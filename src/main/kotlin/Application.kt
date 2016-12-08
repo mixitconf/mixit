@@ -1,5 +1,5 @@
 import org.springframework.web.reactive.function.RouterFunction
-import org.springframework.http.codec.BodyInserters
+import org.springframework.http.codec.BodyInserters.fromObject
 import org.springframework.http.server.reactive.ReactorHttpHandlerAdapter
 import org.springframework.web.reactive.function.HandlerFunction
 import org.springframework.web.reactive.function.RequestPredicates.GET
@@ -19,7 +19,14 @@ fun main(args: Array<String>) {
             .block()
 }
 
+class User(var id:Long, var name:String) {
+
+    override fun toString(): String {
+        return "User(id='$id', name='$name')"
+    }
+}
+
 private fun routes(): RouterFunction<*> {
-    return route(GET("/"),
-            HandlerFunction { request -> ok().body(BodyInserters.fromObject("Hello Mix-IT!")) })
+    return route(GET("/"), HandlerFunction { ok().body(fromObject("Hello Mix-IT!")) })
+            .andRoute(GET("/user/{id}"), HandlerFunction { req -> ok().body(fromObject(User(req.pathVariable("id").toLong(), "Robert"))) })
 }
