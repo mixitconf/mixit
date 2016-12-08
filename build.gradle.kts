@@ -40,6 +40,7 @@ val kotlinVersion = extra["kotlinVersion"] as String
 val springVersion = "5.0.0.BUILD-SNAPSHOT"
 val jacksonVersion = "2.8.4"
 val reactorVersion = "3.0.3.RELEASE"
+val tomcatVersion = "8.5.8"
 
 dependencies {
 	compile("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
@@ -59,7 +60,8 @@ dependencies {
 	compile("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion")
 	compile("com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion")
 
-	compile("io.projectreactor.ipc:reactor-netty:0.6.0.BUILD-SNAPSHOT")
+	compile("org.apache.tomcat:tomcat-util:$tomcatVersion")
+	compile("org.apache.tomcat.embed:tomcat-embed-core:$tomcatVersion")
 
 	compile("commons-logging:commons-logging:1.2")
 	compile("org.slf4j:slf4j-api:1.7.21")
