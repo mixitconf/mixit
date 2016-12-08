@@ -1,3 +1,5 @@
+package fr.mixit.support
+
 import java.io.File
 
 import org.apache.catalina.LifecycleException
