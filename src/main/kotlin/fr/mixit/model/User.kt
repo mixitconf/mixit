@@ -1,5 +1,8 @@
 package fr.mixit.model
 
+import javax.persistence.Entity
+
+@Entity
 class User(var id:Long, var name:String) {
 
     override fun toString(): String {

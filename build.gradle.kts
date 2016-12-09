@@ -22,7 +22,6 @@ apply {
 
 version = "1.0.0-SNAPSHOT"
 
-
 repositories {
 	mavenCentral()
 	jcenter()
@@ -56,7 +55,7 @@ dependencies {
 	compile("org.springframework:spring-beans:$springVersion")
 	compile("org.springframework:spring-context:$springVersion")
 	// TODO Remove the spring-context-support dependency when https://jira.spring.io/browse/SPR-14908 will be fixed
-    compile("org.springframework:spring-context-support:$springVersion")
+	compile("org.springframework:spring-context-support:$springVersion")
 	compile("org.springframework:spring-core:$springVersion")
 	compile("org.springframework:spring-expression:$springVersion")
 	compile("org.springframework:spring-web:$springVersion")
@@ -77,7 +76,8 @@ dependencies {
 	compile("ch.qos.logback:logback-classic:1.1.7")
 
 	compile("io.requery:requery:$requeryVersion")
-    kapt("io.requery:requery-processor:$requeryVersion")
+	kapt("io.requery:requery-processor:$requeryVersion")
+	compile("org.eclipse.persistence:javax.persistence:2.1.1")
 
 }
 
