@@ -7,6 +7,7 @@ import org.apache.catalina.startup.Tomcat
 
 import org.springframework.http.server.reactive.HttpHandler
 import org.springframework.http.server.reactive.ServletHttpHandlerAdapter
+import java.util.concurrent.CompletableFuture
 
 class TomcatServer {
 
@@ -32,6 +33,16 @@ class TomcatServer {
                 throw IllegalStateException(ex)
             }
         }
+    }
+
+    fun startAndAwait() {
+        start()
+        val stop = CompletableFuture<Void>()
+        Runtime.getRuntime().addShutdownHook(Thread {
+            server.stop()
+            stop.complete(null)
+        })
+        stop.get()
     }
 
     fun stop() {
