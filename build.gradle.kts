@@ -55,6 +55,8 @@ dependencies {
 	compile("org.springframework:spring-aop:$springVersion")
 	compile("org.springframework:spring-beans:$springVersion")
 	compile("org.springframework:spring-context:$springVersion")
+	// TODO Remove the spring-context-support dependency when https://jira.spring.io/browse/SPR-14908 will be fixed
+    compile("org.springframework:spring-context-support:$springVersion")
 	compile("org.springframework:spring-core:$springVersion")
 	compile("org.springframework:spring-expression:$springVersion")
 	compile("org.springframework:spring-web:$springVersion")
