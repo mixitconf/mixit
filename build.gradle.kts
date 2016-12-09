@@ -76,6 +76,7 @@ dependencies {
 	compile("ch.qos.logback:logback-classic:1.1.7")
 
 	compile("io.requery:requery:$requeryVersion")
+	compile("io.requery:requery-kotlin:$requeryVersion")
 	kapt("io.requery:requery-processor:$requeryVersion")
 	compile("org.eclipse.persistence:javax.persistence:2.1.1")
 
