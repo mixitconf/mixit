@@ -1,3 +1,4 @@
+import org.jetbrains.kotlin.gradle.plugin.KaptExtension
 import java.util.concurrent.TimeUnit
 
 buildscript {
@@ -24,12 +25,17 @@ version = "1.0.0-SNAPSHOT"
 
 repositories {
 	mavenCentral()
+	jcenter()
 	maven { setUrl("https://repo.spring.io/snapshot") }
 }
 
 configure<JavaPluginConvention> {
 	setSourceCompatibility(1.8)
 	setTargetCompatibility(1.8)
+}
+
+configure<KaptExtension> {
+	generateStubs = true
 }
 
 configurations.all {
@@ -41,6 +47,7 @@ val springVersion = "5.0.0.BUILD-SNAPSHOT"
 val jacksonVersion = "2.8.4"
 val reactorVersion = "3.0.3.RELEASE"
 val tomcatVersion = "8.5.8"
+val requeryVersion = "1.0.2"
 
 dependencies {
 	compile("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
@@ -66,6 +73,9 @@ dependencies {
 	compile("commons-logging:commons-logging:1.2")
 	compile("org.slf4j:slf4j-api:1.7.21")
 	compile("ch.qos.logback:logback-classic:1.1.7")
+
+	compile("io.requery:requery:$requeryVersion")
+    kapt("io.requery:requery-processor:$requeryVersion")
 
 }
 
