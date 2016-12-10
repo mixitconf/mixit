@@ -7,17 +7,21 @@ buildscript {
 
 	repositories {
 		mavenCentral()
+		jcenter()
 	}
 
 	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.2.RELEASE")
 		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
+		classpath("com.github.jengelman.gradle.plugins:shadow:1.2.4")
+		classpath("org.junit.platform:junit-platform-gradle-plugin:1.0.0-M3")
 	}
 }
 
 apply {
 	plugin("kotlin")
-	plugin("org.springframework.boot")
+	plugin("application")
+	plugin("org.junit.platform.gradle.plugin")
+	plugin("com.github.johnrengelman.shadow")
 }
 
 version = "1.0.0-SNAPSHOT"
@@ -38,6 +42,10 @@ configure<KaptExtension> {
 	generateStubs = true
 }
 
+configure<ApplicationPluginConvention> {
+	mainClassName = "mixit.MainKt"
+}
+
 configurations.all {
 	it.resolutionStrategy.cacheChangingModulesFor(0, TimeUnit.SECONDS)
 }
@@ -48,24 +56,20 @@ val jacksonVersion = "2.8.4"
 val reactorVersion = "3.0.3.RELEASE"
 val tomcatVersion = "8.5.8"
 val requeryVersion = "1.0.2"
+val junitJupiterVersion = "5.0.0-M3"
 
 dependencies {
 	compile("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
+	compile("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
 
-	compile("org.springframework:spring-aop:$springVersion")
-	compile("org.springframework:spring-beans:$springVersion")
-	compile("org.springframework:spring-context:$springVersion")
+	compile("org.springframework:spring-web-reactive:$springVersion")
 	// TODO Remove the spring-context-support dependency when https://jira.spring.io/browse/SPR-14908 will be fixed
 	compile("org.springframework:spring-context-support:$springVersion")
-	compile("org.springframework:spring-core:$springVersion")
-	compile("org.springframework:spring-expression:$springVersion")
-	compile("org.springframework:spring-web:$springVersion")
-	compile("org.springframework:spring-web-reactive:$springVersion")
 
 	compile("io.projectreactor:reactor-core:$reactorVersion")
+	testCompile("io.projectreactor.addons:reactor-test:$reactorVersion")
+	testCompile("io.projectreactor.ipc:reactor-netty:0.6.0.BUILD-SNAPSHOT")
 
-	compile("com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion")
-	compile("com.fasterxml.jackson.core:jackson-core:$jacksonVersion")
 	compile("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion")
 	compile("com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion")
 
@@ -79,12 +83,10 @@ dependencies {
 	compile("io.requery:requery:$requeryVersion")
 	compile("io.requery:requery-kotlin:$requeryVersion")
 	kapt("io.requery:requery-processor:$requeryVersion")
-
-	compile("junit:junit:4.12")
 	compile("com.h2database:h2:1.4.191")
 
-	testCompile("io.projectreactor.addons:reactor-test:$reactorVersion")
-	testCompile("io.projectreactor.ipc:reactor-netty:0.6.0.BUILD-SNAPSHOT")
+	testCompile("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
+	testRuntime("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
 }
 
 

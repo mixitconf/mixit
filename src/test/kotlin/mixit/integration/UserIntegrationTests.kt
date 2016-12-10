@@ -2,9 +2,7 @@ package mixit.integration
 
 import mixit.Application
 import mixit.model.User
-import org.junit.After
-import org.junit.Before
-import org.junit.Test
+import org.junit.jupiter.api.*
 import org.springframework.http.MediaType.APPLICATION_JSON_UTF8
 import org.springframework.http.client.reactive.ReactorClientHttpConnector
 import org.springframework.web.client.reactive.ClientRequest.GET
@@ -17,12 +15,8 @@ class UserIntegrationTests {
     val application = Application()
     val webClient = WebClient.builder(ReactorClientHttpConnector()).build()
 
-    @Before
+    @BeforeEach
     fun before() = application.start()
-
-
-    @After
-    fun after() = application.stop()
 
     @Test
     fun findAll() {
@@ -34,4 +28,8 @@ class UserIntegrationTests {
                 .expectComplete()
                 .verify()
     }
+
+    @AfterEach
+    fun after() = application.stop()
+
 }
