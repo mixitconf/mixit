@@ -15,10 +15,20 @@ class TomcatHttpServer(httpHandler: HttpHandler) : HttpServer {
     val port: Int = 8080
 
     override val isRunning: Boolean
-            get() = this._isRunning
+        get() = this._isRunning
 
     private val server: Tomcat
     private var _isRunning: Boolean = false
+
+    init {
+        server = Tomcat()
+        server.setHostname(hostname)
+        server.setPort(port)
+        val base = File(System.getProperty("java.io.tmpdir"))
+        val rootContext = server.addContext("", base.absolutePath)
+        Tomcat.addServlet(rootContext, "httpHandlerServlet", ServletHttpHandlerAdapter(httpHandler))
+        rootContext.addServletMappingDecoded("/", "httpHandlerServlet")
+    }
 
     override fun start() {
         if (!this.isRunning) {
@@ -41,16 +51,6 @@ class TomcatHttpServer(httpHandler: HttpHandler) : HttpServer {
                 throw IllegalStateException(ex)
             }
         }
-    }
-
-    init {
-        server = Tomcat()
-        server.setHostname(hostname)
-        server.setPort(port)
-        val base = File(System.getProperty("java.io.tmpdir"))
-        val rootContext = server.addContext("", base.absolutePath)
-        Tomcat.addServlet(rootContext, "httpHandlerServlet", ServletHttpHandlerAdapter(httpHandler))
-        rootContext.addServletMappingDecoded("/", "httpHandlerServlet")
     }
 
 }
