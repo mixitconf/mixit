@@ -9,6 +9,7 @@ import mixit.service.UserService
 import mixit.support.HttpServer
 import mixit.support.TomcatHttpServer
 import mixit.support.register
+import mixit.support.getBean
 import io.requery.Persistable
 import io.requery.sql.*
 import org.h2.jdbcx.JdbcDataSource
@@ -23,7 +24,7 @@ class Application {
     constructor() {
         appContext = appContext()
         appContext.refresh()
-        server = appContext.getBean(HttpServer::class.java)
+        server = appContext.getBean(HttpServer::class)
     }
 
     private fun appContext() : GenericApplicationContext {
