@@ -31,6 +31,7 @@ repositories {
 configure<JavaPluginConvention> {
 	setSourceCompatibility(1.8)
 	setTargetCompatibility(1.8)
+	sourceSets.getByName("main").java.srcDirs("$buildDir/generated/source/kapt/main")
 }
 
 configure<KaptExtension> {
