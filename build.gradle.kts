@@ -76,9 +76,12 @@ dependencies {
 	compile("ch.qos.logback:logback-classic:1.1.7")
 
 	compile("io.requery:requery:$requeryVersion")
+	compile("io.requery:requery-kotlin:$requeryVersion")
 	kapt("io.requery:requery-processor:$requeryVersion")
 	compile("org.eclipse.persistence:javax.persistence:2.1.1")
 
+	compile("junit:junit:4.12")
+	testCompile("com.h2database:h2:1.4.191")
 }
 
 
