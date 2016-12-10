@@ -11,4 +11,7 @@ interface User : Persistable {
     @get:Generated
     var id: Long
     var name: String
+
+    data class Instance(override var id: Long, override var name: String) : User
 }
+

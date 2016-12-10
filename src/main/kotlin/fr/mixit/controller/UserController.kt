@@ -1,40 +1,27 @@
 package fr.mixit.controller
 
-import fr.mixit.model.User
-import fr.mixit.model.UserEntity
+import fr.mixit.service.UserService
 import org.springframework.http.codec.BodyInserters.fromObject
 import org.springframework.web.reactive.function.HandlerFunction
 import org.springframework.web.reactive.function.RequestPredicates.GET
-import org.springframework.web.reactive.function.RouterFunctions.route
+import org.springframework.web.reactive.function.RouterFunction
+import org.springframework.web.reactive.function.RouterFunctions
+import org.springframework.web.reactive.function.ServerRequest
 import org.springframework.web.reactive.function.ServerResponse.ok
+import java.util.*
 
-object UserController {
+class UserController(val service: UserService) : RouterFunction<Any> {
 
-    fun routes() = route(
+    // Relax Generics check to avoid explicit casting
+    override fun route(request: ServerRequest) = RouterFunctions.route(
                 GET("/user/{id}"), findById()).andRoute(
-                GET("/user/"), findAll())
+                GET("/user/"), findAll()).route(request) as Optional<HandlerFunction<Any>>
 
     fun findById() = HandlerFunction { req ->
-        val userEntity = UserEntity()
-        userEntity.id = req.pathVariable("id").toLong()
-        userEntity.name = "Robert"
-
-        ok().body(fromObject(userEntity))
+        ok().body(fromObject(service.findById(req.pathVariable("id").toLong())))
     }
 
-    fun findAll()  = HandlerFunction {
-        val user1 = UserEntity()
-        user1.id = 1L
-        user1.name = "Robert"
-
-        val user2 = UserEntity()
-        user2.id = 2L
-        user2.name = "Raide"
-
-        val user3 = UserEntity()
-        user3.id = 3L
-        user3.name = "Ford"
-
-        ok().body(fromObject(listOf(user1, user2, user3)))
+    fun findAll() = HandlerFunction {
+        ok().body(fromObject(service.findAll()))
     }
 }

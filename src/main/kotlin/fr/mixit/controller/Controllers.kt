@@ -1,11 +1,14 @@
 package fr.mixit.controller
 
-import org.springframework.core.io.ClassPathResource
-import org.springframework.web.reactive.function.RouterFunctions.resources
+import org.springframework.http.server.reactive.HttpHandler
+import org.springframework.http.server.reactive.ServerHttpRequest
+import org.springframework.http.server.reactive.ServerHttpResponse
+import org.springframework.web.reactive.function.RouterFunction
+import org.springframework.web.reactive.function.RouterFunctions
 
-object Controllers {
+class Controllers(val controllers: List<RouterFunction<*>>) : HttpHandler {
 
-    fun routes() = resources("/**", ClassPathResource("static/"))
-            .and(UserController.routes())
+    override fun handle(request: ServerHttpRequest, response: ServerHttpResponse) =
+            RouterFunctions.toHttpHandler(controllers.reduce(RouterFunction<*>::and)).handle(request, response)
+
 }
-
