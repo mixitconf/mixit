@@ -1,4 +1,4 @@
-package fr.mixit.support
+package mixit.support
 
 import org.springframework.beans.factory.config.BeanDefinition
 import org.springframework.beans.factory.support.AbstractBeanDefinition

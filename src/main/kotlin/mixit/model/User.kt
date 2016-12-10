@@ -1,4 +1,4 @@
-package fr.mixit.model
+package mixit.model
 
 import io.requery.Entity
 import io.requery.Generated

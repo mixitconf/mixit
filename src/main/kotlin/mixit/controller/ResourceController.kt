@@ -1,4 +1,4 @@
-package fr.mixit.controller
+package mixit.controller
 
 import org.springframework.core.io.ClassPathResource
 import org.springframework.core.io.Resource

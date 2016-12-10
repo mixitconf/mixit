@@ -1,6 +1,6 @@
-package fr.mixit.service
+package mixit.service
 
-import fr.mixit.model.User
+import mixit.model.User
 import io.requery.Persistable
 import io.requery.kotlin.eq
 import io.requery.sql.KotlinEntityDataStore

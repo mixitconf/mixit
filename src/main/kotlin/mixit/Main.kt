@@ -1,4 +1,4 @@
-package fr.mixit
+package mixit
 
 import java.util.concurrent.CompletableFuture
 

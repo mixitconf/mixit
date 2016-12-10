@@ -1,4 +1,4 @@
-package fr.mixit.controller
+package mixit.controller
 
 import org.springframework.http.server.reactive.HttpHandler
 import org.springframework.http.server.reactive.ServerHttpRequest

@@ -1,4 +1,4 @@
-package fr.mixit.support
+package mixit.support
 
 interface HttpServer {
     fun start()

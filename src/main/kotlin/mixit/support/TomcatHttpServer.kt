@@ -1,4 +1,4 @@
-package fr.mixit.support
+package mixit.support
 
 import java.io.File
 

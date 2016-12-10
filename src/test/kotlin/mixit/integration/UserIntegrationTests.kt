@@ -1,7 +1,7 @@
-package fr.mixit.controller
+package mixit.integration
 
-import fr.mixit.Application
-import fr.mixit.model.User
+import mixit.Application
+import mixit.model.User
 import org.junit.After
 import org.junit.Before
 import org.junit.Test

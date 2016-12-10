@@ -1,6 +1,6 @@
-package fr.mixit.controller
+package mixit.controller
 
-import fr.mixit.service.UserService
+import mixit.service.UserService
 import org.springframework.http.codec.BodyInserters.fromObject
 import org.springframework.web.reactive.function.HandlerFunction
 import org.springframework.web.reactive.function.RequestPredicates.GET

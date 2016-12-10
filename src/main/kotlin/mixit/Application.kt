@@ -1,14 +1,14 @@
-package fr.mixit
+package mixit
 
-import fr.mixit.controller.Controllers
-import fr.mixit.controller.ResourceController
-import fr.mixit.controller.UserController
-import fr.mixit.model.Models
-import fr.mixit.model.UserEntity
-import fr.mixit.service.UserService
-import fr.mixit.support.HttpServer
-import fr.mixit.support.TomcatHttpServer
-import fr.mixit.support.register
+import mixit.controller.Controllers
+import mixit.controller.ResourceController
+import mixit.controller.UserController
+import mixit.model.Models
+import mixit.model.UserEntity
+import mixit.service.UserService
+import mixit.support.HttpServer
+import mixit.support.TomcatHttpServer
+import mixit.support.register
 import io.requery.Persistable
 import io.requery.sql.*
 import org.h2.jdbcx.JdbcDataSource
