@@ -1,3 +1,4 @@
+import com.github.jengelman.gradle.plugins.shadow.ShadowExtension
 import org.jetbrains.kotlin.gradle.plugin.KaptExtension
 import java.util.concurrent.TimeUnit
 
@@ -44,6 +45,10 @@ configure<KaptExtension> {
 
 configure<ApplicationPluginConvention> {
 	mainClassName = "mixit.MainKt"
+}
+
+configure<ShadowExtension> {
+	version = null
 }
 
 configurations.all {

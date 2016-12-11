@@ -43,7 +43,7 @@ To run the application:
 To package and run the application from the executable JAR:
 ```
 ./gradlew shadowJar
-java -jar build/libs/mixit-1.0.0-SNAPSHOT-all.jar
+java -jar build/libs/mixit-all.jar
 ```
 
 To enable live reload of static resources:
