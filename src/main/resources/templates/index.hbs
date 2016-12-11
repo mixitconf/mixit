@@ -61,9 +61,9 @@
                     <div class="cesar-headband-header">
                         <a href="/"><img src="images/logo/logo-mixit-transparent.svg"></a>
                         <div style="float: right;padding: 1em">
-                            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab american-flag"
-                                    data-upgraded=",MaterialButton">
-                                <img src="images/lang/us.svg" class="cesar-menu__lang">
+                            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab american-flag" data-upgraded=",MaterialButton">
+                                {{#ifEq locale "en"}}<a href="/"><img class="cesar-menu__lang" src="images/lang/fr.svg" /></a>{{/ifEq}}
+                                {{#ifEq locale "fr"}}<a href="/en/"><img class="cesar-menu__lang" src="images/lang/us.svg" /></a>{{/ifEq}}
                             </button>
                         </div>
                     </div>
@@ -82,11 +82,11 @@
                             <h1 class="cesar-imagebanner-blink">
                                 <span class="cesar-imagebanner-blink__head">Mix-IT</span><br>
                                 <span class="cesar-imagebanner-blink__content"
-                                      translate="home.headband.comeback" id="headbandComeback">La conférence avec des crêpes et du cœur</span>
+                                      id="headbandComeback">{{message "home.headband.comeback"}}</span>
                             </h1>
                             <div class="cesar-text" style="vertical-align: center">
-                                <img src="images/icon/calendar.svg">&nbsp;<span translate="home.headband.date">20-21 avril 2017</span>
-                                <img src="images/icon/map-marker.svg">&nbsp;<a href="/venir">CPE,
+                                <img src="images/icon/calendar.svg">&nbsp;{{message "home.headband.date"}}
+                                <img src="images/icon/map-marker.svg">&nbsp;<a ui-sref="venir" href="/venir">CPE,
                                 Lyon</a>
                             </div>
                         </div>
@@ -100,33 +100,28 @@
                 <div class="cesar-container">
                     <div class="mdl-grid cesar-section--bottom">
                         <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-phone mdl-cell--12-col-tablet cesar-info__content">
-                            <h2 translate="home.sponsor.title">Sponsors de l'édition 2017</h2>
+                            <h2>{{message "home.sponsor.title"}}</h2>
                             <p class="cesar-text">
-                                <span translate="home.sponsor.presse">Pour plus d'informations vous pouvez consulter notre</span>&nbsp;
-                                <a ng-href="/docs/presse/leaflet/fr" target="sponsor"
-                                   href="/docs/presse/leaflet/fr"><span translate="home.sponsor.presseend">dossier de presse</span></a>
+                                <span>{{message "home.sponsor.presse"}}</span>&nbsp;
+                                <a target="sponsor" href="/docs/presse/leaflet/fr"><span>{{message
+                                        "home.sponsor.presseend"}}</span></a>
                             </p>
                             <p class="cesar-text">
-                                <span translate="home.sponsor.annonce">Profitez de cet évenement pour mettre en avant votre société. Nous proposons différents niveaux de partenariats qui sont détaillés dans</span>&nbsp;
-                                <a ng-href="/docs/sponsor/leaflet/fr" target="sponsor"
-                                   href="/docs/sponsor/leaflet/fr"><span translate="home.sponsor.annonceend">notre plaquette.</span></a>
+                                <span>{{message "home.sponsor.annonce"}}</span>&nbsp;
+                                <a target="sponsor"
+                                   href="/docs/sponsor/leaflet/fr"><span>{{message
+                                        "home.sponsor.annonceend"}}</span></a>
 
-                                <span translate="home.sponsor.return">Retournez nous le</span>&nbsp;
-                                <a ng-href="/docs/sponsor/form/fr" target="sponsor"
-                                   href="/docs/sponsor/form/fr"><span translate="home.sponsor.form">formulaire de sponsoring</span></a>
-                                <span translate="home.sponsor.at">à</span> <a>contact @
-                                mix-it.fr</a></p>
+                                <span>{{message "home.sponsor.return"}}</span>&nbsp;
+                                <a target="sponsor"
+                                   href="/docs/sponsor/form/fr"><span>{{message "home.sponsor.form"}}</span></a>
+                                <span>{{message "home.sponsor.at"}}</span> <a>contact @ mix-it.fr</a></p>
                             <p>&nbsp;</p>
                         </div>
                         <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone mdl-cell--12-col-tablet cesar-info__content">
-                            <h2 translate="home.info.section1">2 jours de conférences et
-                                d'ateliers.</h2>
-                            <p translate="home.info.section1content" class="cesar-text">Des conférences
-                                pour faire des découvertes, des jeux pour apprendre, des ateliers de développement
-                                ou créatifs, Mix-IT c'est 2 jours intenses de progrès et de rencontres&nbsp;! La
-                                soirée, ouverte à tous, est aussi le moment idéal pour faire des connaissances et
-                                s'ouvrir aux autres cultures.</p>
-                            <p><span translate="home.info.oldconf">See the programm of the previous editions :</span>&nbsp;
+                            <h2>{{message "home.info.section1"}}</h2>
+                            <p class="cesar-text">{{message "home.info.section1content"}}</p>
+                            <p><span>{{message "home.info.oldconf"}}</span>&nbsp;
                                 <a href="/mixit16">2016</a>,&nbsp;
                                 <a href="/mixit15">2015</a>,&nbsp;
                                 <a href="/mixit14">2014</a>,&nbsp;
@@ -134,11 +129,8 @@
                                 <a href="/mixit12">2012</a></p>
                         </div>
                         <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone mdl-cell--12-col-tablet cesar-info__content">
-                            <h2 translate="home.info.section2">600 participants, 50 speakers</h2>
-                            <p translate="home.info.section2content" class="cesar-text">Afin de garder une
-                                dimension conviviale, le nombre de participants est limité à 600. Nous nous battons
-                                pour vous proposer tout cela à un prix très abordable, pour que tout un chacun
-                                puisse en profiter.</p>
+                            <h2>{{message "home.info.section2"}}</h2>
+                            <p class="cesar-text">{{message "home.info.section2content"}}</p>
                         </div>
                     </div>
 
@@ -154,42 +146,49 @@
                         <div class="cesar-section">
                             <h1 class="cesar-imagebanner-blink">
                                 <span class="cesar-imagebanner-blink__head">Speakers</span><br>
-                                <span class="cesar-imagebanner-blink__content"></span><span
-                                    translate="home.speaker.top">Cette année nous étions très fiers d'accueillir&nbsp;</span>
-                                <a class="link" href="/article/163">Joel
-                                    Spolsky</a>
+                                <span class="cesar-imagebanner-blink__content"></span>
+                                <span>{{message "home.speaker.top"}}</span>&nbsp;
+                                <a class="link" href="/article/163">Joel Spolsky</a>
                             </h1>
                             <p class="center cesar-text">
-                                <span translate="home.speaker.title">Voici un panel des speakers que nous avons pu voir lors des précédentes éditions&nbsp;:</span>
+                                <span>{{message "home.speaker.title"}}</span>
                             </p>
                             <div style="display: flex">
                                 <ul>
-                                    <li>Dan North <a href="https://twitter.com/tastapod"><img
-                                            src="images/social/twitter.svg"></a></li>
-                                    <li>Pamela Fox <a href="https://twitter.com/pamelafox"><img
-                                            src="images/social/twitter.svg"></a></li>
-                                    <li>Matti Schneider <a href="https://twitter.com/matti_sg"><img
-                                            src="images/social/twitter.svg"></a></li>
-                                    <li>Bodil Stokke <a href="https://github.com/bodil"><img
-                                            src="images/social/twitter.svg"></a></li>
-                                    <li>Dan Allen <a href="https://twitter.com/mojavelinux"><img
-                                            src="images/social/twitter.svg"></a></li>
+                                    <li>Dan North <a href="https://twitter.com/tastapod">
+                                        <img src="images/social/twitter.svg"></a>
+                                    </li>
+                                    <li>Pamela Fox <a href="https://twitter.com/pamelafox">
+                                        <img src="images/social/twitter.svg"></a>
+                                    </li>
+                                    <li>Matti Schneider <a href="https://twitter.com/matti_sg">
+                                        <img src="images/social/twitter.svg"></a>
+                                    </li>
+                                    <li>Bodil Stokke <a href="https://github.com/bodil">
+                                        <img src="images/social/twitter.svg"></a>
+                                    </li>
+                                    <li>Dan Allen <a href="https://twitter.com/mojavelinux">
+                                        <img src="images/social/twitter.svg"></a>
+                                    </li>
                                 </ul>
                                 <ul>
-                                    <li>Tim Urban <a href="https://twitter.com/waitbutwhy"><img
-                                            src="images/social/twitter.svg"></a></li>
-                                    <li>Katrina Owen <a href="https://twitter.com/kytrinyx"><img
-                                            src="images/social/twitter.svg"></a></li>
-                                    <li>Pierre Piezzardi <a href="https://twitter.com/ppezziardi"><img
-                                            src="images/social/twitter.svg"></a></li>
-                                    <li>Tristan Nitot <a href="https://twitter.com/nitot"><img
-                                            src="images/social/twitter.svg"></a></li>
+                                    <li>Tim Urban <a href="https://twitter.com/waitbutwhy">
+                                        <img src="images/social/twitter.svg"></a>
+                                    </li>
+                                    <li>Katrina Owen <a href="https://twitter.com/kytrinyx">
+                                        <img src="images/social/twitter.svg"></a>
+                                    </li>
+                                    <li>Pierre Piezzardi <a href="https://twitter.com/ppezziardi">
+                                        <img src="images/social/twitter.svg"></a>
+                                    </li>
+                                    <li>Tristan Nitot <a href="https://twitter.com/nitot">
+                                        <img src="images/social/twitter.svg"></a>
+                                    </li>
                                     <li>...</li>
                                 </ul>
                             </div>
                             <p>&nbsp;</p>
-                            <p class="center cesar-text" translate="home.speaker.cfp">Notre appel à
-                                conférenciers ouvrira en janvier 2017.</p>
+                            <p class="center cesar-text">{{message "home.speaker.cfp"}}</p>
                         </div>
                     </div>
                 </div>
@@ -204,15 +203,14 @@
                 <div class="cesar-container">
                     <div class="mdl-grid">
                         <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-phone">
-                            <h3 translate="footer.whoarewe.title">Qui sommes-nous&nbsp;?</h3>
+                            <h3>{{message "footer.whoarewe.title"}}</h3>
 
-                            <p><span translate="footer.whoarewe.content">Mix-IT est une association à but non lucratif fondée en 2011 et animée par des bénévoles issus des communautés techniques et agiles lyonnaises</span>&nbsp;(<a
-                                    translate="footer.whoarewe.more" href="/staff">voir
-                                les membres du staff...</a>)</p>
+                            <p><span>{{message "footer.whoarewe.content"}}</span>&nbsp;(<a href="/staff">{{message
+                                    "footer.whoarewe.more"}}</a>)</p>
 
                         </div>
                         <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone">
-                            <h3 translate="footer.contactus">Nous contacter</h3>
+                            <h3>{{message "footer.contactus"}}</h3>
                             <ul class="cesar-footer--social">
                                 <li><a href="https://twitter.com/mixit_lyon" target="social"><img
                                         src="images/social/twitter.svg" rel="contact" style=" fill: #ffffff;">&nbsp;@mixIT_lyon</a>
@@ -227,13 +225,13 @@
                     <div class="cesar-container cesar-footer__copyright">
                         &nbsp;<a class="grey-text text-lighten-4" href="/api/article/rss/" rel="alternate" title="RSS"
                                  type="application/rss+xml">
-                        <span translate="footer.rss">Flux RSS</span>
+                        <span>{{message "footer.rss"}}</span>
                     </a>
 
                         &nbsp;&nbsp;
                         <a class="grey-text text-lighten-4" href="http://confcodeofconduct.com/index-fr.html"
                            target="_blank">
-                            <span translate="footer.codeofconduct">Code de bonne conduite</span>
+                            <span>{{message "footer.codeofconduct"}}</span>
                         </a>
 
                         <span class="right visible-on-desktop ng-binding">
