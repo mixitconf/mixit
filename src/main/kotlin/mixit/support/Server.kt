@@ -1,6 +1,6 @@
 package mixit.support
 
-interface HttpServer {
+interface Server {
     fun start()
     fun stop()
     val isRunning: Boolean

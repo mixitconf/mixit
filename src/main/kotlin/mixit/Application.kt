@@ -6,12 +6,9 @@ import mixit.controller.UserController
 import mixit.model.Models
 import mixit.model.UserEntity
 import mixit.service.UserService
-import mixit.support.HttpServer
-import mixit.support.TomcatHttpServer
-import mixit.support.register
-import mixit.support.getBean
 import io.requery.Persistable
 import io.requery.sql.*
+import mixit.support.*
 import org.h2.jdbcx.JdbcDataSource
 import org.springframework.beans.factory.support.DefaultListableBeanFactory
 import org.springframework.context.support.GenericApplicationContext
@@ -19,12 +16,12 @@ import org.springframework.context.support.GenericApplicationContext
 class Application {
 
     val appContext: GenericApplicationContext
-    val server: HttpServer
+    val server: Server
 
     constructor() {
         appContext = appContext()
         appContext.refresh()
-        server = appContext.getBean(HttpServer::class)
+        server = appContext.getBean(Server::class)
     }
 
     private fun appContext() : GenericApplicationContext {
@@ -34,7 +31,7 @@ class Application {
         beanFactory.register(UserController::class)
         beanFactory.register(ResourceController::class)
         beanFactory.register(HandlebarsViewResolver::class, "prefix", "/templates/")
-        beanFactory.register(TomcatHttpServer::class)
+        beanFactory.register(TomcatServer::class)
         return GenericApplicationContext(beanFactory)
     }
 

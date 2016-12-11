@@ -67,8 +67,8 @@ dependencies {
 	compile("com.github.jknack:handlebars:4.0.6")
 
 	compile("io.projectreactor:reactor-core:$reactorVersion")
+	compile("io.projectreactor.ipc:reactor-netty:0.6.0.BUILD-SNAPSHOT")
 	testCompile("io.projectreactor.addons:reactor-test:$reactorVersion")
-	testCompile("io.projectreactor.ipc:reactor-netty:0.6.0.BUILD-SNAPSHOT")
 
 	compile("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion")
 	compile("com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion")

@@ -8,67 +8,54 @@ import org.apache.catalina.startup.Tomcat
 import org.springframework.beans.factory.InitializingBean
 import org.springframework.context.ApplicationContext
 import org.springframework.context.ApplicationContextAware
+import org.springframework.http.server.reactive.ReactorHttpHandlerAdapter
 
 import org.springframework.http.server.reactive.ServletHttpHandlerAdapter
 import org.springframework.web.reactive.function.HandlerStrategies
 import org.springframework.web.reactive.function.RouterFunction
 import org.springframework.web.reactive.function.RouterFunctions
+import reactor.ipc.netty.NettyContext
+import reactor.ipc.netty.http.server.HttpServer
+import java.util.concurrent.atomic.AtomicReference
 
-class TomcatHttpServer : HttpServer, ApplicationContextAware, InitializingBean {
-
-    // TODO Allow to customize hostname and port
-    val hostname: String = "localhost"
-    val port: Int = 8080
-    lateinit var appContext: ApplicationContext
+class ReactorNettyServer(hostname: String = "localhost", port: Int = 8080) : Server, ApplicationContextAware, InitializingBean {
 
     override val isRunning: Boolean
-        get() = this._isRunning
+        get() {
+            val context = this.nettyContext.get()
+            return context != null && context.channel().isActive
+        }
 
-    private val server: Tomcat
-    private var _isRunning: Boolean = false
-
-    init {
-        server = Tomcat()
-        server.setHostname(hostname)
-        server.setPort(port)
-    }
+    private val server = HttpServer.create(hostname, port)
+    private val nettyContext = AtomicReference<NettyContext>()
+    lateinit private var appContext: ApplicationContext
+    lateinit private var reactorHandler: ReactorHttpHandlerAdapter
 
     override fun setApplicationContext(context: ApplicationContext) {
         appContext = context
     }
 
     override fun afterPropertiesSet() {
-        val base = File(System.getProperty("java.io.tmpdir"))
-        val rootContext = server.addContext("", base.absolutePath)
         val controllers = appContext.getBeansOfType(RouterFunction::class.java).values
         val viewResolver = appContext.getBean(HandlebarsViewResolver::class.java)
         val router = controllers.reduce(RouterFunction<*>::and)
         val strategies = HandlerStrategies.builder().viewResolver(viewResolver).build()
         val httpHandler = RouterFunctions.toHttpHandler(router, strategies)
-        Tomcat.addServlet(rootContext, "httpHandlerServlet", ServletHttpHandlerAdapter(httpHandler))
-        rootContext.addServletMappingDecoded("/", "httpHandlerServlet")
+        reactorHandler = ReactorHttpHandlerAdapter(httpHandler)
     }
 
     override fun start() {
         if (!this.isRunning) {
-            try {
-                this._isRunning = true
-                this.server.start()
-            } catch (ex: LifecycleException) {
-                throw IllegalStateException(ex)
+            if (this.nettyContext.get() == null) {
+                this.nettyContext.set(server.newHandler(reactorHandler).block())
             }
         }
     }
 
     override fun stop() {
         if (this.isRunning) {
-            try {
-                this._isRunning = false
-                this.server.stop()
-                this.server.destroy()
-            } catch (ex: LifecycleException) {
-                throw IllegalStateException(ex)
-            }
+            val context = this.nettyContext.getAndSet(null)
+            context?.dispose()
         }
     }
 
