@@ -1,6 +1,6 @@
 package mixit
 
-import mixit.controller.Controllers
+import com.github.jknack.handlebars.springreactive.HandlebarsViewResolver
 import mixit.controller.ResourceController
 import mixit.controller.UserController
 import mixit.model.Models
@@ -33,12 +33,12 @@ class Application {
         beanFactory.register(UserService::class)
         beanFactory.register(UserController::class)
         beanFactory.register(ResourceController::class)
-        beanFactory.register(Controllers::class)
+        beanFactory.register(HandlebarsViewResolver::class, "prefix", "/templates/")
         beanFactory.register(TomcatHttpServer::class)
         return GenericApplicationContext(beanFactory)
     }
 
-    private fun dataStore() : KotlinEntityDataStore<Persistable>  {
+    private fun dataStore() : KotlinEntityDataStore<Persistable> {
         val dataSource: JdbcDataSource
         dataSource = JdbcDataSource()
         dataSource.setUrl("jdbc:h2:~/testh2")

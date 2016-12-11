@@ -12,13 +12,23 @@ import java.util.*
 
 class UserController(val service: UserService) : RouterFunction<Any> {
 
-    // Relax Generics check to avoid explicit casting
+    // Relax generics check to avoid explicit casting
     override fun route(request: ServerRequest) = RouterFunctions.route(
-                GET("/user/{id}"), findById()).andRoute(
-                GET("/user/"), findAll()).route(request) as Optional<HandlerFunction<Any>>
+                GET("/user/{id}"), findViewById()).andRoute(
+                GET("/user/"), findAllView()).andRoute(
+                GET("/api/user/{id}"), findById()).andRoute(
+                GET("/api/user/"), findAll()).route(request) as Optional<HandlerFunction<Any>>
+
+    fun findViewById() = HandlerFunction { req ->
+        ok().render("user", mapOf(Pair("user", service.findById(req.pathVariable("id").toLong()))))
+    }
 
     fun findById() = HandlerFunction { req ->
         ok().body(fromObject(service.findById(req.pathVariable("id").toLong())))
+    }
+
+    fun findAllView() = HandlerFunction {
+        ok().render("users", mapOf(Pair("users", service.findAll())))
     }
 
     fun findAll() = HandlerFunction {

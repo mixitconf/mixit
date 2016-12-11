@@ -7,7 +7,7 @@ import io.requery.sql.KotlinEntityDataStore
 
 class UserService(val dataStore: KotlinEntityDataStore<Persistable>) {
 
-    fun findById(id: Long) = dataStore.select(User::class) where (User::id eq id)
+    fun findById(id: Long) = (dataStore.select(User::class) where (User::id eq id)).get().first()
 
     fun findAll() = dataStore.select(User::class).get().toList()
 

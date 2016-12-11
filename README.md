@@ -24,7 +24,6 @@ The technologies used are:
 
  - Dependency injection will be updated with the Spring 5 functional bean API when available
  - Requery Reactor integration will be contributed and used
- - Handlebars integration with Spring Web Reactive will be contributed and used
 
 # Getting started
 
@@ -51,10 +50,7 @@ To enable live reload of static resources:
 ./gradlew processResources -t
 ```
 
-To test the application from a browser:
-```
-http://localhost:8080/index.html
-http://localhost:8080/user/
-http://localhost:8080/user/1
-```
+To test the application from a browser, go to `http://localhost:8080/`.
+
+
  
