@@ -33,6 +33,7 @@ To import the project in IDEA:
  - Make sure you have at least IntelliJ IDEA 2016.3
  - Update IDEA Kotlin plugin to 1.1: Tools -> Kotlin -> Configure Kotlin Plugin Updates -> Early Access Preview 1.1
  - Import it in IDEA as a Gradle project
+ - Right click on `Main.kt` -> Run mixit.MainKt
 
 To run the application:
 ```
