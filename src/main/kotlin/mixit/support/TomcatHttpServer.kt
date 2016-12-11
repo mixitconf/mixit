@@ -8,31 +8,13 @@ import org.apache.catalina.startup.Tomcat
 import org.springframework.beans.factory.InitializingBean
 import org.springframework.context.ApplicationContext
 import org.springframework.context.ApplicationContextAware
-import org.springframework.http.MediaType
 
-import org.springframework.http.server.reactive.HttpHandler
-import org.springframework.http.server.reactive.ServerHttpRequest
 import org.springframework.http.server.reactive.ServletHttpHandlerAdapter
 import org.springframework.web.reactive.function.HandlerStrategies
 import org.springframework.web.reactive.function.RouterFunction
 import org.springframework.web.reactive.function.RouterFunctions
-import org.springframework.web.reactive.result.view.ViewResolver
-import reactor.core.publisher.Mono
-import org.springframework.web.server.ServerWebExchange
-import org.springframework.web.server.WebFilterChain
-import sun.font.LayoutPathImpl.getPath
-import org.springframework.http.server.reactive.ServerHttpRequestDecorator
-import org.springframework.web.server.WebFilter
-import org.springframework.web.util.UriComponentsBuilder.fromUri
-import org.springframework.web.util.UriComponentsBuilder
-import java.net.URI
-import org.springframework.web.server.adapter.WebHttpHandlerBuilder.webHandler
-import org.springframework.web.server.adapter.WebHttpHandlerBuilder
 
-
-
-
-class TomcatHttpServer() : HttpServer, ApplicationContextAware, InitializingBean {
+class TomcatHttpServer : HttpServer, ApplicationContextAware, InitializingBean {
 
     // TODO Allow to customize hostname and port
     val hostname: String = "localhost"

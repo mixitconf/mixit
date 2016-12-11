@@ -56,6 +56,7 @@ val jacksonVersion = "2.8.4"
 val reactorVersion = "3.0.3.RELEASE"
 val tomcatVersion = "8.5.8"
 val requeryVersion = "1.0.2"
+val junitPlatformVersion = "1.0.0-M3"
 val junitJupiterVersion = "5.0.0-M3"
 
 dependencies {
@@ -63,8 +64,7 @@ dependencies {
 	compile("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
 
 	compile("org.springframework:spring-web-reactive:$springVersion")
-	// TODO Remove the spring-context-support dependency when https://jira.spring.io/browse/SPR-14908 will be fixed
-	compile("org.springframework:spring-context-support:$springVersion")
+	compile("com.github.jknack:handlebars:4.0.6")
 
 	compile("io.projectreactor:reactor-core:$reactorVersion")
 	testCompile("io.projectreactor.addons:reactor-test:$reactorVersion")
@@ -86,6 +86,7 @@ dependencies {
 	compile("com.h2database:h2:1.4.191")
 
 	testCompile("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
+	testCompile("org.junit.platform:junit-platform-runner:${junitPlatformVersion}")
 	testRuntime("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
 }
 

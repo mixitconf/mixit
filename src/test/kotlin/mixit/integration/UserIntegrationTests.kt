@@ -11,7 +11,7 @@ import reactor.test.StepVerifier
 
 class UserIntegrationTests {
 
-    val baseUrl = "http://localhost:8080/user/"
+    val baseUrl = "http://localhost:8080/api/user/"
     val application = Application()
     val webClient = WebClient.builder(ReactorClientHttpConnector()).build()
 
