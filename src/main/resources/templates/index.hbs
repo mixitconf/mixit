@@ -61,21 +61,14 @@
                     <div class="cesar-headband-header">
                         <a href="/"><img src="images/logo/logo-mixit-transparent.svg"></a>
                         <div style="float: right;padding: 1em">
-                            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab american-flag" data-upgraded=",MaterialButton">
-                                {{#ifEq locale "en"}}<a href="/"><img class="cesar-menu__lang" src="images/lang/fr.svg" /></a>{{/ifEq}}
-                                {{#ifEq locale "fr"}}<a href="/en/"><img class="cesar-menu__lang" src="images/lang/us.svg" /></a>{{/ifEq}}
+                            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab american-flag"
+                                    data-upgraded=",MaterialButton">
+                                {{#ifEq locale "en"}}
+                                    <a href="/"><img class="cesar-menu__lang" src="images/lang/fr.svg"/></a>{{/ifEq}}
+                                {{#ifEq locale "fr"}}
+                                    <a href="/en/"><img class="cesar-menu__lang" src="images/lang/us.svg"/></a>{{/ifEq}}
                             </button>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--TAGLINE-->
-
-            <div class="cesar-headband">
-                <div class="cesar-imagebanner-filter">
-                    <div class="">
-                        &nbsp;
                     </div>
                     <div class="cesar-imagebanner__content">
                         <div class="cesar-section">
@@ -115,7 +108,7 @@
                                 <span>{{message "home.sponsor.return"}}</span>&nbsp;
                                 <a target="sponsor"
                                    href="/docs/sponsor/form/fr"><span>{{message "home.sponsor.form"}}</span></a>
-                                <span>{{message "home.sponsor.at"}}</span> <a>contact @ mix-it.fr</a></p>
+                                <span>{{message "home.sponsor.at"}}</span> <a>contact@mix-it.fr</a></p>
                             <p>&nbsp;</p>
                         </div>
                         <div class="mdl-cell mdl-cell--6-col mdl-cell--12-col-phone mdl-cell--12-col-tablet cesar-info__content">
@@ -187,13 +180,9 @@
                                     <li>...</li>
                                 </ul>
                             </div>
-                            <p>&nbsp;</p>
                             <p class="center cesar-text">{{message "home.speaker.cfp"}}</p>
                         </div>
                     </div>
-                </div>
-                <div class="cesar-speaker-content visible-on-desktop">
-                    &nbsp;
                 </div>
             </div>
 
@@ -205,18 +194,21 @@
                         <div class="mdl-cell mdl-cell--8-col mdl-cell--12-col-phone">
                             <h3>{{message "footer.whoarewe.title"}}</h3>
 
-                            <p><span>{{message "footer.whoarewe.content"}}</span>&nbsp;(<a href="/staff">{{message
-                                    "footer.whoarewe.more"}}</a>)</p>
+                            <p><span>{{message "footer.whoarewe.content"}}</span>&nbsp;(<a href="/staff">
+                                {{message "footer.whoarewe.more"}}</a>)</p>
 
                         </div>
                         <div class="mdl-cell mdl-cell--4-col mdl-cell--12-col-phone">
                             <h3>{{message "footer.contactus"}}</h3>
                             <ul class="cesar-footer--social">
-                                <li><a href="https://twitter.com/mixit_lyon" target="social"><img
-                                        src="images/social/twitter.svg" rel="contact" style=" fill: #ffffff;">&nbsp;@mixIT_lyon</a>
+                                <li>
+                                    <a href="https://twitter.com/mixit_lyon" target="social">
+                                        <img src="images/social/twitter.svg" rel="contact" style=" fill: #ffffff;">&nbsp;@mixIT_lyon</a>
                                 </li>
-                                <li><a href="https://plus.google.com/106629477368826686108/about" rel="contact"
-                                       target="social"><img src="images/social/google.svg">&nbsp;+mix-IT</a></li>
+                                <li>
+                                    <a href="https://plus.google.com/106629477368826686108/about" rel="contact"
+                                       target="social"><img src="images/social/google.svg">&nbsp;+mix-IT</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
