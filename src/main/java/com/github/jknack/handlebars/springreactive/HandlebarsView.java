@@ -65,6 +65,7 @@ public class HandlebarsView extends AbstractUrlBasedView {
                                         ServerWebExchange exchange) {
         Context context = Context.newBuilder(model)
                 .resolver(valueResolvers)
+                .combine("locale", exchange.getAttribute("locale").get().toString())
                 .build();
         DataBuffer dataBuffer = exchange.getResponse().bufferFactory().allocateBuffer();
         try {

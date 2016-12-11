@@ -23,7 +23,6 @@ import java.io.IOException;
 import java.util.Locale;
 
 import org.springframework.context.MessageSource;
-import org.springframework.context.i18n.LocaleContextHolder;
 
 import com.github.jknack.handlebars.Helper;
 import com.github.jknack.handlebars.Options;
@@ -44,12 +43,10 @@ import com.github.jknack.handlebars.Options;
  * <li>args: Object. Optional</li>
  * <li>default: A default message. Optional.</li>
  * </ul>
- * This helper have a strong dependency to local-thread-bound variable for
- * accessing to the current user locale.
+ * This helper have resolve locale from a "locale" context attribute
  *
+ * @author sdeleuze
  * @author edgar.espina
- * @since 0.5.5
- * @see LocaleContextHolder#getLocale()
  */
 public class MessageSourceHelper implements Helper<String> {
 
@@ -72,7 +69,7 @@ public class MessageSourceHelper implements Helper<String> {
             throws IOException {
         Object[] args = options.params;
         String defaultMessage = options.hash("default");
-        return messageSource.getMessage(code, args, defaultMessage, currentLocale());
+        return messageSource.getMessage(code, args, defaultMessage, currentLocale(options));
     }
 
     /**
@@ -80,7 +77,7 @@ public class MessageSourceHelper implements Helper<String> {
      *
      * @return The current user locale.
      */
-    protected Locale currentLocale() {
-        return LocaleContextHolder.getLocale();
+    protected Locale currentLocale(Options options) {
+        return Locale.forLanguageTag((String)options.context.get("locale"));
     }
 }

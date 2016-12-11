@@ -13,6 +13,10 @@ import org.springframework.http.server.reactive.ServletHttpHandlerAdapter
 import org.springframework.web.reactive.function.HandlerStrategies
 import org.springframework.web.reactive.function.RouterFunction
 import org.springframework.web.reactive.function.RouterFunctions
+import org.springframework.web.server.adapter.WebHttpHandlerBuilder.webHandler
+import org.springframework.web.server.adapter.WebHttpHandlerBuilder
+
+
 
 class TomcatServer(hostname: String = "localhost", port: Int = 8080) : Server, ApplicationContextAware, InitializingBean {
 
@@ -41,7 +45,8 @@ class TomcatServer(hostname: String = "localhost", port: Int = 8080) : Server, A
         val viewResolver = appContext.getBean(HandlebarsViewResolver::class.java)
         val router = controllers.reduce(RouterFunction<*>::and)
         val strategies = HandlerStrategies.builder().viewResolver(viewResolver).build()
-        val httpHandler = RouterFunctions.toHttpHandler(router, strategies)
+        val webHandler = RouterFunctions.toHttpHandler(router, strategies)
+        val httpHandler = WebHttpHandlerBuilder.webHandler(webHandler).filters(LocaleWebFilter()).build()
         Tomcat.addServlet(rootContext, "httpHandlerServlet", ServletHttpHandlerAdapter(httpHandler))
         rootContext.addServletMappingDecoded("/", "httpHandlerServlet")
     }

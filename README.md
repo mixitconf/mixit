@@ -54,4 +54,12 @@ To enable live reload of static resources:
 To test the application from a browser, go to `http://localhost:8080/`.
 
 
- 
+# FAQ
+
+How can I register a new `Foo` singleton bean ?
+
+Add `beanFactory.register(Foo::class)` line in `Application#appContext()`.
+
+How can I register a new Handlebars helper ?
+
+Add a `HelperSource` class in `HandlebarsHelpers` and register the bean in `Application#appContext()` like it has been done for `IfEqHelperSource`.

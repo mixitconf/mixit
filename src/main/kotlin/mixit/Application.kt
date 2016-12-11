@@ -1,7 +1,7 @@
 package mixit
 
 import com.github.jknack.handlebars.springreactive.HandlebarsViewResolver
-import mixit.controller.ResourceController
+import mixit.controller.GlobalController
 import mixit.controller.UserController
 import mixit.model.Models
 import mixit.model.UserEntity
@@ -12,6 +12,7 @@ import mixit.support.*
 import org.h2.jdbcx.JdbcDataSource
 import org.springframework.beans.factory.support.DefaultListableBeanFactory
 import org.springframework.context.support.GenericApplicationContext
+import org.springframework.context.support.ResourceBundleMessageSource
 
 class Application {
 
@@ -29,8 +30,10 @@ class Application {
         beanFactory.registerSingleton("dataStore", dataStore())
         beanFactory.register(UserService::class)
         beanFactory.register(UserController::class)
-        beanFactory.register(ResourceController::class)
+        beanFactory.register(GlobalController::class)
         beanFactory.register(HandlebarsViewResolver::class, "prefix", "/templates/")
+        beanFactory.register(IfEqHelperSource::class)
+        beanFactory.register("messageSource", ResourceBundleMessageSource::class, "basename", "messages")
         beanFactory.register(TomcatServer::class)
         return GenericApplicationContext(beanFactory)
     }

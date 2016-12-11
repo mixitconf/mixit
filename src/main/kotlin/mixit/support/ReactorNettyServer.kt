@@ -14,6 +14,7 @@ import org.springframework.http.server.reactive.ServletHttpHandlerAdapter
 import org.springframework.web.reactive.function.HandlerStrategies
 import org.springframework.web.reactive.function.RouterFunction
 import org.springframework.web.reactive.function.RouterFunctions
+import org.springframework.web.server.adapter.WebHttpHandlerBuilder
 import reactor.ipc.netty.NettyContext
 import reactor.ipc.netty.http.server.HttpServer
 import java.util.concurrent.atomic.AtomicReference
@@ -40,7 +41,8 @@ class ReactorNettyServer(hostname: String = "localhost", port: Int = 8080) : Ser
         val viewResolver = appContext.getBean(HandlebarsViewResolver::class.java)
         val router = controllers.reduce(RouterFunction<*>::and)
         val strategies = HandlerStrategies.builder().viewResolver(viewResolver).build()
-        val httpHandler = RouterFunctions.toHttpHandler(router, strategies)
+        val webHandler = RouterFunctions.toHttpHandler(router, strategies)
+        val httpHandler = WebHttpHandlerBuilder.webHandler(webHandler).filters(LocaleWebFilter()).build()
         reactorHandler = ReactorHttpHandlerAdapter(httpHandler)
     }
 

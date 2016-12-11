@@ -25,14 +25,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
 import java.net.URI;
-import java.util.ArrayList;
-import java.util.Enumeration;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.ResourceBundle;
-import java.util.Set;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -230,6 +224,11 @@ public class HandlebarsViewResolver extends UrlBasedViewResolver implements Help
         if (registerMessageHelper) {
             // Add a message source helper
             handlebars.registerHelper("message", new MessageSourceHelper(getApplicationContext()));
+        }
+
+        Collection<HelperSource> helperSources = getApplicationContext().getBeansOfType(HelperSource.class).values();
+        for (HelperSource helperSource : helperSources) {
+            handlebars.registerHelper(helperSource.getName(), helperSource.getHelper());
         }
 
         if (bindI18nToMessageSource) {
