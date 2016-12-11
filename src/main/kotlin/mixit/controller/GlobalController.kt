@@ -15,10 +15,15 @@ class GlobalController : RouterFunction<Any> {
     override fun route(request: ServerRequest) =
         resources("/**", ClassPathResource("static/"))
                 .andRoute(GET("/"), indexView())
+                .andRoute(GET("/sample"), sampleView())
                 .route(request) as Optional<HandlerFunction<Any>>
 
     fun indexView() = HandlerFunction { req ->
         ServerResponse.ok().render("index")
+    }
+
+    fun sampleView() = HandlerFunction { req ->
+        ServerResponse.ok().render("sample")
     }
 }
 
