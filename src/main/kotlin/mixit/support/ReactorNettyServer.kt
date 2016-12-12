@@ -1,16 +1,12 @@
 package mixit.support
 
 import com.github.jknack.handlebars.springreactive.HandlebarsViewResolver
-import java.io.File
 
-import org.apache.catalina.LifecycleException
-import org.apache.catalina.startup.Tomcat
 import org.springframework.beans.factory.InitializingBean
 import org.springframework.context.ApplicationContext
 import org.springframework.context.ApplicationContextAware
 import org.springframework.http.server.reactive.ReactorHttpHandlerAdapter
 
-import org.springframework.http.server.reactive.ServletHttpHandlerAdapter
 import org.springframework.web.reactive.function.HandlerStrategies
 import org.springframework.web.reactive.function.RouterFunction
 import org.springframework.web.reactive.function.RouterFunctions

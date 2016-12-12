@@ -1,80 +1,44 @@
 package mixit
 
 import com.github.jknack.handlebars.springreactive.HandlebarsViewResolver
+import com.mongodb.reactivestreams.client.MongoClients
 import mixit.controller.GlobalController
 import mixit.controller.UserController
-import mixit.model.Models
-import mixit.model.UserEntity
-import mixit.service.UserService
-import io.requery.Persistable
-import io.requery.sql.*
+import mixit.repository.UserRepository
 import mixit.support.*
-import org.h2.jdbcx.JdbcDataSource
-import org.springframework.beans.factory.support.DefaultListableBeanFactory
-import org.springframework.context.support.GenericApplicationContext
+import org.springframework.context.MessageSource
+import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.ResourceBundleMessageSource
+import org.springframework.data.mongodb.core.ReactiveMongoTemplate
+import org.springframework.data.mongodb.config.AbstractReactiveMongoConfiguration
+import org.springframework.context.annotation.Bean
+import org.springframework.context.annotation.Configuration
+import org.springframework.data.mongodb.core.mapping.event.LoggingEventListener
+import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRepositories
+
 
 class Application {
 
-    val appContext: GenericApplicationContext
+    val appContext: AnnotationConfigApplicationContext
     val server: Server
 
     constructor() {
         appContext = appContext()
         appContext.refresh()
         server = appContext.getBean(Server::class)
+        val userRepository = appContext.getBean(UserRepository::class)
+        userRepository.init()
     }
 
-    private fun appContext() : GenericApplicationContext {
-        val beanFactory = DefaultListableBeanFactory()
-        beanFactory.registerSingleton("dataStore", dataStore())
-        beanFactory.register(UserService::class)
-        beanFactory.register(UserController::class)
-        beanFactory.register(GlobalController::class)
-        beanFactory.register(HandlebarsViewResolver::class, "prefix", "/templates/")
-        beanFactory.register(IfEqHelperSource::class)
-        beanFactory.register("messageSource", ResourceBundleMessageSource::class, "basename", "messages")
-        beanFactory.register(TomcatServer::class)
-        return GenericApplicationContext(beanFactory)
-    }
-
-    private fun dataStore() : KotlinEntityDataStore<Persistable> {
-        val dataSource: JdbcDataSource
-        dataSource = JdbcDataSource()
-        dataSource.setUrl("jdbc:h2:~/testh2")
-        dataSource.user = "sa"
-        dataSource.password = "sa"
-
-        val configuration = KotlinConfiguration(
-                dataSource = dataSource,
-                model = Models.KT,
-                statementCacheSize = 0,
-                useDefaultLogging = true)
-        val dataStore: KotlinEntityDataStore<Persistable> = KotlinEntityDataStore(configuration)
-        initDataStore(dataStore, configuration)
-        return dataStore
-    }
-
-    private fun initDataStore(dataStore: KotlinEntityDataStore<Persistable>, configuration: KotlinConfiguration) {
-        val tables = SchemaModifier(configuration)
-        tables.dropTables()
-        val mode = TableCreationMode.CREATE
-        tables.createTables(mode)
-
-        val user1 = UserEntity()
-        user1.id = 1L
-        user1.name = "Robert"
-        dataStore.insert(user1)
-
-        val user2 = UserEntity()
-        user2.id = 2L
-        user2.name = "Raide"
-        dataStore.insert(user2)
-
-        val user3 = UserEntity()
-        user3.id = 3L
-        user3.name = "Ford"
-        dataStore.insert(user3)
+    private fun appContext() : AnnotationConfigApplicationContext {
+        val appContext = AnnotationConfigApplicationContext()
+        appContext.register(ApplicationConfiguration::class)
+        appContext.register(UserRepository::class)
+        appContext.register(UserController::class)
+        appContext.register(GlobalController::class)
+        appContext.register(IfEqHelperSource::class)
+        appContext.register(TomcatServer::class)
+        return appContext
     }
 
     fun start() {
@@ -85,4 +49,37 @@ class Application {
         server.stop()
         appContext.destroy()
     }
+
+    @Configuration
+    @EnableReactiveMongoRepositories
+    open class ApplicationConfiguration : AbstractReactiveMongoConfiguration() {
+
+        @Bean
+        override fun mongoClient() = MongoClients.create()
+
+        override fun getDatabaseName() = "mixit"
+
+        @Bean
+        open fun mongoEventListener() = LoggingEventListener()
+
+        @Bean
+        open fun mongoTemplate() = ReactiveMongoTemplate(mongoClient(), databaseName)
+
+        @Bean
+        open fun viewResolver(): HandlebarsViewResolver {
+            var viewResolver = HandlebarsViewResolver()
+            viewResolver.setPrefix("/templates/")
+            return viewResolver
+        }
+
+        @Bean
+        open fun messageSource(): MessageSource {
+            val messageSource = ResourceBundleMessageSource()
+            messageSource.setBasename("messages")
+            return messageSource
+        }
+
+    }
+
+
 }

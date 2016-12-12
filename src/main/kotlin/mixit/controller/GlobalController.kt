@@ -17,8 +17,6 @@ class GlobalController : RouterFunction<Any> {
                 .andRoute(GET("/"), indexView())
                 .route(request) as Optional<HandlerFunction<Any>>
 
-    fun indexView() = HandlerFunction { req ->
-        ServerResponse.ok().render("index")
-    }
+    fun indexView() = HandlerFunction { ServerResponse.ok().render("index") }
 }
 

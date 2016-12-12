@@ -1,10 +1,11 @@
 import com.github.jengelman.gradle.plugins.shadow.ShadowExtension
-import org.jetbrains.kotlin.gradle.plugin.KaptExtension
 import java.util.concurrent.TimeUnit
 
 buildscript {
 	val kotlinVersion = "1.0.5-2"
+	val junitPlatformVersion = "1.0.0-M3"
 	extra["kotlinVersion"] = kotlinVersion
+	extra["junitPlatformVersion"] = junitPlatformVersion
 
 	repositories {
 		mavenCentral()
@@ -12,9 +13,9 @@ buildscript {
 	}
 
 	dependencies {
-		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
+		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
 		classpath("com.github.jengelman.gradle.plugins:shadow:1.2.4")
-		classpath("org.junit.platform:junit-platform-gradle-plugin:1.0.0-M3")
+		classpath("org.junit.platform:junit-platform-gradle-plugin:$junitPlatformVersion")
 	}
 }
 
@@ -29,18 +30,13 @@ version = "1.0.0-SNAPSHOT"
 
 repositories {
 	mavenCentral()
-	jcenter()
 	maven { setUrl("https://repo.spring.io/snapshot") }
+	maven { setUrl("https://repo.spring.io/milestone") }
 }
 
 configure<JavaPluginConvention> {
 	setSourceCompatibility(1.8)
 	setTargetCompatibility(1.8)
-	sourceSets.getByName("main").java.srcDirs("$buildDir/generated/source/kapt/main")
-}
-
-configure<KaptExtension> {
-	generateStubs = true
 }
 
 configure<ApplicationPluginConvention> {
@@ -58,10 +54,9 @@ configurations.all {
 val kotlinVersion = extra["kotlinVersion"] as String
 val springVersion = "5.0.0.BUILD-SNAPSHOT"
 val jacksonVersion = "2.8.4"
-val reactorVersion = "3.0.3.RELEASE"
+val reactorVersion = "3.0.4.BUILD-SNAPSHOT"
 val tomcatVersion = "8.5.8"
-val requeryVersion = "1.0.2"
-val junitPlatformVersion = "1.0.0-M3"
+val junitPlatformVersion= extra["junitPlatformVersion"] as String
 val junitJupiterVersion = "5.0.0-M3"
 
 dependencies {
@@ -85,13 +80,11 @@ dependencies {
 	compile("org.slf4j:slf4j-api:1.7.21")
 	compile("ch.qos.logback:logback-classic:1.1.7")
 
-	compile("io.requery:requery:$requeryVersion")
-	compile("io.requery:requery-kotlin:$requeryVersion")
-	kapt("io.requery:requery-processor:$requeryVersion")
-	compile("com.h2database:h2:1.4.191")
+	compile("org.springframework.data:spring-data-mongodb:2.0.0.BUILD-SNAPSHOT")
+	compile("org.mongodb:mongodb-driver-reactivestreams:1.2.0")
 
 	testCompile("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
-	testCompile("org.junit.platform:junit-platform-runner:${junitPlatformVersion}")
+	testCompile("org.junit.platform:junit-platform-runner:$junitPlatformVersion")
 	testRuntime("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
 }
 

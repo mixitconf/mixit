@@ -1,16 +1,15 @@
 package mixit.controller
 
-import mixit.service.UserService
-import org.springframework.http.codec.BodyInserters.fromObject
-import org.springframework.web.reactive.function.HandlerFunction
+import mixit.model.User
+import mixit.repository.UserRepository
+import org.springframework.http.MediaType.APPLICATION_JSON_UTF8
+import org.springframework.http.codec.BodyInserters.fromPublisher
+import org.springframework.web.reactive.function.*
 import org.springframework.web.reactive.function.RequestPredicates.GET
-import org.springframework.web.reactive.function.RouterFunction
-import org.springframework.web.reactive.function.RouterFunctions
-import org.springframework.web.reactive.function.ServerRequest
 import org.springframework.web.reactive.function.ServerResponse.ok
 import java.util.*
 
-class UserController(val service: UserService) : RouterFunction<Any> {
+class UserController(val repository: UserRepository) : RouterFunction<Any> {
 
     // Relax generics check to avoid explicit casting
     override fun route(request: ServerRequest) = RouterFunctions.route(
@@ -20,18 +19,18 @@ class UserController(val service: UserService) : RouterFunction<Any> {
                 GET("/api/user/"), findAll()).route(request) as Optional<HandlerFunction<Any>>
 
     fun findViewById() = HandlerFunction { req ->
-        ok().render("user", mapOf(Pair("user", service.findById(req.pathVariable("id").toLong()))))
+        ok().contentType(APPLICATION_JSON_UTF8).render("user", mapOf(Pair("user", repository.findById(req.pathVariable("id").toLong()).block())))
     }
 
     fun findById() = HandlerFunction { req ->
-        ok().body(fromObject(service.findById(req.pathVariable("id").toLong())))
+        ok().body(fromPublisher(repository.findById(req.pathVariable("id").toLong()), User::class.java))
     }
 
     fun findAllView() = HandlerFunction {
-        ok().render("users", mapOf(Pair("users", service.findAll())))
+        ok().contentType(APPLICATION_JSON_UTF8).render("users", mapOf(Pair("users", repository.findAll().collectList().block())))
     }
 
     fun findAll() = HandlerFunction {
-        ok().body(fromObject(service.findAll()))
+        ok().body(fromPublisher(repository.findAll(), User::class.java))
     }
 }

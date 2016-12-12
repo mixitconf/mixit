@@ -21,10 +21,11 @@ class UserIntegrationTests {
     @Test
     fun findAll() {
         val response = webClient.exchange(GET(baseUrl).accept(APPLICATION_JSON_UTF8).build())
-        StepVerifier.create(response.flatMap{ r -> r.bodyToFlux(User.Instance::class.java)})
-                .consumeNextWith { assert(it == User.Instance(1L, "Robert")) }
-                .consumeNextWith { assert(it == User.Instance(2L, "Raide"))  }
-                .consumeNextWith { assert(it == User.Instance(3L, "Ford")) }
+        StepVerifier.create(response.flatMap{ r -> r.bodyToFlux(User::class.java)})
+                .consumeNextWith {
+                    assert(it == User(1L, "Robert")) }
+                .consumeNextWith { assert(it == User(2L, "Raide"))  }
+                .consumeNextWith { assert(it == User(3L, "Ford")) }
                 .expectComplete()
                 .verify()
     }
