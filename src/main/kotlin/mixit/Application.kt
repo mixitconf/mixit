@@ -14,7 +14,6 @@ import org.springframework.data.mongodb.config.AbstractReactiveMongoConfiguratio
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.data.mongodb.core.mapping.event.LoggingEventListener
-import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRepositories
 import java.util.concurrent.CompletableFuture
 
 
@@ -64,7 +63,6 @@ class Application {
 
     // TODO Replace by function bean registration API when available, see https://jira.spring.io/browse/SPR-14832
     @Configuration
-    @EnableReactiveMongoRepositories
     open class ApplicationConfiguration : AbstractReactiveMongoConfiguration() {
 
         @Bean
