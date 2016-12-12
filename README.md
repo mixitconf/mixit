@@ -16,14 +16,13 @@ The technologies used are:
  - Web framework: [Spring Web Reactive Functional](https://spring.io/blog/2016/09/22/new-in-spring-5-functional-web-framework)
  - Templates: [Handlebars](https://github.com/jknack/handlebars.java)
  - Reactive API: [Reactor](http://projectreactor.io/)
- - Persistence : [Requery](https://github.com/requery/requery) + [H2](http://www.h2database.com/)
+ - Persistence : [Spring Data Reactive MongoDB](https://spring.io/blog/2016/11/28/going-reactive-with-spring-data)
  - Build: [Gradle Script Kotlin](https://github.com/gradle/gradle-script-kotlin)
  - Testing: [JUnit 5](http://junit.org/junit5/)
  
-# Work in progress
+# TODO
 
  - Dependency injection will be updated with the Spring 5 functional bean API when available
- - Requery Reactor integration will be contributed and used
 
 # Getting started
 
