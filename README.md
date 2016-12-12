@@ -5,15 +5,16 @@ This project purpose is to power the Mix-IT 2017 website.
 # Software design
 
 This project software design is an opinionated view of what could be the next generation Java Web applications:
- - Simple
  - Reactive
- - Fast to start, efficient request processing, no classpath scanning
- - Low memory consumption
+ - Simple, fast to start, efficient request processing, no classpath scanning, low memory consumption
  - Cloud Native
+ - [Constructor based injection](http://olivergierke.de/2013/11/why-field-injection-is-evil/)
+ - More functional style and less annotation based than typical Spring applications
 
 The technologies used are:
  - Language: [Kotlin](https://kotlin.link/) 
  - Web framework: [Spring Web Reactive Functional](https://spring.io/blog/2016/09/22/new-in-spring-5-functional-web-framework)
+ - Engine: [Netty](http://netty.io/) used for client and server
  - Templates: [Handlebars](https://github.com/jknack/handlebars.java)
  - Reactive API: [Reactor](http://projectreactor.io/)
  - Persistence : [Spring Data Reactive MongoDB](https://spring.io/blog/2016/11/28/going-reactive-with-spring-data)
@@ -22,13 +23,13 @@ The technologies used are:
  
 # TODO
 
- - Dependency injection will be updated with the Spring 5 functional bean API when available
+ - Switch from Tomcat to Reactor Netty
+ - Dependency injection will be updated with the [Spring 5 functional bean API when available](https://jira.spring.io/browse/SPR-14832)
 
 # Getting started
 
 To import the project in IDEA:
  - Clone the project `git clone https://github.com/mix-it/mixit.git`
- - Build it to generate required classes via the annotation pre-processor: `/.gradlew build`
  - Make sure you have at least IntelliJ IDEA 2016.3
  - Update IDEA Kotlin plugin to 1.1: Tools -> Kotlin -> Configure Kotlin Plugin Updates -> Early Access Preview 1.1
  - Import it in IDEA as a Gradle project
@@ -45,13 +46,7 @@ To package and run the application from the executable JAR:
 java -jar build/libs/mixit-all.jar
 ```
 
-To enable live reload of static resources:
-```
-./gradlew processResources -t
-```
-
 To test the application from a browser, go to `http://localhost:8080/`.
-
 
 # FAQ
 
