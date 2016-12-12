@@ -15,6 +15,7 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.data.mongodb.core.mapping.event.LoggingEventListener
 import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRepositories
+import java.util.concurrent.CompletableFuture
 
 
 class Application {
@@ -30,6 +31,7 @@ class Application {
         userRepository.init()
     }
 
+    // TODO Replace by function bean registration API when available, see https://jira.spring.io/browse/SPR-14832
     private fun appContext() : AnnotationConfigApplicationContext {
         val appContext = AnnotationConfigApplicationContext()
         appContext.register(ApplicationConfiguration::class)
@@ -37,6 +39,7 @@ class Application {
         appContext.register(UserController::class)
         appContext.register(GlobalController::class)
         appContext.register(IfEqHelperSource::class)
+        // TODO Replace by Reactor Netty as soon as static file handling and flushing are fixed
         appContext.register(TomcatServer::class)
         return appContext
     }
@@ -45,11 +48,21 @@ class Application {
         server.start()
     }
 
+    fun await() {
+        val stop = CompletableFuture<Void>()
+        Runtime.getRuntime().addShutdownHook(Thread {
+            stop()
+            stop.complete(null)
+        })
+        stop.get()
+    }
+
     fun stop() {
         server.stop()
         appContext.destroy()
     }
 
+    // TODO Replace by function bean registration API when available, see https://jira.spring.io/browse/SPR-14832
     @Configuration
     @EnableReactiveMongoRepositories
     open class ApplicationConfiguration : AbstractReactiveMongoConfiguration() {

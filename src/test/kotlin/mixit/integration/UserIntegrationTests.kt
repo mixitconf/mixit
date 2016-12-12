@@ -2,6 +2,7 @@ package mixit.integration
 
 import mixit.Application
 import mixit.model.User
+import mixit.support.bodyToFlux
 import org.junit.jupiter.api.*
 import org.springframework.http.MediaType.APPLICATION_JSON_UTF8
 import org.springframework.http.client.reactive.ReactorClientHttpConnector
@@ -21,7 +22,7 @@ class UserIntegrationTests {
     @Test
     fun findAll() {
         val response = webClient.exchange(GET(baseUrl).accept(APPLICATION_JSON_UTF8).build())
-        StepVerifier.create(response.flatMap{ r -> r.bodyToFlux(User::class.java)})
+        StepVerifier.create(response.flatMap{ r -> r.bodyToFlux(User::class)})
                 .consumeNextWith {
                     assert(it == User(1L, "Robert")) }
                 .consumeNextWith { assert(it == User(2L, "Raide"))  }

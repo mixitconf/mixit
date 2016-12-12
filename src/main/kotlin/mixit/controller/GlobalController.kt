@@ -11,7 +11,7 @@ import java.util.*
 
 class GlobalController : RouterFunction<Any> {
 
-    // Relax generics check to avoid explicit casting
+    // TODO Relax generics check to avoid explicit casting
     override fun route(request: ServerRequest) =
         resources("/**", ClassPathResource("static/"))
                 .andRoute(GET("/"), indexView())
