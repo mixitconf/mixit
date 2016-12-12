@@ -6,7 +6,7 @@ This project purpose is to power the Mix-IT 2017 website.
 
 This project software design is an opinionated view of what could be the next generation Java Web applications:
  - Reactive
- - Simple, fast to start, efficient request processing, no classpath scanning, low memory consumption
+ - Simple, fast to start, efficient request processing, low memory consumption
  - Cloud Native
  - [Constructor based injection](http://olivergierke.de/2013/11/why-field-injection-is-evil/)
  - More functional style and less annotation based than typical Spring applications
