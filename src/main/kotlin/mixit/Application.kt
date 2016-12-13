@@ -13,8 +13,11 @@ import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.config.AbstractReactiveMongoConfiguration
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
+import org.springframework.core.env.Environment
 import org.springframework.data.mongodb.core.mapping.event.LoggingEventListener
 import java.util.concurrent.CompletableFuture
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.context.annotation.PropertySource
 
 
 class Application {
@@ -63,12 +66,16 @@ class Application {
 
     // TODO Replace by functional bean registration API when available, see https://jira.spring.io/browse/SPR-14832
     @Configuration
+    @PropertySource("classpath:application.properties")
     open class ApplicationConfiguration : AbstractReactiveMongoConfiguration() {
 
-        @Bean
-        override fun mongoClient() = MongoClients.create()
+        @Autowired
+        lateinit var env: Environment
 
-        override fun getDatabaseName() = "mixit"
+        @Bean
+        override fun mongoClient() = MongoClients.create(env.getProperty("mongo.uri"))
+
+        override fun getDatabaseName() = env.getProperty("mongo.uri").split("/")[3]
 
         @Bean
         open fun mongoEventListener() = LoggingEventListener()
