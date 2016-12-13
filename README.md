@@ -46,6 +46,12 @@ To package and run the application from the executable JAR:
 java -jar build/libs/mixit-all.jar
 ```
 
+To deploy the app on CF:
+```
+./gradlew clean build shadowJar
+cf push
+```
+
 To test the application from a browser, go to `http://localhost:8080/`.
 Technical demo is available at `http://localhost:8080/sample` 
 
