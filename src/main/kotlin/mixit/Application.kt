@@ -30,7 +30,7 @@ class Application {
         userRepository.init()
     }
 
-    // TODO Replace by function bean registration API when available, see https://jira.spring.io/browse/SPR-14832
+    // TODO Replace by functional bean registration API when available, see https://jira.spring.io/browse/SPR-14832
     private fun appContext() : AnnotationConfigApplicationContext {
         val appContext = AnnotationConfigApplicationContext()
         appContext.register(ApplicationConfiguration::class)
@@ -61,7 +61,7 @@ class Application {
         appContext.destroy()
     }
 
-    // TODO Replace by function bean registration API when available, see https://jira.spring.io/browse/SPR-14832
+    // TODO Replace by functional bean registration API when available, see https://jira.spring.io/browse/SPR-14832
     @Configuration
     open class ApplicationConfiguration : AbstractReactiveMongoConfiguration() {
 
