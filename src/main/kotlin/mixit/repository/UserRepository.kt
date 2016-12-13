@@ -6,6 +6,8 @@ import mixit.support.findById
 import org.springframework.data.domain.Sort
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.query.Query
+import reactor.core.publisher.Flux
+import reactor.core.publisher.Mono
 
 class UserRepository(val db: ReactiveMongoTemplate) {
 
@@ -15,7 +17,7 @@ class UserRepository(val db: ReactiveMongoTemplate) {
         db.insert(User(3L, "Ford")).subscribe()
     }
 
-    fun findById(id: Long) = db.findById(id, User::class)
+    fun findById(id: Long) : Mono<User> = db.findById(id)
 
-    fun findAll() = db.find(Query().with(Sort("id")), User::class)
+    fun findAll() : Flux<User> = db.find(Query().with(Sort("id")))
 }

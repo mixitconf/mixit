@@ -10,6 +10,7 @@ This project software design is an opinionated view of what could be the next ge
  - Cloud Native
  - [Constructor based injection](http://olivergierke.de/2013/11/why-field-injection-is-evil/)
  - More functional style and less annotation based than typical Spring applications
+ - Take advantage of [Kotlin extensions](https://kotlinlang.org/docs/reference/extensions.html) and [reified type parameters](https://kotlinlang.org/docs/reference/inline-functions.html#reified-type-parameters)
 
 The technologies used are:
  - Language: [Kotlin](https://kotlin.link/) 

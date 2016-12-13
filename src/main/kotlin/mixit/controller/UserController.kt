@@ -1,9 +1,8 @@
 package mixit.controller
 
-import mixit.model.User
 import mixit.repository.UserRepository
+import mixit.support.fromPublisher
 import org.springframework.http.MediaType.APPLICATION_JSON_UTF8
-import org.springframework.http.codec.BodyInserters.fromPublisher
 import org.springframework.web.reactive.function.*
 import org.springframework.web.reactive.function.RequestPredicates.GET
 import org.springframework.web.reactive.function.ServerResponse.ok
@@ -24,7 +23,7 @@ class UserController(val repository: UserRepository) : RouterFunction<Any> {
     }
 
     fun findById() = HandlerFunction { req ->
-        ok().body(fromPublisher(repository.findById(req.pathVariable("id").toLong()), User::class.java))
+        ok().body(fromPublisher(repository.findById(req.pathVariable("id").toLong())))
     }
 
     // TODO Avoid using block() and perform non-blocking rendering of the view when https://jira.spring.io/browse/SPR-14870 will be fixed
@@ -33,6 +32,6 @@ class UserController(val repository: UserRepository) : RouterFunction<Any> {
     }
 
     fun findAll() = HandlerFunction {
-        ok().body(fromPublisher(repository.findAll(), User::class.java))
+        ok().body(fromPublisher(repository.findAll()))
     }
 }
