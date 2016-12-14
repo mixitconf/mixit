@@ -15,7 +15,7 @@ import reactor.ipc.netty.NettyContext
 import reactor.ipc.netty.http.server.HttpServer
 import java.util.concurrent.atomic.AtomicReference
 
-class ReactorNettyServer(hostname: String = "localhost", port: Int = 8080) : Server, ApplicationContextAware, InitializingBean {
+class ReactorNettyServer(hostname: String, port: Int) : Server, ApplicationContextAware, InitializingBean {
 
     override val isRunning: Boolean
         get() {
@@ -45,7 +45,9 @@ class ReactorNettyServer(hostname: String = "localhost", port: Int = 8080) : Ser
     override fun start() {
         if (!this.isRunning) {
             if (this.nettyContext.get() == null) {
-                this.nettyContext.set(server.newHandler(reactorHandler).block())
+                this.nettyContext.set(server.newHandler(reactorHandler)
+                        .doOnNext { println("Reactor Netty server started on ${it.address()}") }
+                        .block())
             }
         }
     }

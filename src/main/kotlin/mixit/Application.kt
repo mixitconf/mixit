@@ -20,10 +20,11 @@ class Application {
     val context: GenericApplicationContext
     val server: Server
 
-    constructor(hostname: String = "localhost", port: Int = 8080) {
+    constructor(hostname: String = "0.0.0.0", port: Int? = null) {
         context = GenericApplicationContext()
-        context.environment.addPropertySource("application.properties")
-        val mongoUri = context.environment.getProperty("mongo.uri")
+        val env = context.environment
+        env.addPropertySource("application.properties")
+        val mongoUri = env.getProperty("mongo.uri")
         val mongoDatabase = mongoUri.split("/")[3]
 
         context.registerBean(IfEqHelperSource::class)
@@ -43,7 +44,7 @@ class Application {
         context.registerBean(UserRepository::class)
         context.registerBean(UserController::class)
         context.registerBean(GlobalController::class)
-        context.registerBean(Supplier { ReactorNettyServer(hostname, port) })
+        context.registerBean(Supplier { ReactorNettyServer(hostname, port ?: env.getProperty("server.port").toInt()) })
         context.refresh()
 
         server = context.getBean(Server::class)
