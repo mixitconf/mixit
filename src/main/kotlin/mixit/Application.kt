@@ -43,7 +43,7 @@ class Application {
         context.registerBean(UserRepository::class)
         context.registerBean(UserController::class)
         context.registerBean(GlobalController::class)
-        context.registerBean(TomcatServer::class)
+        context.registerBean(ReactorNettyServer::class)
         context.refresh()
 
         server = context.getBean(Server::class)
