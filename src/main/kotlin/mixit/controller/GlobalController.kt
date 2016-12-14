@@ -7,16 +7,17 @@ import org.springframework.web.reactive.function.RouterFunction
 import org.springframework.web.reactive.function.RouterFunctions.resources
 import org.springframework.web.reactive.function.ServerRequest
 import org.springframework.web.reactive.function.ServerResponse
-import java.util.*
+import reactor.core.publisher.Mono
 
-class GlobalController : RouterFunction<Any> {
+
+class GlobalController : RouterFunction<ServerResponse> {
 
     // TODO Relax generics check to avoid explicit casting
     override fun route(request: ServerRequest) =
         resources("/**", ClassPathResource("static/"))
                 .andRoute(GET("/"), indexView())
                 .andRoute(GET("/sample"), sampleView())
-                .route(request) as Optional<HandlerFunction<Any>>
+                .route(request) as Mono<HandlerFunction<ServerResponse>>
 
     fun indexView() = HandlerFunction { ServerResponse.ok().render("index") }
 
