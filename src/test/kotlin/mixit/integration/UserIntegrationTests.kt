@@ -12,8 +12,8 @@ import reactor.test.StepVerifier
 
 class UserIntegrationTests {
 
-    val baseUrl = "http://localhost:8080/api/user/"
-    val application = Application()
+    val baseUrl = "http://localhost:8081/api/user/"
+    val application = Application(port = 8081)
     val webClient = WebClient.builder(ReactorClientHttpConnector()).build()
 
     @BeforeEach
@@ -23,8 +23,7 @@ class UserIntegrationTests {
     fun findAll() {
         val response = webClient.exchange(GET(baseUrl).accept(APPLICATION_JSON_UTF8).build())
         StepVerifier.create(response.flatMap{ r -> r.bodyToFlux(User::class)})
-                .consumeNextWith {
-                    assert(it == User(1L, "Robert")) }
+                .consumeNextWith { assert(it == User(1L, "Robert")) }
                 .consumeNextWith { assert(it == User(2L, "Raide"))  }
                 .consumeNextWith { assert(it == User(3L, "Ford")) }
                 .expectComplete()

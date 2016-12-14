@@ -20,7 +20,7 @@ class Application {
     val context: GenericApplicationContext
     val server: Server
 
-    constructor() {
+    constructor(hostname: String = "localhost", port: Int = 8080) {
         context = GenericApplicationContext()
         context.environment.addPropertySource("application.properties")
         val mongoUri = context.environment.getProperty("mongo.uri")
@@ -43,7 +43,7 @@ class Application {
         context.registerBean(UserRepository::class)
         context.registerBean(UserController::class)
         context.registerBean(GlobalController::class)
-        context.registerBean(ReactorNettyServer::class)
+        context.registerBean(Supplier { ReactorNettyServer(hostname, port) })
         context.refresh()
 
         server = context.getBean(Server::class)
