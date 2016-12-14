@@ -16,7 +16,7 @@ class LocaleWebFilter : WebFilter {
         val request = exchange.request
         return if (request.uri.path.startsWith("/en/")) {
             exchange.attributes.put("locale", Locale.ENGLISH)
-            chain.filter(exchange.mutate().setRequest(PathSubstringServerHttpRequestDecorator(request, 3)).build())
+            chain.filter(exchange.mutate().request(PathSubstringServerHttpRequestDecorator(request, 3)).build())
         } else {
             exchange.attributes.put("locale", Locale.FRENCH)
             chain.filter(exchange)
