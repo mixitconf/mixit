@@ -1,11 +1,14 @@
 package mixit.support
 
+import com.github.jknack.handlebars.springreactive.HandlebarsViewResolver
 import org.reactivestreams.Publisher
 import org.springframework.beans.MutablePropertyValues
+import org.springframework.beans.factory.ListableBeanFactory
 import org.springframework.beans.factory.SupplierFactoryBean
 import org.springframework.beans.factory.config.ConstructorArgumentValues
 import org.springframework.beans.factory.support.AbstractBeanDefinition.AUTOWIRE_CONSTRUCTOR
 import org.springframework.beans.factory.support.RootBeanDefinition
+import org.springframework.context.ApplicationContext
 import org.springframework.context.support.AbstractApplicationContext
 import org.springframework.context.support.GenericApplicationContext
 import org.springframework.core.env.ConfigurableEnvironment
@@ -25,6 +28,11 @@ import java.util.function.Supplier
 import kotlin.reflect.KClass
 
 fun <T : Any> AbstractApplicationContext.getBean(type: KClass<T>) = getBean(type.java)
+
+fun <T : Any> ApplicationContext.getBean(type: KClass<T>): T = getBean(type.java)
+
+fun <T : Any> ListableBeanFactory.getBeansOfType(type: KClass<T>): Map<String, T> = getBeansOfType(type.java)
+
 
 inline fun <reified T : Any> GenericApplicationContext.registerBean(supplier: Supplier<T>) {
     val beanName: String = T::class.simpleName!!

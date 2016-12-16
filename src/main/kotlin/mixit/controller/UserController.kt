@@ -18,7 +18,7 @@ class UserController(val repository: UserRepository) : RouterFunction<ServerResp
                 GET("/api/user/"), findAll()).route(request) as Mono<HandlerFunction<ServerResponse>>
 
     fun findViewById() = HandlerFunction { req ->
-        ok().render("user", mapOf(Pair("user", repository.findById(req.pathVariable("id").toLong()))))
+        repository.findById(req.pathVariable("id").toLong()).then{ u -> ok().render("user", mapOf(Pair("user", u))) }
     }
 
     fun findById() = HandlerFunction { req ->
@@ -26,7 +26,7 @@ class UserController(val repository: UserRepository) : RouterFunction<ServerResp
     }
 
     fun findAllView() = HandlerFunction {
-        ok().render("users", mapOf(Pair("users", repository.findAll().collectList())))
+        repository.findAll().collectList().then{ u -> ok().render("users",  mapOf(Pair("users", u))) }
     }
 
     fun findAll() = HandlerFunction {
