@@ -6,10 +6,10 @@ import org.springframework.beans.factory.InitializingBean
 import org.springframework.context.ApplicationContext
 import org.springframework.context.ApplicationContextAware
 import org.springframework.http.server.reactive.ReactorHttpHandlerAdapter
+import org.springframework.web.reactive.function.server.HandlerStrategies
+import org.springframework.web.reactive.function.server.RouterFunction
+import org.springframework.web.reactive.function.server.RouterFunctions
 
-import org.springframework.web.reactive.function.HandlerStrategies
-import org.springframework.web.reactive.function.RouterFunction
-import org.springframework.web.reactive.function.RouterFunctions
 import org.springframework.web.server.adapter.WebHttpHandlerBuilder
 import reactor.ipc.netty.NettyContext
 import reactor.ipc.netty.http.server.HttpServer

@@ -6,8 +6,8 @@ import mixit.support.bodyToFlux
 import org.junit.jupiter.api.*
 import org.springframework.http.MediaType.APPLICATION_JSON_UTF8
 import org.springframework.http.client.reactive.ReactorClientHttpConnector
-import org.springframework.web.client.reactive.ClientRequest.GET
-import org.springframework.web.client.reactive.WebClient
+import org.springframework.web.reactive.function.client.ClientRequest.GET
+import org.springframework.web.reactive.function.client.WebClient
 import reactor.test.StepVerifier
 
 class UserIntegrationTests {

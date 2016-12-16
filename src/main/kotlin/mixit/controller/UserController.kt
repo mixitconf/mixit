@@ -3,9 +3,9 @@ package mixit.controller
 import mixit.repository.UserRepository
 import mixit.support.fromPublisher
 import org.springframework.http.MediaType.APPLICATION_JSON_UTF8
-import org.springframework.web.reactive.function.*
-import org.springframework.web.reactive.function.RequestPredicates.GET
-import org.springframework.web.reactive.function.ServerResponse.ok
+import org.springframework.web.reactive.function.server.*
+import org.springframework.web.reactive.function.server.RequestPredicates.GET
+import org.springframework.web.reactive.function.server.ServerResponse.ok
 import reactor.core.publisher.Mono
 
 class UserController(val repository: UserRepository) : RouterFunction<ServerResponse> {

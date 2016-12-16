@@ -1,12 +1,12 @@
 package mixit.controller
 
 import org.springframework.core.io.ClassPathResource
-import org.springframework.web.reactive.function.HandlerFunction
-import org.springframework.web.reactive.function.RequestPredicates.GET
-import org.springframework.web.reactive.function.RouterFunction
-import org.springframework.web.reactive.function.RouterFunctions.resources
-import org.springframework.web.reactive.function.ServerRequest
-import org.springframework.web.reactive.function.ServerResponse
+import org.springframework.web.reactive.function.server.HandlerFunction
+import org.springframework.web.reactive.function.server.RequestPredicates.GET
+import org.springframework.web.reactive.function.server.RouterFunction
+import org.springframework.web.reactive.function.server.RouterFunctions.resources
+import org.springframework.web.reactive.function.server.ServerRequest
+import org.springframework.web.reactive.function.server.ServerResponse
 import reactor.core.publisher.Mono
 
 
