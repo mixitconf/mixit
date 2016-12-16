@@ -16,3 +16,4 @@ font/woff2						woff2
 font/opentype					otf
 application/vnd.ms-fontobject	eot
 font/truetype					ttf
+image/vnd.microsoft.icon		ico
