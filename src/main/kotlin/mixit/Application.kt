@@ -44,7 +44,7 @@ class Application {
         context.registerBean(UserRepository::class)
         context.registerBean(UserController::class)
         context.registerBean(GlobalController::class)
-        context.registerBean(Supplier { TomcatServer(hostname, port ?: env.getProperty("server.port").toInt()) })
+        context.registerBean(Supplier { ReactorNettyServer(hostname, port ?: env.getProperty("server.port").toInt()) })
         context.refresh()
 
         server = context.getBean(Server::class)
