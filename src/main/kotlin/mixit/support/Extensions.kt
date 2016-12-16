@@ -50,7 +50,9 @@ fun ConfigurableEnvironment.addPropertySource(location: String) {
     propertySources.addFirst(ResourcePropertySource(EncodedResource(ClassPathResource(location), StandardCharsets.UTF_8)))
 }
 
-fun ClientResponse.bodyToFlux(type: KClass<*>) = bodyToFlux(type.java)
+fun <T : Any> ClientResponse.bodyToFlux(type: KClass<T>) : Flux<T> = bodyToFlux(type.java)
+
+fun <T : Any> ClientResponse.bodyToMono(type: KClass<T>) : Mono<T> = bodyToMono(type.java)
 
 inline fun <reified T : Publisher<S>, reified S : Any> fromPublisher(publisher: T) : BodyInserter<T, ReactiveHttpOutputMessage> =
     BodyInserters.fromPublisher(publisher, S::class.java)
