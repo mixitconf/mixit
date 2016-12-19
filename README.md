@@ -22,11 +22,10 @@ The technologies used are:
  - Reactive API: [Reactor](http://projectreactor.io/)
  - Persistence : [Spring Data Reactive MongoDB](https://spring.io/blog/2016/11/28/going-reactive-with-spring-data)
  - Build: [Gradle Script Kotlin](https://github.com/gradle/gradle-script-kotlin)
- - Testing: [JUnit 5](http://junit.org/junit5/)
+ - Testing: [Spek](https://jetbrains.github.io/spek/)
  
 # TODO
 
- - Switch from Tomcat to Reactor Netty
  - Dependency injection will be updated with the [Spring 5 functional bean API when available](https://jira.spring.io/browse/SPR-14832)
 
 # Getting started
