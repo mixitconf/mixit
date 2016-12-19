@@ -30,6 +30,7 @@ version = "1.0.0-SNAPSHOT"
 
 repositories {
 	mavenCentral()
+	maven { setUrl("https://dl.bintray.com/jetbrains/spek") }
 	maven { setUrl("https://repo.spring.io/snapshot") }
 	maven { setUrl("https://repo.spring.io/milestone") }
 }
@@ -56,7 +57,7 @@ val springVersion = "5.0.0.BUILD-SNAPSHOT"
 val jacksonVersion = "2.8.4"
 val reactorVersion = "3.0.4.BUILD-SNAPSHOT"
 val junitPlatformVersion= extra["junitPlatformVersion"] as String
-val junitJupiterVersion = "5.0.0-M3"
+val spekVersion = "1.1.0-beta2"
 
 dependencies {
 	compile("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
@@ -79,9 +80,7 @@ dependencies {
 	compile("org.springframework.data:spring-data-mongodb:2.0.0.BUILD-SNAPSHOT")
 	compile("org.mongodb:mongodb-driver-reactivestreams:1.2.0")
 
-	testCompile("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
 	testCompile("org.junit.platform:junit-platform-runner:$junitPlatformVersion")
-	testRuntime("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
+	testCompile("org.jetbrains.spek:spek-api:$spekVersion")
+	testRuntime("org.jetbrains.spek:spek-junit-platform-engine:$spekVersion")
 }
-
-

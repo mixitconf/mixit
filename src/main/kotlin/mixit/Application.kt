@@ -19,8 +19,12 @@ class Application {
 
     val context: GenericApplicationContext
     val server: Server
+    val hostname: String
+    val port: Int?
 
     constructor(hostname: String = "0.0.0.0", port: Int? = null) {
+        this.hostname = hostname
+        this.port = port
         context = GenericApplicationContext()
         val env = context.environment
         env.addPropertySource("application.properties")
