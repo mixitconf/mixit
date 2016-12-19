@@ -1,11 +1,7 @@
 package mixit.support
 
-import com.github.jknack.handlebars.springreactive.HandlebarsViewResolver
 import org.reactivestreams.Publisher
-import org.springframework.beans.MutablePropertyValues
 import org.springframework.beans.factory.ListableBeanFactory
-import org.springframework.beans.factory.SupplierFactoryBean
-import org.springframework.beans.factory.config.ConstructorArgumentValues
 import org.springframework.beans.factory.support.AbstractBeanDefinition.AUTOWIRE_CONSTRUCTOR
 import org.springframework.beans.factory.support.RootBeanDefinition
 import org.springframework.context.ApplicationContext
@@ -40,10 +36,7 @@ inline fun <reified T : Any> GenericApplicationContext.registerBean(supplier: Su
 }
 
 inline fun <reified T : Any> GenericApplicationContext.registerBean(beanName: String, supplier: Supplier<T>) {
-    val constructorArgumentValues = ConstructorArgumentValues()
-    constructorArgumentValues.addIndexedArgumentValue(0, T::class.java)
-    constructorArgumentValues.addIndexedArgumentValue(1, supplier)
-    val factoryBeanDefinition = RootBeanDefinition(SupplierFactoryBean::class.java, constructorArgumentValues, MutablePropertyValues())
+    val factoryBeanDefinition = RootBeanDefinition(T::class.java, supplier)
     registerBeanDefinition(beanName, factoryBeanDefinition)
 }
 
