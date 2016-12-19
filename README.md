@@ -4,12 +4,14 @@ This project purpose is to power the Mix-IT 2017 website.
 
 # Software design
 
-This project software design is an opinionated view of what could be the next generation Java Web applications:
+This project software design goal is to demonstrate what a functional web application
+developed with Spring Framework 5 and Kotlin can look like:
  - Reactive
  - Simple, fast to start, efficient request processing, low memory consumption
  - Cloud Native
  - [Constructor based injection](http://olivergierke.de/2013/11/why-field-injection-is-evil/)
  - More functional style and less annotation based than typical Spring applications
+ - Immutable Pojos
  - Take advantage of [Kotlin extensions](https://kotlinlang.org/docs/reference/extensions.html) and [reified type parameters](https://kotlinlang.org/docs/reference/inline-functions.html#reified-type-parameters)
 
 The technologies used are:
