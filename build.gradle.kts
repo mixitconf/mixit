@@ -28,7 +28,7 @@ buildscript {
 apply {
 	plugin("idea")
 	plugin("kotlin")
-	//plugin("kotlin-noarg")
+	//plugin("kotlin-noarg") Not stable yet in IDEA
 	plugin("application")
 	plugin("org.junit.platform.gradle.plugin")
 	plugin("com.github.johnrengelman.shadow")
@@ -37,6 +37,7 @@ apply {
 version = "1.0.0-SNAPSHOT"
 
 repositories {
+	mavenLocal()
 	mavenCentral()
 	maven { setUrl("https://dl.bintray.com/jetbrains/spek") }
 	maven{ setUrl("https://dl.bintray.com/kotlin/kotlin-eap") }
@@ -78,7 +79,7 @@ fun FiltersExtension.engines(setup: EnginesExtension.() -> Unit) {
 }
 
 //configure<NoArgExtension> {
-	//annotation("org.springframework.data.mongodb.core.mapping.Document")
+//	annotation("org.springframework.data.mongodb.core.mapping.Document")
 //}
 
 configurations.all {
@@ -89,7 +90,6 @@ val kotlinVersion = extra["kotlinVersion"] as String
 val springVersion = "5.0.0.BUILD-SNAPSHOT"
 val jacksonVersion = "2.8.4"
 val reactorVersion = "3.0.4.RELEASE"
-val reactorNettyVersion = "0.6.0.RELEASE"
 val junitPlatformVersion= extra["junitPlatformVersion"] as String
 val spekVersion = "1.1.0-beta2"
 
@@ -98,12 +98,10 @@ dependencies {
 	compile("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
 
 	compile("org.springframework:spring-web-reactive:$springVersion")
-	compile("com.github.jknack:handlebars:4.0.6")
+	compile("com.samskivert:jmustache:1.13")
 
-	compile("io.projectreactor.ipc:reactor-netty:$reactorNettyVersion") {
-		exclude(module = "reactor-core")
-	}
 	compile("io.projectreactor:reactor-core:$reactorVersion")
+	compile("io.projectreactor.ipc:reactor-netty:0.6.0.RELEASE")
 	testCompile("io.projectreactor.addons:reactor-test:$reactorVersion")
 
 	compile("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion")

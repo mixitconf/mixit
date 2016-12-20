@@ -1,8 +1,6 @@
 package mixit.support
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import com.github.jknack.handlebars.springreactive.HandlebarsViewResolver
-
 import org.springframework.beans.factory.InitializingBean
 import org.springframework.context.ApplicationContext
 import org.springframework.context.ApplicationContextAware
@@ -18,6 +16,7 @@ import org.springframework.http.server.reactive.ReactorHttpHandlerAdapter
 import org.springframework.web.reactive.function.server.HandlerStrategies
 import org.springframework.web.reactive.function.server.RouterFunction
 import org.springframework.web.reactive.function.server.RouterFunctions
+import org.springframework.web.reactive.result.view.ViewResolver
 
 import org.springframework.web.server.adapter.WebHttpHandlerBuilder
 import reactor.ipc.netty.NettyContext
@@ -43,7 +42,7 @@ class ReactorNettyServer(hostname: String, port: Int) : Server, ApplicationConte
 
     override fun afterPropertiesSet() {
         val controllers = appContext.getBeansOfType(RouterFunction::class).values
-        val viewResolver = appContext.getBean(HandlebarsViewResolver::class)
+        val viewResolver = appContext.getBean(ViewResolver::class)
         val router = controllers.reduce(RouterFunction<*>::and)
         val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().failOnUnknownProperties(false).build()
         val strategies = HandlerStrategies.empty()
@@ -55,7 +54,7 @@ class ReactorNettyServer(hostname: String, port: Int) : Server, ApplicationConte
                 .messageWriter(EncoderHttpMessageWriter(Jackson2JsonEncoder(objectMapper)))
                 .build()
         val webHandler = RouterFunctions.toHttpHandler(router, strategies)
-        val httpHandler = WebHttpHandlerBuilder.webHandler(webHandler).filters(LocaleWebFilter()).build()
+        val httpHandler = WebHttpHandlerBuilder.webHandler(webHandler).filters(MixitWebFilter()).build()
         reactorHandler = ReactorHttpHandlerAdapter(httpHandler)
     }
 

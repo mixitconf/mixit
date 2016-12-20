@@ -1,8 +1,8 @@
 package mixit
 
-import com.github.jknack.handlebars.springreactive.HandlebarsViewResolver
 import com.mongodb.ConnectionString
 import com.mongodb.DBRef
+import com.samskivert.mustache.Mustache
 import mixit.controller.GlobalController
 import mixit.controller.UserController
 import mixit.repository.UserRepository
@@ -13,19 +13,20 @@ import org.springframework.context.support.ResourceBundleMessageSource
 import org.springframework.data.convert.Jsr310Converters
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.SimpleReactiveMongoDatabaseFactory
+import org.springframework.web.reactive.result.view.mustache.MustacheResourceTemplateLoader
+import org.springframework.web.reactive.result.view.mustache.MustacheViewResolver
 import org.springframework.data.mongodb.core.convert.*
 import org.springframework.data.mongodb.core.mapping.MongoMappingContext
 import org.springframework.data.mongodb.core.mapping.MongoPersistentEntity
 import org.springframework.data.mongodb.core.mapping.MongoPersistentProperty
 import org.springframework.data.mongodb.repository.support.ReactiveMongoRepositoryFactory
-import org.springframework.data.mongodb.core.mapping.event.LoggingEventListener
 import java.util.concurrent.CompletableFuture
 import java.util.function.Supplier
 
 
 class Application {
 
-    val context: AnnotationConfigApplicationContext
+    val context = AnnotationConfigApplicationContext()
     val server: Server
     val hostname: String
     val port: Int?
@@ -33,23 +34,25 @@ class Application {
     constructor(hostname: String = "0.0.0.0", port: Int? = null) {
         this.hostname = hostname
         this.port = port
-        context = AnnotationConfigApplicationContext()
         val env = context.environment
         env.addPropertySource("application.properties")
         val mongoUri = env.getProperty("mongo.uri")
 
-        context.registerBean(IfEqHelperSource::class)
         context.registerBean("messageSource", Supplier {
             val messageSource = ResourceBundleMessageSource()
             messageSource.setBasename("messages")
             messageSource
         })
         context.registerBean(Supplier {
-            val viewResolver = HandlebarsViewResolver()
-            viewResolver.setPrefix("/templates/")
-            viewResolver
+            val prefix = "classpath:/templates/"
+            val suffix = ".mustache"
+            val loader = MustacheResourceTemplateLoader(prefix, suffix)
+            val resolver = MustacheViewResolver()
+            resolver.setPrefix(prefix)
+            resolver.setSuffix(suffix)
+            resolver.setCompiler(Mustache.compiler().withLoader(loader))
+            resolver
         })
-        context.registerBean(LoggingEventListener::class)
         context.registerBean(Supplier {
             val factory = SimpleReactiveMongoDatabaseFactory(ConnectionString(mongoUri))
             val conversions = CustomConversions(Jsr310Converters.getConvertersToRegister().toMutableList())

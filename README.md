@@ -18,7 +18,7 @@ The technologies used are:
  - Language: [Kotlin](https://kotlin.link/) 
  - Web framework: [Spring Web Reactive Functional](https://spring.io/blog/2016/09/22/new-in-spring-5-functional-web-framework)
  - Engine: [Netty](http://netty.io/) used for client and server
- - Templates: [Handlebars](https://github.com/jknack/handlebars.java)
+ - Templates: [Mustache](https://github.com/samskivert/jmustache)
  - Reactive API: [Reactor](http://projectreactor.io/)
  - Persistence : [Spring Data Reactive MongoDB](https://spring.io/blog/2016/11/28/going-reactive-with-spring-data)
  - Build: [Gradle Script Kotlin](https://github.com/gradle/gradle-script-kotlin)
