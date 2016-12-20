@@ -1,17 +1,24 @@
 package mixit
 
 import com.github.jknack.handlebars.springreactive.HandlebarsViewResolver
-import com.mongodb.reactivestreams.client.MongoClient
-import com.mongodb.reactivestreams.client.MongoClients
+import com.mongodb.ConnectionString
+import com.mongodb.DBRef
 import mixit.controller.GlobalController
 import mixit.controller.UserController
 import mixit.repository.UserRepository
 import mixit.support.*
+import org.bson.Document
 import org.springframework.context.support.ResourceBundleMessageSource
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.mapping.event.LoggingEventListener
 import java.util.concurrent.CompletableFuture
 import org.springframework.context.support.GenericApplicationContext
+import org.springframework.data.convert.Jsr310Converters
+import org.springframework.data.mongodb.core.SimpleReactiveMongoDatabaseFactory
+import org.springframework.data.mongodb.core.convert.*
+import org.springframework.data.mongodb.core.mapping.MongoMappingContext
+import org.springframework.data.mongodb.core.mapping.MongoPersistentEntity
+import org.springframework.data.mongodb.core.mapping.MongoPersistentProperty
 import java.util.function.Supplier
 
 
@@ -29,7 +36,6 @@ class Application {
         val env = context.environment
         env.addPropertySource("application.properties")
         val mongoUri = env.getProperty("mongo.uri")
-        val mongoDatabase = mongoUri.split("/")[3]
 
         context.registerBean(IfEqHelperSource::class)
         context.registerBean("messageSource", Supplier {
@@ -43,8 +49,16 @@ class Application {
             viewResolver
         })
         context.registerBean(LoggingEventListener::class)
-        context.registerBean(Supplier { MongoClients.create(mongoUri) })
-        context.registerBean(Supplier { ReactiveMongoTemplate(context.getBean(MongoClient::class), mongoDatabase) })
+        context.registerBean(Supplier {
+            val factory = SimpleReactiveMongoDatabaseFactory(ConnectionString(mongoUri))
+            val conversions = CustomConversions(Jsr310Converters.getConvertersToRegister().toMutableList())
+            val mappingContext = MongoMappingContext()
+            mappingContext.setSimpleTypeHolder(conversions.simpleTypeHolder)
+            mappingContext.initialize()
+            val mappingConverter = MappingMongoConverter(NoOpDbRefResolver(), mappingContext)
+            mappingConverter.setCustomConversions(conversions)
+            ReactiveMongoTemplate(factory, mappingConverter)
+        })
         context.registerBean(UserRepository::class)
         context.registerBean(UserController::class)
         context.registerBean(GlobalController::class)
@@ -72,6 +86,26 @@ class Application {
     fun stop() {
         context.destroy()
         server.stop()
+    }
+
+    // TODO to be removed when we can, Spring Data MongoDB should not require that
+    inner class NoOpDbRefResolver : DbRefResolver {
+
+        override fun resolveDbRef(property: MongoPersistentProperty, dbref: DBRef, callback: DbRefResolverCallback, proxyHandler: DbRefProxyHandler?): Any? {
+            return null
+        }
+
+        override fun createDbRef(annotation: org.springframework.data.mongodb.core.mapping.DBRef?, entity: MongoPersistentEntity<*>?, id: Any?): DBRef? {
+            return null
+        }
+
+        override fun fetch(dbRef: DBRef): Document? {
+            return null
+        }
+
+        override fun bulkFetch(dbRefs: MutableList<DBRef>?): MutableList<Document>? {
+            return null
+        }
     }
 
 }
