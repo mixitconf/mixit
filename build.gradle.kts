@@ -1,11 +1,12 @@
 import com.github.jengelman.gradle.plugins.shadow.ShadowExtension
+import org.jetbrains.kotlin.noarg.gradle.NoArgExtension
 import org.junit.platform.gradle.plugin.EnginesExtension
 import org.junit.platform.gradle.plugin.FiltersExtension
 import org.junit.platform.gradle.plugin.JUnitPlatformExtension
 import java.util.concurrent.TimeUnit
 
 buildscript {
-	val kotlinVersion = "1.0.5-2"
+	val kotlinVersion = "1.0.6-eap-112"
 	val junitPlatformVersion = "1.0.0-M3"
 	extra["kotlinVersion"] = kotlinVersion
 	extra["junitPlatformVersion"] = junitPlatformVersion
@@ -13,17 +14,21 @@ buildscript {
 	repositories {
 		mavenCentral()
 		jcenter()
+		maven{ setUrl("https://dl.bintray.com/kotlin/kotlin-eap") }
 	}
 
 	dependencies {
 		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
+		classpath("org.jetbrains.kotlin:kotlin-noarg:$kotlinVersion")
 		classpath("com.github.jengelman.gradle.plugins:shadow:1.2.4")
 		classpath("org.junit.platform:junit-platform-gradle-plugin:$junitPlatformVersion")
 	}
 }
 
 apply {
+	plugin("idea")
 	plugin("kotlin")
+	plugin("kotlin-noarg")
 	plugin("application")
 	plugin("org.junit.platform.gradle.plugin")
 	plugin("com.github.johnrengelman.shadow")
@@ -34,6 +39,7 @@ version = "1.0.0-SNAPSHOT"
 repositories {
 	mavenCentral()
 	maven { setUrl("https://dl.bintray.com/jetbrains/spek") }
+	maven{ setUrl("https://dl.bintray.com/kotlin/kotlin-eap") }
 	maven { setUrl("https://repo.spring.io/snapshot") }
 	maven { setUrl("https://repo.spring.io/milestone") }
 }
@@ -69,6 +75,10 @@ fun FiltersExtension.engines(setup: EnginesExtension.() -> Unit) {
         is ExtensionAware -> extensions.getByType(EnginesExtension::class.java).setup()
         else -> throw Exception("${this::class} must be an instance of ExtensionAware")
     }
+}
+
+configure<NoArgExtension> {
+	annotation("org.springframework.data.mongodb.core.mapping.Document")
 }
 
 configurations.all {

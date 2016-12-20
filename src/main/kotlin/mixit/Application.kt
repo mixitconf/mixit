@@ -5,21 +5,23 @@ import com.mongodb.ConnectionString
 import com.mongodb.DBRef
 import mixit.controller.GlobalController
 import mixit.controller.UserController
+import mixit.data.service.DataInitializer
+import mixit.repository.SponsorRepository
 import mixit.repository.UserRepository
 import mixit.support.*
 import org.bson.Document
 import org.springframework.context.annotation.AnnotationConfigApplicationContext
-import org.springframework.context.support.ResourceBundleMessageSource
-import org.springframework.data.mongodb.core.ReactiveMongoTemplate
-import org.springframework.data.mongodb.core.mapping.event.LoggingEventListener
-import java.util.concurrent.CompletableFuture
 import org.springframework.context.support.GenericApplicationContext
+import org.springframework.context.support.ResourceBundleMessageSource
 import org.springframework.data.convert.Jsr310Converters
+import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.SimpleReactiveMongoDatabaseFactory
 import org.springframework.data.mongodb.core.convert.*
 import org.springframework.data.mongodb.core.mapping.MongoMappingContext
 import org.springframework.data.mongodb.core.mapping.MongoPersistentEntity
 import org.springframework.data.mongodb.core.mapping.MongoPersistentProperty
+import org.springframework.data.mongodb.core.mapping.event.LoggingEventListener
+import java.util.concurrent.CompletableFuture
 import java.util.function.Supplier
 
 
@@ -62,6 +64,8 @@ class Application {
         })
         context.registerBean(UserRepository::class)
         context.registerBean(UserController::class)
+        context.registerBean(DataInitializer::class)
+        context.registerBean(SponsorRepository::class)
         context.registerBean(GlobalController::class)
         context.registerBean(Supplier { ReactorNettyServer(hostname, port ?: env.getProperty("server.port").toInt()) })
         context.refresh()
@@ -69,6 +73,8 @@ class Application {
         server = context.getBean(Server::class)
         val userRepository = context.getBean(UserRepository::class)
         userRepository.init()
+        val sponsorRepository = context.getBean(SponsorRepository::class)
+        sponsorRepository.init()
     }
 
     fun start() {

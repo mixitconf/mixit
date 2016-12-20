@@ -1,6 +1,8 @@
 build/
 .idea/
 *.iml
+*.ipr
+*.iws
 .gradle/
 classes/
 out/
