@@ -1,10 +1,14 @@
 package mixit.support
 
+import com.fasterxml.jackson.databind.ObjectMapper
 import com.github.jknack.handlebars.springreactive.HandlebarsViewResolver
 
 import org.springframework.beans.factory.InitializingBean
 import org.springframework.context.ApplicationContext
 import org.springframework.context.ApplicationContextAware
+import org.springframework.http.codec.DecoderHttpMessageReader
+import org.springframework.http.codec.json.Jackson2JsonDecoder
+import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
 import org.springframework.http.server.reactive.ReactorHttpHandlerAdapter
 import org.springframework.web.reactive.function.server.HandlerStrategies
 import org.springframework.web.reactive.function.server.RouterFunction
@@ -36,7 +40,11 @@ class ReactorNettyServer(hostname: String, port: Int) : Server, ApplicationConte
         val controllers = appContext.getBeansOfType(RouterFunction::class).values
         val viewResolver = appContext.getBean(HandlebarsViewResolver::class)
         val router = controllers.reduce(RouterFunction<*>::and)
-        val strategies = HandlerStrategies.builder().viewResolver(viewResolver).build()
+        val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().failOnUnknownProperties(false).build()
+        val strategies = HandlerStrategies.builder()
+                .viewResolver(viewResolver)
+                .messageReader(DecoderHttpMessageReader(Jackson2JsonDecoder(objectMapper)))
+                .build()
         val webHandler = RouterFunctions.toHttpHandler(router, strategies)
         val httpHandler = WebHttpHandlerBuilder.webHandler(webHandler).filters(LocaleWebFilter()).build()
         reactorHandler = ReactorHttpHandlerAdapter(httpHandler)
