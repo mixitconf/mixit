@@ -7,8 +7,6 @@ import mixit.support.bodyToMono
 import org.jetbrains.spek.api.SubjectSpek
 import org.jetbrains.spek.api.dsl.describe
 import org.jetbrains.spek.api.dsl.it
-import org.junit.platform.runner.JUnitPlatform
-import org.junit.runner.RunWith
 import org.springframework.http.MediaType.APPLICATION_JSON_UTF8
 import org.springframework.http.MediaType.TEXT_HTML
 import org.springframework.http.client.reactive.ReactorClientHttpConnector
@@ -17,7 +15,6 @@ import org.springframework.web.reactive.function.client.ClientRequest.GET
 import org.springframework.web.reactive.function.client.WebClient
 import reactor.test.StepVerifier
 
-@RunWith(JUnitPlatform::class)
 class UserEndpointSpec : SubjectSpek<Application>({
 
     val webClient = WebClient.builder(ReactorClientHttpConnector()).build()

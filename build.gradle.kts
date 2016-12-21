@@ -1,4 +1,7 @@
 import com.github.jengelman.gradle.plugins.shadow.ShadowExtension
+import org.junit.platform.gradle.plugin.EnginesExtension
+import org.junit.platform.gradle.plugin.FiltersExtension
+import org.junit.platform.gradle.plugin.JUnitPlatformExtension
 import java.util.concurrent.TimeUnit
 
 buildscript {
@@ -46,6 +49,26 @@ configure<ApplicationPluginConvention> {
 
 configure<ShadowExtension> {
 	version = null
+}
+
+configure<JUnitPlatformExtension> {
+    filters {
+        engines { "spek" }
+    }
+}
+
+fun JUnitPlatformExtension.filters(setup: FiltersExtension.() -> Unit) {
+    when (this) {
+        is ExtensionAware -> extensions.getByType(FiltersExtension::class.java).setup()
+        else -> throw Exception("${this::class} must be an instance of ExtensionAware")
+    }
+}
+
+fun FiltersExtension.engines(setup: EnginesExtension.() -> Unit) {
+    when (this) {
+        is ExtensionAware -> extensions.getByType(EnginesExtension::class.java).setup()
+        else -> throw Exception("${this::class} must be an instance of ExtensionAware")
+    }
 }
 
 configurations.all {
