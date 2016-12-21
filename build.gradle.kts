@@ -6,7 +6,7 @@ import org.junit.platform.gradle.plugin.JUnitPlatformExtension
 import java.util.concurrent.TimeUnit
 
 buildscript {
-	val kotlinVersion = "1.0.6-eap-112"
+	val kotlinVersion = "1.1-M04"
 	val junitPlatformVersion = "1.0.0-M3"
 	extra["kotlinVersion"] = kotlinVersion
 	extra["junitPlatformVersion"] = junitPlatformVersion
@@ -14,7 +14,7 @@ buildscript {
 	repositories {
 		mavenCentral()
 		jcenter()
-		maven{ setUrl("https://dl.bintray.com/kotlin/kotlin-eap") }
+		maven{ setUrl("https://dl.bintray.com/kotlin/kotlin-eap-1.1") }
 	}
 
 	dependencies {
@@ -39,7 +39,7 @@ version = "1.0.0-SNAPSHOT"
 repositories {
 	mavenCentral()
 	maven { setUrl("https://dl.bintray.com/jetbrains/spek") }
-	maven{ setUrl("https://dl.bintray.com/kotlin/kotlin-eap") }
+	maven{ setUrl("https://dl.bintray.com/kotlin/kotlin-eap-1.1") }
 	maven { setUrl("https://repo.spring.io/snapshot") }
 	maven { setUrl("https://repo.spring.io/milestone") }
 }
