@@ -8,6 +8,7 @@ import mixit.controller.UserController
 import mixit.repository.UserRepository
 import mixit.support.*
 import org.bson.Document
+import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.ResourceBundleMessageSource
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.mapping.event.LoggingEventListener
@@ -24,7 +25,7 @@ import java.util.function.Supplier
 
 class Application {
 
-    val context: GenericApplicationContext
+    val context: AnnotationConfigApplicationContext
     val server: Server
     val hostname: String
     val port: Int?
@@ -32,7 +33,7 @@ class Application {
     constructor(hostname: String = "0.0.0.0", port: Int? = null) {
         this.hostname = hostname
         this.port = port
-        context = GenericApplicationContext()
+        context = AnnotationConfigApplicationContext()
         val env = context.environment
         env.addPropertySource("application.properties")
         val mongoUri = env.getProperty("mongo.uri")

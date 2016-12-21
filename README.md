@@ -24,10 +24,6 @@ The technologies used are:
  - Build: [Gradle Script Kotlin](https://github.com/gradle/gradle-script-kotlin)
  - Testing: [Spek](https://jetbrains.github.io/spek/)
  
-# TODO
-
- - Dependency injection will be updated with the [Spring 5 functional bean API when available](https://jira.spring.io/browse/SPR-14832)
-
 # Getting started
 
 Prerequisite:

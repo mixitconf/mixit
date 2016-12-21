@@ -5,6 +5,7 @@ import org.springframework.beans.factory.ListableBeanFactory
 import org.springframework.beans.factory.support.AbstractBeanDefinition.AUTOWIRE_CONSTRUCTOR
 import org.springframework.beans.factory.support.RootBeanDefinition
 import org.springframework.context.ApplicationContext
+import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.AbstractApplicationContext
 import org.springframework.context.support.GenericApplicationContext
 import org.springframework.core.env.ConfigurableEnvironment
@@ -30,14 +31,12 @@ fun <T : Any> ApplicationContext.getBean(type: KClass<T>): T = getBean(type.java
 fun <T : Any> ListableBeanFactory.getBeansOfType(type: KClass<T>): Map<String, T> = getBeansOfType(type.java)
 
 
-inline fun <reified T : Any> GenericApplicationContext.registerBean(supplier: Supplier<T>) {
-    val beanName: String = T::class.simpleName!!
-    registerBean(beanName, supplier)
+inline fun <reified T : Any> AnnotationConfigApplicationContext.registerBean(supplier: Supplier<T>) {
+    registerBean(T::class.java, supplier)
 }
 
-inline fun <reified T : Any> GenericApplicationContext.registerBean(beanName: String, supplier: Supplier<T>) {
-    val factoryBeanDefinition = RootBeanDefinition(T::class.java, supplier)
-    registerBeanDefinition(beanName, factoryBeanDefinition)
+inline fun <reified T : Any> AnnotationConfigApplicationContext.registerBean(name: String, supplier: Supplier<T>) {
+    registerBean(name, T::class.java, supplier)
 }
 
 fun GenericApplicationContext.registerBean(type: KClass<*>) {
