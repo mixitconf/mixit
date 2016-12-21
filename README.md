@@ -36,7 +36,7 @@ To import the project in IDEA:
  - Update IDEA Kotlin plugin to 1.1: Tools -> Kotlin -> Configure Kotlin Plugin Updates -> Early Access Preview 1.1
  - Install Spek IDEA plugin
  - Import it in IDEA as a Gradle project
- - Right click on `Main.kt` -> Run mixit.MainKt
+ - For now, you need to run the app or test on command line (will be fixed with Kotlin 1.1-M04)
 
 To run the application:
 ```

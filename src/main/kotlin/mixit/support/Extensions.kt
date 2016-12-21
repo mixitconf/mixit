@@ -14,12 +14,16 @@ import org.springframework.core.io.support.EncodedResource
 import org.springframework.core.io.support.ResourcePropertySource
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.query.Query
+import org.springframework.data.mongodb.repository.query.MongoEntityInformation
+import org.springframework.data.mongodb.repository.support.ReactiveMongoRepositoryFactory
 import org.springframework.http.ReactiveHttpOutputMessage
 import org.springframework.web.reactive.function.BodyInserter
 import org.springframework.web.reactive.function.BodyInserters
 import org.springframework.web.reactive.function.client.ClientResponse
+import org.springframework.web.reactive.function.server.ServerRequest
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
+import java.io.Serializable
 import java.nio.charset.StandardCharsets
 import java.util.function.Supplier
 import kotlin.reflect.KClass
@@ -59,6 +63,10 @@ inline fun <reified T : Publisher<S>, reified S : Any> fromPublisher(publisher: 
 
 inline fun <reified T : Any> ClientResponse.bodyToFlux() = bodyToFlux(T::class.java)
 
+inline fun <reified T : Any> ServerRequest.bodyToMono(type: KClass<T>) = bodyToMono(T::class.java)
+
 inline fun <reified T : Any> ReactiveMongoTemplate.findById(id: Any) : Mono<T> = findById(id, T::class.java)
 
 inline fun <reified T : Any> ReactiveMongoTemplate.find(query: Query) : Flux<T> = find(query, T::class.java)
+
+inline fun <T : Any, ID : Serializable> ReactiveMongoRepositoryFactory.getEntityInformation(type: KClass<T>) : MongoEntityInformation<T, ID> = getEntityInformation(type.java)

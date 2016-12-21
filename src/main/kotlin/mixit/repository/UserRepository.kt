@@ -1,23 +1,20 @@
 package mixit.repository
 
 import mixit.model.User
-import mixit.support.find
-import mixit.support.findById
-import org.springframework.data.domain.Sort
+import mixit.support.getEntityInformation
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
-import org.springframework.data.mongodb.core.query.Query
-import reactor.core.publisher.Flux
-import reactor.core.publisher.Mono
+import org.springframework.data.mongodb.repository.support.ReactiveMongoRepositoryFactory
+import org.springframework.data.mongodb.repository.support.SimpleReactiveMongoRepository
 
-class UserRepository(val db: ReactiveMongoTemplate) {
 
-    fun init() {
-        db.insert(User(1L, "Robert")).subscribe()
-        db.insert(User(2L, "Raide")).subscribe()
-        db.insert(User(3L, "Ford")).subscribe()
+class UserRepository(db: ReactiveMongoTemplate, f: ReactiveMongoRepositoryFactory) :
+        SimpleReactiveMongoRepository<User, String>(f.getEntityInformation(User::class), db) {
+
+    fun initData() {
+        deleteAll().block()
+        save(User("robert", "Robert", "Foo")).block()
+        save(User("raide", "Raide", "Bar")).block()
+        save(User("ford", "Ford", "Baz")).block()
     }
 
-    fun findById(id: Long) : Mono<User> = db.findById(id)
-
-    fun findAll() : Flux<User> = db.find(Query().with(Sort("id")))
 }

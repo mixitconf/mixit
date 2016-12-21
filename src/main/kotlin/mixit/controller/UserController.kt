@@ -1,12 +1,18 @@
 package mixit.controller
 
+import mixit.model.User
 import mixit.repository.UserRepository
+import mixit.support.bodyToMono
 import mixit.support.fromPublisher
 import org.springframework.http.MediaType.APPLICATION_JSON_UTF8
+import org.springframework.web.reactive.function.BodyInserters.fromObject
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.RequestPredicates.GET
+import org.springframework.web.reactive.function.server.RequestPredicates.POST
+import org.springframework.web.reactive.function.server.ServerResponse.created
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import reactor.core.publisher.Mono
+import java.net.URI
 
 class UserController(val repository: UserRepository) : RouterFunction<ServerResponse> {
 
@@ -15,21 +21,34 @@ class UserController(val repository: UserRepository) : RouterFunction<ServerResp
                 GET("/user/{id}"), findViewById()).andRoute(
                 GET("/user/"), findAllView()).andRoute(
                 GET("/api/user/{id}"), findById()).andRoute(
-                GET("/api/user/"), findAll()).route(request) as Mono<HandlerFunction<ServerResponse>>
+                GET("/api/user/"), findAll()).andRoute(
+                POST("/api/user/"), create()
+    ).route(request) as Mono<HandlerFunction<ServerResponse>>
 
     fun findViewById() = HandlerFunction { req ->
-        repository.findById(req.pathVariable("id").toLong()).then{ u -> ok().render("user", mapOf(Pair("user", u))) }
+        repository.findOne(req.pathVariable("id"))
+                .then{ u -> ok().render("user", mapOf(Pair("user", u))) }
     }
 
     fun findById() = HandlerFunction { req ->
-        ok().contentType(APPLICATION_JSON_UTF8).body(fromPublisher(repository.findById(req.pathVariable("id").toLong())))
+        ok().contentType(APPLICATION_JSON_UTF8).body(
+                fromPublisher(repository.findOne(req.pathVariable("id"))))
     }
 
     fun findAllView() = HandlerFunction {
-        repository.findAll().collectList().then{ u -> ok().render("users",  mapOf(Pair("users", u))) }
+        repository.findAll()
+                .collectList()
+                .then{ u -> ok().render("users",  mapOf(Pair("users", u))) }
     }
 
     fun findAll() = HandlerFunction {
         ok().contentType(APPLICATION_JSON_UTF8).body(fromPublisher(repository.findAll()))
+    }
+
+    fun create() = HandlerFunction { req ->
+        repository.save(req.bodyToMono(User::class)).single()
+                .then{u -> created(URI.create("/api/user/${u.id}"))
+                .contentType(APPLICATION_JSON_UTF8)
+                .body(fromObject(u))}
     }
 }
