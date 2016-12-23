@@ -88,7 +88,8 @@ configurations.all {
 val kotlinVersion = extra["kotlinVersion"] as String
 val springVersion = "5.0.0.BUILD-SNAPSHOT"
 val jacksonVersion = "2.8.4"
-val reactorVersion = "3.0.4.BUILD-SNAPSHOT"
+val reactorVersion = "3.0.4.RELEASE"
+val reactorNettyVersion = "0.6.0.RELEASE"
 val junitPlatformVersion= extra["junitPlatformVersion"] as String
 val spekVersion = "1.1.0-beta2"
 
@@ -99,7 +100,7 @@ dependencies {
 	compile("org.springframework:spring-web-reactive:$springVersion")
 	compile("com.github.jknack:handlebars:4.0.6")
 
-	compile("io.projectreactor.ipc:reactor-netty:0.6.0.BUILD-SNAPSHOT") {
+	compile("io.projectreactor.ipc:reactor-netty:$reactorNettyVersion") {
 		exclude(module = "reactor-core")
 	}
 	compile("io.projectreactor:reactor-core:$reactorVersion")
