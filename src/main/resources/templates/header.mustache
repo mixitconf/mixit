@@ -15,13 +15,13 @@
         <div class="top-bar-left">
             <ul class="menu" data-dropdown-menu>
                 <li class="menu-text">Mix-it</li>
-                <li><a href="/">{{#i18n}}header.menu.home{{/i18n}}</a></li>
-                <li><a href="/user/">{{#i18n}}header.menu.users{{/i18n}}</a></li>
+                <li><a href="{{localePrefix}}/">{{#i18n}}header.menu.home{{/i18n}}</a></li>
+                <li><a href="{{localePrefix}}/user/">{{#i18n}}header.menu.users{{/i18n}}</a></li>
             </ul>
         </div>
         <div class="top-bar-right">
-            {{#en}}<a href="./"><img class="mixit-menu-lang" src="/images/lang/us.svg" /></a>{{/en}}
-            {{#fr}}<a href="./en"><img class="mixit-menu-lang" src="/images/lang/fr.svg" /></a>{{/fr}}
+            {{#en}}<a href="/"><img class="mixit-menu-lang" src="/images/lang/us.svg" /></a>{{/en}}
+            {{#fr}}<a href="/en/"><img class="mixit-menu-lang" src="/images/lang/fr.svg" /></a>{{/fr}}
         </div>
     </div>
 

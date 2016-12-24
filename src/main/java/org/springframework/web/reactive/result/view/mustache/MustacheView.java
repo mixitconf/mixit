@@ -61,6 +61,7 @@ public class MustacheView extends AbstractUrlBasedView {
                 Locale locale = exchange.getRequest().getHeaders().getAcceptLanguageAsLocale();
                 if (locale != null) {
                     model.put("locale", locale.toString());
+                    model.put("localePrefix", locale.getLanguage().equals("en") ? "/en" : "");
                     model.put("en", locale.getLanguage().equals("en"));
                     model.put("fr", locale.getLanguage().equals("fr"));
                 }
