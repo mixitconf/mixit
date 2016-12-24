@@ -23,6 +23,7 @@ import java.util.Locale;
 import java.util.Map;
 
 import com.samskivert.mustache.Mustache;
+import com.samskivert.mustache.MustacheException;
 import com.samskivert.mustache.Template;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -67,8 +68,11 @@ public class MustacheView extends AbstractUrlBasedView {
                     String key = frag.execute();
                     out.write(getApplicationContext().getMessage(key, null, locale));
                 });
-
-                this.template.execute(model, writer);
+                try {
+                    this.template.execute(model, writer);
+                } catch (MustacheException ex) {
+                    return Mono.error(new MustacheException("Error while rendering " + getUrl() + ": " + ex.getMessage()));
+                }
                 return exchange.getResponse().writeWith(Flux.just(dataBuffer)).doOnSubscribe(s -> {
                     try {
                         writer.flush();

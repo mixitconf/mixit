@@ -9,6 +9,7 @@ import mixit.repository.UserRepository
 import mixit.support.*
 import org.bson.Document
 import org.springframework.context.annotation.AnnotationConfigApplicationContext
+import org.springframework.context.support.ReloadableResourceBundleMessageSource
 import org.springframework.context.support.ResourceBundleMessageSource
 import org.springframework.data.convert.Jsr310Converters
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
@@ -39,8 +40,9 @@ class Application {
         val mongoUri = env.getProperty("mongo.uri")
 
         context.registerBean("messageSource", Supplier {
-            val messageSource = ResourceBundleMessageSource()
+            val messageSource = ReloadableResourceBundleMessageSource()
             messageSource.setBasename("messages")
+            messageSource.setDefaultEncoding("UTF-8")
             messageSource
         })
         context.registerBean(Supplier {
