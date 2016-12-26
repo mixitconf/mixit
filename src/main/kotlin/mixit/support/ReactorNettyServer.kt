@@ -22,6 +22,8 @@ import org.springframework.web.server.adapter.WebHttpHandlerBuilder
 import reactor.ipc.netty.NettyContext
 import reactor.ipc.netty.http.server.HttpServer
 import java.util.concurrent.atomic.AtomicReference
+import org.springframework.beans.factory.BeanFactoryExtension.getBean
+import org.springframework.beans.factory.ListableBeanFactoryExtension.getBeansOfType
 
 class ReactorNettyServer(hostname: String, port: Int) : Server, ApplicationContextAware, InitializingBean {
 

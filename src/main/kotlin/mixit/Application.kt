@@ -10,7 +10,6 @@ import mixit.support.*
 import org.bson.Document
 import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.ReloadableResourceBundleMessageSource
-import org.springframework.context.support.ResourceBundleMessageSource
 import org.springframework.data.convert.Jsr310Converters
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.SimpleReactiveMongoDatabaseFactory
@@ -23,7 +22,8 @@ import org.springframework.data.mongodb.core.mapping.MongoPersistentProperty
 import org.springframework.data.mongodb.repository.support.ReactiveMongoRepositoryFactory
 import java.util.concurrent.CompletableFuture
 import java.util.function.Supplier
-
+import org.springframework.context.support.GenericApplicationContextExtension.registerBean
+import org.springframework.beans.factory.BeanFactoryExtension.getBean
 
 class Application {
 

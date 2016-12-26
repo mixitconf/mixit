@@ -37,7 +37,6 @@ apply {
 version = "1.0.0-SNAPSHOT"
 
 repositories {
-	mavenLocal()
 	mavenCentral()
 	maven { setUrl("https://dl.bintray.com/jetbrains/spek") }
 	maven{ setUrl("https://dl.bintray.com/kotlin/kotlin-eap") }

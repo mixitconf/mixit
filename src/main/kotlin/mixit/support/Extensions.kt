@@ -25,30 +25,8 @@ import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 import java.io.Serializable
 import java.nio.charset.StandardCharsets
-import java.util.function.Supplier
 import kotlin.reflect.KClass
 
-fun <T : Any> AbstractApplicationContext.getBean(type: KClass<T>) = getBean(type.java)
-
-fun <T : Any> ApplicationContext.getBean(type: KClass<T>): T = getBean(type.java)
-
-fun <T : Any> ListableBeanFactory.getBeansOfType(type: KClass<T>): Map<String, T> = getBeansOfType(type.java)
-
-
-inline fun <reified T : Any> AnnotationConfigApplicationContext.registerBean(supplier: Supplier<T>) {
-    registerBean(T::class.java, supplier)
-}
-
-inline fun <reified T : Any> AnnotationConfigApplicationContext.registerBean(name: String, supplier: Supplier<T>) {
-    registerBean(name, T::class.java, supplier)
-}
-
-fun GenericApplicationContext.registerBean(type: KClass<*>) {
-    val beanName: String = type.simpleName!!
-    val beanDefinition = RootBeanDefinition(type.java)
-    beanDefinition.autowireMode = AUTOWIRE_CONSTRUCTOR
-    registerBeanDefinition(beanName, beanDefinition)
-}
 
 fun ConfigurableEnvironment.addPropertySource(location: String) {
     propertySources.addFirst(ResourcePropertySource(EncodedResource(ClassPathResource(location), StandardCharsets.UTF_8)))
