@@ -2,8 +2,6 @@ package mixit.controller
 
 import mixit.model.User
 import mixit.repository.UserRepository
-import mixit.support.bodyToMono
-import mixit.support.fromPublisher
 import org.springframework.http.MediaType.APPLICATION_JSON_UTF8
 import org.springframework.web.reactive.function.BodyInserters.fromObject
 import org.springframework.web.reactive.function.server.*
@@ -13,6 +11,8 @@ import org.springframework.web.reactive.function.server.ServerResponse.created
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import reactor.core.publisher.Mono
 import java.net.URI
+import org.springframework.web.reactive.function.server.ServerRequestExtension.bodyToMono
+import org.springframework.web.reactive.function.BodyInserterExtension.fromPublisher
 
 class UserController(val repository: UserRepository) : RouterFunction<ServerResponse> {
 
