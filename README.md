@@ -32,8 +32,7 @@ Prerequisite:
 
 To import the project in IDEA:
  - Clone the project `git clone https://github.com/mix-it/mixit.git`
- - Make sure you have at least IntelliJ IDEA 2016.3
- - Update IDEA Kotlin plugin to 1.1-M04 EAP: Tools -> Kotlin -> Configure Kotlin Plugin Updates -> Early Access Preview 1.1
+ - Make sure you have at least IntelliJ IDEA 2016.3 and IDEA Kotlin plugin 1.0.6+ (we are waiting IDEA Kotlin plugin 1.1-M05 to have Gradle Kotlin autocomplete)
  - Install Spek IDEA plugin
  - Import it in IDEA as a Gradle project
  - Right click on `Main.kt` -> Run mixit.MainKt
@@ -62,8 +61,5 @@ Technical demo is available at `http://localhost:8080/sample`
 
 How can I register a new `Foo` singleton bean ?
 
-Add `beanFactory.register(Foo::class)` line in `Application#appContext()`.
+Add `beanFactory.register(Foo::class)` line in `Application` constructor.
 
-How can I register a new Handlebars helper ?
-
-Add a `HelperSource` class in `HandlebarsHelpers` and register the bean in `Application#appContext()` like it has been done for `IfEqHelperSource`.

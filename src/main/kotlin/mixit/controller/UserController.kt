@@ -12,7 +12,7 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 import reactor.core.publisher.Mono
 import java.net.URI
 import org.springframework.web.reactive.function.server.ServerRequestExtension.bodyToMono
-import org.springframework.web.reactive.function.BodyInserterExtension.fromPublisher
+import org.springframework.web.reactive.function.BodyInsertersExtension.fromPublisher
 
 class UserController(val repository: UserRepository) : RouterFunction<ServerResponse> {
 
