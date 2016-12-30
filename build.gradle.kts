@@ -56,36 +56,36 @@ configure<ShadowExtension> {
 }
 
 configure<JUnitPlatformExtension> {
-    filters {
-        engines { "spek" }
-    }
+	filters {
+		engines { "spek" }
+	}
 }
 
 fun JUnitPlatformExtension.filters(setup: FiltersExtension.() -> Unit) {
-    when (this) {
-        is ExtensionAware -> extensions.getByType(FiltersExtension::class.java).setup()
-        else -> throw Exception("${this::class} must be an instance of ExtensionAware")
-    }
+	when (this) {
+		is ExtensionAware -> extensions.getByType(FiltersExtension::class.java).setup()
+		else -> throw Exception("${this::class} must be an instance of ExtensionAware")
+	}
 }
 
 fun FiltersExtension.engines(setup: EnginesExtension.() -> Unit) {
-    when (this) {
-        is ExtensionAware -> extensions.getByType(EnginesExtension::class.java).setup()
-        else -> throw Exception("${this::class} must be an instance of ExtensionAware")
-    }
+	when (this) {
+		is ExtensionAware -> extensions.getByType(EnginesExtension::class.java).setup()
+		else -> throw Exception("${this::class} must be an instance of ExtensionAware")
+	}
 }
 
 configure<NoArgExtension> {
 	annotation("org.springframework.data.mongodb.core.mapping.Document")
 }
 
-configurations.all {
-	it.resolutionStrategy.cacheChangingModulesFor(0, TimeUnit.SECONDS)
-}
+//configurations.all {
+//	it.resolutionStrategy.cacheChangingModulesFor(0, TimeUnit.SECONDS)
+//}
 
 val kotlinVersion = extra["kotlinVersion"] as String
 val springVersion = "5.0.0.M4"
-val jacksonVersion = "2.8.4"
+val jacksonVersion = "2.8.5"
 val reactorVersion = "3.0.4.RELEASE"
 val junitPlatformVersion= extra["junitPlatformVersion"] as String
 val spekVersion = "1.1.0-beta2"
@@ -103,6 +103,7 @@ dependencies {
 
 	compile("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion")
 	compile("com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion")
+	compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$jacksonVersion")
 
 	compile("commons-logging:commons-logging:1.2")
 	compile("org.slf4j:slf4j-api:1.7.21")

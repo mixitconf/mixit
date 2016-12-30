@@ -1,22 +1,41 @@
 package mixit.repository
 
-import mixit.data.service.DataInitializer
-import mixit.model.sponsor.Sponsor
-import mixit.support.find
-import mixit.support.findById
-import org.springframework.data.domain.Sort
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.module.kotlin.readValue
+import mixit.data.dto.MemberDataDto
+import mixit.model.Sponsor
+import mixit.support.getEntityInformation
+import org.springframework.core.io.ResourceLoader
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
-import org.springframework.data.mongodb.core.query.Query
-import reactor.core.publisher.Flux
-import reactor.core.publisher.Mono
+import org.springframework.data.mongodb.repository.support.ReactiveMongoRepositoryFactory
+import org.springframework.data.mongodb.repository.support.SimpleReactiveMongoRepository
+import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
 
-class SponsorRepository(val db: ReactiveMongoTemplate, val initializer: DataInitializer) {
+class SponsorRepository(db: ReactiveMongoTemplate, f: ReactiveMongoRepositoryFactory, val resourceLoader: ResourceLoader) :
+        SimpleReactiveMongoRepository<Sponsor, String>(f.getEntityInformation(Sponsor::class), db) {
 
-    fun init() {
-        initializer.readSpeakers()
+    fun initData() {
+        deleteAll().block()
+        save(readSpeakers()).blockLast()
     }
 
-    fun findById(id: Long) : Mono<Sponsor> = db.findById(id)
+    /**
+     * Loads data from a json sponsor file
+     */
+    private fun readSpeaker(filename: String) : Iterable<Sponsor>{
+        val file = resourceLoader.getResource(filename)
+        val objectMapper : ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
+        var sponsors: List<MemberDataDto> = objectMapper.readValue(file.file)
+        return sponsors.map { sponsor -> sponsor.toSponsor() }
+    }
 
-    fun findAll() : Flux<Sponsor> = db.find(Query().with(Sort("id")))
+    /**
+     * Loads data from the json sponsor files
+     */
+    fun readSpeakers() : Iterable<Sponsor>{
+        val files = emptyList<String>()
+
+        return files.flatMap { filename -> readSpeaker(filename) }
+    }
+
 }
