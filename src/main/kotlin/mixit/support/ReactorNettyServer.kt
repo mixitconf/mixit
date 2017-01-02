@@ -1,17 +1,8 @@
 package mixit.support
 
-import com.fasterxml.jackson.databind.ObjectMapper
 import org.springframework.beans.factory.InitializingBean
 import org.springframework.context.ApplicationContext
 import org.springframework.context.ApplicationContextAware
-import org.springframework.core.codec.CharSequenceEncoder
-import org.springframework.core.codec.StringDecoder
-import org.springframework.http.codec.DecoderHttpMessageReader
-import org.springframework.http.codec.EncoderHttpMessageWriter
-import org.springframework.http.codec.ResourceHttpMessageWriter
-import org.springframework.http.codec.json.Jackson2JsonDecoder
-import org.springframework.http.codec.json.Jackson2JsonEncoder
-import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
 import org.springframework.http.server.reactive.ReactorHttpHandlerAdapter
 import org.springframework.web.reactive.function.server.HandlerStrategies
 import org.springframework.web.reactive.function.server.RouterFunction
@@ -46,14 +37,8 @@ class ReactorNettyServer(hostname: String, port: Int) : Server, ApplicationConte
         val controllers = appContext.getBeansOfType(RouterFunction::class).values
         val viewResolver = appContext.getBean(ViewResolver::class)
         val router = controllers.reduce(RouterFunction<*>::and)
-        val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().failOnUnknownProperties(false).build()
-        val strategies = HandlerStrategies.empty()
+        val strategies = HandlerStrategies.builder()
                 .viewResolver(viewResolver)
-                .messageReader(DecoderHttpMessageReader(StringDecoder()))
-                .messageReader(DecoderHttpMessageReader(Jackson2JsonDecoder(objectMapper)))
-                .messageWriter(EncoderHttpMessageWriter(CharSequenceEncoder()))
-                .messageWriter(ResourceHttpMessageWriter())
-                .messageWriter(EncoderHttpMessageWriter(Jackson2JsonEncoder(objectMapper)))
                 .build()
         val webHandler = RouterFunctions.toHttpHandler(router, strategies)
         val httpHandler = WebHttpHandlerBuilder.webHandler(webHandler).filters(MixitWebFilter()).build()
