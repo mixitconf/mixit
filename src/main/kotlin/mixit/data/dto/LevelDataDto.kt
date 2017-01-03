@@ -1,9 +1,9 @@
 package mixit.data.dto
 
-import java.time.Instant
+import mixit.model.SponsorshipLevel
 import java.time.LocalDate
 
 data class LevelDataDto(
-        val key: String?,
+        val key: SponsorshipLevel,
         val value: LocalDate?
 )

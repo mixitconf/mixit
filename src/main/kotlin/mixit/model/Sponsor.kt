@@ -11,6 +11,6 @@ data class Sponsor(
         var shortDescription: String,
         var longDescription: String,
         var logoUrl: String,
-        var links: List<Link>,
+        var links: List<Link> = emptyList(),
         @Id var id: String? = null
 )
