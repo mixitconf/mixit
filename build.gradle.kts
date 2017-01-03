@@ -94,7 +94,15 @@ dependencies {
 	compile("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
 	compile("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
 
+	compile("org.springframework:spring-aop:$springVersion")
+	compile("org.springframework:spring-beans:$springVersion")
+	compile("org.springframework:spring-context:$springVersion")
+	compile("org.springframework:spring-core:$springVersion")
+	compile("org.springframework:spring-expression:$springVersion")
+	compile("org.springframework:spring-tx:$springVersion")
+	compile("org.springframework:spring-web:$springVersion")
 	compile("org.springframework:spring-web-reactive:$springVersion")
+
 	compile("com.samskivert:jmustache:1.13")
 
 	compile("io.projectreactor:reactor-core:$reactorVersion")
