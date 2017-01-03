@@ -16,7 +16,7 @@ import org.springframework.web.reactive.function.BodyInsertersExtension.fromPubl
 
 class UserController(val repository: UserRepository) : RouterFunction<ServerResponse> {
 
-    // TODO Relax generics check to avoid explicit casting
+    @Suppress("UNCHECKED_CAST")// TODO Relax generics check to avoid explicit casting
     override fun route(request: ServerRequest) = RouterFunctions.route(
                 GET("/user/{id}"), findViewById()).andRoute(
                 GET("/user/"), findAllView()).andRoute(

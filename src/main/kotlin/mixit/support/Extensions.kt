@@ -23,4 +23,4 @@ inline fun <reified T : Any> ReactiveMongoTemplate.findById(id: Any) : Mono<T> =
 
 inline fun <reified T : Any> ReactiveMongoTemplate.find(query: Query) : Flux<T> = find(query, T::class.java)
 
-inline fun <T : Any, ID : Serializable> ReactiveMongoRepositoryFactory.getEntityInformation(type: KClass<T>) : MongoEntityInformation<T, ID> = getEntityInformation(type.java)
+fun <T : Any, ID : Serializable> ReactiveMongoRepositoryFactory.getEntityInformation(type: KClass<T>) : MongoEntityInformation<T, ID> = getEntityInformation(type.java)

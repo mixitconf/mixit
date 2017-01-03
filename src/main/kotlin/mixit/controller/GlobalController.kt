@@ -12,7 +12,7 @@ import reactor.core.publisher.Mono
 
 class GlobalController : RouterFunction<ServerResponse> {
 
-    // TODO Relax generics check to avoid explicit casting
+    @Suppress("UNCHECKED_CAST")// TODO Relax generics check to avoid explicit casting
     override fun route(request: ServerRequest) =
         resources("/**", ClassPathResource("static/"))
                 .andRoute(GET("/"), indexView())

@@ -10,7 +10,7 @@ import org.springframework.web.reactive.function.BodyInsertersExtension.fromPubl
 
 class EventController(val repository: EventRepository) : RouterFunction<ServerResponse> {
 
-    // TODO Relax generics check to avoid explicit casting
+    @Suppress("UNCHECKED_CAST") // TODO Relax generics check to avoid explicit casting
     override fun route(request: ServerRequest) = RouterFunctions
             .route(GET("/api/event/{id}"), findOne())
             .andRoute(GET("/api/event/"), findAll())
