@@ -79,10 +79,6 @@ configure<NoArgExtension> {
     annotation("org.springframework.data.mongodb.core.mapping.Document")
 }
 
-//configurations.all {
-//	it.resolutionStrategy.cacheChangingModulesFor(0, TimeUnit.SECONDS)
-//}
-
 val kotlinVersion = extra["kotlinVersion"] as String
 val springVersion = "5.0.0.M4"
 val jacksonVersion = "2.8.5"
