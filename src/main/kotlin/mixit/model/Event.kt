@@ -10,5 +10,6 @@ data class Event(
         val start: LocalDate,
         val end: LocalDate,
         val current: Boolean = false,
+        var sponsors: Iterable<EventSponsoring> = emptyList(),
         @Id val id: String? = null
 )

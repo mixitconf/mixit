@@ -1,7 +1,10 @@
 package mixit.data.dto
 
+import mixit.model.EventSponsoring
 import mixit.model.Link
 import mixit.model.Sponsor
+import mixit.model.SponsorshipLevel
+import java.time.LocalDate
 import java.util.*
 
 data class MemberDataDto(
@@ -34,5 +37,17 @@ data class MemberDataDto(
                 userLinks.map { link -> Link(link.key, link.value) },
                 idMember.toString()
         )
+    }
+
+    fun toEventSponsoring(year: Int): Iterable<EventSponsoring>{
+        // A sponsor has one or more sponsorshipLevel but not a classical memeber
+        val sponsorshipLevel = level ?: listOf(LevelDataDto(SponsorshipLevel.NONE, LocalDate.now()))
+
+        return sponsorshipLevel.map { sl ->  EventSponsoring(
+                sl.key,
+                toSponsor(),
+                sl.value,
+                "".plus(year).plus(sl.key).plus(company)
+                )}
     }
 }

@@ -38,4 +38,4 @@ class EventEndpointSpec : SubjectSpek<Application>({
             subject.stop()
         }
     }
-})
+-})
