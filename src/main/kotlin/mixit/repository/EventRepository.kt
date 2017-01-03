@@ -40,7 +40,7 @@ class EventRepository(db: ReactiveMongoTemplate, f: ReactiveMongoRepositoryFacto
      * Loads data from the json sponsor files
      */
     fun readSponsorsForEvent(event: Event): Event {
-        val filename = "classpath:data/sponsor_".plus(event.year).plus(".json")
+        val filename = "classpath:data/sponsor/sponsor_".plus(event.year).plus(".json")
         val file = resourceLoader.getResource(filename)
 
         val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
