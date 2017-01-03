@@ -37,5 +37,4 @@ class EventEndpointSpec : SubjectSpek<Application>({
                     .verify()
             subject.stop()
         }
-    }
-})
+    }status

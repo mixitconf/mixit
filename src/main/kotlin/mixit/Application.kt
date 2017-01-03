@@ -6,20 +6,21 @@ import mixit.controller.EventController
 import mixit.controller.GlobalController
 import mixit.controller.UserController
 import mixit.repository.EventRepository
-import mixit.repository.SponsorRepository
 import mixit.repository.UserRepository
-import mixit.support.*
+import mixit.support.ReactorNettyServer
+import mixit.support.Server
+import mixit.support.addPropertySource
+import org.springframework.beans.factory.BeanFactoryExtension.getBean
 import org.springframework.context.annotation.AnnotationConfigApplicationContext
+import org.springframework.context.support.GenericApplicationContextExtension.registerBean
 import org.springframework.context.support.ReloadableResourceBundleMessageSource
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.SimpleReactiveMongoDatabaseFactory
+import org.springframework.data.mongodb.repository.support.ReactiveMongoRepositoryFactory
 import org.springframework.web.reactive.result.view.mustache.MustacheResourceTemplateLoader
 import org.springframework.web.reactive.result.view.mustache.MustacheViewResolver
-import org.springframework.data.mongodb.repository.support.ReactiveMongoRepositoryFactory
 import java.util.concurrent.CompletableFuture
 import java.util.function.Supplier
-import org.springframework.context.support.GenericApplicationContextExtension.registerBean
-import org.springframework.beans.factory.BeanFactoryExtension.getBean
 
 class Application {
 
@@ -61,8 +62,6 @@ class Application {
 
         context.registerBean(UserRepository::class)
         context.registerBean(EventRepository::class)
-        context.registerBean(SponsorRepository::class)
-
         context.registerBean(UserController::class)
         context.registerBean(EventController::class)
         context.registerBean(GlobalController::class)
@@ -71,7 +70,6 @@ class Application {
         server = context.getBean(Server::class)
         context.getBean(UserRepository::class).initData()
         context.getBean(EventRepository::class).initData()
-        context.getBean(SponsorRepository::class).initData()
     }
 
     fun start() {
