@@ -13,10 +13,10 @@ import org.springframework.util.SocketUtils
 import org.springframework.web.reactive.function.BodyInserters.fromObject
 import org.springframework.web.reactive.function.client.ClientRequest.GET
 import org.springframework.web.reactive.function.client.ClientRequest.POST
+import org.springframework.web.reactive.function.client.ClientResponseExtension.bodyToFlux
+import org.springframework.web.reactive.function.client.ClientResponseExtension.bodyToMono
 import org.springframework.web.reactive.function.client.WebClient
 import reactor.test.StepVerifier
-import org.springframework.web.reactive.function.client.ClientResponseExtension.bodyToMono
-import org.springframework.web.reactive.function.client.ClientResponseExtension.bodyToFlux
 
 class UserEndpointSpec : SubjectSpek<Application>({
 

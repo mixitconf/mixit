@@ -2,13 +2,8 @@ package mixit
 
 import com.mongodb.ConnectionString
 import com.samskivert.mustache.Mustache
-import mixit.controller.EventController
-import mixit.controller.GlobalController
-import mixit.controller.SessionController
-import mixit.controller.UserController
-import mixit.repository.EventRepository
-import mixit.repository.SessionRepository
-import mixit.repository.UserRepository
+import mixit.controller.*
+import mixit.repository.*
 import mixit.support.ReactorNettyServer
 import mixit.support.Server
 import mixit.support.addPropertySource
@@ -65,10 +60,14 @@ class Application {
         context.registerBean(UserRepository::class)
         context.registerBean(EventRepository::class)
         context.registerBean(SessionRepository::class)
+        context.registerBean(SpeakerRepository::class)
+        context.registerBean(StaffRepository::class)
 
         context.registerBean(UserController::class)
         context.registerBean(EventController::class)
         context.registerBean(SessionController::class)
+        context.registerBean(SpeakerController::class)
+        context.registerBean(StaffController::class)
         context.registerBean(GlobalController::class)
 
         context.refresh()
@@ -76,6 +75,8 @@ class Application {
         context.getBean(UserRepository::class).initData()
         context.getBean(EventRepository::class).initData()
         context.getBean(SessionRepository::class).initData()
+        context.getBean(SpeakerRepository::class).initData()
+        context.getBean(StaffRepository::class).initData()
     }
 
     fun start() {

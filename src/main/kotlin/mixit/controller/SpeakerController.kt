@@ -1,6 +1,6 @@
 package mixit.controller
 
-import mixit.repository.SessionRepository
+import mixit.repository.SpeakerRepository
 import mixit.support.MixitApi
 import org.springframework.http.MediaType.APPLICATION_JSON_UTF8
 import org.springframework.web.reactive.function.BodyInsertersExtension.fromPublisher
@@ -9,12 +9,12 @@ import org.springframework.web.reactive.function.server.RequestPredicates.GET
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import reactor.core.publisher.Mono
 
-class SessionController(val repository: SessionRepository) : RouterFunction<ServerResponse> {
+class SpeakerController(val repository: SpeakerRepository) : RouterFunction<ServerResponse> {
 
     @Suppress("UNCHECKED_CAST") // TODO Relax generics check to avoid explicit casting
     override fun route(request: ServerRequest) = RouterFunctions
-            .route(GET("/api/mixit{eventId}/session/{id}"), findOne())
-            .andRoute(GET("/api/mixit{eventId}/session/"), findAll())
+            .route(GET("/api/mixit{eventId}/speaker/{id}"), findOne())
+            .andRoute(GET("/api/mixit{eventId}/speaker/"), findAll())
             .route(request) as Mono<HandlerFunction<ServerResponse>>
 
     fun findOne() = HandlerFunction { req ->

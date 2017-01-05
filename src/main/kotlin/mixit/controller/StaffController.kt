@@ -1,7 +1,6 @@
 package mixit.controller
 
-import mixit.repository.SessionRepository
-import mixit.support.MixitApi
+import mixit.repository.StaffRepository
 import org.springframework.http.MediaType.APPLICATION_JSON_UTF8
 import org.springframework.web.reactive.function.BodyInsertersExtension.fromPublisher
 import org.springframework.web.reactive.function.server.*
@@ -9,12 +8,12 @@ import org.springframework.web.reactive.function.server.RequestPredicates.GET
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import reactor.core.publisher.Mono
 
-class SessionController(val repository: SessionRepository) : RouterFunction<ServerResponse> {
+class StaffController(val repository: StaffRepository) : RouterFunction<ServerResponse> {
 
     @Suppress("UNCHECKED_CAST") // TODO Relax generics check to avoid explicit casting
     override fun route(request: ServerRequest) = RouterFunctions
-            .route(GET("/api/mixit{eventId}/session/{id}"), findOne())
-            .andRoute(GET("/api/mixit{eventId}/session/"), findAll())
+            .route(GET("/api/staff/{id}"), findOne())
+            .andRoute(GET("/api/staff/"), findAll())
             .route(request) as Mono<HandlerFunction<ServerResponse>>
 
     fun findOne() = HandlerFunction { req ->
@@ -22,6 +21,6 @@ class SessionController(val repository: SessionRepository) : RouterFunction<Serv
     }
 
     fun findAll() = HandlerFunction { req ->
-        ok().contentType(APPLICATION_JSON_UTF8).body(fromPublisher(repository.findByYear(MixitApi.idToYear(req.pathVariable("eventId")))))
+        ok().contentType(APPLICATION_JSON_UTF8).body(fromPublisher(repository.findAll()))
     }
 }

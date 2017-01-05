@@ -36,9 +36,10 @@ data class MemberDataDto(
         )
     }
 
-    fun toSpeaker(): Speaker {
+    fun toSpeaker(enventId: Int): Speaker {
         return Speaker(
                 idMember.toString(),
+                "20".plus(enventId).toInt(),
                 firstname ?: "",
                 lastname ?: "",
                 login ?: "",
@@ -54,6 +55,19 @@ data class MemberDataDto(
                 idMember.toString(),
                 firstname ?: "",
                 lastname ?: ""
+        )
+    }
+
+    fun toStaff(): Staff {
+        return Staff(
+                idMember.toString(),
+                firstname ?: "",
+                lastname ?: "",
+                login ?: "",
+                email ?: "",
+                shortDescription ?: "",
+                longDescription ?: "",
+                userLinks.map { link -> Link(link.key, link.value) }
         )
     }
 

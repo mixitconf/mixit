@@ -4,9 +4,8 @@ import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 
 @Document
-data class Speaker(
+data class Staff(
         @Id var id: String,
-        val year: Int,
         var firstname: String,
         var lastname: String,
         var login: String,

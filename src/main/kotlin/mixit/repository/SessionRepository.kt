@@ -7,26 +7,30 @@ import mixit.model.Session
 import mixit.support.getEntityInformation
 import org.springframework.core.io.ResourceLoader
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
+import org.springframework.data.mongodb.core.query.Criteria
+import org.springframework.data.mongodb.core.query.Query
 import org.springframework.data.mongodb.repository.support.ReactiveMongoRepositoryFactory
 import org.springframework.data.mongodb.repository.support.SimpleReactiveMongoRepository
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
+import reactor.core.publisher.Flux
 
-class SessionRepository(db: ReactiveMongoTemplate, f: ReactiveMongoRepositoryFactory, val resourceLoader: ResourceLoader) :
+
+class SessionRepository(val db: ReactiveMongoTemplate, f: ReactiveMongoRepositoryFactory, val resourceLoader: ResourceLoader) :
         SimpleReactiveMongoRepository<Session, String>(f.getEntityInformation(Session::class), db) {
 
 
     fun initData() {
         deleteAll().block()
 
-        val years = listOf(2012, 2013, 2014, 2015, 2016)
-        years.forEach { year -> saveSessionForEvent(year) }
+        val years = listOf(12, 13, 14, 15, 16)
+        years.forEach { year -> saveSessionsByYear(year) }
     }
 
     /**
-     * Loads data from the json sponsor files
+     * Loads data from the json session files
      */
-    fun saveSessionForEvent(year: Int) {
-        val filename = "classpath:data/session/session_".plus(year).plus(".json")
+    private fun saveSessionsByYear(year: Int) {
+        val filename = "classpath:data/session/session_mixit".plus(year).plus(".json")
         val file = resourceLoader.getResource(filename)
 
         val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
@@ -37,4 +41,8 @@ class SessionRepository(db: ReactiveMongoTemplate, f: ReactiveMongoRepositoryFac
                 .forEach { session -> save(session).block() }
     }
 
+    fun findByYear(year: Int): Flux<Session> {
+        val query = Query().addCriteria(Criteria.where("year").`is`(year))
+        return db.find(query, Session::class.java)
+    }
 }

@@ -4,15 +4,15 @@ import mixit.model.User
 import mixit.repository.UserRepository
 import org.springframework.http.MediaType.APPLICATION_JSON_UTF8
 import org.springframework.web.reactive.function.BodyInserters.fromObject
+import org.springframework.web.reactive.function.BodyInsertersExtension.fromPublisher
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.RequestPredicates.GET
 import org.springframework.web.reactive.function.server.RequestPredicates.POST
+import org.springframework.web.reactive.function.server.ServerRequestExtension.bodyToMono
 import org.springframework.web.reactive.function.server.ServerResponse.created
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import reactor.core.publisher.Mono
 import java.net.URI
-import org.springframework.web.reactive.function.server.ServerRequestExtension.bodyToMono
-import org.springframework.web.reactive.function.BodyInsertersExtension.fromPublisher
 
 class UserController(val repository: UserRepository) : RouterFunction<ServerResponse> {
 

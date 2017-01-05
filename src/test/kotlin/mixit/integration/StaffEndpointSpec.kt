@@ -1,7 +1,7 @@
 package mixit.integration
 
 import mixit.Application
-import mixit.model.Session
+import mixit.model.Staff
 import org.jetbrains.spek.api.SubjectSpek
 import org.jetbrains.spek.api.dsl.describe
 import org.jetbrains.spek.api.dsl.it
@@ -14,7 +14,7 @@ import org.springframework.web.reactive.function.client.ClientResponseExtension.
 import org.springframework.web.reactive.function.client.WebClient
 import reactor.test.StepVerifier
 
-class SessionEndpointSpec : SubjectSpek<Application>({
+class StaffEndpointSpec : SubjectSpek<Application>({
 
     val webClient = WebClient.builder(ReactorClientHttpConnector()).build()
 
@@ -22,28 +22,28 @@ class SessionEndpointSpec : SubjectSpek<Application>({
         Application(port = SocketUtils.findAvailableTcpPort())
     }
 
-    describe("a session JSON endpoint") {
+    describe("a staff JSON endpoint") {
 
-        it("should find the Dan North session") {
+        it("should find in staff Guillaume EHRET") {
             subject.start()
-            val response = webClient.exchange(GET("http://localhost:${subject.port}/api/mixit15/session/2421").accept(APPLICATION_JSON_UTF8).build())
+            val response = webClient.exchange(GET("http://localhost:${subject.port}/api/staff/252").accept(APPLICATION_JSON_UTF8).build())
 
-            StepVerifier.create(response.flatMap{ r -> r.bodyToFlux(Session::class)})
+            StepVerifier.create(response.flatMap{ r -> r.bodyToFlux(Staff::class)})
                     .consumeNextWith { it ->
-                        assertEquals("Selling BDD to the Business", it.title)
-                        assertEquals("NORTH", it.speakers.iterator().next().lastname)
+                        assertEquals("EHRET", it.lastname)
+                        assertEquals("Guillaume", it.firstname)
                     }
                     .expectComplete()
                     .verify()
             subject.stop()
         }
 
-        it("should find 27 sessions for mixit12") {
+        it("should find 10 peaople in mixit staff") {
             subject.start()
-            val response = webClient.exchange(GET("http://localhost:${subject.port}/api/mixit12/session/").accept(APPLICATION_JSON_UTF8).build())
+            val response = webClient.exchange(GET("http://localhost:${subject.port}/api/staff/").accept(APPLICATION_JSON_UTF8).build())
 
-            StepVerifier.create(response.flatMap{ r -> r.bodyToFlux(Session::class)})
-                    .expectNextCount(27)
+            StepVerifier.create(response.flatMap{ r -> r.bodyToFlux(Staff::class)})
+                    .expectNextCount(12)
                     .expectComplete()
                     .verify()
 
