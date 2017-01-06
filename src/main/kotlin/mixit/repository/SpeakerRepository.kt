@@ -29,8 +29,7 @@ class SpeakerRepository(val db: ReactiveMongoTemplate, f: ReactiveMongoRepositor
      * Loads data from the json speaker files
      */
     private fun saveSpeakersByYear(year: Int) {
-        val filename = "classpath:data/speaker/speaker_mixit".plus(year).plus(".json")
-        val file = resourceLoader.getResource(filename)
+        val file = resourceLoader.getResource("classpath:data/speaker/speaker_mixit${year}.json")
 
         val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
         var speakers: List<MemberDataDto> = objectMapper.readValue(file.file)

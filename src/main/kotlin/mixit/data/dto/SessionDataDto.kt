@@ -30,7 +30,7 @@ data class SessionDataDto(
                 Room.findByName(room ?: ""),
                 start,
                 end,
-                "".plus(idSession)
+                "${idSession}"
         )
     }
 }

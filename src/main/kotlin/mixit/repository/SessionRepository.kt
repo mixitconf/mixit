@@ -30,8 +30,7 @@ class SessionRepository(val db: ReactiveMongoTemplate, f: ReactiveMongoRepositor
      * Loads data from the json session files
      */
     private fun saveSessionsByYear(year: Int) {
-        val filename = "classpath:data/session/session_mixit".plus(year).plus(".json")
-        val file = resourceLoader.getResource(filename)
+        val file = resourceLoader.getResource("classpath:data/session/session_mixit${year}.json")
 
         val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
         var sessions: List<SessionDataDto> = objectMapper.readValue(file.file)
