@@ -1,15 +1,12 @@
 package mixit.data.dto
 
-import mixit.model.EventSponsoring
-import mixit.model.Link
-import mixit.model.Sponsor
-import mixit.model.SponsorshipLevel
+import mixit.model.*
 import java.time.LocalDate
 import java.util.*
 
 data class MemberDataDto(
         val idMember: Long,
-        var login: String,
+        var login: String?,
         var firstname: String?,
         var lastname: String?,
         var email: String?,
@@ -28,7 +25,7 @@ data class MemberDataDto(
         return Sponsor(
                 // Company is always defined for a sponsor
                 company ?: "",
-                login,
+                login ?: "",
                 email ?: "",
                 shortDescription ?: "",
                 longDescription ?: "",
@@ -36,6 +33,41 @@ data class MemberDataDto(
                 logo ?: "",
                 userLinks.map { link -> Link(link.key, link.value) },
                 idMember.toString()
+        )
+    }
+
+    fun toSpeaker(enventId: Int): Speaker {
+        return Speaker(
+                idMember.toString(),
+                "20".plus(enventId).toInt(),
+                firstname ?: "",
+                lastname ?: "",
+                login ?: "",
+                email ?: "",
+                shortDescription ?: "",
+                longDescription ?: "",
+                userLinks.map { link -> Link(link.key, link.value) }
+        )
+    }
+
+    fun toSessionSpeaker(): SessionSpeaker {
+        return SessionSpeaker(
+                idMember.toString(),
+                firstname ?: "",
+                lastname ?: ""
+        )
+    }
+
+    fun toStaff(): Staff {
+        return Staff(
+                idMember.toString(),
+                firstname ?: "",
+                lastname ?: "",
+                login ?: "",
+                email ?: "",
+                shortDescription ?: "",
+                longDescription ?: "",
+                userLinks.map { link -> Link(link.key, link.value) }
         )
     }
 

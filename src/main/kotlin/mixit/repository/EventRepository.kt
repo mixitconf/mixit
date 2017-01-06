@@ -22,11 +22,11 @@ class EventRepository(db: ReactiveMongoTemplate, f: ReactiveMongoRepositoryFacto
         deleteAll().block()
 
         val events = listOf(
-                Event(2012, LocalDate.of(2012, 4, 26), LocalDate.of(2012, 4, 26), id = "2012"),
-                Event(2013, LocalDate.of(2013, 4, 25), LocalDate.of(2013, 4, 26), id = "2013"),
-                Event(2014, LocalDate.of(2014, 4, 29), LocalDate.of(2014, 4, 30), id = "2014"),
-                Event(2015, LocalDate.of(2015, 4, 16), LocalDate.of(2015, 4, 17), id = "2015"),
-                Event(2016, LocalDate.of(2016, 4, 21), LocalDate.of(2016, 4, 22), id = "2016")
+                Event(2012, LocalDate.of(2012, 4, 26), LocalDate.of(2012, 4, 26), id = "12"),
+                Event(2013, LocalDate.of(2013, 4, 25), LocalDate.of(2013, 4, 26), id = "13"),
+                Event(2014, LocalDate.of(2014, 4, 29), LocalDate.of(2014, 4, 30), id = "14"),
+                Event(2015, LocalDate.of(2015, 4, 16), LocalDate.of(2015, 4, 17), id = "15"),
+                Event(2016, LocalDate.of(2016, 4, 21), LocalDate.of(2016, 4, 22), id = "16")
         )
 
         events.listIterator().forEach { event -> save(readSponsorsForEvent(event)).block() }
@@ -40,8 +40,7 @@ class EventRepository(db: ReactiveMongoTemplate, f: ReactiveMongoRepositoryFacto
      * Loads data from the json sponsor files
      */
     fun readSponsorsForEvent(event: Event): Event {
-        val filename = "classpath:data/sponsor_".plus(event.year).plus(".json")
-        val file = resourceLoader.getResource(filename)
+        val file = resourceLoader.getResource("classpath:data/sponsor/sponsor_mixit${event.id}.json")
 
         val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
         var sponsors: List<MemberDataDto> = objectMapper.readValue(file.file)
@@ -50,5 +49,4 @@ class EventRepository(db: ReactiveMongoTemplate, f: ReactiveMongoRepositoryFacto
         ev.sponsors = sponsors.flatMap { sponsor -> sponsor.toEventSponsoring(event.year) }
         return ev;
     }
-
 }
