@@ -3,6 +3,9 @@ import org.jetbrains.kotlin.noarg.gradle.NoArgExtension
 import org.junit.platform.gradle.plugin.EnginesExtension
 import org.junit.platform.gradle.plugin.FiltersExtension
 import org.junit.platform.gradle.plugin.JUnitPlatformExtension
+import com.moowork.gradle.gulp.GulpTask
+import com.moowork.gradle.node.NodeExtension
+import com.moowork.gradle.node.yarn.YarnInstallTask
 import java.util.concurrent.TimeUnit
 
 buildscript {
@@ -14,6 +17,9 @@ buildscript {
     repositories {
         mavenCentral()
         jcenter()
+        maven{
+            setUrl("https://plugins.gradle.org/m2/")
+        }
     }
 
     dependencies {
@@ -21,6 +27,7 @@ buildscript {
         classpath("org.jetbrains.kotlin:kotlin-noarg:$kotlinVersion")
         classpath("com.github.jengelman.gradle.plugins:shadow:1.2.4")
         classpath("org.junit.platform:junit-platform-gradle-plugin:$junitPlatformVersion")
+        classpath("com.moowork.gradle:gradle-node-plugin:1.0.1")
     }
 }
 
@@ -31,6 +38,8 @@ apply {
     plugin("application")
     plugin("org.junit.platform.gradle.plugin")
     plugin("com.github.johnrengelman.shadow")
+    plugin("com.moowork.node")
+    plugin("com.moowork.gulp")
 }
 
 version = "1.0.0-SNAPSHOT"
@@ -59,6 +68,11 @@ configure<JUnitPlatformExtension> {
     filters {
         engines { "spek" }
     }
+}
+
+configure<NodeExtension> {
+    version = "6.9.2"
+    download = true
 }
 
 fun JUnitPlatformExtension.filters(setup: FiltersExtension.() -> Unit) {
@@ -120,3 +134,15 @@ dependencies {
     testCompile("org.jetbrains.spek:spek-api:$spekVersion")
     testRuntime("org.jetbrains.spek:spek-junit-platform-engine:$spekVersion")
 }
+
+task<YarnInstallTask>("yarnInstall"){}
+
+task<GulpTask>("gulpBuild") {
+    dependsOn("yarnInstall")
+    getInputs().dir("src/main/sass")
+    getInputs().dir("build/.tmp")
+    getOutputs().dir("src/main/static/css")
+    setArgs(listOf("default"))
+}
+
+tasks.getByName("processResources").dependsOn("gulpBuild")
