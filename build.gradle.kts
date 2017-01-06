@@ -139,10 +139,10 @@ task<YarnInstallTask>("yarnInstall"){}
 
 task<GulpTask>("gulpBuild") {
     dependsOn("yarnInstall")
-    getInputs().dir("src/main/sass")
-    getInputs().dir("build/.tmp")
-    getOutputs().dir("src/main/static/css")
-    setArgs(listOf("default"))
+    inputs.dir("src/main/sass")
+    inputs.dir("build/.tmp")
+    outputs.dir("src/main/static/css")
+    args = listOf("default")
 }
 
 tasks.getByName("processResources").dependsOn("gulpBuild")
