@@ -6,4 +6,6 @@ build/
 .gradle/
 classes/
 out/
+node/
+node_modules/
 

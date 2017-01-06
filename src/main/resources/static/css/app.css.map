@@ -1,0 +1,1 @@
+{"version":3,"sources":["app.scss"],"names":[],"mappings":"AAAA,iBACE,sBAAqB,AACrB,qBAAoB,AACpB,mBAAmB,CACpB,AAED,eACE,gBAAiB,CAClB","file":"app.css","sourcesContent":[".mixit-menu-lang {\n  height:18px!important;\n  width:20px!important;\n  padding:0!important;\n}\n\n.mixit-content {\n  padding-top: 20px;\n}"]}
