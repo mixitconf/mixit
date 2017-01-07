@@ -21,3 +21,23 @@ data class Session(
         val id: String? = null
 )
 
+enum class SessionFormat(val duration: Int) {
+    Talk(50),
+    LightningTalk(5),
+    Workshop(110),
+    Random(25),
+    Keynote(25)
+}
+
+enum class SessionLanguage {
+    fr,
+    en
+}
+
+@Document
+data class SessionSpeaker(
+        @Id var id: String,
+        var firstname: String,
+        var lastname: String
+)
+

@@ -14,3 +14,17 @@ data class Sponsor(
         var links: List<Link> = emptyList(),
         @Id var id: String? = null
 )
+
+enum class SponsorshipLevel {
+    GOLD,
+    SILVER,
+    BRONZE,
+    LANYARD,
+    PARTY,
+    BREAKFAST,
+    LUNCH,
+    HOSTING,
+    VIDEO,
+    COMMUNITY,
+    NONE
+}

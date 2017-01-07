@@ -16,9 +16,9 @@ enum class Room(name: String, capacity: Int) {
         fun findByName(name: String?): Room {
             val room = Room.values().filter { value -> value.name.equals(name) }
             if (room.isEmpty()) {
-                return Unknown;
+                return Unknown
             }
-            return room.first();
+            return room.first()
         }
     }
 }

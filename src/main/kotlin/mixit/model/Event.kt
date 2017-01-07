@@ -13,3 +13,11 @@ data class Event(
         var sponsors: Iterable<EventSponsoring> = emptyList(),
         @Id val id: String? = null
 )
+
+@Document
+data class EventSponsoring(
+        val level: SponsorshipLevel,
+        val sponsor: Sponsor,
+        val value: LocalDate? = null,
+        @Id var id: String? = null
+)
