@@ -58,7 +58,8 @@ class ReactorNettyServer(hostname: String, port: Int) : Server, ApplicationConte
     override fun stop() {
         if (this.isRunning) {
             val context = this.nettyContext.getAndSet(null)
-            context?.dispose()
+            context.dispose()
+            context.onClose()
         }
     }
 

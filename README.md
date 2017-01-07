@@ -37,7 +37,7 @@ To import the project in IDEA:
  - Make sure you have at least IntelliJ IDEA 2016.3 and IDEA Kotlin plugin 1.0.6+ (we are waiting IDEA Kotlin plugin 1.1-M05 to have Gradle Kotlin autocomplete)
  - Install Spek IDEA plugin
  - Import it in IDEA as a Gradle project
- - Right click on `Main.kt` -> Run mixit.MainKt
+ - Right click on `Application.kt` -> Run mixit.ApplicationKt
 
 To run the application:
 ```
@@ -58,10 +58,4 @@ cf push
 
 To test the application from a browser, go to `http://localhost:8080/`.
 Technical demo is available at `http://localhost:8080/sample` 
-
-# FAQ
-
-How can I register a new `Foo` singleton bean ?
-
-Add `beanFactory.register(Foo::class)` line in `Application` constructor.
 

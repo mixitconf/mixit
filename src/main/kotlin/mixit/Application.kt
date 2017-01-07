@@ -21,14 +21,19 @@ import java.util.function.Supplier
 
 class Application {
 
-    val context = AnnotationConfigApplicationContext()
-    val server: Server
     val hostname: String
     val port: Int?
 
-    constructor(hostname: String = "0.0.0.0", port: Int? = null) {
+    var context: AnnotationConfigApplicationContext? = null
+    var server: Server? = null
+
+    constructor(port: Int? = null, hostname: String = "0.0.0.0") {
         this.hostname = hostname
         this.port = port
+    }
+
+    fun start() {
+        var context = AnnotationConfigApplicationContext()
         val env = context.environment
         env.addPropertySource("application.properties")
         val mongoUri = env.getProperty("mongo.uri")
@@ -71,16 +76,16 @@ class Application {
         context.registerBean(GlobalController::class)
 
         context.refresh()
-        server = context.getBean(Server::class)
+        val server = context.getBean(Server::class)
         context.getBean(UserRepository::class).initData()
         context.getBean(EventRepository::class).initData()
         context.getBean(SessionRepository::class).initData()
         context.getBean(SpeakerRepository::class).initData()
         context.getBean(StaffRepository::class).initData()
-    }
-
-    fun start() {
         server.start()
+
+        this.context = context
+        this.server = server
     }
 
     fun await() {
@@ -93,8 +98,14 @@ class Application {
     }
 
     fun stop() {
-        context.destroy()
-        server.stop()
+        server?.stop()
+        context?.destroy()
     }
 
+}
+
+fun main(args: Array<String>) {
+    val application = Application()
+    application.start()
+    application.await()
 }

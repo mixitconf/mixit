@@ -98,7 +98,7 @@ val springVersion = "5.0.0.M4"
 val jacksonVersion = "2.8.5"
 val reactorVersion = "3.0.4.RELEASE"
 val junitPlatformVersion= extra["junitPlatformVersion"] as String
-val spekVersion = "1.1.0-beta2"
+val spekVersion = "1.1.0-beta3"
 
 dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
@@ -132,7 +132,7 @@ dependencies {
 
     testCompile("org.junit.platform:junit-platform-runner:$junitPlatformVersion")
     testCompile("org.jetbrains.spek:spek-api:$spekVersion")
-    testRuntime("org.jetbrains.spek:spek-junit-platform-engine:$spekVersion")
+    testCompile("org.jetbrains.spek:spek-junit-platform-engine:$spekVersion")
 }
 
 task<YarnInstallTask>("yarnInstall"){}
