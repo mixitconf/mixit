@@ -27,12 +27,11 @@ object EventSpec : SubjectSpek<Application>({
 
         it("should find mixit16") {
             StepVerifier.create(webClient
-                    .getJson("http://localhost:${subject.port}/api/mixit16")
+                    .getJson("http://localhost:${subject.port}/api/event/mixit16")
                     .then { r -> r.bodyToMono(Event::class) })
                     .consumeNextWith {
                         assertEquals(2016, it.year)
                         assertFalse(it.current)
-                        assertEquals(25, it.sponsors.count())
                     }
                     .verifyComplete()
         }

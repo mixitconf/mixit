@@ -12,12 +12,12 @@ class EventController(val repository: EventRepository) : RouterFunction<ServerRe
 
     @Suppress("UNCHECKED_CAST") // TODO Relax generics check to avoid explicit casting
     override fun route(request: ServerRequest) = RouterFunctions
-            .route(GET("/api/mixit{eventId}"), findOne())
+            .route(GET("/api/event/{login}"), findOne())
             .andRoute(GET("/api/event/"), findAll())
             .route(request) as Mono<HandlerFunction<ServerResponse>>
 
     fun findOne() = HandlerFunction { req ->
-        ok().contentType(APPLICATION_JSON_UTF8).body(fromPublisher(repository.findOne(req.pathVariable("eventId"))))
+        ok().contentType(APPLICATION_JSON_UTF8).body(fromPublisher(repository.findOne(req.pathVariable("login"))))
     }
 
     fun findAll() = HandlerFunction {

@@ -6,18 +6,30 @@ import java.time.LocalDate
 
 @Document
 data class Event(
-        val year: Int,
+        @Id val id: String,
         val start: LocalDate,
         val end: LocalDate,
         val current: Boolean = false,
-        var sponsors: Iterable<EventSponsoring> = emptyList(),
-        @Id val id: String? = null
-)
+        var sponsors: List<EventSponsoring> = emptyList()
+) {
+    var year: Int = start.year
+}
 
-@Document
 data class EventSponsoring(
         val level: SponsorshipLevel,
-        val sponsor: Sponsor,
-        val value: LocalDate? = null,
-        @Id var id: String? = null
+        val sponsor: User
 )
+
+enum class SponsorshipLevel {
+    GOLD,
+    SILVER,
+    BRONZE,
+    LANYARD,
+    PARTY,
+    BREAKFAST,
+    LUNCH,
+    HOSTING,
+    VIDEO,
+    COMMUNITY,
+    NONE
+}

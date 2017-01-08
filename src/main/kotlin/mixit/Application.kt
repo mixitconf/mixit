@@ -65,14 +65,10 @@ class Application {
         context.registerBean(UserRepository::class)
         context.registerBean(EventRepository::class)
         context.registerBean(SessionRepository::class)
-        context.registerBean(SpeakerRepository::class)
-        context.registerBean(StaffRepository::class)
 
         context.registerBean(UserController::class)
         context.registerBean(EventController::class)
         context.registerBean(SessionController::class)
-        context.registerBean(SpeakerController::class)
-        context.registerBean(StaffController::class)
         context.registerBean(GlobalController::class)
 
         context.refresh()
@@ -80,8 +76,6 @@ class Application {
         context.getBean(UserRepository::class).initData()
         context.getBean(EventRepository::class).initData()
         context.getBean(SessionRepository::class).initData()
-        context.getBean(SpeakerRepository::class).initData()
-        context.getBean(StaffRepository::class).initData()
         server.start()
 
         this.context = context

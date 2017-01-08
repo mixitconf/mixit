@@ -25,7 +25,7 @@ object SessionSpec : SubjectSpek<Application>({
 
         it("should find the Dan North session") {
             StepVerifier.create(webClient
-                    .getJson("http://localhost:${subject.port}/api/mixit15/session/2421")
+                    .getJson("http://localhost:${subject.port}/api/session/2421")
                     .flatMap { r -> r.bodyToFlux(Session::class) })
                     .consumeNextWith {
                         assertEquals("Selling BDD to the Business", it.title)

@@ -6,10 +6,10 @@ import java.time.LocalDateTime
 data class SessionDataDto(
     val idSession: Long,
     var year: Int,
-    var format: SessionFormat,
+    var format: String,
     var title: String,
     var speakers: Iterable<MemberDataDto> = emptyList(),
-    var lang: SessionLanguage,
+    var lang: String,
     var summary: String? = null,
     var description: String? = null,
     var room: String ? = null,
@@ -19,18 +19,18 @@ data class SessionDataDto(
 ){
     fun toSession(): Session {
         return Session(
-                format,
-                year,
+                SessionFormat.valueOf(format.toUpperCase()),
+                "mixit${year.toString().substring(2, 4)}",
                 title,
                 summary ?: "",
-                speakers.map { speaker -> speaker.toSessionSpeaker() },
-                lang?: SessionLanguage.fr,
+                speakers.map { speaker -> speaker.toUser(listOf("mixit${year.toString().substring(2, 4)}")) },
+                if (lang == "en") Language.ENGLISH else Language.FRENCH,
                 LocalDateTime.now(),
                 description,
                 Room.findByName(room ?: ""),
                 start,
                 end,
-                "${idSession}"
+                "$idSession"
         )
     }
 }

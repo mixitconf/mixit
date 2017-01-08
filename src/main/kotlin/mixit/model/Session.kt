@@ -7,37 +7,25 @@ import java.time.LocalDateTime
 @Document
 data class Session(
         val format: SessionFormat,
-        val year: Int,
+        val event: String,
         val title: String,
         val summary: String,
-        val speakers: Iterable<SessionSpeaker> = emptyList(),
-        val lang: SessionLanguage = SessionLanguage.fr,
-        val addedAt: LocalDateTime,
+        val speakers: List<User> = emptyList(), // TODO See why @DBRref does not work
+        val language: Language = Language.FRENCH,
+        val addedAt: LocalDateTime = LocalDateTime.now(),
         val description: String? = null,
         val room: Room? = null,
         val start: LocalDateTime? = null,
         val end: LocalDateTime? = null,
-        @Id
-        val id: String? = null
+        @Id val id: String? = null
 )
 
 enum class SessionFormat(val duration: Int) {
-    Talk(50),
-    LightningTalk(5),
-    Workshop(110),
-    Random(25),
-    Keynote(25)
+    TALK(50),
+    LIGHTNING_TALK(5),
+    WORKSHOP(110),
+    RANDOM(25),
+    KEYNOTE(25)
 }
 
-enum class SessionLanguage {
-    fr,
-    en
-}
-
-@Document
-data class SessionSpeaker(
-        @Id var id: String,
-        var firstname: String,
-        var lastname: String
-)
 

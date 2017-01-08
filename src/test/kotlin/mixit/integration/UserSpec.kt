@@ -1,6 +1,7 @@
 package mixit.integration
 
 import mixit.Application
+import mixit.model.Role
 import mixit.model.User
 import mixit.support.getHtml
 import mixit.support.getJson
@@ -9,13 +10,11 @@ import org.jetbrains.spek.api.dsl.describe
 import org.jetbrains.spek.api.dsl.it
 import org.jetbrains.spek.subject.SubjectSpek
 import org.junit.Assert.assertEquals
+import org.junit.Assert.assertTrue
 import org.springframework.http.MediaType.APPLICATION_JSON_UTF8
 import org.springframework.http.MediaType.TEXT_HTML
 import org.springframework.http.client.reactive.ReactorClientHttpConnector
 import org.springframework.util.SocketUtils
-import org.springframework.web.reactive.function.BodyInserters.fromObject
-import org.springframework.web.reactive.function.client.ClientRequest.GET
-import org.springframework.web.reactive.function.client.ClientRequest.POST
 import org.springframework.web.reactive.function.client.ClientResponseExtension.bodyToFlux
 import org.springframework.web.reactive.function.client.ClientResponseExtension.bodyToMono
 import org.springframework.web.reactive.function.client.WebClient
@@ -31,21 +30,63 @@ object UserSpec : SubjectSpek<Application>({
 
     describe("a user JSON endpoint") {
 
-        it("should find all 3 users Robert, Raide and Ford") {
+        it("should insert a new user Brian") {
             StepVerifier.create(webClient
-                    .getJson("http://localhost:${subject.port}/api/user/")
-                    .flatMap { it.bodyToFlux(User::class)} )
-                    .consumeNextWith { assertEquals("robert", it.id) }
-                    .consumeNextWith { assertEquals("raide", it.id) }
-                    .consumeNextWith { assertEquals("ford", it.id) }
+                    .postJson("http://localhost:${subject.port}/api/user/", User("brian", "Brian", "Clozel", "bc@gm.com"))
+                    .flatMap { it.bodyToMono(User::class)} )
+                    .consumeNextWith { assertEquals("brian", it.login) }
                     .verifyComplete()
         }
 
-        it("should insert a new user Brian") {
+         it("should find speaker Dan North") {
             StepVerifier.create(webClient
-                    .postJson("http://localhost:${subject.port}/api/user/", User("brian", "Brian", "Clozel"))
-                    .flatMap { it.bodyToMono(User::class)} )
-                    .consumeNextWith { assertEquals("brian", it.id) }
+                    .getJson("http://localhost:${subject.port}/api/speaker/tastapod")
+                    .then { r -> r.bodyToMono(User::class)} )
+                    .consumeNextWith {
+                        assertEquals("NORTH", it.lastname)
+                        assertEquals("Dan", it.firstname)
+                        assertTrue(it.roles.contains(Role.SPEAKER))
+                    }
+                    .verifyComplete()
+        }
+
+        it("should find 60 people in Mixit 15 speakers") {
+            StepVerifier.create(webClient
+                    .getJson("http://localhost:${subject.port}/api/mixit15/speaker/")
+                    .flatMap { it.bodyToFlux(User::class)} )
+                    .expectNextCount(60)
+                    .verifyComplete()
+        }
+
+         it("should find staff memeber Guillaume EHRET") {
+            StepVerifier.create(webClient
+                    .getJson("http://localhost:${subject.port}/api/staff/guillaumeehret")
+                    .flatMap { it.bodyToFlux(User::class) })
+                    .consumeNextWith {
+                        assertEquals("EHRET", it.lastname)
+                        assertEquals("Guillaume", it.firstname)
+                        assertTrue(it.roles.contains(Role.STAFF))
+                    }
+                    .verifyComplete()
+        }
+
+        it("should find 12 people in mixit staff") {
+            StepVerifier.create(webClient
+                    .getJson("http://localhost:${subject.port}/api/staff/")
+                    .flatMap { it.bodyToFlux(User::class) })
+                    .expectNextCount(12)
+                    .verifyComplete()
+        }
+
+        it("should find Hervé JACOB") {
+            StepVerifier.create(webClient
+                    .getJson("http://localhost:${subject.port}/api/sponsor/Zenika%20Lyon")
+                    .flatMap { it.bodyToFlux(User::class) })
+                    .consumeNextWith {
+                        assertEquals("JACOB", it.lastname)
+                        assertEquals("Hervé", it.firstname)
+                        assertTrue(it.roles.contains(Role.SPONSOR))
+                    }
                     .verifyComplete()
         }
 
