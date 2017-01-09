@@ -15,9 +15,11 @@ data class Event(
     var year: Int = start.year
 }
 
+@Document
 data class EventSponsoring(
         val level: SponsorshipLevel,
-        val sponsor: User
+        val sponsor: User,
+        val subscriptionDate: LocalDate = LocalDate.now()
 )
 
 enum class SponsorshipLevel {
