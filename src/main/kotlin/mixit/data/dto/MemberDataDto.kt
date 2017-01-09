@@ -20,7 +20,7 @@ data class MemberDataDto(
         var sessions: List<Long>?,
         var level: List<LevelDataDto>?
 ) {
-    fun toUser(events: List<String> = emptyList(), roles: Set<Role> = setOf(Role.ATTENDEE)): User {
+    fun toUser(events: List<String> = emptyList(), role: Role = Role.ATTENDEE): User {
         return User(
                 login ?: "user$idMember",
                 firstname ?: "",
@@ -31,7 +31,7 @@ data class MemberDataDto(
                 longDescription ?: "",
                 logo ?: "",
                 events,
-                roles,
+                role,
                 links = userLinks.map { link -> Link(link.key, link.value) }
         )
     }

@@ -23,7 +23,7 @@ data class SessionDataDto(
                 "mixit${year.toString().substring(2, 4)}",
                 title,
                 summary ?: "",
-                speakers.map { speaker -> speaker.toUser(listOf("mixit${year.toString().substring(2, 4)}")) },
+                speakers.map { speaker -> speaker.toUser() },
                 if (lang == "en") Language.ENGLISH else Language.FRENCH,
                 LocalDateTime.now(),
                 description,

@@ -45,7 +45,7 @@ object UserSpec : SubjectSpek<Application>({
                     .consumeNextWith {
                         assertEquals("NORTH", it.lastname)
                         assertEquals("Dan", it.firstname)
-                        assertTrue(it.roles.contains(Role.SPEAKER))
+                        assertTrue(it.role.equals(Role.SPEAKER))
                     }
                     .verifyComplete()
         }
@@ -58,14 +58,14 @@ object UserSpec : SubjectSpek<Application>({
                     .verifyComplete()
         }
 
-         it("should find staff memeber Guillaume EHRET") {
+         it("should find staff member Guillaume EHRET") {
             StepVerifier.create(webClient
                     .getJson("http://localhost:${subject.port}/api/staff/guillaumeehret")
                     .flatMap { it.bodyToFlux(User::class) })
                     .consumeNextWith {
                         assertEquals("EHRET", it.lastname)
                         assertEquals("Guillaume", it.firstname)
-                        assertTrue(it.roles.contains(Role.STAFF))
+                        assertTrue(it.role.equals(Role.STAFF))
                     }
                     .verifyComplete()
         }
@@ -85,7 +85,7 @@ object UserSpec : SubjectSpek<Application>({
                     .consumeNextWith {
                         assertEquals("JACOB", it.lastname)
                         assertEquals("Hervé", it.firstname)
-                        assertTrue(it.roles.contains(Role.SPONSOR))
+                        assertTrue(it.role.equals(Role.SPONSOR))
                     }
                     .verifyComplete()
         }

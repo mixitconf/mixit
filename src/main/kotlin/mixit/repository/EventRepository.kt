@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.repository.support.SimpleReactiveMongoRe
 import reactor.core.publisher.Flux
 import java.time.LocalDate
 
-class EventRepository(db: ReactiveMongoTemplate, f: ReactiveMongoRepositoryFactory) :
+class EventRepository(db: ReactiveMongoTemplate, val userRepository: UserRepository, f: ReactiveMongoRepositoryFactory) :
         SimpleReactiveMongoRepository<Event, String>(f.getEntityInformation(Event::class), db) {
 
 
@@ -28,5 +28,6 @@ class EventRepository(db: ReactiveMongoTemplate, f: ReactiveMongoRepositoryFacto
     }
 
     override fun findAll(): Flux<Event> = findAll(Sort("year"))
+
 
 }
