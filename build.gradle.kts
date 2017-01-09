@@ -57,7 +57,7 @@ configure<JavaPluginConvention> {
 }
 
 configure<ApplicationPluginConvention> {
-    mainClassName = "mixit.MainKt"
+    mainClassName = "mixit.ApplicationKt"
 }
 
 configure<ShadowExtension> {
