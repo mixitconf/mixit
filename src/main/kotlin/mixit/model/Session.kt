@@ -10,7 +10,8 @@ data class Session(
         val event: String,
         val title: String,
         val summary: String,
-        val speakers: List<User> = emptyList(), // TODO See why @DBRref does not work
+        // TODO Use @DBRref on speakers when https://jira.spring.io/browse/DATAMONGO-1584 will be fixed
+        val speakers: List<User> = emptyList(),
         val language: Language = Language.FRENCH,
         val addedAt: LocalDateTime = LocalDateTime.now(),
         val description: String? = null,
