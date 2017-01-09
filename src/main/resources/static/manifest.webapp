@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "name": "Mix-IT",
+  "launch_path": "/",
+  "start_url": "/"
+  "icons": {
+    "128": "/images/touch/icon-128x128.png"
+  },
+  "developer": {
+    "name": "Guillaume EHRET",
+    "url": "https://wwww.dev-mind.fr"
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "fr",
+  "permissions": {
+  },
+  "locales": {
+    "fr": {
+      "name": "Mix-IT",
+      "description": "Mix-IT, c'est 2 jours de conférences et d'atelier pour découvrir de nouvelles idées, développer, pratiquer, réseauter..."
+    },
+    "en": {
+       "name": "Mix-IT",
+       "description": "Mix-IT, it's 2 intense days of conferences to discover new ideas, games to learn, development or creative workshops"
+    }
+  }
+}
