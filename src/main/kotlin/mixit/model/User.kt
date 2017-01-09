@@ -14,12 +14,11 @@ data class User(
         val longDescription: String? = null,
         val logoUrl: String? = null,
         val events: List<String> = emptyList(),
-        val roles: Set<Role> = setOf(Role.ATTENDEE),
+        val role: Role = Role.ATTENDEE,
         val links: List<Link> = emptyList()
 )
 
 enum class Role {
-    ADMIN,
     STAFF,
     SPEAKER,
     SPONSOR,

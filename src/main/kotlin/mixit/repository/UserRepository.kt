@@ -33,20 +33,19 @@ class UserRepository(val db: ReactiveMongoTemplate, f: ReactiveMongoRepositoryFa
         years.forEach { year ->
             val speakerResource = ClassPathResource("data/speaker/speaker_mixit$year.json")
             val speakers: List<MemberDataDto> = objectMapper.readValue(speakerResource.file)
-            speakers.map { it.toUser(listOf("mixit$year"), setOf(Role.SPEAKER)) }
+            speakers.map { it.toUser(listOf("mixit$year"), Role.SPEAKER) }
                     .forEach { save(it).block() }
         }
 
-        // TODO Handle the fact that some staff member are also speakers
         val staffResource = ClassPathResource("data/staff_mixit.json")
         val staffs: List<MemberDataDto> = objectMapper.readValue(staffResource.file)
-        staffs.map { it.toUser(roles = setOf(Role.STAFF)) }
+        staffs.map { it.toUser(role = Role.STAFF) }
               .forEach { save(it).block() }
 
         years.forEach { year ->
             val sponsorResource = ClassPathResource("data/sponsor/sponsor_mixit$year.json")
             val sponsors: List<MemberDataDto> = objectMapper.readValue(sponsorResource.file)
-            sponsors.map { it.toUser(roles = setOf(Role.SPONSOR)) }
+            sponsors.map { it.toUser(role = Role.SPONSOR) }
                     .forEach { save(it).block() }
         }
     }
@@ -57,17 +56,17 @@ class UserRepository(val db: ReactiveMongoTemplate, f: ReactiveMongoRepositoryFa
     }
 
     fun findByRole(role: Role): Flux<User> {
-        val query = Query().addCriteria(Criteria.where("roles").`is`(role))
+        val query = Query().addCriteria(Criteria.where("role").`is`(role))
         return db.find(query, User::class.java)
     }
 
     fun findByRoleAndEvent(role: Role, event: String): Flux<User> {
-        val query = Query().addCriteria(Criteria.where("roles").`is`(role).and("events").`in`(event))
+        val query = Query().addCriteria(Criteria.where("role").`is`(role).and("events").`in`(event))
         return db.find(query, User::class.java)
     }
 
     fun findOneByRole(login: String, role: Role): Mono<User> {
-        val query = Query().addCriteria(Criteria.where("roles").`in`(role).and("_id").`is`(login))
+        val query = Query().addCriteria(Criteria.where("role").`in`(role).and("_id").`is`(login))
         return db.find(query, User::class.java).next()
     }
 
