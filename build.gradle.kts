@@ -94,7 +94,7 @@ configure<NoArgExtension> {
 }
 
 val kotlinVersion = extra["kotlinVersion"] as String
-val springVersion = "5.0.0.M4"
+val springVersion = "5.0.0.BUILD-SNAPSHOT"
 val jacksonVersion = "2.8.5"
 val reactorVersion = "3.0.4.RELEASE"
 val junitPlatformVersion= extra["junitPlatformVersion"] as String
