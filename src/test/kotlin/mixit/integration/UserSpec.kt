@@ -45,7 +45,7 @@ object UserSpec : SubjectSpek<Application>({
                     .consumeNextWith {
                         assertEquals("NORTH", it.lastname)
                         assertEquals("Dan", it.firstname)
-                        assertTrue(it.role.equals(Role.SPEAKER))
+                        assertTrue(it.role == Role.SPEAKER)
                     }
                     .verifyComplete()
         }
@@ -65,7 +65,7 @@ object UserSpec : SubjectSpek<Application>({
                     .consumeNextWith {
                         assertEquals("EHRET", it.lastname)
                         assertEquals("Guillaume", it.firstname)
-                        assertTrue(it.role.equals(Role.STAFF))
+                        assertTrue(it.role == Role.STAFF)
                     }
                     .verifyComplete()
         }
@@ -85,7 +85,7 @@ object UserSpec : SubjectSpek<Application>({
                     .consumeNextWith {
                         assertEquals("JACOB", it.lastname)
                         assertEquals("Hervé", it.firstname)
-                        assertTrue(it.role.equals(Role.SPONSOR))
+                        assertTrue(it.role == Role.SPONSOR)
                     }
                     .verifyComplete()
         }

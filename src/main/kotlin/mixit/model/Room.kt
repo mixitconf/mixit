@@ -14,7 +14,7 @@ enum class Room(name: String, capacity: Int) {
 
     companion object {
         fun findByName(name: String): Room {
-            val room = Room.values().filter { value -> value.name.equals(name) }
+            val room = Room.values().filter { value -> value.name == name }
             if (room.isEmpty()) {
                 return UNKNOWN
             }
