@@ -16,10 +16,10 @@ class Application {
         this.hostname = hostname
         this.port = port
         this.context = context(this.port, this.hostname)
+        context.refresh()
     }
 
     fun start() {
-        context.refresh()
         context.getBean<UserRepository>().initData()
         context.getBean<UserRepository>().initData()
         context.getBean<SessionRepository>().initData()
@@ -36,8 +36,7 @@ class Application {
     }
 
     fun stop() {
-        context?.getBean<Server>()?.stop()
-        context?.destroy()
+        context.getBean<Server>().stop()
     }
 
 }
