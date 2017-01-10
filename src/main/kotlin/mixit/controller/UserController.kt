@@ -3,35 +3,45 @@ package mixit.controller
 import mixit.model.Role
 import mixit.model.User
 import mixit.repository.UserRepository
+import mixit.support.invoke
 import org.springframework.http.MediaType.APPLICATION_JSON_UTF8
 import org.springframework.web.reactive.function.BodyInserters.fromObject
 import org.springframework.web.reactive.function.BodyInsertersExtension.fromPublisher
 import org.springframework.web.reactive.function.server.*
-import org.springframework.web.reactive.function.server.RequestPredicates.GET
-import org.springframework.web.reactive.function.server.RequestPredicates.POST
 import org.springframework.web.reactive.function.server.ServerRequestExtension.bodyToMono
 import org.springframework.web.reactive.function.server.ServerResponse.created
 import org.springframework.web.reactive.function.server.ServerResponse.ok
-import reactor.core.publisher.Mono
 import java.net.URI
 
 class UserController(val repository: UserRepository) : RouterFunction<ServerResponse> {
 
-    @Suppress("UNCHECKED_CAST")// TODO Relax generics check to avoid explicit casting
-    override fun route(request: ServerRequest) = RouterFunctions.route(
-                GET("/user/{login}"), findViewById()).andRoute(
-                GET("/user/"), findAllView()).andRoute(
-                GET("/api/user/{login}"), findOne()).andRoute(
-                GET("/api/user/"), findAll()).andRoute(
-                GET("/api/staff/"), findStaff()).andRoute(
-                GET("/api/staff/{login}"), findOneStaff()).andRoute(
-                GET("/api/speaker/"), findSpeakers()).andRoute(
-                GET("/api/{event}/speaker/"), findSpeakersByEvent()).andRoute(
-                GET("/api/speaker/{login}"), findOneSpeaker()).andRoute(
-                GET("/api/sponsor/"), findSponsors()).andRoute(
-                GET("/api/sponsor/{login}"), findOneSponsor()).andRoute(
-                POST("/api/user/"), create()
-    ).route(request) as Mono<HandlerFunction<ServerResponse>>
+    override fun route(request: ServerRequest) =
+            "/" {
+                "user" {
+                    "/" {                GET { findAllView() } }
+                    "/{login}" {         GET { findViewById() } }
+                }
+                "api/user" {
+                    "/" {
+                                         POST { create() }
+                                         GET  { findAll() }
+                    }
+                    "/{login}" {         GET { findOne() } }
+                }
+                "api/staff" {
+                    "/" {                GET { findStaff() } }
+                    "/{login}" {         GET { findOneStaff() } }
+                }
+                "api/speaker" {
+                    "/" {                GET { findSpeakers() } }
+                    "/{login}" {         GET { findOneSpeaker() } }
+                }
+                "api/sponsor" {
+                    "/" {                GET { findSponsors() } }
+                    "/{login}" {         GET { findOneSponsor() } }
+                }
+                "api/{event}/speaker/" { GET { findSpeakersByEvent() } }
+            } (request)
 
     fun findViewById() = HandlerFunction { req ->
         repository.findOne(req.pathVariable("login"))
