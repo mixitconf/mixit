@@ -1,80 +1,29 @@
 package mixit
 
-import com.mongodb.ConnectionString
-import com.samskivert.mustache.Mustache
-import mixit.controller.*
 import mixit.repository.*
-import mixit.support.ReactorNettyServer
 import mixit.support.Server
-import mixit.support.addPropertySource
 import org.springframework.beans.factory.BeanFactoryExtension.getBean
 import org.springframework.context.annotation.AnnotationConfigApplicationContext
-import org.springframework.context.support.GenericApplicationContextExtension.registerBean
-import org.springframework.context.support.ReloadableResourceBundleMessageSource
-import org.springframework.data.mongodb.core.ReactiveMongoTemplate
-import org.springframework.data.mongodb.core.SimpleReactiveMongoDatabaseFactory
-import org.springframework.data.mongodb.repository.support.ReactiveMongoRepositoryFactory
-import org.springframework.web.reactive.result.view.mustache.MustacheResourceTemplateLoader
-import org.springframework.web.reactive.result.view.mustache.MustacheViewResolver
 import java.util.concurrent.CompletableFuture
 
 class Application {
 
     val hostname: String
     val port: Int?
-
-    var context: AnnotationConfigApplicationContext? = null
-    var server: Server? = null
+    val context: AnnotationConfigApplicationContext
 
     constructor(port: Int? = null, hostname: String = "0.0.0.0") {
         this.hostname = hostname
         this.port = port
+        this.context = context(this.port, this.hostname)
     }
 
     fun start() {
-        var context = AnnotationConfigApplicationContext()
-        context.environment.addPropertySource("application.properties")
-
-        context.registerBean("messageSource") {
-            val messageSource = ReloadableResourceBundleMessageSource()
-            messageSource.setBasename("messages")
-            messageSource.setDefaultEncoding("UTF-8")
-            messageSource
-        }
-        context.registerBean {
-            val prefix = "classpath:/templates/"
-            val suffix = ".mustache"
-            val loader = MustacheResourceTemplateLoader(prefix, suffix)
-            val resolver = MustacheViewResolver()
-            resolver.setPrefix(prefix)
-            resolver.setSuffix(suffix)
-            resolver.setCompiler(Mustache.compiler().withLoader(loader))
-            resolver
-        }
-        context.registerBean { ReactiveMongoTemplate(SimpleReactiveMongoDatabaseFactory(
-                ConnectionString(context.environment.getProperty("mongo.uri"))
-        ))}
-        context.registerBean { ReactiveMongoRepositoryFactory(it.getBean(ReactiveMongoTemplate::class)) }
-        context.registerBean { ReactorNettyServer(hostname, port ?: it.environment.getProperty("server.port").toInt()) }
-
-        context.registerBean(UserRepository::class)
-        context.registerBean(EventRepository::class)
-        context.registerBean(SessionRepository::class)
-
-        context.registerBean(UserController::class)
-        context.registerBean(EventController::class)
-        context.registerBean(SessionController::class)
-        context.registerBean(GlobalController::class)
-
         context.refresh()
-        val server = context.getBean(Server::class)
-        context.getBean(UserRepository::class).initData()
-        context.getBean(EventRepository::class).initData()
-        context.getBean(SessionRepository::class).initData()
-        server.start()
-
-        this.context = context
-        this.server = server
+        context.getBean<UserRepository>().initData()
+        context.getBean<UserRepository>().initData()
+        context.getBean<SessionRepository>().initData()
+        context.getBean<Server>().start()
     }
 
     fun await() {
@@ -87,7 +36,7 @@ class Application {
     }
 
     fun stop() {
-        server?.stop()
+        context?.getBean<Server>()?.stop()
         context?.destroy()
     }
 
