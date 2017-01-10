@@ -33,17 +33,15 @@ class Application {
 
     fun start() {
         var context = AnnotationConfigApplicationContext()
-        val env = context.environment
-        env.addPropertySource("application.properties")
-        val mongoUri = env.getProperty("mongo.uri")
+        context.environment.addPropertySource("application.properties")
 
-        context.registerBean("messageSource", {
+        context.registerBean("messageSource") {
             val messageSource = ReloadableResourceBundleMessageSource()
             messageSource.setBasename("messages")
             messageSource.setDefaultEncoding("UTF-8")
             messageSource
-        })
-        context.registerBean({
+        }
+        context.registerBean {
             val prefix = "classpath:/templates/"
             val suffix = ".mustache"
             val loader = MustacheResourceTemplateLoader(prefix, suffix)
@@ -52,10 +50,12 @@ class Application {
             resolver.setSuffix(suffix)
             resolver.setCompiler(Mustache.compiler().withLoader(loader))
             resolver
-        })
-        context.registerBean({ ReactiveMongoTemplate(SimpleReactiveMongoDatabaseFactory(ConnectionString(mongoUri))) })
-        context.registerBean({ ReactiveMongoRepositoryFactory(context.getBean(ReactiveMongoTemplate::class)) })
-        context.registerBean({ ReactorNettyServer(hostname, port ?: env.getProperty("server.port").toInt()) })
+        }
+        context.registerBean { ReactiveMongoTemplate(SimpleReactiveMongoDatabaseFactory(
+                ConnectionString(context.environment.getProperty("mongo.uri"))
+        ))}
+        context.registerBean { ReactiveMongoRepositoryFactory(it.getBean(ReactiveMongoTemplate::class)) }
+        context.registerBean { ReactorNettyServer(hostname, port ?: it.environment.getProperty("server.port").toInt()) }
 
         context.registerBean(UserRepository::class)
         context.registerBean(EventRepository::class)
