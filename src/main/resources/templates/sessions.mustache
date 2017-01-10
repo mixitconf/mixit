@@ -1,0 +1,9 @@
+{{> header}}
+
+{{#sessions}}
+    <ul>
+        <li>{{event}} - <a href="{{localePrefix}}/session/{{id}}">{{title}}</a> (<a href="/api/session/{{id}}">API</a>)</li>
+    </ul>
+{{/sessions}}
+
+{{> footer}}

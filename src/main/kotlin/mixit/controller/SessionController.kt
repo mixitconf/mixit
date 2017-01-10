@@ -12,13 +12,26 @@ import reactor.core.publisher.Mono
 class SessionController(val repository: SessionRepository) : RouterFunction<ServerResponse> {
 
     @Suppress("UNCHECKED_CAST") // TODO Relax generics check to avoid explicit casting
-    override fun route(request: ServerRequest) = RouterFunctions
-            .route(GET("/api/session/{login}"), findOne())
-            .andRoute(GET("/api/{event}/session/"), findByEventId())
-            .route(request) as Mono<HandlerFunction<ServerResponse>>
+    override fun route(request: ServerRequest) = RouterFunctions.route(
+            GET("/session/"), findAllView()).andRoute(
+            GET("/session/{id}"), findOneView()).andRoute(
+            GET("/api/session/{id}"), findOne()).andRoute(
+            GET("/api/{event}/session/"), findByEventId()
+    ).route(request) as Mono<HandlerFunction<ServerResponse>>
+
+    fun findAllView() = HandlerFunction {
+        repository.findAll()
+                .collectList()
+                .then { session -> ok().render("sessions",  mapOf(Pair("sessions", session))) }
+    }
+
+    fun findOneView() = HandlerFunction { req ->
+        repository.findOne(req.pathVariable("id"))
+                .then { session -> ok().render("session", mapOf(Pair("session", session))) }
+    }
 
     fun findOne() = HandlerFunction { req ->
-        ok().contentType(APPLICATION_JSON_UTF8).body(fromPublisher(repository.findOne(req.pathVariable("login"))))
+        ok().contentType(APPLICATION_JSON_UTF8).body(fromPublisher(repository.findOne(req.pathVariable("id"))))
     }
 
     fun findByEventId() = HandlerFunction { req ->
