@@ -1,6 +1,5 @@
 package mixit.controller
 
-import mixit.support.RouterFunctionDsl
 import org.springframework.core.io.ClassPathResource
 import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.web.reactive.function.server.*

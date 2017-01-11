@@ -3,7 +3,6 @@ package mixit.controller
 import mixit.model.Role
 import mixit.model.User
 import mixit.repository.UserRepository
-import mixit.support.RouterFunctionDsl
 import org.springframework.http.MediaType.*
 import org.springframework.web.reactive.function.BodyInserters.fromObject
 import org.springframework.web.reactive.function.fromPublisher
@@ -86,7 +85,7 @@ class UserController(val repository: UserRepository) : RouterFunction<ServerResp
     }
 
     fun create() = HandlerFunction { req ->
-        repository.save(req.bodyToMono(User::class)).single()
+        repository.save(req.bodyToMono<User>()).single()
                 .then { u -> created(URI.create("/api/user/${u.login}"))
                     .contentType(APPLICATION_JSON_UTF8)
                     .body(fromObject(u))

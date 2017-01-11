@@ -3,7 +3,6 @@ package mixit.repository
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.data.dto.MemberDataDto
-import mixit.data.dto.SessionDataDto
 import mixit.model.Event
 import mixit.model.EventSponsoring
 import mixit.support.getEntityInformation
@@ -14,7 +13,6 @@ import org.springframework.data.mongodb.repository.support.ReactiveMongoReposito
 import org.springframework.data.mongodb.repository.support.SimpleReactiveMongoRepository
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
 import reactor.core.publisher.Flux
-import reactor.core.publisher.Operators
 import java.time.LocalDate
 
 class EventRepository(db: ReactiveMongoTemplate, val userRepository: UserRepository, f: ReactiveMongoRepositoryFactory) :

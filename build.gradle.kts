@@ -51,11 +51,6 @@ repositories {
     maven { setUrl("https://repo.spring.io/snapshot") }
 }
 
-configure<JavaPluginConvention> {
-    setSourceCompatibility(1.8)
-    setTargetCompatibility(1.8)
-}
-
 configure<ApplicationPluginConvention> {
     mainClassName = "mixit.ApplicationKt"
 }

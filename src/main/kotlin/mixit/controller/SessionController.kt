@@ -1,7 +1,6 @@
 package mixit.controller
 
 import mixit.repository.SessionRepository
-import mixit.support.RouterFunctionDsl
 import org.springframework.http.MediaType.APPLICATION_JSON
 
 import org.springframework.http.MediaType.APPLICATION_JSON_UTF8
