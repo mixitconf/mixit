@@ -4,10 +4,11 @@ import mixit.model.Role
 import mixit.model.User
 import mixit.repository.UserRepository
 import mixit.support.RouterFunctionDsl
-import org.springframework.http.MediaType.APPLICATION_JSON_UTF8
+import org.springframework.http.MediaType.*
 import org.springframework.web.reactive.function.BodyInserters.fromObject
 import org.springframework.web.reactive.function.fromPublisher
 import org.springframework.web.reactive.function.server.*
+import org.springframework.web.reactive.function.server.RequestPredicates.accept
 import org.springframework.web.reactive.function.server.ServerResponse.created
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import java.net.URI
@@ -15,18 +16,18 @@ import java.net.URI
 class UserController(val repository: UserRepository) : RouterFunction<ServerResponse> {
 
     override fun route(request: ServerRequest) = RouterFunctionDsl {
-        GET("/user/") { findAllView() }
-        GET("/user/{login}") { findViewById() }
-        GET("/api/user/") { findAll() }
-        POST("/api/user/") { create() }
-        POST("/api/user/{login}") { findOne() }
-        GET("/api/staff/") { findStaff() }
-        GET("/api/staff/{login}") { findOneStaff() }
-        GET("/api/speaker/") { findSpeakers() }
-        GET("/api/speaker/{login}") { findOneSpeaker() }
-        GET("/api/sponsor/") { findSponsors() }
-        GET("/api/sponsor/{login}") { findOneSponsor() }
-        GET("/api/{event}/speaker/") { findSpeakersByEvent() }
+        (GET("/user/") and accept(TEXT_HTML)) { findAllView() }
+        (GET("/user/{login}") and accept(TEXT_HTML)) { findViewById() }
+        (GET("/api/user/") and accept(APPLICATION_JSON)) { findAll() }
+        (POST("/api/user/") and accept(APPLICATION_JSON)) { create() }
+        (POST("/api/user/{login}") and accept(APPLICATION_JSON)) { findOne() }
+        (GET("/api/staff/") and accept(APPLICATION_JSON)) { findStaff() }
+        (GET("/api/staff/{login}") and accept(APPLICATION_JSON)) { findOneStaff() }
+        (GET("/api/speaker/") and accept(APPLICATION_JSON)) { findSpeakers() }
+        (GET("/api/speaker/{login}") and accept(APPLICATION_JSON)) { findOneSpeaker() }
+        (GET("/api/sponsor/") and accept(APPLICATION_JSON)) { findSponsors() }
+        (GET("/api/sponsor/{login}") and accept(APPLICATION_JSON)) { findOneSponsor() }
+        (GET("/api/{event}/speaker/") and accept(APPLICATION_JSON)) { findSpeakersByEvent() }
     } (request)
 
     fun findViewById() = HandlerFunction { req ->
