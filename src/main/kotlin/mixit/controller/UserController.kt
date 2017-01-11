@@ -3,45 +3,31 @@ package mixit.controller
 import mixit.model.Role
 import mixit.model.User
 import mixit.repository.UserRepository
-import mixit.support.invoke
+import mixit.support.RouterFunctionDsl
 import org.springframework.http.MediaType.APPLICATION_JSON_UTF8
 import org.springframework.web.reactive.function.BodyInserters.fromObject
-import org.springframework.web.reactive.function.BodyInsertersExtension.fromPublisher
+import org.springframework.web.reactive.function.fromPublisher
 import org.springframework.web.reactive.function.server.*
-import org.springframework.web.reactive.function.server.ServerRequestExtension.bodyToMono
 import org.springframework.web.reactive.function.server.ServerResponse.created
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import java.net.URI
 
 class UserController(val repository: UserRepository) : RouterFunction<ServerResponse> {
 
-    override fun route(request: ServerRequest) =
-            "/" {
-                "user" {
-                    "/" {                GET { findAllView() } }
-                    "/{login}" {         GET { findViewById() } }
-                }
-                "api/user" {
-                    "/" {
-                                         POST { create() }
-                                         GET  { findAll() }
-                    }
-                    "/{login}" {         GET { findOne() } }
-                }
-                "api/staff" {
-                    "/" {                GET { findStaff() } }
-                    "/{login}" {         GET { findOneStaff() } }
-                }
-                "api/speaker" {
-                    "/" {                GET { findSpeakers() } }
-                    "/{login}" {         GET { findOneSpeaker() } }
-                }
-                "api/sponsor" {
-                    "/" {                GET { findSponsors() } }
-                    "/{login}" {         GET { findOneSponsor() } }
-                }
-                "api/{event}/speaker/" { GET { findSpeakersByEvent() } }
-            } (request)
+    override fun route(request: ServerRequest) = RouterFunctionDsl {
+        GET("/user/") { findAllView() }
+        GET("/user/{login}") { findViewById() }
+        GET("/api/user/") { findAll() }
+        POST("/api/user/") { create() }
+        POST("/api/user/{login}") { findOne() }
+        GET("/api/staff/") { findStaff() }
+        GET("/api/staff/{login}") { findOneStaff() }
+        GET("/api/speaker/") { findSpeakers() }
+        GET("/api/speaker/{login}") { findOneSpeaker() }
+        GET("/api/sponsor/") { findSponsors() }
+        GET("/api/sponsor/{login}") { findOneSponsor() }
+        GET("/api/{event}/speaker/") { findSpeakersByEvent() }
+    } (request)
 
     fun findViewById() = HandlerFunction { req ->
         repository.findOne(req.pathVariable("login"))

@@ -11,15 +11,15 @@ import mixit.repository.SessionRepository
 import mixit.repository.UserRepository
 import mixit.support.ReactorNettyServer
 import mixit.support.addPropertySource
+import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.ReloadableResourceBundleMessageSource
+import org.springframework.context.support.registerBean
+import org.springframework.beans.factory.getBean
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.SimpleReactiveMongoDatabaseFactory
 import org.springframework.data.mongodb.repository.support.ReactiveMongoRepositoryFactory
 import org.springframework.web.reactive.result.view.mustache.MustacheResourceTemplateLoader
 import org.springframework.web.reactive.result.view.mustache.MustacheViewResolver
-import org.springframework.context.annotation.AnnotationConfigApplicationContextExtension.AnnotationConfigApplicationContext
-import org.springframework.context.support.GenericApplicationContextExtension.registerBean
-import org.springframework.beans.factory.BeanFactoryExtension.getBean
 
 fun context(port: Int?, hostname: String) = AnnotationConfigApplicationContext {
         environment.addPropertySource("application.properties")

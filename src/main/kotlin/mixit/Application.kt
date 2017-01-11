@@ -2,7 +2,7 @@ package mixit
 
 import mixit.repository.*
 import mixit.support.Server
-import org.springframework.beans.factory.BeanFactoryExtension.getBean
+import org.springframework.beans.factory.getBean
 import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import java.util.concurrent.CompletableFuture
 

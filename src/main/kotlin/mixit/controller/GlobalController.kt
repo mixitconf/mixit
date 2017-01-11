@@ -1,22 +1,19 @@
 package mixit.controller
 
-import mixit.support.invoke
+import mixit.support.RouterFunctionDsl
 import org.springframework.core.io.ClassPathResource
-import org.springframework.web.reactive.function.server.HandlerFunction
-import org.springframework.web.reactive.function.server.RouterFunction
-import org.springframework.web.reactive.function.server.ServerRequest
-import org.springframework.web.reactive.function.server.ServerResponse
+import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 
 
 class GlobalController : RouterFunction<ServerResponse> {
 
-    override fun route(request: ServerRequest) =
-        "/" {
-                        GET { indexView() }
-            "**" {      resources(ClassPathResource("static/")) }
-            "sample" {  GET { sampleView() } }
-        } (request)
+    override fun route(request: ServerRequest) = RouterFunctionDsl {
+        GET("/") { indexView() }
+        GET("/sample") { sampleView() }
+        resources("/**", ClassPathResource("static/"))
+
+    } (request)
 
     fun indexView() = HandlerFunction { ok().render("index") }
 

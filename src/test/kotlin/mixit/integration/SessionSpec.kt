@@ -9,7 +9,7 @@ import org.jetbrains.spek.subject.SubjectSpek
 import org.junit.Assert.assertEquals
 import org.springframework.http.client.reactive.ReactorClientHttpConnector
 import org.springframework.util.SocketUtils
-import org.springframework.web.reactive.function.client.ClientResponseExtension.bodyToFlux
+import org.springframework.web.reactive.function.client.bodyToFlux
 import org.springframework.web.reactive.function.client.WebClient
 import reactor.test.StepVerifier
 
@@ -26,7 +26,7 @@ object SessionSpec : SubjectSpek<Application>({
         it("should find the Dan North session") {
             StepVerifier.create(webClient
                     .getJson("http://localhost:${subject.port}/api/session/2421")
-                    .flatMap { r -> r.bodyToFlux(Session::class) })
+                    .flatMap { r -> r.bodyToFlux<Session>() })
                     .consumeNextWith {
                         assertEquals("Selling BDD to the Business", it.title)
                         assertEquals("NORTH", it.speakers.iterator().next().lastname)
@@ -37,7 +37,7 @@ object SessionSpec : SubjectSpek<Application>({
         it("should find 27 sessions for mixit12") {
             StepVerifier.create(webClient
                     .getJson("http://localhost:${subject.port}/api/mixit12/session/")
-                    .flatMap { it.bodyToFlux(Session::class) })
+                    .flatMap { it.bodyToFlux<Session>() })
                     .expectNextCount(27)
                     .verifyComplete()
         }

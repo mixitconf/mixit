@@ -10,8 +10,8 @@ import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.springframework.http.client.reactive.ReactorClientHttpConnector
 import org.springframework.util.SocketUtils
-import org.springframework.web.reactive.function.client.ClientResponseExtension.bodyToMono
-import org.springframework.web.reactive.function.client.ClientResponseExtension.bodyToFlux
+import org.springframework.web.reactive.function.client.bodyToMono
+import org.springframework.web.reactive.function.client.bodyToFlux
 import org.springframework.web.reactive.function.client.WebClient
 import reactor.test.StepVerifier
 
@@ -28,7 +28,7 @@ object EventSpec : SubjectSpek<Application>({
         it("should find mixit16") {
             StepVerifier.create(webClient
                     .getJson("http://localhost:${subject.port}/api/event/mixit16")
-                    .then { r -> r.bodyToMono(Event::class) })
+                    .then { r -> r.bodyToMono<Event>() })
                     .consumeNextWith {
                         assertEquals(2016, it.year)
                         assertFalse(it.current)
@@ -39,7 +39,7 @@ object EventSpec : SubjectSpek<Application>({
         it("should find 6 events from 2012 to 2017") {
             StepVerifier.create(webClient
                     .getJson("http://localhost:${subject.port}/api/event/")
-                    .flatMap { it.bodyToFlux(Event::class) })
+                    .flatMap { it.bodyToFlux<Event>() })
                     .consumeNextWith { assertEquals(2012, it.year) }
                     .consumeNextWith { assertEquals(2013, it.year) }
                     .consumeNextWith { assertEquals(2014, it.year) }
