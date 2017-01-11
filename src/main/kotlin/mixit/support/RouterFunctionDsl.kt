@@ -19,7 +19,7 @@ class RouterFunctionDsl {
 
     infix fun RequestPredicate.and(other: RequestPredicate): RequestPredicate = this.and(other)
 
-    infix fun RequestPredicate.or(other: RequestPredicate): RequestPredicate = this.and(other)
+    infix fun RequestPredicate.or(other: RequestPredicate): RequestPredicate = this.or(other)
 
     operator fun RequestPredicate.not(): RequestPredicate = this.negate()
 

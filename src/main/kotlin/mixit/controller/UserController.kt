@@ -17,7 +17,7 @@ class UserController(val repository: UserRepository) : RouterFunction<ServerResp
 
     override fun route(request: ServerRequest) = RouterFunctionDsl {
         accept(TEXT_HTML).apply {
-            GET("/user/") { findAllView() }
+            (GET("/user/") or GET("/users/")) { findAllView() }
             GET("/user/{login}") { findViewById() }
         }
         accept(APPLICATION_JSON).apply {
