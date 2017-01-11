@@ -12,8 +12,10 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 class EventController(val repository: EventRepository) : RouterFunction<ServerResponse> {
 
     override fun route(request: ServerRequest) = RouterFunctionDsl {
-        (GET("/api/event/") and accept(APPLICATION_JSON)) { findAll() }
-        (GET("/api/event/{login}") and accept(APPLICATION_JSON)) { findOne() }
+        accept(APPLICATION_JSON).apply {
+            GET("/api/event/") { findAll() }
+            GET("/api/event/{login}") { findOne() }
+        }
     } (request)
 
     fun findOne() = HandlerFunction { req ->

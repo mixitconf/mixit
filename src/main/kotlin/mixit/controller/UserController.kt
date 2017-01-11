@@ -16,18 +16,22 @@ import java.net.URI
 class UserController(val repository: UserRepository) : RouterFunction<ServerResponse> {
 
     override fun route(request: ServerRequest) = RouterFunctionDsl {
-        (GET("/user/") and accept(TEXT_HTML)) { findAllView() }
-        (GET("/user/{login}") and accept(TEXT_HTML)) { findViewById() }
-        (GET("/api/user/") and accept(APPLICATION_JSON)) { findAll() }
-        (POST("/api/user/") and accept(APPLICATION_JSON)) { create() }
-        (POST("/api/user/{login}") and accept(APPLICATION_JSON)) { findOne() }
-        (GET("/api/staff/") and accept(APPLICATION_JSON)) { findStaff() }
-        (GET("/api/staff/{login}") and accept(APPLICATION_JSON)) { findOneStaff() }
-        (GET("/api/speaker/") and accept(APPLICATION_JSON)) { findSpeakers() }
-        (GET("/api/speaker/{login}") and accept(APPLICATION_JSON)) { findOneSpeaker() }
-        (GET("/api/sponsor/") and accept(APPLICATION_JSON)) { findSponsors() }
-        (GET("/api/sponsor/{login}") and accept(APPLICATION_JSON)) { findOneSponsor() }
-        (GET("/api/{event}/speaker/") and accept(APPLICATION_JSON)) { findSpeakersByEvent() }
+        accept(TEXT_HTML).apply {
+            GET("/user/") { findAllView() }
+            GET("/user/{login}") { findViewById() }
+        }
+        accept(APPLICATION_JSON).apply {
+            GET("/api/user/") { findAll() }
+            POST("/api/user/") { create() }
+            POST("/api/user/{login}") { findOne() }
+            GET("/api/staff/") { findStaff() }
+            GET("/api/staff/{login}") { findOneStaff() }
+            GET("/api/speaker/") { findSpeakers() }
+            GET("/api/speaker/{login}") { findOneSpeaker() }
+            GET("/api/sponsor/") { findSponsors() }
+            GET("/api/sponsor/{login}") { findOneSponsor() }
+            GET("/api/{event}/speaker/") { findSpeakersByEvent() }
+        }
     } (request)
 
     fun findViewById() = HandlerFunction { req ->

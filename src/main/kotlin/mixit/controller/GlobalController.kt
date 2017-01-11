@@ -11,8 +11,10 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 class GlobalController : RouterFunction<ServerResponse> {
 
     override fun route(request: ServerRequest) = RouterFunctionDsl {
-        (GET("/") and accept(APPLICATION_JSON)) { indexView() }
-        (GET("/sample") and accept(APPLICATION_JSON)) { sampleView() }
+        accept(APPLICATION_JSON).apply {
+            GET("/") { indexView() }
+            GET("/sample") { sampleView() }
+        }
         resources("/**", ClassPathResource("static/"))
     } (request)
 
