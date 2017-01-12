@@ -2,10 +2,7 @@ package mixit
 
 import com.mongodb.ConnectionString
 import com.samskivert.mustache.Mustache
-import mixit.controller.EventController
-import mixit.controller.GlobalController
-import mixit.controller.SessionController
-import mixit.controller.UserController
+import mixit.controller.*
 import mixit.repository.EventRepository
 import mixit.repository.SessionRepository
 import mixit.repository.UserRepository
@@ -52,5 +49,6 @@ fun context(port: Int?, hostname: String) = AnnotationConfigApplicationContext {
         registerBean<UserController>()
         registerBean<EventController>()
         registerBean<SessionController>()
+        registerBean<NewsController>()
         registerBean<GlobalController>()
 }
