@@ -3,6 +3,7 @@ package mixit
 import com.mongodb.ConnectionString
 import com.samskivert.mustache.Mustache
 import mixit.controller.*
+import mixit.repository.ArticleRepository
 import mixit.repository.EventRepository
 import mixit.repository.SessionRepository
 import mixit.repository.UserRepository
@@ -45,7 +46,9 @@ fun context(port: Int?, hostname: String) = AnnotationConfigApplicationContext {
         registerBean<UserRepository>()
         registerBean<EventRepository>()
         registerBean<SessionRepository>()
+        registerBean<ArticleRepository>()
 
+        registerBean<ArticleController>()
         registerBean<UserController>()
         registerBean<EventController>()
         registerBean<SessionController>()
