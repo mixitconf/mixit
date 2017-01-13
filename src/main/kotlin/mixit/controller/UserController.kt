@@ -17,7 +17,7 @@ class UserController(val repository: UserRepository) : RouterFunction<ServerResp
     override fun route(request: ServerRequest) = RouterFunctionDsl {
         accept(TEXT_HTML).apply {
             (GET("/user/") or GET("/users/")) { findAllView() }
-            GET("/user/{login}") { findViewById() }
+            GET("/user/{login}") { findOneView() }
         }
         accept(APPLICATION_JSON).apply {
             GET("/api/user/") { findAll() }
@@ -33,20 +33,20 @@ class UserController(val repository: UserRepository) : RouterFunction<ServerResp
         }
     } (request)
 
-    fun findViewById() = HandlerFunction { req ->
+    fun findOneView() = HandlerFunction { req ->
         repository.findOne(req.pathVariable("login"))
                 .then { u -> ok().render("user", mapOf(Pair("user", u))) }
-    }
-
-    fun findOne() = HandlerFunction { req ->
-        ok().contentType(APPLICATION_JSON_UTF8).body(
-                fromPublisher(repository.findOne(req.pathVariable("login"))))
     }
 
     fun findAllView() = HandlerFunction {
         repository.findAll()
                 .collectList()
                 .then { u -> ok().render("users",  mapOf(Pair("users", u))) }
+    }
+
+    fun findOne() = HandlerFunction { req ->
+        ok().contentType(APPLICATION_JSON_UTF8).body(
+                fromPublisher(repository.findOne(req.pathVariable("login"))))
     }
 
     fun findAll() = HandlerFunction {

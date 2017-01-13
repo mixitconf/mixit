@@ -109,6 +109,7 @@ dependencies {
     compile("org.springframework:spring-web-reactive:$springVersion")
 
     compile("com.samskivert:jmustache:1.13")
+    compile("com.atlassian.commonmark:commonmark:0.8.0")
 
     compile("io.projectreactor:reactor-core:$reactorVersion")
     compile("io.projectreactor.ipc:reactor-netty:0.6.0.RELEASE")

@@ -46,7 +46,7 @@ import org.springframework.web.reactive.result.view.ViewResolver;
  */
 public class MustacheViewResolver extends UrlBasedViewResolver {
 
-	private Compiler compiler = Mustache.compiler();
+	private Compiler compiler = Mustache.compiler().escapeHTML(false);
 
 	private Charset charset = StandardCharsets.UTF_8;
 

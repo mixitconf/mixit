@@ -34,7 +34,7 @@ fun context(port: Int?, hostname: String) = AnnotationConfigApplicationContext {
                 val loader = MustacheResourceTemplateLoader(prefix, suffix)
                 setPrefix(prefix)
                 setSuffix(suffix)
-                setCompiler(Mustache.compiler().withLoader(loader))
+                setCompiler(Mustache.compiler().escapeHTML(false).withLoader(loader))
             }
         }
         registerBean { ReactiveMongoTemplate(SimpleReactiveMongoDatabaseFactory(

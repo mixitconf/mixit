@@ -27,5 +27,4 @@ class ArticleRepository(db: ReactiveMongoTemplate, f: ReactiveMongoRepositoryFac
                 .forEach { article -> save(article).block() }
     }
 
-
 }
