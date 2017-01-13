@@ -17,7 +17,7 @@ import org.commonmark.renderer.html.HtmlRenderer
 
 class ArticleController(val repository: ArticleRepository) : RouterFunction<ServerResponse> {
 
-    override fun route(request: ServerRequest) = RouterFunctionDsl {
+    override fun route(request: ServerRequest) = route(request) {
         accept(TEXT_HTML).apply {
             GET("/article/") { findAllView() }
             GET("/article/{id}") { findOneView() }
@@ -26,7 +26,7 @@ class ArticleController(val repository: ArticleRepository) : RouterFunction<Serv
             GET("/api/article/") { findAll() }
             GET("/api/article/{id}") { findOne() }
         }
-    } (request)
+    }
 
     fun findOneView() = HandlerFunction { req ->
         repository.findOne(req.pathVariable("id")).then { a ->

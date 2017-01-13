@@ -11,14 +11,14 @@ import java.time.Duration.ofMillis
 
 class NewsController : RouterFunction<ServerResponse> {
 
-    override fun route(request: ServerRequest) = RouterFunctionDsl {
+    override fun route(request: ServerRequest) = route(request) {
         accept(TEXT_HTML).apply {
             GET("/news") { newsView() }
         }
         accept(MediaType.TEXT_EVENT_STREAM).apply {
             GET("/news/sse") { newsSse() }
         }
-    } (request)
+    }
 
     fun newsView() = HandlerFunction { req ->
         ok().render("news")

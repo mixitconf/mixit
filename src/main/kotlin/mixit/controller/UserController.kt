@@ -7,14 +7,14 @@ import org.springframework.http.MediaType.*
 import org.springframework.web.reactive.function.BodyInserters.fromObject
 import org.springframework.web.reactive.function.fromPublisher
 import org.springframework.web.reactive.function.server.*
-import org.springframework.web.reactive.function.server.RequestPredicates.accept
+import org.springframework.web.reactive.function.server.RequestPredicates.*
 import org.springframework.web.reactive.function.server.ServerResponse.created
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import java.net.URI
 
 class UserController(val repository: UserRepository) : RouterFunction<ServerResponse> {
 
-    override fun route(request: ServerRequest) = RouterFunctionDsl {
+    override fun route(request: ServerRequest) = route(request) {
         accept(TEXT_HTML).apply {
             (GET("/user/") or GET("/users/")) { findAllView() }
             GET("/user/{login}") { findOneView() }
@@ -31,7 +31,7 @@ class UserController(val repository: UserRepository) : RouterFunction<ServerResp
             GET("/api/sponsor/{login}") { findOneSponsor() }
             GET("/api/{event}/speaker/") { findSpeakersByEvent() }
         }
-    } (request)
+    }
 
     fun findOneView() = HandlerFunction { req ->
         repository.findOne(req.pathVariable("login"))
