@@ -14,5 +14,4 @@ data class Article (
 
 data class Content (
         val title: String,
-        val headline: String,
         val content: String)

@@ -18,8 +18,8 @@ class ArticleDataDto(
 ){
     fun toArticle():Article{
         val contents: Map<Language, Content> = mapOf(
-                Pair(Language.FRENCH, Content(titre, replaceImagePath(resume), replaceImagePath(contenu))),
-                Pair(Language.ENGLISH, Content(title, replaceImagePath(headline), replaceImagePath(content))))
+                Pair(Language.FRENCH, Content(titre, replaceImagePath(resume + "\n" + contenu))),
+                Pair(Language.ENGLISH, Content(title, replaceImagePath(headline + "\n" + content))))
         return Article(author.toUser(), postedAt, contents, "$id")
     }
 
