@@ -1,7 +1,6 @@
 package mixit.data.dto
 
 import mixit.model.Article
-import mixit.model.Content
 import mixit.model.Language
 import java.time.LocalDateTime
 
@@ -16,11 +15,16 @@ class ArticleDataDto(
         val resume: String,
         val contenu: String
 ){
-    fun toArticle():Article{
-        val contents: Map<Language, Content> = mapOf(
-                Pair(Language.FRENCH, Content(titre, replaceImagePath(resume + "\n" + contenu))),
-                Pair(Language.ENGLISH, Content(title, replaceImagePath(headline + "\n" + content))))
-        return Article(author.toUser(), postedAt, contents, "$id")
+    fun toArticle() : Article{
+        val title: Map<Language, String> = mapOf(
+                Pair(Language.FRENCH, titre),
+                Pair(Language.ENGLISH, title)
+        )
+        val content: Map<Language, String> = mapOf(
+                Pair(Language.FRENCH, replaceImagePath(resume + "\n" + contenu)),
+                Pair(Language.ENGLISH, replaceImagePath(headline + "\n" + content))
+        )
+        return Article(author.toUser(), postedAt, title, content, "$id")
     }
 
     fun replaceImagePath(content: String) : String{

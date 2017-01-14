@@ -57,8 +57,8 @@ class ArticleController(val repository: ArticleRepository) : RouterFunction<Serv
             article.id,
             article.author,
             article.addedAt,
-            article.contents[language]!!.title,
-            article.contents[language]!!.content)
+            if (article.title != null) article.title[language]!! else "",
+            if (article.content != null) article.content[language]!! else "")
 
     class ArticleDto(
         val id: String?,

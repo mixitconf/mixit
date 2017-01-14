@@ -8,10 +8,7 @@ import java.time.LocalDateTime
 data class Article (
         val author: User,
         val addedAt: LocalDateTime = LocalDateTime.now(),
-        val contents: Map<Language, Content> = emptyMap(),
+        val title: Map<Language, String> = emptyMap(),
+        val content: Map<Language, String> = emptyMap(),
         @Id val id: String? = null
 )
-
-data class Content (
-        val title: String,
-        val content: String)
