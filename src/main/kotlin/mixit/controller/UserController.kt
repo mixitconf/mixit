@@ -22,7 +22,7 @@ class UserController(val repository: UserRepository) : RouterFunction<ServerResp
         accept(APPLICATION_JSON).apply {
             GET("/api/user/") { findAll() }
             POST("/api/user/") { create() }
-            POST("/api/user/{login}") { findOne() }
+            GET("/api/user/{login}") { findOne() }
             GET("/api/staff/") { findStaff() }
             GET("/api/staff/{login}") { findOneStaff() }
             GET("/api/speaker/") { findSpeakers() }
