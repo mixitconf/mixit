@@ -7,6 +7,8 @@ import mixit.model.Article
 import mixit.support.getEntityInformation
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.domain.Sort
+import org.springframework.data.domain.Sort.Direction
+import org.springframework.data.domain.Sort.Order
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.data.mongodb.repository.support.ReactiveMongoRepositoryFactory
@@ -26,13 +28,13 @@ class ArticleRepository(val db: ReactiveMongoTemplate, f: ReactiveMongoRepositor
         val articleResource = ClassPathResource("data/article_mixit.json")
         val articles: List<ArticleDataDto> = objectMapper.readValue(articleResource.file)
         articles
-                .map { article -> article.toArticle() }
+                .map(ArticleDataDto::toArticle)
                 .forEach { article -> save(article).block() }
     }
 
     override fun findAll(): Flux<Article> {
         val query = Query()
-        query.with(Sort("addedAt"))
+        query.with(Sort(Order(Direction.DESC, "addedAt")))
         query.fields().exclude("content")
         return db.find(query, Article::class.java)
     }
