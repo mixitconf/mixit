@@ -21,7 +21,7 @@ class Application {
 
     fun start() {
         context.getBean<UserRepository>().initData()
-        context.getBean<UserRepository>().initData()
+        context.getBean<EventRepository>().initData()
         context.getBean<SessionRepository>().initData()
         context.getBean<ArticleRepository>().initData()
         context.getBean<Server>().start()
