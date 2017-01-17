@@ -17,41 +17,36 @@ import org.commonmark.renderer.html.HtmlRenderer
 
 class ArticleController(val repository: ArticleRepository) : RouterFunction<ServerResponse> {
 
-    override fun route(request: ServerRequest) = route(request) {
+    override fun route(req: ServerRequest) = route(req) {
         accept(TEXT_HTML).apply {
-            GET("/article/") { findAllView() }
-            GET("/article/{id}") { findOneView() }
+            GET("/article/") { findAllView(req) }
+            GET("/article/{id}") { findOneView(req) }
         }
         accept(APPLICATION_JSON).apply {
             GET("/api/article/") { findAll() }
-            GET("/api/article/{id}") { findOne() }
+            GET("/api/article/{id}") { findOne(req) }
         }
     }
 
-    fun findOneView() = HandlerFunction { req ->
-        repository.findOne(req.pathVariable("id")).then { a ->
-            val languageTag = req.headers().header(HttpHeaders.ACCEPT_LANGUAGE).first()
-            val language = Language.findByTag(languageTag)
-            val model = mapOf(Pair("article", toArticleDto(a, language)))
-            ok().render("article", model)
-        }
+    fun findOneView(req: ServerRequest) = repository.findOne(req.pathVariable("id")).then { a ->
+        val languageTag = req.headers().header(HttpHeaders.ACCEPT_LANGUAGE).first()
+        val language = Language.findByTag(languageTag)
+        val model = mapOf(Pair("article", toArticleDto(a, language)))
+        ok().render("article", model)
     }
 
-    fun findAllView() = HandlerFunction { req ->
-        repository.findAll().collectList().then { articles ->
-            val languageTag = req.headers().header(HttpHeaders.ACCEPT_LANGUAGE).first()
-            val language = Language.findByTag(languageTag)
-            ok().render("articles",  mapOf(Pair("articles", articles.map { toArticleDto(it, language) })))
-        }
+    fun findAllView(req: ServerRequest) = repository.findAll().collectList().then { articles ->
+        val languageTag = req.headers().header(HttpHeaders.ACCEPT_LANGUAGE).first()
+        val language = Language.findByTag(languageTag)
+        ok().render("articles",  mapOf(Pair("articles", articles.map { toArticleDto(it, language) })))
     }
 
-    fun findOne() = HandlerFunction { req ->
-        ok().contentType(APPLICATION_JSON_UTF8).body(fromPublisher(repository.findOne(req.pathVariable("id"))))
-    }
+    fun findOne(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
+            fromPublisher(repository.findOne(req.pathVariable("id"))))
 
-    fun findAll() = HandlerFunction {
-        ok().contentType(APPLICATION_JSON_UTF8).body(fromPublisher(repository.findAll()))
-    }
+    fun findAll() = ok().contentType(APPLICATION_JSON_UTF8).body(
+            fromPublisher(repository.findAll()))
+
 
     private fun toArticleDto(article: Article, language: Language) = ArticleDto(
             article.id,

@@ -14,35 +14,31 @@ import java.time.LocalDateTime
 
 class SessionController(val repository: SessionRepository) : RouterFunction<ServerResponse> {
 
-    override fun route(request: ServerRequest) = route(request) {
+    override fun route(req: ServerRequest) = route(req) {
         accept(TEXT_HTML).apply {
             GET("/session/") { findAllView() }
-            GET("/session/{id}") { findOneView() }
+            GET("/session/{id}") { findOneView(req) }
         }
         accept(APPLICATION_JSON).apply {
-            GET("/api/session/{login}") { findOne() }
-            GET("/api/{event}/session/") { findByEventId() }
+            GET("/api/session/{login}") { findOne(req) }
+            GET("/api/{event}/session/") { findByEventId(req) }
         }
     }
 
-    fun findAllView() = HandlerFunction {
-        repository.findAll()
-                .collectList()
-                .then { session -> ok().render("sessions",  mapOf(Pair("sessions", session))) }
-    }
+    fun findAllView() = repository.findAll()
+            .collectList()
+            .then { session -> ok().render("sessions",  mapOf(Pair("sessions", session))) }
 
-    fun findOneView() = HandlerFunction { req ->
-        repository.findOne(req.pathVariable("id"))
-                .then { session -> ok().render("session", mapOf(Pair("session", SessionDto(session)))) }
-    }
+    fun findOneView(req: ServerRequest) = repository.findOne(req.pathVariable("id"))
+            .then { session -> ok().render("session", mapOf(Pair("session", SessionDto(session)))) }
 
-    fun findOne() = HandlerFunction { req ->
-        ok().contentType(APPLICATION_JSON_UTF8).body(fromPublisher(repository.findOne(req.pathVariable("login"))))
-    }
 
-    fun findByEventId() = HandlerFunction { req ->
-        ok().contentType(APPLICATION_JSON_UTF8).body(fromPublisher(repository.findByEvent(req.pathVariable("event"))))
-    }
+    fun findOne(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
+            fromPublisher(repository.findOne(req.pathVariable("login"))))
+
+    fun findByEventId(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
+            fromPublisher(repository.findByEvent(req.pathVariable("event"))))
+
 
     class SessionDto(
             val id: String?,

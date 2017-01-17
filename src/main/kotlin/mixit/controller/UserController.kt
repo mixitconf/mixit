@@ -14,81 +14,63 @@ import java.net.URI
 
 class UserController(val repository: UserRepository) : RouterFunction<ServerResponse> {
 
-    override fun route(request: ServerRequest) = route(request) {
+    override fun route(req: ServerRequest) = route(req) {
         accept(TEXT_HTML).apply {
             (GET("/user/") or GET("/users/")) { findAllView() }
-            GET("/user/{login}") { findOneView() }
+            GET("/user/{login}") { findOneView(req) }
         }
         accept(APPLICATION_JSON).apply {
             GET("/api/user/") { findAll() }
-            POST("/api/user/") { create() }
-            GET("/api/user/{login}") { findOne() }
+            POST("/api/user/") { create(req) }
+            GET("/api/user/{login}") { findOne(req) }
             GET("/api/staff/") { findStaff() }
-            GET("/api/staff/{login}") { findOneStaff() }
+            GET("/api/staff/{login}") { findOneStaff(req) }
             GET("/api/speaker/") { findSpeakers() }
-            GET("/api/speaker/{login}") { findOneSpeaker() }
+            GET("/api/speaker/{login}") { findOneSpeaker(req) }
             GET("/api/sponsor/") { findSponsors() }
-            GET("/api/sponsor/{login}") { findOneSponsor() }
-            GET("/api/{event}/speaker/") { findSpeakersByEvent() }
+            GET("/api/sponsor/{login}") { findOneSponsor(req) }
+            GET("/api/{event}/speaker/") { findSpeakersByEvent(req) }
         }
     }
 
-    fun findOneView() = HandlerFunction { req ->
-        repository.findOne(req.pathVariable("login"))
-                .then { u -> ok().render("user", mapOf(Pair("user", u))) }
-    }
+    fun findOneView(req: ServerRequest) = repository.findOne(req.pathVariable("login"))
+            .then { u -> ok().render("user", mapOf(Pair("user", u))) }
 
-    fun findAllView() = HandlerFunction {
-        repository.findAll()
-                .collectList()
-                .then { u -> ok().render("users",  mapOf(Pair("users", u))) }
-    }
+    fun findAllView() = repository.findAll()
+            .collectList()
+            .then { u -> ok().render("users",  mapOf(Pair("users", u))) }
 
-    fun findOne() = HandlerFunction { req ->
-        ok().contentType(APPLICATION_JSON_UTF8).body(
+    fun findOne(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
                 fromPublisher(repository.findOne(req.pathVariable("login"))))
-    }
 
-    fun findAll() = HandlerFunction {
-        ok().contentType(APPLICATION_JSON_UTF8).body(fromPublisher(repository.findAll()))
-    }
+    fun findAll() = ok().contentType(APPLICATION_JSON_UTF8).body(
+            fromPublisher(repository.findAll()))
 
-    fun findStaff() = HandlerFunction {
-        ok().contentType(APPLICATION_JSON_UTF8).body(fromPublisher(repository.findByRole(Role.STAFF)))
-    }
+    fun findStaff() = ok().contentType(APPLICATION_JSON_UTF8).body(
+            fromPublisher(repository.findByRole(Role.STAFF)))
 
-    fun findOneStaff() = HandlerFunction { req ->
-        ok().contentType(APPLICATION_JSON_UTF8).body(
+    fun findOneStaff(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
                 fromPublisher(repository.findOneByRole(req.pathVariable("login"), Role.STAFF)))
-    }
 
-    fun findSpeakers() = HandlerFunction {
-        ok().contentType(APPLICATION_JSON_UTF8).body(fromPublisher(repository.findByRole(Role.SPEAKER)))
-    }
+    fun findSpeakers() = ok().contentType(APPLICATION_JSON_UTF8).body(
+            fromPublisher(repository.findByRole(Role.SPEAKER)))
 
-    fun findSpeakersByEvent() = HandlerFunction { req ->
-        ok().contentType(APPLICATION_JSON_UTF8).body(fromPublisher(repository.findByRoleAndEvent(Role.SPEAKER, req.pathVariable("event"))))
-    }
+    fun findSpeakersByEvent(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
+            fromPublisher(repository.findByRoleAndEvent(Role.SPEAKER, req.pathVariable("event"))))
 
-    fun findOneSpeaker() = HandlerFunction { req ->
-        ok().contentType(APPLICATION_JSON_UTF8).body(
+    fun findOneSpeaker(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
                 fromPublisher(repository.findOneByRole(req.pathVariable("login"), Role.SPEAKER)))
-    }
 
-    fun findSponsors() = HandlerFunction {
-        ok().contentType(APPLICATION_JSON_UTF8).body(fromPublisher(repository.findByRole(Role.SPONSOR)))
-    }
+    fun findSponsors() = ok().contentType(APPLICATION_JSON_UTF8).body(
+            fromPublisher(repository.findByRole(Role.SPONSOR)))
 
-    fun findOneSponsor() = HandlerFunction { req ->
-        ok().contentType(APPLICATION_JSON_UTF8).body(
+    fun findOneSponsor(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
                 fromPublisher(repository.findOneByRole(req.pathVariable("login"), Role.SPONSOR)))
-    }
 
-    fun create() = HandlerFunction { req ->
-        repository.save(req.bodyToMono<User>()).single()
-                .then { u -> created(URI.create("/api/user/${u.login}"))
-                    .contentType(APPLICATION_JSON_UTF8)
-                    .body(fromObject(u))
-                }
-    }
+    fun create(req: ServerRequest) = repository.save(req.bodyToMono<User>()).single()
+            .then { u -> created(URI.create("/api/user/${u.login}"))
+                .contentType(APPLICATION_JSON_UTF8)
+                .body(fromObject(u))
+            }
+
 }

@@ -9,12 +9,12 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 
 class GlobalController : RouterFunction<ServerResponse> {
 
-    override fun route(request: ServerRequest) = route(request) {
+    override fun route(req: ServerRequest) = route(req) {
         accept(TEXT_HTML).apply {
             GET("/") { indexView() }
         }
         resources("/**", ClassPathResource("static/"))
     }
 
-    fun indexView() = HandlerFunction { ok().render("index") }
+    fun indexView() = ok().render("index")
 }

@@ -11,7 +11,7 @@ import java.time.Duration.ofMillis
 
 class NewsController : RouterFunction<ServerResponse> {
 
-    override fun route(request: ServerRequest) = route(request) {
+    override fun route(req: ServerRequest) = route(req) {
         accept(TEXT_HTML).apply {
             GET("/news") { newsView() }
         }
@@ -20,14 +20,10 @@ class NewsController : RouterFunction<ServerResponse> {
         }
     }
 
-    fun newsView() = HandlerFunction { req ->
-        ok().render("news")
-    }
+    fun newsView() = ok().render("news")
 
-    fun newsSse() = HandlerFunction { req ->
-        ok().body(fromServerSentEvents(
-                Flux.interval(ofMillis(100)).map { "Hello $it!" }
-        ))
-    }
+    fun newsSse() = ok().body(fromServerSentEvents(
+            Flux.interval(ofMillis(100)).map { "Hello $it!" }
+    ))
 
 }
