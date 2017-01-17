@@ -1,7 +1,7 @@
 package mixit.controller
 
 import org.springframework.core.io.ClassPathResource
-import org.springframework.http.MediaType.APPLICATION_JSON
+import org.springframework.http.MediaType.TEXT_HTML
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.RequestPredicates.accept
 import org.springframework.web.reactive.function.server.ServerResponse.ok
@@ -10,15 +10,11 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 class GlobalController : RouterFunction<ServerResponse> {
 
     override fun route(request: ServerRequest) = route(request) {
-        accept(APPLICATION_JSON).apply {
+        accept(TEXT_HTML).apply {
             GET("/") { indexView() }
-            GET("/sample") { sampleView() }
         }
         resources("/**", ClassPathResource("static/"))
     }
 
     fun indexView() = HandlerFunction { ok().render("index") }
-
-    fun sampleView() = HandlerFunction { ok().render("sample") }
 }
-
