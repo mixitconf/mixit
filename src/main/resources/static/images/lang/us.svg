@@ -1,11 +1,1 @@
-<?xml version="1.0" standalone="no"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1900" height="1000">
-<title>48-star U.S. flag</title><rect width="1900" height="1000" style="fill:#bf0a30"/>
-<g id="strip3"><rect width="1900" height="76.92308" y="76.92308" id="Wstrip" style="fill:#ffffff"/>
-<use y="153.84615" xlink:href="#Wstrip"/><use y="307.69231" xlink:href="#Wstrip"/></g>
-<use y="461.53846" xlink:href="#strip3"/><rect width="760" height="538.46154" style="fill:#002868"/>
-<g id="star24"><g id="row"><g id="halfrow"><path id="Star" style="fill:#ffffff"
- d="M16.043,44.1951H80.8008L28.4092,82.2656L48.4192,20.6707L68.4292,82.2656Z"/>
-<use x="94.73683" xlink:href="#Star"/><use x="189.47367" xlink:href="#Star"/>
-<use x="284.2105" xlink:href="#Star"/></g><use x="378.94733" xlink:href="#halfrow"/></g>
-<use xlink:href="#row" y="87"/><use xlink:href="#row" y="174"/></g><use xlink:href="#star24" y="261"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1900" height="1000"><title>48-star U.S. flag</title><path fill="#bf0a30" d="M0 0h1900v1000H0z"/><g id="b"><path id="a" fill="#fff" d="M0 76.923h1900v76.923H0z"/><use y="153.846" xlink:href="#a"/><use y="307.692" xlink:href="#a"/></g><use y="461.538" xlink:href="#b"/><path fill="#002868" d="M0 0h760v538.462H0z"/><g id="f"><g id="e"><g id="d"><path id="c" d="M16.043 44.195h64.758l-52.392 38.07 20.01-61.594 20.01 61.595z" fill="#fff"/><use x="94.737" xlink:href="#c"/><use x="189.474" xlink:href="#c"/><use x="284.211" xlink:href="#c"/></g><use x="378.947" xlink:href="#d"/></g><use xlink:href="#e" y="87"/><use xlink:href="#e" y="174"/></g><use xlink:href="#f" y="261"/></svg>

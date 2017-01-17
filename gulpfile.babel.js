@@ -6,12 +6,15 @@ import del from 'del';
 import runSequence from 'run-sequence';
 
 const $ = gulpLoadPlugins();
+const imagemin = require('gulp-imagemin');
+const imageminMozjpeg = require('imagemin-mozjpeg');
 
 const paths = {
   main: 'src/main',
   tmp: 'build/.tmp',
   dist: {
-    css : 'src/main/resources/static/css'
+    css : 'src/main/resources/static/css',
+    images : 'src/main/resources/static/images'
   }
 };
 
@@ -42,8 +45,32 @@ gulp.task('styles', () => {
 });
 
 
+// Minimize images
+gulp.task('images-min', () =>
+  gulp.src(`${paths.main}/images/**/*.{svg,png,jpg}`)
+    .pipe(imagemin([imagemin.gifsicle(), imageminMozjpeg(), imagemin.optipng(), imagemin.svgo()], {
+      progressive: true,
+      interlaced: true,
+      arithmetic: true,
+    }))
+    .pipe($.size({title: 'images-min', showFiles: true}))
+    .pipe(gulp.dest(`${paths.dist.images}`))
+);
+gulp.task('images', ['images-min'], () =>
+  gulp.src(`${paths.dist.images}/**/*.{svg,png,jpg}`)
+    .pipe($.webp())
+    .pipe($.size({title: 'images-webp', showFiles: true}))
+    .pipe(gulp.dest(`${paths.dist.images}/2`))
+);
+
+// Copy over the scripts that are used in importScripts as part of the generate-service-worker task.
+gulp.task('vendors', () => {
+  return gulp.src(paths.vendors)
+    .pipe(gulp.dest(`${paths.dist}/js`));
+});
+
 // Clean output directory
-gulp.task('clean', () => del([paths.tmp], {dot: true}));
+gulp.task('clean', () => del([paths.tmp, `${paths.dist.images}`], {dot: true}));
 
 // Watch files for changes
 gulp.task('watch', ['default'], () => {
@@ -53,7 +80,7 @@ gulp.task('watch', ['default'], () => {
 // Build production files, the default task
 gulp.task('default', ['clean'], cb =>
   runSequence(
-    'styles',
+    ['styles', 'images'],
     cb
   )
 );
