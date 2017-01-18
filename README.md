@@ -4,7 +4,7 @@
 
 This project purpose is to power the MiXiT 2017 website.
 
-# Software design
+## Software design
 
 This project software design goal is to demonstrate what a functional web application
 developed with Spring Framework 5 and Kotlin can look like:
@@ -26,7 +26,7 @@ The technologies used are:
  - Build: [Gradle Script Kotlin](https://github.com/gradle/gradle-script-kotlin)
  - Testing: [Spek](https://jetbrains.github.io/spek/)
  
-# Getting started
+## Getting started
 
 Prerequisite:
  - [Install MongoDB](https://www.mongodb.com/download-center) and run `mongod`
@@ -47,15 +47,13 @@ To run the application:
 To package and run the application from the executable JAR:
 ```
 ./gradlew build
-java -jar build/libs/mixit-all.jar
+java -jar build/libs/mixit-1.0.0-SNAPSHOT.jar
 ```
 
 To deploy the app on CF:
 ```
-./gradlew clean build shadowJar
+./gradlew clean build
 cf push
 ```
 
 To test the application from a browser, go to `http://localhost:8080/`.
-Technical demo is available at `http://localhost:8080/sample` 
-
