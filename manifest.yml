@@ -1,4 +1,4 @@
-memory: 256M
+memory: 512M
 instances: 1
 applications:
 - name: mixit-2017
