@@ -12,11 +12,13 @@ import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.repository.support.ReactiveMongoRepositoryFactory
 import org.springframework.data.mongodb.repository.support.SimpleReactiveMongoRepository
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
+import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 import java.time.LocalDate
 
-class EventRepository(db: ReactiveMongoTemplate, val userRepository: UserRepository, f: ReactiveMongoRepositoryFactory) :
-        SimpleReactiveMongoRepository<Event, String>(f.getEntityInformation(Event::class), db) {
+@Repository
+class EventRepository(template: ReactiveMongoTemplate, val userRepository: UserRepository, f: ReactiveMongoRepositoryFactory) :
+        SimpleReactiveMongoRepository<Event, String>(f.getEntityInformation(Event::class), template) {
 
 
     fun initData() {

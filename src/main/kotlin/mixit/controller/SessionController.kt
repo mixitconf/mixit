@@ -5,6 +5,7 @@ import mixit.repository.SessionRepository
 import org.commonmark.parser.Parser
 import org.commonmark.renderer.html.HtmlRenderer
 import org.springframework.http.MediaType.*
+import org.springframework.stereotype.Controller
 
 import org.springframework.web.reactive.function.fromPublisher
 import org.springframework.web.reactive.function.server.*
@@ -12,6 +13,8 @@ import org.springframework.web.reactive.function.server.RequestPredicates.*
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import java.time.LocalDateTime
 
+
+@Controller
 class SessionController(val repository: SessionRepository) : RouterFunction<ServerResponse> {
 
     override fun route(req: ServerRequest) = route(req) {

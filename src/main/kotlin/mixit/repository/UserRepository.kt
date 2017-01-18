@@ -13,12 +13,14 @@ import org.springframework.data.mongodb.core.query.Query
 import org.springframework.data.mongodb.repository.support.ReactiveMongoRepositoryFactory
 import org.springframework.data.mongodb.repository.support.SimpleReactiveMongoRepository
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
+import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
+import mixit.support.*
 
-
-class UserRepository(val db: ReactiveMongoTemplate, f: ReactiveMongoRepositoryFactory) :
-        SimpleReactiveMongoRepository<User, String>(f.getEntityInformation(User::class), db) {
+@Repository
+class UserRepository(val template: ReactiveMongoTemplate, f: ReactiveMongoRepositoryFactory) :
+        SimpleReactiveMongoRepository<User, String>(f.getEntityInformation(User::class), template) {
 
     fun initData() {
         val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
@@ -52,22 +54,22 @@ class UserRepository(val db: ReactiveMongoTemplate, f: ReactiveMongoRepositoryFa
 
     fun findByYear(year: Int): Flux<User> {
         val query = Query().addCriteria(Criteria.where("year").`is`(year))
-        return db.find(query, User::class.java)
+        return template.find(query)
     }
 
     fun findByRole(role: Role): Flux<User> {
         val query = Query().addCriteria(Criteria.where("role").`is`(role))
-        return db.find(query, User::class.java)
+        return template.find(query)
     }
 
     fun findByRoleAndEvent(role: Role, event: String): Flux<User> {
         val query = Query().addCriteria(Criteria.where("role").`is`(role).and("events").`in`(event))
-        return db.find(query, User::class.java)
+        return template.find(query)
     }
 
     fun findOneByRole(login: String, role: Role): Mono<User> {
         val query = Query().addCriteria(Criteria.where("role").`in`(role).and("_id").`is`(login))
-        return db.find(query, User::class.java).next()
+        return template.findOne(query)
     }
 
 }

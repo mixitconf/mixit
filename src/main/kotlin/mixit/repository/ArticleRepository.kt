@@ -14,11 +14,14 @@ import org.springframework.data.mongodb.core.query.Query
 import org.springframework.data.mongodb.repository.support.ReactiveMongoRepositoryFactory
 import org.springframework.data.mongodb.repository.support.SimpleReactiveMongoRepository
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
+import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
+import mixit.support.find
 
 
-class ArticleRepository(val db: ReactiveMongoTemplate, f: ReactiveMongoRepositoryFactory) :
-        SimpleReactiveMongoRepository<Article, String>(f.getEntityInformation(Article::class), db) {
+@Repository
+class ArticleRepository(val template: ReactiveMongoTemplate, f: ReactiveMongoRepositoryFactory) :
+        SimpleReactiveMongoRepository<Article, String>(f.getEntityInformation(Article::class), template) {
 
     fun initData() {
         val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
@@ -36,7 +39,7 @@ class ArticleRepository(val db: ReactiveMongoTemplate, f: ReactiveMongoRepositor
         val query = Query()
         query.with(Sort(Order(Direction.DESC, "addedAt")))
         query.fields().exclude("content")
-        return db.find(query, Article::class.java)
+        return template.find(query)
     }
 
 }

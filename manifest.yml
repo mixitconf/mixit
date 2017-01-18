@@ -2,6 +2,6 @@ memory: 256M
 instances: 1
 applications:
 - name: mixit-2017
-  path: ./build/libs/mixit-all.jar
+  path: ./build/libs/mixit-1.0.0-SNAPSHOT.jar
 timeout: 180
 JAVA_OPTS: -Djava.security.egd=file:///dev/urandom

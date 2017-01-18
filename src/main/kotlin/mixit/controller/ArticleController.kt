@@ -13,8 +13,10 @@ import org.springframework.web.reactive.function.server.RequestPredicates.accept
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import java.time.LocalDateTime
 import org.commonmark.renderer.html.HtmlRenderer
+import org.springframework.stereotype.Controller
 
 
+@Controller
 class ArticleController(val repository: ArticleRepository) : RouterFunction<ServerResponse> {
 
     override fun route(req: ServerRequest) = route(req) {

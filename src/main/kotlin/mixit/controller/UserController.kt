@@ -4,6 +4,7 @@ import mixit.model.Role
 import mixit.model.User
 import mixit.repository.UserRepository
 import org.springframework.http.MediaType.*
+import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.BodyInserters.fromObject
 import org.springframework.web.reactive.function.fromPublisher
 import org.springframework.web.reactive.function.server.*
@@ -12,6 +13,8 @@ import org.springframework.web.reactive.function.server.ServerResponse.created
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import java.net.URI
 
+
+@Controller
 class UserController(val repository: UserRepository) : RouterFunction<ServerResponse> {
 
     override fun route(req: ServerRequest) = route(req) {

@@ -2,6 +2,7 @@ package mixit.controller
 
 import org.springframework.http.MediaType
 import org.springframework.http.MediaType.*
+import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.fromServerSentEvents
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.RequestPredicates.accept
@@ -9,6 +10,8 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 import reactor.core.publisher.Flux
 import java.time.Duration.ofMillis
 
+
+@Controller
 class NewsController : RouterFunction<ServerResponse> {
 
     override fun route(req: ServerRequest) = route(req) {

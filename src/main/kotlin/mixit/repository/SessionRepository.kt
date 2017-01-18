@@ -12,11 +12,13 @@ import org.springframework.data.mongodb.core.query.Query
 import org.springframework.data.mongodb.repository.support.ReactiveMongoRepositoryFactory
 import org.springframework.data.mongodb.repository.support.SimpleReactiveMongoRepository
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
+import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
+import mixit.support.find
 
-
-class SessionRepository(val db: ReactiveMongoTemplate, f: ReactiveMongoRepositoryFactory) :
-        SimpleReactiveMongoRepository<Session, String>(f.getEntityInformation(Session::class), db) {
+@Repository
+class SessionRepository(val template: ReactiveMongoTemplate, f: ReactiveMongoRepositoryFactory) :
+        SimpleReactiveMongoRepository<Session, String>(f.getEntityInformation(Session::class), template) {
 
 
     fun initData() {
@@ -42,6 +44,6 @@ class SessionRepository(val db: ReactiveMongoTemplate, f: ReactiveMongoRepositor
 
     fun findByEvent(eventId: String): Flux<Session> {
         val query = Query().addCriteria(Criteria.where("event").`is`(eventId))
-        return db.find(query, Session::class.java)
+        return template.find(query)
     }
 }

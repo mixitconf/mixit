@@ -18,7 +18,7 @@ developed with Spring Framework 5 and Kotlin can look like:
 
 The technologies used are:
  - Language: [Kotlin](https://kotlin.link/) 
- - Web framework: [Spring Web Reactive Functional](https://spring.io/blog/2016/09/22/new-in-spring-5-functional-web-framework)
+ - Web framework: [Spring Boot](https://projects.spring.io/spring-boot/) and [Spring Web Reactive Functional](https://spring.io/blog/2016/09/22/new-in-spring-5-functional-web-framework)
  - Engine: [Netty](http://netty.io/) used for client and server
  - Templates: [Mustache](https://github.com/samskivert/jmustache) (will be migrated later to [Kotlin typesafe templates](https://github.com/sdeleuze/kotlin-script-templating))
  - Reactive API: [Reactor](http://projectreactor.io/)
@@ -41,12 +41,12 @@ To import the project in IDEA:
 
 To run the application:
 ```
-./gradlew run
+./gradlew bootRun
 ```
 
 To package and run the application from the executable JAR:
 ```
-./gradlew shadowJar
+./gradlew build
 java -jar build/libs/mixit-all.jar
 ```
 

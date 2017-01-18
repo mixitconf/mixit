@@ -1,49 +1,60 @@
 package mixit
 
-import mixit.repository.*
-import mixit.support.Server
-import org.springframework.beans.factory.getBean
-import org.springframework.context.annotation.AnnotationConfigApplicationContext
-import java.util.concurrent.CompletableFuture
+import com.mongodb.ConnectionString
+import com.samskivert.mustache.Mustache
+import mixit.repository.ArticleRepository
+import mixit.repository.EventRepository
+import mixit.repository.SessionRepository
+import mixit.repository.UserRepository
+import mixit.support.MixitWebFilter
+import org.springframework.boot.ApplicationRunner
+import org.springframework.boot.SpringApplication
+import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.context.annotation.Bean
+import org.springframework.core.env.Environment
+import org.springframework.data.mongodb.core.ReactiveMongoOperations
+import org.springframework.data.mongodb.core.ReactiveMongoTemplate
+import org.springframework.data.mongodb.core.SimpleReactiveMongoDatabaseFactory
+import org.springframework.data.mongodb.repository.support.ReactiveMongoRepositoryFactory
+import org.springframework.web.reactive.function.server.HandlerStrategies
+import org.springframework.web.reactive.result.view.mustache.MustacheResourceTemplateLoader
+import org.springframework.web.reactive.result.view.mustache.MustacheViewResolver
 
+@SpringBootApplication
 class Application {
 
-    val hostname: String
-    val port: Int?
-    val context: AnnotationConfigApplicationContext
-
-    constructor(port: Int? = null, hostname: String = "0.0.0.0") {
-        this.hostname = hostname
-        this.port = port
-        this.context = context(this.port, this.hostname)
-        context.refresh()
+    @Bean
+    fun viewResolver() = MustacheViewResolver().apply {
+        val prefix = "classpath:/templates/"
+        val suffix = ".mustache"
+        val loader = MustacheResourceTemplateLoader(prefix, suffix)
+        setPrefix(prefix)
+        setSuffix(suffix)
+        setCompiler(Mustache.compiler().escapeHTML(false).withLoader(loader))
     }
 
-    fun start() {
-        context.getBean<UserRepository>().initData()
-        context.getBean<EventRepository>().initData()
-        context.getBean<SessionRepository>().initData()
-        context.getBean<ArticleRepository>().initData()
-        context.getBean<Server>().start()
+    @Bean
+    fun template(env: Environment) = ReactiveMongoTemplate(SimpleReactiveMongoDatabaseFactory(
+                ConnectionString(env.getProperty("mongo.uri"))))
+
+    @Bean
+    fun mongoRepositoryFactory(db: ReactiveMongoOperations) = ReactiveMongoRepositoryFactory(db)
+
+    @Bean
+    fun dataInitializer(userRepository: UserRepository, eventRepository: EventRepository, sessionRepository: SessionRepository,
+                        articleRepository: ArticleRepository) = ApplicationRunner {
+        userRepository.initData()
+        eventRepository.initData()
+        sessionRepository.initData()
+        articleRepository.initData()
+        HandlerStrategies.withDefaults()
     }
 
-    fun await() {
-        val stop = CompletableFuture<Void>()
-        Runtime.getRuntime().addShutdownHook(Thread {
-            stop()
-            stop.complete(null)
-        })
-        stop.get()
-    }
-
-    fun stop() {
-        context.getBean<Server>().stop()
-    }
+    @Bean
+    fun filter() = MixitWebFilter()
 
 }
 
 fun main(args: Array<String>) {
-    val application = Application()
-    application.start()
-    application.await()
+	SpringApplication.run(Application::class.java, *args)
 }

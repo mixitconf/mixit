@@ -10,22 +10,26 @@ import java.util.concurrent.TimeUnit
 
 buildscript {
     val kotlinVersion = "1.0.6"
+    val springBootVersion = "2.0.0.BUILD-SNAPSHOT"
     val junitPlatformVersion = "1.0.0-M3"
     extra["kotlinVersion"] = kotlinVersion
+    extra["springBootVersion"] = springBootVersion
     extra["junitPlatformVersion"] = junitPlatformVersion
 
     repositories {
         mavenCentral()
-        jcenter()
         maven{
             setUrl("https://plugins.gradle.org/m2/")
         }
+        maven { setUrl("https://repo.spring.io/snapshot") }
+        maven { setUrl("https://repo.spring.io/milestone") }
     }
 
     dependencies {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion")
         classpath("org.jetbrains.kotlin:kotlin-noarg:$kotlinVersion")
-        classpath("com.github.jengelman.gradle.plugins:shadow:1.2.4")
+        classpath("org.jetbrains.kotlin:kotlin-allopen:$kotlinVersion")
         classpath("org.junit.platform:junit-platform-gradle-plugin:$junitPlatformVersion")
         classpath("com.moowork.gradle:gradle-node-plugin:1.0.1")
     }
@@ -35,11 +39,11 @@ apply {
     plugin("idea")
     plugin("kotlin")
     plugin("kotlin-noarg")
-    plugin("application")
+    plugin("kotlin-spring")
     plugin("org.junit.platform.gradle.plugin")
-    plugin("com.github.johnrengelman.shadow")
     plugin("com.moowork.node")
     plugin("com.moowork.gulp")
+    plugin("org.springframework.boot")
 }
 
 version = "1.0.0-SNAPSHOT"
@@ -49,14 +53,6 @@ repositories {
     maven { setUrl("https://dl.bintray.com/jetbrains/spek") }
     maven { setUrl("https://repo.spring.io/milestone") }
     maven { setUrl("https://repo.spring.io/snapshot") }
-}
-
-configure<ApplicationPluginConvention> {
-    mainClassName = "mixit.ApplicationKt"
-}
-
-configure<ShadowExtension> {
-    version = null
 }
 
 configure<JUnitPlatformExtension> {
@@ -89,24 +85,21 @@ configure<NoArgExtension> {
 }
 
 val kotlinVersion = extra["kotlinVersion"] as String
+val junitPlatformVersion= extra["junitPlatformVersion"] as String
 val springVersion = "5.0.0.BUILD-SNAPSHOT"
+val springBootVersion = extra["springBootVersion"] as String
+val springDataVersion = "2.0.0.BUILD-SNAPSHOT"
 val jacksonVersion = "2.8.5"
 val reactorVersion = "3.0.4.RELEASE"
-val junitPlatformVersion= extra["junitPlatformVersion"] as String
 val spekVersion = "1.1.0-beta3"
 
 dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
     compile("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
 
-    compile("org.springframework:spring-aop:$springVersion")
-    compile("org.springframework:spring-beans:$springVersion")
-    compile("org.springframework:spring-context:$springVersion")
-    compile("org.springframework:spring-core:$springVersion")
-    compile("org.springframework:spring-expression:$springVersion")
-    compile("org.springframework:spring-tx:$springVersion")
-    compile("org.springframework:spring-web:$springVersion")
-    compile("org.springframework:spring-web-reactive:$springVersion")
+    compile("org.springframework.boot.experimental:spring-boot-starter-web-reactive:0.1.0.BUILD-SNAPSHOT") {
+        exclude(module= "spring-boot-starter-tomcat")
+    }
 
     compile("com.samskivert:jmustache:1.13")
     compile("com.atlassian.commonmark:commonmark:0.8.0")
@@ -123,7 +116,8 @@ dependencies {
     compile("org.slf4j:slf4j-api:1.7.21")
     compile("ch.qos.logback:logback-classic:1.1.7")
 
-    compile("org.springframework.data:spring-data-mongodb:2.0.0.BUILD-SNAPSHOT")
+    compile("org.springframework.data:spring-data-mongodb:$springDataVersion")
+    compile("org.springframework.data:spring-data-commons:$springDataVersion")
     compile("org.mongodb:mongodb-driver-reactivestreams:1.2.0")
 
     testCompile("org.junit.platform:junit-platform-runner:$junitPlatformVersion")
