@@ -25,7 +25,7 @@ class ArticleRepository(val template: ReactiveMongoTemplate) {
         deleteAll().block()
 
         val articleResource = ClassPathResource("data/article_mixit.json")
-        val articles: List<ArticleDataDto> = objectMapper.readValue(articleResource.file)
+        val articles: List<ArticleDataDto> = objectMapper.readValue(articleResource.inputStream)
         articles
                 .map(ArticleDataDto::toArticle)
                 .forEach { article -> save(article).block() }

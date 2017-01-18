@@ -40,7 +40,7 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
     fun readSponsorsForEvent(year: Int): List<EventSponsoring> {
         val file = ClassPathResource("data/sponsor/sponsor_mixit$year.json")
         val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
-        var sponsors: List<MemberDataDto> = objectMapper.readValue(file.file)
+        var sponsors: List<MemberDataDto> = objectMapper.readValue(file.inputStream)
         return sponsors.flatMap { sponsor -> sponsor.toEventSponsoring(userRepository.findOne("${sponsor.login}").block()) }
     }
 

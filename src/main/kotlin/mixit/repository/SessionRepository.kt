@@ -31,7 +31,7 @@ class SessionRepository(val template: ReactiveMongoTemplate) {
         val file = ClassPathResource("data/session/session_mixit$year.json")
 
         val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
-        var sessions: List<SessionDataDto> = objectMapper.readValue(file.file)
+        var sessions: List<SessionDataDto> = objectMapper.readValue(file.inputStream)
 
         sessions
                 .map { session -> session.toSession() }

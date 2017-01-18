@@ -30,19 +30,19 @@ class UserRepository(val template: ReactiveMongoTemplate) {
         val years = listOf(12, 13, 14, 15, 16)
         years.forEach { year ->
             val speakerResource = ClassPathResource("data/speaker/speaker_mixit$year.json")
-            val speakers: List<MemberDataDto> = objectMapper.readValue(speakerResource.file)
+            val speakers: List<MemberDataDto> = objectMapper.readValue(speakerResource.inputStream)
             speakers.map { it.toUser(listOf("mixit$year"), Role.SPEAKER) }
                     .forEach { save(it).block() }
         }
 
         val staffResource = ClassPathResource("data/staff_mixit.json")
-        val staffs: List<MemberDataDto> = objectMapper.readValue(staffResource.file)
+        val staffs: List<MemberDataDto> = objectMapper.readValue(staffResource.inputStream)
         staffs.map { it.toUser(role = Role.STAFF) }
               .forEach { save(it).block() }
 
         years.forEach { year ->
             val sponsorResource = ClassPathResource("data/sponsor/sponsor_mixit$year.json")
-            val sponsors: List<MemberDataDto> = objectMapper.readValue(sponsorResource.file)
+            val sponsors: List<MemberDataDto> = objectMapper.readValue(sponsorResource.inputStream)
             sponsors.map { it.toUser(role = Role.SPONSOR) }
                     .forEach { save(it).block() }
         }
