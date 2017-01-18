@@ -1,8 +1,8 @@
 [![Travis CI](https://api.travis-ci.org/mix-it/mixit.svg?branch=master)](https://travis-ci.org/mix-it/mixit)
 
-# Mix-IT 2017 website
+# MiXiT 2017 website
 
-This project purpose is to power the Mix-IT 2017 website.
+This project purpose is to power the MiXiT 2017 website.
 
 # Software design
 
