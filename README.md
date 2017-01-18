@@ -34,7 +34,7 @@ Prerequisite:
 
 To import the project in IDEA:
  - Clone the project `git clone https://github.com/mix-it/mixit.git`
- - Make sure you have at least IntelliJ IDEA 2016.3 and IDEA Kotlin plugin 1.0.6+ (we are waiting IDEA Kotlin plugin 1.1-M05 to have Gradle Kotlin autocomplete)
+ - Make sure you have at least IntelliJ IDEA 2016.3 and IDEA Kotlin plugin 1.0.6+ (we are waiting IDEA Kotlin plugin 1.1-beta to have Gradle Kotlin autocomplete)
  - Install Spek IDEA plugin
  - Import it in IDEA as a Gradle project
  - Right click on `Application.kt` -> Run mixit.ApplicationKt
