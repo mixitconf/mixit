@@ -136,3 +136,7 @@ task<GulpTask>("gulpBuild") {
 }
 
 tasks.getByName("processResources").dependsOn("gulpBuild")
+
+tasks.getByName("clean") {
+    delete("yarn.lock")
+}
