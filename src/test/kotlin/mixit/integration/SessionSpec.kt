@@ -19,7 +19,7 @@ object SessionSpec : Spek({
     val webClient = WebClient.builder(ReactorClientHttpConnector()).build()
     var context: ConfigurableApplicationContext? = null
     beforeGroup { context = SpringApplication.run(Application::class.java) }
-    afterGroup { context!!.close() }
+    afterGroup { SpringApplication.exit(context) }
 
     describe("a session JSON endpoint") {
 

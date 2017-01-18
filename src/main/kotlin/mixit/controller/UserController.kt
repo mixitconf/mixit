@@ -70,7 +70,7 @@ class UserController(val repository: UserRepository) : RouterFunction<ServerResp
     fun findOneSponsor(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
                 fromPublisher(repository.findOneByRole(req.pathVariable("login"), Role.SPONSOR)))
 
-    fun create(req: ServerRequest) = repository.save(req.bodyToMono<User>()).single()
+    fun create(req: ServerRequest) = repository.save(req.bodyToMono<User>())
             .then { u -> created(URI.create("/api/user/${u.login}"))
                 .contentType(APPLICATION_JSON_UTF8)
                 .body(fromObject(u))

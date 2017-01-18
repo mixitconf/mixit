@@ -3,22 +3,21 @@ package mixit.repository
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.data.dto.MemberDataDto
+import mixit.model.Article
 import mixit.model.Event
 import mixit.model.EventSponsoring
-import mixit.support.getEntityInformation
+import mixit.support.*
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.domain.Sort
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
-import org.springframework.data.mongodb.repository.support.ReactiveMongoRepositoryFactory
-import org.springframework.data.mongodb.repository.support.SimpleReactiveMongoRepository
+import org.springframework.data.mongodb.core.query.Query
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 import java.time.LocalDate
 
 @Repository
-class EventRepository(template: ReactiveMongoTemplate, val userRepository: UserRepository, f: ReactiveMongoRepositoryFactory) :
-        SimpleReactiveMongoRepository<Event, String>(f.getEntityInformation(Event::class), template) {
+class EventRepository(val template: ReactiveMongoTemplate, val userRepository: UserRepository) {
 
 
     fun initData() {
@@ -45,7 +44,13 @@ class EventRepository(template: ReactiveMongoTemplate, val userRepository: UserR
         return sponsors.flatMap { sponsor -> sponsor.toEventSponsoring(userRepository.findOne("${sponsor.login}").block()) }
     }
 
-    override fun findAll(): Flux<Event> = findAll(Sort("year"))
+    fun findAll(): Flux<Event> = template.find(Query().with(Sort("year")), Event::class)
+
+    fun findOne(id: String) = template.findById(id, Event::class)
+
+    fun deleteAll() = template.remove(Query(), Event::class)
+
+    fun save(event: Event) = template.save(event)
 
 
 }

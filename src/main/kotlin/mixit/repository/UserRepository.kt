@@ -5,13 +5,10 @@ import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.data.dto.MemberDataDto
 import mixit.model.Role
 import mixit.model.User
-import mixit.support.getEntityInformation
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Query
-import org.springframework.data.mongodb.repository.support.ReactiveMongoRepositoryFactory
-import org.springframework.data.mongodb.repository.support.SimpleReactiveMongoRepository
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
@@ -19,8 +16,7 @@ import reactor.core.publisher.Mono
 import mixit.support.*
 
 @Repository
-class UserRepository(val template: ReactiveMongoTemplate, f: ReactiveMongoRepositoryFactory) :
-        SimpleReactiveMongoRepository<User, String>(f.getEntityInformation(User::class), template) {
+class UserRepository(val template: ReactiveMongoTemplate) {
 
     fun initData() {
         val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
@@ -71,5 +67,15 @@ class UserRepository(val template: ReactiveMongoTemplate, f: ReactiveMongoReposi
         val query = Query().addCriteria(Criteria.where("role").`in`(role).and("_id").`is`(login))
         return template.findOne(query)
     }
+
+    fun findAll(): Flux<User> = template.findAll(User::class)
+
+    fun findOne(id: String) = template.findById(id, User::class)
+
+    fun deleteAll() = template.remove(Query(), User::class)
+
+    fun save(user: User) = template.save(user)
+
+    fun save(user: Mono<User>) = template.save(user)
 
 }

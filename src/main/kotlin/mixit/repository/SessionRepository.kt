@@ -4,21 +4,17 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.data.dto.SessionDataDto
 import mixit.model.Session
-import mixit.support.getEntityInformation
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Query
-import org.springframework.data.mongodb.repository.support.ReactiveMongoRepositoryFactory
-import org.springframework.data.mongodb.repository.support.SimpleReactiveMongoRepository
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
-import mixit.support.find
+import mixit.support.*
 
 @Repository
-class SessionRepository(val template: ReactiveMongoTemplate, f: ReactiveMongoRepositoryFactory) :
-        SimpleReactiveMongoRepository<Session, String>(f.getEntityInformation(Session::class), template) {
+class SessionRepository(val template: ReactiveMongoTemplate) {
 
 
     fun initData() {
@@ -46,4 +42,12 @@ class SessionRepository(val template: ReactiveMongoTemplate, f: ReactiveMongoRep
         val query = Query().addCriteria(Criteria.where("event").`is`(eventId))
         return template.find(query)
     }
+
+    fun findAll(): Flux<Session> = template.findAll(Session::class)
+
+    fun findOne(id: String) = template.findById(id, Session::class)
+
+    fun deleteAll() = template.remove(Query(), Session::class)
+
+    fun save(session: Session) = template.save(session)
 }

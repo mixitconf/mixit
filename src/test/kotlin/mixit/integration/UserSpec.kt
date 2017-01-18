@@ -24,7 +24,7 @@ object UserSpec : Spek({
     val webClient = WebClient.builder(ReactorClientHttpConnector()).build()
     var context: ConfigurableApplicationContext? = null
     beforeGroup { context = SpringApplication.run(Application::class.java) }
-    afterGroup { context!!.stop() }
+    afterGroup { SpringApplication.exit(context) }
 
     describe("a user endpoint") {
 
