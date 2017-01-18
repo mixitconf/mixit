@@ -99,6 +99,7 @@ dependencies {
 
     compile("org.springframework.boot.experimental:spring-boot-starter-web-reactive:0.1.0.BUILD-SNAPSHOT") {
         exclude(module= "spring-boot-starter-tomcat")
+        exclude(module= "hibernate-validator")
     }
 
     compile("com.samskivert:jmustache:1.13")

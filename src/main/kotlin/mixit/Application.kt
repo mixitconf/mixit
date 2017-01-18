@@ -7,8 +7,8 @@ import mixit.repository.EventRepository
 import mixit.repository.SessionRepository
 import mixit.repository.UserRepository
 import mixit.support.MixitWebFilter
+import mixit.support.run
 import org.springframework.boot.ApplicationRunner
-import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.annotation.Bean
 import org.springframework.core.env.Environment
@@ -33,7 +33,8 @@ class Application {
 
     @Bean
     fun template(env: Environment) = ReactiveMongoTemplate(SimpleReactiveMongoDatabaseFactory(
-                ConnectionString(env.getProperty("mongo.uri"))))
+                ConnectionString(env.getProperty("mongo.uri"))
+    ))
 
     @Bean
     fun dataInitializer(userRepository: UserRepository, eventRepository: EventRepository, sessionRepository: SessionRepository,
@@ -51,5 +52,5 @@ class Application {
 }
 
 fun main(args: Array<String>) {
-	SpringApplication.run(Application::class.java, *args)
+    run(Application::class, *args)
 }
