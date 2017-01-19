@@ -45,6 +45,7 @@
                 <li><a href="{{localePrefix}}/user/">{{#i18n}}header.menu.users{{/i18n}}</a></li>
                 <li><a href="{{localePrefix}}/session/">{{#i18n}}header.menu.sessions{{/i18n}}</a></li>
                 <li><a href="{{localePrefix}}/news">{{#i18n}}header.menu.news{{/i18n}}</a></li>
+                <li>{{#username}}<span>{{username}} (<a href="{{localePrefix}}/logout">{{#i18n}}header.menu.logout{{/i18n}}</a>)</span>{{/username}}{{^username}}<a href="{{localePrefix}}/login">{{#i18n}}header.menu.login{{/i18n}}</a>{{/username}}</li>
             </ul>
         </div>
         <div class="top-bar-right">

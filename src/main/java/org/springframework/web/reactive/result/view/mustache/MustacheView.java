@@ -21,6 +21,7 @@ import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Optional;
 
 import com.samskivert.mustache.Mustache;
 import com.samskivert.mustache.MustacheException;
@@ -46,6 +47,7 @@ public class MustacheView extends AbstractUrlBasedView {
     private Template template;
 
     public MustacheView() {
+        setRequestContextAttribute("context");
     }
 
     public MustacheView(Template template) {
@@ -59,6 +61,10 @@ public class MustacheView extends AbstractUrlBasedView {
                 DataBuffer dataBuffer = exchange.getResponse().bufferFactory().allocateBuffer();
                 Writer writer = new OutputStreamWriter(dataBuffer.asOutputStream(), getDefaultCharset());
                 Locale locale = exchange.getRequest().getHeaders().getAcceptLanguageAsLocale();
+                Optional<String> username = exchange.getSession().block().getAttribute("username");
+                if (username.isPresent()) {
+                    model.put("username", username.get());
+                }
                 if (locale != null) {
                     model.put("locale", locale.toString());
                     model.put("localePrefix", locale.getLanguage().equals("en") ? "/en" : "");
