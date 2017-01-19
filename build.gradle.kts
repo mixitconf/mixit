@@ -1,4 +1,3 @@
-import com.github.jengelman.gradle.plugins.shadow.ShadowExtension
 import org.jetbrains.kotlin.noarg.gradle.NoArgExtension
 import org.junit.platform.gradle.plugin.EnginesExtension
 import org.junit.platform.gradle.plugin.FiltersExtension
@@ -6,10 +5,9 @@ import org.junit.platform.gradle.plugin.JUnitPlatformExtension
 import com.moowork.gradle.gulp.GulpTask
 import com.moowork.gradle.node.NodeExtension
 import com.moowork.gradle.node.yarn.YarnInstallTask
-import java.util.concurrent.TimeUnit
 
 buildscript {
-    val kotlinVersion = "1.0.6"
+    val kotlinVersion = "1.1.0-beta-17"
     val springBootVersion = "2.0.0.BUILD-SNAPSHOT"
     val junitPlatformVersion = "1.0.0-M3"
     extra["kotlinVersion"] = kotlinVersion
@@ -18,9 +16,8 @@ buildscript {
 
     repositories {
         mavenCentral()
-        maven{
-            setUrl("https://plugins.gradle.org/m2/")
-        }
+        maven { setUrl("https://plugins.gradle.org/m2/") }
+        maven { setUrl("http://dl.bintray.com/kotlin/kotlin-eap-1.1") }
         maven { setUrl("https://repo.spring.io/snapshot") }
         maven { setUrl("https://repo.spring.io/milestone") }
     }
@@ -51,6 +48,7 @@ version = "1.0.0-SNAPSHOT"
 repositories {
     mavenCentral()
     maven { setUrl("https://dl.bintray.com/jetbrains/spek") }
+    maven { setUrl("http://dl.bintray.com/kotlin/kotlin-eap-1.1") }
     maven { setUrl("https://repo.spring.io/milestone") }
     maven { setUrl("https://repo.spring.io/snapshot") }
 }
