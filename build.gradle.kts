@@ -5,6 +5,7 @@ import org.junit.platform.gradle.plugin.JUnitPlatformExtension
 import com.moowork.gradle.gulp.GulpTask
 import com.moowork.gradle.node.NodeExtension
 import com.moowork.gradle.node.yarn.YarnInstallTask
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
     val kotlinVersion = "1.1.0-beta-17"
@@ -51,6 +52,12 @@ repositories {
     maven { setUrl("http://dl.bintray.com/kotlin/kotlin-eap-1.1") }
     maven { setUrl("https://repo.spring.io/milestone") }
     maven { setUrl("https://repo.spring.io/snapshot") }
+}
+
+tasks.withType<KotlinCompile> {
+    kotlinOptions {
+        targetCompatibility = "1.8"
+    }
 }
 
 configure<JUnitPlatformExtension> {
