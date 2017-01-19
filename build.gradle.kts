@@ -140,7 +140,5 @@ tasks.getByName("processResources").dependsOn("gulpBuild")
 
 tasks.getByName("clean") {
     delete("yarn.lock")
-    delete(".gradle/nodejs/")
-    delete(".gradle/yarn/")
     delete("node_modules/")
 }
