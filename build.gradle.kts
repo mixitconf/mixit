@@ -131,13 +131,18 @@ dependencies {
     testCompile("org.jetbrains.spek:spek-junit-platform-engine:$spekVersion")
 }
 
-task<YarnInstallTask>("yarnInstall"){}
+task<YarnInstallTask>("yarnInstall"){
+    inputs.dir("package.json")
+    outputs.dir("node_modules")
+}
 
 task<GulpTask>("gulpBuild") {
     dependsOn("yarnInstall")
     inputs.dir("src/main/sass")
+    inputs.dir("src/main/ts")
+    inputs.dir("src/main/iamges")
     inputs.dir("build/.tmp")
-    outputs.dir("src/main/static/css")
+    outputs.dir("build/resources/static")
     args = listOf("default")
 }
 
