@@ -56,7 +56,7 @@ repositories {
 
 tasks.withType<KotlinCompile> {
     kotlinOptions {
-        targetCompatibility = "1.8"
+        jvmTarget = "1.8"
     }
 }
 
