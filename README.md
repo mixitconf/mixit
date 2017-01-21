@@ -31,6 +31,7 @@ The technologies used are:
 Prerequisite:
  - [Install MongoDB](https://www.mongodb.com/download-center) and run `mongod`
  - [Install Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+ - Depending on your platform, you may have to install libpng (On mac with `brew install libpng` for example)
 
 To import the project in IDEA:
  - Clone the project `git clone https://github.com/mix-it/mixit.git`
