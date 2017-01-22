@@ -24,7 +24,7 @@ The technologies used are:
  - Reactive API: [Reactor](http://projectreactor.io/)
  - Persistence : [Spring Data Reactive MongoDB](https://spring.io/blog/2016/11/28/going-reactive-with-spring-data)
  - Build: [Gradle Script Kotlin](https://github.com/gradle/gradle-script-kotlin)
- - Testing: [Junit 5](http://junit.org/junit5/)
+ - Testing: [Junit](http://junit.org/)
  
 ## Getting started
 

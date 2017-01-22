@@ -3,6 +3,7 @@ package mixit.integration
 import mixit.model.Session
 import mixit.support.getJson
 import org.junit.Assert.assertEquals
+import org.junit.Test
 import org.junit.runner.RunWith
 import org.springframework.boot.context.embedded.LocalServerPort
 import org.springframework.boot.test.context.SpringBootTest
@@ -22,9 +23,10 @@ class SessionIntegrationTests {
 
     val webClient = WebClient.builder(ReactorClientHttpConnector()).build()
 
+    @Test
     fun findDanNorthSession() {
         StepVerifier.create(webClient
-                .getJson("http://localhost:8080/api/session/2421")
+                .getJson("http://localhost:$port/api/session/2421")
                 .flatMap { r -> r.bodyToFlux<Session>() })
                 .consumeNextWith {
                     assertEquals("Selling BDD to the Business", it.title)
@@ -33,9 +35,10 @@ class SessionIntegrationTests {
                 .verifyComplete()
     }
 
-     fun findMixit12Sessions() {
+    @Test
+    fun findMixit12Sessions() {
         StepVerifier.create(webClient
-                .getJson("http://localhost:8080/api/mixit12/session/")
+                .getJson("http://localhost:$port/api/mixit12/session/")
                 .flatMap { it.bodyToFlux<Session>() })
                 .expectNextCount(27)
                 .verifyComplete()

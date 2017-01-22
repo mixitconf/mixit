@@ -7,10 +7,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 buildscript {
     val kotlinVersion = "1.1.0-beta-17"
     val springBootVersion = "2.0.0.BUILD-SNAPSHOT"
-    val junitPlatformVersion = "1.0.0-M3"
     extra["kotlinVersion"] = kotlinVersion
     extra["springBootVersion"] = springBootVersion
-    extra["junitPlatformVersion"] = junitPlatformVersion
 
     repositories {
         mavenCentral()
@@ -25,7 +23,6 @@ buildscript {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion")
         classpath("org.jetbrains.kotlin:kotlin-noarg:$kotlinVersion")
         classpath("org.jetbrains.kotlin:kotlin-allopen:$kotlinVersion")
-        classpath("org.junit.platform:junit-platform-gradle-plugin:$junitPlatformVersion")
         classpath("com.moowork.gradle:gradle-node-plugin:1.0.1")
     }
 }
@@ -35,7 +32,6 @@ apply {
     plugin("kotlin")
     plugin("kotlin-noarg")
     plugin("kotlin-spring")
-    plugin("org.junit.platform.gradle.plugin")
     plugin("com.moowork.node")
     plugin("com.moowork.gulp")
     plugin("org.springframework.boot")
@@ -67,8 +63,6 @@ configure<NoArgExtension> {
 }
 
 val kotlinVersion = extra["kotlinVersion"] as String
-val junitPlatformVersion = extra["junitPlatformVersion"] as String
-val junitJupiterVersion = "5.0.0-M3"
 val springVersion = "5.0.0.BUILD-SNAPSHOT"
 val springBootVersion = extra["springBootVersion"] as String
 val springDataVersion = "2.0.0.BUILD-SNAPSHOT"
@@ -83,7 +77,7 @@ dependencies {
         exclude(module= "spring-boot-starter-tomcat")
         exclude(module= "hibernate-validator")
     }
-    compile("org.springframework:spring-test:$springVersion")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
 
     compile("com.samskivert:jmustache:1.13")
     compile("com.atlassian.commonmark:commonmark:0.8.0")
@@ -103,11 +97,6 @@ dependencies {
     compile("org.springframework.data:spring-data-mongodb:$springDataVersion")
     compile("org.springframework.data:spring-data-commons:$springDataVersion")
     compile("org.mongodb:mongodb-driver-reactivestreams:1.2.0")
-
-    testCompile("org.junit.platform:junit-platform-runner:$junitPlatformVersion")
-    testCompile("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
-    testRuntime("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
-
 }
 
 task<YarnInstallTask>("yarnInstall"){
