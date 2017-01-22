@@ -24,7 +24,7 @@ The technologies used are:
  - Reactive API: [Reactor](http://projectreactor.io/)
  - Persistence : [Spring Data Reactive MongoDB](https://spring.io/blog/2016/11/28/going-reactive-with-spring-data)
  - Build: [Gradle Script Kotlin](https://github.com/gradle/gradle-script-kotlin)
- - Testing: [Spek](https://jetbrains.github.io/spek/)
+ - Testing: [Junit 5](http://junit.org/junit5/)
  
 ## Getting started
 
@@ -36,7 +36,6 @@ Prerequisite:
 To import the project in IDEA:
  - Clone the project `git clone https://github.com/mix-it/mixit.git`
  - Make sure you have at least IntelliJ IDEA 2016.3 and IDEA Kotlin plugin 1.1.0-beta-17+
- - Install Spek IDEA plugin
  - Import it in IDEA as a Gradle project
  - Right click on the project -> Open module settings -> Modules -> mixit -> Kotlin and make sure Kotlin 1.1 language level and that Java 1.8 bytecode options are selected
  - Right click on `Application.kt` -> Run mixit.ApplicationKt

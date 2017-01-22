@@ -1,7 +1,4 @@
 import org.jetbrains.kotlin.noarg.gradle.NoArgExtension
-import org.junit.platform.gradle.plugin.EnginesExtension
-import org.junit.platform.gradle.plugin.FiltersExtension
-import org.junit.platform.gradle.plugin.JUnitPlatformExtension
 import com.moowork.gradle.gulp.GulpTask
 import com.moowork.gradle.node.NodeExtension
 import com.moowork.gradle.node.yarn.YarnInstallTask
@@ -60,29 +57,9 @@ tasks.withType<KotlinCompile> {
     }
 }
 
-configure<JUnitPlatformExtension> {
-    filters {
-        engines { "spek" }
-    }
-}
-
 configure<NodeExtension> {
     version = "6.9.2"
     download = true
-}
-
-fun JUnitPlatformExtension.filters(setup: FiltersExtension.() -> Unit) {
-    when (this) {
-        is ExtensionAware -> extensions.getByType(FiltersExtension::class.java).setup()
-        else -> throw Exception("Must be an instance of ExtensionAware")
-    }
-}
-
-fun FiltersExtension.engines(setup: EnginesExtension.() -> Unit) {
-    when (this) {
-        is ExtensionAware -> extensions.getByType(EnginesExtension::class.java).setup()
-        else -> throw Exception("Must be an instance of ExtensionAware")
-    }
 }
 
 configure<NoArgExtension> {
@@ -90,13 +67,13 @@ configure<NoArgExtension> {
 }
 
 val kotlinVersion = extra["kotlinVersion"] as String
-val junitPlatformVersion= extra["junitPlatformVersion"] as String
+val junitPlatformVersion = extra["junitPlatformVersion"] as String
+val junitJupiterVersion = "5.0.0-M3"
 val springVersion = "5.0.0.BUILD-SNAPSHOT"
 val springBootVersion = extra["springBootVersion"] as String
 val springDataVersion = "2.0.0.BUILD-SNAPSHOT"
 val jacksonVersion = "2.8.5"
 val reactorVersion = "3.0.4.RELEASE"
-val spekVersion = "1.1.0-beta3"
 
 dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
@@ -106,6 +83,7 @@ dependencies {
         exclude(module= "spring-boot-starter-tomcat")
         exclude(module= "hibernate-validator")
     }
+    compile("org.springframework:spring-test:$springVersion")
 
     compile("com.samskivert:jmustache:1.13")
     compile("com.atlassian.commonmark:commonmark:0.8.0")
@@ -127,8 +105,9 @@ dependencies {
     compile("org.mongodb:mongodb-driver-reactivestreams:1.2.0")
 
     testCompile("org.junit.platform:junit-platform-runner:$junitPlatformVersion")
-    testCompile("org.jetbrains.spek:spek-api:$spekVersion")
-    testCompile("org.jetbrains.spek:spek-junit-platform-engine:$spekVersion")
+    testCompile("org.junit.jupiter:junit-jupiter-api:$junitJupiterVersion")
+    testRuntime("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVersion")
+
 }
 
 task<YarnInstallTask>("yarnInstall"){
