@@ -24,7 +24,7 @@ class SessionIntegrationTests {
     val webClient = WebClient.builder(ReactorClientHttpConnector()).build()
 
     @Test
-    fun findDanNorthSession() {
+    fun `Find Dan North session`() {
         StepVerifier.create(webClient
                 .getJson("http://localhost:$port/api/session/2421")
                 .flatMap { r -> r.bodyToFlux<Session>() })
@@ -36,7 +36,7 @@ class SessionIntegrationTests {
     }
 
     @Test
-    fun findMixit12Sessions() {
+    fun `Find MiXiT 2012 sessions`() {
         StepVerifier.create(webClient
                 .getJson("http://localhost:$port/api/mixit12/session/")
                 .flatMap { it.bodyToFlux<Session>() })

@@ -30,7 +30,7 @@ class UserIntegrationTests {
     val webClient = WebClient.builder(ReactorClientHttpConnector()).build()
 
     @Test
-    fun createNewUser() {
+    fun `Create a new user`() {
         StepVerifier.create(webClient
                 .postJson("http://localhost:$port/api/user/", User("brian", "Brian", "Clozel", "bc@gm.com"))
                 .flatMap { it.bodyToMono<User>()} )
@@ -39,7 +39,7 @@ class UserIntegrationTests {
     }
 
     @Test
-    fun findUser() {
+    fun `Find Dan NORTH`() {
         StepVerifier.create(webClient
                 .getJson("http://localhost:$port/api/speaker/tastapod")
                 .then { r -> r.bodyToMono<User>()} )
@@ -52,7 +52,7 @@ class UserIntegrationTests {
     }
 
     @Test
-    fun findMixit15Speakers() {
+    fun `Find all MiXit 2015 speakers`() {
         StepVerifier.create(webClient
                 .getJson("http://localhost:$port/api/mixit15/speaker/")
                 .flatMap { it.bodyToFlux<User>()} )
@@ -61,7 +61,7 @@ class UserIntegrationTests {
     }
 
     @Test
-    fun findStaffMember() {
+    fun `Find Guillaume Ehret staff member`() {
         StepVerifier.create(webClient
                 .getJson("http://localhost:$port/api/staff/guillaumeehret")
                 .flatMap { it.bodyToFlux<User>() })
@@ -74,7 +74,7 @@ class UserIntegrationTests {
     }
 
     @Test
-    fun findStaffMembers() {
+    fun `Find all staff members`() {
         StepVerifier.create(webClient
                 .getJson("http://localhost:$port/api/staff/")
                 .flatMap { it.bodyToFlux<User>() })
@@ -83,7 +83,7 @@ class UserIntegrationTests {
     }
 
     @Test
-    fun findSponsor() {
+    fun `Find Zenika Lyon sponsor`() {
         StepVerifier.create(webClient
                 .getJson("http://localhost:$port/api/sponsor/Zenika%20Lyon")
                 .flatMap { it.bodyToFlux<User>() })
@@ -96,7 +96,7 @@ class UserIntegrationTests {
     }
 
     @Test
-    fun displayUsers() {
+    fun `Find Joel SPOLSKY on users HTML page`() {
         StepVerifier.create(webClient
                 .getHtml("http://localhost:$port/user/")
                 .then { r -> r.bodyToMono<String>()} )

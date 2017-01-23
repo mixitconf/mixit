@@ -26,7 +26,7 @@ class EventIntegrationTests {
     val webClient = WebClient.builder(ReactorClientHttpConnector()).build()
 
     @Test
-    fun findMixit16() {
+    fun `Find MiXiT 2016 event`() {
         StepVerifier.create(webClient
                 .getJson("http://localhost:$port/api/event/mixit16")
                 .then { r -> r.bodyToMono<Event>() })
@@ -38,7 +38,7 @@ class EventIntegrationTests {
     }
 
     @Test
-    fun findEvents() {
+    fun `Find all events`() {
         StepVerifier.create(webClient
                 .getJson("http://localhost:$port/api/event/")
                 .flatMap { it.bodyToFlux<Event>() })
