@@ -7,7 +7,6 @@ import mixit.support.getJson
 import mixit.support.postJson
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
-import org.junit.Ignore
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.springframework.boot.context.embedded.LocalServerPort
@@ -96,13 +95,12 @@ class UserIntegrationTests {
                 .verifyComplete()
     }
 
-    // TODO Find why this test does not works ...
-    @Ignore @Test
+    @Test
     fun displayUsers() {
         StepVerifier.create(webClient
                 .getHtml("http://localhost:$port/user/")
                 .then { r -> r.bodyToMono<String>()} )
-                .consumeNextWith { it.contains("Robert") && it.contains("Raide") && it.contains("Ford") }
+                .consumeNextWith { assertTrue(it.contains("Joel SPOLSKY")) }
                 .verifyComplete()
     }
 

@@ -23,10 +23,6 @@ class UserRepository(val template: ReactiveMongoTemplate) {
 
         deleteAll().block()
 
-        save(User("robert", "Robert", "Foo", "robert@gmail.com")).block()
-        save(User("raide", "Raide", "Bar", "raide@gmail.com")).block()
-        save(User("ford", "Ford", "Baz", "ford@gmail.com")).block()
-
         val years = listOf(12, 13, 14, 15, 16)
         years.forEach { year ->
             val speakerResource = ClassPathResource("data/speaker/speaker_mixit$year.json")
