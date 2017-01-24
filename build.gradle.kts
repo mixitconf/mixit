@@ -23,7 +23,7 @@ buildscript {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion")
         classpath("org.jetbrains.kotlin:kotlin-noarg:$kotlinVersion")
         classpath("org.jetbrains.kotlin:kotlin-allopen:$kotlinVersion")
-        classpath("com.moowork.gradle:gradle-node-plugin:1.0.1")
+        classpath("com.moowork.gradle:gradle-node-plugin:1.1.1")
     }
 }
 
@@ -54,7 +54,7 @@ tasks.withType<KotlinCompile> {
 }
 
 configure<NodeExtension> {
-    version = "6.9.2"
+    version = "6.9.4"
     download = true
 }
 
@@ -99,13 +99,8 @@ dependencies {
     compile("org.mongodb:mongodb-driver-reactivestreams:1.2.0")
 }
 
-task<YarnInstallTask>("yarnInstall"){
-    inputs.dir("package.json")
-    outputs.dir("node_modules")
-}
-
 task<GulpTask>("gulpBuild") {
-    dependsOn("yarnInstall")
+    dependsOn(YarnInstallTask.NAME)
     inputs.dir("src/main/sass")
     inputs.dir("src/main/ts")
     inputs.dir("src/main/iamges")
@@ -115,7 +110,3 @@ task<GulpTask>("gulpBuild") {
 }
 
 tasks.getByName("processResources").dependsOn("gulpBuild")
-
-tasks.getByName("clean") {
-     delete("node_modules/")
-}

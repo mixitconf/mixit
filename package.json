@@ -32,7 +32,7 @@
     "@types/core-js": "^0.9.35",
     "@types/whatwg-fetch": "^0.0.33",
     "fastclick": "^1.0.6",
-    "foundation": "^4.2.1-1",
+    "foundation-sites": "^6.3.0",
     "jquery": "^3.1.1",
     "vinyl-named": "^1.1.0",
     "webpack-stream": "^3.2.0"

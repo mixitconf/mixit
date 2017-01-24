@@ -1,4 +1,6 @@
-@import "../../../node_modules/foundation/scss/foundation";
+@import "../../../node_modules/foundation-sites/scss/foundation";
+
+@include foundation-everything;
 
 body {
   background: #F0F0F3;

@@ -15,7 +15,7 @@ const paths = {
   main: 'src/main',
   tmp: 'build/.tmp',
   vendors: [
-    'node_modules/foundation/js/foundation/foundation.js',
+    'node_modules/foundation/js/foundation-sites/dist/js/foundation.js',
     'node_modules/fastclick/lib/fastclick.js',
     'node_modules/jquery/dist/jquery.js'
   ],
@@ -120,7 +120,6 @@ gulp.task('clean', () => del([paths.tmp, paths.dist.images, paths.dist.js], {dot
 // Watch files for changes
 gulp.task('watch', ['default'], () => {
   gulp.watch([`${paths.main}/sass/**/*.scss`], ['styles']);
-  gulp.watch([`${paths.main}/images/**/*.*`], ['images']);
   gulp.watch([`${paths.main}/ts/**/*.ts`], ['ts-to-js']);
 });
 
