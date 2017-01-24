@@ -3,9 +3,7 @@ package mixit.repository
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.data.dto.MemberDataDto
-import mixit.model.Article
-import mixit.model.Event
-import mixit.model.EventSponsoring
+import mixit.model.*
 import mixit.support.*
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.domain.Sort
@@ -29,9 +27,36 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
                 Event("mixit14", LocalDate.of(2014, 4, 29), LocalDate.of(2014, 4, 30), sponsors = readSponsorsForEvent(14)),
                 Event("mixit15", LocalDate.of(2015, 4, 16), LocalDate.of(2015, 4, 17), sponsors = readSponsorsForEvent(15)),
                 Event("mixit16", LocalDate.of(2016, 4, 21), LocalDate.of(2016, 4, 22), sponsors = readSponsorsForEvent(16)),
-                Event("mixit17", LocalDate.of(2017, 4, 20), LocalDate.of(2017, 4, 21), true)
+                Event("mixit17", LocalDate.of(2017, 4, 20), LocalDate.of(2017, 4, 21), true, createSponsorFor2017())
         )
         events.forEach { event -> save(event).block() }
+    }
+
+    fun createSponsorFor2017(): List<EventSponsoring>{
+        userRepository.save(User("Ippon", "", "", "marketing@ippon.fr ", "Ippon",
+                logoUrl = "/images/sponsor/logo-ippon.svg",
+                longDescription = "Ippon is a specialized global consulting on Digital, BigData and Cloud solutions. We serve prestigious customers " +
+                        "worldwide with teams of high-level consultants and a deep engagement for quality, performance and time-to-market. " +
+                        "\nLocations : France, USA, Australia and morocco \n Key figures : M$25+, 250+ consultants, since 2002 ",
+                links = listOf(Link("Site", "http://www.ippon.fr/"), Link("Blog", "http://blog.ippon.fr/")))).block()
+
+        userRepository.save(User("Hopwork", "", "", "contact@hopwork.fr ", "Hopwork",
+                logoUrl = "/images/sponsor/logo-hopwork.svg",
+                longDescription = "TODO ",
+                links = listOf(Link("Site", "http://www.hopwork.fr/")))).block()
+
+        return listOf(
+                EventSponsoring(SponsorshipLevel.GOLD, userRepository.findOne("Zenika Lyon").block(), LocalDate.of(2016, 11, 4)),
+                EventSponsoring(SponsorshipLevel.GOLD, userRepository.findOne("Sword").block(), LocalDate.of(2016, 12, 7)),
+                EventSponsoring(SponsorshipLevel.GOLD, userRepository.findOne("Ippon").block(), LocalDate.of(2016, 12, 14)),
+                EventSponsoring(SponsorshipLevel.GOLD, userRepository.findOne("Sopra Steria").block(), LocalDate.of(2016, 12, 23)),
+                EventSponsoring(SponsorshipLevel.GOLD, userRepository.findOne("annick.challancin@esker.fr").block(), LocalDate.of(2017, 1, 10)),
+                EventSponsoring(SponsorshipLevel.LANYARD, userRepository.findOne("WorldlineFrance").block(), LocalDate.of(2016, 10, 19)),
+                EventSponsoring(SponsorshipLevel.PARTY, userRepository.findOne("onlylyon").block(), LocalDate.of(2017, 1, 1)),
+                EventSponsoring(SponsorshipLevel.PARTY_DRINKS, userRepository.findOne("Hopwork").block(), LocalDate.of(2016, 11, 2)),
+                EventSponsoring(SponsorshipLevel.SILVER, userRepository.findOne("SerliFr").block(), LocalDate.of(2016, 12, 13)),
+                EventSponsoring(SponsorshipLevel.SILVER, userRepository.findOne("SII_rhonealpes").block(), LocalDate.of(2016, 12, 20))
+        )
     }
 
     /**
