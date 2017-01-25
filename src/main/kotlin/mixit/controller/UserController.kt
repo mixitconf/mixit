@@ -12,6 +12,7 @@ import org.springframework.web.reactive.function.server.RequestPredicates.*
 import org.springframework.web.reactive.function.server.ServerResponse.created
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import java.net.URI
+import java.net.URLDecoder
 
 
 @Controller
@@ -21,6 +22,7 @@ class UserController(val repository: UserRepository) : RouterFunction<ServerResp
         accept(TEXT_HTML).apply {
             (GET("/user/") or GET("/users/")) { findAllView() }
             GET("/user/{login}") { findOneView(req) }
+            GET("/sponsor/{login}") { findOneSponsorView(req) }
         }
         accept(APPLICATION_JSON).apply {
             GET("/api/user/") { findAll() }
@@ -38,6 +40,10 @@ class UserController(val repository: UserRepository) : RouterFunction<ServerResp
 
     fun findOneView(req: ServerRequest) = repository.findOne(req.pathVariable("login"))
             .then { u -> ok().render("user", mapOf(Pair("user", u))) }
+
+    fun findOneSponsorView(req: ServerRequest) =
+        repository.findOne(URLDecoder.decode(req.pathVariable("login"), "UTF-8"))
+                .then { u -> ok().render("sponsor", mapOf(Pair("sponsor", u))) }
 
     fun findAllView() = repository.findAll()
             .collectList()

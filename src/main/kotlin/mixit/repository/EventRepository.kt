@@ -34,15 +34,15 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
 
     fun createSponsorFor2017(): List<EventSponsoring>{
         userRepository.save(User("Ippon", "", "", "marketing@ippon.fr ", "Ippon",
-                logoUrl = "/images/sponsor/logo-ippon.svg",
-                longDescription = "Ippon is a specialized global consulting on Digital, BigData and Cloud solutions. We serve prestigious customers " +
+                logoUrl = "sponsor/logo-ippon.svg",
+                shortDescription = "Ippon is a specialized global consulting on Digital, BigData and Cloud solutions. We serve prestigious customers " +
                         "worldwide with teams of high-level consultants and a deep engagement for quality, performance and time-to-market. " +
                         "\nLocations : France, USA, Australia and morocco \n Key figures : M$25+, 250+ consultants, since 2002 ",
                 links = listOf(Link("Site", "http://www.ippon.fr/"), Link("Blog", "http://blog.ippon.fr/")))).block()
 
         userRepository.save(User("Hopwork", "", "", "contact@hopwork.fr ", "Hopwork",
-                logoUrl = "/images/sponsor/logo-hopwork.svg",
-                longDescription = "TODO ",
+                logoUrl = "sponsor/logo-hopwork.svg",
+                shortDescription = "TODO ",
                 links = listOf(Link("Site", "http://www.hopwork.fr/")))).block()
 
         return listOf(

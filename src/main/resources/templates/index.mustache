@@ -1,5 +1,18 @@
 {{> header}}
 
-{{#i18n}}home.welcome{{/i18n}}
+<p>{{#i18n}}home.welcome{{/i18n}}</p>
+
+<div>Sponsors</div>
+<div>GOLD</div>
+
+{{#sponsorsGold}}
+    <a href="/sponsor/{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}" ><img class="sponsor" src="/images/{{sponsor.logoUrl}}"/></a>
+{{/sponsorsGold}}
+
+<div>SILVER</div>
+
+{{#sponsorsSilver}}
+    <a href="/sponsor/{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}" ><img class="sponsor" src="/images/{{sponsor.logoUrl}}"/></a>
+{{/sponsorsSilver}}
 
 {{> footer}}
