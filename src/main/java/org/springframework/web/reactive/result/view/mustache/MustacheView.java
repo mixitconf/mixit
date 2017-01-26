@@ -19,6 +19,7 @@ package org.springframework.web.reactive.result.view.mustache;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
+import java.net.URLEncoder;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Optional;
@@ -74,6 +75,9 @@ public class MustacheView extends AbstractUrlBasedView {
                 model.put("i18n", (Mustache.Lambda) (frag, out) -> {
                     String key = frag.execute();
                     out.write(getApplicationContext().getMessage(key, null, locale));
+                });
+                model.put("urlEncode", (Mustache.Lambda) (frag, out) -> {
+                    out.write(URLEncoder.encode(frag.execute(), "UTF-8"));
                 });
                 try {
                     this.template.execute(model, writer);
