@@ -5,7 +5,7 @@ import com.moowork.gradle.node.yarn.YarnInstallTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
-    val kotlinVersion = "1.1.0-beta-17"
+    val kotlinVersion = "1.1.0-beta-22"
     val springBootVersion = "2.0.0.BUILD-SNAPSHOT"
     extra["kotlinVersion"] = kotlinVersion
     extra["springBootVersion"] = springBootVersion
