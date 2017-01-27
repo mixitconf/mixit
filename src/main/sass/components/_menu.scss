@@ -1,0 +1,17 @@
+//MENUS
+.mxt-menu__item--nav {
+	color: $anchor-color-alt;
+	&:hover {
+		color: $anchor-color-alt-hover;
+	}
+}
+
+ul.mxt-menu--nav {
+	text-transform: uppercase;
+	font-size: rem-calc(12);
+	font-weight: $global-weight-bold;
+	@include breakpoint(small only) {
+		@include menu-direction(vertical);
+  		text-align: center;
+  	}
+}

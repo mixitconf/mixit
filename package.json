@@ -31,8 +31,8 @@
   "dependencies": {
     "@types/core-js": "^0.9.35",
     "@types/whatwg-fetch": "^0.0.33",
-    "fastclick": "^1.0.6",
     "foundation-sites": "^6.3.0",
+    "motion-ui": "^1.2.2",
     "jquery": "^3.1.1",
     "vinyl-named": "^1.1.0",
     "webpack-stream": "^3.2.0"

@@ -1,0 +1,36 @@
+// WRAPPERS
+.mxt-wrapper--white {
+	background-color: $white;
+	padding-top: 3em;
+	margin: 2em auto;
+}
+
+.mxt-wrapper--header {
+	background: url('/images/svg/mxt-icon--fourviere.svg') no-repeat left top;
+	& .no-svg {
+		background: url('/images/png/mxt-icon--fourviere.png') no-repeat left top;
+	}
+	@include breakpoint(medium) {
+		background-size: contain;
+		background-position: 20% top;
+		padding-top: 5em;
+  	}
+	background-size: 20%;
+	background-position: 5% bottom;
+	background-color: $secondary-color;
+	border-bottom: 5px solid $forth-color;	
+	color: $white;
+	text-align: center;
+	margin-bottom: 2em;
+	padding-top: 2em;
+}
+
+.mxt-wrapper--footer {
+	background-color: $secondary-color;
+	padding: 1em;
+	margin-top: 2em;
+}
+
+.mxt-wrapper--categories {
+
+}

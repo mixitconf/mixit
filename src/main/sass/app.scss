@@ -1,30 +1,84 @@
+@charset "utf-8";
+
 @import "../../../node_modules/foundation-sites/scss/foundation";
+@import "../../../node_modules/motion-ui/motion-ui";
+@import "settings";
 
-@include foundation-everything;
+@include add-foundation-colors;
+@include foundation-global-styles;
+@include foundation-grid;
+@include foundation-flex-grid;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-responsive-embed;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+// @include foundation-progress-element;
+// @include foundation-meter-element;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
+@include foundation-flex-classes;
 
-body {
-  background: #F0F0F3;
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+
+@import 'components/icons.scss';
+@import 'components/img.scss';
+@import 'components/menu.scss';
+@import 'components/text.scss';
+@import 'components/wrappers.scss';
+
+
+strong {
+	font-weight: $global-weight-bold;
 }
 
-.mixit-menu-lang {
-  height:18px!important;
-  width:20px!important;
-  padding:0!important;
+/* fix for IE */
+object {
+    width: 100%;
 }
 
-.mixit-content {
-  padding-top: 20px;
-
+hr {
+	border-color: $light-gray;
+	width: 3em;
 }
 
-.login-box {
-  background: #fff;
-  border: 1px solid #ddd;
-  margin: 100px 0;
-  padding: 40px 20px 0 20px;
-}
-.sponsor {
-  margin: 4px;
-  max-height: 100px;
-  max-width: 140px;
+small {
+	text-transform: uppercase;
+	font-weight: $global-weight-normal;
+	margin-top: 0.3em;
+	@include breakpoint(medium) {
+		font-size: 50%;
+	}
 }

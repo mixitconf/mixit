@@ -15,16 +15,16 @@ class GlobalController(val repository: EventRepository) : RouterFunction<ServerR
 
     override fun route(req: ServerRequest) = route(req) {
         accept(TEXT_HTML).apply {
-            GET("/") { indexView() }
+            GET("/") { homeView() }
         }
         resources("/**", ClassPathResource("static/"))
     }
 
-    fun indexView() = repository.findOne("mixit17")
+    fun homeView() = repository.findOne("mixit17")
             .then { events ->
                 val sponsors = events.sponsors.groupBy { it.level }
                 
-                ServerResponse.ok().render("index", mapOf(
+                ok().render("home", mapOf(
                         Pair("sponsorsGold", sponsors.get(GOLD)),
                         Pair("sponsorsSilver", sponsors.get(SILVER))
                 ))

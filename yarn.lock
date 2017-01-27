@@ -1460,10 +1460,6 @@ fancy-log@^1.1.0, fancy-log@^1.2.0:
     chalk "^1.1.1"
     time-stamp "^1.0.0"
 
-fastclick@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/fastclick/-/fastclick-1.0.6.tgz#161625b27b1a5806405936bda9a2c1926d06be6a"
-
 fd-slicer@~1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/fd-slicer/-/fd-slicer-1.0.1.tgz#8b5bcbd9ec327c5041bf9ab023fd6750f1177e65"
@@ -3154,6 +3150,12 @@ modify-error-event@^1.0.0:
 modify-event@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/modify-event/-/modify-event-1.0.1.tgz#ea1314e13ff6e79389f20ad74192f621de658ad6"
+
+motion-ui@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/motion-ui/-/motion-ui-1.2.2.tgz#ee13bdc498c9d691f0d2907114afd8b0d7a76b2f"
+  dependencies:
+    jquery "^2.2.0"
 
 mozjpeg@^4.0.0:
   version "4.1.1"

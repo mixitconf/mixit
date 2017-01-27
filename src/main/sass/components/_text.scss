@@ -1,0 +1,43 @@
+// TEXT HELPERS
+.mxt-text--cyan {
+	color: $third-color;
+}
+.mxt-text--orange {
+	color: $primary-color;
+}
+
+.mxt-text--bigger {
+	font-size: rem-calc(48);
+}	
+
+.mxt-anchor--uppercase {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+// TITLES
+.mxt-title--alt {
+	color: $third-color;
+	text-transform: uppercase;
+}
+
+.mxt-title--smaller { 
+	font-size: rem-calc(18);
+	padding-bottom: $header-margin-bottom;
+}
+
+
+// HEADER
+.mxt-header--date {
+	color: $third-color;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.mxt-subheader--categories {
+	line-height: 1.5;
+	margin: 0.5em auto;
+	@include breakpoint(medium) {
+		line-height: 1;
+	}
+}

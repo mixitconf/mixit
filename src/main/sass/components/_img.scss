@@ -1,0 +1,21 @@
+// IMG 
+.mxt-img--speakers {
+	margin-bottom: 1em;
+}
+
+.mxt-img--sponsors {
+	width: 10em;
+	height: auto;
+	margin-bottom: 1em;
+	filter: grayscale(100%);
+	&:hover {
+		filter: grayscale(70%);		
+	}
+}
+
+.mxt-img--speakers {
+	filter: grayscale(60%);
+	&:hover {
+		filter: grayscale(30%);
+	}
+}

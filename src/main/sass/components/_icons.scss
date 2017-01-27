@@ -1,0 +1,41 @@
+// ICONS 
+.mxt-icon--logo {
+	width: 4em;
+	margin-left: 1em;
+}
+
+.mxt-icon--heart {
+	width: 1em;
+	margin-left: 0.5em; 
+}
+
+.mxt-icon--heart--footer {
+	width: 1.5em;
+	position: relative;
+	top: 0.3em;
+	path {
+		fill: $primary-color;
+	}
+}
+
+.mxt-icon--wrapper {
+	@include breakpoint (medium) {
+		text-align: right;
+	}
+}
+
+.mxt-icon--edition {
+	width: 5em;
+	text-align: right;
+}
+
+.mxt-icon--social {
+	height: 2em;
+	margin: 1em 0.5em;
+	&:hover {
+		cursor: pointer;
+	}
+	&:hover path {
+		fill: $anchor-color-alt-hover;
+	}
+}

@@ -1,59 +1,32 @@
 <!doctype html>
-<html class="no-js" lang="en" dir="ltr">
-<head>
-    <meta charset="utf-8">
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mix-it</title>
-    <meta name="description" content="{{#i18n}}header.description{{/i18n}}">
-
-    <meta name="msapplication-tap-highlight" content="no">
-
-    <link rel="manifest" href="manifest.json">
-
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="application-name" content="Mix-IT">
-    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
-
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Mix-IT">
-    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
-
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-    <meta name="msapplication-TileColor" content="#0277bd">
-
-    <!-- Color the status bar on mobile devices -->
-    <meta name="theme-color" content="#0277bd">
-
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-
+    <title>MiXiT</title>
     <link rel="stylesheet" href="/css/app.css">
-</head>
-<body>
+    <link rel="icon" type="image/png" href="images/mixit.ico">
+  </head>
+  <body>
 
-    <div class="top-bar" id="mixit-menu">
-        <div class="top-bar-left">
-            <ul class="menu" data-dropdown-menu>
-                <li class="menu-text">Mix-it</li>
-                <li><a href="{{localePrefix}}/">{{#i18n}}header.menu.home{{/i18n}}</a></li>
-                <li><a href="{{localePrefix}}/article/">{{#i18n}}header.menu.blog{{/i18n}}</a></li>
-                <li><a href="{{localePrefix}}/user/">{{#i18n}}header.menu.users{{/i18n}}</a></li>
-                <li><a href="{{localePrefix}}/session/">{{#i18n}}header.menu.sessions{{/i18n}}</a></li>
-                <li><a href="{{localePrefix}}/news">{{#i18n}}header.menu.news{{/i18n}}</a></li>
-                <li>{{#username}}<span>{{username}} (<a href="{{localePrefix}}/logout">{{#i18n}}header.menu.logout{{/i18n}}</a>)</span>{{/username}}{{^username}}<a href="{{localePrefix}}/login">{{#i18n}}header.menu.login{{/i18n}}</a>{{/username}}</li>
-            </ul>
-        </div>
+    <div class="top-bar">
+      <div class="top-bar-title">
+          <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
+          </span>
+        <object type="image/svg+xml" data="/images/svg/mxt-icon--logo.svg" class="mxt-icon--logo"><img src="/images/png/mxt-icon--logo.png"></object>
+      </div>
+      <div id="responsive-menu">
         <div class="top-bar-right">
-            {{#en}}<a href="/"><img class="mixit-menu-lang" src="/images/lang/us.svg" /></a>{{/en}}
-            {{#fr}}<a href="/en/"><img class="mixit-menu-lang" src="/images/lang/fr.svg" /></a>{{/fr}}
+          <ul class="menu mxt-menu--nav">
+            <li><a href="#" class="mxt-menu__item--nav">Speakers</a></li>
+            <li><a href="#" class="mxt-menu__item--nav">Talks</a></li>
+            <li><a href="#" class="mxt-menu__item--nav">Planning</a></li>
+            <li><a href="#" class="mxt-menu__item--nav">Billeterie</a></li>
+            <li><a href="#" class="mxt-menu__item--nav">Venir</a></li>
+            <li><a href="#" class="mxt-menu__item--nav">Sponsors</a></li>
+          </ul>
         </div>
+      </div>
     </div>
-
-    <div class="mixit-content row">
-        <div class="large-12 columns">
-            <div class="callout">
-
