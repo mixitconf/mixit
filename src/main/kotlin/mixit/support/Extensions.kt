@@ -7,20 +7,8 @@ import org.springframework.data.mongodb.core.query.Query
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 import kotlin.reflect.KClass
-import org.springframework.http.MediaType
-import org.springframework.web.reactive.function.BodyInserters
-import org.springframework.web.reactive.function.client.ClientRequest
-import org.springframework.web.reactive.function.client.WebClient
 
 fun run(type: KClass<*>, vararg args: String) = SpringApplication.run(type.java, *args)
-
-
-fun WebClient.getJson(url: String) = exchange(ClientRequest.GET(url).accept(MediaType.APPLICATION_JSON_UTF8).build())
-
-fun WebClient.getHtml(url: String) = exchange(ClientRequest.GET(url).accept(MediaType.TEXT_HTML).build())
-
-fun WebClient.postJson(url: String, body: Any) = exchange(ClientRequest.POST(url).accept(MediaType.APPLICATION_JSON_UTF8).body(BodyInserters.fromObject(body)))
-
 
 inline fun <reified T : Any> ReactiveMongoOperations.findById(id: Any) : Mono<T> = findById(id, T::class.java)
 
