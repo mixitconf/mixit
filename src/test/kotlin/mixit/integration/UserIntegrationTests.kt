@@ -2,6 +2,7 @@ package mixit.integration
 
 import mixit.model.Role
 import mixit.model.User
+import mixit.support.security.OAuthProvider
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test

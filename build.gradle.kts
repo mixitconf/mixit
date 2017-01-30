@@ -90,6 +90,8 @@ dependencies {
         exclude(module = "kotlin-reflect")
     }
     compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
+
+    compile("com.github.scribejava:scribejava-apis:4.0.0")
 }
 
 task<GulpTask>("gulpBuild") {

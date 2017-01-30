@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository
 import reactor.core.publisher.Mono
 import mixit.util.*
 import org.slf4j.LoggerFactory
+import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Criteria.*
 
 
@@ -40,8 +41,19 @@ class UserRepository(val template: ReactiveMongoTemplate) {
             template.find<User>(Query(where("role").`is`(role)))
 
 
+    fun findByEmail(email: String): Mono<User> {
+        val query = Query().addCriteria(Criteria.where("email").`is`(email))
+        return template.findOne(query)
+    }
+
+    fun findByLogin(login: String): Mono<User> {
+        val query = Query().addCriteria(Criteria.where("year").`is`(login))
+        return template.findOne(query)
+    }
+
     fun findByRoleAndEvent(role: Role, event: String) =
             template.find<User>(Query(where("role").`is`(role).and("events").`in`(event)))
+
 
 
     fun findOneByRole(login: String, role: Role) =

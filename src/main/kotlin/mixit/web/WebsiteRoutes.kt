@@ -38,6 +38,7 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
 
             // Authentication
             GET("/login", authenticationHandler::loginView)
+            GET("/oauth/{provider}", authenticationHandler::oauthCallback)
 
             // Talks
             GET("/2017") { talkHandler.findByEventView(2017, it) }
@@ -73,7 +74,11 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
         }
 
         contentType(APPLICATION_FORM_URLENCODED).nest {
-            POST("/login", authenticationHandler::login)
+            "/login".nest {
+                POST("/", authenticationHandler::login)
+                POST("/create", authenticationHandler::createLoginWithProvider)
+                POST("/provider/add", authenticationHandler::associateProvider)
+            }
             //POST("/ticketing", ticketingHandler::submit)
             "/admin".nest {
                 POST("/talks", adminHandler::adminSaveTalk)
