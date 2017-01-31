@@ -103,7 +103,7 @@ task<GulpTask>("gulpBuild") {
     dependsOn(YarnInstallTask.NAME)
     inputs.dir("src/main/sass")
     inputs.dir("src/main/ts")
-    inputs.dir("src/main/iamges")
+    inputs.dir("src/main/images")
     inputs.dir("build/.tmp")
     outputs.dir("build/resources/static")
     args = listOf("default")
