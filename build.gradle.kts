@@ -84,6 +84,7 @@ dependencies {
 
     compile("io.projectreactor:reactor-core:$reactorVersion")
     compile("io.projectreactor.ipc:reactor-netty:0.6.0.RELEASE")
+    compile("io.projectreactor:reactor-kotlin:1.0.0.BUILD-SNAPSHOT")
     testCompile("io.projectreactor.addons:reactor-test:$reactorVersion")
 
     compile("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion")

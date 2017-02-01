@@ -9,8 +9,9 @@ import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.http.MediaType.TEXT_HTML
 import org.springframework.web.reactive.function.client.bodyToFlux
 import org.springframework.web.reactive.function.client.bodyToMono
-import reactor.core.publisher.Mono
+import org.springframework.web.reactive.function.client.exchange
 import reactor.test.StepVerifier
+import toMono
 
 
 class UserIntegrationTests : AbstractIntegrationTests() {
@@ -19,7 +20,7 @@ class UserIntegrationTests : AbstractIntegrationTests() {
     fun `Create a new user`() {
         StepVerifier.create(client.post().uri("http://localhost:$port/api/user/")
                 .accept(APPLICATION_JSON).contentType(APPLICATION_JSON)
-                .exchange(Mono.just(User("brian", "Brian", "Clozel", "bc@gm.com")), User::class.java)
+                .exchange(User("brian", "Brian", "Clozel", "bc@gm.com").toMono())
                 .flatMap { it.bodyToMono<User>()} )
                 .consumeNextWith { assertEquals("brian", it.login) }
                 .verifyComplete()
