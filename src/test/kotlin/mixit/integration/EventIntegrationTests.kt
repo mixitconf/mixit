@@ -14,9 +14,14 @@ class EventIntegrationTests : AbstractIntegrationTests() {
 
     @Test
     fun `Find MiXiT 2016 event`() {
-        StepVerifier.create(client.get().uri("http://localhost:$port/api/event/mixit16")
-                .accept(APPLICATION_JSON).exchange()
-                .then { r -> r.bodyToMono<Event>() })
+        val event = client
+                .get()
+                .uri("/api/event/mixit16")
+                .accept(APPLICATION_JSON)
+                .exchange()
+                .then { r -> r.bodyToMono<Event>() }
+
+        StepVerifier.create(event)
                 .consumeNextWith {
                     assertEquals(2016, it.year)
                     assertFalse(it.current)
@@ -26,9 +31,14 @@ class EventIntegrationTests : AbstractIntegrationTests() {
 
     @Test
     fun `Find all events`() {
-        StepVerifier.create(client.get().uri("http://localhost:$port/api/event/")
-                .accept(APPLICATION_JSON).exchange()
-                .flatMap { it.bodyToFlux<Event>() })
+        val events = client
+                .get()
+                .uri("/api/event/")
+                .accept(APPLICATION_JSON)
+                .exchange()
+                .flatMap { it.bodyToFlux<Event>() }
+
+        StepVerifier.create(events)
                 .consumeNextWith { assertEquals(2012, it.year) }
                 .consumeNextWith { assertEquals(2013, it.year) }
                 .consumeNextWith { assertEquals(2014, it.year) }

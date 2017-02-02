@@ -12,9 +12,14 @@ class SessionIntegrationTests : AbstractIntegrationTests() {
 
     @Test
     fun `Find Dan North session`() {
-        StepVerifier.create(client.get().uri("http://localhost:$port/api/session/2421")
-                .accept(APPLICATION_JSON).exchange()
-                .flatMap { r -> r.bodyToFlux<Session>() })
+        val session = client
+                .get()
+                .uri("/api/session/2421")
+                .accept(APPLICATION_JSON)
+                .exchange()
+                .flatMap { r -> r.bodyToFlux<Session>() }
+
+        StepVerifier.create(session)
                 .consumeNextWith {
                     assertEquals("Selling BDD to the Business", it.title)
                     assertEquals("NORTH", it.speakers.iterator().next().lastname)
@@ -24,9 +29,14 @@ class SessionIntegrationTests : AbstractIntegrationTests() {
 
     @Test
     fun `Find MiXiT 2012 sessions`() {
-        StepVerifier.create(client.get().uri("http://localhost:$port/api/mixit12/session/")
-                .accept(APPLICATION_JSON).exchange()
-                .flatMap { it.bodyToFlux<Session>() })
+        val sessions = client
+                .get()
+                .uri("/api/mixit12/session/")
+                .accept(APPLICATION_JSON)
+                .exchange()
+                .flatMap { it.bodyToFlux<Session>() }
+
+        StepVerifier.create(sessions)
                 .expectNextCount(27)
                 .verifyComplete()
 
