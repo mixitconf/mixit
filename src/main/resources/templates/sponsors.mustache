@@ -1,0 +1,23 @@
+{{> header}}
+
+<div class="row">
+  <div class="column text-center">
+
+    <h2>{{#i18n}}sponsors.gold{{/i18n}}</h2>
+    <ul class="menu simple">
+    {{#sponsorsGold}}
+      <li><a href="/sponsor/{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}" ><img src="/images/{{sponsor.logoUrl}}" /></a></li>
+    {{/sponsorsGold}}
+    </ul>
+
+    <h2>{{#i18n}}sponsors.gold{{/i18n}}</h2>
+    <ul class="menu simple">
+    {{#sponsorsSilver}}
+      <li><a href="/sponsor/{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}" ><img src="/images/{{sponsor.logoUrl}}" /></a></li>
+    {{/sponsorsSilver}}
+    </ul>
+
+  </div>
+</div>
+
+{{> footer}}

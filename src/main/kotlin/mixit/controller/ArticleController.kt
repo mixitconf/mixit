@@ -21,12 +21,12 @@ class ArticleController(val repository: ArticleRepository) : RouterFunction<Serv
 
     override fun route(req: ServerRequest) = route(req) {
         accept(TEXT_HTML).apply {
-            GET("/article/") { findAllView(req) }
-            GET("/article/{id}") { findOneView(req) }
+            GET("/blog/") { findAllView(req) }
+            GET("/blog/{id}") { findOneView(req) }
         }
         accept(APPLICATION_JSON).apply {
-            GET("/api/article/") { findAll() }
-            GET("/api/article/{id}") { findOne(req) }
+            GET("/api/blog/") { findAll() }
+            GET("/api/blog/{id}") { findOne(req) }
         }
     }
 
