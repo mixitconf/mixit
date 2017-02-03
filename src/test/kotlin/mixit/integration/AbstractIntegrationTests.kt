@@ -19,7 +19,7 @@ abstract class AbstractIntegrationTests {
 
     @Before
     fun setup() {
-        client = WebClient.builder("http://localhost:$port").build()
+        client = WebClient.create("http://localhost:$port")
     }
 
 }
