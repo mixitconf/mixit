@@ -112,18 +112,4 @@ class UserIntegrationTests : AbstractIntegrationTests() {
                 .verifyComplete()
     }
 
-    @Test
-    fun `Find Joel SPOLSKY on users HTML page`() {
-        val page = client
-                .get()
-                .uri("/user/")
-                .accept(TEXT_HTML)
-                .exchange()
-                .then { r -> r.bodyToMono<String>() }
-
-        StepVerifier.create(page)
-                .consumeNextWith { assertTrue(it.contains("Joel SPOLSKY")) }
-                .verifyComplete()
-    }
-
 }
