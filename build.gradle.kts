@@ -77,6 +77,7 @@ dependencies {
         exclude(module= "spring-boot-starter-tomcat")
         exclude(module= "hibernate-validator")
     }
+    compile("org.springframework.boot:spring-boot-devtools")
     testCompile("org.springframework.boot:spring-boot-starter-test")
 
     compile("com.samskivert:jmustache:1.13")

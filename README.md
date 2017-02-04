@@ -31,6 +31,7 @@ The technologies used are:
 Prerequisite:
  - [Install MongoDB](https://www.mongodb.com/download-center) and run `mongod`
  - [Install Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+ - [Install Gulp](http://gulpjs.com/) for development mode 
  - Depending on your platform, you may have to install libpng (On mac with `brew install libpng` for example)
 
 To import the project in IDEA:
@@ -38,12 +39,13 @@ To import the project in IDEA:
  - Make sure you have at least IntelliJ IDEA 2016.3 and IDEA Kotlin plugin 1.1.0-beta-17+
  - Import it in IDEA as a Gradle project
  - Right click on the project -> Open module settings -> Modules -> mixit -> Kotlin and make sure Kotlin 1.1 language level and that Java 1.8 bytecode options are selected
- - Right click on `Application.kt` -> Run mixit.ApplicationKt
+ - Right click on `Application.kt` -> Run or Debug `mixit.ApplicationKt`
 
-To run the application:
-```
-./gradlew bootRun
-```
+To run the application in development mode:
+ - Run `./gradlew build` 
+ - Run `gulp watch`
+ - In IDEA, right click on `Application.kt` -> Run or Debug `mixit.Applicationkt`
+ - Static resources will be processed automatically, template modification will require building the project (cmd + F9 on Mac)
 
 To package and run the application from the executable JAR:
 ```
