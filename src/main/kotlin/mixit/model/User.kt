@@ -8,14 +8,14 @@ data class User(
         @Id val login: String,
         val firstname: String,
         val lastname: String,
-        val email: String,
-        val company: String? = null,
-        val shortDescription: String? = null,
-        val longDescription: String? = null,
-        val logoUrl: String? = null,
+        var email: String,
+        var company: String? = null,
+        var shortDescription: String? = null,
+        var longDescription: String? = null,
+        var logoUrl: String? = null,
         val events: List<String> = emptyList(),
         val role: Role = Role.ATTENDEE,
-        val links: List<Link> = emptyList()
+        var links: List<Link> = emptyList()
 )
 
 enum class Role {
