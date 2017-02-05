@@ -144,17 +144,19 @@
     <br>
     <div class="row medium-unstack align-spaced">
       <div class="columns medium-3">
-        <p class="lead">{{#i18n}}home.spirit.cityhall.title{{/i18n}}</p>
+          <strong>{{#i18n}}home.spirit.cityhall.title{{/i18n}}</strong>
         <p>{{#i18n}}home.spirit.cityhall.description{{/i18n}}</p>
       </div>
       <div class="columns medium-3">
         <p><strong>{{#i18n}}home.spirit.pancakes.title{{/i18n}}</strong></p>
         <p>{{#i18n}}home.spirit.pancakes.description{{/i18n}}</p>
+      </div>
+      <div class="columns medium-3">
         <p><strong>{{#i18n}}home.spirit.lunch.title{{/i18n}}</strong></p>
         <p>{{#i18n}}home.spirit.lunch.description{{/i18n}}</p>
       </div>
       <div class="columns medium-3">
-        <p class="lead">{{#i18n}}home.spirit.orga.title{{/i18n}}</p>
+          <strong>{{#i18n}}home.spirit.orga.title{{/i18n}}</strong>
         <p>{{#i18n}}home.spirit.orga.description{{/i18n}}</p>
       </div>
     </div>
@@ -169,7 +171,7 @@
     <p><strong>{{#i18n}}sponsors.gold{{/i18n}}</strong></p>
     <ul class="menu simple">
     {{#sponsors-gold}}
-      <li><a href="/sponsors/{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}" ><img src="/images/{{sponsor.logoUrl}}" class="mxt-img--sponsors-gold mxt-img--grayscale"/></a></li>
+      <li><a href="/sponsors/{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}" ><img src="/images/{{sponsor.logoUrl}}" class="mxt-img--sponsors-home-gold mxt-img--grayscale"/></a></li>
     {{/sponsors-gold}}
     </ul>
 
@@ -178,7 +180,7 @@
     <p><strong>{{#i18n}}sponsors.silver{{/i18n}}</strong></p>
     <ul class="menu simple">
     {{#sponsors-silver}}
-      <li><a href="/sponsors/{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}" ><img src="/images/{{sponsor.logoUrl}}" class="mxt-img--sponsors-silver mxt-img--grayscale"/></a></li>
+      <li><a href="/sponsors/{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}" ><img src="/images/{{sponsor.logoUrl}}" class="mxt-img--sponsors-home-silver mxt-img--grayscale"/></a></li>
     {{/sponsors-silver}}
     </ul>
 
@@ -187,7 +189,7 @@
     <p><strong>{{#i18n}}sponsors.hosting{{/i18n}}</strong></p>
     <ul class="menu simple">
     {{#sponsors-hosting}}
-      <li><a href="/sponsors/{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}" ><img src="/images/{{sponsor.logoUrl}}" class="mxt-img--sponsors mxt-img--grayscale"/></a></li>
+      <li><a href="/sponsors/{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}" ><img src="/images/{{sponsor.logoUrl}}" class="mxt-img--sponsors-home mxt-img--grayscale"/></a></li>
     {{/sponsors-hosting}}
     </ul>
 

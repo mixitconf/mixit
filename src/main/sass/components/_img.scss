@@ -3,6 +3,24 @@
 	margin-bottom: 1em;
 }
 
+.mxt-img--sponsors-home {
+	max-height: 10em;
+	width: 10em;
+	margin-bottom: 1em;
+}
+
+.mxt-img--sponsors-home-gold {
+	@extend .mxt-img--sponsors-home;
+	max-height: 10em;
+	width: 10em;
+}
+
+.mxt-img--sponsors-home-silver {
+	@extend .mxt-img--sponsors-home;
+	max-height: 8em;
+	width: 6em;
+}
+
 .mxt-img--sponsors {
 	max-height: 14em;
 	width: 14em;
