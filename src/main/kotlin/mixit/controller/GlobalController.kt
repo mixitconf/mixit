@@ -1,7 +1,6 @@
 package mixit.controller
 
-import mixit.model.SponsorshipLevel.GOLD
-import mixit.model.SponsorshipLevel.SILVER
+import mixit.model.SponsorshipLevel.*
 import mixit.repository.EventRepository
 import org.springframework.core.io.ClassPathResource
 import org.springframework.http.MediaType.TEXT_HTML
@@ -25,8 +24,9 @@ class GlobalController(val repository: EventRepository) : RouterFunction<ServerR
                 val sponsors = events.sponsors.groupBy { it.level }
                 
                 ok().render("home", mapOf(
-                        Pair("sponsorsGold", sponsors.get(GOLD)),
-                        Pair("sponsorsSilver", sponsors.get(SILVER))
+                        Pair("sponsors-gold", sponsors[GOLD]),
+                        Pair("sponsors-silver", sponsors[SILVER]),
+                        Pair("sponsors-hosting", sponsors[HOSTING])
                 ))
             }
 }

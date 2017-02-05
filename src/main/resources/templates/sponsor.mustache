@@ -1,0 +1,20 @@
+{{> header}}
+
+<div class="row align-middle">
+  <div class="columns large-8 large-centered">
+      <h2>
+          <img src="/images/{{sponsor.logoUrl}}" />
+      </h2>
+
+     <p>
+        {{#sponsor.links}}
+                <a href="{{url}}">{{name}}</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        {{/sponsor.links}}
+    </p>
+
+     <p>{{description}}</p>
+
+  </div>
+</div>
+
+{{> footer}}

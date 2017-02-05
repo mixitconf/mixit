@@ -4,13 +4,32 @@
 }
 
 .mxt-img--sponsors {
-	width: auto;
 	height: 4em;
+	width: auto;
 	margin-bottom: 1em;
+}
+
+.mxt-img--sponsors-gold {
+	@extend .mxt-img--sponsors;
+	height: 6em;
+}
+
+.mxt-img--sponsors-silver {
+	@extend .mxt-img--sponsors;
+	height: 3em;
+}
+
+.mxt-img--grayscale {
 	filter: grayscale(100%);
 	&:hover {
-		filter: grayscale(70%);		
+		filter: grayscale(70%);
 	}
+}
+
+.mxt-img--sponsors-full {
+	width: auto;
+	height: 6em;
+	margin-bottom: 1em;
 }
 
 .mxt-img--speakers {

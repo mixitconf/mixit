@@ -35,6 +35,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.reactive.result.view.AbstractUrlBasedView;
 import org.springframework.web.reactive.result.view.View;
 import org.springframework.web.server.ServerWebExchange;
+import org.springframework.web.util.UriUtils;
 
 /**
  * Spring MVC {@link View} using the Mustache template engine.
@@ -77,7 +78,7 @@ public class MustacheView extends AbstractUrlBasedView {
                     out.write(getApplicationContext().getMessage(key, null, locale));
                 });
                 model.put("urlEncode", (Mustache.Lambda) (frag, out) -> {
-                    out.write(URLEncoder.encode(frag.execute(), "UTF-8"));
+                    out.write(UriUtils.encodePathSegment(frag.execute(), "UTF-8"));
                 });
                 try {
                     this.template.execute(model, writer);

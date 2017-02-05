@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.data.dto.MemberDataDto
 import mixit.model.*
+import mixit.model.SponsorshipLevel.*
 import mixit.support.*
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.domain.Sort
@@ -38,16 +39,21 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
                 shortDescription = "Ippon is a specialized global consulting on Digital, BigData and Cloud solutions. We serve prestigious customers " +
                         "worldwide with teams of high-level consultants and a deep engagement for quality, performance and time-to-market. " +
                         "\nLocations : France, USA, Australia and morocco \n Key figures : M$25+, 250+ consultants, since 2002 ",
+                longDescription = "Ippon is a specialized global consulting on Digital, BigData and Cloud solutions. We serve prestigious customers " +
+                        "worldwide with teams of high-level consultants and a deep engagement for quality, performance and time-to-market. " +
+                        "\nLocations : France, USA, Australia and morocco \n Key figures : M$25+, 250+ consultants, since 2002 ",
                 links = listOf(Link("Site", "http://www.ippon.fr/"), Link("Blog", "http://blog.ippon.fr/")))).block()
 
         userRepository.save(User("Hopwork", "", "", "contact@hopwork.fr", "Hopwork",
                 logoUrl = "sponsor/logo-hopwork.svg",
                 shortDescription = "Les meilleurs freelances. Disponibles maintenant. En toute sécurité.",
+                longDescription = "Les meilleurs freelances. Disponibles maintenant. En toute sécurité.",
                 links = listOf(Link("Site", "http://www.hopwork.fr/")))).block()
 
         userRepository.save(User("LDLC", "", "", "c.bar@ldlc.com", "LDLC",
                 logoUrl = "sponsor/logo-ldlc.png",
                 shortDescription = "Vente de matériel informatique en ligne, particuliers ou pro.",
+                longDescription = "Vente de matériel informatique en ligne, particuliers ou pro.",
                 links = listOf(Link("Site", "http://www.groupe-ldlc.com/"), Link("Site public", "http://www.ldlc.com/"),
                         Link("Site pro", "http://www.ldlc-pro.com/"), Link("Linkedin", "https://www.linkedin.com/company/ldlc"),
                         Link("Twitter", " https://twitter.com/groupeldlc"), Link("Facebook", " https://www.facebook.com/LDLC.com/")))).block()
@@ -61,7 +67,7 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
                 "au long de vos projets."
         sword.links = listOf(Link("Site", "http://www.sword-services.com/fr/"))
         sword.logoUrl = "sponsor/logo-sword.svg"
-        userRepository.save(sword)
+        userRepository.save(sword).block()
 
         var worldline = userRepository.findOne("WorldlineFrance").block()
         worldline.longDescription = "Worldline [Euronext : WLN] est le leader européen et un acteur mondial de référence dans le secteur des paiements et des services " +
@@ -76,20 +82,22 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
                 Link("Site", "fr.worldline.com"), Link("Blog", "fr.worldline.com/blog"), Link("Twitter", "fr.worldline.com"),
                 Link("YouTube", "fr.worldline.com/youtube"), Link("Facebook", "fr.worldline.com/facebook"))
         worldline.logoUrl = "sponsor/logo-worldline.svg"
+        userRepository.save(worldline).block()
 
         return listOf(
-                EventSponsoring(SponsorshipLevel.GOLD, userRepository.findOne("Zenika Lyon").block(), LocalDate.of(2016, 11, 4)),
-                EventSponsoring(SponsorshipLevel.GOLD, sword, LocalDate.of(2016, 12, 7)),
-                EventSponsoring(SponsorshipLevel.GOLD, userRepository.findOne("Ippon").block(), LocalDate.of(2016, 12, 14)),
-                EventSponsoring(SponsorshipLevel.GOLD, userRepository.findOne("Sopra Steria").block(), LocalDate.of(2016, 12, 23)),
-                EventSponsoring(SponsorshipLevel.GOLD, userRepository.findOne("annick.challancin@esker.fr").block(), LocalDate.of(2017, 1, 10)),
-                EventSponsoring(SponsorshipLevel.GOLD, userRepository.findOne("LDLC").block(), LocalDate.of(2017, 1, 20)),
-                EventSponsoring(SponsorshipLevel.LANYARD, worldline, LocalDate.of(2016, 10, 19)),
-                EventSponsoring(SponsorshipLevel.PARTY, userRepository.findOne("onlylyon").block(), LocalDate.of(2017, 1, 1)),
-                EventSponsoring(SponsorshipLevel.PARTY_DRINKS, userRepository.findOne("Hopwork").block(), LocalDate.of(2016, 11, 2)),
-                EventSponsoring(SponsorshipLevel.SILVER, userRepository.findOne("SerliFr").block(), LocalDate.of(2016, 12, 13)),
-                EventSponsoring(SponsorshipLevel.SILVER, userRepository.findOne("SII_rhonealpes").block(), LocalDate.of(2016, 12, 20)),
-                EventSponsoring(SponsorshipLevel.SILVER, userRepository.findOne("woonoz").block(), LocalDate.of(2017, 1, 20))
+                EventSponsoring(GOLD, userRepository.findOne("Zenika Lyon").block(), LocalDate.of(2016, 11, 4)),
+                EventSponsoring(GOLD, sword, LocalDate.of(2016, 12, 7)),
+                EventSponsoring(GOLD, userRepository.findOne("Ippon").block(), LocalDate.of(2016, 12, 14)),
+                EventSponsoring(GOLD, userRepository.findOne("Sopra Steria").block(), LocalDate.of(2016, 12, 23)),
+                EventSponsoring(GOLD, userRepository.findOne("annick.challancin@esker.fr").block(), LocalDate.of(2017, 1, 10)),
+                EventSponsoring(GOLD, userRepository.findOne("LDLC").block(), LocalDate.of(2017, 1, 20)),
+                EventSponsoring(LANYARD, worldline, LocalDate.of(2016, 10, 19)),
+                EventSponsoring(PARTY, userRepository.findOne("onlylyon").block(), LocalDate.of(2017, 1, 1)),
+                EventSponsoring(PARTY_DRINKS, userRepository.findOne("Hopwork").block(), LocalDate.of(2016, 11, 2)),
+                EventSponsoring(SILVER, userRepository.findOne("SerliFr").block(), LocalDate.of(2016, 12, 13)),
+                EventSponsoring(SILVER, userRepository.findOne("SII_rhonealpes").block(), LocalDate.of(2016, 12, 20)),
+                EventSponsoring(SILVER, userRepository.findOne("woonoz").block(), LocalDate.of(2017, 1, 20)),
+                EventSponsoring(HOSTING, userRepository.findOne("pivotal").block(), LocalDate.of(2017, 1, 20))
         )
     }
 

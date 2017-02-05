@@ -1,37 +1,38 @@
 package mixit.controller
 
-import mixit.model.*
+import mixit.model.SponsorshipLevel.*
 import mixit.repository.EventRepository
-import mixit.repository.SessionRepository
-import org.commonmark.parser.Parser
-import org.commonmark.renderer.html.HtmlRenderer
+import mixit.repository.UserRepository
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 
-import org.springframework.web.reactive.function.fromPublisher
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.RequestPredicates.*
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 
 
 @Controller
-class SponsorController(val repository: EventRepository) : RouterFunction<ServerResponse> {
+class SponsorController(val eventRepository: EventRepository, val userRepository: UserRepository) : RouterFunction<ServerResponse> {
 
     override fun route(req: ServerRequest) = route(req) {
         accept(TEXT_HTML).apply {
             GET("/sponsors/") { findAllView() }
+            GET("/sponsors/{id}") { findOneView(req) }
         }
     }
 
-    fun findAllView() = repository.findOne("mixit17")
-            .then { events ->
-                val sponsors = events.sponsors.groupBy { it.level }
+    fun findAllView() = eventRepository.findOne("mixit17").then { events ->
+        val sponsors = events.sponsors.groupBy { it.level }
 
-                ok().render("sponsors", mapOf(
-                        Pair("sponsorsGold", sponsors.get(SponsorshipLevel.GOLD)),
-                        Pair("sponsorsSilver", sponsors.get(SponsorshipLevel.SILVER))
-                ))
-            }
+        ok().render("sponsors", mapOf(
+            Pair("sponsors-gold", sponsors[GOLD]),
+            Pair("sponsors-silver", sponsors[SILVER]),
+            Pair("sponsors-hosting", sponsors[HOSTING])
+        ))
+    }
 
+    fun findOneView(req: ServerRequest) = userRepository.findOne(req.pathVariable("id")).then { s ->
+        ok().render("sponsor", mapOf(Pair("sponsor", s), Pair("description", if (s.longDescription.isEmpty()) s.shortDescription else s.longDescription)))
+    }
 
 }
