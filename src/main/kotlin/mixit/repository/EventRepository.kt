@@ -79,10 +79,15 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
                 "collaborateurs dans le monde entier et génère un chiffre d’affaires estimé à  environ 1,5 milliard d’euros sur une base annuelle. Worldline est une entreprise " +
                 "du Groupe Atos. worldline.com"
         worldline.links = listOf(
-                Link("Site", "fr.worldline.com"), Link("Blog", "fr.worldline.com/blog"), Link("Twitter", "fr.worldline.com"),
+                Link("Site", "http://fr.worldline.com"), Link("Blog", "http://fr.worldline.com/blog"), Link("Twitter", "https://twitter.com/WorldlineGlobal"),
                 Link("YouTube", "fr.worldline.com/youtube"), Link("Facebook", "fr.worldline.com/facebook"))
         worldline.logoUrl = "sponsor/logo-worldline.svg"
         userRepository.save(worldline).block()
+
+        var pivotal = userRepository.findOne("pivotal").block()
+        pivotal.links = listOf(Link("Site", "http://run.pivotal.io/"), Link("Pivotal", "http://pivotal.io/"))
+        userRepository.save(pivotal).block()
+
 
         return listOf(
                 EventSponsoring(GOLD, userRepository.findOne("Zenika Lyon").block(), LocalDate.of(2016, 11, 4)),
