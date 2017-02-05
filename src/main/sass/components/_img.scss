@@ -4,19 +4,21 @@
 }
 
 .mxt-img--sponsors {
-	height: 4em;
-	width: auto;
+	max-height: 14em;
+	width: 14em;
 	margin-bottom: 1em;
 }
 
 .mxt-img--sponsors-gold {
 	@extend .mxt-img--sponsors;
-	height: 6em;
+	max-height: 14em;
+	width: 14em;
 }
 
 .mxt-img--sponsors-silver {
 	@extend .mxt-img--sponsors;
-	height: 3em;
+	max-height: 8em;
+	width: 6em;
 }
 
 .mxt-img--grayscale {
@@ -26,10 +28,10 @@
 	}
 }
 
-.mxt-img--sponsors-full {
-	width: auto;
-	height: 6em;
-	margin-bottom: 1em;
+.mxt-img--sponsor {
+	max-height: 20em;
+	width: 20em;
+	margin-top: 2em;
 }
 
 .mxt-img--speakers {

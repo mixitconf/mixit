@@ -58,7 +58,7 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
                         Link("Site pro", "http://www.ldlc-pro.com/"), Link("Linkedin", "https://www.linkedin.com/company/ldlc"),
                         Link("Twitter", " https://twitter.com/groupeldlc"), Link("Facebook", " https://www.facebook.com/LDLC.com/")))).block()
 
-        var sword = userRepository.findOne("Sword").block()
+        val sword = userRepository.findOne("Sword").block()
         sword.longDescription = "SWORD, c’est 1 500 spécialistes en IT/Digital & Software actifs sur les 5 continents, qui vous accompagnent dans l’évolution " +
                 "de votre organisation à l’ère du numérique. Depuis 2000, SWORD a acquis une solide réputation dans l’édition de logiciels et dans la conduite de " +
                 "projets IT & business complexes en tant que leader de la transformation technologique et digitale.\n\nAvec SWORD c’est la garantie d’un engagement " +
@@ -69,7 +69,7 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
         sword.logoUrl = "sponsor/logo-sword.svg"
         userRepository.save(sword).block()
 
-        var worldline = userRepository.findOne("WorldlineFrance").block()
+        val worldline = userRepository.findOne("WorldlineFrance").block()
         worldline.longDescription = "Worldline [Euronext : WLN] est le leader européen et un acteur mondial de référence dans le secteur des paiements et des services " +
                 "transactionnels. Worldline met en place des services nouvelle génération, permettant à ses clients d’offrir au consommateur final des solutions " +
                 "innovantes et fluides. \n\nActeur clef du B2B2C, riche de plus de 40 ans d’expérience, Worldline sert et contribue au succès de toutes les entreprises " +
@@ -84,9 +84,17 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
         worldline.logoUrl = "sponsor/logo-worldline.svg"
         userRepository.save(worldline).block()
 
-        var pivotal = userRepository.findOne("pivotal").block()
+        val pivotal = userRepository.findOne("pivotal").block()
         pivotal.links = listOf(Link("Site", "http://run.pivotal.io/"), Link("Pivotal", "http://pivotal.io/"))
         userRepository.save(pivotal).block()
+
+        val zenika = userRepository.findOne("Zenika Lyon").block()
+        zenika.logoUrl = "sponsor/logo-zenika.png"
+        userRepository.save(zenika).block()
+
+        val sopraSteria = userRepository.findOne("Sopra Steria").block()
+        sopraSteria.logoUrl = "sponsor/logo-sopra-steria.png"
+        userRepository.save(sopraSteria).block()
 
 
         return listOf(
