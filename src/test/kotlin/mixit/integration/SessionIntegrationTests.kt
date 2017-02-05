@@ -22,7 +22,7 @@ class SessionIntegrationTests : AbstractIntegrationTests() {
         StepVerifier.create(session)
                 .consumeNextWith {
                     assertEquals("Selling BDD to the Business", it.title)
-                    assertEquals("NORTH", it.speakers.iterator().next().lastname)
+                    assertEquals("North", it.speakers.iterator().next().lastname)
                 }
                 .verifyComplete()
     }

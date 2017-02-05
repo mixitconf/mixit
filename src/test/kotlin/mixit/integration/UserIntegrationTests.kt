@@ -32,7 +32,7 @@ class UserIntegrationTests : AbstractIntegrationTests() {
     }
 
     @Test
-    fun `Find Dan NORTH`() {
+    fun `Find Dan North`() {
         val speaker = client
                 .get()
                 .uri("/api/speaker/tastapod")
@@ -42,7 +42,7 @@ class UserIntegrationTests : AbstractIntegrationTests() {
 
         StepVerifier.create(speaker)
                 .consumeNextWith {
-                    assertEquals("NORTH", it.lastname)
+                    assertEquals("North", it.lastname)
                     assertEquals("Dan", it.firstname)
                     assertTrue(it.role == Role.SPEAKER)
                 }
@@ -73,7 +73,7 @@ class UserIntegrationTests : AbstractIntegrationTests() {
 
         StepVerifier.create(staffMember)
                 .consumeNextWith {
-                    assertEquals("EHRET", it.lastname)
+                    assertEquals("Ehret", it.lastname)
                     assertEquals("Guillaume", it.firstname)
                     assertTrue(it.role == Role.STAFF)
                 }
@@ -105,7 +105,7 @@ class UserIntegrationTests : AbstractIntegrationTests() {
 
         StepVerifier.create(sponsor)
                 .consumeNextWith {
-                    assertEquals("JACOB", it.lastname)
+                    assertEquals("Jacob", it.lastname)
                     assertEquals("Hervé", it.firstname)
                     assertTrue(it.role == Role.SPONSOR)
                 }

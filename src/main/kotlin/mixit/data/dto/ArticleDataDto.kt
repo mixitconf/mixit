@@ -20,11 +20,15 @@ class ArticleDataDto(
                 Pair(Language.FRENCH, titre),
                 Pair(Language.ENGLISH, title)
         )
-        val content: Map<Language, String> = mapOf(
-                Pair(Language.FRENCH, replaceImagePath(resume + "\n" + contenu)),
-                Pair(Language.ENGLISH, replaceImagePath(headline + "\n" + content))
+        val headline: Map<Language, String> = mapOf(
+                Pair(Language.FRENCH, replaceImagePath(resume)),
+                Pair(Language.ENGLISH, replaceImagePath(headline))
         )
-        return Article(author.toUser(), postedAt, title, content, "$id")
+        val content: Map<Language, String> = mapOf(
+                Pair(Language.FRENCH, replaceImagePath(contenu)),
+                Pair(Language.ENGLISH, replaceImagePath(content))
+        )
+        return Article(author.toUser(), postedAt, title, headline, content, "$id")
     }
 
     fun replaceImagePath(content: String) : String{

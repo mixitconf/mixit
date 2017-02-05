@@ -9,6 +9,7 @@ data class Article (
         val author: User,
         val addedAt: LocalDateTime = LocalDateTime.now(),
         val title: Map<Language, String> = emptyMap(),
+        val headline: Map<Language, String> = emptyMap(),
         val content: Map<Language, String> = emptyMap(),
         @Id val id: String? = null
 )

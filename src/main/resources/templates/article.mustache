@@ -1,7 +1,19 @@
 {{> header}}
 
-<h2>{{article.title}}</h2>
+<div class="row align-middle">
+  <div class="columns large-8 large-centered">
 
-<p>{{article.htmlContent}}</p>
+    <h2>{{article.title}}</h2>
+
+     <p>
+         {{article.headline}}
+         <br/>
+         {{article.htmlContent}}
+     </p>
+
+      <p>{{article.author.firstname}} {{article.author.lastname}} - {{article.addedAt}}</p>
+
+  </div>
+</div>
 
 {{> footer}}

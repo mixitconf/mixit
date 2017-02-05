@@ -11,13 +11,16 @@ import org.springframework.web.reactive.function.fromPublisher
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.RequestPredicates.accept
 import org.springframework.web.reactive.function.server.ServerResponse.ok
-import java.time.LocalDateTime
 import org.commonmark.renderer.html.HtmlRenderer
 import org.springframework.stereotype.Controller
+import java.time.format.DateTimeFormatter
 
 
 @Controller
 class ArticleController(val repository: ArticleRepository) : RouterFunction<ServerResponse> {
+
+    private val frenchDateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
+    private val englishDateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
 
     override fun route(req: ServerRequest) = route(req) {
         accept(TEXT_HTML).apply {
@@ -53,23 +56,27 @@ class ArticleController(val repository: ArticleRepository) : RouterFunction<Serv
     private fun toArticleDto(article: Article, language: Language) = ArticleDto(
             article.id,
             article.author,
-            article.addedAt,
+            if (language == Language.ENGLISH) article.addedAt.format(englishDateFormatter) else article.addedAt.format(frenchDateFormatter),
             if (article.title != null) article.title[language]!! else "",
+            if (article.headline != null) article.headline[language]!! else "",
             if (article.content != null) article.content[language]!! else "")
 
     class ArticleDto(
         val id: String?,
         val author: User,
-        val addedAt: LocalDateTime,
+        val addedAt: String,
         val title: String,
+        val headline: String,
         val content: String
     ) {
+        private val parser = Parser.builder().build()
+        private val renderer = HtmlRenderer.builder().build()
+
+        val htmlHeadline: String
+            get() = renderer.render(parser.parse(headline))
+
         val htmlContent: String
-            get() {
-                val parser = Parser.builder().build()
-                val document = parser.parse(content)
-                val renderer = HtmlRenderer.builder().build()
-                return renderer.render(document)
-        }
+            get() = renderer.render(parser.parse(content))
+
     }
 }

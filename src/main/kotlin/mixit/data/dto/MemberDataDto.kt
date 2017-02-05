@@ -25,7 +25,7 @@ data class MemberDataDto(
         return User(
                 login ?: "user$idMember",
                 firstname ?: "",
-                lastname ?: "",
+                lastname?.toLowerCase()?.capitalize() ?: "",
                 email ?: "",
                 company ?: "",
                 shortDescription ?: "",
