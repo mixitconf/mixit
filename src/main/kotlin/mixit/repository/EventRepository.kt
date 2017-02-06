@@ -91,6 +91,15 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
         worldline.logoUrl = "sponsor/logo-worldline.svg"
         userRepository.save(worldline).block()
 
+        val enedis = userRepository.findOne("Enedis").block()
+        enedis.longDescription = "Enedis est une entreprise de service public, gestionnaire du réseau de distribution d'électricité qui développe, exploite, modernise le réseau " +
+                "électrique et gère les données associées. Indépendante des fournisseurs d'énergie chargés de la vente et de la gestion du contrat d'électricité, Enedis réalise " +
+                "les raccordements, le dépannage, le relevé des compteurs et toutes interventions techniques."
+        enedis.links = listOf(
+                Link("Site", "www.enedis.fr"))
+        enedis.logoUrl = "sponsor/logo-enedis.svg"
+        userRepository.save(enedis).block()
+
         val pivotal = userRepository.findOne("pivotal").block()
         pivotal.links = listOf(Link("Site", "http://run.pivotal.io/"), Link("Pivotal", "http://pivotal.io/"))
         userRepository.save(pivotal).block()
@@ -107,20 +116,25 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
         onlylyon.logoUrl = "sponsor/logo-onlylyon.png"
         userRepository.save(onlylyon).block()
 
+        val sii = userRepository.findOne("SII_rhonealpes").block()
+        sii.logoUrl = "sponsor/logo-sii.svg"
+        userRepository.save(sii).block()
+
         return listOf(
                 EventSponsoring(GOLD, userRepository.findOne("Zenika Lyon").block(), LocalDate.of(2016, 11, 4)),
                 EventSponsoring(GOLD, sword, LocalDate.of(2016, 12, 7)),
                 EventSponsoring(GOLD, userRepository.findOne("Ippon").block(), LocalDate.of(2016, 12, 14)),
-                EventSponsoring(GOLD, onlylyon, LocalDate.of(2016, 12, 23)),
+                EventSponsoring(GOLD, sopraSteria, LocalDate.of(2016, 12, 23)),
                 EventSponsoring(GOLD, userRepository.findOne("annick.challancin@esker.fr").block(), LocalDate.of(2017, 1, 10)),
                 EventSponsoring(GOLD, userRepository.findOne("LDLC").block(), LocalDate.of(2017, 1, 20)),
                 EventSponsoring(LANYARD, worldline, LocalDate.of(2016, 10, 19)),
-                EventSponsoring(PARTY, userRepository.findOne("onlylyon").block(), LocalDate.of(2017, 1, 1)),
+                EventSponsoring(PARTY, onlylyon, LocalDate.of(2017, 1, 1)),
                 EventSponsoring(PARTY, userRepository.findOne("Hopwork").block(), LocalDate.of(2016, 11, 2)),
                 EventSponsoring(SILVER, userRepository.findOne("SerliFr").block(), LocalDate.of(2016, 12, 13)),
-                EventSponsoring(SILVER, userRepository.findOne("SII_rhonealpes").block(), LocalDate.of(2016, 12, 20)),
+                EventSponsoring(SILVER, sii, LocalDate.of(2016, 12, 20)),
                 EventSponsoring(SILVER, userRepository.findOne("woonoz").block(), LocalDate.of(2017, 1, 20)),
                 EventSponsoring(SILVER, userRepository.findOne("Algolia").block(), LocalDate.of(2017, 1, 23)),
+                EventSponsoring(SILVER, enedis, LocalDate.of(2017, 1, 24)),
                 EventSponsoring(HOSTING, userRepository.findOne("pivotal").block(), LocalDate.of(2017, 1, 20))
         )
     }
