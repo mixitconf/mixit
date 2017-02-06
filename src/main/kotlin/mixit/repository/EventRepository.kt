@@ -103,17 +103,20 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
         sopraSteria.logoUrl = "sponsor/logo-sopra-steria.png"
         userRepository.save(sopraSteria).block()
 
+        val onlylyon = userRepository.findOne("onlylyon").block()
+        onlylyon.logoUrl = "sponsor/logo-onlylyon.png"
+        userRepository.save(onlylyon).block()
 
         return listOf(
                 EventSponsoring(GOLD, userRepository.findOne("Zenika Lyon").block(), LocalDate.of(2016, 11, 4)),
                 EventSponsoring(GOLD, sword, LocalDate.of(2016, 12, 7)),
                 EventSponsoring(GOLD, userRepository.findOne("Ippon").block(), LocalDate.of(2016, 12, 14)),
-                EventSponsoring(GOLD, userRepository.findOne("Sopra Steria").block(), LocalDate.of(2016, 12, 23)),
+                EventSponsoring(GOLD, onlylyon, LocalDate.of(2016, 12, 23)),
                 EventSponsoring(GOLD, userRepository.findOne("annick.challancin@esker.fr").block(), LocalDate.of(2017, 1, 10)),
                 EventSponsoring(GOLD, userRepository.findOne("LDLC").block(), LocalDate.of(2017, 1, 20)),
                 EventSponsoring(LANYARD, worldline, LocalDate.of(2016, 10, 19)),
                 EventSponsoring(PARTY, userRepository.findOne("onlylyon").block(), LocalDate.of(2017, 1, 1)),
-                EventSponsoring(PARTY_DRINKS, userRepository.findOne("Hopwork").block(), LocalDate.of(2016, 11, 2)),
+                EventSponsoring(PARTY, userRepository.findOne("Hopwork").block(), LocalDate.of(2016, 11, 2)),
                 EventSponsoring(SILVER, userRepository.findOne("SerliFr").block(), LocalDate.of(2016, 12, 13)),
                 EventSponsoring(SILVER, userRepository.findOne("SII_rhonealpes").block(), LocalDate.of(2016, 12, 20)),
                 EventSponsoring(SILVER, userRepository.findOne("woonoz").block(), LocalDate.of(2017, 1, 20)),

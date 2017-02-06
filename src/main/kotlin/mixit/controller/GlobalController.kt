@@ -26,7 +26,9 @@ class GlobalController(val repository: EventRepository) : RouterFunction<ServerR
                 ok().render("home", mapOf(
                         Pair("sponsors-gold", sponsors[GOLD]),
                         Pair("sponsors-silver", sponsors[SILVER]),
-                        Pair("sponsors-hosting", sponsors[HOSTING])
+                        Pair("sponsors-hosting", sponsors[HOSTING]),
+                        Pair("sponsors-lanyard", sponsors[LANYARD]),
+                        Pair("sponsors-party", sponsors[PARTY])
                 ))
             }
 }

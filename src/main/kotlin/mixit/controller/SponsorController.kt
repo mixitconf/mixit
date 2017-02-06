@@ -27,7 +27,9 @@ class SponsorController(val eventRepository: EventRepository, val userRepository
         ok().render("sponsors", mapOf(
             Pair("sponsors-gold", sponsors[GOLD]),
             Pair("sponsors-silver", sponsors[SILVER]),
-            Pair("sponsors-hosting", sponsors[HOSTING])
+            Pair("sponsors-hosting", sponsors[HOSTING]),
+            Pair("sponsors-lanyard", sponsors[LANYARD]),
+            Pair("sponsors-party", sponsors[PARTY])
         ))
     }
 

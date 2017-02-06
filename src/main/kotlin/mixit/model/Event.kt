@@ -28,7 +28,6 @@ enum class SponsorshipLevel {
     BRONZE,
     LANYARD,
     PARTY,
-    PARTY_DRINKS,
     BREAKFAST,
     LUNCH,
     HOSTING,
