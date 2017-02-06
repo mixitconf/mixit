@@ -56,7 +56,14 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
                 longDescription = "Vente de matériel informatique en ligne, particuliers ou pro.",
                 links = listOf(Link("Site", "http://www.groupe-ldlc.com/"), Link("Site public", "http://www.ldlc.com/"),
                         Link("Site pro", "http://www.ldlc-pro.com/"), Link("Linkedin", "https://www.linkedin.com/company/ldlc"),
-                        Link("Twitter", " https://twitter.com/groupeldlc"), Link("Facebook", " https://www.facebook.com/LDLC.com/")))).block()
+                        Link("Twitter", "https://twitter.com/groupeldlc"), Link("Facebook", "https://www.facebook.com/LDLC.com/")))).block()
+
+        userRepository.save(User("Algolia", "", "", "hey@algolia.com?subject=MiXit", "Algolia",
+                logoUrl = "sponsor/logo-algolia.svg",
+                shortDescription = "Founded in 2012, Algolia is a privately held company created by veterans in the fields of algorithms, search engines and text mining.",
+                longDescription = "We help users deliver an intuitive search-as-you-type experience on their websites and mobile apps. Basically, we make finding things easier. We are a customer-focused, dev-centric company dedicated to changing the way people think about search.",
+                links = listOf(Link("Site", "https://www.algolia.com/"), Link("Google+", "https://plus.google.com/+Algolia"), Link("Linkedin", "https://www.linkedin.com/company/algolia"),
+                        Link("Twitter", "https://twitter.com/Algolia"), Link("Facebook", "https://www.facebook.com/algolia")))).block()
 
         val sword = userRepository.findOne("Sword").block()
         sword.longDescription = "SWORD, c’est 1 500 spécialistes en IT/Digital & Software actifs sur les 5 continents, qui vous accompagnent dans l’évolution " +
@@ -110,6 +117,7 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
                 EventSponsoring(SILVER, userRepository.findOne("SerliFr").block(), LocalDate.of(2016, 12, 13)),
                 EventSponsoring(SILVER, userRepository.findOne("SII_rhonealpes").block(), LocalDate.of(2016, 12, 20)),
                 EventSponsoring(SILVER, userRepository.findOne("woonoz").block(), LocalDate.of(2017, 1, 20)),
+                EventSponsoring(SILVER, userRepository.findOne("Algolia").block(), LocalDate.of(2017, 1, 23)),
                 EventSponsoring(HOSTING, userRepository.findOne("pivotal").block(), LocalDate.of(2017, 1, 20))
         )
     }
