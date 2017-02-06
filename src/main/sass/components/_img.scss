@@ -2,6 +2,8 @@
 
 .mxt-img--speakers {
 	margin-bottom: 1em;
+	width: 100%;
+	display: block;
 	filter: grayscale(60%);
 	&:hover {
 		filter: grayscale(30%);
