@@ -65,6 +65,14 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
                 links = listOf(Link("Site", "https://www.algolia.com/"), Link("Google+", "https://plus.google.com/+Algolia"), Link("Linkedin", "https://www.linkedin.com/company/algolia"),
                         Link("Twitter", "https://twitter.com/Algolia"), Link("Facebook", "https://www.facebook.com/algolia")))).block()
 
+        userRepository.save(User("Enedis", "", "", "contact@enedis.fr", "Enedis",
+                logoUrl="sponsor/logo-enedis.svg",
+                shortDescription = "Enedis est une entreprise de service public, gestionnaire du réseau de distribution d'électricité qui développe, exploite, modernise le réseau " +
+                        "électrique et gère les données associées.",
+                longDescription = "Indépendante des fournisseurs d'énergie chargés de la vente et de la gestion du contrat d'électricité, Enedis réalise " +
+                        "les raccordements, le dépannage, le relevé des compteurs et toutes interventions techniques.",
+                links = listOf(Link("Site", "www.enedis.fr")))).block()
+
         val sword = userRepository.findOne("Sword").block()
         sword.longDescription = "SWORD, c’est 1 500 spécialistes en IT/Digital & Software actifs sur les 5 continents, qui vous accompagnent dans l’évolution " +
                 "de votre organisation à l’ère du numérique. Depuis 2000, SWORD a acquis une solide réputation dans l’édition de logiciels et dans la conduite de " +
@@ -90,15 +98,6 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
                 Link("YouTube", "fr.worldline.com/youtube"), Link("Facebook", "fr.worldline.com/facebook"))
         worldline.logoUrl = "sponsor/logo-worldline.svg"
         userRepository.save(worldline).block()
-
-        val enedis = userRepository.findOne("Enedis").block()
-        enedis.longDescription = "Enedis est une entreprise de service public, gestionnaire du réseau de distribution d'électricité qui développe, exploite, modernise le réseau " +
-                "électrique et gère les données associées. Indépendante des fournisseurs d'énergie chargés de la vente et de la gestion du contrat d'électricité, Enedis réalise " +
-                "les raccordements, le dépannage, le relevé des compteurs et toutes interventions techniques."
-        enedis.links = listOf(
-                Link("Site", "www.enedis.fr"))
-        enedis.logoUrl = "sponsor/logo-enedis.svg"
-        userRepository.save(enedis).block()
 
         val pivotal = userRepository.findOne("pivotal").block()
         pivotal.links = listOf(Link("Site", "http://run.pivotal.io/"), Link("Pivotal", "http://pivotal.io/"))
