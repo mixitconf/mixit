@@ -71,7 +71,7 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
                         "électrique et gère les données associées.",
                 longDescription = "Indépendante des fournisseurs d'énergie chargés de la vente et de la gestion du contrat d'électricité, Enedis réalise " +
                         "les raccordements, le dépannage, le relevé des compteurs et toutes interventions techniques.",
-                links = listOf(Link("Site", "www.enedis.fr")))).block()
+                links = listOf(Link("Site", "http://www.enedis.fr")))).block()
 
         val sword = userRepository.findOne("Sword").block()
         sword.longDescription = "SWORD, c’est 1 500 spécialistes en IT/Digital & Software actifs sur les 5 continents, qui vous accompagnent dans l’évolution " +
@@ -95,7 +95,7 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
                 "du Groupe Atos. worldline.com"
         worldline.links = listOf(
                 Link("Site", "http://fr.worldline.com"), Link("Blog", "http://fr.worldline.com/blog"), Link("Twitter", "https://twitter.com/WorldlineGlobal"),
-                Link("YouTube", "fr.worldline.com/youtube"), Link("Facebook", "fr.worldline.com/facebook"))
+                Link("YouTube", "http://fr.worldline.com/youtube"), Link("Facebook", "http://fr.worldline.com/facebook"))
         worldline.logoUrl = "sponsor/logo-worldline.svg"
         userRepository.save(worldline).block()
 
