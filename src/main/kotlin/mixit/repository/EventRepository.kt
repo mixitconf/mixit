@@ -134,7 +134,7 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
                 EventSponsoring(SILVER, sii, LocalDate.of(2016, 12, 20)),
                 EventSponsoring(SILVER, userRepository.findOne("woonoz").block(), LocalDate.of(2017, 1, 20)),
                 EventSponsoring(SILVER, userRepository.findOne("Algolia").block(), LocalDate.of(2017, 1, 23)),
-                EventSponsoring(SILVER, enedis, LocalDate.of(2017, 1, 24)),
+                EventSponsoring(SILVER, userRepository.findOne("Enedis").block(), LocalDate.of(2017, 1, 24)),
                 EventSponsoring(HOSTING, userRepository.findOne("pivotal").block(), LocalDate.of(2017, 1, 20))
         )
     }
