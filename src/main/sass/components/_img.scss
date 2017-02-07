@@ -38,6 +38,15 @@
     }
 }
 
+// TEAM PAGE
+.mxt-img--team {
+  max-height: 5em;
+  max-width: 10em;
+  @include breakpoint(small only) {
+    margin-bottom: 1em;
+  }
+}
+
 // GENERAL
 .mxt-img--grayscale {
 	filter: grayscale(100%);
