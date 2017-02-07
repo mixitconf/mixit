@@ -13,6 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration
 import org.springframework.context.annotation.Bean
+import org.springframework.context.support.ReloadableResourceBundleMessageSource
 import org.springframework.core.env.Environment
 import org.springframework.data.mongodb.ReactiveMongoDatabaseFactory
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate

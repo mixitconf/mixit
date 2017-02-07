@@ -44,8 +44,9 @@ To import the project in IDEA:
 To run the application in development mode:
  - Run `./gradlew build` 
  - Run `gulp watch`
+ - Install [live reload extension](http://livereload.com/extensions/) in your browser
  - In IDEA, right click on `Application.kt` -> Run or Debug `mixit.Applicationkt`
- - Static resources will be processed automatically, template modification will require building the project (cmd + F9 on Mac)
+ - Static resources will be processed automatically, as well template modification, only modifying `messages_en.propeties` and `messages_fr.propeties` will require building the project (cmd + F9 on Mac)
 
 To package and run the application from the executable JAR:
 ```
