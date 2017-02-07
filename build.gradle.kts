@@ -103,7 +103,7 @@ task<GulpTask>("gulpBuild") {
     inputs.dir("src/main/ts")
     inputs.dir("src/main/images")
     inputs.dir("build/.tmp")
-    outputs.dir("build/resources/static")
+    outputs.dir("build/resources/main/static")
     args = listOf("default")
 }
 
