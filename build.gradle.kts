@@ -63,11 +63,7 @@ configure<NoArgExtension> {
 }
 
 val kotlinVersion = extra["kotlinVersion"] as String
-val springVersion = "5.0.0.BUILD-SNAPSHOT"
-val springBootVersion = extra["springBootVersion"] as String
 val springDataVersion = "2.0.0.BUILD-SNAPSHOT"
-val jacksonVersion = "2.8.5"
-val reactorVersion = "3.0.4.RELEASE"
 
 dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
@@ -83,14 +79,14 @@ dependencies {
     compile("com.samskivert:jmustache:1.13")
     compile("com.atlassian.commonmark:commonmark:0.8.0")
 
-    compile("io.projectreactor:reactor-core:$reactorVersion")
-    compile("io.projectreactor.ipc:reactor-netty:0.6.0.RELEASE")
+    compile("io.projectreactor:reactor-core")
+    compile("io.projectreactor.ipc:reactor-netty")
     compile("io.projectreactor:reactor-kotlin:1.0.0.BUILD-SNAPSHOT")
-    testCompile("io.projectreactor.addons:reactor-test:$reactorVersion")
+    testCompile("io.projectreactor.addons:reactor-test")
 
-    compile("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion")
-    compile("com.fasterxml.jackson.module:jackson-module-kotlin:$jacksonVersion")
-    compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$jacksonVersion")
+    compile("com.fasterxml.jackson.core:jackson-databind")
+    compile("com.fasterxml.jackson.module:jackson-module-kotlin")
+    compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
 
     compile("commons-logging:commons-logging:1.2")
     compile("org.slf4j:slf4j-api:1.7.21")

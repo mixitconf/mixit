@@ -14,6 +14,7 @@ import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfigurat
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration
 import org.springframework.context.annotation.Bean
 import org.springframework.core.env.Environment
+import org.springframework.data.mongodb.ReactiveMongoDatabaseFactory
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.SimpleReactiveMongoDatabaseFactory
 import org.springframework.web.reactive.result.view.mustache.MustacheResourceTemplateLoader
@@ -33,9 +34,13 @@ class Application {
     }
 
     @Bean
-    fun template(env: Environment) = ReactiveMongoTemplate(SimpleReactiveMongoDatabaseFactory(
-                ConnectionString(env.getProperty("mongo.uri"))
-    ))
+    fun databaseFactory(env: Environment) = SimpleReactiveMongoDatabaseFactory(ConnectionString(env.getProperty("mongo.uri")))
+
+    @Bean
+    fun template(databaseFactory: ReactiveMongoDatabaseFactory) = ReactiveMongoTemplate(databaseFactory)
+
+    @Bean
+    fun filter() = MixitWebFilter()
 
     @Bean
     fun dataInitializer(userRepository: UserRepository, eventRepository: EventRepository, sessionRepository: SessionRepository,
@@ -45,9 +50,6 @@ class Application {
         sessionRepository.initData()
         articleRepository.initData()
     }
-
-    @Bean
-    fun filter() = MixitWebFilter()
 
 }
 
