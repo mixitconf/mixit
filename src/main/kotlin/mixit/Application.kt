@@ -10,15 +10,16 @@ import mixit.support.MixitWebFilter
 import mixit.support.run
 import org.springframework.boot.ApplicationRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration
+import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration
 import org.springframework.context.annotation.Bean
 import org.springframework.core.env.Environment
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.SimpleReactiveMongoDatabaseFactory
-import org.springframework.web.reactive.function.server.HandlerStrategies
 import org.springframework.web.reactive.result.view.mustache.MustacheResourceTemplateLoader
 import org.springframework.web.reactive.result.view.mustache.MustacheViewResolver
 
-@SpringBootApplication
+@SpringBootApplication(exclude = arrayOf(MongoAutoConfiguration::class, MongoDataAutoConfiguration::class))
 class Application {
 
     @Bean
@@ -43,7 +44,6 @@ class Application {
         eventRepository.initData()
         sessionRepository.initData()
         articleRepository.initData()
-        HandlerStrategies.withDefaults()
     }
 
     @Bean
