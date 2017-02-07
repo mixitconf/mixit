@@ -22,7 +22,6 @@ class GlobalController(val repository: EventRepository) : RouterFunction<ServerR
     fun homeView() = repository.findOne("mixit17")
             .then { events ->
                 val sponsors = events.sponsors.groupBy { it.level }
-                
                 ok().render("home", mapOf(
                         Pair("sponsors-gold", sponsors[GOLD]),
                         Pair("sponsors-silver", sponsors[SILVER]),

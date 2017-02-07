@@ -1,6 +1,5 @@
 package mixit.controller
 
-import org.springframework.http.MediaType
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.fromServerSentEvents
@@ -18,7 +17,7 @@ class NewsController : RouterFunction<ServerResponse> {
         accept(TEXT_HTML).apply {
             GET("/news") { newsView() }
         }
-        accept(MediaType.TEXT_EVENT_STREAM).apply {
+        accept(TEXT_EVENT_STREAM).apply {
             GET("/news/sse") { newsSse() }
         }
     }
