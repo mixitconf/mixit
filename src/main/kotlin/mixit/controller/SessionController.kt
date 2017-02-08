@@ -20,8 +20,8 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
 
     override fun route(req: ServerRequest) = route(req) {
         accept(TEXT_HTML).apply {
-            GET("/session/") { findAllView() }
-            GET("/{year}/session/") { findByEventView(req) }
+            GET("/sessions/") { findAllView() }
+            GET("/{year}/sessions/") { findByEventView(req) }
             GET("/session/{id}") { findOneView(req) }
         }
         accept(APPLICATION_JSON).apply {
