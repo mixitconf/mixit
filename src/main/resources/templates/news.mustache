@@ -1,13 +1,6 @@
 {{> header}}
 
-<script src="https://code.jquery.com/jquery-3.1.1.slim.js"></script>
-
-<script type="application/javascript">
-    var eventSource = new EventSource("/news/sse");
-    eventSource.onmessage = function(e) {
-      $("#news").append("<li>" + e.data + "</li>")
-    }
-</script>
+<script src="/js/news.js"></script>
 
 News:
 <ul id="news">
