@@ -1,5 +1,4 @@
-import * as $ from 'jquery';
-window['jQuery'] = $;
+import $ from 'jquery';
 
 $(() => {
   var eventSource = new EventSource("/news/sse");
