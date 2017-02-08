@@ -39,6 +39,10 @@
 	padding-bottom: $header-margin-bottom;
 }
 
+a.mxt-title--article {
+    color: $black;
+    font-size: rem-calc(30);
+}
 
 // HEADER
 .mxt-header--date {

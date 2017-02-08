@@ -1,18 +1,24 @@
 {{> header}}
 
-<div class="row align-middle">
-  <div class="columns large-8 large-centered">
-    <h2>{{#i18n}}articles.title{{/i18n}}</h2>
-    {{#articles}}
-      <div class="callout">
-        <h4><a href="{{localePrefix}}/blog/{{id}}">{{title}}</a></h4><span></span>
-        <p>
-          {{htmlHeadline}}
-          <div class="clearfix"><a href="{{localePrefix}}/blog/{{id}}">{{#i18n}}articles.readmore{{/i18n}}</a><span class="float-right">{{author.firstname}}, {{#i18n}}articles.on{{/i18n}} {{addedAt}}.</span></div>
-        </p>
-      </div>
-    {{/articles}}
-  </div>
+<div class="mxt-wrapper--space"></div>
+
+<div class="row">
+    <div class="column large-8 large-offset-2">
+
+        <h1 class="text-center">{{#i18n}}articles.title{{/i18n}}</h1>
+        <hr />
+        <div class="callout">
+            {{#articles}}
+                <article>
+                    <h2><a href="{{localePrefix}}/blog/{{id}}" class="mxt-title--article">{{title}}</a></h2>
+                    <p class="subheader">{{#i18n}}articles.by{{/i18n}} {{author.firstname}}, {{#i18n}}articles.on{{/i18n}} {{addedAt}}</p>
+                    <p>{{htmlHeadline}}</p>
+                    <a href="{{localePrefix}}/blog/{{id}}" class="button third hollow align-center">{{#i18n}}articles.readmore{{/i18n}}</a>
+                </article>
+                <hr />
+            {{/articles}}
+        </div>
+    </div>
 </div>
 
 {{> footer}}

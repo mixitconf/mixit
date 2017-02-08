@@ -1,17 +1,16 @@
 {{> header}}
 
-<div class="row align-middle">
-  <div class="columns large-8 large-centered">
+<div class="mxt-wrapper--space"></div>
 
-    <h2>{{article.title}}</h2>
-
-     <p>
-         {{article.headline}}
-         <br/>
-         {{article.htmlContent}}
-     </p>
-
-      <p>{{article.author.firstname}}, {{#i18n}}articles.on{{/i18n}} {{article.addedAt}}.</p>
+<div class="row">
+    <div class="column large-8 large-offset-2">
+    <h1 class="text-center">{{article.title}}</h1>
+    <hr />
+    <p class="text-center"><strong>{{#i18n}}articles.by{{/i18n}} {{article.author.firstname}}, {{#i18n}}articles.on{{/i18n}} {{article.addedAt}}</strong></p>
+    <div class="callout">
+        <p class="lead">{{article.headline}}</p>
+        <p>{{article.htmlContent}}</p>
+    </div>
 
   </div>
 </div>
