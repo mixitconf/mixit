@@ -1,15 +1,14 @@
-import EventLoader from './event/event'
+//import EventLoader from './event'
 import * as $ from 'jquery';
 window['jQuery'] = $;
 import 'foundation-sites';
 
-let eventLoader = new EventLoader();
-
 class MixitApp{
     bootstrap(){
-        eventLoader.loadEvent('mixit16')
-            .then(response => response.json())
-            .then(event => console.log(event));
+        //let eventLoader = new EventLoader();
+        //eventLoader.loadEvent('mixit16')
+        //    .then(response => response.json())
+        //    .then(event => console.log(event));
     }
 }
 

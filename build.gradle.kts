@@ -108,3 +108,7 @@ task<GulpTask>("gulpBuild") {
 }
 
 tasks.getByName("processResources").dependsOn("gulpBuild")
+
+fun toto() {
+
+}
