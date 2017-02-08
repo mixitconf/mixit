@@ -104,14 +104,14 @@ gulp.task('ts', () => gulp
 );
 
 // Compile the type script files in javascript
-gulp.task('ts-to-js', ['ts'], () => gulp
-  .src(`${paths.tmp}/ts/app.js`)
-  .pipe(named())
-  .pipe(webpack())
-  .pipe($.sourcemaps.init())
-  .pipe($.uglify({preserveComments: 'none'}))
-  .pipe($.sourcemaps.write('.'))
-  .pipe(gulp.dest(`${ paths.dist.js}`))
+gulp.task('ts-to-js', ['ts'], () =>
+  gulp.src(`${paths.tmp}/ts/*.js`)
+      .pipe(named())
+      .pipe(webpack())
+      .pipe($.sourcemaps.init())
+      .pipe($.uglify({preserveComments: 'none'}))
+      .pipe($.sourcemaps.write('.'))
+      .pipe(gulp.dest(`${ paths.dist.js}`))
 );
 
 // Clean output directory
