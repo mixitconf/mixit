@@ -20,6 +20,7 @@ class SessionController(val repository: SessionRepository) : RouterFunction<Serv
     override fun route(req: ServerRequest) = route(req) {
         accept(TEXT_HTML).apply {
             GET("/session/") { findAllView() }
+            GET("/{event}/session/") { findByEventView(req) }
             GET("/session/{id}") { findOneView(req) }
         }
         accept(APPLICATION_JSON).apply {
@@ -29,6 +30,10 @@ class SessionController(val repository: SessionRepository) : RouterFunction<Serv
     }
 
     fun findAllView() = repository.findAll()
+            .collectList()
+            .then { session -> ok().render("sessions",  mapOf(Pair("sessions", session))) }
+
+    fun findByEventView(req: ServerRequest) = repository.findByEvent(req.pathVariable("event"))
             .collectList()
             .then { session -> ok().render("sessions",  mapOf(Pair("sessions", session))) }
 

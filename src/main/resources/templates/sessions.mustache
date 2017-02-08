@@ -1,9 +1,29 @@
 {{> header}}
 
-{{#sessions}}
-    <ul>
-        <li>{{event}} - <a href="{{localePrefix}}/session/{{id}}">{{title}}</a> (<a href="/api/session/{{id}}">API</a>)</li>
-    </ul>
-{{/sessions}}
+<div class="mxt-wrapper--space"></div>
+
+<div class="row">
+    <div class="column large-8 large-offset-2">
+
+        <h1 class="text-center">{{#i18n}}sessions.title{{/i18n}}</h1>
+        <hr />
+        <div class="callout">
+            {{#sessions}}
+                <article>
+                    <h2><a href="{{localePrefix}}/session/{{id}}" class="mxt-title--article">{{title}}</a></h2>
+                    <p class="subheader">{{event}} / #{{format}}</p>
+                    <p>{{summary}}</p>
+                    <p class="subheader">
+                        {{#speakers}}
+                            <a href="{{localePrefix}}/speaker/{{login}}">{{firstname}} {{lastname}}</a> /
+                        {{/speakers}}
+                    </p>
+                    <a href="{{localePrefix}}/session/{{id}}" class="button third hollow align-center">{{#i18n}}sessions.readmore{{/i18n}}</a>
+                </article>
+                <hr />
+            {{/sessions}}
+        </div>
+    </div>
+</div>
 
 {{> footer}}
