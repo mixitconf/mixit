@@ -31,7 +31,7 @@ class SessionIntegrationTests : AbstractIntegrationTests() {
     fun `Find MiXiT 2012 sessions`() {
         val sessions = client
                 .get()
-                .uri("/api/mixit12/session/")
+                .uri("/api/2012/session/")
                 .accept(APPLICATION_JSON)
                 .exchange()
                 .flatMap { it.bodyToFlux<Session>() }

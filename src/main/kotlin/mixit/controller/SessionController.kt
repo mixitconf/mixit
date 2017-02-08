@@ -26,7 +26,7 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
         }
         accept(APPLICATION_JSON).apply {
             GET("/api/session/{login}") { findOne(req) }
-            GET("/api/{yearlp serve}/session/") { findByEventId(req) }
+            GET("/api/{year}/session/") { findByEventId(req) }
         }
     }
 
