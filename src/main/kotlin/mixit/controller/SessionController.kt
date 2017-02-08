@@ -1,6 +1,7 @@
 package mixit.controller
 
 import mixit.model.*
+import mixit.repository.EventRepository
 import mixit.repository.SessionRepository
 import org.commonmark.parser.Parser
 import org.commonmark.renderer.html.HtmlRenderer
@@ -15,17 +16,17 @@ import java.time.LocalDateTime
 
 
 @Controller
-class SessionController(val repository: SessionRepository) : RouterFunction<ServerResponse> {
+class SessionController(val repository: SessionRepository, val eventRepository: EventRepository) : RouterFunction<ServerResponse> {
 
     override fun route(req: ServerRequest) = route(req) {
         accept(TEXT_HTML).apply {
             GET("/session/") { findAllView() }
-            GET("/{event}/session/") { findByEventView(req) }
+            GET("/{year}/session/") { findByEventView(req) }
             GET("/session/{id}") { findOneView(req) }
         }
         accept(APPLICATION_JSON).apply {
             GET("/api/session/{login}") { findOne(req) }
-            GET("/api/{event}/session/") { findByEventId(req) }
+            GET("/api/{yearlp serve}/session/") { findByEventId(req) }
         }
     }
 
@@ -33,7 +34,7 @@ class SessionController(val repository: SessionRepository) : RouterFunction<Serv
             .collectList()
             .then { session -> ok().render("sessions",  mapOf(Pair("sessions", session))) }
 
-    fun findByEventView(req: ServerRequest) = repository.findByEvent(req.pathVariable("event"))
+    fun findByEventView(req: ServerRequest) = repository.findByEvent(eventRepository.yearToId(req.pathVariable("year")))
             .collectList()
             .then { session -> ok().render("sessions",  mapOf(Pair("sessions", session))) }
 
@@ -45,7 +46,7 @@ class SessionController(val repository: SessionRepository) : RouterFunction<Serv
             fromPublisher(repository.findOne(req.pathVariable("login"))))
 
     fun findByEventId(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
-            fromPublisher(repository.findByEvent(req.pathVariable("event"))))
+            fromPublisher(repository.findByEvent(eventRepository.yearToId(req.pathVariable("year")))))
 
 
     class SessionDto(

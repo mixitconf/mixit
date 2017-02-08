@@ -33,6 +33,8 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
         events.forEach { event -> save(event).block() }
     }
 
+    fun yearToId(year:String): String = "mixit${year.substring(2)}"
+
     fun createSponsorFor2017(): List<EventSponsoring>{
         userRepository.save(User("Ippon", "", "", "marketing@ippon.fr", "Ippon",
                 logoUrl = "sponsor/logo-ippon.svg",
