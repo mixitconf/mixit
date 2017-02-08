@@ -91,4 +91,8 @@ small {
 	@include breakpoint(medium) {
 		font-size: 50%;
 	}
+
+	.no-caps {
+		text-transform: none;
+	}
 }
