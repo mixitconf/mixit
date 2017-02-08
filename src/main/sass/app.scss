@@ -60,6 +60,16 @@
 @import 'components/wrappers.scss';
 
 
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 strong {
 	font-weight: $global-weight-bold;
 }

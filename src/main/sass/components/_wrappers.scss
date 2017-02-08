@@ -25,15 +25,19 @@
 	padding-top: 2em;
 }
 
+
+// STICKY FOOTER
+.mxt-wrapper--page {
+  flex: 1;
+}
+
 .mxt-wrapper--footer {
 	background-color: $secondary-color;
-	padding: 1em;
-	margin-top: 2em;
+	padding: 0.5em;
+	height: 4em;
 }
 
-.mxt-wrapper--categories {
-
-}
+//
 
 .mxt-wrapper--space {
     height: 2em;
