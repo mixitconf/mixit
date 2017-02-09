@@ -4,6 +4,7 @@ import mixit.model.Article
 import mixit.model.Language
 import mixit.model.User
 import mixit.repository.ArticleRepository
+import org.commonmark.ext.autolink.AutolinkExtension
 import org.commonmark.parser.Parser
 import org.springframework.http.HttpHeaders
 import org.springframework.http.MediaType.*
@@ -69,7 +70,7 @@ class ArticleController(val repository: ArticleRepository) : RouterFunction<Serv
         val headline: String,
         val content: String
     ) {
-        private val parser = Parser.builder().build()
+        private val parser = Parser.builder().extensions(listOf(AutolinkExtension.create())).build()
         private val renderer = HtmlRenderer.builder().build()
 
         val htmlHeadline: String
