@@ -33,7 +33,7 @@ class UserController(val repository: UserRepository) : RouterFunction<ServerResp
             GET("/api/staff/") { findStaff() }
             GET("/api/staff/{login}") { findOneStaff(req) }
             GET("/api/speaker/") { findSpeakers() }
-            GET("/api/speaker/{login}") { findOneSpeakerView(req) }
+            GET("/api/speaker/{login}") { findOneSpeaker(req) }
             GET("/api/sponsor/") { findSponsors() }
             GET("/api/sponsor/{login}") { findOneSponsor(req) }
             GET("/api/{event}/speaker/") { findSpeakersByEvent(req) }
@@ -86,7 +86,7 @@ class UserController(val repository: UserRepository) : RouterFunction<ServerResp
     fun findSpeakersByEvent(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
             fromPublisher(repository.findByRoleAndEvent(Role.SPEAKER, req.pathVariable("event"))))
 
-    fun findOneSpeakerView(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
+    fun findOneSpeaker(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
                 fromPublisher(repository.findOneByRole(req.pathVariable("login"), Role.SPEAKER)))
 
     fun findSponsors() = ok().contentType(APPLICATION_JSON_UTF8).body(
