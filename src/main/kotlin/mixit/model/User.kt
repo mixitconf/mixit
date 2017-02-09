@@ -15,7 +15,8 @@ data class User(
         var logoUrl: String? = null,
         val events: List<String> = emptyList(),
         val role: Role = Role.ATTENDEE,
-        var links: List<Link> = emptyList()
+        var links: List<Link> = emptyList(),
+        val legacyId: Long? = null
 )
 
 enum class Role {

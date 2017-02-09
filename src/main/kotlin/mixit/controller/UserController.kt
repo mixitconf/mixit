@@ -22,7 +22,9 @@ class UserController(val repository: UserRepository) : RouterFunction<ServerResp
         accept(TEXT_HTML).apply {
             (GET("/user/") or GET("/users/")) { findAllView() }
             GET("/user/{login}") { findOneView(req) }
-            GET("/sponsor/{login}") { findOneSponsorView(req) }
+            GET("/speaker/{login}") { findOneView(req) }
+            GET("/sponsor/{login}") { findOneView(req) }
+            GET("/staff/{login}") { findOneView(req) }
         }
         accept(APPLICATION_JSON).apply {
             GET("/api/user/") { findAll() }
@@ -31,19 +33,36 @@ class UserController(val repository: UserRepository) : RouterFunction<ServerResp
             GET("/api/staff/") { findStaff() }
             GET("/api/staff/{login}") { findOneStaff(req) }
             GET("/api/speaker/") { findSpeakers() }
-            GET("/api/speaker/{login}") { findOneSpeaker(req) }
+            GET("/api/speaker/{login}") { findOneSpeakerView(req) }
             GET("/api/sponsor/") { findSponsors() }
             GET("/api/sponsor/{login}") { findOneSponsor(req) }
             GET("/api/{event}/speaker/") { findSpeakersByEvent(req) }
         }
     }
 
-    fun findOneView(req: ServerRequest) = repository.findOne(req.pathVariable("login"))
-            .then { u -> ok().render("user", mapOf(Pair("user", u))) }
+    fun findOneView(req: ServerRequest) =
+            try{
+                val idLegacy = req.pathVariable("login").toLong()
+                repository.findByLegacyId(idLegacy)
+                        .then { u -> ok().render("user", mapOf(Pair("user", u))) }
+
+            }
+            catch (e:NumberFormatException){
+                repository.findOne(URLDecoder.decode(req.pathVariable("login"), "UTF-8"))
+                        .then { u -> ok().render("user", mapOf(Pair("user", u))) }
+            }
 
     fun findOneSponsorView(req: ServerRequest) =
-        repository.findOne(URLDecoder.decode(req.pathVariable("login"), "UTF-8"))
-                .then { u -> ok().render("sponsor", mapOf(Pair("sponsor", u))) }
+        try{
+            val idLegacy = req.pathVariable("login").toLong()
+            repository.findByLegacyId(idLegacy)
+                    .then { u -> ok().render("sponsor", mapOf(Pair("sponsor", u))) }
+
+        }
+        catch (e:NumberFormatException){
+            repository.findOne(URLDecoder.decode(req.pathVariable("login"), "UTF-8"))
+                    .then { u -> ok().render("sponsor", mapOf(Pair("sponsor", u))) }
+        }
 
     fun findAllView() = repository.findAll()
             .collectList()
@@ -67,7 +86,7 @@ class UserController(val repository: UserRepository) : RouterFunction<ServerResp
     fun findSpeakersByEvent(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
             fromPublisher(repository.findByRoleAndEvent(Role.SPEAKER, req.pathVariable("event"))))
 
-    fun findOneSpeaker(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
+    fun findOneSpeakerView(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
                 fromPublisher(repository.findOneByRole(req.pathVariable("login"), Role.SPEAKER)))
 
     fun findSponsors() = ok().contentType(APPLICATION_JSON_UTF8).body(

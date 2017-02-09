@@ -42,6 +42,17 @@ class UserRepository(val template: ReactiveMongoTemplate) {
             sponsors.map { it.toUser(role = Role.SPONSOR) }
                     .forEach { save(it).block() }
         }
+
+        val userResource = ClassPathResource("data/users_mixit.json")
+        val users: List<MemberDataDto> = objectMapper.readValue(userResource.inputStream)
+
+        users.map { it.toUser(role = Role.ATTENDEE) }
+                .forEach {
+                    if (findByLegacyId(it.legacyId!!).block() == null && findOne(it.login).block() == null) {
+                        save(it).block()
+                    }
+                }
+
     }
 
     fun findByYear(year: Int): Flux<User> {
@@ -67,6 +78,11 @@ class UserRepository(val template: ReactiveMongoTemplate) {
     fun findAll(): Flux<User> = template.findAll(User::class)
 
     fun findOne(id: String) = template.findById(id, User::class)
+
+    fun findByLegacyId(id: Long): Mono<User> {
+        val query = Query().addCriteria(Criteria.where("legacyId").`is`(id))
+        return template.findOne(query)
+    }
 
     fun deleteAll() = template.remove(Query(), User::class)
 

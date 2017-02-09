@@ -33,7 +33,8 @@ data class MemberDataDto(
                 logo?.replace("sponsors/", "/images/sponsor/") ?: "",
                 events,
                 role,
-                links = userLinks.map { link -> Link(link.key, link.value) }
+                links = userLinks.map { link -> Link(link.key, link.value) },
+                legacyId = idMember
         )
     }
 

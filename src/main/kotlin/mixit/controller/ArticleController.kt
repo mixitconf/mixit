@@ -27,6 +27,9 @@ class ArticleController(val repository: ArticleRepository) : RouterFunction<Serv
         accept(TEXT_HTML).apply {
             GET("/blog/") { findAllView(req) }
             GET("/blog/{id}") { findOneView(req) }
+            // Old routes used by the previous version of our website
+            GET("/articles/") { findAllView(req) }
+            GET("/article/{id}") { findOneView(req) }
         }
         accept(APPLICATION_JSON).apply {
             GET("/api/blog/") { findAll() }
