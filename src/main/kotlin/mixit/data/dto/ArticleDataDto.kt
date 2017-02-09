@@ -21,21 +21,13 @@ class ArticleDataDto(
                 Pair(Language.ENGLISH, title)
         )
         val headline: Map<Language, String> = mapOf(
-                Pair(Language.FRENCH, replaceImagePath(resume)),
-                Pair(Language.ENGLISH, replaceImagePath(headline))
+                Pair(Language.FRENCH, resume),
+                Pair(Language.ENGLISH, headline)
         )
         val content: Map<Language, String> = mapOf(
-                Pair(Language.FRENCH, replaceImagePath(contenu)),
-                Pair(Language.ENGLISH, replaceImagePath(content))
+                Pair(Language.FRENCH, contenu),
+                Pair(Language.ENGLISH, content)
         )
         return Article(author.toUser(), postedAt, title, headline, content, "$id")
-    }
-
-    fun replaceImagePath(content: String) : String{
-        return content
-                .replace("https://www.mix-it.fr/img/articles/", "/images/article/")
-                .replace("http://www.mix-it.fr/public/images/articles/", "/images/article/")
-                .replace("http://www.mix-it.fr/public/images/logo", "/images/sponsor/logo")
-                .replace("https://www.mix-it.fr/img/sponsors/", "/images/sponsor/")
     }
 }
