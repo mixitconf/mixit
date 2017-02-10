@@ -4,6 +4,7 @@ import mixit.model.Article
 import mixit.model.Language
 import mixit.model.User
 import mixit.repository.ArticleRepository
+import org.commonmark.ext.autolink.AutolinkExtension
 import org.commonmark.parser.Parser
 import org.springframework.http.HttpHeaders
 import org.springframework.http.MediaType.*
@@ -26,6 +27,9 @@ class ArticleController(val repository: ArticleRepository) : RouterFunction<Serv
         accept(TEXT_HTML).apply {
             GET("/blog/") { findAllView(req) }
             GET("/blog/{id}") { findOneView(req) }
+            // Old routes used by the previous version of our website
+            GET("/articles/") { findAllView(req) }
+            GET("/article/{id}") { findOneView(req) }
         }
         accept(APPLICATION_JSON).apply {
             GET("/api/blog/") { findAll() }
@@ -69,7 +73,7 @@ class ArticleController(val repository: ArticleRepository) : RouterFunction<Serv
         val headline: String,
         val content: String
     ) {
-        private val parser = Parser.builder().build()
+        private val parser = Parser.builder().extensions(listOf(AutolinkExtension.create())).build()
         private val renderer = HtmlRenderer.builder().build()
 
         val htmlHeadline: String

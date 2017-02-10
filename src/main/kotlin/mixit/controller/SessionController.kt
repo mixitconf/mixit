@@ -3,6 +3,7 @@ package mixit.controller
 import mixit.model.*
 import mixit.repository.EventRepository
 import mixit.repository.SessionRepository
+import org.commonmark.ext.autolink.AutolinkExtension
 import org.commonmark.parser.Parser
 import org.commonmark.renderer.html.HtmlRenderer
 import org.springframework.http.MediaType.*
@@ -20,13 +21,13 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
 
     override fun route(req: ServerRequest) = route(req) {
         accept(TEXT_HTML).apply {
-            GET("/session/") { findAllView() }
-            GET("/{year}/session/") { findByEventView(req) }
+            GET("/sessions/") { findAllView() }
+            GET("/{year}/sessions/") { findByEventView(req) }
             GET("/session/{id}") { findOneView(req) }
         }
         accept(APPLICATION_JSON).apply {
             GET("/api/session/{login}") { findOne(req) }
-            GET("/api/{yearlp serve}/session/") { findByEventId(req) }
+            GET("/api/{year}/session/") { findByEventId(req) }
         }
     }
 
@@ -69,7 +70,7 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
                 session.description, session.room, session.start, session.end)
 
         fun toHtml(markdown: String): String {
-            val parser = Parser.builder().build()
+            val parser = Parser.builder().extensions(listOf(AutolinkExtension.create())).build()
             val document = parser.parse(markdown)
             val renderer = HtmlRenderer.builder().build()
             return renderer.render(document)

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "Mix-IT",
+  "name": "MiXiT",
   "launch_path": "/",
   "start_url": "/"
   "icons": {
@@ -18,12 +18,12 @@
   },
   "locales": {
     "fr": {
-      "name": "Mix-IT",
-      "description": "Mix-IT, c'est 2 jours de conférences et d'atelier pour découvrir de nouvelles idées, développer, pratiquer, réseauter..."
+      "name": "MiXiT",
+      "description": "MiXiT, c'est 2 jours de conférences et d'atelier pour découvrir de nouvelles idées, développer, pratiquer, réseauter..."
     },
     "en": {
-       "name": "Mix-IT",
-       "description": "Mix-IT, it's 2 intense days of conferences to discover new ideas, games to learn, development or creative workshops"
+       "name": "MiXiT",
+       "description": "MiXiT, it's 2 intense days of conferences to discover new ideas, games to learn, development or creative workshops"
     }
   }
 }

@@ -78,6 +78,7 @@ dependencies {
 
     compile("com.samskivert:jmustache:1.13")
     compile("com.atlassian.commonmark:commonmark:0.8.0")
+    compile("com.atlassian.commonmark:commonmark-ext-autolink:0.8.0")
 
     compile("io.projectreactor:reactor-core")
     compile("io.projectreactor.ipc:reactor-netty")
@@ -108,7 +109,3 @@ task<GulpTask>("gulpBuild") {
 }
 
 tasks.getByName("processResources").dependsOn("gulpBuild")
-
-fun toto() {
-
-}
