@@ -5,10 +5,9 @@ import com.moowork.gradle.node.yarn.YarnInstallTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
-    val kotlinVersion = "1.1.0-beta-38"
+    var kotlinVersion: String by extra
+    kotlinVersion = "1.1.0-beta-38"
     val springBootVersion = "2.0.0.BUILD-SNAPSHOT"
-    extra["kotlinVersion"] = kotlinVersion
-    extra["springBootVersion"] = springBootVersion
 
     repositories {
         mavenCentral()
@@ -28,7 +27,6 @@ buildscript {
 }
 
 apply {
-    plugin("idea")
     plugin("kotlin")
     plugin("kotlin-noarg")
     plugin("kotlin-spring")
@@ -62,16 +60,16 @@ configure<NoArgExtension> {
     annotation("org.springframework.data.mongodb.core.mapping.Document")
 }
 
-val kotlinVersion = extra["kotlinVersion"] as String
+val kotlinVersion: String by extra
 val springDataVersion = "2.0.0.BUILD-SNAPSHOT"
 
 dependencies {
-    compile("org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion")
+    compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlinVersion")
     compile("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
 
     compile("org.springframework.boot.experimental:spring-boot-starter-web-reactive:0.1.0.BUILD-SNAPSHOT") {
-        exclude(module= "spring-boot-starter-tomcat")
-        exclude(module= "hibernate-validator")
+        exclude("spring-boot-starter-tomcat")
+        exclude("hibernate-validator")
     }
     compile("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
     compile("org.springframework.boot:spring-boot-devtools")
@@ -81,7 +79,6 @@ dependencies {
     compile("com.atlassian.commonmark:commonmark:0.8.0")
     compile("com.atlassian.commonmark:commonmark-ext-autolink:0.8.0")
 
-    compile("io.projectreactor:reactor-core")
     compile("io.projectreactor.ipc:reactor-netty")
     compile("io.projectreactor:reactor-kotlin:1.0.0.BUILD-SNAPSHOT")
     testCompile("io.projectreactor.addons:reactor-test")
