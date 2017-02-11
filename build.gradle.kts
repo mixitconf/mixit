@@ -73,6 +73,7 @@ dependencies {
         exclude(module= "spring-boot-starter-tomcat")
         exclude(module= "hibernate-validator")
     }
+    compile("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
     compile("org.springframework.boot:spring-boot-devtools")
     testCompile("org.springframework.boot:spring-boot-starter-test")
 
@@ -85,17 +86,9 @@ dependencies {
     compile("io.projectreactor:reactor-kotlin:1.0.0.BUILD-SNAPSHOT")
     testCompile("io.projectreactor.addons:reactor-test")
 
-    compile("com.fasterxml.jackson.core:jackson-databind")
     compile("com.fasterxml.jackson.module:jackson-module-kotlin")
     compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
 
-    compile("commons-logging:commons-logging:1.2")
-    compile("org.slf4j:slf4j-api:1.7.21")
-    compile("ch.qos.logback:logback-classic:1.1.7")
-
-    compile("org.springframework.data:spring-data-mongodb:$springDataVersion")
-    compile("org.springframework.data:spring-data-commons:$springDataVersion")
-    compile("org.mongodb:mongodb-driver-reactivestreams:1.2.0")
 }
 
 task<GulpTask>("gulpBuild") {
