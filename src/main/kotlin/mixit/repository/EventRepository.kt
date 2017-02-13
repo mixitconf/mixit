@@ -117,7 +117,7 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
         userRepository.save(zenika).block()
 
         val sopraSteria = userRepository.findOne("Sopra Steria").block()
-        sopraSteria.logoUrl = "sponsor/logo-sopra-steria.png"
+        sopraSteria.logoUrl = "sponsor/logo-sopra-steria.svg"
         userRepository.save(sopraSteria).block()
 
         val onlylyon = userRepository.findOne("onlylyon").block()
@@ -135,6 +135,7 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
                 EventSponsoring(GOLD, sopraSteria, LocalDate.of(2016, 12, 23)),
                 EventSponsoring(GOLD, userRepository.findOne("annick.challancin@esker.fr").block(), LocalDate.of(2017, 1, 10)),
                 EventSponsoring(GOLD, userRepository.findOne("LDLC").block(), LocalDate.of(2017, 1, 20)),
+                EventSponsoring(GOLD, userRepository.findOne("VISEO").block(), LocalDate.of(2017, 2, 20)),
                 EventSponsoring(LANYARD, worldline, LocalDate.of(2016, 10, 19)),
                 EventSponsoring(PARTY, onlylyon, LocalDate.of(2017, 1, 1)),
                 EventSponsoring(PARTY, userRepository.findOne("Hopwork").block(), LocalDate.of(2016, 11, 2)),
@@ -143,6 +144,7 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
                 EventSponsoring(SILVER, userRepository.findOne("woonoz").block(), LocalDate.of(2017, 1, 20)),
                 EventSponsoring(SILVER, userRepository.findOne("Algolia").block(), LocalDate.of(2017, 1, 23)),
                 EventSponsoring(SILVER, userRepository.findOne("Enedis").block(), LocalDate.of(2017, 1, 24)),
+                EventSponsoring(SILVER, userRepository.findOne("sourcingisr").block(), LocalDate.of(2017, 1, 25)),
                 EventSponsoring(HOSTING, userRepository.findOne("pivotal").block(), LocalDate.of(2017, 1, 20))
         )
     }
