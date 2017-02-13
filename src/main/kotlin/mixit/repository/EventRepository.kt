@@ -54,8 +54,15 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
 
         userRepository.save(User("LDLC", "", "", "c.bar@ldlc.com", "LDLC",
                 logoUrl = "sponsor/logo-ldlc.png",
-                shortDescription = "Vente de matériel informatique en ligne, particuliers ou pro.",
-                longDescription = "Vente de matériel informatique en ligne, particuliers ou pro.",
+                shortDescription = "Créé en 1996 par l’entrepreneur lyonnais Laurent de la Clergerie, le Groupe LDLC est aujourd’hui le 5ème groupe de " +
+                        "e-commerce en France. Son enseigne majeure, LDLC.com, est leader français du e-commerce informatique et high-tech. Constitué de 10" +
+                        " marques dont 6 sites marchands, le pionnier du commerce en ligne conjugue des activités dans le domaine de l’informatique, du " +
+                        "high-tech, de la maison ou encore de l’éducation.",
+                longDescription = "Au cœur des nombreux projets du Groupe LDLC, le département des Systèmes d’Information est le moteur de nos activités en " +
+                        "ligne. Ainsi, une trentaine de personnes au profil IT œuvrent au développement et au bon fonctionnement des sites. En croissance, le " +
+                        "Groupe cherche régulièrement à se doter de talents du numérique pour l’accompagner à atteindre son ambition d’un milliard d’euros de " +
+                        "chiffre d’affaires en 2021. Plus d’informations sur www.groupe-ldlc.com. \n\nTentez par l’aventure ? Rejoignez-nous ! " +
+                        "http://recrutement.groupe-ldlc.com/",
                 links = listOf(Link("Site", "http://www.groupe-ldlc.com/"), Link("Site public", "http://www.ldlc.com/"),
                         Link("Site pro", "http://www.ldlc-pro.com/"), Link("Linkedin", "https://www.linkedin.com/company/ldlc"),
                         Link("Twitter", "https://twitter.com/groupeldlc"), Link("Facebook", "https://www.facebook.com/LDLC.com/")))).block()
