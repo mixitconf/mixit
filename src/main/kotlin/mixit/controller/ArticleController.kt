@@ -4,6 +4,7 @@ import mixit.model.Article
 import mixit.model.Language
 import mixit.model.User
 import mixit.repository.ArticleRepository
+import mixit.support.MarkdownConverter
 import org.commonmark.ext.autolink.AutolinkExtension
 import org.commonmark.parser.Parser
 import org.springframework.http.HttpHeaders
@@ -12,13 +13,12 @@ import org.springframework.web.reactive.function.fromPublisher
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.RequestPredicates.accept
 import org.springframework.web.reactive.function.server.ServerResponse.ok
-import org.commonmark.renderer.html.HtmlRenderer
 import org.springframework.stereotype.Controller
 import java.time.format.DateTimeFormatter
 
 
 @Controller
-class ArticleController(val repository: ArticleRepository) : RouterFunction<ServerResponse> {
+class ArticleController(val repository: ArticleRepository, val markdownConverter: MarkdownConverter) : RouterFunction<ServerResponse> {
 
     private val frenchDateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
     private val englishDateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
@@ -40,14 +40,14 @@ class ArticleController(val repository: ArticleRepository) : RouterFunction<Serv
     fun findOneView(req: ServerRequest) = repository.findOne(req.pathVariable("id")).then { a ->
         val languageTag = req.headers().header(HttpHeaders.ACCEPT_LANGUAGE).first()
         val language = Language.findByTag(languageTag)
-        val model = mapOf(Pair("article", toArticleDto(a, language)))
+        val model = mapOf(Pair("article", toArticleDto(a, language, markdownConverter)))
         ok().render("article", model)
     }
 
     fun findAllView(req: ServerRequest) = repository.findAll().collectList().then { articles ->
         val languageTag = req.headers().header(HttpHeaders.ACCEPT_LANGUAGE).first()
         val language = Language.findByTag(languageTag)
-        ok().render("articles",  mapOf(Pair("articles", articles.map { toArticleDto(it, language) })))
+        ok().render("articles",  mapOf(Pair("articles", articles.map { toArticleDto(it, language, markdownConverter) })))
     }
 
     fun findOne(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
@@ -57,13 +57,13 @@ class ArticleController(val repository: ArticleRepository) : RouterFunction<Serv
             fromPublisher(repository.findAll()))
 
 
-    private fun toArticleDto(article: Article, language: Language) = ArticleDto(
+    private fun toArticleDto(article: Article, language: Language, markdownConverter: MarkdownConverter) = ArticleDto(
             article.id,
             article.author,
             if (language == Language.ENGLISH) article.addedAt.format(englishDateFormatter) else article.addedAt.format(frenchDateFormatter),
             if (article.title != null) article.title[language]!! else "",
-            if (article.headline != null) article.headline[language]!! else "",
-            if (article.content != null) article.content[language]!! else "")
+            markdownConverter.toHTML(if (article.headline != null) article.headline[language]!! else ""),
+            markdownConverter.toHTML(if (article.content != null) article.content[language]!! else ""))
 
     class ArticleDto(
         val id: String?,
@@ -72,15 +72,5 @@ class ArticleController(val repository: ArticleRepository) : RouterFunction<Serv
         val title: String,
         val headline: String,
         val content: String
-    ) {
-        private val parser = Parser.builder().extensions(listOf(AutolinkExtension.create())).build()
-        private val renderer = HtmlRenderer.builder().build()
-
-        val htmlHeadline: String
-            get() = renderer.render(parser.parse(headline))
-
-        val htmlContent: String
-            get() = renderer.render(parser.parse(content))
-
-    }
+    )
 }
