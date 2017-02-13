@@ -3,16 +3,21 @@ package mixit.controller
 import mixit.model.Role
 import mixit.model.User
 import mixit.repository.UserRepository
+import org.commonmark.ext.autolink.AutolinkExtension
+import org.commonmark.parser.Parser
+import org.commonmark.renderer.html.HtmlRenderer
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.BodyInserters.fromObject
 import org.springframework.web.reactive.function.fromPublisher
 import org.springframework.web.reactive.function.server.*
-import org.springframework.web.reactive.function.server.RequestPredicates.*
+import org.springframework.web.reactive.function.server.RequestPredicates.GET
+import org.springframework.web.reactive.function.server.RequestPredicates.accept
 import org.springframework.web.reactive.function.server.ServerResponse.created
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import java.net.URI
 import java.net.URLDecoder
+import java.util.*
 
 
 @Controller
@@ -24,7 +29,7 @@ class UserController(val repository: UserRepository) : RouterFunction<ServerResp
             GET("/user/{login}") { findOneView(req) }
             GET("/speaker/{login}") { findOneView(req) }
             GET("/sponsor/{login}") { findOneView(req) }
-            GET("/staff/{login}") { findOneView(req) }
+            GET("/staff/") { findAllStaff() }
         }
         accept(APPLICATION_JSON).apply {
             GET("/api/user/") { findAll() }
@@ -101,4 +106,19 @@ class UserController(val repository: UserRepository) : RouterFunction<ServerResp
                 .body(fromObject(u))
             }
 
+    fun findAllStaff() = repository.findByRole(Role.STAFF)
+            .collectList()
+            .then { u ->
+                val users = u.map { markdownToHTML(it) }
+                Collections.shuffle(users);
+                ok().render("staff",  mapOf(Pair("staff", users))) }
+
+    fun markdownToHTML(user :User): User {
+        val parser = Parser.builder().extensions(listOf(AutolinkExtension.create())).build()
+        val document = parser.parse(user.shortDescription ?: "")
+        val renderer = HtmlRenderer.builder().build()
+        val encodedDescription = renderer.render(document)
+        user.shortDescription = encodedDescription
+        return user
+    }
 }
