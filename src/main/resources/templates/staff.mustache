@@ -1,0 +1,43 @@
+{{> header}}
+
+<div class="mxt-wrapper--space"></div>
+
+<div class="row">
+    <div class="column large-8 large-offset-2">
+
+        <h1 class="text-center">{{#i18n}}staff.title{{/i18n}}</h1>
+        <p class="text-center">{{#i18n}}staff.story1{{/i18n}}</p>
+        <p class="text-center">{{#i18n}}staff.story2{{/i18n}}</p>
+        <p class="text-center">{{#i18n}}staff.story3{{/i18n}}</p>
+        <hr/>
+
+        <h2 class="subheader text-center">{{#i18n}}staff.teamtitle{{/i18n}}</h2>
+
+        <div class="row mxt-wrapper--team align-middle">
+
+        {{#staff}}
+
+            <div class="small-12 medium-4 columns text-center">
+                <img src="https://www.gravatar.com/avatar/{{logoUrl}}" class="mxt-img--team"/>
+            </div>
+            <div class="small-12 medium-8 columns">
+                {{firstname}} {{lastname}}<br/>
+                {{shortDescription}}
+                <ul class="menu simple">
+                {{#links}}
+                    <li><a href="{{url}}">{{name}}</a></li>
+                {{/links}}
+                </ul>
+            </div>
+
+            <div class="small-12 columns">
+                <hr/>
+            </div>
+
+        {{/staff}}
+
+        </div>
+    </div>
+</div>
+
+{{> footer}}

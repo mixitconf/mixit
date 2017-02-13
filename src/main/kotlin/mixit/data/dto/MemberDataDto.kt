@@ -22,6 +22,12 @@ data class MemberDataDto(
         var level: List<LevelDataDto>?
 ) {
     fun toUser(events: List<String> = emptyList(), role: Role = Role.ATTENDEE): User {
+
+        var logoUrl: String? = hash
+        if (role == Role.SPONSOR) {
+            logoUrl = logo?.replace("sponsors/", "/images/sponsor/") ?: ""
+        }
+
         return User(
                 login ?: "user$idMember",
                 firstname ?: "",
@@ -30,7 +36,7 @@ data class MemberDataDto(
                 company ?: "",
                 shortDescription ?: "",
                 longDescription ?: "",
-                logo?.replace("sponsors/", "/images/sponsor/") ?: "",
+                logoUrl,
                 events,
                 role,
                 links = userLinks.map { link -> Link(link.key, link.value) },
