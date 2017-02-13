@@ -3,21 +3,21 @@ package mixit.controller
 import mixit.model.*
 import mixit.repository.EventRepository
 import mixit.repository.SessionRepository
-import org.commonmark.ext.autolink.AutolinkExtension
-import org.commonmark.parser.Parser
-import org.commonmark.renderer.html.HtmlRenderer
+import mixit.support.MarkdownConverter
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
-
 import org.springframework.web.reactive.function.fromPublisher
-import org.springframework.web.reactive.function.server.*
-import org.springframework.web.reactive.function.server.RequestPredicates.*
+import org.springframework.web.reactive.function.server.RequestPredicates.accept
+import org.springframework.web.reactive.function.server.RouterFunction
+import org.springframework.web.reactive.function.server.ServerRequest
+import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
+import org.springframework.web.reactive.function.server.route
 import java.time.LocalDateTime
 
 
 @Controller
-class SessionController(val repository: SessionRepository, val eventRepository: EventRepository) : RouterFunction<ServerResponse> {
+class SessionController(val repository: SessionRepository, val eventRepository: EventRepository, val markdownConverter: MarkdownConverter) : RouterFunction<ServerResponse> {
 
     override fun route(req: ServerRequest) = route(req) {
         accept(TEXT_HTML).apply {
@@ -40,7 +40,7 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
             .then { session -> ok().render("sessions",  mapOf(Pair("sessions", session))) }
 
     fun findOneView(req: ServerRequest) = repository.findOne(req.pathVariable("id"))
-            .then { session -> ok().render("session", mapOf(Pair("session", SessionDto(session)))) }
+            .then { session -> ok().render("session", mapOf(Pair("session", SessionDto(session, markdownConverter)))) }
 
 
     fun findOne(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
@@ -65,21 +65,9 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
             val end: LocalDateTime?
     ) {
 
-        constructor(session: Session) : this(session.id, session.format, session.event,
-                session.title, session.summary, session.speakers, session.language, session.addedAt,
-                session.description, session.room, session.start, session.end)
+        constructor(session: Session, markdownConverter: MarkdownConverter) : this(session.id, session.format, session.event,
+                session.title, markdownConverter.toHTML(session.summary), session.speakers, session.language, session.addedAt,
+                markdownConverter.toHTML(session.description), session.room, session.start, session.end)
 
-        fun toHtml(markdown: String): String {
-            val parser = Parser.builder().extensions(listOf(AutolinkExtension.create())).build()
-            val document = parser.parse(markdown)
-            val renderer = HtmlRenderer.builder().build()
-            return renderer.render(document)
-        }
-
-        val htmlSummary: String
-            get() = toHtml(summary)
-
-        val htmlDescription: String
-            get() = toHtml(description ?: "")
     }
 }

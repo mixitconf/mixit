@@ -6,6 +6,7 @@ import mixit.repository.ArticleRepository
 import mixit.repository.EventRepository
 import mixit.repository.SessionRepository
 import mixit.repository.UserRepository
+import mixit.support.MarkdownConverter
 import mixit.support.MixitWebFilter
 import mixit.support.run
 import org.springframework.boot.ApplicationRunner
@@ -42,6 +43,9 @@ class Application {
 
     @Bean
     fun filter() = MixitWebFilter()
+
+    @Bean
+    fun markdownConverter() = MarkdownConverter()
 
     @Bean
     fun dataInitializer(userRepository: UserRepository, eventRepository: EventRepository, sessionRepository: SessionRepository,

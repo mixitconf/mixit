@@ -3,9 +3,7 @@ package mixit.controller
 import mixit.model.Role
 import mixit.model.User
 import mixit.repository.UserRepository
-import org.commonmark.ext.autolink.AutolinkExtension
-import org.commonmark.parser.Parser
-import org.commonmark.renderer.html.HtmlRenderer
+import mixit.support.MarkdownConverter
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.BodyInserters.fromObject
@@ -21,7 +19,7 @@ import java.util.*
 
 
 @Controller
-class UserController(val repository: UserRepository) : RouterFunction<ServerResponse> {
+class UserController(val repository: UserRepository, val markdownConverter: MarkdownConverter) : RouterFunction<ServerResponse> {
 
     override fun route(req: ServerRequest) = route(req) {
         accept(TEXT_HTML).apply {
@@ -109,16 +107,13 @@ class UserController(val repository: UserRepository) : RouterFunction<ServerResp
     fun findAllStaff() = repository.findByRole(Role.STAFF)
             .collectList()
             .then { u ->
-                val users = u.map { markdownToHTML(it) }
+                val users = u.map { prepareForHtmlDisplay(it) }
                 Collections.shuffle(users);
-                ok().render("staff",  mapOf(Pair("staff", users))) }
+                ok().render("staff",  mapOf(Pair("staff", users)))
+            }
 
-    fun markdownToHTML(user :User): User {
-        val parser = Parser.builder().extensions(listOf(AutolinkExtension.create())).build()
-        val document = parser.parse(user.shortDescription ?: "")
-        val renderer = HtmlRenderer.builder().build()
-        val encodedDescription = renderer.render(document)
-        user.shortDescription = encodedDescription
+    fun prepareForHtmlDisplay(user :User): User {
+        user.shortDescription = markdownConverter.toHTML(user.shortDescription ?: "")
         return user
     }
 }
