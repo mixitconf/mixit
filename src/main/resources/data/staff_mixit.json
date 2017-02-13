@@ -183,6 +183,21 @@
       { "key": "SW Craft Lyon", "value": "https://www.meetup.com/fr-FR/Software-Craftsmanship-Lyon/" },
       { "key": "LinkedIn", "value": "https://www.linkedin.com/in/charles-bouttaz-18289a39/" }
     ]
+  },
+  {
+    "idMember": 33,
+    "login": "titimoby",
+    "firstname": "Thierry",
+    "lastname": "CHANTIER",
+    "logo": null,
+    "hash": "9299f1577563a936035f5d39a9f3c51b",
+    "shortDescription": "Artisan technologique Cofondateur de MixTeen échange et partage à toute heure ;)",
+    "userLinks": [
+      { "key": "MixTeen", "value": "http://mixteen.github.io/" },
+      { "key": "Tweeter", "value": "https://twitter.com/titimoby" },
+      { "key": "Github", "value": "https://github.com/titimoby" }
+    ]
+
   }
 ]
 
