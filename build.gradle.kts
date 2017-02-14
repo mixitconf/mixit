@@ -68,8 +68,8 @@ dependencies {
     compile("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
 
     compile("org.springframework.boot.experimental:spring-boot-starter-web-reactive:0.1.0.BUILD-SNAPSHOT") {
-        exclude("spring-boot-starter-tomcat")
-        exclude("hibernate-validator")
+        exclude(module = "spring-boot-starter-tomcat")
+        exclude(module = "hibernate-validator")
     }
     compile("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
     compile("org.springframework.boot:spring-boot-devtools")
