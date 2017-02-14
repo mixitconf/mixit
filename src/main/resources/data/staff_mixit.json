@@ -143,7 +143,10 @@
     "logo": null,
     "hash": "04bf197ddd198f4ff3a50e93ebd37272",
     "shortDescription": "Membre de l'équipe de développement de Spring Framework et Reactor chez Pivotal, fan de Kotlin et co-worker à La Cordée.",
-    "userLinks": []
+    "userLinks": [
+      { "key": "Twitter", "value": "https://twitter.com/sdeleuze" },
+      { "key": "Blog on spring.io", "value": "https://spring.io/team/sdeleuze" }
+    ]
   },
   {
     "idMember": 5142,
