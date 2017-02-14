@@ -4,6 +4,7 @@ import mixit.model.Article
 import mixit.model.Language
 import mixit.model.User
 import mixit.repository.ArticleRepository
+import mixit.support.LazyRouterFunction
 import mixit.support.MarkdownConverter
 import org.springframework.http.HttpHeaders
 import org.springframework.http.MediaType.*
@@ -16,22 +17,23 @@ import java.time.format.DateTimeFormatter
 
 
 @Controller
-class ArticleController(val repository: ArticleRepository, val markdownConverter: MarkdownConverter) : RouterFunction<ServerResponse> {
+class ArticleController(val repository: ArticleRepository, val markdownConverter: MarkdownConverter) : LazyRouterFunction() {
 
     private val frenchDateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
     private val englishDateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
 
-    override fun route(req: ServerRequest) = route(req) {
+    // TODO Remove this@ArticleController when KT-15667 will be fixed
+    override val routes: RouterDsl.() -> Unit = {
         accept(TEXT_HTML).apply {
-            GET("/blog/") { findAllView(req) }
-            GET("/blog/{id}") { findOneView(req) }
+            GET("/blog/", this@ArticleController::findAllView)
+            GET("/blog/{id}", this@ArticleController::findOneView)
             // Old routes used by the previous version of our website
-            GET("/articles/") { findAllView(req) }
-            GET("/article/{id}") { findOneView(req) }
+            GET("/articles/", this@ArticleController::findAllView)
+            GET("/article/{id}", this@ArticleController::findOneView)
         }
         accept(APPLICATION_JSON).apply {
-            GET("/api/blog/") { findAll() }
-            GET("/api/blog/{id}") { findOne(req) }
+            GET("/api/blog/", this@ArticleController::findAll)
+            GET("/api/blog/{id}", this@ArticleController::findOne)
         }
     }
 
@@ -51,7 +53,7 @@ class ArticleController(val repository: ArticleRepository, val markdownConverter
     fun findOne(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
             fromPublisher(repository.findOne(req.pathVariable("id"))))
 
-    fun findAll() = ok().contentType(APPLICATION_JSON_UTF8).body(
+    fun findAll(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
             fromPublisher(repository.findAll()))
 
 

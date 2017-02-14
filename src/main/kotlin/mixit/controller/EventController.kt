@@ -1,6 +1,7 @@
 package mixit.controller
 
 import mixit.repository.EventRepository
+import mixit.support.LazyRouterFunction
 import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.http.MediaType.APPLICATION_JSON_UTF8
 import org.springframework.stereotype.Controller
@@ -11,19 +12,20 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 
 
 @Controller
-class EventController(val repository: EventRepository) : RouterFunction<ServerResponse> {
+class EventController(val repository: EventRepository) : LazyRouterFunction() {
 
-    override fun route(req: ServerRequest) = route(req) {
+    // TODO Remove this@ArticleController when KT-15667 will be fixed
+    override val routes: RouterDsl.() -> Unit = {
         accept(APPLICATION_JSON).apply {
-            GET("/api/event/") { findAll() }
-            GET("/api/event/{login}") { findOne(req) }
+            GET("/api/event/", this@EventController::findAll)
+            GET("/api/event/{login}", this@EventController::findOne)
         }
     }
 
     fun findOne(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
             fromPublisher(repository.findOne(req.pathVariable("login"))))
 
-    fun findAll() = ok().contentType(APPLICATION_JSON_UTF8).body(
+    fun findAll(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
             fromPublisher(repository.findAll()))
 
 }

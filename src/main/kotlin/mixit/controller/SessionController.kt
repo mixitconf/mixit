@@ -3,35 +3,35 @@ package mixit.controller
 import mixit.model.*
 import mixit.repository.EventRepository
 import mixit.repository.SessionRepository
+import mixit.support.LazyRouterFunction
 import mixit.support.MarkdownConverter
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.fromPublisher
+import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.RequestPredicates.accept
-import org.springframework.web.reactive.function.server.RouterFunction
-import org.springframework.web.reactive.function.server.ServerRequest
-import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
-import org.springframework.web.reactive.function.server.route
 import java.time.LocalDateTime
 
 
 @Controller
-class SessionController(val repository: SessionRepository, val eventRepository: EventRepository, val markdownConverter: MarkdownConverter) : RouterFunction<ServerResponse> {
+class SessionController(val repository: SessionRepository, val eventRepository: EventRepository,
+                        val markdownConverter: MarkdownConverter) : LazyRouterFunction() {
 
-    override fun route(req: ServerRequest) = route(req) {
+    // TODO Remove this@ArticleController when KT-15667 will be fixed
+    override val routes: RouterDsl.() -> Unit = {
         accept(TEXT_HTML).apply {
-            GET("/sessions/") { findAllView() }
-            GET("/{year}/sessions/") { findByEventView(req) }
-            GET("/session/{id}") { findOneView(req) }
+            GET("/sessions/", this@SessionController::findAllView)
+            GET("/{year}/sessions/", this@SessionController::findByEventView)
+            GET("/session/{id}", this@SessionController::findOneView)
         }
         accept(APPLICATION_JSON).apply {
-            GET("/api/session/{login}") { findOne(req) }
-            GET("/api/{year}/session/") { findByEventId(req) }
+            GET("/api/session/{login}", this@SessionController::findOne)
+            GET("/api/{year}/session/", this@SessionController::findByEventId)
         }
     }
 
-    fun findAllView() = repository.findAll()
+    fun findAllView(req: ServerRequest) = repository.findAll()
             .collectList()
             .then { session -> ok().render("sessions",  mapOf(Pair("sessions", session))) }
 

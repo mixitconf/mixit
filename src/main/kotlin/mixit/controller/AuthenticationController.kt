@@ -1,7 +1,7 @@
 package mixit.controller
 
-import org.springframework.http.MediaType
-import org.springframework.http.MediaType.TEXT_HTML
+import mixit.support.LazyRouterFunction
+import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.server.*
@@ -9,20 +9,21 @@ import org.springframework.web.reactive.function.server.RequestPredicates.accept
 import org.springframework.web.reactive.function.server.ServerResponse.*
 
 @Controller
-class AuthenticationController : RouterFunction<ServerResponse> {
+class AuthenticationController : LazyRouterFunction() {
 
-    override fun route(req: ServerRequest) = route(req) {
+    // TODO Remove this@ArticleController when KT-15667 will be fixed
+    override val routes: RouterDsl.() -> Unit = {
         accept(TEXT_HTML).apply {
-            GET("/login") { loginView() }
+            GET("/login", this@AuthenticationController::loginView)
             // TODO Use POST
-            GET("/logout") { logout(req) }
+            GET("/logout", this@AuthenticationController::logout)
         }
-        accept(MediaType.APPLICATION_FORM_URLENCODED).apply {
-            POST("/login") { login(req) }
+        accept(APPLICATION_FORM_URLENCODED).apply {
+            POST("/login", this@AuthenticationController::login)
         }
     }
 
-    fun loginView() = ok().render("login")
+    fun loginView(req: ServerRequest) = ok().render("login")
 
     fun login(req: ServerRequest) = req.body(BodyExtractors.toFormData()).then { data ->
         req.session().then { session ->

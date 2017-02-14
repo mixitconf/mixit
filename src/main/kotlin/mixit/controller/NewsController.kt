@@ -1,5 +1,6 @@
 package mixit.controller
 
+import mixit.support.LazyRouterFunction
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.fromServerSentEvents
@@ -11,20 +12,21 @@ import java.time.Duration.ofMillis
 
 
 @Controller
-class NewsController : RouterFunction<ServerResponse> {
+class NewsController : LazyRouterFunction() {
 
-    override fun route(req: ServerRequest) = route(req) {
+    // TODO Remove this@ArticleController when KT-15667 will be fixed
+    override val routes: RouterDsl.() -> Unit = {
         accept(TEXT_HTML).apply {
-            GET("/news") { newsView() }
+            GET("/news", this@NewsController::newsView)
         }
         accept(TEXT_EVENT_STREAM).apply {
-            GET("/news/sse") { newsSse() }
+            GET("/news/sse", this@NewsController::newsSse)
         }
     }
 
-    fun newsView() = ok().render("news")
+    fun newsView(req: ServerRequest) = ok().render("news")
 
-    fun newsSse() = ok().body(fromServerSentEvents(
+    fun newsSse(req: ServerRequest) = ok().body(fromServerSentEvents(
             Flux.interval(ofMillis(100)).map { "Hello $it!" }
     ))
 

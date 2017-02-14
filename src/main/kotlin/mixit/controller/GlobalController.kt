@@ -2,6 +2,7 @@ package mixit.controller
 
 import mixit.model.SponsorshipLevel.*
 import mixit.repository.EventRepository
+import mixit.support.LazyRouterFunction
 import org.springframework.core.io.ClassPathResource
 import org.springframework.http.MediaType.TEXT_HTML
 import org.springframework.stereotype.Controller
@@ -10,16 +11,17 @@ import org.springframework.web.reactive.function.server.RequestPredicates.accept
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 
 @Controller
-class GlobalController(val repository: EventRepository) : RouterFunction<ServerResponse> {
+class GlobalController(val repository: EventRepository) : LazyRouterFunction() {
 
-    override fun route(req: ServerRequest) = route(req) {
+    // TODO Remove this@ArticleController when KT-15667 will be fixed
+    override val routes: RouterDsl.() -> Unit = {
         accept(TEXT_HTML).apply {
-            GET("/") { homeView() }
+            GET("/", this@GlobalController::homeView)
         }
         resources("/**", ClassPathResource("static/"))
     }
 
-    fun homeView() = repository.findOne("mixit17")
+    fun homeView(req: ServerRequest) = repository.findOne("mixit17")
             .then { events ->
                 val sponsors = events.sponsors.groupBy { it.level }
                 ok().render("home", mapOf(

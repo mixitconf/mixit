@@ -3,6 +3,7 @@ package mixit.controller
 import mixit.model.SponsorshipLevel.*
 import mixit.repository.EventRepository
 import mixit.repository.UserRepository
+import mixit.support.LazyRouterFunction
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 
@@ -12,16 +13,17 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 
 
 @Controller
-class SponsorController(val eventRepository: EventRepository, val userRepository: UserRepository) : RouterFunction<ServerResponse> {
+class SponsorController(val eventRepository: EventRepository, val userRepository: UserRepository) : LazyRouterFunction() {
 
-    override fun route(req: ServerRequest) = route(req) {
+    // TODO Remove this@ArticleController when KT-15667 will be fixed
+    override val routes: RouterDsl.() -> Unit = {
         accept(TEXT_HTML).apply {
-            GET("/sponsors/") { findAllView() }
-            GET("/sponsors/{id}") { findOneView(req) }
+            GET("/sponsors/", this@SponsorController::findAllView)
+            GET("/sponsors/{id}", this@SponsorController::findOneView)
         }
     }
 
-    fun findAllView() = eventRepository.findOne("mixit17").then { events ->
+    fun findAllView(req: ServerRequest) = eventRepository.findOne("mixit17").then { events ->
         val sponsors = events.sponsors.groupBy { it.level }
 
         ok().render("sponsors", mapOf(
@@ -34,7 +36,10 @@ class SponsorController(val eventRepository: EventRepository, val userRepository
     }
 
     fun findOneView(req: ServerRequest) = userRepository.findOne(req.pathVariable("id")).then { s ->
-        ok().render("sponsor", mapOf(Pair("sponsor", s), Pair("description", if (s.longDescription.isEmpty()) s.shortDescription else s.longDescription)))
+        ok().render("sponsor", mapOf(
+                Pair("sponsor", s),
+                Pair("description", if (s.longDescription.isEmpty()) s.shortDescription else s.longDescription)
+        ))
     }
 
 }

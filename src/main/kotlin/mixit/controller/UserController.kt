@@ -3,6 +3,7 @@ package mixit.controller
 import mixit.model.Role
 import mixit.model.User
 import mixit.repository.UserRepository
+import mixit.support.LazyRouterFunction
 import mixit.support.MarkdownConverter
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
@@ -19,27 +20,28 @@ import java.util.*
 
 
 @Controller
-class UserController(val repository: UserRepository, val markdownConverter: MarkdownConverter) : RouterFunction<ServerResponse> {
+class UserController(val repository: UserRepository, val markdownConverter: MarkdownConverter) : LazyRouterFunction() {
 
-    override fun route(req: ServerRequest) = route(req) {
+    // TODO Remove this@ArticleController when KT-15667 will be fixed
+    override val routes: RouterDsl.() -> Unit = {
         accept(TEXT_HTML).apply {
             (GET("/user/") or GET("/users/")) { findAllView() }
-            GET("/user/{login}") { findOneView(req) }
-            GET("/speaker/{login}") { findOneView(req) }
-            GET("/sponsor/{login}") { findOneView(req) }
-            GET("/staff/") { findAllStaff() }
+            GET("/user/{login}", this@UserController::findOneView)
+            GET("/speaker/{login}", this@UserController::findOneView)
+            GET("/sponsor/{login}", this@UserController::findOneView)
+            GET("/staff/", this@UserController::findAllStaff)
         }
         accept(APPLICATION_JSON).apply {
-            GET("/api/user/") { findAll() }
-            POST("/api/user/") { create(req) }
-            GET("/api/user/{login}") { findOne(req) }
-            GET("/api/staff/") { findStaff() }
-            GET("/api/staff/{login}") { findOneStaff(req) }
-            GET("/api/speaker/") { findSpeakers() }
-            GET("/api/speaker/{login}") { findOneSpeaker(req) }
-            GET("/api/sponsor/") { findSponsors() }
-            GET("/api/sponsor/{login}") { findOneSponsor(req) }
-            GET("/api/{event}/speaker/") { findSpeakersByEvent(req) }
+            GET("/api/user/", this@UserController::findAll)
+            POST("/api/user/", this@UserController::create)
+            GET("/api/user/{login}", this@UserController::findOne)
+            GET("/api/staff/", this@UserController::findStaff)
+            GET("/api/staff/{login}", this@UserController::findOneStaff)
+            GET("/api/speaker/", this@UserController::findSpeakers)
+            GET("/api/speaker/{login}", this@UserController::findOneSpeaker)
+            GET("/api/sponsor/", this@UserController::findSponsors)
+            GET("/api/sponsor/{login}", this@UserController::findOneSponsor)
+            GET("/api/{event}/speaker/", this@UserController::findSpeakersByEvent)
         }
     }
 
@@ -74,16 +76,16 @@ class UserController(val repository: UserRepository, val markdownConverter: Mark
     fun findOne(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
                 fromPublisher(repository.findOne(req.pathVariable("login"))))
 
-    fun findAll() = ok().contentType(APPLICATION_JSON_UTF8).body(
+    fun findAll(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
             fromPublisher(repository.findAll()))
 
-    fun findStaff() = ok().contentType(APPLICATION_JSON_UTF8).body(
+    fun findStaff(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
             fromPublisher(repository.findByRole(Role.STAFF)))
 
     fun findOneStaff(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
                 fromPublisher(repository.findOneByRole(req.pathVariable("login"), Role.STAFF)))
 
-    fun findSpeakers() = ok().contentType(APPLICATION_JSON_UTF8).body(
+    fun findSpeakers(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
             fromPublisher(repository.findByRole(Role.SPEAKER)))
 
     fun findSpeakersByEvent(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
@@ -92,7 +94,7 @@ class UserController(val repository: UserRepository, val markdownConverter: Mark
     fun findOneSpeaker(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
                 fromPublisher(repository.findOneByRole(req.pathVariable("login"), Role.SPEAKER)))
 
-    fun findSponsors() = ok().contentType(APPLICATION_JSON_UTF8).body(
+    fun findSponsors(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
             fromPublisher(repository.findByRole(Role.SPONSOR)))
 
     fun findOneSponsor(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
@@ -104,7 +106,7 @@ class UserController(val repository: UserRepository, val markdownConverter: Mark
                 .body(fromObject(u))
             }
 
-    fun findAllStaff() = repository.findByRole(Role.STAFF)
+    fun findAllStaff(req: ServerRequest) = repository.findByRole(Role.STAFF)
             .collectList()
             .then { u ->
                 val users = u.map { prepareForHtmlDisplay(it) }
