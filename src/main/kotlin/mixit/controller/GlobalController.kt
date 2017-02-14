@@ -15,7 +15,6 @@ class GlobalController(val repository: EventRepository) : RouterFunction<ServerR
     override fun route(req: ServerRequest) = route(req) {
         accept(TEXT_HTML).apply {
             GET("/") { homeView() }
-            GET("/team/") { ok().render("team") }
         }
         resources("/**", ClassPathResource("static/"))
     }
