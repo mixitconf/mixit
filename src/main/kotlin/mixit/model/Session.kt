@@ -29,6 +29,7 @@ enum class SessionFormat(val duration: Int) {
     KEYNOTE(25)
 }
 
+@Suppress("UNUSED_PARAMETER")
 enum class Room(name: String, capacity: Int) {
     AMPHI1("Grand Amphi", 500),
     AMPHI2("Petit Amphi", 200),

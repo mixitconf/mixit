@@ -113,7 +113,7 @@ class UserController(val repository: UserRepository, val markdownConverter: Mark
             }
 
     fun prepareForHtmlDisplay(user :User): User {
-        user.shortDescription = markdownConverter.toHTML(user.shortDescription ?: "")
+        user.shortDescription = markdownConverter.toHTML(user.shortDescription)
         return user
     }
 }

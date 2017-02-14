@@ -5,8 +5,6 @@ import mixit.model.Language
 import mixit.model.User
 import mixit.repository.ArticleRepository
 import mixit.support.MarkdownConverter
-import org.commonmark.ext.autolink.AutolinkExtension
-import org.commonmark.parser.Parser
 import org.springframework.http.HttpHeaders
 import org.springframework.http.MediaType.*
 import org.springframework.web.reactive.function.fromPublisher
@@ -61,9 +59,9 @@ class ArticleController(val repository: ArticleRepository, val markdownConverter
             article.id,
             article.author,
             if (language == Language.ENGLISH) article.addedAt.format(englishDateFormatter) else article.addedAt.format(frenchDateFormatter),
-            if (article.title != null) article.title[language]!! else "",
-            markdownConverter.toHTML(if (article.headline != null) article.headline[language]!! else ""),
-            markdownConverter.toHTML(if (article.content != null) article.content[language]!! else ""))
+            article.title[language] ?: "",
+            markdownConverter.toHTML(article.headline[language] ?: ""),
+            markdownConverter.toHTML(article.content[language] ?: ""))
 
     class ArticleDto(
         val id: String?,
