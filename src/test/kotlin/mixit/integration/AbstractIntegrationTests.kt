@@ -13,7 +13,7 @@ import org.springframework.web.reactive.function.client.WebClient
 abstract class AbstractIntegrationTests {
 
     @LocalServerPort
-    lateinit var port: Integer
+    var port: Int? = null
 
     lateinit var client: WebClient
 
