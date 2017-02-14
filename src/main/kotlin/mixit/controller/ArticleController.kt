@@ -61,7 +61,7 @@ class ArticleController(val repository: ArticleRepository, val markdownConverter
             if (language == Language.ENGLISH) article.addedAt.format(englishDateFormatter) else article.addedAt.format(frenchDateFormatter),
             article.title[language] ?: "",
             markdownConverter.toHTML(article.headline[language] ?: ""),
-            markdownConverter.toHTML(article.content[language] ?: ""))
+            markdownConverter.toHTML(if (article.content != null) article.content[language] else  ""))
 
     class ArticleDto(
         val id: String?,
