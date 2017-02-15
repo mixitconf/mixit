@@ -25,3 +25,28 @@ enum class Role {
     SPONSOR,
     ATTENDEE
 }
+
+class Logo(){
+    companion object {
+
+        fun logoWebPUrl(url:String): String? {
+            if(url.endsWith("png") || url.endsWith("jpg")){
+                return url.replace("png", "webp").replace("jpg", "webp")
+            }
+            return null
+        }
+
+        fun logoType(url:String): String {
+            if(url.endsWith("svg")){
+                return "image/svg+xml"
+            }
+            if(url.endsWith("png")){
+                return "image/png"
+            }
+            if(url.endsWith("jpg")){
+                return "image/jpeg"
+            }
+            throw IllegalArgumentException("Extension not supported")
+        }
+    }
+}

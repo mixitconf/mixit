@@ -1,13 +1,17 @@
 package mixit.controller
 
+import mixit.model.EventSponsoring
+import mixit.model.Logo
 import mixit.model.SponsorshipLevel.*
+import mixit.model.User
 import mixit.repository.EventRepository
 import mixit.support.LazyRouterFunction
 import org.springframework.core.io.ClassPathResource
 import org.springframework.http.MediaType.TEXT_HTML
 import org.springframework.stereotype.Controller
-import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.RequestPredicates.accept
+import org.springframework.web.reactive.function.server.RouterDsl
+import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 
 @Controller
@@ -25,11 +29,30 @@ class GlobalController(val repository: EventRepository) : LazyRouterFunction() {
             .then { events ->
                 val sponsors = events.sponsors.groupBy { it.level }
                 ok().render("home", mapOf(
-                        Pair("sponsors-gold", sponsors[GOLD]),
-                        Pair("sponsors-silver", sponsors[SILVER]),
-                        Pair("sponsors-hosting", sponsors[HOSTING]),
-                        Pair("sponsors-lanyard", sponsors[LANYARD]),
-                        Pair("sponsors-party", sponsors[PARTY])
+                        Pair("sponsors-gold", sponsors[GOLD]!!.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) }),
+                        Pair("sponsors-silver", sponsors[SILVER]!!.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) }),
+                        Pair("sponsors-hosting", sponsors[HOSTING]!!.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) }),
+                        Pair("sponsors-lanyard", sponsors[LANYARD]!!.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) }),
+                        Pair("sponsors-party", sponsors[PARTY]!!.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) })
                 ))
             }
+
+    class SponsorDto(
+        val login: String,
+        val company: String,
+        val logoUrl: String,
+        val logoType: String,
+        val logoWebpUrl: String? = null
+    ){
+        companion object {
+            fun toDto(eventSponsoring: EventSponsoring):SponsorDto = SponsorDto(
+                    eventSponsoring.sponsor.login,
+                    eventSponsoring.sponsor.company!!,
+                    eventSponsoring.sponsor.logoUrl!!,
+                    Logo.logoType(eventSponsoring.sponsor.logoUrl!!),
+                    Logo.logoWebPUrl(eventSponsoring.sponsor.logoUrl!!)
+            )
+        }
+    }
+
 }
