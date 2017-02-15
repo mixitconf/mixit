@@ -65,7 +65,7 @@
     "lastname": "PELLOUX-PRAYER",
     "logo": null,
     "hash": "c1f8d95084fb10d92763960a36f04b46",
-    "shortDescription": "MiXiT CoFounder - software craftman ",
+    "shortDescription": "MiXiT CoFounder - software craftsman ",
     "level": [],
     "userLinks": []
   },
@@ -76,13 +76,11 @@
     "lastname": "LACOTE",
     "logo": null,
     "hash": "1305aa79d71e887dabb8f698c4c1ff9f",
-    "shortDescription": "Développeur chez [Ninja Squad](http://ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+    "shortDescription": "Je fais de l'ordinateur avec [Ninja Squad](http://ninja-squad.fr) le jour, et des tweets pour MiXiT la nuit.",
     "level": [],
     "userLinks": [
-      { "key": "Ninja Squad", "value": "http://ninja-squad.fr" },
-      { "key": "GitHub", "value": "https://github.com/clacote" },
-      { "key": "Agilité", "value": "http://clacote.free.fr/agilite.html" },
-      { "key": "Cast-IT", "value": "http://www.cast-it.fr" }
+      { "key": "Twitter", "value": "https://twitter.com/clacote" },
+      { "key": "Ninja Squad", "value": "http://ninja-squad.fr" }
     ]
   },
   {
