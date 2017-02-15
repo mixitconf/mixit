@@ -12,6 +12,20 @@
         "key": "GOLD",
         "value": null
       }
+    ],
+    "userLinks": [
+      {
+        "key": "Blog",
+        "value": "http://blog.zenika.com"
+      },
+      {
+        "key": "Formations",
+        "value": "http://www.zenika.com/Formation/notre-catalogue-formation.html"
+      },
+      {
+        "key": "Site",
+        "value": "http://www.zenika.com"
+      }
     ]
   },
   {
@@ -42,7 +56,20 @@
         "key": "GOLD",
         "value": null
       }
-    ]
+    ],
+    "userLinks" : [ {
+      "key" : "Blog",
+      "value" : "http://blog.viseo-bt.com/"
+    }, {
+      "key" : "LinkedIn",
+      "value" : "https://www.linkedin.com/company/objet-direct"
+    }, {
+      "key" : "Twitter",
+      "value" : "https://twitter.com/viseotech"
+    }, {
+      "key" : "Facebook",
+      "value" : "https://www.facebook.com/objetdirect/"
+    } ]
   },
   {
     "idMember": 226,
@@ -72,7 +99,14 @@
         "key": "SILVER",
         "value": null
       }
-    ]
+    ],
+    "userLinks" : [ {
+      "key" : "Projet Voltaire",
+      "value" : "http://www.projet-voltaire.fr"
+    }, {
+      "key" : "Woonoz",
+      "value" : "http://www.woonoz.com"
+    } ]
   },
   {
     "idMember": 365,
@@ -117,7 +151,18 @@
         "key": "SILVER",
         "value": null
       }
-    ]
+    ],
+    "shortDescription" : "SonarSource provides applications and services for continuous inspection of code quality.",
+    "userLinks" : [ {
+      "key" : "Site commercial",
+      "value" : "http://www.sonarsource.com"
+    }, {
+      "key" : "Site communautaire",
+      "value" : "http://www.sonarsource.org"
+    }, {
+      "key" : "In Action",
+      "value" : "http://nemo.sonarsource.org"
+    } ]
   },
   {
     "idMember": 673,

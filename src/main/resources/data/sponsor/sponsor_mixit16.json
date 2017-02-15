@@ -12,6 +12,20 @@
         "key": "GOLD",
         "value": "2015-11-15T00:00"
       }
+    ],
+    "userLinks": [
+      {
+        "key": "Blog",
+        "value": "http://blog.zenika.com"
+      },
+      {
+        "key": "Formations",
+        "value": "http://www.zenika.com/Formation/notre-catalogue-formation.html"
+      },
+      {
+        "key": "Site",
+        "value": "http://www.zenika.com"
+      }
     ]
   },
   {
@@ -26,6 +40,12 @@
       {
         "key": "GOLD",
         "value": "2015-12-01T00:00"
+      }
+    ],
+    "userLinks": [
+      {
+        "key": "Site Sopra Steria",
+        "value": "http://www.soprasteria.com/fr/carrieres"
       }
     ]
   },
@@ -42,7 +62,20 @@
         "key": "GOLD",
         "value": "2015-12-18T11:10:47"
       }
-    ]
+    ],
+    "userLinks" : [ {
+      "key" : "Site web",
+      "value" : "http://www.esker.fr/corporate/who_we_are/about_esker.asp"
+    }, {
+      "key" : "LinkedIn",
+      "value" : "https://www.linkedin.com/company/esker-france"
+    }, {
+      "key" : "Twitter",
+      "value" : "https://twitter.com/EskerFrance"
+    }, {
+      "key" : "YouTube",
+      "value" : "https://www.youtube.com/channel/UCRNuK_jrg-GinCQy8B5oAnQ"
+    } ]
   },
   {
     "idMember": 168,
@@ -57,7 +90,20 @@
         "key": "GOLD",
         "value": "2015-12-29T11:17:39"
       }
-    ]
+    ],
+    "userLinks" : [ {
+      "key" : "Blog",
+      "value" : "http://blog.viseo-bt.com/"
+    }, {
+      "key" : "LinkedIn",
+      "value" : "https://www.linkedin.com/company/objet-direct"
+    }, {
+      "key" : "Twitter",
+      "value" : "https://twitter.com/viseotech"
+    }, {
+      "key" : "Facebook",
+      "value" : "https://www.facebook.com/objetdirect/"
+    } ]
   },
   {
     "idMember": 2971,
@@ -72,7 +118,14 @@
         "key": "GOLD",
         "value": "2016-02-08T22:03:59"
       }
-    ]
+    ],
+    "userLinks" : [ {
+      "key" : "Website",
+      "value" : "http://fr.worldline.com/fr-fr/home.html"
+    }, {
+      "key" : "Facebook",
+      "value" : "https://www.facebook.com/WorldlineFrance"
+    } ]
   },
   {
     "idMember": 5812,
@@ -87,7 +140,17 @@
         "key": "GOLD",
         "value": "2016-02-17T17:46:18"
       }
-    ]
+    ],
+    "userLinks" : [ {
+      "key" : "Site web",
+      "value" : "http://www.sword-services.com/fr/#"
+    }, {
+      "key" : "LinkedIn",
+      "value" : "https://www.linkedin.com/company/5079515?trk=hp-feed-company-name"
+    }, {
+      "key" : "Twitter",
+      "value" : "https://twitter.com/sword_group"
+    } ]
   },
   {
     "idMember": 2941,
@@ -102,7 +165,11 @@
         "key": "GOLD",
         "value": "2016-03-03T12:10:24"
       }
-    ]
+    ],
+    "userLinks" : [ {
+      "key" : "Site web corporate",
+      "value" : "http://www.stormshield.eu"
+    } ]
   },
   {
     "idMember": 1083,
@@ -117,7 +184,14 @@
         "key": "GOLD",
         "value": "2016-02-12T13:37:59"
       }
-    ]
+    ],
+    "userLinks" : [ {
+      "key" : "Website",
+      "value" : "http://www.redhat.com/"
+    }, {
+      "key" : "Open Source and Standards",
+      "value" : "http://community.redhat.com"
+    } ]
   },
   {
     "idMember": 2871,
@@ -132,7 +206,11 @@
         "key": "SILVER",
         "value": "2015-12-15T00:00"
       }
-    ]
+    ],
+    "userLinks" : [ {
+      "key" : "ERDF",
+      "value" : "http://www.erdf.fr"
+    } ]
   },
   {
     "idMember": 992,
@@ -147,7 +225,20 @@
         "key": "SILVER",
         "value": "2015-12-17T00:00"
       }
-    ]
+    ],
+    "userLinks" : [ {
+      "key" : "CGI Recrute",
+      "value" : "http://www.cgi-recrute.fr/"
+    }, {
+      "key" : "CGI sur LinkedIn",
+      "value" : "http://www.linkedin.com/company/cgi"
+    }, {
+      "key" : "CGI sur Viadéo",
+      "value" : "http://fr.viadeo.com/fr/company/cgi"
+    }, {
+      "key" : "CGI sur Facebook",
+      "value" : "https://fr-fr.facebook.com/CGIFrance"
+    } ]
   },
   {
     "idMember": 663,
@@ -162,7 +253,18 @@
         "key": "SILVER",
         "value": "2016-01-08T23:55:50"
       }
-    ]
+    ],
+    "shortDescription" : "SonarSource provides applications and services for continuous inspection of code quality.",
+    "userLinks" : [ {
+      "key" : "Site commercial",
+      "value" : "http://www.sonarsource.com"
+    }, {
+      "key" : "Site communautaire",
+      "value" : "http://www.sonarsource.org"
+    }, {
+      "key" : "In Action",
+      "value" : "http://nemo.sonarsource.org"
+    } ]
   },
   {
     "idMember": 1031,
@@ -177,7 +279,11 @@
         "key": "SILVER",
         "value": "2016-01-17T00:03:27"
       }
-    ]
+    ],
+    "userLinks" : [ {
+      "key" : "Econocom-Osiatis",
+      "value" : "http://www.econocom-osiatis.com"
+    } ]
   },
   {
     "idMember": 3681,
@@ -192,7 +298,17 @@
         "key": "SILVER",
         "value": "2016-01-20T00:03:43"
       }
-    ]
+    ],
+    "userLinks" : [ {
+      "key" : "Site ISR",
+      "value" : "http://www.isr.fr/"
+    }, {
+      "key" : "ISR VIADEO",
+      "value" : "http://www.viadeo.com/fr/company/isr-informatique-systemes-reseaux"
+    }, {
+      "key" : "Twitter",
+      "value" : "https://twitter.com/SourcingISR"
+    } ]
   },
   {
     "idMember": 1811,
@@ -207,7 +323,11 @@
         "key": "SILVER",
         "value": "2016-02-02T13:53:39"
       }
-    ]
+    ],
+    "userLinks" : [ {
+      "key" : "Site SII Lyon",
+      "value" : "http://lyon.groupe-sii.com/fr/"
+    } ]
   },
   {
     "idMember": 6162,
@@ -237,7 +357,17 @@
         "key": "SILVER",
         "value": "2016-03-08T00:02:12"
       }
-    ]
+    ],
+    "userLinks" : [ {
+      "key" : "Site web",
+      "value" : "http://stackoverflow.com/"
+    }, {
+      "key" : "Twitter",
+      "value" : "https://twitter.com/StackOverflow"
+    }, {
+      "key" : "Site web",
+      "value" : "http://stackoverflow.com/jobs"
+    } ]
   },
   {
     "idMember": 2291,
@@ -252,7 +382,14 @@
         "key": "SILVER",
         "value": "2016-03-09T13:15:38"
       }
-    ]
+    ],
+    "userLinks" : [ {
+      "key" : "alfene",
+      "value" : "http://www.alfene.com"
+    }, {
+      "key" : "Twitter",
+      "value" : "https://twitter.com/alpaysant"
+    } ]
   },
   {
     "idMember": 7322,
@@ -267,7 +404,17 @@
         "key": "SILVER",
         "value": "2016-03-12T09:36:33"
       }
-    ]
+    ],
+    "userLinks" : [ {
+      "key" : "Site web",
+      "value" : "http://www.amaris.com"
+    }, {
+      "key" : "Twitter",
+      "value" : "https://twitter.com/Amaris"
+    }, {
+      "key" : "Google+",
+      "value" : "https://plus.google.com/+amaris"
+    } ]
   },
   {
     "idMember": 7332,
@@ -282,22 +429,20 @@
         "key": "SILVER",
         "value": "2016-03-12T09:36:28"
       }
-    ]
-  },
-  {
-    "idMember": 5043,
-    "login": "mixit",
-    "firstname": null,
-    "lastname": "MIX-IT",
-    "logo": "sponsor/undefined.svg",
-    "hash": "76bfb8c7569b4cefaa40f9b8fcd18afa",
-    "shortDescription": "Soutenez MiXiT 2016",
-    "level": [
-      {
-        "key": "SILVER",
-        "value": null
-      }
-    ]
+    ],
+    "userLinks" : [ {
+      "key" : "Site web",
+      "value" : "http://www.boot-start.com/"
+    }, {
+      "key" : "Twitter",
+      "value" : "https://twitter.com/boot_start"
+    }, {
+      "key" : "LinkedIn",
+      "value" : "https://www.linkedin.com/company/boot-start"
+    }, {
+      "key" : "Facebook",
+      "value" : "https://www.facebook.com/bootstart/"
+    } ]
   },
   {
     "idMember": 7202,
@@ -312,7 +457,17 @@
         "key": "LANYARD",
         "value": null
       }
-    ]
+    ],
+    "userLinks" : [ {
+      "key" : "Site web",
+      "value" : "https://breaz.io/"
+    }, {
+      "key" : "Site web",
+      "value" : "https://hired.com/"
+    }, {
+      "key" : "Twitter",
+      "value" : "https://twitter.com/breazio"
+    } ]
   },
   {
     "idMember": 5902,
@@ -327,7 +482,14 @@
         "key": "PARTY",
         "value": "2016-02-08T13:22:14"
       }
-    ]
+    ],
+    "userLinks" : [ {
+      "key" : "Site web",
+      "value" : "http://www.onlylyon.com/"
+    }, {
+      "key" : "Twitter",
+      "value" : "https://twitter.com/OnlyLyon"
+    } ]
   },
   {
     "idMember": 5682,
@@ -342,7 +504,14 @@
         "key": "HOSTING",
         "value": "2016-01-29T22:51:44"
       }
-    ]
+    ],
+    "userLinks" : [ {
+      "key" : "Site web",
+      "value" : "http://run.pivotal.io"
+    }, {
+      "key" : "Twitter",
+      "value" : "https://twitter.com/pivotalws"
+    } ]
   },
   {
     "idMember": 7812,
@@ -357,7 +526,14 @@
         "key": "VIDEO",
         "value": "2016-03-31T00:08:50"
       }
-    ]
+    ],
+    "userLinks" : [ {
+      "key" : "Site web",
+      "value" : "http://www.infoq.com/fr/"
+    }, {
+      "key" : "Twitter",
+      "value" : "https://twitter.com/infoqfr?lang=fr"
+    } ]
   },
   {
     "idMember": 7822,
@@ -372,6 +548,10 @@
         "key": "COMMUNITY",
         "value": "2016-03-31T00:09:48"
       }
-    ]
+    ],
+    "userLinks" : [ {
+      "key" : "Site web",
+      "value" : "http://www.lyontechhub.org/"
+    } ]
   }
 ]
