@@ -28,7 +28,7 @@ class UserController(val repository: UserRepository, val markdownConverter: Mark
             (GET("/user/") or GET("/users/")) { findAllView() }
             GET("/user/{login}", this@UserController::findOneView)
             GET("/speaker/{login}", this@UserController::findOneView)
-            GET("/staff/", this@UserController::findAllStaff)
+            GET("/about/", this@UserController::findAboutView)
         }
         accept(APPLICATION_JSON).apply {
             GET("/api/user/", this@UserController::findAll)
@@ -105,12 +105,12 @@ class UserController(val repository: UserRepository, val markdownConverter: Mark
                 .body(fromObject(u))
             }
 
-    fun findAllStaff(req: ServerRequest) = repository.findByRole(Role.STAFF)
+    fun findAboutView(req: ServerRequest) = repository.findByRole(Role.STAFF)
             .collectList()
             .then { u ->
                 val users = u.map { prepareForHtmlDisplay(it) }
                 Collections.shuffle(users);
-                ok().render("staff",  mapOf(Pair("staff", users)))
+                ok().render("about",  mapOf(Pair("staff", users)))
             }
 
     fun prepareForHtmlDisplay(user :User): User {
