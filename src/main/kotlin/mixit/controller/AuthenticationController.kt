@@ -5,7 +5,7 @@ import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.server.*
-import org.springframework.web.reactive.function.server.RequestPredicates.accept
+import org.springframework.web.reactive.function.server.RequestPredicates.*
 import org.springframework.web.reactive.function.server.ServerResponse.*
 
 @Controller
@@ -18,7 +18,7 @@ class AuthenticationController : LazyRouterFunction() {
             // TODO Use POST
             GET("/logout", this@AuthenticationController::logout)
         }
-        accept(APPLICATION_FORM_URLENCODED).apply {
+        contentType(APPLICATION_FORM_URLENCODED).apply {
             POST("/login", this@AuthenticationController::login)
         }
     }
