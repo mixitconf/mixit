@@ -10,7 +10,7 @@ import org.springframework.http.HttpHeaders
 import org.springframework.http.MediaType.*
 import org.springframework.web.reactive.function.fromPublisher
 import org.springframework.web.reactive.function.server.*
-import org.springframework.web.reactive.function.server.RequestPredicates.accept
+import org.springframework.web.reactive.function.server.RequestPredicates.*
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.stereotype.Controller
 import java.time.format.DateTimeFormatter
@@ -25,11 +25,9 @@ class ArticleController(val repository: ArticleRepository, val markdownConverter
     // TODO Remove this@ArticleController when KT-15667 will be fixed
     override val routes: RouterDsl.() -> Unit = {
         accept(TEXT_HTML).apply {
-            GET("/blog/", this@ArticleController::findAllView)
-            GET("/blog/{id}", this@ArticleController::findOneView)
-            // Old routes used by the previous version of our website
-            GET("/articles/", this@ArticleController::findAllView)
-            GET("/article/{id}", this@ArticleController::findOneView)
+            // /articles/** are old routes used by the previous version of our website
+            (GET("/blog/") or GET("/articles/")) { findAllView(it) }
+            (GET("/blog/{id}") or GET("/article/{id}")) { findOneView(it) }
         }
         accept(APPLICATION_JSON).apply {
             GET("/api/blog/", this@ArticleController::findAll)

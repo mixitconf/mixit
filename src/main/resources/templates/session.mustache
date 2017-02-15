@@ -1,9 +1,27 @@
 {{> header}}
 
-{{session.format}} - {{session.event}} : {{session.title}}
+<div class="mxt-wrapper--space"></div>
 
-<br/>
+<div class="row">
+    <div class="column large-8 large-offset-2">
 
-{{session.summary}}
+        <h1 class="text-center">{{#i18n}}session.title{{/i18n}}</h1>
+        <hr />
+        <div class="callout">
+            <article>
+                <h2>{{session.title}}</h2>
+                <p class="subheader">{{session.event}} / #{{session.format}}</p>
+                <p>{{session.summary}}</p>
+                <p class="subheader">
+                    {{#session.speakers}}
+                        <a href="{{localePrefix}}/speaker/{{login}}">{{firstname}} {{lastname}}</a> /
+                    {{/session.speakers}}
+                </p>
+
+            </article>
+
+        </div>
+    </div>
+</div>
 
 {{> footer}}

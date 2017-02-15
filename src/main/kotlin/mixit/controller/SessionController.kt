@@ -9,7 +9,7 @@ import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.fromPublisher
 import org.springframework.web.reactive.function.server.*
-import org.springframework.web.reactive.function.server.RequestPredicates.accept
+import org.springframework.web.reactive.function.server.RequestPredicates.*
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import java.time.LocalDateTime
 
@@ -23,7 +23,7 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
         accept(TEXT_HTML).apply {
             GET("/sessions/", this@SessionController::findAllView)
             GET("/{year}/sessions/", this@SessionController::findByEventView)
-            GET("/session/{id}", this@SessionController::findOneView)
+            (GET("/session/{id}") or GET("/session/{id}/")) { findOneView(it) }
         }
         accept(APPLICATION_JSON).apply {
             GET("/api/session/{login}", this@SessionController::findOne)

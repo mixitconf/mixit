@@ -28,7 +28,6 @@ class UserController(val repository: UserRepository, val markdownConverter: Mark
             (GET("/user/") or GET("/users/")) { findAllView() }
             GET("/user/{login}", this@UserController::findOneView)
             GET("/speaker/{login}", this@UserController::findOneView)
-            GET("/sponsor/{login}", this@UserController::findOneView)
             GET("/staff/", this@UserController::findAllStaff)
         }
         accept(APPLICATION_JSON).apply {

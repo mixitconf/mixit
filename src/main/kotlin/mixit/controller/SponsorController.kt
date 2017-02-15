@@ -19,7 +19,6 @@ class SponsorController(val eventRepository: EventRepository, val userRepository
     override val routes: RouterDsl.() -> Unit = {
         accept(TEXT_HTML).apply {
             GET("/sponsors/", this@SponsorController::findAllView)
-            GET("/sponsors/{id}", this@SponsorController::findOneView)
         }
     }
 
@@ -32,13 +31,6 @@ class SponsorController(val eventRepository: EventRepository, val userRepository
             Pair("sponsors-hosting", sponsors[HOSTING]),
             Pair("sponsors-lanyard", sponsors[LANYARD]),
             Pair("sponsors-party", sponsors[PARTY])
-        ))
-    }
-
-    fun findOneView(req: ServerRequest) = userRepository.findOne(req.pathVariable("id")).then { s ->
-        ok().render("sponsor", mapOf(
-                Pair("sponsor", s),
-                Pair("description", if (s.longDescription.isEmpty()) s.shortDescription else s.longDescription)
         ))
     }
 
