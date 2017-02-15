@@ -1,7 +1,7 @@
 //import EventLoader from './event'
-import * as $ from 'jquery';
-window['jQuery'] = $;
-import 'foundation-sites';
+//import * as $ from 'jquery';
+//window['jQuery'] = $;
+//import 'foundation-sites';
 
 class MixitApp{
     bootstrap(){
@@ -13,6 +13,6 @@ class MixitApp{
 }
 
 new MixitApp().bootstrap();
-$(() => {
-  $(document).foundation();
-});
+//$(() => {
+//  $(document).foundation();
+//});
