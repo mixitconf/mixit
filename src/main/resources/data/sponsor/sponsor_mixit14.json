@@ -179,7 +179,11 @@
         "key": "SILVER",
         "value": null
       }
-    ]
+    ],
+    "userLinks" : [ {
+      "key" : "SERLI",
+      "value" : "http://www.serli.com"
+    } ]
   },
   {
     "idMember": 1015,
