@@ -4,7 +4,7 @@
   "launch_path": "/",
   "start_url": "/"
   "icons": {
-    "128": "/images/touch/icon-128x128.png"
+    "128": "/images/png/mxt-favicon_default.png"
   },
   "developer": {
     "name": "Guillaume EHRET",
