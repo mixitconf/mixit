@@ -11,13 +11,12 @@
             <article>
                 <h2>{{session.title}}</h2>
                 <p class="subheader">{{session.event}} / #{{session.format}}</p>
-                <p>{{session.summary}}</p>
+                <p>{{session.description}}</p>
                 <p class="subheader">
                     {{#session.speakers}}
                         <a href="{{localePrefix}}/speaker/{{login}}">{{firstname}} {{lastname}}</a> /
                     {{/session.speakers}}
                 </p>
-                <p>{{session.description}}</p>
             </article>
 
         </div>
