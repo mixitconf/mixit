@@ -7,12 +7,11 @@ import mixit.repository.ArticleRepository
 import mixit.support.LazyRouterFunction
 import mixit.support.MarkdownConverter
 import org.springframework.http.HttpHeaders
-import org.springframework.http.MediaType.*
-import org.springframework.web.reactive.function.fromPublisher
-import org.springframework.web.reactive.function.server.*
-import org.springframework.web.reactive.function.server.RequestPredicates.*
-import org.springframework.web.reactive.function.server.ServerResponse.ok
+import org.springframework.http.MediaType.APPLICATION_JSON_UTF8
 import org.springframework.stereotype.Controller
+import org.springframework.web.reactive.function.fromPublisher
+import org.springframework.web.reactive.function.server.ServerRequest
+import org.springframework.web.reactive.function.server.ServerResponse.ok
 import java.time.format.DateTimeFormatter
 
 
@@ -27,7 +26,7 @@ class ArticleController(val repository: ArticleRepository, val markdownConverter
         accept(TEXT_HTML).apply {
             // /articles/** are old routes used by the previous version of our website
             (GET("/blog/") or GET("/articles/")) { findAllView(it) }
-            (GET("/blog/{id}") or GET("/article/{id}")) { findOneView(it) }
+            (GET("/blog/{id}") or GET("/article/{id}") or GET("/article/{id}/")) { findOneView(it) }
         }
         accept(APPLICATION_JSON).apply {
             GET("/api/blog/", this@ArticleController::findAll)
