@@ -1,14 +1,22 @@
 {{> header}}
 
+<div class="mxt-wrapper--space"></div>
+
 <div class="row">
     <div class="column large-8 large-offset-2">
 
-        <h1 class="text-center">Work in progress</h1>
+        <h1 class="text-center">{{user.firstname}} {{user.lastname}}</h1>
         <hr />
         <div class="callout">
-            We are working on this page and you will be able to see the detail about {{user.firstname}} very soon!
+            <article>
+                <p class="subheader">{{user.company}}</p>
+                <p>{{user.shortDescription}}</p>
+                <p class="subheader">
+                    {{#user.links}}
+                        <a href="{{url}}">{{name}}</a> /
+                    {{/user.links}}
+                </p>
+            </article>
         </div>
     </div>
 </div>
-
-{{> footer}}

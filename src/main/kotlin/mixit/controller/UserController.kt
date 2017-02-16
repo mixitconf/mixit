@@ -26,8 +26,7 @@ class UserController(val repository: UserRepository, val markdownConverter: Mark
     override val routes: Routes.() -> Unit = {
         accept(TEXT_HTML).apply {
             (GET("/user/") or GET("/users/")) { findAllView() }
-            GET("/user/{login}", this@UserController::findOneView)
-            GET("/speaker/{login}", this@UserController::findOneView)
+            (GET("/user/{login}") or GET("/speaker/{login}") or GET("/member/{login}") or GET("/sponsor/{login}")) { findOneView(it) }
             GET("/about/", this@UserController::findAboutView)
         }
         accept(APPLICATION_JSON).apply {
@@ -48,12 +47,12 @@ class UserController(val repository: UserRepository, val markdownConverter: Mark
             try{
                 val idLegacy = req.pathVariable("login").toLong()
                 repository.findByLegacyId(idLegacy)
-                        .then { u -> ok().render("user", mapOf(Pair("user", u))) }
+                        .then { u -> ok().render("user", mapOf(Pair("user", prepareForHtmlDisplay(u)))) }
 
             }
             catch (e:NumberFormatException){
                 repository.findOne(URLDecoder.decode(req.pathVariable("login"), "UTF-8"))
-                        .then { u -> ok().render("user", mapOf(Pair("user", u))) }
+                        .then { u -> ok().render("user", mapOf(Pair("user", prepareForHtmlDisplay(u)))) }
             }
 
     fun findOneSponsorView(req: ServerRequest) =
