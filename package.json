@@ -30,10 +30,13 @@
   },
   "dependencies": {
     "@types/core-js": "^0.9.35",
+    "@types/service_worker_api": "^0.0.8",
     "@types/whatwg-fetch": "^0.0.33",
     "foundation-sites": "^6.3.0",
-    "motion-ui": "^1.2.2",
     "jquery": "^3.1.1",
+    "motion-ui": "^1.2.2",
+    "sw-precache": "^4.3.0",
+    "sw-toolbox": "^3.4.0",
     "vinyl-named": "^1.1.0",
     "webpack-stream": "^3.2.0"
   }

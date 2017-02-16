@@ -4,6 +4,7 @@ import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import del from 'del';
 import runSequence from 'run-sequence';
+import swPrecache from 'sw-precache';
 
 const $ = gulpLoadPlugins();
 const imagemin = require('gulp-imagemin');
@@ -20,6 +21,7 @@ const paths = {
     'node_modules/jquery/dist/jquery.slim.js'
   ],
   dist: {
+    sw: 'build/resources/main/static',
     css : 'build/resources/main/static/css',
     images : 'build/resources/main/static/images',
     js: 'build/resources/main/static/js'
@@ -114,6 +116,37 @@ gulp.task('ts-to-js', ['ts'], () =>
       .pipe(gulp.dest(`${ paths.dist.js}`))
 );
 
+// Copy over the scripts that are used in importScripts as part of the generate-service-worker task.
+gulp.task('copy-sw-scripts', () => {
+  return gulp.src(['node_modules/sw-toolbox/sw-toolbox.js'])
+    .pipe(gulp.dest(`${ paths.dist.js}`));
+});
+
+// Generate the service worker configuration for the offline mode
+gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
+  let id = new Date().toISOString().slice(0, 13);
+  return swPrecache.write(`${paths.tmp}/service-worker.js`, {
+    cacheId: `mixit-${id}`,
+    // sw-toolbox.js needs to be listed first. It sets up methods used in runtime-caching.js.
+    importScripts: [
+      '/js/sw-toolbox.js',
+      '/js/runtime-caching.js'
+    ],
+    staticFileGlobs: [ `${ paths.dist.sw}/**/*.{js,html,css,png,jpg,json,gif,svg,webp,eot,ttf,woff,woff2}`],
+    stripPrefix: `${ paths.dist.sw}/`
+  });
+});
+
+gulp.task('package-service-worker', ['generate-service-worker'], () =>
+  gulp.src(`${paths.tmp}/service-worker.js`)
+    .pipe($.sourcemaps.init())
+    .pipe($.sourcemaps.write())
+    .pipe($.uglify({preserveComments: 'none'}))
+    .pipe($.size({title: 'scripts'}))
+    .pipe($.sourcemaps.write('.'))
+    .pipe(gulp.dest(`${ paths.dist.sw}`))
+);
+
 // Clean output directory
 gulp.task('clean', () => del([paths.tmp, paths.dist.images, paths.dist.js], {dot: true}));
 
@@ -127,6 +160,7 @@ gulp.task('watch', ['default'], () => {
 gulp.task('default', ['clean'], cb =>
   runSequence(
     ['styles', 'images', 'js-vendors', 'ts-to-js'],
+    'package-service-worker',
     cb
   )
 );
