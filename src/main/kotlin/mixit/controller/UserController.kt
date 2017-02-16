@@ -5,28 +5,30 @@ import mixit.model.User
 import mixit.repository.UserRepository
 import mixit.support.LazyRouterFunction
 import mixit.support.MarkdownConverter
+import org.springframework.beans.factory.annotation.Value
+import org.springframework.http.HttpStatus.*
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.BodyInserters.fromObject
 import org.springframework.web.reactive.function.fromPublisher
 import org.springframework.web.reactive.function.server.*
-import org.springframework.web.reactive.function.server.RequestPredicates.GET
 import org.springframework.web.reactive.function.server.RequestPredicates.accept
-import org.springframework.web.reactive.function.server.ServerResponse.created
-import org.springframework.web.reactive.function.server.ServerResponse.ok
+import org.springframework.web.reactive.function.server.RequestPredicates.*
+import org.springframework.web.reactive.function.server.ServerResponse.*
 import java.net.URI
 import java.net.URLDecoder
 import java.util.*
 
 
 @Controller
-class UserController(val repository: UserRepository, val markdownConverter: MarkdownConverter) : LazyRouterFunction() {
+class UserController(val repository: UserRepository, val markdownConverter: MarkdownConverter,
+                     @Value("\${baseUri}") val baseUri: String) : LazyRouterFunction() {
 
     // TODO Remove this@ArticleController when KT-15667 will be fixed
     override val routes: Routes.() -> Unit = {
         accept(TEXT_HTML).route {
-            (GET("/user/") or GET("/users/")) { findAllView() }
-            (GET("/user/{login}") or GET("/speaker/{login}") or GET("/member/{login}") or GET("/sponsor/{login}")) { findOneView(it) }
+            (GET("/user/{login}") or GET("/speaker/{login}") or GET("/sponsor/{login}")) { findOneView(it) }
+            GET("/member/{login}") { status(PERMANENT_REDIRECT).location(URI.create("$baseUri/user/${it.queryParam("login")}")).build() }
             GET("/about/", this@UserController::findAboutView)
         }
         accept(APPLICATION_JSON).route {
@@ -43,33 +45,14 @@ class UserController(val repository: UserRepository, val markdownConverter: Mark
         }
     }
 
-    fun findOneView(req: ServerRequest) =
-            try{
-                val idLegacy = req.pathVariable("login").toLong()
-                repository.findByLegacyId(idLegacy)
-                        .then { u -> ok().render("user", mapOf(Pair("user", prepareForHtmlDisplay(u)))) }
-
-            }
-            catch (e:NumberFormatException){
-                repository.findOne(URLDecoder.decode(req.pathVariable("login"), "UTF-8"))
-                        .then { u -> ok().render("user", mapOf(Pair("user", prepareForHtmlDisplay(u)))) }
-            }
-
-    fun findOneSponsorView(req: ServerRequest) =
-        try{
-            val idLegacy = req.pathVariable("login").toLong()
-            repository.findByLegacyId(idLegacy)
-                    .then { u -> ok().render("sponsor", mapOf(Pair("sponsor", u))) }
-
-        }
-        catch (e:NumberFormatException){
-            repository.findOne(URLDecoder.decode(req.pathVariable("login"), "UTF-8"))
-                    .then { u -> ok().render("sponsor", mapOf(Pair("sponsor", u))) }
-        }
-
-    fun findAllView() = repository.findAll()
-            .collectList()
-            .then { u -> ok().render("users",  mapOf(Pair("users", u))) }
+    fun findOneView(req: ServerRequest) = try {
+        val idLegacy = req.pathVariable("login").toLong()
+        repository.findByLegacyId(idLegacy)
+                .then { u -> ok().render("user", mapOf(Pair("user", u))) }
+    } catch (e:NumberFormatException) {
+        repository.findOne(URLDecoder.decode(req.pathVariable("login"), "UTF-8"))
+                .then { u -> ok().render("user", mapOf(Pair("user", u))) }
+    }
 
     fun findOne(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
                 fromPublisher(repository.findOne(req.pathVariable("login"))))
