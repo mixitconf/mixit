@@ -24,12 +24,12 @@ class UserController(val repository: UserRepository, val markdownConverter: Mark
 
     // TODO Remove this@ArticleController when KT-15667 will be fixed
     override val routes: Routes.() -> Unit = {
-        accept(TEXT_HTML).apply {
+        accept(TEXT_HTML).route {
             (GET("/user/") or GET("/users/")) { findAllView() }
             (GET("/user/{login}") or GET("/speaker/{login}") or GET("/member/{login}") or GET("/sponsor/{login}")) { findOneView(it) }
             GET("/about/", this@UserController::findAboutView)
         }
-        accept(APPLICATION_JSON).apply {
+        accept(APPLICATION_JSON).route {
             GET("/api/user/", this@UserController::findAll)
             POST("/api/user/", this@UserController::create)
             GET("/api/user/{login}", this@UserController::findOne)

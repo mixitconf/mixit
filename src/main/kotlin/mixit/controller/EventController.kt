@@ -16,7 +16,7 @@ class EventController(val repository: EventRepository) : LazyRouterFunction() {
 
     // TODO Remove this@ArticleController when KT-15667 will be fixed
     override val routes: Routes.() -> Unit = {
-        accept(APPLICATION_JSON).apply {
+        accept(APPLICATION_JSON).route {
             GET("/api/event/", this@EventController::findAll)
             GET("/api/event/{login}", this@EventController::findOne)
         }

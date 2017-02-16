@@ -16,10 +16,10 @@ class NewsController : LazyRouterFunction() {
 
     // TODO Remove this@ArticleController when KT-15667 will be fixed
     override val routes: Routes.() -> Unit = {
-        accept(TEXT_HTML).apply {
+        accept(TEXT_HTML).route {
             GET("/news", this@NewsController::newsView)
         }
-        accept(TEXT_EVENT_STREAM).apply {
+        accept(TEXT_EVENT_STREAM).route {
             GET("/news/sse", this@NewsController::newsSse)
         }
     }

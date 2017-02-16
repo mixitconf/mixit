@@ -17,7 +17,7 @@ class SponsorController(val eventRepository: EventRepository, val userRepository
 
     // TODO Remove this@ArticleController when KT-15667 will be fixed
     override val routes: Routes.() -> Unit = {
-        accept(TEXT_HTML).apply {
+        accept(TEXT_HTML).route {
             GET("/sponsors/", this@SponsorController::findAllView)
         }
     }

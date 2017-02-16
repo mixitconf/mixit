@@ -20,12 +20,12 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
 
     // TODO Remove this@ArticleController when KT-15667 will be fixed
     override val routes: Routes.() -> Unit = {
-        accept(TEXT_HTML).apply {
+        accept(TEXT_HTML).route {
             GET("/sessions/", this@SessionController::findAllView)
             GET("/{year}/sessions/", this@SessionController::findByEventView)
             (GET("/session/{id}") or GET("/session/{id}/")) { findOneView(it) }
         }
-        accept(APPLICATION_JSON).apply {
+        accept(APPLICATION_JSON).route {
             GET("/api/session/{login}", this@SessionController::findOne)
             GET("/api/{year}/session/", this@SessionController::findByEventId)
         }

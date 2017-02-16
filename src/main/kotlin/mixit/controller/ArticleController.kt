@@ -24,12 +24,12 @@ class ArticleController(val repository: ArticleRepository, val markdownConverter
 
     // TODO Remove this@ArticleController when KT-15667 will be fixed
     override val routes: Routes.() -> Unit = {
-        accept(TEXT_HTML).apply {
+        accept(TEXT_HTML).route {
             // /articles/** are old routes used by the previous version of our website
             (GET("/blog/") or GET("/articles/")) { findAllView(it) }
             (GET("/blog/{id}") or GET("/article/{id}")) { findOneView(it) }
         }
-        accept(APPLICATION_JSON).apply {
+        accept(APPLICATION_JSON).route {
             GET("/api/blog/", this@ArticleController::findAll)
             GET("/api/blog/{id}", this@ArticleController::findOne)
         }

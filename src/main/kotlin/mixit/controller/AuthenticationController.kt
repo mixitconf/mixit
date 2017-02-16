@@ -13,12 +13,12 @@ class AuthenticationController : LazyRouterFunction() {
 
     // TODO Remove this@ArticleController when KT-15667 will be fixed
     override val routes: Routes.() -> Unit = {
-        accept(TEXT_HTML).apply {
+        accept(TEXT_HTML).route {
             GET("/login", this@AuthenticationController::loginView)
             // TODO Use POST
             GET("/logout", this@AuthenticationController::logout)
         }
-        contentType(APPLICATION_FORM_URLENCODED).apply {
+        contentType(APPLICATION_FORM_URLENCODED).route {
             POST("/login", this@AuthenticationController::login)
         }
     }

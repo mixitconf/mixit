@@ -3,7 +3,6 @@ package mixit.controller
 import mixit.model.EventSponsoring
 import mixit.model.Logo
 import mixit.model.SponsorshipLevel.*
-import mixit.model.User
 import mixit.repository.EventRepository
 import mixit.support.LazyRouterFunction
 import org.springframework.core.io.ClassPathResource
@@ -19,7 +18,7 @@ class GlobalController(val repository: EventRepository) : LazyRouterFunction() {
 
     // TODO Remove this@ArticleController when KT-15667 will be fixed
     override val routes: Routes.() -> Unit = {
-        accept(TEXT_HTML).apply {
+        accept(TEXT_HTML).route {
             GET("/", this@GlobalController::homeView)
         }
         resources("/**", ClassPathResource("static/"))
