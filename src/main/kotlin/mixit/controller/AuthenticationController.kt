@@ -12,7 +12,7 @@ import org.springframework.web.reactive.function.server.ServerResponse.*
 class AuthenticationController : LazyRouterFunction() {
 
     // TODO Remove this@ArticleController when KT-15667 will be fixed
-    override val routes: RouterDsl.() -> Unit = {
+    override val routes: Routes.() -> Unit = {
         accept(TEXT_HTML).apply {
             GET("/login", this@AuthenticationController::loginView)
             // TODO Use POST

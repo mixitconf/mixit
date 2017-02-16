@@ -15,7 +15,7 @@ import java.time.Duration.ofMillis
 class NewsController : LazyRouterFunction() {
 
     // TODO Remove this@ArticleController when KT-15667 will be fixed
-    override val routes: RouterDsl.() -> Unit = {
+    override val routes: Routes.() -> Unit = {
         accept(TEXT_HTML).apply {
             GET("/news", this@NewsController::newsView)
         }

@@ -23,7 +23,7 @@ class ArticleController(val repository: ArticleRepository, val markdownConverter
     private val englishDateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
 
     // TODO Remove this@ArticleController when KT-15667 will be fixed
-    override val routes: RouterDsl.() -> Unit = {
+    override val routes: Routes.() -> Unit = {
         accept(TEXT_HTML).apply {
             // /articles/** are old routes used by the previous version of our website
             (GET("/blog/") or GET("/articles/")) { findAllView(it) }

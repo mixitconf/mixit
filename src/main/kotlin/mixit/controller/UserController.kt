@@ -23,7 +23,7 @@ import java.util.*
 class UserController(val repository: UserRepository, val markdownConverter: MarkdownConverter) : LazyRouterFunction() {
 
     // TODO Remove this@ArticleController when KT-15667 will be fixed
-    override val routes: RouterDsl.() -> Unit = {
+    override val routes: Routes.() -> Unit = {
         accept(TEXT_HTML).apply {
             (GET("/user/") or GET("/users/")) { findAllView() }
             GET("/user/{login}", this@UserController::findOneView)
