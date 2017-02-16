@@ -5,15 +5,14 @@ import mixit.model.User
 import mixit.repository.UserRepository
 import mixit.support.LazyRouterFunction
 import mixit.support.MarkdownConverter
-import org.springframework.http.MediaType.*
+import org.springframework.http.MediaType.APPLICATION_JSON_UTF8
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.BodyInserters.fromObject
 import org.springframework.web.reactive.function.fromPublisher
-import org.springframework.web.reactive.function.server.*
-import org.springframework.web.reactive.function.server.RequestPredicates.GET
-import org.springframework.web.reactive.function.server.RequestPredicates.accept
+import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse.created
 import org.springframework.web.reactive.function.server.ServerResponse.ok
+import org.springframework.web.reactive.function.server.bodyToMono
 import java.net.URI
 import java.net.URLDecoder
 import java.util.*
@@ -26,8 +25,8 @@ class UserController(val repository: UserRepository, val markdownConverter: Mark
     override val routes: Routes.() -> Unit = {
         accept(TEXT_HTML).apply {
             (GET("/user/") or GET("/users/")) { findAllView() }
-            (GET("/user/{login}") or GET("/speaker/{login}") or GET("/member/{login}") or GET("/sponsor/{login}")) { findOneView(it) }
-            GET("/about/", this@UserController::findAboutView)
+            (GET("/user/{login}") or GET("/speaker/{login}") or GET("/member/{login}") or GET("/member/member/{login}") or GET("/sponsor/{login}") or GET("/member/sponsor/{login}")) { findOneView(it) }
+            (GET("/about/") or GET("/about")) { findAboutView() }
         }
         accept(APPLICATION_JSON).apply {
             GET("/api/user/", this@UserController::findAll)
@@ -104,7 +103,7 @@ class UserController(val repository: UserRepository, val markdownConverter: Mark
                 .body(fromObject(u))
             }
 
-    fun findAboutView(req: ServerRequest) = repository.findByRole(Role.STAFF)
+    fun findAboutView() = repository.findByRole(Role.STAFF)
             .collectList()
             .then { u ->
                 val users = u.map { prepareForHtmlDisplay(it) }

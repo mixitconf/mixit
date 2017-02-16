@@ -5,11 +5,10 @@ import mixit.repository.EventRepository
 import mixit.repository.SessionRepository
 import mixit.support.LazyRouterFunction
 import mixit.support.MarkdownConverter
-import org.springframework.http.MediaType.*
+import org.springframework.http.MediaType.APPLICATION_JSON_UTF8
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.fromPublisher
-import org.springframework.web.reactive.function.server.*
-import org.springframework.web.reactive.function.server.RequestPredicates.*
+import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import java.time.LocalDateTime
 
@@ -21,9 +20,9 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
     // TODO Remove this@ArticleController when KT-15667 will be fixed
     override val routes: Routes.() -> Unit = {
         accept(TEXT_HTML).apply {
-            GET("/sessions/", this@SessionController::findAllView)
+            (GET("/sessions/") or GET("/sessions/")) { findAllView(it) }
             GET("/{year}/sessions/", this@SessionController::findByEventView)
-            (GET("/session/{id}") or GET("/session/{id}/")) { findOneView(it) }
+            (GET("/session/{id}") or GET("/session/{id}/") or GET("/session/{id}/{sluggifiedTitle}/")) { findOneView(it) }
         }
         accept(APPLICATION_JSON).apply {
             GET("/api/session/{login}", this@SessionController::findOne)
