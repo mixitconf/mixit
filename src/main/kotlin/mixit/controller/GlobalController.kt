@@ -20,6 +20,7 @@ class GlobalController(val repository: EventRepository) : LazyRouterFunction() {
     override val routes: Routes.() -> Unit = {
         accept(TEXT_HTML).route {
             GET("/", this@GlobalController::homeView)
+            GET("/archives/") { ok().render("archives") }
         }
         resources("/**", ClassPathResource("static/"))
     }
