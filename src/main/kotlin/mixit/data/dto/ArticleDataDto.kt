@@ -21,12 +21,12 @@ class ArticleDataDto(
                 Pair(Language.ENGLISH, title)
         )
         val headline: Map<Language, String> = mapOf(
-                Pair(Language.FRENCH, resume),
-                Pair(Language.ENGLISH, headline)
+                Pair(Language.FRENCH, resume.replace("/member/member", "/user")),
+                Pair(Language.ENGLISH, headline.replace("/member/member", "/user"))
         )
         val content: Map<Language, String> = mapOf(
-                Pair(Language.FRENCH, contenu),
-                Pair(Language.ENGLISH, content)
+                Pair(Language.FRENCH, contenu.replace("/member/member", "/user")),
+                Pair(Language.ENGLISH, content.replace("/member/member", "/user"))
         )
         return Article(author.toUser(), postedAt, title, headline, content, "$id")
     }

@@ -28,7 +28,7 @@ class UserController(val repository: UserRepository, val markdownConverter: Mark
     override val routes: Routes.() -> Unit = {
         accept(TEXT_HTML).route {
             (GET("/user/{login}") or GET("/speaker/{login}") or GET("/sponsor/{login}")) { findOneView(it) }
-            GET("/member/{login}") { status(PERMANENT_REDIRECT).location(URI.create("$baseUri/user/${it.queryParam("login")}")).build() }
+            GET("/member/{login}") { status(PERMANENT_REDIRECT).location(URI.create("$baseUri/user/${it.pathVariable("login")}")).build() }
             GET("/about/", this@UserController::findAboutView)
         }
         accept(APPLICATION_JSON).route {
