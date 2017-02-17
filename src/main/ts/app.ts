@@ -14,7 +14,7 @@ class MixitApp{
         );
 
         if ('serviceWorker' in navigator && (window.location.protocol === 'https:' || isLocalhost)) {
-            navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+            navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
                 if (typeof registration.update === 'function') {
                     registration.update();
                 }
