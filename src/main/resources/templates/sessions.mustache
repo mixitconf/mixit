@@ -11,7 +11,12 @@
             {{#sessions}}
                 <article>
                     <h2><a href="{{localePrefix}}/session/{{id}}" class="mxt-title--article">{{title}}</a></h2>
-                    <p class="subheader">{{event}} / #{{format}}</p>
+                    <p class="subheader">
+                        {{event}} / #{{format}}
+                        {{#video}}
+                            / &#x25ba;&nbsp;Watch <a href="{{video}}">the video</a>
+                        {{/video}}
+                    </p>
                     <p>{{summary}}</p>
                     <p class="subheader">
                         {{#speakers}}
