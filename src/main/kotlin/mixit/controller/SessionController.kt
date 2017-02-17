@@ -28,7 +28,7 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
             GET("/sessions/", this@SessionController::findAllView)
             GET("/{year}/sessions/", this@SessionController::findByEventView)
             GET("/session/{id}",  this@SessionController::findOneView)
-            GET("/session/{id}/") { status(PERMANENT_REDIRECT).location(create("$baseUri${it.path().removeSuffix("/")}")).build() }
+            (GET("/session/{id}/") or GET("/session/{id}/{sluggifiedTitle}/")) { status(PERMANENT_REDIRECT).location(create("$baseUri${it.path().removeSuffix("/")}")).build() }
         }
         accept(APPLICATION_JSON).route {
             GET("/api/session/{login}", this@SessionController::findOne)

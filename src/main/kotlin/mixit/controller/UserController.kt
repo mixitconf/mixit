@@ -15,7 +15,7 @@ import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.RequestPredicates.accept
 import org.springframework.web.reactive.function.server.RequestPredicates.*
 import org.springframework.web.reactive.function.server.ServerResponse.*
-import java.net.URI
+import java.net.URI.*
 import java.net.URLDecoder
 import java.util.*
 
@@ -28,8 +28,9 @@ class UserController(val repository: UserRepository, val markdownConverter: Mark
     override val routes: Routes.() -> Unit = {
         accept(TEXT_HTML).route {
             (GET("/user/{login}") or GET("/speaker/{login}") or GET("/sponsor/{login}")) { findOneView(it) }
-            GET("/member/{login}") { status(PERMANENT_REDIRECT).location(URI.create("$baseUri/user/${it.pathVariable("login")}")).build() }
+            (GET("/member/{login}") or GET("/member/sponsor/{login}") or GET("/member/member/{login}")) { status(PERMANENT_REDIRECT).location(create("$baseUri/user/${it.pathVariable("login")}")).build() }
             GET("/about/", this@UserController::findAboutView)
+            GET("/about") { status(PERMANENT_REDIRECT).location(create("$baseUri/about/")).build() }
         }
         accept(APPLICATION_JSON).route {
             GET("/api/user/", this@UserController::findAll)
@@ -82,7 +83,7 @@ class UserController(val repository: UserRepository, val markdownConverter: Mark
                 fromPublisher(repository.findOneByRole(req.pathVariable("login"), Role.SPONSOR)))
 
     fun create(req: ServerRequest) = repository.save(req.bodyToMono<User>())
-            .then { u -> created(URI.create("/api/user/${u.login}"))
+            .then { u -> created(create("/api/user/${u.login}"))
                 .contentType(APPLICATION_JSON_UTF8)
                 .body(fromObject(u))
             }
