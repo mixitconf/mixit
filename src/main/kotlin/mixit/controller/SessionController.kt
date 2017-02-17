@@ -6,15 +6,11 @@ import mixit.repository.SessionRepository
 import mixit.support.LazyRouterFunction
 import mixit.support.MarkdownConverter
 import org.springframework.beans.factory.annotation.Value
-import org.springframework.http.HttpStatus.*
-import org.springframework.http.MediaType.*
+import org.springframework.http.MediaType.APPLICATION_JSON_UTF8
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.fromPublisher
-import org.springframework.web.reactive.function.server.*
-import org.springframework.web.reactive.function.server.RequestPredicates.*
+import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse.ok
-import org.springframework.web.reactive.function.server.ServerResponse.status
-import java.net.URI.*
 import java.time.LocalDateTime
 
 
@@ -65,6 +61,7 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
             val language: Language,
             val addedAt: LocalDateTime,
             val description: String?,
+            val video: String?,
             val room: Room?,
             val start: LocalDateTime?,
             val end: LocalDateTime?
@@ -72,7 +69,7 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
 
         constructor(session: Session, markdownConverter: MarkdownConverter) : this(session.id, session.format, session.event,
                 session.title, markdownConverter.toHTML(session.summary), session.speakers, session.language, session.addedAt,
-                markdownConverter.toHTML(session.description), session.room, session.start, session.end)
+                markdownConverter.toHTML(session.description), session.video, session.room, session.start, session.end)
 
     }
 }
