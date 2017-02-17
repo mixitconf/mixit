@@ -15,6 +15,7 @@ data class Session(
         val language: Language = Language.FRENCH,
         val addedAt: LocalDateTime = LocalDateTime.now(),
         val description: String? = null,
+        val video: String? = null,
         val room: Room? = null,
         val start: LocalDateTime? = null,
         val end: LocalDateTime? = null,

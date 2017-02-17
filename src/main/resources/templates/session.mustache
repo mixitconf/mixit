@@ -10,7 +10,12 @@
         <div class="callout">
             <article>
                 <h2>{{session.title}}</h2>
-                <p class="subheader">{{session.event}} / #{{session.format}}</p>
+                <p class="subheader">
+                    {{session.event}} / #{{session.format}}
+                    {{#session.video}}
+                        / &#x25ba;&nbsp;Watch <a href="{{session.video}}">the video</a>
+                    {{/session.video}}
+                </p>
                 <p>{{session.description}}</p>
                 <p class="subheader">
                     {{#session.speakers}}
