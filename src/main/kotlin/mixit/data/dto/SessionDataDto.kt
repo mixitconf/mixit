@@ -1,6 +1,9 @@
 package mixit.data.dto
 
-import mixit.model.*
+import mixit.model.Language
+import mixit.model.Room
+import mixit.model.Session
+import mixit.model.SessionFormat
 import java.time.LocalDateTime
 
 data class SessionDataDto(
@@ -10,8 +13,9 @@ data class SessionDataDto(
     var title: String,
     var speakers: Iterable<MemberDataDto> = emptyList(),
     var lang: String,
-    var summary: String? = null,
+    var summary: String,
     var description: String? = null,
+    var video: String? = null,
     var room: String ? = null,
     var start: LocalDateTime ? = null,
     var end: LocalDateTime ? = null
@@ -27,6 +31,7 @@ data class SessionDataDto(
                 if (lang == "en") Language.ENGLISH else Language.FRENCH,
                 LocalDateTime.now(),
                 description,
+                video,
                 Room.findByName(room ?: ""),
                 start,
                 end,
