@@ -1,5 +1,6 @@
 package mixit.controller
 
+import mixit.model.EventSponsoring
 import mixit.model.SponsorshipLevel.*
 import mixit.repository.EventRepository
 import mixit.repository.UserRepository
@@ -22,15 +23,15 @@ class SponsorController(val eventRepository: EventRepository, val userRepository
         }
     }
 
-    fun findAllView(req: ServerRequest) = eventRepository.findOne("mixit17").then { events ->
+    fun findAllView(req: ServerRequest) = eventRepository.findOne("mixit17").then { events ->   // TODO This could benefit from an in-memory cache with like 1H retention (data never change)
         val sponsors = events.sponsors.groupBy { it.level }
 
         ok().render("sponsors", mapOf(
-            Pair("sponsors-gold", sponsors[GOLD]),
-            Pair("sponsors-silver", sponsors[SILVER]),
-            Pair("sponsors-hosting", sponsors[HOSTING]),
-            Pair("sponsors-lanyard", sponsors[LANYARD]),
-            Pair("sponsors-party", sponsors[PARTY])
+            Pair("sponsors-gold", EventSponsoring.shuffle(sponsors[GOLD])),
+            Pair("sponsors-silver", EventSponsoring.shuffle(sponsors[SILVER])),
+            Pair("sponsors-hosting", EventSponsoring.shuffle(sponsors[HOSTING])),
+            Pair("sponsors-lanyard", EventSponsoring.shuffle(sponsors[LANYARD])),
+            Pair("sponsors-party", EventSponsoring.shuffle(sponsors[PARTY]))
         ))
     }
 

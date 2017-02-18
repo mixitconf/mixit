@@ -25,15 +25,15 @@ class GlobalController(val repository: EventRepository) : LazyRouterFunction() {
         resources("/**", ClassPathResource("static/"))
     }
 
-    fun homeView(req: ServerRequest) = repository.findOne("mixit17")
+    fun homeView(req: ServerRequest) = repository.findOne("mixit17")    // TODO This could benefit from an in-memory cache with like 1H retention (data never change)
             .then { events ->
                 val sponsors = events.sponsors.groupBy { it.level }
                 ok().render("home", mapOf(
-                        Pair("sponsors-gold", sponsors[GOLD]!!.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) }),
-                        Pair("sponsors-silver", sponsors[SILVER]!!.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) }),
-                        Pair("sponsors-hosting", sponsors[HOSTING]!!.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) }),
-                        Pair("sponsors-lanyard", sponsors[LANYARD]!!.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) }),
-                        Pair("sponsors-party", sponsors[PARTY]!!.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) })
+                        Pair("sponsors-gold", EventSponsoring.shuffle(sponsors[GOLD])!!.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) }),
+                        Pair("sponsors-silver", EventSponsoring.shuffle(sponsors[SILVER])!!.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) }),
+                        Pair("sponsors-hosting", EventSponsoring.shuffle(sponsors[HOSTING])!!.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) }),
+                        Pair("sponsors-lanyard", EventSponsoring.shuffle(sponsors[LANYARD])!!.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) }),
+                        Pair("sponsors-party", EventSponsoring.shuffle(sponsors[PARTY])!!.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) })
                 ))
             }
 
