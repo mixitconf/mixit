@@ -4,7 +4,7 @@ import 'foundation-sites';
 
 class MixitApp{
     bootstrap(){
-        this._initServiceWorker();
+        //this._initServiceWorker();
     }
 
     _initServiceWorker() {
