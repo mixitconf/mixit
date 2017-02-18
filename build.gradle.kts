@@ -6,7 +6,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
     var kotlinVersion: String by extra
-    kotlinVersion = "1.1.0-beta-38"
+    kotlinVersion = "1.1.0-rc-91"
     val springBootVersion = "2.0.0.BUILD-SNAPSHOT"
 
     repositories {
