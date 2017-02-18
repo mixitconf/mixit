@@ -11,5 +11,11 @@ data class Article (
         val title: Map<Language, String> = emptyMap(),
         val headline: Map<Language, String> = emptyMap(),
         val content: Map<Language, String>? = emptyMap(),
-        @Id val id: String? = null
+        @Id val id: String? = null,
+        val slug: Map<Language, String> = title.entries.map { (k, v) -> Pair(k, v
+            .toLowerCase()
+            .replace("\n", " ")
+            .replace("[^a-z\\d\\s]".toRegex(), " ")
+            .split(" ")
+            .joinToString("-")) }.toMap()
 )

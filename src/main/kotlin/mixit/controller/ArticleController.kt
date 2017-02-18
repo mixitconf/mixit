@@ -31,7 +31,7 @@ class ArticleController(val repository: ArticleRepository, val markdownConverter
     override val routes: Routes.() -> Unit = {
         accept(TEXT_HTML).route {
             GET("/blog/", this@ArticleController::findAllView)
-            GET("/blog/{id}", this@ArticleController::findOneView)
+            GET("/blog/{slug}", this@ArticleController::findOneView)
             // /articles/** are old routes used by the previous version of our website
             GET("/articles/") { status(PERMANENT_REDIRECT).location(create("$baseUri/blog/")).build() }
             (GET("/article/{id}") or GET("/article/{id}/")) { status(PERMANENT_REDIRECT).location(create("$baseUri/blog/${it.pathVariable("id")}")).build() }
@@ -42,7 +42,7 @@ class ArticleController(val repository: ArticleRepository, val markdownConverter
         }
     }
 
-    fun findOneView(req: ServerRequest) = repository.findOne(req.pathVariable("id")).then { a ->
+    fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug")).then { a ->
         val languageTag = req.headers().header(HttpHeaders.ACCEPT_LANGUAGE).first()
         val language = Language.findByTag(languageTag)
         val model = mapOf(Pair("article", toArticleDto(a, language, markdownConverter)))
@@ -64,6 +64,7 @@ class ArticleController(val repository: ArticleRepository, val markdownConverter
 
     private fun toArticleDto(article: Article, language: Language, markdownConverter: MarkdownConverter) = ArticleDto(
             article.id,
+            article.slug[language] ?: "",
             article.author,
             if (language == Language.ENGLISH) article.addedAt.format(englishDateFormatter) else article.addedAt.format(frenchDateFormatter),
             article.title[language] ?: "",
@@ -72,6 +73,7 @@ class ArticleController(val repository: ArticleRepository, val markdownConverter
 
     class ArticleDto(
         val id: String?,
+        val slug: String,
         val author: User,
         val addedAt: String,
         val title: String,

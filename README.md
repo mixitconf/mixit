@@ -43,6 +43,8 @@ To run the application in development mode:
  - Run `./gradlew clean build bootRun` 
  - Run `gulp watch`
  - Open `http://localhost:8080/` in your browser
+ - If you just want to restart the app: `./gradlew bootRun -x gulpBuild`
+ - If you want to debug the app, add `--debug-jvm` parameter to Gradle command line
  
 To package and run the application from the executable JAR:
 ```
