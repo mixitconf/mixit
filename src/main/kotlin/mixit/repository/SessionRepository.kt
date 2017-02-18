@@ -3,6 +3,8 @@ package mixit.repository
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.data.dto.SessionDataDto
+import mixit.model.Article
+import mixit.model.Language
 import mixit.model.Session
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
@@ -12,6 +14,7 @@ import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 import mixit.support.*
+import reactor.core.publisher.Mono
 
 @Repository
 class SessionRepository(val template: ReactiveMongoTemplate) {
@@ -45,7 +48,10 @@ class SessionRepository(val template: ReactiveMongoTemplate) {
 
     fun findAll(): Flux<Session> = template.findAll(Session::class)
 
-    fun findOne(id: String) = template.findById(id, Session::class)
+    fun findOne(id: String) : Mono<Session>  = template.findById(id)
+
+    fun findBySlug(slug: String) : Mono<Session> =
+            template.findOne(Query().addCriteria(Criteria.where("slug").`is`(slug)))
 
     fun deleteAll() = template.remove(Query(), Session::class)
 

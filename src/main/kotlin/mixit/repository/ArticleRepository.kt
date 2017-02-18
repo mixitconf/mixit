@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.data.dto.ArticleDataDto
 import mixit.model.Article
+import mixit.model.Language
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.domain.Sort
 import org.springframework.data.domain.Sort.Direction
@@ -14,7 +15,7 @@ import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 import mixit.support.*
-import org.springframework.data.mongodb.core.query.Criteria
+import org.springframework.data.mongodb.core.query.Criteria.*
 import reactor.core.publisher.Mono
 
 
@@ -34,10 +35,8 @@ class ArticleRepository(val template: ReactiveMongoTemplate) {
 
     fun findOne(id: String) = template.findById(id, Article::class)
 
-    fun findBySlug(slug: String) : Mono<Article> {
-        val query = Query().addCriteria(Criteria.where("slug").`is`(slug))
-        return template.findOne(query)
-    }
+    fun findBySlug(slug: String, lang: Language) : Mono<Article> =
+            template.findOne(Query().addCriteria(where("slug.$lang").`is`(slug)))
 
     fun findAll(): Flux<Article> {
         val query = Query()

@@ -10,7 +10,7 @@
         <div class="callout">
             {{#sessions}}
                 <article>
-                    <h2><a href="{{localePrefix}}/session/{{id}}" class="mxt-title--article">{{title}}</a></h2>
+                    <h2><a href="{{localePrefix}}/session/{{slug}}" class="mxt-title--article">{{title}}</a></h2>
                     <p class="subheader">
                         {{event}} / #{{format}}
                         {{#video}}
@@ -23,7 +23,7 @@
                             <a href="{{localePrefix}}/speaker/{{login}}">{{firstname}} {{lastname}}</a> /
                         {{/speakers}}
                     </p>
-                    <a href="{{localePrefix}}/session/{{id}}" class="button third hollow align-center">{{#i18n}}sessions.readmore{{/i18n}}</a>
+                    <a href="{{localePrefix}}/session/{{slug}}" class="button third hollow align-center">{{#i18n}}sessions.readmore{{/i18n}}</a>
                 </article>
                 <hr />
             {{/sessions}}

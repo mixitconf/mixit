@@ -5,6 +5,7 @@ import mixit.repository.EventRepository
 import mixit.repository.SessionRepository
 import mixit.support.LazyRouterFunction
 import mixit.support.MarkdownConverter
+import mixit.support.language
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
@@ -28,8 +29,8 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
         accept(TEXT_HTML).route {
             GET("/sessions/", this@SessionController::findAllView)
             GET("/{year}/sessions/", this@SessionController::findByEventView)
-            GET("/session/{id}",  this@SessionController::findOneView)
-            (GET("/session/{id}/") or GET("/session/{id}/{sluggifiedTitle}/")) { status(PERMANENT_REDIRECT).location(create("$baseUri${it.path().removeSuffix("/")}")).build() }
+            GET("/session/{slug}",  this@SessionController::findOneView)
+            (GET("/session/{id}/") or GET("/session/{id}/{sluggifiedTitle}/")) { redirectOneView(it) }
         }
         accept(APPLICATION_JSON).route {
             GET("/api/session/{login}", this@SessionController::findOne)
@@ -45,9 +46,12 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
             .collectList()
             .then { session -> ok().render("sessions",  mapOf(Pair("sessions", session))) }
 
-    fun findOneView(req: ServerRequest) = repository.findOne(req.pathVariable("id"))
+    fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug"))
             .then { session -> ok().render("session", mapOf(Pair("session", SessionDto(session, markdownConverter)))) }
 
+    fun redirectOneView(req: ServerRequest) = repository.findOne(req.pathVariable("id")).then { s ->
+            status(PERMANENT_REDIRECT).location(create("$baseUri/session/${s.slug}")).build()
+    }
 
     fun findOne(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
             fromPublisher(repository.findOne(req.pathVariable("login"))))
@@ -58,6 +62,7 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
 
     class SessionDto(
             val id: String?,
+            val slud: String,
             val format: SessionFormat,
             val event: String,
             val title: String,
@@ -72,7 +77,7 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
             val end: LocalDateTime?
     ) {
 
-        constructor(session: Session, markdownConverter: MarkdownConverter) : this(session.id, session.format, session.event,
+        constructor(session: Session, markdownConverter: MarkdownConverter) : this(session.id, session.slug, session.format, session.event,
                 session.title, markdownConverter.toHTML(session.summary), session.speakers, session.language, session.addedAt,
                 markdownConverter.toHTML(session.description), session.video, session.room, session.start, session.end)
 
