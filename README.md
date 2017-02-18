@@ -42,6 +42,7 @@ To import the project in IDEA:
 To run the application in development mode:
  - Run `./gradlew clean build bootRun` 
  - Run `gulp watch`
+ - Open `http://localhost:8080/` in your browser
  
 To package and run the application from the executable JAR:
 ```
@@ -55,4 +56,3 @@ To deploy the app on CF:
 cf push
 ```
 
-To test the application from a browser, go to `http://localhost:8080/`.
