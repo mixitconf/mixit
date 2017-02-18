@@ -38,70 +38,59 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
     fun createSponsorFor2017(): List<EventSponsoring>{
         userRepository.save(User("Ippon", "", "", "marketing@ippon.fr", "Ippon",
                 logoUrl = "sponsor/logo-ippon.svg",
-                shortDescription = "Ippon is a specialized global consulting on Digital, BigData and Cloud solutions. We serve prestigious customers " +
-                        "worldwide with teams of high-level consultants and a deep engagement for quality, performance and time-to-market. " +
-                        "\nLocations : France, USA, Australia and morocco \n Key figures : M$25+, 250+ consultants, since 2002 ",
-                longDescription = "Ippon is a specialized global consulting on Digital, BigData and Cloud solutions. We serve prestigious customers " +
-                        "worldwide with teams of high-level consultants and a deep engagement for quality, performance and time-to-market. " +
-                        "\nLocations : France, USA, Australia and morocco \n Key figures : M$25+, 250+ consultants, since 2002 ",
+                description = mapOf(Pair(Language.ENGLISH, "Ippon is a specialized global consulting on Digital, BigData and Cloud solutions." +
+                "We serve prestigious customers worldwide with teams of high-level consultants and a deep engagement for quality, performance and time-to-market." +
+                "Locations : France, USA, Australia and morocco. Key figures: M$25+, 250+ consultants, since 2002."), Pair(Language.FRENCH, "Todo")),
                 links = listOf(Link("Site", "http://www.ippon.fr/"), Link("Blog", "http://blog.ippon.fr/")))).block()
 
         userRepository.save(User("Hopwork", "", "", "contact@hopwork.fr", "Hopwork",
                 logoUrl = "sponsor/logo-hopwork.svg",
-                shortDescription = "Les meilleurs freelances. Disponibles maintenant. En toute sécurité.",
-                longDescription = "Les meilleurs freelances. Disponibles maintenant. En toute sécurité.",
+                description = mapOf(Pair(Language.ENGLISH, "Todo"), Pair(Language.FRENCH, "Les meilleurs freelances. Disponibles maintenant. En toute sécurité.")),
                 links = listOf(Link("Site", "http://www.hopwork.fr/")))).block()
 
         userRepository.save(User("LDLC", "", "", "c.bar@ldlc.com", "LDLC",
                 logoUrl = "sponsor/logo-ldlc.png",
-                shortDescription = "Créé en 1996 par l’entrepreneur lyonnais Laurent de la Clergerie, le Groupe LDLC est aujourd’hui le 5ème groupe de " +
-                        "e-commerce en France. Son enseigne majeure, LDLC.com, est leader français du e-commerce informatique et high-tech. Constitué de 10" +
-                        " marques dont 6 sites marchands, le pionnier du commerce en ligne conjugue des activités dans le domaine de l’informatique, du " +
-                        "high-tech, de la maison ou encore de l’éducation.",
-                longDescription = "Au cœur des nombreux projets du Groupe LDLC, le département des Systèmes d’Information est le moteur de nos activités en " +
-                        "ligne. Ainsi, une trentaine de personnes au profil IT œuvrent au développement et au bon fonctionnement des sites. En croissance, le " +
-                        "Groupe cherche régulièrement à se doter de talents du numérique pour l’accompagner à atteindre son ambition d’un milliard d’euros de " +
-                        "chiffre d’affaires en 2021. Plus d’informations sur www.groupe-ldlc.com. \n\nTentez par l’aventure ? Rejoignez-nous ! " +
-                        "http://recrutement.groupe-ldlc.com/",
+                description = mapOf(Pair(Language.ENGLISH, "Todo"), Pair(Language.FRENCH, "Créé en 1996 par l’entrepreneur lyonnais Laurent de la Clergerie," +
+                "le Groupe LDLC est aujourd’hui le 5ème groupe de e-commerce en France. Son enseigne majeure, LDLC.com, est leader français du e-commerce informatique" +
+                "et high-tech. Constitué de 10 marques dont 6 sites marchands, le pionnier du commerce en ligne conjugue des activités dans le domaine de l’informatique," +
+                "du high-tech, de la maison ou encore de l’éducation.")),
                 links = listOf(Link("Site", "http://www.groupe-ldlc.com/"), Link("Site public", "http://www.ldlc.com/"),
                         Link("Site pro", "http://www.ldlc-pro.com/"), Link("Linkedin", "https://www.linkedin.com/company/ldlc"),
                         Link("Twitter", "https://twitter.com/groupeldlc"), Link("Facebook", "https://www.facebook.com/LDLC.com/")))).block()
 
         userRepository.save(User("Algolia", "", "", "hey@algolia.com?subject=MiXit", "Algolia",
                 logoUrl = "sponsor/logo-algolia.svg",
-                shortDescription = "Founded in 2012, Algolia is a privately held company created by veterans in the fields of algorithms, search engines and text mining.",
-                longDescription = "We help users deliver an intuitive search-as-you-type experience on their websites and mobile apps. Basically, we make finding things easier. We are a customer-focused, dev-centric company dedicated to changing the way people think about search.",
+                description = mapOf(Pair(Language.ENGLISH, "Founded in 2012, Algolia is a privately held company created by veterans in the fields of algorithms," +
+                "search engines and text mining."), Pair(Language.FRENCH, "Todo")),
                 links = listOf(Link("Site", "https://www.algolia.com/"), Link("Google+", "https://plus.google.com/+Algolia"), Link("Linkedin", "https://www.linkedin.com/company/algolia"),
                         Link("Twitter", "https://twitter.com/Algolia"), Link("Facebook", "https://www.facebook.com/algolia")))).block()
 
         userRepository.save(User("Enedis", "", "", "contact@enedis.fr", "Enedis",
                 logoUrl="sponsor/logo-enedis.svg",
-                shortDescription = "Enedis est une entreprise de service public, gestionnaire du réseau de distribution d'électricité qui développe, exploite, modernise le réseau " +
-                        "électrique et gère les données associées.",
-                longDescription = "Indépendante des fournisseurs d'énergie chargés de la vente et de la gestion du contrat d'électricité, Enedis réalise " +
-                        "les raccordements, le dépannage, le relevé des compteurs et toutes interventions techniques.",
+                description = mapOf(Pair(Language.FRENCH, "Enedis est une entreprise de service public, gestionnaire du réseau de distribution d'électricité qui développe," +
+                "exploite, modernise le réseau électrique et gère les données associées."), Pair(Language.ENGLISH, "Todo")),
                 links = listOf(Link("Site", "http://www.enedis.fr")))).block()
 
         val sword = userRepository.findOne("Sword").block()
-        sword.longDescription = "SWORD, c’est 1 500 spécialistes en IT/Digital & Software actifs sur les 5 continents, qui vous accompagnent dans l’évolution " +
+        sword.description =  mapOf(Pair(Language.FRENCH, "SWORD, c’est 1 500 spécialistes en IT/Digital & Software actifs sur les 5 continents, qui vous accompagnent dans l’évolution " +
                 "de votre organisation à l’ère du numérique. Depuis 2000, SWORD a acquis une solide réputation dans l’édition de logiciels et dans la conduite de " +
                 "projets IT & business complexes en tant que leader de la transformation technologique et digitale.\n\nAvec SWORD c’est la garantie d’un engagement " +
                 "de proximité dont le but est d’optimiser vos processus & de valoriser vos données. Notre volonté est avant tout de construire dans la durée et de " +
                 "fidéliser nos collaborateurs, nos clients et nos partenaires en nous appuyant sur nos valeurs et notre enthousiasme qui vous accompagneront tout " +
-                "au long de vos projets."
+                "au long de vos projets."), Pair(Language.ENGLISH, "Todo"))
         sword.links = listOf(Link("Site", "http://www.sword-services.com/fr/"))
         sword.logoUrl = "sponsor/logo-sword.svg"
         userRepository.save(sword).block()
 
         val worldline = userRepository.findOne("WorldlineFrance").block()
-        worldline.longDescription = "Worldline [Euronext : WLN] est le leader européen et un acteur mondial de référence dans le secteur des paiements et des services " +
+        worldline.description = mapOf(Pair(Language.FRENCH, "Worldline [Euronext : WLN] est le leader européen et un acteur mondial de référence dans le secteur des paiements et des services " +
                 "transactionnels. Worldline met en place des services nouvelle génération, permettant à ses clients d’offrir au consommateur final des solutions " +
                 "innovantes et fluides. \n\nActeur clef du B2B2C, riche de plus de 40 ans d’expérience, Worldline sert et contribue au succès de toutes les entreprises " +
                 "et administrations, dans un marché en perpétuelle évolution. Worldline propose un Business Model unique et flexible, construit autour d’un portefeuille " +
                 "d’offres évolutif et global permettant une prise en charge end-to-end. Les activités de Worldline sont organisées autour de trois axes : Merchant Services " +
                 "& Terminals, Mobility & e-Transactional Services, Financial Processing & Software Licensing incluant equensWorldline. Worldline emploie plus de 8 600 " +
                 "collaborateurs dans le monde entier et génère un chiffre d’affaires estimé à  environ 1,5 milliard d’euros sur une base annuelle. Worldline est une entreprise " +
-                "du Groupe Atos. worldline.com"
+                "du Groupe Atos. worldline.com"), Pair(Language.ENGLISH, ""))
         worldline.links = listOf(
                 Link("Site", "http://fr.worldline.com"), Link("Blog", "http://fr.worldline.com/blog"), Link("Twitter", "https://twitter.com/WorldlineGlobal"),
                 Link("YouTube", "http://fr.worldline.com/youtube"), Link("Facebook", "http://fr.worldline.com/facebook"))

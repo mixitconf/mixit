@@ -1,10 +1,11 @@
 package mixit.controller
 
-import mixit.model.Role
-import mixit.model.User
+import mixit.model.*
+import mixit.repository.EventRepository
 import mixit.repository.UserRepository
 import mixit.support.LazyRouterFunction
 import mixit.support.MarkdownConverter
+import mixit.support.language
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.HttpStatus.*
 import org.springframework.http.MediaType.*
@@ -17,11 +18,12 @@ import org.springframework.web.reactive.function.server.RequestPredicates.*
 import org.springframework.web.reactive.function.server.ServerResponse.*
 import java.net.URI.*
 import java.net.URLDecoder
+import java.time.LocalDate
 import java.util.*
 
 
 @Controller
-class UserController(val repository: UserRepository, val markdownConverter: MarkdownConverter,
+class UserController(val repository: UserRepository, val eventRepository: EventRepository, val markdownConverter: MarkdownConverter,
                      @Value("\${baseUri}") val baseUri: String) : LazyRouterFunction() {
 
     // TODO Remove this@ArticleController when KT-15667 will be fixed
@@ -31,6 +33,7 @@ class UserController(val repository: UserRepository, val markdownConverter: Mark
             (GET("/member/{login}") or GET("/member/sponsor/{login}") or GET("/member/member/{login}")) { status(PERMANENT_REDIRECT).location(create("$baseUri/user/${it.pathVariable("login")}")).build() }
             GET("/about/", this@UserController::findAboutView)
             GET("/about") { status(PERMANENT_REDIRECT).location(create("$baseUri/about/")).build() }
+            GET("/sponsors/", this@UserController::findSponsorsView)
         }
         accept(APPLICATION_JSON).route {
             GET("/api/user/", this@UserController::findAll)
@@ -91,13 +94,56 @@ class UserController(val repository: UserRepository, val markdownConverter: Mark
     fun findAboutView(req: ServerRequest) = repository.findByRole(Role.STAFF)
             .collectList()
             .then { u ->
-                val users = u.map { prepareForHtmlDisplay(it) }
-                Collections.shuffle(users);
+                val users = u.map { toUserDto(it, req.language()) }
+                Collections.shuffle(users)
                 ok().render("about",  mapOf(Pair("staff", users)))
             }
 
-    fun prepareForHtmlDisplay(user :User): User {
-        user.shortDescription = markdownConverter.toHTML(user.shortDescription)
-        return user
+    fun findSponsorsView(req: ServerRequest) = eventRepository.findOne("mixit17").then { events ->
+        val sponsors = events.sponsors.map { toEventSponsoringDto(it, req.language()) }.groupBy { it.level }
+
+        ok().render("sponsors", mapOf(
+            Pair("sponsors-gold", sponsors[SponsorshipLevel.GOLD]),
+            Pair("sponsors-silver", sponsors[SponsorshipLevel.SILVER]),
+            Pair("sponsors-hosting", sponsors[SponsorshipLevel.HOSTING]),
+            Pair("sponsors-lanyard", sponsors[SponsorshipLevel.LANYARD]),
+            Pair("sponsors-party", sponsors[SponsorshipLevel.PARTY])
+        ))
     }
+
+    private fun toEventSponsoringDto(eventSponsoring: EventSponsoring, language: Language) = EventSponsoringDto(
+           eventSponsoring.level,
+           toUserDto(eventSponsoring.sponsor, language),
+           eventSponsoring.subscriptionDate
+    )
+
+    private fun toUserDto(user: User, language: Language) = UserDto(
+            user.login,
+            user.firstname,
+            user.lastname,
+            user.email,
+            user.company,
+            markdownConverter.toHTML(user.description[language] ?: ""),
+            user.logoUrl,
+            user.events,
+            user.role,
+            user.links)
+
+    class EventSponsoringDto(
+        val level: SponsorshipLevel,
+        val sponsor: UserDto,
+        val subscriptionDate: LocalDate = LocalDate.now()
+)
+
+    class UserDto(
+        val login: String,
+        val firstname: String,
+        val lastname: String,
+        var email: String,
+        var company: String? = null,
+        var description: String,
+        var logoUrl: String? = null,
+        val events: List<String>,
+        val role: Role,
+        var links: List<Link>)
 }
