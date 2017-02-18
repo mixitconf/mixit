@@ -24,7 +24,8 @@ const paths = {
     sw: 'build/resources/main/static',
     css : 'build/resources/main/static/css',
     images : 'build/resources/main/static/images',
-    js: 'build/resources/main/static/js'
+    js: 'build/resources/main/static/js',
+    resources: 'build/resources/main'
   }
 };
 
@@ -113,13 +114,13 @@ gulp.task('ts-to-js', ['ts'], () =>
       .pipe($.sourcemaps.init())
       .pipe($.uglify({preserveComments: 'none'}))
       .pipe($.sourcemaps.write('.'))
-      .pipe(gulp.dest(`${ paths.dist.js}`))
+      .pipe(gulp.dest(`${paths.dist.js}`))
 );
 
 // Copy over the scripts that are used in importScripts as part of the generate-service-worker task.
 gulp.task('copy-sw-scripts', () => {
   return gulp.src(['node_modules/sw-toolbox/sw-toolbox.js'])
-    .pipe(gulp.dest(`${ paths.dist.js}`));
+    .pipe(gulp.dest(`${paths.dist.js}`));
 });
 
 // Generate the service worker configuration for the offline mode
@@ -132,9 +133,19 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
       '/js/sw-toolbox.js',
       '/js/runtime-caching.js'
     ],
-    staticFileGlobs: [ `${ paths.dist.sw}/**/*.{js,html,css,png,jpg,json,gif,svg,webp,eot,ttf,woff,woff2}`],
-    stripPrefix: `${ paths.dist.sw}/`
+    staticFileGlobs: [ `${paths.dist.sw}/**/*.{js,html,css,png,jpg,json,gif,svg,webp,eot,ttf,woff,woff2}`],
+    stripPrefix: `${paths.dist.sw}/`
   });
+});
+
+gulp.task('copy-templates', () => {
+  return gulp.src(['src/main/resources/templates/**'])
+    .pipe(gulp.dest(`${paths.dist.resources}/templates`));
+});
+
+gulp.task('copy-messages', () => {
+  return gulp.src(['src/main/resources/messages*.properties'])
+    .pipe(gulp.dest(`${paths.dist.resources}`));
 });
 
 gulp.task('package-service-worker', ['generate-service-worker'], () =>
@@ -144,7 +155,7 @@ gulp.task('package-service-worker', ['generate-service-worker'], () =>
     .pipe($.uglify({preserveComments: 'none'}))
     .pipe($.size({title: 'scripts'}))
     .pipe($.sourcemaps.write('.'))
-    .pipe(gulp.dest(`${ paths.dist.sw}`))
+    .pipe(gulp.dest(`${paths.dist.sw}`))
 );
 
 // Clean output directory
@@ -154,6 +165,8 @@ gulp.task('clean', () => del([paths.tmp, paths.dist.images, paths.dist.js], {dot
 gulp.task('watch', ['default'], () => {
   gulp.watch([`${paths.main}/sass/**/*.scss`], ['styles']);
   gulp.watch([`${paths.main}/ts/**/*.ts`], ['ts-to-js']);
+  gulp.watch([`${paths.main}/resources/templates/**`], ['copy-templates']);
+  gulp.watch([`${paths.main}/resources/messages*.properties`], ['copy-messages']);
 });
 
 // Build production files, the default task

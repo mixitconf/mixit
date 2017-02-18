@@ -36,18 +36,13 @@ Prerequisite:
 
 To import the project in IDEA:
  - Clone the project `git clone https://github.com/mix-it/mixit.git`
- - Make sure you have at least IntelliJ IDEA 2016.3 and IDEA Kotlin plugin 1.1.0-beta-17+
+ - Make sure you have at least IntelliJ IDEA 2016.3 and IDEA Kotlin plugin 1.1.0-rc-91+
  - Import it in IDEA as a Gradle project
- - Right click on the project -> Open module settings -> Modules -> mixit -> Kotlin and make sure Kotlin 1.1 language level and that Java 1.8 bytecode options are selected
- - Right click on `Application.kt` -> Run or Debug `mixit.ApplicationKt`
-
+ 
 To run the application in development mode:
- - Run `./gradlew build` 
+ - Run `./gradlew clean build bootRun` 
  - Run `gulp watch`
- - Install [live reload extension](http://livereload.com/extensions/) in your browser
- - In IDEA, right click on `Application.kt` -> Run or Debug `mixit.Applicationkt`
- - Static resources will be processed automatically, as well template modification, only modifying `messages_en.propeties` and `messages_fr.propeties` will require building the project (cmd + F9 on Mac)
-
+ 
 To package and run the application from the executable JAR:
 ```
 ./gradlew build
