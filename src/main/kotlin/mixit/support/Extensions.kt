@@ -10,6 +10,7 @@ import org.springframework.web.reactive.function.server.ServerRequest
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 import java.text.Normalizer
+import java.util.*
 import kotlin.reflect.KClass
 
 fun run(type: KClass<*>, vararg args: String) = SpringApplication.run(type.java, *args)
@@ -39,3 +40,8 @@ fun String.toSlug() = this.toLowerCase()
             .split(" ")
             .joinToString("-")
 
+fun <T> Iterable<T>.shuffle(): Iterable<T> {
+    val shuffledList = this.toMutableList()
+    Collections.shuffle(shuffledList)
+    return shuffledList
+}
