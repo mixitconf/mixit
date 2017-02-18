@@ -36,7 +36,7 @@ Prerequisite:
 
 To import the project in IDEA:
  - Clone the project `git clone https://github.com/mix-it/mixit.git`
- - Make sure you have at least IntelliJ IDEA 2016.3 and IDEA Kotlin plugin 1.1.0-rc-91+
+ - Make sure you have at least IntelliJ IDEA 2016.3 and IDEA Kotlin plugin 1.1.0-rc-91+ (menu Tools -> Kotlin -> configure Kotlin Plugin Updates -> select "Early Access Preview 1.1" update channel -> check for updates now -> restart IDE after the update)
  - Import it in IDEA as a Gradle project
  
 To run the application in development mode:
