@@ -35,7 +35,7 @@ data class MemberDataDto(
                 lastname?.toLowerCase()?.capitalize() ?: "",
                 email ?: "",
                 company ?: "",
-                if (shortDescription != null) mapOf(Pair(Language.FRENCH, shortDescription ?: ""), Pair(Language.ENGLISH, shortDescriptionEn ?: "")) else emptyMap(),
+                if (shortDescription != null) mapOf(Pair(Language.FRENCH, shortDescription ?: ""), Pair(Language.ENGLISH, shortDescriptionEn ?: shortDescription ?: "")) else emptyMap(),
                 logoUrl,
                 events,
                 role,

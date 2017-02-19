@@ -53,10 +53,10 @@ class UserController(val repository: UserRepository, val eventRepository: EventR
     fun findOneView(req: ServerRequest) = try {
         val idLegacy = req.pathVariable("login").toLong()
         repository.findByLegacyId(idLegacy)
-                .then { u -> ok().render("user", mapOf(Pair("user", u))) }
+                .then { u -> ok().render("user", mapOf(Pair("user", toUserDto(u, req.language())))) }
     } catch (e:NumberFormatException) {
         repository.findOne(URLDecoder.decode(req.pathVariable("login"), "UTF-8"))
-                .then { u -> ok().render("user", mapOf(Pair("user", u))) }
+                .then { u -> ok().render("user", mapOf(Pair("user", toUserDto(u, req.language())))) }
     }
 
     fun findOne(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
