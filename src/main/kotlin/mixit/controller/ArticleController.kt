@@ -2,6 +2,7 @@ package mixit.controller
 
 import mixit.model.Article
 import mixit.model.Language
+import mixit.model.Language.*
 import mixit.model.User
 import mixit.repository.ArticleRepository
 import mixit.support.LazyRouterFunction
@@ -45,7 +46,9 @@ class ArticleController(val repository: ArticleRepository, val markdownConverter
     fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug"), req.language()).then { a ->
             val model = mapOf(Pair("article", toArticleDto(a, req.language(), markdownConverter)))
             ok().render("article", model)
-    }
+    }.otherwiseIfEmpty (repository.findBySlug(req.pathVariable("slug"), if (req.language() == FRENCH) ENGLISH else FRENCH).then { a ->
+            status(PERMANENT_REDIRECT).location(create("$baseUri${if (req.language() == ENGLISH) "/en" else ""}/blog/${a.slug[req.language()]}")).build()
+    })
 
     fun redirectOneView(req: ServerRequest) = repository.findOne(req.pathVariable("id")).then { a ->
             status(PERMANENT_REDIRECT).location(create("$baseUri/blog/${a.slug[req.language()]}")).build()
@@ -66,7 +69,7 @@ class ArticleController(val repository: ArticleRepository, val markdownConverter
             article.id,
             article.slug[language] ?: "",
             article.author,
-            if (language == Language.ENGLISH) article.addedAt.format(englishDateFormatter) else article.addedAt.format(frenchDateFormatter),
+            if (language == ENGLISH) article.addedAt.format(englishDateFormatter) else article.addedAt.format(frenchDateFormatter),
             article.title[language] ?: "",
             markdownConverter.toHTML(article.headline[language] ?: ""),
             markdownConverter.toHTML(if (article.content != null) article.content[language] else  ""))
