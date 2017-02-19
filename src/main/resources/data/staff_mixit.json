@@ -6,7 +6,8 @@
     "lastname": "EXBRAYAT",
     "logo": null,
     "hash": "77e014c109833d4751e24890f5b4d939",
-    "shortDescription": "Fondateur du JUG, de MiXiT et de [Ninja Squad](http://ninja-squad.fr) et bloggeur [hype](http://hypedrivendev.wordpress.com)\n\n\n\n\n",
+    "shortDescription": "Fondateur du Lyon JUG, de MiXiT, de [Ninja Squad](http://ninja-squad.fr) et bloggeur [hype](http://hypedrivendev.wordpress.com).",
+    "shortDescriptionEn": "Founder of Lyon JUG, MiXiT, [Ninja Squad](http://ninja-squad.fr) and [hype](http://hypedrivendev.wordpress.com) blogger.",
     "level": [],
     "userLinks": [
       { "key": "Ninja Squad", "value": "http://ninja-squad.fr" },
@@ -22,7 +23,8 @@
     "lastname": "CREPET",
     "logo": null,
     "hash": "a7562607fd2dda9889bd3ecc70d98beb",
-    "shortDescription": "[Ninja Squad](http://ninja-squad.fr) Co-founder - JUG Leader : [Lyon JUG](http://www.lyonjug.org) & Duchess France - MiXiT Co-founder",
+    "shortDescription": "Co-fondatrice de [Ninja Squad](http://ninja-squad.fr), du [Lyon JUG](http://www.lyonjug.org), de Duchess France et de MiXiT.",
+    "shortDescriptionEn": "[Ninja Squad](http://ninja-squad.fr) Co-founder - JUG Leader : [Lyon JUG](http://www.lyonjug.org) & Duchess France - MiXiT Co-founder.",
     "level": [],
     "userLinks": [
       { "key": "Ninja Squad", "value": "http://ninja-squad.fr" },
@@ -38,7 +40,8 @@
     "lastname": "DEPIERRE",
     "logo": null,
     "hash": "4d294402a9548a1ffdfc49fa4d777b10",
-    "shortDescription": "Passionate about learning, enjoy collaboration and love building products.",
+    "shortDescription": "Insatiable curieux, passionné, adore bosser en équipe et créer de nouveaux produits.",
+    "shortDescriptionEn": "Passionate about learning, enjoy collaboration and love building products.",
     "level": [],
     "userLinks": [
       { "key": "Blog", "value": "http://blog.lookingforanswers.me" }
@@ -51,7 +54,8 @@
     "lastname": "COUTURIER",
     "logo": null,
     "hash": "918e67363e4361447d7a01c11da8a767",
-    "shortDescription": "Prenez une équipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilité (sans modération)",
+    "shortDescription": "Prenez une équipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilité (sans modération).",
+    "shortDescriptionEn": "Take a team, a project, some best practices and add Agile best practice.",
     "userLinks": [
       { "key": "Terre d'Agile", "value": "http://www.terredagile.com/" },
       { "key": "Talon d'Agile", "value": "http://talondagile.fr/" },
@@ -65,7 +69,8 @@
     "lastname": "PELLOUX-PRAYER",
     "logo": null,
     "hash": "c1f8d95084fb10d92763960a36f04b46",
-    "shortDescription": "MiXiT CoFounder - software craftsman ",
+    "shortDescription": "Co-fondateur de MiXiT, artisan logiciel.",
+    "shortDescriptionEn": "MiXiT CoFounder - software craftsman.",
     "level": [],
     "userLinks": []
   },
@@ -77,6 +82,7 @@
     "logo": null,
     "hash": "1305aa79d71e887dabb8f698c4c1ff9f",
     "shortDescription": "Je fais de l'ordinateur avec [Ninja Squad](http://ninja-squad.fr) le jour, et des tweets pour MiXiT la nuit.",
+    "shortDescriptionEn": "I use a computer with [Ninja Squad](http://ninja-squad.fr) by day, and I tweet for MiXiT by night.",
     "level": [],
     "userLinks": [
       { "key": "Twitter", "value": "https://twitter.com/clacote" },
@@ -90,7 +96,8 @@
     "lastname": "CHARRIÈRE",
     "logo": null,
     "hash": "03c0a459fd631e867bade2cc95517a4f",
-    "shortDescription": "avant-vendeur \"technophage\", ex-dir tech, ex-dp, ex-cp, ex-archi, dev pour la vie",
+    "shortDescription": "Avant-vendeur \"technophage\", ex-dir tech, ex-dp, ex-cp, ex-archi, dev pour la vie.",
+    "shortDescriptionEn": "Presale, \"technophage\", ex tech director, ex project manager, ex architect, lifelong developer.",
     "userLinks": [
       { "key": "GitHub", "value": "http://k33g.github.com/" },
       { "key": "Twitter", "value": "https://twitter.com/k33g_org" },
@@ -104,7 +111,8 @@
     "lastname": "HASSLER",
     "logo": null,
     "hash": "f7492d8d0f081c29d84b684d5a04acf4",
-    "shortDescription": "Indépendant. Dev & Ops, Formation.",
+    "shortDescription": "Indépendant, Dev & Ops, formation.",
+    "shortDescriptionEn": "Self-employed, Dev & Ops, training.",
     "level": []
   },
   {
@@ -115,6 +123,7 @@
     "logo": null,
     "hash": "5865a6e299822c23b4bcc9204d4e22d4",
     "shortDescription": "Développeur Java/Web et agiliste ... freelance.",
+    "shortDescriptionEn": "Java/Web developer and agile ... freelance.",
     "level": [],
     "userLinks": [
       { "key": "DevLyon", "value": "http://www.devlyon.fr" }
@@ -127,7 +136,8 @@
     "lastname": "EHRET",
     "logo": null,
     "hash": "aa4d47d1016e45c23b6af05ec11c0a9c",
-    "shortDescription": "Développeur agile passionné par la technique et l'agilité, fondateur de [Dev-Mind](https://dev-mind.fr/)",
+    "shortDescription": "Développeur agile passionné par la technique et l'agilité, fondateur de [Dev-Mind](https://dev-mind.fr/).",
+    "shortDescriptionEn": "Passionate agile developer, founder of [Dev-Mind](https://dev-mind.fr/).",
     "userLinks": [
       { "key": "Blog", "value": "http://javamind-fr.blogspot.fr/" },
       { "key": "Dev-Mind", "value": "https://www.dev-mind.fr/" }
@@ -141,6 +151,7 @@
     "logo": null,
     "hash": "04bf197ddd198f4ff3a50e93ebd37272",
     "shortDescription": "Membre de l'équipe de développement de Spring Framework et Reactor chez Pivotal, fan de Kotlin et co-worker à La Cordée.",
+    "shortDescriptionEn": "Spring Framework and Reactor committer at Pivotal, Kotlin addict, and co-worker at \"La Cordée\".",
     "userLinks": [
       { "key": "Twitter", "value": "https://twitter.com/sdeleuze" },
       { "key": "Blog on spring.io", "value": "https://spring.io/team/sdeleuze" }
@@ -154,6 +165,7 @@
     "logo": null,
     "hash": "91c77f73775c974ef787492a2193d2c6",
     "shortDescription": "Agiliste depuis plus de 8 ans et coach Agile chez [Goood!](http://goood.pro), GO de la communauté agile lyonnaise via MiXiT et le [CARA Lyon](http://lyon.clubagilerhonealpes.org/)",
+    "shortDescriptionEn": "Agile guy for more than 8 years and Agile coach at [Goood!](http://goood.pro), organizer of Lyon's agile community via MiXiT et [CARA Lyon](http://lyon.clubagilerhonealpes.org/)",
     "level": [],
     "userLinks": []
   },
@@ -164,7 +176,8 @@
     "lastname": "BORDEAU",
     "logo": null,
     "hash": "2f38a64d06efd5433027cc5b04265fb0",
-    "shortDescription": "Webdesign & Interactive Documentaries",
+    "shortDescription": "Webdesign & documentaires interactifs.",
+    "shortDescriptionEn": "Webdesign & Interactive Documentaries.",
     "userLinks": [
       { "key": "Site", "value": "http://www.jessicabordeau.com/" },
       { "key": "Portfolio", "value": "https://jessicabordeau.myportfolio.com/" }
@@ -178,6 +191,7 @@
     "logo": null,
     "hash": "bd0f602050b2f95901199d3a3789eb56",
     "shortDescription": "Développeur agile et craftsman, organisateur du Lyon JUG & Software Craftsmanship Lyon",
+    "shortDescriptionEn": "Agile developer and craftsman, Lyon JUG leader & Software Craftsmanship Lyon",
     "userLinks": [
       { "key": "Twitter", "value": "https://twitter.com/CharlesBouttaz" },
       { "key": "Lyon JUG", "value": "http://www.lyonjug.fr" },
@@ -193,6 +207,7 @@
     "logo": null,
     "hash": "9299f1577563a936035f5d39a9f3c51b",
     "shortDescription": "Artisan technologique Cofondateur de MixTeen échange et partage à toute heure ;)",
+    "shortDescriptionEn": "Tech craftman, co-founder of MixTeen, exchange on a 24-hour basis ;)",
     "userLinks": [
       { "key": "MixTeen", "value": "http://mixteen.github.io/" },
       { "key": "Tweeter", "value": "https://twitter.com/titimoby" },
