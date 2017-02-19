@@ -5,7 +5,6 @@ import mixit.repository.EventRepository
 import mixit.repository.SessionRepository
 import mixit.support.LazyRouterFunction
 import mixit.support.MarkdownConverter
-import mixit.support.language
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
@@ -27,7 +26,6 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
     // TODO Remove this@ArticleController when KT-15667 will be fixed
     override val routes: Routes.() -> Unit = {
         accept(TEXT_HTML).route {
-            GET("/sessions/", this@SessionController::findAllView)
             GET("/{year}/sessions/", this@SessionController::findByEventView)
             GET("/session/{slug}",  this@SessionController::findOneView)
             (GET("/session/{id}/") or GET("/session/{id}/{sluggifiedTitle}/")) { redirectOneView(it) }
@@ -38,13 +36,9 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
         }
     }
 
-    fun findAllView(req: ServerRequest) = repository.findAll()
-            .collectList()
-            .then { session -> ok().render("sessions",  mapOf(Pair("sessions", session))) }
-
     fun findByEventView(req: ServerRequest) = repository.findByEvent(eventRepository.yearToId(req.pathVariable("year")))
             .collectList()
-            .then { session -> ok().render("sessions",  mapOf(Pair("sessions", session))) }
+            .then { session -> ok().render("sessions",  mapOf(Pair("sessions", session), Pair("year", req.pathVariable("year")))) }
 
     fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug"))
             .then { session -> ok().render("session", mapOf(Pair("session", SessionDto(session, markdownConverter)))) }
