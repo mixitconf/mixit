@@ -19,14 +19,25 @@ import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.ServerResponse.status
 import java.net.URI.*
 import java.time.format.DateTimeFormatter
+import java.util.*
+import java.util.stream.Collectors.*
+import java.util.stream.IntStream
+import java.time.temporal.ChronoField
+import java.time.format.DateTimeFormatterBuilder
 
 
 @Controller
 class ArticleController(val repository: ArticleRepository, val markdownConverter: MarkdownConverter,
                         @Value("\${baseUri}") val baseUri: String) : LazyRouterFunction() {
 
-    private val frenchDateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
-    private val englishDateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
+    private val daysLookup : Map<Long, String> = IntStream.rangeClosed(1, 31).boxed().collect(toMap(Int::toLong, { i -> getOrdinal(i)}))
+    private val frenchDateFormatter = DateTimeFormatter.ofPattern("d MMMM yyyy", Locale.FRENCH)
+    private val englishDateFormatter = DateTimeFormatterBuilder()
+            .appendPattern("MMMM")
+            .appendLiteral(" ")
+            .appendText(ChronoField.DAY_OF_MONTH, daysLookup)
+            .appendLiteral(" ")
+            .appendPattern("yyyy").toFormatter(Locale.ENGLISH)
 
     // TODO Remove this@ArticleController when KT-15667 will be fixed
     override val routes: Routes.() -> Unit = {
@@ -83,4 +94,16 @@ class ArticleController(val repository: ArticleRepository, val markdownConverter
         val headline: String,
         val content: String
     )
+
+    private fun getOrdinal(n: Int): String {
+        if (n >= 11 && n <= 13) {
+            return n.toString() + "th"
+        }
+        when (n % 10) {
+            1 -> return n.toString() + "st"
+            2 -> return n.toString() + "nd"
+            3 -> return n.toString() + "rd"
+            else -> return n.toString() + "th"
+        }
+    }
 }
