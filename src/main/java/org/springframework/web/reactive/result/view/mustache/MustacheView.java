@@ -72,6 +72,9 @@ public class MustacheView extends AbstractUrlBasedView {
                     model.put("localePrefix", locale.getLanguage().equals("en") ? "/en" : "");
                     model.put("en", locale.getLanguage().equals("en"));
                     model.put("fr", locale.getLanguage().equals("fr"));
+                    String switchLangUrl = exchange.getRequest().getURI().getPath();
+                    switchLangUrl = locale.getLanguage().equals("en") ? switchLangUrl : "/en" + switchLangUrl;
+                    model.put("switchLangUrl", switchLangUrl);
                 }
                 model.put("i18n", (Mustache.Lambda) (frag, out) -> {
                     String key = frag.execute();
