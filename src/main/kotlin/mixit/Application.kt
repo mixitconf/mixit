@@ -49,7 +49,7 @@ class Application {
     fun template(databaseFactory: ReactiveMongoDatabaseFactory) = ReactiveMongoTemplate(databaseFactory)
 
     @Bean
-    fun filter() = MixitWebFilter()
+    fun filter(env: Environment) = MixitWebFilter(env.getProperty("baseUri"))
 
     @Bean
     fun markdownConverter() = MarkdownConverter()
