@@ -2,12 +2,13 @@
 
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
-import del from 'del';
 import runSequence from 'run-sequence';
 import swPrecache from 'sw-precache';
 
-const $ = gulpLoadPlugins();
-const imagemin = require('gulp-imagemin');
+const $ = gulpLoadPlugins({
+  pattern: ['gulp-*', 'del']
+});
+
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const named = require('vinyl-named');
 const webpack = require('webpack-stream');
@@ -25,7 +26,7 @@ const paths = {
     css : 'build/resources/main/static/css',
     images : 'build/resources/main/static/images',
     js: 'build/resources/main/static/js',
-    resources: 'build/resources/main'
+    resources: 'build/resources/main',
   }
 };
 
@@ -59,7 +60,7 @@ gulp.task('styles', () => {
 // Minimize images
 gulp.task('images-min', () =>
   gulp.src(`${paths.main}/images/**/*.{svg,png,jpg}`)
-    .pipe(imagemin([imagemin.gifsicle(), imageminMozjpeg(), imagemin.optipng(), imagemin.svgo()], {
+    .pipe($.imagemin([$.imagemin.gifsicle(), imageminMozjpeg(), $.imagemin.optipng(), $.imagemin.svgo()], {
       progressive: true,
       interlaced: true,
       arithmetic: true,
@@ -118,24 +119,36 @@ gulp.task('ts-to-js', ['ts'], () =>
 );
 
 // Copy over the scripts that are used in importScripts as part of the generate-service-worker task.
-gulp.task('copy-sw-scripts', () => {
-  return gulp.src(['node_modules/sw-toolbox/sw-toolbox.js'])
-    .pipe(gulp.dest(`${paths.dist.js}`));
+function writeServiceWorkerFile(handleFetch, callback) {
+  var config = {
+    cacheId: 'MiXiT',
+    // Determines whether the fetch event handler is included in the generated service worker code. It is useful to
+    // set this to false in development builds, to ensure that features like live reload still work. Otherwise, the content
+    // would always be served from the service worker cache.
+    handleFetch: handleFetch,
+    logger: $.util.log,
+    runtimeCaching: [{
+      urlPattern: '/(.*)',
+      handler: 'networkFirst',
+      options : {
+        networkTimeoutSeconds: 3,
+        maxAgeSeconds: 600
+      }
+    }],
+    staticFileGlobs: [ paths.dist.sw + '/**/*.{js,html,css,png,jpg,json,gif,svg,webp,eot,ttf,woff,woff2}'],
+    stripPrefix: paths.dist.sw,
+    verbose: true
+  };
+
+  swPrecache.write(`${paths.tmp}/service-worker.js`, config, callback);
+}
+
+gulp.task('generate-service-worker-dev', function(callback) {
+  writeServiceWorkerFile(false, callback);
 });
 
-// Generate the service worker configuration for the offline mode
-gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
-  let id = new Date().toISOString().slice(0, 13);
-  return swPrecache.write(`${paths.tmp}/service-worker.js`, {
-    cacheId: `mixit-${id}`,
-    // sw-toolbox.js needs to be listed first. It sets up methods used in runtime-caching.js.
-    importScripts: [
-      '/js/sw-toolbox.js',
-      '/js/runtime-caching.js'
-    ],
-    staticFileGlobs: [ `${paths.dist.sw}/**/*.{js,html,css,png,jpg,json,gif,svg,webp,eot,ttf,woff,woff2}`],
-    stripPrefix: `${paths.dist.sw}/`
-  });
+gulp.task('generate-service-worker', function(callback) {
+  writeServiceWorkerFile(true, callback);
 });
 
 gulp.task('copy-templates', () => {
@@ -148,7 +161,7 @@ gulp.task('copy-messages', () => {
     .pipe(gulp.dest(`${paths.dist.resources}`));
 });
 
-gulp.task('package-service-worker', ['generate-service-worker'], () =>
+gulp.task('package-service-worker', () =>
   gulp.src(`${paths.tmp}/service-worker.js`)
     .pipe($.sourcemaps.init())
     .pipe($.sourcemaps.write())
@@ -159,20 +172,31 @@ gulp.task('package-service-worker', ['generate-service-worker'], () =>
 );
 
 // Clean output directory
-gulp.task('clean', () => del([paths.tmp, paths.dist.images, paths.dist.js], {dot: true}));
+gulp.task('clean', () => $.del([paths.tmp, paths.dist.images, paths.dist.js], {dot: true}));
 
 // Watch files for changes
-gulp.task('watch', ['default'], () => {
+gulp.task('watch', ['dev'], () => {
   gulp.watch([`${paths.main}/sass/**/*.scss`], ['styles']);
   gulp.watch([`${paths.main}/ts/**/*.ts`], ['ts-to-js']);
   gulp.watch([`${paths.main}/resources/templates/**`], ['copy-templates']);
   gulp.watch([`${paths.main}/resources/messages*.properties`], ['copy-messages']);
 });
 
+// Buil dev files
+gulp.task('dev', ['clean'], cb =>
+  runSequence(
+    ['styles', 'images', 'js-vendors', 'ts-to-js'],
+    'generate-service-worker-dev',
+    'package-service-worker',
+    cb
+  )
+);
+
 // Build production files, the default task
 gulp.task('build', cb =>
   runSequence(
     ['styles', 'images', 'js-vendors', 'ts-to-js'],
+    'generate-service-worker',
     'package-service-worker',
     cb
   )
