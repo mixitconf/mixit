@@ -3,7 +3,7 @@ package mixit.controller
 import mixit.model.*
 import mixit.repository.EventRepository
 import mixit.repository.SessionRepository
-import mixit.support.LazyRouterFunction
+import mixit.support.RouterFunctionProvider
 import mixit.support.MarkdownConverter
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.MediaType.*
@@ -21,7 +21,7 @@ import java.time.LocalDateTime
 
 @Controller
 class SessionController(val repository: SessionRepository, val eventRepository: EventRepository,
-                        val markdownConverter: MarkdownConverter, @Value("\${baseUri}") val baseUri: String) : LazyRouterFunction() {
+                        val markdownConverter: MarkdownConverter, @Value("\${baseUri}") val baseUri: String) : RouterFunctionProvider() {
 
     // TODO Remove this@ArticleController when KT-15667 will be fixed
     override val routes: Routes.() -> Unit = {

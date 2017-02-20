@@ -1,6 +1,6 @@
 package mixit.controller
 
-import mixit.support.LazyRouterFunction
+import mixit.support.RouterFunctionProvider
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.fromServerSentEvents
@@ -12,7 +12,7 @@ import java.time.Duration.ofMillis
 
 
 @Controller
-class NewsController : LazyRouterFunction() {
+class NewsController : RouterFunctionProvider() {
 
     // TODO Remove this@ArticleController when KT-15667 will be fixed
     override val routes: Routes.() -> Unit = {

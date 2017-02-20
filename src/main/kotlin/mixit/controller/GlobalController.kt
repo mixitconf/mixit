@@ -4,7 +4,7 @@ import mixit.model.EventSponsoring
 import mixit.model.Logo
 import mixit.model.SponsorshipLevel.*
 import mixit.repository.EventRepository
-import mixit.support.LazyRouterFunction
+import mixit.support.RouterFunctionProvider
 import mixit.support.shuffle
 import org.springframework.core.io.ClassPathResource
 import org.springframework.http.MediaType.TEXT_HTML
@@ -15,7 +15,7 @@ import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 
 @Controller
-class GlobalController(val repository: EventRepository) : LazyRouterFunction() {
+class GlobalController(val repository: EventRepository) : RouterFunctionProvider() {
 
     // TODO Remove this@ArticleController when KT-15667 will be fixed
     override val routes: Routes.() -> Unit = {

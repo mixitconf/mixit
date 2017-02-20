@@ -3,7 +3,7 @@ package mixit.controller
 import mixit.model.*
 import mixit.repository.EventRepository
 import mixit.repository.UserRepository
-import mixit.support.LazyRouterFunction
+import mixit.support.RouterFunctionProvider
 import mixit.support.MarkdownConverter
 import mixit.support.language
 import mixit.support.shuffle
@@ -25,7 +25,7 @@ import java.util.*
 
 @Controller
 class UserController(val repository: UserRepository, val eventRepository: EventRepository, val markdownConverter: MarkdownConverter,
-                     @Value("\${baseUri}") val baseUri: String) : LazyRouterFunction() {
+                     @Value("\${baseUri}") val baseUri: String) : RouterFunctionProvider() {
 
     // TODO Remove this@ArticleController when KT-15667 will be fixed
     override val routes: Routes.() -> Unit = {

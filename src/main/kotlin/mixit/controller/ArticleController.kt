@@ -5,7 +5,7 @@ import mixit.model.Language
 import mixit.model.Language.*
 import mixit.model.User
 import mixit.repository.ArticleRepository
-import mixit.support.LazyRouterFunction
+import mixit.support.RouterFunctionProvider
 import mixit.support.MarkdownConverter
 import mixit.support.language
 import org.springframework.beans.factory.annotation.Value
@@ -28,7 +28,7 @@ import java.time.format.DateTimeFormatterBuilder
 
 @Controller
 class ArticleController(val repository: ArticleRepository, val markdownConverter: MarkdownConverter,
-                        @Value("\${baseUri}") val baseUri: String) : LazyRouterFunction() {
+                        @Value("\${baseUri}") val baseUri: String) : RouterFunctionProvider() {
 
     private val daysLookup : Map<Long, String> = IntStream.rangeClosed(1, 31).boxed().collect(toMap(Int::toLong, { i -> getOrdinal(i)}))
     private val frenchDateFormatter = DateTimeFormatter.ofPattern("d MMMM yyyy", Locale.FRENCH)
