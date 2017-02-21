@@ -1,12 +1,17 @@
 {{> header}}
 
-<div class="mxt-wrapper--space"></div>
+<div class="mxt-wrapper--page-title">
+    <div class="row">
+        <div class="columns large-8 large-offset-2">
+            <h1 class="text-center">{{#i18n}}articles.title{{/i18n}}</h1>
 
-<div class="row">
-    <div class="column large-8 large-offset-2">
+        </div>
+    </div>
+</div>
 
-        <h1 class="hide">{{#i18n}}articles.title{{/i18n}}</h1>
-
+<div class="mxt-wrapper--page-content">
+    <div class="row">
+        <div class="column large-8 large-offset-2">
             {{#articles}}
             <div class="callout">
                 <article>
@@ -17,6 +22,7 @@
                 </article>
             </div>
             {{/articles}}
+        </div>
     </div>
 </div>
 

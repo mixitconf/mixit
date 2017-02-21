@@ -1,22 +1,28 @@
 {{> header}}
 
-<div class="mxt-wrapper--space"></div>
 
-<div class="row">
-    <div class="column large-8 large-offset-2">
+<div class="mxt-wrapper--page-title">
+    <div class="row">
+        <div class="columns large-8 large-offset-2">
+            <h1 class="text-center">{{user.firstname}} {{user.lastname}}</h1>
+        </div>
+    </div>
+</div>
 
-        <h1 class="text-center">{{user.firstname}} {{user.lastname}}</h1>
-        <hr />
-        <div class="callout">
-            <article>
-                <p class="subheader">{{user.company}}</p>
-                <p>{{user.description}}</p>
-                <p class="subheader">
-                    {{#user.links}}
-                        <a href="{{url}}">{{name}}</a> /
-                    {{/user.links}}
-                </p>
-            </article>
+<div class="mxt-wrapper--page-content">
+    <div class="row">
+        <div class="column large-8 large-offset-2">
+            <div class="callout">
+                <article>
+                    <p class="subheader">{{user.company}}</p>
+                    <p>{{user.description}}</p>
+                    <p class="subheader">
+                        {{#user.links}}
+                            <a href="{{url}}">{{name}}</a> /
+                        {{/user.links}}
+                    </p>
+                </article>
+            </div>
         </div>
     </div>
 </div>

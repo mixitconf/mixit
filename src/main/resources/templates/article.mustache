@@ -1,17 +1,24 @@
 {{> header}}
 
-<div class="mxt-wrapper--space"></div>
+<div class="mxt-wrapper--page-title">
+    <div class="row">
+        <div class="columns large-8 large-offset-2">
+            <h1 class="text-center">{{article.title}}</h1>
+            <hr />
+           	<p class="text-center subheader mxt-text--page-title">{{#i18n}}articles.by{{/i18n}} <strong>{{article.author.firstname}}</strong>, {{#i18n}}articles.on{{/i18n}} <strong>{{article.addedAt}}</strong></p><br />
+        </div>
+    </div>
+</div>
 
-<div class="row">
-    <div class="column large-8 large-offset-2">
-	    <div class="callout">
-		    <h1 class="text-center">{{article.title}}</h1>
-		    <hr />
-		    <p class="text-center subheader">{{#i18n}}articles.by{{/i18n}} <strong>{{article.author.firstname}}</strong>, {{#i18n}}articles.on{{/i18n}} <strong>{{article.addedAt}}</strong></p><br />
-		    <div class="lead">{{article.headline}}</div>
-		    <p>{{article.content}}</p>
+<div class="mxt-wrapper--page-content">
+    <div class="row">
+        <div class="column large-8 large-offset-2">
+            <div class="callout">
+			    <div class="lead">{{article.headline}}</div>
+			    <p>{{article.content}}</p>
+		    </div>
 	    </div>
-  </div>
+ 	</div>
 </div>
 
 {{> footer}}

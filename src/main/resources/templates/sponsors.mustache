@@ -1,24 +1,27 @@
 {{> header}}
 
-<div class="mxt-wrapper--space"></div>
+<div class="mxt-wrapper--page-title">
+    <div class="row">
+        <div class="columns large-8 large-offset-2">
+            <h1 class="text-center">{{#i18n}}sponsors.title{{/i18n}}</h1>
+            <p class="text-center mxt-text--page-title">{{#i18n}}sponsors.text{{/i18n}}</p>
+        </div>
+    </div>
+</div>
 
-<div class="row">
-  <div class="column large-8 large-offset-2">
-
-    <h1 class="text-center">{{#i18n}}sponsors.title{{/i18n}}</h1>
-    <p class="text-center">{{#i18n}}sponsors.text{{/i18n}}</p>
-    <hr />
-
-    <h2 class="subheader text-center mxt-subheader--space">{{#i18n}}sponsors.gold{{/i18n}}</h2>
+<div class="mxt-wrapper--page-content">
+    <div class="row">
+        <div class="column large-8 large-offset-2">
 
     <div class="mxt-wrapper--callout callout">
+        <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.gold{{/i18n}}</h2>
         {{#sponsors-gold}}
         <div class="row align-middle">
             <div class="small-12 medium-4 columns text-center">
                 <img src="/images/{{sponsor.logoUrl}}" class="mxt-img--sponsors" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}"/>
             </div>
             <div class="small-12 medium-8 columns">
-                <h3>NOM DU SPONSOR</h3>
+                <h3 class="subheader">NOM DU SPONSOR</h3>
                 {{sponsor.description}}
                 <ul class="menu simple">
                     {{#sponsor.links}}
@@ -30,16 +33,15 @@
         {{/sponsors-gold}}
     </div>
 
-    <h2 class="subheader text-center mxt-subheader--space">{{#i18n}}sponsors.silver{{/i18n}}</h2>
-
     <div class="mxt-wrapper--callout callout">
+        <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.silver{{/i18n}}</h2>
         {{#sponsors-silver}}
         <div class="row align-middle">
             <div class="small-12 medium-4 columns text-center">
                 <img src="/images/{{sponsor.logoUrl}}" class="mxt-img--sponsors" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}"/>
             </div>
             <div class="small-12 medium-8 columns">
-                <h3>NOM DU SPONSOR</h3>
+                <h3 class="subheader">NOM DU SPONSOR</h3>
                 {{sponsor.description}}
                 <ul class="menu simple">
                     {{#sponsor.links}}
@@ -51,16 +53,15 @@
         {{/sponsors-silver}}
     </div>
 
-    <h2 class="subheader text-center mxt-subheader--space">{{#i18n}}sponsors.party{{/i18n}}</h2>
-
     <div class="mxt-wrapper--callout callout">
+        <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.party{{/i18n}}</h2>
         {{#sponsors-party}}
         <div class="row align-middle">
             <div class="small-12 medium-4 columns text-center">
                 <img src="/images/{{sponsor.logoUrl}}" class="mxt-img--sponsors" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}"/>
             </div>
             <div class="small-12 medium-8 columns">
-                <h3>NOM DU SPONSOR</h3>
+                <h3 class="subheader">NOM DU SPONSOR</h3>
                 {{sponsor.description}}
                 <ul class="menu simple">
                     {{#sponsor.links}}
@@ -72,16 +73,15 @@
         {{/sponsors-party}}
     </div>
 
-    <h2 class="subheader text-center mxt-subheader--space">{{#i18n}}sponsors.lanyard{{/i18n}}</h2>
-
     <div class="mxt-wrapper--callout callout">
+        <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.lanyard{{/i18n}}</h2>
         {{#sponsors-lanyard}}
         <div class="row align-middle">
             <div class="small-12 medium-4 columns text-center">
                 <img src="/images/{{sponsor.logoUrl}}" class="mxt-img--sponsors" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}"/>
             </div>
             <div class="small-12 medium-8 columns">
-                <h3>NOM DU SPONSOR</h3>
+                <h3 class="subheader">NOM DU SPONSOR</h3>
                 {{sponsor.description}}
                 <ul class="menu simple">
                     {{#sponsor.links}}
@@ -93,16 +93,15 @@
         {{/sponsors-lanyard}}
     </div>
 
-    <h2 class="subheader text-center mxt-subheader--space">{{#i18n}}sponsors.hosting{{/i18n}}</h2>
-
     <div class="mxt-wrapper--callout callout">
+        <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.hosting{{/i18n}}</h2>
         {{#sponsors-hosting}}
         <div class="row align-middle">
             <div class="small-12 medium-4 columns text-center">
                 <img src="/images/{{sponsor.logoUrl}}" class="mxt-img--sponsors" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}" />
             </div>
             <div class="small-12 medium-8 columns">
-                <h3>NOM DU SPONSOR</h3>
+                <h3 class="subheader">NOM DU SPONSOR</h3>
                 {{sponsor.description}}
                 <ul class="menu simple">
                     {{#sponsor.links}}
