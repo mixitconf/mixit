@@ -27,7 +27,7 @@ import java.util.*
 class UserController(val repository: UserRepository, val eventRepository: EventRepository, val markdownConverter: MarkdownConverter,
                      @Value("\${baseUri}") val baseUri: String) : RouterFunctionProvider() {
 
-    // TODO Remove this@ArticleController when KT-15667 will be fixed
+    // TODO Remove this@UserController when KT-15667 will be fixed
     override val routes: Routes.() -> Unit = {
         accept(TEXT_HTML).route {
             (GET("/user/{login}") or GET("/speaker/{login}") or GET("/sponsor/{login}")) { findOneView(it) }
@@ -37,15 +37,23 @@ class UserController(val repository: UserRepository, val eventRepository: EventR
             GET("/sponsors/", this@UserController::findSponsorsView)
         }
         accept(APPLICATION_JSON).route {
-            GET("/api/user/", this@UserController::findAll)
-            POST("/api/user/", this@UserController::create)
-            GET("/api/user/{login}", this@UserController::findOne)
-            GET("/api/staff/", this@UserController::findStaff)
-            GET("/api/staff/{login}", this@UserController::findOneStaff)
-            GET("/api/speaker/", this@UserController::findSpeakers)
-            GET("/api/speaker/{login}", this@UserController::findOneSpeaker)
-            GET("/api/sponsor/", this@UserController::findSponsors)
-            GET("/api/sponsor/{login}", this@UserController::findOneSponsor)
+            pathPrefix("/api/user").route {
+                GET("/", this@UserController::findAll)
+                POST("/", this@UserController::create)
+                GET("/{login}", this@UserController::findOne)
+            }
+            pathPrefix("/api/staff").route {
+                GET("/", this@UserController::findStaff)
+                GET("/{login}", this@UserController::findOneStaff)
+            }
+            pathPrefix("/api/speaker").route {
+                GET("/", this@UserController::findSpeakers)
+                GET("/{login}", this@UserController::findOneSpeaker)
+            }
+            pathPrefix("/api/sponsor").route {
+                GET("/", this@UserController::findSponsors)
+                GET("/{login}", this@UserController::findOneSponsor)
+            }
             GET("/api/{event}/speaker/", this@UserController::findSpeakersByEvent)
         }
     }

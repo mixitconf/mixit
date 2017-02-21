@@ -23,16 +23,18 @@ import java.time.LocalDateTime
 class SessionController(val repository: SessionRepository, val eventRepository: EventRepository,
                         val markdownConverter: MarkdownConverter, @Value("\${baseUri}") val baseUri: String) : RouterFunctionProvider() {
 
-    // TODO Remove this@ArticleController when KT-15667 will be fixed
+    // TODO Remove this@SessionController when KT-15667 will be fixed
     override val routes: Routes.() -> Unit = {
         accept(TEXT_HTML).route {
             GET("/{year}/sessions/", this@SessionController::findByEventView)
-            GET("/session/{slug}",  this@SessionController::findOneView)
-            (GET("/session/{id}/") or GET("/session/{id}/{sluggifiedTitle}/")) { redirectOneView(it) }
+            pathPrefix("/session").route {
+                GET("/{slug}",  this@SessionController::findOneView)
+                (GET("/{id}/") or GET("/session/{id}/{sluggifiedTitle}/")) { redirectOneView(it) }
+            }
         }
-        accept(APPLICATION_JSON).route {
-            GET("/api/session/{login}", this@SessionController::findOne)
-            GET("/api/{year}/session/", this@SessionController::findByEventId)
+        (accept(APPLICATION_JSON) and pathPrefix("/api")).route {
+            GET("/session/{login}", this@SessionController::findOne)
+            GET("/{year}/session/", this@SessionController::findByEventId)
         }
     }
 

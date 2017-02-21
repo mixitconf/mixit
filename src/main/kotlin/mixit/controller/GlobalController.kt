@@ -17,7 +17,7 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 @Controller
 class GlobalController(val repository: EventRepository) : RouterFunctionProvider() {
 
-    // TODO Remove this@ArticleController when KT-15667 will be fixed
+    // TODO Remove this@GlobalController when KT-15667 will be fixed
     override val routes: Routes.() -> Unit = {
         accept(TEXT_HTML).route {
             GET("/", this@GlobalController::homeView)

@@ -8,17 +8,18 @@ import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.fromPublisher
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.RequestPredicates.accept
+import org.springframework.web.reactive.function.server.RequestPredicates.pathPrefix
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 
 
 @Controller
 class EventController(val repository: EventRepository) : RouterFunctionProvider() {
 
-    // TODO Remove this@ArticleController when KT-15667 will be fixed
+    // TODO Remove this@EventController when KT-15667 will be fixed
     override val routes: Routes.() -> Unit = {
-        accept(APPLICATION_JSON).route {
-            GET("/api/event/", this@EventController::findAll)
-            GET("/api/event/{login}", this@EventController::findOne)
+        (accept(APPLICATION_JSON) and pathPrefix("/api/event")).route {
+            GET("/", this@EventController::findAll)
+            GET("/{login}", this@EventController::findOne)
         }
     }
 
