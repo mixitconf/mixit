@@ -28,33 +28,42 @@ The technologies used are:
  
 ## Getting started
 
-Prerequisite:
- - [Install MongoDB](https://www.mongodb.com/download-center) and run `mongod`
+### Prerequisite
+ - Install [Git](https://git-scm.com/)
+ - [Fork](https://github.com/mix-it/mixit#fork-destination-box) and clone [the project](https://github.com/mix-it/mixit)
+ - [Install MongoDB](https://www.mongodb.com/download-center)
  - [Install Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
  - [Install Gulp](http://gulpjs.com/) for development mode 
  - Depending on your platform, you may have to install libpng (On mac with `brew install libpng` for example)
-
-To import the project in IDEA:
- - Clone the project `git clone https://github.com/mix-it/mixit.git`
- - Make sure you have at least IntelliJ IDEA 2016.3 and IDEA Kotlin plugin 1.1.0-rc-91+ (menu Tools -> Kotlin -> configure Kotlin Plugin Updates -> select "Early Access Preview 1.1" update channel -> check for updates now -> restart IDE after the update)
- - Import it in IDEA as a Gradle project
  
-To run the application in development mode:
- - Run `./gradlew clean build bootRun` 
- - Run `gulp watch`
+### Run the app in dev mod using command line
+ - Run `mongod`
+ - Run `./gradlew bootRun` in another terminal
+ - Run `gulp watch` in another terminal
  - Open `http://localhost:8080/` in your browser
  - If you just want to restart the app: `./gradlew bootRun -x gulpBuild`
  - If you want to debug the app, add `--debug-jvm` parameter to Gradle command line
  
-To package and run the application from the executable JAR:
+Sass, TypeScript, `messages*.properties` and templates should be live reloaded.
+
+### Import and run the project in IDEA
+ - Make sure you have at least IntelliJ IDEA `2016.3` and IDEA Kotlin plugin `1.1.0-rc-91+` (menu Tools -> Kotlin -> configure Kotlin Plugin Updates -> select "Early Access Preview 1.1" update channel -> check for updates now -> restart IDE after the update)
+ - Import it in IDEA as a Gradle project **and make sure to uncheck "Create Module for each SourceSet"** to avoid a nasty bug that prevent to run the app in IDEA
+ - Run `mongod` in command line
+ - In IntelliJ IDEA, right click on `Application.kt` then `Run ...` or `Debug ...`
+ - Run `gulp watch` in another terminal
+ - Open `http://localhost:8080/` in your browser
+ 
+Sass, TypeScript, `messages*.properties` and templates should be live reloaded.
+ 
+### Package and run the application from the executable JAR:
 ```
-./gradlew build
+./gradlew clean build
 java -jar build/libs/mixit-1.0.0-SNAPSHOT.jar
 ```
 
-To deploy the app on CF:
+###  Deploy the app on Cloud Foundry
 ```
 ./gradlew clean build
 cf push
 ```
-
