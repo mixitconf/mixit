@@ -40,8 +40,6 @@
 	margin: 1em 0.5em;
 	&:hover {
 		cursor: pointer;
-	}
-	&:hover path {
-		fill: $anchor-color-alt-hover;
+		opacity: 0.8;
 	}
 }
