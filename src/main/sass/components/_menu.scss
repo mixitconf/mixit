@@ -1,12 +1,5 @@
-//MENUS
-.mxt-menu__item--nav {
-	color: $anchor-color-alt;
-	&:hover {
-		color: $anchor-color-alt-hover;
-	}
-}
-
-ul.mxt-menu--nav {
+//MENU
+.mxt-menu--nav {
 	text-transform: uppercase;
 	font-size: rem-calc(12);
 	font-weight: $global-weight-bold;
@@ -14,4 +7,41 @@ ul.mxt-menu--nav {
 		@include menu-direction(vertical);
   		text-align: center;
   	}
+}
+
+.mxt-menu__item--nav {
+	color: $anchor-color-alt;
+	&:hover {
+		color: $anchor-color-alt-hover;
+	}
+}
+
+//Language switch
+.mxt-menu__item--lang {
+	color: $medium-gray;
+	&:hover {
+		color: $light-gray;
+	}
+	&::before {
+		@include breakpoint (medium up) {
+			content: "•";
+			margin-right: $topbar-padding*3;
+			color: $medium-gray;
+		}
+	}
+}
+
+//Archives dropdown
+.mxt-menu__dropdown-wrap {
+	@include breakpoint (small only) {
+		min-width: 100%;
+	}
+}
+
+.mxt-menu__dropdown-item {
+	text-transform: none;
+	color: $anchor-color-alt;
+	&:hover {
+		color: $anchor-color-alt-hover;
+	}	
 }
