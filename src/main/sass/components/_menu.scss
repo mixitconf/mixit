@@ -27,6 +27,11 @@
 	color: $light-gray;
 }
 
+// TALKS
+.mxt-menu--talks .has-dropdown > a::after {
+	border-color: rgba(51, 51, 51, 0.4) transparent transparent;
+}
+
 //Archives dropdown
 .mxt-menu__dropdown-wrap {
 	@include breakpoint (small only) {

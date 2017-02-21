@@ -2,8 +2,22 @@
 
 <div class="mxt-wrapper--page-title">
     <div class="row">
-        <div class="columns">
-            <h1 class="text-center">{{#i18n}}sessions.title{{/i18n}} {{year}}</h1>
+        <div class="columns large-8 large-offset-2">
+            <h1 class="text-center">
+            <div class="menu-centered">
+                <ul class="dropdown menu mxt-menu--talks" data-dropdown-menu>
+                    <li>{{#i18n}}sessions.title{{/i18n}}</li>
+                    <li><a href="#">{{year}}</a>
+                        <ul class="menu">
+                            <li><a href="{{localePrefix}}/2016/">2016</a></li>
+                            <li><a href="{{localePrefix}}/2015/">2015</a></li>
+                            <li><a href="{{localePrefix}}/2014/">2014</a></li>
+                            <li><a href="{{localePrefix}}/2013/">2013</a></li>
+                            <li><a href="{{localePrefix}}/2012/">2012</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>

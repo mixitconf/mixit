@@ -3,7 +3,21 @@
 <div class="mxt-wrapper--page-title">
     <div class="row">
         <div class="columns large-8 large-offset-2">
-            <h1 class="text-center">{{#i18n}}sessions.title{{/i18n}} 2017</h1>
+            <h1 class="text-center">
+            <div class="menu-centered">
+                <ul class="dropdown menu mxt-menu--talks" data-dropdown-menu>
+                    <li>{{#i18n}}sessions.title{{/i18n}}</li>
+                    <li><a href="#">2017</a>
+                        <ul class="menu">
+                            <li><a href="{{localePrefix}}/2016/">2016</a></li>
+                            <li><a href="{{localePrefix}}/2015/">2015</a></li>
+                            <li><a href="{{localePrefix}}/2014/">2014</a></li>
+                            <li><a href="{{localePrefix}}/2013/">2013</a></li>
+                            <li><a href="{{localePrefix}}/2012/">2012</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
@@ -12,19 +26,16 @@
 <div class="mxt-wrapper--page-content">
     <div class="row">
         <div class="column large-8 large-offset-2">
-
-            <div class="callout">
-
+            <div class="callout text-center menu-centered">
                 <h2>{{#i18n}}sessions.tba{{/i18n}}</h2>
-
-                <div>
-                    {{#i18n}}sessions.archives{{/i18n}}
-                    <a href="{{localePrefix}}/2016/">2016</a> /
-                    <a href="{{localePrefix}}/2015/">2015</a> /
-                    <a href="{{localePrefix}}/2014/">2014</a> /
-                    <a href="{{localePrefix}}/2013/">2013</a> /
-                    <a href="{{localePrefix}}/2012/">2012</a>
-                </div>
+                <p>{{#i18n}}sessions.archives{{/i18n}}</p>
+                <ul class="menu">
+                    <li><a href="{{localePrefix}}/2016/">MiXiT 2016</a></li>
+                    <li><a href="{{localePrefix}}/2015/">MiXiT 2015</a></li>
+                    <li><a href="{{localePrefix}}/2014/">MiXiT 2014</a></li>
+                    <li><a href="{{localePrefix}}/2013/">MiXiT 2013</a></li>
+                    <li><a href="{{localePrefix}}/2012/">MiXiT 2012</a></li>
+                </ul>
             </div>
         </div>
     </div>

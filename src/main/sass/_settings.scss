@@ -337,7 +337,7 @@ $drilldown-background: $white;
 
 $dropdown-padding: 1rem;
 $dropdown-background: $body-background;
-$dropdown-border: 1px solid $medium-gray;
+$dropdown-border: 0px solid $medium-gray;
 $dropdown-font-size: 1rem;
 $dropdown-width: 300px;
 $dropdown-radius: $global-radius;
@@ -351,11 +351,11 @@ $dropdown-sizes: (
 // -----------------
 
 $dropdownmenu-arrows: true;
-$dropdownmenu-arrow-color: $light-gray;
+$dropdownmenu-arrow-color: $primary-color;
 $dropdownmenu-arrow-size: 5px;
 $dropdownmenu-min-width: 100px;
-$dropdownmenu-background: $white;
-$dropdownmenu-border: 1px solid $medium-gray;
+$dropdownmenu-background: $secondary-color;
+$dropdownmenu-border: 0px solid $medium-gray;
 
 // 19. Forms
 // ---------
