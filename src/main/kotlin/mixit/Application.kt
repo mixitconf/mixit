@@ -13,6 +13,8 @@ import mixit.support.run
 import org.springframework.boot.ApplicationRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration
+import org.springframework.boot.autoconfigure.data.mongo.ReactiveMongoDataAutoConfiguration
+import org.springframework.boot.autoconfigure.data.mongo.ReactiveMongoRepositoriesAutoConfiguration
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration
 import org.springframework.context.annotation.Bean
 import org.springframework.core.env.Environment
@@ -25,7 +27,7 @@ import org.springframework.web.reactive.result.view.mustache.MustacheResourceTem
 import org.springframework.web.reactive.result.view.mustache.MustacheViewResolver
 
 
-@SpringBootApplication(exclude = arrayOf(MongoAutoConfiguration::class, MongoDataAutoConfiguration::class))
+@SpringBootApplication(exclude = arrayOf(MongoAutoConfiguration::class, MongoDataAutoConfiguration::class, ReactiveMongoRepositoriesAutoConfiguration::class, ReactiveMongoDataAutoConfiguration::class))
 class Application {
 
     @Bean
