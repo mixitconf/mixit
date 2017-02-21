@@ -32,14 +32,12 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
             GET("/2014/") { findByEventView(2014, it) }
             GET("/2013/") { findByEventView(2013, it) }
             GET("/2012/") { findByEventView(2012, it) }
-            pathPrefix("/session").route {
-                GET("/{slug}", this@SessionController::findOneView)
-                (GET("/{id}/") or GET("/session/{id}/{sluggifiedTitle}/")) { redirectOneView(it) }
-            }
+            GET("/session/{slug}", this@SessionController::findOneView)
+            (GET("/session/{id}/") or GET("/session/{id}/{sluggifiedTitle}/")) { redirectOneView(it) }
         }
-        (accept(APPLICATION_JSON) and pathPrefix("/api")).route {
-            GET("/talk/{login}", this@SessionController::findOne)
-            GET("/{year}/talk/", this@SessionController::findByEventId)
+        accept(APPLICATION_JSON).route {
+            GET("/api/talk/{login}", this@SessionController::findOne)
+            GET("/api/{year}/talk/", this@SessionController::findByEventId)
         }
     }
 
