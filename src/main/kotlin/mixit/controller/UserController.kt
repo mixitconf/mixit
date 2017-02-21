@@ -30,7 +30,7 @@ class UserController(val repository: UserRepository, val eventRepository: EventR
     override val routes: Routes.() -> Unit = {
         accept(TEXT_HTML).route {
             (GET("/user/{login}") or GET("/speaker/{login}") or GET("/sponsor/{login}")) { findOneView(it) }
-            (GET("/member/{login}") or GET("/member/sponsor/{login}") or GET("/member/member/{login}")) { status(PERMANENT_REDIRECT).location(create("$baseUri/user/${it.pathVariable("login")}")).build() }
+            (GET("/member/{login}") or GET("/profile/{login}") or GET("/member/sponsor/{login}") or GET("/member/member/{login}")) { status(PERMANENT_REDIRECT).location(create("$baseUri/user/${it.pathVariable("login")}")).build() }
             GET("/about/", this@UserController::findAboutView)
             GET("/about") { status(PERMANENT_REDIRECT).location(create("$baseUri/about/")).build() }
             GET("/sponsors/", this@UserController::findSponsorsView)

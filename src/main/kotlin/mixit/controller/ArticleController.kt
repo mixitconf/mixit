@@ -47,7 +47,7 @@ class ArticleController(val repository: ArticleRepository, val markdownConverter
 
             // /articles/** are old routes used by the previous version of our website
             GET("/articles/") { status(PERMANENT_REDIRECT).location(create("$baseUri/blog/")).build() }
-            (GET("/articles/{id}") or GET("/articles/{id}/")) { redirectOneView(it) }
+            (GET("/articles/{id}") or GET("/articles/{id}/") or GET("/article/{id}/")) { redirectOneView(it) }
         }
         (accept(APPLICATION_JSON) and pathPrefix("/api/blog")).route {
             GET("/", this@ArticleController::findAll)
