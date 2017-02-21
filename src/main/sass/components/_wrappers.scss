@@ -26,6 +26,18 @@
 }
 
 
+.mxt-wrapper--page-title {
+	color: $forth-color;
+	background: $secondary-color;
+	padding-top: 4em;
+	padding-bottom: 8em;
+}
+
+.mxt-wrapper--page-content {
+	position: relative;
+	top: -5em;
+}
+
 // STICKY FOOTER
 .mxt-wrapper--page {
   flex: 1;

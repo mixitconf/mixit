@@ -1,34 +1,41 @@
 {{> header}}
 
-<div class="mxt-wrapper--space"></div>
-
-<div class="row">
-    <div class="column large-8 large-offset-2">
-
-        <h1 class="text-center">{{#i18n}}sessions.title{{/i18n}} {{year}}</h1>
-        <hr />
-        <div class="callout">
-            {{#sessions}}
-                <article>
-                    <h2><a href="{{localePrefix}}/session/{{slug}}" class="mxt-title--article">{{title}}</a></h2>
-                    <p class="subheader">
-                        {{event}} / #{{format}}
-                        {{#video}}
-                            / &#x25ba;&nbsp;{{#i18n}}session.video.watch{{/i18n}} <a href="{{video}}">{{#i18n}}session.video.thevideo{{/i18n}}</a>
-                        {{/video}}
-                    </p>
-                    <p>{{summary}}</p>
-                    <p class="subheader">
-                        {{#speakers}}
-                            <a href="{{localePrefix}}/speaker/{{login}}">{{firstname}} {{lastname}}</a> /
-                        {{/speakers}}
-                    </p>
-                    <a href="{{localePrefix}}/session/{{slug}}" class="button third hollow align-center">{{#i18n}}sessions.readmore{{/i18n}}</a>
-                </article>
-                <hr />
-            {{/sessions}}
+<div class="mxt-wrapper--page-title">
+    <div class="row">
+        <div class="columns">
+            <h1 class="text-center">{{#i18n}}sessions.title{{/i18n}} {{year}}</h1>
         </div>
     </div>
 </div>
 
+<div class="mxt-wrapper--page-content">
+    <div class="row">
+        <div class="column large-8 large-offset-2">    
+
+            <div class="callout">
+                {{#sessions}}
+                    <article>
+                        <h2><a href="{{localePrefix}}/session/{{slug}}" class="mxt-title--article">{{title}}</a></h2>
+                        <ul class="menu simple">
+                            {{#speakers}}
+                                <li><a href="{{localePrefix}}/speaker/{{login}}">{{firstname}} {{lastname}}</a></li>
+                            {{/speakers}}
+                        </ul>
+                        <br />
+                        <span><strong>#{{format}}</strong></span>
+                        <p>{{summary}}</p>
+                        <p class="subheader">
+                            <strong>
+                            {{#video}}
+                                <p>&#x25ba;&nbsp;{{#i18n}}session.video.watch{{/i18n}} <a href="{{video}}">{{#i18n}}session.video.thevideo{{/i18n}}</a></p>
+                            {{/video}}</strong>
+                        </p>
+                        <a href="{{localePrefix}}/session/{{slug}}" class="button third hollow">{{#i18n}}sessions.readmore{{/i18n}}</a>
+                    </article>
+                    <hr />
+                {{/sessions}}
+            </div>
+        </div>
+    </div>
+</div>
 {{> footer}}
