@@ -11,10 +11,10 @@ class SessionIntegrationTests : AbstractIntegrationTests() {
 
 
     @Test
-    fun `Find Dan North session`() {
+    fun `Find Dan North talk`() {
         val session = client
                 .get()
-                .uri("/api/session/2421")
+                .uri("/api/talk/2421")
                 .accept(APPLICATION_JSON)
                 .exchange()
                 .flatMap { r -> r.bodyToFlux<Session>() }
@@ -28,10 +28,10 @@ class SessionIntegrationTests : AbstractIntegrationTests() {
     }
 
     @Test
-    fun `Find MiXiT 2012 sessions`() {
+    fun `Find MiXiT 2012 talks`() {
         val sessions = client
                 .get()
-                .uri("/api/2012/session/")
+                .uri("/api/2012/talk/")
                 .accept(APPLICATION_JSON)
                 .exchange()
                 .flatMap { it.bodyToFlux<Session>() }

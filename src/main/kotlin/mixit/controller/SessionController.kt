@@ -26,21 +26,26 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
     // TODO Remove this@SessionController when KT-15667 will be fixed
     override val routes: Routes.() -> Unit = {
         accept(TEXT_HTML).route {
-            GET("/{year}/sessions/", this@SessionController::findByEventView)
+            GET("/2017/") { ok().render("sessions-2017") }
+            GET("/2016/") { findByEventView(2016, it) }
+            GET("/2015/") { findByEventView(2015, it) }
+            GET("/2014/") { findByEventView(2014, it) }
+            GET("/2013/") { findByEventView(2013, it) }
+            GET("/2012/") { findByEventView(2012, it) }
             pathPrefix("/session").route {
                 GET("/{slug}", this@SessionController::findOneView)
                 (GET("/{id}/") or GET("/session/{id}/{sluggifiedTitle}/")) { redirectOneView(it) }
             }
         }
         (accept(APPLICATION_JSON) and pathPrefix("/api")).route {
-            GET("/session/{login}", this@SessionController::findOne)
-            GET("/{year}/session/", this@SessionController::findByEventId)
+            GET("/talk/{login}", this@SessionController::findOne)
+            GET("/{year}/talk/", this@SessionController::findByEventId)
         }
     }
 
-    fun findByEventView(req: ServerRequest) = repository.findByEvent(eventRepository.yearToId(req.pathVariable("year")))
+    fun findByEventView(year: Int, req: ServerRequest) = repository.findByEvent(eventRepository.yearToId(year.toString()))
             .collectList()
-            .then { session -> ok().render("sessions",  mapOf(Pair("sessions", session), Pair("year", req.pathVariable("year")))) }
+            .then { session -> ok().render("sessions",  mapOf(Pair("sessions", session), Pair("year", year))) }
 
     fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug"))
             .then { session -> ok().render("session", mapOf(Pair("session", SessionDto(session, markdownConverter)))) }
