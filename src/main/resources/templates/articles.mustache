@@ -5,19 +5,18 @@
 <div class="row">
     <div class="column large-8 large-offset-2">
 
-        <h1 class="text-center">{{#i18n}}articles.title{{/i18n}}</h1>
-        <hr />
-        <div class="callout">
+        <h1 class="hide">{{#i18n}}articles.title{{/i18n}}</h1>
+
             {{#articles}}
+            <div class="callout">
                 <article>
                     <h2><a href="{{localePrefix}}/blog/{{slug}}" class="mxt-title--article">{{title}}</a></h2>
-                    <p class="subheader">{{#i18n}}articles.by{{/i18n}} {{author.firstname}}, {{#i18n}}articles.on{{/i18n}} {{addedAt}}</p>
+                    <p class="subheader">{{#i18n}}articles.by{{/i18n}} <strong>{{author.firstname}}</strong>, {{#i18n}}articles.on{{/i18n}} <strong>{{addedAt}}</strong></p>
                     <p>{{headline}}</p>
                     <a href="{{localePrefix}}/blog/{{slug}}" class="button hollow align-center">{{#i18n}}articles.readmore{{/i18n}}</a>
                 </article>
-                <hr />
+            </div>
             {{/articles}}
-        </div>
     </div>
 </div>
 
