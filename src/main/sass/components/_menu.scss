@@ -22,13 +22,9 @@
 	&:hover {
 		color: $light-gray;
 	}
-	&::before {
-		@include breakpoint (medium up) {
-			content: "•";
-			margin-right: $topbar-padding*3;
-			color: $medium-gray;
-		}
-	}
+}
+.mxt-menu__item--bullet {	
+	color: $light-gray;
 }
 
 //Archives dropdown
