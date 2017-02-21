@@ -266,26 +266,36 @@
 
 <div class="row">
   <div class="column text-center">
-    <ul class="menu simple">
-      {{#sponsors-gold}}
-        {{> home-sponsor }}
-      {{/sponsors-gold}}
-    </ul>
-    <hr/>
-    <ul class="menu simple">
-      {{#sponsors-silver}}
-        {{> home-sponsor-other }}
-      {{/sponsors-silver}}
-      {{#sponsors-party}}
-        {{> home-sponsor-other }}
-      {{/sponsors-party}}
-      {{#sponsors-hosting}}
-         {{> home-sponsor-other }}
-      {{/sponsors-hosting}}
-      {{#sponsors-lanyard}}
-         {{> home-sponsor-other }}
-      {{/sponsors-lanyard}}
-    </ul>
+      <div class="row align-center ">
+          {{#sponsors-gold}}
+              <div class="columns column-block small-4 medium-3 large-2 mxt-img--sponsors-home-premium">
+                  {{> home-sponsor }}
+              </div>
+          {{/sponsors-gold}}
+      </div>
+      <hr/>
+      <div class="row align-spaced ">
+          {{#sponsors-silver}}
+              <div class="columns column-block small-3 medium-2 large-1 mxt-img--sponsors-home-other">
+                  {{> home-sponsor }}
+              </div>
+          {{/sponsors-silver}}
+          {{#sponsors-party}}
+              <div class="columns column-block small-3 medium-2 large-1 mxt-img--sponsors-home-other">
+                  {{> home-sponsor }}
+              </div>
+          {{/sponsors-party}}
+          {{#sponsors-hosting}}
+              <div class="columns column-block small-3 medium-2 large-1 mxt-img--sponsors-home-other">
+                  {{> home-sponsor }}
+              </div>
+          {{/sponsors-hosting}}
+          {{#sponsors-lanyard}}
+              <div class="columns column-block small-3 medium-2 large-1 mxt-img--sponsors-home-other">
+                  {{> home-sponsor }}
+              </div>
+          {{/sponsors-lanyard}}
+      </div>
 
     <hr />
 

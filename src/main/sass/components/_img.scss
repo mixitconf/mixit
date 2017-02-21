@@ -34,18 +34,18 @@
 // SPONSORS HOME
 .mxt-img--sponsors-home {
   @extend .mxt-img--grayscale;
-	max-height: 10em;
-	max-width: 10em;
+  min-width: 100%;
   margin-bottom: 1em;
 }
 
+.mxt-img--sponsors-home-premium {
+  max-height: 10em;
+  max-width: 10em;
+}
+
 .mxt-img--sponsors-home-other {
-    @extend .mxt-img--grayscale;
-	max-width: 8em;
+    max-width: 8em;
 	max-height: 6em;
-    @include breakpoint(small only) {
-        margin-bottom: 1em;
-    }
 }
 
 // SPONSORS PAGE
