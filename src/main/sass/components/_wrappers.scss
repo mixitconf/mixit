@@ -48,3 +48,12 @@
 .mxt-wrapper--space {
     height: 2em;
 }
+
+// SPONSORS
+.mxt-wrapper--sponsors .row:not(:last-child):after {
+	content:"";
+	border-bottom: 1px solid $light-gray;
+	width: 3em;
+	margin: 2em auto; 
+	position: relative;
+}
