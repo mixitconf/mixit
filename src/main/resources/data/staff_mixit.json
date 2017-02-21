@@ -176,11 +176,12 @@
     "lastname": "BORDEAU",
     "logo": null,
     "hash": "2f38a64d06efd5433027cc5b04265fb0",
-    "shortDescription": "Webdesign & documentaires interactifs.",
-    "shortDescriptionEn": "Webdesign & Interactive Documentaries.",
+    "shortDescription": "Designer & photographer freelance basée à Lyon, spécialisée dans la narration interactive ッ",
+    "shortDescriptionEn": "Freelance designer & phtographer based in Lyon. I specialized in interactive storytelling projects ッ",
     "userLinks": [
+      { "key": "Twitter", "value": "https://twitter.com/jessbordeau" },
       { "key": "Site", "value": "http://www.jessicabordeau.com/" },
-      { "key": "Portfolio", "value": "https://jessicabordeau.myportfolio.com/" }
+      { "key": "Portfolio", "value": "http://design.jessicabordeau.com" }
     ]
   },
   {
