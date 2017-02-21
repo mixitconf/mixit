@@ -4,14 +4,13 @@
 
 <div class="row">
     <div class="column large-8 large-offset-2">
-    <h1 class="text-center">{{article.title}}</h1>
-    <hr />
-    <p class="text-center"><strong>{{#i18n}}articles.by{{/i18n}} {{article.author.firstname}}, {{#i18n}}articles.on{{/i18n}} {{article.addedAt}}</strong></p>
-    <div class="callout">
-        <p class="lead">{{article.headline}}</p>
-        <p>{{article.content}}</p>
-    </div>
-
+	    <div class="callout">
+		    <h1 class="text-center">{{article.title}}</h1>
+		    <hr />
+		    <p class="text-center subheader">{{#i18n}}articles.by{{/i18n}} <strong>{{article.author.firstname}}</strong>, {{#i18n}}articles.on{{/i18n}} <strong>{{article.addedAt}}</strong></p><br />
+		    <div class="lead">{{article.headline}}</div>
+		    <p>{{article.content}}</p>
+	    </div>
   </div>
 </div>
 
