@@ -29,11 +29,11 @@ class GlobalController(val repository: EventRepository) : RouterFunctionProvider
             .then { events ->
                 val sponsors = events.sponsors.groupBy { it.level }
                 ok().render("home", mapOf(
-                        Pair("sponsors-gold", sponsors[GOLD]?.shuffle()?.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) }),
-                        Pair("sponsors-silver", sponsors[SILVER]?.shuffle()?.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) }),
-                        Pair("sponsors-hosting", sponsors[HOSTING]?.shuffle()?.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) }),
-                        Pair("sponsors-lanyard", sponsors[LANYARD]?.shuffle()?.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) }),
-                        Pair("sponsors-party", sponsors[PARTY]?.shuffle()?.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) })
+                        Pair("sponsors-gold", sponsors[GOLD]?.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) }),
+                        Pair("sponsors-silver", sponsors[SILVER]?.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) }),
+                        Pair("sponsors-hosting", sponsors[HOSTING]?.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) }),
+                        Pair("sponsors-lanyard", sponsors[LANYARD]?.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) }),
+                        Pair("sponsors-party", sponsors[PARTY]?.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) })
                 ))
             }
 

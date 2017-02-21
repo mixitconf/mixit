@@ -104,11 +104,11 @@ class UserController(val repository: UserRepository, val eventRepository: EventR
         val sponsors = events.sponsors.map { toEventSponsoringDto(it, req.language()) }.groupBy { it.level }
 
         ok().render("sponsors", mapOf(
-            Pair("sponsors-gold", sponsors[SponsorshipLevel.GOLD]?.shuffle()),
-            Pair("sponsors-silver", sponsors[SponsorshipLevel.SILVER]?.shuffle()),
-            Pair("sponsors-hosting", sponsors[SponsorshipLevel.HOSTING]?.shuffle()),
-            Pair("sponsors-lanyard", sponsors[SponsorshipLevel.LANYARD]?.shuffle()),
-            Pair("sponsors-party", sponsors[SponsorshipLevel.PARTY]?.shuffle())
+            Pair("sponsors-gold", sponsors[SponsorshipLevel.GOLD]),
+            Pair("sponsors-silver", sponsors[SponsorshipLevel.SILVER]),
+            Pair("sponsors-hosting", sponsors[SponsorshipLevel.HOSTING]),
+            Pair("sponsors-lanyard", sponsors[SponsorshipLevel.LANYARD]),
+            Pair("sponsors-party", sponsors[SponsorshipLevel.PARTY])
         ))
     }
 
