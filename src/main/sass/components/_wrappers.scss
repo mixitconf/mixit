@@ -31,12 +31,6 @@
   flex: 1;
 }
 
-.mxt-wrapper--team {
-	background-color: $white;
-	padding: 1em;
-	margin-bottom: 2em;
-}
-
 .mxt-wrapper--footer {
 	background-color: $secondary-color;
 	padding: 0.5em;
@@ -50,7 +44,7 @@
 }
 
 // SPONSORS
-.mxt-wrapper--sponsors .row:not(:last-child):after {
+.mxt-wrapper--callout .row:not(:last-child):after {
 	content:"";
 	border-bottom: 1px solid $light-gray;
 	width: 3em;
