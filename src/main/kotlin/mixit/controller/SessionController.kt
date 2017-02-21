@@ -28,7 +28,7 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
         accept(TEXT_HTML).route {
             GET("/{year}/sessions/", this@SessionController::findByEventView)
             pathPrefix("/session").route {
-                GET("/{slug}",  this@SessionController::findOneView)
+                GET("/{slug}", this@SessionController::findOneView)
                 (GET("/{id}/") or GET("/session/{id}/{sluggifiedTitle}/")) { redirectOneView(it) }
             }
         }
