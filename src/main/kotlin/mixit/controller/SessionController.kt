@@ -32,7 +32,7 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
             GET("/2014/") { findByEventView(2014, it) }
             GET("/2013/") { findByEventView(2013, it) }
             GET("/2012/") { findByEventView(2012, it) }
-            GET("/session/{slug}", this@SessionController::findOneView)
+            GET("/talk/{slug}", this@SessionController::findOneView)
             (GET("/session/{id}/") or GET("/session/{id}/{sluggifiedTitle}/")) { redirectOneView(it) }
         }
         accept(APPLICATION_JSON).route {
@@ -49,7 +49,7 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
             .then { session -> ok().render("session", mapOf(Pair("session", SessionDto(session, markdownConverter)))) }
 
     fun redirectOneView(req: ServerRequest) = repository.findOne(req.pathVariable("id")).then { s ->
-            status(PERMANENT_REDIRECT).location(create("$baseUri/session/${s.slug}")).build()
+            status(PERMANENT_REDIRECT).location(create("$baseUri/talk/${s.slug}")).build()
     }
 
     fun findOne(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
