@@ -85,10 +85,8 @@ dependencies {
     compile("io.projectreactor:reactor-kotlin:1.0.0.BUILD-SNAPSHOT")
     testCompile("io.projectreactor.addons:reactor-test:3.0.5.RELEASE")
 
-
     compile("com.fasterxml.jackson.module:jackson-module-kotlin")
     compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
-
 }
 
 task<GulpTask>("gulpBuild") {
