@@ -80,8 +80,8 @@ dependencies {
     compile("com.atlassian.commonmark:commonmark-ext-autolink:0.8.0")
 
     compile("io.projectreactor:reactor-core:3.0.5.RELEASE")
-    compile("io.projectreactor.ipc:reactor-ipc:0.6.1.BUILD-SNAPSHOT")
-    compile("io.projectreactor.ipc:reactor-netty:0.6.1.BUILD-SNAPSHOT")
+    compile("io.projectreactor.ipc:reactor-ipc:0.6.1.RELEASE")
+    compile("io.projectreactor.ipc:reactor-netty:0.6.1.RELEASE")
     compile("io.projectreactor:reactor-kotlin:1.0.0.BUILD-SNAPSHOT")
     testCompile("io.projectreactor.addons:reactor-test:3.0.5.RELEASE")
 
