@@ -26,7 +26,7 @@ data class MemberDataDto(
 
         var logoUrl: String? = hash
         if (role == Role.SPONSOR) {
-            logoUrl = logo?.replace("sponsors/", "/sponsor/") ?: ""
+            logoUrl = logo?.replace("sponsors/", "sponsor/") ?: ""
         }
 
         return User(
