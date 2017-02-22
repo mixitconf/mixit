@@ -1,24 +1,21 @@
 {{> header}}
 
-<div class="mxt-wrapper--page-title">
+<div class="mxt-wrapper--talks">
     <div class="row">
-        <div class="columns large-8 large-offset-2">
-            <h1 class="text-center">
-            <div class="menu-centered">
-                <ul class="dropdown menu mxt-menu--talks" data-dropdown-menu>
-                    <li>{{#i18n}}sessions.title{{/i18n}}</li>
-                    <li><a href="#">{{year}}</a>
-                        <ul class="menu">
-                            <li><a href="{{localePrefix}}/2017/">2017</a></li>
-                            <li><a href="{{localePrefix}}/2016/">2016</a></li>
-                            <li><a href="{{localePrefix}}/2015/">2015</a></li>
-                            <li><a href="{{localePrefix}}/2014/">2014</a></li>
-                            <li><a href="{{localePrefix}}/2013/">2013</a></li>
-                            <li><a href="{{localePrefix}}/2012/">2012</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+        <div class="columns large-8 large-offset-2 menu-centered text-center">
+            <ul class="dropdown menu simple mxt-menu--talks" data-dropdown-menu>
+                <li class="mxt-menu--talks-title"><h1>{{#i18n}}sessions.title{{/i18n}}</h1></li>
+                <li><a href="#" class="mxt-menu--talks-date">{{year}}</a>
+                    <ul class="menu">
+                        <li><a href="{{localePrefix}}/2017/">2017</a></li>
+                        <li><a href="{{localePrefix}}/2016/">2016</a></li>
+                        <li><a href="{{localePrefix}}/2015/">2015</a></li>
+                        <li><a href="{{localePrefix}}/2014/">2014</a></li>
+                        <li><a href="{{localePrefix}}/2013/">2013</a></li>
+                        <li><a href="{{localePrefix}}/2012/">2012</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
 </div>

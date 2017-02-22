@@ -25,6 +25,22 @@
 	padding-top: 2em;
 }
 
+.mxt-wrapper--talks {
+	background: url('/images/svg/mxt-icon--mic.svg') no-repeat left top;
+	& .no-svg {
+		background: url('/images/png/mxt-icon--mic.png') no-repeat left top;
+	}
+	@include breakpoint(medium) {
+		background-size: contain;
+		background-position: 30% top;
+  	}
+	background-size: 27%;
+	background-position: 8% 50%;
+	background-color: $secondary-color;
+	padding-top: 4em;
+	padding-bottom: 8em;
+	color: $white;
+}
 
 .mxt-wrapper--page-title {
 	color: $forth-color;
