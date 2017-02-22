@@ -8,6 +8,7 @@ import org.springframework.web.server.ServerWebExchange
 import org.springframework.web.server.WebFilter
 import org.springframework.web.server.WebFilterChain
 import java.net.URI
+import java.util.*
 
 class MixitWebFilter(@Value("\${baseUri}") val baseUri: String) : WebFilter {
 
@@ -19,7 +20,7 @@ class MixitWebFilter(@Value("\${baseUri}") val baseUri: String) : WebFilter {
                     .path(exchange.request.uri.path.substring(3))
                     .header(ACCEPT_LANGUAGE, "en").build()).build())
         else if (exchange.request.uri.path == "/" &&
-                exchange.request.headers.acceptLanguageAsLocale.language != "fr" &&
+                (exchange.request.headers.acceptLanguageAsLocale ?: Locale.FRENCH).language != "fr" &&
                 !isSearchEngineCrawler(exchange)) {
             val response = exchange.response
             exchange.session.then { session ->
