@@ -34,18 +34,8 @@
 // SPONSORS HOME
 .mxt-img--sponsors-home {
   @extend .mxt-img--grayscale;
-  min-width: 100%;
-  margin-bottom: 1em;
-}
-
-.mxt-img--sponsors-home-premium {
-  max-height: 16em;
-  max-width: 16em;
-}
-
-.mxt-img--sponsors-home-other {
-    max-width: 10em;
-	max-height: 8em;
+  margin: 0.5em auto;
+  max-height: 5em;
 }
 
 // SPONSORS PAGE
