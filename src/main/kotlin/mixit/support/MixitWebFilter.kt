@@ -7,19 +7,27 @@ import org.springframework.http.HttpStatus
 import org.springframework.web.server.ServerWebExchange
 import org.springframework.web.server.WebFilter
 import org.springframework.web.server.WebFilterChain
+import reactor.core.publisher.Mono
 import java.net.URI
+import java.util.*
 
 class MixitWebFilter(@Value("\${baseUri}") val baseUri: String) : WebFilter {
 
     private val redirectDoneAttribute = "redirectDone"
 
     override fun filter(exchange: ServerWebExchange, chain: WebFilterChain) =
-        if (exchange.request.uri.path.startsWith("/en/"))
+       if (exchange.request.headers.host?.hostString?.endsWith("mix-it.fr") ?: false) {
+           val response = exchange.response
+           response.statusCode = HttpStatus.PERMANENT_REDIRECT
+           response.headers.location = URI("$baseUri${exchange.request.uri.path}")
+           Mono.empty()
+       }
+       else if (exchange.request.uri.path.startsWith("/en/"))
             chain.filter(exchange.mutate().request(exchange.request.mutate()
                     .path(exchange.request.uri.path.substring(3))
                     .header(ACCEPT_LANGUAGE, "en").build()).build())
         else if (exchange.request.uri.path == "/" &&
-                exchange.request.headers.acceptLanguageAsLocale.language != "fr" &&
+                (exchange.request.headers.acceptLanguageAsLocale ?: Locale.FRENCH).language != "fr" &&
                 !isSearchEngineCrawler(exchange)) {
             val response = exchange.response
             exchange.session.then { session ->

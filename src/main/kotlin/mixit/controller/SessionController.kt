@@ -43,7 +43,7 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
 
     fun findByEventView(year: Int, req: ServerRequest) = repository.findByEvent(eventRepository.yearToId(year.toString()))
             .collectList()
-            .then { session -> ok().render("sessions",  mapOf(Pair("sessions", session), Pair("year", year))) }
+            .then { sessions -> ok().render("sessions",  mapOf(Pair("sessions", sessions.map { SessionDto(it, markdownConverter) }), Pair("year", year))) }
 
     fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug"))
             .then { session -> ok().render("session", mapOf(Pair("session", SessionDto(session, markdownConverter)))) }
@@ -61,7 +61,7 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
 
     class SessionDto(
             val id: String?,
-            val slud: String,
+            val slug: String,
             val format: SessionFormat,
             val event: String,
             val title: String,
