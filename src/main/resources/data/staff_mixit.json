@@ -215,6 +215,20 @@
       { "key": "Github", "value": "https://github.com/titimoby" }
     ]
 
+  },
+  {
+    "idMember": 13,
+    "login": "alfred.almendra",
+    "firstname": "Alfred",
+    "lastname": "ALMENDRA",
+    "logo": null,
+    "hash": "2be1fd2878821cca9006d3a5181700a7",
+    "shortDescription": "Consultant indépendant en management agile de l'innovation",
+    "shortDescriptionEn": "Agile enthusiast",
+    "userLinks": [
+      { "key": "Twitter", "value": "https://twitter.com/AlfredAlmendra" },
+      { "key": "Linkedin", "value": "http://fr.linkedin.com/in/alfredalmendra" }
+    ]
   }
 ]
 

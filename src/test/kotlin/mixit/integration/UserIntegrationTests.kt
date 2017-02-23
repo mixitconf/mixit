@@ -90,7 +90,7 @@ class UserIntegrationTests : AbstractIntegrationTests() {
                 .flatMap { it.bodyToFlux<User>() }
 
         StepVerifier.create(staffMembers)
-                .expectNextCount(15)
+                .expectNextCount(16)
                 .verifyComplete()
     }
 
