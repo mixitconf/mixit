@@ -5,9 +5,10 @@ import com.moowork.gradle.node.yarn.YarnInstallTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
+    extra["spring.version"] = "5.0.0.M5"
+    extra["reactor-bom.version"] = "Aluminium-SR1"
     var kotlinVersion: String by extra
     kotlinVersion = "1.1.0-rc-91"
-    val springBootVersion = "2.0.0.BUILD-SNAPSHOT"
 
     repositories {
         mavenCentral()
@@ -19,7 +20,7 @@ buildscript {
 
     dependencies {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.0.BUILD-SNAPSHOT")
         classpath("org.jetbrains.kotlin:kotlin-noarg:$kotlinVersion")
         classpath("org.jetbrains.kotlin:kotlin-allopen:$kotlinVersion")
         classpath("com.moowork.gradle:gradle-node-plugin:1.1.1")
@@ -79,11 +80,10 @@ dependencies {
     compile("com.atlassian.commonmark:commonmark:0.8.0")
     compile("com.atlassian.commonmark:commonmark-ext-autolink:0.8.0")
 
-    compile("io.projectreactor:reactor-core:3.0.5.RELEASE")
-    compile("io.projectreactor.ipc:reactor-ipc:0.6.1.RELEASE")
-    compile("io.projectreactor.ipc:reactor-netty:0.6.1.RELEASE")
+
+    compile("io.projectreactor.ipc:reactor-netty")
     compile("io.projectreactor:reactor-kotlin:1.0.0.BUILD-SNAPSHOT")
-    testCompile("io.projectreactor.addons:reactor-test:3.0.5.RELEASE")
+    testCompile("io.projectreactor.addons:reactor-test")
 
     compile("com.fasterxml.jackson.module:jackson-module-kotlin")
     compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
