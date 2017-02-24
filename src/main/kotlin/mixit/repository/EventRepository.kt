@@ -77,6 +77,18 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
                 Pair(Language.ENGLISH, "Enedis is a public company, electricity distribution network operator which develops, operates, modernizes the electricity grid and manages the associated data.")),
                 links = listOf(Link("Site", "http://www.enedis.fr")))).block()
 
+        userRepository.save(User("GitHub", "", "", "sales@github.com", "GitHub",
+                logoUrl="sponsor/logo-github.svg",
+                description = mapOf(Pair(Language.FRENCH, "GitHub aide les gens à construire des logiciels. Des millions d'individus et d'organisations à travers le monde utilisent GitHub pour découvrir, partager et collaborer sur des " +
+                        "logiciels (des jeux en passant aux frameworks populaires et aux applications majeures. Ensemble, nous définissons la façon dont le logiciel est construit aujourd'hui.\n\nQue vous utilisiez GitHub.com ou GitHub " +
+                        "Enterprise sur vos propres serveurs, vous pouvez accéder à l'une des plus grandes communautés de développeurs au monde pour créer des logiciels de la manière qui vous convient le mieux. " +
+                        "Choisissez votre option de déploiement et intégrez vos outils tiers préférés dans un workflow puissant et collaboratif."),
+                        Pair(Language.ENGLISH, "GitHub is how people build software. Millions of individuals and organizations around the world use GitHub to discover, share, and collaborate on software—from games and experiments to " +
+                                "popular frameworks and leading applications. Together, we're defining how software is built today.\n\nWhether you use GitHub.com or GitHub Enterprise on your own servers, " +
+                                "you can access one of the world's largest developer communities to build software in the way that works best for you. Choose your deployment option and integrate your favorite" +
+                                " third party tools into a powerful, collaborative workflow.")),
+                links = listOf(Link("Site", "https://github.com/"), Link("Electron", "http://electron.atom.io/"), Link("Site", "https://atom.io/")))).block()
+
         val sword = userRepository.findOne("Sword").block()
         sword.description =  mapOf(Pair(Language.FRENCH, "SWORD, c’est 1 500 spécialistes en IT/Digital & Software actifs sur les 5 continents, qui vous accompagnent dans l’évolution " +
             "de votre organisation à l’ère du numérique. Depuis 2000, SWORD a acquis une solide réputation dans l’édition de logiciels et dans la conduite de " +
@@ -154,6 +166,7 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
                 EventSponsoring(GOLD, userRepository.findOne("annick.challancin@esker.fr").block(), LocalDate.of(2017, 1, 10)),
                 EventSponsoring(GOLD, userRepository.findOne("LDLC").block(), LocalDate.of(2017, 1, 20)),
                 EventSponsoring(GOLD, userRepository.findOne("VISEO").block(), LocalDate.of(2017, 2, 20)),
+                EventSponsoring(GOLD, userRepository.findOne("GitHub").block(), LocalDate.of(2017, 2, 28)),
                 EventSponsoring(LANYARD, worldline, LocalDate.of(2016, 10, 19)),
                 EventSponsoring(PARTY, onlylyon, LocalDate.of(2017, 1, 1)),
                 EventSponsoring(PARTY, userRepository.findOne("Hopwork").block(), LocalDate.of(2016, 11, 2)),
