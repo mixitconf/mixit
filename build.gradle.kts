@@ -68,8 +68,7 @@ dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlinVersion")
     compile("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
 
-    compile("org.springframework.boot.experimental:spring-boot-starter-web-reactive:0.1.0.BUILD-SNAPSHOT") {
-        exclude(module = "spring-boot-starter-tomcat")
+    compile("org.springframework.boot:spring-boot-starter-webflux") {
         exclude(module = "hibernate-validator")
     }
     compile("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
@@ -81,7 +80,6 @@ dependencies {
     compile("com.atlassian.commonmark:commonmark-ext-autolink:0.8.0")
 
 
-    compile("io.projectreactor.ipc:reactor-netty")
     compile("io.projectreactor:reactor-kotlin:1.0.0.BUILD-SNAPSHOT")
     testCompile("io.projectreactor.addons:reactor-test")
 
