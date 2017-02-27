@@ -3,9 +3,7 @@ package mixit.controller
 import mixit.model.*
 import mixit.repository.EventRepository
 import mixit.repository.UserRepository
-import mixit.support.RouterFunctionProvider
-import mixit.support.MarkdownConverter
-import mixit.support.language
+import mixit.support.*
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.HttpStatus.*
 import org.springframework.http.MediaType.*
@@ -29,7 +27,7 @@ class UserController(val repository: UserRepository, val eventRepository: EventR
             (GET("/user/{login}") or GET("/speaker/{login}") or GET("/sponsor/{login}")) { findOneView(it) }
             (GET("/member/{login}") or GET("/profile/{login}") or GET("/member/sponsor/{login}") or GET("/member/member/{login}")) { status(PERMANENT_REDIRECT).location(create("$baseUri/user/${it.pathVariable("login")}")).build() }
             GET("/about/", this@UserController::findAboutView)
-            GET("/about") { status(PERMANENT_REDIRECT).location(create("$baseUri/about/")).build() }
+            GET("/about") { redirectPermanently("$baseUri/about/") }
             GET("/sponsors/", this@UserController::findSponsorsView)
         }
         accept(APPLICATION_JSON).route {
@@ -63,37 +61,37 @@ class UserController(val repository: UserRepository, val eventRepository: EventR
                 .then { u -> ok().render("user", mapOf(Pair("user", toUserDto(u, req.language())))) }
     }
 
-    fun findOne(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
-                repository.findOne(req.pathVariable("login")))
+    fun findOne(req: ServerRequest) =
+            ok().json().body(repository.findOne(req.pathVariable("login")))
 
-    fun findAll(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
-            repository.findAll())
+    fun findAll(req: ServerRequest) =
+            ok().json().body(repository.findAll())
 
-    fun findStaff(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
-            repository.findByRole(Role.STAFF))
+    fun findStaff(req: ServerRequest) =
+            ok().json().body(repository.findByRole(Role.STAFF))
 
-    fun findOneStaff(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
-                repository.findOneByRole(req.pathVariable("login"), Role.STAFF))
+    fun findOneStaff(req: ServerRequest) =
+            ok().json().body(repository.findOneByRole(req.pathVariable("login"), Role.STAFF))
 
-    fun findSpeakers(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
-            repository.findByRole(Role.SPEAKER))
+    fun findSpeakers(req: ServerRequest) =
+            ok().json().body(repository.findByRole(Role.SPEAKER))
 
-    fun findSpeakersByEvent(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
-            repository.findByRoleAndEvent(Role.SPEAKER, req.pathVariable("event")))
+    fun findSpeakersByEvent(req: ServerRequest) =
+            ok().json().body(repository.findByRoleAndEvent(Role.SPEAKER, req.pathVariable("event")))
 
-    fun findOneSpeaker(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
-                repository.findOneByRole(req.pathVariable("login"), Role.SPEAKER))
+    fun findOneSpeaker(req: ServerRequest) =
+            ok().json().body(repository.findOneByRole(req.pathVariable("login"), Role.SPEAKER))
 
-    fun findSponsors(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
-            repository.findByRole(Role.SPONSOR))
+    fun findSponsors(req: ServerRequest) =
+            ok().json().body(repository.findByRole(Role.SPONSOR))
 
-    fun findOneSponsor(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
-                repository.findOneByRole(req.pathVariable("login"), Role.SPONSOR))
+    fun findOneSponsor(req: ServerRequest) =
+            ok().json().body(repository.findOneByRole(req.pathVariable("login"), Role.SPONSOR))
 
-    fun create(req: ServerRequest) = repository.save(req.bodyToMono<User>())
-            .then { u -> created(create("/api/user/${u.login}"))
-                .contentType(APPLICATION_JSON_UTF8)
-                .body(u.toMono())
+    fun create(req: ServerRequest) =
+            repository.save(req.bodyToMono<User>())
+            .then { u ->
+                created(create("/api/user/${u.login}")).json().body(u.toMono())
             }
 
     fun findAboutView(req: ServerRequest) = repository.findByRole(Role.STAFF)

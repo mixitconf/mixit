@@ -2,8 +2,8 @@ package mixit.controller
 
 import mixit.repository.EventRepository
 import mixit.support.RouterFunctionProvider
+import mixit.support.json
 import org.springframework.http.MediaType.APPLICATION_JSON
-import org.springframework.http.MediaType.APPLICATION_JSON_UTF8
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.ServerResponse.ok
@@ -20,10 +20,10 @@ class EventController(val repository: EventRepository) : RouterFunctionProvider(
         }
     }
 
-    fun findOne(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
+    fun findOne(req: ServerRequest) = ok().json().body(
             repository.findOne(req.pathVariable("login")))
 
-    fun findAll(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
+    fun findAll(req: ServerRequest) = ok().json().body(
             repository.findAll())
 
 }

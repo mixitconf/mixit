@@ -5,14 +5,13 @@ import mixit.repository.EventRepository
 import mixit.repository.SessionRepository
 import mixit.support.RouterFunctionProvider
 import mixit.support.MarkdownConverter
+import mixit.support.json
+import mixit.support.redirectPermanently
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.ServerResponse.ok
-import org.springframework.web.reactive.function.server.ServerResponse.status
-import org.springframework.http.HttpStatus.*
-import java.net.URI.create
 
 import java.time.LocalDateTime
 
@@ -47,13 +46,13 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
             .then { session -> ok().render("session", mapOf(Pair("session", SessionDto(session, markdownConverter)))) }
 
     fun redirectOneView(req: ServerRequest) = repository.findOne(req.pathVariable("id")).then { s ->
-            status(PERMANENT_REDIRECT).location(create("$baseUri/talk/${s.slug}")).build()
+        redirectPermanently("$baseUri/talk/${s.slug}")
     }
 
-    fun findOne(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
+    fun findOne(req: ServerRequest) = ok().json().body(
             repository.findOne(req.pathVariable("login")))
 
-    fun findByEventId(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
+    fun findByEventId(req: ServerRequest) = ok().json().body(
             repository.findByEvent(eventRepository.yearToId(req.pathVariable("year"))))
 
 

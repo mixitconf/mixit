@@ -5,17 +5,12 @@ import mixit.model.Language
 import mixit.model.Language.*
 import mixit.model.User
 import mixit.repository.ArticleRepository
-import mixit.support.RouterFunctionProvider
-import mixit.support.MarkdownConverter
-import mixit.support.language
+import mixit.support.*
 import org.springframework.beans.factory.annotation.Value
-import org.springframework.http.HttpStatus.*
 import org.springframework.http.MediaType.*
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.stereotype.Controller
-import org.springframework.web.reactive.function.server.ServerResponse.status
-import java.net.URI.*
 import java.time.format.DateTimeFormatter
 import java.util.*
 import java.util.stream.Collectors.*
@@ -44,7 +39,7 @@ class ArticleController(val repository: ArticleRepository, val markdownConverter
                 GET("/", this@ArticleController::findAllView)
                 GET("/{slug}", this@ArticleController::findOneView)
             }
-            GET("/articles/") { status(PERMANENT_REDIRECT).location(create("$baseUri/blog/")).build() }
+            GET("/articles/") { redirectPermanently("$baseUri/blog/") }
             (GET("/articles/{id}") or GET("/articles/{id}/") or GET("/article/{id}/")) { redirectOneView(it) }
         }
         ("/api/blog" and accept(APPLICATION_JSON)).route {
@@ -57,21 +52,21 @@ class ArticleController(val repository: ArticleRepository, val markdownConverter
             val model = mapOf(Pair("article", toArticleDto(a, req.language(), markdownConverter)))
             ok().render("article", model)
     }.otherwiseIfEmpty (repository.findBySlug(req.pathVariable("slug"), if (req.language() == FRENCH) ENGLISH else FRENCH).then { a ->
-            status(PERMANENT_REDIRECT).location(create("$baseUri${if (req.language() == ENGLISH) "/en" else ""}/blog/${a.slug[req.language()]}")).build()
+        redirectPermanently("$baseUri${if (req.language() == ENGLISH) "/en" else ""}/blog/${a.slug[req.language()]}")
     })
 
     fun redirectOneView(req: ServerRequest) = repository.findOne(req.pathVariable("id")).then { a ->
-            status(PERMANENT_REDIRECT).location(create("$baseUri/blog/${a.slug[req.language()]}")).build()
+        redirectPermanently("$baseUri/blog/${a.slug[req.language()]}")
     }
 
     fun findAllView(req: ServerRequest) = repository.findAll().collectList().then { articles ->
         ok().render("articles",  mapOf(Pair("articles", articles.map { toArticleDto(it, req.language(), markdownConverter) })))
     }
 
-    fun findOne(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
+    fun findOne(req: ServerRequest) = ok().json().body(
             repository.findOne(req.pathVariable("id")))
 
-    fun findAll(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
+    fun findAll(req: ServerRequest) = ok().json().body(
             repository.findAll())
 
 
