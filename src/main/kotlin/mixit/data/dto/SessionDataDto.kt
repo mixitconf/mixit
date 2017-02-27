@@ -20,13 +20,13 @@ data class SessionDataDto(
     var start: LocalDateTime ? = null,
     var end: LocalDateTime ? = null
 
-){
+) {
     fun toSession(): Session {
         return Session(
                 SessionFormat.valueOf(format.toUpperCase()),
                 "mixit${year.toString().substring(2, 4)}",
                 title,
-                summary ?: "",
+                summary,
                 speakers.map { speaker -> speaker.toUser() },
                 if (lang == "en") Language.ENGLISH else Language.FRENCH,
                 LocalDateTime.now(),

@@ -55,10 +55,10 @@ class UserController(val repository: UserRepository, val eventRepository: EventR
     fun findOneView(req: ServerRequest) = try {
         val idLegacy = req.pathVariable("login").toLong()
         repository.findByLegacyId(idLegacy)
-                .then { u -> ok().render("user", mapOf(Pair("user", toUserDto(u, req.language())))) }
+                .then { u -> ok().render("user", mapOf(Pair("user", u.toDto(req.language())))) }
     } catch (e:NumberFormatException) {
         repository.findOne(URLDecoder.decode(req.pathVariable("login"), "UTF-8"))
-                .then { u -> ok().render("user", mapOf(Pair("user", toUserDto(u, req.language())))) }
+                .then { u -> ok().render("user", mapOf(Pair("user", u.toDto(req.language())))) }
     }
 
     fun findOne(req: ServerRequest) =
@@ -97,7 +97,7 @@ class UserController(val repository: UserRepository, val eventRepository: EventR
     fun findAboutView(req: ServerRequest) = repository.findByRole(Role.STAFF)
             .collectList()
             .then { u ->
-                val users = u.map { toUserDto(it, req.language()) }
+                val users = u.map { it.toDto(req.language()) }
                 Collections.shuffle(users)
                 ok().render("about",  mapOf(Pair("staff", users)))
             }
@@ -116,21 +116,14 @@ class UserController(val repository: UserRepository, val eventRepository: EventR
 
     private fun toEventSponsoringDto(eventSponsoring: EventSponsoring, language: Language) = EventSponsoringDto(
            eventSponsoring.level,
-           toUserDto(eventSponsoring.sponsor, language),
+           eventSponsoring.sponsor.toDto(language),
            eventSponsoring.subscriptionDate
     )
 
-    private fun toUserDto(user: User, language: Language) = UserDto(
-            user.login,
-            user.firstname,
-            user.lastname,
-            user.email,
-            user.company,
-            markdownConverter.toHTML(user.description[language] ?: ""),
-            user.logoUrl,
-            user.events,
-            user.role,
-            user.links)
+    private fun User.toDto(language: Language) = UserDto(
+            login, firstname, lastname, email, company,
+            markdownConverter.toHTML(description[language] ?: ""),
+            logoUrl, events, role, links)
 
     class EventSponsoringDto(
         val level: SponsorshipLevel,

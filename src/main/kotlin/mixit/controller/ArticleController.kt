@@ -49,7 +49,7 @@ class ArticleController(val repository: ArticleRepository, val markdownConverter
     }
 
     fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug"), req.language()).then { a ->
-            val model = mapOf(Pair("article", toArticleDto(a, req.language(), markdownConverter)))
+            val model = mapOf(Pair("article", a.toDto(req.language(), markdownConverter)))
             ok().render("article", model)
     }.otherwiseIfEmpty (repository.findBySlug(req.pathVariable("slug"), if (req.language() == FRENCH) ENGLISH else FRENCH).then { a ->
         redirectPermanently("$baseUri${if (req.language() == ENGLISH) "/en" else ""}/blog/${a.slug[req.language()]}")
@@ -60,7 +60,7 @@ class ArticleController(val repository: ArticleRepository, val markdownConverter
     }
 
     fun findAllView(req: ServerRequest) = repository.findAll().collectList().then { articles ->
-        ok().render("articles",  mapOf(Pair("articles", articles.map { toArticleDto(it, req.language(), markdownConverter) })))
+        ok().render("articles",  mapOf(Pair("articles", articles.map { it.toDto(req.language(), markdownConverter) })))
     }
 
     fun findOne(req: ServerRequest) = ok().json().body(
@@ -70,14 +70,14 @@ class ArticleController(val repository: ArticleRepository, val markdownConverter
             repository.findAll())
 
 
-    private fun toArticleDto(article: Article, language: Language, markdownConverter: MarkdownConverter) = ArticleDto(
-            article.id,
-            article.slug[language] ?: "",
-            article.author,
-            if (language == ENGLISH) article.addedAt.format(englishDateFormatter) else article.addedAt.format(frenchDateFormatter),
-            article.title[language] ?: "",
-            markdownConverter.toHTML(article.headline[language] ?: ""),
-            markdownConverter.toHTML(if (article.content != null) article.content[language] else  ""))
+    private fun Article.toDto(language: Language, markdownConverter: MarkdownConverter) = ArticleDto(
+            id,
+            slug[language] ?: "",
+            author,
+            if (language == ENGLISH) addedAt.format(englishDateFormatter) else addedAt.format(frenchDateFormatter),
+            title[language] ?: "",
+            markdownConverter.toHTML(headline[language] ?: ""),
+            markdownConverter.toHTML(if (content != null) content[language] else  ""))
 
     class ArticleDto(
         val id: String?,

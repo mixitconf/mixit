@@ -38,22 +38,24 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
         }
     }
 
-    fun findByEventView(year: Int, req: ServerRequest) = repository.findByEvent(eventRepository.yearToId(year.toString()))
-            .collectList()
-            .then { sessions -> ok().render("sessions",  mapOf(Pair("sessions", sessions.map { SessionDto(it, markdownConverter) }), Pair("year", year))) }
+    fun findByEventView(year: Int, req: ServerRequest) =
+            repository.findByEvent(eventRepository.yearToId(year.toString()))
+                    .collectList()
+                    .then { sessions -> ok().render("sessions",  mapOf(Pair("sessions", sessions.map { SessionDto(it, markdownConverter) }), Pair("year", year))) }
 
-    fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug"))
-            .then { session -> ok().render("session", mapOf(Pair("session", SessionDto(session, markdownConverter)))) }
+    fun findOneView(req: ServerRequest) =
+            repository.findBySlug(req.pathVariable("slug"))
+                    .then { session -> ok().render("session", mapOf(Pair("session", SessionDto(session, markdownConverter)))) }
 
-    fun redirectOneView(req: ServerRequest) = repository.findOne(req.pathVariable("id")).then { s ->
-        redirectPermanently("$baseUri/talk/${s.slug}")
+    fun redirectOneView(req: ServerRequest) =
+            repository.findOne(req.pathVariable("id")).then { s -> redirectPermanently("$baseUri/talk/${s.slug}")
     }
 
-    fun findOne(req: ServerRequest) = ok().json().body(
-            repository.findOne(req.pathVariable("login")))
+    fun findOne(req: ServerRequest) =
+            ok().json().body(repository.findOne(req.pathVariable("login")))
 
-    fun findByEventId(req: ServerRequest) = ok().json().body(
-            repository.findByEvent(eventRepository.yearToId(req.pathVariable("year"))))
+    fun findByEventId(req: ServerRequest) =
+            ok().json().body(repository.findByEvent(eventRepository.yearToId(req.pathVariable("year"))))
 
 
     class SessionDto(
