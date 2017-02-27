@@ -13,8 +13,6 @@ import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.BodyInserters.fromObject
 import org.springframework.web.reactive.function.fromPublisher
 import org.springframework.web.reactive.function.server.*
-import org.springframework.web.reactive.function.server.RequestPredicates.accept
-import org.springframework.web.reactive.function.server.RequestPredicates.*
 import org.springframework.web.reactive.function.server.ServerResponse.*
 import java.net.URI.*
 import java.net.URLDecoder
@@ -27,7 +25,7 @@ class UserController(val repository: UserRepository, val eventRepository: EventR
                      @Value("\${baseUri}") val baseUri: String) : RouterFunctionProvider() {
 
     // TODO Remove this@UserController when KT-15667 will be fixed
-    override val routes: Routes.() -> Unit = {
+    override val routes: Routes = {
         accept(TEXT_HTML).route {
             (GET("/user/{login}") or GET("/speaker/{login}") or GET("/sponsor/{login}")) { findOneView(it) }
             (GET("/member/{login}") or GET("/profile/{login}") or GET("/member/sponsor/{login}") or GET("/member/member/{login}")) { status(PERMANENT_REDIRECT).location(create("$baseUri/user/${it.pathVariable("login")}")).build() }
@@ -36,20 +34,20 @@ class UserController(val repository: UserRepository, val eventRepository: EventR
             GET("/sponsors/", this@UserController::findSponsorsView)
         }
         accept(APPLICATION_JSON).route {
-            pathPrefix("/api/user").route {
+            "/api/user".route {
                 GET("/", this@UserController::findAll)
                 POST("/", this@UserController::create)
                 GET("/{login}", this@UserController::findOne)
             }
-            pathPrefix("/api/staff").route {
+            "/api/staff".route {
                 GET("/", this@UserController::findStaff)
                 GET("/{login}", this@UserController::findOneStaff)
             }
-            pathPrefix("/api/speaker").route {
+            "/api/speaker".route {
                 GET("/", this@UserController::findSpeakers)
                 GET("/{login}", this@UserController::findOneSpeaker)
             }
-            pathPrefix("/api/sponsor").route {
+            "/api/sponsor".route {
                 GET("/", this@UserController::findSponsors)
                 GET("/{login}", this@UserController::findOneSponsor)
             }

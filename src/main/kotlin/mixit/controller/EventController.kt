@@ -7,8 +7,6 @@ import org.springframework.http.MediaType.APPLICATION_JSON_UTF8
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.fromPublisher
 import org.springframework.web.reactive.function.server.*
-import org.springframework.web.reactive.function.server.RequestPredicates.accept
-import org.springframework.web.reactive.function.server.RequestPredicates.pathPrefix
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 
 
@@ -16,8 +14,8 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 class EventController(val repository: EventRepository) : RouterFunctionProvider() {
 
     // TODO Remove this@EventController when KT-15667 will be fixed
-    override val routes: Routes.() -> Unit = {
-        (accept(APPLICATION_JSON) and pathPrefix("/api/event")).route {
+    override val routes: Routes = {
+        (accept(APPLICATION_JSON) and "/api/event").route {
             GET("/", this@EventController::findAll)
             GET("/{login}", this@EventController::findOne)
         }

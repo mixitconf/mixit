@@ -13,7 +13,6 @@ import org.springframework.http.HttpStatus.*
 import org.springframework.http.MediaType.*
 import org.springframework.web.reactive.function.fromPublisher
 import org.springframework.web.reactive.function.server.*
-import org.springframework.web.reactive.function.server.RequestPredicates.*
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.ServerResponse.status
@@ -40,16 +39,16 @@ class ArticleController(val repository: ArticleRepository, val markdownConverter
             .appendPattern("yyyy").toFormatter(Locale.ENGLISH)
 
     // TODO Remove this@ArticleController when KT-15667 will be fixed
-    override val routes: Routes.() -> Unit = {
+    override val routes: Routes = {
         accept(TEXT_HTML).route {
-            pathPrefix("/blog").route {
+            "/blog".route {
                 GET("/", this@ArticleController::findAllView)
                 GET("/{slug}", this@ArticleController::findOneView)
             }
             GET("/articles/") { status(PERMANENT_REDIRECT).location(create("$baseUri/blog/")).build() }
             (GET("/articles/{id}") or GET("/articles/{id}/") or GET("/article/{id}/")) { redirectOneView(it) }
         }
-        (accept(APPLICATION_JSON) and pathPrefix("/api/blog")).route {
+        ("/api/blog" and accept(APPLICATION_JSON)).route {
             GET("/", this@ArticleController::findAll)
             GET("/{id}", this@ArticleController::findOne)
         }

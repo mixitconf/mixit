@@ -8,7 +8,6 @@ import mixit.support.RouterFunctionProvider
 import org.springframework.core.io.ClassPathResource
 import org.springframework.http.MediaType.TEXT_HTML
 import org.springframework.stereotype.Controller
-import org.springframework.web.reactive.function.server.RequestPredicates.accept
 import org.springframework.web.reactive.function.server.Routes
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse.ok
@@ -17,7 +16,7 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 class GlobalController(val repository: EventRepository) : RouterFunctionProvider() {
 
     // TODO Remove this@GlobalController when KT-15667 will be fixed
-    override val routes: Routes.() -> Unit = {
+    override val routes: Routes = {
         accept(TEXT_HTML).route {
             GET("/", this@GlobalController::homeView)
         }

@@ -5,7 +5,7 @@ import com.moowork.gradle.node.yarn.YarnInstallTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
-    extra["spring.version"] = "5.0.0.M5"
+    extra["spring.version"] = "5.0.0.BUILD-SNAPSHOT"
     extra["reactor-bom.version"] = "Aluminium-SR1"
     var kotlinVersion: String by extra
     kotlinVersion = "1.1.0-rc-91"

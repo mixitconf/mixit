@@ -10,7 +10,6 @@ import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.fromPublisher
 import org.springframework.web.reactive.function.server.*
-import org.springframework.web.reactive.function.server.RequestPredicates.*
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.ServerResponse.status
 import org.springframework.http.HttpStatus.*
@@ -24,7 +23,7 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
                         val markdownConverter: MarkdownConverter, @Value("\${baseUri}") val baseUri: String) : RouterFunctionProvider() {
 
     // TODO Remove this@SessionController when KT-15667 will be fixed
-    override val routes: Routes.() -> Unit = {
+    override val routes: Routes = {
         accept(TEXT_HTML).route {
             GET("/2017/") { ok().render("sessions-2017") }
             GET("/2016/") { findByEventView(2016, it) }
@@ -35,7 +34,7 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
             GET("/talk/{slug}", this@SessionController::findOneView)
             (GET("/session/{id}/") or GET("/session/{id}") or GET("/session/{id}/{sluggifiedTitle}/") or GET("/session/{id}/{sluggifiedTitle}")) { redirectOneView(it) }
         }
-        (accept(APPLICATION_JSON) and pathPrefix("/api")).route {
+        (accept(APPLICATION_JSON) and "/api").route {
             GET("/talk/{login}", this@SessionController::findOne)
             GET("/{year}/talk/", this@SessionController::findByEventId)
         }
