@@ -20,7 +20,8 @@ import java.time.format.DateTimeFormatterBuilder
 
 
 @Controller
-class ArticleController(val repository: ArticleRepository, val markdownConverter: MarkdownConverter,
+class ArticleController(val repository: ArticleRepository,
+                        val markdownConverter: MarkdownConverter,
                         @Value("\${baseUri}") val baseUri: String) : RouterFunctionProvider() {
 
     private val daysLookup : Map<Long, String> = IntStream.rangeClosed(1, 31).boxed().collect(toMap(Int::toLong, { i -> getOrdinal(i)}))

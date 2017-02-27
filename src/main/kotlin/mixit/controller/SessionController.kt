@@ -17,8 +17,10 @@ import java.time.LocalDateTime
 
 
 @Controller
-class SessionController(val repository: SessionRepository, val eventRepository: EventRepository,
-                        val markdownConverter: MarkdownConverter, @Value("\${baseUri}") val baseUri: String) : RouterFunctionProvider() {
+class SessionController(val repository: SessionRepository,
+                        val eventRepository: EventRepository,
+                        val markdownConverter: MarkdownConverter,
+                        @Value("\${baseUri}") val baseUri: String) : RouterFunctionProvider() {
 
     // TODO Remove this@SessionController when KT-15667 will be fixed
     override val routes: Routes = {

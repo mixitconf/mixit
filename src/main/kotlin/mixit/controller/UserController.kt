@@ -18,7 +18,9 @@ import java.util.*
 
 
 @Controller
-class UserController(val repository: UserRepository, val eventRepository: EventRepository, val markdownConverter: MarkdownConverter,
+class UserController(val repository: UserRepository,
+                     val eventRepository: EventRepository,
+                     val markdownConverter: MarkdownConverter,
                      @Value("\${baseUri}") val baseUri: String) : RouterFunctionProvider() {
 
     // TODO Remove this@UserController when KT-15667 will be fixed
