@@ -11,7 +11,6 @@ import mixit.support.language
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.HttpStatus.*
 import org.springframework.http.MediaType.*
-import org.springframework.web.reactive.function.fromPublisher
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.stereotype.Controller
@@ -70,10 +69,10 @@ class ArticleController(val repository: ArticleRepository, val markdownConverter
     }
 
     fun findOne(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
-            fromPublisher(repository.findOne(req.pathVariable("id"))))
+            repository.findOne(req.pathVariable("id")))
 
     fun findAll(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
-            fromPublisher(repository.findAll()))
+            repository.findAll())
 
 
     private fun toArticleDto(article: Article, language: Language, markdownConverter: MarkdownConverter) = ArticleDto(

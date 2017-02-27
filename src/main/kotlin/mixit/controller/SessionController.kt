@@ -8,7 +8,6 @@ import mixit.support.MarkdownConverter
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
-import org.springframework.web.reactive.function.fromPublisher
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.ServerResponse.status
@@ -52,10 +51,10 @@ class SessionController(val repository: SessionRepository, val eventRepository: 
     }
 
     fun findOne(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
-            fromPublisher(repository.findOne(req.pathVariable("login"))))
+            repository.findOne(req.pathVariable("login")))
 
     fun findByEventId(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
-            fromPublisher(repository.findByEvent(eventRepository.yearToId(req.pathVariable("year")))))
+            repository.findByEvent(eventRepository.yearToId(req.pathVariable("year"))))
 
 
     class SessionDto(

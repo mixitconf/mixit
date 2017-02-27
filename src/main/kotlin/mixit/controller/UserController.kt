@@ -10,10 +10,9 @@ import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.HttpStatus.*
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
-import org.springframework.web.reactive.function.BodyInserters.fromObject
-import org.springframework.web.reactive.function.fromPublisher
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.ServerResponse.*
+import toMono
 import java.net.URI.*
 import java.net.URLDecoder
 import java.time.LocalDate
@@ -65,36 +64,36 @@ class UserController(val repository: UserRepository, val eventRepository: EventR
     }
 
     fun findOne(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
-                fromPublisher(repository.findOne(req.pathVariable("login"))))
+                repository.findOne(req.pathVariable("login")))
 
     fun findAll(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
-            fromPublisher(repository.findAll()))
+            repository.findAll())
 
     fun findStaff(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
-            fromPublisher(repository.findByRole(Role.STAFF)))
+            repository.findByRole(Role.STAFF))
 
     fun findOneStaff(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
-                fromPublisher(repository.findOneByRole(req.pathVariable("login"), Role.STAFF)))
+                repository.findOneByRole(req.pathVariable("login"), Role.STAFF))
 
     fun findSpeakers(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
-            fromPublisher(repository.findByRole(Role.SPEAKER)))
+            repository.findByRole(Role.SPEAKER))
 
     fun findSpeakersByEvent(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
-            fromPublisher(repository.findByRoleAndEvent(Role.SPEAKER, req.pathVariable("event"))))
+            repository.findByRoleAndEvent(Role.SPEAKER, req.pathVariable("event")))
 
     fun findOneSpeaker(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
-                fromPublisher(repository.findOneByRole(req.pathVariable("login"), Role.SPEAKER)))
+                repository.findOneByRole(req.pathVariable("login"), Role.SPEAKER))
 
     fun findSponsors(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
-            fromPublisher(repository.findByRole(Role.SPONSOR)))
+            repository.findByRole(Role.SPONSOR))
 
     fun findOneSponsor(req: ServerRequest) = ok().contentType(APPLICATION_JSON_UTF8).body(
-                fromPublisher(repository.findOneByRole(req.pathVariable("login"), Role.SPONSOR)))
+                repository.findOneByRole(req.pathVariable("login"), Role.SPONSOR))
 
     fun create(req: ServerRequest) = repository.save(req.bodyToMono<User>())
             .then { u -> created(create("/api/user/${u.login}"))
                 .contentType(APPLICATION_JSON_UTF8)
-                .body(fromObject(u))
+                .body(u.toMono())
             }
 
     fun findAboutView(req: ServerRequest) = repository.findByRole(Role.STAFF)
