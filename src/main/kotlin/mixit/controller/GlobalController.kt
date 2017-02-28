@@ -1,7 +1,6 @@
 package mixit.controller
 
 import mixit.model.EventSponsoring
-import mixit.model.Logo
 import mixit.model.SponsorshipLevel.*
 import mixit.repository.EventRepository
 import mixit.support.RouterFunctionProvider
@@ -27,11 +26,11 @@ class GlobalController(val repository: EventRepository) : RouterFunctionProvider
             .then { events ->
                 val sponsors = events.sponsors.groupBy { it.level }
                 ok().render("home", mapOf(
-                        Pair("sponsors-gold", sponsors[GOLD]?.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) }),
-                        Pair("sponsors-silver", sponsors[SILVER]?.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) }),
-                        Pair("sponsors-hosting", sponsors[HOSTING]?.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) }),
-                        Pair("sponsors-lanyard", sponsors[LANYARD]?.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) }),
-                        Pair("sponsors-party", sponsors[PARTY]?.map { eventSponsoring -> SponsorDto.toDto(eventSponsoring) })
+                        Pair("sponsors-gold", sponsors[GOLD]?.map { it.toDto() }),
+                        Pair("sponsors-silver", sponsors[SILVER]?.map { it.toDto() }),
+                        Pair("sponsors-hosting", sponsors[HOSTING]?.map { it.toDto() }),
+                        Pair("sponsors-lanyard", sponsors[LANYARD]?.map { it.toDto() }),
+                        Pair("sponsors-party", sponsors[PARTY]?.map { it.toDto() })
                 ))
             }
 
@@ -41,16 +40,34 @@ class GlobalController(val repository: EventRepository) : RouterFunctionProvider
         val logoUrl: String,
         val logoType: String,
         val logoWebpUrl: String? = null
-    ) {
-        companion object {
-            fun toDto(eventSponsoring: EventSponsoring):SponsorDto = SponsorDto(
-                    eventSponsoring.sponsor.login,
-                    eventSponsoring.sponsor.company!!,
-                    eventSponsoring.sponsor.logoUrl!!,
-                    Logo.logoType(eventSponsoring.sponsor.logoUrl!!),
-                    Logo.logoWebPUrl(eventSponsoring.sponsor.logoUrl!!)
-            )
+    )
+
+    private fun EventSponsoring.toDto() = SponsorDto(
+        this.sponsor.login,
+        this.sponsor.company!!,
+        this.sponsor.logoUrl!!,
+        logoType(this.sponsor.logoUrl),
+        logoWebpUrl(this.sponsor.logoUrl)
+    )
+
+    private fun logoWebpUrl(url:String): String? {
+        if (url.endsWith("png") || url.endsWith("jpg")){
+            return url.replace("png", "webp").replace("jpg", "webp")
         }
+        return null
+    }
+
+    private fun logoType(url:String): String {
+        if (url.endsWith("svg")){
+            return "image/svg+xml"
+        }
+        if (url.endsWith("png")){
+            return "image/png"
+        }
+        if (url.endsWith("jpg")){
+            return "image/jpeg"
+        }
+        throw IllegalArgumentException("Extension not supported")
     }
 
 }
