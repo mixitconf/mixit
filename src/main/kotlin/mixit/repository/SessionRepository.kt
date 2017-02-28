@@ -2,9 +2,6 @@ package mixit.repository
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import mixit.data.dto.SessionDataDto
-import mixit.model.Article
-import mixit.model.Language
 import mixit.model.Session
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
@@ -21,24 +18,13 @@ class SessionRepository(val template: ReactiveMongoTemplate) {
 
 
     fun initData() {
-        deleteAll().block()
-
-        val years = listOf(12, 13, 14, 15, 16)
-        years.forEach { year -> saveSessionsByYear(year) }
-    }
-
-    /**
-     * Loads data from the json session files
-     */
-    private fun saveSessionsByYear(year: Int) {
-        val file = ClassPathResource("data/session/session_mixit$year.json")
-
         val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
-        var sessions: List<SessionDataDto> = objectMapper.readValue(file.inputStream)
-
-        sessions
-                .map { session -> session.toSession() }
-                .forEach { session -> save(session).block() }
+        deleteAll().block()
+        listOf(2012, 2013, 2014, 2015, 2016).forEach { year ->
+            val sessionsResource = ClassPathResource("data/sessions_$year.json")
+            val sessions: List<Session> = objectMapper.readValue(sessionsResource.inputStream)
+            sessions.forEach { save(it).block() }
+        }
     }
 
     fun findByEvent(eventId: String): Flux<Session> {

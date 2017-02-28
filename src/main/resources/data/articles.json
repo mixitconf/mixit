@@ -1,0 +1,4266 @@
+[
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Jessica",
+      "lastname": "Bordeau",
+      "email": "",
+      "company": "Hers",
+      "description": {
+        "FRENCH": "Webdesign & Interactive Documentaries",
+        "ENGLISH": "Webdesign & Interactive Documentaries"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2017,
+      2,
+      23,
+      12,
+      0
+    ],
+    "title": {
+      "FRENCH": "Une nouvelle identit\u00e9 pour MiXiT",
+      "ENGLISH": "MiXiT has a new visual identity"
+    },
+    "headline": {
+      "FRENCH": "MiXiT est une conf\u00e9rence bien connue dans le paysage des d\u00e9veloppeurs et agilistes lyonnais. En 2017, nous esp\u00e9rons attirer un public encore plus vari\u00e9&nbsp;; c'est en partie l'objectif de notre travail d'image. Notre redesign joue sur notre c\u00f4t\u00e9 local, tout en montrant notre volont\u00e9 d'ouverture vers des conf\u00e9rences accessibles au plus grand nombre. Le r\u00e9sultat&nbsp;? Une toute nouvelle identit\u00e9, plus proche de nos valeurs. N'h\u00e9sitez pas \u00e0 nous faire des retours, que vous soyez un habitu\u00e9 ou un nouveau participant, votre avis nous int\u00e9resse&nbsp;!",
+      "ENGLISH": "MiXiT is a well-known conference in Lyon, especially among developers and agilists professionals. However, in 2017, we hope to attract an even wider audience; which is partly the goal of our branding work. Our redesign plays with our local side. It also confirm our choice to make our conferences accessible to a more mainstream audience. The result is a brand new identity, reflecting more clearly our values. Do not hesitate to contact us, whether you are a regular or a new participant, your opinion matters."
+    },
+    "content": null,
+    "id": "313",
+    "slug": {
+      "FRENCH": "une-nouvelle-identite-pour-mixit",
+      "ENGLISH": "mixit-has-a-new-visual-identity"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "S\u00e9bastien",
+      "lastname": "Deleuze",
+      "email": "",
+      "company": "Pivotal",
+      "description": {
+        "FRENCH": "Membre de l'\u00e9quipe de d\u00e9veloppement de Spring Framework et de l'\u00e9quipe d'orga de MiXiT.",
+        "ENGLISH": "Membre de l'\u00e9quipe de d\u00e9veloppement de Spring Framework et de l'\u00e9quipe d'orga de MiXiT."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2016,
+      4,
+      18,
+      7,
+      40,
+      56
+    ],
+    "title": {
+      "FRENCH": "Visite guid\u00e9e des sessions techniques 2016",
+      "ENGLISH": "Visite guid\u00e9e des sessions techniques 2016"
+    },
+    "headline": {
+      "FRENCH": "Puisque MiXiT arrive \u00e0 grand pas, je vous propose une visite guid\u00e9e des pr\u00e9sentations et des ateliers techniques au programme de cette \u00e9dition 2016.",
+      "ENGLISH": "Puisque MiXiT arrive \u00e0 grand pas, je vous propose une visite guid\u00e9e des pr\u00e9sentations et des ateliers techniques au programme de cette \u00e9dition 2016."
+    },
+    "content": null,
+    "id": "312",
+    "slug": {
+      "FRENCH": "visite-guidee-des-sessions-techniques-2016",
+      "ENGLISH": "visite-guidee-des-sessions-techniques-2016"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Gr\u00e9gory",
+      "lastname": "Alexandre",
+      "email": "",
+      "company": "Goood!",
+      "description": {
+        "FRENCH": "Agiliste depuis plus de 8 ans et coach Agile chez [Goood!](http:\/\/goood.pro), GO de la communaut\u00e9 agile lyonnaise via MiXiT et le [CARA Lyon](http:\/\/lyon.clubagilerhonealpes.org\/)",
+        "ENGLISH": "Agiliste depuis plus de 8 ans et coach Agile chez [Goood!](http:\/\/goood.pro), GO de la communaut\u00e9 agile lyonnaise via MiXiT et le [CARA Lyon](http:\/\/lyon.clubagilerhonealpes.org\/)"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2016,
+      4,
+      15,
+      17,
+      38,
+      52
+    ],
+    "title": {
+      "FRENCH": "Le track Agilit\u00e9 : accessible et transverse",
+      "ENGLISH": "The Agile track : accessible & transversal"
+    },
+    "headline": {
+      "FRENCH": "Cette ann\u00e9e, on a souhait\u00e9 cr\u00e9er un track accessible permettant \u00e0 tous de d\u00e9couvrir ou red\u00e9couvrir les bases de l\u2019agilit\u00e9. Mais aussi d\u2019approfondir vos pratiques et en d\u00e9couvrir de nouvelles.",
+      "ENGLISH": "This year, we wanted to create an accessible track allowing everyone to discover or rediscover basics of Agile. You will also go deeper into you practices and discover new ones."
+    },
+    "content": null,
+    "id": "302",
+    "slug": {
+      "FRENCH": "le-track-agilite---accessible-et-transverse",
+      "ENGLISH": "the-agile-track---accessible---transversal"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "C\u00e9dric",
+      "lastname": "Exbrayat",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "Fondateur du JUG, de MiXiT et de [Ninja Squad](http:\/\/ninja-squad.fr) et bloggeur [hype](http:\/\/hypedrivendev.wordpress.com)\n\n\n\n\n",
+        "ENGLISH": "Fondateur du JUG, de MiXiT et de [Ninja Squad](http:\/\/ninja-squad.fr) et bloggeur [hype](http:\/\/hypedrivendev.wordpress.com)\n\n\n\n\n"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2016,
+      4,
+      15,
+      15,
+      41,
+      40
+    ],
+    "title": {
+      "FRENCH": "Les applis mobiles MiXiT 2016",
+      "ENGLISH": "Mobile apps for MiXiT 2016"
+    },
+    "headline": {
+      "FRENCH": "Tu as un smartphone et tu veux t'en servir pour consulter le programme de MiXiT 2016 ? On est l\u00e0 pour toi !",
+      "ENGLISH": "You have a smartphone and want to use it to see the planning? We got you covered!"
+    },
+    "content": null,
+    "id": "292",
+    "slug": {
+      "FRENCH": "les-applis-mobiles-mixit-2016",
+      "ENGLISH": "mobile-apps-for-mixit-2016"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Guillaume",
+      "lastname": "Ehret",
+      "email": "",
+      "company": "Dev-Mind",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur agile passionn\u00e9 par la technique et l'agilit\u00e9, fondateur de [Dev-Mind](https:\/\/dev-mind.fr\/)",
+        "ENGLISH": "D\u00e9veloppeur agile passionn\u00e9 par la technique et l'agilit\u00e9, fondateur de [Dev-Mind](https:\/\/dev-mind.fr\/)"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2016,
+      4,
+      13,
+      22,
+      4,
+      58
+    ],
+    "title": {
+      "FRENCH": "Evolutions du site web",
+      "ENGLISH": "Web site evolutions"
+    },
+    "headline": {
+      "FRENCH": "Depuis l\u2019ann\u00e9e derni\u00e8re vous avez peut \u00eatre vu se (re)construire notre site. Comme nous sommes tous b\u00e9n\u00e9voles ce dernier \u00e9volue doucement et il est encore perfectible\u2026 Mais plusieurs fonctionnalit\u00e9s peuvent vous aider \u00e0 pr\u00e9parer votre conf\u00e9rence.",
+      "ENGLISH": "Our website is evolving slowly and the new version can be improved.... All the staff is composed by volunteers. Several features are ready and cans help you during the conference."
+    },
+    "content": null,
+    "id": "282",
+    "slug": {
+      "FRENCH": "evolutions-du-site-web",
+      "ENGLISH": "web-site-evolutions"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Guillaume",
+      "lastname": "Ehret",
+      "email": "",
+      "company": "Dev-Mind",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur agile passionn\u00e9 par la technique et l'agilit\u00e9, fondateur de [Dev-Mind](https:\/\/dev-mind.fr\/)",
+        "ENGLISH": "D\u00e9veloppeur agile passionn\u00e9 par la technique et l'agilit\u00e9, fondateur de [Dev-Mind](https:\/\/dev-mind.fr\/)"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2016,
+      4,
+      13,
+      11,
+      40,
+      55
+    ],
+    "title": {
+      "FRENCH": "Les mots des sponsors - Esker",
+      "ENGLISH": "Les mots des sponsors - Esker"
+    },
+    "headline": {
+      "FRENCH": "Comment l\u2019\u00e9diteur de logiciel Esker met l\u2019agilit\u00e9 au service du recrutement.",
+      "ENGLISH": "Comment l\u2019\u00e9diteur de logiciel Esker met l\u2019agilit\u00e9 au service du recrutement."
+    },
+    "content": null,
+    "id": "322",
+    "slug": {
+      "FRENCH": "les-mots-des-sponsors---esker",
+      "ENGLISH": "les-mots-des-sponsors---esker"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Cyril",
+      "lastname": "Lacote",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+        "ENGLISH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2016,
+      4,
+      10,
+      22,
+      42,
+      46
+    ],
+    "title": {
+      "FRENCH": "Tim Urban de Wait But Why \u00e0 MiXiT 2016",
+      "ENGLISH": "Tim Urban of Wait But Why at MiXiT 2016"
+    },
+    "headline": {
+      "FRENCH": "Tim Urban tient un blog : [Wait But Why](http:\/\/waitbutwhy.com\/). Si on devait le r\u00e9sumer, on dirait un blog de vulgarisation scientifique. Mais ce serait oublier ses dessins cocasses, sa verve prolixe mais l\u00e9g\u00e8re, et surtout sa minutieuse documentation.",
+      "ENGLISH": "Tim Urban runs a blog: [Wait But Why](http:\/\/waitbutwhy.com\/). Some would say it\u2019s about science popularisation. But they would miss its handmade cartoons, its wordy but funny tone, and, above all, its thorough researches."
+    },
+    "content": null,
+    "id": "272",
+    "slug": {
+      "FRENCH": "tim-urban-de-wait-but-why-a-mixit-2016",
+      "ENGLISH": "tim-urban-of-wait-but-why-at-mixit-2016"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Mathieu",
+      "lastname": "Petitdant",
+      "email": "",
+      "company": "Freelance",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur Java\/Web et agiliste ... freelance.",
+        "ENGLISH": "D\u00e9veloppeur Java\/Web et agiliste ... freelance."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2016,
+      4,
+      5,
+      4,
+      30,
+      34
+    ],
+    "title": {
+      "FRENCH": "Les mots des sponsors - Viseo",
+      "ENGLISH": "Les mots des sponsors - Viseo"
+    },
+    "headline": {
+      "FRENCH": "Mot du sponsor Viseo",
+      "ENGLISH": "Mot du sponsor Viseo"
+    },
+    "content": null,
+    "id": "262",
+    "slug": {
+      "FRENCH": "les-mots-des-sponsors---viseo",
+      "ENGLISH": "les-mots-des-sponsors---viseo"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Agn\u00e8s",
+      "lastname": "Crepet",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder",
+        "ENGLISH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2016,
+      3,
+      31,
+      16,
+      54,
+      39
+    ],
+    "title": {
+      "FRENCH": "Des performances de r\u00e9alit\u00e9 virtuelle \u00e0 MiXiT!",
+      "ENGLISH": "Virtual Reality performances at Mix -IT!"
+    },
+    "headline": {
+      "FRENCH": "Cette ann\u00e9e on vous propose une nouvelle petite surprise sur MiXiT : des performances de r\u00e9alit\u00e9 virtuelle interactives, cr\u00e9\u00e9es sp\u00e9cialement pour vous, par des \u00e9l\u00e8ves ing\u00e9nieurs et des beaux arts!",
+      "ENGLISH": "This year we will offer you a new surprise at Mix- IT: interactive virtual reality performances created especially for you, by students in engineering and fine arts!"
+    },
+    "content": null,
+    "id": "252",
+    "slug": {
+      "FRENCH": "des-performances-de-realite-virtuelle-a-mixit-",
+      "ENGLISH": "virtual-reality-performances-at-mix--it-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Guillaume",
+      "lastname": "Ehret",
+      "email": "",
+      "company": "Dev-Mind",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur agile passionn\u00e9 par la technique et l'agilit\u00e9, fondateur de [Dev-Mind](https:\/\/dev-mind.fr\/)",
+        "ENGLISH": "D\u00e9veloppeur agile passionn\u00e9 par la technique et l'agilit\u00e9, fondateur de [Dev-Mind](https:\/\/dev-mind.fr\/)"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2016,
+      3,
+      23,
+      19,
+      4,
+      41
+    ],
+    "title": {
+      "FRENCH": "Hacker Cesar ! O\u00f9 comment s\u2019interfacer avec MiXiT.",
+      "ENGLISH": "Hack Cesar ! Or how to interface with MiXiT."
+    },
+    "headline": {
+      "FRENCH": "Comme vous avez pu le voir, notre site web a totalement \u00e9t\u00e9 revu cette ann\u00e9e. Le nom de l\u2019application est Cesar et le projet est disponible sous  [Github](https:\/\/github.com\/mix-it\/cesar).",
+      "ENGLISH": "This year we have a brand new website. The name of the project is Cesar and the sources are available on  [Github](https:\/\/github.com\/mix-it\/cesar)."
+    },
+    "content": null,
+    "id": "242",
+    "slug": {
+      "FRENCH": "hacker-cesar---ou-comment-s-interfacer-avec-mixit-",
+      "ENGLISH": "hack-cesar---or-how-to-interface-with-mixit-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Mathieu",
+      "lastname": "Petitdant",
+      "email": "",
+      "company": "Freelance",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur Java\/Web et agiliste ... freelance.",
+        "ENGLISH": "D\u00e9veloppeur Java\/Web et agiliste ... freelance."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2016,
+      3,
+      18,
+      7,
+      12,
+      55
+    ],
+    "title": {
+      "FRENCH": "Programme et ouverture de la billetterie",
+      "ENGLISH": "Agenda, and more details about ticketing"
+    },
+    "headline": {
+      "FRENCH": "Les sessions viennent juste d'\u00eatre publi\u00e9es, d\u00e9couvrez donc ce qui [vous attend \u00e0 MiXiT 2016](\/sessions), et tenez vous pr\u00eats pour l'ouverture de la billetterie.",
+      "ENGLISH": "The sessions have just been published: discover [what awaits you at Mix -IT 2016](\/sessions) and get ready to buy your ticket!"
+    },
+    "content": null,
+    "id": "232",
+    "slug": {
+      "FRENCH": "programme-et-ouverture-de-la-billetterie",
+      "ENGLISH": "agenda--and-more-details-about-ticketing"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Gr\u00e9gory",
+      "lastname": "Alexandre",
+      "email": "",
+      "company": "Goood!",
+      "description": {
+        "FRENCH": "Agiliste depuis plus de 8 ans et coach Agile chez [Goood!](http:\/\/goood.pro), GO de la communaut\u00e9 agile lyonnaise via MiXiT et le [CARA Lyon](http:\/\/lyon.clubagilerhonealpes.org\/)",
+        "ENGLISH": "Agiliste depuis plus de 8 ans et coach Agile chez [Goood!](http:\/\/goood.pro), GO de la communaut\u00e9 agile lyonnaise via MiXiT et le [CARA Lyon](http:\/\/lyon.clubagilerhonealpes.org\/)"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2016,
+      3,
+      2,
+      9,
+      52,
+      59
+    ],
+    "title": {
+      "FRENCH": "Yves Hanoulle, l'agiliste au service des communaut\u00e9s",
+      "ENGLISH": "Yves Hanoulle, an agilist supporter of communities"
+    },
+    "headline": {
+      "FRENCH": "L'interview d'Yves Hanoulle",
+      "ENGLISH": "The interview of Yves Hanoulle"
+    },
+    "content": null,
+    "id": "222",
+    "slug": {
+      "FRENCH": "yves-hanoulle--l-agiliste-au-service-des-communautes",
+      "ENGLISH": "yves-hanoulle--an-agilist-supporter-of-communities"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Mathieu",
+      "lastname": "Petitdant",
+      "email": "",
+      "company": "Freelance",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur Java\/Web et agiliste ... freelance.",
+        "ENGLISH": "D\u00e9veloppeur Java\/Web et agiliste ... freelance."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2016,
+      2,
+      17,
+      19,
+      43,
+      11
+    ],
+    "title": {
+      "FRENCH": "Quoi de neuf sur la billetterie MiXiT ?",
+      "ENGLISH": "Quoi de neuf sur la billetterie MiXiT ?"
+    },
+    "headline": {
+      "FRENCH": "Alors, vous allez enfin faire en sorte que tout le monde ait une place ?",
+      "ENGLISH": "Alors, vous allez enfin faire en sorte que tout le monde ait une place ?"
+    },
+    "content": null,
+    "id": "202",
+    "slug": {
+      "FRENCH": "quoi-de-neuf-sur-la-billetterie-mixit--",
+      "ENGLISH": "quoi-de-neuf-sur-la-billetterie-mixit--"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Guillaume",
+      "lastname": "Ehret",
+      "email": "",
+      "company": "Dev-Mind",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur agile passionn\u00e9 par la technique et l'agilit\u00e9, fondateur de [Dev-Mind](https:\/\/dev-mind.fr\/)",
+        "ENGLISH": "D\u00e9veloppeur agile passionn\u00e9 par la technique et l'agilit\u00e9, fondateur de [Dev-Mind](https:\/\/dev-mind.fr\/)"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2016,
+      2,
+      8,
+      11,
+      17,
+      1
+    ],
+    "title": {
+      "FRENCH": "La Ligne \u00e9ditoriale MiXiT",
+      "ENGLISH": "La Ligne \u00e9ditoriale MiXiT"
+    },
+    "headline": {
+      "FRENCH": "On nous demande souvent \u00ab mais comment choisissez-vous vos speakers sur MiXiT ? \u00bb\u2026 Et \u00e0 chaque fois on se dit \u00ab faut vraiment qu'on fasse un article dessus ! \u00bb",
+      "ENGLISH": "On nous demande souvent \u00ab mais comment choisissez-vous vos speakers sur MiXiT ? \u00bb\u2026 Et \u00e0 chaque fois on se dit \u00ab faut vraiment qu'on fasse un article dessus ! \u00bb"
+    },
+    "content": null,
+    "id": "192",
+    "slug": {
+      "FRENCH": "la-ligne-editoriale-mixit",
+      "ENGLISH": "la-ligne-editoriale-mixit"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Guillaume",
+      "lastname": "Ehret",
+      "email": "",
+      "company": "Dev-Mind",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur agile passionn\u00e9 par la technique et l'agilit\u00e9, fondateur de [Dev-Mind](https:\/\/dev-mind.fr\/)",
+        "ENGLISH": "D\u00e9veloppeur agile passionn\u00e9 par la technique et l'agilit\u00e9, fondateur de [Dev-Mind](https:\/\/dev-mind.fr\/)"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2016,
+      2,
+      1,
+      10,
+      40,
+      39
+    ],
+    "title": {
+      "FRENCH": "Allan Kelly premier speaker agile 2016",
+      "ENGLISH": "Allan Kelly first agile speaker 2016"
+    },
+    "headline": {
+      "FRENCH": "Vous connaissez Kanban, vous connaissez XP mais connaissez vous Xanpan?",
+      "ENGLISH": "You know Kanban, you know XP but do you know Xanpan?"
+    },
+    "content": null,
+    "id": "182",
+    "slug": {
+      "FRENCH": "allan-kelly-premier-speaker-agile-2016",
+      "ENGLISH": "allan-kelly-first-agile-speaker-2016"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Agn\u00e8s",
+      "lastname": "Crepet",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder",
+        "ENGLISH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2016,
+      1,
+      25,
+      22,
+      32,
+      34
+    ],
+    "title": {
+      "FRENCH": "Joel Spolsky, notre premier keynote speaker !",
+      "ENGLISH": "Joel Spolsky, our first keynote speaker!"
+    },
+    "headline": {
+      "FRENCH": "Quel est le point commun entre Excel, [Stack Overflow](http:\/\/stackoverflow.com\/) et [Trello](https:\/\/trello.com\/)?",
+      "ENGLISH": "Do you know what is the common denominator between Excel, [Stack Overflow](http:\/\/stackoverflow.com\/) and [Trello](https:\/\/trello.com\/)?"
+    },
+    "content": null,
+    "id": "163",
+    "slug": {
+      "FRENCH": "joel-spolsky--notre-premier-keynote-speaker--",
+      "ENGLISH": "joel-spolsky--our-first-keynote-speaker-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Agn\u00e8s",
+      "lastname": "Crepet",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder",
+        "ENGLISH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2016,
+      1,
+      20,
+      22,
+      30,
+      41
+    ],
+    "title": {
+      "FRENCH": "Le CFP de MiXiT 2016 est ouvert",
+      "ENGLISH": "The MiXiT 2016 CFP is open"
+    },
+    "headline": {
+      "FRENCH": "Nous avons eu beaucoup de demandes pour conna\u00eere les dates d'ouverture du CFP 2016. Nous pouvons vous dire que c'est chose faite et vous avez jusqu'au 6 mars 2016 pour nous proposer vos sessions.",
+      "ENGLISH": "You were many to request the opening dates of the 2016 CFP. We can tell you that it's done! And you can suggest your sessions until March 6, 2016."
+    },
+    "content": null,
+    "id": "142",
+    "slug": {
+      "FRENCH": "le-cfp-de-mixit-2016-est-ouvert",
+      "ENGLISH": "the-mixit-2016-cfp-is-open"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Mathieu",
+      "lastname": "Petitdant",
+      "email": "",
+      "company": "Freelance",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur Java\/Web et agiliste ... freelance.",
+        "ENGLISH": "D\u00e9veloppeur Java\/Web et agiliste ... freelance."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2015,
+      5,
+      22,
+      13,
+      55,
+      6
+    ],
+    "title": {
+      "FRENCH": "Les retours des participants 2015",
+      "ENGLISH": "Les retours des participants 2015"
+    },
+    "headline": {
+      "FRENCH": "Voici les articles publi\u00e9s par les participants sur l'\u00e9dition MiXiT 2015",
+      "ENGLISH": "Voici les articles publi\u00e9s par les participants sur l'\u00e9dition MiXiT 2015"
+    },
+    "content": null,
+    "id": "141",
+    "slug": {
+      "FRENCH": "les-retours-des-participants-2015",
+      "ENGLISH": "les-retours-des-participants-2015"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Guillaume",
+      "lastname": "Ehret",
+      "email": "",
+      "company": "Dev-Mind",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur agile passionn\u00e9 par la technique et l'agilit\u00e9, fondateur de [Dev-Mind](https:\/\/dev-mind.fr\/)",
+        "ENGLISH": "D\u00e9veloppeur agile passionn\u00e9 par la technique et l'agilit\u00e9, fondateur de [Dev-Mind](https:\/\/dev-mind.fr\/)"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2015,
+      4,
+      14,
+      13,
+      35,
+      15
+    ],
+    "title": {
+      "FRENCH": "Comment g\u00e9rer votre conf\u00e9rence MiXiT 2015",
+      "ENGLISH": "How to prepare your MiXiT 2015"
+    },
+    "headline": {
+      "FRENCH": "Afin que ces deux jours de conf\u00e9rences se passent pour le mieux pour vous voici quelques infos...",
+      "ENGLISH": "Afin que ces deux jours de conf\u00e9rences se passent pour le mieux pour vous voici quelques infos..."
+    },
+    "content": null,
+    "id": "131",
+    "slug": {
+      "FRENCH": "comment-gerer-votre-conference-mixit-2015",
+      "ENGLISH": "how-to-prepare-your-mixit-2015"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Guillaume",
+      "lastname": "Ehret",
+      "email": "",
+      "company": "Dev-Mind",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur agile passionn\u00e9 par la technique et l'agilit\u00e9, fondateur de [Dev-Mind](https:\/\/dev-mind.fr\/)",
+        "ENGLISH": "D\u00e9veloppeur agile passionn\u00e9 par la technique et l'agilit\u00e9, fondateur de [Dev-Mind](https:\/\/dev-mind.fr\/)"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2015,
+      4,
+      13,
+      20,
+      35,
+      15
+    ],
+    "title": {
+      "FRENCH": "Le mot des sponsors (1)",
+      "ENGLISH": "Le mot des sponsors (1)"
+    },
+    "headline": {
+      "FRENCH": "L'\u00e9dition 2015 se rapproche \u00e0 grand pas. Le prix des places a pu se maintenir cette ann\u00e9e \u00e0 un prix encore tr\u00e8s raisonnable gr\u00e2ce aux soutiens de nos sponsors. Aujourd'hui nous donnons la parole aux soci\u00e9t\u00e9s Fiducial et Steria-Sopra.",
+      "ENGLISH": "L'\u00e9dition 2015 se rapproche \u00e0 grand pas. Le prix des places a pu se maintenir cette ann\u00e9e \u00e0 un prix encore tr\u00e8s raisonnable gr\u00e2ce aux soutiens de nos sponsors. Aujourd'hui nous donnons la parole aux soci\u00e9t\u00e9s Fiducial et Steria-Sopra."
+    },
+    "content": null,
+    "id": "101",
+    "slug": {
+      "FRENCH": "le-mot-des-sponsors--1-",
+      "ENGLISH": "le-mot-des-sponsors--1-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Guillaume",
+      "lastname": "Ehret",
+      "email": "",
+      "company": "Dev-Mind",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur agile passionn\u00e9 par la technique et l'agilit\u00e9, fondateur de [Dev-Mind](https:\/\/dev-mind.fr\/)",
+        "ENGLISH": "D\u00e9veloppeur agile passionn\u00e9 par la technique et l'agilit\u00e9, fondateur de [Dev-Mind](https:\/\/dev-mind.fr\/)"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2015,
+      4,
+      13,
+      20,
+      34,
+      26
+    ],
+    "title": {
+      "FRENCH": "Le mot des sponsors (2)",
+      "ENGLISH": "Le mot des sponsors (2)"
+    },
+    "headline": {
+      "FRENCH": "Plus qu'une semaine avant MiXiT. Aujourd'hui nous donnons la parole \u00e0 deux de nos sponsors les soci\u00e9t\u00e9s Elao et Stormshield.",
+      "ENGLISH": "Plus qu'une semaine avant MiXiT. Aujourd'hui nous donnons la parole \u00e0 deux de nos sponsors les soci\u00e9t\u00e9s Elao et Stormshield."
+    },
+    "content": null,
+    "id": "111",
+    "slug": {
+      "FRENCH": "le-mot-des-sponsors--2-",
+      "ENGLISH": "le-mot-des-sponsors--2-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Guillaume",
+      "lastname": "Ehret",
+      "email": "",
+      "company": "Dev-Mind",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur agile passionn\u00e9 par la technique et l'agilit\u00e9, fondateur de [Dev-Mind](https:\/\/dev-mind.fr\/)",
+        "ENGLISH": "D\u00e9veloppeur agile passionn\u00e9 par la technique et l'agilit\u00e9, fondateur de [Dev-Mind](https:\/\/dev-mind.fr\/)"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2015,
+      4,
+      13,
+      20,
+      32,
+      55
+    ],
+    "title": {
+      "FRENCH": "Le mot des sponsors (3)",
+      "ENGLISH": "Le mot des sponsors (3)"
+    },
+    "headline": {
+      "FRENCH": "N'h\u00e9sitez pas \u00e0 faire le tour des stands des sponsors le jour de la Conf\u00e9rence. Aujourd'hui nous laissons la parole \u00e0 la soci\u00e9t\u00e9 SII",
+      "ENGLISH": "N'h\u00e9sitez pas \u00e0 faire le tour des stands des sponsors le jour de la Conf\u00e9rence. Aujourd'hui nous laissons la parole \u00e0 la soci\u00e9t\u00e9 SII"
+    },
+    "content": null,
+    "id": "121",
+    "slug": {
+      "FRENCH": "le-mot-des-sponsors--3-",
+      "ENGLISH": "le-mot-des-sponsors--3-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Guillaume",
+      "lastname": "Ehret",
+      "email": "",
+      "company": "Dev-Mind",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur agile passionn\u00e9 par la technique et l'agilit\u00e9, fondateur de [Dev-Mind](https:\/\/dev-mind.fr\/)",
+        "ENGLISH": "D\u00e9veloppeur agile passionn\u00e9 par la technique et l'agilit\u00e9, fondateur de [Dev-Mind](https:\/\/dev-mind.fr\/)"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2015,
+      3,
+      16,
+      7,
+      28,
+      43
+    ],
+    "title": {
+      "FRENCH": "Le programme de MiXiT 2015",
+      "ENGLISH": "Le programme de MiXiT 2015"
+    },
+    "headline": {
+      "FRENCH": "Nous sommes tr\u00e8s heureux de pouvoir vous annoncer que la nouvelle cuv\u00e9e arrive, et on esp\u00e8re qu\u2019elle vous plaira autant que les pr\u00e9c\u00e9dentes \u00e9ditions. Voici une synth\u00e8se du programme en quelques exemples.",
+      "ENGLISH": "Nous sommes tr\u00e8s heureux de pouvoir vous annoncer que la nouvelle cuv\u00e9e arrive, et on esp\u00e8re qu\u2019elle vous plaira autant que les pr\u00e9c\u00e9dentes \u00e9ditions. Voici une synth\u00e8se du programme en quelques exemples."
+    },
+    "content": null,
+    "id": "91",
+    "slug": {
+      "FRENCH": "le-programme-de-mixit-2015",
+      "ENGLISH": "le-programme-de-mixit-2015"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Cyril",
+      "lastname": "Lacote",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+        "ENGLISH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2015,
+      1,
+      15,
+      13,
+      21,
+      53
+    ],
+    "title": {
+      "FRENCH": "Call For Papers de MiXiT 2015",
+      "ENGLISH": "Call For Papers de MiXiT 2015"
+    },
+    "headline": {
+      "FRENCH": "Le CFP est ouvert d\u00e8s aujourd'hui et jusqu'au 1er mars 2015.",
+      "ENGLISH": "Le CFP est ouvert d\u00e8s aujourd'hui et jusqu'au 1er mars 2015."
+    },
+    "content": null,
+    "id": "81",
+    "slug": {
+      "FRENCH": "call-for-papers-de-mixit-2015",
+      "ENGLISH": "call-for-papers-de-mixit-2015"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Cyril",
+      "lastname": "Lacote",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+        "ENGLISH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2014,
+      12,
+      17,
+      22,
+      25,
+      31
+    ],
+    "title": {
+      "FRENCH": "MiXiT 2015 aura lieu les 16 & 17 avril 2015",
+      "ENGLISH": "MiXiT 2015 aura lieu les 16 & 17 avril 2015"
+    },
+    "headline": {
+      "FRENCH": "Nouvelle edition, nouvelles dates, nouvelle \u00e9quipe, nouveaux sponsors, mais m\u00eame lieu. Tout ce qui change, et tout ce qui ne changera pas.",
+      "ENGLISH": "Nouvelle edition, nouvelles dates, nouvelle \u00e9quipe, nouveaux sponsors, mais m\u00eame lieu. Tout ce qui change, et tout ce qui ne changera pas."
+    },
+    "content": null,
+    "id": "77",
+    "slug": {
+      "FRENCH": "mixit-2015-aura-lieu-les-16---17-avril-2015",
+      "ENGLISH": "mixit-2015-aura-lieu-les-16---17-avril-2015"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Cyril",
+      "lastname": "Lacote",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+        "ENGLISH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2014,
+      7,
+      21,
+      7,
+      3,
+      42
+    ],
+    "title": {
+      "FRENCH": "Les vid\u00e9os des sessions MiXiT 2014",
+      "ENGLISH": "Les vid\u00e9os des sessions MiXiT 2014"
+    },
+    "headline": {
+      "FRENCH": "Vous avez rat\u00e9 MiXiT 2014? Vous avez ador\u00e9 une conf\u00e9rence que vous aimeriez revoir? Voici les vid\u00e9os!",
+      "ENGLISH": "Vous avez rat\u00e9 MiXiT 2014? Vous avez ador\u00e9 une conf\u00e9rence que vous aimeriez revoir? Voici les vid\u00e9os!"
+    },
+    "content": null,
+    "id": "75",
+    "slug": {
+      "FRENCH": "les-videos-des-sessions-mixit-2014",
+      "ENGLISH": "les-videos-des-sessions-mixit-2014"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Franck",
+      "lastname": "Depierre",
+      "email": "",
+      "company": "Stormshield",
+      "description": {
+        "FRENCH": "Passionate about learning, enjoy collaboration and love building products.",
+        "ENGLISH": "Passionate about learning, enjoy collaboration and love building products."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2014,
+      7,
+      9,
+      11,
+      44,
+      22
+    ],
+    "title": {
+      "FRENCH": "Les retours des participants",
+      "ENGLISH": "Les retours des participants"
+    },
+    "headline": {
+      "FRENCH": "Voici les articles publi\u00e9s par les participants sur l'\u00e9dition MiXiT 2014",
+      "ENGLISH": "Voici les articles publi\u00e9s par les participants sur l'\u00e9dition MiXiT 2014"
+    },
+    "content": null,
+    "id": "74",
+    "slug": {
+      "FRENCH": "les-retours-des-participants",
+      "ENGLISH": "les-retours-des-participants"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Mathieu",
+      "lastname": "Petitdant",
+      "email": "",
+      "company": "Freelance",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur Java\/Web et agiliste ... freelance.",
+        "ENGLISH": "D\u00e9veloppeur Java\/Web et agiliste ... freelance."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2014,
+      4,
+      28,
+      9,
+      11,
+      15
+    ],
+    "title": {
+      "FRENCH": "Comment g\u00e9rer ma conf? How to manage my conf?",
+      "ENGLISH": "Comment g\u00e9rer ma conf? How to manage my conf?"
+    },
+    "headline": {
+      "FRENCH": "Les habitu\u00e9s de MiXiT savent qu'ils voient une conf\u00e9rence o\u00f9 l'assistanat du participant est tr\u00e8s limit\u00e9 alors pour vous permettre d'anticiper un peu, voici quelques infos pratiques. [EN] Here are some MiXiT 2014 practical information !",
+      "ENGLISH": "Les habitu\u00e9s de MiXiT savent qu'ils voient une conf\u00e9rence o\u00f9 l'assistanat du participant est tr\u00e8s limit\u00e9 alors pour vous permettre d'anticiper un peu, voici quelques infos pratiques. [EN] Here are some MiXiT 2014 practical information !"
+    },
+    "content": null,
+    "id": "73",
+    "slug": {
+      "FRENCH": "comment-gerer-ma-conf--how-to-manage-my-conf-",
+      "ENGLISH": "comment-gerer-ma-conf--how-to-manage-my-conf-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "C\u00e9dric",
+      "lastname": "Exbrayat",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "Fondateur du JUG, de MiXiT et de [Ninja Squad](http:\/\/ninja-squad.fr) et bloggeur [hype](http:\/\/hypedrivendev.wordpress.com)\n\n\n\n\n",
+        "ENGLISH": "Fondateur du JUG, de MiXiT et de [Ninja Squad](http:\/\/ninja-squad.fr) et bloggeur [hype](http:\/\/hypedrivendev.wordpress.com)\n\n\n\n\n"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2014,
+      4,
+      14,
+      8,
+      47,
+      59
+    ],
+    "title": {
+      "FRENCH": "MiXiT Party on a boat !",
+      "ENGLISH": "MiXiT Party on a boat !"
+    },
+    "headline": {
+      "FRENCH": "Mardi 29 Avril au soir, nous nous retrouvons sur une p\u00e9niche pour continuer \u00e0 \u00e9changer, enfin oser aborder les speakers et se d\u00e9tendre apr\u00e8s une journ\u00e9e riche en nouvelles id\u00e9es.",
+      "ENGLISH": "Mardi 29 Avril au soir, nous nous retrouvons sur une p\u00e9niche pour continuer \u00e0 \u00e9changer, enfin oser aborder les speakers et se d\u00e9tendre apr\u00e8s une journ\u00e9e riche en nouvelles id\u00e9es."
+    },
+    "content": null,
+    "id": "72",
+    "slug": {
+      "FRENCH": "mixit-party-on-a-boat--",
+      "ENGLISH": "mixit-party-on-a-boat--"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Franck",
+      "lastname": "Depierre",
+      "email": "",
+      "company": "Stormshield",
+      "description": {
+        "FRENCH": "Passionate about learning, enjoy collaboration and love building products.",
+        "ENGLISH": "Passionate about learning, enjoy collaboration and love building products."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2014,
+      4,
+      14,
+      6,
+      57,
+      2
+    ],
+    "title": {
+      "FRENCH": "MiXiT 2014 Program \/ Programme (part 2)",
+      "ENGLISH": "MiXiT 2014 Program \/ Programme (part 2)"
+    },
+    "headline": {
+      "FRENCH": "Voici la suite du programme pour la partie non technique\r\nPlease find below the non technical sessions description",
+      "ENGLISH": "Voici la suite du programme pour la partie non technique\r\nPlease find below the non technical sessions description"
+    },
+    "content": null,
+    "id": "70",
+    "slug": {
+      "FRENCH": "mixit-2014-program---programme--part-2-",
+      "ENGLISH": "mixit-2014-program---programme--part-2-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "C\u00e9dric",
+      "lastname": "Exbrayat",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "Fondateur du JUG, de MiXiT et de [Ninja Squad](http:\/\/ninja-squad.fr) et bloggeur [hype](http:\/\/hypedrivendev.wordpress.com)\n\n\n\n\n",
+        "ENGLISH": "Fondateur du JUG, de MiXiT et de [Ninja Squad](http:\/\/ninja-squad.fr) et bloggeur [hype](http:\/\/hypedrivendev.wordpress.com)\n\n\n\n\n"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2014,
+      4,
+      14,
+      6,
+      12,
+      58
+    ],
+    "title": {
+      "FRENCH": "Le programme de MiXiT (part 1)",
+      "ENGLISH": "Le programme de MiXiT (part 1)"
+    },
+    "headline": {
+      "FRENCH": "H\u00e9, t'as vu le programme de MiXiT? On va encore gal\u00e9rer pour choisir dans quelle salle aller...",
+      "ENGLISH": "H\u00e9, t'as vu le programme de MiXiT? On va encore gal\u00e9rer pour choisir dans quelle salle aller..."
+    },
+    "content": null,
+    "id": "67",
+    "slug": {
+      "FRENCH": "le-programme-de-mixit--part-1-",
+      "ENGLISH": "le-programme-de-mixit--part-1-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "C\u00e9dric",
+      "lastname": "Exbrayat",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "Fondateur du JUG, de MiXiT et de [Ninja Squad](http:\/\/ninja-squad.fr) et bloggeur [hype](http:\/\/hypedrivendev.wordpress.com)\n\n\n\n\n",
+        "ENGLISH": "Fondateur du JUG, de MiXiT et de [Ninja Squad](http:\/\/ninja-squad.fr) et bloggeur [hype](http:\/\/hypedrivendev.wordpress.com)\n\n\n\n\n"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2014,
+      4,
+      11,
+      6,
+      48,
+      41
+    ],
+    "title": {
+      "FRENCH": "Les aliens : id\u00e9es originales pour tout de suite",
+      "ENGLISH": "Les aliens : id\u00e9es originales pour tout de suite"
+    },
+    "headline": {
+      "FRENCH": "Un autre des charmes de MiXiT : les speakers aliens. Ils viennent avec un talk pas forc\u00e9ment li\u00e9 directement \u00e0 notre m\u00e9tier, et on en repart la t\u00eate pleine de nouvelles id\u00e9es !",
+      "ENGLISH": "Un autre des charmes de MiXiT : les speakers aliens. Ils viennent avec un talk pas forc\u00e9ment li\u00e9 directement \u00e0 notre m\u00e9tier, et on en repart la t\u00eate pleine de nouvelles id\u00e9es !"
+    },
+    "content": null,
+    "id": "71",
+    "slug": {
+      "FRENCH": "les-aliens---idees-originales-pour-tout-de-suite",
+      "ENGLISH": "les-aliens---idees-originales-pour-tout-de-suite"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Mathieu",
+      "lastname": "Petitdant",
+      "email": "",
+      "company": "Freelance",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur Java\/Web et agiliste ... freelance.",
+        "ENGLISH": "D\u00e9veloppeur Java\/Web et agiliste ... freelance."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2014,
+      4,
+      4,
+      8,
+      29,
+      22
+    ],
+    "title": {
+      "FRENCH": "Les ligthnings talks : proposez, votez!",
+      "ENGLISH": "Les ligthnings talks : proposez, votez!"
+    },
+    "headline": {
+      "FRENCH": "Vous les savez peut \u00eatre, \u00e0 MiXiT, nous avons une tradition : les Lightning talks ! Et on les adooooore !\r\nFa\u00eetes de MiXiT votre conf\u00e9rence.",
+      "ENGLISH": "Vous les savez peut \u00eatre, \u00e0 MiXiT, nous avons une tradition : les Lightning talks ! Et on les adooooore !\r\nFa\u00eetes de MiXiT votre conf\u00e9rence."
+    },
+    "content": null,
+    "id": "69",
+    "slug": {
+      "FRENCH": "les-ligthnings-talks---proposez--votez-",
+      "ENGLISH": "les-ligthnings-talks---proposez--votez-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Cyril",
+      "lastname": "Lacote",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+        "ENGLISH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2014,
+      4,
+      2,
+      21,
+      59,
+      46
+    ],
+    "title": {
+      "FRENCH": "Mix-TeeN : un atelier r\u00e9serv\u00e9 aux enfants!",
+      "ENGLISH": "Mix-TeeN : un atelier r\u00e9serv\u00e9 aux enfants!"
+    },
+    "headline": {
+      "FRENCH": "Pas besoin d\u2019\u00eatre un geek en herbe, pas besoin de passer son temps devant un ordinateur. Avec de la cr\u00e9ativit\u00e9 et de la curiosit\u00e9, il est possible de r\u00e9aliser des programmes informatiques tout en s\u2019amusant.",
+      "ENGLISH": "Pas besoin d\u2019\u00eatre un geek en herbe, pas besoin de passer son temps devant un ordinateur. Avec de la cr\u00e9ativit\u00e9 et de la curiosit\u00e9, il est possible de r\u00e9aliser des programmes informatiques tout en s\u2019amusant."
+    },
+    "content": null,
+    "id": "68",
+    "slug": {
+      "FRENCH": "mix-teen---un-atelier-reserve-aux-enfants-",
+      "ENGLISH": "mix-teen---un-atelier-reserve-aux-enfants-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Franck",
+      "lastname": "Depierre",
+      "email": "",
+      "company": "Stormshield",
+      "description": {
+        "FRENCH": "Passionate about learning, enjoy collaboration and love building products.",
+        "ENGLISH": "Passionate about learning, enjoy collaboration and love building products."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2014,
+      3,
+      17,
+      21,
+      42,
+      40
+    ],
+    "title": {
+      "FRENCH": "Lightning talks",
+      "ENGLISH": "Lightning talks"
+    },
+    "headline": {
+      "FRENCH": "Vous pouvez soumettre des Lightning Talks.",
+      "ENGLISH": "Vous pouvez soumettre des Lightning Talks."
+    },
+    "content": null,
+    "id": "66",
+    "slug": {
+      "FRENCH": "lightning-talks",
+      "ENGLISH": "lightning-talks"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Franck",
+      "lastname": "Depierre",
+      "email": "",
+      "company": "Stormshield",
+      "description": {
+        "FRENCH": "Passionate about learning, enjoy collaboration and love building products.",
+        "ENGLISH": "Passionate about learning, enjoy collaboration and love building products."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2014,
+      3,
+      9,
+      21,
+      1,
+      58
+    ],
+    "title": {
+      "FRENCH": "L\u2019ouverture de la billetterie MiXiT 2014",
+      "ENGLISH": "L\u2019ouverture de la billetterie MiXiT 2014"
+    },
+    "headline": {
+      "FRENCH": "L\u2019ouverture de la billetterie se fera en ligne, le lundi 17 mars 2014 \u00e0 15:00.",
+      "ENGLISH": "L\u2019ouverture de la billetterie se fera en ligne, le lundi 17 mars 2014 \u00e0 15:00."
+    },
+    "content": null,
+    "id": "65",
+    "slug": {
+      "FRENCH": "l-ouverture-de-la-billetterie-mixit-2014",
+      "ENGLISH": "l-ouverture-de-la-billetterie-mixit-2014"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Mathieu",
+      "lastname": "Petitdant",
+      "email": "",
+      "company": "Freelance",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur Java\/Web et agiliste ... freelance.",
+        "ENGLISH": "D\u00e9veloppeur Java\/Web et agiliste ... freelance."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2014,
+      2,
+      27,
+      13,
+      5,
+      47
+    ],
+    "title": {
+      "FRENCH": "Fin du Call for Paper",
+      "ENGLISH": "Fin du Call for Paper"
+    },
+    "headline": {
+      "FRENCH": "Nous accepterons vos propositions de sessions jusqu'au 4 mars inclus.",
+      "ENGLISH": "Nous accepterons vos propositions de sessions jusqu'au 4 mars inclus."
+    },
+    "content": null,
+    "id": "63",
+    "slug": {
+      "FRENCH": "fin-du-call-for-paper",
+      "ENGLISH": "fin-du-call-for-paper"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Romain",
+      "lastname": "Couturier",
+      "email": "",
+      "company": "Terre d'Agile",
+      "description": {
+        "FRENCH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)",
+        "ENGLISH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2014,
+      2,
+      2,
+      16,
+      37,
+      49
+    ],
+    "title": {
+      "FRENCH": "Call for Paper MiXiT 2014",
+      "ENGLISH": "Call for Paper MiXiT 2014"
+    },
+    "headline": {
+      "FRENCH": "Soumettez une session qui soit en phase avec l'esprit de la conf\u00e9rence : \"des id\u00e9es pour tout suite\" ! Tous les sujets ont leur place : technique, agile, innovation, web, management, etc.",
+      "ENGLISH": "Soumettez une session qui soit en phase avec l'esprit de la conf\u00e9rence : \"des id\u00e9es pour tout suite\" ! Tous les sujets ont leur place : technique, agile, innovation, web, management, etc."
+    },
+    "content": null,
+    "id": "60",
+    "slug": {
+      "FRENCH": "call-for-paper-mixit-2014",
+      "ENGLISH": "call-for-paper-mixit-2014"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Cyril",
+      "lastname": "Lacote",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+        "ENGLISH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2014,
+      1,
+      11,
+      20,
+      27,
+      54
+    ],
+    "title": {
+      "FRENCH": "La team s'agrandit!",
+      "ENGLISH": "La team s'agrandit!"
+    },
+    "headline": {
+      "FRENCH": "Mathieu Petitdant rejoint l'\u00e9quipe d'organisation",
+      "ENGLISH": "Mathieu Petitdant rejoint l'\u00e9quipe d'organisation"
+    },
+    "content": null,
+    "id": "58",
+    "slug": {
+      "FRENCH": "la-team-s-agrandit-",
+      "ENGLISH": "la-team-s-agrandit-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Franck",
+      "lastname": "Depierre",
+      "email": "",
+      "company": "Stormshield",
+      "description": {
+        "FRENCH": "Passionate about learning, enjoy collaboration and love building products.",
+        "ENGLISH": "Passionate about learning, enjoy collaboration and love building products."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      12,
+      13,
+      8,
+      30,
+      34
+    ],
+    "title": {
+      "FRENCH": "Appel \u00e0 propositions pour MiXiT 2014",
+      "ENGLISH": "Appel \u00e0 propositions pour MiXiT 2014"
+    },
+    "headline": {
+      "FRENCH": "Avant de lancer le Call For Paper qui d\u00e9butera vers mi-janvier 2014, nous faisons appel \u00e0 vos bonnes id\u00e9es!",
+      "ENGLISH": "Avant de lancer le Call For Paper qui d\u00e9butera vers mi-janvier 2014, nous faisons appel \u00e0 vos bonnes id\u00e9es!"
+    },
+    "content": null,
+    "id": "62",
+    "slug": {
+      "FRENCH": "appel-a-propositions-pour-mixit-2014",
+      "ENGLISH": "appel-a-propositions-pour-mixit-2014"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Cyril",
+      "lastname": "Lacote",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+        "ENGLISH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      12,
+      10,
+      7,
+      23,
+      6
+    ],
+    "title": {
+      "FRENCH": "Et #mixit14 aura lieu... les 29 & 30 avril 2014!",
+      "ENGLISH": "Et #mixit14 aura lieu... les 29 & 30 avril 2014!"
+    },
+    "headline": {
+      "FRENCH": "Mais ce n'est pas la seule annonce...",
+      "ENGLISH": "Mais ce n'est pas la seule annonce..."
+    },
+    "content": null,
+    "id": "61",
+    "slug": {
+      "FRENCH": "et--mixit14-aura-lieu----les-29---30-avril-2014-",
+      "ENGLISH": "et--mixit14-aura-lieu----les-29---30-avril-2014-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Cyril",
+      "lastname": "Lacote",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+        "ENGLISH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      12,
+      6,
+      7,
+      51,
+      5
+    ],
+    "title": {
+      "FRENCH": "Le bilan de MiXiT 2013, en infographie",
+      "ENGLISH": "Le bilan de MiXiT 2013, en infographie"
+    },
+    "headline": {
+      "FRENCH": "Mieux vaut un dessin qu'un long discours sur MiXiT 2013",
+      "ENGLISH": "Mieux vaut un dessin qu'un long discours sur MiXiT 2013"
+    },
+    "content": null,
+    "id": "59",
+    "slug": {
+      "FRENCH": "le-bilan-de-mixit-2013--en-infographie",
+      "ENGLISH": "le-bilan-de-mixit-2013--en-infographie"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Agn\u00e8s",
+      "lastname": "Crepet",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder",
+        "ENGLISH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      9,
+      13,
+      6,
+      37,
+      32
+    ],
+    "title": {
+      "FRENCH": "C'est la rentr\u00e9e! Apprenons aux enfants \u00e0 coder!",
+      "ENGLISH": "C'est la rentr\u00e9e! Apprenons aux enfants \u00e0 coder!"
+    },
+    "headline": {
+      "FRENCH": "Pamela Fox a marqu\u00e9 les esprits des participants de MiXiT lors de la keynote finale de l'\u00e9dition 2012. Elle a abord\u00e9 le th\u00e8me de l'\u00e9ducation et de l'apprentissage du d\u00e9veloppement. Elle imaginait un monde o\u00f9 on apprenait \u00e0 coder d\u00e8s notre plus jeune \u00e2ge!",
+      "ENGLISH": "Pamela Fox a marqu\u00e9 les esprits des participants de MiXiT lors de la keynote finale de l'\u00e9dition 2012. Elle a abord\u00e9 le th\u00e8me de l'\u00e9ducation et de l'apprentissage du d\u00e9veloppement. Elle imaginait un monde o\u00f9 on apprenait \u00e0 coder d\u00e8s notre plus jeune \u00e2ge!"
+    },
+    "content": null,
+    "id": "57",
+    "slug": {
+      "FRENCH": "c-est-la-rentree--apprenons-aux-enfants-a-coder-",
+      "ENGLISH": "c-est-la-rentree--apprenons-aux-enfants-a-coder-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Cyril",
+      "lastname": "Lacote",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+        "ENGLISH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      7,
+      26,
+      11,
+      34,
+      14
+    ],
+    "title": {
+      "FRENCH": "Les vid\u00e9os des keynotes",
+      "ENGLISH": "Les vid\u00e9os des keynotes"
+    },
+    "headline": {
+      "FRENCH": "Vous avez rat\u00e9 MiXiT 2013? Pas de panique, voici les keynotes en vid\u00e9os",
+      "ENGLISH": "Vous avez rat\u00e9 MiXiT 2013? Pas de panique, voici les keynotes en vid\u00e9os"
+    },
+    "content": null,
+    "id": "56",
+    "slug": {
+      "FRENCH": "les-videos-des-keynotes",
+      "ENGLISH": "les-videos-des-keynotes"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Franck",
+      "lastname": "Depierre",
+      "email": "",
+      "company": "Stormshield",
+      "description": {
+        "FRENCH": "Passionate about learning, enjoy collaboration and love building products.",
+        "ENGLISH": "Passionate about learning, enjoy collaboration and love building products."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      5,
+      20,
+      19,
+      50,
+      53
+    ],
+    "title": {
+      "FRENCH": "Les billets apr\u00e8s MiXiT 2013",
+      "ENGLISH": "Les billets apr\u00e8s MiXiT 2013"
+    },
+    "headline": {
+      "FRENCH": "MiXiT 2013 est termin\u00e9 et cet article pointe les diapositives et billets publi\u00e9s par les orateurs et participants.",
+      "ENGLISH": "MiXiT 2013 est termin\u00e9 et cet article pointe les diapositives et billets publi\u00e9s par les orateurs et participants."
+    },
+    "content": null,
+    "id": "55",
+    "slug": {
+      "FRENCH": "les-billets-apres-mixit-2013",
+      "ENGLISH": "les-billets-apres-mixit-2013"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Cyril",
+      "lastname": "Lacote",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+        "ENGLISH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      4,
+      24,
+      15,
+      35,
+      38
+    ],
+    "title": {
+      "FRENCH": "Les applications clientes",
+      "ENGLISH": "Les applications clientes"
+    },
+    "headline": {
+      "FRENCH": "On liste ici les pointeurs vers les applications clientes gracieusement d\u00e9velopp\u00e9es par nos amis, qu'elles soient mobiles ou desktop.",
+      "ENGLISH": "On liste ici les pointeurs vers les applications clientes gracieusement d\u00e9velopp\u00e9es par nos amis, qu'elles soient mobiles ou desktop."
+    },
+    "content": null,
+    "id": "47",
+    "slug": {
+      "FRENCH": "les-applications-clientes",
+      "ENGLISH": "les-applications-clientes"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Agn\u00e8s",
+      "lastname": "Crepet",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder",
+        "ENGLISH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      4,
+      22,
+      20,
+      32,
+      48
+    ],
+    "title": {
+      "FRENCH": "Histoire de FabLab, histoire d'Usinette",
+      "ENGLISH": "Histoire de FabLab, histoire d'Usinette"
+    },
+    "headline": {
+      "FRENCH": "MiXiT accueille cette ann\u00e9e le collectif Usinette. Mais c'est quoi une usinette?",
+      "ENGLISH": "MiXiT accueille cette ann\u00e9e le collectif Usinette. Mais c'est quoi une usinette?"
+    },
+    "content": null,
+    "id": "53",
+    "slug": {
+      "FRENCH": "histoire-de-fablab--histoire-d-usinette",
+      "ENGLISH": "histoire-de-fablab--histoire-d-usinette"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Cyril",
+      "lastname": "Lacote",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+        "ENGLISH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      4,
+      22,
+      7,
+      35,
+      26
+    ],
+    "title": {
+      "FRENCH": "Changement de derni\u00e8re minute",
+      "ENGLISH": "Changement de derni\u00e8re minute"
+    },
+    "headline": {
+      "FRENCH": "La session \"node.js: why, when and how\" a \u00e9t\u00e9 annul\u00e9e, et est remplac\u00e9e par \"Web Components : l'avenir des d\u00e9veloppeurs web\".",
+      "ENGLISH": "La session \"node.js: why, when and how\" a \u00e9t\u00e9 annul\u00e9e, et est remplac\u00e9e par \"Web Components : l'avenir des d\u00e9veloppeurs web\"."
+    },
+    "content": null,
+    "id": "54",
+    "slug": {
+      "FRENCH": "changement-de-derniere-minute",
+      "ENGLISH": "changement-de-derniere-minute"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Romain",
+      "lastname": "Couturier",
+      "email": "",
+      "company": "Terre d'Agile",
+      "description": {
+        "FRENCH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)",
+        "ENGLISH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      4,
+      19,
+      7,
+      56,
+      55
+    ],
+    "title": {
+      "FRENCH": "Interview de Jean-Fran\u00e7ois Jagodzinski",
+      "ENGLISH": "Interview de Jean-Fran\u00e7ois Jagodzinski"
+    },
+    "headline": {
+      "FRENCH": "L'\u00e9quipe et les relations entre les individus est un sujet qui anime Jean-Fran\u00e7ois. En agile il est d'autant plus important de comprendre les m\u00e9canismes pour mieux collaborer. Jean-Fran\u00e7ois nous apporte ses lumi\u00e8res au cours d'un talk et d'un workshop.",
+      "ENGLISH": "L'\u00e9quipe et les relations entre les individus est un sujet qui anime Jean-Fran\u00e7ois. En agile il est d'autant plus important de comprendre les m\u00e9canismes pour mieux collaborer. Jean-Fran\u00e7ois nous apporte ses lumi\u00e8res au cours d'un talk et d'un workshop."
+    },
+    "content": null,
+    "id": "51",
+    "slug": {
+      "FRENCH": "interview-de-jean-francois-jagodzinski",
+      "ENGLISH": "interview-de-jean-francois-jagodzinski"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Cyril",
+      "lastname": "Lacote",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+        "ENGLISH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      4,
+      17,
+      22,
+      11,
+      29
+    ],
+    "title": {
+      "FRENCH": "Wanna hack MiXiT?",
+      "ENGLISH": "Wanna hack MiXiT?"
+    },
+    "headline": {
+      "FRENCH": "Une API JSON est d\u00e9sormais disponible !",
+      "ENGLISH": "Une API JSON est d\u00e9sormais disponible !"
+    },
+    "content": null,
+    "id": "40",
+    "slug": {
+      "FRENCH": "wanna-hack-mixit-",
+      "ENGLISH": "wanna-hack-mixit-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Agn\u00e8s",
+      "lastname": "Crepet",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder",
+        "ENGLISH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      4,
+      17,
+      18,
+      21,
+      57
+    ],
+    "title": {
+      "FRENCH": "Interview des Human Coders",
+      "ENGLISH": "Interview des Human Coders"
+    },
+    "headline": {
+      "FRENCH": "Nous sommes tr\u00e8s heureux d'accueillir sur MiXiT Camille des Human Coders. Il va nous parler de Lean Startup...",
+      "ENGLISH": "Nous sommes tr\u00e8s heureux d'accueillir sur MiXiT Camille des Human Coders. Il va nous parler de Lean Startup..."
+    },
+    "content": null,
+    "id": "52",
+    "slug": {
+      "FRENCH": "interview-des-human-coders",
+      "ENGLISH": "interview-des-human-coders"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Cyril",
+      "lastname": "Lacote",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+        "ENGLISH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      4,
+      15,
+      7,
+      21,
+      14
+    ],
+    "title": {
+      "FRENCH": "Votre trombinoscope personnel",
+      "ENGLISH": "Votre trombinoscope personnel"
+    },
+    "headline": {
+      "FRENCH": "Une nouvelle fonctionnalit\u00e9 vous permet de reconna\u00eetre les participants que vous avez envie de croiser le jour de la conf\u00e9rence.",
+      "ENGLISH": "Une nouvelle fonctionnalit\u00e9 vous permet de reconna\u00eetre les participants que vous avez envie de croiser le jour de la conf\u00e9rence."
+    },
+    "content": null,
+    "id": "50",
+    "slug": {
+      "FRENCH": "votre-trombinoscope-personnel",
+      "ENGLISH": "votre-trombinoscope-personnel"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Romain",
+      "lastname": "Couturier",
+      "email": "",
+      "company": "Terre d'Agile",
+      "description": {
+        "FRENCH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)",
+        "ENGLISH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      4,
+      13,
+      19,
+      26,
+      30
+    ],
+    "title": {
+      "FRENCH": "Interview de Simon Brown",
+      "ENGLISH": "Interview de Simon Brown"
+    },
+    "headline": {
+      "FRENCH": "We pleased to welcome Simon, author of the blog codingthearchitecture.com, who will give a talk and facilitate a workshop about software architecture, a mandatory skill for all teams. Interview !",
+      "ENGLISH": "We pleased to welcome Simon, author of the blog codingthearchitecture.com, who will give a talk and facilitate a workshop about software architecture, a mandatory skill for all teams. Interview !"
+    },
+    "content": null,
+    "id": "49",
+    "slug": {
+      "FRENCH": "interview-de-simon-brown",
+      "ENGLISH": "interview-de-simon-brown"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Romain",
+      "lastname": "Couturier",
+      "email": "",
+      "company": "Terre d'Agile",
+      "description": {
+        "FRENCH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)",
+        "ENGLISH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      4,
+      13,
+      11,
+      38,
+      58
+    ],
+    "title": {
+      "FRENCH": "Interview de Chrissy Welsh",
+      "ENGLISH": "Interview de Chrissy Welsh"
+    },
+    "headline": {
+      "FRENCH": "Chrissy Welsh defines herself as a UXer, she will give a talk \"The hitchhikers guide to UXing without a UXer\" about this discipline, often named, seldom mastered ... Interview !",
+      "ENGLISH": "Chrissy Welsh defines herself as a UXer, she will give a talk \"The hitchhikers guide to UXing without a UXer\" about this discipline, often named, seldom mastered ... Interview !"
+    },
+    "content": null,
+    "id": "46",
+    "slug": {
+      "FRENCH": "interview-de-chrissy-welsh",
+      "ENGLISH": "interview-de-chrissy-welsh"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "C\u00e9dric",
+      "lastname": "Exbrayat",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "Fondateur du JUG, de MiXiT et de [Ninja Squad](http:\/\/ninja-squad.fr) et bloggeur [hype](http:\/\/hypedrivendev.wordpress.com)\n\n\n\n\n",
+        "ENGLISH": "Fondateur du JUG, de MiXiT et de [Ninja Squad](http:\/\/ninja-squad.fr) et bloggeur [hype](http:\/\/hypedrivendev.wordpress.com)\n\n\n\n\n"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      4,
+      12,
+      9,
+      9,
+      54
+    ],
+    "title": {
+      "FRENCH": "Interview de Zach Holman",
+      "ENGLISH": "Interview de Zach Holman"
+    },
+    "headline": {
+      "FRENCH": "Zach is a Githubber and will come to MiXiT for a talk named 'The product is the byproduct'. Interview!",
+      "ENGLISH": "Zach is a Githubber and will come to MiXiT for a talk named 'The product is the byproduct'. Interview!"
+    },
+    "content": null,
+    "id": "48",
+    "slug": {
+      "FRENCH": "interview-de-zach-holman",
+      "ENGLISH": "interview-de-zach-holman"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "C\u00e9dric",
+      "lastname": "Exbrayat",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "Fondateur du JUG, de MiXiT et de [Ninja Squad](http:\/\/ninja-squad.fr) et bloggeur [hype](http:\/\/hypedrivendev.wordpress.com)\n\n\n\n\n",
+        "ENGLISH": "Fondateur du JUG, de MiXiT et de [Ninja Squad](http:\/\/ninja-squad.fr) et bloggeur [hype](http:\/\/hypedrivendev.wordpress.com)\n\n\n\n\n"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      4,
+      2,
+      8,
+      45,
+      31
+    ],
+    "title": {
+      "FRENCH": "Lightning talks",
+      "ENGLISH": "Lightning talks"
+    },
+    "headline": {
+      "FRENCH": "N'oubliez pas que vous pouvez toujours proposer des lightning talks \u00e0 MiXiT ! ",
+      "ENGLISH": "N'oubliez pas que vous pouvez toujours proposer des lightning talks \u00e0 MiXiT ! "
+    },
+    "content": null,
+    "id": "45",
+    "slug": {
+      "FRENCH": "lightning-talks",
+      "ENGLISH": "lightning-talks"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Cyril",
+      "lastname": "Lacote",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+        "ENGLISH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      3,
+      23,
+      20,
+      4,
+      32
+    ],
+    "title": {
+      "FRENCH": "Besoin d'une facture?",
+      "ENGLISH": "Besoin d'une facture?"
+    },
+    "headline": {
+      "FRENCH": "Votre entreprise vous paie les entr\u00e9es \u00e0 MiXiT, et vous voulez-vous faire rembourser? Demandez une facture.",
+      "ENGLISH": "Votre entreprise vous paie les entr\u00e9es \u00e0 MiXiT, et vous voulez-vous faire rembourser? Demandez une facture."
+    },
+    "content": null,
+    "id": "44",
+    "slug": {
+      "FRENCH": "besoin-d-une-facture-",
+      "ENGLISH": "besoin-d-une-facture-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Cyril",
+      "lastname": "Lacote",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+        "ENGLISH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      3,
+      22,
+      0,
+      56,
+      39
+    ],
+    "title": {
+      "FRENCH": "Vous vouliez une place?",
+      "ENGLISH": "Vous vouliez une place?"
+    },
+    "headline": {
+      "FRENCH": "MiXiT 2013 est complet. But wait! Il y a une liste d'attente officielle.",
+      "ENGLISH": "MiXiT 2013 est complet. But wait! Il y a une liste d'attente officielle."
+    },
+    "content": null,
+    "id": "43",
+    "slug": {
+      "FRENCH": "vous-vouliez-une-place-",
+      "ENGLISH": "vous-vouliez-une-place-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Cyril",
+      "lastname": "Lacote",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+        "ENGLISH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      3,
+      21,
+      9,
+      43,
+      53
+    ],
+    "title": {
+      "FRENCH": "MiXiT 2013 : c'est d\u00e9j\u00e0 complet!",
+      "ENGLISH": "MiXiT 2013 : c'est d\u00e9j\u00e0 complet!"
+    },
+    "headline": {
+      "FRENCH": "L'ensemble des places ont \u00e9t\u00e9 vendues.",
+      "ENGLISH": "L'ensemble des places ont \u00e9t\u00e9 vendues."
+    },
+    "content": null,
+    "id": "42",
+    "slug": {
+      "FRENCH": "mixit-2013---c-est-deja-complet-",
+      "ENGLISH": "mixit-2013---c-est-deja-complet-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Cyril",
+      "lastname": "Lacote",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+        "ENGLISH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      3,
+      19,
+      17,
+      44,
+      15
+    ],
+    "title": {
+      "FRENCH": "Construisez votre planning personnel!",
+      "ENGLISH": "Construisez votre planning personnel!"
+    },
+    "headline": {
+      "FRENCH": "Vous pouvez d\u00e9sormais mettre des sessions en favoris directement depuis le planning.",
+      "ENGLISH": "Vous pouvez d\u00e9sormais mettre des sessions en favoris directement depuis le planning."
+    },
+    "content": null,
+    "id": "41",
+    "slug": {
+      "FRENCH": "construisez-votre-planning-personnel-",
+      "ENGLISH": "construisez-votre-planning-personnel-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Cyril",
+      "lastname": "Lacote",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+        "ENGLISH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      3,
+      15,
+      15,
+      6,
+      26
+    ],
+    "title": {
+      "FRENCH": "La billetterie pour MiXiT 2013 est ouverte!",
+      "ENGLISH": "La billetterie pour MiXiT 2013 est ouverte!"
+    },
+    "headline": {
+      "FRENCH": "Ne tardez pas \u00e0 r\u00e9server votre place pour un ou deux jours.",
+      "ENGLISH": "Ne tardez pas \u00e0 r\u00e9server votre place pour un ou deux jours."
+    },
+    "content": null,
+    "id": "39",
+    "slug": {
+      "FRENCH": "la-billetterie-pour-mixit-2013-est-ouverte-",
+      "ENGLISH": "la-billetterie-pour-mixit-2013-est-ouverte-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Cyril",
+      "lastname": "Lacote",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+        "ENGLISH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      3,
+      15,
+      13,
+      2,
+      38
+    ],
+    "title": {
+      "FRENCH": "Le planning des 25 et 26 avril est disponible!",
+      "ENGLISH": "Le planning des 25 et 26 avril est disponible!"
+    },
+    "headline": {
+      "FRENCH": "D\u00e9couvrez la r\u00e9partition des sessions chaque jour.",
+      "ENGLISH": "D\u00e9couvrez la r\u00e9partition des sessions chaque jour."
+    },
+    "content": null,
+    "id": "38",
+    "slug": {
+      "FRENCH": "le-planning-des-25-et-26-avril-est-disponible-",
+      "ENGLISH": "le-planning-des-25-et-26-avril-est-disponible-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Cyril",
+      "lastname": "Lacote",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+        "ENGLISH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      3,
+      14,
+      11,
+      0,
+      11
+    ],
+    "title": {
+      "FRENCH": "Programme 2013 et billetterie",
+      "ENGLISH": "Programme 2013 et billetterie"
+    },
+    "headline": {
+      "FRENCH": "Les sessions et speakers s\u00e9lectionn\u00e9s sont disponibles, et la billetterie ouvrira vendredi 15 mars.",
+      "ENGLISH": "Les sessions et speakers s\u00e9lectionn\u00e9s sont disponibles, et la billetterie ouvrira vendredi 15 mars."
+    },
+    "content": null,
+    "id": "37",
+    "slug": {
+      "FRENCH": "programme-2013-et-billetterie",
+      "ENGLISH": "programme-2013-et-billetterie"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Agn\u00e8s",
+      "lastname": "Crepet",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder",
+        "ENGLISH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      3,
+      7,
+      14,
+      45,
+      31
+    ],
+    "title": {
+      "FRENCH": "Merci \u00e0 tous nos sponsors et partenaires !",
+      "ENGLISH": "Merci \u00e0 tous nos sponsors et partenaires !"
+    },
+    "headline": {
+      "FRENCH": "MiXiT ne pourrait pas avoir lieu sans un certain nombre de partenariats ou de sponsors!\r\nMerci \u00e0 eux!",
+      "ENGLISH": "MiXiT ne pourrait pas avoir lieu sans un certain nombre de partenariats ou de sponsors!\r\nMerci \u00e0 eux!"
+    },
+    "content": null,
+    "id": "36",
+    "slug": {
+      "FRENCH": "merci-a-tous-nos-sponsors-et-partenaires--",
+      "ENGLISH": "merci-a-tous-nos-sponsors-et-partenaires--"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Nicolas",
+      "lastname": "Pelloux-prayer",
+      "email": "",
+      "company": "",
+      "description": {
+        "FRENCH": "MiXiT CoFounder - software craftman ",
+        "ENGLISH": "MiXiT CoFounder - software craftman "
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      2,
+      27,
+      19,
+      16,
+      42
+    ],
+    "title": {
+      "FRENCH": "Appel \u00e0 orateurs",
+      "ENGLISH": "Appel \u00e0 orateurs"
+    },
+    "headline": {
+      "FRENCH": "C'est le moment de soumettre votre session!",
+      "ENGLISH": "C'est le moment de soumettre votre session!"
+    },
+    "content": null,
+    "id": "33",
+    "slug": {
+      "FRENCH": "appel-a-orateurs",
+      "ENGLISH": "appel-a-orateurs"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Agn\u00e8s",
+      "lastname": "Crepet",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder",
+        "ENGLISH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      2,
+      6,
+      10,
+      47,
+      43
+    ],
+    "title": {
+      "FRENCH": "Les filles \u00e0 l'honneur!",
+      "ENGLISH": "Les filles \u00e0 l'honneur!"
+    },
+    "headline": {
+      "FRENCH": "Les nouveaux speakers annonc\u00e9s sont des filles! Attention, elles d\u00e9coiffent...",
+      "ENGLISH": "Les nouveaux speakers annonc\u00e9s sont des filles! Attention, elles d\u00e9coiffent..."
+    },
+    "content": null,
+    "id": "35",
+    "slug": {
+      "FRENCH": "les-filles-a-l-honneur-",
+      "ENGLISH": "les-filles-a-l-honneur-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "C\u00e9dric",
+      "lastname": "Exbrayat",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "Fondateur du JUG, de MiXiT et de [Ninja Squad](http:\/\/ninja-squad.fr) et bloggeur [hype](http:\/\/hypedrivendev.wordpress.com)\n\n\n\n\n",
+        "ENGLISH": "Fondateur du JUG, de MiXiT et de [Ninja Squad](http:\/\/ninja-squad.fr) et bloggeur [hype](http:\/\/hypedrivendev.wordpress.com)\n\n\n\n\n"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      1,
+      25,
+      10,
+      10,
+      55
+    ],
+    "title": {
+      "FRENCH": "Des noms, des noms!",
+      "ENGLISH": "Des noms, des noms!"
+    },
+    "headline": {
+      "FRENCH": "Histoire de vous faire saliver un peu sur le programme, nous d\u00e9voilons aujourd\u2019hui quelques-uns des speakers #mixit13 !",
+      "ENGLISH": "Histoire de vous faire saliver un peu sur le programme, nous d\u00e9voilons aujourd\u2019hui quelques-uns des speakers #mixit13 !"
+    },
+    "content": null,
+    "id": "32",
+    "slug": {
+      "FRENCH": "des-noms--des-noms-",
+      "ENGLISH": "des-noms--des-noms-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Nicolas",
+      "lastname": "Pelloux-prayer",
+      "email": "",
+      "company": "",
+      "description": {
+        "FRENCH": "MiXiT CoFounder - software craftman ",
+        "ENGLISH": "MiXiT CoFounder - software craftman "
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2013,
+      1,
+      22,
+      23,
+      56,
+      27
+    ],
+    "title": {
+      "FRENCH": "MiXiT 2013 aura lieu les 25 et 26 avril!",
+      "ENGLISH": "MiXiT 2013 aura lieu les 25 et 26 avril!"
+    },
+    "headline": {
+      "FRENCH": " Annonce MiXiT 2013",
+      "ENGLISH": " Annonce MiXiT 2013"
+    },
+    "content": null,
+    "id": "31",
+    "slug": {
+      "FRENCH": "mixit-2013-aura-lieu-les-25-et-26-avril-",
+      "ENGLISH": "mixit-2013-aura-lieu-les-25-et-26-avril-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Franck",
+      "lastname": "Depierre",
+      "email": "",
+      "company": "Stormshield",
+      "description": {
+        "FRENCH": "Passionate about learning, enjoy collaboration and love building products.",
+        "ENGLISH": "Passionate about learning, enjoy collaboration and love building products."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      9,
+      26,
+      10,
+      43,
+      40
+    ],
+    "title": {
+      "FRENCH": "Les vid\u00e9os de MiXiT 2012",
+      "ENGLISH": "Les vid\u00e9os de MiXiT 2012"
+    },
+    "headline": {
+      "FRENCH": "OK, elles  ne sont peut-\u00eatre pas toutes de tr\u00e8s bonne qualit\u00e9, mais les speakers le sont!",
+      "ENGLISH": "OK, elles  ne sont peut-\u00eatre pas toutes de tr\u00e8s bonne qualit\u00e9, mais les speakers le sont!"
+    },
+    "content": null,
+    "id": "30",
+    "slug": {
+      "FRENCH": "les-videos-de-mixit-2012",
+      "ENGLISH": "les-videos-de-mixit-2012"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Romain",
+      "lastname": "Couturier",
+      "email": "",
+      "company": "Terre d'Agile",
+      "description": {
+        "FRENCH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)",
+        "ENGLISH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      7,
+      7,
+      15,
+      10,
+      24
+    ],
+    "title": {
+      "FRENCH": "Les supports de pr\u00e9sentation et les retours",
+      "ENGLISH": "Les supports de pr\u00e9sentation et les retours"
+    },
+    "headline": {
+      "FRENCH": "Pour revivre et retrouver MiXiT 2012 (en attendant les vid\u00e9os qui sont en cours de montage), nous vous proposons des liens qui vous serviront \u00e0 revivre les moments forts de cette \u00e9dition.",
+      "ENGLISH": "Pour revivre et retrouver MiXiT 2012 (en attendant les vid\u00e9os qui sont en cours de montage), nous vous proposons des liens qui vous serviront \u00e0 revivre les moments forts de cette \u00e9dition."
+    },
+    "content": null,
+    "id": "29",
+    "slug": {
+      "FRENCH": "les-supports-de-presentation-et-les-retours",
+      "ENGLISH": "les-supports-de-presentation-et-les-retours"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Agn\u00e8s",
+      "lastname": "Crepet",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder",
+        "ENGLISH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      4,
+      25,
+      10,
+      34,
+      7
+    ],
+    "title": {
+      "FRENCH": "Th\u00e9\u00e2tre d\u2019Impro pour jouer \u00e0 \u00eatre Agile avec Aline",
+      "ENGLISH": "Th\u00e9\u00e2tre d\u2019Impro pour jouer \u00e0 \u00eatre Agile avec Aline"
+    },
+    "headline": {
+      "FRENCH": "Voici l'interview d'Aline Paponaud qui animera \u00e0 MiXiT un th\u00e9$atre d'impro pour apprendre \u00e0 \u00eatre agile! Aline \u00e9tait \u00e9galement \u00e0 Devoxx France pour un atelier pour les enfants avec programatoo, co-anim\u00e9 avec une autre superbe Duchess : Audrey Neveu.",
+      "ENGLISH": "Voici l'interview d'Aline Paponaud qui animera \u00e0 MiXiT un th\u00e9$atre d'impro pour apprendre \u00e0 \u00eatre agile! Aline \u00e9tait \u00e9galement \u00e0 Devoxx France pour un atelier pour les enfants avec programatoo, co-anim\u00e9 avec une autre superbe Duchess : Audrey Neveu."
+    },
+    "content": null,
+    "id": "28",
+    "slug": {
+      "FRENCH": "theatre-d-impro-pour-jouer-a-etre-agile-avec-aline",
+      "ENGLISH": "theatre-d-impro-pour-jouer-a-etre-agile-avec-aline"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Agn\u00e8s",
+      "lastname": "Crepet",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder",
+        "ENGLISH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      4,
+      25,
+      10,
+      4,
+      59
+    ],
+    "title": {
+      "FRENCH": "Bodil Stokke & Painless Web App Development",
+      "ENGLISH": "Bodil Stokke & Painless Web App Development"
+    },
+    "headline": {
+      "FRENCH": "Continuing our interview series, the MiXiT team asked some questions to Bodil Stokke who will do a talk about how to do Painless client side JavaScript Development .",
+      "ENGLISH": "Continuing our interview series, the MiXiT team asked some questions to Bodil Stokke who will do a talk about how to do Painless client side JavaScript Development ."
+    },
+    "content": null,
+    "id": "27",
+    "slug": {
+      "FRENCH": "bodil-stokke---painless-web-app-development",
+      "ENGLISH": "bodil-stokke---painless-web-app-development"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Cyril",
+      "lastname": "Lacote",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+        "ENGLISH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      4,
+      24,
+      11,
+      38,
+      51
+    ],
+    "title": {
+      "FRENCH": "Un calendrier Google pour MiXiT",
+      "ENGLISH": "Un calendrier Google pour MiXiT"
+    },
+    "headline": {
+      "FRENCH": "Vous aimeriez tout planifier dans votre smartphone?",
+      "ENGLISH": "Vous aimeriez tout planifier dans votre smartphone?"
+    },
+    "content": null,
+    "id": "26",
+    "slug": {
+      "FRENCH": "un-calendrier-google-pour-mixit",
+      "ENGLISH": "un-calendrier-google-pour-mixit"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Franck",
+      "lastname": "Depierre",
+      "email": "",
+      "company": "Stormshield",
+      "description": {
+        "FRENCH": "Passionate about learning, enjoy collaboration and love building products.",
+        "ENGLISH": "Passionate about learning, enjoy collaboration and love building products."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      4,
+      24,
+      11,
+      20,
+      43
+    ],
+    "title": {
+      "FRENCH": "MiXiT 2012 : votre journ\u00e9e",
+      "ENGLISH": "MiXiT 2012 : votre journ\u00e9e"
+    },
+    "headline": {
+      "FRENCH": "Quelques informations sur l'organisation de votre journ\u00e9e",
+      "ENGLISH": "Quelques informations sur l'organisation de votre journ\u00e9e"
+    },
+    "content": null,
+    "id": "23",
+    "slug": {
+      "FRENCH": "mixit-2012---votre-journee",
+      "ENGLISH": "mixit-2012---votre-journee"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Agn\u00e8s",
+      "lastname": "Crepet",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder",
+        "ENGLISH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      4,
+      24,
+      9,
+      5
+    ],
+    "title": {
+      "FRENCH": "Encounter with Pamela Fox, MiXiT keynote speaker",
+      "ENGLISH": "Encounter with Pamela Fox, MiXiT keynote speaker"
+    },
+    "headline": {
+      "FRENCH": "Continuing our interview series, the MiXiT team asked some questions to Pamela Fox who will be our final keynote speaker and who will do a talk about PhoneGap.",
+      "ENGLISH": "Continuing our interview series, the MiXiT team asked some questions to Pamela Fox who will be our final keynote speaker and who will do a talk about PhoneGap."
+    },
+    "content": null,
+    "id": "24",
+    "slug": {
+      "FRENCH": "encounter-with-pamela-fox--mixit-keynote-speaker",
+      "ENGLISH": "encounter-with-pamela-fox--mixit-keynote-speaker"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Agn\u00e8s",
+      "lastname": "Crepet",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder",
+        "ENGLISH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      4,
+      23,
+      12,
+      8
+    ],
+    "title": {
+      "FRENCH": "Tests d'applications web par Mathilde Lem\u00e9e",
+      "ENGLISH": "Tests d'applications web par Mathilde Lem\u00e9e"
+    },
+    "headline": {
+      "FRENCH": "Cette interview est consacr\u00e9e \u00e0 Mathilde Lem\u00e9e. Elle a, \u00e0 Devoxx France, anim\u00e9 un hackergarten et pr\u00e9sent\u00e9 un talk \u00e9galement sur les tests d'applications web avec WebDriver, TestNG et Selenium Grid qu'elle nous fera le plaisir de pr\u00e9senter \u00e0 MiXiT.",
+      "ENGLISH": "Cette interview est consacr\u00e9e \u00e0 Mathilde Lem\u00e9e. Elle a, \u00e0 Devoxx France, anim\u00e9 un hackergarten et pr\u00e9sent\u00e9 un talk \u00e9galement sur les tests d'applications web avec WebDriver, TestNG et Selenium Grid qu'elle nous fera le plaisir de pr\u00e9senter \u00e0 MiXiT."
+    },
+    "content": null,
+    "id": "25",
+    "slug": {
+      "FRENCH": "tests-d-applications-web-par-mathilde-lemee",
+      "ENGLISH": "tests-d-applications-web-par-mathilde-lemee"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Romain",
+      "lastname": "Couturier",
+      "email": "",
+      "company": "Terre d'Agile",
+      "description": {
+        "FRENCH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)",
+        "ENGLISH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      4,
+      20,
+      13,
+      34,
+      54
+    ],
+    "title": {
+      "FRENCH": "Rencontre UX avec Sophie Freiermuth",
+      "ENGLISH": "Rencontre UX avec Sophie Freiermuth"
+    },
+    "headline": {
+      "FRENCH": "L'UX, tout le monde en a une d\u00e9finition et pourtant peu de gens savent en faire. Pourquoi ? Tout simplement parce qu'il s'agit d'une discipline \u00e0 part enti\u00e8re, un vrai m\u00e9tier dont Sophie Freiermuth va nous livrer quelques secrets.",
+      "ENGLISH": "L'UX, tout le monde en a une d\u00e9finition et pourtant peu de gens savent en faire. Pourquoi ? Tout simplement parce qu'il s'agit d'une discipline \u00e0 part enti\u00e8re, un vrai m\u00e9tier dont Sophie Freiermuth va nous livrer quelques secrets."
+    },
+    "content": null,
+    "id": "16",
+    "slug": {
+      "FRENCH": "rencontre-ux-avec-sophie-freiermuth",
+      "ENGLISH": "rencontre-ux-avec-sophie-freiermuth"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Agn\u00e8s",
+      "lastname": "Crepet",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder",
+        "ENGLISH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      4,
+      19,
+      11,
+      44,
+      23
+    ],
+    "title": {
+      "FRENCH": "Messaging & Social Architecture by Pieter Hintjens",
+      "ENGLISH": "Messaging & Social Architecture by Pieter Hintjens"
+    },
+    "headline": {
+      "FRENCH": "Pieter Hintjens has many strings to his bow. He's active in open standards development (author of Advanced Message Queuing Protocol : AMQP), co-founder of ZeroMQ, a topic of one of his MiXiT talks. And he will speak about Social Architecture too!",
+      "ENGLISH": "Pieter Hintjens has many strings to his bow. He's active in open standards development (author of Advanced Message Queuing Protocol : AMQP), co-founder of ZeroMQ, a topic of one of his MiXiT talks. And he will speak about Social Architecture too!"
+    },
+    "content": null,
+    "id": "21",
+    "slug": {
+      "FRENCH": "messaging---social-architecture-by-pieter-hintjens",
+      "ENGLISH": "messaging---social-architecture-by-pieter-hintjens"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Romain",
+      "lastname": "Couturier",
+      "email": "",
+      "company": "Terre d'Agile",
+      "description": {
+        "FRENCH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)",
+        "ENGLISH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      4,
+      18,
+      10,
+      42,
+      39
+    ],
+    "title": {
+      "FRENCH": "Rencontre avec Gilles Mantel, test, test, test",
+      "ENGLISH": "Rencontre avec Gilles Mantel, test, test, test"
+    },
+    "headline": {
+      "FRENCH": "Souvent parent pauvre des projets, les tests sont pourtant une n\u00e9cessit\u00e9 pour tous qu'on soit agile ... ou pas. Gilles Mantel nous explique pourquoi",
+      "ENGLISH": "Souvent parent pauvre des projets, les tests sont pourtant une n\u00e9cessit\u00e9 pour tous qu'on soit agile ... ou pas. Gilles Mantel nous explique pourquoi"
+    },
+    "content": null,
+    "id": "17",
+    "slug": {
+      "FRENCH": "rencontre-avec-gilles-mantel--test--test--test",
+      "ENGLISH": "rencontre-avec-gilles-mantel--test--test--test"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Agn\u00e8s",
+      "lastname": "Crepet",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder",
+        "ENGLISH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      4,
+      18,
+      8,
+      54,
+      19
+    ],
+    "title": {
+      "FRENCH": "Googler Petra Cross will be @DevoxxFr & @MiXiT",
+      "ENGLISH": "Googler Petra Cross will be @DevoxxFr & @MiXiT"
+    },
+    "headline": {
+      "FRENCH": "Continuing our interview series, the MiXiT team asked some questions at Petra Cross who will be at Devoxx France and MiXiT.",
+      "ENGLISH": "Continuing our interview series, the MiXiT team asked some questions at Petra Cross who will be at Devoxx France and MiXiT."
+    },
+    "content": null,
+    "id": "22",
+    "slug": {
+      "FRENCH": "googler-petra-cross-will-be--devoxxfr----mixit",
+      "ENGLISH": "googler-petra-cross-will-be--devoxxfr----mixit"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Romain",
+      "lastname": "Couturier",
+      "email": "",
+      "company": "Terre d'Agile",
+      "description": {
+        "FRENCH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)",
+        "ENGLISH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      4,
+      13,
+      16,
+      8,
+      50
+    ],
+    "title": {
+      "FRENCH": "Rencontre avec le coach Jean-Claude Grosjean",
+      "ENGLISH": "Rencontre avec le coach Jean-Claude Grosjean"
+    },
+    "headline": {
+      "FRENCH": "Le management n'appara\u00eet ni dans le manifeste agile ni dans les m\u00e9thodes les plus connues comme Scrum, XP ou Kanban. On ne peut pourtant pas occulter cette fonction essentielle de l'entreprise ... qui a aussi sa place dans une \u00e9quipe agile.",
+      "ENGLISH": "Le management n'appara\u00eet ni dans le manifeste agile ni dans les m\u00e9thodes les plus connues comme Scrum, XP ou Kanban. On ne peut pourtant pas occulter cette fonction essentielle de l'entreprise ... qui a aussi sa place dans une \u00e9quipe agile."
+    },
+    "content": null,
+    "id": "19",
+    "slug": {
+      "FRENCH": "rencontre-avec-le-coach-jean-claude-grosjean",
+      "ENGLISH": "rencontre-avec-le-coach-jean-claude-grosjean"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Romain",
+      "lastname": "Couturier",
+      "email": "",
+      "company": "Terre d'Agile",
+      "description": {
+        "FRENCH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)",
+        "ENGLISH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      4,
+      12,
+      14,
+      13,
+      3
+    ],
+    "title": {
+      "FRENCH": "Interview d'Alexis Monville",
+      "ENGLISH": "Interview d'Alexis Monville"
+    },
+    "headline": {
+      "FRENCH": "Alexis Monville animera \"Exp\u00e9rience des billes rouges\", rencontre sur le th\u00e8me du management",
+      "ENGLISH": "Alexis Monville animera \"Exp\u00e9rience des billes rouges\", rencontre sur le th\u00e8me du management"
+    },
+    "content": null,
+    "id": "15",
+    "slug": {
+      "FRENCH": "interview-d-alexis-monville",
+      "ENGLISH": "interview-d-alexis-monville"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Romain",
+      "lastname": "Couturier",
+      "email": "",
+      "company": "Terre d'Agile",
+      "description": {
+        "FRENCH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)",
+        "ENGLISH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      4,
+      11,
+      13,
+      2,
+      27
+    ],
+    "title": {
+      "FRENCH": "Echange avec Emmanuel Levi-Valensi : Lean startup",
+      "ENGLISH": "Echange avec Emmanuel Levi-Valensi : Lean startup"
+    },
+    "headline": {
+      "FRENCH": "Un nouveau terme \"Lean Startup\" vient d'apparaitre. Loin du buzz, cette nouvelle m\u00e9thode s'av\u00e8re tr\u00e8s puissante pour la conception et l'\u00e9mergence de nouveaux produits. Kesako ? R\u00e9ponses avec Emmanuel qui nous dira tout sur ce sujet qui va faire du bruit.",
+      "ENGLISH": "Un nouveau terme \"Lean Startup\" vient d'apparaitre. Loin du buzz, cette nouvelle m\u00e9thode s'av\u00e8re tr\u00e8s puissante pour la conception et l'\u00e9mergence de nouveaux produits. Kesako ? R\u00e9ponses avec Emmanuel qui nous dira tout sur ce sujet qui va faire du bruit."
+    },
+    "content": null,
+    "id": "18",
+    "slug": {
+      "FRENCH": "echange-avec-emmanuel-levi-valensi---lean-startup",
+      "ENGLISH": "echange-avec-emmanuel-levi-valensi---lean-startup"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Romain",
+      "lastname": "Couturier",
+      "email": "",
+      "company": "Terre d'Agile",
+      "description": {
+        "FRENCH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)",
+        "ENGLISH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      4,
+      11,
+      9,
+      58,
+      59
+    ],
+    "title": {
+      "FRENCH": "Interview de la Skyteam !",
+      "ENGLISH": "Interview de la Skyteam !"
+    },
+    "headline": {
+      "FRENCH": "La Skyteam ce sont Antoine Vernois, Fabrice Aimetti et Antoine Launay qui viendront pr\u00e9senter leur cr\u00e9ation originale \"Sky Castle Game\"",
+      "ENGLISH": "La Skyteam ce sont Antoine Vernois, Fabrice Aimetti et Antoine Launay qui viendront pr\u00e9senter leur cr\u00e9ation originale \"Sky Castle Game\""
+    },
+    "content": null,
+    "id": "14",
+    "slug": {
+      "FRENCH": "interview-de-la-skyteam--",
+      "ENGLISH": "interview-de-la-skyteam--"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Romain",
+      "lastname": "Couturier",
+      "email": "",
+      "company": "Terre d'Agile",
+      "description": {
+        "FRENCH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)",
+        "ENGLISH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      4,
+      10,
+      8,
+      30,
+      28
+    ],
+    "title": {
+      "FRENCH": "Rencontre avec Pablo Pernot, coach agile",
+      "ENGLISH": "Rencontre avec Pablo Pernot, coach agile"
+    },
+    "headline": {
+      "FRENCH": "Nous nous sommes entretenus avec Pablo Pernot qui animera la session \"Anatomie d'une mission agile, saison 2\"",
+      "ENGLISH": "Nous nous sommes entretenus avec Pablo Pernot qui animera la session \"Anatomie d'une mission agile, saison 2\""
+    },
+    "content": null,
+    "id": "13",
+    "slug": {
+      "FRENCH": "rencontre-avec-pablo-pernot--coach-agile",
+      "ENGLISH": "rencontre-avec-pablo-pernot--coach-agile"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Agn\u00e8s",
+      "lastname": "Crepet",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder",
+        "ENGLISH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      4,
+      5,
+      12,
+      43,
+      44
+    ],
+    "title": {
+      "FRENCH": "Rencontre avec la coach agile Oana Juncu",
+      "ENGLISH": "Rencontre avec la coach agile Oana Juncu"
+    },
+    "headline": {
+      "FRENCH": "Oana Juncu animera la session \"Le DotGame, jouer la performance\". Nous lui avons pos\u00e9 quelques questions pour vous donner envie d'assister \u00e0 son talk",
+      "ENGLISH": "Oana Juncu animera la session \"Le DotGame, jouer la performance\". Nous lui avons pos\u00e9 quelques questions pour vous donner envie d'assister \u00e0 son talk"
+    },
+    "content": null,
+    "id": "12",
+    "slug": {
+      "FRENCH": "rencontre-avec-la-coach-agile-oana-juncu",
+      "ENGLISH": "rencontre-avec-la-coach-agile-oana-juncu"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "C\u00e9dric",
+      "lastname": "Exbrayat",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "Fondateur du JUG, de MiXiT et de [Ninja Squad](http:\/\/ninja-squad.fr) et bloggeur [hype](http:\/\/hypedrivendev.wordpress.com)\n\n\n\n\n",
+        "ENGLISH": "Fondateur du JUG, de MiXiT et de [Ninja Squad](http:\/\/ninja-squad.fr) et bloggeur [hype](http:\/\/hypedrivendev.wordpress.com)\n\n\n\n\n"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      3,
+      29,
+      11,
+      51,
+      31
+    ],
+    "title": {
+      "FRENCH": "Google sponsor Gold, les sessions annonc\u00e9es!",
+      "ENGLISH": "Google sponsor Gold, les sessions annonc\u00e9es!"
+    },
+    "headline": {
+      "FRENCH": "Notre dernier sponsor est r\u00e9v\u00e9l\u00e9 : ce sera Google qui devient notre partenaire Gold! Les sessions ont \u00e9galement toutes \u00e9t\u00e9 annonc\u00e9es.",
+      "ENGLISH": "Notre dernier sponsor est r\u00e9v\u00e9l\u00e9 : ce sera Google qui devient notre partenaire Gold! Les sessions ont \u00e9galement toutes \u00e9t\u00e9 annonc\u00e9es."
+    },
+    "content": null,
+    "id": "11",
+    "slug": {
+      "FRENCH": "google-sponsor-gold--les-sessions-annoncees-",
+      "ENGLISH": "google-sponsor-gold--les-sessions-annoncees-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Romain",
+      "lastname": "Couturier",
+      "email": "",
+      "company": "Terre d'Agile",
+      "description": {
+        "FRENCH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)",
+        "ENGLISH": "Prenez une \u00e9quipe, un projet, quelques bonnes pratiques, et saupoudrez d'agilit\u00e9 (sans mod\u00e9ration)"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      3,
+      20,
+      12,
+      21,
+      31
+    ],
+    "title": {
+      "FRENCH": "Qu\u2019est-ce qu\u2019un Lightning talk \u00e0 MiXiT ?",
+      "ENGLISH": "Qu\u2019est-ce qu\u2019un Lightning talk \u00e0 MiXiT ?"
+    },
+    "headline": {
+      "FRENCH": "Quelle est sa dur\u00e9e ? Qui passe ? Quand ? Ce nouveau format de sessions ultra-courtes vous surprendra par son dynamisme et la vari\u00e9t\u00e9 du programme. Dans cet article on vous dit tout sur cette nouveaut\u00e9 de MiXiT 2012.",
+      "ENGLISH": "Quelle est sa dur\u00e9e ? Qui passe ? Quand ? Ce nouveau format de sessions ultra-courtes vous surprendra par son dynamisme et la vari\u00e9t\u00e9 du programme. Dans cet article on vous dit tout sur cette nouveaut\u00e9 de MiXiT 2012."
+    },
+    "content": null,
+    "id": "10",
+    "slug": {
+      "FRENCH": "qu-est-ce-qu-un-lightning-talk-a-mixit--",
+      "ENGLISH": "qu-est-ce-qu-un-lightning-talk-a-mixit--"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Nicolas",
+      "lastname": "Pelloux-prayer",
+      "email": "",
+      "company": "",
+      "description": {
+        "FRENCH": "MiXiT CoFounder - software craftman ",
+        "ENGLISH": "MiXiT CoFounder - software craftman "
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      3,
+      15,
+      10,
+      32,
+      43
+    ],
+    "title": {
+      "FRENCH": "Call for paper MiXiT: sa vie, son oeuvre.",
+      "ENGLISH": "Call for paper MiXiT: sa vie, son oeuvre."
+    },
+    "headline": {
+      "FRENCH": "Comment l'\u00e9quipe MiXiT choisit-elle les sessions de son programme?",
+      "ENGLISH": "Comment l'\u00e9quipe MiXiT choisit-elle les sessions de son programme?"
+    },
+    "content": null,
+    "id": "9",
+    "slug": {
+      "FRENCH": "call-for-paper-mixit--sa-vie--son-oeuvre-",
+      "ENGLISH": "call-for-paper-mixit--sa-vie--son-oeuvre-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Cyril",
+      "lastname": "Lacote",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+        "ENGLISH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      3,
+      7,
+      8,
+      48,
+      17
+    ],
+    "title": {
+      "FRENCH": "Nouvelle fonctionnalit\u00e9 : sessions favorites",
+      "ENGLISH": "Nouvelle fonctionnalit\u00e9 : sessions favorites"
+    },
+    "headline": {
+      "FRENCH": "Vous avez terriblement envie d'assister \u00e0 cette session qui a l'air incroyable : marquez-la comme favorite!",
+      "ENGLISH": "Vous avez terriblement envie d'assister \u00e0 cette session qui a l'air incroyable : marquez-la comme favorite!"
+    },
+    "content": null,
+    "id": "8",
+    "slug": {
+      "FRENCH": "nouvelle-fonctionnalite---sessions-favorites",
+      "ENGLISH": "nouvelle-fonctionnalite---sessions-favorites"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "C\u00e9dric",
+      "lastname": "Exbrayat",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "Fondateur du JUG, de MiXiT et de [Ninja Squad](http:\/\/ninja-squad.fr) et bloggeur [hype](http:\/\/hypedrivendev.wordpress.com)\n\n\n\n\n",
+        "ENGLISH": "Fondateur du JUG, de MiXiT et de [Ninja Squad](http:\/\/ninja-squad.fr) et bloggeur [hype](http:\/\/hypedrivendev.wordpress.com)\n\n\n\n\n"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      3,
+      5,
+      10,
+      18,
+      1
+    ],
+    "title": {
+      "FRENCH": "Ouverture des inscriptions!",
+      "ENGLISH": "Ouverture des inscriptions!"
+    },
+    "headline": {
+      "FRENCH": "Vous pouvez acheter votre billet! Soyez rapides car il n'y en aura pas pour tout le monde! ",
+      "ENGLISH": "Vous pouvez acheter votre billet! Soyez rapides car il n'y en aura pas pour tout le monde! "
+    },
+    "content": null,
+    "id": "7",
+    "slug": {
+      "FRENCH": "ouverture-des-inscriptions-",
+      "ENGLISH": "ouverture-des-inscriptions-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "C\u00e9dric",
+      "lastname": "Exbrayat",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "Fondateur du JUG, de MiXiT et de [Ninja Squad](http:\/\/ninja-squad.fr) et bloggeur [hype](http:\/\/hypedrivendev.wordpress.com)\n\n\n\n\n",
+        "ENGLISH": "Fondateur du JUG, de MiXiT et de [Ninja Squad](http:\/\/ninja-squad.fr) et bloggeur [hype](http:\/\/hypedrivendev.wordpress.com)\n\n\n\n\n"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      2,
+      15,
+      14,
+      1,
+      39
+    ],
+    "title": {
+      "FRENCH": "Pourquoi ce site ?",
+      "ENGLISH": "Pourquoi ce site ?"
+    },
+    "headline": {
+      "FRENCH": "Le site de mix-it est un peu plus qu'un simple site de renseignement et inscription. Ce petit article vous expose les fonctionnalit\u00e9s disponibles et les raisons de sa cr\u00e9ation.",
+      "ENGLISH": "Le site de mix-it est un peu plus qu'un simple site de renseignement et inscription. Ce petit article vous expose les fonctionnalit\u00e9s disponibles et les raisons de sa cr\u00e9ation."
+    },
+    "content": null,
+    "id": "6",
+    "slug": {
+      "FRENCH": "pourquoi-ce-site--",
+      "ENGLISH": "pourquoi-ce-site--"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Cyril",
+      "lastname": "Lacote",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+        "ENGLISH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      2,
+      13,
+      6,
+      0,
+      11
+    ],
+    "title": {
+      "FRENCH": "Mise \u00e0 jour du site : suggestions, notifications",
+      "ENGLISH": "Mise \u00e0 jour du site : suggestions, notifications"
+    },
+    "headline": {
+      "FRENCH": "On continue les am\u00e9liorations : des suggestions plus pertinentes ; vous pouvez \u00eatre notifi\u00e9 par mail des activit\u00e9s importantes ; et d'autres am\u00e9liorations...",
+      "ENGLISH": "On continue les am\u00e9liorations : des suggestions plus pertinentes ; vous pouvez \u00eatre notifi\u00e9 par mail des activit\u00e9s importantes ; et d'autres am\u00e9liorations..."
+    },
+    "content": null,
+    "id": "5",
+    "slug": {
+      "FRENCH": "mise-a-jour-du-site---suggestions--notifications",
+      "ENGLISH": "mise-a-jour-du-site---suggestions--notifications"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Cyril",
+      "lastname": "Lacote",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+        "ENGLISH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      2,
+      8,
+      8,
+      37,
+      58
+    ],
+    "title": {
+      "FRENCH": "Mise \u00e0 jour du site : activit\u00e9s plus pertinentes",
+      "ENGLISH": "Mise \u00e0 jour du site : activit\u00e9s plus pertinentes"
+    },
+    "headline": {
+      "FRENCH": "A la demande g\u00e9n\u00e9rale, les activit\u00e9s de consultation disparaissent.",
+      "ENGLISH": "A la demande g\u00e9n\u00e9rale, les activit\u00e9s de consultation disparaissent."
+    },
+    "content": null,
+    "id": "4",
+    "slug": {
+      "FRENCH": "mise-a-jour-du-site---activites-plus-pertinentes",
+      "ENGLISH": "mise-a-jour-du-site---activites-plus-pertinentes"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Agn\u00e8s",
+      "lastname": "Crepet",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder",
+        "ENGLISH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      2,
+      6,
+      9,
+      41,
+      32
+    ],
+    "title": {
+      "FRENCH": "Vous pouvez maintenant vous inscrire!",
+      "ENGLISH": "Vous pouvez maintenant vous inscrire!"
+    },
+    "headline": {
+      "FRENCH": "Apr\u00e8s un petit bug sur la connexion (corrig\u00e9 en mode agile!) c'est tout bon : vous pouvez vous ouvrir un compte MiXiT!",
+      "ENGLISH": "Apr\u00e8s un petit bug sur la connexion (corrig\u00e9 en mode agile!) c'est tout bon : vous pouvez vous ouvrir un compte MiXiT!"
+    },
+    "content": null,
+    "id": "3",
+    "slug": {
+      "FRENCH": "vous-pouvez-maintenant-vous-inscrire-",
+      "ENGLISH": "vous-pouvez-maintenant-vous-inscrire-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Cyril",
+      "lastname": "Lacote",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit.",
+        "ENGLISH": "D\u00e9veloppeur chez [Ninja Squad](http:\/\/ninja-squad.fr) le jour (et CEO, bitch!), co-organisateur de MiXiT la nuit."
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2012,
+      1,
+      31,
+      12,
+      43,
+      39
+    ],
+    "title": {
+      "FRENCH": "Le site MiXiT 2012 est en ligne!",
+      "ENGLISH": "Le site MiXiT 2012 est en ligne!"
+    },
+    "headline": {
+      "FRENCH": "Enfin... Apr\u00e8s des heures de travail, nous sommes heureux de vous faire tester notre site MiXiT 2012!",
+      "ENGLISH": "Enfin... Apr\u00e8s des heures de travail, nous sommes heureux de vous faire tester notre site MiXiT 2012!"
+    },
+    "content": null,
+    "id": "2",
+    "slug": {
+      "FRENCH": "le-site-mixit-2012-est-en-ligne-",
+      "ENGLISH": "le-site-mixit-2012-est-en-ligne-"
+    }
+  },
+  {
+    "author": {
+      "login": "0",
+      "firstname": "Agn\u00e8s",
+      "lastname": "Crepet",
+      "email": "",
+      "company": "Ninja Squad",
+      "description": {
+        "FRENCH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder",
+        "ENGLISH": "[Ninja Squad](http:\/\/ninja-squad.fr) Co-founder\n- JUG Leader : [Lyon JUG](http:\/\/www.lyonjug.org) & Duchess France - MiXiT Co-founder"
+      },
+      "logoUrl": null,
+      "events": [
+
+      ],
+      "role": "ATTENDEE",
+      "links": [
+
+      ],
+      "legacyId": 0
+    },
+    "addedAt": [
+      2011,
+      11,
+      25,
+      0,
+      0
+    ],
+    "title": {
+      "FRENCH": "MiXiT 2012!",
+      "ENGLISH": "MiXiT 2012!"
+    },
+    "headline": {
+      "FRENCH": "MiXiT seconde \u00e9dition est annonc\u00e9e pour le 26 avril 2012",
+      "ENGLISH": "MiXiT seconde \u00e9dition est annonc\u00e9e pour le 26 avril 2012"
+    },
+    "content": null,
+    "id": "1",
+    "slug": {
+      "FRENCH": "mixit-2012-",
+      "ENGLISH": "mixit-2012-"
+    }
+  }
+]

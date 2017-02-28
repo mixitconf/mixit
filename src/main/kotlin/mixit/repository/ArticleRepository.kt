@@ -2,7 +2,6 @@ package mixit.repository
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import mixit.data.dto.ArticleDataDto
 import mixit.model.Article
 import mixit.model.Language
 import org.springframework.core.io.ClassPathResource
@@ -24,13 +23,10 @@ class ArticleRepository(val template: ReactiveMongoTemplate) {
 
     fun initData() {
         val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
-
         deleteAll().block()
-
-        val articleResource = ClassPathResource("data/article_mixit.json")
-        val articles: List<ArticleDataDto> = objectMapper.readValue(articleResource.inputStream)
-        articles.map(ArticleDataDto::toArticle)
-                .forEach { article -> save(article).block() }
+        val articlesResource = ClassPathResource("data/articles.json")
+        val articles: List<Article> = objectMapper.readValue(articlesResource.inputStream)
+        articles.forEach { save(it).block() }
     }
 
     fun findOne(id: String) = template.findById(id, Article::class)

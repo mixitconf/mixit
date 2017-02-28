@@ -2,7 +2,6 @@ package mixit.repository
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import mixit.data.dto.MemberDataDto
 import mixit.model.Role
 import mixit.model.User
 import org.springframework.core.io.ClassPathResource
@@ -20,39 +19,10 @@ class UserRepository(val template: ReactiveMongoTemplate) {
 
     fun initData() {
         val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
-
         deleteAll().block()
-
-        val years = listOf(12, 13, 14, 15, 16)
-        years.forEach { year ->
-            val speakerResource = ClassPathResource("data/speaker/speaker_mixit$year.json")
-            val speakers: List<MemberDataDto> = objectMapper.readValue(speakerResource.inputStream)
-            speakers.map { it.toUser(listOf("mixit$year"), Role.SPEAKER) }
-                    .forEach { save(it).block() }
-        }
-
-        val staffResource = ClassPathResource("data/staff_mixit.json")
-        val staffs: List<MemberDataDto> = objectMapper.readValue(staffResource.inputStream)
-        staffs.map { it.toUser(role = Role.STAFF) }
-              .forEach { save(it).block() }
-
-        years.forEach { year ->
-            val sponsorResource = ClassPathResource("data/sponsor/sponsor_mixit$year.json")
-            val sponsors: List<MemberDataDto> = objectMapper.readValue(sponsorResource.inputStream)
-            sponsors.map { it.toUser(role = Role.SPONSOR) }
-                    .forEach { save(it).block() }
-        }
-
-        val userResource = ClassPathResource("data/users_mixit.json")
-        val users: List<MemberDataDto> = objectMapper.readValue(userResource.inputStream)
-
-        users.map { it.toUser(role = Role.ATTENDEE) }
-                .forEach {
-                    if (findByLegacyId(it.legacyId!!).block() == null && findOne(it.login).block() == null) {
-                        save(it).block()
-                    }
-                }
-
+        val usersResource = ClassPathResource("data/users.json")
+        val users: List<User> = objectMapper.readValue(usersResource.inputStream)
+        users.forEach { save(it).block() }
     }
 
     fun findByYear(year: Int): Flux<User> {

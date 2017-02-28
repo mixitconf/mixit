@@ -1,0 +1,3942 @@
+[
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            695000000
+        ],
+        "description": "Laissez mijoter l'intelligence collective des acteurs d'un projet devant un immense tableau blanc, pour \u00e9changer et d\u00e9crire les \u00e9v\u00e8nements pouvant \u00eatre produit dans le syst\u00e8me. Le r\u00e9sultat est un mod\u00e8le, absorbant des commandes et g\u00e9n\u00e9rant des \u00e9v\u00e8nements pour communiquer ses d\u00e9cisions. Vous verrez ainsi avec quelle rapidit\u00e9, la compr\u00e9hension globale du m\u00e9tier augmente. \n\nEt si vous voulez mettre les main dans le code, essayez notre workshop CQRS et Event Sourcing (https://github.com/DevLyon/mixter), vous verrez comment impl\u00e9menter un design orient\u00e9 \u00e9v\u00e8nement le plus simplement possible !",
+        "end": [
+            2016,
+            4,
+            21,
+            15,
+            40
+        ],
+        "event": "mixit16",
+        "format": "WORKSHOP",
+        "id": "2692",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "florent-pellet-clement-bouillier-emilien-pecoul-jean-helou-event-storming---comprendre-le-metier-autrement",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Florent",
+                "lastname": "Pellet",
+                "legacyId": 5262,
+                "links": [],
+                "login": "5262",
+                "logoUrl": "33dccded6958d1dd29336c63c1fd0624",
+                "role": "ATTENDEE"
+            },
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Cl\u00e9ment",
+                "lastname": "Bouillier",
+                "legacyId": 701,
+                "links": [],
+                "login": "701",
+                "logoUrl": "e187f8ea0d791446c5055882f0c597ee",
+                "role": "ATTENDEE"
+            },
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Emilien",
+                "lastname": "Pecoul",
+                "legacyId": 704,
+                "links": [],
+                "login": "704",
+                "logoUrl": "569a344428936ce3b601ee3c12d8a100",
+                "role": "ATTENDEE"
+            },
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Jean",
+                "lastname": "Helou",
+                "legacyId": 389,
+                "links": [],
+                "login": "389",
+                "logoUrl": "75da740d43c5780539214f24ce1148a6",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            13,
+            50
+        ],
+        "summary": "Il n\u2019est jamais simple de mod\u00e9liser efficacement un syst\u00e8me. Nous proposons pour y parvenir de supprimer tout vocabulaire technique et de se mettre d'accord sur un langage commun \u00e0 l'\u00e9quipe et sp\u00e9cifique au projet.",
+        "title": "Event Storming : comprendre le m\u00e9tier autrement",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            695000000
+        ],
+        "description": "Ca y est, nous sommes agiles. A-G-I-L-E-S!\nLes d\u00e9veloppeurs au pouvoir! \nLes post-its envahissent les murs, tout le monde sprinte, les stand-up meetings sont ex\u00e9cut\u00e9s religieusement.\nLes \u00e9quipes sont motiv\u00e9es, tout du moins au d\u00e9but, mais au fur et \u00e0 mesure les doutes s'installent.\nMes tentatives pour prodiguer des conseils sont re\u00e7ues avec des lev\u00e9es d'yeux au ciel.\nLes projets prennent du retard, les commerciaux s'affolent, les clients regardent cette agitation avec un oeil d'abord amus\u00e9, puis hagard.\nQue se passe-t-il?\nPetit tour d'horizon sur la mise en place de l'agilit\u00e9, m\u00ealant r\u00e9alit\u00e9 et fiction, sans que l'on sache laquelle d\u00e9passe l'autre. Avec une pinc\u00e9e de philosophie matin\u00e9e de mauvaise foi manifeste et d'auto-d\u00e9rision (\u00e0 partager sans mod\u00e9ration).",
+        "end": [
+            2016,
+            4,
+            22,
+            12,
+            50
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "2702",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "gregory-estrade-la-delicate-agilite-du-mammouth",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Gregory",
+                "lastname": "Estrade",
+                "legacyId": 5442,
+                "links": [],
+                "login": "5442",
+                "logoUrl": "139cef776cb4aaa6d385b7dbeb014fcc",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            12,
+            0
+        ],
+        "summary": "Retour d'exp\u00e9rience sur la mise en place de l'agilit\u00e9. Avec des morceaux d'UX dedans.",
+        "title": "La d\u00e9licate agilit\u00e9 du mammouth",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            696000000
+        ],
+        "description": "Que se passe-t-il exactement lorsque vous tapez une URL, jusqu'\u00e0 ce que vous voyez le contenu d'une page Web? Il y a un processus bien d\u00e9fini d'actions que le navigateur fait en interne, comme la construction du DOM, \"render trees\" et l'op\u00e9ration de \"paint\". Le rendu d'une page Web n'est pas qu'une seule action faite par le navigateur, mais un ensemble de petites op\u00e9rations et r\u00e9actions \u00e0 des interactions. Jetez un oeil sous le capot et vous serez surpris par la quantit\u00e9 de choses faites pendant quelques millisecondes. \n\nEn tant que designer ou d\u00e9veloppeur Web, comprendre comment fonctionne un navigateur nous aide \u00e0 prendre de meilleures d\u00e9cisions et \u00e0 comprendre certaines bonnes pratiques de d\u00e9veloppement front pour un Web plus efficace.",
+        "end": [
+            2016,
+            4,
+            22,
+            15,
+            10
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "2712",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "mehdi-lahmam-comment-un-navigateur-affiche-une-page-web-",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Mehdi",
+                "lastname": "Lahmam",
+                "legacyId": 5152,
+                "links": [],
+                "login": "5152",
+                "logoUrl": "c9709e47baec733197975e8fe5abea82",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            14,
+            20
+        ],
+        "summary": "On soul\u00e8ve le capot d'un moteur de rendu Web (WebKit) pour comprendre le processus de rendu d'une page Web avec des exemples \"profil\u00e9s\" avec les Chrome DevTools.",
+        "title": "Comment un navigateur affiche une page Web.",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            696000000
+        ],
+        "description": "The world doesn\u2019t need another software development methodology - there are plenty already!  But each team needs to learn and create their own. Xanpan is Allan Kelly's very own hybrid development approach, a mix of Kanban and Extreme Programming, bit more Lean thrown in, seasoned with economics and refined over many teams. Xanpan demonstrates how elements of XP and Kanban can be combined and used as an effective development approach.\n\nThe resulting focuses on teams not projects, allows for planned and unplanned work within iterations and levels flow.  One team using this approach claims to be able to deliver \"to the day.\"\n\nXanpan started life simply as adding flow thinking to XP and experimenting.  Now it has principles and practices, some of its own but most of which are rooted in Kanban and XP.  This presentation will describe the principles and describe the key practices.  It will look at how and why these practices support the principles. \n\n\"Xanpan - team centric Agile Software Development\" is available fro LeanPub.com and Amazon.",
+        "end": [
+            2016,
+            4,
+            22,
+            8,
+            40
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "2722",
+        "language": "ENGLISH",
+        "room": "UNKNOWN",
+        "slug": "allan-kelly-xanpan",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Allan",
+                "lastname": "Kelly",
+                "legacyId": 5462,
+                "links": [],
+                "login": "5462",
+                "logoUrl": "bad01fc49be5270e189eed1a25f37f62",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            7,
+            50
+        ],
+        "summary": "Q: What do you get if you cross Kanban and Extreme Programming? \nA: Xanpan!",
+        "title": "Xanpan",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            696000000
+        ],
+        "description": "#Abstract\n\n##Description\n\n During the game you will experience scaling issues that occur when multiple teams work on the same product. Multiple Teams will look for solutions to scaling issues and experiment in an iterative way with their ideas on solving them..\n\n\n##Expected benefits of participating\n\nAttendees will face a series of typical scaling challenges like: \n\n+ team synchronisation\n+ efficiency\n+ standardisation\n+ optimisation of expertise\n+ distributed teams\n\n##What did the session creators hope to learn?\n\nThese days we have a few models for scaling teams. \nWith this game we want to help participants experience common scaling issues and observe how they affect them. \nWith the exercises in this book and others, we hope to learn more about scaling dynamics.\n\n##Process and timetable: \n\n+ total time 90 min\n+ Introduction to scaling issues:  5 minutes\n+ Round 1: warm up in local teams 5 minutes\n+ Round 2: multiple rounds solving different scaling issues with a partner team (total 20 minutes)  \n+ Round 3: multiple rounds solving different scaling issues with groups of 4 small teams collaborating (total 10 minutes)  \n+ Round 4: all teams have to collaborate in one large factory 10 minutes\n+ Small retrospective inside the teams 10 minutes\n+ Large joined retrospective (at the end) 30 minutes",
+        "end": [
+            2016,
+            4,
+            22,
+            9,
+            40
+        ],
+        "event": "mixit16",
+        "format": "WORKSHOP",
+        "id": "2742",
+        "language": "ENGLISH",
+        "room": "UNKNOWN",
+        "slug": "yves-hanoulle-franck-depierre-the-scaling-ball-game",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Yves",
+                "lastname": "Hanoulle",
+                "legacyId": 5472,
+                "links": [],
+                "login": "5472",
+                "logoUrl": "54759dada3c761878875100d13dac670",
+                "role": "ATTENDEE"
+            },
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Franck",
+                "lastname": "Depierre",
+                "legacyId": 4,
+                "links": [],
+                "login": "4",
+                "logoUrl": "4d294402a9548a1ffdfc49fa4d777b10",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            7,
+            50
+        ],
+        "summary": "During the game you will experience scaling issues that occur when multiple teams work on the same product. Multiple Teams will look for solutions to scaling issues and experiment in an iterative way with their ideas on solving them..",
+        "title": "The scaling ball game",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            696000000
+        ],
+        "description": "Les d\u00e9veloppeurs ont commenc\u00e9 depuis quelque temps \u00e0 \u00e9crire des tests pour valider leur code et \u00e9viter les bugs et r\u00e9gressions. Cette pratique est ancr\u00e9e dans les \u00e9quipes de d\u00e9veloppements depuis plusieurs ann\u00e9es maintenant, \u00e0 tel point que certains commencent par \u00e9crire leurs tests avant le code (Test Driven Development).\n\nDepuis que le mouvement DevOps est apparu, cette pratique de validation du travail n\u2019a pas forc\u00e9ment \u00e9t\u00e9 appliqu\u00e9e, \u00e0 tel point qu\u2019il arrive que la gestion de configuration ne fonctionne pas du tout sur une machine fra\u00eechement install\u00e9e.\n\nAu cours de cette pr\u00e9sentation, je vais donc pr\u00e9senter pourquoi est ce qu'une description de d\u00e9ploiement peut ne pas fonctionner, pr\u00e9senter des solutions rapides de validation. Ensuite, je parlerai du concept de Test Driven Infrastructure et comment ins\u00e9rer cette m\u00e9thode dans la validation de la gestion de configuration.",
+        "end": [
+            2016,
+            4,
+            21,
+            9,
+            10
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "2752",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "arthur-vuillard-tester-et-valider-ses-deploiements",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Arthur",
+                "lastname": "Vuillard",
+                "legacyId": 5112,
+                "links": [],
+                "login": "5112",
+                "logoUrl": "c8c826f53f65be736a49b6dedb7e6197",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            8,
+            20
+        ],
+        "summary": "De nombreuses \u00e9quipes d\u00e9crivent leurs installations dans une application g\u00e9rant le d\u00e9ploiement (comme Salt, Puppet, Chef, Ansible). Seulement, cette description du d\u00e9ploiement n'est pas toujours fiable.\nAu cours de cette pr\u00e9sentation, nous allons voir comment valider le description d'un d\u00e9ploiement.",
+        "title": "Tester et valider ses d\u00e9ploiements",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            696000000
+        ],
+        "description": "Combien de Chief Digital Officers savent coder ? Comment enseigner le code aux jeunes ? Et quel rapport entre les deux ?\n\nA travers mon parcours personnel, de femme Chief Digital Officer issue du marketing, \u00e0 l\u2019initiation au codage pour accompagner l\u2019\u00e9ducation num\u00e9rique de mes 3 enfants, j\u2019aimerais partager avec vous une autre vision de la transformation digitale, et donc de la soci\u00e9t\u00e9 num\u00e9rique de demain.\n\nLa vraie transformation digitale est-elle la p\u00e9nible formation \u00e0 coup de millions d\u2019euros d\u2019autant d\u2019employ\u00e9s et de cadres r\u00e9ticents \u00e0 changer leurs habitudes et pr\u00e9rogatives, ou l\u2019\u00e9ducation d\u2019acteurs responsables dans une soci\u00e9t\u00e9 num\u00e9rique?\nCette \u00e9ducation peut-elle se faire sans une formation au codage ? Et de quelle philosophie de formation parle-t-on ?  Peut-elle se faire sans la participation active des d\u00e9veloppeurs de m\u00e9tier ?\n \nCes questions m\u2019ont amen\u00e9e \u00e0 un changement complet de trajectoire professionnelle, pour m'investir dans l'enseignement du code aux ados. Mon parcours, et les observations et questionnements qu\u2019il a suscit\u00e9s, ouvrent de nombreuses perspectives pour une approche diff\u00e9rente de l'enseignement du code aux jeunes et non-codeurs.",
+        "end": [
+            2016,
+            4,
+            22,
+            15,
+            45
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "2762",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "youmna-ovazza-de-cdo-au-code---l-education-numerique--la-seule-veritable-transformation-digitale--",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Youmna",
+                "lastname": "Ovazza",
+                "legacyId": 5662,
+                "links": [],
+                "login": "5662",
+                "logoUrl": "fd0cb9e41d9161f17c9d9a32253e32ed",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            15,
+            20
+        ],
+        "summary": "A travers mon parcours personnel, de femme Chief Digital Officer issue du marketing, \u00e0 l\u2019initiation au codage pour accompagner l\u2019\u00e9ducation num\u00e9rique de mes 3 enfants, j\u2019aimerais partager avec vous une autre vision de la transformation digitale, et donc de la soci\u00e9t\u00e9 num\u00e9rique de demain.",
+        "title": "De CDO au CODE : l\u2019\u00e9ducation num\u00e9rique, la seule v\u00e9ritable transformation digitale ?",
+        "video": "https://www.infoq.com/fr/presentations/mix-it-youmna-ovazza-education-numerique"
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            696000000
+        ],
+        "description": "La constitution d'une \u00e9quipe agile est un \u00e9l\u00e9ment fondamental, engageant et certainement pas Agile pour un sou (CDD, CDI, ...). H\u00e9las, cela conduit bien souvent les d\u00e9cisionnaires, qui d\u00e9cident de la possibilit\u00e9 financi\u00e8re d'une embauche, a g\u00e9rer une grande partie du processus de recrutement. Il arrive m\u00eame parfois qu'une nouvelle embauch\u00e9e d\u00e9barque un lundi matin sans que personne -ou presque- ne soit au courant.\n\nCette pr\u00e9sentation est le retour d'exp\u00e9rience d'Enalean, \u00e9diteur de logiciels, et de la strat\u00e9gie mise en place pour mettre les \u00e9quipes au centre de la prise de d\u00e9cision et du processus de recrutement. Les valeurs centrales de l'agilit\u00e9: auto-organisation et responsabilisation de l'\u00e9quipe sont au centre de cette d\u00e9marche. Nous aborderons: \n- la d\u00e9finition du besoin: quel est notre objectif, de qui avons nous le plus besoin pour mener \u00e0 bien notre mission ? \n- la r\u00e9daction de l'offre: comment faire comprendre qui nous sommes ? \n- les entretiens: comment d\u00e9couper le temps imparti, quels exercices, avec qui et dans quels buts. \n- pourquoi nous en sommes arriv\u00e9 l\u00e0 \n\nCette session se veut tr\u00e8s concr\u00e8te dans l'\u00e9vocation des situations. Je partagerais \u00e9galement avec vous les diff\u00e9rents outils mis en place par l'\u00e9quipe.",
+        "end": [
+            2016,
+            4,
+            22,
+            8,
+            40
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "2772",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "manuel-vacelet-recrutement--et-si-vous-laissiez-l-equipe-faire--",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Manuel",
+                "lastname": "Vacelet",
+                "legacyId": 5632,
+                "links": [],
+                "login": "5632",
+                "logoUrl": "e7b95a72606d8a2921d044784111375e",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            7,
+            50
+        ],
+        "summary": "Le recrutement calibr\u00e9 RH/CV/Ecoles vous saoule? vous pensez qu'\u00e9crire un quicksort au tableau avec une main dans le dos ne donne pas une bonne id\u00e9e de vos comp\u00e9tences? vous voulez des outils pour recruter mieux maintenant? j'ai peut-\u00eatre quelque chose pour vous.",
+        "title": "Recrutement, et si vous laissiez l'\u00e9quipe faire ?",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            696000000
+        ],
+        "description": "Innover et conserver un produit de qualit\u00e9 de mani\u00e8re it\u00e9rative. D\u00e9velopper avec des prestataires a distance ou des collaborateurs en t\u00e9l\u00e9travail. Tout en gardant le contr\u00f4le sur la qualit\u00e9, la coh\u00e9rence et la complexit\u00e9 du code produit. Nombreux sont les obstacles auxquels nous faisons face au quotidien au sein de nos entreprises et Bonitasoft ne fait pas exception.\n\nVenez d\u00e9couvrir,  au travers d'une d\u00e9monstration, une strat\u00e9gie de d\u00e9veloppement efficace et un environnement productif ax\u00e9 enti\u00e8rement autour de la Pull Request (jenkins/github/slack/docker). Retour d'exp\u00e9rience, sur plus d'un an de d\u00e9veloppement sans une ligne de code non relue, de collaboration multidisciplinaire et multisite, de prise de d\u00e9cisions consensuelles et d'am\u00e9lioration progressive.\n\nLa Pull Request a litt\u00e9ralement transform\u00e9 notre cycle de d\u00e9veloppement.",
+        "end": null,
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "2782",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "colin-puy-vincent-elcrin-keep-calm-and-send-a-pull-request",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Colin",
+                "lastname": "Puy",
+                "legacyId": 765,
+                "links": [],
+                "login": "765",
+                "logoUrl": "f2bacefba1f2de03a4f7f2940a41ad64",
+                "role": "ATTENDEE"
+            },
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Vincent",
+                "lastname": "Elcrin",
+                "legacyId": 5672,
+                "links": [],
+                "login": "5672",
+                "logoUrl": "1b13dc25e6ca48e72ae11d7c9634b4ed",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": null,
+        "summary": "Venez d\u00e9couvrir une strat\u00e9gie de d\u00e9veloppement efficace, un environnement productif ax\u00e9 enti\u00e8rement autour de la Pull Request. Retour d'exp\u00e9rience, sur plus d'un an de d\u00e9veloppement sans une ligne de code non relue, de prise de d\u00e9cisions consensuelles et d'am\u00e9lioration progressive.",
+        "title": "Keep calm and send a pull request",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            696000000
+        ],
+        "description": "I'll talk about how the design of the environment.  How it helps the user learn syntax, control flow and the API of the language.  How it helps them understand what their program is doing or why it's broken.\n\nI'll talk about the compiler.  I'll talk about how it is able to run the user's program step by step, forwards and backwards.  I'll talk about how it can give very precise syntax and runtime error messages.",
+        "end": null,
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "2792",
+        "language": "ENGLISH",
+        "room": "UNKNOWN",
+        "slug": "mary-rose-cook-a-game-programming-environment-for-beginners",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Mary rose",
+                "lastname": "Cook",
+                "legacyId": 5782,
+                "links": [],
+                "login": "5782",
+                "logoUrl": "bfb7553ad3a564727391fa9be2352546",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": null,
+        "summary": "Code Lauren is a web app that lets beginners program games.  I'll demo the app and talk about how I designed the programming language, compiler and UI to help the user learn to program.",
+        "title": "A game programming environment for beginners",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            696000000
+        ],
+        "description": "Toute donn\u00e9es doit \u00eatre visualis\u00e9e, et \u00e0 toute \u00e9tape de leurs traitements. C'est un outil essentiel du data scientist.\n\nLa visualisation intervient depuis le nettoyage des donn\u00e9es pour d\u00e9tecter des donn\u00e9es manquantes, anomalies, et identifier leurs caract\u00e9ristiques (type, domaine). Ensuite, pour la mod\u00e9lisation qui n\u00e9cessite au pr\u00e9alable de bien comprendre la distribution,  pour informer le choix du mod\u00e8le, ses diff\u00e9rents param\u00e8tres et \u00e9chantillons de donn\u00e9es. Enfin par la communication visuelle pour communiquer des r\u00e9sultats \u00e0 un public \u00e0 la foi expert mais aussi \u00e0 une audience qui ne l'est pas forc\u00e9ment mais int\u00e9ress\u00e9e par le sujet (exemple: data journaliste)\n\nCet atelier sera tr\u00e8s pratique avec l'utilisation d'un unique jeu de donn\u00e9es qui passera par toutes ces \u00e9tapes de traitements et de visualisation. Nous utiliserons des biblioth\u00e8ques disponibles en ligne (Python, D3JS/HighChart/NVD3) pour former un pipeline de traitement, de l'extraction jusqu'\u00e0 la pr\u00e9sentation. Nous utiliserons aussi quelques outils parfois payant ou en version limit\u00e9e pour montrer leur potentiel et leur r\u00f4le de ce pipeline de traitement de donn\u00e9es (\u00e0 titre informatif pour montrer leur r\u00f4le et potentiel). De nombreux exemples (historiques, embl\u00e9matiques) de visualisations seront introduit (New York Times, d3 blocks, ..).\n\nEnfin la conclusion de l'atelier sera  d'initier les participants aux methodes de design via une session de 'design critique' o\u00f9 les participants seront invit\u00e9s \u00e0 prototyper sur papier une visualisation li\u00e9e aux donn\u00e9es qui ont \u00e9t\u00e9 pr\u00e9sent\u00e9es. Ensuite ces prototypes seront discut\u00e9s afin d'en \u00e9tudier les points positifs et n\u00e9gatifs. Et dans quelle mesure ces visualisations peut \u00eatre faite ou customis\u00e9es maintenant, ou celles qui sont propres \u00e0 un sujet et n\u00e9cessiterons un development pointu (e.g. New York Times).",
+        "end": [
+            2016,
+            4,
+            21,
+            13,
+            40
+        ],
+        "event": "mixit16",
+        "format": "WORKSHOP",
+        "id": "2802",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "romain-vuillemot-outils-simples-de-visualisation-pour-le-data-scientist",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Romain",
+                "lastname": "Vuillemot",
+                "legacyId": 5272,
+                "links": [],
+                "login": "5272",
+                "logoUrl": "3a1acea6c19ab622667ad074d523f789",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            11,
+            50
+        ],
+        "summary": "Je pr\u00e9senterai les outils de visualisations pour la caract\u00e9risation et de mod\u00e9lisation d'un jeu de donn\u00e9es (Python, Tableau), d'aide au nettoyage (Trifacta, Data wrangler) et la communication de r\u00e9sultats sur le web avec storytelling (D3JS, HighChart, NVD3).",
+        "title": "Outils simples de visualisation pour le data scientist",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            697000000
+        ],
+        "description": "Le Lean Startup vient avec son vocabulaire pas toujours accessible pour le commun des mortels. Et ce n'est pas si simple de mettre en place une d\u00e9marche Lean Startup quand on d\u00e9marre un projet entrepreneurial. On a souvent tendance \u00e0 rendre les choses complexes l\u00e0 o\u00f9 elles pourraient \u00eatre simples. Car oui, il est *toujours* possible de simplifier un projet.\n\nApr\u00e8s avoir suivi plusieurs dizaines d'entrepreneurs, je vous propose dans cette session d'expliquer un certain nombres de concepts du Lean Startup \u00e0 travers des exemples concrets, de la \"vraie vie\", afin de mieux vous montrer ce qu'est vraiment le Lean Startup.\nJ'illustrerez donc par des exemples des concepts comme le MVP, le Pivot, le Customer Development...",
+        "end": [
+            2016,
+            4,
+            21,
+            9,
+            10
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "2812",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "nicolas-deverge-le-lean-startup-depuis-les-tranchees",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Nicolas",
+                "lastname": "Deverge",
+                "legacyId": 933,
+                "links": [],
+                "login": "933",
+                "logoUrl": "da81db67118a58d77d85d854d40161ff",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            8,
+            20
+        ],
+        "summary": "Apr\u00e8s avoir travaill\u00e9 avec plusieurs dizaines de startups, voici une illustration par des exemples concrets des concepts du Lean Startup (MVP, Lean, Get Out Of The Building, Pivot, Customer Development, Lean Canvas).",
+        "title": "Le Lean Startup depuis les tranch\u00e9es",
+        "video": "https://www.infoq.com/fr/presentations/mix-it-nicolas-deverge-lean-startup-depuis-les-tranchees"
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            697000000
+        ],
+        "description": "== Pr\u00e9-requis\nLe texte du tutoriel est accessible librement sur Internet : http://leneurone.github.io/atelier-duchess-elk/. \nIl est indispensable que les participants aient install\u00e9 avant l'atelier sur leur ordinateur personnel soit Virtual Box et la machine virtuelle tel que d\u00e9crit dans la section \u201cD\u00e9marrage de la machine virtuelle\u201c, soit les produits s\u00e9par\u00e9ment comme d\u00e9crit sur la page \"Installation sans VM\".\n\n== Atelier\nJe commencerai par quelques slides d\u2019introduction pour pr\u00e9senter rapidement les diff\u00e9rents produits mis en oeuvre, ainsi que quelques concepts sp\u00e9cifiques \u00e0 ElasticSearch n\u00e9cessaires pour la suite.\n\nL\u2019atelier a \u00e9t\u00e9 con\u00e7u pour \u00eatre d\u00e9roul\u00e9 de mani\u00e8re assez autonome. Cela permettra \u00e0 chacun de d\u00e9rouler \u00e0 son rythme, de poser les questions qu\u2019il souhaite sans attendre ou au contraire d\u2019avance plus rapidement.\n\nNous apprendrons \u00e0 lire un fichier et \u00e0 l\u2019enrichir avec LogStash, puis \u00e0 configurer ElasticSearch pour indexer correctement les donn\u00e9es. Enfin, nous verrons comment utiliser l\u2019interface Web Kibana pour les visualiser.\n\n== Pour aller plus loin\nLes plus rapides, ou ceux qui souhaiterons continuer le tutoriel une fois revenus chez eux, pourrons ajouter un broker de messages pour obtenir une architecture faiblement coupl\u00e9e, ou apprendre \u00e0 configurer ElasticSearch pour fonctionner en cluster.\n\n== A propos de moi\nJe suis d\u00e9veloppeur Java depuis 4 ans, et je travaille depuis 3 ans avec la stack Elastic au sein d\u2019un client grand compte lyonnais. J\u2019ai d\u00e9ploy\u00e9 jusqu\u2019\u00e0 24 serveurs en production simultan\u00e9ment sur cette infrastructure, pouvant accueillir jusqu\u2019\u00e0 plus 1 milliard de documents et plus de 10.000 logs / s via une architecture distribu\u00e9e, redondante et r\u00e9sistante aux pannes. J\u2019ai \u00e9t\u00e9 amen\u00e9e \u00e0 former plusieurs personnes pour travailler avec moi, ce qui m\u2019a men\u00e9e \u00e0 la r\u00e9daction d\u2019un tutoriel de prise en main de la stack.",
+        "end": [
+            2016,
+            4,
+            21,
+            10,
+            10
+        ],
+        "event": "mixit16",
+        "format": "WORKSHOP",
+        "id": "2822",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "claire-villard-angelique-henry-workshop---introduction-a-elk",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Claire",
+                "lastname": "Villard",
+                "legacyId": 1150,
+                "links": [],
+                "login": "1150",
+                "logoUrl": "a96930423a79b68f2820af9d35876b62",
+                "role": "ATTENDEE"
+            },
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Ang\u00e9lique",
+                "lastname": "Henry",
+                "legacyId": 113,
+                "links": [],
+                "login": "113",
+                "logoUrl": "c9306cebd4c6e1b62ccdff8e45b3bd7b",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            8,
+            20
+        ],
+        "summary": "Pendant ce workshop, nous d\u00e9couvrirons par la pratique comme utiliser 3 produits Elastic, ElasticSearch, LogStash et Kibana (ELK) dans une d\u00e9marche DevOps, pour centraliser des logs ou d\u2019autres informations, et les exploiter graphiquement.",
+        "title": "Workshop : Introduction \u00e0 ELK",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            697000000
+        ],
+        "description": "J\u2019ai mis en place des JWT cette ann\u00e9e sur un projet client et j\u2019aimerai partager ce que j\u2019ai pu impl\u00e9menter avec l\u2019\u00e9quipe.\n\nPour ce talk, j\u2019aimerai que le public reparte avec :\n* Une bonne id\u00e9e du fonctionnement interne des JWT\n* Comment bien s\u00e9curiser les JWT pour un usage browser/serveur (CSRF, XSS)\n* D\u2019autres id\u00e9es d\u2019utilisation (panier, email de confirmation\u2026)\n* Une connaissance des avantages et inconv\u00e9nients",
+        "end": [
+            2016,
+            4,
+            22,
+            9,
+            40
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "2832",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "hubert-sablonniere-100--stateless-avec-jwt--json-web-token-",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Hubert",
+                "lastname": "Sablonni\u00e8re",
+                "legacyId": 2171,
+                "links": [],
+                "login": "2171",
+                "logoUrl": "f7b7503324cbfd2a59aeb3540fa17bb1",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            8,
+            50
+        ],
+        "summary": "Dans nos architectures REST modernes, les bons vieux cookies de session ne suffisent plus. Il est temps de s\u2019int\u00e9resser aux JSON Web Token : une nouvelle approche plus simple, 100% stateless et facilement scalable.\n\nPlus de stockage et plus de r\u00e9plication de session c\u00f4t\u00e9 serveur !",
+        "title": "100% Stateless avec JWT (JSON Web Token)",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            697000000
+        ],
+        "description": "L'adoption massive l'Agilit\u00e9 dans les entreprises et les organisations est souvent associ\u00e9e au choix d'une m\u00e9thode sp\u00e9cifique (Scrum, eXtreme Programming, ou autre). Au-del\u00e0 d'un cadre qui vous dira qui doit faire quoi, quand et comment, il est aujourd'hui encore n\u00e9cessaire de revenir \u00e0 la d\u00e9finition pos\u00e9e en 2001 dans le *Manifeste Agile* pour donner du sens \u00e0 votre \u00e9quipe. Alistair Cockburn nous rappelait d'ailleurs dans une conf\u00e9rence en 2014 que l'avenir de l'Agilit\u00e9 \u00e9tait ... l'Agilit\u00e9 elle-m\u00eame !\n\nPour bien comprendre l'Agilit\u00e9 et aider les autres \u00e0 la vivre, les 4 valeurs et 12 principes du Manifeste Agile donnent un cadre de bon sens qu'il est bon de rappeler que nous soyons d\u00e9butants ou praticiens plus aguerris. \n\nJe vous propose un retour aux sources pour donner de nouvelles perspectives sur votre approche quotidienne de l'Agilit\u00e9. Dans cet atelier : \n\n* Vous (re)d\u00e9couvrez les 4 valeurs et les 12 principes de l'Agilit\u00e9\n* Vous co-contruisez une repr\u00e9sentation concr\u00e8te du Manifeste Agile pour donner forme \u00e0 des concepts qui peuvent para\u00eetre abstraits\n* Vous \u00e9changez avec les autres participants sur la compr\u00e9hension du Manifeste Agile et partager vos exp\u00e9riences\n* Vous cr\u00e9ez votre propre discours pour expliquer ce qu'est l'Agilit\u00e9 dans votre entreprise apr\u00e8s la conf\u00e9rence\n* Pour appuyer votre discours, vous repartez avec une (ou plusieurs) photos de la structure en L\u00e9gos pour partager vos apprentissages\n* Vous d\u00e9couvrez la m\u00e9thode L\u00e9go Serious Play, une approche p\u00e9dagogique \u00e0 base de m\u00e9taphores et de *story telling* pour visualiser des sujets complexes",
+        "end": [
+            2016,
+            4,
+            21,
+            13,
+            40
+        ],
+        "event": "mixit16",
+        "format": "WORKSHOP",
+        "id": "2842",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "romain-couturier-a-la--re-decouverte-du-manifeste-agile",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Romain",
+                "lastname": "Couturier",
+                "legacyId": 5,
+                "links": [],
+                "login": "5",
+                "logoUrl": "918e67363e4361447d7a01c11da8a767",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            11,
+            50
+        ],
+        "summary": "Pour bien comprendre l'Agilit\u00e9 et aider les autres \u00e0 la vivre, les 4 valeurs et 12 principes du Manifeste Agile donnent un cadre de bon sens qu'il est bon de rappeler que nous soyons d\u00e9butants ou praticiens plus aguerris. Laissons de c\u00f4t\u00e9 Scrum, XP ou toutes les m\u00e9thods pour revenir \u00e0 la philosophie",
+        "title": "A la (re)d\u00e9couverte du Manifeste Agile",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            697000000
+        ],
+        "description": "= Le contenu\nEn alternant des __slides__, des __sketches__ et __du v\u00e9cu__, nous d\u00e9taillerons les situations que nous avons vues, v\u00e9cues ou entendus et qui nous interpellent. Nous mettrons le doigt sur des usage qui perdurent parce que, comme pour un projet de d\u00e9v sans tests \"c'est historique\", mais qui ne sont plus en phase avec la soci\u00e9t\u00e9 moderne. Des situation dans les \u00e9quipe de d\u00e9veloppement, avec le client, avec les manageurs ou les RH. Nous proposerons __des contournements__ et __des solutions concr\u00e8tes__ \u00e0 utiliser au quotidien et aider \u00e0 ce que le lieux de travail soit un environnement agr\u00e9able pour toutes et tous.\n\nL'id\u00e9e de cette conf\u00e9rence est venue le jour o\u00f9 nous nous sommes rendu compte que nous avons toutes v\u00e9cues certaines situations d\u00e9sagr\u00e9ables qui nous ont donn\u00e9 envie de partir. Nous souhaitons en parler pour \u00e9viter que les futures g\u00e9n\u00e9rations de d\u00e9veloppeuses y soient confront\u00e9es. De plus, nous nous retrouvons r\u00e9guli\u00e8rement a \u00eatre les rares femmes dans les \u00e9v\u00e9nements techniques, et on nous pose r\u00e9guli\u00e8rement la question \"Mais pourquoi y-a-t-il si peu de femmes ?\" nous avons donc creus\u00e9 le sujet et vous livrons cette analyse.",
+        "end": null,
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "2852",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "claire-villard-marion-felix-angelique-henry-vis-ma-vie-de-developpeuse",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Claire",
+                "lastname": "Villard",
+                "legacyId": 1150,
+                "links": [],
+                "login": "1150",
+                "logoUrl": "a96930423a79b68f2820af9d35876b62",
+                "role": "ATTENDEE"
+            },
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Marion",
+                "lastname": "Felix",
+                "legacyId": 5382,
+                "links": [],
+                "login": "5382",
+                "logoUrl": "919767247c8233a7407836d12bb4a9dc",
+                "role": "ATTENDEE"
+            },
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Ang\u00e9lique",
+                "lastname": "Henry",
+                "legacyId": 113,
+                "links": [],
+                "login": "113",
+                "logoUrl": "c9306cebd4c6e1b62ccdff8e45b3bd7b",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": null,
+        "summary": "Vous voulez plus de __d\u00e9veloppeuses__? Vous pensez ne rien pouvoir y faire et pr\u00e9f\u00e9rez attendre qu\u2019elles tombent du ciel?\n\nEtant les premi\u00e8res concern\u00e9es car d\u00e9veloppeuse nous m\u00eame, nous allons vous donner des solutions pour attirer plus de femmes dans vos \u00e9quipes, et surtout les garder!",
+        "title": "Vis ma vie de d\u00e9veloppeuse",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            697000000
+        ],
+        "description": "On parle de HTTP/2 depuis bien longtemps maintenant - et il est temps de s\u00e9rieusement envisager l\u2019adoption. Mais nous, les d\u00e9veloppeurs, cherchons encore \u00e0 comprendre les implications de HTTP/2 dans nos applications et nos infrastructures.\n\nCette session posera rapidement les bases du protocole lui-m\u00eame et abordera ensuite les questions importantes: comment bien choisir son serveur HTTP/2, comment bien pr\u00e9parer sa migration vers HTTP/2, quels sont les cons\u00e9quences pour le d\u00e9veloppement front-end, Server Push ou Stream Prioritization?\n\nNous utiliserons une application Spring Boot + Jetty en exemple.",
+        "end": [
+            2016,
+            4,
+            22,
+            12,
+            50
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "2872",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "brian-clozel-http-2-pour-le-developpeur-web",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Brian",
+                "lastname": "Clozel",
+                "legacyId": 62,
+                "links": [],
+                "login": "62",
+                "logoUrl": "7f6b3d65ae30e6fec52287f34e22dcb0",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            12,
+            0
+        ],
+        "summary": "Comprendre le protocole HTTP/2, comment les applications web peuvent l'utiliser et comment le mettre en production aujourd'hui sur la JVM.",
+        "title": "HTTP/2 pour le d\u00e9veloppeur Web",
+        "video": "https://www.infoq.com/fr/presentations/mix-it-brian-clozel-http2-pour-le-developpeur-web"
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            697000000
+        ],
+        "description": "L\u2019improvisation est pour certains synonyme de perspectives de chaos et d\u2019incertitude. Pourtant, les \u00eatres humains improvisent chaque minute de leur vie. Cela se fait naturellement, et offre d\u2019autres perspectives remplies de plus de possibilit\u00e9s que l\u2019on ne pourrait l\u2019imaginer.\n\nImprovisateur amateur et Coach Agile professionnel depuis plusieurs ann\u00e9es, je vous propose de vivre des exercices simples et in\u00e9dits favorisant 2 des principales valeurs du manifeste agile : les interactions entre individus, et l'adoption du changement. \n\nJ'utiliserai quelques unes des 50 techniques et jeux d\u2019impros du tr\u00e8s bon livre Improving Agile Teams de Paul Goddard. En anglais la racine \u201cImprov\u201d est commune aux mots Improvisation et Am\u00e9lioration (improvement).\n\nBien entendu, des temps d'\u00e9chauffement et de d\u00e9brief sont pr\u00e9vus.\nAucune comp\u00e9tence n'est requise, ni en th\u00e9\u00e2tre, ni en improvisation, ni en agilit\u00e9 : c'est normal, vous allez les d\u00e9velopper pendant la session !\n\nNous balayerons 5 principes du th\u00e9\u00e2tre d\u2019improvisation :\nS\u00e9curit\u00e9 : comment accepter l\u2019\u00e9chec est essentiel \u00e0 la d\u00e9couverte\nSpontan\u00e9it\u00e9 : comment augmenter le flot d\u2019id\u00e9es\nStorytelling : comment la narration aide l\u2019\u00e9quipe \u00e0 mieux comprendre les clients et utilisateurs\nStatus: comment ajuster son comportement personnel peut encourager la collaboration\nSensibilit\u00e9: comment devenir plus pleinement engag\u00e9 avec ses co-\u00e9quipiers.",
+        "end": [
+            2016,
+            4,
+            22,
+            15,
+            10
+        ],
+        "event": "mixit16",
+        "format": "WORKSHOP",
+        "id": "2892",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "vincent-daviet-improv-ing--agile-teams---interactions-humaines-et-adoption-du-changement",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Vincent",
+                "lastname": "Daviet",
+                "legacyId": 160,
+                "links": [],
+                "login": "160",
+                "logoUrl": "5320948275e14a08565d1a23e0f84d3f",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            13,
+            20
+        ],
+        "summary": "Sur sc\u00e8ne, les acteurs improvisateurs utilisent des r\u00e8gles simples, des principes de collaboration, et des contraintes de jeu pour construire des histoires non pr\u00e9vues et n\u00e9anmoins fascinantes. Les m\u00eames r\u00e8gles et principes aident les \u00e9quipes agiles \u00e0 collaborer plus efficacement.",
+        "title": "Improv(ing) Agile Teams : interactions humaines et adoption du changement",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            697000000
+        ],
+        "description": "Etre capable de communiquer avec 27 personnes en m\u00eame temps afin de les faire progresser dans leur formation demande souplesse, pragmatisme et adaptation permanente.  Les valeurs Agiles permettent cette rigueur.\nMon intervention, un retour d'exp\u00e9rience sur les 6 derni\u00e8re ann\u00e9es, montre diff\u00e9rents aspects pratiques pour cr\u00e9er des supports de communication dans le but d'\u00e9mouvoir et de sensibiliser chaque \u00e9l\u00e8ve. \nJ'insiste sur les valeurs humaines, les sensations et les \u00e9motions, afin de faire progresser chaque enfant par la coop\u00e9ration, la collaboration et le droit \u00e0 l'erreur.",
+        "end": [
+            2016,
+            4,
+            21,
+            7,
+            35
+        ],
+        "event": "mixit16",
+        "format": "KEYNOTE",
+        "id": "2902",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "christian-den-hartigh-pedagogie-et-agilite",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Christian",
+                "lastname": "Den hartigh",
+                "legacyId": 6242,
+                "links": [],
+                "login": "6242",
+                "logoUrl": "6645b03ed3dd93d4705154ddab41ebe5",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            7,
+            10
+        ],
+        "summary": "Keynote : Mise en place des valeurs de l'Agilit\u00e9 dans un contexte d'apprentissage scolaire",
+        "title": "P\u00e9dagogie et Agilit\u00e9",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            697000000
+        ],
+        "description": "Vous \u00eates d\u00e9veloppeur ou analyste fonctionnel, bref vous appartenez \u00e0 une \u00e9quipe. \nVous avez une certaine id\u00e9e de comment les choses doivent se passer : organisation, principes techniques, comportement. \n\nUn coll\u00e8gue est \u00e0 c\u00f4t\u00e9 de la plaque, qu'il en ait conscience ou non.\n* Il/elle n'est pas au niveau d'exigence de l'\u00e9quipe, du projet. \u00ab Il ne respecte pas les r\u00e8gles \u00bb \u00ab Il ne joue pas le jeu \u00bb\n* Il/elle est pris(e) dans un conflit qui pourrit l'ambiance de l'\u00e9quipe. \u00ab Ils peuvent pas se blairer \u00bb\n* Il a un comportement inad\u00e9quat par rapport aux attentes de l'entreprise ou du client.\u00ab Il va se faire sortir \u00bb\nOu plus simplement il/elle vous demande votre aide.  Mais... \u00ab C\u2019est un boulet \u00bb\n\nEt si vous essayiez de l\u2019aider ? \n\n\"\"Quand on doit aborder un sujet difficile avec une personne, il y a 3 options :\n1) Ne rien faire, mais rien de change\n2) Y aller bourrin, mais elle se braque et rien ne change\n3) Avoir un t\u00eate \u00e0 t\u00eate souple et muscl\u00e9\nComment faire ? C'est difficile ... c'est stressant... et j'ai pas envie de pisser dans un violon !\"\"\n\nVous allez apprendre \u00e0 mieux aider lors des t\u00eate \u00e0 t\u00eate : moins de stress pour vous et pour l'autre, et surtout plus d'efficacit\u00e9 : des principes et une mise en pratique des t\u00eate \u00e0 t\u00eate, ou comment aider ses co-\u00e9quipiers en leur parlant (et en les \u00e9coutant). \nVous allez d\u00e9couvrir comment mettre en oeuvre la supervision par les pairs : recadrage, coaching, mentoring, feedback.\n\nApr\u00e8s l'expos\u00e9 de quelques principes issus de cas concret, nous aborderons vos situations.",
+        "end": [
+            2016,
+            4,
+            21,
+            15,
+            40
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "2912",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "pierre-fauvel-tete-a-tete-souple-et-muscle",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Pierre",
+                "lastname": "Fauvel",
+                "legacyId": 22,
+                "links": [],
+                "login": "22",
+                "logoUrl": "1f997170569f6150ae82919e4f2e3659",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            14,
+            50
+        ],
+        "summary": "Pour aborder un sujet difficile avec une personne, il y a 3 options :\n*Ne rien faire, mais rien de change\n*Y aller bourrin, mais elle se braque et rien ne change\n*Avoir un t\u00eate \u00e0 t\u00eate souple et muscl\u00e9\nComment faire ? C'est difficile ... c'est stressant... et j'ai pas envie de pisser dans un violon.",
+        "title": "T\u00eate \u00e0 t\u00eate souple et muscl\u00e9",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            698000000
+        ],
+        "description": "Cet atelier vous donnera un r\u00e9el aper\u00e7u de ce que docker peut faire dans vos projets et vous repartirez avec un setup et des exemples que vous pourrez re-executer dans votre environnement. \n\nDocker 1.10, Swarm  et overlay network sans oublier docker-machine bien s\u00fbr. \n\nLe code de l'application est \u00e9crit en go, vous allez l\u00e9g\u00e8rement modifier le code de l'application est la d\u00e9ployer  dans un cluster form\u00e9e des machines des autres participants. \n\nAucune connaissance en go sont requises pour cet atelier, nous vous assisteront, le focus est sur Docker.",
+        "end": [
+            2016,
+            4,
+            22,
+            9,
+            40
+        ],
+        "event": "mixit16",
+        "format": "WORKSHOP",
+        "id": "2922",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "david-gageot-jean-laurent-de-morlhon-exploiter-les-nouveautes-de-docker-pour-deployer-un-jeu-distribue-",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "David",
+                "lastname": "Gageot",
+                "legacyId": 991,
+                "links": [],
+                "login": "991",
+                "logoUrl": "f0887bf6175ba40dca795eb37883a8cf",
+                "role": "ATTENDEE"
+            },
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Jean-laurent",
+                "lastname": "De morlhon",
+                "legacyId": 597,
+                "links": [],
+                "login": "597",
+                "logoUrl": "649d3668d3ba68e75a3441dec9eac26e",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            7,
+            50
+        ],
+        "summary": "Dans cet atelier de 2h, apr\u00e8s une courte pr\u00e9sentation de l'\u00e9cosyst\u00e8me Docker, vous allez construire une application distribu\u00e9e avec les autres participants \u00e0 l'aide de derni\u00e8res nouveaut\u00e9s de Docker. L'application est un dictionnaire dont chacun des participants \u00e0 un sous-ensemble des donn\u00e9es.",
+        "title": "Exploiter les nouveaut\u00e9s de Docker pour d\u00e9ployer un jeu distribu\u00e9.",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            698000000
+        ],
+        "description": "Une revue de l\u2019ecosysteme Docker: les standards, l\u2019infrastructure, la plateforme et les services; suivi par une demo: construire une application microservice utilisant le framework Java Spring Boot et la deployer sur un cluster Swarm dans un reseau overlay specifique a l\u2019application.\n\nCet expose passera en revue les 4 couches de l\u2019ecosysteme Docker: les standards, l\u2019infrastructure, la plateforme et les services. Les differents acteurs, outils et solutions, pour les developeurs et les ops.\nComment Docker est en train de transformer l'industrie, notions de IaaS, PaaS et CaaS.\nJe terminerai par une demo utilisant les outils Docker les plus recents, docker, docker-compose, docker-machine et Swarm pour construire une application microservice utilisant le framework Java Spring Boot, comment deployer un cluster Swarm multinode avec overlay networking, et y deployer l\u2019application.\n\nA l\u2019issue de la presentation, les auditeurs devraient etre capables de developper et tester une application microservice utilisant plusieurs services, deployer un cluster Swarm multi node avec overlay networking et y deployer l\u2019application.",
+        "end": [
+            2016,
+            4,
+            22,
+            8,
+            40
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "2942",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "patrick-chanezon-docker-et-son-ecosysteme-pour-les-developpeurs-et-les-ops-",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Patrick",
+                "lastname": "Chanezon",
+                "legacyId": 6402,
+                "links": [],
+                "login": "6402",
+                "logoUrl": "b662de358d61299eb2ea042752b96760",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            7,
+            50
+        ],
+        "summary": "Une revue de l\u2019ecosysteme Docker: les standards, l\u2019infrastructure, la plateforme et les services; suivi par une demo: construire une application microservice utilisant le framework Java Spring Boot et la deployer sur un cluster Swarm dans un reseau overlay specifique a l\u2019application.",
+        "title": "Docker et son ecosysteme pour les developpeurs et les ops.",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            698000000
+        ],
+        "description": "Une description du contexte de travail pour un d\u00e9veloppeur \"full-stack\" dans le domaine du data-journalisme.\n\nQue se cache derri\u00e8re ce mot ? \n\nQuelles pratiques, organisation, plateformes et techniques de programmation utiliser pour obtenir des enqu\u00eates journalistiques enrichies des donn\u00e9es \"smart-data\" ?\n\nCot\u00e9 technique, qu'est-ce que Clojure/CLJS, postgreSQL/postGIS, D3, leaflet, cartodb peuvent apporter dans ce domaine ?\n\nPr\u00e9sentation de certains cas d'utilisations et d\u00e9veloppements.",
+        "end": null,
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "2952",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "frederic-vergez-data-journalism---rtsinfo---a-technical-approach",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Frederic",
+                "lastname": "Vergez",
+                "legacyId": 6412,
+                "links": [],
+                "login": "6412",
+                "logoUrl": "c0c5e64175d6bf3257a3a7d6366df715",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": null,
+        "summary": "Tips, tools, platforms & techniques used to built data-journalism products (data-vizualization and extraction, geocoding, mobile...)",
+        "title": "Data-Journalism @ RTSinfo - a technical approach",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            698000000
+        ],
+        "description": "J'ai eu la chance de rencontrer au cours de mes vacances d'\u00e9t\u00e9, par le plus grand des hasards un membre de cette communaut\u00e9. Charles Suire. Inventeur, passionn\u00e9, avec des valeurs et un caract\u00e8re bien tremp\u00e9, il a eu la gentillesse de me raconter comment la communaut\u00e9 fonctionnait. \nJe voudrai partager cette exp\u00e9rience et ainsi rendre hommage \u00e0 ce grand homme qu'est Charles (m\u00e9connu comme beaucoup de grand hommes).",
+        "end": null,
+        "event": "mixit16",
+        "format": "RANDOM",
+        "id": "2962",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "mija-rabemananjara-charles-suire-membre-et-temoin-des-communautes-de-travail-de-boimondau",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Mija",
+                "lastname": "Rabemananjara",
+                "legacyId": 5592,
+                "links": [],
+                "login": "5592",
+                "logoUrl": "378cf6e11d79f188366ed7072889e84f",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": null,
+        "summary": "Dans les ann\u00e9e 1940 Marcel Barbu cr\u00e9e une communaut\u00e9 de travail o\u00f9 la fabrication des boitiers de montre n'est qu'un pr\u00e9texte au d\u00e9veloppement de l'individu dans son enti\u00e8ret\u00e9",
+        "title": "Charles Suire membre et t\u00e9moin des communaut\u00e9s de travail de Boimondau",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            698000000
+        ],
+        "description": "Kanban propose un cadre d'am\u00e9lioration continue en douceur dont la 1\u00e8re fondation est de commencer l\u00e0 o\u00f9 on en est. Comme chaque contexte est diff\u00e9rent, chaque contexte a une adoption unique de Kanban. Mais alors : par o\u00f9 et comment faire ?\n\nEn vous exposant 3 adoptions diff\u00e9rentes dans 3 contextes distincts, je vous propose plusieurs alternatives, en attirant votre attention sur les pi\u00e8ges \u00e0 \u00e9viter, et vous donnerais quelques trucs et astuces.",
+        "end": [
+            2016,
+            4,
+            21,
+            13,
+            30
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "2972",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "alfred-almendra-kanban---un-vivier-d-options",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Alfred",
+                "lastname": "Almendra",
+                "legacyId": 13,
+                "links": [],
+                "login": "13",
+                "logoUrl": "2be1fd2878821cca9006d3a5181700a7",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            12,
+            40
+        ],
+        "summary": "3 retours d\u2019exp\u00e9riences dans 3 contextes diff\u00e9rents autour de l\u2019utilisation de Kanban.",
+        "title": "Kanban : un vivier d'options",
+        "video": "https://www.infoq.com/fr/presentations/mix-it-alfred-almendra-kanban-un-vivier-d-options"
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            698000000
+        ],
+        "description": "Que ce soit une startup, un nouveau produit ou un projet client, la Marque se doit d\u2019\u00eatre au centre de nos pens\u00e9es, processus et d\u00e9cisions. Tout est li\u00e9 \u00e0 la Marque : architecture, design d\u2019interface, animations, features... Chaque d\u00e9tail, \u00e9l\u00e9ment doit v\u00e9hiculer le m\u00eame message. Pour autant, beaucoup ignore ce qu'est r\u00e9ellement une Marque et pourquoi son importance est capitale.\n\n\u00c0 travers l\u2019histoire de \u00abMark\u00bb, je d\u00e9mystifierais la Marque et vous partagerais mon exp\u00e9rience sur \u201ccomment la faire vivre\" sur vos interfaces. En d\u00e9veloppant le processus de cr\u00e9ation et en d\u00e9montrant comment designers et d\u00e9veloppeurs peuvent travailler de concert, je vous d\u00e9voilerai les cl\u00e9s pour imaginer, cr\u00e9er une Marque et faire vivre une exp\u00e9rience innovante, inspirante et unique \u00e0 vos utilisateurs, \u00e0 vos clients.",
+        "end": [
+            2016,
+            4,
+            21,
+            10,
+            10
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "2982",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "manon-gruaz-mark--marque-et-marques",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Manon",
+                "lastname": "Gruaz",
+                "legacyId": 6522,
+                "links": [],
+                "login": "6522",
+                "logoUrl": "c07f32b594de25c446662eaed35ae262",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            9,
+            20
+        ],
+        "summary": "Mark, Marque et Marques\u2026 ou comment cr\u00e9er une Marque et la faire vivre sur une interface.",
+        "title": "Mark, Marque et Marques",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            698000000
+        ],
+        "description": "Le mouvement des makers est souvent mal compris. On imagine des communaut\u00e9s assez ferm\u00e9es, de technophiles. En r\u00e9alit\u00e9, le mouvement des makers est un mouvement tr\u00e8s ouvert, tr\u00e8s accessible et emprunte \u00e9norm\u00e9ment aux monde des d\u00e9veloppeurs.",
+        "end": [
+            2016,
+            4,
+            21,
+            15,
+            40
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "2992",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "damien-cavailles-dev2maker",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Damien",
+                "lastname": "Cavaill\u00e8s",
+                "legacyId": 5072,
+                "links": [],
+                "login": "5072",
+                "logoUrl": "455b81857aea0a5c6ca63f4ba67c4cfd",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            14,
+            50
+        ],
+        "summary": "Le mouvement des makers est souvent mal compris. On imagine des communaut\u00e9s assez ferm\u00e9es, de technophiles. En r\u00e9alit\u00e9, le mouvement des makers est un mouvement tr\u00e8s ouvert, tr\u00e8s accessible et emprunte \u00e9norm\u00e9ment aux monde des d\u00e9veloppeurs.",
+        "title": "Dev2Maker",
+        "video": "https://www.infoq.com/fr/presentations/mix-it-damien-cavailles-dev2maker"
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            698000000
+        ],
+        "description": "La derni\u00e8re version de C# qui est disponible avec le framework .Net 4.6 sous windows depuis quelques mois mais aussi avec la future version 1.0 d'Asp.Net core, n'apporte pas de nouvelle fonctionnalit\u00e9 r\u00e9volutionnaire mais tout un ensemble de simplifications et sucre syntaxique pour nous permettre d'\u00e9crire un code plus simple et plus efficace. \nVous avez peut \u00eatre vu quelques unes de ces nouveaut\u00e9s au cours des mois pr\u00e9c\u00e9dents mais je propose ici de les mettre en relief avec des exemples concrets afin de souligner l'importance et la mise en oeuvre de telle ou telle technique.",
+        "end": [
+            2016,
+            4,
+            22,
+            15,
+            10
+        ],
+        "event": "mixit16",
+        "format": "WORKSHOP",
+        "id": "3002",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "maxime-sanglan-charlier-rui-carvalho-un-code-plus-propre-avec-c-6",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Maxime",
+                "lastname": "Sanglan-charlier",
+                "legacyId": 5372,
+                "links": [],
+                "login": "5372",
+                "logoUrl": "543c1a2d201c55419623b85b2151249a",
+                "role": "ATTENDEE"
+            },
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Rui",
+                "lastname": "Carvalho",
+                "legacyId": 5882,
+                "links": [],
+                "login": "5882",
+                "logoUrl": "20de1bd6180967b4b35117cdfe22be34",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            13,
+            20
+        ],
+        "summary": "La nouvelle version de C# est disponible depuis quelques mois et elle apporte un certain nombre de nouveaut\u00e9s permettant l'\u00e9criture de code plus simple et propre. Nous verrons ces nouveaut\u00e9s mais surtout nous les mettrons en lumi\u00e8re \u00e0 travers des exemples de refactoring.",
+        "title": "Un code plus propre avec C#6",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            698000000
+        ],
+        "description": "Agile. \u00ab Agile \u00bb ne repr\u00e9sente pas un nom que nous pouvons quantifier mais une qualit\u00e9, une propri\u00e9t\u00e9 de quelque chose. Pourquoi donc dans ce cas, certaines personnes veulent nous vendre de l\u2019agile ou pr\u00e9tendent faire de l\u2019agile?\nPour \u00e9viter ce genre d\u2019\u00e9carts, il est peut \u00eatre important aujourd\u2019hui de revenir sur les valeurs fondamentales de notre m\u00e9tier et sur l\u2019agilit\u00e9. Parmi ces valeurs importantes, les boucles de feedback sont une charni\u00e8re centrale. Je vous propose de revenir sur ces valeurs afin de mieux les comprendre et voir ainsi comment r\u00e9ellement produire de meilleurs produits.",
+        "end": [
+            2016,
+            4,
+            21,
+            15,
+            40
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3012",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "rui-carvalho-feedback-loops",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Rui",
+                "lastname": "Carvalho",
+                "legacyId": 5882,
+                "links": [],
+                "login": "5882",
+                "logoUrl": "20de1bd6180967b4b35117cdfe22be34",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            14,
+            50
+        ],
+        "summary": "Dans cette pr\u00e9sentation vous entendrez peut-\u00eatre certaines critiques sur scrum ou les process mais il s'agit surtout d'un talk sur les valeurs et l'apprentissage.\nBien comprendre ses boucles de feedback est le meilleur moyen de r\u00e9aliser les bons produits!",
+        "title": "Feedback Loops",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            699000000
+        ],
+        "description": "Rust is a systems programming language that focuses on safety, speed, and concurrency. Reaching 1.0 last year, Rust is a relatively new programming language, but is already seeing production use. In this talk, Steve will show you the basics of the language, while using case studies and anecdotes from production Rust users.",
+        "end": [
+            2016,
+            4,
+            21,
+            10,
+            10
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3022",
+        "language": "ENGLISH",
+        "room": "UNKNOWN",
+        "slug": "steve-klabnik-rust-in-production",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Steve",
+                "lastname": "Klabnik",
+                "legacyId": 6582,
+                "links": [],
+                "login": "6582",
+                "logoUrl": "233c279c012ebac792aaa805f966cbc7",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            9,
+            20
+        ],
+        "summary": "A talk about Rust, and how it's used in production",
+        "title": "Rust in Production",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            699000000
+        ],
+        "description": "Voici le d\u00e9roul\u00e9 de l'atelier :\n\n1. Pr\u00e9sentation des 9 valeurs Kanban\n\n2. Syst\u00e8me Kanban\n- Les participants auront \u00e0 relier les 4 principes fondateurs et 6 pratiques fondamentales avec les 9 valeurs Kanban\nNote : ce n'est pas si \u00e9vident que \u00e7a, et cela g\u00e9n\u00e8re des discussions int\u00e9ressantes !\n\n3. R\u00e9flexions et discussion\n- Les participants auront \u00e0 choisir 3 valeurs qui r\u00e9sonnent en eux personnellement, puis 3 valeurs qui leur paraissent importantes ou confrontantes \u00e0 consid\u00e9rer dans leur contexte actuel.\nNote : la comparaison des 2 listes donne lieu \u00e0 des discussions entre les groupes. De plus, la seconde liste peut \u00eatre le d\u00e9but de l'\u00e9laboration d'une strat\u00e9gie d'impl\u00e9mentation contextualis\u00e9e et r\u00e9fl\u00e9chie de Kanban.\n\n4. Repr\u00e9sentation visuelle\n- Les participants auront \u00e0 repr\u00e9senter les 9 valeurs Kanban sous forme de poster. 2 Mod\u00e8les seront propos\u00e9s : cercles concentriques / maison Kanban, cependant l'objectif est de laisser libre la cr\u00e9ativit\u00e9 des participants.\n- On affiche alors la galerie de repr\u00e9sentation et on d\u00e9briefe tous ensemble\nNote : La vari\u00e9t\u00e9 des repr\u00e9sentations permet de donner de la nuance et de nouvelles perspectives \u00e0 l'impl\u00e9mentation de Kanban aux participants.",
+        "end": [
+            2016,
+            4,
+            21,
+            15,
+            40
+        ],
+        "event": "mixit16",
+        "format": "WORKSHOP",
+        "id": "3032",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "olivier-my-les-valeurs-de-kanban",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Olivier",
+                "lastname": "My",
+                "legacyId": 6312,
+                "links": [],
+                "login": "6312",
+                "logoUrl": "9dc20eda13e6738df9e02d28fa6fb16d",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            13,
+            50
+        ],
+        "summary": "On parle souvent des valeurs agiles, parfois des valeurs de Scrum, mais qu\u2019en est-il des valeurs de Kanban ? Je vous propose dans cette session de les d\u00e9couvrir et les explorer afin de prendre un peu de recul sur votre impl\u00e9mentation et vous ouvrir \u00e0 de nouvelles perspectives.",
+        "title": "Les valeurs de Kanban",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            699000000
+        ],
+        "description": "Si votre `node_modules` et ou votre `virtualenv` fait plus de 100Mo, si votre projet n\u00e9cessite trois instances Docker pour servir cinq pages, si vous ne savez m\u00eame plus qui builde qui, qui transpile quoi et quel int\u00e9gration continue d\u00e9ploie o\u00f9, alors vous souffrez peut-\u00eatre de ce syndrome que j'appelle \u00ab Complexit\u00e9 par d\u00e9faut \u00bb.\n\nMais tout n'est pas perdu, on va voir ensemble comment d\u00e9marrer petit et it\u00e9rer en \u00e9tant dirig\u00e9 par le besoin. Et uniquement le besoin.",
+        "end": [
+            2016,
+            4,
+            22,
+            9,
+            40
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3042",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "david-larlet-simplicite-par-defaut",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "David",
+                "lastname": "Larlet",
+                "legacyId": 645,
+                "links": [],
+                "login": "645",
+                "logoUrl": "daac2028dd52a4cda7c9133b5c22a0db",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            8,
+            50
+        ],
+        "summary": "Allumer une t\u00e9l\u00e9vision : 3s, d\u00e9marrer une voiture : 2s, lancer votre micro-onde : 1s. Utiliser votre application ? Int\u00e9grer quelqu'un dans votre \u00e9quipe ? Permettre \u00e0 une personne externe de participer \u00e0 votre projet open-source ?",
+        "title": "Simplicit\u00e9 par d\u00e9faut",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            699000000
+        ],
+        "description": "Initialement un PoC de d\u00e9veloppeur sur l'architecture Flux, [Redux](http://redux.js.org/) est pass\u00e9, au cours de l\u2019ann\u00e9e 2015, du statut \"encore une nouvelle impl\u00e9mentation Flux\" au statut d'impl\u00e9mentation la plus populaire. Elle parvient aujourd'hui \u00e0 f\u00e9d\u00e9rer les d\u00e9veloppeurs autour de Flux y compris en dehors de l\u2019\u00e9cosyst\u00e8me React.\n\nRedux est un nouveau paradigme de programmation pour les interfaces Web. Il propose de centraliser l\u2019int\u00e9gralit\u00e9 du contexte de l\u2019application en un seul endroit organisant toutes les transformations de fa\u00e7on s\u00e9quentielles et reproductible.\n\nJe vous propose un tour complet de la technologie par la m\u00eame approche que pr\u00e9conise son cr\u00e9ateur \u00e0 savoir en allant voir directement le code de la librairie. Pas de panique ! L\u2019essentiel de la librairie peut \u00eatre \u00e9crit en un dizaine de lignes.\n\nUne fois les concepts pos\u00e9s, nous vous proposerons un atelier mettant en oeuvre Redux dans une application existante qui ne sera autre que 2048. Avec plusieurs \u00e9tapes, nous ferons \u00e9voluer l'application en l'orchestrant avec Redux et en utilisant progressivement les diff\u00e9rents outils et design patterns couramment utilis\u00e9s.\n\nVous serez rapidement \u00e0 la t\u00eate d'une application fonctionnelle compl\u00e8tement debuggable avec les dev tools de Redux et un historique des transformations.\n\n**Pour pr\u00e9parer le workshop**\n\n- Installer Git & Node 4+\n- Cloner le repository git du projet : https://github.com/Swiip/2048-redux (`git clone https://github.com/Swiip/2048-redux.git`)\n- Se positionner sur la branche `step-0` (`git checkout step-0`)\n- Installer les d\u00e9pendances NPM (`npm install`)",
+        "end": [
+            2016,
+            4,
+            22,
+            13,
+            10
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3052",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "nicolas-cuillery-matthieu-lux-tout-ce-que-vous-voulez-savoir-sur-redux",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Nicolas",
+                "lastname": "Cuillery",
+                "legacyId": 114,
+                "links": [],
+                "login": "114",
+                "logoUrl": "b08fd9671af78445d19048228a8f3d59",
+                "role": "ATTENDEE"
+            },
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Matthieu",
+                "lastname": "Lux",
+                "legacyId": 105,
+                "links": [],
+                "login": "105",
+                "logoUrl": "27bd774790e70807a5489b31f668a71e",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            11,
+            20
+        ],
+        "summary": "Redux est un nouveau paradigme de programmation pour les interfaces Web. Il propose de centraliser l\u2019int\u00e9gralit\u00e9 du contexte de l\u2019application en un seul endroit organisant toutes les transformations de fa\u00e7on reproductible.\n\nVenez d\u00e9couvrir et mettre en pratique ces nouveaux concepts !",
+        "title": "Tout ce que vous voulez savoir sur Redux",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            699000000
+        ],
+        "description": "Nous ferons un point complet sur Angular 2 et son \u00e9cosyst\u00e8me afin que tout le monde puisse s'en faire une id\u00e9e assez compl\u00e8te.\nNous expliquerons d'abord pourquoi Google a d\u00e9cid\u00e9 de faire une rupture (presque) compl\u00e8te vis \u00e0 vis d'Angular 1, puis nous parlerons de la philosophie et des ambitions d'Angular 2.\nNous aborderons alors le choix de Typescript et des nouvelles syntaxes puis nous rentrerons dans le vif du sujet avec un exemple simple d'application qui nous permettra de parler de l'approche \"composants\", de l'injection de d\u00e9pendance, des annotations, de la d\u00e9tection des changements, de la programmation r\u00e9active, ...\nNous parlerons aussi de l'int\u00e9r\u00eat de pouvoir d\u00e9porter le rendu des applications \u00e0 des composants externes afin de pouvoir utiliser des web workers, g\u00e9n\u00e9rer les vues c\u00f4t\u00e9 serveur (Angular Universal) ou encore g\u00e9n\u00e9rer des applications natives (NativeScript).\nEnfin nous verrons rapidement les possibilit\u00e9s pour faire \u00e9voluer une application Angular 1 vers Angular 2.",
+        "end": [
+            2016,
+            4,
+            21,
+            15,
+            40
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3062",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "olivier-combe-angular-2--un-framework-pour-les-gouverner-tous",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Olivier",
+                "lastname": "Combe",
+                "legacyId": 6262,
+                "links": [],
+                "login": "6262",
+                "logoUrl": "ed5bfe517fe4cf235b9d6f6ee99f80bb",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            14,
+            50
+        ],
+        "summary": "Apr\u00e8s une longue p\u00e9riode de d\u00e9veloppement, Angular 2 s'appr\u00eate enfin \u00e0 faire son entr\u00e9e dans la cour des grands. D\u00e9couvrez le framework qui vous fera oublier React et vous donnera envie d'\u00e9crire des classes.\nVenez d\u00e9couvrir pourquoi Angular 2 sera le gros challenger de 2016.",
+        "title": "Angular 2: un framework pour les gouverner tous",
+        "video": "https://www.infoq.com/fr/presentations/mix-it-olivier-combe-angular2"
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            699000000
+        ],
+        "description": "Apr\u00e8s avoir d\u00e9couvert et appliqu\u00e9 des \u00ab processus agiles \u00bb pendant plus de cinq ans, nous avions r\u00e9volutionn\u00e9 notre fa\u00e7on de g\u00e9rer les \u00e9volutions de nos diff\u00e9rents produits. \n \nEt puis, apr\u00e8s un rachat et l\u2019apparition de nouveaux objectifs, nous avons commenc\u00e9 \u00e0 concevoir de tout nouveaux produits.\n \nApr\u00e8s quelques de mois de travail seulement, nous avons atteint les limites de l\u2019organisation en place\u2026 un comble pour une soci\u00e9t\u00e9 qui \u00e9tait per\u00e7ue comme une r\u00e9f\u00e9rence Lyonnaise en mati\u00e8re d\u2019agilit\u00e9 !\n \nLes interactions avec les acteurs ext\u00e9rieurs \u00e0 l\u2019\u00e9quipe n\u2019\u00e9taient pas assez fluides.\nLes \u00e9quipes \u00e9taient plac\u00e9es en situation trop attentiste, pas assez impliqu\u00e9es dans la vision des besoins et l\u2019\u00e9laboration des solutions.\nLe Manager et le Product Owner \u00e9taient \u00e0 la fois trop directifs et pas assez pr\u00e9sents.\n \nIl \u00e9tait temps de nous remettre en question !\n \nTout en gardant en t\u00eate les pr\u00e9ceptes de base de l\u2019agilit\u00e9, nous avons revu le d\u00e9coupage et le focus de nos \u00e9quipes, le r\u00f4le du Product Owner et du manager, le partage de la vision produit, l\u2019approche des inconnus fonctionnels et techniques\u2026\n \nCeci a eu des effets inattendus dans la vie des \u00e9quipes mais aussi dans l\u2019organisation manag\u00e9riale de notre R&D.\n \nApr\u00e8s plus d\u2019un an d\u2019application, nous voulons partager avec vous nos nouvelles pratiques courantes qui r\u00e9pondent \u00e0 ces probl\u00e9matiques et favorisent des \u00e9quipes dynamiques et impliqu\u00e9es !",
+        "end": [
+            2016,
+            4,
+            21,
+            13,
+            30
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3072",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "sylvain-chabert-julien-paffumi-anne-matray-jerome-guilloux-passer-de-processus-agiles--a-la-papa---a-des-equipes-dynamiques-et-impliquees",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Sylvain",
+                "lastname": "Chabert",
+                "legacyId": 558,
+                "links": [],
+                "login": "558",
+                "logoUrl": "409675b674a9ef6952453b2fa58e3d69",
+                "role": "ATTENDEE"
+            },
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Julien",
+                "lastname": "Paffumi",
+                "legacyId": 6952,
+                "links": [],
+                "login": "6952",
+                "logoUrl": "9ea6c1163e9e7475490d45c808ba04f4",
+                "role": "ATTENDEE"
+            },
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Anne",
+                "lastname": "Matray",
+                "legacyId": 6692,
+                "links": [],
+                "login": "6692",
+                "logoUrl": "9c4b427242f379207804632ac6099b89",
+                "role": "ATTENDEE"
+            },
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "J\u00e9r\u00f4me",
+                "lastname": "Guilloux",
+                "legacyId": 7922,
+                "links": [],
+                "login": "7922",
+                "logoUrl": "b04f180f4e903d46b151264d5295d983",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            12,
+            40
+        ],
+        "summary": "Apr\u00e8s avoir appliqu\u00e9 des \u00ab processus agiles \u00bb pendant de nombreuses ann\u00e9es, nous avons atteint les limites de l\u2019organisation en place.\nNous avons revu le fonctionnement des \u00e9quipes et des r\u00f4les qui l'entourent.\nCe nouveau mod\u00e8le favorise des \u00e9quipes dynamiques et impliqu\u00e9es, venez le d\u00e9couvrir !",
+        "title": "Passer de processus agiles \"\u00e0 la papa\", \u00e0 des \u00e9quipes dynamiques et impliqu\u00e9es",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            699000000
+        ],
+        "description": "Vous \u00eates d\u00e9veloppeur, ScrumMaster ou m\u00eame manager et vous avez des probl\u00e8mes avec votre logiciel ? \nVous avez adopt\u00e9 SCRUM mais vos probl\u00e8mes n\u2019ont pas disparu.\nBugs, r\u00e9gressions, maintenance difficile, changements co\u00fbteux bref vous avez un probl\u00e8me de qualit\u00e9.\n\nSi les m\u00e9thodes agiles se concentrent sur l\u2019aspect organisationnel du d\u00e9veloppement logiciel, elles en disent tr\u00e8s peu sur les pratiques de production du code.\nOr pour valoriser des \u201clogiciels op\u00e9rationnels\u201d et \u201cadaptables aux changements\u201d (comme le pr\u00e9conise le manifeste agile), la mani\u00e8re de produire le code est essentielle.\nLe software craftsmanship est avant tout un \u00e9tat d\u2019esprit, mais il repose sur des pratiques concr\u00e8tes de d\u00e9veloppement pioch\u00e9es dans d\u2019autres m\u00e9thodes comme eXtreme Programming.\nDans ce retour d\u2019exp\u00e9rience, un d\u00e9veloppeur et un manager vous pr\u00e9senterons quelques unes des pratiques que nous avons adopt\u00e9es et qui ont chang\u00e9 notre fa\u00e7on de d\u00e9velopper.\nNous vous donnerons aussi des pistes pour les transposer (ou pas !) dans votre contexte.",
+        "end": null,
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3082",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "nicolas-ruffel-charles-bouttaz-software-craftsmanship---le-chainon-manquant-de-l-agilite--",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Nicolas",
+                "lastname": "Ruffel",
+                "legacyId": 40,
+                "links": [],
+                "login": "40",
+                "logoUrl": "1025925472aace679689108086fa64a2",
+                "role": "ATTENDEE"
+            },
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Charles",
+                "lastname": "Bouttaz",
+                "legacyId": 530,
+                "links": [],
+                "login": "530",
+                "logoUrl": "bd0f602050b2f95901199d3a3789eb56",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": null,
+        "summary": "Vous cherchez des pratiques de d\u00e9veloppement pour cr\u00e9er des logiciels bien con\u00e7us ? \nVous vous m\u00e9fiez des techniques miracles qui augmentent la productivit\u00e9, r\u00e9duisent les bugs et font repousser les cheveux ?\nMauvaise nouvelle on ne peut rien pour vos cheveux...",
+        "title": "Software Craftsmanship : le cha\u00eenon manquant de l\u2019agilit\u00e9 ?",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            699000000
+        ],
+        "description": "Ensemble, nous allons \"jeter un \u0153il\" sur l'\u00e9volution du management de la tradition vers l\u2019agile et apprendre comment elle influence une organisation et la gestion de projet moderne.\n\nLa pr\u00e9sentation est expos\u00e9e sous deux volets. \n\nUn premier volet d\u2019une heure avec la pr\u00e9sentation de l\u2019\u00e9volution du management et ce qui se dessine aujourd\u2019hui + un jeu Penny game ou Marshmallow.\n\nUn deuxi\u00e8me volet d\u2019une heure environ pour pr\u00e9senter le monde VUCA (Volatile Incertain Complexe et Ambigu\u00eb) dans lequel nous vivons de plus en plus aujourd'hui + le jeu de Lego Cynefin.",
+        "end": [
+            2016,
+            4,
+            21,
+            10,
+            10
+        ],
+        "event": "mixit16",
+        "format": "WORKSHOP",
+        "id": "3092",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "frederic-rodriguez-evolution-du-management-dans-notre-monde-complexe",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Frederic",
+                "lastname": "Rodriguez",
+                "legacyId": 6992,
+                "links": [],
+                "login": "6992",
+                "logoUrl": "54186fdee02482093196fc99675d0715",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            8,
+            20
+        ],
+        "summary": "Cette pr\u00e9sentation est destin\u00e9e \u00e0 des d\u00e9butants. Elle a pour but d\u2019initier une prise de connaissance, un \u00e9tat d\u2019esprit et d\u00e9couvrir comment notre vision actuelle du management \u00e9volue.",
+        "title": "Evolution du management dans notre monde complexe",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            699000000
+        ],
+        "description": "C\u2019est bien beau de jongler avec les post-it pour faire du air kanban jusqu\u2019au bout de la nuit mais parfois la flamme ne brille plus dans votre regard, celui de vos amis ou de vos coll\u00e8gues, vous perdez peu \u00e0 peu l\u2019envie ou la force de travailler, de sortir, vous tombez malade \u00e0 r\u00e9p\u00e9tition\u2026\n\nLe syndrome de l\u2019\u00e9puisement professionnel n\u2019est pas un mythe, notre exp\u00e9rience personnelle et celle de notre entourage l\u2019affirme clairement. Heureusement, gr\u00e2ce aux apports de la sociologie et de la psychologie nous pouvons vous proposer des moyens de le d\u00e9pister et des solutions concr\u00e8tes pour retrouver l\u2019enthousiasme au travail et en-dehors.\n\nMais nous ne comptons pas nous arr\u00eater l\u00e0 ! Nous vous proposerons \u00e9galement des solutions tout aussi concr\u00e8tes pour am\u00e9liorer les rapports humains dans votre entreprise (en plus, c\u2019est tr\u00e8s rentable), et la soci\u00e9t\u00e9 toute enti\u00e8re (objectif ambitieux) ! Voyage au pays de l'humanisme et du bon sens pour tous ceux qui trouvent que le monde en manque.",
+        "end": [
+            2016,
+            4,
+            22,
+            9,
+            40
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3112",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "goulven-champenois-marie-cecile-paccard-guerir-le-burnout--c-est-possible--",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Goulven",
+                "lastname": "Champenois",
+                "legacyId": 5862,
+                "links": [],
+                "login": "5862",
+                "logoUrl": "c10372fa185fe953f9546de18cc3ef0c",
+                "role": "ATTENDEE"
+            },
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Marie-c\u00e9cile",
+                "lastname": "Paccard",
+                "legacyId": 6922,
+                "links": [],
+                "login": "6922",
+                "logoUrl": "50750c4b08fb46fc26fc8547fccee54c",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            8,
+            50
+        ],
+        "summary": "Le spectre du burnout s'agite dans les m\u00e9dias mais au fait, qui est-il, quelles sont ses raisons ? Nous l\u2019avons test\u00e9 pour vous et vous pr\u00e9senterons la panoplie pour chasser ce fant\u00f4me et comment aller bien au-del\u00e0, pour le faire dispara\u00eetre !",
+        "title": "Gu\u00e9rir le burnout, c\u2019est possible !",
+        "video": "https://www.youtube.com/watch?v=KZz30Rr5LZY"
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            700000000
+        ],
+        "description": "Le daily standup meeting est populaire chez les managers et silencieusement pol\u00e9mique chez les d\u00e9veloppeurs. M\u00eame quand il est bien accept\u00e9, il reste le rituel le plus rat\u00e9 dans sa mise en \u0153uvre. \n\nQui participe ? Vous sentez-vous oblig\u00e9 de prouver que vous avez bien travaill\u00e9 la veille ? Attendez-vous les retardataires ? Est-ce vraiment chacun son tour de parole ? Mais ce \"respect\" emp\u00eache les discussions n\u00e9cessaires ! Trouvez-vous votre standup trop bazar ou au contraire trop militaire ?  Ecoutez-vous vos pairs ou r\u00e9fl\u00e9chissez vous \u00e0 ce que vous allez dire ? Est-ce un day changing rituel ?\n\nRegardez-moi dans les yeux et dites moi la v\u00e9rit\u00e9. Au final, qu'attendez-vous du daily ? \n\nQu'est-ce que cela changerait pour vous, s'il disparaissait ? \n\nUn daily standup sans board est comme une voiture sans GPS. Vous arriverez \u00e0 destination, un jour, mais vous ne savez pas le chemin restant \u00e0 parcourir.  Vous ne voyez pas les embouteillages avant d'y \u00eatre et ne changez pas le trajet initialement pr\u00e9vu. Du bon vieux cycle en V. \n\nJe vous propose d'am\u00e9nager votre board pour obtenir un standup \u00e9nergisant que l'\u00e9quipe attend avec impatience et qui vous permettent r\u00e9ellement d'atteindre votre objectif. Les diff\u00e9rentes pistes sont tir\u00e9es de mon exp\u00e9rience et du livre 99 vizualizations examples. Ce sera \u00e0 vous de piocher et d'it\u00e9rer dessus.",
+        "end": [
+            2016,
+            4,
+            21,
+            14,
+            40
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3122",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "florence-chabanois-comment-obtenir-des-standup-qui-marchent",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Florence",
+                "lastname": "Chabanois",
+                "legacyId": 1016,
+                "links": [],
+                "login": "1016",
+                "logoUrl": "2168f37bb0b5cd95a32f9e6094bc053c",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            13,
+            50
+        ],
+        "summary": "Personne ne parle du standup meeting ! Il est si simple \u00e0 mettre en \u0153uvre. Source de crispations et de baillements, il rel\u00e8ve pourtant plus souvent de la parodie d'agilit\u00e9 que d'auto-organisation. Il est temps d'ajuster votre board pour qu'il soit v\u00e9ritablement \u00e0 son service. Voici comment.",
+        "title": "Comment obtenir des standup qui marchent",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            700000000
+        ],
+        "description": "Sans nous en rendre compte, les r\u00e8gles induites lors de l'interaction orale d'humain \u00e0 humain sont transf\u00e9r\u00e9es au travers de mod\u00e8les mentaux vers les objets interactifs que nous manipulons quotidiennement. ll arrive alors que l'\u00e9change soit r\u00e9duit voire impossible, g\u00e9n\u00e9rant de la frustration et de la r\u00e9pulsion chez nos utilisateurs. \n\nCette conf\u00e9rence d\u00e9taillera avec humour les m\u00e9caniques de l'interaction medi\u00e9e gr\u00e2ce notamment \u00e0 l'analyse conversationnelle, discipline issue de l'\u00e9thnom\u00e9thodologie (ah oui \u00e7a calme hein ;)) et de nombreux exemples comparant la vie quotidienne et celle num\u00e9rique que nous cr\u00e9ons.",
+        "end": [
+            2016,
+            4,
+            22,
+            14,
+            10
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3132",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "bertrand-cochet--mais-tu-vas-m-ecouter--oui---",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Bertrand",
+                "lastname": "Cochet",
+                "legacyId": 6852,
+                "links": [],
+                "login": "6852",
+                "logoUrl": "0dc6d7d5557815f3652a5887aad90f0c",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            13,
+            20
+        ],
+        "summary": "La d\u00e9gradation de notre relation conversationnelle avec les machines qui nous entourent a tendance \u00e0 s'accentuer avec des supports toujours plus connect\u00e9s et mobiles. Il existe pourtant des techniques assez simples pour garantir efficience, fluidit\u00e9 et simplicit\u00e9 \u00e0 la port\u00e9e de tous.",
+        "title": "\"Mais tu vas m'\u00e9couter, oui ?\"",
+        "video": "https://www.infoq.com/fr/presentations/mix-it-bertrand-cochet-mais-tu-vas-m-ecouter"
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            700000000
+        ],
+        "description": "Cette causerie fait le tour d\u2019une dizaine d\u2019ann\u00e9es de \u00ab recherches et d\u00e9veloppements \u00bb personnels, \u00e0 la recherche du\n\u00ab son \u00bb, cet objet que l\u2019on construit, que l\u2019on \u00e9coute, qui se d\u00e9veloppe dans le temps et l\u2019espace, que l\u2019on apprivoise\nparfois pour assembler en une composition \u00e9lectroacoustique. Quelle culture, quelles connaissances, mais aussi quels\nlogiciels, quels mat\u00e9riels sont-ils n\u00e9cessaires pour mener \u00e0 bien une telle entreprise, o\u00f9 l\u2019informatique et la programmation\njouent aujourd\u2019hui un r\u00f4le fondamental ? Extraits d\u2019oeuvres, pr\u00e9sentation de quelques outils, y compris des cr\u00e9ations\nde l\u2019auteur, logiciels existants ou \u00e0 programmer soi-m\u00eame, un panorama des techniques et pratiques du domaine est propos\u00e9\n\u00e0 toute personne souhaitant s\u2019initier ou se lancer dans cette qu\u00eate sans fin...",
+        "end": [
+            2016,
+            4,
+            22,
+            12,
+            50
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3142",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "jean-jacques-girardot-the-construkction-of-sound",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Jean-jacques",
+                "lastname": "Girardot",
+                "legacyId": 6902,
+                "links": [],
+                "login": "6902",
+                "logoUrl": "495ea9aa2914c9f174365204b0555565",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            12,
+            0
+        ],
+        "summary": "Du \"software bending\" aux petits trucs des compositeurs de musique \u00e9lectroacoustique, d\u00e9couvrez tout ce qui est n\u00e9cessaire pour cr\u00e9er des assemblages sonores int\u00e9ressants.",
+        "title": "The construKction of Sound",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            700000000
+        ],
+        "description": "Cette pr\u00e9sentation r\u00e9sumera dans un premier temps l'\u00e9tat actuel de la r\u00e9flexion men\u00e9e par le projet EthicAa financ\u00e9 par l'Agence Nationale pour la Recherche sur la probl\u00e9matique de l'\u00e9thique et des agents autonomes. Nous pr\u00e9senterons ensuite une proposition de l'\u00c9cole des Mines de Saint \u00c9tienne visant \u00e0 r\u00e9pondre au besoin d'une facult\u00e9 de jugement moral et \u00e9thique pour des agents BDI (Belief Desire Intention) et conclurons  par l'impl\u00e9mentation de ces agents en Jason.",
+        "end": null,
+        "event": "mixit16",
+        "format": "RANDOM",
+        "id": "3152",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "nicolas-cointe-agents-autonomes-ethiques",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Nicolas",
+                "lastname": "Cointe",
+                "legacyId": 6772,
+                "links": [],
+                "login": "6772",
+                "logoUrl": "879ccefe04934d817d0fb1e750d1b246",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": null,
+        "summary": "Pr\u00e9sentation de travaux de recherche sur le d\u00e9veloppement d'agents autonomes \u00e9thiques BDI. Pr\u00e9sentation d'une impl\u00e9mentation en Jason",
+        "title": "Agents autonomes \u00e9thiques",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            700000000
+        ],
+        "description": "Tour d\u2019horizon des syst\u00e8mes d\u2019\u00e9criture dans le monde avec 2 objectifs : \n\n1. Comprendre la vari\u00e9t\u00e9 des syst\u00e8mes d'\u00e9criture  \n\nIl faut parler de la classifications des diff\u00e9rentes syst\u00e8mes d\u2019\u00e9criture afin de comprendre la vari\u00e9t\u00e9 des structures existantes (\u00e9critures alphab\u00e9tiques, syllabiques, logographique\u2026). Du latin (une lettre = un son) au chinois (un caract\u00e8re = un mot), il existe beaucoup d\u2019autres fa\u00e7on d\u2019\u00e9crire le language (un caract\u00e8re = une syllabe / une voyelle ou consonne / une indication phon\u00e9tique\u2026)\n\n2. Donner aux participants des exemples concerts d\u2019inspirations qu\u2019ils pourront adapter \u00e0 leur typographie latine.\n\nPour chaque grand type de syst\u00e8me d\u2019\u00e9criture, je m\u2019appuierai sur une ou deux langues connue - ou moins connue - afin de montrer concr\u00e8tement les possibilit\u00e9s que ces structures ouvrent : abjad (arabe, h\u00e9breu), abujida (langues en inde et asie du sud-est), logogramme (chinois), syllabaire (japonais), alphabets (cyrillique).",
+        "end": [
+            2016,
+            4,
+            21,
+            14,
+            40
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3162",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "jessica-bordeau-ecritures-du-monde---typographie-latine",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Jessica",
+                "lastname": "Bordeau",
+                "legacyId": 6632,
+                "links": [],
+                "login": "6632",
+                "logoUrl": "2f38a64d06efd5433027cc5b04265fb0",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            13,
+            50
+        ],
+        "summary": "Du grec au chinois, en passant par l'arabe, le cyrillique ou m\u00eame l'inuit, il existe dans le monde de nombreuses fa\u00e7ons d'\u00e9crire le language. L\u2019esth\u00e9tique, la structure et les particularit\u00e9s de chaque syst\u00e8me d'\u00e9criture devient source d'inspiration concr\u00e8te pour designers et typographes.",
+        "title": "\u00c9critures du monde & typographie latine",
+        "video": "https://www.infoq.com/fr/presentations/mix-it-jessica-bordeau-ecritures-et-typographie"
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            700000000
+        ],
+        "description": "#Plan de la conf\u00e9rence\n* D\u00e9finition ergonomie\n* Quelques concepts de base\n** Les principales lois de la Gestalt (forme) : loi de la bonne forme, loi de la proximit\u00e9, loi de similitude, loi de destin commun, loi de familiarit\u00e9, loi de cl\u00f4ture.\n** La ligne de flottaison\n** F pattern\n** Affordance\n** Loi de Fitts\n** Loi de Hick ou Hick-Hyman\n** Standart ou convention\n* Quelques bonnes pratiques :\n** Facilit\u00e9 la compr\u00e9hension : Coh\u00e9rence externe et interne\n** Bien architecturer son site :\n** Le site doit \u00eatre lisible\n** Une bonne organisation visuelle\n** Le site est r\u00e9actif/interactif\n** L\u2019utilisateur a le contr\u00f4le\n** Faire attention \u00e0 l\u2019accessibilit\u00e9\n* Exemples et mises en application\n** Glop / Pas glob : mise en parall\u00e8le de bons et de mauvais exemples\n** Avant / Apr\u00e8s : exemples de mises en application des principes de la conf\u00e9rence\nLe tout agr\u00e9ment\u00e9 de petits dessins.",
+        "end": [
+            2016,
+            4,
+            22,
+            14,
+            10
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3172",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "florie-sechaud-l-ergonomie-web",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Florie",
+                "lastname": "S\u00e9chaud",
+                "legacyId": 4631,
+                "links": [],
+                "login": "4631",
+                "logoUrl": "39745bfcf5728631c60120ad80d06150",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            13,
+            20
+        ],
+        "summary": "D\u00e9couvrez \u00e0 partir de quelques notions et r\u00e8gles simples comment am\u00e9liorer l'ergonomie de votre site / application web, afin d'offrir \u00e0 vos utilisateurs une meilleure exp\u00e9rience.",
+        "title": "L'ergonomie web",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            700000000
+        ],
+        "description": "La motivation, c'est notre carburant personnel, ce qui nous fait nous lever le matin, ce qui peut nous faire accomplir de grandes choses !\n\nAu cours de ma carri\u00e8re dans l'industrie du logiciel, j'ai crois\u00e9 \u00e0 plusieurs reprises des managers \u00e0 qui on n'avait pas expliqu\u00e9 (ou qui avaient mal compris) quels sont les rouages motivationnels et comment il influent sur notre travail au quotidien. Avec malheureusement des cons\u00e9quences f\u00e2cheuses pour les \u00e9quipes de d\u00e9veloppement.\n\nA travers un atelier ludique et participatif, venez d\u00e9couvrir vos facteurs de motivation personnels.\nVous repartirez avec une meilleure connaissance de vous-m\u00eame, ainsi que des techniques pour mieux comprendre les facteurs de motivation de vos coll\u00e8gues (ou collaborateurs si vous avez des responsabilit\u00e9s de management).",
+        "end": [
+            2016,
+            4,
+            22,
+            13,
+            10
+        ],
+        "event": "mixit16",
+        "format": "WORKSHOP",
+        "id": "3182",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "romain-vignes-sans-motivation-pas-d-action--",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Romain",
+                "lastname": "Vignes",
+                "legacyId": 7132,
+                "links": [],
+                "login": "7132",
+                "logoUrl": "165eaacc30b22244f3727577e1b9ecc5",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            11,
+            20
+        ],
+        "summary": "Atelier ludique et participatif, pour appr\u00e9hender les fondamentaux de la motivation et d\u00e9couvrir ses propres facteurs de motivation",
+        "title": "Sans motivation pas d'action !",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            700000000
+        ],
+        "description": "C'est l\u2019histoire d\u2019une petite physicienne tout droit sortie de l\u2019univers de \u201cthe big bang theory\u201d qui d\u00e9couvre avec surprise le monde de l\u2019entreprise totalement inconnu jusque alors : sa fa\u00e7on d\u00e9concertante de prendre pour certaines toutes ses hypoth\u00e8ses et d\u2019utiliser les chiffres  comme si le simple fait d\u2019utiliser le signe \u201c%\u201d \u00e9tait un gage de v\u00e9rit\u00e9 absolue.\nCette pr\u00e9sentation sera ponctu\u00e9e d\u2019exemples concrets dont la fa\u00e7on dont les chiffres peuvent \u00eatre pr\u00e9sent\u00e9s en entreprise, et de ce que cela signifie d\u2019avoir un regard scientifique et critique sur ces derniers, et \u00e0 quelle point cela peut challenger les mentalit\u00e9s.",
+        "end": [
+            2016,
+            4,
+            22,
+            12,
+            50
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3192",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "claire-morin-qu-est-ce-qu-un-scientifique-pourrait-apporter-au-product-ownership--",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Claire",
+                "lastname": "Morin",
+                "legacyId": 7112,
+                "links": [],
+                "login": "7112",
+                "logoUrl": "fbcbd68cdc17c9e5f86d627b093322e2",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            12,
+            0
+        ],
+        "summary": "Les scientifiques vivent dans leur bulle loin de l\u2019entreprise, c\u2019est bien connu. Mais avec l\u2019av\u00e8nement de la data et surtout de la mesure et de la d\u00e9marche scientifique par le biais du lean start-up, leur fa\u00e7on d\u2019appr\u00e9hender les probl\u00e8mes et les donn\u00e9es pourrait bien s\u2019av\u00e9rer pr\u00e9cieuse..",
+        "title": "Qu'est-ce qu'un scientifique pourrait apporter au Product Ownership ?",
+        "video": "https://www.infoq.com/fr/presentations/mix-it-claire-morin-scientifique-et-product-ownership"
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            700000000
+        ],
+        "description": "Nous partirons de z\u00e9ro pour d\u00e9velopper une application web standard en kotlin. Nous utiliserons spring boot pour acc\u00e9l\u00e9rer l'exercice. \n\n  - param\u00e9trer maven pour la compilation crois\u00e9e kotlin - java\n  - d\u00e9marrer spring boot depuis kotlin,\n  - injection de d\u00e9pendance,\n  - utilisation des data class pour la s\u00e9rialisation json\n  - tests\n  - jpa et jdbc\n\nPour cet atelier, vous aurez besoin: \n\n  - d'un JDK 6 +,\n  - de maven, \n  - de git, \n  - d'un intellij idea avec une version r\u00e9cente du plugin kotlin.\n\nNous nous familiariserons avec la syntaxe et l'outillage de kotlin en d\u00e9veloppant une petite application web from scratch. Cet exercice nous permettra de voir les nombreux apports du langage et de comprendre les quelques contraintes.\n\nNous verrons que kotlin peut remplacer java de mani\u00e8re quasi transparente dans toutes les couches d'un application. L'application r\u00e9alis\u00e9e vous fournira une base sur laquelle vous appuyer pour vos propres projets.",
+        "end": [
+            2016,
+            4,
+            21,
+            13,
+            40
+        ],
+        "event": "mixit16",
+        "format": "WORKSHOP",
+        "id": "3202",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "gaetan-zoritchak-atelier--utiliser-kotlin-dans-une-architecture-standard",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Gaetan",
+                "lastname": "Zoritchak",
+                "legacyId": 21,
+                "links": [],
+                "login": "21",
+                "logoUrl": "2799805396016e89df69d26d22c4445c",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            11,
+            50
+        ],
+        "summary": "Kotlin est enfin sorti en version 1.0. Nous verrons dans cet atelier comment d\u00e9velopper en kotlin dans une architecture \u00abstandard\u00bb: spring, jpa ou jdbc.",
+        "title": "Atelier: utiliser Kotlin dans une architecture standard",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            700000000
+        ],
+        "description": "The W3C has been working on a Web Components standard for almost three years, but it is still a work in progress. But polyfills like allows current developers to use Web Components today, and incorporate to their apps widgets from any library  of web components. \n\nThe best known of these libraries is Google's Polymer. In Google IO 2015 conference, Google has at last released the long awaited version 1.0 of Polymer, making it even faster, more stable and at least suitable for \"serious\" applications. In this lab you will use Polymer 1.0 with Material Design Polymer Elements to design and develop a web application using web components.\n\nYou will learn to use the following technologies:\n\n- Polymer and Web Components (for mobile and desktop)\n- The Paper Elements for Polymer (material design)\n- The integration of Polymer components in Angular (1 and 2) applications.\n\nMandatory Installs prior to lab:\n+ npm \n+ bower\n+ your favorite HTML/CSS/JS IDE (I suggest Sublime Text)",
+        "end": [
+            2016,
+            4,
+            22,
+            15,
+            10
+        ],
+        "event": "mixit16",
+        "format": "WORKSHOP",
+        "id": "3212",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "horacio-gonzalez-hand-s-on-web-components-with-polymer",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Horacio",
+                "lastname": "Gonzalez",
+                "legacyId": 7142,
+                "links": [],
+                "login": "7142",
+                "logoUrl": "6f8d092fec403f766c734ce36e1eef93",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            13,
+            20
+        ],
+        "summary": "Deux heures pour d\u00e9couvrir les composants web et Polymer, pour passer des concepts \u00e0 la cr\u00e9ation d'une premi\u00e8re application web compl\u00e8te avec Polymer.",
+        "title": "Hand's on Web Components with Polymer",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            701000000
+        ],
+        "description": "Vous vous posez des questions sur la s\u00e9curit\u00e9 de votre produit, mais vous ne\nsavez pas par o\u00f9 commencer. Un audit de code? Un test de p\u00e9n\u00e9tration?\nQu'est-ce qu'une analyse de risques?\n\nApprenez les diff\u00e9rences entre ces pratiques, comment organiser votre\nprocessus s\u00e9curit\u00e9, et comment appliquer tout de suite quelques id\u00e9es \u00e0 vos \napplications.",
+        "end": [
+            2016,
+            4,
+            21,
+            13,
+            30
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3222",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "geoffroy-couprie-securiser-votre-produit--from-scratch",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Geoffroy",
+                "lastname": "Couprie",
+                "legacyId": 7092,
+                "links": [],
+                "login": "7092",
+                "logoUrl": "ed9901b9b80743c05aedf58b4f4926dd",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            12,
+            40
+        ],
+        "summary": "La s\u00e9curit\u00e9 logicielle n'est pas un \u00e9v\u00e8nement ponctuel, c'est un process pour lequel on pr\u00e9pare et entraine son \u00e9quipe. Commencez cette pr\u00e9paration d\u00e8s maintenant et \u00e9vitez les surprises le moment venu: comment r\u00e9agir \u00e0 un DoS? Qu'est-ce qu'un test de p\u00e9n\u00e9tration? Comment r\u00e9pondre aux incidents?",
+        "title": "S\u00e9curiser votre produit, from scratch",
+        "video": "https://www.infoq.com/fr/presentations/mix-it-geoffroy-couprie-security"
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            701000000
+        ],
+        "description": "Lors de cet atelier, nous vous proposons de d\u2019apprendre \u00e0 reconna\u00eetre les hypoth\u00e8ses sur lesquelles une proposition de valeur d'un produit se base. Souvent elles paraissent tellement \u00e9videntes qu\u2019on oublie qu\u2019elles sont l\u00e0 ! Chaque \u00e9quipe aura sa proposition de valeur concurrente, elles devront trouver quelles sont les hypoth\u00e8ses sur lesquelles leur proposition se base, et comment elle peut les valider (ou les invalider) au plus vite. Avant que le march\u00e9 de la rattrape...",
+        "end": [
+            2016,
+            4,
+            21,
+            10,
+            10
+        ],
+        "event": "mixit16",
+        "format": "WORKSHOP",
+        "id": "3232",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "claire-morin-nicolas-verite-strategie-ux---formuler-mes-hypotheses--slitch-versus-yeepeechat-",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Claire",
+                "lastname": "Morin",
+                "legacyId": 7112,
+                "links": [],
+                "login": "7112",
+                "logoUrl": "fbcbd68cdc17c9e5f86d627b093322e2",
+                "role": "ATTENDEE"
+            },
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Nicolas",
+                "lastname": "V\u00e9rit\u00e9",
+                "legacyId": 6942,
+                "links": [],
+                "login": "6942",
+                "logoUrl": "96002804bafaa163bd21b0a2fb155a8c",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            8,
+            20
+        ],
+        "summary": "Un des grands changements lorsqu\u2019on travaille en Lean Startup est le fait de mettre au grand jour les hypoth\u00e8ses de travail. Apprenez \u00e0 les formuler pour \u00eatre efficace dans vos interviews utilisateurs et l\u2019analyse de vos donn\u00e9es, et gagner la course entre Slitch et YeePeeChat.",
+        "title": "Strat\u00e9gie UX : Formuler mes hypoth\u00e8ses (Slitch versus YeePeeChat)",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            701000000
+        ],
+        "description": "The code example for the talk is an algorithmic folk tale (\"I know an old lady who swallowed a fly...\"). This is an easy to grasp domain. There is no need to understand complicated economics theory, or video encoding. The algorithmic component gives the code example a useful amount of complexity. The techniques that apply to this simple example also apply in the real world.\n\nDuplication catches our eye, yet much of design is about encapsulating differences. Focusing on the bits that are alike leads to awkward abstractions.\n\nThis talk shows how focusing on differences instead of similarities provides a better outcome.",
+        "end": [
+            2016,
+            4,
+            22,
+            15,
+            10
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3242",
+        "language": "ENGLISH",
+        "room": "UNKNOWN",
+        "slug": "katrina-owen-succession--a-refactoring-story",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Katrina",
+                "lastname": "Owen",
+                "legacyId": 5872,
+                "links": [],
+                "login": "5872",
+                "logoUrl": "51ee7bed9ecbc33aec92517f1fbb6cc2",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            14,
+            20
+        ],
+        "summary": "Refactoring sometimes devolves into an appalling mess. You're chasing a broken test suite, and every change just makes it worse. At other times it's a slow, controlled process culminating in dreadful design.\n\nThis talk presents an end-to-end refactoring that demonstrates strategies to avoid this.",
+        "title": "Succession: A Refactoring Story",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            701000000
+        ],
+        "description": "We'll dive into the skills & contexts that are needed for learning new languages & ideas, and investigate how to apply those to code we write. We'll map the course from an excited beginner to a sometimes world-weary expert; we'll discuss how to respond when a team member says they don't understand our code; we'll talk about the role that working memory & energy play in comprehension; and we'll have a grand time exploring idiosyncrasies from human languages around the globe.",
+        "end": [
+            2016,
+            4,
+            22,
+            9,
+            40
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3252",
+        "language": "ENGLISH",
+        "room": "UNKNOWN",
+        "slug": "laura-savino--reading-in-a-new-language-",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Laura",
+                "lastname": "Savino",
+                "legacyId": 5852,
+                "links": [],
+                "login": "5852",
+                "logoUrl": "49caddf151f4fac963db0812653fc547",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            8,
+            50
+        ],
+        "summary": "You've written in many languages since your first \"hello world\"\u2013but how did you become fluent? And now that you're more senior, how well do your teammates understand the code you write? We'll draw parallels between human languages & code\u2013and show how willpower & empathy can improve fluency in both.",
+        "title": "\"Reading in a New Language\"",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            701000000
+        ],
+        "description": "We love our silver bullets don\u2019t we? Constantly chasing the dream that the next big thing will solve all our past problems. It doesn\u2019t matter if it\u2019s a language, framework, platform or library, we\u2019re out there chasing it. Why? Well because it\u2019s going to solve our needs, it\u2019s going to solve the business needs. Well supposedly it will. And how much is it going to cost? Not that much, especially if we\u2019re not the ones paying the bills.\n\nIt\u2019s about time we look at the hard facts and ask those difficult questions. Are we really looking for a silver bullet?  Why are we constantly riding the technology bandwagon? Where is the churn going to take us? And at what cost?",
+        "end": [
+            2016,
+            4,
+            21,
+            11,
+            35
+        ],
+        "event": "mixit16",
+        "format": "KEYNOTE",
+        "id": "3262",
+        "language": "ENGLISH",
+        "room": "UNKNOWN",
+        "slug": "hadi-hariri-silver-bullet-syndrome",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Hadi",
+                "lastname": "Hariri",
+                "legacyId": 7252,
+                "links": [],
+                "login": "7252",
+                "logoUrl": "c2072a8f90f9fe379ca21c3af39a3757",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            11,
+            10
+        ],
+        "summary": "What's the next Silver Bullet that will solve all our issues? Come find out!",
+        "title": "Silver Bullet Syndrome",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            701000000
+        ],
+        "description": "Kotlin, a language developed by JetBrains for nearly 5 years is very close to its first release. However, did you know that it's being used in production for over a few years now already? Both inside and outside of JetBrains there are people deploying Kotlin applications for Android platform, for Web Applications and just about any other type of application.\n \nWhy are people using it instead of Java or some of the other languages out there? Primarily because it provides significant benefits in terms of conciseness, readability and safety, without some of the drawbacks that adopting a new language has such as a higher learning curve or interoperability with existing code and ecosystems. \n \nIn this talk we'll cover some aspects of Kotlin that can really help you in your daily development, focusing on solving issues versus highlighting language features.",
+        "end": [
+            2016,
+            4,
+            21,
+            9,
+            10
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3272",
+        "language": "ENGLISH",
+        "room": "UNKNOWN",
+        "slug": "hadi-hariri-kotlin---ready-for-production",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Hadi",
+                "lastname": "Hariri",
+                "legacyId": 7252,
+                "links": [],
+                "login": "7252",
+                "logoUrl": "c2072a8f90f9fe379ca21c3af39a3757",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            8,
+            20
+        ],
+        "summary": "Kotlin is a language that is being used by many companies worldwide. In this talk we'll see what Kotlin brings to the table when it comes to value.",
+        "title": "Kotlin - Ready for Production",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            702000000
+        ],
+        "description": "Go is a lovely little programming language designed by smart people you can trust and continuously improved by a large and growing open-source community. Since its release in 2009, it's quickly become the language of the server, powering some of today's most exciting software projects and organizations, including Docker, CloudFlare, HashiCorp, CoreOS, and many more. In this talk we'll do a Go crash-course, and build, grow, and profile an example microservice. You'll leave with an understanding of Go's strengths, and hopefully consider it for your next project.",
+        "end": [
+            2016,
+            4,
+            21,
+            14,
+            40
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3282",
+        "language": "ENGLISH",
+        "room": "UNKNOWN",
+        "slug": "peter-bourgon-go--from-zero-to-hero",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Peter",
+                "lastname": "Bourgon",
+                "legacyId": 7262,
+                "links": [],
+                "login": "7262",
+                "logoUrl": "78ab1e45de2c357b8e36dc9bd70eeba2",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            13,
+            50
+        ],
+        "summary": "Go is a lovely little programming language that's almost perfectly suited to writing microservices. Join the session for a crash-course in Go, where we'll build an example microservice from first principles, and hopefully convince you to try Go for your next project!",
+        "title": "Go, from Zero to Hero",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            702000000
+        ],
+        "description": "Pour d\u00e9velopper des applications r\u00e9actives, RxJava est une solution compl\u00e8te, mais des alternatives int\u00e9ressantes existent. Apr\u00e8s une rapide pr\u00e9sentation des diff\u00e9rentes API de composition r\u00e9actives disponibles ainsi qu\u2019un aper\u00e7u des changements n\u00e9cessaires pour passer d\u2019un mod\u00e8le de programmation bloquant \u00e0 r\u00e9actif, ce Hands-On proposera une introduction \u00e0 la programmation Reactive en utilisant Reactor Core 2.5, une alternative l\u00e9g\u00e8re et performante. Nous apprendrons \u00e0 utiliser les types r\u00e9actifs [Flux](http://projectreactor.io/core/docs/api/reactor/core/publisher/Flux.html) (N \u00e9l\u00e9ments) et [Mono](http://projectreactor.io/core/docs/api/reactor/core/publisher/Mono.html) (1 \u00e9l\u00e9ment) qui constituent la nouvelle API lite au coeur de [Reactor](http://projectreactor.io/) 2.5 qui r\u00e9volutionne le monde des API Rx sur la JVM en offrant une API reprenant le vocabulaire [Reactive eXtensions](http://reactivex.io/) nativement bas\u00e9e sur Java 8 et [Reactive Streams](http://www.reactive-streams.org/) avec un niveau de performance jamais atteint. Vous aurez aussi droit \u00e0 un aper\u00e7u du support r\u00e9actif qui sera prochainement int\u00e9gr\u00e9 \u00e0 Spring Boot ...",
+        "end": [
+            2016,
+            4,
+            21,
+            15,
+            40
+        ],
+        "event": "mixit16",
+        "format": "WORKSHOP",
+        "id": "3292",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "stephane-maldini-a-lite-rx-api-for-the-jvm",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Stephane",
+                "lastname": "Maldini",
+                "legacyId": 6292,
+                "links": [],
+                "login": "6292",
+                "logoUrl": "28f1e1df33de53d322cf42f4e6aec5ac",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            13,
+            50
+        ],
+        "summary": "Une introduction \u00e0 la programmation reactive nouvelle g\u00e9n\u00e9ration avec [Reactor 2.5](http://projectreactor.io). Pourquoi ? Comment ? Qu'est ce que j'en fais moi maintenant ? C'est quoi le backpressure ? La r\u00e9ponse a toutes ces questions et d'autres moins audacieuses dans cette session !",
+        "title": "A lite Rx API for the JVM",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            702000000
+        ],
+        "description": "Selon votre niveau,  vous pourrez r\u00e9alisez des mouvements simples ou tester des algorithmes de cin\u00e9matique ou d'\u00e9quilibre en relation avec diff\u00e9rents capteurs.\nD'abord sur le simulateur V-REP puis sur un v\u00e9ritable robot. Vous pouvez regarder des exemples de travaux sur http://www.poppy-prof.fr\n A la fin de ce workshop, le participant repartira avec les connaissances suffisantes pour ce lancer dans la programmation de robots.\nThis workshop aim to show how you can easily program Poppy and its creatures.",
+        "end": [
+            2016,
+            4,
+            22,
+            9,
+            40
+        ],
+        "event": "mixit16",
+        "format": "WORKSHOP",
+        "id": "3302",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "julien-jehl-stephane-ribas-atelier-robotique-poppy---how-can-you-easily-program-poppy-and-its-creatures-",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Julien",
+                "lastname": "Jehl",
+                "legacyId": 7392,
+                "links": [],
+                "login": "7392",
+                "logoUrl": "372a8273b3ee71dc7304493e8e69869c",
+                "role": "ATTENDEE"
+            },
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Stephane",
+                "lastname": "Ribas",
+                "legacyId": 7612,
+                "links": [],
+                "login": "7612",
+                "logoUrl": "576278f45e80cd9b3bf9438b53095eb7",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            7,
+            50
+        ],
+        "summary": "Venez prendre le contr\u00f4le d'un robot Poppy. Dans cet atelier, nous pr\u00e9senterons la plateforme r\u00e9unissant informatique (python), \u00e9lectronique (arduino), \"m\u00e9canique\" (moteur) et fabrication (imprimante 3D). Nous insisterons sur la partie programmation du robot en python, Scratch, SNAP.",
+        "title": "Atelier robotique Poppy - How can you easily program poppy and its creatures.",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            702000000
+        ],
+        "description": "If you ever approached RxJava before you might come to a conclusion that this library solves problems most of us don't have. Reactively composing streams of data, virtual time, marble diagrams and event-driven programming - where most of our code is pretty much just transferring data from database to presentation layer.\n\nDuring this live coding session for Rx beginners and intermediates there will not be a single slide, we start with empty IDE to step-by-step implement key constructs in RxJava. Most importantly we will discover how this high-level abstraction can help in existing projects. When to use RxJava, what problems does it solve and when using it is an excess of form over substance.",
+        "end": [
+            2016,
+            4,
+            21,
+            13,
+            30
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3342",
+        "language": "ENGLISH",
+        "room": "UNKNOWN",
+        "slug": "tomasz-nurkiewicz-rxjava-in-legacy-projects",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Tomasz",
+                "lastname": "Nurkiewicz",
+                "legacyId": 7222,
+                "links": [],
+                "login": "7222",
+                "logoUrl": "a0a3a4200899708103f7430d87d56e24",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            12,
+            40
+        ],
+        "summary": "During this live coding session for Rx beginners and intermediates there will not be a single slide, we start with empty IDE to step-by-step implement key constructs in RxJava.",
+        "title": "RxJava in legacy projects",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            702000000
+        ],
+        "description": "Les recherches de Bren\u00e9 Brown sur la vuln\u00e9rabilit\u00e9, les \u00e9v\u00e9nements comme FailCon et les publications r\u00e9centes sur le pouvoir des introvertis pr\u00e9sentent des formes de r\u00e9ussite \u00e0 l'oppos\u00e9 de l'image d'entrepreneur-e invincible, guid\u00e9-e par son instinct infaillible et sa confiance en soi in\u00e9branlable. \nLa confiance en soi est devenue un mythe inutile et m\u00eame destructeur, dans une soci\u00e9t\u00e9 qui a besoin de savoir lib\u00e9rer les talents de chacun, pas seulement des plus extravertis.",
+        "end": [
+            2016,
+            4,
+            21,
+            8,
+            0
+        ],
+        "event": "mixit16",
+        "format": "KEYNOTE",
+        "id": "3352",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "laure-jouteau-la-confiance-en-soi--ca-ne-sert-a-rien",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Laure",
+                "lastname": "Jouteau",
+                "legacyId": 6532,
+                "links": [],
+                "login": "6532",
+                "logoUrl": "7f4e44353b899c8099f5cf28beaa05d0",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            7,
+            35
+        ],
+        "summary": "La confiance en soi est souvent \u00e9rig\u00e9e comme l'outil indispensable au succ\u00e8s : croire en soi, savoir se mettre en avant, se vendre. Et si la confiance en soi n'avait rien \u00e0 voir avec la r\u00e9ussite ?",
+        "title": "La confiance en soi, \u00e7a ne sert \u00e0 rien",
+        "video": "https://www.infoq.com/fr/presentations/mix-it-laure-jouteau-confiance-en-soi"
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            702000000
+        ],
+        "description": "gRPC is a language-neutral, platform-neutral RPC framework and toolset which is based on the finalized HTTP/2 standard and developed and open sourced by Google. You can use it to build highly performant, scalable APIs by allowing the definition of services using a powerful binary serialization toolset and language called Protocol Buffers. gRPC helps you to generate idiomatic client and server stubs from service definitions written in a variety of languages. In this session you\u2019ll learn all about gRPC and how it benefits from being based on HTTP/2 and through the use of a working demo and detailed code examples you\u2019ll see how to build gRPC enabled microservices and clients.",
+        "end": [
+            2016,
+            4,
+            21,
+            14,
+            40
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3362",
+        "language": "ENGLISH",
+        "room": "UNKNOWN",
+        "slug": "robert-kubis-hooked-on-http-2--microservices-development-with-grpc",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Robert",
+                "lastname": "Kubis",
+                "legacyId": 7542,
+                "links": [],
+                "login": "7542",
+                "logoUrl": "f0ac73d24f71363ff0f7b9a4c32f010e",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            13,
+            50
+        ],
+        "summary": "In this session you\u2019ll learn all about gRPC and how it benefits from being based on HTTP/2 and through the use of a working demo and detailed code examples you\u2019ll see how to build gRPC enabled microservices and clients.",
+        "title": "Hooked on HTTP/2: Microservices development with gRPC",
+        "video": "https://www.infoq.com/fr/presentations/mix-it-robert-kubis-http2-microservices-grpc"
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            702000000
+        ],
+        "description": "Do you remember the game Simon says from the 80s? I don\u2019t know about you, but I know many that spent hours trying to press those specific sequences of red, green, blue and yellow buttons in the correct order.  But why play on your own? We\u2019ve implemented a gRPC server that allows you to play Simon with other players over the internet!\n\nIn this workshop we will dive into the toolset and libraries to build your very own Simon Says client for this server. We will have a message description in Protocol Buffers format and some stub code in several languages ready for you to play with. The goal for this workshop is for you to have a working client that you can use to play (and beat!) other attendees of the workshop.",
+        "end": [
+            2016,
+            4,
+            22,
+            13,
+            10
+        ],
+        "event": "mixit16",
+        "format": "WORKSHOP",
+        "id": "3372",
+        "language": "ENGLISH",
+        "room": "UNKNOWN",
+        "slug": "robert-kubis-mete-atamel-hands-on-grpc-experience-building-your-own-multiplayer-game-client",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Robert",
+                "lastname": "Kubis",
+                "legacyId": 7542,
+                "links": [],
+                "login": "7542",
+                "logoUrl": "f0ac73d24f71363ff0f7b9a4c32f010e",
+                "role": "ATTENDEE"
+            },
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Mete",
+                "lastname": "Atamel",
+                "legacyId": 7872,
+                "links": [],
+                "login": "7872",
+                "logoUrl": "116f111c3534b2bd96f4df36b7708054",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            11,
+            20
+        ],
+        "summary": "Do you remember the game Simon says from the 80s? I don\u2019t know about you, but I know many that spent hours trying to press those specific sequences of red, green, blue and yellow buttons in the correct order.  But why play on your own? Join us to get hands-on experience with gRPC!",
+        "title": "Hands-on gRPC experience building your own multiplayer game client",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            702000000
+        ],
+        "description": "Je vais vous raconter l'aventure humaine que notre \u00e9quipe vit au quotidien, avec nos difficult\u00e9s et nos r\u00e9ussites.\n\nDans ce retour d'exp\u00e9rience, je vais vous parler de :\n* valeurs agiles\n* propri\u00e9t\u00e9 collective de l'architecture\n* am\u00e9lioration continue\n* auto-organisation et co-responsabilit\u00e9\n* recrutement\n* management\n* bi\u00e8re\n* autobus\n\nCette session ne n\u00e9cessite pas de connaissances particuli\u00e8res sur l'agilit\u00e9.\nCette session est un retour d'exp\u00e9rience dans le cadre d'un projet informatique. Plusieurs \u00e9l\u00e9ments sont facilement transposables dans d'autres domaines.\nCette session parle d'\u00e9tat d'esprit agile, plus que de m\u00e9thodes agiles. Vous n'apprendrez rien sur Scrum, Lean,ou autre m\u00e9thode \"officielle\".",
+        "end": [
+            2016,
+            4,
+            21,
+            9,
+            10
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3422",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "emilie-esposito-rester-agile-en-grandissant---ce-qui-compte--c-est-les-valeurs-",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Emilie",
+                "lastname": "Esposito",
+                "legacyId": 6222,
+                "links": [],
+                "login": "6222",
+                "logoUrl": "9f13087e4a2d7eab22c131f297fbdfed",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            8,
+            20
+        ],
+        "summary": "**Retour d'exp\u00e9rience** de l'\u00e9quipe Kuzzle. En un an, la taille de l'\u00e9quipe a \u00e9t\u00e9 multipli\u00e9e par 3. C'est notre attachement aux valeurs agiles et au pragmatisme qui nous permet de rester agile tout en grandissant.",
+        "title": "Rester agile en grandissant - Ce qui compte, c'est les valeurs.",
+        "video": "https://www.infoq.com/fr/presentations/mix-it-emilie-esposito-rester-agile-en-grandissant"
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            702000000
+        ],
+        "description": "La r\u00e9trospective est un exercice important dans la d\u00e9marche agile, elle permet la mise en \u0153uvre de la boucle d'am\u00e9lioration continue.\nCette c\u00e9r\u00e9monie est souvent mal comprise, mal anim\u00e9, ce qui g\u00e9n\u00e8re de la frustration pour l'\u00e9quipe, des actions peu int\u00e9ressante et un abandon \u00e0 plus ou moins court terme.\nLa facilitation de r\u00e9trospective est un exercice particulier qui n\u00e9cessite beaucoup plus de comp\u00e9tence que l'animation classique de r\u00e9union.\nLe format, l'activit\u00e9 mise en \u0153uvre, le positionnement de l'animateur sont autant de param\u00e8tre qui auront une influence sur le r\u00e9sultat obtenu.\nCette session propose de revenir sur les bases de la facilitation de r\u00e9trospective. Elle permettra aussi de faire un tour d'horizon de quelques serious games \u00e0 mettre en \u0153uvre.",
+        "end": [
+            2016,
+            4,
+            22,
+            15,
+            10
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3432",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "maxime-bonnet-j-anime-une-retrospective-productive-",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Maxime",
+                "lastname": "Bonnet",
+                "legacyId": 6892,
+                "links": [],
+                "login": "6892",
+                "logoUrl": "7b2b39389e55078d65c09bf8c001ad4f",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            14,
+            20
+        ],
+        "summary": "Trop souvent, la boucle d'am\u00e9lioration continue, est n\u00e9glig\u00e9e ou mal mise en \u0153uvre. Cette session propose revenir sur la notion de facilitation lors des r\u00e9trospectives et de faire un tour des outils disponibles.",
+        "title": "J'anime une r\u00e9trospective productive.",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            702000000
+        ],
+        "description": "La programmation Reactive c'est un peu le sujet clivant dans une bonne pause caf\u00e9 avec ses pairs, c'est soit:\n- R\u00e9ponse A : \"N'importe quoi, \u00e7\u00e0 prendra jamais, on comprend rien et on en a m\u00eame pas besoin.\n- R\u00e9ponse B : \"T'as rien compris, t'es nul, c'est le futur, d'ailleurs j'ai remplac\u00e9 mon cloud \u00e0 \u00e9oliennes avec le gang le week-end dernier.\"\n\n[Reactor 2.5](http://projectreactor.io) a l'extr\u00eame ambition de cliver moins. On s'y est m\u00eame mis a plusieurs entre les contributeurs de RxJava, Reactor et Spring. Pourquoi ? Comment ? C'est quoi la backpressure ? Et que vient faire Spring Framework dans cette histoire ? La r\u00e9ponse a toutes ces questions et d'autres moins audacieuses dans cette session !",
+        "end": [
+            2016,
+            4,
+            21,
+            10,
+            10
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3442",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "stephane-maldini-du-reactive-rx-like-pour-java-8-et-plus---v-la-reactor-2-5--",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Stephane",
+                "lastname": "Maldini",
+                "legacyId": 6292,
+                "links": [],
+                "login": "6292",
+                "logoUrl": "28f1e1df33de53d322cf42f4e6aec5ac",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            9,
+            20
+        ],
+        "summary": "Une introduction \u00e0 la programmation reactive nouvelle g\u00e9n\u00e9ration avec [Reactor 2.5](http://projectreactor.io). Pourquoi ? Comment ? Qu'est ce que j'en fais moi maintenant ? C'est quoi le backpressure ? La r\u00e9ponse a toutes ces questions et d'autres moins audacieuses dans cette session !",
+        "title": "Du Reactive Rx-Like pour Java 8 et plus ? V'la Reactor 2.5 !",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            703000000
+        ],
+        "description": "Imagine if the Black Panthers had a technology education program. That is the type of tech activism Idalin aims to bring to the table through her work. Her goal is to merge computer programming with political education so that black and brown people understand the impact technology and social structures have on their lives and possess the means to produce the fundamental change needed for social justice to be a reality. Idalin Bob\u00e9 is an IT consultant at ThoughtWorks and a tech activist. Her passion is bridging the digital divide among hard-to-reach populations and creating more technical community-driven leaders. Originally from the North Side of Philadelphia, Idalin has impacted thousands of men, women and children globally with her work in tech literacy and empowerment.\n\nHer most recent work was supporting Ferguson, Missouri activists with technology tools through Hands Up United's \"Roy Clay Sr. Institute.\" The program trains young community leaders to gain 21st century skills, combining computer coding and political education. Other tech initiatives she spearheaded were: building a computer lab for a school in South India serving people of the lowest caste, building fundraising campaigns to teach 2,000 girls of color through Black Girls CODE and organizing social justice hackathons with Qeyno Labs Hackathons and #YesWeCode.\n\nStill under 35, Idalin is a rising social entrepreneur, whose work has positioned her at the forefront as an innovative leader in technology, activism and community development.",
+        "end": [
+            2016,
+            4,
+            22,
+            16,
+            10
+        ],
+        "event": "mixit16",
+        "format": "KEYNOTE",
+        "id": "3452",
+        "language": "ENGLISH",
+        "room": "UNKNOWN",
+        "slug": "idalin-bobe-21st-century-activists-need-21st-century-skill-sets",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Idalin",
+                "lastname": "Bob\u00e9",
+                "legacyId": 6672,
+                "links": [],
+                "login": "6672",
+                "logoUrl": "9820d958862530243ac90fe13736f2e7",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            15,
+            45
+        ],
+        "summary": "Let's talk tech, race, class and our role as technologists to join the international struggle.",
+        "title": "21st Century Activists Need 21st Century Skill-sets",
+        "video": "https://www.infoq.com/fr/presentations/mix-it-idalin-bobe-21-century-tech-activists"
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            703000000
+        ],
+        "description": "Vous, participants \u00e0 la conf\u00e9rence, serez des clients ou des \u00e9quipiers en force. Vous allez \u00eatre impliqu\u00e9s dans notre projet \"Agilit\u00e9 en une journ\u00e9e\". Vous avez le choix de votre implication : 1h (une it\u00e9ration), 1/2journ\u00e9e, ou toute la journ\u00e9e (le projet complet). Vous participerez \u00e0 ce qui vous fait envie, que vous soyez expert ou d\u00e9butant, ou simplement curieux de vivre un projet agile de l\u2019int\u00e9rieur : sprint, d\u00e9mo, r\u00e9tro, sprint0, livraison, \u2026 Vous participerez \u00e0 un projet agile original, vous pratiquerez plein de c\u00e9r\u00e9monies, aurez du feedback, progresserez et d\u00e9couvrirez de nouvelles mani\u00e8res de g\u00e9rer vos c\u00e9r\u00e9monies \u2026 Une \u00e9quipe de ProductOwner/DEV/ScrumMaster exp\u00e9riment\u00e9s de diff\u00e9rents horizons et soci\u00e9t\u00e9s vous accompagnera. Vous red\u00e9couvrirez plein de bonnes pratiques, vous ferez plein d\u2019erreurs et vous en sortirez grandis. C\u00f4t\u00e9 technique, nous ferons un peu de Big Data (Apache Flink), et un peu de d\u00e9veloppement WEB et Javascript. Et tout \u00e7a en nous amusant !!!",
+        "end": null,
+        "event": "mixit16",
+        "format": "WORKSHOP",
+        "id": "3492",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "matthieu-gironnet-jean-charles-durand-franck-rageade-xavier-nopre-agilite-en-une-journee",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Matthieu",
+                "lastname": "Gironnet",
+                "legacyId": 7752,
+                "links": [],
+                "login": "7752",
+                "logoUrl": "4c75c9e12938f09b872013e04a048ef8",
+                "role": "ATTENDEE"
+            },
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Jean-charles",
+                "lastname": "Durand",
+                "legacyId": 7632,
+                "links": [],
+                "login": "7632",
+                "logoUrl": "d8b0b74f2928faac190d3e106126404b",
+                "role": "ATTENDEE"
+            },
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Franck",
+                "lastname": "Rageade",
+                "legacyId": 7702,
+                "links": [],
+                "login": "7702",
+                "logoUrl": "593c18ea25ef1171700928819c543fc6",
+                "role": "ATTENDEE"
+            },
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Xavier",
+                "lastname": "Nopre",
+                "legacyId": 5352,
+                "links": [],
+                "login": "5352",
+                "logoUrl": "96d381174efe41f85fc16f47b9921e05",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": null,
+        "summary": "Venez prendre part \u00e0 un projet agile ! Ensemble, que ce soit pour 1h, 1/2 journ\u00e9e ou plus, nous allons d\u00e9velopper une petite application WEB de fa\u00e7on agile, avec les c\u00e9r\u00e9monies et les bonnes pratiques. Venez participer, observer, questionner, ... pour d\u00e9couvrir l'agilit\u00e9 en action !",
+        "title": "Agilit\u00e9 en une journ\u00e9e",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            703000000
+        ],
+        "description": "Se lancer sans business model puis construire son offre avec les usages et les demandes autour du produit.\n\nJe ferai un talk enti\u00e8rement bas\u00e9 sur mon exp\u00e9rience des 4 ann\u00e9es au sein de Bunkr. \nIt\u00e9rations, pivots, coups durs, management, relation investisseurs, premiers clients...",
+        "end": [
+            2016,
+            4,
+            22,
+            11,
+            45
+        ],
+        "event": "mixit16",
+        "format": "KEYNOTE",
+        "id": "3502",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "alexis-jamet-du-produit-au-business-model--en-passant-par-le-pivot",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Alexis",
+                "lastname": "Jamet",
+                "legacyId": 7212,
+                "links": [],
+                "login": "7212",
+                "logoUrl": "3d7775715465f132769c43f50741e886",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            11,
+            20
+        ],
+        "summary": "Avoir une id\u00e9e, c'est bien au d\u00e9but. Avoir un produit, c'est mieux ensuite. Avoir un business model, c'est avoir une entreprise.",
+        "title": "Du produit au business model, en passant par le pivot",
+        "video": "https://www.infoq.com/fr/presentations/mix-it-alexis-jamet-du-produit-au-business-model"
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            703000000
+        ],
+        "description": "More information asap",
+        "end": [
+            2016,
+            4,
+            22,
+            7,
+            30
+        ],
+        "event": "mixit16",
+        "format": "KEYNOTE",
+        "id": "3522",
+        "language": "ENGLISH",
+        "room": "UNKNOWN",
+        "slug": "joel-spolsky-the-impact-of-code-on-society",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Joel",
+                "lastname": "Spolsky",
+                "legacyId": 5522,
+                "links": [],
+                "login": "5522",
+                "logoUrl": "346a8788078a658ec6608bb37a663324",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            7,
+            5
+        ],
+        "summary": "More information asap",
+        "title": "The Impact of Code on Society",
+        "video": "https://www.infoq.com/fr/presentations/mix-it-joel-spolsky-impact-of-code-on-society"
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            703000000
+        ],
+        "description": "La recette magique? Combiner une approche aggressive avec la remont\u00e9e de m\u00e9tadonn\u00e9es et un monitoring pr\u00e9cis. Venez d\u00e9couvrir les outils et techniques qui nous permettent de d\u00e9velopper une app g\u00e9rant des paiements sans mourir de trouille!",
+        "end": [
+            2016,
+            4,
+            22,
+            15,
+            10
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3532",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "pierre-yves-ricau-crash-fast---furious",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Pierre-yves",
+                "lastname": "Ricau",
+                "legacyId": 277,
+                "links": [],
+                "login": "277",
+                "logoUrl": "06c6a07275076c6b525e2b14018ad78e",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            14,
+            20
+        ],
+        "summary": "L'app Square Register Android ne crashe pas. Enfin... presque pas!",
+        "title": "Crash Fast & Furious",
+        "video": "https://www.infoq.com/fr/presentations/mix-it-pierre-yves-ricau-crash-fast-and-furious"
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            703000000
+        ],
+        "description": "We will project ourselves in the future via an imaginary day in an heavily IOT\u2019d world and understand the importance of our developments today and the impact of short term choices versus long term thinking. We will cover several dimensions of programming for IOT ranging from best practices, to tools, from standards to business models, from ethics and security to ecosystems and environmental impact. Participants will have a clear vision of how to develop for an IOT world and how it is changing existing development practices.",
+        "end": [
+            2016,
+            4,
+            22,
+            14,
+            10
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3542",
+        "language": "ENGLISH",
+        "room": "UNKNOWN",
+        "slug": "matteo-mazzeri-where-s-the-reset-button-in-a-smart-city-",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Matteo",
+                "lastname": "Mazzeri",
+                "legacyId": 5752,
+                "links": [],
+                "login": "5752",
+                "logoUrl": "0e487753f4c933d7e78ea41c8b2ba6be",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            13,
+            20
+        ],
+        "summary": "As the virtual merges onto the physical the impact software has on our lives becomes ever stronger. Programmable connected objects are invading our cities, industries and homes. In the absence of a coherent & secure ecosystem chaos is assured. In this talk we'll explore possible solutions.",
+        "title": "Where\u2019s the reset button in a smart city?",
+        "video": null
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            703000000
+        ],
+        "description": "I'll explain what's going on inside the .git directory when you commit, check out, merge, resolve conflicts, push and pull. I'll focus on the graph structure that underpins Git and the way the properties of this graph dictate Git\u2019s behavior.  I'll show you how to use these properties to understand what Git has done, what it is doing, and what it will do.",
+        "end": [
+            2016,
+            4,
+            21,
+            10,
+            10
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3552",
+        "language": "ENGLISH",
+        "room": "UNKNOWN",
+        "slug": "mary-rose-cook-git-from-the-inside-out",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Mary rose",
+                "lastname": "Cook",
+                "legacyId": 5782,
+                "links": [],
+                "login": "5782",
+                "logoUrl": "bfb7553ad3a564727391fa9be2352546",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            9,
+            20
+        ],
+        "summary": "A deep dive into the internals of Git.",
+        "title": "Git from the inside out",
+        "video": "https://www.infoq.com/fr/presentations/mix-it-mary-rose-cook-git-from-the-inside-out"
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            703000000
+        ],
+        "description": "D\u00e9cidez de monter votre \u00e9quipe de recherche au Coll\u00e8ge de France \u00e0 Paris. Obtenez votre poste, puis partez en voyage. D\u00e9cidez de voir un iceberg. Allez \u00e0 Ushuaia, le \u00ab bout du monde \u00bb. Fa\u00eetes-y un trou b\u00e9ant dans votre portefeuille. Payez-vous ainsi le luxe de passer deux jours d\u2019ennui naus\u00e9eux sur les eaux d\u00e9cha\u00een\u00e9es au sud du Cap Horn.  Esp\u00e9rez entrevoir entre deux temp\u00eates de neige un continent froid, hostile, et avec de la chance, un manchot. Voyez ledit manchot et quelques milliers de ses cousins. Revenez en France prendre vos fonctions au Coll\u00e8ge de France. Modifiez tous vos projets de recherche et risquez votre statut durement acquis pour essayer de revoir le manchot sans refaire de trous dans votre portefeuille. Parlez de votre d\u00e9marche constructive bien que mentalement discutable \u00e0 la radio. Attirez ainsi l'attention des organisateurs de MiXiT. Fa\u00eetes-vous inviter. Le tour est jou\u00e9.",
+        "end": [
+            2016,
+            4,
+            21,
+            16,
+            40
+        ],
+        "event": "mixit16",
+        "format": "KEYNOTE",
+        "id": "3562",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "marie-manceau-recette-pour-parvenir-a-donner-une-conference-sur-les-embryons-de-manchot-a-mixit",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Marie",
+                "lastname": "Manceau",
+                "legacyId": 7342,
+                "links": [],
+                "login": "7342",
+                "logoUrl": "1fe5e5e6f7973d0589f90366cce9ac23",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            16,
+            15
+        ],
+        "summary": "D\u00e9cidez de monter votre \u00e9quipe de recherche au Coll\u00e8ge de France \u00e0 Paris. Obtenez votre poste, puis partez en voyage. D\u00e9cidez de voir un iceberg. Allez \u00e0 Ushuaia, le \u00ab bout du monde \u00bb.",
+        "title": "Recette pour parvenir \u00e0 donner une conf\u00e9rence sur les embryons de manchot \u00e0 MiXiT",
+        "video": "https://www.infoq.com/fr/presentations/mix-it-marie-manceau-embryons-manchot"
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            703000000
+        ],
+        "description": "ResearchKit is a great example of how mobile technology can improve traditionnal processes, and why it matters.\n\nI would like to give a general presentation of ResearchKit, and showcase a couple of apps powered by this framework. I would like to explain what new capabilities are made possible for medical studies with smartphones, and why it\u2019s important for our health. Finally, I would like to talk about the open-source project itself, and how Apple enabled developers and researchers to contribute to the framework.",
+        "end": [
+            2016,
+            4,
+            22,
+            8,
+            40
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3592",
+        "language": "ENGLISH",
+        "room": "UNKNOWN",
+        "slug": "vincent-tourraine-changing-medical-research-on-mobile",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Vincent",
+                "lastname": "Tourraine",
+                "legacyId": 795,
+                "links": [],
+                "login": "795",
+                "logoUrl": "74079210c61f36dff0a74f24da5727e7",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            7,
+            50
+        ],
+        "summary": "How can mobile apps improve our health by changing how researchers conduct medical studies? This talk focuses on ResearchKit, an open-source framework created by Apple to help scientists make better apps.",
+        "title": "Changing Medical Research on Mobile",
+        "video": "https://www.infoq.com/fr/presentations/mix-it-vincent-tourraine-medical-research-on-mobile"
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            704000000
+        ],
+        "description": "Tim Urban from [Wait But Why](http://waitbutwhy.com/) on Artificial Intelligence.\nThat will be a remote keynote, on Skype.\n\n*Spoiler alert!* His article on AI, [The AI Revolution: The Road to Superintelligence](http://waitbutwhy.com/2015/01/artificial-intelligence-revolution-1.html)",
+        "end": [
+            2016,
+            4,
+            21,
+            16,
+            15
+        ],
+        "event": "mixit16",
+        "format": "KEYNOTE",
+        "id": "3602",
+        "language": "ENGLISH",
+        "room": "UNKNOWN",
+        "slug": "tim-urban-tim-urban-s-keynote-on-ai",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Tim",
+                "lastname": "Urban",
+                "legacyId": 7962,
+                "links": [],
+                "login": "7962",
+                "logoUrl": "cdaf873c33f051e535da2ccf39bae526",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            21,
+            15,
+            50
+        ],
+        "summary": "Tim Urban from [Wait But Why](http://waitbutwhy.com/) on Artificial Intelligence",
+        "title": "Tim Urban's Keynote on AI",
+        "video": "https://www.infoq.com/fr/presentations/mix-it-tim-urban-ai"
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            28,
+            15,
+            38,
+            33,
+            704000000
+        ],
+        "description": "Les d\u00e9veloppeurs ont longtemps h\u00e9sit\u00e9s entre les g\u00e9n\u00e9rateurs de parsers, comme lex et yacc, et l'\u00e9criture \u00e0 la main, de pr\u00e9f\u00e9rence en C. On sait maintenant que les g\u00e9n\u00e9rateurs sont souvent limit\u00e9s, et que les parsers manuels sont complexes et souvent vuln\u00e9rables.\nEn appliquant l'approche des parser combinators, plus flexibles que les g\u00e9n\u00e9rateurs, et plus pr\u00e9cis que les parsers manuels, on obtient des parsers simples \u00e0 d\u00e9velopper et maintenir.\nEn utilisant la gestion m\u00e9moire garantie par le compilateur Rust, on peut pousser la performance du d\u00e9codage \u00e0 ses limites, par exemple par du parsing \"zero copy\", d'o\u00f9 la biblioth\u00e8que de parsers \"nom\".\n\nCette conf\u00e9rence d\u00e9crit les astuces fournies par le langage Rust, et comment on peut les appliquer pour obtenir du code s\u00fbr et performant avec peu d'effort. On abordera aussi les parties th\u00e9oriques des langages et parsers, ainsi que les (mauvaises) pratiques des formats de fichier actuels. Enfin, on \u00e9tudiera les outils con\u00e7us pour aider au d\u00e9veloppement et \u00e0 la maintenance de parsers.",
+        "end": [
+            2016,
+            4,
+            22,
+            14,
+            10
+        ],
+        "event": "mixit16",
+        "format": "TALK",
+        "id": "3612",
+        "language": "FRENCH",
+        "room": "UNKNOWN",
+        "slug": "geoffroy-couprie-des-parsers-surs-avec-rust-et-nom",
+        "speakers": [
+            {
+                "company": "",
+                "description": {},
+                "email": "",
+                "events": [],
+                "firstname": "Geoffroy",
+                "lastname": "Couprie",
+                "legacyId": 7092,
+                "links": [],
+                "login": "7092",
+                "logoUrl": "ed9901b9b80743c05aedf58b4f4926dd",
+                "role": "ATTENDEE"
+            }
+        ],
+        "start": [
+            2016,
+            4,
+            22,
+            13,
+            20
+        ],
+        "summary": "L'\u00e9criture de parsers est un exercice int\u00e9ressant, mais dangereux: on ne compte plus les erreurs d'impl\u00e9mentations, vuln\u00e9rabilit\u00e9s et crashes en production caus\u00e9s par des parsers. En utilisant la m\u00e9thode des parser combinators et la gestion m\u00e9moire de Rust, on \u00e9vitera tous ces \u00e9cueils.",
+        "title": "Des parsers s\u00fbrs avec Rust et nom",
+        "video": "https://www.infoq.com/fr/presentations/mix-it-geoffroy-couprie-des-parsers-surs-avec-rust-et-nom"
+    }
+]
