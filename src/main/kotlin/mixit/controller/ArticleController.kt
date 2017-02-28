@@ -60,7 +60,7 @@ class ArticleController(val repository: ArticleRepository,
         redirectPermanently("$baseUri/blog/${a.slug[req.language()]}")
     }
 
-    fun findAllView(req: ServerRequest) = repository.findAll().collectList().then { articles ->
+    fun findAllView(req: ServerRequest) = repository.findAll(req.language()).collectList().then { articles ->
         val model = mapOf(Pair("articles", articles.map { it.toDto(req.language(), markdownConverter) }))
         ok().render("articles", model)
     }

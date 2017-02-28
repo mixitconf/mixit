@@ -34,10 +34,13 @@ class ArticleRepository(val template: ReactiveMongoTemplate) {
     fun findBySlug(slug: String, lang: Language) : Mono<Article> =
             template.findOne(Query().addCriteria(where("slug.$lang").`is`(slug)))
 
-    fun findAll(): Flux<Article> {
+    fun findAll(lang: Language? = null): Flux<Article> {
         val query = Query()
         query.with(Sort(Order(Direction.DESC, "addedAt")))
         query.fields().exclude("content")
+        if (lang != null) {
+            query.addCriteria(where("content.$lang").exists(true))
+        }
         return template.find(query)
     }
 
