@@ -8,13 +8,13 @@ data class User(
         @Id val login: String,
         val firstname: String,
         val lastname: String,
-        var email: String,
-        var company: String? = null,
-        var description: Map<Language, String> = emptyMap(),
-        var logoUrl: String? = null,
+        val email: String,
+        val company: String? = null,
+        val description: Map<Language, String> = emptyMap(),
+        val logoUrl: String? = null,
         val events: List<String> = emptyList(),
         val role: Role = Role.ATTENDEE,
-        var links: List<Link> = emptyList(),
+        val links: List<Link> = emptyList(),
         val legacyId: Long? = null
 )
 
