@@ -23,8 +23,6 @@ class NewsController : RouterFunctionProvider() {
 
     fun newsView(req: ServerRequest) = ok().render("news")
 
-    fun newsSse(req: ServerRequest) = ok().body(fromServerSentEvents(
-            Flux.interval(ofMillis(100)).map { "Hello $it!" }
-    ))
+    fun newsSse(req: ServerRequest) = ok().body(fromServerSentEvents(Flux.interval(ofMillis(100)).map { "Hello $it!" }))
 
 }

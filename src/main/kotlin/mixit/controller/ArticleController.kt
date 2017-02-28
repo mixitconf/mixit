@@ -50,9 +50,9 @@ class ArticleController(val repository: ArticleRepository,
     }
 
     fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug"), req.language()).then { a ->
-            val model = mapOf(Pair("article", a.toDto(req.language(), markdownConverter)))
-            ok().render("article", model)
-    }.otherwiseIfEmpty (repository.findBySlug(req.pathVariable("slug"), if (req.language() == FRENCH) ENGLISH else FRENCH).then { a ->
+        val model = mapOf(Pair("article", a.toDto(req.language(), markdownConverter)))
+        ok().render("article", model)
+    }.otherwiseIfEmpty(repository.findBySlug(req.pathVariable("slug"), if (req.language() == FRENCH) ENGLISH else FRENCH).then { a ->
         redirectPermanently("$baseUri${if (req.language() == ENGLISH) "/en" else ""}/blog/${a.slug[req.language()]}")
     })
 
@@ -61,14 +61,13 @@ class ArticleController(val repository: ArticleRepository,
     }
 
     fun findAllView(req: ServerRequest) = repository.findAll().collectList().then { articles ->
-        ok().render("articles",  mapOf(Pair("articles", articles.map { it.toDto(req.language(), markdownConverter) })))
+        val model = mapOf(Pair("articles", articles.map { it.toDto(req.language(), markdownConverter) }))
+        ok().render("articles", model)
     }
 
-    fun findOne(req: ServerRequest) = ok().json().body(
-            repository.findOne(req.pathVariable("id")))
+    fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("id")))
 
-    fun findAll(req: ServerRequest) = ok().json().body(
-            repository.findAll())
+    fun findAll(req: ServerRequest) = ok().json().body(repository.findAll())
 
 
     private fun Article.toDto(language: Language, markdownConverter: MarkdownConverter) = ArticleDto(

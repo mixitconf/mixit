@@ -41,7 +41,7 @@ class GlobalController(val repository: EventRepository) : RouterFunctionProvider
         val logoUrl: String,
         val logoType: String,
         val logoWebpUrl: String? = null
-    ){
+    ) {
         companion object {
             fun toDto(eventSponsoring: EventSponsoring):SponsorDto = SponsorDto(
                     eventSponsoring.sponsor.login,

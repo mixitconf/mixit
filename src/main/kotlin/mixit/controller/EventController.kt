@@ -20,10 +20,8 @@ class EventController(val repository: EventRepository) : RouterFunctionProvider(
         }
     }
 
-    fun findOne(req: ServerRequest) = ok().json().body(
-            repository.findOne(req.pathVariable("login")))
+    fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("login")))
 
-    fun findAll(req: ServerRequest) = ok().json().body(
-            repository.findAll())
+    fun findAll(req: ServerRequest) = ok().json().body(repository.findAll())
 
 }

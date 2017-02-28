@@ -54,29 +54,27 @@ class UserController(val repository: UserRepository,
         }
     }
 
-    fun findOneView(req: ServerRequest) = try {
-        val idLegacy = req.pathVariable("login").toLong()
-        repository.findByLegacyId(idLegacy)
-                .then { u -> ok().render("user", mapOf(Pair("user", u.toDto(req.language())))) }
-    } catch (e:NumberFormatException) {
-        repository.findOne(URLDecoder.decode(req.pathVariable("login"), "UTF-8"))
-                .then { u -> ok().render("user", mapOf(Pair("user", u.toDto(req.language())))) }
-    }
+    fun findOneView(req: ServerRequest) =
+            try {
+                val idLegacy = req.pathVariable("login").toLong()
+                repository.findByLegacyId(idLegacy).then { u ->
+                    ok().render("user", mapOf(Pair("user", u.toDto(req.language()))))
+                }
+            } catch (e:NumberFormatException) {
+                repository.findOne(URLDecoder.decode(req.pathVariable("login"), "UTF-8")).then { u ->
+                    ok().render("user", mapOf(Pair("user", u.toDto(req.language()))))
+                }
+            }
 
-    fun findOne(req: ServerRequest) =
-            ok().json().body(repository.findOne(req.pathVariable("login")))
+    fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("login")))
 
-    fun findAll(req: ServerRequest) =
-            ok().json().body(repository.findAll())
+    fun findAll(req: ServerRequest) = ok().json().body(repository.findAll())
 
-    fun findStaff(req: ServerRequest) =
-            ok().json().body(repository.findByRole(Role.STAFF))
+    fun findStaff(req: ServerRequest) = ok().json().body(repository.findByRole(Role.STAFF))
 
-    fun findOneStaff(req: ServerRequest) =
-            ok().json().body(repository.findOneByRole(req.pathVariable("login"), Role.STAFF))
+    fun findOneStaff(req: ServerRequest) = ok().json().body(repository.findOneByRole(req.pathVariable("login"), Role.STAFF))
 
-    fun findSpeakers(req: ServerRequest) =
-            ok().json().body(repository.findByRole(Role.SPEAKER))
+    fun findSpeakers(req: ServerRequest) = ok().json().body(repository.findByRole(Role.SPEAKER))
 
     fun findSpeakersByEvent(req: ServerRequest) =
             ok().json().body(repository.findByRoleAndEvent(Role.SPEAKER, req.pathVariable("event")))
@@ -84,25 +82,20 @@ class UserController(val repository: UserRepository,
     fun findOneSpeaker(req: ServerRequest) =
             ok().json().body(repository.findOneByRole(req.pathVariable("login"), Role.SPEAKER))
 
-    fun findSponsors(req: ServerRequest) =
-            ok().json().body(repository.findByRole(Role.SPONSOR))
+    fun findSponsors(req: ServerRequest) = ok().json().body(repository.findByRole(Role.SPONSOR))
 
     fun findOneSponsor(req: ServerRequest) =
             ok().json().body(repository.findOneByRole(req.pathVariable("login"), Role.SPONSOR))
 
-    fun create(req: ServerRequest) =
-            repository.save(req.bodyToMono<User>())
-            .then { u ->
-                created(create("/api/user/${u.login}")).json().body(u.toMono())
-            }
+    fun create(req: ServerRequest) = repository.save(req.bodyToMono<User>()).then { u ->
+        created(create("/api/user/${u.login}")).json().body(u.toMono())
+    }
 
-    fun findAboutView(req: ServerRequest) = repository.findByRole(Role.STAFF)
-            .collectList()
-            .then { u ->
-                val users = u.map { it.toDto(req.language()) }
-                Collections.shuffle(users)
-                ok().render("about",  mapOf(Pair("staff", users)))
-            }
+    fun findAboutView(req: ServerRequest) = repository.findByRole(Role.STAFF).collectList().then { u ->
+        val users = u.map { it.toDto(req.language()) }
+        Collections.shuffle(users)
+        ok().render("about",  mapOf(Pair("staff", users)))
+    }
 
     fun findSponsorsView(req: ServerRequest) = eventRepository.findOne("mixit17").then { events ->
         val sponsors = events.sponsors.map { toEventSponsoringDto(it, req.language()) }.groupBy { it.level }
