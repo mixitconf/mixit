@@ -47,7 +47,7 @@ The technologies used are:
 Sass, TypeScript, `messages*.properties` and templates should be live reloaded.
 
 ### Import and run the project in IDEA
- - Make sure you have at least IntelliJ IDEA `2016.3` and IDEA Kotlin plugin `1.1.0-rc-91+` (menu Tools -> Kotlin -> configure Kotlin Plugin Updates -> select "Early Access Preview 1.1" update channel -> check for updates now -> restart IDE after the update)
+ - Make sure you have at least IntelliJ IDEA `2016.3` and IDEA Kotlin plugin `1.1.0` (menu Tools -> Kotlin -> configure Kotlin Plugin Updates -> make sure "Stable" channel is selected -> check for updates now -> restart IDE after the update)
  - Import it in IDEA as a Gradle project **and make sure to uncheck "Create Module for each SourceSet"** to avoid a nasty bug that prevent to run the app in IDEA
  - Run `mongod` in command line
  - In IntelliJ IDEA, right click on `Application.kt` then `Run ...` or `Debug ...`
