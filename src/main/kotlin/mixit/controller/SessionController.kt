@@ -6,12 +6,12 @@ import mixit.repository.SessionRepository
 import mixit.support.RouterFunctionProvider
 import mixit.support.MarkdownConverter
 import mixit.support.json
-import mixit.support.redirectPermanently
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.*
-import org.springframework.web.reactive.function.server.ServerResponse.ok
+import org.springframework.web.reactive.function.server.ServerResponse.*
+import java.net.URI
 
 import java.time.LocalDateTime
 
@@ -51,7 +51,7 @@ class SessionController(val repository: SessionRepository,
     }
 
     fun redirectOneView(req: ServerRequest) = repository.findOne(req.pathVariable("id")).then { s ->
-        redirectPermanently("$baseUri/talk/${s.slug}")
+        permanentRedirect(URI("$baseUri/talk/${s.slug}")).build()
     }
 
     fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("login")))

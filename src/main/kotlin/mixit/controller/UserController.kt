@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.ServerResponse.*
 import toMono
+import java.net.URI
 import java.net.URI.*
 import java.net.URLDecoder
 import java.time.LocalDate
@@ -29,7 +30,7 @@ class UserController(val repository: UserRepository,
             (GET("/user/{login}") or GET("/speaker/{login}") or GET("/sponsor/{login}")) { findOneView(it) }
             (GET("/member/{login}") or GET("/profile/{login}") or GET("/member/sponsor/{login}") or GET("/member/member/{login}")) { status(PERMANENT_REDIRECT).location(create("$baseUri/user/${it.pathVariable("login")}")).build() }
             GET("/about/", this@UserController::findAboutView)
-            GET("/about") { redirectPermanently("$baseUri/about/") }
+            GET("/about") { ServerResponse.permanentRedirect(URI("$baseUri/about/")).build() }
             GET("/sponsors/", this@UserController::findSponsorsView)
         }
         accept(APPLICATION_JSON).route {

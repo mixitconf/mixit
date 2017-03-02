@@ -9,8 +9,9 @@ import mixit.support.*
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.MediaType.*
 import org.springframework.web.reactive.function.server.*
-import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.stereotype.Controller
+import org.springframework.web.reactive.function.server.ServerResponse.*
+import java.net.URI
 import java.time.format.DateTimeFormatter
 import java.util.*
 import java.util.stream.Collectors.*
@@ -40,7 +41,7 @@ class ArticleController(val repository: ArticleRepository,
                 GET("/", this@ArticleController::findAllView)
                 GET("/{slug}", this@ArticleController::findOneView)
             }
-            GET("/articles/") { redirectPermanently("$baseUri/blog/") }
+            GET("/articles/") { permanentRedirect(URI("$baseUri/blog/")).build() }
             (GET("/articles/{id}") or GET("/articles/{id}/") or GET("/article/{id}/")) { redirectOneView(it) }
         }
         ("/api/blog" and accept(APPLICATION_JSON)).route {
@@ -53,11 +54,11 @@ class ArticleController(val repository: ArticleRepository,
         val model = mapOf(Pair("article", a.toDto(req.language(), markdownConverter)))
         ok().render("article", model)
     }.otherwiseIfEmpty(repository.findBySlug(req.pathVariable("slug"), if (req.language() == FRENCH) ENGLISH else FRENCH).then { a ->
-        redirectPermanently("$baseUri${if (req.language() == ENGLISH) "/en" else ""}/blog/${a.slug[req.language()]}")
+        permanentRedirect(URI("$baseUri${if (req.language() == ENGLISH) "/en" else ""}/blog/${a.slug[req.language()]}")).build()
     })
 
     fun redirectOneView(req: ServerRequest) = repository.findOne(req.pathVariable("id")).then { a ->
-        redirectPermanently("$baseUri/blog/${a.slug[req.language()]}")
+        permanentRedirect(URI("$baseUri/blog/${a.slug[req.language()]}")).build()
     }
 
     fun findAllView(req: ServerRequest) = repository.findAll(req.language()).collectList().then { articles ->
