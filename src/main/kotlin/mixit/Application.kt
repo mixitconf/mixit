@@ -6,16 +6,14 @@ import mixit.repository.ArticleRepository
 import mixit.repository.EventRepository
 import mixit.repository.SessionRepository
 import mixit.repository.UserRepository
-import mixit.support.MarkdownConverter
-import mixit.support.MixitWebFilter
-import mixit.support.RouterFunctionProvider
-import mixit.support.run
+import mixit.support.*
 import org.springframework.boot.ApplicationRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration
 import org.springframework.boot.autoconfigure.data.mongo.ReactiveMongoDataAutoConfiguration
 import org.springframework.boot.autoconfigure.data.mongo.ReactiveMongoRepositoriesAutoConfiguration
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration
+import org.springframework.context.MessageSource
 import org.springframework.context.annotation.Bean
 import org.springframework.core.env.Environment
 import org.springframework.data.mongodb.ReactiveMongoDatabaseFactory
@@ -27,17 +25,19 @@ import org.springframework.web.reactive.result.view.mustache.MustacheResourceTem
 import org.springframework.web.reactive.result.view.mustache.MustacheViewResolver
 
 
+
 @SpringBootApplication(exclude = arrayOf(MongoAutoConfiguration::class, MongoDataAutoConfiguration::class, ReactiveMongoRepositoriesAutoConfiguration::class, ReactiveMongoDataAutoConfiguration::class))
 class Application {
 
     @Bean
-    fun viewResolver() = MustacheViewResolver().apply {
+    fun viewResolver(messageSource: MessageSource) = MustacheViewResolver().apply {
         val prefix = "classpath:/templates/"
         val suffix = ".mustache"
         val loader = MustacheResourceTemplateLoader(prefix, suffix)
         setPrefix(prefix)
         setSuffix(suffix)
         setCompiler(Mustache.compiler().escapeHTML(false).withLoader(loader))
+        setModelCustomizer({ model, exchange ->  customizeModel(model, exchange, messageSource) })
     }
 
     @Bean

@@ -22,13 +22,14 @@ import java.io.Reader;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.Locale;
+import java.util.Map;
+import java.util.function.BiConsumer;
 
 import com.samskivert.mustache.Mustache;
 import com.samskivert.mustache.Mustache.Compiler;
 
 import com.samskivert.mustache.Template;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
+import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
 import org.springframework.core.io.Resource;
@@ -50,7 +51,7 @@ public class MustacheViewResolver extends UrlBasedViewResolver {
 
 	private Charset charset = StandardCharsets.UTF_8;
 
-	protected static final Log logger = LogFactory.getLog(MustacheViewResolver.class);
+	private BiConsumer<Map<String, Object>, ServerWebExchange> modelCustomizer;
 
 
 	public MustacheViewResolver() {
@@ -83,7 +84,9 @@ public class MustacheViewResolver extends UrlBasedViewResolver {
 	public Mono<View> resolveViewName(String viewName, Locale locale) {
 		Resource resource = getApplicationContext().getResource(getPrefix() + viewName + getSuffix());
 		return super.resolveViewName(viewName, locale).map(view -> {
-			((MustacheView)view).setTemplate(createTemplate(resource));
+			MustacheView mustacheView = (MustacheView)view;
+			mustacheView.setTemplate(createTemplate(resource));
+			mustacheView.setModelCustomizer(this.modelCustomizer);
 			return view;
 		});
 	}
@@ -98,4 +101,7 @@ public class MustacheViewResolver extends UrlBasedViewResolver {
 		}
 	}
 
+	public void setModelCustomizer(BiConsumer<Map<String, Object>, ServerWebExchange> modelCustomizer) {
+		this.modelCustomizer = modelCustomizer;
+	}
 }

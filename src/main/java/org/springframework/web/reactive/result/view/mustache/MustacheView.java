@@ -19,12 +19,10 @@ package org.springframework.web.reactive.result.view.mustache;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
-import java.net.URLEncoder;
 import java.util.Locale;
 import java.util.Map;
-import java.util.Optional;
+import java.util.function.BiConsumer;
 
-import com.samskivert.mustache.Mustache;
 import com.samskivert.mustache.MustacheException;
 import com.samskivert.mustache.Template;
 import reactor.core.publisher.Flux;
@@ -35,7 +33,6 @@ import org.springframework.http.MediaType;
 import org.springframework.web.reactive.result.view.AbstractUrlBasedView;
 import org.springframework.web.reactive.result.view.View;
 import org.springframework.web.server.ServerWebExchange;
-import org.springframework.web.util.UriUtils;
 
 /**
  * Spring MVC {@link View} using the Mustache template engine.
@@ -47,6 +44,8 @@ import org.springframework.web.util.UriUtils;
 public class MustacheView extends AbstractUrlBasedView {
 
     private Template template;
+
+    private BiConsumer<Map<String, Object>, ServerWebExchange> modelCustomizer;
 
     public MustacheView() {
         setRequestContextAttribute("context");
@@ -62,27 +61,9 @@ public class MustacheView extends AbstractUrlBasedView {
 
                 DataBuffer dataBuffer = exchange.getResponse().bufferFactory().allocateBuffer();
                 Writer writer = new OutputStreamWriter(dataBuffer.asOutputStream(), getDefaultCharset());
-                Locale locale = exchange.getRequest().getHeaders().getAcceptLanguageAsLocale();
-                Optional<String> username = exchange.getSession().block().getAttribute("username");
-                if (username.isPresent()) {
-                    model.put("username", username.get());
+                if (this.modelCustomizer != null) {
+                    this.modelCustomizer.accept(model, exchange);
                 }
-                if (locale != null) {
-                    model.put("locale", locale.toString());
-                    model.put("localePrefix", locale.getLanguage().equals("en") ? "/en" : "");
-                    model.put("en", locale.getLanguage().equals("en"));
-                    model.put("fr", locale.getLanguage().equals("fr"));
-                    String switchLangUrl = exchange.getRequest().getURI().getPath();
-                    switchLangUrl = locale.getLanguage().equals("en") ? switchLangUrl : "/en" + switchLangUrl;
-                    model.put("switchLangUrl", switchLangUrl);
-                }
-                model.put("i18n", (Mustache.Lambda) (frag, out) -> {
-                    String key = frag.execute();
-                    out.write(getApplicationContext().getMessage(key, null, locale));
-                });
-                model.put("urlEncode", (Mustache.Lambda) (frag, out) -> {
-                    out.write(UriUtils.encodePathSegment(frag.execute(), "UTF-8"));
-                });
                 try {
                     this.template.execute(model, writer);
                 } catch (MustacheException ex) {
@@ -102,6 +83,10 @@ public class MustacheView extends AbstractUrlBasedView {
 
     public void setTemplate(Template template) {
         this.template = template;
+    }
+
+    public void setModelCustomizer(BiConsumer<Map<String, Object>, ServerWebExchange> modelCustomizer) {
+        this.modelCustomizer = modelCustomizer;
     }
 
     @Override
