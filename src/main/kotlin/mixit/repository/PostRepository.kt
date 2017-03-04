@@ -24,9 +24,9 @@ class PostRepository(val template: ReactiveMongoTemplate) {
     fun initData() {
         val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
         deleteAll().block()
-        val articlesResource = ClassPathResource("data/articles.json")
-        val articles: List<Post> = objectMapper.readValue(articlesResource.inputStream)
-        articles.forEach { save(it).block() }
+        val blogResource = ClassPathResource("data/blog.json")
+        val posts: List<Post> = objectMapper.readValue(blogResource.inputStream)
+        posts.forEach { save(it).block() }
     }
 
     fun findOne(id: String) = template.findById(id, Post::class)
