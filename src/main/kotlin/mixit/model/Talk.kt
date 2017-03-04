@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document
 import java.time.LocalDateTime
 
 @Document
-data class Session(
+data class Talk(
         val format: SessionFormat,
         val event: String,
         val title: String,

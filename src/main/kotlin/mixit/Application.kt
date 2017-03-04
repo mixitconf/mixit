@@ -4,7 +4,7 @@ import com.mongodb.ConnectionString
 import com.samskivert.mustache.Mustache
 import mixit.repository.PostRepository
 import mixit.repository.EventRepository
-import mixit.repository.SessionRepository
+import mixit.repository.TalkRepository
 import mixit.repository.UserRepository
 import mixit.support.*
 import org.springframework.boot.ApplicationRunner
@@ -57,11 +57,11 @@ class Application {
     fun markdownConverter() = MarkdownConverter()
 
     @Bean
-    fun dataInitializer(userRepository: UserRepository, eventRepository: EventRepository, sessionRepository: SessionRepository,
+    fun dataInitializer(userRepository: UserRepository, eventRepository: EventRepository, talkRepository: TalkRepository,
                         postRepository: PostRepository) = ApplicationRunner {
         userRepository.initData()
         eventRepository.initData()
-        sessionRepository.initData()
+        talkRepository.initData()
         postRepository.initData()
     }
 

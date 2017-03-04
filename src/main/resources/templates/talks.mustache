@@ -4,7 +4,7 @@
     <div class="row">
         <div class="columns large-8 large-offset-2 menu-centered text-center">
             <ul class="dropdown menu simple mxt-menu--talks" data-dropdown-menu>
-                <li class="mxt-menu--talks-title"><h1>{{#i18n}}sessions.title{{/i18n}}</h1></li>
+                <li class="mxt-menu--talks-title"><h1>{{#i18n}}talks.title{{/i18n}}</h1></li>
                 <li><a href="#" class="mxt-menu--talks-date">{{year}}</a>
                     <ul class="menu">
                         <li><a href="{{localePrefix}}/2017">2017</a></li>
@@ -25,7 +25,7 @@
         <div class="column large-8 large-offset-2">    
 
             <div class="callout">
-                {{#sessions}}
+                {{#talks}}
                     <article>
                         <h2><a href="{{localePrefix}}/talk/{{slug}}" class="mxt-title--article">{{title}}</a></h2>
                         <ul class="menu simple">
@@ -38,13 +38,13 @@
                         <p>{{summary}}</p>
                         <p class="subheader">
                             <strong>{{#video}}
-                                <p>&#x25ba;&nbsp;{{#i18n}}session.video.watch{{/i18n}} <a href="{{video}}">{{#i18n}}session.video.thevideo{{/i18n}}</a></p>
+                                <p>&#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{video}}">{{#i18n}}talk.video.thevideo{{/i18n}}</a></p>
                             {{/video}}</strong>
                         </p>
-                        <a href="{{localePrefix}}/talk/{{slug}}" class="button third hollow">{{#i18n}}sessions.readmore{{/i18n}}</a>
+                        <a href="{{localePrefix}}/talk/{{slug}}" class="button third hollow">{{#i18n}}talks.readmore{{/i18n}}</a>
                     </article>
                     <hr />
-                {{/sessions}}
+                {{/talks}}
             </div>
         </div>
     </div>

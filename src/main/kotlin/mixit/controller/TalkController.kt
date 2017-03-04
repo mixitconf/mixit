@@ -2,7 +2,7 @@ package mixit.controller
 
 import mixit.model.*
 import mixit.repository.EventRepository
-import mixit.repository.SessionRepository
+import mixit.repository.TalkRepository
 import mixit.support.RouterFunctionProvider
 import mixit.support.MarkdownConverter
 import mixit.support.json
@@ -14,35 +14,35 @@ import java.time.LocalDateTime
 
 
 @Controller
-class SessionController(val repository: SessionRepository,
-                        val eventRepository: EventRepository,
-                        val markdownConverter: MarkdownConverter): RouterFunctionProvider() {
+class TalkController(val repository: TalkRepository,
+                     val eventRepository: EventRepository,
+                     val markdownConverter: MarkdownConverter): RouterFunctionProvider() {
 
-    // TODO Remove this@SessionController when KT-15667 will be fixed
+    // TODO Remove this@TalkController when KT-15667 will be fixed
     override val routes: Routes = {
         accept(TEXT_HTML).route {
-            GET("/2017") { ok().render("sessions-2017") }
+            GET("/2017") { ok().render("talks-2017") }
             GET("/2016") { findByEventView(2016, it) }
             GET("/2015") { findByEventView(2015, it) }
             GET("/2014") { findByEventView(2014, it) }
             GET("/2013") { findByEventView(2013, it) }
             GET("/2012") { findByEventView(2012, it) }
-            GET("/talk/{slug}", this@SessionController::findOneView)
+            GET("/talk/{slug}", this@TalkController::findOneView)
         }
         (accept(APPLICATION_JSON) and "/api").route {
-            GET("/talk/{login}", this@SessionController::findOne)
-            GET("/{year}/talk", this@SessionController::findByEventId)
+            GET("/talk/{login}", this@TalkController::findOne)
+            GET("/{year}/talk", this@TalkController::findByEventId)
         }
     }
 
     fun findByEventView(year: Int, req: ServerRequest) =
             repository.findByEvent(eventRepository.yearToId(year.toString())).collectList().then { sessions ->
-                val model = mapOf(Pair("sessions", sessions.map { SessionDto(it, markdownConverter) }), Pair("year", year))
-                ok().render("sessions", model)
+                val model = mapOf(Pair("talks", sessions.map { SessionDto(it, markdownConverter) }), Pair("year", year))
+                ok().render("talks", model)
             }
 
     fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug")).then { s ->
-        ok().render("session", mapOf(Pair("session", SessionDto(s, markdownConverter))))
+        ok().render("talk", mapOf(Pair("talk", SessionDto(s, markdownConverter))))
     }
 
     fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("login")))
@@ -68,9 +68,9 @@ class SessionController(val repository: SessionRepository,
             val end: LocalDateTime?
     ) {
 
-        constructor(session: Session, markdownConverter: MarkdownConverter) : this(session.id, session.slug, session.format, session.event,
-                session.title, markdownConverter.toHTML(session.summary), session.speakers, session.language, session.addedAt,
-                markdownConverter.toHTML(session.description), session.video, session.room, session.start, session.end)
+        constructor(talk: Talk, markdownConverter: MarkdownConverter) : this(talk.id, talk.slug, talk.format, talk.event,
+                talk.title, markdownConverter.toHTML(talk.summary), talk.speakers, talk.language, talk.addedAt,
+                markdownConverter.toHTML(talk.description), talk.video, talk.room, talk.start, talk.end)
 
     }
 }

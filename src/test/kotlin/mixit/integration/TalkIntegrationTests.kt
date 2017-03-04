@@ -1,13 +1,13 @@
 package mixit.integration
 
-import mixit.model.Session
+import mixit.model.Talk
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.springframework.http.MediaType.APPLICATION_JSON
 import reactor.test.StepVerifier
 import org.springframework.web.reactive.function.client.bodyToFlux
 
-class SessionIntegrationTests : AbstractIntegrationTests() {
+class TalkIntegrationTests : AbstractIntegrationTests() {
 
     @Test
     fun `Find Dan North talk`() {
@@ -16,7 +16,7 @@ class SessionIntegrationTests : AbstractIntegrationTests() {
                 .uri("/api/talk/2421")
                 .accept(APPLICATION_JSON)
                 .exchange()
-                .flatMap { r -> r.bodyToFlux<Session>() }
+                .flatMap { r -> r.bodyToFlux<Talk>() }
 
         StepVerifier.create(session)
                 .consumeNextWith {
@@ -33,7 +33,7 @@ class SessionIntegrationTests : AbstractIntegrationTests() {
                 .uri("/api/2012/talk")
                 .accept(APPLICATION_JSON)
                 .exchange()
-                .flatMap { it.bodyToFlux<Session>() }
+                .flatMap { it.bodyToFlux<Talk>() }
 
         StepVerifier.create(sessions)
                 .expectNextCount(27)

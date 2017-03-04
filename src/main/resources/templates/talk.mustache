@@ -3,7 +3,7 @@
 <div class="mxt-wrapper--page-title">
     <div class="row">
         <div class="columns large-8 large-offset-2">
-            <h1 class="text-center">{{session.title}}</h1>
+            <h1 class="text-center">{{talk.title}}</h1>
         </div>
     </div>
 </div>
@@ -12,19 +12,19 @@
     <div class="row">
         <div class="column large-8 large-offset-2">
             <article class="callout">
-                <div class="lead">{{session.summary}}</div>
+                <div class="lead">{{talk.summary}}</div>
                 <ul class="menu simple">
-                    {{#session.speakers}}
+                    {{#talk.speakers}}
                         <li><a href="{{localePrefix}}/speaker/{{login}}">{{firstname}} {{lastname}}</a></li>
-                    {{/session.speakers}}
+                    {{/talk.speakers}}
                 </ul>
                 <hr />             
-                <p>{{session.description}}</p>
+                <p>{{talk.description}}</p>
                 <p class="subheader"><strong>
-                    {{session.event}} / #{{session.format}}
-                    {{#session.video}}
-                        | &#x25ba;&nbsp;{{#i18n}}session.video.watch{{/i18n}} <a href="{{session.video}}">{{#i18n}}session.video.thevideo{{/i18n}}</a>
-                    {{/session.video}}
+                    {{talk.event}} / #{{talk.format}}
+                    {{#talk.video}}
+                        | &#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{talk.video}}">{{#i18n}}talk.video.thevideo{{/i18n}}</a>
+                    {{/talk.video}}
                 </strong></p>
             </article>
     </div>
