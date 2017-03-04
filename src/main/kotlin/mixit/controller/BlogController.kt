@@ -33,13 +33,11 @@ class BlogController(val repository: PostRepository,
             .appendLiteral(" ")
             .appendPattern("yyyy").toFormatter(Locale.ENGLISH)
 
-    // TODO Remove this@ArticleController when KT-15667 will be fixed
+    // TODO Remove this@BlogController when KT-15667 will be fixed
     override val routes: Routes = {
-        accept(TEXT_HTML).route {
-            "/blog".route {
-                GET("/", this@BlogController::findAllView)
-                GET("/{slug}", this@BlogController::findOneView)
-            }
+        ("/blog" and accept(TEXT_HTML)).route {
+            GET("/", this@BlogController::findAllView)
+            GET("/{slug}", this@BlogController::findOneView)
         }
         ("/api/blog" and accept(APPLICATION_JSON)).route {
             GET("/", this@BlogController::findAll)

@@ -1,6 +1,5 @@
 package mixit.support
 
-import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpHeaders.ACCEPT_LANGUAGE
 import org.springframework.http.HttpStatus
@@ -11,7 +10,7 @@ import reactor.core.publisher.Mono
 import java.net.URI
 import java.util.*
 
-class MixitWebFilter(@Value("\${baseUri}") val baseUri: String) : WebFilter {
+class MixitWebFilter(val baseUri: String) : WebFilter {
 
     private val redirectDoneAttribute = "redirectDone"
 
