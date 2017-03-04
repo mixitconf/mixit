@@ -2,7 +2,7 @@ package mixit.repository
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import mixit.model.Article
+import mixit.model.Post
 import mixit.model.Language
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.domain.Sort
@@ -19,22 +19,22 @@ import reactor.core.publisher.Mono
 
 
 @Repository
-class ArticleRepository(val template: ReactiveMongoTemplate) {
+class PostRepository(val template: ReactiveMongoTemplate) {
 
     fun initData() {
         val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
         deleteAll().block()
         val articlesResource = ClassPathResource("data/articles.json")
-        val articles: List<Article> = objectMapper.readValue(articlesResource.inputStream)
+        val articles: List<Post> = objectMapper.readValue(articlesResource.inputStream)
         articles.forEach { save(it).block() }
     }
 
-    fun findOne(id: String) = template.findById(id, Article::class)
+    fun findOne(id: String) = template.findById(id, Post::class)
 
-    fun findBySlug(slug: String, lang: Language) : Mono<Article> =
+    fun findBySlug(slug: String, lang: Language) : Mono<Post> =
             template.findOne(Query().addCriteria(where("slug.$lang").`is`(slug)))
 
-    fun findAll(lang: Language? = null): Flux<Article> {
+    fun findAll(lang: Language? = null): Flux<Post> {
         val query = Query()
         query.with(Sort(Order(Direction.DESC, "addedAt")))
         query.fields().exclude("content")
@@ -44,9 +44,9 @@ class ArticleRepository(val template: ReactiveMongoTemplate) {
         return template.find(query)
     }
 
-    fun deleteAll() = template.remove(Query(), Article::class)
+    fun deleteAll() = template.remove(Query(), Post::class)
 
-    fun save(article: Article) = template.save(article)
+    fun save(article: Post) = template.save(article)
 
 }
 

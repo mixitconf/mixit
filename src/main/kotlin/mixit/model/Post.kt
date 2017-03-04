@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document
 import java.time.LocalDateTime
 
 @Document
-data class Article (
+data class Post(
         val author: User,
         val addedAt: LocalDateTime = LocalDateTime.now(),
         val title: Map<Language, String> = emptyMap(),

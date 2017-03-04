@@ -2,7 +2,7 @@ package mixit
 
 import com.mongodb.ConnectionString
 import com.samskivert.mustache.Mustache
-import mixit.repository.ArticleRepository
+import mixit.repository.PostRepository
 import mixit.repository.EventRepository
 import mixit.repository.SessionRepository
 import mixit.repository.UserRepository
@@ -58,11 +58,11 @@ class Application {
 
     @Bean
     fun dataInitializer(userRepository: UserRepository, eventRepository: EventRepository, sessionRepository: SessionRepository,
-                        articleRepository: ArticleRepository) = ApplicationRunner {
+                        postRepository: PostRepository) = ApplicationRunner {
         userRepository.initData()
         eventRepository.initData()
         sessionRepository.initData()
-        articleRepository.initData()
+        postRepository.initData()
     }
 
 }

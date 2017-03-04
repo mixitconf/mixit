@@ -1,6 +1,6 @@
 package mixit.controller
 
-import mixit.repository.ArticleRepository
+import mixit.repository.PostRepository
 import mixit.repository.SessionRepository
 import mixit.support.RouterFunctionProvider
 import mixit.support.language
@@ -12,7 +12,7 @@ import org.springframework.web.reactive.function.server.Routes
 import org.springframework.web.reactive.function.server.ServerRequest
 
 @Controller
-class RedirectController(val articleRepository: ArticleRepository,
+class RedirectController(val postRepository: PostRepository,
                          val sessionRepository: SessionRepository,
                          @Value("\${baseUri}") val baseUri: String) : RouterFunctionProvider() {
 
@@ -40,7 +40,7 @@ class RedirectController(val articleRepository: ArticleRepository,
         }
     }
 
-    fun redirectOneArticleView(req: ServerRequest) = articleRepository.findOne(req.pathVariable("id")).then { a ->
+    fun redirectOneArticleView(req: ServerRequest) = postRepository.findOne(req.pathVariable("id")).then { a ->
         permanentRedirect("$baseUri/blog/${a.slug[req.language()]}")
     }
 
