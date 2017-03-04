@@ -11,7 +11,6 @@ import org.springframework.http.MediaType.*
 import org.springframework.web.reactive.function.server.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.ServerResponse.*
-import java.net.URI
 import java.time.format.DateTimeFormatter
 import java.util.*
 import java.util.stream.Collectors.*
@@ -41,8 +40,6 @@ class ArticleController(val repository: ArticleRepository,
                 GET("/", this@ArticleController::findAllView)
                 GET("/{slug}", this@ArticleController::findOneView)
             }
-            GET("/articles/") { permanentRedirect(URI("$baseUri/blog/")).build() }
-            (GET("/articles/{id}") or GET("/articles/{id}/") or GET("/article/{id}/")) { redirectOneView(it) }
         }
         ("/api/blog" and accept(APPLICATION_JSON)).route {
             GET("/", this@ArticleController::findAll)
@@ -54,12 +51,8 @@ class ArticleController(val repository: ArticleRepository,
         val model = mapOf(Pair("article", a.toDto(req.language(), markdownConverter)))
         ok().render("article", model)
     }.otherwiseIfEmpty(repository.findBySlug(req.pathVariable("slug"), if (req.language() == FRENCH) ENGLISH else FRENCH).then { a ->
-        permanentRedirect(URI("$baseUri${if (req.language() == ENGLISH) "/en" else ""}/blog/${a.slug[req.language()]}")).build()
+        permanentRedirect("$baseUri${if (req.language() == ENGLISH) "/en" else ""}/blog/${a.slug[req.language()]}")
     })
-
-    fun redirectOneView(req: ServerRequest) = repository.findOne(req.pathVariable("id")).then { a ->
-        permanentRedirect(URI("$baseUri/blog/${a.slug[req.language()]}")).build()
-    }
 
     fun findAllView(req: ServerRequest) = repository.findAll(req.language()).collectList().then { articles ->
         val model = mapOf(Pair("articles", articles.map { it.toDto(req.language(), markdownConverter) }))

@@ -9,7 +9,6 @@ import org.springframework.web.reactive.function.client.bodyToFlux
 
 class SessionIntegrationTests : AbstractIntegrationTests() {
 
-
     @Test
     fun `Find Dan North talk`() {
         val session = client
@@ -31,7 +30,7 @@ class SessionIntegrationTests : AbstractIntegrationTests() {
     fun `Find MiXiT 2012 talks`() {
         val sessions = client
                 .get()
-                .uri("/api/2012/talk/")
+                .uri("/api/2012/talk")
                 .accept(APPLICATION_JSON)
                 .exchange()
                 .flatMap { it.bodyToFlux<Session>() }

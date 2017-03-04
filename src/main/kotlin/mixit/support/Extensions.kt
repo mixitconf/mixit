@@ -11,6 +11,7 @@ import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
+import java.net.URI
 import java.text.Normalizer
 import java.util.*
 import kotlin.reflect.KClass
@@ -53,3 +54,5 @@ fun ServerResponse.BodyBuilder.json() = contentType(APPLICATION_JSON_UTF8)
 fun ServerResponse.BodyBuilder.xml() = contentType(APPLICATION_XML)
 
 fun ServerResponse.BodyBuilder.html() = contentType(TEXT_HTML)
+
+fun permanentRedirect(uri: String) = ServerResponse.permanentRedirect(URI(uri)).build()

@@ -6,7 +6,6 @@ import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.springframework.http.MediaType.APPLICATION_JSON
-import org.springframework.http.MediaType.TEXT_HTML
 import org.springframework.web.reactive.function.client.bodyToFlux
 import org.springframework.web.reactive.function.client.bodyToMono
 import org.springframework.web.reactive.function.client.exchange

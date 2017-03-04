@@ -4,34 +4,26 @@ import mixit.model.*
 import mixit.repository.EventRepository
 import mixit.repository.UserRepository
 import mixit.support.*
-import org.springframework.beans.factory.annotation.Value
-import org.springframework.http.HttpStatus.*
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.ServerResponse.*
 import toMono
-import java.net.URI
 import java.net.URI.*
 import java.net.URLDecoder
 import java.time.LocalDate
-import java.util.*
 
 
 @Controller
 class UserController(val repository: UserRepository,
                      val eventRepository: EventRepository,
-                     val markdownConverter: MarkdownConverter,
-                     @Value("\${baseUri}") val baseUri: String) : RouterFunctionProvider() {
+                     val markdownConverter: MarkdownConverter) : RouterFunctionProvider() {
 
     // TODO Remove this@UserController when KT-15667 will be fixed
     override val routes: Routes = {
         accept(TEXT_HTML).route {
             (GET("/user/{login}") or GET("/speaker/{login}") or GET("/sponsor/{login}")) { findOneView(it) }
-            (GET("/member/{login}") or GET("/profile/{login}") or GET("/member/sponsor/{login}") or GET("/member/member/{login}")) { status(PERMANENT_REDIRECT).location(create("$baseUri/user/${it.pathVariable("login")}")).build() }
-            GET("/about/", this@UserController::findAboutView)
-            GET("/about") { ServerResponse.permanentRedirect(URI("$baseUri/about/")).build() }
-            GET("/sponsors/", this@UserController::findSponsorsView)
+            GET("/sponsors", this@UserController::findSponsorsView)
         }
         accept(APPLICATION_JSON).route {
             "/api/user".route {
@@ -59,11 +51,11 @@ class UserController(val repository: UserRepository,
             try {
                 val idLegacy = req.pathVariable("login").toLong()
                 repository.findByLegacyId(idLegacy).then { u ->
-                    ok().render("user", mapOf(Pair("user", u.toDto(req.language()))))
+                    ok().render("user", mapOf(Pair("user", u.toDto(req.language(), markdownConverter))))
                 }
             } catch (e:NumberFormatException) {
                 repository.findOne(URLDecoder.decode(req.pathVariable("login"), "UTF-8")).then { u ->
-                    ok().render("user", mapOf(Pair("user", u.toDto(req.language()))))
+                    ok().render("user", mapOf(Pair("user", u.toDto(req.language(), markdownConverter))))
                 }
             }
 
@@ -92,14 +84,8 @@ class UserController(val repository: UserRepository,
         created(create("/api/user/${u.login}")).json().body(u.toMono())
     }
 
-    fun findAboutView(req: ServerRequest) = repository.findByRole(Role.STAFF).collectList().then { u ->
-        val users = u.map { it.toDto(req.language()) }
-        Collections.shuffle(users)
-        ok().render("about",  mapOf(Pair("staff", users)))
-    }
-
     fun findSponsorsView(req: ServerRequest) = eventRepository.findOne("mixit17").then { events ->
-        val sponsors = events.sponsors.map { toEventSponsoringDto(it, req.language()) }.groupBy { it.level }
+        val sponsors = events.sponsors.map { it.toDto(req.language(), markdownConverter) }.groupBy { it.level }
 
         ok().render("sponsors", mapOf(
             Pair("sponsors-gold", sponsors[SponsorshipLevel.GOLD]),
@@ -109,33 +95,30 @@ class UserController(val repository: UserRepository,
             Pair("sponsors-party", sponsors[SponsorshipLevel.PARTY])
         ))
     }
+}
 
-    private fun toEventSponsoringDto(eventSponsoring: EventSponsoring, language: Language) = EventSponsoringDto(
-           eventSponsoring.level,
-           eventSponsoring.sponsor.toDto(language),
-           eventSponsoring.subscriptionDate
-    )
+private fun EventSponsoring.toDto(language: Language, markdownConverter: MarkdownConverter) =
+        EventSponsoringDto(level, sponsor.toDto(language, markdownConverter), subscriptionDate)
 
-    private fun User.toDto(language: Language) = UserDto(
-            login, firstname, lastname, email, company,
-            markdownConverter.toHTML(description[language] ?: ""),
-            logoUrl, events, role, links)
-
-    class EventSponsoringDto(
-        val level: SponsorshipLevel,
-        val sponsor: UserDto,
-        val subscriptionDate: LocalDate = LocalDate.now()
+private class EventSponsoringDto(
+    val level: SponsorshipLevel,
+    val sponsor: UserDto,
+    val subscriptionDate: LocalDate = LocalDate.now()
 )
 
-    class UserDto(
-        val login: String,
-        val firstname: String,
-        val lastname: String,
-        var email: String,
-        var company: String? = null,
-        var description: String,
-        var logoUrl: String? = null,
-        val events: List<String>,
-        val role: Role,
-        var links: List<Link>)
-}
+fun User.toDto(language: Language, markdownConverter: MarkdownConverter) =
+        UserDto(login, firstname, lastname, email, company, markdownConverter.toHTML(description[language] ?: ""),
+        logoUrl, events, role, links)
+
+class UserDto(
+    val login: String,
+    val firstname: String,
+    val lastname: String,
+    var email: String,
+    var company: String? = null,
+    var description: String,
+    var logoUrl: String? = null,
+    val events: List<String>,
+    val role: Role,
+    var links: List<Link>
+)

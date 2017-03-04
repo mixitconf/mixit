@@ -6,37 +6,32 @@ import mixit.repository.SessionRepository
 import mixit.support.RouterFunctionProvider
 import mixit.support.MarkdownConverter
 import mixit.support.json
-import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.ServerResponse.*
-import java.net.URI
-
 import java.time.LocalDateTime
 
 
 @Controller
 class SessionController(val repository: SessionRepository,
                         val eventRepository: EventRepository,
-                        val markdownConverter: MarkdownConverter,
-                        @Value("\${baseUri}") val baseUri: String) : RouterFunctionProvider() {
+                        val markdownConverter: MarkdownConverter): RouterFunctionProvider() {
 
     // TODO Remove this@SessionController when KT-15667 will be fixed
     override val routes: Routes = {
         accept(TEXT_HTML).route {
-            GET("/2017/") { ok().render("sessions-2017") }
-            GET("/2016/") { findByEventView(2016, it) }
-            GET("/2015/") { findByEventView(2015, it) }
-            GET("/2014/") { findByEventView(2014, it) }
-            GET("/2013/") { findByEventView(2013, it) }
-            GET("/2012/") { findByEventView(2012, it) }
+            GET("/2017") { ok().render("sessions-2017") }
+            GET("/2016") { findByEventView(2016, it) }
+            GET("/2015") { findByEventView(2015, it) }
+            GET("/2014") { findByEventView(2014, it) }
+            GET("/2013") { findByEventView(2013, it) }
+            GET("/2012") { findByEventView(2012, it) }
             GET("/talk/{slug}", this@SessionController::findOneView)
-            (GET("/session/{id}/") or GET("/session/{id}") or GET("/session/{id}/{sluggifiedTitle}/") or GET("/session/{id}/{sluggifiedTitle}")) { redirectOneView(it) }
         }
         (accept(APPLICATION_JSON) and "/api").route {
             GET("/talk/{login}", this@SessionController::findOne)
-            GET("/{year}/talk/", this@SessionController::findByEventId)
+            GET("/{year}/talk", this@SessionController::findByEventId)
         }
     }
 
@@ -48,10 +43,6 @@ class SessionController(val repository: SessionRepository,
 
     fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug")).then { s ->
         ok().render("session", mapOf(Pair("session", SessionDto(s, markdownConverter))))
-    }
-
-    fun redirectOneView(req: ServerRequest) = repository.findOne(req.pathVariable("id")).then { s ->
-        permanentRedirect(URI("$baseUri/talk/${s.slug}")).build()
     }
 
     fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("login")))
