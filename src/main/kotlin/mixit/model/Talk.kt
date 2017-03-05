@@ -13,8 +13,7 @@ data class Talk(
         val event: String,
         val title: String,
         val summary: String,
-        // TODO Use @DBRref on speakers when https://jira.spring.io/browse/DATAMONGO-1584 will be fixed
-        val speakers: List<User> = emptyList(),
+        val speakers: List<User> = emptyList(), // TODO Store only id + name
         val language: Language = Language.FRENCH,
         val addedAt: LocalDateTime = LocalDateTime.now(),
         val description: String? = null,
