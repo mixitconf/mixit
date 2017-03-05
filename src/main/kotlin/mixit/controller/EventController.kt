@@ -12,7 +12,6 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 @Controller
 class EventController(val repository: EventRepository) : RouterFunctionProvider() {
 
-    // TODO Remove this@EventController when KT-15667 will be fixed
     override val routes: Routes = {
         (accept(APPLICATION_JSON) and "/api/event").route {
             GET("/", this@EventController::findAll)

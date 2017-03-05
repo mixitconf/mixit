@@ -10,7 +10,6 @@ import org.springframework.web.reactive.function.server.ServerResponse.*
 @Controller
 class AuthenticationController : RouterFunctionProvider() {
 
-    // TODO Remove this@ArticleController when KT-15667 will be fixed
     override val routes: Routes = {
         accept(TEXT_HTML).route {
             GET("/login", this@AuthenticationController::loginView)

@@ -21,7 +21,6 @@ class GlobalController(val userRepository: UserRepository,
                        val eventRepository: EventRepository,
                        val markdownConverter: MarkdownConverter) : RouterFunctionProvider() {
 
-    // TODO Remove this@GlobalController when KT-15667 will be fixed
     override val routes: Routes = {
         accept(TEXT_HTML).route {
             GET("/", this@GlobalController::homeView)

@@ -17,7 +17,6 @@ class BlogController(val repository: PostRepository,
                      val markdownConverter: MarkdownConverter,
                      @Value("\${baseUri}") val baseUri: String) : RouterFunctionProvider() {
 
-    // TODO Remove this@BlogController when KT-15667 will be fixed
     override val routes: Routes = {
         ("/blog" and accept(TEXT_HTML)).route {
             GET("/", this@BlogController::findAllView)

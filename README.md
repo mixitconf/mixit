@@ -1,22 +1,23 @@
 [![Travis CI](https://api.travis-ci.org/mix-it/mixit.svg?branch=master)](https://travis-ci.org/mix-it/mixit)
 
-# MiXiT 2017 website
+# MiXiT website
 
-This project purpose is to power the MiXiT 2017 website.
+This project purpose is to power the MiXiT website.
 
 ## Software design
 
 This project software design goal is to demonstrate what a functional web application
 developed with Spring Framework 5 and Kotlin can look like:
- - Reactive
- - Simple, fast to start, efficient request processing, low memory consumption
- - Cloud Native
- - [Constructor based injection](http://olivergierke.de/2013/11/why-field-injection-is-evil/)
+ - Reactive and non-blocking
  - More functional style and less annotation based than typical Spring applications
+ - Leverage Kotlin features like [Kotlin extensions](https://kotlinlang.org/docs/reference/extensions.html) and [reified type parameters](https://kotlinlang.org/docs/reference/inline-functions.html#reified-type-parameters) for cleaner code
+ - Simple, fast to start, efficient request processing, low memory consumption
+ - [Constructor based injection](http://olivergierke.de/2013/11/why-field-injection-is-evil/)
  - Immutable Pojos
- - Take advantage of [Kotlin extensions](https://kotlinlang.org/docs/reference/extensions.html) and [reified type parameters](https://kotlinlang.org/docs/reference/inline-functions.html#reified-type-parameters)
+ - Cloud Native
 
-The technologies used are:
+### Technologies used
+
  - Language: [Kotlin](https://kotlin.link/) 
  - Web framework: [Spring Boot](https://projects.spring.io/spring-boot/) and [Spring Web Reactive Functional](https://spring.io/blog/2016/09/22/new-in-spring-5-functional-web-framework)
  - Engine: [Netty](http://netty.io/) used for client and server
@@ -26,7 +27,14 @@ The technologies used are:
  - Build: [Gradle Script Kotlin](https://github.com/gradle/gradle-script-kotlin)
  - Testing: [Junit](http://junit.org/)
  
-## Getting started
+### TODO
+
+ - Use `::findAll` instead of `this@BlogController::findAll` when [KT-15667](https://youtrack.jetbrains.com/issue/KT-15667) will be fixed
+ - Change `foo.then { bar -> ... }` to `foo.then { ... }` when [Reactor Core](https://github.com/reactor/reactor-core) 3.1 will be released
+ - Use [Kotlin Javascript](https://kotlinlang.org/docs/reference/js-overview.html) when generated JS size will be optimized or [compile to WebAssembly](https://discuss.kotlinlang.org/t/webassembly-support/1722/) if supported
+ - Update to [Gradle Kotlin Script 0.9.0](https://github.com/gradle/gradle-script-kotlin/milestone/13) to [avoid freezing IDEA when modifying `build.gradle.kts`](https://github.com/gradle/gradle-script-kotlin/issues/249)  
+ 
+## Developer guide
 
 ### Prerequisite
  - Install [Git](https://git-scm.com/)

@@ -18,7 +18,6 @@ class TalkController(val repository: TalkRepository,
                      val eventRepository: EventRepository,
                      val markdownConverter: MarkdownConverter): RouterFunctionProvider() {
 
-    // TODO Remove this@TalkController when KT-15667 will be fixed
     override val routes: Routes = {
         accept(TEXT_HTML).route {
             GET("/2017") { ok().render("talks-2017") }
