@@ -52,8 +52,8 @@ class Application {
     fun markdownConverter() = MarkdownConverter()
 
     @Bean
-    fun dataInitializer(userRepository: UserRepository, eventRepository: EventRepository, talkRepository: TalkRepository,
-                        postRepository: PostRepository) = ApplicationRunner {
+    fun dataInitializer(userRepository: UserRepository, eventRepository: EventRepository,
+                        talkRepository: TalkRepository, postRepository: PostRepository) = ApplicationRunner {
         userRepository.initData()
         eventRepository.initData()
         talkRepository.initData()

@@ -1,8 +1,8 @@
 package mixit.controller
 
-import mixit.model.EventSponsoring
 import mixit.model.Role
 import mixit.model.SponsorshipLevel.*
+import mixit.model.toDto
 import mixit.repository.EventRepository
 import mixit.repository.UserRepository
 import mixit.util.MarkdownConverter
@@ -15,6 +15,7 @@ import org.springframework.web.reactive.function.server.Routes
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import java.util.*
+
 
 @Controller
 class GlobalController(val userRepository: UserRepository,
@@ -44,42 +45,6 @@ class GlobalController(val userRepository: UserRepository,
         val users = u.map { it.toDto(req.language(), markdownConverter) }
         Collections.shuffle(users)
         ok().render("about",  mapOf(Pair("staff", users)))
-    }
-
-    class SponsorDto(
-        val login: String,
-        val company: String,
-        val logoUrl: String,
-        val logoType: String,
-        val logoWebpUrl: String? = null
-    )
-
-    private fun EventSponsoring.toDto() = SponsorDto(
-        this.sponsor.login,
-        this.sponsor.company!!,
-        this.sponsor.logoUrl!!,
-        logoType(this.sponsor.logoUrl),
-        logoWebpUrl(this.sponsor.logoUrl)
-    )
-
-    private fun logoWebpUrl(url:String): String? {
-        if (url.endsWith("png") || url.endsWith("jpg")){
-            return url.replace("png", "webp").replace("jpg", "webp")
-        }
-        return null
-    }
-
-    private fun logoType(url:String): String {
-        if (url.endsWith("svg")){
-            return "image/svg+xml"
-        }
-        if (url.endsWith("png")){
-            return "image/png"
-        }
-        if (url.endsWith("jpg")){
-            return "image/jpeg"
-        }
-        throw IllegalArgumentException("Extension not supported")
     }
 
 }

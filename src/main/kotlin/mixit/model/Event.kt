@@ -1,5 +1,6 @@
 package mixit.model
 
+import mixit.util.MarkdownConverter
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 import java.time.LocalDate
@@ -35,3 +36,48 @@ enum class SponsorshipLevel {
     COMMUNITY,
     NONE
 }
+
+class SponsorDto(
+    val login: String,
+    val company: String,
+    val logoUrl: String,
+    val logoType: String,
+    val logoWebpUrl: String? = null
+)
+
+fun EventSponsoring.toDto() = SponsorDto(
+    this.sponsor.login,
+    this.sponsor.company!!,
+    this.sponsor.logoUrl!!,
+    logoType(this.sponsor.logoUrl),
+    logoWebpUrl(this.sponsor.logoUrl)
+)
+
+private fun logoWebpUrl(url:String): String? {
+    if (url.endsWith("png") || url.endsWith("jpg")){
+        return url.replace("png", "webp").replace("jpg", "webp")
+    }
+    return null
+}
+
+private fun logoType(url:String): String {
+    if (url.endsWith("svg")){
+        return "image/svg+xml"
+    }
+    if (url.endsWith("png")){
+        return "image/png"
+    }
+    if (url.endsWith("jpg")){
+        return "image/jpeg"
+    }
+    throw IllegalArgumentException("Extension not supported")
+}
+
+class EventSponsoringDto(
+    val level: SponsorshipLevel,
+    val sponsor: UserDto,
+    val subscriptionDate: LocalDate = LocalDate.now()
+)
+
+fun EventSponsoring.toDto(language: Language, markdownConverter: MarkdownConverter) =
+        EventSponsoringDto(level, sponsor.toDto(language, markdownConverter), subscriptionDate)

@@ -49,5 +49,3 @@ class PostRepository(val template: ReactiveMongoTemplate) {
     fun save(article: Post) = template.save(article)
 
 }
-
-

@@ -1,9 +1,11 @@
 package mixit.model
 
+import mixit.util.MarkdownConverter
 import mixit.util.toSlug
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 import java.time.LocalDateTime
+
 
 @Document
 data class Talk(
@@ -56,4 +58,26 @@ enum class Room(name: String, capacity: Int) {
     }
 }
 
+class TalkDto(
+    val id: String?,
+    val slug: String,
+    val format: SessionFormat,
+    val event: String,
+    val title: String,
+    val summary: String,
+    val speakers: List<User>,
+    val language: Language,
+    val addedAt: LocalDateTime,
+    val description: String?,
+    val video: String?,
+    val room: Room?,
+    val start: LocalDateTime?,
+    val end: LocalDateTime?
+)
 
+fun Talk.toDto(markdownConverter: MarkdownConverter) = TalkDto(
+        id, slug, format, event, title,
+        markdownConverter.toHTML(summary), speakers, language, addedAt,
+        markdownConverter.toHTML(description),
+        video, room, start, end
+)

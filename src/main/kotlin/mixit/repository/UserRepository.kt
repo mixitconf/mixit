@@ -14,6 +14,7 @@ import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 import mixit.util.*
 
+
 @Repository
 class UserRepository(val template: ReactiveMongoTemplate) {
 

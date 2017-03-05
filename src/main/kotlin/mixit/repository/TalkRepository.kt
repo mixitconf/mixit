@@ -13,9 +13,9 @@ import reactor.core.publisher.Flux
 import mixit.util.*
 import reactor.core.publisher.Mono
 
+
 @Repository
 class TalkRepository(val template: ReactiveMongoTemplate) {
-
 
     fun initData() {
         val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
@@ -42,4 +42,5 @@ class TalkRepository(val template: ReactiveMongoTemplate) {
     fun deleteAll() = template.remove(Query(), Talk::class)
 
     fun save(talk: Talk) = template.save(talk)
+
 }

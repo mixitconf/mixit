@@ -1,9 +1,7 @@
 package mixit.controller
 
-import mixit.model.Post
-import mixit.model.Language
 import mixit.model.Language.*
-import mixit.model.User
+import mixit.model.toDto
 import mixit.repository.PostRepository
 import mixit.util.*
 import org.springframework.beans.factory.annotation.Value
@@ -11,6 +9,7 @@ import org.springframework.http.MediaType.*
 import org.springframework.web.reactive.function.server.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.ServerResponse.*
+
 
 @Controller
 class BlogController(val repository: PostRepository,
@@ -44,23 +43,4 @@ class BlogController(val repository: PostRepository,
 
     fun findAll(req: ServerRequest) = ok().json().body(repository.findAll())
 
-
-    private fun Post.toDto(language: Language, markdownConverter: MarkdownConverter) = PostDto(
-            id,
-            slug[language] ?: "",
-            author,
-            addedAt.format(language),
-            title[language] ?: "",
-            markdownConverter.toHTML(headline[language] ?: ""),
-            markdownConverter.toHTML(if (content != null) content[language] else  ""))
-
-    class PostDto(
-        val id: String?,
-        val slug: String,
-        val author: User,
-        val addedAt: String,
-        val title: String,
-        val headline: String,
-        val content: String
-    )
 }

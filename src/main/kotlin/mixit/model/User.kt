@@ -1,7 +1,9 @@
 package mixit.model
 
+import mixit.util.MarkdownConverter
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
+
 
 @Document
 data class User(
@@ -24,3 +26,20 @@ enum class Role {
     SPONSOR,
     ATTENDEE
 }
+
+class UserDto(
+    val login: String,
+    val firstname: String,
+    val lastname: String,
+    var email: String,
+    var company: String? = null,
+    var description: String,
+    var logoUrl: String? = null,
+    val events: List<String>,
+    val role: Role,
+    var links: List<Link>
+)
+
+fun User.toDto(language: Language, markdownConverter: MarkdownConverter) =
+        UserDto(login, firstname, lastname, email, company, markdownConverter.toHTML(description[language] ?: ""),
+        logoUrl, events, role, links)

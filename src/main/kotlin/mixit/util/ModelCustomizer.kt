@@ -5,6 +5,7 @@ import org.springframework.context.MessageSource
 import org.springframework.web.server.ServerWebExchange
 import org.springframework.web.util.UriUtils
 
+
 fun customizeModel(model: MutableMap<String, Any>, exchange: ServerWebExchange, messageSource: MessageSource) {
     val locale = exchange.request.headers.acceptLanguageAsLocale
     val username = exchange.session.block().getAttribute<String>("username")

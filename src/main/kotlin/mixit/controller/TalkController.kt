@@ -10,7 +10,6 @@ import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.ServerResponse.*
-import java.time.LocalDateTime
 
 
 @Controller
@@ -36,12 +35,12 @@ class TalkController(val repository: TalkRepository,
 
     fun findByEventView(year: Int, req: ServerRequest) =
             repository.findByEvent(eventRepository.yearToId(year.toString())).collectList().then { sessions ->
-                val model = mapOf(Pair("talks", sessions.map { SessionDto(it, markdownConverter) }), Pair("year", year))
+                val model = mapOf(Pair("talks", sessions.map { it.toDto(markdownConverter) }), Pair("year", year))
                 ok().render("talks", model)
             }
 
     fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug")).then { s ->
-        ok().render("talk", mapOf(Pair("talk", SessionDto(s, markdownConverter))))
+        ok().render("talk", mapOf(Pair("talk", s.toDto(markdownConverter))))
     }
 
     fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("login")))
@@ -49,27 +48,4 @@ class TalkController(val repository: TalkRepository,
     fun findByEventId(req: ServerRequest) =
             ok().json().body(repository.findByEvent(eventRepository.yearToId(req.pathVariable("year"))))
 
-
-    class SessionDto(
-            val id: String?,
-            val slug: String,
-            val format: SessionFormat,
-            val event: String,
-            val title: String,
-            val summary: String,
-            val speakers: List<User>,
-            val language: Language,
-            val addedAt: LocalDateTime,
-            val description: String?,
-            val video: String?,
-            val room: Room?,
-            val start: LocalDateTime?,
-            val end: LocalDateTime?
-    ) {
-
-        constructor(talk: Talk, markdownConverter: MarkdownConverter) : this(talk.id, talk.slug, talk.format, talk.event,
-                talk.title, markdownConverter.toHTML(talk.summary), talk.speakers, talk.language, talk.addedAt,
-                markdownConverter.toHTML(talk.description), talk.video, talk.room, talk.start, talk.end)
-
-    }
 }

@@ -49,4 +49,3 @@ class RedirectController(val postRepository: PostRepository,
     }
 
 }
-

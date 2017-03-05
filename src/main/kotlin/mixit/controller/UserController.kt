@@ -11,7 +11,6 @@ import org.springframework.web.reactive.function.server.ServerResponse.*
 import toMono
 import java.net.URI.*
 import java.net.URLDecoder
-import java.time.LocalDate
 
 
 @Controller
@@ -96,29 +95,3 @@ class UserController(val repository: UserRepository,
         ))
     }
 }
-
-private fun EventSponsoring.toDto(language: Language, markdownConverter: MarkdownConverter) =
-        EventSponsoringDto(level, sponsor.toDto(language, markdownConverter), subscriptionDate)
-
-private class EventSponsoringDto(
-    val level: SponsorshipLevel,
-    val sponsor: UserDto,
-    val subscriptionDate: LocalDate = LocalDate.now()
-)
-
-fun User.toDto(language: Language, markdownConverter: MarkdownConverter) =
-        UserDto(login, firstname, lastname, email, company, markdownConverter.toHTML(description[language] ?: ""),
-        logoUrl, events, role, links)
-
-class UserDto(
-    val login: String,
-    val firstname: String,
-    val lastname: String,
-    var email: String,
-    var company: String? = null,
-    var description: String,
-    var logoUrl: String? = null,
-    val events: List<String>,
-    val role: Role,
-    var links: List<Link>
-)

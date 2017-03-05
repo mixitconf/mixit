@@ -7,6 +7,7 @@ import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.ServerResponse.*
 
+
 @Controller
 class AuthenticationController : RouterFunctionProvider() {
 
@@ -35,4 +36,3 @@ class AuthenticationController : RouterFunctionProvider() {
         ok().render("index")
     }
 }
-

@@ -10,11 +10,10 @@ import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
 import org.springframework.stereotype.Repository
-import reactor.core.publisher.Flux
+
 
 @Repository
-class EventRepository(val template: ReactiveMongoTemplate, val userRepository: UserRepository) {
-
+class EventRepository(val template: ReactiveMongoTemplate) {
 
     fun initData() {
         val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
@@ -26,13 +25,12 @@ class EventRepository(val template: ReactiveMongoTemplate, val userRepository: U
 
     fun yearToId(year:String): String = "mixit${year.substring(2)}"
 
-    fun findAll(): Flux<Event> = template.find(Query().with(Sort("year")), Event::class)
+    fun findAll() = template.find(Query().with(Sort("year")), Event::class)
 
     fun findOne(id: String) = template.findById(id, Event::class)
 
     fun deleteAll() = template.remove(Query(), Event::class)
 
     fun save(event: Event) = template.save(event)
-
 
 }
