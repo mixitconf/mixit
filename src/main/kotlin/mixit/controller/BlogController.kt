@@ -11,27 +11,11 @@ import org.springframework.http.MediaType.*
 import org.springframework.web.reactive.function.server.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.ServerResponse.*
-import java.time.format.DateTimeFormatter
-import java.util.*
-import java.util.stream.Collectors.*
-import java.util.stream.IntStream
-import java.time.temporal.ChronoField
-import java.time.format.DateTimeFormatterBuilder
-
 
 @Controller
 class BlogController(val repository: PostRepository,
                      val markdownConverter: MarkdownConverter,
                      @Value("\${baseUri}") val baseUri: String) : RouterFunctionProvider() {
-
-    private val daysLookup : Map<Long, String> = IntStream.rangeClosed(1, 31).boxed().collect(toMap(Int::toLong, { i -> getOrdinal(i)}))
-    private val frenchDateFormatter = DateTimeFormatter.ofPattern("d MMMM yyyy", Locale.FRENCH)
-    private val englishDateFormatter = DateTimeFormatterBuilder()
-            .appendPattern("MMMM")
-            .appendLiteral(" ")
-            .appendText(ChronoField.DAY_OF_MONTH, daysLookup)
-            .appendLiteral(" ")
-            .appendPattern("yyyy").toFormatter(Locale.ENGLISH)
 
     // TODO Remove this@BlogController when KT-15667 will be fixed
     override val routes: Routes = {
@@ -62,16 +46,16 @@ class BlogController(val repository: PostRepository,
     fun findAll(req: ServerRequest) = ok().json().body(repository.findAll())
 
 
-    private fun Post.toDto(language: Language, markdownConverter: MarkdownConverter) = ArticleDto(
+    private fun Post.toDto(language: Language, markdownConverter: MarkdownConverter) = PostDto(
             id,
             slug[language] ?: "",
             author,
-            if (language == ENGLISH) addedAt.format(englishDateFormatter) else addedAt.format(frenchDateFormatter),
+            addedAt.format(language),
             title[language] ?: "",
             markdownConverter.toHTML(headline[language] ?: ""),
             markdownConverter.toHTML(if (content != null) content[language] else  ""))
 
-    class ArticleDto(
+    class PostDto(
         val id: String?,
         val slug: String,
         val author: User,
@@ -80,16 +64,4 @@ class BlogController(val repository: PostRepository,
         val headline: String,
         val content: String
     )
-
-    private fun getOrdinal(n: Int): String {
-        if (n >= 11 && n <= 13) {
-            return n.toString() + "th"
-        }
-        when (n % 10) {
-            1 -> return n.toString() + "st"
-            2 -> return n.toString() + "nd"
-            3 -> return n.toString() + "rd"
-            else -> return n.toString() + "th"
-        }
-    }
 }
