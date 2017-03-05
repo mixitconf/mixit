@@ -5,9 +5,9 @@ import mixit.model.Role
 import mixit.model.SponsorshipLevel.*
 import mixit.repository.EventRepository
 import mixit.repository.UserRepository
-import mixit.support.MarkdownConverter
-import mixit.support.RouterFunctionProvider
-import mixit.support.language
+import mixit.util.MarkdownConverter
+import mixit.util.RouterFunctionProvider
+import mixit.util.language
 import org.springframework.core.io.ClassPathResource
 import org.springframework.http.MediaType.TEXT_HTML
 import org.springframework.stereotype.Controller

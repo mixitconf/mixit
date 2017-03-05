@@ -1,6 +1,6 @@
 package mixit.controller
 
-import mixit.support.RouterFunctionProvider
+import mixit.util.RouterFunctionProvider
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.fromServerSentEvents

@@ -3,9 +3,9 @@ package mixit.controller
 import mixit.model.*
 import mixit.repository.EventRepository
 import mixit.repository.TalkRepository
-import mixit.support.RouterFunctionProvider
-import mixit.support.MarkdownConverter
-import mixit.support.json
+import mixit.util.RouterFunctionProvider
+import mixit.util.MarkdownConverter
+import mixit.util.json
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.*

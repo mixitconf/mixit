@@ -10,7 +10,7 @@ import org.springframework.data.mongodb.core.query.Query
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
-import mixit.support.*
+import mixit.util.*
 import reactor.core.publisher.Mono
 
 @Repository

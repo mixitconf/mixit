@@ -3,7 +3,7 @@ package mixit.controller
 import mixit.model.*
 import mixit.repository.EventRepository
 import mixit.repository.UserRepository
-import mixit.support.*
+import mixit.util.*
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.*

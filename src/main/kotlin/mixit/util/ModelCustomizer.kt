@@ -1,4 +1,4 @@
-package mixit.support
+package mixit.util
 
 import com.samskivert.mustache.Mustache
 import org.springframework.context.MessageSource

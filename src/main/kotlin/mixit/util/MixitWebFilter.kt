@@ -1,4 +1,4 @@
-package mixit.support
+package mixit.util
 
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpHeaders.ACCEPT_LANGUAGE

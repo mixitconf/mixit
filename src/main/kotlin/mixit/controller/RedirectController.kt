@@ -2,9 +2,9 @@ package mixit.controller
 
 import mixit.repository.PostRepository
 import mixit.repository.TalkRepository
-import mixit.support.RouterFunctionProvider
-import mixit.support.language
-import mixit.support.permanentRedirect
+import mixit.util.RouterFunctionProvider
+import mixit.util.language
+import mixit.util.permanentRedirect
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.MediaType.TEXT_HTML
 import org.springframework.stereotype.Controller

@@ -1,4 +1,4 @@
-package mixit.support
+package mixit.util
 
 import com.mongodb.client.result.DeleteResult
 import mixit.model.Language

@@ -1,8 +1,8 @@
 package mixit.controller
 
 import mixit.repository.EventRepository
-import mixit.support.RouterFunctionProvider
-import mixit.support.json
+import mixit.util.RouterFunctionProvider
+import mixit.util.json
 import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.*

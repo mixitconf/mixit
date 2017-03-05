@@ -12,7 +12,7 @@ import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
-import mixit.support.*
+import mixit.util.*
 
 @Repository
 class UserRepository(val template: ReactiveMongoTemplate) {

@@ -1,4 +1,4 @@
-package mixit.support
+package mixit.util
 
 import org.commonmark.ext.autolink.AutolinkExtension
 import org.commonmark.parser.Parser

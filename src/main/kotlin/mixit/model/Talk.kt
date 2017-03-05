@@ -1,6 +1,6 @@
 package mixit.model
 
-import mixit.support.toSlug
+import mixit.util.toSlug
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 import java.time.LocalDateTime

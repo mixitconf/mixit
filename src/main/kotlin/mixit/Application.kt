@@ -6,7 +6,7 @@ import mixit.repository.PostRepository
 import mixit.repository.EventRepository
 import mixit.repository.TalkRepository
 import mixit.repository.UserRepository
-import mixit.support.*
+import mixit.util.*
 import org.springframework.boot.ApplicationRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.MessageSource
