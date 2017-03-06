@@ -89,9 +89,16 @@ task<GulpTask>("gulpBuild") {
     inputs.dir("src/main/sass")
     inputs.dir("src/main/ts")
     inputs.dir("src/main/images")
+    outputs.dir("build/resources/main/static")
+    args = listOf("build")
+}
+
+task<GulpTask>("gulpClean") {
+    dependsOn(YarnInstallTask.NAME)
     inputs.dir("build/.tmp")
     outputs.dir("build/resources/main/static")
-    args = listOf("default")
+    args = listOf("clean")
 }
 
 tasks.getByName("processResources").dependsOn("gulpBuild")
+tasks.getByName("clean").dependsOn("gulpClean")

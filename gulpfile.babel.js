@@ -170,7 +170,7 @@ gulp.task('watch', ['default'], () => {
 });
 
 // Build production files, the default task
-gulp.task('default', ['clean'], cb =>
+gulp.task('build', cb =>
   runSequence(
     ['styles', 'images', 'js-vendors', 'ts-to-js'],
     'package-service-worker',
@@ -178,3 +178,10 @@ gulp.task('default', ['clean'], cb =>
   )
 );
 
+// Build production files, the default task
+gulp.task('default', ['clean'], cb =>
+runSequence(
+  'build',
+  cb
+)
+);
