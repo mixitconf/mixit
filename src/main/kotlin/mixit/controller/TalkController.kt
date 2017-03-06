@@ -10,6 +10,7 @@ import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.ServerResponse.*
+import java.time.LocalDateTime
 
 
 @Controller
@@ -49,3 +50,27 @@ class TalkController(val repository: TalkRepository,
             ok().json().body(repository.findByEvent(eventRepository.yearToId(req.pathVariable("year"))))
 
 }
+
+class TalkDto(
+        val id: String?,
+        val slug: String,
+        val format: SessionFormat,
+        val event: String,
+        val title: String,
+        val summary: String,
+        val speakers: List<User>,
+        val language: Language,
+        val addedAt: LocalDateTime,
+        val description: String?,
+        val video: String?,
+        val room: Room?,
+        val start: LocalDateTime?,
+        val end: LocalDateTime?
+)
+
+fun Talk.toDto(markdownConverter: MarkdownConverter) = TalkDto(
+        id, slug, format, event, title,
+        markdownConverter.toHTML(summary), speakers, language, addedAt,
+        markdownConverter.toHTML(description),
+        video, room, start, end
+)

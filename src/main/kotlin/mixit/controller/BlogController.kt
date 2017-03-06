@@ -1,7 +1,7 @@
 package mixit.controller
 
+import mixit.model.*
 import mixit.model.Language.*
-import mixit.model.toDto
 import mixit.repository.PostRepository
 import mixit.util.*
 import org.springframework.beans.factory.annotation.Value
@@ -44,3 +44,39 @@ class BlogController(val repository: PostRepository,
     fun findAll(req: ServerRequest) = ok().json().body(repository.findAll())
 
 }
+
+class PostDto(
+        val id: String?,
+        val slug: String,
+        val author: User,
+        val addedAt: String,
+        val title: String,
+        val headline: String,
+        val content: String
+)
+
+fun Post.toDto(language: Language, markdownConverter: MarkdownConverter) = PostDto(
+        id,
+        slug[language] ?: "",
+        author,
+        addedAt.format(language),
+        title[language] ?: "",
+        markdownConverter.toHTML(headline[language] ?: ""),
+        markdownConverter.toHTML(if (content != null) content[language] else  ""))
+
+class UserDto(
+        val login: String,
+        val firstname: String,
+        val lastname: String,
+        var email: String,
+        var company: String? = null,
+        var description: String,
+        var logoUrl: String? = null,
+        val events: List<String>,
+        val role: Role,
+        var links: List<Link>
+)
+
+fun User.toDto(language: Language, markdownConverter: MarkdownConverter) =
+        UserDto(login, firstname, lastname, email, company, markdownConverter.toHTML(description[language] ?: ""),
+                logoUrl, events, role, links)
