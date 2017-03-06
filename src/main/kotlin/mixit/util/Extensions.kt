@@ -32,17 +32,17 @@ fun run(type: KClass<*>, vararg args: String) = SpringApplication.run(type.java,
 // Spring Data extensions
 // ----------------------
 
-inline fun <reified T : Any> ReactiveMongoOperations.findById(id: Any) : Mono<T> = findById(id, T::class.java)
+inline fun <reified T : Any> ReactiveMongoOperations.findById(id: Any): Mono<T> = findById(id, T::class.java)
 
-fun <T : Any> ReactiveMongoOperations.findById(id: Any, type: KClass<T>) : Mono<T> = findById(id, type.java)
+fun <T : Any> ReactiveMongoOperations.findById(id: Any, type: KClass<T>): Mono<T> = findById(id, type.java)
 
-inline fun <reified T : Any> ReactiveMongoOperations.find(query: Query) : Flux<T> = find(query, T::class.java)
+inline fun <reified T : Any> ReactiveMongoOperations.find(query: Query): Flux<T> = find(query, T::class.java)
 
-fun <T : Any> ReactiveMongoOperations.findAll(type: KClass<T>) : Flux<T> = findAll(type.java)
+fun <T : Any> ReactiveMongoOperations.findAll(type: KClass<T>): Flux<T> = findAll(type.java)
 
-fun <T : Any> ReactiveMongoOperations.find(query: Query, type: KClass<T>) : Flux<T> = find(query, type.java)
+fun <T : Any> ReactiveMongoOperations.find(query: Query, type: KClass<T>): Flux<T> = find(query, type.java)
 
-inline fun <reified T : Any> ReactiveMongoOperations.findOne(query: Query) : Mono<T> = find(query, T::class.java).next()
+inline fun <reified T : Any> ReactiveMongoOperations.findOne(query: Query): Mono<T> = find(query, T::class.java).next()
 
 fun ReactiveMongoOperations.remove(query: Query, type: KClass<*>): Mono<DeleteResult> = remove(query, type.java)
 
@@ -64,10 +64,10 @@ fun permanentRedirect(uri: String) = ServerResponse.permanentRedirect(URI(uri)).
 // Date/Time extensions
 // --------------------
 
-fun LocalDateTime.format(language: Language) : String =
+fun LocalDateTime.format(language: Language): String =
         if (language == Language.ENGLISH) this.format(englishDateFormatter) else this.format(frenchDateFormatter)
 
-private val daysLookup : Map<Long, String> =
+private val daysLookup: Map<Long, String> =
         IntStream.rangeClosed(1, 31).boxed().collect(Collectors.toMap(Int::toLong, ::getOrdinal))
 
 private val frenchDateFormatter = DateTimeFormatter.ofPattern("d MMMM yyyy", Locale.FRENCH)
@@ -79,34 +79,34 @@ private val englishDateFormatter = DateTimeFormatterBuilder()
         .appendLiteral(" ")
         .appendPattern("yyyy").toFormatter(Locale.ENGLISH)
 
-private fun getOrdinal(n: Int): String {
-        if (n >= 11 && n <= 13) {
-            return n.toString() + "th"
+
+private fun getOrdinal(n: Int) =
+        when {
+            n in 11..13 -> "${n}th"
+            n % 10 == 1 -> "${n}st"
+            n % 10 == 2 -> "${n}nd"
+            n % 10 == 3 -> "${n}rd"
+            else -> "${n}th"
         }
-        when (n % 10) {
-            1 -> return n.toString() + "st"
-            2 -> return n.toString() + "nd"
-            3 -> return n.toString() + "rd"
-            else -> return n.toString() + "th"
-        }
-    }
 
 // ----------------
 // Other extensions
 // ----------------
 
-fun String.stripAccents() = Normalizer.normalize(this, Normalizer.Form.NFD).replace("\\p{InCombiningDiacriticalMarks}+".toRegex(), "")
+fun String.stripAccents() = Normalizer
+        .normalize(this, Normalizer.Form.NFD)
+        .replace("\\p{InCombiningDiacriticalMarks}+".toRegex(), "")
 
-fun String.toSlug() = this.toLowerCase()
-            .stripAccents()
-            .replace("\n", " ")
-            .replace("[^a-z\\d\\s]".toRegex(), " ")
-            .split(" ")
-            .joinToString("-")
+fun String.toSlug() =
+        toLowerCase()
+                .stripAccents()
+                .replace("\n", " ")
+                .replace("[^a-z\\d\\s]".toRegex(), " ")
+                .split(" ")
+                .joinToString("-")
 
-fun <T> Iterable<T>.shuffle(): Iterable<T> {
-    val shuffledList = this.toMutableList()
-    Collections.shuffle(shuffledList)
-    return shuffledList
-}
+fun <T> Iterable<T>.shuffle(): Iterable<T> =
+        toMutableList().apply {
+            Collections.shuffle(this)
+        }
 
