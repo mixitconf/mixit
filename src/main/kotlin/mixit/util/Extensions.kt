@@ -102,7 +102,4 @@ fun String.toSlug() =
                 .joinToString("-")
 
 fun <T> Iterable<T>.shuffle(): Iterable<T> =
-        toMutableList().apply {
-            Collections.shuffle(this)
-        }
-
+        toMutableList().apply { Collections.shuffle(this) }

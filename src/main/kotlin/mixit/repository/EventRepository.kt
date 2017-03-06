@@ -23,8 +23,6 @@ class EventRepository(val template: ReactiveMongoTemplate) {
         events.forEach { save(it).block() }
     }
 
-    fun yearToId(year:String): String = "mixit${year.substring(2)}"
-
     fun findAll() = template.find<Event>(Query().with(Sort("year")))
 
     fun findOne(id: String) = template.findById<Event>(id)

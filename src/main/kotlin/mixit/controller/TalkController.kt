@@ -35,7 +35,7 @@ class TalkController(val repository: TalkRepository,
     }
 
     fun findByEventView(year: Int, req: ServerRequest) =
-            repository.findByEvent(eventRepository.yearToId(year.toString())).collectList().then { sessions ->
+            repository.findByEvent(yearToId(year.toString())).collectList().then { sessions ->
                 val model = mapOf(Pair("talks", sessions.map { it.toDto(markdownConverter) }), Pair("year", year))
                 ok().render("talks", model)
             }
@@ -47,9 +47,11 @@ class TalkController(val repository: TalkRepository,
     fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("login")))
 
     fun findByEventId(req: ServerRequest) =
-            ok().json().body(repository.findByEvent(eventRepository.yearToId(req.pathVariable("year"))))
+            ok().json().body(repository.findByEvent(yearToId(req.pathVariable("year"))))
 
 }
+
+fun yearToId(year:String): String = "mixit${year.substring(2)}"
 
 class TalkDto(
         val id: String?,
