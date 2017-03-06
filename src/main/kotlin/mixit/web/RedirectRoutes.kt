@@ -1,4 +1,4 @@
-package mixit.web
+package mixit.controller
 
 import mixit.repository.PostRepository
 import mixit.repository.TalkRepository
@@ -16,6 +16,8 @@ class RedirectRoutes(val postRepository: PostRepository,
                      val talkRepository: TalkRepository,
                      @Value("\${baseUri}") val baseUri: String) {
 
+    val GOOGLE_DRIVE_URI:String = "https://drive.google.com/open"
+
     @Bean
     fun redirectRouter() = router {
         accept(TEXT_HTML).route {
@@ -24,6 +26,15 @@ class RedirectRoutes(val postRepository: PostRepository,
                 (GET("/{id}") or GET("/{id}/")) { redirectOneArticleView(it) }
             }
             GET("/article/{id}/", this@RedirectRoutes::redirectOneArticleView)
+
+            GET("/docs/sponsor/form/en") { permanentRedirect("$GOOGLE_DRIVE_URI?id=$sponsorFormEn")}
+            GET("/docs/sponsor/form/fr") { permanentRedirect("$GOOGLE_DRIVE_URI?id=$sponsorFormFr")}
+            GET("/docs/sponsor/leaflet/en") { permanentRedirect("$GOOGLE_DRIVE_URI?id=$sponsorLeafletEn")}
+            GET("/docs/sponsor/leaflet/fr") { permanentRedirect("$GOOGLE_DRIVE_URI?id=$sponsorLeafletFr")}
+            GET("/docs/speaker/leaflet/en") { permanentRedirect("$GOOGLE_DRIVE_URI?id=$speakerLeafletEn")}
+            GET("/docs/speaker/leaflet/fr") { permanentRedirect("$GOOGLE_DRIVE_URI?id=$speakerLeafletFr")}
+            GET("/docs/presse/leaflet/en") { permanentRedirect("$GOOGLE_DRIVE_URI?id=$presseLeafletEn")}
+            GET("/docs/presse/leaflet/fr") { permanentRedirect("$GOOGLE_DRIVE_URI?id=$presseLeafletFr")}
 
             GET("/2017/") { permanentRedirect("$baseUri/2017") }
             GET("/2016/") { permanentRedirect("$baseUri/2016") }
