@@ -1,6 +1,5 @@
 package mixit.model
 
-import mixit.util.MarkdownConverter
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 import java.time.LocalDate
