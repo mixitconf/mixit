@@ -53,25 +53,20 @@ fun EventSponsoring.toDto() = SponsorDto(
     logoWebpUrl(this.sponsor.logoUrl)
 )
 
-private fun logoWebpUrl(url:String): String? {
-    if (url.endsWith("png") || url.endsWith("jpg")){
-        return url.replace("png", "webp").replace("jpg", "webp")
-    }
-    return null
-}
+private fun logoWebpUrl(url: String) =
+        when {
+            url.endsWith("png") -> url.replace("png", "webp")
+            url.endsWith("jpg") -> url.replace("jpg", "webp")
+            else -> null
+        }
 
-private fun logoType(url:String): String {
-    if (url.endsWith("svg")){
-        return "image/svg+xml"
-    }
-    if (url.endsWith("png")){
-        return "image/png"
-    }
-    if (url.endsWith("jpg")){
-        return "image/jpeg"
-    }
-    throw IllegalArgumentException("Extension not supported")
-}
+private fun logoType(url: String) =
+        when {
+            url.endsWith("svg") -> "image/svg+xml"
+            url.endsWith("png") -> "image/png"
+            url.endsWith("jpg") -> "image/jpeg"
+            else -> throw IllegalArgumentException("Extension not supported")
+        }
 
 class EventSponsoringDto(
     val level: SponsorshipLevel,
