@@ -14,11 +14,14 @@ import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 import mixit.util.*
+import org.slf4j.LoggerFactory
 import org.springframework.data.mongodb.core.query.Criteria.*
 
 
 @Repository
 class PostRepository(val template: ReactiveMongoTemplate) {
+
+    private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
         val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
@@ -26,6 +29,7 @@ class PostRepository(val template: ReactiveMongoTemplate) {
         val blogResource = ClassPathResource("data/blog.json")
         val posts: List<Post> = objectMapper.readValue(blogResource.inputStream)
         posts.forEach { save(it).block() }
+        logger.info("Blog posts data initialization complete")
     }
 
     fun findOne(id: String) = template.findById<Post>(id)

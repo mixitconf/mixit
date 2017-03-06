@@ -11,11 +11,14 @@ import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Mono
 import mixit.util.*
+import org.slf4j.LoggerFactory
 import org.springframework.data.mongodb.core.query.Criteria.*
 
 
 @Repository
 class UserRepository(val template: ReactiveMongoTemplate) {
+
+    private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
         val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
@@ -23,6 +26,7 @@ class UserRepository(val template: ReactiveMongoTemplate) {
         val usersResource = ClassPathResource("data/users.json")
         val users: List<User> = objectMapper.readValue(usersResource.inputStream)
         users.forEach { save(it).block() }
+        logger.info("Users data initialization complete")
     }
 
     fun findByYear(year: Int) =

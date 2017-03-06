@@ -10,11 +10,14 @@ import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 import mixit.util.*
+import org.slf4j.LoggerFactory
 import org.springframework.data.mongodb.core.query.Criteria.*
 
 
 @Repository
 class TalkRepository(val template: ReactiveMongoTemplate) {
+
+    private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
         val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
@@ -24,6 +27,7 @@ class TalkRepository(val template: ReactiveMongoTemplate) {
             val talks: List<Talk> = objectMapper.readValue(talksResource.inputStream)
             talks.forEach { save(it).block() }
         }
+        logger.info("Talks data initialization complete")
     }
 
     fun findByEvent(eventId: String) =
