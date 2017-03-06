@@ -22,7 +22,7 @@ import org.springframework.web.reactive.result.view.mustache.MustacheViewResolve
 
 
 @SpringBootApplication
-class Application {
+class Mixit {
 
     @Bean
     fun viewResolver(messageSource: MessageSource) = MustacheViewResolver().apply {
@@ -54,5 +54,5 @@ class Application {
 }
 
 fun main(args: Array<String>) {
-    run(Application::class, *args)
+    run(Mixit::class, *args)
 }
