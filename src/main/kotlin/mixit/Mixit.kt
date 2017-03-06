@@ -2,12 +2,7 @@ package mixit
 
 import com.mongodb.ConnectionString
 import com.samskivert.mustache.Mustache
-import mixit.repository.PostRepository
-import mixit.repository.EventRepository
-import mixit.repository.TalkRepository
-import mixit.repository.UserRepository
 import mixit.util.*
-import org.springframework.boot.ApplicationRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.MessageSource
 import org.springframework.context.annotation.Bean
