@@ -34,17 +34,13 @@ fun run(type: KClass<*>, vararg args: String) = SpringApplication.run(type.java,
 
 inline fun <reified T : Any> ReactiveMongoOperations.findById(id: Any): Mono<T> = findById(id, T::class.java)
 
-fun <T : Any> ReactiveMongoOperations.findById(id: Any, type: KClass<T>): Mono<T> = findById(id, type.java)
-
 inline fun <reified T : Any> ReactiveMongoOperations.find(query: Query): Flux<T> = find(query, T::class.java)
 
-fun <T : Any> ReactiveMongoOperations.findAll(type: KClass<T>): Flux<T> = findAll(type.java)
-
-fun <T : Any> ReactiveMongoOperations.find(query: Query, type: KClass<T>): Flux<T> = find(query, type.java)
+inline fun <reified T : Any> ReactiveMongoOperations.findAll(): Flux<T> = findAll(T::class.java)
 
 inline fun <reified T : Any> ReactiveMongoOperations.findOne(query: Query): Mono<T> = find(query, T::class.java).next()
 
-fun ReactiveMongoOperations.remove(query: Query, type: KClass<*>): Mono<DeleteResult> = remove(query, type.java)
+inline fun <reified T : Any> ReactiveMongoOperations.remove(query: Query): Mono<DeleteResult> = remove(query, T::class.java)
 
 // -------------------------
 // Spring WebFlux extensions

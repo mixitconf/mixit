@@ -15,7 +15,6 @@ import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 import mixit.util.*
 import org.springframework.data.mongodb.core.query.Criteria.*
-import reactor.core.publisher.Mono
 
 
 @Repository
@@ -29,10 +28,10 @@ class PostRepository(val template: ReactiveMongoTemplate) {
         posts.forEach { save(it).block() }
     }
 
-    fun findOne(id: String) = template.findById(id, Post::class)
+    fun findOne(id: String) = template.findById<Post>(id)
 
-    fun findBySlug(slug: String, lang: Language) : Mono<Post> =
-            template.findOne(Query().addCriteria(where("slug.$lang").`is`(slug)))
+    fun findBySlug(slug: String, lang: Language) =
+            template.findOne<Post>(Query(where("slug.$lang").`is`(slug)))
 
     fun findAll(lang: Language? = null): Flux<Post> {
         val query = Query()
@@ -44,7 +43,7 @@ class PostRepository(val template: ReactiveMongoTemplate) {
         return template.find(query)
     }
 
-    fun deleteAll() = template.remove(Query(), Post::class)
+    fun deleteAll() = template.remove<Post>(Query())
 
     fun save(article: Post) = template.save(article)
 

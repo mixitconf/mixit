@@ -5,13 +5,12 @@ import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.model.Talk
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
-import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 import mixit.util.*
-import reactor.core.publisher.Mono
+import org.springframework.data.mongodb.core.query.Criteria.*
 
 
 @Repository
@@ -27,19 +26,18 @@ class TalkRepository(val template: ReactiveMongoTemplate) {
         }
     }
 
-    fun findByEvent(eventId: String): Flux<Talk> {
-        val query = Query().addCriteria(Criteria.where("event").`is`(eventId))
-        return template.find(query)
-    }
+    fun findByEvent(eventId: String) =
+        template.find<Talk>(Query(where("event").`is`(eventId)))
 
-    fun findAll(): Flux<Talk> = template.findAll(Talk::class)
 
-    fun findOne(id: String) : Mono<Talk>  = template.findById(id)
+    fun findAll(): Flux<Talk> = template.findAll<Talk>()
 
-    fun findBySlug(slug: String) : Mono<Talk> =
-            template.findOne(Query().addCriteria(Criteria.where("slug").`is`(slug)))
+    fun findOne(id: String) = template.findById<Talk>(id)
 
-    fun deleteAll() = template.remove(Query(), Talk::class)
+    fun findBySlug(slug: String) =
+            template.findOne<Talk>(Query(where("slug").`is`(slug)))
+
+    fun deleteAll() = template.remove<Talk>(Query())
 
     fun save(talk: Talk) = template.save(talk)
 

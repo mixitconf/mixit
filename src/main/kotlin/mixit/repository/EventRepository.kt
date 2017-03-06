@@ -25,11 +25,11 @@ class EventRepository(val template: ReactiveMongoTemplate) {
 
     fun yearToId(year:String): String = "mixit${year.substring(2)}"
 
-    fun findAll() = template.find(Query().with(Sort("year")), Event::class)
+    fun findAll() = template.find<Event>(Query().with(Sort("year")))
 
-    fun findOne(id: String) = template.findById(id, Event::class)
+    fun findOne(id: String) = template.findById<Event>(id)
 
-    fun deleteAll() = template.remove(Query(), Event::class)
+    fun deleteAll() = template.remove<Event>(Query())
 
     fun save(event: Event) = template.save(event)
 

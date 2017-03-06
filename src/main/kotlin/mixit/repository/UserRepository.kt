@@ -6,13 +6,12 @@ import mixit.model.Role
 import mixit.model.User
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
-import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
 import org.springframework.stereotype.Repository
-import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 import mixit.util.*
+import org.springframework.data.mongodb.core.query.Criteria.*
 
 
 @Repository
@@ -26,36 +25,30 @@ class UserRepository(val template: ReactiveMongoTemplate) {
         users.forEach { save(it).block() }
     }
 
-    fun findByYear(year: Int): Flux<User> {
-        val query = Query().addCriteria(Criteria.where("year").`is`(year))
-        return template.find(query)
-    }
+    fun findByYear(year: Int) =
+            template.find<User>(Query(where("year").`is`(year)))
 
-    fun findByRole(role: Role): Flux<User> {
-        val query = Query().addCriteria(Criteria.where("role").`is`(role))
-        return template.find(query)
-    }
 
-    fun findByRoleAndEvent(role: Role, event: String): Flux<User> {
-        val query = Query().addCriteria(Criteria.where("role").`is`(role).and("events").`in`(event))
-        return template.find(query)
-    }
+    fun findByRole(role: Role) =
+            template.find<User>(Query(where("role").`is`(role)))
 
-    fun findOneByRole(login: String, role: Role): Mono<User> {
-        val query = Query().addCriteria(Criteria.where("role").`in`(role).and("_id").`is`(login))
-        return template.findOne(query)
-    }
 
-    fun findAll(): Flux<User> = template.findAll(User::class)
+    fun findByRoleAndEvent(role: Role, event: String) =
+            template.find<User>(Query(where("role").`is`(role).and("events").`in`(event)))
 
-    fun findOne(id: String) = template.findById(id, User::class)
 
-    fun findByLegacyId(id: Long): Mono<User> {
-        val query = Query().addCriteria(Criteria.where("legacyId").`is`(id))
-        return template.findOne(query)
-    }
+    fun findOneByRole(login: String, role: Role) =
+        template.findOne<User>(Query(where("role").`in`(role).and("_id").`is`(login)))
 
-    fun deleteAll() = template.remove(Query(), User::class)
+
+    fun findAll() = template.findAll<User>()
+
+    fun findOne(id: String) = template.findById<User>(id)
+
+    fun findByLegacyId(id: Long) =
+            template.findOne<User>(Query(where("legacyId").`is`(id)))
+
+    fun deleteAll() = template.remove<User>(Query())
 
     fun save(user: User) = template.save(user)
 
