@@ -1,0 +1,52 @@
+{{> header}}
+
+<div class="mxt-wrapper--page-title">
+    <div class="row">
+        <div class="columns large-8 large-offset-2">
+            <h1 class="text-center">{{#i18n}}attend.title{{/i18n}}</h1>
+        </div>
+    </div>
+</div>
+
+<div class="mxt-wrapper--page-content">
+    <div class="row">
+        <div class="column large-8 large-offset-2">
+            <div class="callout">
+                {{#i18n}}attend.text{{/i18n}}
+            </div>
+
+              <div class="login-box">
+    <div class="row">
+      <div class="large-12 columns">
+        <form action="/attend" method="post">
+          <div class="row">
+            <div class="large-12 columns">
+              <input type="text" name="firstname" placeholder="{{#i18n}}attend.firstname{{/i18n}}" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <input type="text" name="lastname" placeholder="{{#i18n}}attend.lastname{{/i18n}}" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <input type="email" name="email" placeholder="{{#i18n}}attend.email{{/i18n}}" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 large-centered columns">
+              <input type="submit" class="button expand" value="{{#i18n}}attend.submit{{/i18n}}"/>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+        </div>
+    </div>
+
+</div>
+
+{{> footer}}
