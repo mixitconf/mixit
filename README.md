@@ -16,8 +16,8 @@ developed with Spring Framework 5 and Kotlin can look like:
  - Immutable Pojos
  - Cloud Native
  
- You can see a variant of this project software design in [this webflux branch](https://github.com/mix-it/mixit/tree/webflux):
-  - [Functional bean registration](https://github.com/mix-it/mixit/blob/webflux/src/main/kotlin/Context.kt)
+ You can see a variant of this project software design in [this functional-bean-registration branch](https://github.com/mix-it/mixit/tree/functional-bean-registration):
+  - [Functional bean registration](https://github.com/mix-it/mixit/blob/functional-bean-registration/src/main/kotlin/Context.kt)
   - Pure Spring Framework project (without Spring Boot)
   - No CGLIB proxy
   - No kotlin-spring plugin needed
