@@ -15,6 +15,11 @@ developed with Spring Framework 5 and Kotlin can look like:
  - [Constructor based injection](http://olivergierke.de/2013/11/why-field-injection-is-evil/)
  - Immutable Pojos
  - Cloud Native
+ 
+ You can see a variant of this project software design in [this webflux branch](https://github.com/mix-it/mixit/tree/webflux):
+  - [Functional bean registration](https://github.com/mix-it/mixit/blob/webflux/src/main/kotlin/Context.kt)
+  - Pure Spring Framework project (without Spring Boot)
+  - No CGLIB proxy 
 
 ### Technologies used
 
@@ -25,7 +30,7 @@ developed with Spring Framework 5 and Kotlin can look like:
  - Reactive API: [Reactor](http://projectreactor.io/)
  - Persistence : [Spring Data Reactive MongoDB](https://spring.io/blog/2016/11/28/going-reactive-with-spring-data)
  - Build: [Gradle Script Kotlin](https://github.com/gradle/gradle-script-kotlin)
- - Testing: [Junit](http://junit.org/)
+ - Testing: [Junit](http://junit.org/) 
  
 ### TODO
 
@@ -49,7 +54,6 @@ developed with Spring Framework 5 and Kotlin can look like:
  - Run `./gradlew bootRun` in another terminal
  - Run `gulp watch` in another terminal
  - Open `http://localhost:8080/` in your browser
- - If you just want to restart the app: `./gradlew bootRun -x gulpBuild`
  - If you want to debug the app, add `--debug-jvm` parameter to Gradle command line
  
 Sass, TypeScript, `messages*.properties` and templates should be live reloaded.
