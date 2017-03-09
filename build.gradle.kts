@@ -68,6 +68,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-webflux") {
         exclude(module = "hibernate-validator")
     }
+    compileOnly("org.springframework:spring-context-indexer")
     compile("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
     compile("org.springframework.boot:spring-boot-devtools")
     testCompile("org.springframework.boot:spring-boot-starter-test")
