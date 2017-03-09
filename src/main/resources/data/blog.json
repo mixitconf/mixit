@@ -1,5 +1,47 @@
 [
     {
+      "addedAt": [
+          2017,
+          3,
+          13,
+          8,
+          0
+      ],
+      "author": {
+          "company": "Ninja-Squad",
+          "description": {
+              "ENGLISH": "Pre-register for MiXiT 2017!",
+              "FRENCH": "Pre-enregistrez-vous pour MiXiT 2017&nbsp;!"
+          },
+          "email": "",
+          "events": [],
+          "firstname": "Cédric",
+          "lastname": "Exbrayat",
+          "legacyId": 0,
+          "links": [],
+          "login": "0",
+          "logoUrl": null,
+          "role": "ATTENDEE"
+      },
+      "content": {
+          "ENGLISH": "MiXiT will soon be here (April 20th-21st), and like every year, you are ready to try to get your ticket by clicking faster than light.\n\nBecause we know that it has become difficult to acquire the precious pass that opens the gates of this conference we prepare with love every year, with speakers from all around the world and from all around our beautiful town of Lyon (and with crepes too, that’s really important).\n\nWe would love to announce that we found the ideal location, a room big enough for 1500 attendees, while keeping the conference friendly (because a lot of you come for the atmosphere too), and all that for the unbeatable price of €50.\n\nBut… no, it doesn’t exist in real life.\n\nMiXit will take place again in the CPE school in Lyon,<br>always with the same number of attendees (600),<br>always with the same price (50€),<br>always with our (unmatched) atmosphere,<br>always with our crepes (a lot).\n\nBut this year, no need for you to be stressed out by the fact that all the conference was sold out in less than a minute (yes, we were blown out by the speed at which we were sold out last year too)!\n\nThis year, we are opening a pre-register step for everybody for a full week (until March, 19th, midnight). Take 5 minutes when you can, enter your firstname, lastname and email [there](/attend).\n\nThen, we are going to do what every conference overwhelmed by its own popularity does (Google IO, Apple WWDC, NgConf, and... MiXiT): we are going to distribute the tickets among those who pre-registered with a `random()`.\nThe lucky ones (most of you) will receive a link to buy their ticket.\nThe less lucky ones will be able to catch up with the talks videos less than a week after the conference (that’s new in 2017!).\n\nI already see some of you thinking about registering several times with all their hotmail and yahoo addresses, but we will take a close look, and the ones who get caught will be excluded from the process.\n\nOne last thing: to ensure fairness among everybody, if you don’t want to use your link to buy a ticket, we will give it to someone else. We won’t authorize a transfer: the buyer of the ticket must have the same email used for the pre-registering step.\n\nHere is the link to pre-register https://mixitconf.org/attend. Hopefully there will be tickets for everybody :) We’ll send the results on Monday, March 20th!",
+          "FRENCH": "MiXiT approche (20-21 Avril), et comme chaque année, vous êtes dans les starting-blocks pour tenter d’avoir votre place en cliquant plus vite que la lumière.\n\nCar, on le sait, il est devenu difficile d'acquérir le précieux sésame qui vous ouvrira les portes de cette conférence que l'on prépare avec amour chaque année, avec des speakers de renom que l'on débusque aux quatres coins du monde et du Rhône-Alpes (et avec des crêpes, important ça, les crêpes).\n\nAlors, on aimerait vous dire que l'on a trouvé la solution idéale, une salle géante pour accueillir 1500 personnes, tout en restant une conférence conviviale où beaucoup viennent aussi pour l'ambiance, et en gardant le prix d'entrée imbattable de 50€.\n\nMais... non, ça n’existe pas dans la vraie vie.\n\nMiXiT aura cette année encore lieu dans les locaux de l’école CPE,<br>toujours avec le même nombre de participants (600),<br>toujours avec le même prix (50€),<br>toujours avec notre ambiance (exceptionnelle),\ntoujours avec des crêpes (beaucoup).\n\nMais cette année, pas de stress pour tenter d'avoir votre place en moins d'une minute (ouais, nous aussi on a halluciné de la vitesse à laquelle elles sont parties l'année dernière)&nbsp;!\n\nCette année, nous allons ouvrir un pré-enregistrement à tout le monde **pendant 1 semaine (jusqu’à dimanche 19 Mars minuit)**.\n\nTu prends 5 minutes quand tu as le temps, tu entres ton nom, prénom et email [ici](/attend).\n\nEnsuite, cela se passera comme cela se passe dans nombre de conférences dépassées par leur popularité (Google IO, Apple WWDC, NgConf, et... MiXiT) : on distribuera les places parmi les pré-inscrits avec un `random()`.\nLes heureux choisis (la plupart d’entre vous) recevront alors un lien pour acheter leur place.\nLes moins chanceux pourront se rattraper avec les vidéos des conférences dès la semaine suivante (nouveauté 2017!).\n\nJe te vois déjà penser te pré-inscrire plusieurs fois avec toutes tes adresses hotmail et caramail, mais sache que l'on va contrôler tout ça, et que toute personne qui tentera ce genre de manoeuvre se verra exclue sans possibilité de recours.\n\nAutre détail non négligeable, pour conserver une équité entre tous les participants, si tu ne souhaites pas garder ton sésame pour l'achat d'une place, elle sera remise en jeu. Nous n'autoriserons pas de transfert : l'acheteur devra avoir le même email au pré-enregistrement et sur la billetterie.\n\nVoici le lien pour te pré-enregistrer  https://mixitconf.org/attend. On aura peut-être même de la place pour tout le monde :) On te tient au courant le lundi 20 Mars&nbsp;!"
+      },
+      "headline": {
+          "ENGLISH": "MiXiT will open its ticket sale soon, but you need to pre-register first. Read more to know why.",
+          "FRENCH": "MiXiT ouvre bientôt sa billeterie mais vous devez vous pré-enregistrer d'abord. Cet article vous dit pourquoi."
+      },
+      "id": "314",
+      "slug": {
+          "ENGLISH": "attend-mixit17",
+          "FRENCH": "assister-mixit17"
+      },
+      "title": {
+          "ENGLISH": "MiXiT pre-registration",
+          "FRENCH": "Pre-enregistrement MiXiT"
+      }
+    },
+    {
         "addedAt": [
             2017,
             2,
