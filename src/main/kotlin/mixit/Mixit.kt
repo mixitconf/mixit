@@ -1,15 +1,11 @@
 package mixit
 
-import com.mongodb.ConnectionString
 import com.samskivert.mustache.Mustache
 import mixit.util.*
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.MessageSource
 import org.springframework.context.annotation.Bean
 import org.springframework.core.env.Environment
-import org.springframework.data.mongodb.ReactiveMongoDatabaseFactory
-import org.springframework.data.mongodb.core.ReactiveMongoTemplate
-import org.springframework.data.mongodb.core.SimpleReactiveMongoDatabaseFactory
 import org.springframework.web.reactive.function.server.RouterFunction
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.result.view.mustache.MustacheResourceTemplateLoader
@@ -33,12 +29,6 @@ class Mixit {
     @Bean
     fun routerFunction(routesProvider: List<RouterFunctionProvider>) =
         routesProvider.map { it.invoke() }.reduce(RouterFunction<ServerResponse>::and)
-
-    @Bean
-    fun databaseFactory(env: Environment) = SimpleReactiveMongoDatabaseFactory(ConnectionString(env.getProperty("mongo.uri")))
-
-    @Bean
-    fun template(databaseFactory: ReactiveMongoDatabaseFactory) = ReactiveMongoTemplate(databaseFactory)
 
     @Bean
     fun filter(env: Environment) = MixitWebFilter(env.getProperty("baseUri"))
