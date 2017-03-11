@@ -1,5 +1,47 @@
 [
     {
+        "addedAt": [
+            2017,
+            3,
+            15,
+            9,
+            0
+        ],
+        "author": {
+            "company": "",
+            "description": {
+                "ENGLISH": "",
+                "FRENCH": ""
+            },
+            "email": "",
+            "events": [],
+            "firstname": "Grégory",
+            "lastname": "Alexandre",
+            "legacyId": 0,
+            "links": [],
+            "login": "0",
+            "logoUrl": null,
+            "role": "ATTENDEE"
+        },
+        "content": {
+            "ENGLISH": "During the whole conference, a screen will transcript, almost simultaneously, every word of speakers, in French and English.\n\n![hearing impaired logo](/images/article/2017-03-hearing-impaired.png \"hearing impaired\")\n\nWe had the chance to meet Maxime, a guy living nearby who developed his [HANDI-SPEECH](http://www.handi-speech.ovh) system, which uses semi-automatic transcription and live human correction. The English talks will use automatic transcription only, and we were pretty much convinced by what we saw.\n\nFor French talks, our awesome team of volunteers will have to check the automatic translation, and fix every mistake. This process is scaled horizontally, with several people fixing in parallel to absorb the flow.\n\n## With your help\n\nSuch a system would be useless if it is for nobody.That's why we're calling today for your help: tell anyone who could benefit from this.\n\nIf you know hearing impaired people, or organizations which could be interested and which could communicate on this, tell them to [send us an email](mailto:contact@mix-it.fr). We would then explain everything.\n\nThanks, and see you on April 20!",
+            "FRENCH": "Pendant toute la durée de la conférence un écran retranscrira, en quasi-direct, les paroles des orateurs, en français comme en anglais.\n\n![logo malentendant](/images/article/2017-03-hearing-impaired.png \"malentendant\")\n\nNous avons eu la chance de rencontrer Maxime, lyonnais qui a développé sa solution [HANDI-SPEECH](http://www.handi-speech.ovh) et propose un mécanisme de transcription automatique appuyée par une correction humaine en live. Les sessions en anglais s’appuieront exclusivement sur de la transcription automatique et, pour avoir testé la bête, nous sommes satisfaits de ce résultat automatique.\n\nPour les sessions en français, notre super équipe de bénévoles aura la tâche primordiale de vérifier tout ce que le traducteur automatique aura écrit et déceler chaque faute potentielle. Le truc foufou est que la correction sera répartie entre plusieurs correcteurs en temps réel afin d'équilibrer la charge que cela représente.\n\n## Avec votre aide\n\nCependant, un tel dispositif a un intérêt limité sans public, c'est pourquoi nous faisons appel à vous pour répandre la bonne parole et faire venir des personnes qui ne viennent traditionnellement pas aux conférences faute de service à leur fournir.\n\nSi vous connaissez des personnes déficientes auditives ou des organismes qui pourraient être intéressés directement et communiquer autour d'eux, dites-leur de [nous envoyer un email](mailto:contact@mix-it.fr). Nous nous chargerons de tout leur expliquer.\n\nMerci à vous et rendez-vous 20 avril&nbsp;!"
+        },
+        "headline": {
+            "ENGLISH": "In 2017, we want to leverage our value of diversity by providing the big theater with an semi-automatic transcription system.",
+            "FRENCH": "En 2017, on donne un coup de boost aux valeurs d'accessibilité de la conférence en équipant le grand amphithéâtre d'un système de transcription semi-automatique."
+        },
+        "id": "315",
+        "slug": {
+            "ENGLISH": "mixit17-with-transcription-for-hearing-impaired",
+            "FRENCH": "mixit17-avec-retranscription-pour-les-malentendants"
+        },
+        "title": {
+            "ENGLISH": "Retranscription for hearing impaired at #MiXiT17",
+            "FRENCH": "Retranscription pour les malentendants à #MiXiT17"
+        }
+    },
+    {
       "addedAt": [
           2017,
           3,
