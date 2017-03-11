@@ -54,6 +54,12 @@
 	top: -5em;
 }
 
+.mxt-wrapper--blog-post {
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+}
 // STICKY FOOTER
 .mxt-wrapper--page {
   flex: 1;
