@@ -7,6 +7,7 @@ import org.springframework.web.reactive.function.server.Routes
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 
+
 @Controller
 class AdminController(val ticketRepository: TicketRepository) : RouterFunctionProvider() {
 
