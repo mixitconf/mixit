@@ -10,6 +10,7 @@ import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.server.Routes
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse.*
+import java.util.*
 
 @Controller
 class TicketingController(val repository: TicketRepository) : RouterFunctionProvider() {
@@ -24,12 +25,12 @@ class TicketingController(val repository: TicketRepository) : RouterFunctionProv
     }
 
     fun submit(req: ServerRequest) = req.body(BodyExtractors.toFormData()).then { data ->
-        val map  = data.toSingleValueMap()
-        val ticket = Ticket(map["email"]!!,
-                map["firstname"]!!,
-                map["lastname"]!!)
+        val formData  = data.toSingleValueMap()
+        val ticket = Ticket(formData["email"]!!,
+                formData["firstname"]!!,
+                formData["lastname"]!!)
         repository.save(ticket)
-                .then { t -> ok().render("ticketing-submission") }
+                .then { t -> ok().render("ticketing-submission", formData) }
                 .otherwise(DuplicateKeyException::class.java, { ok().render("ticketing-error", mapOf(Pair("message", "ticketing.error.alreadyexists"))) } )
                 .otherwise { ok().render("ticketing-error", mapOf(Pair("message", "ticketing.error.default"))) }
     }
