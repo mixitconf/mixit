@@ -22,12 +22,15 @@ class UserRepository(val template: ReactiveMongoTemplate) {
 
     fun initData() {
         val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
-        deleteAll().block()
-        val usersResource = ClassPathResource("data/users.json")
-        val users: List<User> = objectMapper.readValue(usersResource.inputStream)
-        users.forEach { save(it).block() }
-        logger.info("Users data initialization complete")
+        if (count().block() == 0L) {
+            val usersResource = ClassPathResource("data/users.json")
+            val users: List<User> = objectMapper.readValue(usersResource.inputStream)
+            users.forEach { save(it).block() }
+            logger.info("Users data initialization complete")
+        }
     }
+
+    fun count() = template.count<User>()
 
     fun findByYear(year: Int) =
             template.find<User>(Query(where("year").`is`(year)))

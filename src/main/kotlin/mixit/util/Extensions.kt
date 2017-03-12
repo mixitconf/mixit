@@ -44,6 +44,8 @@ inline fun <reified T : Any> ReactiveMongoOperations.findOne(query: Query): Mono
 
 inline fun <reified T : Any> ReactiveMongoOperations.remove(query: Query): Mono<DeleteResult> = remove(query, T::class.java)
 
+inline fun <reified T : Any> ReactiveMongoOperations.count(): Mono<Long> = count(Query(), T::class.java)
+
 // -------------------------
 // Spring WebFlux extensions
 // -------------------------

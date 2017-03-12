@@ -21,14 +21,17 @@ class TalkRepository(val template: ReactiveMongoTemplate) {
 
     fun initData() {
         val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
-        deleteAll().block()
-        listOf(2012, 2013, 2014, 2015, 2016).forEach { year ->
-            val talksResource = ClassPathResource("data/talks_$year.json")
-            val talks: List<Talk> = objectMapper.readValue(talksResource.inputStream)
-            talks.forEach { save(it).block() }
+        if (count().block() == 0L) {
+            listOf(2012, 2013, 2014, 2015, 2016).forEach { year ->
+                val talksResource = ClassPathResource("data/talks_$year.json")
+                val talks: List<Talk> = objectMapper.readValue(talksResource.inputStream)
+                talks.forEach { save(it).block() }
+            }
+            logger.info("Talks data initialization complete")
         }
-        logger.info("Talks data initialization complete")
     }
+
+    fun count() = template.count<Talk>()
 
     fun findByEvent(eventId: String) =
         template.find<Talk>(Query(where("event").`is`(eventId)))

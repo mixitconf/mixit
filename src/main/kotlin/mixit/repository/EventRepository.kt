@@ -20,12 +20,15 @@ class EventRepository(val template: ReactiveMongoTemplate) {
 
     fun initData() {
         val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
-        deleteAll().block()
-        val eventsResource = ClassPathResource("data/events.json")
-        val events: List<Event> = objectMapper.readValue(eventsResource.inputStream)
-        events.forEach { save(it).block() }
-        logger.info("Events data initialization complete")
+        if (count().block() == 0L) {
+            val eventsResource = ClassPathResource("data/events.json")
+            val events: List<Event> = objectMapper.readValue(eventsResource.inputStream)
+            events.forEach { save(it).block() }
+            logger.info("Events data initialization complete")
+        }
     }
+
+    fun count() = template.count<Event>()
 
     fun findAll() = template.find<Event>(Query().with(Sort("year")))
 
