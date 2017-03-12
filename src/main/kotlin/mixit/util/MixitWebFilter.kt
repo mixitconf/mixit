@@ -22,6 +22,19 @@ class MixitWebFilter(val baseUri: String) : WebFilter {
            response.headers.location = URI("$baseUri${exchange.request.uri.path}")
            Mono.empty()
        }
+       else if (exchange.request.uri.path.startsWith("/admin")) {
+            exchange.session.then { session ->
+            if (session.attributes["username"] != null) {
+                chain.filter(exchange)
+            }
+            else {
+                val response = exchange.response
+                response.statusCode = HttpStatus.TEMPORARY_REDIRECT
+                response.headers.location = URI("$baseUri/login")
+                Mono.empty()
+               }
+           }
+       }
        else if (exchange.request.uri.path.startsWith("/en/"))
             chain.filter(exchange.mutate().request(exchange.request.mutate()
                     .path(exchange.request.uri.path.substring(3))

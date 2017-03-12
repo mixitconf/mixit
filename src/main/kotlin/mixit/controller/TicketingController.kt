@@ -16,14 +16,12 @@ class TicketingController(val repository: TicketRepository) : RouterFunctionProv
 
     override val routes: Routes = {
         accept(MediaType.TEXT_HTML).route {
-            GET("/ticketing", this@TicketingController::attendView)
+            GET("/ticketing") { ok().render("ticketing") }
         }
         contentType(MediaType.APPLICATION_FORM_URLENCODED).route {
             POST("/ticketing", this@TicketingController::submit)
         }
     }
-
-    fun attendView(req: ServerRequest) = ok().render("ticketing")
 
     fun submit(req: ServerRequest) = req.body(BodyExtractors.toFormData()).then { data ->
         val map  = data.toSingleValueMap()

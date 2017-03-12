@@ -1,0 +1,39 @@
+{{> header}}
+
+<div class="mxt-wrapper--page-title">
+    <div class="row">
+        <div class="columns large-8 large-offset-2">
+            <h1 class="text-center">{{#i18n}}admin.ticketing.title{{/i18n}}</h1>
+        </div>
+    </div>
+</div>
+
+<div class="mxt-wrapper--page-content">
+    <div class="row">
+        <div class="column large-8 large-offset-2">
+            <div class="callout">
+                <p>{{#i18n}}admin.ticketing.count{{/i18n}} : {{tickets.size}}</p>
+                <table>
+                  <thead>
+                    <tr>
+                      <th width="150">{{#i18n}}admin.ticketing.firstname{{/i18n}}</th>
+                      <th width="150">{{#i18n}}admin.ticketing.lastname{{/i18n}}</th>
+                      <th width="150">{{#i18n}}admin.ticketing.email{{/i18n}}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {{#tickets}}
+                    <tr>
+                      <td>{{firstname}}</td>
+                      <td>{{lastname}}</td>
+                      <td><a href="mailto:{{email}}">{{email}}</a></td>
+                    </tr>
+                    {{/tickets}}
+                  </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{> footer}}
