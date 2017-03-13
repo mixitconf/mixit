@@ -3368,7 +3368,7 @@
             "FRENCH": "Libérer le potentiel de chaque client pour l’accompagner dans sa transformation. Tout a commencé par une idée. Nous étions persuadés qu’en aidant nos clients à relier leurs processus comptables manuels et leurs silos de données, ils pourraient maximiser leur efficacité.  Les organisations avaient du mal à valoriser leurs données et ne pouvaient pas partager d’informationsen temps réel entre différents départements pour accélérer les prises de décision. Depuis, grâce à notre solide expertise et à nos logiciels éprouvés, nos clients misent sur l’avenir et relèvent avec brio les défis les plus complexes en matière de données. Avec notre plateforme nouvelle génération, Axway AMPLIFY, ils peuvent fusionner toutes leurs données pour créer un réseau d'expérience client qui regroupe employés, fournisseurs, partenaires et développeurs et permet aux consommateurs de suivre le rythme effréné de l’innovation de l’ère digitale. ",
             "ENGLISH": "Realizing the transformational power in every customer. We started out with this wild idea that, by helping our customers wire up their  manual accounting processes and data silos, they could become more efficient than they ever dreamed possible.  Organizations were struggling with unlocking value from their data and they couldn’t share real-time insights across departments to speed up decisions. Ever since, we’ve been propelling our customers forward with deep expertise and software that empowers them to tackle their toughest data challenges. With our next generation platform, Axway AMPLIFY, customers can fuse data from anywhere to power a customer experience network that unites not only employees, but suppliers, partners and developers into an agile force for innovation that’s as fast and fluid as today’s digital consumer."
           },
-          "logoUrl": "sponsor\/logo-axway.png",
+          "logoUrl": "sponsor\/logo-axway.svg",
           "events": [
 
           ],
@@ -3381,6 +3381,14 @@
             {
               "name": "Twitter",
               "url": "https://twitter.com/axway/"
+            },
+            {
+              "name": "LinkedIn",
+              "url": "https://www.linkedin.com/company/axway"
+            },
+            {
+              "name": "Instagram",
+              "url": "https://www.instagram.com/axway_of_life/"
             }
           ],
           "legacyId": null

@@ -5579,10 +5579,18 @@
             {
                 "name": "Twitter",
                 "url": "https://twitter.com/axway/"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/company/axway"
+            },
+            {
+                "name": "Instagram",
+                "url": "https://www.instagram.com/axway_of_life/"
             }
         ],
         "login": "Axway",
-        "logoUrl": "sponsor/logo-axway.png",
+        "logoUrl": "sponsor/logo-axway.svg",
         "role": "SPONSOR"
     },
     {
