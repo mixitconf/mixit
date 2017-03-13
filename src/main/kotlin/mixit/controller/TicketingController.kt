@@ -11,28 +11,26 @@ import org.springframework.web.reactive.function.server.Routes
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse.*
 
-//@Controller
-class AttendController(val repository: TicketRepository) : RouterFunctionProvider() {
+@Controller
+class TicketingController(val repository: TicketRepository) : RouterFunctionProvider() {
 
     override val routes: Routes = {
         accept(MediaType.TEXT_HTML).route {
-            GET("/attend", this@AttendController::attendView)
+            GET("/ticketing") { ok().render("ticketing") }
         }
         contentType(MediaType.APPLICATION_FORM_URLENCODED).route {
-            POST("/attend", this@AttendController::submit)
+            POST("/ticketing", this@TicketingController::submit)
         }
     }
 
-    fun attendView(req: ServerRequest) = ok().render("attend")
-
     fun submit(req: ServerRequest) = req.body(BodyExtractors.toFormData()).then { data ->
-        val map  = data.toSingleValueMap()
-        val ticket = Ticket(map["email"]!!,
-                map["firstname"]!!,
-                map["lastname"]!!)
+        val formData  = data.toSingleValueMap()
+        val ticket = Ticket(formData["email"]!!,
+                formData["firstname"]!!,
+                formData["lastname"]!!)
         repository.save(ticket)
-                .then { t -> ok().render("attend-submission") }
-                .otherwise(DuplicateKeyException::class.java, { ok().render("attend-error", mapOf(Pair("message", "attend.error.alreadyexists"))) } )
-                .otherwise { ok().render("attend-error", mapOf(Pair("message", "attend.error.default"))) }
+                .then { t -> ok().render("ticketing-submission", formData) }
+                .otherwise(DuplicateKeyException::class.java, { ok().render("ticketing-error", mapOf(Pair("message", "ticketing.error.alreadyexists"))) } )
+                .otherwise { ok().render("ticketing-error", mapOf(Pair("message", "ticketing.error.default"))) }
     }
 }

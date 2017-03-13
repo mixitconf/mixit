@@ -6,9 +6,11 @@ import org.springframework.boot.SpringApplication
 import org.springframework.data.mongodb.core.ReactiveMongoOperations
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.http.HttpHeaders
+import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType.*
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
+import org.springframework.web.reactive.function.server.ServerResponse.status
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 import java.net.URI
@@ -42,6 +44,8 @@ inline fun <reified T : Any> ReactiveMongoOperations.findOne(query: Query): Mono
 
 inline fun <reified T : Any> ReactiveMongoOperations.remove(query: Query): Mono<DeleteResult> = remove(query, T::class.java)
 
+inline fun <reified T : Any> ReactiveMongoOperations.count(): Mono<Long> = count(Query(), T::class.java)
+
 // -------------------------
 // Spring WebFlux extensions
 // -------------------------
@@ -55,6 +59,13 @@ fun ServerResponse.BodyBuilder.xml() = contentType(APPLICATION_XML)
 fun ServerResponse.BodyBuilder.html() = contentType(TEXT_HTML)
 
 fun permanentRedirect(uri: String) = ServerResponse.permanentRedirect(URI(uri)).build()
+
+fun temporaryRedirect(uri: String) = ServerResponse.temporaryRedirect(URI(uri)).build()
+
+fun found(uri: String): Mono<ServerResponse> {
+    val builder = status(HttpStatus.FOUND)
+    return builder.location(URI(uri)).build()
+}
 
 // --------------------
 // Date/Time extensions
