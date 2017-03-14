@@ -1,28 +1,25 @@
 package mixit.web.handler
 
+import mixit.MixitProperties
 import mixit.model.*
 import mixit.model.Language.*
 import mixit.repository.PostRepository
 import mixit.util.*
-import org.springframework.beans.factory.annotation.Value
-import org.springframework.context.annotation.Bean
-import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.*
-import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.ServerResponse.*
 
 
 @Component
 class BlogHandler(val repository: PostRepository,
                   val markdownConverter: MarkdownConverter,
-                  @Value("\${baseUri}") val baseUri: String) {
+                  val mixitProperties: MixitProperties) {
 
     fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug"), req.language()).then { a ->
         val model = mapOf(Pair("post", a.toDto(req.language(), markdownConverter)))
         ok().render("post", model)
     }.otherwiseIfEmpty(repository.findBySlug(req.pathVariable("slug"), if (req.language() == FRENCH) ENGLISH else FRENCH).then { a ->
-        permanentRedirect("$baseUri${if (req.language() == ENGLISH) "/en" else ""}/blog/${a.slug[req.language()]}")
+        permanentRedirect("${mixitProperties.baseUri}${if (req.language() == ENGLISH) "/en" else ""}/blog/${a.slug[req.language()]}")
     })
 
     fun findAllView(req: ServerRequest) = repository.findAll(req.language()).collectList().then { articles ->

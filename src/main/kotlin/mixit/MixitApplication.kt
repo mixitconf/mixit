@@ -11,14 +11,15 @@ import mixit.util.customizeModel
 import mixit.util.run
 import org.springframework.boot.ApplicationRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.MessageSource
 import org.springframework.context.annotation.Bean
-import org.springframework.core.env.Environment
 import org.springframework.web.reactive.result.view.mustache.MustacheResourceTemplateLoader
 import org.springframework.web.reactive.result.view.mustache.MustacheViewResolver
 
 @SpringBootApplication
-class Mixit {
+@EnableConfigurationProperties(MixitProperties::class)
+class MixitApplication {
 
     @Bean
     fun viewResolver(messageSource: MessageSource) = MustacheViewResolver().apply {
@@ -32,7 +33,7 @@ class Mixit {
     }
 
     @Bean
-    fun filter(env: Environment) = MixitWebFilter(env.getProperty("baseUri"))
+    fun filter(mixitProperties: MixitProperties) = MixitWebFilter(mixitProperties.baseUri!!)
 
     @Bean
     fun markdownConverter() = MarkdownConverter()
@@ -48,5 +49,5 @@ class Mixit {
 }
 
 fun main(args: Array<String>) {
-    run(Mixit::class, *args)
+    run(MixitApplication::class, *args)
 }
