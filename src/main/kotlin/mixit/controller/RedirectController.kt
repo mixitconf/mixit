@@ -2,21 +2,22 @@ package mixit.controller
 
 import mixit.repository.PostRepository
 import mixit.repository.TalkRepository
-import mixit.util.RouterFunctionProvider
 import mixit.util.language
 import mixit.util.permanentRedirect
+import mixit.util.router
 import org.springframework.beans.factory.annotation.Value
+import org.springframework.context.annotation.Bean
 import org.springframework.http.MediaType.TEXT_HTML
 import org.springframework.stereotype.Controller
-import org.springframework.web.reactive.function.server.Routes
 import org.springframework.web.reactive.function.server.ServerRequest
 
 @Controller
 class RedirectController(val postRepository: PostRepository,
                          val talkRepository: TalkRepository,
-                         @Value("\${baseUri}") val baseUri: String) : RouterFunctionProvider() {
+                         @Value("\${baseUri}") val baseUri: String) {
 
-    override val routes: Routes = {
+    @Bean
+    fun redirectRouter() = router {
         accept(TEXT_HTML).route {
             "/articles".route {
                 GET("/") { permanentRedirect("$baseUri/blog") }

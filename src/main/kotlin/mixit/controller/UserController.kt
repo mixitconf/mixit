@@ -4,6 +4,7 @@ import mixit.model.*
 import mixit.repository.EventRepository
 import mixit.repository.UserRepository
 import mixit.util.*
+import org.springframework.context.annotation.Bean
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.*
@@ -16,10 +17,10 @@ import java.net.URLDecoder
 @Controller
 class UserController(val repository: UserRepository,
                      val eventRepository: EventRepository,
-                     val markdownConverter: MarkdownConverter) : RouterFunctionProvider() {
+                     val markdownConverter: MarkdownConverter) {
 
-    // TODO Remove this@UserController when KT-15667 will be fixed
-    override val routes: Routes = {
+    @Bean
+    fun userRouter() = router {
         accept(TEXT_HTML).route {
             (GET("/user/{login}") or GET("/speaker/{login}") or GET("/sponsor/{login}")) { findOneView(it) }
             GET("/sponsors", this@UserController::findSponsorsView)

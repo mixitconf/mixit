@@ -11,8 +11,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.MessageSource
 import org.springframework.context.annotation.Bean
 import org.springframework.core.env.Environment
-import org.springframework.web.reactive.function.server.RouterFunction
-import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.result.view.mustache.MustacheResourceTemplateLoader
 import org.springframework.web.reactive.result.view.mustache.MustacheViewResolver
 
@@ -30,10 +28,6 @@ class Mixit {
         setCompiler(Mustache.compiler().escapeHTML(false).withLoader(loader))
         setModelCustomizer({ model, exchange ->  customizeModel(model, exchange, messageSource) })
     }
-
-    @Bean
-    fun routerFunction(routesProvider: List<RouterFunctionProvider>) =
-        routesProvider.map { it.invoke() }.reduce(RouterFunction<ServerResponse>::and)
 
     @Bean
     fun filter(env: Environment) = MixitWebFilter(env.getProperty("baseUri"))

@@ -5,6 +5,7 @@ import mixit.model.Language.*
 import mixit.repository.PostRepository
 import mixit.util.*
 import org.springframework.beans.factory.annotation.Value
+import org.springframework.context.annotation.Bean
 import org.springframework.http.MediaType.*
 import org.springframework.web.reactive.function.server.*
 import org.springframework.stereotype.Controller
@@ -14,9 +15,10 @@ import org.springframework.web.reactive.function.server.ServerResponse.*
 @Controller
 class BlogController(val repository: PostRepository,
                      val markdownConverter: MarkdownConverter,
-                     @Value("\${baseUri}") val baseUri: String) : RouterFunctionProvider() {
+                     @Value("\${baseUri}") val baseUri: String) {
 
-    override val routes: Routes = {
+    @Bean
+    fun blogRouter() = router {
         ("/blog" and accept(TEXT_HTML)).route {
             GET("/", this@BlogController::findAllView)
             GET("/{slug}", this@BlogController::findOneView)

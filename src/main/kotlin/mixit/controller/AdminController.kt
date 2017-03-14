@@ -1,17 +1,18 @@
 package mixit.controller
 
 import mixit.repository.TicketRepository
-import mixit.util.RouterFunctionProvider
+import mixit.util.router
+import org.springframework.context.annotation.Bean
 import org.springframework.stereotype.Controller
-import org.springframework.web.reactive.function.server.Routes
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 
 
 @Controller
-class AdminController(val ticketRepository: TicketRepository) : RouterFunctionProvider() {
+class AdminController(val ticketRepository: TicketRepository) {
 
-    override val routes: Routes = {
+    @Bean
+    fun adminRouter() = router {
         GET("/admin") { ServerResponse.ok().render("admin") }
         GET("/admin/ticketing", this@AdminController::adminTicketing)
     }

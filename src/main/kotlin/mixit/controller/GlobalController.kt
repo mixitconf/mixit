@@ -5,12 +5,12 @@ import mixit.model.SponsorshipLevel.*
 import mixit.repository.EventRepository
 import mixit.repository.UserRepository
 import mixit.util.MarkdownConverter
-import mixit.util.RouterFunctionProvider
 import mixit.util.language
+import mixit.util.router
+import org.springframework.context.annotation.Bean
 import org.springframework.core.io.ClassPathResource
 import org.springframework.http.MediaType.TEXT_HTML
 import org.springframework.stereotype.Controller
-import org.springframework.web.reactive.function.server.Routes
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import java.time.LocalDate
@@ -20,9 +20,10 @@ import java.util.*
 @Controller
 class GlobalController(val userRepository: UserRepository,
                        val eventRepository: EventRepository,
-                       val markdownConverter: MarkdownConverter) : RouterFunctionProvider() {
+                       val markdownConverter: MarkdownConverter) {
 
-    override val routes: Routes = {
+    @Bean
+    fun globalRouter() = router {
         accept(TEXT_HTML).route {
             GET("/", this@GlobalController::homeView)
             GET("/about", this@GlobalController::findAboutView)
@@ -30,7 +31,8 @@ class GlobalController(val userRepository: UserRepository,
         resources("/**", ClassPathResource("static/"))
     }
 
-    fun homeView(req: ServerRequest) = eventRepository.findOne("mixit17").then { events -> // TODO This could benefit from an in-memory cache with like 1H retention (data never change)
+    fun homeView(req: ServerRequest) = eventRepository.findOne("mixit17").then { events ->
+        // TODO This could benefit from an in-memory cache with like 1H retention (data never change)
         val sponsors = events.sponsors.groupBy { it.level }
         ok().render("home", mapOf(
                 Pair("sponsors-gold", sponsors[GOLD]?.map { it.toDto() }),
@@ -44,7 +46,7 @@ class GlobalController(val userRepository: UserRepository,
     fun findAboutView(req: ServerRequest) = userRepository.findByRole(Role.STAFF).collectList().then { u ->
         val users = u.map { it.toDto(req.language(), markdownConverter) }
         Collections.shuffle(users)
-        ok().render("about",  mapOf(Pair("staff", users)))
+        ok().render("about", mapOf(Pair("staff", users)))
     }
 
 }

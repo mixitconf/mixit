@@ -1,11 +1,11 @@
 package mixit.controller
 
 import mixit.model.*
-import mixit.repository.EventRepository
 import mixit.repository.TalkRepository
-import mixit.util.RouterFunctionProvider
 import mixit.util.MarkdownConverter
 import mixit.util.json
+import mixit.util.router
+import org.springframework.context.annotation.Bean
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.*
@@ -15,10 +15,10 @@ import java.time.LocalDateTime
 
 @Controller
 class TalkController(val repository: TalkRepository,
-                     val eventRepository: EventRepository,
-                     val markdownConverter: MarkdownConverter): RouterFunctionProvider() {
+                     val markdownConverter: MarkdownConverter) {
 
-    override val routes: Routes = {
+    @Bean
+    fun talkRouter() = router {
         accept(TEXT_HTML).route {
             GET("/2017") { ok().render("talks-2017") }
             GET("/2016") { findByEventView(2016, it) }

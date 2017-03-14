@@ -1,8 +1,9 @@
 package mixit.controller
 
-import mixit.util.RouterFunctionProvider
 import mixit.util.found
+import mixit.util.router
 import org.springframework.beans.factory.annotation.Value
+import org.springframework.context.annotation.Bean
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.BodyExtractors.*
@@ -13,9 +14,10 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 @Controller
 class AuthenticationController(@Value("\${admin.username}") val username: String,
                                @Value("\${admin.password}") val password: String,
-                               @Value("\${baseUri}") val baseUri: String) : RouterFunctionProvider() {
+                               @Value("\${baseUri}") val baseUri: String) {
 
-    override val routes: Routes = {
+    @Bean
+    fun authenticationRouter() = router {
         accept(TEXT_HTML).route {
             GET("/login") { ok().render("login") }
             // TODO Use POST

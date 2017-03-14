@@ -1,6 +1,6 @@
 package mixit.controller
 
-import mixit.util.RouterFunctionProvider
+import org.springframework.context.annotation.Bean
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.fromServerSentEvents
@@ -11,9 +11,10 @@ import java.time.Duration.ofMillis
 
 
 @Controller
-class NewsController : RouterFunctionProvider() {
+class NewsController {
 
-    override val routes: Routes = {
+    @Bean
+    fun newsRouter() = mixit.util.router {
         "/news".route {
             (accept(TEXT_HTML) and GET("/")) { newsView(it) }
             (accept(TEXT_EVENT_STREAM) and GET("/sse")) { newsSse(it) }

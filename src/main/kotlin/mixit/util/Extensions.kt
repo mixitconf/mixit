@@ -8,6 +8,8 @@ import org.springframework.data.mongodb.core.query.Query
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType.*
+import org.springframework.web.reactive.function.server.RouterDsl
+import org.springframework.web.reactive.function.server.Routes
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.status
@@ -49,6 +51,8 @@ inline fun <reified T : Any> ReactiveMongoOperations.count(): Mono<Long> = count
 // -------------------------
 // Spring WebFlux extensions
 // -------------------------
+
+fun router(routes: Routes) = RouterDsl().apply(routes).router()
 
 fun ServerRequest.language() = Language.findByTag(this.headers().header(HttpHeaders.ACCEPT_LANGUAGE).first())
 
