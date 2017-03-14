@@ -1,5 +1,6 @@
 package mixit.controller
 
+import mixit.DocDriveProperties
 import mixit.repository.PostRepository
 import mixit.repository.TalkRepository
 import mixit.util.language
@@ -14,6 +15,7 @@ import org.springframework.web.reactive.function.server.ServerRequest
 @Component
 class RedirectRoutes(val postRepository: PostRepository,
                      val talkRepository: TalkRepository,
+                     val docDriveProperties : DocDriveProperties,
                      @Value("\${baseUri}") val baseUri: String) {
 
     val GOOGLE_DRIVE_URI:String = "https://drive.google.com/open"
@@ -27,14 +29,14 @@ class RedirectRoutes(val postRepository: PostRepository,
             }
             GET("/article/{id}/", this@RedirectRoutes::redirectOneArticleView)
 
-            GET("/docs/sponsor/form/en") { permanentRedirect("$GOOGLE_DRIVE_URI?id=$sponsorFormEn")}
-            GET("/docs/sponsor/form/fr") { permanentRedirect("$GOOGLE_DRIVE_URI?id=$sponsorFormFr")}
-            GET("/docs/sponsor/leaflet/en") { permanentRedirect("$GOOGLE_DRIVE_URI?id=$sponsorLeafletEn")}
-            GET("/docs/sponsor/leaflet/fr") { permanentRedirect("$GOOGLE_DRIVE_URI?id=$sponsorLeafletFr")}
-            GET("/docs/speaker/leaflet/en") { permanentRedirect("$GOOGLE_DRIVE_URI?id=$speakerLeafletEn")}
-            GET("/docs/speaker/leaflet/fr") { permanentRedirect("$GOOGLE_DRIVE_URI?id=$speakerLeafletFr")}
-            GET("/docs/presse/leaflet/en") { permanentRedirect("$GOOGLE_DRIVE_URI?id=$presseLeafletEn")}
-            GET("/docs/presse/leaflet/fr") { permanentRedirect("$GOOGLE_DRIVE_URI?id=$presseLeafletFr")}
+            GET("/docs/sponsor/leaflet/en") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${docDriveProperties.en.sponsor}")}
+            GET("/docs/sponsor/leaflet/fr") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${docDriveProperties.fr.sponsor}")}
+            GET("/docs/sponsor/form/en") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${docDriveProperties.en.sponsorform}")}
+            GET("/docs/sponsor/form/fr") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${docDriveProperties.fr.sponsorform}")}
+            GET("/docs/speaker/leaflet/en") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${docDriveProperties.en.speaker}")}
+            GET("/docs/speaker/leaflet/fr") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${docDriveProperties.fr.speaker}")}
+            GET("/docs/presse/leaflet/en") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${docDriveProperties.en.press}")}
+            GET("/docs/presse/leaflet/fr") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${docDriveProperties.fr.press}")}
 
             GET("/2017/") { permanentRedirect("$baseUri/2017") }
             GET("/2016/") { permanentRedirect("$baseUri/2016") }
@@ -67,3 +69,6 @@ class RedirectRoutes(val postRepository: PostRepository,
     }
 
 }
+
+
+
