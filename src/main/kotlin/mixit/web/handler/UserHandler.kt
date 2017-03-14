@@ -1,12 +1,10 @@
-package mixit.controller
+package mixit.web.handler
 
 import mixit.model.*
 import mixit.repository.EventRepository
 import mixit.repository.UserRepository
 import mixit.util.*
-import org.springframework.context.annotation.Bean
-import org.springframework.http.MediaType.*
-import org.springframework.stereotype.Controller
+import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.ServerResponse.*
 import toMono
@@ -14,38 +12,10 @@ import java.net.URI.*
 import java.net.URLDecoder
 
 
-@Controller
-class UserController(val repository: UserRepository,
-                     val eventRepository: EventRepository,
-                     val markdownConverter: MarkdownConverter) {
-
-    @Bean
-    fun userRouter() = router {
-        accept(TEXT_HTML).route {
-            (GET("/user/{login}") or GET("/speaker/{login}") or GET("/sponsor/{login}")) { findOneView(it) }
-            GET("/sponsors", this@UserController::findSponsorsView)
-        }
-        accept(APPLICATION_JSON).route {
-            "/api/user".route {
-                GET("/", this@UserController::findAll)
-                POST("/", this@UserController::create)
-                GET("/{login}", this@UserController::findOne)
-            }
-            "/api/staff".route {
-                GET("/", this@UserController::findStaff)
-                GET("/{login}", this@UserController::findOneStaff)
-            }
-            "/api/speaker".route {
-                GET("/", this@UserController::findSpeakers)
-                GET("/{login}", this@UserController::findOneSpeaker)
-            }
-            "/api/sponsor".route {
-                GET("/", this@UserController::findSponsors)
-                GET("/{login}", this@UserController::findOneSponsor)
-            }
-            GET("/api/{event}/speaker/", this@UserController::findSpeakersByEvent)
-        }
-    }
+@Component
+class UserHandler(val repository: UserRepository,
+                  val eventRepository: EventRepository,
+                  val markdownConverter: MarkdownConverter) {
 
     fun findOneView(req: ServerRequest) =
             try {

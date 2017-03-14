@@ -1,4 +1,4 @@
-package mixit.controller
+package mixit.web.handler
 
 import mixit.model.*
 import mixit.model.Language.*
@@ -7,27 +7,16 @@ import mixit.util.*
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.context.annotation.Bean
 import org.springframework.http.MediaType.*
+import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.*
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.ServerResponse.*
 
 
-@Controller
-class BlogController(val repository: PostRepository,
-                     val markdownConverter: MarkdownConverter,
-                     @Value("\${baseUri}") val baseUri: String) {
-
-    @Bean
-    fun blogRouter() = router {
-        ("/blog" and accept(TEXT_HTML)).route {
-            GET("/", this@BlogController::findAllView)
-            GET("/{slug}", this@BlogController::findOneView)
-        }
-        ("/api/blog" and accept(APPLICATION_JSON)).route {
-            GET("/", this@BlogController::findAll)
-            GET("/{id}", this@BlogController::findOne)
-        }
-    }
+@Component
+class BlogHandler(val repository: PostRepository,
+                  val markdownConverter: MarkdownConverter,
+                  @Value("\${baseUri}") val baseUri: String) {
 
     fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug"), req.language()).then { a ->
         val model = mapOf(Pair("post", a.toDto(req.language(), markdownConverter)))

@@ -1,38 +1,18 @@
-package mixit.controller
+package mixit.web.handler
 
 import mixit.model.*
 import mixit.repository.TalkRepository
 import mixit.util.MarkdownConverter
 import mixit.util.json
-import mixit.util.router
-import org.springframework.context.annotation.Bean
-import org.springframework.http.MediaType.*
-import org.springframework.stereotype.Controller
+import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.ServerResponse.*
 import java.time.LocalDateTime
 
 
-@Controller
-class TalkController(val repository: TalkRepository,
-                     val markdownConverter: MarkdownConverter) {
-
-    @Bean
-    fun talkRouter() = router {
-        accept(TEXT_HTML).route {
-            GET("/2017") { ok().render("talks-2017") }
-            GET("/2016") { findByEventView(2016, it) }
-            GET("/2015") { findByEventView(2015, it) }
-            GET("/2014") { findByEventView(2014, it) }
-            GET("/2013") { findByEventView(2013, it) }
-            GET("/2012") { findByEventView(2012, it) }
-            GET("/talk/{slug}", this@TalkController::findOneView)
-        }
-        (accept(APPLICATION_JSON) and "/api").route {
-            GET("/talk/{login}", this@TalkController::findOne)
-            GET("/{year}/talk", this@TalkController::findByEventId)
-        }
-    }
+@Component
+class TalkHandler(val repository: TalkRepository,
+                  val markdownConverter: MarkdownConverter) {
 
     fun findByEventView(year: Int, req: ServerRequest) =
             repository.findByEvent(yearToId(year.toString())).collectList().then { sessions ->
@@ -48,6 +28,8 @@ class TalkController(val repository: TalkRepository,
 
     fun findByEventId(req: ServerRequest) =
             ok().json().body(repository.findByEvent(yearToId(req.pathVariable("year"))))
+
+    fun talks2017(req: ServerRequest) = ok().render("talks-2017")
 
 }
 

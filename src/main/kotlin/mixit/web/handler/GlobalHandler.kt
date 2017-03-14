@@ -1,4 +1,4 @@
-package mixit.controller
+package mixit.web.handler
 
 import mixit.model.*
 import mixit.model.SponsorshipLevel.*
@@ -6,30 +6,17 @@ import mixit.repository.EventRepository
 import mixit.repository.UserRepository
 import mixit.util.MarkdownConverter
 import mixit.util.language
-import mixit.util.router
-import org.springframework.context.annotation.Bean
-import org.springframework.core.io.ClassPathResource
-import org.springframework.http.MediaType.TEXT_HTML
-import org.springframework.stereotype.Controller
+import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import java.time.LocalDate
 import java.util.*
 
 
-@Controller
-class GlobalController(val userRepository: UserRepository,
-                       val eventRepository: EventRepository,
-                       val markdownConverter: MarkdownConverter) {
-
-    @Bean
-    fun globalRouter() = router {
-        accept(TEXT_HTML).route {
-            GET("/", this@GlobalController::homeView)
-            GET("/about", this@GlobalController::findAboutView)
-        }
-        resources("/**", ClassPathResource("static/"))
-    }
+@Component
+class GlobalHandler(val userRepository: UserRepository,
+                    val eventRepository: EventRepository,
+                    val markdownConverter: MarkdownConverter) {
 
     fun homeView(req: ServerRequest) = eventRepository.findOne("mixit17").then { events ->
         // TODO This could benefit from an in-memory cache with like 1H retention (data never change)
