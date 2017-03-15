@@ -2055,8 +2055,8 @@
           "email": "",
           "company": "Sword",
           "description": {
-            "FRENCH": "Sword Services est sp\u00e9cialis\u00e9 dans le d\u00e9veloppement et l'int\u00e9gration de logiciels sp\u00e9cifiques. Technophiles avant tout, nos 180 collaborateurs Lyonnais seront repr\u00e9sent\u00e9s sur le MixIT que nous sommes fiers de sponsoriser pour la premi\u00e8re ann\u00e9e.",
-            "ENGLISH": "Sword Services est sp\u00e9cialis\u00e9 dans le d\u00e9veloppement et l'int\u00e9gration de logiciels sp\u00e9cifiques. Technophiles avant tout, nos 180 collaborateurs Lyonnais seront repr\u00e9sent\u00e9s sur le MixIT que nous sommes fiers de sponsoriser pour la premi\u00e8re ann\u00e9e."
+            "FRENCH": "SWORD, c\u2019est 1 600 sp\u00e9cialistes en IT/Digital & Software actifs sur les 5 continents, qui vous accompagnent dans l\u2019\u00e9volution de votre organisation \u00e0 l\u2019\u00e8re du num\u00e9rique. Depuis 2000, SWORD a acquis une solide r\u00e9putation dans l\u2019\u00e9dition de logiciels et dans la conduite de projets IT & business complexes en tant que leader de la transformation technologique et digitale. Avec SWORD c\u2019est la garantie d\u2019un engagement de proximit\u00e9 dont le but est d\u2019optimiser vos processus & de valoriser vos donn\u00e9es. Notre volont\u00e9 est avant tout de construire dans la dur\u00e9e et de fid\u00e9liser nos collaborateurs, nos clients et nos partenaires en nous appuyant sur nos valeurs et notre enthousiasme qui vous accompagneront tout au long de vos projets.",
+            "ENGLISH": "SWORD is an international Consulting, Service and Software company driving global leaders intheir digital & technology transformation. Created in November 2000, the group has a current headcount of 1,600+ staff operating in more than 50 countries.Sword offers its customers comprehensive and integrated responses, on both the strategic approach and the execution."
           },
           "logoUrl": "sponsor\/logo-sword.jpg",
           "events": [
@@ -2065,16 +2065,20 @@
           "role": "SPONSOR",
           "links": [
             {
-              "name": "Site web",
-              "url": "http:\/\/www.sword-services.com\/fr\/#"
+              "name": "Site",
+              "url": "http://www.sword-services.com/fr/"
             },
             {
-              "name": "LinkedIn",
-              "url": "https:\/\/www.linkedin.com\/company\/5079515?trk=hp-feed-company-name"
+              "name": "Carrière",
+              "url": "https://career.sword-group.com/"
+            },
+            {
+              "name": "Linkedin",
+              "url": "https://www.linkedin.com/company-beta/7973/"
             },
             {
               "name": "Twitter",
-              "url": "https:\/\/twitter.com\/sword_group"
+              "url": "https://twitter.com/Sword_Group"
             }
           ],
           "legacyId": 5812
@@ -2804,8 +2808,8 @@
           "email": "",
           "company": "Sword",
           "description": {
-            "FRENCH": "SWORD, c\u2019est 1 500 sp\u00e9cialistes en IT\/Digital & Software actifs sur les 5 continents, qui vous accompagnent dans l\u2019\u00e9volution de votre organisation \u00e0 l\u2019\u00e8re du num\u00e9rique. Depuis 2000, SWORD a acquis une solide r\u00e9putation dans l\u2019\u00e9dition de logiciels et dans la conduite de projets IT & business complexes en tant que leader de la transformation technologique et digitale. Avec SWORD c\u2019est la garantie d\u2019un engagement de proximit\u00e9 dont le but est d\u2019optimiser vos processus & de valoriser vos donn\u00e9es. Notre volont\u00e9 est avant tout de construire dans la dur\u00e9e et de fid\u00e9liser nos collaborateurs, nos clients et nos partenaires en nous appuyant sur nos valeurs et notre enthousiasme qui vous accompagneront tout au long de vos projets.",
-            "ENGLISH": "Sword Group is an international Consulting, Service and Software company driving global leaders intheir digital & technology transformation. Created in November 2000, the group has a current headcount of 1,600+ staff operating in more than 50 countries.Sword offers its customers comprehensive and integrated responses, on both the strategic approach and the execution."
+            "FRENCH": "SWORD, c\u2019est 1 600 sp\u00e9cialistes en IT/Digital & Software actifs sur les 5 continents, qui vous accompagnent dans l\u2019\u00e9volution de votre organisation \u00e0 l\u2019\u00e8re du num\u00e9rique. Depuis 2000, SWORD a acquis une solide r\u00e9putation dans l\u2019\u00e9dition de logiciels et dans la conduite de projets IT & business complexes en tant que leader de la transformation technologique et digitale. Avec SWORD c\u2019est la garantie d\u2019un engagement de proximit\u00e9 dont le but est d\u2019optimiser vos processus & de valoriser vos donn\u00e9es. Notre volont\u00e9 est avant tout de construire dans la dur\u00e9e et de fid\u00e9liser nos collaborateurs, nos clients et nos partenaires en nous appuyant sur nos valeurs et notre enthousiasme qui vous accompagneront tout au long de vos projets.",
+            "ENGLISH": "SWORD is an international Consulting, Service and Software company driving global leaders intheir digital & technology transformation. Created in November 2000, the group has a current headcount of 1,600+ staff operating in more than 50 countries.Sword offers its customers comprehensive and integrated responses, on both the strategic approach and the execution."
           },
           "logoUrl": "sponsor\/logo-sword.svg",
           "events": [
@@ -2815,7 +2819,19 @@
           "links": [
             {
               "name": "Site",
-              "url": "http:\/\/www.sword-services.com\/fr\/"
+              "url": "http://www.sword-services.com/fr/"
+            },
+            {
+              "name": "Carrière",
+              "url": "https://career.sword-group.com/"
+            },
+            {
+              "name": "Linkedin",
+              "url": "https://www.linkedin.com/company-beta/7973/"
+            },
+            {
+              "name": "Twitter",
+              "url": "https://twitter.com/Sword_Group"
             }
           ],
           "legacyId": 5812
