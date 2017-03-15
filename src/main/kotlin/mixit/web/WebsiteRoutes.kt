@@ -19,7 +19,7 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
                     val ticketingHandler: TicketingHandler) {
 
     @Bean
-    fun htmlRouter() = router {
+    fun websiteRouter() = router {
 
         accept(TEXT_HTML).route {
             GET("/", globalHandler::homeView)
