@@ -8,7 +8,7 @@ buildscript {
     extra["spring.version"] = "5.0.0.BUILD-SNAPSHOT"
     extra["reactor-bom.version"] = "Aluminium-SR1"
     var kotlinVersion: String by extra
-    kotlinVersion = "1.1.0"
+    kotlinVersion = "1.1.1"
 
     repositories {
         mavenCentral()
