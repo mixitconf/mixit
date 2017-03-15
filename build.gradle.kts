@@ -81,7 +81,9 @@ dependencies {
     compile("io.projectreactor:reactor-kotlin:1.0.0.BUILD-SNAPSHOT")
     testCompile("io.projectreactor.addons:reactor-test")
 
-    compile("com.fasterxml.jackson.module:jackson-module-kotlin")
+    compile("com.fasterxml.jackson.module:jackson-module-kotlin") {
+        exclude(module = "kotlin-reflect")
+    }
     compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
 }
 
