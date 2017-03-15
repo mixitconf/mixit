@@ -3,7 +3,7 @@ package mixit.web
 import mixit.util.router
 import mixit.web.handler.*
 import org.springframework.context.annotation.Bean
-import org.springframework.http.MediaType
+import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Component
 
 
@@ -15,7 +15,7 @@ class ApiRoutes(val blogHandler: BlogHandler,
 
     @Bean
     fun apiRouter() = router {
-        (accept(MediaType.APPLICATION_JSON) and "/api").route {
+        (accept(APPLICATION_JSON) and "/api").route {
             "/blog".route {
                 GET("/", blogHandler::findAll)
                 GET("/{id}", blogHandler::findOne)

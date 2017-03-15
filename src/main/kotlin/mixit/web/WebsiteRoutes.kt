@@ -4,7 +4,7 @@ import mixit.util.router
 import mixit.web.handler.*
 import org.springframework.context.annotation.Bean
 import org.springframework.core.io.ClassPathResource
-import org.springframework.http.MediaType
+import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Component
 
 
@@ -21,7 +21,7 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
     @Bean
     fun htmlRouter() = router {
 
-        accept(MediaType.TEXT_HTML).route {
+        accept(TEXT_HTML).route {
             GET("/", globalHandler::homeView)
             GET("/about", globalHandler::findAboutView)
             GET("/news", newsHandler::newsView)
@@ -59,11 +59,11 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
 
         resources("/**", ClassPathResource("static/"))
 
-        accept(MediaType.TEXT_EVENT_STREAM).route {
+        accept(TEXT_EVENT_STREAM).route {
             GET("/news/sse", newsHandler::newsSse)
         }
 
-        contentType(MediaType.APPLICATION_FORM_URLENCODED).route {
+        contentType(APPLICATION_FORM_URLENCODED).route {
             POST("/login", authenticationHandler::login)
             POST("/ticketing", ticketingHandler::submit)
         }
