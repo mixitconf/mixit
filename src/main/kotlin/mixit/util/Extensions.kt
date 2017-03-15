@@ -12,7 +12,7 @@ import org.springframework.web.reactive.function.server.RouterDsl
 import org.springframework.web.reactive.function.server.Routes
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
-import org.springframework.web.reactive.function.server.ServerResponse.status
+import org.springframework.web.reactive.function.server.ServerResponse.*
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 import java.net.URI
@@ -62,14 +62,11 @@ fun ServerResponse.BodyBuilder.xml() = contentType(APPLICATION_XML)
 
 fun ServerResponse.BodyBuilder.html() = contentType(TEXT_HTML)
 
-fun permanentRedirect(uri: String) = ServerResponse.permanentRedirect(URI(uri)).build()
+fun permanentRedirect(uri: String) = permanentRedirect(URI(uri)).build()
 
-fun temporaryRedirect(uri: String) = ServerResponse.temporaryRedirect(URI(uri)).build()
+fun temporaryRedirect(uri: String) = temporaryRedirect(URI(uri)).build()
 
-fun found(uri: String): Mono<ServerResponse> {
-    val builder = status(HttpStatus.FOUND)
-    return builder.location(URI(uri)).build()
-}
+fun seeOther(uri: String) = seeOther(URI(uri)).build()
 
 // --------------------
 // Date/Time extensions

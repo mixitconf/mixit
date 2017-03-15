@@ -1,7 +1,7 @@
 package mixit.web.handler
 
 import mixit.MixitProperties
-import mixit.util.found
+import mixit.util.seeOther
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.BodyExtractors.*
 import org.springframework.web.reactive.function.server.*
@@ -18,7 +18,7 @@ class AuthenticationHandler(val mixitProperties: MixitProperties) {
             val formData = data.toSingleValueMap()
             if (formData["username"] == mixitProperties.admin.username && formData["password"] == mixitProperties.admin.password) {
                 session.attributes["username"] =  data.toSingleValueMap()["username"]
-                found("${mixitProperties.baseUri}/admin")
+                seeOther("${mixitProperties.baseUri}/admin")
             }
             else ok().render("login-error")
         }

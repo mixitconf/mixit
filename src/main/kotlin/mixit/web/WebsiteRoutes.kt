@@ -9,14 +9,14 @@ import org.springframework.stereotype.Component
 
 
 @Component
-class HtmlRoutes(val adminHandler: AdminHandler,
-                 val authenticationHandler: AuthenticationHandler,
-                 val blogHandler: BlogHandler,
-                 val globalHandler: GlobalHandler,
-                 val newsHandler: NewsHandler,
-                 val talkHandler: TalkHandler,
-                 val userHandler: UserHandler,
-                 val ticketingHandler: TicketingHandler) {
+class WebsiteRoutes(val adminHandler: AdminHandler,
+                    val authenticationHandler: AuthenticationHandler,
+                    val blogHandler: BlogHandler,
+                    val globalHandler: GlobalHandler,
+                    val newsHandler: NewsHandler,
+                    val talkHandler: TalkHandler,
+                    val userHandler: UserHandler,
+                    val ticketingHandler: TicketingHandler) {
 
     @Bean
     fun htmlRouter() = router {
