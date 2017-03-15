@@ -4,6 +4,7 @@ import mixit.MixitProperties
 import mixit.model.*
 import mixit.model.Language.*
 import mixit.repository.PostRepository
+import mixit.repository.UserRepository
 import mixit.util.*
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.*
@@ -12,20 +13,25 @@ import org.springframework.web.reactive.function.server.ServerResponse.*
 
 @Component
 class BlogHandler(val repository: PostRepository,
+                  val userRepository: UserRepository,
                   val markdownConverter: MarkdownConverter,
                   val mixitProperties: MixitProperties) {
 
-    fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug"), req.language()).then { a ->
-        val model = mapOf(Pair("post", a.toDto(req.language(), markdownConverter)))
-        ok().render("post", model)
-    }.otherwiseIfEmpty(repository.findBySlug(req.pathVariable("slug"), if (req.language() == FRENCH) ENGLISH else FRENCH).then { a ->
-        permanentRedirect("${mixitProperties.baseUri}${if (req.language() == ENGLISH) "/en" else ""}/blog/${a.slug[req.language()]}")
-    })
+    fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug"), req.language())
+            .then { post -> userRepository.findOne(post.authorId).then { author ->
+                    val model = mapOf(Pair("post", post.toDto(author, req.language(), markdownConverter)))
+                    ok().render("post", model)
+                }
+            }.otherwiseIfEmpty(repository.findBySlug(req.pathVariable("slug"), if (req.language() == FRENCH) ENGLISH else FRENCH).then { a ->
+                permanentRedirect("${mixitProperties.baseUri}${if (req.language() == ENGLISH) "/en" else ""}/blog/${a.slug[req.language()]}")
+            })
 
-    fun findAllView(req: ServerRequest) = repository.findAll(req.language()).collectList().then { articles ->
-        val model = mapOf(Pair("posts", articles.map { it.toDto(req.language(), markdownConverter) }))
-        ok().render("blog", model)
-    }
+    fun findAllView(req: ServerRequest) = repository.findAll(req.language())
+            .collectList()
+            .then { posts -> userRepository.findMany(posts.map { it.authorId }).collectMap{ it.login }.then { authors ->
+                val model = mapOf(Pair("posts", posts.map { it.toDto(authors[it.authorId]!!, req.language(), markdownConverter) }))
+                ok().render("blog", model)
+            }}
 
     fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("id")))
 
@@ -43,7 +49,7 @@ class PostDto(
         val content: String
 )
 
-fun Post.toDto(language: Language, markdownConverter: MarkdownConverter) = PostDto(
+fun Post.toDto(author: User, language: Language, markdownConverter: MarkdownConverter) = PostDto(
         id,
         slug[language] ?: "",
         author,

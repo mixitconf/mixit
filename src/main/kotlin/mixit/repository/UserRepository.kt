@@ -52,6 +52,8 @@ class UserRepository(val template: ReactiveMongoTemplate) {
 
     fun findOne(id: String) = template.findById<User>(id)
 
+    fun findMany(ids: List<String>) = template.find<User>(Query(where("_id").`in`(ids)))
+
     fun findByLegacyId(id: Long) =
             template.findOne<User>(Query(where("legacyId").`is`(id)))
 

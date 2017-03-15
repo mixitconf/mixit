@@ -8,7 +8,7 @@ import java.time.LocalDateTime
 
 @Document
 data class Post(
-        val author: User,
+        val authorId: String,
         val addedAt: LocalDateTime = LocalDateTime.now(),
         val title: Map<Language, String> = emptyMap(),
         val headline: Map<Language, String> = emptyMap(),
