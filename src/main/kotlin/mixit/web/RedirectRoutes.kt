@@ -54,6 +54,7 @@ class RedirectRoutes(val postRepository: PostRepository,
             GET("/sponsors/") { permanentRedirect("$${mixitProperties.baseUri}/sponsors") }
 
             GET("/about/") { permanentRedirect("${mixitProperties.baseUri}/about") }
+            GET("/home") { permanentRedirect("${mixitProperties.baseUri}/") }
 
         }
     }
