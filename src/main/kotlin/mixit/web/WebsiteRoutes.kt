@@ -3,9 +3,12 @@ package mixit.web
 import mixit.util.router
 import mixit.web.handler.*
 import org.springframework.context.annotation.Bean
+import org.springframework.core.Ordered
+import org.springframework.core.annotation.Order
 import org.springframework.core.io.ClassPathResource
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Component
+import org.springframework.web.reactive.function.server.RouterFunctions.resources
 
 
 @Component
@@ -19,8 +22,8 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
                     val ticketingHandler: TicketingHandler) {
 
     @Bean
+    @Order(Ordered.HIGHEST_PRECEDENCE)
     fun websiteRouter() = router {
-
         accept(TEXT_HTML).route {
             GET("/", globalHandler::homeView)
             GET("/about", globalHandler::findAboutView)
@@ -57,8 +60,6 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
             }
         }
 
-        resources("/**", ClassPathResource("static/"))
-
         accept(TEXT_EVENT_STREAM).route {
             GET("/news/sse", newsHandler::newsSse)
         }
@@ -68,5 +69,9 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
             POST("/ticketing", ticketingHandler::submit)
         }
     }
+
+    @Bean
+    @Order(Ordered.LOWEST_PRECEDENCE)
+    fun resourceRouter() = resources("/**", ClassPathResource("static/"))
 
 }
