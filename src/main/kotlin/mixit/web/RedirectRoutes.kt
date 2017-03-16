@@ -5,11 +5,11 @@ import mixit.repository.PostRepository
 import mixit.repository.TalkRepository
 import mixit.util.language
 import mixit.util.permanentRedirect
-import mixit.util.router
 import org.springframework.context.annotation.Bean
 import org.springframework.http.MediaType.TEXT_HTML
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
+import org.springframework.web.reactive.function.server.router
 
 @Component
 class RedirectRoutes(val postRepository: PostRepository,
@@ -20,8 +20,8 @@ class RedirectRoutes(val postRepository: PostRepository,
 
     @Bean
     fun redirectRouter() = router {
-        accept(TEXT_HTML).route {
-            "/articles".route {
+        accept(TEXT_HTML).nest {
+            "/articles".nest {
                 GET("/") { permanentRedirect("${mixitProperties.baseUri}/blog") }
                 (GET("/{id}") or GET("/{id}/")) { redirectOneArticleView(it) }
             }

@@ -1,6 +1,5 @@
 package mixit.web
 
-import mixit.util.router
 import mixit.web.handler.*
 import org.springframework.context.annotation.Bean
 import org.springframework.core.Ordered
@@ -9,6 +8,7 @@ import org.springframework.core.io.ClassPathResource
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.RouterFunctions.resources
+import org.springframework.web.reactive.function.server.router
 
 
 @Component
@@ -24,7 +24,7 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
     @Bean
     @Order(Ordered.HIGHEST_PRECEDENCE)
     fun websiteRouter() = router {
-        accept(TEXT_HTML).route {
+        accept(TEXT_HTML).nest {
             GET("/", globalHandler::homeView)
             GET("/about", globalHandler::findAboutView)
             GET("/news", newsHandler::newsView)
@@ -49,22 +49,22 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
                     or GET("/sponsor/{login}")) { userHandler.findOneView(it) }
             GET("/sponsors", userHandler::findSponsorsView)
 
-            "/admin".route {
+            "/admin".nest {
                 GET("/", adminHandler::admin)
                 GET("/ticketing", adminHandler::adminTicketing)
             }
 
-            "/blog".route {
+            "/blog".nest {
                 GET("/", blogHandler::findAllView)
                 GET("/{slug}", blogHandler::findOneView)
             }
         }
 
-        accept(TEXT_EVENT_STREAM).route {
+        accept(TEXT_EVENT_STREAM).nest {
             GET("/news/sse", newsHandler::newsSse)
         }
 
-        contentType(APPLICATION_FORM_URLENCODED).route {
+        contentType(APPLICATION_FORM_URLENCODED).nest {
             POST("/login", authenticationHandler::login)
             POST("/ticketing", ticketingHandler::submit)
         }

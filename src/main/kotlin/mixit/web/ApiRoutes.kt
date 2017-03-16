@@ -1,10 +1,10 @@
 package mixit.web
 
-import mixit.util.router
 import mixit.web.handler.*
 import org.springframework.context.annotation.Bean
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Component
+import org.springframework.web.reactive.function.server.router
 
 
 @Component
@@ -15,13 +15,13 @@ class ApiRoutes(val blogHandler: BlogHandler,
 
     @Bean
     fun apiRouter() = router {
-        (accept(APPLICATION_JSON) and "/api").route {
-            "/blog".route {
+        (accept(APPLICATION_JSON) and "/api").nest {
+            "/blog".nest {
                 GET("/", blogHandler::findAll)
                 GET("/{id}", blogHandler::findOne)
             }
 
-            "/event".route {
+            "/event".nest {
                 GET("/", eventHandler::findAll)
                 GET("/{login}", eventHandler::findOne)
             }
@@ -31,20 +31,20 @@ class ApiRoutes(val blogHandler: BlogHandler,
             GET("/{year}/talk", talkHandler::findByEventId)
 
             // users
-            "/user".route {
+            "/user".nest {
                 GET("/", userHandler::findAll)
                 POST("/", userHandler::create)
                 GET("/{login}", userHandler::findOne)
             }
-            "/staff".route {
+            "/staff".nest {
                 GET("/", userHandler::findStaff)
                 GET("/{login}", userHandler::findOneStaff)
             }
-            "/speaker".route {
+            "/speaker".nest {
                 GET("/", userHandler::findSpeakers)
                 GET("/{login}", userHandler::findOneSpeaker)
             }
-            "/sponsor".route {
+            "/sponsor".nest {
                 GET("/", userHandler::findSponsors)
                 GET("/{login}", userHandler::findOneSponsor)
             }

@@ -38,6 +38,7 @@ apply {
 version = "1.0.0-SNAPSHOT"
 
 repositories {
+    mavenLocal()
     mavenCentral()
     maven { setUrl("https://repo.spring.io/milestone") }
     maven { setUrl("https://repo.spring.io/snapshot") }

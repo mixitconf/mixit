@@ -52,8 +52,6 @@ inline fun <reified T : Any> ReactiveMongoOperations.count(): Mono<Long> = count
 // Spring WebFlux extensions
 // -------------------------
 
-fun router(routes: Routes) = RouterDsl().apply(routes).router()
-
 fun ServerRequest.language() = Language.findByTag(this.headers().header(HttpHeaders.ACCEPT_LANGUAGE).first())
 
 fun ServerResponse.BodyBuilder.json() = contentType(APPLICATION_JSON_UTF8)
