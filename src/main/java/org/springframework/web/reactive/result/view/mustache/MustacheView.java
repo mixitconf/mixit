@@ -23,8 +23,8 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.function.BiConsumer;
 
-import com.samskivert.mustache.MustacheException;
 import com.samskivert.mustache.Template;
+import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -32,6 +32,7 @@ import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.http.MediaType;
 import org.springframework.web.reactive.result.view.AbstractUrlBasedView;
 import org.springframework.web.reactive.result.view.View;
+import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.server.ServerWebExchange;
 
 /**
@@ -66,8 +67,8 @@ public class MustacheView extends AbstractUrlBasedView {
                 }
                 try {
                     this.template.execute(model, writer);
-                } catch (MustacheException ex) {
-                    return Mono.error(new MustacheException("Error while rendering " + getUrl() + ": " + ex.getMessage()));
+                } catch (Exception ex) {
+                    return Mono.error(new ResponseStatusException(INTERNAL_SERVER_ERROR, "Error while rendering " + getUrl() + ": " + ex.getMessage()));
                 }
                 return exchange.getResponse().writeWith(Flux.just(dataBuffer)).doOnSubscribe(s -> {
                     try {
