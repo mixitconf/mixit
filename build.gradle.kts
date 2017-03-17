@@ -73,7 +73,11 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
     compile("org.springframework.boot:spring-boot-devtools")
     testCompile("org.springframework.boot:spring-boot-starter-test")
-    runtime("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
+    if (project.hasProperty("embed-mongo") || System.getProperty("idea.executable") == "idea") {
+        runtime("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
+    } else {
+        testRuntime("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
+    }
 
     compile("com.samskivert:jmustache:1.13")
     compile("com.atlassian.commonmark:commonmark:0.8.0")

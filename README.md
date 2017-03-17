@@ -50,7 +50,7 @@ developed with Spring Framework 5 and Kotlin can look like:
  - Depending on your platform, you may have to install libpng (On mac with `brew install libpng` for example)
  
 ### Run the app in dev mod using command line
- - Run `./gradlew bootRun` in another terminal
+ - Run `./gradlew bootRun -Pembed-mongo` in another terminal
  - Run `gulp watch` in another terminal
  - Open `http://localhost:8080/` in your browser
  - If you want to debug the app, add `--debug-jvm` parameter to Gradle command line
