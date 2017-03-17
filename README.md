@@ -45,13 +45,11 @@ developed with Spring Framework 5 and Kotlin can look like:
 ### Prerequisite
  - Install [Git](https://git-scm.com/)
  - [Fork](https://github.com/mix-it/mixit#fork-destination-box) and clone [the project](https://github.com/mix-it/mixit)
- - [Install MongoDB](https://www.mongodb.com/download-center)
  - [Install Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
  - [Install Gulp](http://gulpjs.com/) for development mode 
  - Depending on your platform, you may have to install libpng (On mac with `brew install libpng` for example)
  
 ### Run the app in dev mod using command line
- - Run `mongod`
  - Run `./gradlew bootRun` in another terminal
  - Run `gulp watch` in another terminal
  - Open `http://localhost:8080/` in your browser
@@ -62,7 +60,6 @@ Sass, TypeScript, `messages*.properties` and templates should be live reloaded.
 ### Import and run the project in IDEA
  - Make sure you have at least IntelliJ IDEA `2016.3` and IDEA Kotlin plugin `1.1.0` (menu Tools -> Kotlin -> configure Kotlin Plugin Updates -> make sure "Stable" channel is selected -> check for updates now -> restart IDE after the update)
  - Import it in IDEA as a Gradle project **and make sure to uncheck "Create Module for each SourceSet"** to avoid a nasty bug that prevent to run the app in IDEA
- - Run `mongod` in command line
  - In IntelliJ IDEA, right click on `Application.kt` then `Run ...` or `Debug ...`
  - Run `gulp watch` in another terminal
  - Open `http://localhost:8080/` in your browser
