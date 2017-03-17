@@ -30,7 +30,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.core.io.ResourceLoader;
 
 /**
- * Mustache TemplateLoader implementation that uses a prefix, suffix and the Spring
+ * Spring WebFlux Mustache TemplateLoader implementation that uses a prefix, suffix and the Spring
  * Resource abstraction to load a template from a file, classpath, URL etc. A
  * TemplateLoader is needed in the Compiler when you want to render partials (i.e.
  * tiles-like features).

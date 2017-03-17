@@ -36,7 +36,7 @@ import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.server.ServerWebExchange;
 
 /**
- * Spring MVC {@link View} using the Mustache template engine.
+ * Spring WebFlux {@link View} using the Mustache template engine.
  *
  * @author Dave Syer
  * @author Phillip Webb

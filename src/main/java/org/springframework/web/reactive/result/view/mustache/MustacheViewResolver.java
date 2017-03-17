@@ -38,7 +38,7 @@ import org.springframework.web.reactive.result.view.View;
 import org.springframework.web.reactive.result.view.ViewResolver;
 
 /**
- * Spring MVC {@link ViewResolver} for Mustache.
+ * Spring WebFlux {@link ViewResolver} for Mustache.
  *
  * @author Dave Syer
  * @author Andy Wilkinson
