@@ -24,6 +24,8 @@ import java.util.Map;
 import java.util.function.BiConsumer;
 
 import com.samskivert.mustache.Template;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -48,6 +50,9 @@ public class MustacheView extends AbstractUrlBasedView {
 
     private BiConsumer<Map<String, Object>, ServerWebExchange> modelCustomizer;
 
+    private Logger logger = LoggerFactory.getLogger(getClass());
+
+
     public MustacheView() {
         setRequestContextAttribute("context");
     }
@@ -68,7 +73,9 @@ public class MustacheView extends AbstractUrlBasedView {
                 try {
                     this.template.execute(model, writer);
                 } catch (Exception ex) {
-                    return Mono.error(new ResponseStatusException(INTERNAL_SERVER_ERROR, "Error while rendering " + getUrl() + ": " + ex.getMessage()));
+                    String message = "Error while rendering " + getUrl() + ": " + ex.getMessage();
+                    logger.error(message);
+                    return Mono.error(new ResponseStatusException(INTERNAL_SERVER_ERROR, message));
                 }
                 return exchange.getResponse().writeWith(Flux.just(dataBuffer)).doOnSubscribe(s -> {
                     try {
