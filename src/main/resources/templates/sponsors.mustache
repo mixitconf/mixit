@@ -4,6 +4,7 @@
     <div class="row">
         <div class="columns large-8 large-offset-2">
             <h1 class="text-center">{{#i18n}}sponsors.title{{/i18n}}</h1>
+            <p class="text-center">{{#i18n}}sponsors.become{{/i18n}} <a href="{{#i18n}}home.sponsors.pdf.url{{/i18n}}">{{#i18n}}sponsors.download{{/i18n}}</a></p>
         </div>
     </div>
 </div>
@@ -12,107 +13,107 @@
     <div class="row">
         <div class="column large-8 large-offset-2">
 
-    <div class="mxt-wrapper--callout callout">
-        <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.gold{{/i18n}}</h2>
-        {{#sponsors-gold}}
-        <div class="row align-middle">
-            <div class="small-12 medium-4 columns text-center">
-                <img src="/images/{{sponsor.logoUrl}}" class="mxt-img--sponsors" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}"/>
+            <div class="mxt-wrapper--callout callout">
+                <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.gold{{/i18n}}</h2>
+                {{#sponsors-gold}}
+                <div class="row align-middle">
+                    <div class="small-12 medium-4 columns text-center">
+                        <img src="/images/{{sponsor.logoUrl}}" class="mxt-img--sponsors" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}"/>
+                    </div>
+                    <div class="small-12 medium-8 columns">
+                        <h3 class="subheader">{{sponsor.company}}</h3>
+                        {{sponsor.description}}
+                        <ul class="menu simple">
+                            {{#sponsor.links}}
+                                <li><a href="{{url}}" target="_blank">{{name}}</a></li>
+                            {{/sponsor.links}}
+                        </ul>
+                    </div>
+                </div>
+                {{/sponsors-gold}}
             </div>
-            <div class="small-12 medium-8 columns">
-                <h3 class="subheader">{{sponsor.company}}</h3>
-                {{sponsor.description}}
-                <ul class="menu simple">
-                    {{#sponsor.links}}
-                        <li><a href="{{url}}" target="_blank">{{name}}</a></li>
-                    {{/sponsor.links}}
-                </ul>
-            </div>           
-        </div>
-        {{/sponsors-gold}}
-    </div>
 
-    <div class="mxt-wrapper--callout callout">
-        <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.silver{{/i18n}}</h2>
-        {{#sponsors-silver}}
-        <div class="row align-middle">
-            <div class="small-12 medium-4 columns text-center">
-                <img src="/images/{{sponsor.logoUrl}}" class="mxt-img--sponsors" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}"/>
+            <div class="mxt-wrapper--callout callout">
+                <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.silver{{/i18n}}</h2>
+                {{#sponsors-silver}}
+                <div class="row align-middle">
+                    <div class="small-12 medium-4 columns text-center">
+                        <img src="/images/{{sponsor.logoUrl}}" class="mxt-img--sponsors" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}"/>
+                    </div>
+                    <div class="small-12 medium-8 columns">
+                        <h3 class="subheader">{{sponsor.company}}</h3>
+                        {{sponsor.description}}
+                        <ul class="menu simple">
+                            {{#sponsor.links}}
+                                <li><a href="{{url}}" target="_blank">{{name}}</a></li>
+                            {{/sponsor.links}}
+                        </ul>
+                    </div>
+                </div>
+                {{/sponsors-silver}}
             </div>
-            <div class="small-12 medium-8 columns">
-                <h3 class="subheader">{{sponsor.company}}</h3>
-                {{sponsor.description}}
-                <ul class="menu simple">
-                    {{#sponsor.links}}
-                        <li><a href="{{url}}" target="_blank">{{name}}</a></li>
-                    {{/sponsor.links}}
-                </ul>
+
+            <div class="mxt-wrapper--callout callout">
+                <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.party{{/i18n}}</h2>
+                {{#sponsors-party}}
+                <div class="row align-middle">
+                    <div class="small-12 medium-4 columns text-center">
+                        <img src="/images/{{sponsor.logoUrl}}" class="mxt-img--sponsors" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}"/>
+                    </div>
+                    <div class="small-12 medium-8 columns">
+                        <h3 class="subheader">{{sponsor.company}}</h3>
+                        {{sponsor.description}}
+                        <ul class="menu simple">
+                            {{#sponsor.links}}
+                                <li><a href="{{url}}" target="_blank">{{name}}</a></li>
+                            {{/sponsor.links}}
+                        </ul>
+                    </div>
+                </div>
+                {{/sponsors-party}}
+            </div>
+
+            <div class="mxt-wrapper--callout callout">
+                <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.lanyard{{/i18n}}</h2>
+                {{#sponsors-lanyard}}
+                <div class="row align-middle">
+                    <div class="small-12 medium-4 columns text-center">
+                        <img src="/images/{{sponsor.logoUrl}}" class="mxt-img--sponsors" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}"/>
+                    </div>
+                    <div class="small-12 medium-8 columns">
+                        <h3 class="subheader">{{sponsor.company}}</h3>
+                        {{sponsor.description}}
+                        <ul class="menu simple">
+                            {{#sponsor.links}}
+                                <li><a href="{{url}}" target="_blank">{{name}}</a></li>
+                            {{/sponsor.links}}
+                        </ul>
+                    </div>
+                </div>
+                {{/sponsors-lanyard}}
+            </div>
+
+            <div class="mxt-wrapper--callout callout">
+                <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.hosting{{/i18n}}</h2>
+                {{#sponsors-hosting}}
+                <div class="row align-middle">
+                    <div class="small-12 medium-4 columns text-center">
+                        <img src="/images/{{sponsor.logoUrl}}" class="mxt-img--sponsors" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}" />
+                    </div>
+                    <div class="small-12 medium-8 columns">
+                        <h3 class="subheader">{{sponsor.company}}</h3>
+                        {{sponsor.description}}
+                        <ul class="menu simple">
+                            {{#sponsor.links}}
+                                <li><a href="{{url}}" target="_blank">{{name}}</a></li>
+                            {{/sponsor.links}}
+                        </ul>
+                    </div>
+                </div>
+                {{/sponsors-hosting}}
             </div>
         </div>
-        {{/sponsors-silver}}
     </div>
-
-    <div class="mxt-wrapper--callout callout">
-        <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.party{{/i18n}}</h2>
-        {{#sponsors-party}}
-        <div class="row align-middle">
-            <div class="small-12 medium-4 columns text-center">
-                <img src="/images/{{sponsor.logoUrl}}" class="mxt-img--sponsors" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}"/>
-            </div>
-            <div class="small-12 medium-8 columns">
-                <h3 class="subheader">{{sponsor.company}}</h3>
-                {{sponsor.description}}
-                <ul class="menu simple">
-                    {{#sponsor.links}}
-                        <li><a href="{{url}}" target="_blank">{{name}}</a></li>
-                    {{/sponsor.links}}
-                </ul>
-            </div>
-        </div>
-        {{/sponsors-party}}
-    </div>
-
-    <div class="mxt-wrapper--callout callout">
-        <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.lanyard{{/i18n}}</h2>
-        {{#sponsors-lanyard}}
-        <div class="row align-middle">
-            <div class="small-12 medium-4 columns text-center">
-                <img src="/images/{{sponsor.logoUrl}}" class="mxt-img--sponsors" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}"/>
-            </div>
-            <div class="small-12 medium-8 columns">
-                <h3 class="subheader">{{sponsor.company}}</h3>
-                {{sponsor.description}}
-                <ul class="menu simple">
-                    {{#sponsor.links}}
-                        <li><a href="{{url}}" target="_blank">{{name}}</a></li>
-                    {{/sponsor.links}}
-                </ul>
-            </div>
-        </div>
-        {{/sponsors-lanyard}}
-    </div>
-
-    <div class="mxt-wrapper--callout callout">
-        <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.hosting{{/i18n}}</h2>
-        {{#sponsors-hosting}}
-        <div class="row align-middle">
-            <div class="small-12 medium-4 columns text-center">
-                <img src="/images/{{sponsor.logoUrl}}" class="mxt-img--sponsors" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}" />
-            </div>
-            <div class="small-12 medium-8 columns">
-                <h3 class="subheader">{{sponsor.company}}</h3>
-                {{sponsor.description}}
-                <ul class="menu simple">
-                    {{#sponsor.links}}
-                        <li><a href="{{url}}" target="_blank">{{name}}</a></li>
-                    {{/sponsor.links}}
-                </ul>
-            </div>
-        </div>
-        {{/sponsors-hosting}}
-    </div>
-
-  </div>
 </div>
 
 {{> footer}}
