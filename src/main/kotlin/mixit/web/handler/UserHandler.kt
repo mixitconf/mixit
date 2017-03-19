@@ -1,7 +1,6 @@
 package mixit.web.handler
 
 import mixit.model.*
-import mixit.repository.EventRepository
 import mixit.repository.UserRepository
 import mixit.util.*
 import org.springframework.stereotype.Component
@@ -14,7 +13,6 @@ import java.net.URLDecoder
 
 @Component
 class UserHandler(val repository: UserRepository,
-                  val eventRepository: EventRepository,
                   val markdownConverter: MarkdownConverter) {
 
     fun findOneView(req: ServerRequest) =
@@ -54,15 +52,40 @@ class UserHandler(val repository: UserRepository,
         created(create("/api/user/${u.login}")).json().body(u.toMono())
     }
 
-    fun findSponsorsView(req: ServerRequest) = eventRepository.findOne("mixit17").then { events ->
-        val sponsors = events.sponsors.map { it.toDto(req.language(), markdownConverter) }.groupBy { it.level }
-
-        ok().render("sponsors", mapOf(
-            Pair("sponsors-gold", sponsors[SponsorshipLevel.GOLD]),
-            Pair("sponsors-silver", sponsors[SponsorshipLevel.SILVER]),
-            Pair("sponsors-hosting", sponsors[SponsorshipLevel.HOSTING]),
-            Pair("sponsors-lanyard", sponsors[SponsorshipLevel.LANYARD]),
-            Pair("sponsors-party", sponsors[SponsorshipLevel.PARTY])
-        ))
-    }
 }
+
+class UserDto(
+        val login: String,
+        val firstname: String,
+        val lastname: String,
+        var email: String,
+        var company: String? = null,
+        var description: String,
+        var logoUrl: String? = null,
+        val events: List<String>,
+        val role: Role,
+        var links: List<Link>,
+        val logoType: String?,
+        val logoWebpUrl: String? = null
+)
+
+fun User.toDto(language: Language, markdownConverter: MarkdownConverter) =
+        UserDto(login, firstname, lastname, email, company, markdownConverter.toHTML(description[language] ?: ""),
+                logoUrl, events, role, links, logoType(logoUrl), logoWebpUrl(logoUrl))
+
+private fun logoWebpUrl(url: String?) =
+        when {
+            url == null -> null
+            url.endsWith("png") -> url.replace("png", "webp")
+            url.endsWith("jpg") -> url.replace("jpg", "webp")
+            else -> null
+        }
+
+private fun logoType(url: String?) =
+        when {
+            url == null -> null
+            url.endsWith("svg") -> "image/svg+xml"
+            url.endsWith("png") -> "image/png"
+            url.endsWith("jpg") -> "image/jpeg"
+            else -> null
+        }

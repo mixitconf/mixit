@@ -1,6 +1,5 @@
 package mixit.model
 
-import mixit.util.toSlug
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 import java.time.LocalDateTime
@@ -12,7 +11,7 @@ data class Talk(
         val event: String,
         val title: String,
         val summary: String,
-        val speakers: List<User> = emptyList(), // TODO Store only id + name
+        val speakerIds: List<String> = emptyList(),
         val language: Language = Language.FRENCH,
         val addedAt: LocalDateTime = LocalDateTime.now(),
         val description: String? = null,
@@ -21,7 +20,7 @@ data class Talk(
         val start: LocalDateTime? = null,
         val end: LocalDateTime? = null,
         @Id val id: String? = null,
-        val slug: String = "${speakers.map { "${it.firstname}-${it.lastname}" }.joinToString("-")}-$title".toSlug()
+        val slug: String
 )
 
 enum class SessionFormat(val duration: Int) {

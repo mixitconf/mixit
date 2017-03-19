@@ -15,41 +15,7 @@
     "sponsors": [
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "Zenika Lyon",
-          "firstname": "Herv\u00e9",
-          "lastname": "Jacob",
-          "email": "",
-          "company": "Zenika",
-          "description": {
-            "FRENCH": "Sp\u00e9cialis\u00e9 dans l'architecture informatique et les m\u00e9thodes agiles, Zenika compte 200 collaborateurs r\u00e9partis sur des domaines aussi vari\u00e9s que l'expertise Java, le BigData, le Web, la Mobilit\u00e9, l'IoT, DevOps, le Craftsmanship et l'Agilit\u00e9.",
-            "ENGLISH": "Sp\u00e9cialis\u00e9 dans l'architecture informatique et les m\u00e9thodes agiles, Zenika compte 200 collaborateurs r\u00e9partis sur des domaines aussi vari\u00e9s que l'expertise Java, le BigData, le Web, la Mobilit\u00e9, l'IoT, DevOps, le Craftsmanship et l'Agilit\u00e9."
-          },
-          "logoUrl": "sponsor\/logo-zenika.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Le blog technique",
-              "url": "http:\/\/blog.zenika.com"
-            },
-            {
-              "name": "Les formations Inter \u00e0 Lyon",
-              "url": "http:\/\/www.zenika.com\/Formation\/prochaines-formations.html?agency=3"
-            },
-            {
-              "name": "Formations - Le catalogue complet",
-              "url": "http:\/\/www.zenika.com\/Formation\/notre-catalogue-formation.html"
-            },
-            {
-              "name": "Zenika",
-              "url": "http:\/\/www.zenika.com"
-            }
-          ],
-          "legacyId": 10
-        },
+        "sponsorId": "Zenika Lyon",
         "subscriptionDate": [
           2017,
           2,
@@ -58,37 +24,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "Sqli",
-          "firstname": "",
-          "lastname": "Sqli group",
-          "email": "",
-          "company": "Sqli",
-          "description": {
-            "FRENCH": "Acteur majeur des NTIC en France, 3 piliers fondamentaux : l\u2019innovation, la ma\u00eetrise des techno et la qualit\u00e9.",
-            "ENGLISH": "Acteur majeur des NTIC en France, 3 piliers fondamentaux : l\u2019innovation, la ma\u00eetrise des techno et la qualit\u00e9."
-          },
-          "logoUrl": "sponsor\/logo-sqli-group.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Sqli Carri\u00e8res",
-              "url": "http:\/\/www.sqli-carrieres.com\/index.php"
-            },
-            {
-              "name": "Sqli & Me",
-              "url": "http:\/\/www.facebook.com\/pages\/Sqli-Me\/276504902369375"
-            },
-            {
-              "name": "Sqli",
-              "url": "http:\/\/www.sqli.com"
-            }
-          ],
-          "legacyId": 11
-        },
+        "sponsorId": "Sqli",
         "subscriptionDate": [
           2017,
           2,
@@ -97,41 +33,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "VISEO",
-          "firstname": "Viseo technologies",
-          "lastname": "Viseo technologies",
-          "email": "",
-          "company": "VISEO",
-          "description": {
-            "FRENCH": "La BU VISEO Technologies conseille, accompagne, et d\u00e9livre des projets agiles dans les architectures objet et web & mobiles, avec une pr\u00e9sence \u00e0 Paris, Lyon, Grenoble, et Toulouse.\n\n[Nos offres](http:\/\/www.viseo.com\/fr\/offre\/business-technologies)",
-            "ENGLISH": "La BU VISEO Technologies conseille, accompagne, et d\u00e9livre des projets agiles dans les architectures objet et web & mobiles, avec une pr\u00e9sence \u00e0 Paris, Lyon, Grenoble, et Toulouse.\n\n[Nos offres](http:\/\/www.viseo.com\/fr\/offre\/business-technologies)"
-          },
-          "logoUrl": "sponsor\/logo-viseo.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Blog",
-              "url": "http:\/\/blog.viseo-bt.com\/"
-            },
-            {
-              "name": "LinkedIn",
-              "url": "https:\/\/www.linkedin.com\/company\/objet-direct"
-            },
-            {
-              "name": "Twitter",
-              "url": "https:\/\/twitter.com\/viseotech"
-            },
-            {
-              "name": "Facebook",
-              "url": "https:\/\/www.facebook.com\/objetdirect\/"
-            }
-          ],
-          "legacyId": 168
-        },
+        "sponsorId": "VISEO",
         "subscriptionDate": [
           2017,
           2,
@@ -140,29 +42,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "Yseop",
-          "firstname": "",
-          "lastname": "Yseop",
-          "email": "",
-          "company": "Yseop",
-          "description": {
-            "FRENCH": "Yseop est le premier moteur d'intelligence artificielle qui sait r\u00e9diger comme un \u00eatre humain.",
-            "ENGLISH": "Yseop est le premier moteur d'intelligence artificielle qui sait r\u00e9diger comme un \u00eatre humain."
-          },
-          "logoUrl": "sponsor\/logo-yseop.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site Web Yseop",
-              "url": "http:\/\/www.yseop.com"
-            }
-          ],
-          "legacyId": 169
-        },
+        "sponsorId": "Yseop",
         "subscriptionDate": [
           2017,
           2,
@@ -171,33 +51,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "terre.dagile",
-          "firstname": "Terre",
-          "lastname": "Terre d'agile",
-          "email": "",
-          "company": "Terre d'Agile",
-          "description": {
-            "FRENCH": "L'agilit\u00e9 par un pro pour les pros",
-            "ENGLISH": "L'agilit\u00e9 par un pro pour les pros"
-          },
-          "logoUrl": "sponsor\/logo-terredagile.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site officiel",
-              "url": "http:\/\/www.terredagile.com"
-            },
-            {
-              "name": "Blog",
-              "url": "http:\/\/www.talondagile.com"
-            }
-          ],
-          "legacyId": 226
-        },
+        "sponsorId": "terre.dagile",
         "subscriptionDate": [
           2017,
           2,
@@ -206,33 +60,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "woonoz",
-          "firstname": "",
-          "lastname": "Woonoz",
-          "email": "",
-          "company": "Woonoz",
-          "description": {
-            "FRENCH": "WOONOZ est un \u00e9diteur Lyonnais, pratiquant l'agilit\u00e9, et d\u00e9veloppant des solutions d'aide \u00e0 la m\u00e9morisation de contenu de formation.",
-            "ENGLISH": "WOONOZ est un \u00e9diteur Lyonnais, pratiquant l'agilit\u00e9, et d\u00e9veloppant des solutions d'aide \u00e0 la m\u00e9morisation de contenu de formation."
-          },
-          "logoUrl": "sponsor\/logo-woonoz.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Projet Voltaire",
-              "url": "http:\/\/www.projet-voltaire.fr"
-            },
-            {
-              "name": "Woonoz",
-              "url": "http:\/\/www.woonoz.com"
-            }
-          ],
-          "legacyId": 227
-        },
+        "sponsorId": "woonoz",
         "subscriptionDate": [
           2017,
           2,
@@ -241,26 +69,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "thales",
-          "firstname": "",
-          "lastname": "Thales services",
-          "email": "",
-          "company": "Thales",
-          "description": {
-            "FRENCH": "Thales Services con\u00e7oit, int\u00e8gre et op\u00e8re des syst\u00e8mes d'information critiques pour les gouvernements et les entreprises.",
-            "ENGLISH": "Thales Services con\u00e7oit, int\u00e8gre et op\u00e8re des syst\u00e8mes d'information critiques pour les gouvernements et les entreprises."
-          },
-          "logoUrl": "sponsor\/logo-thales.gif",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-
-          ],
-          "legacyId": 365
-        },
+        "sponsorId": "thales",
         "subscriptionDate": [
           2017,
           2,
@@ -269,26 +78,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "google",
-          "firstname": "",
-          "lastname": "Google",
-          "email": "",
-          "company": "Google",
-          "description": {
-            "FRENCH": "D\u00e9veloppeurs mobile, web ou cloud ? Retrouvez-nous sur nos pages [Google+](http:\/\/plus.google.com\/111395306401981598462\/)!",
-            "ENGLISH": "D\u00e9veloppeurs mobile, web ou cloud ? Retrouvez-nous sur nos pages [Google+](http:\/\/plus.google.com\/111395306401981598462\/)!"
-          },
-          "logoUrl": "sponsor\/logo-google.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-
-          ],
-          "legacyId": 422
-        },
+        "sponsorId": "google",
         "subscriptionDate": [
           2017,
           2,
@@ -314,41 +104,7 @@
     "sponsors": [
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "Zenika Lyon",
-          "firstname": "Herv\u00e9",
-          "lastname": "Jacob",
-          "email": "",
-          "company": "Zenika",
-          "description": {
-            "FRENCH": "Sp\u00e9cialis\u00e9 dans l'architecture informatique et les m\u00e9thodes agiles, Zenika compte 200 collaborateurs r\u00e9partis sur des domaines aussi vari\u00e9s que l'expertise Java, le BigData, le Web, la Mobilit\u00e9, l'IoT, DevOps, le Craftsmanship et l'Agilit\u00e9.",
-            "ENGLISH": "Sp\u00e9cialis\u00e9 dans l'architecture informatique et les m\u00e9thodes agiles, Zenika compte 200 collaborateurs r\u00e9partis sur des domaines aussi vari\u00e9s que l'expertise Java, le BigData, le Web, la Mobilit\u00e9, l'IoT, DevOps, le Craftsmanship et l'Agilit\u00e9."
-          },
-          "logoUrl": "sponsor\/logo-zenika.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Le blog technique",
-              "url": "http:\/\/blog.zenika.com"
-            },
-            {
-              "name": "Les formations Inter \u00e0 Lyon",
-              "url": "http:\/\/www.zenika.com\/Formation\/prochaines-formations.html?agency=3"
-            },
-            {
-              "name": "Formations - Le catalogue complet",
-              "url": "http:\/\/www.zenika.com\/Formation\/notre-catalogue-formation.html"
-            },
-            {
-              "name": "Zenika",
-              "url": "http:\/\/www.zenika.com"
-            }
-          ],
-          "legacyId": 10
-        },
+        "sponsorId": "Zenika Lyon",
         "subscriptionDate": [
           2017,
           2,
@@ -357,37 +113,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "Sqli",
-          "firstname": "",
-          "lastname": "Sqli group",
-          "email": "",
-          "company": "Sqli",
-          "description": {
-            "FRENCH": "Acteur majeur des NTIC en France, 3 piliers fondamentaux : l\u2019innovation, la ma\u00eetrise des techno et la qualit\u00e9.",
-            "ENGLISH": "Acteur majeur des NTIC en France, 3 piliers fondamentaux : l\u2019innovation, la ma\u00eetrise des techno et la qualit\u00e9."
-          },
-          "logoUrl": "sponsor\/logo-sqli-group.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Sqli Carri\u00e8res",
-              "url": "http:\/\/www.sqli-carrieres.com\/index.php"
-            },
-            {
-              "name": "Sqli & Me",
-              "url": "http:\/\/www.facebook.com\/pages\/Sqli-Me\/276504902369375"
-            },
-            {
-              "name": "Sqli",
-              "url": "http:\/\/www.sqli.com"
-            }
-          ],
-          "legacyId": 11
-        },
+        "sponsorId": "Sqli",
         "subscriptionDate": [
           2017,
           2,
@@ -396,41 +122,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "VISEO",
-          "firstname": "Viseo technologies",
-          "lastname": "Viseo technologies",
-          "email": "",
-          "company": "VISEO",
-          "description": {
-            "FRENCH": "La BU VISEO Technologies conseille, accompagne, et d\u00e9livre des projets agiles dans les architectures objet et web & mobiles, avec une pr\u00e9sence \u00e0 Paris, Lyon, Grenoble, et Toulouse.\n\n[Nos offres](http:\/\/www.viseo.com\/fr\/offre\/business-technologies)",
-            "ENGLISH": "La BU VISEO Technologies conseille, accompagne, et d\u00e9livre des projets agiles dans les architectures objet et web & mobiles, avec une pr\u00e9sence \u00e0 Paris, Lyon, Grenoble, et Toulouse.\n\n[Nos offres](http:\/\/www.viseo.com\/fr\/offre\/business-technologies)"
-          },
-          "logoUrl": "sponsor\/logo-viseo.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Blog",
-              "url": "http:\/\/blog.viseo-bt.com\/"
-            },
-            {
-              "name": "LinkedIn",
-              "url": "https:\/\/www.linkedin.com\/company\/objet-direct"
-            },
-            {
-              "name": "Twitter",
-              "url": "https:\/\/twitter.com\/viseotech"
-            },
-            {
-              "name": "Facebook",
-              "url": "https:\/\/www.facebook.com\/objetdirect\/"
-            }
-          ],
-          "legacyId": 168
-        },
+        "sponsorId": "VISEO",
         "subscriptionDate": [
           2017,
           2,
@@ -439,33 +131,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "terre.dagile",
-          "firstname": "Terre",
-          "lastname": "Terre d'agile",
-          "email": "",
-          "company": "Terre d'Agile",
-          "description": {
-            "FRENCH": "L'agilit\u00e9 par un pro pour les pros",
-            "ENGLISH": "L'agilit\u00e9 par un pro pour les pros"
-          },
-          "logoUrl": "sponsor\/logo-terredagile.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site officiel",
-              "url": "http:\/\/www.terredagile.com"
-            },
-            {
-              "name": "Blog",
-              "url": "http:\/\/www.talondagile.com"
-            }
-          ],
-          "legacyId": 226
-        },
+        "sponsorId": "terre.dagile",
         "subscriptionDate": [
           2017,
           2,
@@ -474,33 +140,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "woonoz",
-          "firstname": "",
-          "lastname": "Woonoz",
-          "email": "",
-          "company": "Woonoz",
-          "description": {
-            "FRENCH": "WOONOZ est un \u00e9diteur Lyonnais, pratiquant l'agilit\u00e9, et d\u00e9veloppant des solutions d'aide \u00e0 la m\u00e9morisation de contenu de formation.",
-            "ENGLISH": "WOONOZ est un \u00e9diteur Lyonnais, pratiquant l'agilit\u00e9, et d\u00e9veloppant des solutions d'aide \u00e0 la m\u00e9morisation de contenu de formation."
-          },
-          "logoUrl": "sponsor\/logo-woonoz.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Projet Voltaire",
-              "url": "http:\/\/www.projet-voltaire.fr"
-            },
-            {
-              "name": "Woonoz",
-              "url": "http:\/\/www.woonoz.com"
-            }
-          ],
-          "legacyId": 227
-        },
+        "sponsorId": "woonoz",
         "subscriptionDate": [
           2017,
           2,
@@ -509,26 +149,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "thales",
-          "firstname": "",
-          "lastname": "Thales services",
-          "email": "",
-          "company": "Thales",
-          "description": {
-            "FRENCH": "Thales Services con\u00e7oit, int\u00e8gre et op\u00e8re des syst\u00e8mes d'information critiques pour les gouvernements et les entreprises.",
-            "ENGLISH": "Thales Services con\u00e7oit, int\u00e8gre et op\u00e8re des syst\u00e8mes d'information critiques pour les gouvernements et les entreprises."
-          },
-          "logoUrl": "sponsor\/logo-thales.gif",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-
-          ],
-          "legacyId": 365
-        },
+        "sponsorId": "thales",
         "subscriptionDate": [
           2017,
           2,
@@ -537,26 +158,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "google",
-          "firstname": "",
-          "lastname": "Google",
-          "email": "",
-          "company": "Google",
-          "description": {
-            "FRENCH": "D\u00e9veloppeurs mobile, web ou cloud ? Retrouvez-nous sur nos pages [Google+](http:\/\/plus.google.com\/111395306401981598462\/)!",
-            "ENGLISH": "D\u00e9veloppeurs mobile, web ou cloud ? Retrouvez-nous sur nos pages [Google+](http:\/\/plus.google.com\/111395306401981598462\/)!"
-          },
-          "logoUrl": "sponsor\/logo-google.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-
-          ],
-          "legacyId": 422
-        },
+        "sponsorId": "google",
         "subscriptionDate": [
           2017,
           2,
@@ -565,37 +167,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "sonarsource",
-          "firstname": "",
-          "lastname": "Sonar source",
-          "email": "",
-          "company": "sonarsource",
-          "description": {
-            "FRENCH": "SonarSource provides applications and services for continuous inspection of code quality.",
-            "ENGLISH": "SonarSource provides applications and services for continuous inspection of code quality."
-          },
-          "logoUrl": "sponsor\/logo-sonarsource.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site commercial",
-              "url": "http:\/\/www.sonarsource.com"
-            },
-            {
-              "name": "Site communautaire",
-              "url": "http:\/\/www.sonarsource.org"
-            },
-            {
-              "name": "In Action",
-              "url": "http:\/\/nemo.sonarsource.org"
-            }
-          ],
-          "legacyId": 663
-        },
+        "sponsorId": "sonarsource",
         "subscriptionDate": [
           2017,
           2,
@@ -604,33 +176,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "elasticsearch",
-          "firstname": "",
-          "lastname": "Elasticsearch",
-          "email": "",
-          "company": "Elasticsearch",
-          "description": {
-            "FRENCH": "Company behind Elasticsearch",
-            "ENGLISH": "Company behind Elasticsearch"
-          },
-          "logoUrl": "sponsor\/logo-elasticsearch.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "elasticsearch.org",
-              "url": "http:\/\/www.elasticsearch.org\/"
-            },
-            {
-              "name": "Corporate",
-              "url": "http:\/\/www.elasticsearch.com\/"
-            }
-          ],
-          "legacyId": 673
-        },
+        "sponsorId": "elasticsearch",
         "subscriptionDate": [
           2017,
           2,
@@ -639,26 +185,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "GitHub",
-          "firstname": "",
-          "lastname": "Github",
-          "email": "",
-          "company": "GitHub",
-          "description": {
-            "FRENCH": "GitHub. Social Coding.",
-            "ENGLISH": "GitHub. Social Coding."
-          },
-          "logoUrl": "sponsor\/logo-github.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-
-          ],
-          "legacyId": 690
-        },
+        "sponsorId": "GitHub",
         "subscriptionDate": [
           2017,
           2,
@@ -684,41 +211,7 @@
     "sponsors": [
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "Zenika Lyon",
-          "firstname": "Herv\u00e9",
-          "lastname": "Jacob",
-          "email": "",
-          "company": "Zenika",
-          "description": {
-            "FRENCH": "Sp\u00e9cialis\u00e9 dans l'architecture informatique et les m\u00e9thodes agiles, Zenika compte 200 collaborateurs r\u00e9partis sur des domaines aussi vari\u00e9s que l'expertise Java, le BigData, le Web, la Mobilit\u00e9, l'IoT, DevOps, le Craftsmanship et l'Agilit\u00e9.",
-            "ENGLISH": "Sp\u00e9cialis\u00e9 dans l'architecture informatique et les m\u00e9thodes agiles, Zenika compte 200 collaborateurs r\u00e9partis sur des domaines aussi vari\u00e9s que l'expertise Java, le BigData, le Web, la Mobilit\u00e9, l'IoT, DevOps, le Craftsmanship et l'Agilit\u00e9."
-          },
-          "logoUrl": "sponsor\/logo-zenika.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Le blog technique",
-              "url": "http:\/\/blog.zenika.com"
-            },
-            {
-              "name": "Les formations Inter \u00e0 Lyon",
-              "url": "http:\/\/www.zenika.com\/Formation\/prochaines-formations.html?agency=3"
-            },
-            {
-              "name": "Formations - Le catalogue complet",
-              "url": "http:\/\/www.zenika.com\/Formation\/notre-catalogue-formation.html"
-            },
-            {
-              "name": "Zenika",
-              "url": "http:\/\/www.zenika.com"
-            }
-          ],
-          "legacyId": 10
-        },
+        "sponsorId": "Zenika Lyon",
         "subscriptionDate": [
           2017,
           2,
@@ -727,41 +220,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "VISEO",
-          "firstname": "Viseo technologies",
-          "lastname": "Viseo technologies",
-          "email": "",
-          "company": "VISEO",
-          "description": {
-            "FRENCH": "La BU VISEO Technologies conseille, accompagne, et d\u00e9livre des projets agiles dans les architectures objet et web & mobiles, avec une pr\u00e9sence \u00e0 Paris, Lyon, Grenoble, et Toulouse.\n\n[Nos offres](http:\/\/www.viseo.com\/fr\/offre\/business-technologies)",
-            "ENGLISH": "La BU VISEO Technologies conseille, accompagne, et d\u00e9livre des projets agiles dans les architectures objet et web & mobiles, avec une pr\u00e9sence \u00e0 Paris, Lyon, Grenoble, et Toulouse.\n\n[Nos offres](http:\/\/www.viseo.com\/fr\/offre\/business-technologies)"
-          },
-          "logoUrl": "sponsor\/logo-viseo.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Blog",
-              "url": "http:\/\/blog.viseo-bt.com\/"
-            },
-            {
-              "name": "LinkedIn",
-              "url": "https:\/\/www.linkedin.com\/company\/objet-direct"
-            },
-            {
-              "name": "Twitter",
-              "url": "https:\/\/twitter.com\/viseotech"
-            },
-            {
-              "name": "Facebook",
-              "url": "https:\/\/www.facebook.com\/objetdirect\/"
-            }
-          ],
-          "legacyId": 168
-        },
+        "sponsorId": "VISEO",
         "subscriptionDate": [
           2017,
           2,
@@ -770,33 +229,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "terre.dagile",
-          "firstname": "Terre",
-          "lastname": "Terre d'agile",
-          "email": "",
-          "company": "Terre d'Agile",
-          "description": {
-            "FRENCH": "L'agilit\u00e9 par un pro pour les pros",
-            "ENGLISH": "L'agilit\u00e9 par un pro pour les pros"
-          },
-          "logoUrl": "sponsor\/logo-terredagile.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site officiel",
-              "url": "http:\/\/www.terredagile.com"
-            },
-            {
-              "name": "Blog",
-              "url": "http:\/\/www.talondagile.com"
-            }
-          ],
-          "legacyId": 226
-        },
+        "sponsorId": "terre.dagile",
         "subscriptionDate": [
           2017,
           2,
@@ -805,33 +238,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "woonoz",
-          "firstname": "",
-          "lastname": "Woonoz",
-          "email": "",
-          "company": "Woonoz",
-          "description": {
-            "FRENCH": "WOONOZ est un \u00e9diteur Lyonnais, pratiquant l'agilit\u00e9, et d\u00e9veloppant des solutions d'aide \u00e0 la m\u00e9morisation de contenu de formation.",
-            "ENGLISH": "WOONOZ est un \u00e9diteur Lyonnais, pratiquant l'agilit\u00e9, et d\u00e9veloppant des solutions d'aide \u00e0 la m\u00e9morisation de contenu de formation."
-          },
-          "logoUrl": "sponsor\/logo-woonoz.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Projet Voltaire",
-              "url": "http:\/\/www.projet-voltaire.fr"
-            },
-            {
-              "name": "Woonoz",
-              "url": "http:\/\/www.woonoz.com"
-            }
-          ],
-          "legacyId": 227
-        },
+        "sponsorId": "woonoz",
         "subscriptionDate": [
           2017,
           2,
@@ -840,26 +247,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "google",
-          "firstname": "",
-          "lastname": "Google",
-          "email": "",
-          "company": "Google",
-          "description": {
-            "FRENCH": "D\u00e9veloppeurs mobile, web ou cloud ? Retrouvez-nous sur nos pages [Google+](http:\/\/plus.google.com\/111395306401981598462\/)!",
-            "ENGLISH": "D\u00e9veloppeurs mobile, web ou cloud ? Retrouvez-nous sur nos pages [Google+](http:\/\/plus.google.com\/111395306401981598462\/)!"
-          },
-          "logoUrl": "sponsor\/logo-google.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-
-          ],
-          "legacyId": 422
-        },
+        "sponsorId": "google",
         "subscriptionDate": [
           2017,
           2,
@@ -868,26 +256,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "GitHub",
-          "firstname": "",
-          "lastname": "Github",
-          "email": "",
-          "company": "GitHub",
-          "description": {
-            "FRENCH": "GitHub. Social Coding.",
-            "ENGLISH": "GitHub. Social Coding."
-          },
-          "logoUrl": "sponsor\/logo-github.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-
-          ],
-          "legacyId": 690
-        },
+        "sponsorId": "GitHub",
         "subscriptionDate": [
           2017,
           2,
@@ -896,41 +265,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "cgi",
-          "firstname": "Cgi",
-          "lastname": "Cgi",
-          "email": "",
-          "company": "CGI",
-          "description": {
-            "FRENCH": "[CGI](http:\/\/www.cgi.fr), pour la troisi\u00e8me ann\u00e9e, s\u2019associe \u00e0  pour promouvoir l\u2019innovation, le d\u00e9veloppement, l\u2019agilit\u00e9 et le plaisir",
-            "ENGLISH": "[CGI](http:\/\/www.cgi.fr), pour la troisi\u00e8me ann\u00e9e, s\u2019associe \u00e0  pour promouvoir l\u2019innovation, le d\u00e9veloppement, l\u2019agilit\u00e9 et le plaisir"
-          },
-          "logoUrl": "sponsor\/logo-cgi.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "CGI Recrute",
-              "url": "http:\/\/www.cgi-recrute.fr\/"
-            },
-            {
-              "name": "CGI sur LinkedIn",
-              "url": "http:\/\/www.linkedin.com\/company\/cgi"
-            },
-            {
-              "name": "CGI sur Viad\u00e9o",
-              "url": "http:\/\/fr.viadeo.com\/fr\/company\/cgi"
-            },
-            {
-              "name": "CGI sur Facebook",
-              "url": "https:\/\/fr-fr.facebook.com\/CGIFrance"
-            }
-          ],
-          "legacyId": 992
-        },
+        "sponsorId": "cgi",
         "subscriptionDate": [
           2017,
           2,
@@ -939,41 +274,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "steria",
-          "firstname": "",
-          "lastname": "Steria",
-          "email": "",
-          "company": "",
-          "description": {
-            "FRENCH": "Steria d\u00e9livre des services IT et se positionne comme le partenaire de confiance de la transformation d\u2019un grand nombre d\u2019organisations ",
-            "ENGLISH": "Steria d\u00e9livre des services IT et se positionne comme le partenaire de confiance de la transformation d\u2019un grand nombre d\u2019organisations "
-          },
-          "logoUrl": "sponsor\/logo-steria.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Steria France",
-              "url": "http:\/\/www.steria.com\/fr\/"
-            },
-            {
-              "name": "Steria [Viadeo]",
-              "url": "http:\/\/www.viadeo.com\/v\/company\/steria"
-            },
-            {
-              "name": "Steria [Linkedin]",
-              "url": "http:\/\/www.linkedin.com\/company\/steria"
-            },
-            {
-              "name": "Steria [FaceBook]",
-              "url": "https:\/\/www.facebook.com\/SteriaFrance"
-            }
-          ],
-          "legacyId": 993
-        },
+        "sponsorId": "steria",
         "subscriptionDate": [
           2017,
           2,
@@ -982,29 +283,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "SerliFr",
-          "firstname": "",
-          "lastname": "Serli",
-          "email": "",
-          "company": "SERLI",
-          "description": {
-            "FRENCH": "Soci\u00e9t\u00e9 de conseil et d'ing\u00e9nierie, sp\u00e9cialiste de l'\u00e9cosyst\u00e8me Java, du Cloud et des technologies mobiles, Serli est membre du JCP.",
-            "ENGLISH": "Soci\u00e9t\u00e9 de conseil et d'ing\u00e9nierie, sp\u00e9cialiste de l'\u00e9cosyst\u00e8me Java, du Cloud et des technologies mobiles, Serli est membre du JCP."
-          },
-          "logoUrl": "sponsor\/logo-serli.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "SERLI",
-              "url": "http:\/\/www.serli.com"
-            }
-          ],
-          "legacyId": 1003
-        },
+        "sponsorId": "SerliFr",
         "subscriptionDate": [
           2017,
           2,
@@ -1013,41 +292,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "Open_ESN",
-          "firstname": "",
-          "lastname": "Open",
-          "email": "",
-          "company": "Open",
-          "description": {
-            "FRENCH": "OPEN, une ESN engag\u00e9e sur la Transformation Industrielle et Num\u00e9rique des entreprises !",
-            "ENGLISH": "OPEN, une ESN engag\u00e9e sur la Transformation Industrielle et Num\u00e9rique des entreprises !"
-          },
-          "logoUrl": "sponsor\/logo-open.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site Web Open",
-              "url": "http:\/\/www.open-groupe.com\/"
-            },
-            {
-              "name": "Blog \"La Chose Agile\"",
-              "url": "http:\/\/lachoseagile.wordpress.com\/"
-            },
-            {
-              "name": "Youtube",
-              "url": "https:\/\/www.youtube.com\/user\/OPENESN"
-            },
-            {
-              "name": "Viadeo",
-              "url": "http:\/\/www.viadeo.com\/fr\/company\/open"
-            }
-          ],
-          "legacyId": 1015
-        },
+        "sponsorId": "Open_ESN",
         "subscriptionDate": [
           2017,
           2,
@@ -1056,29 +301,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "econocom-osiatis",
-          "firstname": "",
-          "lastname": "Econocom osiatis",
-          "email": "",
-          "company": "Econocom",
-          "description": {
-            "FRENCH": "Acteur de r\u00e9f\u00e9rence des Services Num\u00e9riques, leader dans la mise en \u0153uvre de solutions globales, technologiques, financi\u00e8res et m\u00e9tier.",
-            "ENGLISH": "Acteur de r\u00e9f\u00e9rence des Services Num\u00e9riques, leader dans la mise en \u0153uvre de solutions globales, technologiques, financi\u00e8res et m\u00e9tier."
-          },
-          "logoUrl": "sponsor\/logo-econom.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Econocom-Osiatis",
-              "url": "http:\/\/www.econocom-osiatis.com"
-            }
-          ],
-          "legacyId": 1031
-        },
+        "sponsorId": "econocom-osiatis",
         "subscriptionDate": [
           2017,
           2,
@@ -1087,41 +310,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "Mozilla",
-          "firstname": "Mozilla",
-          "lastname": "Mozilla",
-          "email": "",
-          "company": "Mozilla",
-          "description": {
-            "FRENCH": "Nous faisons Firefox et Firefox OS. Notre mission est de promouvoir l'ouverture, l'innovation et la bonne sant\u00e9 du Web.",
-            "ENGLISH": "Nous faisons Firefox et Firefox OS. Notre mission est de promouvoir l'ouverture, l'innovation et la bonne sant\u00e9 du Web."
-          },
-          "logoUrl": "sponsor\/logo-mozilla.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Mozilla.org",
-              "url": "http:\/\/www.mozilla.org\/"
-            },
-            {
-              "name": "Mozilla Developer Network",
-              "url": "https:\/\/developer.mozilla.org\/fr\/"
-            },
-            {
-              "name": "Mozilla Hacks ",
-              "url": "http:\/\/hacks.mozilla.org\/"
-            },
-            {
-              "name": "Contribuer \u00e0 Mozilla",
-              "url": "http:\/\/www.mozilla.org\/fr\/contribute\/"
-            }
-          ],
-          "legacyId": 1058
-        },
+        "sponsorId": "Mozilla",
         "subscriptionDate": [
           2017,
           2,
@@ -1130,29 +319,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "VersionOne",
-          "firstname": "",
-          "lastname": "Versionone",
-          "email": "",
-          "company": "VersionOne",
-          "description": {
-            "FRENCH": "VersionOne is the only enterprise software company that has been 100% dedicated to agile life cycle management since day one.",
-            "ENGLISH": "VersionOne is the only enterprise software company that has been 100% dedicated to agile life cycle management since day one."
-          },
-          "logoUrl": "sponsor\/logo-versionone.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Website",
-              "url": "http:\/\/www.versionone.com"
-            }
-          ],
-          "legacyId": 1082
-        },
+        "sponsorId": "VersionOne",
         "subscriptionDate": [
           2017,
           2,
@@ -1161,33 +328,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "Redhat",
-          "firstname": "Redhatopen",
-          "lastname": "Redhatopen",
-          "email": "",
-          "company": "Red Hat",
-          "description": {
-            "FRENCH": "Red Hat\u00ae is the world's leading provider of open source solutions, using a community-powered approach.",
-            "ENGLISH": "Red Hat\u00ae is the world's leading provider of open source solutions, using a community-powered approach."
-          },
-          "logoUrl": "sponsor\/logo-redhat.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Website",
-              "url": "http:\/\/www.redhat.com\/"
-            },
-            {
-              "name": "Open Source and Standards",
-              "url": "http:\/\/community.redhat.com"
-            }
-          ],
-          "legacyId": 1083
-        },
+        "sponsorId": "Redhat",
         "subscriptionDate": [
           2017,
           2,
@@ -1196,29 +337,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "Atlassian",
-          "firstname": "",
-          "lastname": "Atlassian",
-          "email": "",
-          "company": "Atlassian",
-          "description": {
-            "FRENCH": "Atlassian products help innovators everywhere plan, build and launch great software.",
-            "ENGLISH": "Atlassian products help innovators everywhere plan, build and launch great software."
-          },
-          "logoUrl": "sponsor\/logo-atlassian.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Website",
-              "url": "https:\/\/twitter.com\/atlassian"
-            }
-          ],
-          "legacyId": 1084
-        },
+        "sponsorId": "Atlassian",
         "subscriptionDate": [
           2017,
           2,
@@ -1227,29 +346,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "Mailjet",
-          "firstname": "",
-          "lastname": "Mailjet",
-          "email": "",
-          "company": "Mailjet",
-          "description": {
-            "FRENCH": "Mailjet is a powerful emailing cloud service, that not only allows you to send emails to your contacts, but also to better engage with them.",
-            "ENGLISH": "Mailjet is a powerful emailing cloud service, that not only allows you to send emails to your contacts, but also to better engage with them."
-          },
-          "logoUrl": "sponsor\/logo-mailjet.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Website",
-              "url": "https:\/\/www.mailjet.com"
-            }
-          ],
-          "legacyId": 1085
-        },
+        "sponsorId": "Mailjet",
         "subscriptionDate": [
           2017,
           2,
@@ -1275,41 +372,7 @@
     "sponsors": [
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "VISEO",
-          "firstname": "Viseo technologies",
-          "lastname": "Viseo technologies",
-          "email": "",
-          "company": "VISEO",
-          "description": {
-            "FRENCH": "La BU VISEO Technologies conseille, accompagne, et d\u00e9livre des projets agiles dans les architectures objet et web & mobiles, avec une pr\u00e9sence \u00e0 Paris, Lyon, Grenoble, et Toulouse.\n\n[Nos offres](http:\/\/www.viseo.com\/fr\/offre\/business-technologies)",
-            "ENGLISH": "La BU VISEO Technologies conseille, accompagne, et d\u00e9livre des projets agiles dans les architectures objet et web & mobiles, avec une pr\u00e9sence \u00e0 Paris, Lyon, Grenoble, et Toulouse.\n\n[Nos offres](http:\/\/www.viseo.com\/fr\/offre\/business-technologies)"
-          },
-          "logoUrl": "sponsor\/logo-viseo.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Blog",
-              "url": "http:\/\/blog.viseo-bt.com\/"
-            },
-            {
-              "name": "LinkedIn",
-              "url": "https:\/\/www.linkedin.com\/company\/objet-direct"
-            },
-            {
-              "name": "Twitter",
-              "url": "https:\/\/twitter.com\/viseotech"
-            },
-            {
-              "name": "Facebook",
-              "url": "https:\/\/www.facebook.com\/objetdirect\/"
-            }
-          ],
-          "legacyId": 168
-        },
+        "sponsorId": "VISEO",
         "subscriptionDate": [
           2017,
           2,
@@ -1318,33 +381,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "woonoz",
-          "firstname": "",
-          "lastname": "Woonoz",
-          "email": "",
-          "company": "Woonoz",
-          "description": {
-            "FRENCH": "WOONOZ est un \u00e9diteur Lyonnais, pratiquant l'agilit\u00e9, et d\u00e9veloppant des solutions d'aide \u00e0 la m\u00e9morisation de contenu de formation.",
-            "ENGLISH": "WOONOZ est un \u00e9diteur Lyonnais, pratiquant l'agilit\u00e9, et d\u00e9veloppant des solutions d'aide \u00e0 la m\u00e9morisation de contenu de formation."
-          },
-          "logoUrl": "sponsor\/logo-woonoz.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Projet Voltaire",
-              "url": "http:\/\/www.projet-voltaire.fr"
-            },
-            {
-              "name": "Woonoz",
-              "url": "http:\/\/www.woonoz.com"
-            }
-          ],
-          "legacyId": 227
-        },
+        "sponsorId": "woonoz",
         "subscriptionDate": [
           2017,
           2,
@@ -1353,26 +390,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "google",
-          "firstname": "",
-          "lastname": "Google",
-          "email": "",
-          "company": "Google",
-          "description": {
-            "FRENCH": "D\u00e9veloppeurs mobile, web ou cloud ? Retrouvez-nous sur nos pages [Google+](http:\/\/plus.google.com\/111395306401981598462\/)!",
-            "ENGLISH": "D\u00e9veloppeurs mobile, web ou cloud ? Retrouvez-nous sur nos pages [Google+](http:\/\/plus.google.com\/111395306401981598462\/)!"
-          },
-          "logoUrl": "sponsor\/logo-google.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-
-          ],
-          "legacyId": 422
-        },
+        "sponsorId": "google",
         "subscriptionDate": [
           2017,
           2,
@@ -1381,41 +399,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "cgi",
-          "firstname": "Cgi",
-          "lastname": "Cgi",
-          "email": "",
-          "company": "CGI",
-          "description": {
-            "FRENCH": "[CGI](http:\/\/www.cgi.fr), pour la troisi\u00e8me ann\u00e9e, s\u2019associe \u00e0  pour promouvoir l\u2019innovation, le d\u00e9veloppement, l\u2019agilit\u00e9 et le plaisir",
-            "ENGLISH": "[CGI](http:\/\/www.cgi.fr), pour la troisi\u00e8me ann\u00e9e, s\u2019associe \u00e0  pour promouvoir l\u2019innovation, le d\u00e9veloppement, l\u2019agilit\u00e9 et le plaisir"
-          },
-          "logoUrl": "sponsor\/logo-cgi.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "CGI Recrute",
-              "url": "http:\/\/www.cgi-recrute.fr\/"
-            },
-            {
-              "name": "CGI sur LinkedIn",
-              "url": "http:\/\/www.linkedin.com\/company\/cgi"
-            },
-            {
-              "name": "CGI sur Viad\u00e9o",
-              "url": "http:\/\/fr.viadeo.com\/fr\/company\/cgi"
-            },
-            {
-              "name": "CGI sur Facebook",
-              "url": "https:\/\/fr-fr.facebook.com\/CGIFrance"
-            }
-          ],
-          "legacyId": 992
-        },
+        "sponsorId": "cgi",
         "subscriptionDate": [
           2017,
           2,
@@ -1424,29 +408,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "Sopra Steria",
-          "firstname": "",
-          "lastname": "Sopra steria",
-          "email": "",
-          "company": "Sopra Steria",
-          "description": {
-            "FRENCH": "Leader europ\u00e9en de la transformation num\u00e9rique - Conseil, Int\u00e9gration de syst\u00e8mes, Edition de solutions m\u00e9tier et Business Process\nServices",
-            "ENGLISH": "Leader europ\u00e9en de la transformation num\u00e9rique - Conseil, Int\u00e9gration de syst\u00e8mes, Edition de solutions m\u00e9tier et Business Process\nServices"
-          },
-          "logoUrl": "sponsor\/logo-soprasteria.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site Sopra Steria",
-              "url": "http:\/\/www.soprasteria.com\/fr\/carrieres"
-            }
-          ],
-          "legacyId": 1661
-        },
+        "sponsorId": "Sopra Steria",
         "subscriptionDate": [
           2017,
           2,
@@ -1455,41 +417,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "neosoftlyon",
-          "firstname": "",
-          "lastname": "Neosoft",
-          "email": "",
-          "company": "NEO SOFT LYON",
-          "description": {
-            "FRENCH": "N\u00e9o-Soft Services, reconnue par son mod\u00e8le social atypique, sa capacit\u00e9 d'innovation, sa r\u00e9activit\u00e9 et son service de qualit\u00e9.",
-            "ENGLISH": "N\u00e9o-Soft Services, reconnue par son mod\u00e8le social atypique, sa capacit\u00e9 d'innovation, sa r\u00e9activit\u00e9 et son service de qualit\u00e9."
-          },
-          "logoUrl": "sponsor\/logo-neosoft.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "VIADEO",
-              "url": "http:\/\/www.viadeo.com\/fr\/company\/neo-soft1"
-            },
-            {
-              "name": "LINKEDIN",
-              "url": "http:\/\/www.linkedin.com\/company\/neo-soft-services"
-            },
-            {
-              "name": "BLOG",
-              "url": "http:\/\/neosoft-leblog.blogspot.fr\/"
-            },
-            {
-              "name": "FACEBOOK",
-              "url": "https:\/\/www.facebook.com\/neo.soft.groupe"
-            }
-          ],
-          "legacyId": 1721
-        },
+        "sponsorId": "neosoftlyon",
         "subscriptionDate": [
           2017,
           2,
@@ -1498,29 +426,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "FIDUCIAL",
-          "firstname": "",
-          "lastname": "Fiducial",
-          "email": "",
-          "company": "FIDUCIAL ",
-          "description": {
-            "FRENCH": "FIDUCIAL leader des services pluridisciplinaires aux petites et moyennes entreprises.",
-            "ENGLISH": "FIDUCIAL leader des services pluridisciplinaires aux petites et moyennes entreprises."
-          },
-          "logoUrl": "sponsor\/logo-fiducial.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "FIDUCIAL Recrute",
-              "url": "http:\/\/recrute.fiducial.fr\/"
-            }
-          ],
-          "legacyId": 1731
-        },
+        "sponsorId": "FIDUCIAL",
         "subscriptionDate": [
           2017,
           2,
@@ -1529,29 +435,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "SII_rhonealpes",
-          "firstname": "",
-          "lastname": "Sii rh\u00f4ne-alpes",
-          "email": "",
-          "company": "Groupe SII",
-          "description": {
-            "FRENCH": "SII Rh\u00f4ne Alpes: une agence dynamique et en plein d\u00e9veloppement",
-            "ENGLISH": "SII Rh\u00f4ne Alpes: une agence dynamique et en plein d\u00e9veloppement"
-          },
-          "logoUrl": "sponsor\/logo-sii.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site SII Lyon",
-              "url": "http:\/\/lyon.groupe-sii.com\/fr\/"
-            }
-          ],
-          "legacyId": 1811
-        },
+        "sponsorId": "SII_rhonealpes",
         "subscriptionDate": [
           2017,
           2,
@@ -1560,33 +444,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "XebiaLabs",
-          "firstname": "",
-          "lastname": "Xebialabs",
-          "email": "",
-          "company": "XebiaLabs",
-          "description": {
-            "FRENCH": "XebiaLabs est \u00e9diteur de solutions d'automatisation des d\u00e9ploiements, des livraisons et des tests pour le Devops et Continuous Delivery.",
-            "ENGLISH": "XebiaLabs est \u00e9diteur de solutions d'automatisation des d\u00e9ploiements, des livraisons et des tests pour le Devops et Continuous Delivery."
-          },
-          "logoUrl": "sponsor\/logo-xebialabs.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site web XebiaLabs",
-              "url": "http:\/\/xebialabs.com\/"
-            },
-            {
-              "name": "Blog XebiaLabs",
-              "url": "http:\/\/blog.xebialabs.com\/"
-            }
-          ],
-          "legacyId": 2011
-        },
+        "sponsorId": "XebiaLabs",
         "subscriptionDate": [
           2017,
           2,
@@ -1595,33 +453,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "alfene",
-          "firstname": "Alain",
-          "lastname": "Paysant",
-          "email": "",
-          "company": "alfene",
-          "description": {
-            "FRENCH": "alfene intervient en recherche de comp\u00e9tences et recrutements pour des clients (Hors SSII\/ESN) Full France \net \u00e0 l\u2019\u00e9tranger pour certains clients. IT, MOE, MOA, AMOA,  Innovation, Bigdata, Robotique, Drone ainsi\nque Supply Chain, Finance\/Assurance.",
-            "ENGLISH": "alfene intervient en recherche de comp\u00e9tences et recrutements pour des clients (Hors SSII\/ESN) Full France \net \u00e0 l\u2019\u00e9tranger pour certains clients. IT, MOE, MOA, AMOA,  Innovation, Bigdata, Robotique, Drone ainsi\nque Supply Chain, Finance\/Assurance."
-          },
-          "logoUrl": "sponsor\/logo-alfene.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "alfene",
-              "url": "http:\/\/www.alfene.com"
-            },
-            {
-              "name": "Twitter",
-              "url": "https:\/\/twitter.com\/alpaysant"
-            }
-          ],
-          "legacyId": 2291
-        },
+        "sponsorId": "alfene",
         "subscriptionDate": [
           2017,
           2,
@@ -1630,33 +462,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "Enalean",
-          "firstname": "",
-          "lastname": "Enalean",
-          "email": "",
-          "company": "Enalean",
-          "description": {
-            "FRENCH": "Enalean, \u00e9diteur disruptif en ing\u00e9nierie logicielle. D\u00e9veloppeurs de Tuleap, suite open source de Gestion des D\u00e9veloppements Logiciels -ALM.",
-            "ENGLISH": "Enalean, \u00e9diteur disruptif en ing\u00e9nierie logicielle. D\u00e9veloppeurs de Tuleap, suite open source de Gestion des D\u00e9veloppements Logiciels -ALM."
-          },
-          "logoUrl": "sponsor\/logo-enalean.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site web",
-              "url": "https:\/\/www.enalean.com\/fr"
-            },
-            {
-              "name": "Blog",
-              "url": "https:\/\/www.enalean.com\/fr\/blog"
-            }
-          ],
-          "legacyId": 2811
-        },
+        "sponsorId": "Enalean",
         "subscriptionDate": [
           2017,
           2,
@@ -1665,29 +471,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "ERDF-Linky",
-          "firstname": "",
-          "lastname": "Linky erdf",
-          "email": "",
-          "company": "ERDF",
-          "description": {
-            "FRENCH": "Linky c'est le projet de compteurs communicants d'ERDF. Linky c'est aussi un SI, r\u00e9alis\u00e9 \u00e0 Lyon par 200 passionn\u00e9s !",
-            "ENGLISH": "Linky c'est le projet de compteurs communicants d'ERDF. Linky c'est aussi un SI, r\u00e9alis\u00e9 \u00e0 Lyon par 200 passionn\u00e9s !"
-          },
-          "logoUrl": "sponsor\/logo-erdf-linky.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "ERDF",
-              "url": "http:\/\/www.erdf.fr"
-            }
-          ],
-          "legacyId": 2871
-        },
+        "sponsorId": "ERDF-Linky",
         "subscriptionDate": [
           2017,
           2,
@@ -1696,29 +480,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "stormshield",
-          "firstname": "",
-          "lastname": "Stormshield",
-          "email": "",
-          "company": "stormshield.eu",
-          "description": {
-            "FRENCH": "Arkoon et Netasq, filiales \u00e0 100% d\u2019Airbus Defence and Space, op\u00e8rent la marque Stormshield - \u00e9diteur de solutions de s\u00e9curit\u00e9",
-            "ENGLISH": "Arkoon et Netasq, filiales \u00e0 100% d\u2019Airbus Defence and Space, op\u00e8rent la marque Stormshield - \u00e9diteur de solutions de s\u00e9curit\u00e9"
-          },
-          "logoUrl": "sponsor\/logo-stormshield.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site web corporate",
-              "url": "http:\/\/www.stormshield.eu"
-            }
-          ],
-          "legacyId": 2941
-        },
+        "sponsorId": "stormshield",
         "subscriptionDate": [
           2017,
           2,
@@ -1727,33 +489,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "WorldlineFrance",
-          "firstname": "",
-          "lastname": "Worldline",
-          "email": "",
-          "company": "Worldline",
-          "description": {
-            "FRENCH": "Worldline est le leader europ\u00e9en et un acteur mondial de r\u00e9f\u00e9rence dans le secteur des paiements et des services transactionnels.",
-            "ENGLISH": "Worldline est le leader europ\u00e9en et un acteur mondial de r\u00e9f\u00e9rence dans le secteur des paiements et des services transactionnels."
-          },
-          "logoUrl": "sponsor\/logo-worldline.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Website",
-              "url": "http:\/\/fr.worldline.com\/fr-fr\/home.html"
-            },
-            {
-              "name": "Facebook",
-              "url": "https:\/\/www.facebook.com\/WorldlineFrance"
-            }
-          ],
-          "legacyId": 2971
-        },
+        "sponsorId": "WorldlineFrance",
         "subscriptionDate": [
           2017,
           2,
@@ -1762,33 +498,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "Elao",
-          "firstname": "",
-          "lastname": "Elao",
-          "email": "",
-          "company": "ELAO",
-          "description": {
-            "FRENCH": "Elao est une agence de d\u00e9veloppement web 100 % technique, sp\u00e9cialiste des technologies Open source et experte Symfony. ",
-            "ENGLISH": "Elao est une agence de d\u00e9veloppement web 100 % technique, sp\u00e9cialiste des technologies Open source et experte Symfony. "
-          },
-          "logoUrl": "sponsor\/logo-elao.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Blog Elao",
-              "url": "http:\/\/www.elao.com\/fr\/blog"
-            },
-            {
-              "name": "Curvytron",
-              "url": "http:\/\/www.curvytron.com\/#\/"
-            }
-          ],
-          "legacyId": 3221
-        },
+        "sponsorId": "Elao",
         "subscriptionDate": [
           2017,
           2,
@@ -1797,37 +507,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "sourcingisr",
-          "firstname": "Eric",
-          "lastname": "Daniere",
-          "email": "",
-          "company": "ISR",
-          "description": {
-            "FRENCH": "Entreprise de service num\u00e9rique, nous accompagnons nos clients dans l'\u00e9volution de leurs SI depuis 1996.",
-            "ENGLISH": "Entreprise de service num\u00e9rique, nous accompagnons nos clients dans l'\u00e9volution de leurs SI depuis 1996."
-          },
-          "logoUrl": "sponsor\/logo-isr.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site ISR",
-              "url": "http:\/\/www.isr.fr\/"
-            },
-            {
-              "name": "ISR VIADEO",
-              "url": "http:\/\/www.viadeo.com\/fr\/company\/isr-informatique-systemes-reseaux"
-            },
-            {
-              "name": "Twitter",
-              "url": "https:\/\/twitter.com\/SourcingISR"
-            }
-          ],
-          "legacyId": 3681
-        },
+        "sponsorId": "sourcingisr",
         "subscriptionDate": [
           2017,
           2,
@@ -1853,41 +533,7 @@
     "sponsors": [
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "Zenika Lyon",
-          "firstname": "Herv\u00e9",
-          "lastname": "Jacob",
-          "email": "",
-          "company": "Zenika",
-          "description": {
-            "FRENCH": "Sp\u00e9cialis\u00e9 dans l'architecture informatique et les m\u00e9thodes agiles, Zenika compte 200 collaborateurs r\u00e9partis sur des domaines aussi vari\u00e9s que l'expertise Java, le BigData, le Web, la Mobilit\u00e9, l'IoT, DevOps, le Craftsmanship et l'Agilit\u00e9.",
-            "ENGLISH": "Sp\u00e9cialis\u00e9 dans l'architecture informatique et les m\u00e9thodes agiles, Zenika compte 200 collaborateurs r\u00e9partis sur des domaines aussi vari\u00e9s que l'expertise Java, le BigData, le Web, la Mobilit\u00e9, l'IoT, DevOps, le Craftsmanship et l'Agilit\u00e9."
-          },
-          "logoUrl": "sponsor\/logo-zenika.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Le blog technique",
-              "url": "http:\/\/blog.zenika.com"
-            },
-            {
-              "name": "Les formations Inter \u00e0 Lyon",
-              "url": "http:\/\/www.zenika.com\/Formation\/prochaines-formations.html?agency=3"
-            },
-            {
-              "name": "Formations - Le catalogue complet",
-              "url": "http:\/\/www.zenika.com\/Formation\/notre-catalogue-formation.html"
-            },
-            {
-              "name": "Zenika",
-              "url": "http:\/\/www.zenika.com"
-            }
-          ],
-          "legacyId": 10
-        },
+        "sponsorId": "Zenika Lyon",
         "subscriptionDate": [
           2017,
           2,
@@ -1896,29 +542,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "Sopra Steria",
-          "firstname": "",
-          "lastname": "Sopra steria",
-          "email": "",
-          "company": "Sopra Steria",
-          "description": {
-            "FRENCH": "Leader europ\u00e9en de la transformation num\u00e9rique - Conseil, Int\u00e9gration de syst\u00e8mes, Edition de solutions m\u00e9tier et Business Process\nServices",
-            "ENGLISH": "Leader europ\u00e9en de la transformation num\u00e9rique - Conseil, Int\u00e9gration de syst\u00e8mes, Edition de solutions m\u00e9tier et Business Process\nServices"
-          },
-          "logoUrl": "sponsor\/logo-soprasteria.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site Sopra Steria",
-              "url": "http:\/\/www.soprasteria.com\/fr\/carrieres"
-            }
-          ],
-          "legacyId": 1661
-        },
+        "sponsorId": "Sopra Steria",
         "subscriptionDate": [
           2017,
           2,
@@ -1927,41 +551,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "annick.challancin@esker.fr",
-          "firstname": "Annick",
-          "lastname": "Esker",
-          "email": "",
-          "company": "Esker",
-          "description": {
-            "FRENCH": "Editeur de logiciel lyonnais, Esker d\u00e9veloppe des solutions de d\u00e9mat\u00e9rialisation en mode SaaS utilis\u00e9es par plus de 11 000 clients dans le monde. Nos 7 \u00e9quipes Agiles travaillent sur des probl\u00e9matiques de mobilit\u00e9, de s\u00e9curit\u00e9 et de scalabilit\u00e9.",
-            "ENGLISH": "Editeur de logiciel lyonnais, Esker d\u00e9veloppe des solutions de d\u00e9mat\u00e9rialisation en mode SaaS utilis\u00e9es par plus de 11 000 clients dans le monde. Nos 7 \u00e9quipes Agiles travaillent sur des probl\u00e9matiques de mobilit\u00e9, de s\u00e9curit\u00e9 et de scalabilit\u00e9."
-          },
-          "logoUrl": "sponsor\/logo-esker.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site web",
-              "url": "http:\/\/www.esker.fr\/corporate\/who_we_are\/about_esker.asp"
-            },
-            {
-              "name": "LinkedIn",
-              "url": "https:\/\/www.linkedin.com\/company\/esker-france"
-            },
-            {
-              "name": "Twitter",
-              "url": "https:\/\/twitter.com\/EskerFrance"
-            },
-            {
-              "name": "YouTube",
-              "url": "https:\/\/www.youtube.com\/channel\/UCRNuK_jrg-GinCQy8B5oAnQ"
-            }
-          ],
-          "legacyId": 5062
-        },
+        "sponsorId": "annick.challancin@esker.fr",
         "subscriptionDate": [
           2017,
           2,
@@ -1970,41 +560,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "VISEO",
-          "firstname": "Viseo technologies",
-          "lastname": "Viseo technologies",
-          "email": "",
-          "company": "VISEO",
-          "description": {
-            "FRENCH": "La BU VISEO Technologies conseille, accompagne, et d\u00e9livre des projets agiles dans les architectures objet et web & mobiles, avec une pr\u00e9sence \u00e0 Paris, Lyon, Grenoble, et Toulouse.\n\n[Nos offres](http:\/\/www.viseo.com\/fr\/offre\/business-technologies)",
-            "ENGLISH": "La BU VISEO Technologies conseille, accompagne, et d\u00e9livre des projets agiles dans les architectures objet et web & mobiles, avec une pr\u00e9sence \u00e0 Paris, Lyon, Grenoble, et Toulouse.\n\n[Nos offres](http:\/\/www.viseo.com\/fr\/offre\/business-technologies)"
-          },
-          "logoUrl": "sponsor\/logo-viseo.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Blog",
-              "url": "http:\/\/blog.viseo-bt.com\/"
-            },
-            {
-              "name": "LinkedIn",
-              "url": "https:\/\/www.linkedin.com\/company\/objet-direct"
-            },
-            {
-              "name": "Twitter",
-              "url": "https:\/\/twitter.com\/viseotech"
-            },
-            {
-              "name": "Facebook",
-              "url": "https:\/\/www.facebook.com\/objetdirect\/"
-            }
-          ],
-          "legacyId": 168
-        },
+        "sponsorId": "VISEO",
         "subscriptionDate": [
           2017,
           2,
@@ -2013,33 +569,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "WorldlineFrance",
-          "firstname": "",
-          "lastname": "Worldline",
-          "email": "",
-          "company": "Worldline",
-          "description": {
-            "FRENCH": "Worldline est le leader europ\u00e9en et un acteur mondial de r\u00e9f\u00e9rence dans le secteur des paiements et des services transactionnels.",
-            "ENGLISH": "Worldline est le leader europ\u00e9en et un acteur mondial de r\u00e9f\u00e9rence dans le secteur des paiements et des services transactionnels."
-          },
-          "logoUrl": "sponsor\/logo-worldline.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Website",
-              "url": "http:\/\/fr.worldline.com\/fr-fr\/home.html"
-            },
-            {
-              "name": "Facebook",
-              "url": "https:\/\/www.facebook.com\/WorldlineFrance"
-            }
-          ],
-          "legacyId": 2971
-        },
+        "sponsorId": "WorldlineFrance",
         "subscriptionDate": [
           2017,
           2,
@@ -2048,41 +578,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "Sword",
-          "firstname": "Berthille",
-          "lastname": "Sellier",
-          "email": "",
-          "company": "Sword",
-          "description": {
-            "FRENCH": "SWORD, c\u2019est 1 600 sp\u00e9cialistes en IT/Digital & Software actifs sur les 5 continents, qui vous accompagnent dans l\u2019\u00e9volution de votre organisation \u00e0 l\u2019\u00e8re du num\u00e9rique. Depuis 2000, SWORD a acquis une solide r\u00e9putation dans l\u2019\u00e9dition de logiciels et dans la conduite de projets IT & business complexes en tant que leader de la transformation technologique et digitale. Avec SWORD c\u2019est la garantie d\u2019un engagement de proximit\u00e9 dont le but est d\u2019optimiser vos processus & de valoriser vos donn\u00e9es. Notre volont\u00e9 est avant tout de construire dans la dur\u00e9e et de fid\u00e9liser nos collaborateurs, nos clients et nos partenaires en nous appuyant sur nos valeurs et notre enthousiasme qui vous accompagneront tout au long de vos projets.",
-            "ENGLISH": "SWORD is an international Consulting, Service and Software company driving global leaders intheir digital & technology transformation. Created in November 2000, the group has a current headcount of 1,600+ staff operating in more than 50 countries.Sword offers its customers comprehensive and integrated responses, on both the strategic approach and the execution."
-          },
-          "logoUrl": "sponsor\/logo-sword.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site",
-              "url": "http://www.sword-services.com/fr/"
-            },
-            {
-              "name": "Carrière",
-              "url": "https://career.sword-group.com/"
-            },
-            {
-              "name": "Linkedin",
-              "url": "https://www.linkedin.com/company-beta/7973/"
-            },
-            {
-              "name": "Twitter",
-              "url": "https://twitter.com/Sword_Group"
-            }
-          ],
-          "legacyId": 5812
-        },
+        "sponsorId": "Sword",
         "subscriptionDate": [
           2017,
           2,
@@ -2091,29 +587,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "stormshield",
-          "firstname": "",
-          "lastname": "Stormshield",
-          "email": "",
-          "company": "stormshield.eu",
-          "description": {
-            "FRENCH": "Arkoon et Netasq, filiales \u00e0 100% d\u2019Airbus Defence and Space, op\u00e8rent la marque Stormshield - \u00e9diteur de solutions de s\u00e9curit\u00e9",
-            "ENGLISH": "Arkoon et Netasq, filiales \u00e0 100% d\u2019Airbus Defence and Space, op\u00e8rent la marque Stormshield - \u00e9diteur de solutions de s\u00e9curit\u00e9"
-          },
-          "logoUrl": "sponsor\/logo-stormshield.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site web corporate",
-              "url": "http:\/\/www.stormshield.eu"
-            }
-          ],
-          "legacyId": 2941
-        },
+        "sponsorId": "stormshield",
         "subscriptionDate": [
           2017,
           2,
@@ -2122,33 +596,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "Redhat",
-          "firstname": "Redhatopen",
-          "lastname": "Redhatopen",
-          "email": "",
-          "company": "Red Hat",
-          "description": {
-            "FRENCH": "Red Hat\u00ae is the world's leading provider of open source solutions, using a community-powered approach.",
-            "ENGLISH": "Red Hat\u00ae is the world's leading provider of open source solutions, using a community-powered approach."
-          },
-          "logoUrl": "sponsor\/logo-redhat.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Website",
-              "url": "http:\/\/www.redhat.com\/"
-            },
-            {
-              "name": "Open Source and Standards",
-              "url": "http:\/\/community.redhat.com"
-            }
-          ],
-          "legacyId": 1083
-        },
+        "sponsorId": "Redhat",
         "subscriptionDate": [
           2017,
           2,
@@ -2157,29 +605,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "ERDF-Linky",
-          "firstname": "",
-          "lastname": "Linky erdf",
-          "email": "",
-          "company": "ERDF",
-          "description": {
-            "FRENCH": "Linky c'est le projet de compteurs communicants d'ERDF. Linky c'est aussi un SI, r\u00e9alis\u00e9 \u00e0 Lyon par 200 passionn\u00e9s !",
-            "ENGLISH": "Linky c'est le projet de compteurs communicants d'ERDF. Linky c'est aussi un SI, r\u00e9alis\u00e9 \u00e0 Lyon par 200 passionn\u00e9s !"
-          },
-          "logoUrl": "sponsor\/logo-erdf-linky.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "ERDF",
-              "url": "http:\/\/www.erdf.fr"
-            }
-          ],
-          "legacyId": 2871
-        },
+        "sponsorId": "ERDF-Linky",
         "subscriptionDate": [
           2017,
           2,
@@ -2188,41 +614,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "cgi",
-          "firstname": "Cgi",
-          "lastname": "Cgi",
-          "email": "",
-          "company": "CGI",
-          "description": {
-            "FRENCH": "[CGI](http:\/\/www.cgi.fr), pour la troisi\u00e8me ann\u00e9e, s\u2019associe \u00e0  pour promouvoir l\u2019innovation, le d\u00e9veloppement, l\u2019agilit\u00e9 et le plaisir",
-            "ENGLISH": "[CGI](http:\/\/www.cgi.fr), pour la troisi\u00e8me ann\u00e9e, s\u2019associe \u00e0  pour promouvoir l\u2019innovation, le d\u00e9veloppement, l\u2019agilit\u00e9 et le plaisir"
-          },
-          "logoUrl": "sponsor\/logo-cgi.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "CGI Recrute",
-              "url": "http:\/\/www.cgi-recrute.fr\/"
-            },
-            {
-              "name": "CGI sur LinkedIn",
-              "url": "http:\/\/www.linkedin.com\/company\/cgi"
-            },
-            {
-              "name": "CGI sur Viad\u00e9o",
-              "url": "http:\/\/fr.viadeo.com\/fr\/company\/cgi"
-            },
-            {
-              "name": "CGI sur Facebook",
-              "url": "https:\/\/fr-fr.facebook.com\/CGIFrance"
-            }
-          ],
-          "legacyId": 992
-        },
+        "sponsorId": "cgi",
         "subscriptionDate": [
           2017,
           2,
@@ -2231,37 +623,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "sonarsource",
-          "firstname": "",
-          "lastname": "Sonar source",
-          "email": "",
-          "company": "sonarsource",
-          "description": {
-            "FRENCH": "SonarSource provides applications and services for continuous inspection of code quality.",
-            "ENGLISH": "SonarSource provides applications and services for continuous inspection of code quality."
-          },
-          "logoUrl": "sponsor\/logo-sonarsource.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site commercial",
-              "url": "http:\/\/www.sonarsource.com"
-            },
-            {
-              "name": "Site communautaire",
-              "url": "http:\/\/www.sonarsource.org"
-            },
-            {
-              "name": "In Action",
-              "url": "http:\/\/nemo.sonarsource.org"
-            }
-          ],
-          "legacyId": 663
-        },
+        "sponsorId": "sonarsource",
         "subscriptionDate": [
           2017,
           2,
@@ -2270,29 +632,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "econocom-osiatis",
-          "firstname": "",
-          "lastname": "Econocom osiatis",
-          "email": "",
-          "company": "Econocom",
-          "description": {
-            "FRENCH": "Acteur de r\u00e9f\u00e9rence des Services Num\u00e9riques, leader dans la mise en \u0153uvre de solutions globales, technologiques, financi\u00e8res et m\u00e9tier.",
-            "ENGLISH": "Acteur de r\u00e9f\u00e9rence des Services Num\u00e9riques, leader dans la mise en \u0153uvre de solutions globales, technologiques, financi\u00e8res et m\u00e9tier."
-          },
-          "logoUrl": "sponsor\/logo-econom.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Econocom-Osiatis",
-              "url": "http:\/\/www.econocom-osiatis.com"
-            }
-          ],
-          "legacyId": 1031
-        },
+        "sponsorId": "econocom-osiatis",
         "subscriptionDate": [
           2017,
           2,
@@ -2301,37 +641,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "sourcingisr",
-          "firstname": "Eric",
-          "lastname": "Daniere",
-          "email": "",
-          "company": "ISR",
-          "description": {
-            "FRENCH": "Entreprise de service num\u00e9rique, nous accompagnons nos clients dans l'\u00e9volution de leurs SI depuis 1996.",
-            "ENGLISH": "Entreprise de service num\u00e9rique, nous accompagnons nos clients dans l'\u00e9volution de leurs SI depuis 1996."
-          },
-          "logoUrl": "sponsor\/logo-isr.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site ISR",
-              "url": "http:\/\/www.isr.fr\/"
-            },
-            {
-              "name": "ISR VIADEO",
-              "url": "http:\/\/www.viadeo.com\/fr\/company\/isr-informatique-systemes-reseaux"
-            },
-            {
-              "name": "Twitter",
-              "url": "https:\/\/twitter.com\/SourcingISR"
-            }
-          ],
-          "legacyId": 3681
-        },
+        "sponsorId": "sourcingisr",
         "subscriptionDate": [
           2017,
           2,
@@ -2340,29 +650,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "SII_rhonealpes",
-          "firstname": "",
-          "lastname": "Sii rh\u00f4ne-alpes",
-          "email": "",
-          "company": "Groupe SII",
-          "description": {
-            "FRENCH": "SII Rh\u00f4ne Alpes: une agence dynamique et en plein d\u00e9veloppement",
-            "ENGLISH": "SII Rh\u00f4ne Alpes: une agence dynamique et en plein d\u00e9veloppement"
-          },
-          "logoUrl": "sponsor\/logo-sii.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site SII Lyon",
-              "url": "http:\/\/lyon.groupe-sii.com\/fr\/"
-            }
-          ],
-          "legacyId": 1811
-        },
+        "sponsorId": "SII_rhonealpes",
         "subscriptionDate": [
           2017,
           2,
@@ -2371,37 +659,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "1338530083",
-          "firstname": "Mehdi",
-          "lastname": "Lahmam",
-          "email": "",
-          "company": "Craftsmen",
-          "description": {
-            "FRENCH": "Design et d\u00e9veloppement d'applications web.",
-            "ENGLISH": "Design et d\u00e9veloppement d'applications web."
-          },
-          "logoUrl": "sponsor\/logo-craftsmen.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site web",
-              "url": "http:\/\/craftsmen.io"
-            },
-            {
-              "name": "Twitter",
-              "url": "https:\/\/twitter.com\/craftsmenhq"
-            },
-            {
-              "name": "GitHub",
-              "url": "https:\/\/github.com\/craftsmen\/"
-            }
-          ],
-          "legacyId": 6162
-        },
+        "sponsorId": "1338530083",
         "subscriptionDate": [
           2017,
           2,
@@ -2410,37 +668,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "stackoverflow",
-          "firstname": "Stackoverflow",
-          "lastname": "Stack overflow",
-          "email": "",
-          "company": "Stack Overflow",
-          "description": {
-            "FRENCH": "Stack Overflow is the place where the world's developers go to learn, share their knowledge and advance their careers. Our Q&A site features over 10.2 million programming questions, and our job board offers positions with the most exciting employers.",
-            "ENGLISH": "Stack Overflow is the place where the world's developers go to learn, share their knowledge and advance their careers. Our Q&A site features over 10.2 million programming questions, and our job board offers positions with the most exciting employers."
-          },
-          "logoUrl": "sponsor\/logo-stackoverflow.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site web",
-              "url": "http:\/\/stackoverflow.com\/"
-            },
-            {
-              "name": "Twitter",
-              "url": "https:\/\/twitter.com\/StackOverflow"
-            },
-            {
-              "name": "Site web",
-              "url": "http:\/\/stackoverflow.com\/jobs"
-            }
-          ],
-          "legacyId": 7182
-        },
+        "sponsorId": "stackoverflow",
         "subscriptionDate": [
           2017,
           2,
@@ -2449,33 +677,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "alfene",
-          "firstname": "Alain",
-          "lastname": "Paysant",
-          "email": "",
-          "company": "alfene",
-          "description": {
-            "FRENCH": "alfene intervient en recherche de comp\u00e9tences et recrutements pour des clients (Hors SSII\/ESN) Full France \net \u00e0 l\u2019\u00e9tranger pour certains clients. IT, MOE, MOA, AMOA,  Innovation, Bigdata, Robotique, Drone ainsi\nque Supply Chain, Finance\/Assurance.",
-            "ENGLISH": "alfene intervient en recherche de comp\u00e9tences et recrutements pour des clients (Hors SSII\/ESN) Full France \net \u00e0 l\u2019\u00e9tranger pour certains clients. IT, MOE, MOA, AMOA,  Innovation, Bigdata, Robotique, Drone ainsi\nque Supply Chain, Finance\/Assurance."
-          },
-          "logoUrl": "sponsor\/logo-alfene.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "alfene",
-              "url": "http:\/\/www.alfene.com"
-            },
-            {
-              "name": "Twitter",
-              "url": "https:\/\/twitter.com\/alpaysant"
-            }
-          ],
-          "legacyId": 2291
-        },
+        "sponsorId": "alfene",
         "subscriptionDate": [
           2017,
           2,
@@ -2484,37 +686,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "amaris",
-          "firstname": "Amaris",
-          "lastname": "Amaris",
-          "email": "",
-          "company": "Amaris",
-          "description": {
-            "FRENCH": "Amaris est un cabinet ind\u00e9pendant et international de Conseil en Management et Technologies cr\u00e9\u00e9 en 2007. Pr\u00e9sent dans 45 pays, le Groupe accompagne ses clients tout au long du cycle de r\u00e9alisation de leurs projets.",
-            "ENGLISH": "Amaris est un cabinet ind\u00e9pendant et international de Conseil en Management et Technologies cr\u00e9\u00e9 en 2007. Pr\u00e9sent dans 45 pays, le Groupe accompagne ses clients tout au long du cycle de r\u00e9alisation de leurs projets."
-          },
-          "logoUrl": "sponsor\/logo-amaris.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site web",
-              "url": "http:\/\/www.amaris.com"
-            },
-            {
-              "name": "Twitter",
-              "url": "https:\/\/twitter.com\/Amaris"
-            },
-            {
-              "name": "Google+",
-              "url": "https:\/\/plus.google.com\/+amaris"
-            }
-          ],
-          "legacyId": 7322
-        },
+        "sponsorId": "amaris",
         "subscriptionDate": [
           2017,
           2,
@@ -2523,41 +695,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "boot-start",
-          "firstname": "Benjamin",
-          "lastname": "Habegger",
-          "email": "",
-          "company": "Boot-Start",
-          "description": {
-            "FRENCH": "Bootstrap your disruptive IT project in startup mode",
-            "ENGLISH": "Bootstrap your disruptive IT project in startup mode"
-          },
-          "logoUrl": "sponsor\/logo-bootstart.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site web",
-              "url": "http:\/\/www.boot-start.com\/"
-            },
-            {
-              "name": "Twitter",
-              "url": "https:\/\/twitter.com\/boot_start"
-            },
-            {
-              "name": "LinkedIn",
-              "url": "https:\/\/www.linkedin.com\/company\/boot-start"
-            },
-            {
-              "name": "Facebook",
-              "url": "https:\/\/www.facebook.com\/bootstart\/"
-            }
-          ],
-          "legacyId": 7332
-        },
+        "sponsorId": "boot-start",
         "subscriptionDate": [
           2017,
           2,
@@ -2566,37 +704,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "hired",
-          "firstname": "Hired",
-          "lastname": "Hired",
-          "email": "",
-          "company": "Breaz",
-          "description": {
-            "FRENCH": "Avec Breaz recevez jusqu'\u00e0 15 propositions d'entretien des plus belles \u00e9quipes tech en une semaine",
-            "ENGLISH": "Avec Breaz recevez jusqu'\u00e0 15 propositions d'entretien des plus belles \u00e9quipes tech en une semaine"
-          },
-          "logoUrl": "sponsor\/logo-breaz.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site web",
-              "url": "https:\/\/breaz.io\/"
-            },
-            {
-              "name": "Site web",
-              "url": "https:\/\/hired.com\/"
-            },
-            {
-              "name": "Twitter",
-              "url": "https:\/\/twitter.com\/breazio"
-            }
-          ],
-          "legacyId": 7202
-        },
+        "sponsorId": "hired",
         "subscriptionDate": [
           2017,
           2,
@@ -2605,33 +713,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "onlylyon",
-          "firstname": "Onlylyon",
-          "lastname": "Onlylyon",
-          "email": "",
-          "company": "Only Lyon",
-          "description": {
-            "FRENCH": "OnlyLyon a \u00e9t\u00e9 cr\u00e9\u00e9 en 2007 pour assurer la promotion internationale de Lyon.",
-            "ENGLISH": "OnlyLyon a \u00e9t\u00e9 cr\u00e9\u00e9 en 2007 pour assurer la promotion internationale de Lyon."
-          },
-          "logoUrl": "sponsor\/logo-onlylyon.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site web",
-              "url": "http:\/\/www.onlylyon.com\/"
-            },
-            {
-              "name": "Twitter",
-              "url": "https:\/\/twitter.com\/OnlyLyon"
-            }
-          ],
-          "legacyId": 5902
-        },
+        "sponsorId": "onlylyon",
         "subscriptionDate": [
           2017,
           2,
@@ -2640,33 +722,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "pivotal",
-          "firstname": "Seb",
-          "lastname": "Del",
-          "email": "",
-          "company": "Pivotal",
-          "description": {
-            "FRENCH": "La Plateforme Agile pour les \u00e9quipes Agiles, propuls\u00e9 par Cloud Foundry.",
-            "ENGLISH": "La Plateforme Agile pour les \u00e9quipes Agiles, propuls\u00e9 par Cloud Foundry."
-          },
-          "logoUrl": "sponsor\/logo-pivotal.svg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site web",
-              "url": "http:\/\/run.pivotal.io"
-            },
-            {
-              "name": "Twitter",
-              "url": "https:\/\/twitter.com\/pivotalws"
-            }
-          ],
-          "legacyId": 5682
-        },
+        "sponsorId": "pivotal",
         "subscriptionDate": [
           2017,
           2,
@@ -2675,33 +731,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "infoq",
-          "firstname": "Infoq fr",
-          "lastname": "Infoq fr",
-          "email": "",
-          "company": "InfoQ FR",
-          "description": {
-            "FRENCH": "Diffuser les connaissances et l'innovation dans le d\u00e9veloppement logiciel d'entreprise",
-            "ENGLISH": "Diffuser les connaissances et l'innovation dans le d\u00e9veloppement logiciel d'entreprise"
-          },
-          "logoUrl": "sponsor\/logo-infoq.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site web",
-              "url": "http:\/\/www.infoq.com\/fr\/"
-            },
-            {
-              "name": "Twitter",
-              "url": "https:\/\/twitter.com\/infoqfr?lang=fr"
-            }
-          ],
-          "legacyId": 7812
-        },
+        "sponsorId": "infoq",
         "subscriptionDate": [
           2017,
           2,
@@ -2710,29 +740,7 @@
       },
       {
         "level": "NONE",
-        "sponsor": {
-          "login": "lyontechhub",
-          "firstname": "Lyontechhub",
-          "lastname": "Lyontechhub",
-          "email": "",
-          "company": "Lyon Tech Hub",
-          "description": {
-            "FRENCH": "Le hub des communaut\u00e9s IT\/techniques lyonnaises",
-            "ENGLISH": "Le hub des communaut\u00e9s IT\/techniques lyonnaises"
-          },
-          "logoUrl": "sponsor\/logo-lyontechhub.svg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site web",
-              "url": "http:\/\/www.lyontechhub.org\/"
-            }
-          ],
-          "legacyId": 7822
-        },
+        "sponsorId": "lyontechhub",
         "subscriptionDate": [
           2017,
           2,
@@ -2758,41 +766,7 @@
     "sponsors": [
       {
         "level": "GOLD",
-        "sponsor": {
-          "login": "Zenika Lyon",
-          "firstname": "Herv\u00e9",
-          "lastname": "Jacob",
-          "email": "",
-          "company": "Zenika",
-          "description": {
-            "FRENCH": "Sp\u00e9cialis\u00e9 dans l'architecture informatique et les m\u00e9thodes agiles, Zenika compte 200 collaborateurs r\u00e9partis sur des domaines aussi vari\u00e9s que l'expertise Java, le BigData, le Web, la Mobilit\u00e9, l'IoT, DevOps, le Craftsmanship et l'Agilit\u00e9.",
-            "ENGLISH": "IT architecture and Agile methods specialist, Zenika has 200 employees dispatched on various fields like Java, BigData, Web, Mobility, IoT, DevOps, Craftsmanship and Agile."
-          },
-          "logoUrl": "sponsor\/logo-zenika.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Le blog technique",
-              "url": "http:\/\/blog.zenika.com"
-            },
-            {
-              "name": "Les formations Inter \u00e0 Lyon",
-              "url": "http:\/\/www.zenika.com\/Formation\/prochaines-formations.html?agency=3"
-            },
-            {
-              "name": "Formations - Le catalogue complet",
-              "url": "http:\/\/www.zenika.com\/Formation\/notre-catalogue-formation.html"
-            },
-            {
-              "name": "Zenika",
-              "url": "http:\/\/www.zenika.com"
-            }
-          ],
-          "legacyId": 10
-        },
+        "sponsorId": "Zenika Lyon",
         "subscriptionDate": [
           2016,
           11,
@@ -2801,41 +775,7 @@
       },
       {
         "level": "GOLD",
-        "sponsor": {
-          "login": "Sword",
-          "firstname": "Berthille",
-          "lastname": "Sellier",
-          "email": "",
-          "company": "Sword",
-          "description": {
-            "FRENCH": "SWORD, c\u2019est 1 600 sp\u00e9cialistes en IT/Digital & Software actifs sur les 5 continents, qui vous accompagnent dans l\u2019\u00e9volution de votre organisation \u00e0 l\u2019\u00e8re du num\u00e9rique. Depuis 2000, SWORD a acquis une solide r\u00e9putation dans l\u2019\u00e9dition de logiciels et dans la conduite de projets IT & business complexes en tant que leader de la transformation technologique et digitale. Avec SWORD c\u2019est la garantie d\u2019un engagement de proximit\u00e9 dont le but est d\u2019optimiser vos processus & de valoriser vos donn\u00e9es. Notre volont\u00e9 est avant tout de construire dans la dur\u00e9e et de fid\u00e9liser nos collaborateurs, nos clients et nos partenaires en nous appuyant sur nos valeurs et notre enthousiasme qui vous accompagneront tout au long de vos projets.",
-            "ENGLISH": "SWORD is an international Consulting, Service and Software company driving global leaders intheir digital & technology transformation. Created in November 2000, the group has a current headcount of 1,600+ staff operating in more than 50 countries.Sword offers its customers comprehensive and integrated responses, on both the strategic approach and the execution."
-          },
-          "logoUrl": "sponsor\/logo-sword.svg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site",
-              "url": "http://www.sword-services.com/fr/"
-            },
-            {
-              "name": "Carrière",
-              "url": "https://career.sword-group.com/"
-            },
-            {
-              "name": "Linkedin",
-              "url": "https://www.linkedin.com/company-beta/7973/"
-            },
-            {
-              "name": "Twitter",
-              "url": "https://twitter.com/Sword_Group"
-            }
-          ],
-          "legacyId": 5812
-        },
+        "sponsorId": "Sword",
         "subscriptionDate": [
           2016,
           12,
@@ -2844,33 +784,7 @@
       },
       {
         "level": "GOLD",
-        "sponsor": {
-          "login": "Ippon",
-          "firstname": "",
-          "lastname": "",
-          "email": "marketing@ippon.fr",
-          "company": "Ippon",
-          "description": {
-            "ENGLISH": "Ippon is a specialized global consulting on Digital, BigData and Cloud solutions.We serve prestigious customers worldwide with teams of high-level consultants and a deep engagement for quality, performance and time-to-market.Locations: France, USA, Australia and morocco. Key figures: M$25+, 250+ consultants, since 2002.",
-            "FRENCH": "Ippon est sp\u00e9cialis\u00e9 dans le consulting Digital, Big Data et solutions Cloud.Nous nous occupons de clients prestigieux dans le monde entier avec des \u00e9quipes de consultants hautement qualifi\u00e9s et un fort engagement en termes de qualit\u00e9, de performance et de time-to-market.Localisations : France, USA, Australie et Maroc. Chiffres cl\u00e9s: M$25+, 250+ consultants, depuis 2002."
-          },
-          "logoUrl": "sponsor\/logo-ippon.svg",
-          "events": [
-
-          ],
-          "role": "ATTENDEE",
-          "links": [
-            {
-              "name": "Site",
-              "url": "http:\/\/www.ippon.fr\/"
-            },
-            {
-              "name": "Blog",
-              "url": "http:\/\/blog.ippon.fr\/"
-            }
-          ],
-          "legacyId": null
-        },
+        "sponsorId": "Ippon",
         "subscriptionDate": [
           2016,
           12,
@@ -2879,29 +793,7 @@
       },
       {
         "level": "GOLD",
-        "sponsor": {
-          "login": "Sopra Steria",
-          "firstname": "",
-          "lastname": "Sopra steria",
-          "email": "",
-          "company": "Sopra Steria",
-          "description": {
-            "FRENCH": "Sopra Steria, leader europ\u00e9en de la transformation num\u00e9rique, propose l\u2019un des portefeuilles d\u2019offres les plus complets du march\u00e9 : conseil, int\u00e9grationde syst\u00e8mes, \u00e9dition de solutions m\u00e9tier, infrastructure management et business process services.",
-            "ENGLISH": "Sopra Steria, a European leader in digital transformation, provides one of the most comprehensive portfolios of end-to-end service offerings on the market: consulting, systems integration,software development, infrastructure management and business process services. Sopra Steria is trusted by leading private and public-sector organisations to deliver successful transformation programmes that addresstheir most complex and critical business challenges."
-          },
-          "logoUrl": "sponsor\/logo-sopra-steria.svg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site Sopra Steria",
-              "url": "http:\/\/www.soprasteria.com\/fr\/carrieres"
-            }
-          ],
-          "legacyId": 1661
-        },
+        "sponsorId": "Sopra Steria",
         "subscriptionDate": [
           2016,
           12,
@@ -2910,41 +802,7 @@
       },
       {
         "level": "GOLD",
-        "sponsor": {
-          "login": "annick.challancin@esker.fr",
-          "firstname": "Annick",
-          "lastname": "Esker",
-          "email": "",
-          "company": "Esker",
-          "description": {
-            "FRENCH": "Editeur de logiciel lyonnais, Esker d\u00e9veloppe des solutions de d\u00e9mat\u00e9rialisation en mode SaaS utilis\u00e9es par plus de 11 000 clients dans le monde. Nos 7 \u00e9quipes Agiles travaillent sur des probl\u00e9matiques de mobilit\u00e9, de s\u00e9curit\u00e9 et de scalabilit\u00e9.",
-            "ENGLISH": "Editeur de logiciel lyonnais, Esker d\u00e9veloppe des solutions de d\u00e9mat\u00e9rialisation en mode SaaS utilis\u00e9es par plus de 11 000 clients dans le monde. Nos 7 \u00e9quipes Agiles travaillent sur des probl\u00e9matiques de mobilit\u00e9, de s\u00e9curit\u00e9 et de scalabilit\u00e9."
-          },
-          "logoUrl": "sponsor\/logo-esker.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site web",
-              "url": "http:\/\/www.esker.fr\/corporate\/who_we_are\/about_esker.asp"
-            },
-            {
-              "name": "LinkedIn",
-              "url": "https:\/\/www.linkedin.com\/company\/esker-france"
-            },
-            {
-              "name": "Twitter",
-              "url": "https:\/\/twitter.com\/EskerFrance"
-            },
-            {
-              "name": "YouTube",
-              "url": "https:\/\/www.youtube.com\/channel\/UCRNuK_jrg-GinCQy8B5oAnQ"
-            }
-          ],
-          "legacyId": 5062
-        },
+        "sponsorId": "annick.challancin@esker.fr",
         "subscriptionDate": [
           2017,
           1,
@@ -2953,49 +811,7 @@
       },
       {
         "level": "GOLD",
-        "sponsor": {
-          "login": "LDLC",
-          "firstname": "",
-          "lastname": "",
-          "email": "c.bar@ldlc.com",
-          "company": "LDLC",
-          "description": {
-            "ENGLISH": "Created in 1996 by the entrepreneur Laurent de la Clergerie from Lyon,LDLC Group is currently the 5th e-commerce group in France. Its major shop, LDLC.com, is the french leader of computer and high-tech e-commerce.Composed by 10 brands including 6 retail websites, the e-commerce pioneer gathers computing, high-tech, house and education activities.",
-            "FRENCH": "Cr\u00e9\u00e9 en 1996 par l\u2019entrepreneur lyonnais Laurent de la Clergerie,le Groupe LDLC est aujourd\u2019hui le 5\u00e8me groupe de e-commerce en France. Son enseigne majeure, LDLC.com, est leader fran\u00e7ais du e-commerce informatiqueet high-tech. Constitu\u00e9 de 10 marques dont 6 sites marchands, le pionnier du commerce en ligne conjugue des activit\u00e9s dans le domaine de l\u2019informatique,du high-tech, de la maison ou encore de l\u2019\u00e9ducation."
-          },
-          "logoUrl": "sponsor\/logo-ldlc.svg",
-          "events": [
-
-          ],
-          "role": "ATTENDEE",
-          "links": [
-            {
-              "name": "Site",
-              "url": "http:\/\/www.groupe-ldlc.com\/"
-            },
-            {
-              "name": "Site public",
-              "url": "http:\/\/www.ldlc.com\/"
-            },
-            {
-              "name": "Site pro",
-              "url": "http:\/\/www.ldlc-pro.com\/"
-            },
-            {
-              "name": "Linkedin",
-              "url": "https:\/\/www.linkedin.com\/company\/ldlc"
-            },
-            {
-              "name": "Twitter",
-              "url": "https:\/\/twitter.com\/groupeldlc"
-            },
-            {
-              "name": "Facebook",
-              "url": "https:\/\/www.facebook.com\/LDLC.com\/"
-            }
-          ],
-          "legacyId": null
-        },
+        "sponsorId": "LDLC",
         "subscriptionDate": [
           2017,
           1,
@@ -3004,41 +820,7 @@
       },
       {
         "level": "GOLD",
-        "sponsor": {
-          "login": "VISEO",
-          "firstname": "Viseo technologies",
-          "lastname": "Viseo technologies",
-          "email": "",
-          "company": "VISEO",
-          "description": {
-            "FRENCH": "La BU VISEO Technologies conseille, accompagne, et d\u00e9livre des projets agiles dans les architectures objet et web & mobiles, avec une pr\u00e9sence \u00e0 Paris, Lyon, Grenoble, et Toulouse.\n\n[Nos offres](http:\/\/www.viseo.com\/fr\/offre\/business-technologies)",
-            "ENGLISH": "La BU VISEO Technologies conseille, accompagne, et d\u00e9livre des projets agiles dans les architectures objet et web & mobiles, avec une pr\u00e9sence \u00e0 Paris, Lyon, Grenoble, et Toulouse.\n\n[Nos offres](http:\/\/www.viseo.com\/fr\/offre\/business-technologies)"
-          },
-          "logoUrl": "sponsor\/logo-viseo.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Blog",
-              "url": "http:\/\/blog.viseo-bt.com\/"
-            },
-            {
-              "name": "LinkedIn",
-              "url": "https:\/\/www.linkedin.com\/company\/objet-direct"
-            },
-            {
-              "name": "Twitter",
-              "url": "https:\/\/twitter.com\/viseotech"
-            },
-            {
-              "name": "Facebook",
-              "url": "https:\/\/www.facebook.com\/objetdirect\/"
-            }
-          ],
-          "legacyId": 168
-        },
+        "sponsorId": "VISEO",
         "subscriptionDate": [
           2017,
           2,
@@ -3047,37 +829,7 @@
       },
       {
         "level": "GOLD",
-        "sponsor": {
-          "login": "GitHub",
-          "firstname": "",
-          "lastname": "",
-          "email": "sales@github.com",
-          "company": "GitHub",
-          "description": {
-            "FRENCH": "GitHub aide les gens \u00e0 construire des logiciels. Des millions d'individus et d'organisations \u00e0 travers le monde utilisent GitHub pour d\u00e9couvrir, partager et collaborer sur des logiciels (des jeux en passant aux frameworks populaires et aux applications majeures. Ensemble, nous d\u00e9finissons la fa\u00e7on dont le logiciel est construit aujourd'hui.\n\nQue vous utilisiez GitHub.com ou GitHub Enterprise sur vos propres serveurs, vous pouvez acc\u00e9der \u00e0 l'une des plus grandes communaut\u00e9s de d\u00e9veloppeurs au monde pour cr\u00e9er des logiciels de la mani\u00e8re qui vous convient le mieux. Choisissez votre option de d\u00e9ploiement et int\u00e9grez vos outils tiers pr\u00e9f\u00e9r\u00e9s dans un workflow puissant et collaboratif.",
-            "ENGLISH": "GitHub is how people build software. Millions of individuals and organizations around the world use GitHub to discover, share, and collaborate on software\u2014from games and experiments to popular frameworks and leading applications. Together, we're defining how software is built today.\n\nWhether you use GitHub.com or GitHub Enterprise on your own servers, you can access one of the world's largest developer communities to build software in the way that works best for you. Choose your deployment option and integrate your favorite third party tools into a powerful, collaborative workflow."
-          },
-          "logoUrl": "sponsor\/logo-github.svg",
-          "events": [
-
-          ],
-          "role": "ATTENDEE",
-          "links": [
-            {
-              "name": "Site",
-              "url": "https:\/\/github.com\/"
-            },
-            {
-              "name": "Electron",
-              "url": "http:\/\/electron.atom.io\/"
-            },
-            {
-              "name": "Site",
-              "url": "https:\/\/atom.io\/"
-            }
-          ],
-          "legacyId": null
-        },
+        "sponsorId": "GitHub",
         "subscriptionDate": [
           2017,
           2,
@@ -3086,45 +838,7 @@
       },
       {
         "level": "LANYARD",
-        "sponsor": {
-          "login": "WorldlineFrance",
-          "firstname": "",
-          "lastname": "Worldline",
-          "email": "",
-          "company": "Worldline",
-          "description": {
-            "FRENCH": "Worldline [Euronext : WLN] est le leader europ\u00e9en et un acteur mondial de r\u00e9f\u00e9rence dans le secteur des paiements et des services transactionnels. Worldline met en place des services nouvelle g\u00e9n\u00e9ration, permettant \u00e0 ses clients d\u2019offrir au consommateur final des solutions innovantes et fluides. Acteur clef du B2B2C, riche de plus de 40 ans d\u2019exp\u00e9rience, Worldline sert et contribue au succ\u00e8s de toutes les entreprises et administrations, dans un march\u00e9 en perp\u00e9tuelle \u00e9volution. Worldline propose un Business Model unique et flexible, construit autour d\u2019un portefeuille d\u2019offres \u00e9volutif et global permettant une prise en charge end-to-end. Les activit\u00e9s de Worldline sont organis\u00e9es autour de trois axes : Merchant Services & Terminals, Mobility & e-Transactional Services, Financial Processing & Software Licensing incluant equensWorldline. Worldline emploie plus de 8 600 collaborateurs dans le monde entier et g\u00e9n\u00e8re un chiffre d\u2019affaires estim\u00e9 \u00e0  environ 1,5 milliard d\u2019euros sur une base annuelle. Worldline est une entreprise du Groupe Atos.",
-            "ENGLISH": "Worldline [Euronext: WLN] is the European leader in the payments and transactional services industry.Worldline delivers new-generation services, enabling its customers to offer smooth and innovative solutions to the end consumer.Key actor for B2B2C industries, with over 40 years of experience, Worldline supports and contributes to the success of all businesses and administrative servicesin a perpetually evolving market. Worldline offers a unique and flexible business model built around a global and growing portfolio, thus enabling end-to-end support.Worldline activities are organized around three axes: Merchant Services, Mobility & e-Transactional Services, Financial Processing & Software Licensing including equensWorldline.Worldline employs more than 8,600 people worldwide, with estimated revenue of circa 1.5 billion euros on a yearly basis. Worldline is an Atos company"
-          },
-          "logoUrl": "sponsor\/logo-worldline.svg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site",
-              "url": "http:\/\/fr.worldline.com"
-            },
-            {
-              "name": "Blog",
-              "url": "http:\/\/fr.worldline.com\/blog"
-            },
-            {
-              "name": "Twitter",
-              "url": "https:\/\/twitter.com\/WorldlineGlobal"
-            },
-            {
-              "name": "YouTube",
-              "url": "http:\/\/fr.worldline.com\/youtube"
-            },
-            {
-              "name": "Facebook",
-              "url": "http:\/\/fr.worldline.com\/facebook"
-            }
-          ],
-          "legacyId": 2971
-        },
+        "sponsorId": "WorldlineFrance",
         "subscriptionDate": [
           2016,
           10,
@@ -3133,33 +847,7 @@
       },
       {
         "level": "PARTY",
-        "sponsor": {
-          "login": "onlylyon",
-          "firstname": "Onlylyon",
-          "lastname": "Onlylyon",
-          "email": "",
-          "company": "Only Lyon",
-          "description": {
-            "FRENCH": "OnlyLyon a \u00e9t\u00e9 cr\u00e9\u00e9 en 2007 pour assurer la promotion internationale de Lyon.",
-            "ENGLISH": "OnlyLyon has been created in 2007 to promote Lyon worldwide."
-          },
-          "logoUrl": "sponsor\/logo-onlylyon.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site web",
-              "url": "http:\/\/www.onlylyon.com\/"
-            },
-            {
-              "name": "Twitter",
-              "url": "https:\/\/twitter.com\/OnlyLyon"
-            }
-          ],
-          "legacyId": 5902
-        },
+        "sponsorId": "onlylyon",
         "subscriptionDate": [
           2017,
           1,
@@ -3168,29 +856,7 @@
       },
       {
         "level": "PARTY",
-        "sponsor": {
-          "login": "Hopwork",
-          "firstname": "",
-          "lastname": "",
-          "email": "contact@hopwork.fr",
-          "company": "Hopwork",
-          "description": {
-            "ENGLISH": "Best freelancers. Available now. Complete safety.",
-            "FRENCH": "Les meilleurs freelances. Disponibles maintenant. En toute s\u00e9curit\u00e9."
-          },
-          "logoUrl": "sponsor\/logo-hopwork.svg",
-          "events": [
-
-          ],
-          "role": "ATTENDEE",
-          "links": [
-            {
-              "name": "Site",
-              "url": "http:\/\/www.hopwork.fr\/"
-            }
-          ],
-          "legacyId": null
-        },
+        "sponsorId": "Hopwork",
         "subscriptionDate": [
           2016,
           11,
@@ -3199,29 +865,7 @@
       },
       {
         "level": "SILVER",
-        "sponsor": {
-          "login": "SerliFr",
-          "firstname": "",
-          "lastname": "Serli",
-          "email": "",
-          "company": "SERLI",
-          "description": {
-            "FRENCH": "Soci\u00e9t\u00e9 de conseil et d'ing\u00e9nierie, sp\u00e9cialiste de l'\u00e9cosyst\u00e8me Java, du Cloud et des technologies mobiles, Serli est membre du JCP.",
-            "ENGLISH": "Soci\u00e9t\u00e9 de conseil et d'ing\u00e9nierie, sp\u00e9cialiste de l'\u00e9cosyst\u00e8me Java, du Cloud et des technologies mobiles, Serli est membre du JCP."
-          },
-          "logoUrl": "sponsor\/logo-serli.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "SERLI",
-              "url": "http:\/\/www.serli.com"
-            }
-          ],
-          "legacyId": 1003
-        },
+        "sponsorId": "SerliFr",
         "subscriptionDate": [
           2016,
           12,
@@ -3230,29 +874,7 @@
       },
       {
         "level": "SILVER",
-        "sponsor": {
-          "login": "SII_rhonealpes",
-          "firstname": "",
-          "lastname": "Sii rh\u00f4ne-alpes",
-          "email": "",
-          "company": "Groupe SII",
-          "description": {
-            "FRENCH": "SII Rh\u00f4ne Alpes: une agence dynamique et en plein d\u00e9veloppement.",
-            "ENGLISH": "SII Rh\u00f4ne Alpes: a dynamic agency that keeps growing."
-          },
-          "logoUrl": "sponsor\/logo-sii.svg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site SII Lyon",
-              "url": "http:\/\/lyon.groupe-sii.com\/fr\/"
-            }
-          ],
-          "legacyId": 1811
-        },
+        "sponsorId": "SII_rhonealpes",
         "subscriptionDate": [
           2016,
           12,
@@ -3261,33 +883,7 @@
       },
       {
         "level": "SILVER",
-        "sponsor": {
-          "login": "woonoz",
-          "firstname": "",
-          "lastname": "Woonoz",
-          "email": "",
-          "company": "Woonoz",
-          "description": {
-            "FRENCH": "WOONOZ est un \u00e9diteur Lyonnais, pratiquant l'agilit\u00e9, et d\u00e9veloppant des solutions d'aide \u00e0 la m\u00e9morisation de contenu de formation.",
-            "ENGLISH": "WOONOZ est un \u00e9diteur Lyonnais, pratiquant l'agilit\u00e9, et d\u00e9veloppant des solutions d'aide \u00e0 la m\u00e9morisation de contenu de formation."
-          },
-          "logoUrl": "sponsor\/logo-woonoz.png",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Projet Voltaire",
-              "url": "http:\/\/www.projet-voltaire.fr"
-            },
-            {
-              "name": "Woonoz",
-              "url": "http:\/\/www.woonoz.com"
-            }
-          ],
-          "legacyId": 227
-        },
+        "sponsorId": "woonoz",
         "subscriptionDate": [
           2017,
           1,
@@ -3296,45 +892,7 @@
       },
       {
         "level": "SILVER",
-        "sponsor": {
-          "login": "Algolia",
-          "firstname": "",
-          "lastname": "",
-          "email": "hey@algolia.com?subject=MiXit",
-          "company": "Algolia",
-          "description": {
-            "ENGLISH": "Founded in 2012, Algolia is a privately held company created by veterans in the fields of algorithms, search engines and text mining.",
-            "FRENCH": "Cr\u00e9\u00e9e en 2012, Algolia est une soci\u00e9t\u00e9 priv\u00e9e cr\u00e9\u00e9e par des experts dans les domaines des algorithmes relatifs aux moteurs de recherche et \u00e0 l'analyse de textes."
-          },
-          "logoUrl": "sponsor\/logo-algolia.svg",
-          "events": [
-
-          ],
-          "role": "ATTENDEE",
-          "links": [
-            {
-              "name": "Site",
-              "url": "https:\/\/www.algolia.com\/"
-            },
-            {
-              "name": "Google+",
-              "url": "https:\/\/plus.google.com\/+Algolia"
-            },
-            {
-              "name": "Linkedin",
-              "url": "https:\/\/www.linkedin.com\/company\/algolia"
-            },
-            {
-              "name": "Twitter",
-              "url": "https:\/\/twitter.com\/Algolia"
-            },
-            {
-              "name": "Facebook",
-              "url": "https:\/\/www.facebook.com\/algolia"
-            }
-          ],
-          "legacyId": null
-        },
+        "sponsorId": "Algolia",
         "subscriptionDate": [
           2017,
           1,
@@ -3343,29 +901,7 @@
       },
       {
         "level": "SILVER",
-        "sponsor": {
-          "login": "Enedis",
-          "firstname": "",
-          "lastname": "",
-          "email": "contact@enedis.fr",
-          "company": "Enedis",
-          "description": {
-            "FRENCH": "Enedis est une entreprise de service public, gestionnaire du r\u00e9seau de distribution d'\u00e9lectricit\u00e9 qui d\u00e9veloppe, exploite, modernise le r\u00e9seau \u00e9lectrique et g\u00e8re les donn\u00e9es associ\u00e9es.",
-            "ENGLISH": "Enedis is a public company, electricity distribution network operator which develops, operates, modernizes the electricity grid and manages the associated data."
-          },
-          "logoUrl": "sponsor\/logo-enedis.svg",
-          "events": [
-
-          ],
-          "role": "ATTENDEE",
-          "links": [
-            {
-              "name": "Site",
-              "url": "http:\/\/www.enedis.fr"
-            }
-          ],
-          "legacyId": null
-        },
+        "sponsorId": "Enedis",
         "subscriptionDate": [
           2017,
           1,
@@ -3374,41 +910,7 @@
       },
       {
         "level": "SILVER",
-        "sponsor": {
-          "login": "Axway",
-          "firstname": "",
-          "lastname": "",
-          "email": "contact@axway.com",
-          "company": "Axway",
-          "description": {
-            "FRENCH": "Libérer le potentiel de chaque client pour l’accompagner dans sa transformation. Tout a commencé par une idée. Nous étions persuadés qu’en aidant nos clients à relier leurs processus comptables manuels et leurs silos de données, ils pourraient maximiser leur efficacité.  Les organisations avaient du mal à valoriser leurs données et ne pouvaient pas partager d’informationsen temps réel entre différents départements pour accélérer les prises de décision. Depuis, grâce à notre solide expertise et à nos logiciels éprouvés, nos clients misent sur l’avenir et relèvent avec brio les défis les plus complexes en matière de données. Avec notre plateforme nouvelle génération, Axway AMPLIFY, ils peuvent fusionner toutes leurs données pour créer un réseau d'expérience client qui regroupe employés, fournisseurs, partenaires et développeurs et permet aux consommateurs de suivre le rythme effréné de l’innovation de l’ère digitale. ",
-            "ENGLISH": "Realizing the transformational power in every customer. We started out with this wild idea that, by helping our customers wire up their  manual accounting processes and data silos, they could become more efficient than they ever dreamed possible.  Organizations were struggling with unlocking value from their data and they couldn’t share real-time insights across departments to speed up decisions. Ever since, we’ve been propelling our customers forward with deep expertise and software that empowers them to tackle their toughest data challenges. With our next generation platform, Axway AMPLIFY, customers can fuse data from anywhere to power a customer experience network that unites not only employees, but suppliers, partners and developers into an agile force for innovation that’s as fast and fluid as today’s digital consumer."
-          },
-          "logoUrl": "sponsor\/logo-axway.svg",
-          "events": [
-
-          ],
-          "role": "ATTENDEE",
-          "links": [
-            {
-              "name": "Site",
-              "url": "https://www.axway.com/"
-            },
-            {
-              "name": "Twitter",
-              "url": "https://twitter.com/axway/"
-            },
-            {
-              "name": "LinkedIn",
-              "url": "https://www.linkedin.com/company/axway"
-            },
-            {
-              "name": "Instagram",
-              "url": "https://www.instagram.com/axway_of_life/"
-            }
-          ],
-          "legacyId": null
-        },
+        "sponsorId": "Axway",
         "subscriptionDate": [
           2017,
           2,
@@ -3417,37 +919,7 @@
       },
       {
         "level": "SILVER",
-        "sponsor": {
-          "login": "sourcingisr",
-          "firstname": "Eric",
-          "lastname": "Daniere",
-          "email": "",
-          "company": "ISR",
-          "description": {
-            "FRENCH": "Entreprise de service num\u00e9rique, nous accompagnons nos clients dans l'\u00e9volution de leurs SI depuis 1996.",
-            "ENGLISH": "Entreprise de service num\u00e9rique, nous accompagnons nos clients dans l'\u00e9volution de leurs SI depuis 1996."
-          },
-          "logoUrl": "sponsor\/logo-isr.jpg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site ISR",
-              "url": "http:\/\/www.isr.fr\/"
-            },
-            {
-              "name": "ISR VIADEO",
-              "url": "http:\/\/www.viadeo.com\/fr\/company\/isr-informatique-systemes-reseaux"
-            },
-            {
-              "name": "Twitter",
-              "url": "https:\/\/twitter.com\/SourcingISR"
-            }
-          ],
-          "legacyId": 3681
-        },
+        "sponsorId": "sourcingisr",
         "subscriptionDate": [
           2017,
           1,
@@ -3456,33 +928,7 @@
       },
       {
         "level": "HOSTING",
-        "sponsor": {
-          "login": "pivotal",
-          "firstname": "Seb",
-          "lastname": "Del",
-          "email": "",
-          "company": "Pivotal",
-          "description": {
-            "ENGLISH": "Pivotal\u2019s Cloud-Native platform drives software innovation for many of the world\u2019s most admired brands. With millions of developers in communities around the world,Pivotal technology touches billions of users every day. After shaping the software development culture of Silicon Valley's most valuable companies for over a decade, today Pivotal leads a global technology movement transforming how the world builds software.",
-            "FRENCH": "La plateforme cloud native de Pivotal s\u2019impose comme une force d\u2019innovation logicielle pour les plus grandesmarques internationales. Chaque jour, les millions de d\u00e9veloppeurs des communaut\u00e9s open source du monde entier permettent \u00e0 nos technologies d\u2019atteindre des milliards d'utilisateurs. Pendant plus d\u2019une d\u00e9cennie,Pivotal a su insuffler la culture du d\u00e9veloppement logiciel chez les plus grands groupes de la Silicon Valley. Aujourd\u2019hui, nous nous pla\u00e7ons en chef de file d\u2019un mouvement mondial qui r\u00e9volutionne les m\u00e9thodes de conception des logiciels."
-          },
-          "logoUrl": "sponsor\/logo-pivotal.svg",
-          "events": [
-
-          ],
-          "role": "SPONSOR",
-          "links": [
-            {
-              "name": "Site",
-              "url": "http:\/\/run.pivotal.io\/"
-            },
-            {
-              "name": "Pivotal",
-              "url": "http:\/\/pivotal.io\/"
-            }
-          ],
-          "legacyId": 5682
-        },
+        "sponsorId": "pivotal",
         "subscriptionDate": [
           2017,
           1,

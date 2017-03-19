@@ -2,6 +2,7 @@ package mixit.web.handler
 
 import mixit.model.*
 import mixit.repository.TalkRepository
+import mixit.repository.UserRepository
 import mixit.util.MarkdownConverter
 import mixit.util.json
 import org.springframework.stereotype.Component
@@ -12,17 +13,20 @@ import java.time.LocalDateTime
 
 @Component
 class TalkHandler(val repository: TalkRepository,
+                  val userRepository: UserRepository,
                   val markdownConverter: MarkdownConverter) {
 
     fun findByEventView(year: Int, req: ServerRequest) =
             repository.findByEvent(yearToId(year.toString())).collectList().then { sessions ->
-                val model = mapOf(Pair("talks", sessions.map { it.toDto(markdownConverter) }), Pair("year", year))
+                userRepository.findMany(sessions.flatMap(Talk::speakerIds)).collectMap(User::login).then { speakers ->
+                val model = mapOf(Pair("talks", sessions.map { it.toDto(it.speakerIds.map { speakers[it]!! } , markdownConverter) }), Pair("year", year))
                 ok().render("talks", model)
-            }
+            }}
 
-    fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug")).then { s ->
-        ok().render("talk", mapOf(Pair("talk", s.toDto(markdownConverter))))
-    }
+    fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug")).then { session ->
+        userRepository.findMany(session.speakerIds).collectList().then { speakers ->
+        ok().render("talk", mapOf(Pair("talk", session.toDto(speakers!!, markdownConverter))))
+    }}
 
     fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("login")))
 
@@ -52,7 +56,7 @@ class TalkDto(
         val end: LocalDateTime?
 )
 
-fun Talk.toDto(markdownConverter: MarkdownConverter) = TalkDto(
+fun Talk.toDto(speakers: List<User>, markdownConverter: MarkdownConverter) = TalkDto(
         id, slug, format, event, title,
         markdownConverter.toHTML(summary), speakers, language, addedAt,
         markdownConverter.toHTML(description),

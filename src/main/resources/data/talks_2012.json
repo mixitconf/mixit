@@ -1,1106 +1,710 @@
 [
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            241000000
-        ],
-        "description": "If you decide today that you want to create a mobile application, you have to decide on a development strategy - especially if you want to target multiple platforms.You can either learn to program from scratch for each platform or you can use a framework that abstracts on top of all of the platforms and reuses your existing web development knowledge - like Apache [PhoneGap](http://phonegap.com). If you decide to use [PhoneGap](http://phonegap.com/), you still have figure out whether to use a library specially designed for mobile applications - like *Sencha* or *jQuery mobile* - or use general libraries like *Zepto* or *jQuery*. There are a lot of decisions to make, and there's no one best strategy at this point in the game.",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "1",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "pamela-fox-create-mobile-application-with-phonegap",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Pamela",
-                "lastname": "Fox",
-                "legacyId": 9,
-                "links": [],
-                "login": "9",
-                "logoUrl": "92dfeb863138a5a9c0453ed80f9c8c75",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "I'll explain my development strategy, why I chose PhoneGap, and what I've learnt along the way.",
-        "title": "Create mobile application with PhoneGap",
-        "video": null
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            251000000
-        ],
-        "description": "L\u2019exp\u00e9rience des billes rouges (the red bead experiment) est un atelier con\u00e7u par William Edwards Deming pour illustrer les erreurs classiques du management par rapport aux ph\u00e9nom\u00e8nes li\u00e9s \u00e0 un syst\u00e8me, \u00e0 l\u2019organisation elle-m\u00eame. Cette session permettra aux participants de rejouer l'exp\u00e9rience et d'\u00e9changer sur les 7 maladies mortelles des organisations et les 14 points pour la transformation d'une entreprise d\u00e9finis par Deming.",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "5",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "alexis-monville-experience-des-billes-rouges",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Alexis",
-                "lastname": "Monville",
-                "legacyId": 17,
-                "links": [],
-                "login": "17",
-                "logoUrl": "1de6a276595f75143c50c2d08b795ddf",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "L\u2019exp\u00e9rience des billes rouges (the red bead experiment) est un atelier con\u00e7u par William Edwards Deming.",
-        "title": "Exp\u00e9rience des billes rouges",
-        "video": null
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            260000000
-        ],
-        "description": "Oyez ! Oyez ! La l\u00e9gende du Sky Castle Game : \"Il \u00e9tait une fois un Roi tr\u00e8s puissant. Un jour il tomba \u00e9perdument amoureux et d\u00e9cida de construire le Ch\u00e2teau de ses r\u00eaves pour y accueillir sa Bien aim\u00e9e. Il d\u00e9cida de faire appel aux Compagnons Agiles qui sont r\u00e9put\u00e9s pour faire ce que l\u2019on veut, montrer l\u2019\u00e9tat d\u2019avancement et accepter les modifications dont on va n\u00e9cessairement avoir besoin au fur et \u00e0 mesure du chantier afin de satisfaire sa Belle. L\u2019\u00e9quipe recrute. En ferez-vous partie ?\"\r\n\r\nCet atelier dure 2 heures (minimum) et s'adresse \u00e0 tout public.\r\n\r\nIl a \u00e9t\u00e9 pr\u00e9c\u00e9demment jou\u00e9 \u00e0 l'Agile Tour Toulouse le 19 octobre, l'Agile Tour Bordeaux le 21 octobre et la Scrum Night le 7 d\u00e9cembre 2011.",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "7",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "fabrice-aimetti-philippe-launay-antoine-vernois-sky-castle-game",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Fabrice",
-                "lastname": "Aimetti",
-                "legacyId": 16,
-                "links": [],
-                "login": "16",
-                "logoUrl": "d1a4b07474484ef24fbe9e54b669e437",
-                "role": "ATTENDEE"
-            },
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Philippe",
-                "lastname": "Launay",
-                "legacyId": 18,
-                "links": [],
-                "login": "18",
-                "logoUrl": "cd1e1e108acfeda71ce370957fcea8b6",
-                "role": "ATTENDEE"
-            },
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Antoine",
-                "lastname": "Vernois",
-                "legacyId": 20,
-                "links": [],
-                "login": "20",
-                "logoUrl": "90cabf8640f0dded176b40486fda0e6e",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "Le Sky Castle Game est bas\u00e9 sur le Kanban Game de Jon Jagger.",
-        "title": "Sky Castle Game",
-        "video": null
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            260000000
-        ],
-        "description": "L\u2019\u00e8re du management 3.0 (un management agile et Lean) est annonc\u00e9e \u2026 entre opportunit\u00e9s et n\u00e9cessit\u00e9, le m\u00e9tier de manager est en pleine \u00e9volution.\r\nLe mode de management \u00ab Command & Control \u00bb issu du Taylorisme et de l\u2019organisation scientifique du travail (OST) , avec sa vision appauvrie de l\u2019Homme au Travail a montr\u00e9 ses limites; le manager agile explore de nouvelles dimensions pour garantir le succ\u00e8s de tous.\r\nCette session se propose d'explorer ces nouvelles dimensions.",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "10",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "jean-claude-grosjean-dans-la-peau-du-manager-agile",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Jean claude",
-                "lastname": "Grosjean",
-                "legacyId": 24,
-                "links": [],
-                "login": "24",
-                "logoUrl": "ce98206cafbd137079c111d48d691640",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "L\u2019\u00e8re du management 3.0 (agile et Lean) est annonc\u00e9e. Entre opportunit\u00e9s et n\u00e9cessit\u00e9, le m\u00e9tier de manager est en pleine \u00e9volution...",
-        "title": "Dans la peau du Manager Agile",
-        "video": "http://www.youtube.com/watch?v=D95ASG_frvY"
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            261000000
-        ],
-        "description": "L\u2019agile, tout le monde en parle, mais peu osent encore s\u2019y lancer *v\u00e9ritablement*.\r\nIl plane une odeur de risque, d\u2019\u00e9tranget\u00e9, qui freine les d\u00e9cideurs, les managers. \r\n\r\nL\u2019objectif de cette session est de lever cet \u00e9cran de fum\u00e9e pour plonger concr\u00e8tement au sein d\u2019une application de l\u2019agile dans un milieu que l\u2019on estime habituellement rigide ou traditionaliste, le milieu bancaire.\r\n\r\nRentabilit\u00e9, ROI, plan de carri\u00e8re, supervision, d\u00e9finition du besoin, contraintes, risques, \"time to market\", r\u00e9ussite de certains processus, \u00e9checs d\u2019autres, l\u2019objectif de cette session est de d\u00e9crire la r\u00e9alit\u00e9 agile en d\u00e9mystifiant certaines id\u00e9es et en r\u00e9pondant le plus concr\u00e8tement possible aux questions souvent pos\u00e9es.",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "12",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "pablo-pernot-anatomie-d-une-mission-agile--saison-2",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Pablo",
-                "lastname": "Pernot",
-                "legacyId": 25,
-                "links": [],
-                "login": "25",
-                "logoUrl": "cf1b8b7c132e9cfe063c6b6e902ce6a5",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "La r\u00e9alit\u00e9 agile : retour d\u2019exp\u00e9rience sur le d\u00e9ploiement agile au sein d\u2019un grand \u00e9diteur de logiciel dans le milieu bancaire. ",
-        "title": "Anatomie d'une mission agile, saison 2",
-        "video": "http://www.youtube.com/watch?v=1efayxnn_Gs"
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            261000000
-        ],
-        "description": "Hibernate Search a pour objectif de rentre tr\u00e8s facile l'ajout d'un moteur de recherche puissant aux applications. Toute la plomberie et la complexit\u00e9 sont pris en charge par le framework et laisse les d\u00e9veloppeurs se concentrer sur les r\u00e8gles de recherche sp\u00e9cifiques \u00e0 leur application.\r\n\r\nDans cette pr\u00e9sentation, vous d\u00e9couvrirez comment rajouter un moteur de recherche \u00e0 vos applications et vous d\u00e9couvrirez les derni\u00e8res nouveaut\u00e9s comment la recherche par facette et la recherche g\u00e9olocalis\u00e9e.\r\n\r\nEt puisque c'est entre nous, on discutera autour du code et on passera \u00e9ventuellement des slides si il reste du temps.",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "13",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "emmanuel-bernard-hibernate-search--dans-ta-face-ting-",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Emmanuel",
-                "lastname": "Bernard",
-                "legacyId": 30,
-                "links": [],
-                "login": "30",
-                "logoUrl": "9d09f05d50ce6624040126d9eaf727b8",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "Hibernate Search s'appuie sur Lucene pour offrir aux applications Hibernate un moteur de recherche puissant et intuitif \u00e0 ses utilisateurs.",
-        "title": "Hibernate Search: dans ta face(ting)",
-        "video": null
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            262000000
-        ],
-        "description": "Social Architecture by analogy with conventional architecture, is the process, and the product, of planning, designing, and growing an on-line community. Social architectures, in the form of on-line communities, are the cultural and political symbols, and works of art of the Digital Society. The 21st century will be identified with its surviving social architectures.\r\n\r\nAs Social Architects, we participate in communities, we identify successful naturally-occurring patterns, or we develop new patterns, and we apply these deliberately to our own architectures. We apply psychology (our social instincts), economics (how we create common wealth through specialization and trade), politics (how we collect and share power), and technology (how we communicate). We continually adapt our toolkit based on new knowledge and experience. Our goal is to create on-line communities that accurately solve the problems we identify, that grow healthily, and that survive by themselves.\r\n\r\nAll successful communities are based on the inherent contract of mutual benefit. That is, it is possible to build a billion-dollar business based on volunteer labor, but only if every participant contributes for selfish reasons. Often participants do not realize, or care, that they are part of a community. However, every single act is economic. Thus, \"crowd sourcing\" (as the exploitation-for-profit of volunteer labor is sometimes called) only works when the crowd really wants to solve the problems you throw at it.\r\n",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "14",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "pieter-hintjens-social-architecture-101",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Pieter",
-                "lastname": "Hintjens",
-                "legacyId": 31,
-                "links": [],
-                "login": "31",
-                "logoUrl": "c1df3a0f97a9daac66cb6f35adb03368",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "Introducing Social Architecture: how to design and build on-line communities.",
-        "title": "Social Architecture 101",
-        "video": null
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            262000000
-        ],
-        "description": "\u00d8MQ (ZeroMQ, 0MQ, zmq) looks like an embeddable networking library but acts like a concurrency framework. It gives you sockets that carry whole messages across various transports like in-process, inter-process, TCP, and multicast. You can connect sockets N-to-N with patterns like fanout, pub-sub, task distribution, and request-reply. It's fast enough to be the fabric for clustered products. Its asynchronous I/O model gives you scalable multicore applications, built as asynchronous message-processing tasks. It has a score of language APIs and runs on most operating systems. \u00d8MQ is from iMatix and is LGPL open source.",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "15",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "pieter-hintjens-zeromq-is-magic-from-the-future",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Pieter",
-                "lastname": "Hintjens",
-                "legacyId": 31,
-                "links": [],
-                "login": "31",
-                "logoUrl": "c1df3a0f97a9daac66cb6f35adb03368",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "An introduction to ZeroMQ, the fast, smart, and massively scalable connectivity layer for applications in any language, on any platform.",
-        "title": "ZeroMQ is Magic from the Future",
-        "video": null
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            262000000
-        ],
-        "description": "Sur sc\u00e8ne, les improvisateurs doivent faire vivre une histoire et garder le public r\u00e9ceptif, sans texte et sans pr\u00e9paration.\r\nOn nous donne un th\u00e8me, et en d\u00e9finissant un personnage, un lieu et une action, on est parti pour jouer avec quelqu'un d'autre qui a forc\u00e9ment une id\u00e9e compl\u00e8tement diff\u00e9rente.\r\nComment y arriver ? Etre r\u00e9actif ? Ne pas \u00eatre trop brutal en imposant son id\u00e9e, ne pas s'\u00e9craser compl\u00e8tement non plus ? En restant fid\u00e8le a des grands principes : Ecoute, Accepte, Percute, Anime, Construis, Joue le jeu, Innove, Amuse-toi, Ose !\r\nLe tout au service d'une Histoire qui doit avoir du sens. Impensable si l'\u00e9quipe n'est pas en confiance et soud\u00e9e.\r\nTiens, mais on dirait qu'on parle d'Agile...\r\n\r\nSession limit\u00e9e \u00e0 12 participants",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "17",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "aline-paponaud-un-atelier-theatre-d-impro-pour-jouer-a-etre-agile",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Aline",
-                "lastname": "Paponaud",
-                "legacyId": 49,
-                "links": [],
-                "login": "49",
-                "logoUrl": "d5d0721435ade58bb9ae5dab6eb9b091",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "Le th\u00e9\u00e2tre d'impro c'est \u00eatre r\u00e9actif au changement pour \u00eatre au service d'une histoire qui doit avancer. Ca ne vous rappelle rien ?",
-        "title": "Un atelier Th\u00e9\u00e2tre d'Impro pour jouer \u00e0 \u00eatre Agile",
-        "video": null
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            262000000
-        ],
-        "description": "Java ne se limite pas au langage \u00e9ponyme : sa machine virtuelle est capable d'ex\u00e9cuter du bytecode produit par un tr\u00e8s large panel de langages. Peu d'entre nous ont eu de bonnes raisons d'avoir \u00e0 comprendre, g\u00e9n\u00e9rer ou transformer du bytecode Java. Il serait pourtant r\u00e9ducteur de limiter cette activit\u00e9 \u00e0 une magie noire r\u00e9serv\u00e9e aux cr\u00e9ateurs de langages et de frameworks \u00e9volu\u00e9s. \u00c0 titre d'exemple, la manipulation de bytecode est une des cl\u00e9s de voute de la simplification des mod\u00e8les de programmation pour les plates-formes r\u00e9pandues que sont Java EE, Play! ou Spring.\r\n\r\nCette session s'adresse \u00e0 un public de tous niveaux et a pour but non seulement de d\u00e9mystifier le bytecode Java, mais aussi de montrer en quoi cela peut \u00eatre utile dans des cadres applicatifs plus classiques.\r\n\r\n* Bases du bytecode Java et de la JVM\r\n* Manipulation et applications avec : ASM, AspectJ et JBoss Byteman\r\n* Java 7 et invokedynamic\r\n* JooFlux : projet de recherche d\u00e9voil\u00e9 pour toi cher public !",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "24",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "julien-ponge-frederic-le-mouel-manipulation-de-bytecode---democratisons-la-magie",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Julien",
-                "lastname": "Ponge",
-                "legacyId": 98,
-                "links": [],
-                "login": "98",
-                "logoUrl": "50a17cd98aab2cc4d8e144741e11b1b7",
-                "role": "ATTENDEE"
-            },
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Fr\u00e9d\u00e9ric",
-                "lastname": "Le mou\u00ebl",
-                "legacyId": 100,
-                "links": [],
-                "login": "100",
-                "logoUrl": "2a4bd42b6a3db5858ff2250e236f9631",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "Comprendre le bytecode, sa manipulation, et se rendre compte que cela est fort utile.",
-        "title": "Manipulation de bytecode : d\u00e9mocratisons la magie",
-        "video": null
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            263000000
-        ],
-        "description": "Vous devez r\u00e9aliser des tests de charge et vous en avez assez de monter des clusters pour injecter une charge d\u00e9cente ou de cliquer dans une obscure IHM?\r\nInjectez 20 000 requ\u00eates/sec avec votre vieux laptop avec Gatling.\r\n\r\nGatling est d\u00e9velopp\u00e9 en Scala, s'appuie sur un moteur asynchrone \u00e0 base d'acteurs [Akka](http://akka.io) et d'IO non bloquantes [Netty](http://netty.io) et propose un DSL simple et parlant.\r\n\r\nPlus d'informations sur [http://gatling-tool.org](http://gatling-tool.org)",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "25",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "stephane-landelle-stresser-son-application-avec-gatling",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "St\u00e9phane",
-                "lastname": "Landelle",
-                "legacyId": 106,
-                "links": [],
-                "login": "106",
-                "logoUrl": "5424216914c341ff5010e5aa5cea5ae5",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "Gatling est un injecteur de charge l\u00e9ger et ultra-performant.",
-        "title": "Stresser son application avec Gatling",
-        "video": null
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            263000000
-        ],
-        "description": "Les introductions \u00e0 Clojure, \u00e7a suffit ! \r\nLe web en regorge, on a d\u00e9j\u00e0 fait \u00e7a \u00e0 droite et \u00e0 gauche.\r\n\r\nVous en voulez plus, nous en voulons plus ! \r\nVenez interagir avec nous, mettre les mains dans le cambouis, poser toutes les questions que vous voulez, lors d'un Workshop interactif o\u00f9 nous vous ferons d\u00e9couvrir ce que c'est, \"en vrai\", que d'utiliser ce langage de programmation.\r\n\r\nCe Workshop sera anim\u00e9 par Christophe Grand et Laurent Petit (no kidding) :\r\n\r\n* Christophe a \u00e9t\u00e9 speaker lors des 2 conf\u00e9rences Clojure, auteur d'un livre sur Clojure, auteur de librairies Clojure renomm\u00e9es.\r\n\r\n* Laurent a \u00e9t\u00e9 speaker lors de la 1ere conf\u00e9rence Clojure, et est le principal d\u00e9veloppeur de Counterclockwise, le plugin Clojure pour Eclipse.",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "30",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "laurent-petit-christophe-grand-workshop--clojure-hands-on-",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Laurent",
-                "lastname": "Petit",
-                "legacyId": 126,
-                "links": [],
-                "login": "126",
-                "logoUrl": "6595ae6ba5ca0712e8e3074f2d9063d2",
-                "role": "ATTENDEE"
-            },
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Christophe",
-                "lastname": "Grand",
-                "legacyId": 145,
-                "links": [],
-                "login": "145",
-                "logoUrl": "bbc0085f33478b26d720edff3c6221dc",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "Plut\u00f4t que d'assister \u00e0 de longs discours, venez t\u00e2ter du Clojure par vous-m\u00eames en participant \u00e0 un Workshop.",
-        "title": "Workshop \"Clojure hands on\"",
-        "video": null
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            263000000
-        ],
-        "description": "Kanban, mais oui tu sais, c\u2019est le tableau de Post-it \u00a9 au fond de la salle qui vous rappelle que vous \u00eates agiles !\r\n\r\nEt si on vous racontait le minimum vital des principes qui se cachent derri\u00e8re ? \r\n\r\nOui, il y a bien une histoire visuelle derri\u00e8re tout \u00e7a, mais pas uniquement. \r\nKanban est aussi une conduite du changement bas\u00e9e sur l'am\u00e9lioration continue de votre processus existant. \r\n\r\nLes clefs du management visuel:\r\n* Rendre visible l'avancement, l'objectif, les tendances !\r\n\r\nLe Flux: \r\n* Comprendre ce qu'est un Flux \r\n* Flux de valeur, Flux tir\u00e9/pouss\u00e9\r\n* Limiter le travail en cours: WIP\r\n\r\nR\u00e9gler son processus:\r\n* Expliciter les r\u00e8gles et caract\u00e9ristiques\r\n* Trouver la bonne cadence\r\n\r\nPour aller plus loin:\r\n* Th\u00e9orie des contraintes, Files d'attentes, ...\r\n* Kanban vs Scrum : compl\u00e9mentarit\u00e9 ou nouvelle option ?\r\n\r\nNous finirons en vous pr\u00e9sentant quelques cas typiques d\u2019applications de Kanban.",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "35",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "guillaume-lours-dimitri-baeli-kanban-pour-les-nuls-",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Guillaume",
-                "lastname": "Lours",
-                "legacyId": 133,
-                "links": [],
-                "login": "133",
-                "logoUrl": "cb17294de56e44d18f1ab0dc966101a7",
-                "role": "ATTENDEE"
-            },
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Dimitri",
-                "lastname": "Baeli",
-                "legacyId": 131,
-                "links": [],
-                "login": "131",
-                "logoUrl": "7f73df517fdea1028d28f39980edf441",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "Et si on vous racontait les principes fondamentaux qui se cachent derri\u00e8re Kanban ? Beaucoup plus qu'un tableau de post-it !",
-        "title": "Kanban pour les nuls!",
-        "video": null
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            264000000
-        ],
-        "description": "Une visite guid\u00e9e au travers des diff\u00e9rentes techniques d'animation disponibles dans les navigateurs modernes. Donnez de la vie \u00e0 vos pages avec quelques lignes de code d\u00e9claratif gr\u00e2ce aux animations CSS3, CSS3D et SVG. Les slides de la pr\u00e9sentation sont \u00e9videmment en HTML5.",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "36",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "martin-gorner-animez-vos-pages-html5-avec-css3",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Martin",
-                "lastname": "G\u00f6rner",
-                "legacyId": 144,
-                "links": [],
-                "login": "144",
-                "logoUrl": "1d32e45ed963388647d0196a119c2248",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "5' de coding live pour animer un cube en CSS 3D suivi des explications techniques",
-        "title": "Animez vos pages HTML5 avec CSS3",
-        "video": "http://www.youtube.com/watch?v=fML23uCN30o"
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            264000000
-        ],
-        "description": "It is estimated that in the US alone, failed and troubled software projects waste $60-$70 billion per year. For that money, you could launch the space shuttle 100 times, build and deploy the entire 24 satellite GPS, and develop the Boeing 777 from scratch and still have few billion left over.\r\n\r\nIn my talk, I will not be analyzing what other companies do wrong. Instead, I will focus on explaining what Google does to reduce the development cost while speeding up releases and constantly delivering high quality software to our users.\r\n\r\nI will talk about the engineering and management structure at Google, then touch upon various software development workflow methodologies and then dive into the specifics of what software teams at Google do on a day-to-day basis.\r\n",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "39",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "petra-cross-software-development-workflow-at-google",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Petra",
-                "lastname": "Cross",
-                "legacyId": 149,
-                "links": [],
-                "login": "149",
-                "logoUrl": "b9bede71fa2b34b12aeb0b181091ad51",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "We'll look behind the scenes of day-to-day development workflow in the engineering teams at Google.",
-        "title": "Software Development Workflow at Google",
-        "video": null
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            264000000
-        ],
-        "description": "L\u2019automatisation des tests est souvent associ\u00e9e \u00e0 l\u2019id\u00e9e d\u2019obtenir un retour sur investissement (ROI) financier qui permettra de justifier la pertinence de se lancer dans cette d\u00e9marche. Cette id\u00e9e est d\u2019autant plus marqu\u00e9e dans les organisations non agiles. A l\u2019inverse, les \u00e9quipes agiles pr\u00f4nent une automatisation syst\u00e9matique au moins au niveau unitaire, ne raisonnent pas en termes de ROI, et ne cherchent pas \u00e0 remplacer les testeurs avec des automates.\r\n\r\nJe pr\u00e9senterai diff\u00e9rentes formules de calcul de ROI \u00ab \u00e0 l\u2019ancienne \u00bb et expliquerai pourquoi elles sont fausses et comment elles tendent \u00e0 prendre les mauvaises d\u00e9cisions. \r\n\r\nJe pr\u00e9senterai ensuite le mod\u00e8le des options financi\u00e8res et comment la dynamique \u00e9conomique d\u2019automatisation des tests se calque sur ce mod\u00e8le. Cette vision permet d\u2019appr\u00e9hender chaque situation avec des crit\u00e8res simples permettant de d\u00e9river une strat\u00e9gie d\u2019automatisation adapt\u00e9e (test-first vs test-last, unitaire vs fonctionnel, etc.)",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "40",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "gilles-mantel-automatisation-des-tests--le-mythe-du-roi",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Gilles",
-                "lastname": "Mantel",
-                "legacyId": 150,
-                "links": [],
-                "login": "150",
-                "logoUrl": "3f756649274c986aa3f75d20f2cf92ab",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "Cette session a pour but de pr\u00e9senter la dynamique \u00e9conomique d\u2019automatisation des tests qui s'apparente au mod\u00e8le des options financi\u00e8res",
-        "title": "Automatisation des tests: le mythe du ROI",
-        "video": "http://www.youtube.com/watch?v=hf__zcdihwI"
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            264000000
-        ],
-        "description": "L'utilisateur... le grand absent dans la salle de d\u00e9veloppement, pour lequel tant de sueur est vers\u00e9e, tant de lignes de code \u00e9crites et tant de paroles \u00e9chang\u00e9es dans des discussions quelquefois houleuses mais heureusement souvent apais\u00e9es autour d'une bi\u00e8re ou une boite de g\u00e2teaux. \r\n\r\nLe comprendre, le d\u00e9finir, le garder au c\u0153ur du d\u00e9veloppement, r\u00e9pondre \u00e0 ses besoins... \r\n\r\nUne session qui pr\u00e9sentera et partagera les outils de l'ergonome et de l'ethnographe, destin\u00e9e \u00e0 tous les acteurs du d\u00e9veloppement pour augmenter la performance du produit, r\u00e9duire l'inutile, parvenir \u00e0 une d\u00e9finition commerciale de MVP et \u00e9viter des erreurs co\u00fbteuses.",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "43",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "sophie-freiermuth-utilisateur--mon-amour--ma-migraine",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Sophie",
-                "lastname": "Freiermuth",
-                "legacyId": 167,
-                "links": [],
-                "login": "167",
-                "logoUrl": "f3fa24dfe1414c0d67731b44ace47c8e",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "Enrichir sa vision pour enrichir son produit: s'orienter vers un design centr\u00e9 sur l'utilisateur. Pourquoi, comment, quels r\u00e9sultats esp\u00e9rer",
-        "title": "Utilisateur, mon amour, ma migraine",
-        "video": "http://www.youtube.com/watch?v=ta6PLKPF7oU"
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            265000000
-        ],
-        "description": "Le DotGame est un jeu simple qui s'articule sur 3 phases de 5 minutes chacune; \r\nEn formant des groupes de 7 personnes plus environ 5 observateurs, on reproduit un mod\u00e8le qui est pr\u00e9sent\u00e9 comme r\u00e9f\u00e9rence. Chacun est \u00e0 son poste avec une sp\u00e9cialisation particuli\u00e8re.\r\n\r\nLe produit en cours de fabrication passe d'un poste \u00e0 l'autre. \r\nUn utilisateur final (ou PO) valide \u00e0 la fin du cycle les produits le satisfont. \r\n\r\nLes r\u00e8gles changent dans chaque session et elle seront d\u00e9crites \u00e0 l'occasion de la pr\u00e9sentation du jeu.\r\n\r\nPour chaque session on r\u00e9alise les mesures suivantes :\r\n\r\n+  le temps de parcours du premier produit \r\n\r\n+  le nombre des produits valid\u00e9s\r\n\r\n+  le nombre de gaspillages (combien de produits ont \u00e9t\u00e9 rejet\u00e9s et pas finis)\r\n\r\nEn fin de chaque session il y a 5 minutes de r\u00e9trospective.\r\n\r\nLa taille du groupe a un maximum de 10 personnes. \r\n\r\nLa capacit\u00e9 de l'atelier est de 30 personnes maximum.",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "47",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "oana-juncu-le-dotgame--jouer-la-performance-",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Oana",
-                "lastname": "Juncu",
-                "legacyId": 180,
-                "links": [],
-                "login": "180",
-                "logoUrl": "344317ae86414143365fffe909ca2d24",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "Le DotGame illustre l'impact de l'initiative et la collaboration dans la croissance de la performance de l'\u00e9quipe",
-        "title": "Le DotGame, jouer la performance ",
-        "video": null
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            265000000
-        ],
-        "description": "![NodeJs icon](http://nodejs.org/images/logo-light.png)\r\n\r\nThis talk will explore the idea of node.js being more scalable than other technologies, how much of it is true, and how much you should care.\r\n\r\nIf you are not sure about investing your time in learning node yet, or if you've been using node for a while, this talk is aimed to separate the hype from the facts and giving you a better idea for where and how to use node properly.",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "58",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "felix-geisendorfer-the-node-js-scalability-myth",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Felix",
-                "lastname": "Geisend\u00f6rfer",
-                "legacyId": 195,
-                "links": [],
-                "login": "195",
-                "logoUrl": "23968f0ca75b13463d2db5343e5c2096",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "This talk will explore the idea of node.js being more scalable than other technologies, how much of it is true, and how much you should care",
-        "title": "The Node.js Scalability Myth",
-        "video": null
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            265000000
-        ],
-        "description": "Mise au point par Eric Ries en 2008 et appliqu\u00e9e depuis dans de nombreuses startups (DropBox par exemple), le Lean Startup bouleverse les r\u00e8gles de l'entrepreneuriat.\r\n\r\nVous d\u00e9couvrirez pendant cette session les fondements du Lean Startup, ainsi que le Customer Development (marketing agile) et sa compl\u00e9mentarit\u00e9 avec les m\u00e9thodes agiles, et enfin des conseils pratiques pour appliquer le Lean Startup \u00e0 vos projets.",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "60",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "emmanuel-levi-valensi-lean-startup--l-entrepreneuriat-agile",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Emmanuel",
-                "lastname": "Levi-valensi",
-                "legacyId": 199,
-                "links": [],
-                "login": "199",
-                "logoUrl": "bcd6e23972341938359110dd7e7ef81c",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "Mise au point en 2008 et appliqu\u00e9e depuis dans de nombreuses startups, le lean startup bouleverse les r\u00e8gles de l'entrepreneuriat.",
-        "title": "Lean Startup, l'entrepreneuriat agile",
-        "video": "https://www.youtube.com/watch?v=e1GGurd58Yo"
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            265000000
-        ],
-        "description": "Comment tester une application Web ?\r\n\r\nNous aurons l'occasion de creuser en profondeur la question en \u00e9tudiant les outils mis \u00e0 notre disposition que sont Selenium WebDriver, TestNG et surtout Selenium Grid.\r\nSelenium est un outil qui a su s'imposer comme la solution open-source la plus efficace sur le march\u00e9. \r\n\r\nIl permet d'effectuer des tests fonctionnels/d'acceptance sur les applications web et mobiles. Avec Selenium Grid, vous allez pouvoir distribu\u00e9 les tests sur plusieurs machines et diminuer les temps d'execution des plans de tests. Mais il va beaucoup plus loin : en permettant, de mani\u00e8re simple de g\u00e9rer plusieurs environnements, incluant des multiples combinations de browsers/OS, il s'impose comme un outil efficace . \r\n\r\nCombin\u00e9 avec un framework de test sp\u00e9cialis\u00e9 dans le parallelisme tel que TestNG, on obtient une suite robuste et efficace, qui nous permet de nous consacrer sur l'essentiel.\r\n\r\nLes exemples seront Java mais tout ce qui concerne selenium & selenium grid concerne une multitudes d'autres langages (PHP, ruby, c# ...).",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "63",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "mathilde-lemee-selenium-webdriver--testng-et-selenium-grid",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Mathilde",
-                "lastname": "Lemee",
-                "legacyId": 82,
-                "links": [],
-                "login": "82",
-                "logoUrl": "c27a1294054155811ec499d013e113a4",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "Comment tester une application web avec WebDriver, TestNG et Selenium Grid. Mise en place, bonnes pratiques ...",
-        "title": "Selenium WebDriver, TestNG et Selenium Grid",
-        "video": null
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            266000000
-        ],
-        "description": "Comment analyser chaque jour des t\u00e9ra de logs g\u00e9n\u00e9r\u00e9s par plus de 600 JVMs en production, sans impacter leur fonctionnement ?\r\nNous vous pr\u00e9senterons durant cette session la solution Big Data 100% Open Source mise en place chez un des plus grands sites du web europ\u00e9en. Une architecture bas\u00e9e sur syslog-ng, Flume, Hadoop, MongoDb et Play!, qui n'a rien \u00e0 envier aux g\u00e9ants d'outre-atlantique !\r\nVenez d\u00e9couvrir comment nous avons divis\u00e9 par 20 le temps de d\u00e9tection et de traitement des incidents. Mais aussi comment BigData a permis de nouvelles utilisations des logs \u00e0 la fois techniques et surtout m\u00e9tier, comme la d\u00e9tection des fraudes, l\u2019analyse de traffic web, BI en temps r\u00e9el, ...\r\n\u00c0 travers ce retour d'exp\u00e9rience, nous vous proposons de vivre, au coeur d'une des plus exigeantes productions de France, la mise en place de ce projet digne des tr\u00e8s grands du web.\r\n\r\n(Pr\u00e9sentation accept\u00e9e pour DevoxxFr)",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "83",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "pablo-lopez-bigdata---hadoop--exploiter-des-teraoctets-de-logs",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Pablo",
-                "lastname": "Lopez",
-                "legacyId": 260,
-                "links": [],
-                "login": "260",
-                "logoUrl": "64fb03ae3fa4faf5153a9659095e3e44",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "Vivez la mise en place d'une infrastucture compl\u00e8te, articul\u00e9e autour de Hadoop, chez un des acteurs majeurs du web-commerce europ\u00e9en.",
-        "title": "BigData / Hadoop, exploiter des t\u00e9raoctets de logs",
-        "video": "http://www.youtube.com/watch?v=1WF_FBFJllc"
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            266000000
-        ],
-        "description": "Fotopedia est une plateforme web et webservice \u00e0 fort traffic, qui re\u00e7oit plus de 5 millions de visites par mois. Venez d\u00e9couvrir les strat\u00e9gies mises en place par nos \u00e9quipes pour palier aux soucis en production. \r\n\r\nL'application principale de Fotopedia est un Ruby on Rails vieux de 6 ans. \u00c0 cause de ses lenteurs intrins\u00e8ques, nous avons \u00e9t\u00e9 amen\u00e9 \u00e0 mettre en place des strat\u00e9gies de cache \u00e9labor\u00e9es pour que le comportement soit acceptable. Ceci nous a conduit \u00e0 une stack utilisant du cache de fragment \"edge-side\", et des boucles d'invalidation complexes pour garantir la fra\u00eecheur du contenu, qui reste encore perfectible. \r\n\r\nMongoDB, coupl\u00e9 \u00e0 un micro langage de template (mustache), nous permet aujourd'hui d'explorer une autre approche \u00e9liminant totalement le cache pour les donn\u00e9es les plus dynamiques de l'application. \r\n\r\nMots cl\u00e9s : Performance, MongoDB, Varnish, Cache, Mustache",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "93",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "mathieu-poumeyrol-mongodb--mustache----vers-la-mort-du-cache--",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Mathieu",
-                "lastname": "Poumeyrol",
-                "legacyId": 289,
-                "links": [],
-                "login": "289",
-                "logoUrl": "4142d70056c184c89c6544027a6ac89e",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "Le caching a sauv\u00e9 les architectes web des ann\u00e9es 2000, au prix souvent d'une \u00e9norme complexit\u00e9. Peux-t-on, et doit-on tourner cette page ?",
-        "title": "MongoDB, Mustache... Vers la mort du cache ?",
-        "video": null
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            266000000
-        ],
-        "description": "Have you ever tried to write a moderately complex browser side application with the assumption that jQuery is probably all you need for the job? I mean, fire off some AJAX requests, then just use some DOM manipulation to put the results where you want them\u2014how hard can it be, right?\r\n\r\nWould you have enjoyed maintaining the code that resulted from that assumption? No, neither would I.\r\n\r\nWould you like to see a better solution?\r\n\r\nAs it turns out, programmers have known how to keep their frontend code under control for a while using a surprisingly simple principle called MVC. Now that the browser has suddenly become a serious platform for application development, the need for MVC (or, at least, the basic concepts behind MVC) has become so apparent that we already have multiple rival MVC libraries for the browser platform. Backbone is arguably the most popular of the lot, and certainly one of the most lightweight.\r\n\r\nIn this presentation, you'll learn how to harness the power of Backbone by example, as we build a simple browser side application from the bottom up using nothing but Backbone and your favourite DOM toolkit.",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "95",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "bodil-stokke-painless-web-app-development-with-backbone",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Bodil",
-                "lastname": "Stokke",
-                "legacyId": 274,
-                "links": [],
-                "login": "274",
-                "logoUrl": "f9f8e0403b0437662bdbc2b4e9c6ccf3",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "You know how you always mean to apply proper MVC principles but end up with a mess of jQuery instead? No more excuses: now there's Backbone.",
-        "title": "Painless Web App Development with Backbone",
-        "video": "http://www.youtube.com/watch?v=K3LwjZ-F09A"
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            266000000
-        ],
-        "description": "D\u00e9couvrez comment \u00e9crire une application Web avec Play 2.0, en Java et en Scala. Quels sont les concepts architecturaux forts du framework et les mod\u00e8les de programmation qui en d\u00e9coulent, notamment le mod\u00e8le asynchrone.\r\n\r\nVous verrez \u00e9galement, d\u00e9mos \u00e0 l\u2019appui, comment l\u2019API de Play 2.0 *scale*, permettant d\u2019\u00e9crire des applications avec une grande productivit\u00e9 tout en  donnant, s\u2019il le souhaite, \u00e9norm\u00e9ment de contr\u00f4le au d\u00e9veloppeur.\r\n\r\nPlay 2.0 est un framework pour Java et Scala permettant d\u2019\u00e9crire des applications hautement *scalable* gr\u00e2ce \u00e0 sa l\u00e9g\u00e8ret\u00e9, son architecture *stateless* et r\u00e9active.",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "99",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "julien-richard-foy-play-2-0",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Julien",
-                "lastname": "Richard-foy",
-                "legacyId": 300,
-                "links": [],
-                "login": "300",
-                "logoUrl": "c4c26da9c36518e9841ae30f276f64e6",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "Play 2.0 vient de sortir, il est tout frais, tout beau, et s\u2019utilise en Java et Scala",
-        "title": "Play 2.0",
-        "video": null
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            267000000
-        ],
-        "description": "This talk will provide a quick overview of JavaScript for people who already know how to program in an object-oriented language. We will cover both JavaScript\u2019s strengths (yes, those do exist!) and its weaknesses. Everything will be put into perspective by comparing JavaScript with other languages (mainly Java and Python) and by providing a glimpse at ECMAScript 6 (code-named ECMAScript.next), the next version of JavaScript that will be finished by 2013.",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "104",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "axel-rauschmayer-an-overview-of-javascript",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Axel",
-                "lastname": "Rauschmayer",
-                "legacyId": 67,
-                "links": [],
-                "login": "67",
-                "logoUrl": "5592487d2231fbe06ed2ac80d92c8f20",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "This talk will provide a quick overview of JavaScript for people who already know how to program in an object-oriented language.",
-        "title": "An overview of JavaScript",
-        "video": "http://www.youtube.com/watch?v=_GYicBSNhaY"
-    },
-    {
-        "addedAt": [
-            2017,
-            2,
-            28,
-            15,
-            38,
-            33,
-            267000000
-        ],
-        "description": "Kelkoo a impl\u00e9ment\u00e9 une solution globale pour banaliser la cr\u00e9ation, la configuration et le d\u00e9ploiement de ses applications sur son infrastructure.\r\n\r\nDe la cr\u00e9ation du composant logiciel \u00e0 travers des archetypes comprenant la structure maven ainsi des fichiers de configuration templatis\u00e9s jusqu'a la software factory produisant des RPMS.\r\nDu clonage OS automatis\u00e9 des serveurs jusqu'au backoffice de configuration des serveurs (tel composant avec telles clefs de conf  sur tels serveurs);  toutes ces op\u00e9rations sont accessibles au d\u00e9veloppeurs Kelkoo et autorisent des logiques de d\u00e9ploiement continu.\r\n\r\nCette pr\u00e9sentation vise a expliquer comment Kelkoo a mis en oeuvre les outils: Cobbler, Puppet, jenkins, Maven, RPM, Gepetto (BO maison), Punch (surcouche puppet) pour simplifier la cr\u00e9ation, la configuration et le d\u00e9ploiement de ses applications de mani\u00e8re industrielle...",
-        "end": null,
-        "event": "mixit12",
-        "format": "TALK",
-        "id": "114",
-        "language": "FRENCH",
-        "room": "UNKNOWN",
-        "slug": "alain-delafosse-nicolas-capponi-devops-in-real-life-at-kelkoo",
-        "speakers": [
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Alain",
-                "lastname": "Delafosse",
-                "legacyId": 84,
-                "links": [],
-                "login": "84",
-                "logoUrl": "bc91e6b6e5565e352977abfcb20277c2",
-                "role": "ATTENDEE"
-            },
-            {
-                "company": "",
-                "description": {},
-                "email": "",
-                "events": [],
-                "firstname": "Nicolas",
-                "lastname": "Capponi",
-                "legacyId": 379,
-                "links": [],
-                "login": "379",
-                "logoUrl": "d566bb46fa9bb296a8cec9e9d3bac644",
-                "role": "ATTENDEE"
-            }
-        ],
-        "start": null,
-        "summary": "Comment Kelkoo a impl\u00e9ment\u00e9 les principes DevOPS dans le d\u00e9ploiement de ses applications (10 releases par semaine sur 300 serveurs)",
-        "title": "DevOps in real life at Kelkoo",
-        "video": "http://www.youtube.com/watch?v=SIVxBHJ4AbM"
-    }
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "Create mobile application with PhoneGap",
+    "summary": "I'll explain my development strategy, why I chose PhoneGap, and what I've learnt along the way.",
+    "speakerIds": [
+      "pamelafox"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      241000000
+    ],
+    "slug": "pamela-fox-create-mobile-application-with-phonegap",
+    "description": "If you decide today that you want to create a mobile application, you have to decide on a development strategy - especially if you want to target multiple platforms.You can either learn to program from scratch for each platform or you can use a framework that abstracts on top of all of the platforms and reuses your existing web development knowledge - like Apache [PhoneGap](http:\/\/phonegap.com). If you decide to use [PhoneGap](http:\/\/phonegap.com\/), you still have figure out whether to use a library specially designed for mobile applications - like *Sencha* or *jQuery mobile* - or use general libraries like *Zepto* or *jQuery*. There are a lot of decisions to make, and there's no one best strategy at this point in the game.",
+    "video": null,
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "1"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "Exp\u00e9rience des billes rouges",
+    "summary": "L\u2019exp\u00e9rience des billes rouges (the red bead experiment) est un atelier con\u00e7u par William Edwards Deming.",
+    "speakerIds": [
+      "alexismonville"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      251000000
+    ],
+    "slug": "alexis-monville-experience-des-billes-rouges",
+    "description": "L\u2019exp\u00e9rience des billes rouges (the red bead experiment) est un atelier con\u00e7u par William Edwards Deming pour illustrer les erreurs classiques du management par rapport aux ph\u00e9nom\u00e8nes li\u00e9s \u00e0 un syst\u00e8me, \u00e0 l\u2019organisation elle-m\u00eame. Cette session permettra aux participants de rejouer l'exp\u00e9rience et d'\u00e9changer sur les 7 maladies mortelles des organisations et les 14 points pour la transformation d'une entreprise d\u00e9finis par Deming.",
+    "video": null,
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "5"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "Sky Castle Game",
+    "summary": "Le Sky Castle Game est bas\u00e9 sur le Kanban Game de Jon Jagger.",
+    "speakerIds": [
+      "Agilarium",
+      "PhilAgile",
+      "avernois"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      260000000
+    ],
+    "slug": "fabrice-aimetti-philippe-launay-antoine-vernois-sky-castle-game",
+    "description": "Oyez ! Oyez ! La l\u00e9gende du Sky Castle Game : \"Il \u00e9tait une fois un Roi tr\u00e8s puissant. Un jour il tomba \u00e9perdument amoureux et d\u00e9cida de construire le Ch\u00e2teau de ses r\u00eaves pour y accueillir sa Bien aim\u00e9e. Il d\u00e9cida de faire appel aux Compagnons Agiles qui sont r\u00e9put\u00e9s pour faire ce que l\u2019on veut, montrer l\u2019\u00e9tat d\u2019avancement et accepter les modifications dont on va n\u00e9cessairement avoir besoin au fur et \u00e0 mesure du chantier afin de satisfaire sa Belle. L\u2019\u00e9quipe recrute. En ferez-vous partie ?\"\r\n\r\nCet atelier dure 2 heures (minimum) et s'adresse \u00e0 tout public.\r\n\r\nIl a \u00e9t\u00e9 pr\u00e9c\u00e9demment jou\u00e9 \u00e0 l'Agile Tour Toulouse le 19 octobre, l'Agile Tour Bordeaux le 21 octobre et la Scrum Night le 7 d\u00e9cembre 2011.",
+    "video": null,
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "7"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "Dans la peau du Manager Agile",
+    "summary": "L\u2019\u00e8re du management 3.0 (agile et Lean) est annonc\u00e9e. Entre opportunit\u00e9s et n\u00e9cessit\u00e9, le m\u00e9tier de manager est en pleine \u00e9volution...",
+    "speakerIds": [
+      "jcQualitystreet"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      260000000
+    ],
+    "slug": "jean-claude-grosjean-dans-la-peau-du-manager-agile",
+    "description": "L\u2019\u00e8re du management 3.0 (un management agile et Lean) est annonc\u00e9e \u2026 entre opportunit\u00e9s et n\u00e9cessit\u00e9, le m\u00e9tier de manager est en pleine \u00e9volution.\r\nLe mode de management \u00ab Command & Control \u00bb issu du Taylorisme et de l\u2019organisation scientifique du travail (OST) , avec sa vision appauvrie de l\u2019Homme au Travail a montr\u00e9 ses limites; le manager agile explore de nouvelles dimensions pour garantir le succ\u00e8s de tous.\r\nCette session se propose d'explorer ces nouvelles dimensions.",
+    "video": "http:\/\/www.youtube.com\/watch?v=D95ASG_frvY",
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "10"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "Anatomie d'une mission agile, saison 2",
+    "summary": "La r\u00e9alit\u00e9 agile : retour d\u2019exp\u00e9rience sur le d\u00e9ploiement agile au sein d\u2019un grand \u00e9diteur de logiciel dans le milieu bancaire. ",
+    "speakerIds": [
+      "pablopernot"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      261000000
+    ],
+    "slug": "pablo-pernot-anatomie-d-une-mission-agile--saison-2",
+    "description": "L\u2019agile, tout le monde en parle, mais peu osent encore s\u2019y lancer *v\u00e9ritablement*.\r\nIl plane une odeur de risque, d\u2019\u00e9tranget\u00e9, qui freine les d\u00e9cideurs, les managers. \r\n\r\nL\u2019objectif de cette session est de lever cet \u00e9cran de fum\u00e9e pour plonger concr\u00e8tement au sein d\u2019une application de l\u2019agile dans un milieu que l\u2019on estime habituellement rigide ou traditionaliste, le milieu bancaire.\r\n\r\nRentabilit\u00e9, ROI, plan de carri\u00e8re, supervision, d\u00e9finition du besoin, contraintes, risques, \"time to market\", r\u00e9ussite de certains processus, \u00e9checs d\u2019autres, l\u2019objectif de cette session est de d\u00e9crire la r\u00e9alit\u00e9 agile en d\u00e9mystifiant certaines id\u00e9es et en r\u00e9pondant le plus concr\u00e8tement possible aux questions souvent pos\u00e9es.",
+    "video": "http:\/\/www.youtube.com\/watch?v=1efayxnn_Gs",
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "12"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "Hibernate Search: dans ta face(ting)",
+    "summary": "Hibernate Search s'appuie sur Lucene pour offrir aux applications Hibernate un moteur de recherche puissant et intuitif \u00e0 ses utilisateurs.",
+    "speakerIds": [
+      "emmanuelbernard"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      261000000
+    ],
+    "slug": "emmanuel-bernard-hibernate-search--dans-ta-face-ting-",
+    "description": "Hibernate Search a pour objectif de rentre tr\u00e8s facile l'ajout d'un moteur de recherche puissant aux applications. Toute la plomberie et la complexit\u00e9 sont pris en charge par le framework et laisse les d\u00e9veloppeurs se concentrer sur les r\u00e8gles de recherche sp\u00e9cifiques \u00e0 leur application.\r\n\r\nDans cette pr\u00e9sentation, vous d\u00e9couvrirez comment rajouter un moteur de recherche \u00e0 vos applications et vous d\u00e9couvrirez les derni\u00e8res nouveaut\u00e9s comment la recherche par facette et la recherche g\u00e9olocalis\u00e9e.\r\n\r\nEt puisque c'est entre nous, on discutera autour du code et on passera \u00e9ventuellement des slides si il reste du temps.",
+    "video": null,
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "13"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "Social Architecture 101",
+    "summary": "Introducing Social Architecture: how to design and build on-line communities.",
+    "speakerIds": [
+      "hintjens"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      262000000
+    ],
+    "slug": "pieter-hintjens-social-architecture-101",
+    "description": "Social Architecture by analogy with conventional architecture, is the process, and the product, of planning, designing, and growing an on-line community. Social architectures, in the form of on-line communities, are the cultural and political symbols, and works of art of the Digital Society. The 21st century will be identified with its surviving social architectures.\r\n\r\nAs Social Architects, we participate in communities, we identify successful naturally-occurring patterns, or we develop new patterns, and we apply these deliberately to our own architectures. We apply psychology (our social instincts), economics (how we create common wealth through specialization and trade), politics (how we collect and share power), and technology (how we communicate). We continually adapt our toolkit based on new knowledge and experience. Our goal is to create on-line communities that accurately solve the problems we identify, that grow healthily, and that survive by themselves.\r\n\r\nAll successful communities are based on the inherent contract of mutual benefit. That is, it is possible to build a billion-dollar business based on volunteer labor, but only if every participant contributes for selfish reasons. Often participants do not realize, or care, that they are part of a community. However, every single act is economic. Thus, \"crowd sourcing\" (as the exploitation-for-profit of volunteer labor is sometimes called) only works when the crowd really wants to solve the problems you throw at it.\r\n",
+    "video": null,
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "14"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "ZeroMQ is Magic from the Future",
+    "summary": "An introduction to ZeroMQ, the fast, smart, and massively scalable connectivity layer for applications in any language, on any platform.",
+    "speakerIds": [
+      "hintjens"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      262000000
+    ],
+    "slug": "pieter-hintjens-zeromq-is-magic-from-the-future",
+    "description": "\u00d8MQ (ZeroMQ, 0MQ, zmq) looks like an embeddable networking library but acts like a concurrency framework. It gives you sockets that carry whole messages across various transports like in-process, inter-process, TCP, and multicast. You can connect sockets N-to-N with patterns like fanout, pub-sub, task distribution, and request-reply. It's fast enough to be the fabric for clustered products. Its asynchronous I\/O model gives you scalable multicore applications, built as asynchronous message-processing tasks. It has a score of language APIs and runs on most operating systems. \u00d8MQ is from iMatix and is LGPL open source.",
+    "video": null,
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "15"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "Un atelier Th\u00e9\u00e2tre d'Impro pour jouer \u00e0 \u00eatre Agile",
+    "summary": "Le th\u00e9\u00e2tre d'impro c'est \u00eatre r\u00e9actif au changement pour \u00eatre au service d'une histoire qui doit avancer. Ca ne vous rappelle rien ?",
+    "speakerIds": [
+      "bootis"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      262000000
+    ],
+    "slug": "aline-paponaud-un-atelier-theatre-d-impro-pour-jouer-a-etre-agile",
+    "description": "Sur sc\u00e8ne, les improvisateurs doivent faire vivre une histoire et garder le public r\u00e9ceptif, sans texte et sans pr\u00e9paration.\r\nOn nous donne un th\u00e8me, et en d\u00e9finissant un personnage, un lieu et une action, on est parti pour jouer avec quelqu'un d'autre qui a forc\u00e9ment une id\u00e9e compl\u00e8tement diff\u00e9rente.\r\nComment y arriver ? Etre r\u00e9actif ? Ne pas \u00eatre trop brutal en imposant son id\u00e9e, ne pas s'\u00e9craser compl\u00e8tement non plus ? En restant fid\u00e8le a des grands principes : Ecoute, Accepte, Percute, Anime, Construis, Joue le jeu, Innove, Amuse-toi, Ose !\r\nLe tout au service d'une Histoire qui doit avoir du sens. Impensable si l'\u00e9quipe n'est pas en confiance et soud\u00e9e.\r\nTiens, mais on dirait qu'on parle d'Agile...\r\n\r\nSession limit\u00e9e \u00e0 12 participants",
+    "video": null,
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "17"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "Manipulation de bytecode : d\u00e9mocratisons la magie",
+    "summary": "Comprendre le bytecode, sa manipulation, et se rendre compte que cela est fort utile.",
+    "speakerIds": [
+      "jponge",
+      "flemouel"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      262000000
+    ],
+    "slug": "julien-ponge-frederic-le-mouel-manipulation-de-bytecode---democratisons-la-magie",
+    "description": "Java ne se limite pas au langage \u00e9ponyme : sa machine virtuelle est capable d'ex\u00e9cuter du bytecode produit par un tr\u00e8s large panel de langages. Peu d'entre nous ont eu de bonnes raisons d'avoir \u00e0 comprendre, g\u00e9n\u00e9rer ou transformer du bytecode Java. Il serait pourtant r\u00e9ducteur de limiter cette activit\u00e9 \u00e0 une magie noire r\u00e9serv\u00e9e aux cr\u00e9ateurs de langages et de frameworks \u00e9volu\u00e9s. \u00c0 titre d'exemple, la manipulation de bytecode est une des cl\u00e9s de voute de la simplification des mod\u00e8les de programmation pour les plates-formes r\u00e9pandues que sont Java EE, Play! ou Spring.\r\n\r\nCette session s'adresse \u00e0 un public de tous niveaux et a pour but non seulement de d\u00e9mystifier le bytecode Java, mais aussi de montrer en quoi cela peut \u00eatre utile dans des cadres applicatifs plus classiques.\r\n\r\n* Bases du bytecode Java et de la JVM\r\n* Manipulation et applications avec : ASM, AspectJ et JBoss Byteman\r\n* Java 7 et invokedynamic\r\n* JooFlux : projet de recherche d\u00e9voil\u00e9 pour toi cher public !",
+    "video": null,
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "24"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "Stresser son application avec Gatling",
+    "summary": "Gatling est un injecteur de charge l\u00e9ger et ultra-performant.",
+    "speakerIds": [
+      "slandelle"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      263000000
+    ],
+    "slug": "stephane-landelle-stresser-son-application-avec-gatling",
+    "description": "Vous devez r\u00e9aliser des tests de charge et vous en avez assez de monter des clusters pour injecter une charge d\u00e9cente ou de cliquer dans une obscure IHM?\r\nInjectez 20 000 requ\u00eates\/sec avec votre vieux laptop avec Gatling.\r\n\r\nGatling est d\u00e9velopp\u00e9 en Scala, s'appuie sur un moteur asynchrone \u00e0 base d'acteurs [Akka](http:\/\/akka.io) et d'IO non bloquantes [Netty](http:\/\/netty.io) et propose un DSL simple et parlant.\r\n\r\nPlus d'informations sur [http:\/\/gatling-tool.org](http:\/\/gatling-tool.org)",
+    "video": null,
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "25"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "Workshop \"Clojure hands on\"",
+    "summary": "Plut\u00f4t que d'assister \u00e0 de longs discours, venez t\u00e2ter du Clojure par vous-m\u00eames en participant \u00e0 un Workshop.",
+    "speakerIds": [
+      "petitlaurent",
+      "christophe.grand"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      263000000
+    ],
+    "slug": "laurent-petit-christophe-grand-workshop--clojure-hands-on-",
+    "description": "Les introductions \u00e0 Clojure, \u00e7a suffit ! \r\nLe web en regorge, on a d\u00e9j\u00e0 fait \u00e7a \u00e0 droite et \u00e0 gauche.\r\n\r\nVous en voulez plus, nous en voulons plus ! \r\nVenez interagir avec nous, mettre les mains dans le cambouis, poser toutes les questions que vous voulez, lors d'un Workshop interactif o\u00f9 nous vous ferons d\u00e9couvrir ce que c'est, \"en vrai\", que d'utiliser ce langage de programmation.\r\n\r\nCe Workshop sera anim\u00e9 par Christophe Grand et Laurent Petit (no kidding) :\r\n\r\n* Christophe a \u00e9t\u00e9 speaker lors des 2 conf\u00e9rences Clojure, auteur d'un livre sur Clojure, auteur de librairies Clojure renomm\u00e9es.\r\n\r\n* Laurent a \u00e9t\u00e9 speaker lors de la 1ere conf\u00e9rence Clojure, et est le principal d\u00e9veloppeur de Counterclockwise, le plugin Clojure pour Eclipse.",
+    "video": null,
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "30"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "Kanban pour les nuls!",
+    "summary": "Et si on vous racontait les principes fondamentaux qui se cachent derri\u00e8re Kanban ? Beaucoup plus qu'un tableau de post-it !",
+    "speakerIds": [
+      "guillaumelours",
+      "dbaeli"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      263000000
+    ],
+    "slug": "guillaume-lours-dimitri-baeli-kanban-pour-les-nuls-",
+    "description": "Kanban, mais oui tu sais, c\u2019est le tableau de Post-it \u00a9 au fond de la salle qui vous rappelle que vous \u00eates agiles !\r\n\r\nEt si on vous racontait le minimum vital des principes qui se cachent derri\u00e8re ? \r\n\r\nOui, il y a bien une histoire visuelle derri\u00e8re tout \u00e7a, mais pas uniquement. \r\nKanban est aussi une conduite du changement bas\u00e9e sur l'am\u00e9lioration continue de votre processus existant. \r\n\r\nLes clefs du management visuel:\r\n* Rendre visible l'avancement, l'objectif, les tendances !\r\n\r\nLe Flux: \r\n* Comprendre ce qu'est un Flux \r\n* Flux de valeur, Flux tir\u00e9\/pouss\u00e9\r\n* Limiter le travail en cours: WIP\r\n\r\nR\u00e9gler son processus:\r\n* Expliciter les r\u00e8gles et caract\u00e9ristiques\r\n* Trouver la bonne cadence\r\n\r\nPour aller plus loin:\r\n* Th\u00e9orie des contraintes, Files d'attentes, ...\r\n* Kanban vs Scrum : compl\u00e9mentarit\u00e9 ou nouvelle option ?\r\n\r\nNous finirons en vous pr\u00e9sentant quelques cas typiques d\u2019applications de Kanban.",
+    "video": null,
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "35"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "Animez vos pages HTML5 avec CSS3",
+    "summary": "5' de coding live pour animer un cube en CSS 3D suivi des explications techniques",
+    "speakerIds": [
+      "martin.gorner"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      264000000
+    ],
+    "slug": "martin-gorner-animez-vos-pages-html5-avec-css3",
+    "description": "Une visite guid\u00e9e au travers des diff\u00e9rentes techniques d'animation disponibles dans les navigateurs modernes. Donnez de la vie \u00e0 vos pages avec quelques lignes de code d\u00e9claratif gr\u00e2ce aux animations CSS3, CSS3D et SVG. Les slides de la pr\u00e9sentation sont \u00e9videmment en HTML5.",
+    "video": "http:\/\/www.youtube.com\/watch?v=fML23uCN30o",
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "36"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "Software Development Workflow at Google",
+    "summary": "We'll look behind the scenes of day-to-day development workflow in the engineering teams at Google.",
+    "speakerIds": [
+      "GooglePetraCross"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      264000000
+    ],
+    "slug": "petra-cross-software-development-workflow-at-google",
+    "description": "It is estimated that in the US alone, failed and troubled software projects waste $60-$70 billion per year. For that money, you could launch the space shuttle 100 times, build and deploy the entire 24 satellite GPS, and develop the Boeing 777 from scratch and still have few billion left over.\r\n\r\nIn my talk, I will not be analyzing what other companies do wrong. Instead, I will focus on explaining what Google does to reduce the development cost while speeding up releases and constantly delivering high quality software to our users.\r\n\r\nI will talk about the engineering and management structure at Google, then touch upon various software development workflow methodologies and then dive into the specifics of what software teams at Google do on a day-to-day basis.\r\n",
+    "video": null,
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "39"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "Automatisation des tests: le mythe du ROI",
+    "summary": "Cette session a pour but de pr\u00e9senter la dynamique \u00e9conomique d\u2019automatisation des tests qui s'apparente au mod\u00e8le des options financi\u00e8res",
+    "speakerIds": [
+      "gmantel"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      264000000
+    ],
+    "slug": "gilles-mantel-automatisation-des-tests--le-mythe-du-roi",
+    "description": "L\u2019automatisation des tests est souvent associ\u00e9e \u00e0 l\u2019id\u00e9e d\u2019obtenir un retour sur investissement (ROI) financier qui permettra de justifier la pertinence de se lancer dans cette d\u00e9marche. Cette id\u00e9e est d\u2019autant plus marqu\u00e9e dans les organisations non agiles. A l\u2019inverse, les \u00e9quipes agiles pr\u00f4nent une automatisation syst\u00e9matique au moins au niveau unitaire, ne raisonnent pas en termes de ROI, et ne cherchent pas \u00e0 remplacer les testeurs avec des automates.\r\n\r\nJe pr\u00e9senterai diff\u00e9rentes formules de calcul de ROI \u00ab \u00e0 l\u2019ancienne \u00bb et expliquerai pourquoi elles sont fausses et comment elles tendent \u00e0 prendre les mauvaises d\u00e9cisions. \r\n\r\nJe pr\u00e9senterai ensuite le mod\u00e8le des options financi\u00e8res et comment la dynamique \u00e9conomique d\u2019automatisation des tests se calque sur ce mod\u00e8le. Cette vision permet d\u2019appr\u00e9hender chaque situation avec des crit\u00e8res simples permettant de d\u00e9river une strat\u00e9gie d\u2019automatisation adapt\u00e9e (test-first vs test-last, unitaire vs fonctionnel, etc.)",
+    "video": "http:\/\/www.youtube.com\/watch?v=hf__zcdihwI",
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "40"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "Utilisateur, mon amour, ma migraine",
+    "summary": "Enrichir sa vision pour enrichir son produit: s'orienter vers un design centr\u00e9 sur l'utilisateur. Pourquoi, comment, quels r\u00e9sultats esp\u00e9rer",
+    "speakerIds": [
+      "sophie.freiermuth"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      264000000
+    ],
+    "slug": "sophie-freiermuth-utilisateur--mon-amour--ma-migraine",
+    "description": "L'utilisateur... le grand absent dans la salle de d\u00e9veloppement, pour lequel tant de sueur est vers\u00e9e, tant de lignes de code \u00e9crites et tant de paroles \u00e9chang\u00e9es dans des discussions quelquefois houleuses mais heureusement souvent apais\u00e9es autour d'une bi\u00e8re ou une boite de g\u00e2teaux. \r\n\r\nLe comprendre, le d\u00e9finir, le garder au c\u0153ur du d\u00e9veloppement, r\u00e9pondre \u00e0 ses besoins... \r\n\r\nUne session qui pr\u00e9sentera et partagera les outils de l'ergonome et de l'ethnographe, destin\u00e9e \u00e0 tous les acteurs du d\u00e9veloppement pour augmenter la performance du produit, r\u00e9duire l'inutile, parvenir \u00e0 une d\u00e9finition commerciale de MVP et \u00e9viter des erreurs co\u00fbteuses.",
+    "video": "http:\/\/www.youtube.com\/watch?v=ta6PLKPF7oU",
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "43"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "Le DotGame, jouer la performance ",
+    "summary": "Le DotGame illustre l'impact de l'initiative et la collaboration dans la croissance de la performance de l'\u00e9quipe",
+    "speakerIds": [
+      "ojuncu"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      265000000
+    ],
+    "slug": "oana-juncu-le-dotgame--jouer-la-performance-",
+    "description": "Le DotGame est un jeu simple qui s'articule sur 3 phases de 5 minutes chacune; \r\nEn formant des groupes de 7 personnes plus environ 5 observateurs, on reproduit un mod\u00e8le qui est pr\u00e9sent\u00e9 comme r\u00e9f\u00e9rence. Chacun est \u00e0 son poste avec une sp\u00e9cialisation particuli\u00e8re.\r\n\r\nLe produit en cours de fabrication passe d'un poste \u00e0 l'autre. \r\nUn utilisateur final (ou PO) valide \u00e0 la fin du cycle les produits le satisfont. \r\n\r\nLes r\u00e8gles changent dans chaque session et elle seront d\u00e9crites \u00e0 l'occasion de la pr\u00e9sentation du jeu.\r\n\r\nPour chaque session on r\u00e9alise les mesures suivantes :\r\n\r\n+  le temps de parcours du premier produit \r\n\r\n+  le nombre des produits valid\u00e9s\r\n\r\n+  le nombre de gaspillages (combien de produits ont \u00e9t\u00e9 rejet\u00e9s et pas finis)\r\n\r\nEn fin de chaque session il y a 5 minutes de r\u00e9trospective.\r\n\r\nLa taille du groupe a un maximum de 10 personnes. \r\n\r\nLa capacit\u00e9 de l'atelier est de 30 personnes maximum.",
+    "video": null,
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "47"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "The Node.js Scalability Myth",
+    "summary": "This talk will explore the idea of node.js being more scalable than other technologies, how much of it is true, and how much you should care",
+    "speakerIds": [
+      "felixge"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      265000000
+    ],
+    "slug": "felix-geisendorfer-the-node-js-scalability-myth",
+    "description": "![NodeJs icon](http:\/\/nodejs.org\/images\/logo-light.png)\r\n\r\nThis talk will explore the idea of node.js being more scalable than other technologies, how much of it is true, and how much you should care.\r\n\r\nIf you are not sure about investing your time in learning node yet, or if you've been using node for a while, this talk is aimed to separate the hype from the facts and giving you a better idea for where and how to use node properly.",
+    "video": null,
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "58"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "Lean Startup, l'entrepreneuriat agile",
+    "summary": "Mise au point en 2008 et appliqu\u00e9e depuis dans de nombreuses startups, le lean startup bouleverse les r\u00e8gles de l'entrepreneuriat.",
+    "speakerIds": [
+      "PIA_Emmanuel"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      265000000
+    ],
+    "slug": "emmanuel-levi-valensi-lean-startup--l-entrepreneuriat-agile",
+    "description": "Mise au point par Eric Ries en 2008 et appliqu\u00e9e depuis dans de nombreuses startups (DropBox par exemple), le Lean Startup bouleverse les r\u00e8gles de l'entrepreneuriat.\r\n\r\nVous d\u00e9couvrirez pendant cette session les fondements du Lean Startup, ainsi que le Customer Development (marketing agile) et sa compl\u00e9mentarit\u00e9 avec les m\u00e9thodes agiles, et enfin des conseils pratiques pour appliquer le Lean Startup \u00e0 vos projets.",
+    "video": "https:\/\/www.youtube.com\/watch?v=e1GGurd58Yo",
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "60"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "Selenium WebDriver, TestNG et Selenium Grid",
+    "summary": "Comment tester une application web avec WebDriver, TestNG et Selenium Grid. Mise en place, bonnes pratiques ...",
+    "speakerIds": [
+      "MathildeLemee"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      265000000
+    ],
+    "slug": "mathilde-lemee-selenium-webdriver--testng-et-selenium-grid",
+    "description": "Comment tester une application Web ?\r\n\r\nNous aurons l'occasion de creuser en profondeur la question en \u00e9tudiant les outils mis \u00e0 notre disposition que sont Selenium WebDriver, TestNG et surtout Selenium Grid.\r\nSelenium est un outil qui a su s'imposer comme la solution open-source la plus efficace sur le march\u00e9. \r\n\r\nIl permet d'effectuer des tests fonctionnels\/d'acceptance sur les applications web et mobiles. Avec Selenium Grid, vous allez pouvoir distribu\u00e9 les tests sur plusieurs machines et diminuer les temps d'execution des plans de tests. Mais il va beaucoup plus loin : en permettant, de mani\u00e8re simple de g\u00e9rer plusieurs environnements, incluant des multiples combinations de browsers\/OS, il s'impose comme un outil efficace . \r\n\r\nCombin\u00e9 avec un framework de test sp\u00e9cialis\u00e9 dans le parallelisme tel que TestNG, on obtient une suite robuste et efficace, qui nous permet de nous consacrer sur l'essentiel.\r\n\r\nLes exemples seront Java mais tout ce qui concerne selenium & selenium grid concerne une multitudes d'autres langages (PHP, ruby, c# ...).",
+    "video": null,
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "63"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "BigData \/ Hadoop, exploiter des t\u00e9raoctets de logs",
+    "summary": "Vivez la mise en place d'une infrastucture compl\u00e8te, articul\u00e9e autour de Hadoop, chez un des acteurs majeurs du web-commerce europ\u00e9en.",
+    "speakerIds": [
+      "plopez"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      266000000
+    ],
+    "slug": "pablo-lopez-bigdata---hadoop--exploiter-des-teraoctets-de-logs",
+    "description": "Comment analyser chaque jour des t\u00e9ra de logs g\u00e9n\u00e9r\u00e9s par plus de 600 JVMs en production, sans impacter leur fonctionnement ?\r\nNous vous pr\u00e9senterons durant cette session la solution Big Data 100% Open Source mise en place chez un des plus grands sites du web europ\u00e9en. Une architecture bas\u00e9e sur syslog-ng, Flume, Hadoop, MongoDb et Play!, qui n'a rien \u00e0 envier aux g\u00e9ants d'outre-atlantique !\r\nVenez d\u00e9couvrir comment nous avons divis\u00e9 par 20 le temps de d\u00e9tection et de traitement des incidents. Mais aussi comment BigData a permis de nouvelles utilisations des logs \u00e0 la fois techniques et surtout m\u00e9tier, comme la d\u00e9tection des fraudes, l\u2019analyse de traffic web, BI en temps r\u00e9el, ...\r\n\u00c0 travers ce retour d'exp\u00e9rience, nous vous proposons de vivre, au coeur d'une des plus exigeantes productions de France, la mise en place de ce projet digne des tr\u00e8s grands du web.\r\n\r\n(Pr\u00e9sentation accept\u00e9e pour DevoxxFr)",
+    "video": "http:\/\/www.youtube.com\/watch?v=1WF_FBFJllc",
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "83"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "MongoDB, Mustache... Vers la mort du cache ?",
+    "summary": "Le caching a sauv\u00e9 les architectes web des ann\u00e9es 2000, au prix souvent d'une \u00e9norme complexit\u00e9. Peux-t-on, et doit-on tourner cette page ?",
+    "speakerIds": [
+      "kali"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      266000000
+    ],
+    "slug": "mathieu-poumeyrol-mongodb--mustache----vers-la-mort-du-cache--",
+    "description": "Fotopedia est une plateforme web et webservice \u00e0 fort traffic, qui re\u00e7oit plus de 5 millions de visites par mois. Venez d\u00e9couvrir les strat\u00e9gies mises en place par nos \u00e9quipes pour palier aux soucis en production. \r\n\r\nL'application principale de Fotopedia est un Ruby on Rails vieux de 6 ans. \u00c0 cause de ses lenteurs intrins\u00e8ques, nous avons \u00e9t\u00e9 amen\u00e9 \u00e0 mettre en place des strat\u00e9gies de cache \u00e9labor\u00e9es pour que le comportement soit acceptable. Ceci nous a conduit \u00e0 une stack utilisant du cache de fragment \"edge-side\", et des boucles d'invalidation complexes pour garantir la fra\u00eecheur du contenu, qui reste encore perfectible. \r\n\r\nMongoDB, coupl\u00e9 \u00e0 un micro langage de template (mustache), nous permet aujourd'hui d'explorer une autre approche \u00e9liminant totalement le cache pour les donn\u00e9es les plus dynamiques de l'application. \r\n\r\nMots cl\u00e9s : Performance, MongoDB, Varnish, Cache, Mustache",
+    "video": null,
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "93"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "Painless Web App Development with Backbone",
+    "summary": "You know how you always mean to apply proper MVC principles but end up with a mess of jQuery instead? No more excuses: now there's Backbone.",
+    "speakerIds": [
+      "bodil"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      266000000
+    ],
+    "slug": "bodil-stokke-painless-web-app-development-with-backbone",
+    "description": "Have you ever tried to write a moderately complex browser side application with the assumption that jQuery is probably all you need for the job? I mean, fire off some AJAX requests, then just use some DOM manipulation to put the results where you want them\u2014how hard can it be, right?\r\n\r\nWould you have enjoyed maintaining the code that resulted from that assumption? No, neither would I.\r\n\r\nWould you like to see a better solution?\r\n\r\nAs it turns out, programmers have known how to keep their frontend code under control for a while using a surprisingly simple principle called MVC. Now that the browser has suddenly become a serious platform for application development, the need for MVC (or, at least, the basic concepts behind MVC) has become so apparent that we already have multiple rival MVC libraries for the browser platform. Backbone is arguably the most popular of the lot, and certainly one of the most lightweight.\r\n\r\nIn this presentation, you'll learn how to harness the power of Backbone by example, as we build a simple browser side application from the bottom up using nothing but Backbone and your favourite DOM toolkit.",
+    "video": "http:\/\/www.youtube.com\/watch?v=K3LwjZ-F09A",
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "95"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "Play 2.0",
+    "summary": "Play 2.0 vient de sortir, il est tout frais, tout beau, et s\u2019utilise en Java et Scala",
+    "speakerIds": [
+      "jrf"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      266000000
+    ],
+    "slug": "julien-richard-foy-play-2-0",
+    "description": "D\u00e9couvrez comment \u00e9crire une application Web avec Play 2.0, en Java et en Scala. Quels sont les concepts architecturaux forts du framework et les mod\u00e8les de programmation qui en d\u00e9coulent, notamment le mod\u00e8le asynchrone.\r\n\r\nVous verrez \u00e9galement, d\u00e9mos \u00e0 l\u2019appui, comment l\u2019API de Play 2.0 *scale*, permettant d\u2019\u00e9crire des applications avec une grande productivit\u00e9 tout en  donnant, s\u2019il le souhaite, \u00e9norm\u00e9ment de contr\u00f4le au d\u00e9veloppeur.\r\n\r\nPlay 2.0 est un framework pour Java et Scala permettant d\u2019\u00e9crire des applications hautement *scalable* gr\u00e2ce \u00e0 sa l\u00e9g\u00e8ret\u00e9, son architecture *stateless* et r\u00e9active.",
+    "video": null,
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "99"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "An overview of JavaScript",
+    "summary": "This talk will provide a quick overview of JavaScript for people who already know how to program in an object-oriented language.",
+    "speakerIds": [
+      "rauschma"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      267000000
+    ],
+    "slug": "axel-rauschmayer-an-overview-of-javascript",
+    "description": "This talk will provide a quick overview of JavaScript for people who already know how to program in an object-oriented language. We will cover both JavaScript\u2019s strengths (yes, those do exist!) and its weaknesses. Everything will be put into perspective by comparing JavaScript with other languages (mainly Java and Python) and by providing a glimpse at ECMAScript 6 (code-named ECMAScript.next), the next version of JavaScript that will be finished by 2013.",
+    "video": "http:\/\/www.youtube.com\/watch?v=_GYicBSNhaY",
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "104"
+  },
+  {
+    "format": "TALK",
+    "event": "mixit12",
+    "title": "DevOps in real life at Kelkoo",
+    "summary": "Comment Kelkoo a impl\u00e9ment\u00e9 les principes DevOPS dans le d\u00e9ploiement de ses applications (10 releases par semaine sur 300 serveurs)",
+    "speakerIds": [
+      "alain.delafosse",
+      "capponi.nicolas"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      2,
+      28,
+      15,
+      38,
+      33,
+      267000000
+    ],
+    "slug": "alain-delafosse-nicolas-capponi-devops-in-real-life-at-kelkoo",
+    "description": "Kelkoo a impl\u00e9ment\u00e9 une solution globale pour banaliser la cr\u00e9ation, la configuration et le d\u00e9ploiement de ses applications sur son infrastructure.\r\n\r\nDe la cr\u00e9ation du composant logiciel \u00e0 travers des archetypes comprenant la structure maven ainsi des fichiers de configuration templatis\u00e9s jusqu'a la software factory produisant des RPMS.\r\nDu clonage OS automatis\u00e9 des serveurs jusqu'au backoffice de configuration des serveurs (tel composant avec telles clefs de conf  sur tels serveurs);  toutes ces op\u00e9rations sont accessibles au d\u00e9veloppeurs Kelkoo et autorisent des logiques de d\u00e9ploiement continu.\r\n\r\nCette pr\u00e9sentation vise a expliquer comment Kelkoo a mis en oeuvre les outils: Cobbler, Puppet, jenkins, Maven, RPM, Gepetto (BO maison), Punch (surcouche puppet) pour simplifier la cr\u00e9ation, la configuration et le d\u00e9ploiement de ses applications de mani\u00e8re industrielle...",
+    "video": "http:\/\/www.youtube.com\/watch?v=SIVxBHJ4AbM",
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null,
+    "id": "114"
+  }
 ]

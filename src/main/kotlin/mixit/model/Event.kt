@@ -18,7 +18,7 @@ data class Event(
 @Document
 data class EventSponsoring(
         val level: SponsorshipLevel,
-        val sponsor: User,
+        val sponsorId: String,
         val subscriptionDate: LocalDate = LocalDate.now()
 )
 

@@ -39,7 +39,7 @@ class BlogHandler(val repository: PostRepository,
 
 }
 
-class PostDto(
+private class PostDto(
         val id: String?,
         val slug: String,
         val author: User,
@@ -49,7 +49,7 @@ class PostDto(
         val content: String
 )
 
-fun Post.toDto(author: User, language: Language, markdownConverter: MarkdownConverter) = PostDto(
+private fun Post.toDto(author: User, language: Language, markdownConverter: MarkdownConverter) = PostDto(
         id,
         slug[language] ?: "",
         author,
@@ -57,20 +57,3 @@ fun Post.toDto(author: User, language: Language, markdownConverter: MarkdownConv
         title[language] ?: "",
         markdownConverter.toHTML(headline[language] ?: ""),
         markdownConverter.toHTML(if (content != null) content[language] else  ""))
-
-class UserDto(
-        val login: String,
-        val firstname: String,
-        val lastname: String,
-        var email: String,
-        var company: String? = null,
-        var description: String,
-        var logoUrl: String? = null,
-        val events: List<String>,
-        val role: Role,
-        var links: List<Link>
-)
-
-fun User.toDto(language: Language, markdownConverter: MarkdownConverter) =
-        UserDto(login, firstname, lastname, email, company, markdownConverter.toHTML(description[language] ?: ""),
-                logoUrl, events, role, links)

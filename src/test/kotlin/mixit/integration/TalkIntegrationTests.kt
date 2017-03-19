@@ -16,12 +16,12 @@ class TalkIntegrationTests : AbstractIntegrationTests() {
                 .uri("/api/talk/2421")
                 .accept(APPLICATION_JSON)
                 .exchange()
-                .flatMap { r -> r.bodyToFlux<Talk>() }
+                .flatMap { it.bodyToFlux<Talk>() }
 
         StepVerifier.create(session)
                 .consumeNextWith {
                     assertEquals("Selling BDD to the Business", it.title)
-                    assertEquals("North", it.speakers.iterator().next().lastname)
+                    assertEquals("tastapod", it.speakerIds.iterator().next())
                 }
                 .verifyComplete()
     }

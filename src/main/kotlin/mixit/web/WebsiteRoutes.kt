@@ -19,13 +19,14 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
                     val newsHandler: NewsHandler,
                     val talkHandler: TalkHandler,
                     val userHandler: UserHandler,
+                    val sponsorHandler: SponsorHandler,
                     val ticketingHandler: TicketingHandler) {
 
     @Bean
     @Order(Ordered.HIGHEST_PRECEDENCE)
     fun websiteRouter() = router {
         accept(TEXT_HTML).nest {
-            GET("/", globalHandler::homeView)
+            GET("/") { sponsorHandler.viewWithSponsors("home", it) }
             GET("/about", globalHandler::findAboutView)
             GET("/news", newsHandler::newsView)
             GET("/ticketing", ticketingHandler::ticketing)
@@ -47,7 +48,7 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
             (GET("/user/{login}")
                     or GET("/speaker/{login}")
                     or GET("/sponsor/{login}")) { userHandler.findOneView(it) }
-            GET("/sponsors", userHandler::findSponsorsView)
+            GET("/sponsors") { sponsorHandler.viewWithSponsors("sponsors", it) }
 
             "/admin".nest {
                 GET("/", adminHandler::admin)
