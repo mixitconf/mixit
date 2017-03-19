@@ -1,12 +1,13 @@
 package mixit.web
 
 import com.samskivert.mustache.Mustache
+import mixit.MixitProperties
 import org.springframework.context.MessageSource
 import org.springframework.web.server.ServerWebExchange
 import org.springframework.web.util.UriUtils
 
 
-fun customizeModel(model: MutableMap<String, Any>, exchange: ServerWebExchange, messageSource: MessageSource) {
+fun customizeModel(model: MutableMap<String, Any>, exchange: ServerWebExchange, messageSource: MessageSource, properties: MixitProperties) {
     val locale = exchange.request.headers.acceptLanguageAsLocale
     val username = exchange.session.block().getAttribute<String>("username")
     if (username.isPresent) {
@@ -20,6 +21,7 @@ fun customizeModel(model: MutableMap<String, Any>, exchange: ServerWebExchange, 
         var switchLangUrl = exchange.request.uri.path
         switchLangUrl = if (locale.language == "en") switchLangUrl else "/en" + switchLangUrl
         model.put("switchLangUrl", switchLangUrl)
+        model.put("uri", "${properties.baseUri}${exchange.request.uri.path}")
     }
     model.put("i18n", Mustache.Lambda { frag, out ->
         val tokens = frag.execute().split("|")

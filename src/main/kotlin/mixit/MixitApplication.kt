@@ -22,14 +22,14 @@ import org.springframework.web.reactive.result.view.mustache.MustacheViewResolve
 class MixitApplication {
 
     @Bean
-    fun viewResolver(messageSource: MessageSource) = MustacheViewResolver().apply {
+    fun viewResolver(messageSource: MessageSource, properties: MixitProperties) = MustacheViewResolver().apply {
         val prefix = "classpath:/templates/"
         val suffix = ".mustache"
         val loader = MustacheResourceTemplateLoader(prefix, suffix)
         setPrefix(prefix)
         setSuffix(suffix)
         setCompiler(Mustache.compiler().escapeHTML(false).withLoader(loader))
-        setModelCustomizer({ model, exchange -> customizeModel(model, exchange, messageSource) })
+        setModelCustomizer({ model, exchange -> customizeModel(model, exchange, messageSource, properties) })
     }
 
     @Bean
