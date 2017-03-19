@@ -12,7 +12,7 @@ import org.springframework.web.reactive.function.server.ServerResponse.*
 @Component
 class TicketingHandler(val repository: TicketRepository) {
 
-    fun ticketing(req: ServerRequest) = ServerResponse.ok().render("ticketing")
+    fun ticketing(req: ServerRequest) = ServerResponse.ok().render("ticketing", mapOf(Pair("title", "ticketing.title")))
 
     fun submit(req: ServerRequest) = req.body(BodyExtractors.toFormData()).then { data ->
         val formData  = data.toSingleValueMap()
@@ -21,7 +21,7 @@ class TicketingHandler(val repository: TicketRepository) {
                 formData["lastname"]!!)
         repository.save(ticket)
                 .then { t -> ok().render("ticketing-submission", formData) }
-                .otherwise(DuplicateKeyException::class.java, { ok().render("ticketing-error", mapOf(Pair("message", "ticketing.error.alreadyexists"))) } )
-                .otherwise { ok().render("ticketing-error", mapOf(Pair("message", "ticketing.error.default"))) }
+                .otherwise(DuplicateKeyException::class.java, { ok().render("ticketing-error", mapOf(Pair("message", "ticketing.error.alreadyexists"), Pair("title", "ticketing.title"))) } )
+                .otherwise { ok().render("ticketing-error", mapOf(Pair("message", "ticketing.error.default"), Pair("title", "ticketing.title"))) }
     }
 }

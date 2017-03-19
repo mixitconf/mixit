@@ -1,4 +1,4 @@
-package mixit.util
+package mixit.web
 
 import com.samskivert.mustache.Mustache
 import org.springframework.context.MessageSource
@@ -22,8 +22,8 @@ fun customizeModel(model: MutableMap<String, Any>, exchange: ServerWebExchange, 
         model.put("switchLangUrl", switchLangUrl)
     }
     model.put("i18n", Mustache.Lambda { frag, out ->
-        val key = frag.execute()
-        out.write(messageSource.getMessage(key, null, locale))
+        val tokens = frag.execute().split("|")
+        out.write(messageSource.getMessage(tokens[0], tokens.slice(IntRange(1, tokens.size - 1)).toTypedArray(), locale))
     })
     model.put("urlEncode", Mustache.Lambda { frag, out -> out.write(UriUtils.encodePathSegment(frag.execute(), "UTF-8")) })
 }

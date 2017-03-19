@@ -6,8 +6,8 @@ import mixit.repository.PostRepository
 import mixit.repository.TalkRepository
 import mixit.repository.UserRepository
 import mixit.util.MarkdownConverter
-import mixit.util.MixitWebFilter
-import mixit.util.customizeModel
+import mixit.web.MixitWebFilter
+import mixit.web.customizeModel
 import mixit.util.run
 import org.springframework.boot.ApplicationRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication

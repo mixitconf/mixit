@@ -5,6 +5,7 @@ import mixit.repository.TalkRepository
 import mixit.repository.UserRepository
 import mixit.util.MarkdownConverter
 import mixit.util.json
+import mixit.util.language
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.ServerResponse.*
@@ -19,13 +20,13 @@ class TalkHandler(val repository: TalkRepository,
     fun findByEventView(year: Int, req: ServerRequest) =
             repository.findByEvent(yearToId(year.toString())).collectList().then { sessions ->
                 userRepository.findMany(sessions.flatMap(Talk::speakerIds)).collectMap(User::login).then { speakers ->
-                val model = mapOf(Pair("talks", sessions.map { it.toDto(it.speakerIds.map { speakers[it]!! } , markdownConverter) }), Pair("year", year))
+                val model = mapOf(Pair("talks", sessions.map { it.toDto(it.speakerIds.map { speakers[it]!! } , markdownConverter) }), Pair("year", year), Pair("title", "talks.html.title|$year"))
                 ok().render("talks", model)
             }}
 
     fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug")).then { session ->
         userRepository.findMany(session.speakerIds).collectList().then { speakers ->
-        ok().render("talk", mapOf(Pair("talk", session.toDto(speakers!!, markdownConverter))))
+        ok().render("talk", mapOf(Pair("talk", session.toDto(speakers!!, markdownConverter)), Pair("title", "talk.html.title|${session.title}")))
     }}
 
     fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("login")))
@@ -33,7 +34,7 @@ class TalkHandler(val repository: TalkRepository,
     fun findByEventId(req: ServerRequest) =
             ok().json().body(repository.findByEvent(yearToId(req.pathVariable("year"))))
 
-    fun talks2017(req: ServerRequest) = ok().render("talks-2017")
+    fun talks2017(req: ServerRequest) = ok().render("talks-2017", mapOf(Pair("title", "talks.html.title|2017")))
 
 }
 

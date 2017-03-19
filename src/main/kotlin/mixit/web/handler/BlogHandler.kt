@@ -19,7 +19,7 @@ class BlogHandler(val repository: PostRepository,
 
     fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug"), req.language())
             .then { post -> userRepository.findOne(post.authorId).then { author ->
-                    val model = mapOf(Pair("post", post.toDto(author, req.language(), markdownConverter)))
+                    val model = mapOf(Pair("post", post.toDto(author, req.language(), markdownConverter)), Pair("title", "blog.post.title|${post.title[req.language()]}"))
                     ok().render("post", model)
                 }
             }.otherwiseIfEmpty(repository.findBySlug(req.pathVariable("slug"), if (req.language() == FRENCH) ENGLISH else FRENCH).then { a ->
@@ -29,7 +29,7 @@ class BlogHandler(val repository: PostRepository,
     fun findAllView(req: ServerRequest) = repository.findAll(req.language())
             .collectList()
             .then { posts -> userRepository.findMany(posts.map { it.authorId }).collectMap{ it.login }.then { authors ->
-                val model = mapOf(Pair("posts", posts.map { it.toDto(authors[it.authorId]!!, req.language(), markdownConverter) }))
+                val model = mapOf(Pair("posts", posts.map { it.toDto(authors[it.authorId]!!, req.language(), markdownConverter) }), Pair("title", "blog.title"))
                 ok().render("blog", model)
             }}
 
