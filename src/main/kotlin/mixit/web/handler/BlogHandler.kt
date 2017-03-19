@@ -15,7 +15,7 @@ import org.springframework.web.reactive.function.server.ServerResponse.*
 class BlogHandler(val repository: PostRepository,
                   val userRepository: UserRepository,
                   val markdownConverter: MarkdownConverter,
-                  val mixitProperties: MixitProperties) {
+                  val properties: MixitProperties) {
 
     fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug"), req.language())
             .then { post -> userRepository.findOne(post.authorId).then { author ->
@@ -23,7 +23,7 @@ class BlogHandler(val repository: PostRepository,
                     ok().render("post", model)
                 }
             }.otherwiseIfEmpty(repository.findBySlug(req.pathVariable("slug"), if (req.language() == FRENCH) ENGLISH else FRENCH).then { a ->
-                permanentRedirect("${mixitProperties.baseUri}${if (req.language() == ENGLISH) "/en" else ""}/blog/${a.slug[req.language()]}")
+                permanentRedirect("${properties.baseUri}${if (req.language() == ENGLISH) "/en" else ""}/blog/${a.slug[req.language()]}")
             })
 
     fun findAllView(req: ServerRequest) = repository.findAll(req.language())

@@ -9,23 +9,18 @@ import org.springframework.web.reactive.function.server.ServerResponse.*
 
 
 @Component
-class AuthenticationHandler(val mixitProperties: MixitProperties) {
+class AuthenticationHandler(val properties: MixitProperties) {
 
     fun loginView(req: ServerRequest) = ok().render("login")
 
     fun login(req: ServerRequest) = req.body(toFormData()).then { data ->
         req.session().then { session ->
             val formData = data.toSingleValueMap()
-            if (formData["username"] == mixitProperties.admin.username && formData["password"] == mixitProperties.admin.password) {
+            if (formData["username"] == properties.admin.username && formData["password"] == properties.admin.password) {
                 session.attributes["username"] =  data.toSingleValueMap()["username"]
-                seeOther("${mixitProperties.baseUri}/admin")
+                seeOther("${properties.baseUri}/admin")
             }
             else ok().render("login-error")
         }
-    }
-
-    fun logout(req: ServerRequest) = req.session().then { session ->
-        session.attributes.remove("username")
-        ok().render("index")
     }
 }

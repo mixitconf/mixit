@@ -33,7 +33,6 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
 
             // Authentication
             GET("/login", authenticationHandler::loginView)
-            GET("/logout", authenticationHandler::logout)  // TODO Use POST
 
             // Talks
             GET("/2017", talkHandler::talks2017)

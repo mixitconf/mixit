@@ -33,7 +33,7 @@ class MixitApplication {
     }
 
     @Bean
-    fun filter(mixitProperties: MixitProperties) = MixitWebFilter(mixitProperties.baseUri!!)
+    fun filter(properties: MixitProperties) = MixitWebFilter(properties)
 
     @Bean
     fun markdownConverter() = MarkdownConverter()

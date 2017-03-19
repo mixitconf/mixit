@@ -1,5 +1,6 @@
 package mixit.web
 
+import mixit.MixitProperties
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpHeaders.ACCEPT_LANGUAGE
 import org.springframework.http.HttpStatus
@@ -11,7 +12,7 @@ import java.net.URI
 import java.util.*
 
 
-class MixitWebFilter(val baseUri: String) : WebFilter {
+class MixitWebFilter(val properties: MixitProperties) : WebFilter {
 
     private val redirectDoneAttribute = "redirectDone"
 
@@ -19,7 +20,7 @@ class MixitWebFilter(val baseUri: String) : WebFilter {
        if (exchange.request.headers.host?.hostString?.endsWith("mix-it.fr") ?: false) {
            val response = exchange.response
            response.statusCode = HttpStatus.PERMANENT_REDIRECT
-           response.headers.location = URI("$baseUri${exchange.request.uri.path}")
+           response.headers.location = URI("${properties.baseUri}${exchange.request.uri.path}")
            Mono.empty()
        }
        else if (exchange.request.uri.path.startsWith("/admin")) {
@@ -30,7 +31,7 @@ class MixitWebFilter(val baseUri: String) : WebFilter {
             else {
                 val response = exchange.response
                 response.statusCode = HttpStatus.TEMPORARY_REDIRECT
-                response.headers.location = URI("$baseUri/login")
+                response.headers.location = URI("${properties.baseUri}/login")
                 Mono.empty()
                }
            }
@@ -48,7 +49,7 @@ class MixitWebFilter(val baseUri: String) : WebFilter {
                     chain.filter(exchange.mutate().request(exchange.request.mutate().header(ACCEPT_LANGUAGE, "fr").build()).build())
                 else {
                     response.statusCode = HttpStatus.TEMPORARY_REDIRECT
-                    response.headers.location = URI("$baseUri/en/")
+                    response.headers.location = URI("${properties.baseUri}/en/")
                     session.attributes[redirectDoneAttribute] = true
                     session.save()
                 }
