@@ -1,0 +1,774 @@
+[
+  {
+    "event": "mixit17",
+    "title": "Sensibilisation aux bonnes pratiques techniques du Software Craftsmanship : Lego\u00ae \u00e0 la rescousse !",
+    "summary": "Pour cr\u00e9er demain un code de qualit\u00e9, venez (re)d\u00e9couvrir les bases des pratiques techniques du Software Craftsmanship de mani\u00e8re ludique !\nChers gens du m\u00e9tier, venez d\u00e9couvrir la vie d'un d\u00e9veloppeur agile.\nChers d\u00e9veloppeurs, venez pratiquer l'eXtreme LegoBuilding avec le framework LegoUnit !",
+    "speakerIds": [
+      "59873349"
+    ],
+    "speakerIds": ["alice.barralon", "191394821"],
+    "language": "FRENCH",
+    "topic": "Craft\/Maker",
+    "format": "WORKSHOP",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Au secours, ma prod est sous Docker !",
+    "summary": "Docker est un outil tr\u00e8s puissant qui connait une adoption tr\u00e8s rapide grace aux nombreuses possibilit\u00e9es qu'il offre aux \u00e9quipes.\n\nApr\u00e8s l'avoir essay\u00e9 en dev puis avoir convaincu votre management et vos obs de le tester sur des environnements interm\u00e9diaires, il est temps de partir en prod, et l\u00e0, c'est le drame ...\nLe passage d'une production sous Docker engendre des probl\u00e9matiques comme le monitoring, la gestion des logs, le scheduling ou la gestion des datas que l'on d\u00e9couvre.\n\nDans cette pr\u00e9sentation, je ferai un retour d'exp\u00e9rience sur ces probl\u00e9matiques et pr\u00e9senterai des solutions adapt\u00e9es.",
+    "speakerIds": ["francois.teychene"],
+    "language": "FRENCH",
+    "topic": "Ops",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Balade cosmique autour des trous noirs",
+    "summary": "L'Univers, avec un grand \"U\" tel que le d\u00e9fini le concept d'Absolu cher \u00e0 Hegel, est un lieu fascinant. Alors qu'\u00e0 la nuit tomb\u00e9 nous n'y voyons qu'une lune, quelques plan\u00e8tes et de nombreuses \u00e9toiles, l'Univers est en r\u00e9alit\u00e9 peupl\u00e9 de nombreux objets cosmiques dont la compr\u00e9hension nous d\u00e9passe encore aujourd'hui. Bien que nous ayons des th\u00e9ories sur la naissance des plan\u00e8tes et la mort des soleils, force est de constater que bien des structures nous \u00e9chappent. Trop lointaines pour y envoyer une sonde, pas assez lumineuses pour les voir avec nos t\u00e9lescopes, beaucoup de ces sources d'inconnu restent incomprises. Et parmi elles se trouvent les objets les plus fascinants qui soient: les trous noirs. Monstres phagocytant la mati\u00e8re autour d'eux, invisibles aux t\u00e9lescopes, courbant l'espace et le temps, les trous noirs restent une \u00e9nigme. Comment se forment-ils ? Quels sont leurs processus physiques ? Peuvent-ils mourir ou s'\u00e9vaporer ? Autant de questions que l'astrophysique moderne tentent de percer. A l'aide d'observations minutieuses, de th\u00e9ories math\u00e9matiques et de lourdes simulations informatiques, le voile se l\u00e8ve lentement. Durant cette pr\u00e9sentation d\u00e9finitivement \"Alien\", je vous propose de vous expliquer de mani\u00e8re simple mais pr\u00e9cise ce que sont les trous noirs et comment l'astrophysique moderne utilise les supercalculateurs, les Big Data Center ou les calculs sur GPU. Cette conf\u00e9rence se veut une passerelle entre les mondes de l'informatique et de l'astronomie.",
+    "speakerIds": ["frédéric.marin"],
+    "language": "FRENCH",
+    "topic": "Alien",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Cultivating community: Building powerful relationships by communicating with empathy",
+    "summary": "Cultivating community: Building powerful relationships by communicating with empathy\nOne of our most valuable commodities as humans is our ability to build relationships - both personally and professionally. And the key to any successful relationship is empathy: being able to understand someone, connect with someone and view the world through their eyes. The problem is that the empathy needed to cultivate relationships, foster collaboration and build strong communities is often times lacking, especially when we are around people who are different from us. And if empathy is the tie that binds us, then vulnerability is the thread that holds that rope together.\n\nIt's time to change the status quo in tech. Let's explore the impact of empathy on communities. We'll discuss how communication plays a role in building successful relationships; how empathy fosters highly collaborative teams;  and finally we'll talk about true accessibility. Why? Because innovation is at it's best when it's inclusive. And to be inclusive, you must be empathetic.",
+    "speakerIds": ["sharon.steed"],
+    "language": "ENGLISH",
+    "topic": "Team",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "NoEstimates Game",
+    "summary": "Wondering what NoEstimates means in practice, or why you would want to use NoEstimates? Perhaps you\u2019ve heard the buzz, read Vasco Duarte\u2019s excellent book or simply want to understand how to plan better and reduce risk. If so, you should attend this workshop session for a multi-team game that will help you:\n * Learn the basics of NoEstimates and why the concept can help\n * Find out through experimentation what \u2014 and how much \u2014 different factors influence delivery time \n * Learn how to create a probabilistic forecast that provides a less risky way to plan \n * Understand how to reduce variation that affects \u2014 and creates risk in \u2014 delivery \n\nFor more information, including the game materials, please visit https:\/\/mattphilip.wordpress.com\/noestimates-game\/",
+    "speakerIds": ["mattphilip"],
+    "language": "ENGLISH",
+    "topic": "Team",
+    "format": "WORKSHOP",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Compagnonnage, CSS et Vexillologie",
+    "summary": "CSS Flags est un projet un peu fou dans lequel je recr\u00e9e l'ensemble des drapeaux des pays du monde en pure CSS, en n'utilisant qu'un seul `div` par drapeau. Dans ce talk j'explique les diff\u00e9rentes techniques secr\u00e8tes qui vous permette d'utiliser un seul \u00e9l\u00e9ment au maximum de ses capacit\u00e9s. On y voit aussi pourquoi des projets fous et stupides comme celui-ci sont en fait tr\u00e8s importants.",
+    "speakerIds": ["tim.carry"],
+    "language": "FRENCH",
+    "topic": "Alien",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "La Marque est morte. Vive l\u2019Intelligente Artificielle.",
+    "summary": "Le monde a toujours \u00e9t\u00e9 \u00ab Marqu\u00e9 \u00bb. \nDu nombre de pois sur les ailes du papillon Monarque au bande du tigre du bengal, ce syst\u00e8me de \u00abmarques distinctives\u00bb a permis d\u2019organis\u00e9 la complexit\u00e9 de notre monde. Mais vers 2014, les choses se troublent. \nL\u2019id\u00e9e de Marque \u00e9volue avec l\u2019arriv\u00e9e de dispositifs comme Amazon Echo avec reconnaissance vocale soutenus par un AI incroyablement intelligent.\nLa Marque conna\u00eet un changement de paradigme.\nElle n\u2019est plus juste un symbole, un signe. Elle n\u2019est m\u00eame pas une voix. Elle est devenue une entit\u00e9 intelligente, une personnalit\u00e9, un algorithme capable d\u2019apprendre.\nComment \u00abMarqu\u00e9\u00bb une intelligence artificielle ?\nQuel type de relation allons-nous avoir maintenant avec la Marque ?\nDeviendrons-nous des consommateurs compl\u00e8tements manipul\u00e9s par la Marque ? \nLa Marque va-t elle tout simplement devenir notre meilleur ami?",
+    "speakerIds": ["115190943418300876553"],
+    "language": "FRENCH",
+    "topic": "Design",
+    "format": "RANDOM",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Ergonomie du poste de travail, et si l\u2019erreur \u00e9tait {encore, aussi} entre la chaise ergonomique et le clavier orthogonal ?",
+    "summary": "Atelier faisant suite \u00e0 la conf\u00e9rence sur le b\u00e9po.\n*Premi\u00e8re partie* ayant pour objectif d\u2019expliquer simplement \u00ab?comment fonctionne le dos?\u00bb afin de comprendre \u00ab?ce qu\u2019on peut faire avec?\u00bb au quotidien \u00e0 l\u2019aide de propositions posturales du quotidien qui seront pr\u00e9sent\u00e9es ;\n*Seconde partie* autour du b\u00e9po, des claviers, des p\u00e9riph\u00e9riques de saisie ayant pour but :\n* de r\u00e9pondre \u00e0 des questions (y compris li\u00e9es \u00e0 la conf\u00e9rence sur le b\u00e9po) ;\n* de tester du mat\u00e9riel (apportez le votre ! L\u2019id\u00e9e est aussi de pouvoir \u00e9changer).",
+    "speakerIds": ["olivier.guéry", "matthieu.lecoupeau"],
+    "language": "FRENCH",
+    "topic": "Education",
+    "format": "WORKSHOP",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "\u00catre Un D\u00e9veloppeur Apr\u00e8s 40",
+    "summary": "Mon histoire personnelle de d\u00e9veloppeur, saupoudr\u00e9e d'anecdotes, avec un message de paix et sant\u00e9 mentale, pour r\u00e9ussir une carri\u00e8re longue dans le milieu de la cr\u00e9ation de logiciels, sans perdre la t\u00eate ni l'envie de continuer.",
+    "speakerIds": ["adrian.kosmaczewski"],
+    "language": "FRENCH",
+    "topic": "Craft\/Maker",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Le Streaming d'API : pourquoi et comment transformer vos APIs statiques en donn\u00e9es temps r\u00e9el ?",
+    "summary": "Nous savons que l\u2019animation est essentielle pour l'interaction avec nos utilisateurs. Mais aujourd'hui l'interactivit\u00e9 ne peut plus se r\u00e9sumer \u00e0 l\u2019UX. Twitter, Waze, Slack \u2026 toutes les applications \u00e0 succ\u00e8s utilisent le temps r\u00e9el pour rendre leurs utilisateurs addicts.\n\nMais comment faire pour transformer votre API statique en un flux de donn\u00e9es temps-r\u00e9el ? Du pull ? Du push ? Des Webhooks ? Vous connaissez s\u00fbrement les Web-Sockets, mais avez vous d\u00e9j\u00e0 entendu parler de Server-Sent Events ?\n\nDans ce talk nous comparerons ces technologies pour comprendre dans quel cas elles s'appliquent le mieux avant de voir comment on peut aller encore plus loin en r\u00e9duisant la quantit\u00e9 de donn\u00e9es \u00e9chang\u00e9es. Et parce qu'il n'y a pas que le web qui a besoin de temps r\u00e9el (et parce que c'est bien plus fun), je vous montrerai comment faire danser des drones sur des APIs stream\u00e9es.",
+    "speakerIds": ["neveu.audrey"],
+    "language": "FRENCH",
+    "topic": "Dev",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "D\u00e9velopper une application de pari en ligne avec la blockchain Ethereum",
+    "summary": "Dans ce codelab, nous commencerons par une pr\u00e9sentation de la blockchain Ethereum et du principe des smart-contracts. \n\nPuis nous d\u00e9velopperons une Dapp (application compos\u00e9e d\u2019un smart contract en backend + une ihm) basique de pari en ligne sur Ethereum en utilisant le framework Truffle et Angular2.\n\nCela permettra d'apprendre : \n\n\u2022 \u00e0 cr\u00e9er et tester unitairement un smart contract, \n\n\u2022 \u00e0 interfacer ce smart contract avec une IHM Web en Angular2 et Metamask (noeud Ethereum tr\u00e8s light sous forme de plugin Chrome). \n\nDes connaissances du fonctionnement des concepts g\u00e9n\u00e9raux des blockchains sont fortement conseill\u00e9es pour ce codelab, m\u00eame si il y aura quelques rappels au d\u00e9but. \n\nPar contre, pas besoin de conna\u00eetre Ethereum, et la partie Angular2 sera fournie dans les grandes lignes aux participants",
+    "speakerIds": ["benjamin.fontaine", "françois.kha"],
+    "language": "FRENCH",
+    "topic": "Alien",
+    "format": "WORKSHOP",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "D\u00e9veloppez des applications web desktop avec Electron de Github",
+    "summary": "D\u2019un c\u00f4t\u00e9, nous avons la communaut\u00e9 web qui maintient un \u00e9cosyst\u00e8me riche permettant de construire des interfaces utilisateurs rapidement. De l\u2019autre c\u00f4t\u00e9, l\u2019\u00e9cosyst\u00e8me desktop poss\u00e8de des outils tr\u00e8s performants mais qui demandent beaucoup d\u2019investissement. Github s\u2019est retrouss\u00e9 les manches pour tirer le meilleur des deux mondes et a cr\u00e9\u00e9 Electron ! Electron, c\u2019est la possibilit\u00e9 de construire des applications gr\u00e2ce aux composants web tout en profitant des interactions riches avec la machine d\u2019une application desktop.\n\nAu cours de cette pr\u00e9sentation, nous allons revenir sur les raisons du succ\u00e8s grandissant d\u2019Electron et passerons en revue tout ce qu\u2019il offre en mati\u00e8re de packaging, de mises \u00e0 jour automatiques et de strat\u00e9gies de testing au travers du livecoding d\u2019une application meme generator.",
+    "speakerIds": ["eric.briand", "yvonnick.frin"],
+    "language": "FRENCH",
+    "topic": "Dev",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Hexagon challenge",
+    "summary": "C'est une proposition qui sort un peu du cadre. L'objectif n'est pas d'animer quelque chose juste pendant 110min, mais durant toute la conf\u00e9rence, en parall\u00e8le, et donc pas vraiment un workshop.\n\nHexagon challenge est une sorte de codingame. L'objectif est de d\u00e9velopper une AI pour conqu\u00e9rir des terrains. Les diff\u00e9rentes AI sont \u00e9valu\u00e9es en se rencontrant. Les participants peuvent ainsi s'amuser en d\u00e9veloppant et combattant les autres joueurs.\nLes r\u00e8gles sont simples et abordables \u00e0 tout le monde.\n\nLe top serait de pouvoir diffuser des matchs dans le grand amphi pendant les pauses et d'avoir un cr\u00e9neau de 15 min le dernier jour pour la finale. A d\u00e9faut, un petit stand dans le hall pour y mettre une t\u00e9l\u00e9.\n\n![Hexagon challenge](https://lh4.googleusercontent.com/TdzMs7r55PcCTivkKH3EjsbYeO1-h3-vBiJsG0KG3DWENVFzkAGL6xulegE5dLdUQ83pJYKmbEgOVAs=w3076-h1852)",
+    "speakerIds": ["florent.pellet", "clem", "epecoul"],
+    "topic": "Dev",
+    "format": "WORKSHOP",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Travailler autrement",
+    "summary": "Depuis plus d\u2019un si\u00e8cle, la soci\u00e9t\u00e9 exhibe et encourage presque qu\u2019une seule fa\u00e7on de travailler, c\u2019est \u00e0 dire 5j\/5, 220 jours\/an, avec un lien de subordination. Et cela alors que notre soci\u00e9t\u00e9 est en pleine mutation. Qui r\u00eave par exemple de travailler pour une seule soci\u00e9t\u00e9 toute sa vie ?\nN\u2019avons-nous pas m\u00e9lang\u00e9 l\u2019objectif et le moyen pour y parvenir ?\nPeut \u00eatre que vous souhaitez travailler moins, sur d\u2019autres sujets, pour des clients correspondant mieux \u00e0 votre \u00e9thique, \u00eatre nomade\u2026autant de fa\u00e7ons de travailler, de vivre que d\u2019individus, pourquoi voudrions-nous tous le m\u00eame mode de vie ?\nCeci n\u2019est pas r\u00e9serv\u00e9 aux bisounours mais accessible \u00e0 n\u2019importe qui, encore plus pour les d\u00e9veloppeurs.\n\nDurant ce talk, nous aimerions vous faire r\u00e9fl\u00e9chir et envisager une remise en question de votre fa\u00e7on de travailler.",
+    "speakerIds": ["florent.pellet", "clem"],
+    "language": "FRENCH",
+    "topic": "Hack\/Activism",
+    "format": "RANDOM",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "\u00c0 la d\u00e9couverte de Kanban avec Kanbanzine !",
+    "summary": "Cet atelier vous permettra de d\u00e9couvrir Kanban dans un contexte ludique. Vous y incarnerez un membre de l\u2019\u00e9quipe de r\u00e9daction d\u2019un nouveau magazine hebdomadaire. Votre mission est simple : apr\u00e8s une derni\u00e8re \u00e9dition ayant eu des r\u00e9sultats catastrophiques, vous \u00eates missionn\u00e9s par la Direction pour redresser la situation en publiant chaque semaine une \u00e9dition remportant toujours plus de succ\u00e8s.\n\nAutour d\u2019un plateau repr\u00e9sentant la cha\u00eene de production du magazine, vous exp\u00e9rimenterez la gestion de flux, en respectant les contraintes du syst\u00e8me et en faisant de votre mieux pour vous adapter aux al\u00e9as du quotidien.\n\nCet atelier comprend un debrief ayant pour but de pr\u00e9senter les principes Kanban, notamment en lien avec ce qui aura \u00e9t\u00e9 v\u00e9cu lors de la session et se cl\u00f4turera par une session de questions \/ r\u00e9ponses.\n\nCette exp\u00e9rience ludique a pour objectif :\n* de faire \u00e9merger les pratiques collaboratives au sein de l\u2019\u00e9quipe,\n* de toucher du doigt des concepts comme le co\u00fbt du d\u00e9lai ou encore l\u2019allocation de capacit\u00e9,\n* d\u2019exp\u00e9rimenter les b\u00e9n\u00e9fices de l\u2019approche de conduite du changement par les processus Kanban.",
+    "speakerIds": ["anne.gabrillagues", "arnaudG"],
+    "language": "FRENCH",
+    "topic": "Team",
+    "format": "WORKSHOP",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Remote-first?",
+    "summary": "En entreprise, le t\u00e9l\u00e9travail est de plus en plus r\u00e9pandu, mais souvent limit\u00e9 ou difficile. En co-cr\u00e9ant TailorDev, nous avons fait du travail \u00e0 distance (remote work) le mode de travail par d\u00e9faut. Entre exemples, astuces et retours d'exp\u00e9rience, je vous pr\u00e9senterai comment et pourquoi j'ai construit une entreprise \"remote-first\".",
+    "speakerIds": ["william.durand"],
+    "language": "FRENCH",
+    "topic": "Team",
+    "format": "RANDOM",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Comment g\u00e9rer son temps efficacement individuellement et en \u00e9quipe ?",
+    "summary": "Il est possible que vous ayiez la sensation de manquer de temps. Peut-\u00eatre m\u00eame que vous manquez de temps tout le temps. Et quand vous prenez enfin de le temps, vous \u00eates interrompus par un coll\u00e8ge, un mail, une demande client. S'ajoute \u00e0 cela des urgences \u00e0 traiter tout de suite car sinon ... \n\nBref avez tout \u00e7a vous finissez la journ\u00e9e en \u00e9tant plus ou moins fatigu\u00e9 et une impression d\u00e9sagr\u00e9able que \u00e7a n'avance pas alors que vous vous donnez \u00e0 fond !\n\nLa 1\u00e8re bonne nouvelle c'est que nous sommes sommes pas seuls \u00e0 avoir une mauvaise gestion du temps, la 2\u00e8me bonne nouvelle est qu'il existe des actions simples pour sortir de cette spirale infernale :-)\n\nDans cette session, je vous inviterai \u00e0 r\u00e9fl\u00e9chir sur votre propre gestion du temps individuelle et collective. Pour vous aider \u00e0 trouver des pistes d'am\u00e9lioration nous parlerons parall\u00e9lisation, priorisation, d\u00e9l\u00e9gation et dire non ...",
+    "speakerIds": ["romain"],
+    "language": "FRENCH",
+    "topic": "Team",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Myths and patterns of organizational change",
+    "summary": "Myths and Patterns of Organizational Change\n\nYou have great ideas. You're smart. The people in your organization are smart. Post Hoc, Ergo Propter Hoc -- the rest is easy -- simply make a transition plan and transparently explain the benefits. These and other organizational change myths will be tackled by Linda's talk about patterns for introducing new ideas. She will provide some useful tips for helping you start on Monday morning to grow any innovation step by step.",
+    "speakerIds": ["rising.linda"],
+    "language": "ENGLISH",
+    "topic": "Other",
+    "format": "KEYNOTE",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Cargo cult agile",
+    "summary": "On appelle cargo cult le fait d\u2019imiter des comportements, sans en comprendre le fonctionnement, en esp\u00e9rant obtenir les m\u00eames r\u00e9sultats.\nLes organisations adoptent un framework agile esp\u00e9rant livrer rapidement du logiciel \u00e0 haute valeur ajout\u00e9e. Peut-on parler de cargo cult agile ? Quelles sont les pratiques agiles les plus vuln\u00e9rables au cargo cult ?\nLe cargo cult agile n\u2019est pas une fatalit\u00e9. Voici mes solutions pour l\u2019\u00e9viter.",
+    "speakerIds": ["1326945522"],
+    "language": "FRENCH",
+    "topic": "Other",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Apprendre \u00e0 apprendre.",
+    "summary": "Un \u00e9chec scolaire, beaucoup d\u2019amertume vis \u00e0 vis du syst\u00e8me \u00e9ducatif classique, et le gout pour la vengeance, c\u2019est le parcours un peu chaotique dont je suis issu et qui m\u2019a forg\u00e9 une solide envie de partager mes connaissances en programmation.\n\nVoil\u00e0 comment un programmeur lambda de jeu vid\u00e9o se retrouve \u00e0 essayer d\u2019enseigner la programmation \u00e0 des classes de 35+ \u00e9l\u00e8ves post-ados d\u2019une formation tr\u00e8s \u00e9loign\u00e9e de la mati\u00e8re qui savent \u00e0 peine lire une consigne. Retour sur trois ann\u00e9es o\u00f9 j\u2019ai autant enseign\u00e9 qu\u2019appris. \n\n**La suite va vous \u00e9tonner.**",
+    "speakerIds": ["lvictorino"],
+    "language": "FRENCH",
+    "topic": "Education",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Des petits carr\u00e9s de couleur.",
+    "summary": "R\u00e9f\u00e9rencement, UX, Lean, Webdesign, Git, React, NodeJS, Performance, i18n, IoT, Open Source, CSS, Agile, Functional Programming, Data Viz, Google, Java, Marketing, Back End, Full Stack\u2026 Tout \u00e7a on s\u2019en cogne un peu puisqu\u2019\u00e0 la base on voulait juste faire des jeux vid\u00e9o. Non ? \n\nVenez faire plaisir \u00e0 votre vous d\u2019il y a 15\/20 ans qui avait des \u00e9toiles dans les yeux en voyant des carr\u00e9s de couleurs bouger sur son \u00e9cran. D\u00e9couvrons ensemble Pico-8, l\u2019\u00e9mulateur officiel d\u2019une console qui n\u2019a jamais exist\u00e9 : de gros pixels, peu de couleurs, peu de fonctionnalit\u00e9s, beaucoup de limitations, mais 32Ko d\u2019amour sinc\u00e8re et v\u00e9ritable qui fait du bien aux promesses faites il y a longtemps mais jamais oubli\u00e9es.\n\nAttention : des **notions** de programmation sont n\u00e9cessaires pour ne pas mourir de frustration durant ce workshop.",
+    "speakerIds": ["lvictorino"],
+    "language": "FRENCH",
+    "topic": "Other",
+    "format": "WORKSHOP",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Offrez-vous une exp\u00e9rience de design thinking",
+    "summary": "Design Thinking, Pens\u00e9e Design : vous \u00eates de plus en plus nombreux (ou pas ?) \u00e0 avoir entendu parler de ce mode d\u2019application des outils de conception utilis\u00e9s par les designers pour r\u00e9soudre une probl\u00e9matique d\u2019innovation.\n\nMais qu'est-ce qui rend le design thinking si attrayant?   \n\nL'objectif de notre atelier est d'exp\u00e9rimenter le design thinking sur un cas concret pour en comprendre le sens, la valeur ajout\u00e9e et les sp\u00e9cificit\u00e9s de chacune des \u00e9tapes. Nous n'avons pas invent\u00e9 cet atelier, nous animerons le \"design thinking workshop\" mis au point par l'universit\u00e9 de Standford. Il vous sera propos\u00e9 d\u2019exp\u00e9rimenter chaque \u00e9tape du design thinking \u00e0 travers l\u2019exp\u00e9rience d\u2019offrir des cadeaux.\n\nA la fin de notre atelier, vous vous serez appropri\u00e9s les notions du design thinking gr\u00e2ce \u00e0 la pratique et aux moments de d\u00e9brief. Vous aurez v\u00e9cu un moment d'intelligence collective. \n\nNotre promesse : vous faire tout comprendre en moins de 2h et avec z\u00e9ro slides !",
+    "speakerIds": ["marine.cloux", "sylvia.cohen"],
+    "language": "FRENCH",
+    "topic": "Product",
+    "format": "WORKSHOP",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "How I'm turning Usability into a Boolean, Non-Negotiable, System",
+    "summary": "Moving from zero interactions with your users to fully User-Centered Design methodology may freak you out. I know.\nUsability principles may seem pretty uneasy to translate to real UI screens and user interaction. I know.\nSo you'd better not go there. I know. \nBut your users may feel angry at you not thinking on them when coding. I know.\nThis is why I'm currently helping the R&D team at Bonitasoft to think and apply Usability as a Boolean system. And now, it's non negotiable! Come learn how.",
+    "speakerIds": ["nathalie.cotté"],
+    "language": "ENGLISH",
+    "topic": "Other",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "La th\u00e9orie des graphes, appliqu\u00e9e \u00e0 git.",
+    "summary": "Comprendre Git n\u2019est pas forc\u00e9ment chose ais\u00e9e, pourtant ce n\u2019est pas si compliqu\u00e9 qu\u2019on ne le pense gr\u00e2ce \u00e0 la th\u00e9orie des graphes. Apr\u00e8s une rapide introduction \u00e0 cette fameuse th\u00e9orie, nous verrons comment elle s'applique \u00e0 Git. Ce talk ne vous apprendra pas de commande Git incroyable, ne parlera pas impl\u00e9mentation, code, ou \u201cplomberie\u201d, vous ne connaitrez probablement pas de nouveau tour de magie en sortant (ou peut-\u00eatre bien que si), mais vous aurez une nouvelle compr\u00e9hension du fonctionnement de git, et vous comprendrez enfin ce que vous faites avec `git rebase` et `cherry-pick`, ainsi que ce que fait `git gc`, et c\u2019est d\u00e9j\u00e0 pas mal.",
+    "speakerIds": ["ubermuda"],
+    "language": "FRENCH",
+    "topic": "Dev",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "How to become an good Open Source contributor in 1 hour",
+    "summary": "Etes-vous utilisateur de projets open source? Tr\u00e8s probablement... Mais avez-vous d\u00e9j\u00e0 song\u00e9 \u00e0 sauter le pas et devenir contributeur? La d\u00e9marche peut \u00eatre difficile pour plusieurs raisons: vous ne savez pas par o\u00f9 commencer, vous vous dites \"personne ne voudra de mes contributions\", vous avez d\u00e9j\u00e0 propos\u00e9 des patchs mais vous voulez augmenter vos chances ou devenir un meilleur contributeur... Et si vous avez vous m\u00eame d\u00e9marr\u00e9 un projet open source, peut-\u00eatre vous demandez-vous comment mieux le g\u00e9rer, \u00eatre plus encourageant envers les contributions? Ce talk vous montrera avec humour que participer \u00e0 l'open source et devenir un *bon* contributeur n'est pas si difficile.",
+    "speakerIds": ["simonbasle"],
+    "language": "ENGLISH",
+    "topic": "Dev",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Hands-on Angular: let's chat!",
+    "summary": "Le nouveau framework de Google est disponible dans sa version stable (2.0.0) depuis mi-septembre 2016. Je vous propose de d\u00e9couvrir, par la pratique, les concepts et les fonctionnalit\u00e9s que propose Angular en d\u00e9veloppant une application web de chat (*almost from scratch...*). Si vous n'avez pas encore eu le temps de vous plonger dans cet \u00e9cosyst\u00e8me bien particulier, cet atelier est fait pour vous !\n\n**Au programme :**\n\n- Un peu de th\u00e9orie avec quelques slides pour avoir les id\u00e9es bien en place ;-)\n- Beaucoup de pratique avec :\n    - *Composition* de l'application de base\n    - Injection de d\u00e9pendances\n    - Observables avec RxJS et Http\n    - WebSockets avec socket.io\n\nL'atelier est organis\u00e9 de fa\u00e7on didactique et d\u00e9coup\u00e9 en plusieurs \u00e9tapes progressives. La correction de chaque \u00e9tape est disponible pour permettre la progression en cas de blocage. Nul besoin de conna\u00eetre Angular mais de bonnes connaissances en JavaScript (ES2015+) ou TypeScript seront utiles.\n\n**Pr\u00e9-requis :**\n\n- Git\n- Node 7+ \/ npm 3.10.x\n- Votre \u00e9diteur de code pr\u00e9f\u00e9r\u00e9 (je conseille **Visual Studio Code** pour le support TypeScript)",
+    "speakerIds": ["npayot"],
+    "language": "FRENCH",
+    "topic": "Dev",
+    "format": "WORKSHOP",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "React Native dans vos apps. Vos apps dans React Native",
+    "summary": "React Native, \u00e7a fait buzzword. Oh wait, c'est carr\u00e9ment trop buzzword.\nReact Native, c'est pas histoire de laisser les Web Developer faire des Apps de mani\u00e8re pas trop sale.\nReact Native, c'est pas juste pour faire du Cross Platform.\nEn fait, c'est plus une techno assez fine qui va changer le d\u00e9veloppement mobile m\u00eame pour les Devs Natifs !\nJe vous propose de d\u00e9couvrir le point de vue d'un dev Natif en voyage dans React native =D",
+    "speakerIds": ["230222279"],
+    "language": "FRENCH",
+    "topic": "Dev",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Majority Judgment",
+    "summary": "Majority Judgment is a new voting method where voters are explicitly charged with a solemn task of expressing their opinions precisely by evaluating the merit of every candidate in an ordinal scale of measurement such as:  \u00ab Having taken into account all relevant considerations, I judge, in conscience, that as President of the United States of America each of the following candidates would be: a Great , a Good , an Average , a Poor , a Terrible  President.\u00bb Majorities determine the electorate's evaluation of each candidate and the ranking between every pair of candidates \u2014necessarily transitive\u2014 with the first-placed among them the winner. Majority judgment\u2019s principal properties are presented. It best resists manipulation or \u201cgaming the vote\u201d. It is not subject to Arrow\u2019s impossibility, nor to Condorcet\u2019s paradox. The mechanism and its properties are presented via real data (French and US presidential elections, committee decisions, skating and wine competitions).\n\nReferences:\nBalinski, M., and R. Laraki. 2011. Majority Judgment: Measuring, Ranking, and Electing. MIT Press, Cambridge, MA.",
+    "speakerIds": ["rida.laraki"],
+    "language": "ENGLISH",
+    "topic": "Alien",
+    "format": "KEYNOTE",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "L'odyss\u00e9e de la Log",
+    "summary": "Suivez le p\u00e9riple d'une log depuis son \u00e9mission, jusqu'\u00e0 sa destination finale. Un parcourt sem\u00e9 d\u2019emb\u00fbches pour sauver la belle application du m\u00e9chant NullPointor. Des courses poursuites \u00e0 plus 10000 messages\/s dans le d\u00e9dale des syst\u00e8mes distribu\u00e9s.\nActeurs: Logback le faillot, Filebeat l'espion, Kafka le transporteur, Elasticsearch.... Costumes et Maquillage: Logstash\n\nIl s'agit d'un retour d'exp\u00e9rience sur la configuration et l'exploitation d'un pipeline de donn\u00e9es (des logs, des m\u00e9triques...). A partir des probl\u00e8mes rencontr\u00e9s  en production, j'expliquerai le fonctionnement interne des outils utilis\u00e9s, pour vous permettre d'\u00e9viter les m\u00eame \u00e9cueils. Je m\u2019int\u00e9resserai \u00e0 des probl\u00e9matiques comme la fiabilit\u00e9 (perte de messages), la r\u00e9silience, la performance ou la s\u00e9curit\u00e9.",
+    "speakerIds": ["gerald.quintana"],
+    "language": "FRENCH",
+    "topic": "Ops",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Data Engineer's Toolkit",
+    "summary": "Avoir des donn\u00e9es de qualit\u00e9, mise \u00e0 jour \u00e0 la bonne fr\u00e9quence et correctement pr\u00e9sent\u00e9es permet de prendre les bonnes d\u00e9cisions. Mais de nos jours, il y a de plus en plus de cloisons entre les diff\u00e9rentes donn\u00e9es au sein d\u2019une entreprise pour diff\u00e9rentes raisons. De ce fait, la donn\u00e9e est en constant mouvement au sein du syst\u00e8me d\u2019information d\u2019une entreprise. Un des r\u00f4les du data engineer est de s\u2019assurer que les utilisateurs ne sentent pas ou tr\u00e8s peu ce cloisonnement. Quand on est en charge de construire ces voies d\u2019\u00e9change de donn\u00e9es, on doit faire un choix entre les diff\u00e9rentes options suivantes :\n\n* Coder les flux d\u2019int\u00e9gration \u00e0 la main ou avec un framework\n* Utiliser un ETL\n* Mettre en place une architecture orient\u00e9e bus avec un ESB\n* Utiliser les frameworks de data processing orient\u00e9s Big Data (Spark, Kafka streams, etc).\nCette pr\u00e9sentation se focalisera sur les diff\u00e9rents outils et approches d\u2019\u00e9change de donn\u00e9es. Il pr\u00e9sentera chaque outil dans son contexte historique et ces diff\u00e9rents cas d\u2019utilisation. Cette pr\u00e9sentation posera les bases des questions qu'on se doit de se poser pour un choix ad\u00e9quat.",
+    "speakerIds": ["horalass"],
+    "language": "FRENCH",
+    "topic": "Dev",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Probabilistic Programming : Tuer un pi\u00e9ton ou sacrifier les passagers ?",
+    "summary": "La programmation probabiliste cr\u00e9e des syst\u00e8mes qui prennent des d\u00e9cisions \u00e0 partir d'observations dont la certitude n'est pas garantie. Bien qu'encore peut d\u00e9velopp\u00e9e, ce type de programmation va \u00eatre une pi\u00e8ce essentielle des outils bas\u00e9s sur la composition d'algorithmes de machine learning.",
+    "speakerIds": ["didier.girard"],
+    "language": "FRENCH",
+    "topic": "Alien",
+    "format": "RANDOM",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "JavaScript... *soupirs*",
+    "summary": "Vous baignez dans le JavaScript depuis quelques ann\u00e9es ? Vous avez suivi ce qui se passe dans ce monde l\u00e0 ? Vous avez donc certainement crois\u00e9 le terme de \u00abfatigue\u00bb, et vous l'avez peut \u00eatre v\u00e9cue.\n\nJ'ai envie de d\u00e9cortiquer un peu avec vous ce qu'il y a derri\u00e8re ce terme d\u00e9pass\u00e9 (d\u00e9cembre 2015 !!), en prenant un peu de recul pour avoir une vision sur l'ensemble du paysage JavaScript, du langage aux d\u00e9veloppeurs.\n\nAu programme:\n\n- JavaScript, frameworks et outils\n- Communaut\u00e9s et open source\n- Communication et \u00abadvocacy\u00bb\n- \u00abD\u00e9veloppeur JavaScript\u00bb: un m\u00e9tier d'avenir ?\n\nEssayons de r\u00e9fl\u00e9chir ensemble o\u00f9 l'on va !",
+    "speakerIds": ["siegfried.ehret"],
+    "language": "FRENCH",
+    "topic": "Dev",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Conqu\u00e9rir le monde avec CoreOs",
+    "summary": "Sur le fond d'un star wars camp, nous vous proposons de r\u00e9aliser le plus grand cluster de CoreOs jamais cr\u00e9\u00e9 ! Un peu d'Ansible par ci et un peu de Fleet par la, et nous voici avec une arm\u00e9e de Docker \u00e0 disposition !\n\nEt si les Ewok prenaient le pouvoir et installaient Kubernetes pour remplacer Fleet sur ce CoreOs que se passerait il ?\n\nRejoignez cette exp\u00e9rience XXL.",
+    "speakerIds": ["116929121394158032970", "antoine.stalin"],
+    "language": "FRENCH",
+    "topic": "Ops",
+    "format": "WORKSHOP",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Management responsable et cr\u00e9ation de valeur partag\u00e9e",
+    "summary": "Le management responsable (inspir\u00e9 des principes du d\u00e9veloppement durable) est-il un levier de comp\u00e9titivit\u00e9 pour les entreprises ? Les transitions num\u00e9rique, \u00e9cologique et \u00e9nerg\u00e9tique invitent \u00e0 r\u00e9inventer la cr\u00e9ation de valeur dans les organisations. Le concept de \"cr\u00e9ation de valeur partag\u00e9e\" popularis\u00e9 par Porter et Kramer en 2011 est-il une r\u00e9ponse aux enjeux soci\u00e9taux du 21\u00e8me si\u00e8cle ? Autant de sujets au c\u0153ur de nombreux d\u00e9bats actuels dans les entreprises, notamment les PME-PMI...",
+    "speakerIds": ["sandrine.berger-douce", "arnaud.gautier"],
+    "language": "FRENCH",
+    "topic": "Education",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Soft Robotics for Space Applications",
+    "summary": "The emerging field of soft robotics represents an opportunity for novel solutions in the demanding environment of space. This talk will feature a brief overview of the domain of soft robotics, its suitability to space exploration applications, and a survey of NASA funded projects involving soft and\/or hybrid robotics. There will also be  discussion of the interpretation of next-generation space suits as wearable soft robots, and the exciting potential mechanical counter-pressure presents.",
+    "speakerIds": ["kari.love"],
+    "language": "ENGLISH",
+    "topic": "Other",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "WebAssembly pour les d\u00e9veloppeurs Web",
+    "summary": "WebAssembly est une proposition pour un nouveau standard W3C : un format d'ex\u00e9cution binaire pour le Web. Il se veut simple, compact et aussi rapide que le code natif \u00e0 l'ex\u00e9cution. Se basant sur des id\u00e9es d\u00e9riv\u00e9es d'asm.js, ce nouveau format permet de lancer des applications impressionantes et tr\u00e8s avides de performances dans des navigateurs Web. Support\u00e9 par Mozilla, Google, Webkit et Microsoft, sa conception est ouverte et collaborative depuis le d\u00e9but. Et donc concr\u00e8tement, qu'est-ce que tout cela signifie ? Qu'est-ce que cela va changer pour les d\u00e9veloppeurs, au quotidien ? Comment utiliser WebAssembly d\u00e8s aujourd'hui et pour quels usages ? Et JavaScript dans tout \u00e7a ? Autant de questions que l'on va explorer ensemble.",
+    "speakerIds": ["benjamin.bouvier"],
+    "language": "FRENCH",
+    "topic": "Dev",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Vers une r\u00e9volution entrepreneuriale - De l\u2019effet de mode \u00e0 la r\u00e9alit\u00e9 des enjeux et des pratiques",
+    "summary": "Terme polys\u00e9mique, l\u2019entrepreneuriat refl\u00e8te plusieurs r\u00e9alit\u00e9s. Au-del\u00e0 de l\u2019effet de mode, les pays et les cultures proposent diff\u00e9rentes acceptions, de la cr\u00e9ation d\u2019entreprise \u00e0 la start-ups \u2026 au d\u00e9veloppement de l\u2019esprit d\u2019entreprendre. Depuis la troisi\u00e8me r\u00e9volution industrielle et l\u2019apparition de l\u2019\u00e8re du num\u00e9rique, nous assistons \u00e0 une v\u00e9ritable transformation de notre soci\u00e9t\u00e9. Ces mutations profondes ont fait appara\u00eetre de nouvelles attentes, au niveau \u00e9conomique et social. Ainsi, l\u2019entrepreneuriat est devenu une pr\u00e9occupation partag\u00e9e r\u00e9pondant \u00e0 de multiples enjeux (croissance \u00e9conomique, cr\u00e9ation d\u2019emplois, insertion sociale, r\u00e9alisation  de soi \u2026) et semble par\u00e9 de multiples vertus : cr\u00e9ativit\u00e9, innovation, sens de l\u2019initiative, flexibilit\u00e9 \u2026 \nAu-del\u00e0 des domaines d\u2019activit\u00e9s, se pose la question de la cr\u00e9ation et de la croissance des jeunes entreprises, technologiques ou non. Au niveau technologique, la croissance des start-ups num\u00e9riques est essentielle et concerne \u00e9galement les mutations du parc d\u2019entreprises existantes (les PME\/PMI repr\u00e9sentent la grande majorit\u00e9 des entreprises). Le virage num\u00e9rique permettrait d'apporter un demi-point de croissance annuel au PIB fran\u00e7ais. Accompagner les start-ups permet de marquer la rencontre entre l\u2019innovation et certains attributs de l\u2019esprit d\u2019entreprendre (acceptation de l\u2019\u00e9chec, droit \u00e0 l\u2019erreur, valorisation financi\u00e8re de la prise de risque \u2026). Des mesures sont mises en place afin de favoriser la cr\u00e9ation de start-ups, mais \u00e9galement d\u2019inciter les particuliers \u00e0 investir ou d\u00e9velopper le financement participatif. Des outils juridiques (par exemple le statut de SCOP) se d\u00e9veloppent conjointement \u00e0 l\u2019\u00e9volution des besoins et des attentes des cr\u00e9ateurs (impact de la g\u00e9n\u00e9ration, notamment Y et Z). Les approches afin d\u2019accompagner ces mouvements de fonds \u00e9voluent \u00e9galement. Loin de l\u2019approche classique d\u00e9terministe et pr\u00e9visionniste (r\u00e9daction d\u2019un business plan), les processus de construction it\u00e9ratifs et effectuals permettent de se concentrer sur la valeur (lean start-up, nouveaux business model \u2026). \nA partir d\u2019une approche historique, nous proposons d\u2019aborder l\u2019entrepreneuriat \u00e0 partir de son \u00e9cosyst\u00e8me, en pr\u00e9cisant les diff\u00e9rents enjeux (notamment au regard du d\u00e9veloppement de la technologie et de l\u2019innovation), les modalit\u00e9s de mise en \u0153uvre (et les outils) et la place essentielle de l\u2019individu cr\u00e9ateur ou dirigeant.",
+    "speakerIds": ["jean-michel.degeorge"],
+    "language": "FRENCH",
+    "topic": "Education",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Dev rencontre Ops, 1 an apr\u00e8s",
+    "summary": "Infrastructure AWS hautement r\u00e9siliante, architecture blue-green, d\u00e9ploiements enti\u00e8rement automatis\u00e9s, application Symfony d\u00e9coupl\u00e9e en microservices g\u00e9r\u00e9s par un API Manager... Nous avions tous les outils pour former une \u00e9quipe Devops performante. Pourtant il nous manquait un ingr\u00e9dient essentiel: la pratique, qui nous a permis d'am\u00e9liorer significativement la mani\u00e8re dont nous collaborons !\n\nC'est pourquoi, nous, Pauline, ops, et Aurore, dev, souhaitons revenir avec vous sur un an de projet qui a abouti au lancement d'une nouvelle plateforme web d'un leader industriel mondial. Gr\u00e2ce \u00e0 des exemples concrets, vous d\u00e9couvrirez nos bonnes id\u00e9es, aussi bien techniques qu'organisationnelles, mais aussi les erreurs que nous avons commises et comment nous les avons corrig\u00e9es afin que vous puissiez les \u00e9viter.",
+    "speakerIds": ["aurore.malherbes", "pauline.bourjot"],
+    "language": "FRENCH",
+    "topic": "Dev",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "The Quest for the Ultimate Test Story",
+    "summary": "Good stories last: They release emotions, they have their own life, they make you proud and they can help you inform and move others. This is why we embarked on our quest: the quest for the Ultimate Test Story! We set forth to scour the earth in search of testers. Testers with interesting experiences and crazy stories to tell, but not having the words to bring them to life. Our weapon of choice: Test Sphere. A deck of hundred cards that inspires and supports these testers to craft, temper and shape their raw experiences into strong, red-hot stories of power.\n\nIn our workshop we will teach you how to use these cards, by giving you different assignments in small groups. Most importantly: this means you are going to to tell test stories. We are convinced that every tester has had interesting experiences, that deserve to be told and shared. After telling each other these stories, you can start to discuss the content of the story and the performance of the storyteller:\nDo you have similar experiences? \nWould you do something differently?\nDo you have a challenging question?\nHow can the story be told in a more captivating way?\n\n\nAfter you finished the discussion, you can reward each other by giving a small gift in the form of a sticker to show your appreciation of sharing a story and insights. \nContent is vital, but it is also important to look at your performance: \u201chow to improve your storytelling\u201d. A good story is priceless: It can help you convince your manager or drive home your point in a coaching session. In our workshop it is crucial that you give each other feedback on how to tell a good story.\n\nCompleting the workshop, you will have done many interesting activities: you\u2019ll have heard and told lots of stories and have received feedback on how to narrate a great story. Maybe you were rewarded for your positive participation. Challenge yourself and your test colleagues by telling interesting test stories and who knows; maybe you can help us to finish our quest by performing for us: The Ultimate Test Story.\n\nStay awhile and listen. For the best place by the fire, is kept for,... the storyteller.",
+    "speakerIds": ["ard.kramer", "s_colson"],
+    "language": "ENGLISH",
+    "topic": "Education",
+    "format": "WORKSHOP",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Comment sauver la princesse...et si le Design Sprint m\u2019\u00e9tait cont\u00e9 ?",
+    "summary": "Le __Design Sprint__ est une m\u00e9thode de conception ultra-rapide peaufin\u00e9e par l\u2019\u00e9quipe Google Ventures (Jake Knapp) qui a largement puis\u00e9 dans le __Design Thinking__. Elle m\u00e9lange habilement diverses techniques d\u2019id\u00e9ation et conception, soutenue par __l\u2019intelligence collective__, et produit un r\u00e9sultat \u00e9tonnamment riche de sens.\n\nOh toi preux chevalier (chevali\u00e8re), empare-toi de l\u2019arme magique pour terrasser le dragon \u00e0 grand coup de Sprint et sauver ta princesse (ou ton prince), s\u2019il elle (ou il) le vaut bien ! Est-il vraiment possible de r\u00e9aliser cette qu\u00eate en 5 jours au lieu de 5 mois ? Comprendre pourquoi et comment \u00e7a marche, exemples \u00e0 l\u2019appui, astuces en bonus !\n\n1. __A quoi sert un design sprint ?__\nBonne question et merci de l\u2019avoir pos\u00e9e ;)\n2. __Un design sprint de r\u00eave\u2026__\n\"Le chevalier, la princesse et le dragon\", laissez-vous guider au coeur de la m\u00e9thode pour sauver la princesse !\n3. __Pourquoi \u00e7a marche ?__\nD\u00e9cryptage des moments cl\u00e9s, retours d'exp\u00e9riences et cas d'\u00e9tudes pour comprendre les m\u00e9canismes de la m\u00e9thode qui transcendent le projet.\n4. __(re)Apprendre \u00e0 travailler ensemble...autrement.__\nQuand le super cerveau du groupe devient plus puissant que la somme des individualit\u00e9s.",
+    "speakerIds": ["benjamin.richy"],
+    "language": "FRENCH",
+    "topic": "Design",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "CSS is Awesome!",
+    "summary": "Non, le CSS c\u2019est pas du coloriage !\n\nLa puissance du CSS est souvent sous-estim\u00e9e, cette session de Live-Coding sera l\u2019occasion de montrer quantit\u00e9 de trucs et astuces utiles quotidiennement pour les d\u00e9veloppeurs web.\n\nAujourd\u2019hui on entre dans l\u2019\u00e8re post-IE et on peut utiliser beaucoup plus sereinement la puissance que nous offre le CSS; pourquoi passer \u00e0 cot\u00e9 !\n\nEn mode \u2018no-javascript\u2019 venez d\u00e9couvrir des solutions pour faire des : collapsibles panels, accordions, compteurs, popovers, modals, tabs, \u2026",
+    "speakerIds": ["igor.laborie"],
+    "language": "FRENCH",
+    "topic": "Dev",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Gamification: Jouer pour Apprendre",
+    "summary": "Les b\u00e9n\u00e9fices du jeu pour les enfants n'est plus \u00e0 d\u00e9montrer: d\u00e9veloppant l'imagination et permettant la confrontation au monde r\u00e9el, il encourage leur d\u00e9veloppement. Souvent \u00e0 l'\u00e2ge adulte celui ci est plus mal per\u00e7u, vu comme une perte de temps. Et si les bienfaits du jeux pouvaient nous servir \u00e0 tout \u00e2ge comme un outil d'apprentissage?",
+    "speakerIds": ["114977533288635941721"],
+    "language": "FRENCH",
+    "topic": "Education",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "WireSketching - Dessiner les interfaces",
+    "summary": "\u201cC\u2019est tr\u00e8s joli\u2026 mais est-ce qu\u2019il va y avoir de la couleur?\u201c Me suis-je fait r\u00e9pondre plusieurs fois par des clients qui ne comprennaient pas que mes wireframes ne sont pas des propositions graphiques finales.  \n\nParfois, les mots manquent pour communiquer de nouvelles id\u00e9es. En design d'interface, il existe plusieurs formes de \"pop-up\" et de \"dropdown\u201d. Entre les designers, d\u00e9veloppeurs et autres professionnels, une rencontre de travail se transforme souvent en v\u00e9ritable tour de Babel! Les sketches sont rapides, ne co\u00fbtent rien, assure la compr\u00e9hension commune et transposent une \u00e9motion, d\u2019une fa\u00e7on que les wireframes et les maquettes n\u2019en sont pas capables.\n\nJe propose donc une m\u00e9thode sans douleur, pour apprendre \u00e0 communiquer ses id\u00e9es en utilisant une vocabulaire visuel pour les interfaces. Que vous n\u2019ayez jamais tenu un crayon de votre vie, ou que vous soyez artiste visuel confirm\u00e9, cet atelier se pr\u00eate parfaitement aux niveaux variables. \n\nVous apprendrez: \n\n1- Les techniques fondamentales du WireSketching (outils, technique, styles, \u00e9criture)\n2- Sketcher les diff\u00e9rents \u00e9l\u00e9ments d\u2019interface (menus, navigation, boutons, textes, images, etc.)\n3- Combiner le tout en mise en page\n\nLes participants seront ensuite capable de faciliter des sessions de brainstorm, Ils auront les outils en main pour faire des pr\u00e9sentations client impressionnantes et efficaces. Finalement, ils sauront faire en 10 minutes ce qui prendrait des heures \u00e0 faire autrement.",
+    "speakerIds": ["cynthia.savard.saucier"],
+    "language": "FRENCH",
+    "topic": "Design",
+    "format": "WORKSHOP",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Repr\u00e9senter l\u2019\u00e9conomie, le pouvoir, les lobbies gr\u00e2ce aux visualisations de donn\u00e9es : quand le designer fait l\u2019\u00e9quilibriste",
+    "summary": "A la fronti\u00e8re entre art, design, technologies et activisme se trouve ce que Carl DiSalvo appelle l\u2019adversarial design : une production d\u2019objets ou d\u2019interfaces qui ouvrent des espaces de confrontation politique, offrent des ressources et des opportunit\u00e9s de participer au d\u00e9bat public ou \u00e0 la contestation. La visualisation de donn\u00e9es et d\u2019informations s\u2019inscrit dans cette famille d\u2019artefacts quand elle permet aux citoyens de voir et percevoir des rapports, des tendances, des forces dans les enjeux publics, quand elle soul\u00e8ve de nouvelles questions et cr\u00e9e des zones de tensions id\u00e9ologiques.\nA partir de cet angle d\u2019approche, je pr\u00e9senterai le travail de recherche que j\u2019effectue sur la visualisation de donn\u00e9es \u00e9conomiques et en particulier sur la visualisation des r\u00e9seaux de lobbying dans les institutions europ\u00e9ennes. Ces exemples, auxquels s\u2019ajouteront quelques visualisations historiques, permettront de d\u00e9gager trois axes m\u00e9thodologiques permettant de d\u00e9crire la sp\u00e9cificit\u00e9 du design dans le champ de la visualisation de donn\u00e9es. Le premier concerne le rapport \u00e0 la complexit\u00e9 : \u00e0 travers des interfaces sur mesure, des modes de sc\u00e9narisation, nous verrons comment il est possible de guider dans la complexit\u00e9 plut\u00f4t que de la simplifier. Le deuxi\u00e8me axe abordera la pr\u00e9tendue objectivit\u00e9 ou l\u2019impression de rationalit\u00e9 qui \u00e9mane des visualisations de donn\u00e9es et l\u2019int\u00e9r\u00eat du designer \u00e0 privil\u00e9gier la transparence des m\u00e9thodes \u00e0 une neutralit\u00e9 veine. Enfin, nous verrons ce qu\u2019implique le fait de consid\u00e9rer et de traiter les visualisations de donn\u00e9es comme des images \u00e0 travers la rh\u00e9torique et la puissance symbolique.",
+    "speakerIds": ["fabrice.sabatier"],
+    "language": "FRENCH",
+    "topic": "Design",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Travailler moins pour gagner moins",
+    "summary": "Il y a un an j'ai d\u00e9cid\u00e9 de passer \u00e0 temps partiel, ou plut\u00f4t aux\nweek-end de trois jours. Est-ce que \u00e7a m'aide \u00e0 rattraper mon retard\ndans Game of Throne, augmenter le nombre d'heures que j'alloue \u00e0 ma\nveille technique ou bien \u00e0 passer pour quelqu'un qui n'aime pas\ntravailler ?\n\n\u00c0 vrai dire, j'ai surtout pu augmenter ma qualit\u00e9 de vie malgr\u00e9 ma\nbaisse de salaire, ainsi que d\u00e9dier ce temps \u00e0 du b\u00e9n\u00e9volat, m'a\u00e9rer\nl'esprit et voir du pays en me fatigant un peu moins.",
+    "speakerIds": ["thomas.parisot"],
+    "language": "FRENCH",
+    "topic": "Other",
+    "format": "RANDOM",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "La mafia lact\u00e9e au travail",
+    "summary": "Les statistiques fran\u00e7aises d'allaitement maternel \u00e0 6 mois sont bien tristounes. Une grande majorit\u00e9 des femmes cesse l'allaitement \u00e0 contrec\u0153ur au retour au travail apr\u00e8s le cong\u00e9 maternit\u00e9, et c'est dommage. (L'OMS pr\u00e9conise un allaitement maternel exclusif jusqu'\u00e0 6 mois, et open bar jusqu'aux 2 ans de l'enfant !) Avec quelques informations et un peu d'organisation, dans les conditions relativement favorables de l'IT, on devrait pouvoir am\u00e9liorer les choses\u2026\n\nQue pouvez-vous faire, *vous* ? R\u00e9flexions et retour d'exp\u00e9rience de deux m\u00e8res (5 enfants en tout) sur l'allaitement au travail.",
+    "speakerIds": ["tut_tuuut", "mere-teresa"],
+    "language": "FRENCH",
+    "topic": "Alien",
+    "format": "RANDOM",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Being a girl who codes in Romania",
+    "summary": "There are more male coders than female ones in the world. I don't know why. There just are. Little over a year ago I joined a French team of 30 or so developers - only two of whom were women. These numbers were surprising to me, coming from a team where there were as many women as there were men, and can be discouraging to girls considering a career in the industry. But they shouldn't be. I'm here to speak about the life of a coder in Romania from _a woman's perspective_ - not that it really changes anything. Coding knows no bounds - nor gender.",
+    "speakerIds": ["catalina.dobrica"],
+    "language": "ENGLISH",
+    "topic": "Other",
+    "format": "RANDOM",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Quelles biblioth\u00e8ques choisir pour votre projet data-science ? That's the question!",
+    "summary": "Des plus en plus de soci\u00e9t\u00e9s souhaitent int\u00e9grer de la data-science dans leurs projets. Difficile de ne pas se sentir perdu au milieu des nombreuses biblioth\u00e8ques propos\u00e9es, et il est encore plus difficile de s\u00e9lectionner la librairie qui correspond le mieux \u00e0 nos besoins m\u00e9tiers.\n\nCe talk vous pr\u00e9sentera, benchmark \u00e0 l\u2019appuie, diff\u00e9rentes biblioth\u00e8ques scala et python proposant des fonctionnalit\u00e9s de pr\u00e9traitement, de calcul scientifique ou encore de machine learning, afin de vous guider dans votre s\u00e9lection d\u2019outils pour la data-science.\n\nNous allons comparer les biblioth\u00e8ques Saddle, Smile, Breeze et Spark Mllib qui profitent de l\u2019aspect fonctionnel de scala et de ses pr\u00e9dispositions \u00e0 la scalabilit\u00e9, avec les biblioth\u00e8ques Pandas, Scipy, StatsModels et Scikit-Learn, qui permettent un d\u00e9veloppement rapide et flexible en python, pour \u00eatre plus confiant dans le choix de l'outil le plus adapt\u00e9 \u00e0 votre projet.",
+    "speakerIds": ["anastasia.lieva"],
+    "language": "FRENCH",
+    "topic": "Other",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Comment hacker la webcam de votre voisin(e) ?",
+    "summary": "Ce talk est une d\u00e9monstration de l'attaque de l'Homme du milieu (Man-In-The-Middle). L'objectif est de d\u00e9mystifier le hacking par la pratique (\u00e9thique!) et de sensibiliser aux risques que l'on court en permanence (au bureau, \u00e0 la maison ou dans un caf\u00e9 public).\n\nAu programme, le d\u00e9roulement complet d'une attaque :\n\n\u00e9coute r\u00e9seau\nvol de mot de passes\ncr\u00e9ation de trojan\n\u00e9vasion antivirus\ninfection\nprise de contr\u00f4le totale de la cible",
+    "speakerIds": ["charles.bochet"],
+    "language": "FRENCH",
+    "topic": "Hack\/Activism",
+    "format": "RANDOM",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "La DataViz avanc\u00e9e sur le Web en JavaScript avec D3.js",
+    "summary": "D3.js est depuis quelques ann\u00e9es la biblioth\u00e8que standard pour la cr\u00e9ation de visualisation de donn\u00e9es (dataviz) sur le web. Il est donc indispensable de ma\u00eetriser cette biblioth\u00e8que si un programmeur souhaite :\n\n* Cr\u00e9er sa propre dataviz from scratch \u00e0 partir de mockups\n* Adapter un des nombreux exemples D3.js disponibles sur https:\/\/d3js.org\/ \n* Contribuer \u00e0 une biblioth\u00e8que de visualisation bas\u00e9e sur D3.js (c3js, nvd3, ..)\n* Int\u00e9grer une visualization ou une biblioth\u00e8que bas\u00e9e sur D3.js dans un framework (react, angular) sous forme de component\n\nD3.js a les caract\u00e9ristiques suivantes que je pr\u00e9senterai dans l'atelier, afin de :\n\n* Facilement manipuler le DOM d'une page web \u00e0 la JQuery, aussi bien en SVG qu'en Canvas\n* Facilement cr\u00e9er des axes, labels et autres finitions indispensables \u00e0 une dataviz professionnelle\n* Interpoler diff\u00e9rents \u00e9tats du DOM pour faire des transitions anim\u00e9es\n* Cr\u00e9ation des layouts complexes de graphes ou de Treemap\n\nCe workshop a pour but d'\u00eatre tr\u00e8s technique et s'adresse \u00e0 un publique qui maitrise au moins la programmation web en g\u00e9n\u00e9ral, mais id\u00e9alement JavaScript niveau avanc\u00e9 et maitrise l'utilisation de biblioth\u00e8ques (JQuery, ..) ou framework JS (mais ce n'est pas indispensable).\n\nNous verrons donc pendant ce workshop :\n\n* Les principes de D3 \u00e9voqu\u00e9s ci-dessus en d\u00e9tails, et des exemples simples\n* Les sp\u00e9cificit\u00e9s de la V4 de D3 et ES6 et la cr\u00e9ation de modules https:\/\/github.com\/romsson\/d3-gridding\n* L'utilisation de graphiques r\u00e9-utilisables https:\/\/bost.ocks.org\/mike\/chart\/\n* La cr\u00e9ation d'une mini biblio dataviz r\u00e9utilisable https:\/\/github.com\/cid-harvard\/vis-toolkit\n* Le d\u00e9tail de nombreux exemples et quelques points int\u00e9ressants dans le code source de D3.js https:\/\/github.com\/d3\n\nLes participants pourront coder en live les exemples fournis au pr\u00e9alable dans l'interface http:\/\/blockbuilder.org\/ . Les principes de base de la visualisation seront aussi rapidement rappel\u00e9s, ainsi que l'utilisation de vrais jeux de donn\u00e9es pour les exemples.",
+    "speakerIds": ["14898705"],
+    "language": "FRENCH",
+    "topic": "Dev",
+    "format": "WORKSHOP",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Revenu universel, 25 minutes pour tout comprendre",
+    "summary": "Et si l'on donnait une somme d'argent mensuellement \u00e0 tout le monde sans conditions ? C'est le concept simple et clair du revenu universel. Il existe cependant de nombreuses concr\u00e9tisations possibles que nous \u00e9voquerons en r\u00e9pondant aux questions suivantes : Pourquoi le mettre en place ? A quel niveau ? Comment le financer ? Puis nous parlerons des diff\u00e9rentes exp\u00e9rimentations faites \u00e0 travers le monde. Nous finirons par le REVE (Revenu Emancipateur pour Vivre Epanoui), notre revenu universel id\u00e9al.",
+    "speakerIds": ["écoloHumanistes"],
+    "language": "FRENCH",
+    "topic": "Other",
+    "format": "KEYNOTE",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Serverless : transition du monolithique au syst\u00e8me distribu\u00e9",
+    "summary": "C'est l'histoire d'une application web. De base monolithique, elle a \u00e9volu\u00e9 pour int\u00e9grer de mani\u00e8re massive des technologies de type \"serverless\" (pool de 2000 AWS Lambda en production) : am\u00e9lioration drastique des performances, meilleure exp\u00e9rience utilisateur. L'introduction de cette technologie a surtout transform\u00e9 au plus profond l'architecture de l'application en un syst\u00e8me distribu\u00e9\u2026 et avec ma vision de tous mes futurs d\u00e9veloppements.",
+    "speakerIds": ["eunomie"],
+    "language": "FRENCH",
+    "topic": "Dev",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "50 ans de programmation, toujours vivant !",
+    "summary": "Programmer laisse-t-il des s\u00e9quelles ? Pas n\u00e9cessairement, mais des souvenirs, c'est s\u00fbr ! L'auteur nous raconte son pass\u00e9 de programmeur, et \u00e9gr\u00e8ne quelques anecdotes d'une pr\u00e9histoire h\u00e9ro\u00efque, o\u00f9 Windows n'existait pas encore, mais o\u00f9 tout n'\u00e9tait pas rose pour autant...",
+    "speakerIds": ["110883641223381082460"],
+    "language": "FRENCH",
+    "topic": "Other",
+    "format": "RANDOM",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Deep Learning pour la Reconnaissance de Chatons",
+    "summary": "Envie de comprendre le **deep learning par la pratique** ?\nDe nombreux frameworks existent aujourd'hui pour faire du deep learning mais les tutoriaux s'adressent souvent aux initi\u00e9s.\n\nCet atelier sera l'occasion de **d\u00e9tailler les principes de base** n\u00e9cessaires \u00e0 la compr\u00e9hension de ces frameworks.\nNous explorerons des \u00e9l\u00e9ments aujourd'hui typiques dans les r\u00e9seaux profonds : perceptron, descente de gradient, graphe de calcul, r\u00e9seaux convolutionels, ReLU, pr\u00e9-entra\u00eenement, adaptation \u00e0 une nouvelle t\u00e2che, etc.\n\nCet atelier utilisera la biblioth\u00e8que **TensorFlow**.",
+    "speakerIds": ["remiemonet"],
+    "language": "FRENCH",
+    "topic": "Other",
+    "format": "WORKSHOP",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "L'agilit\u00e9, un anarchisme incompatible avec l'entreprise ?",
+    "summary": "L'agilit\u00e9 ne fais pas toujours bon m\u00e9nage avec la culture d'entreprise. Si certaines entreprises r\u00e9forment totalement leur culture pour adopter l'agilit\u00e9, il arrive aussi que ce soit l'agilit\u00e9 qui soit vid\u00e9e de sa substance pour cohabiter avec la culture existante.\n\u00e0 travers un voyage au c\u0153ur de l'anarchisme et de ses valeurs (l'auto-organisation, l'adaptation au changement, la responsabilisation de chacun et le refus du dogmatisme ) nous retrouverons le chemin du manifeste agile afin d'expliquer cette rupture qu'a apport\u00e9 l'agilit\u00e9 et pourquoi elle fait d\u00e9bat ici ou l\u00e0, quand pour certains elle n'est que pure raison.",
+    "speakerIds": ["fabien.maury", "olivier.my"],
+    "language": "FRENCH",
+    "topic": "Team",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Le logiciel libre et leurs communaut\u00e9s peuvent-ils contribuer \u00e0 un monde meilleur ?",
+    "summary": "En 2014, en participant au programme Google Summer Code, j\u2019ai eu l\u2019opportunit\u00e9 de rejoindre la communaut\u00e9 du projet OpenMRS.\n\nOpenMRS est une plateforme de collecte de donn\u00e9es m\u00e9dicales (EMR), libre, gratuite et utilis\u00e9es dans de nombreux pays du tiers monde. L\u2019origine de ce projet remonte \u00e0 2004, pour am\u00e9liorer la lutte contre le SIDA en Afrique subsaharienne. Plus de dix ans apr\u00e8s, le projet rassemble une communaut\u00e9 de pr\u00e8s de 150 contributeurs actifs et 3000 utilisateurs dans le monde.\n\nLa nature humanitaire de ce projet, m'a pouss\u00e9 \u00e0 me questionner sur l\u2019impact et l\u2019influence qu\u2019un tel projet, et plus g\u00e9n\u00e9ralement les logiciels libres pouvaient avoir sur la soci\u00e9t\u00e9 et le monde actuel. L'objectif de ce talk est donc de partager cette experience et  de suciter votre reflexion  !",
+    "speakerIds": ["alexis.duque"],
+    "language": "FRENCH",
+    "topic": "Alien",
+    "format": "RANDOM",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Jenkins Moderne et Livraison Continue: \u00e9crivons ensemble des Pipeline D\u00e9claratifs pour votre application",
+    "summary": "Le projet Jenkins tente cette ann\u00e9e 2017 de rattraper son retard : \n* Une nouvelle interface graphique \"BlueOcean\" (r\u00e9\u00e9criture de z\u00e9ro en ReactJS), \n* Des nouveaux Pipelines D\u00e9claratifs (plus de Groovy \u00e0 apprendre, acc\u00e8s facile aux d\u00e9butants), \n* Une (r\u00e9)adaptation aux pratiques r\u00e9centes (Git\/Github flows, collaboration, DevOps, Docker).\n\nQu'en est-il r\u00e9ellement ? (SPOILER alerte: je travaille pour CloudBees, mais adore utiliser Travis et GitLab CI).\n\nL'objectif de cet atelier est de se faire une id\u00e9e concr\u00e8te du \"Jenkins moderne\" par la pratique plut\u00f4t que par du marketing.\n\nNous r\u00e9aliserons ensemble un \"Pipeline\" de livraison continue bas\u00e9 sur du Jenkins moderne. Au menu:\n* Int\u00e9gration avec Git\n* Configuration de l'environnement de build\n* Compilation\n* Tests & rapports\n* Visualisation\n* D\u00e9ploiement et interaction avec les Ops\n\nDes environnements h\u00e9berg\u00e9 dans Amazon seront disponibles par d\u00e9faut (Navigateur Web HTML5 requis).\n\nDes machines VirtualBox seront disponibles localement, en secours si l'internet est d\u00e9faillant (et afin de vous permettre de rejouer l'atelier apr\u00e8s la conf\u00e9rence).",
+    "speakerIds": ["DamienDuportal"],
+    "language": "FRENCH",
+    "topic": "Product",
+    "format": "WORKSHOP",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Progressive Web Apps, au-del\u00e0 du buzzword",
+    "summary": "Le concept de Progressive Web App a pour ambition de permettre aux applications web de rivaliser, dans une certaine mesure, avec les applications natives. En s\u2019appuyant sur quelques bonnes pratiques et certaines technologies, l'exp\u00e9rience utilisateur est consid\u00e9rablement am\u00e9lior\u00e9e en corrigeant par exemple les soucis de connectivit\u00e9 sur mobile ou en permettant l'utilisation de notifications.\n\nCette pr\u00e9sentation illustrera les avantages des Progressive Web Apps tout en expliquant comment les int\u00e9grer sur son application ou site web. Elle est bas\u00e9e sur un retour d\u2019exp\u00e9rience de plusieurs conf\u00e9rences, ainsi que le d\u00e9veloppement d\u2019une application web, en production, mettant en pratique les concepts des progressive web apps. Elle a pour but de d\u00e9montrer les b\u00e9n\u00e9fices qu'il y a d'utiliser ces concepts ainsi que la facilit\u00e9 de les impl\u00e9menter sur un projet.\n\nNous expliquerons, en se r\u00e9f\u00e9rant \u00e0 notre code d'exemple :\n\n- Quelles motivations soutiennent l'initiative des PWAs\n- Les bonnes pratiques \u00e0 mettre en oeuvre (RWD, S\u00e9curit\u00e9, SEO, etc.)\n- Les outils \u00e0 notre disposition et leur r\u00f4le (ServiceWorker, Push Notifications, Manifest, etc.)",
+    "speakerIds": ["paul-guillaume.déjardin", "antoine.le.taxin"],
+    "language": "FRENCH",
+    "topic": "Dev",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Spring Boot 2",
+    "summary": "La nouvelle g\u00e9n\u00e9ration de Spring Framework est d\u00e9j\u00e0 disponible ! Pour fonctionner sur Spring 5, les applications devront respecter de **nouveaux pr\u00e9-requis** (versions minimales de JDK, conteneurs, libraries...). En contrepartie, vous pourrez vous pr\u00e9parer \u00e0 l'arriv\u00e9e de **JDK9**, profiter du **support de Kotlin** et m\u00eame du nouveau **Spring WebFlux**. Cette session explique comment ces fontionnalit\u00e9s sont int\u00e9gr\u00e9es dans Spring Boot 2, disponible cet automne.",
+    "speakerIds": ["snicoll"],
+    "language": "FRENCH",
+    "topic": "Dev",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Il est temps de repenser notre mani\u00e8re de travailler !",
+    "summary": "Le travail fait partie int\u00e9grante notre vie, \u00e0 tel point que tout ce qui se passe en dehors devient presque anecdotique. Des hobbies, nous n'avons plus besoin : le travail est cens\u00e9 nous nourrir intellectuellement et nous offrir tout ce dont nous avons besoin pour nous \u00e9panouir. Mais que se passe-t-il quand il ne remplit plus cette mission, quand il ne nous nourrit plus, au propre comme au figur\u00e9 ? Je vous propose une r\u00e9flexion sur le travail, son histoire, le mal qu'il nous fait aujourd'hui et des pistes pour enfin le r\u00e9adapter \u00e0 l'humain. Entre autres sujets, nous parlerons burnout, entreprise lib\u00e9r\u00e9e, taylorisme, sociologie, bien-\u00eatre au travail, revenu inconditionnel de base, etc.",
+    "speakerIds": ["mcpaccard"],
+    "language": "FRENCH",
+    "topic": "Education",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Les tests utilisateurs du pauvre",
+    "summary": "Vous n'\u00eates pas UX designer ? D'ailleurs, votre entreprise n'a pas d'UX designer car \u00e7a co\u00fbte trop cher\/c'est inutile ? Mais vous avez envie de faire quelque chose pour votre pauvre produit qui devient de moins en moins utilisable et de plus en plus compliqu\u00e9 ? Alors, vous \u00eates probablement comme moi, l'ann\u00e9e derni\u00e8re quand j'ai d\u00e9cid\u00e9 de lancer des tests utilisateurs avec z\u00e9ro moyens. Dans ce retour d'exp\u00e9rience, je pr\u00e9senterais ma d\u00e9marche pour monter un ou deux sc\u00e9narios de tests, trouver des utilisateurs, organiser une session de tests et analyser les r\u00e9sultats.",
+    "speakerIds": ["annso_"],
+    "language": "FRENCH",
+    "topic": "Product",
+    "format": "RANDOM",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "L'orchestre un mod\u00e8le de gestion de groupe?",
+    "summary": "Passons les portes d'une salle de concert, un orchestre s'installe et joue ; concert merveilleux et instants partag\u00e9s entre musiciens et public, quelle r\u00e9ussite! Si l'on a id\u00e9e du travail musical que cela peut susciter (appelons cela la partie artistique et technique), qui soup\u00e7onnerait le travail sur la foule de musiciens afin d'en faire une \u00e9quipe qui s'\u00e9tablira durant l'ensemble des r\u00e9p\u00e9titions? Plusieurs heures de r\u00e9p\u00e9titions pour 1h30 de musique, autant d'heures permettant une d\u00e9couverte approfondie de l'\u0153uvre, mais \u00e9galement son partage avec un groupe afin d'aller vers un objectif commun: le concert. Ce sont ces heures de r\u00e9p\u00e9titions en groupe, cette face immerg\u00e9e de l'iceberg, que nous partagerons ensemble au-cours de cette keynote.",
+    "speakerIds": ["samuel.couffignal"],
+    "language": "FRENCH",
+    "topic": "Alien",
+    "format": "KEYNOTE",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Rust for Java developers",
+    "summary": "A quick introduction to the Rust Language. Code comparisons between Java and Rust, compiler features, type system, environment and integrating the two languages.\nTopics we will see:\n* Brief History of Rust - how did the project get started, main goals, first stable releases.\n* Main types and Functions - writing a very basic code and a deep comparison between Java style and Rust style. The level of verbosity is similar; however, the way you explicit the types may be different.\n* Structs and Traits, contrasting them with Interfaces and Abstract Classes in Java.\n* Lifetime vs GC - how can we remove objects from the memory without a GC? An interesting alternative approach from Rust to Java's GC. We will show the good and the complicated parts.\n* Notes about the compiler",
+    "speakerIds": ["hanneli.tavante"],
+    "language": "ENGLISH",
+    "topic": "Dev",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Philosophie Fonctionnelle",
+    "summary": "Et si, au lieu de vous pr\u00e9senter l\u2019outillage du paradigme fonctionnel parfois compliqu\u00e9 \u00e0 prendre en main et fortement charg\u00e9 en jargon, nous parlions de comment \u00ab penser en fonctionnel \u00bb ?\n?Et si, nous parlions du paradigme et non d\u2019une impl\u00e9mentation sp\u00e9cifique ? ?\nEt si, on explicitait les id\u00e9es qui font de ce paradigme une solution de choix pour certain type d\u2019applications et qui explique sa popularit\u00e9 grandissante ?  ?\nContrairement \u00e0 trop de pr\u00e9sentation sur la programmation fonctionnelle, je vous propose de d\u00e9couvrir ce paradigme \u00e0 travers son mod\u00e8le de pens\u00e9e et non de ses outils ou impl\u00e9mentations sp\u00e9cifiques.  \nUne pr\u00e9sentation accessible \u00e0 tous, sans jargon ou concepts complexes. Et qui pr\u00e9sente un usage du fonctionnel, possible au quotidien, dans vos langages pr\u00e9f\u00e9r\u00e9s.",
+    "speakerIds": ["arnaudlemaire"],
+    "language": "FRENCH",
+    "topic": "Dev",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Sp\u00e9cifications en milieu agile",
+    "summary": "Les sp\u00e9cifications ont parfois mauvaise presse : trop rigides, peu adapt\u00e9es, elles sont v\u00e9cues comme un fardeau par les d\u00e9veloppeurs. \n\nEn face, les m\u00e9thodologies agiles sont parfois accus\u00e9es d'\u00eatre trop dans le d\u00e9tail et d'emp\u00eacher la vision \u00e0 long terme du projet. \n\nEt s\u2019il \u00e9tait possible d'associer sp\u00e9cifications fonctionnelles et techniques avec les m\u00e9thodologies agiles pour associer vision \u00e0 long terme et flexibilit\u00e9 ? En associant les pratiques du user story mapping, de l'impact mapping et de l'event storming, nous verrons comment concilier agilit\u00e9 et vision produit !",
+    "speakerIds": ["arnaudlemaire"],
+    "language": "FRENCH",
+    "topic": "Product",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Pourquoi tous les d\u00e9veloppeurs sont-ils barbus ?",
+    "summary": "Contrairement \u00e0 beaucoup d\u2019id\u00e9es re\u00e7ues, l\u2019informatique n\u2019a pas \u00e9t\u00e9 cr\u00e9\u00e9 par et pour les hommes blancs am\u00e9ricains et europ\u00e9ens, et seulement eux. Loin de l\u00e0 !\n\nComment se fait-il alors que les femmes et les \u00ab minorit\u00e9s \u00bb soient si peu nombreuses dans les \u00e9coles d'informatique, dans les r\u00e9ponses aux offres d'emploi, et qu'il soit si difficile de citer les contributeur\u2022ice\u2022s qui ne correspondent pas au clich\u00e9 du d\u00e9veloppeur barbu amateur de pizza ?\n\nAid\u00e9 par l'Histoire de l'informatique, la psychologie et la sociologie, je vous donnerai des outils anti-mythes pour voir les probl\u00e8mes actuels et commencer \u00e0 les r\u00e9soudre. Et vous verrez pourquoi la soci\u00e9t\u00e9 toute enti\u00e8re en a bien besoin !",
+    "speakerIds": ["116917682933277334027"],
+    "language": "FRENCH",
+    "topic": "Hack\/Activism",
+    "format": "RANDOM",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Un language que tout le monde Elm",
+    "summary": "Depuis quelques ann\u00e9es, de nombreux outils sont apparus pour nous permettre de structurer au mieux nos applications front-end. Des biblioth\u00e8ques, comme React, des architectures de gestion d'\u00e9tats, comme Redux, et m\u00eame des surcouches au langage comme TypeScript.\n\nEt si nous pouvions repenser JavaScript de z\u00e9ro, et cr\u00e9er un langage adapt\u00e9 au d\u00e9veloppement web tel qu'on le pratique aujourd'hui, en tenant compte de toutes ces bonnes pratiques d\u00e9couvertes sur la route ?\n\nC'est de l\u00e0 qu'est n\u00e9 Elm, un langage fonctionnel qui se compile en JavaScript et qui certifie l'absence d'erreurs au runtime (fini les undefined is not a function!), dont les messages d'erreur \u00e0 la compilation sont limpides et les performances excellentes. En court : si \u00e7a compile, c'est que \u00e7a marche !\n\nJe vous propose de d\u00e9couvrir ce qui fait de ce langage l'un des plus productifs et confortables que j'ai pu utiliser \u00e0 travers sa syntaxe, et je vous montrerai ensuite qu'il est extr\u00eamement simple d'ajouter progressivement des briques Elm \u00e0 une application JavaScript standard ! Nous finirons enfin par un live-coding pour mettre en pratique ces connaissances nouvellement acquises.",
+    "speakerIds": ["2827211758"],
+    "language": "FRENCH",
+    "topic": "Dev",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Eco-conception web",
+    "summary": "On n'y pense pas forc\u00e9ment, les choix de Design et de D\u00e9veloppement des services Web ont aussi un co\u00fbt environnemental : performances, stockage, multiplication des services, design, etc. Tour d'horizon en chiffres, exemples, et ligne de conduite sur des bonnes pratiques pour un d\u00e9veloppement web plus durable.",
+    "speakerIds": ["212689489"],
+    "language": "FRENCH",
+    "topic": "Education",
+    "format": "RANDOM",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "D\u00e9veloppeur sans domicile fixe",
+    "summary": "Les anciens mod\u00e8les nous proposaient d\u2019habiter \u00e0 proximit\u00e9 de notre lieu de travail.\nL\u2019Internet a cr\u00e9\u00e9 le bouleversement et rendu nos bureaux virtuels, notre entreprise d\u00e9mat\u00e9rialis\u00e9e.\nO\u00f9 habiter lorsqu\u2019on a la vastitude du monde ouverte devant soi ?\n\n\u00catre citoyen de l\u2019univers num\u00e9rique peut se transcender dans la vie r\u00e9elle.\nOn troque alors les embouteillages pour les voyages, le bureau pour les lieux ouverts, la possession pour la libert\u00e9.\n\nLe \u201cDigital Nomad\u201d pouss\u00e9 \u00e0 son extr\u00eame ne parle plus d\u2019un domicile fixe, mais de lieux d\u2019habitations \u00e9ph\u00e9m\u00e8res.\nDes lieux de vie nouveaux et des paysages changeant, une vie sans routine dans un quotidien qui vient unifier vies professionnelle et personnelle.\n\nApr\u00e8s avoir gout\u00e9 \u00e0 ce mode de vie, j\u2019ai quitt\u00e9 la notion de \u201clogement\u201d il y a 3 ans.\nDifficile d\u2019envisager la vie autrement quand tout est devenu possible.",
+    "speakerIds": ["vinyll"],
+    "language": "FRENCH",
+    "topic": "Alien",
+    "format": "RANDOM",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Des robots qui s'adaptent \u00e0 leur environnement",
+    "summary": "Les robots sont de plus en plus pr\u00e9sents, que ce soit pour r\u00e9aliser\ndes t\u00e2ches r\u00e9p\u00e9titives ou pour nettoyer le sol ou une piscine. Loin\ndes robots de science fiction, ces robots modernes sont parfois dot\u00e9s\nde capacit\u00e9s surpassant celle des humains, mais il s'agit avant tout\nde super-sp\u00e9cialistes incapables de faire face \u00e0 une situation non\npr\u00e9vue par leur concepteur. Les humains et les animaux disposent donc\nde capacit\u00e9s d'adaptation encore hors d'atteinte en robotique. Les\nchercheurs s'int\u00e9ressent \u00e0 la biologie et \u00e0 la psychologie pour\nd\u00e9passer ces limites et d\u00e9velopper des robots qui, \u00e0 terme, pourraient\nintervenir dans notre environnement quotidien. La robotique\nd\u00e9veloppementale vise \u00e0 permettre aux robots d'apprendre de leurs\ninteractions avec l'environnement. Nous verrons les questions que cela\npose et les approches d\u00e9velopp\u00e9es, notamment dans le cadre du projet\nEurop\u00e9en [DREAM](http:\/\/robotsthatdream.eu\/).",
+    "speakerIds": ["stéphane.doncieux"],
+    "language": "FRENCH",
+    "topic": "Design",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "The Future of Kotlin: How agile can language development be?",
+    "summary": "A successful project usually grows, and Kotlin is no exception. We are adding new targets (JavaScript and Native) and new computation models (coroutines). This talk is about our vision of the future of Kotlin as a language and a ecosystem.\n\nWe'll talk strategy: what we think our industry needs at large and how we are going to fit Kotlin into this picture. \nWe'll talk tactics: how we deal with legacy and compatibility issues, and whether there will ever be Kotlin 2.0.\nWe'll talk operations: can we do \u201ccontinuous delivery\u201d for language features? Or, more generally, how agile can language development be?",
+    "speakerIds": ["andrey.breslav"],
+    "language": "ENGLISH",
+    "topic": "Dev",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Wair",
+    "summary": "TBD",
+    "speakerIds": ["92989140"],
+    "language": "FRENCH",
+    "topic": "Product",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Project Amber - What's new in Java 10",
+    "summary": "Ca y est ! Java 9 est releas\u00e9e ou presque. Bon alors y'a quoi dans Java 10 ?\nCe talk parle des nouvelles features qui vont \u00eatre (ou pas) introduites dans Java 10, \u00e0 savoir, les trucs laiss\u00e9s en plan de Java 8, l'inf\u00e9rence de type pour les variables locales, la covariance des types param\u00e9tr\u00e9s \u00e0 la d\u00e9claration et la grosse feature de Java 10 : le pattern matching et les types structur\u00e9s.\n\nDans le cas du pattern matching, je ferai un petit tour des diff\u00e9rents langages qui impl\u00e9mentent le pattern matching, leurs diff\u00e9rentes s\u00e9mantiques. Dans un second temps, je pr\u00e9ciserai la s\u00e9mantique qui est pr\u00e9vue pour Java et montrerai comment il est pr\u00e9vu d'impl\u00e9menter le pattern matching en Java.",
+    "speakerIds": ["rémi.forax"],
+    "language": "FRENCH",
+    "topic": "Dev",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Email: How Hard Could It Be?",
+    "summary": "Over the past 3 years, ProtonMail has grown into the world\u2019s largest encrypted email service, with over 2 million users. I will discuss the benefits and challenges of working in the open and federated email space, the technical and usability hurdles surrounding encrypted email, and the importance of security-first development in the age of data breaches.",
+    "speakerIds": ["bart.butler"],
+    "language": "ENGLISH",
+    "topic": "Hack\/Activism",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Cloud Encryption with Cryptomator \u2013 Privacy Protection for Everyone",
+    "summary": "Current and past political events have initiated an extensive discussion on privacy and informational self-determination. The vast majority of consumers states their desire to keep personal data private while in everyday life, they use services and approve privacy agreements that undermine their informational self-determination on a large scale. This contradiction is referred to as the privacy paradox. While there are tools designed to keep personal data private, employing such tools is often associated with reduced functionality and\/or usability and new privacy issues resulting from their use. Such deficiencies inhibit their widespread use.\n\nCloud storages are one example for a privacy-critical infrastructure as personal data is distributed across a broad network while the location of storage is often out of the user\u2019s control. Client-side (end-to-end) encryption is a valid way to protect those data independent of security measures taken by the cloud provider and its privacy agreements. However, existing tools \u2013 e.g., for disk or file encryption \u2013 do not work seamlessly with the cloud.\n\nThe idea behind Cryptomator is to make cloud encryption as user-friendly, transparent, and understandable as possible to enable everyone to protect their data. In their talk, the developers of Cryptomator emphasize the importance of privacy in our information society in general and the significance of sophisticated and user-friendly tools to empower everyone to safeguard their privacy in particular. The general idea behind Cryptomator, its encryption scheme and challenges when targeting the cloud will be outlined. In addition, the architecture of the application and future development plans will be illustrated.",
+    "speakerIds": ["christian.schmickler", "markus.kreusch"],
+    "language": "ENGLISH",
+    "topic": "Product",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Cloud Encryption with Cryptomator \u2013 Privacy Protection for Everyone",
+    "summary": "Current and past political events have initiated an extensive discussion on privacy and informational self-determination. The vast majority of consumers states their desire to keep personal data private while in everyday life, they use services and approve privacy agreements that undermine their informational self-determination on a large scale. This contradiction is referred to as the privacy paradox. While there are tools designed to keep personal data private, employing such tools is often associated with reduced functionality and\/or usability and new privacy issues resulting from their use. Such deficiencies inhibit their widespread use.\n\nCloud storages are one example for a privacy-critical infrastructure as personal data is distributed across a broad network while the location of storage is often out of the user\u2019s control. Client-side (end-to-end) encryption is a valid way to protect those data independent of security measures taken by the cloud provider and its privacy agreements. However, existing tools \u2013 e.g., for disk or file encryption \u2013 do not work seamlessly with the cloud.\n\nThe idea behind Cryptomator is to make cloud encryption as user-friendly, transparent, and understandable as possible to enable everyone to protect their data. In their talk, the developers of Cryptomator emphasize the importance of privacy in our information society in general and the significance of sophisticated and user-friendly tools to empower everyone to safeguard their privacy in particular. The general idea behind Cryptomator, its encryption scheme and challenges when targeting the cloud will be outlined. In addition, the architecture of the application and future development plans will be illustrated.",
+    "speakerIds": ["christian.schmickler", "markus.kreusch"],
+    "language": "ENGLISH",
+    "topic": "Product",
+    "format": "TALK",
+    "room": "UNKNOWN"
+  },
+  {
+    "event": "mixit17",
+    "title": "Qwant",
+    "summary": "TBD",
+    "speakerIds": ["eric.leandri"],
+    "language": "FRENCH",
+    "topic": "Alien",
+    "format": "KEYNOTE",
+    "room": "UNKNOWN"
+  }
+]

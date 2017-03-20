@@ -34,8 +34,6 @@ class TalkHandler(val repository: TalkRepository,
     fun findByEventId(req: ServerRequest) =
             ok().json().body(repository.findByEvent(yearToId(req.pathVariable("year"))))
 
-    fun talks2017(req: ServerRequest) = ok().render("talks-2017", mapOf(Pair("title", "talks.html.title|2017")))
-
 }
 
 fun yearToId(year:String): String = "mixit${year.substring(2)}"
