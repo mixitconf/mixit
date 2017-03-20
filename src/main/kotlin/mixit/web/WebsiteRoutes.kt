@@ -39,7 +39,7 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
             GET("/login", authenticationHandler::loginView)
 
             // Talks
-            GET("/2017", talkHandler::talks2017)
+            GET("/2017") { talkHandler.findByEventView(2017, it) }
             GET("/2016") { talkHandler.findByEventView(2016, it) }
             GET("/2015") { talkHandler.findByEventView(2015, it) }
             GET("/2014") { talkHandler.findByEventView(2014, it) }

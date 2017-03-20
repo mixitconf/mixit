@@ -33051,5 +33051,959 @@
         "login": "Enedis",
         "logoUrl": "sponsor/logo-enedis.svg",
         "role": "ATTENDEE"
+    },
+    {
+    "company": "",
+    "description": {
+        "ENGLISH": "Alice Barralon",
+        "FRENCH": "Alice Barralon"
+    },
+    "email": "",
+    "events": [
+        "mixit17"
+    ],
+    "firstname": "Alice",
+    "lastname": "Barralon",
+    "legacyId": null,
+    "links": [],
+    "login": "alice.barralon",
+    "logoUrl": "",
+    "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Francois Teychene",
+            "FRENCH": "Francois Teychene"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Francois",
+        "lastname": "Teychene",
+        "legacyId": null,
+        "links": [],
+        "login": "francois.teychene",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Frédéric Marin",
+            "FRENCH": "Frédéric Marin"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Frédéric",
+        "lastname": "Marin",
+        "legacyId": null,
+        "links": [],
+        "login": "frédéric.marin",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Sharon Steed",
+            "FRENCH": "Sharon Steed"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Sharon",
+        "lastname": "Steed",
+        "legacyId": null,
+        "links": [],
+        "login": "sharon.steed",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Raphael Goetter",
+            "FRENCH": "Raphael Goetter"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Raphael",
+        "lastname": "Goetter",
+        "legacyId": null,
+        "links": [],
+        "login": "raphael.goetter",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Tim Carry",
+            "FRENCH": "Tim Carry"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Tim",
+        "lastname": "Carry",
+        "legacyId": null,
+        "links": [],
+        "login": "tim.carry",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Olivier Guéry",
+            "FRENCH": "Olivier Guéry"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Olivier",
+        "lastname": "Guéry",
+        "legacyId": null,
+        "links": [],
+        "login": "olivier.guéry",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Matthieu Lecoupeau",
+            "FRENCH": "Matthieu Lecoupeau"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Matthieu",
+        "lastname": "Lecoupeau",
+        "legacyId": null,
+        "links": [],
+        "login": "matthieu.lecoupeau",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Adrian Kosmaczewski",
+            "FRENCH": "Adrian Kosmaczewski"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Adrian",
+        "lastname": "Kosmaczewski",
+        "legacyId": null,
+        "links": [],
+        "login": "adrian.kosmaczewski",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "benjamin fontaine",
+            "FRENCH": "benjamin fontaine"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "benjamin",
+        "lastname": "fontaine",
+        "legacyId": null,
+        "links": [],
+        "login": "benjamin.fontaine",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "François Kha",
+            "FRENCH": "François Kha"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "François",
+        "lastname": "Kha",
+        "legacyId": null,
+        "links": [],
+        "login": "françois.kha",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Eric Briand",
+            "FRENCH": "Eric Briand"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Eric",
+        "lastname": "Briand",
+        "legacyId": null,
+        "links": [],
+        "login": "eric.briand",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Yvonnick Frin",
+            "FRENCH": "Yvonnick Frin"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Yvonnick",
+        "lastname": "Frin",
+        "legacyId": null,
+        "links": [],
+        "login": "yvonnick.frin",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Anne Gabrillagues",
+            "FRENCH": "Anne Gabrillagues"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Anne",
+        "lastname": "Gabrillagues",
+        "legacyId": null,
+        "links": [],
+        "login": "anne.gabrillagues",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "William Durand",
+            "FRENCH": "William Durand"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "William",
+        "lastname": "Durand",
+        "legacyId": null,
+        "links": [],
+        "login": "william.durand",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Rising Linda",
+            "FRENCH": "Rising Linda"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Rising",
+        "lastname": "Linda",
+        "legacyId": null,
+        "links": [],
+        "login": "rising.linda",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Marine Cloux",
+            "FRENCH": "Marine Cloux"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Marine",
+        "lastname": "Cloux",
+        "legacyId": null,
+        "links": [],
+        "login": "marine.cloux",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Sylvia Cohen",
+            "FRENCH": "Sylvia Cohen"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Sylvia",
+        "lastname": "Cohen",
+        "legacyId": null,
+        "links": [],
+        "login": "sylvia.cohen",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Nathalie Cotté",
+            "FRENCH": "Nathalie Cotté"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Nathalie",
+        "lastname": "Cotté",
+        "legacyId": null,
+        "links": [],
+        "login": "nathalie.cotté",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Rida Laraki",
+            "FRENCH": "Rida Laraki"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Rida",
+        "lastname": "Laraki",
+        "legacyId": null,
+        "links": [],
+        "login": "rida.laraki",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Siegfried Ehret",
+            "FRENCH": "Siegfried Ehret"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Siegfried",
+        "lastname": "Ehret",
+        "legacyId": null,
+        "links": [],
+        "login": "siegfried.ehret",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Antoine Stalin",
+            "FRENCH": "Antoine Stalin"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Antoine",
+        "lastname": "Stalin",
+        "legacyId": null,
+        "links": [],
+        "login": "antoine.stalin",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Sandrine BERGER-DOUCE",
+            "FRENCH": "Sandrine BERGER-DOUCE"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Sandrine",
+        "lastname": "BERGER-DOUCE",
+        "legacyId": null,
+        "links": [],
+        "login": "sandrine.berger-douce",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Arnaud Gautier",
+            "FRENCH": "Arnaud Gautier"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Arnaud",
+        "lastname": "Gautier",
+        "legacyId": null,
+        "links": [],
+        "login": "arnaud.gautier",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Kari Love",
+            "FRENCH": "Kari Love"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Kari",
+        "lastname": "Love",
+        "legacyId": null,
+        "links": [],
+        "login": "kari.love",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Benjamin Bouvier",
+            "FRENCH": "Benjamin Bouvier"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Benjamin",
+        "lastname": "Bouvier",
+        "legacyId": null,
+        "links": [],
+        "login": "benjamin.bouvier",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Jean-Michel DEGEORGE",
+            "FRENCH": "Jean-Michel DEGEORGE"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Jean-Michel",
+        "lastname": "DEGEORGE",
+        "legacyId": null,
+        "links": [],
+        "login": "jean-michel.degeorge",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Aurore Malherbes",
+            "FRENCH": "Aurore Malherbes"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Aurore",
+        "lastname": "Malherbes",
+        "legacyId": null,
+        "links": [],
+        "login": "aurore.malherbes",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Pauline Bourjot",
+            "FRENCH": "Pauline Bourjot"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Pauline",
+        "lastname": "Bourjot",
+        "legacyId": null,
+        "links": [],
+        "login": "pauline.bourjot",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Ard Kramer",
+            "FRENCH": "Ard Kramer"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Ard",
+        "lastname": "Kramer",
+        "legacyId": null,
+        "links": [],
+        "login": "ard.kramer",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Benjamin Richy",
+            "FRENCH": "Benjamin Richy"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Benjamin",
+        "lastname": "Richy",
+        "legacyId": null,
+        "links": [],
+        "login": "benjamin.richy",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Igor Laborie",
+            "FRENCH": "Igor Laborie"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Igor",
+        "lastname": "Laborie",
+        "legacyId": null,
+        "links": [],
+        "login": "igor.laborie",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Cynthia Savard Saucier",
+            "FRENCH": "Cynthia Savard Saucier"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Cynthia Savard",
+        "lastname": "Saucier",
+        "legacyId": null,
+        "links": [],
+        "login": "cynthia.savard.saucier",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Fabrice Sabatier",
+            "FRENCH": "Fabrice Sabatier"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Fabrice",
+        "lastname": "Sabatier",
+        "legacyId": null,
+        "links": [],
+        "login": "fabrice.sabatier",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Thomas Parisot",
+            "FRENCH": "Thomas Parisot"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Thomas",
+        "lastname": "Parisot",
+        "legacyId": null,
+        "links": [],
+        "login": "thomas.parisot",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Catalina Dobrica",
+            "FRENCH": "Catalina Dobrica"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Catalina",
+        "lastname": "Dobrica",
+        "legacyId": null,
+        "links": [],
+        "login": "catalina.dobrica",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Anastasia Lieva",
+            "FRENCH": "Anastasia Lieva"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Anastasia",
+        "lastname": "Lieva",
+        "legacyId": null,
+        "links": [],
+        "login": "anastasia.lieva",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Charles Bochet",
+            "FRENCH": "Charles Bochet"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Charles",
+        "lastname": "Bochet",
+        "legacyId": null,
+        "links": [],
+        "login": "charles.bochet",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Fabien Maury",
+            "FRENCH": "Fabien Maury"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Fabien",
+        "lastname": "Maury",
+        "legacyId": null,
+        "links": [],
+        "login": "fabien.maury",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Olivier MY",
+            "FRENCH": "Olivier MY"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Olivier",
+        "lastname": "MY",
+        "legacyId": null,
+        "links": [],
+        "login": "olivier.my",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Alexis Duque",
+            "FRENCH": "Alexis Duque"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Alexis",
+        "lastname": "Duque",
+        "legacyId": null,
+        "links": [],
+        "login": "alexis.duque",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Paul-Guillaume Déjardin",
+            "FRENCH": "Paul-Guillaume Déjardin"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Paul-Guillaume",
+        "lastname": "Déjardin",
+        "legacyId": null,
+        "links": [],
+        "login": "paul-guillaume.déjardin",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Antoine Le Taxin",
+            "FRENCH": "Antoine Le Taxin"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Antoine Le",
+        "lastname": "Taxin",
+        "legacyId": null,
+        "links": [],
+        "login": "antoine.le.taxin",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Samuel Couffignal",
+            "FRENCH": "Samuel Couffignal"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Samuel",
+        "lastname": "Couffignal",
+        "legacyId": null,
+        "links": [],
+        "login": "samuel.couffignal",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Hanneli Tavante",
+            "FRENCH": "Hanneli Tavante"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Hanneli",
+        "lastname": "Tavante",
+        "legacyId": null,
+        "links": [],
+        "login": "hanneli.tavante",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Stéphane Doncieux",
+            "FRENCH": "Stéphane Doncieux"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Stéphane",
+        "lastname": "Doncieux",
+        "legacyId": null,
+        "links": [],
+        "login": "stéphane.doncieux",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Andrey Breslav",
+            "FRENCH": "Andrey Breslav"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Andrey",
+        "lastname": "Breslav",
+        "legacyId": null,
+        "links": [],
+        "login": "andrey.breslav",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Bart Butler",
+            "FRENCH": "Bart Butler"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Bart",
+        "lastname": "Butler",
+        "legacyId": null,
+        "links": [],
+        "login": "bart.butler",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Christian Schmickler",
+            "FRENCH": "Christian Schmickler"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Christian",
+        "lastname": "Schmickler",
+        "legacyId": null,
+        "links": [],
+        "login": "christian.schmickler",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Markus Kreusch",
+            "FRENCH": "Markus Kreusch"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Markus",
+        "lastname": "Kreusch",
+        "legacyId": null,
+        "links": [],
+        "login": "markus.kreusch",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Rémi Forax",
+            "FRENCH": "Rémi Forax"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Rémi",
+        "lastname": "Forax",
+        "legacyId": null,
+        "links": [],
+        "login": "rémi.forax",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Romain & Jeff Les \u00e9coloHumanistes",
+            "FRENCH": "Romain & Jeff Les \u00e9coloHumanistes"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Romain & Jeff",
+        "lastname": "Les \u00e9coloHumanistes",
+        "legacyId": null,
+        "links": [],
+        "login": "écoloHumanistes",
+        "logoUrl": "",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "",
+        "description": {
+            "ENGLISH": "Eric Léandri",
+            "FRENCH": "Eric Léandri"
+        },
+        "email": "",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Eric",
+        "lastname": "Leandri",
+        "legacyId": null,
+        "links": [],
+        "login": "eric.leandri",
+        "logoUrl": "",
+        "role": "SPEAKER"
     }
 ]
