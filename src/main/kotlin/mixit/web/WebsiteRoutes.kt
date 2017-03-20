@@ -29,7 +29,7 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
             GET("/") { sponsorHandler.viewWithSponsors("home", it) }
             GET("/about", globalHandler::findAboutView)
             GET("/news", newsHandler::newsView)
-            GET("/ticketing", ticketingHandler::ticketing)
+            //GET("/ticketing", ticketingHandler::ticketing)
 
             // Authentication
             GET("/login", authenticationHandler::loginView)
@@ -66,7 +66,7 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
 
         contentType(APPLICATION_FORM_URLENCODED).nest {
             POST("/login", authenticationHandler::login)
-            POST("/ticketing", ticketingHandler::submit)
+            //POST("/ticketing", ticketingHandler::submit)
         }
     }
 
