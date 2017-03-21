@@ -20,6 +20,10 @@
         "title": {
             "ENGLISH": "Teams, products, pedagogy and design talks at MiXiT 2017",
             "FRENCH": "Talks équipe, produit, pédagogie et design à MiXiT 2017"
+        },
+        "slug": {
+            "ENGLISH": "teams--products--pedagogy-and-design-talks-at-mixit-2017",
+            "FRENCH": "talks-equipe--produit--pedagogie-et-design-a-mixit-2017"
         }
     },{
         "addedAt": [
@@ -123,7 +127,11 @@
       "title": {
           "ENGLISH": "MiXiT 2017 ticketing: pre-registration",
           "FRENCH": "Billetterie MiXiT 2017 : pré-inscription"
-      }
+      },
+        "slug": {
+            "ENGLISH": "mixit-2017-ticketing--pre-registration",
+            "FRENCH": "billetterie-mixit-2017---pre-inscription"
+        }
     },
     {
         "addedAt": [
