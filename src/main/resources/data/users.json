@@ -34251,5 +34251,185 @@
         "login": "eric.leandri",
         "logoUrl": "",
         "role": "SPEAKER"
-    }
+    },
+  {
+    "company": "",
+    "description": {
+      "ENGLISH": "Matthieu Lecoupeau",
+      "FRENCH": "Matthieu Lecoupeau"
+    },
+    "email": "",
+    "events": [
+      "mixit17"
+    ],
+    "firstname": "Matthieu",
+    "lastname": "Lecoupeau",
+    "legacyId": null,
+    "links": [],
+    "login": "matthieu.lecoupeau",
+    "logoUrl": "",
+    "role": "SPEAKER"
+  },
+  {
+    "company": "",
+    "description": {
+      "ENGLISH": "François Kha",
+      "FRENCH": "François Kha"
+    },
+    "email": "",
+    "events": [
+      "mixit17"
+    ],
+    "firstname": "François",
+    "lastname": "Kha",
+    "legacyId": null,
+    "links": [],
+    "login": "françois.kha",
+    "logoUrl": "",
+    "role": "SPEAKER"
+  },
+  {
+    "company": "",
+    "description": {
+      "ENGLISH": "Yvonnick FRIN",
+      "FRENCH": "Yvonnick FRIN"
+    },
+    "email": "",
+    "events": [
+      "mixit17"
+    ],
+    "firstname": "Yvonnick",
+    "lastname": "FRIN",
+    "legacyId": null,
+    "links": [],
+    "login": "yvonnick.frin",
+    "logoUrl": "",
+    "role": "SPEAKER"
+  },
+  {
+    "company": "",
+    "description": {
+      "ENGLISH": "Sylvia Cohen",
+      "FRENCH": "Sylvia Cohen"
+    },
+    "email": "",
+    "events": [
+      "mixit17"
+    ],
+    "firstname": "Sylvia",
+    "lastname": "Cohen",
+    "legacyId": null,
+    "links": [],
+    "login": "sylvia.cohen",
+    "logoUrl": "",
+    "role": "SPEAKER"
+  },
+  {
+    "company": "",
+    "description": {
+      "ENGLISH": "Antoine Stalin",
+      "FRENCH": "Antoine Stalin"
+    },
+    "email": "",
+    "events": [
+      "mixit17"
+    ],
+    "firstname": "Antoine",
+    "lastname": "Stalin",
+    "legacyId": null,
+    "links": [],
+    "login": "antoine.stalin",
+    "logoUrl": "",
+    "role": "SPEAKER"
+  },
+  {
+    "company": "",
+    "description": {
+      "ENGLISH": "Arnaud Gautier",
+      "FRENCH": "Arnaud Gautier"
+    },
+    "email": "",
+    "events": [
+      "mixit17"
+    ],
+    "firstname": "Arnaud",
+    "lastname": "Gautier",
+    "legacyId": null,
+    "links": [],
+    "login": "arnaud.gautier",
+    "logoUrl": "",
+    "role": "SPEAKER"
+  },
+  {
+    "company": "",
+    "description": {
+      "ENGLISH": "Pauline Bourjot",
+      "FRENCH": "Pauline Bourjot"
+    },
+    "email": "",
+    "events": [
+      "mixit17"
+    ],
+    "firstname": "Pauline",
+    "lastname": "Bourjot",
+    "legacyId": null,
+    "links": [],
+    "login": "pauline.bourjot",
+    "logoUrl": "",
+    "role": "SPEAKER"
+  },
+  {
+    "company": "",
+    "description": {
+      "ENGLISH": "Olivier MY",
+      "FRENCH": "Olivier MY"
+    },
+    "email": "",
+    "events": [
+      "mixit17"
+    ],
+    "firstname": "Olivier",
+    "lastname": "MY",
+    "legacyId": null,
+    "links": [],
+    "login": "olivier.my",
+    "logoUrl": "",
+    "role": "SPEAKER"
+  },
+  {
+    "company": "",
+    "description": {
+      "ENGLISH": "Antoine Le Taxin",
+      "FRENCH": "Antoine Le Taxin"
+    },
+    "email": "",
+    "events": [
+      "mixit17"
+    ],
+    "firstname": "Antoine Le",
+    "lastname": "Taxin",
+    "legacyId": null,
+    "links": [],
+    "login": "antoine.le.taxin",
+    "logoUrl": "",
+    "role": "SPEAKER"
+  },
+  {
+    "company": "",
+    "description": {
+      "ENGLISH": "Markus Kreusch",
+      "FRENCH": "Markus Kreusch"
+    },
+    "email": "",
+    "events": [
+      "mixit17"
+    ],
+    "firstname": "Markus",
+    "lastname": "Kreusch",
+    "legacyId": null,
+    "links": [],
+    "login": "markus.kreusch",
+    "logoUrl": "",
+    "role": "SPEAKER"
+  }
 ]
