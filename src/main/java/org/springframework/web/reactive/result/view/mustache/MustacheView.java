@@ -21,7 +21,6 @@ import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.util.Locale;
 import java.util.Map;
-import java.util.function.BiConsumer;
 
 import com.samskivert.mustache.Template;
 import org.slf4j.Logger;
@@ -48,8 +47,6 @@ public class MustacheView extends AbstractUrlBasedView {
 
     private Template template;
 
-    private BiConsumer<Map<String, Object>, ServerWebExchange> modelCustomizer;
-
     private Logger logger = LoggerFactory.getLogger(getClass());
 
 
@@ -67,9 +64,6 @@ public class MustacheView extends AbstractUrlBasedView {
 
                 DataBuffer dataBuffer = exchange.getResponse().bufferFactory().allocateBuffer();
                 Writer writer = new OutputStreamWriter(dataBuffer.asOutputStream(), getDefaultCharset());
-                if (this.modelCustomizer != null) {
-                    this.modelCustomizer.accept(model, exchange);
-                }
                 try {
                     this.template.execute(model, writer);
                 } catch (Exception ex) {
@@ -91,10 +85,6 @@ public class MustacheView extends AbstractUrlBasedView {
 
     public void setTemplate(Template template) {
         this.template = template;
-    }
-
-    public void setModelCustomizer(BiConsumer<Map<String, Object>, ServerWebExchange> modelCustomizer) {
-        this.modelCustomizer = modelCustomizer;
     }
 
     @Override

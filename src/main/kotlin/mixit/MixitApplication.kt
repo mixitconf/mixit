@@ -7,7 +7,6 @@ import mixit.repository.TalkRepository
 import mixit.repository.UserRepository
 import mixit.util.MarkdownConverter
 import mixit.web.MixitWebFilter
-import mixit.web.customizeModel
 import mixit.util.run
 import org.springframework.boot.ApplicationRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
@@ -29,7 +28,6 @@ class MixitApplication {
         setPrefix(prefix)
         setSuffix(suffix)
         setCompiler(Mustache.compiler().escapeHTML(false).withLoader(loader))
-        setModelCustomizer({ model, exchange -> customizeModel(model, exchange, messageSource, properties) })
     }
 
     @Bean

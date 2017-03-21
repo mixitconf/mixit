@@ -86,7 +86,6 @@ public class MustacheViewResolver extends UrlBasedViewResolver {
 		return super.resolveViewName(viewName, locale).map(view -> {
 			MustacheView mustacheView = (MustacheView)view;
 			mustacheView.setTemplate(createTemplate(resource));
-			mustacheView.setModelCustomizer(this.modelCustomizer);
 			return view;
 		});
 	}

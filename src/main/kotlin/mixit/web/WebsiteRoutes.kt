@@ -1,14 +1,16 @@
 package mixit.web
 
+import mixit.MixitProperties
 import mixit.web.handler.*
+import org.springframework.context.MessageSource
 import org.springframework.context.annotation.Bean
 import org.springframework.core.Ordered
 import org.springframework.core.annotation.Order
 import org.springframework.core.io.ClassPathResource
 import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Component
+import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.RouterFunctions.resources
-import org.springframework.web.reactive.function.server.router
 
 
 @Component
@@ -20,7 +22,9 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
                     val talkHandler: TalkHandler,
                     val userHandler: UserHandler,
                     val sponsorHandler: SponsorHandler,
-                    val ticketingHandler: TicketingHandler) {
+                    val ticketingHandler: TicketingHandler,
+                    val messageSource: MessageSource,
+                    val properties: MixitProperties) {
 
     @Bean
     @Order(Ordered.HIGHEST_PRECEDENCE)
@@ -68,6 +72,12 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
             POST("/login", authenticationHandler::login)
             //POST("/ticketing", ticketingHandler::submit)
         }
+    }.filter { request, next ->
+        val locale = request.headers().asHttpHeaders().acceptLanguageAsLocale
+        val session = request.session().block()
+        val path = request.uri().path
+        val model = generateModel(properties.baseUri!!, path, locale, session, messageSource)
+        next.handle(request).then { response -> RenderingResponse.from(response as RenderingResponse).modelAttributes(model).build() }
     }
 
     @Bean
@@ -75,3 +85,4 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
     fun resourceRouter() = resources("/**", ClassPathResource("static/"))
 
 }
+
