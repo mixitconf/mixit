@@ -33053,120 +33053,12 @@
         "role": "ATTENDEE"
     },
     {
-    "company": "",
-    "description": {
-        "ENGLISH": "Alice Barralon",
-        "FRENCH": "Alice Barralon"
-    },
-    "email": "",
-    "events": [
-        "mixit17"
-    ],
-    "firstname": "Alice",
-    "lastname": "Barralon",
-    "legacyId": null,
-    "links": [],
-    "login": "alice.barralon",
-    "logoUrl": "",
-    "role": "SPEAKER"
-    },
-    {
-        "company": "",
+        "company": "http://bepo.fr",
         "description": {
-            "ENGLISH": "Francois Teychene",
-            "FRENCH": "Francois Teychene"
+            "FRENCH": "Masseur-kinésithérapeute depuis 2000, geek pas suffisamment libriste, ayant participé à la création du bépo depuis 2006.",
+            "ENGLISH": "Masseur-kinésithérapeute depuis 2000, geek pas suffisamment libriste, ayant participé à la création du bépo depuis 2006."
         },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Francois",
-        "lastname": "Teychene",
-        "legacyId": null,
-        "links": [],
-        "login": "francois.teychene",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Frédéric Marin",
-            "FRENCH": "Frédéric Marin"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Frédéric",
-        "lastname": "Marin",
-        "legacyId": null,
-        "links": [],
-        "login": "frédéric.marin",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Sharon Steed",
-            "FRENCH": "Sharon Steed"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Sharon",
-        "lastname": "Steed",
-        "legacyId": null,
-        "links": [],
-        "login": "sharon.steed",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Raphael Goetter",
-            "FRENCH": "Raphael Goetter"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Raphael",
-        "lastname": "Goetter",
-        "legacyId": null,
-        "links": [],
-        "login": "raphael.goetter",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Tim Carry",
-            "FRENCH": "Tim Carry"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Tim",
-        "lastname": "Carry",
-        "legacyId": null,
-        "links": [],
-        "login": "tim.carry",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Olivier Guéry",
-            "FRENCH": "Olivier Guéry"
-        },
-        "email": "",
+        "email": "nemolivier@gmail.com",
         "events": [
             "mixit17"
         ],
@@ -33174,287 +33066,1032 @@
         "lastname": "Guéry",
         "legacyId": null,
         "links": [],
-        "login": "olivier.guéry",
-        "logoUrl": "",
+        "login": "olivier.guery",
+        "logoUrl": "https://plus.google.com/photos/105239776532174925205/albums/profile/5730577371015450642",
         "role": "SPEAKER"
     },
     {
-        "company": "",
+        "company": "TailorDev",
         "description": {
-            "ENGLISH": "Matthieu Lecoupeau",
-            "FRENCH": "Matthieu Lecoupeau"
+            "FRENCH": "William is a former researcher in software testing, and now a polyglot developer at TailorDev where he helps academics to open their research. He is also an Open Source evangelist, a public speaker, and a traveler.",
+            "ENGLISH": "William is a former researcher in software testing, and now a polyglot developer at TailorDev where he helps academics to open their research. He is also an Open Source evangelist, a public speaker, and a traveler."
         },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Matthieu",
-        "lastname": "Lecoupeau",
-        "legacyId": null,
-        "links": [],
-        "login": "matthieu.lecoupeau",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Adrian Kosmaczewski",
-            "FRENCH": "Adrian Kosmaczewski"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Adrian",
-        "lastname": "Kosmaczewski",
-        "legacyId": null,
-        "links": [],
-        "login": "adrian.kosmaczewski",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "benjamin fontaine",
-            "FRENCH": "benjamin fontaine"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "benjamin",
-        "lastname": "fontaine",
-        "legacyId": null,
-        "links": [],
-        "login": "benjamin.fontaine",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "François Kha",
-            "FRENCH": "François Kha"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "François",
-        "lastname": "Kha",
-        "legacyId": null,
-        "links": [],
-        "login": "françois.kha",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Eric Briand",
-            "FRENCH": "Eric Briand"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Eric",
-        "lastname": "Briand",
-        "legacyId": null,
-        "links": [],
-        "login": "eric.briand",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Yvonnick Frin",
-            "FRENCH": "Yvonnick Frin"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Yvonnick",
-        "lastname": "Frin",
-        "legacyId": null,
-        "links": [],
-        "login": "yvonnick.frin",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Anne Gabrillagues",
-            "FRENCH": "Anne Gabrillagues"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Anne",
-        "lastname": "Gabrillagues",
-        "legacyId": null,
-        "links": [],
-        "login": "anne.gabrillagues",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "William Durand",
-            "FRENCH": "William Durand"
-        },
-        "email": "",
+        "email": "will@drnd.me",
         "events": [
             "mixit17"
         ],
         "firstname": "William",
         "lastname": "Durand",
         "legacyId": null,
-        "links": [],
+        "links": [
+            {
+                "name": "social",
+                "url": "http://williamdurand.fr/"
+            },
+            {
+                "name": "twitter",
+                "url": "couac"
+            },
+            {
+                "name": "github",
+                "url": "willdurand"
+            }
+        ],
         "login": "william.durand",
-        "logoUrl": "",
         "role": "SPEAKER"
     },
     {
-        "company": "",
+        "company": "ProtonMail",
         "description": {
-            "ENGLISH": "Rising Linda",
-            "FRENCH": "Rising Linda"
+            "FRENCH": "Bart Butler is lead engineer and CTO at ProtonMail, the world's largest secure email service.  Previously, he worked at CERN for four years as a researcher at the Large Hadron Collider. He has a PhD in Particle Physics from Stanford University and was a postdoctoral fellow at Harvard.",
+            "ENGLISH": "Bart Butler is lead engineer and CTO at ProtonMail, the world's largest secure email service.  Previously, he worked at CERN for four years as a researcher at the Large Hadron Collider. He has a PhD in Particle Physics from Stanford University and was a postdoctoral fellow at Harvard."
         },
-        "email": "",
+        "email": "bartbutler@protonmail.com",
         "events": [
             "mixit17"
         ],
-        "firstname": "Rising",
-        "lastname": "Linda",
+        "firstname": "Bart",
+        "lastname": "Butler",
         "legacyId": null,
-        "links": [],
-        "login": "rising.linda",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Marine Cloux",
-            "FRENCH": "Marine Cloux"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
+        "links": [
+            {
+                "name": "social",
+                "url": "https://www.linkedin.com/in/bart-butler-9986441a/"
+            },
+            {
+                "name": "twitter",
+                "url": "https://twitter.com/bartcbutler"
+            },
+            {
+                "name": "github",
+                "url": "https://github.com/bartbutler"
+            }
         ],
-        "firstname": "Marine",
-        "lastname": "Cloux",
-        "legacyId": null,
-        "links": [],
-        "login": "marine.cloux",
-        "logoUrl": "",
+        "login": "bart.butler",
+        "logoUrl": "https://pbs.twimg.com/profile_images/662740857301266432/i_jG177x.jpg",
         "role": "SPEAKER"
     },
     {
-        "company": "",
+        "company": "CNRS, Université Paris Dauphine",
         "description": {
-            "ENGLISH": "Sylvia Cohen",
-            "FRENCH": "Sylvia Cohen"
+            "FRENCH": "Rida Laraki is Directeur de Recherche at the CNRS (Centre National de la Recherche Scientifique) in computer science at LAMSADE, University Paris Dauphine. He obtained his Dipl. Eng. from École Polytechnique (Paris) in 1996 and his Ph.D. in mathematics from University Pierre and Marie Curie in 2000 and is part-time professor in Economics at the École Polytechnique (since 2006).\n\nRida Laraki co-authored 3 books (Social Choice, and Game Theory), published several articles in mathematics, economics, computer science and general public journals. He serves on the editorial board of journals in game theory and operations research.",
+            "ENGLISH": "Rida Laraki is Directeur de Recherche at the CNRS (Centre National de la Recherche Scientifique) in computer science at LAMSADE, University Paris Dauphine. He obtained his Dipl. Eng. from École Polytechnique (Paris) in 1996 and his Ph.D. in mathematics from University Pierre and Marie Curie in 2000 and is part-time professor in Economics at the École Polytechnique (since 2006).\n\nRida Laraki co-authored 3 books (Social Choice, and Game Theory), published several articles in mathematics, economics, computer science and general public journals. He serves on the editorial board of journals in game theory and operations research."
         },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Sylvia",
-        "lastname": "Cohen",
-        "legacyId": null,
-        "links": [],
-        "login": "sylvia.cohen",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Nathalie Cotté",
-            "FRENCH": "Nathalie Cotté"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Nathalie",
-        "lastname": "Cotté",
-        "legacyId": null,
-        "links": [],
-        "login": "nathalie.cotté",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Rida Laraki",
-            "FRENCH": "Rida Laraki"
-        },
-        "email": "",
+        "email": "rida.laraki@gmail.com",
         "events": [
             "mixit17"
         ],
         "firstname": "Rida",
         "lastname": "Laraki",
         "legacyId": null,
-        "links": [],
+        "links": [
+            {
+                "name": "social",
+                "url": "https://sites.google.com/site/ridalaraki/"
+            }
+        ],
         "login": "rida.laraki",
         "logoUrl": "",
         "role": "SPEAKER"
     },
     {
-        "company": "",
         "description": {
-            "ENGLISH": "Siegfried Ehret",
-            "FRENCH": "Siegfried Ehret"
+            "FRENCH": "Hanneli is a software developer. With experience in Java, C++ and Ruby, she works mostly with backend development and project architecture. She contributes to some open source projects and organises Cassandra, Neo4j, Science and Rust meetups in Sao Paulo. She enjoys spreading the knowledge and learning new topics in conferences around the world. She also likes coffee, GIFs, Lego and Mathematics.",
+            "ENGLISH": "Hanneli is a software developer. With experience in Java, C++ and Ruby, she works mostly with backend development and project architecture. She contributes to some open source projects and organises Cassandra, Neo4j, Science and Rust meetups in Sao Paulo. She enjoys spreading the knowledge and learning new topics in conferences around the world. She also likes coffee, GIFs, Lego and Mathematics."
         },
-        "email": "",
+        "email": "hannelita@gmail.com",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Hanneli",
+        "lastname": "Tavante",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "social",
+                "url": "https://medium.com/@hannelita"
+            },
+            {
+                "name": "twitter",
+                "url": "@hannelita"
+            },
+            {
+                "name": "github",
+                "url": "@hannelita"
+            }
+        ],
+        "login": "hanneli.tavante",
+        "logoUrl": "https://scontent-arn2-1.xx.fbcdn.net/v/t1.0-9/10562931_938722626154679_6200077942380594507_n.jpg?oh=66e8b3cba7355828070d58a11a7ded85&oe=594BF375",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "ORIIONS",
+        "description": {
+            "FRENCH": "'Coach in Agile-Land' et développeur sur ses temps libres. \n\nJe forme, je déforme, je transforme des personnes en les accompagnants dans les bonnes pratiques de développement et de management agile (formation et coching).\n\n#DuchessFrance member\n#AgilePaysBasque funder",
+            "ENGLISH": "'Coach in Agile-Land' et développeur sur ses temps libres. \n\nJe forme, je déforme, je transforme des personnes en les accompagnants dans les bonnes pratiques de développement et de management agile (formation et coching).\n\n#DuchessFrance member\n#AgilePaysBasque funder"
+        },
+        "email": "alice.barralon@gmail.com",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Alice",
+        "lastname": "BARRALON",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "social",
+                "url": "www.oriions.com"
+            },
+            {
+                "name": "twitter",
+                "url": "@abarralon"
+            }
+        ],
+        "login": "alice.barralon",
+        "logoUrl": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/5/000/235/187/3497b2a.jpg",
+        "role": "SPEAKER"
+    },
+    {
+        "company": ".CORP",
+        "description": {
+            "FRENCH": "Fabrice Sabatier est designer graphique. Il vit et travaille à Bruxelles. Il cofonde, en 2008, le collectif de création graphique .CORP, aujourd’hui présent à Bruxelles et Saint-Étienne. \nIl est diplômé de l’école supérieure d’art et design de Saint-Étienne (2008) et, depuis 2013, poursuis un doctorat en Art et sciences de l’art à l’Université Libre de Bruxelles (ULB) et à l’école de recherche graphique (erg). Sa recherche s’intéresse au rôle du design dans la perception de l’économie à travers la visualisation de ses données. Il développe notamment des projets de visualisation de réseaux d’influence dans les institutions européennes.\nIl est l’auteur de plusieurs articles dont une petite histoire de la visualisation de données (« Histoire de tournée en rond : brèves, cousues main, du fromage normand à Barack Obama », revue en ligne Tombolo, 2013), une description de l’utilisation de la couleur dans le design de données  (« Du poète dans la machine » dans De la couleur comme un code, ed. -zeug, 2016) ou une analyse du rôle du design dans la visualisation de réseaux (« Des données aux images du lobbying » dans De l’Image du Pouvoir au Pouvoir sans Image, éd. Obsidiane - Les Trois P, 2016)",
+            "ENGLISH": "Fabrice Sabatier est designer graphique. Il vit et travaille à Bruxelles. Il cofonde, en 2008, le collectif de création graphique .CORP, aujourd’hui présent à Bruxelles et Saint-Étienne. \nIl est diplômé de l’école supérieure d’art et design de Saint-Étienne (2008) et, depuis 2013, poursuis un doctorat en Art et sciences de l’art à l’Université Libre de Bruxelles (ULB) et à l’école de recherche graphique (erg). Sa recherche s’intéresse au rôle du design dans la perception de l’économie à travers la visualisation de ses données. Il développe notamment des projets de visualisation de réseaux d’influence dans les institutions européennes.\nIl est l’auteur de plusieurs articles dont une petite histoire de la visualisation de données (« Histoire de tournée en rond : brèves, cousues main, du fromage normand à Barack Obama », revue en ligne Tombolo, 2013), une description de l’utilisation de la couleur dans le design de données  (« Du poète dans la machine » dans De la couleur comme un code, ed. -zeug, 2016) ou une analyse du rôle du design dans la visualisation de réseaux (« Des données aux images du lobbying » dans De l’Image du Pouvoir au Pouvoir sans Image, éd. Obsidiane - Les Trois P, 2016)"
+        },
+        "email": "fabrice.sabatier@ulb.ac.be",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Fabrice",
+        "lastname": "Sabatier",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "twitter",
+                "url": "@FabriceSabatier"
+            }
+        ],
+        "login": "fabrice.sabatier",
+        "logoUrl": "corp-lab.com/researchsabatier/FabriceSabatier.jpg",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "Zenika",
+        "description": {
+            "FRENCH": "Je suis développeur fullstack JEE et web depuis une petite dizaine d'années et je suis passionné de blockchain. Je me suis lancé dans une mission d'évangélisation :) pour faire rayonner la connaissance de cette techno (speaker et co-fondateur du meetup blockchain à Nantes) qui est à mon sens l'une des plus révolutionnaires à l'heure actuelle.",
+            "ENGLISH": "Je suis développeur fullstack JEE et web depuis une petite dizaine d'années et je suis passionné de blockchain. Je me suis lancé dans une mission d'évangélisation :) pour faire rayonner la connaissance de cette techno (speaker et co-fondateur du meetup blockchain à Nantes) qui est à mon sens l'une des plus révolutionnaires à l'heure actuelle."
+        },
+        "email": "benji.fontaine@gmail.com",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "benjamin",
+        "lastname": "fontaine",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "twitter",
+                "url": "benjifontaine5"
+            },
+            {
+                "name": "github",
+                "url": "https://github.com/benjaminfontaine"
+            }
+        ],
+        "login": "benjamin.fontaine",
+        "logoUrl": "https://lh3.googleusercontent.com/-WipNIh14x9A/AAAAAAAAAAI/AAAAAAAAAcc/ItiOgdh6WZ0/photo.jpg",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "Zenika",
+        "description": {
+            "FRENCH": "Développeur touche à tout depuis plus de 10 ans, il travaille actuellement à Zenika Nantes. Ses sujets du moments sont le Cloud, Golang, l’industrialisation du JS, Electron et Docker. Il est formateur officiel Docker et co-organisateur du Docker Meetup Nantes.",
+            "ENGLISH": "Développeur touche à tout depuis plus de 10 ans, il travaille actuellement à Zenika Nantes. Ses sujets du moments sont le Cloud, Golang, l’industrialisation du JS, Electron et Docker. Il est formateur officiel Docker et co-organisateur du Docker Meetup Nantes."
+        },
+        "email": "eric.briand@zenika.com",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Eric",
+        "lastname": "Briand",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "twitter",
+                "url": "@eric_briand"
+            },
+            {
+                "name": "github",
+                "url": "ebriand"
+            }
+        ],
+        "login": "eric.briand",
+        "logoUrl": "http://www.gravatar.com/avatar/d8475326bb94197fab3f6962d110bac3?size=400",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "TabMo",
+        "description": {
+            "FRENCH": "Devops la journée, JUG Leader le soir sur Montpellier, j'aime parler et discuter de developpements et surtout de Docker.\nAncien développeur (Java/Clojure/Python) et gestionnaire de build, j'ai passé le cap vers le Devops et me focus notamment Docker sur lequel j'aime tester de nouvelles choses et mettre en place des services pour les équipes avec lesquelles je travaille.",
+            "ENGLISH": "Devops la journée, JUG Leader le soir sur Montpellier, j'aime parler et discuter de developpements et surtout de Docker.\nAncien développeur (Java/Clojure/Python) et gestionnaire de build, j'ai passé le cap vers le Devops et me focus notamment Docker sur lequel j'aime tester de nouvelles choses et mettre en place des services pour les équipes avec lesquelles je travaille."
+        },
+        "email": "francois.teychene@gmail.com",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Francois",
+        "lastname": "Teychene",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "twitter",
+                "url": "https://twitter.com/fteychene"
+            },
+            {
+                "name": "github",
+                "url": "https://github.com/fteychene"
+            }
+        ],
+        "login": "francois.teychene",
+        "logoUrl": "https://lh6.googleusercontent.com/-RvGrfi4p_Uk/AAAAAAAAAAI/AAAAAAAAAeA/laex6frLlLc/photo.jpg?sz=360",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "Observatoire astronomique de Strasbourg",
+        "description": {
+            "FRENCH": "Astrophysicien travaillant à l'Observatoire astronomique de Strasbourg depuis 2010, je me suis spécialisé dans l'étude des phénomènes de hautes énergies autour des trous noirs. Mon travail consiste à simuler numériquement le transfert de la lumière autour de ces objets mystérieux afin d'en comprendre et d'en révéler les propriétés invisibles. Collaborant avec de nombreux instituts internationaux, nous avons mis au point une nouvelle mission subventionnée par la NASA qui nous permettra bientôt de sonder les étonnantes propriétés de ces monstres galactiques.",
+            "ENGLISH": "Astrophysicien travaillant à l'Observatoire astronomique de Strasbourg depuis 2010, je me suis spécialisé dans l'étude des phénomènes de hautes énergies autour des trous noirs. Mon travail consiste à simuler numériquement le transfert de la lumière autour de ces objets mystérieux afin d'en comprendre et d'en révéler les propriétés invisibles. Collaborant avec de nombreux instituts internationaux, nous avons mis au point une nouvelle mission subventionnée par la NASA qui nous permettra bientôt de sonder les étonnantes propriétés de ces monstres galactiques."
+        },
+        "email": "fmarin.astrophy@gmail.com",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Frédéric",
+        "lastname": "Marin",
+        "legacyId": null,
+        "links": [],
+        "login": "frederic.marin",
+        "logoUrl": "http://img11.hostingpics.net/pics/398394IMG4430.jpg",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "Communilogue",
+        "description": {
+            "FRENCH": "Sharon is an empathy consultant, public speaker and writer. A lifelong stutterer, she utilizes her experiences with her speech along with her background in marketing to help companies communicate more effectively both internally and with their target audience. She writes and speaks about improving communication through empathy. She also over a decade of experience creating and managing content for businesses. You can find out more about her work at communilogue.co.",
+            "ENGLISH": "Sharon is an empathy consultant, public speaker and writer. A lifelong stutterer, she utilizes her experiences with her speech along with her background in marketing to help companies communicate more effectively both internally and with their target audience. She writes and speaks about improving communication through empathy. She also over a decade of experience creating and managing content for businesses. You can find out more about her work at communilogue.co."
+        },
+        "email": "sharon@sharonsteed.co",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Sharon",
+        "lastname": "Steed",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "social",
+                "url": "http://www.communilogue.co"
+            },
+            {
+                "name": "twitter",
+                "url": "http://www.twitter.com/sharonsteed"
+            }
+        ],
+        "login": "sharon.steed",
+        "logoUrl": "https://pbs.twimg.com/profile_images/786664224088989696/B-idKHql.jpg",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "AKOSMA Training",
+        "description": {
+            "FRENCH": "Adrian Kosmaczewski is a writer, a software developer and a teacher. He is the author of two books about mobile software development, and has shipped mobile, web and desktop apps for iOS, Android, Mac OS X, Windows and Linux since 1996. Adrian holds a Master in Information Technology from the University of Liverpool.\n\nWhen not coding or teaching, Adrian likes to spend time with his wife Claudia, his cat Max and his Olivetti Lettera 22 typewriter.",
+            "ENGLISH": "Adrian Kosmaczewski is a writer, a software developer and a teacher. He is the author of two books about mobile software development, and has shipped mobile, web and desktop apps for iOS, Android, Mac OS X, Windows and Linux since 1996. Adrian holds a Master in Information Technology from the University of Liverpool.\n\nWhen not coding or teaching, Adrian likes to spend time with his wife Claudia, his cat Max and his Olivetti Lettera 22 typewriter."
+        },
+        "email": "learn@akosma.training",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Adrian",
+        "lastname": "Kosmaczewski",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "social",
+                "url": "https://akosma.training"
+            },
+            {
+                "name": "twitter",
+                "url": "@akosma"
+            },
+            {
+                "name": "github",
+                "url": "akosma"
+            }
+        ],
+        "login": "adrian.kosmaczewski",
+        "logoUrl": "https://www.gravatar.com/avatar/53619e4417778923cc65a51683e850a0?s=500",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "Alsacreations",
+        "description": {
+            "FRENCH": "Intégrateur du Dimanche, dompteur de CSS et tripoteur de HTML, créateur de la communauté et de l'agence web Alsacreations.\nÉvangéliste international de la Knack d'or et du picon-bière, Ambassadeur du Lorem Ipsum alsacien, et accessoirement auteur de divers livres sur CSS.",
+            "ENGLISH": "Intégrateur du Dimanche, dompteur de CSS et tripoteur de HTML, créateur de la communauté et de l'agence web Alsacreations.\nÉvangéliste international de la Knack d'or et du picon-bière, Ambassadeur du Lorem Ipsum alsacien, et accessoirement auteur de divers livres sur CSS."
+        },
+        "email": "raphael@goetter.fr",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Raphael",
+        "lastname": "Goetter",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "social",
+                "url": "http://goetter.fr/"
+            },
+            {
+                "name": "twitter",
+                "url": "https://twitter.com/goetter"
+            },
+            {
+                "name": "github",
+                "url": "https://github.com/raphaelgoetter"
+            }
+        ],
+        "login": "raphael.goetter",
+        "logoUrl": "https://www.flickr.com/photos/goetter/albums/72157626620578808",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "Rtone",
+        "description": {
+            "FRENCH": "Je suis doctorant et ingénieur software, travaillant du micro-contrôleur aux applications web Java, en passant par le dev mobile, dans le domaine des objets connectés .\nJe partage mon temps entre les projets d'Rtone, un bureau d'étude spécialisé dans l'IoT en région lyonnaise, et mes travaux de recherche au laboratoire CITI de l'INSA de Lyon où je poursuis une thèse sur le Visible Light Communication, dans le cadre d'un contrat CIFRE.",
+            "ENGLISH": "Je suis doctorant et ingénieur software, travaillant du micro-contrôleur aux applications web Java, en passant par le dev mobile, dans le domaine des objets connectés .\nJe partage mon temps entre les projets d'Rtone, un bureau d'étude spécialisé dans l'IoT en région lyonnaise, et mes travaux de recherche au laboratoire CITI de l'INSA de Lyon où je poursuis une thèse sur le Visible Light Communication, dans le cadre d'un contrat CIFRE."
+        },
+        "email": "alexisd@rtone.fr",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Alexis",
+        "lastname": "DUQUE",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "social",
+                "url": "alexisduque.me"
+            },
+            {
+                "name": "twitter",
+                "url": "alexis0duque"
+            },
+            {
+                "name": "github",
+                "url": "alexisduque"
+            }
+        ],
+        "login": "alexis.duque",
+        "logoUrl": "http://www.gravatar.com/avatar/83124b745752d1a1b0ca2eee1af0bd48?s=240",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "Axway",
+        "description": {
+            "FRENCH": "My name is Catalina, I'm from Romania, I'm a coder... and a _girl_.  My love of programming stems from my love of solving puzzles - be it on a board, in an escape room, coding games or a new feature that needs to be pieced together. This led me to attend the Polytechnic University of Bucharest to study Computer Science and Automation. I've worked as a software developer for the better part of the past 4 years, and currently as part of a French-Romanian team at Axway.",
+            "ENGLISH": "My name is Catalina, I'm from Romania, I'm a coder... and a _girl_.  My love of programming stems from my love of solving puzzles - be it on a board, in an escape room, coding games or a new feature that needs to be pieced together. This led me to attend the Polytechnic University of Bucharest to study Computer Science and Automation. I've worked as a software developer for the better part of the past 4 years, and currently as part of a French-Romanian team at Axway."
+        },
+        "email": "dark.catherine@gmail.com",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Catalina",
+        "lastname": "DOBRICA",
+        "legacyId": null,
+        "links": [],
+        "login": "catalina.dobrica",
+        "logoUrl": "http://i.picasion.com/av/85/2tat.png",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "Super-Releaser",
+        "description": {
+            "FRENCH": "Ms. Kari Love is a soft roboticist for Super-Releaser, a Brooklyn-based R&D consultancy. With Final Frontier Design, a commercial space suit company, from 2013-2016 as Lead Patternmaker and Fabricator, Ms. Love worked as a technical expert on 5 NASA contracts. Ms. Love developed costumes for Broadway for more than a decade, including her Spider-Man:Turn Off The Dark costume which was inducted into the Smithsonian collection, and has built puppet costumes at The Jim Henson Company.",
+            "ENGLISH": "Ms. Kari Love is a soft roboticist for Super-Releaser, a Brooklyn-based R&D consultancy. With Final Frontier Design, a commercial space suit company, from 2013-2016 as Lead Patternmaker and Fabricator, Ms. Love worked as a technical expert on 5 NASA contracts. Ms. Love developed costumes for Broadway for more than a decade, including her Spider-Man:Turn Off The Dark costume which was inducted into the Smithsonian collection, and has built puppet costumes at The Jim Henson Company."
+        },
+        "email": "kari@superreleaser.com",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Kari",
+        "lastname": "Love",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "twitter",
+                "url": "@ikyotochan"
+            }
+        ],
+        "login": "kari.love",
+        "logoUrl": "https://dl.dropboxusercontent.com/u/36885952/small360x360.jpg",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "ATELIER DES MEDIAS",
+        "description": {
+            "FRENCH": "Benjamin est consultant-formateur indépendant, expert UX Design (conception de l’expérience utilisateur), et méthodes de projets itératives et agiles. \n\nCréatif refoulé, ingénieur cartésien convaincu, curieux de la vie et des technologies, un peu autodidacte dans l’âme, il adore travailler en équipe. Il conçoit et matérialise des expériences utilisateurs positives et parfois magiques, grâce à un usage intuitif et engageant du Web et des plateformes digitales. \n\nIl anime avec engagement et passion des ateliers avec des méthodes et techniques alternatives :  Design Thinking, Lean UX, et Design Sprint, Value Proposition Design",
+            "ENGLISH": "Benjamin est consultant-formateur indépendant, expert UX Design (conception de l’expérience utilisateur), et méthodes de projets itératives et agiles. \n\nCréatif refoulé, ingénieur cartésien convaincu, curieux de la vie et des technologies, un peu autodidacte dans l’âme, il adore travailler en équipe. Il conçoit et matérialise des expériences utilisateurs positives et parfois magiques, grâce à un usage intuitif et engageant du Web et des plateformes digitales. \n\nIl anime avec engagement et passion des ateliers avec des méthodes et techniques alternatives :  Design Thinking, Lean UX, et Design Sprint, Value Proposition Design"
+        },
+        "email": "benjaminrichy.pro@gmail.com",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Benjamin",
+        "lastname": "Richy",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "social",
+                "url": "https://fr.linkedin.com/in/benjamin-richy-b63452105, https://medium.com/@BenUserMood, ben.usermood.net"
+            },
+            {
+                "name": "twitter",
+                "url": "@benusermood"
+            },
+            {
+                "name": "github",
+                "url": "benj-github"
+            }
+        ],
+        "login": "benjamin.richy",
+        "logoUrl": "http://ben.usermood.net/img/profile-benjamin-300x300.jpg",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "Goood!",
+        "description": {
+            "FRENCH": "Product Owner",
+            "ENGLISH": "Product Owner"
+        },
+        "email": "m.cloux@clt-services.com",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Marine",
+        "lastname": "Cloux",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "social",
+                "url": "https://blog.goood.pro/author/marinecloux/"
+            },
+            {
+                "name": "twitter",
+                "url": "@MarineCloux"
+            },
+            {
+                "name": "github",
+                "url": "/"
+            }
+        ],
+        "login": "marine.cloux",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "Linda Rising LLC",
+        "description": {
+            "FRENCH": "Linda Rising is an independent consultant who lives near Nashville, Tennessee. Linda has a Ph.D. from Arizona State University in the area of object-based design metrics. Her background includes university teaching as well as work in industry in telecommunications, avionics, and tactical weapons systems. She is an internationally known presenter on topics related to agile development, patterns, retrospectives, the change process, and the connection between the latest neuroscience and software development. Linda is the author of numerous articles and several books. The latest, More Fearless Change, co-authored with Mary Lynn Manns. Her web site is: www.lindarising.org",
+            "ENGLISH": "Linda Rising is an independent consultant who lives near Nashville, Tennessee. Linda has a Ph.D. from Arizona State University in the area of object-based design metrics. Her background includes university teaching as well as work in industry in telecommunications, avionics, and tactical weapons systems. She is an internationally known presenter on topics related to agile development, patterns, retrospectives, the change process, and the connection between the latest neuroscience and software development. Linda is the author of numerous articles and several books. The latest, More Fearless Change, co-authored with Mary Lynn Manns. Her web site is: www.lindarising.org"
+        },
+        "email": "risingl@tds.net",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Rising",
+        "lastname": "Linda",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "social",
+                "url": "www.lindarising.org"
+            },
+            {
+                "name": "twitter",
+                "url": "@RisingLinda"
+            }
+        ],
+        "login": "rising.linda",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "Mozilla",
+        "description": {
+            "FRENCH": "Benjamin est ingénieur en compilation chez Mozilla dans l'équipe WebVM. Cette équipe s'occupe de la machine virtuelle Spidermonkey embarquée dans le moteur de rendu de Firefox (Gecko). Avant ça, il a travaillé sur asm.js, un sous-ensemble facilement optimisable de JavaScript aux performances élevées, proches du natif. Il s'est également impliqué dans le développement de SIMD.js, une API de calcul parallèle désormais à la portée des développeurs Web. Désormais il travaille sur l'implémentation de WebAssembly, le bytecode ultime pour le Web, dans Firefox. Sur son temps libre, il cherche à rendre le contrôle aux utilisateurs en contribuant à divers projets libres et ouverts offrant une alternative aux services cloud centralisés... et il apprend aussi à jouer du ukulélé.",
+            "ENGLISH": "Benjamin est ingénieur en compilation chez Mozilla dans l'équipe WebVM. Cette équipe s'occupe de la machine virtuelle Spidermonkey embarquée dans le moteur de rendu de Firefox (Gecko). Avant ça, il a travaillé sur asm.js, un sous-ensemble facilement optimisable de JavaScript aux performances élevées, proches du natif. Il s'est également impliqué dans le développement de SIMD.js, une API de calcul parallèle désormais à la portée des développeurs Web. Désormais il travaille sur l'implémentation de WebAssembly, le bytecode ultime pour le Web, dans Firefox. Sur son temps libre, il cherche à rendre le contrôle aux utilisateurs en contribuant à divers projets libres et ouverts offrant une alternative aux services cloud centralisés... et il apprend aussi à jouer du ukulélé."
+        },
+        "email": "public+cfpio@benj.me",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Benjamin",
+        "lastname": "Bouvier",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "social",
+                "url": "https://blog.benj.me, https://benj.me, https://twitter.com/bnjbvr, https://github.com/bnjbvr, https://framagit.org/bnjbvr"
+            },
+            {
+                "name": "twitter",
+                "url": "@bnjbvr"
+            },
+            {
+                "name": "github",
+                "url": "bnjbvr"
+            }
+        ],
+        "login": "benjamin.bouvier",
+        "logoUrl": "https://benj.me/pub/profile.jpg",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "TabMo",
+        "description": {
+            "FRENCH": "Data-scientist passionate about artificial intelligence/learning (machine, human or whatever), sciences/engineering/agile and art => for a better world",
+            "ENGLISH": "Data-scientist passionate about artificial intelligence/learning (machine, human or whatever), sciences/engineering/agile and art => for a better world"
+        },
+        "email": "lieva9@gmail.com",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Anastasia",
+        "lastname": "Lieva",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "social",
+                "url": "nobodyknowswhatisgoingon.fr"
+            },
+            {
+                "name": "twitter",
+                "url": "@lievAnastazia"
+            }
+        ],
+        "login": "anastasia.lieva",
+        "logoUrl": "https://pbs.twimg.com/profile_images/731769763697967104/7EYQkIiA.jpg",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "Ippon Technologies",
+        "description": {
+            "FRENCH": "Depuis une première rencontre avec l'Agilité en 2008, j'accompagne les équipes de développement en tant que Scrum Master, Product Owner ou Coach Agile.\nAgiliste convaincue, je participe activement à la diffusion de l'Agilité via l'organisation de Meetup et de conférences à Paris. J'ai fait partie de l'équipe organisatrice des 3 derniers ScrumDay et j'ai rejoint l'an dernier l'équipe Lean Kanban France. Parmi mes  projets personnels figurent aussi le développement du jeu d'apprentissage Kanbanzine et divers projets de traduction.",
+            "ENGLISH": "Depuis une première rencontre avec l'Agilité en 2008, j'accompagne les équipes de développement en tant que Scrum Master, Product Owner ou Coach Agile.\nAgiliste convaincue, je participe activement à la diffusion de l'Agilité via l'organisation de Meetup et de conférences à Paris. J'ai fait partie de l'équipe organisatrice des 3 derniers ScrumDay et j'ai rejoint l'an dernier l'équipe Lean Kanban France. Parmi mes  projets personnels figurent aussi le développement du jeu d'apprentissage Kanbanzine et divers projets de traduction."
+        },
+        "email": "agabrillagues@ippon.fr",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Anne",
+        "lastname": "Gabrillagues",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "social",
+                "url": "https://twitter.com/agabrillagues"
+            },
+            {
+                "name": "twitter",
+                "url": "@agabrillagues"
+            }
+        ],
+        "login": "anne.gabrillagues",
+        "logoUrl": "https://pbs.twimg.com/profile_images/495583307019468800/w_T6sErD_400x400.png",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "Xebia",
+        "description": {
+            "FRENCH": "Développeur fullstack Javascript, fervent pratiquant du \"software done right\" je continue de m'améliorer au travers du software craftmanship et occasionnellement speaker en meetup et diverses conférences tel que le [Mois du JS](https://www.youtube.com/watch?v=GfGhmGSgDEU) ou la [Xebicon](https://www.youtube.com/watch?v=tBzluo2guqk)",
+            "ENGLISH": "Développeur fullstack Javascript, fervent pratiquant du \"software done right\" je continue de m'améliorer au travers du software craftmanship et occasionnellement speaker en meetup et diverses conférences tel que le [Mois du JS](https://www.youtube.com/watch?v=GfGhmGSgDEU) ou la [Xebicon](https://www.youtube.com/watch?v=tBzluo2guqk)"
+        },
+        "email": "pgdejardin@xebia.fr",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Paul-Guillaume",
+        "lastname": "Déjardin",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "twitter",
+                "url": "pgdejardin"
+            },
+            {
+                "name": "github",
+                "url": "pgdejardin"
+            }
+        ],
+        "login": "paul-guillaume.dejardin",
+        "logoUrl": "http://www.gravatar.com/avatar/5e5c1678327320ceea9f4f4dff0d66ed?s=75",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "Theodo",
+        "description": {
+            "FRENCH": "Après des études d'ingénieur généraliste, j'ai choisi de faire du développement pour pouvoir créer des applications ayant un impact rapide et fort sur notre environnement. C'est pourquoi j'ai rejoint Theodo, grâce aux dernières technologies web et aux méthodes agiles nous développons rapidement des applications résolvant les problèmes business de nos clients.",
+            "ENGLISH": "Après des études d'ingénieur généraliste, j'ai choisi de faire du développement pour pouvoir créer des applications ayant un impact rapide et fort sur notre environnement. C'est pourquoi j'ai rejoint Theodo, grâce aux dernières technologies web et aux méthodes agiles nous développons rapidement des applications résolvant les problèmes business de nos clients."
+        },
+        "email": "aurorem@theodo.fr",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Aurore",
+        "lastname": "Malherbes",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "twitter",
+                "url": "https://twitter.com/AuroreMa27"
+            },
+            {
+                "name": "github",
+                "url": "https://github.com/AuroreM"
+            }
+        ],
+        "login": "aurore.malherbes",
+        "logoUrl": "https://secure.gravatar.com/avatar/91fc6c1aebddad406ccb2b818a262e88",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "Alten Nederland",
+        "description": {
+            "FRENCH": "I am a software tester from the Netherlands and I am working for Alten Nederland since 2008. I call myself a Qualisopher which stands for someone “who loves truth and wisdom and at the same time is decisive to improve man and his environment” . This means I am interested in the world around us, to see what I can learn and I can apply in software testing. That is one of the reason why I tell stories in books and at (test) conferences such as EuroSTAR, Expo:QA, Belgium Testing Days, CAST and Testnet conferences. \nMy dream is to participate, as a good qualisopher, in all kind of projects such as sports, culture or software testing. Projects which add value to our community: I want to inspire other people by cooperation, fun and empathy and hopefully bring light in someone's life.",
+            "ENGLISH": "I am a software tester from the Netherlands and I am working for Alten Nederland since 2008. I call myself a Qualisopher which stands for someone “who loves truth and wisdom and at the same time is decisive to improve man and his environment” . This means I am interested in the world around us, to see what I can learn and I can apply in software testing. That is one of the reason why I tell stories in books and at (test) conferences such as EuroSTAR, Expo:QA, Belgium Testing Days, CAST and Testnet conferences. \nMy dream is to participate, as a good qualisopher, in all kind of projects such as sports, culture or software testing. Projects which add value to our community: I want to inspire other people by cooperation, fun and empathy and hopefully bring light in someone's life."
+        },
+        "email": "ar.kramer.ard@gmail.com",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Ard",
+        "lastname": "Kramer",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "social",
+                "url": "https://www.linkedin.com/in/ardkramer/"
+            },
+            {
+                "name": "twitter",
+                "url": "ard_kramer"
+            }
+        ],
+        "login": "ard.kramer",
+        "logoUrl": "https://www.linkedin.com/mpr/mpr/AAEAAQAAAAAAAAhcAAAAJDU0MzNkYjIzLTQwYWQtNGZhNC04OTgwLThhZWM1OTIwNTkwZA.jpg",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "SFEIR",
+        "description": {
+            "FRENCH": "Je suis développeur et team leader chez Sfeir. J'ai fait du java quand j'étais petit, puis je me suis orienté vers le front et je suis actuellement développeur Node.js. Je suis également co-organisateur du meetup CSS Paris.",
+            "ENGLISH": "Je suis développeur et team leader chez Sfeir. J'ai fait du java quand j'étais petit, puis je me suis orienté vers le front et je suis actuellement développeur Node.js. Je suis également co-organisateur du meetup CSS Paris."
+        },
+        "email": "siegfried@ehret.me",
         "events": [
             "mixit17"
         ],
         "firstname": "Siegfried",
         "lastname": "Ehret",
         "legacyId": null,
-        "links": [],
+        "links": [
+            {
+                "name": "social",
+                "url": "https://ehret.me"
+            },
+            {
+                "name": "twitter",
+                "url": "https://twitter.com/SiegfriedEhret"
+            },
+            {
+                "name": "github",
+                "url": "https://github.com/SiegfriedEhret/"
+            }
+        ],
         "login": "siegfried.ehret",
-        "logoUrl": "",
+        "logoUrl": "https://dev.ehret.me/siegfried-360.png",
         "role": "SPEAKER"
     },
     {
-        "company": "",
+        "company": "Ecole des Mines de Saint-Etienne",
         "description": {
-            "ENGLISH": "Antoine Stalin",
-            "FRENCH": "Antoine Stalin"
+            "FRENCH": "Jean-Michel Degeorge est Maître-Assistant Habilité à Diriger des Recherches (HDR) en sciences de gestion à l'Ecole des Mines de St-Etienne, au sein du département MRI (Management Responsable de l’Innovation) de l'Institut Fayol. Après un parcours professionnel au sein d’un groupe français industriel et comme entrepreneur (création et reprise d’entreprises), ses recherches se concentrent principalement sur le processus de création d’entreprise (et sur l’innovation) et sur le développement des entreprises existantes. Il s’intéresse aux formations en entrepreneuriat, et particulièrement aux modalités de formation ainsi qu’à leur évaluation. Il est également Secrétaire de rédaction de la Revue de l’Entrepreneuriat et vice-président en charge des revues de l’Académie de l’Entrepreneuriat et de l’Innovation. En parallèle, il accompagne et forme des entrepreneurs et des dirigeants dans leur processus de création et d’innovation.",
+            "ENGLISH": "Jean-Michel Degeorge est Maître-Assistant Habilité à Diriger des Recherches (HDR) en sciences de gestion à l'Ecole des Mines de St-Etienne, au sein du département MRI (Management Responsable de l’Innovation) de l'Institut Fayol. Après un parcours professionnel au sein d’un groupe français industriel et comme entrepreneur (création et reprise d’entreprises), ses recherches se concentrent principalement sur le processus de création d’entreprise (et sur l’innovation) et sur le développement des entreprises existantes. Il s’intéresse aux formations en entrepreneuriat, et particulièrement aux modalités de formation ainsi qu’à leur évaluation. Il est également Secrétaire de rédaction de la Revue de l’Entrepreneuriat et vice-président en charge des revues de l’Académie de l’Entrepreneuriat et de l’Innovation. En parallèle, il accompagne et forme des entrepreneurs et des dirigeants dans leur processus de création et d’innovation."
         },
-        "email": "",
+        "email": "jean-michel.degeorge@emse.fr",
         "events": [
             "mixit17"
         ],
-        "firstname": "Antoine",
-        "lastname": "Stalin",
+        "firstname": "Jean-Michel",
+        "lastname": "DEGEORGE",
         "legacyId": null,
-        "links": [],
-        "login": "antoine.stalin",
+        "links": [
+            {
+                "name": "twitter",
+                "url": "@degeorgejm"
+            }
+        ],
+        "login": "jean-michel.degeorge",
         "logoUrl": "",
         "role": "SPEAKER"
     },
     {
-        "company": "",
+        "company": "Algolia",
         "description": {
-            "ENGLISH": "Sandrine BERGER-DOUCE",
-            "FRENCH": "Sandrine BERGER-DOUCE"
+            "FRENCH": "Developer Advocate à @Algolia. Artisan du web et être humain passionné. Organisateur des meetups #HumanTalks et #TechLunc sur Paris.",
+            "ENGLISH": "Developer Advocate à @Algolia. Artisan du web et être humain passionné. Organisateur des meetups #HumanTalks et #TechLunc sur Paris."
         },
-        "email": "",
+        "email": "tim.carry@algolia.com",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Tim",
+        "lastname": "Carry",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "social",
+                "url": "http://www.pixelastic.com/"
+            },
+            {
+                "name": "twitter",
+                "url": "pixelastic"
+            },
+            {
+                "name": "github",
+                "url": "pixelastic"
+            }
+        ],
+        "login": "tim.carry",
+        "logoUrl": "https://pbs.twimg.com/profile_images/601300425715908608/0Z1RJjQ8_400x400.jpg",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "Bonitasoft",
+        "description": {
+            "FRENCH": ". 10 years as a usability consultant \n. 4 years as an in-house usability person at Bonitasoft (Business Process Management Solution editor) \n. 2 years as an Ashtanga vinyasa yoga teacher ... and counting :]",
+            "ENGLISH": ". 10 years as a usability consultant \n. 4 years as an in-house usability person at Bonitasoft (Business Process Management Solution editor) \n. 2 years as an Ashtanga vinyasa yoga teacher ... and counting :]"
+        },
+        "email": "nathalie.cotte@bonitasoft.com",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Nathalie",
+        "lastname": "Cotté",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "twitter",
+                "url": "@NathErgo38"
+            }
+        ],
+        "login": "nathalie.cotte",
+        "logoUrl": "http://static8.viadeo-static.com/Te3z0B69LldYygl3hEGphfsY1hU=/140x185/smart/member/002xpeyvuf34qvn?ts=1421885748000",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "Shopify",
+        "description": {
+            "FRENCH": "Spécialiste de l’être humain et de ses différents modes de communication, Cynthia a toujours cherché à mieux comprendre comment les gens pensent, interagissent et connectent entre eux.\n\nElle fait d’ailleurs de la communication une de ses alliées les plus précieuses dans le domaine des technologies. Diplômée en design industriel à l’Université de Montréal, elle obtient en 2010 le prix RAÉDIUM pour Chouette!, une plateforme de communication technologique pour renforcer les relations intergénérationnelles. \n\nDepuis qu’elle a rejoint les rangs de Shopify, elle apporte sa créativité sur plusieurs projets d’envergure. Cynthia excelle particulière dans un domaine qui peut sembler un peu flou pour plusieurs; elle crée des connexions émotionnelles intelligentes entre les compagnies et leurs utilisateurs. Elle travaille à titre de directrice du design, et possède un véritable talent pour la conception stratégique, l’ergonomie et la résolution de problèmes. C’est ce bagage d’expériences qui lui permet d’être reconnue comme une experte en design d'interfaces multi-plateformes.\n\nEn plus de son emploi au sein de Shopify, Cynthia est mentor pour des startups, inviter sur des Jurys (Boomerang, Grafika, CLUE) et est invitée à parler dans une multitude d’évènements à travers le monde (TedX Youth Montreal, Creative Mornings, O'Reilly Design Conference, USI, Infopresse, Webin, WAQ, UX Masterclass, etc.) où son approche ludique séduit et surprend. Au cours de ses nombreuses conférences, elle transmet sa passion et son point de vue : le design centré sur l’utilisateur est une réalité et non pas une méthodologie utopique.",
+            "ENGLISH": "Spécialiste de l’être humain et de ses différents modes de communication, Cynthia a toujours cherché à mieux comprendre comment les gens pensent, interagissent et connectent entre eux.\n\nElle fait d’ailleurs de la communication une de ses alliées les plus précieuses dans le domaine des technologies. Diplômée en design industriel à l’Université de Montréal, elle obtient en 2010 le prix RAÉDIUM pour Chouette!, une plateforme de communication technologique pour renforcer les relations intergénérationnelles. \n\nDepuis qu’elle a rejoint les rangs de Shopify, elle apporte sa créativité sur plusieurs projets d’envergure. Cynthia excelle particulière dans un domaine qui peut sembler un peu flou pour plusieurs; elle crée des connexions émotionnelles intelligentes entre les compagnies et leurs utilisateurs. Elle travaille à titre de directrice du design, et possède un véritable talent pour la conception stratégique, l’ergonomie et la résolution de problèmes. C’est ce bagage d’expériences qui lui permet d’être reconnue comme une experte en design d'interfaces multi-plateformes.\n\nEn plus de son emploi au sein de Shopify, Cynthia est mentor pour des startups, inviter sur des Jurys (Boomerang, Grafika, CLUE) et est invitée à parler dans une multitude d’évènements à travers le monde (TedX Youth Montreal, Creative Mornings, O'Reilly Design Conference, USI, Infopresse, Webin, WAQ, UX Masterclass, etc.) où son approche ludique séduit et surprend. Au cours de ses nombreuses conférences, elle transmet sa passion et son point de vue : le design centré sur l’utilisateur est une réalité et non pas une méthodologie utopique."
+        },
+        "email": "cynthia.savard.saucier@gmail.com",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Cynthia",
+        "lastname": "Savard Saucier",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "twitter",
+                "url": "@CynthiaSavard"
+            }
+        ],
+        "login": "cynthia.savard.saucier",
+        "logoUrl": "https://github.com/CynthiaSavard/hello-world/blob/master/Photo%20profil%20Mix%20IT.png?raw=true",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "Arolla",
+        "description": {
+            "FRENCH": "Software craftsman depuis plusieurs années, je suis adepte de tout ce qui rends mon travail meilleurs: XP, TDD, DDD, clean code et articule ma façon de travailler autour des valeurs de l'agilité.\nJe développe sur des projets pour des clients mais coach aussi des équipes en animant des katas entre autre autour de TDD et du pair programming.\nJ'aime me définir comme Software gardener, car une application est comme un jardin où pousse la mauvaise herbe si on ne l'entretient pas.",
+            "ENGLISH": "Software craftsman depuis plusieurs années, je suis adepte de tout ce qui rends mon travail meilleurs: XP, TDD, DDD, clean code et articule ma façon de travailler autour des valeurs de l'agilité.\nJe développe sur des projets pour des clients mais coach aussi des équipes en animant des katas entre autre autour de TDD et du pair programming.\nJ'aime me définir comme Software gardener, car une application est comme un jardin où pousse la mauvaise herbe si on ne l'entretient pas."
+        },
+        "email": "fab.maury@gmail.com",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Fabien",
+        "lastname": "Maury",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "social",
+                "url": "http://www.arolla.fr/blog/author/fabien-maury/, https://github.com/cafetux, https://twitter.com/mrcafetux, https://www.linkedin.com/in/fabien-maury-830b8434"
+            },
+            {
+                "name": "twitter",
+                "url": "https://twitter.com/mrcafetux"
+            },
+            {
+                "name": "github",
+                "url": "https://github.com/cafetux"
+            }
+        ],
+        "login": "fabien.maury",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "THEODO",
+        "description": {
+            "FRENCH": "- 23 ans, de Lyon, diplômé des Ponts & Chaussées (Génie civil & Architecture)\n- Développeur web agile chez [Theodo](https://www.theodo.fr/en/)\n- Apprenti hacker à mes heures perdues",
+            "ENGLISH": "- 23 ans, de Lyon, diplômé des Ponts & Chaussées (Génie civil & Architecture)\n- Développeur web agile chez [Theodo](https://www.theodo.fr/en/)\n- Apprenti hacker à mes heures perdues"
+        },
+        "email": "charlesb@theodo.fr",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Charles",
+        "lastname": "BOCHET",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "social",
+                "url": "https://www.linkedin.com/in/charlesbochet/, https://www.theodo.fr/blog/author/charlesbtheodo-fr/, https://medium.com/@charlesb_55383"
+            },
+            {
+                "name": "twitter",
+                "url": "https://twitter.com/charlesbochet"
+            },
+            {
+                "name": "github",
+                "url": "https://github.com/charlesBochet"
+            }
+        ],
+        "login": "charles.bochet",
+        "logoUrl": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAeMAAAAJGI0NTE2Y2NiLTk2ZTAtNDBlMS1iNDljLWVlMjgxMDg0OWU4MA.jpg",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "MonkeyPatch",
+        "description": {
+            "FRENCH": "Développeur passionné depuis 15 ans. Expert dans les technos Java et Web. Je participe  souvent et anime (parfois) des rdv techniques au travers de ma société ou dans des meeting comme le Toulouse JUG, Software Craftsmanship Toulouse.",
+            "ENGLISH": "Développeur passionné depuis 15 ans. Expert dans les technos Java et Web. Je participe  souvent et anime (parfois) des rdv techniques au travers de ma société ou dans des meeting comme le Toulouse JUG, Software Craftsmanship Toulouse."
+        },
+        "email": "ilaborie@gmail.com",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Igor",
+        "lastname": "Laborie",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "twitter",
+                "url": "ilaborie"
+            },
+            {
+                "name": "github",
+                "url": "ilaborie"
+            }
+        ],
+        "login": "igor.laborie",
+        "logoUrl": "https://pbs.twimg.com/profile_images/3404066863/94e02f3bca9b038c4546f4e42ed05bc6.jpeg",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "dtc innovation",
+        "description": {
+            "FRENCH": "**Thomas Parisot est *Senior Web Engineer* à [dtc innovation][dtc-innovation]** à Londres, au Royaume-Uni (et on y mange bien ;-)). Ses efforts se portent sur la création de prototypes intelligibles, de webapps pour l'économie sociale et solidaire et de *designer* de solides librairies JavaScript Open Source.\n\nIl est un fervent défenseur de l'apprentissage multidisciplinaire, de simplicité et des heureux hasards. Il aime le fromage, évidemment. Et [les mots](https://oncletom.io). Et [composer des photos][photography]. Ou s'évader sur les sentiers de rando, avec tente et sac à dos.\n\nThomas a précédemment travaillé à [BBC R&D][bbcrd], a co-fondé [Sud Web][sudweb] et n'a aucun problème d'admettre avoir créé une startup qui a fait faillite.\n\n[dtc-innovation]: https://dtc-innovation.org/\n[bbcrd]: http://www.bbc.co.uk/rd\n[sudweb]: https://sudweb.fr/\n[photography]: https://oncletom.io/photography/",
+            "ENGLISH": "**Thomas Parisot est *Senior Web Engineer* à [dtc innovation][dtc-innovation]** à Londres, au Royaume-Uni (et on y mange bien ;-)). Ses efforts se portent sur la création de prototypes intelligibles, de webapps pour l'économie sociale et solidaire et de *designer* de solides librairies JavaScript Open Source.\n\nIl est un fervent défenseur de l'apprentissage multidisciplinaire, de simplicité et des heureux hasards. Il aime le fromage, évidemment. Et [les mots](https://oncletom.io). Et [composer des photos][photography]. Ou s'évader sur les sentiers de rando, avec tente et sac à dos.\n\nThomas a précédemment travaillé à [BBC R&D][bbcrd], a co-fondé [Sud Web][sudweb] et n'a aucun problème d'admettre avoir créé une startup qui a fait faillite.\n\n[dtc-innovation]: https://dtc-innovation.org/\n[bbcrd]: http://www.bbc.co.uk/rd\n[sudweb]: https://sudweb.fr/\n[photography]: https://oncletom.io/photography/"
+        },
+        "email": "oncletom@users.noreply.github.com",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Thomas",
+        "lastname": "Parisot",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "social",
+                "url": "https://oncletom.io, https://oncletom.io/talks/"
+            },
+            {
+                "name": "twitter",
+                "url": "https://twitter.com/oncletom"
+            },
+            {
+                "name": "github",
+                "url": "https://github.com/oncletom"
+            }
+        ],
+        "login": "thomas.parisot",
+        "logoUrl": "https://raw.githubusercontent.com/oncletom/talks/master/thomas-parisot.jpg",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "Institut des Systèmes Intelligents et de Robotique (ISIR) - UPMC",
+        "description": {
+            "FRENCH": "Stéphane Doncieux est professeur des Universités en informatique à l'Université Pierre et Marie Curie. Il est responsable de l'équipe AMAC (Architectures et Modèles de l'Adaptation et de la Cognition). Ses travaux portent sur la robotique développementale et l'apprentissage en robotique. Il travaille notamment sur des algorithmes d'apprentissage s'appuyant sur des algorithmes évolutionnistes. Il s'intéresse au démarrage du développement et à l'acquisition de compétences sensori-motrices par babillage et exploration de type divergente, notamment dans le cadre du projet européen DREAM (FET H2020), dont il est le coordinateur (http://robotsthatdream.eu/).",
+            "ENGLISH": "Stéphane Doncieux est professeur des Universités en informatique à l'Université Pierre et Marie Curie. Il est responsable de l'équipe AMAC (Architectures et Modèles de l'Adaptation et de la Cognition). Ses travaux portent sur la robotique développementale et l'apprentissage en robotique. Il travaille notamment sur des algorithmes d'apprentissage s'appuyant sur des algorithmes évolutionnistes. Il s'intéresse au démarrage du développement et à l'acquisition de compétences sensori-motrices par babillage et exploration de type divergente, notamment dans le cadre du projet européen DREAM (FET H2020), dont il est le coordinateur (http://robotsthatdream.eu/)."
+        },
+        "email": "stephane.doncieux@upmc.fr",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Stéphane",
+        "lastname": "Doncieux",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "social",
+                "url": "http://people.isir.upmc.fr/doncieux"
+            },
+            {
+                "name": "twitter",
+                "url": "https://twitter.com/SDoncieux"
+            },
+            {
+                "name": "github",
+                "url": "https://github.com/doncieux"
+            }
+        ],
+        "login": "stephane.doncieux",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "norsys",
+        "description": {
+            "FRENCH": "Yan est développeur depuis une petite dizaine d'années et navigue de projets en projets pour aider et animer les équipes. Passionné par l'automatisation des projets, il rend accessible le projet à l'ensemble des équipiers.",
+            "ENGLISH": "Yan est développeur depuis une petite dizaine d'années et navigue de projets en projets pour aider et animer les équipes. Passionné par l'automatisation des projets, il rend accessible le projet à l'ensemble des équipiers."
+        },
+        "email": "yan.matagne@gmail.com",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Yan",
+        "lastname": "Matagne",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "twitter",
+                "url": "https://twitter.com/ymatagne"
+            },
+            {
+                "name": "github",
+                "url": "https://github.com/ymatagne"
+            }
+        ],
+        "login": "yan.matagne",
+        "logoUrl": "https://pbs.twimg.com/profile_images/670598827561328640/1gZ374Aq.png",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "Skymatic",
+        "description": {
+            "FRENCH": "Christian Schmickler is managing partner at Skymatic and responsible for communication, finance, and marketing. Before joining the Cryptomator project that preceded the foundation of Skymatic in 2016, he worked as a systemic consultant for a German consultancy. He holds a master’s degree in International Business from Maastricht University and bachelor’s degrees in economic sciences and psychology.",
+            "ENGLISH": "Christian Schmickler is managing partner at Skymatic and responsible for communication, finance, and marketing. Before joining the Cryptomator project that preceded the foundation of Skymatic in 2016, he worked as a systemic consultant for a German consultancy. He holds a master’s degree in International Business from Maastricht University and bachelor’s degrees in economic sciences and psychology."
+        },
+        "email": "christian.schmickler@skymatic.de",
+        "events": [
+            "mixit17"
+        ],
+        "firstname": "Christian",
+        "lastname": "Schmickler",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "social",
+                "url": "https://cryptomator.org/, https://cryptomator.org/de/blog/"
+            },
+            {
+                "name": "twitter",
+                "url": "https://twitter.com/Cryptomator"
+            },
+            {
+                "name": "github",
+                "url": "https://github.com/cryptomator/cryptomator"
+            }
+        ],
+        "login": "christian.schmickler",
+        "logoUrl": "https://api.cryptomator.org/stuff/Christian%20Schmickler.jpg",
+        "role": "SPEAKER"
+    },
+    {
+        "company": "Ecole des Mines de St-Etienne",
+        "description": {
+            "FRENCH": "Sandrine Berger-Douce est professeure à l’Ecole des Mines de Saint-Etienne. Titulaire d’un doctorat (Université de Reims Champagne Ardenne, 2001) et d’une habilitation à diriger des recherches (Université de Bretagne Occidentale, 2008), ses travaux portent sur la Responsabilité Sociétale des Entreprises (RSE) dans le contexte des PME et l’accompagnement entrepreneurial, notamment par des stratégies collectives. Ils sont menés au sein du laboratoire Coactis (EA 4161) dans lequel elle assure la coresponsabilité de l’axe « Innovation, Entrepreneuriat et Santé ».",
+            "ENGLISH": "Sandrine Berger-Douce est professeure à l’Ecole des Mines de Saint-Etienne. Titulaire d’un doctorat (Université de Reims Champagne Ardenne, 2001) et d’une habilitation à diriger des recherches (Université de Bretagne Occidentale, 2008), ses travaux portent sur la Responsabilité Sociétale des Entreprises (RSE) dans le contexte des PME et l’accompagnement entrepreneurial, notamment par des stratégies collectives. Ils sont menés au sein du laboratoire Coactis (EA 4161) dans lequel elle assure la coresponsabilité de l’axe « Innovation, Entrepreneuriat et Santé »."
+        },
+        "email": "bergerdouce@emse.fr",
         "events": [
             "mixit17"
         ],
@@ -33463,420 +34100,47 @@
         "legacyId": null,
         "links": [],
         "login": "sandrine.berger-douce",
-        "logoUrl": "",
+        "logoUrl": "http://www.mines-stetienne.fr/wp-content/uploads/2016/01/Sandrine-Berger-Douce.jpg",
         "role": "SPEAKER"
     },
     {
-        "company": "",
+        "company": "Meltin'Cordes",
         "description": {
-            "ENGLISH": "Arnaud Gautier",
-            "FRENCH": "Arnaud Gautier"
+            "FRENCH": "Né en 1991, Samuel Couffignal mène ses études musicales au sein de différents conservatoire (ENMV, CRRde Lyon, Paris XIII&V) depuis ses 17 ans, aussi bien en piano qu’en musique de chambre, analyse, harmonie et contrepoint. Une rencontre déterminante avec Philippe Fournier lui permit de découvrir l’univers passionnant de la direction d’orchestre dès l’âge de 16 ans; depuis, il n’a de cesse de s’intéresser à cette discipline aux champs d’apprentissage toujours plus vastes. Il a pu bénéficier de l’enseignement au piano de Carine Zarifian, Milen Petrov, Philippe Barbey-Lallia et Carlos Roque Alsina notamment. Titulaire du Dem de direction d’orchestre dans la classe de Nicolas Brochot et Laurent Goossaert au Conservatoire Iannis Xenakis d’Evry, il a également eu l’occasion de travailler la direction de choeur auprès de Bernard Tétu lors de l’Académie de Fourvière. Il est par ailleurs lauréat de la bourse Prodij pour le projet d’orchestre « Meltin’Cordes », dont il a la direction artistique et musicale.\n\nDans un souci de recherche permanente, il n’a de cesse de découvrir ou re-découvrir les œuvres du répertoire musical quelque soit l’époque, le style, l’effectif instrumental… Par le biais de Meltin’Cordes, il cherche également à promouvoir le répertoire de musique contemporaine ainsi que la création de nouvelles oeuvre ; il a ainsi pu travailler en collaboration avec des compositeurs tels que Franck Vaudray, Annick Chartreux, Hélène Piris, Laura Lermigeaux…\n\nPassionné par la pédagogie, Samuel Couffignal a été invité plusieurs fois à intervenir sur des sujets liés à la direction d’orchestre, notamment dans le cadre de la « Foire aux Savoirs » organisé par la Villa Gillet avec l’atelier « Apprendre la direction d’orchestre en 20 minutes », auprès du Club Agiles Rhône-Alpes (CARA), au stage de « formation aux techniques de la direction d’orchestre » dirigé par Philippe Fournier etc… Il a également à sa charge deux chorales d’enfants dans le cadre des « Aménagements du Rythme Educatif » (ARE/TAP) à la Ville de Paris.",
+            "ENGLISH": "Né en 1991, Samuel Couffignal mène ses études musicales au sein de différents conservatoire (ENMV, CRRde Lyon, Paris XIII&V) depuis ses 17 ans, aussi bien en piano qu’en musique de chambre, analyse, harmonie et contrepoint. Une rencontre déterminante avec Philippe Fournier lui permit de découvrir l’univers passionnant de la direction d’orchestre dès l’âge de 16 ans; depuis, il n’a de cesse de s’intéresser à cette discipline aux champs d’apprentissage toujours plus vastes. Il a pu bénéficier de l’enseignement au piano de Carine Zarifian, Milen Petrov, Philippe Barbey-Lallia et Carlos Roque Alsina notamment. Titulaire du Dem de direction d’orchestre dans la classe de Nicolas Brochot et Laurent Goossaert au Conservatoire Iannis Xenakis d’Evry, il a également eu l’occasion de travailler la direction de choeur auprès de Bernard Tétu lors de l’Académie de Fourvière. Il est par ailleurs lauréat de la bourse Prodij pour le projet d’orchestre « Meltin’Cordes », dont il a la direction artistique et musicale.\n\nDans un souci de recherche permanente, il n’a de cesse de découvrir ou re-découvrir les œuvres du répertoire musical quelque soit l’époque, le style, l’effectif instrumental… Par le biais de Meltin’Cordes, il cherche également à promouvoir le répertoire de musique contemporaine ainsi que la création de nouvelles oeuvre ; il a ainsi pu travailler en collaboration avec des compositeurs tels que Franck Vaudray, Annick Chartreux, Hélène Piris, Laura Lermigeaux…\n\nPassionné par la pédagogie, Samuel Couffignal a été invité plusieurs fois à intervenir sur des sujets liés à la direction d’orchestre, notamment dans le cadre de la « Foire aux Savoirs » organisé par la Villa Gillet avec l’atelier « Apprendre la direction d’orchestre en 20 minutes », auprès du Club Agiles Rhône-Alpes (CARA), au stage de « formation aux techniques de la direction d’orchestre » dirigé par Philippe Fournier etc… Il a également à sa charge deux chorales d’enfants dans le cadre des « Aménagements du Rythme Educatif » (ARE/TAP) à la Ville de Paris."
         },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Arnaud",
-        "lastname": "Gautier",
-        "legacyId": null,
-        "links": [],
-        "login": "arnaud.gautier",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Kari Love",
-            "FRENCH": "Kari Love"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Kari",
-        "lastname": "Love",
-        "legacyId": null,
-        "links": [],
-        "login": "kari.love",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Benjamin Bouvier",
-            "FRENCH": "Benjamin Bouvier"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Benjamin",
-        "lastname": "Bouvier",
-        "legacyId": null,
-        "links": [],
-        "login": "benjamin.bouvier",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Jean-Michel DEGEORGE",
-            "FRENCH": "Jean-Michel DEGEORGE"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Jean-Michel",
-        "lastname": "DEGEORGE",
-        "legacyId": null,
-        "links": [],
-        "login": "jean-michel.degeorge",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Aurore Malherbes",
-            "FRENCH": "Aurore Malherbes"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Aurore",
-        "lastname": "Malherbes",
-        "legacyId": null,
-        "links": [],
-        "login": "aurore.malherbes",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Pauline Bourjot",
-            "FRENCH": "Pauline Bourjot"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Pauline",
-        "lastname": "Bourjot",
-        "legacyId": null,
-        "links": [],
-        "login": "pauline.bourjot",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Ard Kramer",
-            "FRENCH": "Ard Kramer"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Ard",
-        "lastname": "Kramer",
-        "legacyId": null,
-        "links": [],
-        "login": "ard.kramer",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Benjamin Richy",
-            "FRENCH": "Benjamin Richy"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Benjamin",
-        "lastname": "Richy",
-        "legacyId": null,
-        "links": [],
-        "login": "benjamin.richy",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Igor Laborie",
-            "FRENCH": "Igor Laborie"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Igor",
-        "lastname": "Laborie",
-        "legacyId": null,
-        "links": [],
-        "login": "igor.laborie",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Cynthia Savard Saucier",
-            "FRENCH": "Cynthia Savard Saucier"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Cynthia Savard",
-        "lastname": "Saucier",
-        "legacyId": null,
-        "links": [],
-        "login": "cynthia.savard.saucier",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Fabrice Sabatier",
-            "FRENCH": "Fabrice Sabatier"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Fabrice",
-        "lastname": "Sabatier",
-        "legacyId": null,
-        "links": [],
-        "login": "fabrice.sabatier",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Thomas Parisot",
-            "FRENCH": "Thomas Parisot"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Thomas",
-        "lastname": "Parisot",
-        "legacyId": null,
-        "links": [],
-        "login": "thomas.parisot",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Catalina Dobrica",
-            "FRENCH": "Catalina Dobrica"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Catalina",
-        "lastname": "Dobrica",
-        "legacyId": null,
-        "links": [],
-        "login": "catalina.dobrica",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Anastasia Lieva",
-            "FRENCH": "Anastasia Lieva"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Anastasia",
-        "lastname": "Lieva",
-        "legacyId": null,
-        "links": [],
-        "login": "anastasia.lieva",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Charles Bochet",
-            "FRENCH": "Charles Bochet"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Charles",
-        "lastname": "Bochet",
-        "legacyId": null,
-        "links": [],
-        "login": "charles.bochet",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Fabien Maury",
-            "FRENCH": "Fabien Maury"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Fabien",
-        "lastname": "Maury",
-        "legacyId": null,
-        "links": [],
-        "login": "fabien.maury",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Olivier MY",
-            "FRENCH": "Olivier MY"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Olivier",
-        "lastname": "MY",
-        "legacyId": null,
-        "links": [],
-        "login": "olivier.my",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Alexis Duque",
-            "FRENCH": "Alexis Duque"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Alexis",
-        "lastname": "Duque",
-        "legacyId": null,
-        "links": [],
-        "login": "alexis.duque",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Paul-Guillaume Déjardin",
-            "FRENCH": "Paul-Guillaume Déjardin"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Paul-Guillaume",
-        "lastname": "Déjardin",
-        "legacyId": null,
-        "links": [],
-        "login": "paul-guillaume.déjardin",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Antoine Le Taxin",
-            "FRENCH": "Antoine Le Taxin"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Antoine Le",
-        "lastname": "Taxin",
-        "legacyId": null,
-        "links": [],
-        "login": "antoine.le.taxin",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Samuel Couffignal",
-            "FRENCH": "Samuel Couffignal"
-        },
-        "email": "",
+        "email": "samuel.couffignal@wanadoo.fr",
         "events": [
             "mixit17"
         ],
         "firstname": "Samuel",
         "lastname": "Couffignal",
         "legacyId": null,
-        "links": [],
+        "links": [
+            {
+                "name": "social",
+                "url": "https://meltincordes.com/"
+            }
+        ],
         "login": "samuel.couffignal",
-        "logoUrl": "",
+        "logoUrl": "http://cyril.c.free.fr/pub/16-03-02_Concert_Samuel/.view_pict.php?page=1&file=IMG_0211.jpgb",
         "role": "SPEAKER"
     },
     {
         "company": "",
         "description": {
-            "ENGLISH": "Hanneli Tavante",
-            "FRENCH": "Hanneli Tavante"
+            "ENGLISH": "Rémi Forax",
+            "FRENCH": "Rémi Forax"
         },
         "email": "",
         "events": [
             "mixit17"
         ],
-        "firstname": "Hanneli",
-        "lastname": "Tavante",
+        "firstname": "Rémi",
+        "lastname": "Forax",
         "legacyId": null,
         "links": [],
-        "login": "hanneli.tavante",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Stéphane Doncieux",
-            "FRENCH": "Stéphane Doncieux"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Stéphane",
-        "lastname": "Doncieux",
-        "legacyId": null,
-        "links": [],
-        "login": "stéphane.doncieux",
+        "login": "remi.forax",
         "logoUrl": "",
         "role": "SPEAKER"
     },
@@ -33913,24 +34177,6 @@
         "legacyId": null,
         "links": [],
         "login": "bart.butler",
-        "logoUrl": "",
-        "role": "SPEAKER"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Christian Schmickler",
-            "FRENCH": "Christian Schmickler"
-        },
-        "email": "",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Christian",
-        "lastname": "Schmickler",
-        "legacyId": null,
-        "links": [],
-        "login": "christian.schmickler",
         "logoUrl": "",
         "role": "SPEAKER"
     },
