@@ -106,6 +106,7 @@ fun String.toSlug() =
                 .replace("[^a-z\\d\\s]".toRegex(), " ")
                 .split(" ")
                 .joinToString("-")
+                .replace("-+".toRegex(), "-")   // Avoid multiple consecutive "--"
 
 fun <T> Iterable<T>.shuffle(): Iterable<T> =
         toMutableList().apply { Collections.shuffle(this) }
