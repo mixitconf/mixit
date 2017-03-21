@@ -12,7 +12,7 @@ import org.springframework.web.reactive.function.server.ServerResponse.*
 @Component
 class TicketingHandler(val repository: TicketRepository) {
 
-    fun ticketing(req: ServerRequest) = ServerResponse.ok().render("ticketing", mapOf(Pair("title", "ticketing.title")))
+    fun ticketing(req: ServerRequest) = ServerResponse.ok().render("ticketing-closed", mapOf(Pair("title", "ticketing.title")))
 
     fun submit(req: ServerRequest) = req.body(BodyExtractors.toFormData()).then { data ->
         val formData  = data.toSingleValueMap()
