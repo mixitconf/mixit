@@ -13,7 +13,7 @@ class TicketRepository(val template: ReactiveMongoTemplate) {
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun save(ticket: Ticket) =
-            template.insert(ticket).doOnSuccess { t -> logger.info("Save new ticket $ticket") }
+            template.insert(ticket).doOnSuccess { _ -> logger.info("Save new ticket $ticket") }
 
     fun findAll() = template.findAll<Ticket>()
 

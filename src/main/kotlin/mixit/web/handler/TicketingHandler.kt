@@ -20,7 +20,7 @@ class TicketingHandler(val repository: TicketRepository) {
                 formData["firstname"]!!,
                 formData["lastname"]!!)
         repository.save(ticket)
-                .then { t -> ok().render("ticketing-submission", formData) }
+                .then { _ -> ok().render("ticketing-submission", formData) }
                 .otherwise(DuplicateKeyException::class.java, { ok().render("ticketing-error", mapOf(Pair("message", "ticketing.error.alreadyexists"), Pair("title", "ticketing.title"))) } )
                 .otherwise { ok().render("ticketing-error", mapOf(Pair("message", "ticketing.error.default"), Pair("title", "ticketing.title"))) }
     }

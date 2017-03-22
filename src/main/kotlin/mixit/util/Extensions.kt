@@ -6,10 +6,7 @@ import org.springframework.boot.SpringApplication
 import org.springframework.data.mongodb.core.ReactiveMongoOperations
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.http.HttpHeaders
-import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType.*
-import org.springframework.web.reactive.function.server.RouterDsl
-import org.springframework.web.reactive.function.server.Routes
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.*
@@ -44,6 +41,7 @@ inline fun <reified T : Any> ReactiveMongoOperations.findAll(): Flux<T> = findAl
 
 inline fun <reified T : Any> ReactiveMongoOperations.findOne(query: Query): Mono<T> = find(query, T::class.java).next()
 
+@Suppress("EXTENSION_SHADOWED_BY_MEMBER")
 inline fun <reified T : Any> ReactiveMongoOperations.remove(query: Query): Mono<DeleteResult> = remove(query, T::class.java)
 
 inline fun <reified T : Any> ReactiveMongoOperations.count(): Mono<Long> = count(Query(), T::class.java)
@@ -61,8 +59,6 @@ fun ServerResponse.BodyBuilder.xml() = contentType(APPLICATION_XML)
 fun ServerResponse.BodyBuilder.html() = contentType(TEXT_HTML)
 
 fun permanentRedirect(uri: String) = permanentRedirect(URI(uri)).build()
-
-fun temporaryRedirect(uri: String) = temporaryRedirect(URI(uri)).build()
 
 fun seeOther(uri: String) = seeOther(URI(uri)).build()
 

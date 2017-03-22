@@ -6,7 +6,7 @@ import org.springframework.web.server.WebSession
 import org.springframework.web.util.UriUtils
 import java.util.*
 
-fun generateModel(baseUri: String, path: String, locale: Locale, session: WebSession, messageSource: MessageSource) = mutableMapOf<String, Any>().apply {
+fun generateModel(baseUri: String, path: String, locale: Locale?, session: WebSession, messageSource: MessageSource) = mutableMapOf<String, Any>().apply {
         val username = session.getAttribute<String>("username")
         if (username.isPresent) {
             this["username"] = username.get()
