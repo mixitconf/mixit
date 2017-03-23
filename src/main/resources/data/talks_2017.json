@@ -3,14 +3,25 @@
     "event": "mixit17",
     "title": "Sensibilisation aux bonnes pratiques techniques du Software Craftsmanship : Lego\u00ae \u00e0 la rescousse !",
     "summary": "Pour cr\u00e9er demain un code de qualit\u00e9, venez (re)d\u00e9couvrir les bases des pratiques techniques du Software Craftsmanship de mani\u00e8re ludique !\nChers gens du m\u00e9tier, venez d\u00e9couvrir la vie d'un d\u00e9veloppeur agile.\nChers d\u00e9veloppeurs, venez pratiquer l'eXtreme LegoBuilding avec le framework LegoUnit !",
-    "speakerIds": [
-      "59873349"
-    ],
     "speakerIds": ["alice.barralon", "191394821"],
     "language": "FRENCH",
     "topic": "Craft\/Maker",
     "format": "WORKSHOP",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      13,
+      40
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      15,
+      30
+    ]
   },
   {
     "event": "mixit17",
@@ -20,7 +31,21 @@
     "language": "FRENCH",
     "topic": "Ops",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      10,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      11,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -30,17 +55,21 @@
     "language": "FRENCH",
     "topic": "Alien",
     "format": "TALK",
-    "room": "UNKNOWN"
-  },
-  {
-    "event": "mixit17",
-    "title": "Cultivating community: Building powerful relationships by communicating with empathy",
-    "summary": "Cultivating community: Building powerful relationships by communicating with empathy\nOne of our most valuable commodities as humans is our ability to build relationships - both personally and professionally. And the key to any successful relationship is empathy: being able to understand someone, connect with someone and view the world through their eyes. The problem is that the empathy needed to cultivate relationships, foster collaboration and build strong communities is often times lacking, especially when we are around people who are different from us. And if empathy is the tie that binds us, then vulnerability is the thread that holds that rope together.\n\nIt's time to change the status quo in tech. Let's explore the impact of empathy on communities. We'll discuss how communication plays a role in building successful relationships; how empathy fosters highly collaborative teams;  and finally we'll talk about true accessibility. Why? Because innovation is at it's best when it's inclusive. And to be inclusive, you must be empathetic.",
-    "speakerIds": ["sharon.steed"],
-    "language": "ENGLISH",
-    "topic": "Team",
-    "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      16,
+      0
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      16,
+      50
+    ]
   },
   {
     "event": "mixit17",
@@ -50,7 +79,21 @@
     "language": "ENGLISH",
     "topic": "Team",
     "format": "WORKSHOP",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      9,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      11,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -60,7 +103,21 @@
     "language": "FRENCH",
     "topic": "Alien",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      10,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      11,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -70,7 +127,21 @@
     "language": "FRENCH",
     "topic": "Design",
     "format": "RANDOM",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      13,
+      30
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      13,
+      50
+    ]
   },
   {
     "event": "mixit17",
@@ -80,7 +151,21 @@
     "language": "FRENCH",
     "topic": "Education",
     "format": "WORKSHOP",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      13,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      15,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -90,7 +175,21 @@
     "language": "FRENCH",
     "topic": "Craft\/Maker",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      14,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      15,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -100,7 +199,21 @@
     "language": "FRENCH",
     "topic": "Dev",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      9,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      10,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -110,7 +223,21 @@
     "language": "FRENCH",
     "topic": "Alien",
     "format": "WORKSHOP",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      9,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      11,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -120,7 +247,21 @@
     "language": "FRENCH",
     "topic": "Dev",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      16,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      17,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -139,7 +280,21 @@
     "language": "FRENCH",
     "topic": "Hack\/Activism",
     "format": "RANDOM",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      13,
+      30
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      13,
+      50
+    ]
   },
   {
     "event": "mixit17",
@@ -149,7 +304,21 @@
     "language": "FRENCH",
     "topic": "Team",
     "format": "WORKSHOP",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      15,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      17,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -159,7 +328,21 @@
     "language": "FRENCH",
     "topic": "Team",
     "format": "RANDOM",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      13,
+      30
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      13,
+      50
+    ]
   },
   {
     "event": "mixit17",
@@ -169,7 +352,21 @@
     "language": "FRENCH",
     "topic": "Team",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      10,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      11,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -178,8 +375,22 @@
     "speakerIds": ["rising.linda"],
     "language": "ENGLISH",
     "topic": "Other",
-    "format": "KEYNOTE",
-    "room": "UNKNOWN"
+    "format": "TALK",
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      16,
+      0
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      16,
+      50
+    ]
   },
   {
     "event": "mixit17",
@@ -189,7 +400,21 @@
     "language": "FRENCH",
     "topic": "Other",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      9,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      10,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -199,7 +424,21 @@
     "language": "FRENCH",
     "topic": "Education",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      15,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      16,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -209,7 +448,21 @@
     "language": "FRENCH",
     "topic": "Other",
     "format": "WORKSHOP",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      9,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      11,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -219,7 +472,21 @@
     "language": "FRENCH",
     "topic": "Product",
     "format": "WORKSHOP",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      13,
+      40
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      15,
+      30
+    ]
   },
   {
     "event": "mixit17",
@@ -229,7 +496,21 @@
     "language": "ENGLISH",
     "topic": "Other",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      9,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      10,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -239,7 +520,21 @@
     "language": "FRENCH",
     "topic": "Dev",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      13,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      14,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -249,7 +544,21 @@
     "language": "ENGLISH",
     "topic": "Dev",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      14,
+      40
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      15,
+      30
+    ]
   },
   {
     "event": "mixit17",
@@ -259,7 +568,21 @@
     "language": "FRENCH",
     "topic": "Dev",
     "format": "WORKSHOP",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      15,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      17,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -269,7 +592,21 @@
     "language": "FRENCH",
     "topic": "Dev",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      13,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      14,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -279,7 +616,21 @@
     "language": "ENGLISH",
     "topic": "Alien",
     "format": "KEYNOTE",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      13,
+      0
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      13,
+      25
+    ]
   },
   {
     "event": "mixit17",
@@ -289,7 +640,21 @@
     "language": "FRENCH",
     "topic": "Ops",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      16,
+      0
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      16,
+      50
+    ]
   },
   {
     "event": "mixit17",
@@ -299,7 +664,21 @@
     "language": "FRENCH",
     "topic": "Dev",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      15,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      16,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -309,7 +688,21 @@
     "language": "FRENCH",
     "topic": "Alien",
     "format": "RANDOM",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      13,
+      30
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      13,
+      50
+    ]
   },
   {
     "event": "mixit17",
@@ -319,7 +712,21 @@
     "language": "FRENCH",
     "topic": "Dev",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      15,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      16,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -329,7 +736,21 @@
     "language": "FRENCH",
     "topic": "Ops",
     "format": "WORKSHOP",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      13,
+      40
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      15,
+      30
+    ]
   },
   {
     "event": "mixit17",
@@ -339,7 +760,21 @@
     "language": "FRENCH",
     "topic": "Education",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      14,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      15,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -349,7 +784,21 @@
     "language": "ENGLISH",
     "topic": "Other",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      10,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      11,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -359,7 +808,21 @@
     "language": "FRENCH",
     "topic": "Dev",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      16,
+      0
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      16,
+      50
+    ]
   },
   {
     "event": "mixit17",
@@ -369,7 +832,21 @@
     "language": "FRENCH",
     "topic": "Education",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      13,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      11,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -379,7 +856,21 @@
     "language": "FRENCH",
     "topic": "Dev",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      16,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      17,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -389,17 +880,45 @@
     "language": "ENGLISH",
     "topic": "Education",
     "format": "WORKSHOP",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      9,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      11,
+      40
+    ]
   },
   {
     "event": "mixit17",
-    "title": "Comment sauver la princesse...et si le Design Sprint m\u2019\u00e9tait cont\u00e9 ?",
+    "title": "Le chevalier, la princesse et le dragon... et si le Design Sprint m\u2019\u00e9tait cont\u00e9 ?",
     "summary": "Le __Design Sprint__ est une m\u00e9thode de conception ultra-rapide peaufin\u00e9e par l\u2019\u00e9quipe Google Ventures (Jake Knapp) qui a largement puis\u00e9 dans le __Design Thinking__. Elle m\u00e9lange habilement diverses techniques d\u2019id\u00e9ation et conception, soutenue par __l\u2019intelligence collective__, et produit un r\u00e9sultat \u00e9tonnamment riche de sens.\n\nOh toi preux chevalier (chevali\u00e8re), empare-toi de l\u2019arme magique pour terrasser le dragon \u00e0 grand coup de Sprint et sauver ta princesse (ou ton prince), s\u2019il elle (ou il) le vaut bien ! Est-il vraiment possible de r\u00e9aliser cette qu\u00eate en 5 jours au lieu de 5 mois ? Comprendre pourquoi et comment \u00e7a marche, exemples \u00e0 l\u2019appui, astuces en bonus !\n\n1. __A quoi sert un design sprint ?__\nBonne question et merci de l\u2019avoir pos\u00e9e ;)\n2. __Un design sprint de r\u00eave\u2026__\n\"Le chevalier, la princesse et le dragon\", laissez-vous guider au coeur de la m\u00e9thode pour sauver la princesse !\n3. __Pourquoi \u00e7a marche ?__\nD\u00e9cryptage des moments cl\u00e9s, retours d'exp\u00e9riences et cas d'\u00e9tudes pour comprendre les m\u00e9canismes de la m\u00e9thode qui transcendent le projet.\n4. __(re)Apprendre \u00e0 travailler ensemble...autrement.__\nQuand le super cerveau du groupe devient plus puissant que la somme des individualit\u00e9s.",
     "speakerIds": ["benjamin.richy"],
     "language": "FRENCH",
     "topic": "Design",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      16,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      17,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -409,7 +928,21 @@
     "language": "FRENCH",
     "topic": "Dev",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      13,
+      40
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      14,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -419,7 +952,21 @@
     "language": "FRENCH",
     "topic": "Education",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      14,
+      40
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      15,
+      30
+    ]
   },
   {
     "event": "mixit17",
@@ -429,7 +976,21 @@
     "language": "FRENCH",
     "topic": "Design",
     "format": "WORKSHOP",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      13,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      15,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -449,7 +1010,21 @@
     "language": "FRENCH",
     "topic": "Other",
     "format": "RANDOM",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      13,
+      30
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      13,
+      50
+    ]
   },
   {
     "event": "mixit17",
@@ -459,7 +1034,21 @@
     "language": "FRENCH",
     "topic": "Alien",
     "format": "RANDOM",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      13,
+      30
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      13,
+      50
+    ]
   },
   {
     "event": "mixit17",
@@ -469,7 +1058,21 @@
     "language": "ENGLISH",
     "topic": "Other",
     "format": "RANDOM",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      13,
+      30
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      13,
+      50
+    ]
   },
   {
     "event": "mixit17",
@@ -479,7 +1082,21 @@
     "language": "FRENCH",
     "topic": "Other",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      9,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      10,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -489,7 +1106,21 @@
     "language": "FRENCH",
     "topic": "Hack\/Activism",
     "format": "RANDOM",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      13,
+      30
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      13,
+      50
+    ]
   },
   {
     "event": "mixit17",
@@ -499,7 +1130,21 @@
     "language": "FRENCH",
     "topic": "Dev",
     "format": "WORKSHOP",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      9,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      11,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -509,7 +1154,21 @@
     "language": "FRENCH",
     "topic": "Other",
     "format": "KEYNOTE",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      13,
+      30
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      13,
+      50
+    ]
   },
   {
     "event": "mixit17",
@@ -519,7 +1178,21 @@
     "language": "FRENCH",
     "topic": "Dev",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      15,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      16,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -529,7 +1202,21 @@
     "language": "FRENCH",
     "topic": "Other",
     "format": "RANDOM",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      13,
+      30
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      13,
+      50
+    ]
   },
   {
     "event": "mixit17",
@@ -539,7 +1226,21 @@
     "language": "FRENCH",
     "topic": "Other",
     "format": "WORKSHOP",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      15,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      17,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -549,7 +1250,21 @@
     "language": "FRENCH",
     "topic": "Team",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      14,
+      40
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      15,
+      30
+    ]
   },
   {
     "event": "mixit17",
@@ -559,7 +1274,21 @@
     "language": "FRENCH",
     "topic": "Alien",
     "format": "RANDOM",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      13,
+      30
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      13,
+      50
+    ]
   },
   {
     "event": "mixit17",
@@ -569,7 +1298,21 @@
     "language": "FRENCH",
     "topic": "Product",
     "format": "WORKSHOP",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      9,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      11,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -579,7 +1322,21 @@
     "language": "FRENCH",
     "topic": "Dev",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      10,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      11,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -589,7 +1346,21 @@
     "language": "FRENCH",
     "topic": "Dev",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      10,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      11,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -609,7 +1380,21 @@
     "language": "FRENCH",
     "topic": "Product",
     "format": "RANDOM",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      13,
+      30
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      13,
+      50
+    ]
   },
   {
     "event": "mixit17",
@@ -619,7 +1404,21 @@
     "language": "FRENCH",
     "topic": "Alien",
     "format": "KEYNOTE",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      9,
+      5
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      9,
+      30
+    ]
   },
   {
     "event": "mixit17",
@@ -629,7 +1428,21 @@
     "language": "ENGLISH",
     "topic": "Dev",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      9,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      10,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -649,8 +1462,21 @@
     "language": "FRENCH",
     "topic": "Product",
     "format": "TALK",
-    "room": "UNKNOWN"
-  },
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      13,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      14,
+      40
+    ]
   {
     "event": "mixit17",
     "title": "Pourquoi tous les d\u00e9veloppeurs sont-ils barbus ?",
@@ -659,7 +1485,21 @@
     "language": "FRENCH",
     "topic": "Hack\/Activism",
     "format": "RANDOM",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      13,
+      30
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      13,
+      50
+    ]
   },
   {
     "event": "mixit17",
@@ -669,7 +1509,21 @@
     "language": "FRENCH",
     "topic": "Dev",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      9,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      10,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -679,7 +1533,21 @@
     "language": "FRENCH",
     "topic": "Education",
     "format": "RANDOM",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      13,
+      30
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      13,
+      50
+    ]
   },
   {
     "event": "mixit17",
@@ -689,7 +1557,21 @@
     "language": "FRENCH",
     "topic": "Alien",
     "format": "RANDOM",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      13,
+      30
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      13,
+      50
+    ]
   },
   {
     "event": "mixit17",
@@ -699,7 +1581,21 @@
     "language": "FRENCH",
     "topic": "Design",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      13,
+      40
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      14,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -709,17 +1605,45 @@
     "language": "ENGLISH",
     "topic": "Dev",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      14,
+      40
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      15,
+      30
+    ]
   },
   {
     "event": "mixit17",
-    "title": "Wair",
-    "summary": "TBD",
+    "title": "Entrepreneur dans l'âme ? Comment passer de l'idée au concret.",
+    "summary": "Caroline Van Renterghem de Wair",
     "speakerIds": ["92989140"],
     "language": "FRENCH",
     "topic": "Product",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      13,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      14,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -729,7 +1653,21 @@
     "language": "FRENCH",
     "topic": "Dev",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      14,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      15,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -739,7 +1677,21 @@
     "language": "ENGLISH",
     "topic": "Hack\/Activism",
     "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      14,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      15,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -749,17 +1701,21 @@
     "language": "ENGLISH",
     "topic": "Product",
     "format": "TALK",
-    "room": "UNKNOWN"
-  },
-  {
-    "event": "mixit17",
-    "title": "Cloud Encryption with Cryptomator \u2013 Privacy Protection for Everyone",
-    "summary": "Current and past political events have initiated an extensive discussion on privacy and informational self-determination. The vast majority of consumers states their desire to keep personal data private while in everyday life, they use services and approve privacy agreements that undermine their informational self-determination on a large scale. This contradiction is referred to as the privacy paradox. While there are tools designed to keep personal data private, employing such tools is often associated with reduced functionality and\/or usability and new privacy issues resulting from their use. Such deficiencies inhibit their widespread use.\n\nCloud storages are one example for a privacy-critical infrastructure as personal data is distributed across a broad network while the location of storage is often out of the user\u2019s control. Client-side (end-to-end) encryption is a valid way to protect those data independent of security measures taken by the cloud provider and its privacy agreements. However, existing tools \u2013 e.g., for disk or file encryption \u2013 do not work seamlessly with the cloud.\n\nThe idea behind Cryptomator is to make cloud encryption as user-friendly, transparent, and understandable as possible to enable everyone to protect their data. In their talk, the developers of Cryptomator emphasize the importance of privacy in our information society in general and the significance of sophisticated and user-friendly tools to empower everyone to safeguard their privacy in particular. The general idea behind Cryptomator, its encryption scheme and challenges when targeting the cloud will be outlined. In addition, the architecture of the application and future development plans will be illustrated.",
-    "speakerIds": ["christian.schmickler", "markus.kreusch"],
-    "language": "ENGLISH",
-    "topic": "Product",
-    "format": "TALK",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      21,
+      9,
+      50
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      10,
+      40
+    ]
   },
   {
     "event": "mixit17",
@@ -769,6 +1725,20 @@
     "language": "FRENCH",
     "topic": "Alien",
     "format": "KEYNOTE",
-    "room": "UNKNOWN"
+    "room": "UNKNOWN",
+    "start": [
+      2017,
+      4,
+      20,
+      13,
+      15
+    ],
+    "end": [
+      2017,
+      4,
+      20,
+      13,
+      40
+    ]
   }
 ]

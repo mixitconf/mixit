@@ -33334,33 +33334,6 @@
         "role": "SPEAKER"
     },
     {
-        "company": "Communilogue",
-        "description": {
-            "FRENCH": "Sharon is an empathy consultant, public speaker and writer. A lifelong stutterer, she utilizes her experiences with her speech along with her background in marketing to help companies communicate more effectively both internally and with their target audience. She writes and speaks about improving communication through empathy. She also over a decade of experience creating and managing content for businesses. You can find out more about her work at communilogue.co.",
-            "ENGLISH": "Sharon is an empathy consultant, public speaker and writer. A lifelong stutterer, she utilizes her experiences with her speech along with her background in marketing to help companies communicate more effectively both internally and with their target audience. She writes and speaks about improving communication through empathy. She also over a decade of experience creating and managing content for businesses. You can find out more about her work at communilogue.co."
-        },
-        "email": "sharon@sharonsteed.co",
-        "events": [
-            "mixit17"
-        ],
-        "firstname": "Sharon",
-        "lastname": "Steed",
-        "legacyId": null,
-        "links": [
-            {
-                "name": "social",
-                "url": "http://www.communilogue.co"
-            },
-            {
-                "name": "twitter",
-                "url": "http://www.twitter.com/sharonsteed"
-            }
-        ],
-        "login": "sharon.steed",
-        "logoUrl": "https://pbs.twimg.com/profile_images/786664224088989696/B-idKHql.jpg",
-        "role": "SPEAKER"
-    },
-    {
         "company": "AKOSMA Training",
         "description": {
             "FRENCH": "Adrian Kosmaczewski is a writer, a software developer and a teacher. He is the author of two books about mobile software development, and has shipped mobile, web and desktop apps for iOS, Android, Mac OS X, Windows and Linux since 1996. Adrian holds a Master in Information Technology from the University of Liverpool.\n\nWhen not coding or teaching, Adrian likes to spend time with his wife Claudia, his cat Max and his Olivetti Lettera 22 typewriter.",
