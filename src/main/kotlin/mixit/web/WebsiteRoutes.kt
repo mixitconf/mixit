@@ -11,6 +11,7 @@ import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.RouterFunctions.resources
+import toMono
 
 
 @Component
@@ -77,7 +78,7 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
         val session = request.session().block()
         val path = request.uri().path
         val model = generateModel(properties.baseUri!!, path, locale, session, messageSource)
-        next.handle(request).then { response -> RenderingResponse.from(response as RenderingResponse).modelAttributes(model).build() }
+        next.handle(request).then { response -> if (response is RenderingResponse) RenderingResponse.from(response).modelAttributes(model).build() else response.toMono() }
     }
 
     @Bean
