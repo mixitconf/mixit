@@ -7,21 +7,17 @@ import org.junit.Test
 import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.web.reactive.function.client.bodyToMono
 import org.springframework.web.reactive.function.client.bodyToFlux
-import reactor.test.StepVerifier
+import reactor.core.publisher.test
 
 
 class EventIntegrationTests : AbstractIntegrationTests() {
 
     @Test
     fun `Find MiXiT 2016 event`() {
-        val event = client
-                .get()
-                .uri("/api/event/mixit16")
-                .accept(APPLICATION_JSON)
+        client.get().uri("/api/event/mixit16").accept(APPLICATION_JSON)
                 .exchange()
                 .then { r -> r.bodyToMono<Event>() }
-
-        StepVerifier.create(event)
+                .test()
                 .consumeNextWith {
                     assertEquals(2016, it.year)
                     assertFalse(it.current)
@@ -31,14 +27,10 @@ class EventIntegrationTests : AbstractIntegrationTests() {
 
     @Test
     fun `Find all events`() {
-        val events = client
-                .get()
-                .uri("/api/event/")
-                .accept(APPLICATION_JSON)
+        client.get().uri("/api/event/").accept(APPLICATION_JSON)
                 .exchange()
                 .flatMap { it.bodyToFlux<Event>() }
-
-        StepVerifier.create(events)
+                .test()
                 .consumeNextWith { assertEquals(2012, it.year) }
                 .consumeNextWith { assertEquals(2013, it.year) }
                 .consumeNextWith { assertEquals(2014, it.year) }
@@ -47,4 +39,5 @@ class EventIntegrationTests : AbstractIntegrationTests() {
                 .consumeNextWith { assertEquals(2017, it.year) }
                 .verifyComplete()
     }
+    
 }
