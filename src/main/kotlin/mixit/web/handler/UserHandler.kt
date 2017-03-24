@@ -35,19 +35,6 @@ class UserHandler(val repository: UserRepository,
 
     fun findOneStaff(req: ServerRequest) = ok().json().body(repository.findOneByRole(req.pathVariable("login"), Role.STAFF))
 
-    fun findSpeakers(req: ServerRequest) = ok().json().body(repository.findByRole(Role.SPEAKER))
-
-    fun findSpeakersByEvent(req: ServerRequest) =
-            ok().json().body(repository.findByRoleAndEvent(Role.SPEAKER, req.pathVariable("event")))
-
-    fun findOneSpeaker(req: ServerRequest) =
-            ok().json().body(repository.findOneByRole(req.pathVariable("login"), Role.SPEAKER))
-
-    fun findSponsors(req: ServerRequest) = ok().json().body(repository.findByRole(Role.SPONSOR))
-
-    fun findOneSponsor(req: ServerRequest) =
-            ok().json().body(repository.findOneByRole(req.pathVariable("login"), Role.SPONSOR))
-
     fun create(req: ServerRequest) = repository.save(req.bodyToMono<User>()).then { u ->
         created(create("/api/user/${u.login}")).json().body(u.toMono())
     }
@@ -62,7 +49,6 @@ class UserDto(
         var company: String? = null,
         var description: String,
         var logoUrl: String? = null,
-        val events: List<String>,
         val role: Role,
         var links: List<Link>,
         val logoType: String?,
@@ -71,7 +57,7 @@ class UserDto(
 
 fun User.toDto(language: Language, markdownConverter: MarkdownConverter) =
         UserDto(login, firstname, lastname, email ?: "", company, markdownConverter.toHTML(description[language] ?: ""),
-                logoUrl, events, role, links, logoType(logoUrl), logoWebpUrl(logoUrl))
+                logoUrl, role, links, logoType(logoUrl), logoWebpUrl(logoUrl))
 
 private fun logoWebpUrl(url: String?) =
         when {

@@ -10,7 +10,7 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 @Component
 class EventHandler(val repository: EventRepository) {
 
-    fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("login")))
+    fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("id")))
 
     fun findAll(req: ServerRequest) = ok().json().body(repository.findAll())
 

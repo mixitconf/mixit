@@ -23,7 +23,7 @@ class ApiRoutes(val blogHandler: BlogHandler,
 
             "/event".nest {
                 GET("/", eventHandler::findAll)
-                GET("/{login}", eventHandler::findOne)
+                GET("/{id}", eventHandler::findOne)
             }
 
             // Talks
@@ -40,15 +40,6 @@ class ApiRoutes(val blogHandler: BlogHandler,
                 GET("/", userHandler::findStaff)
                 GET("/{login}", userHandler::findOneStaff)
             }
-            "/speaker".nest {
-                GET("/", userHandler::findSpeakers)
-                GET("/{login}", userHandler::findOneSpeaker)
-            }
-            "/sponsor".nest {
-                GET("/", userHandler::findSponsors)
-                GET("/{login}", userHandler::findOneSponsor)
-            }
-            GET("/{event}/speaker/", userHandler::findSpeakersByEvent)
         }
     }
 }

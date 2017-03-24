@@ -28,24 +28,15 @@ class UserIntegrationTests : AbstractIntegrationTests() {
 
     @Test
     fun `Find Dan North`() {
-        client.get().uri("/api/speaker/tastapod").accept(APPLICATION_JSON)
+        client.get().uri("/api/user/tastapod").accept(APPLICATION_JSON)
                 .exchange()
                 .then { r -> r.bodyToMono<User>() }
                 .test()
                 .consumeNextWith {
                     assertEquals("North", it.lastname)
                     assertEquals("Dan", it.firstname)
-                    assertTrue(it.role == Role.SPEAKER)
+                    assertTrue(it.role == Role.USER)
                 }
-                .verifyComplete()
-    }
-
-    @Test
-    fun `Find all MiXit 2015 speakers`() {
-        client.get().uri("/api/mixit15/speaker/").accept(APPLICATION_JSON).exchange()
-                .flatMap { it.bodyToFlux<User>() }
-                .test()
-                .expectNextCount(60)
                 .verifyComplete()
     }
 
@@ -74,15 +65,15 @@ class UserIntegrationTests : AbstractIntegrationTests() {
     }
 
     @Test
-    fun `Find Zenika Lyon sponsor`() {
-        client.get().uri("/api/sponsor/Zenika%20Lyon").accept(APPLICATION_JSON)
+    fun `Find Zenika Lyon`() {
+        client.get().uri("/api/user/Zenika%20Lyon").accept(APPLICATION_JSON)
                 .exchange()
                 .flatMap { it.bodyToFlux<User>() }
                 .test()
                 .consumeNextWith {
                     assertEquals("Jacob", it.lastname)
                     assertEquals("Hervé", it.firstname)
-                    assertTrue(it.role == Role.SPONSOR)
+                    assertTrue(it.role == Role.USER)
                 }
                 .verifyComplete()
     }
