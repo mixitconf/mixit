@@ -51,7 +51,7 @@ private class PostDto(
 
 private fun Post.toDto(author: User, language: Language, markdownConverter: MarkdownConverter) = PostDto(
         id,
-        slug[language] ?: title[language]?.toSlug() ?: "",
+        slug[language] ?: "",
         author,
         addedAt.format(language),
         title[language] ?: "",
