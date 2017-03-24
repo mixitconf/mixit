@@ -30,7 +30,7 @@ class EventRepository(val template: ReactiveMongoTemplate) {
 
     fun count() = template.count<Event>()
 
-    fun findAll() = template.find<Event>(Query().with(Sort("year")))
+    fun findAll() = template.find<Event>(Query().with(Sort.by("year")))
 
     fun findOne(id: String) = template.findById<Event>(id)
 

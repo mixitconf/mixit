@@ -15,6 +15,7 @@ import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 import mixit.util.*
 import org.slf4j.LoggerFactory
+import org.springframework.data.domain.Sort.Direction.*
 import org.springframework.data.mongodb.core.query.Criteria.*
 
 
@@ -42,7 +43,7 @@ class PostRepository(val template: ReactiveMongoTemplate) {
 
     fun findAll(lang: Language? = null): Flux<Post> {
         val query = Query()
-        query.with(Sort(Order(Direction.DESC, "addedAt")))
+        query.with(Sort.by(Order(DESC, "addedAt")))
         query.fields().exclude("content")
         if (lang != null) {
             query.addCriteria(where("content.$lang").exists(true))
