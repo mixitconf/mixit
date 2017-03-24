@@ -11,7 +11,7 @@ import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.RouterFunctions.resources
-import toMono
+import reactor.core.publisher.toMono
 
 
 @Component
