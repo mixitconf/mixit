@@ -13,11 +13,6 @@
         <div class="column large-8 large-offset-2">
             <article class="callout">
                 <div class="lead">{{talk.summary}}</div>
-                <ul class="menu simple">
-                    {{#talk.speakers}}
-                        <li><a href="{{localePrefix}}/speaker/{{login}}">{{firstname}} {{lastname}}</a></li>
-                    {{/talk.speakers}}
-                </ul>
                 <hr />             
                 <p>{{talk.description}}</p>
                 <p class="subheader"><strong>
@@ -29,5 +24,27 @@
             </article>
     </div>
 </div>
+
+{{#speakers}}
+<div class="mxt-wrapper--page-content">
+    <div class="row">
+        <div class="column large-8 large-offset-2">
+            <div class="callout">
+                <article>
+                    <h2 class="text-center">{{firstname}} {{lastname}}</h1>
+                    <p class="subheader">{{company}}</p>
+                    <p>{{description}}</p>
+                    <p class="subheader">
+                        {{#links}}
+                            <a href="{{url}}">{{name}}</a> /
+                        {{/links}}
+                    </p>
+                </article>
+            </div>
+        </div>
+    </div>
+</div>
+{{/speakers}}
+
 
 {{> footer}}

@@ -9,7 +9,7 @@ data class User(
         @Id val login: String,
         val firstname: String,
         val lastname: String,
-        val email: String,
+        val email: String?,
         val company: String? = null,
         val description: Map<Language, String> = emptyMap(),
         val logoUrl: String? = null,

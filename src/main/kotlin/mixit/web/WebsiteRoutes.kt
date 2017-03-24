@@ -40,7 +40,7 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
             GET("/login", authenticationHandler::loginView)
 
             // Talks
-            GET("/2017", talkHandler::talks2017)
+            GET("/2017") { talkHandler.findByEventView(2017, it) }
             GET("/2016") { talkHandler.findByEventView(2016, it) }
             GET("/2015") { talkHandler.findByEventView(2015, it) }
             GET("/2014") { talkHandler.findByEventView(2014, it) }
@@ -49,9 +49,7 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
             GET("/talk/{slug}", talkHandler::findOneView)
 
             // Users
-            (GET("/user/{login}")
-                    or GET("/speaker/{login}")
-                    or GET("/sponsor/{login}")) { userHandler.findOneView(it) }
+            (GET("/user/{login}") or GET("/sponsor/{login}")) { userHandler.findOneView(it) }
             GET("/sponsors") { sponsorHandler.viewWithSponsors("sponsors", it) }
 
             "/admin".nest {
@@ -78,7 +76,7 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
         val session = request.session().block()
         val path = request.uri().path
         val model = generateModel(properties.baseUri!!, path, locale, session, messageSource)
-        next.handle(request).then { response -> if (response is RenderingResponse) RenderingResponse.from(response).modelAttributes(model).build() else response.toMono() }
+                next.handle(request).then { response -> if (response is RenderingResponse) RenderingResponse.from(response).modelAttributes(model).build() else response.toMono() }
     }
 
     @Bean

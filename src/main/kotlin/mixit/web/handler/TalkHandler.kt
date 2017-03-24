@@ -20,21 +20,19 @@ class TalkHandler(val repository: TalkRepository,
     fun findByEventView(year: Int, req: ServerRequest) =
             repository.findByEvent(yearToId(year.toString())).collectList().then { sessions ->
                 userRepository.findMany(sessions.flatMap(Talk::speakerIds)).collectMap(User::login).then { speakers ->
-                val model = mapOf(Pair("talks", sessions.map { it.toDto(it.speakerIds.map { speakers[it]!! } , markdownConverter) }), Pair("year", year), Pair("title", "talks.html.title|$year"))
+                val model = mapOf(Pair("talks", sessions.map { it.toDto(it.speakerIds.mapNotNull { speakers[it] } , markdownConverter) }), Pair("year", year), Pair("title", "talks.html.title|$year"))
                 ok().render("talks", model)
             }}
 
     fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug")).then { session ->
         userRepository.findMany(session.speakerIds).collectList().then { speakers ->
-        ok().render("talk", mapOf(Pair("talk", session.toDto(speakers!!, markdownConverter)), Pair("title", "talk.html.title|${session.title}")))
+        ok().render("talk", mapOf(Pair("talk", session.toDto(speakers!!, markdownConverter)), Pair("speakers", speakers.map { it.toDto(req.language(), markdownConverter) }), Pair("title", "talk.html.title|${session.title}")))
     }}
 
     fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("login")))
 
     fun findByEventId(req: ServerRequest) =
             ok().json().body(repository.findByEvent(yearToId(req.pathVariable("year"))))
-
-    fun talks2017(req: ServerRequest) = ok().render("talks-2017", mapOf(Pair("title", "talks.html.title|2017")))
 
 }
 

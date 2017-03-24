@@ -70,7 +70,7 @@ class UserDto(
 )
 
 fun User.toDto(language: Language, markdownConverter: MarkdownConverter) =
-        UserDto(login, firstname, lastname, email, company, markdownConverter.toHTML(description[language] ?: ""),
+        UserDto(login, firstname, lastname, email ?: "", company, markdownConverter.toHTML(description[language] ?: ""),
                 logoUrl, events, role, links, logoType(logoUrl), logoWebpUrl(logoUrl))
 
 private fun logoWebpUrl(url: String?) =
