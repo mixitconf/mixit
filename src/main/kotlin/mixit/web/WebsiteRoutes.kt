@@ -31,7 +31,7 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
     @Order(Ordered.HIGHEST_PRECEDENCE)
     fun websiteRouter() = router {
         accept(TEXT_HTML).nest {
-            GET("/") { sponsorHandler.viewWithSponsors("home", it) }
+            GET("/") { sponsorHandler.viewWithSponsors("home", null, it) }
             GET("/about", globalHandler::findAboutView)
             GET("/news", newsHandler::newsView)
             GET("/ticketing", ticketingHandler::ticketing)
@@ -50,7 +50,7 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
 
             // Users
             (GET("/user/{login}") or GET("/sponsor/{login}")) { userHandler.findOneView(it) }
-            GET("/sponsors") { sponsorHandler.viewWithSponsors("sponsors", it) }
+            GET("/sponsors") { sponsorHandler.viewWithSponsors("sponsors", "sponsors.title", it) }
 
             "/admin".nest {
                 GET("/", adminHandler::admin)
