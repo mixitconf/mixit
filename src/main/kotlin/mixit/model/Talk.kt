@@ -8,7 +8,7 @@ import java.time.LocalDateTime
 
 @Document
 data class Talk(
-        val format: SessionFormat,
+        val format: TalkFormat,
         val event: String,
         val title: String,
         val summary: String,
@@ -24,7 +24,7 @@ data class Talk(
         @Id val id: String? = null
 )
 
-enum class SessionFormat(val duration: Int) {
+enum class TalkFormat(val duration: Int) {
     TALK(50),
     LIGHTNING_TALK(5),
     WORKSHOP(110),

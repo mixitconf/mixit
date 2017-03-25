@@ -1,0 +1,44 @@
+{{> header}}
+
+<div class="mxt-wrapper--page-title">
+    <div class="row">
+        <div class="columns large-8 large-offset-2">
+            <h1 class="text-center">{{#i18n}}admin.talks.title{{/i18n}}</h1>
+        </div>
+    </div>
+</div>
+
+<div class="mxt-wrapper--page-content">
+    <div class="row">
+        <div class="column large-8 large-offset-2">
+            <div class="callout">
+                <p>{{#i18n}}admin.talks.count{{/i18n}} : {{talks.size}}</p>
+                <table>
+                  <thead>
+                    <tr>
+                        <th width="150">{{#i18n}}admin.talks.table.format{{/i18n}}</th>
+                        <th width="150">{{#i18n}}admin.talks.table.title{{/i18n}}</th>
+                        <th width="150">{{#i18n}}admin.talks.table.speakers{{/i18n}}</th>
+                        <th width="150">{{#i18n}}admin.talks.table.actions{{/i18n}}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {{#talks}}
+                    <tr>
+                        <td>{{format}}</td>
+                        <td>{{title}}</td>
+                        <td>{{#speakers}}{{firstname}} {{lastname}} {{/speakers}}</td>
+                        <td>
+                            <a href="/admin/talks/edit/{{slug}}">{{#i18n}}admin.talks.table.actions.update{{/i18n}}</a>
+                            <a href="/talk/{{slug}}" target="_blank">{{#i18n}}admin.talks.table.actions.view{{/i18n}}</a>
+                        </td>
+                    </tr>
+                    {{/talks}}
+                  </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{> footer}}

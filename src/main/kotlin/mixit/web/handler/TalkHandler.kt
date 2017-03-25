@@ -18,9 +18,9 @@ class TalkHandler(val repository: TalkRepository,
                   val markdownConverter: MarkdownConverter) {
 
     fun findByEventView(year: Int, req: ServerRequest) =
-            repository.findByEvent(yearToId(year.toString())).collectList().then { sessions ->
-                userRepository.findMany(sessions.flatMap(Talk::speakerIds)).collectMap(User::login).then { speakers ->
-                val model = mapOf(Pair("talks", sessions.map { it.toDto(it.speakerIds.mapNotNull { speakers[it] } , markdownConverter) }), Pair("year", year), Pair("title", "talks.html.title|$year"))
+            repository.findByEvent(yearToId(year.toString())).collectList().then { talks ->
+                userRepository.findMany(talks.flatMap(Talk::speakerIds)).collectMap(User::login).then { speakers ->
+                val model = mapOf(Pair("talks", talks.map { it.toDto(it.speakerIds.mapNotNull { speakers[it] } , markdownConverter) }), Pair("year", year), Pair("title", "talks.html.title|$year"))
                 ok().render("talks", model)
             }}
 
@@ -41,7 +41,7 @@ fun yearToId(year:String): String = "mixit${year.substring(2)}"
 class TalkDto(
         val id: String?,
         val slug: String,
-        val format: SessionFormat,
+        val format: TalkFormat,
         val event: String,
         val title: String,
         val summary: String,

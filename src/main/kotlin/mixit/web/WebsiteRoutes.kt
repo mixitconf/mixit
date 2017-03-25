@@ -55,6 +55,9 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
             "/admin".nest {
                 GET("/", adminHandler::admin)
                 GET("/ticketing", adminHandler::adminTicketing)
+                GET("/talks", adminHandler::adminTalks)
+                GET("/talks/edit/{slug}", adminHandler::adminTalk)
+                POST("/talks/edit", adminHandler::adminSaveTalk)
             }
 
             "/blog".nest {
