@@ -38,6 +38,11 @@ class AdminHandler(val ticketRepository: TicketRepository,
         }
     }
 
+    fun adminUsers(req: ServerRequest) = userRepository.findAll().collectList().then { users ->
+        ok().render("admin-users", mapOf(Pair("users", users), Pair("title", "admin.users.title")))
+    }
+
+
     fun adminTalk(req: ServerRequest) = talkRepository.findBySlug(req.pathVariable("slug")).then { talk ->
         ok().render("admin-talk", mapOf(
                 Pair("talk", talk),

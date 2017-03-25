@@ -1,0 +1,43 @@
+{{> header}}
+
+<div class="mxt-wrapper--page-title">
+    <div class="row">
+        <div class="columns large-8 large-offset-2">
+            <h1 class="text-center">{{#i18n}}admin.users.title{{/i18n}}</h1>
+        </div>
+    </div>
+</div>
+
+<div class="mxt-wrapper--page-content">
+    <div class="row">
+        <div class="column large-8 large-offset-2">
+            <div class="callout">
+                <p>{{#i18n}}admin.users.count{{/i18n}} : {{users.size}}</p>
+                <table>
+                  <thead>
+                    <tr>
+                        <th width="150">{{#i18n}}admin.users.table.login{{/i18n}}</th>
+                        <th width="150">{{#i18n}}admin.users.table.firstname{{/i18n}}</th>
+                        <th width="150">{{#i18n}}admin.users.table.lastname{{/i18n}}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {{#users}}
+                    <tr>
+                        <td>{{login}}</td>
+                        <td>{{firstname}}</td>
+                        <td>{{lastname}}</td>
+                        <td>{{#email}}{{email}}{{/email}}</td>
+                        <td>
+                            <a href="/user/{{login}}" target="_blank">{{#i18n}}admin.users.table.actions.view{{/i18n}}</a>
+                        </td>
+                    </tr>
+                    {{/users}}
+                  </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{> footer}}
