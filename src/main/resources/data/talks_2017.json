@@ -217,11 +217,11 @@
   },
   {
     "event": "mixit17",
-    "title": "D\u00e9velopper une application de pari en ligne avec la blockchain Ethereum",
-    "summary": "Dans ce codelab, nous commencerons par une pr\u00e9sentation de la blockchain Ethereum et du principe des smart-contracts. \n\nPuis nous d\u00e9velopperons une Dapp (application compos\u00e9e d\u2019un smart contract en backend + une ihm) basique de pari en ligne sur Ethereum en utilisant le framework Truffle et Angular2.\n\nCela permettra d'apprendre : \n\n\u2022 \u00e0 cr\u00e9er et tester unitairement un smart contract, \n\n\u2022 \u00e0 interfacer ce smart contract avec une IHM Web en Angular2 et Metamask (noeud Ethereum tr\u00e8s light sous forme de plugin Chrome). \n\nDes connaissances du fonctionnement des concepts g\u00e9n\u00e9raux des blockchains sont fortement conseill\u00e9es pour ce codelab, m\u00eame si il y aura quelques rappels au d\u00e9but. \n\nPar contre, pas besoin de conna\u00eetre Ethereum, et la partie Angular2 sera fournie dans les grandes lignes aux participants",
-    "speakerIds": ["benjamin.fontaine", "françois.kha"],
+    "title": "Jouer et gagner en programmant une blockchain avec Ethereum et Docker",
+    "summary": "Peu connus avant le succès de la cryptomonnaie \"BitCoin\", la technologie **blockchain** et le concept de \"**smart contracts**\" ont maintenant commencé à tracer leur chemin. De nouvelles formes d'organisations distribuées font leur apparition. Et de grandes entreprises, embarquées actuellement dans une phase de numérisation intensive de leurs activités, regardent maintenant avec attention comment exploiter la blockchain, qui pourrait devenir un nouveau modèle disruptif de leurs relations économiques, financières, contractuelles, organisationnelles et de fonctionnement.\n\nAprès une introduction rapide du concept et de la technologie sous-jacente, et de la notion d'application décentralisée, nous vous proposons un **atelier pour apprendre à programmer une solution blockchain**, en s'appuyant sur le framework et l'environnement le plus en vogue du moment : **[Ethereum](https://www.ethereum.org/)**.\n\nVenez donc programmer un jeu simple, de façon décentralisée. A la fin de la séance, vous serez reliés à tous les autres participants au sein de la même blockchain pour participer au jeu de manière collective.\n\nVous apprendrez à :\n* Comprendre les notions de base d'Ethereum.\n* Exécuter les commandes Ethereum dans un conteneur (ici [Docker](https://www.docker.com/)).\n* Créer un compte et une blockchain de test, démarrer un noeud et miner la blockchain.\n* Programmer un \"smart-contract\" en langage [Solidity](http://solidity.readthedocs.io).\n* Intégrer un \"smart-contract\" dans une application décentralisée (Dapp) en JavaScript.\n\n*Pré-requis : ordinateur portable équipé avec VirtualBox v5 et si possible Vagrant (une image de machine virtuelle, comportant tout le matériel nécessaire, sera fournie en séance).*",
+    "speakerIds": ["philippe.bazart", "112455790095465496145"],
     "language": "FRENCH",
-    "topic": "Alien",
+    "topic": "Dev",
     "format": "WORKSHOP",
     "room": "UNKNOWN",
     "start": [
