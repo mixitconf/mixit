@@ -83,7 +83,7 @@ dependencies {
     compile("com.atlassian.commonmark:commonmark-ext-autolink:0.8.0")
 
 
-    compile("io.projectreactor:reactor-kotlin:1.0.0.BUILD-SNAPSHOT")
+    compile("io.projectreactor:reactor-kotlin-extensions:1.0.0.BUILD-SNAPSHOT")
     testCompile("io.projectreactor.addons:reactor-test")
 
     compile("com.fasterxml.jackson.module:jackson-module-kotlin") {
