@@ -13,8 +13,12 @@
         <div class="large-12 large-centered columns">
             <div class="row">
                 <div class="large-12 columns">
-                    <form action="/admin/talks/edit" method="post">
-        <input type="hidden" name="id" value="{{#talk.id}}{{talk.id}}{{/talk.id}}"/>
+                    {{#talk.id}}<form action="/admin/talks/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.talk.delete.confirm{{/i18n}}');">
+                        <input type="hidden" name="id" value="{{talk.id}}"/>
+                        <input type="submit" class="button expand" value="{{#i18n}}admin.talk.delete{{/i18n}}"/>
+                    </form>{{/talk.id}}
+                    <form action="/admin/talks" method="post">
+                        {{#talk.id}}<input type="hidden" name="id" value="{{talk.id}}"/>{{/talk.id}}
                         <input type="hidden" name="event" value="{{talk.event}}"/>
                         <div class="row">
                             <div class="large-12 columns">

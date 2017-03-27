@@ -68,6 +68,15 @@ class AdminHandler(val ticketRepository: TicketRepository,
         }
     }
 
+    fun adminDeleteTalk(req: ServerRequest) : Mono<ServerResponse> =
+            req.body(BodyExtractors.toFormData()).then { data ->
+                val formData = data.toSingleValueMap()
+                talkRepository
+                        .deleteOne(formData["id"]!!)
+                        .then{ _ -> seeOther("${properties.baseUri}/admin/talks") }
+            }
+
+
     private fun adminTalk(talk: Talk = Talk(TALK, "mixit17", "", "")) = ok().render("admin-talk", mapOf(
             Pair("talk", talk),
             Pair("title", "admin.talk.title"),

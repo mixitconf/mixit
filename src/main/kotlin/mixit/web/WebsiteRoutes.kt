@@ -56,9 +56,9 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
                 GET("/", adminHandler::admin)
                 GET("/ticketing", adminHandler::adminTicketing)
                 GET("/talks", adminHandler::adminTalks)
+                DELETE("/")
                 GET("/talks/edit/{slug}", adminHandler::editTalk)
                 GET("/talks/create", adminHandler::createTalk)
-                POST("/talks/edit", adminHandler::adminSaveTalk)
                 GET("/users", adminHandler::adminUsers)
             }
 
@@ -75,6 +75,10 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
         contentType(APPLICATION_FORM_URLENCODED).nest {
             POST("/login", authenticationHandler::login)
             //POST("/ticketing", ticketingHandler::submit)
+            "/admin".nest {
+                POST("/talks", adminHandler::adminSaveTalk)
+                POST("/talks/delete", adminHandler::adminDeleteTalk)
+            }
         }
     }.filter { request, next ->
         val locale = request.headers().asHttpHeaders().acceptLanguageAsLocale
