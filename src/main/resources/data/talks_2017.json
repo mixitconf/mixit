@@ -1741,5 +1741,53 @@
       13,
       40
     ]
+  },
+  {
+    "event": "mixit17",
+    "title": "Trouvez vos cadences, et faite un pas vers le Continuous Delivery.",
+    "summary": "Cette session vous emmènera à la découverte de la notion de **cadence**,  celle qui rythme les activités des équipes, quelle que soit l’approche utilisée, du cycle en V au continous delivery en passant par Scrum et Kanban.\n\n La compréhension des cadences apporte des éléments de réponse aux questions suivantes (entre autres) :\n\n* Faut-il caler la production des user stories sur le calendrier des sprints, sur le release plan ? Y a-t-il d’autres possibilités intéressantes à explorer ? \n* Comment et quand intégrer les différents types de test au flux des travaux ?\n* À quel rythme faut-il livrer en production ? La question se pose-t-elle encore si vous utilisez une approche “continuous delivery” ?\n* Vous devez déjà avoir entendu parlé du fameux “rythme soutenable” nécessaire à la réussite d’un projet agile dans la durée. En théorie c’est très simple, mais en pratique, comment déterminer ce fameux rythme ?\n\nEt il y en a même qui pensent qu’avec de bonnes cadences on peut fluidifier l’ensemble des travaux à réaliser, de la collecte des besoins jusqu’au déploiement, s’affranchir des itérations et réussir un passage au Continuous Delivery !!",
+    "speakerIds": ["anne.gabrillagues"],
+    "language": "FRENCH",
+    "topic": "Ops",
+    "format": "TALK",
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null
+  },
+  {
+    "event": "mixit17",
+    "title": "Legacy Club",
+    "summary": "Code non maintenable, bugs à répétition, corrections chronophages, moral dans les chaussettes... Pas étonnant que la plupart d’entre nous préfèrent travailler sur des projets où tout est à (re)construire (Greenfield) plutôt que sur du code Legacy (Brownfield). Il faut dire que le Legacy sur lequel on a perdu le contrôle est plus que pénible. C’est épuisant, voire décourageant. Et si nous nous trompions ? __Et si – munis de quelques techniques de refactoring et de communication- nous pouvions inverser les choses et reprendre le contrôle…__ \n\n__Le temps d’une session avec des bouts de live-coding__, venez découvrir les trucs et astuces des gens qui préfèrent reprendre le contrôle plutôt que de subir. Voire qui préfèrent les opportunités cachées du Legacy aux pages blanches des projets Greenfield. Vous aussi, rejoignez le Legacy Club !",
+    "speakerIds": ["tpierrain", "bruno.boucard"],
+    "language": "FRENCH",
+    "topic": "Dev",
+    "format": "TALK",
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null
+  },
+  {
+    "event": "mixit17",
+    "title": "Notes on Type Theory for absolute beginners",
+    "summary": "One important subject we analyse in languages is its type system. Having a general overview of a type system provides information about the language structure, possible optimisations and may help us to understand how statements are evaluated. Those are topics that we shall consider for when creating a new project. This talk will provide a gentle introduction to type theory, explaining step by step how we transform source code into logical statements. \nTopics we will cover: \n* Why Type Theory? \n* Quick introduction to logic\n * Where are those concepts used? \n* An analysis of Java Type System",
+    "speakerIds": ["hanneli.tavante"],
+    "language": "ENGLISH",
+    "topic": "Dev",
+    "format": "WORKSHOP",
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null
+  },
+  {
+    "event": "mixit17",
+    "title": "CTF : Sortez le Mr Robot qui est en vous !",
+    "summary": "Vous avez déjà entendu parler de SQL Injection, de failles CSRF ou autres ? Ok, mais les avez-vous déjà exploitées ?\n\nDans ce workshop, nous vous proposerons un \"Capture The Flag\" qui vous permettra de chercher, analyser et exploiter différentes failles de sécurité. Que vous soyez novice ou non, ne vous inquiétez pas, nous serons là pour vous aiguiller dans le seul but d'apprendre des choses tout en passant un excellent moment !\n\nCe workshop se déroulera en plusieurs temps :\n- D'abord un tour d'horizon de différentes failles, avec des exemples concrets mettant en évidence que même les meilleurs développeurs du monde font des erreurs :)\n- Ensuite, nous vous fournirons des liens vers différentes applications dont le but sera d'exploiter une faille vous permettant de récupérer un code.\n- Chaque code récupéré vous permettra de gagner un nombre de points dépendant de la difficulté.\n- Les plus chevronnés d'entre vous seront récompensés :)\n\nNotre rêve caché : trouver le Mr Robot de ce mix-it !",
+    "speakerIds": ["mickaeljeanroy"],
+    "language": "FRENCH",
+    "topic": "Dev",
+    "format": "WORKSHOP",
+    "room": "UNKNOWN",
+    "start": null,
+    "end": null
   }
 ]
