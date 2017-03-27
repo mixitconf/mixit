@@ -42,38 +42,9 @@ class AdminHandler(val ticketRepository: TicketRepository,
         ok().render("admin-users", mapOf(Pair("users", users), Pair("title", "admin.users.title")))
     }
 
+    fun createTalk(req: ServerRequest) : Mono<ServerResponse> = this.adminTalk()
 
-    fun adminTalk(req: ServerRequest) = talkRepository.findBySlug(req.pathVariable("slug")).then { talk ->
-        ok().render("admin-talk", mapOf(
-                Pair("talk", talk),
-                Pair("title", "admin.talk.title"),
-                Pair("rooms", listOf(
-                        Triple(AMPHI1, AMPHI1.name, AMPHI1 == talk.room),
-                        Triple(AMPHI2, AMPHI2.name, AMPHI2 == talk.room),
-                        Triple(ROOM1, ROOM1.name, ROOM1 == talk.room),
-                        Triple(ROOM2, ROOM2.name, ROOM2 == talk.room),
-                        Triple(ROOM3, ROOM3.name, ROOM3 == talk.room),
-                        Triple(ROOM4, ROOM4.name, ROOM4 == talk.room),
-                        Triple(ROOM5, ROOM5.name, ROOM5 == talk.room),
-                        Triple(ROOM6, ROOM6.name, ROOM6 == talk.room),
-                        Triple(ROOM7, ROOM7.name, ROOM7 == talk.room),
-                        Triple(UNKNOWN, UNKNOWN.name, UNKNOWN == talk.room)
-                )),
-                Pair("formats", listOf(
-                        Pair(TALK, TALK == talk.format),
-                        Pair(LIGHTNING_TALK, LIGHTNING_TALK == talk.format),
-                        Pair(WORKSHOP, WORKSHOP == talk.format),
-                        Pair(RANDOM, RANDOM == talk.format),
-                        Pair(KEYNOTE, KEYNOTE == talk.format)
-                )),
-                Pair("languages", listOf(
-                        Pair(ENGLISH, ENGLISH == talk.language),
-                        Pair(FRENCH, FRENCH == talk.language)
-                )),
-                Pair("speakers", talk.speakerIds.joinToString(separator = ","))
-
-        ))
-    }
+    fun editTalk(req: ServerRequest) : Mono<ServerResponse> = talkRepository.findBySlug(req.pathVariable("slug")).then(this::adminTalk)
 
     fun adminSaveTalk(req: ServerRequest) : Mono<ServerResponse> {
         return req.body(BodyExtractors.toFormData()).then { data ->
@@ -96,6 +67,37 @@ class AdminHandler(val ticketRepository: TicketRepository,
             talkRepository.save(talk).then { _ -> seeOther("${properties.baseUri}/admin/talks") }
         }
     }
+
+    private fun adminTalk(talk: Talk = Talk(TALK, "mixit17", "", "")) = ok().render("admin-talk", mapOf(
+            Pair("talk", talk),
+            Pair("title", "admin.talk.title"),
+            Pair("rooms", listOf(
+                    Triple(AMPHI1, AMPHI1.name, AMPHI1 == talk.room),
+                    Triple(AMPHI2, AMPHI2.name, AMPHI2 == talk.room),
+                    Triple(ROOM1, ROOM1.name, ROOM1 == talk.room),
+                    Triple(ROOM2, ROOM2.name, ROOM2 == talk.room),
+                    Triple(ROOM3, ROOM3.name, ROOM3 == talk.room),
+                    Triple(ROOM4, ROOM4.name, ROOM4 == talk.room),
+                    Triple(ROOM5, ROOM5.name, ROOM5 == talk.room),
+                    Triple(ROOM6, ROOM6.name, ROOM6 == talk.room),
+                    Triple(ROOM7, ROOM7.name, ROOM7 == talk.room),
+                    Triple(UNKNOWN, UNKNOWN.name, UNKNOWN == talk.room)
+            )),
+            Pair("formats", listOf(
+                    Pair(TALK, TALK == talk.format),
+                    Pair(LIGHTNING_TALK, LIGHTNING_TALK == talk.format),
+                    Pair(WORKSHOP, WORKSHOP == talk.format),
+                    Pair(RANDOM, RANDOM == talk.format),
+                    Pair(KEYNOTE, KEYNOTE == talk.format)
+            )),
+            Pair("languages", listOf(
+                    Pair(ENGLISH, ENGLISH == talk.language),
+                    Pair(FRENCH, FRENCH == talk.language)
+            )),
+            Pair("speakers", talk.speakerIds.joinToString(separator = ","))
+
+    ))
+
 
 }
 

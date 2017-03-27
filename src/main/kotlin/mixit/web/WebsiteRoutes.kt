@@ -56,7 +56,8 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
                 GET("/", adminHandler::admin)
                 GET("/ticketing", adminHandler::adminTicketing)
                 GET("/talks", adminHandler::adminTalks)
-                GET("/talks/edit/{slug}", adminHandler::adminTalk)
+                GET("/talks/edit/{slug}", adminHandler::editTalk)
+                GET("/talks/create", adminHandler::createTalk)
                 POST("/talks/edit", adminHandler::adminSaveTalk)
                 GET("/users", adminHandler::adminUsers)
             }

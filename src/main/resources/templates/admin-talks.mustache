@@ -12,7 +12,7 @@
     <div class="row">
         <div class="column large-8 large-offset-2">
             <div class="callout">
-                <p>{{#i18n}}admin.talks.count{{/i18n}} : {{talks.size}}</p>
+                <p>{{#i18n}}admin.talks.count{{/i18n}} : {{talks.size}} | <a href="/admin/talks/create">{{#i18n}}admin.talks.actions.create{{/i18n}}</a></p>
                 <table>
                   <thead>
                     <tr>
@@ -29,8 +29,8 @@
                         <td>{{title}}</td>
                         <td>{{#speakers}}{{firstname}} {{lastname}} {{/speakers}}</td>
                         <td>
-                            <a href="/admin/talks/edit/{{slug}}">{{#i18n}}admin.talks.table.actions.update{{/i18n}}</a>
-                            <a href="/talk/{{slug}}" target="_blank">{{#i18n}}admin.talks.table.actions.view{{/i18n}}</a>
+                            <a href="/admin/talks/edit/{{slug}}">{{#i18n}}admin.talks.actions.update{{/i18n}}</a> |
+                            <a href="/talk/{{slug}}" target="_blank">{{#i18n}}admin.talks.actions.view{{/i18n}}</a>
                         </td>
                     </tr>
                     {{/talks}}
