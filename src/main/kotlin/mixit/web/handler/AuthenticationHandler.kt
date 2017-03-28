@@ -41,20 +41,7 @@ class AuthenticationHandler(val properties: MixitProperties, val userRepository:
         userRepository
                 .findByEmail(formData["email"].orEmpty())
                 .then { user ->
-                    userRepository
-                            .save(User(
-                                    user.login,
-                                    user.firstname,
-                                    user.lastname,
-                                    user.email,
-                                    data.toSingleValueMap()["provider"],
-                                    company = user.company,
-                                    description = user.description,
-                                    logoUrl = user.logoUrl,
-                                    role = user.role,
-                                    links = user.links,
-                                    legacyId = user.legacyId
-                            ))
+                    updateUser(user, user.login, data.toSingleValueMap()["provider"].orEmpty())
                             .then(callOauthProvider(req, user))
                 }
     }
@@ -77,30 +64,11 @@ class AuthenticationHandler(val properties: MixitProperties, val userRepository:
         // When user chooses an OAuth authentication we call the provider to start the dance
         session.attributes["email"] = user.email
         val oauthService: OAuth = oAuthFactory.create(user.oAuthProvider!!)
-        ServerResponse.status(HttpStatus.SEE_OTHER).location(oauthService.providerOauthUri(req)).build()
+        ServerResponse.status(HttpStatus.SEE_OTHER).location(oauthService.providerOauthUri(req, user)).build()
     }
 
-//    fun login(req: ServerRequest) = req.body(toFormData()).then { data ->
-//        val provider: String? = data.toSingleValueMap()["provider"]
-//
-//        if (provider.isNullOrEmpty()) {
-//            req.session().then { session ->
-//                val formData = data.toSingleValueMap()
-//                if (formData["username"] == properties.admin.username && formData["password"] == properties.admin.password) {
-//                    session.attributes["username"] = data.toSingleValueMap()["username"]
-//                    seeOther("${properties.baseUri}/admin")
-//                } else ok().render("login-error")
-//            }
-//        } else {
-//            // When user chooses an OAuth authentication we call the provider to start the dance
-//            val oauthService: OAuth = oAuthFactory.create(provider.orEmpty())
-//            ServerResponse.status(HttpStatus.SEE_OTHER).location(oauthService.providerOauthUri(req)).build()
-//        }
-//    }
-
-
     fun logout(req: ServerRequest) = req.session().then { session ->
-        session.attributes.remove("username")
+        session.attributes.remove("email")
         ok().render("home")
     }
 
@@ -108,21 +76,38 @@ class AuthenticationHandler(val properties: MixitProperties, val userRepository:
      * Endpoint called by an OAuth provider when the user is authenticated
      */
     fun oauthCallback(req: ServerRequest) = req.session().then { session ->
-        val oauthService: OAuth = oAuthFactory.create(req.pathVariable("provider"))
-        val oauthId = oauthService.getOAuthId(req)
+        val provider = req.pathVariable("provider")
+        val oauthService: OAuth = oAuthFactory.create(provider)
+        val email = session.getAttribute<String>("email")
 
-        if (oauthId.isPresent()) {
-            userRepository.findByLogin(oauthId.get()).then { user ->
-                if (user != null) {
-                    session.attributes["username"] = "${user.firstname}"
-                    ok().render("home")
-                } else {
-                    userRepository.save(User(oauthId.get(), "", "", "")).block()
-                    ok().render("login-new")
+        userRepository
+                .findByEmail(email.get())
+                .then { user ->
+                    val oauthId = oauthService.getOAuthId(req, user)
+
+                    if (oauthId.isPresent()) {
+                        updateUser(user, oauthId.get(), provider).then { user ->
+                            ok().render("home")
+                        }
+                    } else ok().render("login-error")
                 }
-            }
-        } else ok().render("login-error")
     }
 
+
+    //TODO to refactor
+    fun updateUser(user: User, login: String, provider: String) = userRepository
+            .save(User(
+                    login,
+                    user.firstname,
+                    user.lastname,
+                    user.email,
+                    provider,
+                    company = user.company,
+                    description = user.description,
+                    logoUrl = user.logoUrl,
+                    role = user.role,
+                    links = user.links,
+                    legacyId = user.legacyId
+            ))
 
 }

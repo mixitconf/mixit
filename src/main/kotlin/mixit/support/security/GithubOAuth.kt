@@ -8,6 +8,9 @@ import com.github.scribejava.core.model.OAuthRequest
 import com.github.scribejava.core.model.Response
 import com.github.scribejava.core.model.Verb
 import com.github.scribejava.core.oauth.OAuth20Service
+import mixit.MixitProperties
+import mixit.model.User
+import mixit.util.md5
 import org.springframework.core.env.Environment
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
 import org.springframework.stereotype.Service
@@ -21,28 +24,29 @@ import java.util.*
  * <a href="https://github.com/fernandezpablo85/scribe-java/blob/master/src/test/java/org/scribe/examples/TwitterExample.java">this example</a>.
  */
 @Service
-class GithubOAuth(env: Environment) : DefaultOAuth(env) {
+class GithubOAuth(mixitProperties: MixitProperties) : DefaultOAuth(mixitProperties) {
 
-    private val GITHUB_TOKEN_ATTRIBUTE = GithubOAuth::class.java.name + "-token"
+    override fun apiKey(): String = mixitProperties.oauth.github.apiKey!!
+
+    override fun apiSecret(): String = mixitProperties.oauth.github.clientSecret!!
 
     override fun provider(): OAuthProvider = OAuthProvider.GITHUB
 
-    override fun providerOauthUri(request: ServerRequest): URI {
-        val secretState = "githubsecret${Random().nextInt(999999)}"
-        request.session().block().attributes[GITHUB_TOKEN_ATTRIBUTE] = secretState
-        return URI(service(secretState).getAuthorizationUrl())
+    override fun providerOauthUri(request: ServerRequest, user: User): URI {
+        val service = service("githubsecret${user.email.md5()}")
+        return URI(service.getAuthorizationUrl())
     }
 
-    override fun getOAuthId(request: ServerRequest): Optional<String> {
+    override fun getOAuthId(request: ServerRequest, user: User): Optional<String> {
         val code = request.queryParam("code")
         val state = request.queryParam("state")
-        val secretState = request.session().block().getAttribute<String>(GITHUB_TOKEN_ATTRIBUTE)
+        val secretState = "githubsecret${user.email.md5()}"
 
-        if (!state.isPresent || !code.isPresent || !secretState.isPresent || !secretState.get().equals(state.get())) {
-            return Optional.empty<String>()
+        if (!state.isPresent || !code.isPresent || !secretState.equals(state.get())) {
+            throw IllegalArgumentException("Github Invalid URL")
         }
 
-        val service = service(secretState.get())
+        val service = service(secretState)
         val accessToken = service.getAccessToken(code.get())
         val oauthRequest = OAuthRequest(Verb.GET, "https://api.github.com/user")
 

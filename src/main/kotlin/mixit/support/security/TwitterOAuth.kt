@@ -9,6 +9,8 @@ import com.github.scribejava.core.model.OAuthRequest
 import com.github.scribejava.core.model.Response
 import com.github.scribejava.core.model.Verb
 import com.github.scribejava.core.oauth.OAuth10aService
+import mixit.MixitProperties
+import mixit.model.User
 import org.springframework.core.env.Environment
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
 import org.springframework.stereotype.Service
@@ -21,13 +23,17 @@ import java.util.*
  * <a href="https://github.com/fernandezpablo85/scribe-java/blob/master/src/test/java/org/scribe/examples/TwitterExample.java">this example</a>.
  */
 @Service
-class TwitterOAuth(env: Environment): DefaultOAuth(env) {
+class TwitterOAuth(mixitProperties: MixitProperties): DefaultOAuth(mixitProperties) {
 
     private val TWITTER_TOKEN_ATTRIBUTE = TwitterOAuth::class.java.name + "-token"
 
+    override fun apiKey(): String = mixitProperties.oauth.twitter.apiKey!!
+
+    override fun apiSecret(): String = mixitProperties.oauth.twitter.clientSecret!!
+
     override fun provider(): OAuthProvider = OAuthProvider.TWITTER
 
-    override fun providerOauthUri(request: ServerRequest): URI {
+    override fun providerOauthUri(request: ServerRequest, user: User): URI {
         val service = createService()
         val token = service.requestToken
 
@@ -35,7 +41,7 @@ class TwitterOAuth(env: Environment): DefaultOAuth(env) {
         return URI(service.getAuthorizationUrl(token))
     }
 
-    override fun getOAuthId(request: ServerRequest): Optional<String> {
+    override fun getOAuthId(request: ServerRequest, user: User): Optional<String> {
         val token = request.queryParam("oauth_token")
         val verifier = request.queryParam("oauth_verifier")
         val sessionToken = request.session().block().getAttribute<OAuth1RequestToken>(TWITTER_TOKEN_ATTRIBUTE)

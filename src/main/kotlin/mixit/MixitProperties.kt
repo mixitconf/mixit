@@ -7,6 +7,7 @@ class MixitProperties {
     var baseUri: String? = null
     val admin = Credential()
     val drive = Drive()
+    val oauth = Oauth()
 
     class Credential {
         var username: String? = null
@@ -24,6 +25,18 @@ class MixitProperties {
             var press: String? = null
         }
     }
+
+    class Oauth {
+        val github = Credential()
+        val google = Credential()
+        val twitter = Credential()
+
+        class Credential {
+            var apiKey: String? = null
+            var clientSecret: String? = null
+        }
+    }
+
 }
 
 

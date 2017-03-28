@@ -38,6 +38,7 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
 
             // Authentication
             GET("/login", authenticationHandler::loginView)
+            GET("/logout", authenticationHandler::logout)
             GET("/oauth/{provider}", authenticationHandler::oauthCallback)
 
             // Talks

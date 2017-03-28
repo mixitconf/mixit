@@ -1,18 +1,10 @@
 package mixit.support.security
 
-import com.github.scribejava.apis.TwitterApi
-import com.github.scribejava.core.builder.api.BaseApi
-import com.github.scribejava.core.builder.api.DefaultApi10a
-import com.github.scribejava.core.builder.api.DefaultApi20
-import com.github.scribejava.core.oauth.OAuth10aService
-import com.github.scribejava.core.oauth.OAuthService
-import com.github.scribejava.core.model.Token
-import org.springframework.core.env.Environment
+import mixit.MixitProperties
+import mixit.model.User
 import org.springframework.stereotype.Service
 import org.springframework.web.reactive.function.server.ServerRequest
-import java.io.UnsupportedEncodingException
 import java.net.URI
-import java.net.URLEncoder
 import java.util.*
 
 /**
@@ -37,7 +29,7 @@ interface OAuth {
     /**
      * Gets the service used to call remote provider
      */
-    fun providerOauthUri(request: ServerRequest): URI
+    fun providerOauthUri(request: ServerRequest, user: User): URI
 
     /**
      * Gets the oauth ID from the callback request sent by the OAuth provider.
@@ -45,30 +37,28 @@ interface OAuth {
      * @return the OAuth ID, or empty if the user refused to authenticate
      * @throws BadRequestException if the state or token saved in the first step is invalid
      */
-    fun getOAuthId(request: ServerRequest): Optional<String>
+    fun getOAuthId(request: ServerRequest, user: User): Optional<String>
 
+    /**
+     * Key to access to the provider
+     */
+    fun apiKey(): String
+
+    /**
+     * Secret code to access to the provider
+     */
+    fun apiSecret(): String
 }
 
 /**
  * Base class for OAuth2 implementations.
  */
-abstract class DefaultOAuth(val env: Environment) : OAuth {
+abstract class DefaultOAuth(val mixitProperties: MixitProperties) : OAuth {
 
     /**
      * Returns the URL call by the provider after the authentication
      */
-    protected fun callbackUrl(): String = "http://localhost:8080/oauth/${provider().name.toLowerCase()}"
-
-    /**
-     * Key to access to the provider
-     */
-    protected fun apiKey(): String = env.getProperty("oauth.${provider().name.toLowerCase()}.apiKey")
-
-    /**
-     * Secret code to access to the provider
-     */
-    protected fun apiSecret(): String = env.getProperty("oauth.${provider().name.toLowerCase()}.clientSecret")
-
+    protected fun callbackUrl(): String = "${mixitProperties.baseUri}/oauth/${provider().name.toLowerCase()}"
 
 }
 
