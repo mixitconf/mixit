@@ -46,6 +46,8 @@ class TalkRepository(val template: ReactiveMongoTemplate) {
 
     fun deleteAll() = template.remove<Talk>(Query())
 
+    fun deleteOne(id: String) = template.remove<Talk>(Query(where("_id").`is`(id)))
+
     fun save(talk: Talk) = template.save(talk)
 
 }

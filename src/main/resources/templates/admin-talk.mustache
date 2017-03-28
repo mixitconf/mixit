@@ -13,14 +13,18 @@
         <div class="large-12 large-centered columns">
             <div class="row">
                 <div class="large-12 columns">
-                    <form action="/admin/talks/edit" method="post">
+                    {{#talk.id}}<form action="/admin/talks/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.talk.delete.confirm{{/i18n}}');">
                         <input type="hidden" name="id" value="{{talk.id}}"/>
+                        <input type="submit" class="button expand" value="{{#i18n}}admin.talk.delete{{/i18n}}"/>
+                    </form>{{/talk.id}}
+                    <form action="/admin/talks" method="post">
+                        {{#talk.id}}<input type="hidden" name="id" value="{{talk.id}}"/>{{/talk.id}}
                         <input type="hidden" name="event" value="{{talk.event}}"/>
                         <div class="row">
                             <div class="large-12 columns">
                                 <label>
                                     {{#i18n}}admin.talk.form.title{{/i18n}}
-                                    <input type="text" name="title" value="{{talk.title}}"/>
+                                    <input type="text" name="title" value="{{talk.title}}" required/>
                                 </label>
                             </div>
                         </div>
@@ -28,7 +32,7 @@
                             <div class="large-12 columns">
                                 <label>
                                     {{#i18n}}admin.talk.form.summary{{/i18n}}
-                                    <textarea name="summary" rows="5">{{talk.summary}}</textarea>
+                                    <textarea name="summary" rows="5" required>{{talk.summary}}</textarea>
                                 </label>
                             </div>
                         </div>
@@ -44,7 +48,7 @@
                             <div class="large-12 columns">
                                 <label>
                                     {{#i18n}}admin.talk.form.language{{/i18n}}
-                                    <select name="language">
+                                    <select name="language" required>
                                         {{#languages}}
                                         <option value="{{first}}"{{#second}} selected{{/second}}>{{first}}</option>
                                         {{/languages}}
@@ -56,7 +60,7 @@
                             <div class="large-12 columns">
                                 <label>
                                     {{#i18n}}admin.talk.form.speakers{{/i18n}}
-                                    <input type="text" name="speakers" value="{{speakers}}"/>
+                                    <input type="text" name="speakers" value="{{speakers}}" required/>
                                 </label>
                             </div>
                         </div>
@@ -84,7 +88,7 @@
                             <div class="large-12 columns">
                                 <label>
                                     {{#i18n}}admin.talk.form.format{{/i18n}}
-                                    <select name="format">
+                                    <select name="format" required>
                                         {{#formats}}
                                         <option value="{{first}}"{{#second}} selected{{/second}}>{{first}}</option>
                                         {{/formats}}
@@ -96,7 +100,7 @@
                             <div class="large-12 columns">
                                 <label>
                                     {{#i18n}}admin.talk.form.addedAt{{/i18n}}
-                                    <input type="text" name="addedAt" value="{{talk.addedAt}}"/>
+                                    <input type="text" name="addedAt" value="{{talk.addedAt}}" required/>
                                 </label>
                             </div>
                         </div>
@@ -104,7 +108,7 @@
                             <div class="large-12 columns">
                                 <label>
                                     {{#i18n}}admin.talk.form.start{{/i18n}}
-                                    <input type="text" name="start" value="{{#talk.start}}{{talk.start}}{{/talk.start}}"/>
+                                    <input type="text" name="start" value="{{#talk.start}}{{talk.start}}{{/talk.start}}" required/>
                                 </label>
                             </div>
                         </div>
@@ -112,7 +116,7 @@
                             <div class="large-12 columns">
                                 <label>
                                     {{#i18n}}admin.talk.form.end{{/i18n}}
-                                    <input type="text" name="end" value="{{#talk.end}}{{talk.end}}{{/talk.end}}"/>
+                                    <input type="text" name="end" value="{{#talk.end}}{{talk.end}}{{/talk.end}}" required/>
                                 </label>
                             </div>
                         </div>

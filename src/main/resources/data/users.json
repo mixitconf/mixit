@@ -4475,6 +4475,37 @@
         "role": "USER"
     },
     {
+        "company": "Ninja Squad",
+        "description": {
+            "ENGLISH": "Ninja Squad is a cooperative company, proudly building software by hand with love, providing [trainings](http://ninja-squad.com/formations), and selling [ebooks at 'pay what you want' price about Angular](https://books.ninja-squad.com).",
+            "FRENCH": "Ninja Squad est une société coopérative de développeurs qui font des logiciels à la main et avec amour, donnent [des formations](http://ninja-squad.fr/formations/), et vendent [des livres à prix libre sur Angular](https://books.ninja-squad.com)."
+        },
+        "firstname": "",
+        "lastname": "",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Site",
+                "url": "http://ninja-squad.com"
+            },
+            {
+                "name": "Blog",
+                "url": "http://blog.ninja-squad.com"
+            },
+            {
+                "name": "Angular ebooks",
+                "url": "https://books.ninja-squad.com"
+            },
+            {
+                "name": "Angular exercises (try for free)!",
+                "url": "https://angular-exercises.ninja-squad.com/"
+            }
+        ],
+        "login": "NinjaSquad",
+        "logoUrl": "sponsor/logo-ninjasquad.svg",
+        "role": "USER"
+    },
+    {
         "company": "CGI",
         "description": {
             "ENGLISH": "[CGI](http://www.cgi.fr), pour la troisi\u00e8me ann\u00e9e, s\u2019associe \u00e0  pour promouvoir l\u2019innovation, le d\u00e9veloppement, l\u2019agilit\u00e9 et le plaisir",
@@ -4732,7 +4763,7 @@
             }
         ],
         "login": "Sopra Steria",
-        "logoUrl": "sponsor/logo-sopra-steria.svg",
+        "logoUrl": "sponsor/logo-sopra-steria.png",
         "role": "USER"
     },
     {
