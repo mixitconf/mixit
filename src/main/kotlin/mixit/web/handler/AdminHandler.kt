@@ -9,6 +9,7 @@ import mixit.repository.TalkRepository
 import mixit.repository.TicketRepository
 import mixit.repository.UserRepository
 import mixit.util.MarkdownConverter
+import mixit.util.language
 import mixit.util.seeOther
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.BodyExtractors
@@ -34,7 +35,7 @@ class AdminHandler(val ticketRepository: TicketRepository,
 
     fun adminTalks(req: ServerRequest) = talkRepository.findByEvent("mixit17").collectList().then { talks ->
         userRepository.findMany(talks.flatMap(Talk::speakerIds)).collectMap(User::login).then { speakers ->
-            ok().render("admin-talks", mapOf(Pair("talks", talks.map { it.toDto(it.speakerIds.mapNotNull { speakers[it] }, markdownConverter) }), Pair("title", "admin.talks.title")))
+            ok().render("admin-talks", mapOf(Pair("talks", talks.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] }, markdownConverter) }), Pair("title", "admin.talks.title")))
         }
     }
 
@@ -81,16 +82,16 @@ class AdminHandler(val ticketRepository: TicketRepository,
             Pair("talk", talk),
             Pair("title", "admin.talk.title"),
             Pair("rooms", listOf(
-                    Triple(AMPHI1, AMPHI1.name, AMPHI1 == talk.room),
-                    Triple(AMPHI2, AMPHI2.name, AMPHI2 == talk.room),
-                    Triple(ROOM1, ROOM1.name, ROOM1 == talk.room),
-                    Triple(ROOM2, ROOM2.name, ROOM2 == talk.room),
-                    Triple(ROOM3, ROOM3.name, ROOM3 == talk.room),
-                    Triple(ROOM4, ROOM4.name, ROOM4 == talk.room),
-                    Triple(ROOM5, ROOM5.name, ROOM5 == talk.room),
-                    Triple(ROOM6, ROOM6.name, ROOM6 == talk.room),
-                    Triple(ROOM7, ROOM7.name, ROOM7 == talk.room),
-                    Triple(UNKNOWN, UNKNOWN.name, UNKNOWN == talk.room)
+                    Triple(AMPHI1, "rooms.${AMPHI1.name.toLowerCase()}", AMPHI1 == talk.room),
+                    Triple(AMPHI2, "rooms.${AMPHI2.name.toLowerCase()}", AMPHI2 == talk.room),
+                    Triple(ROOM1, "rooms.${ROOM1.name.toLowerCase()}", ROOM1 == talk.room),
+                    Triple(ROOM2, "rooms.${ROOM2.name.toLowerCase()}", ROOM2 == talk.room),
+                    Triple(ROOM3, "rooms.${ROOM3.name.toLowerCase()}", ROOM3 == talk.room),
+                    Triple(ROOM4, "rooms.${ROOM4.name.toLowerCase()}", ROOM4 == talk.room),
+                    Triple(ROOM5, "rooms.${ROOM5.name.toLowerCase()}", ROOM5 == talk.room),
+                    Triple(ROOM6, "rooms.${ROOM6.name.toLowerCase()}", ROOM6 == talk.room),
+                    Triple(ROOM7, "rooms.${ROOM7.name.toLowerCase()}", ROOM7 == talk.room),
+                    Triple(UNKNOWN, "rooms.${UNKNOWN.name.toLowerCase()}", UNKNOWN == talk.room)
             )),
             Pair("formats", listOf(
                     Pair(TALK, TALK == talk.format),

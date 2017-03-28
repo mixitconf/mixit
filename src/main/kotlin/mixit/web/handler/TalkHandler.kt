@@ -3,9 +3,9 @@ package mixit.web.handler
 import mixit.model.*
 import mixit.repository.TalkRepository
 import mixit.repository.UserRepository
-import mixit.util.MarkdownConverter
-import mixit.util.json
-import mixit.util.language
+import mixit.util.*
+import org.springframework.context.MessageSource
+import org.springframework.context.support.AbstractMessageSource
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.ServerResponse.*
@@ -20,13 +20,13 @@ class TalkHandler(val repository: TalkRepository,
     fun findByEventView(year: Int, req: ServerRequest) =
             repository.findByEvent(yearToId(year.toString())).collectList().then { talks ->
                 userRepository.findMany(talks.flatMap(Talk::speakerIds)).collectMap(User::login).then { speakers ->
-                val model = mapOf(Pair("talks", talks.map { it.toDto(it.speakerIds.mapNotNull { speakers[it] } , markdownConverter) }), Pair("year", year), Pair("title", "talks.html.title|$year"))
+                val model = mapOf(Pair("talks", talks.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] } , markdownConverter) }), Pair("year", year), Pair("title", "talks.html.title|$year"))
                 ok().render("talks", model)
             }}
 
     fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug")).then { session ->
         userRepository.findMany(session.speakerIds).collectList().then { speakers ->
-        ok().render("talk", mapOf(Pair("talk", session.toDto(speakers!!, markdownConverter)), Pair("speakers", speakers.map { it.toDto(req.language(), markdownConverter) }), Pair("title", "talk.html.title|${session.title}")))
+        ok().render("talk", mapOf(Pair("talk", session.toDto(req.language(), speakers!!, markdownConverter)), Pair("speakers", speakers.map { it.toDto(req.language(), markdownConverter) }), Pair("title", "talk.html.title|${session.title}")))
     }}
 
     fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("login")))
@@ -50,14 +50,16 @@ class TalkDto(
         val addedAt: LocalDateTime,
         val description: String?,
         val video: String?,
-        val room: Room?,
-        val start: LocalDateTime?,
-        val end: LocalDateTime?
+        val room: String?,
+        val start: String?,
+        val end: String?,
+        val date: String?
 )
 
-fun Talk.toDto(speakers: List<User>, markdownConverter: MarkdownConverter) = TalkDto(
+fun Talk.toDto(language: Language, speakers: List<User>, markdownConverter: MarkdownConverter) = TalkDto(
         id, slug, format, event, title,
         markdownConverter.toHTML(summary), speakers, language, addedAt,
         markdownConverter.toHTML(description),
-        video, room, start, end
+        video, "rooms.${room?.name?.toLowerCase()}" , start?.formatTalkTime(language), end?.formatTalkTime(language),
+        start?.formatTalkDate(language)
 )

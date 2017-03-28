@@ -35,9 +35,9 @@
                         <p>—</p>
                         <div><strong>#{{talk.format}}</strong></div>
                         <ul class="menu vertical">
-                            <li>Jeudi 20 avril</li>
-                            <li>14h30-15H15</li>
-                            <li>Salle Dark Vador</li>
+                            <li>{{#talk.date}}{{talk.date}}{{/talk.date}}</li>
+                            <li>{{#talk.start}}{{talk.start}} - {{talk.end}}{{/talk.start}}</li>
+                            <li>{{#i18n}}{{talk.room}}{{/i18n}}</li>
                         </ul>
                         <div class="show-for-small-only"><hr /></div>
                     </div>

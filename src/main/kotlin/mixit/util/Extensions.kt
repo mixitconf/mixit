@@ -66,8 +66,14 @@ fun seeOther(uri: String) = seeOther(URI(uri)).build()
 // Date/Time extensions
 // --------------------
 
-fun LocalDateTime.format(language: Language): String =
+fun LocalDateTime.formatDate(language: Language): String =
         if (language == Language.ENGLISH) this.format(englishDateFormatter) else this.format(frenchDateFormatter)
+
+fun LocalDateTime.formatTalkDate(language: Language): String =
+        if (language == Language.ENGLISH) this.format(englishTalkDateFormatter) else this.format(frenchTalkDateFormatter).capitalize()
+
+fun LocalDateTime.formatTalkTime(language: Language): String =
+        if (language == Language.ENGLISH) this.format(englishTalkTimeFormatter) else this.format(frenchTalkTimeFormatter)
 
 private val daysLookup: Map<Long, String> =
         IntStream.rangeClosed(1, 31).boxed().collect(Collectors.toMap(Int::toLong, ::getOrdinal))
@@ -79,7 +85,23 @@ private val englishDateFormatter = DateTimeFormatterBuilder()
         .appendLiteral(" ")
         .appendText(ChronoField.DAY_OF_MONTH, daysLookup)
         .appendLiteral(" ")
-        .appendPattern("yyyy").toFormatter(Locale.ENGLISH)
+        .appendPattern("yyyy")
+        .toFormatter(Locale.ENGLISH)
+
+private val frenchTalkDateFormatter = DateTimeFormatter.ofPattern("EEEE d MMMM", Locale.FRENCH)
+
+private val frenchTalkTimeFormatter = DateTimeFormatter.ofPattern("HH'h'mm", Locale.FRENCH)
+
+private val englishTalkDateFormatter = DateTimeFormatterBuilder()
+        .appendPattern("EEEE")
+        .appendLiteral(" ")
+        .appendPattern("MMMM")
+        .appendLiteral(" ")
+        .appendText(ChronoField.DAY_OF_MONTH, daysLookup)
+        .toFormatter(Locale.ENGLISH)
+
+private val englishTalkTimeFormatter = DateTimeFormatter.ofPattern("HH:mm", Locale.ENGLISH)
+
 
 
 private fun getOrdinal(n: Int) =

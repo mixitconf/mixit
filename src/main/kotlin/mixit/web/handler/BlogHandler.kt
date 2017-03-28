@@ -53,7 +53,7 @@ private fun Post.toDto(author: User, language: Language, markdownConverter: Mark
         id,
         slug[language] ?: "",
         author,
-        addedAt.format(language),
+        addedAt.formatDate(language),
         title[language] ?: "",
         markdownConverter.toHTML(headline[language] ?: ""),
         markdownConverter.toHTML(if (content != null) content[language] else  ""))
