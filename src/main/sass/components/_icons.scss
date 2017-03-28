@@ -8,6 +8,14 @@
 	min-width: 100%;
 }
 
+.mxt-icon--cat__talks {
+	min-width: auto;
+	max-width: 5em;
+	@include breakpoint(small only) {
+		margin-top: 1em;
+	}
+}
+
 .mxt-icon--heart {
 	width: 1em;
 	margin-left: 0.5em; 

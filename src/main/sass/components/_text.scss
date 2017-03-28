@@ -10,6 +10,27 @@
 	font-size: rem-calc(48);
 }	
 
+.mxt-text--talksummary {
+	text-align: justify;
+}
+
+.mxt-text--speakername {
+	text-transform: uppercase;
+	margin-bottom: 0.3em;
+	margin-top: 1em;
+}
+
+.mxt-text--talktime {
+	@include breakpoint (medium up) {
+		text-align: right;
+	}
+}
+
+.mxt-text--talkspeaker {
+	@include breakpoint (medium up) {
+		text-align: center;
+	}	
+}
 .mxt-anchor--uppercase {
 	text-transform: uppercase;
 	font-weight: bold;
@@ -30,8 +51,18 @@
 }
 
 a.mxt-title--article {
-    color: $black;
-    font-size: rem-calc(30);
+    text-transform: uppercase;
+    font-size: rem-calc(22);
+    color: $secondary-color;
+    &:hover {
+    	color: $primary-color;
+    }
+}
+
+.mxt-title--talk {
+	font-size: rem-calc(30);
+	line-height: 1.4;
+	margin-bottom: 1em;
 }
 
 // HEADER
@@ -57,3 +88,11 @@ a.mxt-title--article {
 .mxt-text--speakers {
 	font-size: rem-calc(14);
 }
+
+// CATEGORIES
+.mxt-text--cat { text-transform: uppercase; margin-top: 0.2em; }
+.mxt-text--cat1 { color: #ff8d4e; }
+.mxt-text--cat2 { color: #e1629e; }
+.mxt-text--cat3 { color: #aecbd6; }
+.mxt-text--cat4 { color: #5ab79c; }
+.mxt-text--cat5 { color: #92929a; }

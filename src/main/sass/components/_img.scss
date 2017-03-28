@@ -18,6 +18,16 @@
 	}
 }
 
+.mxt-img--speakers__talks {
+  border-radius: 100%;
+  border: 7px solid $forth-color;
+}
+
+.mxt-img--speakers__talk {
+  @extend .mxt-img--speakers__talks;
+  margin-bottom: 1em;
+}
+
 .mxt-img--overlay {
   position: absolute;
   top: 0;

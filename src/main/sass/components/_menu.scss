@@ -47,6 +47,7 @@
 		@include menu-direction(vertical);
 	}
 }
+
 //Archives dropdown
 .mxt-menu__dropdown-wrap {
 	@include breakpoint (small only) {

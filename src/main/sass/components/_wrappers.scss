@@ -42,12 +42,18 @@
 	color: $white;
 }
 
+.mxt-wrapper--talk-details {
+	@include breakpoint(medium up) {
+		text-align: right;
+	}
+}
 .mxt-wrapper--page-title {
 	color: $forth-color;
 	background: $secondary-color;
 	padding-top: 4em;
 	padding-bottom: 8em;
 }
+
 
 .mxt-wrapper--page-content {
 	position: relative;

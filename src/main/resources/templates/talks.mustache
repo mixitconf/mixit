@@ -22,31 +22,39 @@
 
 <div class="mxt-wrapper--page-content">
     <div class="row">
-        <div class="column large-8 large-offset-2">    
-
+        {{#talks}}
             <div class="callout">
-                {{#talks}}
-                    <article>
-                        <h2><a href="{{localePrefix}}/talk/{{slug}}" class="mxt-title--article">{{title}}</a></h2>
-                        <ul class="menu simple">
-                            {{#speakers}}
-                                <li><a href="{{localePrefix}}/speaker/{{login}}">{{firstname}} {{lastname}}</a></li>
-                            {{/speakers}}
-                        </ul>
-                        <br />
-                        <span><strong>#{{format}}</strong></span>
-                        <p>{{summary}}</p>
-                        <p class="subheader">
-                            <strong>{{#video}}
-                                <p>&#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{video}}">{{#i18n}}talk.video.thevideo{{/i18n}}</a></p>
-                            {{/video}}</strong>
-                        </p>
-                        <a href="{{localePrefix}}/talk/{{slug}}" class="button third hollow">{{#i18n}}talks.readmore{{/i18n}}</a>
-                    </article>
-                    <hr />
-                {{/talks}}
-            </div>
-        </div>
+                <div class="small-12 medium-6 medium-push-3 columns ">
+                    <p><a href="{{localePrefix}}/talk/{{slug}}" class="mxt-title--article">{{title}}</a></p>
+                    <div>{{summary}}</div>
+                    <p class="subheader">
+                        <strong>{{#video}}
+                            <p>&#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{video}}">{{#i18n}}talk.video.thevideo{{/i18n}}</a></p>
+                        {{/video}}</strong>
+                    </p>
+                    <a href="{{localePrefix}}/talk/{{slug}}" class="button hollow">{{#i18n}}talks.readmore{{/i18n}}</a>
+                </div>
+                <div class="small-12 medium-3 medium-pull-6 columns mxt-text--talkspeaker">
+                    <img src="http://placehold.it/150x150" class="mxt-img--speakers__talks hide-for-small-only">
+                    <ul class="menu simple">
+                    {{#speakers}}
+                        <li class="mxt-text--speakername"><strong>{{firstname}} {{lastname}}</strong></li>
+                    {{/speakers}}
+                    </ul>
+                    <div class="hide-for-small-only">
+                        <hr />
+                        <p>#{{format}}</p>
+                    </div>
+                </div>
+                <div class="small-12 medium-3 columns mxt-text--talktime">
+                    <span><strong>Jeudi, 16h</strong></span>
+                    <p>Salle Dark Vador</p>
+                    <div class="hide-for-small-only"><p>—</p></div>
+                    <img src="/images/svg/mxt-icon--cat5.svg" class="mxt-icon--cat mxt-icon--cat__talks" alt="{{#i18n}}home.topics.hacktivism.title{{/i18n}}">
+                    <p class="mxt-text--cat mxt-text--cat5">Hacktivism</p>
+                </div>
+            </div>       
+        {{/talks}}
     </div>
 </div>
 {{> footer}}
