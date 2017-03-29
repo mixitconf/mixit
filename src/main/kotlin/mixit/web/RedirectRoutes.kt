@@ -1,19 +1,15 @@
 package mixit.controller
 
 import mixit.MixitProperties
-import mixit.repository.PostRepository
-import mixit.repository.TalkRepository
-import mixit.util.language
 import mixit.util.permanentRedirect
 import mixit.web.handler.BlogHandler
 import mixit.web.handler.TalkHandler
 import org.springframework.context.annotation.Bean
+import org.springframework.context.annotation.Configuration
 import org.springframework.http.MediaType.TEXT_HTML
-import org.springframework.stereotype.Component
-import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.router
 
-@Component
+@Configuration
 class RedirectRoutes(val blogHandler: BlogHandler,
                      val talkHandler: TalkHandler,
                      val properties: MixitProperties) {

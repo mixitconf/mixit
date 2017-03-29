@@ -2,12 +2,12 @@ package mixit.web
 
 import mixit.web.handler.*
 import org.springframework.context.annotation.Bean
+import org.springframework.context.annotation.Configuration
 import org.springframework.http.MediaType.*
-import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.router
 
 
-@Component
+@Configuration
 class ApiRoutes(val blogHandler: BlogHandler,
                  val eventHandler: EventHandler,
                  val talkHandler: TalkHandler,
