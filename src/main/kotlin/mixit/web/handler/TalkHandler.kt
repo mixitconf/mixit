@@ -1,5 +1,6 @@
 package mixit.web.handler
 
+import mixit.MixitProperties
 import mixit.model.*
 import mixit.repository.TalkRepository
 import mixit.repository.UserRepository
@@ -15,7 +16,8 @@ import java.time.LocalDateTime
 @Component
 class TalkHandler(val repository: TalkRepository,
                   val userRepository: UserRepository,
-                  val markdownConverter: MarkdownConverter) {
+                  val markdownConverter: MarkdownConverter,
+                  val properties: MixitProperties) {
 
     fun findByEventView(year: Int, req: ServerRequest) =
             repository.findByEvent(yearToId(year.toString())).collectList().then { talks ->
@@ -33,6 +35,10 @@ class TalkHandler(val repository: TalkRepository,
 
     fun findByEventId(req: ServerRequest) =
             ok().json().body(repository.findByEvent(yearToId(req.pathVariable("year"))))
+
+    fun redirect(req: ServerRequest) = repository.findOne(req.pathVariable("id")).then { s ->
+        permanentRedirect("${properties.baseUri}/talk/${s.slug}")
+    }
 
 }
 

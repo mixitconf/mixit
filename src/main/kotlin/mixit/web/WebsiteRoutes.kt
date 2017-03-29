@@ -49,7 +49,7 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
             GET("/talk/{slug}", talkHandler::findOneView)
 
             // Users
-            (GET("/user/{login}") or GET("/sponsor/{login}")) { userHandler.findOneView(it) }
+            (GET("/user/{login}") or GET("/sponsor/{login}")).invoke(userHandler::findOneView)
             GET("/sponsors") { sponsorHandler.viewWithSponsors("sponsors", "sponsors.title", it) }
 
             "/admin".nest {

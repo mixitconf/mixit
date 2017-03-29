@@ -5,6 +5,8 @@ import mixit.repository.PostRepository
 import mixit.repository.TalkRepository
 import mixit.util.language
 import mixit.util.permanentRedirect
+import mixit.web.handler.BlogHandler
+import mixit.web.handler.TalkHandler
 import org.springframework.context.annotation.Bean
 import org.springframework.http.MediaType.TEXT_HTML
 import org.springframework.stereotype.Component
@@ -12,8 +14,8 @@ import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.router
 
 @Component
-class RedirectRoutes(val postRepository: PostRepository,
-                     val talkRepository: TalkRepository,
+class RedirectRoutes(val blogHandler: BlogHandler,
+                     val talkHandler: TalkHandler,
                      val properties: MixitProperties) {
 
     val GOOGLE_DRIVE_URI = "https://drive.google.com/open"
@@ -23,9 +25,9 @@ class RedirectRoutes(val postRepository: PostRepository,
         accept(TEXT_HTML).nest {
             "/articles".nest {
                 GET("/") { permanentRedirect("${properties.baseUri}/blog") }
-                (GET("/{id}") or GET("/{id}/")) { redirectOneArticleView(it) }
+                (GET("/{id}") or GET("/{id}/")).invoke(blogHandler::redirect)
             }
-            GET("/article/{id}/", this@RedirectRoutes::redirectOneArticleView)
+            GET("/article/{id}/", blogHandler::redirect)
 
             GET("/docs/sponsor/leaflet/en") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${properties.drive.en.sponsor}")}
             GET("/docs/sponsor/leaflet/fr") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${properties.drive.fr.sponsor}")}
@@ -45,7 +47,7 @@ class RedirectRoutes(val postRepository: PostRepository,
             (GET("/session/{id}")
                     or GET("/session/{id}/")
                     or GET("/session/{id}/{sluggifiedTitle}/")
-                    or GET("/session/{id}/{sluggifiedTitle}")) { redirectOneSessionView(it) }
+                    or GET("/session/{id}/{sluggifiedTitle}")).invoke(talkHandler::redirect)
 
             (GET("/member/{login}")
                     or GET("/profile/{login}")
@@ -57,14 +59,6 @@ class RedirectRoutes(val postRepository: PostRepository,
             GET("/home") { permanentRedirect("${properties.baseUri}/") }
 
         }
-    }
-
-    fun redirectOneArticleView(req: ServerRequest) = postRepository.findOne(req.pathVariable("id")).then { a ->
-        permanentRedirect("${properties.baseUri}/blog/${a.slug[req.language()]}")
-    }
-
-    fun redirectOneSessionView(req: ServerRequest) = talkRepository.findOne(req.pathVariable("id")).then { s ->
-        permanentRedirect("${properties.baseUri}/talk/${s.slug}")
     }
 
 }

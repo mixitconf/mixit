@@ -37,6 +37,10 @@ class BlogHandler(val repository: PostRepository,
 
     fun findAll(req: ServerRequest) = ok().json().body(repository.findAll())
 
+    fun redirect(req: ServerRequest) = repository.findOne(req.pathVariable("id")).then { a ->
+        permanentRedirect("${properties.baseUri}/blog/${a.slug[req.language()]}")
+    }
+
 }
 
 private class PostDto(

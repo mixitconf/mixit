@@ -13,7 +13,7 @@ enum class Language {
         fun findByTag(name: String): Language {
             val language = Language.values().filter { value -> value.name.toLowerCase().substring(0, 2) == name }
             if (language.isEmpty()) {
-                throw IllegalStateException()
+                throw IllegalArgumentException()
             }
             return language.first()
         }
