@@ -29606,5 +29606,83 @@
         "login": "markus.kreusch",
         "logoUrl": "",
         "role": "USER"
+  },
+  {
+        "company": "Qwant",
+        "description": {
+            "FRENCH": "Éric Leandri is the CEO of Qwant.",
+            "ENGLISH": "Éric Leandri is the CEO of Qwant."
+        },
+        "firstname": "Éric",
+        "lastname": "Leandri",
+        "legacyId": null,
+        "links": [],
+        "login": "leandri.eric",
+        "role": "USER"
+  },
+  {
+    "company": "Professional",
+    "description": {
+      "FRENCH": "Nety & Mila are woman developer who also have a big concern in the progress of IT education in Indonesia. They love to educate students with code course. Their voluntary roadshow project take place in October, 2012 and March 2013. During the roadshow they visited 32 vocational high school in 4 cities in Indonesia by motorcycle to promote Java as well as to check on the progress of Java Education Network Indonesia (JENI).",
+      "ENGLISH": "Nety & Mila are woman developer who also have a big concern in the progress of IT education in Indonesia. They love to educate students with code course. Their voluntary roadshow project take place in October, 2012 and March 2013. During the roadshow they visited 32 vocational high school in 4 cities in Indonesia by motorcycle to promote Java as well as to check on the progress of Java Education Network Indonesia (JENI)."
+    },
+    "firstname": "Nety",
+    "lastname": "Herawaty",
+    "legacyId": null,
+    "links": [],
+    "login": "herawaty.nety",
+    "role": "USER"
+  },
+  {
+    "company": "Professional",
+    "description": {
+      "FRENCH": "Nety & Mila are woman developer who also have a big concern in the progress of IT education in Indonesia. They love to educate students with code course. Their voluntary roadshow project take place in October, 2012 and March 2013. During the roadshow they visited 32 vocational high school in 4 cities in Indonesia by motorcycle to promote Java as well as to check on the progress of Java Education Network Indonesia (JENI).",
+      "ENGLISH": "Nety & Mila are woman developer who also have a big concern in the progress of IT education in Indonesia. They love to educate students with code course. Their voluntary roadshow project take place in October, 2012 and March 2013. During the roadshow they visited 32 vocational high school in 4 cities in Indonesia by motorcycle to promote Java as well as to check on the progress of Java Education Network Indonesia (JENI)."
+    },
+    "firstname": "Mila",
+    "lastname": "Yuliani",
+    "legacyId": null,
+    "links": [],
+    "login": "yuliani.mila",
+    "role": "USER"
+  },
+  {
+    "company": "ReGen Villages",
+    "description": {
+      "FRENCH": "",
+      "ENGLISH": ""
+    },
+    "firstname": "Marjolein",
+    "lastname": "Shiamatey",
+    "legacyId": null,
+    "links": [],
+    "login": "shiamatey.marjolein",
+    "role": "USER"
+  },
+  {
+    "company": "La Gonette",
+    "description": {
+      "FRENCH": "",
+      "ENGLISH": ""
+    },
+    "firstname": "Nicolas",
+    "lastname": "Briet",
+    "legacyId": null,
+    "links": [],
+    "login": "briet.nicolas",
+    "role": "USER"
+  },
+  {
+    "company": "Wair",
+    "description": {
+      "FRENCH": "",
+      "ENGLISH": ""
+    },
+    "firstname": "Caroline",
+    "lastname": "Van Renterghem",
+    "legacyId": null,
+    "links": [],
+    "login": "vanrenterghem.caroline",
+    "role": "USER"
   }
 ]
