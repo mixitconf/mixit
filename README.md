@@ -58,7 +58,7 @@ developed with Spring Framework 5 and Kotlin can look like:
 Sass, TypeScript, `messages*.properties` and templates should be live reloaded.
 
 ### Import and run the project in IDEA
- - Make sure you have at least IntelliJ IDEA `2016.3` and IDEA Kotlin plugin `1.1.0` (menu Tools -> Kotlin -> configure Kotlin Plugin Updates -> make sure "Stable" channel is selected -> check for updates now -> restart IDE after the update)
+ - Make sure you have at least IntelliJ IDEA `2016.3.6` or `2017.1.x` and IDEA Kotlin plugin `1.1.1+` (menu Tools -> Kotlin -> configure Kotlin Plugin Updates -> make sure "Stable" channel is selected -> check for updates now -> restart IDE after the update)
  - Import it in IDEA as a Gradle project **and make sure to uncheck "Create Module for each SourceSet"** to avoid a nasty bug that prevent to run the app in IDEA
  - In IntelliJ IDEA, right click on `Application.kt` then `Run ...` or `Debug ...`
  - Run `gulp watch` in another terminal
