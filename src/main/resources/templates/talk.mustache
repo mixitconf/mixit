@@ -3,10 +3,12 @@
 <div class="mxt-wrapper--page-title">
     <div class="row">
         <div class="columns large-8 large-offset-2 text-center">
-                <img src="http://placehold.it/150x150" class="mxt-img--speakers__talk">
-                <ul class="menu vertical">
+                <ul class="menu">
                 {{#speakers}}
-                    <li>{{firstname}} {{lastname}}</li>
+                    <li>
+                        <img src="https://www.gravatar.com/avatar/{{logoUrl}}?size=150" class="mxt-img--speakers__talk">
+                        <div class="mxt-text--speakername">{{firstname}}&nbsp;{{lastname}}</div>
+                    </li>
                 {{/speakers}}
                 </ul>
         </div>

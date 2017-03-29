@@ -35,11 +35,13 @@
                     <a href="{{localePrefix}}/talk/{{slug}}" class="button hollow">{{#i18n}}talks.readmore{{/i18n}}</a>
                 </div>
                 <div class="small-12 medium-3 medium-pull-6 columns mxt-text--talkspeaker">
-                    <img src="http://placehold.it/150x150" class="mxt-img--speakers__talks hide-for-small-only">
                     <ul class="menu simple">
-                    {{#speakers}}
-                        <li class="mxt-text--speakername"><strong>{{firstname}} {{lastname}}</strong></li>
-                    {{/speakers}}
+                        {{#speakers}}
+                            <li>
+                                {{#logoUrl}}<img src="https://www.gravatar.com/avatar/{{logoUrl}}?size=150" class="mxt-img--speakers__talk">{{/logoUrl}}
+                                <div class="mxt-text--speakername">{{firstname}}&nbsp;{{lastname}}</div>
+                            </li>
+                        {{/speakers}}
                     </ul>
                     <div class="hide-for-small-only">
                         <hr />
