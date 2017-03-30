@@ -2,12 +2,12 @@
 
 <div class="mxt-wrapper--page-title">
     <div class="row">
-        <div class="columns large-8 large-offset-2 text-center">
-                <ul class="menu">
+        <div class="columns large-8 large-offset-2 menu-centered">
+                <ul class="menu center">
                 {{#speakers}}
-                    <li>
-                        <img src="https://www.gravatar.com/avatar/{{logoUrl}}?size=150" class="mxt-img--speakers__talk">
-                        <div class="mxt-text--speakername">{{firstname}}&nbsp;{{lastname}}</div>
+                    <li class="menu-text">
+                        <img src="https://www.gravatar.com/avatar/{{logoUrl}}?size=100" class="mxt-img-avatar__speaker">
+                        <div>{{firstname}}&nbsp;{{lastname}}</div>
                     </li>
                 {{/speakers}}
                 </ul>
@@ -45,8 +45,8 @@
                     </div>
                     <div class="small-12 medium-8 medium-pull-4 columns">
                         {{#speakers}}
-                            <h2><small>{{firstname}} {{lastname}}</small></h2>
-                            {{#company}}<p><strong>{{company}}</strong></p>{{/company}}
+                            <h2 class="mxt-text-speaker-name">{{firstname}} {{lastname}}</h2>
+                            {{#company}}<p class="mxt-text-speaker-company">{{company}}</p>{{/company}}
                             {{description}}
                             <ul class="menu simple">
                                 {{#links}}

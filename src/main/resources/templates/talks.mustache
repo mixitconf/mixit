@@ -35,11 +35,11 @@
                     <a href="{{localePrefix}}/talk/{{slug}}" class="button hollow">{{#i18n}}talks.readmore{{/i18n}}</a>
                 </div>
                 <div class="small-12 medium-3 medium-pull-6 columns mxt-text--talkspeaker">
-                    <ul class="menu simple">
+                    <ul class="menu vertical">
                         {{#speakers}}
-                            <li>
-                                {{#logoUrl}}<img src="https://www.gravatar.com/avatar/{{logoUrl}}?size=150" class="mxt-img--speakers__talk">{{/logoUrl}}
-                                <div class="mxt-text--speakername">{{firstname}}&nbsp;{{lastname}}</div>
+                            <li class="menu-text">
+                                {{#logoUrl}}<div class="mxt-img-avatar__wrapper"><img src="https://www.gravatar.com/avatar/{{logoUrl}}?s=100?d=%2Fimages%2Fsvg%2Fmxt-icon--d-avatar.svg" class="mxt-img-avatar__speaker"></div>{{/logoUrl}}
+                                <span>{{firstname}}&nbsp;{{lastname}}</span>
                             </li>
                         {{/speakers}}
                     </ul>
