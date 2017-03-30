@@ -9,7 +9,6 @@ import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.web.reactive.function.client.bodyToFlux
 import org.springframework.web.reactive.function.client.bodyToMono
 import reactor.core.publisher.test
-import reactor.core.publisher.toMono
 
 
 
@@ -18,7 +17,7 @@ class UserIntegrationTests : AbstractIntegrationTests() {
     @Test
     fun `Create a new user`() {
         client.post().uri("/api/user/").accept(APPLICATION_JSON).contentType(APPLICATION_JSON)
-                .body(User("brian", "Brian", "Clozel", "bc@gm.com").toMono())
+                .body(User("brian", "Brian", "Clozel", "bc@gm.com"))
                 .exchange()
                 .flatMap { it.bodyToMono<User>() }
                 .test()
