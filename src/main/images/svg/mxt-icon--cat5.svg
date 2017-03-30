@@ -1,1 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><title>mxt-icon--cat5</title><g data-name="Layer 1"><path fill="#92929a" d="M0 0h50v50H0z"/><path fill="#242539" d="M15.91 10.9h19.32v28.98H15.91z"/><path fill="#92929a" d="M29.29 41.86V26h-8.58v15.86h-7.28V8.14h7.28v10.58h8.58V8.14h7.28v33.72h-7.28z"/><path d="M35.57 9.14v31.72h-5.28V25H19.71v15.86h-5.28V9.14h5.29v10.58h10.57V9.14h5.29m2-2h-9.29v10.58h-6.58V7.14h-9.28v35.72h9.29V27h6.57v15.86h9.29V7.14z" fill="#242539"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <title>mxt-icon--cat5</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <rect width="50" height="50" style="fill: #dbb9b8"/>
+      <rect x="15.64" y="13.9" width="17.36" height="21.02" style="fill: #242539"/>
+      <g>
+        <path d="M12.4,43.4V6.6H31.8v5.8h5.8V37.6H31.8v5.8Zm17.4-7.8V14.4H20.2V35.6Z" style="fill: #dbb9b8"/>
+        <path d="M30.8,7.6v5.8H19.2V36.6H30.8v5.8H13.4V7.6H30.8m5.8,5.8V36.6H30.8V13.4h5.8M32.8,5.6H11.4V44.4H32.8V38.6h5.8V11.4H32.8V5.6ZM21.2,15.4h7.6V34.6H21.2V15.4Z" style="fill: #242539"/>
+      </g>
+    </g>
+  </g>
+</svg>

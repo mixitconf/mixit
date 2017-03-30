@@ -1,1 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><title>mxt-icon--cat3</title><g data-name="Layer 1"><path fill="#aecbd6" d="M0 0h50v50H0z"/><path fill="#242539" d="M12.5 12.67h24.07v25.57H12.5z"/><path fill="#aecbd6" d="M18.21 43.36v-5.78h-5.78V12.42h5.78V6.64h13.58v5.78h5.78v7.8h-7.78v-5.8h-9.58v21.16h9.58v-5.79h7.78v7.79h-5.78v5.78H18.21z"/><path d="M30.79 7.64v5.79H19.21V7.64h11.58m5.79 5.79v5.79h-5.79v-5.8h5.79m-17.36 0v23.16h-5.79V13.42h5.79m17.35 17.37v5.79h-5.78v-5.79h5.79m-5.79 5.79v5.79H19.21v-5.79h11.58m2-30.94H17.21v5.79h-5.78v27.15h5.79v5.79h15.57v-5.79h5.79v-9.79h-9.79v5.79h-7.58V15.42h7.57v5.79h9.79v-9.79h-5.78V5.64z" fill="#242539"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <title>mxt-icon--cat3</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <rect width="50" height="50" style="fill: #aecbd6"/>
+      <rect x="15.91" y="10.9" width="19.32" height="28.98" style="fill: #242539"/>
+      <g>
+        <polygon points="29.29 41.86 29.29 26 20.71 26 20.71 41.86 13.43 41.86 13.43 8.14 20.71 8.14 20.71 18.72 29.29 18.72 29.29 8.14 36.57 8.14 36.57 41.86 29.29 41.86" style="fill: #aecbd6"/>
+        <path d="M35.57,9.14V40.86H30.29V25H19.71V40.86H14.43V9.14h5.29V19.72H30.29V9.14h5.29m2-2H28.29V17.72H21.71V7.14H12.43V42.86h9.29V27h6.57V42.86h9.29V7.14Z" style="fill: #242539"/>
+      </g>
+    </g>
+  </g>
+</svg>
