@@ -17,16 +17,24 @@ class TalkHandler(val repository: TalkRepository,
                   val markdownConverter: MarkdownConverter,
                   val properties: MixitProperties) {
 
-    fun findByEventView(year: Int, req: ServerRequest) =
-            repository.findByEvent(yearToId(year.toString())).collectList().then { talks ->
-                userRepository.findMany(talks.flatMap(Talk::speakerIds)).collectMap(User::login).then { speakers ->
-                val model = mapOf(Pair("talks", talks.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] } , markdownConverter) }), Pair("year", year), Pair("title", "talks.html.title|$year"))
-                ok().render("talks", model)
-            }}
+    fun findByEventView(year: Int, req: ServerRequest) = ok().render("talks", mapOf(
+            Pair("talks", repository
+                    .findByEvent(yearToId(year.toString()))
+                    .collectList()
+                    .then { talks -> userRepository
+                            .findMany(talks.flatMap(Talk::speakerIds))
+                            .collectMap(User::login)
+                            .map { speakers -> talks.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] }, markdownConverter) } }
+                    }),
+            Pair("year", year),
+            Pair("title", "talks.html.title|$year")
+    ))
 
-    fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug")).then { session ->
-        userRepository.findMany(session.speakerIds).collectList().then { speakers ->
-        ok().render("talk", mapOf(Pair("talk", session.toDto(req.language(), speakers!!, markdownConverter)), Pair("speakers", speakers.map { it.toDto(req.language(), markdownConverter) }), Pair("title", "talk.html.title|${session.title}")))
+
+
+    fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug")).then { talk ->
+        userRepository.findMany(talk.speakerIds).collectList().then { speakers ->
+        ok().render("talk", mapOf(Pair("talk", talk.toDto(req.language(), speakers!!, markdownConverter)), Pair("speakers", speakers.map { it.toDto(req.language(), markdownConverter) }), Pair("title", "talk.html.title|${talk.title}")))
     }}
 
     fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("login")))
