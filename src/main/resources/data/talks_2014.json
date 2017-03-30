@@ -1,7 +1,7 @@
 [
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Le mythe du framework agile",
     "summary": "Un framework peut-il se pr\u00e9tendre agile ? \u00c0 travers du code et quelques principes, d\u00e9couvrons une proposition d'architecture agile.",
     "speakerIds": [
@@ -25,7 +25,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "L'ABC du BDD",
     "summary": "Introduction au BDD: de l'incompr\u00e9hension, des duels, de la connaissance, de la communication, des exemples, de l'automatisation et du code!",
     "speakerIds": [
@@ -48,7 +48,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "La confiance dans un monde sous surveillance",
     "summary": "D\u00e9couvrez OpenPGP et le \"web of trust\", des outils pour v\u00e9rifier l'origine et assurer la confidentialit\u00e9 des \u00e9changes sur Internet.",
     "speakerIds": [
@@ -72,7 +72,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit14",
+    "event": "2014",
     "title": "TEST DRIVEN BUSINESS For  Lean Startup Products",
     "summary": "A Lean Startup workshop in the trenches to experiment TEST DRIVEN BUSINESS approach : What about starting the Learning Loop with \"Measure\"? ",
     "speakerIds": [
@@ -95,7 +95,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Jeu vid\u00e9o: le cousin un peu \u00e9trange de l'IT.",
     "summary": "Fantasm\u00e9 par beaucoup, d\u00e9test\u00e9 par d'autres, peu savent vraiment ce qu'est le monde du d\u00e9veloppement de jeux vid\u00e9o.",
     "speakerIds": [
@@ -119,7 +119,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Natural Course of Refactoring \u2013 a refactoring work",
     "summary": "Five step process that guides you and your team through pragmatic everyday refactoring towards emergent design.",
     "speakerIds": [
@@ -143,7 +143,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Comment d\u00e9velopper un PaaS Java en 1H",
     "summary": "Comment d\u00e9velopper un PaaS Java en 1H avec docker. ",
     "speakerIds": [
@@ -167,7 +167,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Tour d\u2019horizon de Node.js",
     "summary": "D\u00e9couvrir et comprendre ce qu'est Node.js et pourquoi \u00e7a envoie du bois, de fa\u00e7on ludique et interactive, philosophiquement + concr\u00e8tement.",
     "speakerIds": [
@@ -190,7 +190,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Crafting Workshop",
     "summary": "Exp\u00e9rimenter les valeurs du software crafsmanship. R\u00e9aliser le site mobile de MiXiT en d\u00e9ploiement continu.",
     "speakerIds": [
@@ -215,7 +215,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Basic Coaching Skills to Magnify Teamwork",
     "summary": "You can't ORDER a team to self-organise - it breaks the self-organisation paradigm! Coaching skills really help - even as a guerilla tactic",
     "speakerIds": [
@@ -238,7 +238,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Toyota Kata \u2013 habits for continuous improvements",
     "summary": "Building on the power of habits, Toyota Kata will help you build a culture of continuous learning and improvement, a kaizen culture. ",
     "speakerIds": [
@@ -262,7 +262,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Prenez le contr\u00f4le d'un a\u00e9roport avec Akka",
     "summary": "Venez d\u00e9couvrir le mod\u00e8le acteur avec Akka. En Java ou Scala, d\u00e9velopper de fa\u00e7on ludique un algorithme de gestion de trafic a\u00e9roportuaire.",
     "speakerIds": [
@@ -286,7 +286,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Visualization \u2013 what\u2019s my brain got to do with it?",
     "summary": "Visualization is key. But are you done? Learn why you won't always get the behavior response intended, and how to improve the odds.",
     "speakerIds": [
@@ -309,7 +309,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Cr\u00e9er un projet autour de ses valeurs",
     "summary": "Un cas pratique sur deux entrepreneurs, des valeurs fortes, et la volont\u00e9 de cr\u00e9er un projet d'entreprise p\u00e9renne.",
     "speakerIds": [
@@ -333,7 +333,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Looking at the future of User Interfaces in Sci-Fi",
     "summary": "Science fiction movies always have crazy softwares and crazy UI. Except when they\u2019re not. Sometimes they\u2019re visionary.",
     "speakerIds": [
@@ -357,7 +357,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Des petits pas vers le Continuous Delivery",
     "summary": "Un codeur raconte son v\u00e9cu et l'\u00e9volution de son outillage pour le passage d'une livraison tous les 30j \u00e0 tous les jours ! ",
     "speakerIds": [
@@ -382,7 +382,7 @@
   },
   {
     "format": "KEYNOTE",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Et si nous n'\u00e9tions qu'au d\u00e9but ?",
     "summary": "Bitcoin, buzz de 2013. Et si, plus qu'un buzz, Bitcoin n'\u00e9tait que le pr\u00e9mice d'un changement majeur, fondamental dans notre soci\u00e9t\u00e9 ?",
     "speakerIds": [
@@ -406,7 +406,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "I want to be an efficient developer",
     "summary": "This talk is a set of good practice to become a more efficient developer who can focus on what is own added value.",
     "speakerIds": [
@@ -430,7 +430,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Application Web Moderne en Java. The CodeStory Way",
     "summary": "Atelier : Application Web Moderne en Java - The CodeStory Way avec @dgageot et @morlhon. #java #test #mongo #angular #lambda #fun #hotkeys",
     "speakerIds": [
@@ -454,7 +454,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "La culture du programmeur",
     "summary": "Explorons comment b\u00e2tir des \u00e9quipes techniques solides & vivre une carri\u00e8re technique captivante en explorant la culture des programmeurs.",
     "speakerIds": [
@@ -477,7 +477,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Android Bashing : apprendre des erreurs des grands",
     "summary": "Cette conf\u00e9rence vise \u00e0 \u00e9tudier les erreurs de g\u00e9ants de l'informatique sur leurs applications Android, afin d'\u00e9viter de les reproduire.",
     "speakerIds": [
@@ -500,7 +500,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Le Web est la plateforme (mobile)",
     "summary": "Pourquoi est-il important que le Web devienne la plateforme universelle, y compris sur mobile ? Comment Mozilla y travaille.",
     "speakerIds": [
@@ -524,7 +524,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Let's Invoke Dynamite in JavaEE with InvokeDynamic",
     "summary": "D\u00e9couvrez comment Invoke Dynamic introduit dans Java SE 7 pourrait r\u00e9volutionner le monde de Java EE \u00e0 travers une mise en oeuvre dans CDI. ",
     "speakerIds": [
@@ -548,7 +548,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "How To Do Kick-Ass Software Development",
     "summary": "You actually want to get stuff done? Less managers managing, less testers testing and less IT-operators operating. Kick-Ass again!",
     "speakerIds": [
@@ -571,7 +571,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Applications r\u00e9actives avec Spring4 et AngularDart",
     "summary": "Retour d'exp\u00e9rience portant sur le d\u00e9veloppement d'OpenSnap, un clone HTML5 de SnapChat utilisant Spring 4, AngularDart, STOMP et Websocket.",
     "speakerIds": [
@@ -595,7 +595,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Product Owner Super Powers",
     "summary": "Building the right thing is hard, moving an organisation towards building the right thing is even harder. ",
     "speakerIds": [
@@ -618,7 +618,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "REX Le kanban va-t-il fluidifier notre chaine ? ",
     "summary": "Pourquoi nous sommes pass\u00e9s au kanban : l'exp\u00e9rience n'aura peut \u00eatre pas encore port\u00e9 ses fruits mais nous vous parlerons des bourgeons.",
     "speakerIds": [
@@ -642,7 +642,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit14",
+    "event": "2014",
     "title": "AngularJS from scratch",
     "summary": "Nous vous proposons de r\u00e9\u00e9crire AngularJS de zero avec nous. Rien de tel pour d\u00e9mystifier le framework et ses principales fonctionnalit\u00e9s!",
     "speakerIds": [
@@ -666,7 +666,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Le lean startup concret autour d'une petite mousse",
     "summary": "Lancez-vous ! Fini la th\u00e9orie du lean startup et suivez les \"petits cailloux\" laiss\u00e9s sur notre chemin pour d\u00e9velopper Une Petite Mousse",
     "speakerIds": [
@@ -691,7 +691,7 @@
   },
   {
     "format": "KEYNOTE",
-    "event": "mixit14",
+    "event": "2014",
     "title": "March\u00e9 de niche et de convictions, Les Sommeli\u00e8res",
     "summary": "En 2013 naissaient Les Sommeli\u00e8res, site de vin d\u00e9di\u00e9 aux femmes. Au-del\u00e0 du marketing de niche, internet permet de porter une cause.",
     "speakerIds": [
@@ -715,7 +715,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Introduction aux Google Glass",
     "summary": "Introduction aux Google Glass: utilisation, d\u00e9veloppement et retour d'experience apr\u00e8s 1 an d'utilisation.",
     "speakerIds": [
@@ -738,7 +738,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Bien choisir son serveur de message",
     "summary": "L'ubiquit\u00e9 de l'information n'a jamais \u00e9t\u00e9 aussi pr\u00e9gnante. De quels outils je dispose en tant que d\u00e9veloppeur et comment choisir le bon ?",
     "speakerIds": [
@@ -762,7 +762,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Apr\u00e8s les NUI",
     "summary": "Les interfaces naturelles (NUI) sont une r\u00e9alit\u00e9: Touch, Kinect, LeapMotion, 3D Camera... Que peut-on en faire et quel sera l'apr\u00e8s NUI ?",
     "speakerIds": [
@@ -786,7 +786,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Des bits aux atomes: re-mat\u00e9rialisons!",
     "summary": "Comment utiliser toutes ses comp\u00e9tences acquises en tant que d\u00e9veloppeur pour cr\u00e9er et partager des objets tangibles param\u00e9triques?",
     "speakerIds": [
@@ -809,7 +809,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Devops, en parler c'est bien, en faire c'est mieux",
     "summary": "Venez jouer aux marionnettes gr\u00e2ce \u00e0 Puppet avec l'aide d'un vagabond (Vagrant) \r\npour vous faire une id\u00e9e concr\u00e8te sur une pratique Devops",
     "speakerIds": [
@@ -832,7 +832,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Can You Do IT Better? Uncover the Way using LEGO\u00ae",
     "summary": "Discover and play with your unique insights into IT development. Experience strategic model building and discovery using LEGO Serious Play.",
     "speakerIds": [
@@ -855,7 +855,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Open-Sourcing http:\/\/spring.io",
     "summary": "How does the Spring team develop and operate the new spring.io, entirely with Pivotal technologies? We're here to share our experience.",
     "speakerIds": [
@@ -879,7 +879,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "boot2docker: zero to docker in 20s",
     "summary": "boot2docker is a 24mb Linux distribution based on made specifically to run Docker containers. It runs completely from RAM.",
     "speakerIds": [
@@ -902,7 +902,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Coach like a wizard: Agile wisdom of Gandalf",
     "summary": "In case you thought Gandalf's wisdom was applicable only to Hobbits, this talk uses his philosophy to help you learn to help your teammates.",
     "speakerIds": [
@@ -925,7 +925,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Party Like It\u2019s 1999",
     "summary": "We've taken 2 steps forward but 1 step back to bring interactivity to to the web. Let's change the way we think about writing web apps.",
     "speakerIds": [
@@ -948,7 +948,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Scaling up Twitter systems",
     "summary": "Scaling up Twitter systems to support millions of users and millions of lines of heterogeneous code. ",
     "speakerIds": [
@@ -971,7 +971,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit14",
+    "event": "2014",
     "title": " Les Habits Neufs de l'Empereur",
     "summary": "Un jeu pour am\u00e9liorer sa communication aux autres, en particulier en situation de stress, en s'appuyant sur le concept de congruence.",
     "speakerIds": [
@@ -995,7 +995,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Des produits avec des \u00e9quipes distribu\u00e9es ?",
     "summary": "Agile et Open Source comme source d'inspiration pour le d\u00e9veloppement de vos produits avec des \u00e9quipes distribu\u00e9es",
     "speakerIds": [
@@ -1019,7 +1019,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "L\u2019am\u00e9lioration continue au sein d\u2019une \u00e9quipe agile",
     "summary": "Retour d'exp\u00e9rience d'une jeune et vaillante \u00e9quipe technique adaptant ses m\u00e9thodes de travail agiles aux r\u00e9alit\u00e9s business.",
     "speakerIds": [
@@ -1044,7 +1044,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Machine learning et r\u00e9gulation num\u00e9rique",
     "summary": "L\u2019objectif est de donner aux auditeurs les bases n\u00e9cessaires pour comprendre le machine learning.",
     "speakerIds": [
@@ -1068,7 +1068,7 @@
   },
   {
     "format": "KEYNOTE",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Programming Diversity ",
     "summary": "How does the lack of diversity in tech hurt us and what can we do as individuals, businesses, and communities to correct it?",
     "speakerIds": [
@@ -1092,7 +1092,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "How to make better decisions",
     "summary": "While HOW to make decisions is important, the WHEN to make decisions is critical to your chances of success. ",
     "speakerIds": [
@@ -1115,7 +1115,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Prioritising ideas using Cost of Delay",
     "summary": "This session examines how a Fortune 500 company used an economic framework across a $100m portfolio to improve prioritisation.",
     "speakerIds": [
@@ -1138,7 +1138,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Consulting Secrets for Effective Communication",
     "summary": "We all communicate, but some people seem more effective. Attend \"Consulting Secrets\" to learn how you can give your message more impact!",
     "speakerIds": [
@@ -1161,7 +1161,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Rapport co\u00fbt\/performance de diff\u00e9rentes stacks Web",
     "summary": "On a mis \u00e0 l'\u00e9preuve diff\u00e9rents patterns d'architectures et diff\u00e9rentes stack Web concernant leurs co\u00fbts d'ex\u00e9cution sur un Cloud",
     "speakerIds": [
@@ -1184,7 +1184,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Developing Great ScrumMasters",
     "summary": "Who makes a great ScrumMaster? How to hire them? How to train them? How to develop great ScrumMasters? Some answers and lots of FUN! :P",
     "speakerIds": [
@@ -1207,7 +1207,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Drawing 101: Mastering the Stickman!",
     "summary": "'I can't draw' is wrong! Anyone can draw and can enhance their visual facilitation skills. This is no theory - come and DRAW FROM SCRATCH!",
     "speakerIds": [
@@ -1230,7 +1230,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Design meets Agile",
     "summary": "What is Service Design Thinking? And how does it relate to the agile world?",
     "speakerIds": [
@@ -1253,7 +1253,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "How to rewrite your JavaScript app ten times",
     "summary": "Rewriting code that seemed like it would work is never any fun. How do you avoid it? The short answer: lots of thoughtful planning.",
     "speakerIds": [
@@ -1277,7 +1277,7 @@
   },
   {
     "format": "KEYNOTE",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Les communaut\u00e9s et le monde IT sous d'autres cieux",
     "summary": "Les communaut\u00e9s et le monde IT en Afrique : similitudes et divergences avec le mod\u00e8le occidental (monde francophone et anglophone)",
     "speakerIds": [
@@ -1301,7 +1301,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Petit design pour grande humanit\u00e9",
     "summary": "Petit design pour grande humanit\u00e9 - Comment le design se rend-il utile \u00e0 nos vies ?",
     "speakerIds": [
@@ -1325,7 +1325,7 @@
   },
   {
     "format": "KEYNOTE",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Serendipitous Disruption?",
     "summary": "GitHub's Streaming Eagle will describe how they've brought serendipity back to the office.",
     "speakerIds": [
@@ -1350,7 +1350,7 @@
   },
   {
     "format": "KEYNOTE",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Biotech breaks free... and so does tech!",
     "summary": "Trends in biotech are bringing new ways of interacting with living matters, and so do other techs. Let's talk about hacking... biohacking!",
     "speakerIds": [
@@ -1373,7 +1373,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Unity3D from zero to hero (Basic session)",
     "summary": "Comprendre et maitriser les bases de Unity3D, le moteur de jeu qui a chang\u00e9 la donne en mati\u00e8re de d\u00e9veloppement de jeux.\r\n",
     "speakerIds": [
@@ -1396,7 +1396,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit14",
+    "event": "2014",
     "title": "Culture Hacking: How may we create more fun @work?",
     "summary": "In this session we will co-design culture hacks to improve happiness at the workplace - and we will ask you to test the hacks!",
     "speakerIds": [

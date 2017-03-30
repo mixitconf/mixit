@@ -1,7 +1,7 @@
 [
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Testez vos id\u00e9es en quelques heures !",
     "summary": "Initiation \u00e0 la Customer Validation et au Lean Startup",
     "speakerIds": [
@@ -24,7 +24,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "The Product is the Byproduct",
     "summary": "A great product is closer to an accident. It's the byproduct of the environment you build at your company.",
     "speakerIds": [
@@ -47,7 +47,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "The hitchhikers guide to UXing without a UXer",
     "summary": "Even without a UXer you can learn to build & develop apps the right way. This not a definitive guide, but it will get you started.",
     "speakerIds": [
@@ -70,7 +70,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Une \u00e9quipe si particuli\u00e8re",
     "summary": "Qu'est-ce qui distingue une \u00e9quipe Agile? On d\u00e9couvre une nouvelle fa\u00e7on de travailler ensemble, mais qu'est-ce que l'on d\u00e9couvre vraiment?",
     "speakerIds": [
@@ -93,7 +93,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit13",
+    "event": "2013",
     "title": "B\u00e2tir une \u00e9quipe \u00e0 partir de ses valeurs",
     "summary": "Une \u00e9quipe ce sont des personnes. Permettre aux \u00e9quipiers d'observer tr\u00e9s t\u00f4t de ce qui les r\u00e9unis ou les \u00e9loigne favorise l'esprit d'\u00e9quipe",
     "speakerIds": [
@@ -116,7 +116,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Software architecture for developers",
     "summary": "A talk for software developers that want to learn more about software architecture, technical leadership and the balance with agility.",
     "speakerIds": [
@@ -139,7 +139,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Agile software architecture sketches",
     "summary": "Agility is about moving fast and this requires good communication, but can *you* communicate the design of your software system effectively?",
     "speakerIds": [
@@ -162,7 +162,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Cloud Patterns",
     "summary": "pr\u00e9sentation des patterns d'architecture \u00e0 appliquer \u00e0 vos d\u00e9veloppements pour accompagner votre transition dans le Cloud",
     "speakerIds": [
@@ -185,7 +185,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Game of Clouds",
     "summary": "L'application \"Games of Thrones\" que nous d\u00e9velopperons ensemble pas \u00e0 pas nous servira de pr\u00e9texte pour explorer les possibilit\u00e9s du Cloud.",
     "speakerIds": [
@@ -208,7 +208,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Validated Influencing",
     "summary": "Introduction to Validated Influencing: a systematic approach to evaluate our progress and ensure we are progressing into the right direction",
     "speakerIds": [
@@ -231,7 +231,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Validated Influencing Workshop",
     "summary": "Introduction to Validated Influencing (see Validated Influencing talk); Group exercises.",
     "speakerIds": [
@@ -254,7 +254,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "The road to potential shippable increments",
     "summary": "A case study on how a team used the improvement kata and Theory of Constraints to consistently deliver 100% of their sprint backlog and more",
     "speakerIds": [
@@ -277,7 +277,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "#OMG, mon \u00e9quipe fait son haka en kanban style !?!",
     "summary": "Ou comment le Scrumban peut r\u00e9pondre \u00e0 certaines probl\u00e9matiques lorsque l'on fait du Scrum, du point de vue de l'\u00e9quipe et du Product Owner.",
     "speakerIds": [
@@ -300,7 +300,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Challenge Kanban",
     "summary": "Venez d\u00e9couvrir le Kanban par la pratique, au cours d'un atelier de r\u00e9f\u00e9rence, pour le mettre en oeuvre dans votre \u00e9quipe Scrum.",
     "speakerIds": [
@@ -323,7 +323,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Live coding avec Yeoman & AngularJS",
     "summary": "Pr\u00e9sentation des solutions Yeoman et AngularJS et r\u00e9alisation en live d\u2019une interface Web permettant l'\u00e9dition de donn\u00e9es d'un service REST",
     "speakerIds": [
@@ -346,7 +346,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Why Kotlin?",
     "summary": "Why so many new languages? Isn't good old Java good enough? Why Kotlin?",
     "speakerIds": [
@@ -369,7 +369,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Dive into Kotlin",
     "summary": "This workshop aimed to demonstrate how different typical programming problems can be easily solved with Kotlin language.",
     "speakerIds": [
@@ -392,7 +392,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Web Components, l'avenir des d\u00e9veloppeurs web",
     "summary": "Enrichir le DOM HTML avec vos propres \u00e9l\u00e9ments, vous en avez r\u00eav\u00e9 ? C'est d\u00e9sormais possible. ",
     "speakerIds": [
@@ -416,7 +416,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Hands On Spring Data",
     "summary": "Avec Spring Data, 20% de LOC en moins. Garanti! Fa\u00eetes-vous la main sur JPA, Mongo, Neo4j mais aussi sur les DSL et l\u2019exposition REST.",
     "speakerIds": [
@@ -440,7 +440,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Un carpaccio, un !",
     "summary": "Explorer comment d\u00e9couper un d\u00e9veloppement en tranches aussi fines que d\u00e9sir\u00e9es tant du point de vue du d\u00e9veloppeur que du m\u00e9tier.",
     "speakerIds": [
@@ -463,7 +463,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Agilistes : n'oubliez pas la technique !",
     "summary": "Pr\u00e9sentation d'outils et m\u00e9thodes pour ne pas oublier que la technique est indispensables au succ\u00e8s d'une transition agile",
     "speakerIds": [
@@ -486,7 +486,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Hackergarten",
     "summary": "Envie de voir l\u2019autre cot\u00e9 du miroir ? Saisissez la chance de contribuer \u00e0 des projets open-source. ",
     "speakerIds": [
@@ -510,7 +510,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Entrer dans le monde du robot Nao",
     "summary": "Pr\u00e9sentation du robot humanoide par deux d\u00e9veloppeuses Nao. Qu'est-ce qu'il y a dedans? Qu'est-ce qu'on peut faire avec?",
     "speakerIds": [
@@ -534,7 +534,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Mettre en place un d\u00e9ploiement continu",
     "summary": "Mise en place pratique d'un d\u00e9ploiement continu automatis\u00e9, sans interruption de service et en prenant en compte les \u00e9volutions de BDD.",
     "speakerIds": [
@@ -557,7 +557,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Hands On Elasticsearch",
     "summary": "Un atelier pratique en Java sur l'int\u00e9gration d'Elasticsearch dans vos projets",
     "speakerIds": [
@@ -580,7 +580,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Introduction au NoSQL avec Couchbase",
     "summary": "Pr\u00e9sentation \u00e0 base de d\u00e9monstrations de la base de donn\u00e9es NoSQL orient\u00e9e document Couchbase 2.0. (Clustering, JSON, MapReduce)",
     "speakerIds": [
@@ -603,7 +603,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit13",
+    "event": "2013",
     "title": "D\u00e9veloppeurs Anonymes",
     "summary": "Venez vivre un programme d'entra\u00eenement pour \u00e9crire du code dont vous serez plus fier. Cette exp\u00e9rience risque de changer vos habitudes !",
     "speakerIds": [
@@ -627,7 +627,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Les nouveaut\u00e9s de Groovy 2.1",
     "summary": "Venez d\u00e9couvrir les nouvelles fonctionnalit\u00e9s de Groovy 2.1 !\r\nInvoke dynamic, type checking personnalis\u00e9, m\u00e9ta-annotations... ",
     "speakerIds": [
@@ -651,7 +651,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Deux ans dans le flux",
     "summary": "C'est l'histoire de d\u00e9veloppeurs qui viennent de passer deux ans dans le flux... (c'est aussi celle d'un Scrum qui a mal tourn\u00e9)",
     "speakerIds": [
@@ -674,7 +674,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "RubyMotion: iOS programming in Ruby",
     "summary": "iOS programming has a hard time becoming popular to the masses. RubyMotion will give a little more fun to this task.",
     "speakerIds": [
@@ -697,7 +697,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit13",
+    "event": "2013",
     "title": "C\u2019est le moment de se lancer dans s\u2019cas l\u00e0 !",
     "summary": "Venez d\u00e9couvrir le langage JVM du moment : Scala, lors d'un workshop couvrant les bases.",
     "speakerIds": [
@@ -722,7 +722,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Crafting Custom Android Views",
     "summary": "Venez d\u00e9couvrir la recette magique pour construire des \"custom Views\" et rendre les interfaces de vos application Android uniques !",
     "speakerIds": [
@@ -745,7 +745,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Groovy, les mains dans le cambouis",
     "summary": "Comment se mettre \u00e0 Groovy ? En mettant les mains dans le cambouis et en codant une petite application tous ensemble !",
     "speakerIds": [
@@ -768,7 +768,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Scrum Metal Jacket",
     "summary": "Scrum by the book ne r\u00e9pond plus \u00e0 vos attentes, sortez des sentiers battus et passez \u00e0 la vitesse sup\u00e9rieure avec Scrum Metal Jacket !",
     "speakerIds": [
@@ -792,7 +792,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Voyage en pays inconnu",
     "summary": "Des ing\u00e9nieurs sont missionn\u00e9s pour apprendre \u00e0 une ethnie inconnue comment construire un pont ... 2 cultures pour 1 seul objectif !",
     "speakerIds": [
@@ -815,7 +815,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Agile Unlimited",
     "summary": "Session, mi REX mi CONF, pr\u00e9sentant des pratiques agiles utilisables en dehors de l'IT et les difficult\u00e9s sp\u00e9cifiques rencontr\u00e9s hors IT",
     "speakerIds": [
@@ -839,7 +839,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Concevoir son d\u00e9veloppement par l'API",
     "summary": "Et si nous commencions par l'API ? Et ensuite ? Quelles bonnes pratiques pour concevoir une API sur de bonnes bases ?",
     "speakerIds": [
@@ -863,7 +863,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Usinette",
     "summary": "Pr\u00e9sentation d'un hackerspace d\u00e9di\u00e9 \u00e0 la construction num\u00e9rique et ouvert \u00e0 de plus larges perspectives....",
     "speakerIds": [
@@ -886,7 +886,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "SensCritique.com : une histoire de start-up",
     "summary": "Comment une discussion entre amis est devenue le 1er site de recommandation culturelle.",
     "speakerIds": [
@@ -909,7 +909,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Les paradoxes du leadership",
     "summary": "Ne venez pas si vous ne voulez pas sortir de situations o\u00f9 plus rien ne semble fonctionner !",
     "speakerIds": [
@@ -932,7 +932,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Dart : one language to rule them all",
     "summary": "A la crois\u00e9e des chemins entre d\u00e9veloppement client, serveur et mobile, Dart a le potentiel pour r\u00e9volutionner notre fa\u00e7on de d\u00e9velopper.",
     "speakerIds": [
@@ -955,7 +955,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Comment tester une application html5 ?",
     "summary": "Live coding sur les tests d'acceptances d'une application html5\/javascript #bdd #javascript",
     "speakerIds": [
@@ -978,7 +978,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit13",
+    "event": "2013",
     "title": "D\u00e9couvrez les lambdas avec Java 8",
     "summary": "D\u00e9couvrez les lambdas de Java 8 avec un atelier TDD, o\u00f9 vous aurez \u00e0 utiliser les lambdas et les Streams de Java 8.",
     "speakerIds": [
@@ -1001,7 +1001,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Testons Agile! TDD vs DBO",
     "summary": "ou comment, moi, d\u00e9veloppeur-testeur , j'ai appris \u00e0 ne plus m'en faire avec les donn\u00e9es",
     "speakerIds": [
@@ -1024,7 +1024,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Que je d\u00e9coupe ma demande en petits morceaux ?",
     "summary": "Pardon ? Vous voulez que je d\u00e9coupe ma demande en morceaux ? Impossible, c'est tout mon produit ou rien du tout !",
     "speakerIds": [
@@ -1047,7 +1047,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Pour un management vraiment agile",
     "summary": "l'auto-organisation est l'un des fondements de l'agilit\u00e9. Mais comment susciter, favoriser ce style d'organisation ?",
     "speakerIds": [
@@ -1070,7 +1070,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit13",
+    "event": "2013",
     "title": "The Clean Architecture",
     "summary": "nous vous proposons de passer en revue du code pour mettre en lumi\u00e8re ce qui peut appara\u00eetre comme de bonnes pratiques d'architecture SOLID",
     "speakerIds": [
@@ -1094,7 +1094,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Quick Start avec le Cloud Google",
     "summary": "Oserez-vous postuler pour un projet IT innovant sans conna\u00eetre le Cloud de Google ?",
     "speakerIds": [
@@ -1118,7 +1118,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Collaborer, et si on improvisait ?",
     "summary": "A partir de saynettes inspir\u00e9es du th\u00e9\u00e2tre d\u2019improvisation, d\u00e9couvrez les valeurs d\u2019une collaboration efficace.",
     "speakerIds": [
@@ -1141,7 +1141,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Backbone, Ember et Angular sont dans un bateau",
     "summary": "Backbone, Ember ou Angular ? Les d\u00e9bats sont enflamm\u00e9s ! Venez comparer forces et faiblesses de chacun pour vous faire votre propre opinion.",
     "speakerIds": [
@@ -1165,7 +1165,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "D'une bonne \u00e9quipe \u00e0 une \u00e9quipe exceptionnelle",
     "summary": "D\u00e9couvrez 7 id\u00e9es\/pratiques des \u00e9quipes d'Atlassian qui vont vous aider \u00e0 faire de votre \u00e9quipe une \u00e9quipe exceptionnelle.",
     "speakerIds": [
@@ -1188,7 +1188,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "node.js: why, when and how [CANCELLED]",
     "summary": "A talk on why, when and how to use node.js in new and existing systems",
     "speakerIds": [
@@ -1211,7 +1211,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Retrospectives in action",
     "summary": "Learn what retrospectives are all about by participating in this interactive workshop filled with exercises, tips and tricks and interaction",
     "speakerIds": [
@@ -1234,7 +1234,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Travis - Saving the world from failing tests",
     "summary": "Travis started as a fun little experiment, and quickly grew into the goto place for open source continuous integration testing",
     "speakerIds": [
@@ -1257,7 +1257,7 @@
   },
   {
     "format": "WORKSHOP",
-    "event": "mixit13",
+    "event": "2013",
     "title": "FabLab versus Usinette ",
     "summary": "Usinette est un hackerspace d\u00e9di\u00e9 \u00e0 la fabrication num\u00e9rique, et a d\u00e9j\u00e0 fabriqu\u00e9 de nombreux RepRap (imprimante 3D autor\u00e9plicante).",
     "speakerIds": [
@@ -1281,7 +1281,7 @@
   },
   {
     "format": "KEYNOTE",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Jouez, apprenez",
     "summary": "Christian Martinez nous invite \u00e0 d\u00e9couvrir son univers de cr\u00e9ateur de jeux dans le monde de la formation professionnelle.",
     "speakerIds": [
@@ -1304,7 +1304,7 @@
   },
   {
     "format": "KEYNOTE",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Open Source Misfeasance",
     "summary": "Zach will tell us some things we should know about open source",
     "speakerIds": [
@@ -1327,7 +1327,7 @@
   },
   {
     "format": "KEYNOTE",
-    "event": "mixit13",
+    "event": "2013",
     "title": "Apprendre la programmation",
     "summary": "Comment et pourquoi expliquer la programmation aux enfants?",
     "speakerIds": [

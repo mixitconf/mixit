@@ -25,14 +25,14 @@
         {{#talks}}
             <div class="callout">
                 <div class="small-12 medium-6 medium-push-3 columns ">
-                    <p><a href="{{localePrefix}}/talk/{{slug}}" class="mxt-title--article">{{title}}</a></p>
+                    <p><a href="{{localePrefix}}/{{event}}/{{slug}}" class="mxt-title--article">{{title}}</a></p>
                     <div>{{summary}}</div>
                     <p class="subheader">
                         <strong>{{#video}}
                             <p>&#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{video}}">{{#i18n}}talk.video.thevideo{{/i18n}}</a></p>
                         {{/video}}</strong>
                     </p>
-                    <a href="{{localePrefix}}/talk/{{slug}}" class="button hollow">{{#i18n}}talks.readmore{{/i18n}}</a>
+                    <a href="{{localePrefix}}/{{event}}/{{slug}}" class="button hollow">{{#i18n}}talks.readmore{{/i18n}}</a>
                 </div>
                 <div class="small-12 medium-3 medium-pull-6 columns mxt-text--talkspeaker">
                     <ul class="menu vertical">

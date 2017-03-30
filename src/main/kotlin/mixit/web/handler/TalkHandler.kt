@@ -19,7 +19,7 @@ class TalkHandler(val repository: TalkRepository,
 
     fun findByEventView(year: Int, req: ServerRequest) = ok().render("talks", mapOf(
             Pair("talks", repository
-                    .findByEvent(yearToId(year.toString()))
+                    .findByEvent(year.toString())
                     .collectList()
                     .then { talks -> userRepository
                             .findMany(talks.flatMap(Talk::speakerIds))
@@ -32,7 +32,7 @@ class TalkHandler(val repository: TalkRepository,
 
 
 
-    fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug")).then { talk ->
+    fun findOneView(year: Int, req: ServerRequest) = repository.findByEventAndSlug(year.toString(), req.pathVariable("slug")).then { talk ->
         userRepository.findMany(talk.speakerIds).collectList().then { speakers ->
         ok().render("talk", mapOf(Pair("talk", talk.toDto(req.language(), speakers!!, markdownConverter)), Pair("speakers", speakers.map { it.toDto(req.language(), markdownConverter) }), Pair("title", "talk.html.title|${talk.title}")))
     }}
@@ -40,15 +40,17 @@ class TalkHandler(val repository: TalkRepository,
     fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("login")))
 
     fun findByEventId(req: ServerRequest) =
-            ok().json().body(repository.findByEvent(yearToId(req.pathVariable("year"))))
+            ok().json().body(repository.findByEvent(req.pathVariable("year")))
 
-    fun redirect(req: ServerRequest) = repository.findOne(req.pathVariable("id")).then { s ->
-        permanentRedirect("${properties.baseUri}/talk/${s.slug}")
+    fun redirectFromId(req: ServerRequest) = repository.findOne(req.pathVariable("id")).then { s ->
+        permanentRedirect("${properties.baseUri}/${s.event}/${s.slug}")
+    }
+
+    fun redirectFromSlug(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug")).then { s ->
+        permanentRedirect("${properties.baseUri}/${s.event}/${s.slug}")
     }
 
 }
-
-fun yearToId(year:String): String = "mixit${year.substring(2)}"
 
 class TalkDto(
         val id: String?,

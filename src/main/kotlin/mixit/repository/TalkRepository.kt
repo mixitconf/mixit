@@ -44,6 +44,9 @@ class TalkRepository(val template: ReactiveMongoTemplate) {
     fun findBySlug(slug: String) =
             template.findOne<Talk>(Query(where("slug").`is`(slug)))
 
+    fun findByEventAndSlug(eventId: String, slug: String) =
+            template.findOne<Talk>(Query(where("slug").`is`(slug).and("event").`is`(eventId)))
+
     fun deleteAll() = template.remove<Talk>(Query())
 
     fun deleteOne(id: String) = template.remove<Talk>(Query(where("_id").`is`(id)))

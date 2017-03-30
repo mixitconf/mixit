@@ -43,7 +43,8 @@ class RedirectRoutes(val blogHandler: BlogHandler,
             (GET("/session/{id}")
                     or GET("/session/{id}/")
                     or GET("/session/{id}/{sluggifiedTitle}/")
-                    or GET("/session/{id}/{sluggifiedTitle}")).invoke(talkHandler::redirect)
+                    or GET("/session/{id}/{sluggifiedTitle}")).invoke(talkHandler::redirectFromId)
+            GET("/talk/{slug}", talkHandler::redirectFromSlug)
 
             (GET("/member/{login}")
                     or GET("/profile/{login}")

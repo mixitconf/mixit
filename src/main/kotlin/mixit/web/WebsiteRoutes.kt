@@ -41,12 +41,17 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
 
             // Talks
             GET("/2017") { talkHandler.findByEventView(2017, it) }
+            GET("/2017/{slug}") { talkHandler.findOneView(2017, it) }
             GET("/2016") { talkHandler.findByEventView(2016, it) }
+            GET("/2016/{slug}") { talkHandler.findOneView(2016, it) }
             GET("/2015") { talkHandler.findByEventView(2015, it) }
+            GET("/2015/{slug}") { talkHandler.findOneView(2015, it) }
             GET("/2014") { talkHandler.findByEventView(2014, it) }
+            GET("/2014/{slug}") { talkHandler.findOneView(2014, it) }
             GET("/2013") { talkHandler.findByEventView(2013, it) }
+            GET("/2013/{slug}") { talkHandler.findOneView(2013, it) }
             GET("/2012") { talkHandler.findByEventView(2012, it) }
-            GET("/talk/{slug}", talkHandler::findOneView)
+            GET("/2012/{slug}") { talkHandler.findOneView(2012, it) }
 
             // Users
             (GET("/user/{login}") or GET("/sponsor/{login}")).invoke(userHandler::findOneView)
