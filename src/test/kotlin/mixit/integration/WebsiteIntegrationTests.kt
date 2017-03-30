@@ -4,7 +4,6 @@ import org.junit.Test
 import org.springframework.http.HttpStatus.*
 import org.springframework.http.MediaType.*
 import reactor.core.publisher.test
-import reactor.test.StepVerifier
 
 class WebsiteIntegrationTests : AbstractIntegrationTests() {
 
@@ -110,10 +109,22 @@ class WebsiteIntegrationTests : AbstractIntegrationTests() {
         client.get().uri("/talk/florent-pellet-clement-bouillier-emilien-pecoul-jean-helou-event-storming---comprendre-le-metier-autrement").accept(TEXT_HTML)
                 .exchange()
                 .test()
+                .expectNextMatches { it.statusCode() == PERMANENT_REDIRECT }
+                .verifyComplete()
+
+        client.get().uri("/2016/florent-pellet-clement-bouillier-emilien-pecoul-jean-helou-event-storming---comprendre-le-metier-autrement").accept(TEXT_HTML)
+                .exchange()
+                .test()
                 .expectNextMatches { it.statusCode() == OK }
                 .verifyComplete()
 
         client.get().uri("/en/talk/florent-pellet-clement-bouillier-emilien-pecoul-jean-helou-event-storming---comprendre-le-metier-autrement").accept(TEXT_HTML)
+                .exchange()
+                .test()
+                .expectNextMatches { it.statusCode() == PERMANENT_REDIRECT }
+                .verifyComplete()
+
+        client.get().uri("/en/2016/florent-pellet-clement-bouillier-emilien-pecoul-jean-helou-event-storming---comprendre-le-metier-autrement").accept(TEXT_HTML)
                 .exchange()
                 .test()
                 .expectNextMatches { it.statusCode() == OK }
