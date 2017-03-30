@@ -2856,5 +2856,40 @@
       17,
       25
     ]
+  },
+  {
+    "format": "WORKSHOP",
+    "event": "mixit17",
+    "topic": "learn",
+    "title": "MixTeen",
+    "summary": "Les enfants, on fait quoi pendant les vacances ? On programme !\n\nPas besoin d’être un geek en herbe, pas besoin de passer son temps devant un ordinateur... Avec de la créativité et de la curiosité, il est possible de réaliser des programmes informatiques tout en s’amusant.\n\nPour les parents : Proposez à vos enfants de comprendre l’informatique de façon ludique, avec des outils qui leur sont adaptés. Nous leur ferons découvrir les clés de la programmation.\n\nPour les enfants : apprenez à créer vos mini-jeux, mini-films sur un ordinateur en venant programmer avec nous !",
+    "speakerIds": [
+      "titimoby"
+    ],
+    "language": "FRENCH",
+    "addedAt": [
+      2017,
+      3,
+      28,
+      15,
+      51,
+      12,
+      760000000
+    ],
+    "room": "ROOM7",
+    "start": [
+      2017,
+      4,
+      21,
+      14,
+      0
+    ],
+    "end": [
+      2017,
+      4,
+      21,
+      18,
+      0
+    ]
   }
 ]
