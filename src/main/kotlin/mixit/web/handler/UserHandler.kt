@@ -48,7 +48,7 @@ class UserDto(
         var email: String,
         var company: String? = null,
         var description: String,
-        var logoUrl: String? = null,
+        var emailHash: String? = null,
         val role: Role,
         var links: List<Link>,
         val logoType: String?,
@@ -57,7 +57,7 @@ class UserDto(
 
 fun User.toDto(language: Language, markdownConverter: MarkdownConverter) =
         UserDto(login, firstname, lastname, email ?: "", company, markdownConverter.toHTML(description[language] ?: ""),
-                logoUrl, role, links, logoType(logoUrl), logoWebpUrl(logoUrl))
+                emailHash, role, links, logoType(emailHash), logoWebpUrl(emailHash))
 
 private fun logoWebpUrl(url: String?) =
         when {

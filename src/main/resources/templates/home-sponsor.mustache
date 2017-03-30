@@ -1,7 +1,7 @@
 <a href="/sponsors#{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}">
     <picture>
         {{#sponsor.logoWebpUrl}}<source srcset="/images/{{sponsor.logoWebpUrl}}" type=" image/webp" alt="{{sponsor.company}}" class="mxt-img--sponsors-home">{{/sponsor.logoWebpUrl}}
-        <source srcset="/images/{{sponsor.logoUrl}}" type="{{sponsor.logoType}}" alt="{{sponsor.company}}" class="mxt-img--sponsors-home">
-        <img src="/images/{{sponsor.logoUrl}}"  alt="{{sponsor.company}}" class="mxt-img--sponsors-home">
+        <source srcset="/images/{{sponsor.emailHash}}" type="{{sponsor.logoType}}" alt="{{sponsor.company}}" class="mxt-img--sponsors-home">
+        <img src="/images/{{sponsor.emailHash}}"  alt="{{sponsor.company}}" class="mxt-img--sponsors-home">
     </picture>
 </a>
