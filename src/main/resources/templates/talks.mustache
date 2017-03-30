@@ -52,8 +52,8 @@
                     <span><strong>{{#date}}{{date}}{{/date}}, {{#start}}{{start}}{{/start}}</strong></span>
                     <p>{{#i18n}}{{room}}{{/i18n}}</p>
                     <div class="hide-for-small-only"><p>—</p></div>
-                    <img src="/images/svg/mxt-icon--cat5.svg" class="mxt-icon--cat mxt-icon--cat__talks" alt="{{#i18n}}home.topics.hacktivism.title{{/i18n}}">
-                    <p class="mxt-text--cat mxt-text--cat5">Hacktivism</p>
+                    {{#topic}}<img src="/images/svg/mxt-icon--{{topic}}.svg" class="mxt-icon--cat mxt-icon--cat__talks" alt="{{#i18n}}home.topics.{{topic}}.title{{/i18n}}">
+                    <p class="mxt-text--cat mxt-text--cat5">{{#i18n}}home.topics.{{topic}}.title{{/i18n}}</p>{{/topic}}
                 </div>
             </div>       
         {{/talks}}

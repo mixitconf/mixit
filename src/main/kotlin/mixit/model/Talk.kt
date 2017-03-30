@@ -16,6 +16,7 @@ data class Talk(
         val language: Language = Language.FRENCH,
         val addedAt: LocalDateTime = LocalDateTime.now(),
         val description: String? = null,
+        val topic: String? = null,
         val video: String? = null,
         val room: Room? = null,
         val start: LocalDateTime? = null,

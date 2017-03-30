@@ -32,9 +32,9 @@
                 <hr />
                 <div class="row">
                     <div class="small-12 medium-4 medium-push-8 columns mxt-wrapper--talk-details">
-                        <img src="/images/svg/mxt-icon--cat5.svg" class="mxt-icon--cat mxt-icon--cat__talks" alt="{{#i18n}}home.topics.hacktivism.title{{/i18n}}">
-                        <p class="mxt-text--cat mxt-text--cat5">Hacktivism</p>
-                        <p>—</p>
+                        {{#talk.topic}}<img src="/images/svg/mxt-icon--{{talk.topic}}.svg" class="mxt-icon--cat mxt-icon--cat__talks" alt="{{#i18n}}home.topics.{{talk.topic}}.title{{/i18n}}">
+                        <p class="mxt-text--cat mxt-text--cat5">{{#i18n}}home.topics.{{talk.topic}}.title{{/i18n}}</p>
+                        <p>—</p>{{/talk.topic}}
                         <div><strong>#{{talk.format}}</strong></div>
                         <ul class="menu vertical">
                             <li>{{#talk.date}}{{talk.date}}{{/talk.date}}</li>
