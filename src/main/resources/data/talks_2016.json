@@ -22,7 +22,6 @@
     ],
     "slug": "florent-pellet-clement-bouillier-emilien-pecoul-jean-helou-event-storming---comprendre-le-metier-autrement",
     "description": "Laissez mijoter l'intelligence collective des acteurs d'un projet devant un immense tableau blanc, pour \u00e9changer et d\u00e9crire les \u00e9v\u00e8nements pouvant \u00eatre produit dans le syst\u00e8me. Le r\u00e9sultat est un mod\u00e8le, absorbant des commandes et g\u00e9n\u00e9rant des \u00e9v\u00e8nements pour communiquer ses d\u00e9cisions. Vous verrez ainsi avec quelle rapidit\u00e9, la compr\u00e9hension globale du m\u00e9tier augmente. \n\nEt si vous voulez mettre les main dans le code, essayez notre workshop CQRS et Event Sourcing (https:\/\/github.com\/DevLyon\/mixter), vous verrez comment impl\u00e9menter un design orient\u00e9 \u00e9v\u00e8nement le plus simplement possible !",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -60,7 +59,6 @@
     ],
     "slug": "gregory-estrade-la-delicate-agilite-du-mammouth",
     "description": "Ca y est, nous sommes agiles. A-G-I-L-E-S!\nLes d\u00e9veloppeurs au pouvoir! \nLes post-its envahissent les murs, tout le monde sprinte, les stand-up meetings sont ex\u00e9cut\u00e9s religieusement.\nLes \u00e9quipes sont motiv\u00e9es, tout du moins au d\u00e9but, mais au fur et \u00e0 mesure les doutes s'installent.\nMes tentatives pour prodiguer des conseils sont re\u00e7ues avec des lev\u00e9es d'yeux au ciel.\nLes projets prennent du retard, les commerciaux s'affolent, les clients regardent cette agitation avec un oeil d'abord amus\u00e9, puis hagard.\nQue se passe-t-il?\nPetit tour d'horizon sur la mise en place de l'agilit\u00e9, m\u00ealant r\u00e9alit\u00e9 et fiction, sans que l'on sache laquelle d\u00e9passe l'autre. Avec une pinc\u00e9e de philosophie matin\u00e9e de mauvaise foi manifeste et d'auto-d\u00e9rision (\u00e0 partager sans mod\u00e9ration).",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -98,7 +96,6 @@
     ],
     "slug": "mehdi-lahmam-comment-un-navigateur-affiche-une-page-web-",
     "description": "Que se passe-t-il exactement lorsque vous tapez une URL, jusqu'\u00e0 ce que vous voyez le contenu d'une page Web? Il y a un processus bien d\u00e9fini d'actions que le navigateur fait en interne, comme la construction du DOM, \"render trees\" et l'op\u00e9ration de \"paint\". Le rendu d'une page Web n'est pas qu'une seule action faite par le navigateur, mais un ensemble de petites op\u00e9rations et r\u00e9actions \u00e0 des interactions. Jetez un oeil sous le capot et vous serez surpris par la quantit\u00e9 de choses faites pendant quelques millisecondes. \n\nEn tant que designer ou d\u00e9veloppeur Web, comprendre comment fonctionne un navigateur nous aide \u00e0 prendre de meilleures d\u00e9cisions et \u00e0 comprendre certaines bonnes pratiques de d\u00e9veloppement front pour un Web plus efficace.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -136,7 +133,6 @@
     ],
     "slug": "allan-kelly-xanpan",
     "description": "The world doesn\u2019t need another software development methodology - there are plenty already!  But each team needs to learn and create their own. Xanpan is Allan Kelly's very own hybrid development approach, a mix of Kanban and Extreme Programming, bit more Lean thrown in, seasoned with economics and refined over many teams. Xanpan demonstrates how elements of XP and Kanban can be combined and used as an effective development approach.\n\nThe resulting focuses on teams not projects, allows for planned and unplanned work within iterations and levels flow.  One team using this approach claims to be able to deliver \"to the day.\"\n\nXanpan started life simply as adding flow thinking to XP and experimenting.  Now it has principles and practices, some of its own but most of which are rooted in Kanban and XP.  This presentation will describe the principles and describe the key practices.  It will look at how and why these practices support the principles. \n\n\"Xanpan - team centric Agile Software Development\" is available fro LeanPub.com and Amazon.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -175,7 +171,6 @@
     ],
     "slug": "yves-hanoulle-franck-depierre-the-scaling-ball-game",
     "description": "#Abstract\n\n##Description\n\n During the game you will experience scaling issues that occur when multiple teams work on the same product. Multiple Teams will look for solutions to scaling issues and experiment in an iterative way with their ideas on solving them..\n\n\n##Expected benefits of participating\n\nAttendees will face a series of typical scaling challenges like: \n\n+ team synchronisation\n+ efficiency\n+ standardisation\n+ optimisation of expertise\n+ distributed teams\n\n##What did the session creators hope to learn?\n\nThese days we have a few models for scaling teams. \nWith this game we want to help participants experience common scaling issues and observe how they affect them. \nWith the exercises in this book and others, we hope to learn more about scaling dynamics.\n\n##Process and timetable: \n\n+ total time 90 min\n+ Introduction to scaling issues:  5 minutes\n+ Round 1: warm up in local teams 5 minutes\n+ Round 2: multiple rounds solving different scaling issues with a partner team (total 20 minutes)  \n+ Round 3: multiple rounds solving different scaling issues with groups of 4 small teams collaborating (total 10 minutes)  \n+ Round 4: all teams have to collaborate in one large factory 10 minutes\n+ Small retrospective inside the teams 10 minutes\n+ Large joined retrospective (at the end) 30 minutes",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -213,7 +208,6 @@
     ],
     "slug": "arthur-vuillard-tester-et-valider-ses-deploiements",
     "description": "Les d\u00e9veloppeurs ont commenc\u00e9 depuis quelque temps \u00e0 \u00e9crire des tests pour valider leur code et \u00e9viter les bugs et r\u00e9gressions. Cette pratique est ancr\u00e9e dans les \u00e9quipes de d\u00e9veloppements depuis plusieurs ann\u00e9es maintenant, \u00e0 tel point que certains commencent par \u00e9crire leurs tests avant le code (Test Driven Development).\n\nDepuis que le mouvement DevOps est apparu, cette pratique de validation du travail n\u2019a pas forc\u00e9ment \u00e9t\u00e9 appliqu\u00e9e, \u00e0 tel point qu\u2019il arrive que la gestion de configuration ne fonctionne pas du tout sur une machine fra\u00eechement install\u00e9e.\n\nAu cours de cette pr\u00e9sentation, je vais donc pr\u00e9senter pourquoi est ce qu'une description de d\u00e9ploiement peut ne pas fonctionner, pr\u00e9senter des solutions rapides de validation. Ensuite, je parlerai du concept de Test Driven Infrastructure et comment ins\u00e9rer cette m\u00e9thode dans la validation de la gestion de configuration.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -289,7 +283,6 @@
     ],
     "slug": "manuel-vacelet-recrutement--et-si-vous-laissiez-l-equipe-faire--",
     "description": "La constitution d'une \u00e9quipe agile est un \u00e9l\u00e9ment fondamental, engageant et certainement pas Agile pour un sou (CDD, CDI, ...). H\u00e9las, cela conduit bien souvent les d\u00e9cisionnaires, qui d\u00e9cident de la possibilit\u00e9 financi\u00e8re d'une embauche, a g\u00e9rer une grande partie du processus de recrutement. Il arrive m\u00eame parfois qu'une nouvelle embauch\u00e9e d\u00e9barque un lundi matin sans que personne -ou presque- ne soit au courant.\n\nCette pr\u00e9sentation est le retour d'exp\u00e9rience d'Enalean, \u00e9diteur de logiciels, et de la strat\u00e9gie mise en place pour mettre les \u00e9quipes au centre de la prise de d\u00e9cision et du processus de recrutement. Les valeurs centrales de l'agilit\u00e9: auto-organisation et responsabilisation de l'\u00e9quipe sont au centre de cette d\u00e9marche. Nous aborderons: \n- la d\u00e9finition du besoin: quel est notre objectif, de qui avons nous le plus besoin pour mener \u00e0 bien notre mission ? \n- la r\u00e9daction de l'offre: comment faire comprendre qui nous sommes ? \n- les entretiens: comment d\u00e9couper le temps imparti, quels exercices, avec qui et dans quels buts. \n- pourquoi nous en sommes arriv\u00e9 l\u00e0 \n\nCette session se veut tr\u00e8s concr\u00e8te dans l'\u00e9vocation des situations. Je partagerais \u00e9galement avec vous les diff\u00e9rents outils mis en place par l'\u00e9quipe.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -328,7 +321,6 @@
     ],
     "slug": "colin-puy-vincent-elcrin-keep-calm-and-send-a-pull-request",
     "description": "Innover et conserver un produit de qualit\u00e9 de mani\u00e8re it\u00e9rative. D\u00e9velopper avec des prestataires a distance ou des collaborateurs en t\u00e9l\u00e9travail. Tout en gardant le contr\u00f4le sur la qualit\u00e9, la coh\u00e9rence et la complexit\u00e9 du code produit. Nombreux sont les obstacles auxquels nous faisons face au quotidien au sein de nos entreprises et Bonitasoft ne fait pas exception.\n\nVenez d\u00e9couvrir,  au travers d'une d\u00e9monstration, une strat\u00e9gie de d\u00e9veloppement efficace et un environnement productif ax\u00e9 enti\u00e8rement autour de la Pull Request (jenkins\/github\/slack\/docker). Retour d'exp\u00e9rience, sur plus d'un an de d\u00e9veloppement sans une ligne de code non relue, de collaboration multidisciplinaire et multisite, de prise de d\u00e9cisions consensuelles et d'am\u00e9lioration progressive.\n\nLa Pull Request a litt\u00e9ralement transform\u00e9 notre cycle de d\u00e9veloppement.",
-    "video": null,
     "room": "UNKNOWN",
     "start": null,
     "end": null,
@@ -354,7 +346,6 @@
     ],
     "slug": "mary-rose-cook-a-game-programming-environment-for-beginners",
     "description": "I'll talk about how the design of the environment.  How it helps the user learn syntax, control flow and the API of the language.  How it helps them understand what their program is doing or why it's broken.\n\nI'll talk about the compiler.  I'll talk about how it is able to run the user's program step by step, forwards and backwards.  I'll talk about how it can give very precise syntax and runtime error messages.",
-    "video": null,
     "room": "UNKNOWN",
     "start": null,
     "end": null,
@@ -380,7 +371,6 @@
     ],
     "slug": "romain-vuillemot-outils-simples-de-visualisation-pour-le-data-scientist",
     "description": "Toute donn\u00e9es doit \u00eatre visualis\u00e9e, et \u00e0 toute \u00e9tape de leurs traitements. C'est un outil essentiel du data scientist.\n\nLa visualisation intervient depuis le nettoyage des donn\u00e9es pour d\u00e9tecter des donn\u00e9es manquantes, anomalies, et identifier leurs caract\u00e9ristiques (type, domaine). Ensuite, pour la mod\u00e9lisation qui n\u00e9cessite au pr\u00e9alable de bien comprendre la distribution,  pour informer le choix du mod\u00e8le, ses diff\u00e9rents param\u00e8tres et \u00e9chantillons de donn\u00e9es. Enfin par la communication visuelle pour communiquer des r\u00e9sultats \u00e0 un public \u00e0 la foi expert mais aussi \u00e0 une audience qui ne l'est pas forc\u00e9ment mais int\u00e9ress\u00e9e par le sujet (exemple: data journaliste)\n\nCet atelier sera tr\u00e8s pratique avec l'utilisation d'un unique jeu de donn\u00e9es qui passera par toutes ces \u00e9tapes de traitements et de visualisation. Nous utiliserons des biblioth\u00e8ques disponibles en ligne (Python, D3JS\/HighChart\/NVD3) pour former un pipeline de traitement, de l'extraction jusqu'\u00e0 la pr\u00e9sentation. Nous utiliserons aussi quelques outils parfois payant ou en version limit\u00e9e pour montrer leur potentiel et leur r\u00f4le de ce pipeline de traitement de donn\u00e9es (\u00e0 titre informatif pour montrer leur r\u00f4le et potentiel). De nombreux exemples (historiques, embl\u00e9matiques) de visualisations seront introduit (New York Times, d3 blocks, ..).\n\nEnfin la conclusion de l'atelier sera  d'initier les participants aux methodes de design via une session de 'design critique' o\u00f9 les participants seront invit\u00e9s \u00e0 prototyper sur papier une visualisation li\u00e9e aux donn\u00e9es qui ont \u00e9t\u00e9 pr\u00e9sent\u00e9es. Ensuite ces prototypes seront discut\u00e9s afin d'en \u00e9tudier les points positifs et n\u00e9gatifs. Et dans quelle mesure ces visualisations peut \u00eatre faite ou customis\u00e9es maintenant, ou celles qui sont propres \u00e0 un sujet et n\u00e9cessiterons un development pointu (e.g. New York Times).",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -457,7 +447,6 @@
     ],
     "slug": "claire-villard-angelique-henry-workshop---introduction-a-elk",
     "description": "== Pr\u00e9-requis\nLe texte du tutoriel est accessible librement sur Internet : http:\/\/leneurone.github.io\/atelier-duchess-elk\/. \nIl est indispensable que les participants aient install\u00e9 avant l'atelier sur leur ordinateur personnel soit Virtual Box et la machine virtuelle tel que d\u00e9crit dans la section \u201cD\u00e9marrage de la machine virtuelle\u201c, soit les produits s\u00e9par\u00e9ment comme d\u00e9crit sur la page \"Installation sans VM\".\n\n== Atelier\nJe commencerai par quelques slides d\u2019introduction pour pr\u00e9senter rapidement les diff\u00e9rents produits mis en oeuvre, ainsi que quelques concepts sp\u00e9cifiques \u00e0 ElasticSearch n\u00e9cessaires pour la suite.\n\nL\u2019atelier a \u00e9t\u00e9 con\u00e7u pour \u00eatre d\u00e9roul\u00e9 de mani\u00e8re assez autonome. Cela permettra \u00e0 chacun de d\u00e9rouler \u00e0 son rythme, de poser les questions qu\u2019il souhaite sans attendre ou au contraire d\u2019avance plus rapidement.\n\nNous apprendrons \u00e0 lire un fichier et \u00e0 l\u2019enrichir avec LogStash, puis \u00e0 configurer ElasticSearch pour indexer correctement les donn\u00e9es. Enfin, nous verrons comment utiliser l\u2019interface Web Kibana pour les visualiser.\n\n== Pour aller plus loin\nLes plus rapides, ou ceux qui souhaiterons continuer le tutoriel une fois revenus chez eux, pourrons ajouter un broker de messages pour obtenir une architecture faiblement coupl\u00e9e, ou apprendre \u00e0 configurer ElasticSearch pour fonctionner en cluster.\n\n== A propos de moi\nJe suis d\u00e9veloppeur Java depuis 4 ans, et je travaille depuis 3 ans avec la stack Elastic au sein d\u2019un client grand compte lyonnais. J\u2019ai d\u00e9ploy\u00e9 jusqu\u2019\u00e0 24 serveurs en production simultan\u00e9ment sur cette infrastructure, pouvant accueillir jusqu\u2019\u00e0 plus 1 milliard de documents et plus de 10.000 logs \/ s via une architecture distribu\u00e9e, redondante et r\u00e9sistante aux pannes. J\u2019ai \u00e9t\u00e9 amen\u00e9e \u00e0 former plusieurs personnes pour travailler avec moi, ce qui m\u2019a men\u00e9e \u00e0 la r\u00e9daction d\u2019un tutoriel de prise en main de la stack.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -495,7 +484,6 @@
     ],
     "slug": "hubert-sablonniere-100--stateless-avec-jwt--json-web-token-",
     "description": "J\u2019ai mis en place des JWT cette ann\u00e9e sur un projet client et j\u2019aimerai partager ce que j\u2019ai pu impl\u00e9menter avec l\u2019\u00e9quipe.\n\nPour ce talk, j\u2019aimerai que le public reparte avec :\n* Une bonne id\u00e9e du fonctionnement interne des JWT\n* Comment bien s\u00e9curiser les JWT pour un usage browser\/serveur (CSRF, XSS)\n* D\u2019autres id\u00e9es d\u2019utilisation (panier, email de confirmation\u2026)\n* Une connaissance des avantages et inconv\u00e9nients",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -533,7 +521,6 @@
     ],
     "slug": "romain-couturier-a-la--re-decouverte-du-manifeste-agile",
     "description": "L'adoption massive l'Agilit\u00e9 dans les entreprises et les organisations est souvent associ\u00e9e au choix d'une m\u00e9thode sp\u00e9cifique (Scrum, eXtreme Programming, ou autre). Au-del\u00e0 d'un cadre qui vous dira qui doit faire quoi, quand et comment, il est aujourd'hui encore n\u00e9cessaire de revenir \u00e0 la d\u00e9finition pos\u00e9e en 2001 dans le *Manifeste Agile* pour donner du sens \u00e0 votre \u00e9quipe. Alistair Cockburn nous rappelait d'ailleurs dans une conf\u00e9rence en 2014 que l'avenir de l'Agilit\u00e9 \u00e9tait ... l'Agilit\u00e9 elle-m\u00eame !\n\nPour bien comprendre l'Agilit\u00e9 et aider les autres \u00e0 la vivre, les 4 valeurs et 12 principes du Manifeste Agile donnent un cadre de bon sens qu'il est bon de rappeler que nous soyons d\u00e9butants ou praticiens plus aguerris. \n\nJe vous propose un retour aux sources pour donner de nouvelles perspectives sur votre approche quotidienne de l'Agilit\u00e9. Dans cet atelier : \n\n* Vous (re)d\u00e9couvrez les 4 valeurs et les 12 principes de l'Agilit\u00e9\n* Vous co-contruisez une repr\u00e9sentation concr\u00e8te du Manifeste Agile pour donner forme \u00e0 des concepts qui peuvent para\u00eetre abstraits\n* Vous \u00e9changez avec les autres participants sur la compr\u00e9hension du Manifeste Agile et partager vos exp\u00e9riences\n* Vous cr\u00e9ez votre propre discours pour expliquer ce qu'est l'Agilit\u00e9 dans votre entreprise apr\u00e8s la conf\u00e9rence\n* Pour appuyer votre discours, vous repartez avec une (ou plusieurs) photos de la structure en L\u00e9gos pour partager vos apprentissages\n* Vous d\u00e9couvrez la m\u00e9thode L\u00e9go Serious Play, une approche p\u00e9dagogique \u00e0 base de m\u00e9taphores et de *story telling* pour visualiser des sujets complexes",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -573,7 +560,6 @@
     ],
     "slug": "claire-villard-marion-felix-angelique-henry-vis-ma-vie-de-developpeuse",
     "description": "= Le contenu\nEn alternant des __slides__, des __sketches__ et __du v\u00e9cu__, nous d\u00e9taillerons les situations que nous avons vues, v\u00e9cues ou entendus et qui nous interpellent. Nous mettrons le doigt sur des usage qui perdurent parce que, comme pour un projet de d\u00e9v sans tests \"c'est historique\", mais qui ne sont plus en phase avec la soci\u00e9t\u00e9 moderne. Des situation dans les \u00e9quipe de d\u00e9veloppement, avec le client, avec les manageurs ou les RH. Nous proposerons __des contournements__ et __des solutions concr\u00e8tes__ \u00e0 utiliser au quotidien et aider \u00e0 ce que le lieux de travail soit un environnement agr\u00e9able pour toutes et tous.\n\nL'id\u00e9e de cette conf\u00e9rence est venue le jour o\u00f9 nous nous sommes rendu compte que nous avons toutes v\u00e9cues certaines situations d\u00e9sagr\u00e9ables qui nous ont donn\u00e9 envie de partir. Nous souhaitons en parler pour \u00e9viter que les futures g\u00e9n\u00e9rations de d\u00e9veloppeuses y soient confront\u00e9es. De plus, nous nous retrouvons r\u00e9guli\u00e8rement a \u00eatre les rares femmes dans les \u00e9v\u00e9nements techniques, et on nous pose r\u00e9guli\u00e8rement la question \"Mais pourquoi y-a-t-il si peu de femmes ?\" nous avons donc creus\u00e9 le sujet et vous livrons cette analyse.",
-    "video": null,
     "room": "UNKNOWN",
     "start": null,
     "end": null,
@@ -637,7 +623,6 @@
     ],
     "slug": "vincent-daviet-improv-ing--agile-teams---interactions-humaines-et-adoption-du-changement",
     "description": "L\u2019improvisation est pour certains synonyme de perspectives de chaos et d\u2019incertitude. Pourtant, les \u00eatres humains improvisent chaque minute de leur vie. Cela se fait naturellement, et offre d\u2019autres perspectives remplies de plus de possibilit\u00e9s que l\u2019on ne pourrait l\u2019imaginer.\n\nImprovisateur amateur et Coach Agile professionnel depuis plusieurs ann\u00e9es, je vous propose de vivre des exercices simples et in\u00e9dits favorisant 2 des principales valeurs du manifeste agile : les interactions entre individus, et l'adoption du changement. \n\nJ'utiliserai quelques unes des 50 techniques et jeux d\u2019impros du tr\u00e8s bon livre Improving Agile Teams de Paul Goddard. En anglais la racine \u201cImprov\u201d est commune aux mots Improvisation et Am\u00e9lioration (improvement).\n\nBien entendu, des temps d'\u00e9chauffement et de d\u00e9brief sont pr\u00e9vus.\nAucune comp\u00e9tence n'est requise, ni en th\u00e9\u00e2tre, ni en improvisation, ni en agilit\u00e9 : c'est normal, vous allez les d\u00e9velopper pendant la session !\n\nNous balayerons 5 principes du th\u00e9\u00e2tre d\u2019improvisation :\nS\u00e9curit\u00e9 : comment accepter l\u2019\u00e9chec est essentiel \u00e0 la d\u00e9couverte\nSpontan\u00e9it\u00e9 : comment augmenter le flot d\u2019id\u00e9es\nStorytelling : comment la narration aide l\u2019\u00e9quipe \u00e0 mieux comprendre les clients et utilisateurs\nStatus: comment ajuster son comportement personnel peut encourager la collaboration\nSensibilit\u00e9: comment devenir plus pleinement engag\u00e9 avec ses co-\u00e9quipiers.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -675,7 +660,6 @@
     ],
     "slug": "christian-den-hartigh-pedagogie-et-agilite",
     "description": "Etre capable de communiquer avec 27 personnes en m\u00eame temps afin de les faire progresser dans leur formation demande souplesse, pragmatisme et adaptation permanente.  Les valeurs Agiles permettent cette rigueur.\nMon intervention, un retour d'exp\u00e9rience sur les 6 derni\u00e8re ann\u00e9es, montre diff\u00e9rents aspects pratiques pour cr\u00e9er des supports de communication dans le but d'\u00e9mouvoir et de sensibiliser chaque \u00e9l\u00e8ve. \nJ'insiste sur les valeurs humaines, les sensations et les \u00e9motions, afin de faire progresser chaque enfant par la coop\u00e9ration, la collaboration et le droit \u00e0 l'erreur.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -713,7 +697,6 @@
     ],
     "slug": "pierre-fauvel-tete-a-tete-souple-et-muscle",
     "description": "Vous \u00eates d\u00e9veloppeur ou analyste fonctionnel, bref vous appartenez \u00e0 une \u00e9quipe. \nVous avez une certaine id\u00e9e de comment les choses doivent se passer : organisation, principes techniques, comportement. \n\nUn coll\u00e8gue est \u00e0 c\u00f4t\u00e9 de la plaque, qu'il en ait conscience ou non.\n* Il\/elle n'est pas au niveau d'exigence de l'\u00e9quipe, du projet. \u00ab Il ne respecte pas les r\u00e8gles \u00bb \u00ab Il ne joue pas le jeu \u00bb\n* Il\/elle est pris(e) dans un conflit qui pourrit l'ambiance de l'\u00e9quipe. \u00ab Ils peuvent pas se blairer \u00bb\n* Il a un comportement inad\u00e9quat par rapport aux attentes de l'entreprise ou du client.\u00ab Il va se faire sortir \u00bb\nOu plus simplement il\/elle vous demande votre aide.  Mais... \u00ab C\u2019est un boulet \u00bb\n\nEt si vous essayiez de l\u2019aider ? \n\n\"\"Quand on doit aborder un sujet difficile avec une personne, il y a 3 options :\n1) Ne rien faire, mais rien de change\n2) Y aller bourrin, mais elle se braque et rien ne change\n3) Avoir un t\u00eate \u00e0 t\u00eate souple et muscl\u00e9\nComment faire ? C'est difficile ... c'est stressant... et j'ai pas envie de pisser dans un violon !\"\"\n\nVous allez apprendre \u00e0 mieux aider lors des t\u00eate \u00e0 t\u00eate : moins de stress pour vous et pour l'autre, et surtout plus d'efficacit\u00e9 : des principes et une mise en pratique des t\u00eate \u00e0 t\u00eate, ou comment aider ses co-\u00e9quipiers en leur parlant (et en les \u00e9coutant). \nVous allez d\u00e9couvrir comment mettre en oeuvre la supervision par les pairs : recadrage, coaching, mentoring, feedback.\n\nApr\u00e8s l'expos\u00e9 de quelques principes issus de cas concret, nous aborderons vos situations.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -752,7 +735,6 @@
     ],
     "slug": "david-gageot-jean-laurent-de-morlhon-exploiter-les-nouveautes-de-docker-pour-deployer-un-jeu-distribue-",
     "description": "Cet atelier vous donnera un r\u00e9el aper\u00e7u de ce que docker peut faire dans vos projets et vous repartirez avec un setup et des exemples que vous pourrez re-executer dans votre environnement. \n\nDocker 1.10, Swarm  et overlay network sans oublier docker-machine bien s\u00fbr. \n\nLe code de l'application est \u00e9crit en go, vous allez l\u00e9g\u00e8rement modifier le code de l'application est la d\u00e9ployer  dans un cluster form\u00e9e des machines des autres participants. \n\nAucune connaissance en go sont requises pour cet atelier, nous vous assisteront, le focus est sur Docker.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -790,7 +772,6 @@
     ],
     "slug": "patrick-chanezon-docker-et-son-ecosysteme-pour-les-developpeurs-et-les-ops-",
     "description": "Une revue de l\u2019ecosysteme Docker: les standards, l\u2019infrastructure, la plateforme et les services; suivi par une demo: construire une application microservice utilisant le framework Java Spring Boot et la deployer sur un cluster Swarm dans un reseau overlay specifique a l\u2019application.\n\nCet expose passera en revue les 4 couches de l\u2019ecosysteme Docker: les standards, l\u2019infrastructure, la plateforme et les services. Les differents acteurs, outils et solutions, pour les developeurs et les ops.\nComment Docker est en train de transformer l'industrie, notions de IaaS, PaaS et CaaS.\nJe terminerai par une demo utilisant les outils Docker les plus recents, docker, docker-compose, docker-machine et Swarm pour construire une application microservice utilisant le framework Java Spring Boot, comment deployer un cluster Swarm multinode avec overlay networking, et y deployer l\u2019application.\n\nA l\u2019issue de la presentation, les auditeurs devraient etre capables de developper et tester une application microservice utilisant plusieurs services, deployer un cluster Swarm multi node avec overlay networking et y deployer l\u2019application.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -828,7 +809,6 @@
     ],
     "slug": "frederic-vergez-data-journalism---rtsinfo---a-technical-approach",
     "description": "Une description du contexte de travail pour un d\u00e9veloppeur \"full-stack\" dans le domaine du data-journalisme.\n\nQue se cache derri\u00e8re ce mot ? \n\nQuelles pratiques, organisation, plateformes et techniques de programmation utiliser pour obtenir des enqu\u00eates journalistiques enrichies des donn\u00e9es \"smart-data\" ?\n\nCot\u00e9 technique, qu'est-ce que Clojure\/CLJS, postgreSQL\/postGIS, D3, leaflet, cartodb peuvent apporter dans ce domaine ?\n\nPr\u00e9sentation de certains cas d'utilisations et d\u00e9veloppements.",
-    "video": null,
     "room": "UNKNOWN",
     "start": null,
     "end": null,
@@ -854,7 +834,6 @@
     ],
     "slug": "mija-rabemananjara-charles-suire-membre-et-temoin-des-communautes-de-travail-de-boimondau",
     "description": "J'ai eu la chance de rencontrer au cours de mes vacances d'\u00e9t\u00e9, par le plus grand des hasards un membre de cette communaut\u00e9. Charles Suire. Inventeur, passionn\u00e9, avec des valeurs et un caract\u00e8re bien tremp\u00e9, il a eu la gentillesse de me raconter comment la communaut\u00e9 fonctionnait. \nJe voudrai partager cette exp\u00e9rience et ainsi rendre hommage \u00e0 ce grand homme qu'est Charles (m\u00e9connu comme beaucoup de grand hommes).",
-    "video": null,
     "room": "UNKNOWN",
     "start": null,
     "end": null,
@@ -918,7 +897,6 @@
     ],
     "slug": "manon-gruaz-mark--marque-et-marques",
     "description": "Que ce soit une startup, un nouveau produit ou un projet client, la Marque se doit d\u2019\u00eatre au centre de nos pens\u00e9es, processus et d\u00e9cisions. Tout est li\u00e9 \u00e0 la Marque : architecture, design d\u2019interface, animations, features... Chaque d\u00e9tail, \u00e9l\u00e9ment doit v\u00e9hiculer le m\u00eame message. Pour autant, beaucoup ignore ce qu'est r\u00e9ellement une Marque et pourquoi son importance est capitale.\n\n\u00c0 travers l\u2019histoire de \u00abMark\u00bb, je d\u00e9mystifierais la Marque et vous partagerais mon exp\u00e9rience sur \u201ccomment la faire vivre\" sur vos interfaces. En d\u00e9veloppant le processus de cr\u00e9ation et en d\u00e9montrant comment designers et d\u00e9veloppeurs peuvent travailler de concert, je vous d\u00e9voilerai les cl\u00e9s pour imaginer, cr\u00e9er une Marque et faire vivre une exp\u00e9rience innovante, inspirante et unique \u00e0 vos utilisateurs, \u00e0 vos clients.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -995,7 +973,6 @@
     ],
     "slug": "maxime-sanglan-charlier-rui-carvalho-un-code-plus-propre-avec-c-6",
     "description": "La derni\u00e8re version de C# qui est disponible avec le framework .Net 4.6 sous windows depuis quelques mois mais aussi avec la future version 1.0 d'Asp.Net core, n'apporte pas de nouvelle fonctionnalit\u00e9 r\u00e9volutionnaire mais tout un ensemble de simplifications et sucre syntaxique pour nous permettre d'\u00e9crire un code plus simple et plus efficace. \nVous avez peut \u00eatre vu quelques unes de ces nouveaut\u00e9s au cours des mois pr\u00e9c\u00e9dents mais je propose ici de les mettre en relief avec des exemples concrets afin de souligner l'importance et la mise en oeuvre de telle ou telle technique.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -1033,7 +1010,6 @@
     ],
     "slug": "rui-carvalho-feedback-loops",
     "description": "Agile. \u00ab Agile \u00bb ne repr\u00e9sente pas un nom que nous pouvons quantifier mais une qualit\u00e9, une propri\u00e9t\u00e9 de quelque chose. Pourquoi donc dans ce cas, certaines personnes veulent nous vendre de l\u2019agile ou pr\u00e9tendent faire de l\u2019agile?\nPour \u00e9viter ce genre d\u2019\u00e9carts, il est peut \u00eatre important aujourd\u2019hui de revenir sur les valeurs fondamentales de notre m\u00e9tier et sur l\u2019agilit\u00e9. Parmi ces valeurs importantes, les boucles de feedback sont une charni\u00e8re centrale. Je vous propose de revenir sur ces valeurs afin de mieux les comprendre et voir ainsi comment r\u00e9ellement produire de meilleurs produits.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -1071,7 +1047,6 @@
     ],
     "slug": "steve-klabnik-rust-in-production",
     "description": "Rust is a systems programming language that focuses on safety, speed, and concurrency. Reaching 1.0 last year, Rust is a relatively new programming language, but is already seeing production use. In this talk, Steve will show you the basics of the language, while using case studies and anecdotes from production Rust users.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -1109,7 +1084,6 @@
     ],
     "slug": "olivier-my-les-valeurs-de-kanban",
     "description": "Voici le d\u00e9roul\u00e9 de l'atelier :\n\n1. Pr\u00e9sentation des 9 valeurs Kanban\n\n2. Syst\u00e8me Kanban\n- Les participants auront \u00e0 relier les 4 principes fondateurs et 6 pratiques fondamentales avec les 9 valeurs Kanban\nNote : ce n'est pas si \u00e9vident que \u00e7a, et cela g\u00e9n\u00e8re des discussions int\u00e9ressantes !\n\n3. R\u00e9flexions et discussion\n- Les participants auront \u00e0 choisir 3 valeurs qui r\u00e9sonnent en eux personnellement, puis 3 valeurs qui leur paraissent importantes ou confrontantes \u00e0 consid\u00e9rer dans leur contexte actuel.\nNote : la comparaison des 2 listes donne lieu \u00e0 des discussions entre les groupes. De plus, la seconde liste peut \u00eatre le d\u00e9but de l'\u00e9laboration d'une strat\u00e9gie d'impl\u00e9mentation contextualis\u00e9e et r\u00e9fl\u00e9chie de Kanban.\n\n4. Repr\u00e9sentation visuelle\n- Les participants auront \u00e0 repr\u00e9senter les 9 valeurs Kanban sous forme de poster. 2 Mod\u00e8les seront propos\u00e9s : cercles concentriques \/ maison Kanban, cependant l'objectif est de laisser libre la cr\u00e9ativit\u00e9 des participants.\n- On affiche alors la galerie de repr\u00e9sentation et on d\u00e9briefe tous ensemble\nNote : La vari\u00e9t\u00e9 des repr\u00e9sentations permet de donner de la nuance et de nouvelles perspectives \u00e0 l'impl\u00e9mentation de Kanban aux participants.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -1147,7 +1121,6 @@
     ],
     "slug": "david-larlet-simplicite-par-defaut",
     "description": "Si votre `node_modules` et ou votre `virtualenv` fait plus de 100Mo, si votre projet n\u00e9cessite trois instances Docker pour servir cinq pages, si vous ne savez m\u00eame plus qui builde qui, qui transpile quoi et quel int\u00e9gration continue d\u00e9ploie o\u00f9, alors vous souffrez peut-\u00eatre de ce syndrome que j'appelle \u00ab Complexit\u00e9 par d\u00e9faut \u00bb.\n\nMais tout n'est pas perdu, on va voir ensemble comment d\u00e9marrer petit et it\u00e9rer en \u00e9tant dirig\u00e9 par le besoin. Et uniquement le besoin.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -1186,7 +1159,6 @@
     ],
     "slug": "nicolas-cuillery-matthieu-lux-tout-ce-que-vous-voulez-savoir-sur-redux",
     "description": "Initialement un PoC de d\u00e9veloppeur sur l'architecture Flux, [Redux](http:\/\/redux.js.org\/) est pass\u00e9, au cours de l\u2019ann\u00e9e 2015, du statut \"encore une nouvelle impl\u00e9mentation Flux\" au statut d'impl\u00e9mentation la plus populaire. Elle parvient aujourd'hui \u00e0 f\u00e9d\u00e9rer les d\u00e9veloppeurs autour de Flux y compris en dehors de l\u2019\u00e9cosyst\u00e8me React.\n\nRedux est un nouveau paradigme de programmation pour les interfaces Web. Il propose de centraliser l\u2019int\u00e9gralit\u00e9 du contexte de l\u2019application en un seul endroit organisant toutes les transformations de fa\u00e7on s\u00e9quentielles et reproductible.\n\nJe vous propose un tour complet de la technologie par la m\u00eame approche que pr\u00e9conise son cr\u00e9ateur \u00e0 savoir en allant voir directement le code de la librairie. Pas de panique ! L\u2019essentiel de la librairie peut \u00eatre \u00e9crit en un dizaine de lignes.\n\nUne fois les concepts pos\u00e9s, nous vous proposerons un atelier mettant en oeuvre Redux dans une application existante qui ne sera autre que 2048. Avec plusieurs \u00e9tapes, nous ferons \u00e9voluer l'application en l'orchestrant avec Redux et en utilisant progressivement les diff\u00e9rents outils et design patterns couramment utilis\u00e9s.\n\nVous serez rapidement \u00e0 la t\u00eate d'une application fonctionnelle compl\u00e8tement debuggable avec les dev tools de Redux et un historique des transformations.\n\n**Pour pr\u00e9parer le workshop**\n\n- Installer Git & Node 4+\n- Cloner le repository git du projet : https:\/\/github.com\/Swiip\/2048-redux (`git clone https:\/\/github.com\/Swiip\/2048-redux.git`)\n- Se positionner sur la branche `step-0` (`git checkout step-0`)\n- Installer les d\u00e9pendances NPM (`npm install`)",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -1265,7 +1237,6 @@
     ],
     "slug": "sylvain-chabert-julien-paffumi-anne-matray-jerome-guilloux-passer-de-processus-agiles--a-la-papa---a-des-equipes-dynamiques-et-impliquees",
     "description": "Apr\u00e8s avoir d\u00e9couvert et appliqu\u00e9 des \u00ab processus agiles \u00bb pendant plus de cinq ans, nous avions r\u00e9volutionn\u00e9 notre fa\u00e7on de g\u00e9rer les \u00e9volutions de nos diff\u00e9rents produits. \n \nEt puis, apr\u00e8s un rachat et l\u2019apparition de nouveaux objectifs, nous avons commenc\u00e9 \u00e0 concevoir de tout nouveaux produits.\n \nApr\u00e8s quelques de mois de travail seulement, nous avons atteint les limites de l\u2019organisation en place\u2026 un comble pour une soci\u00e9t\u00e9 qui \u00e9tait per\u00e7ue comme une r\u00e9f\u00e9rence Lyonnaise en mati\u00e8re d\u2019agilit\u00e9 !\n \nLes interactions avec les acteurs ext\u00e9rieurs \u00e0 l\u2019\u00e9quipe n\u2019\u00e9taient pas assez fluides.\nLes \u00e9quipes \u00e9taient plac\u00e9es en situation trop attentiste, pas assez impliqu\u00e9es dans la vision des besoins et l\u2019\u00e9laboration des solutions.\nLe Manager et le Product Owner \u00e9taient \u00e0 la fois trop directifs et pas assez pr\u00e9sents.\n \nIl \u00e9tait temps de nous remettre en question !\n \nTout en gardant en t\u00eate les pr\u00e9ceptes de base de l\u2019agilit\u00e9, nous avons revu le d\u00e9coupage et le focus de nos \u00e9quipes, le r\u00f4le du Product Owner et du manager, le partage de la vision produit, l\u2019approche des inconnus fonctionnels et techniques\u2026\n \nCeci a eu des effets inattendus dans la vie des \u00e9quipes mais aussi dans l\u2019organisation manag\u00e9riale de notre R&D.\n \nApr\u00e8s plus d\u2019un an d\u2019application, nous voulons partager avec vous nos nouvelles pratiques courantes qui r\u00e9pondent \u00e0 ces probl\u00e9matiques et favorisent des \u00e9quipes dynamiques et impliqu\u00e9es !",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -1304,7 +1275,6 @@
     ],
     "slug": "nicolas-ruffel-charles-bouttaz-software-craftsmanship---le-chainon-manquant-de-l-agilite--",
     "description": "Vous \u00eates d\u00e9veloppeur, ScrumMaster ou m\u00eame manager et vous avez des probl\u00e8mes avec votre logiciel ? \nVous avez adopt\u00e9 SCRUM mais vos probl\u00e8mes n\u2019ont pas disparu.\nBugs, r\u00e9gressions, maintenance difficile, changements co\u00fbteux bref vous avez un probl\u00e8me de qualit\u00e9.\n\nSi les m\u00e9thodes agiles se concentrent sur l\u2019aspect organisationnel du d\u00e9veloppement logiciel, elles en disent tr\u00e8s peu sur les pratiques de production du code.\nOr pour valoriser des \u201clogiciels op\u00e9rationnels\u201d et \u201cadaptables aux changements\u201d (comme le pr\u00e9conise le manifeste agile), la mani\u00e8re de produire le code est essentielle.\nLe software craftsmanship est avant tout un \u00e9tat d\u2019esprit, mais il repose sur des pratiques concr\u00e8tes de d\u00e9veloppement pioch\u00e9es dans d\u2019autres m\u00e9thodes comme eXtreme Programming.\nDans ce retour d\u2019exp\u00e9rience, un d\u00e9veloppeur et un manager vous pr\u00e9senterons quelques unes des pratiques que nous avons adopt\u00e9es et qui ont chang\u00e9 notre fa\u00e7on de d\u00e9velopper.\nNous vous donnerons aussi des pistes pour les transposer (ou pas !) dans votre contexte.",
-    "video": null,
     "room": "UNKNOWN",
     "start": null,
     "end": null,
@@ -1330,7 +1300,6 @@
     ],
     "slug": "frederic-rodriguez-evolution-du-management-dans-notre-monde-complexe",
     "description": "Ensemble, nous allons \"jeter un \u0153il\" sur l'\u00e9volution du management de la tradition vers l\u2019agile et apprendre comment elle influence une organisation et la gestion de projet moderne.\n\nLa pr\u00e9sentation est expos\u00e9e sous deux volets. \n\nUn premier volet d\u2019une heure avec la pr\u00e9sentation de l\u2019\u00e9volution du management et ce qui se dessine aujourd\u2019hui + un jeu Penny game ou Marshmallow.\n\nUn deuxi\u00e8me volet d\u2019une heure environ pour pr\u00e9senter le monde VUCA (Volatile Incertain Complexe et Ambigu\u00eb) dans lequel nous vivons de plus en plus aujourd'hui + le jeu de Lego Cynefin.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -1407,7 +1376,6 @@
     ],
     "slug": "florence-chabanois-comment-obtenir-des-standup-qui-marchent",
     "description": "Le daily standup meeting est populaire chez les managers et silencieusement pol\u00e9mique chez les d\u00e9veloppeurs. M\u00eame quand il est bien accept\u00e9, il reste le rituel le plus rat\u00e9 dans sa mise en \u0153uvre. \n\nQui participe ? Vous sentez-vous oblig\u00e9 de prouver que vous avez bien travaill\u00e9 la veille ? Attendez-vous les retardataires ? Est-ce vraiment chacun son tour de parole ? Mais ce \"respect\" emp\u00eache les discussions n\u00e9cessaires ! Trouvez-vous votre standup trop bazar ou au contraire trop militaire ?  Ecoutez-vous vos pairs ou r\u00e9fl\u00e9chissez vous \u00e0 ce que vous allez dire ? Est-ce un day changing rituel ?\n\nRegardez-moi dans les yeux et dites moi la v\u00e9rit\u00e9. Au final, qu'attendez-vous du daily ? \n\nQu'est-ce que cela changerait pour vous, s'il disparaissait ? \n\nUn daily standup sans board est comme une voiture sans GPS. Vous arriverez \u00e0 destination, un jour, mais vous ne savez pas le chemin restant \u00e0 parcourir.  Vous ne voyez pas les embouteillages avant d'y \u00eatre et ne changez pas le trajet initialement pr\u00e9vu. Du bon vieux cycle en V. \n\nJe vous propose d'am\u00e9nager votre board pour obtenir un standup \u00e9nergisant que l'\u00e9quipe attend avec impatience et qui vous permettent r\u00e9ellement d'atteindre votre objectif. Les diff\u00e9rentes pistes sont tir\u00e9es de mon exp\u00e9rience et du livre 99 vizualizations examples. Ce sera \u00e0 vous de piocher et d'it\u00e9rer dessus.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -1483,7 +1451,6 @@
     ],
     "slug": "jean-jacques-girardot-the-construkction-of-sound",
     "description": "Cette causerie fait le tour d\u2019une dizaine d\u2019ann\u00e9es de \u00ab recherches et d\u00e9veloppements \u00bb personnels, \u00e0 la recherche du\n\u00ab son \u00bb, cet objet que l\u2019on construit, que l\u2019on \u00e9coute, qui se d\u00e9veloppe dans le temps et l\u2019espace, que l\u2019on apprivoise\nparfois pour assembler en une composition \u00e9lectroacoustique. Quelle culture, quelles connaissances, mais aussi quels\nlogiciels, quels mat\u00e9riels sont-ils n\u00e9cessaires pour mener \u00e0 bien une telle entreprise, o\u00f9 l\u2019informatique et la programmation\njouent aujourd\u2019hui un r\u00f4le fondamental ? Extraits d\u2019oeuvres, pr\u00e9sentation de quelques outils, y compris des cr\u00e9ations\nde l\u2019auteur, logiciels existants ou \u00e0 programmer soi-m\u00eame, un panorama des techniques et pratiques du domaine est propos\u00e9\n\u00e0 toute personne souhaitant s\u2019initier ou se lancer dans cette qu\u00eate sans fin...",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -1521,7 +1488,6 @@
     ],
     "slug": "nicolas-cointe-agents-autonomes-ethiques",
     "description": "Cette pr\u00e9sentation r\u00e9sumera dans un premier temps l'\u00e9tat actuel de la r\u00e9flexion men\u00e9e par le projet EthicAa financ\u00e9 par l'Agence Nationale pour la Recherche sur la probl\u00e9matique de l'\u00e9thique et des agents autonomes. Nous pr\u00e9senterons ensuite une proposition de l'\u00c9cole des Mines de Saint \u00c9tienne visant \u00e0 r\u00e9pondre au besoin d'une facult\u00e9 de jugement moral et \u00e9thique pour des agents BDI (Belief Desire Intention) et conclurons  par l'impl\u00e9mentation de ces agents en Jason.",
-    "video": null,
     "room": "UNKNOWN",
     "start": null,
     "end": null,
@@ -1585,7 +1551,6 @@
     ],
     "slug": "florie-sechaud-l-ergonomie-web",
     "description": "#Plan de la conf\u00e9rence\n* D\u00e9finition ergonomie\n* Quelques concepts de base\n** Les principales lois de la Gestalt (forme) : loi de la bonne forme, loi de la proximit\u00e9, loi de similitude, loi de destin commun, loi de familiarit\u00e9, loi de cl\u00f4ture.\n** La ligne de flottaison\n** F pattern\n** Affordance\n** Loi de Fitts\n** Loi de Hick ou Hick-Hyman\n** Standart ou convention\n* Quelques bonnes pratiques :\n** Facilit\u00e9 la compr\u00e9hension : Coh\u00e9rence externe et interne\n** Bien architecturer son site :\n** Le site doit \u00eatre lisible\n** Une bonne organisation visuelle\n** Le site est r\u00e9actif\/interactif\n** L\u2019utilisateur a le contr\u00f4le\n** Faire attention \u00e0 l\u2019accessibilit\u00e9\n* Exemples et mises en application\n** Glop \/ Pas glob : mise en parall\u00e8le de bons et de mauvais exemples\n** Avant \/ Apr\u00e8s : exemples de mises en application des principes de la conf\u00e9rence\nLe tout agr\u00e9ment\u00e9 de petits dessins.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -1623,7 +1588,6 @@
     ],
     "slug": "romain-vignes-sans-motivation-pas-d-action--",
     "description": "La motivation, c'est notre carburant personnel, ce qui nous fait nous lever le matin, ce qui peut nous faire accomplir de grandes choses !\n\nAu cours de ma carri\u00e8re dans l'industrie du logiciel, j'ai crois\u00e9 \u00e0 plusieurs reprises des managers \u00e0 qui on n'avait pas expliqu\u00e9 (ou qui avaient mal compris) quels sont les rouages motivationnels et comment il influent sur notre travail au quotidien. Avec malheureusement des cons\u00e9quences f\u00e2cheuses pour les \u00e9quipes de d\u00e9veloppement.\n\nA travers un atelier ludique et participatif, venez d\u00e9couvrir vos facteurs de motivation personnels.\nVous repartirez avec une meilleure connaissance de vous-m\u00eame, ainsi que des techniques pour mieux comprendre les facteurs de motivation de vos coll\u00e8gues (ou collaborateurs si vous avez des responsabilit\u00e9s de management).",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -1699,7 +1663,6 @@
     ],
     "slug": "gaetan-zoritchak-atelier--utiliser-kotlin-dans-une-architecture-standard",
     "description": "Nous partirons de z\u00e9ro pour d\u00e9velopper une application web standard en kotlin. Nous utiliserons spring boot pour acc\u00e9l\u00e9rer l'exercice. \n\n  - param\u00e9trer maven pour la compilation crois\u00e9e kotlin - java\n  - d\u00e9marrer spring boot depuis kotlin,\n  - injection de d\u00e9pendance,\n  - utilisation des data class pour la s\u00e9rialisation json\n  - tests\n  - jpa et jdbc\n\nPour cet atelier, vous aurez besoin: \n\n  - d'un JDK 6 +,\n  - de maven, \n  - de git, \n  - d'un intellij idea avec une version r\u00e9cente du plugin kotlin.\n\nNous nous familiariserons avec la syntaxe et l'outillage de kotlin en d\u00e9veloppant une petite application web from scratch. Cet exercice nous permettra de voir les nombreux apports du langage et de comprendre les quelques contraintes.\n\nNous verrons que kotlin peut remplacer java de mani\u00e8re quasi transparente dans toutes les couches d'un application. L'application r\u00e9alis\u00e9e vous fournira une base sur laquelle vous appuyer pour vos propres projets.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -1737,7 +1700,6 @@
     ],
     "slug": "horacio-gonzalez-hand-s-on-web-components-with-polymer",
     "description": "The W3C has been working on a Web Components standard for almost three years, but it is still a work in progress. But polyfills like allows current developers to use Web Components today, and incorporate to their apps widgets from any library  of web components. \n\nThe best known of these libraries is Google's Polymer. In Google IO 2015 conference, Google has at last released the long awaited version 1.0 of Polymer, making it even faster, more stable and at least suitable for \"serious\" applications. In this lab you will use Polymer 1.0 with Material Design Polymer Elements to design and develop a web application using web components.\n\nYou will learn to use the following technologies:\n\n- Polymer and Web Components (for mobile and desktop)\n- The Paper Elements for Polymer (material design)\n- The integration of Polymer components in Angular (1 and 2) applications.\n\nMandatory Installs prior to lab:\n+ npm \n+ bower\n+ your favorite HTML\/CSS\/JS IDE (I suggest Sublime Text)",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -1814,7 +1776,6 @@
     ],
     "slug": "claire-morin-nicolas-verite-strategie-ux---formuler-mes-hypotheses--slitch-versus-yeepeechat-",
     "description": "Lors de cet atelier, nous vous proposons de d\u2019apprendre \u00e0 reconna\u00eetre les hypoth\u00e8ses sur lesquelles une proposition de valeur d'un produit se base. Souvent elles paraissent tellement \u00e9videntes qu\u2019on oublie qu\u2019elles sont l\u00e0 ! Chaque \u00e9quipe aura sa proposition de valeur concurrente, elles devront trouver quelles sont les hypoth\u00e8ses sur lesquelles leur proposition se base, et comment elle peut les valider (ou les invalider) au plus vite. Avant que le march\u00e9 de la rattrape...",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -1852,7 +1813,6 @@
     ],
     "slug": "katrina-owen-succession--a-refactoring-story",
     "description": "The code example for the talk is an algorithmic folk tale (\"I know an old lady who swallowed a fly...\"). This is an easy to grasp domain. There is no need to understand complicated economics theory, or video encoding. The algorithmic component gives the code example a useful amount of complexity. The techniques that apply to this simple example also apply in the real world.\n\nDuplication catches our eye, yet much of design is about encapsulating differences. Focusing on the bits that are alike leads to awkward abstractions.\n\nThis talk shows how focusing on differences instead of similarities provides a better outcome.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -1890,7 +1850,6 @@
     ],
     "slug": "laura-savino--reading-in-a-new-language-",
     "description": "We'll dive into the skills & contexts that are needed for learning new languages & ideas, and investigate how to apply those to code we write. We'll map the course from an excited beginner to a sometimes world-weary expert; we'll discuss how to respond when a team member says they don't understand our code; we'll talk about the role that working memory & energy play in comprehension; and we'll have a grand time exploring idiosyncrasies from human languages around the globe.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -1928,7 +1887,6 @@
     ],
     "slug": "hadi-hariri-silver-bullet-syndrome",
     "description": "We love our silver bullets don\u2019t we? Constantly chasing the dream that the next big thing will solve all our past problems. It doesn\u2019t matter if it\u2019s a language, framework, platform or library, we\u2019re out there chasing it. Why? Well because it\u2019s going to solve our needs, it\u2019s going to solve the business needs. Well supposedly it will. And how much is it going to cost? Not that much, especially if we\u2019re not the ones paying the bills.\n\nIt\u2019s about time we look at the hard facts and ask those difficult questions. Are we really looking for a silver bullet?  Why are we constantly riding the technology bandwagon? Where is the churn going to take us? And at what cost?",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -1966,7 +1924,6 @@
     ],
     "slug": "hadi-hariri-kotlin---ready-for-production",
     "description": "Kotlin, a language developed by JetBrains for nearly 5 years is very close to its first release. However, did you know that it's being used in production for over a few years now already? Both inside and outside of JetBrains there are people deploying Kotlin applications for Android platform, for Web Applications and just about any other type of application.\n \nWhy are people using it instead of Java or some of the other languages out there? Primarily because it provides significant benefits in terms of conciseness, readability and safety, without some of the drawbacks that adopting a new language has such as a higher learning curve or interoperability with existing code and ecosystems. \n \nIn this talk we'll cover some aspects of Kotlin that can really help you in your daily development, focusing on solving issues versus highlighting language features.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -2004,7 +1961,6 @@
     ],
     "slug": "peter-bourgon-go--from-zero-to-hero",
     "description": "Go is a lovely little programming language designed by smart people you can trust and continuously improved by a large and growing open-source community. Since its release in 2009, it's quickly become the language of the server, powering some of today's most exciting software projects and organizations, including Docker, CloudFlare, HashiCorp, CoreOS, and many more. In this talk we'll do a Go crash-course, and build, grow, and profile an example microservice. You'll leave with an understanding of Go's strengths, and hopefully consider it for your next project.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -2042,7 +1998,6 @@
     ],
     "slug": "stephane-maldini-a-lite-rx-api-for-the-jvm",
     "description": "Pour d\u00e9velopper des applications r\u00e9actives, RxJava est une solution compl\u00e8te, mais des alternatives int\u00e9ressantes existent. Apr\u00e8s une rapide pr\u00e9sentation des diff\u00e9rentes API de composition r\u00e9actives disponibles ainsi qu\u2019un aper\u00e7u des changements n\u00e9cessaires pour passer d\u2019un mod\u00e8le de programmation bloquant \u00e0 r\u00e9actif, ce Hands-On proposera une introduction \u00e0 la programmation Reactive en utilisant Reactor Core 2.5, une alternative l\u00e9g\u00e8re et performante. Nous apprendrons \u00e0 utiliser les types r\u00e9actifs [Flux](http:\/\/projectreactor.io\/core\/docs\/api\/reactor\/core\/publisher\/Flux.html) (N \u00e9l\u00e9ments) et [Mono](http:\/\/projectreactor.io\/core\/docs\/api\/reactor\/core\/publisher\/Mono.html) (1 \u00e9l\u00e9ment) qui constituent la nouvelle API lite au coeur de [Reactor](http:\/\/projectreactor.io\/) 2.5 qui r\u00e9volutionne le monde des API Rx sur la JVM en offrant une API reprenant le vocabulaire [Reactive eXtensions](http:\/\/reactivex.io\/) nativement bas\u00e9e sur Java 8 et [Reactive Streams](http:\/\/www.reactive-streams.org\/) avec un niveau de performance jamais atteint. Vous aurez aussi droit \u00e0 un aper\u00e7u du support r\u00e9actif qui sera prochainement int\u00e9gr\u00e9 \u00e0 Spring Boot ...",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -2081,7 +2036,6 @@
     ],
     "slug": "julien-jehl-stephane-ribas-atelier-robotique-poppy---how-can-you-easily-program-poppy-and-its-creatures-",
     "description": "Selon votre niveau,  vous pourrez r\u00e9alisez des mouvements simples ou tester des algorithmes de cin\u00e9matique ou d'\u00e9quilibre en relation avec diff\u00e9rents capteurs.\nD'abord sur le simulateur V-REP puis sur un v\u00e9ritable robot. Vous pouvez regarder des exemples de travaux sur http:\/\/www.poppy-prof.fr\n A la fin de ce workshop, le participant repartira avec les connaissances suffisantes pour ce lancer dans la programmation de robots.\nThis workshop aim to show how you can easily program Poppy and its creatures.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -2119,7 +2073,6 @@
     ],
     "slug": "tomasz-nurkiewicz-rxjava-in-legacy-projects",
     "description": "If you ever approached RxJava before you might come to a conclusion that this library solves problems most of us don't have. Reactively composing streams of data, virtual time, marble diagrams and event-driven programming - where most of our code is pretty much just transferring data from database to presentation layer.\n\nDuring this live coding session for Rx beginners and intermediates there will not be a single slide, we start with empty IDE to step-by-step implement key constructs in RxJava. Most importantly we will discover how this high-level abstraction can help in existing projects. When to use RxJava, what problems does it solve and when using it is an excess of form over substance.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -2234,7 +2187,6 @@
     ],
     "slug": "robert-kubis-mete-atamel-hands-on-grpc-experience-building-your-own-multiplayer-game-client",
     "description": "Do you remember the game Simon says from the 80s? I don\u2019t know about you, but I know many that spent hours trying to press those specific sequences of red, green, blue and yellow buttons in the correct order.  But why play on your own? We\u2019ve implemented a gRPC server that allows you to play Simon with other players over the internet!\n\nIn this workshop we will dive into the toolset and libraries to build your very own Simon Says client for this server. We will have a message description in Protocol Buffers format and some stub code in several languages ready for you to play with. The goal for this workshop is for you to have a working client that you can use to play (and beat!) other attendees of the workshop.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -2310,7 +2262,6 @@
     ],
     "slug": "maxime-bonnet-j-anime-une-retrospective-productive-",
     "description": "La r\u00e9trospective est un exercice important dans la d\u00e9marche agile, elle permet la mise en \u0153uvre de la boucle d'am\u00e9lioration continue.\nCette c\u00e9r\u00e9monie est souvent mal comprise, mal anim\u00e9, ce qui g\u00e9n\u00e8re de la frustration pour l'\u00e9quipe, des actions peu int\u00e9ressante et un abandon \u00e0 plus ou moins court terme.\nLa facilitation de r\u00e9trospective est un exercice particulier qui n\u00e9cessite beaucoup plus de comp\u00e9tence que l'animation classique de r\u00e9union.\nLe format, l'activit\u00e9 mise en \u0153uvre, le positionnement de l'animateur sont autant de param\u00e8tre qui auront une influence sur le r\u00e9sultat obtenu.\nCette session propose de revenir sur les bases de la facilitation de r\u00e9trospective. Elle permettra aussi de faire un tour d'horizon de quelques serious games \u00e0 mettre en \u0153uvre.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -2348,7 +2299,6 @@
     ],
     "slug": "stephane-maldini-du-reactive-rx-like-pour-java-8-et-plus---v-la-reactor-2-5--",
     "description": "La programmation Reactive c'est un peu le sujet clivant dans une bonne pause caf\u00e9 avec ses pairs, c'est soit:\n- R\u00e9ponse A : \"N'importe quoi, \u00e7\u00e0 prendra jamais, on comprend rien et on en a m\u00eame pas besoin.\n- R\u00e9ponse B : \"T'as rien compris, t'es nul, c'est le futur, d'ailleurs j'ai remplac\u00e9 mon cloud \u00e0 \u00e9oliennes avec le gang le week-end dernier.\"\n\n[Reactor 2.5](http:\/\/projectreactor.io) a l'extr\u00eame ambition de cliver moins. On s'y est m\u00eame mis a plusieurs entre les contributeurs de RxJava, Reactor et Spring. Pourquoi ? Comment ? C'est quoi la backpressure ? Et que vient faire Spring Framework dans cette histoire ? La r\u00e9ponse a toutes ces questions et d'autres moins audacieuses dans cette session !",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,
@@ -2427,7 +2377,6 @@
     ],
     "slug": "matthieu-gironnet-jean-charles-durand-franck-rageade-xavier-nopre-agilite-en-une-journee",
     "description": "Vous, participants \u00e0 la conf\u00e9rence, serez des clients ou des \u00e9quipiers en force. Vous allez \u00eatre impliqu\u00e9s dans notre projet \"Agilit\u00e9 en une journ\u00e9e\". Vous avez le choix de votre implication : 1h (une it\u00e9ration), 1\/2journ\u00e9e, ou toute la journ\u00e9e (le projet complet). Vous participerez \u00e0 ce qui vous fait envie, que vous soyez expert ou d\u00e9butant, ou simplement curieux de vivre un projet agile de l\u2019int\u00e9rieur : sprint, d\u00e9mo, r\u00e9tro, sprint0, livraison, \u2026 Vous participerez \u00e0 un projet agile original, vous pratiquerez plein de c\u00e9r\u00e9monies, aurez du feedback, progresserez et d\u00e9couvrirez de nouvelles mani\u00e8res de g\u00e9rer vos c\u00e9r\u00e9monies \u2026 Une \u00e9quipe de ProductOwner\/DEV\/ScrumMaster exp\u00e9riment\u00e9s de diff\u00e9rents horizons et soci\u00e9t\u00e9s vous accompagnera. Vous red\u00e9couvrirez plein de bonnes pratiques, vous ferez plein d\u2019erreurs et vous en sortirez grandis. C\u00f4t\u00e9 technique, nous ferons un peu de Big Data (Apache Flink), et un peu de d\u00e9veloppement WEB et Javascript. Et tout \u00e7a en nous amusant !!!",
-    "video": null,
     "room": "UNKNOWN",
     "start": null,
     "end": null,
@@ -2567,7 +2516,6 @@
     ],
     "slug": "matteo-mazzeri-where-s-the-reset-button-in-a-smart-city-",
     "description": "We will project ourselves in the future via an imaginary day in an heavily IOT\u2019d world and understand the importance of our developments today and the impact of short term choices versus long term thinking. We will cover several dimensions of programming for IOT ranging from best practices, to tools, from standards to business models, from ethics and security to ecosystems and environmental impact. Participants will have a clear vision of how to develop for an IOT world and how it is changing existing development practices.",
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2016,

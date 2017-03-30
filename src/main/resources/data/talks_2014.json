@@ -21,8 +21,6 @@
     "description": "\u00abAgile Web Development with Rails !\u00bb, \u00abAgile Web Development with Grails !\u00bb, \u00abAgile Development with \u00bb. \r\nCes annonces vous semblent peut \u00eatre famili\u00e8res. Si vous vendez votre \u00e2me \u00e0 un framework, il va envoyer Voyance au 3617 pour pr\u00e9voir la r\u00e9ussite de votre projet, faire revenir l'\u00eatre aim\u00e9, vous rendre plus agile et soigner le bec de li\u00e8vre. \r\nSi on reformule : \u00abVous n'avez pas besoin de savoir coder, vous n'avez plus qu'\u00e0 remplir les trous\u00bb. Si cette approche peut para\u00eetre incr\u00e9mentale, elle est plus discutablement it\u00e9rative. Lean nous parle de \u00abdernier moment responsable\u00bb ; eXtreme Programming de design \u00e9mergent et de tdd ; autant de pratiques qui nous encouragent \u00e0 retarder le plus possible les d\u00e9cisions d'architecture. Dans cette session tr\u00e8s technique, nous allons \u00e9tudier cette opposition, et finalement parler de ce que peut \u00eatre une architecture agile.",
     "video": "https:\/\/www.infoq.com\/fr\/presentations\/mythe-framework-agile",
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "330"
   },
   {
@@ -45,10 +43,7 @@
     ],
     "slug": "arnauld-loyer-l-abc-du-bdd",
     "description": "Une introduction au Behavior Driven Development, avec plein d'id\u00e9es pour tout de suite! et applicable \u00e0 tout projet.\r\nIl sera question:\r\n\r\n* de passer de l'incompr\u00e9hension \u00e0 savoir qu'on ne sait pas\r\n* des westerns spaghetti aux Three Amigos, \r\n* de rel\u00e9guer le Comment au second plan pour laisser sa place au Pourquoi!\r\n* de rendre des sp\u00e9cifications ex\u00e9cutables \r\n* de d\u00e9couvrir qu'un concombre n'est pas qu'un Cucurbitac\u00e9e aux feuilles tri-lob\u00e9es\r\n* d'automatisation comme outil de non-regression\r\n\r\nAu cours de cette session, nous expliquerons ce qu'est le BDD. Nous verrons **qu'il n'est pas question d'outils ou de tests, mais de collaboration et de discussion** entre les diff\u00e9rentes parties prenantes: **du m\u00e9tier aux d\u00e9veloppeurs en passant par les testeurs. Cette presentation s'adresse \u00e0 l'ensemble de ces populations** en expliquant l'importance qu'il y a \u00e0 se comprendre, et qu'il n'est pas n\u00e9cessaire d'avoir des outils sophistiqu\u00e9s pour avoir des **b\u00e9n\u00e9fices imm\u00e9diats**.\r\n\r\nNous verrons quelques pratiques de discussion qui permettent d'arriver \u00e0 une meilleure compr\u00e9hension et \u00e0 une description du besoin. Nous verrons aussi comment des exemples concrets permettent de s'assurer d'une compr\u00e9hension commune et comment ils permettent de construire un langage unique et non ambigu. Nous verrons comment rendre ces **sp\u00e9cifications executables** en r\u00e9utilisant les exemples construits pr\u00e9c\u00e9demment et en les automatisant. Ceux-ci viendront renforcer les tests d'acceptance et devenir des tests de non regressions.\r\nEnfin, nous verrons que cette d\u00e9marche nous permettra d'avoir une **documentation vivante et toujours \u00e0 jour de notre syst\u00e8me**.\r\n\r\n\r\n\r\n",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "331"
   },
   {
@@ -73,8 +68,6 @@
     "description": "Le mod\u00e8le de s\u00e9curit\u00e9 sur Internet repose sur des autorit\u00e9s de certification centralis\u00e9es et corruptibles (erreur r\u00e9cente de l'ANSSI sur des certificats Google, interceptions par la NSA...). M\u00eame lorsqu'il fonctionne, il ne garantit que l'int\u00e9grit\u00e9 des tuyaux, pas l'\u00e9tat des donn\u00e9es transmises avant leur transfert (compromission de Rubygems.org, backdoors dans OpenX Source, phpMyAdmin, vsftpd, ProFTPD...).\r\n\r\nLe \"web of trust\" OpenPGP, largement utilis\u00e9 dans le d\u00e9veloppement de logiciels libres tels que la distribution Debian et le noyau Linux, offre une alternative d\u00e9centralis\u00e9e \u00e0 ce mod\u00e8le de s\u00e9curit\u00e9.\r\n\r\nDans cette session, d\u00e9couvrez :\r\n\r\n* l'int\u00e9r\u00eat de v\u00e9rifier les fichiers t\u00e9l\u00e9charg\u00e9s\r\n* l'int\u00e9r\u00eat des autorit\u00e9s de certification\r\n* les faiblesses d'un syst\u00e8me centralis\u00e9\r\n* OpenPGP : chiffrement, v\u00e9rification\r\n* le web of trust\r\n* deux exemples d'utilisation: Debian et le noyau Linux\r\n\r\nVous apprendrez aussi comment cr\u00e9er une cl\u00e9 OpenPGP et l'int\u00e9grer au web of trust.\r\n\r\nVous pourrez mettre tout \u00e7a en pratique \u00e0 la _key-signing party_ MiXiT pendant la soir\u00e9e du 29 \u00e0 la Plateforme ; pensez \u00e0 apporter votre empreinte de cl\u00e9 (en plusieurs exemplaires) et une pi\u00e8ce d'identit\u00e9 !\r\n\r\nLe support de pr\u00e9sentation se trouve sur [http:\/\/confiance.sk2.org](http:\/\/confiance.sk2.org) et [https:\/\/github.com\/skitt\/lcd1mss](https:\/\/github.com\/skitt\/lcd1mss) ; les instructions pour cr\u00e9er une cl\u00e9 et le n\u00e9cessaire pour la _key-signing party_ sont \u00e0 partir de [http:\/\/confiance.sk2.org\/#\/etape1](http:\/\/confiance.sk2.org\/#\/etape1).",
     "video": "https:\/\/www.infoq.com\/fr\/presentations\/confiance-monde-sous-surveillance",
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "340"
   },
   {
@@ -97,10 +90,7 @@
     ],
     "slug": "oana-juncu-test-driven-business-for--lean-startup-products",
     "description": "The Minimum Viable Product (MVP) stays at the foundation of a lean start-up. In the loop of \u201cIdeation\u2013Design\u2013Build\u2013Measure\u2013Improve\u201d, the MVP is the reason and the purpose of a lean star-tup. For everyone who is confronted in their day-to-day work with choices of the best options to create products that customers will fall in love with, I propose an original approach called Test-Driven Business (TDB), where the measures and tests that will be done after the product release are defined before the design of the future product.\r\n\r\nThis session, presented in a workshop format, will show the difference of focus in defining an MVP in an classic design-first approach, and the Test-Driven Business (defining metrics\/test first). During the session, the participants will build an MVP lean canvas in a design-first approach for a chosen product, then a version of the lean canvas using the Test-Driven Business metrics-first approach.\r\n\r\nThe session shows that using the Test-Driven Business, where we define first what the tests\/metrics to validate the product will be, and that it allows a more specific definition of key features, a more focused customer segment and that it helps answer the question, \u201cHow will I have really auditable and actionable measures?\u201d\r\n\r\nAgenda of the workshop:\r\n\r\nintroduction: Test-Driven Business\r\nchoose a product\r\nFirst round:\r\n\r\nstate the product vision\r\ncreate a lean canvas (using elevator pitch)\r\nSecond round:\r\n\r\ndefine the meaningful measures: use the solution-focused technique\/set of questions to explore what impacts are expected and the measures of that impact\r\ndefine the new lean canvas by filling the key metrics first with measures found in the former step\r\nconclusion and possible further exploration\r\n",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "343"
   },
   {
@@ -125,8 +115,6 @@
     "description": "Pendant ce temps\u2026\r\n\r\nJV : Tu sais combien de gamins ont dit un jour \u00ab Quand je serai grand je ferai des jeux vid\u00e9o \u00bb ??!\r\n\r\nIT : Oh oui je sais, aujourd\u2019hui ils sont tous chez moi.\r\n\r\nJV : Mais beaucoup regrettent, je me trompe ?\r\n\r\nIT : Au moins je les paie, moi !\r\n\r\nJV : Ok, ok, mais beaucoup peuvent se targuer d\u00e9velopper des logiciels qui donnent du plaisir aux gens tu penses ?\r\n\r\nIT : Redescend un peu sur terre\u2026 il y a peut-\u00eatre moins de plaisir chez moi mais plus d\u2019\u00e9volution de carri\u00e8re.\r\n\r\nJV : A quel prix ? Devoir arr\u00eater d\u2019\u00eatre un programmeur de g\u00e9nie pour devenir manager ?\r\n\r\nIT : Tu as vu avec quelle technologie et quelle puissance mes gars travaillent tous les jours ?\r\n\r\nJV :\u2026 oh oui, la plupart des \u00e9volutions techniques dont ils jouissent ont \u00e9t\u00e9 cr\u00e9\u00e9s en mon nom.\r\n\r\nIT : \u2026\r\n       \r\nIT : \u2026 JV, tu ne penses pas qu\u2019un jour nous pourrions nous reparler comme avant ?\r\n\r\nJV : \u2026 Peut-\u00eatre\u2026\r\n\r\nIT : \u2026 Tu te souviens quand nous \u00e9tions jeunes ? Nous \u00e9tions si unis\u2026\r\n\r\nJV : Tu veux parler de l\u2019\u00e9poque ou tu disais \u00ab Quand je serai grand je ferai des jeux vid\u00e9o \u00bb ?\r\n\r\n\r\n\r\nL\u2019IT et le Jeu Vid\u00e9o sont des cousins qui ne se connaissent que trop peu. Cependant ces deux mondes ont beaucoup \u00e0 apprendre l\u2019un de l\u2019autre, que ce soit en technique, en m\u00e9thode, ou en culture. Alors que beaucoup des acteurs de l\u2019IT fantasment le monde du jeu vid\u00e9o, ce tour d\u2019horizon, fait par un d\u00e9veloppeur de jeu connaissant bien l\u2019IT, tentera de faire un constat honn\u00eate de l\u2019\u00e9tat de cette industrie aujourd\u2019hui en France.\r\n",
     "video": "https:\/\/www.infoq.com\/fr\/presentations\/jeux-video-cousin-etrange-it",
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "351"
   },
   {
@@ -151,8 +139,6 @@
     "description": "Doing refactoring seems to be obvious practice in a software development. In many teams times it is not being done at all. \"We have no time to do it!\". \"We are not allowed\". \"We don't know where to start and how to do it pragmatically\". Many programmers are familiar with classic refactorings or even more complex refactorings to patterns, clean code rules and naming rules. But it is not enough. Pragmatic refactoring is a difficult practice that requires many years of experience. And what if you or folks from your team don't have that experience? Then refactoring may be more harmful than useful.\r\nThe Natural Course of Refactoring is a process, workflow that expresses something what may seem obvious for experienced refactoring practitioner but very difficult to figure out for beginners or even more advanced practitioners. It is like red-green-refactor for TDD. NCR is a way of thinking which shifts your focus from single refactorings to a more holistic approach. It is also decision framework helping you to specify what is next pragmatic step (if there is any).It helps you to recognize what stage the particular fragment of source code is, what you can do about it and decide if to do something or leave it as it is. It guides you what exact refactorings you should take into consideration in the particular stage and also which refactorings are way too big steps.\r\nWho can benefit from this? \r\n\u2022 Every programmer beginning refactoring practice or having need for clear guidance about refactoring process.\r\n\u2022 Every leader who wants refactoring to become an everyday practice even in inexperience team.\r\n\u2022 Every coach who wants to have a simple yet powerful framework to teach refactoring as a whole process (not only weakly connected pieces).",
     "video": "https:\/\/www.infoq.com\/fr\/presentations\/natural-course-refactoring",
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "357"
   },
   {
@@ -176,10 +162,7 @@
     ],
     "slug": "herve-fontbonne-fabien-amico-comment-developper-un-paas-java-en-1h",
     "description": "Les plateformes **Cloud** de type **PaaS** se d\u00e9mocratisent chaque jour au sein des DSI et des \u00e9quipes de d\u00e9veloppeurs. En parall\u00e8le la gamme des solutions s\u2019\u00e9toffe r\u00e9guli\u00e8rement OpenShift, CloudFoundry, CloudUnit et \u00e9volue techniquement tr\u00e8s vite.\r\n\r\nEn 2013, [**docker**](http:\/\/docker.io) a r\u00e9volutionn\u00e9 la mise en place des **PaaS** comme la virtualisation \u00e0 ses d\u00e9buts a r\u00e9volutionn\u00e9 la cr\u00e9ation de IaaS. \r\n\r\nCette session vous permettra de comprendre l\u2019int\u00e9r\u00eat d\u2019une plateforme **PaaS** \u00e0 travers l\u2019outil [**docker**](http:\/\/docker.io). Un exemple concret de d\u00e9veloppement Java\/REST permettra de fournir un catalogue de services tels que Tomcat, JBoss, Jenkins, Apache RollerBlog.\r\n\r\nLe **PaaS** change la fa\u00e7on dont on va d\u00e9velopper, tester et d\u00e9ployer nos applications. C\u2019est un outil qui permet de gagner beaucoup de temps sur un projet et d\u2019am\u00e9liorer le \u201cGo To Market\u201d.   \r\n\r\nNous proposons une session de intenses et dynamiques o\u00f9 chaque intervenant alternera entre live-coding et pr\u00e9sentation orale. \r\n\r\nAu menu :\r\n\r\n* Pr\u00e9sentation de **docker**\r\n* Manipulation de l\u2019API REST **docker** au travers d\u2019une API Java \r\n* Cr\u00e9ation d\u2019un mini **PaaS** fournissant un catalogue de service",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "358"
   },
   {
@@ -202,10 +185,7 @@
     ],
     "slug": "christophe-porteneuve-tour-d-horizon-de-node-js",
     "description": "Node.js est l\u2019une des technologies **les plus en vue** de ces derni\u00e8res ann\u00e9es, des services web \u00e0 la robotique ; d\u00e9sormais **bien industrialis\u00e9** et dot\u00e9 d\u2019un \u00e9cosyst\u00e8me et d\u2019une communaut\u00e9 tr\u00e8s vifs, Node a remis sur le devant de la sc\u00e8ne un mod\u00e8le de programmation non bloquant \/ asynchrone et, surtout, des techniques de code \u00e9l\u00e9gantes pour r\u00e9aliser celui-ci.\r\n\r\n2013 a d'ailleurs \u00e9t\u00e9 l'ann\u00e9e de son d\u00e9collage chez les tr\u00e8s gros acteurs, avec pl\u00e9thore de *success stories* de conversions enchant\u00e9es chez eBay, PayPal, LinkedIn, IBM, Walmart et bien d'autres\u2026\r\n\r\nDans cette pr\u00e9sentation\u2014qui s'adresse tant \u00e0 ceux qui n'ont jamais regard\u00e9 Node qu'\u00e0 ceux qui jouent d\u00e9j\u00e0 avec\u2014Christophe Porteneuve brosse un tableau de Node.js aussi concret que possible. Il posera rapidement quelques notions fondamentales (Node, modules, npm, asynchrone\u2026) puis explorera le d\u00e9veloppement d\u2019une application web ludique et interactive, qui mettra conjointement en \u0153uvre quelques-uns des usages les plus c\u00e9l\u00e8bres, d\u2019Express \u00e0 Docco en passant par de l\u2019OAuth 2, du Redis, des Web Sockets, Brunch, Mocha et Uglify.\r\n\r\nAvec m\u00eame un petit bonus qui sortira du strict domaine d\u00e9mat\u00e9rialis\u00e9 du web pour se manifester physiquement.",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "361"
   },
   {
@@ -230,10 +210,7 @@
     ],
     "slug": "florent-pellet-clement-bouillier-emilien-pecoul-crafting-workshop",
     "description": "Envie de promouvoir les valeurs du software crafsmanship, mais votre patron ne vous laisse pas faire ? Alors venez d\u00e9velopper le site mobile de MiXiT. **Un atelier sera ouvert pendant 2 jours** o\u00f9 vous pourrez venir contribuer en pair programming le temps que vous le souhaitez. Gr\u00e2ce au d\u00e9ploiement continu, vous pourrez avoir un feedback en temps r\u00e9el avec les participants du mix-IT.\r\n\r\nLe site sera sous la forme d\u2019une Single Page Application avec un serveur node.js.\r\n\r\nVous \u00eates d\u00e9veloppeur mais vous ne connaissez pas bien JavaScript, alors c\u2019est l\u2019occasion de d\u00e9couvrir avec du Pair Programming.\r\n\r\nVous n\u2019\u00eates pas d\u00e9veloppeur, vous pourrez \u00e9galement participer en donnant un feedback, des id\u00e9es ou pourquoi pas un design.",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "362"
   },
   {
@@ -256,10 +233,7 @@
     ],
     "slug": "deborah-preuss-basic-coaching-skills-to-magnify-teamwork",
     "description": "In the past, thinkers planned and do-ers executed and all was.. well, orderly, at least. \r\n\r\nBut our work has changed, basic tasks are now automated, and success depends on the real-time interaction of many creative people. This shift from traditional management to a more collaborative style can be challenging, though: how do we move from \"telling\" to new forms of leadership that get our teams fully engaged? How do we \"make\" self-organisation happen? (And: isn't that a contradiction in itself?) \r\n\r\nThe good news is that leadership is back in focus: rather than \"managing\" teamwork, leaders (at all levels) can help restore meaning to teamwork, and can model and encourage new ways of working. \r\n\r\nThe tools for doing this are somewhat counterintuitive, though: for example, when we replace \"telling\" with \"listening and asking\" the process may slow down at first, and the results become less predictable... but by taking this risk ourselves we send a clear invitation, that is more than just words. When we begin to show that we don't have all the answers, and really invite our colleagues to help us find the way forward, we build new bridges of respect and trust, and kindle new passion within our teams as each one is appreciated for bringing his or her best to the work. \r\n\r\nMy journey to learn coaching skills has drastically changed how I interact with individuals and groups - my work is now less stressful and yet more demanding! I manage my own energy more intentionally, and I more actively engaging my students and colleagues - to create outcomes full of energy and life. \r\n\r\nJoin me to explore simple (but not easy!) coaching skills like Listening, Powerful Questions, and \"Not Fixing\" (in a coaching dojo). Sometimes I'll talk, but mostly you will discuss and practice in small groups, and we will reflect together on what we learn. I can't wait! \r\n\r\nThe session will be run in English, and groupwork may be done in the language of participants. Je parles aussi fran\u00e7ais. (Ahem... au moins, Qu\u00e9b\u00e9cois!)\r\n",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "363"
   },
   {
@@ -284,8 +258,6 @@
     "description": ">\u201cWe are what we repeatedly do. Excellence, then, is not an act, but a habit.\u201d - Aristotle\r\n\r\nWhat are the habits, routines, behavior patterns, needed to strive for excellence every day? How do we create a culture of continuous learning and improvement?\r\n\r\nBuilding on the power of habits, Toyota Kata will help you build a culture of continuous learning and improvement, a kaizen culture. \r\n\r\nIn this session, you will be introduced to the two main Kata* of the Toyota Kata, the Improvement Kata and Coaching Kata. You will learn how the Improvement Kata and Coaching Kata can become your \u201cmuscle memory\u201d for continuous learning and improvements in your organization. These daily habits or routines will help you to strive towards your vision, your state of awesomeness, in small experiments focused on learning. The Improvement Kata will form the habits of doing small daily experiments focused on learning and improving. The Coaching Kata will form the habits of the leaders of the organization to help the learners learn and improve.\r\n\r\nIn this session, we will take Toyota Kata out of the manufacturing context and put it into the knowledge work context. You will learn how you can start applying the Improvement Kata and Coaching Kata in a software development context tomorrow.\r\n\r\n*Time to stop collecting problems and start forming new habits of learning and improving!*\r\n\r\n(*) Kata means pattern, routine, habits or way of doing things. Kata is about creating a fast \u201cmuscle memory\u201d of how to take action instantaneously in a situation without having to go through a slower logical procedure. A Kata is something that you practice over and over striving for perfection. If the Kata itself is relative static, the content of the Kata, as we execute it is modified based on the situation and context in real-time as it happens. A Kata as different from a routine in that it contains a continuous self-renewal process.\r\n\r\n",
     "video": "https:\/\/www.infoq.com\/fr\/presentations\/toyota-kata",
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "364"
   },
   {
@@ -309,10 +281,7 @@
     ],
     "slug": "jean-helou-xavier-bucchiotty-prenez-le-controle-d-un-aeroport-avec-akka",
     "description": "Nous vous proposons de travailler sur la programmation dans le mod\u00e8le acteur, totalement dynamique et asynchrone. Nous verrons ce qu\u2019est un acteur, comment lui envoyer des messages, g\u00e9rer des machines \u00e0 \u00e9tats, tout cela dans une approche d'Event Sourcing. \r\nNous verrons ensuite comment les modules akka-remote et akka-persistence permettent d'appr\u00e9hender la distribution et la r\u00e9silience de l'application. \r\n\r\nVous aurez le choix de programmer en Java ou en Scala. Cet atelier est aussi un retour condens\u00e9 du cours \"Reactive Programming\" sur Coursera donn\u00e9 fin 2013.",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "365"
   },
   {
@@ -335,10 +304,7 @@
     ],
     "slug": "mattias-skarin-visualization---what-s-my-brain-got-to-do-with-it-",
     "description": "Visualization is a key lean technique and a necessity, when you, as a part of a complex system are tackling a fast moving environment. But why is it such a necessity? Let\u2019s walk through some of the limitation imposed on us by our brain, how visualization helps us cope and why we don't always act according to obvious facts.\r\n\r\nI will share what to think of, to improve the odds of getting the response intended including examples where visualization actually changed the world.\r\n",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "369"
   },
   {
@@ -363,8 +329,6 @@
     "description": "On parle beaucoup de comment d\u00e9marrer un projet, comment le financer, comment le faire grandir au maximum et comment le vendre au mieux.\r\nMais on ne parle que rarement de taille optimale d'un projet, de volont\u00e9 de p\u00e9rennit\u00e9 dans le temps, de financement mesur\u00e9 pour garder le contr\u00f4le ou d'aveuglement par l'ego.\r\n\r\nCette session est donc l\u00e0 pour \u00e7a !\r\nL'id\u00e9e ? Partager avec vous sur la Cord\u00e9e, le projet que j'ai cofond\u00e9, qui vise \u00e0 d\u00e9velopper l'entraide entre ind\u00e9pendants, entrepreneurs et t\u00e9l\u00e9travailleurs, en cr\u00e9ant des espaces de coworking o\u00f9 la communaut\u00e9 est plus importante que les m\u00e8tres carr\u00e9s.\r\n\r\nCe projet, nous sommes deux \u00e0 l'avoir cr\u00e9\u00e9, avec des valeurs fortes (partage, gouvernance participative, croissance mesur\u00e9e, \u00e9cologie, confiance...) sur lesquelles on ne voulait pas transiger. Comment alors cr\u00e9er un projet qui a de l'impact, se finance, grandit et trouve son \u00e9quilibre, tout en gardant ses valeurs ?\r\n\r\nLa r\u00e9ponse, ce sera \u00e0 Mix-It !",
     "video": "https:\/\/www.infoq.com\/fr\/presentations\/creer-projet-autour-valeurs",
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "372"
   },
   {
@@ -389,8 +353,6 @@
     "description": "If you watch old science fiction movies, you\u2019ll probably find them ridiculous, with a lot of ugly hardware and funny computers. But when you take a closer look, you can see that people already invented the iPad and Google Glass 50 years ago. They were not real, of course, but they existed.\r\n\r\nIf tomorrow you create a simulation to enslave the human race, you probably won\u2019t use green code falling down your screen. But who knows? \r\n\r\nOur industry is inspired by the work of science fiction authors, and these people love to learn about technology to help them imagine new worlds. I\u2019d like to talk about some of the major breakthrough in User Interfaces as seen in Science Fiction, talk about what didn\u2019t work out, and try to imagine what our computers will look like in 50 years, based on those observations.\r\n\r\nThe next time you\u2019ll see a movie featuring crazy computers, you\u2019ll probably think twice. Science-_Fiction_, but for how long?",
     "video": "https:\/\/www.infoq.com\/fr\/presentations\/looking-future-user-interface",
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "378"
   },
   {
@@ -416,8 +378,6 @@
     "description": "LesFurets.com est pass\u00e9 en 18 mois d'une organisation solide de type \"\u00e9diteur logiciel\" avec une release par mois \u00e0 une organisation non moins solide en \"Continuous Delivery\" avec une mise en production par jour de  \"ce qui est pr\u00eat\" (sans \u00eatre bloqu\u00e9 par les d\u00e9veloppements en cours). \r\n\r\nC'est un d\u00e9veloppeur qui vous pr\u00e9sentera l'histoire v\u00e9cue de l'int\u00e9rieur :\r\n<< Ce changement nous pousse \u00e0 devenir de meilleurs d\u00e9veloppeurs, car avant de livrer tous les jours, il y a des \u00e9tapes interm\u00e9diaires n\u00e9cessaires pour faire na\u00eetre le besoin et d\u00e9velopper la capacit\u00e9 de l\u2019\u00e9quipe \u00e0 changer. >>\r\n\r\nUn bon produit ne sort pas du chapeau, il se construit par it\u00e9ration, en essayant, en se trompant et en corrigeant. Raccourcir la boucle de retour entre les concepteurs et les utilisateurs apporte une tr\u00e8s grande valeur comp\u00e9titive. Adoptez le continuous delivery pour devenir l\u2019\u00e9quipe IT dont le business r\u00eave.\r\n\r\nLe vouloir n\u2019est pas tout, il reste \u00e0 savoir comment s\u2019y prendre. Le mod\u00e8le it\u00e9ratif de SCRUM atteint ses limites lorsque l\u2019on vise \u00e0 mettre en prod plus souvent (Time to Market aggressif). Les co\u00fbts de recette explosent et la synchronisation des t\u00e2ches se complique. \r\n\r\nChez LesFurets.com nous avons enti\u00e8rement chang\u00e9 notre gestion de projet et nos m\u00e9thodes de d\u00e9veloppement. Le fonctionnement adh\u00e8re fortement \u00e0 une philosophie o\u00f9 le planning de release et deadlines n\u2019existent plus, les d\u00e9veloppements sont livr\u00e9s simplement quand ils sont pr\u00eats (Flux).\r\n\r\nLa pr\u00e9sentation passera en revue tous les moyens techniques et organisationnels que nous employons pour garantir le m\u00eame niveau de qualit\u00e9 qu\u2019auparavant : mise en production, livraison de code, validation, int\u00e9gration continue, travail en feature branches, it\u00e9ration avec le business, sp\u00e9cifications fonctionnelles. \r\n\r\nTechniquement nous pr\u00e9senterons notre Usine Logicielle, le poste et les actions du d\u00e9veloppeur, et l'organisation de la QA.",
     "video": "https:\/\/www.infoq.com\/fr\/presentations\/petits-pas-vers-continuous-delivery",
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "381"
   },
   {
@@ -442,8 +402,6 @@
     "description": "Internet transforme notre mode de vie et notre soci\u00e9t\u00e9. Depuis la musique \u00e0 la presse, nous connaissons tous des exemples de profonds bouleversements dans notre \u00e9conomie.\r\n\r\nL'Internet of Things n'est pas pr\u00eat de ralentir cette tendance sur laquelle les technophiles surfent. Tous ces changements, ces boulversements viennent avec leurs lots de questions, d'interrogations, de probl\u00e8mes \u00e9thiques.\r\n\r\nEn 2013, la technologie Bitcoin a beaucoup fait parler d'elle. Certains ont investi de l'argent, quelques rares sont devenus riches. Mais cela n'a pas r\u00e9volutionn\u00e9 le monde. Pas encore.\r\n\r\nEt si nous n'\u00e9tions qu'au tout d\u00e9but ? Et si le potentiel de disruption d'un Bitcoin allait au del\u00e0 de tout ce que nous pouvons imaginer ? \r\n\r\nPour les technophiles, pour les business owners, il est important de pr\u00e9voir, de se projeter en avant. Le changement devient tellement rapide que nos observations sont d\u00e9j\u00e0 p\u00e9rim\u00e9es.",
     "video": "https:\/\/www.infoq.com\/fr\/presentations\/mix-it-2014-keynote-ouverture",
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "382"
   },
   {
@@ -468,8 +426,6 @@
     "description": "Ce talk a \u00e9t\u00e9 donn\u00e9 lors des API days :\r\nAPI days : [slides](http:\/\/fr.slideshare.net\/quentinadam\/i-want-to-be-more-efficient-apidays) and [video](https:\/\/www.youtube.com\/watch?v=mNM5S2JvMyY)\r\n\r\nCe que je veux transmettre \u00e0 travers ce talk est un ensemble de bonne pratiques qui permettent de se sentir mieux dans son travail et de se focaliser sur ce qui est important.\r\n\r\nJe compte le remixer pour int\u00e9grer un concept dit de \"Fast developer\" qui est le d\u00e9veloppeur agile et efficace que nous cherchons tous \u00e0 \u00eatre.\r\n\r\nJe peut aller sur un format 20 ou 50 min, en FR ou EN.\r\n\r\n\r\n\r\nQuelques uns de mes talk en r\u00e9f\u00e9rence :\r\nDotScale : [slides](http:\/\/fr.slideshare.net\/quentinadam\/dotscale2013-how-to-scale) and [video](https:\/\/www.youtube.com\/watch?v=UjR0Kg491bI)\r\n\r\nTakeoff :  [slides](http:\/\/fr.slideshare.net\/quentinadam\/use-promises-futures-and-some-functional-programing-stuff-without-being-a-math-nerd)  et [video](https:\/\/www.youtube.com\/watch?v=2OjHNe9Akaw)\r\n\r\nScala.io : organizer and speaker [slides](http:\/\/fr.slideshare.net\/quentinadam\/some-advice-from-the-guy-who-handle-your-applications-uptime-scalaio-2013)\r\n\r\n",
     "video": "https:\/\/www.infoq.com\/fr\/presentations\/be-a-efficient-developer",
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "387"
   },
   {
@@ -493,10 +449,7 @@
     ],
     "slug": "david-gageot-jean-laurent-de-morlhon-application-web-moderne-en-java--the-codestory-way",
     "description": "Venez participer \u00e0 cet atelier de 2 heures 30. L'objectif est simple : apprendre \u00e0 d\u00e9velopper une application web moderne en Java. Rapidement, de mani\u00e8re pragmatique et en toute confiance.\r\n\r\nAvec l'assistance et les d\u00e9mos live de David Gageot et Jean-Laurent de Morlhon.\r\n\r\nAu menu : du Java 8, un poil d'Angular, un soup\u00e7on de CoffeeScript, du MongoDB, du pair-programming, des tests IHM, des hotkeys de malade, des plugins de fou et un cycle de d\u00e9veloppement ultra rapide. Oui vous ne r\u00eavez pas on parle bien de Java.\r\n\r\nLundi, au boulot, vous ne verrez plus votre projet java de la m\u00eame mani\u00e8re.",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "388"
   },
   {
@@ -519,10 +472,7 @@
     ],
     "slug": "jean-laurent-de-morlhon-la-culture-du-programmeur",
     "description": "Vous avez l'id\u00e9e qui va vous rendre riche et le budget, maintenant il vous faut les programmeurs. Pas juste les 2 gugus qui parlent de warcraft \u00e0 la cafet et qui livrent jour apr\u00e8s jour une application de plus en plus bugg\u00e9, mais des PROGRAMMEURS, des vrais. Ceux qui murmurent \u00e0 l'oreilles des programmes pour faire des applications extraordinaires.\r\n\r\nMais je les trouves o\u00f9 ces types l\u00e0 ?\r\n\r\nCette session pr\u00e9sente des r\u00e9ponses concretes en explorant la culture de ces programmeurs. \r\n\r\nComprendre cette culture est un facteur determinant pour b\u00e2tir une \u00e9quipe produit extraordinaire.",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "389"
   },
   {
@@ -545,10 +495,7 @@
     ],
     "slug": "eyal-lezmy-android-bashing---apprendre-des-erreurs-des-grands",
     "description": "Microsoft, Facebook, Yahoo, ... Ces g\u00e9ants du soft sont tous de grands \u00e9diteurs d'applications et leur r\u00e9putation n'est plus \u00e0 faire. Il leur arrive malgr\u00e9 tout de ne pas rencontrer le succ\u00e8s sur le PlayStore Android.\r\n\r\nDurant cette conf\u00e9rence je vous raconterai l'histoire de ces applications qui avaient tout pour r\u00e9ussir et qui ont \u00e9chou\u00e9 \u00e0 satisfaire les utilisateurs. On identifiera ensemble les erreurs commises afin de pouvoir prendre soin de ne jamais les reproduire.",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "390"
   },
   {
@@ -573,8 +520,6 @@
     "description": "(note : je peux faire la pr\u00e9sentation en anglais ou en fran\u00e7ais, au choix. Dans tous les cas les slides seront en anglais). \r\n\r\nLe Web est un accident heureux. Apr\u00e8s des d\u00e9cennies pendant lesquelles les d\u00e9veloppeurs devaient \u00e9crire des versions Windows, Mac et Linux de leurs applications, le Web est arriv\u00e9, et avec lui les Web Apps. Aujourd'hui, il serait risible d'imaginer une version de Facebook ou de Gmail pour Windows et une autre pour le Mac. \r\n\r\nPourtant, le monde de l'ordinateur personnel est en voie d'obsolescence. Dans les prochaines ann\u00e9es, plusieurs milliards de personnes vont d\u00e9couvrir l'informatique et Internet, mais \u00e7a ne sera pas avec des PC mais en utilisant des t\u00e9l\u00e9phones mobiles. \r\n\r\nVeut-on confier les cl\u00e9s de notre futur num\u00e9rique \u00e0 Apple et Google ou veut-un un monde technologique o\u00f9 chacun peut apprendre et cr\u00e9er sans avoir \u00e0 demander la permission ? Comment garder le contr\u00f4le sur nos smartphones ?",
     "video": "https:\/\/www.infoq.com\/fr\/presentations\/web-plateforme-mobile",
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "397"
   },
   {
@@ -599,8 +544,6 @@
     "description": "Si l'arriv\u00e9e d'InvokeDynamic dans Java 7 a marqu\u00e9 un tournant pour la cr\u00e9ation de langages bas\u00e9s sur la JVM, cette fonctionnalit\u00e9 est rest\u00e9e confidentielle dans l'univers des d\u00e9veloppeurs de frameworks Java et de Java EE.\r\nDans cette pr\u00e9sentation nous reviendrons sur les particularit\u00e9s d'InvokeDynamic et sur sa mise en \u0153uvre en Java. Ensuite nous verrons comment remplacer le m\u00e9canisme de Proxy utilis\u00e9 dans CDI par des appels InvokeDynamic. Enfin nous expliquerons comment la g\u00e9n\u00e9ralisation d'invokeDynamic pourrait marquer la mort des conteneurs et la fin de Java EE tel que nous le connaissons.",
     "video": "https:\/\/www.infoq.com\/fr\/presentations\/javaee-with-invokedynamic",
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "401"
   },
   {
@@ -623,10 +566,7 @@
     ],
     "slug": "sven-peters-how-to-do-kick-ass-software-development",
     "description": "With Kick-Ass Software Development you actually get stuff done. Feedback cycles are short, code quality is awesome and customers get the features they lust after. Less mangers managing, less testers testing and less IT-operators operating. The developers take the power back, making them much happier. Sound like paradise? It is!\r\nThis session will show you how we do Kick-Ass Software Development at Atlassian. I will talk about how we: use pull requests for better code quality; collaborate fast to develop ideas; avoid meetings to get more stuff done; tighten our feedback loops to fail faster; shorten our release cycles; and work together happily on different continents. It's a great way to develop software and we think it can work in your company, too. ",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "405"
   },
   {
@@ -651,8 +591,6 @@
     "description": "Cette conf\u00e9rence aborde le d\u00e9veloppement d'applications r\u00e9actives via un retour d'exp\u00e9rience portant sur le projet [OpenSnap](https:\/\/github.com\/sdeleuze\/opensnap), un clone HTML5 de SnapChat utilisant Java 8, Spring Boot, Spring Framework 4 et AngularDart.\r\n\r\nAu programme :\r\n\r\n- Pourquoi Spring Boot est une r\u00e9volution !\r\n- Les nouveaut\u00e9s de Spring Framework 4 telles que le support de Websocket, SockJS et STOMP\r\n- L'efficacit\u00e9 de d\u00e9veloppement unique qu'apportent Dart et AngularDart c\u00f4t\u00e9 client\r\n- Quelles diff\u00e9rences entre le d\u00e9veloppement RIA avec des webservices REST et Websocket\r\n- Quelles fonctionnalit\u00e9s b\u00e9n\u00e9ficient de ces nouvelles possibilit\u00e9s de push du serveur vers le client\r\n- Pourquoi le support de SockJS permet de faire du \"websocket\" dans la vraie vie, y compris derri\u00e8re les proxy d'entreprise\r\n- Pourquoi Websocket seul est trop bas niveau et comment STOMP comble ce manque\r\n- La scalabilit\u00e9 et les performances\r\n- Build mixte Java et Dart gr\u00e2ce \u00e0 Gradle\r\n\r\nLes participants pourront tester la demo afin de s'envoyer des photos en live avec leur ordinateur portable, tablette ou smartphone. L'\u00e9cran de la salle diffusera les photos envoy\u00e9es au compte MiXiT qui s'afficheront sur l'\u00e9cran.",
     "video": "https:\/\/www.infoq.com\/fr\/presentations\/spring4-dartangular",
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "417"
   },
   {
@@ -675,10 +613,7 @@
     ],
     "slug": "stefan-haas-product-owner-super-powers",
     "description": "It is incredibly hard to excite customers by creating valuable products and services. You only know if there is value on your roadmap when you experiment and test with people beyond your organisation but it's too easy just to get overwhelmed by the complexity when going outside of the building. And those who dare trying to find out the truth of their value proposition often face strong resistance from inside their organisation that wants to stay in the comfy zone. \r\nIn my session I will discuss common problems Product Owners face and what they and their teams need to achieve the goal to create value.",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "419"
   },
   {
@@ -703,8 +638,6 @@
     "description": "Les r\u00e9trospectives garantissent l'am\u00e9lioration continue des \u00e9quipes. Bien, mais par rapport \u00e0 quel probl\u00e8me ? Dans une r\u00e9union avec 90% de d\u00e9veloppeurs, \u00e0 quel moment les enjeux de l'entreprise sont-elles adress\u00e9es ? Comment d\u00e9livrer plus vite par exemple ? En changeant d'\u00e9quipe, en mettant plus de pression, en recrutant ?\r\n\r\nPlus vite... que quoi d'ailleurs ? Qu'aujourd'hui, que le concurrent, qu'une autre \u00e9quipe ? Quel est la vitesse vis\u00e9e qui ne nuit ni \u00e0 la qualit\u00e9 (donc au client), ni \u00e0 l'\u00e9quipe ?\r\n\r\nAujourd'hui, il s'\u00e9coule en moyenne 11 jours entre la priorisation et la mise en production d'une user story. Je nous donne 3 mois pour diviser ce lead time par deux. Le moyen : le kanban, ajust\u00e9 par des r\u00e9tros r\u00e9guli\u00e8res.\r\n\r\nNous vous raconterons ce que l'\u00e9quipe si habitu\u00e9e a scrum aura pens\u00e9 de la transition et comment l'objectif aura \u00e9t\u00e9 atteint (ou pas).",
     "video": "https:\/\/www.infoq.com\/fr\/presentations\/rex-kanban-fludifier-chaine",
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "423"
   },
   {
@@ -728,10 +661,7 @@
     ],
     "slug": "olivier-huber-matthieu-lux-angularjs-from-scratch",
     "description": "On a tous vu une pr\u00e9sentation d\u2019AngularJS montrant la magie des bindings et des directives. Oui, mais comment \u00e7a marche ? Rien de mieux pour le comprendre que de le construire \u00e9tape par \u00e9tape. C\u2019est finalement avec assez peu de code et un code tr\u00e8s int\u00e9ressant \u00e0 d\u00e9tailler que les principaux m\u00e9canismes d\u2019AngularJS apparaissent. Avant la fin de la s\u00e9ance, binding, directives, templates, tout fonctionne.\r\n\r\nDepuis plus d\u2019un an, dans la communaut\u00e9 AngularJS en France, les pr\u00e9sentations sur le framework ont toutes \u00e9t\u00e9 donn\u00e9es.\r\n\r\nMais comment d\u00e9mystifier le c\u00f4t\u00e9 magique d\u2019AngularJS. Comment aborder avec des auditeurs qui ne sont pas forc\u00e9ment sp\u00e9cialistes du JavaScript, les m\u00e9canismes interne du framework ? Nous avons mis au point une base de code qui permet, en partant de zero, de reproduire les m\u00e9canismes principales des scopes d\u2019Angular, du Dirty Checking, du binding et enfin de la compilation du DOM afin d\u2019interpr\u00e9ter les directives pr\u00e9sentes dans le code HTML.\r\n\r\nA travers un atelier anim\u00e9 \u00e0 deux, nous proposerons aux participants une nouvelle approche d\u2019Angular. Une approche par le code, comment\u00e9, it\u00e9ratif, qui permet de bien comprendre comment marche le framework et ce qui fait sa coh\u00e9rence et sa robustesse.\r\n\r\nN\u00e9cessaire pour l'atelier :\r\n\r\n- Un \u00e9diteur ou un IDE et Chrome et c'est tout !\r\n\r\n- Vous pouvez prendre de l'avance et cloner le repo : https:\/\/github.com\/Zenika\/angular-from-scratch",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "424"
   },
   {
@@ -757,8 +687,6 @@
     "description": "Votre prochain projet, qu'il soit de cr\u00e9er votre startup ou de d\u00e9velopper un produit en interne, sera en lean startup car voici le graal des m\u00e9thodes pour ne d\u00e9velopper que ce qui est utile ... en tous cas c'est ainsi que vous le voyez en premi\u00e8re lecture mais vous h\u00e9sitez \u00e0 faire le premier pas au risque de vous retrouver perdu avec quelques chose bien loin des Dropbox et autres AirBnB.\r\n\r\nIl y a un an, avec Une Petite Mousse, nous avions l'id\u00e9e de faire d\u00e9couvrir les meilleures bi\u00e8res avec une d\u00e9gustation dont la s\u00e9lection change chaque mois. Nous \u00e9tions (tr\u00e8s) contraints en temps et en fonds, nous \u00e9tions dans cette situation o\u00f9 le lean startup est le graal et ... nous avons fait le premier pas en lan\u00e7ant dans la journ\u00e9e une page statique avec notre pitch et un bouton acheter sans savoir comment envoyer les bi\u00e8res (car cela n'est pas un probl\u00e8me avant la premi\u00e8re commande ;)\r\n\r\nDe 500\u20ac de chiffres d'affaire le premier mois, nous sommes pass\u00e9 \u00e0 50 000\u20ac de chiffres d'affaire dix mois plus tard. Alors, sans dire qu'il n'y a qu'un chemin ni qu'il existe une \"secret sauce\" pour r\u00e9ussir, nous pouvons en tous cas vous donner les indications sur les \"petits cailloux\" que nous avons laiss\u00e9s sur notre parcours afin de savoir o\u00f9 vous mettrez les pieds ... [une petite mousse](https:\/\/unepetitemousse.fr\/ \"Abonnement au coffret des meilleures bi\u00e8res - Une Petite Mousse\") \u00e0 la main ;)",
     "video": "https:\/\/www.infoq.com\/fr\/presentations\/lean-startup-autour-petite-mousse",
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "428"
   },
   {
@@ -783,8 +711,6 @@
     "description": "Aujourd'hui, tout le monde peut cr\u00e9er une entreprise et un site e-commerce. C'est extr\u00eamement facile : une liasse de paperasse au greffe, un CMS gratuit, quelques produits et c'est parti. Ensuite, le faire conna\u00eetre et acqu\u00e9rir de la client\u00e8le est une autre affaire. J'ai beaucoup d'admiration pour les gens qui r\u00e9ussissent \u00e0 cr\u00e9er un site e-commerce rentable, \u00e0 le faire prosp\u00e9rer et \u00e0 cr\u00e9er des emplois.\r\n\r\nPourtant, je pense que ne faire que \u00e7a, c'est g\u00e2cher le potentiel d'internet. L'infini march\u00e9 qui s'offre \u00e0 tout e-commer\u00e7ant nous permet d'aller plus loin. Nous pouvons imaginer des entreprises \u00e0 succ\u00e8s s'adressant \u00e0 de petites communaut\u00e9s, en les aidant \u00e0 couvrir des besoins inassouvis. Nous pouvons aussi imaginer des services online qui participent \u00e0 des causes plus larges, \u00e0 leur \u00e9chelle. \r\n\r\nVoici mon histoire pour illustrer cette id\u00e9e. \r\n\r\n\r\n\r\nAlors que j'\u00e9tais cadre salari\u00e9e dans une entreprise de publicit\u00e9 online, avec le confort et la s\u00e9curit\u00e9 de ce type de postes, j'ai cherch\u00e9 \u00e0 donner du sens \u00e0 ma vie. J'\u00e9tais passionn\u00e9e de vin, comp\u00e9tente en web, et habilit\u00e9e \u00e0 cr\u00e9er un Ni\u00e8me site de vente de vin en ligne. Mais vendre du vin ne m'int\u00e9resse pas et ne m'a jamais int\u00e9ress\u00e9. Non. Ce que je voulais c'\u00e9tait partager ma passion pour le vin. Mais justement, quelque chose me d\u00e9rangeait dans ce milieu du vin : son \u00e9litisme. J'ai donc d\u00e9cid\u00e9 de m'adresser aux n\u00e9ophytes, \u00e0 cette majorit\u00e9 de gens qui n'y connaissent rien en vin. Or un groupe de personnes semblait \u00eatre \u00e0 l'\u00e9cart du monde du vin, ne choisissait jamais la bouteille pour accompagner le repas, n'allait pas dans les salons des vins, ne lisait pas la presse sp\u00e9cialis\u00e9e... Ce groupe ce sont les femmes. J'ai donc d\u00e9cid\u00e9 d'enqu\u00eater, de d\u00e9couvrir pourquoi les femmes ne s'int\u00e9ressaient pas au vin. \r\n\r\nEn cr\u00e9ant le site Les Sommeli\u00e8res, j'essaie d'apporter un peu d'\u00e9galit\u00e9 homme-femme dans ce milieu encore tr\u00e8s masculin. Les Sommeli\u00e8res, c'est un blog o\u00f9 je partage mes d\u00e9couvertes, mes d\u00e9gustations et mes connaissances, du contenu original avec des recettes faciles et rapides \u00e0 cuisiner pour r\u00e9aliser des accords mets et vins. C'est aussi un petit algorithme, le VinoQuiz, qui permet de trouver le vin qui correspond \u00e0 ses go\u00fbts. Enfin, c'est un site e-commerce o\u00f9 les femmes peuvent commander les bouteilles \u00e0 l'unit\u00e9 pour go\u00fbter \u00e0 une grande vari\u00e9t\u00e9 de vins. \r\n\r\nEduquer les femmes au vin est une cause qui peut sembler bien d\u00e9risoire \u00e0 c\u00f4t\u00e9 d'autres causes bien plus graves. Mais, mises bout \u00e0 bout, les petites causes ne font-elles pas un monde meilleur ? Depuis que j'y travaille, je me sens plus fi\u00e8re de ce que je fais tous les jours, plus heureuse, m\u00eame si c'est difficile et peu lucratif pour l'instant. Chaque nouvelle lectrice du blog, chaque nouvelle cliente est une petite victoire et une femme de plus qui s'int\u00e9resse au vin. Cela lui permet d'int\u00e9grer des conversations jusqu'alors tr\u00e8s masculines, et donc de l'aider \u00e0 devenir l'\u00e9gale de l'homme. \r\n\r\n",
     "video": "https:\/\/www.infoq.com\/fr\/presentations\/marche-niche-convictions-sommelieres",
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "432"
   },
   {
@@ -807,10 +733,7 @@
     ],
     "slug": "alain-regnier-introduction-aux-google-glass",
     "description": "Cette conf\u00e9rence est une introduction sur les Google Glass et couvrira ce que sont les Glass, comment elles fonctionnent et ce qu'on peut d\u00e9j\u00e0 faire avec. \r\nOn parlera ensuite de d\u00e9veloppement via la Mirror API et le GDK Sneak Peek, pour finir par un retour d'exp\u00e9rience en tant que Glass Explorer et d\u00e9veloppeur depuis un an. \r\n",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "434"
   },
   {
@@ -835,8 +758,6 @@
     "description": "D\u00e9porter l\u2019envoi d\u2019un mail, notifier des applications tierces, synchroniser des caches distribu\u00e9s, transf\u00e9rer des logs, communiquer entre des portables\u2026 On ne compte pas les cas d\u2019utilisation d\u2019un serveur de message. Pourtant c\u2019est souvent un outil mal appr\u00e9hend\u00e9.\r\n\r\nEntre les diff\u00e9rents protocoles et API (JMS, AMQP, STOMP, MQTT...) et les diff\u00e9rents outils existants (ActiveMQ, RabbitMQ, Kafka, 0MQ \u2026), quels sont les crit\u00e8res pour faire le meilleur choix ? Nous verrons comment se poser les bonnes questions sur la consistance, la performance ou encore la scalabilit\u00e9.\r\n\r\nNous profiterons \u00e9galement de cette occasion pour replacer dans le contexte du SI ce middleware trop souvent n\u00e9glig\u00e9.",
     "video": "https:\/\/www.infoq.com\/fr\/presentations\/choisir-serveur-message",
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "438"
   },
   {
@@ -861,8 +782,6 @@
     "description": "Les interfaces naturelles (NUI) sont une r\u00e9alit\u00e9 : interfaces tactiles, Kinect, LeapMotion, Gesture Camera\u2026 \r\nLes constructeurs PC int\u00e8grent d\u00e9j\u00e0 les NUI directement dans leur gamme de produits 2014. \r\n\r\nCette session vous montrera comment utiliser ses technologies innovantes de mani\u00e8re pertinente pour am\u00e9liorer vos interactions utilisateurs et cr\u00e9er de nouveaux services (Relation client, Marketing\r\nProductivit\u00e9, Hygi\u00e8ne et s\u00e9curit\u00e9, Data-visualization...)\r\n\r\nLes NUI, c'est maintenant ! Mais quel futur se profile pour nous et nos utilisateurs. Nous aborderons les \u00e9volutions et nouvelles tendances avec notamment les nouveaux capteurs embarqu\u00e9s permettant de cr\u00e9er des smart-objects et les interfaces individuelles.\r\n\r\n\r\nPour le staff:\r\nSession semi-technique (\u00e9tat de l'art, principes et concepts NUI)\r\nJe ferai quelques d\u00e9mos Kinect sur sc\u00e8ne.\r\nCette session est une \u00e9volution de ma session SoftShake13 : http:\/\/www.youtube.com\/watch?v=vpBjBi1QaIY \r\n\r\n\r\n",
     "video": "https:\/\/www.infoq.com\/fr\/presentations\/nui",
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "440"
   },
   {
@@ -885,10 +804,7 @@
     ],
     "slug": "stephane-mor-des-bits-aux-atomes--re-materialisons-",
     "description": "Le num\u00e9rique accueille depuis peu un petit nouveau: la fabrication num\u00e9rique. L'essor de l'impression 3D signe l'\u00e8re de la re-mat\u00e9rialisation; on peut d\u00e9sormais fabriquer des objets assez facilement depuis un fichier informatique. Bonne nouvelle: vous avez toutes les comp\u00e9tences pour le faire!\r\n\r\nLors de cet atelier vous apprendrez \u00e0 \"programmer\" des objets en 3D directement imprimables, et vous aurez tous les outils en main pour cr\u00e9er des objets param\u00e9triques. En int\u00e9grant directement les contraintes d'impression 3D, vous pourrez cr\u00e9er des objets qui s'impriment bien sur l'imprimante 3D qui vous attendra sur une table (!).\r\n\r\nAu passage, ce sera pour vous l'occasion de d\u00e9couvrir l'*open hardware*, pendant tangible de l'open source. Imaginez des objets cr\u00e9\u00e9s collectivement de mani\u00e8re agile, versionn\u00e9s, partag\u00e9s librement et reproductibles dans n'importe quel fablab...\r\n\r\nVous avez l'opportunit\u00e9 d'apporter tout votre savoir-faire num\u00e9rique au mouvement maker! Je vous montrerai comment.",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "442"
   },
   {
@@ -911,10 +827,7 @@
     ],
     "slug": "sylvain-mougenot-devops--en-parler-c-est-bien--en-faire-c-est-mieux",
     "description": "Venez jouer aux marionnettes gr\u00e2ce \u00e0 Puppet avec l'aide d'un vagabond (Vagrant) \r\npour vous faire une id\u00e9e concr\u00e8te sur une pratique Devops.\r\n\r\n**Atelier Devops :**\r\n\r\n - utilisation de Vagrant pour lancer des Machines Virtuelles (VM)\r\n - explications Vagrant, cr\u00e9ation box, d\u00e9but provisionning\r\n - Puppet : d\u00e9mo avec un Puppet master (sur le poste du participant)\r\n - Puppet : explication de la structures de r\u00e9pertoire de \/etc\/puppet (organisation, exemple de code)\r\n - Coder du puppet\r\n - D\u00e9ployer : httpd + contenu static\r\n - Externaliser le param\u00e9trage avec hiera\r\n - D\u00e9ployer : httpd + contenu 'param\u00e9tr\u00e9'\r\n\r\n**Pr\u00e9requis :**\r\n \r\nVoici la liste des composants \u00e0 installer.\r\n\r\nLa premi\u00e8re \u00e9tape de l'atelier sera de valider l'installation de votre poste.\r\n\r\n<table>\r\n<tr><td>soft <\/td><td>  lien <\/td><\/tr>\r\n<tr><td> Virtualbox <\/td><td>  <a href=\"https:\/\/www.virtualbox.org\/wiki\/Downloads\">Download Virtualbox<\/a>  4.3.10 <\/td><\/tr>\r\n<tr><td> Virtualbox extensions <\/td><td> <a href=\"http:\/\/download.virtualbox.org\/virtualbox\/4.3.10\/Oracle_VM_VirtualBox_Extension_Pack-4.3.10-93012.vbox-extpack\">Download Virtualbox Extensions<\/a> <\/td><\/tr>\r\n<tr><td> Vagrant <\/td><td> <a href=\"http:\/\/www.vagrantup.com\/downloads.html\">Download Vagrant<\/a> <\/td><\/tr>\r\n<tr><td> A Vagrant box <\/td><td> <a href=\"http:\/\/packages.vstone.eu\/vagrant-boxes\/boxes\/centos-6.x-64bit-puppet.3.x-vbox.4.3.10-1.box\">centos-6.x-64bit-puppet.3.x-vbox.4.3.10-1.box<\/a> <\/td><\/tr>\r\n<tr><td> Gepetto (IDE) <\/td><td> <a href=\"http:\/\/puppetlabs.github.io\/geppetto\/download.html\">Download Gepetto<\/a> <\/td><\/tr>\r\n<\/table>\r\n\r\n> **Attention**\r\n> En raison des contraintes de param\u00e9trage des VM il est important de garder la coh\u00e9rence entre la version de la box Vagrant et la version de Virtualbox.\r\n> - centos-6.x-64bit-puppet.3.x-vbox.**4.3.10**-1.box n\u00e9cessite Virtualbox **4.3.10**\r\n\r\n**Les sources sont sur Github**\r\n[devops_puppet_workshop](https:\/\/github.com\/smougenot\/devops_puppet_workshop)\r\n\r\n**Les slides sont sur Slideshare**\r\n[puppet-workshop](http:\/\/www.slideshare.net\/SMougenot\/puppet-workshop)",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "462"
   },
   {
@@ -937,10 +850,7 @@
     ],
     "slug": "steve-holyer-can-you-do-it-better--uncover-the-way-using-lego-",
     "description": "*Please Note Session Limit: 24 Participants*\r\n\r\nLet\u2019s *really* uncover better ways of developing software. **Forget about dogma, rules, manifestos, frameworks** and **processes** and **unleash your imagination** to construct a better way of doing software. In this workshop, you will **experience the power of accelerated learning and discovery using LEGO\u00ae SERIOUS PLAY\u00ae to create strategies for innovation and change.**\r\n\r\nLEGO\u00ae Serious Play\u00ae is a powerful facilitated approach for using LEGO\u00ae to **free your imagination by constructing 3-D metaphorical models**. Using the LEGO\u00ae bricks you will be fully-engaged with hands-on, **accelerated learning techniques** that allow you to see deeply and gain a meaningful understanding of your imaginative strategies for building better software.\r\n\r\nThe LEGO\u00ae Serious Play\u00ae methods are **based on the learning theories of Piaget and Papert** and were developed by Johann Roos and Bart Victor at the respected International Institute for Management Development (IMD) in Lausanne, Switzerland. \r\n\r\nIf you are curious about using the facilitated LEGO\u00ae Serious Play\u00ae process to discover strategy, create change, or charter stronger teams **this is your chance to try it out with a trained and experienced facilitator**.\r\n\r\n**NOTE:** In this workshop you'll receive a quick introduction to the theory behind LEGO\u00ae Serious Play\u00ae, and you will use the process to explore the real strategic application of uncovering better ways of developing software. This is not a full workshop which can last four hours, a full day or even longer. At the end of our 2:30 hour introduction session you will have your first valuable result, and you'll hear about the ways a full workshop would continue.\r\n\r\nIf this sounds dry to you, then think of it like this: **we\u2019re simply going to play with a lot of cool LEGO\u00ae**, and while we're having an awesome time doing that through LEGO\u00ae Serious Play\u00ae we\u2019re going to discover and actually play with new insights into software development. ",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "482"
   },
   {
@@ -965,8 +875,6 @@
     "description": "With the unveiling of the Spring IO platform and important changes in the Pivotal Spring technology stack, the Spring team is happy to introduce a brand new spring.io website.\r\n\r\nWait, why talk about this at mix-it? Well, spring.io is written entirely in Spring, runs on Cloud Foundry and is now an open source project. \r\n\r\nFrom Spring Boot, Cloud Foundry, Bower and Gulp to open source challenges, we're here to give you a complete picture of one of the central pieces of our infrastructure - and hopefully some ideas to take home...",
     "video": "https:\/\/www.infoq.com\/fr\/presentations\/open-sourcing-spring-io",
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "485"
   },
   {
@@ -989,10 +897,7 @@
     ],
     "slug": "steeve-morin-boot2docker--zero-to-docker-in-20s",
     "description": "What started as a hack has turned into a real operating system, used by tens of thousands of developers worldwide. And it all started because we found that having a full featured host operating system isn't needed to run Docker images.\r\n\r\nboot2docker is essentially trying to change the way people develop, run and deploy software through Docker, across all OSes and hardware. It is opinionated, is distributed as an ISO image, and is read-only.\r\n\r\nMost importantly, an ecosystem is starting to develop around it:\r\n\r\n- [boot2docker-cli](https:\/\/github.com\/boot2docker\/boot2docker-cli) is a tool to run and manage a boot2docker virtual machine\r\n- [Mac OS X Installer](https:\/\/github.com\/boot2docker\/osx-installer) is a full featured installer that will allow anyone to run Docker on OS X.\r\n- [DVM](https:\/\/github.com\/fnichol\/dvm) is an on demand Docker virtual machine, thanks to Vagrant and boot2docker\r\n\r\nIn this talk, I will not only present you what boot2docker is, but what we stand for, and why we think our choices change the way we deal with OS and how Docker is paving the way to the next generation of software.",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "487"
   },
   {
@@ -1015,10 +920,7 @@
     ],
     "slug": "matthew-philip-coach-like-a-wizard--agile-wisdom-of-gandalf",
     "description": "Most people know the character Gandalf as a wizard with a knack for helping Hobbits save Middle Earth. But his timeless wisdom applies to agile teams, too! Whether you coach teams or simply like to help your teammates improve, you will learn in this talk how to empower people, enable them to fail safely, empathize with them and help them see and share in the bigger vision. We'll do this by reviewing a few quotes from JRR Tolkien's Middle Earth novels (Hobbit, Lord of the Rings) -- as well as a couple of video clips from the movies -- and applying the principles to knowledge work on 21st century Real Earth.",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "492"
   },
   {
@@ -1041,10 +943,7 @@
     ],
     "slug": "paul-o-shannessy-party-like-it-s-1999",
     "description": "The past 15 years of the web have been a hot mess. Somehow we survived the metric ton of pain that we\u2019ve all lived through making websites work. We have a different set of problems (and browsers) that we need to work with, but at its core, web sites aren\u2019t that different.\r\n\r\nWe have a pile of markup coming from the server which the browser knows how to parse and turn into a pretty picture. We still have HTML, CSS, JS. We\u2019ve ironed out a lot of the kinks (and introduced new ones). We have better tools (and better designers), but the technologies haven\u2019t changed much. What has changed is how we use these technologies. Web 2.0 happened. We all made tag clouds that loaded XML from our server and generated markup in JS and then stuck it into the DOM with innerHTML.\r\n\r\nA lot of us are building applications now, not web pages. The complexity has increased by orders of magnitude. In 1999 we got some data from a database and rendered HTML on the server \u2014 that was the only place responsible for markup. Now we\u2019re changing the display based on user interaction. We\u2019re managing state on the client and server. We\u2019re duplicating logic.\r\n\r\nIn this talk, I\u2019ll discuss about how we can build the web like it\u2019s 1999 but still get the goodies that we\u2019ve come to love, without having to resort to complicated spaghetti code. We\u2019ll use [Facebook\u2019s React](http:\/\/facebook.github.io\/react\/) as an example of a tool to help approach this problem.",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "494"
   },
   {
@@ -1067,10 +966,7 @@
     ],
     "slug": "ity-kaul-scaling-up-twitter-systems",
     "description": "Twitter is one of the most heavily trafficked sites on the internet, with over <b>240 million active users<\/b> and serving over <b>500 million Tweets per day<\/b>. Twitter, as a company and as a service has seen  remarkable growth in its eight years of existence. Scaling its services to meet high traffic demands and scaling our development tools to support millions of lines of heterogeneous code have both been challenging and rewarding.\r\n\r\nHistorically, nearly all of Twitter's traffic had been served by a monolithic application written in Ruby on Rails. Our growing user base, rapid development cycles and changing business needs all contributed to redesigning our monolithic codebase and move to a services oriented architecture. \r\n\r\nIn this talk, I will attempt to explain how Twitter scaled to support a) millions of users and b) millions of lines of code and how the community can leverage from these experiences and open source tools being developed.\r\n\r\n<b>How to scale to support millions of users? <\/b>\r\nFor higher performance, scalability and resilience to failure, we worked on the migration of Ruby on Rails based monolithic Twitter services to Services Oriented Architecture (SOA), where the services are JVM processes, mostly written in Scala and communicate with one another asynchronously over a network connection. \r\n\r\n<b>How to scale to support millions of lines of heterogeneous code? <\/b>\r\nPants Build system at Twitter is a state-of-the-art build tool designed to support polyglot services.  This tool is open sourced and is being actively worked on and rapidly adopted in the community.\r\n\r\n\r\n",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "495"
   },
   {
@@ -1094,10 +990,7 @@
     ],
     "slug": "dorothee-le-seac-h-pierrick-thibault--les-habits-neufs-de-l-empereur",
     "description": "Le changement, \u00e7a commence par soi-m\u00eame.\r\nParmi les valeurs de l'agilit\u00e9, il y a la communication (\u00ab Les individus et les interactions, plus que les processus et les outils. \u00bb). \r\nDans cet atelier, je vous propose d'am\u00e9liorer votre communication aux autres, en particulier en situation de stress, au travers d'un jeu propos\u00e9 par Portia Tung et Jenni Jepsen, les Habits Neufs de l'Empereur.\r\nNous aborderons ainsi le concept de congruence, avec l'objectif d'apprendre \u00e0 l'appliquer \u00e0 notre comportement. C'est une mani\u00e8re, dans notre vie de tous les jours, d'am\u00e9liorer notre communication, et de r\u00e9duire notre stress.",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "496"
   },
   {
@@ -1122,8 +1015,6 @@
     "description": "De nos jours, presque tout le monde sait faire grandir une infrastructure de machines en mode distribu\u00e9, avec une tr\u00e8s bonne communication entre elles, et en \u00e9vitant les points uniques de d\u00e9faillance (c'est une traduction de SPOF, single point of failure).\r\n\r\nEn y r\u00e9fl\u00e9chissant, des serveurs distribu\u00e9s \u00e0 travers le monde ne sont pas si diff\u00e9rents que des \u00e9quipes distribu\u00e9es, elles ont besoin de connection et de synchronisation...\r\n\r\n*Vraiment ?*\r\n\r\nNous sommes des humains... pas des machines\u2026\r\n\r\n\r\nDans cette session, nous allons voir comment eNovance, une soci\u00e9t\u00e9 qui con\u00e7oit des produits destin\u00e9s \u00e0 batir des infrastructures informatiques, d'ou le pitch initial... Nous allons donc voir comment eNovance a fait grandir son \u00e9quipe de d\u00e9veloppement produits en mode distribu\u00e9 en suivant les valeurs et principes agile.\r\n\r\nCette session expliquera comment nous nous appuyons sur nos Product Owner pour guider nos contributions \u00e0 des logiciels libres constitutifs de nos produits. Nous verrons par exemple comment nous planifions nos it\u00e9rations en suivant le rythme donn\u00e9 par le projet Openstack. Nous verrons \u00e9galement comment nous organisons nos scrums, sprint planning, sprint review et retrospectives en nous adaptant \u00e0 des \u00e9quipiers positionn\u00e9s sur diff\u00e9rents fuseaux horaires.\r\n\r\nLa session pr\u00e9sentera le mode de fonctionnement d'un projet open source embl\u00e9matique : Openstack. Ainsi que la fa\u00e7on de contribuer de l'\u00e9quipe eNovance.\r\n\r\n",
     "video": "https:\/\/www.infoq.com\/fr\/presentations\/produits-avec-equipes-distribuees",
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "497"
   },
   {
@@ -1149,8 +1040,6 @@
     "description": "En deux ans d\u2019existence, l\u2019\u00e9quipe technique de la soci\u00e9t\u00e9 TEA est pass\u00e9e de 0 \u00e0 6 d\u00e9veloppeurs et continue de cro\u00eetre. Une forte croissance implique de fr\u00e9quents changements de contexte qui risquent de perturber l\u2019\u00e9quipe. Elle doit les g\u00e9rer en restant alerte et proactive.  \r\n\r\nCette conf\u00e9rence est le **retour d\u2019exp\u00e9rience** d\u2019une \u00e9quipe de jeunes et vaillants d\u00e9veloppeurs s\u2019adaptant aux r\u00e9alit\u00e9s business tout en essayant d\u2019am\u00e9liorer la qualit\u00e9 de ses livrables. \u00c0 force de belles avanc\u00e9es, de grands aller-retours et de petites boulettes, notre \u00e9quipe recherche constamment une m\u00e9thodologie agile qui lui convient. Notre \u00e9volution passe par : \r\n\r\n * Scrum vs Kanban : du mode **flux** \u00e0 **l\u2019it\u00e9ratif**, et inversement ;\r\n * les **r\u00e9unions** : minimiser leur dur\u00e9e, maximiser leur apport ;\r\n * la **revue de code** : \u00e0 posteriori, en bin\u00f4mage, outill\u00e9e ou pas ;\r\n * l\u2019int\u00e9gration d\u2019un **nouveau d\u00e9veloppeur** ;\r\n * la bo\u00eete \u00e0 outils de la vie d\u2019\u00e9quipe : planning-poker, daily scrum, burn down\u2026\r\n\r\nCette pr\u00e9sentation ne vise pas \u00e0 donner l\u2019organisation parfaite d\u2019une \u00e9quipe (on sait tous qu\u2019elle n\u2019existe pas), mais \u00e0 pr\u00e9senter nos **outils et pratiques** nous permettant de tendre vers celle-ci.\r\n",
     "video": "https:\/\/www.infoq.com\/fr\/presentations\/amelioration-continue-au-sein-equipe-agile",
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "498"
   },
   {
@@ -1174,10 +1063,7 @@
     ],
     "slug": "guillaume-laforge-didier-girard-machine-learning-et-regulation-numerique",
     "description": "Le machine learning est la science qui permet \u00e0 un algorithme d\u2019apprendre sans avoir \u00e9t\u00e9 explicitement programm\u00e9 pour cela. Elle est utilis\u00e9e par les acteurs de la nouvelle \u00e9conomie pour le traitement de gros volumes de donn\u00e9es, dans la traduction automatique, la reconnaissance de la parole, la classification de consommateur, la construction de r\u00e9putation, ou la pr\u00e9vision des trafics. C\u2019est la \u201cr\u00e9gulation num\u00e9rique\u201d.\r\n\r\nNous parlerons des champs d\u2019application du machine learning par les gros acteurs du num\u00e9rique, de ses fondements math\u00e9matiques, des grands familles d\u2019algorithmes et des outils disponibles pour mettre en pratique.\r\n\r\nD\u00e9couvrez les bases pour comprendre cette science et mesurer le potentiel des possibilit\u00e9s de son utilisation.",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "500"
   },
   {
@@ -1202,8 +1088,6 @@
     "description": "It's been scientifically proven that more diverse communities and workplaces create better products and the solutions to difficult problems are more complete and diverse themselves. Companies are struggling to find adequate talent. So why do we see so few women, people of color, and LGBTQ people at our events and on the about pages of our websites? Even more curiously, why do 60% of women leave the tech industry within 10 years? Why are fewer women choosing to pursue computer science and related degrees than ever before? Why have stories of active discouragement, dismissal, harassment, or worse become regular news? \r\n\r\nIn this talk we\u2019ll examine the causes behind the lack of diversity in our communities, events, and workplaces. We\u2019ll discuss what we can do as community members, event organizers, and co-workers to not only combat this problem, but to encourage positive change by contributing to an atmosphere of inclusivity.\r\n",
     "video": "https:\/\/www.infoq.com\/fr\/presentations\/programming-diversity",
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "509"
   },
   {
@@ -1226,10 +1110,7 @@
     ],
     "slug": "olav-maassen-how-to-make-better-decisions",
     "description": "While HOW to make decisions is important, the WHEN to make decisions is critical to your chances of success. \r\n\r\nTiming is everything, however deferring commitments causes stress to many people. Real options helps you manage that stress by creating bounded uncertainty in an context of total uncertainty. This is not a simple process that you copy and learn to adopt through practice. This is a new way at looking at the world around you that starts by learning to differentiate between options and commitments. Olav helps do this through an interactive exercise.\r\n\r\nIt turns out that the way you manage your options is to focus on commitments and attempt to avoid or defer them. After identifying commitments, Olav discuss creating options to turn the commitments into reversible commitments.\r\n\r\nChris Matts and Olav Maassen have recently created \u201cCommitment\u201d, the first graphic business novel about managing project risk. Because they eat their own dog food Real Options plays a big part in the creation part of the book as well. Olav presents the creation process as a case study about applying Real Options and how that leads to different behavior.\r\n\r\nFinally Olav presents a number of mini case studies where other people have applied Real Option thinking in \u201cout of the box\u201d situations. Once you get it, it will change your life.",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "514"
   },
   {
@@ -1252,10 +1133,7 @@
     ],
     "slug": "ozlem-yuce-prioritising-ideas-using-cost-of-delay",
     "description": "Improving prioritisation has become a tired concept in most IT departments, and yet it has the potential to change the conversation from one of cutting cost, to delivering valuable solutions as quick as the business needs it.\r\n\r\nMost organisations don't suffer from a lack of innovative ideas, they suffer from not being able to pick the best of what turns out to be a bad bunch. Thanks to the consumerisation of IT and software eating the world this is getting worse. Innovation and software development is already synonymous in most organizations. As Jack Welch says: If you are not moving at the speed of the marketplace you're already dead \u2013 you just haven't stopped breathing yet.\r\n\r\nSo how do we improve the way we prioritise to ensure that we're delivering value quickly and not wasting our precious capacity to innovate? Since economics is all about scarcity, we can turn to economics to help us quickly discover, nurture and speed up the delivery of value. This session examines how a Fortune 500 company used an economic framework across a $100m portfolio to:\r\n\r\n1. Improve Prioritisation \u2013 by using CD3 (Cost of Delay Divided by Duration) \r\n2. Improve Decision-making \u2013 by making the economic trade-offs visible\r\n3. Change the Focus \u2013 from efficiency and cost to speed and value",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "515"
   },
   {
@@ -1278,10 +1156,7 @@
     ],
     "slug": "jeffrey-davidson-consulting-secrets-for-effective-communication",
     "description": "Sometimes it's not just about code. It's about understanding, sharing, communication, and leverage. \r\n\r\nUnfortunately, the skills to work well with others--from stakeholders, to users, to team mates--isn't taught in school. It's not taught most anyplace. \r\n\r\nThis interactive talk will give participants the chance to practice stances and communication techniques that will immediately impact their effectiveness. \r\n\r\nTake advantage of this opportunity to learn how consultants use the skills of business analysts and scrum masters to influence the opinions and actions of people around them. Come and learn practical \"soft skill\" tips for making an impact on your project, team members, stakeholders, and executives. \r\n",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "518"
   },
   {
@@ -1304,10 +1179,7 @@
     ],
     "slug": "nicolas-fonrose-rapport-cout-performance-de-differentes-stacks-web",
     "description": "Les choix d\u2019architecture logicielles ont un impact important sur la capacit\u00e9 des syst\u00e8mes \u00e0 supporter la charge qui leur est impos\u00e9e, sur la fiabilit\u00e9 du syst\u00e8me sur sa latence et sur d\u2019autres param\u00e8tres encore.\r\n\r\nDepuis l\u2019arriv\u00e9e des infrastructures Cloud et de leur mode de fonctionnement pay-as-you-go, le co\u00fbt devient aussi un \u00e9l\u00e9ment \u00e0 prendre en compte.\r\n\r\nCette session se penchera en d\u00e9tail sur le rapport co\u00fbt performance de diff\u00e9rentes solutions techniques, JEE, Scala, NodeJS et de quelques autres. Nous feront aussi varier certains param\u00e8tres de l\u2019infrastructure Cloud (AWS) elle-m\u00eame (impact des EBS PIOPS, des nouveaux types d\u2019instances, \u2026). La combinatoire \u00e9tant tr\u00e8s \u00e9lev\u00e9e, un sous-ensemble sera s\u00e9lectionn\u00e9.\r\n\r\nPour chaque test, une synth\u00e8se des param\u00e8tres significatifs de performances (nombre de transactions r\u00e9alis\u00e9es, latence, \u2026) et de co\u00fbts (Compute, Storage, Network, IO, \u2026) sera pr\u00e9sent\u00e9e, l\u2019id\u00e9e \u00e9tant de d\u00e9tecter les patterns d\u2019architecture et les technologies qui semblent \u00eatre les plus efficaces dans le cadre d\u2019un d\u00e9ploiement Cloud.\r\n\r\nLa t\u00e2che de comparaison \u00e9tant immense, nous nous appuierons sur des \"templates de benchmarks\" d\u00e9j\u00e0 cr\u00e9\u00e9s et nous nous focaliseront sur l'impact au niveau de la consommation de resources Cloud.",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "520"
   },
   {
@@ -1330,10 +1202,7 @@
     ],
     "slug": "angel-medinilla-developing-great-scrummasters",
     "description": "The Scrum Master, as defined by Agile literature, is responsible of maintaining the Scrum process, which calls for a deep understanding of the Scrum mechanics. But, according to many, he is also responsible of team development, continuous improvement, Agile adoption, team facilitation, change management or even one-on-one coaching. This talk will present two frameworks that include an evolution path for the Scrum Master and how to select and develop great ScrumMasters. These frameworks are based  on several fields, including psychology, coaching, motivational science, communication skills, corporate culture or change management. Over all, it will give you some clues on how to identify, hire and develop great Scrum Masters.\r\n",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "521"
   },
   {
@@ -1356,10 +1225,7 @@
     ],
     "slug": "angel-medinilla-drawing-101--mastering-the-stickman-",
     "description": "Over the last years there is a growing interest in fields and practices like visual facilitation, visual communication, skecthnoting, story telling... Still, most people get thwarted on the beginning steps - drawing! \r\n\r\nAs Jurgen Appelo uses to say, it's not that people 'can't draw', only they might not be able to draw as professional artists, but even the most rudimentary skills on drawing can provide amazing results when it comes to enhance your facilitation and coaching work. \r\n\r\nThis workshop will start from scratch, with no previous skills required other than holding a pen, and will provide you with enough background to start your visual facilitation and sketching path with one of the most powerful tools for story telling - the stick man! \r\n\r\nOverall, lots of fun guaranteed... :P",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "522"
   },
   {
@@ -1382,10 +1248,7 @@
     ],
     "slug": "jens-otto-lange-design-meets-agile",
     "description": "There is a lot buzz about service design and design thinking as means to innovate. But how do they relate to the methods and mind set of agile? What is the role of a designer in an agile organization? And how could she\/he contribute to generate and increase customer value? In his talk, Jens Otto Lange will give a short overview about the history of design in business, explain the ideas of design thinking and service design and suggest how these disciplines could help your team to create products and services that create superior customer value. ",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "523"
   },
   {
@@ -1410,8 +1273,6 @@
     "description": "It would be nice if developers could download a JavaScript framework, plug in the custom logic required for their particular problem, and have a functional, scalable, and reliable application. As any who's tried can probably tell you, however, it doesn't work like that. It doesn't matter if your application has 5000 \"pages\" or less than 50 - it will eventually become a large application in terms of code, because size of code is not just a measure of the complexity of the app itself, but of its maturity. If you've tried taking an app from a minimal set of functionality to something complex enough to cover all the edge cases, you've probably done some rewriting. \r\nIf you haven't, it's your lucky day! We'll talk about several of the ways you can almost guarantee a rewrite in your app's future. If, on the other hand, rewrites don't sound like that much fun to you, we'll also talk about how to avoid them or at least minimise the risk they present.",
     "video": "https:\/\/www.infoq.com\/fr\/presentations\/how-rewrite-your-javascript",
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "525"
   },
   {
@@ -1436,8 +1297,6 @@
     "description": "Nous allons parler des communaut\u00e9s en Afrique, comment elles s'organisent, se financent etc...\r\nQue fait un d\u00e9veloppeur de sa journ\u00e9e de travail dans le contexte africain.\r\n\r\nNous allons montrer que l'Afrique est plurielle et on a les m\u00eames divergences entre le monde anglophone et francophone. Les r\u00e9flexes dans le monde anglophone sont diff\u00e9rents du monde francophone.\r\n\r\nNous allons aussi parler de quelques probl\u00e8mes de la soci\u00e9t\u00e9 africaine qui emp\u00eachent d'avoir au sein des DSI des \u00e9quipes de d\u00e9veloppement performantes (les lacunes de la formation, le culte des grand dipl\u00f4mes, externalisation des projets etc...)\r\n\r\nEnsuite nous citerons quelques belles histoires de d\u00e9veloppeur qui ont r\u00e9ussi en Afrique.\r\n\r\nEnfin diff\u00e9rentes strat\u00e9gies dans grands groupes comme Google, IBM, Oracle et Microsoft en Afrique.",
     "video": "https:\/\/www.infoq.com\/fr\/presentations\/communautes-monde-it-sous-autres-cieux",
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "526"
   },
   {
@@ -1462,8 +1321,6 @@
     "description": "**Comment le design se rend-il utile \u00e0 nos vies ?** L'imaginaire social autour de la cr\u00e9ation rel\u00e8ve souvent du mythe (le design \u00e7a n'est pas rendre beau!) cependant, il suffit parfois de petites choses intelligentes pour innover et faire grandir l'humain de fa\u00e7on individuelle et collective ou collaborative. Au travers d'exemples et d'\u00e9l\u00e9ments clefs, je vous invite \u00e0 d\u00e9couvrir, autour du monde, comment la cr\u00e9ation de services, de produits, d'objets, d'exp\u00e9riences peuvent changer nos vies. \r\n\r\n[ # **Retrouvez toute la conf\u00e9rence en ligne** # ](https:\/\/speakerdeck.com\/geoffreydorne\/petit-design-pour-grande-humanite-geoffrey-dorne-2014 \"Petit design pour grande humanit\u00e9\")\r\n\r\nSujets abord\u00e9s :\r\n\r\n* ce que n'est plus le design\r\n* le design comme une exp\u00e9rience\r\n* le designer comme un observateur des usages\r\n* le mouvement Jugaad\r\n* des exemples autour du monde\r\n* le paradoxe du design aujourd'hui \r\n* cinq clefs pour un design humain\r\n* les bonnes questions \u00e0 se poser sur les projets\r\n\r\nRepartez avec plusieurs grands principes qui vous permettront de regarder le monde sous l'angle du design, de l'utile et de l'humain.",
     "video": "https:\/\/www.infoq.com\/fr\/presentations\/petit-design-pour-grande-humanite",
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "529"
   },
   {
@@ -1488,10 +1345,7 @@
     ],
     "slug": "patrick-dunnam-streaming-eagles-drew-woods-serendipitous-disruption-",
     "description": "As many have heard, in the early days, GitHub chose not to have an office for almost 2 years. One of the major drivers for getting an office was to promote what is called  \"serendipitous interactions.\" The idea is that by coming into the office, one will encounter a broader set of people than the ones you are working closely with, and have interactions that cross-pollinate and produce unforeseeable innovation. It sounds great, but's completely false in practice.\r\n\r\nWhat really happens? You come in, and say \"Hi\" to the same people you see every day on the way there. You sit at your desk, near the same group of individuals, and then go to lunch with the same 3 people you always eat sandwiches with. \r\n\r\nIn \"Serendipitous Disruption?\", Patrick and Drew, counterparts in Streaming Eagle, will take the audience through their efforts to bring true serendipity back, describing their surprising methods and even more surprising outcomes. ",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "530"
   },
   {
@@ -1514,10 +1368,7 @@
     ],
     "slug": "rieul-techer-biotech-breaks-free----and-so-does-tech-",
     "description": "Rieul Techer is a member of the non-profit organization \"La Paillasse\" in Paris one of the world's largest community laboratories, commonly called hackerspaces, that foster open access and open source biotechnologies. He is also the co-founder of \"La Paillasse Sa\u00f4ne\" in Lyon, a non-profit organization strongly connected to the emerging network of \"Paillasses\" over the world and dedicated to open source cleantechnologies and bio-inspired technologies with a strong integration to the Rh\u00f4ne-Alpes innovation ecosystem. \r\nWorking closely with Thomas Landrain, co-founder and president of \"La Paillasse\" in Paris who is an active member of the Do-it-yourself Biology (DIYbio) community, organizing the launch of DIYbio Europe, and working regularly as one of its spokespersons, Rieul is an active member of the \"Tiers-Lieux\" community and highly committed to innovation (technology and social), open-concepts and the common goods production. \r\nConvinced that the 21st century will be the century of the citizen appropriation of the way to innovate from a DIY perspective, particularly in the field of bio-inspired technologies and cleantechnologies, he is focusing on making research and experimentation more accessible for citizens and amateurs. At \"la Paillasse\" people are developing cheap genetic diagnostic and creative use of biomaterials, but it won't stop at your door step... Rieul is working on democratizing the access to research and innovation in various fields, making more accessible to use technologies and for anyone to build useful low-tech at a limited cost.\r\nWith a highly interdisciplinary background in engineering, research, innovation, finance and management in the fields of energy and environment (strong interaction between bio and clean), Rieul is currently starting to work on innovation management process and financing; in the meantime he is co-building \"La Paillasse Sa\u00f4ne\": the first eco-hacklab bridging bio and clean.",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "540"
   },
   {
@@ -1540,10 +1391,7 @@
     ],
     "slug": "laurent-victorino-unity3d-from-zero-to-hero--basic-session-",
     "description": "**Unity3D**, le moteur de jeu qui grimpe dont tout le monde parle mais que tr\u00e8s peu montrent.\r\n\r\nCe Workshop a pour but de vous pr\u00e9senter **Unity3D**, le moteur de jeu qui a chang\u00e9 la donne en mati\u00e8re de d\u00e9veloppement. \r\nCe petit tour d\u2019horizon, ainsi que quelques conseils pour **bien d\u00e9buter**, vous permettront d\u2019avoir une meilleure compr\u00e9hension du moteur ainsi que du fonctionnement d\u2019un jeu.\r\n\r\nVous apprendrez ce qu\u2019est Unity, a quoi il sert, et surtout comment **maitriser les bases** de la b\u00eate afin de concevoir et d\u00e9velopper tr\u00e8s rapidement des jeux sur des plateformes aussi diverses que **smartphone, PC, MacOS, Linux, et m\u00eame consoles**.\r\n\r\nCe Workshop est principalement destin\u00e9 aux programmeurs, cependant peu de choses tr\u00e8s complexes seront abord\u00e9es, donc tous les corps de m\u00e9tiers pourront s\u2019y retrouver.\r\n\r\nVenez, **si possible**, avec une machine \u00e9quip\u00e9e de [Unity 4.3](https:\/\/unity3d.com\/unity\/download) ainsi que l'[IDE](http:\/\/fr.wikipedia.org\/wiki\/Environnement_de_d\u00e9veloppement) de votre choix pour d\u00e9velopper.\r\n",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "542"
   },
   {
@@ -1567,10 +1415,7 @@
     ],
     "slug": "stefan-haas-jens-otto-lange-culture-hacking--how-may-we-create-more-fun--work-",
     "description": "In this session we will co-design culture hacks to improve happiness at the workplace - and we will ask you to test the hacks we are going to prototype the next day when back at work!  \r\n\r\nWe need you to do some empathy work before the workshop, so please come prepared: \r\nAs input for the culture hack design challenge we need as many stories as possible about what makes your buddies happy or un-happy at work, what is fun and what\u2019s wrong with work. So please grab a pen and some Post-its, get in touch with people and do a little interview to find out what makes them happy\/unhappy. \r\n\r\nFor those of you unfamiliar with interviewing you may want to check this out: [Toolkit to support your design\r\nthinking practice](http:\/\/dschool.stanford.edu\/wp-content\/uploads\/2011\/03\/BootcampBootleg2010v2SLIM.pdf) and if possible work in pairs. \r\n\r\nFor a quick intro to the concepts we are using have a look here: \r\n\r\n[Culture hacking: how may we increase happiness at our workplaces](http:\/\/www.slideshare.net\/stefan-haas\/culture-hacking-how-may-we-increase-happiness-at-our-workplaces), \r\n\r\n[Business Culture Hackers - Sharing stories about hacking biz culture](http:\/\/bizculturehackers.com)\r\n\r\n\r\n\r\n",
-    "video": null,
     "room": "UNKNOWN",
-    "start": null,
-    "end": null,
     "id": "559"
   }
 ]

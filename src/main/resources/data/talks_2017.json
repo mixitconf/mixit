@@ -18,8 +18,6 @@
       12,
       730000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM5",
     "start": [
       2017,
@@ -34,9 +32,7 @@
       20,
       15,
       50
-    ],
-    "slug": "sensibilisation-aux-bonnes-pratiques-techniques-du-software-craftsmanship-lego-a-la-rescousse-",
-    "id": "58da867076a8e700186bc32b"
+    ]
   },
   {
     "format": "TALK",
@@ -56,8 +52,6 @@
       12,
       749000000
     ],
-    "description": "",
-    "video": "",
     "room": "AMPHI2",
     "start": [
       2017,
@@ -72,9 +66,7 @@
       21,
       11,
       50
-    ],
-    "slug": "au-secours-ma-prod-est-sous-docker-",
-    "id": "58da867076a8e700186bc32c"
+    ]
   },
   {
     "format": "TALK",
@@ -94,8 +86,6 @@
       12,
       750000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM1",
     "start": [
       2017,
@@ -110,9 +100,7 @@
       21,
       16,
       50
-    ],
-    "slug": "balade-cosmique-autour-des-trous-noirs",
-    "id": "58da867076a8e700186bc32d"
+    ]
   },
   {
     "format": "WORKSHOP",
@@ -132,8 +120,6 @@
       12,
       750000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM4",
     "start": [
       2017,
@@ -148,9 +134,7 @@
       21,
       11,
       50
-    ],
-    "slug": "noestimates-game",
-    "id": "58da867076a8e700186bc32e"
+    ]
   },
   {
     "format": "TALK",
@@ -170,8 +154,6 @@
       12,
       751000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM2",
     "start": [
       2017,
@@ -186,9 +168,7 @@
       21,
       11,
       50
-    ],
-    "slug": "compagnonnage-css-et-vexillologie",
-    "id": "58da867076a8e700186bc32f"
+    ]
   },
   {
     "format": "RANDOM",
@@ -208,8 +188,6 @@
       12,
       752000000
     ],
-    "description": "",
-    "video": "",
     "room": "UNKNOWN",
     "start": [
       2017,
@@ -224,9 +202,7 @@
       20,
       14,
       0
-    ],
-    "slug": "la-marque-est-morte-vive-l-intelligente-artificielle-",
-    "id": "58da867076a8e700186bc330"
+    ]
   },
   {
     "format": "WORKSHOP",
@@ -247,8 +223,6 @@
       12,
       756000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM4",
     "start": [
       2017,
@@ -263,9 +237,7 @@
       21,
       15,
       40
-    ],
-    "slug": "ergonomie-du-poste-de-travail-et-si-l-erreur-etait-encore-aussi-entre-la-chaise-ergonomique-et-le-clavier-orthogonal-",
-    "id": "58da867076a8e700186bc331"
+    ]
   },
   {
     "format": "TALK",
@@ -285,8 +257,6 @@
       12,
       757000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM2",
     "start": [
       2017,
@@ -301,9 +271,7 @@
       21,
       15,
       40
-    ],
-    "slug": "etre-un-developpeur-apres-40",
-    "id": "58da867076a8e700186bc332"
+    ]
   },
   {
     "format": "TALK",
@@ -323,8 +291,6 @@
       12,
       757000000
     ],
-    "description": "",
-    "video": "",
     "room": "AMPHI1",
     "start": [
       2017,
@@ -339,9 +305,7 @@
       21,
       10,
       50
-    ],
-    "slug": "le-streaming-d-api-pourquoi-et-comment-transformer-vos-apis-statiques-en-donnees-temps-reel-",
-    "id": "58da867076a8e700186bc333"
+    ]
   },
   {
     "format": "WORKSHOP",
@@ -362,8 +326,6 @@
       12,
       758000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM5",
     "start": [
       2017,
@@ -378,9 +340,7 @@
       20,
       12,
       0
-    ],
-    "slug": "jouer-et-gagner-en-programmant-une-blockchain-avec-ethereum-et-docker",
-    "id": "58da867076a8e700186bc334"
+    ]
   },
   {
     "format": "TALK",
@@ -401,8 +361,6 @@
       12,
       758000000
     ],
-    "description": "",
-    "video": "",
     "room": "AMPHI1",
     "start": [
       2017,
@@ -417,9 +375,7 @@
       20,
       18,
       0
-    ],
-    "slug": "developpez-des-applications-web-desktop-avec-electron-de-github",
-    "id": "58da867076a8e700186bc335"
+    ]
   },
   {
     "format": "WORKSHOP",
@@ -441,8 +397,6 @@
       12,
       759000000
     ],
-    "description": "",
-    "video": "",
     "room": "UNKNOWN",
     "start": [
       2017,
@@ -457,9 +411,7 @@
       20,
       18,
       0
-    ],
-    "slug": "hexagon-challenge",
-    "id": "58da867076a8e700186bc336"
+    ]
   },
   {
     "format": "RANDOM",
@@ -480,8 +432,6 @@
       12,
       759000000
     ],
-    "description": "",
-    "video": "",
     "room": "UNKNOWN",
     "start": [
       2017,
@@ -496,9 +446,7 @@
       20,
       14,
       0
-    ],
-    "slug": "travailler-autrement",
-    "id": "58da867076a8e700186bc337"
+    ]
   },
   {
     "format": "WORKSHOP",
@@ -519,8 +467,6 @@
       12,
       760000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM4",
     "start": [
       2017,
@@ -535,9 +481,7 @@
       20,
       18,
       0
-    ],
-    "slug": "a-la-decouverte-de-kanban-avec-kanbanzine-",
-    "id": "58da867076a8e700186bc338"
+    ]
   },
   {
     "format": "RANDOM",
@@ -557,8 +501,6 @@
       12,
       760000000
     ],
-    "description": "",
-    "video": "",
     "room": "UNKNOWN",
     "start": [
       2017,
@@ -573,9 +515,7 @@
       21,
       13,
       50
-    ],
-    "slug": "remote-first-",
-    "id": "58da867076a8e700186bc339"
+    ]
   },
   {
     "format": "TALK",
@@ -595,8 +535,6 @@
       12,
       763000000
     ],
-    "description": "",
-    "video": "",
     "room": "AMPHI1",
     "start": [
       2017,
@@ -611,9 +549,7 @@
       21,
       11,
       50
-    ],
-    "slug": "comment-gerer-son-temps-efficacement-individuellement-et-en-equipe-",
-    "id": "58da867076a8e700186bc33a"
+    ]
   },
   {
     "format": "TALK",
@@ -633,8 +569,6 @@
       12,
       764000000
     ],
-    "description": "",
-    "video": "",
     "room": "AMPHI1",
     "start": [
       2017,
@@ -649,9 +583,7 @@
       20,
       18,
       0
-    ],
-    "slug": "myths-and-patterns-of-organizational-change",
-    "id": "58da867076a8e700186bc33b"
+    ]
   },
   {
     "format": "TALK",
@@ -671,8 +603,6 @@
       12,
       764000000
     ],
-    "description": "",
-    "video": "",
     "room": "AMPHI1",
     "start": [
       2017,
@@ -687,9 +617,7 @@
       20,
       11,
       0
-    ],
-    "slug": "cargo-cult-agile",
-    "id": "58da867076a8e700186bc33c"
+    ]
   },
   {
     "format": "TALK",
@@ -709,8 +637,6 @@
       12,
       764000000
     ],
-    "description": "",
-    "video": "",
     "room": "AMPHI1",
     "start": [
       2017,
@@ -725,9 +651,7 @@
       20,
       17,
       0
-    ],
-    "slug": "apprendre-a-apprendre-",
-    "id": "58da867076a8e700186bc33d"
+    ]
   },
   {
     "format": "WORKSHOP",
@@ -747,8 +671,6 @@
       12,
       765000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM3",
     "start": [
       2017,
@@ -763,9 +685,7 @@
       21,
       11,
       50
-    ],
-    "slug": "des-petits-carres-de-couleur-",
-    "id": "58da867076a8e700186bc33e"
+    ]
   },
   {
     "format": "WORKSHOP",
@@ -786,8 +706,6 @@
       12,
       765000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM3",
     "start": [
       2017,
@@ -802,9 +720,7 @@
       20,
       15,
       50
-    ],
-    "slug": "offrez-vous-une-experience-de-design-thinking",
-    "id": "58da867076a8e700186bc33f"
+    ]
   },
   {
     "format": "TALK",
@@ -824,8 +740,6 @@
       12,
       766000000
     ],
-    "description": "",
-    "video": "",
     "room": "AMPHI2",
     "start": [
       2017,
@@ -840,9 +754,7 @@
       21,
       10,
       50
-    ],
-    "slug": "how-i-m-turning-usability-into-a-boolean-non-negotiable-system",
-    "id": "58da867076a8e700186bc340"
+    ]
   },
   {
     "format": "TALK",
@@ -862,8 +774,6 @@
       12,
       766000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM1",
     "start": [
       2017,
@@ -878,9 +788,7 @@
       20,
       15,
       50
-    ],
-    "slug": "how-to-become-an-good-open-source-contributor-in-1-hour",
-    "id": "58da867076a8e700186bc342"
+    ]
   },
   {
     "format": "WORKSHOP",
@@ -900,8 +808,6 @@
       12,
       767000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM3",
     "start": [
       2017,
@@ -916,9 +822,7 @@
       20,
       18,
       0
-    ],
-    "slug": "hands-on-angular-let-s-chat-",
-    "id": "58da867076a8e700186bc343"
+    ]
   },
   {
     "format": "TALK",
@@ -938,8 +842,6 @@
       12,
       767000000
     ],
-    "description": "",
-    "video": "",
     "room": "AMPHI1",
     "start": [
       2017,
@@ -954,9 +856,7 @@
       21,
       14,
       40
-    ],
-    "slug": "react-native-dans-vos-apps-vos-apps-dans-react-native",
-    "id": "58da867076a8e700186bc344"
+    ]
   },
   {
     "format": "KEYNOTE",
@@ -976,8 +876,6 @@
       12,
       768000000
     ],
-    "description": "",
-    "video": "",
     "room": "AMPHI1",
     "start": [
       2017,
@@ -992,9 +890,7 @@
       21,
       18,
       35
-    ],
-    "slug": "majority-judgment",
-    "id": "58da867076a8e700186bc345"
+    ]
   },
   {
     "format": "TALK",
@@ -1014,8 +910,6 @@
       12,
       768000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM2",
     "start": [
       2017,
@@ -1030,9 +924,7 @@
       21,
       16,
       50
-    ],
-    "slug": "l-odyssee-de-la-log",
-    "id": "58da867076a8e700186bc346"
+    ]
   },
   {
     "format": "TALK",
@@ -1052,8 +944,6 @@
       12,
       768000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM2",
     "start": [
       2017,
@@ -1068,9 +958,7 @@
       20,
       17,
       0
-    ],
-    "slug": "data-engineer-s-toolkit",
-    "id": "58da867076a8e700186bc347"
+    ]
   },
   {
     "format": "RANDOM",
@@ -1090,8 +978,6 @@
       12,
       769000000
     ],
-    "description": "",
-    "video": "",
     "room": "UNKNOWN",
     "start": [
       2017,
@@ -1106,9 +992,7 @@
       20,
       14,
       0
-    ],
-    "slug": "probabilistic-programming-tuer-un-pieton-ou-sacrifier-les-passagers-",
-    "id": "58da867076a8e700186bc348"
+    ]
   },
   {
     "format": "TALK",
@@ -1128,8 +1012,6 @@
       12,
       769000000
     ],
-    "description": "",
-    "video": "",
     "room": "AMPHI2",
     "start": [
       2017,
@@ -1144,9 +1026,7 @@
       20,
       17,
       0
-    ],
-    "slug": "javascript-soupirs-",
-    "id": "58da867076a8e700186bc349"
+    ]
   },
   {
     "format": "WORKSHOP",
@@ -1167,8 +1047,6 @@
       12,
       770000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM4",
     "start": [
       2017,
@@ -1183,9 +1061,7 @@
       20,
       15,
       50
-    ],
-    "slug": "conquerir-le-monde-avec-coreos",
-    "id": "58da867076a8e700186bc34a"
+    ]
   },
   {
     "format": "TALK",
@@ -1206,8 +1082,6 @@
       12,
       770000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM1",
     "start": [
       2017,
@@ -1222,9 +1096,7 @@
       21,
       15,
       40
-    ],
-    "slug": "management-responsable-et-creation-de-valeur-partagee",
-    "id": "58da867076a8e700186bc34b"
+    ]
   },
   {
     "format": "TALK",
@@ -1244,8 +1116,6 @@
       12,
       771000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM1",
     "start": [
       2017,
@@ -1260,9 +1130,7 @@
       21,
       11,
       50
-    ],
-    "slug": "soft-robotics-for-space-applications",
-    "id": "58da867076a8e700186bc34c"
+    ]
   },
   {
     "format": "TALK",
@@ -1282,8 +1150,6 @@
       12,
       771000000
     ],
-    "description": "",
-    "video": "",
     "room": "AMPHI2",
     "start": [
       2017,
@@ -1298,9 +1164,7 @@
       21,
       16,
       50
-    ],
-    "slug": "webassembly-pour-les-developpeurs-web",
-    "id": "58da867076a8e700186bc34d"
+    ]
   },
   {
     "format": "TALK",
@@ -1320,8 +1184,6 @@
       12,
       772000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM2",
     "start": [
       2017,
@@ -1336,9 +1198,7 @@
       20,
       15,
       50
-    ],
-    "slug": "vers-une-revolution-entrepreneuriale-de-l-effet-de-mode-a-la-realite-des-enjeux-et-des-pratiques",
-    "id": "58da867076a8e700186bc34e"
+    ]
   },
   {
     "format": "TALK",
@@ -1359,8 +1219,6 @@
       12,
       772000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM1",
     "start": [
       2017,
@@ -1375,9 +1233,7 @@
       20,
       18,
       0
-    ],
-    "slug": "dev-rencontre-ops-1-an-apres",
-    "id": "58da867076a8e700186bc34f"
+    ]
   },
   {
     "format": "WORKSHOP",
@@ -1398,8 +1254,6 @@
       12,
       773000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM4",
     "start": [
       2017,
@@ -1414,9 +1268,7 @@
       20,
       12,
       0
-    ],
-    "slug": "the-quest-for-the-ultimate-test-story",
-    "id": "58da867076a8e700186bc350"
+    ]
   },
   {
     "format": "TALK",
@@ -1436,8 +1288,6 @@
       12,
       773000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM2",
     "start": [
       2017,
@@ -1452,9 +1302,7 @@
       21,
       14,
       40
-    ],
-    "slug": "le-chevalier-la-princesse-et-le-dragon-et-si-le-design-sprint-m-etait-conte-",
-    "id": "58da867076a8e700186bc351"
+    ]
   },
   {
     "format": "TALK",
@@ -1474,8 +1322,6 @@
       12,
       773000000
     ],
-    "description": "",
-    "video": "",
     "room": "AMPHI2",
     "start": [
       2017,
@@ -1490,9 +1336,7 @@
       20,
       14,
       50
-    ],
-    "slug": "css-is-awesome-",
-    "id": "58da867076a8e700186bc352"
+    ]
   },
   {
     "format": "TALK",
@@ -1512,8 +1356,6 @@
       12,
       774000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM2",
     "start": [
       2017,
@@ -1528,9 +1370,7 @@
       20,
       12,
       0
-    ],
-    "slug": "gamification-jouer-pour-apprendre",
-    "id": "58da867076a8e700186bc353"
+    ]
   },
   {
     "format": "WORKSHOP",
@@ -1550,8 +1390,6 @@
       12,
       774000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM3",
     "start": [
       2017,
@@ -1566,9 +1404,7 @@
       21,
       15,
       40
-    ],
-    "slug": "wiresketching-dessiner-les-interfaces",
-    "id": "58da867076a8e700186bc354"
+    ]
   },
   {
     "format": "TALK",
@@ -1588,8 +1424,6 @@
       12,
       774000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM1",
     "start": [
       2017,
@@ -1604,9 +1438,7 @@
       21,
       10,
       50
-    ],
-    "slug": "representer-l-economie-le-pouvoir-les-lobbies-grace-aux-visualisations-de-donnees-quand-le-designer-fait-l-equilibriste",
-    "id": "58da867076a8e700186bc355"
+    ]
   },
   {
     "format": "RANDOM",
@@ -1627,7 +1459,6 @@
       775000000
     ],
     "description": null,
-    "video": null,
     "room": "UNKNOWN",
     "start": [
       2017,
@@ -1642,9 +1473,7 @@
       21,
       13,
       50
-    ],
-    "slug": "travailler-moins-pour-gagner-moins",
-    "id": "58da867076a8e700186bc356"
+    ]
   },
   {
     "format": "RANDOM",
@@ -1665,8 +1494,6 @@
       12,
       776000000
     ],
-    "description": "",
-    "video": "",
     "room": "UNKNOWN",
     "start": [
       2017,
@@ -1681,9 +1508,7 @@
       20,
       14,
       0
-    ],
-    "slug": "la-mafia-lactee-au-travail",
-    "id": "58da867076a8e700186bc357"
+    ]
   },
   {
     "format": "RANDOM",
@@ -1703,8 +1528,6 @@
       12,
       776000000
     ],
-    "description": "",
-    "video": "",
     "room": "UNKNOWN",
     "start": [
       2017,
@@ -1719,9 +1542,7 @@
       21,
       13,
       50
-    ],
-    "slug": "being-a-girl-who-codes-in-romania",
-    "id": "58da867076a8e700186bc358"
+    ]
   },
   {
     "format": "TALK",
@@ -1741,8 +1562,6 @@
       12,
       776000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM2",
     "start": [
       2017,
@@ -1757,9 +1576,7 @@
       20,
       11,
       0
-    ],
-    "slug": "quelles-bibliotheques-choisir-pour-votre-projet-data-science-that-s-the-question-",
-    "id": "58da867076a8e700186bc359"
+    ]
   },
   {
     "format": "RANDOM",
@@ -1779,8 +1596,6 @@
       12,
       777000000
     ],
-    "description": "",
-    "video": "",
     "room": "UNKNOWN",
     "start": [
       2017,
@@ -1795,9 +1610,7 @@
       21,
       13,
       50
-    ],
-    "slug": "comment-hacker-la-webcam-de-votre-voisin-e-",
-    "id": "58da867076a8e700186bc35a"
+    ]
   },
   {
     "format": "WORKSHOP",
@@ -1817,8 +1630,6 @@
       12,
       777000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM5",
     "start": [
       2017,
@@ -1833,9 +1644,7 @@
       21,
       11,
       50
-    ],
-    "slug": "la-dataviz-avancee-sur-le-web-en-javascript-avec-d3-js",
-    "id": "58da867076a8e700186bc35b"
+    ]
   },
   {
     "format": "KEYNOTE",
@@ -1855,8 +1664,6 @@
       12,
       777000000
     ],
-    "description": "",
-    "video": "",
     "room": "AMPHI1",
     "start": [
       2017,
@@ -1871,9 +1678,7 @@
       21,
       13,
       25
-    ],
-    "slug": "revenu-universel-25-minutes-pour-tout-comprendre",
-    "id": "58da867076a8e700186bc35c"
+    ]
   },
   {
     "format": "TALK",
@@ -1893,8 +1698,6 @@
       12,
       778000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM1",
     "start": [
       2017,
@@ -1909,9 +1712,7 @@
       20,
       17,
       0
-    ],
-    "slug": "serverless-transition-du-monolithique-au-systeme-distribue",
-    "id": "58da867076a8e700186bc35d"
+    ]
   },
   {
     "format": "RANDOM",
@@ -1931,8 +1732,6 @@
       12,
       778000000
     ],
-    "description": "",
-    "video": "",
     "room": "UNKNOWN",
     "start": [
       2017,
@@ -1947,9 +1746,7 @@
       20,
       14,
       0
-    ],
-    "slug": "50-ans-de-programmation-toujours-vivant-",
-    "id": "58da867076a8e700186bc35e"
+    ]
   },
   {
     "format": "WORKSHOP",
@@ -1969,8 +1766,6 @@
       12,
       779000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM5",
     "start": [
       2017,
@@ -1985,9 +1780,7 @@
       20,
       18,
       0
-    ],
-    "slug": "deep-learning-pour-la-reconnaissance-de-chatons",
-    "id": "58da867076a8e700186bc35f"
+    ]
   },
   {
     "format": "TALK",
@@ -2008,7 +1801,6 @@
       785000000
     ],
     "description": "TODO",
-    "video": "",
     "room": "AMPHI2",
     "start": [
       2017,
@@ -2023,9 +1815,7 @@
       21,
       16,
       50
-    ],
-    "slug": "entrepreneur-dans-l-ame-comment-passer-de-l-idee-au-concret-",
-    "id": "58da867076a8e700186bc371"
+    ]
   },
   {
     "format": "KEYNOTE",
@@ -2046,7 +1836,6 @@
       493000000
     ],
     "description": "A l'automne 2011 un petit groupe de citoyens lyonnais eurent l'id\u00e9e folle de cr\u00e9er une nouvelle monnaie. Quelques ann\u00e9es plus tard La Gonette voyait le jour pour inonder les porte monnaies des gones et des fenottes. Mais au fait, a quoi \u00e7a sert de cr\u00e9er une monnaie locale?",
-    "video": "",
     "room": "AMPHI1",
     "start": [
       2017,
@@ -2061,9 +1850,7 @@
       20,
       9,
       20
-    ],
-    "slug": "la-naissance-de-la-gonette",
-    "id": "58dc0e9b8ee01e0011a0ab97"
+    ]
   },
   {
     "format": "TALK",
@@ -2084,8 +1871,6 @@
       12,
       779000000
     ],
-    "description": "",
-    "video": "",
     "room": "AMPHI2",
     "start": [
       2017,
@@ -2100,9 +1885,7 @@
       20,
       15,
       50
-    ],
-    "slug": "l-agilite-un-anarchisme-incompatible-avec-l-entreprise-",
-    "id": "58da867076a8e700186bc360"
+    ]
   },
   {
     "format": "RANDOM",
@@ -2122,8 +1905,6 @@
       12,
       780000000
     ],
-    "description": "",
-    "video": "",
     "room": "UNKNOWN",
     "start": [
       2017,
@@ -2138,9 +1919,7 @@
       20,
       14,
       0
-    ],
-    "slug": "le-logiciel-libre-et-leurs-communautes-peuvent-ils-contribuer-a-un-monde-meilleur-",
-    "id": "58da867076a8e700186bc361"
+    ]
   },
   {
     "format": "WORKSHOP",
@@ -2160,8 +1939,6 @@
       12,
       780000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM3",
     "start": [
       2017,
@@ -2176,9 +1953,7 @@
       20,
       12,
       0
-    ],
-    "slug": "jenkins-moderne-et-livraison-continue-ecrivons-ensemble-des-pipeline-declaratifs-pour-votre-application",
-    "id": "58da867076a8e700186bc362"
+    ]
   },
   {
     "format": "TALK",
@@ -2199,8 +1974,6 @@
       12,
       780000000
     ],
-    "description": "",
-    "video": "",
     "room": "AMPHI2",
     "start": [
       2017,
@@ -2215,9 +1988,7 @@
       20,
       12,
       0
-    ],
-    "slug": "progressive-web-apps-au-dela-du-buzzword",
-    "id": "58da867076a8e700186bc363"
+    ]
   },
   {
     "format": "TALK",
@@ -2237,8 +2008,6 @@
       12,
       781000000
     ],
-    "description": "",
-    "video": "",
     "room": "AMPHI1",
     "start": [
       2017,
@@ -2253,9 +2022,7 @@
       20,
       12,
       0
-    ],
-    "slug": "spring-boot-2",
-    "id": "58da867076a8e700186bc364"
+    ]
   },
   {
     "format": "TALK",
@@ -2275,8 +2042,6 @@
       12,
       781000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM1",
     "start": [
       2017,
@@ -2291,9 +2056,7 @@
       20,
       12,
       0
-    ],
-    "slug": "il-est-temps-de-repenser-notre-maniere-de-travailler-",
-    "id": "58da867076a8e700186bc365"
+    ]
   },
   {
     "format": "RANDOM",
@@ -2313,8 +2076,6 @@
       12,
       781000000
     ],
-    "description": "",
-    "video": "",
     "room": "UNKNOWN",
     "start": [
       2017,
@@ -2329,9 +2090,7 @@
       21,
       13,
       50
-    ],
-    "slug": "les-tests-utilisateurs-du-pauvre",
-    "id": "58da867076a8e700186bc366"
+    ]
   },
   {
     "format": "KEYNOTE",
@@ -2351,8 +2110,6 @@
       12,
       782000000
     ],
-    "description": "",
-    "video": "",
     "room": "AMPHI1",
     "start": [
       2017,
@@ -2367,9 +2124,7 @@
       20,
       9,
       50
-    ],
-    "slug": "l-orchestre-un-modele-de-gestion-de-groupe-",
-    "id": "58da867076a8e700186bc367"
+    ]
   },
   {
     "format": "TALK",
@@ -2389,8 +2144,6 @@
       12,
       782000000
     ],
-    "description": "",
-    "video": "",
     "room": "AMPHI2",
     "start": [
       2017,
@@ -2405,9 +2158,7 @@
       20,
       11,
       0
-    ],
-    "slug": "rust-for-java-developers",
-    "id": "58da867076a8e700186bc368"
+    ]
   },
   {
     "format": "TALK",
@@ -2427,8 +2178,6 @@
       12,
       783000000
     ],
-    "description": "",
-    "video": "",
     "room": "AMPHI2",
     "start": [
       2017,
@@ -2443,9 +2192,7 @@
       21,
       14,
       40
-    ],
-    "slug": "specifications-en-milieu-agile",
-    "id": "58da867076a8e700186bc36a"
+    ]
   },
   {
     "format": "RANDOM",
@@ -2465,8 +2212,6 @@
       12,
       783000000
     ],
-    "description": "",
-    "video": "",
     "room": "UNKNOWN",
     "start": [
       2017,
@@ -2481,9 +2226,7 @@
       21,
       13,
       50
-    ],
-    "slug": "pourquoi-tous-les-developpeurs-sont-ils-barbus-",
-    "id": "58da867076a8e700186bc36b"
+    ]
   },
   {
     "format": "TALK",
@@ -2503,8 +2246,6 @@
       12,
       784000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM1",
     "start": [
       2017,
@@ -2519,9 +2260,7 @@
       20,
       11,
       0
-    ],
-    "slug": "un-language-que-tout-le-monde-elm",
-    "id": "58da867076a8e700186bc36c"
+    ]
   },
   {
     "format": "RANDOM",
@@ -2541,8 +2280,6 @@
       12,
       784000000
     ],
-    "description": "",
-    "video": "",
     "room": "UNKNOWN",
     "start": [
       2017,
@@ -2557,9 +2294,7 @@
       21,
       13,
       50
-    ],
-    "slug": "eco-conception-web",
-    "id": "58da867076a8e700186bc36d"
+    ]
   },
   {
     "format": "RANDOM",
@@ -2579,8 +2314,6 @@
       12,
       784000000
     ],
-    "description": "",
-    "video": "",
     "room": "UNKNOWN",
     "start": [
       2017,
@@ -2595,9 +2328,7 @@
       20,
       14,
       0
-    ],
-    "slug": "developpeur-sans-domicile-fixe",
-    "id": "58da867076a8e700186bc36e"
+    ]
   },
   {
     "format": "TALK",
@@ -2617,8 +2348,6 @@
       12,
       785000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM2",
     "start": [
       2017,
@@ -2633,9 +2362,7 @@
       20,
       14,
       50
-    ],
-    "slug": "des-robots-qui-s-adaptent-a-leur-environnement",
-    "id": "58da867076a8e700186bc36f"
+    ]
   },
   {
     "format": "TALK",
@@ -2655,8 +2382,6 @@
       12,
       786000000
     ],
-    "description": "",
-    "video": "",
     "room": "AMPHI1",
     "start": [
       2017,
@@ -2671,9 +2396,7 @@
       21,
       15,
       40
-    ],
-    "slug": "project-amber-what-s-new-in-java-10",
-    "id": "58da867076a8e700186bc372"
+    ]
   },
   {
     "format": "TALK",
@@ -2693,8 +2416,6 @@
       12,
       786000000
     ],
-    "description": "",
-    "video": "",
     "room": "AMPHI2",
     "start": [
       2017,
@@ -2709,9 +2430,7 @@
       21,
       15,
       40
-    ],
-    "slug": "email-how-hard-could-it-be-",
-    "id": "58da867076a8e700186bc373"
+    ]
   },
   {
     "format": "TALK",
@@ -2732,8 +2451,6 @@
       12,
       786000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM2",
     "start": [
       2017,
@@ -2748,9 +2465,7 @@
       21,
       10,
       50
-    ],
-    "slug": "cloud-encryption-with-cryptomator-privacy-protection-for-everyone",
-    "id": "58da867076a8e700186bc374"
+    ]
   },
   {
     "format": "TALK",
@@ -2770,8 +2485,6 @@
       12,
       787000000
     ],
-    "description": "",
-    "video": "",
     "room": "AMPHI1",
     "start": [
       2017,
@@ -2786,9 +2499,7 @@
       20,
       14,
       50
-    ],
-    "slug": "trouvez-vos-cadences-et-faite-un-pas-vers-le-continuous-delivery-",
-    "id": "58da867176a8e700186bc376"
+    ]
   },
   {
     "format": "TALK",
@@ -2809,8 +2520,6 @@
       12,
       788000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM2",
     "start": [
       2017,
@@ -2825,9 +2534,7 @@
       20,
       18,
       0
-    ],
-    "slug": "legacy-club",
-    "id": "58da867176a8e700186bc377"
+    ]
   },
   {
     "format": "TALK",
@@ -2847,8 +2554,6 @@
       12,
       788000000
     ],
-    "description": "",
-    "video": "",
     "room": "UNKNOWN",
     "start": [
       2017,
@@ -2863,9 +2568,7 @@
       20,
       14,
       40
-    ],
-    "slug": "notes-on-type-theory-for-absolute-beginners",
-    "id": "58da867176a8e700186bc378"
+    ]
   },
   {
     "format": "WORKSHOP",
@@ -2885,8 +2588,6 @@
       12,
       788000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM5",
     "start": [
       2017,
@@ -2901,9 +2602,7 @@
       21,
       15,
       40
-    ],
-    "slug": "ctf-sortez-le-mr-robot-qui-est-en-vous-",
-    "id": "58da867176a8e700186bc379"
+    ]
   },
   {
     "format": "KEYNOTE",
@@ -2924,7 +2623,6 @@
       787000000
     ],
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "video": "",
     "room": "UNKNOWN",
     "start": [
       2017,
@@ -2939,9 +2637,7 @@
       20,
       13,
       40
-    ],
-    "slug": "qwant",
-    "id": "58da867176a8e700186bc375"
+    ]
   },
   {
     "format": "TALK",
@@ -2961,8 +2657,6 @@
       12,
       766000000
     ],
-    "description": "",
-    "video": "",
     "room": "ROOM1",
     "start": [
       2017,
@@ -2977,9 +2671,7 @@
       21,
       14,
       40
-    ],
-    "slug": "la-theorie-des-graphes-appliquee-a-git-",
-    "id": "58da867076a8e700186bc341"
+    ]
   },
   {
     "format": "TALK",
@@ -2999,8 +2691,6 @@
       12,
       785000000
     ],
-    "description": "",
-    "video": "",
     "room": "AMPHI1",
     "start": [
       2017,
@@ -3015,9 +2705,7 @@
       20,
       15,
       50
-    ],
-    "slug": "the-future-of-kotlin-how-agile-can-language-development-be-",
-    "id": "58da867076a8e700186bc370"
+    ]
   },
   {
     "format": "KEYNOTE",
@@ -3038,7 +2726,6 @@
       841000000
     ],
     "description": "TODO",
-    "video": "",
     "room": "AMPHI1",
     "start": [
       2017,
@@ -3053,9 +2740,7 @@
       21,
       9,
       40
-    ],
-    "slug": "regen-villages",
-    "id": "58dc166f8ee01e0011a0ab9a"
+    ]
   },
   {
     "format": "KEYNOTE",
@@ -3077,7 +2762,6 @@
       336000000
     ],
     "description": "TODO",
-    "video": "",
     "room": "AMPHI1",
     "start": [
       2017,
@@ -3092,8 +2776,6 @@
       20,
       17,
       25
-    ],
-    "slug": "nety-mila",
-    "id": "58dc1a808ee01e0011a0ab9b"
+    ]
   }
 ]
