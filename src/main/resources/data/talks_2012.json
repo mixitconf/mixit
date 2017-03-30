@@ -24,7 +24,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "Exp\u00e9rience des billes rouges",
     "summary": "L\u2019exp\u00e9rience des billes rouges (the red bead experiment) est un atelier con\u00e7u par William Edwards Deming.",
     "speakerIds": [
@@ -47,7 +47,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "Sky Castle Game",
     "summary": "Le Sky Castle Game est bas\u00e9 sur le Kanban Game de Jon Jagger.",
     "speakerIds": [
@@ -72,7 +72,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "Dans la peau du Manager Agile",
     "summary": "L\u2019\u00e8re du management 3.0 (agile et Lean) est annonc\u00e9e. Entre opportunit\u00e9s et n\u00e9cessit\u00e9, le m\u00e9tier de manager est en pleine \u00e9volution...",
     "speakerIds": [
@@ -96,7 +96,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "Anatomie d'une mission agile, saison 2",
     "summary": "La r\u00e9alit\u00e9 agile : retour d\u2019exp\u00e9rience sur le d\u00e9ploiement agile au sein d\u2019un grand \u00e9diteur de logiciel dans le milieu bancaire. ",
     "speakerIds": [
@@ -120,7 +120,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "Hibernate Search: dans ta face(ting)",
     "summary": "Hibernate Search s'appuie sur Lucene pour offrir aux applications Hibernate un moteur de recherche puissant et intuitif \u00e0 ses utilisateurs.",
     "speakerIds": [
@@ -143,7 +143,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "Social Architecture 101",
     "summary": "Introducing Social Architecture: how to design and build on-line communities.",
     "speakerIds": [
@@ -166,7 +166,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "ZeroMQ is Magic from the Future",
     "summary": "An introduction to ZeroMQ, the fast, smart, and massively scalable connectivity layer for applications in any language, on any platform.",
     "speakerIds": [
@@ -189,7 +189,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "Un atelier Th\u00e9\u00e2tre d'Impro pour jouer \u00e0 \u00eatre Agile",
     "summary": "Le th\u00e9\u00e2tre d'impro c'est \u00eatre r\u00e9actif au changement pour \u00eatre au service d'une histoire qui doit avancer. Ca ne vous rappelle rien ?",
     "speakerIds": [
@@ -212,7 +212,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "Manipulation de bytecode : d\u00e9mocratisons la magie",
     "summary": "Comprendre le bytecode, sa manipulation, et se rendre compte que cela est fort utile.",
     "speakerIds": [
@@ -236,7 +236,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "Stresser son application avec Gatling",
     "summary": "Gatling est un injecteur de charge l\u00e9ger et ultra-performant.",
     "speakerIds": [
@@ -259,7 +259,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "Workshop \"Clojure hands on\"",
     "summary": "Plut\u00f4t que d'assister \u00e0 de longs discours, venez t\u00e2ter du Clojure par vous-m\u00eames en participant \u00e0 un Workshop.",
     "speakerIds": [
@@ -283,7 +283,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "Kanban pour les nuls!",
     "summary": "Et si on vous racontait les principes fondamentaux qui se cachent derri\u00e8re Kanban ? Beaucoup plus qu'un tableau de post-it !",
     "speakerIds": [
@@ -307,7 +307,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "Animez vos pages HTML5 avec CSS3",
     "summary": "5' de coding live pour animer un cube en CSS 3D suivi des explications techniques",
     "speakerIds": [
@@ -331,7 +331,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "Software Development Workflow at Google",
     "summary": "We'll look behind the scenes of day-to-day development workflow in the engineering teams at Google.",
     "speakerIds": [
@@ -354,7 +354,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "Automatisation des tests: le mythe du ROI",
     "summary": "Cette session a pour but de pr\u00e9senter la dynamique \u00e9conomique d\u2019automatisation des tests qui s'apparente au mod\u00e8le des options financi\u00e8res",
     "speakerIds": [
@@ -378,7 +378,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "Utilisateur, mon amour, ma migraine",
     "summary": "Enrichir sa vision pour enrichir son produit: s'orienter vers un design centr\u00e9 sur l'utilisateur. Pourquoi, comment, quels r\u00e9sultats esp\u00e9rer",
     "speakerIds": [
@@ -402,7 +402,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "Le DotGame, jouer la performance ",
     "summary": "Le DotGame illustre l'impact de l'initiative et la collaboration dans la croissance de la performance de l'\u00e9quipe",
     "speakerIds": [
@@ -425,7 +425,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "The Node.js Scalability Myth",
     "summary": "This talk will explore the idea of node.js being more scalable than other technologies, how much of it is true, and how much you should care",
     "speakerIds": [
@@ -448,7 +448,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "Lean Startup, l'entrepreneuriat agile",
     "summary": "Mise au point en 2008 et appliqu\u00e9e depuis dans de nombreuses startups, le lean startup bouleverse les r\u00e8gles de l'entrepreneuriat.",
     "speakerIds": [
@@ -472,7 +472,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "Selenium WebDriver, TestNG et Selenium Grid",
     "summary": "Comment tester une application web avec WebDriver, TestNG et Selenium Grid. Mise en place, bonnes pratiques ...",
     "speakerIds": [
@@ -495,7 +495,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "BigData \/ Hadoop, exploiter des t\u00e9raoctets de logs",
     "summary": "Vivez la mise en place d'une infrastucture compl\u00e8te, articul\u00e9e autour de Hadoop, chez un des acteurs majeurs du web-commerce europ\u00e9en.",
     "speakerIds": [
@@ -519,7 +519,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "MongoDB, Mustache... Vers la mort du cache ?",
     "summary": "Le caching a sauv\u00e9 les architectes web des ann\u00e9es 2000, au prix souvent d'une \u00e9norme complexit\u00e9. Peux-t-on, et doit-on tourner cette page ?",
     "speakerIds": [
@@ -542,7 +542,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "Painless Web App Development with Backbone",
     "summary": "You know how you always mean to apply proper MVC principles but end up with a mess of jQuery instead? No more excuses: now there's Backbone.",
     "speakerIds": [
@@ -566,7 +566,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "Play 2.0",
     "summary": "Play 2.0 vient de sortir, il est tout frais, tout beau, et s\u2019utilise en Java et Scala",
     "speakerIds": [
@@ -589,7 +589,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "An overview of JavaScript",
     "summary": "This talk will provide a quick overview of JavaScript for people who already know how to program in an object-oriented language.",
     "speakerIds": [
@@ -613,7 +613,7 @@
   },
   {
     "format": "TALK",
-    "event": "mixit12",
+    "event": "2012",
     "title": "DevOps in real life at Kelkoo",
     "summary": "Comment Kelkoo a impl\u00e9ment\u00e9 les principes DevOPS dans le d\u00e9ploiement de ses applications (10 releases par semaine sur 300 serveurs)",
     "speakerIds": [
