@@ -8,7 +8,6 @@ import org.junit.Test
 import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.web.reactive.function.client.bodyToFlux
 import org.springframework.web.reactive.function.client.bodyToMono
-import org.springframework.web.reactive.function.client.exchange
 import reactor.core.publisher.test
 import reactor.core.publisher.toMono
 
@@ -19,7 +18,8 @@ class UserIntegrationTests : AbstractIntegrationTests() {
     @Test
     fun `Create a new user`() {
         client.post().uri("/api/user/").accept(APPLICATION_JSON).contentType(APPLICATION_JSON)
-                .exchange(User("brian", "Brian", "Clozel", "bc@gm.com").toMono())
+                .body(User("brian", "Brian", "Clozel", "bc@gm.com").toMono())
+                .exchange()
                 .flatMap { it.bodyToMono<User>() }
                 .test()
                 .consumeNextWith { assertEquals("brian", it.login) }
