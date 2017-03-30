@@ -29456,8 +29456,8 @@
     {
         "company": "",
         "description": {
-            "ENGLISH": "Eric Léandri",
-            "FRENCH": "Eric Léandri"
+            "ENGLISH": "",
+            "FRENCH": "Expert en sécurité informatique et télécoms, Éric dispose de 20 ans d’expérience dans le déploiement de plateformes IT à grande échelle (BT, General Electric…) et dans l’entrepreneuriat (Mobilegov SaaS, Trustmission…). En 2010, il précise sa vision d’un moteur de recherche européen ambitieux, qui décloisonnerait le Web et respecterait à la fois les libertés des utilisateurs et la stabilité de l’écosystème numérique. Il concrétise cette vision en cofondant Qwant dont il prend la direction, puis la présidence depuis mai 2016."
         },
         "firstname": "Eric",
         "lastname": "Leandri",
@@ -29605,19 +29605,6 @@
         "links": [],
         "login": "markus.kreusch",
         "logoUrl": "",
-        "role": "USER"
-  },
-  {
-        "company": "Qwant",
-        "description": {
-            "FRENCH": "Éric Leandri is the CEO of Qwant.",
-            "ENGLISH": "Éric Leandri is the CEO of Qwant."
-        },
-        "firstname": "Éric",
-        "lastname": "Leandri",
-        "legacyId": null,
-        "links": [],
-        "login": "leandri.eric",
         "role": "USER"
   },
   {
