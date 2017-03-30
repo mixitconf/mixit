@@ -41,6 +41,12 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
 
             // Talks
             GET("/2017") { talkHandler.findByEventView(2017, it) }
+            GET("/2017/makers") { talkHandler.findByEventView(2017, it, "makers") }
+            GET("/2017/aliens") { talkHandler.findByEventView(2017, it, "aliens") }
+            GET("/2017/tech") { talkHandler.findByEventView(2017, it, "tech") }
+            GET("/2017/design") { talkHandler.findByEventView(2017, it, "design") }
+            GET("/2017/hacktivism") { talkHandler.findByEventView(2017, it, "hacktivism") }
+            GET("/2017/learn") { talkHandler.findByEventView(2017, it, "learn") }
             GET("/2017/{slug}") { talkHandler.findOneView(2017, it) }
             GET("/2016") { talkHandler.findByEventView(2016, it) }
             GET("/2016/{slug}") { talkHandler.findOneView(2016, it) }

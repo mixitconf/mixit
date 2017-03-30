@@ -17,9 +17,9 @@ class TalkHandler(val repository: TalkRepository,
                   val markdownConverter: MarkdownConverter,
                   val properties: MixitProperties) {
 
-    fun findByEventView(year: Int, req: ServerRequest) = ok().render("talks", mapOf(
+    fun findByEventView(year: Int, req: ServerRequest, topic: String? = null) = ok().render("talks", mapOf(
             Pair("talks", repository
-                    .findByEvent(year.toString())
+                    .findByEvent(year.toString(), topic)
                     .collectList()
                     .then { talks -> userRepository
                             .findMany(talks.flatMap(Talk::speakerIds))

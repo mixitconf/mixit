@@ -33,8 +33,12 @@ class TalkRepository(val template: ReactiveMongoTemplate) {
 
     fun count() = template.count<Talk>()
 
-    fun findByEvent(eventId: String) =
-        template.find<Talk>(Query(where("event").`is`(eventId)))
+    fun findByEvent(eventId: String, topic: String? = null): Flux<Talk> {
+        val criteria = where("event").`is`(eventId)
+        if (topic != null) criteria.and("topic").`is`(topic)
+        return template.find<Talk>(Query(criteria))
+    }
+
 
 
     fun findAll(): Flux<Talk> = template.findAll<Talk>()
