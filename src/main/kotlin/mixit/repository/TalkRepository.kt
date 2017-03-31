@@ -11,6 +11,8 @@ import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 import mixit.util.*
 import org.slf4j.LoggerFactory
+import org.springframework.data.domain.Sort.*
+import org.springframework.data.domain.Sort.Direction.*
 import org.springframework.data.mongodb.core.query.Criteria.*
 
 
@@ -36,12 +38,11 @@ class TalkRepository(val template: ReactiveMongoTemplate) {
     fun findByEvent(eventId: String, topic: String? = null): Flux<Talk> {
         val criteria = where("event").`is`(eventId)
         if (topic != null) criteria.and("topic").`is`(topic)
-        return template.find<Talk>(Query(criteria))
+        return template.find<Talk>(Query(criteria).with(by(Order(ASC, "start"))))
     }
 
 
-
-    fun findAll(): Flux<Talk> = template.findAll<Talk>()
+    fun findAll(): Flux<Talk> = template.find<Talk>(Query().with(by(Order(ASC, "start"))))
 
     fun findOne(id: String) = template.findById<Talk>(id)
 
