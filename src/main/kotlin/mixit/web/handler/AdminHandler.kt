@@ -36,7 +36,7 @@ class AdminHandler(val ticketRepository: TicketRepository,
 
     fun adminTalks(req: ServerRequest) = ok().render("admin-talks", mapOf(
             Pair("talks", talkRepository
-                    .findByEvent("mixit17")
+                    .findByEvent("2017")
                     .collectList()
                     .then { talks -> userRepository
                             .findMany(talks.flatMap(Talk::speakerIds))
