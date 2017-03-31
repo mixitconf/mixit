@@ -7,8 +7,6 @@ import org.springframework.context.MessageSource
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.DependsOn
-import org.springframework.core.Ordered
-import org.springframework.core.annotation.Order
 import org.springframework.core.io.ClassPathResource
 import org.springframework.http.MediaType.*
 import org.springframework.web.reactive.function.server.*
@@ -33,7 +31,6 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
 
     @Bean
     @DependsOn("databaseInitializer")
-    @Order(Ordered.HIGHEST_PRECEDENCE)
     fun websiteRouter() = router {
         accept(TEXT_HTML).nest {
             GET("/") { sponsorHandler.viewWithSponsors("home", null, it) }
@@ -97,7 +94,7 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
     }
 
     @Bean
-    @Order(Ordered.LOWEST_PRECEDENCE)
+    @DependsOn("websiteRouter")
     fun resourceRouter() = resources("/**", ClassPathResource("static/"))
 
 }
