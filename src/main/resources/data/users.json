@@ -16845,8 +16845,8 @@
     {
         "company": "",
         "description": {
-            "ENGLISH": "Software craftsman. Passionate and enthusiastic about what I do. Enterprise Java, Open Source. Spring framework committer, Maven PMC member.",
-            "FRENCH": "Software craftsman. Passionate and enthusiastic about what I do. Enterprise Java, Open Source. Spring framework committer, Maven PMC member."
+            "ENGLISH": "Stéphane has a thing for code quality and robustness. He's been spreading the word for more than ten years while developing large scale Java enterprise applications in the geospatial, financial, or logistics sectors. An Apache Maven PMC member since 2006, he joined the core Spring Framework development team early 2014, being one of the main contributors to both Spring Framework and Spring Boot since. During his free time, he loves traveling around the world.",
+            "FRENCH": "Stéphane travaille sur Spring Boot, Spring Framework & start.spring.io chez Pivotal. Durant son temps libre, il adore voyager un peu partout dans le monde."
         },
         "firstname": "St\u00e9phane",
         "lastname": "Nicoll",
