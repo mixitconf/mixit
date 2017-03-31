@@ -2825,8 +2825,8 @@
     "format": "KEYNOTE",
     "event": "2017",
     "topic": "aliens",
-    "title": "Nety & Mila",
-    "summary": "A venir ...",
+    "title": "Nety & Mila, female coders in Indonesia",
+    "summary": "It's no secret that there's a gender gap in coding. In Indonesia, the proportion of coders is 85% male and 15% female. Indonesia has 10th highest number of female coders in the world (HackerRank, March 21, 2017).\r\n\r\nNety & Mila are female developers from Indonesia.\r\nThey both are members of JUG Indonesia, founders of Duchess Indonesia, and promotors of JENI (Jeni Education Network Indonesia). JENI is a curriculum created by JUG Indonesia on 2005 and officially adopted by the Ministry of National Education on 2006.\r\n\r\nThey will share how they first get into programming, then why they decided to make coding as a career.\r\nApart from being a developer, they also have a big concern in IT education in Indonesia, especially in vocational high school students, because they’re also one of the graduates. But in fact, there is a gap between the IT curriculum in vocational school and the industry needs. So to reduce the gap, they held a voluntary roadshow between October 2012 and March 2013 to educate the students with one day free Java training. They visited 32 vocational high schools in 4 cities in Indonesia, by motorcycle, with the aim to teach additional knowledge to IT students, as well as to check on the progress of JENI (Java Education Network Indonesia).",
     "speakerIds": [
       "herawaty.nety",
       "yuliani.mila"
