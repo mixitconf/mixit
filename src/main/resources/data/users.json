@@ -29409,20 +29409,6 @@
     {
         "company": "",
         "description": {
-            "ENGLISH": "Bart Butler",
-            "FRENCH": "Bart Butler"
-        },
-        "firstname": "Bart",
-        "lastname": "Butler",
-        "legacyId": null,
-        "links": [],
-        "login": "bart.butler",
-        "emailHash": "4e42cf3c48652a6e5310e0b28f6edf53",
-        "role": "USER"
-    },
-    {
-        "company": "",
-        "description": {
             "ENGLISH": "Markus Kreusch",
             "FRENCH": "Markus Kreusch"
         },
