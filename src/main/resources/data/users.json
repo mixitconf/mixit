@@ -10277,10 +10277,10 @@
         "role": "USER"
     },
     {
-        "company": "",
+        "company": "Scopyleft",
         "description": {
-            "ENGLISH": "Web dev Python/Dj < PHP/Sf \u00e0 Montpellier",
-            "FRENCH": "Web dev Python/Dj < PHP/Sf \u00e0 Montpellier"
+            "ENGLISH": "Nomad web developer at [Scopyleft](http://scopyleft.fr/)",
+            "FRENCH": "Développeur Web nomade chez [Scopyleft](http://scopyleft.fr/)"
         },
         "firstname": "Vincent",
         "lastname": "Agnano",
