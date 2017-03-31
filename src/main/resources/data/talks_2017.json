@@ -2471,7 +2471,7 @@
     "format": "TALK",
     "event": "2017",
     "topic": "hacktivism",
-    "title": "ProtonMail: How Hard Could It Be?",
+    "title": "Email: How Hard Could It Be?",
     "summary": "Over the past 3 years, ProtonMail has grown into the world\u2019s largest encrypted email service, with over 2 million users. I will discuss the benefits and challenges of working in the open and federated email space, the technical and usability hurdles surrounding encrypted email, and the importance of security-first development in the age of data breaches.",
     "speakerIds": [
       "bart.butler"
