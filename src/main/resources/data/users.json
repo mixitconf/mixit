@@ -2165,15 +2165,19 @@
         "role": "USER"
     },
     {
-        "company": "",
+        "company": "Pivotal",
         "description": {
-            "ENGLISH": "software development aficionado, Editor @InfoQFR, SDK Engineer at @Couchbase",
-            "FRENCH": "software development aficionado, Editor @InfoQFR, SDK Engineer at @Couchbase"
+            "ENGLISH": "Simon is member of the Spring steam at Pivotal, on project Reactor. Passionnate developer, he previously worked at Couchbase.",
+            "FRENCH": "Simon est membre de l'équipe Spring chez Pivotal, sur le projet Reactor. Développeur passionné, il a auparavant travaillé chez Couchbase (SDK Java réactif et ses intégrations dans l'éco-système Spring) mais aussi en SSII."
         },
         "firstname": "Simon",
         "lastname": "Basl\u00e9",
         "legacyId": 929,
-        "links": [],
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/simonbasle"
+            }],
         "login": "simonbasle",
         "emailHash": "fda20bf9d9c85c4390ca7237beba45a2",
         "role": "USER"
