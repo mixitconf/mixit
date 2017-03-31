@@ -30,7 +30,7 @@
                         <td>{{#speakers}}{{firstname}} {{lastname}} {{/speakers}}</td>
                         <td>
                             <a href="/admin/talks/edit/{{slug}}">{{#i18n}}admin.talks.actions.update{{/i18n}}</a> |
-                            <a href="/talk/{{slug}}" target="_blank">{{#i18n}}admin.talks.actions.view{{/i18n}}</a>
+                            <a href="/{{event}}/{{slug}}" target="_blank">{{#i18n}}admin.talks.actions.view{{/i18n}}</a>
                         </td>
                     </tr>
                     {{/talks}}
