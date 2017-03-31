@@ -8,13 +8,14 @@ buildscript {
     extra["spring.version"] = "5.0.0.BUILD-SNAPSHOT"
     extra["reactor-bom.version"] = "Aluminium-SR1"
     var kotlinVersion: String by extra
-    kotlinVersion = "1.1.1"
+    kotlinVersion = "1.1.2-eap-44"
 
     repositories {
         mavenCentral()
         maven { setUrl("https://plugins.gradle.org/m2/") }
         maven { setUrl("https://repo.spring.io/snapshot") }
         maven { setUrl("https://repo.spring.io/milestone") }
+        maven { setUrl("https://dl.bintray.com/kotlin/kotlin-eap-1.1" )}
     }
 
     dependencies {
@@ -41,6 +42,7 @@ repositories {
     mavenCentral()
     maven { setUrl("https://repo.spring.io/milestone") }
     maven { setUrl("https://repo.spring.io/snapshot") }
+    maven { setUrl("https://dl.bintray.com/kotlin/kotlin-eap-1.1" )}
 }
 
 tasks.withType<KotlinCompile> {
