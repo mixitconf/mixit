@@ -1,14 +1,9 @@
 package mixit
 
 import com.samskivert.mustache.Mustache
-import mixit.repository.EventRepository
-import mixit.repository.PostRepository
-import mixit.repository.TalkRepository
-import mixit.repository.UserRepository
 import mixit.util.MarkdownConverter
 import mixit.web.MixitWebFilter
 import mixit.util.run
-import org.springframework.boot.ApplicationRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.MessageSource
@@ -36,14 +31,6 @@ class MixitApplication {
     @Bean
     fun markdownConverter() = MarkdownConverter()
 
-    @Bean
-    fun dataInitializer(userRepository: UserRepository, eventRepository: EventRepository,
-                        talkRepository: TalkRepository, postRepository: PostRepository) = ApplicationRunner {
-        userRepository.initData()
-        eventRepository.initData()
-        talkRepository.initData()
-        postRepository.initData()
-    }
 }
 
 fun main(args: Array<String>) {

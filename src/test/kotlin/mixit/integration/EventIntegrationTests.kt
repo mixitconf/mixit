@@ -14,7 +14,7 @@ class EventIntegrationTests : AbstractIntegrationTests() {
 
     @Test
     fun `Find MiXiT 2016 event`() {
-        client.get().uri("/api/event/mixit16").accept(APPLICATION_JSON)
+        client.get().uri("/api/event/2016").accept(APPLICATION_JSON)
                 .exchange()
                 .then { r -> r.bodyToMono<Event>() }
                 .test()

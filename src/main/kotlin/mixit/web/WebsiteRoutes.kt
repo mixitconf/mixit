@@ -1,10 +1,12 @@
 package mixit.web
 
 import mixit.MixitProperties
+import mixit.repository.EventRepository
 import mixit.web.handler.*
 import org.springframework.context.MessageSource
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
+import org.springframework.context.annotation.DependsOn
 import org.springframework.core.Ordered
 import org.springframework.core.annotation.Order
 import org.springframework.core.io.ClassPathResource
@@ -25,9 +27,12 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
                     val sponsorHandler: SponsorHandler,
                     val ticketingHandler: TicketingHandler,
                     val messageSource: MessageSource,
-                    val properties: MixitProperties) {
+                    val properties: MixitProperties,
+                    val eventRepository: EventRepository) {
+
 
     @Bean
+    @DependsOn("databaseInitializer")
     @Order(Ordered.HIGHEST_PRECEDENCE)
     fun websiteRouter() = router {
         accept(TEXT_HTML).nest {
@@ -40,24 +45,16 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
             GET("/login", authenticationHandler::loginView)
 
             // Talks
-            GET("/2017") { talkHandler.findByEventView(2017, it) }
-            GET("/2017/makers") { talkHandler.findByEventView(2017, it, "makers") }
-            GET("/2017/aliens") { talkHandler.findByEventView(2017, it, "aliens") }
-            GET("/2017/tech") { talkHandler.findByEventView(2017, it, "tech") }
-            GET("/2017/design") { talkHandler.findByEventView(2017, it, "design") }
-            GET("/2017/hacktivism") { talkHandler.findByEventView(2017, it, "hacktivism") }
-            GET("/2017/learn") { talkHandler.findByEventView(2017, it, "learn") }
-            GET("/2017/{slug}") { talkHandler.findOneView(2017, it) }
-            GET("/2016") { talkHandler.findByEventView(2016, it) }
-            GET("/2016/{slug}") { talkHandler.findOneView(2016, it) }
-            GET("/2015") { talkHandler.findByEventView(2015, it) }
-            GET("/2015/{slug}") { talkHandler.findOneView(2015, it) }
-            GET("/2014") { talkHandler.findByEventView(2014, it) }
-            GET("/2014/{slug}") { talkHandler.findOneView(2014, it) }
-            GET("/2013") { talkHandler.findByEventView(2013, it) }
-            GET("/2013/{slug}") { talkHandler.findOneView(2013, it) }
-            GET("/2012") { talkHandler.findByEventView(2012, it) }
-            GET("/2012/{slug}") { talkHandler.findOneView(2012, it) }
+            eventRepository.findAll().toIterable().map { it.year }.forEach { year ->
+                GET("/$year") { talkHandler.findByEventView(year, it) }
+                GET("/$year/makers") { talkHandler.findByEventView(year, it, "makers") }
+                GET("/$year/aliens") { talkHandler.findByEventView(year, it, "aliens") }
+                GET("/$year/tech") { talkHandler.findByEventView(year, it, "tech") }
+                GET("/$year/design") { talkHandler.findByEventView(year, it, "design") }
+                GET("/$year/hacktivism") { talkHandler.findByEventView(year, it, "hacktivism") }
+                GET("/$year/learn") { talkHandler.findByEventView(year, it, "learn") }
+                GET("/$year/{slug}") { talkHandler.findOneView(year, it) }
+            }
 
             // Users
             (GET("/user/{login}") or GET("/sponsor/{login}")).invoke(userHandler::findOneView)
