@@ -782,7 +782,7 @@
     "format": "TALK",
     "event": "2017",
     "topic": "learn",
-    "title": "How to become an good Open Source contributor in 1 hour",
+    "title": "How to become a good Open Source contributor in 1 hour",
     "summary": "Etes-vous utilisateur de projets open source? Tr\u00e8s probablement... Mais avez-vous d\u00e9j\u00e0 song\u00e9 \u00e0 sauter le pas et devenir contributeur? La d\u00e9marche peut \u00eatre difficile pour plusieurs raisons: vous ne savez pas par o\u00f9 commencer, vous vous dites \"personne ne voudra de mes contributions\", vous avez d\u00e9j\u00e0 propos\u00e9 des patchs mais vous voulez augmenter vos chances ou devenir un meilleur contributeur... Et si vous avez vous m\u00eame d\u00e9marr\u00e9 un projet open source, peut-\u00eatre vous demandez-vous comment mieux le g\u00e9rer, \u00eatre plus encourageant envers les contributions? Ce talk vous montrera avec humour que participer \u00e0 l'open source et devenir un *bon* contributeur n'est pas si difficile.",
     "speakerIds": [
       "simonbasle"
