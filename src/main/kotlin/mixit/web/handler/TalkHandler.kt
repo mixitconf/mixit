@@ -8,6 +8,8 @@ import mixit.util.*
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.ServerResponse.*
+import org.springframework.web.util.UriUtils
+import java.nio.charset.StandardCharsets
 import java.time.LocalDateTime
 
 
@@ -27,14 +29,19 @@ class TalkHandler(val repository: TalkRepository,
                             .map { speakers -> talks.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] }, markdownConverter) } }
                     }),
             Pair("year", year),
-            Pair("title", "talks.html.title|$year")
+            Pair("title", "talks.html.title|$year"),
+            Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8))
     ))
 
 
 
     fun findOneView(year: Int, req: ServerRequest) = repository.findByEventAndSlug(year.toString(), req.pathVariable("slug")).then { talk ->
         userRepository.findMany(talk.speakerIds).collectList().then { speakers ->
-        ok().render("talk", mapOf(Pair("talk", talk.toDto(req.language(), speakers!!, markdownConverter)), Pair("speakers", speakers.map { it.toDto(req.language(), markdownConverter) }), Pair("title", "talk.html.title|${talk.title}")))
+        ok().render("talk", mapOf(
+                Pair("talk", talk.toDto(req.language(), speakers!!, markdownConverter)),
+                Pair("speakers", speakers.map { it.toDto(req.language(), markdownConverter) }),
+                Pair("title", "talk.html.title|${talk.title}"),
+                Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8))))
     }}
 
     fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("login")))
