@@ -37,6 +37,7 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
             GET("/about", globalHandler::findAboutView)
             GET("/news", newsHandler::newsView)
             GET("/ticketing", ticketingHandler::ticketing)
+            GET("/sponsors") { sponsorHandler.viewWithSponsors("sponsors", "sponsors.title", it) }
 
             // Authentication
             GET("/login", authenticationHandler::loginView)
@@ -52,10 +53,6 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
                 GET("/$year/learn") { talkHandler.findByEventView(year, it, "learn") }
                 GET("/$year/{slug}") { talkHandler.findOneView(year, it) }
             }
-
-            // Users
-            (GET("/user/{login}") or GET("/sponsor/{login}")).invoke(userHandler::findOneView)
-            GET("/sponsors") { sponsorHandler.viewWithSponsors("sponsors", "sponsors.title", it) }
 
             "/admin".nest {
                 GET("/", adminHandler::admin)
