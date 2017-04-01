@@ -29,8 +29,9 @@ class TalkHandler(val repository: TalkRepository,
                             .map { speakers -> talks.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] }, markdownConverter) } }
                     }),
             Pair("year", year),
-            Pair("title", "talks.html.title|$year"),
-            Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8))
+            Pair("title", when(topic) { null -> "talks.title.html|$year" else -> "talks.title.html.$topic|$year" }),
+            Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
+            Pair("topic", topic)
     ))
 
 
