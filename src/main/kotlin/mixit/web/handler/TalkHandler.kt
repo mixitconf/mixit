@@ -60,7 +60,7 @@ class TalkDto(
         val title: String,
         val summary: String,
         val speakers: List<User>,
-        val language: Language,
+        val language: String,
         val addedAt: LocalDateTime,
         val description: String?,
         val topic: String?,
@@ -71,10 +71,10 @@ class TalkDto(
         val date: String?
 )
 
-fun Talk.toDto(language: Language, speakers: List<User>, markdownConverter: MarkdownConverter) = TalkDto(
+fun Talk.toDto(lang: Language, speakers: List<User>, markdownConverter: MarkdownConverter) = TalkDto(
         id, slug, format, event, title,
-        markdownConverter.toHTML(summary), speakers, language, addedAt,
+        markdownConverter.toHTML(summary), speakers, language.name.toLowerCase(), addedAt,
         markdownConverter.toHTML(description), topic,
-        video, "rooms.${room?.name?.toLowerCase()}" , start?.formatTalkTime(language), end?.formatTalkTime(language),
-        start?.formatTalkDate(language)
+        video, "rooms.${room?.name?.toLowerCase()}" , start?.formatTalkTime(lang), end?.formatTalkTime(lang),
+        start?.formatTalkDate(lang)
 )
