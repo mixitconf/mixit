@@ -10,6 +10,7 @@ fun generateModel(baseUri: String, path: String, locale: Locale?, session: WebSe
         val username = session.getAttribute<String>("username")
         if (username.isPresent) {
             this["username"] = username.get()
+            if (username.get() == "mixit") this["admin"] = true
         }
         if (locale != null) {
             this["locale"] = locale.toString()
