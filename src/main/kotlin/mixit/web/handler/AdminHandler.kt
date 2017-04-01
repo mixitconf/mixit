@@ -112,6 +112,14 @@ class AdminHandler(val ticketRepository: TicketRepository,
                     Pair(ENGLISH, ENGLISH == talk.language),
                     Pair(FRENCH, FRENCH == talk.language)
             )),
+            Pair("topics", listOf(
+                    Pair("makers", "makers" == talk.topic),
+                    Pair("aliens", "aliens" == talk.topic),
+                    Pair("tech", "tech" == talk.topic),
+                    Pair("design", "design" == talk.topic),
+                    Pair("hacktivism", "hacktivism" == talk.topic),
+                    Pair("learn", "learn" == talk.topic)
+            )),
             Pair("speakers", talk.speakerIds.joinToString(separator = ","))
 
     ))

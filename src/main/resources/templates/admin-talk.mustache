@@ -31,8 +31,12 @@
                         <div class="row">
                             <div class="large-12 columns">
                                 <label>
-                                    {{#i18n}}admin.talk.form.title{{/i18n}}
-                                    <input type="text" name="topic" value="{{talk.topic}}" required/>
+                                    {{#i18n}}admin.talk.form.topic{{/i18n}}
+                                    <select name="topic" required>
+                                        {{#topics}}
+                                            <option value="{{first}}"{{#second}} selected{{/second}}>{{first}}</option>
+                                        {{/topics}}
+                                    </select>
                                 </label>
                             </div>
                         </div>
