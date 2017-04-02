@@ -10,7 +10,7 @@
 .mxt-img--speakers {
 	margin-bottom: 0.3em;
 	width: 100%;
-  height: auto;
+    height: auto;
 	display: block;
 	filter: grayscale(70%);
 	&:hover {
@@ -23,6 +23,8 @@
   border: 7px solid $forth-color;
   margin-bottom: 1em;
   background: $forth-color none repeat scroll 0 0;
+  width: 100px;
+  height: 100px;
 }
 
 

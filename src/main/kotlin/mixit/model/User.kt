@@ -13,6 +13,7 @@ data class User(
         val company: String? = null,
         val description: Map<Language, String> = emptyMap(),
         val emailHash: String? = null,
+        val photoUrl: String? = null,
         val role: Role = Role.USER,
         val links: List<Link> = emptyList(),
         val legacyId: Long? = null

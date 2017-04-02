@@ -61,6 +61,14 @@
                         <div class="row">
                             <div class="large-12 columns">
                                 <label>
+                                    {{#i18n}}admin.user.form.photoUrl{{/i18n}}
+                                    <input type="text" name="photoUrl" value="{{#user.photoUrl}}{{user.photoUrl}}{{/user.photoUrl}}"/>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <label>
                                     {{#i18n}}admin.user.form.company{{/i18n}}
                                     <input type="text" name="company" value="{{#user.company}}{{user.company}}{{/user.company}}"/>
                                 </label>

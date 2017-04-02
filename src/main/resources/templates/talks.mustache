@@ -38,7 +38,7 @@
                     <ul class="menu vertical">
                         {{#speakers}}
                             <li class="menu-text">
-                                <div class="mxt-img-avatar__wrapper"><img src="{{^emailHash}}/images/png/mxt-icon--default-avatar.png{{/emailHash}}{{#emailHash}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/emailHash}}" class="mxt-img-avatar__speaker"></div>
+                                <div class="mxt-img-avatar__wrapper"><img src="{{^emailHash}}{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{/emailHash}}{{#emailHash}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/emailHash}}" class="mxt-img-avatar__speaker"></div>
                                 <span>{{firstname}}&nbsp;{{lastname}}</span>
                             </li>
                         {{/speakers}}
