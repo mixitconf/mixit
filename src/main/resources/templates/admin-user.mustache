@@ -1,0 +1,125 @@
+{{> header}}
+
+<div class="mxt-wrapper--page-title">
+    <div class="row">
+        <div class="columns large-8 large-offset-2">
+            <h1 class="text-center">{{#i18n}}admin.user.title{{/i18n}}</h1>
+        </div>
+    </div>
+</div>
+
+<div class="mxt-wrapper--page-content">
+    <div class="callout">
+        <div class="large-12 large-centered columns">
+            <div class="row">
+                <div class="large-12 columns">
+                    {{#user.login}}<form action="/admin/user/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.user.delete.confirm{{/i18n}}');">
+                        <input type="hidden" name="login" value="{{user.login}}"/>
+                        <input type="submit" class="button expand" value="{{#i18n}}admin.user.delete{{/i18n}}"/>
+                    </form>{{/user.login}}
+                    <form action="/admin/users" method="post">
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <label>
+                                    {{#i18n}}admin.user.form.login{{/i18n}}
+                                    <input type="text" name="login" value="{{user.login}}" required/>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <label>
+                                    {{#i18n}}admin.user.form.firstname{{/i18n}}
+                                    <input type="text" name="firstname" value="{{user.firstname}}" required/>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <label>
+                                    {{#i18n}}admin.user.form.lastname{{/i18n}}
+                                    <input type="text" name="lastname" value="{{user.lastname}}" required/>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <label>
+                                    {{#i18n}}admin.user.form.email{{/i18n}}
+                                    <input type="text" name="email" value="{{#user.email}}{{user.email}}{{/user.email}}"/>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <label>
+                                    {{#i18n}}admin.user.form.emailHash{{/i18n}}
+                                    <input type="text" name="emailHash" value="{{#user.emailHash}}{{user.emailHash}}{{/user.emailHash}}"/>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <label>
+                                    {{#i18n}}admin.user.form.company{{/i18n}}
+                                    <input type="text" name="company" value="{{#user.company}}{{user.company}}{{/user.company}}"/>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <label>
+                                    {{#i18n}}admin.user.form.description.fr{{/i18n}}
+                                    <textarea name="description-fr" rows="10">{{#description-fr}}{{description-fr}}{{/description-fr}}</textarea>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <label>
+                                    {{#i18n}}admin.user.form.description.en{{/i18n}}
+                                    <textarea name="description-en" rows="10">{{#description-en}}{{description-en}}{{/description-en}}</textarea>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <label>
+                                    {{#i18n}}admin.user.form.role{{/i18n}}
+                                    <select name="role" required>
+                                        {{#roles}}
+                                            <option value="{{first}}"{{#second}} selected{{/second}}>{{first}}</option>
+                                        {{/roles}}
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <label>
+                                    {{#i18n}}admin.user.form.links{{/i18n}}
+                                    <input type="text" name="links" value="{{links}}"/>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <label>
+                                    {{#i18n}}admin.user.form.legacyId{{/i18n}}
+                                    <input type="text" name="legacyId" value="{{#user.legacyId}}{{user.legacyId}}{{/user.legacyId}}"/>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 large-centered columns">
+                                <input type="submit" class="button expand" value="{{#i18n}}admin.user.save{{/i18n}}"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{> footer}}

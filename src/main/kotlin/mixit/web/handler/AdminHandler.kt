@@ -1,8 +1,11 @@
 package mixit.web.handler
 
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.MixitProperties
 import mixit.model.*
 import mixit.model.Language.*
+import mixit.model.Role.*
 import mixit.model.Room.*
 import mixit.model.TalkFormat.*
 import mixit.repository.TalkRepository
@@ -25,7 +28,8 @@ class AdminHandler(val ticketRepository: TicketRepository,
                    val talkRepository: TalkRepository,
                    val userRepository: UserRepository,
                    val markdownConverter: MarkdownConverter,
-                   val properties: MixitProperties) {
+                   val properties: MixitProperties,
+                   val objectMapper: ObjectMapper) {
 
     fun admin(req: ServerRequest) = ok().render("admin", mapOf(Pair("title", "admin.title")))
 
@@ -124,6 +128,52 @@ class AdminHandler(val ticketRepository: TicketRepository,
 
     ))
 
+    fun createUser(req: ServerRequest): Mono<ServerResponse> = this.adminUser()
+
+    fun editUser(req: ServerRequest): Mono<ServerResponse> = userRepository.findOne(req.pathVariable("login")).then(this::adminUser)
+
+    fun adminDeleteUser(req: ServerRequest): Mono<ServerResponse> =
+            req.body(BodyExtractors.toFormData()).then { data ->
+                val formData = data.toSingleValueMap()
+                userRepository
+                        .deleteOne(formData["login"]!!)
+                        .then{ _ -> seeOther("${properties.baseUri}/admin/users") }
+            }
+
+    private fun adminUser(user: User = User("", "", "", "")) = ok().render("admin-user", mapOf(
+            Pair("user", user),
+            Pair("description-fr", user.description[FRENCH]),
+            Pair("description-en", user.description[ENGLISH]),
+            Pair("roles", listOf(
+                    Pair(USER, USER == user.role),
+                    Pair(STAFF, STAFF == user.role)
+            )),
+            Pair("links", user.links.toJson())
+
+    ))
+
+    fun adminSaveUser(req: ServerRequest) : Mono<ServerResponse> {
+        return req.body(BodyExtractors.toFormData()).then { data ->
+            val formData = data.toSingleValueMap()
+            val user = User(
+                    login = formData["login"]!!,
+                    firstname = formData["firstname"]!!,
+                    lastname = formData["lastname"]!!,
+                    email = if (formData["email"] == "") null else formData["email"],
+                    emailHash = if (formData["emailHash"] == "") null else formData["emailHash"],
+                    company = if (formData["company"] == "") null else formData["company"],
+                    description = mapOf(Pair(FRENCH, formData["description-fr"]!!), Pair(ENGLISH, formData["description-en"]!!)),
+                    role = Role.valueOf(formData["role"]!!),
+                    links =  formData["links"]!!.toLinks(),
+                    legacyId = if (formData["legacyId"] == "") null else formData["legacyId"]!!.toLong()
+            )
+            userRepository.save(user).then { _ -> seeOther("${properties.baseUri}/admin/users") }
+        }
+    }
+
+    private fun Any.toJson() = objectMapper.writeValueAsString(this).replace("\"", "&quot;")
+
+    private fun String.toLinks() = objectMapper.readValue<List<Link>>(this)
 
 }
 

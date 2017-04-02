@@ -3,6 +3,7 @@ package mixit.repository
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.model.Role
+import mixit.model.Talk
 import mixit.model.User
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
@@ -50,14 +51,16 @@ class UserRepository(val template: ReactiveMongoTemplate) {
 
     fun findAll() = template.findAll<User>()
 
-    fun findOne(id: String) = template.findById<User>(id)
+    fun findOne(login: String) = template.findById<User>(login)
 
-    fun findMany(ids: List<String>) = template.find<User>(Query(where("_id").`in`(ids)))
+    fun findMany(logins: List<String>) = template.find<User>(Query(where("_id").`in`(logins)))
 
     fun findByLegacyId(id: Long) =
             template.findOne<User>(Query(where("legacyId").`is`(id)))
 
     fun deleteAll() = template.remove<User>(Query())
+
+    fun deleteOne(login: String) = template.remove<User>(Query(where("_id").`is`(login)))
 
     fun save(user: User) = template.save(user)
 
