@@ -5259,23 +5259,23 @@
         "company": "Pivotal",
         "description": {
             "ENGLISH": "Pivotal\u2019s Cloud-Native platform drives software innovation for many of the world\u2019s most admired brands. With millions of developers in communities around the world,Pivotal technology touches billions of users every day. After shaping the software development culture of Silicon Valley's most valuable companies for over a decade, today Pivotal leads a global technology movement transforming how the world builds software.",
-            "FRENCH": "La plateforme cloud native de Pivotal s\u2019impose comme une force d\u2019innovation logicielle pour les plus grandesmarques internationales. Chaque jour, les millions de d\u00e9veloppeurs des communaut\u00e9s open source du monde entier permettent \u00e0 nos technologies d\u2019atteindre des milliards d'utilisateurs. Pendant plus d\u2019une d\u00e9cennie,Pivotal a su insuffler la culture du d\u00e9veloppement logiciel chez les plus grands groupes de la Silicon Valley. Aujourd\u2019hui, nous nous pla\u00e7ons en chef de file d\u2019un mouvement mondial qui r\u00e9volutionne les m\u00e9thodes de conception des logiciels."
+            "FRENCH": "La plateforme cloud native de Pivotal s\u2019impose comme une force d\u2019innovation logicielle pour les plus grandes marques internationales. Chaque jour, les millions de d\u00e9veloppeurs des communaut\u00e9s open source du monde entier permettent \u00e0 nos technologies d\u2019atteindre des milliards d'utilisateurs. Pendant plus d\u2019une d\u00e9cennie,Pivotal a su insuffler la culture du d\u00e9veloppement logiciel chez les plus grands groupes de la Silicon Valley. Aujourd\u2019hui, nous nous pla\u00e7ons en chef de file d\u2019un mouvement mondial qui r\u00e9volutionne les m\u00e9thodes de conception des logiciels."
         },
-        "firstname": "Seb",
-        "lastname": "Del",
+        "firstname": "",
+        "lastname": "",
         "legacyId": 5682,
         "links": [
             {
                 "name": "Site",
-                "url": "http://run.pivotal.io/"
+                "url": "http://pivotal.io/"
             },
             {
-                "name": "Pivotal",
-                "url": "http://pivotal.io/"
+                "name": "Pivotal Web Services",
+                "url": "http://run.pivotal.io/"
             }
         ],
         "login": "pivotal",
-        "emailHash": "sponsor/logo-pivotal.svg",
+        "emailHash": "sponsor/logo-pivotal.png",
         "role": "USER"
     },
     {
