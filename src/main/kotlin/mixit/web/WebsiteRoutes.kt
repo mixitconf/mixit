@@ -38,6 +38,7 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
             GET("/news", newsHandler::newsView)
             GET("/ticketing", ticketingHandler::ticketing)
             GET("/sponsors") { sponsorHandler.viewWithSponsors("sponsors", "sponsors.title", it) }
+            GET("/mixteen", globalHandler::mixteenView)
 
             // Authentication
             GET("/login", authenticationHandler::loginView)
