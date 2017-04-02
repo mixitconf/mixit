@@ -64,6 +64,9 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
                 GET("/users", adminHandler::adminUsers)
                 GET("/users/edit/{login}", adminHandler::editUser)
                 GET("/users/create", adminHandler::createUser)
+                GET("/blog", adminHandler::adminBlog)
+                GET("/post/edit/{id}", adminHandler::editPost)
+                GET("/post/create", adminHandler::createPost)
             }
 
             "/blog".nest {
@@ -84,6 +87,8 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
                 POST("/talks/delete", adminHandler::adminDeleteTalk)
                 POST("/users", adminHandler::adminSaveUser)
                 POST("/users/delete", adminHandler::adminDeleteUser)
+                POST("/post", adminHandler::adminSavePost)
+                POST("/post/delete", adminHandler::adminDeletePost)
             }
         }
     }.filter { request, next ->

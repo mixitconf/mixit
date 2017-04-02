@@ -1,0 +1,41 @@
+{{> header}}
+
+<div class="mxt-wrapper--page-title">
+    <div class="row">
+        <div class="columns large-8 large-offset-2">
+            <h1 class="text-center">{{#i18n}}admin.blog.title{{/i18n}}</h1>
+        </div>
+    </div>
+</div>
+
+<div class="mxt-wrapper--page-content">
+    <div class="row">
+        <div class="column large-8 large-offset-2">
+            <div class="callout">
+                <p>{{#i18n}}admin.blog.count{{/i18n}} : {{posts.size}} | <a href="/admin/post/create">{{#i18n}}admin.blog.actions.create{{/i18n}}</a></p>
+                <table>
+                  <thead>
+                    <tr>
+                        <th>{{#i18n}}admin.blog.table.title{{/i18n}}</th>
+                        <th>{{#i18n}}admin.blog.table.author{{/i18n}}</th>
+                        <th>{{#i18n}}admin.blog.table.actions{{/i18n}}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {{#posts}}
+                    <tr>
+                        <td>{{title}}</td>
+                        <td>{{author.firstname}} {{author.lastname}}</td>
+                        <td>
+                            <a href="/admin/post/edit/{{id}}">{{#i18n}}admin.blog.actions.update{{/i18n}}</a><br /><a href="/blog/{{slug}}" target="_blank">{{#i18n}}admin.blog.actions.view{{/i18n}}</a>
+                        </td>
+                    </tr>
+                    {{/posts}}
+                  </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{> footer}}

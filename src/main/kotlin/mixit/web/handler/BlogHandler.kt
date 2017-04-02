@@ -43,7 +43,7 @@ class BlogHandler(val repository: PostRepository,
 
 }
 
-private class PostDto(
+class PostDto(
         val id: String?,
         val slug: String,
         val author: User,
@@ -53,7 +53,7 @@ private class PostDto(
         val content: String
 )
 
-private fun Post.toDto(author: User, language: Language, markdownConverter: MarkdownConverter) = PostDto(
+fun Post.toDto(author: User, language: Language, markdownConverter: MarkdownConverter) = PostDto(
         id,
         slug[language] ?: "",
         author,

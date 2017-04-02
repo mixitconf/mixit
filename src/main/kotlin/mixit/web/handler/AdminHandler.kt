@@ -8,12 +8,14 @@ import mixit.model.Language.*
 import mixit.model.Role.*
 import mixit.model.Room.*
 import mixit.model.TalkFormat.*
+import mixit.repository.PostRepository
 import mixit.repository.TalkRepository
 import mixit.repository.TicketRepository
 import mixit.repository.UserRepository
 import mixit.util.MarkdownConverter
 import mixit.util.language
 import mixit.util.seeOther
+import mixit.util.toSlug
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.server.ServerRequest
@@ -27,6 +29,7 @@ import java.time.LocalDateTime
 class AdminHandler(val ticketRepository: TicketRepository,
                    val talkRepository: TalkRepository,
                    val userRepository: UserRepository,
+                   val postRepository: PostRepository,
                    val markdownConverter: MarkdownConverter,
                    val properties: MixitProperties,
                    val objectMapper: ObjectMapper) {
@@ -168,6 +171,53 @@ class AdminHandler(val ticketRepository: TicketRepository,
                     legacyId = if (formData["legacyId"] == "") null else formData["legacyId"]!!.toLong()
             )
             userRepository.save(user).then { _ -> seeOther("${properties.baseUri}/admin/users") }
+        }
+    }
+
+    fun adminBlog(req: ServerRequest) : Mono<ServerResponse> = ok().render("admin-blog", mapOf(Pair("posts", postRepository.findAll().collectList()
+            .then { posts -> userRepository
+                    .findMany(posts.map { it.authorId })
+                    .collectMap(User::login)
+                    .map { authors -> posts.map { it.toDto(authors[it.authorId]!!, req.language(), markdownConverter) } }
+            }), Pair("title", "admin.blog.title")))
+
+
+
+    fun createPost(req: ServerRequest): Mono<ServerResponse> = this.adminPost()
+
+    fun editPost(req: ServerRequest): Mono<ServerResponse> = postRepository.findOne(req.pathVariable("id")).then(this::adminPost)
+
+    fun adminDeletePost(req: ServerRequest): Mono<ServerResponse> =
+            req.body(BodyExtractors.toFormData()).then { data ->
+                val formData = data.toSingleValueMap()
+                postRepository
+                        .deleteOne(formData["id"]!!)
+                        .then{ _ -> seeOther("${properties.baseUri}/admin/blog") }
+            }
+
+    private fun adminPost(post: Post = Post("")) = ok().render("admin-post", mapOf(
+            Pair("post", post),
+            Pair("title-fr", post.title[FRENCH]),
+            Pair("title-en", post.title[ENGLISH]),
+            Pair("headline-fr", post.headline[FRENCH]),
+            Pair("headline-en", post.headline[ENGLISH]),
+            Pair("content-fr", post.content?.get(FRENCH)),
+            Pair("content-en", post.content?.get(ENGLISH))
+    ))
+
+    fun adminSavePost(req: ServerRequest) : Mono<ServerResponse> {
+        return req.body(BodyExtractors.toFormData()).then { data ->
+            val formData = data.toSingleValueMap()
+            val post = Post(
+                    id = formData["id"],
+                    addedAt = LocalDateTime.parse(formData["addedAt"]),
+                    authorId = formData["authorId"]!!,
+                    title = mapOf(Pair(FRENCH, formData["title-fr"]!!), Pair(ENGLISH, formData["title-en"]!!)),
+                    slug = mapOf(Pair(FRENCH, formData["title-fr"]!!.toSlug()), Pair(ENGLISH, formData["title-en"]!!.toSlug())),
+                    headline = mapOf(Pair(FRENCH, formData["headline-fr"]!!), Pair(ENGLISH, formData["headline-en"]!!)),
+                    content = mapOf(Pair(FRENCH, formData["content-fr"]!!), Pair(ENGLISH, formData["content-en"]!!))
+            )
+            postRepository.save(post).then { _ -> seeOther("${properties.baseUri}/admin/blog") }
         }
     }
 

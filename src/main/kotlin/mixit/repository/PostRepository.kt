@@ -6,7 +6,6 @@ import mixit.model.Post
 import mixit.model.Language
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.domain.Sort
-import org.springframework.data.domain.Sort.Direction
 import org.springframework.data.domain.Sort.Order
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.query.Query
@@ -52,6 +51,8 @@ class PostRepository(val template: ReactiveMongoTemplate) {
     }
 
     fun deleteAll() = template.remove<Post>(Query())
+
+    fun deleteOne(id: String) = template.remove<Post>(Query(where("_id").`is`(id)))
 
     fun save(article: Post) = template.save(article)
 
