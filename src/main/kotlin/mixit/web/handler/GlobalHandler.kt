@@ -22,5 +22,7 @@ class GlobalHandler(val userRepository: UserRepository,
 
     fun mixteenView(req: ServerRequest) = ok().render("mixteen")
 
+    fun faqView(req: ServerRequest) = ok().render("faq")
+
 }
 
