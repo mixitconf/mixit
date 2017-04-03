@@ -15,8 +15,8 @@ class EventIntegrationTests : AbstractIntegrationTests() {
     @Test
     fun `Find MiXiT 2016 event`() {
         client.get().uri("/api/event/mixit16").accept(APPLICATION_JSON)
-                .exchange()
-                .then { r -> r.bodyToMono<Event>() }
+                .retrieve()
+                .bodyToMono<Event>()
                 .test()
                 .consumeNextWith {
                     assertEquals(2016, it.year)
@@ -28,8 +28,8 @@ class EventIntegrationTests : AbstractIntegrationTests() {
     @Test
     fun `Find all events`() {
         client.get().uri("/api/event/").accept(APPLICATION_JSON)
-                .exchange()
-                .flatMap { it.bodyToFlux<Event>() }
+                .retrieve()
+                .bodyToFlux<Event>()
                 .test()
                 .consumeNextWith { assertEquals(2012, it.year) }
                 .consumeNextWith { assertEquals(2013, it.year) }

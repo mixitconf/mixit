@@ -12,8 +12,8 @@ class TalkIntegrationTests : AbstractIntegrationTests() {
     @Test
     fun `Find Dan North talk`() {
         client.get().uri("/api/talk/2421").accept(APPLICATION_JSON)
-                .exchange()
-                .flatMap { it.bodyToFlux<Talk>() }
+                .retrieve()
+                .bodyToFlux<Talk>()
                 .test()
                 .consumeNextWith {
                     assertEquals("Selling BDD to the Business", it.title)
@@ -25,8 +25,8 @@ class TalkIntegrationTests : AbstractIntegrationTests() {
     @Test
     fun `Find MiXiT 2012 talks`() {
         client.get().uri("/api/2012/talk").accept(APPLICATION_JSON)
-                .exchange()
-                .flatMap { it.bodyToFlux<Talk>() }
+                .retrieve()
+                .bodyToFlux<Talk>()
                 .test()
                 .expectNextCount(27)
                 .verifyComplete()

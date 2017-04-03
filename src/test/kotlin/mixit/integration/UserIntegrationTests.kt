@@ -18,8 +18,8 @@ class UserIntegrationTests : AbstractIntegrationTests() {
     fun `Create a new user`() {
         client.post().uri("/api/user/").accept(APPLICATION_JSON).contentType(APPLICATION_JSON)
                 .body(User("brian", "Brian", "Clozel", "bc@gm.com"))
-                .exchange()
-                .flatMap { it.bodyToMono<User>() }
+                .retrieve()
+                .bodyToMono<User>()
                 .test()
                 .consumeNextWith { assertEquals("brian", it.login) }
                 .verifyComplete()
@@ -28,8 +28,8 @@ class UserIntegrationTests : AbstractIntegrationTests() {
     @Test
     fun `Find Dan North`() {
         client.get().uri("/api/user/tastapod").accept(APPLICATION_JSON)
-                .exchange()
-                .then { r -> r.bodyToMono<User>() }
+                .retrieve()
+                .bodyToMono<User>()
                 .test()
                 .consumeNextWith {
                     assertEquals("North", it.lastname)
@@ -42,8 +42,8 @@ class UserIntegrationTests : AbstractIntegrationTests() {
     @Test
     fun `Find Guillaume Ehret staff member`() {
         client.get().uri("/api/staff/guillaumeehret").accept(APPLICATION_JSON)
-                .exchange()
-                .flatMap { it.bodyToFlux<User>() }
+                .retrieve()
+                .bodyToFlux<User>()
                 .test()
                 .consumeNextWith {
                     assertEquals("Ehret", it.lastname)
@@ -56,8 +56,8 @@ class UserIntegrationTests : AbstractIntegrationTests() {
     @Test
     fun `Find all staff members`() {
         client.get().uri("/api/staff/").accept(APPLICATION_JSON)
-                .exchange()
-                .flatMap { it.bodyToFlux<User>() }
+                .retrieve()
+                .bodyToFlux<User>()
                 .test()
                 .expectNextCount(16)
                 .verifyComplete()
@@ -66,8 +66,8 @@ class UserIntegrationTests : AbstractIntegrationTests() {
     @Test
     fun `Find Zenika Lyon`() {
         client.get().uri("/api/user/Zenika%20Lyon").accept(APPLICATION_JSON)
-                .exchange()
-                .flatMap { it.bodyToFlux<User>() }
+                .retrieve()
+                .bodyToFlux<User>()
                 .test()
                 .consumeNextWith {
                     assertEquals("Jacob", it.lastname)
