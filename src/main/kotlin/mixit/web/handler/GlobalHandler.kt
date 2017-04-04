@@ -24,5 +24,6 @@ class GlobalHandler(val userRepository: UserRepository,
 
     fun faqView(req: ServerRequest) = ok().render("faq")
 
+    fun comeToMixitView(req: ServerRequest) = ok().render("come")
 }
 
