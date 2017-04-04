@@ -14,8 +14,8 @@
             <div class="callout">
 
                 <p class="text-center lead">{{#i18n}}about.story1{{/i18n}}</p>
-                <p class="text-center">{{#i18n}}about.story2{{/i18n}}</p>
-                <p class="text-center">{{#i18n}}about.story3{{/i18n}}</p>
+                <p>{{#i18n}}about.story2{{/i18n}}</p>
+                <p>{{#i18n}}about.story3{{/i18n}}</p>
 
                 <h2 class="subheader text-center mxt-subheader--space">{{#i18n}}about.teamtitle{{/i18n}}</h2><br />
 
@@ -23,7 +23,7 @@
                 {{#staff}}
                     <div class="row align-middle">
                         <div class="small-12 medium-4 columns text-center">
-                            <img src="https://www.gravatar.com/avatar/{{emailHash}}?size=400" class="mxt-img--team"/>
+                            <div class="mxt-img-avatar__wrapper"><img src="https://www.gravatar.com/avatar/{{emailHash}}?size=400" class="mxt-img-avatar__speaker"/></div>
                         </div>
                         <div class="small-12 medium-8 columns">
                             <h3>{{firstname}} {{lastname}}</h3>
