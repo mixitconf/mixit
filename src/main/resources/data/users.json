@@ -4510,6 +4510,33 @@
         "role": "USER"
     },
     {
+        "company": "USEway",
+        "description": {
+            "ENGLISH": "We support companies in their ecommerce, digital and web projects. We help our customers to build their good product, to drive their projects. On agility, we focus on collaboration and added-value research. For us, supporting MiXiT is to support this conviction.",
+            "FRENCH": "Nous accompagnons les entreprises dans leurs projets ecommerce, digitaux et Web. Nous aidons nos clients à construire leur juste produit, conduire leurs projets. De l'agilité, nous retenons en priorité la collaboration et la recherche de la valeur ajoutée. Pour nous, supporter MiXiT, c’est supporter cette conviction."
+        },
+        "firstname": "",
+        "lastname": "",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Site",
+                "url": "http://www.useway.fr/"
+            },
+            {
+                "name": "Facebook",
+                "url": "https://www.facebook.com/usewaycorporate"
+            },
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/USEway_corp"
+            }
+        ],
+        "login": "USEway",
+        "emailHash": "sponsor/logo-useway.png",
+        "role": "USER"
+    },
+    {
         "company": "CGI",
         "description": {
             "ENGLISH": "[CGI](http://www.cgi.fr), pour la troisi\u00e8me ann\u00e9e, s\u2019associe \u00e0  pour promouvoir l\u2019innovation, le d\u00e9veloppement, l\u2019agilit\u00e9 et le plaisir",
