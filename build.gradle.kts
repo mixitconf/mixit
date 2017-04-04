@@ -34,6 +34,7 @@ apply {
     plugin("com.moowork.node")
     plugin("com.moowork.gulp")
     plugin("org.springframework.boot")
+    plugin("io.spring.dependency-management")
 }
 
 version = "1.0.0-SNAPSHOT"
