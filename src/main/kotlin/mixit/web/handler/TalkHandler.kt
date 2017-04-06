@@ -58,6 +58,7 @@ class TalkHandler(val repository: TalkRepository,
         permanentRedirect("${properties.baseUri}/${s.event}/${s.slug}")
     }
 
+    fun planning(req: ServerRequest) = ok().render("planning")
 }
 
 class TalkDto(
