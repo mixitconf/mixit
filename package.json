@@ -32,7 +32,7 @@
     "@types/core-js": "^0.9.35",
     "@types/service_worker_api": "^0.0.8",
     "@types/whatwg-fetch": "^0.0.33",
-    "foundation-sites": "^6.3.0",
+    "foundation-sites": "^6.3.1",
     "jquery": "^3.1.1",
     "motion-ui": "^1.2.2",
     "sw-precache": "^4.3.0",
