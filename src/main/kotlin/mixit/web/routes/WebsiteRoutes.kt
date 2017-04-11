@@ -95,7 +95,7 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
             }
         }
     }.filter { request, next ->
-        val locale = request.headers().asHttpHeaders().acceptLanguageAsLocales.first()
+        val locale = request.headers().asHttpHeaders().acceptLanguageAsLocales.firstOrNull()
         val session = request.session().block()
         val path = request.uri().path
         val model = generateModel(properties.baseUri!!, path, locale, session, messageSource)

@@ -41,7 +41,7 @@ class MixitWebFilter(val properties: MixitProperties) : WebFilter {
                     .path(exchange.request.uri.path.substring(3))
                     .header(ACCEPT_LANGUAGE, "en").build()).build())
         else if (exchange.request.uri.path == "/" &&
-                (exchange.request.headers.acceptLanguageAsLocales.first() ?: Locale.FRENCH).language != "fr" &&
+                (exchange.request.headers.acceptLanguageAsLocales.firstOrNull() ?: Locale.FRENCH).language != "fr" &&
                 !isSearchEngineCrawler(exchange)) {
             val response = exchange.response
             exchange.session.flatMap {
