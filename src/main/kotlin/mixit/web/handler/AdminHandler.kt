@@ -45,7 +45,8 @@ class AdminHandler(val ticketRepository: TicketRepository,
             Pair("talks", talkRepository
                     .findByEvent("2017")
                     .collectList()
-                    .then { talks -> userRepository
+                    .flatMap { talks ->
+                        userRepository
                             .findMany(talks.flatMap(Talk::speakerIds))
                             .collectMap(User::login)
                             .map { speakers -> talks.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] }, markdownConverter) } }
@@ -59,11 +60,11 @@ class AdminHandler(val ticketRepository: TicketRepository,
 
     fun createTalk(req: ServerRequest) : Mono<ServerResponse> = this.adminTalk()
 
-    fun editTalk(req: ServerRequest) : Mono<ServerResponse> = talkRepository.findBySlug(req.pathVariable("slug")).then(this::adminTalk)
+    fun editTalk(req: ServerRequest) : Mono<ServerResponse> = talkRepository.findBySlug(req.pathVariable("slug")).flatMap(this::adminTalk)
 
     fun adminSaveTalk(req: ServerRequest) : Mono<ServerResponse> {
-        return req.body(BodyExtractors.toFormData()).then { data ->
-            val formData = data.toSingleValueMap()
+        return req.body(BodyExtractors.toFormData()).flatMap {
+            val formData = it.toSingleValueMap()
             val talk = Talk(
                     id = formData["id"],
                     event = formData["event"]!!,
@@ -80,16 +81,16 @@ class AdminHandler(val ticketRepository: TicketRepository,
                     start = LocalDateTime.parse(formData["start"]),
                     end = LocalDateTime.parse(formData["end"])
             )
-            talkRepository.save(talk).then { _ -> seeOther("${properties.baseUri}/admin/talks") }
+            talkRepository.save(talk).then { seeOther("${properties.baseUri}/admin/talks") }
         }
     }
 
     fun adminDeleteTalk(req: ServerRequest) : Mono<ServerResponse> =
-            req.body(BodyExtractors.toFormData()).then { data ->
-                val formData = data.toSingleValueMap()
+            req.body(BodyExtractors.toFormData()).flatMap {
+                val formData = it.toSingleValueMap()
                 talkRepository
                         .deleteOne(formData["id"]!!)
-                        .then{ _ -> seeOther("${properties.baseUri}/admin/talks") }
+                        .then { seeOther("${properties.baseUri}/admin/talks") }
             }
 
 
@@ -133,14 +134,14 @@ class AdminHandler(val ticketRepository: TicketRepository,
 
     fun createUser(req: ServerRequest): Mono<ServerResponse> = this.adminUser()
 
-    fun editUser(req: ServerRequest): Mono<ServerResponse> = userRepository.findOne(req.pathVariable("login")).then(this::adminUser)
+    fun editUser(req: ServerRequest): Mono<ServerResponse> = userRepository.findOne(req.pathVariable("login")).flatMap(this::adminUser)
 
     fun adminDeleteUser(req: ServerRequest): Mono<ServerResponse> =
-            req.body(BodyExtractors.toFormData()).then { data ->
-                val formData = data.toSingleValueMap()
+            req.body(BodyExtractors.toFormData()).flatMap {
+                val formData = it.toSingleValueMap()
                 userRepository
                         .deleteOne(formData["login"]!!)
-                        .then{ _ -> seeOther("${properties.baseUri}/admin/users") }
+                        .then { seeOther("${properties.baseUri}/admin/users") }
             }
 
     private fun adminUser(user: User = User("", "", "", "")) = ok().render("admin-user", mapOf(
@@ -156,8 +157,8 @@ class AdminHandler(val ticketRepository: TicketRepository,
     ))
 
     fun adminSaveUser(req: ServerRequest) : Mono<ServerResponse> {
-        return req.body(BodyExtractors.toFormData()).then { data ->
-            val formData = data.toSingleValueMap()
+        return req.body(BodyExtractors.toFormData()).flatMap {
+            val formData = it.toSingleValueMap()
             val user = User(
                     login = formData["login"]!!,
                     firstname = formData["firstname"]!!,
@@ -171,12 +172,12 @@ class AdminHandler(val ticketRepository: TicketRepository,
                     links =  formData["links"]!!.toLinks(),
                     legacyId = if (formData["legacyId"] == "") null else formData["legacyId"]!!.toLong()
             )
-            userRepository.save(user).then { _ -> seeOther("${properties.baseUri}/admin/users") }
+            userRepository.save(user).then { seeOther("${properties.baseUri}/admin/users") }
         }
     }
 
     fun adminBlog(req: ServerRequest) : Mono<ServerResponse> = ok().render("admin-blog", mapOf(Pair("posts", postRepository.findAll().collectList()
-            .then { posts -> userRepository
+            .flatMap { posts -> userRepository
                     .findMany(posts.map { it.authorId })
                     .collectMap(User::login)
                     .map { authors -> posts.map { it.toDto(authors[it.authorId]!!, req.language(), markdownConverter) } }
@@ -186,14 +187,14 @@ class AdminHandler(val ticketRepository: TicketRepository,
 
     fun createPost(req: ServerRequest): Mono<ServerResponse> = this.adminPost()
 
-    fun editPost(req: ServerRequest): Mono<ServerResponse> = postRepository.findOne(req.pathVariable("id")).then(this::adminPost)
+    fun editPost(req: ServerRequest): Mono<ServerResponse> = postRepository.findOne(req.pathVariable("id")).flatMap(this::adminPost)
 
     fun adminDeletePost(req: ServerRequest): Mono<ServerResponse> =
-            req.body(BodyExtractors.toFormData()).then { data ->
-                val formData = data.toSingleValueMap()
+            req.body(BodyExtractors.toFormData()).flatMap {
+                val formData = it.toSingleValueMap()
                 postRepository
                         .deleteOne(formData["id"]!!)
-                        .then{ _ -> seeOther("${properties.baseUri}/admin/blog") }
+                        .then { seeOther("${properties.baseUri}/admin/blog") }
             }
 
     private fun adminPost(post: Post = Post("")) = ok().render("admin-post", mapOf(
@@ -207,8 +208,8 @@ class AdminHandler(val ticketRepository: TicketRepository,
     ))
 
     fun adminSavePost(req: ServerRequest) : Mono<ServerResponse> {
-        return req.body(BodyExtractors.toFormData()).then { data ->
-            val formData = data.toSingleValueMap()
+        return req.body(BodyExtractors.toFormData()).flatMap {
+            val formData = it.toSingleValueMap()
             val post = Post(
                     id = formData["id"],
                     addedAt = LocalDateTime.parse(formData["addedAt"]),
@@ -218,7 +219,7 @@ class AdminHandler(val ticketRepository: TicketRepository,
                     headline = mapOf(Pair(FRENCH, formData["headline-fr"]!!), Pair(ENGLISH, formData["headline-en"]!!)),
                     content = mapOf(Pair(FRENCH, formData["content-fr"]!!), Pair(ENGLISH, formData["content-en"]!!))
             )
-            postRepository.save(post).then { _ -> seeOther("${properties.baseUri}/admin/blog") }
+            postRepository.save(post).then { seeOther("${properties.baseUri}/admin/blog") }
         }
     }
 

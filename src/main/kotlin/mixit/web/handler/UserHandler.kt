@@ -18,12 +18,12 @@ class UserHandler(val repository: UserRepository,
     fun findOneView(req: ServerRequest) =
             try {
                 val idLegacy = req.pathVariable("login").toLong()
-                repository.findByLegacyId(idLegacy).then { u ->
-                    ok().render("user", mapOf(Pair("user", u.toDto(req.language(), markdownConverter))))
+                repository.findByLegacyId(idLegacy).flatMap {
+                    ok().render("user", mapOf(Pair("user", it.toDto(req.language(), markdownConverter))))
                 }
             } catch (e:NumberFormatException) {
-                repository.findOne(URLDecoder.decode(req.pathVariable("login"), "UTF-8")).then { u ->
-                    ok().render("user", mapOf(Pair("user", u.toDto(req.language(), markdownConverter))))
+                repository.findOne(URLDecoder.decode(req.pathVariable("login"), "UTF-8")).flatMap {
+                    ok().render("user", mapOf(Pair("user", it.toDto(req.language(), markdownConverter))))
                 }
             }
 
@@ -35,8 +35,8 @@ class UserHandler(val repository: UserRepository,
 
     fun findOneStaff(req: ServerRequest) = ok().json().body(repository.findOneByRole(req.pathVariable("login"), Role.STAFF))
 
-    fun create(req: ServerRequest) = repository.save(req.bodyToMono<User>()).then { u ->
-        created(create("/api/user/${u.login}")).json().body(u.toMono())
+    fun create(req: ServerRequest) = repository.save(req.bodyToMono<User>()).flatMap {
+        created(create("/api/user/${it.login}")).json().body(it.toMono())
     }
 
 }

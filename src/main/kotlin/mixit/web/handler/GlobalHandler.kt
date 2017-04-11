@@ -14,8 +14,8 @@ import java.util.*
 class GlobalHandler(val userRepository: UserRepository,
                     val markdownConverter: MarkdownConverter) {
 
-    fun findAboutView(req: ServerRequest) = userRepository.findByRole(Role.STAFF).collectList().then { u ->
-        val users = u.map { it.toDto(req.language(), markdownConverter) }
+    fun findAboutView(req: ServerRequest) = userRepository.findByRole(Role.STAFF).collectList().flatMap {
+        val users = it.map { it.toDto(req.language(), markdownConverter) }
         Collections.shuffle(users)
         ok().render("about", mapOf(Pair("staff", users), Pair("title", "about.title")))
     }

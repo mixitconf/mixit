@@ -24,8 +24,8 @@ class MixitWebFilter(val properties: MixitProperties) : WebFilter {
            Mono.empty()
        }
        else if (exchange.request.uri.path.startsWith("/admin")) {
-            exchange.session.then { session ->
-            if (session.attributes["username"] != null) {
+            exchange.session.flatMap {
+            if (it.attributes["username"] != null) {
                 chain.filter(exchange)
             }
             else {
@@ -41,17 +41,17 @@ class MixitWebFilter(val properties: MixitProperties) : WebFilter {
                     .path(exchange.request.uri.path.substring(3))
                     .header(ACCEPT_LANGUAGE, "en").build()).build())
         else if (exchange.request.uri.path == "/" &&
-                (exchange.request.headers.acceptLanguageAsLocale ?: Locale.FRENCH).language != "fr" &&
+                (exchange.request.headers.acceptLanguageAsLocales.first() ?: Locale.FRENCH).language != "fr" &&
                 !isSearchEngineCrawler(exchange)) {
             val response = exchange.response
-            exchange.session.then { session ->
-                if (session.attributes[redirectDoneAttribute] == true)
+            exchange.session.flatMap {
+                if (it.attributes[redirectDoneAttribute] == true)
                     chain.filter(exchange.mutate().request(exchange.request.mutate().header(ACCEPT_LANGUAGE, "fr").build()).build())
                 else {
                     response.statusCode = HttpStatus.TEMPORARY_REDIRECT
                     response.headers.location = URI("${properties.baseUri}/en/")
-                    session.attributes[redirectDoneAttribute] = true
-                    session.save()
+                    it.attributes[redirectDoneAttribute] = true
+                    it.save()
                 }
             }
         }

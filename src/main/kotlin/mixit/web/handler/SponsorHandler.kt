@@ -15,8 +15,8 @@ class SponsorHandler(val userRepository: UserRepository,
                      val eventRepository: EventRepository,
                      val markdownConverter: MarkdownConverter) {
 
-    fun viewWithSponsors(view: String, title: String?, req: ServerRequest) = eventRepository.findOne("mixit17").then { event ->
-        userRepository.findMany(event.sponsors.map { it.sponsorId }).collectMap(User::login).then { sponsorsByLogin ->
+    fun viewWithSponsors(view: String, title: String?, req: ServerRequest) = eventRepository.findOne("mixit17").flatMap { event ->
+        userRepository.findMany(event.sponsors.map { it.sponsorId }).collectMap(User::login).flatMap { sponsorsByLogin ->
             val sponsorsByEvent = event.sponsors.groupBy { it.level }
             ServerResponse.ok().render(view, mapOf(
                     Pair("sponsors-gold", sponsorsByEvent[SponsorshipLevel.GOLD]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),

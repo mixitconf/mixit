@@ -23,7 +23,7 @@ class TalkHandler(val repository: TalkRepository,
             Pair("talks", repository
                     .findByEvent(year.toString(), topic)
                     .collectList()
-                    .then { talks -> userRepository
+                    .flatMap { talks -> userRepository
                             .findMany(talks.flatMap(Talk::speakerIds))
                             .collectMap(User::login)
                             .map { speakers -> talks.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] }, markdownConverter) } }
@@ -36,8 +36,8 @@ class TalkHandler(val repository: TalkRepository,
 
 
 
-    fun findOneView(year: Int, req: ServerRequest) = repository.findByEventAndSlug(year.toString(), req.pathVariable("slug")).then { talk ->
-        userRepository.findMany(talk.speakerIds).collectList().then { speakers ->
+    fun findOneView(year: Int, req: ServerRequest) = repository.findByEventAndSlug(year.toString(), req.pathVariable("slug")).flatMap { talk ->
+        userRepository.findMany(talk.speakerIds).collectList().flatMap { speakers ->
         ok().render("talk", mapOf(
                 Pair("talk", talk.toDto(req.language(), speakers!!, markdownConverter)),
                 Pair("speakers", speakers.map { it.toDto(req.language(), markdownConverter) }),
@@ -50,12 +50,12 @@ class TalkHandler(val repository: TalkRepository,
     fun findByEventId(req: ServerRequest) =
             ok().json().body(repository.findByEvent(req.pathVariable("year")))
 
-    fun redirectFromId(req: ServerRequest) = repository.findOne(req.pathVariable("id")).then { s ->
-        permanentRedirect("${properties.baseUri}/${s.event}/${s.slug}")
+    fun redirectFromId(req: ServerRequest) = repository.findOne(req.pathVariable("id")).flatMap {
+        permanentRedirect("${properties.baseUri}/${it.event}/${it.slug}")
     }
 
-    fun redirectFromSlug(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug")).then { s ->
-        permanentRedirect("${properties.baseUri}/${s.event}/${s.slug}")
+    fun redirectFromSlug(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug")).flatMap {
+        permanentRedirect("${properties.baseUri}/${it.event}/${it.slug}")
     }
 
     fun planning(req: ServerRequest) = ok().render("planning")

@@ -18,17 +18,17 @@ class BlogHandler(val repository: PostRepository,
                   val properties: MixitProperties) {
 
     fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug"), req.language())
-            .then { post -> userRepository.findOne(post.authorId).then { author ->
+            .flatMap { post -> userRepository.findOne(post.authorId).flatMap { author ->
                     val model = mapOf(Pair("post", post.toDto(author, req.language(), markdownConverter)), Pair("title", "blog.post.title|${post.title[req.language()]}"))
                     ok().render("post", model)
                 }
-            }.otherwiseIfEmpty(repository.findBySlug(req.pathVariable("slug"), if (req.language() == FRENCH) ENGLISH else FRENCH).then { a ->
-                permanentRedirect("${properties.baseUri}${if (req.language() == ENGLISH) "/en" else ""}/blog/${a.slug[req.language()]}")
+            }.otherwiseIfEmpty(repository.findBySlug(req.pathVariable("slug"), if (req.language() == FRENCH) ENGLISH else FRENCH).flatMap {
+                permanentRedirect("${properties.baseUri}${if (req.language() == ENGLISH) "/en" else ""}/blog/${it.slug[req.language()]}")
             })
 
     fun findAllView(req: ServerRequest) = repository.findAll(req.language())
             .collectList()
-            .then { posts -> userRepository.findMany(posts.map { it.authorId }).collectMap{ it.login }.then { authors ->
+            .flatMap { posts -> userRepository.findMany(posts.map { it.authorId }).collectMap{ it.login }.flatMap { authors ->
                 val model = mapOf(Pair("posts", posts.map { it.toDto(authors[it.authorId]!!, req.language(), markdownConverter) }), Pair("title", "blog.title"))
                 ok().render("blog", model)
             }}
@@ -37,8 +37,8 @@ class BlogHandler(val repository: PostRepository,
 
     fun findAll(req: ServerRequest) = ok().json().body(repository.findAll())
 
-    fun redirect(req: ServerRequest) = repository.findOne(req.pathVariable("id")).then { a ->
-        permanentRedirect("${properties.baseUri}/blog/${a.slug[req.language()]}")
+    fun redirect(req: ServerRequest) = repository.findOne(req.pathVariable("id")).flatMap {
+        permanentRedirect("${properties.baseUri}/blog/${it.slug[req.language()]}")
     }
 
 }

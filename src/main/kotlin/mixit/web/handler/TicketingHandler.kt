@@ -8,20 +8,21 @@ import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.*
+import reactor.core.publisher.otherwise
 
 @Component
 class TicketingHandler(val repository: TicketRepository) {
 
     fun ticketing(req: ServerRequest) = ServerResponse.ok().render("ticketing-closed", mapOf(Pair("title", "ticketing.title")))
 
-    fun submit(req: ServerRequest) = req.body(BodyExtractors.toFormData()).then { data ->
-        val formData  = data.toSingleValueMap()
+    fun submit(req: ServerRequest) = req.body(BodyExtractors.toFormData()).flatMap {
+        val formData  = it.toSingleValueMap()
         val ticket = Ticket(formData["email"]!!,
                 formData["firstname"]!!,
                 formData["lastname"]!!)
         repository.save(ticket)
-                .then { _ -> ok().render("ticketing-submission", formData) }
-                .otherwise(DuplicateKeyException::class.java, { ok().render("ticketing-error", mapOf(Pair("message", "ticketing.error.alreadyexists"), Pair("title", "ticketing.title"))) } )
+                .then { ok().render("ticketing-submission", formData) }
+                .otherwise(DuplicateKeyException::class, { ok().render("ticketing-error", mapOf(Pair("message", "ticketing.error.alreadyexists"), Pair("title", "ticketing.title"))) } )
                 .otherwise { ok().render("ticketing-error", mapOf(Pair("message", "ticketing.error.default"), Pair("title", "ticketing.title"))) }
     }
 }
