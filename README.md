@@ -1,4 +1,4 @@
-[![Travis CI](https://api.travis-ci.org/mixitconf/mixit.svg?branch=master)](https://travis-ci.org/mix-it/mixit)
+[![Travis CI](https://api.travis-ci.org/mixitconf/mixit.svg?branch=master)](https://travis-ci.org/mixitconf/mixit)
 
 # MiXiT website
 
