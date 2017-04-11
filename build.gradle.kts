@@ -8,7 +8,7 @@ buildscript {
     extra["spring.version"] = "5.0.0.BUILD-SNAPSHOT"
     extra["reactor-bom.version"] = "Bismuth-BUILD-SNAPSHOT"
     var kotlinVersion: String by extra
-    kotlinVersion = "1.1.2-eap-44"
+    kotlinVersion = "1.1.2-eap-69"
 
     repositories {
         mavenCentral()
@@ -44,6 +44,7 @@ repositories {
     maven { setUrl("https://repo.spring.io/milestone") }
     maven { setUrl("https://repo.spring.io/snapshot") }
     maven { setUrl("https://dl.bintray.com/kotlin/kotlin-eap-1.1" )}
+    maven { setUrl("https://dl.bintray.com/sdeleuze/maven") }
 }
 
 tasks.withType<KotlinCompile> {
@@ -73,6 +74,7 @@ dependencies {
     }
     compileOnly("org.springframework:spring-context-indexer")
     compile("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
+    compile("org.springframework.data:spring-data-mongodb:2.0.0.reactor31")
     compile("org.springframework.boot:spring-boot-devtools")
     testCompile("org.springframework.boot:spring-boot-starter-test")
     if (project.hasProperty("embed-mongo") || System.getProperty("idea.executable") == "idea") {
