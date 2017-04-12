@@ -12,7 +12,36 @@
 <div class="mxt-wrapper--page-content">
     <div class="row">
         <div class="column large-8 large-offset-2">
-            TODO
+            <h1 class="text-center">{{#i18n}}planning.title{{/i18n}}</h1>
+            <hr />
+
+        {{#talks}}
+            {{#J20}}
+                {{#AMPHI1}}
+                <div class="row">
+                    {{format}} {{title}}
+                </div>
+                {{/AMPHI1}}
+            {{/J20}}
+        {{/talks}}
+            <br>
+
+
+            <div class="row">
+                <div class="medium-9 columns">
+                    <div class="row">
+                        <div class="medium-4 columns" style="height: 250px; background: green;"></div>
+                        <div class="medium-4 columns" style="height: 250px; background: blue;"></div>
+                        <div class="medium-4 columns" style="height: 250px; background: red;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="medium-4 columns" style="height: 250px; background: yellow;"></div>
+                        <div class="medium-4 columns" style="height: 250px; background: orange;"></div>
+                        <div class="medium-4 columns" style="height: 250px; background: purple;"></div>
+                    </div>
+                </div>
+                <div class="medium-3 columns" style="height: 500px; background: black;"></div>
+            </div>
         </div>
     </div>
 </div>
