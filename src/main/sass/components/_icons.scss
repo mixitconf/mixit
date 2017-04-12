@@ -10,7 +10,8 @@
 
 .mxt-icon--cat__talks {
 	min-width: auto;
-	max-width: 5em;
+	max-width: 1.7em;
+	height: auto;
 	@include breakpoint(small only) {
 		margin-top: 1em;
 	}

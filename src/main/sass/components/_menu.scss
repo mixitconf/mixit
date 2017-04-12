@@ -62,3 +62,9 @@
 		color: $anchor-color-alt-hover;
 	}	
 }
+
+// Accordion
+
+ul.menu.mxt-menu--accordion > li {
+	display: inline-block;
+}

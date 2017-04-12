@@ -92,12 +92,23 @@ a.mxt-title--article {
 }
 
 // CATEGORIES
-.mxt-text--cat { text-transform: uppercase; margin-top: 0.2em; }
-.mxt-text--cat1 { color: #ff8d4e; }
-.mxt-text--cat2 { color: #e1629e; }
-.mxt-text--cat3 { color: #aecbd6; }
-.mxt-text--cat4 { color: #5ab79c; }
-.mxt-text--cat5 { color: #92929a; }
+.mxt-text--cat { 
+	text-transform: uppercase; 
+	color: $white; 
+	padding: 0.2em 0.5em 0.1em 0.1em;
+	border-radius: 0.2em; 
+	font-size: rem-calc(12);
+}
+.mxt-text--cat-tech { background-color: #e1629e; }
+.mxt-text--cat-aliens { background-color: #5ab79c; }
+.mxt-text--cat-design { background-color: #dbb9b8; }
+.mxt-text--cat-hacktivism { background-color: #aecbd6; }
+.mxt-text--cat-learn { background-color: #92929a; }
+.mxt-text--cat-makers { background-color: #ff8d4e; }
+
+.mxt-text--cat-en { background-color: #ff8d4e; padding: 0.5em 0.3em; }
+.mxt-text--cat-format { color: $medium-gray; font-weight: normal; }
+.mxt-text--cat-room { color: $third-color; font-weight: normal; text-transform: uppercase; }
 
 .mxt-expand {
 	width: 100%

@@ -20,43 +20,62 @@
     </div>
 </div>
 
+
 <div class="mxt-wrapper--page-content">
     <div class="row">
-        {{#talks}}
-            <div class="callout mxt-expand">
-                <div class="small-12 medium-6 medium-push-3 columns ">
-                    <p><a href="{{localePrefix}}/{{event}}/{{slug}}" class="mxt-title--article">{{title}}</a></p>
-                    <div>{{summary}}</div>
-                    <p class="subheader">
-                        <strong>{{#video}}
-                            <p>&#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{video}}">{{#i18n}}talk.video.thevideo{{/i18n}}</a></p>
-                        {{/video}}</strong>
-                    </p>
-                    <a href="{{localePrefix}}/{{event}}/{{slug}}" class="button hollow">{{#i18n}}talks.readmore{{/i18n}}</a>
-                </div>
-                <div class="small-12 medium-3 medium-pull-6 columns mxt-text--talkspeaker">
-                    <ul class="menu vertical">
-                        {{#speakers}}
-                            <li class="menu-text">
-                                <div class="mxt-img-avatar__wrapper"><img src="{{^emailHash}}{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{/emailHash}}{{#emailHash}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/emailHash}}" class="mxt-img-avatar__speaker"></div>
-                                <span>{{firstname}}&nbsp;{{lastname}}</span>
+        <div class="columns large-12 callout">
+            <h2>Jeudi 20 avril - matinée</h2><br />
+            <ul class="accordion" data-accordion>
+                {{#talks}}
+                  <li class="accordion-item" data-accordion-item>
+                    <!-- Accordion tab title -->
+                    <a href="#" class="accordion-title">
+                        <ul class="menu mxt-menu--accordion">
+                            <li>{{#start}}{{start}}{{/start}} - {{#end}}{{end}}{{/end}}</li>
+                            <li class="menu-text">{{title}}</li>
+                            {{#topic}}
+                            <li class="mxt-text--cat mxt-text--cat-{{topic}}">
+                                <img src="/images/svg/mxt-icon--{{topic}}.svg" class="mxt-icon--cat mxt-icon--cat__talks" alt="{{#i18n}}home.topics.{{topic}}.title{{/i18n}}" />
+                                <span>{{#i18n}}home.topics.{{topic}}.title{{/i18n}}</span>
                             </li>
-                        {{/speakers}}
-                    </ul>
-                    <div class="hide-for-small-only">
-                        <hr />
-                        <p>#{{format}} {{#i18n}}talk.in{{/i18n}} {{#i18n}}talk.language.{{language}}{{/i18n}}</p>
+                            {{/topic}}
+                            <!-- @Seb AJOUTER CONDITION SI ANGLAIS -->
+                            <li class="mxt-text--cat mxt-text--cat-en menu-text">EN</li>
+                            <!-- @Seb AJOUTER CONDITION SAUF SI Format == talk -->
+                            <li class="mxt-text--cat-format menu-text">#{{format}}</li>
+                        </ul>
+                    </a>
+                    <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+                    <div class="accordion-content" data-tab-content>
+                        <div class="row">
+                            <div class="small-9 columns">
+                                <p class="mxt-text--cat-room">{{#i18n}}{{room}}{{/i18n}}</p>
+                                <div>{{summary}}</div>
+                                <p class="subheader">
+                                    <strong>{{#video}}
+                                        <p>&#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{video}}">{{#i18n}}talk.video.thevideo{{/i18n}}</a></p>
+                                    {{/video}}</strong>
+                                </p>
+                            </div>
+                            <div class="small-3 columns text-center">
+                                <ul class="menu vertical">
+                                    {{#speakers}}
+                                        <li class="menu-text">
+                                            <div class="mxt-img-avatar__wrapper"><img src="{{^emailHash}}{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{/emailHash}}{{#emailHash}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/emailHash}}" class="mxt-img-avatar__speaker"></div>
+                                            <span>{{firstname}}&nbsp;{{lastname}}</span>
+                                        </li>
+                                    {{/speakers}}
+                                </ul>
+                                <hr />
+                                <a href="{{localePrefix}}/{{event}}/{{slug}}" class="button hollow" target="_blank">{{#i18n}}talks.readmore{{/i18n}}</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="small-12 medium-3 columns mxt-text--talktime">
-                    <span><strong>{{#date}}{{date}}{{/date}}, {{#start}}{{start}}{{/start}}</strong></span>
-                    <p>{{#i18n}}{{room}}{{/i18n}}</p>
-                    <div class="hide-for-small-only"><p>—</p></div>
-                    {{#topic}}<a href="{{localePrefix}}/{{event}}/{{topic}}"><img src="/images/svg/mxt-icon--{{topic}}.svg" class="mxt-icon--cat mxt-icon--cat__talks" alt="{{#i18n}}home.topics.{{topic}}.title{{/i18n}}"></a>
-                    <p class="mxt-text--cat mxt-text--cat5">{{#i18n}}home.topics.{{topic}}.title{{/i18n}}</p>{{/topic}}
-                </div>
-            </div>       
-        {{/talks}}
+                  </li>
+                {{/talks}}
+            </ul>
+        </div>
     </div>
 </div>
+
 {{> footer}}
