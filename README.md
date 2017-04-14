@@ -72,8 +72,18 @@ Sass, TypeScript, `messages*.properties` and templates should be live reloaded.
 java -jar build/libs/mixit-1.0.0-SNAPSHOT.jar
 ```
 
-###  Deploy the app on Cloud Foundry
+### Deploy the app on Cloud Foundry
 ```
 ./gradlew clean bootJar
 cf push
+```
+
+### Copy PROD data to src/main/resources/data
+ 
+```
+curl https://mixitconf.org/api/blog | python -m json.tool > blog.json
+curl https://mixitconf.org/api/event | python -m json.tool > events.json
+curl https://mixitconf.org/api/user | python -m json.tool > users.json
+curl https://mixitconf.org/api/2017/talk | python -m json.tool > talks_2017.json
+commit -a -m "Update data from PROD"
 ```
