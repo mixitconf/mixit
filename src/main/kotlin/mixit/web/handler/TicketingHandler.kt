@@ -8,7 +8,7 @@ import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.*
-import reactor.core.publisher.otherwise
+import reactor.core.publisher.onErrorResume
 
 @Component
 class TicketingHandler(val repository: TicketRepository) {
@@ -22,7 +22,7 @@ class TicketingHandler(val repository: TicketRepository) {
                 formData["lastname"]!!)
         repository.save(ticket)
                 .then { ok().render("ticketing-submission", formData) }
-                .otherwise(DuplicateKeyException::class, { ok().render("ticketing-error", mapOf(Pair("message", "ticketing.error.alreadyexists"), Pair("title", "ticketing.title"))) } )
-                .otherwise { ok().render("ticketing-error", mapOf(Pair("message", "ticketing.error.default"), Pair("title", "ticketing.title"))) }
+                .onErrorResume(DuplicateKeyException::class, { ok().render("ticketing-error", mapOf(Pair("message", "ticketing.error.alreadyexists"), Pair("title", "ticketing.title"))) } )
+                .onErrorResume { ok().render("ticketing-error", mapOf(Pair("message", "ticketing.error.default"), Pair("title", "ticketing.title"))) }
     }
 }

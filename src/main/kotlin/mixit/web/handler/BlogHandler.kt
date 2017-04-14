@@ -22,7 +22,7 @@ class BlogHandler(val repository: PostRepository,
                     val model = mapOf(Pair("post", post.toDto(author, req.language(), markdownConverter)), Pair("title", "blog.post.title|${post.title[req.language()]}"))
                     ok().render("post", model)
                 }
-            }.otherwiseIfEmpty(repository.findBySlug(req.pathVariable("slug"), if (req.language() == FRENCH) ENGLISH else FRENCH).flatMap {
+            }.switchIfEmpty(repository.findBySlug(req.pathVariable("slug"), if (req.language() == FRENCH) ENGLISH else FRENCH).flatMap {
                 permanentRedirect("${properties.baseUri}${if (req.language() == ENGLISH) "/en" else ""}/blog/${it.slug[req.language()]}")
             })
 

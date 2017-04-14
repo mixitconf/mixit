@@ -6,7 +6,6 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
     extra["spring.version"] = "5.0.0.BUILD-SNAPSHOT"
-    extra["reactor-bom.version"] = "Bismuth-BUILD-SNAPSHOT"
     var kotlinVersion: String by extra
     kotlinVersion = "1.1.1"
 
@@ -90,7 +89,7 @@ dependencies {
     compile("com.atlassian.commonmark:commonmark-ext-autolink:0.8.0")
 
 
-    compile("io.projectreactor:reactor-kotlin-extensions:1.0.0.M1")
+    compile("io.projectreactor:reactor-kotlin-extensions:1.0.0.BUILD-SNAPSHOT")
     testCompile("io.projectreactor.addons:reactor-test")
 
     compile("com.fasterxml.jackson.module:jackson-module-kotlin")
