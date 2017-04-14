@@ -112,6 +112,26 @@
                 </div>
                 {{/sponsors-hosting}}
             </div>
+
+            <div class="mxt-wrapper--callout callout">
+                <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.hosting{{/i18n}}</h2>
+                {{#sponsors-video}}
+                    <div class="row align-middle">
+                        <div class="small-12 medium-4 columns text-center">
+                            <img src="/images/{{sponsor.emailHash}}" class="mxt-img--sponsors" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}" />
+                        </div>
+                        <div class="small-12 medium-8 columns">
+                            <h3 class="subheader">{{sponsor.company}}</h3>
+                            {{sponsor.description}}
+                            <ul class="menu simple">
+                                {{#sponsor.links}}
+                                    <li><a href="{{url}}" target="_blank">{{name}}</a></li>
+                                {{/sponsor.links}}
+                            </ul>
+                        </div>
+                    </div>
+                {{/sponsors-video}}
+            </div>
         </div>
     </div>
 </div>
