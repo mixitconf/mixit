@@ -23,10 +23,11 @@
 
 <div class="mxt-wrapper--page-content">
     <div class="row">
+        {{#talks.entrySet}}
         <div class="columns large-12 callout">
-            <h2>Jeudi 20 avril - matinée</h2><br />
+            {{#key}}<h2>{{key}}</h2><br />{{/key}}
             <ul class="accordion" data-accordion>
-                {{#talks}}
+                  {{#value}}
                   <li class="accordion-item" data-accordion-item>
                     <!-- Accordion tab title -->
                     <a href="#" class="accordion-title">
@@ -39,10 +40,8 @@
                                 <span>{{#i18n}}home.topics.{{topic}}.title{{/i18n}}</span>
                             </li>
                             {{/topic}}
-                            <!-- @Seb AJOUTER CONDITION SI ANGLAIS -->
-                            <li class="mxt-text--cat mxt-text--cat-en menu-text">EN</li>
-                            <!-- @Seb AJOUTER CONDITION SAUF SI Format == talk -->
-                            <li class="mxt-text--cat-format menu-text">#{{format}}</li>
+                            {{#isEn}}<li class="mxt-text--cat mxt-text--cat-en menu-text">EN</li>{{/isEn}}
+                            {{^isTalk}}<li class="mxt-text--cat-format menu-text">#{{format}}</li>{{/isTalk}}
                         </ul>
                     </a>
                     <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
@@ -52,9 +51,7 @@
                                 <p class="mxt-text--cat-room">{{#i18n}}{{room}}{{/i18n}}</p>
                                 <div>{{summary}}</div>
                                 <p class="subheader">
-                                    <strong>{{#video}}
-                                        <p>&#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{video}}">{{#i18n}}talk.video.thevideo{{/i18n}}</a></p>
-                                    {{/video}}</strong>
+                                    {{#video}}<p><strong>&#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{video}}">{{#i18n}}talk.video.thevideo{{/i18n}}</a></strong></p>{{/video}}
                                 </p>
                             </div>
                             <div class="small-3 columns text-center">
@@ -72,9 +69,10 @@
                         </div>
                     </div>
                   </li>
-                {{/talks}}
+                {{/value}}
             </ul>
         </div>
+        {{/talks.entrySet}}
     </div>
 </div>
 

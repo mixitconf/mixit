@@ -26,8 +26,10 @@ class TalkHandler(val repository: TalkRepository,
                     .flatMap { talks -> userRepository
                             .findMany(talks.flatMap(Talk::speakerIds))
                             .collectMap(User::login)
-                            .map { speakers -> talks.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] }, markdownConverter) } }
-                    }),
+                            .map { speakers -> talks.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] }, markdownConverter) }.groupBy { it.date } }
+                    }
+
+            ),
             Pair("year", year),
             Pair("title", when(topic) { null -> "talks.title.html|$year" else -> "talks.title.html.$topic|$year" }),
             Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
@@ -58,7 +60,6 @@ class TalkHandler(val repository: TalkRepository,
         permanentRedirect("${properties.baseUri}/${it.event}/${it.slug}")
     }
 
-    fun planning(req: ServerRequest) = ok().render("planning")
 }
 
 class TalkDto(
@@ -77,7 +78,9 @@ class TalkDto(
         val room: String?,
         val start: String?,
         val end: String?,
-        val date: String?
+        val date: String?,
+        val isEn: Boolean = (language == "english"),
+        val isTalk: Boolean = (format == TalkFormat.TALK)
 )
 
 fun Talk.toDto(lang: Language, speakers: List<User>, markdownConverter: MarkdownConverter) = TalkDto(

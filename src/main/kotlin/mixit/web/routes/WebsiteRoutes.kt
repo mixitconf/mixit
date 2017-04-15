@@ -54,7 +54,6 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
                 GET("/$year/hacktivism") { talkHandler.findByEventView(year, it, "hacktivism") }
                 GET("/$year/learn") { talkHandler.findByEventView(year, it, "learn") }
                 GET("/$year/{slug}") { talkHandler.findOneView(year, it) }
-                GET("/planning", talkHandler::planning)
             }
 
             "/admin".nest {
