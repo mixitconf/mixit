@@ -29189,18 +29189,18 @@
         "role": "USER"
     },
     {
-        "company": null,
+        "company": "Qwant",
         "description": {
-            "ENGLISH": "",
-            "FRENCH": "Expert en s\u00e9curit\u00e9 informatique et t\u00e9l\u00e9coms, \u00c9ric dispose de 20 ans d\u2019exp\u00e9rience dans le d\u00e9ploiement de plateformes IT \u00e0 grande \u00e9chelle (BT, General Electric\u2026) et dans l\u2019entrepreneuriat (Mobilegov SaaS, Trustmission\u2026). En 2010, il pr\u00e9cise sa vision d\u2019un moteur de recherche europ\u00e9en ambitieux, qui d\u00e9cloisonnerait le Web et respecterait \u00e0 la fois les libert\u00e9s des utilisateurs et la stabilit\u00e9 de l\u2019\u00e9cosyst\u00e8me num\u00e9rique. Il concr\u00e9tise cette vision en cofondant Qwant dont il prend la direction, puis la pr\u00e9sidence depuis mai 2016."
+            "ENGLISH": "A lawyer by training, founder of <a href=\"http://www.numerama.com/\" target=\"_blank\">Numerama.com</a>, this privacy and digital rights advocate has joined Qwant where he is Ethics and Public Relations Officer.",
+            "FRENCH": "Juriste de formation, Guillaume a d'abord passé près de 15 ans à diriger la rédaction du magazine <a href=\"http://www.numerama.com/\" target=\"_blank\">Numerama.com</a> qu'il a fondé en 2002. Passionné par les questions de responsabilité sociale et morale que posent souvent les innovations numériques, il a ensuite donné une forme plus concrète à ses convictions en rejoignant le moteur de recherche européen Qwant, dont il est le directeur de l'éthique et des relations publiques."
         },
         "emailHash": null,
-        "firstname": "Eric",
-        "lastname": "L\u00e9andri",
+        "firstname": "Guillaume",
+        "lastname": "Champeau",
         "legacyId": null,
         "links": [],
-        "login": "eric.leandri",
-        "photoUrl": "https://crunchbase-production-res.cloudinary.com/image/upload/c_pad,h_140,w_140/v1464260933/ka3mtx4xwrtgkn1rekvl.png",
+        "login": "guillaume.champeau",
+        "photoUrl": "https://pbs.twimg.com/profile_images/742426671626780676/4ti7IjPi_400x400.jpg",
         "role": "USER"
     },
     {

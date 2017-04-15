@@ -576,7 +576,7 @@
         "room": "AMPHI1",
         "slug": "qwant",
         "speakerIds": [
-            "eric.leandri"
+            "guillaume.champeau"
         ],
         "start": [
             2017,
@@ -585,8 +585,8 @@
             13,
             15
         ],
-        "summary": "A venir ...",
-        "title": "Qwant",
+        "summary": "Les développeurs ne sont pas des machines qui programment d'autres machines, mais bien des hommes et des femmes doués de conscience dont les lignes de code qu'ils produisent peuvent avoir un impact important sur la société. Quelles sont les règles en matière d'éthique pour les développeurs et les startupers ? L'éthique est-elle un obstacle à la croissance d'une entreprise ? Cette keynote apportera des éléments de réflexion en s'intéressant, en particulier, au traitement des données personnelles des utilisateurs.",
+        "title": "Quelle éthique pour les développeurs ?",
         "topic": "hacktivism",
         "video": null
     },
