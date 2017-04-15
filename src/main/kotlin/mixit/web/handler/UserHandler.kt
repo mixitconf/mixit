@@ -56,10 +56,9 @@ class UserDto(
         val logoWebpUrl: String? = null
 )
 
-// TODO Use photoUrl instead of emailHash (modify data + change logoType and logoWebpUrl parameter
 fun User.toDto(language: Language, markdownConverter: MarkdownConverter) =
         UserDto(login, firstname, lastname, email ?: "", company, markdownConverter.toHTML(description[language] ?: ""),
-                emailHash, photoUrl, role, links, logoType(emailHash), logoWebpUrl(emailHash))
+                emailHash, photoUrl, role, links, logoType(photoUrl), logoWebpUrl(photoUrl))
 
 private fun logoWebpUrl(url: String?) =
         when {

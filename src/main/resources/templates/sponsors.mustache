@@ -18,7 +18,11 @@
                 {{#sponsors-gold}}
                 <div class="row align-middle">
                     <div class="small-12 medium-4 columns text-center">
-                        <img src="/images/{{sponsor.emailHash}}" class="mxt-img--sponsors" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}"/>
+                        <picture>
+                            {{#sponsor.logoWebpUrl}}<source srcset="{{sponsor.logoWebpUrl}}" type=" image/webp" alt="{{sponsor.company}}" class="mxt-img--sponsors">{{/sponsor.logoWebpUrl}}
+                            <source srcset="{{sponsor.photoUrl}}" type="{{sponsor.logoType}}" alt="{{sponsor.company}}" class="mxt-img--sponsors">
+                            <img src="{{sponsor.photoUrl}}" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}} alt="{{sponsor.company}}" class="mxt-img--sponsors">
+                        </picture>
                     </div>
                     <div class="small-12 medium-8 columns">
                         <h3 class="subheader">{{sponsor.company}}</h3>
@@ -38,7 +42,11 @@
                 {{#sponsors-silver}}
                 <div class="row align-middle">
                     <div class="small-12 medium-4 columns text-center">
-                        <img src="/images/{{sponsor.emailHash}}" class="mxt-img--sponsors" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}"/>
+                        <picture>
+                            {{#sponsor.logoWebpUrl}}<source srcset="{{sponsor.logoWebpUrl}}" type=" image/webp" alt="{{sponsor.company}}" class="mxt-img--sponsors">{{/sponsor.logoWebpUrl}}
+                            <source srcset="{{sponsor.photoUrl}}" type="{{sponsor.logoType}}" alt="{{sponsor.company}}" class="mxt-img--sponsors">
+                            <img src="{{sponsor.photoUrl}}" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}} alt="{{sponsor.company}}" class="mxt-img--sponsors">
+                        </picture>
                     </div>
                     <div class="small-12 medium-8 columns">
                         <h3 class="subheader">{{sponsor.company}}</h3>
@@ -58,7 +66,11 @@
                 {{#sponsors-party}}
                 <div class="row align-middle">
                     <div class="small-12 medium-4 columns text-center">
-                        <img src="/images/{{sponsor.emailHash}}" class="mxt-img--sponsors" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}"/>
+                        <picture>
+                            {{#sponsor.logoWebpUrl}}<source srcset="{{sponsor.logoWebpUrl}}" type=" image/webp" alt="{{sponsor.company}}" class="mxt-img--sponsors">{{/sponsor.logoWebpUrl}}
+                            <source srcset="{{sponsor.photoUrl}}" type="{{sponsor.logoType}}" alt="{{sponsor.company}}" class="mxt-img--sponsors">
+                            <img src="{{sponsor.photoUrl}}" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}} alt="{{sponsor.company}}" class="mxt-img--sponsors">
+                        </picture>
                     </div>
                     <div class="small-12 medium-8 columns">
                         <h3 class="subheader">{{sponsor.company}}</h3>
@@ -78,7 +90,11 @@
                 {{#sponsors-lanyard}}
                 <div class="row align-middle">
                     <div class="small-12 medium-4 columns text-center">
-                        <img src="/images/{{sponsor.emailHash}}" class="mxt-img--sponsors" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}"/>
+                        <picture>
+                            {{#sponsor.logoWebpUrl}}<source srcset="{{sponsor.logoWebpUrl}}" type=" image/webp" alt="{{sponsor.company}}" class="mxt-img--sponsors">{{/sponsor.logoWebpUrl}}
+                            <source srcset="{{sponsor.photoUrl}}" type="{{sponsor.logoType}}" alt="{{sponsor.company}}" class="mxt-img--sponsors">
+                            <img src="{{sponsor.photoUrl}}" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}} alt="{{sponsor.company}}" class="mxt-img--sponsors">
+                        </picture>
                     </div>
                     <div class="small-12 medium-8 columns">
                         <h3 class="subheader">{{sponsor.company}}</h3>
@@ -98,7 +114,11 @@
                 {{#sponsors-hosting}}
                 <div class="row align-middle">
                     <div class="small-12 medium-4 columns text-center">
-                        <img src="/images/{{sponsor.emailHash}}" class="mxt-img--sponsors" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}" />
+                        <picture>
+                            {{#sponsor.logoWebpUrl}}<source srcset="{{sponsor.logoWebpUrl}}" type=" image/webp" alt="{{sponsor.company}}" class="mxt-img--sponsors">{{/sponsor.logoWebpUrl}}
+                            <source srcset="{{sponsor.photoUrl}}" type="{{sponsor.logoType}}" alt="{{sponsor.company}}" class="mxt-img--sponsors">
+                            <img src="{{sponsor.photoUrl}}" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}} alt="{{sponsor.company}}" class="mxt-img--sponsors">
+                        </picture>
                     </div>
                     <div class="small-12 medium-8 columns">
                         <h3 class="subheader">{{sponsor.company}}</h3>
@@ -118,7 +138,11 @@
                 {{#sponsors-video}}
                     <div class="row align-middle">
                         <div class="small-12 medium-4 columns text-center">
-                            <img src="/images/{{sponsor.emailHash}}" class="mxt-img--sponsors" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}" />
+                            <picture>
+                                {{#sponsor.logoWebpUrl}}<source srcset="{{sponsor.logoWebpUrl}}" type=" image/webp" alt="{{sponsor.company}}" class="mxt-img--sponsors">{{/sponsor.logoWebpUrl}}
+                                <source srcset="{{sponsor.photoUrl}}" type="{{sponsor.logoType}}" alt="{{sponsor.company}}" class="mxt-img--sponsors">
+                                <img src="{{sponsor.photoUrl}}" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}} alt="{{sponsor.company}}" class="mxt-img--sponsors">
+                            </picture>
                         </div>
                         <div class="small-12 medium-8 columns">
                             <h3 class="subheader">{{sponsor.company}}</h3>
