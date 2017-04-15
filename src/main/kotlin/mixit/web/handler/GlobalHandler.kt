@@ -20,10 +20,10 @@ class GlobalHandler(val userRepository: UserRepository,
         ok().render("about", mapOf(Pair("staff", users), Pair("title", "about.title")))
     }
 
-    fun mixteenView(req: ServerRequest) = ok().render("mixteen")
+    fun mixteenView(req: ServerRequest) = ok().render("mixteen", mapOf(Pair("title", "mixteen.title")))
 
-    fun faqView(req: ServerRequest) = ok().render("faq")
+    fun faqView(req: ServerRequest) = ok().render("faq", mapOf(Pair("title", "faq.title")))
 
-    fun comeToMixitView(req: ServerRequest) = ok().render("come")
+    fun comeToMixitView(req: ServerRequest) = ok().render("come", mapOf(Pair("title", "come.title")))
 }
 
