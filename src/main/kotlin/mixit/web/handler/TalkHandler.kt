@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.ServerResponse.*
 import org.springframework.web.util.UriUtils
+import reactor.core.publisher.Mono
 import java.nio.charset.StandardCharsets
 import java.time.LocalDateTime
 
@@ -19,23 +20,25 @@ class TalkHandler(val repository: TalkRepository,
                   val markdownConverter: MarkdownConverter,
                   val properties: MixitProperties) {
 
-    fun findByEventView(year: Int, req: ServerRequest, topic: String? = null) = ok().render("talks", mapOf(
-            Pair("talks", repository
-                    .findByEvent(year.toString(), topic)
-                    .collectList()
-                    .flatMap { talks -> userRepository
-                            .findMany(talks.flatMap(Talk::speakerIds))
-                            .collectMap(User::login)
-                            .map { speakers -> talks.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] }, markdownConverter) }.groupBy { it.date } }
-                    }
+    fun findByEventView(year: Int, req: ServerRequest, topic: String? = null): Mono<ServerResponse> {
+        val talks = repository
+                .findByEvent(year.toString(), topic)
+                .collectList()
+                .flatMap { talks -> userRepository
+                        .findMany(talks.flatMap(Talk::speakerIds))
+                        .collectMap(User::login)
+                        .map { speakers -> talks.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] }, markdownConverter) }.groupBy { it.date } }
+                }
 
-            ),
-            Pair("year", year),
-            Pair("title", when(topic) { null -> "talks.title.html|$year" else -> "talks.title.html.$topic|$year" }),
-            Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
-            Pair("topic", topic)
-    ))
-
+        return ok().render("talks", mapOf(
+                Pair("talks", talks),
+                Pair("year", year),
+                Pair("title", when(topic) { null -> "talks.title.html|$year" else -> "talks.title.html.$topic|$year" }),
+                Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
+                Pair("topic", topic),
+                Pair("has2Columns", talks.map { it.size == 2 })
+        ))
+    }
 
 
     fun findOneView(year: Int, req: ServerRequest) = repository.findByEventAndSlug(year.toString(), req.pathVariable("slug")).flatMap { talk ->

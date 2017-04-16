@@ -24,7 +24,7 @@
 <div class="mxt-wrapper--page-content">
     <div class="row">
         {{#talks.entrySet}}
-        <div class="columns large-12 callout">
+        <div class="columns small-12 medium-12 {{#has2Columns}}large-6{{/has2Columns}}{{^has2Columns}}large-12{{/has2Columns}} callout">
             {{#key}}<h2>{{key}}</h2><br />{{/key}}
             <ul class="accordion" data-accordion>
                   {{#value}}
@@ -32,8 +32,9 @@
                     <!-- Accordion tab title -->
                     <a href="#" class="accordion-title">
                         <ul class="menu mxt-menu--accordion">
-                            <li>{{#start}}{{start}}{{/start}} - {{#end}}{{end}}{{/end}}</li>
-                            <li class="menu-text">{{title}}</li>
+                            <li>{{#start}}{{start}}{{/start}} - {{#end}}{{end}}{{/end}} <span class="menu-text">{{title}}</span></li>
+                        </ul>
+                        <ul class="menu mxt-menu--accordion">
                             {{#topic}}
                             <li class="mxt-text--cat mxt-text--cat-{{topic}}">
                                 <img src="/images/svg/mxt-icon--{{topic}}.svg" class="mxt-icon--cat mxt-icon--cat__talks" alt="{{#i18n}}home.topics.{{topic}}.title{{/i18n}}" />
@@ -47,14 +48,14 @@
                     <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
                     <div class="accordion-content" data-tab-content>
                         <div class="row">
-                            <div class="small-9 columns">
+                            <div class="small-7 medium-9 large-8 columns">
                                 <p class="mxt-text--cat-room">{{#i18n}}{{room}}{{/i18n}}</p>
                                 <div>{{summary}}</div>
                                 <p class="subheader">
                                     {{#video}}<p><strong>&#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{video}}">{{#i18n}}talk.video.thevideo{{/i18n}}</a></strong></p>{{/video}}
                                 </p>
                             </div>
-                            <div class="small-3 columns text-center">
+                            <div class="small-5 medium-3 large-4 columns text-center">
                                 <ul class="menu vertical">
                                     {{#speakers}}
                                         <li class="menu-text">
