@@ -59,7 +59,7 @@ class UserIntegrationTests : AbstractIntegrationTests() {
                 .retrieve()
                 .bodyToFlux<User>()
                 .test()
-                .expectNextCount(16)
+                .expectNextCount(15)
                 .verifyComplete()
     }
 
