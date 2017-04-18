@@ -31,18 +31,15 @@
                   <li class="accordion-item" data-accordion-item>
                     <!-- Accordion tab title -->
                     <a href="#" class="accordion-title">
-                        <ul class="menu mxt-menu--accordion">
-                            <li>{{#start}}{{start}}{{/start}} - {{#end}}{{end}}{{/end}} <span class="menu-text">{{title}}</span></li>
-                        </ul>
-                        <ul class="menu mxt-menu--accordion">
-                            {{#topic}}
-                            <li class="mxt-text--cat mxt-text--cat-{{topic}}">
-                                <img src="/images/svg/mxt-icon--{{topic}}.svg" class="mxt-icon--cat mxt-icon--cat__talks" alt="{{#i18n}}home.topics.{{topic}}.title{{/i18n}}" />
-                                <span>{{#i18n}}home.topics.{{topic}}.title{{/i18n}}</span>
-                            </li>
-                            {{/topic}}
-                            {{#isEn}}<li class="mxt-text--cat mxt-text--cat-en menu-text">EN</li>{{/isEn}}
-                            {{^isTalk}}<li class="mxt-text--cat-format menu-text">#{{format}}</li>{{/isTalk}}
+                        {{#topic}}<div class="mxt-text--cat mxt-text--cat-{{topic}}">
+                            <img src="/images/svg/mxt-icon--{{topic}}.svg" class="mxt-icon--cat mxt-icon--cat__talks" alt="{{#i18n}}home.topics.{{topic}}.title{{/i18n}}" />
+                            <span>{{#i18n}}home.topics.{{topic}}.title{{/i18n}}</span>
+                        </div>{{/topic}}
+                        <h4>{{title}}{{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}</h4>
+                        <ul class="menu simple mxt-menu--accordion">
+                            <li>{{#start}}{{start}}{{/start}} - {{#end}}{{end}}{{/end}}</li>
+                            {{^isTalk}}<li class="mxt-text--cat-format">#{{format}}</li>{{/isTalk}}
+                            
                         </ul>
                     </a>
                     <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->

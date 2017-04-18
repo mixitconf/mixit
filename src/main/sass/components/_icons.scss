@@ -12,9 +12,6 @@
 	min-width: auto;
 	max-width: 1.7em;
 	height: auto;
-	@include breakpoint(small only) {
-		margin-top: 1em;
-	}
 }
 
 .mxt-icon--heart {
