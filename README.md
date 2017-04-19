@@ -36,7 +36,6 @@ developed with Spring Framework 5 and Kotlin can look like:
 ### TODO
 
  - Use `::findAll` instead of `this@BlogController::findAll` when [KT-15667](https://youtrack.jetbrains.com/issue/KT-15667) will be fixed
- - Change `foo.then { bar -> ... }` to `foo.then { ... }` when [Reactor Core](https://github.com/reactor/reactor-core) 3.1 will be released
  - Use [Kotlin Javascript](https://kotlinlang.org/docs/reference/js-overview.html) when generated JS size will be optimized or [compile to WebAssembly](https://discuss.kotlinlang.org/t/webassembly-support/1722/) if supported
  - Update to [Gradle Kotlin Script 0.9.0](https://github.com/gradle/gradle-script-kotlin/milestone/13) to [avoid freezing IDEA when modifying `build.gradle.kts`](https://github.com/gradle/gradle-script-kotlin/issues/249)  
  
