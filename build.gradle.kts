@@ -72,10 +72,7 @@ dependencies {
         exclude(module = "hibernate-validator")
     }
     compileOnly("org.springframework:spring-context-indexer")
-    compile("org.springframework.boot:spring-boot-starter-data-mongodb-reactive") {
-        exclude(module = "spring-data-mongodb")
-    }
-    compile("org.springframework.data:spring-data-mongodb:2.0.0.reactor31")
+    compile("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
     compile("org.springframework.boot:spring-boot-devtools")
     testCompile("org.springframework.boot:spring-boot-starter-test")
     if (project.hasProperty("embed-mongo") || System.getProperty("idea.executable") == "idea") {
