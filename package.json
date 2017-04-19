@@ -23,10 +23,13 @@
     "gulp-tsc": "^1.2.6",
     "gulp-uglify": "^2.0.0",
     "gulp-uncss": "^1.0.6",
+    "gulp-util": "^3.0.8",
     "gulp-webp": "^2.3.0",
     "imagemin-mozjpeg": "^6.0.0",
     "run-sequence": "^1.2.2",
-    "typescript": "^2.1.5"
+    "typescript": "^2.1.5",
+    "sw-precache": "^5.0.0",
+    "sw-toolbox": "^3.5.1"
   },
   "dependencies": {
     "@types/core-js": "^0.9.35",
@@ -35,8 +38,6 @@
     "foundation-sites": "^6.3.1",
     "jquery": "^3.1.1",
     "motion-ui": "^1.2.2",
-    "sw-precache": "^4.3.0",
-    "sw-toolbox": "^3.4.0",
     "vinyl-named": "^1.1.0",
     "webpack-stream": "^3.2.0"
   }
