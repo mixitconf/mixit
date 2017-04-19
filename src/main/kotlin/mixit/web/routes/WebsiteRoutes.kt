@@ -40,6 +40,7 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
             GET("/mixteen", globalHandler::mixteenView)
             GET("/faq", globalHandler::faqView)
             GET("/come", globalHandler::comeToMixitView)
+            GET("/schedule", globalHandler::scheduleView)
 
             // Authentication
             GET("/login", authenticationHandler::loginView)

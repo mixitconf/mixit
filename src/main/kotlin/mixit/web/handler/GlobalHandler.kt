@@ -25,5 +25,7 @@ class GlobalHandler(val userRepository: UserRepository,
     fun faqView(req: ServerRequest) = ok().render("faq", mapOf(Pair("title", "faq.title")))
 
     fun comeToMixitView(req: ServerRequest) = ok().render("come", mapOf(Pair("title", "come.title")))
+
+    fun scheduleView(req: ServerRequest) = ok().render("schedule", mapOf(Pair("title", "schedule.title")))
 }
 
