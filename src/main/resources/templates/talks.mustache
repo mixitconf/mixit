@@ -5,7 +5,7 @@
         <div class="columns large-8 large-offset-2 menu-centered text-center">
             <ul class="dropdown menu simple mxt-menu--talks" data-dropdown-menu>
                 <li class="mxt-menu--talks-title"><h1>{{#i18n}}talks.title{{#topic}}.{{topic}}{{/topic}}{{/i18n}}</h1></li>
-                <li><a href="#" class="mxt-menu--talks-date">{{year}}</a>
+                <li><a href="#" class="mxt-menu--talks-date"><h1>{{year}}</h1></a>
                     <ul class="menu">
                         <li><a href="{{localePrefix}}/2017{{#topic}}/{{topic}}{{/topic}}">2017</a></li>
                         <li><a href="{{localePrefix}}/2016{{#topic}}/{{topic}}{{/topic}}">2016</a></li>
@@ -35,7 +35,7 @@
                             <img src="/images/svg/mxt-icon--{{topic}}.svg" class="mxt-icon--cat mxt-icon--cat__talks" alt="{{#i18n}}home.topics.{{topic}}.title{{/i18n}}" />
                             <span>{{#i18n}}home.topics.{{topic}}.title{{/i18n}}</span>
                         </div>{{/topic}}
-                        <h4>{{title}}{{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}</h4>
+                        <h3 class="mxt-text--talktitle">{{title}}{{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}</h3>
                         <ul class="menu simple mxt-menu--accordion">
                             <li>{{#start}}{{start}}{{/start}} - {{#end}}{{end}}{{/end}}</li>
                             {{^isTalk}}<li class="mxt-text--cat-format">#{{format}}</li>{{/isTalk}}
