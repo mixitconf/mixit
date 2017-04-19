@@ -45,7 +45,7 @@ class TalkHandler(val repository: TalkRepository,
         userRepository.findMany(talk.speakerIds).collectList().flatMap { speakers ->
         ok().render("talk", mapOf(
                 Pair("talk", talk.toDto(req.language(), speakers!!, markdownConverter)),
-                Pair("speakers", speakers.map { it.toDto(req.language(), markdownConverter) }),
+                Pair("speakers", speakers.map { it.toDto(req.language(), markdownConverter) }.sortedBy { talk.speakerIds.indexOf(it.login) }),
                 Pair("title", "talk.html.title|${talk.title}"),
                 Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8))))
     }}
