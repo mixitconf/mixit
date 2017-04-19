@@ -21,7 +21,7 @@ class TicketingHandler(val repository: TicketRepository) {
                 formData["firstname"]!!,
                 formData["lastname"]!!)
         repository.save(ticket)
-                .then { ok().render("ticketing-submission", formData) }
+                .then(ok().render("ticketing-submission", formData))
                 .onErrorResume(DuplicateKeyException::class, { ok().render("ticketing-error", mapOf(Pair("message", "ticketing.error.alreadyexists"), Pair("title", "ticketing.title"))) } )
                 .onErrorResume { ok().render("ticketing-error", mapOf(Pair("message", "ticketing.error.default"), Pair("title", "ticketing.title"))) }
     }
