@@ -5,24 +5,26 @@ import mixit.util.MarkdownConverter
 import mixit.web.MixitWebFilter
 import mixit.util.run
 import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.autoconfigure.mustache.MustacheResourceTemplateLoader
+import org.springframework.boot.autoconfigure.mustache.reactive.MustacheViewResolver
 import org.springframework.boot.context.properties.EnableConfigurationProperties
-import org.springframework.context.MessageSource
 import org.springframework.context.annotation.Bean
-import org.springframework.web.reactive.result.view.mustache.MustacheResourceTemplateLoader
-import org.springframework.web.reactive.result.view.mustache.MustacheViewResolver
 
 @SpringBootApplication
 @EnableConfigurationProperties(MixitProperties::class)
 class MixitApplication {
 
+    private val prefix = "classpath:/templates/"
+    private val suffix = ".mustache"
+    private val mustacheCompiler = Mustache
+            .compiler()
+            .escapeHTML(false)
+            .withLoader(MustacheResourceTemplateLoader(prefix, suffix))
+
     @Bean
-    fun viewResolver(messageSource: MessageSource, properties: MixitProperties) = MustacheViewResolver().apply {
-        val prefix = "classpath:/templates/"
-        val suffix = ".mustache"
-        val loader = MustacheResourceTemplateLoader(prefix, suffix)
+    fun viewResolver() = MustacheViewResolver(mustacheCompiler).apply {
         setPrefix(prefix)
         setSuffix(suffix)
-        setCompiler(Mustache.compiler().escapeHTML(false).withLoader(loader))
     }
 
     @Bean
