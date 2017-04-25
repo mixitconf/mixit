@@ -17,7 +17,7 @@ class UserIntegrationTests : AbstractIntegrationTests() {
     @Test
     fun `Create a new user`() {
         client.post().uri("/api/user/").accept(APPLICATION_JSON).contentType(APPLICATION_JSON)
-                .body(User("brian", "Brian", "Clozel", "bc@gm.com"))
+                .syncBody(User("brian", "Brian", "Clozel", "bc@gm.com"))
                 .retrieve()
                 .bodyToMono<User>()
                 .test()
