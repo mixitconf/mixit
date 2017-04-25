@@ -1,8 +1,6 @@
 package mixit
 
 import com.samskivert.mustache.Mustache
-import mixit.util.MarkdownConverter
-import mixit.web.MixitWebFilter
 import mixit.util.run
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.autoconfigure.mustache.MustacheResourceTemplateLoader
@@ -26,12 +24,6 @@ class MixitApplication {
         setPrefix(prefix)
         setSuffix(suffix)
     }
-
-    @Bean
-    fun filter(properties: MixitProperties) = MixitWebFilter(properties)
-
-    @Bean
-    fun markdownConverter() = MarkdownConverter()
 
 }
 

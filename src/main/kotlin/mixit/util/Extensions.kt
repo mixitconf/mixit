@@ -5,7 +5,6 @@ import mixit.model.Language
 import org.springframework.boot.SpringApplication
 import org.springframework.data.mongodb.core.ReactiveMongoOperations
 import org.springframework.data.mongodb.core.query.Query
-import org.springframework.http.HttpHeaders
 import org.springframework.http.MediaType.*
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
@@ -33,24 +32,31 @@ fun run(type: KClass<*>, vararg args: String) = SpringApplication.run(type.java,
 // Spring Data extensions
 // ----------------------
 
-inline fun <reified T : Any> ReactiveMongoOperations.findById(id: Any): Mono<T> = findById(id, T::class.java)
+inline fun <reified T : Any> ReactiveMongoOperations.findById(id: Any): Mono<T> =
+        findById(id, T::class.java)
 
-inline fun <reified T : Any> ReactiveMongoOperations.find(query: Query): Flux<T> = find(query, T::class.java)
+inline fun <reified T : Any> ReactiveMongoOperations.find(query: Query): Flux<T> =
+        find(query, T::class.java)
 
-inline fun <reified T : Any> ReactiveMongoOperations.findAll(): Flux<T> = findAll(T::class.java)
+inline fun <reified T : Any> ReactiveMongoOperations.findAll(): Flux<T> =
+        findAll(T::class.java)
 
-inline fun <reified T : Any> ReactiveMongoOperations.findOne(query: Query): Mono<T> = find(query, T::class.java).next()
+inline fun <reified T : Any> ReactiveMongoOperations.findOne(query: Query): Mono<T> =
+        find(query, T::class.java).next()
 
 @Suppress("EXTENSION_SHADOWED_BY_MEMBER")
-inline fun <reified T : Any> ReactiveMongoOperations.remove(query: Query): Mono<DeleteResult> = remove(query, T::class.java)
+inline fun <reified T : Any> ReactiveMongoOperations.remove(query: Query): Mono<DeleteResult> =
+        remove(query, T::class.java)
 
-inline fun <reified T : Any> ReactiveMongoOperations.count(): Mono<Long> = count(Query(), T::class.java)
+inline fun <reified T : Any> ReactiveMongoOperations.count(): Mono<Long> =
+        count(Query(), T::class.java)
 
 // -------------------------
 // Spring WebFlux extensions
 // -------------------------
 
-fun ServerRequest.language() = Language.findByTag(this.headers().asHttpHeaders().acceptLanguageAsLocales.first().language)
+fun ServerRequest.language() =
+        Language.findByTag(this.headers().asHttpHeaders().acceptLanguageAsLocales.first().language)
 
 fun ServerResponse.BodyBuilder.json() = contentType(APPLICATION_JSON_UTF8)
 
@@ -121,14 +127,13 @@ fun String.stripAccents() = Normalizer
         .normalize(this, Normalizer.Form.NFD)
         .replace("\\p{InCombiningDiacriticalMarks}+".toRegex(), "")
 
-fun String.toSlug() =
-        toLowerCase()
-                .stripAccents()
-                .replace("\n", " ")
-                .replace("[^a-z\\d\\s]".toRegex(), " ")
-                .split(" ")
-                .joinToString("-")
-                .replace("-+".toRegex(), "-")   // Avoid multiple consecutive "--"
+fun String.toSlug() = toLowerCase()
+        .stripAccents()
+        .replace("\n", " ")
+        .replace("[^a-z\\d\\s]".toRegex(), " ")
+        .split(" ")
+        .joinToString("-")
+        .replace("-+".toRegex(), "-")   // Avoid multiple consecutive "--"
 
 fun <T> Iterable<T>.shuffle(): Iterable<T> =
         toMutableList().apply { Collections.shuffle(this) }

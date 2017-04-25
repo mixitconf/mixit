@@ -6,7 +6,6 @@ import mixit.model.Talk
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.query.Query
-import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 import mixit.util.*
@@ -17,12 +16,12 @@ import org.springframework.data.mongodb.core.query.Criteria.*
 
 
 @Repository
-class TalkRepository(val template: ReactiveMongoTemplate) {
+class TalkRepository(val template: ReactiveMongoTemplate,
+                     val objectMapper: ObjectMapper) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
-        val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
         if (count().block() == 0L) {
             listOf(2012, 2013, 2014, 2015, 2016, 2017).forEach { year ->
                 val talksResource = ClassPathResource("data/talks_$year.json")

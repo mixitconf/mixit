@@ -9,17 +9,16 @@ import org.springframework.core.io.ClassPathResource
 import org.springframework.data.domain.Sort
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.query.Query
-import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
 import org.springframework.stereotype.Repository
 
 
 @Repository
-class EventRepository(val template: ReactiveMongoTemplate) {
+class EventRepository(val template: ReactiveMongoTemplate,
+                      val objectMapper: ObjectMapper) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
-        val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
         if (count().block() == 0L) {
             val eventsResource = ClassPathResource("data/events.json")
             val events: List<Event> = objectMapper.readValue(eventsResource.inputStream)

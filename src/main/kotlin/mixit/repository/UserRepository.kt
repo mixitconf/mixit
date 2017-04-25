@@ -3,12 +3,10 @@ package mixit.repository
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.model.Role
-import mixit.model.Talk
 import mixit.model.User
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.query.Query
-import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Mono
 import mixit.util.*
@@ -17,12 +15,12 @@ import org.springframework.data.mongodb.core.query.Criteria.*
 
 
 @Repository
-class UserRepository(val template: ReactiveMongoTemplate) {
+class UserRepository(val template: ReactiveMongoTemplate,
+                     val objectMapper: ObjectMapper) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
-        val objectMapper: ObjectMapper = Jackson2ObjectMapperBuilder.json().build()
         if (count().block() == 0L) {
             val usersResource = ClassPathResource("data/users.json")
             val users: List<User> = objectMapper.readValue(usersResource.inputStream)

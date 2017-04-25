@@ -34,25 +34,28 @@ class AdminHandler(val ticketRepository: TicketRepository,
                    val properties: MixitProperties,
                    val objectMapper: ObjectMapper) {
 
-    fun admin(req: ServerRequest) = ok().render("admin", mapOf(Pair("title", "admin.title")))
+    fun admin(req: ServerRequest) =
+            ok().render("admin", mapOf(Pair("title", "admin.title")))
 
-    fun adminTicketing(req: ServerRequest) = ok().render("admin-ticketing", mapOf(
-            Pair("tickets", ticketRepository.findAll()),
-            Pair("title", "admin.ticketing.title")
-    ))
+    fun adminTicketing(req: ServerRequest) =
+            ok().render("admin-ticketing", mapOf(
+                Pair("tickets", ticketRepository.findAll()),
+                Pair("title", "admin.ticketing.title")
+            ))
 
-    fun adminTalks(req: ServerRequest) = ok().render("admin-talks", mapOf(
-            Pair("talks", talkRepository
-                    .findByEvent("2017")
-                    .collectList()
-                    .flatMap { talks ->
-                        userRepository
-                            .findMany(talks.flatMap(Talk::speakerIds))
-                            .collectMap(User::login)
-                            .map { speakers -> talks.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] }, markdownConverter) } }
-                    }),
-            Pair("title", "admin.talks.title")
-    ))
+    fun adminTalks(req: ServerRequest) =
+            ok().render("admin-talks", mapOf(
+                Pair("talks", talkRepository
+                        .findByEvent("2017")
+                        .collectList()
+                        .flatMap { talks ->
+                            userRepository
+                                .findMany(talks.flatMap(Talk::speakerIds))
+                                .collectMap(User::login)
+                                .map { speakers -> talks.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] }, markdownConverter) } }
+                        }),
+                Pair("title", "admin.talks.title")
+            ))
 
 
     fun adminUsers(req: ServerRequest) = ok().render("admin-users", mapOf(Pair("users", userRepository.findAll()), Pair("title", "admin.users.title")))

@@ -4,6 +4,7 @@ import mixit.MixitProperties
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpHeaders.ACCEPT_LANGUAGE
 import org.springframework.http.HttpStatus
+import org.springframework.stereotype.Component
 import org.springframework.web.server.ServerWebExchange
 import org.springframework.web.server.WebFilter
 import org.springframework.web.server.WebFilterChain
@@ -12,6 +13,7 @@ import java.net.URI
 import java.util.*
 
 
+@Component
 class MixitWebFilter(val properties: MixitProperties) : WebFilter {
 
     private val redirectDoneAttribute = "redirectDone"
