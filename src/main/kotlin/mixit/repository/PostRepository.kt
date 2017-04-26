@@ -44,7 +44,7 @@ class PostRepository(val template: ReactiveMongoTemplate,
         query.with(Sort.by(Order(DESC, "addedAt")))
         query.fields().exclude("content")
         if (lang != null) {
-            query.addCriteria(where("content.$lang").exists(true))
+            query.addCriteria(where("title.$lang").exists(true))
         }
         return template.find(query)
     }
