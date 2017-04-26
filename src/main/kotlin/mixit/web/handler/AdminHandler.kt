@@ -12,7 +12,6 @@ import mixit.repository.PostRepository
 import mixit.repository.TalkRepository
 import mixit.repository.TicketRepository
 import mixit.repository.UserRepository
-import mixit.util.MarkdownConverter
 import mixit.util.language
 import mixit.util.seeOther
 import mixit.util.toSlug
@@ -30,7 +29,6 @@ class AdminHandler(val ticketRepository: TicketRepository,
                    val talkRepository: TalkRepository,
                    val userRepository: UserRepository,
                    val postRepository: PostRepository,
-                   val markdownConverter: MarkdownConverter,
                    val properties: MixitProperties,
                    val objectMapper: ObjectMapper) {
 
@@ -52,7 +50,7 @@ class AdminHandler(val ticketRepository: TicketRepository,
                             userRepository
                                 .findMany(talks.flatMap(Talk::speakerIds))
                                 .collectMap(User::login)
-                                .map { speakers -> talks.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] }, markdownConverter) } }
+                                .map { speakers -> talks.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] }) } }
                         }),
                 Pair("title", "admin.talks.title")
             ))
@@ -183,7 +181,7 @@ class AdminHandler(val ticketRepository: TicketRepository,
             .flatMap { posts -> userRepository
                     .findMany(posts.map { it.authorId })
                     .collectMap(User::login)
-                    .map { authors -> posts.map { it.toDto(authors[it.authorId]!!, req.language(), markdownConverter) } }
+                    .map { authors -> posts.map { it.toDto(authors[it.authorId]!!, req.language()) } }
             }), Pair("title", "admin.blog.title")))
 
 

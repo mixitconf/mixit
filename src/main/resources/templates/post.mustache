@@ -14,8 +14,8 @@
     <div class="row">
         <div class="column large-8 large-offset-2">
             <div class="callout">
-			    <div class="lead">{{post.headline}}</div>
-			    <p>{{post.content}}</p>
+			    <div class="lead">{{#markdown}}{{post.headline}}{{/markdown}}</div>
+			    <p>{{#markdown}}{{post.content}}{{/markdown}}</p>
 		    </div>
 	    </div>
  	</div>

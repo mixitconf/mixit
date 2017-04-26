@@ -21,8 +21,8 @@
             <article class="callout">
                 <h1 class="text-center mxt-title--talk">{{talk.title}}</h1>
                 <hr /> 
-                <div class="lead">{{talk.summary}}</div>            
-                {{talk.description}}
+                <div class="lead">{{talk.summary}}</div>
+                {{#talk.description}}{{talk.description}}{{/talk.description}}
                 <p class="subheader"><strong>
                     {{#talk.video}}
                         <hr />

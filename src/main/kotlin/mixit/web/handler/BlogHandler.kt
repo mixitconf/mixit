@@ -14,12 +14,11 @@ import org.springframework.web.reactive.function.server.ServerResponse.*
 @Component
 class BlogHandler(val repository: PostRepository,
                   val userRepository: UserRepository,
-                  val markdownConverter: MarkdownConverter,
                   val properties: MixitProperties) {
 
     fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug"), req.language())
             .flatMap { post -> userRepository.findOne(post.authorId).flatMap { author ->
-                    val model = mapOf(Pair("post", post.toDto(author, req.language(), markdownConverter)), Pair("title", "blog.post.title|${post.title[req.language()]}"))
+                    val model = mapOf(Pair("post", post.toDto(author, req.language())), Pair("title", "blog.post.title|${post.title[req.language()]}"))
                     ok().render("post", model)
                 }
             }.switchIfEmpty(repository.findBySlug(req.pathVariable("slug"), if (req.language() == FRENCH) ENGLISH else FRENCH).flatMap {
@@ -29,7 +28,7 @@ class BlogHandler(val repository: PostRepository,
     fun findAllView(req: ServerRequest) = repository.findAll(req.language())
             .collectList()
             .flatMap { posts -> userRepository.findMany(posts.map { it.authorId }).collectMap{ it.login }.flatMap { authors ->
-                val model = mapOf(Pair("posts", posts.map { it.toDto(authors[it.authorId]!!, req.language(), markdownConverter) }), Pair("title", "blog.title"))
+                val model = mapOf(Pair("posts", posts.map { it.toDto(authors[it.authorId]!!, req.language()) }), Pair("title", "blog.title"))
                 ok().render("blog", model)
             }}
 
@@ -50,14 +49,14 @@ class PostDto(
         val addedAt: String,
         val title: String,
         val headline: String,
-        val content: String
+        val content: String?
 )
 
-fun Post.toDto(author: User, language: Language, markdownConverter: MarkdownConverter) = PostDto(
+fun Post.toDto(author: User, language: Language) = PostDto(
         id,
         slug[language] ?: "",
         author,
         addedAt.formatDate(language),
         title[language] ?: "",
-        markdownConverter.toHTML(headline[language] ?: ""),
-        markdownConverter.toHTML(if (content != null) content[language] else  ""))
+        headline[language] ?: "",
+        if (content != null) content[language] else  "")

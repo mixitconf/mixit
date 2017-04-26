@@ -16,7 +16,7 @@
                 <article>
                     <h2><a href="{{localePrefix}}/blog/{{slug}}" class="mxt-title--article">{{title}}</a></h2>
                     <p class="subheader">{{#i18n}}blog.by{{/i18n}} <strong>{{author.firstname}}</strong>, {{#i18n}}blog.on{{/i18n}} <strong>{{addedAt}}</strong></p>
-                    <p>{{headline}}</p>
+                    <p>{{#markdown}}{{headline}}{{/markdown}}</p>
                     <a href="{{localePrefix}}/blog/{{slug}}" class="button hollow align-center">{{#i18n}}blog.readmore{{/i18n}}</a>
                 </article>
             </div>

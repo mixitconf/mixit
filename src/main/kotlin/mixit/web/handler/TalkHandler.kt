@@ -17,7 +17,6 @@ import java.time.LocalDateTime
 @Component
 class TalkHandler(val repository: TalkRepository,
                   val userRepository: UserRepository,
-                  val markdownConverter: MarkdownConverter,
                   val properties: MixitProperties) {
 
     fun findByEventView(year: Int, req: ServerRequest, topic: String? = null): Mono<ServerResponse> {
@@ -27,7 +26,7 @@ class TalkHandler(val repository: TalkRepository,
                 .flatMap { talks -> userRepository
                         .findMany(talks.flatMap(Talk::speakerIds))
                         .collectMap(User::login)
-                        .map { speakers -> talks.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] }, markdownConverter) }.groupBy { it.date } }
+                        .map { speakers -> talks.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] }) }.groupBy { it.date } }
                 }
 
         return ok().render("talks", mapOf(
@@ -44,8 +43,8 @@ class TalkHandler(val repository: TalkRepository,
     fun findOneView(year: Int, req: ServerRequest) = repository.findByEventAndSlug(year.toString(), req.pathVariable("slug")).flatMap { talk ->
         userRepository.findMany(talk.speakerIds).collectList().flatMap { speakers ->
         ok().render("talk", mapOf(
-                Pair("talk", talk.toDto(req.language(), speakers!!, markdownConverter)),
-                Pair("speakers", speakers.map { it.toDto(req.language(), markdownConverter) }.sortedBy { talk.speakerIds.indexOf(it.login) }),
+                Pair("talk", talk.toDto(req.language(), speakers!!)),
+                Pair("speakers", speakers.map { it.toDto(req.language()) }.sortedBy { talk.speakerIds.indexOf(it.login) }),
                 Pair("title", "talk.html.title|${talk.title}"),
                 Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8))))
     }}
@@ -86,10 +85,10 @@ class TalkDto(
         val isTalk: Boolean = (format == TalkFormat.TALK)
 )
 
-fun Talk.toDto(lang: Language, speakers: List<User>, markdownConverter: MarkdownConverter) = TalkDto(
+fun Talk.toDto(lang: Language, speakers: List<User>) = TalkDto(
         id, slug, format, event, title,
-        markdownConverter.toHTML(summary), speakers, language.name.toLowerCase(), addedAt,
-        markdownConverter.toHTML(description), topic,
+        summary, speakers, language.name.toLowerCase(), addedAt,
+        description, topic,
         video, "rooms.${room?.name?.toLowerCase()}" , start?.formatTalkTime(lang), end?.formatTalkTime(lang),
         start?.formatTalkDate(lang)
 )

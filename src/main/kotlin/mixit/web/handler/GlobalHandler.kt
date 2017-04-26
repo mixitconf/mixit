@@ -2,7 +2,6 @@ package mixit.web.handler
 
 import mixit.model.*
 import mixit.repository.UserRepository
-import mixit.util.MarkdownConverter
 import mixit.util.language
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
@@ -11,11 +10,10 @@ import java.util.*
 
 
 @Component
-class GlobalHandler(val userRepository: UserRepository,
-                    val markdownConverter: MarkdownConverter) {
+class GlobalHandler(val userRepository: UserRepository) {
 
     fun findAboutView(req: ServerRequest) = userRepository.findByRole(Role.STAFF).collectList().flatMap {
-        val users = it.map { it.toDto(req.language(), markdownConverter) }
+        val users = it.map { it.toDto(req.language()) }
         Collections.shuffle(users)
         ok().render("about", mapOf(Pair("staff", users), Pair("title", "about.title")))
     }

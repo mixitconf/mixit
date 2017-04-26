@@ -12,18 +12,17 @@ import java.net.URLDecoder
 
 
 @Component
-class UserHandler(val repository: UserRepository,
-                  val markdownConverter: MarkdownConverter) {
+class UserHandler(val repository: UserRepository) {
 
     fun findOneView(req: ServerRequest) =
             try {
                 val idLegacy = req.pathVariable("login").toLong()
                 repository.findByLegacyId(idLegacy).flatMap {
-                    ok().render("user", mapOf(Pair("user", it.toDto(req.language(), markdownConverter))))
+                    ok().render("user", mapOf(Pair("user", it.toDto(req.language()))))
                 }
             } catch (e:NumberFormatException) {
                 repository.findOne(URLDecoder.decode(req.pathVariable("login"), "UTF-8")).flatMap {
-                    ok().render("user", mapOf(Pair("user", it.toDto(req.language(), markdownConverter))))
+                    ok().render("user", mapOf(Pair("user", it.toDto(req.language()))))
                 }
             }
 
@@ -56,8 +55,8 @@ class UserDto(
         val logoWebpUrl: String? = null
 )
 
-fun User.toDto(language: Language, markdownConverter: MarkdownConverter) =
-        UserDto(login, firstname, lastname, email ?: "", company, markdownConverter.toHTML(description[language] ?: ""),
+fun User.toDto(language: Language) =
+        UserDto(login, firstname, lastname, email ?: "", company, description[language] ?: "",
                 emailHash, photoUrl, role, links, logoType(photoUrl), logoWebpUrl(photoUrl))
 
 private fun logoWebpUrl(url: String?) =

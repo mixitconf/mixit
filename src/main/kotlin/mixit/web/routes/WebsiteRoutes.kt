@@ -2,6 +2,7 @@ package mixit.web
 
 import mixit.MixitProperties
 import mixit.repository.EventRepository
+import mixit.util.MarkdownConverter
 import mixit.web.handler.*
 import org.springframework.context.MessageSource
 import org.springframework.context.annotation.Bean
@@ -25,7 +26,8 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
                     val ticketingHandler: TicketingHandler,
                     val messageSource: MessageSource,
                     val properties: MixitProperties,
-                    val eventRepository: EventRepository) {
+                    val eventRepository: EventRepository,
+                    val markdownConverter: MarkdownConverter) {
 
 
     @Bean
@@ -98,7 +100,7 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
         val locale = request.headers().asHttpHeaders().acceptLanguageAsLocales.firstOrNull()
         val session = request.session().block()
         val path = request.uri().path
-        val model = generateModel(properties.baseUri!!, path, locale, session, messageSource)
+        val model = generateModel(properties.baseUri!!, path, locale, session, messageSource, markdownConverter)
                 next.handle(request).flatMap { if (it is RenderingResponse) RenderingResponse.from(it).modelAttributes(model).build() else it.toMono() }
     }
 

@@ -1,29 +1,21 @@
 package mixit
 
-import com.samskivert.mustache.Mustache
 import mixit.util.run
 import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.autoconfigure.mustache.MustacheResourceTemplateLoader
-import org.springframework.boot.autoconfigure.mustache.reactive.MustacheViewResolver
 import org.springframework.boot.context.properties.EnableConfigurationProperties
+import com.samskivert.mustache.Mustache
+import com.samskivert.mustache.Mustache.TemplateLoader
 import org.springframework.context.annotation.Bean
+
 
 @SpringBootApplication
 @EnableConfigurationProperties(MixitProperties::class)
 class MixitApplication {
 
-    private val prefix = "classpath:/templates/"
-    private val suffix = ".mustache"
-    private val mustacheCompiler = Mustache
-            .compiler()
-            .escapeHTML(false)
-            .withLoader(MustacheResourceTemplateLoader(prefix, suffix))
-
     @Bean
-    fun viewResolver() = MustacheViewResolver(mustacheCompiler).apply {
-        setPrefix(prefix)
-        setSuffix(suffix)
-    }
+    fun mustacheCompiler(templateLoader: TemplateLoader) =
+            // TODO Find a way to disable HTML escaping before enabling user authentication
+            Mustache.compiler().escapeHTML(false).withLoader(templateLoader)
 
 }
 
