@@ -5,35 +5,26 @@ import com.moowork.gradle.node.yarn.YarnInstallTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
-    extra["spring.version"] = "5.0.0.BUILD-SNAPSHOT"
-    var kotlinVersion: String by extra
-    kotlinVersion = "1.1.1"
-
     repositories {
-        mavenCentral()
-        maven { setUrl("https://plugins.gradle.org/m2/") }
         maven { setUrl("https://repo.spring.io/snapshot") }
-        maven { setUrl("https://repo.spring.io/milestone") }
-        maven { setUrl("https://dl.bintray.com/kotlin/kotlin-eap-1.1" )}
     }
 
     dependencies {
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
         classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.0.BUILD-SNAPSHOT")
-        classpath("org.jetbrains.kotlin:kotlin-noarg:$kotlinVersion")
-        classpath("org.jetbrains.kotlin:kotlin-allopen:$kotlinVersion")
-        classpath("com.moowork.gradle:gradle-node-plugin:1.1.1")
     }
 }
 
+plugins {
+    id("org.jetbrains.kotlin.jvm") version "1.1.2"
+    id("org.jetbrains.kotlin.plugin.spring") version "1.1.2"
+    id("org.jetbrains.kotlin.plugin.noarg") version "1.1.2"
+    id("com.moowork.node") version "1.1.1"
+    id("com.moowork.gulp") version "1.1.1"
+    id("io.spring.dependency-management") version "1.0.2.RELEASE"
+}
+
 apply {
-    plugin("kotlin")
-    plugin("kotlin-noarg")
-    plugin("kotlin-spring")
-    plugin("com.moowork.node")
-    plugin("com.moowork.gulp")
     plugin("org.springframework.boot")
-    plugin("io.spring.dependency-management")
 }
 
 version = "1.0.0-SNAPSHOT"
@@ -42,8 +33,6 @@ repositories {
     mavenCentral()
     maven { setUrl("https://repo.spring.io/milestone") }
     maven { setUrl("https://repo.spring.io/snapshot") }
-    maven { setUrl("https://dl.bintray.com/kotlin/kotlin-eap-1.1" )}
-    maven { setUrl("https://dl.bintray.com/sdeleuze/maven") }
 }
 
 tasks.withType<KotlinCompile> {
@@ -61,12 +50,9 @@ configure<NoArgExtension> {
     annotation("org.springframework.data.mongodb.core.mapping.Document")
 }
 
-val kotlinVersion: String by extra
-val springDataVersion = "2.0.0.BUILD-SNAPSHOT"
-
 dependencies {
-    compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlinVersion")
-    compile("org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion")
+    compile(kotlinModule("stdlib-jre8"))
+    compile(kotlinModule("reflect"))
 
     compile("org.springframework.boot:spring-boot-starter-webflux") {
         exclude(module = "hibernate-validator")
