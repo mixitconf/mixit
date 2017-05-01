@@ -67,13 +67,13 @@ Sass, TypeScript, `messages*.properties` and templates should be live reloaded.
  
 ### Package and run the application from the executable JAR:
 ```
-./gradlew clean bootJar
+./gradlew clean build
 java -jar build/libs/mixit-1.0.0-SNAPSHOT.jar
 ```
 
 ### Deploy the app on Cloud Foundry
 ```
-./gradlew clean bootJar
+./gradlew clean build
 cf push
 ```
 
