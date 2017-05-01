@@ -4,14 +4,17 @@ import mixit.MixitProperties
 import mixit.repository.EventRepository
 import mixit.util.MarkdownConverter
 import mixit.web.handler.*
+import org.slf4j.LoggerFactory
 import org.springframework.context.MessageSource
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.DependsOn
 import org.springframework.core.io.ClassPathResource
+import org.springframework.http.MediaType
 import org.springframework.http.MediaType.*
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.RouterFunctions.resources
+import org.springframework.web.reactive.function.server.ServerResponse.ok
 import reactor.core.publisher.toMono
 
 
@@ -28,6 +31,8 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
                     val properties: MixitProperties,
                     val eventRepository: EventRepository,
                     val markdownConverter: MarkdownConverter) {
+
+    private val logger = LoggerFactory.getLogger(WebsiteRoutes::class.java)
 
 
     @Bean
@@ -94,6 +99,13 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
                 POST("/users/delete", adminHandler::adminDeleteUser)
                 POST("/post", adminHandler::adminSavePost)
                 POST("/post/delete", adminHandler::adminDeletePost)
+            }
+        }
+
+        if (properties.baseUri != "https://mixitconf.org") {
+            logger.warn("SEO disabled via robots.txt because ${properties.baseUri} baseUri is not the production one (https://mixitconf.org)")
+            GET("/robots.txt") {
+                ok().contentType(MediaType.TEXT_PLAIN).syncBody("User-agent: *\nDisallow: /")
             }
         }
     }.filter { request, next ->
