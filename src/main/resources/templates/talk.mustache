@@ -20,13 +20,20 @@
         <div class="column large-8 large-offset-2">
             <article class="callout">
                 <h1 class="text-center mxt-title--talk">{{talk.title}}</h1>
-                <hr /> 
+                <hr />
                 <div class="lead">{{talk.summary}}</div>
                 {{#talk.description}}{{talk.description}}{{/talk.description}}
                 <p class="subheader"><strong>
                     {{#talk.video}}
                         <hr />
-                        | &#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{talk.video}}">{{#i18n}}talk.video.thevideo{{/i18n}}</a>
+                        {{#vimeoPlayer}}
+                            <div class="mxt-wrapper--intrinsic">
+                                <iframe src="{{vimeoPlayer}}" class="mxt-wrapper--video-player" allowfullscreen></iframe>
+                            </div>
+                        {{/vimeoPlayer}}
+                        {{^vimeoPlayer}}
+                            &#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{talk.video}}" target="_blank">{{#i18n}}talk.video.thevideo{{/i18n}}</a>
+                        {{/vimeoPlayer}}
                     {{/talk.video}}
                 </strong></p>
                 <hr />
