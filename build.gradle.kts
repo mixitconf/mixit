@@ -59,7 +59,6 @@ dependencies {
     }
     compileOnly("org.springframework:spring-context-indexer")
     compile("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
-    compile("org.springframework.boot:spring-boot-devtools")
     testCompile("org.springframework.boot:spring-boot-starter-test")
     runtime("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
     compile("com.samskivert:jmustache:1.13")
