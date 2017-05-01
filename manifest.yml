@@ -6,4 +6,5 @@ applications:
   path: ./build/libs/mixit-1.0.0-SNAPSHOT.jar
   env:
       JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{enabled: false}'
+      SPRING_PROFILES_ACTIVE : cloud
 timeout: 180
