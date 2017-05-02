@@ -21,8 +21,9 @@
             <article class="callout">
                 <h1 class="text-center mxt-title--talk">{{talk.title}}</h1>
                 <hr />
-                <div class="lead">{{talk.summary}}</div>
-                {{#talk.description}}{{talk.description}}{{/talk.description}}
+                <p>{{#markdown}}{{talk.summary}}{{/markdown}}</p>
+                <hr />
+                {{#talk.description}}<p>{{#markdown}}{{talk.description}}{{/markdown}}</p>{{/talk.description}}
                 <p class="subheader"><strong>
                     {{#talk.video}}
                         <hr />
@@ -54,7 +55,7 @@
                         {{#speakers}}
                             <h2 class="mxt-text-speaker-name">{{firstname}} {{lastname}}</h2>
                             {{#company}}<p class="mxt-text-speaker-company">{{company}}</p>{{/company}}
-                            {{description}}
+                            {{#markdown}}{{description}}{{/markdown}}
                             <ul class="menu simple">
                                 {{#links}}
                                     <li><a href="{{url}}">{{name}}</a></li>

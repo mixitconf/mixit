@@ -47,11 +47,8 @@
                         <div class="row">
                             <div class="small-7 medium-9 large-8 columns">
                                 <p class="mxt-text--cat-room">{{#i18n}}{{room}}{{/i18n}}</p>
-                                <div>{{summary}}</div>
-                                <p class="subheader">
-                                    {{#video}}<p><strong>&#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{video}}" target="_blank">{{#i18n}}talk.video.thevideo{{/i18n}}</a></strong></p>{{/video}}
-                                </p>
-                            </div>
+                                <div>{{#markdown}}{{summary}}{{/markdown}}</div>
+                             </div>
                             <div class="small-5 medium-3 large-4 columns text-center">
                                 <ul class="menu vertical">
                                     {{#speakers}}
