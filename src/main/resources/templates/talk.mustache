@@ -22,8 +22,10 @@
                 <h1 class="text-center mxt-title--talk">{{talk.title}}</h1>
                 <hr />
                 <p>{{#markdown}}{{talk.summary}}{{/markdown}}</p>
-                <hr />
-                {{#talk.description}}<p>{{#markdown}}{{talk.description}}{{/markdown}}</p>{{/talk.description}}
+                {{#talk.description}}
+                    <hr />
+                    <p>{{#markdown}}{{talk.description}}{{/markdown}}</p>
+                {{/talk.description}}
                 <p class="subheader"><strong>
                     {{#talk.video}}
                         <hr />

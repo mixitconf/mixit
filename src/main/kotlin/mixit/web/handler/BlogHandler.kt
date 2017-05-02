@@ -63,7 +63,7 @@ fun Post.toDto(author: User, language: Language) = PostDto(
         addedAt.formatDate(language),
         title[language] ?: "",
         headline[language] ?: "",
-        if (content != null) content[language] else  "")
+        if (content != null) content[language] else  null)
 
 class Feed(
         val title: String,

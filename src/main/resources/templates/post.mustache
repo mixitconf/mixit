@@ -15,8 +15,10 @@
         <div class="column large-8 large-offset-2">
             <div class="callout">
 			    <p>{{#markdown}}{{post.headline}}{{/markdown}}</p>
+                {{#post.content}}
                 <hr />
 			    <p>{{#markdown}}{{post.content}}{{/markdown}}</p>
+                {{/post.content}}
 		    </div>
 	    </div>
  	</div>
