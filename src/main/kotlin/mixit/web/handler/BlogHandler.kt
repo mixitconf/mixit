@@ -6,9 +6,11 @@ import mixit.model.Language.*
 import mixit.repository.PostRepository
 import mixit.repository.UserRepository
 import mixit.util.*
+import org.springframework.http.MediaType.*
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.ServerResponse.*
+import java.util.*
 
 
 @Component
@@ -40,6 +42,8 @@ class BlogHandler(val repository: PostRepository,
         permanentRedirect("${properties.baseUri}/blog/${it.slug[req.language()]}")
     }
 
+    fun feed(req: ServerRequest) = ok().contentType(APPLICATION_ATOM_XML).render("feed", mapOf(Pair("feed", repository.findAll(req.language()).collectList().map { it.toFeed(req.language(), "blog.feed.title", "/blog") })))
+
 }
 
 class PostDto(
@@ -60,3 +64,31 @@ fun Post.toDto(author: User, language: Language) = PostDto(
         title[language] ?: "",
         headline[language] ?: "",
         if (content != null) content[language] else  "")
+
+class Feed(
+        val title: String,
+        val link: String,
+        val updated: String,
+        val entries: List<FeedEntry>
+)
+
+class FeedEntry(
+        val id: String,
+        val title: String,
+        val link: String,
+        val updated: String
+)
+
+fun Post.toFeedEntry(language: Language) = FeedEntry(
+        id!!,
+        title[language]!!,
+        slug[language]!!,
+        addedAt.toRFC3339()
+)
+
+fun List<Post>.toFeed(language: Language, title: String, link: String)= Feed(
+        title,
+        link,
+        first().addedAt.toRFC3339(),
+        map { it.toFeedEntry(language) }
+)

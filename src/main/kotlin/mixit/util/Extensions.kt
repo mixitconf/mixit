@@ -14,6 +14,8 @@ import reactor.core.publisher.Mono
 import java.net.URI
 import java.text.Normalizer
 import java.time.LocalDateTime
+import java.time.ZoneOffset
+import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
 import java.time.format.DateTimeFormatterBuilder
 import java.time.temporal.ChronoField
@@ -58,6 +60,9 @@ inline fun <reified T : Any> ReactiveMongoOperations.count(): Mono<Long> =
 fun ServerRequest.language() =
         Language.findByTag(this.headers().asHttpHeaders().acceptLanguageAsLocales.first().language)
 
+fun ServerRequest.locale() =
+        this.headers().asHttpHeaders().acceptLanguageAsLocales.first() ?: Locale.ENGLISH
+
 fun ServerResponse.BodyBuilder.json() = contentType(APPLICATION_JSON_UTF8)
 
 fun ServerResponse.BodyBuilder.xml() = contentType(APPLICATION_XML)
@@ -80,6 +85,9 @@ fun LocalDateTime.formatTalkDate(language: Language): String =
 
 fun LocalDateTime.formatTalkTime(language: Language): String =
         if (language == Language.ENGLISH) this.format(englishTalkTimeFormatter) else this.format(frenchTalkTimeFormatter)
+
+fun LocalDateTime.toRFC3339(): String = ZonedDateTime.of(this, ZoneOffset.UTC) .format(rfc3339Formatter)
+
 
 private val daysLookup: Map<Long, String> =
         IntStream.rangeClosed(1, 31).boxed().collect(Collectors.toMap(Int::toLong, ::getOrdinal))
@@ -107,6 +115,8 @@ private val englishTalkDateFormatter = DateTimeFormatterBuilder()
         .toFormatter(Locale.ENGLISH)
 
 private val englishTalkTimeFormatter = DateTimeFormatter.ofPattern("HH:mm", Locale.ENGLISH)
+
+private val rfc3339Formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssXXX")
 
 
 
@@ -137,3 +147,5 @@ fun String.toSlug() = toLowerCase()
 
 fun <T> Iterable<T>.shuffle(): Iterable<T> =
         toMutableList().apply { Collections.shuffle(this) }
+
+fun localePrefix(locale: Locale) = if (locale.language == "en") "/en" else ""

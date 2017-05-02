@@ -3,6 +3,7 @@ package mixit.web
 import mixit.MixitProperties
 import mixit.repository.EventRepository
 import mixit.util.MarkdownConverter
+import mixit.util.locale
 import mixit.web.handler.*
 import org.slf4j.LoggerFactory
 import org.springframework.context.MessageSource
@@ -16,6 +17,7 @@ import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.RouterFunctions.resources
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import reactor.core.publisher.toMono
+import java.util.*
 
 
 @Configuration
@@ -38,6 +40,7 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
     @Bean
     @DependsOn("databaseInitializer")
     fun websiteRouter() = router {
+        GET("/blog/feed", blogHandler::feed)
         accept(TEXT_HTML).nest {
             GET("/") { sponsorHandler.viewWithSponsors("home", null, it) }
             GET("/about", globalHandler::findAboutView)
@@ -105,11 +108,11 @@ class WebsiteRoutes(val adminHandler: AdminHandler,
         if (properties.baseUri != "https://mixitconf.org") {
             logger.warn("SEO disabled via robots.txt because ${properties.baseUri} baseUri is not the production one (https://mixitconf.org)")
             GET("/robots.txt") {
-                ok().contentType(MediaType.TEXT_PLAIN).syncBody("User-agent: *\nDisallow: /")
+                ok().contentType(TEXT_PLAIN).syncBody("User-agent: *\nDisallow: /")
             }
         }
     }.filter { request, next ->
-        val locale = request.headers().asHttpHeaders().acceptLanguageAsLocales.firstOrNull()
+        val locale : Locale = request.locale()
         val session = request.session().block()
         val path = request.uri().path
         val model = generateModel(properties.baseUri!!, path, locale, session, messageSource, markdownConverter)

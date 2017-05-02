@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+    <title>{{#i18n}}{{feed.title}}{{/i18n}}</title>
+    <link href="{{baseUri}}{{localePrefix}}/blog"/>
+    <updated>{{feed.updated}}</updated>
+    <id>{{localePrefix}}/blog</id>
+
+    {{#feed.entries}}
+    <entry>
+        <id>{{id}}</id>
+        <title>{{title}}</title>
+        <link href="{{baseUri}}{{localePrefix}}/blog/{{link}}"/>
+        <updated>{{updated}}</updated>
+    </entry>
+    {{/feed.entries}}
+
+</feed>
