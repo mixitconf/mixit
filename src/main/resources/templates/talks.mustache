@@ -37,9 +37,9 @@
                         </div>{{/topic}}
                         <h3 class="mxt-text--talktitle">{{title}}{{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}</h3>
                         <ul class="menu simple mxt-menu--accordion">
-                            <li>{{#start}}{{start}}{{/start}} - {{#end}}{{end}}{{/end}}</li>
+                            <!--<li>{{#start}}{{start}}{{/start}} - {{#end}}{{end}}{{/end}}</li>-->
+                            {{#video}}<li><strong>&#x25ba; {{#i18n}}talks.title.video{{/i18n}}</strong></li>{{/video}}
                             {{^isTalk}}<li class="mxt-text--cat-format">#{{format}}</li>{{/isTalk}}
-                            
                         </ul>
                     </a>
                     <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
