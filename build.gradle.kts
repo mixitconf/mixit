@@ -17,11 +17,13 @@ buildscript {
 }
 
 plugins {
-    id("org.jetbrains.kotlin.jvm") version "1.1.2"
-    id("org.jetbrains.kotlin.plugin.spring") version "1.1.2"
-    id("org.jetbrains.kotlin.plugin.noarg") version "1.1.2"
-    id("com.moowork.node") version "1.1.1"
-    id("com.moowork.gulp") version "1.1.1"
+    val kotlinVersion = "1.1.2"
+    val nodePluginVersion = "1.1.1"
+    id("org.jetbrains.kotlin.jvm") version kotlinVersion
+    id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion
+    id("org.jetbrains.kotlin.plugin.noarg") version kotlinVersion
+    id("com.moowork.node") version nodePluginVersion
+    id("com.moowork.gulp") version nodePluginVersion
     id("io.spring.dependency-management") version "1.0.2.RELEASE"
 }
 
@@ -53,8 +55,8 @@ configure<NoArgExtension> {
 }
 
 dependencies {
-    compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:1.1.2")
-    compile("org.jetbrains.kotlin:kotlin-reflect:1.1.2")
+    compile("org.jetbrains.kotlin:kotlin-stdlib-jre8")
+    compile("org.jetbrains.kotlin:kotlin-reflect")
 
     compile("org.springframework.boot:spring-boot-starter-webflux") {
         exclude(module = "hibernate-validator")
@@ -66,7 +68,6 @@ dependencies {
     compile("com.samskivert:jmustache:1.13")
     compile("com.atlassian.commonmark:commonmark:0.9.0")
     compile("com.atlassian.commonmark:commonmark-ext-autolink:0.9.0")
-
 
     compile("io.projectreactor:reactor-kotlin-extensions:1.0.0.M2")
     testCompile("io.projectreactor.addons:reactor-test")
