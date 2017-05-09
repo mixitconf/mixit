@@ -45,12 +45,12 @@ tasks.withType<KotlinCompile> {
     }
 }
 
-configure<NodeExtension> {
+node {
     version = "6.9.4"
     download = true
 }
 
-configure<NoArgExtension> {
+noArg {
     annotation("org.springframework.data.mongodb.core.mapping.Document")
 }
 
