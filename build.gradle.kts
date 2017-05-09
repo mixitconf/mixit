@@ -64,8 +64,8 @@ dependencies {
     testCompile("org.springframework.boot:spring-boot-starter-test")
     runtime("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
     compile("com.samskivert:jmustache:1.13")
-    compile("com.atlassian.commonmark:commonmark:0.8.0")
-    compile("com.atlassian.commonmark:commonmark-ext-autolink:0.8.0")
+    compile("com.atlassian.commonmark:commonmark:0.9.0")
+    compile("com.atlassian.commonmark:commonmark-ext-autolink:0.9.0")
 
 
     compile("io.projectreactor:reactor-kotlin-extensions:1.0.0.BUILD-SNAPSHOT")
