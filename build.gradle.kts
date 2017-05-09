@@ -6,6 +6,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 buildscript {
     repositories {
+        mavenCentral()
+        maven { setUrl("https://repo.spring.io/milestone") }
         maven { setUrl("https://repo.spring.io/snapshot") }
     }
 
@@ -51,8 +53,8 @@ configure<NoArgExtension> {
 }
 
 dependencies {
-    compile(kotlinModule("stdlib-jre8"))
-    compile(kotlinModule("reflect"))
+    compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:1.1.2")
+    compile("org.jetbrains.kotlin:kotlin-reflect:1.1.2")
 
     compile("org.springframework.boot:spring-boot-starter-webflux") {
         exclude(module = "hibernate-validator")
