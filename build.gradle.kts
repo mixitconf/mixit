@@ -1,6 +1,4 @@
-import org.jetbrains.kotlin.noarg.gradle.NoArgExtension
 import com.moowork.gradle.gulp.GulpTask
-import com.moowork.gradle.node.NodeExtension
 import com.moowork.gradle.node.yarn.YarnInstallTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
