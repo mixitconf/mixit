@@ -30,29 +30,6 @@ import kotlin.reflect.KClass
 
 fun run(type: KClass<*>, vararg args: String) = SpringApplication.run(type.java, *args)
 
-// ----------------------
-// Spring Data extensions
-// ----------------------
-
-inline fun <reified T : Any> ReactiveMongoOperations.findById(id: Any): Mono<T> =
-        findById(id, T::class.java)
-
-inline fun <reified T : Any> ReactiveMongoOperations.find(query: Query): Flux<T> =
-        find(query, T::class.java)
-
-inline fun <reified T : Any> ReactiveMongoOperations.findAll(): Flux<T> =
-        findAll(T::class.java)
-
-inline fun <reified T : Any> ReactiveMongoOperations.findOne(query: Query): Mono<T> =
-        find(query, T::class.java).next()
-
-@Suppress("EXTENSION_SHADOWED_BY_MEMBER")
-inline fun <reified T : Any> ReactiveMongoOperations.remove(query: Query): Mono<DeleteResult> =
-        remove(query, T::class.java)
-
-inline fun <reified T : Any> ReactiveMongoOperations.count(): Mono<Long> =
-        count(Query(), T::class.java)
-
 // -------------------------
 // Spring WebFlux extensions
 // -------------------------

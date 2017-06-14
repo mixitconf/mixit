@@ -9,19 +9,19 @@ buildscript {
     }
 
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.0.M1")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.0.M2")
     }
 }
 
 plugins {
-    val kotlinVersion = "1.1.2"
+    val kotlinVersion = "1.1.2-5"
     val nodePluginVersion = "1.1.1"
     id("org.jetbrains.kotlin.jvm") version kotlinVersion
     id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion
     id("org.jetbrains.kotlin.plugin.noarg") version kotlinVersion
     id("com.moowork.node") version nodePluginVersion
     id("com.moowork.gulp") version nodePluginVersion
-    id("io.spring.dependency-management") version "1.0.2.RELEASE"
+    id("io.spring.dependency-management") version "1.0.3.RELEASE"
 }
 
 apply {
@@ -33,7 +33,6 @@ version = "1.0.0-SNAPSHOT"
 repositories {
     mavenCentral()
     maven { setUrl("https://repo.spring.io/milestone") }
-    maven { setUrl("https://repo.spring.io/snapshot") }
 }
 
 tasks.withType<KotlinCompile> {
@@ -66,8 +65,8 @@ dependencies {
     compile("com.atlassian.commonmark:commonmark:0.9.0")
     compile("com.atlassian.commonmark:commonmark-ext-autolink:0.9.0")
 
+    testCompile("io.projectreactor:reactor-test")
     compile("io.projectreactor:reactor-kotlin-extensions:1.0.0.M2")
-    testCompile("io.projectreactor.addons:reactor-test")
 
     compile("com.fasterxml.jackson.module:jackson-module-kotlin")
     compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")

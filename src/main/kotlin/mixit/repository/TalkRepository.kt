@@ -4,14 +4,13 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.model.Talk
 import org.springframework.core.io.ClassPathResource
-import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
-import mixit.util.*
 import org.slf4j.LoggerFactory
 import org.springframework.data.domain.Sort.*
 import org.springframework.data.domain.Sort.Direction.*
+import org.springframework.data.mongodb.core.*
 import org.springframework.data.mongodb.core.query.Criteria.*
 
 
