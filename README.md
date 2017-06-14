@@ -46,7 +46,7 @@ developed with Spring Framework 5 and Kotlin can look like:
  - [Fork](https://github.com/mix-it/mixit#fork-destination-box) and clone [the project](https://github.com/mix-it/mixit)
  - [Install Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
  - [Install Gulp](http://gulpjs.com/) for development mode 
- - Depending on your platform, you may have to install libpng (On mac with `brew install libpng` for example)
+ - Depending on your platform, you may have to install libpng (On mac with `brew install libpng` or on Ubuntu your need to install libpng12 with [this package](http://cz.archive.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb) because the default one is too recent)
  
 ### Run the app in dev mod using command line
  - Run `./gradlew bootRun` in another terminal
