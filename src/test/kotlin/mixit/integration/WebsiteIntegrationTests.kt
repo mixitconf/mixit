@@ -3,7 +3,7 @@ package mixit.integration
 import org.junit.Test
 import org.springframework.http.HttpStatus.*
 import org.springframework.http.MediaType.*
-import reactor.core.publisher.test
+import reactor.test.test
 
 class WebsiteIntegrationTests : AbstractIntegrationTests() {
 

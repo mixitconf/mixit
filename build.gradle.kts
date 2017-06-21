@@ -33,6 +33,7 @@ version = "1.0.0-SNAPSHOT"
 repositories {
     mavenCentral()
     maven { setUrl("https://repo.spring.io/milestone") }
+    maven { setUrl("https://repo.spring.io/snapshot") }
 }
 
 tasks.withType<KotlinCompile> {
@@ -65,8 +66,8 @@ dependencies {
     compile("com.atlassian.commonmark:commonmark:0.9.0")
     compile("com.atlassian.commonmark:commonmark-ext-autolink:0.9.0")
 
-    testCompile("io.projectreactor:reactor-test")
-    compile("io.projectreactor:reactor-kotlin-extensions:1.0.0.M2")
+    compile("io.projectreactor:reactor-core:3.1.0.BUILD-SNAPSHOT")
+    testCompile("io.projectreactor:reactor-test:3.1.0.BUILD-SNAPSHOT")
 
     compile("com.fasterxml.jackson.module:jackson-module-kotlin")
     compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")

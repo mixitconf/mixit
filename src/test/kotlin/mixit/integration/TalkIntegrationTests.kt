@@ -5,7 +5,7 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.web.reactive.function.client.bodyToFlux
-import reactor.core.publisher.test
+import reactor.test.test
 
 class TalkIntegrationTests : AbstractIntegrationTests() {
 
