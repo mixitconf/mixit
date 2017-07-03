@@ -2,6 +2,7 @@ package mixit.util
 
 import com.mongodb.client.result.DeleteResult
 import mixit.model.Language
+import org.reactivestreams.Publisher
 import org.springframework.boot.SpringApplication
 import org.springframework.data.mongodb.core.ReactiveMongoOperations
 import org.springframework.data.mongodb.core.query.Query
@@ -126,3 +127,14 @@ fun <T> Iterable<T>.shuffle(): Iterable<T> =
         toMutableList().apply { Collections.shuffle(this) }
 
 fun localePrefix(locale: Locale) = if (locale.language == "en") "/en" else ""
+
+// ---------------------------
+// Temporary Reactor extension
+// ---------------------------
+
+fun <T : Any, E : Throwable> Mono<T>.onErrorResume(exceptionType: KClass<E>, fallback: (E) -> Mono<T>): Mono<T> =
+        onErrorResume(exceptionType.java, { fallback(it) })
+
+fun <T> T.toMono(): Mono<T> = Mono.just(this)
+
+

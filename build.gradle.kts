@@ -65,9 +65,8 @@ dependencies {
     compile("com.samskivert:jmustache:1.13")
     compile("com.atlassian.commonmark:commonmark:0.9.0")
     compile("com.atlassian.commonmark:commonmark-ext-autolink:0.9.0")
-
-    compile("io.projectreactor:reactor-core:3.1.0.BUILD-SNAPSHOT")
-    testCompile("io.projectreactor:reactor-test:3.1.0.BUILD-SNAPSHOT")
+    
+    testCompile("io.projectreactor:reactor-test")
 
     compile("com.fasterxml.jackson.module:jackson-module-kotlin")
     compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
