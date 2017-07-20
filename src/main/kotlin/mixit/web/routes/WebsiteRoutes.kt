@@ -4,7 +4,6 @@ import mixit.MixitProperties
 import mixit.repository.EventRepository
 import mixit.util.MarkdownConverter
 import mixit.util.locale
-import mixit.util.toMono
 import mixit.web.handler.*
 import org.slf4j.LoggerFactory
 import org.springframework.context.MessageSource
@@ -16,7 +15,7 @@ import org.springframework.http.MediaType.*
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.RouterFunctions.resources
 import org.springframework.web.reactive.function.server.ServerResponse.ok
-//import reactor.core.publisher.toMono
+import reactor.core.publisher.toMono
 import java.util.*
 
 

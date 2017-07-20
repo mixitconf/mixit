@@ -16,10 +16,10 @@ fun generateModel(baseUri: String,
                   markdownConverter: MarkdownConverter
                   ) = mutableMapOf<String, Any>().apply {
 
-    val username = session.getAttribute<String>("username")
-        if (username.isPresent) {
-            this["username"] = username.get()
-            if (username.get() == "mixit") this["admin"] = true
+        val username = session.getAttribute<String>("username")
+        username?.let {
+            this["username"] = it
+            if (it == "mixit") this["admin"] = true
         }
         this["locale"] = locale.toString()
         this["localePrefix"] = localePrefix(locale)

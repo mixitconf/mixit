@@ -8,8 +8,7 @@ import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.*
-//import reactor.core.publisher.onErrorResume
-import mixit.util.onErrorResume
+import reactor.core.publisher.onErrorResume
 
 @Component
 class TicketingHandler(val repository: TicketRepository) {

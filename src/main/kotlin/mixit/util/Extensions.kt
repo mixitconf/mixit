@@ -1,17 +1,11 @@
 package mixit.util
 
-import com.mongodb.client.result.DeleteResult
 import mixit.model.Language
-import org.reactivestreams.Publisher
 import org.springframework.boot.SpringApplication
-import org.springframework.data.mongodb.core.ReactiveMongoOperations
-import org.springframework.data.mongodb.core.query.Query
 import org.springframework.http.MediaType.*
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.*
-import reactor.core.publisher.Flux
-import reactor.core.publisher.Mono
 import java.net.URI
 import java.text.Normalizer
 import java.time.LocalDateTime
@@ -128,13 +122,5 @@ fun <T> Iterable<T>.shuffle(): Iterable<T> =
 
 fun localePrefix(locale: Locale) = if (locale.language == "en") "/en" else ""
 
-// ---------------------------
-// Temporary Reactor extension
-// ---------------------------
-
-fun <T : Any, E : Throwable> Mono<T>.onErrorResume(exceptionType: KClass<E>, fallback: (E) -> Mono<T>): Mono<T> =
-        onErrorResume(exceptionType.java, { fallback(it) })
-
-fun <T> T.toMono(): Mono<T> = Mono.just(this)
 
 
