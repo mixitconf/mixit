@@ -1,14 +1,13 @@
 package mixit.integration
 
 import mixit.model.Event
-import mixit.util.test
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Test
 import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.web.reactive.function.client.bodyToMono
 import org.springframework.web.reactive.function.client.bodyToFlux
-//import reactor.test.test
+import reactor.test.test
 
 
 class EventIntegrationTests : AbstractIntegrationTests() {
