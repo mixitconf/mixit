@@ -8,10 +8,11 @@ import org.springframework.core.io.ClassPathResource
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Mono
-import mixit.util.*
 import org.slf4j.LoggerFactory
 import org.springframework.data.mongodb.core.*
 import org.springframework.data.mongodb.core.query.Criteria.*
+import org.springframework.data.mongodb.core.query.inValues
+import org.springframework.data.mongodb.core.query.isEqualTo
 
 
 @Repository
@@ -32,33 +33,33 @@ class UserRepository(val template: ReactiveMongoTemplate,
     fun count() = template.count<User>()
 
     fun findByYear(year: Int) =
-            template.find<User>(Query(where("year").`is`(year)))
+            template.find<User>(Query(where("year").isEqualTo(year)))
 
 
     fun findByRole(role: Role) =
-            template.find<User>(Query(where("role").`is`(role)))
+            template.find<User>(Query(where("role").isEqualTo(role)))
 
 
     fun findByRoleAndEvent(role: Role, event: String) =
-            template.find<User>(Query(where("role").`is`(role).and("events").`in`(event)))
+            template.find<User>(Query(where("role").isEqualTo(role).and("events").inValues(event)))
 
 
     fun findOneByRole(login: String, role: Role) =
-        template.findOne<User>(Query(where("role").`in`(role).and("_id").`is`(login)))
+        template.findOne<User>(Query(where("role").inValues(role).and("_id").isEqualTo(login)))
 
 
     fun findAll() = template.findAll<User>()
 
     fun findOne(login: String) = template.findById<User>(login)
 
-    fun findMany(logins: List<String>) = template.find<User>(Query(where("_id").`in`(logins)))
+    fun findMany(logins: List<String>) = template.find<User>(Query(where("_id").inValues(logins)))
 
     fun findByLegacyId(id: Long) =
-            template.findOne<User>(Query(where("legacyId").`is`(id)))
+            template.findOne<User>(Query(where("legacyId").isEqualTo(id)))
 
     fun deleteAll() = template.remove<User>(Query())
 
-    fun deleteOne(login: String) = template.remove<User>(Query(where("_id").`is`(login)))
+    fun deleteOne(login: String) = template.remove<User>(Query(where("_id").isEqualTo(login)))
 
     fun save(user: User) = template.save(user)
 

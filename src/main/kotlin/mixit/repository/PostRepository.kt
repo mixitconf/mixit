@@ -15,6 +15,7 @@ import org.slf4j.LoggerFactory
 import org.springframework.data.domain.Sort.Direction.*
 import org.springframework.data.mongodb.core.*
 import org.springframework.data.mongodb.core.query.Criteria.*
+import org.springframework.data.mongodb.core.query.isEqualTo
 
 
 @Repository
@@ -37,7 +38,7 @@ class PostRepository(val template: ReactiveMongoTemplate,
     fun findOne(id: String) = template.findById<Post>(id)
 
     fun findBySlug(slug: String, lang: Language) =
-            template.findOne<Post>(Query(where("slug.$lang").`is`(slug)))
+            template.findOne<Post>(Query(where("slug.$lang").isEqualTo(slug)))
 
     fun findAll(lang: Language? = null): Flux<Post> {
         val query = Query()
@@ -51,7 +52,7 @@ class PostRepository(val template: ReactiveMongoTemplate,
 
     fun deleteAll() = template.remove<Post>(Query())
 
-    fun deleteOne(id: String) = template.remove<Post>(Query(where("_id").`is`(id)))
+    fun deleteOne(id: String) = template.remove<Post>(Query(where("_id").isEqualTo(id)))
 
     fun save(article: Post) = template.save(article)
 

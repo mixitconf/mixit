@@ -12,6 +12,7 @@ import org.springframework.data.domain.Sort.*
 import org.springframework.data.domain.Sort.Direction.*
 import org.springframework.data.mongodb.core.*
 import org.springframework.data.mongodb.core.query.Criteria.*
+import org.springframework.data.mongodb.core.query.isEqualTo
 
 
 @Repository
@@ -34,8 +35,8 @@ class TalkRepository(val template: ReactiveMongoTemplate,
     fun count() = template.count<Talk>()
 
     fun findByEvent(eventId: String, topic: String? = null): Flux<Talk> {
-        val criteria = where("event").`is`(eventId)
-        if (topic != null) criteria.and("topic").`is`(topic)
+        val criteria = where("event").isEqualTo(eventId)
+        if (topic != null) criteria.and("topic").isEqualTo(topic)
         return template.find<Talk>(Query(criteria).with(by(Order(ASC, "start"))))
     }
 
@@ -45,14 +46,14 @@ class TalkRepository(val template: ReactiveMongoTemplate,
     fun findOne(id: String) = template.findById<Talk>(id)
 
     fun findBySlug(slug: String) =
-            template.findOne<Talk>(Query(where("slug").`is`(slug)))
+            template.findOne<Talk>(Query(where("slug").isEqualTo(slug)))
 
     fun findByEventAndSlug(eventId: String, slug: String) =
-            template.findOne<Talk>(Query(where("slug").`is`(slug).and("event").`is`(eventId)))
+            template.findOne<Talk>(Query(where("slug").isEqualTo(slug).and("event").isEqualTo(eventId)))
 
     fun deleteAll() = template.remove<Talk>(Query())
 
-    fun deleteOne(id: String) = template.remove<Talk>(Query(where("_id").`is`(id)))
+    fun deleteOne(id: String) = template.remove<Talk>(Query(where("_id").isEqualTo(id)))
 
     fun save(talk: Talk) = template.save(talk)
 
