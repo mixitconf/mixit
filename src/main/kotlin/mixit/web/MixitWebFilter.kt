@@ -19,7 +19,7 @@ class MixitWebFilter(val properties: MixitProperties) : WebFilter {
     private val redirectDoneAttribute = "redirectDone"
 
     override fun filter(exchange: ServerWebExchange, chain: WebFilterChain) =
-       if (exchange.request.headers.host?.hostString?.endsWith("mix-it.fr") ?: false) {
+       if (exchange.request.headers.host?.hostString?.endsWith("mix-it.fr") == true) {
            val response = exchange.response
            response.statusCode = HttpStatus.PERMANENT_REDIRECT
            response.headers.location = URI("${properties.baseUri}${exchange.request.uri.path}")

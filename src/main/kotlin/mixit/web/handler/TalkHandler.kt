@@ -33,7 +33,7 @@ class TalkHandler(val repository: TalkRepository,
                 Pair("talks", talks),
                 Pair("year", year),
                 Pair("title", when(topic) { null -> "talks.title.html|$year" else -> "talks.title.html.$topic|$year" }),
-                Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
+                Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
                 Pair("topic", topic),
                 Pair("has2Columns", talks.map { it.size == 2 })
         ))
@@ -46,7 +46,7 @@ class TalkHandler(val repository: TalkRepository,
                 Pair("talk", talk.toDto(req.language(), speakers!!)),
                 Pair("speakers", speakers.map { it.toDto(req.language()) }.sortedBy { talk.speakerIds.indexOf(it.login) }),
                 Pair("title", "talk.html.title|${talk.title}"),
-                Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
+                Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
                 Pair("vimeoPlayer", if(talk.video?.startsWith("https://vimeo.com/") == true) talk.video.replace("https://vimeo.com/", "https://player.vimeo.com/video/") else null)
         ))
     }}
