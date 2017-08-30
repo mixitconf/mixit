@@ -25,12 +25,12 @@ import java.time.LocalDateTime
 
 
 @Component
-class AdminHandler(val ticketRepository: TicketRepository,
-                   val talkRepository: TalkRepository,
-                   val userRepository: UserRepository,
-                   val postRepository: PostRepository,
-                   val properties: MixitProperties,
-                   val objectMapper: ObjectMapper) {
+class AdminHandler(private val ticketRepository: TicketRepository,
+                   private val talkRepository: TalkRepository,
+                   private val userRepository: UserRepository,
+                   private val postRepository: PostRepository,
+                   private val properties: MixitProperties,
+                   private val objectMapper: ObjectMapper) {
 
     fun admin(req: ServerRequest) =
             ok().render("admin", mapOf(Pair("title", "admin.title")))

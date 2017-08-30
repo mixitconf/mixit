@@ -16,8 +16,8 @@ import org.springframework.data.mongodb.core.query.isEqualTo
 
 
 @Repository
-class TalkRepository(val template: ReactiveMongoTemplate,
-                     val objectMapper: ObjectMapper) {
+class TalkRepository(private val template: ReactiveMongoTemplate,
+                     private val objectMapper: ObjectMapper) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
 

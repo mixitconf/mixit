@@ -16,8 +16,8 @@ import org.springframework.data.mongodb.core.query.isEqualTo
 
 
 @Repository
-class UserRepository(val template: ReactiveMongoTemplate,
-                     val objectMapper: ObjectMapper) {
+class UserRepository(private val template: ReactiveMongoTemplate,
+                     private val objectMapper: ObjectMapper) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
 

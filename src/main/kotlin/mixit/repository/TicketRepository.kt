@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository
 
 
 @Repository
-class TicketRepository(val template: ReactiveMongoTemplate) {
+class TicketRepository(private val template: ReactiveMongoTemplate) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
 

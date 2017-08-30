@@ -8,7 +8,7 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 
 
 @Component
-class EventHandler(val repository: EventRepository) {
+class EventHandler(private val repository: EventRepository) {
 
     fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("id")))
 

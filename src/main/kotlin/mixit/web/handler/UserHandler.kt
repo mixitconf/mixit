@@ -12,7 +12,7 @@ import java.net.URLDecoder
 
 
 @Component
-class UserHandler(val repository: UserRepository) {
+class UserHandler(private val repository: UserRepository) {
 
     fun findOneView(req: ServerRequest) =
             try {

@@ -10,7 +10,6 @@ import org.springframework.data.domain.Sort.Order
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
-import mixit.util.*
 import org.slf4j.LoggerFactory
 import org.springframework.data.domain.Sort.Direction.*
 import org.springframework.data.mongodb.core.*
@@ -19,8 +18,8 @@ import org.springframework.data.mongodb.core.query.isEqualTo
 
 
 @Repository
-class PostRepository(val template: ReactiveMongoTemplate,
-                     val objectMapper: ObjectMapper) {
+class PostRepository(private val template: ReactiveMongoTemplate,
+                     private val objectMapper: ObjectMapper) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
 

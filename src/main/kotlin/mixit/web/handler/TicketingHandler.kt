@@ -11,7 +11,7 @@ import org.springframework.web.reactive.function.server.ServerResponse.*
 import reactor.core.publisher.onErrorResume
 
 @Component
-class TicketingHandler(val repository: TicketRepository) {
+class TicketingHandler(private val repository: TicketRepository) {
 
     fun ticketing(req: ServerRequest) = ServerResponse.ok().render("ticketing-closed", mapOf(Pair("title", "ticketing.title")))
 

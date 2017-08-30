@@ -3,7 +3,6 @@ package mixit.repository
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.model.*
-import mixit.util.*
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.domain.Sort
@@ -13,8 +12,8 @@ import org.springframework.stereotype.Repository
 
 
 @Repository
-class EventRepository(val template: ReactiveMongoTemplate,
-                      val objectMapper: ObjectMapper) {
+class EventRepository(private val template: ReactiveMongoTemplate,
+                      private val objectMapper: ObjectMapper) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
 

@@ -10,8 +10,8 @@ import org.springframework.web.reactive.function.server.ServerResponse
 import java.time.LocalDate
 
 @Component
-class SponsorHandler(val userRepository: UserRepository,
-                     val eventRepository: EventRepository) {
+class SponsorHandler(private val userRepository: UserRepository,
+                     private val eventRepository: EventRepository) {
 
     fun viewWithSponsors(view: String, title: String?, req: ServerRequest) = eventRepository.findOne("mixit17").flatMap { event ->
         userRepository.findMany(event.sponsors.map { it.sponsorId }).collectMap(User::login).flatMap { sponsorsByLogin ->

@@ -15,9 +15,9 @@ import java.time.LocalDateTime
 
 
 @Component
-class TalkHandler(val repository: TalkRepository,
-                  val userRepository: UserRepository,
-                  val properties: MixitProperties) {
+class TalkHandler(private val repository: TalkRepository,
+                  private val userRepository: UserRepository,
+                  private val properties: MixitProperties) {
 
     fun findByEventView(year: Int, req: ServerRequest, topic: String? = null): Mono<ServerResponse> {
         val talks = repository

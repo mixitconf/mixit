@@ -9,7 +9,7 @@ import org.springframework.web.reactive.function.server.ServerResponse.*
 
 
 @Component
-class AuthenticationHandler(val properties: MixitProperties) {
+class AuthenticationHandler(private val properties: MixitProperties) {
 
     fun loginView(req: ServerRequest) = ok().render("login")
 
