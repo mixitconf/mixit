@@ -15,12 +15,6 @@ developed with Spring Framework 5 and Kotlin can look like:
  - [Constructor based injection](http://olivergierke.de/2013/11/why-field-injection-is-evil/)
  - Immutable Pojos
  - Cloud Native
- 
- You can see a variant of this project software design in [this functional-bean-registration branch](https://github.com/mix-it/mixit/tree/functional-bean-registration):
-  - [Functional bean registration](https://github.com/mix-it/mixit/blob/functional-bean-registration/src/main/kotlin/Context.kt)
-  - Pure Spring Framework project (without Spring Boot)
-  - No CGLIB proxy
-  - No kotlin-spring plugin needed
 
 ### Technologies used
 
@@ -35,9 +29,7 @@ developed with Spring Framework 5 and Kotlin can look like:
  
 ### TODO
 
- - Use `::findAll` instead of `this@BlogController::findAll` when [KT-15667](https://youtrack.jetbrains.com/issue/KT-15667) will be fixed
- - Use [Kotlin Javascript](https://kotlinlang.org/docs/reference/js-overview.html) when generated JS size will be optimized or [compile to WebAssembly](https://discuss.kotlinlang.org/t/webassembly-support/1722/) if supported
- - Update to [Gradle Kotlin Script 0.9.0](https://github.com/gradle/gradle-script-kotlin/milestone/13) to [avoid freezing IDEA when modifying `build.gradle.kts`](https://github.com/gradle/gradle-script-kotlin/issues/249)  
+ - Use [Kotlin Javascript](https://kotlinlang.org/docs/reference/js-overview.html) when generated JS size will be optimized or [compile to WebAssembly](https://discuss.kotlinlang.org/t/webassembly-support/1722/) if supported  
  
 ## Developer guide
 
