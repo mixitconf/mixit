@@ -2,7 +2,7 @@
 
 <div class="mxt-wrapper--page-title">
     <div class="row">
-        <div class="columns large-8 large-offset-2">
+        <div class="columns large-12">
             <h1 class="text-center">{{post.title}}</h1>
             <hr />
            	<p class="text-center subheader mxt-text--page-title">{{#i18n}}blog.by{{/i18n}} <strong>{{post.author.firstname}}</strong>, {{#i18n}}blog.on{{/i18n}} <strong>{{post.addedAt}}</strong></p><br />
@@ -12,7 +12,7 @@
 
 <div class="mxt-wrapper--page-content mxt-wrapper--blog-post">
     <div class="row">
-        <div class="column large-8 large-offset-2">
+        <div class="column large-12">
             <div class="callout">
 			    <p>{{#markdown}}{{post.headline}}{{/markdown}}</p>
                 {{#post.content}}
