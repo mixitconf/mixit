@@ -7,7 +7,7 @@ This project purpose is to power the MiXiT website.
 ## Software design
 
 This project software design goal is to demonstrate what a functional web application
-developed with Spring Framework 5 and Kotlin can look like:
+developed with Spring Boot 2, Spring WebFlux and Kotlin can look like:
  - Reactive and non-blocking
  - More functional style and less annotation based than typical Spring applications
  - Leverage Kotlin features like [Kotlin extensions](https://kotlinlang.org/docs/reference/extensions.html) and [reified type parameters](https://kotlinlang.org/docs/reference/inline-functions.html#reified-type-parameters) for cleaner code
@@ -19,17 +19,17 @@ developed with Spring Framework 5 and Kotlin can look like:
 ### Technologies used
 
  - Language: [Kotlin](https://kotlin.link/) 
- - Web framework: [Spring Boot](https://projects.spring.io/spring-boot/) and [Spring Web Reactive Functional](https://spring.io/blog/2016/09/22/new-in-spring-5-functional-web-framework)
+ - Framework: [Spring Boot 2.0](https://projects.spring.io/spring-boot/) with [Spring 5 Kotlin support](https://docs.spring.io/spring-framework/docs/5.0.x/spring-framework-reference/kotlin.html) and [Spring WebFlux functional](https://docs.spring.io/spring-framework/docs/5.0.x/spring-framework-reference/reactive-web.html)
  - Engine: [Netty](http://netty.io/) used for client and server
  - Templates: [Mustache](https://github.com/samskivert/jmustache) (will be migrated later to [Kotlin typesafe templates](https://github.com/sdeleuze/kotlin-script-templating))
  - Reactive API: [Reactor](http://projectreactor.io/)
  - Persistence : [Spring Data Reactive MongoDB](https://spring.io/blog/2016/11/28/going-reactive-with-spring-data)
  - Build: [Gradle Script Kotlin](https://github.com/gradle/gradle-script-kotlin)
- - Testing: [Junit](http://junit.org/) 
+ - Testing: [Junit 5](http://junit.org/) 
  
 ### TODO
 
- - Use [Kotlin Javascript](https://kotlinlang.org/docs/reference/js-overview.html) when generated JS size will be optimized or [compile to WebAssembly](https://discuss.kotlinlang.org/t/webassembly-support/1722/) if supported  
+ - Use [Kotlin Javascript](https://kotlinlang.org/docs/reference/js-overview.html) with []dead code elimination](https://kotlinlang.org/docs/reference/javascript-dce.html) tool  
  
 ## Developer guide
 
@@ -49,8 +49,8 @@ developed with Spring Framework 5 and Kotlin can look like:
 Sass, TypeScript, `messages*.properties` and templates should be live reloaded.
 
 ### Import and run the project in IDEA
- - Make sure you have at least IntelliJ IDEA `2016.3.6` or `2017.1.x` and IDEA Kotlin plugin `1.1.1+` (menu Tools -> Kotlin -> configure Kotlin Plugin Updates -> make sure "Stable" channel is selected -> check for updates now -> restart IDE after the update)
- - Import it in IDEA as a Gradle project **and make sure to uncheck "Create Module for each SourceSet"** to avoid a nasty bug that prevent to run the app in IDEA
+ - Make sure you have at least IntelliJ IDEA `2017.2.x` and IDEA Kotlin plugin `1.1.4+` (menu Tools -> Kotlin -> configure Kotlin Plugin Updates -> make sure "Stable" channel is selected -> check for updates now -> restart IDE after the update)
+ - Import it in IDEA as a Gradle project
  - In IntelliJ IDEA, right click on `Application.kt` then `Run ...` or `Debug ...`
  - Run `gulp watch` in another terminal
  - Open `http://localhost:8080/` in your browser
