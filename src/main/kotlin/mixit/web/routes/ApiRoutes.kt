@@ -8,10 +8,10 @@ import org.springframework.web.reactive.function.server.router
 
 
 @Configuration
-class ApiRoutes(val blogHandler: BlogHandler,
-                 val eventHandler: EventHandler,
-                 val talkHandler: TalkHandler,
-                 val userHandler: UserHandler) {
+class ApiRoutes(private val blogHandler: BlogHandler,
+                private val eventHandler: EventHandler,
+                private val talkHandler: TalkHandler,
+                private val userHandler: UserHandler) {
 
     @Bean
     fun apiRouter() = router {

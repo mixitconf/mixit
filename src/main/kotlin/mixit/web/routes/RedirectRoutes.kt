@@ -10,9 +10,9 @@ import org.springframework.http.MediaType.TEXT_HTML
 import org.springframework.web.reactive.function.server.router
 
 @Configuration
-class RedirectRoutes(val blogHandler: BlogHandler,
-                     val talkHandler: TalkHandler,
-                     val properties: MixitProperties) {
+class RedirectRoutes(private val blogHandler: BlogHandler,
+                     private val talkHandler: TalkHandler,
+                     private val properties: MixitProperties) {
 
     val GOOGLE_DRIVE_URI = "https://drive.google.com/open"
 

@@ -20,18 +20,18 @@ import java.util.*
 
 
 @Configuration
-class WebsiteRoutes(val adminHandler: AdminHandler,
-                    val authenticationHandler: AuthenticationHandler,
-                    val blogHandler: BlogHandler,
-                    val globalHandler: GlobalHandler,
-                    val newsHandler: NewsHandler,
-                    val talkHandler: TalkHandler,
-                    val sponsorHandler: SponsorHandler,
-                    val ticketingHandler: TicketingHandler,
-                    val messageSource: MessageSource,
-                    val properties: MixitProperties,
-                    val eventRepository: EventRepository,
-                    val markdownConverter: MarkdownConverter) {
+class WebsiteRoutes(private val adminHandler: AdminHandler,
+                    private val authenticationHandler: AuthenticationHandler,
+                    private val blogHandler: BlogHandler,
+                    private val globalHandler: GlobalHandler,
+                    private val newsHandler: NewsHandler,
+                    private val talkHandler: TalkHandler,
+                    private val sponsorHandler: SponsorHandler,
+                    private val ticketingHandler: TicketingHandler,
+                    private val messageSource: MessageSource,
+                    private val properties: MixitProperties,
+                    private val eventRepository: EventRepository,
+                    private val markdownConverter: MarkdownConverter) {
 
     private val logger = LoggerFactory.getLogger(WebsiteRoutes::class.java)
 
