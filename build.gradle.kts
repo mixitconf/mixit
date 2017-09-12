@@ -11,6 +11,7 @@ buildscript {
 
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.0.BUILD-SNAPSHOT")
+        classpath("org.junit.platform:junit-platform-gradle-plugin:1.0.0")
     }
 }
 
@@ -26,6 +27,7 @@ plugins {
 
 apply {
     plugin("org.springframework.boot")
+    plugin("org.junit.platform.gradle.plugin")
 }
 
 version = "1.0.0-SNAPSHOT"
