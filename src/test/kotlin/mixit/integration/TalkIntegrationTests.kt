@@ -1,8 +1,8 @@
 package mixit.integration
 
 import mixit.model.Talk
-import org.junit.Assert.assertEquals
-import org.junit.Test
+import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Test
 import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.web.reactive.function.client.bodyToFlux
 import reactor.test.test

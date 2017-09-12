@@ -39,7 +39,7 @@ repositories {
 tasks.withType<KotlinCompile> {
     kotlinOptions {
         jvmTarget = "1.8"
-		freeCompilerArgs = listOf("-Xjsr305-annotations=enable")
+        freeCompilerArgs = listOf("-Xjsr305-annotations=enable")
     }
 }
 
@@ -57,18 +57,24 @@ dependencies {
     }
     compileOnly("org.springframework:spring-context-indexer")
     compile("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
-    testCompile("org.springframework.boot:spring-boot-starter-test")
+
     runtime("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
     compile("com.samskivert:jmustache:1.13")
     compile("com.atlassian.commonmark:commonmark:0.9.0")
     compile("com.atlassian.commonmark:commonmark-ext-autolink:0.9.0")
 
-	compile("com.google.code.findbugs:jsr305:3.0.2") // Needed for now, could be removed when KT-19419 will be fixed
-    
-    testCompile("io.projectreactor:reactor-test")
+    compile("com.google.code.findbugs:jsr305:3.0.2") // Needed for now, could be removed when KT-19419 will be fixed
 
     compile("com.fasterxml.jackson.module:jackson-module-kotlin")
     compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
+
+    testCompile("org.springframework.boot:spring-boot-starter-test") {
+        exclude(module = "junit")
+    }
+    testCompile("org.junit.jupiter:junit-jupiter-api")
+    testRuntime("org.junit.jupiter:junit-jupiter-engine")
+    testRuntime("org.junit.platform:junit-platform-launcher")
+    testCompile("io.projectreactor:reactor-test")
 }
 
 task<GulpTask>("gulpBuild") {
