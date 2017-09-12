@@ -53,6 +53,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
 
             // Authentication
             GET("/login", authenticationHandler::loginView)
+            GET("/logout", authenticationHandler::logout)
 
             // Talks
             eventRepository.findAll().toIterable().map { it.year }.forEach { year ->
