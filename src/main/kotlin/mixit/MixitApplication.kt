@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Bean
 class MixitApplication {
 
     @Bean
-    fun mustacheCompiler(templateLoader: TemplateLoader) =
+    fun mustacheCompiler(templateLoader: TemplateLoader): Mustache.Compiler =
             // TODO Find a way to disable HTML escaping before enabling user authentication
             Mustache.compiler().escapeHTML(false).withLoader(templateLoader)
 

@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component
 @Component
 class MarkdownConverter {
 
-    val parser = Parser.builder().extensions(listOf(AutolinkExtension.create())).build()
-    val renderer = HtmlRenderer.builder().build()
+    private val parser = Parser.builder().extensions(listOf(AutolinkExtension.create())).build()
+    private val renderer = HtmlRenderer.builder().build()
 
     fun toHTML(input: String?): String {
         if (input == null || input.isEmpty()) {

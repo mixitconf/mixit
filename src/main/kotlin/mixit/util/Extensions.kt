@@ -32,7 +32,7 @@ fun run(type: KClass<*>, vararg args: String) = SpringApplication.run(type.java,
 fun ServerRequest.language() =
         Language.findByTag(this.headers().asHttpHeaders().acceptLanguageAsLocales.first().language)
 
-fun ServerRequest.locale() =
+fun ServerRequest.locale(): Locale =
         this.headers().asHttpHeaders().acceptLanguageAsLocales.first() ?: Locale.ENGLISH
 
 fun ServerResponse.BodyBuilder.json() = contentType(APPLICATION_JSON_UTF8)

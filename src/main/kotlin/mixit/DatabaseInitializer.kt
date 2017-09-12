@@ -8,10 +8,10 @@ import org.springframework.stereotype.Component
 import javax.annotation.PostConstruct
 
 @Component
-class DatabaseInitializer(val userRepository: UserRepository,
-                          val eventRepository: EventRepository,
-                          val talkRepository: TalkRepository,
-                          val postRepository: PostRepository) {
+class DatabaseInitializer(private val userRepository: UserRepository,
+                          private val eventRepository: EventRepository,
+                          private val talkRepository: TalkRepository,
+                          private val postRepository: PostRepository) {
 
     @PostConstruct
     fun init() {
