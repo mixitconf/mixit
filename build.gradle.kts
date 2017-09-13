@@ -58,6 +58,7 @@ dependencies {
         exclude(module = "hibernate-validator")
     }
     compileOnly("org.springframework:spring-context-indexer")
+    compile("org.springframework.boot:spring-boot-starter-mail")
     compile("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
 
     runtime("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
@@ -71,6 +72,13 @@ dependencies {
     testCompile("org.junit.jupiter:junit-jupiter-api")
     testRuntime("org.junit.jupiter:junit-jupiter-engine")
     testCompile("io.projectreactor:reactor-test")
+
+    compile("com.fasterxml.jackson.module:jackson-module-kotlin")
+    compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
+
+    compile("com.google.api-client:google-api-client:1.22.0")
+    compile("com.google.oauth-client:google-oauth-client-jetty:1.22.0")
+    compile("com.google.apis:google-api-services-gmail:v1-rev70-1.22.0")
 }
 
 task<GulpTask>("gulpBuild") {

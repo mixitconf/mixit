@@ -2,6 +2,7 @@ package mixit.model
 
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
+import java.time.LocalDateTime
 
 
 @Document
@@ -16,7 +17,9 @@ data class User(
         val photoUrl: String? = null,
         val role: Role = Role.USER,
         val links: List<Link> = emptyList(),
-        val legacyId: Long? = null
+        val legacyId: Long? = null,
+        var tokenExpiration: LocalDateTime = LocalDateTime.now().minusDays(1),
+        var token: String = "empty-token"
 )
 
 enum class Role {
