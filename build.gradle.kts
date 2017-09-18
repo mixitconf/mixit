@@ -5,8 +5,8 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 buildscript {
     repositories {
         mavenCentral()
-        maven { setUrl("https://repo.spring.io/milestone") }
-        maven { setUrl("https://repo.spring.io/snapshot") }
+        maven("https://repo.spring.io/milestone")
+        maven("https://repo.spring.io/snapshot")
     }
 
     dependencies {
@@ -34,8 +34,8 @@ version = "1.0.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
-    maven { setUrl("https://repo.spring.io/milestone") }
-    maven { setUrl("https://repo.spring.io/snapshot") }
+    maven("https://repo.spring.io/milestone")
+    maven("https://repo.spring.io/snapshot")
 }
 
 tasks.withType<KotlinCompile> {
