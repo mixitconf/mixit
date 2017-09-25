@@ -65,9 +65,6 @@ dependencies {
     compile("com.atlassian.commonmark:commonmark:0.9.0")
     compile("com.atlassian.commonmark:commonmark-ext-autolink:0.9.0")
 
-    compile("com.fasterxml.jackson.module:jackson-module-kotlin")
-    compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
-
     testCompile("org.springframework.boot:spring-boot-starter-test") {
         exclude(module = "junit")
     }
