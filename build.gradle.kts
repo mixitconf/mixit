@@ -16,7 +16,7 @@ buildscript {
 }
 
 plugins {
-    val kotlinVersion = "1.1.4-3"
+    val kotlinVersion = "1.1.50"
     val nodePluginVersion = "1.1.1"
     id("org.jetbrains.kotlin.jvm") version kotlinVersion
     id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion
@@ -41,7 +41,7 @@ repositories {
 tasks.withType<KotlinCompile> {
     kotlinOptions {
         jvmTarget = "1.8"
-        freeCompilerArgs = listOf("-Xjsr305-annotations=enable")
+        freeCompilerArgs = listOf("-Xjsr305=strict")
     }
 }
 
@@ -64,8 +64,6 @@ dependencies {
     compile("com.samskivert:jmustache:1.13")
     compile("com.atlassian.commonmark:commonmark:0.9.0")
     compile("com.atlassian.commonmark:commonmark-ext-autolink:0.9.0")
-
-    compile("com.google.code.findbugs:jsr305:3.0.2") // Needed for now, could be removed when KT-19419 will be fixed
 
     compile("com.fasterxml.jackson.module:jackson-module-kotlin")
     compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
