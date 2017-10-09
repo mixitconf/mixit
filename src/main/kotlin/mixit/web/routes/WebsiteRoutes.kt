@@ -95,6 +95,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
 
         contentType(APPLICATION_FORM_URLENCODED).nest {
             POST("/login", authenticationHandler::login)
+            POST("/login-confirmation", authenticationHandler::authenticate)
             //POST("/ticketing", ticketingHandler::submit)
             "/admin".nest {
                 POST("/talks", adminHandler::adminSaveTalk)

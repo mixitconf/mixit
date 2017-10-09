@@ -9,6 +9,7 @@
 </div>
 
 <div class="mxt-wrapper--page-content">
+    <p>{{#i18n}}talk.video.watch{{/i18n}}</p>
     <div class="large-3 large-centered columns">
       <div class="callout">
         <div class="row">
@@ -16,12 +17,18 @@
             <form action="/login" method="post">
               <div class="row">
                 <div class="large-12 columns">
-                  <input type="text" name="email" placeholder="contact@mix-it.fr" />
+                    <input type="email" name="email" value="{{email}}" />
+                  {{email}}
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <input type="password" name="token" placeholder="Token" />
                 </div>
               </div>
               <div class="row">
                 <div class="large-12 large-centered columns">
-                  <input type="hidden" name="action" value="login"/>
+                  <input type="hidden" name="action" value="authenticate"/>
                   <input type="submit" class="button expand" value="Log In"/>
                 </div>
               </div>
