@@ -17,7 +17,8 @@ import java.time.LocalDateTime
 @Component
 class TalkHandler(private val repository: TalkRepository,
                   private val userRepository: UserRepository,
-                  private val properties: MixitProperties) {
+                  private val properties: MixitProperties,
+                  private val markdownConverter: MarkdownConverter) {
 
     fun findByEventView(year: Int, req: ServerRequest, topic: String? = null): Mono<ServerResponse> {
         val talks = repository
@@ -44,7 +45,7 @@ class TalkHandler(private val repository: TalkRepository,
         userRepository.findMany(talk.speakerIds).collectList().flatMap { speakers ->
         ok().render("talk", mapOf(
                 Pair("talk", talk.toDto(req.language(), speakers!!)),
-                Pair("speakers", speakers.map { it.toDto(req.language()) }.sortedBy { talk.speakerIds.indexOf(it.login) }),
+                Pair("speakers", speakers.map { it.toDto(req.language(), markdownConverter) }.sortedBy { talk.speakerIds.indexOf(it.login) }),
                 Pair("title", "talk.html.title|${talk.title}"),
                 Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
                 Pair("vimeoPlayer", if(talk.video?.startsWith("https://vimeo.com/") == true) talk.video.replace("https://vimeo.com/", "https://player.vimeo.com/video/") else null)

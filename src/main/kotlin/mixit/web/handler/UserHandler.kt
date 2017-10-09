@@ -12,17 +12,18 @@ import java.net.URLDecoder
 
 
 @Component
-class UserHandler(private val repository: UserRepository) {
+class UserHandler(private val repository: UserRepository,
+                  private val markdownConverter: MarkdownConverter) {
 
     fun findOneView(req: ServerRequest) =
             try {
                 val idLegacy = req.pathVariable("login").toLong()
                 repository.findByLegacyId(idLegacy).flatMap {
-                    ok().render("user", mapOf(Pair("user", it.toDto(req.language()))))
+                    ok().render("user", mapOf(Pair("user", it.toDto(req.language(), markdownConverter))))
                 }
             } catch (e:NumberFormatException) {
                 repository.findOne(URLDecoder.decode(req.pathVariable("login"), "UTF-8")).flatMap {
-                    ok().render("user", mapOf(Pair("user", it.toDto(req.language()))))
+                    ok().render("user", mapOf(Pair("user", it.toDto(req.language(), markdownConverter))))
                 }
             }
 
@@ -30,9 +31,9 @@ class UserHandler(private val repository: UserRepository) {
 
     fun findAll(req: ServerRequest) = ok().json().body(repository.findAll())
 
-    fun findStaff(req: ServerRequest) = ok().json().body(repository.findByRole(Role.STAFF))
+    fun findStaff(req: ServerRequest) = ok().json().body(repository.findByRoles(listOf(Role.STAFF)))
 
-    fun findOneStaff(req: ServerRequest) = ok().json().body(repository.findOneByRole(req.pathVariable("login"), Role.STAFF))
+    fun findOneStaff(req: ServerRequest) = ok().json().body(repository.findOneByRoles(req.pathVariable("login"), listOf(Role.STAFF, Role.STAFF_IN_PAUSE)))
 
     fun create(req: ServerRequest) = repository.save(req.bodyToMono<User>()).flatMap {
         created(create("/api/user/${it.login}")).json().body(it.toMono())
@@ -55,8 +56,8 @@ class UserDto(
         val logoWebpUrl: String? = null
 )
 
-fun User.toDto(language: Language) =
-        UserDto(login, firstname, lastname, email ?: "", company, description[language] ?: "",
+fun User.toDto(language: Language, markdownConverter: MarkdownConverter) =
+        UserDto(login, firstname, lastname, email ?: "", company, markdownConverter.toHTML(description[language] ?: ""),
                 emailHash, photoUrl, role, links, logoType(photoUrl), logoWebpUrl(photoUrl))
 
 private fun logoWebpUrl(url: String?) =

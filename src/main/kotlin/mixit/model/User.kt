@@ -21,5 +21,6 @@ data class User(
 
 enum class Role {
     STAFF,
+    STAFF_IN_PAUSE,
     USER
 }

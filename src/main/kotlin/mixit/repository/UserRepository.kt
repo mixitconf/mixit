@@ -36,16 +36,16 @@ class UserRepository(private val template: ReactiveMongoTemplate,
             template.find<User>(Query(where("year").isEqualTo(year)))
 
 
-    fun findByRole(role: Role) =
-            template.find<User>(Query(where("role").isEqualTo(role)))
+    fun findByRoles(roles: List<Role>) =
+            template.find<User>(Query(where("role").inValues(roles)))
 
 
     fun findByRoleAndEvent(role: Role, event: String) =
             template.find<User>(Query(where("role").isEqualTo(role).and("events").inValues(event)))
 
 
-    fun findOneByRole(login: String, role: Role) =
-        template.findOne<User>(Query(where("role").inValues(role).and("_id").isEqualTo(login)))
+    fun findOneByRoles(login: String, roles: List<Role>) =
+        template.findOne<User>(Query(where("role").inValues(roles).and("_id").isEqualTo(login)))
 
 
     fun findAll() = template.findAll<User>()
