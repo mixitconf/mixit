@@ -5,6 +5,7 @@ import mixit.repository.UserRepository
 import mixit.util.language
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
+import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import java.util.*
 
@@ -17,6 +18,9 @@ class GlobalHandler(val userRepository: UserRepository) {
         Collections.shuffle(users)
         ok().render("about", mapOf(Pair("staff", users), Pair("title", "about.title")))
     }
+
+    fun homeView(req: ServerRequest) = ok().render("home", mapOf(Pair("title", null)))
+
 
     fun mixteenView(req: ServerRequest) = ok().render("mixteen", mapOf(Pair("title", "mixteen.title")))
 

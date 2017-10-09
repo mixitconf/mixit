@@ -41,7 +41,8 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
     fun websiteRouter() = router {
         GET("/blog/feed", blogHandler::feed)
         accept(TEXT_HTML).nest {
-            GET("/") { sponsorHandler.viewWithSponsors("home", null, it) }
+            // GET("/") { sponsorHandler.viewWithSponsors("home", null, it) }
+            GET("/") { globalHandler.homeView(it) }
             GET("/about", globalHandler::findAboutView)
             GET("/news", newsHandler::newsView)
             GET("/ticketing", ticketingHandler::ticketing)
