@@ -1,4 +1,4 @@
-memory: 512M
+memory: 1GB
 instances: 1
 buildpack: java_buildpack
 applications:
