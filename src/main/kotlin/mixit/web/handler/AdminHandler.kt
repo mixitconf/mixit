@@ -151,7 +151,8 @@ class AdminHandler(private val ticketRepository: TicketRepository,
             Pair("description-en", user.description[ENGLISH]),
             Pair("roles", listOf(
                     Pair(USER, USER == user.role),
-                    Pair(STAFF, STAFF == user.role)
+                    Pair(STAFF, STAFF == user.role),
+                    Pair(STAFF_IN_PAUSE, STAFF_IN_PAUSE == user.role)
             )),
             Pair("links", user.links.toJson())
 
