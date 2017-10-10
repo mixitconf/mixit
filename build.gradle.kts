@@ -17,7 +17,7 @@ buildscript {
 
 plugins {
     val kotlinVersion = "1.1.51"
-    val nodePluginVersion = "1.1.1"
+    val nodePluginVersion = "1.2.0"
     id("org.jetbrains.kotlin.jvm") version kotlinVersion
     id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion
     id("com.moowork.node") version nodePluginVersion
@@ -79,14 +79,14 @@ task<GulpTask>("gulpBuild") {
     inputs.dir("src/main/ts")
     inputs.dir("src/main/images")
     outputs.dir("build/resources/main/static")
-    args = listOf("build")
+    setArgs(listOf("build"))
 }
 
 task<GulpTask>("gulpClean") {
     dependsOn(YarnInstallTask.NAME)
     inputs.dir("build/.tmp")
     outputs.dir("build/resources/main/static")
-    args = listOf("clean")
+    setArgs(listOf("clean"))
 }
 
 tasks.getByName("processResources").dependsOn("gulpBuild")
