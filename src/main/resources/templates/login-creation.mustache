@@ -14,20 +14,39 @@
       <div class="callout">
         <div class="row">
           <div class="large-12 columns">
-            <form action="/authenticate" method="post">
+            <form action="/users" method="post">
               <div class="row">
                 <div class="large-12 columns">
-                    <input type="email" name="email" value="{{email}}" />
-                  {{email}}
+                    {{#i18n}}user.form.description{{/i18n}}
                 </div>
               </div>
               <div class="row">
                 <div class="large-12 columns">
-                  <input type="password" name="token" placeholder="Token" />
+                    {{#i18n}}user.form.email{{/i18n}}
+                   <input type="email" name="email" value="{{email}}" disabled/>
                 </div>
               </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <label>
+                    {{#i18n}}user.form.firstname{{/i18n}}
+                    <input type="text" name="firstname" value="{{user.firstname}}" required/>
+                  </label>
+              </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <label>
+                    {{#i18n}}user.form.lastname{{/i18n}}
+                    <input type="text" name="lastname" value="{{user.lastname}}" required/>
+                  </label>
+                </div>
+              </div>
+
+
               <div class="row">
                 <div class="large-12 large-centered columns">
+                  <input type="hidden" name="action" value="authenticate"/>
                   <input type="submit" class="button expand" value="Log In"/>
                 </div>
               </div>

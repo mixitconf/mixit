@@ -26,6 +26,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
                     private val globalHandler: GlobalHandler,
                     private val newsHandler: NewsHandler,
                     private val talkHandler: TalkHandler,
+                    private val userHandler: UserHandler,
                     private val sponsorHandler: SponsorHandler,
                     private val ticketingHandler: TicketingHandler,
                     private val messageSource: MessageSource,
@@ -95,7 +96,8 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
 
         contentType(APPLICATION_FORM_URLENCODED).nest {
             POST("/login", authenticationHandler::login)
-            POST("/login-confirmation", authenticationHandler::authenticate)
+            POST("/authenticate", authenticationHandler::authenticate)
+            POST("/users", userHandler::saveUser)
             //POST("/ticketing", ticketingHandler::submit)
             "/admin".nest {
                 POST("/talks", adminHandler::adminSaveTalk)

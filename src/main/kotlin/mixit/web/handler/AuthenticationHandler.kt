@@ -26,28 +26,14 @@ class AuthenticationHandler(private val userRepository: UserRepository,
     fun login(req: ServerRequest): Mono<ServerResponse> = req.body(toFormData()).flatMap { data ->
         val formData = data.toSingleValueMap()
         val email = formData["email"]
-        val token = formData["token"]
-        val action = formData["action"]
 
-        if (action == "authenticate") {
-            authenticate(req, email, token)
-        }
-        redirectLogin(req, email)
-    }
-
-    fun logout(req: ServerRequest): Mono<ServerResponse> = req.session().flatMap { session ->
-        session.attributes.remove("email")
-        temporaryRedirect(URI("${properties.baseUri}/")).build()
-    }
-
-    fun redirectLogin(req: ServerRequest, email: String?): Mono<ServerResponse> {
         // Email is required
-        if (email == null) return ok().render("login-error")
+        if (email == null)  ok().render("login-error")
 
         val context = mapOf(Pair("email", email))
 
         // We need to know if user exists or not
-        return findIfUserExist(email)
+        findIfUserExist(email!!)
                 .flatMap { user ->
                     // if user exists we send a token by email
                     sendUserToken(email, user)
@@ -62,22 +48,34 @@ class AuthenticationHandler(private val userRepository: UserRepository,
                 .switchIfEmpty(ServerResponse.ok().render("login-creation", context))
     }
 
-    fun authenticate(req: ServerRequest, email: String?, token: String?): Mono<ServerResponse> = req.session().flatMap { session ->
-        // If email or token are null we can't open a session
-        if (email == null || token == null) {
-            ok().render("login-error")
-        }
+    fun logout(req: ServerRequest): Mono<ServerResponse> = req.session().flatMap { session ->
+        session.attributes.remove("email")
+        temporaryRedirect(URI("${properties.baseUri}/")).build()
+    }
 
-        findIfUserExist(email!!)
-                // User must exist at this point
-                .flatMap { user ->
-                    if (token == user.token) {
-                        session.attributes["username"] = email
-                        seeOther(URI("${properties.baseUri}/admin")).build()
+
+    fun authenticate(req: ServerRequest): Mono<ServerResponse> = req.body(toFormData()).flatMap { data ->
+        val formData = data.toSingleValueMap()
+        val email = formData["email"]
+        val token = formData["token"]
+
+        req.session().flatMap { session ->
+            // If email or token are null we can't open a session
+            if (email == null || token == null) {
+                ok().render("login-error")
+            }
+
+            findIfUserExist(email!!)
+                    // User must exist at this point
+                    .flatMap { user ->
+                        if (token == user.token) {
+                            session.attributes["username"] = email
+                            seeOther(URI("${properties.baseUri}/admin")).build()
+                        }
+                        ServerResponse.badRequest().build()
                     }
-                    ServerResponse.badRequest().build()
-                }
-                .switchIfEmpty(ServerResponse.badRequest().build());
+                    .switchIfEmpty(ServerResponse.badRequest().build());
+        }
     }
 
 

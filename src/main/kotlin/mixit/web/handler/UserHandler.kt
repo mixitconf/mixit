@@ -1,18 +1,22 @@
 package mixit.web.handler
 
+import mixit.MixitProperties
 import mixit.model.*
 import mixit.repository.UserRepository
 import mixit.util.*
 import org.springframework.stereotype.Component
+import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.ServerResponse.*
+import reactor.core.publisher.Mono
 import reactor.core.publisher.toMono
 import java.net.URI.*
 import java.net.URLDecoder
 
 
 @Component
-class UserHandler(private val repository: UserRepository) {
+class UserHandler(private val repository: UserRepository,
+                  private val properties: MixitProperties) {
 
     fun findOneView(req: ServerRequest) =
             try {
@@ -38,6 +42,20 @@ class UserHandler(private val repository: UserRepository) {
         created(create("/api/user/${it.login}")).json().body(it.toMono())
     }
 
+    fun saveUser(req: ServerRequest) : Mono<ServerResponse> {
+        return req.body(BodyExtractors.toFormData()).flatMap {
+            val formData = it.toSingleValueMap()
+            val user = User(
+                    login = formData["email"]!!,
+                    firstname = formData["firstname"]!!,
+                    lastname = formData["lastname"]!!,
+                    email = formData["email"]!!,
+                    photoUrl = "/images/png/mxt-icon--default-avatar.png",
+                    role = Role.USER
+            )
+            repository.save(user).then(seeOther("${properties.baseUri}/login"))
+        }
+    }
 }
 
 class UserDto(
