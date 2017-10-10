@@ -17,11 +17,9 @@ buildscript {
 
 plugins {
     val kotlinVersion = "1.1.51"
-    val nodePluginVersion = "1.2.0"
     id("org.jetbrains.kotlin.jvm") version kotlinVersion
     id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion
-    id("com.moowork.node") version nodePluginVersion
-    id("com.moowork.gulp") version nodePluginVersion
+    id("com.moowork.gulp") version "1.2.0"
     id("io.spring.dependency-management") version "1.0.3.RELEASE"
 }
 
