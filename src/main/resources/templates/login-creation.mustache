@@ -1,0 +1,60 @@
+{{> header}}
+
+<div class="mxt-wrapper--page-title">
+    <div class="row">
+        <div class="columns large-12">
+            <h1 class="text-center">{{#i18n}}login.title{{/i18n}}</h1>
+        </div>
+    </div>
+</div>
+
+<div class="mxt-wrapper--page-content">
+    <p>{{#i18n}}talk.video.watch{{/i18n}}</p>
+    <div class="large-3 large-centered columns">
+      <div class="callout">
+        <div class="row">
+          <div class="large-12 columns">
+            <form action="/users" method="post">
+              <div class="row">
+                <div class="large-12 columns">
+                    {{#i18n}}user.form.description{{/i18n}}
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                    {{#i18n}}user.form.email{{/i18n}}
+                   <input type="email" name="email" value="{{email}}" disabled/>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <label>
+                    {{#i18n}}user.form.firstname{{/i18n}}
+                    <input type="text" name="firstname" value="{{user.firstname}}" required/>
+                  </label>
+              </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <label>
+                    {{#i18n}}user.form.lastname{{/i18n}}
+                    <input type="text" name="lastname" value="{{user.lastname}}" required/>
+                  </label>
+                </div>
+              </div>
+
+
+              <div class="row">
+                <div class="large-12 large-centered columns">
+                  <input type="hidden" name="action" value="authenticate"/>
+                  <input type="submit" class="button expand" value="Log In"/>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+{{> footer}}

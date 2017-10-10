@@ -26,6 +26,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
                     private val globalHandler: GlobalHandler,
                     private val newsHandler: NewsHandler,
                     private val talkHandler: TalkHandler,
+                    private val userHandler: UserHandler,
                     private val sponsorHandler: SponsorHandler,
                     private val ticketingHandler: TicketingHandler,
                     private val messageSource: MessageSource,
@@ -40,6 +41,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
     @DependsOn("databaseInitializer")
     fun websiteRouter() = router {
         GET("/blog/feed", blogHandler::feed)
+
         accept(TEXT_HTML).nest {
             GET("/") { sponsorHandler.viewWithSponsors("home", null, it) }
             GET("/about", globalHandler::findAboutView)
@@ -53,6 +55,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
 
             // Authentication
             GET("/login", authenticationHandler::loginView)
+            GET("/disconnect", authenticationHandler::logout)
 
             // Talks
             eventRepository.findAll().toIterable().map { it.year }.forEach { year ->
@@ -93,6 +96,8 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
 
         contentType(APPLICATION_FORM_URLENCODED).nest {
             POST("/login", authenticationHandler::login)
+            POST("/authenticate", authenticationHandler::authenticate)
+            POST("/users", userHandler::saveUser)
             //POST("/ticketing", ticketingHandler::submit)
             "/admin".nest {
                 POST("/talks", adminHandler::adminSaveTalk)

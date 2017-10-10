@@ -20,6 +20,7 @@ fun generateModel(baseUri: String,
         username?.let {
             this["username"] = it
             if (it == "mixit") this["admin"] = true
+            this["connected"] = true
         }
         this["locale"] = locale.toString()
         this["localePrefix"] = localePrefix(locale)
