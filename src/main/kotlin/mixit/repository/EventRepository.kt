@@ -9,7 +9,6 @@ import org.springframework.data.domain.Sort
 import org.springframework.data.mongodb.core.*
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.stereotype.Repository
-import java.time.LocalDate
 
 
 @Repository
@@ -24,13 +23,6 @@ class EventRepository(private val template: ReactiveMongoTemplate,
             val events: List<Event> = objectMapper.readValue(eventsResource.inputStream)
             events.forEach { save(it).block() }
             logger.info("Events data initialization complete")
-        }
-        if(findOne("mixit18").block() == null){
-            save(Event(
-                    "mixit18",
-                    LocalDate.parse("2018-04-19"),
-                    LocalDate.parse("2018-04-20"),
-                    true))
         }
     }
 

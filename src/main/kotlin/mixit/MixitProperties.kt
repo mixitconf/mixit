@@ -5,13 +5,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties
 @ConfigurationProperties("mixit")
 class MixitProperties {
     var baseUri: String? = null
-    val admin = Credential()
+    var contact: String? = null
+    var admin: String? = null
     val drive = Drive()
-
-    class Credential {
-        var username: String? = null
-        var password: String? = null
-    }
 
     class Drive {
         val fr = DriveDocuments()

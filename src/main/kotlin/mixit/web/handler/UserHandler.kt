@@ -1,11 +1,14 @@
 package mixit.web.handler
 
+import mixit.MixitProperties
 import mixit.model.*
 import mixit.repository.UserRepository
 import mixit.util.*
 import org.springframework.stereotype.Component
+import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.server.*
 import org.springframework.web.reactive.function.server.ServerResponse.*
+import reactor.core.publisher.Mono
 import reactor.core.publisher.toMono
 import java.net.URI.*
 import java.net.URLDecoder
@@ -38,7 +41,6 @@ class UserHandler(private val repository: UserRepository,
     fun create(req: ServerRequest) = repository.save(req.bodyToMono<User>()).flatMap {
         created(create("/api/user/${it.login}")).json().body(it.toMono())
     }
-
 }
 
 class UserDto(

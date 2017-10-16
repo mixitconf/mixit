@@ -1,5 +1,7 @@
 {{> header}}
 
+<script src="/js/login.js"></script>
+
 <div class="mxt-wrapper--page-title">
     <div class="row">
         <div class="columns large-12">
@@ -9,19 +11,27 @@
 </div>
 
 <div class="mxt-wrapper--page-content">
+
     <div class="large-3 large-centered columns">
       <div class="callout">
         <div class="row">
+          <p>{{#i18n}}login.confirmation{{/i18n}}</p>
           <div class="large-12 columns">
-            <form action="/login" method="post">
+            <form action="/signin" method="post">
               <div class="row">
                 <div class="large-12 columns">
-                  <input type="text" name="email" placeholder="contact@mix-it.fr" />
+                  <input type="hidden" name="email" value="{{email}}" />
+                  {{email}}
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <input type="password" name="token" placeholder="Token" />
                 </div>
               </div>
               <div class="row">
                 <div class="large-12 large-centered columns">
-                  <input type="submit" class="button expand" value="{{#i18n}}login.action.signin{{/i18n}}"/>
+                  <input type="submit" class="button expand" value="Log In"/>
                 </div>
               </div>
             </form>

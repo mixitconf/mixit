@@ -44,7 +44,7 @@ class AdminHandler(private val ticketRepository: TicketRepository,
     fun adminTalks(req: ServerRequest) =
             ok().render("admin-talks", mapOf(
                 Pair("talks", talkRepository
-                        .findByEvent("2018")
+                        .findByEvent("2017")
                         .collectList()
                         .flatMap { talks ->
                             userRepository
@@ -95,7 +95,7 @@ class AdminHandler(private val ticketRepository: TicketRepository,
             }
 
 
-    private fun adminTalk(talk: Talk = Talk(TALK, "mixit18", "", "")) = ok().render("admin-talk", mapOf(
+    private fun adminTalk(talk: Talk = Talk(TALK, "mixit17", "", "")) = ok().render("admin-talk", mapOf(
             Pair("talk", talk),
             Pair("title", "admin.talk.title"),
             Pair("rooms", listOf(

@@ -1,0 +1,58 @@
+{{> header}}
+
+<div class="mxt-wrapper--page-title">
+    <div class="row">
+        <div class="columns large-12">
+            <h1 class="text-center">{{#i18n}}login.title{{/i18n}}</h1>
+        </div>
+    </div>
+</div>
+
+<div class="mxt-wrapper--page-content">
+    <div class="large-3 large-centered columns">
+      <div class="callout">
+        <div class="row">
+          <div class="large-12 columns">
+            <form action="/signup" method="post">
+              <div class="row">
+                <div class="large-12 columns">
+                    {{#i18n}}user.form.description{{/i18n}}
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                   {{#i18n}}user.form.email{{/i18n}}
+                   <input type="text" value="{{email}}" disabled/>
+                   <input type="hidden" name="email" value="{{email}}"/>
+                </div>
+              </div>
+                <hr>
+              <div class="row">
+                <div class="large-12 columns">
+                  <label>
+                    {{#i18n}}user.form.firstname{{/i18n}}
+                    <input type="text" name="firstname" required/>
+                  </label>
+              </div>
+              </div>
+              <div class="row">
+                <div class="large-12 columns">
+                  <label>
+                    {{#i18n}}user.form.lastname{{/i18n}}
+                    <input type="text" name="lastname" required/>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-12 large-centered columns">
+                  <input type="submit" class="button expand" value="{{#i18n}}login.action.signup{{/i18n}}"/>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+{{> footer}}

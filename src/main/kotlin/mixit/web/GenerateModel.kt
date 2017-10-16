@@ -20,6 +20,7 @@ fun generateModel(baseUri: String,
         username?.let {
             this["username"] = it
             if (it == "mixit") this["admin"] = true
+            this["connected"] = true
         }
         this["locale"] = locale.toString()
         this["localePrefix"] = localePrefix(locale)
@@ -35,3 +36,20 @@ fun generateModel(baseUri: String,
         this["urlEncode"] = Mustache.Lambda { frag, out -> out.write(UriUtils.encodePathSegment(frag.execute(), "UTF-8")) }
         this["markdown"] = Mustache.Lambda { frag, out -> out.write(markdownConverter.toHTML(frag.execute())) }
 }.toMap()
+
+fun generateModel(baseUri: String,
+                  locale: Locale,
+                  messageSource: MessageSource
+) = mutableMapOf<String, Any>().apply {
+
+    this["locale"] = locale.toString()
+    this["localePrefix"] = localePrefix(locale)
+    this["en"] = locale.language == "en"
+    this["fr"] = locale.language == "fr"
+    this["baseUri"] = baseUri
+    this["i18n"] = Mustache.Lambda { frag, out ->
+        val tokens = frag.execute().split("|")
+        out.write(messageSource.getMessage(tokens[0], tokens.slice(IntRange(1, tokens.size - 1)).toTypedArray(), locale))
+    }
+    this["urlEncode"] = Mustache.Lambda { frag, out -> out.write(UriUtils.encodePathSegment(frag.execute(), "UTF-8")) }
+}

@@ -34,7 +34,6 @@ class RedirectRoutes(private val blogHandler: BlogHandler,
             GET("/docs/presse/leaflet/en") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${properties.drive.en.press}")}
             GET("/docs/presse/leaflet/fr") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${properties.drive.fr.press}")}
 
-            GET("/2018/") { permanentRedirect("${properties.baseUri}/2018") }
             GET("/2017/") { permanentRedirect("${properties.baseUri}/2017") }
             GET("/2016/") { permanentRedirect("${properties.baseUri}/2016") }
             GET("/2015/") { permanentRedirect("${properties.baseUri}/2015") }

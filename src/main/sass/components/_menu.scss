@@ -16,6 +16,13 @@
 	}
 }
 
+.mxt-menu__item--close-nav {
+	padding-top: 7rem;
+	padding-right: 0.5rem;
+	padding-left: 0;
+	display: inline;
+}
+
 //Language switch
 .mxt-menu__item--lang {
 	color: $medium-gray;
@@ -62,3 +69,4 @@
 		color: $anchor-color-alt-hover;
 	}	
 }
+
