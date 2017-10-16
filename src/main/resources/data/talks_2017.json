@@ -3,45 +3,6 @@
         "addedAt": [
             2017,
             3,
-            29,
-            19,
-            43,
-            15,
-            493000000
-        ],
-        "description": "A l'automne 2011 un petit groupe de citoyens lyonnais eurent l'id\u00e9e folle de cr\u00e9er une nouvelle monnaie. Quelques ann\u00e9es plus tard La Gonette voyait le jour pour inonder les porte monnaies des gones et des fenottes. Mais au fait, a quoi \u00e7a sert de cr\u00e9er une monnaie locale?",
-        "end": [
-            2017,
-            4,
-            20,
-            9,
-            50
-        ],
-        "event": "2017",
-        "format": "KEYNOTE",
-        "id": "58de4d4b9312a300179a2a77",
-        "language": "FRENCH",
-        "room": "AMPHI1",
-        "slug": "la-naissance-de-la-gonette",
-        "speakerIds": [
-            "briet.nicolas"
-        ],
-        "start": [
-            2017,
-            4,
-            20,
-            9,
-            40
-        ],
-        "summary": "A l'automne 2011 un petit groupe de citoyens lyonnais eurent l'id\u00e9e folle de cr\u00e9er une nouvelle monnaie. Quelques ann\u00e9es plus tard La Gonette voyait le jour pour inonder les porte monnaies des gones et des fenottes. Mais au fait, a quoi \u00e7a sert de cr\u00e9er une monnaie locale?",
-        "title": "La naissance de La Gonette",
-        "topic": "aliens",
-        "video": null
-    },
-    {
-        "addedAt": [
-            2017,
-            3,
             28,
             15,
             51,
@@ -74,6 +35,45 @@
         ],
         "summary": "Passons les portes d'une salle de concert, un orchestre s'installe et joue ; concert merveilleux et instants partag\u00e9s entre musiciens et public, quelle r\u00e9ussite! Si l'on a id\u00e9e du travail musical que cela peut susciter (appelons cela la partie artistique et technique), qui soup\u00e7onnerait le travail sur la foule de musiciens afin d'en faire une \u00e9quipe qui s'\u00e9tablira durant l'ensemble des r\u00e9p\u00e9titions? Plusieurs heures de r\u00e9p\u00e9titions pour 1h30 de musique, autant d'heures permettant une d\u00e9couverte approfondie de l'\u0153uvre, mais \u00e9galement son partage avec un groupe afin d'aller vers un objectif commun: le concert. Ce sont ces heures de r\u00e9p\u00e9titions en groupe, cette face immerg\u00e9e de l'iceberg, que nous partagerons ensemble au-cours de cette keynote.",
         "title": "L'orchestre un mod\u00e8le de gestion de groupe?",
+        "topic": "aliens",
+        "video": "https://vimeo.com/215505962"
+    },
+    {
+        "addedAt": [
+            2017,
+            3,
+            29,
+            19,
+            43,
+            15,
+            493000000
+        ],
+        "description": "A l'automne 2011 un petit groupe de citoyens lyonnais eurent l'id\u00e9e folle de cr\u00e9er une nouvelle monnaie. Quelques ann\u00e9es plus tard La Gonette voyait le jour pour inonder les porte monnaies des gones et des fenottes. Mais au fait, a quoi \u00e7a sert de cr\u00e9er une monnaie locale?",
+        "end": [
+            2017,
+            4,
+            20,
+            9,
+            50
+        ],
+        "event": "2017",
+        "format": "KEYNOTE",
+        "id": "58de4d4b9312a300179a2a77",
+        "language": "FRENCH",
+        "room": "AMPHI1",
+        "slug": "la-naissance-de-la-gonette",
+        "speakerIds": [
+            "briet.nicolas"
+        ],
+        "start": [
+            2017,
+            4,
+            20,
+            9,
+            40
+        ],
+        "summary": "A l'automne 2011 un petit groupe de citoyens lyonnais eurent l'id\u00e9e folle de cr\u00e9er une nouvelle monnaie. Quelques ann\u00e9es plus tard La Gonette voyait le jour pour inonder les porte monnaies des gones et des fenottes. Mais au fait, a quoi \u00e7a sert de cr\u00e9er une monnaie locale?",
+        "title": "La naissance de La Gonette",
         "topic": "aliens",
         "video": null
     },
@@ -128,7 +128,7 @@
             12,
             758000000
         ],
-        "description": "Apr\u00e8s une introduction rapide du concept et de la technologie sous-jacente, et de la notion d'application d\u00e9centralis\u00e9e, nous vous proposons un **atelier pour apprendre \u00e0 programmer une solution blockchain**, en s'appuyant sur le framework et l'environnement le plus en vogue du moment : **[Ethereum](https://www.ethereum.org/)**.\r\n\r\nVenez donc programmer un jeu simple, de fa\u00e7on d\u00e9centralis\u00e9e. A la fin de la s\u00e9ance, vous serez reli\u00e9s \u00e0 tous les autres participants au sein de la m\u00eame blockchain pour participer au jeu de mani\u00e8re collective.\r\n\r\nVous apprendrez \u00e0 :\r\n* Comprendre les notions de base d'Ethereum.\r\n* Ex\u00e9cuter les commandes Ethereum dans un conteneur (ici [Docker](https://www.docker.com/)).\r\n* Cr\u00e9er un compte et une blockchain de test, d\u00e9marrer un noeud et miner la blockchain.\r\n* Programmer un \"smart-contract\" en langage [Solidity](http://solidity.readthedocs.io).\r\n* Int\u00e9grer un \"smart-contract\" dans une application d\u00e9centralis\u00e9e (Dapp) en JavaScript.\r\n\r\n*Pr\u00e9-requis : ordinateur portable \u00e9quip\u00e9 avec VirtualBox v5 et si possible Vagrant (une image de machine virtuelle, comportant tout le mat\u00e9riel n\u00e9cessaire, sera fournie en s\u00e9ance).*",
+        "description": "Apr\u00e8s une introduction rapide du concept et de la technologie sous-jacente, et de la notion d'application d\u00e9centralis\u00e9e, nous vous proposons un **atelier pour apprendre \u00e0 programmer une solution blockchain**, en s'appuyant sur le framework et l'environnement le plus en vogue du moment : **[Ethereum](https://www.ethereum.org/)**.\r\n\r\nVenez donc programmer un jeu simple, de fa\u00e7on d\u00e9centralis\u00e9e. A la fin de la s\u00e9ance, vous serez reli\u00e9s \u00e0 tous les autres participants au sein de la m\u00eame blockchain pour participer au jeu de mani\u00e8re collective.\r\n\r\nVous apprendrez \u00e0 :\r\n* Comprendre les notions de base d'Ethereum.\r\n* Ex\u00e9cuter les commandes Ethereum dans un conteneur (ici [Docker](https://www.docker.com/)).\r\n* Cr\u00e9er un compte et une blockchain de test, d\u00e9marrer un noeud et miner la blockchain.\r\n* Programmer un \"smart-contract\" en langage [Solidity](http://solidity.readthedocs.io).\r\n* Int\u00e9grer un \"smart-contract\" dans une application d\u00e9centralis\u00e9e (Dapp) en JavaScript.\r\n\r\n**Pr\u00e9-requis** :\r\n\r\n- ordinateur portable \u00e9quip\u00e9 avec VirtualBox v5 et si possible Vagrant.\r\n- t\u00e9l\u00e9chargement de http://siilabs.sii-lyon.fr/vagrant/images/SIILyon-BlockchainDemo.box ",
         "end": [
             2017,
             4,
@@ -168,7 +168,7 @@
             12,
             764000000
         ],
-        "description": null,
+        "description": "[Slides on SpeakerDeck](https://speakerdeck.com/emilieesposito/cargo-cult-agile)",
         "end": [
             2017,
             4,
@@ -195,7 +195,7 @@
         "summary": "On appelle cargo cult le fait d\u2019imiter des comportements, sans en comprendre le fonctionnement, en esp\u00e9rant obtenir les m\u00eames r\u00e9sultats.\r\nLes organisations adoptent un framework agile esp\u00e9rant livrer rapidement du logiciel \u00e0 haute valeur ajout\u00e9e. Peut-on parler de cargo cult agile ? Quelles sont les pratiques agiles les plus vuln\u00e9rables au cargo cult ?\r\nLe cargo cult agile n\u2019est pas une fatalit\u00e9. Voici mes solutions pour l\u2019\u00e9viter.",
         "title": "Cargo cult agile",
         "topic": "learn",
-        "video": null
+        "video": "https://vimeo.com/215516793"
     },
     {
         "addedAt": [
@@ -275,7 +275,7 @@
         "summary": "Des plus en plus de soci\u00e9t\u00e9s souhaitent int\u00e9grer de la data-science dans leurs projets. Difficile de ne pas se sentir perdu au milieu des nombreuses biblioth\u00e8ques propos\u00e9es, et il est encore plus difficile de s\u00e9lectionner la librairie qui correspond le mieux \u00e0 nos besoins m\u00e9tiers.",
         "title": "Quelles biblioth\u00e8ques choisir pour votre projet data-science ? That's the question!",
         "topic": "tech",
-        "video": null
+        "video": "https://vimeo.com/215629177"
     },
     {
         "addedAt": [
@@ -353,7 +353,7 @@
         "summary": "A quick introduction to the Rust Language. Code comparisons between Java and Rust, compiler features, type system, environment and integrating the two languages.",
         "title": "Rust for Java developers",
         "topic": "tech",
-        "video": null
+        "video": "https://vimeo.com/215627152"
     },
     {
         "addedAt": [
@@ -392,7 +392,7 @@
         "summary": "Depuis quelques ann\u00e9es, de nombreux outils sont apparus pour nous permettre de structurer au mieux nos applications front-end. Des biblioth\u00e8ques, comme React, des architectures de gestion d'\u00e9tats, comme Redux, et m\u00eame des surcouches au langage comme TypeScript.\r\n\r\nEt si nous pouvions repenser JavaScript de z\u00e9ro, et cr\u00e9er un langage adapt\u00e9 au d\u00e9veloppement web tel qu'on le pratique aujourd'hui, en tenant compte de toutes ces bonnes pratiques d\u00e9couvertes sur la route ?",
         "title": "Un language que tout le monde Elm",
         "topic": "tech",
-        "video": null
+        "video": "https://vimeo.com/215620393"
     },
     {
         "addedAt": [
@@ -432,7 +432,7 @@
         "summary": "D\u2019un c\u00f4t\u00e9, nous avons la communaut\u00e9 web qui maintient un \u00e9cosyst\u00e8me riche permettant de construire des interfaces utilisateurs rapidement. De l\u2019autre c\u00f4t\u00e9, l\u2019\u00e9cosyst\u00e8me desktop poss\u00e8de des outils tr\u00e8s performants mais qui demandent beaucoup d\u2019investissement. Github s\u2019est retrouss\u00e9 les manches pour tirer le meilleur des deux mondes et a cr\u00e9\u00e9 Electron ! Electron, c\u2019est la possibilit\u00e9 de construire des applications gr\u00e2ce aux composants web tout en profitant des interactions riches avec la machine d\u2019une application desktop.",
         "title": "D\u00e9veloppez des applications web desktop avec Electron de Github",
         "topic": "tech",
-        "video": null
+        "video": "https://vimeo.com/215528389"
     },
     {
         "addedAt": [
@@ -471,7 +471,7 @@
         "summary": "Les b\u00e9n\u00e9fices du jeu pour les enfants n'est plus \u00e0 d\u00e9montrer: d\u00e9veloppant l'imagination et permettant la confrontation au monde r\u00e9el, il encourage leur d\u00e9veloppement. Souvent \u00e0 l'\u00e2ge adulte celui ci est plus mal per\u00e7u, vu comme une perte de temps. Et si les bienfaits du jeux pouvaient nous servir \u00e0 tout \u00e2ge comme un outil d'apprentissage?",
         "title": "Gamification: Jouer pour Apprendre",
         "topic": "learn",
-        "video": null
+        "video": "https://vimeo.com/216749994"
     },
     {
         "addedAt": [
@@ -495,7 +495,7 @@
         "format": "TALK",
         "id": "58de4d4b9312a300179a2a7c",
         "language": "FRENCH",
-        "room": "AMPHI1",
+        "room": "AMPHI2",
         "slug": "spring-boot-2",
         "speakerIds": [
             "snicoll"
@@ -510,7 +510,7 @@
         "summary": "La nouvelle g\u00e9n\u00e9ration de Spring Framework sera bient\u00f4t disponible ! Pour fonctionner sur Spring 5, les applications devront respecter de **nouveaux pr\u00e9-requis** (versions minimales de JDK, conteneurs, libraries...). En contrepartie, vous pourrez vous pr\u00e9parer \u00e0 l'arriv\u00e9e de **JDK9**, profiter du **support de Kotlin** et m\u00eame du nouveau **Spring WebFlux**. Cette session explique comment ces fonctionnalit\u00e9s sont int\u00e9gr\u00e9es dans Spring Boot 2, disponible cet automne.",
         "title": "Spring Boot 2",
         "topic": "tech",
-        "video": null
+        "video": "https://vimeo.com/215628139"
     },
     {
         "addedAt": [
@@ -549,7 +549,7 @@
         "summary": "Le travail fait partie int\u00e9grante notre vie, \u00e0 tel point que tout ce qui se passe en dehors devient presque anecdotique. Des hobbies, nous n'avons plus besoin : le travail est cens\u00e9 nous nourrir intellectuellement et nous offrir tout ce dont nous avons besoin pour nous \u00e9panouir. Mais que se passe-t-il quand il ne remplit plus cette mission, quand il ne nous nourrit plus, au propre comme au figur\u00e9 ? Je vous propose une r\u00e9flexion sur le travail, son histoire, le mal qu'il nous fait aujourd'hui et des pistes pour enfin le r\u00e9adapter \u00e0 l'humain. Entre autres sujets, nous parlerons burnout, entreprise lib\u00e9r\u00e9e, taylorisme, sociologie, bien-\u00eatre au travail, revenu inconditionnel de base, etc.",
         "title": "Il est temps de repenser notre mani\u00e8re de travailler !",
         "topic": "learn",
-        "video": null
+        "video": "https://vimeo.com/215572019"
     },
     {
         "addedAt": [
@@ -567,13 +567,14 @@
             4,
             20,
             13,
-            40
+            35
         ],
         "event": "2017",
         "format": "KEYNOTE",
         "id": "58de4d4c9312a300179a2a8e",
         "language": "FRENCH",
         "room": "AMPHI1",
+        "slug": "quelle-ethique-pour-les-developpeurs-",
         "speakerIds": [
             "guillaume.champeau"
         ],
@@ -582,12 +583,12 @@
             4,
             20,
             13,
-            15
+            10
         ],
-        "summary": "Les développeurs ne sont pas des machines qui programment d'autres machines, mais bien des hommes et des femmes doués de conscience dont les lignes de code qu'ils produisent peuvent avoir un impact important sur la société. Quelles sont les règles en matière d'éthique pour les développeurs et les startupers ? L'éthique est-elle un obstacle à la croissance d'une entreprise ? Cette keynote apportera des éléments de réflexion en s'intéressant, en particulier, au traitement des données personnelles des utilisateurs.",
-        "title": "Quelle éthique pour les développeurs ?",
+        "summary": "Les d\u00e9veloppeurs ne sont pas des machines qui programment d'autres machines, mais bien des hommes et des femmes dou\u00e9s de conscience dont les lignes de code qu'ils produisent peuvent avoir un impact important sur la soci\u00e9t\u00e9. Quelles sont les r\u00e8gles en mati\u00e8re d'\u00e9thique pour les d\u00e9veloppeurs et les startupers ? L'\u00e9thique est-elle un obstacle \u00e0 la croissance d'une entreprise ? Cette keynote apportera des \u00e9l\u00e9ments de r\u00e9flexion en s'int\u00e9ressant, en particulier, au traitement des donn\u00e9es personnelles des utilisateurs.",
+        "title": "Quelle \u00e9thique pour les d\u00e9veloppeurs ?",
         "topic": "hacktivism",
-        "video": null
+        "video": "https://vimeo.com/215558307"
     },
     {
         "addedAt": [
@@ -626,7 +627,7 @@
         "summary": "Le monde a toujours \u00e9t\u00e9 \u00ab Marqu\u00e9 \u00bb. \r\nDu nombre de pois sur les ailes du papillon Monarque au bande du tigre du bengal, ce syst\u00e8me de \u00abmarques distinctives\u00bb a permis d\u2019organis\u00e9 la complexit\u00e9 de notre monde. Mais vers 2014, les choses se troublent. \r\nL\u2019id\u00e9e de Marque \u00e9volue avec l\u2019arriv\u00e9e de dispositifs comme Amazon Echo avec reconnaissance vocale soutenus par un AI incroyablement intelligent.\r\nLa Marque conna\u00eet un changement de paradigme.\r\nElle n\u2019est plus juste un symbole, un signe. Elle n\u2019est m\u00eame pas une voix. Elle est devenue une entit\u00e9 intelligente, une personnalit\u00e9, un algorithme capable d\u2019apprendre.\r\nComment \u00abMarqu\u00e9\u00bb une intelligence artificielle ?\r\nQuel type de relation allons-nous avoir maintenant avec la Marque ?\r\nDeviendrons-nous des consommateurs compl\u00e8tements manipul\u00e9s par la Marque ? \r\nLa Marque va-t elle tout simplement devenir notre meilleur ami?",
         "title": "La Marque est morte. Vive l\u2019Intelligente Artificielle.",
         "topic": "design",
-        "video": null
+        "video": "https://vimeo.com/215623881"
     },
     {
         "addedAt": [
@@ -666,7 +667,7 @@
         "summary": "Depuis plus d\u2019un si\u00e8cle, la soci\u00e9t\u00e9 exhibe et encourage presque qu\u2019une seule fa\u00e7on de travailler, c\u2019est \u00e0 dire 5j/5, 220 jours/an, avec un lien de subordination. Et cela alors que notre soci\u00e9t\u00e9 est en pleine mutation. Qui r\u00eave par exemple de travailler pour une seule soci\u00e9t\u00e9 toute sa vie ?\r\nN\u2019avons-nous pas m\u00e9lang\u00e9 l\u2019objectif et le moyen pour y parvenir ?\r\nPeut \u00eatre que vous souhaitez travailler moins, sur d\u2019autres sujets, pour des clients correspondant mieux \u00e0 votre \u00e9thique, \u00eatre nomade\u2026autant de fa\u00e7ons de travailler, de vivre que d\u2019individus, pourquoi voudrions-nous tous le m\u00eame mode de vie ?\r\nCeci n\u2019est pas r\u00e9serv\u00e9 aux bisounours mais accessible \u00e0 n\u2019importe qui, encore plus pour les d\u00e9veloppeurs.\r\n\r\nDurant ce talk, nous aimerions vous faire r\u00e9fl\u00e9chir et envisager une remise en question de votre fa\u00e7on de travailler.",
         "title": "Travailler autrement",
         "topic": "hacktivism",
-        "video": null
+        "video": "https://vimeo.com/216753822"
     },
     {
         "addedAt": [
@@ -705,7 +706,7 @@
         "summary": "La programmation probabiliste cr\u00e9e des syst\u00e8mes qui prennent des d\u00e9cisions \u00e0 partir d'observations dont la certitude n'est pas garantie. Bien qu'encore peut d\u00e9velopp\u00e9e, ce type de programmation va \u00eatre une pi\u00e8ce essentielle des outils bas\u00e9s sur la composition d'algorithmes de machine learning.",
         "title": "Probabilistic Programming : Tuer un pi\u00e9ton ou sacrifier les passagers ?",
         "topic": "aliens",
-        "video": null
+        "video": "https://vimeo.com/215559437"
     },
     {
         "addedAt": [
@@ -862,7 +863,7 @@
         "summary": "Les anciens mod\u00e8les nous proposaient d\u2019habiter \u00e0 proximit\u00e9 de notre lieu de travail.\r\nL\u2019Internet a cr\u00e9\u00e9 le bouleversement et rendu nos bureaux virtuels, notre entreprise d\u00e9mat\u00e9rialis\u00e9e.\r\nO\u00f9 habiter lorsqu\u2019on a la vastitude du monde ouverte devant soi ?\r\n\r\n\u00catre citoyen de l\u2019univers num\u00e9rique peut se transcender dans la vie r\u00e9elle.\r\nOn troque alors les embouteillages pour les voyages, le bureau pour les lieux ouverts, la possession pour la libert\u00e9.\r\n\r\nLe \u201cDigital Nomad\u201d pouss\u00e9 \u00e0 son extr\u00eame ne parle plus d\u2019un domicile fixe, mais de lieux d\u2019habitations \u00e9ph\u00e9m\u00e8res.\r\nDes lieux de vie nouveaux et des paysages changeant, une vie sans routine dans un quotidien qui vient unifier vies professionnelle et personnelle.\r\n\r\nApr\u00e8s avoir gout\u00e9 \u00e0 ce mode de vie, j\u2019ai quitt\u00e9 la notion de \u201clogement\u201d il y a 3 ans.\r\nDifficile d\u2019envisager la vie autrement quand tout est devenu possible.",
         "title": "D\u00e9veloppeur sans domicile fixe",
         "topic": "aliens",
-        "video": null
+        "video": "https://vimeo.com/215566922"
     },
     {
         "addedAt": [
@@ -1020,8 +1021,8 @@
         ],
         "summary": "Non, le CSS c\u2019est pas du coloriage !\r\n\r\nLa puissance du CSS est souvent sous-estim\u00e9e, cette session de Live-Coding sera l\u2019occasion de montrer quantit\u00e9 de trucs et astuces utiles quotidiennement pour les d\u00e9veloppeurs web.\r\n\r\nAujourd\u2019hui on entre dans l\u2019\u00e8re post-IE et on peut utiliser beaucoup plus sereinement la puissance que nous offre le CSS; pourquoi passer \u00e0 cot\u00e9 !\r\n\r\nEn mode \u2018no-javascript\u2019 venez d\u00e9couvrir des solutions pour faire des : collapsibles panels, accordions, compteurs, popovers, modals, tabs, \u2026",
         "title": "CSS is Awesome!",
-        "topic": "tech",
-        "video": null
+        "topic": "design",
+        "video": "https://vimeo.com/215621504"
     },
     {
         "addedAt": [
@@ -1059,8 +1060,8 @@
         ],
         "summary": "Les robots sont de plus en plus pr\u00e9sents, que ce soit pour r\u00e9aliser\r\ndes t\u00e2ches r\u00e9p\u00e9titives ou pour nettoyer le sol ou une piscine. Loin\r\ndes robots de science fiction, ces robots modernes sont parfois dot\u00e9s\r\nde capacit\u00e9s surpassant celle des humains, mais il s'agit avant tout\r\nde super-sp\u00e9cialistes incapables de faire face \u00e0 une situation non\r\npr\u00e9vue par leur concepteur. Les humains et les animaux disposent donc\r\nde capacit\u00e9s d'adaptation encore hors d'atteinte en robotique. Les\r\nchercheurs s'int\u00e9ressent \u00e0 la biologie et \u00e0 la psychologie pour\r\nd\u00e9passer ces limites et d\u00e9velopper des robots qui, \u00e0 terme, pourraient\r\nintervenir dans notre environnement quotidien. La robotique\r\nd\u00e9veloppementale vise \u00e0 permettre aux robots d'apprendre de leurs\r\ninteractions avec l'environnement. Nous verrons les questions que cela\r\npose et les approches d\u00e9velopp\u00e9es, notamment dans le cadre du projet\r\nEurop\u00e9en [DREAM](http://robotsthatdream.eu/).",
         "title": "Des robots qui s'adaptent \u00e0 leur environnement",
-        "topic": "design",
-        "video": null
+        "topic": "tech",
+        "video": "https://vimeo.com/216751806"
     },
     {
         "addedAt": [
@@ -1085,7 +1086,7 @@
         "id": "58de4d4c9312a300179a2a8a",
         "language": "FRENCH",
         "room": "AMPHI1",
-        "slug": "trouvez-vos-cadences-et-faite-un-pas-vers-le-continuous-delivery",
+        "slug": "trouvez-vos-cadences-et-faites-un-pas-vers-le-continuous-delivery",
         "speakerIds": [
             "anne.gabrillagues"
         ],
@@ -1097,9 +1098,9 @@
             0
         ],
         "summary": "Cette session vous emm\u00e8nera \u00e0 la d\u00e9couverte de la notion de **cadence**,  celle qui rythme les activit\u00e9s des \u00e9quipes, quelle que soit l\u2019approche utilis\u00e9e, du cycle en V au continous delivery en passant par Scrum et Kanban.",
-        "title": "Trouvez vos cadences, et faite un pas vers le Continuous Delivery",
+        "title": "Trouvez vos cadences, et faites un pas vers le Continuous Delivery",
         "topic": "learn",
-        "video": null
+        "video": "https://vimeo.com/215554148"
     },
     {
         "addedAt": [
@@ -1138,7 +1139,7 @@
         "summary": "One important subject we analyse in languages is its type system. Having a general overview of a type system provides information about the language structure, possible optimisations and may help us to understand how statements are evaluated. Those are topics that we shall consider for when creating a new project. This talk will provide a gentle introduction to type theory, explaining step by step how we transform source code into logical statements. ",
         "title": "Notes on Type Theory for absolute beginners",
         "topic": "tech",
-        "video": null
+        "video": "https://vimeo.com/215568056"
     },
     {
         "addedAt": [
@@ -1177,7 +1178,7 @@
         "summary": "Etes-vous utilisateur de projets open source? Tr\u00e8s probablement... Mais avez-vous d\u00e9j\u00e0 song\u00e9 \u00e0 sauter le pas et devenir contributeur? La d\u00e9marche peut \u00eatre difficile pour plusieurs raisons: vous ne savez pas par o\u00f9 commencer, vous vous dites \"personne ne voudra de mes contributions\", vous avez d\u00e9j\u00e0 propos\u00e9 des patchs mais vous voulez augmenter vos chances ou devenir un meilleur contributeur... Et si vous avez vous m\u00eame d\u00e9marr\u00e9 un projet open source, peut-\u00eatre vous demandez-vous comment mieux le g\u00e9rer, \u00eatre plus encourageant envers les contributions? Ce talk vous montrera avec humour que participer \u00e0 l'open source et devenir un *bon* contributeur n'est pas si difficile.",
         "title": "How to become a good Open Source contributor in 1 hour",
         "topic": "learn",
-        "video": null
+        "video": "https://vimeo.com/215564956"
     },
     {
         "addedAt": [
@@ -1189,7 +1190,7 @@
             12,
             772000000
         ],
-        "description": null,
+        "description": "Having devoted more than ten years to researching the fast-moving fields that almost daily reveal new information, Linda shares what she has uncovered\u2014some of it surprising, some even counterintuitive. She summarizes the research and provides concrete tips for improving your individual, team, and organizational abilities. Most of us sit all day, believing that concentrating without moving, in a room with no natural light, drinking too much caffeine, after our usual night of less than six hours of sleep is the way to get work done. Linda offers ways to incorporate movement, take a break, change focus, brighten our environments, think better, and be happier. Learn the latest tips for boosting your problem-solving power.",
         "end": [
             2017,
             4,
@@ -1200,11 +1201,11 @@
         "event": "2017",
         "format": "TALK",
         "id": "58de4d4b9312a300179a2a64",
-        "language": "FRENCH",
+        "language": "ENGLISH",
         "room": "ROOM2",
-        "slug": "vers-une-revolution-entrepreneuriale-de-l-effet-de-mode-a-la-realite-des-enjeux-et-des-pratiques",
+        "slug": "tips-for-better-problem-solving",
         "speakerIds": [
-            "jean-michel.degeorge"
+            "rising.linda"
         ],
         "start": [
             2017,
@@ -1213,10 +1214,10 @@
             15,
             0
         ],
-        "summary": "Terme polys\u00e9mique, l\u2019entrepreneuriat refl\u00e8te plusieurs r\u00e9alit\u00e9s. Au-del\u00e0 de l\u2019effet de mode, les pays et les cultures proposent diff\u00e9rentes acceptions, de la cr\u00e9ation d\u2019entreprise \u00e0 la start-ups \u2026 au d\u00e9veloppement de l\u2019esprit d\u2019entreprendre. Depuis la troisi\u00e8me r\u00e9volution industrielle et l\u2019apparition de l\u2019\u00e8re du num\u00e9rique, nous assistons \u00e0 une v\u00e9ritable transformation de notre soci\u00e9t\u00e9. Ces mutations profondes ont fait appara\u00eetre de nouvelles attentes, au niveau \u00e9conomique et social. Ainsi, l\u2019entrepreneuriat est devenu une pr\u00e9occupation partag\u00e9e r\u00e9pondant \u00e0 de multiples enjeux (croissance \u00e9conomique, cr\u00e9ation d\u2019emplois, insertion sociale, r\u00e9alisation  de soi \u2026) et semble par\u00e9 de multiples vertus : cr\u00e9ativit\u00e9, innovation, sens de l\u2019initiative, flexibilit\u00e9 \u2026 \r\nAu-del\u00e0 des domaines d\u2019activit\u00e9s, se pose la question de la cr\u00e9ation et de la croissance des jeunes entreprises, technologiques ou non. Au niveau technologique, la croissance des start-ups num\u00e9riques est essentielle et concerne \u00e9galement les mutations du parc d\u2019entreprises existantes (les PME/PMI repr\u00e9sentent la grande majorit\u00e9 des entreprises). Le virage num\u00e9rique permettrait d'apporter un demi-point de croissance annuel au PIB fran\u00e7ais. Accompagner les start-ups permet de marquer la rencontre entre l\u2019innovation et certains attributs de l\u2019esprit d\u2019entreprendre (acceptation de l\u2019\u00e9chec, droit \u00e0 l\u2019erreur, valorisation financi\u00e8re de la prise de risque \u2026). Des mesures sont mises en place afin de favoriser la cr\u00e9ation de start-ups, mais \u00e9galement d\u2019inciter les particuliers \u00e0 investir ou d\u00e9velopper le financement participatif. Des outils juridiques (par exemple le statut de SCOP) se d\u00e9veloppent conjointement \u00e0 l\u2019\u00e9volution des besoins et des attentes des cr\u00e9ateurs (impact de la g\u00e9n\u00e9ration, notamment Y et Z). Les approches afin d\u2019accompagner ces mouvements de fonds \u00e9voluent \u00e9galement. Loin de l\u2019approche classique d\u00e9terministe et pr\u00e9visionniste (r\u00e9daction d\u2019un business plan), les processus de construction it\u00e9ratifs et effectuals permettent de se concentrer sur la valeur (lean start-up, nouveaux business model \u2026). \r\nA partir d\u2019une approche historique, nous proposons d\u2019aborder l\u2019entrepreneuriat \u00e0 partir de son \u00e9cosyst\u00e8me, en pr\u00e9cisant les diff\u00e9rents enjeux (notamment au regard du d\u00e9veloppement de la technologie et de l\u2019innovation), les modalit\u00e9s de mise en \u0153uvre (et les outils) et la place essentielle de l\u2019individu cr\u00e9ateur ou dirigeant.",
-        "title": "Vers une r\u00e9volution entrepreneuriale - De l\u2019effet de mode \u00e0 la r\u00e9alit\u00e9 des enjeux et des pratiques",
+        "summary": "Unfortunately, those of us who struggle with complex problems for a living don't have time to keep up with the enormous amount of cognitive science research that could help us become better thinkers, better problem solvers, and better decision makers.",
+        "title": "Tips for better problem-solving",
         "topic": "learn",
-        "video": null
+        "video": "https://vimeo.com/215724550"
     },
     {
         "addedAt": [
@@ -1256,7 +1257,7 @@
         "summary": "L'agilit\u00e9 ne fais pas toujours bon m\u00e9nage avec la culture d'entreprise. Si certaines entreprises r\u00e9forment totalement leur culture pour adopter l'agilit\u00e9, il arrive aussi que ce soit l'agilit\u00e9 qui soit vid\u00e9e de sa substance pour cohabiter avec la culture existante.\r\n\u00e0 travers un voyage au c\u0153ur de l'anarchisme et de ses valeurs (l'auto-organisation, l'adaptation au changement, la responsabilisation de chacun et le refus du dogmatisme ) nous retrouverons le chemin du manifeste agile afin d'expliquer cette rupture qu'a apport\u00e9 l'agilit\u00e9 et pourquoi elle fait d\u00e9bat ici ou l\u00e0, quand pour certains elle n'est que pure raison.",
         "title": "L'agilit\u00e9, un anarchisme incompatible avec l'entreprise ?",
         "topic": "learn",
-        "video": null
+        "video": "https://vimeo.com/215624435"
     },
     {
         "addedAt": [
@@ -1295,7 +1296,7 @@
         "summary": "A successful project usually grows, and Kotlin is no exception. We are adding new targets (JavaScript and Native) and new computation models (coroutines). This talk is about our vision of the future of Kotlin as a language and a ecosystem.",
         "title": "The Future of Kotlin: How agile can language development be?",
         "topic": "tech",
-        "video": null
+        "video": "https://vimeo.com/215556547"
     },
     {
         "addedAt": [
@@ -1374,7 +1375,7 @@
         "summary": "Un \u00e9chec scolaire, beaucoup d\u2019amertume vis \u00e0 vis du syst\u00e8me \u00e9ducatif classique, et le gout pour la vengeance, c\u2019est le parcours un peu chaotique dont je suis issu et qui m\u2019a forg\u00e9 une solide envie de partager mes connaissances en programmation.\r\n\r\nVoil\u00e0 comment un programmeur lambda de jeu vid\u00e9o se retrouve \u00e0 essayer d\u2019enseigner la programmation \u00e0 des classes de 35+ \u00e9l\u00e8ves post-ados d\u2019une formation tr\u00e8s \u00e9loign\u00e9e de la mati\u00e8re qui savent \u00e0 peine lire une consigne. Retour sur trois ann\u00e9es o\u00f9 j\u2019ai autant enseign\u00e9 qu\u2019appris. \r\n\r\n**La suite va vous \u00e9tonner.**",
         "title": "Apprendre \u00e0 apprendre.",
         "topic": "learn",
-        "video": null
+        "video": "https://vimeo.com/215524673"
     },
     {
         "addedAt": [
@@ -1423,45 +1424,6 @@
             15,
             51,
             12,
-            769000000
-        ],
-        "description": "Au programme:\r\n\r\n- JavaScript, frameworks et outils\r\n- Communaut\u00e9s et open source\r\n- Communication et \u00abadvocacy\u00bb\r\n- \u00abD\u00e9veloppeur JavaScript\u00bb: un m\u00e9tier d'avenir ?\r\n\r\nEssayons de r\u00e9fl\u00e9chir ensemble o\u00f9 l'on va !",
-        "end": [
-            2017,
-            4,
-            20,
-            17,
-            0
-        ],
-        "event": "2017",
-        "format": "TALK",
-        "id": "58de4d4b9312a300179a2a5f",
-        "language": "FRENCH",
-        "room": "AMPHI2",
-        "slug": "javascript-soupirs-",
-        "speakerIds": [
-            "siegfried.ehret"
-        ],
-        "start": [
-            2017,
-            4,
-            20,
-            16,
-            10
-        ],
-        "summary": "Vous baignez dans le JavaScript depuis quelques ann\u00e9es ? Vous avez suivi ce qui se passe dans ce monde l\u00e0 ? Vous avez donc certainement crois\u00e9 le terme de \u00abfatigue\u00bb, et vous l'avez peut \u00eatre v\u00e9cue.\r\n\r\nJ'ai envie de d\u00e9cortiquer un peu avec vous ce qu'il y a derri\u00e8re ce terme d\u00e9pass\u00e9 (d\u00e9cembre 2015 !!), en prenant un peu de recul pour avoir une vision sur l'ensemble du paysage JavaScript, du langage aux d\u00e9veloppeurs.",
-        "title": "JavaScript... *soupirs*",
-        "topic": "tech",
-        "video": null
-    },
-    {
-        "addedAt": [
-            2017,
-            3,
-            28,
-            15,
-            51,
-            12,
             778000000
         ],
         "description": null,
@@ -1491,46 +1453,7 @@
         "summary": "C'est l'histoire d'une application web. De base monolithique, elle a \u00e9volu\u00e9 pour int\u00e9grer de mani\u00e8re massive des technologies de type \"serverless\" (pool de 2000 AWS Lambda en production) : am\u00e9lioration drastique des performances, meilleure exp\u00e9rience utilisateur. L'introduction de cette technologie a surtout transform\u00e9 au plus profond l'architecture de l'application en un syst\u00e8me distribu\u00e9\u2026 et avec ma vision de tous mes futurs d\u00e9veloppements.",
         "title": "Serverless : transition du monolithique au syst\u00e8me distribu\u00e9",
         "topic": "tech",
-        "video": null
-    },
-    {
-        "addedAt": [
-            2017,
-            3,
-            28,
-            15,
-            51,
-            12,
-            779000000
-        ],
-        "description": null,
-        "end": [
-            2017,
-            4,
-            20,
-            18,
-            0
-        ],
-        "event": "2017",
-        "format": "WORKSHOP",
-        "id": "58de4d4b9312a300179a2a75",
-        "language": "FRENCH",
-        "room": "ROOM5",
-        "slug": "deep-learning-pour-la-reconnaissance-de-chatons",
-        "speakerIds": [
-            "remiemonet"
-        ],
-        "start": [
-            2017,
-            4,
-            20,
-            16,
-            10
-        ],
-        "summary": "Envie de comprendre le **deep learning par la pratique** ?\r\nDe nombreux frameworks existent aujourd'hui pour faire du deep learning mais les tutoriaux s'adressent souvent aux initi\u00e9s.\r\n\r\nCet atelier sera l'occasion de **d\u00e9tailler les principes de base** n\u00e9cessaires \u00e0 la compr\u00e9hension de ces frameworks.\r\nNous explorerons des \u00e9l\u00e9ments aujourd'hui typiques dans les r\u00e9seaux profonds : perceptron, descente de gradient, graphe de calcul, r\u00e9seaux convolutionels, ReLU, pr\u00e9-entra\u00eenement, adaptation \u00e0 une nouvelle t\u00e2che, etc.\r\n\r\nCet atelier utilisera la biblioth\u00e8que **TensorFlow**.",
-        "title": "Deep Learning pour la Reconnaissance de Chatons",
-        "topic": "learn",
-        "video": null
+        "video": "https://vimeo.com/215619367"
     },
     {
         "addedAt": [
@@ -1570,47 +1493,85 @@
         "summary": "Current and past political events have initiated an extensive discussion on privacy and informational self-determination. The vast majority of consumers states their desire to keep personal data private while in everyday life, they use services and approve privacy agreements that undermine their informational self-determination on a large scale. This contradiction is referred to as the privacy paradox. While there are tools designed to keep personal data private, employing such tools is often associated with reduced functionality and/or usability and new privacy issues resulting from their use. Such deficiencies inhibit their widespread use.",
         "title": "Cloud Encryption with Cryptomator \u2013 Privacy Protection for Everyone",
         "topic": "hacktivism",
+        "video": "https://vimeo.com/215730748"
+    },
+    {
+        "addedAt": [
+            2017,
+            3,
+            28,
+            15,
+            51,
+            12,
+            779000000
+        ],
+        "description": null,
+        "end": [
+            2017,
+            4,
+            20,
+            18,
+            0
+        ],
+        "event": "2017",
+        "format": "WORKSHOP",
+        "id": "58de4d4b9312a300179a2a75",
+        "language": "FRENCH",
+        "room": "ROOM5",
+        "slug": "deep-learning-pour-la-reconnaissance-de-chatons",
+        "speakerIds": [
+            "remiemonet"
+        ],
+        "start": [
+            2017,
+            4,
+            20,
+            16,
+            10
+        ],
+        "summary": "Envie de comprendre le **deep learning par la pratique** ?\r\nDe nombreux frameworks existent aujourd'hui pour faire du deep learning mais les tutoriaux s'adressent souvent aux initi\u00e9s.\r\n\r\nCet atelier sera l'occasion de **d\u00e9tailler les principes de base** n\u00e9cessaires \u00e0 la compr\u00e9hension de ces frameworks.\r\nNous explorerons des \u00e9l\u00e9ments aujourd'hui typiques dans les r\u00e9seaux profonds : perceptron, descente de gradient, graphe de calcul, r\u00e9seaux convolutionels, ReLU, pr\u00e9-entra\u00eenement, adaptation \u00e0 une nouvelle t\u00e2che, etc.\r\n\r\nCet atelier utilisera la biblioth\u00e8que **TensorFlow**, Il est <a href=\"https://www.tensorflow.org/install/\" target=\"_blank\">fortement recommand\u00e9 de l'avoir install\u00e9</a> pour participer \u00e0 ce workshop.",
+        "title": "Deep Learning pour la Reconnaissance de Chatons",
+        "topic": "learn",
         "video": null
     },
     {
         "addedAt": [
             2017,
             3,
-            29,
-            20,
-            33,
-            36,
-            336000000
+            28,
+            15,
+            51,
+            12,
+            769000000
         ],
-        "description": "Nety & Mila are both members of JUG Indonesia, founders of Duchess Indonesia, and promotors of JENI (Java Education Network Indonesia). JENI is a curriculum created by JUG Indonesia on 2005 and officially adopted by the Ministry of National Education on 2006.\r\n\r\nApart from being a developer, they also have a big concern in IT education in Indonesia, especially in vocational high school students, because they\u2019re also one of the graduates. But in fact, there is a gap between the IT curriculum in vocational school and the industry needs. So to reduce the gap, they held a voluntary roadshow on October 2012 and March 2013 to educate the students with one day free Java training. They visited 32 vocational high schools in 4 cities in Indonesia, by motorcycle, with the aim to teach additional knowledge to IT students, as well as to check on the progress of JENI (Java Education Network Indonesia).",
+        "description": "Au programme:\r\n\r\n- JavaScript, frameworks et outils\r\n- Communaut\u00e9s et open source\r\n- Communication et \u00abadvocacy\u00bb\r\n- \u00abD\u00e9veloppeur JavaScript\u00bb: un m\u00e9tier d'avenir ?\r\n\r\nEssayons de r\u00e9fl\u00e9chir ensemble o\u00f9 l'on va !",
         "end": [
-            2017,
-            4,
-            20,
-            17,
-            25
-        ],
-        "event": "2017",
-        "format": "KEYNOTE",
-        "id": "58de4d4c9312a300179a2a92",
-        "language": "ENGLISH",
-        "room": "AMPHI1",
-        "slug": "take-java-on-the-road",
-        "speakerIds": [
-            "herawaty.nety",
-            "yuliani.mila"
-        ],
-        "start": [
             2017,
             4,
             20,
             17,
             0
         ],
-        "summary": "Nety & Mila are female developers from Indonesia.\r\nThey will share how they first get into programming, then why they decided to make coding as a career.\r\n",
-        "title": "Take Java on the Road",
-        "topic": "aliens",
-        "video": null
+        "event": "2017",
+        "format": "TALK",
+        "id": "58de4d4b9312a300179a2a5f",
+        "language": "FRENCH",
+        "room": "AMPHI2",
+        "slug": "javascript-soupirs-",
+        "speakerIds": [
+            "siegfried.ehret"
+        ],
+        "start": [
+            2017,
+            4,
+            20,
+            16,
+            10
+        ],
+        "summary": "Vous baignez dans le JavaScript depuis quelques ann\u00e9es ? Vous avez suivi ce qui se passe dans ce monde l\u00e0 ? Vous avez donc certainement crois\u00e9 le terme de \u00abfatigue\u00bb, et vous l'avez peut \u00eatre v\u00e9cue.\r\n\r\nJ'ai envie de d\u00e9cortiquer un peu avec vous ce qu'il y a derri\u00e8re ce terme d\u00e9pass\u00e9 (d\u00e9cembre 2015 !!), en prenant un peu de recul pour avoir une vision sur l'ensemble du paysage JavaScript, du langage aux d\u00e9veloppeurs.",
+        "title": "JavaScript... *soupirs*",
+        "topic": "tech",
+        "video": "https://vimeo.com/215622626"
     },
     {
         "addedAt": [
@@ -1649,7 +1610,7 @@
         "summary": "Myths and Patterns of Organizational Change\r\n\r\nYou have great ideas. You're smart. The people in your organization are smart. Post Hoc, Ergo Propter Hoc -- the rest is easy -- simply make a transition plan and transparently explain the benefits. These and other organizational change myths will be tackled by Linda's talk about patterns for introducing new ideas. She will provide some useful tips for helping you start on Monday morning to grow any innovation step by step.",
         "title": "Myths and patterns of organizational change",
         "topic": "learn",
-        "video": null
+        "video": "https://vimeo.com/215560289"
     },
     {
         "addedAt": [
@@ -1688,7 +1649,7 @@
         "summary": "Suivez le p\u00e9riple d'une log depuis son \u00e9mission, jusqu'\u00e0 sa destination finale. Un parcourt sem\u00e9 d\u2019emb\u00fbches pour sauver la belle application du m\u00e9chant NullPointor. Des courses poursuites \u00e0 plus 10000 messages/s dans le d\u00e9dale des syst\u00e8mes distribu\u00e9s.\r\nActeurs: Logback le faillot, Filebeat l'espion, Kafka le transporteur, Elasticsearch.... Costumes et Maquillage: Logstash",
         "title": "L'odyss\u00e9e de la Log",
         "topic": "tech",
-        "video": null
+        "video": "https://vimeo.com/215569844"
     },
     {
         "addedAt": [
@@ -1728,7 +1689,7 @@
         "summary": "Le concept de Progressive Web App a pour ambition de permettre aux applications web de rivaliser, dans une certaine mesure, avec les applications natives. En s\u2019appuyant sur quelques bonnes pratiques et certaines technologies, l'exp\u00e9rience utilisateur est consid\u00e9rablement am\u00e9lior\u00e9e en corrigeant par exemple les soucis de connectivit\u00e9 sur mobile ou en permettant l'utilisation de notifications.",
         "title": "Progressive Web Apps, au-del\u00e0 du buzzword",
         "topic": "tech",
-        "video": null
+        "video": "https://vimeo.com/215625792"
     },
     {
         "addedAt": [
@@ -1768,7 +1729,46 @@
         "summary": "Code non maintenable, bugs \u00e0 r\u00e9p\u00e9tition, corrections chronophages, moral dans les chaussettes... Pas \u00e9tonnant que la plupart d\u2019entre nous pr\u00e9f\u00e8rent travailler sur des projets o\u00f9 tout est \u00e0 (re)construire (Greenfield) plut\u00f4t que sur du code Legacy (Brownfield). Il faut dire que le Legacy sur lequel on a perdu le contr\u00f4le est plus que p\u00e9nible. C\u2019est \u00e9puisant, voire d\u00e9courageant. Et si nous nous trompions ? __Et si \u2013 munis de quelques techniques de refactoring et de communication- nous pouvions inverser les choses et reprendre le contr\u00f4le\u2026__ \r\n",
         "title": "Legacy Club",
         "topic": "makers",
-        "video": null
+        "video": "https://vimeo.com/215728093"
+    },
+    {
+        "addedAt": [
+            2017,
+            3,
+            28,
+            15,
+            51,
+            12,
+            768000000
+        ],
+        "description": "References:\r\nBalinski, M., and R. Laraki. 2011. Majority Judgment: Measuring, Ranking, and Electing. MIT Press, Cambridge, MA.",
+        "end": [
+            2017,
+            4,
+            20,
+            18,
+            35
+        ],
+        "event": "2017",
+        "format": "KEYNOTE",
+        "id": "58de4d4b9312a300179a2a5b",
+        "language": "FRENCH",
+        "room": "AMPHI1",
+        "slug": "majority-judgment",
+        "speakerIds": [
+            "rida.laraki"
+        ],
+        "start": [
+            2017,
+            4,
+            20,
+            18,
+            10
+        ],
+        "summary": "Majority Judgment is a new voting method where voters are explicitly charged with a solemn task of expressing their opinions precisely by evaluating the merit of every candidate in an ordinal scale of measurement such as:  \u00ab Having taken into account all relevant considerations, I judge, in conscience, that as President of the United States of America each of the following candidates would be: a Great , a Good , an Average , a Poor , a Terrible  President.\u00bb Majorities determine the electorate's evaluation of each candidate and the ranking between every pair of candidates \u2014necessarily transitive\u2014 with the first-placed among them the winner. Majority judgment\u2019s principal properties are presented. It best resists manipulation or \u201cgaming the vote\u201d. It is not subject to Arrow\u2019s impossibility, nor to Condorcet\u2019s paradox. The mechanism and its properties are presented via real data (French and US presidential elections, committee decisions, skating and wine competitions).",
+        "title": "Majority Judgment",
+        "topic": "aliens",
+        "video": "https://vimeo.com/215530686"
     },
     {
         "addedAt": [
@@ -1780,7 +1780,7 @@
             15,
             841000000
         ],
-        "description": "A venir ...",
+        "description": "ReGen Villages is the \"Tesla of eco-villages\" because the neighborhoods will allow eco-conscious people to elegantly go off the grid on their own terms. The villages will also use sensors and technology to monitor energy use, farming efficiency, and living patterns, and send that data to the cloud so villages in similar geographic regions can learn from each other. The strategy is similar to the way Tesla uses machine learning to analyze data gathered from the autopilot systems in its cars.",
         "end": [
             2017,
             4,
@@ -1791,7 +1791,7 @@
         "event": "2017",
         "format": "KEYNOTE",
         "id": "58de4d4c9312a300179a2a91",
-        "language": "FRENCH",
+        "language": "ENGLISH",
         "room": "AMPHI1",
         "slug": "regen-villages",
         "speakerIds": [
@@ -1804,10 +1804,10 @@
             9,
             15
         ],
-        "summary": "A venir ...",
+        "summary": "ReGen Villages is a startup real estate development company aiming to build small, self-sustaining residential communities around the world. The first one is expected to be completed in Almere, Netherlands in 2018. Unlike traditional subdivisions, ReGen villages would be \u201cregenerative\u201d (hence the name), since they\u2019d use resources in a closed loop.\r\n\r\n",
         "title": "ReGen Villages",
-        "topic": "design",
-        "video": null
+        "topic": "hacktivism",
+        "video": "https://vimeo.com/217027864"
     },
     {
         "addedAt": [
@@ -1885,7 +1885,7 @@
         "summary": "Nous savons que l\u2019animation est essentielle pour l'interaction avec nos utilisateurs. Mais aujourd'hui l'interactivit\u00e9 ne peut plus se r\u00e9sumer \u00e0 l\u2019UX. Twitter, Waze, Slack \u2026 toutes les applications \u00e0 succ\u00e8s utilisent le temps r\u00e9el pour rendre leurs utilisateurs addicts.\r\n\r\nMais comment faire pour transformer votre API statique en un flux de donn\u00e9es temps-r\u00e9el ? Du pull ? Du push ? Des Webhooks ? Vous connaissez s\u00fbrement les Web-Sockets, mais avez vous d\u00e9j\u00e0 entendu parler de Server-Sent Events ?\r\n\r\nDans ce talk nous comparerons ces technologies pour comprendre dans quel cas elles s'appliquent le mieux avant de voir comment on peut aller encore plus loin en r\u00e9duisant la quantit\u00e9 de donn\u00e9es \u00e9chang\u00e9es. Et parce qu'il n'y a pas que le web qui a besoin de temps r\u00e9el (et parce que c'est bien plus fun), je vous montrerai comment faire danser des drones sur des APIs stream\u00e9es.",
         "title": "Le Streaming d'API : pourquoi et comment transformer vos APIs statiques en donn\u00e9es temps r\u00e9el ?",
         "topic": "tech",
-        "video": null
+        "video": "https://vimeo.com/217005631"
     },
     {
         "addedAt": [
@@ -1963,7 +1963,7 @@
         "summary": "Avoir des donn\u00e9es de qualit\u00e9, mise \u00e0 jour \u00e0 la bonne fr\u00e9quence et correctement pr\u00e9sent\u00e9es permet de prendre les bonnes d\u00e9cisions. Mais de nos jours, il y a de plus en plus de cloisons entre les diff\u00e9rentes donn\u00e9es au sein d\u2019une entreprise pour diff\u00e9rentes raisons. De ce fait, la donn\u00e9e est en constant mouvement au sein du syst\u00e8me d\u2019information d\u2019une entreprise. Un des r\u00f4les du data engineer est de s\u2019assurer que les utilisateurs ne sentent pas ou tr\u00e8s peu ce cloisonnement. Quand on est en charge de construire ces voies d\u2019\u00e9change de donn\u00e9es, on doit faire un choix entre les diff\u00e9rentes options suivantes :\r\n\r\n* Coder les flux d\u2019int\u00e9gration \u00e0 la main ou avec un framework\r\n* Utiliser un ETL\r\n* Mettre en place une architecture orient\u00e9e bus avec un ESB\r\n* Utiliser les frameworks de data processing orient\u00e9s Big Data (Spark, Kafka streams, etc).\r\nCette pr\u00e9sentation se focalisera sur les diff\u00e9rents outils et approches d\u2019\u00e9change de donn\u00e9es. Il pr\u00e9sentera chaque outil dans son contexte historique et ces diff\u00e9rents cas d\u2019utilisation. Cette pr\u00e9sentation posera les bases des questions qu'on se doit de se poser pour un choix ad\u00e9quat.",
         "title": "Data Engineer's Toolkit",
         "topic": "tech",
-        "video": null
+        "video": "https://vimeo.com/216806303"
     },
     {
         "addedAt": [
@@ -1975,7 +1975,7 @@
             12,
             774000000
         ],
-        "description": null,
+        "description": "A partir de cet angle d\u2019approche, je pr\u00e9senterai le travail de recherche que j\u2019effectue sur la visualisation de donn\u00e9es \u00e9conomiques et en particulier sur la visualisation des r\u00e9seaux de lobbying dans les institutions europ\u00e9ennes. Ces exemples, auxquels s\u2019ajouteront quelques visualisations historiques, permettront de d\u00e9gager trois axes m\u00e9thodologiques permettant de d\u00e9crire la sp\u00e9cificit\u00e9 du design dans le champ de la visualisation de donn\u00e9es. Le premier concerne le rapport \u00e0 la complexit\u00e9 : \u00e0 travers des interfaces sur mesure, des modes de sc\u00e9narisation, nous verrons comment il est possible de guider dans la complexit\u00e9 plut\u00f4t que de la simplifier. Le deuxi\u00e8me axe abordera la pr\u00e9tendue objectivit\u00e9 ou l\u2019impression de rationalit\u00e9 qui \u00e9mane des visualisations de donn\u00e9es et l\u2019int\u00e9r\u00eat du designer \u00e0 privil\u00e9gier la transparence des m\u00e9thodes \u00e0 une neutralit\u00e9 veine. Enfin, nous verrons ce qu\u2019implique le fait de consid\u00e9rer et de traiter les visualisations de donn\u00e9es comme des images \u00e0 travers la rh\u00e9torique et la puissance symbolique.",
         "end": [
             2017,
             4,
@@ -1999,10 +1999,10 @@
             10,
             0
         ],
-        "summary": "A la fronti\u00e8re entre art, design, technologies et activisme se trouve ce que Carl DiSalvo appelle l\u2019adversarial design : une production d\u2019objets ou d\u2019interfaces qui ouvrent des espaces de confrontation politique, offrent des ressources et des opportunit\u00e9s de participer au d\u00e9bat public ou \u00e0 la contestation. La visualisation de donn\u00e9es et d\u2019informations s\u2019inscrit dans cette famille d\u2019artefacts quand elle permet aux citoyens de voir et percevoir des rapports, des tendances, des forces dans les enjeux publics, quand elle soul\u00e8ve de nouvelles questions et cr\u00e9e des zones de tensions id\u00e9ologiques.\r\nA partir de cet angle d\u2019approche, je pr\u00e9senterai le travail de recherche que j\u2019effectue sur la visualisation de donn\u00e9es \u00e9conomiques et en particulier sur la visualisation des r\u00e9seaux de lobbying dans les institutions europ\u00e9ennes. Ces exemples, auxquels s\u2019ajouteront quelques visualisations historiques, permettront de d\u00e9gager trois axes m\u00e9thodologiques permettant de d\u00e9crire la sp\u00e9cificit\u00e9 du design dans le champ de la visualisation de donn\u00e9es. Le premier concerne le rapport \u00e0 la complexit\u00e9 : \u00e0 travers des interfaces sur mesure, des modes de sc\u00e9narisation, nous verrons comment il est possible de guider dans la complexit\u00e9 plut\u00f4t que de la simplifier. Le deuxi\u00e8me axe abordera la pr\u00e9tendue objectivit\u00e9 ou l\u2019impression de rationalit\u00e9 qui \u00e9mane des visualisations de donn\u00e9es et l\u2019int\u00e9r\u00eat du designer \u00e0 privil\u00e9gier la transparence des m\u00e9thodes \u00e0 une neutralit\u00e9 veine. Enfin, nous verrons ce qu\u2019implique le fait de consid\u00e9rer et de traiter les visualisations de donn\u00e9es comme des images \u00e0 travers la rh\u00e9torique et la puissance symbolique.",
+        "summary": "A la fronti\u00e8re entre art, design, technologies et activisme se trouve ce que Carl DiSalvo appelle l\u2019adversarial design : une production d\u2019objets ou d\u2019interfaces qui ouvrent des espaces de confrontation politique, offrent des ressources et des opportunit\u00e9s de participer au d\u00e9bat public ou \u00e0 la contestation. La visualisation de donn\u00e9es et d\u2019informations s\u2019inscrit dans cette famille d\u2019artefacts quand elle permet aux citoyens de voir et percevoir des rapports, des tendances, des forces dans les enjeux publics, quand elle soul\u00e8ve de nouvelles questions et cr\u00e9e des zones de tensions id\u00e9ologiques.\r\n",
         "title": "Repr\u00e9senter l\u2019\u00e9conomie, le pouvoir, les lobbies gr\u00e2ce aux visualisations de donn\u00e9es : quand le designer fait l\u2019\u00e9quilibriste",
         "topic": "design",
-        "video": null
+        "video": "https://vimeo.com/221258686"
     },
     {
         "addedAt": [
@@ -2080,7 +2080,7 @@
         "summary": "Passer de z\u00e9ro interactions avec vos utilisateurs \u00e0 une m\u00e9thode compl\u00e8tement centr\u00e9e sur l'humain vous fait flipper ? \r\nJe vois bien ce que vous voulez dire.",
         "title": "Si l'ergonomie des IHM m'\u00e9tait cont\u00e9e comme un syst\u00e8me Bool\u00e9en, simple et non-n\u00e9gociable",
         "topic": "design",
-        "video": null
+        "video": "https://vimeo.com/221245202"
     },
     {
         "addedAt": [
@@ -2119,7 +2119,7 @@
         "summary": "Docker est un outil tr\u00e8s puissant qui connait une adoption tr\u00e8s rapide grace aux nombreuses possibilit\u00e9es qu'il offre aux \u00e9quipes.\r\n\r\nApr\u00e8s l'avoir essay\u00e9 en dev puis avoir convaincu votre management et vos obs de le tester sur des environnements interm\u00e9diaires, il est temps de partir en prod, et l\u00e0, c'est le drame ...\r\nLe passage d'une production sous Docker engendre des probl\u00e9matiques comme le monitoring, la gestion des logs, le scheduling ou la gestion des datas que l'on d\u00e9couvre.\r\n\r\nDans cette pr\u00e9sentation, je ferai un retour d'exp\u00e9rience sur ces probl\u00e9matiques et pr\u00e9senterai des solutions adapt\u00e9es.",
         "title": "Au secours, ma prod est sous Docker !",
         "topic": "tech",
-        "video": null
+        "video": "https://vimeo.com/221249374"
     },
     {
         "addedAt": [
@@ -2158,7 +2158,7 @@
         "summary": "CSS Flags est un projet un peu fou dans lequel je recr\u00e9e l'ensemble des drapeaux des pays du monde en pure CSS, en n'utilisant qu'un seul `div` par drapeau. Dans ce talk j'explique les diff\u00e9rentes techniques secr\u00e8tes qui vous permette d'utiliser un seul \u00e9l\u00e9ment au maximum de ses capacit\u00e9s. On y voit aussi pourquoi des projets fous et stupides comme celui-ci sont en fait tr\u00e8s importants.",
         "title": "Compagnonnage, CSS et Vexillologie",
         "topic": "aliens",
-        "video": null
+        "video": "https://vimeo.com/216848472"
     },
     {
         "addedAt": [
@@ -2197,7 +2197,7 @@
         "summary": "Il est possible que vous ayiez la sensation de manquer de temps. Peut-\u00eatre m\u00eame que vous manquez de temps tout le temps. Et quand vous prenez enfin de le temps, vous \u00eates interrompus par un coll\u00e8ge, un mail, une demande client. S'ajoute \u00e0 cela des urgences \u00e0 traiter tout de suite car sinon ... ",
         "title": "Comment g\u00e9rer son temps efficacement individuellement et en \u00e9quipe ?",
         "topic": "learn",
-        "video": null
+        "video": "https://vimeo.com/217011902"
     },
     {
         "addedAt": [
@@ -2236,7 +2236,7 @@
         "summary": "The emerging field of soft robotics represents an opportunity for novel solutions in the demanding environment of space. This talk will feature a brief overview of the domain of soft robotics, its suitability to space exploration applications, and a survey of NASA funded projects involving soft and/or hybrid robotics. There will also be  discussion of the interpretation of next-generation space suits as wearable soft robots, and the exciting potential mechanical counter-pressure presents.",
         "title": "Soft Robotics for Space Applications",
         "topic": "makers",
-        "video": null
+        "video": "https://vimeo.com/221257250"
     },
     {
         "addedAt": [
@@ -2275,7 +2275,7 @@
         "summary": "Et si l'on donnait une somme d'argent mensuellement \u00e0 tout le monde sans conditions ? C'est le concept simple et clair du revenu universel. Il existe cependant de nombreuses concr\u00e9tisations possibles que nous \u00e9voquerons en r\u00e9pondant aux questions suivantes : Pourquoi le mettre en place ? A quel niveau ? Comment le financer ? Puis nous parlerons des diff\u00e9rentes exp\u00e9rimentations faites \u00e0 travers le monde. Nous finirons par le REVE (Revenu Emancipateur pour Vivre Epanoui), notre revenu universel id\u00e9al.",
         "title": "Revenu universel, 25 minutes pour tout comprendre",
         "topic": "aliens",
-        "video": null
+        "video": "https://vimeo.com/217015501"
     },
     {
         "addedAt": [
@@ -2326,7 +2326,7 @@
             12,
             775000000
         ],
-        "description": null,
+        "description": "\u00c0 vrai dire, j'ai surtout pu augmenter ma qualit\u00e9 de vie malgr\u00e9 ma\r\nbaisse de salaire, ainsi que d\u00e9dier ce temps \u00e0 du b\u00e9n\u00e9volat, m'a\u00e9rer\r\nl'esprit et voir du pays en me fatigant un peu moins.",
         "end": [
             2017,
             4,
@@ -2350,10 +2350,10 @@
             13,
             30
         ],
-        "summary": "Il y a un an j'ai d\u00e9cid\u00e9 de passer \u00e0 temps partiel, ou plut\u00f4t aux\nweek-end de trois jours. Est-ce que \u00e7a m'aide \u00e0 rattraper mon retard\ndans Game of Throne, augmenter le nombre d'heures que j'alloue \u00e0 ma\nveille technique ou bien \u00e0 passer pour quelqu'un qui n'aime pas\ntravailler ?\n\n\u00c0 vrai dire, j'ai surtout pu augmenter ma qualit\u00e9 de vie malgr\u00e9 ma\nbaisse de salaire, ainsi que d\u00e9dier ce temps \u00e0 du b\u00e9n\u00e9volat, m'a\u00e9rer\nl'esprit et voir du pays en me fatigant un peu moins.",
+        "summary": "Il y a un an j'ai d\u00e9cid\u00e9 de passer \u00e0 temps partiel, ou plut\u00f4t aux\r\nweek-end de trois jours. Est-ce que \u00e7a m'aide \u00e0 rattraper mon retard\r\ndans Game of Throne, augmenter le nombre d'heures que j'alloue \u00e0 ma\r\nveille technique ou bien \u00e0 passer pour quelqu'un qui n'aime pas\r\ntravailler ?",
         "title": "Travailler moins pour gagner moins",
         "topic": "aliens",
-        "video": null
+        "video": "https://vimeo.com/217023172"
     },
     {
         "addedAt": [
@@ -2392,7 +2392,7 @@
         "summary": "There are more male coders than female ones in the world. I don't know why. There just are. Little over a year ago I joined a French team of 30 or so developers - only two of whom were women. These numbers were surprising to me, coming from a team where there were as many women as there were men, and can be discouraging to girls considering a career in the industry. But they shouldn't be. I'm here to speak about the life of a coder in Romania from _a woman's perspective_ - not that it really changes anything. Coding knows no bounds - nor gender.",
         "title": "Being a girl who codes in Romania",
         "topic": "aliens",
-        "video": null
+        "video": "https://vimeo.com/221260276"
     },
     {
         "addedAt": [
@@ -2482,7 +2482,7 @@
             12,
             783000000
         ],
-        "description": "Aid\u00e9 par l'Histoire de l'informatique, la psychologie et la sociologie, je vous donnerai des outils anti-mythes pour voir les probl\u00e8mes actuels et commencer \u00e0 les r\u00e9soudre. Et vous verrez pourquoi la soci\u00e9t\u00e9 toute enti\u00e8re en a bien besoin !",
+        "description": "Aid\u00e9 par l'Histoire de l'informatique, la psychologie et la sociologie, je vous donnerai des outils anti-mythes pour voir les probl\u00e8mes actuels et commencer \u00e0 les r\u00e9soudre. Et vous verrez pourquoi la soci\u00e9t\u00e9 toute enti\u00e8re en a bien besoin !\r\n\r\nSupport/diaporama :\r\n\r\n- [sur SpeakerDeck](https://speakerdeck.com/goulvench/pourquoi-tous-les-developpeurs-sont-ils-barbus)\r\n- [sur SlideShare](https://fr.slideshare.net/Goulvench/pourquoi-tous-les-developpeurs-sont-ils-barbus)",
         "end": [
             2017,
             4,
@@ -2509,7 +2509,7 @@
         "summary": "Contrairement \u00e0 beaucoup d\u2019id\u00e9es re\u00e7ues, l\u2019informatique n\u2019a pas \u00e9t\u00e9 cr\u00e9\u00e9 par et pour les hommes blancs am\u00e9ricains et europ\u00e9ens, et seulement eux. Loin de l\u00e0 !\r\n\r\nComment se fait-il alors que les femmes et les \u00ab minorit\u00e9s \u00bb soient si peu nombreuses dans les \u00e9coles d'informatique, dans les r\u00e9ponses aux offres d'emploi, et qu'il soit si difficile de citer les contributeur\u2022ice\u2022s qui ne correspondent pas au clich\u00e9 du d\u00e9veloppeur barbu amateur de pizza ?",
         "title": "Pourquoi tous les d\u00e9veloppeurs sont-ils barbus ?",
         "topic": "hacktivism",
-        "video": null
+        "video": "https://vimeo.com/222190532"
     },
     {
         "addedAt": [
@@ -2549,7 +2549,7 @@
         "summary": "On n'y pense pas forc\u00e9ment, les choix de Design et de D\u00e9veloppement des services Web ont aussi un co\u00fbt environnemental : performances, stockage, multiplication des services, design, etc. Tour d'horizon en chiffres, exemples, et ligne de conduite sur des bonnes pratiques pour un d\u00e9veloppement web plus durable.",
         "title": "Eco-conception web",
         "topic": "learn",
-        "video": null
+        "video": "https://vimeo.com/222191095"
     },
     {
         "addedAt": [
@@ -2586,7 +2586,7 @@
             13,
             50
         ],
-        "summary": "*Premi\u00e8re partie* ayant pour objectif d\u2019expliquer simplement \u00ab?comment fonctionne le dos?\u00bb afin de comprendre \u00ab?ce qu\u2019on peut faire avec?\u00bb au quotidien \u00e0 l\u2019aide de propositions posturales du quotidien qui seront pr\u00e9sent\u00e9es ;\r\n*Seconde partie* autour du b\u00e9po, des claviers, des p\u00e9riph\u00e9riques de saisie ayant pour but :\r\n* de r\u00e9pondre \u00e0 des questions (y compris li\u00e9es \u00e0 la conf\u00e9rence sur le b\u00e9po) ;\r\n* de tester du mat\u00e9riel (apportez le votre ! L\u2019id\u00e9e est aussi de pouvoir \u00e9changer).",
+        "summary": "*Premi\u00e8re partie* ayant pour objectif d\u2019expliquer simplement \u00ab\u00a0comment fonctionne le dos\u00a0\u00bb afin de comprendre \u00ab\u00a0ce qu\u2019on peut faire avec\u00a0\u00bb au quotidien \u00e0 l\u2019aide de propositions posturales du quotidien qui seront pr\u00e9sent\u00e9es\u00a0;\r\n\r\n*Seconde partie* autour du b\u00e9po, des claviers, des p\u00e9riph\u00e9riques de saisie ayant pour but\u00a0:\r\n\r\n* de r\u00e9pondre \u00e0 des questions\u00a0;\r\n* de tester du mat\u00e9riel (apportez le votre ! L\u2019id\u00e9e est aussi de pouvoir \u00e9changer).",
         "title": "Ergonomie du poste de travail, et si l\u2019erreur \u00e9tait {encore, aussi} entre la chaise ergonomique et le clavier orthogonal ?",
         "topic": "learn",
         "video": null
@@ -2628,7 +2628,7 @@
         "summary": "React Native, \u00e7a fait buzzword. Oh wait, c'est carr\u00e9ment trop buzzword.\r\nReact Native, c'est pas histoire de laisser les Web Developer faire des Apps de mani\u00e8re pas trop sale.\r\nReact Native, c'est pas juste pour faire du Cross Platform.\r\nEn fait, c'est plus une techno assez fine qui va changer le d\u00e9veloppement mobile m\u00eame pour les Devs Natifs !\r\nJe vous propose de d\u00e9couvrir le point de vue d'un dev Natif en voyage dans React native =D",
         "title": "React Native dans vos apps. Vos apps dans React Native",
         "topic": "tech",
-        "video": null
+        "video": "https://vimeo.com/217033855"
     },
     {
         "addedAt": [
@@ -2668,7 +2668,7 @@
         "summary": "Le __Design Sprint__ est une m\u00e9thode de conception ultra-rapide peaufin\u00e9e par l\u2019\u00e9quipe Google Ventures (Jake Knapp) qui a largement puis\u00e9 dans le __Design Thinking__. Elle m\u00e9lange habilement diverses techniques d\u2019id\u00e9ation et conception, soutenue par __l\u2019intelligence collective__, et produit un r\u00e9sultat \u00e9tonnamment riche de sens.",
         "title": "Comment sauver la princesse... et si le Design Sprint m\u2019\u00e9tait cont\u00e9 ?",
         "topic": "design",
-        "video": null
+        "video": "https://vimeo.com/216859612"
     },
     {
         "addedAt": [
@@ -2746,7 +2746,7 @@
         "summary": "Les sp\u00e9cifications ont parfois mauvaise presse : trop rigides, peu adapt\u00e9es, elles sont v\u00e9cues comme un fardeau par les d\u00e9veloppeurs. \r\n\r\nEn face, les m\u00e9thodologies agiles sont parfois accus\u00e9es d'\u00eatre trop dans le d\u00e9tail et d'emp\u00eacher la vision \u00e0 long terme du projet. \r\n\r\nEt s\u2019il \u00e9tait possible d'associer sp\u00e9cifications fonctionnelles et techniques avec les m\u00e9thodologies agiles pour associer vision \u00e0 long terme et flexibilit\u00e9 ? En associant les pratiques du user story mapping, de l'impact mapping et de l'event storming, nous verrons comment concilier agilit\u00e9 et vision produit !",
         "title": "Sp\u00e9cifications en milieu agile",
         "topic": "makers",
-        "video": null
+        "video": "https://vimeo.com/222168353"
     },
     {
         "addedAt": [
@@ -2811,7 +2811,7 @@
         "id": "58de4d4c9312a300179a2a8f",
         "language": "FRENCH",
         "room": "ROOM1",
-        "slug": "la-theorie-des-graphes-appliquee-a-git-",
+        "slug": "la-theorie-des-graphes-appliquee-a-git",
         "speakerIds": [
             "ubermuda"
         ],
@@ -2823,9 +2823,9 @@
             50
         ],
         "summary": "Comprendre Git n\u2019est pas forc\u00e9ment chose ais\u00e9e, pourtant ce n\u2019est pas si compliqu\u00e9 qu\u2019on ne le pense gr\u00e2ce \u00e0 la th\u00e9orie des graphes. Apr\u00e8s une rapide introduction \u00e0 cette fameuse th\u00e9orie, nous verrons comment elle s'applique \u00e0 Git. Ce talk ne vous apprendra pas de commande Git incroyable, ne parlera pas impl\u00e9mentation, code, ou \u201cplomberie\u201d, vous ne connaitrez probablement pas de nouveau tour de magie en sortant (ou peut-\u00eatre bien que si), mais vous aurez une nouvelle compr\u00e9hension du fonctionnement de git, et vous comprendrez enfin ce que vous faites avec `git rebase` et `cherry-pick`, ainsi que ce que fait `git gc`, et c\u2019est d\u00e9j\u00e0 pas mal.",
-        "title": "La th\u00e9orie des graphes, appliqu\u00e9e \u00e0 git.",
+        "title": "La th\u00e9orie des graphes, appliqu\u00e9e \u00e0 git",
         "topic": "tech",
-        "video": null
+        "video": "https://vimeo.com/221265426"
     },
     {
         "addedAt": [
@@ -2889,7 +2889,7 @@
         "id": "58de4d4b9312a300179a2a49",
         "language": "FRENCH",
         "room": "ROOM2",
-        "slug": "etre-un-developpeur-apres-40",
+        "slug": "etre-developpeur-apres-40-ans",
         "speakerIds": [
             "adrian.kosmaczewski"
         ],
@@ -2901,9 +2901,9 @@
             50
         ],
         "summary": "Mon histoire personnelle de d\u00e9veloppeur, saupoudr\u00e9e d'anecdotes, avec un message de paix et sant\u00e9 mentale, pour r\u00e9ussir une carri\u00e8re longue dans le milieu de la cr\u00e9ation de logiciels, sans perdre la t\u00eate ni l'envie de continuer.",
-        "title": "\u00catre Un D\u00e9veloppeur Apr\u00e8s 40",
+        "title": "\u00catre D\u00e9veloppeur Apr\u00e8s 40 ans",
         "topic": "makers",
-        "video": null
+        "video": "https://vimeo.com/221255997"
     },
     {
         "addedAt": [
@@ -2943,7 +2943,7 @@
         "summary": "Le management responsable (inspir\u00e9 des principes du d\u00e9veloppement durable) est-il un levier de comp\u00e9titivit\u00e9 pour les entreprises ? Les transitions num\u00e9rique, \u00e9cologique et \u00e9nerg\u00e9tique invitent \u00e0 r\u00e9inventer la cr\u00e9ation de valeur dans les organisations. Le concept de \"cr\u00e9ation de valeur partag\u00e9e\" popularis\u00e9 par Porter et Kramer en 2011 est-il une r\u00e9ponse aux enjeux soci\u00e9taux du 21\u00e8me si\u00e8cle ? Autant de sujets au c\u0153ur de nombreux d\u00e9bats actuels dans les entreprises, notamment les PME-PMI...",
         "title": "Management responsable et cr\u00e9ation de valeur partag\u00e9e",
         "topic": "learn",
-        "video": null
+        "video": "https://vimeo.com/221288285"
     },
     {
         "addedAt": [
@@ -2982,7 +2982,7 @@
         "summary": "Ca y est ! Java 9 est releas\u00e9e ou presque. Bon alors y'a quoi dans Java 10 ?\r\nCe talk parle des nouvelles features qui vont \u00eatre (ou pas) introduites dans Java 10, \u00e0 savoir, les trucs laiss\u00e9s en plan de Java 8, l'inf\u00e9rence de type pour les variables locales, la covariance des types param\u00e9tr\u00e9s \u00e0 la d\u00e9claration et la grosse feature de Java 10 : le pattern matching et les types structur\u00e9s.\r\n\r\nDans le cas du pattern matching, je ferai un petit tour des diff\u00e9rents langages qui impl\u00e9mentent le pattern matching, leurs diff\u00e9rentes s\u00e9mantiques. Dans un second temps, je pr\u00e9ciserai la s\u00e9mantique qui est pr\u00e9vue pour Java et montrerai comment il est pr\u00e9vu d'impl\u00e9menter le pattern matching en Java.",
         "title": "Project Amber - What's new in Java 10",
         "topic": "tech",
-        "video": null
+        "video": "https://vimeo.com/217082535"
     },
     {
         "addedAt": [
@@ -3007,7 +3007,7 @@
         "id": "58de4d4c9312a300179a2a88",
         "language": "ENGLISH",
         "room": "AMPHI2",
-        "slug": "email-how-hard-could-it-be-",
+        "slug": "encrypted-email-how-hard-could-it-be-",
         "speakerIds": [
             "bart.butler"
         ],
@@ -3019,9 +3019,9 @@
             50
         ],
         "summary": "Over the past 3 years, **ProtonMail** has grown into the world\u2019s largest encrypted email service, with over 2 million users. I will discuss the benefits and challenges of working in the open and federated email space, the technical and usability hurdles surrounding encrypted email, and the importance of security-first development in the age of data breaches.",
-        "title": "Email: How Hard Could It Be?",
+        "title": "Encrypted Email: How Hard Could It Be?",
         "topic": "hacktivism",
-        "video": null
+        "video": "https://vimeo.com/216747532"
     },
     {
         "addedAt": [
@@ -3060,7 +3060,7 @@
         "summary": "L'Univers, avec un grand \"U\" tel que le d\u00e9fini le concept d'Absolu cher \u00e0 Hegel, est un lieu fascinant. Alors qu'\u00e0 la nuit tomb\u00e9 nous n'y voyons qu'une lune, quelques plan\u00e8tes et de nombreuses \u00e9toiles, l'Univers est en r\u00e9alit\u00e9 peupl\u00e9 de nombreux objets cosmiques dont la compr\u00e9hension nous d\u00e9passe encore aujourd'hui.",
         "title": "Balade cosmique autour des trous noirs",
         "topic": "aliens",
-        "video": null
+        "video": "https://vimeo.com/221270941"
     },
     {
         "addedAt": [
@@ -3099,7 +3099,7 @@
         "summary": "WebAssembly est une proposition pour un nouveau standard W3C : un format d'ex\u00e9cution binaire pour le Web. Il se veut simple, compact et aussi rapide que le code natif \u00e0 l'ex\u00e9cution. Se basant sur des id\u00e9es d\u00e9riv\u00e9es d'asm.js, ce nouveau format permet de lancer des applications impressionantes et tr\u00e8s avides de performances dans des navigateurs Web. Support\u00e9 par Mozilla, Google, Webkit et Microsoft, sa conception est ouverte et collaborative depuis le d\u00e9but. Et donc concr\u00e8tement, qu'est-ce que tout cela signifie ? Qu'est-ce que cela va changer pour les d\u00e9veloppeurs, au quotidien ? Comment utiliser WebAssembly d\u00e8s aujourd'hui et pour quels usages ? Et JavaScript dans tout \u00e7a ? Autant de questions que l'on va explorer ensemble.",
         "title": "WebAssembly pour les d\u00e9veloppeurs Web",
         "topic": "tech",
-        "video": null
+        "video": "https://vimeo.com/222170685"
     },
     {
         "addedAt": [
@@ -3139,7 +3139,7 @@
         "summary": "Infrastructure AWS hautement r\u00e9siliante, architecture blue-green, d\u00e9ploiements enti\u00e8rement automatis\u00e9s, application Symfony d\u00e9coupl\u00e9e en microservices g\u00e9r\u00e9s par un API Manager... Nous avions tous les outils pour former une \u00e9quipe Devops performante. Pourtant il nous manquait un ingr\u00e9dient essentiel: la pratique, qui nous a permis d'am\u00e9liorer significativement la mani\u00e8re dont nous collaborons !",
         "title": "Dev rencontre Ops, 1 an apr\u00e8s",
         "topic": "tech",
-        "video": null
+        "video": "https://vimeo.com/216993406"
     },
     {
         "addedAt": [
@@ -3163,7 +3163,7 @@
         "format": "TALK",
         "id": "58de4d4b9312a300179a2a76",
         "language": "FRENCH",
-        "room": "AMPHI2",
+        "room": "AMPHI1",
         "slug": "entrepreneur-dans-l-ame-comment-passer-de-l-idee-au-concret-",
         "speakerIds": [
             "vanrenterghem.caroline"
@@ -3178,44 +3178,45 @@
         "summary": "Voici les th\u00e8mes qui seront abord\u00e9s lors de cette conf\u00e9rence qui sera interactive et se terminera par un partage a propos des projets et difficult\u00e9s de chacun.\r\n\r\nComment savoir si j'ai une bonne id\u00e9e ? Comment d\u00e9marrer ? Seul ou en \u00e9quipe, ai-je les m\u00eames chances ? Quelles aides publiques/priv\u00e9es ? \u00c0 quel stade ? Quels planning, quelles deadline dois-je m'appliquer ? Test & simplicit\u00e9 comme trames pour avancer. La m\u00e9thode agile. Quand mieux vaut-il abandonner ? Incubateurs, acc\u00e9l\u00e9rateurs, dois-je en int\u00e9grer un ? Puis-je me r\u00e9mun\u00e9rer ? Comment ? La particularit\u00e9 des produits physiques et du hardware Ouverture sur les nexts steps : cr\u00e9ation d'une entreprise, lev\u00e9es de fonds et soutien \u00e0 la croissance",
         "title": "Entrepreneur dans l'\u00e2me ? Comment passer de l'id\u00e9e au concret.",
         "topic": "makers",
-        "video": null
+        "video": "https://vimeo.com/217089207"
     },
     {
         "addedAt": [
             2017,
             3,
-            28,
-            15,
-            51,
-            12,
-            768000000
+            29,
+            20,
+            33,
+            36,
+            336000000
         ],
-        "description": "References:\r\nBalinski, M., and R. Laraki. 2011. Majority Judgment: Measuring, Ranking, and Electing. MIT Press, Cambridge, MA.",
+        "description": "Nety & Mila are both members of JUG Indonesia, founders of Duchess Indonesia, and promotors of JENI (Java Education Network Indonesia). JENI is a curriculum created by JUG Indonesia on 2005 and officially adopted by the Ministry of National Education on 2006.\r\n\r\nApart from being a developer, they also have a big concern in IT education in Indonesia, especially in vocational high school students, because they\u2019re also one of the graduates. But in fact, there is a gap between the IT curriculum in vocational school and the industry needs. So to reduce the gap, they held a voluntary roadshow on October 2012 and March 2013 to educate the students with one day free Java training. They visited 32 vocational high schools in 4 cities in Indonesia, by motorcycle, with the aim to teach additional knowledge to IT students, as well as to check on the progress of JENI (Java Education Network Indonesia).",
         "end": [
             2017,
             4,
             21,
-            18,
-            35
+            17,
+            25
         ],
         "event": "2017",
         "format": "KEYNOTE",
-        "id": "58de4d4b9312a300179a2a5b",
-        "language": "FRENCH",
+        "id": "58de4d4c9312a300179a2a92",
+        "language": "ENGLISH",
         "room": "AMPHI1",
-        "slug": "majority-judgment",
+        "slug": "take-java-on-the-road",
         "speakerIds": [
-            "rida.laraki"
+            "herawaty.nety",
+            "yuliani.mila"
         ],
         "start": [
             2017,
             4,
             21,
-            18,
-            10
+            17,
+            0
         ],
-        "summary": "Majority Judgment is a new voting method where voters are explicitly charged with a solemn task of expressing their opinions precisely by evaluating the merit of every candidate in an ordinal scale of measurement such as:  \u00ab Having taken into account all relevant considerations, I judge, in conscience, that as President of the United States of America each of the following candidates would be: a Great , a Good , an Average , a Poor , a Terrible  President.\u00bb Majorities determine the electorate's evaluation of each candidate and the ranking between every pair of candidates \u2014necessarily transitive\u2014 with the first-placed among them the winner. Majority judgment\u2019s principal properties are presented. It best resists manipulation or \u201cgaming the vote\u201d. It is not subject to Arrow\u2019s impossibility, nor to Condorcet\u2019s paradox. The mechanism and its properties are presented via real data (French and US presidential elections, committee decisions, skating and wine competitions).",
-        "title": "Majority Judgment",
+        "summary": "Nety & Mila are female developers from Indonesia.\r\nThey will share how they first get into programming, then why they decided to make coding as a career.\r\n",
+        "title": "Take Java on the Road",
         "topic": "aliens",
         "video": null
     }
