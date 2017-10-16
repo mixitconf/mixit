@@ -26,6 +26,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
                     private val globalHandler: GlobalHandler,
                     private val newsHandler: NewsHandler,
                     private val talkHandler: TalkHandler,
+                    private val userHandler: UserHandler,
                     private val sponsorHandler: SponsorHandler,
                     private val ticketingHandler: TicketingHandler,
                     private val messageSource: MessageSource,
@@ -35,14 +36,18 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
 
     private val logger = LoggerFactory.getLogger(WebsiteRoutes::class.java)
 
+    companion object {
+        val securedAdminUrl:List<String> = listOf("/admin")
+        val securedUrl:List<String> = listOf("/schedule")
+    }
 
     @Bean
     @DependsOn("databaseInitializer")
     fun websiteRouter() = router {
         GET("/blog/feed", blogHandler::feed)
+
         accept(TEXT_HTML).nest {
-            // GET("/") { sponsorHandler.viewWithSponsors("home", null, it) }
-            GET("/") { globalHandler.homeView(it) }
+            GET("/") { sponsorHandler.viewWithSponsors("home", null, it) }
             GET("/about", globalHandler::findAboutView)
             GET("/news", newsHandler::newsView)
             GET("/ticketing", ticketingHandler::ticketing)
@@ -54,6 +59,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
 
             // Authentication
             GET("/login", authenticationHandler::loginView)
+            GET("/disconnect", authenticationHandler::logout)
 
             // Talks
             eventRepository.findAll().toIterable().map { it.year }.forEach { year ->
@@ -94,6 +100,9 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
 
         contentType(APPLICATION_FORM_URLENCODED).nest {
             POST("/login", authenticationHandler::login)
+            POST("/signup", authenticationHandler::signUp)
+            POST("/signin", authenticationHandler::signIn)
+
             //POST("/ticketing", ticketingHandler::submit)
             "/admin".nest {
                 POST("/talks", adminHandler::adminSaveTalk)

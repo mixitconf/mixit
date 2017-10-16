@@ -43,14 +43,24 @@
             <li><a href="{{localePrefix}}/ticketing" class="mxt-menu__item--nav">{{#i18n}}header.menu.ticketing{{/i18n}}</a></li>-->
             {{#admin}}<li><a href="{{localePrefix}}/admin" class="mxt-menu__item--nav">{{#i18n}}header.menu.admin{{/i18n}}</a></li>{{/admin}}
             <li><a href="{{localePrefix}}/2017" class="mxt-menu__item--nav">{{#i18n}}header.menu.talks{{/i18n}}</a></li>
-            <!--<li><a href="{{localePrefix}}/schedule" class="mxt-menu__item--nav">{{#i18n}}header.menu.schedule{{/i18n}}</a></li>-->
+            <li><a href="{{localePrefix}}/schedule" class="mxt-menu__item--nav">{{#i18n}}header.menu.schedule{{/i18n}}</a></li>
             <li><a href="{{localePrefix}}/mixteen" class="mxt-menu__item--nav">{{#i18n}}header.menu.mixteen{{/i18n}}</a></li>
-            <!--<li><a href="{{localePrefix}}/sponsors" class="mxt-menu__item--nav">{{#i18n}}header.menu.sponsors{{/i18n}}</a></li>-->
+            <li><a href="{{localePrefix}}/sponsors" class="mxt-menu__item--nav">{{#i18n}}header.menu.sponsors{{/i18n}}</a></li>
             <li><a href="{{localePrefix}}/blog" class="mxt-menu__item--nav">{{#i18n}}header.menu.blog{{/i18n}}</a></li>
             <li><a href="{{localePrefix}}/come" class="mxt-menu__item--nav">{{#i18n}}header.menu.come{{/i18n}}</a></li>
             <li><a href="{{localePrefix}}/about" class="mxt-menu__item--nav">{{#i18n}}header.menu.about{{/i18n}}</a></li>
             <li class="hide-for-small-only mxt-menu__item--bullet menu-text">&bull;</li>
-            <li>{{#en}}<a class="mxt-menu__item--lang" href="{{switchLangUrl}}">Français</a>{{/en}}{{#fr}}<a href="{{switchLangUrl}}" class="mxt-menu__item--lang">English</a>{{/fr}}</li>
+            {{#connected}}<li class="show-for-small-only"><a href="{{localePrefix}}/disconnect" class="mxt-menu__item--nav mxt-menu__item--close-nav">{{#i18n}}header.menu.logout{{/i18n}}</a></li>{{/connected}}
+            {{^connected}}<li class="show-for-small-only"><a href="{{localePrefix}}/login" class="mxt-menu__item--nav mxt-menu__item--close-nav">{{#i18n}}header.menu.login{{/i18n}}</a></li>{{/connected}}
+            <li class="show-for-small-only">{{#en}}<a class="mxt-menu__item--lang" href="{{switchLangUrl}}">Français</a>{{/en}}{{#fr}}<a href="{{switchLangUrl}}" class="mxt-menu__item--lang">English</a>{{/fr}}</li>
+            <li class="hide-for-small-only">
+                <div style="display: block">
+                    {{#en}}<a class="mxt-menu__item--lang mxt-menu__item--close-nav" href="{{switchLangUrl}}">Français</a>{{/en}}
+                    {{#fr}}<a href="{{switchLangUrl}}" class="mxt-menu__item--lang mxt-menu__item--close-nav">English</a>{{/fr}}
+                    {{#connected}}<a href="{{localePrefix}}/disconnect" class="mxt-menu__item--nav mxt-menu__item--close-nav"><img src="/images/svg/security/mxt-lock--close.svg" title="{{#i18n}}header.menu.logout{{/i18n}}" class="mxt-icon--top-bar"></a>{{/connected}}
+                    {{^connected}}<a href="{{localePrefix}}/login" class="mxt-menu__item--nav mxt-menu__item--close-nav"><img src="/images/svg/security/mxt-lock--open.svg" title="{{#i18n}}header.menu.login{{/i18n}}" class="mxt-icon--top-bar"></a>{{/connected}}
+                </div>
+            </li>
           </ul>
         </div>
       </div>

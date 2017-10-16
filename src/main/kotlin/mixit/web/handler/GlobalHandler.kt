@@ -30,9 +30,6 @@ class GlobalHandler(val userRepository: UserRepository, val markdownConverter: M
                         Pair("title", "about.title")))
             }
 
-    fun homeView(req: ServerRequest) = ok().render("home", mapOf(Pair("title", null)))
-
-
     fun mixteenView(req: ServerRequest) = ok().render("mixteen", mapOf(Pair("title", "mixteen.title")))
 
     fun faqView(req: ServerRequest) = ok().render("faq", mapOf(Pair("title", "faq.title")))

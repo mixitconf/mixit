@@ -72,7 +72,7 @@ class EmailServiceTest{
                 // a link to our website
                 .contains("<a href=\"https://mixitconf.org\">https://mixitconf.org</a>")
                 // a link to be able to end the token
-                .contains("<a href=\"https://mixitconf.org/test@gmail.com/token-3455-dede\">token-3455-dede</a>")
+                .contains("<form action=\"https://mixitconf.org/signin\" method=\"post\">")
     }
 
     @Test
@@ -88,7 +88,7 @@ class EmailServiceTest{
                 // a link to our website
                 .contains("<a href=\"https://mixitconf.org\">https://mixitconf.org</a>")
                 // a link to be able to end the token
-                .contains("<a href=\"https://mixitconf.org/test@gmail.com/token-3455-dede\">token-3455-dede</a>")
+                .contains("<form action=\"https://mixitconf.org/signin\" method=\"post\">")
     }
 
     @Test
@@ -127,7 +127,7 @@ class EmailServiceTest{
                 // a link to our website
                 .contains("<a href=\"http://localhost:8080\">http://localhost:8080</a>")
                 // a link to be able to end the token
-                .contains("<a href=\"http://localhost:8080/test@gmail.com/token-3455-dede\">token-3455-dede</a>")
+                .contains("<form action=\"http://localhost:8080/signin\" method=\"post\">")
     }
 
     private fun createUser(): User {

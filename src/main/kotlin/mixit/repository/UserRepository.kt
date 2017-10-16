@@ -35,6 +35,10 @@ class UserRepository(private val template: ReactiveMongoTemplate,
     fun findByYear(year: Int) =
             template.find<User>(Query(where("year").isEqualTo(year)))
 
+    fun findByEmail(email: String) = template.findOne<User>(Query(where("email").isEqualTo(email)))
+
+    fun findByName(firstname: String, lastname: String) =
+            template.find<User>(Query(where("firstname").isEqualTo(firstname).and("lastname").isEqualTo(lastname)))
 
     fun findByRoles(roles: List<Role>) =
             template.find<User>(Query(where("role").inValues(roles)))
