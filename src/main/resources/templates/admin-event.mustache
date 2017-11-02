@@ -1,0 +1,100 @@
+{{> header}}
+
+<div class="mxt-wrapper--page-title">
+    <div class="row">
+        <div class="columns large-8 large-offset-2">
+            <h1 class="text-center">{{#i18n}}admin.event.title{{/i18n}}</h1>
+        </div>
+    </div>
+</div>
+
+<div class="mxt-wrapper--page-content">
+    <div class="callout">
+        <div class="large-12 large-centered columns">
+            <div class="row">
+                <div class="large-12 columns">
+                    <form action="/admin/events" method="post">
+                        <h3>{{#i18n}}admin.event.text{{/i18n}}&nbsp;</h3>
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <label>
+                                    {{#i18n}}admin.event.form.id{{/i18n}}
+                                    {{#creationMode}}
+                                        <input type="text" name="eventId" value="{{event.id}}" required/>
+                                    {{/creationMode}}
+                                    {{^creationMode}}
+                                        <input type="text" value="{{event.id}}" disabled="true"/>
+                                        <input type="hidden" name="eventId" value="{{event.id}}"/>
+                                    {{/creationMode}}
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <label>
+                                    {{#i18n}}admin.event.form.start{{/i18n}}
+                                    <input type="text" name="start" value="{{event.start}}" required/>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <label>
+                                    {{#i18n}}admin.event.form.end{{/i18n}}
+                                    <input type="text" name="end" value="{{event.end}}" required/>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <label>
+                                    {{#i18n}}admin.event.form.current{{/i18n}}&nbsp;
+                                    <input type="checkbox" name="current" value="true" {{#event.current}}checked{{/event.current}}/>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 large-centered columns">
+                                <input type="submit" class="button expand" value="{{#i18n}}admin.event.save{{/i18n}}"/>
+                            </div>
+                        </div>
+
+                        {{^creationMode}}
+                        <hr>
+                        <h3>{{#i18n}}admin.event.sponsors.text{{/i18n}}&nbsp;</h3>
+
+                        <div class="callout">
+                            <p>{{#i18n}}admin.events.sponsors.count{{/i18n}} : {{event.sponsors.size}} | <a href="/admin/events/{{event.id}}/sponsors/create">{{#i18n}}admin.events.actions.create{{/i18n}}</a></p>
+
+                            <table>
+                                <thead>
+                                <tr>
+                                    <th>{{#i18n}}admin.event.sponsors.table.level{{/i18n}}</th>
+                                    <th>{{#i18n}}admin.event.sponsors.table.sponsorId{{/i18n}}</th>
+                                    <th>{{#i18n}}admin.event.sponsors.table.subdate{{/i18n}}</th>
+                                    <th>{{#i18n}}admin.event.sponsors.table.actions{{/i18n}}</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {{#event.sponsors}}
+                                    <tr>
+                                        <td>{{level}}</td>
+                                        <td>{{sponsorId}}</td>
+                                        <td>{{subscriptionDate}}</td>
+                                        <td>
+                                            <a href="/admin/events/{{event.id}}/sponsors/edit/{{sponsorId}}/{{level}}">{{#i18n}}admin.events.actions.update{{/i18n}}</a>
+                                        </td>
+                                    </tr>
+                                {{/event.sponsors}}
+                                </tbody>
+                            </table>
+                        </div>
+                        {{/creationMode}}
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{> footer}}

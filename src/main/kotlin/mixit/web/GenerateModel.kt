@@ -1,6 +1,8 @@
 package mixit.web
 
 import com.samskivert.mustache.Mustache
+import mixit.MixitProperties
+import mixit.model.Role
 import mixit.util.MarkdownConverter
 import mixit.util.localePrefix
 import org.springframework.context.MessageSource
@@ -8,7 +10,7 @@ import org.springframework.web.server.WebSession
 import org.springframework.web.util.UriUtils
 import java.util.*
 
-fun generateModel(baseUri: String,
+fun generateModel(properties: MixitProperties,
                   path: String,
                   locale: Locale,
                   session: WebSession,
@@ -17,9 +19,10 @@ fun generateModel(baseUri: String,
                   ) = mutableMapOf<String, Any>().apply {
 
         val username = session.getAttribute<String>("username")
+        val role = session.getAttribute<Role>("role")
         username?.let {
             this["username"] = it
-            if (it == "mixit") this["admin"] = true
+            if(it.equals(properties.admin!!) || (role !=null && role == Role.STAFF)) this["admin"] = true
             this["connected"] = true
         }
         this["locale"] = locale.toString()
@@ -27,8 +30,8 @@ fun generateModel(baseUri: String,
         this["en"] = locale.language == "en"
         this["fr"] = locale.language == "fr"
         this["switchLangUrl"] = if (locale.language == "en") path else "/en" + path
-        this["baseUri"] = baseUri
-        this["uri"] = "$baseUri$path"
+        this["baseUri"] = properties.baseUri!!
+        this["uri"] = "${properties.baseUri!!}$path"
         this["i18n"] = Mustache.Lambda { frag, out ->
             val tokens = frag.execute().split("|")
             out.write(messageSource.getMessage(tokens[0], tokens.slice(IntRange(1, tokens.size - 1)).toTypedArray(), locale))

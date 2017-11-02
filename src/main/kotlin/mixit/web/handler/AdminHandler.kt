@@ -4,14 +4,12 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.MixitProperties
 import mixit.model.*
-import mixit.model.Language.*
+import mixit.model.Language.ENGLISH
+import mixit.model.Language.FRENCH
 import mixit.model.Role.*
 import mixit.model.Room.*
 import mixit.model.TalkFormat.*
-import mixit.repository.PostRepository
-import mixit.repository.TalkRepository
-import mixit.repository.TicketRepository
-import mixit.repository.UserRepository
+import mixit.repository.*
 import mixit.util.language
 import mixit.util.seeOther
 import mixit.util.toSlug
@@ -19,15 +17,19 @@ import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
-import org.springframework.web.reactive.function.server.ServerResponse.*
+import org.springframework.web.reactive.function.server.ServerResponse.ok
 import reactor.core.publisher.Mono
+import java.time.LocalDate
 import java.time.LocalDateTime
+import java.util.*
+import kotlin.streams.toList
 
 
 @Component
 class AdminHandler(private val ticketRepository: TicketRepository,
                    private val talkRepository: TalkRepository,
                    private val userRepository: UserRepository,
+                   private val eventRepository: EventRepository,
                    private val postRepository: PostRepository,
                    private val properties: MixitProperties,
                    private val objectMapper: ObjectMapper) {
@@ -37,33 +39,33 @@ class AdminHandler(private val ticketRepository: TicketRepository,
 
     fun adminTicketing(req: ServerRequest) =
             ok().render("admin-ticketing", mapOf(
-                Pair("tickets", ticketRepository.findAll()),
-                Pair("title", "admin.ticketing.title")
+                    Pair("tickets", ticketRepository.findAll()),
+                    Pair("title", "admin.ticketing.title")
             ))
 
     fun adminTalks(req: ServerRequest) =
             ok().render("admin-talks", mapOf(
-                Pair("talks", talkRepository
-                        .findByEvent("2017")
-                        .collectList()
-                        .flatMap { talks ->
-                            userRepository
-                                .findMany(talks.flatMap(Talk::speakerIds))
-                                .collectMap(User::login)
-                                .map { speakers -> talks.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] }) } }
-                        }),
-                Pair("title", "admin.talks.title")
+                    Pair("talks", talkRepository
+                            .findByEvent("2017")
+                            .collectList()
+                            .flatMap { talks ->
+                                userRepository
+                                        .findMany(talks.flatMap(Talk::speakerIds))
+                                        .collectMap(User::login)
+                                        .map { speakers -> talks.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] }) } }
+                            }),
+                    Pair("title", "admin.talks.title")
             ))
 
 
     fun adminUsers(req: ServerRequest) = ok().render("admin-users", mapOf(Pair("users", userRepository.findAll()), Pair("title", "admin.users.title")))
 
 
-    fun createTalk(req: ServerRequest) : Mono<ServerResponse> = this.adminTalk()
+    fun createTalk(req: ServerRequest): Mono<ServerResponse> = this.adminTalk()
 
-    fun editTalk(req: ServerRequest) : Mono<ServerResponse> = talkRepository.findBySlug(req.pathVariable("slug")).flatMap(this::adminTalk)
+    fun editTalk(req: ServerRequest): Mono<ServerResponse> = talkRepository.findBySlug(req.pathVariable("slug")).flatMap(this::adminTalk)
 
-    fun adminSaveTalk(req: ServerRequest) : Mono<ServerResponse> {
+    fun adminSaveTalk(req: ServerRequest): Mono<ServerResponse> {
         return req.body(BodyExtractors.toFormData()).flatMap {
             val formData = it.toSingleValueMap()
             val talk = Talk(
@@ -86,7 +88,7 @@ class AdminHandler(private val ticketRepository: TicketRepository,
         }
     }
 
-    fun adminDeleteTalk(req: ServerRequest) : Mono<ServerResponse> =
+    fun adminDeleteTalk(req: ServerRequest): Mono<ServerResponse> =
             req.body(BodyExtractors.toFormData()).flatMap {
                 val formData = it.toSingleValueMap()
                 talkRepository
@@ -133,6 +135,135 @@ class AdminHandler(private val ticketRepository: TicketRepository,
 
     ))
 
+    fun adminEvents(req: ServerRequest) = ok().render("admin-events", mapOf(Pair("events", eventRepository.findAll()), Pair("title", "admin.events.title")))
+
+    fun createEvent(req: ServerRequest): Mono<ServerResponse> = this.adminEvent()
+
+    fun editEvent(req: ServerRequest): Mono<ServerResponse> = eventRepository.findOne(req.pathVariable("eventId")).flatMap { this.adminEvent(it) }
+
+    private fun adminEvent(event: Event = Event("", LocalDate.now(), LocalDate.now())) = ok().render("admin-event", mapOf(
+            Pair("creationMode", event.id == ""),
+            Pair("event", event)
+    ))
+
+    fun adminSaveEvent(req: ServerRequest): Mono<ServerResponse> {
+        return req.body(BodyExtractors.toFormData()).flatMap {
+            val formData = it.toSingleValueMap()
+
+            // We need to find the event in database
+            eventRepository
+                    .findOne(formData["eventId"]!!)
+                    .flatMap {
+                        val event = Event(
+                                it.id,
+                                LocalDate.parse(formData["start"]!!),
+                                LocalDate.parse(formData["end"]!!),
+                                if (formData["current"] == null) false else formData["current"]!!.toBoolean(),
+                                it.sponsors
+                        )
+                        eventRepository.save(event).then(seeOther("${properties.baseUri}/admin/events"))
+                    }
+                    .switchIfEmpty(eventRepository.save(Event(
+                            formData["eventId"]!!,
+                            LocalDate.parse(formData["start"]!!),
+                            LocalDate.parse(formData["end"]!!),
+                            if (formData["current"] == null) false else formData["current"]!!.toBoolean()
+                    )).then(seeOther("${properties.baseUri}/admin/events")))
+        }
+    }
+
+    fun createEventSponsoring(req: ServerRequest): Mono<ServerResponse> = adminEventSponsoring(req.pathVariable("eventId"))
+
+    fun editEventSponsoring(req: ServerRequest): Mono<ServerResponse> = eventRepository
+            .findOne(req.pathVariable("eventId"))
+            .flatMap { adminEventSponsoring(req.pathVariable("eventId"), it.sponsors.stream().filter{ eventSponsoringMatch(req.pathVariable("sponsorId"), req.pathVariable("level"), it)}.findAny().get()) }
+
+    private fun adminEventSponsoring(eventId: String, eventSponsoring: EventSponsoring = EventSponsoring(SponsorshipLevel.NONE, "", LocalDate.now())) = ok().render("admin-event-sponsor", mapOf(
+            Pair("creationMode", eventSponsoring.sponsorId == ""),
+            Pair("eventId", eventId),
+            Pair("eventSponsoring", eventSponsoring),
+            Pair("levels", listOf(
+                    Pair(SponsorshipLevel.ACCESSIBILITY, SponsorshipLevel.ACCESSIBILITY == eventSponsoring.level),
+                    Pair(SponsorshipLevel.BREAKFAST, SponsorshipLevel.ACCESSIBILITY == eventSponsoring.level),
+                    Pair(SponsorshipLevel.BRONZE, SponsorshipLevel.BRONZE == eventSponsoring.level),
+                    Pair(SponsorshipLevel.COMMUNITY, SponsorshipLevel.COMMUNITY == eventSponsoring.level),
+                    Pair(SponsorshipLevel.ECOCUP, SponsorshipLevel.ECOCUP == eventSponsoring.level),
+                    Pair(SponsorshipLevel.GOLD, SponsorshipLevel.GOLD == eventSponsoring.level),
+                    Pair(SponsorshipLevel.HOSTING, SponsorshipLevel.ACCESSIBILITY == eventSponsoring.level),
+                    Pair(SponsorshipLevel.LANYARD, SponsorshipLevel.ACCESSIBILITY == eventSponsoring.level),
+                    Pair(SponsorshipLevel.LUNCH, SponsorshipLevel.ACCESSIBILITY == eventSponsoring.level),
+                    Pair(SponsorshipLevel.MIXTEEN, SponsorshipLevel.MIXTEEN == eventSponsoring.level),
+                    Pair(SponsorshipLevel.NONE, SponsorshipLevel.NONE == eventSponsoring.level),
+                    Pair(SponsorshipLevel.PARTY, SponsorshipLevel.PARTY == eventSponsoring.level),
+                    Pair(SponsorshipLevel.SILVER, SponsorshipLevel.SILVER == eventSponsoring.level),
+                    Pair(SponsorshipLevel.VIDEO, SponsorshipLevel.VIDEO == eventSponsoring.level)
+            ))
+    ))
+
+    private fun eventSponsoringMatch(sponsorId: String, level: String,eventSponsoring: EventSponsoring): Boolean =
+            sponsorId.equals(eventSponsoring.sponsorId) && level.equals(eventSponsoring.level.name)
+
+    fun adminUpdateEventSponsoring(req: ServerRequest): Mono<ServerResponse> = req.body(BodyExtractors.toFormData()).flatMap {
+            val formData = it.toSingleValueMap()
+            // We need to find the event in database
+            eventRepository
+                    .findOne(formData["eventId"]!!)
+                    .flatMap {
+                        // We create a mutable list
+                        val sponsors = it.sponsors
+                                .stream()
+                                .map {
+                                    if (eventSponsoringMatch(formData["eventId"]!!, formData["sponsorId"]!!, it)) {
+                                        EventSponsoring(it.level, it.sponsorId, if (formData["subscriptionDate"] == null) LocalDate.now() else LocalDate.parse(formData["subscriptionDate"]!!))
+                                    } else {
+                                        it
+                                    }
+                                }
+                                .toList()
+
+                        eventRepository.save(Event(it.id, it.start, it.end, it.current, sponsors)).then(seeOther("${properties.baseUri}/admin/events/edit/${formData["eventId"]!!}"))
+                    }
+        }
+
+    fun adminCreateEventSponsoring(req: ServerRequest): Mono<ServerResponse> = req.body(BodyExtractors.toFormData()).flatMap {
+        val formData = it.toSingleValueMap()
+        // We need to find the event in database
+        eventRepository
+                .findOne(formData["eventId"]!!)
+                .flatMap {
+                    // We create a mutable list
+                    val sponsors = it.sponsors.toMutableList()
+                    sponsors.add(
+                            EventSponsoring(
+                                    SponsorshipLevel.valueOf(formData["level"]!!),
+                                    formData["sponsorId"]!!,
+                                    if (formData["subscriptionDate"] == null) LocalDate.now() else LocalDate.parse(formData["subscriptionDate"]!!)))
+
+                    eventRepository.save(Event(it.id, it.start, it.end, it.current, sponsors)).then(seeOther("${properties.baseUri}/admin/events/edit/${formData["eventId"]!!}"))
+                }
+    }
+
+    fun adminDeleteEventSponsoring(req: ServerRequest): Mono<ServerResponse> =req.body(BodyExtractors.toFormData()).flatMap {
+        val formData = it.toSingleValueMap()
+        // We need to find the event in database
+        eventRepository
+                .findOne(formData["eventId"]!!)
+                .flatMap {
+                    // We create a mutable list
+                    val sponsors = it.sponsors
+                            .stream()
+                            .map {
+                                if (eventSponsoringMatch(formData["sponsorId"]!!, formData["level"]!!, it)) null  else it
+                            }
+                            .filter(Objects::nonNull)
+                            .toList()
+                            .requireNoNulls()
+
+                    eventRepository.save(Event(it.id, it.start, it.end, it.current, sponsors)).then(seeOther("${properties.baseUri}/admin/events/edit/${formData["eventId"]!!}"))
+                }
+    }
+
+
     fun createUser(req: ServerRequest): Mono<ServerResponse> = this.adminUser()
 
     fun editUser(req: ServerRequest): Mono<ServerResponse> = userRepository.findOne(req.pathVariable("login")).flatMap(this::adminUser)
@@ -158,7 +289,7 @@ class AdminHandler(private val ticketRepository: TicketRepository,
 
     ))
 
-    fun adminSaveUser(req: ServerRequest) : Mono<ServerResponse> {
+    fun adminSaveUser(req: ServerRequest): Mono<ServerResponse> {
         return req.body(BodyExtractors.toFormData()).flatMap {
             val formData = it.toSingleValueMap()
             val user = User(
@@ -167,24 +298,29 @@ class AdminHandler(private val ticketRepository: TicketRepository,
                     lastname = formData["lastname"]!!,
                     email = if (formData["email"] == "") null else formData["email"],
                     emailHash = if (formData["emailHash"] == "") null else formData["emailHash"],
-                    photoUrl = if (formData["photoUrl"] == "") { if (formData["emailHash"] == "") "/images/png/mxt-icon--default-avatar.png" else null } else { if (formData["emailHash"] == "") formData["photoUrl"] else null },
+                    photoUrl = if (formData["photoUrl"] == "") {
+                        if (formData["emailHash"] == "") "/images/png/mxt-icon--default-avatar.png" else null
+                    } else {
+                        if (formData["emailHash"] == "") formData["photoUrl"] else null
+                    },
                     company = if (formData["company"] == "") null else formData["company"],
                     description = mapOf(Pair(FRENCH, formData["description-fr"]!!), Pair(ENGLISH, formData["description-en"]!!)),
                     role = Role.valueOf(formData["role"]!!),
-                    links =  formData["links"]!!.toLinks(),
+                    links = formData["links"]!!.toLinks(),
                     legacyId = if (formData["legacyId"] == "") null else formData["legacyId"]!!.toLong()
             )
             userRepository.save(user).then(seeOther("${properties.baseUri}/admin/users"))
         }
     }
 
-    fun adminBlog(req: ServerRequest) : Mono<ServerResponse> = ok().render("admin-blog", mapOf(Pair("posts", postRepository.findAll().collectList()
-            .flatMap { posts -> userRepository
-                    .findMany(posts.map { it.authorId })
-                    .collectMap(User::login)
-                    .map { authors -> posts.map { it.toDto(authors[it.authorId]!!, req.language()) } }
-            }), Pair("title", "admin.blog.title")))
 
+    fun adminBlog(req: ServerRequest): Mono<ServerResponse> = ok().render("admin-blog", mapOf(Pair("posts", postRepository.findAll().collectList()
+            .flatMap { posts ->
+                userRepository
+                        .findMany(posts.map { it.authorId })
+                        .collectMap(User::login)
+                        .map { authors -> posts.map { it.toDto(authors[it.authorId]!!, req.language()) } }
+            }), Pair("title", "admin.blog.title")))
 
 
     fun createPost(req: ServerRequest): Mono<ServerResponse> = this.adminPost()
@@ -209,7 +345,7 @@ class AdminHandler(private val ticketRepository: TicketRepository,
             Pair("content-en", post.content?.get(ENGLISH))
     ))
 
-    fun adminSavePost(req: ServerRequest) : Mono<ServerResponse> {
+    fun adminSavePost(req: ServerRequest): Mono<ServerResponse> {
         return req.body(BodyExtractors.toFormData()).flatMap {
             val formData = it.toSingleValueMap()
             val post = Post(

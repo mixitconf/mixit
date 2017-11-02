@@ -83,6 +83,11 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
                 GET("/users", adminHandler::adminUsers)
                 GET("/users/edit/{login}", adminHandler::editUser)
                 GET("/users/create", adminHandler::createUser)
+                GET("/events", adminHandler::adminEvents)
+                GET("/events/edit/{eventId}", adminHandler::editEvent)
+                GET("/events/{eventId}/sponsors/edit/{sponsorId}/{level}", adminHandler::editEventSponsoring)
+                GET("/events/{eventId}/sponsors/create", adminHandler::createEventSponsoring)
+                GET("/events/create", adminHandler::createEvent)
                 GET("/blog", adminHandler::adminBlog)
                 GET("/post/edit/{id}", adminHandler::editPost)
                 GET("/post/create", adminHandler::createPost)
@@ -109,6 +114,10 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
                 POST("/talks/delete", adminHandler::adminDeleteTalk)
                 POST("/users", adminHandler::adminSaveUser)
                 POST("/users/delete", adminHandler::adminDeleteUser)
+                POST("/events", adminHandler::adminSaveEvent)
+                POST("/events/{eventId}/sponsors/create", adminHandler::adminCreateEventSponsoring)
+                POST("/events/{eventId}/sponsors/delete", adminHandler::adminDeleteEventSponsoring)
+                POST("/events/{eventId}/sponsors", adminHandler::adminUpdateEventSponsoring)
                 POST("/post", adminHandler::adminSavePost)
                 POST("/post/delete", adminHandler::adminDeletePost)
             }
@@ -124,7 +133,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
         val locale : Locale = request.locale()
         val session = request.session().block()!!
         val path = request.uri().path
-        val model = generateModel(properties.baseUri!!, path, locale, session, messageSource, markdownConverter)
+        val model = generateModel(properties, path, locale, session, messageSource, markdownConverter)
                 next.handle(request).flatMap { if (it is RenderingResponse) RenderingResponse.from(it).modelAttributes(model).build() else it.toMono() }
     }
 

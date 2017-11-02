@@ -46,8 +46,9 @@ class AuthenticationHandler(private val userRepository: UserRepository,
      * Action when user wants to log out
      */
     fun logout(req: ServerRequest): Mono<ServerResponse> = req.session().flatMap { session ->
-        session.attributes.remove("email")
+        session.attributes.remove("username")
         session.attributes.remove("token")
+        session.attributes.remove("role")
         temporaryRedirect(URI("${properties.baseUri}/")).build()
     }
 
@@ -136,6 +137,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
                                 // token has to be valid
                                 renderError("login.error.token.text")
                             } else {
+                                session.attributes["role"] = user.role
                                 session.attributes["username"] = email
                                 session.attributes["token"] = token
                                 seeOther(URI("${properties.baseUri}/")).build()

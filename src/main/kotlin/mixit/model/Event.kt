@@ -33,6 +33,9 @@ enum class SponsorshipLevel {
     HOSTING,
     VIDEO,
     COMMUNITY,
+    MIXTEEN,
+    ECOCUP,
+    ACCESSIBILITY,
     NONE
 }
 
