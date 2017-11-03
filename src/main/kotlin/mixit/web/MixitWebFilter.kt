@@ -69,7 +69,6 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
                                             redirectForLogin(exchange, "login")
                                         }
                                     }
-                                    .switchIfEmpty(redirectForLogin(exchange, "login"))
                         } else {
                             redirectForLogin(exchange, "login")
                         }
