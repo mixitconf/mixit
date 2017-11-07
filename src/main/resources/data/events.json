@@ -751,7 +751,7 @@
         "year": 2016
     },
     {
-        "current": true,
+        "current": false,
         "end": [
             2017,
             4,
@@ -964,5 +964,103 @@
             20
         ],
         "year": 2017
+    },
+    {
+        "current": true,
+        "end": [
+            2018,
+            4,
+            20
+        ],
+        "id": "mixit18",
+        "sponsors": [
+            {
+                "level": "SILVER",
+                "sponsorId": "Saagie",
+                "subscriptionDate": [
+                    2017,
+                    9,
+                    6
+                ]
+            },
+            {
+                "level": "ECOCUP",
+                "sponsorId": "Saagie",
+                "subscriptionDate": [
+                    2017,
+                    9,
+                    6
+                ]
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Zenika Lyon",
+                "subscriptionDate": [
+                    2017,
+                    10,
+                    6
+                ]
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Hiptest",
+                "subscriptionDate": [
+                    2017,
+                    10,
+                    7
+                ]
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "WorldlineFrance",
+                "subscriptionDate": [
+                    2017,
+                    10,
+                    8
+                ]
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Sopra Steria",
+                "subscriptionDate": [
+                    2017,
+                    10,
+                    15
+                ]
+            },
+            {
+                "level": "MIXTEEN",
+                "sponsorId": "clevercloud",
+                "subscriptionDate": [
+                    2017,
+                    10,
+                    6
+                ]
+            },
+            {
+                "level": "ECOCUP",
+                "sponsorId": "clevercloud",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    6
+                ]
+            },
+            {
+                "level": "HOSTING",
+                "sponsorId": "pivotal",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    6
+                ]
+            }
+        ],
+        "start": [
+            2018,
+            4,
+            19
+        ],
+        "year": 2018
     }
 ]

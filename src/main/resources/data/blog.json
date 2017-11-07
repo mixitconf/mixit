@@ -2,6 +2,32 @@
     {
         "addedAt": [
             2017,
+            11,
+            2,
+            21,
+            41,
+            14,
+            763000000
+        ],
+        "authorId": "mpetitdant",
+        "content": {},
+        "headline": {
+            "ENGLISH": "Organizing a conference requires some budget. Here are the details!",
+            "FRENCH": "Faire une conf demande \u00e9videmment un certain budget. On vous explique tout dans cet article !"
+        },
+        "id": "59fb96bbdfe031001521deaf",
+        "slug": {
+            "ENGLISH": "mixit-2017-balance",
+            "FRENCH": "bilan-financier-mixit-2017"
+        },
+        "title": {
+            "ENGLISH": "MiXiT 2017 balance",
+            "FRENCH": "Bilan financier MiXiT 2017"
+        }
+    },
+    {
+        "addedAt": [
+            2017,
             5,
             2,
             15,
