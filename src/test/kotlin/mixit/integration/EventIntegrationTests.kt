@@ -36,6 +36,7 @@ class EventIntegrationTests : AbstractIntegrationTests() {
                 .consumeNextWith { assertEquals(2015, it.year) }
                 .consumeNextWith { assertEquals(2016, it.year) }
                 .consumeNextWith { assertEquals(2017, it.year) }
+                .consumeNextWith { assertEquals(2018, it.year) }
                 .verifyComplete()
     }
     
