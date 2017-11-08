@@ -37,11 +37,11 @@ class SponsorHandler(private val userRepository: UserRepository,
             .switchIfEmpty(ServerResponse.ok().render(view, mapOf(Pair("title", title))))
 }
 
-private class EventSponsoringDto(
+class EventSponsoringDto(
         val level: SponsorshipLevel,
         val sponsor: UserDto,
         val subscriptionDate: LocalDate = LocalDate.now()
 )
 
-private fun EventSponsoring.toDto(sponsor: User, language: Language, markdownConverter: MarkdownConverter) =
+fun EventSponsoring.toDto(sponsor: User, language: Language, markdownConverter: MarkdownConverter) =
         EventSponsoringDto(level, sponsor.toDto(language, markdownConverter), subscriptionDate)

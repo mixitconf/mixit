@@ -68,6 +68,41 @@
                 </div>
             </article>
         </div>
+        {{#sponsors}}
+            <hr/>
+            <div class="row small-up-3 medium-up-6 align-center align-middle">
+                {{#sponsors-lanyard}}
+                    <div class="columns text-center">
+                        {{> talk-sponsor }}
+                    </div>
+                {{/sponsors-lanyard}}
+                {{#sponsors-party}}
+                    <div class="columns text-center">
+                        {{> talk-sponsor }}
+                    </div>
+                {{/sponsors-party}}
+                {{#sponsors-silver}}
+                    <div class="columns columns-block text-center">
+                        {{> talk-sponsor }}
+                    </div>
+                {{/sponsors-silver}}
+                {{#sponsors-mixteen}}
+                    <div class="columns columns-block text-center">
+                        {{> talk-sponsor }}
+                    </div>
+                {{/sponsors-mixteen}}
+                {{#sponsors-hosting}}
+                    <div class="columns text-center">
+                        {{> talk-sponsor }}
+                    </div>
+                {{/sponsors-hosting}}
+                {{#sponsors-video}}
+                    <div class="columns text-center">
+                        {{> talk-sponsor }}
+                    </div>
+                {{/sponsors-video}}
+            </div>
+        {{/sponsors}}
     </div>
 </div>
 

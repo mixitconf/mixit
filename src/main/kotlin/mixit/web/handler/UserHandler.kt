@@ -1,16 +1,21 @@
 package mixit.web.handler
 
-import mixit.MixitProperties
-import mixit.model.*
+import mixit.model.Language
+import mixit.model.Link
+import mixit.model.Role
+import mixit.model.User
 import mixit.repository.UserRepository
-import mixit.util.*
+import mixit.util.MarkdownConverter
+import mixit.util.json
+import mixit.util.language
 import org.springframework.stereotype.Component
-import org.springframework.web.reactive.function.BodyExtractors
-import org.springframework.web.reactive.function.server.*
-import org.springframework.web.reactive.function.server.ServerResponse.*
-import reactor.core.publisher.Mono
+import org.springframework.web.reactive.function.server.ServerRequest
+import org.springframework.web.reactive.function.server.ServerResponse.created
+import org.springframework.web.reactive.function.server.ServerResponse.ok
+import org.springframework.web.reactive.function.server.body
+import org.springframework.web.reactive.function.server.bodyToMono
 import reactor.core.publisher.toMono
-import java.net.URI.*
+import java.net.URI.create
 import java.net.URLDecoder
 
 
@@ -76,5 +81,6 @@ private fun logoType(url: String?) =
             url.endsWith("svg") -> "image/svg+xml"
             url.endsWith("png") -> "image/png"
             url.endsWith("jpg") -> "image/jpeg"
+            url.endsWith("gif") -> "image/gif"
             else -> null
         }

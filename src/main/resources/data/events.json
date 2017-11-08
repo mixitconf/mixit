@@ -9,75 +9,75 @@
         "id": "mixit12",
         "sponsors": [
             {
-                "level": "NONE",
+                "level": "GOLD",
                 "sponsorId": "Zenika Lyon",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "GOLD",
                 "sponsorId": "Sqli",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "GOLD",
                 "sponsorId": "VISEO",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "Yseop",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
-                "sponsorId": "terre.dagile",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "woonoz",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
-                "sponsorId": "thales",
+                "level": "SILVER",
+                "sponsorId": "terre.dagile",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "GOLD",
                 "sponsorId": "google",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
+                ]
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "thales",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    8
                 ]
             }
         ],
@@ -98,93 +98,93 @@
         "id": "mixit13",
         "sponsors": [
             {
-                "level": "NONE",
+                "level": "GOLD",
                 "sponsorId": "Zenika Lyon",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "Sqli",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "GOLD",
                 "sponsorId": "VISEO",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "terre.dagile",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "woonoz",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "thales",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "google",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "sonarsource",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "elasticsearch",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "GitHub",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             }
         ],
@@ -205,147 +205,147 @@
         "id": "mixit14",
         "sponsors": [
             {
-                "level": "NONE",
-                "sponsorId": "Zenika Lyon",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
-                "sponsorId": "VISEO",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "terre.dagile",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "GOLD",
+                "sponsorId": "Zenika Lyon",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    8
+                ]
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "VISEO",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    8
+                ]
+            },
+            {
+                "level": "SILVER",
                 "sponsorId": "woonoz",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "google",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
-                "sponsorId": "GitHub",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
+                "level": "GOLD",
                 "sponsorId": "cgi",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "GOLD",
                 "sponsorId": "steria",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "SILVER",
+                "sponsorId": "GitHub",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    8
+                ]
+            },
+            {
+                "level": "SILVER",
                 "sponsorId": "SerliFr",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "GOLD",
                 "sponsorId": "Open_ESN",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "econocom-osiatis",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "Mozilla",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "VersionOne",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
-                "sponsorId": "Redhat",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "Atlassian",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "SILVER",
+                "sponsorId": "Redhat",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    8
+                ]
+            },
+            {
+                "level": "SILVER",
                 "sponsorId": "Mailjet",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             }
         ],
@@ -366,147 +366,147 @@
         "id": "mixit15",
         "sponsors": [
             {
-                "level": "NONE",
-                "sponsorId": "VISEO",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "woonoz",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "GOLD",
+                "sponsorId": "VISEO",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    8
+                ]
+            },
+            {
+                "level": "SILVER",
                 "sponsorId": "google",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "cgi",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
-                "sponsorId": "Sopra Steria",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
-                "sponsorId": "neosoftlyon",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "FIDUCIAL",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "SII_rhonealpes",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
-                "sponsorId": "XebiaLabs",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "alfene",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
-                "sponsorId": "Enalean",
+                "level": "GOLD",
+                "sponsorId": "Sopra Steria",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "ERDF-Linky",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
-                "sponsorId": "stormshield",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
-                "sponsorId": "WorldlineFrance",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "Elao",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "sourcingisr",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
+                ]
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "WorldlineFrance",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    8
+                ]
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "neosoftlyon",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    8
+                ]
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "XebiaLabs",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    8
+                ]
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Enalean",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    8
+                ]
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "stormshield",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    8
                 ]
             }
         ],
@@ -527,219 +527,210 @@
         "id": "mixit16",
         "sponsors": [
             {
-                "level": "NONE",
+                "level": "GOLD",
                 "sponsorId": "Zenika Lyon",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "GOLD",
                 "sponsorId": "Sopra Steria",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "GOLD",
                 "sponsorId": "annick.challancin@esker.fr",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "GOLD",
                 "sponsorId": "VISEO",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
-                "sponsorId": "WorldlineFrance",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
-                "sponsorId": "Sword",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
-                "sponsorId": "stormshield",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
-                "sponsorId": "Redhat",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "ERDF-Linky",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
-                "sponsorId": "cgi",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
+                "level": "SILVER",
                 "sponsorId": "sonarsource",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
+                "level": "GOLD",
+                "sponsorId": "Redhat",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    8
+                ]
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Sword",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    8
+                ]
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "cgi",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    8
+                ]
+            },
+            {
+                "level": "SILVER",
                 "sponsorId": "econocom-osiatis",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
-                "sponsorId": "sourcingisr",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
-                "sponsorId": "SII_rhonealpes",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
-                "sponsorId": "1338530083",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
-                "sponsorId": "stackoverflow",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
-                "sponsorId": "alfene",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
-                "sponsorId": "amaris",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
-                "sponsorId": "boot-start",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
-                "sponsorId": "hired",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
-                "sponsorId": "onlylyon",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
-                "sponsorId": "pivotal",
-                "subscriptionDate": [
-                    2017,
-                    2,
-                    28
-                ]
-            },
-            {
-                "level": "NONE",
+                "level": "VIDEO",
                 "sponsorId": "infoq",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
                 ]
             },
             {
-                "level": "NONE",
-                "sponsorId": "lyontechhub",
+                "level": "SILVER",
+                "sponsorId": "SII_rhonealpes",
                 "subscriptionDate": [
                     2017,
-                    2,
-                    28
+                    11,
+                    8
+                ]
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "sourcingisr",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    8
+                ]
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "WorldlineFrance",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    8
+                ]
+            },
+            {
+                "level": "LANYARD",
+                "sponsorId": "hired",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    8
+                ]
+            },
+            {
+                "level": "PARTY",
+                "sponsorId": "onlylyon",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    8
+                ]
+            },
+            {
+                "level": "HOSTING",
+                "sponsorId": "pivotal",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    8
+                ]
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "stormshield",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    8
+                ]
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "stackoverflow",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    8
+                ]
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "alfene",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    8
+                ]
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "boot-start",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    8
+                ]
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "amaris",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    8
+                ]
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "1338530083",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    8
                 ]
             }
         ],
@@ -1053,6 +1044,24 @@
                     2017,
                     11,
                     6
+                ]
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "semarchy",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    7
+                ]
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "datagalaxy",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    1
                 ]
             }
         ],

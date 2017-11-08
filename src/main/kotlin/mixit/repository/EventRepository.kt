@@ -2,7 +2,7 @@ package mixit.repository
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import mixit.model.*
+import mixit.model.Event
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.domain.Sort
@@ -37,5 +37,7 @@ class EventRepository(private val template: ReactiveMongoTemplate,
     fun deleteAll() = template.remove<Event>(Query())
 
     fun save(event: Event) = template.save(event)
+
+    fun findByYear(year: Int) = template.findOne<Event>(Query(Criteria.where("year").isEqualTo(year)))
 
 }
