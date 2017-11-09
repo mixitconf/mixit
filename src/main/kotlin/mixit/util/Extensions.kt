@@ -5,7 +5,8 @@ import org.springframework.boot.SpringApplication
 import org.springframework.http.MediaType.*
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
-import org.springframework.web.reactive.function.server.ServerResponse.*
+import org.springframework.web.reactive.function.server.ServerResponse.permanentRedirect
+import org.springframework.web.reactive.function.server.ServerResponse.seeOther
 import java.net.URI
 import java.text.Normalizer
 import java.time.LocalDateTime
@@ -33,7 +34,7 @@ fun ServerRequest.language() =
         Language.findByTag(this.headers().asHttpHeaders().acceptLanguageAsLocales.first().language)
 
 fun ServerRequest.locale(): Locale =
-        this.headers().asHttpHeaders().acceptLanguageAsLocales.first() ?: Locale.ENGLISH
+        this.headers().asHttpHeaders().contentLanguage ?: Locale.ENGLISH
 
 fun ServerResponse.BodyBuilder.json() = contentType(APPLICATION_JSON_UTF8)
 

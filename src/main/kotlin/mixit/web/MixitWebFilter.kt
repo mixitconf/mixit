@@ -5,6 +5,7 @@ import mixit.model.Role
 import mixit.repository.UserRepository
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpHeaders.ACCEPT_LANGUAGE
+import org.springframework.http.HttpHeaders.CONTENT_LANGUAGE
 import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Component
 import org.springframework.web.server.ServerWebExchange
@@ -62,7 +63,7 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
                                             else {
                                                 chain.filter(exchange.mutate().request(exchange.request.mutate()
                                                         .path(uriPath)
-                                                        .header(ACCEPT_LANGUAGE, if (languageEn) "en" else "fr").build())
+                                                        .header(CONTENT_LANGUAGE, if (languageEn) "en" else "fr").build())
                                                         .build())
                                             }
                                         } else {
@@ -76,7 +77,7 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
                 } else {
                     chain.filter(exchange.mutate().request(exchange.request.mutate()
                             .path(uriPath)
-                            .header(ACCEPT_LANGUAGE, if (languageEn) "en" else "fr").build())
+                            .header(CONTENT_LANGUAGE, if (languageEn) "en" else "fr").build())
                             .build())
                 }
             }
