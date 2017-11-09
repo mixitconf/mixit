@@ -48,12 +48,12 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
         GET("/blog/feed", blogHandler::feed)
 
         accept(TEXT_HTML).nest {
-            GET("/") { sponsorHandler.viewWithSponsors("home", 2018, false, it) }
+            GET("/") { sponsorHandler.viewWithSponsors("home", null, 2018, false, it) }
             GET("/about", globalHandler::findAboutView)
             GET("/news", newsHandler::newsView)
             GET("/ticketing", ticketingHandler::ticketing)
-            GET("/sponsors") { sponsorHandler.viewWithSponsors("sponsors", 2018, false, it) }
-            GET("/mixteen", globalHandler::mixteenView)
+            GET("/sponsors") { sponsorHandler.viewWithSponsors("sponsors", "sponsors.title", 2018, false, it) }
+            GET("/mixteen",  { sponsorHandler.viewWithSponsors("mixteen", "mixteen.title", 2018, false, it) })
             GET("/faq", globalHandler::faqView)
             GET("/come", globalHandler::comeToMixitView)
             GET("/schedule", globalHandler::scheduleView)
@@ -64,7 +64,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
 
             // Sponsors
             eventRepository.findAll().toIterable().map { it.year }.forEach { year ->
-                GET("/sponsors/$year") { sponsorHandler.viewWithSponsors("sponsors", year, false, it) }
+                GET("/sponsors/$year") { sponsorHandler.viewWithSponsors("sponsors", "sponsors.title", year, false, it) }
             }
 
             // Talks

@@ -18,7 +18,7 @@ class SponsorHandler(private val userRepository: UserRepository,
                      private val eventRepository: EventRepository,
                      private val markdownConverter: MarkdownConverter) {
 
-    fun viewWithSponsors(view: String, year: Int, subPath: Boolean ,req: ServerRequest) = eventRepository.findByYear(year)
+    fun viewWithSponsors(view: String, title: String?, year: Int, subPath: Boolean ,req: ServerRequest) = eventRepository.findByYear(year)
             .flatMap { event ->
                 userRepository.findMany(event.sponsors.map { it.sponsorId }).collectMap(User::login).flatMap { sponsorsByLogin ->
                     val sponsorsByEvent = event.sponsors.groupBy { it.level }
@@ -32,7 +32,7 @@ class SponsorHandler(private val userRepository: UserRepository,
                             Pair("sponsors-mixteen", sponsorsByEvent[SponsorshipLevel.MIXTEEN]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
                             Pair("sponsors-party", sponsorsByEvent[SponsorshipLevel.PARTY]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
                             Pair("sponsors-video", sponsorsByEvent[SponsorshipLevel.VIDEO]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
-                            Pair("title", if (!view.equals("home")) "sponsors.title|$year" else null)
+                            Pair("title", if (!view.equals("sponsors")) title else "$title|$year")
                     ))
                 }
             }
