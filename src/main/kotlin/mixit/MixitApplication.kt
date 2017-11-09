@@ -2,9 +2,9 @@ package mixit
 
 import com.samskivert.mustache.Mustache
 import com.samskivert.mustache.Mustache.TemplateLoader
-import mixit.util.run
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.properties.EnableConfigurationProperties
+import org.springframework.boot.runApplication
 import org.springframework.context.annotation.Bean
 
 
@@ -19,5 +19,5 @@ class MixitApplication {
 }
 
 fun main(args: Array<String>) {
-    run(MixitApplication::class, *args)
+    runApplication<MixitApplication>(*args)
 }

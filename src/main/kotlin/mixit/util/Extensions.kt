@@ -1,7 +1,6 @@
 package mixit.util
 
 import mixit.model.Language
-import org.springframework.boot.SpringApplication
 import org.springframework.http.MediaType.*
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
@@ -17,13 +16,6 @@ import java.time.temporal.ChronoField
 import java.util.*
 import java.util.stream.Collectors
 import java.util.stream.IntStream
-import kotlin.reflect.KClass
-
-// ----------------------
-// Spring Boot extensions
-// ----------------------
-
-fun run(type: KClass<*>, vararg args: String) = SpringApplication.run(type.java, *args)
 
 // -------------------------
 // Spring WebFlux extensions
