@@ -29,7 +29,7 @@ developed with Spring Boot 2, Spring WebFlux and Kotlin can look like:
  
 ### TODO
 
- - Use [Kotlin Javascript](https://kotlinlang.org/docs/reference/js-overview.html) with []dead code elimination](https://kotlinlang.org/docs/reference/javascript-dce.html) tool  
+ - Use [Kotlin Javascript](https://kotlinlang.org/docs/reference/js-overview.html) with [dead code elimination](https://kotlinlang.org/docs/reference/javascript-dce.html) tool  
  
 ## Developer guide
 
