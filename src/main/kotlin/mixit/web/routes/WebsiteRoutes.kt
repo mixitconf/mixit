@@ -76,6 +76,8 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
                 GET("/$year/design") { talkHandler.findByEventView(year, it, "design") }
                 GET("/$year/hacktivism") { talkHandler.findByEventView(year, it, "hacktivism") }
                 GET("/$year/learn") { talkHandler.findByEventView(year, it, "learn") }
+                GET("/$year/videos") { talkHandler.findVideoByEventView(year, it) }
+                GET("/$year/videos/{topic}") { talkHandler.findVideoTopicByEventView(year, it) }
                 GET("/$year/{slug}") { talkHandler.findOneView(year, it) }
             }
 

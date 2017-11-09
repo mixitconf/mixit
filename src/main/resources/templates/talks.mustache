@@ -16,6 +16,7 @@
                     </ul>
                 </li>
             </ul>
+            <p>{{#i18n}}talks.videos.see{{/i18n}} <a href="{{localePrefix}}/{{year}}/videos{{#topic}}/{{topic}}{{/topic}}">{{#i18n}}talks.videos{{/i18n}}</a></p>
         </div>
     </div>
 </div>
@@ -74,9 +75,19 @@
                 </ul>
             </div>
         {{/talks.entrySet}}
+        {{^talks.entrySet}}
+        <div class="columns small-12 medium-12 large-12 callout">
+            <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+        </div>
+        {{/talks.entrySet}}
         {{#sponsors}}
             <hr/>
             <div class="small-up-3 medium-up-6 align-center align-middle">
+                {{#sponsors-gold}}
+                    <div class="columns text-center">
+                        {{> home-sponsor }}
+                    </div>
+                {{/sponsors-gold}}
                 {{#sponsors-lanyard}}
                     <div class="columns text-center">
                         {{> home-sponsor }}

@@ -77,6 +77,11 @@
         {{#sponsors}}
             <hr/>
             <div class="small-up-3 medium-up-6 align-center align-middle">
+                {{#sponsors-gold}}
+                    <div class="columns text-center">
+                        {{> talk-sponsor }}
+                    </div>
+                {{/sponsors-gold}}
                 {{#sponsors-lanyard}}
                     <div class="columns text-center">
                         {{> talk-sponsor }}

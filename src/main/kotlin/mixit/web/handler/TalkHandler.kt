@@ -7,6 +7,7 @@ import mixit.repository.TalkRepository
 import mixit.repository.UserRepository
 import mixit.util.*
 import org.springframework.stereotype.Component
+import org.springframework.util.StringUtils
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
@@ -65,6 +66,32 @@ class TalkHandler(private val repository: TalkRepository,
         }
     }
 
+    fun findVideoTopicByEventView(year: Int, req: ServerRequest): Mono<ServerResponse> = findVideoByEventView(year, req, req.pathVariable("topic"))
+
+    fun findVideoByEventView(year: Int, req: ServerRequest, topic: String? = null): Mono<ServerResponse> {
+        val talks = repository
+                .findByEvent(year.toString(), topic)
+                .filter { !StringUtils.isEmpty(it.video) }
+                .collectList()
+                .flatMap { talks ->
+                    userRepository
+                            .findMany(talks.flatMap { it.speakerIds })
+                            .collectMap(User::login)
+                            .map { speakers -> talks.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] }) } }
+                }
+
+        val sponsors = eventSponsors(year, req)
+
+        return ok().render("videos", mapOf(
+                Pair("talks", talks),
+                Pair("topic", topic),
+                Pair("year", year),
+                Pair("title", "videos.title.html|$year"),
+                Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
+                Pair("sponsors", sponsors)
+        ))
+    }
+
     private fun eventSponsors(year: Int, req: ServerRequest) = eventRepository
             .findByYear(year)
             .flatMap { event ->
@@ -112,6 +139,7 @@ class TalkDto(
         val description: String?,
         val topic: String?,
         val video: String?,
+        val vimeoPlayer: String?,
         val room: String?,
         val start: String?,
         val end: String?,
@@ -121,9 +149,13 @@ class TalkDto(
 )
 
 fun Talk.toDto(lang: Language, speakers: List<User>) = TalkDto(
-        id, slug, format, event, title,
-        summary, speakers, language.name.toLowerCase(), addedAt,
-        description, topic,
-        video, "rooms.${room?.name?.toLowerCase()}", start?.formatTalkTime(lang), end?.formatTalkTime(lang),
-        start?.formatTalkDate(lang)
-)
+            id, slug, format, event, title,
+            summary, speakers, language.name.toLowerCase(), addedAt,
+            description, topic,
+            video,
+            if (video?.startsWith("https://vimeo.com/") == true) video.replace("https://vimeo.com/", "https://player.vimeo.com/video/") else null,
+            "rooms.${room?.name?.toLowerCase()}",
+            start?.formatTalkTime(lang),
+            end?.formatTalkTime(lang),
+            start?.formatTalkDate(lang)
+    )

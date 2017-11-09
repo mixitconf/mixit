@@ -1,0 +1,129 @@
+{{> header}}
+
+<div class="mxt-wrapper--talks">
+    <div class="row">
+        <div class="columns large-8 large-offset-2 menu-centered text-center">
+            <ul class="dropdown menu simple mxt-menu--talks" data-dropdown-menu>
+                <li class="mxt-menu--talks-title"><h1>{{#i18n}}videos.title{{/i18n}}</h1></li>
+                <li><a href="#" class="mxt-menu--talks-date"><h1>{{year}}</h1></a>
+                    <ul class="menu">
+                        <li><a href="{{localePrefix}}/2017/videos">2017</a></li>
+                        <li><a href="{{localePrefix}}/2016/videos">2016</a></li>
+                        <li><a href="{{localePrefix}}/2015/videos">2015</a></li>
+                        <li><a href="{{localePrefix}}/2014/videos">2014</a></li>
+                        <li><a href="{{localePrefix}}/2013/videos">2013</a></li>
+                        <li><a href="{{localePrefix}}/2012/videos">2012</a></li>
+                    </ul>
+                </li>
+                <p class="text-center">{{#i18n}}videos.text{{/i18n}}</p>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="mxt-wrapper--page-content">
+    <div class="row">
+        <div class="columns small-12 medium-12 large-12 callout">
+            {{#talks}}
+                <ul class="accordion" data-accordion>
+                    <li class="accordion-item" data-accordion-item>
+                        <!-- Accordion tab title -->
+                        <a href="#" class="accordion-title">
+                            {{#topic}}
+                                <div class="mxt-text--cat mxt-text--cat-{{topic}}">
+                                    <img src="/images/svg/mxt-icon--{{topic}}.svg" class="mxt-icon--cat mxt-icon--cat__talks"
+                                         alt="{{#i18n}}home.topics.{{topic}}.title{{/i18n}}"/>
+                                    <span>{{#i18n}}home.topics.{{topic}}.title{{/i18n}}</span>
+                                </div>{{/topic}}
+                            <h3 class="mxt-text--talktitle">{{title}}{{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}</h3>
+                            <ul class="menu simple mxt-menu--accordion">
+                                <!--<li>{{#start}}{{start}}{{/start}} - {{#end}}{{end}}{{/end}}</li>-->
+                                {{#video}}
+                                    <li><strong>&#x25ba; {{#i18n}}videos.plus.html{{/i18n}}</strong></li>{{/video}}
+                                {{^isTalk}}
+                                    <li class="mxt-text--cat-format">#{{format}}</li>{{/isTalk}}
+                            </ul>
+                        </a>
+                        <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+                        <div class="accordion-content" data-tab-content>
+                            <div class="row">
+                                <div class="small-7 medium-9 large-8 columns">
+                                    <p class="mxt-text--cat-room">{{#i18n}}{{room}}{{/i18n}}</p>
+                                    <div>{{#markdown}}{{summary}}{{/markdown}}</div>
+                                    {{#video}}
+                                        <hr/>
+                                        {{#vimeoPlayer}}
+                                            <div class="mxt-wrapper--intrinsic">
+                                                <iframe src="{{vimeoPlayer}}" class="mxt-wrapper--video-player" allowfullscreen></iframe>
+                                            </div>
+                                        {{/vimeoPlayer}}
+                                        {{^vimeoPlayer}}
+                                            &#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{video}}" target="_blank">{{#i18n}}talk.video.thevideo{{/i18n}}</a>
+                                        {{/vimeoPlayer}}
+                                    {{/video}}
+                                </div>
+                                <div class="small-5 medium-3 large-4 columns text-center">
+                                    <ul class="menu vertical">
+                                        {{#speakers}}
+                                            <li class="menu-text">
+                                                <div class="mxt-img-avatar__wrapper"><img
+                                                        src="{{^emailHash}}{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{/emailHash}}{{#emailHash}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/emailHash}}"
+                                                        class="mxt-img-avatar__speaker"></div>
+                                                <span>{{firstname}}&nbsp;{{lastname}}</span>
+                                            </li>
+                                        {{/speakers}}
+                                    </ul>
+                                    <hr/>
+                                    <a href="{{localePrefix}}/{{event}}/{{slug}}" class="button hollow">{{#i18n}}talks.readmore{{/i18n}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            {{/talks}}
+        </div>
+        {{#sponsors}}
+            <hr/>
+            <div class="small-up-3 medium-up-6 align-center align-middle">
+                {{#sponsors-gold}}
+                    <div class="columns text-center">
+                        {{> talk-sponsor }}
+                    </div>
+                {{/sponsors-gold}}
+                {{#sponsors-lanyard}}
+                    <div class="columns text-center">
+                        {{> talk-sponsor }}
+                    </div>
+                {{/sponsors-lanyard}}
+                {{#sponsors-party}}
+                    <div class="columns text-center">
+                        {{> talk-sponsor }}
+                    </div>
+                {{/sponsors-party}}
+                {{#sponsors-silver}}
+                    <div class="columns columns-block text-center">
+                        {{> talk-sponsor }}
+                    </div>
+                {{/sponsors-silver}}
+                {{#sponsors-mixteen}}
+                    <div class="columns columns-block text-center">
+                        {{> talk-sponsor }}
+                    </div>
+                {{/sponsors-mixteen}}
+                {{#sponsors-hosting}}
+                    <div class="columns text-center">
+                        {{> talk-sponsor }}
+                    </div>
+                {{/sponsors-hosting}}
+                {{#sponsors-video}}
+                    <div class="columns text-center">
+                        {{> talk-sponsor }}
+                    </div>
+                {{/sponsors-video}}
+            </div>
+        {{/sponsors}}
+    </div>
+</div>
+
+{{> footer}}
