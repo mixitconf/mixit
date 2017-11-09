@@ -18,11 +18,13 @@ class SponsorHandler(private val userRepository: UserRepository,
                      private val eventRepository: EventRepository,
                      private val markdownConverter: MarkdownConverter) {
 
-    fun viewWithSponsors(view: String, title: String?, req: ServerRequest) = eventRepository.findOne("mixit18")
+    fun viewWithSponsors(view: String, year: Int, subPath: Boolean ,req: ServerRequest) = eventRepository.findByYear(year)
             .flatMap { event ->
                 userRepository.findMany(event.sponsors.map { it.sponsorId }).collectMap(User::login).flatMap { sponsorsByLogin ->
                     val sponsorsByEvent = event.sponsors.groupBy { it.level }
                     ServerResponse.ok().render(view, mapOf(
+                            Pair("year", year),
+                            Pair("imagepath", if (subPath) "../" else "/"),
                             Pair("sponsors-gold", sponsorsByEvent[SponsorshipLevel.GOLD]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
                             Pair("sponsors-silver", sponsorsByEvent[SponsorshipLevel.SILVER]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
                             Pair("sponsors-hosting", sponsorsByEvent[SponsorshipLevel.HOSTING]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
@@ -30,11 +32,10 @@ class SponsorHandler(private val userRepository: UserRepository,
                             Pair("sponsors-mixteen", sponsorsByEvent[SponsorshipLevel.MIXTEEN]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
                             Pair("sponsors-party", sponsorsByEvent[SponsorshipLevel.PARTY]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
                             Pair("sponsors-video", sponsorsByEvent[SponsorshipLevel.VIDEO]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
-                            Pair("title", title)
+                            Pair("title", if (!view.equals("home")) "sponsors.title|$year" else null)
                     ))
                 }
             }
-            .switchIfEmpty(ServerResponse.ok().render(view, mapOf(Pair("title", title))))
 }
 
 class EventSponsoringDto(

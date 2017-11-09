@@ -12,9 +12,10 @@ import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.DependsOn
 import org.springframework.core.io.ClassPathResource
 import org.springframework.http.MediaType.*
-import org.springframework.web.reactive.function.server.*
+import org.springframework.web.reactive.function.server.RenderingResponse
 import org.springframework.web.reactive.function.server.RouterFunctions.resources
 import org.springframework.web.reactive.function.server.ServerResponse.ok
+import org.springframework.web.reactive.function.server.router
 import reactor.core.publisher.toMono
 import java.util.*
 
@@ -37,8 +38,8 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
     private val logger = LoggerFactory.getLogger(WebsiteRoutes::class.java)
 
     companion object {
-        val securedAdminUrl:List<String> = listOf("/admin")
-        val securedUrl:List<String> = listOf("/schedule")
+        val securedAdminUrl: List<String> = listOf("/admin")
+        val securedUrl: List<String> = listOf("/schedule")
     }
 
     @Bean
@@ -47,11 +48,11 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
         GET("/blog/feed", blogHandler::feed)
 
         accept(TEXT_HTML).nest {
-            GET("/") { sponsorHandler.viewWithSponsors("home", null, it) }
+            GET("/") { sponsorHandler.viewWithSponsors("home", 2018, false, it) }
             GET("/about", globalHandler::findAboutView)
             GET("/news", newsHandler::newsView)
             GET("/ticketing", ticketingHandler::ticketing)
-            GET("/sponsors") { sponsorHandler.viewWithSponsors("sponsors", "sponsors.title", it) }
+            GET("/sponsors") { sponsorHandler.viewWithSponsors("sponsors", 2018, false, it) }
             GET("/mixteen", globalHandler::mixteenView)
             GET("/faq", globalHandler::faqView)
             GET("/come", globalHandler::comeToMixitView)
@@ -60,6 +61,11 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
             // Authentication
             GET("/login", authenticationHandler::loginView)
             GET("/disconnect", authenticationHandler::logout)
+
+            // Sponsors
+            eventRepository.findAll().toIterable().map { it.year }.forEach { year ->
+                GET("/sponsors/$year") { sponsorHandler.viewWithSponsors("sponsors", year, false, it) }
+            }
 
             // Talks
             eventRepository.findAll().toIterable().map { it.year }.forEach { year ->
@@ -130,11 +136,11 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
             }
         }
     }.filter { request, next ->
-        val locale : Locale = request.locale()
+        val locale: Locale = request.locale()
         val session = request.session().block()!!
         val path = request.uri().path
         val model = generateModel(properties, path, locale, session, messageSource, markdownConverter)
-                next.handle(request).flatMap { if (it is RenderingResponse) RenderingResponse.from(it).modelAttributes(model).build() else it.toMono() }
+        next.handle(request).flatMap { if (it is RenderingResponse) RenderingResponse.from(it).modelAttributes(model).build() else it.toMono() }
     }
 
     @Bean

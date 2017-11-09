@@ -3,14 +3,15 @@
 <div class="mxt-wrapper--page-title">
     <div class="row">
         <div class="columns large-12 menu-centered">
-                <ul class="menu center">
+            <ul class="menu center">
                 {{#speakers}}
                     <li class="menu-text">
-                        <img src="{{^emailHash}}{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{/emailHash}}{{#emailHash}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/emailHash}}" class="mxt-img-avatar__speaker">
+                        <img src="{{^emailHash}}{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{/emailHash}}{{#emailHash}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/emailHash}}"
+                             class="mxt-img-avatar__speaker">
                         <div>{{firstname}}&nbsp;{{lastname}}</div>
                     </li>
                 {{/speakers}}
-                </ul>
+            </ul>
         </div>
     </div>
 </div>
@@ -20,15 +21,15 @@
         <div class="column large-12">
             <article class="callout">
                 <h1 class="text-center mxt-title--talk">{{talk.title}}</h1>
-                <hr />
+                <hr/>
                 <p>{{#markdown}}{{talk.summary}}{{/markdown}}</p>
                 {{#talk.description}}
-                    <hr />
+                    <hr/>
                     <p>{{#markdown}}{{talk.description}}{{/markdown}}</p>
                 {{/talk.description}}
                 <p class="subheader"><strong>
                     {{#talk.video}}
-                        <hr />
+                        <hr/>
                         {{#vimeoPlayer}}
                             <div class="mxt-wrapper--intrinsic">
                                 <iframe src="{{vimeoPlayer}}" class="mxt-wrapper--video-player" allowfullscreen></iframe>
@@ -39,19 +40,23 @@
                         {{/vimeoPlayer}}
                     {{/talk.video}}
                 </strong></p>
-                <hr />
+                <hr/>
                 <div class="row">
                     <div class="small-12 medium-4 medium-push-8 columns mxt-wrapper--talk-details">
-                        {{#talk.topic}}<a href="{{localePrefix}}/{{talk.event}}/{{talk.topic}}"><img src="/images/svg/mxt-icon--{{talk.topic}}.svg" class="mxt-icon--cat mxt-icon--cat__talks" alt="{{#i18n}}home.topics.{{talk.topic}}.title{{/i18n}}"></a>
-                        <p class="mxt-text--cat mxt-text--cat5">{{#i18n}}home.topics.{{talk.topic}}.title{{/i18n}}</p>
-                        <p>—</p>{{/talk.topic}}
+                        {{#talk.topic}}
+                            <a href="{{localePrefix}}/{{talk.event}}/{{talk.topic}}"><img src="/images/svg/mxt-icon--{{talk.topic}}.svg" class="mxt-icon--cat mxt-icon--cat__talks"
+                                                                                          alt="{{#i18n}}home.topics.{{talk.topic}}.title{{/i18n}}"></a>
+                            <p class="mxt-text--cat mxt-text--cat5">{{#i18n}}home.topics.{{talk.topic}}.title{{/i18n}}</p>
+                            <p>—</p>{{/talk.topic}}
                         <div><strong>#{{talk.format}}</strong> {{#i18n}}talk.in{{/i18n}} {{#i18n}}talk.language.{{talk.language}}{{/i18n}}</div>
                         <ul class="menu vertical">
                             <li>{{#talk.date}}{{talk.date}}{{/talk.date}}</li>
                             <li>{{#talk.start}}{{talk.start}} - {{talk.end}}{{/talk.start}}</li>
                             <li>{{#i18n}}{{talk.room}}{{/i18n}}</li>
                         </ul>
-                        <div class="show-for-small-only"><hr /></div>
+                        <div class="show-for-small-only">
+                            <hr/>
+                        </div>
                     </div>
                     <div class="small-12 medium-8 medium-pull-4 columns">
                         {{#speakers}}
@@ -70,7 +75,7 @@
         </div>
         {{#sponsors}}
             <hr/>
-            <div class="row small-up-3 medium-up-6 align-center align-middle">
+            <div class="small-up-3 medium-up-6 align-center align-middle">
                 {{#sponsors-lanyard}}
                     <div class="columns text-center">
                         {{> talk-sponsor }}

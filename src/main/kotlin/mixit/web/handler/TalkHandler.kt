@@ -25,7 +25,6 @@ class TalkHandler(private val repository: TalkRepository,
                   private val markdownConverter: MarkdownConverter) {
 
     fun findByEventView(year: Int, req: ServerRequest, topic: String? = null): Mono<ServerResponse> {
-
         val talks = repository
                 .findByEvent(year.toString(), topic)
                 .collectList()

@@ -1,0 +1,18 @@
+<div class="row align-middle">
+    <div class="small-12 medium-4 columns text-center">
+        <picture>
+            {{#sponsor.logoWebpUrl}}<source srcset="{{imagepath}}{{sponsor.logoWebpUrl}}" type=" image/webp" alt="{{sponsor.company}}" class="mxt-img--sponsors">{{/sponsor.logoWebpUrl}}
+            <source srcset="{{imagepath}}{{sponsor.photoUrl}}" type="{{sponsor.logoType}}" alt="{{sponsor.company}}" class="mxt-img--sponsors">
+            <img src="{{imagepath}}{{sponsor.photoUrl}}" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}} alt="{{sponsor.company}}" class="mxt-img--sponsors">
+        </picture>
+    </div>
+    <div class="small-12 medium-8 columns">
+        <h3 class="subheader">{{sponsor.company}}</h3>
+        {{#markdown}}{{sponsor.description}}{{/markdown}}
+        <ul class="menu simple">
+            {{#sponsor.links}}
+                <li><a href="{{url}}" target="_blank">{{name}}</a></li>
+            {{/sponsor.links}}
+        </ul>
+    </div>
+</div>
