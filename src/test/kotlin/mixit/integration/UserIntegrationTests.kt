@@ -4,13 +4,22 @@ import mixit.model.Role
 import mixit.model.User
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.extension.ExtendWith
+import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.boot.web.server.LocalServerPort
 import org.springframework.http.MediaType.APPLICATION_JSON
+import org.springframework.test.context.junit.jupiter.SpringExtension
+import org.springframework.web.reactive.function.client.WebClient
 import org.springframework.web.reactive.function.client.bodyToFlux
 import org.springframework.web.reactive.function.client.bodyToMono
 import reactor.test.test
 
 
-class UserIntegrationTests : AbstractIntegrationTests() {
+@ExtendWith(SpringExtension::class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+class UserIntegrationTests(@LocalServerPort port: Int) {
+
+    private val client = WebClient.create("http://localhost:$port")
 
     @Test
     fun `Create a new user`() {

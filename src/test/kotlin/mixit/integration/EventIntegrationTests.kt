@@ -3,13 +3,22 @@ package mixit.integration
 import mixit.model.Event
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.extension.ExtendWith
+import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.boot.web.server.LocalServerPort
 import org.springframework.http.MediaType.APPLICATION_JSON
+import org.springframework.test.context.junit.jupiter.SpringExtension
+import org.springframework.web.reactive.function.client.WebClient
 import org.springframework.web.reactive.function.client.bodyToMono
 import org.springframework.web.reactive.function.client.bodyToFlux
 import reactor.test.test
 
 
-class EventIntegrationTests : AbstractIntegrationTests() {
+@ExtendWith(SpringExtension::class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+class EventIntegrationTests(@LocalServerPort port: Int) {
+
+    private val client = WebClient.create("http://localhost:$port")
 
     @Test
     fun `Find MiXiT 2016 event`() {
