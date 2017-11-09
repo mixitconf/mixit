@@ -22,6 +22,7 @@
             <article class="callout">
                 <h1 class="text-center mxt-title--talk">{{talk.title}}</h1>
                 <hr/>
+                {{#admin}}<a href="/admin/talks/edit/{{talk.slug}}">{{#i18n}}admin.talks.actions.update{{/i18n}}</a> <br />{{/admin}}
                 <p>{{#markdown}}{{talk.summary}}{{/markdown}}</p>
                 {{#talk.description}}
                     <hr/>
