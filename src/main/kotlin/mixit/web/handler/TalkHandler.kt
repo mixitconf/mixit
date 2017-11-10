@@ -66,9 +66,9 @@ class TalkHandler(private val repository: TalkRepository,
         }
     }
 
-    fun findVideoTopicByEventView(year: Int, req: ServerRequest): Mono<ServerResponse> = findVideoByEventView(year, req, req.pathVariable("topic"))
+    fun findMediaTopicByEventView(year: Int, req: ServerRequest): Mono<ServerResponse> = findMediaByEventView(year, req, req.pathVariable("topic"))
 
-    fun findVideoByEventView(year: Int, req: ServerRequest, topic: String? = null): Mono<ServerResponse> {
+    fun findMediaByEventView(year: Int, req: ServerRequest, topic: String? = null): Mono<ServerResponse> {
         val talks = repository
                 .findByEvent(year.toString(), topic)
                 .filter { !StringUtils.isEmpty(it.video) }
@@ -80,15 +80,17 @@ class TalkHandler(private val repository: TalkRepository,
                             .map { speakers -> talks.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] }) } }
                 }
 
+        val event = eventRepository.findByYear(year)
         val sponsors = eventSponsors(year, req)
 
-        return ok().render("videos", mapOf(
+        return ok().render("medias", mapOf(
                 Pair("talks", talks),
                 Pair("topic", topic),
                 Pair("year", year),
-                Pair("title", "videos.title.html|$year"),
+                Pair("title", "medias.title.html|$year"),
                 Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
-                Pair("sponsors", sponsors)
+                Pair("sponsors", sponsors),
+                Pair("event", event)
         ))
     }
 

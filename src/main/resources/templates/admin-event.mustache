@@ -48,6 +48,22 @@
                         <div class="row">
                             <div class="large-12 columns">
                                 <label>
+                                    {{#i18n}}admin.event.form.photosUrl{{/i18n}}
+                                    <input type="text" name="photosUrl" {{#event.photosUrl}}value="{{event.photosUrl}}"{{/event.photosUrl}}/>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <label>
+                                    {{#i18n}}admin.event.form.videosUrl{{/i18n}}
+                                    <input type="text" name="videosUrl" {{#event.videosUrl}}value="{{event.videosUrl}}"{{/event.videosUrl}}/>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns">
+                                <label>
                                     {{#i18n}}admin.event.form.current{{/i18n}}&nbsp;
                                     <input type="checkbox" name="current" value="true" {{#event.current}}checked{{/event.current}}/>
                                 </label>

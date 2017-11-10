@@ -10,7 +10,9 @@ data class Event(
         val start: LocalDate,
         val end: LocalDate,
         val current: Boolean = false,
-        val sponsors: List<EventSponsoring> = emptyList()
+        val sponsors: List<EventSponsoring> = emptyList(),
+        val photosUrl: String? = null,
+        val videosUrl: String? = null
 ) {
     val year: Int = start.year
 }
