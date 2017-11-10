@@ -3,16 +3,18 @@ package mixit.repository
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.model.Talk
+import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
+import org.springframework.data.domain.Sort.Direction.ASC
+import org.springframework.data.domain.Sort.Order
+import org.springframework.data.domain.Sort.by
+import org.springframework.data.mongodb.core.*
+import org.springframework.data.mongodb.core.query.Criteria.where
 import org.springframework.data.mongodb.core.query.Query
+import org.springframework.data.mongodb.core.query.inValues
+import org.springframework.data.mongodb.core.query.isEqualTo
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
-import org.slf4j.LoggerFactory
-import org.springframework.data.domain.Sort.*
-import org.springframework.data.domain.Sort.Direction.*
-import org.springframework.data.mongodb.core.*
-import org.springframework.data.mongodb.core.query.Criteria.*
-import org.springframework.data.mongodb.core.query.isEqualTo
 
 
 @Repository
@@ -40,6 +42,11 @@ class TalkRepository(private val template: ReactiveMongoTemplate,
         return template.find<Talk>(Query(criteria).with(by(Order(ASC, "start"))))
     }
 
+    fun findBySpeakerId(speakerIds: List<String>, talkIdExcluded: String? = null): Flux<Talk> {
+        val criteria = where("speakerIds").inValues(speakerIds)
+        if (talkIdExcluded != null) criteria.and("id").ne(talkIdExcluded)
+        return template.find<Talk>(Query(criteria).with(by(Order(ASC, "start"))))
+    }
 
     fun findAll(): Flux<Talk> = template.find<Talk>(Query().with(by(Order(ASC, "start"))))
 

@@ -1,11 +1,13 @@
 package mixit.integration
 
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.boot.web.server.LocalServerPort
-import org.springframework.http.HttpStatus.*
-import org.springframework.http.MediaType.*
+import org.springframework.http.HttpStatus.OK
+import org.springframework.http.HttpStatus.PERMANENT_REDIRECT
+import org.springframework.http.MediaType.TEXT_HTML
 import org.springframework.test.context.junit.jupiter.SpringExtension
 import org.springframework.web.reactive.function.client.WebClient
 import reactor.test.test
@@ -13,6 +15,7 @@ import reactor.test.test
 
 @ExtendWith(SpringExtension::class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@Disabled
 class WebsiteIntegrationTests(@LocalServerPort port: Int) {
 
     private val client = WebClient.create("http://localhost:$port")

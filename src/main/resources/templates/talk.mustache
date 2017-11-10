@@ -22,7 +22,7 @@
             <article class="callout">
                 <h1 class="text-center mxt-title--talk">{{talk.title}}</h1>
                 <hr/>
-                {{#admin}}<a href="/admin/talks/edit/{{talk.slug}}">{{#i18n}}admin.talks.actions.update{{/i18n}}</a> <br />{{/admin}}
+                {{#admin}}<a href="/admin/talks/edit/{{talk.slug}}">{{#i18n}}admin.talks.actions.update{{/i18n}}</a> <br/>{{/admin}}
                 <p>{{#markdown}}{{talk.summary}}{{/markdown}}</p>
                 {{#talk.description}}
                     <hr/>
@@ -72,6 +72,46 @@
                         {{/speakers}}
                     </div>
                 </div>
+                <hr/>
+                {{#hasOthertalks}}
+                    {{#talk.speakersFirstNames}}<h2>{{#i18n}}talk.others| {{talk.speakersFirstNames}}{{/i18n}}</h2>{{/talk.speakersFirstNames}}
+                    <div class="row">
+
+                        <div class="columns small-12 medium-12 {{#has2Columns}}large-6{{/has2Columns}}{{^has2Columns}}large-12{{/has2Columns}} callout">
+                            <ul class="accordion" data-accordion>
+                                {{#othertalks}}
+                                    <li class="accordion-item" data-accordion-item>
+                                        <!-- Accordion tab title -->
+                                        <a href="#" class="accordion-title">
+                                            <h3 class="mxt-text--talktitle"><b>{{event}}</b> - {{title}}{{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
+                                            </h3>
+                                            <ul class="menu simple mxt-menu--accordion">
+                                                {{#video}}
+                                                    <li><strong>&#x25ba; {{#i18n}}talks.title.video{{/i18n}}</strong></li>{{/video}}
+                                                {{^isTalk}}
+                                                    <li class="mxt-text--cat-format">#{{format}}</li>{{/isTalk}}
+                                            </ul>
+                                        </a>
+                                        <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+                                        <div class="accordion-content" data-tab-content>
+                                            <div class="row">
+                                                <div class="small-7 medium-9 large-8 columns">
+                                                    {{#speakers}}
+                                                        <p class="mxt-text--cat-room">{{firstname}} {{lastname}}</p>
+                                                    {{/speakers}}
+                                                    <div>{{#markdown}}{{summary}}{{/markdown}}</div>
+                                                </div>
+                                                <div class="small-5 medium-3 large-4 columns text-center">
+                                                    <a href="{{localePrefix}}/{{event}}/{{slug}}" class="button hollow">{{#i18n}}talks.readmore{{/i18n}}</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                {{/othertalks}}
+                            </ul>
+                        </div>
+                    </div>
+                {{/hasOthertalks}}
             </article>
         </div>
         {{#sponsors}}
