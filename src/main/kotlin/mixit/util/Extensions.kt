@@ -23,7 +23,8 @@ import java.util.stream.IntStream
 // -------------------------
 
 fun ServerRequest.language() =
-        Language.findByTag(this.headers().asHttpHeaders().acceptLanguageAsLocales.first().language)
+        Language.findByTag(if(this.headers().asHttpHeaders().contentLanguage != null) this.headers().asHttpHeaders().contentLanguage!!.language
+            else this.headers().asHttpHeaders().acceptLanguageAsLocales.first().language)
 
 fun ServerRequest.locale(): Locale =
         this.headers().asHttpHeaders().contentLanguage ?: Locale.ENGLISH
