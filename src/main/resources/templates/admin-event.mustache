@@ -48,16 +48,16 @@
                         <div class="row">
                             <div class="large-12 columns">
                                 <label>
-                                    {{#i18n}}admin.event.form.photosUrl{{/i18n}}
-                                    <input type="text" name="photosUrl" {{#event.photosUrl}}value="{{event.photosUrl}}"{{/event.photosUrl}}/>
+                                    {{#i18n}}admin.event.form.photo{{/i18n}}
+                                    <input type="text" name="photoUrls" {{#links}}value="{{links}}"{{/links}}/>
                                 </label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="large-12 columns">
                                 <label>
-                                    {{#i18n}}admin.event.form.videosUrl{{/i18n}}
-                                    <input type="text" name="videosUrl" {{#event.videosUrl}}value="{{event.videosUrl}}"{{/event.videosUrl}}/>
+                                    {{#i18n}}admin.event.form.video{{/i18n}}
+                                    <input type="text" name="videoUrl" {{#videolink}}value="{{videolink}}"{{/videolink}}/>
                                 </label>
                             </div>
                         </div>

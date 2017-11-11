@@ -26,25 +26,30 @@
         <div class="columns small-12 medium-12 large-12 callout">
             <p class="text-center lead">{{#i18n}}medias.text{{/i18n}}</p>
 
-            {{#event.photosUrl}}
+            {{#hasPhotosOrVideo}}
                 <h2>{{#i18n}}medias.html.soul{{/i18n}}</h2>
                 <p>{{#i18n}}medias.html.soul.text{{/i18n}}</p>
 
-                <p>&#x25ba;&nbsp;{{#i18n}}medias.html.soul.see{{/i18n}} <a href="{{event.photosUrl}}" target="_blank">{{#i18n}}medias.html.soul.see.photos{{/i18n}}</a></p>
+                <p>
+                    {{#event.photoUrls}}
+                    &#x25ba;&nbsp;{{#i18n}}medias.html.soul.see{{/i18n}}
+                    <a href="{{url}}" target="_blank">"{{name}}"</a><br/>
+                    {{/event.photoUrls}}
+                </p>
 
-                {{#event.videosUrl}}
+                {{#event.videoUrl}}
                     <div class="row">
                         <div class="column">
                             <strong>
                                 <div class="mxt-wrapper--intrinsic">
-                                    <iframe src="{{event.videosUrl}}" class="mxt-wrapper--video-player" allowfullscreen></iframe>
+                                    <iframe src="{{event.videoUrl.url}}" class="mxt-wrapper--video-player" allowfullscreen></iframe>
                                 </div>
                             </strong>
                             <br>
                         </div>
                     </div>
-                {{/event.videosUrl}}
-            {{/event.photosUrl}}
+                {{/event.videoUrl}}
+            {{/hasPhotosOrVideo}}
 
             <h2>{{#i18n}}medias.html.videos{{/i18n}}</h2>
             {{#talks}}

@@ -100,7 +100,8 @@ class TalkHandler(private val repository: TalkRepository,
                 Pair("title", "medias.title.html|$year"),
                 Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
                 Pair("sponsors", sponsors),
-                Pair("event", event)
+                Pair("event", event),
+                Pair("hasPhotosOrVideo", event.videoUrl != null || event.photoUrls.isNotEmpty())
         ))
     }
 

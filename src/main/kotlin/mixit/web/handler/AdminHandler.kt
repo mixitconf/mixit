@@ -143,7 +143,9 @@ class AdminHandler(private val ticketRepository: TicketRepository,
 
     private fun adminEvent(event: Event = Event("", LocalDate.now(), LocalDate.now())) = ok().render("admin-event", mapOf(
             Pair("creationMode", event.id == ""),
-            Pair("event", event)
+            Pair("event", event),
+            Pair("links", event.photoUrls.toJson()),
+            Pair("videolink", if(event.videoUrl == null) "" else event.videoUrl!!.toJson())
     ))
 
     fun adminSaveEvent(req: ServerRequest): Mono<ServerResponse> {
@@ -160,8 +162,8 @@ class AdminHandler(private val ticketRepository: TicketRepository,
                                 LocalDate.parse(formData["end"]!!),
                                 if (formData["current"] == null) false else formData["current"]!!.toBoolean(),
                                 it.sponsors,
-                                formData["photosUrl"],
-                                formData["videosUrl"]
+                                if (formData["photoUrls"] == null) emptyList() else formData["photoUrls"]!!.toLinks(),
+                                if (formData["videoUrl"] == null) null else formData["videoUrl"]!!.toLink()
                         )
                         eventRepository.save(event).then(seeOther("${properties.baseUri}/admin/events"))
                     }
@@ -367,6 +369,7 @@ class AdminHandler(private val ticketRepository: TicketRepository,
 
     private fun String.toLinks() = objectMapper.readValue<List<Link>>(this)
 
+    private fun String.toLink() = objectMapper.readValue<Link>(this)
 }
 
 
