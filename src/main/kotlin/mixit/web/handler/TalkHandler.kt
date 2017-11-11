@@ -14,6 +14,7 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.body
 import org.springframework.web.util.UriUtils
 import reactor.core.publisher.Mono
+import reactor.core.publisher.toMono
 import java.nio.charset.StandardCharsets
 import java.time.LocalDateTime
 
@@ -58,15 +59,16 @@ class TalkHandler(private val repository: TalkRepository,
 
             val otherTalks = repository
                     .findBySpeakerId(talk.speakerIds, talk.id)
-                    .map { talk ->
-                        talk.toDto(req.language(), speakers.filter { talk.speakerIds.contains(it.login) }.toList())
+                    .collectList()
+                    .flatMap { talks ->
+                        talks.map {talk ->   talk.toDto(req.language(), speakers.filter { talk.speakerIds.contains(it.login) }.toList()) }.toMono()
                     }
 
             ok().render("talk", mapOf(
                     Pair("talk", talk.toDto(req.language(), speakers!!)),
                     Pair("speakers", speakers.map { speaker -> speaker.toDto(req.language(), markdownConverter) }.sortedBy { talk.speakerIds.indexOf(it.login) }),
                     Pair("othertalks", otherTalks),
-                    Pair("othertalks", otherTalks.count().map { it > 0 }),
+                    Pair("hasOthertalks", otherTalks.map { it.size > 0 }),
                     Pair("title", "talk.html.title|${talk.title}"),
                     Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
                     Pair("vimeoPlayer", if (talk.video?.startsWith("https://vimeo.com/") == true) talk.video.replace("https://vimeo.com/", "https://player.vimeo.com/video/") else null),
