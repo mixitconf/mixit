@@ -73,17 +73,6 @@
                                 <div class="small-7 medium-9 large-8 columns">
                                     <p class="mxt-text--cat-room">{{#i18n}}{{room}}{{/i18n}}</p>
                                     <div>{{#markdown}}{{summary}}{{/markdown}}</div>
-                                    {{#video}}
-                                        <hr/>
-                                        {{#vimeoPlayer}}
-                                            <div class="mxt-wrapper--intrinsic">
-                                                <iframe src="{{vimeoPlayer}}" class="mxt-wrapper--video-player" allowfullscreen></iframe>
-                                            </div>
-                                        {{/vimeoPlayer}}
-                                        {{^vimeoPlayer}}
-                                            &#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{video}}" target="_blank">{{#i18n}}talk.video.thevideo{{/i18n}}</a>
-                                        {{/vimeoPlayer}}
-                                    {{/video}}
                                 </div>
                                 <div class="small-5 medium-3 large-4 columns text-center">
                                     <ul class="menu vertical">
@@ -105,46 +94,25 @@
                 </ul>
             {{/talks}}
         </div>
-        {{#sponsors}}
-            <hr/>
-            <div class="small-up-3 medium-up-6 align-center align-middle">
-                {{#sponsors-gold}}
-                    <div class="columns text-center">
-                        {{> talk-sponsor }}
-                    </div>
-                {{/sponsors-gold}}
-                {{#sponsors-lanyard}}
-                    <div class="columns text-center">
-                        {{> talk-sponsor }}
-                    </div>
-                {{/sponsors-lanyard}}
-                {{#sponsors-party}}
-                    <div class="columns text-center">
-                        {{> talk-sponsor }}
-                    </div>
-                {{/sponsors-party}}
-                {{#sponsors-silver}}
-                    <div class="columns columns-block text-center">
-                        {{> talk-sponsor }}
-                    </div>
-                {{/sponsors-silver}}
-                {{#sponsors-mixteen}}
-                    <div class="columns columns-block text-center">
-                        {{> talk-sponsor }}
-                    </div>
-                {{/sponsors-mixteen}}
-                {{#sponsors-hosting}}
-                    <div class="columns text-center">
-                        {{> talk-sponsor }}
-                    </div>
-                {{/sponsors-hosting}}
-                {{#sponsors-video}}
-                    <div class="columns text-center">
-                        {{> talk-sponsor }}
-                    </div>
-                {{/sponsors-video}}
-            </div>
-        {{/sponsors}}
+    </div>
+    <div class="row">
+        <div class="column large-12">
+            {{#sponsors}}
+                <hr/>
+                <div class="align-center align-middle row">
+                    {{#sponsors-gold}}
+                        <div class="columns text-center large-2 medium-2 small-3">
+                            {{> talk-sponsor }}
+                        </div>
+                    {{/sponsors-gold}}
+                    {{#sponsors-others}}
+                        <div class="columns text-center large-1 medium-1 small-2">
+                            {{> talk-sponsor }}
+                        </div>
+                    {{/sponsors-others}}
+                </div>
+            {{/sponsors}}
+        </div>
     </div>
 </div>
 

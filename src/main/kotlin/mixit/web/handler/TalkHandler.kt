@@ -14,7 +14,6 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.body
 import org.springframework.web.util.UriUtils
 import reactor.core.publisher.Mono
-import reactor.core.publisher.toMono
 import java.nio.charset.StandardCharsets
 import java.time.LocalDateTime
 
@@ -57,15 +56,17 @@ class TalkHandler(private val repository: TalkRepository,
 
         userRepository.findMany(talk.speakerIds).collectList().flatMap { speakers ->
 
-            val otherTalks = repository.findBySpeakerId(talk.speakerIds, talk.id).collectList().flatMap { talks ->
-                talks.toList().map { t -> t.toDto(req.language(), speakers.filter { t.speakerIds.contains(it.login)}.toList()) }.toMono()
-            }.block()
+            val otherTalks = repository
+                    .findBySpeakerId(talk.speakerIds, talk.id)
+                    .map { talk ->
+                        talk.toDto(req.language(), speakers.filter { talk.speakerIds.contains(it.login) }.toList())
+                    }
 
             ok().render("talk", mapOf(
                     Pair("talk", talk.toDto(req.language(), speakers!!)),
                     Pair("speakers", speakers.map { speaker -> speaker.toDto(req.language(), markdownConverter) }.sortedBy { talk.speakerIds.indexOf(it.login) }),
                     Pair("othertalks", otherTalks),
-                    Pair("hasOthertalks", otherTalks !=null && otherTalks!!.isNotEmpty()),
+                    Pair("othertalks", otherTalks.count().map { it > 0 }),
                     Pair("title", "talk.html.title|${talk.title}"),
                     Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
                     Pair("vimeoPlayer", if (talk.video?.startsWith("https://vimeo.com/") == true) talk.video.replace("https://vimeo.com/", "https://player.vimeo.com/video/") else null),
@@ -76,22 +77,21 @@ class TalkHandler(private val repository: TalkRepository,
 
     fun findMediaTopicByEventView(year: Int, req: ServerRequest): Mono<ServerResponse> = findMediaByEventView(year, req, req.pathVariable("topic"))
 
-    fun findMediaByEventView(year: Int, req: ServerRequest, topic: String? = null): Mono<ServerResponse> {
+    fun findMediaByEventView(year: Int, req: ServerRequest, topic: String? = null): Mono<ServerResponse> = eventRepository.findByYear(year).flatMap { event ->
         val talks = repository
                 .findByEvent(year.toString(), topic)
                 .filter { !StringUtils.isEmpty(it.video) }
-                .collectSortedList(Comparator.comparing(Talk::title))
+                .collectList()
                 .flatMap { talks ->
                     userRepository
                             .findMany(talks.flatMap { it.speakerIds })
                             .collectMap(User::login)
-                            .map { speakers -> talks.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] }) } }
+                            .map { speakers -> talks.sortedBy { it.title }.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] }) } }
                 }
 
-        val event = eventRepository.findByYear(year)
         val sponsors = eventSponsors(year, req)
 
-        return ok().render("medias", mapOf(
+        ok().render("medias", mapOf(
                 Pair("talks", talks),
                 Pair("topic", topic),
                 Pair("year", year),
@@ -112,12 +112,9 @@ class TalkHandler(private val repository: TalkRepository,
                             val sponsorsByEvent = event.sponsors.groupBy { it.level }
                             mapOf(
                                     Pair("sponsors-gold", sponsorsByEvent[SponsorshipLevel.GOLD]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
-                                    Pair("sponsors-silver", sponsorsByEvent[SponsorshipLevel.SILVER]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
-                                    Pair("sponsors-hosting", sponsorsByEvent[SponsorshipLevel.HOSTING]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
-                                    Pair("sponsors-lanyard", sponsorsByEvent[SponsorshipLevel.LANYARD]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
-                                    Pair("sponsors-mixteen", sponsorsByEvent[SponsorshipLevel.MIXTEEN]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
-                                    Pair("sponsors-party", sponsorsByEvent[SponsorshipLevel.PARTY]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
-                                    Pair("sponsors-video", sponsorsByEvent[SponsorshipLevel.VIDEO]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) })
+                                    Pair("sponsors-others", sponsorsByEvent.entries
+                                            .filter { it.key != SponsorshipLevel.GOLD }?.flatMap { it.value }
+                                            .map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) })
                             )
                         }
             }
@@ -156,6 +153,7 @@ class TalkDto(
         val date: String?,
         val isEn: Boolean = (language == "english"),
         val isTalk: Boolean = (format == TalkFormat.TALK),
+        val multiSpeaker: Boolean = (speakers.size > 1),
         val speakersFirstNames: String = (speakers.joinToString { it.firstname })
 )
 

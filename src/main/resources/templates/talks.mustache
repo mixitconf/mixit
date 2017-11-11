@@ -80,46 +80,25 @@
             <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
         </div>
         {{/talks.entrySet}}
-        {{#sponsors}}
-            <hr/>
-            <div class="small-up-3 medium-up-6 align-center align-middle">
-                {{#sponsors-gold}}
-                    <div class="columns text-center">
-                        {{> home-sponsor }}
-                    </div>
-                {{/sponsors-gold}}
-                {{#sponsors-lanyard}}
-                    <div class="columns text-center">
-                        {{> home-sponsor }}
-                    </div>
-                {{/sponsors-lanyard}}
-                {{#sponsors-party}}
-                    <div class="columns text-center">
-                        {{> home-sponsor }}
-                    </div>
-                {{/sponsors-party}}
-                {{#sponsors-silver}}
-                    <div class="columns columns-block text-center">
-                        {{> home-sponsor }}
-                    </div>
-                {{/sponsors-silver}}
-                {{#sponsors-mixteen}}
-                    <div class="columns columns-block text-center">
-                        {{> home-sponsor }}
-                    </div>
-                {{/sponsors-mixteen}}
-                {{#sponsors-hosting}}
-                    <div class="columns text-center">
-                        {{> home-sponsor }}
-                    </div>
-                {{/sponsors-hosting}}
-                {{#sponsors-video}}
-                    <div class="columns text-center">
-                        {{> home-sponsor }}
-                    </div>
-                {{/sponsors-video}}
-            </div>
-        {{/sponsors}}
+    </div>
+    <div class="row">
+        <div class="column large-12">
+            {{#sponsors}}
+                <hr/>
+                <div class="align-center align-middle row">
+                    {{#sponsors-gold}}
+                        <div class="columns text-center large-2 medium-2 small-3">
+                            {{> home-sponsor }}
+                        </div>
+                    {{/sponsors-gold}}
+                    {{#sponsors-others}}
+                        <div class="columns text-center large-1 medium-1 small-2">
+                            {{> home-sponsor }}
+                        </div>
+                    {{/sponsors-others}}
+                </div>
+            {{/sponsors}}
+        </div>
     </div>
 </div>
 
