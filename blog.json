@@ -1,0 +1,2440 @@
+[
+    {
+        "addedAt": [
+            2017,
+            11,
+            2,
+            21,
+            41,
+            14,
+            763000000
+        ],
+        "authorId": "mpetitdant",
+        "content": {},
+        "headline": {
+            "ENGLISH": "Organizing a conference requires some budget. Here are the details!",
+            "FRENCH": "Faire une conf demande \u00e9videmment un certain budget. On vous explique tout dans cet article !"
+        },
+        "id": "59fb96bbdfe031001521deaf",
+        "slug": {
+            "ENGLISH": "mixit-2017-balance",
+            "FRENCH": "bilan-financier-mixit-2017"
+        },
+        "title": {
+            "ENGLISH": "MiXiT 2017 balance",
+            "FRENCH": "Bilan financier MiXiT 2017"
+        }
+    },
+    {
+        "addedAt": [
+            2017,
+            5,
+            2,
+            15,
+            28,
+            30,
+            392000000
+        ],
+        "authorId": "sdeleuze",
+        "content": {},
+        "headline": {
+            "ENGLISH": "We have the pleasure to announce that the 25 first MiXiT 2017 talk videos have been published on the [talks page of the website](/en/2017) (identified by a **\u25ba Video** tag) and on the [MiXiT Vimeo channel](https://vimeo.com/mixitconf). All the remaining videos will be available within 2 weeks.",
+            "FRENCH": "Quand nous avons fait le pari du tirage au sort pour la billetterie de MiXiT 2017, nous voulions trouver un moyen de pouvoir partager cette \u00e9dition avec les 500 personnes \u00e0 qui nous n'avons pas pu proposer la possibilit\u00e9 de venir. Et m\u00eame pour les chanceux qui \u00e9taient l\u00e0, le choix entre les diff\u00e9rentes tracks a parfois \u00e9t\u00e9 corn\u00e9lien. Nous souhaitions \u00e9galement proposer des vid\u00e9os de qualit\u00e9, sans publicit\u00e9, int\u00e9gr\u00e9es au site mais \u00e9galement disponibles via mobile et tablette."
+        },
+        "id": "5908a5f5d459ba00158e17a3",
+        "slug": {
+            "ENGLISH": "mixit-2017-talk-videos-are-now-available",
+            "FRENCH": "les-talks-mixit-2017-sont-disponibles-en-video"
+        },
+        "title": {
+            "ENGLISH": "MiXiT 2017 talk videos are now available",
+            "FRENCH": "Les talks MiXiT 2017 sont disponibles en vid\u00e9o"
+        }
+    },
+    {
+        "addedAt": [
+            2017,
+            4,
+            12,
+            8,
+            11,
+            49,
+            234000000
+        ],
+        "authorId": "cedric",
+        "content": {},
+        "headline": {
+            "ENGLISH": "MiXiT tries to reduce its ecological footprint, we explain why.",
+            "FRENCH": "MiXiT essaye de r\u00e9duire son empreinte \u00e9cologique, on vous explique comment."
+        },
+        "id": "58ede21090b345000e4e049f",
+        "slug": {
+            "ENGLISH": "mixit-a-conference-which-attempts-to-be-eco-responsible",
+            "FRENCH": "mixit-une-conference-qui-tente-d-etre-eco-responsable"
+        },
+        "title": {
+            "ENGLISH": "MiXiT, a conference (which attempts to be) eco-responsible",
+            "FRENCH": "MiXiT, une conf\u00e9rence (qui tente d'\u00eatre) \u00e9co-responsable"
+        }
+    },
+    {
+        "addedAt": [
+            2017,
+            4,
+            10,
+            15,
+            51,
+            24,
+            694000000
+        ],
+        "authorId": "cedric",
+        "content": {},
+        "headline": {
+            "ENGLISH": "You have a smartphone and want to use it to see the planning? We got you covered!",
+            "FRENCH": "Tu as un smartphone et tu veux t'en servir pour consulter le programme de MiXiT 2017 ? On est l\u00e0 pour toi !"
+        },
+        "id": "58ebabb890b345000e4e049e",
+        "slug": {
+            "ENGLISH": "mobile-apps-for-mixit-2017",
+            "FRENCH": "les-applications-mobiles-pour-mixit-2017"
+        },
+        "title": {
+            "ENGLISH": "Mobile apps for MiXiT 2017",
+            "FRENCH": "Les applications mobiles pour MiXiT 2017"
+        }
+    },
+    {
+        "addedAt": [
+            2017,
+            4,
+            10,
+            6,
+            37,
+            2,
+            899000000
+        ],
+        "authorId": "guillaumeehret",
+        "content": {},
+        "headline": {
+            "ENGLISH": "Two days of talks and workshops can be exhausting, right?\r\nDon\u2019t worry, we got you covered with relaxing side activities.",
+            "FRENCH": "2 jours de conf\u00e9rences et d\u2019ateliers en mode intensif, c\u2019est parfois fatigant, non ?\r\nNous en avons conscience et c\u2019est pourquoi nous vous avons pr\u00e9vu plein de petits \u00e0 c\u00f4t\u00e9 pour vous faciliter MiXiT."
+        },
+        "id": "58eb285690b345000e4e049d",
+        "slug": {
+            "ENGLISH": "-mixit17-more-than-a-conference-side-activities",
+            "FRENCH": "-mixit17-plus-qu-une-conference-les-activites-en-marge"
+        },
+        "title": {
+            "ENGLISH": "#mixit17, more than a conference: side activities",
+            "FRENCH": "#mixit17, plus qu\u2019une conf\u00e9rence : les activit\u00e9s en marge"
+        }
+    },
+    {
+        "addedAt": [
+            2017,
+            3,
+            18,
+            9,
+            0
+        ],
+        "authorId": "92989140",
+        "content": {},
+        "headline": {
+            "ENGLISH": "Let me give you a preview of the MiXiT 2017 program for those who want to see something else than code and servers, in order to wait until the complete program of the conference to be released.",
+            "FRENCH": "Voici un extrait du programme pour ceux qui veulent voir autre chose que du code et des serveurs, en attendant la publication compl\u00e8te du programme de cette nouvelle \u00e9dition de MiXiT."
+        },
+        "id": "318",
+        "slug": {
+            "ENGLISH": "teams--products--pedagogy-and-design-talks-at-mixit-2017",
+            "FRENCH": "talks-equipe--produit--pedagogie-et-design-a-mixit-2017"
+        },
+        "title": {
+            "ENGLISH": "Teams, products, pedagogy and design talks at MiXiT 2017",
+            "FRENCH": "Talks \u00e9quipe, produit, p\u00e9dagogie et design \u00e0 MiXiT 2017"
+        }
+    },
+    {
+        "addedAt": [
+            2017,
+            3,
+            17,
+            9,
+            0
+        ],
+        "authorId": "Charles Bouttaz",
+        "content": {},
+        "headline": {
+            "ENGLISH": "Until the complete program of the conference is released let me give you a preview of the MiXiT 2017 technical program.",
+            "FRENCH": "En attendant la publication compl\u00e8te du programme de cette nouvelle \u00e9dition de MiXiT, laissez-moi vous donner un aper\u00e7u de ce qui vous attend cette ann\u00e9e niveau technique."
+        },
+        "id": "317",
+        "slug": {
+            "ENGLISH": "tech-talks-mixit-2017",
+            "FRENCH": "talks-tech-mixit-2017"
+        },
+        "title": {
+            "ENGLISH": "Tech talks at MiXiT 2017",
+            "FRENCH": "Talks tech \u00e0 MiXiT 2017"
+        }
+    },
+    {
+        "addedAt": [
+            2017,
+            3,
+            16,
+            9,
+            0
+        ],
+        "authorId": "cedric",
+        "content": {},
+        "headline": {
+            "ENGLISH": "Aliens are back at #mixit17!",
+            "FRENCH": "Les aliens sont de retour \u00e0 #mixit17&nbsp;!"
+        },
+        "id": "316",
+        "slug": {
+            "ENGLISH": "alien-talks-mixit-2017",
+            "FRENCH": "talks-aliens-mixit-2017"
+        },
+        "title": {
+            "ENGLISH": "Alien talks at MiXiT 2017",
+            "FRENCH": "Talks aliens \u00e0 MiXiT 2017"
+        }
+    },
+    {
+        "addedAt": [
+            2017,
+            3,
+            15,
+            9,
+            0
+        ],
+        "authorId": "92989140",
+        "content": {},
+        "headline": {
+            "ENGLISH": "In 2017, we want to leverage our value of diversity by providing the big theater with an semi-automatic transcription system.",
+            "FRENCH": "En 2017, on donne un coup de boost aux valeurs d'accessibilit\u00e9 de la conf\u00e9rence en \u00e9quipant le grand amphith\u00e9\u00e2tre d'un syst\u00e8me de transcription semi-automatique."
+        },
+        "id": "315",
+        "slug": {
+            "ENGLISH": "mixit17-with-transcription-for-hearing-impaired",
+            "FRENCH": "mixit17-avec-retranscription-pour-les-malentendants"
+        },
+        "title": {
+            "ENGLISH": "Retranscription for hearing impaired at #MiXiT17",
+            "FRENCH": "Retranscription pour les malentendants \u00e0 #MiXiT17"
+        }
+    },
+    {
+        "addedAt": [
+            2017,
+            3,
+            13,
+            8,
+            0
+        ],
+        "authorId": "cedric",
+        "content": {},
+        "headline": {
+            "ENGLISH": "MiXiT will open its ticket sale soon, but you need to pre-register first. Read more to know why.",
+            "FRENCH": "MiXiT ouvre bient\u00f4t sa billetterie, mais vous devez d'abord vous pr\u00e9-enregistrer. Cet article vous dit pourquoi."
+        },
+        "id": "314",
+        "slug": {
+            "ENGLISH": "mixit-2017-ticketing--pre-registration",
+            "FRENCH": "billetterie-mixit-2017---pre-inscription"
+        },
+        "title": {
+            "ENGLISH": "MiXiT 2017 ticketing: pre-registration",
+            "FRENCH": "Billetterie MiXiT 2017 : pr\u00e9-inscription"
+        }
+    },
+    {
+        "addedAt": [
+            2017,
+            2,
+            23,
+            12,
+            0
+        ],
+        "authorId": "jessbordeau",
+        "content": {},
+        "headline": {
+            "ENGLISH": "MiXiT is a well-known conference in Lyon, especially among developers and agilists professionals. However, in 2017, we hope to attract an even wider audience; which is partly the goal of our branding work. Our redesign plays with our local side. It also confirm our choice to make our conferences accessible to a more mainstream audience. The result is a brand new identity, reflecting more clearly our values. Do not hesitate to contact us, whether you are a regular or a new participant, your opinion matters.",
+            "FRENCH": "MiXiT est une conf\u00e9rence bien connue dans le paysage des d\u00e9veloppeurs et agilistes lyonnais. En 2017, nous esp\u00e9rons attirer un public encore plus vari\u00e9&nbsp;; c'est en partie l'objectif de notre travail d'image. Notre redesign joue sur notre c\u00f4t\u00e9 local, tout en montrant notre volont\u00e9 d'ouverture vers des conf\u00e9rences accessibles au plus grand nombre. Le r\u00e9sultat&nbsp;? Une toute nouvelle identit\u00e9, plus proche de nos valeurs. N'h\u00e9sitez pas \u00e0 nous faire des retours, que vous soyez un habitu\u00e9 ou un nouveau participant, votre avis nous int\u00e9resse&nbsp;!"
+        },
+        "id": "313",
+        "slug": {
+            "ENGLISH": "mixit-has-a-new-visual-identity",
+            "FRENCH": "une-nouvelle-identite-pour-mixit"
+        },
+        "title": {
+            "ENGLISH": "MiXiT has a new visual identity",
+            "FRENCH": "Une nouvelle identit\u00e9 pour MiXiT"
+        }
+    },
+    {
+        "addedAt": [
+            2016,
+            4,
+            18,
+            7,
+            40,
+            56
+        ],
+        "authorId": "sdeleuze",
+        "content": {},
+        "headline": {
+            "FRENCH": "Puisque MiXiT arrive \u00e0 grand pas, je vous propose une visite guid\u00e9e des pr\u00e9sentations et des ateliers techniques au programme de cette \u00e9dition 2016."
+        },
+        "id": "312",
+        "slug": {
+            "FRENCH": "visite-guidee-des-sessions-techniques-2016"
+        },
+        "title": {
+            "FRENCH": "Visite guid\u00e9e des sessions techniques 2016"
+        }
+    },
+    {
+        "addedAt": [
+            2016,
+            4,
+            15,
+            17,
+            38,
+            52
+        ],
+        "authorId": "92989140",
+        "content": {},
+        "headline": {
+            "ENGLISH": "This year, we wanted to create an accessible track allowing everyone to discover or rediscover basics of Agile. You will also go deeper into you practices and discover new ones.",
+            "FRENCH": "Cette ann\u00e9e, on a souhait\u00e9 cr\u00e9er un track accessible permettant \u00e0 tous de d\u00e9couvrir ou red\u00e9couvrir les bases de l\u2019agilit\u00e9. Mais aussi d\u2019approfondir vos pratiques et en d\u00e9couvrir de nouvelles."
+        },
+        "id": "302",
+        "slug": {
+            "ENGLISH": "the-agile-track---accessible---transversal",
+            "FRENCH": "le-track-agilite---accessible-et-transverse"
+        },
+        "title": {
+            "ENGLISH": "The Agile track : accessible & transversal",
+            "FRENCH": "Le track Agilit\u00e9 : accessible et transverse"
+        }
+    },
+    {
+        "addedAt": [
+            2016,
+            4,
+            15,
+            15,
+            41,
+            40
+        ],
+        "authorId": "cedric",
+        "content": {},
+        "headline": {
+            "ENGLISH": "You have a smartphone and want to use it to see the planning? We got you covered!",
+            "FRENCH": "Tu as un smartphone et tu veux t'en servir pour consulter le programme de MiXiT 2016 ? On est l\u00e0 pour toi !"
+        },
+        "id": "292",
+        "slug": {
+            "ENGLISH": "mobile-apps-for-mixit-2016",
+            "FRENCH": "les-applis-mobiles-mixit-2016"
+        },
+        "title": {
+            "ENGLISH": "Mobile apps for MiXiT 2016",
+            "FRENCH": "Les applis mobiles MiXiT 2016"
+        }
+    },
+    {
+        "addedAt": [
+            2016,
+            4,
+            13,
+            22,
+            4,
+            58
+        ],
+        "authorId": "guillaumeehret",
+        "content": {},
+        "headline": {
+            "ENGLISH": "Our website is evolving slowly and the new version can be improved.... All the staff is composed by volunteers. Several features are ready and cans help you during the conference.",
+            "FRENCH": "Depuis l\u2019ann\u00e9e derni\u00e8re vous avez peut \u00eatre vu se (re)construire notre site. Comme nous sommes tous b\u00e9n\u00e9voles ce dernier \u00e9volue doucement et il est encore perfectible\u2026 Mais plusieurs fonctionnalit\u00e9s peuvent vous aider \u00e0 pr\u00e9parer votre conf\u00e9rence."
+        },
+        "id": "282",
+        "slug": {
+            "ENGLISH": "web-site-evolutions",
+            "FRENCH": "evolutions-du-site-web"
+        },
+        "title": {
+            "ENGLISH": "Web site evolutions",
+            "FRENCH": "Evolutions du site web"
+        }
+    },
+    {
+        "addedAt": [
+            2016,
+            4,
+            13,
+            11,
+            40,
+            55
+        ],
+        "authorId": "guillaumeehret",
+        "content": {},
+        "headline": {
+            "FRENCH": "Comment l\u2019\u00e9diteur de logiciel Esker met l\u2019agilit\u00e9 au service du recrutement."
+        },
+        "id": "322",
+        "slug": {
+            "FRENCH": "les-mots-des-sponsors---esker"
+        },
+        "title": {
+            "FRENCH": "Les mots des sponsors - Esker"
+        }
+    },
+    {
+        "addedAt": [
+            2016,
+            4,
+            10,
+            22,
+            42,
+            46
+        ],
+        "authorId": "clacote",
+        "content": {},
+        "headline": {
+            "ENGLISH": "Tim Urban runs a blog: [Wait But Why](http://waitbutwhy.com/). Some would say it\u2019s about science popularisation. But they would miss its handmade cartoons, its wordy but funny tone, and, above all, its thorough researches.",
+            "FRENCH": "Tim Urban tient un blog : [Wait But Why](http://waitbutwhy.com/). Si on devait le r\u00e9sumer, on dirait un blog de vulgarisation scientifique. Mais ce serait oublier ses dessins cocasses, sa verve prolixe mais l\u00e9g\u00e8re, et surtout sa minutieuse documentation."
+        },
+        "id": "272",
+        "slug": {
+            "ENGLISH": "tim-urban-of-wait-but-why-at-mixit-2016",
+            "FRENCH": "tim-urban-de-wait-but-why-a-mixit-2016"
+        },
+        "title": {
+            "ENGLISH": "Tim Urban of Wait But Why at MiXiT 2016",
+            "FRENCH": "Tim Urban de Wait But Why \u00e0 MiXiT 2016"
+        }
+    },
+    {
+        "addedAt": [
+            2016,
+            4,
+            5,
+            4,
+            30,
+            34
+        ],
+        "authorId": "guillaumeehret",
+        "content": {},
+        "headline": {
+            "FRENCH": "Mot du sponsor Viseo"
+        },
+        "id": "262",
+        "slug": {
+            "FRENCH": "les-mots-des-sponsors---viseo"
+        },
+        "title": {
+            "FRENCH": "Les mots des sponsors - Viseo"
+        }
+    },
+    {
+        "addedAt": [
+            2016,
+            3,
+            31,
+            16,
+            54,
+            39
+        ],
+        "authorId": "agnes",
+        "content": {},
+        "headline": {
+            "ENGLISH": "This year we will offer you a new surprise at Mix- IT: interactive virtual reality performances created especially for you, by students in engineering and fine arts!",
+            "FRENCH": "Cette ann\u00e9e on vous propose une nouvelle petite surprise sur MiXiT : des performances de r\u00e9alit\u00e9 virtuelle interactives, cr\u00e9\u00e9es sp\u00e9cialement pour vous, par des \u00e9l\u00e8ves ing\u00e9nieurs et des beaux arts!"
+        },
+        "id": "252",
+        "slug": {
+            "ENGLISH": "virtual-reality-performances-at-mix--it-",
+            "FRENCH": "des-performances-de-realite-virtuelle-a-mixit-"
+        },
+        "title": {
+            "ENGLISH": "Virtual Reality performances at Mix -IT!",
+            "FRENCH": "Des performances de r\u00e9alit\u00e9 virtuelle \u00e0 MiXiT!"
+        }
+    },
+    {
+        "addedAt": [
+            2016,
+            3,
+            23,
+            19,
+            4,
+            41
+        ],
+        "authorId": "guillaumeehret",
+        "content": {},
+        "headline": {
+            "ENGLISH": "This year we have a brand new website. The name of the project is Cesar and the sources are available on  [Github](https://github.com/mix-it/cesar).",
+            "FRENCH": "Comme vous avez pu le voir, notre site web a totalement \u00e9t\u00e9 revu cette ann\u00e9e. Le nom de l\u2019application est Cesar et le projet est disponible sous  [Github](https://github.com/mix-it/cesar)."
+        },
+        "id": "242",
+        "slug": {
+            "ENGLISH": "hack-cesar---or-how-to-interface-with-mixit-",
+            "FRENCH": "hacker-cesar---ou-comment-s-interfacer-avec-mixit-"
+        },
+        "title": {
+            "ENGLISH": "Hack Cesar ! Or how to interface with MiXiT.",
+            "FRENCH": "Hacker Cesar ! O\u00f9 comment s\u2019interfacer avec MiXiT."
+        }
+    },
+    {
+        "addedAt": [
+            2016,
+            3,
+            18,
+            7,
+            12,
+            55
+        ],
+        "authorId": "guillaumeehret",
+        "content": {},
+        "headline": {
+            "ENGLISH": "The sessions have just been published: discover [what awaits you at Mix -IT 2016](/sessions) and get ready to buy your ticket!",
+            "FRENCH": "Les sessions viennent juste d'\u00eatre publi\u00e9es, d\u00e9couvrez donc ce qui [vous attend \u00e0 MiXiT 2016](/sessions), et tenez vous pr\u00eats pour l'ouverture de la billetterie."
+        },
+        "id": "232",
+        "slug": {
+            "ENGLISH": "agenda--and-more-details-about-ticketing",
+            "FRENCH": "programme-et-ouverture-de-la-billetterie"
+        },
+        "title": {
+            "ENGLISH": "Agenda, and more details about ticketing",
+            "FRENCH": "Programme et ouverture de la billetterie"
+        }
+    },
+    {
+        "addedAt": [
+            2016,
+            3,
+            2,
+            9,
+            52,
+            59
+        ],
+        "authorId": "guillaumeehret",
+        "content": {},
+        "headline": {
+            "ENGLISH": "The interview of Yves Hanoulle",
+            "FRENCH": "L'interview d'Yves Hanoulle"
+        },
+        "id": "222",
+        "slug": {
+            "ENGLISH": "yves-hanoulle--an-agilist-supporter-of-communities",
+            "FRENCH": "yves-hanoulle--l-agiliste-au-service-des-communautes"
+        },
+        "title": {
+            "ENGLISH": "Yves Hanoulle, an agilist supporter of communities",
+            "FRENCH": "Yves Hanoulle, l'agiliste au service des communaut\u00e9s"
+        }
+    },
+    {
+        "addedAt": [
+            2016,
+            2,
+            17,
+            19,
+            43,
+            11
+        ],
+        "authorId": "mpt",
+        "content": {},
+        "headline": {
+            "FRENCH": "Alors, vous allez enfin faire en sorte que tout le monde ait une place ?"
+        },
+        "id": "202",
+        "slug": {
+            "FRENCH": "quoi-de-neuf-sur-la-billetterie-mixit--"
+        },
+        "title": {
+            "FRENCH": "Quoi de neuf sur la billetterie MiXiT ?"
+        }
+    },
+    {
+        "addedAt": [
+            2016,
+            2,
+            8,
+            11,
+            17,
+            1
+        ],
+        "authorId": "guillaumeehret",
+        "content": {},
+        "headline": {
+            "ENGLISH": "On nous demande souvent \u00ab mais comment choisissez-vous vos speakers sur MiXiT ? \u00bb\u2026 Et \u00e0 chaque fois on se dit \u00ab faut vraiment qu'on fasse un article dessus ! \u00bb",
+            "FRENCH": "On nous demande souvent \u00ab mais comment choisissez-vous vos speakers sur MiXiT ? \u00bb\u2026 Et \u00e0 chaque fois on se dit \u00ab faut vraiment qu'on fasse un article dessus ! \u00bb"
+        },
+        "id": "192",
+        "slug": {
+            "FRENCH": "la-ligne-editoriale-mixit"
+        },
+        "title": {
+            "FRENCH": "La Ligne \u00e9ditoriale MiXiT"
+        }
+    },
+    {
+        "addedAt": [
+            2016,
+            2,
+            1,
+            10,
+            40,
+            39
+        ],
+        "authorId": "guillaumeehret",
+        "content": {},
+        "headline": {
+            "ENGLISH": "You know Kanban, you know XP but do you know Xanpan?",
+            "FRENCH": "Vous connaissez Kanban, vous connaissez XP mais connaissez vous Xanpan?"
+        },
+        "id": "182",
+        "slug": {
+            "ENGLISH": "allan-kelly-first-agile-speaker-2016",
+            "FRENCH": "allan-kelly-premier-speaker-agile-2016"
+        },
+        "title": {
+            "ENGLISH": "Allan Kelly first agile speaker 2016",
+            "FRENCH": "Allan Kelly premier speaker agile 2016"
+        }
+    },
+    {
+        "addedAt": [
+            2016,
+            1,
+            25,
+            22,
+            32,
+            34
+        ],
+        "authorId": "agnes",
+        "content": {},
+        "headline": {
+            "ENGLISH": "Do you know what is the common denominator between Excel, [Stack Overflow](http://stackoverflow.com/) and [Trello](https://trello.com/)?",
+            "FRENCH": "Quel est le point commun entre Excel, [Stack Overflow](http://stackoverflow.com/) et [Trello](https://trello.com/)?"
+        },
+        "id": "163",
+        "slug": {
+            "ENGLISH": "joel-spolsky--our-first-keynote-speaker-",
+            "FRENCH": "joel-spolsky--notre-premier-keynote-speaker--"
+        },
+        "title": {
+            "ENGLISH": "Joel Spolsky, our first keynote speaker!",
+            "FRENCH": "Joel Spolsky, notre premier keynote speaker !"
+        }
+    },
+    {
+        "addedAt": [
+            2016,
+            1,
+            20,
+            22,
+            30,
+            41
+        ],
+        "authorId": "agnes",
+        "content": {},
+        "headline": {
+            "ENGLISH": "You were many to request the opening dates of the 2016 CFP. We can tell you that it's done! And you can suggest your sessions until March 6, 2016.",
+            "FRENCH": "Nous avons eu beaucoup de demandes pour conna\u00eere les dates d'ouverture du CFP 2016. Nous pouvons vous dire que c'est chose faite et vous avez jusqu'au 6 mars 2016 pour nous proposer vos sessions."
+        },
+        "id": "142",
+        "slug": {
+            "ENGLISH": "the-mixit-2016-cfp-is-open",
+            "FRENCH": "le-cfp-de-mixit-2016-est-ouvert"
+        },
+        "title": {
+            "ENGLISH": "The MiXiT 2016 CFP is open",
+            "FRENCH": "Le CFP de MiXiT 2016 est ouvert"
+        }
+    },
+    {
+        "addedAt": [
+            2015,
+            5,
+            22,
+            13,
+            55,
+            6
+        ],
+        "authorId": "mpt",
+        "content": {},
+        "headline": {
+            "FRENCH": "Voici les articles publi\u00e9s par les participants sur l'\u00e9dition MiXiT 2015"
+        },
+        "id": "141",
+        "slug": {
+            "FRENCH": "les-retours-des-participants-2015"
+        },
+        "title": {
+            "FRENCH": "Les retours des participants 2015"
+        }
+    },
+    {
+        "addedAt": [
+            2015,
+            4,
+            14,
+            13,
+            35,
+            15
+        ],
+        "authorId": "guillaumeehret",
+        "content": {},
+        "headline": {
+            "ENGLISH": "Afin que ces deux jours de conf\u00e9rences se passent pour le mieux pour vous voici quelques infos...",
+            "FRENCH": "Afin que ces deux jours de conf\u00e9rences se passent pour le mieux pour vous voici quelques infos..."
+        },
+        "id": "131",
+        "slug": {
+            "ENGLISH": "how-to-prepare-your-mixit-2015",
+            "FRENCH": "comment-gerer-votre-conference-mixit-2015"
+        },
+        "title": {
+            "ENGLISH": "How to prepare your MiXiT 2015",
+            "FRENCH": "Comment g\u00e9rer votre conf\u00e9rence MiXiT 2015"
+        }
+    },
+    {
+        "addedAt": [
+            2015,
+            4,
+            13,
+            20,
+            35,
+            15
+        ],
+        "authorId": "guillaumeehret",
+        "content": {},
+        "headline": {
+            "FRENCH": "L'\u00e9dition 2015 se rapproche \u00e0 grand pas. Le prix des places a pu se maintenir cette ann\u00e9e \u00e0 un prix encore tr\u00e8s raisonnable gr\u00e2ce aux soutiens de nos sponsors. Aujourd'hui nous donnons la parole aux soci\u00e9t\u00e9s Fiducial et Steria-Sopra."
+        },
+        "id": "101",
+        "slug": {
+            "FRENCH": "le-mot-des-sponsors--1-"
+        },
+        "title": {
+            "FRENCH": "Le mot des sponsors (1)"
+        }
+    },
+    {
+        "addedAt": [
+            2015,
+            4,
+            13,
+            20,
+            34,
+            26
+        ],
+        "authorId": "guillaumeehret",
+        "content": {},
+        "headline": {
+            "FRENCH": "Plus qu'une semaine avant MiXiT. Aujourd'hui nous donnons la parole \u00e0 deux de nos sponsors les soci\u00e9t\u00e9s Elao et Stormshield."
+        },
+        "id": "111",
+        "slug": {
+            "FRENCH": "le-mot-des-sponsors--2-"
+        },
+        "title": {
+            "FRENCH": "Le mot des sponsors (2)"
+        }
+    },
+    {
+        "addedAt": [
+            2015,
+            4,
+            13,
+            20,
+            32,
+            55
+        ],
+        "authorId": "guillaumeehret",
+        "content": {},
+        "headline": {
+            "FRENCH": "N'h\u00e9sitez pas \u00e0 faire le tour des stands des sponsors le jour de la Conf\u00e9rence. Aujourd'hui nous laissons la parole \u00e0 la soci\u00e9t\u00e9 SII"
+        },
+        "id": "121",
+        "slug": {
+            "FRENCH": "le-mot-des-sponsors--3-"
+        },
+        "title": {
+            "FRENCH": "Le mot des sponsors (3)"
+        }
+    },
+    {
+        "addedAt": [
+            2015,
+            3,
+            16,
+            7,
+            28,
+            43
+        ],
+        "authorId": "guillaumeehret",
+        "content": {},
+        "headline": {
+            "FRENCH": "Nous sommes tr\u00e8s heureux de pouvoir vous annoncer que la nouvelle cuv\u00e9e arrive, et on esp\u00e8re qu\u2019elle vous plaira autant que les pr\u00e9c\u00e9dentes \u00e9ditions. Voici une synth\u00e8se du programme en quelques exemples."
+        },
+        "id": "91",
+        "slug": {
+            "FRENCH": "le-programme-de-mixit-2015"
+        },
+        "title": {
+            "FRENCH": "Le programme de MiXiT 2015"
+        }
+    },
+    {
+        "addedAt": [
+            2015,
+            1,
+            15,
+            13,
+            21,
+            53
+        ],
+        "authorId": "clacote",
+        "content": {},
+        "headline": {
+            "FRENCH": "Le CFP est ouvert d\u00e8s aujourd'hui et jusqu'au 1er mars 2015."
+        },
+        "id": "81",
+        "slug": {
+            "FRENCH": "call-for-papers-de-mixit-2015"
+        },
+        "title": {
+            "FRENCH": "Call For Papers de MiXiT 2015"
+        }
+    },
+    {
+        "addedAt": [
+            2014,
+            12,
+            17,
+            22,
+            25,
+            31
+        ],
+        "authorId": "clacote",
+        "content": {},
+        "headline": {
+            "FRENCH": "Nouvelle edition, nouvelles dates, nouvelle \u00e9quipe, nouveaux sponsors, mais m\u00eame lieu. Tout ce qui change, et tout ce qui ne changera pas."
+        },
+        "id": "77",
+        "slug": {
+            "FRENCH": "mixit-2015-aura-lieu-les-16---17-avril-2015"
+        },
+        "title": {
+            "FRENCH": "MiXiT 2015 aura lieu les 16 & 17 avril 2015"
+        }
+    },
+    {
+        "addedAt": [
+            2014,
+            7,
+            21,
+            7,
+            3,
+            42
+        ],
+        "authorId": "clacote",
+        "content": {},
+        "headline": {
+            "FRENCH": "Vous avez rat\u00e9 MiXiT 2014? Vous avez ador\u00e9 une conf\u00e9rence que vous aimeriez revoir? Voici les vid\u00e9os!"
+        },
+        "id": "75",
+        "slug": {
+            "FRENCH": "les-videos-des-sessions-mixit-2014"
+        },
+        "title": {
+            "FRENCH": "Les vid\u00e9os des sessions MiXiT 2014"
+        }
+    },
+    {
+        "addedAt": [
+            2014,
+            7,
+            9,
+            11,
+            44,
+            22
+        ],
+        "authorId": "franck",
+        "content": {},
+        "headline": {
+            "FRENCH": "Voici les articles publi\u00e9s par les participants sur l'\u00e9dition MiXiT 2014"
+        },
+        "id": "74",
+        "slug": {
+            "FRENCH": "les-retours-des-participants"
+        },
+        "title": {
+            "FRENCH": "Les retours des participants"
+        }
+    },
+    {
+        "addedAt": [
+            2014,
+            4,
+            28,
+            9,
+            11,
+            15
+        ],
+        "authorId": "mpt",
+        "content": {},
+        "headline": {
+            "ENGLISH": "Here are some MiXiT 2014 practical information !",
+            "FRENCH": "Les habitu\u00e9s de MiXiT savent qu'ils voient une conf\u00e9rence o\u00f9 l'assistanat du participant est tr\u00e8s limit\u00e9 alors pour vous permettre d'anticiper un peu, voici quelques infos pratiques."
+        },
+        "id": "73",
+        "slug": {
+            "ENGLISH": "how-to-manage-my-conf-",
+            "FRENCH": "comment-gerer-ma-conf-"
+        },
+        "title": {
+            "ENGLISH": "How to manage my conf?",
+            "FRENCH": "Comment g\u00e9rer ma conf?"
+        }
+    },
+    {
+        "addedAt": [
+            2014,
+            4,
+            14,
+            8,
+            47,
+            59
+        ],
+        "authorId": "cedric",
+        "content": {},
+        "headline": {
+            "FRENCH": "Mardi 29 Avril au soir, nous nous retrouvons sur une p\u00e9niche pour continuer \u00e0 \u00e9changer, enfin oser aborder les speakers et se d\u00e9tendre apr\u00e8s une journ\u00e9e riche en nouvelles id\u00e9es."
+        },
+        "id": "72",
+        "slug": {
+            "FRENCH": "mixit-party-on-a-boat--"
+        },
+        "title": {
+            "FRENCH": "MiXiT Party on a boat !"
+        }
+    },
+    {
+        "addedAt": [
+            2014,
+            4,
+            14,
+            6,
+            57,
+            2
+        ],
+        "authorId": "franck",
+        "content": {},
+        "headline": {
+            "ENGLISH": "Please find below the non technical sessions description",
+            "FRENCH": "Voici la suite du programme pour la partie non technique"
+        },
+        "id": "70",
+        "slug": {
+            "ENGLISH": "mixit-2014-program--part-2-",
+            "FRENCH": "mixit-2014-programme--part-2-"
+        },
+        "title": {
+            "ENGLISH": "MiXiT 2014 Program (part 2)",
+            "FRENCH": "MiXiT 2014 Programme (part 2)"
+        }
+    },
+    {
+        "addedAt": [
+            2014,
+            4,
+            14,
+            6,
+            12,
+            58
+        ],
+        "authorId": "cedric",
+        "content": {},
+        "headline": {
+            "FRENCH": "H\u00e9, t'as vu le programme de MiXiT? On va encore gal\u00e9rer pour choisir dans quelle salle aller..."
+        },
+        "id": "67",
+        "slug": {
+            "FRENCH": "le-programme-de-mixit--part-1-"
+        },
+        "title": {
+            "FRENCH": "Le programme de MiXiT (part 1)"
+        }
+    },
+    {
+        "addedAt": [
+            2014,
+            4,
+            11,
+            6,
+            48,
+            41
+        ],
+        "authorId": "cedric",
+        "content": {},
+        "headline": {
+            "FRENCH": "Un autre des charmes de MiXiT : les speakers aliens. Ils viennent avec un talk pas forc\u00e9ment li\u00e9 directement \u00e0 notre m\u00e9tier, et on en repart la t\u00eate pleine de nouvelles id\u00e9es !"
+        },
+        "id": "71",
+        "slug": {
+            "FRENCH": "les-aliens---idees-originales-pour-tout-de-suite"
+        },
+        "title": {
+            "FRENCH": "Les aliens : id\u00e9es originales pour tout de suite"
+        }
+    },
+    {
+        "addedAt": [
+            2014,
+            4,
+            4,
+            8,
+            29,
+            22
+        ],
+        "authorId": "mpt",
+        "content": {},
+        "headline": {
+            "ENGLISH": "Maybe you know that every year at MiXiT, we are doing **Lightning talks**! \r\n\r\nAnd we loooove them!",
+            "FRENCH": "Vous les savez peut \u00eatre, \u00e0 MiXiT, nous avons une tradition : les Lightning talks ! Et on les adooooore !"
+        },
+        "id": "69",
+        "slug": {
+            "ENGLISH": "ligthnings-talks---propose--vote-",
+            "FRENCH": "les-ligthnings-talks---proposez--votez-"
+        },
+        "title": {
+            "ENGLISH": "Ligthnings talks : propose, vote!",
+            "FRENCH": "Les ligthnings talks : proposez, votez!"
+        }
+    },
+    {
+        "addedAt": [
+            2014,
+            4,
+            2,
+            21,
+            59,
+            46
+        ],
+        "authorId": "clacote",
+        "content": {},
+        "headline": {
+            "FRENCH": "Pas besoin d\u2019\u00eatre un geek en herbe, pas besoin de passer son temps devant un ordinateur. Avec de la cr\u00e9ativit\u00e9 et de la curiosit\u00e9, il est possible de r\u00e9aliser des programmes informatiques tout en s\u2019amusant."
+        },
+        "id": "68",
+        "slug": {
+            "FRENCH": "mix-teen---un-atelier-reserve-aux-enfants-"
+        },
+        "title": {
+            "FRENCH": "Mix-TeeN : un atelier r\u00e9serv\u00e9 aux enfants!"
+        }
+    },
+    {
+        "addedAt": [
+            2014,
+            3,
+            17,
+            21,
+            42,
+            40
+        ],
+        "authorId": "franck",
+        "content": {},
+        "headline": {
+            "FRENCH": "Vous pouvez soumettre des Lightning Talks."
+        },
+        "id": "66",
+        "slug": {
+            "FRENCH": "lightning-talks"
+        },
+        "title": {
+            "FRENCH": "Lightning talks"
+        }
+    },
+    {
+        "addedAt": [
+            2014,
+            3,
+            9,
+            21,
+            1,
+            58
+        ],
+        "authorId": "franck",
+        "content": {},
+        "headline": {
+            "FRENCH": "L\u2019ouverture de la billetterie se fera en ligne, le lundi 17 mars 2014 \u00e0 15:00."
+        },
+        "id": "65",
+        "slug": {
+            "FRENCH": "l-ouverture-de-la-billetterie-mixit-2014"
+        },
+        "title": {
+            "FRENCH": "L\u2019ouverture de la billetterie MiXiT 2014"
+        }
+    },
+    {
+        "addedAt": [
+            2014,
+            2,
+            27,
+            13,
+            5,
+            47
+        ],
+        "authorId": "mpt",
+        "content": {},
+        "headline": {
+            "ENGLISH": "We accept your proposals until March 4th.",
+            "FRENCH": "Nous accepterons vos propositions de sessions jusqu'au 4 mars inclus."
+        },
+        "id": "63",
+        "slug": {
+            "ENGLISH": "end-of-call-for-paper",
+            "FRENCH": "fin-du-call-for-paper"
+        },
+        "title": {
+            "ENGLISH": "End of Call for Paper",
+            "FRENCH": "Fin du Call for Paper"
+        }
+    },
+    {
+        "addedAt": [
+            2014,
+            2,
+            2,
+            16,
+            37,
+            49
+        ],
+        "authorId": "romain",
+        "content": {},
+        "headline": {
+            "ENGLISH": "Submit talks in line with MiXiT spirit!",
+            "FRENCH": "Soumettez une session qui soit en phase avec l'esprit de la conf\u00e9rence : \"des id\u00e9es pour tout suite\" ! Tous les sujets ont leur place : technique, agile, innovation, web, management, etc."
+        },
+        "id": "60",
+        "slug": {
+            "ENGLISH": "call-for-paper-mixit-2014",
+            "FRENCH": "call-for-paper-mixit-2014"
+        },
+        "title": {
+            "ENGLISH": "Call for Paper MiXiT 2014",
+            "FRENCH": "Call for Paper MiXiT 2014"
+        }
+    },
+    {
+        "addedAt": [
+            2014,
+            1,
+            11,
+            20,
+            27,
+            54
+        ],
+        "authorId": "clacote",
+        "content": {},
+        "headline": {
+            "FRENCH": "Mathieu Petitdant rejoint l'\u00e9quipe d'organisation"
+        },
+        "id": "58",
+        "slug": {
+            "FRENCH": "la-team-s-agrandit-"
+        },
+        "title": {
+            "FRENCH": "La team s'agrandit!"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            12,
+            13,
+            8,
+            30,
+            34
+        ],
+        "authorId": "franck",
+        "content": {},
+        "headline": {
+            "FRENCH": "Avant de lancer le Call For Paper qui d\u00e9butera vers mi-janvier 2014, nous faisons appel \u00e0 vos bonnes id\u00e9es!"
+        },
+        "id": "62",
+        "slug": {
+            "FRENCH": "appel-a-propositions-pour-mixit-2014"
+        },
+        "title": {
+            "FRENCH": "Appel \u00e0 propositions pour MiXiT 2014"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            12,
+            10,
+            7,
+            23,
+            6
+        ],
+        "authorId": "clacote",
+        "content": {},
+        "headline": {
+            "FRENCH": "Mais ce n'est pas la seule annonce..."
+        },
+        "id": "61",
+        "slug": {
+            "FRENCH": "et--mixit14-aura-lieu----les-29---30-avril-2014-"
+        },
+        "title": {
+            "FRENCH": "Et #mixit14 aura lieu... les 29 & 30 avril 2014!"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            12,
+            6,
+            7,
+            51,
+            5
+        ],
+        "authorId": "clacote",
+        "content": {},
+        "headline": {
+            "FRENCH": "Mieux vaut un dessin qu'un long discours sur MiXiT 2013"
+        },
+        "id": "59",
+        "slug": {
+            "FRENCH": "le-bilan-de-mixit-2013--en-infographie"
+        },
+        "title": {
+            "FRENCH": "Le bilan de MiXiT 2013, en infographie"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            9,
+            13,
+            6,
+            37,
+            32
+        ],
+        "authorId": "agnes",
+        "content": {},
+        "headline": {
+            "FRENCH": "Pamela Fox a marqu\u00e9 les esprits des participants de MiXiT lors de la keynote finale de l'\u00e9dition 2012. Elle a abord\u00e9 le th\u00e8me de l'\u00e9ducation et de l'apprentissage du d\u00e9veloppement. Elle imaginait un monde o\u00f9 on apprenait \u00e0 coder d\u00e8s notre plus jeune \u00e2ge!"
+        },
+        "id": "57",
+        "slug": {
+            "FRENCH": "c-est-la-rentree--apprenons-aux-enfants-a-coder-"
+        },
+        "title": {
+            "FRENCH": "C'est la rentr\u00e9e! Apprenons aux enfants \u00e0 coder!"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            7,
+            26,
+            11,
+            34,
+            14
+        ],
+        "authorId": "clacote",
+        "content": {},
+        "headline": {
+            "FRENCH": "Vous avez rat\u00e9 MiXiT 2013? Pas de panique, voici les keynotes en vid\u00e9os"
+        },
+        "id": "56",
+        "slug": {
+            "FRENCH": "les-videos-des-keynotes"
+        },
+        "title": {
+            "FRENCH": "Les vid\u00e9os des keynotes"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            5,
+            20,
+            19,
+            50,
+            53
+        ],
+        "authorId": "franck",
+        "content": {},
+        "headline": {
+            "FRENCH": "MiXiT 2013 est termin\u00e9 et cet article pointe les diapositives et billets publi\u00e9s par les orateurs et participants."
+        },
+        "id": "55",
+        "slug": {
+            "FRENCH": "les-billets-apres-mixit-2013"
+        },
+        "title": {
+            "FRENCH": "Les billets apr\u00e8s MiXiT 2013"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            4,
+            24,
+            15,
+            35,
+            38
+        ],
+        "authorId": "clacote",
+        "content": {},
+        "headline": {
+            "FRENCH": "On liste ici les pointeurs vers les applications clientes gracieusement d\u00e9velopp\u00e9es par nos amis, qu'elles soient mobiles ou desktop."
+        },
+        "id": "47",
+        "slug": {
+            "FRENCH": "les-applications-clientes"
+        },
+        "title": {
+            "FRENCH": "Les applications clientes"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            4,
+            22,
+            20,
+            32,
+            48
+        ],
+        "authorId": "agnes",
+        "content": {},
+        "headline": {
+            "FRENCH": "MiXiT accueille cette ann\u00e9e le collectif Usinette. Mais c'est quoi une usinette?"
+        },
+        "id": "53",
+        "slug": {
+            "FRENCH": "histoire-de-fablab--histoire-d-usinette"
+        },
+        "title": {
+            "FRENCH": "Histoire de FabLab, histoire d'Usinette"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            4,
+            22,
+            7,
+            35,
+            26
+        ],
+        "authorId": "clacote",
+        "content": {},
+        "headline": {
+            "ENGLISH": "La session \"node.js: why, when and how\" a \u00e9t\u00e9 annul\u00e9e, et est remplac\u00e9e par \"Web Components : l'avenir des d\u00e9veloppeurs web\".",
+            "FRENCH": "La session \"node.js: why, when and how\" a \u00e9t\u00e9 annul\u00e9e, et est remplac\u00e9e par \"Web Components : l'avenir des d\u00e9veloppeurs web\"."
+        },
+        "id": "54",
+        "slug": {
+            "ENGLISH": "changement-de-derniere-minute",
+            "FRENCH": "changement-de-derniere-minute"
+        },
+        "title": {
+            "ENGLISH": "Changement de derni\u00e8re minute",
+            "FRENCH": "Changement de derni\u00e8re minute"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            4,
+            19,
+            7,
+            56,
+            55
+        ],
+        "authorId": "romain",
+        "content": {},
+        "headline": {
+            "FRENCH": "L'\u00e9quipe et les relations entre les individus est un sujet qui anime Jean-Fran\u00e7ois. En agile il est d'autant plus important de comprendre les m\u00e9canismes pour mieux collaborer. Jean-Fran\u00e7ois nous apporte ses lumi\u00e8res au cours d'un talk et d'un workshop."
+        },
+        "id": "51",
+        "slug": {
+            "FRENCH": "interview-de-jean-francois-jagodzinski"
+        },
+        "title": {
+            "FRENCH": "Interview de Jean-Fran\u00e7ois Jagodzinski"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            4,
+            17,
+            22,
+            11,
+            29
+        ],
+        "authorId": "clacote",
+        "content": {},
+        "headline": {
+            "FRENCH": "Une API JSON est d\u00e9sormais disponible !"
+        },
+        "id": "40",
+        "slug": {
+            "FRENCH": "wanna-hack-mixit-"
+        },
+        "title": {
+            "FRENCH": "Wanna hack MiXiT?"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            4,
+            17,
+            18,
+            21,
+            57
+        ],
+        "authorId": "agnes",
+        "content": {},
+        "headline": {
+            "FRENCH": "Nous sommes tr\u00e8s heureux d'accueillir sur MiXiT Camille des Human Coders. Il va nous parler de Lean Startup..."
+        },
+        "id": "52",
+        "slug": {
+            "FRENCH": "interview-des-human-coders"
+        },
+        "title": {
+            "FRENCH": "Interview des Human Coders"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            4,
+            15,
+            7,
+            21,
+            14
+        ],
+        "authorId": "clacote",
+        "content": {},
+        "headline": {
+            "FRENCH": "Une nouvelle fonctionnalit\u00e9 vous permet de reconna\u00eetre les participants que vous avez envie de croiser le jour de la conf\u00e9rence."
+        },
+        "id": "50",
+        "slug": {
+            "FRENCH": "votre-trombinoscope-personnel"
+        },
+        "title": {
+            "FRENCH": "Votre trombinoscope personnel"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            4,
+            13,
+            19,
+            26,
+            30
+        ],
+        "authorId": "romain",
+        "content": {},
+        "headline": {
+            "ENGLISH": "We pleased to welcome Simon, author of the blog codingthearchitecture.com, who will give a talk and facilitate a workshop about software architecture, a mandatory skill for all teams. Interview !"
+        },
+        "id": "49",
+        "slug": {
+            "ENGLISH": "interview-de-simon-brown"
+        },
+        "title": {
+            "ENGLISH": "Interview de Simon Brown"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            4,
+            13,
+            11,
+            38,
+            58
+        ],
+        "authorId": "romain",
+        "content": {},
+        "headline": {
+            "ENGLISH": "Chrissy Welsh defines herself as a UXer, she will give a talk \"The hitchhikers guide to UXing without a UXer\" about this discipline, often named, seldom mastered ... Interview !"
+        },
+        "id": "46",
+        "slug": {
+            "ENGLISH": "interview-of-chrissy-welsh"
+        },
+        "title": {
+            "ENGLISH": "Interview of Chrissy Welsh"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            4,
+            12,
+            9,
+            9,
+            54
+        ],
+        "authorId": "cedric",
+        "content": {},
+        "headline": {
+            "ENGLISH": "Zach is a Githubber and will come to MiXiT for a talk named 'The product is the byproduct'. Interview!"
+        },
+        "id": "48",
+        "slug": {
+            "ENGLISH": "interview-of-zach-holman"
+        },
+        "title": {
+            "ENGLISH": "Interview of Zach Holman"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            4,
+            2,
+            8,
+            45,
+            31
+        ],
+        "authorId": "cedric",
+        "content": {},
+        "headline": {
+            "FRENCH": "N'oubliez pas que vous pouvez toujours proposer des lightning talks \u00e0 MiXiT ! "
+        },
+        "id": "45",
+        "slug": {
+            "FRENCH": "lightning-talks"
+        },
+        "title": {
+            "FRENCH": "Lightning talks"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            3,
+            23,
+            20,
+            4,
+            32
+        ],
+        "authorId": "clacote",
+        "content": {},
+        "headline": {
+            "FRENCH": "Votre entreprise vous paie les entr\u00e9es \u00e0 MiXiT, et vous voulez-vous faire rembourser? Demandez une facture."
+        },
+        "id": "44",
+        "slug": {
+            "FRENCH": "besoin-d-une-facture-"
+        },
+        "title": {
+            "FRENCH": "Besoin d'une facture?"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            3,
+            22,
+            0,
+            56,
+            39
+        ],
+        "authorId": "clacote",
+        "content": {},
+        "headline": {
+            "FRENCH": "MiXiT 2013 est complet. But wait! Il y a une liste d'attente officielle."
+        },
+        "id": "43",
+        "slug": {
+            "FRENCH": "vous-vouliez-une-place-"
+        },
+        "title": {
+            "FRENCH": "Vous vouliez une place?"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            3,
+            21,
+            9,
+            43,
+            53
+        ],
+        "authorId": "clacote",
+        "content": {},
+        "headline": {
+            "FRENCH": "L'ensemble des places ont \u00e9t\u00e9 vendues."
+        },
+        "id": "42",
+        "slug": {
+            "FRENCH": "mixit-2013---c-est-deja-complet-"
+        },
+        "title": {
+            "FRENCH": "MiXiT 2013 : c'est d\u00e9j\u00e0 complet!"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            3,
+            19,
+            17,
+            44,
+            15
+        ],
+        "authorId": "clacote",
+        "content": {},
+        "headline": {
+            "FRENCH": "Vous pouvez d\u00e9sormais mettre des sessions en favoris directement depuis le planning."
+        },
+        "id": "41",
+        "slug": {
+            "FRENCH": "construisez-votre-planning-personnel-"
+        },
+        "title": {
+            "FRENCH": "Construisez votre planning personnel!"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            3,
+            15,
+            15,
+            6,
+            26
+        ],
+        "authorId": "clacote",
+        "content": {},
+        "headline": {
+            "FRENCH": "Ne tardez pas \u00e0 r\u00e9server votre place pour un ou deux jours."
+        },
+        "id": "39",
+        "slug": {
+            "FRENCH": "la-billetterie-pour-mixit-2013-est-ouverte-"
+        },
+        "title": {
+            "FRENCH": "La billetterie pour MiXiT 2013 est ouverte!"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            3,
+            15,
+            13,
+            2,
+            38
+        ],
+        "authorId": "clacote",
+        "content": {},
+        "headline": {
+            "FRENCH": "D\u00e9couvrez la r\u00e9partition des sessions chaque jour."
+        },
+        "id": "38",
+        "slug": {
+            "FRENCH": "le-planning-des-25-et-26-avril-est-disponible-"
+        },
+        "title": {
+            "FRENCH": "Le planning des 25 et 26 avril est disponible!"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            3,
+            14,
+            11,
+            0,
+            11
+        ],
+        "authorId": "clacote",
+        "content": {},
+        "headline": {
+            "FRENCH": "Les sessions et speakers s\u00e9lectionn\u00e9s sont disponibles, et la billetterie ouvrira vendredi 15 mars."
+        },
+        "id": "37",
+        "slug": {
+            "FRENCH": "programme-2013-et-billetterie"
+        },
+        "title": {
+            "FRENCH": "Programme 2013 et billetterie"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            3,
+            7,
+            14,
+            45,
+            31
+        ],
+        "authorId": "agnes",
+        "content": {},
+        "headline": {
+            "FRENCH": "MiXiT ne pourrait pas avoir lieu sans un certain nombre de partenariats ou de sponsors!\r\nMerci \u00e0 eux!"
+        },
+        "id": "36",
+        "slug": {
+            "FRENCH": "merci-a-tous-nos-sponsors-et-partenaires--"
+        },
+        "title": {
+            "FRENCH": "Merci \u00e0 tous nos sponsors et partenaires !"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            2,
+            27,
+            19,
+            16,
+            42
+        ],
+        "authorId": "105069688047906196113",
+        "content": {},
+        "headline": {
+            "FRENCH": "C'est le moment de soumettre votre session!"
+        },
+        "id": "33",
+        "slug": {
+            "FRENCH": "appel-a-orateurs"
+        },
+        "title": {
+            "FRENCH": "Appel \u00e0 orateurs"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            2,
+            6,
+            10,
+            47,
+            43
+        ],
+        "authorId": "agnes",
+        "content": {},
+        "headline": {
+            "FRENCH": "Les nouveaux speakers annonc\u00e9s sont des filles! Attention, elles d\u00e9coiffent..."
+        },
+        "id": "35",
+        "slug": {
+            "FRENCH": "les-filles-a-l-honneur-"
+        },
+        "title": {
+            "FRENCH": "Les filles \u00e0 l'honneur!"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            1,
+            25,
+            10,
+            10,
+            55
+        ],
+        "authorId": "cedric",
+        "content": {},
+        "headline": {
+            "FRENCH": "Histoire de vous faire saliver un peu sur le programme, nous d\u00e9voilons aujourd\u2019hui quelques-uns des speakers #mixit13 !"
+        },
+        "id": "32",
+        "slug": {
+            "FRENCH": "des-noms--des-noms-"
+        },
+        "title": {
+            "FRENCH": "Des noms, des noms!"
+        }
+    },
+    {
+        "addedAt": [
+            2013,
+            1,
+            22,
+            23,
+            56,
+            27
+        ],
+        "authorId": "105069688047906196113",
+        "content": {},
+        "headline": {
+            "FRENCH": "Annonce MiXiT 2013"
+        },
+        "id": "31",
+        "slug": {
+            "FRENCH": "mixit-2013-aura-lieu-les-25-et-26-avril-"
+        },
+        "title": {
+            "FRENCH": "MiXiT 2013 aura lieu les 25 et 26 avril!"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            9,
+            26,
+            10,
+            43,
+            40
+        ],
+        "authorId": "franck",
+        "content": {},
+        "headline": {
+            "FRENCH": "OK, elles  ne sont peut-\u00eatre pas toutes de tr\u00e8s bonne qualit\u00e9, mais les speakers le sont!"
+        },
+        "id": "30",
+        "slug": {
+            "FRENCH": "les-videos-de-mixit-2012"
+        },
+        "title": {
+            "FRENCH": "Les vid\u00e9os de MiXiT 2012"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            7,
+            7,
+            15,
+            10,
+            24
+        ],
+        "authorId": "romain",
+        "content": {},
+        "headline": {
+            "FRENCH": "Pour revivre et retrouver MiXiT 2012 (en attendant les vid\u00e9os qui sont en cours de montage), nous vous proposons des liens qui vous serviront \u00e0 revivre les moments forts de cette \u00e9dition."
+        },
+        "id": "29",
+        "slug": {
+            "FRENCH": "les-supports-de-presentation-et-les-retours"
+        },
+        "title": {
+            "FRENCH": "Les supports de pr\u00e9sentation et les retours"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            4,
+            25,
+            10,
+            34,
+            7
+        ],
+        "authorId": "agnes",
+        "content": {},
+        "headline": {
+            "FRENCH": "Voici l'interview d'Aline Paponaud qui animera \u00e0 MiXiT un th\u00e9$atre d'impro pour apprendre \u00e0 \u00eatre agile! Aline \u00e9tait \u00e9galement \u00e0 Devoxx France pour un atelier pour les enfants avec programatoo, co-anim\u00e9 avec une autre superbe Duchess : Audrey Neveu."
+        },
+        "id": "28",
+        "slug": {
+            "FRENCH": "theatre-d-impro-pour-jouer-a-etre-agile-avec-aline"
+        },
+        "title": {
+            "FRENCH": "Th\u00e9\u00e2tre d\u2019Impro pour jouer \u00e0 \u00eatre Agile avec Aline"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            4,
+            25,
+            10,
+            4,
+            59
+        ],
+        "authorId": "agnes",
+        "content": {},
+        "headline": {
+            "ENGLISH": "Continuing our interview series, the MiXiT team asked some questions to Bodil Stokke who will do a talk about how to do Painless client side JavaScript Development ."
+        },
+        "id": "27",
+        "slug": {
+            "ENGLISH": "bodil-stokke---painless-web-app-development"
+        },
+        "title": {
+            "ENGLISH": "Bodil Stokke & Painless Web App Development"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            4,
+            24,
+            11,
+            38,
+            51
+        ],
+        "authorId": "clacote",
+        "content": {},
+        "headline": {
+            "FRENCH": "Vous aimeriez tout planifier dans votre smartphone?"
+        },
+        "id": "26",
+        "slug": {
+            "FRENCH": "un-calendrier-google-pour-mixit"
+        },
+        "title": {
+            "FRENCH": "Un calendrier Google pour MiXiT"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            4,
+            24,
+            11,
+            20,
+            43
+        ],
+        "authorId": "franck",
+        "content": {},
+        "headline": {
+            "FRENCH": "Quelques informations sur l'organisation de votre journ\u00e9e"
+        },
+        "id": "23",
+        "slug": {
+            "FRENCH": "mixit-2012---votre-journee"
+        },
+        "title": {
+            "FRENCH": "MiXiT 2012 : votre journ\u00e9e"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            4,
+            24,
+            9,
+            5
+        ],
+        "authorId": "agnes",
+        "content": {},
+        "headline": {
+            "ENGLISH": "Continuing our interview series, the MiXiT team asked some questions to Pamela Fox who will be our final keynote speaker and who will do a talk about PhoneGap."
+        },
+        "id": "24",
+        "slug": {
+            "ENGLISH": "encounter-with-pamela-fox--mixit-keynote-speaker"
+        },
+        "title": {
+            "ENGLISH": "Encounter with Pamela Fox, MiXiT keynote speaker"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            4,
+            23,
+            12,
+            8
+        ],
+        "authorId": "agnes",
+        "content": {},
+        "headline": {
+            "FRENCH": "Cette interview est consacr\u00e9e \u00e0 Mathilde Lem\u00e9e. Elle a, \u00e0 Devoxx France, anim\u00e9 un hackergarten et pr\u00e9sent\u00e9 un talk \u00e9galement sur les tests d'applications web avec WebDriver, TestNG et Selenium Grid qu'elle nous fera le plaisir de pr\u00e9senter \u00e0 MiXiT."
+        },
+        "id": "25",
+        "slug": {
+            "FRENCH": "tests-d-applications-web-par-mathilde-lemee"
+        },
+        "title": {
+            "FRENCH": "Tests d'applications web par Mathilde Lem\u00e9e"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            4,
+            20,
+            13,
+            34,
+            54
+        ],
+        "authorId": "romain",
+        "content": {},
+        "headline": {
+            "FRENCH": "L'UX, tout le monde en a une d\u00e9finition et pourtant peu de gens savent en faire. Pourquoi ? Tout simplement parce qu'il s'agit d'une discipline \u00e0 part enti\u00e8re, un vrai m\u00e9tier dont Sophie Freiermuth va nous livrer quelques secrets."
+        },
+        "id": "16",
+        "slug": {
+            "FRENCH": "rencontre-ux-avec-sophie-freiermuth"
+        },
+        "title": {
+            "FRENCH": "Rencontre UX avec Sophie Freiermuth"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            4,
+            19,
+            11,
+            44,
+            23
+        ],
+        "authorId": "agnes",
+        "content": {},
+        "headline": {
+            "ENGLISH": "Pieter Hintjens has many strings to his bow. He's active in open standards development (author of Advanced Message Queuing Protocol : AMQP), co-founder of ZeroMQ, a topic of one of his MiXiT talks. And he will speak about Social Architecture too!"
+        },
+        "id": "21",
+        "slug": {
+            "ENGLISH": "messaging---social-architecture-by-pieter-hintjens"
+        },
+        "title": {
+            "ENGLISH": "Messaging & Social Architecture by Pieter Hintjens"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            4,
+            18,
+            10,
+            42,
+            39
+        ],
+        "authorId": "romain",
+        "content": {},
+        "headline": {
+            "FRENCH": "Souvent parent pauvre des projets, les tests sont pourtant une n\u00e9cessit\u00e9 pour tous qu'on soit agile ... ou pas. Gilles Mantel nous explique pourquoi"
+        },
+        "id": "17",
+        "slug": {
+            "FRENCH": "rencontre-avec-gilles-mantel--test--test--test"
+        },
+        "title": {
+            "FRENCH": "Rencontre avec Gilles Mantel, test, test, test"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            4,
+            18,
+            8,
+            54,
+            19
+        ],
+        "authorId": "agnes",
+        "content": {},
+        "headline": {
+            "ENGLISH": "Continuing our interview series, the MiXiT team asked some questions at Petra Cross who will be at Devoxx France and MiXiT."
+        },
+        "id": "22",
+        "slug": {
+            "ENGLISH": "googler-petra-cross-will-be--devoxxfr----mixit"
+        },
+        "title": {
+            "ENGLISH": "Googler Petra Cross will be @DevoxxFr & @MiXiT"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            4,
+            13,
+            16,
+            8,
+            50
+        ],
+        "authorId": "romain",
+        "content": {},
+        "headline": {
+            "FRENCH": "Le management n'appara\u00eet ni dans le manifeste agile ni dans les m\u00e9thodes les plus connues comme Scrum, XP ou Kanban. On ne peut pourtant pas occulter cette fonction essentielle de l'entreprise ... qui a aussi sa place dans une \u00e9quipe agile."
+        },
+        "id": "19",
+        "slug": {
+            "FRENCH": "rencontre-avec-le-coach-jean-claude-grosjean"
+        },
+        "title": {
+            "FRENCH": "Rencontre avec le coach Jean-Claude Grosjean"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            4,
+            12,
+            14,
+            13,
+            3
+        ],
+        "authorId": "romain",
+        "content": {},
+        "headline": {
+            "FRENCH": "Alexis Monville animera \"Exp\u00e9rience des billes rouges\", rencontre sur le th\u00e8me du management"
+        },
+        "id": "15",
+        "slug": {
+            "FRENCH": "interview-d-alexis-monville"
+        },
+        "title": {
+            "FRENCH": "Interview d'Alexis Monville"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            4,
+            11,
+            13,
+            2,
+            27
+        ],
+        "authorId": "romain",
+        "content": {},
+        "headline": {
+            "FRENCH": "Un nouveau terme \"Lean Startup\" vient d'apparaitre. Loin du buzz, cette nouvelle m\u00e9thode s'av\u00e8re tr\u00e8s puissante pour la conception et l'\u00e9mergence de nouveaux produits. Kesako ? R\u00e9ponses avec Emmanuel qui nous dira tout sur ce sujet qui va faire du bruit."
+        },
+        "id": "18",
+        "slug": {
+            "FRENCH": "echange-avec-emmanuel-levi-valensi---lean-startup"
+        },
+        "title": {
+            "FRENCH": "Echange avec Emmanuel Levi-Valensi : Lean startup"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            4,
+            11,
+            9,
+            58,
+            59
+        ],
+        "authorId": "romain",
+        "content": {},
+        "headline": {
+            "FRENCH": "La Skyteam ce sont Antoine Vernois, Fabrice Aimetti et Antoine Launay qui viendront pr\u00e9senter leur cr\u00e9ation originale \"Sky Castle Game\""
+        },
+        "id": "14",
+        "slug": {
+            "FRENCH": "interview-de-la-skyteam--"
+        },
+        "title": {
+            "FRENCH": "Interview de la Skyteam !"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            4,
+            10,
+            8,
+            30,
+            28
+        ],
+        "authorId": "romain",
+        "content": {},
+        "headline": {
+            "FRENCH": "Nous nous sommes entretenus avec Pablo Pernot qui animera la session \"Anatomie d'une mission agile, saison 2\""
+        },
+        "id": "13",
+        "slug": {
+            "FRENCH": "rencontre-avec-pablo-pernot--coach-agile"
+        },
+        "title": {
+            "FRENCH": "Rencontre avec Pablo Pernot, coach agile"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            4,
+            5,
+            12,
+            43,
+            44
+        ],
+        "authorId": "agnes",
+        "content": {},
+        "headline": {
+            "FRENCH": "Oana Juncu animera la session \"Le DotGame, jouer la performance\". Nous lui avons pos\u00e9 quelques questions pour vous donner envie d'assister \u00e0 son talk"
+        },
+        "id": "12",
+        "slug": {
+            "FRENCH": "rencontre-avec-la-coach-agile-oana-juncu"
+        },
+        "title": {
+            "FRENCH": "Rencontre avec la coach agile Oana Juncu"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            3,
+            29,
+            11,
+            51,
+            31
+        ],
+        "authorId": "cedric",
+        "content": {},
+        "headline": {
+            "FRENCH": "Notre dernier sponsor est r\u00e9v\u00e9l\u00e9 : ce sera Google qui devient notre partenaire Gold! Les sessions ont \u00e9galement toutes \u00e9t\u00e9 annonc\u00e9es."
+        },
+        "id": "11",
+        "slug": {
+            "FRENCH": "google-sponsor-gold--les-sessions-annoncees-"
+        },
+        "title": {
+            "FRENCH": "Google sponsor Gold, les sessions annonc\u00e9es!"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            3,
+            20,
+            12,
+            21,
+            31
+        ],
+        "authorId": "romain",
+        "content": {},
+        "headline": {
+            "FRENCH": "Quelle est sa dur\u00e9e ? Qui passe ? Quand ? Ce nouveau format de sessions ultra-courtes vous surprendra par son dynamisme et la vari\u00e9t\u00e9 du programme. Dans cet article on vous dit tout sur cette nouveaut\u00e9 de MiXiT 2012."
+        },
+        "id": "10",
+        "slug": {
+            "FRENCH": "qu-est-ce-qu-un-lightning-talk-a-mixit--"
+        },
+        "title": {
+            "FRENCH": "Qu\u2019est-ce qu\u2019un Lightning talk \u00e0 MiXiT ?"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            3,
+            15,
+            10,
+            32,
+            43
+        ],
+        "authorId": "105069688047906196113",
+        "content": {},
+        "headline": {
+            "FRENCH": "Comment l'\u00e9quipe MiXiT choisit-elle les sessions de son programme?"
+        },
+        "id": "9",
+        "slug": {
+            "FRENCH": "call-for-paper-mixit--sa-vie--son-oeuvre-"
+        },
+        "title": {
+            "FRENCH": "Call for paper MiXiT: sa vie, son oeuvre."
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            3,
+            7,
+            8,
+            48,
+            17
+        ],
+        "authorId": "clacote",
+        "content": {},
+        "headline": {
+            "FRENCH": "Vous avez terriblement envie d'assister \u00e0 cette session qui a l'air incroyable : marquez-la comme favorite!"
+        },
+        "id": "8",
+        "slug": {
+            "FRENCH": "nouvelle-fonctionnalite---sessions-favorites"
+        },
+        "title": {
+            "FRENCH": "Nouvelle fonctionnalit\u00e9 : sessions favorites"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            3,
+            5,
+            10,
+            18,
+            1
+        ],
+        "authorId": "cedric",
+        "content": {},
+        "headline": {
+            "FRENCH": "Vous pouvez acheter votre billet! Soyez rapides car il n'y en aura pas pour tout le monde! "
+        },
+        "id": "7",
+        "slug": {
+            "FRENCH": "ouverture-des-inscriptions-"
+        },
+        "title": {
+            "FRENCH": "Ouverture des inscriptions!"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            2,
+            15,
+            14,
+            1,
+            39
+        ],
+        "authorId": "cedric",
+        "content": {},
+        "headline": {
+            "FRENCH": "Le site de mix-it est un peu plus qu'un simple site de renseignement et inscription. Ce petit article vous expose les fonctionnalit\u00e9s disponibles et les raisons de sa cr\u00e9ation."
+        },
+        "id": "6",
+        "slug": {
+            "FRENCH": "pourquoi-ce-site--"
+        },
+        "title": {
+            "FRENCH": "Pourquoi ce site ?"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            2,
+            13,
+            6,
+            0,
+            11
+        ],
+        "authorId": "clacote",
+        "content": {},
+        "headline": {
+            "FRENCH": "On continue les am\u00e9liorations : des suggestions plus pertinentes ; vous pouvez \u00eatre notifi\u00e9 par mail des activit\u00e9s importantes ; et d'autres am\u00e9liorations..."
+        },
+        "id": "5",
+        "slug": {
+            "FRENCH": "mise-a-jour-du-site---suggestions--notifications"
+        },
+        "title": {
+            "FRENCH": "Mise \u00e0 jour du site : suggestions, notifications"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            2,
+            8,
+            8,
+            37,
+            58
+        ],
+        "authorId": "clacote",
+        "content": {},
+        "headline": {
+            "FRENCH": "A la demande g\u00e9n\u00e9rale, les activit\u00e9s de consultation disparaissent."
+        },
+        "id": "4",
+        "slug": {
+            "FRENCH": "mise-a-jour-du-site---activites-plus-pertinentes"
+        },
+        "title": {
+            "FRENCH": "Mise \u00e0 jour du site : activit\u00e9s plus pertinentes"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            2,
+            6,
+            9,
+            41,
+            32
+        ],
+        "authorId": "agnes",
+        "content": {},
+        "headline": {
+            "FRENCH": "Apr\u00e8s un petit bug sur la connexion (corrig\u00e9 en mode agile!) c'est tout bon : vous pouvez vous ouvrir un compte MiXiT!"
+        },
+        "id": "3",
+        "slug": {
+            "FRENCH": "vous-pouvez-maintenant-vous-inscrire-"
+        },
+        "title": {
+            "FRENCH": "Vous pouvez maintenant vous inscrire!"
+        }
+    },
+    {
+        "addedAt": [
+            2012,
+            1,
+            31,
+            12,
+            43,
+            39
+        ],
+        "authorId": "clacote",
+        "content": {},
+        "headline": {
+            "FRENCH": "Enfin... Apr\u00e8s des heures de travail, nous sommes heureux de vous faire tester notre site MiXiT 2012!"
+        },
+        "id": "2",
+        "slug": {
+            "FRENCH": "le-site-mixit-2012-est-en-ligne-"
+        },
+        "title": {
+            "FRENCH": "Le site MiXiT 2012 est en ligne!"
+        }
+    },
+    {
+        "addedAt": [
+            2011,
+            11,
+            25,
+            0,
+            0
+        ],
+        "authorId": "agnes",
+        "content": {},
+        "headline": {
+            "FRENCH": "MiXiT seconde \u00e9dition est annonc\u00e9e pour le 26 avril 2012"
+        },
+        "id": "1",
+        "slug": {
+            "FRENCH": "mixit-2012-"
+        },
+        "title": {
+            "FRENCH": "MiXiT 2012!"
+        }
+    }
+]
