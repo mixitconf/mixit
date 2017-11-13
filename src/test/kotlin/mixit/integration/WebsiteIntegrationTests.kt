@@ -15,7 +15,6 @@ import reactor.test.test
 
 @ExtendWith(SpringExtension::class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@Disabled
 class WebsiteIntegrationTests(@LocalServerPort port: Int) {
 
     private val client = WebClient.create("http://localhost:$port")
