@@ -38,17 +38,16 @@
                 </p>
 
                 {{#event.videoUrl}}
-                    <div class="row">
-                        <div class="column">
-                            <strong>
-                                <div class="mxt-wrapper--intrinsic">
-                                    <iframe src="{{event.videoUrl.url}}" class="mxt-wrapper--video-player" allowfullscreen></iframe>
-                                </div>
-                            </strong>
-                            <br>
+                    {{#videoUrl}}
+                        <div class="mxt-wrapper--intrinsic">
+                            <iframe src="{{videoUrl}}" class="mxt-wrapper--video-player" allowfullscreen></iframe>
                         </div>
-                    </div>
+                    {{/videoUrl}}
+                    {{^videoUrl}}
+                        &#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{videoUrl}}" target="_blank">{{#i18n}}talk.video.thevideo{{/i18n}}</a>
+                    {{/videoUrl}}
                 {{/event.videoUrl}}
+                <p>&nbsp;</p>
             {{/hasPhotosOrVideo}}
 
             <h2>{{#i18n}}medias.html.videos{{/i18n}}</h2>

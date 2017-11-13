@@ -162,8 +162,8 @@ class AdminHandler(private val ticketRepository: TicketRepository,
                                 LocalDate.parse(formData["end"]!!),
                                 if (formData["current"] == null) false else formData["current"]!!.toBoolean(),
                                 it.sponsors,
-                                if (formData["photoUrls"] == null) emptyList() else formData["photoUrls"]!!.toLinks(),
-                                if (formData["videoUrl"] == null) null else formData["videoUrl"]!!.toLink()
+                                if (formData["photoUrls"].isNullOrEmpty()) emptyList() else formData["photoUrls"]!!.toLinks(),
+                                if (formData["videoUrl"].isNullOrEmpty()) null else formData["videoUrl"]!!.toLink()
                         )
                         eventRepository.save(event).then(seeOther("${properties.baseUri}/admin/events"))
                     }

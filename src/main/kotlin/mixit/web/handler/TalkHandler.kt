@@ -101,6 +101,7 @@ class TalkHandler(private val repository: TalkRepository,
                 Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
                 Pair("sponsors", sponsors),
                 Pair("event", event),
+                Pair("videoUrl", if (event.videoUrl?.url?.startsWith("https://vimeo.com/") == true) event.videoUrl.url.replace("https://vimeo.com/", "https://player.vimeo.com/video/") else null),
                 Pair("hasPhotosOrVideo", event.videoUrl != null || event.photoUrls.isNotEmpty())
         ))
     }
