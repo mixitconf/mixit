@@ -7,15 +7,12 @@ import mixit.repository.UserRepository
 import mixit.util.EmailService
 import mixit.util.locale
 import org.slf4j.LoggerFactory
-import org.springframework.http.HttpCookie
 import org.springframework.stereotype.Component
-import org.springframework.util.MultiValueMap
 import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.BodyExtractors.toFormData
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.*
-import org.springframework.web.server.WebSession
 import reactor.core.publisher.Mono
 import java.net.URI
 import java.time.LocalDateTime
@@ -120,7 +117,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
      */
     fun signIn(req: ServerRequest): Mono<ServerResponse> = req.body(toFormData()).flatMap { data ->
         val formData = data.toSingleValueMap()
-        val email = formData["email"]
+        val email = User.decodeEmail(formData["email"])
         val token = formData["token"]
 
         req.session().flatMap { session ->

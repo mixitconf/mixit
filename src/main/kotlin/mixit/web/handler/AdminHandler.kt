@@ -282,6 +282,7 @@ class AdminHandler(private val ticketRepository: TicketRepository,
 
     private fun adminUser(user: User = User("", "", "", "")) = ok().render("admin-user", mapOf(
             Pair("user", user),
+            Pair("email", User.decodeEmail(user.email)),
             Pair("description-fr", user.description[FRENCH]),
             Pair("description-en", user.description[ENGLISH]),
             Pair("roles", listOf(
@@ -300,7 +301,7 @@ class AdminHandler(private val ticketRepository: TicketRepository,
                     login = formData["login"]!!,
                     firstname = formData["firstname"]!!,
                     lastname = formData["lastname"]!!,
-                    email = if (formData["email"] == "") null else formData["email"],
+                    email = if (formData["email"] == "") null else User.encodeEmail(formData["email"]),
                     emailHash = if (formData["emailHash"] == "") null else formData["emailHash"],
                     photoUrl = if (formData["photoUrl"] == "") {
                         if (formData["emailHash"] == "") "/images/png/mxt-icon--default-avatar.png" else null

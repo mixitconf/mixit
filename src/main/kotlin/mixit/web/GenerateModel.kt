@@ -22,7 +22,7 @@ fun generateModel(properties: MixitProperties,
         val role = session.getAttribute<Role>("role")
         username?.let {
             this["username"] = it
-            if(it.equals(properties.admin!!) || (role !=null && role == Role.STAFF)) this["admin"] = true
+            if((role !=null && role == Role.STAFF)) this["admin"] = true
             this["connected"] = true
         }
         this["locale"] = locale.toString()
