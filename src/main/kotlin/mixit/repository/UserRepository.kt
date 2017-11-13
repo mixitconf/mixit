@@ -4,15 +4,15 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.model.Role
 import mixit.model.User
-import org.springframework.core.io.ClassPathResource
-import org.springframework.data.mongodb.core.query.Query
-import org.springframework.stereotype.Repository
-import reactor.core.publisher.Mono
 import org.slf4j.LoggerFactory
+import org.springframework.core.io.ClassPathResource
 import org.springframework.data.mongodb.core.*
-import org.springframework.data.mongodb.core.query.Criteria.*
+import org.springframework.data.mongodb.core.query.Criteria.where
+import org.springframework.data.mongodb.core.query.Query
 import org.springframework.data.mongodb.core.query.inValues
 import org.springframework.data.mongodb.core.query.isEqualTo
+import org.springframework.stereotype.Repository
+import reactor.core.publisher.Mono
 
 
 @Repository
@@ -35,7 +35,7 @@ class UserRepository(private val template: ReactiveMongoTemplate,
     fun findByYear(year: Int) =
             template.find<User>(Query(where("year").isEqualTo(year)))
 
-    fun findByEmail(email: String) = template.findOne<User>(Query(where("email").isEqualTo(email)))
+    fun findByEmail(email: String) = template.findOne<User>(Query(where("email").isEqualTo(User.encodeEmail(email))))
 
     fun findByName(firstname: String, lastname: String) =
             template.find<User>(Query(where("firstname").isEqualTo(firstname).and("lastname").isEqualTo(lastname)))
@@ -49,7 +49,7 @@ class UserRepository(private val template: ReactiveMongoTemplate,
 
 
     fun findOneByRoles(login: String, roles: List<Role>) =
-        template.findOne<User>(Query(where("role").inValues(roles).and("_id").isEqualTo(login)))
+            template.findOne<User>(Query(where("role").inValues(roles).and("_id").isEqualTo(login)))
 
 
     fun findAll() = template.findAll<User>()

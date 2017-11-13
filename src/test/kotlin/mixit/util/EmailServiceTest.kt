@@ -5,27 +5,23 @@ import mixit.MixitProperties
 import mixit.model.User
 import mixit.web.generateModel
 import org.assertj.core.api.Assertions
-import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
+import org.mockito.ArgumentCaptor
 import org.mockito.BDDMockito
-import org.mockito.Mock
 import org.mockito.Mockito
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.context.MessageSource
 import org.springframework.core.io.ResourceLoader
-import org.springframework.mail.SimpleMailMessage
 import org.springframework.mail.javamail.JavaMailSender
 import org.springframework.test.context.junit.jupiter.SpringExtension
 import java.util.*
-import javax.mail.Session
-import javax.mail.internet.MimeMessage
-import org.mockito.ArgumentCaptor
-import javax.mail.Address
 import javax.mail.Message
+import javax.mail.Session
 import javax.mail.internet.InternetAddress
+import javax.mail.internet.MimeMessage
 
 
 /**
@@ -59,7 +55,7 @@ class EmailServiceTest{
 
     @Test
     fun `open a mustache template to generate email in french`() {
-        val user = User("test@gmail.com", "Guillaume", "EHRET", "test@gmail.com")
+        val user = User("test@gmail.com", "Guillaume", "EHRET", "dGVzdEBnbWFpbC5jb20=")
         user.token = "token-3455-dede"
         var params = generateModel("https://mixitconf.org", Locale.FRENCH, messageSource)
         params.put("user", user)
@@ -131,7 +127,7 @@ class EmailServiceTest{
     }
 
     private fun createUser(): User {
-        val user = User("test@gmail.com", "Guillaume", "EHRET", "test@gmail.com")
+        val user = User("test@gmail.com", "Guillaume", "EHRET", "dGVzdEBnbWFpbC5jb20=")
         user.token = "token-3455-dede"
         return user
     }

@@ -64,8 +64,17 @@ class UserDto(
 )
 
 fun User.toDto(language: Language, markdownConverter: MarkdownConverter) =
-        UserDto(login, firstname, lastname, email ?: "", company, markdownConverter.toHTML(description[language] ?: ""),
-                emailHash, photoUrl, role, links, logoType(photoUrl), logoWebpUrl(photoUrl))
+        UserDto(login,
+                firstname,
+                lastname,
+                User.decodeEmail(email) ?: "",
+                company, markdownConverter.toHTML(description[language] ?: ""),
+                emailHash,
+                photoUrl,
+                role,
+                links,
+                logoType(photoUrl),
+                logoWebpUrl(photoUrl))
 
 private fun logoWebpUrl(url: String?) =
         when {

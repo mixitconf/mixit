@@ -57,7 +57,7 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
                                     .flatMap { user ->
                                         // If user is find, token must to be the good one and must be valid
                                         if (user.token.equals(it.attributes["token"]!!.toString()) && user.tokenExpiration.isAfter(LocalDateTime.now())) {
-                                            if (startWithAdminSecuredUrl(uriPath) && user.role != Role.STAFF && !user.email.equals(properties.admin)){
+                                            if (startWithAdminSecuredUrl(uriPath) && user.role != Role.STAFF){
                                                 redirectForLogin(exchange, "")
                                             }
                                             else {

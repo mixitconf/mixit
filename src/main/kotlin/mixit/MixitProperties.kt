@@ -6,7 +6,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties
 class MixitProperties {
     var baseUri: String? = null
     var contact: String? = null
-    var admin: String? = null
     val drive = Drive()
 
     class Drive {

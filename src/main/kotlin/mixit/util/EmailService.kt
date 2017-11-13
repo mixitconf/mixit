@@ -30,7 +30,6 @@ class EmailService(private val mustacheCompiler: Mustache.Compiler,
 
 
     fun sendUserTokenEmail(user: User, locale: Locale) {
-        logger.info("A token was sent to ${user.email}")
         sendEmail("email-token",
                 messageSource.getMessage("email-token-subject", null, locale),
                 user,
@@ -41,13 +40,14 @@ class EmailService(private val mustacheCompiler: Mustache.Compiler,
         try {
             val message = mailSender.createMimeMessage()
             val helper = MimeMessageHelper(message, true, "UTF-8")
-
+            val email = User.decodeEmail(user.email)
             val context = generateModel(properties.baseUri!!, locale, messageSource)
+
             context.put("user", user)
-            context.put("encodedemail", Escaping.escapeHtml(user.email!!, true))
+            context.put("encodedemail", Escaping.escapeHtml(email, true))
 
             message.setContent(openTemplate(templateName, context), "text/html")
-            helper.setTo(user.email!!)
+            helper.setTo(email!!)
             helper.setSubject(subject)
 
             mailSender.send(message)

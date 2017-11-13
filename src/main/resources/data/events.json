@@ -7,6 +7,12 @@
             26
         ],
         "id": "mixit12",
+        "photoUrls": [
+            {
+                "name": "MiXiT 2012",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157688295733061"
+            }
+        ],
         "sponsors": [
             {
                 "level": "GOLD",
@@ -86,6 +92,7 @@
             4,
             26
         ],
+        "videoUrl": null,
         "year": 2012
     },
     {
@@ -96,6 +103,12 @@
             26
         ],
         "id": "mixit13",
+        "photoUrls": [
+            {
+                "name": "MiXiT 2013",
+                "url": "https://photos.google.com/b/106629477368826686108/album/AF1QipP_2rgU2AmfHs8jqjqHZssdbptYaq8f2tqAyqLN"
+            }
+        ],
         "sponsors": [
             {
                 "level": "GOLD",
@@ -193,6 +206,7 @@
             4,
             25
         ],
+        "videoUrl": null,
         "year": 2013
     },
     {
@@ -203,6 +217,12 @@
             30
         ],
         "id": "mixit14",
+        "photoUrls": [
+            {
+                "name": "MiXiT 2014",
+                "url": "https://photos.google.com/b/106629477368826686108/album/AF1QipNw6ApiPhPzzd-5BtKlIsuLralYcTCm2HaG3GXk"
+            }
+        ],
         "sponsors": [
             {
                 "level": "SILVER",
@@ -354,6 +374,10 @@
             4,
             29
         ],
+        "videoUrl": {
+            "name": "video",
+            "url": "https://vimeo.com/214902172"
+        },
         "year": 2014
     },
     {
@@ -364,6 +388,20 @@
             17
         ],
         "id": "mixit15",
+        "photoUrls": [
+            {
+                "name": "MiXiT 2015 jour 1",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157652095111126"
+            },
+            {
+                "name": "MiXiT 2015 soir\u00e9 la plateforme",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157651751048368"
+            },
+            {
+                "name": "MiXiT 2015 jour 2",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157649826132434"
+            }
+        ],
         "sponsors": [
             {
                 "level": "SILVER",
@@ -515,6 +553,10 @@
             4,
             16
         ],
+        "videoUrl": {
+            "name": "video",
+            "url": "https://vimeo.com/214908582"
+        },
         "year": 2015
     },
     {
@@ -525,6 +567,20 @@
             22
         ],
         "id": "mixit16",
+        "photoUrls": [
+            {
+                "name": "MiXiT 2016 conf\u00e9rence",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157666243159183"
+            },
+            {
+                "name": "MiXiT 2016 reportage",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157667987593380"
+            },
+            {
+                "name": "MiXiT 2016 diner speaker",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157667470832986"
+            }
+        ],
         "sponsors": [
             {
                 "level": "GOLD",
@@ -739,6 +795,10 @@
             4,
             21
         ],
+        "videoUrl": {
+            "name": "video",
+            "url": "https://vimeo.com/214908582"
+        },
         "year": 2016
     },
     {
@@ -749,6 +809,16 @@
             21
         ],
         "id": "mixit17",
+        "photoUrls": [
+            {
+                "name": "MiXiT 2017 official",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157680961511852"
+            },
+            {
+                "name": "MiXiT 2017 unofficial",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157683737519685"
+            }
+        ],
         "sponsors": [
             {
                 "level": "GOLD",
@@ -954,6 +1024,10 @@
             4,
             20
         ],
+        "videoUrl": {
+            "name": "video",
+            "url": "https://vimeo.com/215910469"
+        },
         "year": 2017
     },
     {
@@ -964,6 +1038,7 @@
             20
         ],
         "id": "mixit18",
+        "photoUrls": [],
         "sponsors": [
             {
                 "level": "SILVER",
@@ -1070,6 +1145,7 @@
             4,
             19
         ],
+        "videoUrl": null,
         "year": 2018
     }
 ]
