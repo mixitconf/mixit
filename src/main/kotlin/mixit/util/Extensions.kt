@@ -7,6 +7,8 @@ import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.permanentRedirect
 import org.springframework.web.reactive.function.server.ServerResponse.seeOther
 import java.net.URI
+import java.nio.charset.Charset
+import java.security.MessageDigest
 import java.text.Normalizer
 import java.time.LocalDateTime
 import java.time.ZoneOffset
@@ -23,8 +25,8 @@ import java.util.stream.IntStream
 // -------------------------
 
 fun ServerRequest.language() =
-        Language.findByTag(if(this.headers().asHttpHeaders().contentLanguage != null) this.headers().asHttpHeaders().contentLanguage!!.language
-            else this.headers().asHttpHeaders().acceptLanguageAsLocales.first().language)
+        Language.findByTag(if (this.headers().asHttpHeaders().contentLanguage != null) this.headers().asHttpHeaders().contentLanguage!!.language
+        else this.headers().asHttpHeaders().acceptLanguageAsLocales.first().language)
 
 fun ServerRequest.locale(): Locale =
         this.headers().asHttpHeaders().contentLanguage ?: Locale.ENGLISH
@@ -52,7 +54,7 @@ fun LocalDateTime.formatTalkDate(language: Language): String =
 fun LocalDateTime.formatTalkTime(language: Language): String =
         if (language == Language.ENGLISH) this.format(englishTalkTimeFormatter) else this.format(frenchTalkTimeFormatter)
 
-fun LocalDateTime.toRFC3339(): String = ZonedDateTime.of(this, ZoneOffset.UTC) .format(rfc3339Formatter)
+fun LocalDateTime.toRFC3339(): String = ZonedDateTime.of(this, ZoneOffset.UTC).format(rfc3339Formatter)
 
 
 private val daysLookup: Map<Long, String> =
@@ -85,7 +87,6 @@ private val englishTalkTimeFormatter = DateTimeFormatter.ofPattern("HH:mm", Loca
 private val rfc3339Formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssXXX")
 
 
-
 private fun getOrdinal(n: Int) =
         when {
             n in 11..13 -> "${n}th"
@@ -110,6 +111,17 @@ fun String.toSlug() = toLowerCase()
         .split(" ")
         .joinToString("-")
         .replace("-+".toRegex(), "-")   // Avoid multiple consecutive "--"
+
+fun String.md5Hex(): String? = if (isNullOrEmpty()) null else hex(MessageDigest.getInstance("MD5").digest(toByteArray(Charset.forName("CP1252"))))
+
+private fun hex(digested: ByteArray): String {
+    val sb = StringBuffer()
+    for (i in digested.indices) {
+        val v = Integer.toHexString(((digested[i].toInt() and 0xFF) or 0x100))
+        sb.append(v.substring(1, 3))
+    }
+    return sb.toString()
+}
 
 fun <T> Iterable<T>.shuffle(): Iterable<T> =
         toMutableList().apply { Collections.shuffle(this) }
