@@ -154,13 +154,25 @@ class AuthenticationHandler(private val userRepository: UserRepository,
      * the email it's OK. If he retries a login a new token is sent
      */
     private fun sendUserToken(email: String, user: User, locale: Locale): Mono<User> {
-        user.token = UUID.randomUUID().toString()
-        user.tokenExpiration = LocalDateTime.now().plusHours(12)
+        val userToUpdate = User(
+                user.login,
+                user.firstname,
+                user.lastname,
+                User.encodeEmail(email),
+                user.company,
+                user.description,
+                user.emailHash,
+                user.photoUrl,
+                user.role,
+                user.links,
+                user.legacyId,
+                LocalDateTime.now().plusHours(12),
+                UUID.randomUUID().toString())
 
         try {
             logger.info("A token was sent to ${email}")
-            emailService.sendUserTokenEmail(user, locale)
-            return userRepository.save(user)
+            emailService.sendUserTokenEmail(userToUpdate, locale)
+            return userRepository.save(userToUpdate)
         } catch (e: RuntimeException) {
             return Mono.empty()
         }
