@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.model.Role
 import mixit.model.User
+import mixit.util.md5Hex
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.mongodb.core.*
@@ -35,7 +36,8 @@ class UserRepository(private val template: ReactiveMongoTemplate,
     fun findByYear(year: Int) =
             template.find<User>(Query(where("year").isEqualTo(year)))
 
-    fun findByEmail(email: String) = template.findOne<User>(Query(where("email").isEqualTo(User.encodeEmail(email))))
+    fun findByEmail(email: String) = template.findOne<User>(Query(where("role").inValues(Role.STAFF, Role.STAFF_IN_PAUSE, Role.USER)
+            .orOperator(where("email").isEqualTo(User.encodeEmail(email)), where("emailHash").isEqualTo(email.md5Hex()))))
 
     fun findByName(firstname: String, lastname: String) =
             template.find<User>(Query(where("firstname").isEqualTo(firstname).and("lastname").isEqualTo(lastname)))
