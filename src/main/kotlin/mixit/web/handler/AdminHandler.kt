@@ -10,9 +10,7 @@ import mixit.model.Role.*
 import mixit.model.Room.*
 import mixit.model.TalkFormat.*
 import mixit.repository.*
-import mixit.util.language
-import mixit.util.seeOther
-import mixit.util.toSlug
+import mixit.util.*
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.server.ServerRequest
@@ -282,7 +280,7 @@ class AdminHandler(private val ticketRepository: TicketRepository,
 
     private fun adminUser(user: User = User("", "", "", "")) = ok().render("admin-user", mapOf(
             Pair("user", user),
-            Pair("email", User.decodeEmail(user.email)),
+            Pair("email", user.email?.decodeFromBase64()),
             Pair("description-fr", user.description[FRENCH]),
             Pair("description-en", user.description[ENGLISH]),
             Pair("roles", listOf(
@@ -301,7 +299,7 @@ class AdminHandler(private val ticketRepository: TicketRepository,
                     login = formData["login"]!!,
                     firstname = formData["firstname"]!!,
                     lastname = formData["lastname"]!!,
-                    email = if (formData["email"] == "") null else User.encodeEmail(formData["email"]),
+                    email = if (formData["email"] == "") null else formData["email"]!!.encodeToBase64(),
                     emailHash = if (formData["emailHash"] == "") null else formData["emailHash"],
                     photoUrl = if (formData["photoUrl"] == "") {
                         if (formData["emailHash"] == "") "/images/png/mxt-icon--default-avatar.png" else null

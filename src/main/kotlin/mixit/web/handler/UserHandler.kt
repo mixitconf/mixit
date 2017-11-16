@@ -6,6 +6,7 @@ import mixit.model.Role
 import mixit.model.User
 import mixit.repository.UserRepository
 import mixit.util.MarkdownConverter
+import mixit.util.decodeFromBase64
 import mixit.util.json
 import mixit.util.language
 import org.springframework.stereotype.Component
@@ -67,7 +68,7 @@ fun User.toDto(language: Language, markdownConverter: MarkdownConverter) =
         UserDto(login,
                 firstname,
                 lastname,
-                User.decodeEmail(email) ?: "",
+                email?.decodeFromBase64() ?: "",
                 company, markdownConverter.toHTML(description[language] ?: ""),
                 emailHash,
                 photoUrl,

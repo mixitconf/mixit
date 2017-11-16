@@ -5,6 +5,8 @@ import mixit.model.Role
 import mixit.model.User
 import mixit.repository.UserRepository
 import mixit.util.EmailService
+import mixit.util.decodeFromBase64
+import mixit.util.encodeToBase64
 import mixit.util.locale
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
@@ -117,7 +119,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
      */
     fun signIn(req: ServerRequest): Mono<ServerResponse> = req.body(toFormData()).flatMap { data ->
         val formData = data.toSingleValueMap()
-        val email = User.decodeEmail(formData["email"])
+        val email = formData["email"]?.decodeFromBase64()
         val token = formData["token"]
 
         req.session().flatMap { session ->
@@ -158,7 +160,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
                 user.login,
                 user.firstname,
                 user.lastname,
-                User.encodeEmail(email),
+                email.encodeToBase64(),
                 user.company,
                 user.description,
                 user.emailHash,

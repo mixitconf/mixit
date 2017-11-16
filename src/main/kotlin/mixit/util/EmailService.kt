@@ -40,14 +40,13 @@ class EmailService(private val mustacheCompiler: Mustache.Compiler,
         try {
             val message = mailSender.createMimeMessage()
             val helper = MimeMessageHelper(message, true, "UTF-8")
-            val email = User.decodeEmail(user.email)
             val context = generateModel(properties.baseUri!!, locale, messageSource)
 
             context.put("user", user)
-            context.put("encodedemail", Escaping.escapeHtml(email, true))
+            context.put("encodedemail", Escaping.escapeHtml(user.email!!.decodeFromBase64(), true))
 
             message.setContent(openTemplate(templateName, context), "text/html")
-            helper.setTo(email!!)
+            helper.setTo(user.email!!.decodeFromBase64()!!)
             helper.setSubject(subject)
 
             mailSender.send(message)
