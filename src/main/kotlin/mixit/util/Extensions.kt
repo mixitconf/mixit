@@ -19,6 +19,10 @@ import java.time.temporal.ChronoField
 import java.util.*
 import java.util.stream.Collectors
 import java.util.stream.IntStream
+import javax.crypto.Cipher
+import javax.crypto.spec.IvParameterSpec
+import javax.crypto.spec.SecretKeySpec
+
 
 // -------------------------
 // Spring WebFlux extensions
@@ -114,8 +118,39 @@ fun String.toSlug() = toLowerCase()
 
 
 fun String.encodeToMd5(): String? = if (isNullOrEmpty()) null else hex(MessageDigest.getInstance("MD5").digest(toByteArray(Charset.forName("CP1252"))))
+
 fun String.encodeToBase64(): String? = if (isNullOrEmpty()) null else Base64.getEncoder().encodeToString(toByteArray())
+
 fun String.decodeFromBase64(): String? = if (isNullOrEmpty()) null else String(Base64.getDecoder().decode(toByteArray()))
+
+fun String.encrypt(key: String, initVector: String): String? {
+    try {
+        val encrypted = cipher(key, initVector, Cipher.ENCRYPT_MODE).doFinal(toByteArray())
+        return Base64.getEncoder().encodeToString(encrypted)
+    } catch (ex: Exception) {
+        ex.printStackTrace()
+    }
+    return null
+}
+
+fun String.decrypt(key: String, initVector: String): String? {
+    try {
+        val encrypted = Base64.getDecoder().decode(toByteArray())
+        return String(cipher(key, initVector, Cipher.DECRYPT_MODE).doFinal(encrypted))
+    } catch (ex: Exception) {
+        ex.printStackTrace()
+    }
+    return null
+}
+
+private fun cipher(key: String, initVector: String, mode: Int): Cipher {
+    val iv = IvParameterSpec(initVector.toByteArray(charset("UTF-8")))
+    val skeySpec = SecretKeySpec(key.toByteArray(charset("UTF-8")), "AES")
+
+    val cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING")
+    cipher.init(mode, skeySpec, iv)
+    return cipher
+}
 
 private fun hex(digested: ByteArray): String {
     val sb = StringBuffer()

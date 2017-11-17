@@ -9,6 +9,9 @@ import org.junit.jupiter.api.Test
  */
 class ExtensionsTest {
 
+    val encryptionKey = "Bar12345Bar12345"
+    val initVector = "RandomInitVector"
+
     @Test
     fun toSlug() {
         assertEquals("", "".toSlug())
@@ -19,7 +22,7 @@ class ExtensionsTest {
 
     @Test
     fun encodeToMd5() {
-        assertEquals("aa4d47d1016e45c23b6af05ec11c0a9c", "gui.ehret@gmail.com".encodeToMd5())
+        assertEquals("1aedb8d9dc4751e229a335e371db8058", "test@gmail.com".encodeToMd5())
         val nullable:String? = null
         assertNull(nullable?.encodeToMd5())
         val empty = ""
@@ -28,7 +31,7 @@ class ExtensionsTest {
 
     @Test
     fun encodeToBase64() {
-        assertEquals("Z3VpLmVocmV0QGdtYWlsLmNvbQ==", "gui.ehret@gmail.com".encodeToBase64())
+        assertEquals("dGVzdEBnbWFpbC5jb20=", "test@gmail.com".encodeToBase64())
         val nullable:String? = null
         assertNull(nullable?.encodeToBase64())
         val empty = ""
@@ -37,10 +40,24 @@ class ExtensionsTest {
 
     @Test
     fun decodeFromBase64() {
-        assertEquals("gui.ehret@gmail.com", "Z3VpLmVocmV0QGdtYWlsLmNvbQ==".decodeFromBase64())
+        assertEquals("test@gmail.com", "dGVzdEBnbWFpbC5jb20=".decodeFromBase64())
         val nullable:String? = null
         assertNull(nullable?.decodeFromBase64())
         val empty = ""
         assertNull(empty.decodeFromBase64())
+    }
+
+    @Test
+    fun encrypt() {
+        assertEquals("lnGW8QagnVzABAjptgMCJg==", "test@gmail.com".encrypt(encryptionKey, initVector))
+        val nullable:String? = null
+        assertNull(nullable?.encrypt(encryptionKey, initVector))
+    }
+
+    @Test
+    fun decrypt() {
+        assertEquals("test@gmail.com", "lnGW8QagnVzABAjptgMCJg==".decrypt(encryptionKey, initVector))
+        val nullable:String? = null
+        assertNull(nullable?.decrypt(encryptionKey, initVector))
     }
 }
