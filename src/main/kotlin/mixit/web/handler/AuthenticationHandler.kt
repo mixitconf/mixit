@@ -4,9 +4,8 @@ import mixit.MixitProperties
 import mixit.model.Role
 import mixit.model.User
 import mixit.repository.UserRepository
-import mixit.util.EmailService
-import mixit.util.decodeFromBase64
-import mixit.util.encodeToBase64
+import mixit.util.Cryptographer
+import mixit.util.EmailSender
 import mixit.util.locale
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
@@ -24,7 +23,8 @@ import java.util.*
 @Component
 class AuthenticationHandler(private val userRepository: UserRepository,
                             private val properties: MixitProperties,
-                            private val emailService: EmailService) {
+                            private val emailSender: EmailSender,
+                            private val cryptographer: Cryptographer) {
 
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
@@ -119,7 +119,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
      */
     fun signIn(req: ServerRequest): Mono<ServerResponse> = req.body(toFormData()).flatMap { data ->
         val formData = data.toSingleValueMap()
-        val email = formData["email"]?.decodeFromBase64()
+        val email = cryptographer.decrypt(formData["email"])
         val token = formData["token"]
 
         req.session().flatMap { session ->
@@ -160,7 +160,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
                 user.login,
                 user.firstname,
                 user.lastname,
-                email.encodeToBase64(),
+                cryptographer.encrypt(email),
                 user.company,
                 user.description,
                 user.emailHash,
@@ -173,7 +173,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
 
         try {
             logger.info("A token was sent to ${email}")
-            emailService.sendUserTokenEmail(userToUpdate, locale)
+            emailSender.sendUserTokenEmail(userToUpdate, locale)
             return userRepository.save(userToUpdate)
         } catch (e: RuntimeException) {
             return Mono.empty()

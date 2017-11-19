@@ -7,6 +7,7 @@ class MixitProperties {
     var baseUri: String? = null
     var contact: String? = null
     val drive = Drive()
+    val aes = Aes()
 
     class Drive {
         val fr = DriveDocuments()
@@ -18,6 +19,11 @@ class MixitProperties {
             var speaker: String? = null
             var press: String? = null
         }
+    }
+
+    class Aes {
+        var initvector: String? = null
+        var key: String? = null
     }
 }
 

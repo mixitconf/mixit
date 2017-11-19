@@ -29,7 +29,7 @@ import javax.mail.internet.MimeMessage
  */
 @ExtendWith(SpringExtension::class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class EmailServiceTest{
+class EmailSenderTest {
 
     @Autowired
     lateinit var mustacheCompiler: Mustache.Compiler
@@ -43,14 +43,19 @@ class EmailServiceTest{
     @Autowired
     lateinit var messageSource: MessageSource
 
+    @Autowired
+    lateinit var cryptographer:Cryptographer
+
     val mailSenderMock: JavaMailSender = Mockito.mock(JavaMailSender::class.java)
 
-    lateinit var emailService: EmailService
+    lateinit var emailSender: EmailSender
 
     @BeforeEach
     fun `init test`(){
+        properties.aes.initvector = "RandomInitVector"
+        properties.aes.key = "Bar12345Bar12345"
         // Service to test is not injected because we want to use  Spy to simulate the work of the mailSender
-        emailService = EmailService(mustacheCompiler, resourceLoader, mailSenderMock, properties, messageSource)
+        emailSender = EmailSender(mustacheCompiler, resourceLoader, mailSenderMock, properties, messageSource, cryptographer)
     }
 
     @Test
@@ -60,7 +65,7 @@ class EmailServiceTest{
         var params = generateModel("https://mixitconf.org", Locale.FRENCH, messageSource)
         params.put("user", user)
 
-        val content = emailService.openTemplate("email-token", params)
+        val content = emailSender.openTemplate("email-token", params)
 
         Assertions.assertThat(content)
                 // a message to say hello
@@ -76,7 +81,7 @@ class EmailServiceTest{
         var params = generateModel("https://mixitconf.org", Locale.ENGLISH, messageSource)
         params.put("user", createUser())
 
-        val content = emailService.openTemplate("email-token", params)
+        val content = emailSender.openTemplate("email-token", params)
 
         Assertions.assertThat(content)
                 // a message to say hello
@@ -92,7 +97,7 @@ class EmailServiceTest{
         val mimeMessage = MimeMessage(Session.getInstance(Properties()))
         BDDMockito.given(mailSenderMock.createMimeMessage()).willReturn(mimeMessage)
 
-        emailService.sendEmail("email-token", "subject", createUser(), Locale.FRENCH)
+        emailSender.sendEmail("email-token", "subject", createUser(), Locale.FRENCH)
 
         // Message must be sent
         val argumentCaptor: ArgumentCaptor<MimeMessage> = ArgumentCaptor.forClass(MimeMessage::class.java)
@@ -108,7 +113,7 @@ class EmailServiceTest{
         val mimeMessage = MimeMessage(Session.getInstance(Properties()))
         BDDMockito.given(mailSenderMock.createMimeMessage()).willReturn(mimeMessage)
 
-        emailService.sendUserTokenEmail(createUser(), Locale.ENGLISH)
+        emailSender.sendUserTokenEmail(createUser(), Locale.ENGLISH)
 
         // Message must be sent
         val argumentCaptor: ArgumentCaptor<MimeMessage> = ArgumentCaptor.forClass(MimeMessage::class.java)
@@ -127,7 +132,7 @@ class EmailServiceTest{
     }
 
     private fun createUser(): User {
-        val user = User("test@gmail.com", "Guillaume", "EHRET", "dGVzdEBnbWFpbC5jb20=")
+        val user = User("test@gmail.com", "Guillaume", "EHRET", "lnGW8QagnVzABAjptgMCJg==")
         user.token = "token-3455-dede"
         return user
     }
