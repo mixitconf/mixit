@@ -44,7 +44,7 @@ tasks.withType<KotlinCompile> {
 }
 
 node {
-    version = "6.9.4"
+    version = "9.2.0"
     download = true
 }
 
