@@ -3,7 +3,7 @@ package mixit.util
 import com.samskivert.mustache.Mustache
 import mixit.MixitProperties
 import mixit.model.User
-import mixit.web.generateModel
+import mixit.web.generateModelForExernalCall
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -62,7 +62,7 @@ class EmailSenderTest {
     fun `open a mustache template to generate email in french`() {
         val user = User("test@gmail.com", "Guillaume", "EHRET", "dGVzdEBnbWFpbC5jb20=")
         user.token = "token-3455-dede"
-        var params = generateModel("https://mixitconf.org", Locale.FRENCH, messageSource)
+        var params = generateModelForExernalCall("https://mixitconf.org", Locale.FRENCH, messageSource)
         params.put("user", user)
 
         val content = emailSender.openTemplate("email-token", params)
@@ -78,7 +78,7 @@ class EmailSenderTest {
 
     @Test
     fun `open a mustache template to generate email in english`() {
-        var params = generateModel("https://mixitconf.org", Locale.ENGLISH, messageSource)
+        var params = generateModelForExernalCall("https://mixitconf.org", Locale.ENGLISH, messageSource)
         params.put("user", createUser())
 
         val content = emailSender.openTemplate("email-token", params)

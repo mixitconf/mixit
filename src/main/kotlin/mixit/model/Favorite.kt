@@ -5,7 +5,7 @@ import org.springframework.data.mongodb.core.mapping.Document
 
 @Document
 data class Favorite(
-        val login: String,
+        val email: String,
         val talkId: String,
         @Id val id: String? = null
 )

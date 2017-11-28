@@ -38,14 +38,17 @@ class AuthenticationHandler(private val userRepository: UserRepository,
      * Action when user wants to sign in
      */
     fun login(req: ServerRequest): Mono<ServerResponse> = req.body(toFormData()).flatMap { data ->
-        searchUserAndSendToken(data.toSingleValueMap()["email"], req.locale())
+        // Email is required
+        if (data.toSingleValueMap()["email"] == null) renderError("login.error.text")
+        searchUserAndSendToken(data.toSingleValueMap()["email"]!!, req.locale())
     }
 
     /**
      * Action when user wants to log out
      */
     fun logout(req: ServerRequest): Mono<ServerResponse> = req.session().flatMap { session ->
-        session.attributes.remove("username")
+        session.attributes.remove("email")
+        session.attributes.remove("login")
         session.attributes.remove("token")
         session.attributes.remove("role")
         temporaryRedirect(URI("${properties.baseUri}/")).build()
@@ -57,9 +60,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
      * Email is required for the sign in process. If email is not in our database, we ask to the visitor to create
      * a new account. If the account already exists we send him a token by email
      */
-    private fun searchUserAndSendToken(email: String?, locale: Locale): Mono<ServerResponse> {
-        // Email is required
-        if (email == null) return renderError("login.error.text")
+    private fun searchUserAndSendToken(email: String, locale: Locale): Mono<ServerResponse> {
 
         val context = mapOf(Pair("email", email))
 
@@ -86,25 +87,24 @@ class AuthenticationHandler(private val userRepository: UserRepository,
         if (formData["email"] == null || formData["firstname"] == null || formData["lastname"] == null)
             renderError("login.error.field.text")
 
+        val email = formData["email"]!!
         val user = User(
                 login = formData["email"]!!,
                 firstname = formData["firstname"]!!.toLowerCase().capitalize(),
                 lastname = formData["lastname"]!!.toLowerCase().capitalize(),
-                email = formData["email"]!!,
+                email = email,
                 photoUrl = "/images/png/mxt-icon--default-avatar.png",
                 role = Role.USER
         )
 
-        userRepository.findByEmail(user.email!!)
+        userRepository.findByEmail(email)
                 // Email is unique and if an email is found we return an error
                 .flatMap { renderError("login.error.uniqueemail.text") }
                 .switchIfEmpty(
                         userRepository
                                 .save(user)
                                 // if user is created we send him a token by email
-                                .flatMap { usr ->
-                                    searchUserAndSendToken(usr.email, req.locale())
-                                }
+                                .flatMap { searchUserAndSendToken(email, req.locale()) }
                                 // otherwise we display an error
                                 .switchIfEmpty(renderError("login.error.creation.text"))
                 )
@@ -115,7 +115,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
      */
     fun signIn(req: ServerRequest): Mono<ServerResponse> = req.body(toFormData()).flatMap { data ->
         val formData = data.toSingleValueMap()
-        val email = cryptographer.decrypt(formData["email"])
+        val email = if (cryptographer.decrypt(formData["email"]) == null) formData["email"] else cryptographer.decrypt(formData["email"])
         val token = formData["token"]
 
         req.session().flatMap { session ->
@@ -133,12 +133,11 @@ class AuthenticationHandler(private val userRepository: UserRepository,
                                 renderError("login.error.token.text")
                             } else {
                                 session.attributes["role"] = user.role
-                                session.attributes["username"] = email
+                                session.attributes["email"] = email
                                 session.attributes["token"] = token
                                 seeOther(URI("${properties.baseUri}/")).build()
                             }
-                        }
-                        else {
+                        } else {
                             renderError("login.error.badtoken.text")
                         }
 
