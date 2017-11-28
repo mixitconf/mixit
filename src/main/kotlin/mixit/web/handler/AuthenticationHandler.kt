@@ -68,10 +68,8 @@ class AuthenticationHandler(private val userRepository: UserRepository,
                 .flatMap { user ->
                     // if user exists we send a token by email
                     sendUserToken(email, user, locale)
-                            .flatMap { _ ->
-                                // if token is sent we call the the screen where user can type this token
-                                ok().render("login-confirmation", context)
-                            }
+                            // if token is sent we call the the screen where user can type this token
+                            .flatMap { ok().render("login-confirmation", context) }
                             // if not this is an error
                             .switchIfEmpty(renderError("login.error.sendtoken.text"))
                 }
@@ -99,9 +97,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
 
         userRepository.findByEmail(user.email!!)
                 // Email is unique and if an email is found we return an error
-                .flatMap { _ ->
-                    renderError("login.error.uniqueemail.text")
-                }
+                .flatMap { renderError("login.error.uniqueemail.text") }
                 .switchIfEmpty(
                         userRepository
                                 .save(user)
