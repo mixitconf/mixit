@@ -52,8 +52,7 @@ class EmailSenderTest {
 
     @BeforeEach
     fun `init test`(){
-        properties.aes.initvector = "RandomInitVector"
-        properties.aes.key = "Bar12345Bar12345"
+        properties.aes = MixitProperties.Aes("RandomInitVector", "Bar12345Bar12345")
         // Service to test is not injected because we want to use  Spy to simulate the work of the mailSender
         emailSender = EmailSender(mustacheCompiler, resourceLoader, mailSenderMock, properties, messageSource, cryptographer)
     }

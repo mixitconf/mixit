@@ -19,6 +19,7 @@ plugins {
     val nodePluginVersion = "1.1.1"
     id("org.jetbrains.kotlin.jvm") version kotlinVersion
     id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion
+    id("org.jetbrains.kotlin.plugin.noarg") version kotlinVersion
     id("com.moowork.node") version nodePluginVersion
     id("com.moowork.gulp") version nodePluginVersion
     id("io.spring.dependency-management") version "1.0.3.RELEASE"
@@ -34,6 +35,10 @@ version = "1.0.0-SNAPSHOT"
 repositories {
     mavenCentral()
     maven("https://repo.spring.io/milestone")
+}
+
+noArg {
+    annotation("org.springframework.boot.context.properties.ConfigurationProperties")
 }
 
 tasks.withType<KotlinCompile> {

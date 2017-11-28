@@ -3,28 +3,26 @@ package mixit
 import org.springframework.boot.context.properties.ConfigurationProperties
 
 @ConfigurationProperties("mixit")
-class MixitProperties {
-    var baseUri: String? = null
-    var contact: String? = null
-    val drive = Drive()
-    val aes = Aes()
+data class MixitProperties(
+    var baseUri: String,
+    var contact: String,
+    var drive: Drive,
+    var aes: Aes) {
 
-    class Drive {
-        val fr = DriveDocuments()
-        val en = DriveDocuments()
+    data class Drive(
+        var fr: DriveDocuments,
+        var en: DriveDocuments)
 
-        class DriveDocuments {
-            var sponsorform: String? = null
-            var sponsor: String? = null
-            var speaker: String? = null
-            var press: String? = null
-        }
-    }
 
-    class Aes {
-        var initvector: String? = null
-        var key: String? = null
-    }
+    data class DriveDocuments(
+        var sponsorform: String,
+        var sponsor: String,
+        var speaker: String,
+        var press: String)
+
+    data class Aes(
+        var initvector: String,
+        var key: String)
 }
 
 
