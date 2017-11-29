@@ -27,10 +27,31 @@
         <div class="column large-12">
 
             <div class="mxt-wrapper--callout callout">
+                <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.lanyard{{/i18n}}</h2>
+                {{#sponsors-lanyard}}
+                    {{> sponsor }}
+                {{/sponsors-lanyard}}
+            </div>
+
+            <div class="mxt-wrapper--callout callout">
                 <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.gold{{/i18n}}</h2>
                 {{#sponsors-gold}}
                     {{> sponsor }}
                 {{/sponsors-gold}}
+            </div>
+
+            <div class="mxt-wrapper--callout callout">
+                <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.accessibility{{/i18n}}</h2>
+                {{#sponsors-accessibility}}
+                    {{> sponsor }}
+                {{/sponsors-accessibility}}
+            </div>
+
+            <div class="mxt-wrapper--callout callout">
+                <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.mixteen{{/i18n}}</h2>
+                {{#sponsors-mixteen}}
+                    {{> sponsor }}
+                {{/sponsors-mixteen}}
             </div>
 
             <div class="mxt-wrapper--callout callout">
@@ -45,20 +66,6 @@
                 {{#sponsors-party}}
                     {{> sponsor }}
                 {{/sponsors-party}}
-            </div>
-
-            <div class="mxt-wrapper--callout callout">
-                <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.lanyard{{/i18n}}</h2>
-                {{#sponsors-lanyard}}
-                    {{> sponsor }}
-                {{/sponsors-lanyard}}
-            </div>
-
-            <div class="mxt-wrapper--callout callout">
-                <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.mixteen{{/i18n}}</h2>
-                {{#sponsors-mixteen}}
-                    {{> sponsor }}
-                {{/sponsors-mixteen}}
             </div>
 
             <div class="mxt-wrapper--callout callout">
