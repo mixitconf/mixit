@@ -45,7 +45,7 @@ class TalkHandler(private val repository: TalkRepository,
                 Pair("title", when (topic) { null -> "talks.title.html|$year"
                     else -> "talks.title.html.$topic|$year"
                 }),
-                Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
+                Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
                 Pair("topic", topic),
                 Pair("has2Columns", talks.map { it.size == 2 }),
                 Pair("sponsors", sponsors)
@@ -71,7 +71,7 @@ class TalkHandler(private val repository: TalkRepository,
                     Pair("year", year),
                     Pair("hasOthertalks", otherTalks.map { it.size > 0 }),
                     Pair("title", "talk.html.title|${talk.title}"),
-                    Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
+                    Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
                     Pair("vimeoPlayer", if (talk.video?.startsWith("https://vimeo.com/") == true) talk.video.replace("https://vimeo.com/", "https://player.vimeo.com/video/") else null),
                     Pair("sponsors", sponsors)
             ))
@@ -99,7 +99,7 @@ class TalkHandler(private val repository: TalkRepository,
                 Pair("topic", topic),
                 Pair("year", year),
                 Pair("title", "medias.title.html|$year"),
-                Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
+                Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
                 Pair("sponsors", sponsors),
                 Pair("event", event),
                 Pair("videoUrl", if (event.videoUrl?.url?.startsWith("https://vimeo.com/") == true) event.videoUrl.url.replace("https://vimeo.com/", "https://player.vimeo.com/video/") else null),
@@ -118,7 +118,7 @@ class TalkHandler(private val repository: TalkRepository,
                             mapOf(
                                     Pair("sponsors-gold", sponsorsByEvent[SponsorshipLevel.GOLD]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
                                     Pair("sponsors-others", sponsorsByEvent.entries
-                                            .filter { it.key != SponsorshipLevel.GOLD }.flatMap { it.value }
+                                            .filter { it.key != SponsorshipLevel.GOLD }?.flatMap { it.value }
                                             .map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) })
                             )
                         }

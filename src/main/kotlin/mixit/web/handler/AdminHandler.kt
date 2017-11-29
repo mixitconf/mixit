@@ -147,7 +147,7 @@ class AdminHandler(private val ticketRepository: TicketRepository,
             Pair("creationMode", event.id == ""),
             Pair("event", event),
             Pair("links", event.photoUrls.toJson()),
-            Pair("videolink", if(event.videoUrl == null) "" else event.videoUrl.toJson())
+            Pair("videolink", if(event.videoUrl == null) "" else event.videoUrl!!.toJson())
     ))
 
     fun adminSaveEvent(req: ServerRequest): Mono<ServerResponse> {

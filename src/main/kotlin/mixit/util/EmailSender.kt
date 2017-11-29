@@ -41,8 +41,8 @@ class EmailSender(private val mustacheCompiler: Mustache.Compiler,
         try {
             val message = javaMailSender.createMimeMessage()
             val helper = MimeMessageHelper(message, true, "UTF-8")
-            val context = generateModel(properties.baseUri, locale, messageSource)
-            val email = cryptographer.decrypt(user.email)
+            val context = generateModel(properties.baseUri!!, locale, messageSource)
+            val email = cryptographer.decrypt(user.email!!)
 
             context.put("user", user)
             context.put("encodedemail", Escaping.escapeHtml(email, true))
