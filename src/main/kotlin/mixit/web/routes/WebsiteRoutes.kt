@@ -38,7 +38,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
 
     companion object {
         val securedAdminUrl: List<String> = listOf("/admin")
-        val securedUrl: List<String> = listOf("/schedule", "/favorites")
+        val securedUrl: List<String> = listOf("/schedule", "/api/favorites")
     }
 
     @Bean
