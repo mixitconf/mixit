@@ -3,7 +3,7 @@ package mixit.util
 import com.samskivert.mustache.Mustache
 import mixit.MixitProperties
 import mixit.model.User
-import mixit.web.generateModel
+import mixit.web.generateModelForExernalCall
 import org.commonmark.internal.util.Escaping
 import org.slf4j.LoggerFactory
 import org.springframework.context.MessageSource
@@ -41,7 +41,7 @@ class EmailSender(private val mustacheCompiler: Mustache.Compiler,
         try {
             val message = javaMailSender.createMimeMessage()
             val helper = MimeMessageHelper(message, true, "UTF-8")
-            val context = generateModel(properties.baseUri!!, locale, messageSource)
+            val context = generateModelForExernalCall(properties.baseUri!!, locale, messageSource)
             val email = cryptographer.decrypt(user.email!!)
 
             context.put("user", user)
@@ -60,7 +60,7 @@ class EmailSender(private val mustacheCompiler: Mustache.Compiler,
     }
 
     fun openTemplate(templateName: String, context: Map<String, Any>): String {
-        val resource = resourceLoader.getResource("classpath:templates/${templateName}.mustache").inputStream
+        val resource = resourceLoader.getResource("classpath:templates/$templateName.mustache").inputStream
         val template = mustacheCompiler.compile(InputStreamReader(resource))
 
         return template.execute(context)

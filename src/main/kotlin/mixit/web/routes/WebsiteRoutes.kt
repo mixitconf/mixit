@@ -27,7 +27,6 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
                     private val globalHandler: GlobalHandler,
                     private val newsHandler: NewsHandler,
                     private val talkHandler: TalkHandler,
-                    private val userHandler: UserHandler,
                     private val sponsorHandler: SponsorHandler,
                     private val ticketingHandler: TicketingHandler,
                     private val messageSource: MessageSource,
@@ -39,7 +38,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
 
     companion object {
         val securedAdminUrl: List<String> = listOf("/admin")
-        val securedUrl: List<String> = listOf("/schedule")
+        val securedUrl: List<String> = listOf("/schedule", "/favorites")
     }
 
     @Bean

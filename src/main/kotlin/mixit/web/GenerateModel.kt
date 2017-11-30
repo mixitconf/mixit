@@ -11,17 +11,17 @@ import org.springframework.web.util.UriUtils
 import java.util.*
 
 fun generateModel(properties: MixitProperties,
-                  path: String,
-                  locale: Locale,
-                  session: WebSession,
-                  messageSource: MessageSource,
-                  markdownConverter: MarkdownConverter
+                                path: String,
+                                locale: Locale,
+                                session: WebSession,
+                                messageSource: MessageSource,
+                                markdownConverter: MarkdownConverter
                   ) = mutableMapOf<String, Any>().apply {
 
-        val username = session.getAttribute<String>("username")
+        val email = session.getAttribute<String>("email")
         val role = session.getAttribute<Role>("role")
-        username?.let {
-            this["username"] = it
+        email?.let {
+            this["email"] = it
             if((role !=null && role == Role.STAFF)) this["admin"] = true
             this["connected"] = true
         }
@@ -40,9 +40,9 @@ fun generateModel(properties: MixitProperties,
         this["markdown"] = Mustache.Lambda { frag, out -> out.write(markdownConverter.toHTML(frag.execute())) }
 }.toMap()
 
-fun generateModel(baseUri: String,
-                  locale: Locale,
-                  messageSource: MessageSource
+fun generateModelForExernalCall(baseUri: String,
+                                locale: Locale,
+                                messageSource: MessageSource
 ) = mutableMapOf<String, Any>().apply {
 
     this["locale"] = locale.toString()

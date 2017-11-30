@@ -1138,6 +1138,60 @@
                     11,
                     1
                 ]
+            },
+            {
+                "level": "LANYARD",
+                "sponsorId": "annick.challancin@esker.fr",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    14
+                ]
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "woonoz",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    14
+                ]
+            },
+            {
+                "level": "ECOCUP",
+                "sponsorId": "woonoz",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    14
+                ]
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "sogelink",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    23
+                ]
+            },
+            {
+                "level": "ACCESSIBILITY",
+                "sponsorId": "LDLC",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    28
+                ]
+            },
+            {
+                "level": "ECOCUP",
+                "sponsorId": "LDLC",
+                "subscriptionDate": [
+                    2017,
+                    11,
+                    28
+                ]
             }
         ],
         "start": [

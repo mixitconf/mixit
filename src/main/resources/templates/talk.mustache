@@ -20,7 +20,13 @@
     <div class="row">
         <div class="column large-12">
             <article class="callout">
-                <h1 class="text-center mxt-title--talk">{{talk.title}}</h1>
+                <h1 class="text-center mxt-title--talk">
+                    {{talk.title}}
+                    {{#connected}}
+                        <button id="favorite" class="mxt-img--favorite"></button>
+                    {{/connected}}
+                </h1>
+
                 <hr/>
                 {{#admin}}<a href="/admin/talks/edit/{{talk.slug}}">{{#i18n}}admin.talks.actions.update{{/i18n}}</a> <br/>{{/admin}}
                 <p>{{#markdown}}{{talk.summary}}{{/markdown}}</p>
@@ -136,6 +142,11 @@
     </div>
 </div>
 
+{{#connected}}
+<input type="hidden" id="talkId" value="{{talk.id}}"/>
+<input type="hidden" id="email" value="{{email}}"/>
+{{/connected}}
 
+<script src="/js/talk.js"></script>
 
 {{> footer}}
