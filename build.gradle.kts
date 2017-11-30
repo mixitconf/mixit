@@ -9,13 +9,13 @@ buildscript {
     }
 
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.0.M6")
-        classpath("org.junit.platform:junit-platform-gradle-plugin:1.0.0")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.0.M7")
+        classpath("org.junit.platform:junit-platform-gradle-plugin:1.0.2")
     }
 }
 
 plugins {
-    val kotlinVersion = "1.1.60"
+    val kotlinVersion = "1.1.61"
     val nodePluginVersion = "1.1.1"
     id("org.jetbrains.kotlin.jvm") version kotlinVersion
     id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion
@@ -51,6 +51,7 @@ node {
 dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib-jre8")
     compile("org.jetbrains.kotlin:kotlin-reflect")
+    compile("com.fasterxml.jackson.module:jackson-module-kotlin")
 
     compile("org.springframework.boot:spring-boot-starter-webflux") {
         exclude(module = "hibernate-validator")
@@ -70,9 +71,6 @@ dependencies {
     testCompile("org.junit.jupiter:junit-jupiter-api")
     testRuntime("org.junit.jupiter:junit-jupiter-engine")
     testCompile("io.projectreactor:reactor-test")
-
-    compile("com.fasterxml.jackson.module:jackson-module-kotlin")
-    compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
 }
 
 task<GulpTask>("gulpBuild") {
