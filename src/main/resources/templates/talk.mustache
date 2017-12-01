@@ -23,7 +23,14 @@
                 <h1 class="text-center mxt-title--talk">
                     {{talk.title}}
                     {{#connected}}
-                        <button id="favorite" class="mxt-img--favorite"></button>
+                        <button id="favorite" class="mxt-img--favorite">
+                            {{#favorites}}
+                                <img src="/images/svg/favorites/mxt-favorite.svg" class="mxt-icon--cat__talks"/>
+                            {{/favorites}}
+                            {{^favorites}}
+                                <img src="/images/svg/favorites/mxt-favorite-non.svg" class="mxt-icon--cat__talks"/>
+                            {{/favorites}}
+                        </button>
                     {{/connected}}
                 </h1>
 
@@ -123,28 +130,28 @@
     </div>
     <div class="row">
         <div class="column large-12">
-        {{#sponsors}}
-            <hr/>
-            <div class="align-center align-middle row">
-                {{#sponsors-gold}}
-                    <div class="columns text-center large-2 medium-2 small-3">
-                        {{> talk-sponsor }}
-                    </div>
-                {{/sponsors-gold}}
-                {{#sponsors-others}}
-                    <div class="columns text-center large-1 medium-1 small-2">
-                        {{> talk-sponsor }}
-                    </div>
-                {{/sponsors-others}}
-            </div>
-        {{/sponsors}}
+            {{#sponsors}}
+                <hr/>
+                <div class="align-center align-middle row">
+                    {{#sponsors-gold}}
+                        <div class="columns text-center large-2 medium-2 small-3">
+                            {{> talk-sponsor }}
+                        </div>
+                    {{/sponsors-gold}}
+                    {{#sponsors-others}}
+                        <div class="columns text-center large-1 medium-1 small-2">
+                            {{> talk-sponsor }}
+                        </div>
+                    {{/sponsors-others}}
+                </div>
+            {{/sponsors}}
         </div>
     </div>
 </div>
 
 {{#connected}}
-<input type="hidden" id="talkId" value="{{talk.id}}"/>
-<input type="hidden" id="email" value="{{email}}"/>
+    <input type="hidden" id="talkId" value="{{talk.id}}"/>
+    <input type="hidden" id="email" value="{{email}}"/>
 {{/connected}}
 
 <script src="/js/talk.js"></script>

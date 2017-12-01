@@ -3,6 +3,7 @@ package mixit.web.handler
 import mixit.MixitProperties
 import mixit.model.*
 import mixit.repository.EventRepository
+import mixit.repository.FavoriteRepository
 import mixit.repository.TalkRepository
 import mixit.repository.UserRepository
 import mixit.util.*
@@ -24,7 +25,8 @@ class TalkHandler(private val repository: TalkRepository,
                   private val userRepository: UserRepository,
                   private val eventRepository: EventRepository,
                   private val properties: MixitProperties,
-                  private val markdownConverter: MarkdownConverter) {
+                  private val markdownConverter: MarkdownConverter,
+                  private val favoriteRepository: FavoriteRepository) {
 
     fun findByEventView(year: Int, req: ServerRequest, topic: String? = null): Mono<ServerResponse> {
         val talks = repository
@@ -55,26 +57,31 @@ class TalkHandler(private val repository: TalkRepository,
     fun findOneView(year: Int, req: ServerRequest): Mono<ServerResponse> = repository.findByEventAndSlug(year.toString(), req.pathVariable("slug")).flatMap { talk ->
         val sponsors = eventSponsors(year, req)
 
-        userRepository.findMany(talk.speakerIds).collectList().flatMap { speakers ->
+        req.session().flatMap {
+            val currentUserEmail = it.getAttribute<String>("email")
 
-            val otherTalks = repository
-                    .findBySpeakerId(talk.speakerIds, talk.id)
-                    .collectList()
-                    .flatMap { talks ->
-                        talks.map {talk ->   talk.toDto(req.language(), speakers.filter { talk.speakerIds.contains(it.login) }.toList()) }.toMono()
-                    }
+            userRepository.findMany(talk.speakerIds).collectList().flatMap { speakers ->
 
-            ok().render("talk", mapOf(
-                    Pair("talk", talk.toDto(req.language(), speakers!!)),
-                    Pair("speakers", speakers.map { speaker -> speaker.toDto(req.language(), markdownConverter) }.sortedBy { talk.speakerIds.indexOf(it.login) }),
-                    Pair("othertalks", otherTalks),
-                    Pair("year", year),
-                    Pair("hasOthertalks", otherTalks.map { it.size > 0 }),
-                    Pair("title", "talk.html.title|${talk.title}"),
-                    Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
-                    Pair("vimeoPlayer", if (talk.video?.startsWith("https://vimeo.com/") == true) talk.video.replace("https://vimeo.com/", "https://player.vimeo.com/video/") else null),
-                    Pair("sponsors", sponsors)
-            ))
+                val otherTalks = repository
+                        .findBySpeakerId(talk.speakerIds, talk.id)
+                        .collectList()
+                        .flatMap { talks ->
+                            talks.map { talk -> talk.toDto(req.language(), speakers.filter { talk.speakerIds.contains(it.login) }.toList()) }.toMono()
+                        }
+
+                ok().render("talk", mapOf(
+                        Pair("talk", talk.toDto(req.language(), speakers!!)),
+                        Pair("speakers", speakers.map { speaker -> speaker.toDto(req.language(), markdownConverter) }.sortedBy { talk.speakerIds.indexOf(it.login) }),
+                        Pair("othertalks", otherTalks),
+                        Pair("favorites", if (currentUserEmail == null) null else favoriteRepository.findByTalkAndEmail(currentUserEmail, talk.id!!)),
+                        Pair("year", year),
+                        Pair("hasOthertalks", otherTalks.map { it.size > 0 }),
+                        Pair("title", "talk.html.title|${talk.title}"),
+                        Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
+                        Pair("vimeoPlayer", if (talk.video?.startsWith("https://vimeo.com/") == true) talk.video.replace("https://vimeo.com/", "https://player.vimeo.com/video/") else null),
+                        Pair("sponsors", sponsors)
+                ))
+            }
         }
     }
 

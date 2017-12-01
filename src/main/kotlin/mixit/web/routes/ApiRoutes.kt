@@ -5,7 +5,6 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.web.reactive.function.server.router
-import reactor.core.publisher.toMono
 
 
 @Configuration
@@ -47,7 +46,5 @@ class ApiRoutes(private val blogHandler: BlogHandler,
                 GET("/{login}", userHandler::findOneStaff)
             }
         }
-    }.filter { request, next ->
-          next.handle(request).flatMap {  it.toMono() }
     }
 }

@@ -1,18 +1,6 @@
-function loadFavorite() {
-  const talkField = <HTMLInputElement> document.getElementById('talkId');
-  const emailField = <HTMLInputElement> document.getElementById('email');
-  if (talkField && emailField) {
-    const favoriteButton = document.getElementById('favorite');
-
-    fetch(`/api/favorites/${emailField.value}/talks/${talkField.value}`, {method: 'get'})
-      .then(response => response.json())
-      .then(json => {
-        const img = json.selected ? 'mxt-favorite.svg' : 'mxt-favorite-non.svg';
-        favoriteButton.innerHTML = `<img src="/images/svg/favorites/${img}" class="mxt-icon--cat__talks"/>`;
-        favoriteButton.onclick = favoriteToggle;
-        favoriteButton.style.visibility = 'visible';
-      });
-  }
+function initFavoriteButton() {
+  const favoriteButton = document.getElementById('favorite');
+  favoriteButton.onclick = favoriteToggle;
 }
 
 function favoriteToggle() {
@@ -28,4 +16,4 @@ function favoriteToggle() {
     });
 }
 
-window.addEventListener("load", loadFavorite);
+window.addEventListener("load", initFavoriteButton);
