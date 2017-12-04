@@ -13,7 +13,7 @@
         <div class="large-12 large-centered columns">
             <div class="row">
                 <div class="large-12 columns">
-                    {{#user.login}}<form action="/admin/user/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.user.delete.confirm{{/i18n}}');">
+                    {{#user.login}}<form action="/admin/users/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.user.delete.confirm{{/i18n}}');">
                         <input type="hidden" name="login" value="{{user.login}}"/>
                         <input type="submit" class="button expand" value="{{#i18n}}admin.user.delete{{/i18n}}"/>
                     </form>{{/user.login}}
