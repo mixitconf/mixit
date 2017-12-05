@@ -42,6 +42,17 @@
   background-color: $third-color;
 }
 
+// TALKS
+.mxt-img--talk__portfolio {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.mxt-img--talk {
+  flex: 1 0 33%;
+  padding: 1em
+}
+
 // SPONSORS HOME
 .mxt-img--sponsors-home {
   @extend .mxt-img--grayscale;

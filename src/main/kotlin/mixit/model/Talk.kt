@@ -21,6 +21,7 @@ data class Talk(
         val room: Room? = null,
         val start: LocalDateTime? = null,
         val end: LocalDateTime? = null,
+        val photoUrls: List<Link> = emptyList(),
         val slug: String = title.toSlug(),
         @Id val id: String? = null
 )

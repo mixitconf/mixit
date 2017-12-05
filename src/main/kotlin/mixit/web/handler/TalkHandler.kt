@@ -163,6 +163,7 @@ class TalkDto(
         val start: String?,
         val end: String?,
         val date: String?,
+        val photoUrls: List<Link> = emptyList(),
         val isEn: Boolean = (language == "english"),
         val isTalk: Boolean = (format == TalkFormat.TALK),
         val multiSpeaker: Boolean = (speakers.size > 1),
@@ -178,5 +179,6 @@ fun Talk.toDto(lang: Language, speakers: List<User>) = TalkDto(
         "rooms.${room?.name?.toLowerCase()}",
         start?.formatTalkTime(lang),
         end?.formatTalkTime(lang),
-        start?.formatTalkDate(lang)
+        start?.formatTalkDate(lang),
+        photoUrls
 )

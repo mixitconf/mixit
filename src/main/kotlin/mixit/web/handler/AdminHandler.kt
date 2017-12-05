@@ -84,8 +84,9 @@ class AdminHandler(private val ticketRepository: TicketRepository,
                     room = Room.valueOf(formData["room"]!!),
                     addedAt = LocalDateTime.parse(formData["addedAt"]),
                     start = LocalDateTime.parse(formData["start"]),
-                    end = LocalDateTime.parse(formData["end"])
-            )
+                    end = LocalDateTime.parse(formData["end"]),
+                    photoUrls = if (formData["photoUrls"].isNullOrEmpty()) emptyList() else formData["photoUrls"]!!.toLinks()
+                    )
             talkRepository.save(talk).then(seeOther("${properties.baseUri}/admin/talks"))
         }
     }
@@ -133,7 +134,8 @@ class AdminHandler(private val ticketRepository: TicketRepository,
                     Pair("hacktivism", "hacktivism" == talk.topic),
                     Pair("learn", "learn" == talk.topic)
             )),
-            Pair("speakers", talk.speakerIds.joinToString(separator = ","))
+            Pair("speakers", talk.speakerIds.joinToString(separator = ",")),
+            Pair("photos", talk.photoUrls.toJson())
 
     ))
 

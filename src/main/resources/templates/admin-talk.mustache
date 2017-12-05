@@ -133,6 +133,14 @@
                             </div>
                         </div>
                         <div class="row">
+                            <div class="large-12 columns">
+                                <label>
+                                    {{#i18n}}admin.talk.form.photo{{/i18n}}
+                                    <input type="text" name="photoUrls" value="{{#photos}}{{photos}}{{/photos}}"/>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="large-12 large-centered columns">
                                 <input type="submit" class="button expand" value="{{#i18n}}admin.talk.save{{/i18n}}"/>
                             </div>

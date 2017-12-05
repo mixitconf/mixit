@@ -125,7 +125,13 @@
                         </div>
                     </div>
                 {{/hasOthertalks}}
+                <div class="row" class="mxt-img--talk__portfolio">
+                    {{#talk.photoUrls}}
+                        <div class="mxt-img--talk"><a href ="{{url}}"><img src="{{url}}" aria-label="{{name}}" class="mxt-img--grayscale"/></a></div>
+                    {{/talk.photoUrls}}
+                </div>
             </article>
+
         </div>
     </div>
     <div class="row">
@@ -147,6 +153,7 @@
             {{/sponsors}}
         </div>
     </div>
+
 </div>
 
 {{#connected}}
