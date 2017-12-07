@@ -6,6 +6,7 @@ import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.find
 import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Query
+import org.springframework.data.mongodb.core.query.inValues
 import org.springframework.data.mongodb.core.query.isEqualTo
 import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
@@ -17,8 +18,11 @@ class FavoriteRepository(private val template: ReactiveMongoTemplate, val crypto
 
     fun findByEmail(email: String): Flux<Favorite> = template.find<Favorite>(Query(Criteria.where("email").isEqualTo(cryptographer.encrypt(email))))
 
-    fun findByTalkAndEmail(email: String, talkId: String): Mono<Favorite> = template.findOne(Query(Criteria.where("email").isEqualTo(cryptographer.encrypt(email))
+    fun findByEmailAndTalk(email: String, talkId: String): Mono<Favorite> = template.findOne(Query(Criteria.where("email").isEqualTo(cryptographer.encrypt(email))
             .andOperator(Criteria.where("talkId").isEqualTo(talkId))), Favorite::class.java)
+
+    fun findByEmailAndTalks(email: String, talkIds: List<String>) = template.find<Favorite>(Query(Criteria.where("email").isEqualTo(cryptographer.encrypt(email))
+            .andOperator(Criteria.where("talkId").inValues(talkIds))))
 
     fun save(favorite: Favorite) = template.save(favorite)
 

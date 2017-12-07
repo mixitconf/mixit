@@ -62,13 +62,27 @@
                                          alt="{{#i18n}}home.topics.{{topic}}.title{{/i18n}}"/>
                                     <span>{{#i18n}}home.topics.{{topic}}.title{{/i18n}}</span>
                                 </div>{{/topic}}
-                            <h3 class="mxt-text--talktitle">{{title}}{{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}</h3>
+                            <h3 class="mxt-text--talktitle">
+                                {{#connected}}
+                                    <button class="mxt-img--favorite">
+                                        {{#favorite}}
+                                            <img src="/images/svg/favorites/mxt-favorite.svg" id="favorite-{{id}}" class="mxt-icon--cat__talks"/>
+                                        {{/favorite}}
+                                        {{^favorite}}
+                                            <img src="/images/svg/favorites/mxt-favorite-non.svg" id="favorite-{{id}}" class="mxt-icon--cat__talks"/>
+                                        {{/favorite}}
+                                    </button>
+                                {{/connected}}
+                                {{title}}
+                                {{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
+                            </h3>
                             <ul class="menu simple mxt-menu--accordion">
                                 <!--<li>{{#start}}{{start}}{{/start}} - {{#end}}{{end}}{{/end}}</li>-->
                                 {{#video}}
                                     <li><strong>&#x25ba; {{#i18n}}medias.html.plus{{/i18n}}</strong></li>{{/video}}
                                 {{^isTalk}}
-                                    <li class="mxt-text--cat-format">#{{format}}</li>{{/isTalk}}
+                                    <li class="mxt-text--cat-format">#{{format}}</li>
+                                {{/isTalk}}
                             </ul>
                         </a>
                         <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
@@ -83,8 +97,8 @@
                                         {{#speakers}}
                                             <li class="menu-text">
                                                 <div class="mxt-img-avatar__wrapper"><img
-                                                        src="{{^emailHash}}{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{/emailHash}}{{#emailHash}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/emailHash}}"
-                                                        class="mxt-img-avatar__speaker"></div>
+                                                        data-src="{{^emailHash}}{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{/emailHash}}{{#emailHash}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/emailHash}}"
+                                                        class="mxt-img-avatar__speaker mxt-img--lazyload"></div>
                                                 <span>{{firstname}}&nbsp;{{lastname}}</span>
                                             </li>
                                         {{/speakers}}
@@ -119,5 +133,12 @@
         </div>
     </div>
 </div>
+
+{{#connected}}
+    <input type="hidden" id="email" value="{{email}}"/>
+{{/connected}}
+
+<script src="/js/talks.js"></script>
+<script async src="/js/images.js"></script>
 
 {{> footer}}

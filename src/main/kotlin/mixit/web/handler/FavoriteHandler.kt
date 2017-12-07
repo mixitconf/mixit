@@ -14,7 +14,7 @@ import reactor.core.publisher.toMono
 class FavoriteHandler(private val favoriteRepository: FavoriteRepository, private val cryptographer: Cryptographer) {
 
     fun toggleFavorite(req: ServerRequest) = ok().json().body(
-            favoriteRepository.findByTalkAndEmail(req.pathVariable("email"), req.pathVariable("id"))
+            favoriteRepository.findByEmailAndTalk(req.pathVariable("email"), req.pathVariable("id"))
                     // if favorite is found we delete it
                     .flatMap { favoriteRepository.delete(req.pathVariable("email"), it.talkId).map { FavoriteDto(req.pathVariable("id"), false) } }
                     // otherwise we create it
@@ -26,7 +26,7 @@ class FavoriteHandler(private val favoriteRepository: FavoriteRepository, privat
 
 
     fun getFavorite(req: ServerRequest) = ok().json().body(
-            favoriteRepository.findByTalkAndEmail(req.pathVariable("email"), req.pathVariable("id"))
+            favoriteRepository.findByEmailAndTalk(req.pathVariable("email"), req.pathVariable("id"))
                     .flatMap { FavoriteDto(it.talkId, true).toMono() }
                     .switchIfEmpty(FavoriteDto(req.pathVariable("id"), false).toMono())
     )

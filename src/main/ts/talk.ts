@@ -1,19 +1,22 @@
-function initFavoriteButton() {
-  const favoriteButton = document.getElementById('favorite');
-  favoriteButton.onclick = favoriteToggle;
+class TalkCtrl{
+  constructor() {
+    const favoriteButton = document.getElementById('favorite');
+    favoriteButton.onclick = this.favoriteToggle;
+  }
+
+  favoriteToggle(event) {
+    const talkField = <HTMLInputElement> document.getElementById('talkId');
+    const email = <HTMLInputElement> document.getElementById('email');
+    const img = event.srcElement;
+
+    fetch(`/api/favorites/${email.value}/talks/${talkField.value}/toggle`, {method: 'post'})
+      .then(response => response.json())
+      .then(json => {
+        const imgPath = json.selected ? 'mxt-favorite.svg' : 'mxt-favorite-non.svg';
+        img.src = `/images/svg/favorites/${imgPath}`;
+      });
+  }
 }
 
-function favoriteToggle() {
-  const talkField = <HTMLInputElement> document.getElementById('talkId');
-  const email = <HTMLInputElement> document.getElementById('email');
-  const favoriteButton = document.getElementById('favorite');
+window.addEventListener("load", () => new TalkCtrl());
 
-  fetch(`/api/favorites/${email.value}/talks/${talkField.value}/toggle`, {method: 'post'})
-    .then(response => response.json())
-    .then(json => {
-      const img = json.selected ? 'mxt-favorite.svg' : 'mxt-favorite-non.svg';
-      favoriteButton.innerHTML = `<img src="/images/svg/favorites/${img}" class="mxt-icon--cat__talks"/>`;
-    });
-}
-
-window.addEventListener("load", initFavoriteButton);

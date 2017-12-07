@@ -115,15 +115,16 @@ class AuthenticationHandler(private val userRepository: UserRepository,
      */
     fun signIn(req: ServerRequest): Mono<ServerResponse> = req.body(toFormData()).flatMap { data ->
         val formData = data.toSingleValueMap()
-        val email = if (cryptographer.decrypt(formData["email"]) == null) formData["email"] else cryptographer.decrypt(formData["email"])
+
+        // If email or token are null we can't open a session
+        if (formData["email"] == null || formData["token"] == null) {
+            renderError("login.error.required.text")
+        }
+
+        val email = if (formData["email"]!!.contains("@")) formData["email"] else cryptographer.decrypt(formData["email"])
         val token = formData["token"]
 
         req.session().flatMap { session ->
-            // If email or token are null we can't open a session
-            if (email == null || token == null) {
-                renderError("login.error.required.text")
-            }
-
             userRepository.findByEmail(email!!)
                     // User must exist at this point
                     .flatMap { user ->

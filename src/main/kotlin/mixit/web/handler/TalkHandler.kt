@@ -28,31 +28,57 @@ class TalkHandler(private val repository: TalkRepository,
                   private val markdownConverter: MarkdownConverter,
                   private val favoriteRepository: FavoriteRepository) {
 
-    fun findByEventView(year: Int, req: ServerRequest, topic: String? = null): Mono<ServerResponse> {
-        val talks = repository
-                .findByEvent(year.toString(), topic)
-                .collectList()
-                .flatMap { talks ->
-                    userRepository
-                            .findMany(talks.flatMap(Talk::speakerIds))
-                            .collectMap(User::login)
-                            .map { speakers -> talks.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] }) }.groupBy { it.date } }
-                }
+    fun findByEventView(year: Int, req: ServerRequest, topic: String? = null): Mono<ServerResponse> =
+            req.session().flatMap {
+                val currentUserEmail = it.getAttribute<String>("email")
 
-        val sponsors = eventSponsors(year, req)
+                val talks = repository
+                        .findByEvent(year.toString(), topic)
+                        .collectList()
+                        .flatMap { talks ->
+                            if (currentUserEmail != null) {
+                                val favorites = favoriteRepository
+                                        .findByEmailAndTalks(currentUserEmail, talks.map { it.id!! })
+                                        .collectMap(Favorite::talkId)
+                                addUserToTalk(talks, favorites.block(), req.language())
+                            } else {
+                                addUserToTalk(talks, emptyMap(), req.language())
+                            }
+                        }
 
-        return ok().render("talks", mapOf(
-                Pair("talks", talks),
-                Pair("year", year),
-                Pair("title", when (topic) { null -> "talks.title.html|$year"
-                    else -> "talks.title.html.$topic|$year"
-                }),
-                Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
-                Pair("topic", topic),
-                Pair("has2Columns", talks.map { it.size == 2 }),
-                Pair("sponsors", sponsors)
-        ))
-    }
+                val sponsors = eventSponsors(year, req)
+
+                ok().render("talks", mapOf(
+                        Pair("talks", talks),
+                        Pair("year", year),
+                        Pair("title", when (topic) { null -> "talks.title.html|$year"
+                            else -> "talks.title.html.$topic|$year"
+                        }),
+                        Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
+                        Pair("topic", topic),
+                        Pair("has2Columns", talks.map { it.size == 2 }),
+                        Pair("sponsors", sponsors)
+                ))
+            }
+
+    private fun addUserToTalk(talks: List<Talk>,
+                              favorites: Map<String, Favorite>? = emptyMap(),
+                              language: Language): Mono<Map<String, List<TalkDto>>> = userRepository
+            .findMany(talks.flatMap(Talk::speakerIds))
+            .collectMap(User::login)
+            .map { speakers ->
+                talks.map { it.toDto(language, it.speakerIds.mapNotNull { speakers[it] }, favorites!!.get(it.id) != null) }.groupBy { if (it.date == null) "" else it.date }
+            }
+
+    private fun addUserToTalkForMedia(talks: List<Talk>,
+                              favorites: Map<String, Favorite>? = emptyMap(),
+                              language: Language) = userRepository
+            .findMany(talks.flatMap(Talk::speakerIds))
+            .collectMap(User::login)
+            .map { speakers ->
+                talks.sortedBy { it.title }.map { it.toDto(language, it.speakerIds.mapNotNull { speakers[it] }, favorites!!.get(it.id) != null) }
+            }
+
 
     fun findOneView(year: Int, req: ServerRequest): Mono<ServerResponse> = repository.findByEventAndSlug(year.toString(), req.pathVariable("slug")).flatMap { talk ->
         val sponsors = eventSponsors(year, req)
@@ -73,7 +99,7 @@ class TalkHandler(private val repository: TalkRepository,
                         Pair("talk", talk.toDto(req.language(), speakers!!)),
                         Pair("speakers", speakers.map { speaker -> speaker.toDto(req.language(), markdownConverter) }.sortedBy { talk.speakerIds.indexOf(it.login) }),
                         Pair("othertalks", otherTalks),
-                        Pair("favorites", if (currentUserEmail == null) null else favoriteRepository.findByTalkAndEmail(currentUserEmail, talk.id!!)),
+                        Pair("favorites", if (currentUserEmail == null) null else favoriteRepository.findByEmailAndTalk(currentUserEmail, talk.id!!)),
                         Pair("year", year),
                         Pair("hasOthertalks", otherTalks.map { it.size > 0 }),
                         Pair("title", "talk.html.title|${talk.title}"),
@@ -88,30 +114,38 @@ class TalkHandler(private val repository: TalkRepository,
     fun findMediaTopicByEventView(year: Int, req: ServerRequest): Mono<ServerResponse> = findMediaByEventView(year, req, req.pathVariable("topic"))
 
     fun findMediaByEventView(year: Int, req: ServerRequest, topic: String? = null): Mono<ServerResponse> = eventRepository.findByYear(year).flatMap { event ->
-        val talks = repository
-                .findByEvent(year.toString(), topic)
-                .filter { !StringUtils.isEmpty(it.video) }
-                .collectList()
-                .flatMap { talks ->
-                    userRepository
-                            .findMany(talks.flatMap { it.speakerIds })
-                            .collectMap(User::login)
-                            .map { speakers -> talks.sortedBy { it.title }.map { it.toDto(req.language(), it.speakerIds.mapNotNull { speakers[it] }) } }
-                }
+        req.session().flatMap {
+            val currentUserEmail = it.getAttribute<String>("email")
 
-        val sponsors = eventSponsors(year, req)
+            val talks = repository
+                    .findByEvent(year.toString(), topic)
+                    .filter { !StringUtils.isEmpty(it.video) }
+                    .collectList()
+                    .flatMap { talks ->
+                        if (currentUserEmail != null) {
+                            val favorites = favoriteRepository
+                                    .findByEmailAndTalks(currentUserEmail, talks.map { it.id!! })
+                                    .collectMap(Favorite::talkId)
+                            addUserToTalkForMedia(talks, favorites.block(), req.language())
+                        } else {
+                            addUserToTalkForMedia(talks, emptyMap(), req.language())
+                        }
+                    }
 
-        ok().render("medias", mapOf(
-                Pair("talks", talks),
-                Pair("topic", topic),
-                Pair("year", year),
-                Pair("title", "medias.title.html|$year"),
-                Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
-                Pair("sponsors", sponsors),
-                Pair("event", event),
-                Pair("videoUrl", if (event.videoUrl?.url?.startsWith("https://vimeo.com/") == true) event.videoUrl.url.replace("https://vimeo.com/", "https://player.vimeo.com/video/") else null),
-                Pair("hasPhotosOrVideo", event.videoUrl != null || event.photoUrls.isNotEmpty())
-        ))
+            val sponsors = eventSponsors(year, req)
+
+            ok().render("medias", mapOf(
+                    Pair("talks", talks),
+                    Pair("topic", topic),
+                    Pair("year", year),
+                    Pair("title", "medias.title.html|$year"),
+                    Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
+                    Pair("sponsors", sponsors),
+                    Pair("event", event),
+                    Pair("videoUrl", if (event.videoUrl?.url?.startsWith("https://vimeo.com/") == true) event.videoUrl.url.replace("https://vimeo.com/", "https://player.vimeo.com/video/") else null),
+                    Pair("hasPhotosOrVideo", event.videoUrl != null || event.photoUrls.isNotEmpty())
+            ))
+        }
     }
 
     private fun eventSponsors(year: Int, req: ServerRequest) = eventRepository
@@ -125,7 +159,7 @@ class TalkHandler(private val repository: TalkRepository,
                             mapOf(
                                     Pair("sponsors-gold", sponsorsByEvent[SponsorshipLevel.GOLD]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
                                     Pair("sponsors-others", sponsorsByEvent.entries
-                                            .filter { it.key != SponsorshipLevel.GOLD }?.flatMap { it.value }
+                                            .filter { it.key != SponsorshipLevel.GOLD }.flatMap { it.value }
                                             .map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) })
                             )
                         }
@@ -163,6 +197,7 @@ class TalkDto(
         val start: String?,
         val end: String?,
         val date: String?,
+        val favorite: Boolean = false,
         val photoUrls: List<Link> = emptyList(),
         val isEn: Boolean = (language == "english"),
         val isTalk: Boolean = (format == TalkFormat.TALK),
@@ -170,7 +205,7 @@ class TalkDto(
         val speakersFirstNames: String = (speakers.joinToString { it.firstname })
 )
 
-fun Talk.toDto(lang: Language, speakers: List<User>) = TalkDto(
+fun Talk.toDto(lang: Language, speakers: List<User>, favorite: Boolean = false) = TalkDto(
         id, slug, format, event, title,
         summary, speakers, language.name.toLowerCase(), addedAt,
         description, topic,
@@ -180,5 +215,6 @@ fun Talk.toDto(lang: Language, speakers: List<User>) = TalkDto(
         start?.formatTalkTime(lang),
         end?.formatTalkTime(lang),
         start?.formatTalkDate(lang),
+        favorite,
         photoUrls
 )
