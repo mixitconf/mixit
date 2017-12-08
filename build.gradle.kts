@@ -2,18 +2,6 @@ import com.moowork.gradle.gulp.GulpTask
 import com.moowork.gradle.node.yarn.YarnInstallTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-buildscript {
-    repositories {
-        mavenCentral()
-        maven("https://repo.spring.io/milestone")
-    }
-
-    dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.0.M7")
-        classpath("org.junit.platform:junit-platform-gradle-plugin:1.0.2")
-    }
-}
-
 plugins {
     val kotlinVersion = "1.1.61"
     val nodePluginVersion = "1.1.1"
@@ -21,12 +9,9 @@ plugins {
     id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion
     id("com.moowork.node") version nodePluginVersion
     id("com.moowork.gulp") version nodePluginVersion
+    id("org.springframework.boot") version "2.0.0.M7"
     id("io.spring.dependency-management") version "1.0.3.RELEASE"
-}
-
-apply {
-    plugin("org.springframework.boot")
-    plugin("org.junit.platform.gradle.plugin")
+    id("org.junit.platform.gradle.plugin") version "1.0.2"
 }
 
 version = "1.0.0-SNAPSHOT"
@@ -61,7 +46,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
 
     runtime("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
-    compile("com.samskivert:jmustache:1.13")
+    compile("com.samskivert:jmustache")
     compile("com.atlassian.commonmark:commonmark:0.9.0")
     compile("com.atlassian.commonmark:commonmark-ext-autolink:0.9.0")
 
