@@ -1,0 +1,151 @@
+{{> header}}
+
+<div class="mxt-wrapper--talks">
+    <div class="row">
+        <div class="columns large-8 large-offset-2 menu-centered text-center">
+            <ul class="dropdown menu simple mxt-menu--talks" data-dropdown-menu>
+                <li class="mxt-menu--talks-title"><h1>{{#i18n}}talks.title{{#topic}}.{{topic}}{{/topic}}{{/i18n}}</h1></li>
+                <li><a href="#" class="mxt-menu--talks-date"><h1>{{year}}</h1></a>
+                    <ul class="menu">
+                        <li><a href="{{localePrefix}}/2017{{#topic}}/{{topic}}{{/topic}}">2017</a></li>
+                        <li><a href="{{localePrefix}}/2016{{#topic}}/{{topic}}{{/topic}}">2016</a></li>
+                        <li><a href="{{localePrefix}}/2015{{#topic}}/{{topic}}{{/topic}}">2015</a></li>
+                        <li><a href="{{localePrefix}}/2014{{#topic}}/{{topic}}{{/topic}}">2014</a></li>
+                        <li><a href="{{localePrefix}}/2013{{#topic}}/{{topic}}{{/topic}}">2013</a></li>
+                        <li><a href="{{localePrefix}}/2012{{#topic}}/{{topic}}{{/topic}}">2012</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <p>{{#i18n}}talks.medias.see{{/i18n}} <a href="{{localePrefix}}/2017/medias{{#topic}}/{{topic}}{{/topic}}">{{#i18n}}talks.medias{{/i18n}}</a></p>
+        </div>
+    </div>
+</div>
+
+
+<div class="mxt-wrapper--page-content">
+    <div class="row">
+        <div class="column large-12 callout">
+
+            <h2>{{#i18n}}cfp.title{{/i18n}}</h2>
+            <p class="lead">{{#i18n}}cfp.description{{/i18n}}</p>
+
+            <div class="row align-center"><a href="{{localePrefix}}/admin/events" class="button  align-center"><h3>{{#i18n}}cfp.action{{/i18n}}</h3></a></div>
+
+            <h2>{{#i18n}}home.topics.title{{/i18n}}</h2>
+            <p>{{#i18n}}cfp.tracks{{/i18n}}</p>
+
+            <div class="row">
+                <div class="columns mxt-icon--wrapper column-block small-12 medium-6 large-5">
+                    <div class="row align-middle">
+                        <div class="columns medium-push-9">
+                            <img src="/images/svg/mxt-icon--makers.svg" class="mxt-icon--cat" alt="{{#i18n}}home.topics.makers.title{{/i18n}}">
+                        </div>
+                        <div class="columns small-9 medium-pull-3">
+                            <h3 class="subheader mxt-subheader--categories">{{#i18n}}home.topics.makers.title{{/i18n}}<br>
+                                <small>{{#i18n}}home.topics.makers.description{{/i18n}}</small>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="row align-middle">
+                        <div class="columns medium-push-9">
+                            <img src="/images/svg/mxt-icon--aliens.svg" class="mxt-icon--cat" alt="{{#i18n}}home.topics.aliens.title{{/i18n}}">
+                        </div>
+                        <div class="columns small-9 medium-pull-3">
+                            <h3 class="subheader mxt-subheader--categories">{{#i18n}}home.topics.aliens.title{{/i18n}}<br>
+                                <small>{{#i18n}}home.topics.aliens.description{{/i18n}}</small>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="row align-middle">
+                        <div class="columns medium-push-9">
+                            <img src="/images/svg/mxt-icon--tech.svg" class="mxt-icon--cat" alt="{{#i18n}}home.topics.tech.title{{/i18n}}">
+                        </div>
+                        <div class="columns small-9 medium-pull-3">
+                            <h3 class="subheader mxt-subheader--categories">{{#i18n}}home.topics.tech.title{{/i18n}}<br>
+                                <small>{{#i18n}}home.topics.tech.description{{/i18n}}</small>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns mxt-icon--wrapper column-block small-12 medium-6 large-5">
+                    <div class="row align-middle">
+                        <div class="columns medium-push-9">
+                            <img src="/images/svg/mxt-icon--design.svg" class="mxt-icon--cat" alt="{{#i18n}}home.topics.design.title{{/i18n}}">
+                        </div>
+                        <div class="columns small-9 medium-pull-3">
+                            <h3 class="subheader mxt-subheader--categories">{{#i18n}}home.topics.design.title{{/i18n}}<br>
+                                <small>{{#i18n}}home.topics.design.description{{/i18n}}</small>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="row align-middle">
+                        <div class="columns medium-push-9">
+                            <img src="/images/svg/mxt-icon--hacktivism.svg" class="mxt-icon--cat" alt="{{#i18n}}home.topics.hacktivism.title{{/i18n}}">
+                        </div>
+                        <div class="columns small-9 medium-pull-3">
+                            <h3 class="subheader mxt-subheader--categories">{{#i18n}}home.topics.hacktivism.title{{/i18n}}<br>
+                                <small>{{#i18n}}home.topics.hacktivism.description{{/i18n}}</small>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="row align-middle">
+                        <div class="columns medium-push-9">
+                            <img src="/images/svg/mxt-icon--learn.svg" class="mxt-icon--cat" alt="{{#i18n}}home.topics.learn.title{{/i18n}}">
+                        </div>
+                        <div class="columns small-9 medium-pull-3">
+                            <h3 class="subheader mxt-subheader--categories">{{#i18n}}home.topics.learn.title{{/i18n}}<br>
+                                <small>{{#i18n}}home.topics.learn.description{{/i18n}}</small>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>{{#i18n}}cfp.format.title{{/i18n}}</h2>
+
+            <p>{{#i18n}}cfp.format.description{{/i18n}}</p>
+
+            <ul>
+                <li>{{#i18n}}cfp.format.talk{{/i18n}}</li>
+                <li>{{#i18n}}cfp.format.random{{/i18n}}</li>
+                <li>{{#i18n}}cfp.format.workshop{{/i18n}}</li>
+                <li>{{#i18n}}cfp.format.keynote{{/i18n}}</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="column large-12">
+        {{#sponsors}}
+            <hr/>
+            <div class="align-center align-middle row">
+                {{#sponsors-gold}}
+                    <div class="columns text-center large-2 medium-2 small-3">
+                        {{> home-sponsor }}
+                    </div>
+                {{/sponsors-gold}}
+                {{#sponsors-others}}
+                    <div class="columns text-center large-1 medium-1 small-2">
+                        {{> home-sponsor }}
+                    </div>
+                {{/sponsors-others}}
+            </div>
+        {{/sponsors}}
+    </div>
+</div>
+</div>
+
+{{#connected}}
+    <input type="hidden" id="email" value="{{email}}"/>
+{{/connected}}
+
+<script src="/js/talks.js"></script>
+<script async src="/js/images.js"></script>
+
+{{> footer}}
+
