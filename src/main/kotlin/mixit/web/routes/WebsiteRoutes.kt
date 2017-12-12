@@ -52,10 +52,11 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
             GET("/news", newsHandler::newsView)
             GET("/ticketing", ticketingHandler::ticketing)
             GET("/sponsors") { sponsorHandler.viewWithSponsors("sponsors", "sponsors.title", 2018, false, it) }
-            GET("/mixteen",  { sponsorHandler.viewWithSponsors("mixteen", "mixteen.title", 2018, false, it) })
+            GET("/mixteen", { sponsorHandler.viewWithSponsors("mixteen", "mixteen.title", 2018, false, it) })
             GET("/faq", globalHandler::faqView)
             GET("/come", globalHandler::comeToMixitView)
             GET("/schedule", globalHandler::scheduleView)
+            GET("/cfp") { talkHandler.findByEventView(2018, it) }
 
             // Authentication
             GET("/login", authenticationHandler::loginView)
