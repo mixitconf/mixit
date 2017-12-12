@@ -29,7 +29,7 @@ fun generateModel(properties: MixitProperties,
         this["localePrefix"] = localePrefix(locale)
         this["en"] = locale.language == "en"
         this["fr"] = locale.language == "fr"
-        this["switchLangUrl"] = if (locale.language == "en") path else "/en" + path
+        this["switchLangUrl"] = if (locale.language == "en") "/fr" + path else "/en" + path
         this["baseUri"] = properties.baseUri!!
         this["uri"] = "${properties.baseUri!!}$path"
         this["i18n"] = Mustache.Lambda { frag, out ->

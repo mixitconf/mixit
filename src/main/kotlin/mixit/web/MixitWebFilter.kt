@@ -72,8 +72,9 @@ class MixitWebFilter(val applicationContext: ApplicationContext, val properties:
             // In other case we have to see if the page is secured or not
             else {
                 // When a user wants to see a page in english uri path starts with 'en'
-                val languageEn = exchange.request.uri.path.startsWith("/en/")
-                val uriPath = if (languageEn) exchange.request.uri.path.substring(3) else exchange.request.uri.path
+                val initUriPath = exchange.request.uri.path;
+                val languageEn = initUriPath.startsWith("/en/")
+                val uriPath = if (initUriPath.startsWith("/en/") || initUriPath.startsWith("/fr/")) initUriPath.substring(3) else initUriPath
 
                 // If url is securized we have to check the credentials information
                 if (startWithSecuredUrl(uriPath)) {
