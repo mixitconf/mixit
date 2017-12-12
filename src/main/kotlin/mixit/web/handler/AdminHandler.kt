@@ -286,7 +286,7 @@ class AdminHandler(private val ticketRepository: TicketRepository,
 
     private fun adminUser(user: User = User("", "", "", "")) = ok().render("admin-user", mapOf(
             Pair("user", user),
-            Pair("email", cryptographer.decrypt(user.email)),
+            Pair("usremail", cryptographer.decrypt(user.email)),
             Pair("description-fr", user.description[FRENCH]),
             Pair("description-en", user.description[ENGLISH]),
             Pair("roles", listOf(
