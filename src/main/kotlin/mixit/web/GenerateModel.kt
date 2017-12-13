@@ -29,7 +29,7 @@ fun generateModel(properties: MixitProperties,
         this["localePrefix"] = localePrefix(locale)
         this["en"] = locale.language == "en"
         this["fr"] = locale.language == "fr"
-        this["switchLangUrl"] = if (locale.language == "en") "/fr" + path else "/en" + path
+        this["switchLangUrl"] = switchLangUrl(path, locale)
         this["baseUri"] = properties.baseUri!!
         this["uri"] = "${properties.baseUri!!}$path"
         this["i18n"] = Mustache.Lambda { frag, out ->
@@ -39,6 +39,13 @@ fun generateModel(properties: MixitProperties,
         this["urlEncode"] = Mustache.Lambda { frag, out -> out.write(UriUtils.encodePathSegment(frag.execute(), "UTF-8")) }
         this["markdown"] = Mustache.Lambda { frag, out -> out.write(markdownConverter.toHTML(frag.execute())) }
 }.toMap()
+
+private fun switchLangUrl(path: String, locale: Locale) : String {
+    if (locale.language == "en" && (path == "/" || path == "/en/" || path == "/en")){
+        return "/fr/"
+    }
+    return if (locale.language == "en") path else "/en" + path
+}
 
 fun generateModelForExernalCall(baseUri: String,
                                 locale: Locale,

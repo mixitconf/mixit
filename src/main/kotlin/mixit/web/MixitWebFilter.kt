@@ -6,7 +6,6 @@ import mixit.model.User
 import mixit.repository.UserRepository
 import org.springframework.context.ApplicationContext
 import org.springframework.http.HttpHeaders
-import org.springframework.http.HttpHeaders.ACCEPT_LANGUAGE
 import org.springframework.http.HttpHeaders.CONTENT_LANGUAGE
 import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Component
@@ -58,16 +57,9 @@ class MixitWebFilter(val applicationContext: ApplicationContext, val properties:
                     (exchange.request.headers.acceptLanguageAsLocales.firstOrNull() ?: Locale.FRENCH).language != "fr" &&
                     !isSearchEngineCrawler(exchange)) {
                 val response = exchange.response
-                exchange.session.flatMap {
-                    if (it.attributes[redirectDoneAttribute] == true)
-                        chain.filter(exchange.mutate().request(exchange.request.mutate().header(ACCEPT_LANGUAGE, "fr").build()).build())
-                    else {
-                        response.statusCode = HttpStatus.TEMPORARY_REDIRECT
-                        response.headers.location = URI("${properties.baseUri}/en/")
-                        it.attributes[redirectDoneAttribute] = true
-                        it.save()
-                    }
-                }
+                response.statusCode = HttpStatus.TEMPORARY_REDIRECT
+                response.headers.location = URI("${properties.baseUri}/en/")
+                Mono.empty()
             }
             // In other case we have to see if the page is secured or not
             else {
