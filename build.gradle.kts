@@ -44,6 +44,7 @@ dependencies {
     compileOnly("org.springframework:spring-context-indexer")
     compile("org.springframework.boot:spring-boot-starter-mail")
     compile("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
+    compile("org.springframework.boot:spring-boot-devtools")
 
     runtime("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
     compile("com.samskivert:jmustache")

@@ -1,0 +1,12 @@
+${AnsiColor.BRIGHT_BLACK}███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+${AnsiColor.BRIGHT_BLACK}███                                                                                                                                         ${AnsiColor.BRIGHT_BLACK}███                                            
+${AnsiColor.BRIGHT_BLACK}███                                                ██      ██  ██  ██      ██  ${AnsiColor.YELLOW}██  ██████████                                               ${AnsiColor.BRIGHT_BLACK}███
+${AnsiColor.BRIGHT_BLACK}███                                                ████  ████        ██  ██    ${AnsiColor.YELLOW}        ██                                                   ${AnsiColor.BRIGHT_BLACK}███
+${AnsiColor.BRIGHT_BLACK}███                                                ██  ██  ██  ██      ██      ${AnsiColor.YELLOW}██      ██                                                   ${AnsiColor.BRIGHT_BLACK}███
+${AnsiColor.BRIGHT_BLACK}███                                                ██      ██  ██    ██  ${AnsiColor.YELLOW}██    ██      ██                                                   ${AnsiColor.BRIGHT_BLACK}███
+${AnsiColor.BRIGHT_BLACK}███                                                ██      ██  ██  ██      ${AnsiColor.YELLOW}██  ██      ██                                                   ${AnsiColor.BRIGHT_BLACK}███
+${AnsiColor.BRIGHT_BLACK}███                                                                                                                                         ${AnsiColor.BRIGHT_BLACK}███
+${AnsiColor.BRIGHT_BLACK}███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+${AnsiColor.BRIGHT_BLACK}███  ${AnsiColor.BLACK} Running Spring Boot ${spring-boot.version}                                                                                                          ${AnsiColor.BRIGHT_BLACK}███
+${AnsiColor.BRIGHT_BLACK}███  ${AnsiColor.BLUE} http://mixitconf.org ${AnsiColor.DEFAULT}                                                                                                                 ${AnsiColor.BRIGHT_BLACK}███
+${AnsiColor.BRIGHT_BLACK}███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
