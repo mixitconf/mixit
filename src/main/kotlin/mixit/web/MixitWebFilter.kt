@@ -22,8 +22,6 @@ import java.util.stream.Stream
 @Component
 class MixitWebFilter(val applicationContext: ApplicationContext, val properties: MixitProperties, val userRepository: UserRepository) : WebFilter {
 
-    private val redirectDoneAttribute = "redirectDone"
-
     override fun filter(exchange: ServerWebExchange, chain: WebFilterChain) = exchange.session.flatMap { session ->
         // We need to know if the user is connected or not
         val email = session.attributes["email"]
