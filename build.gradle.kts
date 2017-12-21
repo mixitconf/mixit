@@ -50,6 +50,7 @@ dependencies {
     compile("com.samskivert:jmustache")
     compile("com.atlassian.commonmark:commonmark:0.9.0")
     compile("com.atlassian.commonmark:commonmark-ext-autolink:0.9.0")
+    compile("com.sendgrid:sendgrid-java:4.1.2")
 
     testCompile("org.springframework.boot:spring-boot-starter-test") {
         exclude(module = "junit")

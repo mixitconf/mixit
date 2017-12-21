@@ -2,7 +2,8 @@ package mixit.integration
 
 import mixit.model.Role
 import mixit.model.User
-import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.boot.test.context.SpringBootTest
@@ -66,7 +67,7 @@ class UserIntegrationTests(@LocalServerPort port: Int) {
                 .retrieve()
                 .bodyToFlux<User>()
                 .test()
-                .expectNextCount(7)
+                .expectNextCount(6)
                 .verifyComplete()
     }
 

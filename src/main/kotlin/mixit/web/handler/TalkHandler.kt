@@ -176,7 +176,6 @@ class TalkHandler(private val repository: TalkRepository,
     fun redirectFromSlug(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug")).flatMap {
         permanentRedirect("${properties.baseUri}/${it.event}/${it.slug}")
     }
-
 }
 
 class TalkDto(

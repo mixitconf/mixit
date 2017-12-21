@@ -44,18 +44,18 @@ class EmailSenderTest {
     lateinit var messageSource: MessageSource
 
     @Autowired
-    lateinit var cryptographer:Cryptographer
+    lateinit var cryptographer: Cryptographer
 
     val mailSenderMock: JavaMailSender = Mockito.mock(JavaMailSender::class.java)
 
     lateinit var emailSender: EmailSender
 
     @BeforeEach
-    fun `init test`(){
+    fun `init test`() {
         properties.aes.initvector = "RandomInitVector"
         properties.aes.key = "Bar12345Bar12345"
         // Service to test is not injected because we want to use  Spy to simulate the work of the mailSender
-        emailSender = EmailSender(mustacheCompiler, resourceLoader, mailSenderMock, properties, messageSource, cryptographer)
+        emailSender = GmailSender(mustacheCompiler, resourceLoader, properties, messageSource, cryptographer, mailSenderMock)
     }
 
     @Test
@@ -93,7 +93,7 @@ class EmailSenderTest {
     }
 
     @Test
-    fun `send an email to a user with specified subject`(){
+    fun `send an email to a user with specified subject`() {
         val mimeMessage = MimeMessage(Session.getInstance(Properties()))
         BDDMockito.given(mailSenderMock.createMimeMessage()).willReturn(mimeMessage)
 
@@ -109,7 +109,7 @@ class EmailSenderTest {
     }
 
     @Test
-    fun `send an email with a connexion token to a user in english`(){
+    fun `send an email with a connexion token to a user in english`() {
         val mimeMessage = MimeMessage(Session.getInstance(Properties()))
         BDDMockito.given(mailSenderMock.createMimeMessage()).willReturn(mimeMessage)
 
@@ -136,4 +136,6 @@ class EmailSenderTest {
         user.token = "token-3455-dede"
         return user
     }
+
 }
+

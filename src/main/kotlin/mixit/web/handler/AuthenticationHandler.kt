@@ -5,7 +5,7 @@ import mixit.model.Role
 import mixit.model.User
 import mixit.repository.UserRepository
 import mixit.util.Cryptographer
-import mixit.util.EmailSender
+import mixit.util.ElasticEmailSender
 import mixit.util.locale
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
@@ -23,7 +23,7 @@ import java.util.*
 @Component
 class AuthenticationHandler(private val userRepository: UserRepository,
                             private val properties: MixitProperties,
-                            private val emailSender: EmailSender,
+                            private val emailSender: ElasticEmailSender,
                             private val cryptographer: Cryptographer) {
 
 
@@ -172,6 +172,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
             emailSender.sendUserTokenEmail(userToUpdate, locale)
             return userRepository.save(userToUpdate)
         } catch (e: RuntimeException) {
+            logger.error(e.message, e)
             return Mono.empty()
         }
     }
