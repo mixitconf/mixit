@@ -1,0 +1,68 @@
+<html>
+<head>
+    <style>
+        img {
+            max-width: 100%
+        }
+
+        html {
+            font-family: Arial, Tahoma
+        }
+
+        .boxed {
+            margin: auto;
+            box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+        }
+
+        .mxt-button {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 0 1rem;
+            padding: .85em 1em;
+            -webkit-appearance: none;
+            border: 1px solid transparent;
+            border-radius: 0;
+            transition: background-color .25s ease-out,color .25s ease-out;
+            font-size: .9rem;
+            line-height: 1;
+            text-align: center;
+            cursor: pointer;
+            background-color: #ff8d4e;
+            color: #fefefe;
+        }
+    </style>
+</head>
+<body>
+<div style="width:100%;text-align:center; padding:1em;">
+    <div style="max-width:1000px;" class="boxed">
+        <div style="background-color:#2c233d;padding:1em;">
+            <img src="https://mixitconf.org/images/png/mxt-icon--logo.png">
+        </div>
+        <div style="padding:1em;">
+
+            {{#i18n}}email-ticketing-hi{{/i18n}} {{user.firstname}}
+
+            <p>&nbsp;</p>
+
+            <p>{{#i18n}}email-ticketing.intro{{/i18n}}</p>
+
+            <p>{{#i18n}}email-ticketing.description{{/i18n}}</p>
+
+            <p>{{#i18n}}email-ticketing.future{{/i18n}}</p>
+
+            <p>{{#i18n}}email-ticketing-signature{{/i18n}}</p>
+        </div>
+        <div style="background-color:#2c233d;color:white;padding:0.5em">
+            <div style="text-align:right">
+                <a href="https://twitter.com/mixitconf" target="_blank" class="mxt-menu__item--nav">
+                    <img src="https://mixitconf.org/images/png/mxt-icon--social2.png" style="margin: 0 .5em;height: 1.5em;width: 1.5em;" alt="Twitter"></a>
+
+                <a href="https://github.com/mixitconf/mixit" target="_blank" class="mxt-menu__item--nav">
+                    <img src="https://mixitconf.org/images/png/mxt-icon--social3.png" style="margin: 0 .5em;height: 1.5em;width: 1.5em;" alt="GitHub"></a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

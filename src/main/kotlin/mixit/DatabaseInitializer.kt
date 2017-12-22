@@ -1,9 +1,6 @@
 package mixit
 
-import mixit.repository.EventRepository
-import mixit.repository.PostRepository
-import mixit.repository.TalkRepository
-import mixit.repository.UserRepository
+import mixit.repository.*
 import org.springframework.stereotype.Component
 import javax.annotation.PostConstruct
 
@@ -11,6 +8,7 @@ import javax.annotation.PostConstruct
 class DatabaseInitializer(private val userRepository: UserRepository,
                           private val eventRepository: EventRepository,
                           private val talkRepository: TalkRepository,
+                          private val ticketRepository: TicketRepository,
                           private val postRepository: PostRepository) {
 
     @PostConstruct
@@ -19,5 +17,6 @@ class DatabaseInitializer(private val userRepository: UserRepository,
         eventRepository.initData()
         talkRepository.initData()
         postRepository.initData()
+        ticketRepository.initData()
     }
 }

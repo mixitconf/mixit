@@ -116,7 +116,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
             POST("/signup", authenticationHandler::signUp)
             POST("/signin", authenticationHandler::signIn)
 
-            //POST("/ticketing", ticketingHandler::submit)
+            POST("/ticketing", ticketingHandler::submit)
             "/admin".nest {
                 POST("/talks", adminHandler::adminSaveTalk)
                 POST("/talks/delete", adminHandler::adminDeleteTalk)

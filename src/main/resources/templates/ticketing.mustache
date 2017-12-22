@@ -8,42 +8,68 @@
     </div>
 </div>
 
+<p>&nbsp;</p>
+
 <div class="mxt-wrapper--page-content">
     <div class="row">
-        <div class="column large-12">
-            <div class="callout">
+        <div class="column large-12 callout">
+            <div class="lead">
                 {{#i18n}}ticketing.text{{/i18n}}
             </div>
 
-              <div class="login-box">
-    <div class="row">
-      <div class="large-12 columns">
-        <form action="/ticketing" method="post">
-          <div class="row">
-            <div class="large-12 columns">
-              <input type="text" name="firstname" placeholder="{{#i18n}}ticketing.firstname{{/i18n}}" required>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <input type="text" name="lastname" placeholder="{{#i18n}}ticketing.lastname{{/i18n}}" required>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <input type="email" name="email" placeholder="{{#i18n}}ticketing.email{{/i18n}}" required>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 large-centered columns">
-              <input type="submit" class="button expand" value="{{#i18n}}ticketing.submit{{/i18n}}"/>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
+            <picture>
+                <source srcset="images/jpg/mixit_amphi.webp" type="image/webp"/>
+                <source srcset="images/facilities/mixit_amphi.jpg"/>
+                <img src="images/facilities/mixit_amphi.jpg" alt="Mixit public" class="mxt-img--picture">
+            </picture>
 
+            <div class="login-box">
+                <div class="row">
+                    <div class="large-12 columns">
+                        <form action="/ticketing" method="post">
+                            <div class="row">
+                                <div class="large-12 columns">
+                                    <input type="text" name="firstname" placeholder="{{#i18n}}ticketing.firstname{{/i18n}}" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="large-12 columns">
+                                    <input type="text" name="lastname" placeholder="{{#i18n}}ticketing.lastname{{/i18n}}" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="large-12 columns">
+                                    <input type="email" name="email" placeholder="{{#i18n}}ticketing.email{{/i18n}}" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="large-12 large-centered columns">
+                                    <input type="submit" class="button expand" value="{{#i18n}}ticketing.submit{{/i18n}}"/>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="large-12 columns">
+                    <h2>{{#i18n}}ticketing.description.why{{/i18n}}</h2>
+
+                    <p>{{#i18n}}ticketing.description.intro{{/i18n}}</p>
+                    <p>{{#i18n}}ticketing.description.but{{/i18n}}</p>
+                    <p>{{#i18n}}ticketing.description.where{{/i18n}}</p>
+                    <p>{{#i18n}}ticketing.description.stress{{/i18n}}</p>
+                    <p>{{#i18n}}ticketing.description.how{{/i18n}}</p>
+                    <p>{{#i18n}}ticketing.description.hack{{/i18n}}</p>
+                </div>
+
+                <div class="row" class="mxt-img--talk__portfolio">
+                    <div class="mxt-img--talk"><a href ="https://farm5.staticflickr.com/4165/34230277200_f6f40b6662_z_d.jpg"><img src="https://farm5.staticflickr.com/4165/34230277200_f6f40b6662_z_d.jpg" aria-label="Closing keynote" class="mxt-img--grayscale"/></a></div>
+                    <div class="mxt-img--talk"><a href ="https://farm5.staticflickr.com/4174/34574860086_0f032da82c_z_d.jpg"><img src="https://farm5.staticflickr.com/4174/34574860086_0f032da82c_z_d.jpg" aria-label="CPE Lyon" class="mxt-img--grayscale"/></a></div>
+                    <div class="mxt-img--talk"><a href ="https://farm5.staticflickr.com/4172/34485934691_037ebdd5d9_z_d.jpg"><img src="https://farm5.staticflickr.com/4172/34485934691_037ebdd5d9_z_d.jpg" aria-label="CPE Lyon" class="mxt-img--grayscale"/></a></div>
+                </div>
+            </div>
         </div>
     </div>
 
