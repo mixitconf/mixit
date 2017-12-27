@@ -50,9 +50,9 @@ class EmailService(private val properties: MixitProperties,
             val content = templateService.load(templateName, context)
 
             if (usage == EmailServiceUsage.AUTHENTICATION) {
-                authentEmailSender.send(Email(email, subject, content))
+                authentEmailSender.send(EmailMessage(email, subject, content))
             } else {
-                messageEmailSender.send(Email(email, subject, content))
+                messageEmailSender.send(EmailMessage(email, subject, content))
             }
 
         } catch (e: MessagingException) {

@@ -1,7 +1,6 @@
 package mixit.util
 
 import com.sendgrid.*
-import com.sendgrid.Email
 import mixit.MixitProperties
 import org.springframework.context.annotation.Profile
 import org.springframework.http.MediaType
@@ -15,13 +14,13 @@ import java.io.IOException
 /**
  * Email
  */
-data class Email(val to: String, val subject: String, val content: String)
+data class EmailMessage(val to: String, val subject: String, val content: String)
 
 /**
  * An email sender is able to send an HTML message via email to a consignee
  */
 interface EmailSender {
-    fun send(email: Email)
+    fun send(email: EmailMessage)
 }
 
 /**
@@ -42,7 +41,7 @@ interface MessageEmailSender : EmailSender
 @Profile("!cloud")
 class GmailSender(private val javaMailSender: JavaMailSender) : AuthentEmailSender, MessageEmailSender {
 
-    override fun send(email: Email) {
+    override fun send(email: EmailMessage) {
         val message = javaMailSender.createMimeMessage()
         val helper = MimeMessageHelper(message, true, "UTF-8")
         helper.setTo(email.to)
@@ -50,7 +49,6 @@ class GmailSender(private val javaMailSender: JavaMailSender) : AuthentEmailSend
         message.setContent(email.content, MediaType.TEXT_HTML_VALUE)
         javaMailSender.send(message)
     }
-
 }
 
 /**
@@ -60,7 +58,7 @@ class GmailSender(private val javaMailSender: JavaMailSender) : AuthentEmailSend
 @Profile("cloud")
 class ElasticEmailSender(private val properties: MixitProperties) : AuthentEmailSender {
 
-    override fun send(email: Email) {
+    override fun send(email: EmailMessage) {
 
         val result = WebClient.create(properties.elasticmail.host!!)
                 .post()
@@ -96,7 +94,7 @@ data class ElasticEmailResponse(val success: Boolean, val error: String? = null,
 @Profile("cloud")
 class SendGridSender(private val properties: MixitProperties) : MessageEmailSender{
 
-    override fun send(email: Email) {
+    override fun send(email: EmailMessage) {
 
         val mail = Mail(
                 Email(properties.contact, "MiXiT"),
