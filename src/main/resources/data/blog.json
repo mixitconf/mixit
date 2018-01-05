@@ -1,14 +1,24 @@
 [
     {
-        "addedAt": [
-            2017,
-            11,
-            2,
-            21,
-            41,
-            14,
-            763000000
-        ],
+        "addedAt": "2017-11-07T11:00:01.257",
+        "authorId": "mpetitdant",
+        "content": {},
+        "headline": {
+            "ENGLISH": "Let\u2019s start again: some guest speakers, some other that fought well to go through the call for papers, \u201caliens\u201d keynotes, random talks\u2026 All that mixed in Lyon, France on april 19th and 20th. The whole limited to the lucky ones randomly selected to buy a ticket (lottery planned on early february).",
+            "FRENCH": "Nous repartons sur notre bonne vieille recette : un peu de speakers invit\u00e9s, d\u2019autres ayant su\u00e9 becs et ongles pour passer l\u2019appel \u00e0 orateur, des aliens en keynote, des talks random... Le tout mix\u00e9 les 19 et 20 avril chez CPE Lyon. Et r\u00e9serv\u00e9 \u00e0 celles et ceux qui auront tent\u00e9 leur chance au tirage au sort des places pr\u00e9vu d\u00e9but f\u00e9vrier."
+        },
+        "id": "5a133d3e2b6b0d000d4cda80",
+        "slug": {
+            "ENGLISH": "-mixit18-dates-cfp-sponsors-",
+            "FRENCH": "-mixit18-dates-cfp-sponsors-"
+        },
+        "title": {
+            "ENGLISH": "#mixit18 dates, CFP, sponsors...",
+            "FRENCH": "#mixit18 dates, CFP, sponsors..."
+        }
+    },
+    {
+        "addedAt": "2017-11-02T21:41:14.763",
         "authorId": "mpetitdant",
         "content": {},
         "headline": {
@@ -26,15 +36,7 @@
         }
     },
     {
-        "addedAt": [
-            2017,
-            5,
-            2,
-            15,
-            28,
-            30,
-            392000000
-        ],
+        "addedAt": "2017-05-02T15:28:30.392",
         "authorId": "sdeleuze",
         "content": {},
         "headline": {
@@ -52,15 +54,7 @@
         }
     },
     {
-        "addedAt": [
-            2017,
-            4,
-            12,
-            8,
-            11,
-            49,
-            234000000
-        ],
+        "addedAt": "2017-04-12T08:11:49.234",
         "authorId": "cedric",
         "content": {},
         "headline": {
@@ -78,15 +72,7 @@
         }
     },
     {
-        "addedAt": [
-            2017,
-            4,
-            10,
-            15,
-            51,
-            24,
-            694000000
-        ],
+        "addedAt": "2017-04-10T15:51:24.694",
         "authorId": "cedric",
         "content": {},
         "headline": {
@@ -104,15 +90,7 @@
         }
     },
     {
-        "addedAt": [
-            2017,
-            4,
-            10,
-            6,
-            37,
-            2,
-            899000000
-        ],
+        "addedAt": "2017-04-10T06:37:02.899",
         "authorId": "guillaumeehret",
         "content": {},
         "headline": {
@@ -130,13 +108,7 @@
         }
     },
     {
-        "addedAt": [
-            2017,
-            3,
-            18,
-            9,
-            0
-        ],
+        "addedAt": "2017-03-18T09:00:00",
         "authorId": "92989140",
         "content": {},
         "headline": {
@@ -154,13 +126,7 @@
         }
     },
     {
-        "addedAt": [
-            2017,
-            3,
-            17,
-            9,
-            0
-        ],
+        "addedAt": "2017-03-17T09:00:00",
         "authorId": "Charles Bouttaz",
         "content": {},
         "headline": {
@@ -178,13 +144,7 @@
         }
     },
     {
-        "addedAt": [
-            2017,
-            3,
-            16,
-            9,
-            0
-        ],
+        "addedAt": "2017-03-16T09:00:00",
         "authorId": "cedric",
         "content": {},
         "headline": {
@@ -202,13 +162,7 @@
         }
     },
     {
-        "addedAt": [
-            2017,
-            3,
-            15,
-            9,
-            0
-        ],
+        "addedAt": "2017-03-15T09:00:00",
         "authorId": "92989140",
         "content": {},
         "headline": {
@@ -226,13 +180,7 @@
         }
     },
     {
-        "addedAt": [
-            2017,
-            3,
-            13,
-            8,
-            0
-        ],
+        "addedAt": "2017-03-13T08:00:00",
         "authorId": "cedric",
         "content": {},
         "headline": {
@@ -250,13 +198,7 @@
         }
     },
     {
-        "addedAt": [
-            2017,
-            2,
-            23,
-            12,
-            0
-        ],
+        "addedAt": "2017-02-23T12:00:00",
         "authorId": "jessbordeau",
         "content": {},
         "headline": {
@@ -274,14 +216,7 @@
         }
     },
     {
-        "addedAt": [
-            2016,
-            4,
-            18,
-            7,
-            40,
-            56
-        ],
+        "addedAt": "2016-04-18T07:40:56",
         "authorId": "sdeleuze",
         "content": {},
         "headline": {
@@ -296,14 +231,7 @@
         }
     },
     {
-        "addedAt": [
-            2016,
-            4,
-            15,
-            17,
-            38,
-            52
-        ],
+        "addedAt": "2016-04-15T17:38:52",
         "authorId": "92989140",
         "content": {},
         "headline": {
@@ -321,14 +249,7 @@
         }
     },
     {
-        "addedAt": [
-            2016,
-            4,
-            15,
-            15,
-            41,
-            40
-        ],
+        "addedAt": "2016-04-15T15:41:40",
         "authorId": "cedric",
         "content": {},
         "headline": {
@@ -346,14 +267,7 @@
         }
     },
     {
-        "addedAt": [
-            2016,
-            4,
-            13,
-            22,
-            4,
-            58
-        ],
+        "addedAt": "2016-04-13T22:04:58",
         "authorId": "guillaumeehret",
         "content": {},
         "headline": {
@@ -371,14 +285,7 @@
         }
     },
     {
-        "addedAt": [
-            2016,
-            4,
-            13,
-            11,
-            40,
-            55
-        ],
+        "addedAt": "2016-04-13T11:40:55",
         "authorId": "guillaumeehret",
         "content": {},
         "headline": {
@@ -393,14 +300,7 @@
         }
     },
     {
-        "addedAt": [
-            2016,
-            4,
-            10,
-            22,
-            42,
-            46
-        ],
+        "addedAt": "2016-04-10T22:42:46",
         "authorId": "clacote",
         "content": {},
         "headline": {
@@ -418,14 +318,7 @@
         }
     },
     {
-        "addedAt": [
-            2016,
-            4,
-            5,
-            4,
-            30,
-            34
-        ],
+        "addedAt": "2016-04-05T04:30:34",
         "authorId": "guillaumeehret",
         "content": {},
         "headline": {
@@ -440,14 +333,7 @@
         }
     },
     {
-        "addedAt": [
-            2016,
-            3,
-            31,
-            16,
-            54,
-            39
-        ],
+        "addedAt": "2016-03-31T16:54:39",
         "authorId": "agnes",
         "content": {},
         "headline": {
@@ -465,14 +351,7 @@
         }
     },
     {
-        "addedAt": [
-            2016,
-            3,
-            23,
-            19,
-            4,
-            41
-        ],
+        "addedAt": "2016-03-23T19:04:41",
         "authorId": "guillaumeehret",
         "content": {},
         "headline": {
@@ -490,14 +369,7 @@
         }
     },
     {
-        "addedAt": [
-            2016,
-            3,
-            18,
-            7,
-            12,
-            55
-        ],
+        "addedAt": "2016-03-18T07:12:55",
         "authorId": "guillaumeehret",
         "content": {},
         "headline": {
@@ -515,14 +387,7 @@
         }
     },
     {
-        "addedAt": [
-            2016,
-            3,
-            2,
-            9,
-            52,
-            59
-        ],
+        "addedAt": "2016-03-02T09:52:59",
         "authorId": "guillaumeehret",
         "content": {},
         "headline": {
@@ -540,14 +405,7 @@
         }
     },
     {
-        "addedAt": [
-            2016,
-            2,
-            17,
-            19,
-            43,
-            11
-        ],
+        "addedAt": "2016-02-17T19:43:11",
         "authorId": "mpt",
         "content": {},
         "headline": {
@@ -562,14 +420,7 @@
         }
     },
     {
-        "addedAt": [
-            2016,
-            2,
-            8,
-            11,
-            17,
-            1
-        ],
+        "addedAt": "2016-02-08T11:17:01",
         "authorId": "guillaumeehret",
         "content": {},
         "headline": {
@@ -585,14 +436,7 @@
         }
     },
     {
-        "addedAt": [
-            2016,
-            2,
-            1,
-            10,
-            40,
-            39
-        ],
+        "addedAt": "2016-02-01T10:40:39",
         "authorId": "guillaumeehret",
         "content": {},
         "headline": {
@@ -610,14 +454,7 @@
         }
     },
     {
-        "addedAt": [
-            2016,
-            1,
-            25,
-            22,
-            32,
-            34
-        ],
+        "addedAt": "2016-01-25T22:32:34",
         "authorId": "agnes",
         "content": {},
         "headline": {
@@ -635,14 +472,7 @@
         }
     },
     {
-        "addedAt": [
-            2016,
-            1,
-            20,
-            22,
-            30,
-            41
-        ],
+        "addedAt": "2016-01-20T22:30:41",
         "authorId": "agnes",
         "content": {},
         "headline": {
@@ -660,14 +490,7 @@
         }
     },
     {
-        "addedAt": [
-            2015,
-            5,
-            22,
-            13,
-            55,
-            6
-        ],
+        "addedAt": "2015-05-22T13:55:06",
         "authorId": "mpt",
         "content": {},
         "headline": {
@@ -682,14 +505,7 @@
         }
     },
     {
-        "addedAt": [
-            2015,
-            4,
-            14,
-            13,
-            35,
-            15
-        ],
+        "addedAt": "2015-04-14T13:35:15",
         "authorId": "guillaumeehret",
         "content": {},
         "headline": {
@@ -707,14 +523,7 @@
         }
     },
     {
-        "addedAt": [
-            2015,
-            4,
-            13,
-            20,
-            35,
-            15
-        ],
+        "addedAt": "2015-04-13T20:35:15",
         "authorId": "guillaumeehret",
         "content": {},
         "headline": {
@@ -729,14 +538,7 @@
         }
     },
     {
-        "addedAt": [
-            2015,
-            4,
-            13,
-            20,
-            34,
-            26
-        ],
+        "addedAt": "2015-04-13T20:34:26",
         "authorId": "guillaumeehret",
         "content": {},
         "headline": {
@@ -751,14 +553,7 @@
         }
     },
     {
-        "addedAt": [
-            2015,
-            4,
-            13,
-            20,
-            32,
-            55
-        ],
+        "addedAt": "2015-04-13T20:32:55",
         "authorId": "guillaumeehret",
         "content": {},
         "headline": {
@@ -773,14 +568,7 @@
         }
     },
     {
-        "addedAt": [
-            2015,
-            3,
-            16,
-            7,
-            28,
-            43
-        ],
+        "addedAt": "2015-03-16T07:28:43",
         "authorId": "guillaumeehret",
         "content": {},
         "headline": {
@@ -795,14 +583,7 @@
         }
     },
     {
-        "addedAt": [
-            2015,
-            1,
-            15,
-            13,
-            21,
-            53
-        ],
+        "addedAt": "2015-01-15T13:21:53",
         "authorId": "clacote",
         "content": {},
         "headline": {
@@ -817,14 +598,7 @@
         }
     },
     {
-        "addedAt": [
-            2014,
-            12,
-            17,
-            22,
-            25,
-            31
-        ],
+        "addedAt": "2014-12-17T22:25:31",
         "authorId": "clacote",
         "content": {},
         "headline": {
@@ -839,14 +613,7 @@
         }
     },
     {
-        "addedAt": [
-            2014,
-            7,
-            21,
-            7,
-            3,
-            42
-        ],
+        "addedAt": "2014-07-21T07:03:42",
         "authorId": "clacote",
         "content": {},
         "headline": {
@@ -861,14 +628,7 @@
         }
     },
     {
-        "addedAt": [
-            2014,
-            7,
-            9,
-            11,
-            44,
-            22
-        ],
+        "addedAt": "2014-07-09T11:44:22",
         "authorId": "franck",
         "content": {},
         "headline": {
@@ -883,14 +643,7 @@
         }
     },
     {
-        "addedAt": [
-            2014,
-            4,
-            28,
-            9,
-            11,
-            15
-        ],
+        "addedAt": "2014-04-28T09:11:15",
         "authorId": "mpt",
         "content": {},
         "headline": {
@@ -908,14 +661,7 @@
         }
     },
     {
-        "addedAt": [
-            2014,
-            4,
-            14,
-            8,
-            47,
-            59
-        ],
+        "addedAt": "2014-04-14T08:47:59",
         "authorId": "cedric",
         "content": {},
         "headline": {
@@ -930,14 +676,7 @@
         }
     },
     {
-        "addedAt": [
-            2014,
-            4,
-            14,
-            6,
-            57,
-            2
-        ],
+        "addedAt": "2014-04-14T06:57:02",
         "authorId": "franck",
         "content": {},
         "headline": {
@@ -955,14 +694,7 @@
         }
     },
     {
-        "addedAt": [
-            2014,
-            4,
-            14,
-            6,
-            12,
-            58
-        ],
+        "addedAt": "2014-04-14T06:12:58",
         "authorId": "cedric",
         "content": {},
         "headline": {
@@ -977,14 +709,7 @@
         }
     },
     {
-        "addedAt": [
-            2014,
-            4,
-            11,
-            6,
-            48,
-            41
-        ],
+        "addedAt": "2014-04-11T06:48:41",
         "authorId": "cedric",
         "content": {},
         "headline": {
@@ -999,14 +724,7 @@
         }
     },
     {
-        "addedAt": [
-            2014,
-            4,
-            4,
-            8,
-            29,
-            22
-        ],
+        "addedAt": "2014-04-04T08:29:22",
         "authorId": "mpt",
         "content": {},
         "headline": {
@@ -1024,14 +742,7 @@
         }
     },
     {
-        "addedAt": [
-            2014,
-            4,
-            2,
-            21,
-            59,
-            46
-        ],
+        "addedAt": "2014-04-02T21:59:46",
         "authorId": "clacote",
         "content": {},
         "headline": {
@@ -1046,14 +757,7 @@
         }
     },
     {
-        "addedAt": [
-            2014,
-            3,
-            17,
-            21,
-            42,
-            40
-        ],
+        "addedAt": "2014-03-17T21:42:40",
         "authorId": "franck",
         "content": {},
         "headline": {
@@ -1068,14 +772,7 @@
         }
     },
     {
-        "addedAt": [
-            2014,
-            3,
-            9,
-            21,
-            1,
-            58
-        ],
+        "addedAt": "2014-03-09T21:01:58",
         "authorId": "franck",
         "content": {},
         "headline": {
@@ -1090,14 +787,7 @@
         }
     },
     {
-        "addedAt": [
-            2014,
-            2,
-            27,
-            13,
-            5,
-            47
-        ],
+        "addedAt": "2014-02-27T13:05:47",
         "authorId": "mpt",
         "content": {},
         "headline": {
@@ -1115,14 +805,7 @@
         }
     },
     {
-        "addedAt": [
-            2014,
-            2,
-            2,
-            16,
-            37,
-            49
-        ],
+        "addedAt": "2014-02-02T16:37:49",
         "authorId": "romain",
         "content": {},
         "headline": {
@@ -1140,14 +823,7 @@
         }
     },
     {
-        "addedAt": [
-            2014,
-            1,
-            11,
-            20,
-            27,
-            54
-        ],
+        "addedAt": "2014-01-11T20:27:54",
         "authorId": "clacote",
         "content": {},
         "headline": {
@@ -1162,14 +838,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            12,
-            13,
-            8,
-            30,
-            34
-        ],
+        "addedAt": "2013-12-13T08:30:34",
         "authorId": "franck",
         "content": {},
         "headline": {
@@ -1184,14 +853,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            12,
-            10,
-            7,
-            23,
-            6
-        ],
+        "addedAt": "2013-12-10T07:23:06",
         "authorId": "clacote",
         "content": {},
         "headline": {
@@ -1206,14 +868,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            12,
-            6,
-            7,
-            51,
-            5
-        ],
+        "addedAt": "2013-12-06T07:51:05",
         "authorId": "clacote",
         "content": {},
         "headline": {
@@ -1228,14 +883,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            9,
-            13,
-            6,
-            37,
-            32
-        ],
+        "addedAt": "2013-09-13T06:37:32",
         "authorId": "agnes",
         "content": {},
         "headline": {
@@ -1250,14 +898,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            7,
-            26,
-            11,
-            34,
-            14
-        ],
+        "addedAt": "2013-07-26T11:34:14",
         "authorId": "clacote",
         "content": {},
         "headline": {
@@ -1272,14 +913,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            5,
-            20,
-            19,
-            50,
-            53
-        ],
+        "addedAt": "2013-05-20T19:50:53",
         "authorId": "franck",
         "content": {},
         "headline": {
@@ -1294,14 +928,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            4,
-            24,
-            15,
-            35,
-            38
-        ],
+        "addedAt": "2013-04-24T15:35:38",
         "authorId": "clacote",
         "content": {},
         "headline": {
@@ -1316,14 +943,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            4,
-            22,
-            20,
-            32,
-            48
-        ],
+        "addedAt": "2013-04-22T20:32:48",
         "authorId": "agnes",
         "content": {},
         "headline": {
@@ -1338,14 +958,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            4,
-            22,
-            7,
-            35,
-            26
-        ],
+        "addedAt": "2013-04-22T07:35:26",
         "authorId": "clacote",
         "content": {},
         "headline": {
@@ -1363,14 +976,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            4,
-            19,
-            7,
-            56,
-            55
-        ],
+        "addedAt": "2013-04-19T07:56:55",
         "authorId": "romain",
         "content": {},
         "headline": {
@@ -1385,14 +991,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            4,
-            17,
-            22,
-            11,
-            29
-        ],
+        "addedAt": "2013-04-17T22:11:29",
         "authorId": "clacote",
         "content": {},
         "headline": {
@@ -1407,14 +1006,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            4,
-            17,
-            18,
-            21,
-            57
-        ],
+        "addedAt": "2013-04-17T18:21:57",
         "authorId": "agnes",
         "content": {},
         "headline": {
@@ -1429,14 +1021,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            4,
-            15,
-            7,
-            21,
-            14
-        ],
+        "addedAt": "2013-04-15T07:21:14",
         "authorId": "clacote",
         "content": {},
         "headline": {
@@ -1451,14 +1036,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            4,
-            13,
-            19,
-            26,
-            30
-        ],
+        "addedAt": "2013-04-13T19:26:30",
         "authorId": "romain",
         "content": {},
         "headline": {
@@ -1473,14 +1051,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            4,
-            13,
-            11,
-            38,
-            58
-        ],
+        "addedAt": "2013-04-13T11:38:58",
         "authorId": "romain",
         "content": {},
         "headline": {
@@ -1495,14 +1066,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            4,
-            12,
-            9,
-            9,
-            54
-        ],
+        "addedAt": "2013-04-12T09:09:54",
         "authorId": "cedric",
         "content": {},
         "headline": {
@@ -1517,14 +1081,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            4,
-            2,
-            8,
-            45,
-            31
-        ],
+        "addedAt": "2013-04-02T08:45:31",
         "authorId": "cedric",
         "content": {},
         "headline": {
@@ -1539,14 +1096,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            3,
-            23,
-            20,
-            4,
-            32
-        ],
+        "addedAt": "2013-03-23T20:04:32",
         "authorId": "clacote",
         "content": {},
         "headline": {
@@ -1561,14 +1111,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            3,
-            22,
-            0,
-            56,
-            39
-        ],
+        "addedAt": "2013-03-22T00:56:39",
         "authorId": "clacote",
         "content": {},
         "headline": {
@@ -1583,14 +1126,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            3,
-            21,
-            9,
-            43,
-            53
-        ],
+        "addedAt": "2013-03-21T09:43:53",
         "authorId": "clacote",
         "content": {},
         "headline": {
@@ -1605,14 +1141,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            3,
-            19,
-            17,
-            44,
-            15
-        ],
+        "addedAt": "2013-03-19T17:44:15",
         "authorId": "clacote",
         "content": {},
         "headline": {
@@ -1627,14 +1156,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            3,
-            15,
-            15,
-            6,
-            26
-        ],
+        "addedAt": "2013-03-15T15:06:26",
         "authorId": "clacote",
         "content": {},
         "headline": {
@@ -1649,14 +1171,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            3,
-            15,
-            13,
-            2,
-            38
-        ],
+        "addedAt": "2013-03-15T13:02:38",
         "authorId": "clacote",
         "content": {},
         "headline": {
@@ -1671,14 +1186,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            3,
-            14,
-            11,
-            0,
-            11
-        ],
+        "addedAt": "2013-03-14T11:00:11",
         "authorId": "clacote",
         "content": {},
         "headline": {
@@ -1693,14 +1201,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            3,
-            7,
-            14,
-            45,
-            31
-        ],
+        "addedAt": "2013-03-07T14:45:31",
         "authorId": "agnes",
         "content": {},
         "headline": {
@@ -1715,14 +1216,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            2,
-            27,
-            19,
-            16,
-            42
-        ],
+        "addedAt": "2013-02-27T19:16:42",
         "authorId": "105069688047906196113",
         "content": {},
         "headline": {
@@ -1737,14 +1231,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            2,
-            6,
-            10,
-            47,
-            43
-        ],
+        "addedAt": "2013-02-06T10:47:43",
         "authorId": "agnes",
         "content": {},
         "headline": {
@@ -1759,14 +1246,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            1,
-            25,
-            10,
-            10,
-            55
-        ],
+        "addedAt": "2013-01-25T10:10:55",
         "authorId": "cedric",
         "content": {},
         "headline": {
@@ -1781,14 +1261,7 @@
         }
     },
     {
-        "addedAt": [
-            2013,
-            1,
-            22,
-            23,
-            56,
-            27
-        ],
+        "addedAt": "2013-01-22T23:56:27",
         "authorId": "105069688047906196113",
         "content": {},
         "headline": {
@@ -1803,14 +1276,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            9,
-            26,
-            10,
-            43,
-            40
-        ],
+        "addedAt": "2012-09-26T10:43:40",
         "authorId": "franck",
         "content": {},
         "headline": {
@@ -1825,14 +1291,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            7,
-            7,
-            15,
-            10,
-            24
-        ],
+        "addedAt": "2012-07-07T15:10:24",
         "authorId": "romain",
         "content": {},
         "headline": {
@@ -1847,14 +1306,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            4,
-            25,
-            10,
-            34,
-            7
-        ],
+        "addedAt": "2012-04-25T10:34:07",
         "authorId": "agnes",
         "content": {},
         "headline": {
@@ -1869,14 +1321,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            4,
-            25,
-            10,
-            4,
-            59
-        ],
+        "addedAt": "2012-04-25T10:04:59",
         "authorId": "agnes",
         "content": {},
         "headline": {
@@ -1891,14 +1336,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            4,
-            24,
-            11,
-            38,
-            51
-        ],
+        "addedAt": "2012-04-24T11:38:51",
         "authorId": "clacote",
         "content": {},
         "headline": {
@@ -1913,14 +1351,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            4,
-            24,
-            11,
-            20,
-            43
-        ],
+        "addedAt": "2012-04-24T11:20:43",
         "authorId": "franck",
         "content": {},
         "headline": {
@@ -1935,13 +1366,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            4,
-            24,
-            9,
-            5
-        ],
+        "addedAt": "2012-04-24T09:05:00",
         "authorId": "agnes",
         "content": {},
         "headline": {
@@ -1956,13 +1381,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            4,
-            23,
-            12,
-            8
-        ],
+        "addedAt": "2012-04-23T12:08:00",
         "authorId": "agnes",
         "content": {},
         "headline": {
@@ -1977,14 +1396,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            4,
-            20,
-            13,
-            34,
-            54
-        ],
+        "addedAt": "2012-04-20T13:34:54",
         "authorId": "romain",
         "content": {},
         "headline": {
@@ -1999,14 +1411,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            4,
-            19,
-            11,
-            44,
-            23
-        ],
+        "addedAt": "2012-04-19T11:44:23",
         "authorId": "agnes",
         "content": {},
         "headline": {
@@ -2021,14 +1426,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            4,
-            18,
-            10,
-            42,
-            39
-        ],
+        "addedAt": "2012-04-18T10:42:39",
         "authorId": "romain",
         "content": {},
         "headline": {
@@ -2043,14 +1441,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            4,
-            18,
-            8,
-            54,
-            19
-        ],
+        "addedAt": "2012-04-18T08:54:19",
         "authorId": "agnes",
         "content": {},
         "headline": {
@@ -2065,14 +1456,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            4,
-            13,
-            16,
-            8,
-            50
-        ],
+        "addedAt": "2012-04-13T16:08:50",
         "authorId": "romain",
         "content": {},
         "headline": {
@@ -2087,14 +1471,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            4,
-            12,
-            14,
-            13,
-            3
-        ],
+        "addedAt": "2012-04-12T14:13:03",
         "authorId": "romain",
         "content": {},
         "headline": {
@@ -2109,14 +1486,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            4,
-            11,
-            13,
-            2,
-            27
-        ],
+        "addedAt": "2012-04-11T13:02:27",
         "authorId": "romain",
         "content": {},
         "headline": {
@@ -2131,14 +1501,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            4,
-            11,
-            9,
-            58,
-            59
-        ],
+        "addedAt": "2012-04-11T09:58:59",
         "authorId": "romain",
         "content": {},
         "headline": {
@@ -2153,14 +1516,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            4,
-            10,
-            8,
-            30,
-            28
-        ],
+        "addedAt": "2012-04-10T08:30:28",
         "authorId": "romain",
         "content": {},
         "headline": {
@@ -2175,14 +1531,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            4,
-            5,
-            12,
-            43,
-            44
-        ],
+        "addedAt": "2012-04-05T12:43:44",
         "authorId": "agnes",
         "content": {},
         "headline": {
@@ -2197,14 +1546,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            3,
-            29,
-            11,
-            51,
-            31
-        ],
+        "addedAt": "2012-03-29T11:51:31",
         "authorId": "cedric",
         "content": {},
         "headline": {
@@ -2219,14 +1561,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            3,
-            20,
-            12,
-            21,
-            31
-        ],
+        "addedAt": "2012-03-20T12:21:31",
         "authorId": "romain",
         "content": {},
         "headline": {
@@ -2241,14 +1576,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            3,
-            15,
-            10,
-            32,
-            43
-        ],
+        "addedAt": "2012-03-15T10:32:43",
         "authorId": "105069688047906196113",
         "content": {},
         "headline": {
@@ -2263,14 +1591,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            3,
-            7,
-            8,
-            48,
-            17
-        ],
+        "addedAt": "2012-03-07T08:48:17",
         "authorId": "clacote",
         "content": {},
         "headline": {
@@ -2285,14 +1606,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            3,
-            5,
-            10,
-            18,
-            1
-        ],
+        "addedAt": "2012-03-05T10:18:01",
         "authorId": "cedric",
         "content": {},
         "headline": {
@@ -2307,14 +1621,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            2,
-            15,
-            14,
-            1,
-            39
-        ],
+        "addedAt": "2012-02-15T14:01:39",
         "authorId": "cedric",
         "content": {},
         "headline": {
@@ -2329,14 +1636,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            2,
-            13,
-            6,
-            0,
-            11
-        ],
+        "addedAt": "2012-02-13T06:00:11",
         "authorId": "clacote",
         "content": {},
         "headline": {
@@ -2351,14 +1651,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            2,
-            8,
-            8,
-            37,
-            58
-        ],
+        "addedAt": "2012-02-08T08:37:58",
         "authorId": "clacote",
         "content": {},
         "headline": {
@@ -2373,14 +1666,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            2,
-            6,
-            9,
-            41,
-            32
-        ],
+        "addedAt": "2012-02-06T09:41:32",
         "authorId": "agnes",
         "content": {},
         "headline": {
@@ -2395,14 +1681,7 @@
         }
     },
     {
-        "addedAt": [
-            2012,
-            1,
-            31,
-            12,
-            43,
-            39
-        ],
+        "addedAt": "2012-01-31T12:43:39",
         "authorId": "clacote",
         "content": {},
         "headline": {
@@ -2417,13 +1696,7 @@
         }
     },
     {
-        "addedAt": [
-            2011,
-            11,
-            25,
-            0,
-            0
-        ],
+        "addedAt": "2011-11-25T00:00:00",
         "authorId": "agnes",
         "content": {},
         "headline": {

@@ -717,6 +717,11 @@
                 "level": "SILVER",
                 "sponsorId": "sourcingisr",
                 "subscriptionDate": "2017-12-18"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "sogeti",
+                "subscriptionDate": "2017-12-22"
             }
         ],
         "start": "2018-04-19",
