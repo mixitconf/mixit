@@ -2,19 +2,19 @@ package mixit.repository
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import mixit.model.Post
 import mixit.model.Language
+import mixit.model.Post
+import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.domain.Sort
+import org.springframework.data.domain.Sort.Direction.DESC
 import org.springframework.data.domain.Sort.Order
+import org.springframework.data.mongodb.core.*
+import org.springframework.data.mongodb.core.query.Criteria.where
 import org.springframework.data.mongodb.core.query.Query
+import org.springframework.data.mongodb.core.query.isEqualTo
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
-import org.slf4j.LoggerFactory
-import org.springframework.data.domain.Sort.Direction.*
-import org.springframework.data.mongodb.core.*
-import org.springframework.data.mongodb.core.query.Criteria.*
-import org.springframework.data.mongodb.core.query.isEqualTo
 
 
 @Repository
@@ -42,7 +42,7 @@ class PostRepository(private val template: ReactiveMongoTemplate,
     fun findAll(lang: Language? = null): Flux<Post> {
         val query = Query()
         query.with(Sort.by(Order(DESC, "addedAt")))
-        query.fields().exclude("content")
+        //query.fields().exclude("content")
         if (lang != null) {
             query.addCriteria(where("title.$lang").exists(true))
         }
