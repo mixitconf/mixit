@@ -55,7 +55,7 @@ class GmailSender(private val javaMailSender: JavaMailSender) : AuthentEmailSend
  * Elastic email is the sender used on our cloud instances for our authentication emails
  */
 @Component
-@Profile("cloud")
+@Profile("notusenow")
 class ElasticEmailSender(private val properties: MixitProperties) : AuthentEmailSender {
 
     override fun send(email: EmailMessage) {
@@ -92,7 +92,7 @@ data class ElasticEmailResponse(val success: Boolean, val error: String? = null,
  */
 @Component
 @Profile("cloud")
-class SendGridSender(private val properties: MixitProperties) : MessageEmailSender{
+class SendGridSender(private val properties: MixitProperties) : AuthentEmailSender, MessageEmailSender{
 
     override fun send(email: EmailMessage) {
 
