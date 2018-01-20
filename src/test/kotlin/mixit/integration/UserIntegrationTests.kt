@@ -67,7 +67,7 @@ class UserIntegrationTests(@LocalServerPort port: Int) {
                 .retrieve()
                 .bodyToFlux<User>()
                 .test()
-                .expectNextCount(6)
+                .expectNextCount(7)
                 .verifyComplete()
     }
 

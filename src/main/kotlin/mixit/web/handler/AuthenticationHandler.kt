@@ -4,11 +4,9 @@ import mixit.MixitProperties
 import mixit.model.Role
 import mixit.model.User
 import mixit.repository.UserRepository
-import mixit.util.Cryptographer
-import mixit.util.EmailService
-import mixit.util.EmailServiceUsage
-import mixit.util.locale
+import mixit.util.*
 import org.slf4j.LoggerFactory
+import org.springframework.http.ResponseCookie
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.BodyExtractors.toFormData
@@ -17,6 +15,7 @@ import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.*
 import reactor.core.publisher.Mono
 import java.net.URI
+import java.time.Duration
 import java.time.LocalDateTime
 import java.util.*
 
@@ -137,7 +136,13 @@ class AuthenticationHandler(private val userRepository: UserRepository,
                                 session.attributes["role"] = user.role
                                 session.attributes["email"] = email
                                 session.attributes["token"] = token
-                                seeOther(URI("${properties.baseUri}/")).build()
+
+                                seeOther(URI("${properties.baseUri}/"))
+                                        .cookie(ResponseCookie
+                                                .from("XSRF-TOKEN", "${email}:${token}".encodeToBase64()!!)
+                                                .maxAge(Duration.between(LocalDateTime.now(), user.tokenExpiration))
+                                                .build())
+                                        .build()
                             }
                         } else {
                             renderError("login.error.badtoken.text")
@@ -166,7 +171,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
                 user.links,
                 user.legacyId,
                 LocalDateTime.now().plusHours(12),
-                UUID.randomUUID().toString())
+                UUID.randomUUID().toString().substring(0,13))
 
         try {
             logger.info("A token was sent to $email")

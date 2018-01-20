@@ -4,10 +4,11 @@ import mixit.MixitProperties
 import mixit.model.Role
 import mixit.model.User
 import mixit.repository.UserRepository
-import org.springframework.context.ApplicationContext
+import mixit.util.decodeFromBase64
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpHeaders.CONTENT_LANGUAGE
 import org.springframework.http.HttpStatus
+import org.springframework.http.server.reactive.ServerHttpRequest
 import org.springframework.stereotype.Component
 import org.springframework.web.server.ServerWebExchange
 import org.springframework.web.server.WebFilter
@@ -20,24 +21,37 @@ import java.util.stream.Stream
 
 
 @Component
-class MixitWebFilter(val applicationContext: ApplicationContext, val properties: MixitProperties, val userRepository: UserRepository) : WebFilter {
+class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRepository) : WebFilter {
+
+    private fun readUserInfo(request: ServerHttpRequest) = (request.cookies).get("XSRF-TOKEN")?.first()?.value?.decodeFromBase64()?.split(":")
 
     override fun filter(exchange: ServerWebExchange, chain: WebFilterChain) = exchange.session.flatMap { session ->
         // We need to know if the user is connected or not
-        val email = session.attributes["email"]
-        val token = session.attributes["token"]
+        val userInfo = readUserInfo(exchange.request)
 
-        if (email != null && token != null) {
-            // If session contains an email we load the user
-            userRepository.findByEmail(email.toString()).flatMap {
-                // We have to see if the token is the good one anf if it is yet valid
-                if (it.token.equals(token.toString()) && it.tokenExpiration.isAfter(LocalDateTime.now())) {
-                    filter(exchange, chain, it)
-                } else {
-                    filter(exchange, chain, null)
+        if(userInfo!=null && userInfo.size == 2){
+            val email = userInfo.get(0)
+            val token = userInfo.get(1)
+
+            if (email != null && token != null) {
+                // If session contains an email we load the user
+                userRepository.findByEmail(email.toString()).flatMap {
+                    // We have to see if the token is the good one anf if it is yet valid
+                    if (it.token.equals(token.toString()) && it.tokenExpiration.isAfter(LocalDateTime.now())) {
+                        // If user is found we need to restore infos in session
+                        session.attributes["role"] = it.role
+                        session.attributes["email"] = email
+                        session.attributes["token"] = token
+                        filter(exchange, chain, it)
+                    } else {
+                        filter(exchange, chain, null)
+                    }
                 }
+            } else {
+                filter(exchange, chain, null)
             }
-        } else {
+        }
+        else{
             filter(exchange, chain, null)
         }
     }
