@@ -48,7 +48,7 @@ class TalkHandler(private val repository: TalkRepository,
 
                 val sponsors = eventSponsors(year, req)
 
-                ok().render(if(year == 2018) "cfptalks" else "talks", mapOf(
+                ok().render("talks", mapOf(
                         Pair("talks", talks),
                         Pair("year", year),
                         Pair("title", when (topic) { null -> "talks.title.html|$year"
