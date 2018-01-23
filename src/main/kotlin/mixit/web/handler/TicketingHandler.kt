@@ -22,7 +22,7 @@ class TicketingHandler(private val repository: TicketRepository,
                        private val cryptographer: Cryptographer,
                        private val emailService: EmailService) {
 
-    fun ticketing(req: ServerRequest) = ServerResponse.ok().render("ticketing-soon", mapOf(Pair("title", "ticketing.title")))
+    fun ticketing(req: ServerRequest) = ServerResponse.ok().render("ticketing", mapOf(Pair("title", "ticketing.title")))
 
     fun submit(req: ServerRequest) = req.body(BodyExtractors.toFormData()).flatMap {
         val formData  = it.toSingleValueMap()
