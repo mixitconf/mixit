@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component
 import java.time.LocalDateTime
 
 /**
- * Class used to generate session from a cfp.io export. Sessions are exported from http://mix-it.cfp.io/api/proposals
+ * Class used to generate session from a cfp.io export (http://mix-it.cfp.io/api/proposals). Sessions are exported from http://mix-it.cfp.io/api/proposals
  * This class will be deleted when everything will be imported
  */
 @Component
