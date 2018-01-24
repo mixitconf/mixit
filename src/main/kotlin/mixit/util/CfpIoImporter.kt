@@ -64,7 +64,7 @@ private val topics = mapOf(
         Pair("Hack/Activism", "hacktivism"),
         Pair("Design", "design"),
         Pair("Tech", "tech"),
-        Pair("Other", "other"),
+        Pair("Other", "learn"),
         Pair("Maker", "makers"),
         Pair("Product", "makers"),
         Pair("Education", "learn")
