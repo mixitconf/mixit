@@ -26,16 +26,17 @@ class CfpIoImporter(private val userReposittory: UserRepository,
             logger.info("Cfp io import starts")
 
             val eventsResource = ClassPathResource("data/cfp/sessions.json")
-            val talks: List<CfpioTalk> = objectMapper.readValue(eventsResource.inputStream)
-
-            talks.filter { it.state == "ACCEPTED" }
-                    .forEach {
-                        // We need to save the users
+            val randomResource = ClassPathResource("data/cfp/random.json")
+            val cfpIoTalks: List<CfpioTalk> = objectMapper.readValue(eventsResource.inputStream)
+            val talks = cfpIoTalks.filter { it.state == "ACCEPTED" }
+                    .map{
                         val logins = mutableListOf(saveSpeaker(it.speaker).login)
                         it.cospeakers?.map { saveSpeaker(it).login }?.forEach { logins.add(it) }
-
-                        talkRepository.save(it.toTalk(logins)).block()
+                        it.toTalk(logins)
                     }
+
+            talks.filter { it.format != TalkFormat.RANDOM }.forEach { talkRepository.save(it).block()}
+
             logger.info("Cfp io data are initialized")
         }
     }
@@ -65,6 +66,7 @@ private val topics = mapOf(
         Pair("Design", "design"),
         Pair("Tech", "tech"),
         Pair("Other", "learn"),
+        Pair("other", "learn"),
         Pair("Maker", "makers"),
         Pair("Product", "makers"),
         Pair("Education", "learn")
