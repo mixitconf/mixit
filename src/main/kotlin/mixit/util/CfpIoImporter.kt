@@ -26,19 +26,39 @@ class CfpIoImporter(private val userReposittory: UserRepository,
             logger.info("Cfp io import starts")
 
             val eventsResource = ClassPathResource("data/cfp/sessions.json")
-            val randomResource = ClassPathResource("data/cfp/random.json")
             val cfpIoTalks: List<CfpioTalk> = objectMapper.readValue(eventsResource.inputStream)
-            val talks = cfpIoTalks.filter { it.state == "ACCEPTED" }
+
+            cfpIoTalks
+                    .filter { it.state == "ACCEPTED" }
                     .map{
                         val logins = mutableListOf(saveSpeaker(it.speaker).login)
                         it.cospeakers?.map { saveSpeaker(it).login }?.forEach { logins.add(it) }
                         it.toTalk(logins)
                     }
-
-            talks.filter { it.format != TalkFormat.RANDOM }.forEach { talkRepository.save(it).block()}
+                    .forEach { talkRepository.save(it).block()}
 
             logger.info("Cfp io data are initialized")
         }
+    }
+
+    private fun saveRandomsForLaterUpdate(cfpIoTalks: List<CfpioTalk>) {
+        cfpIoTalks.filter { it.state == "ACCEPTED" }
+                .map{
+                    val logins = mutableListOf(saveSpeaker(it.speaker).login)
+                    it.cospeakers?.map { saveSpeaker(it).login }?.forEach { logins.add(it) }
+                    it.toTalk(logins)
+                }
+                .forEach { talkRepository.save(it).block()}
+    }
+
+    private fun saveTalks(cfpIoTalks: List<CfpioTalk>) {
+        cfpIoTalks.filter { it.state == "ACCEPTED" }
+                .map{
+                    val logins = mutableListOf(saveSpeaker(it.speaker).login)
+                    it.cospeakers?.map { saveSpeaker(it).login }?.forEach { logins.add(it) }
+                    it.toTalk(logins)
+                }
+                .forEach { talkRepository.save(it).block()}
     }
 
     private fun saveSpeaker(speaker: CfpioSpeaker): User {
@@ -78,6 +98,7 @@ private data class CfpioTalk(
         val name: String,
         val language: String?,
         val description: String,
+        val plus: String?,
         val eventId: String,
         val format: Int,
         val trackLabel: String,
@@ -90,11 +111,11 @@ private data class CfpioTalk(
             formats.getOrDefault(format, TalkFormat.TALK),
             "2018",
             name,
-            "",
+            description,
             speakers,
             languages.getOrDefault(language, Language.FRENCH),
             LocalDateTime.now(),
-            description,
+            if (plus == null) "" else plus,
             topics.getOrDefault(trackLabel, "Other"),
             start = LocalDateTime.of(2017, 4, 19, 8, 0, 0),
             end = LocalDateTime.of(2017, 4, 19, 8, 50, 0),
@@ -123,7 +144,7 @@ private data class CfpioSpeaker(
             user.lastname,
             email,
             company,
-            if (bio == null) mapOf(Pair(Language.FRENCH, "UNKNOWN"), Pair(Language.ENGLISH, "UNKNOWN"))
+            if (bio == null) user.description
             else mapOf(Pair(Language.FRENCH, bio), Pair(Language.ENGLISH, bio)),
             user.emailHash,
             if (imageProfilURL == null) user.photoUrl else imageProfilURL,
