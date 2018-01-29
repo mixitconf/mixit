@@ -117,8 +117,8 @@ private data class CfpioTalk(
             LocalDateTime.now(),
             if (plus == null) "" else plus,
             topics.getOrDefault(trackLabel, "Other"),
-            start = LocalDateTime.of(2017, 4, 19, 8, 0, 0),
-            end = LocalDateTime.of(2017, 4, 19, 8, 50, 0),
+            start = LocalDateTime.of(2018, 4, 19, 8, 0, 0),
+            end = LocalDateTime.of(2018, 4, 19, 8, 50, 0),
             room = Room.UNKNOWN
     )
 }
@@ -144,22 +144,22 @@ private data class CfpioSpeaker(
             user.lastname,
             email,
             company,
-            if (bio == null) user.description
-            else mapOf(Pair(Language.FRENCH, bio), Pair(Language.ENGLISH, bio)),
-            if (imageProfilURL == null) user.emailHash else null,
-            if (imageProfilURL == null) user.photoUrl else imageProfilURL,
+            if (bio.isNullOrEmpty()) user.description
+            else mapOf(Pair(Language.FRENCH, bio!!), Pair(Language.ENGLISH, bio)),
+            if (imageProfilURL.isNullOrEmpty()) user.emailHash else null,
+            if (imageProfilURL.isNullOrEmpty()) user.photoUrl else imageProfilURL,
             user.role,
             if (findSpeakerLinks().isEmpty()) user.links else findSpeakerLinks()
     )
 
     fun toUser() = User(
             email,
-            if (firstname == null) "UNKNOWN" else firstname,
-            if (lastname == null) "UNKNOWN" else lastname,
+            if (firstname.isNullOrEmpty()) "UNKNOWN" else firstname!!,
+            if (lastname.isNullOrEmpty()) "UNKNOWN" else lastname!!,
             email,
             company,
-            if (bio == null) mapOf(Pair(Language.FRENCH, "UNKNOWN"), Pair(Language.ENGLISH, "UNKNOWN")) else mapOf(Pair(Language.FRENCH, bio), Pair(Language.ENGLISH, bio)),
-            if (imageProfilURL == null) email.encodeToMd5() else null,
+            if (bio.isNullOrEmpty()) mapOf(Pair(Language.FRENCH, "UNKNOWN"), Pair(Language.ENGLISH, "UNKNOWN")) else mapOf(Pair(Language.FRENCH, bio!!), Pair(Language.ENGLISH, bio)),
+            if (imageProfilURL.isNullOrEmpty()) email.encodeToMd5() else null,
             imageProfilURL,
             Role.USER,
             findSpeakerLinks()
@@ -167,17 +167,17 @@ private data class CfpioSpeaker(
 
     private fun findSpeakerLinks(): List<Link> {
         val list = mutableListOf<Link>()
-        if (github != null) {
-            list.add(Link("Github", github))
+        if (!github.isNullOrEmpty()) {
+            list.add(Link("Github", github!!))
         }
-        if (twitter != null) {
-            list.add(Link("Twitter", twitter))
+        if (!twitter.isNullOrEmpty()) {
+            list.add(Link("Twitter", twitter!!))
         }
-        if (googleplus != null) {
-            list.add(Link("Google+", googleplus))
+        if (!googleplus.isNullOrEmpty()) {
+            list.add(Link("Google+", googleplus!!))
         }
-        if (social != null) {
-            list.add(Link("Autre", social))
+        if (!social.isNullOrEmpty()) {
+            list.add(Link("Autre", social!!))
         }
         return list
     }
