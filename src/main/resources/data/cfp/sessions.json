@@ -535,15 +535,15 @@
         "email": "eric.daspet@survol.fr",
         "lastname": "Daspet",
         "firstname": "Éric",
-        "bio": null,
-        "company": null,
-        "twitter": null,
+        "bio": "Toujours la tête pleine de projets, je discute facilement photo, société, démocratie et libertés, ainsi que web ouvert et architectures techniques. Venez échanger, me dire qui vous êtes, ce qui vous fait vibrer, et comment vous pouvez ensemble contribuer positivement à la société qui nous entoure. J'ai été CTO de La Ruche Qui Dit Oui!, co-fondateur et CTO de TEA - the ebook alternative, co-fondateur des conférences Paris-Web et co-auteur du livre PHP 5 avancé (désormais PHP 7 avancé). Aujourd'hui j'accompagne des équipes pour les aider à tirer le meilleur d'elles-mêmes.",
+        "company": "E3D5",
+        "twitter": "https://twitter.com/edasfr",
         "googleplus": null,
         "github": null,
         "language": null,
         "gender": "MALE",
-        "social": null,
-        "imageProfilURL": null
+        "social": "https://e3d5.fr/",
+        "imageProfilURL": "http://eric.daspet.name/portrait.jpg"
       }
     ]
   },
@@ -607,15 +607,15 @@
         "email": "emile@silvis.co.za",
         "lastname": "Emile",
         "firstname": "Silvis",
-        "bio": null,
+        "bio": "Emile Silvis is a South African agile practitioner living and working in the Netherlands. He started off as a business analyst, but since started a business, learned to program and lead a team of software engineers. He likes systems thinking, startups, sci-fi, pizza and philosophy.",
         "company": null,
-        "twitter": null,
+        "twitter": "https://twitter.com/emilesilvis",
         "googleplus": null,
-        "github": null,
-        "language": null,
+        "github": "https://github.com/emilesilvis",
+        "language": "en",
         "gender": "MALE",
-        "social": null,
-        "imageProfilURL": null
+        "social": "www.emilesilvis.com",
+        "imageProfilURL": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/2/000/2c1/0f6/33f0b58.jpg"
       }
     ]
   },
@@ -650,15 +650,15 @@
         "email": "antoine.cellier@zenika.com",
         "lastname": "CELLIER",
         "firstname": "Antoine",
-        "bio": null,
-        "company": null,
-        "twitter": null,
+        "bio": "Consultant et formateur chez Zenika Nantes. J'interviens sur des missions de réalisation autour des technos front et back tel que AngularJS, ReactJS et Spring. Passionné par l’écosystème technique dans lequel je travaille je participe régulièrement aux meetups Nantais et donne des talks lors de différents événements.",
+        "company": "Zenika",
+        "twitter": "https://twitter.com/AntoineCellier3",
         "googleplus": null,
         "github": null,
-        "language": null,
+        "language": "fr",
         "gender": "MALE",
         "social": null,
-        "imageProfilURL": null
+        "imageProfilURL": "https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/22008390_10212587583198780_7964204568540731664_n.jpg?oh=ef3161619ec40f93dbe7245f9b4c22ef&oe=5A893B41"
       }
     ]
   },
@@ -832,15 +832,15 @@
         "email": "pmariac@gmail.com",
         "lastname": "Mariac",
         "firstname": "Pierre",
-        "bio": null,
-        "company": null,
-        "twitter": null,
+        "bio": "Codeur depuis que j'ai eu un CPC à noël, maintenant je fais des datavisualizations chez data2viz avec mes copains.",
+        "company": "Data2Viz",
+        "twitter": "https://twitter.com/imtam5",
         "googleplus": null,
-        "github": null,
-        "language": null,
+        "github": "https://github.com/pmariac",
+        "language": "fr",
         "gender": "MALE",
         "social": null,
-        "imageProfilURL": null
+        "imageProfilURL": "https://pbs.twimg.com/profile_images/861919767388618753/JYP-R9sO_400x400.jpg"
       }
     ]
   },
@@ -986,15 +986,15 @@
         "email": "m.brechet@gmail.com",
         "lastname": "BRECHET",
         "firstname": "Matthieu",
-        "bio": null,
-        "company": null,
-        "twitter": null,
+        "bio": "Architecte logiciel expérimenté et polyvalent, je me suis spécialisé dans la conception d’application Web. J'affectionne particulièrement le développement frontEnd autour des langages comme javascript, typescript et des API HTML5. Passionné par les différentes problématiques du web (performance, RWD, mobile, référencement, accessibilité…), j'aime croire que tout est réalisable dans un navigateur. Toujours très curieux d’apprendre de nouvelles choses, je participe régulièrement aux conférences nationales en tant que spectateur et parfois en tant que speaker",
+        "company": "SII",
+        "twitter": "https://twitter.com/mbrechet",
         "googleplus": null,
-        "github": null,
-        "language": null,
+        "github": "https://github.com/mbrechet",
+        "language": "fr",
         "gender": "MALE",
         "social": null,
-        "imageProfilURL": null
+        "imageProfilURL": "https://pbs.twimg.com/profile_images/554555557320085506/RESH2yqu.jpeg"
       }
     ]
   },
@@ -1275,15 +1275,15 @@
         "email": "tclavier@azae.net",
         "lastname": "Clavier",
         "firstname": "Thomas",
-        "bio": null,
-        "company": null,
-        "twitter": null,
+        "bio": "Je suis coach agile chez Azaé, enseignant à l’université de Lille 1 et co-fondateur de Deliverous, mes sujets de prédilection sont l’agilité, devops, docker, le lean startup et l’artisanat logiciel. Depuis plus de 10 ans, j’essaye de transformer le travail en un jeu, faire progresser les geeks et challenger les managers, poser des questions pour faire progresser les équipes.",
+        "company": "Azaé",
+        "twitter": "https://twitter.com/thomasclavier",
         "googleplus": null,
-        "github": null,
-        "language": null,
+        "github": "https://github.com/tclavier",
+        "language": "fr",
         "gender": "MALE",
-        "social": null,
-        "imageProfilURL": null
+        "social": "https://www.linkedin.com/in/thomasclavier/",
+        "imageProfilURL": "http://ajiro.fr/authors/clavier_thomas/"
       }
     ]
   },
@@ -1319,15 +1319,15 @@
         "email": "veronique.bonnet@emulsioncreative.com",
         "lastname": "Bonnet",
         "firstname": "Véronique",
-        "bio": null,
-        "company": null,
-        "twitter": null,
+        "bio": "Depuis 2001, je développe des outils et une pédagogie de l’action pour appréhender les dynamiques des processus créatifs et collaboratifs. Je formalise des méthodes pour donner à comprendre la complexité du mouvement permanent. J’innove dans le domaine de l’ingénierie pédagogique 2.0. J’accompagne les entreprises à structurer leur agilité et à innover. J’agis avec mes valeurs de respect et de cohérence. Expérience : Show-Business - Industrie nautique - Conseil en communication, stratégie marketing, design produit, management des organisations apprenantes.",
+        "company": "Emulsion Créative",
+        "twitter": "https://twitter.com/vemulsion",
         "googleplus": null,
         "github": null,
-        "language": null,
-        "gender": "MALE",
-        "social": null,
-        "imageProfilURL": null
+        "language": "fr",
+        "gender": "FEMALE",
+        "social": "http://www.emulsioncreative.com/ ",
+        "imageProfilURL": "https://media-exp2.licdn.com/mpr/mpr/shrinknp_400_400/AAMAAQDGAAwAAQAAAAAAAA63AAAAJGUyMTk1YjkyLTVmZmUtNDk1YS05M2M2LTY1YTRjNzdjZmM1Yg.jpg"
       }
     ]
   },
@@ -1391,15 +1391,15 @@
         "email": "clairezuliani@gmail.com",
         "lastname": "Zuliani",
         "firstname": "Claire",
-        "bio": null,
+        "bio": "Développeuse qui aime le design et les sciences humaines, ou l'inverse.",
         "company": null,
-        "twitter": null,
+        "twitter": "https://twitter.com/ZooletteDesBois",
         "googleplus": null,
-        "github": null,
+        "github": "https://github.com/clairezed",
         "language": null,
-        "gender": "MALE",
-        "social": null,
-        "imageProfilURL": null
+        "gender": "FEMALE",
+        "social": "http://marges.clairezuliani.com/",
+        "imageProfilURL": "https://d33wubrfki0l68.cloudfront.net/dddd2605dce105601dcba9587f14633175792c58/82039/assets/images/avatar.png"
       }
     ]
   },
@@ -1464,14 +1464,14 @@
         "lastname": "Jeanroy",
         "firstname": "Mickael",
         "bio": "Développeur le jour, open-source addict la nuit.",
-        "company": null,
-        "twitter": null,
+        "company": "Zenika",
+        "twitter": "https://twitter.com/mickaeljeanroy",
         "googleplus": null,
         "github": null,
-        "language": null,
-        "gender": "MALE",
+        "language": "fr",
+        "gender": "FEMALE",
         "social": null,
-        "imageProfilURL": null
+        "imageProfilURL": "https://avatars0.githubusercontent.com/u/1067361?v=3&s=400"
       }
     ]
   },
