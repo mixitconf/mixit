@@ -51,7 +51,7 @@
       "language": "English",
       "gender": "FEMALE",
       "social": "http://www.communilogue.co",
-      "imageProfilURL": "https://pbs.twimg.com/profile_images/786664224088989696/B-idKHql.jpg"
+      "imageProfilURL": "https://pixelpioneers.co/uploads/pioneers/_avatarLarge/sharonsteed.jpg"
     },
     "cospeakers": []
   },
@@ -275,7 +275,7 @@
       "language": "fr",
       "gender": "MALE",
       "social": "",
-      "imageProfilURL": ""
+      "imageProfilURL": "https://media-exp2.licdn.com/media/AAEAAQAAAAAAAAe9AAAAJDcyYTAwNTgxLTU0ZDEtNGZlNS1hOWU3LTJhMGMwYWY2Y2ZkMg.jpg"
     },
     "cospeakers": [
       {
@@ -389,7 +389,7 @@
       "language": "fr",
       "gender": "MALE",
       "social": "",
-      "imageProfilURL": null
+      "imageProfilURL": "https://pbs.twimg.com/profile_images/898473019626139648/sWN9sQnP_400x400.jpg"
     },
     "cospeakers": []
   },
@@ -599,7 +599,7 @@
       "language": "en",
       "gender": "MALE",
       "social": "www.dcme.nu",
-      "imageProfilURL": "https://www.google.nl/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwieoLKPr-HXAhXCalAKHUgmBYAQjRwIBw&url=https%3A%2F%2Fnl.linkedin.com%2Fin%2Frolandflemm&psig=AOvVaw2FAbMA8e1Ik6yHMxF9jSlY&ust=1511961829420035"
+      "imageProfilURL": "https://media-exp2.licdn.com/media/AAIA_wDGAAAAAQAAAAAAAAuzAAAAJDlhMWU5OTRkLWQ0M2EtNGIwMS1iZTA1LWYzODE5NmNlNTU0MQ.jpg"
     },
     "cospeakers": [
       {
@@ -769,7 +769,7 @@
       "language": "en",
       "gender": "MALE",
       "social": "www.auger-loizeau.com",
-      "imageProfilURL": "https://www.dropbox.com/s/pe2jny52mv9fjxo/augerco.jpg?dl=0"
+      "imageProfilURL": "https://photos-5.dropbox.com/t/2/AACQH1raJRTOf-jTwG8i-idGBhy3YHyz3zbh_cykyHrEBw/12/26779623/jpeg/32x32/3/1517234400/0/2/augerco.jpg/EJmAlhQY1TogBygH/bpufZ6pKR0y3UJib5hlwzWPFBMOIenc1VFCwgzgkizA?dl=0&size=2048x1536&size_mode=3"
     },
     "cospeakers": []
   },
@@ -922,7 +922,7 @@
       "language": "en",
       "gender": "MALE",
       "social": "",
-      "imageProfilURL": "https://drive.google.com/file/d/0B4CZuzlLI837V2UyakVwaWZXVWM/view?usp=sharing"
+      "imageProfilURL": "https://pbs.twimg.com/profile_images/735408636986556416/1hkL4fkk_400x400.jpg"
     },
     "cospeakers": []
   },
@@ -1267,7 +1267,7 @@
       "language": "fr",
       "gender": "FEMALE",
       "social": "https://www.linkedin.com/in/juliequille/",
-      "imageProfilURL": "http://ajiro.fr/authors/quille_julie/"
+      "imageProfilURL": "http://ajiro.fr/assets/images/people/quille_julie.jpg"
     },
     "cospeakers": [
       {
@@ -1283,7 +1283,7 @@
         "language": "fr",
         "gender": "MALE",
         "social": "https://www.linkedin.com/in/thomasclavier/",
-        "imageProfilURL": "http://ajiro.fr/authors/clavier_thomas/"
+        "imageProfilURL": "http://ajiro.fr/assets/images/people/clavier_thomas.jpg"
       }
     ]
   },
@@ -1305,13 +1305,13 @@
       "firstname": "Claude",
       "bio": "Claude Bonnet - Dirigeant Toccata Ingénierie\nEMSE 58\nSerial-entrepreneur - Expert en ingénierie industrielle et financière ; Management de l'innovation ; Management général ; Conduite de projet ; Formateur (EMSE, SupOptique, ESCP, INGREF, Université Jean Monet...).\nAuteur \"Réussir ses projets\" (Ed. La chronique Sociale)\nExpérience : Industrie pétrochimie, BTP, thermique et aéraulique, équipement sidérurgique, industrie des loisirs",
       "company": "Toccata Ingénierie",
-      "twitter": "",
+      "twitter": null,
       "googleplus": null,
       "github": null,
       "language": "fr",
       "gender": "MALE",
       "social": "",
-      "imageProfilURL": ""
+      "imageProfilURL": null
     },
     "cospeakers": [
       {
@@ -1555,7 +1555,7 @@
       "language": "fr",
       "gender": "FEMALE",
       "social": "https://marieguillaumet.com/blog",
-      "imageProfilURL": "https://marieguillaumet.com/misc/marie-guillaumet_square.jpg"
+      "imageProfilURL": "https://pbs.twimg.com/profile_images/893697090538360832/bzPdkHN9_400x400.jpg"
     },
     "cospeakers": []
   },
@@ -1720,7 +1720,7 @@
       "language": "fr",
       "gender": "FEMALE",
       "social": "",
-      "imageProfilURL": ""
+      "imageProfilURL": "https://media-exp2.licdn.com/media/AAMAAQDGAAwAAQAAAAAAAA-cAAAAJDAzZWUzNTg3LTc1OGItNDgxMS05Nzg2LWZiMDJhNDZlZjRmNQ.jpg"
     },
     "cospeakers": []
   },
@@ -1797,31 +1797,15 @@
       "firstname": "Tamara",
       "bio": "Manager Practice \"Delivery Agile\"",
       "company": "Keyrus",
-      "twitter": "https://twitter.com/TamKdk",
+      "twitter": "https://twitter.com/TamaraKdk",
       "googleplus": null,
       "github": null,
       "language": "fr",
       "gender": "FEMALE",
       "social": "https://www.linkedin.com/in/tamara-kondakjian-55943592/",
-      "imageProfilURL": null
+      "imageProfilURL": "http://static8.viadeo-static.com/dwyKZF8ToHX31PRSaaACschMoN8=/140x140/member/0022em5rqymdscic?ts=946681200000"
     },
-    "cospeakers": [
-      {
-        "id": "3652",
-        "email": "perretmathieu1@gmail.com",
-        "lastname": null,
-        "firstname": null,
-        "bio": null,
-        "company": null,
-        "twitter": null,
-        "googleplus": null,
-        "github": null,
-        "language": null,
-        "gender": "MALE",
-        "social": null,
-        "imageProfilURL": null
-      }
-    ]
+    "cospeakers": []
   },
   {
     "id": "3208",
@@ -1901,7 +1885,7 @@
       "language": "en",
       "gender": "MALE",
       "social": "http://www.curious-creature.com",
-      "imageProfilURL": "https://drive.google.com/open?id=0BzaZIbtFMTjNcHVhQU5LdmpWNU0"
+      "imageProfilURL": "https://pbs.twimg.com/profile_images/459175652105527298/6qGNL0QI_400x400.jpeg"
     },
     "cospeakers": [
       {
@@ -1917,7 +1901,7 @@
         "language": "en",
         "gender": "MALE",
         "social": "medium.com/@chethaase",
-        "imageProfilURL": "https://photos.app.goo.gl/qvW3gLHMUQRWXrm03"
+        "imageProfilURL": "https://lh3.googleusercontent.com/r4OJIg_iAE5GiZPqLqXML9eh0La5YMx09eZpIz2KM4PFGrQtwDmHtaplVlgu5DvraVBFJ22iQ-9-0OE=s329-rw-no"
       }
     ]
   },
@@ -2043,7 +2027,7 @@
       "language": "en",
       "gender": "FEMALE",
       "social": "",
-      "imageProfilURL": null
+      "imageProfilURL": "https://pbs.twimg.com/profile_images/53142956/Saw-whet_Owl_10_400x400.jpg"
     },
     "cospeakers": []
   },
@@ -2125,7 +2109,7 @@
       "language": "fr",
       "gender": "MALE",
       "social": "",
-      "imageProfilURL": "https://univ-lyon3.academia.edu/SamuelLepine"
+      "imageProfilURL": "https://pbs.twimg.com/profile_images/892872185517285376/76qIVKRk_400x400.jpg"
     },
     "cospeakers": []
   },
@@ -2152,7 +2136,7 @@
       "language": "fr",
       "gender": "FEMALE",
       "social": "https://laquadrature.net/fr",
-      "imageProfilURL": null
+      "imageProfilURL": "https://crypto.quebec/wp-content/uploads/2017/09/lqdnsweatshirt-825x510.jpg"
     },
     "cospeakers": [{
       "id": "1",
@@ -2163,7 +2147,8 @@
       "company": "La Quadrature du Net",
       "gender": "MALE",
       "social": "https://laquadrature.net/fr",
-      "language": "fr"
+      "language": "fr",
+      "imageProfilURL": "https://crypto.quebec/wp-content/uploads/2017/09/lqdnsweatshirt-825x510.jpg"
     }]
   },
   {
@@ -2189,7 +2174,7 @@
       "language": "Français",
       "gender": "MALE",
       "social": "",
-      "imageProfilURL": null
+      "imageProfilURL": "http://u864.lyon.inserm.fr/Members/YvesRossetti?action=AttachFile&do=get&target=YRredB.jpg"
     },
     "cospeakers": []
   },
@@ -2251,7 +2236,7 @@
   {
     "id": "3637",
     "state": "ACCEPTED",
-    "name": "Random Joshua",
+    "name": "Joshua",
     "language": "English",
     "description": "TBD",
     "eventId": "mix-it",
@@ -2262,7 +2247,7 @@
       "id": "804",
       "email": "mathieu.petitdant@gmail.com",
       "lastname": "Petitdant",
-      "firstname": "Mathieu",
+      "firstname": "Joshua",
       "bio": "todo",
       "company": "freelance",
       "twitter": null,
