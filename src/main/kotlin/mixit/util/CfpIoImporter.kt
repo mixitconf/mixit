@@ -155,7 +155,7 @@ private data class CfpioSpeaker(
     fun toUser() = User(
             email,
             if (firstname.isNullOrEmpty()) "UNKNOWN" else firstname!!,
-            if (lastname.isNullOrEmpty()) "UNKNOWN" else lastname!!,
+            if (lastname.isNullOrEmpty()) "" else lastname!!,
             email,
             company,
             if (bio.isNullOrEmpty()) mapOf(Pair(Language.FRENCH, "UNKNOWN"), Pair(Language.ENGLISH, "UNKNOWN")) else mapOf(Pair(Language.FRENCH, bio!!), Pair(Language.ENGLISH, bio)),
