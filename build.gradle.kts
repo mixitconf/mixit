@@ -51,6 +51,7 @@ dependencies {
     compile("com.atlassian.commonmark:commonmark:0.9.0")
     compile("com.atlassian.commonmark:commonmark-ext-autolink:0.9.0")
     compile("com.sendgrid:sendgrid-java:4.1.2")
+    compile("com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:20171016.1")
 
     testCompile("org.springframework.boot:spring-boot-starter-test") {
         exclude(module = "junit")
