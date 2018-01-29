@@ -2205,33 +2205,6 @@
     "cospeakers": []
   },
   {
-    "id": "3451",
-    "state": "ACCEPTED",
-    "name": "Keynote Ariel Kyrou",
-    "language": "Français",
-    "description": "todo",
-    "eventId": "mix-it",
-    "format": 50,
-    "trackLabel": "Alien",
-    "difficulty": 1,
-    "speaker": {
-      "id": "804",
-      "email": "mathieu.petitdant@gmail.com",
-      "lastname": "Petitdant",
-      "firstname": "Mathieu",
-      "bio": "todo",
-      "company": "freelance",
-      "twitter": "mpetitdant",
-      "googleplus": null,
-      "github": "mpetitdant",
-      "language": "Français",
-      "gender": "MALE",
-      "social": "",
-      "imageProfilURL": null
-    },
-    "cospeakers": []
-  },
-  {
     "id": "3452",
     "state": "ACCEPTED",
     "name": "Keynote Yves Rosseti",
