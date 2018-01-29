@@ -146,7 +146,7 @@ private data class CfpioSpeaker(
             company,
             if (bio == null) user.description
             else mapOf(Pair(Language.FRENCH, bio), Pair(Language.ENGLISH, bio)),
-            user.emailHash,
+            if (imageProfilURL == null) user.emailHash else null,
             if (imageProfilURL == null) user.photoUrl else imageProfilURL,
             user.role,
             if (findSpeakerLinks().isEmpty()) user.links else findSpeakerLinks()
@@ -159,7 +159,7 @@ private data class CfpioSpeaker(
             email,
             company,
             if (bio == null) mapOf(Pair(Language.FRENCH, "UNKNOWN"), Pair(Language.ENGLISH, "UNKNOWN")) else mapOf(Pair(Language.FRENCH, bio), Pair(Language.ENGLISH, bio)),
-            null,
+            if (imageProfilURL == null) email.encodeToMd5() else null,
             imageProfilURL,
             Role.USER,
             findSpeakerLinks()

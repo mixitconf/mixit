@@ -2189,20 +2189,30 @@
     "difficulty": 1,
     "speaker": {
       "id": "1144",
-      "email": "agnes.crepet@gmail.com",
-      "lastname": "crepet",
-      "firstname": "agnes",
-      "bio": "professional newbie",
-      "company": null,
+      "email": "adc@laquadrature.net",
+      "lastname": "de Cornulier",
+      "firstname": "Agnès",
+      "bio": "Coordinatrice de l'analyse juridique et politique à La Quadrature du Net, Agnès travaille notamment sur les questions de chiffrement et ses enjeux en termes de protection de la vie privée et de confidentialité des communications.",
+      "company": "La Quadrature du Net",
       "twitter": null,
       "googleplus": null,
       "github": null,
       "language": "fr",
-      "gender": "MALE",
-      "social": "",
+      "gender": "FEMALE",
+      "social": "https://laquadrature.net/fr",
       "imageProfilURL": null
     },
-    "cospeakers": []
+    "cospeakers": [{
+      "id": "1",
+      "email": "okhin@laquadrature.net",
+      "lastname": "",
+      "firstname": "Okhin",
+      "bio": "Okhin est responsable des outils à La Quadrature du Net et à ce titre il participe à la réflexion sur les enjeux politiques et techniques liés au chiffrement.",
+      "company": "La Quadrature du Net",
+      "gender": "MALE",
+      "social": "https://laquadrature.net/fr",
+      "language": "fr"
+    }]
   },
   {
     "id": "3452",
