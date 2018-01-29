@@ -140,8 +140,8 @@ private data class CfpioSpeaker(
 ) {
     fun toUser(user: User) = User(
             user.login,
-            user.firstname,
-            user.lastname,
+            if (firstname.isNullOrEmpty()) user.firstname else firstname!!,
+            if (lastname.isNullOrEmpty()) user.lastname else lastname!!,
             email,
             company,
             if (bio.isNullOrEmpty()) user.description
