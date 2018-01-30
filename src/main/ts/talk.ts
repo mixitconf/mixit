@@ -8,6 +8,7 @@ class TalkCtrl{
     const talkField = <HTMLInputElement> document.getElementById('talkId');
     const email = <HTMLInputElement> document.getElementById('email');
     const img = event.srcElement;
+    event.stopPropagation();
 
     fetch(`/api/favorites/${email.value}/talks/${talkField.value}/toggle`, {method: 'post'})
       .then(response => response.json())
