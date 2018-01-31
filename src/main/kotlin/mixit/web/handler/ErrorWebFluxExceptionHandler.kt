@@ -7,7 +7,7 @@ import mixit.web.generateModel
 import org.springframework.boot.autoconfigure.web.ErrorProperties
 import org.springframework.boot.autoconfigure.web.ResourceProperties
 import org.springframework.boot.autoconfigure.web.reactive.error.DefaultErrorWebExceptionHandler
-import org.springframework.boot.autoconfigure.web.reactive.error.ErrorAttributes
+import org.springframework.boot.web.reactive.error.ErrorAttributes
 import org.springframework.context.ApplicationContext
 import org.springframework.context.MessageSource
 import org.springframework.web.reactive.function.server.RenderingResponse

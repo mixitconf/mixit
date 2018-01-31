@@ -3,14 +3,14 @@ import com.moowork.gradle.node.yarn.YarnInstallTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    val kotlinVersion = "1.1.61"
+    val kotlinVersion = "1.2.21"
     val nodePluginVersion = "1.1.1"
     id("org.jetbrains.kotlin.jvm") version kotlinVersion
     id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion
     id("com.moowork.node") version nodePluginVersion
     id("com.moowork.gulp") version nodePluginVersion
-    id("org.springframework.boot") version "2.0.0.M7"
-    id("io.spring.dependency-management") version "1.0.3.RELEASE"
+    id("org.springframework.boot") version "2.0.0.RC1"
+    id("io.spring.dependency-management") version "1.0.4.RELEASE"
     id("org.junit.platform.gradle.plugin") version "1.0.2"
 }
 
@@ -34,7 +34,7 @@ node {
 }
 
 dependencies {
-    compile("org.jetbrains.kotlin:kotlin-stdlib-jre8")
+    compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     compile("org.jetbrains.kotlin:kotlin-reflect")
     compile("com.fasterxml.jackson.module:jackson-module-kotlin")
 

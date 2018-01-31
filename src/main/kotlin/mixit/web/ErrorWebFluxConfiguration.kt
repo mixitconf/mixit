@@ -5,8 +5,8 @@ import mixit.util.MarkdownConverter
 import mixit.web.handler.ErrorWebFluxExceptionHandler
 import org.springframework.boot.autoconfigure.web.ResourceProperties
 import org.springframework.boot.autoconfigure.web.ServerProperties
-import org.springframework.boot.autoconfigure.web.reactive.error.ErrorAttributes
-import org.springframework.boot.autoconfigure.web.reactive.error.ErrorWebExceptionHandler
+import org.springframework.boot.web.reactive.error.ErrorAttributes
+import org.springframework.boot.web.reactive.error.ErrorWebExceptionHandler
 import org.springframework.context.ApplicationContext
 import org.springframework.context.MessageSource
 import org.springframework.context.annotation.Bean
