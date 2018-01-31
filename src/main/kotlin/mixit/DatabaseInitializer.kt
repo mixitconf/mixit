@@ -10,8 +10,7 @@ class DatabaseInitializer(private val userRepository: UserRepository,
                           private val eventRepository: EventRepository,
                           private val talkRepository: TalkRepository,
                           private val ticketRepository: TicketRepository,
-                          private val postRepository: PostRepository,
-                          private val cfpIoImporter: CfpIoImporter) {
+                          private val postRepository: PostRepository) {
 
     @PostConstruct
     fun init() {
@@ -20,6 +19,5 @@ class DatabaseInitializer(private val userRepository: UserRepository,
         talkRepository.initData()
         postRepository.initData()
         ticketRepository.initData()
-        cfpIoImporter.initData()
     }
 }
