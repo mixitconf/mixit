@@ -81,7 +81,7 @@
     },
     {
         "addedAt": "2018-01-30T12:47:04.626",
-        "description": "",
+        "description": null,
         "end": "2018-04-19T08:50:00",
         "event": "2018",
         "format": "KEYNOTE",
@@ -89,13 +89,13 @@
         "language": "FRENCH",
         "photoUrls": [],
         "room": "UNKNOWN",
-        "slug": "keynote-yves-rosseti",
+        "slug": "percevoir-et-communiquer-realite-et-fictions-personnelles",
         "speakerIds": [
             "yves.rossetti@inserm.fr"
         ],
         "start": "2018-04-19T08:00:00",
         "summary": "TODO",
-        "title": "Keynote Yves Rosseti",
+        "title": "Percevoir et communiquer: r\u00e9alit\u00e9 et fictions personnelles",
         "topic": "aliens",
         "video": null
     },
@@ -971,7 +971,7 @@
     },
     {
         "addedAt": "2018-01-30T12:47:04.13",
-        "description": "Nous verrons aussi les principales failles de l\u2019OWASP et comment les \u00e9viter. Nous vous montrerons avec quelques d\u00e9mos les techniques indispensables pour identifier le maximum de vuln\u00e9rabilit\u00e9s afin de livrer des applications s\u00e9curis\u00e9es \u00e0 moindre co\u00fbt :\n- Analyse de d\u00e9pendances et du code source\n- Analyse des images docker\n- Tests d'intrusion automatis\u00e9s",
+        "description": "Nous verrons aussi les principales failles de l\u2019OWASP et comment les \u00e9viter. Nous vous montrerons avec quelques d\u00e9mos les techniques indispensables pour identifier le maximum de vuln\u00e9rabilit\u00e9s afin de livrer des applications s\u00e9curis\u00e9es \u00e0 moindre co\u00fbt :\r\n- Analyse de d\u00e9pendances et du code source\r\n- Analyse des images docker\r\n- Tests d'intrusion automatis\u00e9s",
         "end": "2018-04-19T08:50:00",
         "event": "2018",
         "format": "TALK",
@@ -985,9 +985,9 @@
             "mickaeljeanroy"
         ],
         "start": "2018-04-19T08:00:00",
-        "summary": "L\u2019ann\u00e9e 2017 \u00e9tait sans doute l'ann\u00e9e des fuites de donn\u00e9es et de la cybers\u00e9curit\u00e9. Rien de tel qu\u2019un bad buzz cr\u00e9\u00e9 par un \u00ab data breach \u00bb pour nuire \u00e0 l\u2019image de votre entreprise et d\u00e9truire votre r\u00e9putation !\n\nLors de ce talk, nous allons d\u00e9couvrir ensemble comment int\u00e9grer la s\u00e9curit\u00e9 dans votre plateforme d'int\u00e9gration continue.",
+        "summary": "L\u2019ann\u00e9e 2017 \u00e9tait sans doute l'ann\u00e9e des fuites de donn\u00e9es et de la cybers\u00e9curit\u00e9. Rien de tel qu\u2019un bad buzz cr\u00e9\u00e9 par un \u00ab data breach \u00bb pour nuire \u00e0 l\u2019image de votre entreprise et d\u00e9truire votre r\u00e9putation !\r\n\r\nLors de ce talk, nous allons d\u00e9couvrir ensemble comment int\u00e9grer la s\u00e9curit\u00e9 dans votre plateforme d'int\u00e9gration continue.",
         "title": "Int\u00e9grez la s\u00e9cu dans votre quotidien avant qu\u2019il ne soit trop tard!",
-        "topic": "hacktivism",
+        "topic": "tech",
         "video": null
     },
     {
@@ -1293,7 +1293,7 @@
     },
     {
         "addedAt": "2018-01-30T12:47:04.542",
-        "description": "",
+        "description": null,
         "end": "2018-04-19T08:50:00",
         "event": "2018",
         "format": "KEYNOTE",
@@ -1306,14 +1306,14 @@
             "isabll.huynh@gmail.com"
         ],
         "start": "2018-04-19T08:00:00",
-        "summary": "Cette conf\u00e9rence c'est l'histoire d'Isabelle Huynh, de son changement d'ing\u00e9nieur d\u00e9veloppement pour un grand groupe \u00e0 exploratrice de l'Ing\u00e9nierie Positive. Mais c'est aussi l'histoire de ses rencontres \u00e0 travers le monde. Des entrepreneurs, des ing\u00e9nieurs et chercheurs qui chaque jour cherchent \u00e0 am\u00e9liorer la vie des personnes. Quelles sont les clefs qui d\u00e9clenchent de tels parcours ? \n\nIsabelle l'assure, on a tous quelque chose en nous de positif. Elle vous invite \u00e0 le d\u00e9couvrir.",
+        "summary": "Cette conf\u00e9rence c'est l'histoire d'Isabelle Huynh, de son changement d'ing\u00e9nieure d\u00e9veloppement pour un grand groupe \u00e0 exploratrice de l'Ing\u00e9nierie Positive. Mais c'est aussi l'histoire de ses rencontres \u00e0 travers le monde. Des entrepreneurs, des ing\u00e9nieurs et chercheurs qui chaque jour cherchent \u00e0 am\u00e9liorer la vie des personnes. Quelles sont les clefs qui d\u00e9clenchent de tels parcours ? \r\n\r\nIsabelle l'assure, on a tous quelque chose en nous de positif. Elle vous invite \u00e0 le d\u00e9couvrir.",
         "title": "Comment r\u00e9veiller l'ing\u00e9nieur positif pr\u00e9sent en chacun de nous ?",
         "topic": "aliens",
         "video": null
     },
     {
         "addedAt": "2018-01-30T12:47:04.558",
-        "description": "Spring Boot 2.0 offre de nombreuses am\u00e9liorations et nouvelles fonctionnalit\u00e9s: nouveaux cas d'utilisation, nouveaux serveurs support\u00e9s (avec Netty), mais aussi nouvelles variantes d'applications Web: Spring WebFlux permet d'utiliser des annotations comme pour Spring MVC, mais aussi une nouvelle approche fonctionnelle avec \"WebFlux.fn\".\n\nAvec sa version 2.0, Spring Boot donne aux applications WebFlux les m\u00eames facilit\u00e9s:\n\n* auto-configuration des applications web\n* configuration de vos apps avec cl\u00e9s de configuration et callbacks\n* Actuators et Developer Tools\n* Support de Spring Data et Spring Security",
+        "description": "Spring Boot 2.0 offre de nombreuses am\u00e9liorations et nouvelles fonctionnalit\u00e9s: nouveaux cas d'utilisation, nouveaux serveurs support\u00e9s (avec Netty), mais aussi nouvelles variantes d'applications Web: Spring WebFlux permet d'utiliser des annotations comme pour Spring MVC, mais aussi une nouvelle approche fonctionnelle avec \"WebFlux.fn\".\r\n\r\nAvec sa version 2.0, Spring Boot donne aux applications WebFlux les m\u00eames facilit\u00e9s:\r\n\r\n* auto-configuration des applications web\r\n* configuration de vos apps avec cl\u00e9s de configuration et callbacks\r\n* Actuators et Developer Tools\r\n* Support de Spring Data et Spring Security",
         "end": "2018-04-19T08:50:00",
         "event": "2018",
         "format": "TALK",
@@ -1323,11 +1323,11 @@
         "room": "UNKNOWN",
         "slug": "applications-web-avec-spring-boot-2-0",
         "speakerIds": [
-            "snicoll@pivotal.io",
+            "snicoll",
             "brian.clozel"
         ],
         "start": "2018-04-19T08:00:00",
-        "summary": "Avec Spring Boot 2.0, de nouveaux choix s'offrent \u00e0 vous. Vous pouvez maintenant \u00e9crire des applications r\u00e9actives avec Spring WebFlux et continuer de profiter des fonctionnalit\u00e9s de Spring Boot.\n\nPendant cette session de live coding, St\u00e9phane et Brian vont \u00e9crire une application WebFlux et montrer comment utiliser Actuator, Developer Tools et plus encore.",
+        "summary": "Avec Spring Boot 2.0, de nouveaux choix s'offrent \u00e0 vous. Vous pouvez maintenant \u00e9crire des applications r\u00e9actives avec Spring WebFlux et continuer de profiter des fonctionnalit\u00e9s de Spring Boot.\r\n\r\nPendant cette session de live coding, St\u00e9phane et Brian vont \u00e9crire une application WebFlux et montrer comment utiliser Actuator, Developer Tools et plus encore.",
         "title": "Applications Web avec Spring Boot 2.0",
         "topic": "tech",
         "video": null
