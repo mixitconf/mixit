@@ -33,10 +33,6 @@ class UserRepository(private val template: ReactiveMongoTemplate,
         }
     }
 
-    fun fixMail(){
-        val users = findAll().filter{it.email!=null && it.email.indexOf("@") > 0}.map {  }
-    }
-
     fun count() = template.count<User>()
 
     fun findByYear(year: Int) =
