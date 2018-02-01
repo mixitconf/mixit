@@ -4,6 +4,8 @@ import mixit.model.Ticket
 import org.slf4j.LoggerFactory
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.findAll
+import org.springframework.data.mongodb.core.query.Query
+import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
 
 
@@ -13,7 +15,7 @@ class TicketRepository(private val template: ReactiveMongoTemplate) {
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
-        removeAll()
+        deleteAll().block()
     }
 
     fun save(ticket: Ticket) =
@@ -21,5 +23,5 @@ class TicketRepository(private val template: ReactiveMongoTemplate) {
 
     fun findAll() = template.findAll<Ticket>()
 
-    fun removeAll() = findAll().flatMap { template.remove(it) }
+    fun deleteAll() = template.remove<Ticket>(Query())
 }
