@@ -10,6 +10,7 @@ import org.springframework.context.MessageSource
 import org.springframework.core.io.ResourceLoader
 import org.springframework.stereotype.Component
 import java.io.InputStreamReader
+import java.time.LocalDate
 import java.util.*
 import javax.mail.MessagingException
 
@@ -32,11 +33,13 @@ enum class EmailServiceUsage {
 class EmailService(private val properties: MixitProperties,
                    private val messageSource: MessageSource,
                    private val cryptographer: Cryptographer,
+                   private val primaryAuthentEmailSender: PrimaryAuthentEmailSender,
                    private val authentEmailSender: AuthentEmailSender,
                    private val messageEmailSender: MessageEmailSender,
                    private val templateService: TemplateService) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
+    private val mailCounter = mutableMapOf(Pair(LocalDate.now(), 0))
 
     fun send(templateName: String, user: User, locale: Locale, usage: EmailServiceUsage) {
 
@@ -50,7 +53,7 @@ class EmailService(private val properties: MixitProperties,
             val content = templateService.load(templateName, context)
 
             if (usage == EmailServiceUsage.AUTHENTICATION) {
-                authentEmailSender.send(EmailMessage(email, subject, content))
+                getEmailSender().send(EmailMessage(email, subject, content))
             } else {
                 messageEmailSender.send(EmailMessage(email, subject, content))
             }
@@ -61,4 +64,21 @@ class EmailService(private val properties: MixitProperties,
         }
     }
 
+    fun getEmailSender(): EmailSender{
+        val date = LocalDate.now()
+        val count = mailCounter.get(date)
+
+        if(count == null){
+            mailCounter.clear()
+            mailCounter.put(date, 1)
+            return primaryAuthentEmailSender
+        }
+        mailCounter.remove(date)
+        mailCounter.put(date, count + 1)
+
+        if(count<400){
+            return primaryAuthentEmailSender
+        }
+        return authentEmailSender
+    }
 }

@@ -26,6 +26,11 @@ interface EmailSender {
 /**
  * We can have an email sender to manage our authentication phase ...
  */
+interface PrimaryAuthentEmailSender : EmailSender
+
+/**
+ * We can have an email sender to manage our authentication phase ...
+ */
 interface AuthentEmailSender : EmailSender
 
 /**
@@ -38,8 +43,7 @@ interface MessageEmailSender : EmailSender
  * or for our different information messages
  */
 @Component
-@Profile("!cloud")
-class GmailSender(private val javaMailSender: JavaMailSender) : AuthentEmailSender, MessageEmailSender {
+class GmailSender(private val javaMailSender: JavaMailSender) : PrimaryAuthentEmailSender {
 
     override fun send(email: EmailMessage) {
         val message = javaMailSender.createMimeMessage()
@@ -91,7 +95,6 @@ data class ElasticEmailResponse(val success: Boolean, val error: String? = null,
  * Send grid is the sender used on our cloud instances to send information messages
  */
 @Component
-@Profile("cloud")
 class SendGridSender(private val properties: MixitProperties) : AuthentEmailSender, MessageEmailSender{
 
     override fun send(email: EmailMessage) {
