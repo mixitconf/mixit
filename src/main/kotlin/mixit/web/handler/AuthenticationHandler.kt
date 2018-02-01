@@ -170,7 +170,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
                 user.role,
                 user.links,
                 user.legacyId,
-                LocalDateTime.now().plusHours(12),
+                LocalDateTime.now().plusHours(48),
                 UUID.randomUUID().toString().substring(0,13))
 
         try {
