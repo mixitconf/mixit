@@ -1,10 +1,12 @@
 import * as $ from 'jquery';
-window['jQuery'] = $;
 import 'foundation-sites';
+
+window['jQuery'] = $;
 
 class MixitApp{
     bootstrap(){
-        this._initServiceWorker();
+        //SW will be enabled later
+        //this._initServiceWorker();
     }
 
     _initServiceWorker() {
