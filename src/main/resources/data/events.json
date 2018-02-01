@@ -722,6 +722,11 @@
                 "level": "GOLD",
                 "sponsorId": "sogeti",
                 "subscriptionDate": "2017-12-22"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "akuiteo",
+                "subscriptionDate": "2018-02-01"
             }
         ],
         "start": "2018-04-19",

@@ -61,7 +61,7 @@
     },
     {
         "addedAt": "2018-01-30T12:47:02.908",
-        "description": "C'est ce que nous allons vous montrer \u00e0 travers ce live coding. Nous d\u00e9velopperons pas \u00e0 pas une application \u00e0 base de Lambda, de NoSQL (DynamoDB) et d'API Gateway pour enfin la d\u00e9ployer dans le cloud AWS.  \n\nSi vous vous demandez comment coder une application robuste, test\u00e9e, scalable en vous concentrant sur les fonctionnalit\u00e9s et non l'infrastructure, cette conf\u00e9rence est faite pour vous :)",
+        "description": "C'est ce que nous allons vous montrer \u00e0 travers ce live coding. Nous d\u00e9velopperons pas \u00e0 pas une application \u00e0 base de Lambda, de NoSQL (DynamoDB) et d'API Gateway pour enfin la d\u00e9ployer dans le cloud AWS.  \r\n\r\nSi vous vous demandez comment coder une application robuste, test\u00e9e, scalable en vous concentrant sur les fonctionnalit\u00e9s et non l'infrastructure, cette conf\u00e9rence est faite pour vous :)",
         "end": "2018-04-19T08:50:00",
         "event": "2018",
         "format": "TALK",
@@ -71,10 +71,11 @@
         "room": "UNKNOWN",
         "slug": "serverless-is-the-new-back",
         "speakerIds": [
-            "gegron"
+            "gegron",
+            "jpinsolle@xebia.fr"
         ],
         "start": "2018-04-19T08:00:00",
-        "summary": "Que se cache-t-il derri\u00e8re les buzz words \"serverless\" et \"services manag\u00e9s\" ?\nEst-il r\u00e9ellement possible de construire une application sans provisionner de serveur ?\n\n",
+        "summary": "Que se cache-t-il derri\u00e8re les buzz words \"serverless\" et \"services manag\u00e9s\" ?\r\nEst-il r\u00e9ellement possible de construire une application sans provisionner de serveur ?\r\n\r\n",
         "title": "Serverless is the new back",
         "topic": "tech",
         "video": null
@@ -1374,7 +1375,7 @@
     },
     {
         "addedAt": "2018-01-30T12:47:04.585",
-        "description": "",
+        "description": null,
         "end": "2018-04-19T08:50:00",
         "event": "2018",
         "format": "TALK",
@@ -1382,14 +1383,15 @@
         "language": "FRENCH",
         "photoUrls": [],
         "room": "UNKNOWN",
-        "slug": "coaching-a-tous-les-etages",
+        "slug": "mentoring-a-tous-les-etages",
         "speakerIds": [
-            "nicolas.savois@gmail.com"
+            "nicolas.savois@gmail.com",
+            "ambalaurelie@gmail.com"
         ],
         "start": "2018-04-19T08:00:00",
-        "summary": "Cette pr\u00e9sentation traitera des questions essentielles : de l\u2019int\u00e9gration d\u2019un nouvel arrivant dans une entreprise, \u00e0 l\u2019encouragement de la progression individuelle, en passant par le bien-\u00eatre au travail de tous. La solution miracle (ou une partie du miracle) ? Le pair coaching maison ! Nous vous expliquerons tout de ce syst\u00e8me que nous avons mis en place l\u2019an dernier et continuons \u00e0 am\u00e9liorer depuis. Un coach (coach\u00e9) et une coach\u00e9e viennent vous pr\u00e9senter la m\u00e9thode (\u201cdu bonheur\u201d).",
-        "title": "Coaching \u00e0 tous les \u00e9tages",
-        "topic": "team",
+        "summary": "Cette pr\u00e9sentation traitera des questions essentielles : de l\u2019int\u00e9gration d\u2019un nouvel arrivant dans une entreprise, \u00e0 l\u2019encouragement de la progression individuelle, en passant par le bien-\u00eatre au travail de tous. La solution miracle (ou une partie du miracle) ? Le pair mentoring maison ! Nous vous expliquerons tout de ce syst\u00e8me que nous avons mis en place l\u2019an dernier et continuons \u00e0 am\u00e9liorer depuis. Un mentor (mentor\u00e9) et une mentor\u00e9e viennent vous pr\u00e9senter la m\u00e9thode (\u201cdu bonheur\u201d).",
+        "title": "Mentoring \u00e0 tous les \u00e9tages",
+        "topic": "makers",
         "video": null
     },
     {
