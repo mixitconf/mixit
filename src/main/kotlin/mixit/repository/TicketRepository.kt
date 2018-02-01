@@ -15,7 +15,7 @@ class TicketRepository(private val template: ReactiveMongoTemplate) {
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
-        deleteAll().block()
+
     }
 
     fun save(ticket: Ticket) =
