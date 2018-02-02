@@ -76,7 +76,7 @@ fun User.toDto(language: Language, markdownConverter: MarkdownConverter) =
                 logoType(photoUrl),
                 logoWebpUrl(photoUrl))
 
-private fun logoWebpUrl(url: String?) =
+fun logoWebpUrl(url: String?) =
         when {
             url == null -> null
             url.endsWith("png") -> url.replace("png", "webp")
@@ -84,7 +84,7 @@ private fun logoWebpUrl(url: String?) =
             else -> null
         }
 
-private fun logoType(url: String?) =
+fun logoType(url: String?) =
         when {
             url == null -> null
             url.endsWith("svg") -> "image/svg+xml"

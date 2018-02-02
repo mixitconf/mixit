@@ -17,7 +17,7 @@
                     </ul>
                 </li>
             </ul>
-            <p>{{#i18n}}talks.medias.see{{/i18n}} <a href="{{localePrefix}}/{{year}}/medias{{#topic}}/{{topic}}{{/topic}}">{{#i18n}}talks.medias{{/i18n}}</a></p>
+            {{^current}}<p>{{#i18n}}talks.medias.see{{/i18n}} <a href="{{localePrefix}}/{{year}}/medias{{#topic}}/{{topic}}{{/topic}}">{{#i18n}}talks.medias{{/i18n}}</a></p>{{/current}}
         </div>
     </div>
 </div>
@@ -102,12 +102,12 @@
                 <div class="align-center align-middle row">
                     {{#sponsors-gold}}
                         <div class="columns text-center large-2 medium-2 small-3">
-                            {{> home-sponsor }}
+                            {{> sponsor-detail }}
                         </div>
                     {{/sponsors-gold}}
                     {{#sponsors-others}}
                         <div class="columns text-center large-1 medium-1 small-2">
-                            {{> home-sponsor }}
+                            {{> sponsor-detail }}
                         </div>
                     {{/sponsors-others}}
                 </div>

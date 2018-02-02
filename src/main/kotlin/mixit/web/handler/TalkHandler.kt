@@ -51,6 +51,7 @@ class TalkHandler(private val repository: TalkRepository,
                 ok().render("talks", mapOf(
                         Pair("talks", talks),
                         Pair("year", year),
+                        Pair("current", year == 2018),
                         Pair("title", when (topic) { null -> "talks.title.html|$year"
                             else -> "talks.title.html.$topic|$year"
                         }),
@@ -148,7 +149,7 @@ class TalkHandler(private val repository: TalkRepository,
         }
     }
 
-    private fun eventSponsors(year: Int, req: ServerRequest) = eventRepository
+    fun eventSponsors(year: Int, req: ServerRequest) = eventRepository
             .findByYear(year)
             .flatMap { event ->
                 userRepository
@@ -157,10 +158,11 @@ class TalkHandler(private val repository: TalkRepository,
                         .map { sponsorsByLogin ->
                             val sponsorsByEvent = event.sponsors.groupBy { it.level }
                             mapOf(
-                                    Pair("sponsors-gold", sponsorsByEvent[SponsorshipLevel.GOLD]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
-                                    Pair("sponsors-others", sponsorsByEvent.entries
-                                            .filter { it.key != SponsorshipLevel.GOLD }.flatMap { it.value }
-                                            .map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) })
+                                    Pair("sponsors-gold", sponsorsByEvent[SponsorshipLevel.GOLD]?.map { it.toSponsorDto(sponsorsByLogin[it.sponsorId]!!) }),
+                                    Pair("sponsors-others", event.sponsors
+                                            .filter { it.level != SponsorshipLevel.GOLD }
+                                            .map { it.toSponsorDto(sponsorsByLogin[it.sponsorId]!!) }
+                                            .distinctBy { it.login })
                             )
                         }
             }
