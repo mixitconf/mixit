@@ -17,9 +17,8 @@ const paths = {
   main: 'src/main',
   tmp: 'build/.tmp',
   vendors: [
-    'node_modules/foundation/js/foundation-sites/dist/js/foundation.js',
-    'node_modules/fastclick/lib/fastclick.js',
-    'node_modules/jquery/dist/jquery.slim.js'
+    'node_modules/foundation-sites/dist/js/foundation.js',
+    'node_modules/jquery/dist/jquery.js'
   ],
   dist: {
     sw: 'build/resources/main/static',

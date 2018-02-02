@@ -1,8 +1,3 @@
-import * as $ from 'jquery';
-import 'foundation-sites';
-
-window['jQuery'] = $;
-
 class MixitApp{
     bootstrap(){
         //SW will be enabled later
@@ -44,8 +39,4 @@ class MixitApp{
         }
     }
 }
-
 new MixitApp().bootstrap();
-$(() => {
-  $(document).foundation();
-});
