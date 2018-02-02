@@ -3,16 +3,14 @@ package mixit.web.handler
 import mixit.model.Ticket
 import mixit.model.User
 import mixit.repository.TicketRepository
-import mixit.util.Cryptographer
-import mixit.util.EmailService
-import mixit.util.EmailServiceUsage
-import mixit.util.locale
+import mixit.util.*
 import org.springframework.dao.DuplicateKeyException
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
+import org.springframework.web.reactive.function.server.body
 import reactor.core.publisher.Mono
 import reactor.core.publisher.onErrorResume
 import java.util.*
@@ -21,6 +19,8 @@ import java.util.*
 class TicketingHandler(private val repository: TicketRepository,
                        private val cryptographer: Cryptographer,
                        private val emailService: EmailService) {
+
+    fun findAll(req: ServerRequest) = ok().json().body(repository.findAll())
 
     fun ticketing(req: ServerRequest) = ServerResponse.ok().render("ticketing", mapOf(Pair("title", "ticketing.title")))
 

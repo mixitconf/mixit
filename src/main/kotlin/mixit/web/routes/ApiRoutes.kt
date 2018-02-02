@@ -12,6 +12,7 @@ class ApiRoutes(private val blogHandler: BlogHandler,
                 private val eventHandler: EventHandler,
                 private val talkHandler: TalkHandler,
                 private val favoriteHandler: FavoriteHandler,
+                private val ticketingHandler: TicketingHandler,
                 private val userHandler: UserHandler) {
 
     @Bean
@@ -25,6 +26,10 @@ class ApiRoutes(private val blogHandler: BlogHandler,
             "/event".nest {
                 GET("/", eventHandler::findAll)
                 GET("/{id}", eventHandler::findOne)
+            }
+
+            "/admin".nest {
+                GET("/ticket", ticketingHandler::findAll)
             }
 
             // Talks
