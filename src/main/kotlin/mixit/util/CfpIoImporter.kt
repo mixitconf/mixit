@@ -113,7 +113,7 @@ private data class CfpioTalk(
             name,
             description,
             speakers,
-            languages.getOrDefault(language, Language.FRENCH),
+            languages.getOrDefault(language!!, Language.FRENCH),
             LocalDateTime.now(),
             if (plus == null) "" else plus,
             topics.getOrDefault(trackLabel, "Other"),
