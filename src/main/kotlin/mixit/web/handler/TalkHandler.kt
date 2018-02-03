@@ -8,7 +8,6 @@ import mixit.repository.TalkRepository
 import mixit.repository.UserRepository
 import mixit.util.*
 import org.springframework.stereotype.Component
-import org.springframework.util.StringUtils
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
@@ -31,22 +30,8 @@ class TalkHandler(private val repository: TalkRepository,
     fun findByEventView(year: Int, req: ServerRequest, topic: String? = null): Mono<ServerResponse> =
             req.session().flatMap {
                 val currentUserEmail = it.getAttribute<String>("email")
-
-                val talks = repository
-                        .findByEvent(year.toString(), topic)
-                        .collectList()
-                        .flatMap { talks ->
-                            if (currentUserEmail != null) {
-                                val favorites = favoriteRepository
-                                        .findByEmailAndTalks(currentUserEmail, talks.map { it.id!! })
-                                        .collectMap(Favorite::talkId)
-                                addUserToTalk(talks, favorites.block(), req.language())
-                            } else {
-                                addUserToTalk(talks, emptyMap(), req.language())
-                            }
-                        }
-
-                val sponsors = eventSponsors(year, req)
+                val talks = loadTalkAndFavorites(year, req.language(), currentUserEmail, topic).map { it.groupBy { if (it.date == null) "" else it.date } }
+                val sponsors = loadSponsors(year, req)
 
                 ok().render("talks", mapOf(
                         Pair("talks", talks),
@@ -62,27 +47,65 @@ class TalkHandler(private val repository: TalkRepository,
                 ))
             }
 
-    private fun addUserToTalk(talks: List<Talk>,
-                              favorites: Map<String, Favorite>? = emptyMap(),
-                              language: Language): Mono<Map<String, List<TalkDto>>> = userRepository
-            .findMany(talks.flatMap(Talk::speakerIds))
-            .collectMap(User::login)
-            .map { speakers ->
-                talks.map { it.toDto(language, it.speakerIds.mapNotNull { speakers[it] }, favorites!!.get(it.id) != null) }.groupBy { if (it.date == null) "" else it.date }
+    fun findMediaByEventView(year: Int, req: ServerRequest, topic: String? = null): Mono<ServerResponse> =
+            req.session().flatMap {
+                val currentUserEmail = it.getAttribute<String>("email")
+                val talks = loadTalkAndFavorites(year, req.language(), currentUserEmail, topic).map { it.sortedBy { it.title } }
+                val sponsors = loadSponsors(year, req)
+
+                eventRepository
+                        .findByYear(year)
+                        .flatMap { event ->
+
+                            ok().render("medias", mapOf(
+                                    Pair("talks", talks),
+                                    Pair("topic", topic),
+                                    Pair("year", year),
+                                    Pair("title", "medias.title.html|$year"),
+                                    Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
+                                    Pair("sponsors", sponsors),
+                                    Pair("event", event),
+                                    Pair("videoUrl", if (event.videoUrl?.url?.startsWith("https://vimeo.com/") == true) event.videoUrl.url.replace("https://vimeo.com/", "https://player.vimeo.com/video/") else null),
+                                    Pair("hasPhotosOrVideo", event.videoUrl != null || event.photoUrls.isNotEmpty())))
+                        }
             }
 
-    private fun addUserToTalkForMedia(talks: List<Talk>,
-                              favorites: Map<String, Favorite>? = emptyMap(),
-                              language: Language) = userRepository
-            .findMany(talks.flatMap(Talk::speakerIds))
-            .collectMap(User::login)
-            .map { speakers ->
-                talks.sortedBy { it.title }.map { it.toDto(language, it.speakerIds.mapNotNull { speakers[it] }, favorites!!.get(it.id) != null) }
-            }
+    private fun loadTalkAndFavorites(year: Int, language: Language, currentUserEmail: String? = null, topic: String? = null): Mono<List<TalkDto>> =
+            repository
+                    .findByEvent(year.toString(), topic)
+                    .collectList()
+                    .flatMap { talks ->
+                        if (currentUserEmail != null) {
+                            favoriteRepository
+                                    .findByEmailAndTalks(currentUserEmail, talks.map { it.id!! })
+                                    .switchIfEmpty{ addUserToTalks(talks, emptyList(), language) }
+                                    .collectList()
+                                    .flatMap { favorites ->
+                                        addUserToTalks(talks, favorites, language)
+                                    }
+                        } else {
+                            addUserToTalks(talks, emptyList(), language)
+                        }
+                    }
 
+    private fun addUserToTalks(talks: List<Talk>,
+                               favorites: List<Favorite>,
+                               language: Language): Mono<List<TalkDto>> =
+            userRepository
+                    .findMany(talks.flatMap(Talk::speakerIds))
+                    .collectMap(User::login)
+                    .map { speakers ->
+                        System.out.println("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFff" + favorites.get(0))
+                        talks
+                                .map { talk ->
+                                    talk.toDto(language,
+                                            talk.speakerIds.mapNotNull { speakers[it] },
+                                            favorites.filter { talk.id!!.equals(it.talkId) }.any())
+                                }
+                    }
 
     fun findOneView(year: Int, req: ServerRequest): Mono<ServerResponse> = repository.findByEventAndSlug(year.toString(), req.pathVariable("slug")).flatMap { talk ->
-        val sponsors = eventSponsors(year, req)
+        val sponsors = loadSponsors(year, req)
 
         req.session().flatMap {
             val currentUserEmail = it.getAttribute<String>("email")
@@ -112,44 +135,7 @@ class TalkHandler(private val repository: TalkRepository,
         }
     }
 
-    fun findMediaTopicByEventView(year: Int, req: ServerRequest): Mono<ServerResponse> = findMediaByEventView(year, req, req.pathVariable("topic"))
-
-    fun findMediaByEventView(year: Int, req: ServerRequest, topic: String? = null): Mono<ServerResponse> = eventRepository.findByYear(year).flatMap { event ->
-        req.session().flatMap {
-            val currentUserEmail = it.getAttribute<String>("email")
-
-            val talks = repository
-                    .findByEvent(year.toString(), topic)
-                    .filter { !StringUtils.isEmpty(it.video) }
-                    .collectList()
-                    .flatMap { talks ->
-                        if (currentUserEmail != null) {
-                            val favorites = favoriteRepository
-                                    .findByEmailAndTalks(currentUserEmail, talks.map { it.id!! })
-                                    .collectMap(Favorite::talkId)
-                            addUserToTalkForMedia(talks, favorites.block(), req.language())
-                        } else {
-                            addUserToTalkForMedia(talks, emptyMap(), req.language())
-                        }
-                    }
-
-            val sponsors = eventSponsors(year, req)
-
-            ok().render("medias", mapOf(
-                    Pair("talks", talks),
-                    Pair("topic", topic),
-                    Pair("year", year),
-                    Pair("title", "medias.title.html|$year"),
-                    Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
-                    Pair("sponsors", sponsors),
-                    Pair("event", event),
-                    Pair("videoUrl", if (event.videoUrl?.url?.startsWith("https://vimeo.com/") == true) event.videoUrl.url.replace("https://vimeo.com/", "https://player.vimeo.com/video/") else null),
-                    Pair("hasPhotosOrVideo", event.videoUrl != null || event.photoUrls.isNotEmpty())
-            ))
-        }
-    }
-
-    fun eventSponsors(year: Int, req: ServerRequest) = eventRepository
+    fun loadSponsors(year: Int, req: ServerRequest) = eventRepository
             .findByYear(year)
             .flatMap { event ->
                 userRepository
@@ -222,10 +208,10 @@ fun Talk.toDto(lang: Language, speakers: List<User>, favorite: Boolean = false) 
         photoUrls
 )
 
-fun Talk.summary() = if(format == TalkFormat.RANDOM  && language == Language.ENGLISH && event=="2018")
+fun Talk.summary() = if (format == TalkFormat.RANDOM && language == Language.ENGLISH && event == "2018")
     "This is a \"Random\" talk. For this track we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 25 minutes. As it's a surprise we don't display the session summary before...   "
-    else if(format == TalkFormat.RANDOM  && language == Language.FRENCH && event=="2018")
+else if (format == TalkFormat.RANDOM && language == Language.FRENCH && event == "2018")
     "Ce talk est de type \"random\". Pour cette track, nous choisissons le programme pour vous. Vous êtes dans une pièce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 25 minutes. Comme c'est une surprise, nous n'affichons pas le résumé de la session avant ..."
-    else summary
+else summary
 
-fun Talk.description() = if(format == TalkFormat.RANDOM && event=="2018") "" else description
+fun Talk.description() = if (format == TalkFormat.RANDOM && event == "2018") "" else description

@@ -1,7 +1,8 @@
 class TalksCtrl{
+
   constructor() {
-    const favoriteButtons = document.getElementsByClassName('mxt-img--favorite');
-    Array.from(favoriteButtons).forEach((favoriteButton: HTMLElement) => favoriteButton.onclick= this.favoriteToggle);
+    // const favoriteButtons = document.getElementsByClassName('mxt-img--favorite');
+    // Array.from(favoriteButtons).forEach((favoriteButton: HTMLElement) => favoriteButton.onclick= this.favoriteToggle);
   }
 
   favoriteToggle(event) {
@@ -16,6 +17,7 @@ class TalksCtrl{
         img.src = `/images/svg/favorites/${imgPath}`;
       });
   }
+
 }
 
-window.addEventListener("load", () => new TalksCtrl());
+window.addEventListener("load", () => window['ctrl'] = new TalksCtrl());

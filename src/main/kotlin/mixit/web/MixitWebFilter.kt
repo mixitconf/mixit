@@ -35,9 +35,9 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
 
             if (email != null && token != null) {
                 // If session contains an email we load the user
-                userRepository.findByEmail(email.toString()).flatMap {
+                userRepository.findByEmail(email).flatMap {
                     // We have to see if the token is the good one anf if it is yet valid
-                    if (it.token.equals(token.toString()) && it.tokenExpiration.isAfter(LocalDateTime.now())) {
+                    if (it.token.equals(token) && it.tokenExpiration.isAfter(LocalDateTime.now())) {
                         // If user is found we need to restore infos in session
                         session.attributes["role"] = it.role
                         session.attributes["email"] = email

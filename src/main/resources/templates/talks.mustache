@@ -43,10 +43,10 @@
                                     {{#connected}}
                                         <button class="mxt-img--favorite">
                                             {{#favorite}}
-                                                <img src="/images/svg/favorites/mxt-favorite.svg" id="favorite-{{id}}" class="mxt-icon--cat__talks"/>
+                                                <img src="/images/svg/favorites/mxt-favorite.svg" id="favorite-{{id}}" class="mxt-icon--cat__talks" onclick="ctrl.favoriteToggle(event)"/>
                                             {{/favorite}}
                                             {{^favorite}}
-                                                <img src="/images/svg/favorites/mxt-favorite-non.svg" id="favorite-{{id}}" class="mxt-icon--cat__talks"/>
+                                                <img src="/images/svg/favorites/mxt-favorite-non.svg" id="favorite-{{id}}" class="mxt-icon--cat__talks" onclick="ctrl.favoriteToggle(event)"/>
                                             {{/favorite}}
                                         </button>
                                     {{/connected}}
@@ -120,8 +120,7 @@
     <input type="hidden" id="email" value="{{email}}"/>
 {{/connected}}
 
-<script src="/js/talks.js"></script>
-<script async src="/js/images.js"></script>
-
 {{> footer}}
 
+<script async src="/js/talks.js"></script>
+<script async src="/js/images.js"></script>
