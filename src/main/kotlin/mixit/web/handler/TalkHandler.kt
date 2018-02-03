@@ -95,7 +95,6 @@ class TalkHandler(private val repository: TalkRepository,
                     .findMany(talks.flatMap(Talk::speakerIds))
                     .collectMap(User::login)
                     .map { speakers ->
-                        System.out.println("FFFFFFFFFFFFFFFFFFFFFFFFFFFFFff" + favorites.get(0))
                         talks
                                 .map { talk ->
                                     talk.toDto(language,
