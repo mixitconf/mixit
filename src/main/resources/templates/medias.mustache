@@ -66,10 +66,10 @@
                                 {{#connected}}
                                     <button class="mxt-img--favorite">
                                         {{#favorite}}
-                                            <img src="/images/svg/favorites/mxt-favorite.svg" id="favorite-{{id}}" class="mxt-icon--cat__talks"/>
+                                            <img src="/images/svg/favorites/mxt-favorite.svg" id="favorite-{{id}}" class="mxt-icon--cat__talks" onclick="ctrl.favoriteToggle(event)"/>
                                         {{/favorite}}
                                         {{^favorite}}
-                                            <img src="/images/svg/favorites/mxt-favorite-non.svg" id="favorite-{{id}}" class="mxt-icon--cat__talks"/>
+                                            <img src="/images/svg/favorites/mxt-favorite-non.svg" id="favorite-{{id}}" class="mxt-icon--cat__talks" onclick="ctrl.favoriteToggle(event)"/>
                                         {{/favorite}}
                                     </button>
                                 {{/connected}}
