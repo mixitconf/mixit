@@ -242,7 +242,7 @@
     },
     {
         "addedAt": "2018-01-30T12:47:02.92",
-        "description": "Au fil des chapitres, la transformation va s\u2019op\u00e9rer jusqu\u2019\u00e0 devenir un mod\u00e8le de l\u2019Agilit\u00e9. L\u2019\u00e9quipe va adopter le management visuel et un board physique. Elle va m\u00eame (\u00f4 malheur) abandonner JIRA. L\u2019\u00e9quipe va devenir de plus en plus rigoureuse dans la d\u00e9finition et l\u2019application de ses process. Elle va r\u00e9ussir \u00e0 r\u00e9duire son temps de release pour r\u00e9ussir \u00e0 faire des mises en prod tous les jours. L\u2019\u00e9quipe va \u00e9galement beaucoup grossir et n\u00e9cessiter une remise en question profonde de son organisation.\n\nEn r\u00e9sum\u00e9 : pas de recette magique, mais beaucoup de sources d\u2019inspiration.\n\nIl s\u2019agira d\u2019un vrai retour d\u2019exp\u00e9rience, qui se voudra tr\u00e8s divertissant, en mode storytelling et avec beaucoup d\u2019humour.",
+        "description": "Au fil des chapitres, la transformation va s\u2019op\u00e9rer jusqu\u2019\u00e0 devenir un mod\u00e8le de l\u2019Agilit\u00e9. L\u2019\u00e9quipe va adopter le management visuel et un board physique. Elle va m\u00eame (\u00f4 malheur) abandonner JIRA. L\u2019\u00e9quipe va devenir de plus en plus rigoureuse dans la d\u00e9finition et l\u2019application de ses process. Elle va r\u00e9ussir \u00e0 r\u00e9duire son temps de release pour r\u00e9ussir \u00e0 faire des mises en prod tous les jours. L\u2019\u00e9quipe va \u00e9galement beaucoup grossir et n\u00e9cessiter une remise en question profonde de son organisation.\r\n\r\nEn r\u00e9sum\u00e9 : pas de recette magique, mais beaucoup de sources d\u2019inspiration.\r\n\r\nIl s\u2019agira d\u2019un vrai retour d\u2019exp\u00e9rience, qui se voudra tr\u00e8s divertissant, en mode storytelling et avec beaucoup d\u2019humour.",
         "end": "2018-04-19T08:50:00",
         "event": "2018",
         "format": "TALK",
@@ -252,10 +252,11 @@
         "room": "UNKNOWN",
         "slug": "retour-d-experience-de-l-equipe-player-a-france-televisions-passer-de-faire-de-l-agile-a-etre-agile",
         "speakerIds": [
-            "jeanpi.lambert@gmail.com"
+            "jeanpi.lambert@gmail.com",
+            "r.souria@gmail.com"
         ],
         "start": "2018-04-19T08:00:00",
-        "summary": "Revivez avec nous la grande aventure Agile de l\u2019\u00e9quipe Player \u00e0 France T\u00e9l\u00e9visions !\n\nAu d\u00e9but de notre histoire, on pourrait qualifier l\u2019\u00e9quipe Player de France T\u00e9l\u00e9visions d\u2019\u00e9quipe comme les autres, qui pratique un Scrum grossier. On fait un stand-up quotidien, une d\u00e9mo et une r\u00e9tro toutes les deux semaines, et le backlog est dans JIRA : c\u2019est \u00e7a faire de l\u2019Agile, pas vrai ?",
+        "summary": "Revivez avec nous la grande aventure Agile de l\u2019\u00e9quipe Player \u00e0 France T\u00e9l\u00e9visions !\r\n\r\nAu d\u00e9but de notre histoire, on pourrait qualifier l\u2019\u00e9quipe Player de France T\u00e9l\u00e9visions d\u2019\u00e9quipe comme les autres, qui pratique un Scrum grossier. On fait un stand-up quotidien, une d\u00e9mo et une r\u00e9tro toutes les deux semaines, et le backlog est dans JIRA : c\u2019est \u00e7a faire de l\u2019Agile, pas vrai ?",
         "title": "Retour d'exp\u00e9rience de l'\u00e9quipe Player \u00e0 France T\u00e9l\u00e9visions : passer de faire de l'Agile \u00e0 \u00eatre Agile",
         "topic": "tech",
         "video": null
@@ -588,7 +589,7 @@
     },
     {
         "addedAt": "2018-01-30T12:47:03.344",
-        "description": "Et si on se mettait dans cette situation, en \u00e9quipes et en comp\u00e9tition ? Qui sera alors l'\u00e9quipe la plus \u00e0 m\u00eame de faire \u00e9voluer le code legacy, tout en continuant \u00e0 gagner de l'argent ?\n\nVenez relever le challenge, avec votre env de dev favori !",
+        "description": "Et si on se mettait dans cette situation, en \u00e9quipes et en comp\u00e9tition ? Qui sera alors l'\u00e9quipe la plus \u00e0 m\u00eame de faire \u00e9voluer le code legacy, tout en continuant \u00e0 gagner de l'argent ?\r\n\r\nVenez relever le challenge, avec votre env de dev favori !",
         "end": "2018-04-19T08:50:00",
         "event": "2018",
         "format": "WORKSHOP",
@@ -598,10 +599,11 @@
         "room": "UNKNOWN",
         "slug": "epic-legacy-code-challenge",
         "speakerIds": [
-            "julien.jakubowski@gmail.com"
+            "julien.jakubowski@gmail.com",
+            "cdesquilbet@octo.com"
         ],
         "start": "2018-04-19T08:00:00",
-        "summary": "Vous venez d'\u00eatre embauch\u00e9s chez Paladin Inventories Company. Elle gagne beaucoup d'argent avec son logiciel. Mais le gobelin qui l'a \u00e9crit s'est fait d\u00e9vorer par un dragon. Vous ne comprenez rien au code. Et bien s\u00fbr il n'y a pas de tests. Le probl\u00e8me : une horde de trolls se rue vers vous avec plein de nouvelles demandes pour ce logiciel, qui est maintenant le v\u00f4tre...\n\nCette situation vous dit quelquechose ?",
+        "summary": "Vous venez d'\u00eatre embauch\u00e9s chez Paladin Inventories Company. Elle gagne beaucoup d'argent avec son logiciel. Mais le gobelin qui l'a \u00e9crit s'est fait d\u00e9vorer par un dragon. Vous ne comprenez rien au code. Et bien s\u00fbr il n'y a pas de tests. Le probl\u00e8me : une horde de trolls se rue vers vous avec plein de nouvelles demandes pour ce logiciel, qui est maintenant le v\u00f4tre...\r\n\r\nCette situation vous dit quelquechose ?",
         "title": "Epic Legacy Code Challenge",
         "topic": "tech",
         "video": null
