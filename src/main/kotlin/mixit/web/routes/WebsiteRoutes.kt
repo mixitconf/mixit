@@ -56,7 +56,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
             GET("/faq", globalHandler::faqView)
             GET("/come", globalHandler::comeToMixitView)
             GET("/schedule", globalHandler::scheduleView)
-            GET("/cfp") { talkHandler.findByEventView(2018, it) }
+            GET("/cfp") { talkHandler.findByEventView(2018, it, false) }
 
             // Authentication
             GET("/login", authenticationHandler::loginView)
@@ -69,16 +69,26 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
 
             // Talks
             eventRepository.findAll().toIterable().map { it.year }.forEach { year ->
-                GET("/$year") { talkHandler.findByEventView(year, it) }
-                GET("/$year/makers") { talkHandler.findByEventView(year, it, "makers") }
-                GET("/$year/aliens") { talkHandler.findByEventView(year, it, "aliens") }
-                GET("/$year/tech") { talkHandler.findByEventView(year, it, "tech") }
-                GET("/$year/design") { talkHandler.findByEventView(year, it, "design") }
-                GET("/$year/hacktivism") { talkHandler.findByEventView(year, it, "hacktivism") }
-                GET("/$year/learn") { talkHandler.findByEventView(year, it, "learn") }
-                GET("/$year/team") { talkHandler.findByEventView(year, it, "team") }
-                GET("/$year/medias") { talkHandler.findMediaByEventView(year, it) }
-                GET("/$year/medias/{topic}") { talkHandler.findMediaByEventView(year, it, it.pathVariable("topic")) }
+                GET("/$year") { talkHandler.findByEventView(year, it, false) }
+                GET("/$year/favorite") { talkHandler.findByEventView(year, it, true) }
+                GET("/$year/makers") { talkHandler.findByEventView(year, it, false, "makers") }
+                GET("/$year/makers/favorite") { talkHandler.findByEventView(year, it, true, "makers") }
+                GET("/$year/aliens") { talkHandler.findByEventView(year, it, false, "aliens") }
+                GET("/$year/aliens/favorite") { talkHandler.findByEventView(year, it, true, "aliens") }
+                GET("/$year/tech") { talkHandler.findByEventView(year, it, false, "tech") }
+                GET("/$year/tech/favorite") { talkHandler.findByEventView(year, it, true, "tech") }
+                GET("/$year/design") { talkHandler.findByEventView(year, it, false, "design") }
+                GET("/$year/design/favorite") { talkHandler.findByEventView(year, it, true, "design") }
+                GET("/$year/hacktivism") { talkHandler.findByEventView(year, it, false, "hacktivism") }
+                GET("/$year/hacktivism/favorite/favorite") { talkHandler.findByEventView(year, it, true, "hacktivism") }
+                GET("/$year/learn") { talkHandler.findByEventView(year, it, false, "learn") }
+                GET("/$year/learn/favorite") { talkHandler.findByEventView(year, it, true, "learn") }
+                GET("/$year/team") { talkHandler.findByEventView(year, it, false, "team") }
+                GET("/$year/team/favorite") { talkHandler.findByEventView(year, it, true, "team") }
+                GET("/$year/medias") { talkHandler.findMediaByEventView(year, it, false) }
+                GET("/$year/medias/favorite") { talkHandler.findMediaByEventView(year, it, true) }
+                GET("/$year/medias/{topic}") { talkHandler.findMediaByEventView(year, it, false, it.pathVariable("topic")) }
+                GET("/$year/medias/{topic}/favorite") { talkHandler.findMediaByEventView(year, it, true, it.pathVariable("topic")) }
                 GET("/$year/{slug}") { talkHandler.findOneView(year, it) }
             }
 

@@ -30,10 +30,10 @@ class TalkHandler(private val repository: TalkRepository,
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
-    fun findByEventView(year: Int, req: ServerRequest, topic: String? = null): Mono<ServerResponse> =
+    fun findByEventView(year: Int, req: ServerRequest, filterOnFavorite: Boolean, topic: String? = null): Mono<ServerResponse> =
             req.session().flatMap {
                 val currentUserEmail = it.getAttribute<String>("email")
-                val talks = loadTalkAndFavorites(year, req.language(), currentUserEmail, topic).map { it.groupBy { if (it.date == null) "" else it.date } }
+                val talks = loadTalkAndFavorites(year, req.language(), filterOnFavorite, currentUserEmail, topic).map { it.groupBy { if (it.date == null) "" else it.date } }
                 val sponsors = loadSponsors(year, req)
 
                 ok().render("talks", mapOf(
@@ -50,10 +50,10 @@ class TalkHandler(private val repository: TalkRepository,
                 ))
             }
 
-    fun findMediaByEventView(year: Int, req: ServerRequest, topic: String? = null): Mono<ServerResponse> =
+    fun findMediaByEventView(year: Int, req: ServerRequest, filterOnFavorite: Boolean, topic: String? = null): Mono<ServerResponse> =
             req.session().flatMap {
                 val currentUserEmail = it.getAttribute<String>("email")
-                val talks = loadTalkAndFavorites(year, req.language(), currentUserEmail, topic).map { it.sortedBy { it.title } }
+                val talks = loadTalkAndFavorites(year, req.language(), filterOnFavorite, currentUserEmail, topic).map { it.sortedBy { it.title } }
                 val sponsors = loadSponsors(year, req)
 
                 eventRepository
@@ -72,38 +72,39 @@ class TalkHandler(private val repository: TalkRepository,
                                     Pair("hasPhotosOrVideo", event.videoUrl != null || event.photoUrls.isNotEmpty())))
                         }
 
-}
-    private fun loadTalkAndFavorites(year: Int, language: Language, currentUserEmail: String? = null, topic: String? = null): Mono<List<TalkDto>> =
-            repository
-                    .findByEvent(year.toString(), topic)
-                    .collectList()
-                    .flatMap { talks ->
-                        if (currentUserEmail != null) {
-                            favoriteRepository
-                                    .findByEmail(currentUserEmail)
-                                    .collectList()
-                                    .flatMap { favorites ->
-                                        addUserToTalks(talks, favorites, language)
-                                    }
-                        } else {
-                            addUserToTalks(talks, emptyList(), language)
+            }
+
+    private fun loadTalkAndFavorites(year: Int, language: Language, filterOnFavorite: Boolean, currentUserEmail: String? = null, topic: String? = null): Mono<List<TalkDto>> =
+            if (currentUserEmail != null) {
+                favoriteRepository
+                        .findByEmail(currentUserEmail)
+                        .collectList()
+                        .flatMap { favorites ->
+                            if (filterOnFavorite) {
+                                repository.findByEvent(year.toString(), topic).collectList().flatMap { addUserToTalks(it, favorites, language) }
+                            } else {
+                                repository.findByEventAndTalkIds(year.toString(), favorites.map { it.talkId }, topic)
+                                        .collectList().flatMap { addUserToTalks(it, favorites, language) }
+                            }
                         }
-                    }
+            } else {
+                repository.findByEvent(year.toString(), topic).collectList().flatMap { addUserToTalks(it, emptyList(), language) }
+            }
 
     private fun addUserToTalks(talks: List<Talk>,
                                favorites: List<Favorite>,
                                language: Language): Mono<List<TalkDto>> =
             userRepository
-                .findMany(talks.flatMap(Talk::speakerIds))
-                .collectMap(User::login)
-                .map { speakers ->
-                    talks
-                            .map { talk ->
-                                talk.toDto(language,
-                                        talk.speakerIds.mapNotNull { speakers[it] },
-                                        favorites.filter { talk.id!!.equals(it.talkId) }.any())
-                            }
-                }
+                    .findMany(talks.flatMap(Talk::speakerIds))
+                    .collectMap(User::login)
+                    .map { speakers ->
+                        talks
+                                .map { talk ->
+                                    talk.toDto(language,
+                                            talk.speakerIds.mapNotNull { speakers[it] },
+                                            favorites.filter { talk.id!!.equals(it.talkId) }.any())
+                                }
+                    }
 
     fun findOneView(year: Int, req: ServerRequest): Mono<ServerResponse> = repository.findByEventAndSlug(year.toString(), req.pathVariable("slug")).flatMap { talk ->
         val sponsors = loadSponsors(year, req)

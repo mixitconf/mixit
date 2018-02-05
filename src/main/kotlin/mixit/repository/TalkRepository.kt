@@ -42,6 +42,12 @@ class TalkRepository(private val template: ReactiveMongoTemplate,
         return template.find<Talk>(Query(criteria).with(by(Order(ASC, "start"))))
     }
 
+    fun findByEventAndTalkIds(eventId: String, talkIds: List<String>, topic: String? = null): Flux<Talk> {
+        val criteria = where("event").isEqualTo(eventId).and("id").inValues(talkIds)
+        if (topic != null) criteria.and("topic").isEqualTo(topic)
+        return template.find<Talk>(Query(criteria).with(by(Order(ASC, "start"))))
+    }
+
     fun findBySpeakerId(speakerIds: List<String>, talkIdExcluded: String? = null): Flux<Talk> {
         val criteria = where("speakerIds").inValues(speakerIds)
         if (talkIdExcluded != null) criteria.and("id").ne(talkIdExcluded)
