@@ -7,6 +7,7 @@ import mixit.repository.FavoriteRepository
 import mixit.repository.TalkRepository
 import mixit.repository.UserRepository
 import mixit.util.*
+import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
@@ -26,6 +27,8 @@ class TalkHandler(private val repository: TalkRepository,
                   private val properties: MixitProperties,
                   private val markdownConverter: MarkdownConverter,
                   private val favoriteRepository: FavoriteRepository) {
+
+    private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun findByEventView(year: Int, req: ServerRequest, topic: String? = null): Mono<ServerResponse> =
             req.session().flatMap {
@@ -68,8 +71,8 @@ class TalkHandler(private val repository: TalkRepository,
                                     Pair("videoUrl", if (event.videoUrl?.url?.startsWith("https://vimeo.com/") == true) event.videoUrl.url.replace("https://vimeo.com/", "https://player.vimeo.com/video/") else null),
                                     Pair("hasPhotosOrVideo", event.videoUrl != null || event.photoUrls.isNotEmpty())))
                         }
-            }
 
+}
     private fun loadTalkAndFavorites(year: Int, language: Language, currentUserEmail: String? = null, topic: String? = null): Mono<List<TalkDto>> =
             repository
                     .findByEvent(year.toString(), topic)
@@ -77,8 +80,7 @@ class TalkHandler(private val repository: TalkRepository,
                     .flatMap { talks ->
                         if (currentUserEmail != null) {
                             favoriteRepository
-                                    .findByEmailAndTalks(currentUserEmail, talks.map { it.id!! })
-                                    .switchIfEmpty{ addUserToTalks(talks, emptyList(), language) }
+                                    .findByEmail(currentUserEmail)
                                     .collectList()
                                     .flatMap { favorites ->
                                         addUserToTalks(talks, favorites, language)
@@ -92,16 +94,16 @@ class TalkHandler(private val repository: TalkRepository,
                                favorites: List<Favorite>,
                                language: Language): Mono<List<TalkDto>> =
             userRepository
-                    .findMany(talks.flatMap(Talk::speakerIds))
-                    .collectMap(User::login)
-                    .map { speakers ->
-                        talks
-                                .map { talk ->
-                                    talk.toDto(language,
-                                            talk.speakerIds.mapNotNull { speakers[it] },
-                                            favorites.filter { talk.id!!.equals(it.talkId) }.any())
-                                }
-                    }
+                .findMany(talks.flatMap(Talk::speakerIds))
+                .collectMap(User::login)
+                .map { speakers ->
+                    talks
+                            .map { talk ->
+                                talk.toDto(language,
+                                        talk.speakerIds.mapNotNull { speakers[it] },
+                                        favorites.filter { talk.id!!.equals(it.talkId) }.any())
+                            }
+                }
 
     fun findOneView(year: Int, req: ServerRequest): Mono<ServerResponse> = repository.findByEventAndSlug(year.toString(), req.pathVariable("slug")).flatMap { talk ->
         val sponsors = loadSponsors(year, req)

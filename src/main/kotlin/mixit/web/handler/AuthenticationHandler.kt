@@ -171,10 +171,10 @@ class AuthenticationHandler(private val userRepository: UserRepository,
                 user.links,
                 user.legacyId,
                 LocalDateTime.now().plusHours(48),
-                UUID.randomUUID().toString().substring(0,13))
+                UUID.randomUUID().toString().substring(0,14).replace("-", ""))
 
         try {
-            logger.info("A token was sent to $email")
+            logger.info("A token ${userToUpdate.token} was sent to $email")
             emailService.send("email-token", userToUpdate, locale, EmailServiceUsage.AUTHENTICATION)
             return userRepository.save(userToUpdate)
         } catch (e: RuntimeException) {

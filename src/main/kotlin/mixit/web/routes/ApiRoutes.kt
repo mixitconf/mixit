@@ -30,6 +30,7 @@ class ApiRoutes(private val blogHandler: BlogHandler,
 
             "/admin".nest {
                 GET("/ticket", ticketingHandler::findAll)
+                GET("/favorite", favoriteHandler::findAll)
             }
 
             // Talks

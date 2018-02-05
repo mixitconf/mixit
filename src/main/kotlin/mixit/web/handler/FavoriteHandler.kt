@@ -13,6 +13,8 @@ import reactor.core.publisher.toMono
 @Controller
 class FavoriteHandler(private val favoriteRepository: FavoriteRepository, private val cryptographer: Cryptographer) {
 
+    fun findAll(req: ServerRequest) = ok().json().body(favoriteRepository.findAll())
+
     fun toggleFavorite(req: ServerRequest) = ok().json().body(
             favoriteRepository.findByEmailAndTalk(req.pathVariable("email"), req.pathVariable("id"))
                     // if favorite is found we delete it
