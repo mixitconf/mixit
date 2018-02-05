@@ -56,6 +56,24 @@ ansi-align@^1.1.0:
   dependencies:
     string-width "^1.0.1"
 
+ansi-cyan@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/ansi-cyan/-/ansi-cyan-0.1.1.tgz#538ae528af8982f28ae30d86f2f17456d2609873"
+  dependencies:
+    ansi-wrap "0.1.0"
+
+ansi-gray@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/ansi-gray/-/ansi-gray-0.1.1.tgz#2962cf54ec9792c48510a3deb524436861ef7251"
+  dependencies:
+    ansi-wrap "0.1.0"
+
+ansi-red@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/ansi-red/-/ansi-red-0.1.1.tgz#8c638f9d1080800a353c9c28c8a81ca4705d946c"
+  dependencies:
+    ansi-wrap "0.1.0"
+
 ansi-regex@^2.0.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-2.1.1.tgz#c3b33ab5ee360d86e0e628f0468ae7ef27d654df"
@@ -69,6 +87,10 @@ ansi-styles@^3.1.0:
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-3.2.0.tgz#c159b8d5be0f9e5a6f346dab94f16ce022161b88"
   dependencies:
     color-convert "^1.9.0"
+
+ansi-wrap@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/ansi-wrap/-/ansi-wrap-0.1.0.tgz#a82250ddb0015e9a27ca82e82ea603bbfa45efaf"
 
 anymatch@^1.3.0:
   version "1.3.0"
@@ -104,6 +126,13 @@ argparse@^1.0.7:
   dependencies:
     sprintf-js "~1.0.2"
 
+arr-diff@^1.0.1:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/arr-diff/-/arr-diff-1.1.0.tgz#687c32758163588fef7de7b36fabe495eb1a399a"
+  dependencies:
+    arr-flatten "^1.0.1"
+    array-slice "^0.2.3"
+
 arr-diff@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/arr-diff/-/arr-diff-2.0.0.tgz#8f3b827f955a8bd669697e4a4256ac3ceae356cf"
@@ -114,6 +143,10 @@ arr-flatten@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/arr-flatten/-/arr-flatten-1.0.1.tgz#e5ffe54d45e19f32f216e91eb99c8ce892bb604b"
 
+arr-union@^2.0.1:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/arr-union/-/arr-union-2.1.0.tgz#20f9eab5ec70f5c7d215b1077b1c39161d292c7d"
+
 array-differ@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/array-differ/-/array-differ-1.0.0.tgz#eff52e3758249d33be402b8bb8e564bb2b5d4031"
@@ -121,6 +154,10 @@ array-differ@^1.0.0:
 array-find-index@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/array-find-index/-/array-find-index-1.0.2.tgz#df010aa1287e164bbda6f9723b0a96a1ec4187a1"
+
+array-slice@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/array-slice/-/array-slice-0.2.3.tgz#dd3cfb80ed7973a75117cdac69b0b99ec86186f5"
 
 array-union@^1.0.1:
   version "1.0.2"
@@ -196,7 +233,7 @@ atob@~1.1.0:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/atob/-/atob-1.1.3.tgz#95f13629b12c3a51a5d215abdce2aa9f32f80773"
 
-autoprefixer@^6.0.0, autoprefixer@^6.3.1:
+autoprefixer@^6.3.1:
   version "6.7.4"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-6.7.4.tgz#b4405a263325c04a7c2b1c86fc603ad7bbfe01c6"
   dependencies:
@@ -205,6 +242,17 @@ autoprefixer@^6.0.0, autoprefixer@^6.3.1:
     normalize-range "^0.1.2"
     num2fraction "^1.2.2"
     postcss "^5.2.14"
+    postcss-value-parser "^3.2.3"
+
+autoprefixer@^7.0.0:
+  version "7.2.5"
+  resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-7.2.5.tgz#04ccbd0c6a61131b6d13f53d371926092952d192"
+  dependencies:
+    browserslist "^2.11.1"
+    caniuse-lite "^1.0.30000791"
+    normalize-range "^0.1.2"
+    num2fraction "^1.2.2"
+    postcss "^6.0.16"
     postcss-value-parser "^3.2.3"
 
 aws-sign2@~0.6.0:
@@ -753,6 +801,13 @@ browserslist@^1.0.1, browserslist@^1.5.2, browserslist@^1.7.4:
     caniuse-db "^1.0.30000624"
     electron-to-chromium "^1.2.2"
 
+browserslist@^2.11.1:
+  version "2.11.3"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-2.11.3.tgz#fe36167aed1bbcde4827ebfe71347a2cc70b99b2"
+  dependencies:
+    caniuse-lite "^1.0.30000792"
+    electron-to-chromium "^1.3.30"
+
 buffer-shims@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/buffer-shims/-/buffer-shims-1.0.0.tgz#9978ce317388c649ad8793028c3477ef044a8b51"
@@ -818,6 +873,10 @@ caniuse-db@^1.0.30000346, caniuse-db@^1.0.30000624:
   version "1.0.30000624"
   resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000624.tgz#554b87547895e36f5fe128f4b7448a2ea5bf2213"
 
+caniuse-lite@^1.0.30000791, caniuse-lite@^1.0.30000792:
+  version "1.0.30000792"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000792.tgz#d0cea981f8118f3961471afbb43c9a1e5bbf0332"
+
 capture-stack-trace@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/capture-stack-trace/-/capture-stack-trace-1.0.0.tgz#4a6fa07399c26bba47f0b2496b4d0fb408c5550d"
@@ -855,6 +914,14 @@ chalk@*, chalk@^1.0.0, chalk@^1.1.0, chalk@^1.1.1, chalk@^1.1.3:
 chalk@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.1.0.tgz#ac5becf14fa21b99c6c92ca7a7d7cfd5b17e743e"
+  dependencies:
+    ansi-styles "^3.1.0"
+    escape-string-regexp "^1.0.5"
+    supports-color "^4.0.0"
+
+chalk@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.3.0.tgz#b5ea48efc9c1793dccc9b4767c93914d3f2d52ba"
   dependencies:
     ansi-styles "^3.1.0"
     escape-string-regexp "^1.0.5"
@@ -942,6 +1009,10 @@ color-string@^0.3.0:
   resolved "https://registry.yarnpkg.com/color-string/-/color-string-0.3.0.tgz#27d46fb67025c5c2fa25993bfbf579e47841b991"
   dependencies:
     color-name "^1.0.0"
+
+color-support@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/color-support/-/color-support-1.1.3.tgz#93834379a1cc9a0c61f82f52f0d04322251bd5a2"
 
 color@^0.11.0:
   version "0.11.4"
@@ -1385,6 +1456,10 @@ electron-to-chromium@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.2.2.tgz#e41bc9488c88e3cfa1e94bde28e8420d7d47c47c"
 
+electron-to-chromium@^1.3.30:
+  version "1.3.32"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.32.tgz#11d0684c0840e003c4be8928f8ac5f35dbc2b4e6"
+
 emojis-list@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
@@ -1494,6 +1569,12 @@ expand-tilde@^1.2.1, expand-tilde@^1.2.2:
   dependencies:
     os-homedir "^1.0.1"
 
+extend-shallow@^1.1.2:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/extend-shallow/-/extend-shallow-1.1.4.tgz#19d6bf94dfc09d76ba711f39b872d21ff4dd9071"
+  dependencies:
+    kind-of "^1.1.0"
+
 extend-shallow@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/extend-shallow/-/extend-shallow-2.0.1.tgz#51af7d614ad9a9f610ea1bafbb989d6b1c56890f"
@@ -1528,6 +1609,14 @@ fancy-log@^1.1.0, fancy-log@^1.2.0:
   resolved "https://registry.yarnpkg.com/fancy-log/-/fancy-log-1.3.0.tgz#45be17d02bb9917d60ccffd4995c999e6c8c9948"
   dependencies:
     chalk "^1.1.1"
+    time-stamp "^1.0.0"
+
+fancy-log@^1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/fancy-log/-/fancy-log-1.3.2.tgz#f41125e3d84f2e7d89a43d06d958c8f78be16be1"
+  dependencies:
+    ansi-gray "^0.1.1"
+    color-support "^1.1.3"
     time-stamp "^1.0.0"
 
 fd-slicer@~1.0.1:
@@ -2011,13 +2100,14 @@ graceful-fs@~1.2.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
-gulp-autoprefixer@^3.1.1:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/gulp-autoprefixer/-/gulp-autoprefixer-3.1.1.tgz#75230051cd0d171343d783b7e9b5d1120eeef9b0"
+gulp-autoprefixer@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/gulp-autoprefixer/-/gulp-autoprefixer-4.1.0.tgz#064af73cc02cadac8ff34d0bf93ffdfb94ea12aa"
   dependencies:
-    autoprefixer "^6.0.0"
-    gulp-util "^3.0.0"
-    postcss "^5.0.4"
+    autoprefixer "^7.0.0"
+    fancy-log "^1.3.2"
+    plugin-error "^0.1.2"
+    postcss "^6.0.1"
     through2 "^2.0.0"
     vinyl-sourcemaps-apply "^0.2.0"
 
@@ -2818,6 +2908,10 @@ jsprim@^1.2.2:
 kew@^0.7.0, kew@~0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/kew/-/kew-0.7.0.tgz#79d93d2d33363d6fdd2970b335d9141ad591d79b"
+
+kind-of@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-1.1.0.tgz#140a3d2d41a36d2efcfa9377b62c24f8495a5c44"
 
 kind-of@^3.0.2:
   version "3.1.0"
@@ -3708,6 +3802,16 @@ pinkie@^2.0.0:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/pinkie/-/pinkie-2.0.4.tgz#72556b80cfa0d48a974e80e77248e80ed4f7f870"
 
+plugin-error@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/plugin-error/-/plugin-error-0.1.2.tgz#3b9bb3335ccf00f425e07437e19276967da47ace"
+  dependencies:
+    ansi-cyan "^0.1.1"
+    ansi-red "^0.1.1"
+    arr-diff "^1.0.1"
+    arr-union "^2.0.1"
+    extend-shallow "^1.1.2"
+
 plur@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/plur/-/plur-2.1.2.tgz#7482452c1a0f508e3e344eaec312c91c29dc655a"
@@ -3924,6 +4028,14 @@ postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0
     js-base64 "^2.1.9"
     source-map "^0.5.6"
     supports-color "^3.2.3"
+
+postcss@^6.0.1, postcss@^6.0.16:
+  version "6.0.17"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.17.tgz#e259a051ca513f81e9afd0c21f7f82eda50c65c5"
+  dependencies:
+    chalk "^2.3.0"
+    source-map "^0.6.1"
+    supports-color "^5.1.0"
 
 postcss@~5.0.14:
   version "5.0.21"
@@ -4456,6 +4568,10 @@ source-map@^0.1.38:
   dependencies:
     amdefine ">=0.0.4"
 
+source-map@^0.6.1:
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
+
 source-map@~0.4.1:
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.4.4.tgz#eba4f5da9c0dc999de68032d8b4f76173652036b"
@@ -4653,6 +4769,12 @@ supports-color@^3.1.0, supports-color@^3.1.2, supports-color@^3.2.3:
 supports-color@^4.0.0:
   version "4.4.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-4.4.0.tgz#883f7ddabc165142b2a61427f3352ded195d1a3e"
+  dependencies:
+    has-flag "^2.0.0"
+
+supports-color@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-5.1.0.tgz#058a021d1b619f7ddf3980d712ea3590ce7de3d5"
   dependencies:
     has-flag "^2.0.0"
 
