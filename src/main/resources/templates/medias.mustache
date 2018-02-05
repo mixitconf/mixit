@@ -16,6 +16,10 @@
                     </ul>
                 </li>
             </ul>
+            {{#connected}}
+                {{#filtered}}<p>{{#i18n}}talks.favorites.filter.active{{/i18n}}</p>{{/filtered}}
+                {{^filtered}}<p><a href="{{localePrefix}}/{{year}}/medias{{#topic}}/{{topic}}{{/topic}}/favorite">{{#i18n}}talks.favorites.filter{{/i18n}}</a></p>{{/filtered}}
+            {{/connected}}
         </div>
     </div>
 </div>

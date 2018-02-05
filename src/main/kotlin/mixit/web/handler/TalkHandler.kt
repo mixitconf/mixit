@@ -43,6 +43,7 @@ class TalkHandler(private val repository: TalkRepository,
                         Pair("title", when (topic) { null -> "talks.title.html|$year"
                             else -> "talks.title.html.$topic|$year"
                         }),
+                        Pair("filtered", filterOnFavorite),
                         Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
                         Pair("topic", topic),
                         Pair("has2Columns", talks.map { it.size == 2 }),
@@ -67,6 +68,7 @@ class TalkHandler(private val repository: TalkRepository,
                                     Pair("title", "medias.title.html|$year"),
                                     Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
                                     Pair("sponsors", sponsors),
+                                    Pair("filtered", filterOnFavorite),
                                     Pair("event", event),
                                     Pair("videoUrl", if (event.videoUrl?.url?.startsWith("https://vimeo.com/") == true) event.videoUrl.url.replace("https://vimeo.com/", "https://player.vimeo.com/video/") else null),
                                     Pair("hasPhotosOrVideo", event.videoUrl != null || event.photoUrls.isNotEmpty())))
@@ -81,10 +83,10 @@ class TalkHandler(private val repository: TalkRepository,
                         .collectList()
                         .flatMap { favorites ->
                             if (filterOnFavorite) {
-                                repository.findByEvent(year.toString(), topic).collectList().flatMap { addUserToTalks(it, favorites, language) }
-                            } else {
                                 repository.findByEventAndTalkIds(year.toString(), favorites.map { it.talkId }, topic)
                                         .collectList().flatMap { addUserToTalks(it, favorites, language) }
+                            } else {
+                                repository.findByEvent(year.toString(), topic).collectList().flatMap { addUserToTalks(it, favorites, language) }
                             }
                         }
             } else {
