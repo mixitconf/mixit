@@ -30,6 +30,7 @@ tasks.withType<KotlinCompile> {
 
 node {
     version = "9.2.0"
+    yarnVersion = "1.3.2"
     download = true
 }
 
