@@ -1,0 +1,8 @@
+{
+  "build": {
+    "goal": "build"
+  },
+  "deploy": {
+    "goal": "bootRun"
+  }
+}
