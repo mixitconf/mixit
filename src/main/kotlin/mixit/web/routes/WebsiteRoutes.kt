@@ -1,6 +1,7 @@
 package mixit.web
 
 import mixit.MixitProperties
+import mixit.model.SponsorshipLevel
 import mixit.repository.EventRepository
 import mixit.util.MarkdownConverter
 import mixit.util.locale
@@ -47,12 +48,12 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
         GET("/blog/feed", blogHandler::feed)
 
         accept(TEXT_HTML).nest {
-            GET("/") { sponsorHandler.viewWithSponsors("home", null, 2018, false, it) }
+            GET("/") { sponsorHandler.viewWithSponsors("home", SponsorshipLevel.GOLD, null, 2018, it) }
             GET("/about", globalHandler::findAboutView)
             GET("/news", newsHandler::newsView)
             GET("/ticketing", ticketingHandler::ticketing)
-            GET("/sponsors") { sponsorHandler.viewWithSponsors("sponsors", "sponsors.title", 2018, false, it) }
-            GET("/mixteen", { sponsorHandler.viewWithSponsors("mixteen", "mixteen.title", 2018, false, it) })
+            GET("/sponsors") { sponsorHandler.viewWithSponsors(2018, it) }
+            GET("/mixteen", { sponsorHandler.viewWithSponsors("mixteen", SponsorshipLevel.MIXTEEN, "mixteen.title", 2018, it) })
             GET("/faq", globalHandler::faqView)
             GET("/come", globalHandler::comeToMixitView)
             GET("/schedule", globalHandler::scheduleView)
@@ -64,7 +65,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
 
             // Sponsors
             eventRepository.findAll().toIterable().map { it.year }.forEach { year ->
-                GET("/sponsors/$year") { sponsorHandler.viewWithSponsors("sponsors", "sponsors.title", year, false, it) }
+                GET("/sponsors/$year") { sponsorHandler.viewWithSponsors(year, it) }
             }
 
             // Talks
