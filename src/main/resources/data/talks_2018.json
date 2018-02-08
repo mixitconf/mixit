@@ -1,7 +1,7 @@
 [
     {
         "addedAt": "2018-01-30T12:47:04.663",
-        "description": "",
+        "description": null,
         "end": "2018-04-19T08:50:00",
         "event": "2018",
         "format": "TALK",
@@ -78,46 +78,6 @@
         "summary": "Que se cache-t-il derri\u00e8re les buzz words \"serverless\" et \"services manag\u00e9s\" ?\r\nEst-il r\u00e9ellement possible de construire une application sans provisionner de serveur ?\r\n\r\n",
         "title": "Serverless is the new back",
         "topic": "tech",
-        "video": null
-    },
-    {
-        "addedAt": "2018-01-30T12:47:04.626",
-        "description": null,
-        "end": "2018-04-19T08:50:00",
-        "event": "2018",
-        "format": "KEYNOTE",
-        "id": "5a706948840deb00141a7249",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "percevoir-et-communiquer-realite-et-fictions-personnelles",
-        "speakerIds": [
-            "yves.rossetti@inserm.fr"
-        ],
-        "start": "2018-04-19T08:00:00",
-        "summary": "TODO",
-        "title": "Percevoir et communiquer: r\u00e9alit\u00e9 et fictions personnelles",
-        "topic": "aliens",
-        "video": null
-    },
-    {
-        "addedAt": "2018-01-30T12:47:02.6",
-        "description": "Don't come to this session for a lesson on theory...come to this session to hear the philosophies and principles of Peter Scobie, Program Manager/Team Doctor. You'll leave this session invigorated, engaged and ready to take action.",
-        "end": "2018-04-19T08:50:00",
-        "event": "2018",
-        "format": "RANDOM",
-        "id": "5a706948840deb00141a7208",
-        "language": "ENGLISH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "the-team-playbook-a-recipe-for-healthy-teams",
-        "speakerIds": [
-            "pscobie@optusnet.com.au"
-        ],
-        "start": "2018-04-19T08:00:00",
-        "summary": "The benefits of a high performing team are endless. They are autonomous, empowered, responsible and effective. At Atlassian, we've pioneered the Team Playbook, which is our way of scaling teams by getting smarter, not bigger, and driving a culture of continual improvement. Utilised by hundreds of teams within Atlassian, we've made our secret sauce not so secret. ",
-        "title": "The Team Playbook: A Recipe for Healthy Teams",
-        "topic": "team",
         "video": null
     },
     {
@@ -1515,6 +1475,26 @@
         "summary": "Looking for ways to make the transition from block based programming to text based programming easier, then look no further! In this talk 14 year old Josh will introduce you to his project called EduBlocks, which is a visual block based programming tool that he has created to help teachers introduce programming languages, like Python, to children at an earlier age. ",
         "title": "Make the transition from block based programming to text based programming",
         "topic": "makers",
+        "video": null
+    },
+    {
+        "addedAt": "2018-01-30T12:47:04.626",
+        "description": null,
+        "end": "2018-04-19T08:50:00",
+        "event": "2018",
+        "format": "KEYNOTE",
+        "id": "5a706948840deb00141a7249",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "UNKNOWN",
+        "slug": "percevoir-et-communiquer-realite-et-fictions-personnelles",
+        "speakerIds": [
+            "yves.rossetti@inserm.fr"
+        ],
+        "start": "2018-04-19T08:00:00",
+        "summary": "Les illusions nous montrent que malgr\u00e8 la complexit\u00e9 des op\u00e9rations que le cerveau r\u00e9alise pour appr\u00e9hender la r\u00e9alit\u00e9, nous ne percevons pas cette r\u00e9alit\u00e9. Elles permettent d\u2019explorer comment notre perception r\u00e9sout les multiples probl\u00e8mes pos\u00e9s par l\u2019ambigu\u00eft\u00e9 des signaux que nous recevons, et comment le cerveau choisi rapidement l'interpr\u00e9tation la plus probable. \r\n\r\nEn d\u00e9pit des apparences, la communication ob\u00e9it aux m\u00eames r\u00e8gles que la perception : le cerveau pr\u00e9f\u00e8re tout miser sur une interpr\u00e9tation que de rester dans l\u2019ambig\u00fcit\u00e9, au risque de se tromper tout en croyant avoir raison. Alors comment pouvons-nous rester disponible \u00e0 la r\u00e9alit\u00e9 de l'autre et conserver une communication ouverte et constructive ?",
+        "title": "Percevoir et communiquer: r\u00e9alit\u00e9 et fictions personnelles",
+        "topic": "aliens",
         "video": null
     }
 ]
