@@ -23,6 +23,32 @@ import java.net.URLDecoder
 class UserHandler(private val repository: UserRepository,
                   private val markdownConverter: MarkdownConverter) {
 
+    companion object {
+        val speakerStarInHistory = listOf(
+                "tastapod",
+                "joel.spolsky",
+                "pamelafox",
+                "MattiSG",
+                "bodil",
+                "mojavelinux",
+                "andrey.breslav",
+                "103086746",
+                "ppezziardi",
+                "rising.linda")
+        val speakerStarInCurrentEvent = listOf("jhoeller@pivotal.io")
+        /*Sharon Steed
+        * Juergen Hoeller
+        * Alexandre Boutin
+        * Laura Carvajal
+        * John John Le Drew
+        * James Auger
+        * David Gageot
+        * Romain Guy
+        * Chet Haase
+        * Sam Brannen*/
+    }
+
+
     fun findOneView(req: ServerRequest) =
             try {
                 val idLegacy = req.pathVariable("login").toLong()
@@ -47,6 +73,13 @@ class UserHandler(private val repository: UserRepository,
         created(create("/api/user/${it.login}")).json().body(it.toMono())
     }
 }
+
+class SpeakerStarDto(
+    val login: String,
+    val key: String,
+    val name: String
+)
+fun User.toSpeakerStarDto() = SpeakerStarDto(login, lastname.decapitalize(),"$firstname $lastname")
 
 class UserDto(
         val login: String,
