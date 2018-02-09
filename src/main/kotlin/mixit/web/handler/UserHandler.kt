@@ -1,9 +1,11 @@
 package mixit.web.handler
 
+import mixit.MixitProperties
 import mixit.model.Language
 import mixit.model.Link
 import mixit.model.Role
 import mixit.model.User
+import mixit.repository.TalkRepository
 import mixit.repository.UserRepository
 import mixit.util.MarkdownConverter
 import mixit.util.json
@@ -14,14 +16,18 @@ import org.springframework.web.reactive.function.server.ServerResponse.created
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.body
 import org.springframework.web.reactive.function.server.bodyToMono
+import org.springframework.web.util.UriUtils
 import reactor.core.publisher.toMono
 import java.net.URI.create
 import java.net.URLDecoder
+import java.nio.charset.StandardCharsets
 
 
 @Component
 class UserHandler(private val repository: UserRepository,
-                  private val markdownConverter: MarkdownConverter) {
+                  private val talkRepository: TalkRepository,
+                  private val markdownConverter: MarkdownConverter,
+                  private val properties: MixitProperties) {
 
     companion object {
         val speakerStarInHistory = listOf(
@@ -35,31 +41,41 @@ class UserHandler(private val repository: UserRepository,
                 "103086746",
                 "ppezziardi",
                 "rising.linda")
-        val speakerStarInCurrentEvent = listOf("jhoeller@pivotal.io")
-        /*Sharon Steed
-        * Juergen Hoeller
-        * Alexandre Boutin
-        * Laura Carvajal
-        * John John Le Drew
-        * James Auger
-        * David Gageot
-        * Romain Guy
-        * Chet Haase
-        * Sam Brannen*/
+        val speakerStarInCurrentEvent = listOf(
+                "jhoeller@pivotal.io",
+                "sharon@sharonsteed.co",
+                "agilex",
+                "laura.carvajal@gmail.com",
+                "augerment@gmail.com",
+                "dgageot",
+                "romainguy@curious-creature.com",
+                "graphicsgeek1@gmail.com",
+                "sam@sambrannen.com")
     }
 
 
     fun findOneView(req: ServerRequest) =
             try {
                 val idLegacy = req.pathVariable("login").toLong()
-                repository.findByLegacyId(idLegacy).flatMap {
-                    ok().render("user", mapOf(Pair("user", it.toDto(req.language(), markdownConverter))))
-                }
-            } catch (e:NumberFormatException) {
-                repository.findOne(URLDecoder.decode(req.pathVariable("login"), "UTF-8")).flatMap {
-                    ok().render("user", mapOf(Pair("user", it.toDto(req.language(), markdownConverter))))
-                }
+                repository.findByLegacyId(idLegacy).flatMap { findOneViewDetail(it, req) }
+            } catch (e: NumberFormatException) {
+                repository.findOne(URLDecoder.decode(req.pathVariable("login"), "UTF-8")).flatMap { findOneViewDetail(it, req) }
             }
+
+    private fun findOneViewDetail(user: User, req: ServerRequest) =
+            talkRepository
+                    .findBySpeakerId(listOf(user.login))
+                    .collectList()
+                    .flatMap { talks ->
+                        talks.map { talk -> talk.toDto(req.language(), listOf(user)) }.toMono()
+                        ok()
+                                .render("user", mapOf(
+                                        Pair("user", user.toDto(req.language(), markdownConverter)),
+                                        Pair("talks", talks),
+                                        Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8))
+                                ))
+                    }
+
 
     fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("login")))
 
@@ -75,11 +91,12 @@ class UserHandler(private val repository: UserRepository,
 }
 
 class SpeakerStarDto(
-    val login: String,
-    val key: String,
-    val name: String
+        val login: String,
+        val key: String,
+        val name: String
 )
-fun User.toSpeakerStarDto() = SpeakerStarDto(login, lastname.decapitalize(),"$firstname $lastname")
+
+fun User.toSpeakerStarDto() = SpeakerStarDto(login, lastname.decapitalize(), "$firstname $lastname")
 
 class UserDto(
         val login: String,

@@ -6,6 +6,7 @@ import mixit.model.Talk
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.domain.Sort.Direction.ASC
+import org.springframework.data.domain.Sort.Direction.DESC
 import org.springframework.data.domain.Sort.Order
 import org.springframework.data.domain.Sort.by
 import org.springframework.data.mongodb.core.*
@@ -51,7 +52,7 @@ class TalkRepository(private val template: ReactiveMongoTemplate,
     fun findBySpeakerId(speakerIds: List<String>, talkIdExcluded: String? = null): Flux<Talk> {
         val criteria = where("speakerIds").inValues(speakerIds)
         if (talkIdExcluded != null) criteria.and("id").ne(talkIdExcluded)
-        return template.find<Talk>(Query(criteria).with(by(Order(ASC, "start"))))
+        return template.find<Talk>(Query(criteria).with(by(Order(DESC, "start"))))
     }
 
     fun findAll(): Flux<Talk> = template.find<Talk>(Query().with(by(Order(ASC, "start"))))

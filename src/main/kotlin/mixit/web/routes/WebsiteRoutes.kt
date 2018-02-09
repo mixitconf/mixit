@@ -30,6 +30,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
                     private val talkHandler: TalkHandler,
                     private val sponsorHandler: SponsorHandler,
                     private val ticketingHandler: TicketingHandler,
+                    private val userHandler: UserHandler,
                     private val messageSource: MessageSource,
                     private val properties: MixitProperties,
                     private val eventRepository: EventRepository,
@@ -58,6 +59,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
             GET("/come", globalHandler::comeToMixitView)
             GET("/schedule", globalHandler::scheduleView)
             GET("/cfp") { talkHandler.findByEventView(2018, it, false) }
+            GET("/user/{login}") { userHandler.findOneView(it) }
 
             // Authentication
             GET("/login", authenticationHandler::loginView)

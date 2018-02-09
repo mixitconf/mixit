@@ -73,8 +73,8 @@ class SponsorHandler(private val userRepository: UserRepository,
                                                 Pair("title", if (!view.equals("sponsors")) title else "$title|$year"),
                                                 Pair("sponsors-main", mainSponsor),
                                                 Pair("sponsors-others", otherSponsors),
-                                                Pair("oldEditionStar", UserHandler.speakerStarInHistory.map { usersByLogin[it]!!.toSpeakerStarDto() }),
-                                                Pair("cuurentEditionStar", UserHandler.speakerStarInCurrentEvent.map { usersByLogin[it]!!.toSpeakerStarDto() })
+                                                Pair("stars-old", UserHandler.speakerStarInHistory.map { usersByLogin[it]!!.toSpeakerStarDto() }),
+                                                Pair("stars-current", UserHandler.speakerStarInCurrentEvent.map { usersByLogin[it]!!.toSpeakerStarDto() })
                                         ))
                                     }
                                     else{
