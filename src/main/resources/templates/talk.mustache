@@ -12,6 +12,11 @@
                     </li>
                 {{/speakers}}
             </ul>
+            {{#admin}}
+                <div>
+                    <a href="{{localePrefix}}/admin/talks/edit/{{talk.slug}}" class="button hollow mxt-anchor--uppercase" style="margin-bottom: 0">{{#i18n}}admin.talks.actions.update{{/i18n}}</a>
+                </div>
+            {{/admin}}
         </div>
     </div>
 </div>
@@ -37,7 +42,6 @@
                 </h1>
 
                 <hr/>
-                {{#admin}}<a href="/admin/talks/edit/{{talk.slug}}">{{#i18n}}admin.talks.actions.update{{/i18n}}</a> <br/>{{/admin}}
                 <p>{{#markdown}}{{talk.summary}}{{/markdown}}</p>
                 {{#talk.description}}
                     <hr/>

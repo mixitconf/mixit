@@ -10,6 +10,11 @@
                         <div>{{#hasTalks}}{{#i18n}}user.speaker{{/i18n}}{{/hasTalks}}{{^hasTalks}}{{#i18n}}user.standard{{/i18n}}{{/hasTalks}}</div>
                     </li>
             </ul>
+            {{#admin}}
+                <div>
+                    <a href="{{localePrefix}}/admin/users/edit/{{user.login}}" class="button hollow mxt-anchor--uppercase" style="margin-bottom: 0">{{#i18n}}admin.talks.actions.update{{/i18n}}</a>
+                </div>
+            {{/admin}}
         </div>
     </div>
 </div>
@@ -21,7 +26,6 @@
                 {{user.firstname}} {{user.lastname}}
             </h1>
             {{#user.company}}<p class="text-center mxt-text-speaker-company">{{user.company}}</p>{{/user.company}}
-            {{#admin}}<a href="/admin/users/edit/{{user.login}}">{{#i18n}}admin.talks.actions.update{{/i18n}}</a> <br/>{{/admin}}
 
             {{#markdown}}{{user.description}}{{/markdown}}
             <ul class="menu simple">
