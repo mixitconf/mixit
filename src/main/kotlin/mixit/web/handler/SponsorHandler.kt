@@ -1,6 +1,5 @@
 package mixit.web.handler
 
-import mixit.MixitProperties
 import mixit.model.EventSponsoring
 import mixit.model.Language
 import mixit.model.SponsorshipLevel
@@ -12,15 +11,12 @@ import mixit.util.language
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
-import org.springframework.web.util.UriUtils
-import java.nio.charset.StandardCharsets
 import java.time.LocalDate
 import java.util.*
 
 @Component
 class SponsorHandler(private val userRepository: UserRepository,
                      private val eventRepository: EventRepository,
-                     private val properties: MixitProperties,
                      private val markdownConverter: MarkdownConverter) {
 
     fun viewWithSponsors(year: Int, req: ServerRequest) =
@@ -83,7 +79,6 @@ class SponsorHandler(private val userRepository: UserRepository,
                                                 Pair("title", if (!view.equals("sponsors")) title else "$title|$year"),
                                                 Pair("sponsors-main", mainSponsor),
                                                 Pair("sponsors-others", otherSponsors),
-                                                Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
                                                 Pair("stars-old", oldStars.subList(0,6)),
                                                 Pair("stars-current", currentStars.subList(0,6))
                                         ))

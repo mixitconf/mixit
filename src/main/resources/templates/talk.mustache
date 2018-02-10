@@ -6,9 +6,9 @@
             <ul class="menu center">
                 {{#speakers}}
                     <li class="menu-text">
-                        <a href="{{baseUri}}/user/{{login}}"><img src="{{^emailHash}}{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{/emailHash}}{{#emailHash}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/emailHash}}"
+                        <a href="/user/{{login}}"><img src="{{^emailHash}}{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{/emailHash}}{{#emailHash}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/emailHash}}"
                              class="mxt-img-avatar__speaker"></a>
-                        <div><a href="{{baseUri}}/user/{{login}}">{{firstname}}&nbsp;{{lastname}}</a>   </div>
+                        <div><a href="/user/{{login}}">{{firstname}}&nbsp;{{lastname}}</a>   </div>
                     </li>
                 {{/speakers}}
             </ul>
