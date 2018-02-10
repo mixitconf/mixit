@@ -1,0 +1,14 @@
+<div class="column column-block">
+    <a href="/user/{{login}}">
+        <div class="mxt-img--container">
+            <picture>
+                <source srcset="{{baseUri}}/images/speakers/{{key}}.webp" type=" image/webp" alt="speaker-spolsky" class="mxt-img--speakers">
+                <source srcset="{{baseUri}}/images/speakers/{{key}}.jpg" alt="speaker-spolsky" class="mxt-img--speakers">
+                <img src="{{baseUri}}/images/speakers/{{key}}.jpg" alt="speaker-spolsky" class="mxt-img--speakers">
+            </picture>
+            <div class="mxt-img--overlay"><img src="{{baseUri}}/images/svg/mxt-icon--network.svg" class="mxt-icon--network" alt="network"></div>
+        </div>
+    </a>
+    <span class="lead">{{name}}</span><br/>
+    <p class="mxt-text--speakers">{{#i18n}}home.speakers.{{key}}{{/i18n}}</p>
+</div>

@@ -1433,7 +1433,7 @@
         "room": "UNKNOWN",
         "slug": "katrina-owen-succession--a-refactoring-story",
         "speakerIds": [
-            "103086746"
+            "kowen"
         ],
         "start": "2016-04-22T14:20:00",
         "summary": "Refactoring sometimes devolves into an appalling mess. You're chasing a broken test suite, and every change just makes it worse. At other times it's a slow, controlled process culminating in dreadful design.\n\nThis talk presents an end-to-end refactoring that demonstrates strategies to avoid this.",

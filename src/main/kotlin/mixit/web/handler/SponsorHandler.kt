@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import java.time.LocalDate
+import java.util.*
 
 @Component
 class SponsorHandler(private val userRepository: UserRepository,
@@ -44,22 +45,53 @@ class SponsorHandler(private val userRepository: UserRepository,
             eventRepository
                     .findByYear(year)
                     .flatMap { event ->
-                        userRepository
-                                .findMany(event.sponsors.map { it.sponsorId })
-                                .collectMap(User::login)
-                                .flatMap { sponsorsByLogin ->
-                                    val sponsorsByEvent = event.sponsors.groupBy { it.level }
+                        val isHomePage = view.equals("home")
 
-                                    ServerResponse.ok().render(view, mapOf(
-                                            Pair("year", year),
-                                            Pair("imagepath", "/"),
-                                            Pair("title", if (!view.equals("sponsors")) title else "$title|$year"),
-                                            Pair("sponsors-main", sponsorsByEvent[spolight]?.map { it.toSponsorDto(sponsorsByLogin[it.sponsorId]!!) }),
-                                            Pair("sponsors-others", event.sponsors
-                                                    .filter { it.level != SponsorshipLevel.GOLD }
-                                                    .map { it.toSponsorDto(sponsorsByLogin[it.sponsorId]!!) }
-                                                    .distinctBy { it.login })
-                                    ))
+                        val ids = event.sponsors.map { it.sponsorId }.toMutableList()
+
+                        if(isHomePage){
+                            // We adds speaker stars
+                            ids.addAll(UserHandler.speakerStarInCurrentEvent)
+                            ids.addAll(UserHandler.speakerStarInHistory)
+                        }
+
+                        userRepository
+                                .findMany(ids)
+                                .collectMap(User::login)
+                                .flatMap { usersByLogin ->
+                                    val sponsorsByEvent = event.sponsors.groupBy { it.level }
+                                    val mainSponsor=sponsorsByEvent[spolight]?.map { it.toSponsorDto(usersByLogin[it.sponsorId]!!) }
+
+                                    val otherSponsors = event.sponsors
+                                            .filter { it.level != SponsorshipLevel.GOLD }
+                                            .map { it.toSponsorDto(usersByLogin[it.sponsorId]!!) }
+                                            .distinctBy { it.login }
+
+                                    if(view.equals("home")){
+                                        val oldStars =  UserHandler.speakerStarInHistory.map { usersByLogin[it]!!.toSpeakerStarDto() }.toMutableList()
+                                        val currentStars =  UserHandler.speakerStarInCurrentEvent.map { usersByLogin[it]!!.toSpeakerStarDto() }.toMutableList()
+                                        Collections.shuffle(oldStars)
+                                        Collections.shuffle(currentStars)
+
+                                        ServerResponse.ok().render(view, mapOf(
+                                                Pair("year", year),
+                                                Pair("imagepath", "/"),
+                                                Pair("title", if (!view.equals("sponsors")) title else "$title|$year"),
+                                                Pair("sponsors-main", mainSponsor),
+                                                Pair("sponsors-others", otherSponsors),
+                                                Pair("stars-old", oldStars.subList(0,6)),
+                                                Pair("stars-current", currentStars.subList(0,6))
+                                        ))
+                                    }
+                                    else{
+                                        ServerResponse.ok().render(view, mapOf(
+                                                Pair("year", year),
+                                                Pair("imagepath", "/"),
+                                                Pair("title", if (!view.equals("sponsors")) title else "$title|$year"),
+                                                Pair("sponsors-main", mainSponsor),
+                                                Pair("sponsors-others", otherSponsors)
+                                        ))
+                                    }
                                 }
                     }
 }

@@ -137,158 +137,32 @@
 <div class="mxt-wrapper--white">
     <div class="row">
         <div class="column column-block">
-
+            <h2 class="text-center">
+                <small>{{#i18n}}home.speakers.current.title{{/i18n}}</small>
+            </h2>
+            <br>
+            <div class="row small-up-2 medium-up-3 large-up-6">
+                {{#stars-current}}
+                    {{> home-speaker }}
+                {{/stars-current}}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column column-block">
             <h2 class="text-center">
                 <small>{{#i18n}}home.speakers.title{{/i18n}}</small>
             </h2>
             <br>
-            <div class="row small-up-2 medium-up-3 large-up-5">
-
-                <div class="column column-block">
-                    <a href="https://www.joelonsoftware.com/" target="_blank">
-                        <div class="mxt-img--container">
-                            <picture>
-                                <source srcset="/images/speakers/spolsky.webp" type=" image/webp" alt="speaker-spolsky" class="mxt-img--speakers">
-                                <source srcset="/images/speakers/spolsky.jpg" alt="speaker-spolsky" class="mxt-img--speakers">
-                                <img src="/images/speakers/spolsky.jpg" alt="speaker-spolsky" class="mxt-img--speakers">
-                            </picture>
-                            <div class="mxt-img--overlay"><img src="/images/svg/mxt-icon--network.svg" class="mxt-icon--network" alt="network"></div>
-                        </div>
-                    </a>
-                    <span class="lead">Joel Spolsky</span><br/>
-                    <p class="mxt-text--speakers">{{#i18n}}home.speakers.spolsky{{/i18n}}</p>
-                </div>
-                <div class="column column-block">
-                    <a href="https://twitter.com/tastapod" target="_blank">
-                        <div class="mxt-img--container">
-                            <picture>
-                                <source srcset="/images/speakers/north.webp" type=" image/webp" alt="speaker-north" class="mxt-img--speakers">
-                                <source srcset="/images/speakers/north.jpg" alt="speaker-north" class="mxt-img--speakers">
-                                <img src="/images/speakers/north.jpg" alt="speaker-north" class="mxt-img--speakers">
-                            </picture>
-                            <div class="mxt-img--overlay"><img src="/images/svg/mxt-icon--network.svg" class="mxt-icon--network" alt="network"></div>
-                        </div>
-                    </a>
-                    <span class="lead">Dan North</span><br/>
-                    <p class="mxt-text--speakers">{{#i18n}}home.speakers.north{{/i18n}}</p>
-                </div>
-                <div class="column column-block">
-                    <a href="https://twitter.com/pamelafox" target="_blank">
-                        <div class="mxt-img--container">
-                            <picture>
-                                <source srcset="/images/speakers/fox.webp" type=" image/webp" alt="speaker-fox" class="mxt-img--speakers">
-                                <source srcset="/images/speakers/fox.jpg" alt="speaker-fox" class="mxt-img--speakers">
-                                <img src="/images/speakers/fox.jpg" alt="speaker-fox" class="mxt-img--speakers">
-                            </picture>
-                            <div class="mxt-img--overlay"><img src="/images/svg/mxt-icon--network.svg" class="mxt-icon--network" alt="network"></div>
-                        </div>
-                    </a>
-                    <span class="lead">Pamela Fox</span><br/>
-                    <p class="mxt-text--speakers">{{#i18n}}home.speakers.fox{{/i18n}}</p>
-                </div>
-                <div class="column column-block hide-for-medium-only">
-                    <a href="https://twitter.com/matti_sg" target="_blank">
-                        <div class="mxt-img--container">
-                            <picture>
-                                <source srcset="/images/speakers/schneider.webp" type=" image/webp" alt="speaker-schneider" class="mxt-img--speakers">
-                                <source srcset="/images/speakers/schneider.jpg" alt="speaker-schneider" class="mxt-img--speakers">
-                                <img src="/images/speakers/schneider.jpg" alt="speaker-schneider" class="mxt-img--speakers">
-                            </picture>
-                            <div class="mxt-img--overlay"><img src="/images/svg/mxt-icon--network.svg" class="mxt-icon--network" alt="network"></div>
-                        </div>
-                    </a>
-                    <span class="lead">Matti Schneider</span><br/>
-                    <p class="mxt-text--speakers">{{#i18n}}home.speakers.schneider{{/i18n}}</p>
-                </div>
-                <div class="column column-block">
-                    <a href="https://twitter.com/bodil" target="_blank">
-                        <div class="mxt-img--container">
-                            <picture>
-                                <source srcset="/images/speakers/stokke.webp" type=" image/webp" alt="speaker-stokke" class="mxt-img--speakers">
-                                <source srcset="/images/speakers/stokke.jpg" alt="speaker-stokke" class="mxt-img--speakers">
-                                <img src="/images/speakers/stokke.jpg" alt="speaker-stokke" class="mxt-img--speakers">
-                            </picture>
-                            <div class="mxt-img--overlay"><img src="/images/svg/mxt-icon--network.svg" class="mxt-icon--network" alt="network"></div>
-                        </div>
-                    </a>
-                    <span class="lead">Bodil Stokke</span><br/>
-                    <p class="mxt-text--speakers">{{#i18n}}home.speakers.stokke{{/i18n}}</p>
-                </div>
-                <div class="column column-block">
-                    <a href="https://twitter.com/mojavelinux" target="_blank">
-                        <div class="mxt-img--container">
-                            <picture>
-                                <source srcset="/images/speakers/allen.webp" type=" image/webp" alt="speaker-allen" class="mxt-img--speakers">
-                                <source srcset="/images/speakers/allen.jpg" alt="speaker-allen" class="mxt-img--speakers">
-                                <img src="/images/speakers/allen.jpg" alt="speaker-allen" class="mxt-img--speakers">
-                            </picture>
-                            <div class="mxt-img--overlay"><img src="/images/svg/mxt-icon--network.svg" class="mxt-icon--network" alt="network"></div>
-                        </div>
-                    </a>
-                    <span class="lead">Dan Allen</span><br/>
-                    <p class="mxt-text--speakers">{{#i18n}}home.speakers.allen{{/i18n}}</p>
-                </div>
-                <div class="column column-block">
-                    <a href="https://twitter.com/waitbutwhy" target="_blank">
-                        <div class="mxt-img--container">
-                            <picture>
-                                <source srcset="/images/speakers/breslav.webp" type=" image/webp" alt="speaker-breslav" class="mxt-img--speakers">
-                                <source srcset="/images/speakers/breslav.jpg" alt="speaker-breslav" class="mxt-img--speakers">
-                                <img src="/images/speakers/breslav.jpg" alt="speaker-breslav" class="mxt-img--speakers">
-                            </picture>
-                            <div class="mxt-img--overlay"><img src="/images/svg/mxt-icon--network.svg" class="mxt-icon--network" alt="network"></div>
-                        </div>
-                    </a>
-                    <span class="lead">Andrey Breslav</span><br/>
-                    <p class="mxt-text--speakers">{{#i18n}}home.speakers.breslav{{/i18n}}</p>
-                </div>
-                <div class="column column-block">
-                    <a href="https://twitter.com/kytrinyx" target="_blank">
-                        <div class="mxt-img--container">
-                            <picture>
-                                <source srcset="/images/speakers/owen.webp" type=" image/webp" alt="speaker-owen" class="mxt-img--speakers">
-                                <source srcset="/images/speakers/owen.jpg" alt="speaker-owen" class="mxt-img--speakers">
-                                <img src="/images/speakers/owen.jpg" alt="speaker-owen" class="mxt-img--speakers">
-                            </picture>
-                            <div class="mxt-img--overlay"><img src="/images/svg/mxt-icon--network.svg" class="mxt-icon--network" alt="network"></div>
-                        </div>
-                    </a>
-                    <span class="lead">Katrina Owen</span><br/>
-                    <p class="mxt-text--speakers">{{#i18n}}home.speakers.owen{{/i18n}}</p>
-                </div>
-                <div class="column column-block">
-                    <a href="https://twitter.com/ppezziardi" target="_blank">
-                        <div class="mxt-img--container">
-                            <picture>
-                                <source srcset="/images/speakers/piezzardi.webp" type=" image/webp" alt="speaker-piezzardi" class="mxt-img--speakers">
-                                <source srcset="/images/speakers/piezzardi.jpg" alt="speaker-piezzardi" class="mxt-img--speakers">
-                                <img src="/images/speakers/piezzardi.jpg" alt="speaker-piezzardi" class="mxt-img--speakers">
-                            </picture>
-                            <div class="mxt-img--overlay"><img src="/images/svg/mxt-icon--network.svg" class="mxt-icon--network" alt="network"></div>
-                        </div>
-                    </a>
-                    <span class="lead">Pierre Piezzardi</span><br/>
-                    <p class="mxt-text--speakers">{{#i18n}}home.speakers.piezzardi{{/i18n}}</p>
-                </div>
-                <div class="column column-block">
-                    <a href="https://twitter.com/nitot" target="_blank">
-                        <div class="mxt-img--container">
-                            <picture>
-                                <source srcset="/images/speakers/rising.webp" type=" image/webp" alt="speaker-rising" class="mxt-img--speakers">
-                                <source srcset="/images/speakers/rising.jpg" alt="speaker-rising" class="mxt-img--speakers">
-                                <img src="/images/speakers/rising.jpg" alt="speaker-rising" class="mxt-img--speakers">
-                            </picture>
-                            <div class="mxt-img--overlay"><img src="/images/svg/mxt-icon--network.svg" class="mxt-icon--network" alt="network"></div>
-                        </div>
-                    </a>
-                    <span class="lead">Linda Rising</span><br/>
-                    <p class="mxt-text--speakers">{{#i18n}}home.speakers.rising{{/i18n}}</p>
-                </div>
+            <div class="row small-up-2 medium-up-3 large-up-6">
+                {{#stars-old}}
+                    {{> home-speaker }}
+                {{/stars-old}}
             </div>
-
         </div>
     </div>
 </div>
+
 
 <div class="row">
     <div class="column">

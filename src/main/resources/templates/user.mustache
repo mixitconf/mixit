@@ -1,0 +1,87 @@
+{{> header}}
+
+<div class="mxt-wrapper--talks">
+    <div class="row">
+        <div class="columns large-12 menu-centered">
+            <ul class="menu center">
+                    <li class="menu-text">
+                        <img src="{{^user.emailHash}}{{#user.photoUrl}}{{user.photoUrl}}{{/user.photoUrl}}{{/user.emailHash}}{{#user.emailHash}}https://www.gravatar.com/avatar/{{user.emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/user.emailHash}}"
+                                                                  class="mxt-img-avatar__speaker">
+                        <div>Speaker</div>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="mxt-wrapper--page-content">
+    <div class="row">
+        <div class="column large-12 callout">
+            <h1 class="text-center mxt-title--talk">
+                {{user.firstname}} {{user.lastname}}
+            </h1>
+            {{#user.company}}<p class="text-center mxt-text-speaker-company">{{user.company}}</p>{{/user.company}}
+
+            {{#markdown}}{{user.description}}{{/markdown}}
+            <ul class="menu simple">
+                {{#user.links}}
+                    <li><a href="{{url}}">{{name}}</a></li>
+                {{/user.links}}
+            </ul>
+
+            <br>
+
+            <hr/>
+
+            <div class="row">
+
+                <div class="columns small-12 medium-12 large-12 callout">
+                    <ul class="accordion" data-accordion>
+                        {{#talks}}
+                            <li class="accordion-item" data-accordion-item>
+                                <!-- Accordion tab title -->
+                                <a href="#" class="accordion-title">
+                                    <h3 class="mxt-text--talktitle"><b>{{event}}</b> - {{title}}{{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
+                                    </h3>
+                                    <ul class="menu simple mxt-menu--accordion">
+                                        {{#video}}
+                                            <li><strong>&#x25ba; {{#i18n}}talks.title.video{{/i18n}}</strong></li>{{/video}}
+                                        {{^isTalk}}
+                                            <li class="mxt-text--cat-format">#{{format}}</li>{{/isTalk}}
+                                    </ul>
+                                </a>
+                                <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+                                <div class="accordion-content" data-tab-content>
+                                    <div class="row">
+                                        <div class="small-7 medium-9 large-8 columns">
+                                            {{#speakers}}
+                                                <p class="mxt-text--cat-room">{{firstname}} {{lastname}}</p>
+                                            {{/speakers}}
+                                            <div>{{#markdown}}{{summary}}{{/markdown}}</div>
+                                            <br>
+                                        </div>
+                                        <div class="small-5 medium-3 large-4 columns text-center">
+                                            <a href="{{localePrefix}}/{{event}}/{{slug}}" class="button hollow">{{#i18n}}talks.readmore{{/i18n}}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        {{/talks}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <article class="callout">
+        <div class="row">
+            <div class="column large-12">
+
+
+                <br/>
+            </div>
+        </div>
+    </article>
+</div>
+
+{{> footer}}
