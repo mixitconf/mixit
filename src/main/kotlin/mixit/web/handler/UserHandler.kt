@@ -38,7 +38,7 @@ class UserHandler(private val repository: UserRepository,
                 "bodil",
                 "mojavelinux",
                 "andrey.breslav",
-                "kowen",
+                //"kowen",
                 "ppezziardi",
                 "rising.linda")
         val speakerStarInCurrentEvent = listOf(
