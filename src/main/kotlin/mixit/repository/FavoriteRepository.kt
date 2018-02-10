@@ -46,4 +46,6 @@ class FavoriteRepository(private val template: ReactiveMongoTemplate, val crypto
 
     fun delete(email: String, talkId: String) = template.remove<Favorite>(Query(Criteria.where("email").isEqualTo(cryptographer.encrypt(email))
             .andOperator(Criteria.where("talkId").isEqualTo(talkId))))
+
+    fun deleteAll() = template.remove<Favorite>(Query())
 }

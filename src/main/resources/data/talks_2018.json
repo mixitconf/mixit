@@ -1,25 +1,5 @@
 [
     {
-        "addedAt": "2018-01-30T12:47:04.663",
-        "description": null,
-        "end": "2018-04-19T08:50:00",
-        "event": "2018",
-        "format": "TALK",
-        "id": "5a706948840deb00141a724d",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "webassembly",
-        "speakerIds": [
-            "benjamin.bouvier"
-        ],
-        "start": "2018-04-19T08:00:00",
-        "summary": "tbd",
-        "title": "Webassembly",
-        "topic": "tech",
-        "video": null
-    },
-    {
         "addedAt": "2018-01-30T12:47:03.038",
         "description": "",
         "end": "2018-04-19T08:50:00",
@@ -1495,6 +1475,26 @@
         "summary": "Les illusions nous montrent que malgr\u00e8 la complexit\u00e9 des op\u00e9rations que le cerveau r\u00e9alise pour appr\u00e9hender la r\u00e9alit\u00e9, nous ne percevons pas cette r\u00e9alit\u00e9. Elles permettent d\u2019explorer comment notre perception r\u00e9sout les multiples probl\u00e8mes pos\u00e9s par l\u2019ambigu\u00eft\u00e9 des signaux que nous recevons, et comment le cerveau choisi rapidement l'interpr\u00e9tation la plus probable. \r\n\r\nEn d\u00e9pit des apparences, la communication ob\u00e9it aux m\u00eames r\u00e8gles que la perception : le cerveau pr\u00e9f\u00e8re tout miser sur une interpr\u00e9tation que de rester dans l\u2019ambig\u00fcit\u00e9, au risque de se tromper tout en croyant avoir raison. Alors comment pouvons-nous rester disponible \u00e0 la r\u00e9alit\u00e9 de l'autre et conserver une communication ouverte et constructive ?",
         "title": "Percevoir et communiquer: r\u00e9alit\u00e9 et fictions personnelles",
         "topic": "aliens",
+        "video": null
+    },
+    {
+        "addedAt": "2018-01-30T12:47:04.663",
+        "description": "Un an apr\u00e8s la sortie de la version MVP (minimum viable product) de WebAssembly, de nombreux usages \u00e9mergent et laissent entrevoir les possibilit\u00e9s futures du format binaire accessible dans tous les navigateurs Web modernes. Pourquoi s'int\u00e9resser \u00e0 WebAssembly aujourd'hui ? Est-ce que c'est fait pour moi ? Est-ce que c'est simple \u00e0 utiliser ? Comment je peux en tirer profit facilement d\u00e9s aujourd'hui ? Nous essayerons ensemble de r\u00e9pondre \u00e0 ces questions, puis nous verrons comment cr\u00e9er et int\u00e9grer du code WebAssembly, en passant par toutes les \u00e9tapes, de l'\u00e9criture du code source initial (dans un autre langage que JS, mais pas de panique !) jusqu'\u00e0 l'int\u00e9gration dans une application Web.",
+        "end": "2018-04-19T08:50:00",
+        "event": "2018",
+        "format": "TALK",
+        "id": "5a706948840deb00141a724d",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "UNKNOWN",
+        "slug": "faciliter-le-developpement-d-applications-web-performantes-avec-webassembly",
+        "speakerIds": [
+            "benjamin.bouvier"
+        ],
+        "start": "2018-04-19T08:00:00",
+        "summary": "Un an apr\u00e8s la sortie de la version MVP (minimum viable product) de WebAssembly, de nombreux usages \u00e9mergent et laissent entrevoir les possibilit\u00e9s futures du format binaire accessible dans tous les navigateurs Web modernes. Pourquoi s'int\u00e9resser \u00e0 WebAssembly aujourd'hui ? Est-ce que c'est fait pour moi ? Est-ce que c'est simple \u00e0 utiliser ? Comment je peux en tirer profit facilement d\u00e9s aujourd'hui ? Nous essayerons ensemble de r\u00e9pondre \u00e0 ces questions, puis nous verrons comment cr\u00e9er et int\u00e9grer du code WebAssembly, en passant par toutes les \u00e9tapes, de l'\u00e9criture du code source initial (dans un autre langage que JS, mais pas de panique !) jusqu'\u00e0 l'int\u00e9gration dans une application Web.",
+        "title": "Faciliter le d\u00e9veloppement d'applications Web performantes avec WebAssembly",
+        "topic": "tech",
         "video": null
     }
 ]
