@@ -7,7 +7,6 @@ import mixit.repository.FavoriteRepository
 import mixit.repository.TalkRepository
 import mixit.repository.UserRepository
 import mixit.util.*
-import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
@@ -27,8 +26,6 @@ class TalkHandler(private val repository: TalkRepository,
                   private val properties: MixitProperties,
                   private val markdownConverter: MarkdownConverter,
                   private val favoriteRepository: FavoriteRepository) {
-
-    private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun findByEventView(year: Int, req: ServerRequest, filterOnFavorite: Boolean, topic: String? = null): Mono<ServerResponse> =
             req.session().flatMap {

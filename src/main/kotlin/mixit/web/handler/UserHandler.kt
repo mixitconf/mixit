@@ -12,12 +12,14 @@ import mixit.util.json
 import mixit.util.language
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
+import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.created
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.body
 import org.springframework.web.reactive.function.server.bodyToMono
 import org.springframework.web.util.UriUtils
 import reactor.core.publisher.toMono
+import java.net.URI
 import java.net.URI.create
 import java.net.URLDecoder
 import java.nio.charset.StandardCharsets
@@ -62,6 +64,18 @@ class UserHandler(private val repository: UserRepository,
                 repository.findOne(URLDecoder.decode(req.pathVariable("login"), "UTF-8")).flatMap { findOneViewDetail(it, req) }
             }
 
+    fun findProfile(req: ServerRequest)=
+            req.session().flatMap {
+                val currentUserEmail = it.getAttribute<String>("email")
+
+                if(currentUserEmail==null){
+                    ServerResponse.temporaryRedirect(URI("${properties.baseUri}/")).build()
+                }
+                else {
+                    repository.findByEmail(currentUserEmail).flatMap { findOneViewDetail(it, req) }
+                }
+            }
+
     private fun findOneViewDetail(user: User, req: ServerRequest) =
             talkRepository
                     .findBySpeakerId(listOf(user.login))
@@ -72,6 +86,7 @@ class UserHandler(private val repository: UserRepository,
                                 .render("user", mapOf(
                                         Pair("user", user.toDto(req.language(), markdownConverter)),
                                         Pair("talks", talks),
+                                        Pair("hasTalks", talks.isNotEmpty()),
                                         Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8))
                                 ))
                     }
@@ -88,6 +103,7 @@ class UserHandler(private val repository: UserRepository,
     fun create(req: ServerRequest) = repository.save(req.bodyToMono<User>()).flatMap {
         created(create("/api/user/${it.login}")).json().body(it.toMono())
     }
+
 }
 
 class SpeakerStarDto(

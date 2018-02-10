@@ -56,8 +56,13 @@
                 <div class="mxt-wrapper--row">
                     {{#en}}<a class="mxt-menu__item--lang mxt-menu__item--close-nav" href="{{switchLangUrl}}">Français</a>{{/en}}
                     {{#fr}}<a href="{{switchLangUrl}}" class="mxt-menu__item--lang mxt-menu__item--close-nav">English</a>{{/fr}}
-                    {{#connected}}<a href="{{localePrefix}}/disconnect" class="mxt-menu__item--nav mxt-menu__item--close-nav"><img src="/images/svg/security/mxt-lock--close.svg" title="{{#i18n}}header.menu.logout{{/i18n}}" class="mxt-icon--top-bar"></a>{{/connected}}
-                    {{^connected}}<a href="{{localePrefix}}/login" class="mxt-menu__item--nav mxt-menu__item--close-nav"><img src="/images/svg/security/mxt-lock--open.svg" title="{{#i18n}}header.menu.login{{/i18n}}" class="mxt-icon--top-bar"></a>{{/connected}}
+                    {{#connected}}
+                        <a href="{{localePrefix}}/profile" class="mxt-menu__item--nav mxt-menu__item--close-nav"><img src="/images/svg/mxt-profile.svg" title="{{#i18n}}header.menu.profile{{/i18n}}" class="mxt-icon--top-bar"></a>
+                        <a href="{{localePrefix}}/disconnect" class="mxt-menu__item--nav mxt-menu__item--close-nav"><img src="/images/svg/security/mxt-lock--close.svg" title="{{#i18n}}header.menu.logout{{/i18n}}" class="mxt-icon--top-bar"></a>
+                    {{/connected}}
+                    {{^connected}}
+                        <a href="{{localePrefix}}/login" class="mxt-menu__item--nav mxt-menu__item--close-nav"><img src="/images/svg/security/mxt-lock--open.svg" title="{{#i18n}}header.menu.login{{/i18n}}" class="mxt-icon--top-bar"></a>
+                    {{/connected}}
                 </div>
             </li>
           </ul>

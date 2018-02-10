@@ -60,6 +60,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
             GET("/schedule", globalHandler::scheduleView)
             GET("/cfp") { talkHandler.findByEventView(2018, it, false) }
             GET("/user/{login}") { userHandler.findOneView(it) }
+            GET("/profile") { userHandler.findProfile(it) }
 
             // Authentication
             GET("/login", authenticationHandler::loginView)
