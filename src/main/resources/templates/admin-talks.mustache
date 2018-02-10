@@ -3,7 +3,20 @@
 <div class="mxt-wrapper--page-title">
     <div class="row">
         <div class="columns large-12">
-            <h1 class="text-center">{{#i18n}}admin.talks.title{{/i18n}}</h1>
+            <ul class="dropdown menu simple mxt-menu--talks text-center" data-dropdown-menu>
+                <li class="mxt-menu--talks-title"><h1>{{#i18n}}admin.talks.title{{/i18n}}</h1></li>
+                <li><a href="#" class="mxt-menu--talks-date"><h1>{{year}}</h1></a>
+                    <ul class="menu">
+                        <li><a href="{{localePrefix}}/admin/talks/2018{{#topic}}/{{topic}}{{/topic}}">2018</a></li>
+                        <li><a href="{{localePrefix}}/admin/talks/2017{{#topic}}/{{topic}}{{/topic}}">2017</a></li>
+                        <li><a href="{{localePrefix}}/admin/talks/2016{{#topic}}/{{topic}}{{/topic}}">2016</a></li>
+                        <li><a href="{{localePrefix}}/admin/talks/2015{{#topic}}/{{topic}}{{/topic}}">2015</a></li>
+                        <li><a href="{{localePrefix}}/admin/talks/2014{{#topic}}/{{topic}}{{/topic}}">2014</a></li>
+                        <li><a href="{{localePrefix}}/admin/talks/2013{{#topic}}/{{topic}}{{/topic}}">2013</a></li>
+                        <li><a href="{{localePrefix}}/admin/talks/2012{{#topic}}/{{topic}}{{/topic}}">2012</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
 </div>
