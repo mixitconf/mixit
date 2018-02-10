@@ -28,7 +28,7 @@
 
 
 <div class="mxt-wrapper--page-content">
-    <div class="row">
+    <div class="row mxt-wrapper--row">
         {{#talks.entrySet}}
             <div class="columns small-12 medium-12 {{#has2Columns}}large-6{{/has2Columns}}{{^has2Columns}}large-12{{/has2Columns}} callout">
                 <!--{{#key}}<h2>{{key}}</h2><br/>{{/key}}-->
@@ -67,7 +67,7 @@
                             </a>
                             <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
                             <div class="accordion-content" data-tab-content>
-                                <div class="row">
+                                <div class="row mxt-wrapper--row">
                                     <div class="small-7 medium-9 large-8 columns">
                                         <p class="mxt-text--cat-room">{{#i18n}}{{room}}{{/i18n}}</p>
                                         <div>{{#markdown}}{{summary}}{{/markdown}}</div>
