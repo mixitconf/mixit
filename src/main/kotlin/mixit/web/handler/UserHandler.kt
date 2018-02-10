@@ -38,7 +38,7 @@ class UserHandler(private val repository: UserRepository,
                 "bodil",
                 "mojavelinux",
                 "andrey.breslav",
-                "103086746",
+                "kowen",
                 "ppezziardi",
                 "rising.linda")
         val speakerStarInCurrentEvent = listOf(
@@ -96,7 +96,7 @@ class SpeakerStarDto(
         val name: String
 )
 
-fun User.toSpeakerStarDto() = SpeakerStarDto(login, lastname.decapitalize(), "$firstname $lastname")
+fun User.toSpeakerStarDto() = SpeakerStarDto(login, lastname.toLowerCase(), "$firstname $lastname")
 
 class UserDto(
         val login: String,
