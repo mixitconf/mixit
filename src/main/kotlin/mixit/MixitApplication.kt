@@ -2,6 +2,7 @@ package mixit
 
 import com.samskivert.mustache.Mustache
 import com.samskivert.mustache.Mustache.TemplateLoader
+import mixit.web.SimpleEscapers
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.runApplication
@@ -14,9 +15,7 @@ class MixitApplication {
 
     @Bean
     fun mustacheCompiler(templateLoader: TemplateLoader): Mustache.Compiler =
-            //Mustache.compiler().withEscaper(SimpleEscapers().HTML).withLoader(templateLoader)
-            // TODO Find a way to disable HTML escaping before enabling user authentication
-            Mustache.compiler().escapeHTML(false).withLoader(templateLoader)
+            Mustache.compiler().withEscaper(SimpleEscapers().HTML).withLoader(templateLoader)
 }
 
 fun main(args: Array<String>) {
