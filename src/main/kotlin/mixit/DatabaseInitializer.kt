@@ -14,13 +14,6 @@ class DatabaseInitializer(private val userRepository: UserRepository,
 
     @PostConstruct
     fun init() {
-        userRepository.deleteAll().block()
-        eventRepository.deleteAll().block()
-        talkRepository.deleteAll().block()
-        postRepository.deleteAll().block()
-        ticketRepository.deleteAll().block()
-        favoriteRepository.deleteAll().block()
-
         userRepository.initData()
         eventRepository.initData()
         talkRepository.initData()
