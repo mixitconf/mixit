@@ -2,7 +2,7 @@ package mixit
 
 import com.samskivert.mustache.Mustache
 import com.samskivert.mustache.Mustache.TemplateLoader
-import mixit.web.MustacheEscapers
+import mixit.web.StringEscapers
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.runApplication
@@ -15,7 +15,7 @@ class MixitApplication {
 
     @Bean
     fun mustacheCompiler(templateLoader: TemplateLoader): Mustache.Compiler =
-            Mustache.compiler().withEscaper(MustacheEscapers().HTML).withLoader(templateLoader)
+            Mustache.compiler().withEscaper(StringEscapers().HTML).withLoader(templateLoader)
 }
 
 fun main(args: Array<String>) {

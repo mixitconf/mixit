@@ -8,9 +8,9 @@ import org.owasp.html.Sanitizers
  * @author Dev-Mind <guillaume@dev-mind.fr>
  * @since 16/01/18.
  */
-class MustacheEscapers {
+class StringEscapers {
 
-    val policy = Sanitizers.FORMATTING
+    val htmlPolicy = Sanitizers.FORMATTING
             .and(Sanitizers.LINKS)
             .and(Sanitizers.TABLES)
             .and(Sanitizers.BLOCKS)
@@ -22,5 +22,9 @@ class MustacheEscapers {
                     .toFactory())
             .and(HtmlPolicyBuilder().allowAttributes("class").globally().toFactory())
 
-    val HTML: Mustache.Escaper =  Mustache.Escaper { text -> policy.sanitize(text) }
+    val markdownPolicy = Sanitizers.FORMATTING
+
+    val HTML: Mustache.Escaper =  Mustache.Escaper { text -> htmlPolicy.sanitize(text) }
+
+    val MARKDOWN: Mustache.Escaper =  Mustache.Escaper { text -> markdownPolicy.sanitize(text) }
 }
