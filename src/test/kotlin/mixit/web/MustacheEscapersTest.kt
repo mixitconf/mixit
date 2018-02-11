@@ -7,9 +7,9 @@ import org.junit.jupiter.api.Test
 /**
  * Test {@link SimpleEscapers}
  */
-class SimpleEscapersTest {
+class MustacheEscapersTest {
 
-    val escaper = SimpleEscapers().HTML
+    val escaper = MustacheEscapers().HTML
 
     @Test
     fun `should sanitize HTML with images`() {

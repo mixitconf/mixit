@@ -8,7 +8,7 @@ import org.owasp.html.Sanitizers
  * @author Dev-Mind <guillaume@dev-mind.fr>
  * @since 16/01/18.
  */
-class SimpleEscapers {
+class MustacheEscapers {
 
     val policy = Sanitizers.FORMATTING
             .and(Sanitizers.LINKS)
