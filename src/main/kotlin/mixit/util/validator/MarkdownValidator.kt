@@ -35,7 +35,6 @@ class MarkdownValidator {
         }
         if(!value.equals(escaper.escape(value))){
             System.out.println(value)
-            System.out.println(sanitize(value))
             System.out.println(escaper.escape(value))
         }
         return value.equals(escaper.escape(value))

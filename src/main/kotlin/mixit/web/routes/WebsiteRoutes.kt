@@ -60,8 +60,9 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
             GET("/schedule", globalHandler::scheduleView)
             GET("/cfp") { talkHandler.findByEventView(2018, it, false) }
             GET("/user/{login}") { userHandler.findOneView(it) }
-            GET("/me") { userHandler.findProfile(it) }
-            GET("/me/edit", userHandler::editProfile)
+            GET("/me") { userHandler.findProfileView(it) }
+            GET("/me/edit", userHandler::editProfileView)
+            GET("/me/talks/edit/{slug}", talkHandler::editTalkView)
 
             // Authentication
             GET("/login", authenticationHandler::loginView)
@@ -133,6 +134,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
             POST("/signup", authenticationHandler::signUp)
             POST("/signin", authenticationHandler::signIn)
             POST("/me", userHandler::saveProfile)
+            POST("/me/talks", talkHandler::saveProfileTalk)
 
             POST("/ticketing", ticketingHandler::submit)
             "/admin".nest {

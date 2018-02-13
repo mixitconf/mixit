@@ -34,16 +34,18 @@
             <h1 class="text-center mxt-title--talk" style="margin-bottom: 0">
                 {{user.firstname}} {{user.lastname}}
             </h1>
-            {{#user.company}}<p class="text-center mxt-text-speaker-company">{{user.company}}</p>{{/user.company}}
+            <div class="row">
+                <div class="columns small-12 medium-12 large-12 callout">
+                    {{#user.company}}<p class="text-center mxt-text-speaker-company">{{user.company}}</p>{{/user.company}}
 
-            {{#markdown}}{{user.description}}{{/markdown}}
-            <ul class="menu simple">
-                {{#user.links}}
-                    <li><a href="{{url}}">{{name}}</a></li>
-                {{/user.links}}
-            </ul>
-            <br>
-            <hr/>
+                    {{#markdown}}{{user.description}}{{/markdown}}
+                    <ul class="menu simple">
+                        {{#user.links}}
+                            <li><a href="{{url}}">{{name}}</a></li>
+                        {{/user.links}}
+                    </ul>
+                </div>
+            </div>
             <div class="row">
                 <div class="columns small-12 medium-12 large-12 callout">
                     <ul class="accordion" data-accordion>
@@ -54,24 +56,24 @@
                                     <h3 class="mxt-text--talktitle"><b>{{event}}</b> - {{title}}{{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
                                     </h3>
                                     <ul class="menu simple mxt-menu--accordion">
-                                        {{#video}}
-                                            <li><strong>&#x25ba; {{#i18n}}talks.title.video{{/i18n}}</strong></li>{{/video}}
-                                        {{^isTalk}}
-                                            <li class="mxt-text--cat-format">#{{format}}</li>{{/isTalk}}
+                                        {{#video}}<li><strong>&#x25ba; {{#i18n}}talks.title.video{{/i18n}}</strong></li>{{/video}}
+                                            <li class="mxt-text--cat-format">#{{format}}</li>
                                     </ul>
                                 </a>
                                 <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
                                 <div class="accordion-content" style="display: block">
                                     <div class="row mxt-wrapper--row">
                                         <div class="small-7 medium-9 large-8 columns">
-                                            {{#speakers}}
-                                                <p class="mxt-text--cat-room">{{firstname}} {{lastname}}</p>
-                                            {{/speakers}}
                                             <div>{{#markdown}}{{summary}}{{/markdown}}</div>
                                             <br>
                                         </div>
                                         <div class="small-5 medium-3 large-4 columns text-center">
                                             <a href="{{localePrefix}}/{{event}}/{{slug}}" class="button hollow">{{#i18n}}talks.readmore{{/i18n}}</a>
+                                            {{#isCurrentEdition}}
+                                                {{#canUpdateProfile}}
+                                                    <a href="{{localePrefix}}/me/talks/edit/{{slug}}" class="button hollow">{{#i18n}}talks.update{{/i18n}}</a>
+                                                {{/canUpdateProfile}}
+                                            {{/isCurrentEdition}}
                                         </div>
                                     </div>
                                 </div>
@@ -83,7 +85,5 @@
         </div>
     </div>
 </div>
-
-<script src="/js/profile.js"></script>
 
 {{> footer}}

@@ -1,0 +1,87 @@
+{{> header}}
+
+<div class="mxt-wrapper--page-title">
+    <div class="row">
+        <div class="columns large-12 menu-centered">
+            <ul class="menu center">
+                {{#speakers}}
+                    <li class="menu-text">
+                        <a href="/user/{{login}}"><img
+                                src="{{^emailHash}}{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{/emailHash}}{{#emailHash}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/emailHash}}"
+                                class="mxt-img-avatar__speaker"></a>
+                        <div><a href="/user/{{login}}">{{firstname}}&nbsp;{{lastname}}</a></div>
+                    </li>
+                {{/speakers}}
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="mxt-wrapper--page-content">
+    <form action="/me/talks" method="post">
+        <input type="hidden" name="id" value="{{talk.id}}"/>
+        <div class="row">
+            <div class="column large-12 callout">
+                <div class="large-8 large-centered columns">
+                    {{#hasErrors}}
+                        <div class="callout mxt-wrapper--error-callout">
+                            {{#errors.entrySet}}
+                                {{#i18n}}{{value}}{{/i18n}}<br>
+                            {{/errors.entrySet}}
+                        </div>
+                    {{/hasErrors}}
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <label class="{{#errors.title}}is-invalid-label{{/errors.title}}">
+                                {{#i18n}}talk.form.title{{/i18n}}
+                                <input type="text" name="title" class="{{#errors.title}}is-invalid-input{{/errors.title}}"
+                                       value="{{talk.title}}" required id="title" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <label class="{{#errors.summary}}is-invalid-label{{/errors.summary}}">
+                                {{#i18n}}talk.form.summary{{/i18n}}&nbsp;<span class="help-text">{{#i18n}}talk.form.summary.desc{{/i18n}}</span><br>
+                                <span class="help-text">{{#i18n}}talk.form.markdown{{/i18n}}</span>
+
+                                <textarea name="summary" rows="5" required
+                                          class="{{#errors.summary}}is-invalid-input{{/errors.summary}}">{{talk.summary}}</textarea>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <label class="{{#errors.description}}is-invalid-label{{/errors.description}}">
+                                {{#i18n}}talk.form.description{{/i18n}}&nbsp;<span class="help-text">{{#i18n}}talk.form.description.desc{{/i18n}}</span><br>
+                                <span class="help-text">{{#i18n}}talk.form.markdown{{/i18n}}</span>
+                                <textarea name="description" rows="10"
+                                          class="{{#errors.description}}is-invalid-input{{/errors.description}}">{{talk.description}}</textarea>
+
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <label class="{{#errors.language}}is-invalid-label{{/errors.language}}">
+                                {{#i18n}}admin.talk.form.language{{/i18n}}
+                                <select name="language" required class="{{#errors.language}}is-invalid-input{{/errors.language}}">
+                                    {{#languages}}
+                                        <option value="{{first}}"{{#second}} selected{{/second}}>{{first}}</option>
+                                    {{/languages}}
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-12 large-centered columns">
+                            <input type="submit" class="button expand" value="{{#i18n}}user.save{{/i18n}}"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+{{> footer}}

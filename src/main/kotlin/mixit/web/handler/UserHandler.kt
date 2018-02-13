@@ -74,17 +74,48 @@ class UserHandler(private val repository: UserRepository,
                         .flatMap { findOneViewDetail(it, "user", false, req, emptyMap()) }
             }
 
-    fun findProfile(req: ServerRequest) =
+    fun findProfileView(req: ServerRequest) =
             req.session().flatMap {
                 val currentUserEmail = it.getAttribute<String>("email")
                 repository.findByEmail(currentUserEmail!!).flatMap { findOneViewDetail(it, "user", true, req, emptyMap()) }
             }
 
-    fun editProfile(req: ServerRequest) =
+    fun editProfileView(req: ServerRequest) =
             req.session().flatMap {
                 val currentUserEmail = it.getAttribute<String>("email")
-                repository.findByEmail(currentUserEmail!!).flatMap { findOneViewDetail(it, "profile", false, req, emptyMap()) }
+                repository.findByEmail(currentUserEmail!!).flatMap { findOneViewDetail(it, "user-edit", false, req, emptyMap()) }
             }
+
+    private fun findOneViewDetail(user: User, view: String, canUpdateProfile: Boolean, req: ServerRequest, errors:Map<String, String>) =
+            talkRepository
+                    .findBySpeakerId(listOf(user.login))
+                    .collectList()
+                    .flatMap { talks ->
+
+                        val talkDtos = talks.map { talk -> talk.toDto(req.language(), listOf(user)) }
+
+                        if ("user-edit".equals(view))
+                            ok()
+                                    .render("user-edit", mapOf(
+                                            Pair("user", user.toDto(req.language(), markdownConverter)),
+                                            Pair("usermail", cryptographer.decrypt(user.email)),
+                                            Pair("description-fr", user.description[Language.FRENCH]),
+                                            Pair("description-en", user.description[Language.ENGLISH]),
+                                            Pair("userlinks", user.toLinkDtos()),
+                                            Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
+                                            Pair("errors", errors),
+                                            Pair("hasErrors", errors.isNotEmpty())
+                                    ))
+                        else
+                            ok()
+                                    .render(view, mapOf(
+                                            Pair("user", user.toDto(req.language(), markdownConverter)),
+                                            Pair("canUpdateProfile", canUpdateProfile),
+                                            Pair("talks", talkDtos),
+                                            Pair("hasTalks", talkDtos.isNotEmpty()),
+                                            Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8))
+                                    ))
+                    }
 
 
     fun saveProfile(req: ServerRequest): Mono<ServerResponse> = req.session().flatMap {
@@ -116,7 +147,7 @@ class UserHandler(private val repository: UserRepository,
                 }
 
                 if(errors.isNotEmpty()){
-                    findOneViewDetail(it, "profile", false, req, errors)
+                    findOneViewDetail(it, "user-edit", false, req, errors)
                 }
 
                 val user = User(
@@ -188,38 +219,6 @@ class UserHandler(private val repository: UserRepository,
                 .mapIndexed { index, i -> Pair(formData["link${index}Name"], formData["link${index}Url"]) }
                 .filter { !it.first.isNullOrBlank() && !it.second.isNullOrBlank() }
                 .map { Link(it.first!!, it.second!!) }
-
-
-
-    private fun findOneViewDetail(user: User, view: String, canUpdateProfile: Boolean, req: ServerRequest, errors:Map<String, String>) =
-            talkRepository
-                    .findBySpeakerId(listOf(user.login))
-                    .collectList()
-                    .flatMap { talks ->
-                        talks.map { talk -> talk.toDto(req.language(), listOf(user)) }.toMono()
-                        if ("profile".equals(view))
-                            ok()
-                                    .render("profile", mapOf(
-                                            Pair("user", user.toDto(req.language(), markdownConverter)),
-                                            Pair("usermail", cryptographer.decrypt(user.email)),
-                                            Pair("description-fr", user.description[Language.FRENCH]),
-                                            Pair("description-en", user.description[Language.ENGLISH]),
-                                            Pair("userlinks", user.toLinkDtos()),
-                                            Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
-                                            Pair("errors", errors),
-                                            Pair("hasErrors", errors.isNotEmpty())
-                                    ))
-                        else
-                            ok()
-                                    .render(view, mapOf(
-                                            Pair("user", user.toDto(req.language(), markdownConverter)),
-                                            Pair("canUpdateProfile", canUpdateProfile),
-                                            Pair("talks", talks),
-                                            Pair("hasTalks", talks.isNotEmpty()),
-                                            Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8))
-                                    ))
-                    }
-
 
     fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("login")))
 

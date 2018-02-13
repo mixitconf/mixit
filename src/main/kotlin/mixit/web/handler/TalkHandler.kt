@@ -7,7 +7,10 @@ import mixit.repository.FavoriteRepository
 import mixit.repository.TalkRepository
 import mixit.repository.UserRepository
 import mixit.util.*
+import mixit.util.validator.MarkdownValidator
+import mixit.util.validator.MaxLengthValidator
 import org.springframework.stereotype.Component
+import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
@@ -25,7 +28,9 @@ class TalkHandler(private val repository: TalkRepository,
                   private val eventRepository: EventRepository,
                   private val properties: MixitProperties,
                   private val markdownConverter: MarkdownConverter,
-                  private val favoriteRepository: FavoriteRepository) {
+                  private val favoriteRepository: FavoriteRepository,
+                  private val maxLengthValidator: MaxLengthValidator,
+                  private val markdownValidator: MarkdownValidator) {
 
     fun findByEventView(year: Int, req: ServerRequest, filterOnFavorite: Boolean, topic: String? = null): Mono<ServerResponse> =
             req.session().flatMap {
@@ -105,6 +110,7 @@ class TalkHandler(private val repository: TalkRepository,
                                 }
                     }
 
+
     fun findOneView(year: Int, req: ServerRequest): Mono<ServerResponse> = repository.findByEventAndSlug(year.toString(), req.pathVariable("slug")).flatMap { talk ->
         val sponsors = loadSponsors(year, req)
 
@@ -135,6 +141,91 @@ class TalkHandler(private val repository: TalkRepository,
             }
         }
     }
+
+    fun editTalkView(req: ServerRequest) =
+            repository
+                    .findBySlug(req.pathVariable("slug"))
+                    .flatMap { editTalkViewDetail(req, it, emptyMap()) }
+
+    private fun editTalkViewDetail(req: ServerRequest, talk: Talk, errors:Map<String, String>) = userRepository.findMany(talk.speakerIds).collectList().flatMap { speakers ->
+
+        ok().render("talk-edit", mapOf(
+                Pair("talk", talk.toDto(req.language(), speakers!!, convertRandomLabel = false)),
+                Pair("speakers", speakers.map { speaker -> speaker.toDto(req.language(), markdownConverter) }.sortedBy { talk.speakerIds.indexOf(it.login) }),
+                Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
+                Pair("hasErrors", errors.isNotEmpty()),
+                Pair("errors", errors),
+                Pair("languages", listOf(
+                        Pair(Language.ENGLISH, Language.ENGLISH == talk.language),
+                        Pair(Language.FRENCH, Language.FRENCH == talk.language)
+                ))
+        ))
+    }
+
+    fun saveProfileTalk(req: ServerRequest): Mono<ServerResponse> = req.body(BodyExtractors.toFormData()).flatMap {
+        val formData = it.toSingleValueMap()
+
+        repository.findOne(formData["id"]!!).flatMap {
+
+            val errors = mutableMapOf<String, String>()
+
+            // Null check
+            if(formData["title"].isNullOrBlank()){
+                errors.put("title","talk.form.error.title.required")
+            }
+            if(formData["summary"].isNullOrBlank()){
+                errors.put("title","talk.form.error.summary.required")
+            }
+            if(formData["language"].isNullOrBlank()){
+                errors.put("title","talk.form.error.language.required")
+            }
+
+            if(errors.isNotEmpty()){
+                editTalkViewDetail(req, it, errors)
+            }
+
+            val talk = Talk(
+                    it.format,
+                    it.event,
+                    formData["title"]!!,
+                    markdownValidator.sanitize(formData["summary"]!!),
+                    it.speakerIds,
+                    Language.valueOf(formData["language"]!!),
+                    it.addedAt,
+                    markdownValidator.sanitize(formData["description"]),
+                    it.topic,
+                    it.video,
+                    it.room,
+                    it.start,
+                    it.end,
+                    it.photoUrls,
+                    id = it.id
+            )
+
+            // We want to control data to not save invalid things in our database
+            if(!maxLengthValidator.isValid(talk.title, 255)){
+                errors.put("title","talk.form.error.title.size")
+            }
+
+            if(!markdownValidator.isValid(talk.summary)){
+                errors.put("summary","talk.form.error.summary")
+            }
+
+            if(!markdownValidator.isValid(talk.description)){
+                errors.put("description","talk.form.error.description")
+            }
+
+            if(errors.isEmpty()){
+                // If everything is Ok we save the user
+                repository.save(talk).then(seeOther("${properties.baseUri}/me"))
+            }
+            else{
+                editTalkViewDetail(req, talk, errors)
+            }
+        }
+
+    }
+
 
     fun loadSponsors(year: Int, req: ServerRequest) = eventRepository
             .findByYear(year)
@@ -189,15 +280,16 @@ class TalkDto(
         val photoUrls: List<Link> = emptyList(),
         val isEn: Boolean = (language == "english"),
         val isTalk: Boolean = (format == TalkFormat.TALK),
+        val isCurrentEdition: Boolean = "2018".equals(event),
         val multiSpeaker: Boolean = (speakers.size > 1),
         val speakersFirstNames: String = (speakers.joinToString { it.firstname })
 )
 
-fun Talk.toDto(lang: Language, speakers: List<User>, favorite: Boolean = false) = TalkDto(
+fun Talk.toDto(lang: Language, speakers: List<User>, favorite: Boolean = false, convertRandomLabel: Boolean = true) = TalkDto(
         id, slug, format, event, title,
-        summary(),
+        summary(convertRandomLabel),
         speakers, language.name.toLowerCase(), addedAt,
-        description(),
+        description(convertRandomLabel),
         topic,
         video,
         if (video?.startsWith("https://vimeo.com/") == true) video.replace("https://vimeo.com/", "https://player.vimeo.com/video/") else null,
@@ -209,10 +301,10 @@ fun Talk.toDto(lang: Language, speakers: List<User>, favorite: Boolean = false) 
         photoUrls
 )
 
-fun Talk.summary() = if (format == TalkFormat.RANDOM && language == Language.ENGLISH && event == "2018")
+fun Talk.summary(convertRandomLabel: Boolean) = if (convertRandomLabel && format == TalkFormat.RANDOM && language == Language.ENGLISH && event == "2018")
     "This is a \"Random\" talk. For this track we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 25 minutes. As it's a surprise we don't display the session summary before...   "
-else if (format == TalkFormat.RANDOM && language == Language.FRENCH && event == "2018")
+else if (convertRandomLabel && format == TalkFormat.RANDOM && language == Language.FRENCH && event == "2018")
     "Ce talk est de type \"random\". Pour cette track, nous choisissons le programme pour vous. Vous êtes dans une pièce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 25 minutes. Comme c'est une surprise, nous n'affichons pas le résumé de la session avant ..."
 else summary
 
-fun Talk.description() = if (format == TalkFormat.RANDOM && event == "2018") "" else description
+fun Talk.description(convertRandomLabel: Boolean) = if (convertRandomLabel && format == TalkFormat.RANDOM && event == "2018") "" else description
