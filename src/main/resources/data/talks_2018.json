@@ -610,7 +610,7 @@
     },
     {
         "addedAt": "2018-01-30T12:47:03.403",
-        "description": "Des starter kits seront \u00e0 disposition (Node.js, php, Java), la plateforme sera ouverte 2 semaines avant la conf\u00e9rence.\n\nTournoi avec des lots \u00e0 gagner \u00e0 la fin de la session.",
+        "description": "Des starter kits seront \u00e0 disposition (Node.js, php, Java), la plateforme sera ouverte 2 semaines avant la conf\u00e9rence.\r\n\r\nTournoi avec des lots \u00e0 gagner \u00e0 la fin de la session.",
         "end": "2018-04-19T08:50:00",
         "event": "2018",
         "format": "WORKSHOP",
@@ -620,11 +620,11 @@
         "room": "UNKNOWN",
         "slug": "coding-game-challenge",
         "speakerIds": [
-            "vincent.ogloblinsky@gmail.com",
+            "hmetivier",
             "m.brechet@gmail.com"
         ],
         "start": "2018-04-19T08:00:00",
-        "summary": "Venez participer \u00e0 ce challenge de conception d\u2019intelligence artificielle.\n\nLes r\u00e8gles sont simples :\n\n- une bataille de personnages m\u00e9di\u00e9vaux en un contre un\n\n- une API REST d\u2019attaque \u00e0 disposition\n\n- une application web de visualisation du combat en live\n\nVous n\u2019avez plus qu\u2019\u00e0 coder votre IA avec votre langage pr\u00e9f\u00e9r\u00e9, r\u00e9agir en cons\u00e9quence et affronter l\u2019IA du serveur ou d\u2019autres participants de ce lab.",
+        "summary": "Venez participer \u00e0 ce challenge de conception d\u2019intelligence artificielle.\r\n\r\nLes r\u00e8gles sont simples :\r\n\r\n- une bataille de personnages m\u00e9di\u00e9vaux en un contre un\r\n\r\n- une API REST d\u2019attaque \u00e0 disposition\r\n\r\n- une application web de visualisation du combat en live\r\n\r\nVous n\u2019avez plus qu\u2019\u00e0 coder votre IA avec votre langage pr\u00e9f\u00e9r\u00e9, r\u00e9agir en cons\u00e9quence et affronter l\u2019IA du serveur ou d\u2019autres participants de ce lab.",
         "title": "Coding Game Challenge",
         "topic": "tech",
         "video": null
