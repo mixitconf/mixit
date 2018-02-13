@@ -115,3 +115,7 @@
 	background-color: mix($input-background-invalid, $white, 10%);
 	border-color: $input-background-invalid;
 }
+
+.mxt-wrapper--accordion-title-exploded:before {
+	content: '';
+}

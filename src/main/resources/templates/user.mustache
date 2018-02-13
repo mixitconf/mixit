@@ -48,9 +48,9 @@
                 <div class="columns small-12 medium-12 large-12 callout">
                     <ul class="accordion" data-accordion>
                         {{#talks}}
-                            <li class="accordion-item" data-accordion-item>
+                            <li class="accordion-item">
                                 <!-- Accordion tab title -->
-                                <a href="#" class="accordion-title">
+                                <a href="#" class="accordion-title mxt-wrapper--accordion-title-exploded mxt-wrapper--accordion-title-exploded">
                                     <h3 class="mxt-text--talktitle"><b>{{event}}</b> - {{title}}{{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
                                     </h3>
                                     <ul class="menu simple mxt-menu--accordion">
@@ -61,7 +61,7 @@
                                     </ul>
                                 </a>
                                 <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
-                                <div class="accordion-content" data-tab-content>
+                                <div class="accordion-content" style="display: block">
                                     <div class="row mxt-wrapper--row">
                                         <div class="small-7 medium-9 large-8 columns">
                                             {{#speakers}}
