@@ -17,49 +17,54 @@
             <div class="lead">
                 {{#i18n}}ticketing.text{{/i18n}}
             </div>
-
-            <div class="mxt-wrapper--callout callout">
+            <hr/>
+            <div>
                 <h2>{{#i18n}}ticketing.description.why{{/i18n}}</h2>
                 <p>{{#i18n}}ticketing.description.intro{{/i18n}}</p>
                 <p>{{#i18n}}ticketing.description.how{{/i18n}}</p>
             </div>
-
-            <div class="mxt-wrapper--callout callout">
+            <hr/>
+            <div>
                 <p>{{#i18n}}ticketing.description.hack{{/i18n}}</p>
             </div>
 
-            <div class="callout">
+
                 <div class="login-box">
                     <div class="row">
-                        <div class="large-12 columns">
-                            <form action="/ticketing" method="post">
-                                <div class="row">
-                                    <div class="large-12 columns">
-                                        <input type="text" name="firstname" placeholder="{{#i18n}}ticketing.firstname{{/i18n}}" required>
+                        <div class="large-12 small-12 columns">
+                            <div class="row">
+                                <div class="column large-12 callout">
+                                    <div class="large-8 small-12 large-centered columns">
+                                        <form action="/ticketing" method="post">
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    <input type="text" name="firstname" placeholder="{{#i18n}}ticketing.firstname{{/i18n}}" required>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    <input type="text" name="lastname" placeholder="{{#i18n}}ticketing.lastname{{/i18n}}" required>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-12 columns">
+                                                    <input type="email" name="email" placeholder="{{#i18n}}ticketing.email{{/i18n}}" required>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="large-12 large-centered columns">
+                                                    <input type="submit" class="button expand" value="{{#i18n}}ticketing.submit{{/i18n}}"/>
+                                                </div>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="large-12 columns">
-                                        <input type="text" name="lastname" placeholder="{{#i18n}}ticketing.lastname{{/i18n}}" required>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="large-12 columns">
-                                        <input type="email" name="email" placeholder="{{#i18n}}ticketing.email{{/i18n}}" required>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="large-12 large-centered columns">
-                                        <input type="submit" class="button expand" value="{{#i18n}}ticketing.submit{{/i18n}}"/>
-                                    </div>
-                                </div>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="mxt-wrapper--callout callout">
+            <div>
                 <p>{{#i18n}}ticketing.description.plus{{/i18n}}</p>
             </div>
 
