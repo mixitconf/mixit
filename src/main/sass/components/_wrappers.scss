@@ -110,3 +110,8 @@
 .mxt-wrapper--row {
 	display: block;
 }
+
+.mxt-wrapper--error-callout {
+	background-color: mix($input-background-invalid, $white, 10%);
+	border-color: $input-background-invalid;
+}

@@ -10,11 +10,20 @@
                         <div>{{#hasTalks}}{{#i18n}}user.speaker{{/i18n}}{{/hasTalks}}{{^hasTalks}}{{#i18n}}user.standard{{/i18n}}{{/hasTalks}}</div>
                     </li>
             </ul>
-            {{#admin}}
-                <div>
-                    <a href="{{localePrefix}}/admin/users/edit/{{user.login}}" class="button hollow mxt-anchor--uppercase" style="margin-bottom: 0">{{#i18n}}admin.talks.actions.update{{/i18n}}</a>
-                </div>
-            {{/admin}}
+            {{#connected}}
+                {{^canUpdateProfile}}
+                    {{#admin}}
+                        <div>
+                            <a href="{{localePrefix}}/admin/users/edit/{{user.login}}" class="button hollow mxt-anchor--uppercase" style="margin-bottom: 0">{{#i18n}}admin.talks.actions.update{{/i18n}}</a>
+                        </div>
+                    {{/admin}}
+                {{/canUpdateProfile}}
+                {{#canUpdateProfile}}
+                    <div>
+                        <a href="{{localePrefix}}/me/edit" class="button hollow mxt-anchor--uppercase" style="margin-bottom: 0">{{#i18n}}admin.talks.actions.update{{/i18n}}</a>
+                    </div>
+                {{/canUpdateProfile}}
+            {{/connected}}
         </div>
     </div>
 </div>
@@ -73,16 +82,8 @@
             </div>
         </div>
     </div>
-
-    <article class="callout">
-        <div class="row">
-            <div class="column large-12">
-
-
-                <br/>
-            </div>
-        </div>
-    </article>
 </div>
+
+<script src="/js/profile.js"></script>
 
 {{> footer}}

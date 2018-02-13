@@ -5,6 +5,7 @@ import mixit.model.Role
 import mixit.model.User
 import mixit.repository.UserRepository
 import mixit.util.*
+import mixit.util.validator.EmailValidator
 import org.slf4j.LoggerFactory
 import org.springframework.http.ResponseCookie
 import org.springframework.stereotype.Component
@@ -24,6 +25,7 @@ import java.util.*
 class AuthenticationHandler(private val userRepository: UserRepository,
                             private val properties: MixitProperties,
                             private val emailService: EmailService,
+                            private val emailValidator: EmailValidator,
                             private val cryptographer: Cryptographer) {
 
 
@@ -39,8 +41,15 @@ class AuthenticationHandler(private val userRepository: UserRepository,
      */
     fun login(req: ServerRequest): Mono<ServerResponse> = req.body(toFormData()).flatMap { data ->
         // Email is required
-        if (data.toSingleValueMap()["email"] == null) renderError("login.error.text")
-        searchUserAndSendToken(data.toSingleValueMap()["email"]!!, req.locale())
+        if (data.toSingleValueMap()["email"] == null){
+            renderError("login.error.text")
+        }
+        else if(!emailValidator.isValid(data.toSingleValueMap()["email"]!!)){
+            renderError("login.error.creation.mail")
+        }
+        else {
+            searchUserAndSendToken(data.toSingleValueMap()["email"]!!, req.locale())
+        }
     }
 
     /**
@@ -97,17 +106,22 @@ class AuthenticationHandler(private val userRepository: UserRepository,
                 role = Role.USER
         )
 
-        userRepository.findByEmail(email)
-                // Email is unique and if an email is found we return an error
-                .flatMap { renderError("login.error.uniqueemail.text") }
-                .switchIfEmpty(
-                        userRepository
-                                .save(user)
-                                // if user is created we send him a token by email
-                                .flatMap { searchUserAndSendToken(email, req.locale()) }
-                                // otherwise we display an error
-                                .switchIfEmpty(renderError("login.error.creation.text"))
-                )
+        if(!emailValidator.isValid(email)){
+            renderError("login.error.creation.mail")
+        }
+        else {
+            userRepository.findByEmail(email)
+                    // Email is unique and if an email is found we return an error
+                    .flatMap { renderError("login.error.uniqueemail.text") }
+                    .switchIfEmpty(
+                            userRepository
+                                    .save(user)
+                                    // if user is created we send him a token by email
+                                    .flatMap { searchUserAndSendToken(email, req.locale()) }
+                                    // otherwise we display an error
+                                    .switchIfEmpty(renderError("login.error.creation.text"))
+                    )
+        }
     }
 
     /**
