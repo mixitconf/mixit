@@ -87,8 +87,15 @@
 }
 
 .mxt-img--favorite {
-  cursor: hand;
+  cursor: pointer;
   border: none;
+
+  > img{
+    filter: brightness(100%);
+    &:hover {
+      filter: brightness(75%);
+    }
+  }
 }
 
 .mxt-img--picture {
