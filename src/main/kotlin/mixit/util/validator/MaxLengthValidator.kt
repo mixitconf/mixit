@@ -10,9 +10,6 @@ import org.springframework.stereotype.Component
 class MaxLengthValidator {
 
     fun isValid(value: String, max: Int): Boolean {
-        if (value == null) {
-            return true
-        }
         val length = value.length
         return length <= max
     }

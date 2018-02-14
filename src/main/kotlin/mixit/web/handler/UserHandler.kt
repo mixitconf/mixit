@@ -216,7 +216,7 @@ class UserHandler(private val repository: UserRepository,
         IntStream.range(0,5)
                 .toArray()
                 .asList()
-                .mapIndexed { index, i -> Pair(formData["link${index}Name"], formData["link${index}Url"]) }
+                .mapIndexed { index, _ -> Pair(formData["link${index}Name"], formData["link${index}Url"]) }
                 .filter { !it.first.isNullOrBlank() && !it.second.isNullOrBlank() }
                 .map { Link(it.first!!, it.second!!) }
 
@@ -241,12 +241,15 @@ class LinkDto(
 
 fun Link.toLinkDto(index: Int) = LinkDto(name, url, "link${index + 1}")
 
-fun User.toLinkDtos() = if (links.size > 4) links else {
-    val existingLinks = links.size
-    val userLinks = links.mapIndexed { index, link -> link.toLinkDto(index) }.toMutableList()
-    IntStream.range(0, 5 - existingLinks).forEach { userLinks.add(LinkDto("", "", "link${existingLinks + it + 1}")) }
-    userLinks.groupBy { it.index }
-}
+fun User.toLinkDtos(): Map<String, List<LinkDto>> =
+        if (links.size > 4){
+            links.mapIndexed { index, link ->  link.toLinkDto(index) }.groupBy { it.index }
+        } else {
+            val existingLinks = links.size
+            val userLinks = links.mapIndexed { index, link -> link.toLinkDto(index) }.toMutableList()
+            IntStream.range(0, 5 - existingLinks).forEach { userLinks.add(LinkDto("", "", "link${existingLinks + it + 1}")) }
+            userLinks.groupBy { it.index }
+        }
 
 class SpeakerStarDto(
         val login: String,
