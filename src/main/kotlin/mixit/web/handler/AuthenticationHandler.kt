@@ -127,76 +127,60 @@ class AuthenticationHandler(private val userRepository: UserRepository,
 
     /**
      * Action when user wants to send his token to open a session. This token is valid only for a limited time
+     * This action is launched when user clicks on the link sent by email
      */
-    fun signIn(req: ServerRequest): Mono<ServerResponse> {
+    fun signInViaUrl(req: ServerRequest): Mono<ServerResponse> {
         val email = URLDecoder.decode(req.pathVariable("email"), "UTF-8").decodeFromBase64()
         val token = req.pathVariable("token")
-
-        return req.session().flatMap { session ->
-            userRepository.findByEmail(email!!)
-                    // User must exist at this point
-                    .flatMap { user ->
-                        if (token.trim() == user.token) {
-                            if (user.tokenExpiration.isBefore(LocalDateTime.now())) {
-                                // token has to be valid
-                                renderError("login.error.token.text")
-                            } else {
-                                session.attributes["role"] = user.role
-                                session.attributes["email"] = email
-                                session.attributes["token"] = token
-
-                                seeOther(URI("${properties.baseUri}/"))
-                                        .cookie(ResponseCookie
-                                                .from("XSRF-TOKEN", "${email}:${token}".encodeToBase64()!!)
-                                                .maxAge(Duration.between(LocalDateTime.now(), user.tokenExpiration))
-                                                .build())
-                                        .build()
-                            }
-                        } else {
-                            renderError("login.error.badtoken.text")
-                        }
-
-                    }
-                    .switchIfEmpty(renderError("login.error.bademail.text"))
-        }
+        return signInProcess(req, email!!, token)
     }
 
-//            req.body(toFormData()).flatMap { data ->
-//        val formData = data.toSingleValueMap()
-//
+    /**
+     * Action when user wants to send his token to open a session. This token is valid only for a limited time
+     * This action is launched when user copy the token in the website
+     */
+    fun signIn(req: ServerRequest): Mono<ServerResponse> = req.body(toFormData()).flatMap { data ->
+        val formData = data.toSingleValueMap()
 
-//
-//        val email = if (formData["email"]!!.contains("@")) formData["email"] else cryptographer.decrypt(formData["email"])
-//        val token = formData["token"]
-//
-//        req.session().flatMap { session ->
-//            userRepository.findByEmail(email!!)
-//                    // User must exist at this point
-//                    .flatMap { user ->
-//                        if (token!!.trim() == user.token) {
-//                            if (user.tokenExpiration.isBefore(LocalDateTime.now())) {
-//                                // token has to be valid
-//                                renderError("login.error.token.text")
-//                            } else {
-//                                session.attributes["role"] = user.role
-//                                session.attributes["email"] = email
-//                                session.attributes["token"] = token
-//
-//                                seeOther(URI("${properties.baseUri}/"))
-//                                        .cookie(ResponseCookie
-//                                                .from("XSRF-TOKEN", "${email}:${token}".encodeToBase64()!!)
-//                                                .maxAge(Duration.between(LocalDateTime.now(), user.tokenExpiration))
-//                                                .build())
-//                                        .build()
-//                            }
-//                        } else {
-//                            renderError("login.error.badtoken.text")
-//                        }
-//
-//                    }
-//                    .switchIfEmpty(renderError("login.error.bademail.text"))
-//        }
-//    }
+        // If email or token are null we can't open a session
+        if (formData["email"] == null || formData["token"] == null) {
+            renderError("login.error.required.text")
+        }
+
+        val email = if (formData["email"]!!.contains("@")) formData["email"] else cryptographer.decrypt(formData["email"])
+        val token = formData["token"]
+
+        signInProcess(req, email!!, token!!)
+    }
+
+    fun signInProcess(req: ServerRequest, email: String, token:String) =
+            req.session().flatMap { session ->
+        userRepository.findByEmail(email)
+                // User must exist at this point
+                .flatMap { user ->
+                    if (token.trim() == user.token) {
+                        if (user.tokenExpiration.isBefore(LocalDateTime.now())) {
+                            // token has to be valid
+                            renderError("login.error.token.text")
+                        } else {
+                            session.attributes["role"] = user.role
+                            session.attributes["email"] = email
+                            session.attributes["token"] = token
+
+                            seeOther(URI("${properties.baseUri}/"))
+                                    .cookie(ResponseCookie
+                                            .from("XSRF-TOKEN", "${email}:${token}".encodeToBase64()!!)
+                                            .maxAge(Duration.between(LocalDateTime.now(), user.tokenExpiration))
+                                            .build())
+                                    .build()
+                        }
+                    } else {
+                        renderError("login.error.badtoken.text")
+                    }
+
+                }
+                .switchIfEmpty(renderError("login.error.bademail.text"))
+    }
 
     /**
      * Sends an email with a token to the user. We don't need validation of the email adress. If he receives

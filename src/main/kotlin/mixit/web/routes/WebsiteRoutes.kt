@@ -67,7 +67,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
             // Authentication
             GET("/login", authenticationHandler::loginView)
             GET("/disconnect", authenticationHandler::logout)
-            GET("/signin/{token}/{email:.*}", authenticationHandler::signIn)
+            GET("/signin/{token}/{email:.*}", authenticationHandler::signInViaUrl)
 
             // Sponsors
             eventRepository.findAll().toIterable().map { it.year }.forEach { year ->
@@ -133,7 +133,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
         contentType(APPLICATION_FORM_URLENCODED).nest {
             POST("/login", authenticationHandler::login)
             POST("/signup", authenticationHandler::signUp)
-            //POST("/signin", authenticationHandler::signIn)
+            POST("/signin", authenticationHandler::signIn)
             POST("/me", userHandler::saveProfile)
             POST("/me/talks", talkHandler::saveProfileTalk)
 
