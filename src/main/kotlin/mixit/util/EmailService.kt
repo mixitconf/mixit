@@ -4,12 +4,12 @@ import com.samskivert.mustache.Mustache
 import mixit.MixitProperties
 import mixit.model.User
 import mixit.web.generateModelForExernalCall
-import org.commonmark.internal.util.Escaping
 import org.slf4j.LoggerFactory
 import org.springframework.context.MessageSource
 import org.springframework.core.io.ResourceLoader
 import org.springframework.stereotype.Component
 import java.io.InputStreamReader
+import java.net.URLEncoder
 import java.time.LocalDate
 import java.util.*
 import javax.mail.MessagingException
@@ -49,7 +49,7 @@ class EmailService(private val properties: MixitProperties,
 
         try {
             context.put("user", user)
-            context.put("encodedemail", Escaping.escapeHtml(email, true))
+            context.put("encodedemail", URLEncoder.encode(email.encodeToBase64(), "UTF-8"))
             val content = templateService.load(templateName, context)
 
             if (usage == EmailServiceUsage.AUTHENTICATION) {

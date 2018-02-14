@@ -16,6 +16,7 @@ import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.*
 import reactor.core.publisher.Mono
 import java.net.URI
+import java.net.URLDecoder
 import java.time.Duration
 import java.time.LocalDateTime
 import java.util.*
@@ -127,22 +128,15 @@ class AuthenticationHandler(private val userRepository: UserRepository,
     /**
      * Action when user wants to send his token to open a session. This token is valid only for a limited time
      */
-    fun signIn(req: ServerRequest): Mono<ServerResponse> = req.body(toFormData()).flatMap { data ->
-        val formData = data.toSingleValueMap()
+    fun signIn(req: ServerRequest): Mono<ServerResponse> {
+        val email = URLDecoder.decode(req.pathVariable("email"), "UTF-8").decodeFromBase64()
+        val token = req.pathVariable("token")
 
-        // If email or token are null we can't open a session
-        if (formData["email"] == null || formData["token"] == null) {
-            renderError("login.error.required.text")
-        }
-
-        val email = if (formData["email"]!!.contains("@")) formData["email"] else cryptographer.decrypt(formData["email"])
-        val token = formData["token"]
-
-        req.session().flatMap { session ->
+        return req.session().flatMap { session ->
             userRepository.findByEmail(email!!)
                     // User must exist at this point
                     .flatMap { user ->
-                        if (token!!.trim() == user.token) {
+                        if (token.trim() == user.token) {
                             if (user.tokenExpiration.isBefore(LocalDateTime.now())) {
                                 // token has to be valid
                                 renderError("login.error.token.text")
@@ -166,6 +160,43 @@ class AuthenticationHandler(private val userRepository: UserRepository,
                     .switchIfEmpty(renderError("login.error.bademail.text"))
         }
     }
+
+//            req.body(toFormData()).flatMap { data ->
+//        val formData = data.toSingleValueMap()
+//
+
+//
+//        val email = if (formData["email"]!!.contains("@")) formData["email"] else cryptographer.decrypt(formData["email"])
+//        val token = formData["token"]
+//
+//        req.session().flatMap { session ->
+//            userRepository.findByEmail(email!!)
+//                    // User must exist at this point
+//                    .flatMap { user ->
+//                        if (token!!.trim() == user.token) {
+//                            if (user.tokenExpiration.isBefore(LocalDateTime.now())) {
+//                                // token has to be valid
+//                                renderError("login.error.token.text")
+//                            } else {
+//                                session.attributes["role"] = user.role
+//                                session.attributes["email"] = email
+//                                session.attributes["token"] = token
+//
+//                                seeOther(URI("${properties.baseUri}/"))
+//                                        .cookie(ResponseCookie
+//                                                .from("XSRF-TOKEN", "${email}:${token}".encodeToBase64()!!)
+//                                                .maxAge(Duration.between(LocalDateTime.now(), user.tokenExpiration))
+//                                                .build())
+//                                        .build()
+//                            }
+//                        } else {
+//                            renderError("login.error.badtoken.text")
+//                        }
+//
+//                    }
+//                    .switchIfEmpty(renderError("login.error.bademail.text"))
+//        }
+//    }
 
     /**
      * Sends an email with a token to the user. We don't need validation of the email adress. If he receives

@@ -44,6 +44,7 @@ class TemplateServiceTest{
         user.token = "token-3455-dede"
         val params = generateModelForExernalCall("https://mixitconf.org", Locale.FRENCH, messageSource)
         params.put("user", user)
+        params.put("encodedemail", "test@gmail.com")
 
         val content = templateService.load("email-token", params)
 
@@ -53,13 +54,14 @@ class TemplateServiceTest{
                 // a link to our website
                 .contains("<a href=\"https://mixitconf.org\">https://mixitconf.org</a>")
                 // a link to be able to end the token
-                .contains("<form action=\"https://mixitconf.org/signin\" method=\"post\">")
+                .contains("<a href=\"https://mixitconf.org/signin/token-3455-dede/test&#64;gmail.com\" class=\"button mxt-button\">Log In</a>")
     }
 
     @Test
     fun `open a mustache template to generate email in english`() {
         val params = generateModelForExernalCall("https://mixitconf.org", Locale.ENGLISH, messageSource)
         params.put("user", createUser())
+        params.put("encodedemail", "test@gmail.com")
 
         val content = templateService.load("email-token", params)
 
@@ -69,7 +71,7 @@ class TemplateServiceTest{
                 // a link to our website
                 .contains("<a href=\"https://mixitconf.org\">https://mixitconf.org</a>")
                 // a link to be able to end the token
-                .contains("<form action=\"https://mixitconf.org/signin\" method=\"post\">")
+                .contains("<a href=\"https://mixitconf.org/signin/token-3455-dede/test&#64;gmail.com\" class=\"button mxt-button\">Log In</a>")
     }
 
     private fun createUser(): User {
