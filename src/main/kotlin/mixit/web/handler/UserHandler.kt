@@ -102,7 +102,7 @@ class UserHandler(private val repository: UserRepository,
                                             Pair("description-fr", user.description[Language.FRENCH]),
                                             Pair("description-en", user.description[Language.ENGLISH]),
                                             Pair("userlinks", user.toLinkDtos()),
-                                            Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8)),
+                                            Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
                                             Pair("errors", errors),
                                             Pair("hasErrors", errors.isNotEmpty())
                                     ))
@@ -113,7 +113,7 @@ class UserHandler(private val repository: UserRepository,
                                             Pair("canUpdateProfile", canUpdateProfile),
                                             Pair("talks", talkDtos),
                                             Pair("hasTalks", talkDtos.isNotEmpty()),
-                                            Pair("baseUri", UriUtils.encode(properties.baseUri!!, StandardCharsets.UTF_8))
+                                            Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8))
                                     ))
                     }
 

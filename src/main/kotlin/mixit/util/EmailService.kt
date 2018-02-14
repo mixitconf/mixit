@@ -44,8 +44,8 @@ class EmailService(private val properties: MixitProperties,
     fun send(templateName: String, user: User, locale: Locale, usage: EmailServiceUsage) {
 
         val subject = messageSource.getMessage("${templateName}-subject", null, locale)
-        val context = generateModelForExernalCall(properties.baseUri!!, locale, messageSource)
-        val email = cryptographer.decrypt(user.email!!)!!
+        val context = generateModelForExernalCall(properties.baseUri, locale, messageSource)
+        val email = cryptographer.decrypt(user.email)!!
 
         try {
             context.put("user", user)

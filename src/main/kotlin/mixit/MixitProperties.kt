@@ -4,8 +4,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties
 
 @ConfigurationProperties("mixit")
 class MixitProperties {
-    var baseUri: String? = null
-    var contact: String? = null
+    lateinit var baseUri: String
+    lateinit var contact: String
     val drive = Drive()
     val aes = Aes()
     val sendgrid = MailProvider()
@@ -16,22 +16,22 @@ class MixitProperties {
         val en = DriveDocuments()
 
         class DriveDocuments {
-            var sponsorform: String? = null
-            var sponsor: String? = null
-            var speaker: String? = null
-            var press: String? = null
+            lateinit var sponsorform: String
+            lateinit var sponsor: String
+            lateinit var speaker: String
+            lateinit var press: String
         }
     }
 
     class Aes {
-        var initvector: String? = null
-        var key: String? = null
+        lateinit var initvector: String
+        lateinit var key: String
     }
 
     class MailProvider {
-        var apikey: String? = null
-        var host: String? = null
-        var version: String? = null
+        lateinit var apikey: String
+        lateinit var host: String
+        lateinit var version: String
     }
 }
 

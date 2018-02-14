@@ -64,11 +64,11 @@ class ElasticEmailSender(private val properties: MixitProperties) : AuthentEmail
 
     override fun send(email: EmailMessage) {
 
-        val result = WebClient.create(properties.elasticmail.host!!)
+        val result = WebClient.create(properties.elasticmail.host)
                 .post()
                 .uri("/${properties.elasticmail.version}/email/send")
                 .body(BodyInserters
-                        .fromFormData("apikey", properties.elasticmail.apikey!!)
+                        .fromFormData("apikey", properties.elasticmail.apikey)
                         .with("from", properties.contact)
                         .with("fromName", "MiXiT")
                         .with("to", email.to)
