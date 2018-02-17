@@ -54,7 +54,8 @@ dependencies {
     compile("com.samskivert:jmustache")
     compile("com.atlassian.commonmark:commonmark:0.9.0")
     compile("com.atlassian.commonmark:commonmark-ext-autolink:0.9.0")
-    compile("com.sendgrid:sendgrid-java:4.1.2")
+    compile("com.google.api-client:google-api-client:1.23.0")
+    compile("com.google.apis:google-api-services-gmail:v1-rev81-1.23.0")
     compile("com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:20171016.1")
 
 

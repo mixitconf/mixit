@@ -25,23 +25,16 @@ class TemplateService(private val mustacheCompiler: Mustache.Compiler,
     }
 }
 
-enum class EmailServiceUsage {
-    AUTHENTICATION, INFORMATION
-}
-
 @Component
 class EmailService(private val properties: MixitProperties,
                    private val messageSource: MessageSource,
                    private val cryptographer: Cryptographer,
-                   private val primaryAuthentEmailSender: PrimaryAuthentEmailSender,
-                   private val authentEmailSender: AuthentEmailSender,
-                   private val messageEmailSender: MessageEmailSender,
+                   private val emailSender: EmailSender,
                    private val templateService: TemplateService) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
-    private val mailCounter = mutableMapOf(Pair(LocalDate.now(), 0))
 
-    fun send(templateName: String, user: User, locale: Locale, usage: EmailServiceUsage) {
+    fun send(templateName: String, user: User, locale: Locale) {
 
         val subject = messageSource.getMessage("${templateName}-subject", null, locale)
         val context = generateModelForExernalCall(properties.baseUri, locale, messageSource)
@@ -52,11 +45,7 @@ class EmailService(private val properties: MixitProperties,
             context.put("encodedemail", URLEncoder.encode(email.encodeToBase64(), "UTF-8"))
             val content = templateService.load(templateName, context)
 
-            if (usage == EmailServiceUsage.AUTHENTICATION) {
-                getEmailSender().send(EmailMessage(email, subject, content))
-            } else {
-                messageEmailSender.send(EmailMessage(email, subject, content))
-            }
+            emailSender.send(EmailMessage(email, subject, content))
 
         } catch (e: MessagingException) {
             logger.error(String.format("Not possible to send email [%s] to %s", subject, user.email), e)
@@ -64,21 +53,4 @@ class EmailService(private val properties: MixitProperties,
         }
     }
 
-    fun getEmailSender(): EmailSender{
-        val date = LocalDate.now()
-        val count = mailCounter.get(date)
-
-        if(count == null){
-            mailCounter.clear()
-            mailCounter.put(date, 1)
-            return primaryAuthentEmailSender
-        }
-        mailCounter.remove(date)
-        mailCounter.put(date, count + 1)
-
-        if(count<400){
-            return primaryAuthentEmailSender
-        }
-        return authentEmailSender
-    }
 }
