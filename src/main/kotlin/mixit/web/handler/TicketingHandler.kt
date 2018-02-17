@@ -13,16 +13,24 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.body
 import reactor.core.publisher.Mono
 import reactor.core.publisher.onErrorResume
+import reactor.core.publisher.toMono
 import java.util.*
 
 @Component
-class TicketingHandler(private val repository: TicketRepository,
+class TicketingHandler(private val ticketRepository: TicketRepository,
                        private val cryptographer: Cryptographer,
                        private val emailService: EmailService) {
 
-    fun findAll(req: ServerRequest) = ok().json().body(repository.findAll())
+    fun findAll(req: ServerRequest) = ok().json().body(ticketRepository.findAll())
 
-    fun ticketing(req: ServerRequest) = ServerResponse.ok().render("ticketing", mapOf(Pair("title", "ticketing.title")))
+    fun randomDraw(req: ServerRequest) =
+            ok().json().body(
+                    ticketRepository
+                            .findAll()
+                            .collectList()
+                            .flatMap { it.shuffled(Random()).slice(IntRange(0, 600)).toMono() })
+
+    fun ticketing(req: ServerRequest) = ServerResponse.ok().render("ticketing-closed", mapOf(Pair("title", "ticketing.title")))
 
     fun submit(req: ServerRequest) = req.body(BodyExtractors.toFormData()).flatMap {
         val formData  = it.toSingleValueMap()
@@ -31,7 +39,7 @@ class TicketingHandler(private val repository: TicketRepository,
                 formData["firstname"]!!,
                 formData["lastname"]!!)
 
-        repository.save(ticket)
+        ticketRepository.save(ticket)
                 .then(sendUserConfirmation(ticket, formData, req.locale()))
                 .onErrorResume(DuplicateKeyException::class, { ok().render("ticketing-error", mapOf(Pair("message", "ticketing.error.alreadyexists"), Pair("title", "ticketing.title"))) } )
                 .onErrorResume { ok().render("ticketing-error", mapOf(Pair("message", "ticketing.error.default"), Pair("title", "ticketing.title"))) }
