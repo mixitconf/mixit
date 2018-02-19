@@ -1,17 +1,24 @@
 package mixit.web.handler
 
 import mixit.model.Role
+import mixit.model.User
+import mixit.repository.PostRepository
+import mixit.repository.TalkRepository
 import mixit.repository.UserRepository
 import mixit.util.MarkdownConverter
 import mixit.util.language
 import org.springframework.stereotype.Component
+import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import java.util.*
 
 
 @Component
-class GlobalHandler(val userRepository: UserRepository, val markdownConverter: MarkdownConverter) {
+class GlobalHandler(val userRepository: UserRepository,
+                    val postRepository: PostRepository,
+                    val talkRepository: TalkRepository,
+                    val markdownConverter: MarkdownConverter) {
 
     fun findAboutView(req: ServerRequest) = userRepository
             .findByRoles(listOf(Role.STAFF, Role.STAFF_IN_PAUSE))
@@ -35,5 +42,39 @@ class GlobalHandler(val userRepository: UserRepository, val markdownConverter: M
     fun comeToMixitView(req: ServerRequest) = ok().render("come", mapOf(Pair("title", "come.title")))
 
     fun scheduleView(req: ServerRequest) = ok().render("schedule", mapOf(Pair("title", "schedule.title")))
+
+    fun findFullTextView(req: ServerRequest) = ok().render("search", mapOf(Pair("title", "search.title")))
+
+    fun searchFullTextView(req: ServerRequest) =
+            req.body(BodyExtractors.toFormData()).flatMap {
+                val formData = it.toSingleValueMap()
+
+                if(formData["search"] == null || formData["search"]!!.trim().length < 3){
+                    ok().render("search", mapOf(
+                            Pair("criteria", formData["search"]),
+                            Pair("title", "search.title")
+                    ))
+                }
+                else {
+                    val criteria = formData["search"]!!.trim().split(" ")
+
+                    val users = userRepository.findFullText(criteria).map { it.toDto(req.language(), markdownConverter, criteria) }
+                    val articles = postRepository.findFullText(criteria).map {
+                        System.out.println("eEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEe")
+                        it.toDto(User("MiXiT", "MiXiT", "MiXiT", "MiXiT"), req.language(), criteria) }
+                    val talks = talkRepository.findFullText(criteria).map { it.toDto(req.language(), emptyList(), false, false, criteria) }
+
+                    ok().render("search", mapOf(
+                            Pair("criteria", formData["search"]),
+                            Pair("title", "search.title"),
+                            Pair("users",  users),
+                            Pair("hasUsers",  users.hasElements()),
+                            Pair("talks", talks),
+                            Pair("hasTalks",  talks.hasElements()),
+                            Pair("articles", articles),
+                            Pair("hasArticles",  articles.hasElements())
+                    ))
+                }
+            }
 }
 

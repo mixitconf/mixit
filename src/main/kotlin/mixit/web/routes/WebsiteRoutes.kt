@@ -63,6 +63,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
             GET("/me") { userHandler.findProfileView(it) }
             GET("/me/edit", userHandler::editProfileView)
             GET("/me/talks/edit/{slug}", talkHandler::editTalkView)
+            GET("/search") { globalHandler.findFullTextView(it) }
 
             // Authentication
             GET("/login", authenticationHandler::loginView)
@@ -136,6 +137,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
             POST("/signin", authenticationHandler::signIn)
             POST("/me", userHandler::saveProfile)
             POST("/me/talks", talkHandler::saveProfileTalk)
+            POST("/search") { globalHandler.searchFullTextView(it) }
             // POST("/ticketing", ticketingHandler::submit)
 
             "/admin".nest {

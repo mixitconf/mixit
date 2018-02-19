@@ -285,11 +285,12 @@ class TalkDto(
         val speakersFirstNames: String = (speakers.joinToString { it.firstname })
 )
 
-fun Talk.toDto(lang: Language, speakers: List<User>, favorite: Boolean = false, convertRandomLabel: Boolean = true) = TalkDto(
-        id, slug, format, event, title,
-        summary(convertRandomLabel),
+fun Talk.toDto(lang: Language, speakers: List<User>, favorite: Boolean = false, convertRandomLabel: Boolean = true, searchTerms: List<String> = emptyList()) = TalkDto(
+        id, slug, format, event,
+        title.markFoundOccurrences(searchTerms),
+        summary(convertRandomLabel).markFoundOccurrences(searchTerms),
         speakers, language.name.toLowerCase(), addedAt,
-        description(convertRandomLabel),
+        description(convertRandomLabel)?.markFoundOccurrences(searchTerms),
         topic,
         video,
         if (video?.startsWith("https://vimeo.com/") == true) video.replace("https://vimeo.com/", "https://player.vimeo.com/video/") else null,

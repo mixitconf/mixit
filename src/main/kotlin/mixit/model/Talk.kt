@@ -2,6 +2,7 @@ package mixit.model
 
 import mixit.util.toSlug
 import org.springframework.data.annotation.Id
+import org.springframework.data.mongodb.core.index.TextIndexed
 import org.springframework.data.mongodb.core.mapping.Document
 import java.time.LocalDateTime
 
@@ -10,12 +11,12 @@ import java.time.LocalDateTime
 data class Talk(
         val format: TalkFormat,
         val event: String,
-        val title: String,
-        val summary: String,
+        @TextIndexed val title: String,
+        @TextIndexed(weight = 5F) val summary: String,
         val speakerIds: List<String> = emptyList(),
         val language: Language = Language.FRENCH,
         val addedAt: LocalDateTime = LocalDateTime.now(),
-        val description: String? = null,
+        @TextIndexed(weight = 10F) val description: String? = null,
         val topic: String? = null,
         val video: String? = null,
         val room: Room? = null,

@@ -118,6 +118,10 @@ a.mxt-title--article {
 .mxt-text--cat-format { color: $medium-gray; font-weight: normal; }
 .mxt-text--cat-room { color: $third-color; font-weight: normal; text-transform: uppercase; }
 
+.mxt-text--found {
+	background-color: yellow;
+}
+
 .mxt-expand {
 	width: 100%
 }

@@ -1,15 +1,19 @@
 package mixit.web.handler
 
 import mixit.MixitProperties
-import mixit.model.*
-import mixit.model.Language.*
+import mixit.model.Language
+import mixit.model.Language.ENGLISH
+import mixit.model.Language.FRENCH
+import mixit.model.Post
+import mixit.model.User
 import mixit.repository.PostRepository
 import mixit.repository.UserRepository
 import mixit.util.*
-import org.springframework.http.MediaType.*
+import org.springframework.http.MediaType.APPLICATION_ATOM_XML
 import org.springframework.stereotype.Component
-import org.springframework.web.reactive.function.server.*
-import org.springframework.web.reactive.function.server.ServerResponse.*
+import org.springframework.web.reactive.function.server.ServerRequest
+import org.springframework.web.reactive.function.server.ServerResponse.ok
+import org.springframework.web.reactive.function.server.body
 
 
 @Component
@@ -55,14 +59,14 @@ class PostDto(
         val content: String?
 )
 
-fun Post.toDto(author: User, language: Language) = PostDto(
+fun Post.toDto(author: User, language: Language, searchTerms: List<String> = emptyList()) = PostDto(
         id,
         slug[language] ?: "",
         author,
         addedAt.formatDate(language),
-        title[language] ?: "",
-        headline[language] ?: "",
-        if (content != null) content[language] else  null)
+        title[language] ?: "".markFoundOccurrences(searchTerms),
+        headline[language] ?: "".markFoundOccurrences(searchTerms),
+        if (content != null) content[language]?.markFoundOccurrences(searchTerms) else  null)
 
 class Feed(
         val title: String,
