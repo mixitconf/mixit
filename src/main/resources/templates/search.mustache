@@ -14,17 +14,11 @@
             <div class="column large-12 callout">
                 <div class="large-8 large-centered columns">
                     <div class="row">
-                        <div class="large-12 columns">
-                            <label>
-                                {{#i18n}}search.title{{/i18n}}
-                                <input type="search" name="search" class="input-group-field" value="{{#criteria}}{{criteria}}{{/criteria}}" placeholder="Search">
-                            </label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        &nbsp;<br>
-                        <div class="large-12 large-centered columns">
-                            <input type="submit" class="button expand" value="{{#i18n}}search.title{{/i18n}}"/>
+                        <div class="large-12 columns input-group">
+                            <input type="search" class="input-group-field" name="search" placeholder="{{#i18n}}search.title{{/i18n}}">
+                            <div class="input-group-button">
+                                <button type="submit" class="button expand"><img src="/images/svg/mxt-search.svg" style="max-width: 1.5em" title="{{#i18n}}header.menu.search{{/i18n}}"></button>
+                            </div>
                         </div>
                     </div>
                 </div>
