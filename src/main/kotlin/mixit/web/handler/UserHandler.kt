@@ -274,12 +274,13 @@ class UserDto(
         val logoWebpUrl: String? = null
 )
 
-fun User.toDto(language: Language, markdownConverter: MarkdownConverter) =
+fun User.toDto(language: Language, markdownConverter: MarkdownConverter, searchTerms: List<String> = emptyList()) =
         UserDto(login,
-                firstname,
-                lastname,
+                firstname.markFoundOccurrences(searchTerms),
+                lastname.markFoundOccurrences(searchTerms),
                 email,
-                company, markdownConverter.toHTML(description[language] ?: ""),
+                company,
+                markdownConverter.toHTML(description[language] ?: "").markFoundOccurrences(searchTerms),
                 emailHash,
                 photoUrl,
                 role,

@@ -12,6 +12,8 @@ import org.springframework.data.domain.Sort.Order
 import org.springframework.data.mongodb.core.*
 import org.springframework.data.mongodb.core.query.Criteria.where
 import org.springframework.data.mongodb.core.query.Query
+import org.springframework.data.mongodb.core.query.TextCriteria
+import org.springframework.data.mongodb.core.query.TextQuery
 import org.springframework.data.mongodb.core.query.isEqualTo
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
@@ -49,10 +51,17 @@ class PostRepository(private val template: ReactiveMongoTemplate,
         return template.find(query)
     }
 
+    fun findFullText(criteria: List<String>): Flux<Post> {
+        val textCriteria = TextCriteria()
+        criteria.forEach { textCriteria.matching(it) }
+
+        val query = TextQuery(textCriteria).sortByScore()
+        return template.find(query)
+    }
+
     fun deleteAll() = template.remove<Post>(Query())
 
     fun deleteOne(id: String) = template.remove<Post>(Query(where("_id").isEqualTo(id)))
 
     fun save(article: Post) = template.save(article)
-
 }

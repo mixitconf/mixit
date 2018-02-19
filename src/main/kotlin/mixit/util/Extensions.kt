@@ -104,6 +104,15 @@ private fun getOrdinal(n: Int) =
 // Other extensions
 // ----------------
 
+fun String.markFoundOccurrences(searchTerms: List<String>? = emptyList()) = if(searchTerms ==null || searchTerms.isEmpty()) this else {
+    var str = this
+    searchTerms.forEach { str = str.replace(it, "<span class=\"mxt-text--found\">$it</span>", true) }
+    str
+}
+
+
+
+
 fun String.stripAccents() = Normalizer
         .normalize(this, Normalizer.Form.NFD)
         .replace("\\p{InCombiningDiacriticalMarks}+".toRegex(), "")

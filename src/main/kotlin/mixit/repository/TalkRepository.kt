@@ -10,10 +10,8 @@ import org.springframework.data.domain.Sort.Direction.DESC
 import org.springframework.data.domain.Sort.Order
 import org.springframework.data.domain.Sort.by
 import org.springframework.data.mongodb.core.*
+import org.springframework.data.mongodb.core.query.*
 import org.springframework.data.mongodb.core.query.Criteria.where
-import org.springframework.data.mongodb.core.query.Query
-import org.springframework.data.mongodb.core.query.inValues
-import org.springframework.data.mongodb.core.query.isEqualTo
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 
@@ -56,6 +54,14 @@ class TalkRepository(private val template: ReactiveMongoTemplate,
     }
 
     fun findAll(): Flux<Talk> = template.find<Talk>(Query().with(by(Order(ASC, "start"))))
+
+    fun findFullText(criteria: List<String>): Flux<Talk> {
+        val textCriteria = TextCriteria()
+        criteria.forEach { textCriteria.matching(it) }
+
+        val query = TextQuery(textCriteria).sortByScore()
+        return template.find(query)
+    }
 
     fun findOne(id: String) = template.findById<Talk>(id)
 
