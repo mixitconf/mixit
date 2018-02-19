@@ -59,9 +59,7 @@ class GlobalHandler(val userRepository: UserRepository,
                     val criteria = formData["search"]!!.trim().split(" ")
 
                     val users = userRepository.findFullText(criteria).map { it.toDto(req.language(), markdownConverter, criteria) }
-                    val articles = postRepository.findFullText(criteria).map {
-                        System.out.println("eEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEe")
-                        it.toDto(User("MiXiT", "MiXiT", "MiXiT", "MiXiT"), req.language(), criteria) }
+                    val articles = postRepository.findFullText(criteria).map { it.toDto(User("MiXiT", "MiXiT", "MiXiT", "MiXiT"), req.language(), criteria) }
                     val talks = talkRepository.findFullText(criteria).map { it.toDto(req.language(), emptyList(), false, false, criteria) }
 
                     ok().render("search", mapOf(
@@ -69,10 +67,13 @@ class GlobalHandler(val userRepository: UserRepository,
                             Pair("title", "search.title"),
                             Pair("users",  users),
                             Pair("hasUsers",  users.hasElements()),
+                            Pair("countUsers",  users.count()),
                             Pair("talks", talks),
                             Pair("hasTalks",  talks.hasElements()),
+                            Pair("countTalks",  talks.count()),
                             Pair("articles", articles),
-                            Pair("hasArticles",  articles.hasElements())
+                            Pair("hasArticles",  articles.hasElements()),
+                            Pair("countArticles",  articles.count())
                     ))
                 }
             }

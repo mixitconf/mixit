@@ -55,7 +55,7 @@ class PostRepository(private val template: ReactiveMongoTemplate,
         val textCriteria = TextCriteria()
         criteria.forEach { textCriteria.matching(it) }
 
-        val query = TextQuery.query(textCriteria)
+        val query = TextQuery(textCriteria).sortByScore()
         return template.find(query)
     }
 

@@ -12,8 +12,12 @@ data class Post(
         val authorId: String,
         val addedAt: LocalDateTime = LocalDateTime.now(),
         @TextIndexed val title: Map<Language, String> = emptyMap(),
-        @TextIndexed(weight = 5F) val headline: Map<Language, String> = emptyMap(),
-        @TextIndexed(weight = 10F) val content: Map<Language, String>? = emptyMap(),
+        val headline: Map<Language, String> = emptyMap(),
+        val content: Map<Language, String>? = emptyMap(),
         @Id val id: String? = null,
-        val slug: Map<Language, String> = title.entries.map { (k, v) -> Pair(k, v.toSlug()) }.toMap()
+        val slug: Map<Language, String> = title.entries.map { (k, v) -> Pair(k, v.toSlug()) }.toMap(),
+        // We can't add an index on Map values. This field is only used to be able to do that
+        @TextIndexed(weight = 5F) val indexedHeadline: String = headline.values.joinToString(" "),
+        @TextIndexed(weight = 5F) val indexedContent: String = if(content == null) " " else content.values.joinToString(" ")
+
 )

@@ -22,88 +22,69 @@
                         </div>
                     </div>
                     <div class="row">
+                        &nbsp;<br>
                         <div class="large-12 large-centered columns">
                             <input type="submit" class="button expand" value="{{#i18n}}search.title{{/i18n}}"/>
                         </div>
                     </div>
                 </div>
 
+                <hr>
+
+                <h2>{{#i18n}}search.talks{{/i18n}}</h2>
                 {{#hasTalks}}
-                    <h2>{{#i18n}}search.talks{{/i18n}}</h2>
+                    <p>{{#i18n}}search.nb{{/i18n}}{{countTalks}}</p>
+                    {{#talks}}
+                        <article>
+                            <h2><a href="{{localePrefix}}/{{event}}/{{slug}}" class="mxt-title--article">
+                                <b>{{event}}</b> -
+                                {{title}}
+                                {{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
+                            </a></h2>
+                            <ul class="menu simple mxt-menu--accordion">
+                                {{#video}}
+                                    <li><strong>&#x25ba; {{#i18n}}talks.title.video{{/i18n}}</strong></li>{{/video}}
 
-                    <div class="columns small-12 medium-12 large-12 callout">
-                        <ul class="accordion" data-accordion>
-                            {{#talks}}
-                                <li class="accordion-item" data-accordion-item>
-                                    <!-- Accordion tab title -->
-                                    <a href="#" class="accordion-title">
-                                        <h3 class="mxt-text--talktitle">
-                                            <b>{{event}}</b> -
-                                            {{title}}
-                                            {{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
-                                        </h3>
-                                        <ul class="menu simple mxt-menu--accordion">
-                                            {{#video}}
-                                                <li><strong>&#x25ba; {{#i18n}}talks.title.video{{/i18n}}</strong></li>{{/video}}
-
-                                            <li class="mxt-text--cat-format">#{{format}}</li>
-                                        </ul>
-                                    </a>
-                                    <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
-                                    <div class="accordion-content" data-tab-content>
-                                        <div class="row mxt-wrapper--row">
-                                            <div class="small-7 medium-9 large-8 columns">
-                                                <p class="mxt-text--cat-room">{{#i18n}}{{room}}{{/i18n}}</p>
-                                                <div>{{#markdown}}{{summary}}{{/markdown}}</div>
-                                            </div>
-                                            <div class="small-5 medium-3 large-4 columns text-center">
-                                                <a href="{{localePrefix}}/{{event}}/{{slug}}" class="button hollow">{{#i18n}}talks.readmore{{/i18n}}</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            {{/talks}}
-                        </ul>
-                    </div>
-
+                                <li class="mxt-text--cat-format">#{{format}}</li>
+                            </ul>
+                            <p>{{#markdown}}{{summary}}{{/markdown}}</p>
+                            <a href="{{localePrefix}}/{{event}}/{{slug}}" class="button hollow align-center">{{#i18n}}talks.readmore{{/i18n}}</a>
+                        </article>
+                    {{/talks}}
                 {{/hasTalks}}
-
-                {{#articles}}
-                    {{.}}
-                {{/articles}}
-                ss
+                {{^hasTalks}}
+                    <p>{{#i18n}}search.no.talks{{/i18n}}</p>
+                {{/hasTalks}}
+                <hr/>
+                <h2>{{#i18n}}search.posts{{/i18n}}</h2>
                 {{#hasArticles}}
-                    <h2>{{#i18n}}search.posts{{/i18n}}</h2>
+                    <p>{{#i18n}}search.nb{{/i18n}}{{countArticles}}</p>
                     {{#articles}}
-                        {{.}}
+                        <article>
+                            <h2><a href="{{localePrefix}}/blog/{{slug}}" class="mxt-title--article">{{title}}</a></h2>
+                            <p class="subheader">{{#i18n}}blog.on{{/i18n}} <strong>{{addedAt}}</strong></p>
+                            <p>{{#markdown}}{{headline}}{{/markdown}}</p>
+                            <a href="{{localePrefix}}/blog/{{slug}}" class="button hollow align-center">{{#i18n}}blog.readmore{{/i18n}}</a>
+                        </article>
                     {{/articles}}
                 {{/hasArticles}}
-
+                {{^hasArticles}}
+                    <p>{{#i18n}}search.no.posts{{/i18n}}</p>
+                {{/hasArticles}}
+                <hr/>
+                <h2>{{#i18n}}search.users{{/i18n}}</h2>
                 {{#hasUsers}}
-                    <h2>{{#i18n}}search.users{{/i18n}}</h2>
-                    <div class="columns small-12 medium-12 large-12 callout">
-                        <ul class="accordion">
-                            {{#users}}
-                                <li class="accordion-item">
-                                    <!-- Accordion tab title -->
-                                    <a href="#" class="accordion-title">
-                                        <h3 class="mxt-text--talktitle">{{firstname}} {{lastname}}</h3>
-                                    </a>
-                                    <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
-                                    <div class="accordion-content" style="display: block">
-                                        <div class="row mxt-wrapper--row">
-                                            <div class="small-7 medium-9 large-8 columns">
-                                                <div>{{#markdown}}{{description}}{{/markdown}}</div>
-                                            </div>
-                                            <div class="small-5 medium-3 large-4 columns text-center">
-                                                <a href="{{localePrefix}}/user/{{login}}" class="button hollow">{{#i18n}}user.readmore{{/i18n}}</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            {{/users}}
-                        </ul>
-                    </div>
+                    <p>{{#i18n}}search.nb{{/i18n}}{{countUsers}}</p>
+                    {{#users}}
+                        <article>
+                            <h2><a href="{{localePrefix}}/user/{{login}}" class="mxt-title--article">{{firstname}} {{lastname}}</a></h2>
+                            <p>{{#markdown}}{{description}}{{/markdown}}</p>
+                            <a href="{{localePrefix}}/user/{{login}}" class="button hollow align-center">{{#i18n}}user.readmore{{/i18n}}</a>
+                        </article>
+                    {{/users}}
+                {{/hasUsers}}
+                {{^hasUsers}}
+                    <p>{{#i18n}}search.no.users{{/i18n}}</p>
                 {{/hasUsers}}
             </div>
         </div>
