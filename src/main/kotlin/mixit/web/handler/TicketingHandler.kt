@@ -28,7 +28,11 @@ class TicketingHandler(private val ticketRepository: TicketRepository,
                     ticketRepository
                             .findAll()
                             .collectList()
-                            .flatMap { it.shuffled(Random()).slice(IntRange(0, 600)).toMono() })
+                            .flatMap { it.shuffled(Random())
+                                         .distinctBy { listOf(it.firstname, it.lastname) }
+                                         .slice(IntRange(0, 600))
+                                         .toMono()
+                            })
 
     fun ticketing(req: ServerRequest) = ServerResponse.ok().render("ticketing-closed", mapOf(Pair("title", "ticketing.title")))
 
