@@ -46,6 +46,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-mail")
     compile("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
     compile("org.springframework.boot:spring-boot-devtools")
+    compile("org.springframework.boot:spring-boot-configuration-processor")
 
     runtime("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
     compile("com.samskivert:jmustache")
@@ -53,6 +54,7 @@ dependencies {
     compile("com.atlassian.commonmark:commonmark-ext-autolink:0.9.0")
     compile("com.sendgrid:sendgrid-java:4.1.2")
     compile("com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:20171016.1")
+
 
     testCompile("org.springframework.boot:spring-boot-starter-test") {
         exclude(module = "junit")
