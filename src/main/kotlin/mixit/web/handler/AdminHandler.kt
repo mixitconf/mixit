@@ -41,7 +41,9 @@ class AdminHandler(private val ticketRepository: TicketRepository,
 
     fun adminTicketing(req: ServerRequest) =
             ok().render("admin-ticketing", mapOf(
-                    Pair("tickets", ticketRepository.findAll()),
+                    Pair("tickets", ticketRepository.findAll()
+                            .sort(Comparator.comparing(Ticket::lastname)
+                                    .thenComparing(Comparator.comparing(Ticket::firstname)))),
                     Pair("title", "admin.ticketing.title")
             ))
 
