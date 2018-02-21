@@ -671,7 +671,7 @@
     },
     {
         "addedAt": "2018-01-30T12:47:03.43",
-        "description": "",
+        "description": null,
         "end": "2018-04-19T08:50:00",
         "event": "2018",
         "format": "TALK",
@@ -681,7 +681,8 @@
         "room": "UNKNOWN",
         "slug": "vers-la-degooglisation-et-au-dela-",
         "speakerIds": [
-            "dev@marienfressinaud.fr"
+            "dev@marienfressinaud.fr",
+            "pyves"
         ],
         "start": "2018-04-19T08:00:00",
         "summary": "Ah, les GAFAM, ces d\u00e9voreurs de donn\u00e9es fournisseurs de services gratuits. Chez Framasoft, on s'int\u00e9resse \u00e0 eux depuis 4 ans. Et on en a trouv\u00e9 des choses \u00e0 dire : exploitation des donn\u00e9es, sur-d\u00e9pendance, relation d\u00e9s\u00e9quilibr\u00e9e\u2026 Le tableau n'est pas rose. Mais pourtant, il y a des choses \u00e0 faire. Voici donc un petit bilan de ce que l'association a accompli depuis le lancement de la campagne \u00ab D\u00e9googlisons Internet \u00bb, ce que l'on projette de faire pour les ann\u00e9es \u00e0 venir et comment vous allez nous y aider, \u00e0 sauver l'Internet\u2026",
@@ -771,7 +772,7 @@
     },
     {
         "addedAt": "2018-01-30T12:47:03.479",
-        "description": "Over the past decade Agile has spread like wildfire. Almost every organization has implemented some sort of Agile Framework and many are investing heavily in implementing them. In addition, there are now more than 500,000 Certified Scrum Masters. \nWith all those positive things happening, then what\u2019s stopping us from living the Fairytale?\n\nThrough his work with Agile Transformations and as founder of the Beyond Scrum concept, Allan has gained vast experience in making teams and organizations move beyond the agile frameworks and embrace true Agile. In this Keynote Allan will take you on an inspirational journey that goes beyond frameworks and processes, to a place where people can make a difference.",
+        "description": "Over the past decade Agile has spread like wildfire. Almost every organization has implemented some sort of Agile Framework and many are investing heavily in implementing them. In addition, there are now more than 500,000 Certified Scrum Masters. \r\nWith all those positive things happening, then what\u2019s stopping us from living the Fairytale?\r\n\r\nThrough his work with Agile Transformations and as founder of the Beyond Scrum concept, Allan has gained vast experience in making teams and organizations move beyond the agile frameworks and embrace true Agile. In this Keynote Allan will take you on an inspirational journey that goes beyond frameworks and processes, to a place where people can make a difference.",
         "end": "2018-04-19T08:50:00",
         "event": "2018",
         "format": "TALK",
@@ -779,13 +780,13 @@
         "language": "ENGLISH",
         "photoUrls": [],
         "room": "UNKNOWN",
-        "slug": "agile-is-it-real-or-a-fairytale-",
+        "slug": "agile-is-it-real-of-a-fairytale",
         "speakerIds": [
             "allan@rennebo.com"
         ],
         "start": "2018-04-19T08:00:00",
-        "summary": "Imagine a place where all rules have to add value and make sense. Where the processes are there to support instead of control. Where profit is the consequence of doing a great job - not the reason why we go to work. Where employees as so happy to work that the salary becomes secondary. Where the customers are so happy they don't consider going elsewhere\n.\nThis may sound like a fairytale and in most organizations, it is \u2013 but does it really have to be?",
-        "title": "Agile - is it real or a fairytale?",
+        "summary": "Imagine a place where all rules have to add value and make sense. Where the processes are there to support instead of control. Where profit is the consequence of doing a great job - not the reason why we go to work. Where employees are so happy that the salary becomes secondary. Where the customers are so happy they don't consider going elsewhere . \r\n\r\nThis may sound like a fairytale and in most organizations, it is \u2013 but does it really have to be?",
+        "title": "Agile \u2013 is it real of a fairytale",
         "topic": "aliens",
         "video": null
     },
@@ -1035,7 +1036,7 @@
     },
     {
         "addedAt": "2018-01-30T12:47:04.183",
-        "description": "",
+        "description": null,
         "end": "2018-04-19T08:50:00",
         "event": "2018",
         "format": "TALK",
@@ -1048,7 +1049,7 @@
             "anne.gabrillagues"
         ],
         "start": "2018-04-19T08:00:00",
-        "summary": "Si vous avez d\u00e9j\u00e0 travaill\u00e9 sur un projet agile, vous avez sans doute rencontr\u00e9 la User Story. Vous avez m\u00eame peut-\u00eatre utilis\u00e9 des \"persona\", ces fiches de personnage qui repr\u00e9sentent un de vos utilisateurs type. Ces formats ont marqu\u00e9 une vraie \u00e9tape dans l'\u00e9volution de la sp\u00e9cification agile et sont le support actuellement le plus largement utilis\u00e9 pour la formalisation du besoin en mode agile.\n\nMais est-ce suffisant ? Est-ce que cela permet de capter l'essence du besoin ? Pas forc\u00e9ment !\n\nLa Job Story est une approche compl\u00e9mentaire, qui peut venir enrichir votre compr\u00e9hension des attentes de vos clients, et vous aider \u00e0 d\u00e9velopper un super produit !",
+        "summary": "Depuis une premi\u00e8re rencontre avec l'Agilit\u00e9 en 2008, j'accompagne les \u00e9quipes en tant que Scrum Master, Product Owner ou Coach Agile. Agiliste convaincue, je participe activement \u00e0 la diffusion de l'Agilit\u00e9 via l'organisation de Meetup et de conf\u00e9rences \u00e0 Paris. J'ai fait partie de l'\u00e9quipe organisatrice des 3 derniers ScrumDay et j'ai rejoint l'\u00e9quipe Lean Kanban France en 2016 (conf\u00e9rences Lean Kanban France et FlowCon). Parmi mes projets personnels figurent aussi le d\u00e9veloppement du jeu d'apprentissage Kanbanzine et divers projets de traduction. \r\n\r\nLa Job Story est une approche compl\u00e9mentaire, qui peut venir enrichir votre compr\u00e9hension des attentes de vos clients, et vous aider \u00e0 d\u00e9velopper un super produit !",
         "title": "Job Story : Penser autrement l'expression du besoin agile",
         "topic": "makers",
         "video": null
@@ -1155,7 +1156,7 @@
     },
     {
         "addedAt": "2018-01-30T12:47:04.496",
-        "description": "D'o\u00f9 l'id\u00e9e d'une session mettant les 2 \"jeux de constructions\" \u00e0 l'epreuve  des \u00e9quipes Dev&Ops qui voudront tenter l'exp\u00e9rience, agr\u00e9ment\u00e9e au fil des it\u00e9rations par quelques p\u00e9rip\u00e9ties tir\u00e9es de la vie r\u00e9elle des projets.\n\nNote : Ce workshop s'adresse \u00e0 un public large et ne n\u00e9cessite pas de connaissances techniques.",
+        "description": "D'o\u00f9 l'id\u00e9e d'une session mettant les 2 \"jeux de constructions\" \u00e0 l'epreuve  des \u00e9quipes Dev&Ops qui voudront tenter l'exp\u00e9rience, agr\u00e9ment\u00e9e au fil des it\u00e9rations par quelques p\u00e9rip\u00e9ties tir\u00e9es de la vie r\u00e9elle des projets.\r\n\r\nNote : Ce workshop s'adresse \u00e0 un public large et ne n\u00e9cessite pas de connaissances techniques.",
         "end": "2018-04-19T08:50:00",
         "event": "2018",
         "format": "WORKSHOP",
@@ -1165,10 +1166,11 @@
         "room": "UNKNOWN",
         "slug": "lego-vs-kapla-problematiques-devops-par-le-jeu",
         "speakerIds": [
-            "tamara.kondakjian@gmail.com"
+            "tamara.kondakjian@gmail.com",
+            "perretmathieu"
         ],
         "start": "2018-04-19T08:00:00",
-        "summary": "Le workshop propos\u00e9 est un atelier ludique de sensibilisation aux probl\u00e9matiques \"DevOps\", r\u00e9unissant :  \n-  les \"Devs\" qui r\u00e9alisent des fonctionnalit\u00e9s en nombre\n- et les \"Ops\" ou Operationnels (Equipe d'Exploitation) qui doivent garantir un syst\u00e8me stable en Production.\n\nNous avons jou\u00e9 quelques sessions de \"Lego4DevOps\" sous la bienveillance du Cara Lyon puis de l'agile Grenoble... et certains nous ont mis au d\u00e9fi de tester la version \"Kapla\" !",
+        "summary": "Le workshop propos\u00e9 est un atelier ludique de sensibilisation aux probl\u00e9matiques \"DevOps\", r\u00e9unissant :  \r\n-  les \"Devs\" qui r\u00e9alisent des fonctionnalit\u00e9s en nombre\r\n- et les \"Ops\" ou Operationnels (Equipe d'Exploitation) qui doivent garantir un syst\u00e8me stable en Production.\r\n\r\nNous avons jou\u00e9 quelques sessions de \"Lego4DevOps\" sous la bienveillance du Cara Lyon puis de l'agile Grenoble... et certains nous ont mis au d\u00e9fi de tester la version \"Kapla\" !",
         "title": "Lego VS Kapla : Probl\u00e9matiques DevOps par le jeu",
         "topic": "makers",
         "video": null
@@ -1399,7 +1401,7 @@
     },
     {
         "addedAt": "2018-01-30T12:47:04.635",
-        "description": "",
+        "description": null,
         "end": "2018-04-19T08:50:00",
         "event": "2018",
         "format": "WORKSHOP",
@@ -1407,14 +1409,14 @@
         "language": "ENGLISH",
         "photoUrls": [],
         "room": "UNKNOWN",
-        "slug": "beyond-scrum",
+        "slug": "the-beyond-scrum-game",
         "speakerIds": [
             "allan@rennebo.com"
         ],
         "start": "2018-04-19T08:00:00",
-        "summary": "How do we evolve beyond the definition of Scrum and become truly Hyper Productive?\n\nIn this workshop you will be invited on a journey where Scrum grows beyond the Scrum Framework, and becomes a team culture where teams work collaboratively to deliver value, learn, and to continuously improve \u2013 all in pursuit of a clear purpose.\n\nGet ready for a fun time where you will be able to learn and play at the same time.\n\nCome and join the game!",
-        "title": "Beyond Scrum",
-        "topic": "team",
+        "summary": "How do we evolve beyond the definition of Scrum and become truly Hyper Productive?\r\n\r\nIn this workshop you will be invited on a journey where Scrum grows beyond the Scrum Framework, and becomes a team culture where teams work collaboratively to deliver value, learn, and to continuously improve \u2013 all in pursuit of a clear purpose.\r\n\r\nGet ready for a fun time where you will be able to learn and play at the same time.\r\n\r\nCome and join the game!",
+        "title": "The Beyond Scrum Game",
+        "topic": "makers",
         "video": null
     },
     {
