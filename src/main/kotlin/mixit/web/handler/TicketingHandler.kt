@@ -30,7 +30,7 @@ class TicketingHandler(private val ticketRepository: TicketRepository,
                             .collectList()
                             .flatMap { it.shuffled(Random())
                                          .distinctBy { listOf(it.firstname, it.lastname) }
-                                         .slice(IntRange(0, 600))
+                                         .mapIndexed { index, ticket ->  ticket.toDto(index + 1)}
                                          .toMono()
                             })
 
@@ -54,4 +54,14 @@ class TicketingHandler(private val ticketRepository: TicketRepository,
         emailService.send("email-ticketing", user, locale, EmailServiceUsage.INFORMATION)
         return ok().render("ticketing-submission", formData)
     }
+
+    class TicketDto(
+            val rank: Int,
+            val email: String,
+            val firstname: String,
+            val lastname: String
+    )
+
+    fun Ticket.toDto(rank: Int) = TicketDto(rank, email, firstname, lastname)
+
 }
