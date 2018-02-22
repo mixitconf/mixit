@@ -149,6 +149,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
                 POST("/events/{eventId}/sponsors/create", adminHandler::adminCreateEventSponsoring)
                 POST("/events/{eventId}/sponsors/delete", adminHandler::adminDeleteEventSponsoring)
                 POST("/events/{eventId}/sponsors", adminHandler::adminUpdateEventSponsoring)
+                POST("/ticketing/delete", adminHandler::adminDeleteTicketing)
                 POST("/post", adminHandler::adminSavePost)
                 POST("/post/delete", adminHandler::adminDeletePost)
             }

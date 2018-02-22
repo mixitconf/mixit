@@ -42,10 +42,22 @@ class AdminHandler(private val ticketRepository: TicketRepository,
     fun adminTicketing(req: ServerRequest) =
             ok().render("admin-ticketing", mapOf(
                     Pair("tickets", ticketRepository.findAll()
+                            .map { Ticket(
+                                    it.email,
+                                    it.firstname.trim().toLowerCase().capitalize(),
+                                    it.lastname.trim().toLowerCase().capitalize()) }
                             .sort(Comparator.comparing(Ticket::lastname)
                                     .thenComparing(Comparator.comparing(Ticket::firstname)))),
                     Pair("title", "admin.ticketing.title")
             ))
+
+    fun adminDeleteTicketing(req: ServerRequest): Mono<ServerResponse> =
+            req.body(BodyExtractors.toFormData()).flatMap {
+                val formData = it.toSingleValueMap()
+                ticketRepository
+                        .deleteOne(formData["email"]!!)
+                        .then(seeOther("${properties.baseUri}/admin/ticketing"))
+            }
 
     fun adminTalks(req: ServerRequest, year: String) =
             ok().render("admin-talks", mapOf(

@@ -16,9 +16,10 @@
                 <table>
                   <thead>
                     <tr>
-                      <th width="150">{{#i18n}}admin.ticketing.table.firstname{{/i18n}}</th>
-                      <th width="150">{{#i18n}}admin.ticketing.table.lastname{{/i18n}}</th>
-                      <th width="150">{{#i18n}}admin.ticketing.table.email{{/i18n}}</th>
+                      <th>{{#i18n}}admin.ticketing.table.firstname{{/i18n}}</th>
+                      <th>{{#i18n}}admin.ticketing.table.lastname{{/i18n}}</th>
+                      <th>{{#i18n}}admin.ticketing.table.email{{/i18n}}</th>
+                      <th>&nbsp;</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -27,6 +28,10 @@
                       <td>{{firstname}}</td>
                       <td>{{lastname}}</td>
                       <td><a href="mailto:{{email}}">{{email}}</a></td>
+                      <td><form action="/admin/ticketing/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.ticketing.delete.confirm{{/i18n}}');">
+                            <input type="hidden" name="email" value="{{email}}"/>
+                            <input type="submit" class="button expand" value="{{#i18n}}admin.ticketing.delete{{/i18n}}"/>
+                        </form></td>
                     </tr>
                     {{/tickets}}
                   </tbody>
