@@ -1,10 +1,5 @@
 class TalksCtrl{
 
-  constructor() {
-    // const favoriteButtons = document.getElementsByClassName('mxt-img--favorite');
-    // Array.from(favoriteButtons).forEach((favoriteButton: HTMLElement) => favoriteButton.onclick= this.favoriteToggle);
-  }
-
   favoriteToggle(event) {
     const img = event.srcElement;
     const email = <HTMLInputElement> document.getElementById('email');
