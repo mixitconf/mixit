@@ -8,7 +8,6 @@ class TalksCtrl{
   favoriteToggle(event) {
     const img = event.srcElement;
     const email = <HTMLInputElement> document.getElementById('email');
-    event.stopPropagation();
 
     fetch(`/api/favorites/${email.value}/talks/${img.id.substr(9,img.id.length)}/toggle`, {method: 'post'})
       .then(response => response.json())
