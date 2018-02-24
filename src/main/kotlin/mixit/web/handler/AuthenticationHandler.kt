@@ -49,7 +49,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
             renderError("login.error.creation.mail")
         }
         else {
-            searchUserAndSendToken(data.toSingleValueMap()["email"]!!, req.locale())
+            searchUserAndSendToken(data.toSingleValueMap()["email"]!!.trim().toLowerCase(), req.locale())
         }
     }
 
@@ -97,9 +97,9 @@ class AuthenticationHandler(private val userRepository: UserRepository,
         if (formData["email"] == null || formData["firstname"] == null || formData["lastname"] == null)
             renderError("login.error.field.text")
 
-        val email = formData["email"]!!
+        val email = formData["email"]!!.trim().toLowerCase()
         val user = User(
-                login = formData["email"]!!,
+                login = email.split("@").get(0),
                 firstname = formData["firstname"]!!.toLowerCase().capitalize(),
                 lastname = formData["lastname"]!!.toLowerCase().capitalize(),
                 email = email,
@@ -118,7 +118,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
                             userRepository
                                     .save(user)
                                     // if user is created we send him a token by email
-                                    .flatMap { searchUserAndSendToken(email, req.locale()) }
+                                    .flatMap { searchUserAndSendToken(email.trim().toLowerCase(), req.locale()) }
                                     // otherwise we display an error
                                     .switchIfEmpty(renderError("login.error.creation.text"))
                     )
@@ -132,7 +132,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
     fun signInViaUrl(req: ServerRequest): Mono<ServerResponse> {
         val email = URLDecoder.decode(req.pathVariable("email"), "UTF-8").decodeFromBase64()
         val token = req.pathVariable("token")
-        return signInProcess(req, email!!, token)
+        return signInProcess(req, email!!.trim().toLowerCase(), token)
     }
 
     /**
@@ -150,7 +150,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
         val email = if (formData["email"]!!.contains("@")) formData["email"] else cryptographer.decrypt(formData["email"])
         val token = formData["token"]
 
-        signInProcess(req, email!!, token!!)
+        signInProcess(req, email!!.trim().toLowerCase(), token!!)
     }
 
     fun signInProcess(req: ServerRequest, email: String, token:String) =
