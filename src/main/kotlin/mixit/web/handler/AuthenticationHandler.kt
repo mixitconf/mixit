@@ -42,13 +42,11 @@ class AuthenticationHandler(private val userRepository: UserRepository,
      */
     fun login(req: ServerRequest): Mono<ServerResponse> = req.body(toFormData()).flatMap { data ->
         // Email is required
-        if (data.toSingleValueMap()["email"] == null){
+        if (data.toSingleValueMap()["email"] == null) {
             renderError("login.error.text")
-        }
-        else if(!emailValidator.isValid(data.toSingleValueMap()["email"]!!)){
+        } else if (!emailValidator.isValid(data.toSingleValueMap()["email"]!!)) {
             renderError("login.error.creation.mail")
-        }
-        else {
+        } else {
             searchUserAndSendToken(data.toSingleValueMap()["email"]!!.trim().toLowerCase(), req.locale())
         }
     }
@@ -107,10 +105,9 @@ class AuthenticationHandler(private val userRepository: UserRepository,
                 role = Role.USER
         )
 
-        if(!emailValidator.isValid(email)){
+        if (!emailValidator.isValid(email)) {
             renderError("login.error.creation.mail")
-        }
-        else {
+        } else {
             userRepository.findByEmail(email)
                     // Email is unique and if an email is found we return an error
                     .flatMap { renderError("login.error.uniqueemail.text") }
@@ -132,7 +129,9 @@ class AuthenticationHandler(private val userRepository: UserRepository,
     fun signInViaUrl(req: ServerRequest): Mono<ServerResponse> {
         val email = URLDecoder.decode(req.pathVariable("email"), "UTF-8").decodeFromBase64()
         val token = req.pathVariable("token")
-        return signInProcess(req, email!!.trim().toLowerCase(), token)
+
+        val context = mapOf(Pair("email", email), Pair ("token", token))
+        return ok().render("login-confirmation", context)
     }
 
     /**
@@ -148,38 +147,35 @@ class AuthenticationHandler(private val userRepository: UserRepository,
         }
 
         val email = if (formData["email"]!!.contains("@")) formData["email"] else cryptographer.decrypt(formData["email"])
-        val token = formData["token"]
+        val token = formData["token"]!!
 
-        signInProcess(req, email!!.trim().toLowerCase(), token!!)
-    }
+        req.session().flatMap { session ->
+            userRepository.findByEmail(email!!)
+                    // User must exist at this point
+                    .flatMap { user ->
+                        if (token.trim() == user.token) {
+                            if (user.tokenExpiration.isBefore(LocalDateTime.now())) {
+                                // token has to be valid
+                                renderError("login.error.token.text")
+                            } else {
+                                session.attributes["role"] = user.role
+                                session.attributes["email"] = email
+                                session.attributes["token"] = token
 
-    fun signInProcess(req: ServerRequest, email: String, token:String) =
-            req.session().flatMap { session ->
-        userRepository.findByEmail(email)
-                // User must exist at this point
-                .flatMap { user ->
-                    if (token.trim() == user.token) {
-                        if (user.tokenExpiration.isBefore(LocalDateTime.now())) {
-                            // token has to be valid
-                            renderError("login.error.token.text")
+                                seeOther(URI("${properties.baseUri}/"))
+                                        .cookie(ResponseCookie
+                                                .from("XSRF-TOKEN", "${email}:${token}".encodeToBase64()!!)
+                                                .maxAge(Duration.between(LocalDateTime.now(), user.tokenExpiration))
+                                                .build())
+                                        .build()
+                            }
                         } else {
-                            session.attributes["role"] = user.role
-                            session.attributes["email"] = email
-                            session.attributes["token"] = token
-
-                            seeOther(URI("${properties.baseUri}/"))
-                                    .cookie(ResponseCookie
-                                            .from("XSRF-TOKEN", "${email}:${token}".encodeToBase64()!!)
-                                            .maxAge(Duration.between(LocalDateTime.now(), user.tokenExpiration))
-                                            .build())
-                                    .build()
+                            renderError("login.error.badtoken.text")
                         }
-                    } else {
-                        renderError("login.error.badtoken.text")
-                    }
 
-                }
-                .switchIfEmpty(renderError("login.error.bademail.text"))
+                    }
+                    .switchIfEmpty(renderError("login.error.bademail.text"))
+        }
     }
 
     /**
@@ -200,7 +196,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
                 user.links,
                 user.legacyId,
                 LocalDateTime.now().plusHours(48),
-                UUID.randomUUID().toString().substring(0,14).replace("-", ""))
+                UUID.randomUUID().toString().substring(0, 14).replace("-", ""))
 
         try {
             logger.info("A token ${userToUpdate.token} was sent to $email")
