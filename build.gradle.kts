@@ -9,7 +9,7 @@ plugins {
     id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion
     id("com.moowork.node") version nodePluginVersion
     id("com.moowork.gulp") version nodePluginVersion
-    id("org.springframework.boot") version "2.0.0.RC1"
+    id("org.springframework.boot") version "2.0.0.RC2"
     id("io.spring.dependency-management") version "1.0.4.RELEASE"
     id("org.junit.platform.gradle.plugin") version "1.0.2"
 }
