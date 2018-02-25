@@ -711,26 +711,6 @@
         "video": null
     },
     {
-        "addedAt": "2018-01-30T12:47:03.448",
-        "description": "",
-        "end": "2018-04-19T08:50:00",
-        "event": "2018",
-        "format": "TALK",
-        "id": "5a706948840deb00141a7227",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "cessons-les-estimations-",
-        "speakerIds": [
-            "pro@leguedois.fr"
-        ],
-        "start": "2018-04-19T08:00:00",
-        "summary": "lors que les estimations sont \u00e0 la base des m\u00e9thodes classiques et que dans le domaine Agile, SCRUM notamment lui accorde une grande importance, nous allons l\u2019espace d\u2019une conf\u00e9rence remettre en cause celles-ci.\n\nApr\u00e8s un bref rappel de diff\u00e9rentes m\u00e9thodes permettant de r\u00e9aliser des estimations et croyances qui y sont attach\u00e9es, nous prendrons le temps de r\u00e9fl\u00e9chir sur les effets n\u00e9fastes de ces derni\u00e8res. Enfin, nous verrons comment dans la r\u00e9alit\u00e9 des projets, il est possible de s\u2019en extraire.\n\nPr\u00e9sentation sans jargon ouverte \u00e0 toute personne ayant des notions de gestion de projet.",
-        "title": "Cessons les estimations !",
-        "topic": "tech",
-        "video": null
-    },
-    {
         "addedAt": "2018-01-30T12:47:03.457",
         "description": "",
         "end": "2018-04-19T08:50:00",
@@ -1496,6 +1476,26 @@
         "start": "2018-04-19T08:00:00",
         "summary": "Un an apr\u00e8s la sortie de la version MVP (minimum viable product) de WebAssembly, de nombreux usages \u00e9mergent et laissent entrevoir les possibilit\u00e9s futures du format binaire accessible dans tous les navigateurs Web modernes. Pourquoi s'int\u00e9resser \u00e0 WebAssembly aujourd'hui ? Est-ce que c'est fait pour moi ? Est-ce que c'est simple \u00e0 utiliser ? Comment je peux en tirer profit facilement d\u00e9s aujourd'hui ? Nous essayerons ensemble de r\u00e9pondre \u00e0 ces questions, puis nous verrons comment cr\u00e9er et int\u00e9grer du code WebAssembly, en passant par toutes les \u00e9tapes, de l'\u00e9criture du code source initial (dans un autre langage que JS, mais pas de panique !) jusqu'\u00e0 l'int\u00e9gration dans une application Web.",
         "title": "Faciliter le d\u00e9veloppement d'applications Web performantes avec WebAssembly",
+        "topic": "tech",
+        "video": null
+    },
+    {
+        "addedAt": "2018-01-30T12:47:03.448",
+        "description": "Conf\u00e9rence iconoclaste, sous la forme d\u2019un one man show, afin de r\u00e9fl\u00e9chir (et de rire ?) sur un aspect essentiel de l\u2019agilit\u00e9.\r\n",
+        "end": "2018-04-19T08:50:00",
+        "event": "2018",
+        "format": "TALK",
+        "id": "5a706948840deb00141a7227",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "UNKNOWN",
+        "slug": "cessons-les-estimations-",
+        "speakerIds": [
+            "pro@leguedois.fr"
+        ],
+        "start": "2018-04-19T08:00:00",
+        "summary": "Alors que les estimations sont \u00e0 la base des m\u00e9thodes classiques et que dans le domaine Agile, SCRUM notamment lui accorde une grande importance, nous allons l\u2019espace d\u2019une conf\u00e9rence remettre en cause celles-ci.\r\n\r\nApr\u00e8s un bref rappel de diff\u00e9rentes m\u00e9thodes permettant de r\u00e9aliser des estimations et croyances qui y sont attach\u00e9es, nous prendrons le temps de r\u00e9fl\u00e9chir sur les effets n\u00e9fastes de ces derni\u00e8res. Enfin, nous verrons comment dans la r\u00e9alit\u00e9 des projets, il est possible de s\u2019en extraire.\r\n\r\n",
+        "title": "Cessons les estimations !",
         "topic": "tech",
         "video": null
     }
