@@ -73,7 +73,7 @@ class UserIntegrationTests(@LocalServerPort port: Int) {
 
     @Test
     fun `Find Zenika Lyon`() {
-        client.get().uri("/api/user/Zenika Lyon").accept(APPLICATION_JSON)
+        client.get().uri("/api/user/Zenika%20Lyon").accept(APPLICATION_JSON)
                 .retrieve()
                 .bodyToFlux<User>()
                 .test()
