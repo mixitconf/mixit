@@ -55,6 +55,7 @@ class UserHandler(private val repository: UserRepository,
         val speakerStarInCurrentEvent = listOf(
                 "jhoeller@pivotal.io",
                 "sharon@sharonsteed.co",
+                "allan@rennebo.com",
                 "agilex",
                 "laura.carvajal@gmail.com",
                 "augerment@gmail.com",
@@ -69,6 +70,7 @@ class UserHandler(private val repository: UserRepository,
             try {
                 val idLegacy = req.pathVariable("login").toLong()
                 repository.findByLegacyId(idLegacy).flatMap { findOneViewDetail(it, "user", false, req, emptyMap()) }
+
             } catch (e: NumberFormatException) {
                 repository.findOne(URLDecoder.decode(req.pathVariable("login"), "UTF-8"))
                         .flatMap { findOneViewDetail(it, "user", false, req, emptyMap()) }
