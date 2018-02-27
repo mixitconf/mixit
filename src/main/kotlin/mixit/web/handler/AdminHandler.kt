@@ -343,7 +343,7 @@ class AdminHandler(private val ticketRepository: TicketRepository,
                 userRepository
                         .findMany(posts.map { it.authorId })
                         .collectMap(User::login)
-                        .map { authors -> posts.map { it.toDto(authors[it.authorId]!!, req.language()) } }
+                        .map { authors -> posts.map { it.toDto(if(authors[it.authorId] == null) User("mixit", "", "MiXiT","") else authors[it.authorId]!!, req.language()) } }
             }), Pair("title", "admin.blog.title")))
 
 
