@@ -33,7 +33,7 @@ class BlogHandler(val repository: PostRepository,
     fun findAllView(req: ServerRequest) = repository.findAll(req.language())
             .collectList()
             .flatMap { posts -> userRepository.findMany(posts.map { it.authorId }).collectMap{ it.login }.flatMap { authors ->
-                val model = mapOf(Pair("posts", posts.map { it.toDto(authors[it.authorId]!!, req.language()) }), Pair("title", "blog.title"))
+                val model = mapOf(Pair("posts", posts.map { it.toDto(if(authors[it.authorId] == null) User("mixit", "", "MiXiT","") else authors[it.authorId]!!, req.language()) }), Pair("title", "blog.title"))
                 ok().render("blog", model)
             }}
 
