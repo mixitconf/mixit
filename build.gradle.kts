@@ -19,18 +19,15 @@ repositories {
     mavenCentral()
 }
 
-tasks {
-    withType<KotlinCompile> {
-        kotlinOptions {
-            jvmTarget = "1.8"
-            freeCompilerArgs = listOf("-Xjsr305=strict")
-        }
+tasks.withType<KotlinCompile> {
+    kotlinOptions {
+        jvmTarget = "1.8"
+        freeCompilerArgs = listOf("-Xjsr305=strict")
     }
+}
 
-    // TODO To be replaced by test { } support when available in Gradle Kotlin DSL
-    withType<Test> {
-        useJUnitPlatform()
-    }
+val test by tasks.getting(Test::class) {
+    useJUnitPlatform()
 }
 
 node {
