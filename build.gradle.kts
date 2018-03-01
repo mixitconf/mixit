@@ -9,22 +9,27 @@ plugins {
     id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion
     id("com.moowork.node") version nodePluginVersion
     id("com.moowork.gulp") version nodePluginVersion
-    id("org.springframework.boot") version "2.0.0.RC2"
+    id("org.springframework.boot") version "2.0.0.RELEASE"
     id("io.spring.dependency-management") version "1.0.4.RELEASE"
-    id("org.junit.platform.gradle.plugin") version "1.0.2"
 }
 
 version = "1.0.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
-    maven("https://repo.spring.io/milestone")
 }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions {
-        jvmTarget = "1.8"
-        freeCompilerArgs = listOf("-Xjsr305=strict")
+tasks {
+    withType<KotlinCompile> {
+        kotlinOptions {
+            jvmTarget = "1.8"
+            freeCompilerArgs = listOf("-Xjsr305=strict")
+        }
+    }
+
+    // TODO To be replaced by test { } support when available in Gradle Kotlin DSL
+    withType<Test> {
+        useJUnitPlatform()
     }
 }
 
@@ -59,8 +64,8 @@ dependencies {
     testCompile("org.springframework.boot:spring-boot-starter-test") {
         exclude(module = "junit")
     }
-    testCompile("org.junit.jupiter:junit-jupiter-api")
-    testRuntime("org.junit.jupiter:junit-jupiter-engine")
+    testImplementation("org.junit.jupiter:junit-jupiter-api")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
     testCompile("io.projectreactor:reactor-test")
 }
 
