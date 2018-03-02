@@ -1076,7 +1076,7 @@
     },
     {
         "addedAt": "2018-01-30T12:47:04.468",
-        "description": "Comme dans toute transformation, les facteurs cl\u00e9s de succ\u00e8s se trouvent dans les Hommes plut\u00f4t que dans une recette \u00e0 appliquer. Au-del\u00e0 du marketing, il y a des talents \u00e0 d\u00e9velopper. \nComment d\u00e9velopper les talents de chacun, pour qu\u2019un groupe d\u2019individus devienne une \u00e9quipe, \u00e0 l\u2019\u00e9coute, co-responsable et agile ? \nQuels sont les points de vigilance \u00e0 garder en t\u00eate pour conduire cette transformation, culturelle avant tout ?\nC\u2019est ce que nous vous proposons d\u2019aborder dans cet atelier qui int\u00e8grera \u00e0 la fois des notions de neurosciences et des exercices pour vivre les concepts abord\u00e9s.",
+        "description": "Comme dans toute transformation, les facteurs cl\u00e9s de succ\u00e8s se trouvent dans les Hommes plut\u00f4t que dans une recette \u00e0 appliquer. Au-del\u00e0 du marketing, il y a des talents \u00e0 d\u00e9velopper. \r\nComment d\u00e9velopper les talents de chacun, pour qu\u2019un groupe d\u2019individus devienne une \u00e9quipe, \u00e0 l\u2019\u00e9coute, co-responsable et agile ? \r\nQuels sont les points de vigilance \u00e0 garder en t\u00eate pour conduire cette transformation, culturelle avant tout ?\r\nC\u2019est ce que nous vous proposons d\u2019aborder dans cet atelier qui int\u00e8grera \u00e0 la fois des notions de neurosciences et des exercices pour vivre les concepts abord\u00e9s.",
         "end": "2018-04-19T08:50:00",
         "event": "2018",
         "format": "WORKSHOP",
@@ -1086,12 +1086,14 @@
         "room": "UNKNOWN",
         "slug": "peut-on-etre-agile-sans-etre-agile-",
         "speakerIds": [
-            "njeauffroy@gmail.com"
+            "njeauffroy@gmail.com",
+            "sboissier",
+            "jattard"
         ],
         "start": "2018-04-19T08:00:00",
-        "summary": "Avez-vous d\u00e9j\u00e0 rencontr\u00e9 des \u00e9quipes qui constataient : \u00ab l\u2019Agilit\u00e9, on a essay\u00e9, mais \u00e7a n\u2019a pas march\u00e9\u2026 \u00bb ? Peut-\u00eatre m\u00eame en avez-vous fait partie ? \nIl ne suffit peut-\u00eatre pas de se d\u00e9clarer Agile pour \u00eatre agile !",
+        "summary": "Avez-vous d\u00e9j\u00e0 rencontr\u00e9 des \u00e9quipes qui constataient : \u00ab l\u2019Agilit\u00e9, on a essay\u00e9, mais \u00e7a n\u2019a pas march\u00e9\u2026 \u00bb ? Peut-\u00eatre m\u00eame en avez-vous fait partie ? \r\nIl ne suffit peut-\u00eatre pas de se d\u00e9clarer Agile pour \u00eatre agile !",
         "title": "Peut-on \u00eatre Agile sans \u00eatre agile ?",
-        "topic": "team",
+        "topic": "makers",
         "video": null
     },
     {
