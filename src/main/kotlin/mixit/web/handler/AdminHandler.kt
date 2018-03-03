@@ -145,6 +145,7 @@ class AdminHandler(private val ticketRepository: TicketRepository,
                     Pair("makers", "makers" == talk.topic),
                     Pair("aliens", "aliens" == talk.topic),
                     Pair("tech", "tech" == talk.topic),
+                    Pair("team", "team" == talk.topic),
                     Pair("design", "design" == talk.topic),
                     Pair("hacktivism", "hacktivism" == talk.topic),
                     Pair("learn", "learn" == talk.topic)
