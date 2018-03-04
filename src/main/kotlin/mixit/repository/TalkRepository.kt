@@ -23,6 +23,7 @@ class TalkRepository(private val template: ReactiveMongoTemplate,
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
+        deleteAll()
         if (count().block() == 0L) {
             listOf(2012, 2013, 2014, 2015, 2016, 2017, 2018).forEach { year ->
                 val talksResource = ClassPathResource("data/talks_$year.json")

@@ -22,6 +22,7 @@ class FavoriteRepository(private val template: ReactiveMongoTemplate, val crypto
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
+        deleteAll()
         if (count().block() == 0L) {
             val favoriteResource = ClassPathResource("data/favorite.json")
             val favorites: List<Favorite> = objectMapper.readValue(favoriteResource.inputStream)
