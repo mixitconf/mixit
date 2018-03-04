@@ -70,6 +70,10 @@
                                 <div class="row mxt-wrapper--row">
                                     <div class="small-7 medium-9 large-8 columns">
                                         <p class="mxt-text--cat-room">{{#i18n}}{{room}}{{/i18n}}</p>
+                                        <p>
+                                            {{#date}}{{date}}{{/date}}<br>
+                                            {{#start}}{{start}} - {{end}}{{/start}}
+                                        </p>
                                         <div>{{#markdown}}{{summary}}{{/markdown}}</div>
                                     </div>
                                     <div class="small-5 medium-3 large-4 columns text-center">
