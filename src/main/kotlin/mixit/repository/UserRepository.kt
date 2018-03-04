@@ -24,7 +24,6 @@ class UserRepository(private val template: ReactiveMongoTemplate,
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
-        deleteAll()
         if (count().block() == 0L) {
             val usersResource = ClassPathResource("data/users.json")
             val users: List<User> = objectMapper.readValue(usersResource.inputStream)

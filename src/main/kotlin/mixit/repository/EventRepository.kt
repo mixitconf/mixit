@@ -20,7 +20,6 @@ class EventRepository(private val template: ReactiveMongoTemplate,
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
-        deleteAll()
         if (count().block() == 0L) {
             val eventsResource = ClassPathResource("data/events.json")
             val events: List<Event> = objectMapper.readValue(eventsResource.inputStream)

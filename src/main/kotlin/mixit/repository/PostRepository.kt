@@ -26,7 +26,6 @@ class PostRepository(private val template: ReactiveMongoTemplate,
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
-        deleteAll()
         if (count().block() == 0L) {
             val blogResource = ClassPathResource("data/blog.json")
             val posts: List<Post> = objectMapper.readValue(blogResource.inputStream)

@@ -23,7 +23,6 @@ class TicketRepository(private val template: ReactiveMongoTemplate,
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
-        deleteAll()
         if (count().block() == 0L) {
             val usersResource = ClassPathResource("data/ticket.json")
             val tickets: List<Ticket> = objectMapper.readValue(usersResource.inputStream)
