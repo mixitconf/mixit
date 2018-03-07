@@ -103,11 +103,11 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
             "/admin".nest {
                 GET("/", adminHandler::admin)
                 GET("/ticketing", adminHandler::adminTicketing)
-                GET("/talks") { adminHandler.adminTalks(it, "2018")}
-                GET("/talks/{year}") { adminHandler.adminTalks(it, it.pathVariable("year"))}
                 DELETE("/")
                 GET("/talks/edit/{slug}", adminHandler::editTalk)
+                GET("/talks") { adminHandler.adminTalks(it, "2018")}
                 GET("/talks/create", adminHandler::createTalk)
+                GET("/talks/{year}") { adminHandler.adminTalks(it, it.pathVariable("year"))}
                 GET("/users", adminHandler::adminUsers)
                 GET("/users/edit/{login}", adminHandler::editUser)
                 GET("/users/create", adminHandler::createUser)
