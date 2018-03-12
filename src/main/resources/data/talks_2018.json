@@ -367,6 +367,28 @@
         "video": null
     },
     {
+        "addedAt": "2018-03-12T13:02:31.265",
+        "description": "Les Raspberry Jams sont des \u00e9v\u00e8nements o\u00f9 les gens viennent pour d\u00e9couvrir le monde num\u00e9rique.\r\nLes Jams peuvent prendre toutes sortes de tailles et de formes : ateliers pour d\u00e9butants, sessions de travail sur vos propres projets, des d\u00e9monstrations, des conf\u00e9rences...\r\nUne Jam rassemble toutes sortes de personnes : certains d\u00e9couvrent les interactions avec des montages \u00e9lectroniques, et d'autres ont des tonnes d'exp\u00e9rience qu'ils sont heureux de venir partager.\r\nLes Jams sont des \u00e9v\u00e8nements accueillants o\u00f9 vous pourrez faire des rencontres et apprendre ensemble dans un environnement amical.\r\n\r\nPour son \u00e9dition 2018, MiXiT a d\u00e9cid\u00e9 d'h\u00e9berger une Raspberry Pi Jam.\r\nElle se fera avec l'aide de :\r\n- Alan Mc Cullagh : un passionn\u00e9 dans cet univers de code et d'\u00e9lectronique\r\n- Joshua Lowe : un jeune entousiasthe proposant une solution pour d\u00e9couvrir le code en d\u00e9marrant par des blocs graphiques pour finir par du code en language python.\r\n- Thierry Chantier : entre 2 ateliers avec les enfants de MixTeen, il est temps de partager aussi avec les adultes.\r\n\r\nVenez d\u00e9couvrir, discuter, bricoler et coder... Quelque soit le temps que vous avez, nous trouverons de quoi \u00e9changer.",
+        "end": "2018-04-19T18:00:00",
+        "event": "2018",
+        "format": "WORKSHOP",
+        "id": "5aa67aed67bc5305f8a4370c",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "UNKNOWN",
+        "slug": "raspberry-pi-jam",
+        "speakerIds": [
+            "alanmccullagh",
+            "Joshua.Lowe@gmail.com",
+            "titimoby"
+        ],
+        "start": "2018-04-19T14:00:00",
+        "summary": "Les Raspberry Jams sont des \u00e9v\u00e8nements o\u00f9 les gens viennent pour d\u00e9couvrir le monde num\u00e9rique.\r\nLes Jams peuvent prendre toutes sortes de tailles et de formes : ateliers pour d\u00e9butants, sessions de travail sur vos propres projets, des d\u00e9monstrations, des conf\u00e9rences...\r\nUne Jam rassemble toutes sortes de personnes : certains d\u00e9couvrent les interactions avec des montages \u00e9lectroniques, et d'autres ont des tonnes d'exp\u00e9rience qu'ils sont heureux de venir partager.\r\nLes Jams sont des \u00e9v\u00e8nements accueillants o\u00f9 vous pourrez faire des rencontres et apprendre ensemble dans un environnement amical.\r\n\r\nPour son \u00e9dition 2018, MiXiT a d\u00e9cid\u00e9 d'h\u00e9berger une Raspberry Pi Jam.\r\nElle se fera avec l'aide de :\r\n- Alan Mc Cullagh : un passionn\u00e9 dans cet univers de code et d'\u00e9lectronique\r\n- Joshua Lowe : un jeune entousiasthe proposant une solution pour d\u00e9couvrir le code en d\u00e9marrant par des blocs graphiques pour finir par du code en language python.\r\n- Thierry Chantier : entre 2 ateliers avec les enfants de MixTeen, il est temps de partager aussi avec les adultes.\r\n\r\nVenez d\u00e9couvrir, discuter, bricoler et coder... Quelque soit le temps que vous avez, nous trouverons de quoi \u00e9changer.\r\n",
+        "title": "Raspberry Pi Jam",
+        "topic": "makers",
+        "video": null
+    },
+    {
         "addedAt": "2018-01-30T12:47:03.135",
         "description": "We will take you through you some Systems Thinking theory to be able get your hands dirty on modelling a case problem and conclude by approaching some of the problems you deal with in your daily practice. \r\n\r\nThis Workshop is suitable for people working in management positions, agile coaches and scrum masters and will be facilitated by Emile Silvis and Roland Flemm.",
         "end": "2018-04-19T16:00:00",
@@ -405,26 +427,6 @@
         "start": "2018-04-19T14:10:00",
         "summary": "GraphQL est une sp\u00e9cification et un langage de requ\u00eatage poss\u00e9dant de nombreuses impl\u00e9mentations c\u00f4t\u00e9 serveur mais aussi c\u00f4t\u00e9 client.\r\n\r\nNous allons propulser notre application gr\u00e2ce \u00e0 l\u2019impl\u00e9mentation client fournie par Apollo. Les performances vont \u00eatre am\u00e9lior\u00e9es gr\u00e2ce \u00e0 un syst\u00e8me de cache, mais aussi l'exp\u00e9rience utilisateur avec le pattern optimistic UI.\r\n\r\nA partir d\u2019une application Angular, nous exploiterons les donn\u00e9es d\u2019une API GraphQL \u00e0 l\u2019aide d\u2019Apollo. Profitons des avantages de GraphQL mais pas que!",
         "title": "Propulsez votre application Angular avec GraphQL et Apollo",
-        "topic": "tech",
-        "video": null
-    },
-    {
-        "addedAt": "2018-01-30T12:47:03.457",
-        "description": null,
-        "end": "2018-04-19T15:00:00",
-        "event": "2018",
-        "format": "TALK",
-        "id": "5a706948840deb00141a7228",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "ROOM2",
-        "slug": "comment-le-suivi-du-diabete-m-a-amene-a-la-dataviz-",
-        "speakerIds": [
-            "stephanie.moallic@gmail.com"
-        ],
-        "start": "2018-04-19T14:10:00",
-        "summary": "Imaginez: tous les jours, vous devez prendre votre taux de sucre au moins 3 fois dans la journ\u00e9e, vous notez vos r\u00e9sultats dans un petit carnet au format papier.\r\n\r\nC'est un peu long, r\u00e9barbatif et pas tr\u00e8s \u00e9colo, non? Surtout pour nous qui aimons bien automatiser le maximum de t\u00e2ches, et pouvoir consulter nos donn\u00e9es de n'importe o\u00f9...\r\n\r\nMaintenant, imaginez: vous r\u00e9cup\u00e9rez toutes ces donn\u00e9es qui sont stock\u00e9es sur l'appareil de mesure, vous les remontez dans une base de donn\u00e9es et vous faites le suivi via une interface web qui vous permet en plus d'annoter les relev\u00e9s pour lesquels vous souhaitez ajouter des informations compl\u00e9mentaires...\r\n\r\nVenez d\u00e9couvrir durant ce talk comment mettre ce cas en pratique: de la r\u00e9cup\u00e9ration de donn\u00e9es \u00e0 la mise en place de la data visualisation pour pouvoir exploiter toutes ces donn\u00e9es et les enrichir.",
-        "title": "Comment le suivi du diab\u00e8te m'a amen\u00e9 \u00e0 la Dataviz !",
         "topic": "tech",
         "video": null
     },
@@ -506,6 +508,26 @@
         "start": "2018-04-19T14:10:00",
         "summary": "Un an apr\u00e8s la sortie de la version MVP (minimum viable product) de WebAssembly, de nombreux usages \u00e9mergent et laissent entrevoir les possibilit\u00e9s futures du format binaire accessible dans tous les navigateurs Web modernes. Pourquoi s'int\u00e9resser \u00e0 WebAssembly aujourd'hui ? Est-ce que c'est fait pour moi ? Est-ce que c'est simple \u00e0 utiliser ? Comment je peux en tirer profit facilement d\u00e9s aujourd'hui ? Nous essayerons ensemble de r\u00e9pondre \u00e0 ces questions, puis nous verrons comment cr\u00e9er et int\u00e9grer du code WebAssembly, en passant par toutes les \u00e9tapes, de l'\u00e9criture du code source initial (dans un autre langage que JS, mais pas de panique !) jusqu'\u00e0 l'int\u00e9gration dans une application Web.",
         "title": "Faciliter le d\u00e9veloppement d'applications Web performantes avec WebAssembly",
+        "topic": "tech",
+        "video": null
+    },
+    {
+        "addedAt": "2018-01-30T12:47:04.136",
+        "description": "Pour la petite histoire Vert.x est un toolkit pour \u00e9crire des applications r\u00e9actives et polyglottes pour la JVM. Il fournit aujourd'hui un \u00e9cosyst\u00e8me complet et modulaire qui int\u00e8gre le paradigme r\u00e9actif de bout en bout, performant et facile \u00e0 utiliser pour tous types d'applications. La richesse de l'\u00e9cosyst\u00e8me Vert.x permet de d\u00e9velopper aussi bien une application web de type temps r\u00e9el, de faire de l'IoT, d'impl\u00e9menter des adaptateurs de protocoles, d'\u00e9crire des applications distribu\u00e9es et bien entendu de concevoir et int\u00e9grer des micro-services.",
+        "end": "2018-04-19T15:00:00",
+        "event": "2018",
+        "format": "TALK",
+        "id": "5a706948840deb00141a7232",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM2",
+        "slug": "demystifier-le-reactif-et-l-orchestration-de-services-avec-vert-x-kubernetes-et-kotlin",
+        "speakerIds": [
+            "jponge"
+        ],
+        "start": "2018-04-19T14:10:00",
+        "summary": "Les syst\u00e8mes distribu\u00e9s r\u00e9actifs ? L'orchestration de services avec Kubernetes ?\r\nTout le monde ou presque a entendu ces termes sans n\u00e9cessairement savoir de quoi il s'agit vraiment.\r\n\r\nCe talk se veut une d\u00e9mystification du r\u00e9actif avec Eclipse Vert.x et une initiation au d\u00e9ploiement d'applications dans Kubernetes qui est moins effrayant qu'il n'en a l'air. Bien entendu les d\u00e9mos (et l'\u00e9ventuel effet d\u00e9mo) prendront le dessus sur l'empilement de slides. Et comme Vert.x supporte plusieurs langages populaires de la JVM, nous utiliserons Kotlin.",
+        "title": "D\u00e9mystifier le r\u00e9actif et l'orchestration de services avec Vert.x, Kubernetes et Kotlin",
         "topic": "tech",
         "video": null
     },
@@ -749,6 +771,26 @@
         "start": "2018-04-19T17:10:00",
         "summary": "Cette conf\u00e9rence c'est l'histoire d'Isabelle Huynh, de son changement d'ing\u00e9nieure d\u00e9veloppement pour un grand groupe \u00e0 exploratrice de l'Ing\u00e9nierie Positive. Mais c'est aussi l'histoire de ses rencontres \u00e0 travers le monde. Des entrepreneurs, des ing\u00e9nieurs et chercheurs qui chaque jour cherchent \u00e0 am\u00e9liorer la vie des personnes. Quelles sont les clefs qui d\u00e9clenchent de tels parcours ? \r\n\r\nIsabelle l'assure, on a tous quelque chose en nous de positif. Elle vous invite \u00e0 le d\u00e9couvrir.",
         "title": "Comment r\u00e9veiller l'ing\u00e9nieur positif pr\u00e9sent en chacun de nous ?",
+        "topic": "aliens",
+        "video": null
+    },
+    {
+        "addedAt": "2018-03-08T12:22:53.84",
+        "description": null,
+        "end": "2018-04-19T18:00:00",
+        "event": "2018",
+        "format": "TALK",
+        "id": "5aa12bd067bc5305f8a4370b",
+        "language": "ENGLISH",
+        "photoUrls": [],
+        "room": "AMPHI1",
+        "slug": "gossip-on-the-block",
+        "speakerIds": [
+            "augerment@gmail.com"
+        ],
+        "start": "2018-04-19T17:10:00",
+        "summary": "This presentation will explore how information is captured (interpreted), emotionalised (gossip), politicised (propaganda), fabricated (fake news) and pre-empted (prediction) with a particular focus on the role technology plays and could play in mediating these factors.",
+        "title": "Gossip on the Block",
         "topic": "aliens",
         "video": null
     },
@@ -1118,6 +1160,47 @@
         "video": null
     },
     {
+        "addedAt": "2018-03-08T10:50:24.587",
+        "description": null,
+        "end": "2018-04-20T14:10:00",
+        "event": "2018",
+        "format": "RANDOM",
+        "id": "5aa115dc67bc5305f8a4370a",
+        "language": "ENGLISH",
+        "photoUrls": [],
+        "room": "UNKNOWN",
+        "slug": "comedy-talk",
+        "speakerIds": [
+            "romainguy@curious-creature.com",
+            "graphicsgeek1@gmail.com"
+        ],
+        "start": "2018-04-20T13:50:00",
+        "summary": "A short comedy talk on a topic relevant to software engineers: engineering management, traveling as a software engineer, new programming language, etc. We haven't decided on the exact content yet.",
+        "title": "Comedy Talk",
+        "topic": "aliens",
+        "video": null
+    },
+    {
+        "addedAt": "2018-01-30T12:47:03.457",
+        "description": null,
+        "end": "2018-04-20T15:00:00",
+        "event": "2018",
+        "format": "TALK",
+        "id": "5a706948840deb00141a7228",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM2",
+        "slug": "comment-le-suivi-du-diabete-m-a-amene-a-la-dataviz-",
+        "speakerIds": [
+            "stephanie.moallic@gmail.com"
+        ],
+        "start": "2018-04-20T14:10:00",
+        "summary": "Imaginez: tous les jours, vous devez prendre votre taux de sucre au moins 3 fois dans la journ\u00e9e, vous notez vos r\u00e9sultats dans un petit carnet au format papier.\r\n\r\nC'est un peu long, r\u00e9barbatif et pas tr\u00e8s \u00e9colo, non? Surtout pour nous qui aimons bien automatiser le maximum de t\u00e2ches, et pouvoir consulter nos donn\u00e9es de n'importe o\u00f9...\r\n\r\nMaintenant, imaginez: vous r\u00e9cup\u00e9rez toutes ces donn\u00e9es qui sont stock\u00e9es sur l'appareil de mesure, vous les remontez dans une base de donn\u00e9es et vous faites le suivi via une interface web qui vous permet en plus d'annoter les relev\u00e9s pour lesquels vous souhaitez ajouter des informations compl\u00e9mentaires...\r\n\r\nVenez d\u00e9couvrir durant ce talk comment mettre ce cas en pratique: de la r\u00e9cup\u00e9ration de donn\u00e9es \u00e0 la mise en place de la data visualisation pour pouvoir exploiter toutes ces donn\u00e9es et les enrichir.",
+        "title": "Comment le suivi du diab\u00e8te m'a amen\u00e9 \u00e0 la Dataviz !",
+        "topic": "tech",
+        "video": null
+    },
+    {
         "addedAt": "2018-01-30T12:47:02.571",
         "description": "Sitting at convergence of these two things is MIDI \u2014 a niche protocol that's been around since 1983 and was originally designed for musical instruments to communicate with one another. It's event-oriented approach to messaging feels right at home in the asynchronous world of JavaScript & Node, and the prevalence of MIDI support in older musical equipment means you can find unique, hackable and affordable hardware at your local pawnshop or Craig's List.\r\n\r\nThis unlikely tech stack \u2014 Tiny Computers + JavaScript + MIDI \u2014 can lend itself to creative programming beyond music. George's Talk will explain how to get started, walk through several examples and elaborate on the future of this stack, not only as a platform for experimentation but for education as well.",
         "end": "2018-04-20T15:00:00",
@@ -1201,27 +1284,6 @@
         "video": null
     },
     {
-        "addedAt": "2018-01-30T12:47:04.071",
-        "description": "Cette fermet\u00e9 de l'esprit permet de saisir et de soutenir des id\u00e9es pionni\u00e8res et audacieuses. Avec le courage, les obstacles, les erreurs, les \u00e9checs, les risques ne seront pas des freins mais des tremplins d'\u00e9nergie pour affermir le projet. \r\nDans le contexte complexe des mutations soci\u00e9tales et technologiques d\u2019aujourd\u2019hui, cette responsabilit\u00e9 personnelle, libre de toute influence ext\u00e9rieure, est de plus en plus d\u00e9terminante.\r\n\r\nA partir de quelques exp\u00e9riences communes et personnelles, p\u00e8re et fille partageront les \u00e9l\u00e9ments cl\u00e9s qui ont forg\u00e9s leurs parcours de serial-entrepreneurs. Ils donneront \u00e0 s\u2019interroger sur les leviers et les comportements qui peuvent conduire du \u00ab d\u00e9clencheur \u00bb \u00e0 la cr\u00e9ation d\u2019entreprise innovante. Ils joueront de leur diversit\u00e9 de genre, de g\u00e9n\u00e9ration, d\u2019expertise et d\u2019exp\u00e9rience... Ils exposeront leurs communs comme leurs diff\u00e9rences. Ensemble, ils esp\u00e8rent stimuler vos questionnements et nourrir votre envie de courage.",
-        "end": "2018-04-20T15:00:00",
-        "event": "2018",
-        "format": "TALK",
-        "id": "5a706948840deb00141a722d",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "ROOM2",
-        "slug": "en-vie-de-courage",
-        "speakerIds": [
-            "bonnet-cla@wanadoo.fr",
-            "veronique.bonnet@emulsioncreative.com"
-        ],
-        "start": "2018-04-20T14:10:00",
-        "summary": "Se lancer dans l'aventure de la cr\u00e9ation d'entreprise demande non seulement de bien connaitre les processus de conduite de projet, mais bien plus encore de mettre en \u0153uvre la vertu du courage pour affronter les obstacles, les prises de risques qui ne manqueront pas de surgir.",
-        "title": "En vie de courage",
-        "topic": "aliens",
-        "video": null
-    },
-    {
         "addedAt": "2018-01-30T12:47:04.154",
         "description": "La typographie \u00e9tant une composante majeure du design graphique, cette pr\u00e9sentation s\u2019adresse en premier lieu aux designers UI. Mais la probl\u00e9matique de la typographie accessible concerne \u00e9galement les designers UX, les int\u00e9gratrices et int\u00e9grateurs web, ainsi que toute personne amen\u00e9e \u00e0 contribuer \u00e0 un projet web et s\u2019int\u00e9ressant au sujet.",
         "end": "2018-04-20T15:00:00",
@@ -1242,6 +1304,27 @@
         "video": null
     },
     {
+        "addedAt": "2018-01-30T12:47:04.071",
+        "description": "Cette fermet\u00e9 de l'esprit permet de saisir et de soutenir des id\u00e9es pionni\u00e8res et audacieuses. Avec le courage, les obstacles, les erreurs, les \u00e9checs, les risques ne seront pas des freins mais des tremplins d'\u00e9nergie pour affermir le projet. \r\nDans le contexte complexe des mutations soci\u00e9tales et technologiques d\u2019aujourd\u2019hui, cette responsabilit\u00e9 personnelle, libre de toute influence ext\u00e9rieure, est de plus en plus d\u00e9terminante.\r\n\r\nA partir de quelques exp\u00e9riences communes et personnelles, p\u00e8re et fille partageront les \u00e9l\u00e9ments cl\u00e9s qui ont forg\u00e9s leurs parcours de serial-entrepreneurs. Ils donneront \u00e0 s\u2019interroger sur les leviers et les comportements qui peuvent conduire du \u00ab d\u00e9clencheur \u00bb \u00e0 la cr\u00e9ation d\u2019entreprise innovante. Ils joueront de leur diversit\u00e9 de genre, de g\u00e9n\u00e9ration, d\u2019expertise et d\u2019exp\u00e9rience... Ils exposeront leurs communs comme leurs diff\u00e9rences. Ensemble, ils esp\u00e8rent stimuler vos questionnements et nourrir votre envie de courage.",
+        "end": "2018-04-20T16:00:00",
+        "event": "2018",
+        "format": "TALK",
+        "id": "5a706948840deb00141a722d",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM1",
+        "slug": "en-vie-de-courage",
+        "speakerIds": [
+            "bonnet-cla@wanadoo.fr",
+            "veronique.bonnet@emulsioncreative.com"
+        ],
+        "start": "2018-04-20T15:10:00",
+        "summary": "Se lancer dans l'aventure de la cr\u00e9ation d'entreprise demande non seulement de bien connaitre les processus de conduite de projet, mais bien plus encore de mettre en \u0153uvre la vertu du courage pour affronter les obstacles, les prises de risques qui ne manqueront pas de surgir.",
+        "title": "En vie de courage",
+        "topic": "aliens",
+        "video": null
+    },
+    {
         "addedAt": "2018-01-30T12:47:04.079",
         "description": "On confond les r\u00e8gles auxquelles ils sont soumis au sein des navigateurs. On fait des amalgames avec les sessions c\u00f4t\u00e9 serveur. Ces petits trous dans le gigantesque \u00e9ventail de connaissances du d\u00e9veloppeur moderne ont parfois des impacts non n\u00e9gligeables sur la s\u00e9curit\u00e9 de nos applications et sur la pr\u00e9servation de notre vie priv\u00e9e en tant qu\u2019utilisateur du Web.\r\n\r\nAu menu de cette session, je vous propose de (re)d\u00e9couvrir les cookies HTTP par l\u2019exemple et la pratique. Nous reviendrons sur leurs origines et nous verrons en d\u00e9tails le fonctionnement au sein des navigateurs et des serveurs. Enfin, nous aborderons les aspects les plus r\u00e9cent dans le domaine (SameSite, cookie prefix...). Ce talk sera plus g\u00e9n\u00e9ralement l\u2019occasion de parler de s\u00e9curit\u00e9, de tracking et de vie priv\u00e9e.",
         "end": "2018-04-20T16:00:00",
@@ -1258,26 +1341,6 @@
         "start": "2018-04-20T15:10:00",
         "summary": "Les cookies HTTP sont partout ! Pas une journ\u00e9e sans qu\u2019un site nous demande \u201cd\u2019accepter les cookies\u201d. Rares sont les projets Web qui ne les utilisent pas et pourtant leur fonctionnement nous \u00e9chappe trop souvent.",
         "title": "#RetourAuxSources : Les cookies HTTP",
-        "topic": "tech",
-        "video": null
-    },
-    {
-        "addedAt": "2018-01-30T12:47:04.136",
-        "description": "Pour la petite histoire Vert.x est un toolkit pour \u00e9crire des applications r\u00e9actives et polyglottes pour la JVM. Il fournit aujourd'hui un \u00e9cosyst\u00e8me complet et modulaire qui int\u00e8gre le paradigme r\u00e9actif de bout en bout, performant et facile \u00e0 utiliser pour tous types d'applications. La richesse de l'\u00e9cosyst\u00e8me Vert.x permet de d\u00e9velopper aussi bien une application web de type temps r\u00e9el, de faire de l'IoT, d'impl\u00e9menter des adaptateurs de protocoles, d'\u00e9crire des applications distribu\u00e9es et bien entendu de concevoir et int\u00e9grer des micro-services.",
-        "end": "2018-04-20T16:00:00",
-        "event": "2018",
-        "format": "TALK",
-        "id": "5a706948840deb00141a7232",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "ROOM1",
-        "slug": "demystifier-le-reactif-et-l-orchestration-de-services-avec-vert-x-kubernetes-et-kotlin",
-        "speakerIds": [
-            "jponge"
-        ],
-        "start": "2018-04-20T15:10:00",
-        "summary": "Les syst\u00e8mes distribu\u00e9s r\u00e9actifs ? L'orchestration de services avec Kubernetes ?\r\nTout le monde ou presque a entendu ces termes sans n\u00e9cessairement savoir de quoi il s'agit vraiment.\r\n\r\nCe talk se veut une d\u00e9mystification du r\u00e9actif avec Eclipse Vert.x et une initiation au d\u00e9ploiement d'applications dans Kubernetes qui est moins effrayant qu'il n'en a l'air. Bien entendu les d\u00e9mos (et l'\u00e9ventuel effet d\u00e9mo) prendront le dessus sur l'empilement de slides. Et comme Vert.x supporte plusieurs langages populaires de la JVM, nous utiliserons Kotlin.",
-        "title": "D\u00e9mystifier le r\u00e9actif et l'orchestration de services avec Vert.x, Kubernetes et Kotlin",
         "topic": "tech",
         "video": null
     },

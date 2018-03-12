@@ -649,11 +649,6 @@
                 "subscriptionDate": "2017-11-06"
             },
             {
-                "level": "HOSTING",
-                "sponsorId": "pivotal",
-                "subscriptionDate": "2017-11-06"
-            },
-            {
                 "level": "GOLD",
                 "sponsorId": "semarchy",
                 "subscriptionDate": "2017-11-07"
@@ -732,6 +727,16 @@
                 "level": "PARTY",
                 "sponsorId": "onlylyon",
                 "subscriptionDate": "2018-02-20"
+            },
+            {
+                "level": "HOSTING",
+                "sponsorId": "clevercloud",
+                "subscriptionDate": "2018-03-06"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "Axway",
+                "subscriptionDate": "2018-03-06"
             }
         ],
         "start": "2018-04-19",

@@ -5031,8 +5031,8 @@
         "login": "clacote",
         "photoUrl": null,
         "role": "STAFF_IN_PAUSE",
-        "token": "b547db0134d3",
-        "tokenExpiration": "2018-02-28T11:32:29.648"
+        "token": "6054e837529d",
+        "tokenExpiration": "2018-03-08T10:26:14.821"
     },
     {
         "company": null,
@@ -5107,8 +5107,8 @@
         "login": "guillaumeehret",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "1d326767acb2",
-        "tokenExpiration": "2018-03-05T13:10:32.878"
+        "token": "ab7845d56360",
+        "tokenExpiration": "2018-03-14T20:25:23.282"
     },
     {
         "company": null,
@@ -5416,12 +5416,12 @@
     {
         "company": "Axway",
         "description": {
-            "ENGLISH": "Lib\u00e9rer le potentiel de chaque client pour l\u2019accompagner dans sa transformation. Tout a commenc\u00e9 par une id\u00e9e. Nous \u00e9tions persuad\u00e9s qu\u2019en aidant nos clients \u00e0 relier leurs processus comptables manuels et leurs silos de donn\u00e9es, ils pourraient maximiser leur efficacit\u00e9.  Les organisations avaient du mal \u00e0 valoriser leurs donn\u00e9es et ne pouvaient pas partager d\u2019informationsen temps r\u00e9el entre diff\u00e9rents d\u00e9partements pour acc\u00e9l\u00e9rer les prises de d\u00e9cision. Depuis, gr\u00e2ce \u00e0 notre solide expertise et \u00e0 nos logiciels \u00e9prouv\u00e9s, nos clients misent sur l\u2019avenir et rel\u00e8vent avec brio les d\u00e9fis les plus complexes en mati\u00e8re de donn\u00e9es. Avec notre plateforme nouvelle g\u00e9n\u00e9ration, Axway AMPLIFY, ils peuvent fusionner toutes leurs donn\u00e9es pour cr\u00e9er un r\u00e9seau d'exp\u00e9rience client qui regroupe employ\u00e9s, fournisseurs, partenaires et d\u00e9veloppeurs et permet aux consommateurs de suivre le rythme effr\u00e9n\u00e9 de l\u2019innovation de l\u2019\u00e8re digitale. ",
-            "FRENCH": "Realizing the transformational power in every customer. We started out with this wild idea that, by helping our customers wire up their  manual accounting processes and data silos, they could become more efficient than they ever dreamed possible.  Organizations were struggling with unlocking value from their data and they couldn\u2019t share real-time insights across departments to speed up decisions. Ever since, we\u2019ve been propelling our customers forward with deep expertise and software that empowers them to tackle their toughest data challenges. With our next generation platform, Axway AMPLIFY, customers can fuse data from anywhere to power a customer experience network that unites not only employees, but suppliers, partners and developers into an agile force for innovation that\u2019s as fast and fluid as today\u2019s digital consumer."
+            "ENGLISH": "Axway (Euronext: AXW.PA) unlocks digital experiences by connecting individuals, systems, businesses and customer ecosystems with digital infrastructure solutions. AMPLIFY\u2122, Axway\u2019s hybrid integration platform, connects data from any device anywhere, expands collaboration, fuels millions of apps and supplies real-time analytics to build customer experience networks. \r\n\r\n\r\nFrom idea to execution, Axway\u2019s expertise in API management, secure file exchange and B2B/EDI integration have solved the toughest data challenges for more than 11,000 organizations in 100 countries. To learn more, visit www.axway.com/en.",
+            "FRENCH": "Axway (Euronext : AXW.PA) ouvre la voie \u00e0 des exp\u00e9riences num\u00e9riques en connectant les personnes, les syst\u00e8mes, les entreprises et les \u00e9cosyst\u00e8mes des clients \u00e0 des solutions d'infrastructure num\u00e9riques. Axway AMPLIFY\u2122, la plateforme d'int\u00e9gration hybride d'Axway, connecte les donn\u00e9es depuis n'importe quel appareil, o\u00f9 qu'il se trouve, \u00e9tend la collaboration, supporte des millions d'applications et fournit des donn\u00e9es analytiques en temps r\u00e9el pour b\u00e2tir des r\u00e9seaux d'exp\u00e9rience client. \r\n\r\n\r\nDe l'id\u00e9e \u00e0 sa mise en \u0153uvre, l'expertise d'Axway dans la gestion des API ainsi que l'\u00e9change s\u00e9curis\u00e9 de fichiers et l'int\u00e9gration B2B/EDI a permis de relever les plus grands d\u00e9fis en mati\u00e8re d\u2019int\u00e9gration de donn\u00e9es pour plus de 11 000 organisations r\u00e9parties dans 100 pays. Pour en savoir plus \u00e0 propos d\u2019Axway, visitez www. axway.com/fr."
         },
         "email": null,
         "emailHash": null,
-        "firstname": "",
+        "firstname": "Axway",
         "lastname": "Axway",
         "legacyId": null,
         "links": [
@@ -5446,7 +5446,7 @@
         "photoUrl": "images/sponsors/logo-axway.svg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.474"
+        "tokenExpiration": "2018-03-05T18:33:40.05"
     },
     {
         "company": "GitHub",
@@ -6031,11 +6031,11 @@
         "company": "Worldline",
         "description": {
             "ENGLISH": "Worldline [Euronext: WLN] is the European leader in the payments and transactional services industry.Worldline delivers new-generation services, enabling its customers to offer smooth and innovative solutions to the end consumer.Key actor for B2B2C industries, with over 40 years of experience, Worldline supports and contributes to the success of all businesses and administrative servicesin a perpetually evolving market. Worldline offers a unique and flexible business model built around a global and growing portfolio, thus enabling end-to-end support.Worldline activities are organized around three axes: Merchant Services, Mobility & e-Transactional Services, Financial Processing & Software Licensing including equensWorldline.Worldline employs more than 8,600 people worldwide, with estimated revenue of circa 1.5 billion euros on a yearly basis. Worldline is an Atos company",
-            "FRENCH": "Worldline [Euronext : WLN] est le leader europ\u00e9en et un acteur mondial de r\u00e9f\u00e9rence dans le secteur des paiements et des services transactionnels. Worldline met en place des services nouvelle g\u00e9n\u00e9ration, permettant \u00e0 ses clients d\u2019offrir au consommateur final des solutions innovantes et fluides. Acteur clef du B2B2C, riche de plus de 40 ans d\u2019exp\u00e9rience, Worldline sert et contribue au succ\u00e8s de toutes les entreprises et administrations, dans un march\u00e9 en perp\u00e9tuelle \u00e9volution. Worldline propose un Business Model unique et flexible, construit autour d\u2019un portefeuille d\u2019offres \u00e9volutif et global permettant une prise en charge end-to-end. Les activit\u00e9s de Worldline sont organis\u00e9es autour de trois axes : Merchant Services & Terminals, Mobility & e-Transactional Services, Financial Processing & Software Licensing incluant equensWorldline. Worldline emploie plus de 8 600 collaborateurs dans le monde entier et g\u00e9n\u00e8re un chiffre d\u2019affaires estim\u00e9 \u00e0  environ 1,5 milliard d\u2019euros sur une base annuelle. Worldline est une entreprise du Groupe Atos."
+            "FRENCH": "Worldline, leader europ\u00e9en du paiement\u00a0 et des services transactionnels, est\u00a0 \u00e9galement un acteur majeur dans les domaines des services marchands, de la mobilit\u00e9 ou de la e-administration via la mise \u00e0 disposition d\u2019offres mutualis\u00e9es ou la construction de solutions sur mesure.\r\n\u00a0\r\n\r\nNous proposons \u00e0 nos clients une collaboration de bout en bout depuis l\u2019accompagnement m\u00e9tier, le d\u00e9veloppement jusqu\u2019\u00e0 l\u2019h\u00e9bergement d\u00e9di\u00e9 ou cloud, l\u2019exploitation applicative.\r\n\u00a0\r\n\r\nL\u2019Open Source, le Software Craftsmanship ainsi que les d\u00e9marches Agile et DevOps constituent des marqueurs forts de nos projets et les m\u00e9thodologies, techniques et technologies associ\u00e9es sont au c\u0153ur de nos strat\u00e9gies, organisations et plateformes.\r\n\u00a0\r\n\r\nNous travaillons exclusivement depuis nos locaux et ne fonctionnons pas en mode r\u00e9gie. Nous d\u00e9veloppons l\u2019expertise et l\u2019innovation via \u00e0 un r\u00e9seau d\u2019experts techniques, projets et m\u00e9tiers, issus de nos \u00e9quipes.\r\n\u00a0\r\n\r\nWorldline porte une attention particuli\u00e8re au d\u00e9veloppement de chaque collaborateur et propose une large offre de formations. Nous encourageons un juste \u00e9quilibre entre vie priv\u00e9e et vie professionnelle et portons une attention particuli\u00e8re \u00e0 l\u2019\u00e9galit\u00e9 femme-homme.\r\n\u00a0\r\n\r\nEnfin, La diversit\u00e9 de nos projets\u00a0 offre une grande richesse m\u00e9tier et technologique et permet \u00e0 chacun, quel que soit son profil, de contribuer \u00e0 la construction de solutions ambitieuses.\r\n\u00a0\r\n\r\nWorldline est une soci\u00e9t\u00e9 du groupe Atos."
         },
         "email": null,
         "emailHash": null,
-        "firstname": "",
+        "firstname": "C\u00e9cile",
         "lastname": "Worldline",
         "legacyId": 2971,
         "links": [
@@ -6064,7 +6064,7 @@
         "photoUrl": "images/sponsors/logo-worldline.svg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.475"
+        "tokenExpiration": "2018-03-05T13:38:31.691"
     },
     {
         "company": "ELAO",
@@ -12998,7 +12998,7 @@
             "ENGLISH": "Consultant Objet Direct.\nJava Addict et GWT Evangelist",
             "FRENCH": "Consultant Objet Direct.\nJava Addict et GWT Evangelist"
         },
-        "email": null,
+        "email": "Z4jo1O68TVk4WtWz+4BgiGNTGV8VTkMjKGwhgk0y3Zk=",
         "emailHash": "d64f8edc8a504111fb05648aafa0a2b3",
         "firstname": "Claude",
         "lastname": "Petot",
@@ -13007,8 +13007,8 @@
         "login": "claude.petot",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.488"
+        "token": "97a28ed7843a",
+        "tokenExpiration": "2018-03-13T21:35:08.755"
     },
     {
         "company": "",
@@ -15687,24 +15687,6 @@
         "legacyId": 651,
         "links": [],
         "login": "n1k0",
-        "photoUrl": null,
-        "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.493"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": ".",
-            "FRENCH": "."
-        },
-        "email": null,
-        "emailHash": "f90677176fe2c0160dbbdea4b105e598",
-        "firstname": "Jonathan",
-        "lastname": "Scher",
-        "legacyId": 652,
-        "links": [],
-        "login": "jscher",
         "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
@@ -19424,7 +19406,7 @@
             "ENGLISH": "D\u00e9velopper j2ee",
             "FRENCH": "D\u00e9velopper j2ee"
         },
-        "email": null,
+        "email": "DckcGk1+2sjBQYfx6Mu3nW5SlJgFfe2KaWACHrNjUWOOKarHnwIdTnObIGyGSyV/",
         "emailHash": "aedf5ef932e6378cc402f28dfb7dc98c",
         "firstname": "Chezeaubernard",
         "lastname": "Olivier",
@@ -19433,8 +19415,8 @@
         "login": "olivier.chezeaubernard",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.5"
+        "token": "036a3bbac62f",
+        "tokenExpiration": "2018-03-09T18:47:01.948"
     },
     {
         "company": "",
@@ -24239,7 +24221,7 @@
             "ENGLISH": "*",
             "FRENCH": "*"
         },
-        "email": null,
+        "email": "nMQYTePxHzrIzXjrdl1AozltOKqtEBj9SuGNs7BorHw=",
         "emailHash": "2c398481d3b8ba8ea4dcce54f994257b",
         "firstname": "Bertrand",
         "lastname": "Noel",
@@ -24248,8 +24230,8 @@
         "login": "BertrandNOEL",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.509"
+        "token": "99077919def4",
+        "tokenExpiration": "2018-03-14T19:49:06.479"
     },
     {
         "company": "",
@@ -28325,7 +28307,7 @@
             "ENGLISH": "Sopra Steria Group, Division immobilier, Architecture Ulis",
             "FRENCH": "Sopra Steria Group, Division immobilier, Architecture Ulis"
         },
-        "email": null,
+        "email": "OU14k9VyNYdLshVIUo8dk7ZNyqJuGpc0mwKajZsfxKo=",
         "emailHash": "09f736dc4c69a4c4663e5a2ff9745fac",
         "firstname": "Antoine",
         "lastname": "Replumaz",
@@ -28334,8 +28316,8 @@
         "login": "antoine.replumaz@free.fr",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.517"
+        "token": "0d45ef246fdd",
+        "tokenExpiration": "2018-03-09T13:06:57.003"
     },
     {
         "company": "",
@@ -38091,8 +38073,8 @@
         "login": "mpetitdant",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "134a076b-c208",
-        "tokenExpiration": "2018-02-03T20:11:42.087"
+        "token": "4b58910bf0f1",
+        "tokenExpiration": "2018-03-12T17:10:49.657"
     },
     {
         "company": "Sogelink",
@@ -39091,16 +39073,16 @@
             }
         ],
         "login": "antoine.cellier@zenika.com",
-        "photoUrl": "https://scontent-lht6-1.xx.fbcdn.net/v/t1.0-9/22008390_10212587583198780_7964204568540731664_n.jpg?oh=ef3161619ec40f93dbe7245f9b4c22ef&oe=5A893B41",
+        "photoUrl": "https://pbs.twimg.com/profile_images/806489306105872384/tshIxFiJ_400x400.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-01-30T23:42:36.981"
+        "tokenExpiration": "2018-03-11T20:26:45.939"
     },
     {
         "company": "Ippon",
         "description": {
-            "ENGLISH": "L'avanc\u00e9e du Digital am\u00e8ne les entreprise \u00e0 se r\u00e9inventer. De nouveaux mode d'organisation \u00e9mergent. Ayant travaill\u00e9 dans de nombreux contextes, avec diff\u00e9rentes fa\u00e7on de faire, je les aide \u00e0 se transformer.",
-            "FRENCH": "L'avanc\u00e9e du Digital am\u00e8ne les entreprise \u00e0 se r\u00e9inventer. De nouveaux mode d'organisation \u00e9mergent. Ayant travaill\u00e9 dans de nombreux contextes, avec diff\u00e9rentes fa\u00e7on de faire, je les aide \u00e0 se transformer."
+            "ENGLISH": "L'avanc\u00e9e du Digital am\u00e8ne les entreprises \u00e0 se r\u00e9inventer. De nouveaux modes d'organisation \u00e9mergent. Ayant travaill\u00e9 dans de nombreux contextes, avec diff\u00e9rentes fa\u00e7on de faire, je les aide \u00e0 se transformer.",
+            "FRENCH": "L'avanc\u00e9e du Digital am\u00e8ne les entreprises \u00e0 se r\u00e9inventer. De nouveaux modes d'organisation \u00e9mergent. Ayant travaill\u00e9 dans de nombreux contextes, avec diff\u00e9rentes fa\u00e7on de faire, je les aide \u00e0 se transformer."
         },
         "email": "8QVNJNI9emcr2PhApGrEmJQVHeuD1sTCx3U/mMoms5E=",
         "emailHash": null,
@@ -39117,7 +39099,7 @@
         "photoUrl": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/7/005/039/0a6/3782c4e.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-01-30T23:42:36.984"
+        "tokenExpiration": "2018-03-05T12:48:05.274"
     },
     {
         "company": "Rtone",
@@ -39986,8 +39968,8 @@
     {
         "company": "L'Air du Bois",
         "description": {
-            "ENGLISH": "# Un r\u00eave de gamin\n\nPur produit de la g\u00e9n\u00e9ration 80, j'ai r\u00eav\u00e9 sur les *Syst\u00e8me D* et les *Ma maison, mon ouvrage* de l'\u00e9poque qu'on pouvait tout faire par soi m\u00eame.\nPlus tard, c'est aussi bien un ordinateur qu'une perceuse que j'ai pu avoir dans les mains. Les deux ne semblent pas avoir vraiment de point commun. Mais dans tous les cas, se sont des outils avec lesquels on peut assouvir sa cr\u00e9ativit\u00e9.\nL'ordinateur, a trac\u00e9 le chemin de mon premier m\u00e9tier et la perceuse celui de ma passion. Aujourd'hui, j'ai inverser les deux et je suis devenu \u00e9b\u00e9niste.\n\n# \"Bricodeur\" du dimanche\n\nProgrammer sur ordinateur (coder) ou concevoir et r\u00e9aliser des objets usuels en bois restent encore deux activit\u00e9s qui font tourner mon quotidien. Et finalement, c'est m\u00eame assez compl\u00e9mentaire. Alors, c'est en autodidacte que j'ai progress\u00e9 dans chaque domaine. Et aujourd'hui, je suis heureux de pouvoir r\u00e9aliser autant un site web comme celui-ci (L'Air du Bois) que de passer des heures dans l'atelier \u00e0 fa\u00e7onner le bois avec des projets de plus en plus ambitieux.\n\n# Partager ma passion\n\nJ'ai beaucoup appris de mes erreurs, mais j'ai surtout appris de ce que partage les passionn\u00e9s du monde entier au travers d'Internet. Ouvrir un portail comme L'Air du Bois, c'est pour moi le moyen de contribuer \u00e0 cet effort collectif.",
-            "FRENCH": "# Un r\u00eave de gamin\n\nPur produit de la g\u00e9n\u00e9ration 80, j'ai r\u00eav\u00e9 sur les *Syst\u00e8me D* et les *Ma maison, mon ouvrage* de l'\u00e9poque qu'on pouvait tout faire par soi m\u00eame.\nPlus tard, c'est aussi bien un ordinateur qu'une perceuse que j'ai pu avoir dans les mains. Les deux ne semblent pas avoir vraiment de point commun. Mais dans tous les cas, se sont des outils avec lesquels on peut assouvir sa cr\u00e9ativit\u00e9.\nL'ordinateur, a trac\u00e9 le chemin de mon premier m\u00e9tier et la perceuse celui de ma passion. Aujourd'hui, j'ai inverser les deux et je suis devenu \u00e9b\u00e9niste.\n\n# \"Bricodeur\" du dimanche\n\nProgrammer sur ordinateur (coder) ou concevoir et r\u00e9aliser des objets usuels en bois restent encore deux activit\u00e9s qui font tourner mon quotidien. Et finalement, c'est m\u00eame assez compl\u00e9mentaire. Alors, c'est en autodidacte que j'ai progress\u00e9 dans chaque domaine. Et aujourd'hui, je suis heureux de pouvoir r\u00e9aliser autant un site web comme celui-ci (L'Air du Bois) que de passer des heures dans l'atelier \u00e0 fa\u00e7onner le bois avec des projets de plus en plus ambitieux.\n\n# Partager ma passion\n\nJ'ai beaucoup appris de mes erreurs, mais j'ai surtout appris de ce que partage les passionn\u00e9s du monde entier au travers d'Internet. Ouvrir un portail comme L'Air du Bois, c'est pour moi le moyen de contribuer \u00e0 cet effort collectif."
+            "ENGLISH": "# Un r\u00eave de gamin\r\n\r\nPur produit de la g\u00e9n\u00e9ration 80, j'ai r\u00eav\u00e9 sur les *Syst\u00e8me D* et les *Ma maison, mon ouvrage* de l'\u00e9poque qu'on pouvait tout faire par soi m\u00eame.\r\nPlus tard, c'est aussi bien un ordinateur qu'une perceuse que j'ai pu avoir dans les mains. Les deux ne semblent pas avoir vraiment de point commun. Mais dans tous les cas, se sont des outils avec lesquels on peut assouvir sa cr\u00e9ativit\u00e9.\r\nL'ordinateur, a trac\u00e9 le chemin de mon premier m\u00e9tier et la perceuse celui de ma passion. Aujourd'hui, j'ai inverser les deux et je suis devenu \u00e9b\u00e9niste.\r\n\r\n# \"Bricodeur\" du dimanche\r\n\r\nProgrammer sur ordinateur (coder) ou concevoir et r\u00e9aliser des objets usuels en bois restent encore deux activit\u00e9s qui font tourner mon quotidien. Et finalement, c'est m\u00eame assez compl\u00e9mentaire. Alors, c'est en autodidacte que j'ai progress\u00e9 dans chaque domaine. Et aujourd'hui, je suis heureux de pouvoir r\u00e9aliser autant un site web comme celui-ci (L'Air du Bois) que de passer des heures dans l'atelier \u00e0 fa\u00e7onner le bois avec des projets de plus en plus ambitieux.\r\n\r\n# Partager ma passion\r\n\r\nJ'ai beaucoup appris de mes erreurs, mais j'ai surtout appris de ce que partage les passionn\u00e9s du monde entier au travers d'Internet. Ouvrir un portail comme L'Air du Bois, c'est pour moi le moyen de contribuer \u00e0 cet effort collectif.",
+            "FRENCH": "# Un r\u00eave de gamin\r\n\r\nPur produit de la g\u00e9n\u00e9ration 80, j'ai r\u00eav\u00e9 sur les *Syst\u00e8me D* et les *Ma maison, mon ouvrage* de l'\u00e9poque qu'on pouvait tout faire par soi m\u00eame.\r\nPlus tard, c'est aussi bien un ordinateur qu'une perceuse que j'ai pu avoir dans les mains. Les deux ne semblent pas avoir vraiment de point commun. Mais dans tous les cas, se sont des outils avec lesquels on peut assouvir sa cr\u00e9ativit\u00e9.\r\nL'ordinateur, a trac\u00e9 le chemin de mon premier m\u00e9tier et la perceuse celui de ma passion. Aujourd'hui, j'ai inverser les deux et je suis devenu \u00e9b\u00e9niste.\r\n\r\n# \"Bricodeur\" du dimanche\r\n\r\nProgrammer sur ordinateur (coder) ou concevoir et r\u00e9aliser des objets usuels en bois restent encore deux activit\u00e9s qui font tourner mon quotidien. Et finalement, c'est m\u00eame assez compl\u00e9mentaire. Alors, c'est en autodidacte que j'ai progress\u00e9 dans chaque domaine. Et aujourd'hui, je suis heureux de pouvoir r\u00e9aliser autant un site web comme celui-ci (L'Air du Bois) que de passer des heures dans l'atelier \u00e0 fa\u00e7onner le bois avec des projets de plus en plus ambitieux.\r\n\r\n# Partager ma passion\r\n\r\nJ'ai beaucoup appris de mes erreurs, mais j'ai surtout appris de ce que partage les passionn\u00e9s du monde entier au travers d'Internet. Ouvrir un portail comme L'Air du Bois, c'est pour moi le moyen de contribuer \u00e0 cet effort collectif."
         },
         "email": "Ydew0eGuAROKrDB2EtKZ91v16c3vy9c5HssxhE2S/qw=",
         "emailHash": null,
@@ -40013,10 +39995,10 @@
             }
         ],
         "login": "boris.beaulant@gmail.com",
-        "photoUrl": "https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/11125273_10205524155376196_2047433136996947017_n.jpg?oh=9c5581dc3a0bfebb9199c7b7d3982361&oe=5A9311D5",
+        "photoUrl": "https://avatars3.githubusercontent.com/u/156056?s=400&v=4",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-01-30T23:42:37.359"
+        "tokenExpiration": "2018-03-11T20:28:36.693"
     },
     {
         "company": "Dylan Cozian",
@@ -40174,8 +40156,8 @@
     {
         "company": null,
         "description": {
-            "ENGLISH": "Passionate about kindness and code quality, I advocate eXtreme Programming practices and Software Crafting communities. \n\nBorn in Oviedo (Asturias, Spain), I moved to Berlin years ago fascinated by, among others, the constant knowledge exchange among members of local software development communities and user groups.\n\nThere I worked as Software Engineer in Babbel, where I joined the Monetization team (a.k.a. Payments) to later on switch to a R&D project exploring the application of adaptive learning to digital language learning.\n\nInspired by Corey Haines and its famous \u201cPair programming tour\u201d, in summer 2017 I took a backpack and boarded on an epic journey visiting local communities, sharing good vibes & knowledge.",
-            "FRENCH": "Passionate about kindness and code quality, I advocate eXtreme Programming practices and Software Crafting communities. \n\nBorn in Oviedo (Asturias, Spain), I moved to Berlin years ago fascinated by, among others, the constant knowledge exchange among members of local software development communities and user groups.\n\nThere I worked as Software Engineer in Babbel, where I joined the Monetization team (a.k.a. Payments) to later on switch to a R&D project exploring the application of adaptive learning to digital language learning.\n\nInspired by Corey Haines and its famous \u201cPair programming tour\u201d, in summer 2017 I took a backpack and boarded on an epic journey visiting local communities, sharing good vibes & knowledge."
+            "ENGLISH": "Dani works as a Lead Software & Innovation Consultant at trendig, where he applies critical and out of the box thinking to help teams and organizations to achieve their objectives. \r\n\r\nPassionate about code quality and continuous learning cultures, he advocates the eXtreme Programming methodology and happily participates in several Ruby User Groups and Software as a Craft communities around Europe.\r\n\r\nIn his previous life he embarked on a 6-month journey visiting local communities, sharing good vibes and crafting software, a so-called Journeyman Tour. Before that, he worked as a Software Engineer for Babbel, Sweetspot Intelligence and DXC Spain.",
+            "FRENCH": "Dani works as a Lead Software & Innovation Consultant at trendig, where he applies critical and out of the box thinking to help teams and organizations to achieve their objectives. \r\n\r\nPassionate about code quality and continuous learning cultures, he advocates the eXtreme Programming methodology and happily participates in several Ruby User Groups and Software as a Craft communities around Europe.\r\n\r\nIn his previous life he embarked on a 6-month journey visiting local communities, sharing good vibes and crafting software, a so-called Journeyman Tour. Before that, he worked as a Software Engineer for Babbel, Sweetspot Intelligence and DXC Spain."
         },
         "email": "6dZ0hefE4n/2CoayABL7CQ==",
         "emailHash": null,
@@ -40185,7 +40167,7 @@
         "links": [
             {
                 "name": "Github",
-                "url": "dcarral"
+                "url": "https://github.com/dcarral"
             },
             {
                 "name": "Twitter",
@@ -40200,7 +40182,7 @@
         "photoUrl": "https://pbs.twimg.com/profile_images/631438474206412800/syNZc4zm_400x400.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-01-30T23:42:37.379"
+        "tokenExpiration": "2018-03-11T15:50:53.936"
     },
     {
         "company": "Google",
@@ -40937,5 +40919,58 @@
         "role": "USER",
         "token": "empty-token",
         "tokenExpiration": "2018-02-28T17:48:14.358"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "llapierre@cross-systems.ch",
+        "emailHash": null,
+        "firstname": "Laurent",
+        "lastname": "Lapierre",
+        "legacyId": null,
+        "links": [],
+        "login": "llapierre",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2018-03-05T10:36:43.53"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "florian.ballandreau@free.fr",
+        "emailHash": null,
+        "firstname": "Florian",
+        "lastname": "Ballandreau",
+        "legacyId": null,
+        "links": [],
+        "login": "florian.ballandreau",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2018-03-05T17:55:19.967"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "\u00c9ducateur exp\u00e9riment\u00e9, il a une longue exp\u00e9rience de travail dans l\u2019industrie des technologies de l\u2019information et des services. \r\nIl est sp\u00e9cialis\u00e9 dans le support technique, le d\u00e9pannage logiciel, la traduction, la gestion de la relation client (CRM). \r\nC\u2019est un \u201cGeek passionn\u00e9\u201d ambassadeur entre autre du Raspberry Pi et de Code Club en France\u2026\r\n",
+            "FRENCH": "\u00c9ducateur exp\u00e9riment\u00e9, il a une longue exp\u00e9rience de travail dans l\u2019industrie des technologies de l\u2019information et des services. \r\nIl est sp\u00e9cialis\u00e9 dans le support technique, le d\u00e9pannage logiciel, la traduction, la gestion de la relation client (CRM). \r\nC\u2019est un \u201cGeek passionn\u00e9\u201d ambassadeur entre autre du Raspberry Pi et de Code Club en France\u2026\r\n"
+        },
+        "email": "STjRyUvcLgqLKST/XsaPwzuwTWU5clgisNJZzNZADn8=",
+        "emailHash": null,
+        "firstname": "Alan",
+        "lastname": "Mc Cullagh",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/tyrower"
+            }
+        ],
+        "login": "alanmccullagh",
+        "photoUrl": "http://hepia.hesge.ch/csd/files/42336892/42336893/1/1503860481000/team-alan.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2018-03-11T15:42:42.282"
     }
 ]
