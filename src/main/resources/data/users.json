@@ -4960,7 +4960,7 @@
             "ENGLISH": "[Ninja Squad](http://ninja-squad.fr) Co-founder - JUG Leader : [Lyon JUG](http://www.lyonjug.org) & Duchess France - MiXiT Co-founder.",
             "FRENCH": "Co-fondatrice de [Ninja Squad](http://ninja-squad.fr), du [Lyon JUG](http://www.lyonjug.org), de Duchess France et de MiXiT."
         },
-        "email": "ncvtZWJHrMVjLkuSm+2TnuTj4PzzxdcUuTPWzlZmnCA=",
+        "email": "ncvtZWJHrMVjLkuSm+2Tnh6e22crxpAEG9wtlH3lDEc=",
         "emailHash": "a7562607fd2dda9889bd3ecc70d98beb",
         "firstname": "Agn\u00e8s",
         "lastname": "Crepet",
@@ -4986,8 +4986,8 @@
         "login": "agnes",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "empty-token",
-        "tokenExpiration": "2018-01-09T10:43:40.077"
+        "token": "2d7364eb899a",
+        "tokenExpiration": "2018-03-15T21:42:41.188"
     },
     {
         "company": null,
@@ -5107,8 +5107,8 @@
         "login": "guillaumeehret",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "ab7845d56360",
-        "tokenExpiration": "2018-03-14T20:25:23.282"
+        "token": "8df7e9e9f0ee",
+        "tokenExpiration": "2018-03-15T20:44:24.618"
     },
     {
         "company": null,
@@ -6030,7 +6030,7 @@
     {
         "company": "Worldline",
         "description": {
-            "ENGLISH": "Worldline [Euronext: WLN] is the European leader in the payments and transactional services industry.Worldline delivers new-generation services, enabling its customers to offer smooth and innovative solutions to the end consumer.Key actor for B2B2C industries, with over 40 years of experience, Worldline supports and contributes to the success of all businesses and administrative servicesin a perpetually evolving market. Worldline offers a unique and flexible business model built around a global and growing portfolio, thus enabling end-to-end support.Worldline activities are organized around three axes: Merchant Services, Mobility & e-Transactional Services, Financial Processing & Software Licensing including equensWorldline.Worldline employs more than 8,600 people worldwide, with estimated revenue of circa 1.5 billion euros on a yearly basis. Worldline is an Atos company",
+            "ENGLISH": "Worldline is the European leader in the field of payments and transactional services and plays a major role in the fields of merchant services, mobility, e-administration and major state projects thanks to shared services and offerings and the construction of bespoke solutions.\r\n\r\n \r\nWe provide our customers with end-to-end collaboration: from business analysis; software development; to dedicated or cloud-based hosting; technical operation.\r\n\r\n \r\nOpen Source, Software Craftsmanship, and the Agile and DevOps approaches are key characteristics of our projects. The associated methodologies, techniques and technologies are naturally reflected in Worldline\u2019s culture; they are at the heart of our strategies, organizations and platforms.\r\n\r\n \r\nWe work exclusively from our own premises and do not operate in T&M mode. We develop expertise and innovation thanks to a large network of technical, project and business experts coming from all of our teams.\r\n\r\n \r\nWorldline pays particular attention to the development of each employee and offers a wide range of training courses. We promote a good work/life balance and pay special attention to gender equality and diversity.\r\n\r\n \r\nFinally, the diversity of projects, clients and challenges that we address provides a great business and technological wealth. It enables everyone to contribute to the construction of ambitious functional and technical solutions.\r\n\r\n \r\nWorldline is an Atos company.",
             "FRENCH": "Worldline, leader europ\u00e9en du paiement\u00a0 et des services transactionnels, est\u00a0 \u00e9galement un acteur majeur dans les domaines des services marchands, de la mobilit\u00e9 ou de la e-administration via la mise \u00e0 disposition d\u2019offres mutualis\u00e9es ou la construction de solutions sur mesure.\r\n\u00a0\r\n\r\nNous proposons \u00e0 nos clients une collaboration de bout en bout depuis l\u2019accompagnement m\u00e9tier, le d\u00e9veloppement jusqu\u2019\u00e0 l\u2019h\u00e9bergement d\u00e9di\u00e9 ou cloud, l\u2019exploitation applicative.\r\n\u00a0\r\n\r\nL\u2019Open Source, le Software Craftsmanship ainsi que les d\u00e9marches Agile et DevOps constituent des marqueurs forts de nos projets et les m\u00e9thodologies, techniques et technologies associ\u00e9es sont au c\u0153ur de nos strat\u00e9gies, organisations et plateformes.\r\n\u00a0\r\n\r\nNous travaillons exclusivement depuis nos locaux et ne fonctionnons pas en mode r\u00e9gie. Nous d\u00e9veloppons l\u2019expertise et l\u2019innovation via \u00e0 un r\u00e9seau d\u2019experts techniques, projets et m\u00e9tiers, issus de nos \u00e9quipes.\r\n\u00a0\r\n\r\nWorldline porte une attention particuli\u00e8re au d\u00e9veloppement de chaque collaborateur et propose une large offre de formations. Nous encourageons un juste \u00e9quilibre entre vie priv\u00e9e et vie professionnelle et portons une attention particuli\u00e8re \u00e0 l\u2019\u00e9galit\u00e9 femme-homme.\r\n\u00a0\r\n\r\nEnfin, La diversit\u00e9 de nos projets\u00a0 offre une grande richesse m\u00e9tier et technologique et permet \u00e0 chacun, quel que soit son profil, de contribuer \u00e0 la construction de solutions ambitieuses.\r\n\u00a0\r\n\r\nWorldline est une soci\u00e9t\u00e9 du groupe Atos."
         },
         "email": null,
@@ -6040,12 +6040,12 @@
         "legacyId": 2971,
         "links": [
             {
-                "name": "Site",
-                "url": "http://fr.worldline.com"
-            },
-            {
                 "name": "Blog",
                 "url": "http://fr.worldline.com/blog"
+            },
+            {
+                "name": "Site",
+                "url": "http://fr.worldline.com"
             },
             {
                 "name": "Twitter",
@@ -6064,7 +6064,7 @@
         "photoUrl": "images/sponsors/logo-worldline.svg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-05T13:38:31.691"
+        "tokenExpiration": "2018-03-12T09:32:26.941"
     },
     {
         "company": "ELAO",
@@ -17804,7 +17804,7 @@
             "ENGLISH": "D\u00e9veloppeur Java Agile",
             "FRENCH": "D\u00e9veloppeur Java Agile"
         },
-        "email": null,
+        "email": "kGmhyr7sBwC4CDbhJLvO/cXAiiQBUCbOqQ5oZ7aRK1Y=",
         "emailHash": "02dd5a7a5088e14f42f35b577947bf5b",
         "firstname": "Hoang thanh",
         "lastname": "Nguyen",
@@ -17813,8 +17813,8 @@
         "login": "htnguyen_fr",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.497"
+        "token": "e41e40459c89",
+        "tokenExpiration": "2018-03-15T11:30:58.984"
     },
     {
         "company": "",
@@ -20916,10 +20916,10 @@
             }
         ],
         "login": "jattard",
-        "photoUrl": "http://youtopie.com/wp-content/uploads/2017/09/Julie-Attard.png",
+        "photoUrl": "https://mixitconf.org/images/speakers/attard.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-02-28T17:52:16.389"
+        "tokenExpiration": "2018-03-12T09:35:31.688"
     },
     {
         "company": "",
@@ -34296,7 +34296,7 @@
         "tokenExpiration": "2018-03-03T17:17:35.529"
     },
     {
-        "company": "",
+        "company": null,
         "description": {
             "ENGLISH": "Product Owner. Fascin\u00e9e par les facult\u00e9s des enfants \u00e0 coder en moins de deux ... Mix-teen addict depuis 2014",
             "FRENCH": "Product Owner. Fascin\u00e9e par les facult\u00e9s des enfants \u00e0 coder en moins de deux ... Mix-teen addict depuis 2014"
@@ -34304,14 +34304,14 @@
         "email": null,
         "emailHash": "9e6fe8bdae1260bc3351bc952cfc8131",
         "firstname": "Aude",
-        "lastname": "Lemar",
+        "lastname": "Lemar-Verrier",
         "legacyId": 7722,
         "links": [],
         "login": "106329914971209052078",
         "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.529"
+        "tokenExpiration": "2018-03-12T12:05:46.575"
     },
     {
         "company": "",
@@ -38930,10 +38930,10 @@
             }
         ],
         "login": "edas",
-        "photoUrl": "http://eric.daspet.name/portrait.jpg",
+        "photoUrl": "https://mixitconf.org/images/speakers/daspet.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-01-30T23:42:36.95"
+        "tokenExpiration": "2018-03-12T09:38:03.974"
     },
     {
         "company": "Wise Noodles",
@@ -38965,10 +38965,10 @@
             }
         ],
         "login": "john@wisenoodles.com",
-        "photoUrl": "https://s.gravatar.com/avatar/8a168b90e1318b876b116a06f6b36302?s=2000",
+        "photoUrl": "https://mixitconf.org/images/speakers/le_drew.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-02-03T21:20:02.938"
+        "tokenExpiration": "2018-03-12T09:38:28.701"
     },
     {
         "company": "d.c.m.e.",
@@ -39571,16 +39571,16 @@
             }
         ],
         "login": "isislat@gmail.com",
-        "photoUrl": "https://lesnouveauxtravailleurs.fr/wp-content/uploads/2017/01/MoiJanvier2017.jpg",
+        "photoUrl": "https://mixitconf.org/images/speakers/latorre.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-01-30T23:42:37.103"
+        "tokenExpiration": "2018-03-12T09:34:26.936"
     },
     {
         "company": "Core Agile",
         "description": {
-            "ENGLISH": "I am an Agile enthusiast, DRiVE practitioner, UnBoss believer, Leadership thinker, Scrum Coach, Cultural Change Agent and probably a whole lot more.\nMy passion is to help businesses succeed by allowing the employees to grow \u2013 both individually and together. To achieve that, I of course utilize many different frameworks and practices \u2013 like Scrum, Kanban, SAFe, etc., but my main focus is always on how the changes supports the need of the employees and customers in the best possible way.\nI am an active member of the Business Agility and Agile communities, founder of Agile Copenhagen and speaker at conferences around the world.",
-            "FRENCH": "I am an Agile enthusiast, DRiVE practitioner, UnBoss believer, Leadership thinker, Scrum Coach, Cultural Change Agent and probably a whole lot more.\nMy passion is to help businesses succeed by allowing the employees to grow \u2013 both individually and together. To achieve that, I of course utilize many different frameworks and practices \u2013 like Scrum, Kanban, SAFe, etc., but my main focus is always on how the changes supports the need of the employees and customers in the best possible way.\nI am an active member of the Business Agility and Agile communities, founder of Agile Copenhagen and speaker at conferences around the world."
+            "ENGLISH": "I am an Agile enthusiast, DRiVE practitioner, UnBoss believer, Leadership thinker, Scrum Coach, Cultural Change Agent and probably a whole lot more.\r\nMy passion is to help businesses succeed by allowing the employees to grow \u2013 both individually and together. To achieve that, I of course utilize many different frameworks and practices \u2013 like Scrum, Kanban, SAFe, etc., but my main focus is always on how the changes supports the need of the employees and customers in the best possible way.\r\nI am an active member of the Business Agility and Agile communities, founder of Agile Copenhagen and speaker at conferences around the world.",
+            "FRENCH": "I am an Agile enthusiast, DRiVE practitioner, UnBoss believer, Leadership thinker, Scrum Coach, Cultural Change Agent and probably a whole lot more.\r\nMy passion is to help businesses succeed by allowing the employees to grow \u2013 both individually and together. To achieve that, I of course utilize many different frameworks and practices \u2013 like Scrum, Kanban, SAFe, etc., but my main focus is always on how the changes supports the need of the employees and customers in the best possible way.\r\nI am an active member of the Business Agility and Agile communities, founder of Agile Copenhagen and speaker at conferences around the world."
         },
         "email": "1zOo6uykxKynAehe71cy01B+bMxF9e9mIQDVMupmvu4=",
         "emailHash": null,
@@ -39598,10 +39598,10 @@
             }
         ],
         "login": "allan@rennebo.com",
-        "photoUrl": "http://rennebo.com/AllanRenneboJepsenProfile.png",
+        "photoUrl": "https://mixitconf.org/images/speakers/jepsen.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-01-30T23:42:37.106"
+        "tokenExpiration": "2018-03-12T07:20:22.475"
     },
     {
         "company": "Elastic",
@@ -40276,10 +40276,10 @@
             }
         ],
         "login": "isabll.huynh@gmail.com",
-        "photoUrl": "http://www.laclavette.fr/wp-content/uploads/2018/01/Isabelle-H-La-clavette.jpg",
+        "photoUrl": "https://mixitconf.org/images/speakers/huynh.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-01-29T22:22:46.407"
+        "tokenExpiration": "2018-03-12T09:35:54.605"
     },
     {
         "company": "INSA-Lyon, INRIA",
@@ -40509,7 +40509,7 @@
             "ENGLISH": "Josh is a 14 year old coder, passionate about sharing his skills with others. He is the creator of EduBlocks, a drag and drop version of Python 3 which allows students to learn the Python syntax with minimal errors. His software is being used in countries all around the world by students and teachers alike. Josh delivers numerous workshops around the country sharing his passion for coding to people of all ages. He was recently awarded a John Pinner Award at PyCon UK for his contribution to the coding community. He is also a pi-top futureCHAMPION.",
             "FRENCH": "Josh is a 14 year old coder, passionate about sharing his skills with others. He is the creator of EduBlocks, a drag and drop version of Python 3 which allows students to learn the Python syntax with minimal errors. His software is being used in countries all around the world by students and teachers alike. Josh delivers numerous workshops around the country sharing his passion for coding to people of all ages. He was recently awarded a John Pinner Award at PyCon UK for his contribution to the coding community. He is also a pi-top futureCHAMPION."
         },
-        "email": "zLS3hqsFDqGfZj2FTX58je9KB26+PzFqHcrXBPlxP7Y=",
+        "email": "4WWyyk++UuN2x6h0Zkkk+DBY347HA8KImnIHg63+X7Y=",
         "emailHash": null,
         "firstname": "Joshua",
         "lastname": "Lowe",
@@ -40519,7 +40519,7 @@
         "photoUrl": "https://mixitconf.org/images/speakers/lowe.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-02-13T08:37:12.879"
+        "tokenExpiration": "2018-03-12T07:18:28.749"
     },
     {
         "company": "Pivotal",
@@ -40972,5 +40972,23 @@
         "role": "USER",
         "token": "empty-token",
         "tokenExpiration": "2018-03-11T15:42:42.282"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Prof de Math et passionn\u00e9 de musique Cyril intervient occasionnellement \u00e0 Mixteen",
+            "FRENCH": "Prof de Math et passionn\u00e9 de musique Cyril intervient occasionnellement \u00e0 Mixteen"
+        },
+        "email": "ftYbqFqxSQUM3BkAaVvGIRifgAGiY/Zz/ohVw8GeVdw=",
+        "emailHash": null,
+        "firstname": "Cyril",
+        "lastname": "Pavon",
+        "legacyId": null,
+        "links": [],
+        "login": "cyrilpavon",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2018-03-12T12:30:53.38"
     }
 ]

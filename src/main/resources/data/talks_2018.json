@@ -1181,6 +1181,39 @@
         "video": null
     },
     {
+        "addedAt": "2018-03-13T12:15:55.141",
+        "description": "Les inscriptions se font exclusivement via la billeterie YurPlan. Pour cel\u00e0 vous pouvez suivre le Twitter Mixteen\r\n\r\nPlusieurs activit\u00e9s seront propos\u00e9es:\r\n\r\n* Pour tous : Scratch\r\n* Ateliers de d\u00e9couverte des principes de l'informatique : jeux pour d\u00e9couvrir le binaire, le codage d'images...\r\n* Thymio : un petit robot facile \u00e0 programmer qui permet de comprendre les bases de la robotique, et se d\u00e9place suivant les diff\u00e9rentes instructions des enfants.\r\n* Micro:bit : une carte \u00e9labor\u00e9 sous la supervision de la BBC \u00e0 destination des \u00e9coliers anglais. Elle permet l\u2019initiation \u00e0 l\u2019\u00e9lectronique, l\u2019IoT et la programmation.\r\n\r\nLes enfants peuvent venir avec leur ordinateur portable et un go\u00fbter \u00e0 base des c\u00e9l\u00e8bres cr\u00eapes de MiXiT leur servi\r\n \r\nVers 17h, les enfants pr\u00e9sentent leurs r\u00e9alisations aux autres enfants et aux parents qui souhaitent participer.  A 18h00, tout ce petit monde montera sur sc\u00e8ne devant l'assembl\u00e9e r\u00e9unie de MiXiT.\r\n",
+        "end": "2018-04-20T18:00:00",
+        "event": "2018",
+        "format": "WORKSHOP",
+        "id": "5aa7c31e41569c05fdf5c93a",
+        "language": "FRENCH",
+        "photoUrls": [
+            {
+                "name": "Logo",
+                "url": "https://mixitconf.org/images/png/mxt-logo-mixteen.png"
+            }
+        ],
+        "room": "ROOM7",
+        "slug": "born-to-code-avec-mixteen-",
+        "speakerIds": [
+            "titimoby",
+            " gerald.quintana",
+            "115833292931696563446",
+            "rAkIz",
+            "108536104623325962265",
+            "106329914971209052078",
+            "bmarron",
+            "alfred.almendra",
+            "cyrilpavon"
+        ],
+        "start": "2018-04-20T14:00:00",
+        "summary": "Cet atelier r\u00e9serv\u00e9 aux ados inscrits au pr\u00e9alable aura lieu sur la mezzanine. Suivez les panneaux si vous voulez voir les ateliers et \u00e9changer avec les diff\u00e9rents intervenants. Les participants, les enfants apprennent \u00e0 cr\u00e9er des mini-jeux, \u00e0 programmer des robots, \u00e0 assembler des composants \u00e9lectroniques... \r\n",
+        "title": "Born to code avec MixTeen ",
+        "topic": "makers",
+        "video": null
+    },
+    {
         "addedAt": "2018-01-30T12:47:03.457",
         "description": null,
         "end": "2018-04-20T15:00:00",
