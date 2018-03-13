@@ -31,6 +31,9 @@ class SpeakerImageLoaderTest() {
     @Autowired
     lateinit var talkRepository: TalkRepository
 
+    val SPECIAL_SLUG_CHARACTERS = mapOf<Char, Char>(Pair('é', 'e'), Pair('è', 'e'), Pair('ï', 'i'), Pair(' ', '_'), Pair('ê', 'e'), Pair('à', 'a'), Pair('-', '_'))
+
+
     @Test
     fun loadSpeakerImages() {
         val speakers = talkRepository
@@ -38,21 +41,32 @@ class SpeakerImageLoaderTest() {
                 .collectList()
                 .flatMap { userRepository.findMany(it.flatMap(Talk::speakerIds)).collectList() }
                 .block()
+                ?.sortedBy { it.lastname }
 
         speakers?.forEach {
             val imageUrl = getImageUrl(it)
-            if(!imageUrl.isNullOrBlank()) {
-                downloadImage(imageUrl!!, it.lastname.replace(" ", "_").toLowerCase())
+            val filename = if (it.lastname.isNullOrBlank()) santitize(it.firstname) else santitize(it.lastname)
+            if (!imageUrl.isNullOrBlank()) {
+                downloadImage(imageUrl!!, filename)
             }
         }
 
     }
 
+    fun santitize(value: String): String = value.toLowerCase().toCharArray().map { if (SPECIAL_SLUG_CHARACTERS.get(it) == null) it else SPECIAL_SLUG_CHARACTERS.get(it) }.joinToString("")
+
     fun getImageUrl(user: User): String? {
-        if (user.photoUrl != null)
-            return if (user.photoUrl!!.startsWith("/images") || user.photoUrl!!.contains("/mixitconf"))  null else user.photoUrl!!
-        else
-            return "http://gravatar.com/avatar/${user.emailHash}?s=400"
+        System.out.println("user ${user.lastname} -> ${user.photoUrl}")
+        if (!user.photoUrl.isNullOrEmpty()) {
+            if (user.photoUrl!!.contains("/mixitconf")) {
+                return user.photoUrl
+            }
+            if (user.photoUrl!!.startsWith("/images")) {
+                return "https://mixitconf.cleverapps.io${user.photoUrl}"
+            }
+            return user.photoUrl
+        } else
+            return "https://www.gravatar.com/avatar/${user.emailHash}?s=400"
     }
 
     fun downloadImage(url: String, filename: String) {
@@ -67,11 +81,11 @@ class SpeakerImageLoaderTest() {
         }
         emplacement.createNewFile()
 
-        FileOutputStream(emplacement).use{
+        FileOutputStream(emplacement).use {
             val out = it
 
-            try{
-                URL(url).openConnection().getInputStream().use{
+            try {
+                URL(url).openConnection().getInputStream().use {
                     val b = ByteArray(1024)
                     var c: Int = it.read(b)
                     while (c != -1) {
@@ -79,8 +93,7 @@ class SpeakerImageLoaderTest() {
                         c = it.read(b)
                     }
                 }
-            }
-            catch (e:Exception){
+            } catch (e: Exception) {
                 System.out.println("Impossible to load image for ${filename}")
                 e.printStackTrace()
             }
