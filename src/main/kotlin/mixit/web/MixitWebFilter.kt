@@ -26,34 +26,43 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
     private fun readUserInfo(request: ServerHttpRequest) = (request.cookies).get("XSRF-TOKEN")?.first()?.value?.decodeFromBase64()?.split(":")
 
     override fun filter(exchange: ServerWebExchange, chain: WebFilterChain) = exchange.session.flatMap { session ->
-        // We need to know if the user is connected or not
-        val userInfo = readUserInfo(exchange.request)
+        // For web resource we don't need to know if the user is connected or not
+        if(isWebResource(exchange.request.uri.path)){
+            filter(exchange, chain, null)
+        }
+        else {
+            try {
+                // We need to
+                val userInfo = readUserInfo(exchange.request)
 
-        if(userInfo!=null && userInfo.size == 2){
-            val email = userInfo.get(0)
-            val token = userInfo.get(1)
+                if (userInfo != null && userInfo.size == 2) {
+                    val email = userInfo.get(0)
+                    val token = userInfo.get(1)
 
-            // If session contains an email we load the user
-            userRepository.findByEmail(email).flatMap {
-                // We have to see if the token is the good one anf if it is yet valid
-                if (it.token.equals(token) && it.tokenExpiration.isAfter(LocalDateTime.now())) {
-                    // If user is found we need to restore infos in session
-                    session.attributes["role"] = it.role
-                    session.attributes["email"] = email
-                    session.attributes["token"] = token
-                    filter(exchange, chain, it)
+                    // If session contains an email we load the user
+                    userRepository.findByEmail(email).flatMap {
+                        // We have to see if the token is the good one anf if it is yet valid
+                        if (it.token.equals(token) && it.tokenExpiration.isAfter(LocalDateTime.now())) {
+                            // If user is found we need to restore infos in session
+                            session.attributes["role"] = it.role
+                            session.attributes["email"] = email
+                            session.attributes["token"] = token
+                            filter(exchange, chain, it)
+                        } else {
+                            filter(exchange, chain, null)
+                        }
+                    }
                 } else {
                     filter(exchange, chain, null)
                 }
+            } catch (e: IllegalArgumentException) {
+                filter(exchange, chain, null)
             }
-        }
-        else{
-            filter(exchange, chain, null)
         }
     }
 
     fun filter(exchange: ServerWebExchange, chain: WebFilterChain, user: User?) =
-            // People who used the old URL are directly redirected
+    // People who used the old URL are directly redirected
             if (exchange.request.headers.host?.hostString?.endsWith("mix-it.fr") == true) {
                 val response = exchange.response
                 response.statusCode = HttpStatus.PERMANENT_REDIRECT
@@ -62,7 +71,8 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
             }
             // For those who arrive on our home page with another language tha french, we need to load the site in english
             else if (exchange.request.uri.path == "/" &&
-                    (exchange.request.headers.acceptLanguageAsLocales.firstOrNull() ?: Locale.FRENCH).language != "fr" &&
+                    (exchange.request.headers.acceptLanguageAsLocales.firstOrNull()
+                            ?: Locale.FRENCH).language != "fr" &&
                     !isSearchEngineCrawler(exchange)) {
                 val response = exchange.response
                 response.statusCode = HttpStatus.TEMPORARY_REDIRECT
@@ -96,6 +106,14 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
                             .build())
                 }
             }
+
+    private fun isWebResource(initUriPath: String): Boolean = initUriPath.endsWith(".css") ||
+                    initUriPath.endsWith(".js") ||
+                    initUriPath.endsWith(".svg") ||
+                    initUriPath.endsWith(".jpg") ||
+                    initUriPath.endsWith(".png") ||
+                    initUriPath.endsWith(".webp") ||
+                    initUriPath.endsWith(".webapp")
 
     private fun redirectForLogin(exchange: ServerWebExchange, uri: String): Mono<Void> {
         val response = exchange.response
