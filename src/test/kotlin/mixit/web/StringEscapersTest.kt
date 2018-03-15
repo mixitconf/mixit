@@ -17,10 +17,10 @@ class StringEscapersTest {
 
         @Test
         fun `should sanitize HTML with images`() {
-            val html = "<img src=\"/images/png/planning2017_1.png\" class=\"\" alt=\"planning2017\" />"
+            val html = "<img src=\"/images/png/planning_2017_J1_AM.png\" class=\"\" alt=\"planning2017\" />"
             assertThat(escaper.escape(html)).isEqualTo(html)
 
-            val htmlWithJs = "<img src=\"/images/png/planning2017_1.png\" onclick=\"callFunction()\" class=\"\" alt=\"planning2017\" />"
+            val htmlWithJs = "<img src=\"/images/png/planning_2017_J1_AM.png\" onclick=\"callFunction()\" class=\"\" alt=\"planning2017\" />"
             assertThat(escaper.escape(htmlWithJs)).isEqualTo(html)
         }
 

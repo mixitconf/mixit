@@ -64,6 +64,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
             GET("/me/edit", userHandler::editProfileView)
             GET("/me/talks/edit/{slug}", talkHandler::editTalkView)
             GET("/search") { globalHandler.findFullTextView(it) }
+            GET("/schedule", globalHandler::scheduleView)
 
             // Authentication
             GET("/login", authenticationHandler::loginView)
