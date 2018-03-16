@@ -5107,8 +5107,8 @@
         "login": "guillaumeehret",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "8df7e9e9f0ee",
-        "tokenExpiration": "2018-03-15T20:44:24.618"
+        "token": "1eab44ce6576",
+        "tokenExpiration": "2018-03-18T16:13:15.334"
     },
     {
         "company": null,
@@ -12993,10 +12993,10 @@
         "tokenExpiration": "2018-03-03T17:17:35.488"
     },
     {
-        "company": "",
+        "company": null,
         "description": {
-            "ENGLISH": "Consultant Objet Direct.\nJava Addict et GWT Evangelist",
-            "FRENCH": "Consultant Objet Direct.\nJava Addict et GWT Evangelist"
+            "ENGLISH": "Full Stack Java Web Developer",
+            "FRENCH": "D\u00e9veloppeur Full Stack Java Web"
         },
         "email": "Z4jo1O68TVk4WtWz+4BgiGNTGV8VTkMjKGwhgk0y3Zk=",
         "emailHash": "d64f8edc8a504111fb05648aafa0a2b3",
@@ -13007,8 +13007,8 @@
         "login": "claude.petot",
         "photoUrl": null,
         "role": "USER",
-        "token": "97a28ed7843a",
-        "tokenExpiration": "2018-03-13T21:35:08.755"
+        "token": "8b27a3635a3b",
+        "tokenExpiration": "2018-03-17T12:51:25.895"
     },
     {
         "company": "",
@@ -22187,7 +22187,7 @@
             "ENGLISH": "D\u00e9veloppeur",
             "FRENCH": "D\u00e9veloppeur"
         },
-        "email": null,
+        "email": "0IKMOEU1vxOh4hSN3zmHR5AhtvkaVwarNBFmF6b7vi0=",
         "emailHash": "250713d76c20c37b5a03f7a6c048838b",
         "firstname": "Thomas",
         "lastname": "Nowak",
@@ -22196,8 +22196,8 @@
         "login": "tomnwk",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.505"
+        "token": "4547f349bdb7",
+        "tokenExpiration": "2018-03-18T14:57:45.545"
     },
     {
         "company": "",
@@ -28397,7 +28397,7 @@
             "ENGLISH": "D\u00e9veloppeur .Net (e-commerce)",
             "FRENCH": "D\u00e9veloppeur .Net (e-commerce)"
         },
-        "email": null,
+        "email": "yyfoL+BB6A5FNkqFxfT/Qc6VCH+AHKhROKpVmx3KX+U=",
         "emailHash": "ea1e6fde11ed262df11173b1f92fa35d",
         "firstname": "Thomas",
         "lastname": "Nowak",
@@ -28406,8 +28406,8 @@
         "login": "@tomnwk",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.517"
+        "token": "dac16e0a2781",
+        "tokenExpiration": "2018-03-18T14:59:21.81"
     },
     {
         "company": "",
@@ -38916,7 +38916,7 @@
         },
         "email": "s9djKjZ3m9yQyYBLpf+02ZyEsAD/1GpRMfCPXxGi2jo=",
         "emailHash": null,
-        "firstname": "\u00c9ric",
+        "firstname": "Eric",
         "lastname": "Daspet",
         "legacyId": null,
         "links": [
@@ -38933,7 +38933,7 @@
         "photoUrl": "https://mixitconf.org/images/speakers/daspet.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-12T09:38:03.974"
+        "tokenExpiration": "2018-03-12T22:46:19.612"
     },
     {
         "company": "Wise Noodles",
@@ -39328,8 +39328,8 @@
     {
         "company": "Deutsche Telekom",
         "description": {
-            "ENGLISH": "Sebastian works as a \u201cSpecialist Senior Manager Software Developer\u201d at Deutsche Telekom, after some time developing backend applications with Java and PHP he became a citizen of the JavaScript world. Recently he\u00b4s getting his hands dirty with Python and Rust. For the last six years Sebastian tries to improve our lives, working on Deutsche Telekoms Smart Home platform Qivicon.\n\n>> Famous last words:\n>> \u201cIf I would\u2019ve wanted to work in \u2018Enterprise\u2019, I\u2019d have joined Starfleet\u2026\u201d",
-            "FRENCH": "Sebastian works as a \u201cSpecialist Senior Manager Software Developer\u201d at Deutsche Telekom, after some time developing backend applications with Java and PHP he became a citizen of the JavaScript world. Recently he\u00b4s getting his hands dirty with Python and Rust. For the last six years Sebastian tries to improve our lives, working on Deutsche Telekoms Smart Home platform Qivicon.\n\n>> Famous last words:\n>> \u201cIf I would\u2019ve wanted to work in \u2018Enterprise\u2019, I\u2019d have joined Starfleet\u2026\u201d"
+            "ENGLISH": "Sebastian works as a \u201cSpecialist Senior Manager Software Developer\u201d at Deutsche Telekom, after some time developing backend applications with Java and PHP he became a citizen of the JavaScript world. Recently he\u00b4s getting his hands dirty with Python and Rust. For the last six years Sebastian tries to improve our lives, working on Deutsche Telekoms Smart Home platform Qivicon.\r\n\r\n>> Famous last words:\r\n>> \u201cIf I would\u2019ve wanted to work in \u2018Enterprise\u2019, I\u2019d have joined Starfleet\u2026\u201d",
+            "FRENCH": "Sebastian works as a \u201cSpecialist Senior Manager Software Developer\u201d at Deutsche Telekom, after some time developing backend applications with Java and PHP he became a citizen of the JavaScript world. Recently he\u00b4s getting his hands dirty with Python and Rust. For the last six years Sebastian tries to improve our lives, working on Deutsche Telekoms Smart Home platform Qivicon.\r\n\r\n>> Famous last words:\r\n>> \u201cIf I would\u2019ve wanted to work in \u2018Enterprise\u2019, I\u2019d have joined Starfleet\u2026\u201d"
         },
         "email": "3cAgHml6eD49B2ReW5Gea8346HekoJ1PWgCQpMzlWl4=",
         "emailHash": null,
@@ -39351,10 +39351,10 @@
             }
         ],
         "login": "public@asciidisco.com",
-        "photoUrl": "https://pictures.asciidisco.com/uploads/big/dff5c90dde1cbea06317e2019a99b6ca.jpg",
+        "photoUrl": "/images/speakers/golasch.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-01-30T23:42:37.056"
+        "tokenExpiration": "2018-03-14T12:44:09.427"
     },
     {
         "company": "SII",
@@ -40915,10 +40915,10 @@
             }
         ],
         "login": "sboissier",
-        "photoUrl": "http://youtopie.com/wp-content/uploads/2017/12/Boissier-Sophie.png",
+        "photoUrl": "/images/speakers/boissier.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-02-28T17:48:14.358"
+        "tokenExpiration": "2018-03-14T12:44:42.119"
     },
     {
         "company": null,
@@ -40990,5 +40990,47 @@
         "role": "USER",
         "token": "empty-token",
         "tokenExpiration": "2018-03-12T12:30:53.38"
+    },
+    {
+        "company": "Feelinjob",
+        "description": {
+            "ENGLISH": "Feelinjob est d\u00e9nicheur de beaux jobs IT et de talents passionn\u00e9s @ Lyon. Dit autrement, nous aidons les profils  exp\u00e9riment\u00e9s ou seniors \u00e0 trouver le job de leurs r\u00eaves et nous aidons les entreprises \u00e0 recruter de beaux profils \u00e0 valeur ajout\u00e9e \ud83d\ude0a\r\n\r\nNous travaillons exclusivement avec les candidats et les soci\u00e9t\u00e9s anim\u00e9s par la passion, le plaisir au travail et la qualit\u00e9, en choisissant ceux et celles avec qui nous aurions nous-m\u00eame eu plaisir \u00e0 travailler si nous \u00e9tions client final ou candidat \u00e0 l'\u00e9coute du march\u00e9.\r\n\r\nNos valeurs : Qualit\u00e9 et professionnalisme, passion, transparence, bienveillance et simplicit\u00e9.\r\n\r\nFeelinjob a \u00e9t\u00e9 fond\u00e9 par Herv\u00e9 Jacob, ex Directeur de Zenika Lyon",
+            "FRENCH": "Feelinjob est d\u00e9nicheur de beaux jobs IT et de talents passionn\u00e9s @ Lyon. Dit autrement, nous aidons les profils  exp\u00e9riment\u00e9s ou seniors \u00e0 trouver le job de leurs r\u00eaves et nous aidons les entreprises \u00e0 recruter de beaux profils \u00e0 valeur ajout\u00e9e \ud83d\ude0a\r\n\r\nNous travaillons exclusivement avec les candidats et les soci\u00e9t\u00e9s anim\u00e9s par la passion, le plaisir au travail et la qualit\u00e9, en choisissant ceux et celles avec qui nous aurions nous-m\u00eame eu plaisir \u00e0 travailler si nous \u00e9tions client final ou candidat \u00e0 l'\u00e9coute du march\u00e9.\r\n\r\nNos valeurs : Qualit\u00e9 et professionnalisme, passion, transparence, bienveillance et simplicit\u00e9.\r\n\r\nFeelinjob a \u00e9t\u00e9 fond\u00e9 par Herv\u00e9 Jacob, ex Directeur de Zenika Lyon"
+        },
+        "email": "vrn4IXqFtBhWBpWeEaDrYkGEj4b657DY1MDkUOPkAMc=",
+        "emailHash": null,
+        "firstname": "Herv\u00e9",
+        "lastname": "Jacob",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/hjacob/ "
+            },
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/herve_jacob"
+            }
+        ],
+        "login": "feelinjob",
+        "photoUrl": "images/sponsors/logo-feelinjob.svg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2018-03-13T13:00:54.826"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "jean-baptiste.parisot@zenika.com",
+        "emailHash": null,
+        "firstname": "Jean-baptiste",
+        "lastname": "Parisot",
+        "legacyId": null,
+        "links": [],
+        "login": "jean-baptiste.parisot",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2018-03-14T13:08:05.889"
     }
 ]

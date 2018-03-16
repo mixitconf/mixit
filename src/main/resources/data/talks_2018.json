@@ -472,26 +472,6 @@
         "video": null
     },
     {
-        "addedAt": "2018-01-30T12:47:04.459",
-        "description": "Cette session se d\u00e9roulera en 2 parties :\r\n- D\u00e9couverte des 9 filtres d'attention par la pratique : vous comprendrez leur impact sur la structure d'une personnalit\u00e9\r\n- D\u00e9couverte d'un mod\u00e8le de typologie de personnalit\u00e9 respectueux de la richesse et de l'unicit\u00e9 de chacun\r\n\r\nEn Agilit\u00e9, on dit que les outils sont en support des individus et des interactions. C'est pourquoi je vous propose de d\u00e9couvrir cet incroyable outil de compassion afin d'apprendre \u00e0 mieux vous conna\u00eetre, mieux comprendre les autres et ainsi, interagir de mani\u00e8re plus efficace.",
-        "end": "2018-04-19T16:00:00",
-        "event": "2018",
-        "format": "WORKSHOP",
-        "id": "5a706948840deb00141a7239",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "ROOM5",
-        "slug": "mieux-communiquer-en-decouvrant-ses-filtres-d-attention",
-        "speakerIds": [
-            "olivier.my@gmail.com"
-        ],
-        "start": "2018-04-19T14:10:00",
-        "summary": "Une grande difficult\u00e9 de la communication vient de la conviction de parler la m\u00eame langue que l'autre, de donner le m\u00eame sens aux mots et de consid\u00e9rer les m\u00eames choses comme importantes. Et s'il en \u00e9tait autrement ?\r\n\r\nDepuis notre enfance, nous avons d\u00e9velopp\u00e9 des automatismes li\u00e9s \u00e0 notre perception du monde et qui vont conditionner la mani\u00e8re dont nous nous comportons aujourd'hui. M\u00eame si cela peut \u00eatre notre principal atout, c'est aussi notre principale limitation.",
-        "title": "Mieux communiquer en d\u00e9couvrant ses filtres d'attention",
-        "topic": "team",
-        "video": null
-    },
-    {
         "addedAt": "2018-01-30T12:47:04.663",
         "description": "Un an apr\u00e8s la sortie de la version MVP (minimum viable product) de WebAssembly, de nombreux usages \u00e9mergent et laissent entrevoir les possibilit\u00e9s futures du format binaire accessible dans tous les navigateurs Web modernes. Pourquoi s'int\u00e9resser \u00e0 WebAssembly aujourd'hui ? Est-ce que c'est fait pour moi ? Est-ce que c'est simple \u00e0 utiliser ? Comment je peux en tirer profit facilement d\u00e9s aujourd'hui ? Nous essayerons ensemble de r\u00e9pondre \u00e0 ces questions, puis nous verrons comment cr\u00e9er et int\u00e9grer du code WebAssembly, en passant par toutes les \u00e9tapes, de l'\u00e9criture du code source initial (dans un autre langage que JS, mais pas de panique !) jusqu'\u00e0 l'int\u00e9gration dans une application Web.",
         "end": "2018-04-19T15:00:00",
@@ -508,6 +488,27 @@
         "start": "2018-04-19T14:10:00",
         "summary": "Un an apr\u00e8s la sortie de la version MVP (minimum viable product) de WebAssembly, de nombreux usages \u00e9mergent et laissent entrevoir les possibilit\u00e9s futures du format binaire accessible dans tous les navigateurs Web modernes. Pourquoi s'int\u00e9resser \u00e0 WebAssembly aujourd'hui ? Est-ce que c'est fait pour moi ? Est-ce que c'est simple \u00e0 utiliser ? Comment je peux en tirer profit facilement d\u00e9s aujourd'hui ? Nous essayerons ensemble de r\u00e9pondre \u00e0 ces questions, puis nous verrons comment cr\u00e9er et int\u00e9grer du code WebAssembly, en passant par toutes les \u00e9tapes, de l'\u00e9criture du code source initial (dans un autre langage que JS, mais pas de panique !) jusqu'\u00e0 l'int\u00e9gration dans une application Web.",
         "title": "Faciliter le d\u00e9veloppement d'applications Web performantes avec WebAssembly",
+        "topic": "tech",
+        "video": null
+    },
+    {
+        "addedAt": "2018-01-30T12:47:03.403",
+        "description": "Des starter kits seront \u00e0 disposition (Node.js, php, Java), la plateforme sera ouverte 2 semaines avant la conf\u00e9rence.\r\n\r\nTournoi avec des lots \u00e0 gagner \u00e0 la fin de la session.",
+        "end": "2018-04-19T16:00:00",
+        "event": "2018",
+        "format": "WORKSHOP",
+        "id": "5a706948840deb00141a7222",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM5",
+        "slug": "coding-game-challenge",
+        "speakerIds": [
+            "hmetivier",
+            "m.brechet@gmail.com"
+        ],
+        "start": "2018-04-19T14:10:00",
+        "summary": "Venez participer \u00e0 ce challenge de conception d\u2019intelligence artificielle.\r\n\r\nLes r\u00e8gles sont simples :\r\n\r\n- une bataille de personnages m\u00e9di\u00e9vaux en un contre un\r\n\r\n- une API REST d\u2019attaque \u00e0 disposition\r\n\r\n- une application web de visualisation du combat en live\r\n\r\nVous n\u2019avez plus qu\u2019\u00e0 coder votre IA avec votre langage pr\u00e9f\u00e9r\u00e9, r\u00e9agir en cons\u00e9quence et affronter l\u2019IA du serveur ou d\u2019autres participants de ce lab.",
+        "title": "Coding Game Challenge",
         "topic": "tech",
         "video": null
     },
@@ -1234,6 +1235,26 @@
         "video": null
     },
     {
+        "addedAt": "2018-01-30T12:47:04.459",
+        "description": "Cette session se d\u00e9roulera en 2 parties :\r\n- D\u00e9couverte des 9 filtres d'attention par la pratique : vous comprendrez leur impact sur la structure d'une personnalit\u00e9\r\n- D\u00e9couverte d'un mod\u00e8le de typologie de personnalit\u00e9 respectueux de la richesse et de l'unicit\u00e9 de chacun\r\n\r\nEn Agilit\u00e9, on dit que les outils sont en support des individus et des interactions. C'est pourquoi je vous propose de d\u00e9couvrir cet incroyable outil de compassion afin d'apprendre \u00e0 mieux vous conna\u00eetre, mieux comprendre les autres et ainsi, interagir de mani\u00e8re plus efficace.",
+        "end": "2018-04-20T16:00:00",
+        "event": "2018",
+        "format": "WORKSHOP",
+        "id": "5a706948840deb00141a7239",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM5",
+        "slug": "mieux-communiquer-en-decouvrant-ses-filtres-d-attention",
+        "speakerIds": [
+            "olivier.my@gmail.com"
+        ],
+        "start": "2018-04-20T14:10:00",
+        "summary": "Une grande difficult\u00e9 de la communication vient de la conviction de parler la m\u00eame langue que l'autre, de donner le m\u00eame sens aux mots et de consid\u00e9rer les m\u00eames choses comme importantes. Et s'il en \u00e9tait autrement ?\r\n\r\nDepuis notre enfance, nous avons d\u00e9velopp\u00e9 des automatismes li\u00e9s \u00e0 notre perception du monde et qui vont conditionner la mani\u00e8re dont nous nous comportons aujourd'hui. M\u00eame si cela peut \u00eatre notre principal atout, c'est aussi notre principale limitation.",
+        "title": "Mieux communiquer en d\u00e9couvrant ses filtres d'attention",
+        "topic": "team",
+        "video": null
+    },
+    {
         "addedAt": "2018-01-30T12:47:02.571",
         "description": "Sitting at convergence of these two things is MIDI \u2014 a niche protocol that's been around since 1983 and was originally designed for musical instruments to communicate with one another. It's event-oriented approach to messaging feels right at home in the asynchronous world of JavaScript & Node, and the prevalence of MIDI support in older musical equipment means you can find unique, hackable and affordable hardware at your local pawnshop or Craig's List.\r\n\r\nThis unlikely tech stack \u2014 Tiny Computers + JavaScript + MIDI \u2014 can lend itself to creative programming beyond music. George's Talk will explain how to get started, walk through several examples and elaborate on the future of this stack, not only as a platform for experimentation but for education as well.",
         "end": "2018-04-20T15:00:00",
@@ -1296,27 +1317,6 @@
         "video": null
     },
     {
-        "addedAt": "2018-01-30T12:47:03.403",
-        "description": "Des starter kits seront \u00e0 disposition (Node.js, php, Java), la plateforme sera ouverte 2 semaines avant la conf\u00e9rence.\r\n\r\nTournoi avec des lots \u00e0 gagner \u00e0 la fin de la session.",
-        "end": "2018-04-20T16:00:00",
-        "event": "2018",
-        "format": "WORKSHOP",
-        "id": "5a706948840deb00141a7222",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "ROOM5",
-        "slug": "coding-game-challenge",
-        "speakerIds": [
-            "hmetivier",
-            "m.brechet@gmail.com"
-        ],
-        "start": "2018-04-20T14:10:00",
-        "summary": "Venez participer \u00e0 ce challenge de conception d\u2019intelligence artificielle.\r\n\r\nLes r\u00e8gles sont simples :\r\n\r\n- une bataille de personnages m\u00e9di\u00e9vaux en un contre un\r\n\r\n- une API REST d\u2019attaque \u00e0 disposition\r\n\r\n- une application web de visualisation du combat en live\r\n\r\nVous n\u2019avez plus qu\u2019\u00e0 coder votre IA avec votre langage pr\u00e9f\u00e9r\u00e9, r\u00e9agir en cons\u00e9quence et affronter l\u2019IA du serveur ou d\u2019autres participants de ce lab.",
-        "title": "Coding Game Challenge",
-        "topic": "tech",
-        "video": null
-    },
-    {
         "addedAt": "2018-01-30T12:47:04.154",
         "description": "La typographie \u00e9tant une composante majeure du design graphique, cette pr\u00e9sentation s\u2019adresse en premier lieu aux designers UI. Mais la probl\u00e9matique de la typographie accessible concerne \u00e9galement les designers UX, les int\u00e9gratrices et int\u00e9grateurs web, ainsi que toute personne amen\u00e9e \u00e0 contribuer \u00e0 un projet web et s\u2019int\u00e9ressant au sujet.",
         "end": "2018-04-20T15:00:00",
@@ -1333,6 +1333,26 @@
         "start": "2018-04-20T14:10:00",
         "summary": "**Comment la typographie web peut-elle am\u00e9liorer l\u2019accessibilit\u00e9 d\u2019une interface ?** Puisque le contenu est roi, penchons-nous sur le design du texte \u00e0 l\u2019\u00e9cran, et sur sa capacit\u00e9 \u00e0 am\u00e9liorer l\u2019exp\u00e9rience utilisateur des personnes en situation de handicap visuel et/ou cognitif.\r\n\r\nTaille, couleur, espacement et alignement des caract\u00e8res ; longueurs des lignes ; polices de caract\u00e8res adapt\u00e9es ; personnalisation de l\u2019interface par les utilisateurs ; aides \u00e0 la lecture\u2026 Cette conf\u00e9rence vous permettra de **faire des choix typographiques \u00e9clair\u00e9s en mati\u00e8re d\u2019accessibilit\u00e9**, et de cr\u00e9er ainsi des interfaces plus accessibles et plus inclusives.",
         "title": "Typographie et accessibilit\u00e9",
+        "topic": "design",
+        "video": null
+    },
+    {
+        "addedAt": "2018-01-30T12:47:04.173",
+        "description": "R\u00e9utilisant le Modular design, cette approche n\u2019est pas r\u00e9cente et est d\u00e9j\u00e0 utilis\u00e9e par de nombreuses \u00e9quipes. Mais comment la mettre en pratique ? En quoi des logiciels comme Sketch et Adobe XD peuvent nous permettre de mettre facilement en place des styleguides et un design bas\u00e9 sur des composants ? Est-ce adapt\u00e9 aussi pour les petits projets ? \r\n\r\nC\u2019est ce que nous d\u00e9couvririons dans ce Workshop qui sera compos\u00e9 d\u2019une petite pr\u00e9sentation du contexte d\u2019une vingtaine de minutes, suivi d\u2019une mise en pratique.",
+        "end": "2018-04-20T16:00:00",
+        "event": "2018",
+        "format": "WORKSHOP",
+        "id": "5a706948840deb00141a7236",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM3",
+        "slug": "mise-en-pratique-de-l-atomic-design",
+        "speakerIds": [
+            "dylan.cozian@gmail.com"
+        ],
+        "start": "2018-04-20T14:10:00",
+        "summary": "Atomic design \r\n\r\nAvec l\u2019\u00e9mergence de logiciels comme Sketch et Adobe XD, ce n\u2019est pas seulement de nouvelles mani\u00e8res techniques de cr\u00e9er nos interfaces, mais aussi une nouvelle fa\u00e7on de penser le design : plus homog\u00e8ne, adaptable, maintenable, collaboratif\u2026 Brad Frost a, dans les premiers, th\u00e9oris\u00e9 ce qu\u2019on appelle maintenant l\u2019Atomic Design ! Une mani\u00e8re de designer nos interfaces, proche du d\u00e9veloppement objet, ne se contentant plus de juste cr\u00e9er des pages, mais partant du postulat de cr\u00e9er des composants que nous pourrons r\u00e9utiliser et adapter en fonction du contexte.",
+        "title": "Mise en pratique de l'Atomic Design",
         "topic": "design",
         "video": null
     },
@@ -1495,26 +1515,6 @@
         "summary": "D\u00e9barrassez-vous de familles enti\u00e8res de bugs avec 21 astuces qui r\u00e9duisent l'opportunit\u00e9 pour les bugs.\r\n\r\nLes bugs ne sont pas une fatalit\u00e9, ils arrivent d\u00e8s lors que le design le permet. Apprenez comment addresser\r\nles causes racines et comment doter votre code d'une robustesse intrins\u00e8que.",
         "title": "Bug free. By design",
         "topic": "tech",
-        "video": null
-    },
-    {
-        "addedAt": "2018-01-30T12:47:04.173",
-        "description": "R\u00e9utilisant le Modular design, cette approche n\u2019est pas r\u00e9cente et est d\u00e9j\u00e0 utilis\u00e9e par de nombreuses \u00e9quipes. Mais comment la mettre en pratique ? En quoi des logiciels comme Sketch et Adobe XD peuvent nous permettre de mettre facilement en place des styleguides et un design bas\u00e9 sur des composants ? Est-ce adapt\u00e9 aussi pour les petits projets ? \r\n\r\nC\u2019est ce que nous d\u00e9couvririons dans ce Workshop qui sera compos\u00e9 d\u2019une petite pr\u00e9sentation du contexte d\u2019une vingtaine de minutes, suivi d\u2019une mise en pratique.",
-        "end": "2018-04-20T17:10:00",
-        "event": "2018",
-        "format": "WORKSHOP",
-        "id": "5a706948840deb00141a7236",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "ROOM5",
-        "slug": "mise-en-pratique-de-l-atomic-design",
-        "speakerIds": [
-            "dylan.cozian@gmail.com"
-        ],
-        "start": "2018-04-20T16:20:00",
-        "summary": "Atomic design \r\n\r\nAvec l\u2019\u00e9mergence de logiciels comme Sketch et Adobe XD, ce n\u2019est pas seulement de nouvelles mani\u00e8res techniques de cr\u00e9er nos interfaces, mais aussi une nouvelle fa\u00e7on de penser le design : plus homog\u00e8ne, adaptable, maintenable, collaboratif\u2026 Brad Frost a, dans les premiers, th\u00e9oris\u00e9 ce qu\u2019on appelle maintenant l\u2019Atomic Design ! Une mani\u00e8re de designer nos interfaces, proche du d\u00e9veloppement objet, ne se contentant plus de juste cr\u00e9er des pages, mais partant du postulat de cr\u00e9er des composants que nous pourrons r\u00e9utiliser et adapter en fonction du contexte.",
-        "title": "Mise en pratique de l'Atomic Design",
-        "topic": "design",
         "video": null
     },
     {
