@@ -615,26 +615,6 @@
         "video": null
     },
     {
-        "addedAt": "2018-01-30T12:47:02.995",
-        "description": "Durant ce live-coding consistant \u00e0 refactorer un code imp\u00e9ratif vers un code fonctionnel, les concepts principaux seront introduits uniquement quand cela est utile et expliqu\u00e9s en profondeur.\r\n\u00c0 la fin de ce talk, les concepts suivants n'auront plus de secrets pour vous :\r\n- La transparence r\u00e9f\u00e9rentielle\r\n- Les fonctions comme citoyennes de premi\u00e8re classe\r\n- Les fonctions d'ordre sup\u00e9rieur\r\n- Les closures\r\n- Le lambda calcul\r\n- La curryfication\r\n- L'application partielle\r\n- La composition de fonction\r\n- La notation \u00abPoint-free\u00bb",
-        "end": "2018-04-19T17:10:00",
-        "event": "2018",
-        "format": "TALK",
-        "id": "5a706948840deb00141a720e",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "ROOM2",
-        "slug": "de-javascript-a-haskell-la-programmation-fonctionnelle-expliquee-simplement",
-        "speakerIds": [
-            "115428158670419649279"
-        ],
-        "start": "2018-04-19T16:20:00",
-        "summary": "Si un de vos coll\u00e8gue vous a d\u00e9j\u00e0 dit \u00abAlors l\u00e0, j'ai utilis\u00e9 de l'application partielle sur cette fonction que j'ai curryfi\u00e9 en utilisant des fonctions d'ordre sup\u00e9rieur et des closures\u00bb et que vous n'avez rien compris, alors ce talk est pour vous.\r\nLa programmation fonctionnelle pr\u00e9sente de nombreux concepts qui viennent des maths. Et cela fait peur ! Mais appliqu\u00e9 \u00e0 l'informatique, c'est en r\u00e9alit\u00e9 tr\u00e8s simple !",
-        "title": "De Javascript \u00e0 Haskell : la programmation fonctionnelle expliqu\u00e9e simplement",
-        "topic": "tech",
-        "video": null
-    },
-    {
         "addedAt": "2018-01-30T12:47:03.071",
         "description": null,
         "end": "2018-04-19T17:10:00",
@@ -756,6 +736,26 @@
         "video": null
     },
     {
+        "addedAt": "2018-01-30T12:47:02.591",
+        "description": "En Avril 2017, Reddit a conduit une exp\u00e9rience sociale: un canvas collaboratif g\u00e9ant surnomm\u00e9 \"r/place\". Le truc: une personne seule ne pouvait que **peindre un pixel toutes les 5 minutes**... Des communaut\u00e9s pr\u00e9-existantes sur le site se sont ralli\u00e9es pour revendiquer leur lopin de pixels, et de nouvelles communaut\u00e9s se sont form\u00e9es autour de projets de pixel art sp\u00e9cifiques.\r\n\r\nDurant cette session, nous tenterons de recr\u00e9er une exp\u00e9rience r/place beaucoup plus courte et la rendre accessible tout au long de la conf\u00e9rence. En utilisant des outils tels que Spring Boot, Spring WebFlux et Reactor, nous allons pouvoir facilement faire \u00e9voluer son API, la faire monter en charge et montrer en direct les mises \u00e0 jour du tableau.",
+        "end": "2018-04-19T17:10:00",
+        "event": "2018",
+        "format": "TALK",
+        "id": "5a706948840deb00141a7207",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM2",
+        "slug": "1-pixel-per-second",
+        "speakerIds": [
+            "simonbasle"
+        ],
+        "start": "2018-04-19T16:20:00",
+        "summary": "Cr\u00e9er du \"pixel art\" collaboratif, tel est notre challenge dans cette exp\u00e9rience de live coding. En utilisant Spring Boot, WebFlux et Reactor, ma mission est de lui donner une API. La v\u00f4tre est juste de dessiner... 1 pixel par seconde :)",
+        "title": "1 Pixel Per Second",
+        "topic": "tech",
+        "video": null
+    },
+    {
         "addedAt": "2018-01-30T12:47:04.542",
         "description": null,
         "end": "2018-04-19T17:35:00",
@@ -816,22 +816,22 @@
         "video": null
     },
     {
-        "addedAt": "2018-01-30T12:47:02.591",
-        "description": "En Avril 2017, Reddit a conduit une exp\u00e9rience sociale: un canvas collaboratif g\u00e9ant surnomm\u00e9 \"r/place\". Le truc: une personne seule ne pouvait que **peindre un pixel toutes les 5 minutes**... Des communaut\u00e9s pr\u00e9-existantes sur le site se sont ralli\u00e9es pour revendiquer leur lopin de pixels, et de nouvelles communaut\u00e9s se sont form\u00e9es autour de projets de pixel art sp\u00e9cifiques.\r\n\r\nDurant cette session, nous tenterons de recr\u00e9er une exp\u00e9rience r/place beaucoup plus courte et la rendre accessible tout au long de la conf\u00e9rence. En utilisant des outils tels que Spring Boot, Spring WebFlux et Reactor, nous allons pouvoir facilement faire \u00e9voluer son API, la faire monter en charge et montrer en direct les mises \u00e0 jour du tableau.",
+        "addedAt": "2018-01-30T12:47:02.995",
+        "description": "Durant ce live-coding consistant \u00e0 refactorer un code imp\u00e9ratif vers un code fonctionnel, les concepts principaux seront introduits uniquement quand cela est utile et expliqu\u00e9s en profondeur.\r\n\u00c0 la fin de ce talk, les concepts suivants n'auront plus de secrets pour vous :\r\n- La transparence r\u00e9f\u00e9rentielle\r\n- Les fonctions comme citoyennes de premi\u00e8re classe\r\n- Les fonctions d'ordre sup\u00e9rieur\r\n- Les closures\r\n- Le lambda calcul\r\n- La curryfication\r\n- L'application partielle\r\n- La composition de fonction\r\n- La notation \u00abPoint-free\u00bb",
         "end": "2018-04-20T11:00:00",
         "event": "2018",
         "format": "TALK",
-        "id": "5a706948840deb00141a7207",
+        "id": "5a706948840deb00141a720e",
         "language": "FRENCH",
         "photoUrls": [],
         "room": "ROOM2",
-        "slug": "1-pixel-per-second",
+        "slug": "de-javascript-a-haskell-la-programmation-fonctionnelle-expliquee-simplement",
         "speakerIds": [
-            "simonbasle"
+            "115428158670419649279"
         ],
         "start": "2018-04-20T10:10:00",
-        "summary": "Cr\u00e9er du \"pixel art\" collaboratif, tel est notre challenge dans cette exp\u00e9rience de live coding. En utilisant Spring Boot, WebFlux et Reactor, ma mission est de lui donner une API. La v\u00f4tre est juste de dessiner... 1 pixel par seconde :)",
-        "title": "1 Pixel Per Second",
+        "summary": "Si un de vos coll\u00e8gue vous a d\u00e9j\u00e0 dit \u00abAlors l\u00e0, j'ai utilis\u00e9 de l'application partielle sur cette fonction que j'ai curryfi\u00e9 en utilisant des fonctions d'ordre sup\u00e9rieur et des closures\u00bb et que vous n'avez rien compris, alors ce talk est pour vous.\r\nLa programmation fonctionnelle pr\u00e9sente de nombreux concepts qui viennent des maths. Et cela fait peur ! Mais appliqu\u00e9 \u00e0 l'informatique, c'est en r\u00e9alit\u00e9 tr\u00e8s simple !",
+        "title": "De Javascript \u00e0 Haskell : la programmation fonctionnelle expliqu\u00e9e simplement",
         "topic": "tech",
         "video": null
     },

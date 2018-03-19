@@ -5107,8 +5107,8 @@
         "login": "guillaumeehret",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "1eab44ce6576",
-        "tokenExpiration": "2018-03-18T16:13:15.334"
+        "token": "6ac39aec73fc",
+        "tokenExpiration": "2018-03-21T10:08:18.903"
     },
     {
         "company": null,
@@ -36082,24 +36082,20 @@
             },
             {
                 "name": "twitter",
-                "url": "@hannelita"
-            },
-            {
-                "name": "github",
-                "url": "@hannelita"
+                "url": "https://twitter.com/hannelita"
             }
         ],
         "login": "hanneli.tavante",
         "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.533"
+        "tokenExpiration": "2018-03-15T18:43:34.904"
     },
     {
         "company": "ORIIONS",
         "description": {
-            "ENGLISH": "'Coach in Agile-Land' et d\u00e9veloppeur sur ses temps libres. \n\nJe forme, je d\u00e9forme, je transforme des personnes en les accompagnants dans les bonnes pratiques de d\u00e9veloppement et de management agile (formation et coching).\n\n#DuchessFrance member\n#AgilePaysBasque funder",
-            "FRENCH": "'Coach in Agile-Land' et d\u00e9veloppeur sur ses temps libres. \n\nJe forme, je d\u00e9forme, je transforme des personnes en les accompagnants dans les bonnes pratiques de d\u00e9veloppement et de management agile (formation et coching).\n\n#DuchessFrance member\n#AgilePaysBasque funder"
+            "ENGLISH": "'Coach in Agile-Land' et d\u00e9veloppeur sur ses temps libres. \r\n\r\nJe forme, je d\u00e9forme, je transforme des personnes en les accompagnants dans les bonnes pratiques de d\u00e9veloppement et de management agile (formation et coching).\r\n\r\n#DuchessFrance member\r\n#AgilePaysBasque funder",
+            "FRENCH": "'Coach in Agile-Land' et d\u00e9veloppeur sur ses temps libres. \r\n\r\nJe forme, je d\u00e9forme, je transforme des personnes en les accompagnants dans les bonnes pratiques de d\u00e9veloppement et de management agile (formation et coching).\r\n\r\n#DuchessFrance member\r\n#AgilePaysBasque funder"
         },
         "email": null,
         "emailHash": "d8589b89eb9865e8ee722c1c0a141df3",
@@ -36113,14 +36109,14 @@
             },
             {
                 "name": "twitter",
-                "url": "@abarralon"
+                "url": "https://twitter.com/abarralon"
             }
         ],
         "login": "alice.barralon",
         "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.533"
+        "tokenExpiration": "2018-03-15T18:44:09.336"
     },
     {
         "company": ".CORP",
@@ -36136,14 +36132,14 @@
         "links": [
             {
                 "name": "twitter",
-                "url": "@FabriceSabatier"
+                "url": "https://twitter.com/FabriceSabatier"
             }
         ],
         "login": "fabrice.sabatier",
         "photoUrl": "http://corp-lab.com/researchsabatier/FabriceSabatier.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.533"
+        "tokenExpiration": "2018-03-15T18:44:30.159"
     },
     {
         "company": "Zenika",
@@ -36186,18 +36182,18 @@
         "links": [
             {
                 "name": "twitter",
-                "url": "@eric_briand"
+                "url": "https://twitter.com/eric_briand"
             },
             {
                 "name": "github",
-                "url": "ebriand"
+                "url": "https://github.com/ebriand"
             }
         ],
         "login": "eric.briand",
         "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.533"
+        "tokenExpiration": "2018-03-15T18:45:06.859"
     },
     {
         "company": "TabMo",
@@ -36247,8 +36243,8 @@
     {
         "company": "AKOSMA Training",
         "description": {
-            "ENGLISH": "Adrian Kosmaczewski is a writer, a software developer and a teacher. He is the author of two books about mobile software development, and has shipped mobile, web and desktop apps for iOS, Android, Mac OS X, Windows and Linux since 1996. Adrian holds a Master in Information Technology from the University of Liverpool.\n\nWhen not coding or teaching, Adrian likes to spend time with his wife Claudia, his cat Max and his Olivetti Lettera 22 typewriter.",
-            "FRENCH": "Adrian Kosmaczewski is a writer, a software developer and a teacher. He is the author of two books about mobile software development, and has shipped mobile, web and desktop apps for iOS, Android, Mac OS X, Windows and Linux since 1996. Adrian holds a Master in Information Technology from the University of Liverpool.\n\nWhen not coding or teaching, Adrian likes to spend time with his wife Claudia, his cat Max and his Olivetti Lettera 22 typewriter."
+            "ENGLISH": "Adrian Kosmaczewski is a writer, a software developer and a teacher. He is the author of two books about mobile software development, and has shipped mobile, web and desktop apps for iOS, Android, Mac OS X, Windows and Linux since 1996. Adrian holds a Master in Information Technology from the University of Liverpool.\r\n\r\nWhen not coding or teaching, Adrian likes to spend time with his wife Claudia, his cat Max and his Olivetti Lettera 22 typewriter.",
+            "FRENCH": "Adrian Kosmaczewski is a writer, a software developer and a teacher. He is the author of two books about mobile software development, and has shipped mobile, web and desktop apps for iOS, Android, Mac OS X, Windows and Linux since 1996. Adrian holds a Master in Information Technology from the University of Liverpool.\r\n\r\nWhen not coding or teaching, Adrian likes to spend time with his wife Claudia, his cat Max and his Olivetti Lettera 22 typewriter."
         },
         "email": null,
         "emailHash": "80bff3b60c4518bfbffecd67418c1d6d",
@@ -36262,18 +36258,18 @@
             },
             {
                 "name": "twitter",
-                "url": "@akosma"
+                "url": "https://twitter.com/akosma"
             },
             {
                 "name": "github",
-                "url": "akosma"
+                "url": "https://github.com/akosma"
             }
         ],
         "login": "adrian.kosmaczewski",
         "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.534"
+        "tokenExpiration": "2018-03-15T18:45:48.094"
     },
     {
         "company": "Alsacreations",
@@ -36396,18 +36392,18 @@
             },
             {
                 "name": "twitter",
-                "url": "@benusermood"
+                "url": "https://twitter.com/benusermood"
             },
             {
                 "name": "github",
-                "url": "benj-github"
+                "url": "https://github.com/benj-github"
             }
         ],
         "login": "benjamin.richy",
         "photoUrl": "http://ben.usermood.net/img/profile-benjamin-300x300.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.534"
+        "tokenExpiration": "2018-03-15T18:46:16.062"
     },
     {
         "company": "Goood!",
@@ -36427,18 +36423,14 @@
             },
             {
                 "name": "twitter",
-                "url": "@MarineCloux"
-            },
-            {
-                "name": "github",
-                "url": "/"
+                "url": "https://twitter.com/MarineCloux"
             }
         ],
         "login": "marine.cloux",
         "photoUrl": "https://pbs.twimg.com/profile_images/573871681065721857/pz7kNDu0.jpeg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.534"
+        "tokenExpiration": "2018-03-15T18:47:00.729"
     },
     {
         "company": "Linda Rising LLC",
@@ -36458,14 +36450,14 @@
             },
             {
                 "name": "twitter",
-                "url": "@RisingLinda"
+                "url": "https://twitter.com/RisingLinda"
             }
         ],
         "login": "rising.linda",
         "photoUrl": "https://pbs.twimg.com/profile_images/2514744320/jl055ubspote8i5a8gaq_400x400.jpeg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.534"
+        "tokenExpiration": "2018-03-15T18:47:15.499"
     },
     {
         "company": null,
@@ -36481,22 +36473,22 @@
         "links": [
             {
                 "name": "social",
-                "url": "https://blog.benj.me, https://benj.me, https://twitter.com/bnjbvr, https://github.com/bnjbvr, https://framagit.org/bnjbvr"
+                "url": "https://blog.benj.me"
             },
             {
                 "name": "twitter",
-                "url": "@bnjbvr"
+                "url": "https://twitter.com/bnjbvr"
             },
             {
                 "name": "github",
-                "url": "bnjbvr"
+                "url": "https://github.com/bnjbvr"
             }
         ],
         "login": "benjamin.bouvier",
         "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-01-30T23:42:36.777"
+        "tokenExpiration": "2018-03-15T18:48:31.248"
     },
     {
         "company": "TabMo",
@@ -36516,14 +36508,14 @@
             },
             {
                 "name": "twitter",
-                "url": "@lievAnastazia"
+                "url": "https://twitter.com/lievAnastazia"
             }
         ],
         "login": "anastasia.lieva",
         "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.534"
+        "tokenExpiration": "2018-03-15T18:48:54.955"
     },
     {
         "company": "Ippon Technologies",
@@ -39590,7 +39582,7 @@
         "links": [
             {
                 "name": "Twitter",
-                "url": "@rennebo"
+                "url": "https://twitter.com/rennebo"
             },
             {
                 "name": "Autre",
@@ -39601,7 +39593,7 @@
         "photoUrl": "https://mixitconf.org/images/speakers/jepsen.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-12T07:20:22.475"
+        "tokenExpiration": "2018-03-15T18:41:10.091"
     },
     {
         "company": "Elastic",
