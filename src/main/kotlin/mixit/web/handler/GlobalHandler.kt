@@ -43,6 +43,8 @@ class GlobalHandler(val userRepository: UserRepository,
 
     fun scheduleView(req: ServerRequest) = ok().render("schedule", mapOf(Pair("title", "schedule.title")))
 
+    fun speakerView(req: ServerRequest) = ok().render("speaker", mapOf(Pair("title", "speaker.title")))
+
     fun findFullTextView(req: ServerRequest) = ok().render("search", mapOf(Pair("title", "search.title")))
 
     fun searchFullTextView(req: ServerRequest) =
