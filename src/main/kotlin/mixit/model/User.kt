@@ -9,8 +9,8 @@ import java.time.LocalDateTime
 @Document
 data class User(
         @Id val login: String,
-        @TextIndexed val firstname: String,
-        @TextIndexed val lastname: String,
+        @TextIndexed(weight = 10F) val firstname: String,
+        @TextIndexed(weight = 10F) val lastname: String,
         val email: String?,
         val company: String? = null,
         @TextIndexed(weight = 5F) val description: Map<Language, String> = emptyMap(),

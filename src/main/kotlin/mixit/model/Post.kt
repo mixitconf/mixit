@@ -11,7 +11,7 @@ import java.time.LocalDateTime
 data class Post(
         val authorId: String,
         val addedAt: LocalDateTime = LocalDateTime.now(),
-        @TextIndexed val title: Map<Language, String> = emptyMap(),
+        @TextIndexed(weight = 10F) val title: Map<Language, String> = emptyMap(),
         val headline: Map<Language, String> = emptyMap(),
         val content: Map<Language, String>? = emptyMap(),
         @Id val id: String? = null,
