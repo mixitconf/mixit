@@ -56,7 +56,7 @@
                                 {{#i18n}}talk.form.description{{/i18n}}&nbsp;<span class="help-text">{{#i18n}}talk.form.description.desc{{/i18n}}</span><br>
                                 <span class="help-text">{{#i18n}}talk.form.markdown{{/i18n}}</span>
                                 <textarea name="description" rows="10"
-                                          class="{{#errors.description}}is-invalid-input{{/errors.description}}">{{talk.description}}</textarea>
+                                          class="{{#errors.description}}is-invalid-input{{/errors.description}}">{{#talk.description}}{{talk.description}}{{/talk.description}}</textarea>
 
                             </label>
                         </div>
