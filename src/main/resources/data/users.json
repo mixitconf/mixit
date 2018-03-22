@@ -5107,8 +5107,8 @@
         "login": "guillaumeehret",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "6ac39aec73fc",
-        "tokenExpiration": "2018-03-21T10:08:18.903"
+        "token": "10271ea296ab",
+        "tokenExpiration": "2018-03-23T16:41:49.549"
     },
     {
         "company": null,
@@ -22848,22 +22848,39 @@
         "tokenExpiration": "2018-03-03T17:17:35.506"
     },
     {
-        "company": "",
+        "company": "Sword Group",
         "description": {
-            "ENGLISH": "Software Architect at Sword Group, P-Seller Data Insights (Microsoft), BizTalk Server, WCF, SQL Server & .Net Expert",
-            "FRENCH": "Software Architect at Sword Group, P-Seller Data Insights (Microsoft), BizTalk Server, WCF, SQL Server & .Net Expert"
+            "ENGLISH": "Data &amp; Analytics Architect at Sword Group,\r\nAzure (Data Plateform &amp; Integration) BizTalk Server, WCF, SQL Server &amp; .Net Expert\r\nP-Seller Data &amp; AI (Microsoft), ",
+            "FRENCH": "Architecte Data &amp; Analytics \u00e0 Sword Group, \r\nExpert Azure (Data Plateform &amp; Integration) BizTalk Server, WCF, SQL Server &amp; .Net\r\nP-Seller Data &amp; AI (Microsoft), "
         },
-        "email": null,
+        "email": "I/OvPNsFEuqfCLQIcHjuSzoCoHcupKv9czJuc5i/JH4=",
         "emailHash": "558c927e8a8ac2bf20aee426cf79e4a9",
         "firstname": "Romain",
         "lastname": "Ehret",
         "legacyId": 1132,
-        "links": [],
+        "links": [
+            {
+                "name": "Web",
+                "url": "http://puffix.io/"
+            },
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/RomainEhret"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/romain-ehret"
+            },
+            {
+                "name": "Github",
+                "url": "https://github.com/EhRom"
+            }
+        ],
         "login": "romain.ehret",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.506"
+        "token": "4ec1bb2bbdf6",
+        "tokenExpiration": "2018-03-22T08:26:04.715"
     },
     {
         "company": "",
@@ -36541,8 +36558,8 @@
         "login": "anne.gabrillagues",
         "photoUrl": "https://pbs.twimg.com/profile_images/495583307019468800/w_T6sErD_400x400.png",
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-01-30T23:42:36.782"
+        "token": "a115aea37b85",
+        "tokenExpiration": "2018-03-23T15:57:37.569"
     },
     {
         "company": "Xebia",
@@ -38087,13 +38104,17 @@
             {
                 "name": "Twitter",
                 "url": "https://twitter.com/sogelink"
+            },
+            {
+                "name": "Linkedin",
+                "url": "https://fr.linkedin.com/company/groupe-sogelink"
             }
         ],
         "login": "sogelink",
         "photoUrl": "images/sponsors/logo-sogelink.svg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2017-11-22T09:39:55.121"
+        "tokenExpiration": "2018-03-20T20:43:56.294"
     },
     {
         "company": "sogeti",
@@ -40771,8 +40792,8 @@
         "login": "s_colson",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-02-05T14:42:41.397"
+        "token": "c279c8cab9d7",
+        "tokenExpiration": "2018-03-23T12:24:55.141"
     },
     {
         "company": null,
@@ -41024,5 +41045,62 @@
         "role": "USER",
         "token": "empty-token",
         "tokenExpiration": "2018-03-14T13:08:05.889"
+    },
+    {
+        "company": "SuperTilt",
+        "description": {
+            "ENGLISH": "SuperTilt a pour mission d\u2019accompagner les entreprises et les \u00e9quipes dans la gestion de la complexit\u00e9 humaine, produit et m\u00e9thodologique. Pour y parvenir, je m'appuie sur des valeurs, des pratiques et des outils qui ont d\u00e9montr\u00e9 leur efficacit\u00e9 p\u00e9dagogique : Agilit\u00e9, facilitation graphique, s\u00e9minaires cr\u00e9atifs, formation en ligne, Kanban et gestion du temps, jeux d'entreprise et conf\u00e9rence. \r\n\r\n\r\nMon objectif est de favoriser la prise de conscience collective de la n\u00e9cessit\u00e9 de changer et des solutions pour y parvenir.  ",
+            "FRENCH": "SuperTilt a pour mission d\u2019accompagner les entreprises et les \u00e9quipes dans la gestion de la complexit\u00e9 humaine, produit et m\u00e9thodologique. Pour y parvenir, je m'appuie sur des valeurs, des pratiques et des outils qui ont d\u00e9montr\u00e9 leur efficacit\u00e9 p\u00e9dagogique : Agilit\u00e9, facilitation graphique, s\u00e9minaires cr\u00e9atifs, formation en ligne, Kanban et gestion du temps, jeux d'entreprise et conf\u00e9rence. \r\n\r\n\r\nMon objectif est de favoriser la prise de conscience collective de la n\u00e9cessit\u00e9 de changer et des solutions pour y parvenir.  "
+        },
+        "email": "mc9ZWt+p70l75DXCtWashj+T5UgONv52l+kW1IDDf2g=",
+        "emailHash": null,
+        "firstname": "super",
+        "lastname": "tilt",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Site",
+                "url": "www.supertilt.fr"
+            },
+            {
+                "name": "Linkedin",
+                "url": "https://www.linkedin.com/in/romaincouturier/"
+            }
+        ],
+        "login": "super.tilt",
+        "photoUrl": "images/sponsors/logo-supertilt.svg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2018-03-20T09:01:08.837"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "berenvd@gmail.com",
+        "emailHash": null,
+        "firstname": "Beren",
+        "lastname": "Van daele",
+        "legacyId": null,
+        "links": [],
+        "login": "berenvd",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2018-03-20T12:31:55.557"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "vhinderer@gmail.com",
+        "emailHash": null,
+        "firstname": "Vincent",
+        "lastname": "Hinderer",
+        "legacyId": null,
+        "links": [],
+        "login": "vhinderer",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2018-03-21T05:21:45.106"
     }
 ]

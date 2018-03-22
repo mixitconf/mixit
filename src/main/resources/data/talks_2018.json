@@ -1527,13 +1527,13 @@
         "language": "FRENCH",
         "photoUrls": [],
         "room": "ROOM3",
-        "slug": "job-story-penser-autrement-l-expression-du-besoin-agile",
+        "slug": "penser-autrement-l-expression-du-besoin-agile",
         "speakerIds": [
             "anne.gabrillagues"
         ],
         "start": "2018-04-20T16:20:00",
-        "summary": "Depuis une premi\u00e8re rencontre avec l'Agilit\u00e9 en 2008, j'accompagne les \u00e9quipes en tant que Scrum Master, Product Owner ou Coach Agile. Agiliste convaincue, je participe activement \u00e0 la diffusion de l'Agilit\u00e9 via l'organisation de Meetup et de conf\u00e9rences \u00e0 Paris. J'ai fait partie de l'\u00e9quipe organisatrice des 3 derniers ScrumDay et j'ai rejoint l'\u00e9quipe Lean Kanban France en 2016 (conf\u00e9rences Lean Kanban France et FlowCon). Parmi mes projets personnels figurent aussi le d\u00e9veloppement du jeu d'apprentissage Kanbanzine et divers projets de traduction. \r\n\r\nLa Job Story est une approche compl\u00e9mentaire, qui peut venir enrichir votre compr\u00e9hension des attentes de vos clients, et vous aider \u00e0 d\u00e9velopper un super produit !",
-        "title": "Job Story : Penser autrement l'expression du besoin agile",
+        "summary": "Si vous avez d\u00e9j\u00e0 travaill\u00e9 sur un projet agile, vous avez sans doute rencontr\u00e9 la User Story. Vous avez m\u00eame peut-\u00eatre utilis\u00e9 des \"persona\", ces fiches de personnage qui repr\u00e9sentent un de vos utilisateurs type. Ces formats ont marqu\u00e9 une vraie \u00e9tape dans l'\u00e9volution de la sp\u00e9cification agile et sont le support actuellement le plus largement utilis\u00e9 pour la formalisation du besoin en mode agile. \r\n\r\nMais est-ce suffisant ? Est-ce que cela permet de capter l'essence du besoin ? Pas forc\u00e9ment ! La Job Story est une approche compl\u00e9mentaire, qui peut venir enrichir votre compr\u00e9hension des attentes de vos clients, et vous aider \u00e0 d\u00e9velopper un super produit !\r\n",
+        "title": "Penser autrement l'expression du besoin agile",
         "topic": "team",
         "video": null
     },
