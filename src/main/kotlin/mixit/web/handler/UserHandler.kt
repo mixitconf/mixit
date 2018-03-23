@@ -208,7 +208,7 @@ class UserHandler(private val repository: UserRepository,
                     repository.save(user).then(seeOther("${properties.baseUri}/me"))
                 }
                 else{
-                    findOneViewDetail(user, "profile", false, req, errors)
+                    findOneViewDetail(user, "user", false, req, errors)
                 }
             }
         }
