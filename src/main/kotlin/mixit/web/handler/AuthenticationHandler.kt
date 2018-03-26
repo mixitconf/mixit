@@ -100,7 +100,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
                 login = email.split("@").get(0),
                 firstname = formData["firstname"]!!.toLowerCase().capitalize(),
                 lastname = formData["lastname"]!!.toLowerCase().capitalize(),
-                email = email,
+                email = cryptographer.encrypt(email),
                 photoUrl = "/images/png/mxt-icon--default-avatar.png",
                 role = Role.USER
         )
