@@ -200,7 +200,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
 
         try {
             logger.info("A token ${userToUpdate.token} was sent to $email")
-            emailService.send("email-token", userToUpdate, locale, EmailServiceUsage.AUTHENTICATION)
+            emailService.send("email-token", userToUpdate, locale)
             return userRepository.save(userToUpdate)
         } catch (e: RuntimeException) {
             logger.error(e.message, e)

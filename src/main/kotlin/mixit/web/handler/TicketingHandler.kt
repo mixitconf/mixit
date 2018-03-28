@@ -51,7 +51,7 @@ class TicketingHandler(private val ticketRepository: TicketRepository,
 
     private fun sendUserConfirmation(ticket:Ticket, formData: Map<String, String>, locale: Locale): Mono<ServerResponse> {
         val user = User(ticket.email, ticket.firstname, ticket.lastname, cryptographer.encrypt(ticket.email))
-        emailService.send("email-ticketing", user, locale, EmailServiceUsage.INFORMATION)
+        emailService.send("email-ticketing", user, locale)
         return ok().render("ticketing-submission", formData)
     }
 

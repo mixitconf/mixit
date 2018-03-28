@@ -8,8 +8,7 @@ class MixitProperties {
     lateinit var contact: String
     val drive = Drive()
     val aes = Aes()
-    val sendgrid = MailProvider()
-    val elasticmail = MailProvider()
+    val googleapi = GoogleApi()
 
     class Drive {
         val fr = DriveDocuments()
@@ -28,10 +27,11 @@ class MixitProperties {
         lateinit var key: String
     }
 
-    class MailProvider {
-        lateinit var apikey: String
-        lateinit var host: String
-        lateinit var version: String
+    class GoogleApi {
+        lateinit var clientid: String
+        lateinit var p12path: String
+        lateinit var user: String
+        lateinit var appname: String
     }
 }
 

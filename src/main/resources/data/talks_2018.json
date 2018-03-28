@@ -20,6 +20,26 @@
         "video": null
     },
     {
+        "addedAt": "2018-03-26T20:28:33.522",
+        "description": null,
+        "end": "2018-04-19T09:45:00",
+        "event": "2018",
+        "format": "KEYNOTE",
+        "id": "5ab95846bb5af9061f341f94",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHI1",
+        "slug": "les-ouvrages-d-anticipation-peuvent-ils-contribuer-a-changer-le-monde-",
+        "speakerIds": [
+            "ariel.kirou"
+        ],
+        "start": "2018-04-19T09:20:00",
+        "summary": "Saviez-vous que le cr\u00e9ateur du smartphone Android lorsqu\u2019il \u00e9tait chez Google, Andy Rubin, a souhait\u00e9 bon anniversaire d\u2019activation au r\u00e9pliquant Roy Batty du film Blade Runner ? De William Gibson qui a invent\u00e9 le mot cyberspace \u00e0 Vernor Vinge qui est le p\u00e8re de la Singularit\u00e9 technologique en passant par Philip K. Dick \u00e0 qui nous devons le roman d\u2019o\u00f9 est n\u00e9 Blade Runner, la conf\u00e9rence s\u2019interrogera sur la fa\u00e7on dont la science-fiction irrigue le r\u00e9el, et comment notre r\u00e9alit\u00e9 de plus en plus technologique s\u2019imbibe elle aussi de romans et univers d\u2019anticipation.\r\n",
+        "title": "Les ouvrages d\u2019anticipation peuvent-ils contribuer \u00e0 changer le monde ?",
+        "topic": "aliens",
+        "video": null
+    },
+    {
         "addedAt": "2018-01-30T12:47:02.982",
         "description": "Apr\u00e8s avoir expliqu\u00e9 ce qu\u2019est une architecture BlockChain et ce qu\u2019elle apporte, cette pr\u00e9sentation fera un \u00e9tat des lieux de cette technologie \u00e9mergente. Nous verrons ainsi les applications possibles, et ferons un statut sur celles qui sont en place, ou en cours de mise en place.",
         "end": "2018-04-19T11:00:00",
@@ -41,7 +61,7 @@
     },
     {
         "addedAt": "2018-01-30T12:47:03.083",
-        "description": null,
+        "description": "Pourquoi un tel succ\u00e8s ? Le projet a un motto: &#34;Le framework progressif&#34; -- l&#39;exp\u00e9rience de d\u00e9veloppement des utilisateurs de Vue.js est au c\u0153ur de notre strat\u00e9gie pour rendre le web plus accessible aux d\u00e9veloppeurs et les apps web plus riches.\r\n\r\nComment? Facilit\u00e9 d&#39;utilisation, efficacit\u00e9, performance et souplesse tout en proposant des solutions officielles ou recommand\u00e9es, des happy paths, une documentation de qualit\u00e9 et une communaut\u00e9 de passionn\u00e9s du web qui font grandir l&#39;\u00e9cosyst\u00e8me. Pas d&#39;investisseurs, pas de grosse entreprise au commande avec ses strat\u00e9gies propres: Vue.js est un projet communautaire et le restera. Pour le web par le web!",
         "end": "2018-04-19T11:00:00",
         "event": "2018",
         "format": "TALK",
@@ -54,7 +74,7 @@
             "guillaume.b.chau@gmail.com"
         ],
         "start": "2018-04-19T10:10:00",
-        "summary": "Vue est un projet 100% communautaire et open-source. C'est le challenger qui est l\u00e0 pour secouer le monde des librairies front-end, de par sa simplicit\u00e9 et sa puissance ! L'\u00e9cosyst\u00e8me autour de Vue grandi de jour en jour, les retours sont tr\u00e8s positifs et de tr\u00e8s grandes entreprises l'ont choisi comme Adobe, Alibaba, Microsoft, Sainsbury's, Nintendo et m\u00eame Facebook! Vue est \u00e9galement inclut par d\u00e9faut avec le framework PHP Laravel.\r\n// wip",
+        "summary": "Vue est un projet 100% communautaire et open-source. C&#39;est le challenger qui est l\u00e0 pour secouer le monde des librairies front-end, de par sa simplicit\u00e9 et son efficacit\u00e9 ! L&#39;\u00e9cosyst\u00e8me autour de Vue grandi de jour en jour, les retours sont tr\u00e8s positifs et de tr\u00e8s grandes entreprises l&#39;ont choisi comme Adobe, Alibaba, Microsoft, Sainsbury&#39;s, Nintendo et m\u00eame Facebook ! Vue a \u00e9galement \u00e9t\u00e9 choisi par le framework PHP Laravel pour \u00eatre sa librairie front-end par d\u00e9faut.",
         "title": "Vue.js, le framework progressif",
         "topic": "tech",
         "video": null
@@ -1138,26 +1158,6 @@
         "summary": "Le monde du libre est rempli de communaut\u00e9s de d\u00e9veloppeurs passionn\u00e9s. *Mais o\u00f9 sont les designers ?* Incompr\u00e9hensions entre les diff\u00e9rents corps de m\u00e9tier, m\u00e9connaissance de ce qu'est un logiciel libre, l\u00e9gende du designer-artiste qui n'en fait qu'\u00e0 sa t\u00eate, possibilit\u00e9s de contribuer mal adapt\u00e9es pour des designers, les origines de ce d\u00e9samour sont nombreuses. Et si on passait \u00e0 l'\u00e9tape suivante, celle o\u00f9 devs et designers du libre se rejoignent pour cr\u00e9er des logiciels ensemble, histoire d'en am\u00e9liorer l'exp\u00e9rience utilisateur ?",
         "title": "Designers et Logiciels libres: et si on collaborait ?",
         "topic": "design",
-        "video": null
-    },
-    {
-        "addedAt": "2018-01-30T12:47:04.593",
-        "description": null,
-        "end": "2018-04-20T14:10:00",
-        "event": "2018",
-        "format": "RANDOM",
-        "id": "5a706948840deb00141a7246",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "marvel-x-dc-retro-futurisme-du-super-heros",
-        "speakerIds": [
-            "s.wojewoda@gmail.com"
-        ],
-        "start": "2018-04-20T13:50:00",
-        "summary": "A l'\u00e8re du Digital, l'\u00e9dition papier est d\u00e9pass\u00e9e. Pourtant, les super-h\u00e9ros sont partout, et ils viennent du papier... Oui, mais d'o\u00f9 viennent-ils, finalement ? Si tout le monde sait que Hulk est un Marvel, que Batman vient de DC, quid d'Aquaman ? Hawkeye ? C'est quoi la diff\u00e9rence avec _The Arrow_ ? Et comment fait-on quand on est un h\u00e9ros de 80 ans pour relancer une nouvelle histoire tous les deux ans, en gardant un air de jeune premier ?\r\n\r\nSi les super-h\u00e9ros ont g\u00e9n\u00e9ralement une N\u00e9m\u00e9sis, les deux maisons que sont Marvel et DC ont pass\u00e9 les cinquante derni\u00e8res ann\u00e9es \u00e0 se battre \u00e0 coup de pages de comics, comment ont-elles fait pour rester en vie ? Pour innover ? Pour garder un public ?\r\n\r\nCette conf\u00e9rence sera l'occasion d'un parcours balistique dans l'histoire des batailles entre la \"Maison des Id\u00e9es\" et la Batcave, pour visiter les strat\u00e9gies et techniques qui ont permis de d\u00e9velopper des marques connues, une production qui s'accroit encore aujourd'hui, et qui est sortie (en bien ou pas) du papier pour monter sur d'autres supports.\r\n\r\nEt comme le blabla c'est p\u00e9nible, cette session sera largement interactive, pour que tous les participants sortent avec le sentiment que quand on se met en col\u00e8re, on ne devient pas forc\u00e9ment vert.\r\n\r\n>**Simeon : ** Mais alors, c'est qui le plus fort, Hulk ou Superman ?\r\n>\r\n>**Karah : ** Tout le monde sait \u00e7a voyons !\r\n>\r\n>**Simeon :** D'accord, mais quand m\u00eame Superman il est super fort avec sa cape",
-        "title": "Marvel X DC : r\u00e9tro-futurisme du super h\u00e9ros",
-        "topic": "aliens",
         "video": null
     },
     {

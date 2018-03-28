@@ -4986,8 +4986,8 @@
         "login": "agnes",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "2d7364eb899a",
-        "tokenExpiration": "2018-03-15T21:42:41.188"
+        "token": "1eee8476b7a3",
+        "tokenExpiration": "2018-03-28T08:42:59.47"
     },
     {
         "company": null,
@@ -5107,8 +5107,8 @@
         "login": "guillaumeehret",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "10271ea296ab",
-        "tokenExpiration": "2018-03-23T16:41:49.549"
+        "token": "4d9ebddd7680",
+        "tokenExpiration": "2018-03-28T11:48:08.951"
     },
     {
         "company": null,
@@ -35958,25 +35958,33 @@
     {
         "company": "Enedis",
         "description": {
-            "ENGLISH": "Enedis is a public company, electricity distribution network operator which develops, operates, modernizes the electricity grid and manages the associated data.",
-            "FRENCH": "Enedis est une entreprise de service public, gestionnaire du r\u00e9seau de distribution d'\u00e9lectricit\u00e9 qui d\u00e9veloppe, exploite, modernise le r\u00e9seau \u00e9lectrique et g\u00e8re les donn\u00e9es associ\u00e9es."
+            "ENGLISH": "Enedis est une entreprise de service public, gestionnaire du r\u00e9seau de distribution d\u2019\u00e9lectricit\u00e9 qui emploie pr\u00e8s de 39 000 personnes. Au service de 36 millions de clients, elle d\u00e9veloppe, exploite, modernise 1,4 million de kilom\u00e8tres de r\u00e9seau \u00e9lectrique basse et moyenne tension (220 et 20.000 Volts) et g\u00e8re les donn\u00e9es associ\u00e9es. Enedis r\u00e9alise les raccordements des clients, le d\u00e9pannage 24h/24, 7J/7, le relev\u00e9 des compteurs et toutes les interventions techniques. Elle est ind\u00e9pendante des fournisseurs d\u2019\u00e9nergie qui sont charg\u00e9s de la vente et de la gestion du contrat de fourniture d\u2019\u00e9lectricit\u00e9.\r\n",
+            "FRENCH": "Enedis est une entreprise de service public, gestionnaire du r\u00e9seau de distribution d\u2019\u00e9lectricit\u00e9 qui emploie pr\u00e8s de 39 000 personnes. Au service de 36 millions de clients, elle d\u00e9veloppe, exploite, modernise 1,4 million de kilom\u00e8tres de r\u00e9seau \u00e9lectrique basse et moyenne tension (220 et 20.000 Volts) et g\u00e8re les donn\u00e9es associ\u00e9es. Enedis r\u00e9alise les raccordements des clients, le d\u00e9pannage 24h/24, 7J/7, le relev\u00e9 des compteurs et toutes les interventions techniques. Elle est ind\u00e9pendante des fournisseurs d\u2019\u00e9nergie qui sont charg\u00e9s de la vente et de la gestion du contrat de fourniture d\u2019\u00e9lectricit\u00e9.\r\n"
         },
-        "email": null,
+        "email": "tz3ZaCpmhQcD+ZT2CJ6O5F5ToSlXdrZKGnkF/OqG0hU=",
         "emailHash": null,
-        "firstname": "",
-        "lastname": "",
+        "firstname": "Olivier",
+        "lastname": "Pellegrino",
         "legacyId": null,
         "links": [
             {
                 "name": "Site",
                 "url": "http://www.enedis.fr"
+            },
+            {
+                "name": "Facebook",
+                "url": "https://www.facebook.com/Enedis.officiel/"
+            },
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/enedis"
             }
         ],
         "login": "Enedis",
         "photoUrl": "images/sponsors/logo-enedis.svg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.533"
+        "tokenExpiration": "2018-03-21T18:54:54.427"
     },
     {
         "company": "http://bepo.fr",
@@ -38839,8 +38847,8 @@
     {
         "company": null,
         "description": {
-            "ENGLISH": "Membre de la Core Team de Vue.js, Guillaume est le cr\u00e9ateur d'int\u00e9grations avec Meteor ([vue-meteor](https://github.com/Akryum/vue-meteor/)) et Apollo GraphQL ([vue-apollo](https://github.com/Akryum/vue-apollo)) afin d'aider les d\u00e9veloppeurs \u00e0 cr\u00e9er des applications Vue avec une forte int\u00e9ractivit\u00e9 et du temps-r\u00e9el. Il a \u00e9galement cr\u00e9\u00e9 l'application vue-curated permettant de trouver les bonnes librairies pour d\u00e9velopper une application, et il contribue \u00e0 l'\u00e9cosyst\u00e8me avec des outils comme [vue-virtual-scroller](https://github.com/Akryum/vue-virtual-scroller) et [vue-supply](https://github.com/Akryum/vue-supply).",
-            "FRENCH": "Membre de la Core Team de Vue.js, Guillaume est le cr\u00e9ateur d'int\u00e9grations avec Meteor ([vue-meteor](https://github.com/Akryum/vue-meteor/)) et Apollo GraphQL ([vue-apollo](https://github.com/Akryum/vue-apollo)) afin d'aider les d\u00e9veloppeurs \u00e0 cr\u00e9er des applications Vue avec une forte int\u00e9ractivit\u00e9 et du temps-r\u00e9el. Il a \u00e9galement cr\u00e9\u00e9 l'application vue-curated permettant de trouver les bonnes librairies pour d\u00e9velopper une application, et il contribue \u00e0 l'\u00e9cosyst\u00e8me avec des outils comme [vue-virtual-scroller](https://github.com/Akryum/vue-virtual-scroller) et [vue-supply](https://github.com/Akryum/vue-supply)."
+            "ENGLISH": "Vue.js Core Team Member, Guillaume works on vue-devtools, vue-cli and vue-curated ([github](https://github.com/vuejs/)).\r\nHe also contributes to the larger ecosystem with integration like [vue-apollo](https://github.com/Akryum/vue-apollo) and [vue-meteor](https://github.com/Akryum/vue-meteor/) to help developers build highly interactive realtime apps, plus other tools like [vue-virtual-scroller](https://github.com/Akryum/vue-virtual-scroller), [v-tooltip](https://github.com/Akryum/v-tooltip) and [vue-supply](https://github.com/Akryum/vue-supply).",
+            "FRENCH": "Membre de la Core Team de Vue.js, Guillaume travaille sur vue-devtools, vue-cli et vue-curated ([github](https://github.com/vuejs/)).\r\nIl contribue \u00e9galement \u00e0 l&#39;\u00e9cosyst\u00e8me avec des int\u00e9grations \u00e0 Apollo GraphQL ([vue-apollo](https://github.com/Akryum/vue-apollo)) et Meteor ([vue-meteor](https://github.com/Akryum/vue-meteor/)) afin d&#39;aider les d\u00e9veloppeurs \u00e0 cr\u00e9er des applications Vue avec une forte interactivit\u00e9 et du temps-r\u00e9el, ainsi que des outils comme [vue-virtual-scroller](https://github.com/Akryum/vue-virtual-scroller), [v-tooltip](https://github.com/Akryum/v-tooltip) et [vue-supply](https://github.com/Akryum/vue-supply)."
         },
         "email": "6jHGEW72f4RDxKX5cBJzgWiwFjQvdfQi7eONhmpqx/I=",
         "emailHash": null,
@@ -38850,18 +38858,22 @@
         "links": [
             {
                 "name": "Github",
-                "url": "Akryum"
+                "url": "https://github.com/Akryum/"
             },
             {
                 "name": "Twitter",
                 "url": "https://twitter.com/Akryum"
+            },
+            {
+                "name": "Website",
+                "url": "https://guillaume-chau.info/"
             }
         ],
         "login": "guillaume.b.chau@gmail.com",
-        "photoUrl": "https://conf.vuejs.org/img/guillaume.jpg",
+        "photoUrl": "https://github.com/Akryum.png",
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-01-30T23:42:36.937"
+        "token": "5058760364b0",
+        "tokenExpiration": "2018-03-28T10:15:26.72"
     },
     {
         "company": "Pivotal",
@@ -40167,10 +40179,10 @@
         "tokenExpiration": "2018-03-06T15:09:54.707"
     },
     {
-        "company": null,
+        "company": "trendig technology services",
         "description": {
-            "ENGLISH": "Dani works as a Lead Software & Innovation Consultant at trendig, where he applies critical and out of the box thinking to help teams and organizations to achieve their objectives. \r\n\r\nPassionate about code quality and continuous learning cultures, he advocates the eXtreme Programming methodology and happily participates in several Ruby User Groups and Software as a Craft communities around Europe.\r\n\r\nIn his previous life he embarked on a 6-month journey visiting local communities, sharing good vibes and crafting software, a so-called Journeyman Tour. Before that, he worked as a Software Engineer for Babbel, Sweetspot Intelligence and DXC Spain.",
-            "FRENCH": "Dani works as a Lead Software & Innovation Consultant at trendig, where he applies critical and out of the box thinking to help teams and organizations to achieve their objectives. \r\n\r\nPassionate about code quality and continuous learning cultures, he advocates the eXtreme Programming methodology and happily participates in several Ruby User Groups and Software as a Craft communities around Europe.\r\n\r\nIn his previous life he embarked on a 6-month journey visiting local communities, sharing good vibes and crafting software, a so-called Journeyman Tour. Before that, he worked as a Software Engineer for Babbel, Sweetspot Intelligence and DXC Spain."
+            "ENGLISH": "Dani is a Software Engineer who enjoys applying critical and out of the box thinking to technology, producing elegant solutions to non-trivial product and customer challenges.\r\n\r\nPassionate about code quality and deliberate practice, he advocates the eXtreme Programming methodology and participates in several Ruby User Groups and Software as a Craft communities around Europe.\r\n\r\nIn his role as Lead Software &amp; Innovation Consultant &#64; trendig, Dani strives to delight clients day in, day out. He believes in the power of psychologically safe spaces, diversity, and continuous learning cultures to unlock teams\u2019 full potential and achieve high-quality results.\r\n\r\nIn his previous life he embarked on a so-called Journeyman Tour, a 6-month backpacking journey visiting local communities, crafting software, and sharing good vibes all over the place. Ask him about the funny anecdote when he was hitchhiking in the Albanian mountains, you won\u2019t regret it! ",
+            "FRENCH": "Dani is a Software Engineer who enjoys applying critical and out of the box thinking to technology, producing elegant solutions to non-trivial product and customer challenges.\r\n\r\nPassionate about code quality and deliberate practice, he advocates the eXtreme Programming methodology and participates in several Ruby User Groups and Software as a Craft communities around Europe.\r\n\r\nIn his role as Lead Software &amp; Innovation Consultant &#64; trendig, Dani strives to delight clients day in, day out. He believes in the power of psychologically safe spaces, diversity, and continuous learning cultures to unlock teams\u2019 full potential and achieve high-quality results.\r\n\r\nIn his previous life he embarked on a so-called Journeyman Tour, a 6-month backpacking journey visiting local communities, crafting software, and sharing good vibes all over the place. Ask him about the funny anecdote when he was hitchhiking in the Albanian mountains, you won\u2019t regret it! "
         },
         "email": "6dZ0hefE4n/2CoayABL7CQ==",
         "emailHash": null,
@@ -40187,15 +40199,15 @@
                 "url": "https://twitter.com/dcarral"
             },
             {
-                "name": "Autre",
-                "url": "http://speakerdeck.com/dcarral"
+                "name": "LinkedIn",
+                "url": "https://linkedin.com/in/dcarral"
             }
         ],
         "login": "dan@dcarral.org",
-        "photoUrl": "https://pbs.twimg.com/profile_images/631438474206412800/syNZc4zm_400x400.jpg",
+        "photoUrl": "https://trendig.com/media//trainers/dani_trainer.png",
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-11T15:50:53.936"
+        "token": "3d27e8885b9d",
+        "tokenExpiration": "2018-03-25T14:02:21.894"
     },
     {
         "company": "Google",
@@ -41060,7 +41072,7 @@
         "links": [
             {
                 "name": "Site",
-                "url": "www.supertilt.fr"
+                "url": "https://www.supertilt.fr/"
             },
             {
                 "name": "Linkedin",
@@ -41071,36 +41083,24 @@
         "photoUrl": "images/sponsors/logo-supertilt.svg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-20T09:01:08.837"
+        "tokenExpiration": "2018-03-22T11:58:11.318"
     },
     {
         "company": null,
-        "description": {},
-        "email": "berenvd@gmail.com",
+        "description": {
+            "ENGLISH": "R\u00e9dacteur en chef de la revue Visions solidaires pour demain et membre du collectif de r\u00e9daction de Multitudes, Ariel Kyrou aime utiliser la science-fiction et l\u2019art contemporain pour penser (et panser) notre aujourd\u2019hui. \r\n\r\nCosc\u00e9nariste du film documentaire Les mondes de Philip K. Dick (Nova Prod, Arte, 2016), il est l\u2019auteur de [R\u00e9inventer le travail sans l\u2019emploi](http://www.institutdiderot.fr/reinventer-le-travail-sans-emploi/) (Institut Diderot, 2017) ; L\u2019emploi est mort, vivre le travail ! (Mille et Une Nuits / Fayard, 2015) avec Bernard Stiegler ; Ceci n\u2019est pas un blasph\u00e8me (Inculte / Actes Sud, 2015) avec mounir fatmi ; R\u00e9volutions du Net (Inculte, 2012) ; Google God (Inculte, 2010) ; ABC Dick : Nous vivons dans les mots d\u2019un \u00e9crivain de science-fiction (Inculte, 2009) ; Paranofictions, Trait\u00e9 de savoir vivre pour une \u00e9poque de science-fiction (Climats, 2007) et Techno Rebelle, Un si\u00e8cle de musiques \u00e9lectroniques (Deno\u00ebl, 2002). \r\n\r\nDirecteur associ\u00e9 de la soci\u00e9t\u00e9 Moderne Multim\u00e9dias, il est \u00e9galement le r\u00e9dacteur en chef du magazine de r\u00e9flexion sur le num\u00e9rique [Culture Mobile](http://www.culturemobile.net/), des dossiers du [Digital Society Forum](http://digital-society-forum.orange.com/) et de la base de connaissance pour l\u2019invention solidaire et sociale [solidarum.org](http://www.solidarum.org/). R\u00e9dacteur en chef adjoint du mensuel Actuel de 1989 \u00e0 1993, et d\u00e9sormais chercheur associ\u00e9 au [Costech](http://www.costech.utc.fr/), laboratoire de sciences humaines et sociales de l\u2019Universit\u00e9 de technologies de Compi\u00e8gne (UTC), il enseigne \u00ab l\u2019histoire critique des cultures actuelles \u00bb \u00e0 l\u2019Universit\u00e9 de Versailles / Saint-Quentin en Yvelines, et contribue actuellement \u00e0 la construction de deux projets : un Institut des hautes \u00e9tudes dans la transition num\u00e9rique (IHETN) ainsi qu\u2019une Universit\u00e9 de la Pluralit\u00e9 (U+), r\u00e9seau autour des imaginaires du futur. ",
+            "FRENCH": "R\u00e9dacteur en chef de la revue Visions solidaires pour demain et membre du collectif de r\u00e9daction de Multitudes, Ariel Kyrou aime utiliser la science-fiction et l\u2019art contemporain pour penser (et panser) notre aujourd\u2019hui. \r\n\r\nCosc\u00e9nariste du film documentaire Les mondes de Philip K. Dick (Nova Prod, Arte, 2016), il est l\u2019auteur de [R\u00e9inventer le travail sans l\u2019emploi](http://www.institutdiderot.fr/reinventer-le-travail-sans-emploi/) (Institut Diderot, 2017) ; L\u2019emploi est mort, vivre le travail ! (Mille et Une Nuits / Fayard, 2015) avec Bernard Stiegler ; Ceci n\u2019est pas un blasph\u00e8me (Inculte / Actes Sud, 2015) avec mounir fatmi ; R\u00e9volutions du Net (Inculte, 2012) ; Google God (Inculte, 2010) ; ABC Dick : Nous vivons dans les mots d\u2019un \u00e9crivain de science-fiction (Inculte, 2009) ; Paranofictions, Trait\u00e9 de savoir vivre pour une \u00e9poque de science-fiction (Climats, 2007) et Techno Rebelle, Un si\u00e8cle de musiques \u00e9lectroniques (Deno\u00ebl, 2002). \r\n\r\nDirecteur associ\u00e9 de la soci\u00e9t\u00e9 Moderne Multim\u00e9dias, il est \u00e9galement le r\u00e9dacteur en chef du magazine de r\u00e9flexion sur le num\u00e9rique [Culture Mobile](http://www.culturemobile.net/), des dossiers du [Digital Society Forum](http://digital-society-forum.orange.com/) et de la base de connaissance pour l\u2019invention solidaire et sociale [solidarum.org](http://www.solidarum.org/). R\u00e9dacteur en chef adjoint du mensuel Actuel de 1989 \u00e0 1993, et d\u00e9sormais chercheur associ\u00e9 au [Costech](http://www.costech.utc.fr/), laboratoire de sciences humaines et sociales de l\u2019Universit\u00e9 de technologies de Compi\u00e8gne (UTC), il enseigne \u00ab l\u2019histoire critique des cultures actuelles \u00bb \u00e0 l\u2019Universit\u00e9 de Versailles / Saint-Quentin en Yvelines, et contribue actuellement \u00e0 la construction de deux projets : un Institut des hautes \u00e9tudes dans la transition num\u00e9rique (IHETN) ainsi qu\u2019une Universit\u00e9 de la Pluralit\u00e9 (U+), r\u00e9seau autour des imaginaires du futur. "
+        },
+        "email": "H2PdCcGEA6FLhu1mHax9fXmmrh7YkdKIIZkicQX80uA=",
         "emailHash": null,
-        "firstname": "Beren",
-        "lastname": "Van daele",
+        "firstname": "Ariel",
+        "lastname": "Kirou",
         "legacyId": null,
         "links": [],
-        "login": "berenvd",
+        "login": "ariel.kirou",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-20T12:31:55.557"
-    },
-    {
-        "company": null,
-        "description": {},
-        "email": "vhinderer@gmail.com",
-        "emailHash": null,
-        "firstname": "Vincent",
-        "lastname": "Hinderer",
-        "legacyId": null,
-        "links": [],
-        "login": "vhinderer",
-        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
-        "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-21T05:21:45.106"
+        "tokenExpiration": "2018-03-25T21:00:15.137"
     }
 ]
