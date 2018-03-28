@@ -52,7 +52,7 @@ class GmailApiSender(private val properties: MixitProperties, private val gmailS
         emailMessage.encodeRaw(buffer.toByteArray())
 
         gmailService.users().messages().send("me", emailMessage).execute().apply {
-            logger.debug("Mail ${this.id} ${this.labelIds}")
+            logger.info("Mail Gmail API ${this.id} ${this.labelIds}")
         }
     }
 }
@@ -62,8 +62,10 @@ class GmailApiSender(private val properties: MixitProperties, private val gmailS
  * or for our different information messages
  */
 @Component
-@Profile("default")
+@Profile("!cloud")
 class GmailSmtpSender(private val javaMailSender: JavaMailSender) : EmailSender {
+
+    private val logger = LoggerFactory.getLogger(this.javaClass)
 
     override fun send(email: EmailMessage) {
         val message = javaMailSender.createMimeMessage()
@@ -71,6 +73,8 @@ class GmailSmtpSender(private val javaMailSender: JavaMailSender) : EmailSender 
         helper.setTo(email.to)
         helper.setSubject(email.subject)
         message.setContent(email.content, MediaType.TEXT_HTML_VALUE)
-        javaMailSender.send(message)
+        javaMailSender.send(message).apply {
+            logger.debug("Mail SMTP")
+        }
     }
 }
