@@ -14,6 +14,7 @@ import org.springframework.web.reactive.function.BodyExtractors.toFormData
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.*
+import org.springframework.web.server.WebSession
 import reactor.core.publisher.Mono
 import java.net.URI
 import java.net.URLDecoder
@@ -55,11 +56,25 @@ class AuthenticationHandler(private val userRepository: UserRepository,
      * Action when user wants to log out
      */
     fun logout(req: ServerRequest): Mono<ServerResponse> = req.session().flatMap { session ->
+        Mono.justOrEmpty(session.getAttribute<String>("email"))
+                .flatMap {
+                    userRepository
+                            .findByEmail(it)
+                            .flatMap { updateUserToken(it, req.locale())
+                                        .flatMap { clearSession(session) }
+                                        .switchIfEmpty(clearSession(session))
+                            }
+                            .switchIfEmpty(clearSession(session))
+                }
+                .switchIfEmpty(clearSession(session))
+    }
+
+    private fun clearSession(session: WebSession):Mono<ServerResponse> {
         session.attributes.remove("email")
         session.attributes.remove("login")
         session.attributes.remove("token")
         session.attributes.remove("role")
-        temporaryRedirect(URI("${properties.baseUri}/")).build()
+        return temporaryRedirect(URI("${properties.baseUri}/")).build()
     }
 
     private fun renderError(error: String?): Mono<ServerResponse> = ok().render("login-error", mapOf(Pair("description", error)))
@@ -76,7 +91,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
         return userRepository.findByEmail(email)
                 .flatMap { user ->
                     // if user exists we send a token by email
-                    sendUserToken(email, user, locale)
+                    updateUserToken(user, locale, sendToken = true)
                             // if token is sent we call the the screen where user can type this token
                             .flatMap { ok().render("login-confirmation", context) }
                             // if not this is an error
@@ -134,6 +149,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
         return ok().render("login-confirmation", context)
     }
 
+
     /**
      * Action when user wants to send his token to open a session. This token is valid only for a limited time
      * This action is launched when user copy the token in the website
@@ -182,25 +198,13 @@ class AuthenticationHandler(private val userRepository: UserRepository,
      * Sends an email with a token to the user. We don't need validation of the email adress. If he receives
      * the email it's OK. If he retries a login a new token is sent
      */
-    private fun sendUserToken(email: String, user: User, locale: Locale): Mono<User> {
-        val userToUpdate = User(
-                user.login,
-                user.firstname,
-                user.lastname,
-                cryptographer.encrypt(email),
-                user.company,
-                user.description,
-                user.emailHash,
-                user.photoUrl,
-                user.role,
-                user.links,
-                user.legacyId,
-                LocalDateTime.now().plusHours(48),
-                UUID.randomUUID().toString().substring(0, 14).replace("-", ""))
-
+    private fun updateUserToken(user: User, locale: Locale, sendToken:Boolean = false): Mono<User> {
+        val userToUpdate = user.generateNewToken()
         try {
-            logger.info("A token ${userToUpdate.token} was sent to $email")
-            emailService.send("email-token", userToUpdate, locale)
+            if(sendToken){
+                logger.info("A token ${userToUpdate.token} was sent by email")
+                emailService.send("email-token", userToUpdate, locale)
+            }
             return userRepository.save(userToUpdate)
         } catch (e: RuntimeException) {
             logger.error(e.message, e)
@@ -208,5 +212,8 @@ class AuthenticationHandler(private val userRepository: UserRepository,
         }
     }
 
-
 }
+
+fun User.generateNewToken() = User(login, firstname, lastname, email, company, description, emailHash,
+        photoUrl, role, links,legacyId, LocalDateTime.now().plusHours(48),
+        UUID.randomUUID().toString().substring(0, 14).replace("-", ""))
