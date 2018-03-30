@@ -91,7 +91,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
         return userRepository.findByEmail(email)
                 .flatMap { user ->
                     // if user exists we send a token by email
-                    updateUserToken(user, locale, sendToken = true)
+                    updateUserToken(if(user.email == null) user.updateEmail(cryptographer, email) else user, locale, sendToken = true)
                             // if token is sent we call the the screen where user can type this token
                             .flatMap { ok().render("login-confirmation", context) }
                             // if not this is an error
@@ -217,3 +217,6 @@ class AuthenticationHandler(private val userRepository: UserRepository,
 fun User.generateNewToken() = User(login, firstname, lastname, email, company, description, emailHash,
         photoUrl, role, links,legacyId, LocalDateTime.now().plusHours(48),
         UUID.randomUUID().toString().substring(0, 14).replace("-", ""))
+
+fun User.updateEmail(cryptographer: Cryptographer, newEmail: String) = User(login, firstname, lastname, cryptographer.encrypt(newEmail), company, description, emailHash,
+        photoUrl, role, links,legacyId, tokenExpiration, token)
