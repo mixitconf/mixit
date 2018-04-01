@@ -2,6 +2,7 @@ package mixit.util
 
 import com.google.api.services.gmail.Gmail
 import com.google.api.services.gmail.model.Message
+import com.google.common.html.HtmlEscapers
 import mixit.MixitProperties
 import org.slf4j.LoggerFactory
 import org.springframework.context.annotation.Profile
@@ -43,7 +44,7 @@ class GmailApiSender(private val properties: MixitProperties, private val gmailS
         message.setFrom(InternetAddress(properties.contact))
         message.addRecipient(javax.mail.Message.RecipientType.TO, InternetAddress(email.to))
         message.subject = email.subject
-        message.setContent(email.content, MediaType.TEXT_HTML_VALUE)
+        message.setContent(email.content, "${MediaType.TEXT_HTML_VALUE}; charset=UTF-8")
 
         val buffer = ByteArrayOutputStream()
         message.writeTo(buffer)
