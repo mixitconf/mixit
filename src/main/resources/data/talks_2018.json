@@ -492,22 +492,22 @@
         "video": null
     },
     {
-        "addedAt": "2018-01-30T12:47:04.663",
-        "description": "Un an apr\u00e8s la sortie de la version MVP (minimum viable product) de WebAssembly, de nombreux usages \u00e9mergent et laissent entrevoir les possibilit\u00e9s futures du format binaire accessible dans tous les navigateurs Web modernes. Pourquoi s'int\u00e9resser \u00e0 WebAssembly aujourd'hui ? Est-ce que c'est fait pour moi ? Est-ce que c'est simple \u00e0 utiliser ? Comment je peux en tirer profit facilement d\u00e9s aujourd'hui ? Nous essayerons ensemble de r\u00e9pondre \u00e0 ces questions, puis nous verrons comment cr\u00e9er et int\u00e9grer du code WebAssembly, en passant par toutes les \u00e9tapes, de l'\u00e9criture du code source initial (dans un autre langage que JS, mais pas de panique !) jusqu'\u00e0 l'int\u00e9gration dans une application Web.",
+        "addedAt": "2018-01-30T12:47:02.581",
+        "description": "En plus de pr\u00e9senter les int\u00e9r\u00eats de Elm, *un langage fonctionnel, statiquement typ\u00e9, driv\u00e9 par sa communaut\u00e9*, dot\u00e9 d'un compilateur tr\u00e8s tr\u00e8s bavard pour faciliter le d\u00e9bogage et donc, par extension, *le r\u00e9factoring*.\r\n\r\nNous verrons comment exploiter au mieux son framework pour faire de la programmation fonctionnelle r\u00e9active dirig\u00e9e par des composants.",
         "end": "2018-04-19T15:00:00",
         "event": "2018",
         "format": "TALK",
-        "id": "5a706948840deb00141a724d",
+        "id": "5a706948840deb00141a7206",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "AMPHI1",
-        "slug": "faciliter-le-developpement-d-applications-web-performantes-avec-webassembly",
+        "room": "ROOM2",
+        "slug": "elm-pour-la-construction-d-une-application-web-moderne",
         "speakerIds": [
-            "benjamin.bouvier"
+            "xavier.vdw@gmail.com"
         ],
         "start": "2018-04-19T14:10:00",
-        "summary": "Un an apr\u00e8s la sortie de la version MVP (minimum viable product) de WebAssembly, de nombreux usages \u00e9mergent et laissent entrevoir les possibilit\u00e9s futures du format binaire accessible dans tous les navigateurs Web modernes. Pourquoi s'int\u00e9resser \u00e0 WebAssembly aujourd'hui ? Est-ce que c'est fait pour moi ? Est-ce que c'est simple \u00e0 utiliser ? Comment je peux en tirer profit facilement d\u00e9s aujourd'hui ? Nous essayerons ensemble de r\u00e9pondre \u00e0 ces questions, puis nous verrons comment cr\u00e9er et int\u00e9grer du code WebAssembly, en passant par toutes les \u00e9tapes, de l'\u00e9criture du code source initial (dans un autre langage que JS, mais pas de panique !) jusqu'\u00e0 l'int\u00e9gration dans une application Web.",
-        "title": "Faciliter le d\u00e9veloppement d'applications Web performantes avec WebAssembly",
+        "summary": "Les applications web au cours de ces derni\u00e8res ann\u00e9es ont \u00e9volu\u00e9es de mani\u00e8re **drastique** ! C'est g\u00e9nial ! D'un c\u00f4t\u00e9, en tant qu'utilisateur, on b\u00e9n\u00e9fice d'exp\u00e9riences de navigation de plus en plus fluide et immersive, de l'autre, en tant que d\u00e9veloppeur, on gagne de la mati\u00e8re int\u00e9ressante \u00e0 exploiter pour construire des applications de plus en plus riches. Dans cette pr\u00e9sentation, je vous propose de survoler le langage **Elm** pour construire une Single Page App moderne, offrant tous les canaux d'interactivit\u00e9 que l'on peut attendre (routing client, mutation de la page, signaux discrets). ",
+        "title": "Elm pour la construction d'une application web moderne",
         "topic": "tech",
         "video": null
     },
@@ -541,7 +541,7 @@
         "id": "5a706948840deb00141a7232",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "ROOM2",
+        "room": "AMPHI1",
         "slug": "demystifier-le-reactif-et-l-orchestration-de-services-avec-vert-x-kubernetes-et-kotlin",
         "speakerIds": [
             "jponge"
@@ -1255,6 +1255,26 @@
         "video": null
     },
     {
+        "addedAt": "2018-01-30T12:47:04.663",
+        "description": "Un an apr\u00e8s la sortie de la version MVP (minimum viable product) de WebAssembly, de nombreux usages \u00e9mergent et laissent entrevoir les possibilit\u00e9s futures du format binaire accessible dans tous les navigateurs Web modernes. Pourquoi s'int\u00e9resser \u00e0 WebAssembly aujourd'hui ? Est-ce que c'est fait pour moi ? Est-ce que c'est simple \u00e0 utiliser ? Comment je peux en tirer profit facilement d\u00e9s aujourd'hui ? Nous essayerons ensemble de r\u00e9pondre \u00e0 ces questions, puis nous verrons comment cr\u00e9er et int\u00e9grer du code WebAssembly, en passant par toutes les \u00e9tapes, de l'\u00e9criture du code source initial (dans un autre langage que JS, mais pas de panique !) jusqu'\u00e0 l'int\u00e9gration dans une application Web.",
+        "end": "2018-04-20T15:00:00",
+        "event": "2018",
+        "format": "TALK",
+        "id": "5a706948840deb00141a724d",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM1",
+        "slug": "faciliter-le-developpement-d-applications-web-performantes-avec-webassembly",
+        "speakerIds": [
+            "benjamin.bouvier"
+        ],
+        "start": "2018-04-20T14:10:00",
+        "summary": "Un an apr\u00e8s la sortie de la version MVP (minimum viable product) de WebAssembly, de nombreux usages \u00e9mergent et laissent entrevoir les possibilit\u00e9s futures du format binaire accessible dans tous les navigateurs Web modernes. Pourquoi s'int\u00e9resser \u00e0 WebAssembly aujourd'hui ? Est-ce que c'est fait pour moi ? Est-ce que c'est simple \u00e0 utiliser ? Comment je peux en tirer profit facilement d\u00e9s aujourd'hui ? Nous essayerons ensemble de r\u00e9pondre \u00e0 ces questions, puis nous verrons comment cr\u00e9er et int\u00e9grer du code WebAssembly, en passant par toutes les \u00e9tapes, de l'\u00e9criture du code source initial (dans un autre langage que JS, mais pas de panique !) jusqu'\u00e0 l'int\u00e9gration dans une application Web.",
+        "title": "Faciliter le d\u00e9veloppement d'applications Web performantes avec WebAssembly",
+        "topic": "tech",
+        "video": null
+    },
+    {
         "addedAt": "2018-01-30T12:47:02.571",
         "description": "Sitting at convergence of these two things is MIDI \u2014 a niche protocol that's been around since 1983 and was originally designed for musical instruments to communicate with one another. It's event-oriented approach to messaging feels right at home in the asynchronous world of JavaScript & Node, and the prevalence of MIDI support in older musical equipment means you can find unique, hackable and affordable hardware at your local pawnshop or Craig's List.\r\n\r\nThis unlikely tech stack \u2014 Tiny Computers + JavaScript + MIDI \u2014 can lend itself to creative programming beyond music. George's Talk will explain how to get started, walk through several examples and elaborate on the future of this stack, not only as a platform for experimentation but for education as well.",
         "end": "2018-04-20T15:00:00",
@@ -1272,26 +1292,6 @@
         "summary": "Tiny computers such as the [RaspberryPi](https://www.raspberrypi.org), [Arduino](https://www.arduino.cc/) and [C.H.I.P.](https://getchip.com/) have finally reached a level of  performance and affordability that makes hardware experimentation accessible to everyone. At the same time, JavaScript has emerged as the lingua franca of web programming and can be found in many places beyond just the browser. \r\n\r\nWhat if I told you there was a mature protocol that's been around since 1983 and was uniquely poised to take advantage of this development?\r\n\r\nWell, wonder no more and [meet MIDI](https://en.wikipedia.org/wiki/MIDI)! ",
         "title": "Make More Than Music with MIDI, JavaScript & Tiny Computers",
         "topic": "makers",
-        "video": null
-    },
-    {
-        "addedAt": "2018-01-30T12:47:02.581",
-        "description": "En plus de pr\u00e9senter les int\u00e9r\u00eats de Elm, *un langage fonctionnel, statiquement typ\u00e9, driv\u00e9 par sa communaut\u00e9*, dot\u00e9 d'un compilateur tr\u00e8s tr\u00e8s bavard pour faciliter le d\u00e9bogage et donc, par extension, *le r\u00e9factoring*.\r\n\r\nNous verrons comment exploiter au mieux son framework pour faire de la programmation fonctionnelle r\u00e9active dirig\u00e9e par des composants.",
-        "end": "2018-04-20T15:00:00",
-        "event": "2018",
-        "format": "TALK",
-        "id": "5a706948840deb00141a7206",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "ROOM1",
-        "slug": "elm-pour-la-construction-d-une-application-web-moderne",
-        "speakerIds": [
-            "xavier.vdw@gmail.com"
-        ],
-        "start": "2018-04-20T14:10:00",
-        "summary": "Les applications web au cours de ces derni\u00e8res ann\u00e9es ont \u00e9volu\u00e9es de mani\u00e8re **drastique** ! C'est g\u00e9nial ! D'un c\u00f4t\u00e9, en tant qu'utilisateur, on b\u00e9n\u00e9fice d'exp\u00e9riences de navigation de plus en plus fluide et immersive, de l'autre, en tant que d\u00e9veloppeur, on gagne de la mati\u00e8re int\u00e9ressante \u00e0 exploiter pour construire des applications de plus en plus riches. Dans cette pr\u00e9sentation, je vous propose de survoler le langage **Elm** pour construire une Single Page App moderne, offrant tous les canaux d'interactivit\u00e9 que l'on peut attendre (routing client, mutation de la page, signaux discrets). ",
-        "title": "Elm pour la construction d'une application web moderne",
-        "topic": "tech",
         "video": null
     },
     {
