@@ -326,26 +326,6 @@
         "video": null
     },
     {
-        "addedAt": "2018-01-30T12:47:04.516",
-        "description": null,
-        "end": "2018-04-19T14:10:00",
-        "event": "2018",
-        "format": "RANDOM",
-        "id": "5a706948840deb00141a723f",
-        "language": "ENGLISH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "software-on-the-road-the-journey",
-        "speakerIds": [
-            "dan@dcarral.org"
-        ],
-        "start": "2018-04-19T13:50:00",
-        "summary": "Have you wondered how would it be to quit your job, take a backpack, and be on the road 24/7? \r\n\r\nThrough a continuous stream of audiovisual material captured during his trip, Dani takes you into an inspiring journey visiting local communities, sharing good vibes & crafting software.\r\n\r\n6 months and 13 countries later, and having hitch-hiked in the Albanian mountains, philosophized with a jewelry crafter in Mallorca, danced reggae in Jamaica and couchsurfed all over the place, he's back to share part of his adventures with us.\r\n\r\nAll in all, he just want to spread happiness around. Are you in?",
-        "title": "Software on the road: the journey",
-        "topic": "aliens",
-        "video": null
-    },
-    {
         "addedAt": "2018-01-30T12:47:04.618",
         "description": null,
         "end": "2018-04-19T14:10:00",
@@ -364,6 +344,26 @@
         "summary": "La France fait partie des pays qui cherchent \u00e0 affaiblir le chiffrement,\r\nvia l'obligation d'installer des portes d\u00e9rob\u00e9es par exemple. Le\r\nchiffrement peut d\u00e9j\u00e0 en France \u00eatre un motif d'augmentation des peines,\r\nou en faire un motif de suspicion. Les d\u00e9clarations contre le\r\nchiffrement s\u2019encha\u00eenent et une r\u00e9flexion est en cours au niveau\r\neurop\u00e9en pour mettre en \u0153uvre une strat\u00e9gie commune au sein de l'Union\r\neurop\u00e9enne.\r\nNotre objectif est donc d'essayer de renverser la tendance et de montrer\r\nque les d\u00e9veloppeurs ont aussi un r\u00f4le politique important.",
         "title": "WTFrance",
         "topic": "hacktivism",
+        "video": null
+    },
+    {
+        "addedAt": "2018-01-30T12:47:04.516",
+        "description": null,
+        "end": "2018-04-19T14:10:00",
+        "event": "2018",
+        "format": "RANDOM",
+        "id": "5a706948840deb00141a723f",
+        "language": "ENGLISH",
+        "photoUrls": [],
+        "room": "UNKNOWN",
+        "slug": "software-on-the-road-the-journey",
+        "speakerIds": [
+            "dan@dcarral.org"
+        ],
+        "start": "2018-04-19T13:50:00",
+        "summary": "Have you wondered how would it be to quit your job, take a backpack, and be on the road 24/7? \r\n\r\nThrough a continuous stream of audiovisual material captured during his trip, Dani takes you into an inspiring journey visiting local communities, sharing good vibes & crafting software.\r\n\r\n6 months and 13 countries later, and having hitch-hiked in the Albanian mountains, philosophized with a jewelry crafter in Mallorca, danced reggae in Jamaica and couchsurfed all over the place, he's back to share part of his adventures with us.\r\n\r\nAll in all, he just want to spread happiness around. Are you in?",
+        "title": "Software on the road: the journey",
+        "topic": "aliens",
         "video": null
     },
     {
@@ -451,6 +451,26 @@
         "video": null
     },
     {
+        "addedAt": "2018-01-30T12:47:04.422",
+        "description": null,
+        "end": "2018-04-19T15:00:00",
+        "event": "2018",
+        "format": "TALK",
+        "id": "5a706948840deb00141a7238",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM1",
+        "slug": "designer-codeur-comment-le-metier-et-les-outils-du-designer-graphique-evoluent",
+        "speakerIds": [
+            "azertypow@gmail.com"
+        ],
+        "start": "2018-04-19T14:10:00",
+        "summary": "L'environnement de travail du designer graphique \u00e9volue avec la cr\u00e9ation d\u2019interfaces d\u2019applications web. La programmation devient un milieu accessible pour ce dernier, et peut m\u00eame n\u00e9cessiter son expertise dans certains domaines (css, svg, canvas, javascript\u2026) en collaboration avec le d\u00e9veloppeur.  \r\nL\u2019outillage du designer graphique n\u2019est donc plus limit\u00e9 aux interfaces graphiques de type WIMP (Windows, Icons, Menus, Pointing) comme Adobe, mais s\u2019ouvre sur les interfaces textuelles de programmation. Sa m\u00e9thode de travail peut d\u00e9sormais se rapprocher de celle du d\u00e9veloppeur.\r\n\r\n\u00c0 travers un \u00e9tat des lieux des outils \u00e9mergents, nous explorerons les nouvelles logiques de cr\u00e9ation d\u2019interface, et de leurs \u00e9volutions possibles.",
+        "title": "Designer/codeur, comment le m\u00e9tier et les outils du designer graphique \u00e9voluent",
+        "topic": "design",
+        "video": null
+    },
+    {
         "addedAt": "2018-01-30T12:47:03.629",
         "description": null,
         "end": "2018-04-19T15:00:00",
@@ -469,26 +489,6 @@
         "summary": "Certains mots ont pris des sens tr\u00e8s particuliers dans notre langue, le mot \u201caider\u201d en fait partie. Lors de cette session, je vous propose de m\u2019accompagner dans une r\u00e9flexion sur les vices cach\u00e9s de l\u2019aide en g\u00e9n\u00e9ral, telle qu\u2019elle est souvent pratiqu\u00e9e. Le tout sera remis dans le contexte de la demande, ou de l\u2019absence de demande, et se notre rapport au \u201cnon\u201d.\r\n\r\nTriangle de Karpman, CNV ou Analyse Transactionnelle, l\u2019occasion de vous pr\u00e9senter quelques outils qui pourront vous aider \u00e0 revisiter votre mani\u00e8re d\u2019\u201c\u00eatre\u201d \u00e0 vous m\u00eame et aux autres.",
         "title": "Vous arrive-t-il d'infliger de l'aide ?",
         "topic": "learn",
-        "video": null
-    },
-    {
-        "addedAt": "2018-01-30T12:47:04.422",
-        "description": null,
-        "end": "2018-04-19T15:00:00",
-        "event": "2018",
-        "format": "TALK",
-        "id": "5a706948840deb00141a7238",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "ROOM1",
-        "slug": "designer-codeur-comment-le-metier-et-les-outils-du-designer-graphique-evoluent",
-        "speakerIds": [
-            "azertypow@gmail.com"
-        ],
-        "start": "2018-04-19T14:10:00",
-        "summary": "L'environnement de travail du designer graphique \u00e9volue avec la cr\u00e9ation d\u2019interfaces d\u2019applications web. La programmation devient un milieu accessible pour ce dernier, et peut m\u00eame n\u00e9cessiter son expertise dans certains domaines (css, svg, canvas, javascript\u2026) en collaboration avec le d\u00e9veloppeur.  \r\nL\u2019outillage du designer graphique n\u2019est donc plus limit\u00e9 aux interfaces graphiques de type WIMP (Windows, Icons, Menus, Pointing) comme Adobe, mais s\u2019ouvre sur les interfaces textuelles de programmation. Sa m\u00e9thode de travail peut d\u00e9sormais se rapprocher de celle du d\u00e9veloppeur.\r\n\r\n\u00c0 travers un \u00e9tat des lieux des outils \u00e9mergents, nous explorerons les nouvelles logiques de cr\u00e9ation d\u2019interface, et de leurs \u00e9volutions possibles.",
-        "title": "Designer/codeur, comment le m\u00e9tier et les outils du designer graphique \u00e9voluent",
-        "topic": "design",
         "video": null
     },
     {
@@ -877,26 +877,6 @@
         "video": null
     },
     {
-        "addedAt": "2018-01-30T12:47:03.17",
-        "description": "Au cours de ce talk nous verrons en d\u00e9tails le principe des derni\u00e8res attaques qui ont fait la une. Nous parlerons ensuite des failles touchant les IoTs les plus courantes (le top 10 OWASP IoT), les solutions et contre-mesures.\r\n\r\nNous parlerons notamment des attaques par canaux auxiliaires pour lesquelles peux de solutions existent et qui donnent toujours du fil \u00e0 retorde aux chercheurs.\r\n\r\nEnfin, nous terminerons par une petite d\u00e9mo d\u2019attaque de type Man-in-the-midle (MiTM) sur un objet Bluetooth",
-        "end": "2018-04-20T11:00:00",
-        "event": "2018",
-        "format": "TALK",
-        "id": "5a706948840deb00141a7219",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "ROOM1",
-        "slug": "la-securite-dans-l-iot-difficultes-failles-et-contre-mesures",
-        "speakerIds": [
-            "alexisd@rtone.fr"
-        ],
-        "start": "2018-04-20T10:10:00",
-        "summary": "Avec la multiplication des objets connect\u00e9s dans notre quotidien, la s\u00e9curit\u00e9 de ces appareils \u00e9lectroniques, qui a \u00e9t\u00e9 souvent n\u00e9glig\u00e9e par le pass\u00e9, devient une r\u00e9elle probl\u00e9matique. Leur faible co\u00fbt de conception, la n\u00e9gligence des fabricants ou m\u00eame la notre, nous d\u00e9veloppeurs, en font des proies faciles pour les hackers. Ce ph\u00e9nom\u00e8ne se constate bien dans l'actualit\u00e9, o\u00f9 l'on parle de plus en plus d'attaques \u00e0 grande \u00e9chelles visant des cameras ou frigos connect\u00e9s, mais \u00e9galement les serrures Bluetooth.",
-        "title": "La s\u00e9curit\u00e9 dans l'IoT : difficult\u00e9s, failles et contre-mesures",
-        "topic": "tech",
-        "video": null
-    },
-    {
         "addedAt": "2018-01-30T12:47:04.475",
         "description": "Cela peut para\u00eetre surprenant en effet de ne pas prendre ni papier ni  crayon pour faire du sketching et semble limiter l'expressivit\u00e9 des prototypes et en plus demander des connaissances en programmation... \r\nMais ce compromis reste cependant acceptable car la programmation permet de rapidement g\u00e9n\u00e9rer des variations de design (notamment \u00e0 partir d'exemples de maquettes telles que https://romsson.github.io/d3-gridding-infovis/example/capture/display.html) et ne vous demande pas non-plus de savoir bien dessiner ! En plus, cela facilitera grandement la transition vers des prototypes plus haute fid\u00e9lit\u00e9 en transformant les prototypes r\u00e9alis\u00e9s en JavaScript vers un chart interactif et en couleur.\r\n\r\nLes particpants de ce workshops apprendront :\r\n-Les bases du design graphique (grids, proportions, explorations de design)\r\n-L'implementation de grids en JavaScript et leur mapping avec des donn\u00e9es temporaires (mais r\u00e9alistes)\r\n-La mise en page et le raffinement de design\r\n-Exporter ces prototypes (SVG/HTML/autre) et y inclure les donn\u00e9es finales\r\n-Rendre le graphique interactif et comportant des transitions anim\u00e9es",
         "end": "2018-04-20T12:00:00",
@@ -914,27 +894,6 @@
         "summary": "Les dataviz sont de plus en plus populaires mais restent difficile \u00e0 cr\u00e9er. \r\nCe workshop propose a pour but d'initier les participants aux m\u00e9thodes de prototypes de visualisation de donn\u00e9es sous forme de grids et de maquettes interactives, en noir et blanc. La particularit\u00e9 du prototypage sera d'\u00eatre r\u00e9alis\u00e9 en live coding en JavaScript.",
         "title": "Dataviz sans data: le prototypage rapide de visualisation de donn\u00e9es.. sans donn\u00e9es!",
         "topic": "design",
-        "video": null
-    },
-    {
-        "addedAt": "2018-01-30T12:47:04.534",
-        "description": null,
-        "end": "2018-04-20T11:00:00",
-        "event": "2018",
-        "format": "TALK",
-        "id": "5a706948840deb00141a7240",
-        "language": "ENGLISH",
-        "photoUrls": [],
-        "room": "AMPHI1",
-        "slug": "modern-android-development",
-        "speakerIds": [
-            "romainguy@curious-creature.com",
-            "graphicsgeek1@gmail.com"
-        ],
-        "start": "2018-04-20T10:10:00",
-        "summary": "The past several years has seen the introduction of new functionality and practices into core Android development, with such elements as the Support Library, Architecture Components, and Kotlin. But all of the old programming approaches still work. So what's an Android developer supposed to do?\r\n\r\nThis talk will not only cover these new aspects of Android development; we will talk about *why* they exist and how to understand modern development of Android applications. Developers will leave with a better idea of what they should  know and use in their projects.",
-        "title": "Modern Android Development",
-        "topic": "tech",
         "video": null
     },
     {
@@ -956,6 +915,27 @@
         "summary": "Cette pr\u00e9sentation traitera des questions essentielles : de l\u2019int\u00e9gration d\u2019un nouvel arrivant dans une entreprise, \u00e0 l\u2019encouragement de la progression individuelle, en passant par le bien-\u00eatre au travail de tous. La solution miracle (ou une partie du miracle) ? Le pair mentoring maison ! Nous vous expliquerons tout de ce syst\u00e8me que nous avons mis en place l\u2019an dernier et continuons \u00e0 am\u00e9liorer depuis. Un mentor (mentor\u00e9) et une mentor\u00e9e viennent vous pr\u00e9senter la m\u00e9thode (\u201cdu bonheur\u201d).",
         "title": "Mentoring \u00e0 tous les \u00e9tages",
         "topic": "makers",
+        "video": null
+    },
+    {
+        "addedAt": "2018-01-30T12:47:04.534",
+        "description": null,
+        "end": "2018-04-20T11:00:00",
+        "event": "2018",
+        "format": "TALK",
+        "id": "5a706948840deb00141a7240",
+        "language": "ENGLISH",
+        "photoUrls": [],
+        "room": "AMPHI1",
+        "slug": "modern-android-development",
+        "speakerIds": [
+            "romainguy@curious-creature.com",
+            "graphicsgeek1@gmail.com"
+        ],
+        "start": "2018-04-20T10:10:00",
+        "summary": "The past several years has seen the introduction of new functionality and practices into core Android development, with such elements as the Support Library, Architecture Components, and Kotlin. But all of the old programming approaches still work. So what's an Android developer supposed to do?\r\n\r\nThis talk will not only cover these new aspects of Android development; we will talk about *why* they exist and how to understand modern development of Android applications. Developers will leave with a better idea of what they should  know and use in their projects.",
+        "title": "Modern Android Development",
+        "topic": "tech",
         "video": null
     },
     {
@@ -1183,7 +1163,7 @@
     },
     {
         "addedAt": "2018-03-13T12:15:55.141",
-        "description": "Les inscriptions se font exclusivement via la billeterie YurPlan. Pour cel\u00e0 vous pouvez suivre le Twitter Mixteen\r\n\r\nPlusieurs activit\u00e9s seront propos\u00e9es:\r\n\r\n* Pour tous : Scratch\r\n* Ateliers de d\u00e9couverte des principes de l'informatique : jeux pour d\u00e9couvrir le binaire, le codage d'images...\r\n* Thymio : un petit robot facile \u00e0 programmer qui permet de comprendre les bases de la robotique, et se d\u00e9place suivant les diff\u00e9rentes instructions des enfants.\r\n* Micro:bit : une carte \u00e9labor\u00e9 sous la supervision de la BBC \u00e0 destination des \u00e9coliers anglais. Elle permet l\u2019initiation \u00e0 l\u2019\u00e9lectronique, l\u2019IoT et la programmation.\r\n\r\nLes enfants peuvent venir avec leur ordinateur portable et un go\u00fbter \u00e0 base des c\u00e9l\u00e8bres cr\u00eapes de MiXiT leur servi\r\n \r\nVers 17h, les enfants pr\u00e9sentent leurs r\u00e9alisations aux autres enfants et aux parents qui souhaitent participer.  A 18h00, tout ce petit monde montera sur sc\u00e8ne devant l'assembl\u00e9e r\u00e9unie de MiXiT.\r\n",
+        "description": "Les inscriptions se font exclusivement via la billetterie [BilletWeb.fr](https://www.billetweb.fr/atelier-mixteen-avril-2018). \r\nL&#39;ouverture sera annonc\u00e9e sur la [mailing list MixTeen](https://groups.google.com/forum/?hl&#61;fr#!forum/liste-mixteen), le [compte Twitter](https://twitter.com/mixteen_lyon) et la page [Facebook](https://www.facebook.com/mixteen.lyon/).\r\n\r\nPlusieurs activit\u00e9s seront propos\u00e9es:\r\n\r\n* Pour tous : Scratch\r\n* Ateliers de d\u00e9couverte des principes de l&#39;informatique : jeux pour d\u00e9couvrir le binaire, le codage d&#39;images...\r\n* Thymio : un petit robot facile \u00e0 programmer qui permet de comprendre les bases de la robotique, et se d\u00e9place suivant les diff\u00e9rentes instructions des enfants.\r\n* Micro:bit : une carte \u00e9labor\u00e9 sous la supervision de la BBC \u00e0 destination des \u00e9coliers anglais. Elle permet l\u2019initiation \u00e0 l\u2019\u00e9lectronique, l\u2019IoT et la programmation.\r\n\r\nLes enfants peuvent venir avec leur ordinateur portable et un go\u00fbter \u00e0 base des c\u00e9l\u00e8bres cr\u00eapes de MiXiT leur servi\r\n \r\nVers 17h, les enfants pr\u00e9sentent leurs r\u00e9alisations aux autres enfants et aux parents qui souhaitent participer.  A 18h00, tout ce petit monde montera sur sc\u00e8ne devant l&#39;assembl\u00e9e r\u00e9unie de MiXiT.\r\n",
         "end": "2018-04-20T18:00:00",
         "event": "2018",
         "format": "WORKSHOP",
@@ -1209,7 +1189,7 @@
             "cyrilpavon"
         ],
         "start": "2018-04-20T14:00:00",
-        "summary": "Cet atelier r\u00e9serv\u00e9 aux ados inscrits au pr\u00e9alable aura lieu sur la mezzanine. Suivez les panneaux si vous voulez voir les ateliers et \u00e9changer avec les diff\u00e9rents intervenants. Les participants, les enfants apprennent \u00e0 cr\u00e9er des mini-jeux, \u00e0 programmer des robots, \u00e0 assembler des composants \u00e9lectroniques... \r\n",
+        "summary": "Cet atelier r\u00e9serv\u00e9 aux enfants inscrits au pr\u00e9alable et aura lieu sur la mezzanine. \r\nSuivez les panneaux si vous voulez voir les ateliers et \u00e9changer avec les diff\u00e9rents intervenants. \r\nLes participants, les enfants apprennent \u00e0 cr\u00e9er des mini-jeux, \u00e0 programmer des robots, \u00e0 assembler des composants \u00e9lectroniques... \r\n",
         "title": "Born to code avec MixTeen ",
         "topic": "makers",
         "video": null
@@ -1354,6 +1334,26 @@
         "summary": "Atomic design \r\n\r\nAvec l\u2019\u00e9mergence de logiciels comme Sketch et Adobe XD, ce n\u2019est pas seulement de nouvelles mani\u00e8res techniques de cr\u00e9er nos interfaces, mais aussi une nouvelle fa\u00e7on de penser le design : plus homog\u00e8ne, adaptable, maintenable, collaboratif\u2026 Brad Frost a, dans les premiers, th\u00e9oris\u00e9 ce qu\u2019on appelle maintenant l\u2019Atomic Design ! Une mani\u00e8re de designer nos interfaces, proche du d\u00e9veloppement objet, ne se contentant plus de juste cr\u00e9er des pages, mais partant du postulat de cr\u00e9er des composants que nous pourrons r\u00e9utiliser et adapter en fonction du contexte.",
         "title": "Mise en pratique de l'Atomic Design",
         "topic": "design",
+        "video": null
+    },
+    {
+        "addedAt": "2018-01-30T12:47:03.17",
+        "description": "Au cours de ce talk nous verrons en d\u00e9tails le principe des derni\u00e8res attaques qui ont fait la une. Nous parlerons ensuite des failles touchant les IoTs les plus courantes (le top 10 OWASP IoT), les solutions et contre-mesures.\r\n\r\nNous parlerons notamment des attaques par canaux auxiliaires pour lesquelles peux de solutions existent et qui donnent toujours du fil \u00e0 retorde aux chercheurs.\r\n\r\nEnfin, nous terminerons par une petite d\u00e9mo d\u2019attaque de type Man-in-the-midle (MiTM) sur un objet Bluetooth",
+        "end": "2018-04-20T16:00:00",
+        "event": "2018",
+        "format": "TALK",
+        "id": "5a706948840deb00141a7219",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM2",
+        "slug": "la-securite-dans-l-iot-difficultes-failles-et-contre-mesures",
+        "speakerIds": [
+            "alexisd@rtone.fr"
+        ],
+        "start": "2018-04-20T15:10:00",
+        "summary": "Avec la multiplication des objets connect\u00e9s dans notre quotidien, la s\u00e9curit\u00e9 de ces appareils \u00e9lectroniques, qui a \u00e9t\u00e9 souvent n\u00e9glig\u00e9e par le pass\u00e9, devient une r\u00e9elle probl\u00e9matique. Leur faible co\u00fbt de conception, la n\u00e9gligence des fabricants ou m\u00eame la notre, nous d\u00e9veloppeurs, en font des proies faciles pour les hackers. Ce ph\u00e9nom\u00e8ne se constate bien dans l'actualit\u00e9, o\u00f9 l'on parle de plus en plus d'attaques \u00e0 grande \u00e9chelles visant des cameras ou frigos connect\u00e9s, mais \u00e9galement les serrures Bluetooth.",
+        "title": "La s\u00e9curit\u00e9 dans l'IoT : difficult\u00e9s, failles et contre-mesures",
+        "topic": "tech",
         "video": null
     },
     {
