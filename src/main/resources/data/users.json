@@ -5142,41 +5142,6 @@
         "tokenExpiration": "2018-04-05T12:17:53.225"
     },
     {
-        "company": "Zenika",
-        "description": {
-            "ENGLISH": "Zenika est un cabinet sp\u00e9cialis\u00e9 dans l\u2019architecture informatique et les m\u00e9thodes Agiles poss\u00e9dant une triple comp\u00e9tence de conseil, r\u00e9alisation et formation. Nos clients sont de grands comptes, des PME ou encore des startups, dans tous secteurs d\u2019activit\u00e9s. Le Web et la Mobilit\u00e9, le Big Data, le Craftsmanship, DevOps, l'IoT, l'Innovation et l'Agilit\u00e9 sont nos principaux domaines d'expertise. Nous nous classons, pour notre quatri\u00e8me participation, au 3\u00e8 rang du palmar\u00e8s Great Place to Work 2017 des entreprises de moins de 500 salari\u00e9s.",
-            "FRENCH": "Zenika est un cabinet sp\u00e9cialis\u00e9 dans l\u2019architecture informatique et les m\u00e9thodes Agiles poss\u00e9dant une triple comp\u00e9tence de conseil, r\u00e9alisation et formation. Nos clients sont de grands comptes, des PME ou encore des startups, dans tous secteurs d\u2019activit\u00e9s. Le Web et la Mobilit\u00e9, le Big Data, le Craftsmanship, DevOps, l'IoT, l'Innovation et l'Agilit\u00e9 sont nos principaux domaines d'expertise. Nous nous classons, pour notre quatri\u00e8me participation, au 3\u00e8 rang du palmar\u00e8s Great Place to Work 2017 des entreprises de moins de 500 salari\u00e9s."
-        },
-        "email": null,
-        "emailHash": null,
-        "firstname": "Herv\u00e9",
-        "lastname": "Jacob",
-        "legacyId": 10,
-        "links": [
-            {
-                "name": "Le blog technique",
-                "url": "http://blog.zenika.com"
-            },
-            {
-                "name": "Les formations Inter \u00e0 Lyon",
-                "url": "http://www.zenika.com/Formation/prochaines-formations.html?agency=3"
-            },
-            {
-                "name": "Formations - Le catalogue complet",
-                "url": "http://www.zenika.com/Formation/notre-catalogue-formation.html"
-            },
-            {
-                "name": "Zenika",
-                "url": "http://www.zenika.com"
-            }
-        ],
-        "login": "Zenika Lyon",
-        "photoUrl": "images/sponsors/logo-zenika.png",
-        "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.473"
-    },
-    {
         "company": "Sqli",
         "description": {
             "ENGLISH": "Acteur majeur des NTIC en France, 3 piliers fondamentaux : l\u2019innovation, la ma\u00eetrise des techno et la qualit\u00e9.",
@@ -16461,24 +16426,6 @@
         "legacyId": 707,
         "links": [],
         "login": "emmanuel_siegel",
-        "photoUrl": null,
-        "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.494"
-    },
-    {
-        "company": "",
-        "description": {
-            "ENGLISH": "Animateur d'expertise et codeur passionn\u00e9",
-            "FRENCH": "Animateur d'expertise et codeur passionn\u00e9"
-        },
-        "email": null,
-        "emailHash": "b7195e86fadd1479f9e0b4d14f23c4eb",
-        "firstname": "Louis",
-        "lastname": "Tournayre",
-        "legacyId": 709,
-        "links": [],
-        "login": "louidji",
         "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
@@ -41167,5 +41114,40 @@
         "role": "USER",
         "token": "9a1e2d44f918",
         "tokenExpiration": "2018-04-04T11:16:41.435"
+    },
+    {
+        "company": "Zenika",
+        "description": {
+            "ENGLISH": "Zenika est un cabinet sp\u00e9cialis\u00e9 dans l\u2019architecture informatique et les m\u00e9thodes Agiles poss\u00e9dant une triple comp\u00e9tence de conseil, r\u00e9alisation et formation. Nos clients sont de grands comptes, des PME ou encore des startups, dans tous secteurs d\u2019activit\u00e9s. Le Web et la Mobilit\u00e9, le Big Data, le Craftsmanship, DevOps, l'IoT, l'Innovation et l'Agilit\u00e9 sont nos principaux domaines d'expertise. Nous nous classons, pour notre quatri\u00e8me participation, au 3\u00e8 rang du palmar\u00e8s Great Place to Work 2017 des entreprises de moins de 500 salari\u00e9s.",
+            "FRENCH": "Zenika est un cabinet sp\u00e9cialis\u00e9 dans l\u2019architecture informatique et les m\u00e9thodes Agiles poss\u00e9dant une triple comp\u00e9tence de conseil, r\u00e9alisation et formation. Nos clients sont de grands comptes, des PME ou encore des startups, dans tous secteurs d\u2019activit\u00e9s. Le Web et la Mobilit\u00e9, le Big Data, le Craftsmanship, DevOps, l'IoT, l'Innovation et l'Agilit\u00e9 sont nos principaux domaines d'expertise. Nous nous classons, pour notre quatri\u00e8me participation, au 3\u00e8 rang du palmar\u00e8s Great Place to Work 2017 des entreprises de moins de 500 salari\u00e9s."
+        },
+        "email": "K+1NYEYquxbo0DpilsNBbPHpnVfYCjPu1tzmeVqHs+k=",
+        "emailHash": null,
+        "firstname": "Louis",
+        "lastname": "Tournayre",
+        "legacyId": 10,
+        "links": [
+            {
+                "name": "Le blog technique",
+                "url": "http://blog.zenika.com"
+            },
+            {
+                "name": "Les formations Inter \u00e0 Lyon",
+                "url": "http://www.zenika.com/Formation/prochaines-formations.html?agency=3"
+            },
+            {
+                "name": "Formations - Le catalogue complet",
+                "url": "http://www.zenika.com/Formation/notre-catalogue-formation.html"
+            },
+            {
+                "name": "Zenika",
+                "url": "http://www.zenika.com"
+            }
+        ],
+        "login": "ZenikaLyon",
+        "photoUrl": "images/sponsors/logo-zenika.png",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2018-04-03T21:33:23.556"
     }
 ]

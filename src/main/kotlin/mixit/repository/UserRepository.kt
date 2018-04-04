@@ -30,16 +30,7 @@ class UserRepository(private val template: ReactiveMongoTemplate,
             users.forEach { save(it).block() }
             logger.info("Users data initialization complete")
         }
-
-        val user = findOne("Zenika Lyon").block();
-        if(user!=null) {
-            save(user.updateLogin("ZenikaLyon")).block()
-        }
-        deleteOne("Zenika Lyon").block();
     }
-
-    fun User.updateLogin(newLogin: String) = User(newLogin, firstname, lastname, email, company, description, emailHash,
-            photoUrl, role, links,legacyId, tokenExpiration, token)
 
     fun findFullText(criteria: List<String>): Flux<User> {
         val textCriteria = TextCriteria()

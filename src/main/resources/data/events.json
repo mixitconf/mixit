@@ -3,18 +3,8 @@
         "current": false,
         "end": "2012-04-26",
         "id": "mixit12",
-        "photoUrls": [
-            {
-                "name": "MiXiT 2012",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157688295733061"
-            }
-        ],
+        "photoUrls": [],
         "sponsors": [
-            {
-                "level": "GOLD",
-                "sponsorId": "Zenika Lyon",
-                "subscriptionDate": "2017-11-08"
-            },
             {
                 "level": "GOLD",
                 "sponsorId": "Sqli",
@@ -49,6 +39,11 @@
                 "level": "SILVER",
                 "sponsorId": "thales",
                 "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "ZenikaLyon",
+                "subscriptionDate": "2017-11-08"
             }
         ],
         "start": "2012-04-26",
@@ -59,18 +54,8 @@
         "current": false,
         "end": "2013-04-26",
         "id": "mixit13",
-        "photoUrls": [
-            {
-                "name": "MiXiT 2013",
-                "url": "https://photos.google.com/b/106629477368826686108/album/AF1QipP_2rgU2AmfHs8jqjqHZssdbptYaq8f2tqAyqLN"
-            }
-        ],
+        "photoUrls": [],
         "sponsors": [
-            {
-                "level": "GOLD",
-                "sponsorId": "Zenika Lyon",
-                "subscriptionDate": "2017-11-08"
-            },
             {
                 "level": "SILVER",
                 "sponsorId": "Sqli",
@@ -115,6 +100,11 @@
                 "level": "SILVER",
                 "sponsorId": "GitHub",
                 "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "ZenikaLyon",
+                "subscriptionDate": "2017-11-08"
             }
         ],
         "start": "2013-04-25",
@@ -125,21 +115,11 @@
         "current": false,
         "end": "2014-04-30",
         "id": "mixit14",
-        "photoUrls": [
-            {
-                "name": "MiXiT 2014",
-                "url": "https://photos.google.com/b/106629477368826686108/album/AF1QipNw6ApiPhPzzd-5BtKlIsuLralYcTCm2HaG3GXk"
-            }
-        ],
+        "photoUrls": [],
         "sponsors": [
             {
                 "level": "SILVER",
                 "sponsorId": "terre.dagile",
-                "subscriptionDate": "2017-11-08"
-            },
-            {
-                "level": "GOLD",
-                "sponsorId": "Zenika Lyon",
                 "subscriptionDate": "2017-11-08"
             },
             {
@@ -211,13 +191,15 @@
                 "level": "SILVER",
                 "sponsorId": "Mailjet",
                 "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "ZenikaLyon",
+                "subscriptionDate": "2017-11-08"
             }
         ],
         "start": "2014-04-29",
-        "videoUrl": {
-            "name": "video",
-            "url": "https://vimeo.com/214902172"
-        },
+        "videoUrl": null,
         "year": 2014
     },
     {
@@ -331,26 +313,8 @@
         "current": false,
         "end": "2016-04-22",
         "id": "mixit16",
-        "photoUrls": [
-            {
-                "name": "MiXiT 2016 conf\u00e9rence",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157666243159183"
-            },
-            {
-                "name": "MiXiT 2016 reportage",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157667987593380"
-            },
-            {
-                "name": "MiXiT 2016 diner speaker",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157667470832986"
-            }
-        ],
+        "photoUrls": [],
         "sponsors": [
-            {
-                "level": "GOLD",
-                "sponsorId": "Zenika Lyon",
-                "subscriptionDate": "2017-11-08"
-            },
             {
                 "level": "GOLD",
                 "sponsorId": "Sopra Steria",
@@ -460,35 +424,23 @@
                 "level": "SILVER",
                 "sponsorId": "1338530083",
                 "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "ZenikaLyon",
+                "subscriptionDate": "2017-11-08"
             }
         ],
         "start": "2016-04-21",
-        "videoUrl": {
-            "name": "video",
-            "url": "https://vimeo.com/214908582"
-        },
+        "videoUrl": null,
         "year": 2016
     },
     {
         "current": false,
         "end": "2017-04-21",
         "id": "mixit17",
-        "photoUrls": [
-            {
-                "name": "MiXiT 2017 official",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157680961511852"
-            },
-            {
-                "name": "MiXiT 2017 unofficial",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157683737519685"
-            }
-        ],
+        "photoUrls": [],
         "sponsors": [
-            {
-                "level": "GOLD",
-                "sponsorId": "Zenika Lyon",
-                "subscriptionDate": "2016-11-04"
-            },
             {
                 "level": "GOLD",
                 "sponsorId": "Sword",
@@ -593,13 +545,15 @@
                 "level": "VIDEO",
                 "sponsorId": "infoq",
                 "subscriptionDate": "2017-04-14"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "ZenikaLyon",
+                "subscriptionDate": "2016-11-04"
             }
         ],
         "start": "2017-04-20",
-        "videoUrl": {
-            "name": "video",
-            "url": "https://vimeo.com/215910469"
-        },
+        "videoUrl": null,
         "year": 2017
     },
     {
@@ -617,11 +571,6 @@
                 "level": "ECOCUP",
                 "sponsorId": "Saagie",
                 "subscriptionDate": "2017-09-06"
-            },
-            {
-                "level": "GOLD",
-                "sponsorId": "Zenika Lyon",
-                "subscriptionDate": "2017-10-06"
             },
             {
                 "level": "GOLD",
@@ -752,6 +701,11 @@
                 "level": "SILVER",
                 "sponsorId": "super.tilt",
                 "subscriptionDate": "2018-03-23"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "ZenikaLyon",
+                "subscriptionDate": "2017-10-06"
             }
         ],
         "start": "2018-04-19",
