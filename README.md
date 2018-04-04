@@ -72,6 +72,9 @@ cf push
 ### Copy PROD data to src/main/resources/data
  
 ```
-q
-
+curl https://mixitconf.org/api/blog | python -m json.tool > blog.json
+curl https://mixitconf.org/api/event | python -m json.tool > events.json
+curl https://mixitconf.org/api/user | python -m json.tool > users.json
+curl https://mixitconf.org/api/2018/talk | python -m json.tool > talks_2018.json
+git commit -a -m "Update data from PROD"
 ```
