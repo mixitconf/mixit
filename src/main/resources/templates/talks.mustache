@@ -45,12 +45,12 @@
                                     </div>{{/topic}}
                                 <h3 class="mxt-text--talktitle">
                                     {{#connected}}
-                                        <button class="mxt-img--favorite">
+                                        <button class="mxt-img--favorite" onclick="ctrl.favoriteToggle(event)" id="favorite-{{id}}">
                                             {{#favorite}}
-                                                <img src="/images/svg/favorites/mxt-favorite.svg" id="favorite-{{id}}" class="mxt-icon--cat__talks" onclick="ctrl.favoriteToggle(event)"/>
+                                                <img src="/images/svg/favorites/mxt-favorite.svg" class="mxt-icon--cat__talks" id="favorite-{{id}}"/>
                                             {{/favorite}}
                                             {{^favorite}}
-                                                <img src="/images/svg/favorites/mxt-favorite-non.svg" id="favorite-{{id}}" class="mxt-icon--cat__talks" onclick="ctrl.favoriteToggle(event)"/>
+                                                <img src="/images/svg/favorites/mxt-favorite-non.svg" class="mxt-icon--cat__talks" id="favorite-{{id}}"/>
                                             {{/favorite}}
                                         </button>
                                     {{/connected}}
