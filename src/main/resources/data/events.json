@@ -706,6 +706,11 @@
                 "level": "GOLD",
                 "sponsorId": "ZenikaLyon",
                 "subscriptionDate": "2017-10-06"
+            },
+            {
+                "level": "ACCESSIBILITY",
+                "sponsorId": "cgi",
+                "subscriptionDate": "2018-04-06"
             }
         ],
         "start": "2018-04-19",

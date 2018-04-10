@@ -335,14 +335,13 @@
         "language": "FRENCH",
         "photoUrls": [],
         "room": "UNKNOWN",
-        "slug": "wtfrance",
+        "slug": "action-de-groupe-contre-les-gafam",
         "speakerIds": [
-            "adc@laquadrature.net",
-            "okhin@laquadrature.net"
+            "adc@laquadrature.net"
         ],
         "start": "2018-04-19T13:50:00",
-        "summary": "La France fait partie des pays qui cherchent \u00e0 affaiblir le chiffrement,\r\nvia l'obligation d'installer des portes d\u00e9rob\u00e9es par exemple. Le\r\nchiffrement peut d\u00e9j\u00e0 en France \u00eatre un motif d'augmentation des peines,\r\nou en faire un motif de suspicion. Les d\u00e9clarations contre le\r\nchiffrement s\u2019encha\u00eenent et une r\u00e9flexion est en cours au niveau\r\neurop\u00e9en pour mettre en \u0153uvre une strat\u00e9gie commune au sein de l'Union\r\neurop\u00e9enne.\r\nNotre objectif est donc d'essayer de renverser la tendance et de montrer\r\nque les d\u00e9veloppeurs ont aussi un r\u00f4le politique important.",
-        "title": "WTFrance",
+        "summary": "La France fait partie des pays qui cherchent \u00e0 affaiblir le chiffrement, via l'obligation d'installer des portes d\u00e9rob\u00e9es par exemple. Le chiffrement peut d\u00e9j\u00e0 en France \u00eatre un motif d'augmentation des peines, ou en faire un motif de suspicion. Les d\u00e9clarations contre le chiffrement s\u2019encha\u00eenent et une r\u00e9flexion est en cours au niveau europ\u00e9en pour mettre en \u0153uvre une strat\u00e9gie commune au sein de l'Union europ\u00e9enne.\r\n\r\nNotre objectif est donc d'essayer de renverser la tendance et de montrer que les d\u00e9veloppeurs ont aussi un r\u00f4le politique important.",
+        "title": "Action de groupe contre les GAFAM",
         "topic": "hacktivism",
         "video": null
     },
@@ -959,6 +958,26 @@
         "video": null
     },
     {
+        "addedAt": "2018-01-30T12:47:04.567",
+        "description": "Ensuite, elle pr\u00e9sentera un concept r\u00e9cent, les m\u00e9canismes d'attention. Comme un humain scrutant une sc\u00e8ne par des mouvements oculaires, ces m\u00e9thodes permettent \u00e0 un r\u00e9seau de neurones de se focaliser sur une partie pertinente des donn\u00e9es d'entr\u00e9e : une partie d'un visage pour la reconnaissance faciale ou une partie d'une phrase pour la traduction.",
+        "end": "2018-04-20T11:00:00",
+        "event": "2018",
+        "format": "TALK",
+        "id": "5a706948840deb00141a7243",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM1",
+        "slug": "scruter-pour-mieux-comprendre-deep-learning-et-mecanismes-d-attention",
+        "speakerIds": [
+            "flonks@gmail.com"
+        ],
+        "start": "2018-04-20T10:10:00",
+        "summary": "L\u2019apprentissage profond de repr\u00e9sentations (le Deep Learning) est une famille de m\u00e9thodes du domaine \u00ab intelligence artificielle \u00bb permettant d\u2019apprendre de connaissances \u00e0 partir de masses de donn\u00e9es (textes, images, vid\u00e9os etc.). Plus pr\u00e9cis\u00e9ment, ces mod\u00e8les permettent de faire des pr\u00e9dictions sur des nouvelles donn\u00e9es. Cette intervention passera en revue l\u2019historique de cette th\u00e9matique, les enjeux majeurs et quelques techniques cl\u00e9. ",
+        "title": "Scruter pour mieux comprendre : Deep Learning et m\u00e9canismes d'attention",
+        "topic": "design",
+        "video": null
+    },
+    {
         "addedAt": "2018-01-30T12:47:02.908",
         "description": "C'est ce que nous allons vous montrer \u00e0 travers ce live coding. Nous d\u00e9velopperons pas \u00e0 pas une application \u00e0 base de Lambda, de NoSQL (DynamoDB) et d'API Gateway pour enfin la d\u00e9ployer dans le cloud AWS.  \r\n\r\nSi vous vous demandez comment coder une application robuste, test\u00e9e, scalable en vous concentrant sur les fonctionnalit\u00e9s et non l'infrastructure, cette conf\u00e9rence est faite pour vous :)",
         "end": "2018-04-20T12:00:00",
@@ -1395,26 +1414,6 @@
         "summary": "Les cookies HTTP sont partout ! Pas une journ\u00e9e sans qu\u2019un site nous demande \u201cd\u2019accepter les cookies\u201d. Rares sont les projets Web qui ne les utilisent pas et pourtant leur fonctionnement nous \u00e9chappe trop souvent.",
         "title": "#RetourAuxSources : Les cookies HTTP",
         "topic": "tech",
-        "video": null
-    },
-    {
-        "addedAt": "2018-01-30T12:47:04.567",
-        "description": "Ensuite, elle pr\u00e9sentera un concept r\u00e9cent, les m\u00e9canismes d'attention. Comme un humain scrutant une sc\u00e8ne par des mouvements oculaires, ces m\u00e9thodes permettent \u00e0 un r\u00e9seau de neurones de se focaliser sur une partie pertinente des donn\u00e9es d'entr\u00e9e : une partie d'un visage pour la reconnaissance faciale ou une partie d'une phrase pour la traduction.",
-        "end": "2018-04-20T16:00:00",
-        "event": "2018",
-        "format": "TALK",
-        "id": "5a706948840deb00141a7243",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "ROOM2",
-        "slug": "scruter-pour-mieux-comprendre-deep-learning-et-mecanismes-d-attention",
-        "speakerIds": [
-            "flonks@gmail.com"
-        ],
-        "start": "2018-04-20T15:10:00",
-        "summary": "L\u2019apprentissage profond de repr\u00e9sentations (le Deep Learning) est une famille de m\u00e9thodes du domaine \u00ab intelligence artificielle \u00bb permettant d\u2019apprendre de connaissances \u00e0 partir de masses de donn\u00e9es (textes, images, vid\u00e9os etc.). Plus pr\u00e9cis\u00e9ment, ces mod\u00e8les permettent de faire des pr\u00e9dictions sur des nouvelles donn\u00e9es. Cette intervention passera en revue l\u2019historique de cette th\u00e9matique, les enjeux majeurs et quelques techniques cl\u00e9. ",
-        "title": "Scruter pour mieux comprendre : Deep Learning et m\u00e9canismes d'attention",
-        "topic": "design",
         "video": null
     },
     {

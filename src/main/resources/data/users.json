@@ -1313,7 +1313,7 @@
             "ENGLISH": "D\u00e9veloppeur et fier de l'\u00eatre depuis 1997. Contributeur passionn\u00e9 \u00e0 StackOverflow.com.",
             "FRENCH": "D\u00e9veloppeur et fier de l'\u00eatre depuis 1997. Contributeur passionn\u00e9 \u00e0 StackOverflow.com."
         },
-        "email": null,
+        "email": "4DED2tMZyfqf4KmBUvqBSdRWU3E6Qu1lo9YwiTm6L2A=",
         "emailHash": "dbdda0ab21995afb3a5888310b8d166b",
         "firstname": "Jean-baptiste",
         "lastname": "Nizet",
@@ -1322,8 +1322,8 @@
         "login": "jbnizet",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.465"
+        "token": "92508435a6ff",
+        "tokenExpiration": "2018-04-11T18:26:15.185"
     },
     {
         "company": "",
@@ -4510,10 +4510,10 @@
             }
         ],
         "login": "115428158670419649279",
-        "photoUrl": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAA1AAAAJGE5YjY4OTk2LTUwZWMtNDYxZC1iMTIyLWIyY2UyODg5YjU1Mg.jpg",
+        "photoUrl": "https://mixitconf.org/images/speakers/detant.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-01-30T23:42:36.715"
+        "tokenExpiration": "2018-04-05T07:33:16.003"
     },
     {
         "company": "Data2Viz",
@@ -4629,8 +4629,8 @@
         "login": "pyves",
         "photoUrl": "https://framapic.org/CVM7dhDQGhJ2/HKk0019blube.png",
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-02T07:41:57.611"
+        "token": "588b1512edac",
+        "tokenExpiration": "2018-04-10T13:19:26.576"
     },
     {
         "company": null,
@@ -5011,7 +5011,7 @@
         "company": null,
         "description": {
             "ENGLISH": "I use a computer with [Ninja Squad](http://ninja-squad.fr) by day, and I tweet for MiXiT by night.",
-            "FRENCH": "Je fais de l&#39;ordinateur avec [Ninja Squad](http://ninja-squad.fr) le jour, et des tweets pour MiXiT la nuit."
+            "FRENCH": "Je fais de l'ordinateur avec [Ninja Squad](http://ninja-squad.fr) le jour, et des tweets pour MiXiT la nuit."
         },
         "email": "DhmGGiyiCRiTPrU+B7eG8VfZ0HmNd3BZknjMEWnbTdM=",
         "emailHash": "1305aa79d71e887dabb8f698c4c1ff9f",
@@ -5031,8 +5031,8 @@
         "login": "clacote",
         "photoUrl": null,
         "role": "STAFF_IN_PAUSE",
-        "token": "1d5dbc9a8b0f",
-        "tokenExpiration": "2018-04-05T23:04:18.706"
+        "token": "empty-token",
+        "tokenExpiration": "2018-04-04T09:26:02.885"
     },
     {
         "company": null,
@@ -5107,8 +5107,8 @@
         "login": "guillaumeehret",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "d8a2ac0644bb",
-        "tokenExpiration": "2018-04-06T15:29:11.257"
+        "token": "4a751bdde1ba",
+        "tokenExpiration": "2018-04-12T11:30:09.578"
     },
     {
         "company": null,
@@ -6699,7 +6699,7 @@
             "ENGLISH": "Chef de projet technique chez Sogelink",
             "FRENCH": "Chef de projet technique chez Sogelink"
         },
-        "email": null,
+        "email": "+u85izCX80qPV4JJsIdIMd/rrQzZMiJztDjDS877G64=",
         "emailHash": "798bd095469753c11bb61a782669de97",
         "firstname": "Maxime",
         "lastname": "Werlen",
@@ -6708,8 +6708,8 @@
         "login": "mwerlen",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.476"
+        "token": "782b07a6b0c6",
+        "tokenExpiration": "2018-04-07T18:56:55.599"
     },
     {
         "company": "",
@@ -10821,7 +10821,7 @@
             "ENGLISH": "D\u00e9veloppeur passionn\u00e9, en constante recherche de m\u00e9thodes permettant d'augmenter l'esprit d'\u00e9quipe et la qualit\u00e9 des applications produites.",
             "FRENCH": "D\u00e9veloppeur passionn\u00e9, en constante recherche de m\u00e9thodes permettant d'augmenter l'esprit d'\u00e9quipe et la qualit\u00e9 des applications produites."
         },
-        "email": null,
+        "email": "FylF0TIPCjYlIp22Pj1pWPFHCzo+n0x3bXP0vNT72hg=",
         "emailHash": "ff859cd4391c00d3e8f577828bef1cf0",
         "firstname": "Herv\u00e9",
         "lastname": "Klimezak",
@@ -10830,8 +10830,8 @@
         "login": "hklimezak",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.484"
+        "token": "f55e2ba7c1aa",
+        "tokenExpiration": "2018-04-11T15:05:25.532"
     },
     {
         "company": "",
@@ -14745,7 +14745,7 @@
             "ENGLISH": "D\u00e9veloppeur PHP @Decitre Interactive\n\n\n",
             "FRENCH": "D\u00e9veloppeur PHP @Decitre Interactive\n\n\n"
         },
-        "email": null,
+        "email": "YA+Uu3maEgmKYiyQjhskgOLWDI5tBfmX44kW51O5aLs=",
         "emailHash": "d962ede646a73614bd7014beb8850019",
         "firstname": "S\u00e9bastien",
         "lastname": "Rogier",
@@ -14754,8 +14754,8 @@
         "login": "srogier",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.491"
+        "token": "20effc88db5b",
+        "tokenExpiration": "2018-04-11T11:04:49.51"
     },
     {
         "company": "",
@@ -16653,7 +16653,7 @@
             "ENGLISH": "Responsable applicatif",
             "FRENCH": "Responsable applicatif"
         },
-        "email": null,
+        "email": "RZRGC/1NcRlf5t2P0mxw9RldCYuRnHh4FC3RlDVPzmE=",
         "emailHash": "0281e8fc81e0394ccc6d125d5172ac8a",
         "firstname": "Xavier",
         "lastname": "Michel",
@@ -16662,8 +16662,8 @@
         "login": "xaviermichel",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.495"
+        "token": "3597da8a8726",
+        "tokenExpiration": "2018-04-11T14:46:04.366"
     },
     {
         "company": "",
@@ -16707,7 +16707,7 @@
             "ENGLISH": "Lead Dev chez Atos Worldline",
             "FRENCH": "Lead Dev chez Atos Worldline"
         },
-        "email": null,
+        "email": "FTgHeN/7dOcTRigtg5YtPAQ4QfHpY9L3+BRIHcO3ods=",
         "emailHash": "fd4df10aa95aac4242f3054f2d49fbe9",
         "firstname": "Julien",
         "lastname": "Villanti",
@@ -16716,8 +16716,8 @@
         "login": "julien.villanti",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.495"
+        "token": "18e1900e4ace",
+        "tokenExpiration": "2018-04-11T06:53:27.517"
     },
     {
         "company": "",
@@ -18822,8 +18822,8 @@
         "login": "Bilgetz",
         "photoUrl": null,
         "role": "USER",
-        "token": "a2ea5d12-6d4c",
-        "tokenExpiration": "2018-02-05T16:14:49.423"
+        "token": "0f82d3e82e6c",
+        "tokenExpiration": "2018-04-11T11:15:51.832"
     },
     {
         "company": "",
@@ -31583,7 +31583,7 @@
     {
         "company": "",
         "description": {},
-        "email": null,
+        "email": "y13CQfFIi/j4fAMvdJdhKFxbLB2yMPk5KzAHQiSw/4A=",
         "emailHash": "467ee02ee274fe0691e449e3314f50d4",
         "firstname": "Sylvain",
         "lastname": "Pras",
@@ -31592,8 +31592,8 @@
         "login": "181133681",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.523"
+        "token": "a485cf7acda3",
+        "tokenExpiration": "2018-04-11T11:31:49.391"
     },
     {
         "company": "",
@@ -38393,8 +38393,8 @@
         "login": "39215433",
         "photoUrl": null,
         "role": "USER",
-        "token": "1023a3e1-678b",
-        "tokenExpiration": "2018-01-21T01:38:09.742"
+        "token": "92b12ef0940e",
+        "tokenExpiration": "2018-04-11T20:02:13.528"
     },
     {
         "company": "AGILETOYOU",
@@ -38507,10 +38507,10 @@
             }
         ],
         "login": "george@mand.is",
-        "photoUrl": "http://george.mand.is.s3.amazonaws.com/profile-smaller.jpg",
+        "photoUrl": "https://mixitconf.org/images/speakers/george.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-01-30T23:42:36.871"
+        "tokenExpiration": "2018-04-05T07:35:22.826"
     },
     {
         "company": "Atlassian",
@@ -38631,8 +38631,8 @@
     {
         "company": null,
         "description": {
-            "ENGLISH": "I\u2019m a software tester from Belgium who helps shape teams and testers to improve on their work and their understanding of testing. I\u2019m an organizer of BREWT: the Belgian Peer conference & a test meetup in his hometown: Gent. The creative brain behind Test Sphere and speaker at Test Bash Manchester and Eurostar 2016.\nMy dream is to become a test coach for people that nobody believes in anymore or no longer believe in themselves. People that have motivation and will, but no luck. I want to tap into that potential and give them the opportunity to become awesome tester.",
-            "FRENCH": "I\u2019m a software tester from Belgium who helps shape teams and testers to improve on their work and their understanding of testing. I\u2019m an organizer of BREWT: the Belgian Peer conference & a test meetup in his hometown: Gent. The creative brain behind Test Sphere and speaker at Test Bash Manchester and Eurostar 2016.\nMy dream is to become a test coach for people that nobody believes in anymore or no longer believe in themselves. People that have motivation and will, but no luck. I want to tap into that potential and give them the opportunity to become awesome tester."
+            "ENGLISH": "I\u2019m a software tester from Belgium who helps shape teams and testers to improve on their work and their understanding of testing. I\u2019m an organizer of BREWT: the Belgian Peer conference & a test meetup in his hometown: Gent. The creative brain behind Test Sphere and speaker at Test Bash Manchester and Eurostar 2016.\r\nMy dream is to become a test coach for people that nobody believes in anymore or no longer believe in themselves. People that have motivation and will, but no luck. I want to tap into that potential and give them the opportunity to become awesome tester.",
+            "FRENCH": "I\u2019m a software tester from Belgium who helps shape teams and testers to improve on their work and their understanding of testing. I\u2019m an organizer of BREWT: the Belgian Peer conference & a test meetup in his hometown: Gent. The creative brain behind Test Sphere and speaker at Test Bash Manchester and Eurostar 2016.\r\nMy dream is to become a test coach for people that nobody believes in anymore or no longer believe in themselves. People that have motivation and will, but no luck. I want to tap into that potential and give them the opportunity to become awesome tester."
         },
         "email": "E3CEgsIdz/LxArfSl7+flHuWbkLMgjm3uLIj0y70GJE=",
         "emailHash": null,
@@ -38641,10 +38641,10 @@
         "legacyId": null,
         "links": [],
         "login": "Berenvd@gmail.com",
-        "photoUrl": "https://media-exp2.licdn.com/media/AAEAAQAAAAAAAAe9AAAAJDcyYTAwNTgxLTU0ZDEtNGZlNS1hOWU3LTJhMGMwYWY2Y2ZkMg.jpg",
+        "photoUrl": "https://mixitconf.org/images/speakers/van_daele.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-01-30T23:42:36.91"
+        "tokenExpiration": "2018-04-05T07:38:04.698"
     },
     {
         "company": "freelance",
@@ -38931,10 +38931,10 @@
             }
         ],
         "login": "roland.flemm@gmail.com",
-        "photoUrl": "https://media-exp2.licdn.com/media/AAIA_wDGAAAAAQAAAAAAAAuzAAAAJDlhMWU5OTRkLWQ0M2EtNGIwMS1iZTA1LWYzODE5NmNlNTU0MQ.jpg",
+        "photoUrl": "https://mixitconf.org/images/speakers/flemm.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T08:07:58.11"
+        "tokenExpiration": "2018-04-08T16:11:23.731"
     },
     {
         "company": null,
@@ -38962,10 +38962,10 @@
             }
         ],
         "login": "emile@silvis.co.za",
-        "photoUrl": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/2/000/2c1/0f6/33f0b58.jpg",
+        "photoUrl": "https://mixitconf.org/images/speakers/emile.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-01-30T23:42:36.964"
+        "tokenExpiration": "2018-04-05T07:33:33.376"
     },
     {
         "company": "Zenika",
@@ -39066,16 +39066,16 @@
             }
         ],
         "login": "jonathan.scher",
-        "photoUrl": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/7/005/039/0a6/3782c4e.jpg",
+        "photoUrl": "https://mixitconf.org/images/speakers/scher.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-05T12:48:05.274"
+        "tokenExpiration": "2018-04-05T07:36:48.13"
     },
     {
         "company": "Lucca / GDG Nantes",
         "description": {
-            "ENGLISH": "GDE Web Technology, je travaille pour Lucca en tant que responsable des composants des produits.\n\nEn dehors du travail, je suis co-fondateur du GDG Nantes, organisateur du DevFest Nantes, co-cr\u00e9ateur des Nantes Wit et organisateur de Devoxx4Kids\n\nRetrouvez l'ensemble de mes contributions sur https://github.com/jefBinomed",
-            "FRENCH": "GDE Web Technology, je travaille pour Lucca en tant que responsable des composants des produits.\n\nEn dehors du travail, je suis co-fondateur du GDG Nantes, organisateur du DevFest Nantes, co-cr\u00e9ateur des Nantes Wit et organisateur de Devoxx4Kids\n\nRetrouvez l'ensemble de mes contributions sur https://github.com/jefBinomed"
+            "ENGLISH": "GDE Web Technology, je travaille pour Lucca en tant que responsable des composants des produits.\r\n\r\nEn dehors du travail, je suis co-fondateur du GDG Nantes, organisateur du DevFest Nantes, co-cr\u00e9ateur des Nantes Wit et organisateur de Devoxx4Kids\r\n\r\nRetrouvez l'ensemble de mes contributions sur https://github.com/jefBinomed",
+            "FRENCH": "GDE Web Technology, je travaille pour Lucca en tant que responsable des composants des produits.\r\n\r\nEn dehors du travail, je suis co-fondateur du GDG Nantes, organisateur du DevFest Nantes, co-cr\u00e9ateur des Nantes Wit et organisateur de Devoxx4Kids\r\n\r\nRetrouvez l'ensemble de mes contributions sur https://github.com/jefBinomed"
         },
         "email": "dGIGDvr2Eo5Vbex69rGgM/In2FddTqMQwvWu+3+uX78=",
         "emailHash": null,
@@ -39097,10 +39097,10 @@
             }
         ],
         "login": "jefBinomed",
-        "photoUrl": "https://pbs.twimg.com/profile_images/821731886431174657/YamrWrOR_400x400.jpg",
+        "photoUrl": "https://mixitconf.org/images/speakers/garreau.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-01-30T23:42:37.003"
+        "tokenExpiration": "2018-04-05T07:33:53.795"
     },
     {
         "company": null,
@@ -39591,10 +39591,10 @@
             }
         ],
         "login": "jquille@azae.net",
-        "photoUrl": "http://ajiro.fr/assets/images/people/quille_julie.jpg",
+        "photoUrl": "https://mixitconf.org/images/speakers/quille.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-01-30T23:42:37.114"
+        "tokenExpiration": "2018-04-05T07:36:27.643"
     },
     {
         "company": "Aza\u00e9",
@@ -39622,10 +39622,10 @@
             }
         ],
         "login": "tclavier@azae.net",
-        "photoUrl": "http://ajiro.fr/assets/images/people/clavier_thomas.jpg",
+        "photoUrl": "https://mixitconf.org/images/speakers/clavier.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-01-30T23:42:37.118"
+        "tokenExpiration": "2018-04-05T07:32:54.073"
     },
     {
         "company": "Toccata Ing\u00e9nierie",
@@ -39992,10 +39992,10 @@
             }
         ],
         "login": "azertypow@gmail.com",
-        "photoUrl": "http://data2viz.io/images/photo/nico@2x.png",
+        "photoUrl": "https://mixitconf.org/images/speakers/baldran.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T08:29:35.283"
+        "tokenExpiration": "2018-04-05T07:31:46.519"
     },
     {
         "company": "Soat",
@@ -40046,16 +40046,16 @@
             }
         ],
         "login": "smogo@maiwann.net",
-        "photoUrl": "http://www.maiwann.net/img/photo_profil.jpg",
+        "photoUrl": "https://mixitconf.org/images/speakers/lenoir.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-01-30T23:42:37.373"
+        "tokenExpiration": "2018-04-05T07:36:12.244"
     },
     {
         "company": "Youtopie",
         "description": {
-            "ENGLISH": "En 2015, apr\u00e8s 15 ans dans l'industrie, j'ai embrass\u00e9 l'Agilit\u00e9 en amenant mon \u00e9quipe sur le chemin de la gouvernance partag\u00e9e.\nPlusieurs exp\u00e9riences de r\u00e9organisations m'avaient amen\u00e9e au constat que les outilq et processus sont trop souvent privil\u00e9gi\u00e9s par rapport \u00e0 l'accompagnement des Hommes. \nDans ce chemin vers l'Agilit\u00e9, nous avons collectivement appris qu'il ne suffit pas de vouloir changer pour r\u00e9ussir et que chacun doit \u00eatre soutenu dans son \u00e9volution.\nA ce jour, j'ai rejoint la soci\u00e9t\u00e9 Youtopie pour me consacrer enti\u00e8rement \u00e0 l'accompagnement des Hommes.",
-            "FRENCH": "En 2015, apr\u00e8s 15 ans dans l'industrie, j'ai embrass\u00e9 l'Agilit\u00e9 en amenant mon \u00e9quipe sur le chemin de la gouvernance partag\u00e9e.\nPlusieurs exp\u00e9riences de r\u00e9organisations m'avaient amen\u00e9e au constat que les outilq et processus sont trop souvent privil\u00e9gi\u00e9s par rapport \u00e0 l'accompagnement des Hommes. \nDans ce chemin vers l'Agilit\u00e9, nous avons collectivement appris qu'il ne suffit pas de vouloir changer pour r\u00e9ussir et que chacun doit \u00eatre soutenu dans son \u00e9volution.\nA ce jour, j'ai rejoint la soci\u00e9t\u00e9 Youtopie pour me consacrer enti\u00e8rement \u00e0 l'accompagnement des Hommes."
+            "ENGLISH": "En 2015, apr\u00e8s 15 ans dans l'industrie, j'ai embrass\u00e9 l'Agilit\u00e9 en amenant mon \u00e9quipe sur le chemin de la gouvernance partag\u00e9e.\r\nPlusieurs exp\u00e9riences de r\u00e9organisations m'avaient amen\u00e9e au constat que les outilq et processus sont trop souvent privil\u00e9gi\u00e9s par rapport \u00e0 l'accompagnement des Hommes. \r\nDans ce chemin vers l'Agilit\u00e9, nous avons collectivement appris qu'il ne suffit pas de vouloir changer pour r\u00e9ussir et que chacun doit \u00eatre soutenu dans son \u00e9volution.\r\nA ce jour, j'ai rejoint la soci\u00e9t\u00e9 Youtopie pour me consacrer enti\u00e8rement \u00e0 l'accompagnement des Hommes.",
+            "FRENCH": "En 2015, apr\u00e8s 15 ans dans l'industrie, j'ai embrass\u00e9 l'Agilit\u00e9 en amenant mon \u00e9quipe sur le chemin de la gouvernance partag\u00e9e.\r\nPlusieurs exp\u00e9riences de r\u00e9organisations m'avaient amen\u00e9e au constat que les outilq et processus sont trop souvent privil\u00e9gi\u00e9s par rapport \u00e0 l'accompagnement des Hommes. \r\nDans ce chemin vers l'Agilit\u00e9, nous avons collectivement appris qu'il ne suffit pas de vouloir changer pour r\u00e9ussir et que chacun doit \u00eatre soutenu dans son \u00e9volution.\r\nA ce jour, j'ai rejoint la soci\u00e9t\u00e9 Youtopie pour me consacrer enti\u00e8rement \u00e0 l'accompagnement des Hommes."
         },
         "email": "3jERNiqVnDgylnjY89UZxT4PYGayLO8RTuqBtI0lbqk=",
         "emailHash": null,
@@ -40069,10 +40069,10 @@
             }
         ],
         "login": "njeauffroy@gmail.com",
-        "photoUrl": "https://media-exp2.licdn.com/media/AAMAAQDGAAwAAQAAAAAAAA-cAAAAJDAzZWUzNTg3LTc1OGItNDgxMS05Nzg2LWZiMDJhNDZlZjRmNQ.jpg",
+        "photoUrl": "https://mixitconf.org/images/speakers/jeauffroy.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-01-30T23:42:37.37"
+        "tokenExpiration": "2018-04-05T07:35:52.092"
     },
     {
         "company": "Leboncoin",
@@ -40087,10 +40087,10 @@
         "legacyId": null,
         "links": [],
         "login": "rogelio.canedo@gmail.com",
-        "photoUrl": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAANHAAAAJGVhMjllNzRlLTkzNzQtNDJiYi1hOWE0LTYzMDRlZTUwYjY0Zg.jpg",
+        "photoUrl": "https://mixitconf.org/images/speakers/canedo.jpg",
         "role": "USER",
-        "token": "5c4e2ec4973d",
-        "tokenExpiration": "2018-03-06T15:09:54.707"
+        "token": "empty-token",
+        "tokenExpiration": "2018-04-05T07:32:10.282"
     },
     {
         "company": "Google",
@@ -40360,7 +40360,7 @@
         "email": "EcahMmRZ8i3jptNXF+oqj/DZaxQlJugJn1NmyDX7w5E=",
         "emailHash": null,
         "firstname": "Agn\u00e8s",
-        "lastname": "de Cornulier",
+        "lastname": " ",
         "legacyId": null,
         "links": [
             {
@@ -40372,7 +40372,7 @@
         "photoUrl": "https://crypto.quebec/wp-content/uploads/2017/09/lqdnsweatshirt-825x510.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-01-30T23:42:37.404"
+        "tokenExpiration": "2018-04-05T06:13:42.112"
     },
     {
         "company": "La Quadrature du Net",
@@ -40560,8 +40560,8 @@
         "login": "testeacher",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-02-04T10:22:20.934"
+        "token": "c99093482a2a",
+        "tokenExpiration": "2018-04-08T13:06:30.541"
     },
     {
         "company": "Xebia",
@@ -40670,10 +40670,10 @@
             }
         ],
         "login": "r.souria@gmail.com",
-        "photoUrl": "https://media-exp2.licdn.com/media/AAEAAQAAAAAAAAo2AAAAJDk0NDlhMTZkLWE0YjctNGFjOC04NzQ3LWM5YjFhNGU5NWJiZA.jpg",
+        "photoUrl": "https://mixitconf.org/images/speakers/sourianarayanane.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-02-01T15:15:26.342"
+        "tokenExpiration": "2018-04-05T07:37:27.458"
     },
     {
         "company": "OCTO Technology",
@@ -41118,8 +41118,8 @@
     {
         "company": "Zenika",
         "description": {
-            "ENGLISH": "Zenika est un cabinet sp\u00e9cialis\u00e9 dans l\u2019architecture informatique et les m\u00e9thodes Agiles poss\u00e9dant une triple comp\u00e9tence de conseil, r\u00e9alisation et formation. Nos clients sont de grands comptes, des PME ou encore des startups, dans tous secteurs d\u2019activit\u00e9s. Le Web et la Mobilit\u00e9, le Big Data, le Craftsmanship, DevOps, l'IoT, l'Innovation et l'Agilit\u00e9 sont nos principaux domaines d'expertise. Nous nous classons, pour notre quatri\u00e8me participation, au 3\u00e8 rang du palmar\u00e8s Great Place to Work 2017 des entreprises de moins de 500 salari\u00e9s.",
-            "FRENCH": "Zenika est un cabinet sp\u00e9cialis\u00e9 dans l\u2019architecture informatique et les m\u00e9thodes Agiles poss\u00e9dant une triple comp\u00e9tence de conseil, r\u00e9alisation et formation. Nos clients sont de grands comptes, des PME ou encore des startups, dans tous secteurs d\u2019activit\u00e9s. Le Web et la Mobilit\u00e9, le Big Data, le Craftsmanship, DevOps, l'IoT, l'Innovation et l'Agilit\u00e9 sont nos principaux domaines d'expertise. Nous nous classons, pour notre quatri\u00e8me participation, au 3\u00e8 rang du palmar\u00e8s Great Place to Work 2017 des entreprises de moins de 500 salari\u00e9s."
+            "ENGLISH": "Created in 2006, Zenika is a technological, managerial and organizational innovation firm that supports companies in their digital transformation. Zenika is the link between the organic world and the digital world and is positioned as a &#34;One Stop Shop&#34; for its customers.\r\n\r\nFrom the user interface (Web, Mobile, Voice, IoT, VR) to the data and its usage, with agility in mind, Zenika brings together various profiles on the following areas of expertise: Java, Big Data, Web, Mobility, IoT, DevOps, Craftsmanship, Agility, Security and organizational transformations. After the opening of agencies in Paris, Lyon, Rennes, Nantes, Lille, Bordeaux, Singapore and Montreal, the group wishes to reinforce its national and international influence.\r\n\r\nIn 2018, Zenika rose to 1st place in the Great Place to Work 2018 France Awards, thanks to its 336 Zenikeans who contribute every day.",
+            "FRENCH": "En 2018, Zenika se hisse \u00e0 la 1\u00e8re place du Palmar\u00e8s Great Place to Work 2018 France gr\u00e2ce \u00e0 ses 336 z\u00e9nik\u00e9ens qui y contribuent chaque jour.\r\n\r\nCr\u00e9\u00e9 en 2006, Zenika est un cabinet d&#39;innovation technologique, manag\u00e9riale et organisationnelle, qui accompagne les entreprises dans leur transformation num\u00e9rique. Zenika fait le lien entre le monde organique et le monde num\u00e9rique et se positionne comme un &#34;One Stop Shop&#34;\u200b pour ses clients.\r\n\r\nDepuis l&#39;interface (Web, Mobile, Voix, Objet Connect\u00e9, RA/RV) jusqu&#39;\u00e0 la data et son usage, le tout en mode agile, Zenika regroupe des profils vari\u00e9s sur les domaines d&#39;expertise suivants : Java, Big Data, Web, Mobilit\u00e9, IoT, DevOps, Craftsmanship, Agilit\u00e9, s\u00e9curit\u00e9 et transformation des organisations. Apr\u00e8s les ouvertures successives des agences de Paris, Lyon, Rennes, Nantes, Lille, Bordeaux, Singapour et Montr\u00e9al, le groupe souhaite renforcer son rayonnement national et international."
         },
         "email": "K+1NYEYquxbo0DpilsNBbPHpnVfYCjPu1tzmeVqHs+k=",
         "emailHash": null,
@@ -41128,26 +41128,74 @@
         "legacyId": 10,
         "links": [
             {
-                "name": "Le blog technique",
+                "name": "Zenika",
+                "url": "http://www.zenika.com"
+            },
+            {
+                "name": "Le blog technique (Fran\u00e7ais)",
                 "url": "http://blog.zenika.com"
             },
             {
-                "name": "Les formations Inter \u00e0 Lyon",
-                "url": "http://www.zenika.com/Formation/prochaines-formations.html?agency=3"
+                "name": "Le blog technique (Anglais)",
+                "url": "https://medium.zenika.com/"
             },
             {
-                "name": "Formations - Le catalogue complet",
-                "url": "http://www.zenika.com/Formation/notre-catalogue-formation.html"
-            },
-            {
-                "name": "Zenika",
-                "url": "http://www.zenika.com"
+                "name": "Les prochaines formations",
+                "url": "https://training.zenika.com/fr/next-sessions"
             }
         ],
         "login": "ZenikaLyon",
-        "photoUrl": "images/sponsors/logo-zenika.png",
+        "photoUrl": "https://mixitconf.org/images/sponsors/logo-zenika.png",
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-04-03T21:33:23.556"
+        "token": "9143f4bd09e2",
+        "tokenExpiration": "2018-04-12T10:16:44.49"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "yfQWq7ZoVi/n54sP8AD9Mq0N74rexUPqt30K/P+MEzg=",
+        "emailHash": null,
+        "firstname": "Matthieu",
+        "lastname": "Napoli",
+        "legacyId": null,
+        "links": [],
+        "login": "matthieu",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "c506471ff7fc",
+        "tokenExpiration": "2018-04-11T11:17:10.504"
+    },
+    {
+        "company": "Kelkoo",
+        "description": {
+            "ENGLISH": "Dev Java | Scala at Kelkoo",
+            "FRENCH": "Dev Java | Scala chez Kelkoo"
+        },
+        "email": "SIWaVKwly5tWNpmzufZFtqhtQrwIDLByu4b7Heglvvw=",
+        "emailHash": "c7f6a62906eded42d55d86126a5da446",
+        "firstname": "Lorie",
+        "lastname": "Pisicchio",
+        "legacyId": null,
+        "links": [],
+        "login": "lorie.pisicchio",
+        "photoUrl": null,
+        "role": "USER",
+        "token": "b55bec6fda35",
+        "tokenExpiration": "2018-04-12T06:40:14.99"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "u2r5Xq2muNaKvTx2GZ7oLQ==",
+        "emailHash": null,
+        "firstname": "Clement",
+        "lastname": "Gibaud",
+        "legacyId": null,
+        "links": [],
+        "login": "cg",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "dd9c2162e92c",
+        "tokenExpiration": "2018-04-12T07:58:53.072"
     }
 ]
