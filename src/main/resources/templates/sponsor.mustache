@@ -1,10 +1,19 @@
 <div class="row align-middle mxt-wrapper--row" id="{{sponsor.login}}">
     <div class="small-12 medium-4 columns text-center">
-        <picture>
-            {{#sponsor.logoWebpUrl}}<source srcset="{{imagepath}}{{sponsor.logoWebpUrl}}" type=" image/webp" alt="{{sponsor.company}}" class="mxt-img--sponsors">{{/sponsor.logoWebpUrl}}
-            <source srcset="{{imagepath}}{{sponsor.photoUrl}}" type="{{sponsor.logoType}}" alt="{{sponsor.company}}" class="mxt-img--sponsors">
-            <img src="{{imagepath}}{{sponsor.photoUrl}}" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}} alt="{{sponsor.company}}" class="mxt-img--sponsors">
-        </picture>
+        {{#isAbsoluteLogo}}
+            <picture>
+                {{#sponsor.logoWebpUrl}}<source srcset="{{sponsor.logoWebpUrl}}" type="image/webp" alt="{{sponsor.company}}" class="mxt-img--sponsors">{{/sponsor.logoWebpUrl}}
+                <source srcset="{{sponsor.photoUrl}}" type="{{sponsor.logoType}}" alt="{{sponsor.company}}" class="mxt-img--sponsors">
+                <img src="{{sponsor.photoUrl}}" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}} alt="{{sponsor.company}}" class="mxt-img--sponsors">
+            </picture>
+        {{/isAbsoluteLogo}}
+        {{^isAbsoluteLogo}}
+            <picture>
+                {{#sponsor.logoWebpUrl}}<source srcset="{{imagepath}}{{sponsor.logoWebpUrl}}" type=" image/webp" alt="{{sponsor.company}}" class="mxt-img--sponsors">{{/sponsor.logoWebpUrl}}
+                <source srcset="{{imagepath}}{{sponsor.photoUrl}}" type="{{sponsor.logoType}}" alt="{{sponsor.company}}" class="mxt-img--sponsors">
+                <img src="{{imagepath}}{{sponsor.photoUrl}}" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}} alt="{{sponsor.company}}" class="mxt-img--sponsors">
+            </picture>
+        {{/isAbsoluteLogo}}
     </div>
     <div class="small-12 medium-8 columns">
         <h3 class="subheader">{{sponsor.company}}</h3>

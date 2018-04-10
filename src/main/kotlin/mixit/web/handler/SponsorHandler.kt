@@ -107,7 +107,8 @@ class SponsorDto(
         var company: String,
         var photoUrl: String,
         val logoType: String?,
-        val logoWebpUrl: String? = null
+        val logoWebpUrl: String? = null,
+        val isAbsoluteLogo: Boolean = photoUrl.startsWith("http")
 )
 
 fun EventSponsoring.toDto(sponsor: User, language: Language, markdownConverter: MarkdownConverter) =

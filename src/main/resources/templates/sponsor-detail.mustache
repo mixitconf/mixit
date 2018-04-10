@@ -1,7 +1,14 @@
 <a href="/sponsors/{{year}}/#{{#urlEncode}}{{login}}{{/urlEncode}}">
     <picture>
-        {{#logoWebpUrl}}<source srcset="../{{logoWebpUrl}}" type="image/webp" alt="{{company}}" class="mxt-img--sponsors-home">{{/logoWebpUrl}}
-        <source srcset="../{{photoUrl}}" type="{{logoType}}" alt="{{company}}" class="mxt-img--sponsors-home">
-        <img src="../{{photoUrl}}"  alt="{{company}}" class="mxt-img--sponsors-home">
+        {{#isAbsoluteLogo}}
+            {{#logoWebpUrl}}<source srcset="{{logoWebpUrl}}" type="image/webp" alt="{{company}}" class="mxt-img--sponsors-home">{{/logoWebpUrl}}
+            <source srcset="{{photoUrl}}" type="{{logoType}}" alt="{{company}}" class="mxt-img--sponsors-home">
+            <img src="{{photoUrl}}"  alt="{{company}}" class="mxt-img--sponsors-home">
+        {{/isAbsoluteLogo}}
+        {{^isAbsoluteLogo}}
+            {{#logoWebpUrl}}<source srcset="../{{logoWebpUrl}}" type="image/webp" alt="{{company}}" class="mxt-img--sponsors-home">{{/logoWebpUrl}}
+            <source srcset="../{{photoUrl}}" type="{{logoType}}" alt="{{company}}" class="mxt-img--sponsors-home">
+            <img src="../{{photoUrl}}"  alt="{{company}}" class="mxt-img--sponsors-home">
+        {{/isAbsoluteLogo}}
     </picture>
 </a>
