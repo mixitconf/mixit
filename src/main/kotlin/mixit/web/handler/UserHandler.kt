@@ -53,16 +53,16 @@ class UserHandler(private val repository: UserRepository,
                 "ppezziardi",
                 "rising.linda")
         val speakerStarInCurrentEvent = listOf(
-                "jhoeller@pivotal.io",
-                "sharon@sharonsteed.co",
-                "allan@rennebo.com",
+                "jhoeller",
+                "sharonsteed",
+                "allan.rennebo",
                 "agilex",
-                "laura.carvajal@gmail.com",
-                "augerment@gmail.com",
+                "laura.carvajal",
+                "augerment",
                 "dgageot",
-                "romainguy@curious-creature.com",
-                "graphicsgeek1@gmail.com",
-                "sam@sambrannen.com")
+                "romainguy",
+                "graphicsgeek1",
+                "sambrannen")
     }
 
 
