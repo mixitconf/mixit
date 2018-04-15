@@ -11,7 +11,7 @@
         "room": "AMPHI1",
         "slug": "building-highly-productive-teams-with-empathy",
         "speakerIds": [
-            "sharon@sharonsteed.co"
+            "sharonsteed"
         ],
         "start": "2018-04-19T09:10:00",
         "summary": "One of our most valuable commodities as humans is our ability to build relationships \u2013 both personally and professionally. And the key to any successful relationship is empathy: being able to understand someone, connect with someone and view the world through their eyes. The problem is that the empathy needed to cultivate relationships, foster collaboration and build strong communities is often times lacking, especially when we are around people who are different from us.",
@@ -51,7 +51,7 @@
         "room": "ROOM1",
         "slug": "state-of-the-blockchain",
         "speakerIds": [
-            "hugo.briand@ekino.com"
+            "hugo.briand"
         ],
         "start": "2018-04-19T10:10:00",
         "summary": "Les architectures BlockChain commencent \u00e0 se d\u00e9velopper : de nombreuses startups se servent de ce mod\u00e8le pour se financer, atteignant parfois des montants records. ",
@@ -61,7 +61,7 @@
     },
     {
         "addedAt": "2018-01-30T12:47:03.083",
-        "description": "Pourquoi un tel succ\u00e8s ? Le projet a un motto: &#34;Le framework progressif&#34; -- l&#39;exp\u00e9rience de d\u00e9veloppement des utilisateurs de Vue.js est au c\u0153ur de notre strat\u00e9gie pour rendre le web plus accessible aux d\u00e9veloppeurs et les apps web plus riches.\r\n\r\nComment? Facilit\u00e9 d&#39;utilisation, efficacit\u00e9, performance et souplesse tout en proposant des solutions officielles ou recommand\u00e9es, des happy paths, une documentation de qualit\u00e9 et une communaut\u00e9 de passionn\u00e9s du web qui font grandir l&#39;\u00e9cosyst\u00e8me. Pas d&#39;investisseurs, pas de grosse entreprise au commande avec ses strat\u00e9gies propres: Vue.js est un projet communautaire et le restera. Pour le web par le web!",
+        "description": "Pourquoi un tel succ\u00e8s ? Le projet a un motto: \"Le framework progressif\" -- l'exp\u00e9rience de d\u00e9veloppement des utilisateurs de Vue.js est au c\u0153ur de notre strat\u00e9gie pour rendre le web plus accessible aux d\u00e9veloppeurs et les apps web plus riches.\r\n\r\nComment? Facilit\u00e9 d'utilisation, efficacit\u00e9, performance et souplesse tout en proposant des solutions officielles ou recommand\u00e9es, des happy paths, une documentation de qualit\u00e9 et une communaut\u00e9 de passionn\u00e9s du web qui font grandir l'\u00e9cosyst\u00e8me. Pas d'investisseurs, pas de grosse entreprise au commande avec ses strat\u00e9gies propres: Vue.js est un projet communautaire et le restera. Pour le web par le web!",
         "end": "2018-04-19T11:00:00",
         "event": "2018",
         "format": "TALK",
@@ -71,10 +71,10 @@
         "room": "AMPHI1",
         "slug": "vue-js-le-framework-progressif",
         "speakerIds": [
-            "guillaume.b.chau@gmail.com"
+            "guillaume.b.chau"
         ],
         "start": "2018-04-19T10:10:00",
-        "summary": "Vue est un projet 100% communautaire et open-source. C&#39;est le challenger qui est l\u00e0 pour secouer le monde des librairies front-end, de par sa simplicit\u00e9 et son efficacit\u00e9 ! L&#39;\u00e9cosyst\u00e8me autour de Vue grandi de jour en jour, les retours sont tr\u00e8s positifs et de tr\u00e8s grandes entreprises l&#39;ont choisi comme Adobe, Alibaba, Microsoft, Sainsbury&#39;s, Nintendo et m\u00eame Facebook ! Vue a \u00e9galement \u00e9t\u00e9 choisi par le framework PHP Laravel pour \u00eatre sa librairie front-end par d\u00e9faut.",
+        "summary": "Vue est un projet 100% communautaire et open-source. C'est le challenger qui est l\u00e0 pour secouer le monde des librairies front-end, de par sa simplicit\u00e9 et son efficacit\u00e9 ! L'\u00e9cosyst\u00e8me autour de Vue grandi de jour en jour, les retours sont tr\u00e8s positifs et de tr\u00e8s grandes entreprises l'ont choisi comme Adobe, Alibaba, Microsoft, Sainsbury's, Nintendo et m\u00eame Facebook ! Vue a \u00e9galement \u00e9t\u00e9 choisi par le framework PHP Laravel pour \u00eatre sa librairie front-end par d\u00e9faut.",
         "title": "Vue.js, le framework progressif",
         "topic": "tech",
         "video": null
@@ -91,7 +91,7 @@
         "room": "AMPHI2",
         "slug": "punishment-and-humiliation",
         "speakerIds": [
-            "john@wisenoodles.com"
+            "wisenoodles"
         ],
         "start": "2018-04-19T10:10:00",
         "summary": "What does punishment and humiliation look like in a professional context? Is it ever justified? Why do we use punishment as parents, as a society or as leaders? And most importantly, does it work? Or rather, does it work the way we expect?",
@@ -101,7 +101,7 @@
     },
     {
         "addedAt": "2018-01-30T12:47:03.344",
-        "description": "Et si on se mettait dans cette situation, en \u00e9quipes et en comp\u00e9tition ? Qui sera alors l'\u00e9quipe la plus \u00e0 m\u00eame de faire \u00e9voluer le code legacy, tout en continuant \u00e0 gagner de l'argent ?\r\n\r\nVenez relever le challenge, avec votre env de dev favori !",
+        "description": "En comprenant mieux puis en corrigeant la cause racine des bugs, nous tranformons les \u00e9checs de hier en force  pour demain.\r\n\r\n\r\nLe geste \u00e0 r\u00e9p\u00e9ter :\r\n\r\n\r\n1. Identifier soit une faiblesse du design susceptible de causer un bug lorsque l'on \u00e9tend le code, soit un bug existant.\r\n2. Expliquer comment le design actuel a contribu\u00e9 \u00e0 l'introduction du bug  ou comment il risque d'y contribuer dans le futur.\r\n3. Trouvez un design qui rend impossible ce bug ou du moins qui le rend peu probable.",
         "end": "2018-04-19T12:00:00",
         "event": "2018",
         "format": "WORKSHOP",
@@ -109,14 +109,13 @@
         "language": "FRENCH",
         "photoUrls": [],
         "room": "ROOM4",
-        "slug": "epic-legacy-code-challenge",
+        "slug": "zero-bug-kata",
         "speakerIds": [
-            "julien.jakubowski@gmail.com",
-            "cdesquilbet@octo.com"
+            "johan.martinsson"
         ],
         "start": "2018-04-19T10:10:00",
-        "summary": "Vous venez d'\u00eatre embauch\u00e9s chez Paladin Inventories Company. Elle gagne beaucoup d'argent avec son logiciel. Mais le gobelin qui l'a \u00e9crit s'est fait d\u00e9vorer par un dragon. Vous ne comprenez rien au code. Et bien s\u00fbr il n'y a pas de tests. Le probl\u00e8me : une horde de trolls se rue vers vous avec plein de nouvelles demandes pour ce logiciel, qui est maintenant le v\u00f4tre...\r\n\r\nCette situation vous dit quelquechose ?",
-        "title": "Epic Legacy Code Challenge",
+        "summary": "Les bugs ne sont pas une fatalit\u00e9! \r\n\r\nLes bugs s'introduisent dans notre code d\u00fb aux choix de conception que nous faisons ou, plus souvent, que nous manquons de faire.\r\n\r\n\r\nAu cours de cet atelier nous pratiqueront la correction des causes racine des bugs. Vous allez \u00e9tudier des bugs afin de comprendre les faiblesses dans le design qui a permi et facilit\u00e9 leur introduction. Une fois compris vous allez inventer de designs alternatifs qui rendraient impossible ou du moins peu probable leur introducition. Nous allons \u00e9galement chercher des faiblesses du design, o\u00f9 ce serait probable que l'on introduise un bug dans le futur.",
+        "title": "Zero bug kata",
         "topic": "tech",
         "video": null
     },
@@ -132,7 +131,7 @@
         "room": "ROOM2",
         "slug": "vers-la-degooglisation-et-au-dela-",
         "speakerIds": [
-            "dev@marienfressinaud.fr",
+            "marienfressinaud",
             "pyves"
         ],
         "start": "2018-04-19T10:10:00",
@@ -153,7 +152,7 @@
         "room": "ROOM3",
         "slug": "peut-on-etre-agile-sans-etre-agile-",
         "speakerIds": [
-            "njeauffroy@gmail.com",
+            "njeauffroy",
             "sboissier",
             "jattard"
         ],
@@ -175,7 +174,7 @@
         "room": "ROOM5",
         "slug": "lego-vs-kapla-problematiques-devops-par-le-jeu",
         "speakerIds": [
-            "tamara.kondakjian@gmail.com",
+            "tamara.kondakjian",
             "perretmathieu"
         ],
         "start": "2018-04-19T10:10:00",
@@ -206,7 +205,7 @@
     },
     {
         "addedAt": "2018-01-30T12:47:02.616",
-        "description": "In this talk I will go over how we went from being generally oblivious about accessibility to making it a core part of our process across multiple divisions. I will share the roadblocks we found and the lessons we learned, along with tangible solutions you can integrate them into your own project today, regardless of available time, budget or support.",
+        "description": "A great deal of what makes a website accessible is fairly straightforward to achieve, but only once we know what to look out for! So many websites are broken for disabled users, including those who rely on assistive tech, such as screen readers and magnifiers, to navigate the web. That's a good 10%-20% of your user base who can't access your content or pay for your product, even though they may want to.\r\n\r\nIn this talk we will go over some common front-end (anti)patterns and how they affect accessibility while otherwise going virtually undetected. We will see real user testimonials of how these affect their interaction with the web and their daily lives. Lastly, we'll cover how to get the same results without breaking your site for disabled users, including real-life examples of how we've we've avoided these pitfalls at The Financial Times.",
         "end": "2018-04-19T12:00:00",
         "event": "2018",
         "format": "TALK",
@@ -214,13 +213,13 @@
         "language": "ENGLISH",
         "photoUrls": [],
         "room": "AMPHI2",
-        "slug": "yes-your-site-too-can-and-should-be-accessible-lessons-learned-from-building-ft-com",
+        "slug": "but-my-site-looks-fine-common-ways-we-break-accessibility-and-how-to-avoid-them-",
         "speakerIds": [
-            "laura.carvajal@gmail.com"
+            "laura.carvajal"
         ],
         "start": "2018-04-19T11:10:00",
         "summary": "In 2016, we at The Financial Times launched a new version of our website to great success. It broke ground on key areas in which we\u2019d set out to excel and measured very closely, like performance, resilience and usability. But one day, and rather serendipitously, we realized we had largely forgotten to measure one thing: accessibility. And you can\u2019t improve what you don\u2019t measure.",
-        "title": "YES, your site too can (and should) be accessible. Lessons learned from building FT.com",
+        "title": "But my site looks fine! Common ways we break accessibility and how to avoid them.",
         "topic": "tech",
         "video": null
     },
@@ -236,8 +235,8 @@
         "room": "ROOM1",
         "slug": "retour-d-experience-de-l-equipe-player-a-france-televisions-passer-de-faire-de-l-agile-a-etre-agile",
         "speakerIds": [
-            "jeanpi.lambert@gmail.com",
-            "r.souria@gmail.com"
+            "jeanpi.lambert",
+            "r.souria"
         ],
         "start": "2018-04-19T11:10:00",
         "summary": "Revivez avec nous la grande aventure Agile de l\u2019\u00e9quipe Player \u00e0 France T\u00e9l\u00e9visions !\r\n\r\nAu d\u00e9but de notre histoire, on pourrait qualifier l\u2019\u00e9quipe Player de France T\u00e9l\u00e9visions d\u2019\u00e9quipe comme les autres, qui pratique un Scrum grossier. On fait un stand-up quotidien, une d\u00e9mo et une r\u00e9tro toutes les deux semaines, et le backlog est dans JIRA : c\u2019est \u00e7a faire de l\u2019Agile, pas vrai ?",
@@ -277,7 +276,7 @@
         "room": "AMPHI1",
         "slug": "la-technologie-a-l-attaque-du-chomage-retour-d-experience-sur-l-aventure-bob-emploi",
         "speakerIds": [
-            "florian@bayesimpact.org"
+            "bayesimpact"
         ],
         "start": "2018-04-19T13:10:00",
         "summary": "En novembre 2016, la startup \u00e0 but non-lucratif Bayes Impact lan\u00e7ait Bob Emploi, une application en ligne pour aider les chercheurs d'emploi. Depuis Bob Emploi a accompagn\u00e9 plus de 150 000 personnes.\r\n\r\nComme toute aventure startup, ce projet a connu beaucoup de rebondissements. Florian va partager les \u00e9tapes par lesquelles l'\u00e9quipe et le produit sont pass\u00e9s !",
@@ -297,10 +296,10 @@
         "room": "UNKNOWN",
         "slug": "developper-un-jeu-video-quand-on-n-y-connait-rien-en-developpement-de-jeux-video-",
         "speakerIds": [
-            "david.wursteisen@soat.fr"
+            "david.wursteisen"
         ],
         "start": "2018-04-19T13:50:00",
-        "summary": "Comment on d\u00e9veloppe un jeu vid\u00e9o ? Est-ce compliqu\u00e9 d\u2019afficher un personnage sur l\u2019\u00e9cran et de le faire bouger par la suite ? Programmer un jeu est-il comparable \u00e0 programmer un application backend ? Quels sont les outils \u00e0 utiliser ? Comment rendre un jeu amusant ? J\u2019ai d\u00fb me poser ces questions pour r\u00e9aliser mon premier jeu mobile. ",
+        "summary": "Ce talk est de type \"random\". Pour cette track, nous choisissons le programme pour vous. Vous \u00eates dans une pi\u00e8ce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 20 minutes. Comme c'est une surprise, nous n'affichons pas le r\u00e9sum\u00e9 de la session avant ...",
         "title": "D\u00e9velopper un jeu vid\u00e9o (quand on n\u2019y connait rien en d\u00e9veloppement de jeux vid\u00e9o)",
         "topic": "learn",
         "video": null
@@ -317,10 +316,10 @@
         "room": "UNKNOWN",
         "slug": "l-air-du-bois-un-reseau-social-solidaire",
         "speakerIds": [
-            "boris.beaulant@gmail.com"
+            "boris.beaulant"
         ],
         "start": "2018-04-19T13:50:00",
-        "summary": "En 2013, apr\u00e8s 10 ans ann\u00e9es de d\u00e9veloppement dans le secteur du jeu vid\u00e9o, je d\u00e9cide d'op\u00e9rer un virage \u00e0 360\u00b0 dans mon parcours professionnel pour devenir **\u00e9b\u00e9niste**.\r\nEn ex-d\u00e9veloppeur largement **autodidact**, je n'ai pas envisag\u00e9 cette reconversion autrement que par l'auto apprentissage. La pratique, les erreurs et Internet ont donc \u00e9t\u00e9 mes amis.\r\n\r\nSoucieux de transmettre des valeurs aujourd\u2019hui essentielles \u00e0 mes yeux comme celle du libre que j\u2019ai pu largement brasser en 10 ans de code, j\u2019ai voulu d\u00e9cliner cette philosophie dans le domaine du travail du bois.\r\n\r\nAmoureux du code autant que du copeau, j\u2019ai lanc\u00e9 le projet [L\u2019Air du Bois](https://www.lairdubois.fr). Projet qui vise \u00e0 \u00eatre autant un outil libre et accessible, qu\u2019un moyen d\u2019\u00e9change et d\u2019interconnexion autour d\u2019une passion commune et encore qu\u2019une r\u00e9serve \u00e0 savoirs et id\u00e9es. Cet outil a donc naturellement pris la forme d\u2019un hybrid entre un r\u00e9seau social, un wiki et une encyclop\u00e9die. Bref, un bo\u00eete \u00e0 outils oeuvrant \u00e0 l\u2019enrichissement d\u2019un *Bien Commun* financ\u00e9 par le volontariat et le don.\r\n\r\nDans ce talk, je vous propose tout d\u2019abord de d\u00e9couvrir l\u2019outil et sa philosophie et ensuite de vous partager ces 5 premi\u00e8res ann\u00e9es d\u2019exp\u00e9rience \u00e0 d\u00e9velopper un tel projet communautaire et solidaire autant d\u2019un point de vue du d\u00e9veloppeur que de l\u2019\u00e9b\u00e9niste.\r\nEt de d\u00e9couvrir comment le travail de la communaut\u00e9 du libre a pu amener de nombreuses personnes \u00e0 se passionner pour le travail du bois.",
+        "summary": "Ce talk est de type \"random\". Pour cette track, nous choisissons le programme pour vous. Vous \u00eates dans une pi\u00e8ce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 20 minutes. Comme c'est une surprise, nous n'affichons pas le r\u00e9sum\u00e9 de la session avant ...",
         "title": "L'Air du Bois : Un r\u00e9seau social solidaire",
         "topic": "aliens",
         "video": null
@@ -337,10 +336,10 @@
         "room": "UNKNOWN",
         "slug": "action-de-groupe-contre-les-gafam",
         "speakerIds": [
-            "adc@laquadrature.net"
+            "adclaquadrature"
         ],
         "start": "2018-04-19T13:50:00",
-        "summary": "La France fait partie des pays qui cherchent \u00e0 affaiblir le chiffrement, via l'obligation d'installer des portes d\u00e9rob\u00e9es par exemple. Le chiffrement peut d\u00e9j\u00e0 en France \u00eatre un motif d'augmentation des peines, ou en faire un motif de suspicion. Les d\u00e9clarations contre le chiffrement s\u2019encha\u00eenent et une r\u00e9flexion est en cours au niveau europ\u00e9en pour mettre en \u0153uvre une strat\u00e9gie commune au sein de l'Union europ\u00e9enne.\r\n\r\nNotre objectif est donc d'essayer de renverser la tendance et de montrer que les d\u00e9veloppeurs ont aussi un r\u00f4le politique important.",
+        "summary": "Ce talk est de type \"random\". Pour cette track, nous choisissons le programme pour vous. Vous \u00eates dans une pi\u00e8ce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 20 minutes. Comme c'est une surprise, nous n'affichons pas le r\u00e9sum\u00e9 de la session avant ...",
         "title": "Action de groupe contre les GAFAM",
         "topic": "hacktivism",
         "video": null
@@ -357,10 +356,10 @@
         "room": "UNKNOWN",
         "slug": "software-on-the-road-the-journey",
         "speakerIds": [
-            "dan@dcarral.org"
+            "dcarral"
         ],
         "start": "2018-04-19T13:50:00",
-        "summary": "Have you wondered how would it be to quit your job, take a backpack, and be on the road 24/7? \r\n\r\nThrough a continuous stream of audiovisual material captured during his trip, Dani takes you into an inspiring journey visiting local communities, sharing good vibes & crafting software.\r\n\r\n6 months and 13 countries later, and having hitch-hiked in the Albanian mountains, philosophized with a jewelry crafter in Mallorca, danced reggae in Jamaica and couchsurfed all over the place, he's back to share part of his adventures with us.\r\n\r\nAll in all, he just want to spread happiness around. Are you in?",
+        "summary": "This is a \"Random\" talk. For this track we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 20 minutes. As it's a surprise we don't display the session summary before...   ",
         "title": "Software on the road: the journey",
         "topic": "aliens",
         "video": null
@@ -377,10 +376,10 @@
         "room": "UNKNOWN",
         "slug": "make-the-transition-from-block-based-programming-to-text-based-programming",
         "speakerIds": [
-            "Joshua.Lowe@gmail.com"
+            "Joshua.Lowe"
         ],
         "start": "2018-04-19T13:50:00",
-        "summary": "Looking for ways to make the transition from block based programming to text based programming easier, then look no further! In this talk 14 year old Josh will introduce you to his project called EduBlocks, which is a visual block based programming tool that he has created to help teachers introduce programming languages, like Python, to children at an earlier age. ",
+        "summary": "This is a \"Random\" talk. For this track we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 20 minutes. As it's a surprise we don't display the session summary before...   ",
         "title": "Make the transition from block based programming to text based programming",
         "topic": "makers",
         "video": null
@@ -388,7 +387,7 @@
     {
         "addedAt": "2018-03-12T13:02:31.265",
         "description": "Les Raspberry Jams sont des \u00e9v\u00e8nements o\u00f9 les gens viennent pour d\u00e9couvrir le monde num\u00e9rique.\r\nLes Jams peuvent prendre toutes sortes de tailles et de formes : ateliers pour d\u00e9butants, sessions de travail sur vos propres projets, des d\u00e9monstrations, des conf\u00e9rences...\r\nUne Jam rassemble toutes sortes de personnes : certains d\u00e9couvrent les interactions avec des montages \u00e9lectroniques, et d'autres ont des tonnes d'exp\u00e9rience qu'ils sont heureux de venir partager.\r\nLes Jams sont des \u00e9v\u00e8nements accueillants o\u00f9 vous pourrez faire des rencontres et apprendre ensemble dans un environnement amical.\r\n\r\nPour son \u00e9dition 2018, MiXiT a d\u00e9cid\u00e9 d'h\u00e9berger une Raspberry Pi Jam.\r\nElle se fera avec l'aide de :\r\n- Alan Mc Cullagh : un passionn\u00e9 dans cet univers de code et d'\u00e9lectronique\r\n- Joshua Lowe : un jeune entousiasthe proposant une solution pour d\u00e9couvrir le code en d\u00e9marrant par des blocs graphiques pour finir par du code en language python.\r\n- Thierry Chantier : entre 2 ateliers avec les enfants de MixTeen, il est temps de partager aussi avec les adultes.\r\n\r\nVenez d\u00e9couvrir, discuter, bricoler et coder... Quelque soit le temps que vous avez, nous trouverons de quoi \u00e9changer.",
-        "end": "2018-04-19T18:00:00",
+        "end": "2018-04-19T17:00:00",
         "event": "2018",
         "format": "WORKSHOP",
         "id": "5aa67aed67bc5305f8a4370c",
@@ -398,7 +397,7 @@
         "slug": "raspberry-pi-jam",
         "speakerIds": [
             "alanmccullagh",
-            "Joshua.Lowe@gmail.com",
+            "Joshua.Lowe",
             "titimoby"
         ],
         "start": "2018-04-19T14:00:00",
@@ -419,8 +418,8 @@
         "room": "ROOM3",
         "slug": "if-you-can-draw-the-problem-you-can-solve-it-systems-thinking-made-practical",
         "speakerIds": [
-            "roland.flemm@gmail.com",
-            "emile@silvis.co.za"
+            "roland.flemm",
+            "silvis"
         ],
         "start": "2018-04-19T14:10:00",
         "summary": "When we try to solve complex organisational problems, we\u2019re often like the six blind men describing an elephant: We focus only on the parts, convinced that we alone know the truth. We fail to see holistically how the parts interconnect to make up the whole. \r\n\r\n\r\n\r\nOur systems thinking workshop gives you the tools to approach complex problems as systems, even if these complex problems are \u201csoft problems\u201d (such as fixing an unsafe organisational culture, undergoing an agile transformation or implementing a DevOps mindset). ",
@@ -440,8 +439,8 @@
         "room": "ROOM4",
         "slug": "propulsez-votre-application-angular-avec-graphql-et-apollo",
         "speakerIds": [
-            "thomas.betous@zenika.com",
-            "antoine.cellier@zenika.com"
+            "thomas.betous",
+            "antoine.cellier"
         ],
         "start": "2018-04-19T14:10:00",
         "summary": "GraphQL est une sp\u00e9cification et un langage de requ\u00eatage poss\u00e9dant de nombreuses impl\u00e9mentations c\u00f4t\u00e9 serveur mais aussi c\u00f4t\u00e9 client.\r\n\r\nNous allons propulser notre application gr\u00e2ce \u00e0 l\u2019impl\u00e9mentation client fournie par Apollo. Les performances vont \u00eatre am\u00e9lior\u00e9es gr\u00e2ce \u00e0 un syst\u00e8me de cache, mais aussi l'exp\u00e9rience utilisateur avec le pattern optimistic UI.\r\n\r\nA partir d\u2019une application Angular, nous exploiterons les donn\u00e9es d\u2019une API GraphQL \u00e0 l\u2019aide d\u2019Apollo. Profitons des avantages de GraphQL mais pas que!",
@@ -461,7 +460,7 @@
         "room": "ROOM1",
         "slug": "designer-codeur-comment-le-metier-et-les-outils-du-designer-graphique-evoluent",
         "speakerIds": [
-            "azertypow@gmail.com"
+            "azertypow"
         ],
         "start": "2018-04-19T14:10:00",
         "summary": "L'environnement de travail du designer graphique \u00e9volue avec la cr\u00e9ation d\u2019interfaces d\u2019applications web. La programmation devient un milieu accessible pour ce dernier, et peut m\u00eame n\u00e9cessiter son expertise dans certains domaines (css, svg, canvas, javascript\u2026) en collaboration avec le d\u00e9veloppeur.  \r\nL\u2019outillage du designer graphique n\u2019est donc plus limit\u00e9 aux interfaces graphiques de type WIMP (Windows, Icons, Menus, Pointing) comme Adobe, mais s\u2019ouvre sur les interfaces textuelles de programmation. Sa m\u00e9thode de travail peut d\u00e9sormais se rapprocher de celle du d\u00e9veloppeur.\r\n\r\n\u00c0 travers un \u00e9tat des lieux des outils \u00e9mergents, nous explorerons les nouvelles logiques de cr\u00e9ation d\u2019interface, et de leurs \u00e9volutions possibles.",
@@ -481,8 +480,7 @@
         "room": "AMPHI2",
         "slug": "vous-arrive-t-il-d-infliger-de-l-aide-",
         "speakerIds": [
-            "jquille@azae.net",
-            "tclavier@azae.net"
+            "jquille"
         ],
         "start": "2018-04-19T14:10:00",
         "summary": "Certains mots ont pris des sens tr\u00e8s particuliers dans notre langue, le mot \u201caider\u201d en fait partie. Lors de cette session, je vous propose de m\u2019accompagner dans une r\u00e9flexion sur les vices cach\u00e9s de l\u2019aide en g\u00e9n\u00e9ral, telle qu\u2019elle est souvent pratiqu\u00e9e. Le tout sera remis dans le contexte de la demande, ou de l\u2019absence de demande, et se notre rapport au \u201cnon\u201d.\r\n\r\nTriangle de Karpman, CNV ou Analyse Transactionnelle, l\u2019occasion de vous pr\u00e9senter quelques outils qui pourront vous aider \u00e0 revisiter votre mani\u00e8re d\u2019\u201c\u00eatre\u201d \u00e0 vous m\u00eame et aux autres.",
@@ -502,7 +500,7 @@
         "room": "ROOM2",
         "slug": "elm-pour-la-construction-d-une-application-web-moderne",
         "speakerIds": [
-            "xavier.vdw@gmail.com"
+            "xavier.vdw"
         ],
         "start": "2018-04-19T14:10:00",
         "summary": "Les applications web au cours de ces derni\u00e8res ann\u00e9es ont \u00e9volu\u00e9es de mani\u00e8re **drastique** ! C'est g\u00e9nial ! D'un c\u00f4t\u00e9, en tant qu'utilisateur, on b\u00e9n\u00e9fice d'exp\u00e9riences de navigation de plus en plus fluide et immersive, de l'autre, en tant que d\u00e9veloppeur, on gagne de la mati\u00e8re int\u00e9ressante \u00e0 exploiter pour construire des applications de plus en plus riches. Dans cette pr\u00e9sentation, je vous propose de survoler le langage **Elm** pour construire une Single Page App moderne, offrant tous les canaux d'interactivit\u00e9 que l'on peut attendre (routing client, mutation de la page, signaux discrets). ",
@@ -523,7 +521,7 @@
         "slug": "coding-game-challenge",
         "speakerIds": [
             "hmetivier",
-            "m.brechet@gmail.com"
+            "m.brechet"
         ],
         "start": "2018-04-19T14:10:00",
         "summary": "Venez participer \u00e0 ce challenge de conception d\u2019intelligence artificielle.\r\n\r\nLes r\u00e8gles sont simples :\r\n\r\n- une bataille de personnages m\u00e9di\u00e9vaux en un contre un\r\n\r\n- une API REST d\u2019attaque \u00e0 disposition\r\n\r\n- une application web de visualisation du combat en live\r\n\r\nVous n\u2019avez plus qu\u2019\u00e0 coder votre IA avec votre langage pr\u00e9f\u00e9r\u00e9, r\u00e9agir en cons\u00e9quence et affronter l\u2019IA du serveur ou d\u2019autres participants de ce lab.",
@@ -564,32 +562,12 @@
         "slug": "developpez-votre-application-multiplateforme-en-kotlin",
         "speakerIds": [
             "g.zoritchak",
-            "pmariac@gmail.com"
+            "pmariac"
         ],
         "start": "2018-04-19T15:10:00",
         "summary": "Avec Kotlin 1.2, on peut coder un module qui sera d\u00e9ploy\u00e9 indiff\u00e9remment dans la JVM, sur Android et dans un moteur javascript. \r\n\r\nQuelles sont les particularit\u00e9s, les avantages et les limitations de ces d\u00e9veloppements multiplateforme? Quels sont les cas d\u2019utilisation ? Comment simplifier les d\u00e9veloppements par la mise en \u0153uvre de vos propres DSL?",
         "title": "D\u00e9veloppez votre application multiplateforme en kotlin",
         "topic": "tech",
-        "video": null
-    },
-    {
-        "addedAt": "2018-01-30T12:47:03.438",
-        "description": null,
-        "end": "2018-04-19T16:00:00",
-        "event": "2018",
-        "format": "TALK",
-        "id": "5a706948840deb00141a7226",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "AMPHI2",
-        "slug": "mes-fails-en-tant-que-cto",
-        "speakerIds": [
-            "jbdusseaut"
-        ],
-        "start": "2018-04-19T15:10:00",
-        "summary": "En 2001, je cr\u00e9ais avec un ami WipiStudio, ma premi\u00e8re startup, et mon premier \u00e9chec. \r\nA l'\u00e9poque, le terme CTO n'\u00e9tait pas vraiment \u00e0 la mode, la net \u00e9conomie s'\u00e9tait effondr\u00e9e, et je savais \u00e0 peine coder. \r\n17 ans plus tard, ou presque, je suis pass\u00e9 par bien d'autres environnements et startups, et j'ai joyeusement continu\u00e9 \u00e0 \u00e9chouer. \r\n\r\nJe vous propose dans cette conf\u00e9rence de faire le tour des erreurs que j'ai pu commettre, ou celles que j'ai cautionn\u00e9es, \u00e0 travers la petite dizaine d'exp\u00e9riences entrepreneuriales auxquelles j'ai pu participer de pr\u00eat ou de loin.",
-        "title": "Mes fails en tant que CTO",
-        "topic": "makers",
         "video": null
     },
     {
@@ -622,15 +600,35 @@
         "id": "5a706948840deb00141a7227",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "ROOM2",
+        "room": "AMPHI2",
         "slug": "cessons-les-estimations-",
         "speakerIds": [
-            "pro@leguedois.fr"
+            "leguedois"
         ],
         "start": "2018-04-19T15:10:00",
         "summary": "Alors que les estimations sont \u00e0 la base des m\u00e9thodes classiques et que dans le domaine Agile, SCRUM notamment lui accorde une grande importance, nous allons l\u2019espace d\u2019une conf\u00e9rence remettre en cause celles-ci.\r\n\r\nApr\u00e8s un bref rappel de diff\u00e9rentes m\u00e9thodes permettant de r\u00e9aliser des estimations et croyances qui y sont attach\u00e9es, nous prendrons le temps de r\u00e9fl\u00e9chir sur les effets n\u00e9fastes de ces derni\u00e8res. Enfin, nous verrons comment dans la r\u00e9alit\u00e9 des projets, il est possible de s\u2019en extraire.\r\n\r\n",
         "title": "Cessons les estimations !",
         "topic": "team",
+        "video": null
+    },
+    {
+        "addedAt": "2018-01-30T12:47:03.161",
+        "description": "Les barri\u00e8res \u00e0 l'obtention d'un permis de conduire ont de nombreuses origines, qui d\u00e9pendent de diff\u00e9rentes agences gourvernementales. Coordoner ces agences sur des sujets \u00e0 faible visibilit\u00e9 \u00e9lectoral est complexe, quelque soit le pays. Pourtant, de nombreux sujets fondamentaux d\u00e9pendent de cette coordination, tels que la pr\u00e9vention de la violence conjugale, l'int\u00e9gration des jeunes dans le monde du travail ou encore l'\u00e9ducation des enfants en bas age.\r\n\r\nEn 2015, le Department of Internal Affairs lance une initiative visant \u00e0 coordoner des actions sur ces domaines. Il forme le Co-Design Lab, qui a pour mission de coordoner les efforts sur ces probl\u00e8matiques. Cette structure engage des \u00e9quipes pluridisciplinaires sur une approche inspir\u00e9e de l'Agile, du Lean Startup, et du Design Thinking. \r\n\r\nJ'ai eu la chance de coacher pour le lab. Je vous propose une vision de l'interrieur d'une initiative gouvernementale pas comme les autres...\r\n\r\nhttps://www.aucklandco-lab.nz/",
+        "end": "2018-04-19T16:00:00",
+        "event": "2018",
+        "format": "TALK",
+        "id": "5a706948840deb00141a7218",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM2",
+        "slug": "comment-le-gouvernement-de-nouvelle-zelande-s-inspire-d-agile-pour-ameliorer-les-conditions-de-vie-dans-les-banlieues",
+        "speakerIds": [
+            "jonathan.scher"
+        ],
+        "start": "2018-04-19T15:10:00",
+        "summary": "En Nouvelle Z\u00e9lande, le permis de conduire est le premier pas pour trouver du travail et particper \u00e0 la soci\u00e9t\u00e9. Pour certaines personnes il est difficile de le passer. Pourtant, sans un permis, il leur est complexe de se d\u00e9placer et de trouver un emploi. Sans locomotion, obtenir une photo d'identit\u00e9 devient un cauchemare, les ali\u00e9nant de nombreux services. Seule solution : ils risquent leur vie et celle des autres sur la route. Ils s'exposent \u00e0 des amendes qu'ils ne pourront pas rembourser.",
+        "title": "Comment le gouvernement de Nouvelle Z\u00e9lande s'inspire d'Agile pour am\u00e9liorer les conditions de vie dans les banlieues",
+        "topic": "aliens",
         "video": null
     },
     {
@@ -642,35 +640,15 @@
         "id": "5a706948840deb00141a7211",
         "language": "ENGLISH",
         "photoUrls": [],
-        "room": "ROOM3",
+        "room": "ROOM5",
         "slug": "augment-your-reality-with-arcore-",
         "speakerIds": [
-            "benrabah.wajdi@gmail.com"
+            "benrabah.wajdi"
         ],
         "start": "2018-04-19T16:20:00",
         "summary": "2017 marked a big step for augmented reality. First, Apple announced at the Worldwide Developers Conference the availability of its ARKit framework to allow developers to integrate augmented reality into their applications. Then Google has responded with Arcore, this giant who was present on this field since 2014 with the Tango project.\r\n\r\nDuring this talk, we will present ARCore as a framework, then its advantages over ARKit. Then we'll see how you can start right now to create your own augmented experience via an exciting live coding. This talk will allow you to anticipate the next trends and be to be prepared to the future of apps.",
         "title": "Augment your reality with ARCore !",
         "topic": "tech",
-        "video": null
-    },
-    {
-        "addedAt": "2018-01-30T12:47:03.161",
-        "description": "Les barri\u00e8res \u00e0 l'obtention d'un permis de conduire ont de nombreuses origines, qui d\u00e9pendent de diff\u00e9rentes agences gourvernementales. Coordoner ces agences sur des sujets \u00e0 faible visibilit\u00e9 \u00e9lectoral est complexe, quelque soit le pays. Pourtant, de nombreux sujets fondamentaux d\u00e9pendent de cette coordination, tels que la pr\u00e9vention de la violence conjugale, l'int\u00e9gration des jeunes dans le monde du travail ou encore l'\u00e9ducation des enfants en bas age.\r\n\r\nEn 2015, le Department of Internal Affairs lance une initiative visant \u00e0 coordoner des actions sur ces domaines. Il forme le Co-Design Lab, qui a pour mission de coordoner les efforts sur ces probl\u00e8matiques. Cette structure engage des \u00e9quipes pluridisciplinaires sur une approche inspir\u00e9e de l'Agile, du Lean Startup, et du Design Thinking. \r\n\r\nJ'ai eu la chance de coacher pour le lab. Je vous propose une vision de l'interrieur d'une initiative gouvernementale pas comme les autres...\r\n\r\nhttps://www.aucklandco-lab.nz/",
-        "end": "2018-04-19T17:10:00",
-        "event": "2018",
-        "format": "TALK",
-        "id": "5a706948840deb00141a7218",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "AMPHI1",
-        "slug": "comment-le-gouvernement-de-nouvelle-zelande-s-inspire-d-agile-pour-ameliorer-les-conditions-de-vie-dans-les-banlieues",
-        "speakerIds": [
-            "jonathan.scher"
-        ],
-        "start": "2018-04-19T16:20:00",
-        "summary": "En Nouvelle Z\u00e9lande, le permis de conduire est le premier pas pour trouver du travail et particper \u00e0 la soci\u00e9t\u00e9. Pour certaines personnes il est difficile de le passer. Pourtant, sans un permis, il leur est complexe de se d\u00e9placer et de trouver un emploi. Sans locomotion, obtenir une photo d'identit\u00e9 devient un cauchemare, les ali\u00e9nant de nombreux services. Seule solution : ils risquent leur vie et celle des autres sur la route. Ils s'exposent \u00e0 des amendes qu'ils ne pourront pas rembourser.",
-        "title": "Comment le gouvernement de Nouvelle Z\u00e9lande s'inspire d'Agile pour am\u00e9liorer les conditions de vie dans les banlieues",
-        "topic": "aliens",
         "video": null
     },
     {
@@ -705,7 +683,7 @@
         "room": "AMPHI2",
         "slug": "agile-is-it-real-of-a-fairytale",
         "speakerIds": [
-            "allan@rennebo.com"
+            "allan.rennebo"
         ],
         "start": "2018-04-19T16:20:00",
         "summary": "Imagine a place where all rules have to add value and make sense. Where the processes are there to support instead of control. Where profit is the consequence of doing a great job - not the reason why we go to work. Where employees are so happy that the salary becomes secondary. Where the customers are so happy they don't consider going elsewhere . \r\n\r\nThis may sound like a fairytale and in most organizations, it is \u2013 but does it really have to be?",
@@ -725,7 +703,7 @@
         "room": "ROOM1",
         "slug": "open-source-as-a-business-strategy-struggle-success",
         "speakerIds": [
-            "pk@xeraa.net"
+            "pkxeraa"
         ],
         "start": "2018-04-19T16:20:00",
         "summary": "How do you build a lasting and successful company that also stays true to its open source roots? This talk takes a look at why open source is important to business and three essential elements of this path:",
@@ -746,7 +724,7 @@
         "slug": "se-liberer-des-entreprises-pour-creer-son-equilibre-et-payer-ses-factures",
         "speakerIds": [
             "mathieu.parisot",
-            "clairezuliani@gmail.com"
+            "clairezuliani"
         ],
         "start": "2018-04-19T16:20:00",
         "summary": "Les entreprises lib\u00e9r\u00e9es : \u00e7a a l'air trop bien. Si on s'\u00e9coutait, on casserait et on referait tout comme on l'entend. Doit-on forc\u00e9ment quitter les entreprises traditionnelles pour vivre et travailler heureu\u00b7x\u00b7se ?\r\nCes injonctions \u00e0 l'autonomie peuvent pourtant \u00eatre mal v\u00e9cues. Il est difficile de savoir si c'est une mode ou un vrai truc qui fait du bien.",
@@ -763,7 +741,7 @@
         "id": "5a706948840deb00141a7207",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "ROOM2",
+        "room": "AMPHI1",
         "slug": "1-pixel-per-second",
         "speakerIds": [
             "simonbasle"
@@ -772,6 +750,26 @@
         "summary": "Cr\u00e9er du \"pixel art\" collaboratif, tel est notre challenge dans cette exp\u00e9rience de live coding. En utilisant Spring Boot, WebFlux et Reactor, ma mission est de lui donner une API. La v\u00f4tre est juste de dessiner... 1 pixel par seconde :)",
         "title": "1 Pixel Per Second",
         "topic": "tech",
+        "video": null
+    },
+    {
+        "addedAt": "2018-04-15T18:11:34.302",
+        "description": null,
+        "end": "2018-04-19T17:10:00",
+        "event": "2018",
+        "format": "TALK",
+        "id": "5ad3962fc04c5e06059fc672",
+        "language": "ENGLISH",
+        "photoUrls": [],
+        "room": "ROOM3",
+        "slug": "an-introduction-to-large-scale-scrum-less-real-life-stories",
+        "speakerIds": [
+            "roland.flemm"
+        ],
+        "start": "2018-04-19T16:20:00",
+        "summary": "This lecture aims at people who are not yet familiar with the LeSS framework. I will explain what LeSS is, how LeSS relates to Scrum and what the key differences with Scrum are. I will touch upon the impact of LeSS adoptions and share with my experience working at various smaller and larger companies.",
+        "title": "An Introduction to Large Scale Scrum (LeSS): Real life stories",
+        "topic": "learn",
         "video": null
     },
     {
@@ -786,7 +784,7 @@
         "room": "AMPHI1",
         "slug": "comment-reveiller-l-ingenieur-positif-present-en-chacun-de-nous-",
         "speakerIds": [
-            "isabll.huynh@gmail.com"
+            "isabll.huynh"
         ],
         "start": "2018-04-19T17:10:00",
         "summary": "Cette conf\u00e9rence c'est l'histoire d'Isabelle Huynh, de son changement d'ing\u00e9nieure d\u00e9veloppement pour un grand groupe \u00e0 exploratrice de l'Ing\u00e9nierie Positive. Mais c'est aussi l'histoire de ses rencontres \u00e0 travers le monde. Des entrepreneurs, des ing\u00e9nieurs et chercheurs qui chaque jour cherchent \u00e0 am\u00e9liorer la vie des personnes. Quelles sont les clefs qui d\u00e9clenchent de tels parcours ? \r\n\r\nIsabelle l'assure, on a tous quelque chose en nous de positif. Elle vous invite \u00e0 le d\u00e9couvrir.",
@@ -806,7 +804,7 @@
         "room": "AMPHI1",
         "slug": "gossip-on-the-block",
         "speakerIds": [
-            "augerment@gmail.com"
+            "augerment"
         ],
         "start": "2018-04-19T17:10:00",
         "summary": "This presentation will explore how information is captured (interpreted), emotionalised (gossip), politicised (propaganda), fabricated (fake news) and pre-empted (prediction) with a particular focus on the role technology plays and could play in mediating these factors.",
@@ -826,7 +824,7 @@
         "room": "AMPHI1",
         "slug": "percevoir-et-communiquer-realite-et-fictions-personnelles",
         "speakerIds": [
-            "yves.rossetti@inserm.fr"
+            "yves.rossetti"
         ],
         "start": "2018-04-20T09:10:00",
         "summary": "Les illusions nous montrent que malgr\u00e8 la complexit\u00e9 des op\u00e9rations que le cerveau r\u00e9alise pour appr\u00e9hender la r\u00e9alit\u00e9, nous ne percevons pas cette r\u00e9alit\u00e9. Elles permettent d\u2019explorer comment notre perception r\u00e9sout les multiples probl\u00e8mes pos\u00e9s par l\u2019ambigu\u00eft\u00e9 des signaux que nous recevons, et comment le cerveau choisi rapidement l'interpr\u00e9tation la plus probable. \r\n\r\nEn d\u00e9pit des apparences, la communication ob\u00e9it aux m\u00eames r\u00e8gles que la perception : le cerveau pr\u00e9f\u00e8re tout miser sur une interpr\u00e9tation que de rester dans l\u2019ambig\u00fcit\u00e9, au risque de se tromper tout en croyant avoir raison. Alors comment pouvons-nous rester disponible \u00e0 la r\u00e9alit\u00e9 de l'autre et conserver une communication ouverte et constructive ?",
@@ -907,8 +905,8 @@
         "room": "AMPHI2",
         "slug": "mentoring-a-tous-les-etages",
         "speakerIds": [
-            "nicolas.savois@gmail.com",
-            "ambalaurelie@gmail.com"
+            "nicolas.savois",
+            "ambalaurelie"
         ],
         "start": "2018-04-20T10:10:00",
         "summary": "Cette pr\u00e9sentation traitera des questions essentielles : de l\u2019int\u00e9gration d\u2019un nouvel arrivant dans une entreprise, \u00e0 l\u2019encouragement de la progression individuelle, en passant par le bien-\u00eatre au travail de tous. La solution miracle (ou une partie du miracle) ? Le pair mentoring maison ! Nous vous expliquerons tout de ce syst\u00e8me que nous avons mis en place l\u2019an dernier et continuons \u00e0 am\u00e9liorer depuis. Un mentor (mentor\u00e9) et une mentor\u00e9e viennent vous pr\u00e9senter la m\u00e9thode (\u201cdu bonheur\u201d).",
@@ -928,8 +926,8 @@
         "room": "AMPHI1",
         "slug": "modern-android-development",
         "speakerIds": [
-            "romainguy@curious-creature.com",
-            "graphicsgeek1@gmail.com"
+            "romainguy",
+            "graphicsgeek1"
         ],
         "start": "2018-04-20T10:10:00",
         "summary": "The past several years has seen the introduction of new functionality and practices into core Android development, with such elements as the Support Library, Architecture Components, and Kotlin. But all of the old programming approaches still work. So what's an Android developer supposed to do?\r\n\r\nThis talk will not only cover these new aspects of Android development; we will talk about *why* they exist and how to understand modern development of Android applications. Developers will leave with a better idea of what they should  know and use in their projects.",
@@ -949,7 +947,7 @@
         "room": "ROOM5",
         "slug": "the-beyond-scrum-game",
         "speakerIds": [
-            "allan@rennebo.com"
+            "allan.rennebo"
         ],
         "start": "2018-04-20T10:10:00",
         "summary": "How do we evolve beyond the definition of Scrum and become truly Hyper Productive?\r\n\r\nIn this workshop you will be invited on a journey where Scrum grows beyond the Scrum Framework, and becomes a team culture where teams work collaboratively to deliver value, learn, and to continuously improve \u2013 all in pursuit of a clear purpose.\r\n\r\nGet ready for a fun time where you will be able to learn and play at the same time.\r\n\r\nCome and join the game!",
@@ -969,7 +967,7 @@
         "room": "ROOM1",
         "slug": "scruter-pour-mieux-comprendre-deep-learning-et-mecanismes-d-attention",
         "speakerIds": [
-            "flonks@gmail.com"
+            "flonks"
         ],
         "start": "2018-04-20T10:10:00",
         "summary": "L\u2019apprentissage profond de repr\u00e9sentations (le Deep Learning) est une famille de m\u00e9thodes du domaine \u00ab intelligence artificielle \u00bb permettant d\u2019apprendre de connaissances \u00e0 partir de masses de donn\u00e9es (textes, images, vid\u00e9os etc.). Plus pr\u00e9cis\u00e9ment, ces mod\u00e8les permettent de faire des pr\u00e9dictions sur des nouvelles donn\u00e9es. Cette intervention passera en revue l\u2019historique de cette th\u00e9matique, les enjeux majeurs et quelques techniques cl\u00e9. ",
@@ -990,7 +988,7 @@
         "slug": "serverless-is-the-new-back",
         "speakerIds": [
             "gegron",
-            "jpinsolle@xebia.fr"
+            "jpinsolle"
         ],
         "start": "2018-04-20T11:10:00",
         "summary": "Que se cache-t-il derri\u00e8re les buzz words \"serverless\" et \"services manag\u00e9s\" ?\r\nEst-il r\u00e9ellement possible de construire une application sans provisionner de serveur ?\r\n\r\n",
@@ -1030,7 +1028,7 @@
         "room": "AMPHI2",
         "slug": "reconstrained-design",
         "speakerIds": [
-            "augerment@gmail.com"
+            "augerment"
         ],
         "start": "2018-04-20T11:10:00",
         "summary": "Design practice always happens under a particular set of forces, commonly known as constraints. These constraints may be straightforward and indisputable, such as a physical or material quality: the force of gravity, the tensile strength of a structural beam, or a financial budget, and provide tangible limits to be adhered to or challenged.\r\nConstraints, however, also exist in more abstract, systemic or hidden forms. ",
@@ -1071,7 +1069,7 @@
         "room": "AMPHI1",
         "slug": "15-years-of-spring",
         "speakerIds": [
-            "jhoeller@pivotal.io"
+            "jhoeller"
         ],
         "start": "2018-04-20T13:10:00",
         "summary": "The Spring Framework originated from a book in 2002, becoming the most widely used application framework in the entire Java ecosystem within a few years... and holding that position to this day. This talk illustrates Spring's evolution over 15 years, adapting not only to five new JDK generations but also to ever-changing requirements in modern enterprise architectures.",
@@ -1091,10 +1089,10 @@
         "room": "UNKNOWN",
         "slug": "des-portes-logiques-pneumatiques-en-bois",
         "speakerIds": [
-            "treguy@free.fr"
+            "treguy"
         ],
         "start": "2018-04-20T13:50:00",
-        "summary": "Et si on parlait un peu d'orgue de barbarie, d'alg\u00e8bre de Boole, d'additions et de bulles de savon ? Juste pour le plaisir ? Peut \u00eatre qu'on gonflera des ballons pour compter sur les doigts.",
+        "summary": "Ce talk est de type \"random\". Pour cette track, nous choisissons le programme pour vous. Vous \u00eates dans une pi\u00e8ce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 20 minutes. Comme c'est une surprise, nous n'affichons pas le r\u00e9sum\u00e9 de la session avant ...",
         "title": "Des Portes Logiques Pneumatiques en Bois",
         "topic": "aliens",
         "video": null
@@ -1111,10 +1109,10 @@
         "room": "UNKNOWN",
         "slug": "extreme-volunteering-applying-xp-practices-in-volunteering-team",
         "speakerIds": [
-            "marcin.bazydlo@gmail.com"
+            "marcin.bazydlo"
         ],
         "start": "2018-04-20T13:50:00",
-        "summary": "In 2017 I was given an opportunity to lead at region level team of 18 volunteers of the established country level volunteering project in Poland. The goal of the project is to help families in need rebuild their self esteem and motivation to work for better future by giving one time gift supporting their actual needs. The role of a region is to build a team, find families in need, asses their needs and keep in touch with donors.\r\n\r\nAs a software engineer and a team lead I drew heavily from my day-to-day work practices. I found it fascinating how agile practices had to be adapted to a new situation. Some of them didn\u2019t catch up at all. Others were already part of standard training and requirements from the parent organisation. Some appeared to be novelty that our team quickly adopted. Constant comparison of my work day with volunteering work gave me different perspective on how I work day-to-day. And that\u2019s what I would like to share with you.\r\n\r\nIn this talk you will learn how corporate can get a volunteering project and what process it follows. I will compare and contrast it with extreme programming practices. I have some stories to share that I hope will be useful not only to those who treat their team like volunteers.",
+        "summary": "This is a \"Random\" talk. For this track we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 20 minutes. As it's a surprise we don't display the session summary before...   ",
         "title": "eXtreme volunteering: Applying XP practices in volunteering team",
         "topic": "team",
         "video": null
@@ -1131,10 +1129,10 @@
         "room": "UNKNOWN",
         "slug": "comment-etre-un-developpeur-ethique-et-green-dilemne-entre-la-course-technologique-et-mon-impact-sur-la-societe-",
         "speakerIds": [
-            "sgreenit@gmail.com"
+            "sgreenit"
         ],
         "start": "2018-04-20T13:50:00",
-        "summary": "Le logiciel est partout. Il est clair que le logiciel a un impact r\u00e9el sur le monde : uberisation, digitalisation... mais stoppons ici la buzzwordisation... Nous, d\u00e9veloppeurs sommes les architectes du monde virtuel au service du r\u00e9el. Nos actions ont un effet bien r\u00e9el. B\u00e9n\u00e9fique mais aussi n\u00e9faste. \r\nExclusion sociale, impact environnemental, obsolescence sont des effets bien r\u00e9el de nos logiciels. Mais avons nous le choix face au demandes de nos utilisateurs et clients et aux contraintes associ\u00e9es (planning, s\u00e9curit\u00e9...)\r\nEt bien oui, c'est le choix qui est fait par de nombreuses soci\u00e9t\u00e9s et d\u00e9veloppeurs : b\u00e9n\u00e9volat comme code for America, Eco-conception de logiciel publique... Etre d\u00e9veloppeur ethique et green est possible, nous verrons concretement comme faire cela au jour le jour.",
+        "summary": "Ce talk est de type \"random\". Pour cette track, nous choisissons le programme pour vous. Vous \u00eates dans une pi\u00e8ce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 20 minutes. Comme c'est une surprise, nous n'affichons pas le r\u00e9sum\u00e9 de la session avant ...",
         "title": "Comment \u00eatre un d\u00e9veloppeur ethique et green ? Dilemne entre la course technologique et mon impact sur la soci\u00e9t\u00e9.",
         "topic": "hacktivism",
         "video": null
@@ -1151,10 +1149,10 @@
         "room": "UNKNOWN",
         "slug": "designers-et-logiciels-libres-et-si-on-collaborait-",
         "speakerIds": [
-            "smogo@maiwann.net"
+            "smogo.maiwann"
         ],
         "start": "2018-04-20T13:50:00",
-        "summary": "Le monde du libre est rempli de communaut\u00e9s de d\u00e9veloppeurs passionn\u00e9s. *Mais o\u00f9 sont les designers ?* Incompr\u00e9hensions entre les diff\u00e9rents corps de m\u00e9tier, m\u00e9connaissance de ce qu'est un logiciel libre, l\u00e9gende du designer-artiste qui n'en fait qu'\u00e0 sa t\u00eate, possibilit\u00e9s de contribuer mal adapt\u00e9es pour des designers, les origines de ce d\u00e9samour sont nombreuses. Et si on passait \u00e0 l'\u00e9tape suivante, celle o\u00f9 devs et designers du libre se rejoignent pour cr\u00e9er des logiciels ensemble, histoire d'en am\u00e9liorer l'exp\u00e9rience utilisateur ?",
+        "summary": "Ce talk est de type \"random\". Pour cette track, nous choisissons le programme pour vous. Vous \u00eates dans une pi\u00e8ce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 20 minutes. Comme c'est une surprise, nous n'affichons pas le r\u00e9sum\u00e9 de la session avant ...",
         "title": "Designers et Logiciels libres: et si on collaborait ?",
         "topic": "design",
         "video": null
@@ -1171,11 +1169,11 @@
         "room": "UNKNOWN",
         "slug": "comedy-talk",
         "speakerIds": [
-            "romainguy@curious-creature.com",
-            "graphicsgeek1@gmail.com"
+            "romainguy",
+            "graphicsgeek1"
         ],
         "start": "2018-04-20T13:50:00",
-        "summary": "A short comedy talk on a topic relevant to software engineers: engineering management, traveling as a software engineer, new programming language, etc. We haven't decided on the exact content yet.",
+        "summary": "This is a \"Random\" talk. For this track we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 20 minutes. As it's a surprise we don't display the session summary before...   ",
         "title": "Comedy Talk",
         "topic": "aliens",
         "video": null
@@ -1225,7 +1223,7 @@
         "room": "ROOM2",
         "slug": "comment-le-suivi-du-diabete-m-a-amene-a-la-dataviz-",
         "speakerIds": [
-            "stephanie.moallic@gmail.com"
+            "stephanie.moallic"
         ],
         "start": "2018-04-20T14:10:00",
         "summary": "Imaginez: tous les jours, vous devez prendre votre taux de sucre au moins 3 fois dans la journ\u00e9e, vous notez vos r\u00e9sultats dans un petit carnet au format papier.\r\n\r\nC'est un peu long, r\u00e9barbatif et pas tr\u00e8s \u00e9colo, non? Surtout pour nous qui aimons bien automatiser le maximum de t\u00e2ches, et pouvoir consulter nos donn\u00e9es de n'importe o\u00f9...\r\n\r\nMaintenant, imaginez: vous r\u00e9cup\u00e9rez toutes ces donn\u00e9es qui sont stock\u00e9es sur l'appareil de mesure, vous les remontez dans une base de donn\u00e9es et vous faites le suivi via une interface web qui vous permet en plus d'annoter les relev\u00e9s pour lesquels vous souhaitez ajouter des informations compl\u00e9mentaires...\r\n\r\nVenez d\u00e9couvrir durant ce talk comment mettre ce cas en pratique: de la r\u00e9cup\u00e9ration de donn\u00e9es \u00e0 la mise en place de la data visualisation pour pouvoir exploiter toutes ces donn\u00e9es et les enrichir.",
@@ -1245,7 +1243,7 @@
         "room": "ROOM5",
         "slug": "mieux-communiquer-en-decouvrant-ses-filtres-d-attention",
         "speakerIds": [
-            "olivier.my@gmail.com"
+            "olivier.my"
         ],
         "start": "2018-04-20T14:10:00",
         "summary": "Une grande difficult\u00e9 de la communication vient de la conviction de parler la m\u00eame langue que l'autre, de donner le m\u00eame sens aux mots et de consid\u00e9rer les m\u00eames choses comme importantes. Et s'il en \u00e9tait autrement ?\r\n\r\nDepuis notre enfance, nous avons d\u00e9velopp\u00e9 des automatismes li\u00e9s \u00e0 notre perception du monde et qui vont conditionner la mani\u00e8re dont nous nous comportons aujourd'hui. M\u00eame si cela peut \u00eatre notre principal atout, c'est aussi notre principale limitation.",
@@ -1285,7 +1283,7 @@
         "room": "AMPHI2",
         "slug": "make-more-than-music-with-midi-javascript-tiny-computers",
         "speakerIds": [
-            "george@mand.is"
+            "mand.is"
         ],
         "start": "2018-04-20T14:10:00",
         "summary": "Tiny computers such as the [RaspberryPi](https://www.raspberrypi.org), [Arduino](https://www.arduino.cc/) and [C.H.I.P.](https://getchip.com/) have finally reached a level of  performance and affordability that makes hardware experimentation accessible to everyone. At the same time, JavaScript has emerged as the lingua franca of web programming and can be found in many places beyond just the browser. \r\n\r\nWhat if I told you there was a mature protocol that's been around since 1983 and was uniquely poised to take advantage of this development?\r\n\r\nWell, wonder no more and [meet MIDI](https://en.wikipedia.org/wiki/MIDI)! ",
@@ -1305,7 +1303,7 @@
         "room": "ROOM4",
         "slug": "-re-invent-your-test-strategy",
         "speakerIds": [
-            "Berenvd@gmail.com",
+            "Berenvd",
             "s_colson",
             "testeacher"
         ],
@@ -1327,7 +1325,7 @@
         "room": "AMPHI1",
         "slug": "typographie-et-accessibilite",
         "speakerIds": [
-            "marie@marieguillaumet.com"
+            "marieguillaumet"
         ],
         "start": "2018-04-20T14:10:00",
         "summary": "**Comment la typographie web peut-elle am\u00e9liorer l\u2019accessibilit\u00e9 d\u2019une interface ?** Puisque le contenu est roi, penchons-nous sur le design du texte \u00e0 l\u2019\u00e9cran, et sur sa capacit\u00e9 \u00e0 am\u00e9liorer l\u2019exp\u00e9rience utilisateur des personnes en situation de handicap visuel et/ou cognitif.\r\n\r\nTaille, couleur, espacement et alignement des caract\u00e8res ; longueurs des lignes ; polices de caract\u00e8res adapt\u00e9es ; personnalisation de l\u2019interface par les utilisateurs ; aides \u00e0 la lecture\u2026 Cette conf\u00e9rence vous permettra de **faire des choix typographiques \u00e9clair\u00e9s en mati\u00e8re d\u2019accessibilit\u00e9**, et de cr\u00e9er ainsi des interfaces plus accessibles et plus inclusives.",
@@ -1347,7 +1345,7 @@
         "room": "ROOM3",
         "slug": "mise-en-pratique-de-l-atomic-design",
         "speakerIds": [
-            "dylan.cozian@gmail.com"
+            "dylan.cozian"
         ],
         "start": "2018-04-20T14:10:00",
         "summary": "Atomic design \r\n\r\nAvec l\u2019\u00e9mergence de logiciels comme Sketch et Adobe XD, ce n\u2019est pas seulement de nouvelles mani\u00e8res techniques de cr\u00e9er nos interfaces, mais aussi une nouvelle fa\u00e7on de penser le design : plus homog\u00e8ne, adaptable, maintenable, collaboratif\u2026 Brad Frost a, dans les premiers, th\u00e9oris\u00e9 ce qu\u2019on appelle maintenant l\u2019Atomic Design ! Une mani\u00e8re de designer nos interfaces, proche du d\u00e9veloppement objet, ne se contentant plus de juste cr\u00e9er des pages, mais partant du postulat de cr\u00e9er des composants que nous pourrons r\u00e9utiliser et adapter en fonction du contexte.",
@@ -1367,7 +1365,7 @@
         "room": "ROOM2",
         "slug": "la-securite-dans-l-iot-difficultes-failles-et-contre-mesures",
         "speakerIds": [
-            "alexisd@rtone.fr"
+            "alexisd"
         ],
         "start": "2018-04-20T15:10:00",
         "summary": "Avec la multiplication des objets connect\u00e9s dans notre quotidien, la s\u00e9curit\u00e9 de ces appareils \u00e9lectroniques, qui a \u00e9t\u00e9 souvent n\u00e9glig\u00e9e par le pass\u00e9, devient une r\u00e9elle probl\u00e9matique. Leur faible co\u00fbt de conception, la n\u00e9gligence des fabricants ou m\u00eame la notre, nous d\u00e9veloppeurs, en font des proies faciles pour les hackers. Ce ph\u00e9nom\u00e8ne se constate bien dans l'actualit\u00e9, o\u00f9 l'on parle de plus en plus d'attaques \u00e0 grande \u00e9chelles visant des cameras ou frigos connect\u00e9s, mais \u00e9galement les serrures Bluetooth.",
@@ -1387,8 +1385,8 @@
         "room": "ROOM1",
         "slug": "en-vie-de-courage",
         "speakerIds": [
-            "bonnet-cla@wanadoo.fr",
-            "veronique.bonnet@emulsioncreative.com"
+            "bonnet-cla",
+            "veronique.bonnet"
         ],
         "start": "2018-04-20T15:10:00",
         "summary": "Se lancer dans l'aventure de la cr\u00e9ation d'entreprise demande non seulement de bien connaitre les processus de conduite de projet, mais bien plus encore de mettre en \u0153uvre la vertu du courage pour affronter les obstacles, les prises de risques qui ne manqueront pas de surgir.",
@@ -1428,7 +1426,7 @@
         "room": "AMPHI2",
         "slug": "junit-5-new-opportunities-for-testing-on-the-jvm",
         "speakerIds": [
-            "sam@sambrannen.com"
+            "sambrannen"
         ],
         "start": "2018-04-20T15:10:00",
         "summary": "Take a Deep Dive into JUnit 5 with core committer Sam Brannen!\r\n\r\nOver the last decade a lot has happened in the world of Java and testing, but JUnit 4 hasn't kept up. Now JUnit 5 is here to help shape the future of testing on the JVM with a focus on Java 8 language features, extensibility, and a modern programming API for testing in Java. Moreover, JUnit isn't just a Java testing framework anymore. Third parties are already developing test engines for Scala, Groovy, Kotlin, etc. that run on the new JUnit Platform.",
@@ -1468,7 +1466,7 @@
         "room": "ROOM5",
         "slug": "the-dark-ages-of-iot",
         "speakerIds": [
-            "public@asciidisco.com"
+            "asciidisco"
         ],
         "start": "2018-04-20T16:20:00",
         "summary": "Advertisements suggest that we are at the zenith of mankind's scientific knowledge and technological power,\r\nbut when it comes to IoT and the so-called 'Smart Home', we are clearly not. \r\nIn fact, we are in the middle of the dark age.\r\n\r\nI'll explain the challenges that we're facing today (from an implementors perspective), \r\nwhat's 'wrong' with our current products & show you how a smart 'Smart Home' experience could look like in the near future.",
@@ -1488,7 +1486,7 @@
         "room": "ROOM2",
         "slug": "s-epanouir-grace-aux-nouveaux-formats-de-travail-remote-nomadisme-digital-slashing-entreprise-liberee",
         "speakerIds": [
-            "isislat@gmail.com"
+            "isislat"
         ],
         "start": "2018-04-20T16:20:00",
         "summary": "Tour d\u2019horizon de quatre nouveaux formats de travail qui replacent le sens et l\u2019\u00e9panouissement personnel au centre de l\u2019\u00e9quation : remote, entreprise lib\u00e9r\u00e9e, nomadisme digital, slashing.",
@@ -1548,7 +1546,7 @@
         "room": "ROOM4",
         "slug": "comment-leboncoin-est-passe-en-feature-teams",
         "speakerIds": [
-            "rogelio.canedo@gmail.com",
+            "rogelio.canedo",
             "abderrahmane"
         ],
         "start": "2018-04-20T16:20:00",
@@ -1569,7 +1567,7 @@
         "room": "AMPHI2",
         "slug": "principles-for-data-visualization-design",
         "speakerIds": [
-            "arnicas@gmail.com"
+            "arnicas"
         ],
         "start": "2018-04-20T16:20:00",
         "summary": "Data visualization is the process of making numeric data visual, such as in charts and graphs and maps and networks.  I'll go over some basic chart design principles for communicating clearly, and show examples of excellent static and interactive charts created primarily by data journalists to communicate to a wide audience. We will finish with some discussion of using multiple charts and interactive techniques to tell a data \"story.\"",
@@ -1589,7 +1587,7 @@
         "room": "AMPHI1",
         "slug": "une-bonne-intelligence-artificielle-doit-elle-pouvoir-s-emouvoir-",
         "speakerIds": [
-            "samuel.lepine@gmail.com"
+            "samuel.lepine"
         ],
         "start": "2018-04-20T17:10:00",
         "summary": "Si vous deviez cr\u00e9er une intelligence artificielle, la programmeriez-vous de telle sorte qu\u2019elle puisse aussi \u00e9prouver des \u00e9motions ? Que nous apportent r\u00e9ellement les \u00e9motions, et seraient-elles vraiment n\u00e9cessaires au bon fonctionnement d\u2019une intelligence artificielle ? De nombreuses personnes, tout comme certains philosophes, consid\u00e8rent parfois que la vie serait bien meilleure sans \u00e9motions (Shaffer, 1983). Celles-ci, en effet, nous font souvent agir d\u2019une fa\u00e7on apparemment irrationnelle. La col\u00e8re, par exemple, nous conduit \u00e0 formuler des remarques blessantes que nous regrettons aussit\u00f4t, l\u2019embarras peut nous rendre maladroits en soci\u00e9t\u00e9, et l\u2019angoisse nous am\u00e8ne \u00e0 accorder trop d\u2019importance \u00e0 des d\u00e9tails compl\u00e8tement anodins. A cela s\u2019ajoute encore le fait que certaines \u00e9motions, comme la honte ou la culpabilit\u00e9, sont tout simplement d\u00e9sagr\u00e9ables \u00e0 \u00e9prouver. De ce point de vue, nous envions parfois le calme et la rationalit\u00e9 parfaite de certains personnages fictionnels comme Monsieur Spock. En suivant cette approche, il serait donc tentant de penser qu\u2019une intelligence artificielle optimale fonctionnerait bien mieux ind\u00e9pendamment de toute \u00e9motion. ",
