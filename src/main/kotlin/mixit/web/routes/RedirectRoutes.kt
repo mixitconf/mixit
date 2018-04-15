@@ -24,6 +24,7 @@ class RedirectRoutes(private val blogHandler: BlogHandler,
                 (GET("/{id}") or GET("/{id}/")).invoke(blogHandler::redirect)
             }
             GET("/article/{id}/", blogHandler::redirect)
+            GET("/mixteen") { permanentRedirect("${properties.baseUri}/2018/born-to-code-avec-mixteen-")}
 
             GET("/docs/sponsor/leaflet/en") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${properties.drive.en.sponsor}")}
             GET("/docs/sponsor/leaflet/fr") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${properties.drive.fr.sponsor}")}
