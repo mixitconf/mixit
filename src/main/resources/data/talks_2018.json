@@ -2,7 +2,7 @@
     {
         "addedAt": "2018-01-30T12:47:02.561",
         "description": "In this talk, Sharon will discuss how communication plays a role in building successful relationships; how empathy fosters highly collaborative teams; and finally we\u2019ll talk about true accessibility. Why? Because innovation is at it\u2019s best when it\u2019s inclusive. And to be inclusive, you must be empathetic",
-        "end": "2018-04-19T09:35:00",
+        "end": "2018-04-19T09:20:00",
         "event": "2018",
         "format": "KEYNOTE",
         "id": "5a706948840deb00141a7204",
@@ -13,7 +13,7 @@
         "speakerIds": [
             "sharonsteed"
         ],
-        "start": "2018-04-19T09:10:00",
+        "start": "2018-04-19T08:55:00",
         "summary": "One of our most valuable commodities as humans is our ability to build relationships \u2013 both personally and professionally. And the key to any successful relationship is empathy: being able to understand someone, connect with someone and view the world through their eyes. The problem is that the empathy needed to cultivate relationships, foster collaboration and build strong communities is often times lacking, especially when we are around people who are different from us.",
         "title": "Building highly productive teams with empathy",
         "topic": "team",
@@ -754,7 +754,7 @@
     },
     {
         "addedAt": "2018-04-15T18:11:34.302",
-        "description": null,
+        "description": "I will explain what LeSS is, how LeSS relates to Scrum and what the key differences with Scrum are. I will touch upon the impact of LeSS adoptions and share with my experience working at various smaller and larger companies.\r\n\r\nThe audience needs to have understanding of Scrum",
         "end": "2018-04-19T17:10:00",
         "event": "2018",
         "format": "TALK",
@@ -767,7 +767,7 @@
             "roland.flemm"
         ],
         "start": "2018-04-19T16:20:00",
-        "summary": "This lecture aims at people who are not yet familiar with the LeSS framework. I will explain what LeSS is, how LeSS relates to Scrum and what the key differences with Scrum are. I will touch upon the impact of LeSS adoptions and share with my experience working at various smaller and larger companies.",
+        "summary": "This lecture aims at people who are not yet familiar with the LeSS framework.",
         "title": "An Introduction to Large Scale Scrum (LeSS): Real life stories",
         "topic": "learn",
         "video": null

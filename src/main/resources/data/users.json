@@ -5053,8 +5053,8 @@
         "login": "guillaumeehret",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "15b6deb57870",
-        "tokenExpiration": "2018-04-17T17:54:05.915"
+        "token": "5e9f8bf0046b",
+        "tokenExpiration": "2018-04-18T21:44:21.359"
     },
     {
         "company": null,
@@ -10776,8 +10776,8 @@
         "login": "hklimezak",
         "photoUrl": null,
         "role": "USER",
-        "token": "f55e2ba7c1aa",
-        "tokenExpiration": "2018-04-11T15:05:25.532"
+        "token": "672866ce9a3a",
+        "tokenExpiration": "2018-04-18T07:30:38.119"
     },
     {
         "company": "",
@@ -15510,8 +15510,8 @@
         "login": "bmaras",
         "photoUrl": null,
         "role": "USER",
-        "token": "dd2441e47c6e",
-        "tokenExpiration": "2018-04-14T07:01:20.368"
+        "token": "480c6f3e8331",
+        "tokenExpiration": "2018-04-18T20:10:03.364"
     },
     {
         "company": "",
@@ -23285,7 +23285,7 @@
             "ENGLISH": "Developer Mobile/Web and stuff ... (HTML5 games/museum apps) #ionic #cordova #angular",
             "FRENCH": "Developer Mobile/Web and stuff ... (HTML5 games/museum apps) #ionic #cordova #angular"
         },
-        "email": null,
+        "email": "CuT0VFqjJ3Qg1FZl79b91IaL2LyKzVSU0Rf5DN04jXU=",
         "emailHash": "2f5b7c46e38addcd22dfd2a39a0aec7e",
         "firstname": "Tobias",
         "lastname": "Kausch",
@@ -23294,8 +23294,8 @@
         "login": "tobika",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.507"
+        "token": "51356d7aefb6",
+        "tokenExpiration": "2018-04-18T08:16:09.708"
     },
     {
         "company": "",
@@ -37959,8 +37959,8 @@
         "login": "mpetitdant",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "60042d861ed3",
-        "tokenExpiration": "2018-04-15T07:07:36.877"
+        "token": "4f9aad4fc2a0",
+        "tokenExpiration": "2018-04-18T19:33:37.098"
     },
     {
         "company": "Sogelink",
@@ -41205,5 +41205,188 @@
         "role": "USER",
         "token": "df6427f09c28",
         "tokenExpiration": "2018-04-16T19:43:18.904"
+    },
+    {
+        "company": "Sollya",
+        "description": {
+            "ENGLISH": "Digital Communication &amp; Ethic",
+            "FRENCH": "Communication Digitale &amp; Responsable"
+        },
+        "email": "9gF4lmmT1o0On3r8fFO5eTeSqNwrHMWcRQhh+WKIqSs=",
+        "emailHash": "e0add247193a107944dbfe09a2876afe",
+        "firstname": "Alex",
+        "lastname": "Carmona",
+        "legacyId": null,
+        "links": [],
+        "login": "skalx.news",
+        "photoUrl": null,
+        "role": "USER",
+        "token": "07a726d4fb40",
+        "tokenExpiration": "2018-04-17T19:54:18.822"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "ilfTjASbTjIolBrNEzmLpgPNx/zka7R9GK6hF5hcSso=",
+        "emailHash": null,
+        "firstname": "Xavier",
+        "lastname": "Van de woestyne",
+        "legacyId": null,
+        "links": [],
+        "login": "xaviervdw",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "8fc3344199b6",
+        "tokenExpiration": "2018-04-17T20:19:44.718"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "XhQzg74qAeLoMDTQTWpTD7G8nYehkrlRrZulbO0LKV4=",
+        "emailHash": null,
+        "firstname": "Jonathan",
+        "lastname": "Lef\u00e8vre",
+        "legacyId": null,
+        "links": [],
+        "login": "jo.lefevre+mixitconf",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "cd2174ee4167",
+        "tokenExpiration": "2018-04-18T06:15:22.078"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "wgiGKlkduKpZ74GgcTfuIr3UvbagTCr1ohUxp/5ddvM=",
+        "emailHash": null,
+        "firstname": "Nicolas",
+        "lastname": "Tiran",
+        "legacyId": null,
+        "links": [],
+        "login": "nicolas.tiran",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "16ee30c7a87b",
+        "tokenExpiration": "2018-04-18T06:45:01.592"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "5Hq8yIEcZ9oSY4oXEWcnNj58+/L6cvwRg56TW3SHTZw=",
+        "emailHash": null,
+        "firstname": "Janice",
+        "lastname": "Gallardo",
+        "legacyId": null,
+        "links": [],
+        "login": "janice.gallardo",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "ed96574952e8",
+        "tokenExpiration": "2018-04-18T06:59:52.821"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "TztT0ESEW5m2xCireqfvwK3k3v8AHdxiJ7PTc4EVfCQ=",
+        "emailHash": null,
+        "firstname": "Benjamin",
+        "lastname": "Lorentz",
+        "legacyId": null,
+        "links": [],
+        "login": "benjy.lorentz",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "b07d301230b2",
+        "tokenExpiration": "2018-04-18T08:23:54.885"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "gfkRkRFdkVBoJw42+IVCtng/4jFF9JSHSvHgovniYpo=",
+        "emailHash": null,
+        "firstname": "Marine",
+        "lastname": "Picaut",
+        "legacyId": null,
+        "links": [],
+        "login": "picaut.marine",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "d2d5a7018d3e",
+        "tokenExpiration": "2018-04-18T10:39:35.842"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "Z5kKUUOYjvI6mJm1AAfeHtN//cgXt9QthKsL5T54Z/Q=",
+        "emailHash": null,
+        "firstname": "Fabrice",
+        "lastname": "Caland",
+        "legacyId": null,
+        "links": [],
+        "login": "fabrice.caland",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "32b4cbd26dd6",
+        "tokenExpiration": "2018-04-18T12:38:47.391"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "bFN9DzWFjLEa4Mm3jbMWc5cTKt700mF1Lx3NhFYxx+Q=",
+        "emailHash": null,
+        "firstname": "Philippe",
+        "lastname": "Laumay",
+        "legacyId": null,
+        "links": [],
+        "login": "philippe.laumay",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "ce7ec7c1ec30",
+        "tokenExpiration": "2018-04-18T13:20:43.508"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "qm5PI+hy7Q4p61w1cyz7iV/3HEhaJbBOhK1yk0KdJmU=",
+        "emailHash": null,
+        "firstname": "Thomas",
+        "lastname": "Bracher",
+        "legacyId": null,
+        "links": [],
+        "login": "thchblog",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "78a5a62b5f1b",
+        "tokenExpiration": "2018-04-18T13:58:26.912"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "RgAKUiGjH1FdwDwncQOAng==",
+        "emailHash": null,
+        "firstname": "Christophe",
+        "lastname": "Ayel",
+        "legacyId": null,
+        "links": [],
+        "login": "cayel",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "a6f0935d1b12",
+        "tokenExpiration": "2018-04-18T19:21:39.353"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "eTpbcNQlYRyRlLltqlpTSxfK0ZOmp+oqy5qZsSm1VjU=",
+        "emailHash": null,
+        "firstname": "Estelle",
+        "lastname": "Bissay",
+        "legacyId": null,
+        "links": [],
+        "login": "estelle.bissay",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "6c371ce5e9e5",
+        "tokenExpiration": "2018-04-18T21:21:10.07"
     }
 ]

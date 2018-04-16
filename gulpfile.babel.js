@@ -3,7 +3,7 @@
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import runSequence from 'run-sequence';
-import swPrecache from 'sw-precache';
+const wbBuild = require('workbox-build');
 
 const $ = gulpLoadPlugins({
   pattern: ['gulp-*', 'del']
@@ -21,7 +21,6 @@ const paths = {
     'node_modules/jquery/dist/jquery.js'
   ],
   dist: {
-    sw: 'build/resources/main/static',
     css : 'build/resources/main/static/css',
     images : 'build/resources/main/static/images',
     js: 'build/resources/main/static/js',
@@ -117,39 +116,6 @@ gulp.task('ts-to-js', ['ts'], () =>
       .pipe(gulp.dest(`${paths.dist.js}`))
 );
 
-// Copy over the scripts that are used in importScripts as part of the generate-service-worker task.
-function writeServiceWorkerFile(handleFetch, callback) {
-  var config = {
-    cacheId: 'MiXiT',
-    // Determines whether the fetch event handler is included in the generated service worker code. It is useful to
-    // set this to false in development builds, to ensure that features like live reload still work. Otherwise, the content
-    // would always be served from the service worker cache.
-    handleFetch: handleFetch,
-    logger: $.util.log,
-    runtimeCaching: [{
-      urlPattern: '/(.*)',
-      handler: 'networkFirst',
-      options : {
-        networkTimeoutSeconds: 3,
-        maxAgeSeconds: 600
-      }
-    }],
-    staticFileGlobs: [ paths.dist.sw + '/**/*.{js,html,css,png,jpg,json,gif,svg,webp,eot,ttf,woff,woff2}'],
-    stripPrefix: paths.dist.sw,
-    verbose: true
-  };
-
-  swPrecache.write(`${paths.tmp}/service-worker.js`, config, callback);
-}
-
-gulp.task('generate-service-worker-dev', function(callback) {
-  writeServiceWorkerFile(false, callback);
-});
-
-gulp.task('generate-service-worker', function(callback) {
-  writeServiceWorkerFile(true, callback);
-});
-
 gulp.task('copy-templates', () => {
   return gulp.src(['src/main/resources/templates/**'])
     .pipe(gulp.dest(`${paths.dist.resources}/templates`));
@@ -160,14 +126,31 @@ gulp.task('copy-messages', () => {
     .pipe(gulp.dest(`${paths.dist.resources}`));
 });
 
-gulp.task('package-service-worker', () =>
-  gulp.src(`${paths.tmp}/service-worker.js`)
-    .pipe($.sourcemaps.init())
-    .pipe($.sourcemaps.write())
-    .pipe($.uglify({preserveComments: 'none'}))
-    .pipe($.size({title: 'scripts'}))
-    .pipe($.sourcemaps.write('.'))
-    .pipe(gulp.dest(`${paths.dist.sw}`))
+gulp.task('service-worker', ['service-worker-bundle', 'service-worker-resource'], () =>
+    gulp.src(`${paths.tmp}/sw.js`)
+        .pipe($.sourcemaps.init())
+        .pipe($.sourcemaps.write())
+        .pipe($.uglify({preserveComments: 'none'}))
+        .pipe($.size({title: 'scripts'}))
+        .pipe($.sourcemaps.write('.'))
+        .pipe(gulp.dest(`${paths.dist.resources}/static`))
+);
+
+gulp.task('service-worker-resource', (cb) => {
+    gulp.src(['node_modules/workbox-sw/build/*-sw.js'])
+        .pipe($.size({title: 'copy', showFiles: true}))
+        .pipe(gulp.dest(`${paths.dist.resources}/static`))
+        .on('end', () => cb())
+});
+
+gulp.task('service-worker-bundle', () =>
+    wbBuild.injectManifest({
+        swSrc: `${paths.main}/resources/static/sw.js`,
+        swDest: `${paths.tmp}/sw.js`,
+        globDirectory: `${paths.dist.resources}/static`,
+        globPatterns: ['**\/*.{js,html,css,svg}']
+        // we don't load image files on SW precaching step
+    }).catch((err) => console.log('[ERROR] This happened: ' + err))
 );
 
 // Clean output directory
@@ -182,21 +165,19 @@ gulp.task('watch', ['dev'], () => {
 });
 
 // Buil dev files
-gulp.task('dev', ['clean'], cb =>
+gulp.task('dev', cb =>
   runSequence(
     ['styles', 'images', 'js-vendors', 'ts-to-js'],
-    'generate-service-worker-dev',
-    'package-service-worker',
+    'service-worker',
     cb
   )
 );
 
 // Build production files, the default task
-gulp.task('build', cb =>
+gulp.task('build', ['clean'], cb =>
   runSequence(
     ['styles', 'images', 'js-vendors', 'ts-to-js'],
-    'generate-service-worker',
-    'package-service-worker',
+    'service-worker',
     cb
   )
 );
