@@ -53,7 +53,7 @@ if (workbox) {
             networkTimeoutSeconds: 3,
             plugins: [
                 new workbox.expiration.Plugin({
-                    maxEntries: 60,
+                    maxEntries: 80,
                     maxAgeSeconds: 6 * 60 * 60
                 }),
                 new workbox.cacheableResponse.Plugin({
