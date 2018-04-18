@@ -325,26 +325,6 @@
         "video": null
     },
     {
-        "addedAt": "2018-01-30T12:47:04.618",
-        "description": null,
-        "end": "2018-04-19T14:10:00",
-        "event": "2018",
-        "format": "RANDOM",
-        "id": "5a706948840deb00141a7248",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "action-de-groupe-contre-les-gafam",
-        "speakerIds": [
-            "adclaquadrature"
-        ],
-        "start": "2018-04-19T13:50:00",
-        "summary": "Ce talk est de type \"random\". Pour cette track, nous choisissons le programme pour vous. Vous \u00eates dans une pi\u00e8ce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 20 minutes. Comme c'est une surprise, nous n'affichons pas le r\u00e9sum\u00e9 de la session avant ...",
-        "title": "Action de groupe contre les GAFAM",
-        "topic": "hacktivism",
-        "video": null
-    },
-    {
         "addedAt": "2018-01-30T12:47:04.516",
         "description": null,
         "end": "2018-04-19T14:10:00",
@@ -362,6 +342,26 @@
         "summary": "This is a \"Random\" talk. For this track we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 20 minutes. As it's a surprise we don't display the session summary before...   ",
         "title": "Software on the road: the journey",
         "topic": "aliens",
+        "video": null
+    },
+    {
+        "addedAt": "2018-01-30T12:47:04.618",
+        "description": null,
+        "end": "2018-04-19T14:10:00",
+        "event": "2018",
+        "format": "RANDOM",
+        "id": "5a706948840deb00141a7248",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "UNKNOWN",
+        "slug": "action-de-groupe-contre-les-gafam",
+        "speakerIds": [
+            "adclaquadrature"
+        ],
+        "start": "2018-04-19T13:50:00",
+        "summary": "Ce talk est de type \"random\". Pour cette track, nous choisissons le programme pour vous. Vous \u00eates dans une pi\u00e8ce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 20 minutes. Comme c'est une surprise, nous n'affichons pas le r\u00e9sum\u00e9 de la session avant ...",
+        "title": "Action de groupe contre les GAFAM",
+        "topic": "hacktivism",
         "video": null
     },
     {
@@ -449,26 +449,6 @@
         "video": null
     },
     {
-        "addedAt": "2018-01-30T12:47:04.422",
-        "description": null,
-        "end": "2018-04-19T15:00:00",
-        "event": "2018",
-        "format": "TALK",
-        "id": "5a706948840deb00141a7238",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "ROOM1",
-        "slug": "designer-codeur-comment-le-metier-et-les-outils-du-designer-graphique-evoluent",
-        "speakerIds": [
-            "azertypow"
-        ],
-        "start": "2018-04-19T14:10:00",
-        "summary": "L'environnement de travail du designer graphique \u00e9volue avec la cr\u00e9ation d\u2019interfaces d\u2019applications web. La programmation devient un milieu accessible pour ce dernier, et peut m\u00eame n\u00e9cessiter son expertise dans certains domaines (css, svg, canvas, javascript\u2026) en collaboration avec le d\u00e9veloppeur.  \r\nL\u2019outillage du designer graphique n\u2019est donc plus limit\u00e9 aux interfaces graphiques de type WIMP (Windows, Icons, Menus, Pointing) comme Adobe, mais s\u2019ouvre sur les interfaces textuelles de programmation. Sa m\u00e9thode de travail peut d\u00e9sormais se rapprocher de celle du d\u00e9veloppeur.\r\n\r\n\u00c0 travers un \u00e9tat des lieux des outils \u00e9mergents, nous explorerons les nouvelles logiques de cr\u00e9ation d\u2019interface, et de leurs \u00e9volutions possibles.",
-        "title": "Designer/codeur, comment le m\u00e9tier et les outils du designer graphique \u00e9voluent",
-        "topic": "design",
-        "video": null
-    },
-    {
         "addedAt": "2018-01-30T12:47:03.629",
         "description": null,
         "end": "2018-04-19T15:00:00",
@@ -486,6 +466,26 @@
         "summary": "Certains mots ont pris des sens tr\u00e8s particuliers dans notre langue, le mot \u201caider\u201d en fait partie. Lors de cette session, je vous propose de m\u2019accompagner dans une r\u00e9flexion sur les vices cach\u00e9s de l\u2019aide en g\u00e9n\u00e9ral, telle qu\u2019elle est souvent pratiqu\u00e9e. Le tout sera remis dans le contexte de la demande, ou de l\u2019absence de demande, et se notre rapport au \u201cnon\u201d.\r\n\r\nTriangle de Karpman, CNV ou Analyse Transactionnelle, l\u2019occasion de vous pr\u00e9senter quelques outils qui pourront vous aider \u00e0 revisiter votre mani\u00e8re d\u2019\u201c\u00eatre\u201d \u00e0 vous m\u00eame et aux autres.",
         "title": "Vous arrive-t-il d'infliger de l'aide ?",
         "topic": "learn",
+        "video": null
+    },
+    {
+        "addedAt": "2018-01-30T12:47:04.422",
+        "description": null,
+        "end": "2018-04-19T15:00:00",
+        "event": "2018",
+        "format": "TALK",
+        "id": "5a706948840deb00141a7238",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM1",
+        "slug": "designer-codeur-comment-le-metier-et-les-outils-du-designer-graphique-evoluent",
+        "speakerIds": [
+            "azertypow"
+        ],
+        "start": "2018-04-19T14:10:00",
+        "summary": "L'environnement de travail du designer graphique \u00e9volue avec la cr\u00e9ation d\u2019interfaces d\u2019applications web. La programmation devient un milieu accessible pour ce dernier, et peut m\u00eame n\u00e9cessiter son expertise dans certains domaines (css, svg, canvas, javascript\u2026) en collaboration avec le d\u00e9veloppeur.  \r\nL\u2019outillage du designer graphique n\u2019est donc plus limit\u00e9 aux interfaces graphiques de type WIMP (Windows, Icons, Menus, Pointing) comme Adobe, mais s\u2019ouvre sur les interfaces textuelles de programmation. Sa m\u00e9thode de travail peut d\u00e9sormais se rapprocher de celle du d\u00e9veloppeur.\r\n\r\n\u00c0 travers un \u00e9tat des lieux des outils \u00e9mergents, nous explorerons les nouvelles logiques de cr\u00e9ation d\u2019interface, et de leurs \u00e9volutions possibles.",
+        "title": "Designer/codeur, comment le m\u00e9tier et les outils du designer graphique \u00e9voluent",
+        "topic": "design",
         "video": null
     },
     {
@@ -797,7 +797,7 @@
         "description": null,
         "end": "2018-04-19T18:00:00",
         "event": "2018",
-        "format": "TALK",
+        "format": "KEYNOTE",
         "id": "5aa12bd067bc5305f8a4370b",
         "language": "ENGLISH",
         "photoUrls": [],
@@ -894,27 +894,6 @@
         "video": null
     },
     {
-        "addedAt": "2018-01-30T12:47:04.585",
-        "description": null,
-        "end": "2018-04-20T11:00:00",
-        "event": "2018",
-        "format": "TALK",
-        "id": "5a706948840deb00141a7245",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "AMPHI2",
-        "slug": "mentoring-a-tous-les-etages",
-        "speakerIds": [
-            "nicolas.savois",
-            "ambalaurelie"
-        ],
-        "start": "2018-04-20T10:10:00",
-        "summary": "Cette pr\u00e9sentation traitera des questions essentielles : de l\u2019int\u00e9gration d\u2019un nouvel arrivant dans une entreprise, \u00e0 l\u2019encouragement de la progression individuelle, en passant par le bien-\u00eatre au travail de tous. La solution miracle (ou une partie du miracle) ? Le pair mentoring maison ! Nous vous expliquerons tout de ce syst\u00e8me que nous avons mis en place l\u2019an dernier et continuons \u00e0 am\u00e9liorer depuis. Un mentor (mentor\u00e9) et une mentor\u00e9e viennent vous pr\u00e9senter la m\u00e9thode (\u201cdu bonheur\u201d).",
-        "title": "Mentoring \u00e0 tous les \u00e9tages",
-        "topic": "makers",
-        "video": null
-    },
-    {
         "addedAt": "2018-01-30T12:47:04.534",
         "description": null,
         "end": "2018-04-20T11:00:00",
@@ -933,6 +912,27 @@
         "summary": "The past several years has seen the introduction of new functionality and practices into core Android development, with such elements as the Support Library, Architecture Components, and Kotlin. But all of the old programming approaches still work. So what's an Android developer supposed to do?\r\n\r\nThis talk will not only cover these new aspects of Android development; we will talk about *why* they exist and how to understand modern development of Android applications. Developers will leave with a better idea of what they should  know and use in their projects.",
         "title": "Modern Android Development",
         "topic": "tech",
+        "video": null
+    },
+    {
+        "addedAt": "2018-01-30T12:47:04.585",
+        "description": null,
+        "end": "2018-04-20T11:00:00",
+        "event": "2018",
+        "format": "TALK",
+        "id": "5a706948840deb00141a7245",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHI2",
+        "slug": "mentoring-a-tous-les-etages",
+        "speakerIds": [
+            "nicolas.savois",
+            "ambalaurelie"
+        ],
+        "start": "2018-04-20T10:10:00",
+        "summary": "Cette pr\u00e9sentation traitera des questions essentielles : de l\u2019int\u00e9gration d\u2019un nouvel arrivant dans une entreprise, \u00e0 l\u2019encouragement de la progression individuelle, en passant par le bien-\u00eatre au travail de tous. La solution miracle (ou une partie du miracle) ? Le pair mentoring maison ! Nous vous expliquerons tout de ce syst\u00e8me que nous avons mis en place l\u2019an dernier et continuons \u00e0 am\u00e9liorer depuis. Un mentor (mentor\u00e9) et une mentor\u00e9e viennent vous pr\u00e9senter la m\u00e9thode (\u201cdu bonheur\u201d).",
+        "title": "Mentoring \u00e0 tous les \u00e9tages",
+        "topic": "makers",
         "video": null
     },
     {
