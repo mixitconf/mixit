@@ -265,23 +265,23 @@
         "video": null
     },
     {
-        "addedAt": "2018-01-30T12:47:03.199",
+        "addedAt": "2018-01-30T12:47:04.542",
         "description": null,
         "end": "2018-04-19T13:35:00",
         "event": "2018",
         "format": "KEYNOTE",
-        "id": "5a706948840deb00141a721c",
+        "id": "5a706948840deb00141a7241",
         "language": "FRENCH",
         "photoUrls": [],
         "room": "AMPHI1",
-        "slug": "la-technologie-a-l-attaque-du-chomage-retour-d-experience-sur-l-aventure-bob-emploi",
+        "slug": "comment-reveiller-l-ingenieur-positif-present-en-chacun-de-nous-",
         "speakerIds": [
-            "bayesimpact"
+            "isabll.huynh"
         ],
         "start": "2018-04-19T13:10:00",
-        "summary": "En novembre 2016, la startup \u00e0 but non-lucratif Bayes Impact lan\u00e7ait Bob Emploi, une application en ligne pour aider les chercheurs d'emploi. Depuis Bob Emploi a accompagn\u00e9 plus de 150 000 personnes.\r\n\r\nComme toute aventure startup, ce projet a connu beaucoup de rebondissements. Florian va partager les \u00e9tapes par lesquelles l'\u00e9quipe et le produit sont pass\u00e9s !",
-        "title": "La technologie \u00e0 l'attaque du ch\u00f4mage : retour d'exp\u00e9rience sur l'aventure Bob Emploi",
-        "topic": "makers",
+        "summary": "Cette conf\u00e9rence c'est l'histoire d'Isabelle Huynh, de son changement d'ing\u00e9nieure d\u00e9veloppement pour un grand groupe \u00e0 exploratrice de l'Ing\u00e9nierie Positive. Mais c'est aussi l'histoire de ses rencontres \u00e0 travers le monde. Des entrepreneurs, des ing\u00e9nieurs et chercheurs qui chaque jour cherchent \u00e0 am\u00e9liorer la vie des personnes. Quelles sont les clefs qui d\u00e9clenchent de tels parcours ? \r\n\r\nIsabelle l'assure, on a tous quelque chose en nous de positif. Elle vous invite \u00e0 le d\u00e9couvrir.",
+        "title": "Comment r\u00e9veiller l'ing\u00e9nieur positif pr\u00e9sent en chacun de nous ?",
+        "topic": "aliens",
         "video": null
     },
     {
@@ -720,7 +720,7 @@
         "id": "5a706948840deb00141a722f",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "ROOM5",
+        "room": "ROOM2",
         "slug": "se-liberer-des-entreprises-pour-creer-son-equilibre-et-payer-ses-factures",
         "speakerIds": [
             "mathieu.parisot",
@@ -773,23 +773,23 @@
         "video": null
     },
     {
-        "addedAt": "2018-01-30T12:47:04.542",
+        "addedAt": "2018-01-30T12:47:03.199",
         "description": null,
         "end": "2018-04-19T17:35:00",
         "event": "2018",
         "format": "KEYNOTE",
-        "id": "5a706948840deb00141a7241",
+        "id": "5a706948840deb00141a721c",
         "language": "FRENCH",
         "photoUrls": [],
         "room": "AMPHI1",
-        "slug": "comment-reveiller-l-ingenieur-positif-present-en-chacun-de-nous-",
+        "slug": "la-technologie-a-l-attaque-du-chomage-retour-d-experience-sur-l-aventure-bob-emploi",
         "speakerIds": [
-            "isabll.huynh"
+            "bayesimpact"
         ],
         "start": "2018-04-19T17:10:00",
-        "summary": "Cette conf\u00e9rence c'est l'histoire d'Isabelle Huynh, de son changement d'ing\u00e9nieure d\u00e9veloppement pour un grand groupe \u00e0 exploratrice de l'Ing\u00e9nierie Positive. Mais c'est aussi l'histoire de ses rencontres \u00e0 travers le monde. Des entrepreneurs, des ing\u00e9nieurs et chercheurs qui chaque jour cherchent \u00e0 am\u00e9liorer la vie des personnes. Quelles sont les clefs qui d\u00e9clenchent de tels parcours ? \r\n\r\nIsabelle l'assure, on a tous quelque chose en nous de positif. Elle vous invite \u00e0 le d\u00e9couvrir.",
-        "title": "Comment r\u00e9veiller l'ing\u00e9nieur positif pr\u00e9sent en chacun de nous ?",
-        "topic": "aliens",
+        "summary": "En novembre 2016, la startup \u00e0 but non-lucratif Bayes Impact lan\u00e7ait Bob Emploi, une application en ligne pour aider les chercheurs d'emploi. Depuis Bob Emploi a accompagn\u00e9 plus de 150 000 personnes.\r\n\r\nComme toute aventure startup, ce projet a connu beaucoup de rebondissements. Florian va partager les \u00e9tapes par lesquelles l'\u00e9quipe et le produit sont pass\u00e9s !",
+        "title": "La technologie \u00e0 l'attaque du ch\u00f4mage : retour d'exp\u00e9rience sur l'aventure Bob Emploi",
+        "topic": "makers",
         "video": null
     },
     {
