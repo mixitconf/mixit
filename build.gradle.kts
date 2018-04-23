@@ -7,6 +7,7 @@ plugins {
     val nodePluginVersion = "1.1.1"
     id("org.jetbrains.kotlin.jvm") version kotlinVersion
     id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion
+    id("org.jetbrains.kotlin.kapt") version kotlinVersion
     id("com.moowork.node") version nodePluginVersion
     id("com.moowork.gulp") version nodePluginVersion
     id("org.springframework.boot") version "2.0.1.RELEASE"
@@ -48,8 +49,8 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-mail")
     compile("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
     compile("org.springframework.boot:spring-boot-devtools")
-    compile("org.springframework.boot:spring-boot-configuration-processor")
-
+    kapt("org.springframework.boot:spring-boot-configuration-processor")
+    
     runtime("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
     compile("com.samskivert:jmustache")
     compile("com.atlassian.commonmark:commonmark:0.9.0")
