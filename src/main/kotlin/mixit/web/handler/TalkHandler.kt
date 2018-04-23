@@ -285,7 +285,7 @@ class TalkDto(
         val speakersFirstNames: String = (speakers.joinToString { it.firstname })
 )
 
-fun Talk.toDto(lang: Language, speakers: List<User>, favorite: Boolean = false, convertRandomLabel: Boolean = true, searchTerms: List<String> = emptyList()) = TalkDto(
+fun Talk.toDto(lang: Language, speakers: List<User>, favorite: Boolean = false, convertRandomLabel: Boolean = false, searchTerms: List<String> = emptyList()) = TalkDto(
         id, slug, format, event,
         title.markFoundOccurrences(searchTerms),
         summary(convertRandomLabel).markFoundOccurrences(searchTerms),

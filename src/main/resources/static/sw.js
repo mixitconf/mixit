@@ -48,6 +48,23 @@ if (workbox) {
         })
     );
 
+    workbox.routing.registerRoute(/(.*)\/admin(.*)$/, workbox.strategies.staleWhileRevalidate({
+            cacheName: 'html-adm-resources',
+            networkTimeoutSeconds: 3,
+            plugins: [
+                new workbox.expiration.Plugin({
+                    maxEntries: 1,
+                    maxAgeSeconds: 1
+                }),
+                new workbox.cacheableResponse.Plugin({
+                    headers: {
+                        'Content-Type': 'text/html;charset=UTF-8'
+                    }
+                })
+            ]
+        })
+    );
+
     workbox.routing.registerRoute(/.*$/, workbox.strategies.staleWhileRevalidate({
             cacheName: 'html-resources',
             networkTimeoutSeconds: 3,
