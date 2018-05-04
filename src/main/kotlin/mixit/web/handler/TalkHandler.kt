@@ -41,7 +41,7 @@ class TalkHandler(private val repository: TalkRepository,
                 ok().render("talks", mapOf(
                         Pair("talks", talks),
                         Pair("year", year),
-                        Pair("current", year == 2018),
+                        Pair("current", year == 2019),
                         Pair("title", when (topic) { null -> "talks.title.html|$year"
                             else -> "talks.title.html.$topic|$year"
                         }),
@@ -280,7 +280,7 @@ class TalkDto(
         val photoUrls: List<Link> = emptyList(),
         val isEn: Boolean = (language == "english"),
         val isTalk: Boolean = (format == TalkFormat.TALK),
-        val isCurrentEdition: Boolean = "2018".equals(event),
+        val isCurrentEdition: Boolean = "2019".equals(event),
         val multiSpeaker: Boolean = (speakers.size > 1),
         val speakersFirstNames: String = (speakers.joinToString { it.firstname })
 )
@@ -302,12 +302,12 @@ fun Talk.toDto(lang: Language, speakers: List<User>, favorite: Boolean = false, 
         photoUrls
 )
 
-fun Talk.summary(convertRandomLabel: Boolean) = if (convertRandomLabel && format == TalkFormat.RANDOM && language == Language.ENGLISH && event == "2018")
+fun Talk.summary(convertRandomLabel: Boolean) = if (convertRandomLabel && format == TalkFormat.RANDOM && language == Language.ENGLISH && event == "2019")
     "This is a \"Random\" talk. For this track we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 20 minutes. As it's a surprise we don't display the session summary before...   "
-else if (convertRandomLabel && format == TalkFormat.RANDOM && language == Language.FRENCH && event == "2018")
+else if (convertRandomLabel && format == TalkFormat.RANDOM && language == Language.FRENCH && event == "2019")
     "Ce talk est de type \"random\". Pour cette track, nous choisissons le programme pour vous. Vous êtes dans une pièce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 20 minutes. Comme c'est une surprise, nous n'affichons pas le résumé de la session avant ..."
 else summary
 
-fun Talk.description(convertRandomLabel: Boolean) = if (convertRandomLabel && format == TalkFormat.RANDOM && event == "2018") "" else description
+fun Talk.description(convertRandomLabel: Boolean) = if (convertRandomLabel && format == TalkFormat.RANDOM && event == "2019") "" else description
 
 fun Talk.sanitizeForApi() = Talk(format, event, title, summary(true), speakerIds, language, addedAt, description, topic, video, room, start, end, photoUrls, slug, id)
