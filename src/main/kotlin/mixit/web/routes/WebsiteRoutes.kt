@@ -164,10 +164,11 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
         }
     }.filter { request, next ->
         val locale: Locale = request.locale()
-        val session = request.session().block()!!
         val path = request.uri().path
-        val model = generateModel(properties, path, locale, session, messageSource, markdownConverter)
-        next.handle(request).flatMap { if (it is RenderingResponse) RenderingResponse.from(it).modelAttributes(model).build() else it.toMono() }
+		request.session().flatMap { session ->
+			val model = generateModel(properties, path, locale, session, messageSource, markdownConverter)
+			next.handle(request).flatMap { if (it is RenderingResponse) RenderingResponse.from(it).modelAttributes(model).build() else it.toMono() }
+		}
     }
 
     @Bean
