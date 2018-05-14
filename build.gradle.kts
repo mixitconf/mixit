@@ -3,15 +3,15 @@ import com.moowork.gradle.node.yarn.YarnInstallTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    val kotlinVersion = "1.2.40"
+    val kotlinVersion = "1.2.41"
     val nodePluginVersion = "1.1.1"
     id("org.jetbrains.kotlin.jvm") version kotlinVersion
     id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion
     id("org.jetbrains.kotlin.kapt") version kotlinVersion
     id("com.moowork.node") version nodePluginVersion
     id("com.moowork.gulp") version nodePluginVersion
-    id("org.springframework.boot") version "2.0.1.RELEASE"
-    id("io.spring.dependency-management") version "1.0.4.RELEASE"
+    id("org.springframework.boot") version "2.0.2.RELEASE"
+    id("io.spring.dependency-management") version "1.0.5.RELEASE"
 }
 
 version = "1.0.0-SNAPSHOT"
