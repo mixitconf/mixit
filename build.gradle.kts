@@ -38,6 +38,8 @@ node {
 }
 
 dependencies {
+    val commonmarkVersion = "0.11.0"
+
     compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     compile("org.jetbrains.kotlin:kotlin-reflect")
     compile("com.fasterxml.jackson.module:jackson-module-kotlin")
@@ -53,12 +55,11 @@ dependencies {
     
     runtime("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
     compile("com.samskivert:jmustache")
-    compile("com.atlassian.commonmark:commonmark:0.9.0")
-    compile("com.atlassian.commonmark:commonmark-ext-autolink:0.9.0")
+    compile("com.atlassian.commonmark:commonmark:$commonmarkVersion")
+    compile("com.atlassian.commonmark:commonmark-ext-autolink:$commonmarkVersion")
     compile("com.google.api-client:google-api-client:1.23.0")
     compile("com.google.apis:google-api-services-gmail:v1-rev81-1.23.0")
     compile("com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:20171016.1")
-
 
     testCompile("org.springframework.boot:spring-boot-starter-test") {
         exclude(module = "junit")
