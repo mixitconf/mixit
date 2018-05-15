@@ -1,45 +1,37 @@
 package mixit.integration
 
 import mixit.model.Talk
-import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
+import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.boot.web.server.LocalServerPort
 import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.test.context.junit.jupiter.SpringExtension
-import org.springframework.web.reactive.function.client.WebClient
-import org.springframework.web.reactive.function.client.bodyToFlux
-import reactor.test.test
+import org.springframework.test.web.reactive.server.WebTestClient
+import org.springframework.test.web.reactive.server.expectBodyList
 
 
 @ExtendWith(SpringExtension::class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class TalkIntegrationTests(@LocalServerPort port: Int) {
-
-    private val client = WebClient.create("http://localhost:$port")
+class TalkIntegrationTests(@Autowired val client: WebTestClient) {
 
     @Test
     fun `Find Dan North talk`() {
         client.get().uri("/api/talk/2421").accept(APPLICATION_JSON)
-                .retrieve()
-                .bodyToFlux<Talk>()
-                .test()
-                .consumeNextWith {
-                    assertEquals("Selling BDD to the Business", it.title)
-                    assertEquals("tastapod", it.speakerIds.iterator().next())
-                }
-                .verifyComplete()
+                .exchange()
+                .expectStatus().is2xxSuccessful
+                .expectBody()
+                .jsonPath("\$.title").isEqualTo("Selling BDD to the Business")
+                .jsonPath("\$.speakerIds").isEqualTo("tastapod")
     }
 
     @Test
     fun `Find MiXiT 2012 talks`() {
         client.get().uri("/api/2012/talk").accept(APPLICATION_JSON)
-                .retrieve()
-                .bodyToFlux<Talk>()
-                .test()
-                .expectNextCount(27)
-                .verifyComplete()
+                .exchange()
+                .expectStatus().is2xxSuccessful
+                .expectBodyList<Talk>()
+                .hasSize(27)
     }
 
 }
