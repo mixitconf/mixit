@@ -23,15 +23,10 @@ import java.net.URL
 @ExtendWith(SpringExtension::class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Disabled
-class SpeakerImageLoaderTest() {
+class SpeakerImageLoaderTest(@Autowired val userRepository: UserRepository,
+                             @Autowired val talkRepository: TalkRepository) {
 
-    @Autowired
-    lateinit var userRepository: UserRepository
-
-    @Autowired
-    lateinit var talkRepository: TalkRepository
-
-    val SPECIAL_SLUG_CHARACTERS = mapOf<Char, Char>(Pair('é', 'e'), Pair('è', 'e'), Pair('ï', 'i'), Pair(' ', '_'), Pair('ê', 'e'), Pair('à', 'a'), Pair('-', '_'))
+    val SPECIAL_SLUG_CHARACTERS = mapOf(Pair('é', 'e'), Pair('è', 'e'), Pair('ï', 'i'), Pair(' ', '_'), Pair('ê', 'e'), Pair('à', 'a'), Pair('-', '_'))
 
 
     @Test

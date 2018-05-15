@@ -20,26 +20,15 @@ import java.util.*
  */
 @ExtendWith(SpringExtension::class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class TemplateServiceTest{
-    @Autowired
-    lateinit var mustacheCompiler: Mustache.Compiler
+class TemplateServiceTest(@Autowired val mustacheCompiler: Mustache.Compiler,
+                          @Autowired val resourceLoader: ResourceLoader,
+                          @Autowired val messageSource: MessageSource) {
 
-    @Autowired
-    lateinit var resourceLoader: ResourceLoader
 
-    @Autowired
-    lateinit var messageSource: MessageSource
-
-    lateinit var templateService: TemplateService
-
-    @BeforeEach
-    fun `init test`() {
-        // Service to test is not injected because we want to use  Spy to simulate the work of the mailSender
-        templateService = TemplateService(mustacheCompiler, resourceLoader)
-    }
+    val templateService: TemplateService = TemplateService(mustacheCompiler, resourceLoader)
 
     @Test
-    fun `open a mustache template to generate email in french`() {
+    fun `Open a mustache template to generate email in french`() {
         val user = User("test@gmail.com", "Guillaume", "EHRET", "dGVzdEBnbWFpbC5jb20=")
         user.token = "token-3455-dede"
         val params = generateModelForExernalCall("https://mixitconf.org", Locale.FRENCH, messageSource)
@@ -58,7 +47,7 @@ class TemplateServiceTest{
     }
 
     @Test
-    fun `open a mustache template to generate email in english`() {
+    fun `Open a mustache template to generate email in english`() {
         val params = generateModelForExernalCall("https://mixitconf.org", Locale.ENGLISH, messageSource)
         params.put("user", createUser())
         params.put("encodedemail", "test@gmail.com")
@@ -79,4 +68,5 @@ class TemplateServiceTest{
         user.token = "token-3455-dede"
         return user
     }
+
 }
