@@ -1,11 +1,20 @@
+
 class TalksCtrl{
 
-    favoriteToggle(event){
-        // Depending on the browser the target is not the same. In Firefox this is the button and in Chrome the img
-        const elt = event.target;
-        const targetIsButton = event.target.outerHTML.indexOf('button') >= 0;
+    constructor() {
+        const buttons = [].slice.call(document.getElementsByClassName('mxt-img--favorite'));
+        for(const element  of buttons){
+            (element as HTMLButtonElement).onclick = this.favoriteToggle;
+        }
+    }
 
-        const email = <HTMLInputElement> document.getElementById('email');
+
+    favoriteToggle(event: Event){
+        // Depending on the browser the target is not the same. In Firefox this is the button and in Chrome the img
+        const elt = event.target as HTMLElement;
+        const targetIsButton = elt.outerHTML.indexOf('button') >= 0;
+
+        const email = document.getElementById('email') as HTMLInputElement;
         const id = elt.id.substr(9,elt.id.length);
 
         fetch(`/api/favorites/${email.value}/talks/${id}/toggle`, {method: 'post'})
@@ -16,7 +25,7 @@ class TalksCtrl{
                     elt.innerHTML = `<img src="/images/svg/favorites/${imgPath}" class="mxt-icon--cat__talks" id="favorite-{{id}}"/>`;
                 }
                 else {
-                    elt.src = `/images/svg/favorites/${imgPath}`;
+                    (elt as HTMLImageElement).src = `/images/svg/favorites/${imgPath}`;
                 }
             });
 
@@ -24,4 +33,4 @@ class TalksCtrl{
     }
 }
 
-window.addEventListener("load", () => window['ctrl'] = new TalksCtrl());
+window.addEventListener("load", () => new TalksCtrl());

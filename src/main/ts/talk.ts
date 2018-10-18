@@ -4,10 +4,10 @@ class TalkCtrl {
         favoriteButton.onclick = this.favoriteToggle;
     }
 
-    favoriteToggle(event) {
+    favoriteToggle(event: Event) {
         // Depending on the browser the target is not the same. In Firefox this is the button and in Chrome the img
-        const elt = event.target;
-        const targetIsButton = event.target.outerHTML.indexOf('button') >= 0;
+        const elt = event.target as HTMLElement;
+        const targetIsButton = elt.outerHTML.indexOf('button') >= 0;
 
         const talkField = <HTMLInputElement> document.getElementById('talkId');
         const email = <HTMLInputElement> document.getElementById('email');
@@ -20,7 +20,7 @@ class TalkCtrl {
                     elt.innerHTML = `<img src="/images/svg/favorites/${imgPath}" class="mxt-icon--cat__talks" id="favorite-{{id}}"/>`;
                 }
                 else {
-                    elt.src = `/images/svg/favorites/${imgPath}`;
+                    (elt as HTMLImageElement).src = `/images/svg/favorites/${imgPath}`;
                 }
             });
 
