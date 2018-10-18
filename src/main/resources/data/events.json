@@ -3,7 +3,12 @@
         "current": false,
         "end": "2012-04-26",
         "id": "mixit12",
-        "photoUrls": [],
+        "photoUrls": [
+            {
+                "name": "MiXiT 2012",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157688295733061"
+            }
+        ],
         "sponsors": [
             {
                 "level": "GOLD",
@@ -54,7 +59,12 @@
         "current": false,
         "end": "2013-04-26",
         "id": "mixit13",
-        "photoUrls": [],
+        "photoUrls": [
+            {
+                "name": "MiXiT 2013",
+                "url": "https://photos.google.com/b/106629477368826686108/album/AF1QipP_2rgU2AmfHs8jqjqHZssdbptYaq8f2tqAyqLN"
+            }
+        ],
         "sponsors": [
             {
                 "level": "SILVER",
@@ -115,7 +125,12 @@
         "current": false,
         "end": "2014-04-30",
         "id": "mixit14",
-        "photoUrls": [],
+        "photoUrls": [
+            {
+                "name": "MiXiT 2014",
+                "url": "https://photos.google.com/b/106629477368826686108/album/AF1QipNw6ApiPhPzzd-5BtKlIsuLralYcTCm2HaG3GXk"
+            }
+        ],
         "sponsors": [
             {
                 "level": "SILVER",
@@ -199,7 +214,10 @@
             }
         ],
         "start": "2014-04-29",
-        "videoUrl": null,
+        "videoUrl": {
+            "name": "video",
+            "url": "https://vimeo.com/214902172"
+        },
         "year": 2014
     },
     {
@@ -313,7 +331,20 @@
         "current": false,
         "end": "2016-04-22",
         "id": "mixit16",
-        "photoUrls": [],
+        "photoUrls": [
+            {
+                "name": "MiXiT 2016 conf\u00e9rence",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157666243159183"
+            },
+            {
+                "name": "MiXiT 2016 reportage",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157667987593380"
+            },
+            {
+                "name": "MiXiT 2016 diner speaker",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157667470832986"
+            }
+        ],
         "sponsors": [
             {
                 "level": "GOLD",
@@ -439,7 +470,16 @@
         "current": false,
         "end": "2017-04-21",
         "id": "mixit17",
-        "photoUrls": [],
+        "photoUrls": [
+            {
+                "name": "MiXiT 2017 official",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157680961511852"
+            },
+            {
+                "name": "MiXiT 2017 unofficial",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157683737519685"
+            }
+        ],
         "sponsors": [
             {
                 "level": "GOLD",
@@ -553,14 +593,46 @@
             }
         ],
         "start": "2017-04-20",
-        "videoUrl": null,
+        "videoUrl": {
+            "name": "video",
+            "url": "https://vimeo.com/215910469"
+        },
         "year": 2017
     },
     {
         "current": true,
         "end": "2018-04-20",
         "id": "mixit18",
-        "photoUrls": [],
+        "photoUrls": [
+            {
+                "name": "MiXiT 2018 - Day 1 - April 19th",
+                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157695359228534"
+            },
+            {
+                "name": "MiXiT 2018 - Day 2 - April 20th",
+                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157695359699634"
+            },
+            {
+                "name": "MiXiT 2018 MIXTeeN",
+                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157690273360050"
+            },
+            {
+                "name": "MiXiT 2018 - Hackathon",
+                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157666160590557"
+            },
+            {
+                "name": "MiXiT 2018 - Party",
+                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157694276287871"
+            },
+            {
+                "name": "MiXiT 2018 - Speakers dinner",
+                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157695105885704"
+            },
+            {
+                "name": "MiXiT 2018 - Miam",
+                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157692909395252"
+            }
+        ],
         "sponsors": [
             {
                 "level": "SILVER",
@@ -714,7 +786,10 @@
             }
         ],
         "start": "2018-04-19",
-        "videoUrl": null,
+        "videoUrl": {
+            "name": "video",
+            "url": "https://vimeo.com/266571226"
+        },
         "year": 2018
     }
 ]

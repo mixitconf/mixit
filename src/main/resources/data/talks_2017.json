@@ -405,6 +405,27 @@
         "video": "https://vimeo.com/216753822"
     },
     {
+        "addedAt": "2017-03-28T15:51:12.776",
+        "description": null,
+        "end": "2017-04-20T14:00:00",
+        "event": "2017",
+        "format": "RANDOM",
+        "id": "58de4d4b9312a300179a2a6d",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "UNKNOWN",
+        "slug": "la-mafia-lactee-au-travail",
+        "speakerIds": [
+            "tut_tuuut",
+            "mere-teresa"
+        ],
+        "start": "2017-04-20T13:40:00",
+        "summary": "Les statistiques fran\u00e7aises d'allaitement maternel \u00e0 6 mois sont bien tristounes. Une grande majorit\u00e9 des femmes cesse l'allaitement \u00e0 contrec\u0153ur au retour au travail apr\u00e8s le cong\u00e9 maternit\u00e9, et c'est dommage. (L'OMS pr\u00e9conise un allaitement maternel exclusif jusqu'\u00e0 6 mois, et open bar jusqu'aux 2 ans de l'enfant !) Avec quelques informations et un peu d'organisation, dans les conditions relativement favorables de l'IT, on devrait pouvoir am\u00e9liorer les choses\u2026\r\n\r\nQue pouvez-vous faire, *vous* ? R\u00e9flexions et retour d'exp\u00e9rience de deux m\u00e8res (5 enfants en tout) sur l'allaitement au travail.",
+        "title": "La mafia lact\u00e9e au travail",
+        "topic": "aliens",
+        "video": null
+    },
+    {
         "addedAt": "2017-03-28T15:51:12.769",
         "description": null,
         "end": "2017-04-20T14:00:00",
@@ -432,27 +453,6 @@
         "title": "Probabilistic Programming : Tuer un pi\u00e9ton ou sacrifier les passagers ?",
         "topic": "aliens",
         "video": "https://vimeo.com/215559437"
-    },
-    {
-        "addedAt": "2017-03-28T15:51:12.776",
-        "description": null,
-        "end": "2017-04-20T14:00:00",
-        "event": "2017",
-        "format": "RANDOM",
-        "id": "58de4d4b9312a300179a2a6d",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "la-mafia-lactee-au-travail",
-        "speakerIds": [
-            "tut_tuuut",
-            "mere-teresa"
-        ],
-        "start": "2017-04-20T13:40:00",
-        "summary": "Les statistiques fran\u00e7aises d'allaitement maternel \u00e0 6 mois sont bien tristounes. Une grande majorit\u00e9 des femmes cesse l'allaitement \u00e0 contrec\u0153ur au retour au travail apr\u00e8s le cong\u00e9 maternit\u00e9, et c'est dommage. (L'OMS pr\u00e9conise un allaitement maternel exclusif jusqu'\u00e0 6 mois, et open bar jusqu'aux 2 ans de l'enfant !) Avec quelques informations et un peu d'organisation, dans les conditions relativement favorables de l'IT, on devrait pouvoir am\u00e9liorer les choses\u2026\r\n\r\nQue pouvez-vous faire, *vous* ? R\u00e9flexions et retour d'exp\u00e9rience de deux m\u00e8res (5 enfants en tout) sur l'allaitement au travail.",
-        "title": "La mafia lact\u00e9e au travail",
-        "topic": "aliens",
-        "video": null
     },
     {
         "addedAt": "2017-03-28T15:51:12.778",
@@ -557,27 +557,6 @@
         "video": null
     },
     {
-        "addedAt": "2017-03-28T15:51:12.77",
-        "description": null,
-        "end": "2017-04-20T15:50:00",
-        "event": "2017",
-        "format": "WORKSHOP",
-        "id": "58de4d4b9312a300179a2a60",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "ROOM4",
-        "slug": "conquerir-le-monde-avec-coreos",
-        "speakerIds": [
-            "116929121394158032970",
-            "antoine.stalin"
-        ],
-        "start": "2017-04-20T14:00:00",
-        "summary": "Sur le fond d'un star wars camp, nous vous proposons de r\u00e9aliser le plus grand cluster de CoreOs jamais cr\u00e9\u00e9 ! Un peu d'Ansible par ci et un peu de Fleet par la, et nous voici avec une arm\u00e9e de Docker \u00e0 disposition !\r\n\r\nEt si les Ewok prenaient le pouvoir et installaient Kubernetes pour remplacer Fleet sur ce CoreOs que se passerait il ?\r\n\r\nRejoignez cette exp\u00e9rience XXL.",
-        "title": "Conqu\u00e9rir le monde avec CoreOs",
-        "topic": "tech",
-        "video": null
-    },
-    {
         "addedAt": "2017-03-28T15:51:12.773",
         "description": null,
         "end": "2017-04-20T14:50:00",
@@ -601,6 +580,27 @@
         "title": "CSS is Awesome!",
         "topic": "design",
         "video": "https://vimeo.com/215621504"
+    },
+    {
+        "addedAt": "2017-03-28T15:51:12.77",
+        "description": null,
+        "end": "2017-04-20T15:50:00",
+        "event": "2017",
+        "format": "WORKSHOP",
+        "id": "58de4d4b9312a300179a2a60",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM4",
+        "slug": "conquerir-le-monde-avec-coreos",
+        "speakerIds": [
+            "116929121394158032970",
+            "antoine.stalin"
+        ],
+        "start": "2017-04-20T14:00:00",
+        "summary": "Sur le fond d'un star wars camp, nous vous proposons de r\u00e9aliser le plus grand cluster de CoreOs jamais cr\u00e9\u00e9 ! Un peu d'Ansible par ci et un peu de Fleet par la, et nous voici avec une arm\u00e9e de Docker \u00e0 disposition !\r\n\r\nEt si les Ewok prenaient le pouvoir et installaient Kubernetes pour remplacer Fleet sur ce CoreOs que se passerait il ?\r\n\r\nRejoignez cette exp\u00e9rience XXL.",
+        "title": "Conqu\u00e9rir le monde avec CoreOs",
+        "topic": "tech",
+        "video": null
     },
     {
         "addedAt": "2017-03-28T15:51:12.785",
@@ -1175,26 +1175,6 @@
         "video": "https://vimeo.com/221245202"
     },
     {
-        "addedAt": "2017-03-28T15:51:12.749",
-        "description": null,
-        "end": "2017-04-21T11:50:00",
-        "event": "2017",
-        "format": "TALK",
-        "id": "58de4d4b9312a300179a2a43",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "AMPHI2",
-        "slug": "au-secours-ma-prod-est-sous-docker-",
-        "speakerIds": [
-            "francois.teychene"
-        ],
-        "start": "2017-04-21T11:00:00",
-        "summary": "Docker est un outil tr\u00e8s puissant qui connait une adoption tr\u00e8s rapide grace aux nombreuses possibilit\u00e9es qu'il offre aux \u00e9quipes.\r\n\r\nApr\u00e8s l'avoir essay\u00e9 en dev puis avoir convaincu votre management et vos obs de le tester sur des environnements interm\u00e9diaires, il est temps de partir en prod, et l\u00e0, c'est le drame ...\r\nLe passage d'une production sous Docker engendre des probl\u00e9matiques comme le monitoring, la gestion des logs, le scheduling ou la gestion des datas que l'on d\u00e9couvre.\r\n\r\nDans cette pr\u00e9sentation, je ferai un retour d'exp\u00e9rience sur ces probl\u00e9matiques et pr\u00e9senterai des solutions adapt\u00e9es.",
-        "title": "Au secours, ma prod est sous Docker !",
-        "topic": "tech",
-        "video": "https://vimeo.com/221249374"
-    },
-    {
         "addedAt": "2017-03-28T15:51:12.763",
         "description": "Bref avez tout \u00e7a vous finissez la journ\u00e9e en \u00e9tant plus ou moins fatigu\u00e9 et une impression d\u00e9sagr\u00e9able que \u00e7a n'avance pas alors que vous vous donnez \u00e0 fond !\r\n\r\nLa 1\u00e8re bonne nouvelle c'est que nous sommes sommes pas seuls \u00e0 avoir une mauvaise gestion du temps, la 2\u00e8me bonne nouvelle est qu'il existe des actions simples pour sortir de cette spirale infernale :-)\r\n\r\nDans cette session, je vous inviterai \u00e0 r\u00e9fl\u00e9chir sur votre propre gestion du temps individuelle et collective. Pour vous aider \u00e0 trouver des pistes d'am\u00e9lioration nous parlerons parall\u00e9lisation, priorisation, d\u00e9l\u00e9gation et dire non ...",
         "end": "2017-04-21T11:50:00",
@@ -1213,6 +1193,26 @@
         "title": "Comment g\u00e9rer son temps efficacement individuellement et en \u00e9quipe ?",
         "topic": "learn",
         "video": "https://vimeo.com/217011902"
+    },
+    {
+        "addedAt": "2017-03-28T15:51:12.749",
+        "description": null,
+        "end": "2017-04-21T11:50:00",
+        "event": "2017",
+        "format": "TALK",
+        "id": "58de4d4b9312a300179a2a43",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHI2",
+        "slug": "au-secours-ma-prod-est-sous-docker-",
+        "speakerIds": [
+            "francois.teychene"
+        ],
+        "start": "2017-04-21T11:00:00",
+        "summary": "Docker est un outil tr\u00e8s puissant qui connait une adoption tr\u00e8s rapide grace aux nombreuses possibilit\u00e9es qu'il offre aux \u00e9quipes.\r\n\r\nApr\u00e8s l'avoir essay\u00e9 en dev puis avoir convaincu votre management et vos obs de le tester sur des environnements interm\u00e9diaires, il est temps de partir en prod, et l\u00e0, c'est le drame ...\r\nLe passage d'une production sous Docker engendre des probl\u00e9matiques comme le monitoring, la gestion des logs, le scheduling ou la gestion des datas que l'on d\u00e9couvre.\r\n\r\nDans cette pr\u00e9sentation, je ferai un retour d'exp\u00e9rience sur ces probl\u00e9matiques et pr\u00e9senterai des solutions adapt\u00e9es.",
+        "title": "Au secours, ma prod est sous Docker !",
+        "topic": "tech",
+        "video": "https://vimeo.com/221249374"
     },
     {
         "addedAt": "2017-03-28T15:51:12.771",
@@ -1328,26 +1328,6 @@
         "video": "https://vimeo.com/217023172"
     },
     {
-        "addedAt": "2017-03-28T15:51:12.776",
-        "description": null,
-        "end": "2017-04-21T13:50:00",
-        "event": "2017",
-        "format": "RANDOM",
-        "id": "58de4d4b9312a300179a2a6e",
-        "language": "ENGLISH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "being-a-girl-who-codes-in-romania",
-        "speakerIds": [
-            "catalina.dobrica"
-        ],
-        "start": "2017-04-21T13:30:00",
-        "summary": "There are more male coders than female ones in the world. I don't know why. There just are. Little over a year ago I joined a French team of 30 or so developers - only two of whom were women. These numbers were surprising to me, coming from a team where there were as many women as there were men, and can be discouraging to girls considering a career in the industry. But they shouldn't be. I'm here to speak about the life of a coder in Romania from _a woman's perspective_ - not that it really changes anything. Coding knows no bounds - nor gender.",
-        "title": "Being a girl who codes in Romania",
-        "topic": "aliens",
-        "video": "https://vimeo.com/221260276"
-    },
-    {
         "addedAt": "2017-03-28T15:51:12.777",
         "description": "Au programme, le d\u00e9roulement complet d'une attaque :\r\n\r\n- \u00e9coute r\u00e9seau\r\n- vol de mot de passes\r\n- cr\u00e9ation de trojan\r\n- \u00e9vasion antivirus\r\n- infection\r\n- prise de contr\u00f4le totale de la cible",
         "end": "2017-04-21T13:50:00",
@@ -1366,6 +1346,26 @@
         "title": "Comment hacker la webcam de votre voisin(e) ?",
         "topic": "hacktivism",
         "video": null
+    },
+    {
+        "addedAt": "2017-03-28T15:51:12.776",
+        "description": null,
+        "end": "2017-04-21T13:50:00",
+        "event": "2017",
+        "format": "RANDOM",
+        "id": "58de4d4b9312a300179a2a6e",
+        "language": "ENGLISH",
+        "photoUrls": [],
+        "room": "UNKNOWN",
+        "slug": "being-a-girl-who-codes-in-romania",
+        "speakerIds": [
+            "catalina.dobrica"
+        ],
+        "start": "2017-04-21T13:30:00",
+        "summary": "There are more male coders than female ones in the world. I don't know why. There just are. Little over a year ago I joined a French team of 30 or so developers - only two of whom were women. These numbers were surprising to me, coming from a team where there were as many women as there were men, and can be discouraging to girls considering a career in the industry. But they shouldn't be. I'm here to speak about the life of a coder in Romania from _a woman's perspective_ - not that it really changes anything. Coding knows no bounds - nor gender.",
+        "title": "Being a girl who codes in Romania",
+        "topic": "aliens",
+        "video": "https://vimeo.com/221260276"
     },
     {
         "addedAt": "2017-03-28T15:51:12.781",

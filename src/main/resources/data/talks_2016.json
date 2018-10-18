@@ -955,6 +955,26 @@
         "video": null
     },
     {
+        "addedAt": "2017-02-28T15:38:33.7",
+        "description": "La motivation, c'est notre carburant personnel, ce qui nous fait nous lever le matin, ce qui peut nous faire accomplir de grandes choses !\n\nAu cours de ma carri\u00e8re dans l'industrie du logiciel, j'ai crois\u00e9 \u00e0 plusieurs reprises des managers \u00e0 qui on n'avait pas expliqu\u00e9 (ou qui avaient mal compris) quels sont les rouages motivationnels et comment il influent sur notre travail au quotidien. Avec malheureusement des cons\u00e9quences f\u00e2cheuses pour les \u00e9quipes de d\u00e9veloppement.\n\nA travers un atelier ludique et participatif, venez d\u00e9couvrir vos facteurs de motivation personnels.\nVous repartirez avec une meilleure connaissance de vous-m\u00eame, ainsi que des techniques pour mieux comprendre les facteurs de motivation de vos coll\u00e8gues (ou collaborateurs si vous avez des responsabilit\u00e9s de management).",
+        "end": "2016-04-22T13:10:00",
+        "event": "2016",
+        "format": "WORKSHOP",
+        "id": "3182",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "UNKNOWN",
+        "slug": "romain-vignes-sans-motivation-pas-d-action--",
+        "speakerIds": [
+            "103162932700423659158"
+        ],
+        "start": "2016-04-22T11:20:00",
+        "summary": "Atelier ludique et participatif, pour appr\u00e9hender les fondamentaux de la motivation et d\u00e9couvrir ses propres facteurs de motivation",
+        "title": "Sans motivation pas d'action !",
+        "topic": null,
+        "video": null
+    },
+    {
         "addedAt": "2017-02-28T15:38:33.699",
         "description": "Initialement un PoC de d\u00e9veloppeur sur l'architecture Flux, [Redux](http://redux.js.org/) est pass\u00e9, au cours de l\u2019ann\u00e9e 2015, du statut \"encore une nouvelle impl\u00e9mentation Flux\" au statut d'impl\u00e9mentation la plus populaire. Elle parvient aujourd'hui \u00e0 f\u00e9d\u00e9rer les d\u00e9veloppeurs autour de Flux y compris en dehors de l\u2019\u00e9cosyst\u00e8me React.\n\nRedux est un nouveau paradigme de programmation pour les interfaces Web. Il propose de centraliser l\u2019int\u00e9gralit\u00e9 du contexte de l\u2019application en un seul endroit organisant toutes les transformations de fa\u00e7on s\u00e9quentielles et reproductible.\n\nJe vous propose un tour complet de la technologie par la m\u00eame approche que pr\u00e9conise son cr\u00e9ateur \u00e0 savoir en allant voir directement le code de la librairie. Pas de panique ! L\u2019essentiel de la librairie peut \u00eatre \u00e9crit en un dizaine de lignes.\n\nUne fois les concepts pos\u00e9s, nous vous proposerons un atelier mettant en oeuvre Redux dans une application existante qui ne sera autre que 2048. Avec plusieurs \u00e9tapes, nous ferons \u00e9voluer l'application en l'orchestrant avec Redux et en utilisant progressivement les diff\u00e9rents outils et design patterns couramment utilis\u00e9s.\n\nVous serez rapidement \u00e0 la t\u00eate d'une application fonctionnelle compl\u00e8tement debuggable avec les dev tools de Redux et un historique des transformations.\n\n**Pour pr\u00e9parer le workshop**\n\n- Installer Git & Node 4+\n- Cloner le repository git du projet : https://github.com/Swiip/2048-redux (`git clone https://github.com/Swiip/2048-redux.git`)\n- Se positionner sur la branche `step-0` (`git checkout step-0`)\n- Installer les d\u00e9pendances NPM (`npm install`)",
         "end": "2016-04-22T13:10:00",
@@ -972,26 +992,6 @@
         "start": "2016-04-22T11:20:00",
         "summary": "Redux est un nouveau paradigme de programmation pour les interfaces Web. Il propose de centraliser l\u2019int\u00e9gralit\u00e9 du contexte de l\u2019application en un seul endroit organisant toutes les transformations de fa\u00e7on reproductible.\n\nVenez d\u00e9couvrir et mettre en pratique ces nouveaux concepts !",
         "title": "Tout ce que vous voulez savoir sur Redux",
-        "topic": null,
-        "video": null
-    },
-    {
-        "addedAt": "2017-02-28T15:38:33.7",
-        "description": "La motivation, c'est notre carburant personnel, ce qui nous fait nous lever le matin, ce qui peut nous faire accomplir de grandes choses !\n\nAu cours de ma carri\u00e8re dans l'industrie du logiciel, j'ai crois\u00e9 \u00e0 plusieurs reprises des managers \u00e0 qui on n'avait pas expliqu\u00e9 (ou qui avaient mal compris) quels sont les rouages motivationnels et comment il influent sur notre travail au quotidien. Avec malheureusement des cons\u00e9quences f\u00e2cheuses pour les \u00e9quipes de d\u00e9veloppement.\n\nA travers un atelier ludique et participatif, venez d\u00e9couvrir vos facteurs de motivation personnels.\nVous repartirez avec une meilleure connaissance de vous-m\u00eame, ainsi que des techniques pour mieux comprendre les facteurs de motivation de vos coll\u00e8gues (ou collaborateurs si vous avez des responsabilit\u00e9s de management).",
-        "end": "2016-04-22T13:10:00",
-        "event": "2016",
-        "format": "WORKSHOP",
-        "id": "3182",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "romain-vignes-sans-motivation-pas-d-action--",
-        "speakerIds": [
-            "103162932700423659158"
-        ],
-        "start": "2016-04-22T11:20:00",
-        "summary": "Atelier ludique et participatif, pour appr\u00e9hender les fondamentaux de la motivation et d\u00e9couvrir ses propres facteurs de motivation",
-        "title": "Sans motivation pas d'action !",
         "topic": null,
         "video": null
     },
@@ -1342,6 +1342,26 @@
         "video": null
     },
     {
+        "addedAt": "2017-02-28T15:38:33.704",
+        "description": "Les d\u00e9veloppeurs ont longtemps h\u00e9sit\u00e9s entre les g\u00e9n\u00e9rateurs de parsers, comme lex et yacc, et l'\u00e9criture \u00e0 la main, de pr\u00e9f\u00e9rence en C. On sait maintenant que les g\u00e9n\u00e9rateurs sont souvent limit\u00e9s, et que les parsers manuels sont complexes et souvent vuln\u00e9rables.\nEn appliquant l'approche des parser combinators, plus flexibles que les g\u00e9n\u00e9rateurs, et plus pr\u00e9cis que les parsers manuels, on obtient des parsers simples \u00e0 d\u00e9velopper et maintenir.\nEn utilisant la gestion m\u00e9moire garantie par le compilateur Rust, on peut pousser la performance du d\u00e9codage \u00e0 ses limites, par exemple par du parsing \"zero copy\", d'o\u00f9 la biblioth\u00e8que de parsers \"nom\".\n\nCette conf\u00e9rence d\u00e9crit les astuces fournies par le langage Rust, et comment on peut les appliquer pour obtenir du code s\u00fbr et performant avec peu d'effort. On abordera aussi les parties th\u00e9oriques des langages et parsers, ainsi que les (mauvaises) pratiques des formats de fichier actuels. Enfin, on \u00e9tudiera les outils con\u00e7us pour aider au d\u00e9veloppement et \u00e0 la maintenance de parsers.",
+        "end": "2016-04-22T14:10:00",
+        "event": "2016",
+        "format": "TALK",
+        "id": "3612",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "UNKNOWN",
+        "slug": "geoffroy-couprie-des-parsers-surs-avec-rust-et-nom",
+        "speakerIds": [
+            "64759160"
+        ],
+        "start": "2016-04-22T13:20:00",
+        "summary": "L'\u00e9criture de parsers est un exercice int\u00e9ressant, mais dangereux: on ne compte plus les erreurs d'impl\u00e9mentations, vuln\u00e9rabilit\u00e9s et crashes en production caus\u00e9s par des parsers. En utilisant la m\u00e9thode des parser combinators et la gestion m\u00e9moire de Rust, on \u00e9vitera tous ces \u00e9cueils.",
+        "title": "Des parsers s\u00fbrs avec Rust et nom",
+        "topic": null,
+        "video": "https://www.infoq.com/fr/presentations/mix-it-geoffroy-couprie-des-parsers-surs-avec-rust-et-nom"
+    },
+    {
         "addedAt": "2017-02-28T15:38:33.7",
         "description": "The W3C has been working on a Web Components standard for almost three years, but it is still a work in progress. But polyfills like allows current developers to use Web Components today, and incorporate to their apps widgets from any library  of web components. \n\nThe best known of these libraries is Google's Polymer. In Google IO 2015 conference, Google has at last released the long awaited version 1.0 of Polymer, making it even faster, more stable and at least suitable for \"serious\" applications. In this lab you will use Polymer 1.0 with Material Design Polymer Elements to design and develop a web application using web components.\n\nYou will learn to use the following technologies:\n\n- Polymer and Web Components (for mobile and desktop)\n- The Paper Elements for Polymer (material design)\n- The integration of Polymer components in Angular (1 and 2) applications.\n\nMandatory Installs prior to lab:\n+ npm \n+ bower\n+ your favorite HTML/CSS/JS IDE (I suggest Sublime Text)",
         "end": "2016-04-22T15:10:00",
@@ -1380,26 +1400,6 @@
         "title": "Where\u2019s the reset button in a smart city?",
         "topic": null,
         "video": null
-    },
-    {
-        "addedAt": "2017-02-28T15:38:33.704",
-        "description": "Les d\u00e9veloppeurs ont longtemps h\u00e9sit\u00e9s entre les g\u00e9n\u00e9rateurs de parsers, comme lex et yacc, et l'\u00e9criture \u00e0 la main, de pr\u00e9f\u00e9rence en C. On sait maintenant que les g\u00e9n\u00e9rateurs sont souvent limit\u00e9s, et que les parsers manuels sont complexes et souvent vuln\u00e9rables.\nEn appliquant l'approche des parser combinators, plus flexibles que les g\u00e9n\u00e9rateurs, et plus pr\u00e9cis que les parsers manuels, on obtient des parsers simples \u00e0 d\u00e9velopper et maintenir.\nEn utilisant la gestion m\u00e9moire garantie par le compilateur Rust, on peut pousser la performance du d\u00e9codage \u00e0 ses limites, par exemple par du parsing \"zero copy\", d'o\u00f9 la biblioth\u00e8que de parsers \"nom\".\n\nCette conf\u00e9rence d\u00e9crit les astuces fournies par le langage Rust, et comment on peut les appliquer pour obtenir du code s\u00fbr et performant avec peu d'effort. On abordera aussi les parties th\u00e9oriques des langages et parsers, ainsi que les (mauvaises) pratiques des formats de fichier actuels. Enfin, on \u00e9tudiera les outils con\u00e7us pour aider au d\u00e9veloppement et \u00e0 la maintenance de parsers.",
-        "end": "2016-04-22T14:10:00",
-        "event": "2016",
-        "format": "TALK",
-        "id": "3612",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "geoffroy-couprie-des-parsers-surs-avec-rust-et-nom",
-        "speakerIds": [
-            "64759160"
-        ],
-        "start": "2016-04-22T13:20:00",
-        "summary": "L'\u00e9criture de parsers est un exercice int\u00e9ressant, mais dangereux: on ne compte plus les erreurs d'impl\u00e9mentations, vuln\u00e9rabilit\u00e9s et crashes en production caus\u00e9s par des parsers. En utilisant la m\u00e9thode des parser combinators et la gestion m\u00e9moire de Rust, on \u00e9vitera tous ces \u00e9cueils.",
-        "title": "Des parsers s\u00fbrs avec Rust et nom",
-        "topic": null,
-        "video": "https://www.infoq.com/fr/presentations/mix-it-geoffroy-couprie-des-parsers-surs-avec-rust-et-nom"
     },
     {
         "addedAt": "2017-02-28T15:38:33.696",
