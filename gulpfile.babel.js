@@ -162,7 +162,7 @@ gulp.task('watch-resources', () => gulp.watch([`${paths.main}/resources/messages
 
 
 gulp.task('dev', gulp.series('styles', 'images', 'js-vendors', 'js-custom', 'service-worker'));
-gulp.task('watch', gulp.series('dev', 'watch-styles', 'watch-ts', 'watch-templates', 'watch-resources'));
+gulp.task('watch', gulp.parallel('watch-styles', 'watch-ts', 'watch-templates', 'watch-resources'));
 gulp.task('build', gulp.series('dev'));
 gulp.task('default', gulp.series('build'));
 
