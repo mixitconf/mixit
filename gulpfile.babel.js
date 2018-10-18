@@ -59,9 +59,10 @@ gulp.task('images-webp', () =>
       .pipe(gulp.dest(`${paths.dist.images}`))
 );
 
-gulp.task('images-copy', () =>
-  gulp.src('build/.tmp/img/**/*.{svg,png,jpg,webp}')
+gulp.task('images-copy', (cb) =>
+  gulp.src(`${paths.main}/images/**/*.{svg,png,jpg}`)
       .pipe(gulp.dest(`${paths.dist.images}`))
+      .on('end', () => cb())
 );
 
 gulp.task('images', gulp.parallel('images-webp', 'images-copy'));
