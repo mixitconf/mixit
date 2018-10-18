@@ -1,73 +1,83 @@
 <!doctype html>
 <html class="no-js" lang="{{#en}}en{{/en}}{{#fr}}fr{{/fr}}">
-  <head>
-    <meta charset="utf-8" />
+<head>
+    <meta charset="utf-8"/>
 
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="MiXiT">
     <link rel="icon" sizes="192x192" href="/images/png/mxt-favicon_chrome.png">
-    <link rel="alternate" hreflang="{{#en}}fr{{/en}}{{#fr}}en{{/fr}}" href="{{switchLangUrl}}" />
+    <link rel="alternate" hreflang="{{#en}}fr{{/en}}{{#fr}}en{{/fr}}" href="{{switchLangUrl}}"/>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Dev-Mind">
     <link rel="apple-touch-icon" href="images/png/mxt-favicon_apple.png">
     <meta name="theme-color" content="#2c233d">
 
-    <meta property="og:title" content="MiXiT{{#title}} - {{#i18n}}{{title}}{{/i18n}}{{/title}}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{uri}}" />
-    <meta property="og:image" content="https://mixitconf.org/images/png/fbpreview.png" />
+    <meta property="og:title" content="MiXiT{{#title}} - {{#i18n}}{{title}}{{/i18n}}{{/title}}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="{{uri}}"/>
+    <meta property="og:image" content="https://mixitconf.org/images/png/fbpreview.png"/>
     <title>{{#title}}{{#i18n}}{{title}}{{/i18n}} - {{/title}}MiXiT</title>
     <link rel="stylesheet" href="/css/app.css">
     <link rel="icon" type="image/png" href="/favicon.ico">
     <link rel="manifest" href="/manifest.json">
     <link type="application/atom+xml" rel="alternate" href="{{localePrefix}}/blog/feed"/>
-  </head>
-  <body>
-  <div class="mxt-wrapper--page">
+</head>
+<body>
+<div class="mxt-wrapper--page">
     <div class="top-bar">
-      <div class="top-bar-title">
+        <div class="top-bar-title">
           <span data-responsive-toggle="responsive-menu" data-hide-for="medium" style="display: none;">
             <button class="menu-icon" type="button" data-toggle></button>
           </span>
-          <a href="{{localePrefix}}/{{#fr}}fr/{{/fr}}" class="mxt-anchor--svg" rel="nofollow"><img src="/images/svg/mxt-icon--logo.svg" class="mxt-icon--logo"></a>
-      </div>
-      <div id="responsive-menu">
-        <div class="top-bar-right">
-          <ul class="mxt-menu--nav menu">
-            <!--<li><a href="#" class="mxt-menu__item--nav">{{#i18n}}header.menu.planning{{/i18n}}</a></li>-->
-            {{#admin}}<li><a href="{{localePrefix}}/admin" class="mxt-menu__item--nav">{{#i18n}}header.menu.admin{{/i18n}}</a></li>{{/admin}}
-            <!--<li><a href="{{localePrefix}}/ticketing" class="mxt-menu__item--nav">{{#i18n}}header.menu.ticketing{{/i18n}}</a></li>-->
-            <li><a href="{{localePrefix}}/2018" class="mxt-menu__item--nav">{{#i18n}}header.menu.talks{{/i18n}}</a></li>
-            <!--<li><a href="{{localePrefix}}/cfp" class="mxt-menu__item--nav">{{#i18n}}header.menu.cfp{{/i18n}}</a></li>-->
-            <li><a href="{{localePrefix}}/schedule" class="mxt-menu__item--nav">{{#i18n}}header.menu.schedule{{/i18n}}</a></li>
-            <!--<li><a href="{{localePrefix}}/mixteen" class="mxt-menu__item--nav">{{#i18n}}header.menu.mixteen{{/i18n}}</a></li>-->
-            <li><a href="{{localePrefix}}/sponsors" class="mxt-menu__item--nav">{{#i18n}}header.menu.sponsors{{/i18n}}</a></li>
-            <li><a href="{{localePrefix}}/blog" class="mxt-menu__item--nav">{{#i18n}}header.menu.blog{{/i18n}}</a></li>
-            <li><a href="{{localePrefix}}/come" class="mxt-menu__item--nav">{{#i18n}}header.menu.come{{/i18n}}</a></li>
-            <li><a href="{{localePrefix}}/about" class="mxt-menu__item--nav">{{#i18n}}header.menu.about{{/i18n}}</a></li>
-            <li class="hide-for-small-only mxt-menu__item--bullet menu-text">&bull;</li>
-            {{#connected}}<li class="show-for-small-only"><a href="{{localePrefix}}/disconnect" class="mxt-menu__item--nav mxt-menu__item--close-nav">{{#i18n}}header.menu.logout{{/i18n}}</a></li>{{/connected}}
-            {{^connected}}<li class="show-for-small-only"><a href="{{localePrefix}}/login" class="mxt-menu__item--nav mxt-menu__item--close-nav">{{#i18n}}header.menu.login{{/i18n}}</a></li>{{/connected}}
-            <li class="show-for-small-only">{{#en}}<a class="mxt-menu__item--lang" href="{{switchLangUrl}}">Français</a>{{/en}}{{#fr}}<a href="{{switchLangUrl}}" class="mxt-menu__item--lang">English</a>{{/fr}}</li>
-            <li class="hide-for-small-only">
-                <div class="mxt-wrapper--row">
-                    {{#en}}<a class="mxt-menu__item--lang mxt-menu__item--close-nav" href="{{switchLangUrl}}">Français</a>{{/en}}
-                    {{#fr}}<a href="{{switchLangUrl}}" class="mxt-menu__item--lang mxt-menu__item--close-nav">English</a>{{/fr}}
-                    {{#connected}}
-                        <a href="{{localePrefix}}/search" class="mxt-menu__item--nav mxt-menu__item--close-nav"><img src="/images/svg/mxt-search.svg" title="{{#i18n}}header.menu.search{{/i18n}}" class="mxt-icon--top-bar"></a>
-                        <a href="{{localePrefix}}/me" class="mxt-menu__item--nav mxt-menu__item--close-nav"><img src="/images/svg/mxt-profile.svg" title="{{#i18n}}header.menu.profile{{/i18n}}" class="mxt-icon--top-bar"></a>
-                        <a href="{{localePrefix}}/disconnect" class="mxt-menu__item--nav mxt-menu__item--close-nav"><img src="/images/svg/security/mxt-lock--close.svg" title="{{#i18n}}header.menu.logout{{/i18n}}" class="mxt-icon--top-bar"></a>
-                    {{/connected}}
-                    {{^connected}}
-                        <a href="{{localePrefix}}/search" class="mxt-menu__item--nav mxt-menu__item--close-nav"><img src="/images/svg/mxt-search.svg" title="{{#i18n}}header.menu.search{{/i18n}}" class="mxt-icon--top-bar"></a>
-                        <a href="{{localePrefix}}/login" class="mxt-menu__item--nav mxt-menu__item--close-nav"><img src="/images/svg/security/mxt-lock--open.svg" title="{{#i18n}}header.menu.login{{/i18n}}" class="mxt-icon--top-bar"></a>
-                    {{/connected}}
-                </div>
-            </li>
-          </ul>
+            <a href="{{localePrefix}}/{{#fr}}fr/{{/fr}}" class="mxt-anchor--svg" rel="nofollow"><img
+                    src="/images/svg/mxt-icon--logo.svg" class="mxt-icon--logo"></a>
         </div>
-      </div>
+        <div id="responsive-menu">
+            <div class="top-bar-right">
+                <ul class="mxt-menu--nav menu">
+                    <!--<li><a href="#" class="mxt-menu__item--nav">{{#i18n}}header.menu.planning{{/i18n}}</a></li>-->
+                    {{#admin}}<li><a href="{{localePrefix}}/admin" class="mxt-menu__item--nav">{{#i18n}}header.menu.admin{{/i18n}}</a></li>{{/admin}}
+                    <!--<li><a href="{{localePrefix}}/ticketing" class="mxt-menu__item--nav">{{#i18n}}header.menu.ticketing{{/i18n}}</a></li>-->
+                    <li><a href="{{localePrefix}}/2018" class="mxt-menu__item--nav">{{#i18n}}header.menu.talks{{/i18n}}</a></li>
+                    <!--<li><a href="{{localePrefix}}/cfp" class="mxt-menu__item--nav">{{#i18n}}header.menu.cfp{{/i18n}}</a></li>-->
+                    <!--<li><a href="{{localePrefix}}/schedule" class="mxt-menu__item--nav">{{#i18n}}header.menu.schedule{{/i18n}}</a></li>-->
+                    <!--<li><a href="{{localePrefix}}/mixteen" class="mxt-menu__item--nav">{{#i18n}}header.menu.mixteen{{/i18n}}</a></li>-->
+                    <li><a href="{{localePrefix}}/sponsors" class="mxt-menu__item--nav">{{#i18n}}header.menu.sponsors{{/i18n}}</a></li>
+                    <li><a href="{{localePrefix}}/blog" class="mxt-menu__item--nav">{{#i18n}}header.menu.blog{{/i18n}}</a></li>
+                    <li><a href="{{localePrefix}}/come" class="mxt-menu__item--nav">{{#i18n}}header.menu.come{{/i18n}}</a></li>
+                    <li><a href="{{localePrefix}}/about" class="mxt-menu__item--nav">{{#i18n}}header.menu.about{{/i18n}}</a></li>
+                    <li class="hide-for-small-only mxt-menu__item--bullet">&bull;</li>
+                    <li class="show-for-small-only">
+                        {{#connected}}<a href="{{localePrefix}}/disconnect"
+                                         class="mxt-menu__item--nav mxt-menu__item--close-nav">{{#i18n}}header.menu.logout{{/i18n}}</a>{{/connected}}
+                        {{^connected}}<a href="{{localePrefix}}/login"
+                                         class="mxt-menu__item--nav mxt-menu__item--close-nav">{{#i18n}}header.menu.login{{/i18n}}</a>{{/connected}}
+                    </li>
+                    <li>
+                        {{#en}}<a class="mxt-menu__item--lang" href="{{switchLangUrl}}">Français</a>{{/en}}
+                        {{#fr}}<a href="{{switchLangUrl}}" class="mxt-menu__item--lang">English</a>{{/fr}}
+                    </li>
+                    <li class="hide-for-small-only"><a href="{{localePrefix}}/search" class="mxt-menu__item--nav mxt-menu__item--close-nav"><img
+                            src="/images/svg/mxt-search.svg" title="{{#i18n}}header.menu.search{{/i18n}}" class="mxt-icon--top-bar"></a>
+                    </li>
+                    {{#connected}}<li class="hide-for-small-only">
+                        <a href="{{localePrefix}}/me" class="mxt-menu__item--nav mxt-menu__item--close-nav">
+                            <img src="/images/svg/mxt-profile.svg" title="{{#i18n}}header.menu.profile{{/i18n}}" class="mxt-icon--top-bar"></a>
+                    </li>{{/connected}}
+                    <li class="hide-for-small-only">
+                        {{#connected}}<a href="{{localePrefix}}/disconnect" class="mxt-menu__item--nav mxt-menu__item--close-nav">
+                            <img src="/images/svg/security/mxt-lock--close.svg"  title="{{#i18n}}header.menu.logout{{/i18n}}" class="mxt-icon--top-bar"></a>
+                        {{/connected}}
+                        {{^connected}}
+                            <a href="{{localePrefix}}/login" class="mxt-menu__item--nav mxt-menu__item--close-nav">
+                                <img src="/images/svg/security/mxt-lock--open.svg" title="{{#i18n}}header.menu.login{{/i18n}}" class="mxt-icon--top-bar"></a>
+                        {{/connected}}
+                    </li>
+
+                </ul>
+            </div>
+        </div>
     </div>
