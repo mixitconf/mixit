@@ -3,8 +3,8 @@ import com.moowork.gradle.node.yarn.YarnInstallTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    val kotlinVersion = "1.2.41"
-    val nodePluginVersion = "1.1.1"
+    val kotlinVersion = "1.2.51"
+    val nodePluginVersion = "1.2.0"
     id("org.jetbrains.kotlin.jvm") version kotlinVersion
     id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion
     id("org.jetbrains.kotlin.kapt") version kotlinVersion
@@ -33,7 +33,7 @@ val test by tasks.getting(Test::class) {
 
 node {
     version = "9.2.0"
-    yarnVersion = "1.3.2"
+    yarnVersion = "1.6.0"
     download = true
 }
 
@@ -75,14 +75,12 @@ task<GulpTask>("gulpBuild") {
     inputs.dir("src/main/ts")
     inputs.dir("src/main/images")
     outputs.dir("build/resources/main/static")
-    args = listOf("build")
 }
 
 task<GulpTask>("gulpClean") {
     dependsOn(YarnInstallTask.NAME)
     inputs.dir("build/.tmp")
     outputs.dir("build/resources/main/static")
-    args = listOf("clean")
 }
 
 tasks.getByName("processResources").dependsOn("gulpBuild")
