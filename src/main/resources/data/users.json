@@ -4976,9 +4976,9 @@
         ],
         "login": "clacote",
         "photoUrl": null,
-        "role": "STAFF",
-        "token": "b61e7efd2697",
-        "tokenExpiration": "2018-05-17T16:08:25.975"
+        "role": "STAFF_IN_PAUSE",
+        "token": "empty-token",
+        "tokenExpiration": "2018-10-18T08:19:05.889"
     },
     {
         "company": null,
@@ -5053,8 +5053,8 @@
         "login": "guillaumeehret",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "25edd60fb4bf",
-        "tokenExpiration": "2018-10-20T18:59:19.064"
+        "token": "74fe47f00a6c",
+        "tokenExpiration": "2018-10-21T08:16:04.425"
     },
     {
         "company": null,
@@ -42408,5 +42408,23 @@
         "role": "USER",
         "token": "c992e450e671",
         "tokenExpiration": "2018-10-18T12:14:14.431"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "",
+            "FRENCH": ""
+        },
+        "email": "Oba3j+ubAvBrGlSmXx68KTJYSblzCwP5H+XvipiNh5Q=",
+        "emailHash": null,
+        "firstname": "Anne-laure",
+        "lastname": "De boissieu",
+        "legacyId": null,
+        "links": [],
+        "login": "anne-laure",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "STAFF",
+        "token": "empty-token",
+        "tokenExpiration": "2018-10-18T08:21:13.809"
     }
 ]
