@@ -600,7 +600,7 @@
         "year": 2017
     },
     {
-        "current": true,
+        "current": false,
         "end": "2018-04-20",
         "id": "mixit18",
         "photoUrls": [
@@ -791,5 +791,15 @@
             "url": "https://vimeo.com/266571226"
         },
         "year": 2018
+    },
+    {
+        "current": true,
+        "end": "2019-05-24",
+        "id": "mixit19",
+        "photoUrls": [],
+        "sponsors": [],
+        "start": "2019-05-23",
+        "videoUrl": null,
+        "year": 2019
     }
 ]

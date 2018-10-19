@@ -10,7 +10,7 @@ plugins {
     id("org.jetbrains.kotlin.kapt") version kotlinVersion
     id("com.moowork.node") version nodePluginVersion
     id("com.moowork.gulp") version nodePluginVersion
-    id("org.springframework.boot") version "2.0.5.RELEASE"
+    id("org.springframework.boot") version "2.0.2.RELEASE"
     id("io.spring.dependency-management") version "1.0.5.RELEASE"
 }
 

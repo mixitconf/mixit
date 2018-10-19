@@ -103,12 +103,11 @@ gulp.task('js-to-es5', () =>
       .pipe(named())
       .pipe(webpack( { mode: 'production'}))
       .pipe($.sourcemaps.init())
-      //.pipe($.uglify())
       .pipe($.sourcemaps.write('.'))
       .pipe(gulp.dest(`${paths.dist.js}`))
 );
 
-gulp.task('js-custom', gulp.series('js-to-es5', 'ts-to-js'));
+gulp.task('js-custom', gulp.series('ts-to-js', 'js-to-es5'));
 
 gulp.task('copy-templates', () => {
   return gulp.src(['src/main/resources/templates/**'])

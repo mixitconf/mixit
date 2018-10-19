@@ -22,7 +22,7 @@ class CfpIoImporter(private val userReposittory: UserRepository,
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
-        if (talkRepository.findByEvent("2018").count().block() == 0L) {
+        if (talkRepository.findByEvent("2019").count().block() == 0L) {
             logger.info("Cfp io import starts")
 
             val eventsResource = ClassPathResource("data/cfp/sessions.json")
@@ -109,7 +109,7 @@ private data class CfpioTalk(
 
     fun toTalk(speakers: List<String>) = Talk(
             formats.getOrDefault(format, TalkFormat.TALK),
-            "2018",
+            "2019",
             name,
             description,
             speakers,
@@ -117,8 +117,8 @@ private data class CfpioTalk(
             LocalDateTime.now(),
             if (plus == null) "" else plus,
             topics.getOrDefault(trackLabel, "Other"),
-            start = LocalDateTime.of(2018, 4, 19, 8, 0, 0),
-            end = LocalDateTime.of(2018, 4, 19, 8, 50, 0),
+            start = LocalDateTime.of(2019, 5, 22, 8, 0, 0),
+            end = LocalDateTime.of(2019, 5, 23, 8, 50, 0),
             room = Room.UNKNOWN
     )
 }
