@@ -6,17 +6,16 @@
 }
 
 .mxt-wrapper--header {
-	background: url('/images/svg/robot.svg') no-repeat left top;
+	background: url('/images/svg/mxt-skyline.svg') no-repeat center bottom;
 	& .no-svg {
-		background: url('/images/png/mxt-icon--fourviere.png') no-repeat left top;
+		background: url('/images/png/mxt-skyline.png') no-repeat center bottom;
 	}
-	@include breakpoint(medium) {
-		background-size: contain;
-		background-position: 20% top;
+	@include breakpoint(small) {
+		background-size: 200%;
 		padding-top: 5em;
   	}
-	background-size: 20%;
-	background-position: 5% bottom;
+	background-size: 100%;
+	background-position: 5% bottom !important;
 	background-color: $secondary-color;
 	border-bottom: 5px solid $forth-color;	
 	color: $white;
