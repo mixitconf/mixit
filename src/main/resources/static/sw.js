@@ -35,7 +35,7 @@ if (workbox) {
 
   // use a stale while revalidate for CSS and JavaScript files that aren't precached.
   workbox.routing.registerRoute(
-    /\.(?:js|css)$/,
+    /\.(?:js)$/,
     workbox.strategies.staleWhileRevalidate(
       {
         cacheName: 'static-resources',
@@ -52,7 +52,7 @@ if (workbox) {
 
   // use a stale while revalidate for CSS and JavaScript files that aren't precached.
   workbox.routing.registerRoute(
-    /\.(?:html)$/,
+    /\.(?:html|css)$/,
     workbox.strategies.networkFirst(
       {
         cacheName: 'html-resources',
