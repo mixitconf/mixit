@@ -600,7 +600,7 @@
         "year": 2017
     },
     {
-        "current": false,
+        "current": true,
         "end": "2018-04-20",
         "id": "mixit18",
         "photoUrls": [
@@ -793,11 +793,37 @@
         "year": 2018
     },
     {
-        "current": true,
+        "current": false,
         "end": "2019-05-24",
         "id": "mixit19",
         "photoUrls": [],
-        "sponsors": [],
+        "sponsors": [
+            {
+                "level": "SILVER",
+                "sponsorId": "feelinjob",
+                "subscriptionDate": "2018-11-01"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "super.tilt",
+                "subscriptionDate": "2018-11-02"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "ZenikaLyon",
+                "subscriptionDate": "2018-11-05"
+            },
+            {
+                "level": "HOSTING",
+                "sponsorId": "clevercloud",
+                "subscriptionDate": "2018-11-16"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "woonoz",
+                "subscriptionDate": "2018-11-21"
+            }
+        ],
         "start": "2019-05-23",
         "videoUrl": null,
         "year": 2019
