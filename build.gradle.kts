@@ -27,7 +27,7 @@ tasks.withType<KotlinCompile> {
     }
 }
 
-val test by tasks.getting(Test::class) {
+tasks.withType<Test> {
     useJUnitPlatform()
 }
 
