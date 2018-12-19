@@ -3,7 +3,6 @@ language: java
 before_install: ./gradlew clean
 jdk:
   - oraclejdk8
-slack: mixit16:qrDQ2JzD6cgLcyc9JPpHjzmN
 services: mongodb
 notifications:
   email: false
