@@ -54,7 +54,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
             GET("/news", newsHandler::newsView)
             GET("/ticketing", ticketingHandler::ticketing)
             GET("/sponsors") { sponsorHandler.viewWithSponsors(2019, it) }
-            GET("/mixteen", { sponsorHandler.viewWithSponsors("mixteen", SponsorshipLevel.MIXTEEN, "mixteen.title", 2019, it) })
+            GET("/mixteen") { sponsorHandler.viewWithSponsors("mixteen", SponsorshipLevel.MIXTEEN, "mixteen.title", 2019, it) }
             GET("/faq", globalHandler::faqView)
             GET("/come", globalHandler::comeToMixitView)
             GET("/schedule", globalHandler::scheduleView)

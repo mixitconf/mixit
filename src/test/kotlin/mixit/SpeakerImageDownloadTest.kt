@@ -42,7 +42,7 @@ class SpeakerImageLoaderTest(@Autowired val userRepository: UserRepository,
             val imageUrl = getImageUrl(it)
             val filename = if (it.lastname.isNullOrBlank()) santitize(it.firstname) else santitize(it.lastname)
             if (!imageUrl.isNullOrBlank()) {
-                downloadImage(imageUrl!!, filename)
+                downloadImage(imageUrl, filename)
             }
         }
 

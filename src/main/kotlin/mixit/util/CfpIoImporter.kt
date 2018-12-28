@@ -140,12 +140,12 @@ private data class CfpioSpeaker(
 ) {
     fun toUser(user: User) = User(
             user.login,
-            if (firstname.isNullOrEmpty()) user.firstname else firstname!!,
-            if (lastname.isNullOrEmpty()) user.lastname else lastname!!,
+            if (firstname.isNullOrEmpty()) user.firstname else firstname,
+            if (lastname.isNullOrEmpty()) user.lastname else lastname,
             email,
             company,
             if (bio.isNullOrEmpty()) user.description
-            else mapOf(Pair(Language.FRENCH, bio!!), Pair(Language.ENGLISH, bio)),
+            else mapOf(Pair(Language.FRENCH, bio), Pair(Language.ENGLISH, bio)),
             if (imageProfilURL.isNullOrEmpty()) user.emailHash else null,
             if (imageProfilURL.isNullOrEmpty()) user.photoUrl else imageProfilURL,
             user.role,
@@ -154,11 +154,11 @@ private data class CfpioSpeaker(
 
     fun toUser() = User(
             email,
-            if (firstname.isNullOrEmpty()) "UNKNOWN" else firstname!!,
-            if (lastname.isNullOrEmpty()) "" else lastname!!,
+            if (firstname.isNullOrEmpty()) "UNKNOWN" else firstname,
+            if (lastname.isNullOrEmpty()) "" else lastname,
             email,
             company,
-            if (bio.isNullOrEmpty()) mapOf(Pair(Language.FRENCH, "UNKNOWN"), Pair(Language.ENGLISH, "UNKNOWN")) else mapOf(Pair(Language.FRENCH, bio!!), Pair(Language.ENGLISH, bio)),
+            if (bio.isNullOrEmpty()) mapOf(Pair(Language.FRENCH, "UNKNOWN"), Pair(Language.ENGLISH, "UNKNOWN")) else mapOf(Pair(Language.FRENCH, bio), Pair(Language.ENGLISH, bio)),
             if (imageProfilURL.isNullOrEmpty()) email.encodeToMd5() else null,
             imageProfilURL,
             Role.USER,
@@ -168,16 +168,16 @@ private data class CfpioSpeaker(
     private fun findSpeakerLinks(): List<Link> {
         val list = mutableListOf<Link>()
         if (!github.isNullOrEmpty()) {
-            list.add(Link("Github", github!!))
+            list.add(Link("Github", github))
         }
         if (!twitter.isNullOrEmpty()) {
-            list.add(Link("Twitter", twitter!!))
+            list.add(Link("Twitter", twitter))
         }
         if (!googleplus.isNullOrEmpty()) {
-            list.add(Link("Google+", googleplus!!))
+            list.add(Link("Google+", googleplus))
         }
         if (!social.isNullOrEmpty()) {
-            list.add(Link("Autre", social!!))
+            list.add(Link("Autre", social))
         }
         return list
     }
