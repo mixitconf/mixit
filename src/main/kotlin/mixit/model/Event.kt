@@ -12,10 +12,9 @@ data class Event(
         val current: Boolean = false,
         val sponsors: List<EventSponsoring> = emptyList(),
         val photoUrls: List<Link> = emptyList(),
-        val videoUrl: Link? = null
-) {
-    val year: Int = start.year
-}
+        val videoUrl: Link? = null,
+        val year: Int = start.year
+)
 
 @Document
 data class EventSponsoring(

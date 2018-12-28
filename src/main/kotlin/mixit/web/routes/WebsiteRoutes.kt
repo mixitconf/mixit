@@ -1,8 +1,10 @@
 package mixit.web
 
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.MixitProperties
+import mixit.model.Event
 import mixit.model.SponsorshipLevel
-import mixit.repository.EventRepository
 import mixit.util.MarkdownConverter
 import mixit.util.locale
 import mixit.web.handler.*
@@ -15,7 +17,6 @@ import org.springframework.core.io.ClassPathResource
 import org.springframework.http.MediaType.*
 import org.springframework.web.reactive.function.server.RenderingResponse
 import org.springframework.web.reactive.function.server.RouterFunctions.resources
-import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.router
 import reactor.core.publisher.toMono
 import java.util.*
@@ -33,7 +34,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
                     private val userHandler: UserHandler,
                     private val messageSource: MessageSource,
                     private val properties: MixitProperties,
-                    private val eventRepository: EventRepository,
+                    private val objectMapper: ObjectMapper,
                     private val markdownConverter: MarkdownConverter) {
 
     private val logger = LoggerFactory.getLogger(WebsiteRoutes::class.java)
@@ -44,7 +45,6 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
     }
 
     @Bean
-    @DependsOn("databaseInitializer")
     fun websiteRouter() = router {
         GET("/blog/feed", blogHandler::feed)
 
@@ -71,13 +71,16 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
             GET("/disconnect", authenticationHandler::logout)
             GET("/signin/{token}/{email:.*}", authenticationHandler::signInViaUrl)
 
+            val eventsResource = ClassPathResource("data/events.json")
+            val events: List<Event> = objectMapper.readValue(eventsResource.inputStream)
+
             // Sponsors
-            eventRepository.findAll().toIterable().map { it.year }.forEach { year ->
+            events.map { it.year }.forEach { year ->
                 GET("/sponsors/$year") { sponsorHandler.viewWithSponsors(year, it) }
             }
 
             // Talks
-            eventRepository.findAll().toIterable().map { it.year }.forEach { year ->
+            events.map { it.year }.forEach { year ->
                 GET("/$year") { talkHandler.findByEventView(year, it, false) }
                 GET("/$year/favorite") { talkHandler.findByEventView(year, it, true) }
                 GET("/$year/makers") { talkHandler.findByEventView(year, it, false, "makers") }
