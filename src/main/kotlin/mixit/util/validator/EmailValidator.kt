@@ -1,6 +1,5 @@
 package mixit.util.validator
 
-import org.springframework.stereotype.Component
 import java.net.IDN
 import java.util.regex.Pattern
 
@@ -8,7 +7,6 @@ import java.util.regex.Pattern
  * @author Dev-Mind <guillaume@dev-mind.fr>
  * @since 11/02/18.
  */
-@Component
 class EmailValidator {
 
     fun isValid(value: String?): Boolean {

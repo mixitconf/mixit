@@ -18,6 +18,7 @@ version = "1.0.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
+    maven("https://repo.spring.io/milestone")
 }
 
 tasks.withType<KotlinCompile> {
@@ -43,6 +44,7 @@ dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     compile("org.jetbrains.kotlin:kotlin-reflect")
     compile("com.fasterxml.jackson.module:jackson-module-kotlin")
+    compile("org.springframework.fu:spring-fu-kofu:0.0.3")
 
     compile("org.springframework.boot:spring-boot-starter-webflux") {
         exclude(module = "hibernate-validator")

@@ -10,7 +10,6 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.body
 import reactor.core.publisher.toMono
 
-@Controller
 class FavoriteHandler(private val favoriteRepository: FavoriteRepository, private val cryptographer: Cryptographer) {
 
     fun findAll(req: ServerRequest) = ok().json().body(favoriteRepository.findAll())

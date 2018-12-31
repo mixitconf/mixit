@@ -16,7 +16,6 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.body
 
 
-@Component
 class BlogHandler(val repository: PostRepository,
                   val userRepository: UserRepository,
                   val properties: MixitProperties) {

@@ -1,14 +1,18 @@
 package mixit
 
-import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.context.properties.EnableConfigurationProperties
-import org.springframework.boot.runApplication
+import mixit.config.databaseConfig
+import mixit.config.mailConfig
+import mixit.config.webConfig
+import org.springframework.fu.kofu.application
 
 
-@SpringBootApplication
-@EnableConfigurationProperties(MixitProperties::class)
-class MixitApplication
+val app = application {
+    configurationProperties<MixitProperties>(prefix = "mixit")
+    enable(databaseConfig)
+    enable(mailConfig)
+    enable(webConfig)
+}
 
 fun main(args: Array<String>) {
-    runApplication<MixitApplication>(*args)
+    app.run()
 }

@@ -29,7 +29,6 @@ import java.nio.charset.StandardCharsets
 import java.util.stream.IntStream
 
 
-@Component
 class UserHandler(private val repository: UserRepository,
                   private val talkRepository: TalkRepository,
                   private val markdownConverter: MarkdownConverter,

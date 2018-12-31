@@ -11,12 +11,10 @@ import org.springframework.core.io.ClassPathResource
 import org.springframework.data.mongodb.core.*
 import org.springframework.data.mongodb.core.query.*
 import org.springframework.data.mongodb.core.query.Criteria.where
-import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 
 
-@Repository
 class UserRepository(private val template: ReactiveMongoTemplate,
                      private val objectMapper: ObjectMapper,
                      private val cryptographer: Cryptographer) {

@@ -2,14 +2,11 @@ package mixit.util
 
 import com.google.api.services.gmail.Gmail
 import com.google.api.services.gmail.model.Message
-import com.google.common.html.HtmlEscapers
 import mixit.MixitProperties
 import org.slf4j.LoggerFactory
-import org.springframework.context.annotation.Profile
 import org.springframework.http.MediaType
 import org.springframework.mail.javamail.JavaMailSender
 import org.springframework.mail.javamail.MimeMessageHelper
-import org.springframework.stereotype.Component
 import java.io.ByteArrayOutputStream
 import java.util.*
 import javax.mail.Session
@@ -32,8 +29,6 @@ interface EmailSender {
 /**
  * Gmail API service is used in cloud mode to send email
  */
-@Component
-@Profile("cloud")
 class GmailApiSender(private val properties: MixitProperties, private val gmailService: Gmail) : EmailSender {
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
@@ -62,8 +57,6 @@ class GmailApiSender(private val properties: MixitProperties, private val gmailS
  * Gmail is used in developpement mode (via SMTP) to send email used for authentication
  * or for our different information messages
  */
-@Component
-@Profile("!cloud")
 class GmailSmtpSender(private val javaMailSender: JavaMailSender) : EmailSender {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)

@@ -1,14 +1,13 @@
 package mixit
 
-import org.springframework.boot.context.properties.ConfigurationProperties
-
-@ConfigurationProperties("mixit")
 class MixitProperties {
     lateinit var baseUri: String
     lateinit var contact: String
     val drive = Drive()
     val aes = Aes()
     val googleapi = GoogleApi()
+    val securedAdminUrl = listOf("/admin", "/api/admin")
+    val securedUrl = listOf("/me")
 
     class Drive {
         val fr = DriveDocuments()

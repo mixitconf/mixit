@@ -22,7 +22,6 @@ import java.nio.charset.StandardCharsets
 import java.time.LocalDateTime
 
 
-@Component
 class TalkHandler(private val repository: TalkRepository,
                   private val userRepository: UserRepository,
                   private val eventRepository: EventRepository,

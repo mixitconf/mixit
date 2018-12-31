@@ -7,14 +7,12 @@ import mixit.repository.TalkRepository
 import mixit.repository.UserRepository
 import mixit.util.MarkdownConverter
 import mixit.util.language
-import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import java.util.*
 
 
-@Component
 class GlobalHandler(val userRepository: UserRepository,
                     val postRepository: PostRepository,
                     val talkRepository: TalkRepository,

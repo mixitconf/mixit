@@ -7,14 +7,11 @@ import mixit.web.generateModelForExernalCall
 import org.slf4j.LoggerFactory
 import org.springframework.context.MessageSource
 import org.springframework.core.io.ResourceLoader
-import org.springframework.stereotype.Component
 import java.io.InputStreamReader
 import java.net.URLEncoder
-import java.time.LocalDate
 import java.util.*
 import javax.mail.MessagingException
 
-@Component
 class TemplateService(private val mustacheCompiler: Mustache.Compiler,
                       private val resourceLoader: ResourceLoader) {
 
@@ -25,7 +22,6 @@ class TemplateService(private val mustacheCompiler: Mustache.Compiler,
     }
 }
 
-@Component
 class EmailService(private val properties: MixitProperties,
                    private val messageSource: MessageSource,
                    private val cryptographer: Cryptographer,

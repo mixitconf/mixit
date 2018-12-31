@@ -9,7 +9,6 @@ import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpHeaders.CONTENT_LANGUAGE
 import org.springframework.http.HttpStatus
 import org.springframework.http.server.reactive.ServerHttpRequest
-import org.springframework.stereotype.Component
 import org.springframework.web.server.ServerWebExchange
 import org.springframework.web.server.WebFilter
 import org.springframework.web.server.WebFilterChain
@@ -20,7 +19,6 @@ import java.util.*
 import java.util.stream.Stream
 
 
-@Component
 class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRepository) : WebFilter {
 
     private fun readUserInfo(request: ServerHttpRequest) = (request.cookies).get("XSRF-TOKEN")?.first()?.value?.decodeFromBase64()?.split(":")
@@ -123,9 +121,9 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
     }
 
     private fun startWithSecuredUrl(path: String): Boolean =
-            Stream.concat(WebsiteRoutes.securedUrl.stream(), WebsiteRoutes.securedAdminUrl.stream()).anyMatch { path.startsWith(it) }
+            Stream.concat(properties.securedUrl.stream(), properties.securedAdminUrl.stream()).anyMatch { path.startsWith(it) }
 
-    private fun startWithAdminSecuredUrl(path: String): Boolean = WebsiteRoutes.securedAdminUrl.stream().anyMatch { path.startsWith(it) }
+    private fun startWithAdminSecuredUrl(path: String): Boolean = properties.securedAdminUrl.stream().anyMatch { path.startsWith(it) }
 
     private fun isSearchEngineCrawler(exchange: ServerWebExchange): Boolean {
         val userAgent = exchange.request.headers.getFirst(HttpHeaders.USER_AGENT) ?: ""

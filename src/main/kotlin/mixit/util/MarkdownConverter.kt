@@ -3,10 +3,8 @@ package mixit.util
 import org.commonmark.ext.autolink.AutolinkExtension
 import org.commonmark.parser.Parser
 import org.commonmark.renderer.html.HtmlRenderer
-import org.springframework.stereotype.Component
 
 
-@Component
 class MarkdownConverter {
 
     private val parser = Parser.builder().extensions(listOf(AutolinkExtension.create())).build()

@@ -1,26 +1,31 @@
 package mixit.config
 
 import mixit.repository.*
+import mixit.util.Cryptographer
 import org.springframework.boot.CommandLineRunner
-import org.springframework.context.annotation.Bean
-import org.springframework.context.annotation.Configuration
+import org.springframework.fu.kofu.configuration
+import org.springframework.fu.kofu.mongo.mongodb
 
-@Configuration
-class DatabaseConfig {
-
-    @Bean
-    fun databaseInitializer(userRepository: UserRepository,
-                            eventRepository: EventRepository,
-                            talkRepository: TalkRepository,
-                            ticketRepository: TicketRepository,
-                            postRepository: PostRepository,
-                            favoriteRepository: FavoriteRepository) = CommandLineRunner {
-
-        userRepository.initData()
-        eventRepository.initData()
-        talkRepository.initData()
-        postRepository.initData()
-        ticketRepository.initData()
-        favoriteRepository.initData()
+val databaseConfig = configuration {
+    beans {
+        bean {
+            // Use listener<ApplicationReadyEvent> { } when SPR-17298 will be fixed
+            CommandLineRunner {
+                ref<UserRepository>().initData()
+                ref<EventRepository>().initData()
+                ref<TalkRepository>().initData()
+                ref<PostRepository>().initData()
+                ref<TicketRepository>().initData()
+                ref<FavoriteRepository>().initData()
+            }
+        }
+        bean<EventRepository>()
+        bean<FavoriteRepository>()
+        bean<PostRepository>()
+        bean<TalkRepository>()
+        bean<TicketRepository>()
+        bean<UserRepository>()
+        bean<Cryptographer>()
     }
+    mongodb()
 }

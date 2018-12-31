@@ -26,7 +26,6 @@ import java.util.*
 import kotlin.streams.toList
 
 
-@Component
 class AdminHandler(private val ticketRepository: TicketRepository,
                    private val talkRepository: TalkRepository,
                    private val userRepository: UserRepository,

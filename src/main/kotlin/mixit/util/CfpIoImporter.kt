@@ -7,14 +7,12 @@ import mixit.repository.TalkRepository
 import mixit.repository.UserRepository
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
-import org.springframework.stereotype.Component
 import java.time.LocalDateTime
 
 /**
  * Class used to generate session from a cfp.io export (http://mix-it.cfp.io/api/proposals). Sessions are exported from http://mix-it.cfp.io/api/proposals
  * This class will be deleted when everything will be imported
  */
-@Component
 class CfpIoImporter(private val userReposittory: UserRepository,
                     private val talkRepository: TalkRepository,
                     private val objectMapper: ObjectMapper) {

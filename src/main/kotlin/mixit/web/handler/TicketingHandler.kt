@@ -5,7 +5,6 @@ import mixit.model.User
 import mixit.repository.TicketRepository
 import mixit.util.*
 import org.springframework.dao.DuplicateKeyException
-import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
@@ -16,7 +15,6 @@ import reactor.core.publisher.onErrorResume
 import reactor.core.publisher.toMono
 import java.util.*
 
-@Component
 class TicketingHandler(private val ticketRepository: TicketRepository,
                        private val cryptographer: Cryptographer,
                        private val emailService: EmailService) {

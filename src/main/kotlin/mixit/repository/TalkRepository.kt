@@ -12,11 +12,9 @@ import org.springframework.data.domain.Sort.by
 import org.springframework.data.mongodb.core.*
 import org.springframework.data.mongodb.core.query.*
 import org.springframework.data.mongodb.core.query.Criteria.where
-import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 
 
-@Repository
 class TalkRepository(private val template: ReactiveMongoTemplate,
                      private val objectMapper: ObjectMapper) {
 

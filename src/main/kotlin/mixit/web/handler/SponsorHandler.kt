@@ -14,7 +14,6 @@ import org.springframework.web.reactive.function.server.ServerResponse
 import java.time.LocalDate
 import java.util.*
 
-@Component
 class SponsorHandler(private val userRepository: UserRepository,
                      private val eventRepository: EventRepository,
                      private val markdownConverter: MarkdownConverter) {

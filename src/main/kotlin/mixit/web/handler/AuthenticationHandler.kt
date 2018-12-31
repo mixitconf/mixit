@@ -23,7 +23,6 @@ import java.time.LocalDateTime
 import java.util.*
 
 
-@Component
 class AuthenticationHandler(private val userRepository: UserRepository,
                             private val properties: MixitProperties,
                             private val emailService: EmailService,

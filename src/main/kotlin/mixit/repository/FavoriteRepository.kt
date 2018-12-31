@@ -11,11 +11,9 @@ import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.data.mongodb.core.query.inValues
 import org.springframework.data.mongodb.core.query.isEqualTo
-import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 
-@Repository
 class FavoriteRepository(private val template: ReactiveMongoTemplate, val cryptographer: Cryptographer,
                          private val objectMapper: ObjectMapper) {
 
