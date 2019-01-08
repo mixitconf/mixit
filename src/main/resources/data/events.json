@@ -827,6 +827,16 @@
                 "level": "SILVER",
                 "sponsorId": "hiit",
                 "subscriptionDate": "2018-11-29"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "cossilys21",
+                "subscriptionDate": "2018-12-15"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "clevercloud",
+                "subscriptionDate": "2018-12-19"
             }
         ],
         "start": "2019-05-23",
