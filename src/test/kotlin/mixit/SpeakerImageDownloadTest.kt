@@ -40,7 +40,7 @@ class SpeakerImageLoaderTest(@Autowired val userRepository: UserRepository,
 
         speakers?.forEach {
             val imageUrl = getImageUrl(it)
-            val filename = if (it.lastname.isNullOrBlank()) santitize(it.firstname) else santitize(it.lastname)
+            val filename = if (it.lastname.isNullOrBlank()) sanitize(it.firstname) else sanitize(it.lastname)
             if (!imageUrl.isNullOrBlank()) {
                 downloadImage(imageUrl, filename)
             }
@@ -48,7 +48,7 @@ class SpeakerImageLoaderTest(@Autowired val userRepository: UserRepository,
 
     }
 
-    fun santitize(value: String): String = value.toLowerCase().toCharArray().map { if (SPECIAL_SLUG_CHARACTERS.get(it) == null) it else SPECIAL_SLUG_CHARACTERS.get(it) }.joinToString("")
+    fun sanitize(value: String): String = value.toLowerCase().toCharArray().map { if (SPECIAL_SLUG_CHARACTERS.get(it) == null) it else SPECIAL_SLUG_CHARACTERS.get(it) }.joinToString("")
 
     fun getImageUrl(user: User): String? {
         System.out.println("user ${user.lastname} -> ${user.photoUrl}")
