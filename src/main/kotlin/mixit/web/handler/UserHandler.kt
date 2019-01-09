@@ -65,30 +65,29 @@ class UserHandler(private val repository: UserRepository,
                 "sambrannen")
     }
 
-
     fun findOneView(req: ServerRequest) =
             try {
                 val idLegacy = req.pathVariable("login").toLong()
-                repository.findByLegacyId(idLegacy).flatMap { findOneViewDetail(it, "user", false, req, emptyMap()) }
+                repository.findByLegacyId(idLegacy).flatMap { findOneViewDetail(req, it, "user") }
 
             } catch (e: NumberFormatException) {
                 repository.findOne(URLDecoder.decode(req.pathVariable("login"), "UTF-8"))
-                        .flatMap { findOneViewDetail(it, "user", false, req, emptyMap()) }
+                        .flatMap { findOneViewDetail(req, it, "user") }
             }
 
     fun findProfileView(req: ServerRequest) =
             req.session().flatMap {
                 val currentUserEmail = it.getAttribute<String>("email")
-                repository.findByEmail(currentUserEmail!!).flatMap { findOneViewDetail(it, "user", true, req, emptyMap()) }
+                repository.findByEmail(currentUserEmail!!).flatMap { findOneViewDetail(req, it, "user", canUpdateProfile = true) }
             }
 
     fun editProfileView(req: ServerRequest) =
             req.session().flatMap {
                 val currentUserEmail = it.getAttribute<String>("email")
-                repository.findByEmail(currentUserEmail!!).flatMap { findOneViewDetail(it, "user-edit", false, req, emptyMap()) }
+                repository.findByEmail(currentUserEmail!!).flatMap { findOneViewDetail(req, it, "user-edit") }
             }
 
-    private fun findOneViewDetail(user: User, view: String, canUpdateProfile: Boolean, req: ServerRequest, errors:Map<String, String>) =
+    private fun findOneViewDetail(req: ServerRequest, user: User, view: String, canUpdateProfile: Boolean = false, errors: Map<String, String> = emptyMap()) =
             talkRepository
                     .findBySpeakerId(listOf(user.login))
                     .collectList()
@@ -132,24 +131,24 @@ class UserHandler(private val repository: UserRepository,
                 val errors = mutableMapOf<String, String>()
 
                 // Null check
-                if(formData["firstname"].isNullOrBlank()){
-                    errors.put("firstname","user.form.error.firstname.required")
+                if (formData["firstname"].isNullOrBlank()) {
+                    errors.put("firstname", "user.form.error.firstname.required")
                 }
-                if(formData["lastname"].isNullOrBlank()){
-                    errors.put("lastname","user.form.error.lastname.required")
+                if (formData["lastname"].isNullOrBlank()) {
+                    errors.put("lastname", "user.form.error.lastname.required")
                 }
-                if(formData["email"].isNullOrBlank()){
-                    errors.put("email","user.form.error.email.required")
+                if (formData["email"].isNullOrBlank()) {
+                    errors.put("email", "user.form.error.email.required")
                 }
-                if(formData["description-fr"].isNullOrBlank()){
-                    errors.put("description-fr","user.form.error.description.fr.required")
+                if (formData["description-fr"].isNullOrBlank()) {
+                    errors.put("description-fr", "user.form.error.description.fr.required")
                 }
-                if(formData["description-en"].isNullOrBlank()){
-                    errors.put("description-en","user.form.error.description.en.required")
+                if (formData["description-en"].isNullOrBlank()) {
+                    errors.put("description-en", "user.form.error.description.en.required")
                 }
 
-                if(errors.isNotEmpty()){
-                    findOneViewDetail(it, "user-edit", false, req, errors)
+                if (errors.isNotEmpty()) {
+                    findOneViewDetail(req, it, "user-edit", errors = errors)
                 }
 
                 val user = User(
@@ -171,56 +170,54 @@ class UserHandler(private val repository: UserRepository,
                 )
 
 
-
                 // We want to control data to not save invalid things in our database
-                if(!maxLengthValidator.isValid(user.firstname, 30)){
-                    errors.put("firstname","user.form.error.firstname.size")
+                if (!maxLengthValidator.isValid(user.firstname, 30)) {
+                    errors.put("firstname", "user.form.error.firstname.size")
                 }
-                if(!maxLengthValidator.isValid(user.lastname, 30)){
-                    errors.put("lastname","user.form.error.lastname.size")
+                if (!maxLengthValidator.isValid(user.lastname, 30)) {
+                    errors.put("lastname", "user.form.error.lastname.size")
                 }
-                if(user.company!=null && !maxLengthValidator.isValid(user.company, 60)){
-                    errors.put("company","user.form.error.company.size")
+                if (user.company != null && !maxLengthValidator.isValid(user.company, 60)) {
+                    errors.put("company", "user.form.error.company.size")
                 }
-                if(!emailValidator.isValid(formData["email"]!!)){
-                    errors.put("email","user.form.error.email")
+                if (!emailValidator.isValid(formData["email"]!!)) {
+                    errors.put("email", "user.form.error.email")
                 }
-                if(!markdownValidator.isValid(user.description.get(Language.FRENCH))){
-                    errors.put("description-fr","user.form.error.description.fr")
+                if (!markdownValidator.isValid(user.description.get(Language.FRENCH))) {
+                    errors.put("description-fr", "user.form.error.description.fr")
                 }
-                if(!markdownValidator.isValid(user.description.get(Language.ENGLISH))){
-                    errors.put("description-en","user.form.error.description.en")
+                if (!markdownValidator.isValid(user.description.get(Language.ENGLISH))) {
+                    errors.put("description-en", "user.form.error.description.en")
                 }
-                if(!urlValidator.isValid(user.photoUrl)){
-                    errors.put("photoUrl","user.form.error.photourl")
+                if (!urlValidator.isValid(user.photoUrl)) {
+                    errors.put("photoUrl", "user.form.error.photourl")
                 }
                 user.links.forEachIndexed { index, link ->
-                    if(!maxLengthValidator.isValid(link.name, 30)){
-                        errors.put("link${index+1}Name","user.form.error.link${index+1}.name")
+                    if (!maxLengthValidator.isValid(link.name, 30)) {
+                        errors.put("link${index + 1}Name", "user.form.error.link${index + 1}.name")
                     }
-                    if(!urlValidator.isValid(link.url)){
-                        errors.put("link${index+1}Url","user.form.error.link${index+1}.url")
+                    if (!urlValidator.isValid(link.url)) {
+                        errors.put("link${index + 1}Url", "user.form.error.link${index + 1}.url")
                     }
                 }
 
-                if(errors.isEmpty()){
+                if (errors.isEmpty()) {
                     // If everything is Ok we save the user
                     repository.save(user).then(seeOther("${properties.baseUri}/me"))
-                }
-                else{
-                    findOneViewDetail(user, "user-edit", false, req, errors)
+                } else {
+                    findOneViewDetail(req, user, "user-edit", errors = errors)
                 }
             }
         }
     }
 
     private fun extractLinks(formData: Map<String, String>): List<Link> =
-        IntStream.range(0,5)
-                .toArray()
-                .asList()
-                .mapIndexed { index, _ -> Pair(formData["link${index}Name"], formData["link${index}Url"]) }
-                .filter { !it.first.isNullOrBlank() && !it.second.isNullOrBlank() }
-                .map { Link(it.first!!, it.second!!) }
+            IntStream.range(0, 5)
+                    .toArray()
+                    .asList()
+                    .mapIndexed { index, _ -> Pair(formData["link${index}Name"], formData["link${index}Url"]) }
+                    .filter { !it.first.isNullOrBlank() && !it.second.isNullOrBlank() }
+                    .map { Link(it.first!!, it.second!!) }
 
     fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("login")))
 
@@ -244,8 +241,8 @@ class LinkDto(
 fun Link.toLinkDto(index: Int) = LinkDto(name, url, "link${index + 1}")
 
 fun User.toLinkDtos(): Map<String, List<LinkDto>> =
-        if (links.size > 4){
-            links.mapIndexed { index, link ->  link.toLinkDto(index) }.groupBy { it.index }
+        if (links.size > 4) {
+            links.mapIndexed { index, link -> link.toLinkDto(index) }.groupBy { it.index }
         } else {
             val existingLinks = links.size
             val userLinks = links.mapIndexed { index, link -> link.toLinkDto(index) }.toMutableList()
