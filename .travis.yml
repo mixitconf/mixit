@@ -1,6 +1,6 @@
 # kickstart travis.
 language: java
-before_install: ./gradlew clean
+before_install: ./gradlew build
 jdk:
   - oraclejdk8
 services: mongodb
