@@ -10,7 +10,7 @@ plugins {
     id("org.jetbrains.kotlin.kapt") version kotlinVersion
     id("com.moowork.node") version nodePluginVersion
     id("com.moowork.gulp") version nodePluginVersion
-    id("org.springframework.boot") version "2.1.1.RELEASE"
+    id("org.springframework.boot") version "2.1.2.RELEASE"
     id("io.spring.dependency-management") version "1.0.6.RELEASE"
 }
 
@@ -84,4 +84,3 @@ task<GulpTask>("gulpClean") {
 }
 
 tasks.getByName("processResources").dependsOn("gulpBuild")
-tasks.getByName("clean").dependsOn("gulpClean")
