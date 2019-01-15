@@ -45,6 +45,10 @@
                         {{/user.links}}
                     </ul>
                 </div>
+                <div class="columns small-12 medium-12 large-12 callout">
+                    {{#hasLotteryTicket}}<strong><img src="/images/svg/lottery/mxt-icon--ok.svg" class="mxt-icon--lottery-ok">&nbsp;{{#i18n}}profile.hasticket{{/i18n}}</strong>{{/hasLotteryTicket}}
+                    {{^hasLotteryTicket}}<strong><img src="/images/svg/lottery/mxt-icon--ko.svg" class="mxt-icon--lottery-ko">&nbsp;{{#i18n}}profile.hasnoticket{{/i18n}}</strong>{{/hasLotteryTicket}}
+                </div>
             </div>
             <div class="row">
                 <div class="columns small-12 medium-12 large-12 callout">

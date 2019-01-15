@@ -6,6 +6,7 @@ import mixit.model.Link
 import mixit.model.Role
 import mixit.model.User
 import mixit.repository.TalkRepository
+import mixit.repository.TicketRepository
 import mixit.repository.UserRepository
 import mixit.util.*
 import mixit.util.validator.EmailValidator
@@ -32,6 +33,7 @@ import java.util.stream.IntStream
 @Component
 class UserHandler(private val repository: UserRepository,
                   private val talkRepository: TalkRepository,
+                  private val ticketRepository: TicketRepository,
                   private val markdownConverter: MarkdownConverter,
                   private val cryptographer: Cryptographer,
                   private val properties: MixitProperties,
@@ -74,58 +76,77 @@ class UserHandler(private val repository: UserRepository,
                 "nitot")
     }
 
+    enum class ViewMode { ViewMyProfile, ViewUser, EditProfile }
+
     fun findOneView(req: ServerRequest) =
             try {
                 val idLegacy = req.pathVariable("login").toLong()
-                repository.findByLegacyId(idLegacy).flatMap { findOneViewDetail(req, it, "user") }
+                repository.findByLegacyId(idLegacy).flatMap { findOneViewDetail(req, it) }
 
             } catch (e: NumberFormatException) {
                 repository.findOne(URLDecoder.decode(req.pathVariable("login"), "UTF-8"))
-                        .flatMap { findOneViewDetail(req, it, "user") }
+                        .flatMap { findOneViewDetail(req, it) }
             }
 
     fun findProfileView(req: ServerRequest) =
             req.session().flatMap {
                 val currentUserEmail = it.getAttribute<String>("email")
-                repository.findByEmail(currentUserEmail!!).flatMap { findOneViewDetail(req, it, "user", canUpdateProfile = true) }
+                repository.findByEmail(currentUserEmail!!).flatMap { findOneViewDetail(req, it, ViewMode.ViewMyProfile) }
             }
 
     fun editProfileView(req: ServerRequest) =
             req.session().flatMap {
                 val currentUserEmail = it.getAttribute<String>("email")
-                repository.findByEmail(currentUserEmail!!).flatMap { findOneViewDetail(req, it, "user-edit") }
+                repository.findByEmail(currentUserEmail!!).flatMap { findOneViewDetail(req, it, ViewMode.EditProfile) }
             }
 
-    private fun findOneViewDetail(req: ServerRequest, user: User, view: String, canUpdateProfile: Boolean = false, errors: Map<String, String> = emptyMap()) =
-            talkRepository
-                    .findBySpeakerId(listOf(user.login))
-                    .collectList()
-                    .flatMap { talks ->
+    private fun findOneViewDetail(req: ServerRequest,
+                                  user: User, viewMode: ViewMode = ViewMode.ViewUser,
+                                  errors: Map<String, String> = emptyMap()): Mono<ServerResponse> =
+            if (viewMode == ViewMode.EditProfile) {
+                ok().render("user-edit", mapOf(
+                        Pair("user", user.toDto(req.language(), markdownConverter)),
+                        Pair("usermail", cryptographer.decrypt(user.email)),
+                        Pair("description-fr", user.description[Language.FRENCH]),
+                        Pair("description-en", user.description[Language.ENGLISH]),
+                        Pair("userlinks", user.toLinkDtos()),
+                        Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
+                        Pair("errors", errors),
+                        Pair("hasErrors", errors.isNotEmpty())
+                ))
+            } else if (viewMode == ViewMode.ViewMyProfile) {
+                ticketRepository
+                        .findByEmail(cryptographer.decrypt(user.email)!!)
+                        .flatMap {
+                            ok().render("user", mapOf(
+                                    Pair("user", user.toDto(req.language(), markdownConverter)),
+                                    Pair("hasLotteryTicket", true),
+                                    Pair("canUpdateProfile", true),
+                                    Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8))
+                            ))
+                        }
+                        .switchIfEmpty(
+                                ok().render("user", mapOf(
+                                        Pair("user", user.toDto(req.language(), markdownConverter)),
+                                        Pair("canUpdateProfile", true),
+                                        Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8))
+                                        ))
+                        )
+            } else {
+                talkRepository
+                        .findBySpeakerId(listOf(user.login))
+                        .collectList()
+                        .flatMap { talks ->
+                            val talkDtos = talks.map { talk -> talk.toDto(req.language(), listOf(user)) }
+                            ok().render("user", mapOf(
+                                    Pair("user", user.toDto(req.language(), markdownConverter)),
+                                    Pair("talks", talkDtos),
+                                    Pair("hasTalks", talkDtos.isNotEmpty()),
+                                    Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8))
+                            ))
 
-                        val talkDtos = talks.map { talk -> talk.toDto(req.language(), listOf(user)) }
-
-                        if ("user-edit".equals(view))
-                            ok()
-                                    .render("user-edit", mapOf(
-                                            Pair("user", user.toDto(req.language(), markdownConverter)),
-                                            Pair("usermail", cryptographer.decrypt(user.email)),
-                                            Pair("description-fr", user.description[Language.FRENCH]),
-                                            Pair("description-en", user.description[Language.ENGLISH]),
-                                            Pair("userlinks", user.toLinkDtos()),
-                                            Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
-                                            Pair("errors", errors),
-                                            Pair("hasErrors", errors.isNotEmpty())
-                                    ))
-                        else
-                            ok()
-                                    .render(view, mapOf(
-                                            Pair("user", user.toDto(req.language(), markdownConverter)),
-                                            Pair("canUpdateProfile", canUpdateProfile),
-                                            Pair("talks", talkDtos),
-                                            Pair("hasTalks", talkDtos.isNotEmpty()),
-                                            Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8))
-                                    ))
-                    }
+                        }
+            }
 
 
     fun saveProfile(req: ServerRequest): Mono<ServerResponse> = req.session().flatMap {
@@ -157,7 +178,7 @@ class UserHandler(private val repository: UserRepository,
                 }
 
                 if (errors.isNotEmpty()) {
-                    findOneViewDetail(req, it, "user-edit", errors = errors)
+                    findOneViewDetail(req, it, ViewMode.EditProfile, errors = errors)
                 }
 
                 val user = User(
@@ -214,7 +235,7 @@ class UserHandler(private val repository: UserRepository,
                     // If everything is Ok we save the user
                     repository.save(user).then(seeOther("${properties.baseUri}/me"))
                 } else {
-                    findOneViewDetail(req, user, "user-edit", errors = errors)
+                    findOneViewDetail(req, user, ViewMode.EditProfile, errors = errors)
                 }
             }
         }

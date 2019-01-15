@@ -23060,21 +23060,6 @@
     },
     {
         "company": null,
-        "description": {},
-        "email": "qG5x9r/xHJMxk8iM+pT4EytyPWKRzM1ZIEWKEAOU++Y=",
-        "emailHash": null,
-        "firstname": "Guillaume",
-        "lastname": "Ehret",
-        "legacyId": null,
-        "links": [],
-        "login": "guillaume",
-        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
-        "role": "USER",
-        "token": "ccc8e0d38268",
-        "tokenExpiration": "2018-04-04T05:36:30.043"
-    },
-    {
-        "company": null,
         "description": {
             "ENGLISH": "Vue.js Core Team Member, Guillaume works on vue-devtools, vue-cli and vue-curated ([github](https://github.com/vuejs/)).\r\nHe also contributes to the larger ecosystem with integration like [vue-apollo](https://github.com/Akryum/vue-apollo) and [vue-meteor](https://github.com/Akryum/vue-meteor/) to help developers build highly interactive realtime apps, plus other tools like [vue-virtual-scroller](https://github.com/Akryum/vue-virtual-scroller), [v-tooltip](https://github.com/Akryum/v-tooltip) and [vue-supply](https://github.com/Akryum/vue-supply).",
             "FRENCH": "Membre de la Core Team de Vue.js, Guillaume travaille sur vue-devtools, vue-cli et vue-curated ([github](https://github.com/vuejs/)).\r\nIl contribue \u00e9galement \u00e0 l'\u00e9cosyst\u00e8me avec des int\u00e9grations \u00e0 Apollo GraphQL ([vue-apollo](https://github.com/Akryum/vue-apollo)) et Meteor ([vue-meteor](https://github.com/Akryum/vue-meteor/)) afin d'aider les d\u00e9veloppeurs \u00e0 cr\u00e9er des applications Vue avec une forte interactivit\u00e9 et du temps-r\u00e9el, ainsi que des outils comme [vue-virtual-scroller](https://github.com/Akryum/vue-virtual-scroller), [v-tooltip](https://github.com/Akryum/v-tooltip) et [vue-supply](https://github.com/Akryum/vue-supply)."

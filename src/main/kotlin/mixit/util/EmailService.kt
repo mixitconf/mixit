@@ -44,11 +44,10 @@ class EmailService(private val properties: MixitProperties,
             context.put("user", user)
             context.put("encodedemail", URLEncoder.encode(email.encodeToBase64(), "UTF-8"))
             val content = templateService.load(templateName, context)
-
             emailSender.send(EmailMessage(email, subject, content))
 
         } catch (e: MessagingException) {
-            logger.error(String.format("Not possible to send email [%s] to %s", subject, user.email), e)
+            logger.error("Not possible to send email [${subject}] to ${user.email}", e)
             throw RuntimeException("Error when system send the mail " + subject, e)
         }
     }
