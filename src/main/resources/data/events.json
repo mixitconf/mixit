@@ -600,7 +600,7 @@
         "year": 2017
     },
     {
-        "current": true,
+        "current": false,
         "end": "2018-04-20",
         "id": "mixit18",
         "photoUrls": [
@@ -793,7 +793,7 @@
         "year": 2018
     },
     {
-        "current": false,
+        "current": true,
         "end": "2019-05-24",
         "id": "mixit19",
         "photoUrls": [],
@@ -837,6 +837,41 @@
                 "level": "GOLD",
                 "sponsorId": "clevercloud",
                 "subscriptionDate": "2018-12-19"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Sopra Steria",
+                "subscriptionDate": "2019-01-15"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "linkvalue",
+                "subscriptionDate": "2019-01-18"
+            },
+            {
+                "level": "PARTY",
+                "sponsorId": "braincube",
+                "subscriptionDate": "2019-01-18"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Hopwork",
+                "subscriptionDate": "2019-01-21"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Bonitasoft",
+                "subscriptionDate": "2019-01-21"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "VISEO",
+                "subscriptionDate": "2019-02-11"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "sourcingisr",
+                "subscriptionDate": "2019-02-11"
             }
         ],
         "start": "2019-05-23",
