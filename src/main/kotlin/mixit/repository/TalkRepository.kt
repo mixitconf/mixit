@@ -31,6 +31,9 @@ class TalkRepository(private val template: ReactiveMongoTemplate,
             }
             logger.info("Talks data initialization complete")
         }
+        val talksResource = ClassPathResource("data/talks_2019.json")
+        val talks: List<Talk> = objectMapper.readValue(talksResource.inputStream)
+        talks.forEach { save(it).block()}
     }
 
     fun count() = template.count<Talk>()
