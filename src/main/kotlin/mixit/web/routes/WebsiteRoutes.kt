@@ -92,9 +92,13 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
                 GET("/$year/design") { talkHandler.findByEventView(year, it, false, "design") }
                 GET("/$year/design/favorite") { talkHandler.findByEventView(year, it, true, "design") }
                 GET("/$year/hacktivism") { talkHandler.findByEventView(year, it, false, "hacktivism") }
-                GET("/$year/hacktivism/favorite/favorite") { talkHandler.findByEventView(year, it, true, "hacktivism") }
+                GET("/$year/hacktivism/favorite") { talkHandler.findByEventView(year, it, true, "hacktivism") }
                 GET("/$year/learn") { talkHandler.findByEventView(year, it, false, "learn") }
                 GET("/$year/learn/favorite") { talkHandler.findByEventView(year, it, true, "learn") }
+                GET("/$year/ethics") { talkHandler.findByEventView(year, it, false, "ethics") }
+                GET("/$year/ethics/favorite") { talkHandler.findByEventView(year, it, true, "ethics") }
+                GET("/$year/lifestyle") { talkHandler.findByEventView(year, it, false, "lifestyle") }
+                GET("/$year/lifestyle/favorite") { talkHandler.findByEventView(year, it, true, "lifestyle") }
                 GET("/$year/team") { talkHandler.findByEventView(year, it, false, "team") }
                 GET("/$year/team/favorite") { talkHandler.findByEventView(year, it, true, "team") }
                 GET("/$year/medias") { talkHandler.findMediaByEventView(year, it, false) }

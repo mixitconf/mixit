@@ -3,9 +3,6 @@ package mixit.repository
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.model.Event
-import mixit.model.EventSponsoring
-import mixit.model.SponsorshipLevel
-import mixit.util.seeOther
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.domain.Sort
@@ -14,7 +11,6 @@ import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.data.mongodb.core.query.isEqualTo
 import org.springframework.stereotype.Repository
-import java.time.LocalDate
 
 
 @Repository
