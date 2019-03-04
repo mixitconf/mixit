@@ -30,6 +30,37 @@ class UserRepository(private val template: ReactiveMongoTemplate,
             users.forEach { save(it).block() }
             logger.info("Users data initialization complete")
         }
+
+        // We load 2019 speakers
+        val usersResource = ClassPathResource("data/speakers_2019.json")
+        val users: List<User> = objectMapper.readValue(usersResource.inputStream)
+        users.forEach {speaker ->
+            val user = findOne(speaker.login).block()
+            if (user != null) {
+                //println("User found =>  ${user.lastname} ${user.firstname}")
+                save(User(
+                        speaker.login,
+                        speaker.firstname,
+                        speaker.lastname,
+                        speaker.email,
+                        speaker.company,
+                        speaker.description,
+                        speaker.emailHash,
+                        speaker.photoUrl,
+                        speaker.role,
+                        speaker.links,
+                        speaker.legacyId
+                )).block()
+                println("User updated")
+
+            } else {
+                println("User not found => ${speaker.firstname} ${speaker.lastname}")
+                save(speaker).block()
+                println("User created")
+            }
+        }
+        logger.info("2019 speaker data initialization complete")
+
     }
 
     fun findFullText(criteria: List<String>): Flux<User> {

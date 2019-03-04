@@ -1,0 +1,3078 @@
+[
+  {
+    "id": "14591863-034f-4e91-8ec7-eec1853bc557",
+    "firstName": "Alan",
+    "lastName": "McCullagh ∴",
+    "fullName": "Alan McCullagh ∴",
+    "bio": "Irlandais, geek passionné de tout ce qui est apprentissage et transmission des connaissances autour de l'informatique. Adepte de Raspberry Pi.",
+    "tagLine": "Pichoun France",
+    "profilePicture": "https://sessionize.com/image?f=68f717736eee1278a3fb477ddcd1a2b4,400,400,True,False,63-034f-4e91-8ec7-eec1853bc557.84dc6245-1d67-40c6-8225-603dbafa40a0.png",
+    "sessions": [
+      {
+        "id": 85658,
+        "name": "Raspberry Pi Jam"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/tyrower",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/alan-mccullagh-022a918/",
+        "linkType": "LinkedIn"
+      }
+    ]
+  },
+  {
+    "id": "c71c603b-e9f8-462c-ad99-48bbdb46b65b",
+    "firstName": "Alexis",
+    "lastName": "Duque",
+    "fullName": "Alexis Duque",
+    "bio": "Je suis responsale des activités de R&D et de l'équipe sécurité IoT au sein d'Rtone, une équipe d'experts en conception d'objets connectés basée à Lyon.\r\n\r\nJe possède un doctorat en informatique de l'Université de Lyon obtenu après une thèse sur le Visible Light Communication pour l'IoT au sein du laboratoire CITI de l'INSA de Lyon. Mais je reste néammoins un geek passionné avant tout, qui aime également toucher au code, du micro-contrôleur aux applications web Java, en passant par le dev mobile.\r\n\r\nJe participe et donne régulièrement des présentations lors de conferences techniques, ou scientifiques sur des sujets autours de l'IoT ou la sécurité.",
+    "tagLine": "Rtone, R&D and Security Leader",
+    "profilePicture": "https://sessionize.com/image?f=7546fc1252fc3af7172bcef79999ac62,400,400,True,False,1f59ac21-4b94-454a-8af1-ab1f421169da.jpg",
+    "sessions": [
+      {
+        "id": 83294,
+        "name": "La 5G, 40' pour (presque) tout comprendre"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/alexis0duque",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "Blog",
+        "url": "https://alexisduque.me",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://rtone.fr",
+        "linkType": "Company_Website"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/alexisduque/",
+        "linkType": "LinkedIn"
+      }
+    ]
+  },
+  {
+    "id": "102a9490-50b8-40e2-9283-3592dbb32bd6",
+    "firstName": "Anastasia",
+    "lastName": "Lieva",
+    "fullName": "Anastasia Lieva",
+    "bio": "Fuzzy Humanist, Data Science Witch, The Lambda Wisperer",
+    "tagLine": "Data Science Witch ",
+    "profilePicture": "https://sessionize.com/image?f=da0119acd7fef38aad7cbfba9185a021,400,400,True,False,90-50b8-40e2-9283-3592dbb32bd6.7551fc43-9aa5-463e-9e5b-052a51195188.jpg",
+    "sessions": [
+      {
+        "id": 72615,
+        "name": "Make Data-Science Great Again. Pourquoi et comment crafter la Data-Science sur mesure."
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/lievAnastazia",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "Blog",
+        "url": "http://nobodyknowswhatisgoingon.fr",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.comwatt.com/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "3b11b519-c79a-4252-8a15-b5172b4563d2",
+    "firstName": "Andre",
+    "lastName": "Staltz",
+    "fullName": "Andre Staltz",
+    "bio": "Andre is an open source developer and speaker focused on building peer-to-peer social networks. He has worked in the software industry for 8 years, gaining fame in JavaScript tooling, such as Cycle.js, RxJS, Callbags, and functional programming. However, his background for more than 14 years has been community software: (2004) started managing communities of PHP bulletin boards, (2012) made a startup for modern group discussions, (2014) made peer-to-peer platforms with WebRTC, and recently (2017) joined the Secure Scuttlebutt group to build offline-first social networks. His latest project, Manyverse, is a mobile app social network experience capable of working entirely offline, built for non-commercial purposes and as free and open source software, with the goal of helping the underconnected populations in developing countries use the bright side of modern communications.",
+    "tagLine": "Creator of Manyverse",
+    "profilePicture": "https://sessionize.com/image?f=3a28d577591b11d35d9dc50d0afe8cfa,400,400,True,False,19-c79a-4252-8a15-b5172b4563d2.ccdd4f72-bd5e-493c-8e20-3d2842107073.jpeg",
+    "sessions": [
+      {
+        "id": 78303,
+        "name": "The internet in 2030"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/andrestaltz",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "Blog",
+        "url": "https://staltz.com",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://staltz.com",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "a9ce0b11-5c03-423e-a0ed-e54283f7bdea",
+    "firstName": "Arnaud",
+    "lastName": "TOURNIER",
+    "fullName": "Arnaud TOURNIER",
+    "bio": "Arnaud Tournier is a developper since more than ten years. Initially specialized on the C++ language in the context of real-time distributed information systems, this computer engineer spent the last five years on web technologies, with diligence and perspicacity. With the technical skills gained by several years programming to-the-metal, Arnaud leads, accompanies and advises developper teams on their application architectures and spreads his knowledge on cloud architectures and contenerization.",
+    "tagLine": "Stack Labs R&D director",
+    "profilePicture": "https://sessionize.com/image?f=020a751a94ebb0bb3b18044fcfabb101,400,400,True,False,b3819e35-48fc-44fc-937e-c79ef220be65.jpg",
+    "sessions": [
+      {
+        "id": 75728,
+        "name": "Voyage au pays merveilleux des Unikernels"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/ltearno",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/lteconsulting/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://stack-labs.com",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "9bf08669-4778-466f-8cc7-726a11030fe8",
+    "firstName": "Arthur",
+    "lastName": "Vuillard",
+    "fullName": "Arthur Vuillard",
+    "bio": " De formation ingénieur, je suis développeur Python, administrateur GNU/Linux et fondateur d'Hashbang. J'interviens principalement sur des projets de systèmes d'informations et de développements webs.\r\n\r\nAuparavant, j'ai évolué à plusieurs postes (développeur, chef de projet, architecte logiciel, responsable Recherche et Développement) chez Alinto, une PME lyonnaise spécialisée dans la messagerie électronique, mais plutôt dans un écosystème Java.\r\n\r\nJe suis particulièrement attiré par GNU/Linux, Python, le logiciel libre, l'expérience utilisateur et l'utilité des applications réalisées.\r\n\r\nJ'ai été pendant 6 ans au bureau de l'Association Francophone Python et organisateur de rencontres régulières à Lyon. J'ai également participé aux organisations des conférences PyConFr de 2014 à 2018 et Pytong 2015.",
+    "tagLine": "Gérant à tout faire d'Hashbang, coopérative de développement Python",
+    "profilePicture": "https://sessionize.com/image?f=cd2c501bad5f034a920e03220cb7342f,400,400,True,False,69-4778-466f-8cc7-726a11030fe8.68ad2c60-b287-4774-becf-6f24a5a9ee3d.png",
+    "sessions": [
+      {
+        "id": 82176,
+        "name": "Coopération inter-entreprises et logiciels libres"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/arthru_vuillrad",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/arthur-vuillard-5782894/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://hashbang.fr/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "3568cd9d-6222-4eab-9280-d19ad81904d4",
+    "firstName": "Augustin",
+    "lastName": "Richard",
+    "fullName": "Augustin Richard",
+    "bio": "J'ai soutenu une thèse en neurosciences sur les mécanismes de l'apprentissage, en lien avec la motivation et les émotions notamment. J'ai ensuite rejoint Sogilis Lyon où j'ai pu découvrir le fonctionnement  d'une organisation autogérée, ce qui m'a séduit au-delà de toute attente. \r\nAujourd'hui, toujours chez Sogilis Lyon, je cherche à promouvoir ce type d'organisation à travers le jeu, ma passion dans la vie. \r\nJ'ai d'ailleurs un projet de bar à jeu en cours pour ceux que ça intéresse.",
+    "tagLine": "Sogilis Lyon",
+    "profilePicture": "https://sessionize.com/image?f=bdba746d04da1b9c0bff2556e5524376,400,400,True,False,9d-6222-4eab-9280-d19ad81904d4.f363f0d3-35db-4fdb-9a5e-180a05812e42.jpg",
+    "sessions": [
+      {
+        "id": 76754,
+        "name": "Sur le pont de la rivière Kawaï"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/augustin-richard-2682734a/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://sogilis.com/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "396fd052-c512-4479-8709-ba2c138c2d12",
+    "firstName": "Bastien",
+    "lastName": "David",
+    "fullName": "Bastien David",
+    "bio": "Développeur passionné, j'adore apprendre et transmettre aux autres ce que je découvre.",
+    "tagLine": "Développeur @orange",
+    "profilePicture": "https://sessionize.com/image?f=bde0c4683c26ba973b17a6e909c7e64c,400,400,True,False,fffda2f2-97b0-4272-9d67-da00b7f2c47e.jpg",
+    "sessions": [
+      {
+        "id": 83486,
+        "name": "Contraintes et Jeux sociaux pour des dojos au top!"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/bastien_david",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/bastien-david-0b89864/",
+        "linkType": "LinkedIn"
+      }
+    ]
+  },
+  {
+    "id": "b8be15cd-5467-493a-ba3c-6d8ce43d4437",
+    "firstName": "Bodil",
+    "lastName": "Stokke",
+    "fullName": "Bodil Stokke",
+    "bio": "Bodil works as a computer science researcher for a secretive think tank, and is a world renowned expert in varied fields such as pizza and persistent data structures. Contrary to popular rumour, she only has five fingers on each hand, but is still able to use Emacs.",
+    "tagLine": "Programmer",
+    "profilePicture": "https://sessionize.com/image?f=d4fd8afa9dc60cc3dd4992b0cd734642,400,400,True,False,cd-5467-493a-ba3c-6d8ce43d4437.1ea893d6-4bae-4054-b739-502dc514a160.jpg",
+    "sessions": [
+      {
+        "id": 85418,
+        "name": "Meetings With Remarkable Trees"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/bodil",
+        "linkType": "Twitter"
+      }
+    ]
+  },
+  {
+    "id": "663bece7-6ae3-4ca9-bd47-21599b650fa6",
+    "firstName": "Bouillier",
+    "lastName": "Clément",
+    "fullName": "Bouillier Clément",
+    "bio": "I started as software developer in 2004, and now I am a freelancer since 5 years. As a contractor, I mentor team members to help them grasp DDD practices from strategic to tactical patterns & implementation flavors (\"classic\", CQRS, EventSourcing...). I also work on DDD organisational impacts.\r\nI also launched some services or co-organize some associations as side-projects, like KickBanking (manage french social taxes for freelancers) and HackYourJob (freelance dev community).",
+    "tagLine": "DDD crafter",
+    "profilePicture": "https://sessionize.com/image?f=ad2ef2ef111e019d12e5c8c807fd3c50,400,400,True,False,e7-6ae3-4ca9-bd47-21599b650fa6.944aaa44-471a-45ca-af0f-e59ea825fc1b.jpeg",
+    "sessions": [
+      {
+        "id": 74341,
+        "name": "Introduction au T(ype)DD avec F# et web app réactive avec Fable.io"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/clem_bouillier",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/clementbouillier",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "http://www.devcrafting.com/en/blog/",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "http://www.devcrafting.com/en/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "c15441fc-3ab6-4085-bebf-b0408e0b5497",
+    "firstName": "Boyd",
+    "lastName": "Rotgans",
+    "fullName": "Boyd Rotgans",
+    "bio": null,
+    "tagLine": null,
+    "profilePicture": "https://sessionize.com/image?f=9f082bee56fee2ea2112da9cc602be29,400,400,True,False,59551565-6263-4a17-b95f-50c287db49b5.jpg",
+    "sessions": [
+      {
+        "id": 78342,
+        "name": "Generative and Data-Driven Posters"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": []
+  },
+  {
+    "id": "0f0e28b0-a4b1-4da7-8bc4-e9c810554ec8",
+    "firstName": "Brian",
+    "lastName": "Clozel",
+    "fullName": "Brian Clozel",
+    "bio": "Committer Spring Framework & Spring Boot à Pivotal",
+    "tagLine": "Membre de l'équipe Spring",
+    "profilePicture": "https://sessionize.com/image?f=834093b759e9cddf4046a67d065a7216,400,400,True,False,76c05b3b-aeac-46bc-918e-aa71ca4c1dc3.jpg",
+    "sessions": [
+      {
+        "id": 76078,
+        "name": "Applications web efficaces avec Spring Boot 2"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/bclozel",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://spring.io",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "cf3f16d1-1466-4ffc-82be-2f720f21a159",
+    "firstName": "Brice",
+    "lastName": "Buffa",
+    "fullName": "Brice Buffa",
+    "bio": "Développeur web ascendant facilitateur, j'accompagne au jour le jour mes clients dans la réalisation d'applications dans des contextes agiles. Responsabilisation des équipes, transparence et pratiques adaptées… mon cheval de bataille est la qualité ! \r\n\r\nCurieux des autres et de leurs idées, j’aime échanger, apprendre sur le terrain, me nourrir de lectures autour du développement personnel. J’interviens d’ailleurs dans plusieurs structures (MixTeen, les Savanturiers, Code moi un mouton) pour faire découvrir la programmation aux plus petits avec des jeux, des robots et des outils amusants.",
+    "tagLine": "Zenika",
+    "profilePicture": "https://sessionize.com/image?f=1274e4f5f9a816257cb3efcc5349483c,400,400,True,False,d1-1466-4ffc-82be-2f720f21a159.76dc9240-d3f1-4948-9fe7-7616993bdcd2.jpg",
+    "sessions": [
+      {
+        "id": 77672,
+        "name": "Code from Scratch"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Company Website",
+        "url": "http://www.zenika.com",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "8a6f2157-ecf5-4335-b5f0-671806e8834c",
+    "firstName": "Bruno",
+    "lastName": "Bellamy",
+    "fullName": "Bruno Bellamy",
+    "bio": "https://bellaminettes.com/blog/",
+    "tagLine": "artiste, dessinateur, geek, bassiste",
+    "profilePicture": null,
+    "sessions": [
+      {
+        "id": 85381,
+        "name": "Utopie et bellaminettes"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": []
+  },
+  {
+    "id": "e8b29178-4a12-499b-8247-a7682d08f7d8",
+    "firstName": "Cédric",
+    "lastName": "BODIN",
+    "fullName": "Cédric BODIN",
+    "bio": "Venant des mathématiques appliquées puis du développement logiciel, c’est dans le coaching agile et la facilitation opérationnelle que Cédric a finalement trouvé sa voie : aider les équipes et les organisations à gagner en efficacité de manière pérenne !\r\nDepuis 2011, il a ainsi accompagné de nombreuses transformations, que ce soit à l’échelle d’une équipe, d’un service, d’un département, ou d’une société. Il agit dans des contextes aussi variés que la banque, les télécoms, l’industrie, les services…\r\nChaque jour, il aime à partager son expérience, sa créativité et son pragmatisme, en s’appliquant à créer une dynamique positive ( vaste programme ; )",
+    "tagLine": "Coach en agilité des organisations",
+    "profilePicture": "https://sessionize.com/image?f=b0717ca2ec03ba7230d60c6bf3b9b793,400,400,True,False,78-4a12-499b-8247-a7682d08f7d8.7ea535c9-b488-4ae3-bec1-f587f2b1a838.jpg",
+    "sessions": [
+      {
+        "id": 83489,
+        "name": "Kouizz Amann"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/cedricbodin",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/cedricbodin/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.fenikso.fr/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "2bf8db81-a5da-4849-af37-c30e5b761136",
+    "firstName": "Céline",
+    "lastName": "Gilet",
+    "fullName": "Céline Gilet",
+    "bio": "Céline fait partie de la tribu Software Craftsmanship chez OCTO Technology.\r\n\r\nDéveloppeuse depuis plus de 10 ans, elle intervient et accompagne des projets pour promouvoir et diffuser les pratiques de qualité logicielle (TDD, Clean Code, Clean Archi, Code review).\r\n\r\nElle s'intéresse et se passionne pour tout ce qui favorise et entretient la dynamique dans une équipe pour délivrer régulièrement de la valeur.",
+    "tagLine": "Consultante @OCTO Technology : Lead Development, Training & Software Craftsmanship : Better Quality Software with Joy #craft #development",
+    "profilePicture": "https://sessionize.com/image?f=9766d8afb5912d871f7e71e77f99cff5,400,400,True,False,81-a5da-4849-af37-c30e5b761136.33e12750-9f09-4108-b83e-e2470153169a.png",
+    "sessions": [
+      {
+        "id": 81671,
+        "name": "D'une architecture N-Tiers à une architecture Clean Hexagonale"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/celinegilet",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/c%C3%A9line-gilet-33794210/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.octo.com/fr",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "d61588fa-9dfd-44ee-b0bf-b506276d154b",
+    "firstName": "Christian",
+    "lastName": "Weinert",
+    "fullName": "Christian Weinert",
+    "bio": "Christian wants to (r)evolutionize our working environment by changing how we interact. To achieve this he demonstrates the power of Liberating Structures to people around the world. He loves his children, Ashtanga Yoga and Surfing.",
+    "tagLine": "Liberator @Holisticon AG - Germany",
+    "profilePicture": "https://sessionize.com/image?f=2f39171431b67cd953d6f53447325009,400,400,True,False,0c86b2da-8793-4211-aa0c-3b90078b38f8.jpg",
+    "sessions": [
+      {
+        "id": 83477,
+        "name": "Empower your team for self-organization – using Liberating Structures"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/rObOtrOxx",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/christian-weinert-4a953b142/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://blog.holisticon.de/",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.holisticon.de/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "4ee0024d-0120-4c81-87c3-9f097a530f54",
+    "firstName": "Christophe",
+    "lastName": "Keromen",
+    "fullName": "Christophe Keromen",
+    "bio": null,
+    "tagLine": null,
+    "profilePicture": "https://sessionize.com/image?f=568590737438b8fe46eeb4bddf854408,400,400,True,False,9212cf37-6219-4c0e-b9d2-d17ce7fd83cb.jpg",
+    "sessions": [
+      {
+        "id": 82580,
+        "name": "Changer les relations difficiles par une approche systémique interactionnelle"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": []
+  },
+  {
+    "id": "31ddd040-a860-470d-a156-c798e6941cc7",
+    "firstName": "Clément",
+    "lastName": "OUDOT",
+    "fullName": "Clément OUDOT",
+    "bio": "Développeur sur LemonLDAP::NG, LDAP Tool Box et FusionIAM",
+    "tagLine": "Identity Solutions Manager chez Worteks",
+    "profilePicture": "https://sessionize.com/image?f=212d7c677768ddf8eceee702bd4e7cfc,400,400,True,False,3fb5899e-1c8d-4919-a93e-b407f8cb60d4.jpg",
+    "sessions": [
+      {
+        "id": 83034,
+        "name": "Initiation à l'improvisation théâtrale"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/clementoudot",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/clementoudot/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.worteks.com",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "573665bb-4197-4540-9aa2-db436a25f764",
+    "firstName": "Clément",
+    "lastName": "Viricel",
+    "fullName": "Clément Viricel",
+    "bio": "Jeune docteur en Mathématiques et Informatiques, j'ai passé mon doctorat avec l'INSA et l'INRA de Toulouse sur les méthodes de comptage appliqué au design de protéines. Je travaille désormais sur des problématiques de recherche en IA via des méthodes de Machine Learning : traduction automatique, analyse sémantique, détection automatique de langues…",
+    "tagLine": "Data Researcher @365Talents",
+    "profilePicture": "https://sessionize.com/image?f=f2358fdd5107f9406ba616d01cd0588d,400,400,True,False,bb-4197-4540-9aa2-db436a25f764.cd7a74d4-5bb7-42c4-85ab-194decf03651.jpg",
+    "sessions": [
+      {
+        "id": 82973,
+        "name": "Introduction aux Word Embeddings avec Word2Vec"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/clement-viricel-b82821b1/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Company Website",
+        "url": "http://www.365talents.com",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "834296df-e7dc-46ae-b9d2-be5e9c75e2d7",
+    "firstName": "David",
+    "lastName": "Benqué",
+    "fullName": "David Benqué",
+    "bio": "David Benqué est designer/chercheur et doctorant au Royal College of Art de Londres. Sa pratique interroge la place des sciences et des technologies dans notre société à travers des installations, publications et scénarios. Son projet de recherche actuel porte sur les pouvoirs supposés des algorithmes ‘prédictifs’ et l’influence de ceux ci sur les imaginaires collectifs. Il enseigne le design à Goldsmiths University of London.",
+    "tagLine": "Designer/chercheur - doctorant au Royal College of Art (Londres)",
+    "profilePicture": "https://sessionize.com/image?f=2dc4a668d0a4f75dda4d74ced6b32870,400,400,True,False,df-e7dc-46ae-b9d2-be5e9c75e2d7.f1f458d5-a858-43a2-b203-e5a6262eb965.jpeg",
+    "sessions": [
+      {
+        "id": 84580,
+        "name": "Le Nouveau Flatland"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/davidbenque",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "Blog",
+        "url": "https://theairpump.davidbenque.com/",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://davidbenque.com/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "aab12620-8f08-4ee9-98c4-1ac299c21182",
+    "firstName": "Dmitry",
+    "lastName": "Vinnik",
+    "fullName": "Dmitry Vinnik",
+    "bio": "Dmitry Vinnik is a Lead Software Engineer at Salesforce and has been passionate about Software Quality since the very beginning of his career.\r\nHe started out as a Quality Engineer, and was able to bring test expertise into his current Software Engineering role to ensure delivery of a high quality product.\r\nDmitry is also a Scrum Master focused on making his team more efficient and productive.\r\nHis background involves studying medicine and bioinformatics in addition to software and quality engineering. ",
+    "tagLine": "Lead Software Engineer",
+    "profilePicture": "https://sessionize.com/image?f=a5934f1d5e78923ca78ed10d18eb975e,400,400,True,False,20-8f08-4ee9-98c4-1ac299c21182.9c97d0ff-c341-4c76-bae6-4f5e29f622e5.jpg",
+    "sessions": [
+      {
+        "id": 83443,
+        "name": "Modern Web Testing: Going Beyond Selenium"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/dmitry-vinnik",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/DmitryVinnik",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "Blog",
+        "url": "https://dvinnik.com",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://dvinnik.com",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "9b75fb2f-d87d-4470-ba35-edade14ea645",
+    "firstName": "Edwin",
+    "lastName": "Jakobs",
+    "fullName": "Edwin Jakobs",
+    "bio": "Edwin Jakobs is a developer and a designer with a strong interest in computational and generative methods. He is one of the founding partners of RNDR, a studio for interactive design based in The Hague. Edwin is the lead developer of OPENRNDR an open source framework for creative coding.",
+    "tagLine": "Principal developer of OPENRNDR",
+    "profilePicture": "https://sessionize.com/image?f=0f1b687b9ece2dcca65494b9a740e24d,400,400,True,False,2f-d87d-4470-ba35-edade14ea645.ebdd9d69-0cd2-4e79-a5d2-857e9d88b5f5.png",
+    "sessions": [
+      {
+        "id": 78341,
+        "name": "OPENRNDR"
+      },
+      {
+        "id": 78342,
+        "name": "Generative and Data-Driven Posters"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "http://twitter.com/voorbeeld",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "Company Website",
+        "url": "http://rndr.studio",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "3666d808-b2c9-47f1-9749-09fad0e93f2e",
+    "firstName": "Elisabeth",
+    "lastName": "Engel",
+    "fullName": "Elisabeth Engel",
+    "bio": "Elisabeth is a UX & tech innovator and a travel enthusiast. She is passionate about lean UX, web performance and usability testing. While exploring new places all around the world, she's always on the hunt for fresh UX & frontend inspirations.",
+    "tagLine": "UX & Tech Innovator @interfacewerk",
+    "profilePicture": "https://sessionize.com/image?f=6f56ba6cdb765e9a14c833d4b2791f87,400,400,True,False,08-b2c9-47f1-9749-09fad0e93f2e.e6b0e3af-f281-446a-a576-3bb2987d1887.png",
+    "sessions": [
+      {
+        "id": 82829,
+        "name": "The Illusion of Speed - Hacking Users' Perception"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "http://twitter.com/_lizzelo_",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/elisabeth-engel-a9699b71/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://interfacewerk.de/",
+        "linkType": "Company_Website"
+      },
+      {
+        "title": "Blog",
+        "url": "http://elisabeth-engel.de",
+        "linkType": "Blog"
+      }
+    ]
+  },
+  {
+    "id": "4891e0c0-0ef1-41d8-91c0-68981abe91e8",
+    "firstName": "Ellène",
+    "lastName": "Dijoux Siber",
+    "fullName": "Ellène Dijoux Siber",
+    "bio": "Dev depuis 10 ans, je suis maintenant lead dev chez Quicksign. Membre de Duchess France",
+    "tagLine": "Lead Dev chez Quicksign",
+    "profilePicture": "https://sessionize.com/image?f=9b53cf622d92b967d517a8b207d68636,400,400,True,False,c0-0ef1-41d8-91c0-68981abe91e8.612dc02c-44cb-4acf-8434-9d61b74f6dde.jpg",
+    "sessions": [
+      {
+        "id": 82942,
+        "name": "Diminuer ses déchets c’est possible !"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "http://twitter.com/ElleneSiber",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/ellenedijouxsiber/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "http://uneviededev.com",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.quicksign.com/fr/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "5dc1d804-8b63-4097-9d96-e6964315acd1",
+    "firstName": "Emily",
+    "lastName": "Gorcenski",
+    "fullName": "Emily Gorcenski",
+    "bio": "Emily has over ten years of experience in scientific computing and engineering research and development. She has a background in mathematical analysis, with a focus on probability theory and numerical analysis. She is currently working in Python, though she has a background that includes C#/.Net, Unity3D, SQL, and MATLAB. In addition, she has experience in statistics and experimental design, and has served as Principal Investigator in clinical research projects. An advocate for social justice, Emily is an activist and survivor of the 2017 Charlottesville neo-Nazi attacks. She was named as one of 2018’s most influential feminists by Bitch Magazine for her work in shining a light on far-right violence with her project, First Vigil.",
+    "tagLine": "Data Scientist",
+    "profilePicture": "https://sessionize.com/image?f=5c03da0db39667ec0ea3c01545b6109f,400,400,True,False,04-8b63-4097-9d96-e6964315acd1.2b976d65-97a7-4bff-b980-e9f9d9ca0028.jpg",
+    "sessions": [
+      {
+        "id": 85491,
+        "name": "Machine Learning in an Agile World: Keeping Models Fresh with Continuous Intelligence"
+      },
+      {
+        "id": 85492,
+        "name": "Beyond Ethics—Technological Citizenship in Changing Times"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/emilygorcenski",
+        "linkType": "Twitter"
+      }
+    ]
+  },
+  {
+    "id": "98a554c2-cb31-4e8b-8e02-256ab1d5aa97",
+    "firstName": "Emmanuel",
+    "lastName": "Hervé",
+    "fullName": "Emmanuel Hervé",
+    "bio": "Tombé dans la marmite en 2007, à un moment où l’Agilité n’était pas encore à la mode, je consacre désormais mon temps et mon énergie au service des individus, des équipes et des organisations.\r\n\r\nAssez joueur et plutôt créatif, en charge de l’Agilité au sein de Zenika Lyon, je suis aussi membre du CARA Valence-Lyon-Grenoble :-) organisateur d’évènements et speakers dans plusieurs conférences. \r\n“N’oublie jamais d’essayer !” - Robots",
+    "tagLine": "Coach Agile / Facilitateur chez Zenika",
+    "profilePicture": "https://sessionize.com/image?f=a492b6a6373de0778c53f85cbaed2ec6,400,400,True,False,c2-cb31-4e8b-8e02-256ab1d5aa97.b7f66c07-79a3-4e40-ab89-5ce726980fa4.jpg",
+    "sessions": [
+      {
+        "id": 83105,
+        "name": "Please stand up !"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/ehervepro",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/emmanuelherve/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.zenika.com/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "d62da65c-6ea2-4f16-9826-7efc1a5d2bb0",
+    "firstName": "Estelle",
+    "lastName": "Landry",
+    "fullName": "Estelle Landry",
+    "bio": "Passionée par mon métier de Product Owner, par l'UX (User eXpérience) et le GameStorming, j'aime participer à l'élaboration d'un produit en étant le lien entre les utilisateurs et les développeurs.\r\n\r\nSpeakeuse en conférence tech, membre des Duchess France, de SunnyTech et du MeetUp UX Flupa Montpellier, je continue à me perfectionner et à discuter de nouvelles méthodes ou technologies de l'IT.",
+    "tagLine": "Product Owner chez Elium",
+    "profilePicture": "https://sessionize.com/image?f=7805d892a62bc1061ea57a3e6fecc246,400,400,True,False,5c-6ea2-4f16-9826-7efc1a5d2bb0.0bece383-e90e-47d9-9267-52e5e9ed66b3.jpg",
+    "sessions": [
+      {
+        "id": 72613,
+        "name": "Comment perdre sa surchage featurale ?"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/estelandry",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/estelle-landry-61866b71/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.elium.tv/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "fc685ea9-d9c6-4a9e-ac52-fdf8c1624ac1",
+    "firstName": "Fabrice",
+    "lastName": "Bloch",
+    "fullName": "Fabrice Bloch",
+    "bio": "Statisticien public, agiliste militant, formateur en design-thinking et en leadership",
+    "tagLine": "Agilitateur Public",
+    "profilePicture": "https://sessionize.com/image?f=006572ce7fdb2ea1a55f1932f0e7e98b,400,400,True,False,a9-d9c6-4a9e-ac52-fdf8c1624ac1.616f0922-a4c4-4cf7-9a5a-20a28570c449.jpg",
+    "sessions": [
+      {
+        "id": 73126,
+        "name": "Le circular design : designer pour une innovation soutenable"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/AgilitatrPublic",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/fabrice-bloch-4b9b5194/",
+        "linkType": "LinkedIn"
+      }
+    ]
+  },
+  {
+    "id": "27b55912-9f27-4575-9046-5ddbc72f83fa",
+    "firstName": "Fabrice",
+    "lastName": "Des Mazery",
+    "fullName": "Fabrice Des Mazery",
+    "bio": "Déjà 17 ans avec la tête dans le produit ! Ex entrepreneur (3 startups, 2 exits), salarié de temps en temps (Deezer).\r\nAujourd'hui, j'aide les autres à créer de meilleurs produits : je forme, je coache, et parfois je parle de produit, de growth, de design d'engagement et de responsabilité digitale.\r\n",
+    "tagLine": "Chief Product Evangelist @ Thiga",
+    "profilePicture": "https://sessionize.com/image?f=b12f2c447741a60fafa35b900547a551,400,400,True,False,12-9f27-4575-9046-5ddbc72f83fa.b48a8e85-2bef-480d-b5e0-a673d0dae5bf.jpg",
+    "sessions": [
+      {
+        "id": 73225,
+        "name": "Peut-on tromper 1000 fois une personne ?"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/desmazery",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://fr.linkedin.com/in/innovatormindset",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.thiga.fr",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "084d5c4b-8866-4bfc-89e5-800170318be2",
+    "firstName": "Florence",
+    "lastName": "Chabanois",
+    "fullName": "Florence Chabanois",
+    "bio": "Florence Chabanois exerce dans le milieu agile depuis une dizaine d'années. Sa forme de tête ni ronde ni carré lui a permis d'endosser des casquettes en tissus différents : développeur, coach, ScrumMaster, manager, product owner.",
+    "tagLine": "Manager IT @ Carboatmedia.fr",
+    "profilePicture": "https://sessionize.com/image?f=5c973479fcf8e54a8c659b1249204f37,400,400,True,False,4b-8866-4bfc-89e5-800170318be2.65ff2230-0fe4-4aa0-94b0-f4a18b616dd6.png",
+    "sessions": [
+      {
+        "id": 83509,
+        "name": "Le focus, votre meilleur ennemi"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/fchabanois",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/florencechabanois",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Company Website",
+        "url": "http://www.lacentrale.fr",
+        "linkType": "Company_Website"
+      },
+      {
+        "title": "Blog",
+        "url": "http://devsnotebook.fr",
+        "linkType": "Blog"
+      }
+    ]
+  },
+  {
+    "id": "bc17f3d4-22c8-4750-87a6-125c6a1efb35",
+    "firstName": "Florent",
+    "lastName": "PELLET",
+    "fullName": "Florent PELLET",
+    "bio": "Software Crafter convaincu et passionné pour les sujets autour de DDD.",
+    "tagLine": "HackYourJob, DDD addict",
+    "profilePicture": "https://sessionize.com/image?f=921586e88f857c09179950b91146911f,400,400,True,False,d4-22c8-4750-87a6-125c6a1efb35.316525c4-33df-4ea4-8ecd-ff9cea353a71.jpg",
+    "sessions": [
+      {
+        "id": 74341,
+        "name": "Introduction au T(ype)DD avec F# et web app réactive avec Fable.io"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/florentpellet",
+        "linkType": "Twitter"
+      }
+    ]
+  },
+  {
+    "id": "17a79866-1c08-4a72-9026-c69cdf0db636",
+    "firstName": "Francois",
+    "lastName": "Teychene",
+    "fullName": "Francois Teychene",
+    "bio": "Développeur couteau suisse pouvant intervenir du Javascript à la table de routage. Mes passions actuelles sont le Rust, le DevOps et le Scala en plus de vouloir mettre des conteneurs partout.",
+    "tagLine": "Cloud Developper @ Saagie , MontpellierTechHub organiser,  SunnyTech organiser. ",
+    "profilePicture": "https://sessionize.com/image?f=7803271c39e258e632dedb600d9676bf,400,400,True,False,0d9d3031-1076-4d4e-95bf-8d0756c0a20b.jpg",
+    "sessions": [
+      {
+        "id": 76283,
+        "name": "Mon premier service en Rust"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/fteychene",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.saagie.com/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "310a45d5-5b9b-406f-9eed-5a3b9eb10d62",
+    "firstName": "François-Guillaume",
+    "lastName": "Ribreau",
+    "fullName": "François-Guillaume Ribreau",
+    "bio": "Architect & Head of Digital Development @OuestFrance🌟 #FullStack CTO @imagecharts @Redsmin @motiondynamic_ @mailpopin founder🚀 Trainer @EPSI_Nantes @UnivNantes",
+    "tagLine": "Head of Digital Development @OuestFrance - FullStack CTO",
+    "profilePicture": "https://sessionize.com/image?f=87e1e10aa0044daa0b902037325eabbe,400,400,True,False,d5-5b9b-406f-9eed-5a3b9eb10d62.5c678a50-43d0-4f80-b06b-8a27a82e0d30.jpg",
+    "sessions": [
+      {
+        "id": 76621,
+        "name": "Choisir entre une API RPC, SOAP, REST, GraphQL? Et si le problème était ailleurs ?"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/FGRibreau",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/francoisguillaumeribreau/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://blog.fgribreau.com",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://fgribreau.com",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "e74529b5-fa93-46eb-a212-96bb40931e1e",
+    "firstName": "Horacio",
+    "lastName": "Gonzalez",
+    "fullName": "Horacio Gonzalez",
+    "bio": "Spaniard lost in Brittany, unconformist coder, dreamer and all-around geek. Software Engineer by day, community organizer night, Horacio fell into web programming in 1997, and he has never left it. \r\n\r\nAfter some years as @warp10io frontend leader as Cityzen Data, Horacio currently works as developer advocate at OVH. He is the co-founder and leader of the FinistJUG (the French JUG the nearest to the Silicon Valley!) and GDG Finistère, and Google Developer Expert (GDE) in Web Technologies and Flutter.\r\n",
+    "tagLine": "DevRel at OVH, GDE in Web Technologies",
+    "profilePicture": "https://sessionize.com/image?f=7cfafc99b049c26dd8ecfa60c3224570,400,400,True,False,fd22f8cd-aedc-4a65-ab53-eba89c848666.jpg",
+    "sessions": [
+      {
+        "id": 78739,
+        "name": "Venez coder votre 1ère application Flutter !"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/LostInBrittany",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/horaciogonzalez/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B15PZKqNTSG6FuTIyz6aReg%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_feed-nav.settings_view_profile",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://ovh.com",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "8fe99c7e-3fb5-4833-b199-4009995688fe",
+    "firstName": "Houssem",
+    "lastName": "BELHADJ AHMED",
+    "fullName": "Houssem BELHADJ AHMED",
+    "bio": "Développeur depuis 4 ans, j'aime toucher à tout et découvrir des nouvelles technos. Je suis passionné par la sécurité informatique plus particulièrement par la sécurité web.",
+    "tagLine": "Software Engineer @ Malt",
+    "profilePicture": "https://sessionize.com/image?f=313ac0f60c4feaa4dfbdd2eba572c439,400,400,True,False,7e-3fb5-4833-b199-4009995688fe.9881c353-b3a1-47c7-9cdb-0d19b68e44db.jpg",
+    "sessions": [
+      {
+        "id": 83439,
+        "name": "Que deviennent nos mots de passe après un leak de données ?"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/7ouss3m",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.malt.fr",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "5fada0dc-1c5e-43a7-a1f6-08bfadd5fc0a",
+    "firstName": "Hubert",
+    "lastName": "SABLONNIÈRE",
+    "fullName": "Hubert SABLONNIÈRE",
+    "bio": "Hubert est passionné par le Web. Il est toujours à la recherche de nouvelles idées et autres bidouilles pour améliorer l'expérience des utilisateurs et des développeurs.",
+    "tagLine": "Web developer",
+    "profilePicture": "https://sessionize.com/image?f=69e0b49b41c242c77ed0f17c65e92d46,400,400,True,False,3899e584-61d5-4932-84fa-8702ae2349ec.jpg",
+    "sessions": [
+      {
+        "id": 80856,
+        "name": "Le Web, ses frameworks et ses standards : déconstruire pour mieux (re?)construire"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/hsablonniere",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "Blog",
+        "url": "https://www.hsablonniere.com/",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.clever-cloud.com/fr/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "8b2f7c9f-c702-40ac-b215-86fa6c40a239",
+    "firstName": "Igor",
+    "lastName": "Laborie",
+    "fullName": "Igor Laborie",
+    "bio": "Développeur passionné depuis plus de 18 ans, expert dans les technos Java et Web. Je suis impliqué dans les rendez-vous techniques toulousains (Devfest Toulouse, GDG, JUG, Software Craftsmanship Toulouse).\r\nJ’apprécie la programmation fonctionnelle, et donc particulièrement je suis attiré par les nouveaux langages et frameworks qui vont dans cette direction. \r\n\r\nEt puis je sais dessiner une 🦄 en CSS.",
+    "tagLine": "Expert Web + Java (disons plutôt Kotlin ou Scala)",
+    "profilePicture": "https://sessionize.com/image?f=e4b3748d8a1a168477ea1ea4ef972710,400,400,True,False,de119840-c917-4482-bebe-23f8b6761949.jpg",
+    "sessions": [
+      {
+        "id": 79684,
+        "name": "⏰ CSS Clockwork"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Company Website",
+        "url": "http://www.monkeypatch.io/",
+        "linkType": "Company_Website"
+      },
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/ilaborie",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/igor-laborie-080ab78/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "http://www.monkeypatch.io/blog/",
+        "linkType": "Blog"
+      }
+    ]
+  },
+  {
+    "id": "75e5c838-d0f4-42e0-bc87-0dc01f4c7ce4",
+    "firstName": "Isabelle",
+    "lastName": "Gauthier",
+    "fullName": "Isabelle Gauthier",
+    "bio": "Spécialiste de la transformation des organisations, auparavant directrice marketing, j’accompagne aujourd’hui les entreprises de toutes tailles dans la rénovation de leurs offres, la découverte et la mise en oeuvre de l’agilité au niveau stratégique et managérial.\r\n\r\nForte de 20 années de management d’équipes, transversal et opérationnel, j’oeuvre désormais à l’amélioration les organisations, les offres et la culture des entreprises que j’accompagne, au travers de programmes de  transformation culturelle, formation et coaching de managers \r\n\r\nMon crédo : Rien ne se perd, rien ne se crée, tout se transforme !\r\n",
+    "tagLine": "Goood, coaching managérial et coaching d'organisations",
+    "profilePicture": "https://sessionize.com/image?f=8c67fd72475dcb7bf131562d996f4ee8,400,400,True,False,38-d0f4-42e0-bc87-0dc01f4c7ce4.7f97db15-303e-4b44-90b5-1693892e192b.jpg",
+    "sessions": [
+      {
+        "id": 82985,
+        "name": "La vérité sur ce qui nous motive"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/I_Gauthier",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/igauthier/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://blog.goood.com/author/igauthier91189542/",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "http://www.goood.com",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "bfb38ebb-9307-4d7d-88fb-7fc3599a7c1c",
+    "firstName": "Ivan",
+    "lastName": "Čuljak",
+    "fullName": "Ivan Čuljak",
+    "bio": "Ivan is a .NET freelance developer in love with Azure, Xamarin, and the idea of automating whatever. When he’s not developing something new, he’s salvaging something inherited, consulting with enthusiasm, and testing and breaking new technologies in a quest for something useful.",
+    "tagLine": "Cloud Solution Architect @ Celeste Maze",
+    "profilePicture": "https://sessionize.com/image?f=43978d08b4d00739525a55263fa18e0a,400,400,True,False,bb-9307-4d7d-88fb-7fc3599a7c1c.daad77f8-dd4b-4560-90d9-c70a6289e67d.jpg",
+    "sessions": [
+      {
+        "id": 79445,
+        "name": "Building stateful, resilient and complex serverless systems while orchestrating old-school services"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/culjakivan",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/culjakivan/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://www.culjak.xyz",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.celestemaze.com",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "fba23fa1-2a05-491a-924b-b6305ca0b473",
+    "firstName": "James",
+    "lastName": "Carlson",
+    "fullName": "James Carlson",
+    "bio": "Founder of Bucketworks (2002), the first collaborative third place in America, and the School Factory (2007), a federation of more than 100 third places, James has been passionate about the development of hands-on learning communities across science, art, business and culture. James now develops a new third place, Bright City, in Paris, while creating a mosaic of the world with 10,000 human eyes. ",
+    "tagLine": "May I take a photo of your eyes? / Puis-je prendre une photo de vos yeux?",
+    "profilePicture": "https://sessionize.com/image?f=0c431efed505c923b2d01fa98455c569,400,400,True,False,1cb421af-37d3-49a0-9655-bb415c574366.jpg",
+    "sessions": [
+      {
+        "id": 84490,
+        "name": "Third Place Trajectories"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/hypnagogic",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/bucketworks/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "http://jamescarlson.me",
+        "linkType": "Blog"
+      }
+    ]
+  },
+  {
+    "id": "b4429144-4b40-49eb-8432-df5bc18da32a",
+    "firstName": "Jean-Baptiste",
+    "lastName": "Lievremont",
+    "fullName": "Jean-Baptiste Lievremont",
+    "bio": "Terrien 🌍, être humain 🚶, papa 👨‍👩‍👧‍👦, mari 💑, développeur 👨‍💻, outilleur 🔨, cycliste 🚴, gamer 🎮, gourmand 🥘, bisounours 🐻.\r\n\r\nJ'ai commencé à programmer des outils sur calculatrice Casio pour mes camarades de classe au lycée il y a 20 ans, et cette volonté constante de mettre l'informatique au service des êtres humains m'a emmené sur les routes du développement sous ses multiples facettes - desktop, embarqué, Web front, Web serveur, cloud.\r\n\r\nJ'occupe mes journées chez SonarSource à forger des outils logiciels pour faciliter la vie des mes collègues, et certains de mes weekends à animer des ateliers Arduino pour le chapitre genevois de Devoxx4Kids.",
+    "tagLine": "Forgeron d'outils chez SonarSource",
+    "profilePicture": "https://sessionize.com/image?f=a4f17fe9b812bcdfea099a23f02fb0db,400,400,True,False,44-4b40-49eb-8432-df5bc18da32a.c4945327-74a4-4322-960e-ca0e4abcc178.jpeg",
+    "sessions": [
+      {
+        "id": 81637,
+        "name": "Éloge du vide"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/mithfindel",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/jeanbaptistelievremont/",
+        "linkType": "LinkedIn"
+      }
+    ]
+  },
+  {
+    "id": "c567ee5e-0db0-4729-bab2-7aea5a808f49",
+    "firstName": "Johan",
+    "lastName": "Martinsson",
+    "fullName": "Johan Martinsson",
+    "bio": "Johan Martinsson est un développeur freelance qui se passionne entre autres pour le design du code.\r\nAvec 17 ans d’expérience, il a passé les 8 dernières années à aider des équipes de maîtriser\r\nle développement accompagné de tests dans de multiples langages. Régulièrement il trouve des (bonnes) excuses pour aller montrer un peu de code dans des conférences en France et ailleurs.\r\n",
+    "tagLine": "La passion du code. Coach Tech Agile",
+    "profilePicture": "https://sessionize.com/image?f=97705a8b415d069f01f9c9e7a0cc0a51,400,400,True,False,5e-0db0-4729-bab2-7aea5a808f49.1de3f90e-234d-453c-b6ab-945a9f4e4a22.jpg",
+    "sessions": [
+      {
+        "id": 83486,
+        "name": "Contraintes et Jeux sociaux pour des dojos au top!"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/johan_alps",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/jomartinsson/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "http://martinsson-johan.blogspot.com",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "http://www.changit.fr",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "1f834106-bd6b-4080-b557-d1dad9274e6d",
+    "firstName": "Joshua",
+    "lastName": "Lowe",
+    "fullName": "Joshua Lowe",
+    "bio": "Josh is a 15 year old coder, passionate about sharing his skills with others. He is the creator of EduBlocks, an open source drag and drop version of Python 3 which allows students to learn the Python syntax with minimal errors. His software is being used in countries all around the world by students and teachers alike. Josh delivers numerous workshops around the country sharing his passion for coding to people of all ages. In 2017, he was awarded a John Pinner Award at PyCon UK for his contribution to the coding community. He is also a pi-top futureCHAMPION.",
+    "tagLine": "Creator and maintainer of EduBlocks",
+    "profilePicture": "https://sessionize.com/image?f=1cd675318a4652b1e1aa9c34453bd736,400,400,True,False,ab7aaadf-278a-48f7-9d63-f9d18ee41b60.jpg",
+    "sessions": [
+      {
+        "id": 83210,
+        "name": "Building an open source project"
+      },
+      {
+        "id": 85658,
+        "name": "Raspberry Pi Jam"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "http://twitter.com/all_about_code",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "Blog",
+        "url": "http://allaboutcode.co.uk",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "http://edublocks.org",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "6d445e97-0c74-4d8f-8632-2db18f1bf336",
+    "firstName": "Jules",
+    "lastName": "Hablot",
+    "fullName": "Jules Hablot",
+    "bio": "Je suis un nouveau développeur qui partage déjà tout ce que j'ai pu apprendre.",
+    "tagLine": "Dev chez Zenika",
+    "profilePicture": "https://sessionize.com/image?f=f7d7521f6fb7d444398e8722c81ea5b4,400,400,True,False,be75dfec-3c2c-4f01-a407-d4c493a2b7b7.jpg",
+    "sessions": [
+      {
+        "id": 77672,
+        "name": "Code from Scratch"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": []
+  },
+  {
+    "id": "854bddd6-84df-4a97-8b18-cadad6a446f4",
+    "firstName": "Juliane",
+    "lastName": "Blier",
+    "fullName": "Juliane Blier",
+    "bio": "Coming from International Marketing studies, I started Web Development at the end of 2016. I am now working in EdTech at SchoolMouv in Toulouse.\r\n\r\nI am passionate and curious about new tools, technologies and languages.",
+    "tagLine": "Lead Dev Fullstack Javascript @ SchoolMouv",
+    "profilePicture": "https://sessionize.com/image?f=0ec1ce13a1537b376e3a2ef97c91a3b3,400,400,True,False,d6-84df-4a97-8b18-cadad6a446f4.1e5c682a-d98a-4e53-84a5-bbef33c81537.jpg",
+    "sessions": [
+      {
+        "id": 83468,
+        "name": "Remake de jeux rétro avec Vue.js"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/tactless7",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/juliane-blier-428b8b49/",
+        "linkType": "LinkedIn"
+      }
+    ]
+  },
+  {
+    "id": "95ed1a96-f183-49f4-b3d7-186a120c323b",
+    "firstName": "Julie",
+    "lastName": "Quillé",
+    "fullName": "Julie Quillé",
+    "bio": "Passionnée par l’être humain, la psychologie et la sociologie, j’accompagne les personnes et les équipes dans leur cheminement vers plus de responsabilité et de liberté individuelles. La Communication Bienveillante (CNV) est mon outil de prédilection.",
+    "tagLine": "Développeuse de conscience en croissance",
+    "profilePicture": "https://sessionize.com/image?f=c4d463d182ec5d3e1520c70253cd4762,400,400,True,False,56ad64c7-2029-4de9-864c-90493929dd39.jpg",
+    "sessions": [
+      {
+        "id": 83117,
+        "name": "Les émotions fortes au travail : qu'est-ce que j'en fais ?"
+      },
+      {
+        "id": 83329,
+        "name": "La parole au travail : un privilège masculin"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/juliequille",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/juliequille/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://azae.net/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "7a2d9e89-5c01-4d21-b67b-26b7aa3e77a0",
+    "firstName": "Julien",
+    "lastName": "Porot",
+    "fullName": "Julien Porot",
+    "bio": "J'aide les personnes, les équipes et les organisations à mieux coopérer, et je fais tout mon possible pour que cela se fasse dans la joie et le respect. \r\nJe m'appuie sur mon goût pour la facilitation, le théâtre et le coaching systémique pour faire bouger les lignes.",
+    "tagLine": "A guide to possibility land",
+    "profilePicture": "https://sessionize.com/image?f=c3ebcd546835577788455b1a8db42586,400,400,True,False,89-5c01-4d21-b67b-26b7aa3e77a0.0950c251-7d0c-4913-89fe-02dd965c3d82.jpg",
+    "sessions": [
+      {
+        "id": 82580,
+        "name": "Changer les relations difficiles par une approche systémique interactionnelle"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/cranedemorse",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/julienporot/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.goood.com/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "bb3d9d1b-57f8-4e44-b487-a6e1492dd5d9",
+    "firstName": "Julien",
+    "lastName": "Topçu",
+    "fullName": "Julien Topçu",
+    "bio": "Senior Lead Developer à la Société Générale, je suis un fervent défenseur du Software Craftsmanship.\r\n\r\nJ'évangélise activement autour de DDD/Hexagonal Architecture, l'XP et le Kanban #NoEstimates au sein de cours et de meetups ainsi qu'à travers d'articles de blog.\r\n\r\nMembre de la fondation OWASP, je m'efforce de transmettre à la communauté une philosophie DevSecOps. J'ai monté plusieurs Red Teams  (équipes mettant à l'épreuve la sécurité d'une compagnie) et participé à la mise en place de pipeline de Continuous Security à l'échelles d'entreprises.",
+    "tagLine": "Sr Lead Dev @SocieteGenerale & OWASP fundation member",
+    "profilePicture": "https://sessionize.com/image?f=ebb253fdbafcec00745e395713826045,400,400,True,False,1b-57f8-4e44-b487-a6e1492dd5d9.d768854a-603f-4104-ae25-25c1d9f53eb8.png",
+    "sessions": [
+      {
+        "id": 72672,
+        "name": "Comment se faire hacker bien comme il faut!"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/JulienTopcu",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/julien-top%C3%A7u/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://beyondxscratch.com/",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://medium.com/soci%C3%A9t%C3%A9-g%C3%A9n%C3%A9rale-engineering",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "da22f15c-6305-4eee-945f-7625b75bb6d5",
+    "firstName": "Kalyan",
+    "lastName": "Dikshit",
+    "fullName": "Kalyan Dikshit",
+    "bio": "Kalyan Dikshit is a Mozilla Tech Speaker, Representative, and part of its Hyderabad Community, India. His job has to do with Security and he spoke at the Internet Freedom Festival 2017, 2018, Still Hacking Anyway (SHA), All Systems Go! 2017. He recently gave a talk at “Shift DEV 2018” happened at Spilt in Croatia. \r\nAs a volunteer he localizes software for Mozilla, Tor, Orfox, Orbot, GlobaLeaks, Briar and OONIProbe. He currently also devotes his time with ICRISAT where he works, with drones to develop and trial techniques to connect farmers. \r\nFounder of the “JAVA 1.X Hyderabad Chapter” giving lectures on the latest features and changes in Java. Co-founder of “Duck Duck Go Hyderabad Chapter”. \r\n«Developer by Day, Hacker by Night.»",
+    "tagLine": "Mozilla Tech Speaker",
+    "profilePicture": "https://sessionize.com/image?f=64ee11ceff7ce8de073f336644c08c44,400,400,True,False,5c-6305-4eee-945f-7625b75bb6d5.4326e7bb-c5b7-47c8-9ba0-04bba25b2b8d.jpg",
+    "sessions": [
+      {
+        "id": 83180,
+        "name": "Decentralizing Internet of Things"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/decode_dev",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "Blog",
+        "url": "https://medium.com/@decode_dev",
+        "linkType": "Blog"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://in.linkedin.com/in/umkdikshit",
+        "linkType": "LinkedIn"
+      }
+    ]
+  },
+  {
+    "id": "08aa10d6-848f-4458-80a8-f499295bd560",
+    "firstName": "Kevin",
+    "lastName": "Davin",
+    "fullName": "Kevin Davin",
+    "bio": "Cloud Architect, I am above all passionate about tech, languages, infrastructure, and automation. \r\n\r\nJava, Kotlin, Go, Javascript or TypeScript are my day-to-day languages. I deploy all of those on the Google Kubernetes Engine with the Continuous Integration of Gitlab 🚀. \r\n\r\nAddict of agility and devops, some of my work was to help teams to follow those philosophies. From the analysis of the code quality (with code-review or static analysis tool) to the setup of unit or end-to-end tests and ending by the continuous deployment of the application directly on the Google Cloud platform. \r\n\r\nMy mantra is to go to production as soon as possible! In my activity in Stack Labs and also in my personal time, I contribute on open source projects (Spring boot, Spring Security, Angular, Protractor, Jest schematics for Angular, NgxOpenlayers...). . \r\n\r\nI'm involved in the GDG Toulouse, on the organization part (for the video capture part) and to provide some talks too. Following that, I'm also into the DevFest Toulouse team since day 1. I'm mainly managing the website during the Devfest season. Thanks to that, I became the first external contributor to the GDG-X/hoverboard project. \r\n\r\nI'm currently CTO (and one of the founder) of Stack Labs, a company specialized in architecture and development of cloud solution. I supervise about twenty passionate and talented developers in their missions and during our internal events\r\n",
+    "tagLine": "Stack Labs",
+    "profilePicture": "https://sessionize.com/image?f=f1fcc6673eceafbd8ca1a794cd74b4d4,400,400,True,False,01c6f17c-4070-4b34-b634-b069e527c4a0.jpg",
+    "sessions": [
+      {
+        "id": 75326,
+        "name": "Una-Gitlab, le TP à Roulette !"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/davinkevin",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/davinkevin/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://blog.stack-labs.com",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.stack-labs.com/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "14f4a638-4979-4fc7-8306-547eb8c3b1b6",
+    "firstName": "Laura",
+    "lastName": "Wacrenier",
+    "fullName": "Laura Wacrenier",
+    "bio": "UX Designer basée à Genève. Depuis quelques années, je travaille sur l'expérience utilisateur de produits destinés aux développeurs et développeuses : SonarQube et SonarCloud. En parallèle, je me passionne pour l'accessibilité et l'inclusivité des produits numériques. ",
+    "tagLine": "UX Designer @SonarSource",
+    "profilePicture": "https://sessionize.com/image?f=0562b71550774533dce022d5af38d4f4,400,400,True,False,38-4979-4fc7-8306-547eb8c3b1b6.c6a2ec93-97af-4d12-8a83-6549b9e0de71.jpg",
+    "sessions": [
+      {
+        "id": 83387,
+        "name": "Au delà des couleurs, des interfaces adaptées au daltonisme"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/Laoraw",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/laura-wacrenier",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.sonarsource.com/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "4d8cf2ab-f135-4d32-9d98-b1eb5dfc44e5",
+    "firstName": "Laurent",
+    "lastName": "Grangeau",
+    "fullName": "Laurent Grangeau",
+    "bio": "Laurent Grangeau is a Cloud Solution Architect at Sogeti with more than 10+ years of experience. Former Java developer, he has since developed in .NET, with Agile and DevOps mindsets. He has been experimenting with cloud providers for more than 5+ years. Docker enthusiast from the beginning, he has experienced with building microservices and distributed systems. He loves to automate things and run distributed applications at scale.",
+    "tagLine": "CSA @ Sogeti",
+    "profilePicture": "https://sessionize.com/image?f=bd44c7e0066bc7cc9b15e8aa7e6fad20,400,400,True,False,898cb4cf-0292-40a7-989d-aaa66f5dab43.jpg",
+    "sessions": [
+      {
+        "id": 81581,
+        "name": "Knative, OpenFaaS, Kubeless : la guerre des frameworks serverless est lancée !"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/laurentgrangeau",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/laurentgrangeau/",
+        "linkType": "LinkedIn"
+      }
+    ]
+  },
+  {
+    "id": "723aa7b6-e1d3-416c-a874-b109eec85be2",
+    "firstName": "Les",
+    "lastName": "Pounder",
+    "fullName": "Les Pounder",
+    "bio": "Les is a maker, hacker and writer who specialises in introducing maker skills to learners of all ages. Either in person or via tutorials for magazines and websites.",
+    "tagLine": "Creative Technologist / Author",
+    "profilePicture": "https://sessionize.com/image?f=949f8e7995fb7f901888bd23137b1f1e,400,400,True,False,b6-e1d3-416c-a874-b109eec85be2.9f4a5891-063d-441d-8fb1-b885785c23f9.jpg",
+    "sessions": [
+      {
+        "id": 82012,
+        "name": "Learn how to write MicroPython on the micro:bit"
+      },
+      {
+        "id": 85658,
+        "name": "Raspberry Pi Jam"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/biglesp",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "Blog",
+        "url": "https://bigl.es",
+        "linkType": "Blog"
+      }
+    ]
+  },
+  {
+    "id": "560c5a34-ef83-4a7e-b95d-dfff500d5a09",
+    "firstName": "Lola",
+    "lastName": "Guillot",
+    "fullName": "Lola Guillot",
+    "bio": "Bio",
+    "tagLine": "alien",
+    "profilePicture": null,
+    "sessions": [
+      {
+        "id": 96929,
+        "name": "Pour en finir avec la méritocratie"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": []
+  },
+  {
+    "id": "841a873e-ac54-4cd8-8060-0f78bd6f5898",
+    "firstName": "Marek",
+    "lastName": "Stój",
+    "fullName": "Marek Stój",
+    "bio": "Marek is an experienced software developer. During his professional career spanning more than 10 years, he worked with technologies like .NET, C#, Android, Java, Big Data or Scala. Marek is simply a computer geek, specifically fascinated by the ever-growing influence of theoretical foundations of computer science on the IT industry.\r\n\r\nToday it is not his career that is important though, because Marek also realized recently, that a passion can easily turn into an obsession which blinds us from the truth - that there is more to life than coding. And this idea, he believes, is worth spreading among fellow IT geeks.",
+    "tagLine": "I help people stand up for their passions.",
+    "profilePicture": "https://sessionize.com/image?f=ec957701cc34bd5a98e8fd4aee59b6e3,400,400,True,False,3e-ac54-4cd8-8060-0f78bd6f5898.c3aab774-6a44-44b4-861c-a79a7e935409.jpg",
+    "sessions": [
+      {
+        "id": 75721,
+        "name": "Sitting Considered Deadly"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/marekstoj",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/marekstoj/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "http://www.marekstoj.com/",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "http://www.marekstoj.com/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "0cd0ad1b-f0f8-4b50-939d-09500b0df800",
+    "firstName": "Margaux",
+    "lastName": "PERRIN",
+    "fullName": "Margaux PERRIN",
+    "bio": "After studies un neurosciences and phD in brain-computer interface, I am ux-designer since 2014. As a part of an Agile organisation, I am regularly PO (Product Owner) and Scrum Master. In my daily work, I design web and mobile applications in order to optimize user experience and make users happy. \r\nSince 2015, I also blog about UX and agility: http://www.margaux-perrin.com/category/ergonomie/",
+    "tagLine": "uxShadow by Sogilis, ergonome / UX-designer / PO",
+    "profilePicture": "https://sessionize.com/image?f=1190c6ee1811021267e69a574c2106c1,400,400,True,False,1b-f0f8-4b50-939d-09500b0df800.4c3a5051-38a4-472b-aa0b-cf10c40acd73.jpg",
+    "sessions": [
+      {
+        "id": 76754,
+        "name": "Sur le pont de la rivière Kawaï"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/Margauxlergo",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "http://www.linkedin.com/in/margaux-perrin-264aa250",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "http://www.margaux-perrin.com",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "http://www.uxshadow.com",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "1249cb96-4821-4d4a-bb56-5840f7c31709",
+    "firstName": "Marie-Cécile",
+    "lastName": "Paccard",
+    "fullName": "Marie-Cécile Paccard",
+    "bio": "Designer systémique, facilitatrice, oratrice, mentor, moteur d'écosystèmes, écoféministe intersectionnelle, j'appréhende le complexe pour comprendre, converger, structurer et construire. Je donne des conférences et je publie sur mon métier et sur des thématiques comme le burnout ou l'anthropocène. Mes valeurs conduisent ma pratique du métier et je pratique un design inclusif et éthique. Depuis bientôt 15 ans, j'aide les personnes et les organisations à définir leurs fondamentaux et leurs objectifs et à construire une communication cohérente en fonction. Je suis membre du chapitre lyonnais d'IxDA avec qui j'ai co-organisé la conférence Interaction 18, des Designers Lyonnais et de groupes locaux d'entraide. J'ai créé et co-anime le think tank Common Future(s).",
+    "tagLine": "Designer systémique",
+    "profilePicture": "https://sessionize.com/image?f=b3941f25b2645d9f4947a3892496191c,400,400,True,False,96-4821-4d4a-bb56-5840f7c31709.97a2adb7-c1a0-4f70-947d-d151f8f03f17.png",
+    "sessions": [
+      {
+        "id": 83444,
+        "name": "Façonner des futurs souhaitables : concevoir à l'ère de l'Anthropocène"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/mcpaccard",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/mcpaccard/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "http://resilience.mcpaccard.com",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://mcpaccard.com",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "c4bfb238-b846-429f-b106-23091a09b4f6",
+    "firstName": "Marion",
+    "lastName": "Georges",
+    "fullName": "Marion Georges",
+    "bio": "J'aime travailler en groupe, rencontrer des gens, découvrir des métier et réfléchir sur des problèmes. Je suis ergonome et mon travail consiste à récolter des informations auprès des utilisateurs afin d'offrir une expérience simple, intuitive et adéquation avec les usages des utilisateurs. Au plaisir d'échanger avec vous à propos de vos problématiques du moment.",
+    "tagLine": "uxShadow by Sogilis ",
+    "profilePicture": "https://sessionize.com/image?f=cb2fbbc4ab276d564daff9c53c96ed94,400,400,True,False,38-b846-429f-b106-23091a09b4f6.a45eecbc-6e88-4c7d-a74d-b06e2dbdfa76.JPG",
+    "sessions": [
+      {
+        "id": 76754,
+        "name": "Sur le pont de la rivière Kawaï"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/marion-georges-sogilis/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Company Website",
+        "url": "http://www.uxshadow.com/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "ceb8e6dc-ed73-462d-9b20-e936d675cf9d",
+    "firstName": "Mary",
+    "lastName": "Poppendieck",
+    "fullName": "Mary Poppendieck",
+    "bio": "Mary Poppendieck has been in the Information Technology industry for over forty years. She has managed software development, supply chain management, manufacturing operations, and new product development. She spearheaded the implementation of a Just-in-Time system in a 3M manufacturing plant and led new product development teams, commercializing products ranging from digital controllers to 3M Light Fiber™.  \r\nMary is a popular writer and speaker, and coauthor of the book Lean Software Development: an Agile Toolkit, which was awarded the Software Development Productivity Award in 2004. A sequel, Implementing Lean Software Development: from Concept to Cash was published in 2006. A third book, Leading Lean Software Development: Results are Not the Point was published in November 2009, and a fourth book, The Lean Mindset: Ask the Right Questions was published in 2013.\r\n",
+    "tagLine": "Author, Lean Software Development Series",
+    "profilePicture": "https://sessionize.com/image?f=ac0f4caa7ef5eb9da48d057cd1a863b3,400,400,True,False,dc-ed73-462d-9b20-e936d675cf9d.9ab8cf69-0a03-4dc6-965e-82faca756da6.png",
+    "sessions": [
+      {
+        "id": 84482,
+        "name": "Learning How to Learn"
+      },
+      {
+        "id": 84483,
+        "name": "Reliability Engineering – The Essential Discipline for Complex Systems"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/mpoppendieck",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "Blog",
+        "url": "http://www.leanessays.com/",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "http://www.poppendieck.com",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "a17588e2-7f28-4752-8898-0f04aaffda31",
+    "firstName": "Maryange",
+    "lastName": "Dichi",
+    "fullName": "Maryange Dichi",
+    "bio": "20 ans d'xp en info (tech, dev, sysadmin linux, resp tech&fonct de plateformes de services), coach pro et scrum master certifiée, en chemin vers le coaching agile ",
+    "tagLine": "Création d'entreprise en cours",
+    "profilePicture": null,
+    "sessions": [
+      {
+        "id": 73123,
+        "name": "Le Bullshit, notre indifférence à l'égard de la vérité"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/MaryangeDichi",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/maryangedichi/",
+        "linkType": "LinkedIn"
+      }
+    ]
+  },
+  {
+    "id": "04d45547-b24c-4043-9833-c45f84c685be",
+    "firstName": "Matthieu",
+    "lastName": "Lux",
+    "fullName": "Matthieu Lux",
+    "bio": "Developer Advocate chez AYA @ Zenika pour toutes les technologies Web et JavaScript. (React, Vue, Angular, Redux, Node, GraphQL, Next, Nuxt)\r\n\r\nDéveloppeur, formateur, organisateur au LyonJS, plusieurs projets Open Source. Speaker à de nombreuses conférences : dotJS, Paris Web, ngEurope, MixIT et DevoxxFR bien sûr ;)",
+    "tagLine": "Developer advocate chez AYA @ Zenika",
+    "profilePicture": "https://sessionize.com/image?f=d41e69bf932d6a5c4c0550cc18363df8,400,400,True,False,47-b24c-4043-9833-c45f84c685be.9e85cc17-61b7-42dd-915d-5eeb17b5662c.jpg",
+    "sessions": [
+      {
+        "id": 82527,
+        "name": "Vanilla JS 2019"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/swiip",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/swiip/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://medium.com/@Swiip_51904",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.zenika.com/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "1a9dd7cb-90f9-4876-a5af-ef4b8416de8c",
+    "firstName": "Mehdi",
+    "lastName": "Lahmam",
+    "fullName": "Mehdi Lahmam",
+    "bio": "TBD",
+    "tagLine": "Développeur",
+    "profilePicture": "https://sessionize.com/image?f=7911388ddd9489d909d639c19e74fb7f,400,400,True,False,a5201bef-a1f3-4be3-9f85-74f874833da2.jpg",
+    "sessions": [
+      {
+        "id": 73607,
+        "name": "Dette technique"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/mehlah",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://lahmam.com",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "0313e42d-d2bf-4af9-8449-c56725d54be4",
+    "firstName": "Mickael",
+    "lastName": "Faust",
+    "fullName": "Mickael Faust",
+    "bio": "Tech lead Frontend chez Ametix (Lyon)\r\nTech lead Frontend en prestation chez ENEDIS (lyon)\r\nEnseignant vacataire JS/Mobile chez Telecom St etienne",
+    "tagLine": "Tech lead Frontend @ Ametix",
+    "profilePicture": "https://sessionize.com/image?f=bf52bae4dc1d29b13bb53e1f8dfc78b9,400,400,True,False,2d-d2bf-4af9-8449-c56725d54be4.54fed4f7-7e56-4c77-9629-77f6a95e2976.jpg",
+    "sessions": [
+      {
+        "id": 76442,
+        "name": "REX après 2 ans de PWA en production chez un client"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/TsubaR00ck",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/mickael-faust-67a55768",
+        "linkType": "LinkedIn"
+      }
+    ]
+  },
+  {
+    "id": "5dd8c210-5400-4e32-bc5d-4b9e31223d5b",
+    "firstName": "Mickael",
+    "lastName": "Jeanroy",
+    "fullName": "Mickael Jeanroy",
+    "bio": "Développeur depuis une dizaine d'années et passionné par la sécurité, je suis toujours à la recherche de nouvelles techniques pour trouver et exploiter de nouvelles vulnérabilités :)",
+    "tagLine": "Software Engineer @ Malt",
+    "profilePicture": "https://sessionize.com/image?f=c169cf1c2693d8e6e40607f4e1e91b61,400,400,True,False,10-5400-4e32-bc5d-4b9e31223d5b.e025c0c3-2a7b-4e47-ad6b-7977d5332b3f.jpeg",
+    "sessions": [
+      {
+        "id": 83439,
+        "name": "Que deviennent nos mots de passe après un leak de données ?"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/mickaeljeanroy",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.malt.fr",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "656587bc-4d09-4532-bf48-7b0c7c6ddfa9",
+    "firstName": "Nicolas",
+    "lastName": "Decoster",
+    "fullName": "Nicolas Decoster",
+    "bio": "Informaticien curieux depuis 35 ans, de métier depuis 20 ans. Non spécialiste touche à tout : du développement logiciel à l'étude scientifique, du développement d'algorithmes de traitement à la mise en œuvre de systèmes, de la programmation en C++ ou Python à l'utilisation des technos Web, de la petite appli en ligne de commande aux IHM.",
+    "tagLine": "Magellium",
+    "profilePicture": "https://sessionize.com/image?f=275679100fe9fd08e3e682b066e26acc,400,400,True,False,bc-4d09-4532-bf48-7b0c7c6ddfa9.7bab5ba8-e772-4bfa-81ca-f89b982d2714.jpg",
+    "sessions": [
+      {
+        "id": 83468,
+        "name": "Remake de jeux rétro avec Vue.js"
+      },
+      {
+        "id": 83470,
+        "name": "WebAssembly dans la vraie vie"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/nnodot",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.magellium.com/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "5f73b71a-a5fd-4932-a17a-4c9150a72b20",
+    "firstName": "Nicolas",
+    "lastName": "Sanitas",
+    "fullName": "Nicolas Sanitas",
+    "bio": null,
+    "tagLine": null,
+    "profilePicture": "https://sessionize.com/image?f=9023628fe36cb86af8774161d9b13f30,400,400,True,False,7c427d65-560f-4f73-8068-c8a66b388723.jpg",
+    "sessions": [
+      {
+        "id": 73291,
+        "name": "Innover dans les Tech4Good ? Pourquoi ? Comment ?"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": []
+  },
+  {
+    "id": "baee590c-fde7-4049-ae31-14bd3f524cb6",
+    "firstName": "Oana",
+    "lastName": "Juncu",
+    "fullName": "Oana Juncu",
+    "bio": "Oana likes to call herself an Agile Business DJ, who mixes whatever practices of collective intelligence, from Agile to TheoryU  help people, teams and organisations to become proud of their outcomes and delight their customers.\r\nAfter 15 years of experience in Software Development and System Management has driven  Oana to embrace Agile and Lean mind set, principles and practices, that she believes are the most effective approaches for 21st century lead organizations willing to focus on quality products with high impact on the market. She recently embraced the entrepreneurship path by founding cOemerge, a company that helps its large or smaller clients grow  Agility and entrepreneurial mindset  through Lean Startup. \r\nTo reinforce the effectiveness of Lean Startup,  she developed an original approach to  defining products in a Lean Startup way, called \"Test Driven Business\r\nOana acts as an Agile Transformation facilitator , using Creative Solution Definition. She trains and coach Agile teams (from core Business to Software Development and Support Services), so they are able to adopt the set of practices, from Scrum to Kanban and Lean improvement techniques, that are most adapted to their context and goal. A key focus is building cross-organizations  Product Ownership awareness to align their mission alignment toward User Value creation. ",
+    "tagLine": "cOemerge, Agile Business DJ",
+    "profilePicture": "https://sessionize.com/image?f=14d6f3e3aeed643405a08c9400853e89,400,400,True,False,7ad6d6e6-1b99-455a-a793-f0ee43c8124d.jpg",
+    "sessions": [
+      {
+        "id": 78880,
+        "name": "Innovate Organisations - From Ego To Eco"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/ojuncu",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/oanajuncu/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "http://oanasagile.blogspot.com",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://coemerge.com",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "e26a9da9-f23c-4c03-b96d-f015cf261f98",
+    "firstName": "Olivier",
+    "lastName": "Huber",
+    "fullName": "Olivier Huber",
+    "bio": "Olivier Huber est un passionné de création logicielle.\r\nPour lui, notre métier est l'un des rares à nous donner la capacité de matérialiser une idée rapidement et à faible coût.\r\nInitié il y a plus de 15 ans à l'agilité par la pratique de l'eXtrême Programming, il devient Agiliste convaincu et Scrum Master par la suite.\r\nIl intervient principalement pendant 15 ans en développement / conseil / formation chez des clients qui ont des besoins Java et Web.\r\nOccasionnellement il donne des conférences (Devoxx, Mix-IT, Breizchamp, …) sur des sujets comme AngularJS, Vert.x, …\r\nIl rejoint Zenika en septembre 2008 pour évoluer parmi des collègues qui ont la même ferveur et afin de partager (formations, conférences, …) au maximum ses connaissances.",
+    "tagLine": "Responsable Pédagogique Formation à Zenika",
+    "profilePicture": "https://sessionize.com/image?f=36779b6f468db75eeb4bfcbca9b779c5,400,400,True,False,9b122681-3569-4c90-b046-c76bdbfdcd8c.jpg",
+    "sessions": [
+      {
+        "id": 80161,
+        "name": "Storytelling"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/olivierhuber",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/olivierhuber/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.zenika.com/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "80600e6f-0100-4fe0-8771-a5c260921259",
+    "firstName": "Olivier",
+    "lastName": "Leplus",
+    "fullName": "Olivier Leplus",
+    "bio": "I love to share knowledge among developers and people in general.",
+    "tagLine": "Developer Relations Manager at Microsoft & Google Developer Expert on Web Technologies",
+    "profilePicture": "https://sessionize.com/image?f=e8dbb55144b9b925bd5a8011cc970cbd,400,400,True,False,81a74894-0ace-4a4b-8651-8d7f9bc07b1d.jpg",
+    "sessions": [
+      {
+        "id": 81459,
+        "name": "VS Code: mode collaboratif activé!"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/olivierleplus",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/olivierleplus/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://tagazok.github.io/",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.microsoft.com",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "3a3c95a1-e673-421b-b012-afa3527cb139",
+    "firstName": "Olivier",
+    "lastName": "MY",
+    "fullName": "Olivier MY",
+    "bio": "Issu d'un cursus ingénieur, je me suis vite rendu compte que mes appétences et compétences tournaient plus autour de l'humain que de la technique. Je suis alors devenu Coach Agile et Coach Professionnel car j'ai toujours voulu contribuer à rendre le monde meilleur. J'accompagne aujourd'hui des individus, des équipes et des organisations vers une meilleure compréhension d'eux-mêmes afin de bâtir ensemble le futur qui leur correspond.",
+    "tagLine": "Happiness Promoter - Agile Coach",
+    "profilePicture": "https://sessionize.com/image?f=14939853a82466cb58c941750732e306,400,400,True,False,e6277cf5-fbf5-4fdf-9eee-732c9bc80f2e.jpg",
+    "sessions": [
+      {
+        "id": 83259,
+        "name": "Responsabilisez-vous qu'ils disaient !"
+      },
+      {
+        "id": 83261,
+        "name": "Le paradoxe du poisson rouge"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/OyoMy",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/oliviermy/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://oyomy.fr/",
+        "linkType": "Blog"
+      }
+    ]
+  },
+  {
+    "id": "345d6ca8-029d-41c5-9a0c-9c0b745180e2",
+    "firstName": "pablo",
+    "lastName": "pernot",
+    "fullName": "pablo pernot",
+    "bio": null,
+    "tagLine": null,
+    "profilePicture": null,
+    "sessions": [
+      {
+        "id": 83402,
+        "name": "Dynamic Kanban"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": []
+  },
+  {
+    "id": "dff5e26b-c51c-41b2-b3f2-af10d19e6b57",
+    "firstName": "Pascal",
+    "lastName": "MARTIN",
+    "fullName": "Pascal MARTIN",
+    "bio": "Passionné de développement en général ainsi que de Web et de PHP en particulier, Pascal Martin est DevOps chez M6 Web à Lyon, sur la plateforme 6play.\r\n\r\nSes expériences précédentes l’ont vu passer d’un poste d’expert technique en SSII à un rôle de Lead Dev chez un éditeur, puis à un poste de développeur dans une startup. Il est intervenu sur des projets Web de toutes tailles, sur des applications intranet d’analyse et de suivi, du e-commerce, ainsi que dans le monde de la culture ou des médias.\r\n\r\nIl publie régulièrement, notamment des articles techniques, sur son blog et il est auteur des livres « Développer une Extension PHP » et « Le Plan Copenhague » et coauteur de « PHP 7 avancé ».",
+    "tagLine": "DevOps @ M6 Web",
+    "profilePicture": "https://sessionize.com/image?f=9e8a159c9fce1e079a7a408b6670b72d,400,400,True,False,6b-c51c-41b2-b3f2-af10d19e6b57.c2762f85-e643-49e1-bf4d-0d9a552ab84a.jpg",
+    "sessions": [
+      {
+        "id": 82984,
+        "name": "Migration de 6play vers Le Cloud, retour d’expérience"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/pascal_martin",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/martinpascal/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://blog.pascal-martin.fr/",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://tech.m6web.fr/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "e52a6be1-a845-447c-a10d-5f84c7a94558",
+    "firstName": "Patrick",
+    "lastName": "Comfaits",
+    "fullName": "Patrick Comfaits",
+    "bio": "J’ai été développeur (il y a longtemps), chef de projets, directeur de projets. Et en 2015, j’ai eu en charge un premier projet Agile, en Scrum. J’ai ainsi pu participer et prendre conscience des différences fondamentales entre l’agilité et les méthodes classiques avec l’aide de coachs confirmés.\r\nDepuis, j’ai perfectionné mes compétences : par la lecture, par des conférences, par des échanges avec des Scrum Masters et des Coachs. J’ai testé le sketchnoting, la facilitation graphique, la facilitation d’ateliers, le management 3.0, etc. Je me suis beaucoup appliqué à moi-même les principes de l’agilité : essayer, apprendre, recommencer.\r\nAujourd’hui, je suis animateur de la communauté Agile chez Groupama, ainsi que manager et responsable de projets.",
+    "tagLine": "Manager & animateur de la transformation Agile, Groupama",
+    "profilePicture": "https://sessionize.com/image?f=b0174ddaba7663dcafd9ed303e3299a3,400,400,True,False,e1-a845-447c-a10d-5f84c7a94558.68acb6d8-bc54-421a-9787-14a80ac33482.JPG",
+    "sessions": [
+      {
+        "id": 78709,
+        "name": "Les habitants de l'Open Space : la posture du manager"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/pcomfaits?lang=fr",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/patrick-comfaits-1707008/",
+        "linkType": "LinkedIn"
+      }
+    ]
+  },
+  {
+    "id": "441003fe-4ab4-404a-8ab5-02b4f52ffbf7",
+    "firstName": "pierre",
+    "lastName": "paci",
+    "fullName": "pierre paci",
+    "bio": "Ingénieur logiciel orienté Machine Learning et DevOps, je contribue aujourd'hui à créer de nouveau projets innovants. J'évolue dans de multiple domaine, et notamment celui des Tech4Good.",
+    "tagLine": "Développeur d'innovation chez InTech Luxembourg",
+    "profilePicture": "https://sessionize.com/image?f=a25de8c8f376789eaf49b1d5dea45c34,400,400,True,False,fe-4ab4-404a-8ab5-02b4f52ffbf7.4680de80-a456-46f7-977d-792905ec33e4.jpg",
+    "sessions": [
+      {
+        "id": 73291,
+        "name": "Innover dans les Tech4Good ? Pourquoi ? Comment ?"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/pierre_paci",
+        "linkType": "Twitter"
+      }
+    ]
+  },
+  {
+    "id": "2f909cb1-ca6f-4e25-8442-f67cdc7f2b5c",
+    "firstName": "Pierre",
+    "lastName": "Tibulle",
+    "fullName": "Pierre Tibulle",
+    "bio": "Job Crafter en ESN, je suis \"full mobile\" (Android/iOS/Hybride), je gribouille des sketchnotes colorées et avec le temps qu'il me reste je participe à l'organisation du meetup Android Nantes (GDG)...",
+    "tagLine": "Practice Leader Mobile chez ASI",
+    "profilePicture": "https://sessionize.com/image?f=1530548f398d281416518b01618bd267,400,400,True,False,491af80f-3ffc-470c-9f61-6f43700a5ec2.jpg",
+    "sessions": [
+      {
+        "id": 78739,
+        "name": "Venez coder votre 1ère application Flutter !"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/ptibulle",
+        "linkType": "Twitter"
+      }
+    ]
+  },
+  {
+    "id": "64431bad-e327-4232-ac6b-b4993e6e9c4a",
+    "firstName": "Priscille",
+    "lastName": "Faÿ",
+    "fullName": "Priscille Faÿ",
+    "bio": "Consultante agile chez Zenika (Lyon) et précédemment chez OCTO Technology (Paris), j’accompagne les product owner ou les équipes globales dans la gestion de projets agiles. \r\nÀ partir des tweets du monde entier j’aime confronter les différents points de vue liés à l'agilité. Sur cette base j’ai notamment créé la revue de tweets \"What’s up agile\".",
+    "tagLine": "Consultante agile chez Zenika",
+    "profilePicture": "https://sessionize.com/image?f=f2f500c58ee001ab1f1b1f4598a70767,400,400,True,False,9c1a1df8-2b45-4cdf-acf8-3aec4246cb70.jpg",
+    "sessions": [
+      {
+        "id": 83105,
+        "name": "Please stand up !"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/PriscilleFay",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.zenika.com/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "a5aae244-03b0-4e40-bcb0-7a99f6fec691",
+    "firstName": "Raphaël",
+    "lastName": "Pierquin",
+    "fullName": "Raphaël Pierquin",
+    "bio": null,
+    "tagLine": null,
+    "profilePicture": null,
+    "sessions": [
+      {
+        "id": 83329,
+        "name": "La parole au travail : un privilège masculin"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": []
+  },
+  {
+    "id": "506b5c4f-8236-48c5-b6e3-45beac43695a",
+    "firstName": "Raphaël",
+    "lastName": "Yharrassarry",
+    "fullName": "Raphaël Yharrassarry",
+    "bio": "Je travaille en freelance comme lead UX designer, psychologue depuis le dernier millénaire. Mon parcours m’a permis de travailler sur des sujets variés allant du WAP à la télévision, en passant par, le web, le e-commerce et les applications professionnelles ou le design de service. J’interviens sur les phases de recherches utilisateurs, l’animation d’ateliers de co-conception, la réalisation et l’évaluation des services, ainsi que sur la mise en place de stratégies centrées sur l’Utilisateur.\r\n\r\nDepuis 2009, je partage mon expérience et mes connaissances sur mon bloc-notes. Ce qui m’a amené par la suite, à enseigner dans divers écoles et notamment à créer une formation en UX Design et à animer UX Pays basque.",
+    "tagLine": "UX designer depuis le dernier millénaire",
+    "profilePicture": "https://sessionize.com/image?f=f3f0edf151bf85efe0db809a092d1f96,400,400,True,False,4f-8236-48c5-b6e3-45beac43695a.74feaf49-7bd5-4ad9-a393-d058b05eb68f.jpg",
+    "sessions": [
+      {
+        "id": 79783,
+        "name": "Slow UX, De l’art de la lenteur dans les processus de conception centrés sur l'usage."
+      },
+      {
+        "id": 79784,
+        "name": "Du design de l’attention à l’éthique du designer"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/iergo",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/raphaelyharrassarry/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://blocnotes.iergo.fr",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.iergo.fr",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "55116fd1-3998-4de1-9936-2dfb6978ee2a",
+    "firstName": "Rémi",
+    "lastName": "Lesieur Bridel",
+    "fullName": "Rémi Lesieur Bridel",
+    "bio": "Joueur, codeur, coach, musicien... Les interactions entre les humains et leurs créations, c'est un peu mon sujet d'étude. ",
+    "tagLine": "Devops & Craftsman chez Goood",
+    "profilePicture": "https://sessionize.com/image?f=f8d745f08acf1fc3603e818d68ef8be9,400,400,True,False,6b8020c8-f1d8-4c20-9c68-08d4c36669e6.jpg",
+    "sessions": [
+      {
+        "id": 82581,
+        "name": "Comment les jeux vidéos m'ont formé à l'agilité"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Company Website",
+        "url": "http://www.goood.com",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "94ad68a5-fd97-42d9-9a42-bd3cba4a0be5",
+    "firstName": "Sam",
+    "lastName": "Galson",
+    "fullName": "Sam Galson",
+    "bio": "Sam works for the London-based consultancy YLD, specialising in Node.js, React and Kubernetes.",
+    "tagLine": "Software engineer at YLD",
+    "profilePicture": "https://sessionize.com/image?f=a50267abc258716ccc5a4acdc6e08a52,400,400,True,False,a5-fd97-42d9-9a42-bd3cba4a0be5.47702e28-2421-4a49-8632-b6bf180d2038.png",
+    "sessions": [
+      {
+        "id": 81894,
+        "name": "Le génie paramétrisé: MetaFont et ses leçons"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/sam_galson",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "Blog",
+        "url": "https://medium.com/@sam_galson",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.yld.io/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "7d8032c2-c958-49d0-abbe-fb8eb1070156",
+    "firstName": "Samira",
+    "lastName": "Rabaâoui",
+    "fullName": "Samira Rabaâoui",
+    "bio": " ",
+    "tagLine": "Chef de Projet & Développeur Python/JS",
+    "profilePicture": "https://sessionize.com/image?f=035d12803f245bbb1963092b5483fcf5,400,400,True,False,c2-c958-49d0-abbe-fb8eb1070156.492aa80c-2a5d-45bf-a411-08af367aab7e.jpg",
+    "sessions": [
+      {
+        "id": 82176,
+        "name": "Coopération inter-entreprises et logiciels libres"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": []
+  },
+  {
+    "id": "3a2f286a-93a5-4974-b4a7-51d24bc92eb1",
+    "firstName": "Sarah",
+    "lastName": "Haïm-Lubczanski",
+    "fullName": "Sarah Haïm-Lubczanski",
+    "bio": "Après avoir été formatrice, puis développeuse, Sarah Haïm-Lubczanski a toujours préféré le contact des informaticien.ne.s spécialistes à celui du grand public, et cela a bien fonctionné puisqu'elle écrit de la documentation de logiciel opensource pour BIMData.\r\nCo-fondatrice de l’antenne AFUP Lyon, co-fondatrice de la Game Dev Party et co-organisatrice du premier Coding Goûter lyonnais, elle est engagée dans le tissu associatif local technologique. Elle apprécie d’être à l’initiative de projets qui aident les autres.",
+    "tagLine": "Technical Writer at BIMData.io",
+    "profilePicture": "https://sessionize.com/image?f=2a96d5651ed804d231b2898f322a14fd,400,400,True,False,6a-93a5-4974-b4a7-51d24bc92eb1.2db1edd2-1014-4ac9-a7cf-74a34b77e4c6.jpg",
+    "sessions": [
+      {
+        "id": 82585,
+        "name": "Great features implies great responsabilities"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/sarahhaim",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "Blog",
+        "url": "http://www.sarahhaim.net/",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "http://www.bimdata.io",
+        "linkType": "Company_Website"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/sarahhaim/",
+        "linkType": "LinkedIn"
+      }
+    ]
+  },
+  {
+    "id": "107327be-a539-4fae-8253-9f18741812db",
+    "firstName": "Sebastien",
+    "lastName": "Stormacq",
+    "fullName": "Sebastien Stormacq",
+    "bio": "Today, as Technical Evangelist @ AWS, Seb is inspiring builders to unlock the value of the AWS cloud, using his secret blend of passion, enthusiasm, customer advocacy, curiosity and creativity.\r\n\r\nSébastien worked for the last 20+ years with large enterprises and startups alike to help them to transform their business requirements into technical solutions, to unlock the value of software, mobile applications and to scale systems to meet customer demand. He built & lead the AWS Technical Training team in EMEA, then he built & lead the Alexa Solution Architecture team in UK, France, Italy and Spain.",
+    "tagLine": "Developer Evangelist, AWS France",
+    "profilePicture": "https://sessionize.com/image?f=a29c19352bb4496405058d1851be67d8,400,400,True,False,be-a539-4fae-8253-9f18741812db.df64aeb1-a848-4380-b0f9-fd8a31e9b798.png",
+    "sessions": [
+      {
+        "id": 83100,
+        "name": "Mettre en place une chaîne de livraison continue pour vos applications serverless"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/sebsto",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/sebastienstormacq/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://stormacq.com",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://aws.amazon.com",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "4c69dd62-4bf9-4586-ba83-005ba0584d20",
+    "firstName": "Simon",
+    "lastName": "Belak",
+    "fullName": "Simon Belak",
+    "bio": "Built my first computer out of Lego bricks and learned to program soon after. Emergence, networks, modes of thought, limits of language and expression are what makes me smile (and stay up at night). The combination of lisp and machine learning put me on the path of always striving to make myself redundant if not outright obsolete. Currently working hard to become obsolete at Metabase where I am trying to build an artificial data scientist and imbue visualisations with understanding and context.",
+    "tagLine": "Philosopher-hacker",
+    "profilePicture": "https://sessionize.com/image?f=9e29a147e22f8694257e40c0cb339abf,400,400,True,False,80c753e3-b2c8-483a-8769-d39be9f042e6.jpg",
+    "sessions": [
+      {
+        "id": 83419,
+        "name": "The subtle art of recommendation (algorithms)"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/sbelak",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/simonbelak/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://metabase.com",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "b5f94929-ffc0-4e99-9da4-3a5c62913f65",
+    "firstName": "Stéphane",
+    "lastName": "Colson",
+    "fullName": "Stéphane Colson",
+    "bio": "Testeur logiciel indépendant depuis un peu plus d'un an, j'ai 17 ans d'expériences dans le monde du logiciel, dont 13 comme testeur.",
+    "tagLine": "Freelance Software Tester",
+    "profilePicture": "https://sessionize.com/image?f=24b8c52cdd46b11a41ecbcce391e2612,400,400,True,False,29-ffc0-4e99-9da4-3a5c62913f65.e9cff964-61f0-4dc1-8fd5-ff673f6672b5.jpg",
+    "sessions": [
+      {
+        "id": 83397,
+        "name": "Histoires de gros échecs logiciels. Et si on testait plus souvent et mieux nos assertions ?"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/s_colson",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/stephanecolson/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://lyontesting.fr",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://testingit.eu",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "1131dc57-3585-4eb5-a017-230289bc90c0",
+    "firstName": "Stéphane",
+    "lastName": "Nicoll",
+    "fullName": "Stéphane Nicoll",
+    "bio": "Stéphane travaille sur Spring Boot, Spring Framework & start.spring.io chez Pivotal.",
+    "tagLine": "Membre de l'équipe Spring",
+    "profilePicture": "https://sessionize.com/image?f=80509fc2c950c177865f92b59825c739,400,400,True,False,6bea5817-8116-4608-af8a-86a77edf4d88.jpg",
+    "sessions": [
+      {
+        "id": 76078,
+        "name": "Applications web efficaces avec Spring Boot 2"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/snicoll",
+        "linkType": "Twitter"
+      }
+    ]
+  },
+  {
+    "id": "ddff421a-de84-4d8f-9d2a-e799ea9c5055",
+    "firstName": "Svetlana",
+    "lastName": "Kouznetsova",
+    "fullName": "Svetlana Kouznetsova",
+    "bio": "Svetlana Kouznetsova (Sveta) is a NYC-based user experience and accessibility consultant and works with business owners, media producers, corporations, educational institutions, event organizers to make their products, services, interactions user-friendly and accessible to more people. She has a Master of Science degree in Internet Technology, several advanced certifications, and project experience with national and international organizations and educational institutions. Sveta is also a founder of Audio Accessibility and provides consultation and training to businesses about quality communication access to audio, video, events. She is an experienced speaker and author of “Sound Is Not Enough: Captioning as Universal Design”. Sveta's recent TEDx talk uncovers benefits of captioning access that increase audience and ROI for businesses. Her personal experience with deafness and communication barriers contributes to her success as a professional consultant and allows clients to have a greater understanding of why accessibility is critical.",
+    "tagLine": "Consultant, Author, Speaker",
+    "profilePicture": "https://sessionize.com/image?f=4617f13d740dda0af2daa67726f71dd9,400,400,True,False,1a-de84-4d8f-9d2a-e799ea9c5055.c57573a2-b079-479d-9021-bd7a8e0a90e8.jpg",
+    "sessions": [
+      {
+        "id": 75483,
+        "name": "Missing out 20% of potential users and customers: Importance of accessibility"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "http://twitter.com/svknyc",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "http://linkedin.com/in/svetlanakouznetsova",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "http://about.me/svetlanakouznetsova",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "http://about.me/svetlanakouznetsova",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "73150ed0-417e-44b1-8e5d-9a3edd074536",
+    "firstName": "Tanguy",
+    "lastName": "Moreau",
+    "fullName": "Tanguy Moreau",
+    "bio": null,
+    "tagLine": null,
+    "profilePicture": "https://sessionize.com/image?f=2bbd464cbe84cb3056c2c55cb8f4477b,400,400,True,False,a6512383-e368-4121-afe7-f753f3a5801e.jpg",
+    "sessions": [
+      {
+        "id": 82973,
+        "name": "Introduction aux Word Embeddings avec Word2Vec"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": []
+  },
+  {
+    "id": "d0ecaeb7-eaa0-4b60-b78a-29d677578a04",
+    "firstName": "Thierry",
+    "lastName": "Chantier",
+    "fullName": "Thierry Chantier",
+    "bio": "Bricoler, coder, transmettre : peut importe tant qu'il y a de la passion.",
+    "tagLine": "Maker, Coder, Educator",
+    "profilePicture": "https://sessionize.com/image?f=55fa9ba85db1e606d7d2c6c0a2efae1f,400,400,True,False,b7-eaa0-4b60-b78a-29d677578a04.ea07be95-a828-47fa-a436-94aab230cd4e.jpg",
+    "sessions": [
+      {
+        "id": 85658,
+        "name": "Raspberry Pi Jam"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": []
+  },
+  {
+    "id": "3d99ce52-64bd-4c5a-8000-f85ade3c8f7e",
+    "firstName": "Thomas",
+    "lastName": "Buvignier",
+    "fullName": "Thomas Buvignier",
+    "bio": "Product Owner UX et passionné de graphisme, je travaille au sein de l’agence Bewizyu sur les interfaces de nos clients. Contributeur du blog, je suis toujours à l’affût des dernières tendances graphiques et UX afin de pouvoir les travailler et créer une expérience utilisateur optimale.\r\nEx-entrepreneur et ayant eu plusieurs vies ma curiosité se trouve résumée dans une citation de J.K Chesterton : « Il n’y a pas de sujet peu intéressant, il n’y a que des personnes peu intéressées »",
+    "tagLine": "PO UX @ BEWIZYU",
+    "profilePicture": "https://sessionize.com/image?f=37641978974cd8617ac30ce8743f5fec,400,400,True,False,52-64bd-4c5a-8000-f85ade3c8f7e.69d14948-91ec-4431-afa6-e56063ecb362.jpg",
+    "sessions": [
+      {
+        "id": 74737,
+        "name": "Il n'y a pas de magie, tout est dans les détails !"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/CadentALatere",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/thomas-buvignier-8881a311/",
+        "linkType": "LinkedIn"
+      }
+    ]
+  },
+  {
+    "id": "3adef1cb-7515-4cd0-b7cb-efe6eafaf454",
+    "firstName": "Thomas",
+    "lastName": "di Luccio",
+    "fullName": "Thomas di Luccio",
+    "bio": null,
+    "tagLine": null,
+    "profilePicture": null,
+    "sessions": [
+      {
+        "id": 83444,
+        "name": "Façonner des futurs souhaitables : concevoir à l'ère de l'Anthropocène"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": []
+  },
+  {
+    "id": "e552b68d-f9bc-4d67-8a4d-3429b20abce7",
+    "firstName": "Tiffany",
+    "lastName": "Souterre",
+    "fullName": "Tiffany Souterre",
+    "bio": "I love science and I love data! After finishing a PhD in genetic engineering, I continued my quest for discovering new patterns through data science and machine learning. I currently work as a Data Scientist and I play with machine learning algorithms on my free time. Someday, I wish to leverage artificial intelligence and genetics to improve people's life.",
+    "tagLine": "Jems Datafactory",
+    "profilePicture": "https://sessionize.com/image?f=841595e1889165da403278a2eca986d2,400,400,True,False,024af413-0c10-453f-9f83-f7b7365aa8fc.jpg",
+    "sessions": [
+      {
+        "id": 81455,
+        "name": "Tensorflow, there is no spoon"
+      },
+      {
+        "id": 81459,
+        "name": "VS Code: mode collaboratif activé!"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/TiffanySouterre",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/tiffanysouterre/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://amagash.github.io",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "http://www.jems-group.com/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "6f431b22-2237-4d2e-a298-40915997310d",
+    "firstName": "Toon",
+    "lastName": "van Ramshorst",
+    "fullName": "Toon van Ramshorst",
+    "bio": "Digital Product Designer working remote. Trained as an Architect, but focused on great interface design.",
+    "tagLine": "Architect, web Product Designer & Hacker",
+    "profilePicture": "https://sessionize.com/image?f=433c78bb26f504874420195e1cf276ab,400,400,True,False,22-2237-4d2e-a298-40915997310d.d17532ae-1631-4f6a-a29f-d9491dbe27e7.jpg",
+    "sessions": [
+      {
+        "id": 82583,
+        "name": "From minimalism to building a Tiny House"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/ramshorst",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/toonvanramshorst/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://dribbble.com/ramshorst",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "dac66388-6e56-4929-9cf3-0a9a1a7f407b",
+    "firstName": "Tristan",
+    "lastName": "Nitot",
+    "fullName": "Tristan Nitot",
+    "bio": "Tristan Nitot, 52 ans, est un entrepreneur, auteur et activiste. Tristan a été impliqué dans le projet Mozilla (Firefox) pendant 17 ans, depuis ses origines en 1998 jusqu'en 2015, il a en particulier co-fondé et présidé Mozilla Europe. Ensuite, Tristan a été Chief Product Officer du projet open source Cozy Cloud, un cloud personnel \"private by design\". En juin 2018, il a rejoint Qwant, le moteur de recherche européen respectueux de la vie privée en tant que VP Advocacy. Après avoir été trois ans membre du Conseil National du Numérique (2013-2016), Tristan a publié en octobre 2016 un livre intitulé \"Surveillance://\" sur le sujet de la vie privée à l'ère du numérique. Tristan est aussi membre du comité de prospective de la CNIL. \r\n",
+    "tagLine": "VP, Qwant",
+    "profilePicture": "https://sessionize.com/image?f=69389916a47ff6ef3969dcbfc46535f6,400,400,True,False,8894bdff-cf61-4342-900f-3f62f33d56c4.jpg",
+    "sessions": [
+      {
+        "id": 83045,
+        "name": "Combiner respecte de la vie privée et personnalisation des services en ligne"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/nitot/",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/nitot",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://standblog.org/",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://qwant.com/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "9b5908c3-874b-4d36-b8e0-8290c6d34f56",
+    "firstName": "Victor",
+    "lastName": "GALLET",
+    "fullName": "Victor GALLET",
+    "bio": null,
+    "tagLine": null,
+    "profilePicture": null,
+    "sessions": [
+      {
+        "id": 77672,
+        "name": "Code from Scratch"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": []
+  },
+  {
+    "id": "c43010d7-6da2-4e7d-9f2f-fb951edc4645",
+    "firstName": "William",
+    "lastName": "Marques",
+    "fullName": "William Marques",
+    "bio": "Consultant Full Stack d'Ippon Technologies et membre de la Core Team JHipster. \r\nIl a contribué en grande partie sur la partie Angular du célèbre générateur d'application aux 12 000 étoiles GitHub.\r\nPassionné par le développement Web, l'écosystème JavaScript et notamment sur les problématiques liées aux performances côté client.",
+    "tagLine": "Consultant chez Ippon Technologies",
+    "profilePicture": "https://sessionize.com/image?f=f38221966692ee7a51b4053fd4c6854c,400,400,True,False,d7-6da2-4e7d-9f2f-fb951edc4645.ee532a35-3735-444b-81c7-c55a3efe5e9f.jpg",
+    "sessions": [
+      {
+        "id": 82132,
+        "name": "Vers l’infini et au-delà avec Angular !"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/WylMarq",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/william-marques-b6627590/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://en.ippon.tech/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "5b3cf8da-a778-4019-a06a-33185318525c",
+    "firstName": "Woody",
+    "lastName": "Zuill",
+    "fullName": "Woody Zuill",
+    "bio": "I help teams create an environment where everyone can excel in their work and life. http://bit.ly/MobProgrammingBook … - visit http://mobprogramming.org ",
+    "tagLine": "Agile Coach",
+    "profilePicture": null,
+    "sessions": [
+      {
+        "id": 97747,
+        "name": "Mob Programming: A Whole Team Approach"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": []
+  },
+  {
+    "id": "62844f9b-0080-4712-a566-38da978bba2b",
+    "firstName": "Xavier",
+    "lastName": "Detant",
+    "fullName": "Xavier Detant",
+    "bio": "Co-organisateur de la communauté software craftsmanship de Paris et de la non-conférence SoCraTes France, le partage de savoir est au cœur de mon état d'esprit.\r\nAmoureux de la programmation fonctionnelle et du code élégant, le plaisir de programmer et d'expliquer cet art ont fait de moi un crafter passionné.",
+    "tagLine": "CTO @ Zenika",
+    "profilePicture": "https://sessionize.com/image?f=d9968824f7ae357e162b1d9da4070740,400,400,True,False,9b-0080-4712-a566-38da978bba2b.035f89f2-02c5-4666-b213-a639af9cd3a2.jpg",
+    "sessions": [
+      {
+        "id": 73468,
+        "name": "Sortir de son code de confort"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/XDetant",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/xavierdetant",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.zenika.com/",
+        "linkType": "Company_Website"
+      }
+    ]
+  },
+  {
+    "id": "a7bdcecf-d9f8-4d6f-b224-da4672f1c2a6",
+    "firstName": "yαnnick",
+    "lastName": "grenzinger",
+    "fullName": "yαnnick grenzinger",
+    "bio": "Passionate developer for more than 10 years, my goal is to help companies create great products by applying best technical practices (like the xDDs of course !) but also trying to improve the systems where softwares are built.\r\n\r\nCurrently coach Craft & Flow @ benext",
+    "tagLine": "Holistic software gardener",
+    "profilePicture": "https://sessionize.com/image?f=ea876053337e3d4295a32d8abd56c7d5,400,400,True,False,cf4aac11-d6ed-4aad-97b6-a92f62748538.jpg",
+    "sessions": [
+      {
+        "id": 83402,
+        "name": "Dynamic Kanban"
+      }
+    ],
+    "isTopSpeaker": false,
+    "links": [
+      {
+        "title": "Twitter",
+        "url": "https://twitter.com/ygrenzinger",
+        "linkType": "Twitter"
+      },
+      {
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/yannickgrenzinger/",
+        "linkType": "LinkedIn"
+      },
+      {
+        "title": "Blog",
+        "url": "https://about.me/yannick.grenzinger",
+        "linkType": "Blog"
+      },
+      {
+        "title": "Company Website",
+        "url": "https://www.benextcompany.com/",
+        "linkType": "Company_Website"
+      }
+    ]
+  }
+]

@@ -9621,37 +9621,25 @@
     {
         "company": "VISEO",
         "description": {
-            "ENGLISH": "La BU VISEO Technologies conseille, accompagne, et d\u00e9livre des projets agiles dans les architectures objet et web & mobiles, avec une pr\u00e9sence \u00e0 Paris, Lyon, Grenoble, et Toulouse.\n\n[Nos offres](http://www.viseo.com/fr/offre/viseo-technologies)",
-            "FRENCH": "La BU VISEO Technologies conseille, accompagne, et d\u00e9livre des projets agiles dans les architectures objet et web & mobiles, avec une pr\u00e9sence \u00e0 Paris, Lyon, Grenoble, et Toulouse.\n\n[Nos offres](http://www.viseo.com/fr/offre/viseo-technologies)"
+            "ENGLISH": "VISEO utilise la technologie comme un puissant levier de transformation et d\u2019innovation pour aider ses clients \u00e0 tirer parti des opportunit\u00e9s du num\u00e9rique, adresser les nouveaux usages et affronter la concurrence d\u2019acteurs qui changent les r\u00e8gles du jeu.\r\n\r\nAvec 2 000 collaborateurs intervenant sur 5 continents, VISEO concilie agilit\u00e9 et compl\u00e9mentarit\u00e9 de ses savoir-faire - design de nouveaux produits et services, digitalisation des processus m\u00e9tier, valorisation des donn\u00e9es, d\u00e9veloppement des actifs digitaux - pour faire du num\u00e9rique un r\u00e9el levier de comp\u00e9titivit\u00e9 et de performance. \u00bb\r\n\r\n#DigitalMakers      ",
+            "FRENCH": "VISEO utilise la technologie comme un puissant levier de transformation et d\u2019innovation pour aider ses clients \u00e0 tirer parti des opportunit\u00e9s du num\u00e9rique, adresser les nouveaux usages et affronter la concurrence d\u2019acteurs qui changent les r\u00e8gles du jeu.\r\n\r\nAvec 2 000 collaborateurs intervenant sur 5 continents, VISEO concilie agilit\u00e9 et compl\u00e9mentarit\u00e9 de ses savoir-faire - design de nouveaux produits et services, digitalisation des processus m\u00e9tier, valorisation des donn\u00e9es, d\u00e9veloppement des actifs digitaux - pour faire du num\u00e9rique un r\u00e9el levier de comp\u00e9titivit\u00e9 et de performance. \u00bb\r\n\r\n#DigitalMakers      "
         },
-        "email": null,
+        "email": "HkEY5+YPjDEb1F1OIZbkfBabdGmTVV7iyAJoEpWFqmo=",
         "emailHash": null,
         "firstname": "Viseo technologies",
         "lastname": "Viseo technologies",
         "legacyId": 168,
         "links": [
             {
-                "name": "Blog",
-                "url": "http://blog.viseo-bt.com/"
-            },
-            {
-                "name": "LinkedIn",
-                "url": "https://www.linkedin.com/company/objet-direct"
-            },
-            {
-                "name": "Twitter",
-                "url": "https://twitter.com/viseotech"
-            },
-            {
-                "name": "Facebook",
-                "url": "https://www.facebook.com/objetdirect/"
+                "name": "Site web",
+                "url": "https://www.viseo.com/fr"
             }
         ],
         "login": "VISEO",
         "photoUrl": "images/sponsors/logo-viseo1.svg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.474"
+        "tokenExpiration": "2019-02-17T14:40:43.994"
     },
     {
         "company": "VersionOne",
@@ -23172,8 +23160,8 @@
         "login": "guillaumeehret",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "dc1ab1ef5caa",
-        "tokenExpiration": "2019-02-13T15:02:09.957"
+        "token": "ffe7c01f0c4d",
+        "tokenExpiration": "2019-03-06T14:28:01.966"
     },
     {
         "company": "",
@@ -37444,8 +37432,8 @@
         "login": "s_colson",
         "photoUrl": null,
         "role": "USER",
-        "token": "c279c8cab9d7",
-        "tokenExpiration": "2018-03-23T12:24:55.141"
+        "token": "606bb52ebb5a",
+        "tokenExpiration": "2019-02-19T19:02:51.673"
     },
     {
         "company": "",
@@ -40935,12 +40923,12 @@
     {
         "company": "Thales",
         "description": {
-            "ENGLISH": "Thales Services con\u00e7oit, int\u00e8gre et op\u00e8re des syst\u00e8mes d'information critiques pour les gouvernements et les entreprises.",
-            "FRENCH": "Thales Services con\u00e7oit, int\u00e8gre et op\u00e8re des syst\u00e8mes d'information critiques pour les gouvernements et les entreprises."
+            "ENGLISH": "In a world that is increasingly mobile, interconnected and interdependent, customers come to Thales to help them make life better and keep us safer thanks to digital technologies. To be sure the new technologies can be trusted, Thales secures the digital transformation of the most critical information systems and protects every stage of the data lifecycle. Our 5,000 specialists in critical information systems and cybersecurity design unique solutions to meet the requirements of the most demanding customers. More than 50 countries and 130 major companies and critical infrastructure providers place their trust in Thales, the European leader in cybersecurity and world leader in data security, to support their digital transformation.\r\n\r\n",
+            "FRENCH": "Dans un monde de plus en plus connect\u00e9, Thales est aux c\u00f4t\u00e9s de ceux qui ont l\u2019ambition de mettre le num\u00e9rique au service d\u2019un monde meilleur et plus s\u00fbr.\r\n\r\nAfin que nous puissions  b\u00e9n\u00e9ficier en toute confiance des nouvelles technologies, Thales s\u00e9curise la transformation des syst\u00e8mes d\u2019information les plus critiques et prot\u00e8ge tout le cycle de vie de la donn\u00e9e. Nos 5000 sp\u00e9cialistes en informatique critique et en cybers\u00e9curit\u00e9 con\u00e7oivent des solutions uniques r\u00e9pondant aux exigences les plus pouss\u00e9es de nos clients. Plus de 50 Etats, 130 grandes entreprises et op\u00e9rateurs d\u2019importance vitale font confiance \u00e0 Thales, leader europ\u00e9en de la cybers\u00e9curit\u00e9 et leader mondial de la protection des donn\u00e9es, pour assurer leur transformation digitale.\r\n\r\n"
         },
         "email": null,
         "emailHash": null,
-        "firstname": "",
+        "firstname": "thales",
         "lastname": "Thales services",
         "legacyId": 365,
         "links": [],
@@ -40948,7 +40936,7 @@
         "photoUrl": "images/sponsors/logo-thales.gif",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.474"
+        "tokenExpiration": "2019-03-03T14:29:13.545"
     },
     {
         "company": "",
@@ -42941,8 +42929,8 @@
         "login": "vladislav.pernin",
         "photoUrl": null,
         "role": "USER",
-        "token": "5d7647d2c44d",
-        "tokenExpiration": "2018-04-20T15:30:45.452"
+        "token": "723392ea7347",
+        "tokenExpiration": "2019-03-01T19:22:16.329"
     },
     {
         "company": "",
@@ -44292,8 +44280,8 @@
         "login": "guerric.phalippou",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "a40f0b6ad1e2",
-        "tokenExpiration": "2019-02-17T13:27:50.297"
+        "token": "16a3c0b6c51b",
+        "tokenExpiration": "2019-02-27T22:19:03.788"
     },
     {
         "company": null,
@@ -44309,5 +44297,275 @@
         "role": "USER",
         "token": "853f12d04f97",
         "tokenExpiration": "2019-02-18T15:20:31.086"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "q4m7ijSpBP74pSw488ZhO0MQHbV+RFDGomk9C8UU1NU=",
+        "emailHash": null,
+        "firstname": "Thomas",
+        "lastname": "Saccomani",
+        "legacyId": null,
+        "links": [],
+        "login": "thomas.saccomani",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "b07460b53f7d",
+        "tokenExpiration": "2019-02-21T18:27:27.846"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "FIeoC5DOCMt63ssbF8lohMgLGcVNz3oEhVXebsA01Mg=",
+        "emailHash": null,
+        "firstname": "Sabelo",
+        "lastname": "Mgozie",
+        "legacyId": null,
+        "links": [],
+        "login": "sabelo",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "947ef8c624a5",
+        "tokenExpiration": "2019-02-21T19:20:43.85"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "CA/FpQXXeb0nN1Q46y/pN5lDTCcp7epKTaNGb1sarfg=",
+        "emailHash": null,
+        "firstname": "Karyn",
+        "lastname": "Horonzy",
+        "legacyId": null,
+        "links": [],
+        "login": "karrenhoronga",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "38bc42866f94",
+        "tokenExpiration": "2019-02-22T11:41:57.33"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "XUlL1ffYkRnrJ5z8whg7FG0mptDUPt5IVBawfALDN5E=",
+        "emailHash": null,
+        "firstname": "Christopher",
+        "lastname": "Kabata ",
+        "legacyId": null,
+        "links": [],
+        "login": "esaiemulombo",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "5880171d87be",
+        "tokenExpiration": "2019-02-23T07:17:36.546"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "C0NjSDtzNLpW2TKVTe1HHph6OCrJqoLJE3PcHKym9Lg=",
+        "emailHash": null,
+        "firstname": "Ebrahiem",
+        "lastname": "Ajmoodien",
+        "legacyId": null,
+        "links": [],
+        "login": "ebie.ajmoodien",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "234dddf8ab17",
+        "tokenExpiration": "2019-02-25T17:46:52.494"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "kQdgO/vkjEKOQHLJZa+E9/UrndzbJyM6BSndlsorMoA=",
+        "emailHash": null,
+        "firstname": "Muzikayise ",
+        "lastname": "Mzakes",
+        "legacyId": null,
+        "links": [],
+        "login": "mpanzamuzikayise",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "fc7fdb39c7b3",
+        "tokenExpiration": "2019-02-26T19:51:20.193"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "VVTJtlnPfFtIVNGHoTJhvCS0KJdUThK8QYOUgkBf/Fg=",
+        "emailHash": null,
+        "firstname": "Jabulisiwe",
+        "lastname": "Sibiya",
+        "legacyId": null,
+        "links": [],
+        "login": "jabuzeen33",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "cbc2999229e3",
+        "tokenExpiration": "2019-02-27T08:17:56.734"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "jm1FLD0AKsNEN5azSYHpLBIn/OXhICq+ScR+Y+DbkVk=",
+        "emailHash": null,
+        "firstname": "Luma1988",
+        "lastname": "Luma1988",
+        "legacyId": null,
+        "links": [],
+        "login": "lmnyango",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "7504f65d887b",
+        "tokenExpiration": "2019-02-28T19:48:59.074"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "GRrueyqzoGwV9MCU/orfS3Vmuve317GIwZXisvfpBHk=",
+        "emailHash": null,
+        "firstname": "Nikita",
+        "lastname": "Nikita",
+        "legacyId": null,
+        "links": [],
+        "login": "zandarashvili2007",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "d2c659903e6e",
+        "tokenExpiration": "2019-03-01T17:54:53.638"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "lt/+phPrCts+O/ebazE5FqXbrJ3gsQkeZf+Hj8kFEnQ=",
+        "emailHash": null,
+        "firstname": "Siddeeqah ",
+        "lastname": "Abdul khader ",
+        "legacyId": null,
+        "links": [],
+        "login": "siddeeqahak5",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "b9feb82c5fdb",
+        "tokenExpiration": "2019-03-02T20:20:11.074"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "kXIy9tQ8t6mdIfsBcTAJDXbtkjK3ghQnNf+Ur9bGhls=",
+        "emailHash": null,
+        "firstname": "Nelson",
+        "lastname": "Nelson",
+        "legacyId": null,
+        "links": [],
+        "login": "2776536974210",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "01299875375c",
+        "tokenExpiration": "2019-03-03T11:35:56.961"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "mDESbrN8ykqH8QI9udVQHv3GhrUk4M/Ial8D9yDSbUo=",
+        "emailHash": null,
+        "firstname": "Madubela",
+        "lastname": "Lungani handsome",
+        "legacyId": null,
+        "links": [],
+        "login": "lunganimadubela4",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "e08e1c218f0f",
+        "tokenExpiration": "2019-03-04T22:44:58.311"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "Vs6w3A18gIiUdDMn2JOdwMZlLrk9u9j8VlfnbVrmBhU=",
+        "emailHash": null,
+        "firstname": "Boetabee",
+        "lastname": "0723709407",
+        "legacyId": null,
+        "links": [],
+        "login": "kurashed",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "8249ddf3499f",
+        "tokenExpiration": "2019-03-04T23:03:11.817"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "pkEmAFdmrxm1pbQ6KhmRxYAQcJ9XFTCcAfxDvZfLLs4=",
+        "emailHash": null,
+        "firstname": "Monique",
+        "lastname": "Glamorous",
+        "legacyId": null,
+        "links": [],
+        "login": "moniqueglass55",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "ec88c1aa8656",
+        "tokenExpiration": "2019-03-05T13:04:48.646"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "wKRKzv0ZSSfXgOEc+EfDLNqeOK5XsM/QhUkbitLIm50=",
+        "emailHash": null,
+        "firstname": "D\u00e9bora",
+        "lastname": "Poirier",
+        "legacyId": null,
+        "links": [],
+        "login": "debora.poirier",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "c854c9d3ed96",
+        "tokenExpiration": "2019-03-06T13:13:51.381"
+    },
+    {
+        "company": "Conserto",
+        "description": {
+            "ENGLISH": "Conserto, Great Place To Work and Growth Champion company, offers a wide range of IT services (cloud, digital, embedded, robotics, agile, training...). The origin of Conserto is the story of an encounter, to regain our sense of IT Services as a noble craft, using individual knowledge for the benefit of a collective force.\r\n\r\nWith eight agencies across France, Conserto is close to its clients and close to its consultants to provide a cutting-edge customer solution thanks to fulfilled and expert consultants.\r\n\r\nIt is in this sense that we have created the LABS, a tailor-made talent incubator to improve skills and put a fair amount of magic in everything we do; because we assume that we spend too much time at work as it is to get bored. Join us so we can build your career together, develop value-added offers and practice the magic!\r\n\r\nConserto, a company where every talent is a soloist who brings his music to the score !",
+            "FRENCH": "Conserto, entreprise Great Place To Work et Champion de la Croissance, propose un large panel de services informatiques (expertises cloud, digital, embedded, robotique, agilit\u00e9, centre de formation\u2026). L\u2019origine de Conserto est l\u2019histoire d\u2019une rencontre, pour faire du service informatique un artisanat noble, mettant le savoir individuel au profit d\u2019une force collective.\r\n\r\nAvec ses huit agences sur le territoire fran\u00e7ais, Conserto est proche de ses clients et proche de ses consultants pour apporter une solution cliente pointue gr\u00e2ce \u00e0 des consultants experts \u00e9panouis.\r\n\r\nC\u2019est dans ce sens que nous avons cr\u00e9\u00e9 le LABS, un incubateur de talents sur mesure pour monter en comp\u00e9tences et mettons une bonne dose de #f\u00e9erie dans tout ce que nous faisons ; car nous partons du principe que nous passons trop de temps au travail pour devoir s\u2019y ennuyer. Rejoignez-nous pour construire ensemble votre carri\u00e8re, d\u00e9velopper des offres \u00e0 valeur ajout\u00e9e et pratiquer la F\u00e9erie !\r\n\r\nConserto, une entreprise o\u00f9 chaque talent est un soliste qui apporte sa note \u00e0 la partition !"
+        },
+        "email": "xfUHuKg55BUc58Yhv/6ImxZjJ0zq0cVnR3oS9Y2RM/4=",
+        "emailHash": null,
+        "firstname": "Yann",
+        "lastname": "BELLIERES",
+        "legacyId": null,
+        "links": [],
+        "login": "conserto",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T14:31:43.253"
+    },
+    {
+        "company": "Soci\u00e9t\u00e9 g\u00e9n\u00e9rale",
+        "description": {
+            "ENGLISH": "Soci\u00e9t\u00e9 G\u00e9n\u00e9rale est l\u2019un des tout premiers groupes europ\u00e9ens de services financiers. S\u2019appuyant sur un mod\u00e8le diversifi\u00e9 et int\u00e9gr\u00e9, le Groupe allie solidit\u00e9 financi\u00e8re, dynamique d\u2019innovation et strat\u00e9gie de croissance durable afin d\u2019\u00eatre le partenaire de confiance de ses clients, engag\u00e9 dans les transformations positives des soci\u00e9t\u00e9s et des \u00e9conomies.\r\n\r\nActeur de l\u2019\u00e9conomie r\u00e9elle depuis plus de 150 ans avec un ancrage solide en Europe et connect\u00e9 au reste du monde, Soci\u00e9t\u00e9 G\u00e9n\u00e9rale emploie plus de 147 000 collaborateurs dans 67 pays et accompagne au quotidien 31 millions de clients particuliers, entreprises et investisseurs institutionnels \u00e0 travers le monde, en offrant une large palette de conseils et de solutions financi\u00e8res sur mesure qui s\u2019appuie sur trois p\u00f4les m\u00e9tiers compl\u00e9mentaires :\r\n\r\n* la Banque de d\u00e9tail en France avec les enseignes Soci\u00e9t\u00e9 G\u00e9n\u00e9rale, Cr\u00e9dit du Nord et Boursorama qui offrent des gammes compl\u00e8tes de services financiers avec un dispositif omnicanal \u00e0 la pointe de l\u2019innovation digitale ;\r\n* la Banque de d\u00e9tail \u00e0 l\u2019international, l\u2019assurance et les services financiers aux entreprises, avec des r\u00e9seaux pr\u00e9sents en Afrique, Russie, Europe centrale et de l\u2019est, et des m\u00e9tiers sp\u00e9cialis\u00e9s leaders dans leurs march\u00e9s ;\r\n* la Banque de Grande Client\u00e8le et Solutions Investisseurs, avec ses expertises reconnues, positions internationales cl\u00e9s et solutions int\u00e9gr\u00e9es\r\n\r\nSoci\u00e9t\u00e9 G\u00e9n\u00e9rale figure dans les principaux indices de d\u00e9veloppement durable : DJSI (World and Europe), FTSE4Good (Global et Europe), Euronext Vigeo (Monde, Europe et Eurozone), 4 des indices STOXX ESG Leaders, MSCI Low Carbon Leaders Index.",
+            "FRENCH": "Soci\u00e9t\u00e9 G\u00e9n\u00e9rale est l\u2019un des tout premiers groupes europ\u00e9ens de services financiers. S\u2019appuyant sur un mod\u00e8le diversifi\u00e9 et int\u00e9gr\u00e9, le Groupe allie solidit\u00e9 financi\u00e8re, dynamique d\u2019innovation et strat\u00e9gie de croissance durable afin d\u2019\u00eatre le partenaire de confiance de ses clients, engag\u00e9 dans les transformations positives des soci\u00e9t\u00e9s et des \u00e9conomies.\r\n\r\nActeur de l\u2019\u00e9conomie r\u00e9elle depuis plus de 150 ans avec un ancrage solide en Europe et connect\u00e9 au reste du monde, Soci\u00e9t\u00e9 G\u00e9n\u00e9rale emploie plus de 147 000 collaborateurs dans 67 pays et accompagne au quotidien 31 millions de clients particuliers, entreprises et investisseurs institutionnels \u00e0 travers le monde, en offrant une large palette de conseils et de solutions financi\u00e8res sur mesure qui s\u2019appuie sur trois p\u00f4les m\u00e9tiers compl\u00e9mentaires :\r\n\r\n* la Banque de d\u00e9tail en France avec les enseignes Soci\u00e9t\u00e9 G\u00e9n\u00e9rale, Cr\u00e9dit du Nord et Boursorama qui offrent des gammes compl\u00e8tes de services financiers avec un dispositif omnicanal \u00e0 la pointe de l\u2019innovation digitale ;\r\n* la Banque de d\u00e9tail \u00e0 l\u2019international, l\u2019assurance et les services financiers aux entreprises, avec des r\u00e9seaux pr\u00e9sents en Afrique, Russie, Europe centrale et de l\u2019est, et des m\u00e9tiers sp\u00e9cialis\u00e9s leaders dans leurs march\u00e9s ;\r\n* la Banque de Grande Client\u00e8le et Solutions Investisseurs, avec ses expertises reconnues, positions internationales cl\u00e9s et solutions int\u00e9gr\u00e9es\r\n\r\nSoci\u00e9t\u00e9 G\u00e9n\u00e9rale figure dans les principaux indices de d\u00e9veloppement durable : DJSI (World and Europe), FTSE4Good (Global et Europe), Euronext Vigeo (Monde, Europe et Eurozone), 4 des indices STOXX ESG Leaders, MSCI Low Carbon Leaders Index."
+        },
+        "email": "hmeXdtefXljlv9p+NBbn8tiY5JNQ+/lhYC0tV+QcGIo=",
+        "emailHash": null,
+        "firstname": "Charlotte",
+        "lastname": "Sauvageot",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "twitter",
+                "url": "https://twitter.com/SocieteGenerale"
+            },
+            {
+                "name": "Site web",
+                "url": "www.societegenerale.com"
+            }
+        ],
+        "login": "societegenerale",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T14:40:08.197"
     }
 ]

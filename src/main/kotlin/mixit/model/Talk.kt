@@ -19,7 +19,7 @@ data class Talk(
         @TextIndexed val description: String? = null,
         val topic: String? = null,
         val video: String? = null,
-        val room: Room? = null,
+        val room: Room? = Room.UNKNOWN,
         val start: LocalDateTime? = null,
         val end: LocalDateTime? = null,
         val photoUrls: List<Link> = emptyList(),
@@ -32,7 +32,8 @@ enum class TalkFormat(val duration: Int) {
     LIGHTNING_TALK(5),
     WORKSHOP(110),
     RANDOM(25),
-    KEYNOTE(25)
+    KEYNOTE(25),
+    KEYNOTE_SURPRISE(25)
 }
 
 @Suppress("UNUSED_PARAMETER")
