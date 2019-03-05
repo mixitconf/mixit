@@ -270,13 +270,26 @@
         "emailHash": "6f8d092fec403f766c734ce36e1eef93",
         "firstname": "Horacio",
         "lastname": "Gonzalez",
-        "legacyId": 7142,
-        "links": [],
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/LostInBrittany"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/horaciogonzalez/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3B15PZKqNTSG6FuTIyz6aReg%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_feed-nav.settings_view_profile"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://ovh.com"
+            }
+        ],
         "login": "100578619938900089909",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/gonzalez.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.472"
+        "tokenExpiration": "2019-03-03T22:24:54.327"
     },
     {
         "company": "",
@@ -1137,19 +1150,22 @@
         "tokenExpiration": "2018-03-03T17:17:35.471"
     },
     {
-        "company": "",
-        "description": {},
-        "email": null,
-        "emailHash": "14877a32e92b1e9e5c8711ba837d6bde",
+        "company": null,
+        "description": {
+            "ENGLISH": "UNKNOWN",
+            "FRENCH": "UNKNOWN"
+        },
+        "email": "4Eibg4UVoXUgxhF432Mh3e47WEIEvw7yqaR2IE6dgd0=",
+        "emailHash": "92c29fbe27d838fb16406b367c22a016",
         "firstname": "Victor",
         "lastname": "Gallet",
-        "legacyId": 8052,
+        "legacyId": null,
         "links": [],
         "login": "106558503016616394107",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/gallet.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.53"
+        "tokenExpiration": "2019-03-03T22:24:54.581"
     },
     {
         "company": "",
@@ -2289,25 +2305,29 @@
             "FRENCH": "Co-organisateur de la communaut\u00e9 software craftsmanship de Paris et de la non-conf\u00e9rence SoCraTes France, le partage de savoir est au c\u0153ur de mon \u00e9tat d'esprit."
         },
         "email": "bX/e0ff/486xLgoNB9liltVOqjp6P4GXAXgqcr0l3yQ=",
-        "emailHash": null,
+        "emailHash": "9cdbff57893b64c94e666bfdcabffadf",
         "firstname": "Xavier",
         "lastname": "Detant",
         "legacyId": null,
         "links": [
             {
-                "name": "Github",
-                "url": "https://github.com/FaustXVI/"
-            },
-            {
                 "name": "Twitter",
                 "url": "https://twitter.com/XDetant"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/xavierdetant"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://www.zenika.com/"
             }
         ],
         "login": "115428158670419649279",
-        "photoUrl": "https://mixitconf.org/images/speakers/detant.jpg",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/detant.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-04-05T07:33:16.003"
+        "tokenExpiration": "2019-03-03T22:24:54.591"
     },
     {
         "company": "",
@@ -2367,13 +2387,18 @@
         "emailHash": "236812ebf13a70e8f3b40e92c430eb90",
         "firstname": "Brice",
         "lastname": "Buffa",
-        "legacyId": 7422,
-        "links": [],
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Company Website",
+                "url": "http://www.zenika.com"
+            }
+        ],
         "login": "115833292931696563446",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/buffa.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.528"
+        "tokenExpiration": "2019-03-03T22:24:54.249"
     },
     {
         "company": "",
@@ -2835,35 +2860,31 @@
         "tokenExpiration": "2018-03-03T17:17:35.523"
     },
     {
-        "company": "Craftsmen",
+        "company": null,
         "description": {
-            "ENGLISH": "Design et d\u00e9veloppement d'applications web.",
-            "FRENCH": "Design et d\u00e9veloppement d'applications web."
+            "ENGLISH": "TBD",
+            "FRENCH": "TBD"
         },
-        "email": null,
-        "emailHash": null,
+        "email": "OEkZmvPbBnvEl0Vy0UK0BSabvY0pgUo3Lm5poZmnwyY=",
+        "emailHash": "c74bdcd3fa7c3d3f23290f46430b1463",
         "firstname": "Mehdi",
         "lastname": "Lahmam",
-        "legacyId": 6162,
+        "legacyId": null,
         "links": [
             {
-                "name": "Site web",
-                "url": "http://craftsmen.io"
-            },
-            {
                 "name": "Twitter",
-                "url": "https://twitter.com/craftsmenhq"
+                "url": "https://twitter.com/mehlah"
             },
             {
-                "name": "GitHub",
-                "url": "https://github.com/craftsmen/"
+                "name": "Company Website",
+                "url": "https://lahmam.com"
             }
         ],
         "login": "1338530083",
-        "photoUrl": "images/sponsors/logo-craftsmen.jpg",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/lahmam.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.475"
+        "tokenExpiration": "2019-03-03T22:24:54.438"
     },
     {
         "company": "",
@@ -4169,25 +4190,25 @@
             "FRENCH": "D\u00e9veloppeur chez Zenika, je travaille sur des sujets divers et vari\u00e9s. Je suis un touche-\u00e0-tout passionn\u00e9 par le monde du JS et la s\u00e9curit\u00e9 informatique. Je suis aussi co-organisateur du meetup HumanTalks Lyon."
         },
         "email": "MRmHKleE71Q8IF1P9RX6iJ+9FEp8fJFrOmBI58ORxvc=",
-        "emailHash": null,
+        "emailHash": "70b546a732302e988426cccaada40d40",
         "firstname": "Houssem",
         "lastname": "BELHADJ AHMED",
         "legacyId": null,
         "links": [
             {
-                "name": "Github",
-                "url": "https://github.com/houssemba"
-            },
-            {
                 "name": "Twitter",
                 "url": "https://twitter.com/7ouss3m"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://www.malt.fr"
             }
         ],
         "login": "51680989",
-        "photoUrl": "https://mixitconf.org/images/speakers/belhadj_ahmed.jpg",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/belhadj_ahmed.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-04-17T06:44:27.389"
+        "tokenExpiration": "2019-03-03T22:24:54.331"
     },
     {
         "company": "",
@@ -6983,20 +7004,33 @@
     {
         "company": null,
         "description": {
-            "ENGLISH": "Josh is a 14 year old coder, passionate about sharing his skills with others. He is the creator of EduBlocks, a drag and drop version of Python 3 which allows students to learn the Python syntax with minimal errors. His software is being used in countries all around the world by students and teachers alike. Josh delivers numerous workshops around the country sharing his passion for coding to people of all ages. He was recently awarded a John Pinner Award at PyCon UK for his contribution to the coding community. He is also a pi-top futureCHAMPION.",
-            "FRENCH": "Josh is a 14 year old coder, passionate about sharing his skills with others. He is the creator of EduBlocks, a drag and drop version of Python 3 which allows students to learn the Python syntax with minimal errors. His software is being used in countries all around the world by students and teachers alike. Josh delivers numerous workshops around the country sharing his passion for coding to people of all ages. He was recently awarded a John Pinner Award at PyCon UK for his contribution to the coding community. He is also a pi-top futureCHAMPION."
+            "ENGLISH": "Josh is a 15 year old coder, passionate about sharing his skills with others. He is the creator of EduBlocks, an open source drag and drop version of Python 3 which allows students to learn the Python syntax with minimal errors. His software is being used in countries all around the world by students and teachers alike. Josh delivers numerous workshops around the country sharing his passion for coding to people of all ages. In 2017, he was awarded a John Pinner Award at PyCon UK for his contribution to the coding community. He is also a pi-top futureCHAMPION.",
+            "FRENCH": "Josh is a 15 year old coder, passionate about sharing his skills with others. He is the creator of EduBlocks, an open source drag and drop version of Python 3 which allows students to learn the Python syntax with minimal errors. His software is being used in countries all around the world by students and teachers alike. Josh delivers numerous workshops around the country sharing his passion for coding to people of all ages. In 2017, he was awarded a John Pinner Award at PyCon UK for his contribution to the coding community. He is also a pi-top futureCHAMPION."
         },
-        "email": "4WWyyk++UuN2x6h0Zkkk+DBY347HA8KImnIHg63+X7Y=",
-        "emailHash": null,
+        "email": "BkmgtImMj0WwD2ZCjOyZPOWK3MQ9uXUHjsxRYAjbZQw=",
+        "emailHash": "11127bb0d29fdab9a119123234723154",
         "firstname": "Joshua",
         "lastname": "Lowe",
         "legacyId": null,
-        "links": [],
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "http://twitter.com/all_about_code"
+            },
+            {
+                "name": "Blog",
+                "url": "http://allaboutcode.co.uk"
+            },
+            {
+                "name": "Company Website",
+                "url": "http://edublocks.org"
+            }
+        ],
         "login": "Joshua.Lowe",
-        "photoUrl": "https://mixitconf.org/images/speakers/lowe.jpg",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/lowe.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-04-11T21:26:37.409"
+        "tokenExpiration": "2019-03-03T22:24:54.361"
     },
     {
         "company": "",
@@ -9001,7 +9035,7 @@
         },
         "email": null,
         "emailHash": null,
-        "firstname": "",
+        "firstname": "SII",
         "lastname": "Sii rh\u00f4ne-alpes",
         "legacyId": 1811,
         "links": [
@@ -9011,10 +9045,10 @@
             }
         ],
         "login": "SII_rhonealpes",
-        "photoUrl": "images/sponsors/logo-sii.svg",
+        "photoUrl": "https://mixitconf.org/images/sponsors/logo-sii.svg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.475"
+        "tokenExpiration": "2019-03-03T22:08:13.434"
     },
     {
         "company": "",
@@ -9382,13 +9416,30 @@
         "emailHash": "27bd774790e70807a5489b31f668a71e",
         "firstname": "Matthieu",
         "lastname": "Lux",
-        "legacyId": 105,
-        "links": [],
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/swiip"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/swiip/"
+            },
+            {
+                "name": "Blog",
+                "url": "https://medium.com/@Swiip_51904"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://www.zenika.com/"
+            }
+        ],
         "login": "Swiip",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/lux.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.463"
+        "tokenExpiration": "2019-03-03T22:24:54.433"
     },
     {
         "company": "",
@@ -11235,29 +11286,33 @@
             "FRENCH": "Je suis ing\u00e9nieur software, du micro-contr\u00f4leur aux applications web Java, en passant par le dev mobile, dans le domaine des objets connect\u00e9s .\r\nJe partage mon temps entre les projets d'Rtone, un bureau d'\u00e9tude sp\u00e9cialis\u00e9 dans l'IoT en r\u00e9gion lyonnaise, et mes travaux de recherche au laboratoire CITI de l'INSA de Lyon o\u00f9 je poursuis une th\u00e8se sur le Visible Light Communication, dans le cadre d'un contrat CIFRE."
         },
         "email": "I09ZOAmPZi56Zl3b74aADqTVxmth7qjwJFjl/yrVDbo=",
-        "emailHash": null,
+        "emailHash": "21c7ab53728ffe5b92202e346bf0364f",
         "firstname": "Alexis",
-        "lastname": "DUQUE",
+        "lastname": "Duque",
         "legacyId": null,
         "links": [
-            {
-                "name": "Github",
-                "url": "https://github.com/alexisduque"
-            },
             {
                 "name": "Twitter",
                 "url": "https://twitter.com/alexis0duque"
             },
             {
-                "name": "Autre",
-                "url": "http://alexisduque.me"
+                "name": "Blog",
+                "url": "https://alexisduque.me"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://rtone.fr"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/alexisduque/"
             }
         ],
         "login": "alexisd",
-        "photoUrl": "http://www.gravatar.com/avatar/83124b745752d1a1b0ca2eee1af0bd48?s=240",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/duque.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-04-11T22:12:32.601"
+        "tokenExpiration": "2019-03-03T22:24:54.186"
     },
     {
         "company": "",
@@ -11708,19 +11763,23 @@
         "legacyId": null,
         "links": [
             {
-                "name": "social",
-                "url": "nobodyknowswhatisgoingon.fr"
+                "name": "Twitter",
+                "url": "https://twitter.com/lievAnastazia"
             },
             {
-                "name": "twitter",
-                "url": "https://twitter.com/lievAnastazia"
+                "name": "Blog",
+                "url": "http://nobodyknowswhatisgoingon.fr"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://www.comwatt.com/"
             }
         ],
         "login": "anastasia.lieva",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/lieva.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-15T18:48:54.955"
+        "tokenExpiration": "2019-03-03T22:24:54.198"
     },
     {
         "company": null,
@@ -12818,13 +12877,26 @@
         "emailHash": "c8c826f53f65be736a49b6dedb7e6197",
         "firstname": "Arthur",
         "lastname": "Vuillard",
-        "legacyId": 5112,
-        "links": [],
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/arthru_vuillrad"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/arthur-vuillard-5782894/"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://hashbang.fr/"
+            }
+        ],
         "login": "arthru",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/vuillard.png",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.471"
+        "tokenExpiration": "2019-03-03T22:24:54.215"
     },
     {
         "company": "",
@@ -14633,22 +14705,27 @@
         "tokenExpiration": "2018-03-03T17:17:35.513"
     },
     {
-        "company": "",
+        "company": null,
         "description": {
-            "ENGLISH": "Internet Scientist",
-            "FRENCH": "Internet Scientist"
+            "ENGLISH": "Bodil works as a computer science researcher for a secretive think tank, and is a world renowned expert in varied fields such as pizza and persistent data structures. Contrary to popular rumour, she only has five fingers on each hand, but is still able to use Emacs.",
+            "FRENCH": "Bodil works as a computer science researcher for a secretive think tank, and is a world renowned expert in varied fields such as pizza and persistent data structures. Contrary to popular rumour, she only has five fingers on each hand, but is still able to use Emacs."
         },
-        "email": null,
-        "emailHash": "f9f8e0403b0437662bdbc2b4e9c6ccf3",
+        "email": "+bzOXXovOiKE8QACXZcmnMEXZwuXntaL1tMX0xzTKfk=",
+        "emailHash": "f3340c5d96c78b0d5f8be1d030eea927",
         "firstname": "Bodil",
         "lastname": "Stokke",
-        "legacyId": 274,
-        "links": [],
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/bodil"
+            }
+        ],
         "login": "bodil",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/stokke.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.462"
+        "tokenExpiration": "2019-03-03T22:24:54.229"
     },
     {
         "company": null,
@@ -14966,20 +15043,29 @@
     {
         "company": null,
         "description": {
-            "ENGLISH": "Spring Framework team member.",
-            "FRENCH": "Spring Framework team member."
+            "ENGLISH": "Committer Spring Framework & Spring Boot \u00e0 Pivotal",
+            "FRENCH": "Committer Spring Framework & Spring Boot \u00e0 Pivotal"
         },
-        "email": "0PkUr0o+d4jEouI0lYhLZczFyed8Mlx2/7G6p5GsxvY=",
-        "emailHash": "7f6b3d65ae30e6fec52287f34e22dcb0",
+        "email": "OozoOykXl69RehZkyzVNfQ==",
+        "emailHash": "9d1d5b668ad4b1fccb1a80e6789d11b5",
         "firstname": "Brian",
         "lastname": "Clozel",
         "legacyId": null,
-        "links": [],
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/bclozel"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://spring.io"
+            }
+        ],
         "login": "brian.clozel",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/clozel.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-01-30T23:44:56.56"
+        "tokenExpiration": "2019-03-03T22:24:54.24"
     },
     {
         "company": "",
@@ -15722,14 +15808,27 @@
         "email": null,
         "emailHash": "d22244b43be7f7d8a4fc6204259e1394",
         "firstname": "C\u00e9dric",
-        "lastname": "Bodin",
-        "legacyId": 2081,
-        "links": [],
+        "lastname": "BODIN",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/cedricbodin"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/cedricbodin/"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://www.fenikso.fr/"
+            }
+        ],
         "login": "cedricbodin",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/bodin.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.469"
+        "tokenExpiration": "2019-03-03T22:24:54.256"
     },
     {
         "company": "",
@@ -16853,22 +16952,39 @@
         "tokenExpiration": "2018-03-03T17:17:35.489"
     },
     {
-        "company": "DevCrafting/HackYourJob",
+        "company": null,
         "description": {
-            "ENGLISH": "Software craftsman/generalizing specialist, je m'int\u00e9resse au d\u00e9veloppement toutes plateformes confondues (avec une sp\u00e9cialit\u00e9 .NET C#/F#) pour cr\u00e9er des applications ajust\u00e9es et cibl\u00e9es sur la valeur m\u00e9tier requises par les utilisateurs. Pour cela, une bonne dose d'agilit\u00e9 est n\u00e9cessaire, c'est pourquoi je cultive \u00e9galement cette facette avec une inspiration des diff\u00e9rentes m\u00e9thodes et pratiques propos\u00e9es par la communaut\u00e9 (XP, Kanban, Scrum...). Enfin, l'agilit\u00e9 n\u00e9cessite \u00e9galement une grosse dose de technicit\u00e9 pour r\u00e9aliser des applications qui peuvent suivre l'adaptation au changement n\u00e9cessaire, ce qui passe par des pratiques (TDD, BDD, refactoring...) et concepts (DDD, CQRS...) d'ing\u00e9nierie logicielle pas encore assez connus.",
-            "FRENCH": "Software craftsman/generalizing specialist, je m'int\u00e9resse au d\u00e9veloppement toutes plateformes confondues (avec une sp\u00e9cialit\u00e9 .NET C#/F#) pour cr\u00e9er des applications ajust\u00e9es et cibl\u00e9es sur la valeur m\u00e9tier requises par les utilisateurs. Pour cela, une bonne dose d'agilit\u00e9 est n\u00e9cessaire, c'est pourquoi je cultive \u00e9galement cette facette avec une inspiration des diff\u00e9rentes m\u00e9thodes et pratiques propos\u00e9es par la communaut\u00e9 (XP, Kanban, Scrum...). Enfin, l'agilit\u00e9 n\u00e9cessite \u00e9galement une grosse dose de technicit\u00e9 pour r\u00e9aliser des applications qui peuvent suivre l'adaptation au changement n\u00e9cessaire, ce qui passe par des pratiques (TDD, BDD, refactoring...) et concepts (DDD, CQRS...) d'ing\u00e9nierie logicielle pas encore assez connus."
+            "ENGLISH": "I started as software developer in 2004, and now I am a freelancer since 5 years. As a contractor, I mentor team members to help them grasp DDD practices from strategic to tactical patterns & implementation flavors (\"classic\", CQRS, EventSourcing...). I also work on DDD organisational impacts.\r\nI also launched some services or co-organize some associations as side-projects, like KickBanking (manage french social taxes for freelancers) and HackYourJob (freelance dev community).",
+            "FRENCH": "I started as software developer in 2004, and now I am a freelancer since 5 years. As a contractor, I mentor team members to help them grasp DDD practices from strategic to tactical patterns & implementation flavors (\"classic\", CQRS, EventSourcing...). I also work on DDD organisational impacts.\r\nI also launched some services or co-organize some associations as side-projects, like KickBanking (manage french social taxes for freelancers) and HackYourJob (freelance dev community)."
         },
-        "email": null,
-        "emailHash": "e187f8ea0d791446c5055882f0c597ee",
-        "firstname": "Cl\u00e9ment",
-        "lastname": "Bouillier",
-        "legacyId": 701,
-        "links": [],
+        "email": "3rJfBnyAvou/TRQ5UmIeOnBxLZM+w4eqtdYNlahGkwA=",
+        "emailHash": "52214de779b3933d6bf8981cd19e548a",
+        "firstname": "Bouillier",
+        "lastname": "Cl\u00e9ment",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/clem_bouillier"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/clementbouillier"
+            },
+            {
+                "name": "Blog",
+                "url": "http://www.devcrafting.com/en/blog/"
+            },
+            {
+                "name": "Company Website",
+                "url": "http://www.devcrafting.com/en/"
+            }
+        ],
         "login": "clem",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/clement.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.535"
+        "tokenExpiration": "2019-03-03T22:24:54.233"
     },
     {
         "company": "",
@@ -17255,14 +17371,27 @@
         "email": null,
         "emailHash": "6a1752bce22dc351458277dac0c636a7",
         "firstname": "Cl\u00e9ment",
-        "lastname": "Oudot",
-        "legacyId": 295,
-        "links": [],
+        "lastname": "OUDOT",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/clementoudot"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/clementoudot/"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://www.worteks.com"
+            }
+        ],
         "login": "coudot",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/oudot.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.483"
+        "tokenExpiration": "2019-03-03T22:24:54.274"
     },
     {
         "company": "",
@@ -19225,14 +19354,31 @@
         "email": null,
         "emailHash": "33fc11f88b25d361cbb8bdf12fc47cca",
         "firstname": "Ell\u00e8ne",
-        "lastname": "Dijoux siber",
-        "legacyId": 292,
-        "links": [],
+        "lastname": "Dijoux Siber",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "http://twitter.com/ElleneSiber"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/ellenedijouxsiber/"
+            },
+            {
+                "name": "Blog",
+                "url": "http://uneviededev.com"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://www.quicksign.com/fr/"
+            }
+        ],
         "login": "ellene.dijoux",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/dijoux_siber.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.483"
+        "tokenExpiration": "2019-03-03T22:24:54.292"
     },
     {
         "company": null,
@@ -19345,14 +19491,27 @@
         "email": null,
         "emailHash": "cd688f11de2715c5b4a1245b637ddb5e",
         "firstname": "Emmanuel",
-        "lastname": "Herve",
-        "legacyId": 2191,
-        "links": [],
+        "lastname": "Herv\u00e9",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/ehervepro"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/emmanuelherve/"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://www.zenika.com/"
+            }
+        ],
         "login": "emmanuel.herve",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/herve.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.469"
+        "tokenExpiration": "2019-03-03T22:24:54.3"
     },
     {
         "company": "",
@@ -20394,22 +20553,39 @@
         "tokenExpiration": "2018-03-03T17:17:35.493"
     },
     {
-        "company": "",
+        "company": null,
         "description": {
             "ENGLISH": "Florence Chabanois exerce dans le milieu agile depuis une dizaine d'ann\u00e9es. Sa forme de t\u00eate ni ronde ni carr\u00e9 lui a permis d'endosser des casquettes en tissus diff\u00e9rents : d\u00e9veloppeur, coach, ScrumMaster, manager, product owner.",
             "FRENCH": "Florence Chabanois exerce dans le milieu agile depuis une dizaine d'ann\u00e9es. Sa forme de t\u00eate ni ronde ni carr\u00e9 lui a permis d'endosser des casquettes en tissus diff\u00e9rents : d\u00e9veloppeur, coach, ScrumMaster, manager, product owner."
         },
-        "email": null,
-        "emailHash": "2168f37bb0b5cd95a32f9e6094bc053c",
+        "email": "cQbzVpgbFDtk49C8axUpQlufM3qVtX/8RN2RNHqtgBg=",
+        "emailHash": "21440364f1515ce54e72e9b2e172a6ac",
         "firstname": "Florence",
         "lastname": "Chabanois",
-        "legacyId": 1016,
-        "links": [],
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/fchabanois"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/florencechabanois"
+            },
+            {
+                "name": "Company Website",
+                "url": "http://www.lacentrale.fr"
+            },
+            {
+                "name": "Blog",
+                "url": "http://devsnotebook.fr"
+            }
+        ],
         "login": "fchabanois",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/chabanois.png",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.466"
+        "tokenExpiration": "2019-03-03T22:24:54.313"
     },
     {
         "company": "",
@@ -20863,22 +21039,27 @@
         "tokenExpiration": "2018-03-03T17:17:35.463"
     },
     {
-        "company": "HackYourJob",
+        "company": null,
         "description": {
-            "ENGLISH": "DDD Addict, Software Craftsman",
-            "FRENCH": "DDD Addict, Software Craftsman"
+            "ENGLISH": "Software Crafter convaincu et passionn\u00e9 pour les sujets autour de DDD.",
+            "FRENCH": "Software Crafter convaincu et passionn\u00e9 pour les sujets autour de DDD."
         },
-        "email": null,
-        "emailHash": "aafae598a04def3699bbc7417129ff53",
+        "email": "9+VrsCXDwjWdGDzN3lcVM6gngeWM9g1cN/2F4P6XmWE=",
+        "emailHash": "e9da50e993cb3ff8d1787f551fadad83",
         "firstname": "Florent",
         "lastname": "Pellet",
-        "legacyId": 631,
-        "links": [],
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/florentpellet"
+            }
+        ],
         "login": "florent.pellet",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/pellet.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.465"
+        "tokenExpiration": "2019-03-03T22:24:54.317"
     },
     {
         "company": null,
@@ -21462,19 +21643,19 @@
         "legacyId": null,
         "links": [
             {
-                "name": "twitter",
+                "name": "Twitter",
                 "url": "https://twitter.com/fteychene"
             },
             {
-                "name": "github",
-                "url": "https://github.com/fteychene"
+                "name": "Company Website",
+                "url": "https://www.saagie.com/"
             }
         ],
         "login": "francois.teychene",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/teychene.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.533"
+        "tokenExpiration": "2019-03-03T22:24:54.32"
     },
     {
         "company": "",
@@ -23160,8 +23341,8 @@
         "login": "guillaumeehret",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "ffe7c01f0c4d",
-        "tokenExpiration": "2019-03-06T14:28:01.966"
+        "token": "cd9a678c4463",
+        "tokenExpiration": "2019-03-07T06:37:37.07"
     },
     {
         "company": "",
@@ -23884,25 +24065,29 @@
             "FRENCH": "Hubert est passionn\u00e9 par le Web. Il est toujours \u00e0 la recherche de nouvelles id\u00e9es et autres bidouilles pour am\u00e9liorer l'exp\u00e9rience des utilisateurs et des d\u00e9veloppeurs."
         },
         "email": "7ehqgjLICmvgydh5XmHOA6EcN1a0Tn1zHacKfLu5CGE=",
-        "emailHash": null,
+        "emailHash": "f7b7503324cbfd2a59aeb3540fa17bb1",
         "firstname": "Hubert",
         "lastname": "SABLONNI\u00c8RE",
         "legacyId": null,
         "links": [
             {
-                "name": "Github",
-                "url": "https://github.com/hsablonniere"
-            },
-            {
                 "name": "Twitter",
                 "url": "https://twitter.com/hsablonniere"
+            },
+            {
+                "name": "Blog",
+                "url": "https://www.hsablonniere.com/"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://www.clever-cloud.com/fr/"
             }
         ],
         "login": "hsablonniere",
-        "photoUrl": "https://fr.gravatar.com/userimage/13472948/38009733493b55d52223205e85c6e86d.png?size=500",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/sablonniere.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-01-30T23:42:36.704"
+        "tokenExpiration": "2019-03-03T22:24:54.335"
     },
     {
         "company": "",
@@ -24163,31 +24348,39 @@
         "tokenExpiration": "2018-03-03T17:17:35.518"
     },
     {
-        "company": "MonkeyPatch",
+        "company": null,
         "description": {
-            "ENGLISH": "D\u00e9veloppeur passionn\u00e9 depuis 15 ans. Expert dans les technos Java et Web. Je participe  souvent et anime (parfois) des rdv techniques au travers de ma soci\u00e9t\u00e9 ou dans des meeting comme le Toulouse JUG, Software Craftsmanship Toulouse.",
-            "FRENCH": "D\u00e9veloppeur passionn\u00e9 depuis 15 ans. Expert dans les technos Java et Web. Je participe  souvent et anime (parfois) des rdv techniques au travers de ma soci\u00e9t\u00e9 ou dans des meeting comme le Toulouse JUG, Software Craftsmanship Toulouse."
+            "ENGLISH": "D\u00e9veloppeur passionn\u00e9 depuis plus de 18 ans, expert dans les technos Java et Web. Je suis impliqu\u00e9 dans les rendez-vous techniques toulousains (Devfest Toulouse, GDG, JUG, Software Craftsmanship Toulouse).\r\nJ\u2019appr\u00e9cie la programmation fonctionnelle, et donc particuli\u00e8rement je suis attir\u00e9 par les nouveaux langages et frameworks qui vont dans cette direction. \r\n\r\nEt puis je sais dessiner une \ud83e\udd84 en CSS.",
+            "FRENCH": "D\u00e9veloppeur passionn\u00e9 depuis plus de 18 ans, expert dans les technos Java et Web. Je suis impliqu\u00e9 dans les rendez-vous techniques toulousains (Devfest Toulouse, GDG, JUG, Software Craftsmanship Toulouse).\r\nJ\u2019appr\u00e9cie la programmation fonctionnelle, et donc particuli\u00e8rement je suis attir\u00e9 par les nouveaux langages et frameworks qui vont dans cette direction. \r\n\r\nEt puis je sais dessiner une \ud83e\udd84 en CSS."
         },
-        "email": null,
-        "emailHash": "5870075cc4934bb7c32f2a6c56cc4f8d",
+        "email": "A5ysfX/6wAkqsLvY2oh1egTGpNu4IHo2E6W09hiy1rY=",
+        "emailHash": "cc6db7826bfa1e864cb9947cbc5e38c0",
         "firstname": "Igor",
         "lastname": "Laborie",
         "legacyId": null,
         "links": [
             {
-                "name": "twitter",
-                "url": "ilaborie"
+                "name": "Company Website",
+                "url": "http://www.monkeypatch.io/"
             },
             {
-                "name": "github",
-                "url": "ilaborie"
+                "name": "Twitter",
+                "url": "https://twitter.com/ilaborie"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/igor-laborie-080ab78/"
+            },
+            {
+                "name": "Blog",
+                "url": "http://www.monkeypatch.io/blog/"
             }
         ],
         "login": "igor.laborie",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/laborie.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.534"
+        "tokenExpiration": "2019-03-03T22:24:54.338"
     },
     {
         "company": "",
@@ -25837,35 +26030,39 @@
         "tokenExpiration": "2018-03-03T17:17:35.483"
     },
     {
-        "company": "Indep",
+        "company": null,
         "description": {
-            "ENGLISH": "Johan Martinsson est d\u00e9veloppeur freelance qui se passionne entre autres pour les design du code. Avec 15 ans d\u2019exp\u00e9rience, il a pass\u00e9 les 6 derni\u00e8res ann\u00e9es \u00e0 aider des \u00e9quipes de ma\u00eetriser le d\u00e9veloppement accompagn\u00e9 de tests dans de multiples langages. R\u00e9guli\u00e8rement il trouve des raisons (toujours bonnes) pour aller montrer un peu de code dans des conf\u00e9rences. \r\n\r\nJohan a organis\u00e9 le 1er Code Retreat en france et le premier Legacy Code Retreat mondial avec JB Rainsberger. Il continue \u00e0 s\u2019investir dans le dojo grenoblois qui atteint ces 120 s\u00e9ances cette ann\u00e9e.",
-            "FRENCH": "Johan Martinsson est d\u00e9veloppeur freelance qui se passionne entre autres pour les design du code. Avec 15 ans d\u2019exp\u00e9rience, il a pass\u00e9 les 6 derni\u00e8res ann\u00e9es \u00e0 aider des \u00e9quipes de ma\u00eetriser le d\u00e9veloppement accompagn\u00e9 de tests dans de multiples langages. R\u00e9guli\u00e8rement il trouve des raisons (toujours bonnes) pour aller montrer un peu de code dans des conf\u00e9rences. \r\n\r\nJohan a organis\u00e9 le 1er Code Retreat en france et le premier Legacy Code Retreat mondial avec JB Rainsberger. Il continue \u00e0 s\u2019investir dans le dojo grenoblois qui atteint ces 120 s\u00e9ances cette ann\u00e9e."
+            "ENGLISH": "Johan Martinsson est un d\u00e9veloppeur freelance qui se passionne entre autres pour le design du code.\r\nAvec 17 ans d\u2019exp\u00e9rience, il a pass\u00e9 les 8 derni\u00e8res ann\u00e9es \u00e0 aider des \u00e9quipes de ma\u00eetriser\r\nle d\u00e9veloppement accompagn\u00e9 de tests dans de multiples langages. R\u00e9guli\u00e8rement il trouve des (bonnes) excuses pour aller montrer un peu de code dans des conf\u00e9rences en France et ailleurs.\r\n",
+            "FRENCH": "Johan Martinsson est un d\u00e9veloppeur freelance qui se passionne entre autres pour le design du code.\r\nAvec 17 ans d\u2019exp\u00e9rience, il a pass\u00e9 les 8 derni\u00e8res ann\u00e9es \u00e0 aider des \u00e9quipes de ma\u00eetriser\r\nle d\u00e9veloppement accompagn\u00e9 de tests dans de multiples langages. R\u00e9guli\u00e8rement il trouve des (bonnes) excuses pour aller montrer un peu de code dans des conf\u00e9rences en France et ailleurs.\r\n"
         },
-        "email": "KMQHtxcXxL3jtUSGXGYzZgZ5TykyDM0R7Iyfzl3oyMg=",
-        "emailHash": null,
+        "email": "1PaywawTRr4NYujUAabCsnyAUwdBfywQWcKf3S/qsSI=",
+        "emailHash": "21dcc3ea0a001f006f0eae700089a47e",
         "firstname": "Johan",
         "lastname": "Martinsson",
         "legacyId": null,
         "links": [
             {
-                "name": "Github",
-                "url": "https://github.com/martinsson"
-            },
-            {
                 "name": "Twitter",
                 "url": "https://twitter.com/johan_alps"
             },
             {
-                "name": "Autre",
-                "url": "http://martinsson-johan.blogspot.fr"
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/jomartinsson/"
+            },
+            {
+                "name": "Blog",
+                "url": "http://martinsson-johan.blogspot.com"
+            },
+            {
+                "name": "Company Website",
+                "url": "http://www.changit.fr"
             }
         ],
         "login": "johan.martinsson",
-        "photoUrl": "https://mixitconf.org/images/speakers/martinsson.jpg",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/martinsson.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-04-17T06:36:15.633"
+        "tokenExpiration": "2019-03-03T22:24:54.357"
     },
     {
         "company": "",
@@ -26239,27 +26436,35 @@
         "tokenExpiration": "2018-10-18T08:27:35.726"
     },
     {
-        "company": "Aza\u00e9",
+        "company": null,
         "description": {
-            "ENGLISH": "Passionn\u00e9e par l\u2019\u00eatre humain, la psychologie et la sociologie, j\u2019accompagne les personnes et les \u00e9quipes dans leur cheminement vers plus de responsabilit\u00e9 et de libert\u00e9 individuelles. La Communication Bienveillante (CNV) est mon outil de pr\u00e9dilection. Dans un dynamique d\u2019am\u00e9lioration continue, il me tient \u00e0 c\u0153ur d\u2019\u00e9largir en permanence mes domaines de comp\u00e9tences, par des lectures, des recherches, des formations, mais surtout \u00e0 travers des \u00e9changes et de l\u2019exp\u00e9rimentation. Ce sont mes int\u00e9r\u00eats pour l\u2019\u00e9panouissement au travail, l\u2019adaptabilit\u00e9 et le travail collaboratif qui m\u2019ont amen\u00e9 \u00e0 l\u2019agilit\u00e9 et au coaching d\u2019\u00e9quipes.",
-            "FRENCH": "Passionn\u00e9e par l\u2019\u00eatre humain, la psychologie et la sociologie, j\u2019accompagne les personnes et les \u00e9quipes dans leur cheminement vers plus de responsabilit\u00e9 et de libert\u00e9 individuelles. La Communication Bienveillante (CNV) est mon outil de pr\u00e9dilection. Dans un dynamique d\u2019am\u00e9lioration continue, il me tient \u00e0 c\u0153ur d\u2019\u00e9largir en permanence mes domaines de comp\u00e9tences, par des lectures, des recherches, des formations, mais surtout \u00e0 travers des \u00e9changes et de l\u2019exp\u00e9rimentation. Ce sont mes int\u00e9r\u00eats pour l\u2019\u00e9panouissement au travail, l\u2019adaptabilit\u00e9 et le travail collaboratif qui m\u2019ont amen\u00e9 \u00e0 l\u2019agilit\u00e9 et au coaching d\u2019\u00e9quipes."
+            "ENGLISH": "Passionn\u00e9e par l\u2019\u00eatre humain, la psychologie et la sociologie, j\u2019accompagne les personnes et les \u00e9quipes dans leur cheminement vers plus de responsabilit\u00e9 et de libert\u00e9 individuelles. La Communication Bienveillante (CNV) est mon outil de pr\u00e9dilection.",
+            "FRENCH": "Passionn\u00e9e par l\u2019\u00eatre humain, la psychologie et la sociologie, j\u2019accompagne les personnes et les \u00e9quipes dans leur cheminement vers plus de responsabilit\u00e9 et de libert\u00e9 individuelles. La Communication Bienveillante (CNV) est mon outil de pr\u00e9dilection."
         },
-        "email": "0WSCpMFhd2cMNXnDMmWTUIzKC0R4SbD2lvgWVSxENmo=",
-        "emailHash": null,
+        "email": "Y2awBR//P1To/WrOv4+c2Jei9Aj0lJrnMwsrbUbBhz8=",
+        "emailHash": "95d27ddf9f5187135897e0aaeba1f89d",
         "firstname": "Julie",
         "lastname": "Quill\u00e9",
         "legacyId": null,
         "links": [
             {
-                "name": "Autre",
+                "name": "Twitter",
+                "url": "https://twitter.com/juliequille"
+            },
+            {
+                "name": "LinkedIn",
                 "url": "https://www.linkedin.com/in/juliequille/"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://azae.net/"
             }
         ],
         "login": "jquille",
-        "photoUrl": "https://mixitconf.org/images/speakers/quille.jpg",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/quille.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-04-11T21:32:24.951"
+        "tokenExpiration": "2019-03-03T22:24:54.378"
     },
     {
         "company": "",
@@ -27855,13 +28060,22 @@
         "emailHash": "42b0fc8c087272a69e98ad71bb5052df",
         "firstname": "Laurent",
         "lastname": "Grangeau",
-        "legacyId": 6202,
-        "links": [],
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/laurentgrangeau"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/laurentgrangeau/"
+            }
+        ],
         "login": "laurentgrangeau",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/grangeau.png",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.525"
+        "tokenExpiration": "2019-03-03T22:24:54.401"
     },
     {
         "company": "",
@@ -30835,22 +31049,39 @@
         "tokenExpiration": "2018-03-03T17:17:35.494"
     },
     {
-        "company": "",
+        "company": null,
         "description": {
-            "ENGLISH": "Designer num\u00e9rique \u00e0 Lyon",
-            "FRENCH": "Designer num\u00e9rique \u00e0 Lyon"
+            "ENGLISH": "Designer syst\u00e9mique, facilitatrice, oratrice, mentor, moteur d'\u00e9cosyst\u00e8mes, \u00e9cof\u00e9ministe intersectionnelle, j'appr\u00e9hende le complexe pour comprendre, converger, structurer et construire. Je donne des conf\u00e9rences et je publie sur mon m\u00e9tier et sur des th\u00e9matiques comme le burnout ou l'anthropoc\u00e8ne. Mes valeurs conduisent ma pratique du m\u00e9tier et je pratique un design inclusif et \u00e9thique. Depuis bient\u00f4t 15 ans, j'aide les personnes et les organisations \u00e0 d\u00e9finir leurs fondamentaux et leurs objectifs et \u00e0 construire une communication coh\u00e9rente en fonction. Je suis membre du chapitre lyonnais d'IxDA avec qui j'ai co-organis\u00e9 la conf\u00e9rence Interaction 18, des Designers Lyonnais et de groupes locaux d'entraide. J'ai cr\u00e9\u00e9 et co-anime le think tank Common Future(s).",
+            "FRENCH": "Designer syst\u00e9mique, facilitatrice, oratrice, mentor, moteur d'\u00e9cosyst\u00e8mes, \u00e9cof\u00e9ministe intersectionnelle, j'appr\u00e9hende le complexe pour comprendre, converger, structurer et construire. Je donne des conf\u00e9rences et je publie sur mon m\u00e9tier et sur des th\u00e9matiques comme le burnout ou l'anthropoc\u00e8ne. Mes valeurs conduisent ma pratique du m\u00e9tier et je pratique un design inclusif et \u00e9thique. Depuis bient\u00f4t 15 ans, j'aide les personnes et les organisations \u00e0 d\u00e9finir leurs fondamentaux et leurs objectifs et \u00e0 construire une communication coh\u00e9rente en fonction. Je suis membre du chapitre lyonnais d'IxDA avec qui j'ai co-organis\u00e9 la conf\u00e9rence Interaction 18, des Designers Lyonnais et de groupes locaux d'entraide. J'ai cr\u00e9\u00e9 et co-anime le think tank Common Future(s)."
         },
-        "email": null,
-        "emailHash": "d712924058b1de9a99428e532f9d0d86",
-        "firstname": "Marie-c\u00e9cile",
+        "email": "x82gk55uEzcXqSbzpPzoo3QcDFx3/dMhjxkOLtxZzRw=",
+        "emailHash": "28478b0979ec8da4bf1e9ee90c1e0806",
+        "firstname": "Marie-C\u00e9cile",
         "lastname": "Paccard",
-        "legacyId": 1431,
-        "links": [],
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/mcpaccard"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/mcpaccard/"
+            },
+            {
+                "name": "Blog",
+                "url": "http://resilience.mcpaccard.com"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://mcpaccard.com"
+            }
+        ],
         "login": "mcpaccard",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/paccard.png",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.512"
+        "tokenExpiration": "2019-03-03T22:24:54.417"
     },
     {
         "company": "",
@@ -31193,13 +31424,22 @@
         "emailHash": "741aadef5d0bca2b4256209f159972e8",
         "firstname": "Mickael",
         "lastname": "Faust",
-        "legacyId": 1921,
-        "links": [],
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/TsubaR00ck"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/mickael-faust-67a55768"
+            }
+        ],
         "login": "mickael.faust",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/faust.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.513"
+        "tokenExpiration": "2019-03-03T22:24:54.441"
     },
     {
         "company": "",
@@ -31244,7 +31484,7 @@
             "FRENCH": "D\u00e9veloppeur le jour, open-source addict la nuit."
         },
         "email": "mI74qs043wESglC35A67cCNskPcx2B/jKXNwofDJohc=",
-        "emailHash": null,
+        "emailHash": "0821f22ef4c472411f3d6ffa525bdf44",
         "firstname": "Mickael",
         "lastname": "Jeanroy",
         "legacyId": null,
@@ -31252,13 +31492,17 @@
             {
                 "name": "Twitter",
                 "url": "https://twitter.com/mickaeljeanroy"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://www.malt.fr"
             }
         ],
         "login": "mickaeljeanroy",
-        "photoUrl": "https://avatars0.githubusercontent.com/u/1067361?v=3&s=400",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/jeanroy.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-01-30T16:01:09.865"
+        "tokenExpiration": "2019-03-03T22:24:54.445"
     },
     {
         "company": null,
@@ -33004,22 +33248,39 @@
         "tokenExpiration": "2018-03-03T17:17:35.533"
     },
     {
-        "company": "",
+        "company": null,
         "description": {
-            "ENGLISH": "Passionn\u00e9 par le Web et le logiciel Libre, Tristan Nitot contribue au projet Mozilla depuis 1998. Il a fond\u00e9 Mozilla Europe en 2003.",
-            "FRENCH": "Passionn\u00e9 par le Web et le logiciel Libre, Tristan Nitot contribue au projet Mozilla depuis 1998. Il a fond\u00e9 Mozilla Europe en 2003."
+            "ENGLISH": "Tristan Nitot, 52 ans, est un entrepreneur, auteur et activiste. Tristan a \u00e9t\u00e9 impliqu\u00e9 dans le projet Mozilla (Firefox) pendant 17 ans, depuis ses origines en 1998 jusqu'en 2015, il a en particulier co-fond\u00e9 et pr\u00e9sid\u00e9 Mozilla Europe. Ensuite, Tristan a \u00e9t\u00e9 Chief Product Officer du projet open source Cozy Cloud, un cloud personnel \"private by design\". En juin 2018, il a rejoint Qwant, le moteur de recherche europ\u00e9en respectueux de la vie priv\u00e9e en tant que VP Advocacy. Apr\u00e8s avoir \u00e9t\u00e9 trois ans membre du Conseil National du Num\u00e9rique (2013-2016), Tristan a publi\u00e9 en octobre 2016 un livre intitul\u00e9 \"Surveillance://\" sur le sujet de la vie priv\u00e9e \u00e0 l'\u00e8re du num\u00e9rique. Tristan est aussi membre du comit\u00e9 de prospective de la CNIL. \r\n",
+            "FRENCH": "Tristan Nitot, 52 ans, est un entrepreneur, auteur et activiste. Tristan a \u00e9t\u00e9 impliqu\u00e9 dans le projet Mozilla (Firefox) pendant 17 ans, depuis ses origines en 1998 jusqu'en 2015, il a en particulier co-fond\u00e9 et pr\u00e9sid\u00e9 Mozilla Europe. Ensuite, Tristan a \u00e9t\u00e9 Chief Product Officer du projet open source Cozy Cloud, un cloud personnel \"private by design\". En juin 2018, il a rejoint Qwant, le moteur de recherche europ\u00e9en respectueux de la vie priv\u00e9e en tant que VP Advocacy. Apr\u00e8s avoir \u00e9t\u00e9 trois ans membre du Conseil National du Num\u00e9rique (2013-2016), Tristan a publi\u00e9 en octobre 2016 un livre intitul\u00e9 \"Surveillance://\" sur le sujet de la vie priv\u00e9e \u00e0 l'\u00e8re du num\u00e9rique. Tristan est aussi membre du comit\u00e9 de prospective de la CNIL. \r\n"
         },
-        "email": null,
-        "emailHash": "3ac6bd8f5222fed869d6fd03314e25af",
+        "email": "vKi5MB7TdBcMe52oPyGykgatbdRu2RG4+RL+sPV7Q5Q=",
+        "emailHash": "f13e0838f351816f523b0c4f7834d9d7",
         "firstname": "Tristan",
         "lastname": "Nitot",
-        "legacyId": 994,
-        "links": [],
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/nitot/"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/nitot"
+            },
+            {
+                "name": "Blog",
+                "url": "https://standblog.org/"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://qwant.com/"
+            }
+        ],
         "login": "nitot",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/nitot.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.466"
+        "tokenExpiration": "2019-03-03T22:24:54.577"
     },
     {
         "company": "",
@@ -33498,22 +33759,39 @@
         "tokenExpiration": "2018-03-03T17:17:35.498"
     },
     {
-        "company": "",
+        "company": null,
         "description": {
-            "ENGLISH": "Supporter de la pens\u00e9e Agile au del\u00e0 de l'IT, comme solution pour une entreprise responsable.",
-            "FRENCH": "Supporter de la pens\u00e9e Agile au del\u00e0 de l'IT, comme solution pour une entreprise responsable."
+            "ENGLISH": "Oana likes to call herself an Agile Business DJ, who mixes whatever practices of collective intelligence, from Agile to TheoryU  help people, teams and organisations to become proud of their outcomes and delight their customers.\r\nAfter 15 years of experience in Software Development and System Management has driven  Oana to embrace Agile and Lean mind set, principles and practices, that she believes are the most effective approaches for 21st century lead organizations willing to focus on quality products with high impact on the market. She recently embraced the entrepreneurship path by founding cOemerge, a company that helps its large or smaller clients grow  Agility and entrepreneurial mindset  through Lean Startup. \r\nTo reinforce the effectiveness of Lean Startup,  she developed an original approach to  defining products in a Lean Startup way, called \"Test Driven Business\r\nOana acts as an Agile Transformation facilitator , using Creative Solution Definition. She trains and coach Agile teams (from core Business to Software Development and Support Services), so they are able to adopt the set of practices, from Scrum to Kanban and Lean improvement techniques, that are most adapted to their context and goal. A key focus is building cross-organizations  Product Ownership awareness to align their mission alignment toward User Value creation. ",
+            "FRENCH": "Oana likes to call herself an Agile Business DJ, who mixes whatever practices of collective intelligence, from Agile to TheoryU  help people, teams and organisations to become proud of their outcomes and delight their customers.\r\nAfter 15 years of experience in Software Development and System Management has driven  Oana to embrace Agile and Lean mind set, principles and practices, that she believes are the most effective approaches for 21st century lead organizations willing to focus on quality products with high impact on the market. She recently embraced the entrepreneurship path by founding cOemerge, a company that helps its large or smaller clients grow  Agility and entrepreneurial mindset  through Lean Startup. \r\nTo reinforce the effectiveness of Lean Startup,  she developed an original approach to  defining products in a Lean Startup way, called \"Test Driven Business\r\nOana acts as an Agile Transformation facilitator , using Creative Solution Definition. She trains and coach Agile teams (from core Business to Software Development and Support Services), so they are able to adopt the set of practices, from Scrum to Kanban and Lean improvement techniques, that are most adapted to their context and goal. A key focus is building cross-organizations  Product Ownership awareness to align their mission alignment toward User Value creation. "
         },
-        "email": null,
-        "emailHash": "344317ae86414143365fffe909ca2d24",
+        "email": "VjvfimZKUWjIgSy+KGYo+dUs19NFsKv+KizlUmIZcyM=",
+        "emailHash": "7d91f48a2412d2f5d394eba1946d5383",
         "firstname": "Oana",
         "lastname": "Juncu",
-        "legacyId": 180,
-        "links": [],
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/ojuncu"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/oanajuncu/"
+            },
+            {
+                "name": "Blog",
+                "url": "http://oanasagile.blogspot.com"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://coemerge.com"
+            }
+        ],
         "login": "ojuncu",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/juncu.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.462"
+        "tokenExpiration": "2019-03-03T22:24:54.46"
     },
     {
         "company": "",
@@ -33759,13 +34037,26 @@
         "emailHash": "f3297524e6d2f113a5874d43514015b1",
         "firstname": "Olivier",
         "lastname": "Huber",
-        "legacyId": 1026,
-        "links": [],
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/olivierhuber"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/olivierhuber/"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://www.zenika.com/"
+            }
+        ],
         "login": "olivier.huber",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/huber.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.466"
+        "tokenExpiration": "2019-03-03T22:24:54.464"
     },
     {
         "company": "",
@@ -33846,25 +34137,29 @@
             "FRENCH": "Olivier est Coach professionnel et Coach Agile chez Soat o\u00f9 il accompagne ses clients dans l'optimisation de leur performance par l'intelligence collective. Passionn\u00e9 par les relations humaines, il cherche avant tout \u00e0 redonner du sens aux pratiques utilis\u00e9es en entreprise afin de stimuler plus de responsabilisation, de motivation et d'engagement."
         },
         "email": "MwafhLtDXx6v+satfYG9KY2zDExkODBvVopksPLtp+8=",
-        "emailHash": null,
+        "emailHash": "9dc20eda13e6738df9e02d28fa6fb16d",
         "firstname": "Olivier",
-        "lastname": "My",
+        "lastname": "MY",
         "legacyId": null,
         "links": [
             {
                 "name": "Twitter",
-                "url": "https://twitter.com/OyoMY"
+                "url": "https://twitter.com/OyoMy"
             },
             {
-                "name": "Autre",
-                "url": "http://oyomy.fr/"
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/oliviermy/"
+            },
+            {
+                "name": "Blog",
+                "url": "https://oyomy.fr/"
             }
         ],
         "login": "olivier.my",
-        "photoUrl": "https://mixitconf.org/images/speakers/my.jpg",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/my.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-04-17T06:40:54.11"
+        "tokenExpiration": "2019-03-03T22:24:54.473"
     },
     {
         "company": null,
@@ -34227,22 +34522,22 @@
         "tokenExpiration": "2018-03-03T17:17:35.508"
     },
     {
-        "company": "",
+        "company": null,
         "description": {
-            "ENGLISH": "craint l'eau froide. ",
-            "FRENCH": "craint l'eau froide. "
+            "ENGLISH": "UNKNOWN",
+            "FRENCH": "UNKNOWN"
         },
-        "email": null,
-        "emailHash": "cf1b8b7c132e9cfe063c6b6e902ce6a5",
+        "email": "CPTTVuwNfACBxy8rNAhvgnz1tKhZ7ZheU2KgdxkYGNc=",
+        "emailHash": "d20b62447356b0e9796c18ffc0596325",
         "firstname": "Pablo",
         "lastname": "Pernot",
-        "legacyId": 25,
+        "legacyId": null,
         "links": [],
         "login": "pablopernot",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/pernot.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.461"
+        "tokenExpiration": "2019-03-03T22:24:54.477"
     },
     {
         "company": "",
@@ -34376,14 +34671,31 @@
         "email": null,
         "emailHash": "37458c7c44851cd6c402e02e5a9be94f",
         "firstname": "Pascal",
-        "lastname": "Martin",
-        "legacyId": 1033,
-        "links": [],
+        "lastname": "MARTIN",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/pascal_martin"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/martinpascal/"
+            },
+            {
+                "name": "Blog",
+                "url": "https://blog.pascal-martin.fr/"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://tech.m6web.fr/"
+            }
+        ],
         "login": "pascal.martin",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/martin.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.504"
+        "tokenExpiration": "2019-03-03T22:24:54.48"
     },
     {
         "company": "",
@@ -37427,13 +37739,25 @@
             {
                 "name": "Twitter",
                 "url": "https://twitter.com/s_colson"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/stephanecolson/"
+            },
+            {
+                "name": "Blog",
+                "url": "https://lyontesting.fr"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://testingit.eu"
             }
         ],
         "login": "s_colson",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/colson.jpg",
         "role": "USER",
-        "token": "606bb52ebb5a",
-        "tokenExpiration": "2019-02-19T19:02:51.673"
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.532"
     },
     {
         "company": "",
@@ -39174,25 +39498,21 @@
             "FRENCH": "St\u00e9phane has a thing for code quality and robustness. He's been spreading the word for more than ten years while developing large scale Java enterprise applications in the geospatial, financial, or logistics sectors. An Apache Maven PMC member since 2006, he joined the core Spring Framework development team early 2014, being one of the main contributors to both Spring Framework and Spring Boot since. During his free time, he loves traveling around the world."
         },
         "email": "rDsKAnbKv02tPa/aDyQQwsH3KRqVChJnyLAEl9Gioyw=",
-        "emailHash": null,
+        "emailHash": "33d0963a20138828608f3f61927545b8",
         "firstname": "St\u00e9phane",
         "lastname": "Nicoll",
-        "legacyId": 1010,
+        "legacyId": null,
         "links": [
-            {
-                "name": "Github",
-                "url": "https://github.com/snicoll"
-            },
             {
                 "name": "Twitter",
                 "url": "https://twitter.com/snicoll"
             }
         ],
         "login": "snicoll",
-        "photoUrl": "https://lh5.googleusercontent.com/-Z-fY5u0ZtX8/AAAAAAAAAAI/AAAAAAAAAEk/XrzcHQMl1sU/photo.jpg",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/nicoll.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-01-29T15:35:30.254"
+        "tokenExpiration": "2019-03-03T22:24:54.529"
     },
     {
         "company": "",
@@ -41643,26 +41963,13 @@
         "emailHash": "9299f1577563a936035f5d39a9f3c51b",
         "firstname": "Thierry",
         "lastname": "Chantier",
-        "legacyId": 33,
-        "links": [
-            {
-                "name": "MixTeen",
-                "url": "http://mixteen.github.io/"
-            },
-            {
-                "name": "Tweeter",
-                "url": "https://twitter.com/titimoby"
-            },
-            {
-                "name": "Github",
-                "url": "https://github.com/titimoby"
-            }
-        ],
+        "legacyId": null,
+        "links": [],
         "login": "titimoby",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/chantier.jpg",
         "role": "STAFF_IN_PAUSE",
-        "token": "1404f95fff41",
-        "tokenExpiration": "2018-04-05T12:17:53.225"
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.552"
     },
     {
         "company": "",
@@ -43874,15 +44181,32 @@
         },
         "email": null,
         "emailHash": "243ed6e0c253e674512d807730c4b08f",
-        "firstname": "Yannick",
-        "lastname": "Grenzinger",
-        "legacyId": 658,
-        "links": [],
+        "firstname": "y\u03b1nnick",
+        "lastname": "grenzinger",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/ygrenzinger"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/yannickgrenzinger/"
+            },
+            {
+                "name": "Blog",
+                "url": "https://about.me/yannick.grenzinger"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://www.benextcompany.com/"
+            }
+        ],
         "login": "ygrenzinger",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/grenzinger.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.493"
+        "tokenExpiration": "2019-03-03T22:24:54.595"
     },
     {
         "company": "",
@@ -44536,10 +44860,10 @@
         "legacyId": null,
         "links": [],
         "login": "conserto",
-        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "photoUrl": "https://mixitconf.org/images/sponsors/logo-conserto.svg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T14:31:43.253"
+        "tokenExpiration": "2019-03-03T22:08:45.626"
     },
     {
         "company": "Soci\u00e9t\u00e9 g\u00e9n\u00e9rale",
@@ -44563,9 +44887,1695 @@
             }
         ],
         "login": "societegenerale",
-        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "photoUrl": "https://mixitconf.org/images/sponsors/logo-societegenerale.svg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T14:40:08.197"
+        "tokenExpiration": "2019-03-03T22:09:17.121"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "qCykse+slpyHREXSh0rAzs2BiApviFtRrW6ZA9ewzHtv9YmlgkuqwnSLaeNn36Ta",
+        "emailHash": null,
+        "firstname": "Shaquille",
+        "lastname": "Shaquille",
+        "legacyId": null,
+        "links": [],
+        "login": "www.shaquilledeedaniels",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "00c05de8e632",
+        "tokenExpiration": "2019-03-06T22:22:56.131"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Irlandais, geek passionn\u00e9 de tout ce qui est apprentissage et transmission des connaissances autour de l'informatique. Adepte de Raspberry Pi.",
+            "FRENCH": "Irlandais, geek passionn\u00e9 de tout ce qui est apprentissage et transmission des connaissances autour de l'informatique. Adepte de Raspberry Pi."
+        },
+        "email": "hydeW17tmkG0YI8USLWAPqv13VoRcNaXouAZN2q9Gwc=",
+        "emailHash": "6b6d05623ba1600f88a76c2c50009610",
+        "firstname": "Alan",
+        "lastname": "McCullagh \u2234",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/tyrower"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/alan-mccullagh-022a918/"
+            }
+        ],
+        "login": "tyrower",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/mccullagh_0.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.117"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Andre is an open source developer and speaker focused on building peer-to-peer social networks. He has worked in the software industry for 8 years, gaining fame in JavaScript tooling, such as Cycle.js, RxJS, Callbags, and functional programming. However, his background for more than 14 years has been community software: (2004) started managing communities of PHP bulletin boards, (2012) made a startup for modern group discussions, (2014) made peer-to-peer platforms with WebRTC, and recently (2017) joined the Secure Scuttlebutt group to build offline-first social networks. His latest project, Manyverse, is a mobile app social network experience capable of working entirely offline, built for non-commercial purposes and as free and open source software, with the goal of helping the underconnected populations in developing countries use the bright side of modern communications.",
+            "FRENCH": "Andre is an open source developer and speaker focused on building peer-to-peer social networks. He has worked in the software industry for 8 years, gaining fame in JavaScript tooling, such as Cycle.js, RxJS, Callbags, and functional programming. However, his background for more than 14 years has been community software: (2004) started managing communities of PHP bulletin boards, (2012) made a startup for modern group discussions, (2014) made peer-to-peer platforms with WebRTC, and recently (2017) joined the Secure Scuttlebutt group to build offline-first social networks. His latest project, Manyverse, is a mobile app social network experience capable of working entirely offline, built for non-commercial purposes and as free and open source software, with the goal of helping the underconnected populations in developing countries use the bright side of modern communications."
+        },
+        "email": "cJhr7u7l4s5MAs+448/KjGwwSMyhmxzW6jj8fcffrVQ=",
+        "emailHash": "c8dbe3c6d219999ee0ecce86a450d0e3",
+        "firstname": "Andre",
+        "lastname": "Staltz",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/andrestaltz"
+            },
+            {
+                "name": "Blog",
+                "url": "https://staltz.com"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://staltz.com"
+            }
+        ],
+        "login": "andre",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/staltz.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.203"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Arnaud Tournier is a developper since more than ten years. Initially specialized on the C++ language in the context of real-time distributed information systems, this computer engineer spent the last five years on web technologies, with diligence and perspicacity. With the technical skills gained by several years programming to-the-metal, Arnaud leads, accompanies and advises developper teams on their application architectures and spreads his knowledge on cloud architectures and contenerization.",
+            "FRENCH": "Arnaud Tournier is a developper since more than ten years. Initially specialized on the C++ language in the context of real-time distributed information systems, this computer engineer spent the last five years on web technologies, with diligence and perspicacity. With the technical skills gained by several years programming to-the-metal, Arnaud leads, accompanies and advises developper teams on their application architectures and spreads his knowledge on cloud architectures and contenerization."
+        },
+        "email": "SUw3m4lGouwyMjch3Uf6b6eCFHU1qJ1raWWSQ5Mx90A=",
+        "emailHash": "3d45b77cce96b722c721267b65f2fbb5",
+        "firstname": "Arnaud",
+        "lastname": "Tournier",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/ltearno"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/lteconsulting/"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://stack-labs.com"
+            }
+        ],
+        "login": "ltearno",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/tournier.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.21"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "J'ai soutenu une th\u00e8se en neurosciences sur les m\u00e9canismes de l'apprentissage, en lien avec la motivation et les \u00e9motions notamment. J'ai ensuite rejoint Sogilis Lyon o\u00f9 j'ai pu d\u00e9couvrir le fonctionnement  d'une organisation autog\u00e9r\u00e9e, ce qui m'a s\u00e9duit au-del\u00e0 de toute attente. \r\nAujourd'hui, toujours chez Sogilis Lyon, je cherche \u00e0 promouvoir ce type d'organisation \u00e0 travers le jeu, ma passion dans la vie. \r\nJ'ai d'ailleurs un projet de bar \u00e0 jeu en cours pour ceux que \u00e7a int\u00e9resse.",
+            "FRENCH": "J'ai soutenu une th\u00e8se en neurosciences sur les m\u00e9canismes de l'apprentissage, en lien avec la motivation et les \u00e9motions notamment. J'ai ensuite rejoint Sogilis Lyon o\u00f9 j'ai pu d\u00e9couvrir le fonctionnement  d'une organisation autog\u00e9r\u00e9e, ce qui m'a s\u00e9duit au-del\u00e0 de toute attente. \r\nAujourd'hui, toujours chez Sogilis Lyon, je cherche \u00e0 promouvoir ce type d'organisation \u00e0 travers le jeu, ma passion dans la vie. \r\nJ'ai d'ailleurs un projet de bar \u00e0 jeu en cours pour ceux que \u00e7a int\u00e9resse."
+        },
+        "email": "BQgTNZU5Y0gqSkY8BTBTEtOP0tuuwLaPM255ic/xOXI=",
+        "emailHash": "c0323b6ffc7c5357117000339f356b45",
+        "firstname": "Augustin",
+        "lastname": "Richard",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/augustin-richard-2682734a/"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://sogilis.com/"
+            }
+        ],
+        "login": "augustin",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/richard.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.221"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "D\u00e9veloppeur passionn\u00e9, j'adore apprendre et transmettre aux autres ce que je d\u00e9couvre.",
+            "FRENCH": "D\u00e9veloppeur passionn\u00e9, j'adore apprendre et transmettre aux autres ce que je d\u00e9couvre."
+        },
+        "email": "+mUG1FLobbYITPkWAycijSkVTmAts8F32Y7lgfqx3RU=",
+        "emailHash": "751ef6f909c1c54dca0862d8c5dbcdac",
+        "firstname": "Bastien",
+        "lastname": "David",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/bastien_david"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/bastien-david-0b89864/"
+            }
+        ],
+        "login": "bastien.david.info",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/david.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.225"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "UNKNOWN",
+            "FRENCH": "UNKNOWN"
+        },
+        "email": "Ome2J5iVyzysZgSUc8dCELf73MkZRJBpXW04RVDVin4=",
+        "emailHash": "abac646391c0202b037414113060d29c",
+        "firstname": "Boyd",
+        "lastname": "Rotgans",
+        "legacyId": null,
+        "links": [],
+        "login": "bydrotgans",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/rotgans.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.237"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "https://bellaminettes.com/blog/",
+            "FRENCH": "https://bellaminettes.com/blog/"
+        },
+        "email": "ODkbS8woETEBVRQcO2RjR2jxTM5gtZDFCQw+RA0lxSs=",
+        "emailHash": "2a84b9779ee5ca81908abd09ac618ebb",
+        "firstname": "Bruno",
+        "lastname": "Bellamy",
+        "legacyId": null,
+        "links": [],
+        "login": "bruno",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/bellamy.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.252"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "C\u00e9line fait partie de la tribu Software Craftsmanship chez OCTO Technology.\r\n\r\nD\u00e9veloppeuse depuis plus de 10 ans, elle intervient et accompagne des projets pour promouvoir et diffuser les pratiques de qualit\u00e9 logicielle (TDD, Clean Code, Clean Archi, Code review).\r\n\r\nElle s'int\u00e9resse et se passionne pour tout ce qui favorise et entretient la dynamique dans une \u00e9quipe pour d\u00e9livrer r\u00e9guli\u00e8rement de la valeur.",
+            "FRENCH": "C\u00e9line fait partie de la tribu Software Craftsmanship chez OCTO Technology.\r\n\r\nD\u00e9veloppeuse depuis plus de 10 ans, elle intervient et accompagne des projets pour promouvoir et diffuser les pratiques de qualit\u00e9 logicielle (TDD, Clean Code, Clean Archi, Code review).\r\n\r\nElle s'int\u00e9resse et se passionne pour tout ce qui favorise et entretient la dynamique dans une \u00e9quipe pour d\u00e9livrer r\u00e9guli\u00e8rement de la valeur."
+        },
+        "email": "I1iikX93yRd7YUYCa/1Vng==",
+        "emailHash": "7bfb803015ee8c4e07d7fe6b0e714294",
+        "firstname": "C\u00e9line",
+        "lastname": "Gilet",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/celinegilet"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/c%C3%A9line-gilet-33794210/"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://www.octo.com/fr"
+            }
+        ],
+        "login": "cgilet",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/gilet.png",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.26"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Christian wants to (r)evolutionize our working environment by changing how we interact. To achieve this he demonstrates the power of Liberating Structures to people around the world. He loves his children, Ashtanga Yoga and Surfing.",
+            "FRENCH": "Christian wants to (r)evolutionize our working environment by changing how we interact. To achieve this he demonstrates the power of Liberating Structures to people around the world. He loves his children, Ashtanga Yoga and Surfing."
+        },
+        "email": "jVawhgLCK6MhNNZ1t6Q1rCrEOEwfdxmfJ7rRk3eSIf8=",
+        "emailHash": "e8a639ef665c063ec64c908a01f11837",
+        "firstname": "Christian",
+        "lastname": "Weinert",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/rObOtrOxx"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/christian-weinert-4a953b142/"
+            },
+            {
+                "name": "Blog",
+                "url": "https://blog.holisticon.de/"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://www.holisticon.de/"
+            }
+        ],
+        "login": "ch.weinert",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/weinert.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.264"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "UNKNOWN",
+            "FRENCH": "UNKNOWN"
+        },
+        "email": "GOgXBBbChuK0nQyrPnPRffasrJVrCnSy+aFE5Fl+eRA=",
+        "emailHash": "2898ad2474ba25b87a9326585d3a234e",
+        "firstname": "Christophe",
+        "lastname": "Keromen",
+        "legacyId": null,
+        "links": [],
+        "login": "ckeromen",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/keromen.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.267"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Jeune docteur en Math\u00e9matiques et Informatiques, j'ai pass\u00e9 mon doctorat avec l'INSA et l'INRA de Toulouse sur les m\u00e9thodes de comptage appliqu\u00e9 au design de prot\u00e9ines. Je travaille d\u00e9sormais sur des probl\u00e9matiques de recherche en IA via des m\u00e9thodes de Machine Learning : traduction automatique, analyse s\u00e9mantique, d\u00e9tection automatique de langues\u2026",
+            "FRENCH": "Jeune docteur en Math\u00e9matiques et Informatiques, j'ai pass\u00e9 mon doctorat avec l'INSA et l'INRA de Toulouse sur les m\u00e9thodes de comptage appliqu\u00e9 au design de prot\u00e9ines. Je travaille d\u00e9sormais sur des probl\u00e9matiques de recherche en IA via des m\u00e9thodes de Machine Learning : traduction automatique, analyse s\u00e9mantique, d\u00e9tection automatique de langues\u2026"
+        },
+        "email": "LpsfOYNYxlBSwpWVFSqtD1JnDdKPULdxN8pbuL+O5iY=",
+        "emailHash": "57c3c511b809104a7467aec538a8cc30",
+        "firstname": "Cl\u00e9ment",
+        "lastname": "Viricel",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/clement-viricel-b82821b1/"
+            },
+            {
+                "name": "Company Website",
+                "url": "http://www.365talents.com"
+            }
+        ],
+        "login": "paul.mougel",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/viricel.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.271"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "David Benqu\u00e9 est designer/chercheur et doctorant au Royal College of Art de Londres. Sa pratique interroge la place des sciences et des technologies dans notre soci\u00e9t\u00e9 \u00e0 travers des installations, publications et sc\u00e9narios. Son projet de recherche actuel porte sur les pouvoirs suppos\u00e9s des algorithmes \u2018pr\u00e9dictifs\u2019 et l\u2019influence de ceux ci sur les imaginaires collectifs. Il enseigne le design \u00e0 Goldsmiths University of London.",
+            "FRENCH": "David Benqu\u00e9 est designer/chercheur et doctorant au Royal College of Art de Londres. Sa pratique interroge la place des sciences et des technologies dans notre soci\u00e9t\u00e9 \u00e0 travers des installations, publications et sc\u00e9narios. Son projet de recherche actuel porte sur les pouvoirs suppos\u00e9s des algorithmes \u2018pr\u00e9dictifs\u2019 et l\u2019influence de ceux ci sur les imaginaires collectifs. Il enseigne le design \u00e0 Goldsmiths University of London."
+        },
+        "email": "Gf1KKuu+e3Mg3Rn/ySirZ/6PuliDSR9T/xMWts93UNc=",
+        "emailHash": "3398a34f9c824f0f876a645ca57a5716",
+        "firstname": "David",
+        "lastname": "Benqu\u00e9",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/davidbenque"
+            },
+            {
+                "name": "Blog",
+                "url": "https://theairpump.davidbenque.com/"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://davidbenque.com/"
+            }
+        ],
+        "login": "davidbenque",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/benque.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.278"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Dmitry Vinnik is a Lead Software Engineer at Salesforce and has been passionate about Software Quality since the very beginning of his career.\r\nHe started out as a Quality Engineer, and was able to bring test expertise into his current Software Engineering role to ensure delivery of a high quality product.\r\nDmitry is also a Scrum Master focused on making his team more efficient and productive.\r\nHis background involves studying medicine and bioinformatics in addition to software and quality engineering. ",
+            "FRENCH": "Dmitry Vinnik is a Lead Software Engineer at Salesforce and has been passionate about Software Quality since the very beginning of his career.\r\nHe started out as a Quality Engineer, and was able to bring test expertise into his current Software Engineering role to ensure delivery of a high quality product.\r\nDmitry is also a Scrum Master focused on making his team more efficient and productive.\r\nHis background involves studying medicine and bioinformatics in addition to software and quality engineering. "
+        },
+        "email": "AwuLQH8NZYGPcEerduozn+EGhcyMa8ex1qD3d88JPq4=",
+        "emailHash": "cdac6b00f833d10f7ffc529cbc275d19",
+        "firstname": "Dmitry",
+        "lastname": "Vinnik",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/dmitry-vinnik"
+            },
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/DmitryVinnik"
+            },
+            {
+                "name": "Blog",
+                "url": "https://dvinnik.com"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://dvinnik.com"
+            }
+        ],
+        "login": "dmitryvinn",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/vinnik.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.281"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Edwin Jakobs is a developer and a designer with a strong interest in computational and generative methods. He is one of the founding partners of RNDR, a studio for interactive design based in The Hague. Edwin is the lead developer of OPENRNDR an open source framework for creative coding.",
+            "FRENCH": "Edwin Jakobs is a developer and a designer with a strong interest in computational and generative methods. He is one of the founding partners of RNDR, a studio for interactive design based in The Hague. Edwin is the lead developer of OPENRNDR an open source framework for creative coding."
+        },
+        "email": "DqPUaQDjFLhE7i5SX5SxmK2LsvIcrNThOEXacysdofo=",
+        "emailHash": "d2e6b262225b44456b219e93bc0db356",
+        "firstname": "Edwin",
+        "lastname": "Jakobs",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "http://twitter.com/voorbeeld"
+            },
+            {
+                "name": "Company Website",
+                "url": "http://rndr.studio"
+            }
+        ],
+        "login": "edwin",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/jakobs.png",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.285"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Elisabeth is a UX & tech innovator and a travel enthusiast. She is passionate about lean UX, web performance and usability testing. While exploring new places all around the world, she's always on the hunt for fresh UX & frontend inspirations.",
+            "FRENCH": "Elisabeth is a UX & tech innovator and a travel enthusiast. She is passionate about lean UX, web performance and usability testing. While exploring new places all around the world, she's always on the hunt for fresh UX & frontend inspirations."
+        },
+        "email": "0IkSknaHmxxEgMCq4pt25fWVq5NGaxtQYAXI3+qWih0=",
+        "emailHash": "675645596039ca1965f76200b3b4dbcf",
+        "firstname": "Elisabeth",
+        "lastname": "Engel",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "http://twitter.com/_lizzelo_"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/elisabeth-engel-a9699b71/"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://interfacewerk.de/"
+            },
+            {
+                "name": "Blog",
+                "url": "http://elisabeth-engel.de"
+            }
+        ],
+        "login": "elisabeth-engel",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/engel.png",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.289"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Emily has over ten years of experience in scientific computing and engineering research and development. She has a background in mathematical analysis, with a focus on probability theory and numerical analysis. She is currently working in Python, though she has a background that includes C#/.Net, Unity3D, SQL, and MATLAB. In addition, she has experience in statistics and experimental design, and has served as Principal Investigator in clinical research projects. An advocate for social justice, Emily is an activist and survivor of the 2017 Charlottesville neo-Nazi attacks. She was named as one of 2018\u2019s most influential feminists by Bitch Magazine for her work in shining a light on far-right violence with her project, First Vigil.",
+            "FRENCH": "Emily has over ten years of experience in scientific computing and engineering research and development. She has a background in mathematical analysis, with a focus on probability theory and numerical analysis. She is currently working in Python, though she has a background that includes C#/.Net, Unity3D, SQL, and MATLAB. In addition, she has experience in statistics and experimental design, and has served as Principal Investigator in clinical research projects. An advocate for social justice, Emily is an activist and survivor of the 2017 Charlottesville neo-Nazi attacks. She was named as one of 2018\u2019s most influential feminists by Bitch Magazine for her work in shining a light on far-right violence with her project, First Vigil."
+        },
+        "email": "F9ZTzZNrGBkD5hKIGXj3BcNHTFVaR+yoYetxqMqFoLk=",
+        "emailHash": "b75fbf3347c43d1ebc25719b2db052a5",
+        "firstname": "Emily",
+        "lastname": "Gorcenski",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/emilygorcenski"
+            }
+        ],
+        "login": "egorcenski",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/gorcenski.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.296"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Passion\u00e9e par mon m\u00e9tier de Product Owner, par l'UX (User eXp\u00e9rience) et le GameStorming, j'aime participer \u00e0 l'\u00e9laboration d'un produit en \u00e9tant le lien entre les utilisateurs et les d\u00e9veloppeurs.\r\n\r\nSpeakeuse en conf\u00e9rence tech, membre des Duchess France, de SunnyTech et du MeetUp UX Flupa Montpellier, je continue \u00e0 me perfectionner et \u00e0 discuter de nouvelles m\u00e9thodes ou technologies de l'IT.",
+            "FRENCH": "Passion\u00e9e par mon m\u00e9tier de Product Owner, par l'UX (User eXp\u00e9rience) et le GameStorming, j'aime participer \u00e0 l'\u00e9laboration d'un produit en \u00e9tant le lien entre les utilisateurs et les d\u00e9veloppeurs.\r\n\r\nSpeakeuse en conf\u00e9rence tech, membre des Duchess France, de SunnyTech et du MeetUp UX Flupa Montpellier, je continue \u00e0 me perfectionner et \u00e0 discuter de nouvelles m\u00e9thodes ou technologies de l'IT."
+        },
+        "email": "2G9+BSG3U+ZOC70DfBfOPxeEnG05X3QCyjijlC0ZwIY=",
+        "emailHash": "f196e266e8cad0835fe73a93dcd4da7c",
+        "firstname": "Estelle",
+        "lastname": "Landry",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/estelandry"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/estelle-landry-61866b71/"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://www.elium.tv/"
+            }
+        ],
+        "login": "estelle.landry",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/landry.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.303"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Statisticien public, agiliste militant, formateur en design-thinking et en leadership",
+            "FRENCH": "Statisticien public, agiliste militant, formateur en design-thinking et en leadership"
+        },
+        "email": "5I92JTNgcFZB7JMqTXE03I+2qybBXWkUreLAuP+phP8=",
+        "emailHash": "74a36ab9eb3c6705fb098270261b73d6",
+        "firstname": "Fabrice",
+        "lastname": "Bloch",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/AgilitatrPublic"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/fabrice-bloch-4b9b5194/"
+            }
+        ],
+        "login": "jackfack.fb",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/bloch.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.307"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "D\u00e9j\u00e0 17 ans avec la t\u00eate dans le produit ! Ex entrepreneur (3 startups, 2 exits), salari\u00e9 de temps en temps (Deezer).\r\nAujourd'hui, j'aide les autres \u00e0 cr\u00e9er de meilleurs produits : je forme, je coache, et parfois je parle de produit, de growth, de design d'engagement et de responsabilit\u00e9 digitale.\r\n",
+            "FRENCH": "D\u00e9j\u00e0 17 ans avec la t\u00eate dans le produit ! Ex entrepreneur (3 startups, 2 exits), salari\u00e9 de temps en temps (Deezer).\r\nAujourd'hui, j'aide les autres \u00e0 cr\u00e9er de meilleurs produits : je forme, je coache, et parfois je parle de produit, de growth, de design d'engagement et de responsabilit\u00e9 digitale.\r\n"
+        },
+        "email": "Te4BYo7Sg/4JTG6oD5KkZDJXuVu2mAMMX8pOePT+TR0=",
+        "emailHash": "6028e6aaa5b1ea77ca418db46858121b",
+        "firstname": "Fabrice",
+        "lastname": "Des Mazery",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/desmazery"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://fr.linkedin.com/in/innovatormindset"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://www.thiga.fr"
+            }
+        ],
+        "login": "fabrice.desmazery",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/des_mazery.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.31"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Architect & Head of Digital Development @OuestFrance\ud83c\udf1f #FullStack CTO @imagecharts @Redsmin @motiondynamic_ @mailpopin founder\ud83d\ude80 Trainer @EPSI_Nantes @UnivNantes",
+            "FRENCH": "Architect & Head of Digital Development @OuestFrance\ud83c\udf1f #FullStack CTO @imagecharts @Redsmin @motiondynamic_ @mailpopin founder\ud83d\ude80 Trainer @EPSI_Nantes @UnivNantes"
+        },
+        "email": "gq/KQNUR9h8i/tOZGCx8b3gOc/DGPpzlX/3Cf3zEGmc=",
+        "emailHash": "e715824b2d858e3b89104ed0896012c8",
+        "firstname": "Fran\u00e7ois-Guillaume",
+        "lastname": "Ribreau",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/FGRibreau"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/francoisguillaumeribreau/"
+            },
+            {
+                "name": "Blog",
+                "url": "https://blog.fgribreau.com"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://fgribreau.com"
+            }
+        ],
+        "login": "ribreau",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/ribreau.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.324"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Sp\u00e9cialiste de la transformation des organisations, auparavant directrice marketing, j\u2019accompagne aujourd\u2019hui les entreprises de toutes tailles dans la r\u00e9novation de leurs offres, la d\u00e9couverte et la mise en oeuvre de l\u2019agilit\u00e9 au niveau strat\u00e9gique et manag\u00e9rial.\r\n\r\nForte de 20 ann\u00e9es de management d\u2019\u00e9quipes, transversal et op\u00e9rationnel, j\u2019oeuvre d\u00e9sormais \u00e0 l\u2019am\u00e9lioration les organisations, les offres et la culture des entreprises que j\u2019accompagne, au travers de programmes de  transformation culturelle, formation et coaching de managers \r\n\r\nMon cr\u00e9do : Rien ne se perd, rien ne se cr\u00e9e, tout se transforme !\r\n",
+            "FRENCH": "Sp\u00e9cialiste de la transformation des organisations, auparavant directrice marketing, j\u2019accompagne aujourd\u2019hui les entreprises de toutes tailles dans la r\u00e9novation de leurs offres, la d\u00e9couverte et la mise en oeuvre de l\u2019agilit\u00e9 au niveau strat\u00e9gique et manag\u00e9rial.\r\n\r\nForte de 20 ann\u00e9es de management d\u2019\u00e9quipes, transversal et op\u00e9rationnel, j\u2019oeuvre d\u00e9sormais \u00e0 l\u2019am\u00e9lioration les organisations, les offres et la culture des entreprises que j\u2019accompagne, au travers de programmes de  transformation culturelle, formation et coaching de managers \r\n\r\nMon cr\u00e9do : Rien ne se perd, rien ne se cr\u00e9e, tout se transforme !\r\n"
+        },
+        "email": "3ZAluLzJ3s88IiSzHOrCtbiftlokiKeZQ+zAzTiMmDA=",
+        "emailHash": "cd14ffc38d8bf729ccd7a69df0c74e8d",
+        "firstname": "Isabelle",
+        "lastname": "Gauthier",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/I_Gauthier"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/igauthier/"
+            },
+            {
+                "name": "Blog",
+                "url": "https://blog.goood.com/author/igauthier91189542/"
+            },
+            {
+                "name": "Company Website",
+                "url": "http://www.goood.com"
+            }
+        ],
+        "login": "i.gauthier",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/gauthier.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.342"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Ivan is a .NET freelance developer in love with Azure, Xamarin, and the idea of automating whatever. When he\u2019s not developing something new, he\u2019s salvaging something inherited, consulting with enthusiasm, and testing and breaking new technologies in a quest for something useful.",
+            "FRENCH": "Ivan is a .NET freelance developer in love with Azure, Xamarin, and the idea of automating whatever. When he\u2019s not developing something new, he\u2019s salvaging something inherited, consulting with enthusiasm, and testing and breaking new technologies in a quest for something useful."
+        },
+        "email": "MS4U1oP62hPjIfniyXPk2g==",
+        "emailHash": "402476a4ba88f9ef948a17ee96d1f360",
+        "firstname": "Ivan",
+        "lastname": "\u010culjak",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/culjakivan"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/culjakivan/"
+            },
+            {
+                "name": "Blog",
+                "url": "https://www.culjak.xyz"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://www.celestemaze.com"
+            }
+        ],
+        "login": "ivan",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/\u010duljak.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.345"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Founder of Bucketworks (2002), the first collaborative third place in America, and the School Factory (2007), a federation of more than 100 third places, James has been passionate about the development of hands-on learning communities across science, art, business and culture. James now develops a new third place, Bright City, in Paris, while creating a mosaic of the world with 10,000 human eyes. ",
+            "FRENCH": "Founder of Bucketworks (2002), the first collaborative third place in America, and the School Factory (2007), a federation of more than 100 third places, James has been passionate about the development of hands-on learning communities across science, art, business and culture. James now develops a new third place, Bright City, in Paris, while creating a mosaic of the world with 10,000 human eyes. "
+        },
+        "email": "+nTRIn8SyXAm0Y2zPwiYh1E1eQ8xmmBD0xyzGmxZ4+s=",
+        "emailHash": "46d9b896bdfe43864b7516b75965a1ae",
+        "firstname": "James",
+        "lastname": "Carlson",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/hypnagogic"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/bucketworks/"
+            },
+            {
+                "name": "Blog",
+                "url": "http://jamescarlson.me"
+            }
+        ],
+        "login": "james.carlson",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/carlson.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.351"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Terrien \ud83c\udf0d, \u00eatre humain \ud83d\udeb6, papa \ud83d\udc68\u200d\ud83d\udc69\u200d\ud83d\udc67\u200d\ud83d\udc66, mari \ud83d\udc91, d\u00e9veloppeur \ud83d\udc68\u200d\ud83d\udcbb, outilleur \ud83d\udd28, cycliste \ud83d\udeb4, gamer \ud83c\udfae, gourmand \ud83e\udd58, bisounours \ud83d\udc3b.\r\n\r\nJ'ai commenc\u00e9 \u00e0 programmer des outils sur calculatrice Casio pour mes camarades de classe au lyc\u00e9e il y a 20 ans, et cette volont\u00e9 constante de mettre l'informatique au service des \u00eatres humains m'a emmen\u00e9 sur les routes du d\u00e9veloppement sous ses multiples facettes - desktop, embarqu\u00e9, Web front, Web serveur, cloud.\r\n\r\nJ'occupe mes journ\u00e9es chez SonarSource \u00e0 forger des outils logiciels pour faciliter la vie des mes coll\u00e8gues, et certains de mes weekends \u00e0 animer des ateliers Arduino pour le chapitre genevois de Devoxx4Kids.",
+            "FRENCH": "Terrien \ud83c\udf0d, \u00eatre humain \ud83d\udeb6, papa \ud83d\udc68\u200d\ud83d\udc69\u200d\ud83d\udc67\u200d\ud83d\udc66, mari \ud83d\udc91, d\u00e9veloppeur \ud83d\udc68\u200d\ud83d\udcbb, outilleur \ud83d\udd28, cycliste \ud83d\udeb4, gamer \ud83c\udfae, gourmand \ud83e\udd58, bisounours \ud83d\udc3b.\r\n\r\nJ'ai commenc\u00e9 \u00e0 programmer des outils sur calculatrice Casio pour mes camarades de classe au lyc\u00e9e il y a 20 ans, et cette volont\u00e9 constante de mettre l'informatique au service des \u00eatres humains m'a emmen\u00e9 sur les routes du d\u00e9veloppement sous ses multiples facettes - desktop, embarqu\u00e9, Web front, Web serveur, cloud.\r\n\r\nJ'occupe mes journ\u00e9es chez SonarSource \u00e0 forger des outils logiciels pour faciliter la vie des mes coll\u00e8gues, et certains de mes weekends \u00e0 animer des ateliers Arduino pour le chapitre genevois de Devoxx4Kids."
+        },
+        "email": "Cw8PqU+PCwUe2VQgpnMeSbMT4zRkmFBJPhLQu6u8Wd0=",
+        "emailHash": "5e896f63b8af2dfacf0589be330ded5c",
+        "firstname": "Jean-Baptiste",
+        "lastname": "Lievremont",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/mithfindel"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/jeanbaptistelievremont/"
+            }
+        ],
+        "login": "jb.lievremont",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/lievremont.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.354"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Je suis un nouveau d\u00e9veloppeur qui partage d\u00e9j\u00e0 tout ce que j'ai pu apprendre.",
+            "FRENCH": "Je suis un nouveau d\u00e9veloppeur qui partage d\u00e9j\u00e0 tout ce que j'ai pu apprendre."
+        },
+        "email": "MT5m3a9E26ne9pQkAJSfAcmfaezRGqrFzyRw6lq9JqY=",
+        "emailHash": "83ea11a4e4c1c8069abd2b7988fa3e1d",
+        "firstname": "Jules",
+        "lastname": "Hablot",
+        "legacyId": null,
+        "links": [],
+        "login": "jules.hablot",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/hablot.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.371"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Coming from International Marketing studies, I started Web Development at the end of 2016. I am now working in EdTech at SchoolMouv in Toulouse.\r\n\r\nI am passionate and curious about new tools, technologies and languages.",
+            "FRENCH": "Coming from International Marketing studies, I started Web Development at the end of 2016. I am now working in EdTech at SchoolMouv in Toulouse.\r\n\r\nI am passionate and curious about new tools, technologies and languages."
+        },
+        "email": "C62oZ/KP4IC+UTVwUPSuoxHkOnahF5q4JCix403D21A=",
+        "emailHash": "be313aed261839a3e699028a0a0a5f54",
+        "firstname": "Juliane",
+        "lastname": "Blier",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/tactless7"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/juliane-blier-428b8b49/"
+            }
+        ],
+        "login": "blier.juliane",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/blier.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.374"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Senior Lead Developer \u00e0 la Soci\u00e9t\u00e9 G\u00e9n\u00e9rale, je suis un fervent d\u00e9fenseur du Software Craftsmanship.\r\n\r\nJ'\u00e9vang\u00e9lise activement autour de DDD/Hexagonal Architecture, l'XP et le Kanban #NoEstimates au sein de cours et de meetups ainsi qu'\u00e0 travers d'articles de blog.\r\n\r\nMembre de la fondation OWASP, je m'efforce de transmettre \u00e0 la communaut\u00e9 une philosophie DevSecOps. J'ai mont\u00e9 plusieurs Red Teams  (\u00e9quipes mettant \u00e0 l'\u00e9preuve la s\u00e9curit\u00e9 d'une compagnie) et particip\u00e9 \u00e0 la mise en place de pipeline de Continuous Security \u00e0 l'\u00e9chelles d'entreprises.",
+            "FRENCH": "Senior Lead Developer \u00e0 la Soci\u00e9t\u00e9 G\u00e9n\u00e9rale, je suis un fervent d\u00e9fenseur du Software Craftsmanship.\r\n\r\nJ'\u00e9vang\u00e9lise activement autour de DDD/Hexagonal Architecture, l'XP et le Kanban #NoEstimates au sein de cours et de meetups ainsi qu'\u00e0 travers d'articles de blog.\r\n\r\nMembre de la fondation OWASP, je m'efforce de transmettre \u00e0 la communaut\u00e9 une philosophie DevSecOps. J'ai mont\u00e9 plusieurs Red Teams  (\u00e9quipes mettant \u00e0 l'\u00e9preuve la s\u00e9curit\u00e9 d'une compagnie) et particip\u00e9 \u00e0 la mise en place de pipeline de Continuous Security \u00e0 l'\u00e9chelles d'entreprises."
+        },
+        "email": "o8kOn0OizoVaFjqa+aNGflDpNeAQGJTKWTThWj+49BI=",
+        "emailHash": "610f3914d9b392b389657823719f09dd",
+        "firstname": "Julien",
+        "lastname": "Top\u00e7u",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/JulienTopcu"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/julien-top%C3%A7u/"
+            },
+            {
+                "name": "Blog",
+                "url": "https://beyondxscratch.com/"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://medium.com/soci%C3%A9t%C3%A9-g%C3%A9n%C3%A9rale-engineering"
+            }
+        ],
+        "login": "julien.topcu",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/top\u00e7u.png",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.382"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "J'aide les personnes, les \u00e9quipes et les organisations \u00e0 mieux coop\u00e9rer, et je fais tout mon possible pour que cela se fasse dans la joie et le respect. \r\nJe m'appuie sur mon go\u00fbt pour la facilitation, le th\u00e9\u00e2tre et le coaching syst\u00e9mique pour faire bouger les lignes.",
+            "FRENCH": "J'aide les personnes, les \u00e9quipes et les organisations \u00e0 mieux coop\u00e9rer, et je fais tout mon possible pour que cela se fasse dans la joie et le respect. \r\nJe m'appuie sur mon go\u00fbt pour la facilitation, le th\u00e9\u00e2tre et le coaching syst\u00e9mique pour faire bouger les lignes."
+        },
+        "email": "bAs4TewsCV4hrfSfisHPcyXHE1ndNHoyPXqXYDWduoE=",
+        "emailHash": "9b680e81b24876067465608938e4f983",
+        "firstname": "Julien",
+        "lastname": "Porot",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/cranedemorse"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/julienporot/"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://www.goood.com/"
+            }
+        ],
+        "login": "julien.porot",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/porot.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.386"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Kalyan Dikshit is a Mozilla Tech Speaker, Representative, and part of its Hyderabad Community, India. His job has to do with Security and he spoke at the Internet Freedom Festival 2017, 2018, Still Hacking Anyway (SHA), All Systems Go! 2017. He recently gave a talk at \u201cShift DEV 2018\u201d happened at Spilt in Croatia. \r\nAs a volunteer he localizes software for Mozilla, Tor, Orfox, Orbot, GlobaLeaks, Briar and OONIProbe. He currently also devotes his time with ICRISAT where he works, with drones to develop and trial techniques to connect farmers. \r\nFounder of the \u201cJAVA 1.X Hyderabad Chapter\u201d giving lectures on the latest features and changes in Java. Co-founder of \u201cDuck Duck Go Hyderabad Chapter\u201d. \r\n\u00abDeveloper by Day, Hacker by Night.\u00bb",
+            "FRENCH": "Kalyan Dikshit is a Mozilla Tech Speaker, Representative, and part of its Hyderabad Community, India. His job has to do with Security and he spoke at the Internet Freedom Festival 2017, 2018, Still Hacking Anyway (SHA), All Systems Go! 2017. He recently gave a talk at \u201cShift DEV 2018\u201d happened at Spilt in Croatia. \r\nAs a volunteer he localizes software for Mozilla, Tor, Orfox, Orbot, GlobaLeaks, Briar and OONIProbe. He currently also devotes his time with ICRISAT where he works, with drones to develop and trial techniques to connect farmers. \r\nFounder of the \u201cJAVA 1.X Hyderabad Chapter\u201d giving lectures on the latest features and changes in Java. Co-founder of \u201cDuck Duck Go Hyderabad Chapter\u201d. \r\n\u00abDeveloper by Day, Hacker by Night.\u00bb"
+        },
+        "email": "XGZXxar0S3MN9aHJ1s4WNu1VJylgFNzkCKO516bZlOs=",
+        "emailHash": "fafb2a5b8bbf6ee183f150606e5f0277",
+        "firstname": "Kalyan",
+        "lastname": "Dikshit",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/decode_dev"
+            },
+            {
+                "name": "Blog",
+                "url": "https://medium.com/@decode_dev"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://in.linkedin.com/in/umkdikshit"
+            }
+        ],
+        "login": "dikshitrocks93",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/dikshit.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.39"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Cloud Architect, I am above all passionate about tech, languages, infrastructure, and automation. \r\n\r\nJava, Kotlin, Go, Javascript or TypeScript are my day-to-day languages. I deploy all of those on the Google Kubernetes Engine with the Continuous Integration of Gitlab \ud83d\ude80. \r\n\r\nAddict of agility and devops, some of my work was to help teams to follow those philosophies. From the analysis of the code quality (with code-review or static analysis tool) to the setup of unit or end-to-end tests and ending by the continuous deployment of the application directly on the Google Cloud platform. \r\n\r\nMy mantra is to go to production as soon as possible! In my activity in Stack Labs and also in my personal time, I contribute on open source projects (Spring boot, Spring Security, Angular, Protractor, Jest schematics for Angular, NgxOpenlayers...). . \r\n\r\nI'm involved in the GDG Toulouse, on the organization part (for the video capture part) and to provide some talks too. Following that, I'm also into the DevFest Toulouse team since day 1. I'm mainly managing the website during the Devfest season. Thanks to that, I became the first external contributor to the GDG-X/hoverboard project. \r\n\r\nI'm currently CTO (and one of the founder) of Stack Labs, a company specialized in architecture and development of cloud solution. I supervise about twenty passionate and talented developers in their missions and during our internal events\r\n",
+            "FRENCH": "Cloud Architect, I am above all passionate about tech, languages, infrastructure, and automation. \r\n\r\nJava, Kotlin, Go, Javascript or TypeScript are my day-to-day languages. I deploy all of those on the Google Kubernetes Engine with the Continuous Integration of Gitlab \ud83d\ude80. \r\n\r\nAddict of agility and devops, some of my work was to help teams to follow those philosophies. From the analysis of the code quality (with code-review or static analysis tool) to the setup of unit or end-to-end tests and ending by the continuous deployment of the application directly on the Google Cloud platform. \r\n\r\nMy mantra is to go to production as soon as possible! In my activity in Stack Labs and also in my personal time, I contribute on open source projects (Spring boot, Spring Security, Angular, Protractor, Jest schematics for Angular, NgxOpenlayers...). . \r\n\r\nI'm involved in the GDG Toulouse, on the organization part (for the video capture part) and to provide some talks too. Following that, I'm also into the DevFest Toulouse team since day 1. I'm mainly managing the website during the Devfest season. Thanks to that, I became the first external contributor to the GDG-X/hoverboard project. \r\n\r\nI'm currently CTO (and one of the founder) of Stack Labs, a company specialized in architecture and development of cloud solution. I supervise about twenty passionate and talented developers in their missions and during our internal events\r\n"
+        },
+        "email": "pVuvJpxLHk0CtWmEm1DK0Yb0ojA0U+Qlsh3i1r3AubA=",
+        "emailHash": "477389c44ffb21d82a4e05dd46f8aaa2",
+        "firstname": "Kevin",
+        "lastname": "Davin",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/davinkevin"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/davinkevin/"
+            },
+            {
+                "name": "Blog",
+                "url": "https://blog.stack-labs.com"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://www.stack-labs.com/"
+            }
+        ],
+        "login": "davin.kevin",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/davin.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.393"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "UX Designer bas\u00e9e \u00e0 Gen\u00e8ve. Depuis quelques ann\u00e9es, je travaille sur l'exp\u00e9rience utilisateur de produits destin\u00e9s aux d\u00e9veloppeurs et d\u00e9veloppeuses : SonarQube et SonarCloud. En parall\u00e8le, je me passionne pour l'accessibilit\u00e9 et l'inclusivit\u00e9 des produits num\u00e9riques. ",
+            "FRENCH": "UX Designer bas\u00e9e \u00e0 Gen\u00e8ve. Depuis quelques ann\u00e9es, je travaille sur l'exp\u00e9rience utilisateur de produits destin\u00e9s aux d\u00e9veloppeurs et d\u00e9veloppeuses : SonarQube et SonarCloud. En parall\u00e8le, je me passionne pour l'accessibilit\u00e9 et l'inclusivit\u00e9 des produits num\u00e9riques. "
+        },
+        "email": "CCVCjS2Aoh0IMjWNBIt6iASzsD5493q5veYbzI/3f2Q=",
+        "emailHash": "ec44f51d28980cd86630a8b00364e258",
+        "firstname": "Laura",
+        "lastname": "Wacrenier",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/Laoraw"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/laura-wacrenier"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://www.sonarsource.com/"
+            }
+        ],
+        "login": "laurawacrenier",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/wacrenier.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.398"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Les is a maker, hacker and writer who specialises in introducing maker skills to learners of all ages. Either in person or via tutorials for magazines and websites.",
+            "FRENCH": "Les is a maker, hacker and writer who specialises in introducing maker skills to learners of all ages. Either in person or via tutorials for magazines and websites."
+        },
+        "email": "OV4Zg1OdhOkLtV98LUrXFzX4IFbXUNLTWtWbCwaYAgg=",
+        "emailHash": "543ae164055cd5a3be5b1680076f3ae6",
+        "firstname": "Les",
+        "lastname": "Pounder",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/biglesp"
+            },
+            {
+                "name": "Blog",
+                "url": "https://bigl.es"
+            }
+        ],
+        "login": "lespounder",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/pounder.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.407"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Marek is an experienced software developer. During his professional career spanning more than 10 years, he worked with technologies like .NET, C#, Android, Java, Big Data or Scala. Marek is simply a computer geek, specifically fascinated by the ever-growing influence of theoretical foundations of computer science on the IT industry.\r\n\r\nToday it is not his career that is important though, because Marek also realized recently, that a passion can easily turn into an obsession which blinds us from the truth - that there is more to life than coding. And this idea, he believes, is worth spreading among fellow IT geeks.",
+            "FRENCH": "Marek is an experienced software developer. During his professional career spanning more than 10 years, he worked with technologies like .NET, C#, Android, Java, Big Data or Scala. Marek is simply a computer geek, specifically fascinated by the ever-growing influence of theoretical foundations of computer science on the IT industry.\r\n\r\nToday it is not his career that is important though, because Marek also realized recently, that a passion can easily turn into an obsession which blinds us from the truth - that there is more to life than coding. And this idea, he believes, is worth spreading among fellow IT geeks."
+        },
+        "email": "g+W/UHeMCRqW5ay4aPEPA2afzq10UdMAICsJCWogDqs=",
+        "emailHash": "1fe4904857798affa9b7e130ee165042",
+        "firstname": "Marek",
+        "lastname": "St\u00f3j",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/marekstoj"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/marekstoj/"
+            },
+            {
+                "name": "Blog",
+                "url": "http://www.marekstoj.com/"
+            },
+            {
+                "name": "Company Website",
+                "url": "http://www.marekstoj.com/"
+            }
+        ],
+        "login": "marek.stoj",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/st\u00f3j.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.41"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "After studies un neurosciences and phD in brain-computer interface, I am ux-designer since 2014. As a part of an Agile organisation, I am regularly PO (Product Owner) and Scrum Master. In my daily work, I design web and mobile applications in order to optimize user experience and make users happy. \r\nSince 2015, I also blog about UX and agility: http://www.margaux-perrin.com/category/ergonomie/",
+            "FRENCH": "After studies un neurosciences and phD in brain-computer interface, I am ux-designer since 2014. As a part of an Agile organisation, I am regularly PO (Product Owner) and Scrum Master. In my daily work, I design web and mobile applications in order to optimize user experience and make users happy. \r\nSince 2015, I also blog about UX and agility: http://www.margaux-perrin.com/category/ergonomie/"
+        },
+        "email": "0rYJZ6kLMCrWQ0TAXp9eU19SGzNFystnvoKQGYfAU2A=",
+        "emailHash": "90561e91fdc6ab8a8b39e7c00531767a",
+        "firstname": "Margaux",
+        "lastname": "PERRIN",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/Margauxlergo"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "http://www.linkedin.com/in/margaux-perrin-264aa250"
+            },
+            {
+                "name": "Blog",
+                "url": "http://www.margaux-perrin.com"
+            },
+            {
+                "name": "Company Website",
+                "url": "http://www.uxshadow.com"
+            }
+        ],
+        "login": "margaux",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/perrin.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.414"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "J'aime travailler en groupe, rencontrer des gens, d\u00e9couvrir des m\u00e9tier et r\u00e9fl\u00e9chir sur des probl\u00e8mes. Je suis ergonome et mon travail consiste \u00e0 r\u00e9colter des informations aupr\u00e8s des utilisateurs afin d'offrir une exp\u00e9rience simple, intuitive et ad\u00e9quation avec les usages des utilisateurs. Au plaisir d'\u00e9changer avec vous \u00e0 propos de vos probl\u00e9matiques du moment.",
+            "FRENCH": "J'aime travailler en groupe, rencontrer des gens, d\u00e9couvrir des m\u00e9tier et r\u00e9fl\u00e9chir sur des probl\u00e8mes. Je suis ergonome et mon travail consiste \u00e0 r\u00e9colter des informations aupr\u00e8s des utilisateurs afin d'offrir une exp\u00e9rience simple, intuitive et ad\u00e9quation avec les usages des utilisateurs. Au plaisir d'\u00e9changer avec vous \u00e0 propos de vos probl\u00e9matiques du moment."
+        },
+        "email": "Rjm8pEj4MAbEOLJrEOrId2/wnxFtDf9hMVedJ0GPSGc=",
+        "emailHash": "5361d075c1ae9964fddb9f633e4f876b",
+        "firstname": "Marion",
+        "lastname": "Georges",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/marion-georges-sogilis/"
+            },
+            {
+                "name": "Company Website",
+                "url": "http://www.uxshadow.com/"
+            }
+        ],
+        "login": "marion",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/georges.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.422"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Mary Poppendieck has been in the Information Technology industry for over forty years. She has managed software development, supply chain management, manufacturing operations, and new product development. She spearheaded the implementation of a Just-in-Time system in a 3M manufacturing plant and led new product development teams, commercializing products ranging from digital controllers to 3M Light Fiber\u2122.  \r\nMary is a popular writer and speaker, and coauthor of the book Lean Software Development: an Agile Toolkit, which was awarded the Software Development Productivity Award in 2004. A sequel, Implementing Lean Software Development: from Concept to Cash was published in 2006. A third book, Leading Lean Software Development: Results are Not the Point was published in November 2009, and a fourth book, The Lean Mindset: Ask the Right Questions was published in 2013.\r\n",
+            "FRENCH": "Mary Poppendieck has been in the Information Technology industry for over forty years. She has managed software development, supply chain management, manufacturing operations, and new product development. She spearheaded the implementation of a Just-in-Time system in a 3M manufacturing plant and led new product development teams, commercializing products ranging from digital controllers to 3M Light Fiber\u2122.  \r\nMary is a popular writer and speaker, and coauthor of the book Lean Software Development: an Agile Toolkit, which was awarded the Software Development Productivity Award in 2004. A sequel, Implementing Lean Software Development: from Concept to Cash was published in 2006. A third book, Leading Lean Software Development: Results are Not the Point was published in November 2009, and a fourth book, The Lean Mindset: Ask the Right Questions was published in 2013.\r\n"
+        },
+        "email": "DhOhNTdIQrNkSFB25NZTPJBWuxJ6hUdCYLqRIdulie8=",
+        "emailHash": "7c83e887c90958add3a89bdeb5d71cf7",
+        "firstname": "Mary",
+        "lastname": "Poppendieck",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/mpoppendieck"
+            },
+            {
+                "name": "Blog",
+                "url": "http://www.leanessays.com/"
+            },
+            {
+                "name": "Company Website",
+                "url": "http://www.poppendieck.com"
+            }
+        ],
+        "login": "mary",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/poppendieck.png",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.426"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "20 ans d'xp en info (tech, dev, sysadmin linux, resp tech&fonct de plateformes de services), coach pro et scrum master certifi\u00e9e, en chemin vers le coaching agile ",
+            "FRENCH": "20 ans d'xp en info (tech, dev, sysadmin linux, resp tech&fonct de plateformes de services), coach pro et scrum master certifi\u00e9e, en chemin vers le coaching agile "
+        },
+        "email": "IsVyMdkW6yqx2HLNM8H5+aGkJI507ZGJJPTg10wKB4g=",
+        "emailHash": "f7bf6b5720abd82520fd773064825242",
+        "firstname": "Maryange",
+        "lastname": "Dichi",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/MaryangeDichi"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/maryangedichi/"
+            }
+        ],
+        "login": "maryange.dichi",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/dichi.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.43"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "UNKNOWN",
+            "FRENCH": "UNKNOWN"
+        },
+        "email": "I6x2O9lJw2xE4obLuvpN3tzEl3nVBq7/R5ByJnodzlk=",
+        "emailHash": "6c4e7a6916d3768ddac2bea54ea46b3c",
+        "firstname": "Nicolas",
+        "lastname": "Sanitas",
+        "legacyId": null,
+        "links": [],
+        "login": "nsanitas",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/sanitas.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.452"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Informaticien curieux depuis 35 ans, de m\u00e9tier depuis 20 ans. Non sp\u00e9cialiste touche \u00e0 tout : du d\u00e9veloppement logiciel \u00e0 l'\u00e9tude scientifique, du d\u00e9veloppement d'algorithmes de traitement \u00e0 la mise en \u0153uvre de syst\u00e8mes, de la programmation en C++ ou Python \u00e0 l'utilisation des technos Web, de la petite appli en ligne de commande aux IHM.",
+            "FRENCH": "Informaticien curieux depuis 35 ans, de m\u00e9tier depuis 20 ans. Non sp\u00e9cialiste touche \u00e0 tout : du d\u00e9veloppement logiciel \u00e0 l'\u00e9tude scientifique, du d\u00e9veloppement d'algorithmes de traitement \u00e0 la mise en \u0153uvre de syst\u00e8mes, de la programmation en C++ ou Python \u00e0 l'utilisation des technos Web, de la petite appli en ligne de commande aux IHM."
+        },
+        "email": "HRGROzQgs0CzzCK1BmeUSk1HDPSZZPc2EaacRWmx0hc=",
+        "emailHash": "63cd869e270ac802d9b8738d9398e11a",
+        "firstname": "Nicolas",
+        "lastname": "Decoster",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/nnodot"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://www.magellium.com/"
+            }
+        ],
+        "login": "decoster",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/decoster.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.456"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "I love to share knowledge among developers and people in general.",
+            "FRENCH": "I love to share knowledge among developers and people in general."
+        },
+        "email": "ql/sXfWCvibL5WfrSsbrtSecsZdKSmPeTzrcoTPVJaM=",
+        "emailHash": "66bccfe0482ec8e1c9b821c727f137d7",
+        "firstname": "Olivier",
+        "lastname": "Leplus",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/olivierleplus"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/olivierleplus/"
+            },
+            {
+                "name": "Blog",
+                "url": "https://tagazok.github.io/"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://www.microsoft.com"
+            }
+        ],
+        "login": "leplus.olivier",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/leplus.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.468"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "J\u2019ai \u00e9t\u00e9 d\u00e9veloppeur (il y a longtemps), chef de projets, directeur de projets. Et en 2015, j\u2019ai eu en charge un premier projet Agile, en Scrum. J\u2019ai ainsi pu participer et prendre conscience des diff\u00e9rences fondamentales entre l\u2019agilit\u00e9 et les m\u00e9thodes classiques avec l\u2019aide de coachs confirm\u00e9s.\r\nDepuis, j\u2019ai perfectionn\u00e9 mes comp\u00e9tences : par la lecture, par des conf\u00e9rences, par des \u00e9changes avec des Scrum Masters et des Coachs. J\u2019ai test\u00e9 le sketchnoting, la facilitation graphique, la facilitation d\u2019ateliers, le management 3.0, etc. Je me suis beaucoup appliqu\u00e9 \u00e0 moi-m\u00eame les principes de l\u2019agilit\u00e9 : essayer, apprendre, recommencer.\r\nAujourd\u2019hui, je suis animateur de la communaut\u00e9 Agile chez Groupama, ainsi que manager et responsable de projets.",
+            "FRENCH": "J\u2019ai \u00e9t\u00e9 d\u00e9veloppeur (il y a longtemps), chef de projets, directeur de projets. Et en 2015, j\u2019ai eu en charge un premier projet Agile, en Scrum. J\u2019ai ainsi pu participer et prendre conscience des diff\u00e9rences fondamentales entre l\u2019agilit\u00e9 et les m\u00e9thodes classiques avec l\u2019aide de coachs confirm\u00e9s.\r\nDepuis, j\u2019ai perfectionn\u00e9 mes comp\u00e9tences : par la lecture, par des conf\u00e9rences, par des \u00e9changes avec des Scrum Masters et des Coachs. J\u2019ai test\u00e9 le sketchnoting, la facilitation graphique, la facilitation d\u2019ateliers, le management 3.0, etc. Je me suis beaucoup appliqu\u00e9 \u00e0 moi-m\u00eame les principes de l\u2019agilit\u00e9 : essayer, apprendre, recommencer.\r\nAujourd\u2019hui, je suis animateur de la communaut\u00e9 Agile chez Groupama, ainsi que manager et responsable de projets."
+        },
+        "email": "tKGcFxL+ZlHWiiywe7RZTZJjKR5VRdVIncDZS2FrkW8=",
+        "emailHash": "7dbbf8224cdc3a8789a177006f33db48",
+        "firstname": "Patrick",
+        "lastname": "Comfaits",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/pcomfaits?lang=fr"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/patrick-comfaits-1707008/"
+            }
+        ],
+        "login": "pcomfaits",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/comfaits.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.484"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Ing\u00e9nieur logiciel orient\u00e9 Machine Learning et DevOps, je contribue aujourd'hui \u00e0 cr\u00e9er de nouveau projets innovants. J'\u00e9volue dans de multiple domaine, et notamment celui des Tech4Good.",
+            "FRENCH": "Ing\u00e9nieur logiciel orient\u00e9 Machine Learning et DevOps, je contribue aujourd'hui \u00e0 cr\u00e9er de nouveau projets innovants. J'\u00e9volue dans de multiple domaine, et notamment celui des Tech4Good."
+        },
+        "email": "iYNuyqQw130G7bqX4XGSAn2HXeHO6aK7YNMmAkKcDn8=",
+        "emailHash": "3f28a6977e6c3e7b439428a8a7546994",
+        "firstname": "Pierre",
+        "lastname": "Paci",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/pierre_paci"
+            }
+        ],
+        "login": "pierre.paci",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/paci.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.489"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Job Crafter en ESN, je suis \"full mobile\" (Android/iOS/Hybride), je gribouille des sketchnotes color\u00e9es et avec le temps qu'il me reste je participe \u00e0 l'organisation du meetup Android Nantes (GDG)...",
+            "FRENCH": "Job Crafter en ESN, je suis \"full mobile\" (Android/iOS/Hybride), je gribouille des sketchnotes color\u00e9es et avec le temps qu'il me reste je participe \u00e0 l'organisation du meetup Android Nantes (GDG)..."
+        },
+        "email": "04pxkaUJGzOZfQI92qh8Bw9wzM+brAygltzsYSbg390=",
+        "emailHash": "f4ee266ddd3f381b2bb75e8b3427ab63",
+        "firstname": "Pierre",
+        "lastname": "Tibulle",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/ptibulle"
+            }
+        ],
+        "login": "ptibulle",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/tibulle.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.492"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Consultante agile chez Zenika (Lyon) et pr\u00e9c\u00e9demment chez OCTO Technology (Paris), j\u2019accompagne les product owner ou les \u00e9quipes globales dans la gestion de projets agiles. \r\n\u00c0 partir des tweets du monde entier j\u2019aime confronter les diff\u00e9rents points de vue li\u00e9s \u00e0 l'agilit\u00e9. Sur cette base j\u2019ai notamment cr\u00e9\u00e9 la revue de tweets \"What\u2019s up agile\".",
+            "FRENCH": "Consultante agile chez Zenika (Lyon) et pr\u00e9c\u00e9demment chez OCTO Technology (Paris), j\u2019accompagne les product owner ou les \u00e9quipes globales dans la gestion de projets agiles. \r\n\u00c0 partir des tweets du monde entier j\u2019aime confronter les diff\u00e9rents points de vue li\u00e9s \u00e0 l'agilit\u00e9. Sur cette base j\u2019ai notamment cr\u00e9\u00e9 la revue de tweets \"What\u2019s up agile\"."
+        },
+        "email": "DmZfr19VlZl9NFE1g9kMiDyDK5VwLtnfjEZb14LrxnE=",
+        "emailHash": "7fe3c6bbc75cd99992fc0460ce9aa294",
+        "firstname": "Priscille",
+        "lastname": "Fa\u00ff",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/PriscilleFay"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://www.zenika.com/"
+            }
+        ],
+        "login": "priscille.fay",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/fa\u00ff.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.496"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "UNKNOWN",
+            "FRENCH": "UNKNOWN"
+        },
+        "email": "lWFSWCFfNUul4x+V9d1H+g==",
+        "emailHash": "b8e758fa29f34e09204bd117183507f9",
+        "firstname": "Rapha\u00ebl",
+        "lastname": "Pierquin",
+        "legacyId": null,
+        "links": [],
+        "login": "raphael",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/pierquin.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.503"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Joueur, codeur, coach, musicien... Les interactions entre les humains et leurs cr\u00e9ations, c'est un peu mon sujet d'\u00e9tude. ",
+            "FRENCH": "Joueur, codeur, coach, musicien... Les interactions entre les humains et leurs cr\u00e9ations, c'est un peu mon sujet d'\u00e9tude. "
+        },
+        "email": "o8ksaBeESG0idw0nSQVYY5kscANpkHkLAt6MJRNzOgU=",
+        "emailHash": "09a4f20c5d3af9387cf1955ab74bb169",
+        "firstname": "R\u00e9mi",
+        "lastname": "Lesieur Bridel",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Company Website",
+                "url": "http://www.goood.com"
+            }
+        ],
+        "login": "r.lesieur",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/lesieur_bridel.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.507"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Sam works for the London-based consultancy YLD, specialising in Node.js, React and Kubernetes.",
+            "FRENCH": "Sam works for the London-based consultancy YLD, specialising in Node.js, React and Kubernetes."
+        },
+        "email": "ZojF1PJSaDgOsNgauD5PhxyH00WN2XI1yU6yWbOyJmM=",
+        "emailHash": "373cf5bd2f909c68f8cd58d76261907e",
+        "firstname": "Sam",
+        "lastname": "Galson",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/sam_galson"
+            },
+            {
+                "name": "Blog",
+                "url": "https://medium.com/@sam_galson"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://www.yld.io/"
+            }
+        ],
+        "login": "sam.galson",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/galson.png",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.51"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": " ",
+            "FRENCH": " "
+        },
+        "email": "U7bUO3JOtCGo7eVeopCHbJX9dmgT4IYJTuQrIdnMfEk=",
+        "emailHash": "bbcdda6150a9c177d0564e978f62a375",
+        "firstname": "Samira",
+        "lastname": "Raba\u00e2oui",
+        "legacyId": null,
+        "links": [],
+        "login": "samira_rabaaoui",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/raba\u00e2oui.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.514"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Apr\u00e8s avoir \u00e9t\u00e9 formatrice, puis d\u00e9veloppeuse, Sarah Ha\u00efm-Lubczanski a toujours pr\u00e9f\u00e9r\u00e9 le contact des informaticien.ne.s sp\u00e9cialistes \u00e0 celui du grand public, et cela a bien fonctionn\u00e9 puisqu'elle \u00e9crit de la documentation de logiciel opensource pour BIMData.\r\nCo-fondatrice de l\u2019antenne AFUP Lyon, co-fondatrice de la Game Dev Party et co-organisatrice du premier Coding Go\u00fbter lyonnais, elle est engag\u00e9e dans le tissu associatif local technologique. Elle appr\u00e9cie d\u2019\u00eatre \u00e0 l\u2019initiative de projets qui aident les autres.",
+            "FRENCH": "Apr\u00e8s avoir \u00e9t\u00e9 formatrice, puis d\u00e9veloppeuse, Sarah Ha\u00efm-Lubczanski a toujours pr\u00e9f\u00e9r\u00e9 le contact des informaticien.ne.s sp\u00e9cialistes \u00e0 celui du grand public, et cela a bien fonctionn\u00e9 puisqu'elle \u00e9crit de la documentation de logiciel opensource pour BIMData.\r\nCo-fondatrice de l\u2019antenne AFUP Lyon, co-fondatrice de la Game Dev Party et co-organisatrice du premier Coding Go\u00fbter lyonnais, elle est engag\u00e9e dans le tissu associatif local technologique. Elle appr\u00e9cie d\u2019\u00eatre \u00e0 l\u2019initiative de projets qui aident les autres."
+        },
+        "email": "/SJskcYMX6dzyNicWud02T09r50aforI5PVSnpmFaUM=",
+        "emailHash": "45f8297805fc39f26fae04909e4ab7bd",
+        "firstname": "Sarah",
+        "lastname": "Ha\u00efm-Lubczanski",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/sarahhaim"
+            },
+            {
+                "name": "Blog",
+                "url": "http://www.sarahhaim.net/"
+            },
+            {
+                "name": "Company Website",
+                "url": "http://www.bimdata.io"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/sarahhaim/"
+            }
+        ],
+        "login": "mere-teresaHa\u00efm-Lubczanski",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/haim_lubczanski.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.517"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Today, as Technical Evangelist @ AWS, Seb is inspiring builders to unlock the value of the AWS cloud, using his secret blend of passion, enthusiasm, customer advocacy, curiosity and creativity.\r\n\r\nS\u00e9bastien worked for the last 20+ years with large enterprises and startups alike to help them to transform their business requirements into technical solutions, to unlock the value of software, mobile applications and to scale systems to meet customer demand. He built & lead the AWS Technical Training team in EMEA, then he built & lead the Alexa Solution Architecture team in UK, France, Italy and Spain.",
+            "FRENCH": "Today, as Technical Evangelist @ AWS, Seb is inspiring builders to unlock the value of the AWS cloud, using his secret blend of passion, enthusiasm, customer advocacy, curiosity and creativity.\r\n\r\nS\u00e9bastien worked for the last 20+ years with large enterprises and startups alike to help them to transform their business requirements into technical solutions, to unlock the value of software, mobile applications and to scale systems to meet customer demand. He built & lead the AWS Technical Training team in EMEA, then he built & lead the Alexa Solution Architecture team in UK, France, Italy and Spain."
+        },
+        "email": "lx18fh1/Cj7uzQVXxFZNnSiX6wMcRN5s8WXoBI2zDBs=",
+        "emailHash": "8d913eec72e7837bb2712a06ea5f25c5",
+        "firstname": "Sebastien",
+        "lastname": "Stormacq",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/sebsto"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/sebastienstormacq/"
+            },
+            {
+                "name": "Blog",
+                "url": "https://stormacq.com"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://aws.amazon.com"
+            }
+        ],
+        "login": "sebastien.stormacq",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/stormacq.png",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.521"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Built my first computer out of Lego bricks and learned to program soon after. Emergence, networks, modes of thought, limits of language and expression are what makes me smile (and stay up at night). The combination of lisp and machine learning put me on the path of always striving to make myself redundant if not outright obsolete. Currently working hard to become obsolete at Metabase where I am trying to build an artificial data scientist and imbue visualisations with understanding and context.",
+            "FRENCH": "Built my first computer out of Lego bricks and learned to program soon after. Emergence, networks, modes of thought, limits of language and expression are what makes me smile (and stay up at night). The combination of lisp and machine learning put me on the path of always striving to make myself redundant if not outright obsolete. Currently working hard to become obsolete at Metabase where I am trying to build an artificial data scientist and imbue visualisations with understanding and context."
+        },
+        "email": "5oeVEMrfzpWZo8GqOoeXqzFYM7szPGBD5WqCkTiuyMc=",
+        "emailHash": "7b51ec3cddd1e4e6ad03e763883ff037",
+        "firstname": "Simon",
+        "lastname": "Belak",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/sbelak"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/simonbelak/"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://metabase.com"
+            }
+        ],
+        "login": "simon.belak",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/belak.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.525"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Svetlana Kouznetsova (Sveta) is a NYC-based user experience and accessibility consultant and works with business owners, media producers, corporations, educational institutions, event organizers to make their products, services, interactions user-friendly and accessible to more people. She has a Master of Science degree in Internet Technology, several advanced certifications, and project experience with national and international organizations and educational institutions. Sveta is also a founder of Audio Accessibility and provides consultation and training to businesses about quality communication access to audio, video, events. She is an experienced speaker and author of \u201cSound Is Not Enough: Captioning as Universal Design\u201d. Sveta's recent TEDx talk uncovers benefits of captioning access that increase audience and ROI for businesses. Her personal experience with deafness and communication barriers contributes to her success as a professional consultant and allows clients to have a greater understanding of why accessibility is critical.",
+            "FRENCH": "Svetlana Kouznetsova (Sveta) is a NYC-based user experience and accessibility consultant and works with business owners, media producers, corporations, educational institutions, event organizers to make their products, services, interactions user-friendly and accessible to more people. She has a Master of Science degree in Internet Technology, several advanced certifications, and project experience with national and international organizations and educational institutions. Sveta is also a founder of Audio Accessibility and provides consultation and training to businesses about quality communication access to audio, video, events. She is an experienced speaker and author of \u201cSound Is Not Enough: Captioning as Universal Design\u201d. Sveta's recent TEDx talk uncovers benefits of captioning access that increase audience and ROI for businesses. Her personal experience with deafness and communication barriers contributes to her success as a professional consultant and allows clients to have a greater understanding of why accessibility is critical."
+        },
+        "email": "peYwr4+J4RZF7mi+J/bEGytQxXPfTdUaq+KRn297eCo=",
+        "emailHash": "00a2ed90548e57617879e834b8f3de5f",
+        "firstname": "Svetlana",
+        "lastname": "Kouznetsova",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "http://twitter.com/svknyc"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "http://linkedin.com/in/svetlanakouznetsova"
+            },
+            {
+                "name": "Blog",
+                "url": "http://about.me/svetlanakouznetsova"
+            },
+            {
+                "name": "Company Website",
+                "url": "http://about.me/svetlanakouznetsova"
+            }
+        ],
+        "login": "svetlana",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/kouznetsova.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.538"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "UNKNOWN",
+            "FRENCH": "UNKNOWN"
+        },
+        "email": "CWdiWGSlh4acG8GWGJVGubs3jnLMDoetGb9a/4Ptj8s=",
+        "emailHash": "72e119a24abc3c720c1211d513b14c14",
+        "firstname": "Tanguy",
+        "lastname": "Moreau",
+        "legacyId": null,
+        "links": [],
+        "login": "tanguy.moreau",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/moreau.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.543"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Product Owner UX et passionn\u00e9 de graphisme, je travaille au sein de l\u2019agence Bewizyu sur les interfaces de nos clients. Contributeur du blog, je suis toujours \u00e0 l\u2019aff\u00fbt des derni\u00e8res tendances graphiques et UX afin de pouvoir les travailler et cr\u00e9er une exp\u00e9rience utilisateur optimale.\r\nEx-entrepreneur et ayant eu plusieurs vies ma curiosit\u00e9 se trouve r\u00e9sum\u00e9e dans une citation de J.K Chesterton : \u00ab Il n\u2019y a pas de sujet peu int\u00e9ressant, il n\u2019y a que des personnes peu int\u00e9ress\u00e9es \u00bb",
+            "FRENCH": "Product Owner UX et passionn\u00e9 de graphisme, je travaille au sein de l\u2019agence Bewizyu sur les interfaces de nos clients. Contributeur du blog, je suis toujours \u00e0 l\u2019aff\u00fbt des derni\u00e8res tendances graphiques et UX afin de pouvoir les travailler et cr\u00e9er une exp\u00e9rience utilisateur optimale.\r\nEx-entrepreneur et ayant eu plusieurs vies ma curiosit\u00e9 se trouve r\u00e9sum\u00e9e dans une citation de J.K Chesterton : \u00ab Il n\u2019y a pas de sujet peu int\u00e9ressant, il n\u2019y a que des personnes peu int\u00e9ress\u00e9es \u00bb"
+        },
+        "email": "iQek8BuiPf+NRQKu0u9Vul61Q7Dc2vlTby3tds2SfO8=",
+        "emailHash": "1507f0876db1348837d576e5ec7c3d94",
+        "firstname": "Thomas",
+        "lastname": "Buvignier",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/CadentALatere"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/thomas-buvignier-8881a311/"
+            }
+        ],
+        "login": "tbuvignier",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/buvignier.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.561"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "UNKNOWN",
+            "FRENCH": "UNKNOWN"
+        },
+        "email": "9wNRu1itygQLbXVV8Uhdxkjsv9vc9hJ72zeGrDm4iJFijCAxeX650UjnBWVoQFBd",
+        "emailHash": "c06f2ff581dbc702a01f7330596fa981",
+        "firstname": "Thomas",
+        "lastname": "di Luccio",
+        "legacyId": null,
+        "links": [],
+        "login": "thomas+sessionize",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/di_luccio.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.565"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "I love science and I love data! After finishing a PhD in genetic engineering, I continued my quest for discovering new patterns through data science and machine learning. I currently work as a Data Scientist and I play with machine learning algorithms on my free time. Someday, I wish to leverage artificial intelligence and genetics to improve people's life.",
+            "FRENCH": "I love science and I love data! After finishing a PhD in genetic engineering, I continued my quest for discovering new patterns through data science and machine learning. I currently work as a Data Scientist and I play with machine learning algorithms on my free time. Someday, I wish to leverage artificial intelligence and genetics to improve people's life."
+        },
+        "email": "Y/01YeJRLNYs4xgyEQM9PNzP8IPpXoE2TVqEyuNCRiA=",
+        "emailHash": "a19c9ea16c0c152de685b981e5e69815",
+        "firstname": "Tiffany",
+        "lastname": "Souterre",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/TiffanySouterre"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/tiffanysouterre/"
+            },
+            {
+                "name": "Blog",
+                "url": "https://amagash.github.io"
+            },
+            {
+                "name": "Company Website",
+                "url": "http://www.jems-group.com/"
+            }
+        ],
+        "login": "tiffanysouterre",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/souterre.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.57"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Digital Product Designer working remote. Trained as an Architect, but focused on great interface design.",
+            "FRENCH": "Digital Product Designer working remote. Trained as an Architect, but focused on great interface design."
+        },
+        "email": "cwERHdfhtY/Le0Z+YnN/9QiNNrCFD4gWu4bKwuh7DzE=",
+        "emailHash": "767856d83ad02fc27f4d73d6358fd7b6",
+        "firstname": "Toon",
+        "lastname": "van Ramshorst",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/ramshorst"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/toonvanramshorst/"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://dribbble.com/ramshorst"
+            }
+        ],
+        "login": "ramshorstvan Ramshorst",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/van_ramshorst.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.573"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Consultant Full Stack d'Ippon Technologies et membre de la Core Team JHipster. \r\nIl a contribu\u00e9 en grande partie sur la partie Angular du c\u00e9l\u00e8bre g\u00e9n\u00e9rateur d'application aux 12 000 \u00e9toiles GitHub.\r\nPassionn\u00e9 par le d\u00e9veloppement Web, l'\u00e9cosyst\u00e8me JavaScript et notamment sur les probl\u00e9matiques li\u00e9es aux performances c\u00f4t\u00e9 client.",
+            "FRENCH": "Consultant Full Stack d'Ippon Technologies et membre de la Core Team JHipster. \r\nIl a contribu\u00e9 en grande partie sur la partie Angular du c\u00e9l\u00e8bre g\u00e9n\u00e9rateur d'application aux 12 000 \u00e9toiles GitHub.\r\nPassionn\u00e9 par le d\u00e9veloppement Web, l'\u00e9cosyst\u00e8me JavaScript et notamment sur les probl\u00e9matiques li\u00e9es aux performances c\u00f4t\u00e9 client."
+        },
+        "email": "uUOw+lq4bQJHZN5eptOHPWyClZzD3pvRFXXksOSoGdI=",
+        "emailHash": "a90a471c6424e2ea68e992840a0e059b",
+        "firstname": "William",
+        "lastname": "Marques",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/WylMarq"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/william-marques-b6627590/"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://en.ippon.tech/"
+            }
+        ],
+        "login": "williamarques91",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/marques.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.585"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "I help teams create an environment where everyone can excel in their work and life. http://bit.ly/MobProgrammingBook \u2026 - visit http://mobprogramming.org ",
+            "FRENCH": "I help teams create an environment where everyone can excel in their work and life. http://bit.ly/MobProgrammingBook \u2026 - visit http://mobprogramming.org "
+        },
+        "email": "VhAtjnM900gWIfgWYY0Ycg==",
+        "emailHash": "0ca314e0f97b41acef17950a10043933",
+        "firstname": "Woody",
+        "lastname": "Zuill",
+        "legacyId": null,
+        "links": [],
+        "login": "Woody.Zuill",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/zuill.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-03T22:24:54.588"
     }
 ]

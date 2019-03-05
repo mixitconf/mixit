@@ -51,8 +51,7 @@ class UserHandler(private val repository: UserRepository,
                 "andrey.breslav",
                 //"kowen",
                 "ppezziardi",
-                "rising.linda")
-        val speakerStarInCurrentEvent = listOf(
+                "rising.linda",
                 "jhoeller",
                 "sharonsteed",
                 "allan.rennebo",
@@ -63,6 +62,16 @@ class UserHandler(private val repository: UserRepository,
                 "romainguy",
                 "graphicsgeek1",
                 "sambrannen")
+        val speakerStarInCurrentEvent = listOf(
+                "bodil",
+                "andre",
+                "mary",
+                "Woody.Zuill",
+                "james.carlson",
+                "egorcenski",
+                "ojuncu",
+                "hsablonniere",
+                "nitot")
     }
 
     fun findOneView(req: ServerRequest) =
@@ -256,7 +265,7 @@ class SpeakerStarDto(
         val name: String
 )
 
-fun User.toSpeakerStarDto() = SpeakerStarDto(login, lastname.toLowerCase(), "$firstname $lastname")
+fun User.toSpeakerStarDto() = SpeakerStarDto(login, lastname.toLowerCase().replace("è", "e"), "$firstname $lastname")
 
 class UserDto(
         val login: String,
