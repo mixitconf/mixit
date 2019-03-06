@@ -1,5 +1,45 @@
 [
     {
+        "addedAt": "2019-03-04T22:33:57.62",
+        "description": null,
+        "end": null,
+        "event": "2019",
+        "format": "TALK",
+        "id": "5c7da7637c9ab929073c0d24",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "UNKNOWN",
+        "slug": "comment-perdre-sa-surchage-featurale-",
+        "speakerIds": [
+            "estelle.landry"
+        ],
+        "start": null,
+        "summary": "Le cycle de vie d'une application est un chemin n\u00e9buleux et plein de dangers. La complexit\u00e9 ne fait que croitre durant les mois et les ann\u00e9es d'utilisation. L'un des plus gros challenges d'un d\u00e9veloppeur est de pouvoir la contr\u00f4ler tout en ajoutant de nouvelles fonctionnalit\u00e9s (features).\r\n\r\nDes solutions existent : le r\u00e9-\u00e9criture de code ou encore la maitrise de la dette technique. En effet, ces deux actions permettent de lever \"la complexit\u00e9 accidentelle\". Mais que faisons nous de la \"complexit\u00e9 essentielle\" ? La complexit\u00e9 qui n'est pas li\u00e9e au code.\r\n\r\nLa seule solution : Supprimer des fonctionnalit\u00e9s ! Ce talk vous expliquera comment perdre la surcharge featurale de vos applications en comprenant la diff\u00e9rence entre la complexit\u00e9 essentielle et la complexit\u00e9 accidentelle, mais aussi en vous donnant des cl\u00e9s pour mener \u00e0 bien ce changement dans vos \u00e9quipes projet.",
+        "title": "Comment perdre sa surchage featurale ?",
+        "topic": "design",
+        "video": null
+    },
+    {
+        "addedAt": "2019-03-04T22:33:57.629",
+        "description": null,
+        "end": null,
+        "event": "2019",
+        "format": "TALK",
+        "id": "5c7da7637c9ab929073c0d25",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "UNKNOWN",
+        "slug": "make-data-science-great-again-pourquoi-et-comment-crafter-la-data-science-sur-mesure-",
+        "speakerIds": [
+            "anastasia.lieva"
+        ],
+        "start": null,
+        "summary": "Il n'est pas \u00e9vident d'int\u00e9grer de la Data Science dans les soci\u00e9t\u00e9s qui d\u00e9veloppent un business qui de base ne pr\u00e9voyait pas de l\u2019intelligence artificielle (IA), et pour lequel l\u2019IA n'est pas au c\u0153ur du m\u00e9tier. Malgr\u00e9 la motivation d'utiliser l\u2019IA, de nombreux projets Data Science dans ces soci\u00e9t\u00e9s \u00e9chouent.\r\n\r\nC'est autant frustrant pour les responsables d'entreprises que d\u00e9motivant pour les data-scientists, dont les projets finissent au placard. On va analyser ensemble cette situation, pour d\u00e9terminer les raisons de ces \u00e9checs. On va \u00e9galement \u00e9tudier comment \u00e9viter les erreurs les plus courantes, et comment mener ce changement sans encombre afin d'enrichir vos produits avec l\u2019IA.\r\n\r\nL\u2019objectif du talk est que peu importe le profil que vous avez - dev front, dev back, data-scientist, CTO, CEO, Product Manager - vous retournerez lundi dans votre soci\u00e9t\u00e9 en sachant \u00e0 la fois identifier et mener \u00e0 bien les opportunit\u00e9s de Data Science.",
+        "title": "Make Data-Science Great Again. Pourquoi et comment crafter la Data-Science sur mesure.",
+        "topic": "team",
+        "video": null
+    },
+    {
         "addedAt": "2019-03-04T22:33:57.629",
         "description": null,
         "end": null,
@@ -207,6 +247,26 @@
         "end": null,
         "event": "2019",
         "format": "TALK",
+        "id": "5c7da7637c9ab929073c0d30",
+        "language": "ENGLISH",
+        "photoUrls": [],
+        "room": "UNKNOWN",
+        "slug": "missing-out-20-of-potential-users-and-customers-importance-of-accessibility",
+        "speakerIds": [
+            "svetlana"
+        ],
+        "start": null,
+        "summary": "People with disabilities make up the largest minority that is 20% of global population, but their needs are sadly the most misunderstood and ignored. They are even often dismissed from diversity and inclusion equation. Accessibility is an important part of any projects and is not to be used as an afterthought. It\u2019s every team member's responsibility to make their products and services accessible regardless of a type of industry they are working in. Accessibility benefits everyone and not just those with disabilities - including businesses who can improve their bottom lines because they will retain and keep more happy and loyal customers.\r\n\r\nThe speaker will share her personal experiences as a professional who is deaf and discuss what needs to be done to make products and services accessible.",
+        "title": "Missing out 20% of potential users and customers: Importance of accessibility",
+        "topic": "design",
+        "video": null
+    },
+    {
+        "addedAt": "2019-03-04T22:33:57.632",
+        "description": null,
+        "end": null,
+        "event": "2019",
+        "format": "TALK",
         "id": "5c7da7637c9ab929073c0d31",
         "language": "ENGLISH",
         "photoUrls": [],
@@ -381,7 +441,7 @@
             "andre"
         ],
         "start": null,
-        "summary": "This is a \"surprise\" talk. For our keynote we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 30 minutes. As it's a surprise we don't display the session summary before...   ",
+        "summary": "The centralizing powers of the internet are showing a need for radical change towards freedom and user rights. A new movement is building the new internet, but there are even more difficulties approaching: climate crisis, crowd social engineering, and the next impending economic crisis, all of which are interconnected. This talk will show you how we are coming to the end of an era, and how one promising approach can benefit the environment, the economy, humanity, and the internet: d\u00e9croissance.",
         "title": "The internet in 2030",
         "topic": "aliens",
         "video": null
@@ -401,7 +461,7 @@
             "edwin"
         ],
         "start": null,
-        "summary": "This is a \"surprise\" talk. For our keynote we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 30 minutes. As it's a surprise we don't display the session summary before...   ",
+        "summary": "A 30 minute talk introducing the OPENRNDR framework for creative coding. The talk covers how OPENRNDR is created and embedded in interactive design practice. The talk continues with a short introduction that enables anyone interested to start writing visual applications with the framework.",
         "title": "OPENRNDR",
         "topic": "aliens",
         "video": null
@@ -563,7 +623,7 @@
             "raphael"
         ],
         "start": null,
-        "summary": "Ce talk est une \"surprise\". Pour cette track, nous choisissons le programme pour vous. Vous \u00eates dans une pi\u00e8ce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 30 minutes. Comme c'est une surprise, nous n'affichons pas le r\u00e9sum\u00e9 de la session avant ...",
+        "summary": "Quand je con\u00e7ois une page, un service, je vais faire attention aux besoins des utilisateurs, \u00e0 leurs capacit\u00e9s cognitives. Je vais les guider dans le parcours que j\u2019estime pertinent pour eux. Je vais attirer \u00e0 leur attention vers certains \u00e9l\u00e9ments, la d\u00e9tourner d\u2019autres \u00e9l\u00e9ments que je juge secondaire. Je peux jouer avec diff\u00e9rents biais cognitifs pour arriver \u00e0 mes fins.\r\nEn allant plus loin, je peux mettre en place une strat\u00e9gie pour que les utilisateurs adoptent librement certains comportements, voir cr\u00e9er de l\u2019addiction, que se soit num\u00e9rique ou dans la vie r\u00e9elle. Ces comportements peuvent \u00eatre vertueux ou justes servir les int\u00e9r\u00eats d\u2019une entreprise.\r\nQuand est-ce que, moi, designer je passe la ligne rouge\u00a0? Quelles r\u00e8gles je me fixe ou pas\u00a0? Il existe des codes de conduites comme celui de l\u2019UXPA, mais concr\u00e8tement \u00e7a donne quoi quand on essaye de l\u2019appliquer dans la vraie vie\u00a0?",
         "title": "Du design de l\u2019attention \u00e0 l\u2019\u00e9thique du designer",
         "topic": "ethics",
         "video": null
@@ -836,6 +896,26 @@
         "description": null,
         "end": null,
         "event": "2019",
+        "format": "TALK",
+        "id": "5c7da7637c9ab929073c0d50",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "UNKNOWN",
+        "slug": "comment-les-jeux-videos-m-ont-forme-a-l-agilite",
+        "speakerIds": [
+            "r.lesieur"
+        ],
+        "start": null,
+        "summary": "Apprendre en jouant, c'est possible ! Le plus impressionnant est quand on s'en rend compte des ann\u00e9es plus tard. Quels jeux m'ont pr\u00e9par\u00e9s \u00e0 l'agilit\u00e9 et au management et comment, c'est ce que je veux partager.",
+        "title": "Comment les jeux vid\u00e9os m'ont form\u00e9 \u00e0 l'agilit\u00e9",
+        "topic": "team",
+        "video": null
+    },
+    {
+        "addedAt": "2019-03-04T22:33:57.639",
+        "description": null,
+        "end": null,
+        "event": "2019",
         "format": "RANDOM",
         "id": "5c7da7637c9ab929073c0d51",
         "language": "ENGLISH",
@@ -1098,6 +1178,26 @@
         "description": null,
         "end": null,
         "event": "2019",
+        "format": "KEYNOTE_SURPRISE",
+        "id": "5c7da7637c9ab929073c0d5e",
+        "language": "ENGLISH",
+        "photoUrls": [],
+        "room": "UNKNOWN",
+        "slug": "building-an-open-source-project",
+        "speakerIds": [
+            "joshualowe1002"
+        ],
+        "start": null,
+        "summary": "In this talk, 15 year old software developer Joshua Lowe, will talk about his journey building an open source project. Josh has been running his open source project, EduBlocks, for 2 years and has learnt many things along the way. This talk will discuss the benefits of going open source, why open source may be a good idea for your project, the problems of making your project open source and advice for people who may be interested in building an open source project or may already be maintaining one. As well as discussing open source projects, Josh will talk a bit about his project EduBlocks, which is a visual block based programming tool that he has created to help teachers introduce programming languages, like Python, to children at an earlier age. It's being used in over 120 countries across the world in schools, homes and more!",
+        "title": "Building an open source project",
+        "topic": "makers",
+        "video": null
+    },
+    {
+        "addedAt": "2019-03-04T22:33:57.643",
+        "description": null,
+        "end": null,
+        "event": "2019",
         "format": "TALK",
         "id": "5c7da7637c9ab929073c0d5f",
         "language": "FRENCH",
@@ -1312,7 +1412,7 @@
             "thomas+sessionize"
         ],
         "start": null,
-        "summary": "Ce talk est une \"surprise\". Pour cette track, nous choisissons le programme pour vous. Vous \u00eates dans une pi\u00e8ce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 30 minutes. Comme c'est une surprise, nous n'affichons pas le r\u00e9sum\u00e9 de la session avant ...",
+        "summary": "2019 sera la derni\u00e8re ann\u00e9e qui ressemblera aux pr\u00e9c\u00e9dentes. Vous n'avez pas pu \u00e9chapper \u00e0 l'arriv\u00e9e des \"collapsologues\", oiseaux de mauvaise augure qui d\u00e9crivent inlassablement les potentiels effondrements syst\u00e9miques dont nous serons victimes dans les prochaines d\u00e9cennies, voire ann\u00e9es. Nous somme entr\u00e9\u00b7es dans l'\u00e8re de l'Anthropoc\u00e8ne, o\u00f9 nous humains sommes devenus une force g\u00e9ologique capable de modifier la plan\u00e8te, le climat et les dynamiques du vivant. Un avenir peu enviable, presque terrifiant se pr\u00e9pare sous nos yeux, la f\u00eate \u00e0 la croissance exponentielle semble bel et bien termin\u00e9e.\r\n\r\nLe design et la tech ont largement particip\u00e9 \u00e0 l'exploitation des ressources naturelles et l\u2019acc\u00e9l\u00e9ration des cycles de production et de consommation. Nous actrices et acteurs des nouvelles technologies avons bien souvent perdu l\u2019ancrage \u00e0 la dimension syst\u00e9mique et politique de notre pratique. Nous avons malgr\u00e9 nous contribu\u00e9 \u00e0 fa\u00e7onner ce monde pr\u00eat \u00e0 s'effondrer.\r\n\r\nIl existe un imaginaire entre l'apocalypse et le monde fantasm\u00e9 des \"g\u00e9nies-milliardaires\". Il existe une posture entre se construire un bunker auto-suffisant et exploiter jusqu'\u00e0 la derni\u00e8re goutte les ressources encore pr\u00e9sentes. Nous voulons voir dans ces constats implacables une invitation puissante \u00e0 nous rassembler et nous questionner sur comment nous sculptons notre quotidien comme notre futur. Loin de nous l'id\u00e9e de pr\u00f4ner la fin de la tech et de l'innovation : nous avons encore plein de cordes technologiques \u00e0 notre arc que nous pouvons mobiliser diff\u00e9remment pour tracer les nouvelles r\u00e8gles d'un monde prosp\u00e8re, digne, r\u00e9silient et circulaire. Nous parlerons des communs, du design du vivre ensemble, d'anthropologie, de logiciel libre, de design ouvert, de coop\u00e9ration, de r\u00e9silience, de permaculture...\r\n\r\nCette intervention est le r\u00e9sultat de deux ans de r\u00e9flexion et de recherches dont nous vous pr\u00e9senterons les premiers r\u00e9sultats pour agir d\u00e8s maintenant et faire muter nos pratiques autant que nos paradigmes : initiatives d\u00e9j\u00e0 existantes qui prouvent qu'on peut faire les choses autrement, principes et heuristiques qui permettent de concevoir les outils pour des futurs d\u00e9sirables.\r\n\r\nPlan :\r\n\r\n1/ \u00c0 travers un constat rapide, nous ferons \u00e9tat des d\u00e9fis climatiques, politiques, syst\u00e9miques d\u00e9j\u00e0 pr\u00e9sents \u00e0 notre porte.\r\n2/ Nous questionnerons le r\u00f4le de la tech et du design dans l'Anthropoc\u00e8ne\r\n3/ \u00c0 travers quatre grands principes de design, nous verrons comment nous pouvons changer notre angle de vue sur le monde que nous cr\u00e9ons.\r\n4/ Nous citerons des exemples et des preuves de concept viables qui soutiennent nos hypoth\u00e8ses.\r\n5/ Enfin, nous vous proposerons des heuristiques de design, open source et adaptables \u00e0 toutes les disciplines, pour agir tout de suite et changer profond\u00e9ment notre fa\u00e7on d'\u00eatre au monde.",
         "title": "Fa\u00e7onner des futurs souhaitables : concevoir \u00e0 l'\u00e8re de l'Anthropoc\u00e8ne",
         "topic": "ethics",
         "video": null
@@ -1454,7 +1554,7 @@
             "mary"
         ],
         "start": null,
-        "summary": "This is a \"surprise\" talk. For our keynote we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 30 minutes. As it's a surprise we don't display the session summary before...   ",
+        "summary": "Every groundbreaking advance in software engineering \u2013 from the iPhone to space exploration to self-driving cars, not to mention the Internet and the Cloud \u2013 has followed the same arc. First there is the impossible challenge. Then there is a long hard slog of learning, with all its ups and downs. Eventually a solution emerges, which always looks obvious in retrospect. Finally, copycats try to achieve the same success, but they bypass the learning part; they don\u2019t buy Thomas Edison\u2019s observation that that innovation is 1% inspiration and 99% perspiration. \r\nThis talk is about Learning Organizations and what they do differently. It draws on examples from our rich history of breakthroughs to show how organizations create a climate that fosters innovation.\r\n",
         "title": "Learning How to Learn",
         "topic": "team",
         "video": null
@@ -1494,7 +1594,7 @@
             "james.carlson"
         ],
         "start": null,
-        "summary": "This is a \"surprise\" talk. For our keynote we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 30 minutes. As it's a surprise we don't display the session summary before...   ",
+        "summary": "Where are we going with third places? France now has 1,800, according to a recent report co-published by the Ministry of Territorial Integration. How can these places contribute to the future of schools, the world of business, the world of art and of culture? James Carlson, founder of Bucketworks (2002) a \"health club for the brain\" and the School Factory (2007), a nationwide network of makerspaces and hackerspaces in the US will lead a discussion on the trajectory of the third place, and its progression in society. ",
         "title": "Third Place Trajectories",
         "topic": "aliens",
         "video": null
@@ -1514,7 +1614,7 @@
             "davidbenque"
         ],
         "start": null,
-        "summary": "Ce talk est une \"surprise\". Pour cette track, nous choisissons le programme pour vous. Vous \u00eates dans une pi\u00e8ce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 30 minutes. Comme c'est une surprise, nous n'affichons pas le r\u00e9sum\u00e9 de la session avant ...",
+        "summary": "*Flatland*, par Edwin Abbott Abbott, est une fable dont les personnages sont des figures g\u00e9om\u00e9triques. Un simple carr\u00e9, habitant un monde en deux dimensions, fait la rencontre d'une sph\u00e8re qui lui fait d\u00e9couvrir un espace au del\u00e0 des limites de son imagination. \u00c0 sa publication en 1883 *Flatland* \u00e9tait une satire de la soci\u00e9t\u00e9 victorienne, notamment de sa structure de classes et de la place r\u00e9serv\u00e9e aux femmes. Je reviens sur cette fable singuli\u00e8re pour questionner une g\u00e9om\u00e9trie plus contemporaine: celle de l'usage des donn\u00e9es num\u00e9riques et des pouvoirs que l'on conf\u00e8re \u00e0 \"l'intelligence artificielle\".",
         "title": "Le Nouveau Flatland",
         "topic": "design",
         "video": null
@@ -1594,9 +1694,32 @@
             "egorcenski"
         ],
         "start": null,
-        "summary": "This is a \"surprise\" talk. For our keynote we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 30 minutes. As it's a surprise we don't display the session summary before...   ",
+        "summary": "Over the past few years, the relationship between technology, technologists, and the state has come under scrutiny. With many people becoming angry with the unchecked influence that technology has on society and government, people are starting to question the ethical duties of technologists. These discussions are too late. This talk will challenge the audience, and with a radical lens, will explore how something more than simple ethics is needed to address the damage that has already happened\u2014and to mitigate the damage to come.",
         "title": "Beyond Ethics\u2014Technological Citizenship in Changing Times",
         "topic": "ethics",
+        "video": null
+    },
+    {
+        "addedAt": "2019-03-04T22:33:57.658",
+        "description": null,
+        "end": null,
+        "event": "2019",
+        "format": "WORKSHOP",
+        "id": "5c7da7637c9ab929073c0d78",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "UNKNOWN",
+        "slug": "raspberry-pi-jam",
+        "speakerIds": [
+            "tyrower",
+            "Joshua.Lowe",
+            "lespounder",
+            "titimoby"
+        ],
+        "start": null,
+        "summary": "Raspberry Pi Jam",
+        "title": "Raspberry Pi Jam",
+        "topic": "makers",
         "video": null
     },
     {
@@ -1867,6 +1990,26 @@
         "end": null,
         "event": "2019",
         "format": "TALK",
+        "id": "5c7da824a6d40108c981f90e",
+        "language": "ENGLISH",
+        "photoUrls": [],
+        "room": "UNKNOWN",
+        "slug": "missing-out-20-of-potential-users-and-customers-importance-of-accessibility",
+        "speakerIds": [
+            "svetlana"
+        ],
+        "start": null,
+        "summary": "People with disabilities make up the largest minority that is 20% of global population, but their needs are sadly the most misunderstood and ignored. They are even often dismissed from diversity and inclusion equation. Accessibility is an important part of any projects and is not to be used as an afterthought. It\u2019s every team member's responsibility to make their products and services accessible regardless of a type of industry they are working in. Accessibility benefits everyone and not just those with disabilities - including businesses who can improve their bottom lines because they will retain and keep more happy and loyal customers.\r\n\r\nThe speaker will share her personal experiences as a professional who is deaf and discuss what needs to be done to make products and services accessible.",
+        "title": "Missing out 20% of potential users and customers: Importance of accessibility",
+        "topic": "design",
+        "video": null
+    },
+    {
+        "addedAt": "2019-03-04T22:33:57.632",
+        "description": null,
+        "end": null,
+        "event": "2019",
+        "format": "TALK",
         "id": "5c7da824a6d40108c981f90f",
         "language": "ENGLISH",
         "photoUrls": [],
@@ -2041,7 +2184,7 @@
             "andre"
         ],
         "start": null,
-        "summary": "This is a \"surprise\" talk. For our keynote we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 30 minutes. As it's a surprise we don't display the session summary before...   ",
+        "summary": "The centralizing powers of the internet are showing a need for radical change towards freedom and user rights. A new movement is building the new internet, but there are even more difficulties approaching: climate crisis, crowd social engineering, and the next impending economic crisis, all of which are interconnected. This talk will show you how we are coming to the end of an era, and how one promising approach can benefit the environment, the economy, humanity, and the internet: d\u00e9croissance.",
         "title": "The internet in 2030",
         "topic": "aliens",
         "video": null
@@ -2061,7 +2204,7 @@
             "edwin"
         ],
         "start": null,
-        "summary": "This is a \"surprise\" talk. For our keynote we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 30 minutes. As it's a surprise we don't display the session summary before...   ",
+        "summary": "A 30 minute talk introducing the OPENRNDR framework for creative coding. The talk covers how OPENRNDR is created and embedded in interactive design practice. The talk continues with a short introduction that enables anyone interested to start writing visual applications with the framework.",
         "title": "OPENRNDR",
         "topic": "aliens",
         "video": null
@@ -2223,7 +2366,7 @@
             "raphael"
         ],
         "start": null,
-        "summary": "Ce talk est une \"surprise\". Pour cette track, nous choisissons le programme pour vous. Vous \u00eates dans une pi\u00e8ce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 30 minutes. Comme c'est une surprise, nous n'affichons pas le r\u00e9sum\u00e9 de la session avant ...",
+        "summary": "Quand je con\u00e7ois une page, un service, je vais faire attention aux besoins des utilisateurs, \u00e0 leurs capacit\u00e9s cognitives. Je vais les guider dans le parcours que j\u2019estime pertinent pour eux. Je vais attirer \u00e0 leur attention vers certains \u00e9l\u00e9ments, la d\u00e9tourner d\u2019autres \u00e9l\u00e9ments que je juge secondaire. Je peux jouer avec diff\u00e9rents biais cognitifs pour arriver \u00e0 mes fins.\r\nEn allant plus loin, je peux mettre en place une strat\u00e9gie pour que les utilisateurs adoptent librement certains comportements, voir cr\u00e9er de l\u2019addiction, que se soit num\u00e9rique ou dans la vie r\u00e9elle. Ces comportements peuvent \u00eatre vertueux ou justes servir les int\u00e9r\u00eats d\u2019une entreprise.\r\nQuand est-ce que, moi, designer je passe la ligne rouge\u00a0? Quelles r\u00e8gles je me fixe ou pas\u00a0? Il existe des codes de conduites comme celui de l\u2019UXPA, mais concr\u00e8tement \u00e7a donne quoi quand on essaye de l\u2019appliquer dans la vraie vie\u00a0?",
         "title": "Du design de l\u2019attention \u00e0 l\u2019\u00e9thique du designer",
         "topic": "ethics",
         "video": null
@@ -2496,6 +2639,26 @@
         "description": null,
         "end": null,
         "event": "2019",
+        "format": "TALK",
+        "id": "5c7da825a6d40108c981f92e",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "UNKNOWN",
+        "slug": "comment-les-jeux-videos-m-ont-forme-a-l-agilite",
+        "speakerIds": [
+            "r.lesieur"
+        ],
+        "start": null,
+        "summary": "Apprendre en jouant, c'est possible ! Le plus impressionnant est quand on s'en rend compte des ann\u00e9es plus tard. Quels jeux m'ont pr\u00e9par\u00e9s \u00e0 l'agilit\u00e9 et au management et comment, c'est ce que je veux partager.",
+        "title": "Comment les jeux vid\u00e9os m'ont form\u00e9 \u00e0 l'agilit\u00e9",
+        "topic": "team",
+        "video": null
+    },
+    {
+        "addedAt": "2019-03-04T22:33:57.639",
+        "description": null,
+        "end": null,
+        "event": "2019",
         "format": "RANDOM",
         "id": "5c7da825a6d40108c981f92f",
         "language": "ENGLISH",
@@ -2758,6 +2921,26 @@
         "description": null,
         "end": null,
         "event": "2019",
+        "format": "KEYNOTE_SURPRISE",
+        "id": "5c7da825a6d40108c981f93c",
+        "language": "ENGLISH",
+        "photoUrls": [],
+        "room": "UNKNOWN",
+        "slug": "building-an-open-source-project",
+        "speakerIds": [
+            "joshualowe1002"
+        ],
+        "start": null,
+        "summary": "In this talk, 15 year old software developer Joshua Lowe, will talk about his journey building an open source project. Josh has been running his open source project, EduBlocks, for 2 years and has learnt many things along the way. This talk will discuss the benefits of going open source, why open source may be a good idea for your project, the problems of making your project open source and advice for people who may be interested in building an open source project or may already be maintaining one. As well as discussing open source projects, Josh will talk a bit about his project EduBlocks, which is a visual block based programming tool that he has created to help teachers introduce programming languages, like Python, to children at an earlier age. It's being used in over 120 countries across the world in schools, homes and more!",
+        "title": "Building an open source project",
+        "topic": "makers",
+        "video": null
+    },
+    {
+        "addedAt": "2019-03-04T22:33:57.643",
+        "description": null,
+        "end": null,
+        "event": "2019",
         "format": "TALK",
         "id": "5c7da825a6d40108c981f93d",
         "language": "FRENCH",
@@ -2972,7 +3155,7 @@
             "thomas+sessionize"
         ],
         "start": null,
-        "summary": "Ce talk est une \"surprise\". Pour cette track, nous choisissons le programme pour vous. Vous \u00eates dans une pi\u00e8ce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 30 minutes. Comme c'est une surprise, nous n'affichons pas le r\u00e9sum\u00e9 de la session avant ...",
+        "summary": "2019 sera la derni\u00e8re ann\u00e9e qui ressemblera aux pr\u00e9c\u00e9dentes. Vous n'avez pas pu \u00e9chapper \u00e0 l'arriv\u00e9e des \"collapsologues\", oiseaux de mauvaise augure qui d\u00e9crivent inlassablement les potentiels effondrements syst\u00e9miques dont nous serons victimes dans les prochaines d\u00e9cennies, voire ann\u00e9es. Nous somme entr\u00e9\u00b7es dans l'\u00e8re de l'Anthropoc\u00e8ne, o\u00f9 nous humains sommes devenus une force g\u00e9ologique capable de modifier la plan\u00e8te, le climat et les dynamiques du vivant. Un avenir peu enviable, presque terrifiant se pr\u00e9pare sous nos yeux, la f\u00eate \u00e0 la croissance exponentielle semble bel et bien termin\u00e9e.\r\n\r\nLe design et la tech ont largement particip\u00e9 \u00e0 l'exploitation des ressources naturelles et l\u2019acc\u00e9l\u00e9ration des cycles de production et de consommation. Nous actrices et acteurs des nouvelles technologies avons bien souvent perdu l\u2019ancrage \u00e0 la dimension syst\u00e9mique et politique de notre pratique. Nous avons malgr\u00e9 nous contribu\u00e9 \u00e0 fa\u00e7onner ce monde pr\u00eat \u00e0 s'effondrer.\r\n\r\nIl existe un imaginaire entre l'apocalypse et le monde fantasm\u00e9 des \"g\u00e9nies-milliardaires\". Il existe une posture entre se construire un bunker auto-suffisant et exploiter jusqu'\u00e0 la derni\u00e8re goutte les ressources encore pr\u00e9sentes. Nous voulons voir dans ces constats implacables une invitation puissante \u00e0 nous rassembler et nous questionner sur comment nous sculptons notre quotidien comme notre futur. Loin de nous l'id\u00e9e de pr\u00f4ner la fin de la tech et de l'innovation : nous avons encore plein de cordes technologiques \u00e0 notre arc que nous pouvons mobiliser diff\u00e9remment pour tracer les nouvelles r\u00e8gles d'un monde prosp\u00e8re, digne, r\u00e9silient et circulaire. Nous parlerons des communs, du design du vivre ensemble, d'anthropologie, de logiciel libre, de design ouvert, de coop\u00e9ration, de r\u00e9silience, de permaculture...\r\n\r\nCette intervention est le r\u00e9sultat de deux ans de r\u00e9flexion et de recherches dont nous vous pr\u00e9senterons les premiers r\u00e9sultats pour agir d\u00e8s maintenant et faire muter nos pratiques autant que nos paradigmes : initiatives d\u00e9j\u00e0 existantes qui prouvent qu'on peut faire les choses autrement, principes et heuristiques qui permettent de concevoir les outils pour des futurs d\u00e9sirables.\r\n\r\nPlan :\r\n\r\n1/ \u00c0 travers un constat rapide, nous ferons \u00e9tat des d\u00e9fis climatiques, politiques, syst\u00e9miques d\u00e9j\u00e0 pr\u00e9sents \u00e0 notre porte.\r\n2/ Nous questionnerons le r\u00f4le de la tech et du design dans l'Anthropoc\u00e8ne\r\n3/ \u00c0 travers quatre grands principes de design, nous verrons comment nous pouvons changer notre angle de vue sur le monde que nous cr\u00e9ons.\r\n4/ Nous citerons des exemples et des preuves de concept viables qui soutiennent nos hypoth\u00e8ses.\r\n5/ Enfin, nous vous proposerons des heuristiques de design, open source et adaptables \u00e0 toutes les disciplines, pour agir tout de suite et changer profond\u00e9ment notre fa\u00e7on d'\u00eatre au monde.",
         "title": "Fa\u00e7onner des futurs souhaitables : concevoir \u00e0 l'\u00e8re de l'Anthropoc\u00e8ne",
         "topic": "ethics",
         "video": null
@@ -3114,7 +3297,7 @@
             "mary"
         ],
         "start": null,
-        "summary": "This is a \"surprise\" talk. For our keynote we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 30 minutes. As it's a surprise we don't display the session summary before...   ",
+        "summary": "Every groundbreaking advance in software engineering \u2013 from the iPhone to space exploration to self-driving cars, not to mention the Internet and the Cloud \u2013 has followed the same arc. First there is the impossible challenge. Then there is a long hard slog of learning, with all its ups and downs. Eventually a solution emerges, which always looks obvious in retrospect. Finally, copycats try to achieve the same success, but they bypass the learning part; they don\u2019t buy Thomas Edison\u2019s observation that that innovation is 1% inspiration and 99% perspiration. \r\nThis talk is about Learning Organizations and what they do differently. It draws on examples from our rich history of breakthroughs to show how organizations create a climate that fosters innovation.\r\n",
         "title": "Learning How to Learn",
         "topic": "team",
         "video": null
@@ -3154,7 +3337,7 @@
             "james.carlson"
         ],
         "start": null,
-        "summary": "This is a \"surprise\" talk. For our keynote we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 30 minutes. As it's a surprise we don't display the session summary before...   ",
+        "summary": "Where are we going with third places? France now has 1,800, according to a recent report co-published by the Ministry of Territorial Integration. How can these places contribute to the future of schools, the world of business, the world of art and of culture? James Carlson, founder of Bucketworks (2002) a \"health club for the brain\" and the School Factory (2007), a nationwide network of makerspaces and hackerspaces in the US will lead a discussion on the trajectory of the third place, and its progression in society. ",
         "title": "Third Place Trajectories",
         "topic": "aliens",
         "video": null
@@ -3174,7 +3357,7 @@
             "davidbenque"
         ],
         "start": null,
-        "summary": "Ce talk est une \"surprise\". Pour cette track, nous choisissons le programme pour vous. Vous \u00eates dans une pi\u00e8ce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 30 minutes. Comme c'est une surprise, nous n'affichons pas le r\u00e9sum\u00e9 de la session avant ...",
+        "summary": "*Flatland*, par Edwin Abbott Abbott, est une fable dont les personnages sont des figures g\u00e9om\u00e9triques. Un simple carr\u00e9, habitant un monde en deux dimensions, fait la rencontre d'une sph\u00e8re qui lui fait d\u00e9couvrir un espace au del\u00e0 des limites de son imagination. \u00c0 sa publication en 1883 *Flatland* \u00e9tait une satire de la soci\u00e9t\u00e9 victorienne, notamment de sa structure de classes et de la place r\u00e9serv\u00e9e aux femmes. Je reviens sur cette fable singuli\u00e8re pour questionner une g\u00e9om\u00e9trie plus contemporaine: celle de l'usage des donn\u00e9es num\u00e9riques et des pouvoirs que l'on conf\u00e8re \u00e0 \"l'intelligence artificielle\".",
         "title": "Le Nouveau Flatland",
         "topic": "design",
         "video": null
@@ -3254,7 +3437,7 @@
             "egorcenski"
         ],
         "start": null,
-        "summary": "This is a \"surprise\" talk. For our keynote we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 30 minutes. As it's a surprise we don't display the session summary before...   ",
+        "summary": "Over the past few years, the relationship between technology, technologists, and the state has come under scrutiny. With many people becoming angry with the unchecked influence that technology has on society and government, people are starting to question the ethical duties of technologists. These discussions are too late. This talk will challenge the audience, and with a radical lens, will explore how something more than simple ethics is needed to address the damage that has already happened\u2014and to mitigate the damage to come.",
         "title": "Beyond Ethics\u2014Technological Citizenship in Changing Times",
         "topic": "ethics",
         "video": null
@@ -3300,66 +3483,6 @@
         "summary": "Mob Programming is a development practice where the whole team works on the same thing, at the same time, in the same space, and on the same computer. It is a whole-team approach to doing all the work the team does including designing, coding, testing, and working with the customers, users and other stakeholders. This is an evolutionary step beyond pair programming and accentuates face-to-face",
         "title": "Mob Programming: A Whole Team Approach",
         "topic": "team",
-        "video": null
-    },
-    {
-        "addedAt": "2019-03-04T22:33:57.62",
-        "description": null,
-        "end": "2019-05-23T09:00:00",
-        "event": "2019",
-        "format": "TALK",
-        "id": "5c7da7637c9ab929073c0d24",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "comment-perdre-sa-surchage-featurale-",
-        "speakerIds": [
-            "estelle.landry"
-        ],
-        "start": "2019-05-23T09:00:00",
-        "summary": "Le cycle de vie d'une application est un chemin n\u00e9buleux et plein de dangers. La complexit\u00e9 ne fait que croitre durant les mois et les ann\u00e9es d'utilisation. L'un des plus gros challenges d'un d\u00e9veloppeur est de pouvoir la contr\u00f4ler tout en ajoutant de nouvelles fonctionnalit\u00e9s (features).\r\n\r\nDes solutions existent : le r\u00e9-\u00e9criture de code ou encore la maitrise de la dette technique. En effet, ces deux actions permettent de lever \"la complexit\u00e9 accidentelle\". Mais que faisons nous de la \"complexit\u00e9 essentielle\" ? La complexit\u00e9 qui n'est pas li\u00e9e au code.\r\n\r\nLa seule solution : Supprimer des fonctionnalit\u00e9s ! Ce talk vous expliquera comment perdre la surcharge featurale de vos applications en comprenant la diff\u00e9rence entre la complexit\u00e9 essentielle et la complexit\u00e9 accidentelle, mais aussi en vous donnant des cl\u00e9s pour mener \u00e0 bien ce changement dans vos \u00e9quipes projet.",
-        "title": "Comment perdre sa surchage featurale ?",
-        "topic": "design",
-        "video": null
-    },
-    {
-        "addedAt": "2019-03-04T22:33:57.639",
-        "description": null,
-        "end": "2019-05-23T10:30:00",
-        "event": "2019",
-        "format": "TALK",
-        "id": "5c7da825a6d40108c981f92e",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "comment-les-jeux-video-m-ont-forme-a-l-agilite",
-        "speakerIds": [
-            "r.lesieur"
-        ],
-        "start": "2019-05-23T09:30:00",
-        "summary": "Apprendre en jouant, c'est possible ! Le plus impressionnant est quand on s'en rend compte des ann\u00e9es plus tard. Quels jeux m'ont pr\u00e9par\u00e9s \u00e0 l'agilit\u00e9 et au management et comment, c'est ce que je veux partager.",
-        "title": "Comment les jeux vid\u00e9o m'ont form\u00e9 \u00e0 l'agilit\u00e9",
-        "topic": "team",
-        "video": null
-    },
-    {
-        "addedAt": "2019-03-04T22:33:57.643",
-        "description": null,
-        "end": "2019-05-23T14:00:00",
-        "event": "2019",
-        "format": "TALK",
-        "id": "5c7da825a6d40108c981f93c",
-        "language": "ENGLISH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "building-an-open-source-project",
-        "speakerIds": [
-            "Joshua.Lowe"
-        ],
-        "start": "2019-05-23T13:40:00",
-        "summary": "In this talk, 15 year old software developer Joshua Lowe, will talk about his journey building an open source project. Josh has been running his open source project, EduBlocks, for 2 years and has learnt many things along the way. This talk will discuss the benefits of going open source, why open source may be a good idea for your project, the problems of making your project open source and advice for people who may be interested in building an open source project or may already be maintaining one. As well as discussing open source projects, Josh will talk a bit about his project EduBlocks, which is a visual block based programming tool that he has created to help teachers introduce programming languages, like Python, to children at an earlier age. It's being used in over 120 countries across the world in schools, homes and more!",
-        "title": "Building an open source project",
-        "topic": "makers",
         "video": null
     }
 ]
