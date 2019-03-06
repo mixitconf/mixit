@@ -14,6 +14,9 @@ import org.springframework.data.mongodb.core.query.*
 import org.springframework.data.mongodb.core.query.Criteria.where
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.LocalTime
 
 
 @Repository
@@ -30,6 +33,27 @@ class TalkRepository(private val template: ReactiveMongoTemplate,
                 talks.forEach { save(it).block() }
             }
             logger.info("Talks data initialization complete")
+        }
+        // We have to update all time for the 2019 talks
+        findByEvent("2019").collectList().block()?.map { talk ->
+            save(Talk(
+                    talk.format,
+                    talk.event,
+                    talk.title,
+                    talk.summary,
+                    talk.speakerIds,
+                    talk.language,
+                    talk.addedAt,
+                    talk.description,
+                    talk.topic,
+                    talk.video,
+                    talk.room,
+                    LocalDateTime.of(LocalDate.parse("2019-05-23"), LocalTime.parse("09:00")),
+                    LocalDateTime.of(LocalDate.parse("2019-05-23"), LocalTime.parse("09:30")),
+                    talk.photoUrls,
+                    talk.slug,
+                    talk.id
+            )).block()
         }
     }
 
