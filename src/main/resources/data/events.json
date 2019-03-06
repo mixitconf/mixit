@@ -887,6 +887,11 @@
                 "level": "GOLD",
                 "sponsorId": "societegenerale",
                 "subscriptionDate": "2019-03-04"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "thales",
+                "subscriptionDate": "2019-03-06"
             }
         ],
         "start": "2019-05-23",

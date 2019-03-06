@@ -11937,8 +11937,8 @@
         "login": "anne-laure",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "5ee6d43c1cf3",
-        "tokenExpiration": "2019-02-17T13:25:11.437"
+        "token": "315c877d5f43",
+        "tokenExpiration": "2019-03-07T20:36:28.554"
     },
     {
         "company": "Ippon Technologies",
@@ -21465,8 +21465,8 @@
         "login": "franck",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "7b054d94f982",
-        "tokenExpiration": "2019-02-17T20:49:21.799"
+        "token": "a430afe08fab",
+        "tokenExpiration": "2019-03-07T19:49:42.093"
     },
     {
         "company": "",
@@ -41253,10 +41253,10 @@
         "legacyId": 365,
         "links": [],
         "login": "thales",
-        "photoUrl": "images/sponsors/logo-thales.gif",
+        "photoUrl": "https://mixitconf.org/images/sponsors/logo-thales.svg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T14:29:13.545"
+        "tokenExpiration": "2019-03-05T08:55:34.383"
     },
     {
         "company": "",
@@ -46577,5 +46577,20 @@
         "role": "USER",
         "token": "empty-token",
         "tokenExpiration": "2019-03-03T22:24:54.588"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "Q+Qf0QEBtpbssbnA0MHbPZDrTmQBbX1cKuxdnRLZ/Y8=",
+        "emailHash": null,
+        "firstname": "Nicolas",
+        "lastname": "Krieger",
+        "legacyId": null,
+        "links": [],
+        "login": "nicolas.krieger",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "bc4de36d84a6",
+        "tokenExpiration": "2019-03-07T09:35:06.569"
     }
 ]
