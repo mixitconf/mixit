@@ -32,6 +32,7 @@ class ApiRoutes(private val blogHandler: BlogHandler,
                 GET("/ticket", ticketingHandler::findAll)
                 GET("/ticket/random", ticketingHandler::randomDraw)
                 GET("/favorite", favoriteHandler::findAll)
+                GET("/{year}/talk", talkHandler::findAdminByEventId)
             }
 
             // Talks

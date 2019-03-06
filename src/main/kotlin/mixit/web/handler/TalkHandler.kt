@@ -249,6 +249,9 @@ class TalkHandler(private val repository: TalkRepository,
 
     fun findByEventId(req: ServerRequest) = ok().json().body(repository.findByEvent(req.pathVariable("year")).map { it.sanitizeForApi() })
 
+    fun findAdminByEventId(req: ServerRequest) = ok().json().body(repository.findByEvent(req.pathVariable("year")))
+
+
     fun redirectFromId(req: ServerRequest) = repository.findOne(req.pathVariable("id")).flatMap {
         permanentRedirect("${properties.baseUri}/${it.event}/${it.slug}")
     }
@@ -330,4 +333,4 @@ fun Talk.title(convertRandomLabel: Boolean, searchTerms: List<String> = emptyLis
 
 fun Talk.description(convertRandomLabel: Boolean) = if (convertRandomLabel && (format == TalkFormat.RANDOM || format == TalkFormat.KEYNOTE_SURPRISE) && event == "2019") "" else description
 
-fun Talk.sanitizeForApi() = Talk(format, event, title, summary(true), speakerIds, language, addedAt, description, topic, video, room, start, end, photoUrls, slug, id)
+fun Talk.sanitizeForApi() = Talk(format, event, title(true), summary(true), speakerIds, language, addedAt, description(true), topic, video, room, start, end, photoUrls, slug, id)
