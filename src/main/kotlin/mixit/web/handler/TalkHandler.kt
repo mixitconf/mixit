@@ -285,9 +285,9 @@ class TalkDto(
         val speakersFirstNames: String = (speakers.joinToString { it.firstname })
 )
 
-fun Talk.toDto(lang: Language, speakers: List<User>, favorite: Boolean = false, convertRandomLabel: Boolean = false, searchTerms: List<String> = emptyList()) = TalkDto(
+fun Talk.toDto(lang: Language, speakers: List<User>, favorite: Boolean = false, convertRandomLabel: Boolean = true, searchTerms: List<String> = emptyList()) = TalkDto(
         id, slug, format, event,
-        title.markFoundOccurrences(searchTerms),
+        title(convertRandomLabel, searchTerms),
         summary(convertRandomLabel).markFoundOccurrences(searchTerms),
         speakers,
         language.name.toLowerCase(), addedAt,
@@ -303,12 +303,31 @@ fun Talk.toDto(lang: Language, speakers: List<User>, favorite: Boolean = false, 
         photoUrls
 )
 
-fun Talk.summary(convertRandomLabel: Boolean) = if (convertRandomLabel && format == TalkFormat.RANDOM && language == Language.ENGLISH && event == "2019")
-    "This is a \"Random\" talk. For this track we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 20 minutes. As it's a surprise we don't display the session summary before...   "
-else if (convertRandomLabel && format == TalkFormat.RANDOM && language == Language.FRENCH && event == "2019")
-    "Ce talk est de type \"random\". Pour cette track, nous choisissons le programme pour vous. Vous êtes dans une pièce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 20 minutes. Comme c'est une surprise, nous n'affichons pas le résumé de la session avant ..."
-else summary
+fun Talk.summary(convertRandomLabel: Boolean): String {
+    if(event == "2019" && convertRandomLabel){
+        when(format){
+            TalkFormat.RANDOM -> {
+                if(language == Language.ENGLISH){
+                    return "This is a \"Random\" talk. For this track we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 20 minutes. As it's a surprise we don't display the session summary before...   "
+                }
+                return "Ce talk est de type \"random\". Pour cette track, nous choisissons le programme pour vous. Vous êtes dans une pièce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 20 minutes. Comme c'est une surprise, nous n'affichons pas le résumé de la session avant ..."
+            }
+            TalkFormat.KEYNOTE_SURPRISE -> {
+                if (language == Language.ENGLISH) {
+                    return "This is a \"surprise\" talk. For our keynote we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 30 minutes. As it's a surprise we don't display the session summary before...   "
+                }
+                return "Ce talk est une \"surprise\". Pour cette track, nous choisissons le programme pour vous. Vous êtes dans une pièce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 30 minutes. Comme c'est une surprise, nous n'affichons pas le résumé de la session avant ..."
+            }
+        }
+        return summary
+    }
+    return summary
+}
 
-fun Talk.description(convertRandomLabel: Boolean) = if (convertRandomLabel && format == TalkFormat.RANDOM && event == "2019") "" else description
+
+fun Talk.title(convertRandomLabel: Boolean, searchTerms: List<String> = emptyList()): String = if (convertRandomLabel && format == TalkFormat.KEYNOTE_SURPRISE && event == "2019")  "A surprise keynote... is a surprise"
+     else title.markFoundOccurrences(searchTerms)
+
+fun Talk.description(convertRandomLabel: Boolean) = if (convertRandomLabel && (format == TalkFormat.RANDOM || format == TalkFormat.KEYNOTE_SURPRISE) && event == "2019") "" else description
 
 fun Talk.sanitizeForApi() = Talk(format, event, title, summary(true), speakerIds, language, addedAt, description, topic, video, room, start, end, photoUrls, slug, id)
