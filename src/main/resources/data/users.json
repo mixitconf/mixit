@@ -1162,10 +1162,10 @@
         "legacyId": null,
         "links": [],
         "login": "106558503016616394107",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/gallet.jpg",
+        "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.581"
+        "tokenExpiration": "2019-03-06T12:53:30.999"
     },
     {
         "company": "",
@@ -11937,8 +11937,8 @@
         "login": "anne-laure",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "315c877d5f43",
-        "tokenExpiration": "2019-03-07T20:36:28.554"
+        "token": "df35964004ed",
+        "tokenExpiration": "2019-03-08T13:29:02.304"
     },
     {
         "company": "Ippon Technologies",
@@ -12868,7 +12868,7 @@
         "tokenExpiration": "2018-03-03T17:17:35.522"
     },
     {
-        "company": "",
+        "company": null,
         "description": {
             "ENGLISH": "Je suis d\u00e9veloppeur Python, administrateur GNU/Linux et fondateur d'Hashbang, soci\u00e9t\u00e9 proposant des services pour les entrepreneurs et PME du web. J'interviens principalement sur des projets de syst\u00e8mes d'informations et de d\u00e9veloppements webs.",
             "FRENCH": "Je suis d\u00e9veloppeur Python, administrateur GNU/Linux et fondateur d'Hashbang, soci\u00e9t\u00e9 proposant des services pour les entrepreneurs et PME du web. J'interviens principalement sur des projets de syst\u00e8mes d'informations et de d\u00e9veloppements webs."
@@ -12893,10 +12893,10 @@
             }
         ],
         "login": "arthru",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/vuillard.png",
+        "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.215"
+        "tokenExpiration": "2019-03-06T12:37:14.765"
     },
     {
         "company": "",
@@ -20582,10 +20582,10 @@
             }
         ],
         "login": "fchabanois",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/chabanois.png",
+        "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.313"
+        "tokenExpiration": "2019-03-06T12:28:45.822"
     },
     {
         "company": "",
@@ -23341,8 +23341,8 @@
         "login": "guillaumeehret",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "cd9a678c4463",
-        "tokenExpiration": "2019-03-07T06:37:37.07"
+        "token": "c4d0b7ddbad2",
+        "tokenExpiration": "2019-03-09T08:02:49.912"
     },
     {
         "company": "",
@@ -28051,7 +28051,7 @@
         "tokenExpiration": "2018-03-03T17:17:35.493"
     },
     {
-        "company": "",
+        "company": null,
         "description": {
             "ENGLISH": "Laurent Grangeau est un coach DevOps chez Finaxys. Il coach au sein d'une banque les \u00e9quipes de d\u00e9veloppement vers le continuous delivery. Docker enthousiaste depuis le d\u00e9but, il participe activement \u00e0 promouvoir Docker en co-organisant des meetups.",
             "FRENCH": "Laurent Grangeau est un coach DevOps chez Finaxys. Il coach au sein d'une banque les \u00e9quipes de d\u00e9veloppement vers le continuous delivery. Docker enthousiaste depuis le d\u00e9but, il participe activement \u00e0 promouvoir Docker en co-organisant des meetups."
@@ -28072,10 +28072,10 @@
             }
         ],
         "login": "laurentgrangeau",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/grangeau.png",
+        "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.401"
+        "tokenExpiration": "2019-03-06T12:38:24.85"
     },
     {
         "company": "",
@@ -31078,10 +31078,10 @@
             }
         ],
         "login": "mcpaccard",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/paccard.png",
+        "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.417"
+        "tokenExpiration": "2019-03-06T12:27:03.382"
     },
     {
         "company": "",
@@ -32016,8 +32016,8 @@
         "login": "mpetitdant",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "c532ad81dab4",
-        "tokenExpiration": "2019-02-06T21:08:48.689"
+        "token": "b6e912e3e4c7",
+        "tokenExpiration": "2019-03-09T21:00:14.848"
     },
     {
         "company": null,
@@ -41968,8 +41968,8 @@
         "login": "titimoby",
         "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/chantier.jpg",
         "role": "STAFF_IN_PAUSE",
-        "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.552"
+        "token": "eb0f7ef2ddc6",
+        "tokenExpiration": "2019-03-08T15:03:22.773"
     },
     {
         "company": "",
@@ -45112,10 +45112,10 @@
             }
         ],
         "login": "cgilet",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/gilet.png",
+        "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.26"
+        "tokenExpiration": "2019-03-06T12:37:54.561"
     },
     {
         "company": null,
@@ -45285,10 +45285,10 @@
             }
         ],
         "login": "edwin",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/jakobs.png",
+        "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.285"
+        "tokenExpiration": "2019-03-06T12:38:11.829"
     },
     {
         "company": null,
@@ -45320,10 +45320,10 @@
             }
         ],
         "login": "elisabeth-engel",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/engel.png",
+        "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.289"
+        "tokenExpiration": "2019-03-06T12:36:25.94"
     },
     {
         "company": null,
@@ -45537,10 +45537,10 @@
             }
         ],
         "login": "ivan",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/\u010duljak.jpg",
+        "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.345"
+        "tokenExpiration": "2019-03-06T12:49:54.039"
     },
     {
         "company": null,
@@ -45675,10 +45675,10 @@
             }
         ],
         "login": "julien.topcu",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/top\u00e7u.png",
+        "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.382"
+        "tokenExpiration": "2019-03-06T12:25:19.402"
     },
     {
         "company": null,
@@ -45865,10 +45865,10 @@
             }
         ],
         "login": "marek.stoj",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/st\u00f3j.jpg",
+        "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.41"
+        "tokenExpiration": "2019-03-06T12:50:22.752"
     },
     {
         "company": null,
@@ -45962,10 +45962,10 @@
             }
         ],
         "login": "mary",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/poppendieck.png",
+        "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.426"
+        "tokenExpiration": "2019-03-06T12:28:15.332"
     },
     {
         "company": null,
@@ -45989,10 +45989,10 @@
             }
         ],
         "login": "maryange.dichi",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/dichi.jpg",
+        "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.43"
+        "tokenExpiration": "2019-03-06T12:24:46.882"
     },
     {
         "company": null,
@@ -46187,10 +46187,10 @@
         "legacyId": null,
         "links": [],
         "login": "raphael",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/pierquin.jpg",
+        "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.503"
+        "tokenExpiration": "2019-03-06T12:35:53.088"
     },
     {
         "company": null,
@@ -46241,10 +46241,10 @@
             }
         ],
         "login": "sam.galson",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/galson.png",
+        "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.51"
+        "tokenExpiration": "2019-03-06T12:37:42.019"
     },
     {
         "company": null,
@@ -46329,10 +46329,10 @@
             }
         ],
         "login": "sebastien.stormacq",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/stormacq.png",
+        "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.521"
+        "tokenExpiration": "2019-03-06T12:34:07.611"
     },
     {
         "company": null,
@@ -46592,5 +46592,115 @@
         "role": "USER",
         "token": "bc4de36d84a6",
         "tokenExpiration": "2019-03-07T09:35:06.569"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "4hSY4bjNUwWUZpGqAS7DKGaZRHBVvx03R11LSOapujY=",
+        "emailHash": null,
+        "firstname": "Florent",
+        "lastname": "Daubign\u00e9",
+        "legacyId": null,
+        "links": [],
+        "login": "daubiflo",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "cd16c81c7dba",
+        "tokenExpiration": "2019-03-08T19:28:26.767"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "gyese6NLlUcFtuaVv1hV3b4Zxwrod9V80MMBM3xJtv0=",
+        "emailHash": null,
+        "firstname": "Blonde",
+        "lastname": "Butt",
+        "legacyId": null,
+        "links": [],
+        "login": "blondie.handsome85",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "33bfed25b9db",
+        "tokenExpiration": "2019-03-08T23:36:32.425"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "",
+            "FRENCH": "Je travaille en freelance comme lead UX designer, psychologue depuis le dernier mill\u00e9naire. Mon parcours m\u2019a permis de travailler sur des sujets vari\u00e9s allant du WAP \u00e0 la t\u00e9l\u00e9vision, en passant par, le web, le e-commerce et les applications professionnelles ou le design de service. J\u2019interviens sur les phases de recherches utilisateurs, l\u2019animation d\u2019ateliers de co-conception, la r\u00e9alisation et l\u2019\u00e9valuation des services, ainsi que sur la mise en place de strat\u00e9gies centr\u00e9es sur l\u2019Utilisateur.\r\nDepuis 2009, je partage mon exp\u00e9rience et mes connaissances sur mon bloc-notes. Ce qui m\u2019a amen\u00e9 par la suite, \u00e0 enseigner dans divers \u00e9coles et notamment \u00e0 cr\u00e9er une formation en UX Design et \u00e0 animer UX Pays basque."
+        },
+        "email": "nJcNIIEfdeVCEbBLC19Bj2Na4HMoBmCzVPuAdCHMWN8=",
+        "emailHash": null,
+        "firstname": "Rapha\u00ebl",
+        "lastname": "Yharrassarry",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/iergo"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/raphaelyharrassarry/"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://www.iergo.fr"
+            },
+            {
+                "name": "Blog",
+                "url": "https://blocnotes.iergo.fr"
+            }
+        ],
+        "login": "yharrassarry",
+        "photoUrl": "https://sessionize.com/image?f=f3f0edf151bf85efe0db809a092d1f96,400,400,True,False,4f-8236-48c5-b6e3-45beac43695a.74feaf49-7bd5-4ad9-a393-d058b05eb68f.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-06T09:04:26.211"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "mRn1qNdnTrGf4XPa2I/2dCGmWFtY73PvESGL8KwdGIY=",
+        "emailHash": null,
+        "firstname": "Washaana",
+        "lastname": "Curnow",
+        "legacyId": null,
+        "links": [],
+        "login": "washaanacurnow",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "b82085023fee",
+        "tokenExpiration": "2019-03-09T14:46:40.941"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "G5m1CsV3Gv4oN84cwOitbWvpUrk/rmC/1d1Uw1muvhM=",
+        "emailHash": null,
+        "firstname": "Sikhulule",
+        "lastname": "Asinavalo",
+        "legacyId": null,
+        "links": [],
+        "login": "siyotywaasinavalo",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "4d08642cd004",
+        "tokenExpiration": "2019-03-09T16:07:14.607"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "hnj5mOnkzZfD5zrCOp5PCf3bKksCzfAly/Yzd6/HGcg=",
+        "emailHash": null,
+        "firstname": "Sylvester",
+        "lastname": "Ndimande",
+        "legacyId": null,
+        "links": [],
+        "login": "sylvesterndimande",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "9c7722ef9d5b",
+        "tokenExpiration": "2019-03-09T20:14:47.492"
     }
 ]
