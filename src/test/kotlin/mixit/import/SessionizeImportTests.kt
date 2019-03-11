@@ -23,7 +23,7 @@ inline fun <reified T> ObjectMapper.readValue(src: InputStream): T = readValue(s
 
 @ExtendWith(SpringExtension::class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-//@Disabled
+@Disabled
 class SessionizeImportTests(@Autowired val objectMapper: ObjectMapper,
                             @Autowired val userRepository: UserRepository,
                             @Autowired val cryptographer: Cryptographer) {

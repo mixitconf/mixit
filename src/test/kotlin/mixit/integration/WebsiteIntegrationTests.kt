@@ -109,11 +109,11 @@ class WebsiteIntegrationTests(@Autowired val client: WebTestClient) {
                 .expectStatus().is2xxSuccessful
 
 
-        client.get().uri("/2016").accept(TEXT_HTML)
+        client.get().uri("/2018").accept(TEXT_HTML)
                 .exchange()
                 .expectStatus().is2xxSuccessful
 
-        client.get().uri("/en/2016").accept(TEXT_HTML)
+        client.get().uri("/en/2018").accept(TEXT_HTML)
                 .exchange()
                 .expectStatus().is2xxSuccessful
 
