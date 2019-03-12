@@ -17,6 +17,7 @@ import org.springframework.core.io.ClassPathResource
 import org.springframework.http.MediaType.*
 import org.springframework.web.reactive.function.server.RenderingResponse
 import org.springframework.web.reactive.function.server.RouterFunctions.resources
+import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.router
 import reactor.core.publisher.toMono
 import java.util.*
@@ -146,7 +147,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
             POST("/me", userHandler::saveProfile)
             POST("/me/talks", talkHandler::saveProfileTalk)
             POST("/search") { globalHandler.searchFullTextView(it) }
-            // POST("/ticketing", ticketingHandler::submit)
+            POST("/ticketing", ticketingHandler::submit)
 
             "/admin".nest {
                 POST("/talks", adminHandler::adminSaveTalk)
@@ -166,7 +167,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
         if (properties.baseUri != "https://mixitconf.org") {
             logger.warn("SEO disabled via robots.txt because ${properties.baseUri} baseUri is not the production one (https://mixitconf.org)")
             GET("/robots.txt") {
-                ok().contentType(TEXT_PLAIN).syncBody("User-agent: *\nDisallow: /")
+                ServerResponse.ok().contentType(TEXT_PLAIN).syncBody("User-agent: *\nDisallow: /")
             }
         }
     }.filter { request, next ->

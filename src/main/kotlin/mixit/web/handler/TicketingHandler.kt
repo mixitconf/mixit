@@ -34,7 +34,7 @@ class TicketingHandler(private val ticketRepository: TicketRepository,
                                          .toMono()
                             })
 
-    fun ticketing(req: ServerRequest) = ServerResponse.ok().render("ticketing-closed", mapOf(Pair("title", "ticketing.title")))
+    fun ticketing(req: ServerRequest) = ServerResponse.ok().render("ticketing", mapOf(Pair("title", "ticketing.title")))
 
     fun submit(req: ServerRequest) = req.body(BodyExtractors.toFormData()).flatMap {
         val formData  = it.toSingleValueMap()

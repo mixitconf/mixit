@@ -52,7 +52,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
     compile("org.springframework.boot:spring-boot-devtools")
     kapt("org.springframework.boot:spring-boot-configuration-processor")
-    
+
     runtime("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
     compile("com.samskivert:jmustache")
     compile("com.atlassian.commonmark:commonmark:$commonmarkVersion")

@@ -3,6 +3,7 @@ package mixit.web.handler
 import mixit.MixitProperties
 import mixit.model.Role
 import mixit.model.User
+import mixit.repository.TicketRepository
 import mixit.repository.UserRepository
 import mixit.util.*
 import mixit.util.validator.EmailValidator
@@ -25,6 +26,7 @@ import java.util.*
 
 @Component
 class AuthenticationHandler(private val userRepository: UserRepository,
+                            private val ticketRepository: TicketRepository,
                             private val properties: MixitProperties,
                             private val emailService: EmailService,
                             private val emailValidator: EmailValidator,
@@ -48,7 +50,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
         } else if (!emailValidator.isValid(data.toSingleValueMap()["email"]!!)) {
             renderError("login.error.creation.mail")
         } else {
-            searchUserAndSendToken(data.toSingleValueMap()["email"]!!.trim().toLowerCase(), req.locale())
+            searchUserAndSendToken(req, data.toSingleValueMap()["email"]!!.trim().toLowerCase())
         }
     }
 
@@ -60,7 +62,8 @@ class AuthenticationHandler(private val userRepository: UserRepository,
                 .flatMap {
                     userRepository
                             .findByEmail(it)
-                            .flatMap { updateUserToken(it, req.locale())
+                            .flatMap {
+                                updateUserToken(it, req.locale())
                                         .flatMap { clearSession(session) }
                                         .switchIfEmpty(clearSession(session))
                             }
@@ -69,7 +72,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
                 .switchIfEmpty(clearSession(session))
     }
 
-    private fun clearSession(session: WebSession):Mono<ServerResponse> {
+    private fun clearSession(session: WebSession): Mono<ServerResponse> {
         session.attributes.remove("email")
         session.attributes.remove("login")
         session.attributes.remove("token")
@@ -83,7 +86,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
      * Email is required for the sign in process. If email is not in our database, we ask to the visitor to create
      * a new account. If the account already exists we send him a token by email
      */
-    private fun searchUserAndSendToken(email: String, locale: Locale): Mono<ServerResponse> {
+    private fun searchUserAndSendToken(req: ServerRequest, email: String): Mono<ServerResponse> {
 
         val context = mapOf(Pair("email", email))
 
@@ -91,15 +94,35 @@ class AuthenticationHandler(private val userRepository: UserRepository,
         return userRepository.findByEmail(email)
                 .flatMap { user ->
                     // if user exists we send a token by email
-                    updateUserToken(if(user.email == null) user.updateEmail(cryptographer, email) else user, locale, sendToken = true)
+                    updateUserToken(if (user.email == null) user.updateEmail(cryptographer, email) else user, req.locale(), sendToken = true)
                             // if token is sent we call the the screen where user can type this token
                             .flatMap { ok().render("login-confirmation", context) }
                             // if not this is an error
                             .switchIfEmpty(renderError("login.error.sendtoken.text"))
                 }
                 // if user is not found we ask him if he wants to create a new account
-                .switchIfEmpty(ServerResponse.ok().render("login-creation", context))
+                .switchIfEmpty(searchUserInTicketsAndSendToken(req, email, context))
     }
+
+
+    private fun searchUserInTicketsAndSendToken(req: ServerRequest, email: String, context: Map<String, String>): Mono<ServerResponse> =
+            ticketRepository.findByEmail(email)
+                .flatMap { ticket ->
+                    createUser(
+                            req,
+                            email,
+                            User(
+                                    login = email.split("@").get(0),
+                                    firstname = ticket.firstname.toLowerCase().capitalize(),
+                                    lastname = ticket.lastname.toLowerCase().capitalize(),
+                                    email = cryptographer.encrypt(email),
+                                    photoUrl = "/images/png/mxt-icon--default-avatar.png",
+                                    role = Role.USER
+                            )
+                    )
+                }
+                // if user is not found we ask him if he wants to create a new account
+                .switchIfEmpty(ServerResponse.ok().render("login-creation", context))
 
     /**
      * Action to create a new account. Email, firstname, lastname are required in the form sent by the user
@@ -123,19 +146,23 @@ class AuthenticationHandler(private val userRepository: UserRepository,
         if (!emailValidator.isValid(email)) {
             renderError("login.error.creation.mail")
         } else {
-            userRepository.findByEmail(email)
-                    // Email is unique and if an email is found we return an error
-                    .flatMap { renderError("login.error.uniqueemail.text") }
-                    .switchIfEmpty(
-                            userRepository
-                                    .save(user)
-                                    // if user is created we send him a token by email
-                                    .flatMap { searchUserAndSendToken(email.trim().toLowerCase(), req.locale()) }
-                                    // otherwise we display an error
-                                    .switchIfEmpty(renderError("login.error.creation.text"))
-                    )
+            createUser(req, email, user)
         }
     }
+
+    fun createUser(req: ServerRequest, nonEncryptedEmail: String, user: User): Mono<ServerResponse> = userRepository
+            .findByEmail(nonEncryptedEmail)
+            // Email is unique and if an email is found we return an error
+            .flatMap { renderError("login.error.uniqueemail.text") }
+            .switchIfEmpty(
+                    userRepository
+                            .save(user)
+                            // if user is created we send him a token by email
+                            .flatMap { searchUserAndSendToken(req, nonEncryptedEmail.trim().toLowerCase()) }
+                            // otherwise we display an error
+                            .switchIfEmpty(renderError("login.error.creation.text"))
+            )
+
 
     /**
      * Action when user wants to send his token to open a session. This token is valid only for a limited time
@@ -145,7 +172,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
         val email = URLDecoder.decode(req.pathVariable("email"), "UTF-8").decodeFromBase64()
         val token = req.pathVariable("token")
 
-        val context = mapOf(Pair("email", email), Pair ("token", token))
+        val context = mapOf(Pair("email", email), Pair("token", token))
         return ok().render("login-confirmation", context)
     }
 
@@ -198,10 +225,10 @@ class AuthenticationHandler(private val userRepository: UserRepository,
      * Sends an email with a token to the user. We don't need validation of the email adress. If he receives
      * the email it's OK. If he retries a login a new token is sent
      */
-    private fun updateUserToken(user: User, locale: Locale, sendToken:Boolean = false): Mono<User> {
+    private fun updateUserToken(user: User, locale: Locale, sendToken: Boolean = false): Mono<User> {
         val userToUpdate = user.generateNewToken()
         try {
-            if(sendToken){
+            if (sendToken) {
                 logger.info("A token ${userToUpdate.token} was sent by email")
                 emailService.send("email-token", userToUpdate, locale)
             }
@@ -215,8 +242,8 @@ class AuthenticationHandler(private val userRepository: UserRepository,
 }
 
 fun User.generateNewToken() = User(login, firstname, lastname, email, company, description, emailHash,
-        photoUrl, role, links,legacyId, LocalDateTime.now().plusHours(48),
+        photoUrl, role, links, legacyId, LocalDateTime.now().plusHours(48),
         UUID.randomUUID().toString().substring(0, 14).replace("-", ""))
 
 fun User.updateEmail(cryptographer: Cryptographer, newEmail: String) = User(login, firstname, lastname, cryptographer.encrypt(newEmail), company, description, emailHash,
-        photoUrl, role, links,legacyId, tokenExpiration, token)
+        photoUrl, role, links, legacyId, tokenExpiration, token)
