@@ -892,6 +892,21 @@
                 "level": "GOLD",
                 "sponsorId": "thales",
                 "subscriptionDate": "2019-03-06"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Redhat",
+                "subscriptionDate": "2019-03-11"
+            },
+            {
+                "level": "MIXTEEN",
+                "sponsorId": "Redhat",
+                "subscriptionDate": "2019-03-11"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "WorldlineFrance",
+                "subscriptionDate": "2019-03-12"
             }
         ],
         "start": "2019-05-23",

@@ -8808,8 +8808,8 @@
     {
         "company": "Red Hat",
         "description": {
-            "ENGLISH": "Red Hat\u00ae is the world's leading provider of open source solutions, using a community-powered approach.",
-            "FRENCH": "Red Hat\u00ae is the world's leading provider of open source solutions, using a community-powered approach."
+            "ENGLISH": "We\u2019re the world\u2019s leading provider of enterprise open source solutions, using a community-powered approach to deliver high-performing Linux, cloud, container, and Kubernetes technologies. We help you standardize across environments, develop cloud-native applications, and integrate, automate, secure, and manage complex environments with award-winning support, training, and consulting services.",
+            "FRENCH": "Red Hat est le premier \u00e9diteur de solutions Open Source pour les entreprises. Notre mod\u00e8le de souscription simple et \u00e9conomique permet \u00e0 nos clients de b\u00e9n\u00e9ficier de la stabilit\u00e9 et haute performance de nos technologies de cloud, Linux, gestion, middleware, mobilit\u00e9, stockage et virtualisation. Nous offrons \u00e9galement un niveau de support, de formation et de consulting reconnu.\r\n"
         },
         "email": null,
         "emailHash": null,
@@ -8827,10 +8827,10 @@
             }
         ],
         "login": "Redhat",
-        "photoUrl": "images/sponsors/logo-redhat.jpg",
+        "photoUrl": "https://mixitconf.org/images/sponsors/logo-redhat1.svg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.474"
+        "tokenExpiration": "2019-03-11T21:08:43.362"
     },
     {
         "company": "",
@@ -11937,8 +11937,8 @@
         "login": "anne-laure",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "df35964004ed",
-        "tokenExpiration": "2019-03-08T13:29:02.304"
+        "token": "c3c5ac1b75e6",
+        "tokenExpiration": "2019-03-13T20:22:20.189"
     },
     {
         "company": "Ippon Technologies",
@@ -20382,8 +20382,8 @@
         "login": "fabrice.liut",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2017-11-18T11:58:57.385"
+        "token": "f5a5e2d29173",
+        "tokenExpiration": "2019-03-14T14:25:54.074"
     },
     {
         "company": "",
@@ -23341,8 +23341,8 @@
         "login": "guillaumeehret",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "c4d0b7ddbad2",
-        "tokenExpiration": "2019-03-09T08:02:49.912"
+        "token": "672913945a0b",
+        "tokenExpiration": "2019-03-14T15:05:10.553"
     },
     {
         "company": "",
@@ -32016,8 +32016,8 @@
         "login": "mpetitdant",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "b6e912e3e4c7",
-        "tokenExpiration": "2019-03-09T21:00:14.848"
+        "token": "56692e7c9c2f",
+        "tokenExpiration": "2019-03-13T19:24:07.391"
     },
     {
         "company": null,
@@ -46702,5 +46702,155 @@
         "role": "USER",
         "token": "9c7722ef9d5b",
         "tokenExpiration": "2019-03-09T20:14:47.492"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "GT9NBtbbxPCxMV0EJXkiA9qVKJ43tRdzHmb+Oz4tDOA=",
+        "emailHash": null,
+        "firstname": "Reffo",
+        "lastname": "Demmy",
+        "legacyId": null,
+        "links": [],
+        "login": "0721356229",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "dd8f968a14cc",
+        "tokenExpiration": "2019-03-10T21:50:37.034"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "bOvVc0qT7PCt87gSb6fIp7N5HfIgpGxYtxKKigyHAGY=",
+        "emailHash": null,
+        "firstname": "Amanda",
+        "lastname": "Lunagirl",
+        "legacyId": null,
+        "links": [],
+        "login": "missouw",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "580b86af8300",
+        "tokenExpiration": "2019-03-11T11:28:04.366"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "//EYkMCoo1k2BLdSFM7cGbMU5CL1bopZT4tWXZq+vN4=",
+        "emailHash": null,
+        "firstname": "Amanda",
+        "lastname": "Lunagirl",
+        "legacyId": null,
+        "links": [],
+        "login": "mandysenekal9",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "4770a9d2aecc",
+        "tokenExpiration": "2019-03-11T11:28:48.026"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "WdZcX/9z32fE638RXf2ASs55A1kAy4Y7T07IjCOpbkA=",
+        "emailHash": null,
+        "firstname": "Eddie",
+        "lastname": "Moutom",
+        "legacyId": null,
+        "links": [],
+        "login": "eddie.mouton",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "2ddc409558ec",
+        "tokenExpiration": "2019-03-11T17:09:48.736"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "2FW/AiCMHOTnozXOavZ3z18jZQE1JgC4xpGnoMfHiFk=",
+        "emailHash": null,
+        "firstname": "Laure",
+        "lastname": "Bucki",
+        "legacyId": null,
+        "links": [],
+        "login": "laure.delaveau",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "897d0f92dbfb",
+        "tokenExpiration": "2019-03-11T18:10:15.098"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "VF9ZpUkbqDjzPkEFnhTxK0iqo1QHpaDYgXRCnlatFd0=",
+        "emailHash": null,
+        "firstname": "Judgement",
+        "lastname": "Mashele",
+        "legacyId": null,
+        "links": [],
+        "login": "judgemental8",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "7148afd97478",
+        "tokenExpiration": "2019-03-13T02:22:16.009"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "B+inXkOGmGpyIVC3gp+TPTTwxP2rnpYdmmYXArfstog=",
+        "emailHash": null,
+        "firstname": "Tonderai",
+        "lastname": "Mashaire",
+        "legacyId": null,
+        "links": [],
+        "login": "tmashaire",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "448609aae024",
+        "tokenExpiration": "2019-03-13T21:46:23.389"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "I3rJLtb1paL79whJzfArLGjtCjg/T54C2AKpaHlQNrc=",
+        "emailHash": null,
+        "firstname": "Romain",
+        "lastname": "Belfils",
+        "legacyId": null,
+        "links": [],
+        "login": "romain.belfils",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "408fcffff0bf",
+        "tokenExpiration": "2019-03-14T10:13:04.127"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "+pe6k6fft6/o60wUVtr8ikIIUZDxTccatV0rGUwSDOo=",
+        "emailHash": null,
+        "firstname": "Alain",
+        "lastname": "Donorio",
+        "legacyId": null,
+        "links": [],
+        "login": "donorio.alain",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "7ecfa97476e1",
+        "tokenExpiration": "2019-03-14T10:24:07.481"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "VXwMylrmfkXTA3sicrfUuFLmJ71t39UEUkXu1Af1GY8=",
+        "emailHash": null,
+        "firstname": "Faatimah",
+        "lastname": "Sallie",
+        "legacyId": null,
+        "links": [],
+        "login": "info",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "c9ffa5b54fc7",
+        "tokenExpiration": "2019-03-14T16:58:49.391"
     }
 ]
