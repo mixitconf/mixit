@@ -205,7 +205,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
                                 session.attributes["email"] = email
                                 session.attributes["token"] = token
 
-                                seeOther(URI("${properties.baseUri}/"))
+                                seeOther(URI("${properties.baseUri}/me"))
                                         .cookie(ResponseCookie
                                                 .from("XSRF-TOKEN", "${email}:${token}".encodeToBase64()!!)
                                                 .maxAge(Duration.between(LocalDateTime.now(), user.tokenExpiration))
