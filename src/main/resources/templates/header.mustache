@@ -51,6 +51,9 @@
                     <li><a href="{{localePrefix}}/about" class="mxt-menu__item--nav">{{#i18n}}header.menu.about{{/i18n}}</a></li>
                     <li class="hide-for-small-only mxt-menu__item--bullet">&bull;</li>
                     <li class="show-for-small-only">
+                        {{#connected}}<a href="{{localePrefix}}/me"
+                                         class="mxt-menu__item--nav mxt-menu__item--close-nav">{{#i18n}}header.menu.profile{{/i18n}}</a>{{/connected}}
+
                         {{#connected}}<a href="{{localePrefix}}/disconnect"
                                          class="mxt-menu__item--nav mxt-menu__item--close-nav">{{#i18n}}header.menu.logout{{/i18n}}</a>{{/connected}}
                         {{^connected}}<a href="{{localePrefix}}/login"
