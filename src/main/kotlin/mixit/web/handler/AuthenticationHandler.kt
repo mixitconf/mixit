@@ -112,7 +112,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
                             req,
                             email,
                             User(
-                                    login = email.split("@").get(0),
+                                    login = email.split("@").get(0).toSlug(),
                                     firstname = ticket.firstname.toLowerCase().capitalize(),
                                     lastname = ticket.lastname.toLowerCase().capitalize(),
                                     email = cryptographer.encrypt(email),
@@ -135,7 +135,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
 
         val email = formData["email"]!!.trim().toLowerCase()
         val user = User(
-                login = email.split("@").get(0),
+                login = email.split("@").get(0).toSlug(),
                 firstname = formData["firstname"]!!.toLowerCase().capitalize(),
                 lastname = formData["lastname"]!!.toLowerCase().capitalize(),
                 email = cryptographer.encrypt(email),
