@@ -5,7 +5,7 @@
         <div class="columns large-12 menu-centered">
             <ul class="menu center">
                     <li class="menu-text">
-                        <img src="{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{^photoUrl}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/photoUrl}}"
+                        <img src="{{#photoUrl}}{{photoUrl}}{{/photoUrl}}https://www.gravatar.com/avatar/{{#emailHash}}{{emailHash}}{{/emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{"
                             class="mxt-img-avatar__speaker">
                         <div>{{#hasTalks}}{{#i18n}}user.speaker{{/i18n}}{{/hasTalks}}{{^hasTalks}}{{#i18n}}user.standard{{/i18n}}{{/hasTalks}}</div>
                     </li>
