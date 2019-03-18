@@ -42,10 +42,12 @@ class AdminHandler(private val ticketRepository: TicketRepository,
     fun adminTicketing(req: ServerRequest) =
             ok().render("admin-ticketing", mapOf(
                     Pair("tickets", ticketRepository.findAll()
-                            .map { Ticket(
-                                    it.email,
-                                    it.firstname.trim().toLowerCase().capitalize(),
-                                    it.lastname.trim().toLowerCase().capitalize()) }
+                            .map {
+                                Ticket(
+                                        it.email,
+                                        it.firstname.trim().toLowerCase().capitalize(),
+                                        it.lastname.trim().toLowerCase().capitalize())
+                            }
                             .sort(Comparator.comparing(Ticket::lastname)
                                     .thenComparing(Comparator.comparing(Ticket::firstname)))),
                     Pair("title", "admin.ticketing.title")
@@ -101,7 +103,7 @@ class AdminHandler(private val ticketRepository: TicketRepository,
                     start = LocalDateTime.parse(formData["start"]),
                     end = LocalDateTime.parse(formData["end"]),
                     photoUrls = if (formData["photoUrls"].isNullOrEmpty()) emptyList() else formData["photoUrls"]!!.toLinks()
-                    )
+            )
             talkRepository.save(talk).then(seeOther("${properties.baseUri}/admin/talks"))
         }
     }
@@ -135,7 +137,8 @@ class AdminHandler(private val ticketRepository: TicketRepository,
                     Pair(LIGHTNING_TALK, LIGHTNING_TALK == talk.format),
                     Pair(WORKSHOP, WORKSHOP == talk.format),
                     Pair(RANDOM, RANDOM == talk.format),
-                    Pair(KEYNOTE, KEYNOTE == talk.format)
+                    Pair(KEYNOTE, KEYNOTE == talk.format),
+                    Pair(KEYNOTE_SURPRISE, KEYNOTE_SURPRISE == talk.format)
             )),
             Pair("languages", listOf(
                     Pair(ENGLISH, ENGLISH == talk.language),
@@ -165,7 +168,7 @@ class AdminHandler(private val ticketRepository: TicketRepository,
             Pair("creationMode", event.id == ""),
             Pair("event", event),
             Pair("links", event.photoUrls.toJson()),
-            Pair("videolink", if(event.videoUrl == null) "" else event.videoUrl.toJson())
+            Pair("videolink", if (event.videoUrl == null) "" else event.videoUrl.toJson())
     ))
 
     fun adminSaveEvent(req: ServerRequest): Mono<ServerResponse> {
@@ -200,7 +203,7 @@ class AdminHandler(private val ticketRepository: TicketRepository,
 
     fun editEventSponsoring(req: ServerRequest): Mono<ServerResponse> = eventRepository
             .findOne(req.pathVariable("eventId"))
-            .flatMap { adminEventSponsoring(req.pathVariable("eventId"), it.sponsors.stream().filter{ eventSponsoringMatch(req.pathVariable("sponsorId"), req.pathVariable("level"), it)}.findAny().get()) }
+            .flatMap { adminEventSponsoring(req.pathVariable("eventId"), it.sponsors.stream().filter { eventSponsoringMatch(req.pathVariable("sponsorId"), req.pathVariable("level"), it) }.findAny().get()) }
 
     private fun adminEventSponsoring(eventId: String, eventSponsoring: EventSponsoring = EventSponsoring(SponsorshipLevel.NONE, "", LocalDate.now())) = ok().render("admin-event-sponsor", mapOf(
             Pair("creationMode", eventSponsoring.sponsorId == ""),
@@ -224,30 +227,30 @@ class AdminHandler(private val ticketRepository: TicketRepository,
             ))
     ))
 
-    private fun eventSponsoringMatch(sponsorId: String, level: String,eventSponsoring: EventSponsoring): Boolean =
+    private fun eventSponsoringMatch(sponsorId: String, level: String, eventSponsoring: EventSponsoring): Boolean =
             sponsorId.equals(eventSponsoring.sponsorId) && level.equals(eventSponsoring.level.name)
 
     fun adminUpdateEventSponsoring(req: ServerRequest): Mono<ServerResponse> = req.body(BodyExtractors.toFormData()).flatMap {
-            val formData = it.toSingleValueMap()
-            // We need to find the event in database
-            eventRepository
-                    .findOne(formData["eventId"]!!)
-                    .flatMap {
-                        // We create a mutable list
-                        val sponsors = it.sponsors
-                                .stream()
-                                .map {
-                                    if (eventSponsoringMatch(formData["eventId"]!!, formData["sponsorId"]!!, it)) {
-                                        EventSponsoring(it.level, it.sponsorId, if (formData["subscriptionDate"] == null) LocalDate.now() else LocalDate.parse(formData["subscriptionDate"]!!))
-                                    } else {
-                                        it
-                                    }
+        val formData = it.toSingleValueMap()
+        // We need to find the event in database
+        eventRepository
+                .findOne(formData["eventId"]!!)
+                .flatMap {
+                    // We create a mutable list
+                    val sponsors = it.sponsors
+                            .stream()
+                            .map {
+                                if (eventSponsoringMatch(formData["eventId"]!!, formData["sponsorId"]!!, it)) {
+                                    EventSponsoring(it.level, it.sponsorId, if (formData["subscriptionDate"] == null) LocalDate.now() else LocalDate.parse(formData["subscriptionDate"]!!))
+                                } else {
+                                    it
                                 }
-                                .toList()
+                            }
+                            .toList()
 
-                        eventRepository.save(Event(it.id, it.start, it.end, it.current, sponsors)).then(seeOther("${properties.baseUri}/admin/events/edit/${formData["eventId"]!!}"))
-                    }
-        }
+                    eventRepository.save(Event(it.id, it.start, it.end, it.current, sponsors)).then(seeOther("${properties.baseUri}/admin/events/edit/${formData["eventId"]!!}"))
+                }
+    }
 
     fun adminCreateEventSponsoring(req: ServerRequest): Mono<ServerResponse> = req.body(BodyExtractors.toFormData()).flatMap {
         val formData = it.toSingleValueMap()
@@ -267,7 +270,7 @@ class AdminHandler(private val ticketRepository: TicketRepository,
                 }
     }
 
-    fun adminDeleteEventSponsoring(req: ServerRequest): Mono<ServerResponse> =req.body(BodyExtractors.toFormData()).flatMap {
+    fun adminDeleteEventSponsoring(req: ServerRequest): Mono<ServerResponse> = req.body(BodyExtractors.toFormData()).flatMap {
         val formData = it.toSingleValueMap()
         // We need to find the event in database
         eventRepository
@@ -277,7 +280,7 @@ class AdminHandler(private val ticketRepository: TicketRepository,
                     val sponsors = it.sponsors
                             .stream()
                             .map {
-                                if (eventSponsoringMatch(formData["sponsorId"]!!, formData["level"]!!, it)) null  else it
+                                if (eventSponsoringMatch(formData["sponsorId"]!!, formData["level"]!!, it)) null else it
                             }
                             .filter(Objects::nonNull)
                             .toList()
@@ -344,7 +347,7 @@ class AdminHandler(private val ticketRepository: TicketRepository,
                 userRepository
                         .findMany(posts.map { it.authorId })
                         .collectMap(User::login)
-                        .map { authors -> posts.map { it.toDto(if(authors[it.authorId] == null) User("mixit", "", "MiXiT","") else authors[it.authorId]!!, req.language()) } }
+                        .map { authors -> posts.map { it.toDto(if (authors[it.authorId] == null) User("mixit", "", "MiXiT", "") else authors[it.authorId]!!, req.language()) } }
             }), Pair("title", "admin.blog.title")))
 
 
