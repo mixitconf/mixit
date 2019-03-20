@@ -331,20 +331,7 @@
         "current": false,
         "end": "2016-04-22",
         "id": "mixit16",
-        "photoUrls": [
-            {
-                "name": "MiXiT 2016 conf\u00e9rence",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157666243159183"
-            },
-            {
-                "name": "MiXiT 2016 reportage",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157667987593380"
-            },
-            {
-                "name": "MiXiT 2016 diner speaker",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157667470832986"
-            }
-        ],
+        "photoUrls": [],
         "sponsors": [
             {
                 "level": "GOLD",
@@ -449,11 +436,6 @@
             {
                 "level": "SILVER",
                 "sponsorId": "amaris",
-                "subscriptionDate": "2017-11-08"
-            },
-            {
-                "level": "SILVER",
-                "sponsorId": "1338530083",
                 "subscriptionDate": "2017-11-08"
             },
             {
@@ -894,11 +876,6 @@
                 "subscriptionDate": "2019-03-06"
             },
             {
-                "level": "GOLD",
-                "sponsorId": "Redhat",
-                "subscriptionDate": "2019-03-11"
-            },
-            {
                 "level": "MIXTEEN",
                 "sponsorId": "Redhat",
                 "subscriptionDate": "2019-03-11"
@@ -907,6 +884,16 @@
                 "level": "GOLD",
                 "sponsorId": "WorldlineFrance",
                 "subscriptionDate": "2019-03-12"
+            },
+            {
+                "level": "LANYARD",
+                "sponsorId": "Redhat",
+                "subscriptionDate": "2019-03-13"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "akuiteo",
+                "subscriptionDate": "2019-03-13"
             }
         ],
         "start": "2019-05-23",
