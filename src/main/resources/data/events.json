@@ -894,6 +894,21 @@
                 "level": "SILVER",
                 "sponsorId": "akuiteo",
                 "subscriptionDate": "2019-03-13"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "microsoft",
+                "subscriptionDate": "2019-03-20"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "talan",
+                "subscriptionDate": "2019-03-25"
+            },
+            {
+                "level": "PARTY",
+                "sponsorId": "onlylyon",
+                "subscriptionDate": "2019-03-25"
             }
         ],
         "start": "2019-05-23",

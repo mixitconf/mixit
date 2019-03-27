@@ -870,8 +870,8 @@
         "login": "105069688047906196113",
         "photoUrl": null,
         "role": "USER",
-        "token": "c73b6c1f17c8",
-        "tokenExpiration": "2019-03-15T09:36:42.308"
+        "token": "bf7523b8ab92",
+        "tokenExpiration": "2019-03-28T10:14:11.972"
     },
     {
         "company": "",
@@ -1153,19 +1153,24 @@
         "company": null,
         "description": {
             "ENGLISH": "UNKNOWN",
-            "FRENCH": "UNKNOWN"
+            "FRENCH": "Consultant Java #Zenika ascendant craftman soupoudr\u00e9 d'ops"
         },
         "email": "4Eibg4UVoXUgxhF432Mh3e47WEIEvw7yqaR2IE6dgd0=",
         "emailHash": "92c29fbe27d838fb16406b367c22a016",
         "firstname": "Victor",
         "lastname": "Gallet",
         "legacyId": null,
-        "links": [],
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/GalletVictor"
+            }
+        ],
         "login": "106558503016616394107",
         "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-06T12:53:30.999"
+        "tokenExpiration": "2019-03-25T07:58:36.314"
     },
     {
         "company": "",
@@ -2384,8 +2389,11 @@
         "tokenExpiration": "2018-03-03T17:17:35.531"
     },
     {
-        "company": "",
-        "description": {},
+        "company": null,
+        "description": {
+            "ENGLISH": "",
+            "FRENCH": "D\u00e9veloppeur web ascendant facilitateur, j'accompagne au jour le jour mes clients dans la r\u00e9alisation d'applications dans des contextes agiles. Responsabilisation des \u00e9quipes, transparence et pratiques adapt\u00e9es\u2026 mon cheval de bataille est la qualit\u00e9 ! \r\n\r\nCurieux des autres et de leurs id\u00e9es, j\u2019aime \u00e9changer, apprendre sur le terrain, me nourrir de lectures autour du d\u00e9veloppement personnel. J\u2019interviens par ailleurs dans plusieurs structures (MixTeen, Savanturiers, Code moi un mouton) pour faire d\u00e9couvrir la programmation aux plus petits avec des jeux, des robots et des outils amusants."
+        },
         "email": "vpYV3BcYEAjoi4WSqqc3j/JHTJKnuu9+AWeKk9au48Y=",
         "emailHash": "236812ebf13a70e8f3b40e92c430eb90",
         "firstname": "Brice",
@@ -2398,10 +2406,10 @@
             }
         ],
         "login": "115833292931696563446",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/buffa.jpg",
+        "photoUrl": null,
         "role": "USER",
-        "token": "855782cf04c4",
-        "tokenExpiration": "2019-03-20T19:29:18.459"
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-24T13:03:36.667"
     },
     {
         "company": "",
@@ -3766,8 +3774,8 @@
         "login": "29446423",
         "photoUrl": null,
         "role": "USER",
-        "token": "793d531a7363",
-        "tokenExpiration": "2019-03-15T09:57:29.027"
+        "token": "dfb7e0a4b32f",
+        "tokenExpiration": "2019-03-28T21:05:32.365"
     },
     {
         "company": "",
@@ -4216,7 +4224,7 @@
     {
         "company": "",
         "description": {},
-        "email": null,
+        "email": "odNIdOTPYuocfFP8zJSduYzJAj48azu5BBfs73tN5zs=",
         "emailHash": "86ad5b374dd2bf203adaf7f7a9a5a0a8",
         "firstname": "Guillaume",
         "lastname": "Grossetie",
@@ -4225,8 +4233,8 @@
         "login": "53169976",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.528"
+        "token": "45a4e804e07e",
+        "tokenExpiration": "2019-03-27T16:39:46.751"
     },
     {
         "company": "",
@@ -4484,8 +4492,8 @@
         "login": "82324890",
         "photoUrl": null,
         "role": "USER",
-        "token": "def2771e86f3",
-        "tokenExpiration": "2019-03-15T10:03:27.577"
+        "token": "b68fb4dc4d12",
+        "tokenExpiration": "2019-03-27T17:10:56.365"
     },
     {
         "company": "",
@@ -9629,8 +9637,8 @@
         "login": "Tom32i",
         "photoUrl": null,
         "role": "USER",
-        "token": "a49615ce6d61",
-        "tokenExpiration": "2019-03-15T08:40:19.14"
+        "token": "074c66ecbe12",
+        "tokenExpiration": "2019-03-27T15:49:21.385"
     },
     {
         "company": "",
@@ -11485,7 +11493,7 @@
             "ENGLISH": "Je suis une d\u00e9veloppeuse polyglotte et une maman qui d\u00e9pote ! J'habite en France, pr\u00e8s de Gen\u00e8ve.",
             "FRENCH": "Je suis une d\u00e9veloppeuse polyglotte et une maman qui d\u00e9pote ! J'habite en France, pr\u00e8s de Gen\u00e8ve."
         },
-        "email": null,
+        "email": "TQ6HBswIAkUBsSsQvtxp02kOnzsoPNj+m3ZfS+SS9kY=",
         "emailHash": "1c4a6e3235228af71f6801cba2d5f1b0",
         "firstname": "Audrey",
         "lastname": "Li\u00e8vremont",
@@ -11494,8 +11502,8 @@
         "login": "alievremont",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.506"
+        "token": "75f2e87f4ffe",
+        "tokenExpiration": "2019-03-29T08:05:09.616"
     },
     {
         "company": "",
@@ -11967,8 +11975,8 @@
         "login": "anne-laure",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "d0f164c15b7e",
-        "tokenExpiration": "2019-03-20T21:03:23.33"
+        "token": "449246c2796d",
+        "tokenExpiration": "2019-03-27T08:40:56.166"
     },
     {
         "company": "Ippon Technologies",
@@ -14048,8 +14056,8 @@
         "login": "benji__07",
         "photoUrl": null,
         "role": "USER",
-        "token": "e61609ebe3eb",
-        "tokenExpiration": "2019-03-16T12:55:19.703"
+        "token": "42cd7e4d1c46",
+        "tokenExpiration": "2019-03-27T15:49:56.018"
     },
     {
         "company": null,
@@ -20766,30 +20774,18 @@
     },
     {
         "company": null,
-        "description": {
-            "ENGLISH": "Lead Dev PHP, Symfony,  PostgreSQL",
-            "FRENCH": "Lead Dev PHP, Symfony,  PostgreSQL"
-        },
-        "email": "DvaMHTeK4XYk3FJUIbwL4y5z8mS/rsKDHJF02aYH990=",
-        "emailHash": "e3b402da476607c7475379d9c1788c3c",
+        "description": {},
+        "email": "gcsrfU9GPFs2rfsS2gN2RsH3n8ooVlK/Bl57M+XpTLs=",
+        "emailHash": null,
         "firstname": "Florian",
         "lastname": "Ferriere",
-        "legacyId": 1274,
-        "links": [
-            {
-                "name": "Blog",
-                "url": "http://blog.fferriere.fr/"
-            },
-            {
-                "name": "Twitter",
-                "url": "https://twitter.com/FerriereFlorian"
-            }
-        ],
+        "legacyId": null,
+        "links": [],
         "login": "fferriere",
-        "photoUrl": null,
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "ee9c6b780cc4",
-        "tokenExpiration": "2018-04-20T12:32:31.015"
+        "token": "1da5a4bd260d",
+        "tokenExpiration": "2019-03-27T15:52:35.82"
     },
     {
         "company": "",
@@ -21424,22 +21420,22 @@
         "tokenExpiration": "2018-03-03T17:17:35.516"
     },
     {
-        "company": "",
+        "company": null,
         "description": {
-            "ENGLISH": "IT Engineer @BGeografic \u2022 Java, web, agile",
-            "FRENCH": "IT Engineer @BGeografic \u2022 Java, web, agile"
+            "ENGLISH": "IT Engineer &#64;BGeografic \u2022 Java, web, agile",
+            "FRENCH": "IT Engineer &#64;BGeografic \u2022 Java, web, agile"
         },
-        "email": null,
+        "email": "EhEfV70gZzdFNiCJygzixUAEhuqF/1IXN96nO3x9tNw=",
         "emailHash": "0953c08525b60c9ca5cd17cc7c6d49c2",
         "firstname": "Alexis",
-        "lastname": "Thomas",
+        "lastname": "THOMAS",
         "legacyId": 412,
         "links": [],
         "login": "fr.alexisthomas",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.486"
+        "token": "a3f8fa760107",
+        "tokenExpiration": "2019-03-26T21:24:01.095"
     },
     {
         "company": "",
@@ -21512,8 +21508,8 @@
         "login": "franck",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "ca27b9beef25",
-        "tokenExpiration": "2019-03-22T08:57:56.141"
+        "token": "5b44bc548f33",
+        "tokenExpiration": "2019-03-24T17:37:32.523"
     },
     {
         "company": "",
@@ -21990,22 +21986,22 @@
         "tokenExpiration": "2018-04-17T11:04:49.438"
     },
     {
-        "company": "",
+        "company": null,
         "description": {
             "ENGLISH": "Ing\u00e9nieur INSA IF (1999), d\u00e9veloppeur C#/.NET, TDD, archi web, service bus, CQRS, scrum, Hypermedia API, build/int\u00e9gration continue, Hg, Git",
             "FRENCH": "Ing\u00e9nieur INSA IF (1999), d\u00e9veloppeur C#/.NET, TDD, archi web, service bus, CQRS, scrum, Hypermedia API, build/int\u00e9gration continue, Hg, Git"
         },
-        "email": null,
+        "email": "gjvv5Qk4+T1zMFpqD0z1hurd7VFB+lB2bVM1L1d0XaI=",
         "emailHash": "111fcd7b79048779950002571919acc2",
         "firstname": "Fabien",
-        "lastname": "V",
+        "lastname": "VIGNON",
         "legacyId": 3231,
         "links": [],
         "login": "fvn",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.516"
+        "token": "3abcf0c27593",
+        "tokenExpiration": "2019-03-24T09:19:33.121"
     },
     {
         "company": "",
@@ -22086,8 +22082,8 @@
         "login": "g.zoritchak",
         "photoUrl": "https://mixitconf.org/images/speakers/zoritchak.jpg",
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-04-17T06:43:32.381"
+        "token": "44b3b4b3b86b",
+        "tokenExpiration": "2019-03-28T23:42:33.175"
     },
     {
         "company": "",
@@ -22994,8 +22990,8 @@
         "login": "greg",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "1675342d8f3c",
-        "tokenExpiration": "2019-03-17T13:37:13.511"
+        "token": "88190fe5e953",
+        "tokenExpiration": "2019-03-23T09:58:48.485"
     },
     {
         "company": "",
@@ -23385,8 +23381,8 @@
         "login": "guillaumeehret",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "6f85beb1491e",
-        "tokenExpiration": "2019-03-22T10:40:01.585"
+        "token": "440c6001fe7f",
+        "tokenExpiration": "2019-03-29T12:11:08.677"
     },
     {
         "company": "",
@@ -28975,8 +28971,8 @@
         "login": "lorie.pisicchio",
         "photoUrl": null,
         "role": "USER",
-        "token": "cf1fb7263ad1",
-        "tokenExpiration": "2019-03-15T08:37:21.237"
+        "token": "ab505f80828a",
+        "tokenExpiration": "2019-03-27T09:26:38.412"
     },
     {
         "company": "",
@@ -30497,7 +30493,7 @@
             "ENGLISH": "Technical Melodic Death Metal JavaCore",
             "FRENCH": "Technical Melodic Death Metal JavaCore"
         },
-        "email": null,
+        "email": "1mAvrGcJHOnZ03gDeYqjClU/s1epgujEgu4Aj5qwKCo=",
         "emailHash": "280582f9e62fa95b9561d528db78b5bc",
         "firstname": "Mathieu",
         "lastname": "Lacour",
@@ -30506,8 +30502,8 @@
         "login": "mathieu.lacour",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.504"
+        "token": "c84231ec30e9",
+        "tokenExpiration": "2019-03-28T08:27:01.031"
     },
     {
         "company": "",
@@ -31456,12 +31452,12 @@
         "tokenExpiration": "2018-03-03T17:17:35.486"
     },
     {
-        "company": "",
+        "company": null,
         "description": {
-            "ENGLISH": "Ing\u00e9nieur concepteur d\u00e9veloppeur mobilit\u00e9 chez SQLI Group",
-            "FRENCH": "Ing\u00e9nieur concepteur d\u00e9veloppeur mobilit\u00e9 chez SQLI Group"
+            "ENGLISH": "",
+            "FRENCH": "Tech lead Frontend chez Ametix (Lyon),\r\nTech lead Frontend en prestation chez ENEDIS (Lyon),\r\nEnseignant vacataire JS/Mobile chez Telecom St Etienne."
         },
-        "email": null,
+        "email": "YV4ff70E7x49gMI0HSEVkeHrqkQzRzRfZyFjrD9FDNM=",
         "emailHash": "741aadef5d0bca2b4256209f159972e8",
         "firstname": "Mickael",
         "lastname": "Faust",
@@ -31477,10 +31473,10 @@
             }
         ],
         "login": "mickael.faust",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/faust.jpg",
+        "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.441"
+        "token": "f9803e8d0dfc",
+        "tokenExpiration": "2019-03-27T22:03:36.409"
     },
     {
         "company": "",
@@ -32058,8 +32054,8 @@
         "login": "mpetitdant",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "27de1a993a6f",
-        "tokenExpiration": "2019-03-20T19:29:28.835"
+        "token": "6b60a34820ab",
+        "tokenExpiration": "2019-03-27T09:16:31.382"
     },
     {
         "company": null,
@@ -33506,7 +33502,7 @@
             "ENGLISH": "MiXiT CoFounder - software craftsman.",
             "FRENCH": "Co-fondateur de MiXiT, artisan logiciel."
         },
-        "email": null,
+        "email": "zI8kyrbUSNcLaHX3LBjkp+2vK2Emmp6wRHYOh4QSoFk=",
         "emailHash": "c1f8d95084fb10d92763960a36f04b46",
         "firstname": "Nicolas",
         "lastname": "Pelloux-prayer",
@@ -33515,8 +33511,8 @@
         "login": "npelloux",
         "photoUrl": null,
         "role": "STAFF_IN_PAUSE",
-        "token": "empty-token",
-        "tokenExpiration": "2017-11-05T09:11:41.89"
+        "token": "1b6e0db69c1a",
+        "tokenExpiration": "2019-03-28T10:13:48.997"
     },
     {
         "company": "",
@@ -34170,10 +34166,10 @@
         "tokenExpiration": "2018-03-03T17:17:35.51"
     },
     {
-        "company": "Soat",
+        "company": "OyoMy",
         "description": {
-            "ENGLISH": "Olivier est Coach professionnel et Coach Agile chez Soat o\u00f9 il accompagne ses clients dans l'optimisation de leur performance par l'intelligence collective. Passionn\u00e9 par les relations humaines, il cherche avant tout \u00e0 redonner du sens aux pratiques utilis\u00e9es en entreprise afin de stimuler plus de responsabilisation, de motivation et d'engagement.",
-            "FRENCH": "Olivier est Coach professionnel et Coach Agile chez Soat o\u00f9 il accompagne ses clients dans l'optimisation de leur performance par l'intelligence collective. Passionn\u00e9 par les relations humaines, il cherche avant tout \u00e0 redonner du sens aux pratiques utilis\u00e9es en entreprise afin de stimuler plus de responsabilisation, de motivation et d'engagement."
+            "ENGLISH": "",
+            "FRENCH": "Coach Agile et Coach Professionnel, Olivier accompagne des individus, des \u00e9quipes et des organisations ayant l\u2019envie d\u2019aller vers plus d\u2019adaptabilit\u00e9, de r\u00e9silience et de p\u00e9rennit\u00e9 humaine dans ce monde en perp\u00e9tuel mouvement. Dans ce sens, il les aide \u00e0 mobiliser les \u00e9nergies vers un objectif porteur de sens, \u00e0 mieux coop\u00e9rer ensemble et \u00e0 changer avec plaisir. Son approche se veut simple et l\u00e9g\u00e8re, sans injonction et teint\u00e9e de d\u00e9veloppement personnel."
         },
         "email": "MwafhLtDXx6v+satfYG9KY2zDExkODBvVopksPLtp+8=",
         "emailHash": "9dc20eda13e6738df9e02d28fa6fb16d",
@@ -34195,10 +34191,10 @@
             }
         ],
         "login": "olivier.my",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/my.jpg",
+        "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.473"
+        "tokenExpiration": "2019-03-20T20:14:12.139"
     },
     {
         "company": null,
@@ -34563,8 +34559,8 @@
     {
         "company": null,
         "description": {
-            "ENGLISH": "UNKNOWN",
-            "FRENCH": "UNKNOWN"
+            "ENGLISH": "",
+            "FRENCH": "Apr\u00e8s une ma\u00eetrise sur les Monty Python, un DEA sur le non-sens et l\u2019absurde, l\u2019entame d\u2019un doctorat sur les comiques cin\u00e9matographiques il parait normal que Pablo se soit lanc\u00e9 dans le management et la conduite du changement, c\u2019est -finalement- une suite logique. Aujourd\u2019hui vilain gentleman chez beNext."
         },
         "email": "CPTTVuwNfACBxy8rNAhvgnz1tKhZ7ZheU2KgdxkYGNc=",
         "emailHash": "d20b62447356b0e9796c18ffc0596325",
@@ -34573,10 +34569,10 @@
         "legacyId": null,
         "links": [],
         "login": "pablopernot",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/pernot.jpg",
+        "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.477"
+        "tokenExpiration": "2019-03-20T20:10:05.295"
     },
     {
         "company": "",
@@ -36301,22 +36297,35 @@
         "tokenExpiration": "2018-03-03T17:17:35.514"
     },
     {
-        "company": "",
+        "company": null,
         "description": {
-            "ENGLISH": "Fondateur de hckrs.io \u2014 communaut\u00e9 de hackers !",
-            "FRENCH": "Fondateur de hckrs.io \u2014 communaut\u00e9 de hackers !"
+            "ENGLISH": "Digital Product Designer working remote. Trained as an Architect, but focused on great interface design.",
+            "FRENCH": "Digital Product Designer working remote. Trained as an Architect, but focused on great interface design."
         },
-        "email": null,
-        "emailHash": "2d0adac3d469c62e99d6fe3dcd8921d6",
+        "email": "cwERHdfhtY/Le0Z+YnN/9QiNNrCFD4gWu4bKwuh7DzE=",
+        "emailHash": null,
         "firstname": "Toon",
         "lastname": "Van ramshorst",
         "legacyId": 1151,
-        "links": [],
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/ramshorst"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/toonvanramshorst/"
+            },
+            {
+                "name": "Company Website",
+                "url": "https://dribbble.com/ramshorst"
+            }
+        ],
         "login": "ramshorst",
-        "photoUrl": null,
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/van_ramshorst.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.507"
+        "tokenExpiration": "2019-03-24T06:46:23.684"
     },
     {
         "company": "",
@@ -40632,8 +40641,8 @@
         "login": "sylvain.chabert",
         "photoUrl": null,
         "role": "USER",
-        "token": "29e48c50378a",
-        "tokenExpiration": "2019-03-16T19:52:03.178"
+        "token": "e3f3819a74f7",
+        "tokenExpiration": "2019-03-29T11:42:14.431"
     },
     {
         "company": "",
@@ -40836,8 +40845,8 @@
     {
         "company": "Talan",
         "description": {
-            "ENGLISH": "For more than 15 years, Talan has advised companies, supporting them and executing Agile transformation projects in France and abroad. \r\nThe group mainly interacts with big companies\u2019 technological transformations, more precisely in areas such as Big Data, IoT, Block Chain and Artificial Intelligence.\r\nTalan\u2019s staff have strong methodological, technological and sectoral expertise, developing and aiding our clients toward the same end:  sustainably improved performance. This expertise are disseminated among complementary hubs: advice (TalanConsulting), solutions (TalanSolutions),  technological development (TalanLabs), operational support (TalanOperations) and a nearshore development center (TalanShore).\r\n\r\nThe group, headquartered in Paris, has several subsidiaries in France (Amiens, Lille, Lyon, Montpellier, Nantes, Rennes) and abroad (Canada, United States, Luxembourg, Morocco, United Kingdom, Switzerland, Tunisia). At the end of 2017, Talan will reach organic revenues of 190M\u20ac for 1800 employees. \r\n",
-            "FRENCH": "Depuis plus de 15 ans, Talan conseille les entreprises, les accompagne et met en \u0153uvre leurs projets de transformation en France et \u00e0 l\u2019international. Le groupe intervient principalement dans les domaines li\u00e9s aux mutations technologiques des grands groupes, et notamment le Big Data, l\u2019IoT, la Blockchain et l\u2019Intelligence Artificielle.\r\n\r\nForts d\u2019expertises m\u00e9thodologiques, technologiques et sectorielles, les femmes et les hommes du groupe d\u00e9veloppent, avec leurs clients et partenaires, une intelligence collective dans un m\u00eame esprit : am\u00e9liorer durablement leur performance. Leurs savoir-faire sont r\u00e9partis en plusieurs p\u00f4les compl\u00e9mentaires : le conseil (TalanConsulting), les solutions (TalanSolutions), le d\u00e9veloppement technologique (TalanLabs), l\u2019appui op\u00e9rationnel aux projets\r\n(TalanOp\u00e9rations) et le centre de d\u00e9veloppement nearshore (TalanShore).\r\n\r\nLe groupe, dont le si\u00e8ge est \u00e0 Paris, dispose de filiales \u00e0 Amiens, Lille, Lyon, Montpellier, Nantes, Rennes ainsi qu\u2019\u00e0 l\u2019\u00e9tranger (Canada, Chine, \u00c9tats-Unis, Luxembourg, Maroc, Royaume-Uni, Suisse, Tunisie). Fin 2017, Talan atteindra un chiffre d\u2019affaires organique de 190 M\u20ac pour 1800 collaborateurs."
+            "ENGLISH": "Talan is a key player in the support and agile transformation of its clients. In high growth, Talan now has nearly 3,000 consultants in France and abroad. Talan is among the Top 10 French companies where it is a great place to work.\r\n\r\nThe Lyon division shares the Talan Group's values with its customers and its 60 employees.\r\n\r\nTalan Lyon division is:\r\n\r\n- A team mindset, promoted by innovative and collaborative tools and thematic events. This environment boosts creativity and sharing of knowledge and skills.\r\n- Long-term partnerships with faithful customers in Transport, Energy, IT & Digital Advisory, Mutual business areas\r\n- Functional and development expertises to realize innovative agile projects,\r\n- Collaborators directly involved in the development of the Agency with variety of profiles, cultural backgrounds and experiences. They are fully engaged in their client activities and in Talan development\r\n- Pragmatism and a \"business-oriented\" approach to give meaning to work and value to technological innovations\r\n- ... and always more agility, because we are convinced of agility benefits. Mastering the process of agile acculturation from advisory (agilitation, facilitation) to production (agile set, feature team), Scrum, Event Storming, Backlog Grooming, are not neologisms for us!\r\n\r\nIn 2019, Talan Lyon wishes to continue its growth without losing sight of its values which make the well-being of its employees and the satisfaction of its customers.\r\n\r\nWe are waiting for you on Mix-IT to have coffee, to get to know each other and to tell you more about our #pride Talan division!",
+            "FRENCH": "Talan est un acteur de r\u00e9f\u00e9rence dans l\u2019accompagnement et la transformation agile de ses clients. En tr\u00e8s forte croissance, Talan compte aujourd\u2019hui pr\u00e8s de 3 000 consultants en France et \u00e0 l\u2019international. Talan se positionne dans le Top 10 des entreprises o\u00f9 il fait bon travailler en France.\r\n\r\nL\u2019agence de Lyon confirme les valeurs du groupe aupr\u00e8s de ses clients et de ses 60 collaborateurs.\r\n\r\nTalan \u00e0 Lyon c\u2019est :\r\n\r\n-  Un \u00e9tat d\u2019esprit d\u2019\u00e9quipe, encourag\u00e9 par des outils collaboratifs innovants et des \u00e9v\u00e9nements th\u00e9matiques, permettant de booster la cr\u00e9ativit\u00e9 et le partage des savoirs et des comp\u00e9tences.\r\n-  Des partenariats clients construits sur la dur\u00e9e et la confiance dans les domaines m\u00e9tiers Transport, Energie, IT & Digital Advisory, Mutuelles\r\n- Des comp\u00e9tences fonctionnelles et de d\u00e9veloppement pour r\u00e9aliser des projets agiles innovants,\r\n-  Des collaborateurs entrepreneurs aux profils et temp\u00e9raments vari\u00e9s qui s\u2019investissent quotidiennement pour leur client et pour le d\u00e9veloppement de l\u2019agence\r\n-  Du pragmatisme et une approche orient\u00e9e \u00ab m\u00e9tiers \u00bb pour donner du sens au travail et de la valeur aux innovations technologiques\r\n-   \u2026Et toujours plus d\u2019agilit\u00e9, parce que nous sommes convaincus des b\u00e9n\u00e9fices de l\u2019agilit\u00e9. Rod\u00e9s au processus d\u2019acculturation agile du cadrage (agilitation, facilitation) \u00e0 la r\u00e9alisation (plateau agile, feature team), Scrum, Event Storming, Backlog Grooming, ne sont pas des n\u00e9ologismes pour nous !\r\n\r\nEn 2019, Talan Lyon souhaite poursuivre sa croissance sans perdre de vue ses valeurs qui font le bien-\u00eatre de ses collaborateurs et la satisfaction de ses clients.\r\n\r\nNous vous attendons sur Mix-IT pour partager un petit caf\u00e9, faire connaissance et vous en dire plus sur notre agence#fiert\u00e9 !"
         },
         "email": "E5FoXHm3xUBpW2vWxjy0r28R/VE4k6aU5Lz2g48KgyY=",
         "emailHash": null,
@@ -40859,10 +40868,10 @@
             }
         ],
         "login": "talan",
-        "photoUrl": "images/sponsors/logo-talan.svg",
+        "photoUrl": "https://mixitconf.org/images/sponsors/logo-talan.svg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2017-12-05T09:10:04.126"
+        "tokenExpiration": "2019-03-24T06:36:29.355"
     },
     {
         "company": "Keyrus",
@@ -44225,13 +44234,13 @@
         "tokenExpiration": "2018-03-03T17:17:35.468"
     },
     {
-        "company": "",
+        "company": "beNext",
         "description": {
-            "ENGLISH": "Software craftsman passionate about UX, design, agile management and organization. More info [Here](http://about.me/yannick.grenzinger)",
-            "FRENCH": "Software craftsman passionate about UX, design, agile management and organization. More info [Here](http://about.me/yannick.grenzinger)"
+            "ENGLISH": "Holistic software gardener. #Craft and #Flow coach at &#64;benextcompany  \r\nOrganizer of &#64;FlowConFR and Paris Continuous Delivery meetup  \r\n&#34;Jack of all trades, master of some&#34;",
+            "FRENCH": "Jardinier logiciel holistique - coach #Craft &amp; #Flow chez &#64;benextcompany  \r\nOrganisateur de la conference &#64;FlowConFR et du meetup Paris Continuous Delivery  \r\n &#34;Jack of all trades, master of some&#34;"
         },
-        "email": null,
-        "emailHash": "243ed6e0c253e674512d807730c4b08f",
+        "email": "DiJ+BtjotYLv2zBI/6AkaGKR9eWCIoKnN3BSyXoR4lQ=",
+        "emailHash": null,
         "firstname": "y\u03b1nnick",
         "lastname": "grenzinger",
         "legacyId": null,
@@ -44256,8 +44265,8 @@
         "login": "ygrenzinger",
         "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/grenzinger.jpg",
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.595"
+        "token": "3d55183e241f",
+        "tokenExpiration": "2019-03-24T08:17:47.642"
     },
     {
         "company": "",
@@ -45104,8 +45113,8 @@
     {
         "company": null,
         "description": {
-            "ENGLISH": "UNKNOWN",
-            "FRENCH": "UNKNOWN"
+            "ENGLISH": "Partner RNDR (Interaction designer, user experience, 3D Visuals). He has a BA in Interaction Design from Artez Academy for the Arts. He is fluent in Kotlin, Java, Processing, and Javascript-based languages (Nodejs, React js, Redux, D3, etc.), and has experience in machine vision using frameworks as Tensorflow as well as extensive experience in 3D time-based visualising. He has given many workshops and has teaching experience in interaction design. \r\n",
+            "FRENCH": "Partner RNDR (Interaction designer, user experience, 3D Visuals). He has a BA in Interaction Design from Artez Academy for the Arts. He is fluent in Kotlin, Java, Processing, and Javascript-based languages (Nodejs, React js, Redux, D3, etc.), and has experience in machine vision using frameworks as Tensorflow as well as extensive experience in 3D time-based visualising. He has given many workshops and has teaching experience in interaction design. \r\n"
         },
         "email": "Ome2J5iVyzysZgSUc8dCELf73MkZRJBpXW04RVDVin4=",
         "emailHash": "abac646391c0202b037414113060d29c",
@@ -45114,28 +45123,25 @@
         "legacyId": null,
         "links": [],
         "login": "bydrotgans",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/rotgans.jpg",
+        "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.237"
+        "tokenExpiration": "2019-03-20T20:17:07.719"
     },
     {
         "company": null,
-        "description": {
-            "ENGLISH": "https://bellaminettes.com/blog/",
-            "FRENCH": "https://bellaminettes.com/blog/"
-        },
-        "email": "ODkbS8woETEBVRQcO2RjR2jxTM5gtZDFCQw+RA0lxSs=",
-        "emailHash": "2a84b9779ee5ca81908abd09ac618ebb",
+        "description": {},
+        "email": "GJ3LTbDbO8jwL3oLNvJSpg==",
+        "emailHash": null,
         "firstname": "Bruno",
-        "lastname": "Bellamy",
+        "lastname": "Schvartz",
         "legacyId": null,
         "links": [],
         "login": "bruno",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/bellamy.jpg",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.252"
+        "token": "3bced34322e6",
+        "tokenExpiration": "2019-03-27T10:25:25.354"
     },
     {
         "company": null,
@@ -45206,20 +45212,33 @@
     {
         "company": null,
         "description": {
-            "ENGLISH": "UNKNOWN",
-            "FRENCH": "UNKNOWN"
+            "ENGLISH": "Agile & Systemic Catalyst\r\nRespectful Catalyst for Continuous and Systemic Transformation\r\nHelp people, collectives, organizations to mobilize their resources for achieving their goals with harmony.\r\nNurture a change of perception, feeling and behavior, for more fluidity in uncertainty. Contribute to bring out a new universe of possibility. Encourage harmony. See the eyes shine. This is my mission.",
+            "FRENCH": "Agile & Systemic Catalyst\r\nRespectful Catalyst for Continuous and Systemic Transformation\r\nHelp people, collectives, organizations to mobilize their resources for achieving their goals with harmony.\r\nNurture a change of perception, feeling and behavior, for more fluidity in uncertainty. Contribute to bring out a new universe of possibility. Encourage harmony. See the eyes shine. This is my mission."
         },
         "email": "GOgXBBbChuK0nQyrPnPRffasrJVrCnSy+aFE5Fl+eRA=",
         "emailHash": "2898ad2474ba25b87a9326585d3a234e",
         "firstname": "Christophe",
         "lastname": "Keromen",
         "legacyId": null,
-        "links": [],
+        "links": [
+            {
+                "name": "Linkedin",
+                "url": "http://www.linkedin.com/in/christophekeromen"
+            },
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/ckeromen"
+            },
+            {
+                "name": "Slideshare",
+                "url": "https://www.slideshare.net/ckti/"
+            }
+        ],
         "login": "ckeromen",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/keromen.jpg",
+        "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.267"
+        "tokenExpiration": "2019-03-25T07:52:35.984"
     },
     {
         "company": null,
@@ -47307,8 +47326,8 @@
         "login": "jonathan",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "4a4d0658173c",
-        "tokenExpiration": "2019-03-15T08:42:29.437"
+        "token": "425af2f3bdfd",
+        "tokenExpiration": "2019-03-28T23:09:48.029"
     },
     {
         "company": null,
@@ -47427,8 +47446,8 @@
         "login": "sylvain.zoccarato",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "cdf54d91329a",
-        "tokenExpiration": "2019-03-16T12:00:59.013"
+        "token": "1dd3177283fa",
+        "tokenExpiration": "2019-03-27T15:56:49.12"
     },
     {
         "company": null,
@@ -47712,8 +47731,8 @@
         "login": "vaurat",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "1bca55148577",
-        "tokenExpiration": "2019-03-15T08:53:32.87"
+        "token": "45ff6570c9e1",
+        "tokenExpiration": "2019-03-23T14:16:37.895"
     },
     {
         "company": null,
@@ -48105,8 +48124,8 @@
         "login": "c.bousquet",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "5abbe3a34c77",
-        "tokenExpiration": "2019-03-15T09:20:58.966"
+        "token": "99fcfe369b9f",
+        "tokenExpiration": "2019-03-24T07:10:26.725"
     },
     {
         "company": null,
@@ -48390,8 +48409,8 @@
         "login": "laetitia.duby",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "a40827fddddb",
-        "tokenExpiration": "2019-03-15T09:50:13.892"
+        "token": "b1678fb7a3eb",
+        "tokenExpiration": "2019-03-23T22:55:26.378"
     },
     {
         "company": "Wizbii",
@@ -48588,8 +48607,8 @@
         "login": "donolwenn",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "8b10122a5f4a",
-        "tokenExpiration": "2019-03-15T10:31:11.223"
+        "token": "1e7b5079f8a9",
+        "tokenExpiration": "2019-03-28T21:39:18.52"
     },
     {
         "company": null,
@@ -48723,8 +48742,8 @@
         "login": "hmerat",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "4fee94aabd80",
-        "tokenExpiration": "2019-03-15T11:05:09.013"
+        "token": "f61a73cd200e",
+        "tokenExpiration": "2019-03-24T10:39:26.722"
     },
     {
         "company": null,
@@ -48753,8 +48772,8 @@
         "login": "hugues.deflaugergues",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "5519131fc065",
-        "tokenExpiration": "2019-03-15T11:30:12.561"
+        "token": "5b16e4fe9e4a",
+        "tokenExpiration": "2019-03-23T09:12:48.868"
     },
     {
         "company": null,
@@ -49449,8 +49468,8 @@
         "login": "a_defanti",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "783e29cfb0eb",
-        "tokenExpiration": "2019-03-17T22:18:15.899"
+        "token": "d8df257003f5",
+        "tokenExpiration": "2019-03-27T21:02:26.47"
     },
     {
         "company": null,
@@ -49513,19 +49532,22 @@
         "tokenExpiration": "2019-03-16T07:05:10.159"
     },
     {
-        "company": null,
-        "description": {},
+        "company": "Inova Software",
+        "description": {
+            "ENGLISH": "Tech Lead Developer",
+            "FRENCH": "Tech Lead Developer"
+        },
         "email": "xtIVeu1fOPBe7VYcNW1/5wncrLyl5f3sxbQKnyujUUp6qltUWXW5GVk2jt6suApC",
-        "emailHash": null,
+        "emailHash": "43a57157e37f0c164aaaef07ebfbbc80",
         "firstname": "S\u00e9bastien",
         "lastname": "Gachet",
         "legacyId": null,
         "links": [],
         "login": "sebastien.gachet",
-        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "photoUrl": null,
         "role": "USER",
-        "token": "9152d45f976f",
-        "tokenExpiration": "2019-03-16T07:36:18.026"
+        "token": "c379d4753a69",
+        "tokenExpiration": "2019-03-28T09:20:16.966"
     },
     {
         "company": null,
@@ -49644,8 +49666,8 @@
         "login": "nicolas.thouvenin",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "f800a5d834f7",
-        "tokenExpiration": "2019-03-16T08:25:08.869"
+        "token": "644097a8a987",
+        "tokenExpiration": "2019-03-24T14:24:04.425"
     },
     {
         "company": null,
@@ -49674,8 +49696,8 @@
         "login": "jerome.spanogeorges",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "4443bec5a038",
-        "tokenExpiration": "2019-03-16T08:28:29.855"
+        "token": "ba3b88303a3a",
+        "tokenExpiration": "2019-03-27T15:47:50.236"
     },
     {
         "company": null,
@@ -49704,8 +49726,8 @@
         "login": "s_pce",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "6cbd1cfa1b66",
-        "tokenExpiration": "2019-03-16T08:50:26.926"
+        "token": "659758bea27a",
+        "tokenExpiration": "2019-03-28T09:39:58.615"
     },
     {
         "company": "Ladydinde",
@@ -49767,8 +49789,8 @@
         "login": "huchede.thomas",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "ed0b8867df18",
-        "tokenExpiration": "2019-03-16T10:17:21.112"
+        "token": "59b2272cb53a",
+        "tokenExpiration": "2019-03-27T21:07:48.246"
     },
     {
         "company": null,
@@ -50082,8 +50104,8 @@
         "login": "samuel.abiassi",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "6d58035abd1b",
-        "tokenExpiration": "2019-03-16T14:12:31.267"
+        "token": "5404cf8a3bf4",
+        "tokenExpiration": "2019-03-28T20:09:27.972"
     },
     {
         "company": null,
@@ -50187,8 +50209,8 @@
         "login": "julie.nguyen",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "74835fb93cb5",
-        "tokenExpiration": "2019-03-16T15:17:43.643"
+        "token": "2d7be4d153cb",
+        "tokenExpiration": "2019-03-24T13:26:05.656"
     },
     {
         "company": null,
@@ -50313,17 +50335,17 @@
     {
         "company": null,
         "description": {},
-        "email": "fLBxjKsYi1OEu6dFZDgDW2f8nDo/xG7UxbtUTt2lTww=",
+        "email": "6b0+6pLtkoF0mjfzhzUz9WUoeBz6Otk7xM6nQ4lJCLg=",
         "emailHash": null,
         "firstname": "Nicolas",
-        "lastname": "Chuche",
+        "lastname": "Noel",
         "legacyId": null,
         "links": [],
         "login": "nicolas",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "b30c53faf8a3",
-        "tokenExpiration": "2019-03-16T16:36:49.953"
+        "token": "a8eae8c2e92a",
+        "tokenExpiration": "2019-03-27T09:57:55.57"
     },
     {
         "company": null,
@@ -50367,8 +50389,8 @@
         "login": "mbouquet77",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "562ca3151497",
-        "tokenExpiration": "2019-03-16T17:53:32.811"
+        "token": "1d2b0c9780bb",
+        "tokenExpiration": "2019-03-28T22:06:57.266"
     },
     {
         "company": null,
@@ -50412,8 +50434,8 @@
         "login": "fabousqu",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "b3a9b997cf16",
-        "tokenExpiration": "2019-03-16T19:29:46.557"
+        "token": "96a217969b1e",
+        "tokenExpiration": "2019-03-27T19:21:03.281"
     },
     {
         "company": null,
@@ -50427,8 +50449,8 @@
         "login": "spetit",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "88e4571cf067",
-        "tokenExpiration": "2019-03-16T22:05:14.775"
+        "token": "f81ecaa41220",
+        "tokenExpiration": "2019-03-28T15:00:16.282"
     },
     {
         "company": null,
@@ -50993,8 +51015,8 @@
         "login": "ajakubiak",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "8fe516befd06",
-        "tokenExpiration": "2019-03-20T10:53:00.538"
+        "token": "a2103677aaaf",
+        "tokenExpiration": "2019-03-28T07:43:48.946"
     },
     {
         "company": null,
@@ -51288,5 +51310,693 @@
         "role": "USER",
         "token": "16a3986ade3e",
         "tokenExpiration": "2019-03-22T13:06:31.381"
+    },
+    {
+        "company": "Microsoft",
+        "description": {
+            "ENGLISH": "As a leader in productivity platforms and services, Microsoft empowers everyperson and every organization to achieve more in a world based on the cloud and mobility. At the core of the French digital ecosystem for more than 30 years, Microsoft France, chaired by Carlo Purassanta since September 2017, brings together more than 1,600 employees at its Issy-les-Moulineaux Campus, under the sign of openness, creativity and collaboration. \r\n\r\nWith a network of more than 10,500 business, technological, public sector, research or start-up partners, Microsoft France is committed to promoting equal opportunities and digital education alongside non-profit organisations throughout the country.",
+            "FRENCH": "Leader des plateformes et des services de productivit\u00e9, Microsoft donne \u00e0 chaque individu et chaque organisation les moyens de r\u00e9aliser ses ambitions, dans un monde fond\u00e9 sur le Cloud et la mobilit\u00e9.Au c\u0153ur de l\u2019\u00e9cosyst\u00e8me num\u00e9rique fran\u00e7ais depuis plus de 30 ans, Microsoft France, pr\u00e9sid\u00e9e par Carlo Purassanta depuis septembre 2017, rassemble plus de 1 600 collaborateurs au sein de son Campus d\u2019Issy-les-Moulineaux, sous le signe de l\u2019ouverture, de la cr\u00e9ativit\u00e9 et de la collaboration. \r\n\r\nAvec un tissu de plus de 10 500 partenaires business, technologiques, acteurs du secteur public, chercheurs ou start-ups, acteur responsable, Microsoft France s\u2019engage en faveur de l\u2019\u00e9galit\u00e9 des chances et de l\u2019\u00e9ducation au num\u00e9rique aux c\u00f4t\u00e9s des associations sur l\u2019ensemble du territoire"
+        },
+        "email": "e/4kyvsCs+4H0KtX5NcvnSj9AbGrlWFptOMlaCScOkzQnxObGWg0xE2mPMpOINti",
+        "emailHash": null,
+        "firstname": "Fran\u00e7ois",
+        "lastname": "Bouteruche",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Microsoft",
+                "url": "https://www.microsoft.com/fr-fr/"
+            },
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/msdev_fr"
+            }
+        ],
+        "login": "microsoft",
+        "photoUrl": "https://mixitconf.org/images/sponsors/logo-microsoft.svg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-19T14:24:56.823"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "bDkkIVslnQ4riJk1ePZBr4UT7QpwdsuJt8QoNy5yNmc=",
+        "emailHash": null,
+        "firstname": "Komi",
+        "lastname": "Dogbatse",
+        "legacyId": null,
+        "links": [],
+        "login": "kdogbatse",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "505b30a984fe",
+        "tokenExpiration": "2019-03-22T15:09:55.015"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "ks3sSuaIN02/S40q+CrUlahwUXWU+DLG5pkpVGDE+aw=",
+        "emailHash": null,
+        "firstname": "Thibaut",
+        "lastname": "Daumont",
+        "legacyId": null,
+        "links": [],
+        "login": "thibaut-daumont",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "3974344b6d07",
+        "tokenExpiration": "2019-03-22T15:49:17.05"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "tpgcOx/Tz5oV/Sb51o2rGyoUvsgaoBpY4AFp0FbfH3A=",
+        "emailHash": null,
+        "firstname": "M",
+        "lastname": "M",
+        "legacyId": null,
+        "links": [],
+        "login": "mickael-marimoutou",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "ecd9304989be",
+        "tokenExpiration": "2019-03-22T15:53:11.663"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "w1vKY5ohOJQDg8B3/GsKP+5wKbZVIrIBynJ0jljptxk=",
+        "emailHash": null,
+        "firstname": "Damien",
+        "lastname": "Arco",
+        "legacyId": null,
+        "links": [],
+        "login": "damien-arco",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "9e5ff921fb61",
+        "tokenExpiration": "2019-03-23T08:35:28.178"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "rwHZfvF+YO4L8mHCG3Yhp2w3nFcBvd/TPIvb9/jjLIE=",
+        "emailHash": null,
+        "firstname": "Antonio",
+        "lastname": "Munoz",
+        "legacyId": null,
+        "links": [],
+        "login": "amzco",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "703765d769ec",
+        "tokenExpiration": "2019-03-23T09:11:47.255"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "v/rAsQ8GMBVjfmlrK9g5u/VMOoA8fvJKS65c9wb0EE8=",
+        "emailHash": null,
+        "firstname": "Solange",
+        "lastname": "Gubian",
+        "legacyId": null,
+        "links": [],
+        "login": "solange-gubian",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "43f56e6c7235",
+        "tokenExpiration": "2019-03-23T13:08:54.916"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "wijMdsclYP/JEOtn3NCJMUIVRER12NOP95vewvoC8t4=",
+        "emailHash": null,
+        "firstname": "Y\u00eac\u00ea",
+        "lastname": "N'dori",
+        "legacyId": null,
+        "links": [],
+        "login": "yece-ndori",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "c87b98d09ae0",
+        "tokenExpiration": "2019-03-23T14:06:21.24"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "nwSscD1OKdfFF/sE+mgGB/Yos0/ng1qqpvs7nasfUiyAXkTqw/D8jW4Buscc4pKx",
+        "emailHash": null,
+        "firstname": "Camille",
+        "lastname": "Salembier",
+        "legacyId": null,
+        "links": [],
+        "login": "camille-salembier",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "542f06e469f9",
+        "tokenExpiration": "2019-03-23T14:28:55.141"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "QQrUlcnsA22JVBqSjNirbvDkF0JJciat3Pk7LvQaPFo=",
+        "emailHash": null,
+        "firstname": "Adrien",
+        "lastname": "Samson",
+        "legacyId": null,
+        "links": [],
+        "login": "adrien",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "50f654af8290",
+        "tokenExpiration": "2019-03-23T15:57:37.645"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "h7v/C8dWWJmiCzuOsdB7PmMwGbTvrRWOVjlJPJii16A=",
+        "emailHash": null,
+        "firstname": "Adrien",
+        "lastname": "Samson",
+        "legacyId": null,
+        "links": [],
+        "login": "pro",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "8a049606ae91",
+        "tokenExpiration": "2019-03-23T15:57:53.803"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "hP2mKbEyY8Ene+T71nDuUBBUyBl9pm6u4Z/JZ2LpFE8=",
+        "emailHash": null,
+        "firstname": "Jean-baptiste",
+        "lastname": "Le duigou",
+        "legacyId": null,
+        "links": [],
+        "login": "jb-leduigou",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "06c14ff3fba9",
+        "tokenExpiration": "2019-03-24T09:04:57.454"
+    },
+    {
+        "company": "Antidot",
+        "description": {
+            "ENGLISH": "Hi :)",
+            "FRENCH": "Coucou :)"
+        },
+        "email": "X8SiVSWe8IBzhQ37ZsZsR3bM6eri29br8xMN3ULBzOw=",
+        "emailHash": null,
+        "firstname": "Bastien",
+        "lastname": "Boulard",
+        "legacyId": null,
+        "links": [],
+        "login": "bboulard",
+        "photoUrl": "https://66.media.tumblr.com/b0021e41d4182b3e2d793708e0562a7d/tumblr_nytbigXV0T1sazj00o1_400.gif",
+        "role": "USER",
+        "token": "d70f504bf3e9",
+        "tokenExpiration": "2019-03-24T10:24:14.625"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "2EJAOVvDsT6w2iZjjvj+uho80cGSEA5j9cSfBdm589E=",
+        "emailHash": null,
+        "firstname": "Thomas",
+        "lastname": "Delort",
+        "legacyId": null,
+        "links": [],
+        "login": "thomas-delort",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "0c948532f7cd",
+        "tokenExpiration": "2019-03-24T14:56:31.698"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "3dv796K7aB1kqL/ohDD9BTR7TZVMqkfXhJSEeF2OFqU=",
+        "emailHash": null,
+        "firstname": "Yves",
+        "lastname": "Saintillan",
+        "legacyId": null,
+        "links": [],
+        "login": "yves-saintillan",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "95133fffc989",
+        "tokenExpiration": "2019-03-24T15:39:03.645"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "QCvqGiys8PwARLFhw55CetuitdNGicsFYliP2FLJk7Q=",
+        "emailHash": null,
+        "firstname": "Arnaud",
+        "lastname": "Freismuth",
+        "legacyId": null,
+        "links": [],
+        "login": "afreismuth",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "36106280d891",
+        "tokenExpiration": "2019-03-24T16:15:19.346"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "AfV6rWLHkeamT2gEHBCIDFmRt6FS4IgMyHquHJN2lK3XWTSpBSHr6bNx7QAiDJWx",
+        "emailHash": null,
+        "firstname": "M\u00e9lanie",
+        "lastname": "Lavabre",
+        "legacyId": null,
+        "links": [],
+        "login": "melanie-lavabre",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "0bb0d062e6d6",
+        "tokenExpiration": "2019-03-25T10:41:03.777"
+    },
+    {
+        "company": "Viaxoft",
+        "description": {
+            "ENGLISH": "Full Stack programmer who like to learn",
+            "FRENCH": "D\u00e9veloppeur Full Stack qui aime progresser "
+        },
+        "email": "rb+U0hbFg+Rn5g7HVksKyP8mId0PkAEvan3gMxwMmkg=",
+        "emailHash": "d195de7b0f22b7e5f9fb6365fe0776f6",
+        "firstname": "Yann",
+        "lastname": "Masliah",
+        "legacyId": null,
+        "links": [],
+        "login": "y-masliah",
+        "photoUrl": null,
+        "role": "USER",
+        "token": "1bf7fdfb1652",
+        "tokenExpiration": "2019-03-25T18:40:18.135"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "nlqtmv9bjWJSrMRCCl5GEexAUTwI1PGGkZSywn6cPJw=",
+        "emailHash": null,
+        "firstname": "Pierre",
+        "lastname": "Plagnes",
+        "legacyId": null,
+        "links": [],
+        "login": "pierre-plagnes",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "fc692f94be37",
+        "tokenExpiration": "2019-03-26T10:44:19.986"
+    },
+    {
+        "company": "CrafTogether",
+        "description": {
+            "ENGLISH": "-",
+            "FRENCH": "-"
+        },
+        "email": "3BFn6uIKyWcKS//ja0YwJwuIvA/9D3W3qtL/NO2++qE=",
+        "emailHash": "93edfe8ef9e603bd70172cb8c83c4d77",
+        "firstname": "Eric",
+        "lastname": "Denayrolles",
+        "legacyId": null,
+        "links": [],
+        "login": "eric-mixitconf",
+        "photoUrl": null,
+        "role": "USER",
+        "token": "19bcd4eac757",
+        "tokenExpiration": "2019-03-27T09:23:05.4"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "LJcLeKAwkt7EM4GH51uNUgu0sOGb8teMlUH3BLzepks=",
+        "emailHash": null,
+        "firstname": "Laure",
+        "lastname": "Bosse",
+        "legacyId": null,
+        "links": [],
+        "login": "laure-bosse",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "49ab8c5b2393",
+        "tokenExpiration": "2019-03-27T10:43:24.857"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "x7lycpdyJ6/+wTL50JEvP6CY6wmfKstnKQgokdJnnqk=",
+        "emailHash": null,
+        "firstname": "Frank",
+        "lastname": "Ortega",
+        "legacyId": null,
+        "links": [],
+        "login": "foa-kpu",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "11985f1c8934",
+        "tokenExpiration": "2019-03-27T10:55:45.575"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "IHC4vxcb0U/YCmMU6Cp1P4iSJKUWjCXVrWka0fqMUAo=",
+        "emailHash": null,
+        "firstname": "Virginie",
+        "lastname": "Ngo",
+        "legacyId": null,
+        "links": [],
+        "login": "ngo-virginie1",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "1f6a34cee47b",
+        "tokenExpiration": "2019-03-27T15:02:25.592"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "zX9J55GDaYcxg9nzehokr2uwx7nKom85zRvodVYJO8c=",
+        "emailHash": null,
+        "firstname": "Kedk",
+        "lastname": "Jdisidjdbej",
+        "legacyId": null,
+        "links": [],
+        "login": "zainabzaib",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "43bfc8ab635c",
+        "tokenExpiration": "2019-03-27T15:56:46.781"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "tM3iV44Uxq9f0F7yOjXlEkc7N57Zp/0Wib9JPOMsho0=",
+        "emailHash": null,
+        "firstname": "Alexandre",
+        "lastname": "Ravoux",
+        "legacyId": null,
+        "links": [],
+        "login": "aravoux",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "58bca9f2f8a0",
+        "tokenExpiration": "2019-03-27T16:45:33.734"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Freelance developer,  .NET sided, but still open to other ecosystems, conversion to F# and his functionnal mates in progress.",
+            "FRENCH": "D\u00e9velopeur Freelance, c\u00f4t\u00e9 .NET, mais ouvert aux autres \u00e9cosyst\u00e8mes, en cours de conversion vers F# et ses amis fonctionnels."
+        },
+        "email": "tlbwNx2nUKUe5ex48/nhTp4Qol34UbW7EVjsxOfE9IY=",
+        "emailHash": "7b6d36155da73595df0a7473978b5826",
+        "firstname": "Sylvain",
+        "lastname": "Coudert",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/sylv_coud"
+            },
+            {
+                "name": "Blog",
+                "url": "https://punkindev.fr"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/sylvain-coudert-b802a477/"
+            }
+        ],
+        "login": "coudert-sylvain",
+        "photoUrl": null,
+        "role": "USER",
+        "token": "48e6a83291cf",
+        "tokenExpiration": "2019-03-27T16:47:48.792"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "+f3DHr7U9aBuA2nUINh7k/CKRPqcn/+bjzlPy9cybgs=",
+        "emailHash": null,
+        "firstname": "Thokozani ",
+        "lastname": "Mtsweni",
+        "legacyId": null,
+        "links": [],
+        "login": "mtsweni911tk",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "93ffc9c026e6",
+        "tokenExpiration": "2019-03-28T00:30:50.722"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "QZAkzTQv7pvlz4GeXEBOUg==",
+        "emailHash": null,
+        "firstname": "Marie-charlotte",
+        "lastname": "Prudent",
+        "legacyId": null,
+        "links": [],
+        "login": "mcp",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "4da8d824ff73",
+        "tokenExpiration": "2019-03-28T06:22:58.642"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "LWlVZaonoSKjctQNkn5yf88jrfDezAMZ6KDrf5iSGnc=",
+        "emailHash": null,
+        "firstname": "Aur\u00e9lie",
+        "lastname": "Dubuis",
+        "legacyId": null,
+        "links": [],
+        "login": "aurel-dubs",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "657c508b6b9f",
+        "tokenExpiration": "2019-03-28T08:08:31.535"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "0gN8DmE5LLMx401Ek0QTHZOKSjpKRN/ooZ3sDhsRaw4=",
+        "emailHash": null,
+        "firstname": "Mohamed",
+        "lastname": "Boubaya",
+        "legacyId": null,
+        "links": [],
+        "login": "mohamedboubaya1",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "6e8a9bedfe67",
+        "tokenExpiration": "2019-03-28T12:44:14.743"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "MpxC6bMxLgcQxJiIIFtdMQ==",
+        "emailHash": null,
+        "firstname": "Andrew",
+        "lastname": "Spencer",
+        "legacyId": null,
+        "links": [],
+        "login": "spencer",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "03358b6919a9",
+        "tokenExpiration": "2019-03-28T12:21:00.512"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "svuw/XwTumEKltVNeVXFuY9Hqlbg0Ktdn55RBfBvPLk=",
+        "emailHash": null,
+        "firstname": "Mohamed",
+        "lastname": "Boubaya",
+        "legacyId": null,
+        "links": [],
+        "login": "mohamed-boubaya",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "0e27d9285cca",
+        "tokenExpiration": "2019-03-28T12:43:53.057"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "nSGtlBYDNHLAYcUs2k87K6wvrdxGp4Kdz4UieWwcTFU=",
+        "emailHash": null,
+        "firstname": "Guillaume",
+        "lastname": "Besset",
+        "legacyId": null,
+        "links": [],
+        "login": "guillaume-besset-pro",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "7d0a48c3faec",
+        "tokenExpiration": "2019-03-28T12:41:59.081"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "wL5AwnY5uMqMCs8pMmJCktMAfR6bp2YNVgEFWRXVUzM=",
+        "emailHash": null,
+        "firstname": "Mickael",
+        "lastname": "Chalandon",
+        "legacyId": null,
+        "links": [],
+        "login": "m-chal-andon",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "ba2432382e04",
+        "tokenExpiration": "2019-03-28T13:59:29.259"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "tChMJ1I/eyS19DfOU/uhJG3pOUDUYsZqOrZeO+xnkGY=",
+        "emailHash": null,
+        "firstname": "Bash session",
+        "lastname": "Bash session",
+        "legacyId": null,
+        "links": [],
+        "login": "bayandaxubu",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "4c639bb377ae",
+        "tokenExpiration": "2019-03-28T14:14:54.257"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "iZRR5NteNju5t/kf3qMG+gQ8yEDj4Qy9xvevNUbSDno=",
+        "emailHash": null,
+        "firstname": "Paul",
+        "lastname": "Santus",
+        "legacyId": null,
+        "links": [],
+        "login": "paul-santus",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "5afda9312f40",
+        "tokenExpiration": "2019-03-28T20:20:27.194"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "ORXBfV75XIlaryvk8MNkR+y906g+7ivnVQKFYhy7DIznPxWNWqZ+vRHGmGEEgxw1",
+        "emailHash": null,
+        "firstname": "Elise",
+        "lastname": "Vanholsbeeck",
+        "legacyId": null,
+        "links": [],
+        "login": "elise-vanholsbeeck",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "4fdc00a15c33",
+        "tokenExpiration": "2019-03-28T21:36:13.511"
+    },
+    {
+        "company": "Ippon Technologies",
+        "description": {
+            "ENGLISH": "I&#39;m a developer who love my job.\r\n\r\nWith a strong interest in front end development, I am interested in different ways to organize a design system to collaborate effectively between PO (or other product owners), UX, UI, and developer.\r\n\r\nOriginally inspired by XP (extreme programming), I have no preference for a particular programming language, the method of work matters much more to me.\r\n\r\nIn my opinion, learning is a necessity throughout a developer&#39;s development. That&#39;s why I participate in Software Craftsmanship communities.",
+            "FRENCH": "Je suis un d\u00e9veloppeur passionn\u00e9 par mon m\u00e9tier.\r\n\r\nAvec un fort int\u00e9r\u00eat pour le d\u00e9veloppement front end, je m&#39;int\u00e9resse aux diff\u00e9rentes fa\u00e7on d&#39;organiser un design system pour collaborer efficacement entre PO (ou autre responsable du produit), UX, UI, et d\u00e9veloppeur.\r\n\r\nInspir\u00e9 initialement par XP (extreme programming), je n&#39;ai pas de pr\u00e9f\u00e9rence envers un langage de programmation en particulier, la m\u00e9thode de travail m&#39;importe beaucoup plus.\r\n\r\nL&#39;apprentissage est, selon moi, n\u00e9cessaire tout au long du parcours d&#39;un d\u00e9veloppeur. C&#39;est pourquoi je participe aux communaut\u00e9s du Software Craftsmanship."
+        },
+        "email": "YvZnD6n5DHyNH5JuW0WGdbuEH6Ck9aLo/0c7j6mGLOI=",
+        "emailHash": "a03e1ce3843244837a4901f0d59e50b8",
+        "firstname": "Anthony",
+        "lastname": "Rey",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Articles",
+                "url": "https://blog.ippon.fr/author/anthony/"
+            },
+            {
+                "name": "GitHub",
+                "url": "https://github.com/Gnuk"
+            },
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/arey_gnuk"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/anthonyrey/"
+            }
+        ],
+        "login": "gnuk-psb",
+        "photoUrl": null,
+        "role": "USER",
+        "token": "6aadb60fcfbf",
+        "tokenExpiration": "2019-03-29T07:44:54.157"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "qqLN7j0GCAUdw7pkFiuacGsAGWFmKIi5NEW+1Cphy8o=",
+        "emailHash": null,
+        "firstname": "Florian",
+        "lastname": "Ortiz",
+        "legacyId": null,
+        "links": [],
+        "login": "florian-ortiz",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "3737fe1ffb68",
+        "tokenExpiration": "2019-03-29T08:58:36.747"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "YDRxTpNtfg19zopCh+X4ajSQs+h77ynLx1m6AJqEwOc=",
+        "emailHash": null,
+        "firstname": "C\u00e9dric ",
+        "lastname": "Chateau",
+        "legacyId": null,
+        "links": [],
+        "login": "c-chateau",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "9c44cf142f40",
+        "tokenExpiration": "2019-03-29T09:40:53.455"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "I'm responsible of all the C.I/C.D for 15 Angular frontend projects using the awesome Gitlab tool.\r\nI'm aslo in charge to spread the DevOps philosophy to emphasizes collaboration between developpers and operations.",
+            "FRENCH": "I'm responsible of all the C.I/C.D for 15 Angular frontend projects using the awesome Gitlab tool.\r\nI'm aslo in charge to spread the DevOps philosophy to emphasizes collaboration between developpers and operations."
+        },
+        "email": "UXAtoQT2GUMJCanqMNtJHP5WwzQyPz1uyU8/8a7oxZY=",
+        "emailHash": null,
+        "firstname": "Logan",
+        "lastname": "Weber",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Gitlab",
+                "url": "https://gitlab.com/neonox31"
+            },
+            {
+                "name": "Github",
+                "url": "https://github.com/neonox31"
+            },
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/Neonox31"
+            }
+        ],
+        "login": "logan",
+        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/logan_weber.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-03-26T12:15:22.693"
     }
 ]
