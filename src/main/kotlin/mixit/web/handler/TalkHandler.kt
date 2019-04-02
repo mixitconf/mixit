@@ -42,7 +42,8 @@ class TalkHandler(private val repository: TalkRepository,
                         Pair("talks", talks),
                         Pair("year", year),
                         Pair("current", year == 2019),
-                        Pair("title", when (topic) { null -> "talks.title.html|$year"
+                        Pair("title", when (topic) {
+                            null -> "talks.title.html|$year"
                             else -> "talks.title.html.$topic|$year"
                         }),
                         Pair("filtered", filterOnFavorite),
@@ -147,7 +148,7 @@ class TalkHandler(private val repository: TalkRepository,
                     .findBySlug(req.pathVariable("slug"))
                     .flatMap { editTalkViewDetail(req, it, emptyMap()) }
 
-    private fun editTalkViewDetail(req: ServerRequest, talk: Talk, errors:Map<String, String>) = userRepository.findMany(talk.speakerIds).collectList().flatMap { speakers ->
+    private fun editTalkViewDetail(req: ServerRequest, talk: Talk, errors: Map<String, String>) = userRepository.findMany(talk.speakerIds).collectList().flatMap { speakers ->
 
         ok().render("talk-edit", mapOf(
                 Pair("talk", talk.toDto(req.language(), speakers!!, convertRandomLabel = false)),
@@ -170,17 +171,17 @@ class TalkHandler(private val repository: TalkRepository,
             val errors = mutableMapOf<String, String>()
 
             // Null check
-            if(formData["title"].isNullOrBlank()){
-                errors.put("title","talk.form.error.title.required")
+            if (formData["title"].isNullOrBlank()) {
+                errors.put("title", "talk.form.error.title.required")
             }
-            if(formData["summary"].isNullOrBlank()){
-                errors.put("title","talk.form.error.summary.required")
+            if (formData["summary"].isNullOrBlank()) {
+                errors.put("title", "talk.form.error.summary.required")
             }
-            if(formData["language"].isNullOrBlank()){
-                errors.put("title","talk.form.error.language.required")
+            if (formData["language"].isNullOrBlank()) {
+                errors.put("title", "talk.form.error.language.required")
             }
 
-            if(errors.isNotEmpty()){
+            if (errors.isNotEmpty()) {
                 editTalkViewDetail(req, it, errors)
             }
 
@@ -203,23 +204,22 @@ class TalkHandler(private val repository: TalkRepository,
             )
 
             // We want to control data to not save invalid things in our database
-            if(!maxLengthValidator.isValid(talk.title, 255)){
-                errors.put("title","talk.form.error.title.size")
+            if (!maxLengthValidator.isValid(talk.title, 255)) {
+                errors.put("title", "talk.form.error.title.size")
             }
 
-            if(!markdownValidator.isValid(talk.summary)){
-                errors.put("summary","talk.form.error.summary")
+            if (!markdownValidator.isValid(talk.summary)) {
+                errors.put("summary", "talk.form.error.summary")
             }
 
-            if(!markdownValidator.isValid(talk.description)){
-                errors.put("description","talk.form.error.description")
+            if (!markdownValidator.isValid(talk.description)) {
+                errors.put("description", "talk.form.error.description")
             }
 
-            if(errors.isEmpty()){
+            if (errors.isEmpty()) {
                 // If everything is Ok we save the user
                 repository.save(talk).then(seeOther("${properties.baseUri}/me"))
-            }
-            else{
+            } else {
                 editTalkViewDetail(req, talk, errors)
             }
         }
@@ -245,7 +245,7 @@ class TalkHandler(private val repository: TalkRepository,
                         }
             }
 
-    fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("login")).map { it.sanitizeForApi()})
+    fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("login")).map { it.sanitizeForApi() })
 
     fun findByEventId(req: ServerRequest) = ok().json().body(repository.findByEvent(req.pathVariable("year")).map { it.sanitizeForApi() })
 
@@ -307,29 +307,29 @@ fun Talk.toDto(lang: Language, speakers: List<User>, favorite: Boolean = false, 
 )
 
 fun Talk.summary(convertRandomLabel: Boolean): String {
-    if(event == "2019" && convertRandomLabel){
-        when(format){
+    if (event == "2019" && convertRandomLabel) {
+        return when (format) {
             TalkFormat.RANDOM -> {
-                if(language == Language.ENGLISH){
-                    return "This is a \"Random\" talk. For this track we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 20 minutes. As it's a surprise we don't display the session summary before...   "
-                }
-                return "Ce talk est de type \"random\". Pour cette track, nous choisissons le programme pour vous. Vous êtes dans une pièce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 20 minutes. Comme c'est une surprise, nous n'affichons pas le résumé de la session avant ..."
+                if (language == Language.ENGLISH)
+                    "This is a \"Random\" talk. For this track we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 20 minutes. As it's a surprise we don't display the session summary before...   "
+                else
+                    "Ce talk est de type \"random\". Pour cette track, nous choisissons le programme pour vous. Vous êtes dans une pièce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 20 minutes. Comme c'est une surprise, nous n'affichons pas le résumé de la session avant ..."
             }
             TalkFormat.KEYNOTE_SURPRISE -> {
-                if (language == Language.ENGLISH) {
-                    return "This is a \"surprise\" talk. For our keynote we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 30 minutes. As it's a surprise we don't display the session summary before...   "
-                }
-                return "Ce talk est une \"surprise\". Pour cette track, nous choisissons le programme pour vous. Vous êtes dans une pièce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 30 minutes. Comme c'est une surprise, nous n'affichons pas le résumé de la session avant ..."
+                if (language == Language.ENGLISH)
+                    "This is a \"surprise\" talk. For our keynote we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 30 minutes. As it's a surprise we don't display the session summary before...   "
+                else
+                    "Ce talk est une \"surprise\". Pour cette track, nous choisissons le programme pour vous. Vous êtes dans une pièce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 30 minutes. Comme c'est une surprise, nous n'affichons pas le résumé de la session avant ..."
             }
+            else -> summary
         }
-        return summary
     }
     return summary
 }
 
 
-fun Talk.title(convertRandomLabel: Boolean, searchTerms: List<String> = emptyList()): String = if (convertRandomLabel && format == TalkFormat.KEYNOTE_SURPRISE && event == "2019")  "A surprise keynote... is a surprise"
-     else title.markFoundOccurrences(searchTerms)
+fun Talk.title(convertRandomLabel: Boolean, searchTerms: List<String> = emptyList()): String = if (convertRandomLabel && format == TalkFormat.KEYNOTE_SURPRISE && event == "2019") "A surprise keynote... is a surprise"
+else title.markFoundOccurrences(searchTerms)
 
 fun Talk.description(convertRandomLabel: Boolean) = if (convertRandomLabel && (format == TalkFormat.RANDOM || format == TalkFormat.KEYNOTE_SURPRISE) && event == "2019") "" else description
 

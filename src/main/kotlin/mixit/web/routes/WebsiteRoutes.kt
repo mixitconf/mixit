@@ -147,7 +147,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
             POST("/me", userHandler::saveProfile)
             POST("/me/talks", talkHandler::saveProfileTalk)
             POST("/search") { globalHandler.searchFullTextView(it) }
-            POST("/ticketing", ticketingHandler::submit)
+            //POST("/ticketing", ticketingHandler::submit)
 
             "/admin".nest {
                 POST("/talks", adminHandler::adminSaveTalk)
