@@ -7,6 +7,7 @@ import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.permanentRedirect
 import org.springframework.web.reactive.function.server.ServerResponse.seeOther
 import java.net.URI
+import java.net.URLEncoder
 import java.nio.charset.Charset
 import java.security.MessageDigest
 import java.text.Normalizer
@@ -125,6 +126,7 @@ fun String.toSlug() = toLowerCase()
         .joinToString("-")
         .replace("-+".toRegex(), "-")   // Avoid multiple consecutive "--"
 
+fun String.toUrlPath() = URLEncoder.encode(this, "UTF-8").replace("+", "%20")
 
 fun String.encodeToMd5(): String? = if (isNullOrEmpty()) null else hex(MessageDigest.getInstance("MD5").digest(toByteArray(Charset.forName("CP1252"))))
 
