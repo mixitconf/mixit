@@ -10,8 +10,8 @@ plugins {
     id("org.jetbrains.kotlin.kapt") version kotlinVersion
     id("com.moowork.node") version nodePluginVersion
     id("com.moowork.gulp") version nodePluginVersion
-    id("org.springframework.boot") version "2.1.3.RELEASE"
-    id("io.spring.dependency-management") version "1.0.6.RELEASE"
+    id("org.springframework.boot") version "2.1.4.RELEASE"
+    id("io.spring.dependency-management") version "1.0.7.RELEASE"
 }
 
 version = "1.0.0-SNAPSHOT"
