@@ -909,6 +909,11 @@
                 "level": "PARTY",
                 "sponsorId": "onlylyon",
                 "subscriptionDate": "2019-03-25"
+            },
+            {
+                "level": "MIXTEEN",
+                "sponsorId": "keyrus",
+                "subscriptionDate": "2019-04-05"
             }
         ],
         "start": "2019-05-23",
