@@ -11,3 +11,6 @@ node/
 node_modules/
 src/main/resources/static/css/
 src/main/resources/static/images/
+
+# MacOS
+.DS_Store
