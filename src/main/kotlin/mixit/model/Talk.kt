@@ -40,12 +40,17 @@ enum class TalkFormat(val duration: Int) {
 enum class Room(capacity: Int) {
     AMPHI1(500),
     AMPHI2(200),
-    ROOM1(110),
-    ROOM2(110),
+    AMPHIC(445),
+    AMPHID(445),
+    AMPHIK(300),
+    ROOM1(198),
+    ROOM2(108),
     ROOM3(30),
     ROOM4(30),
     ROOM5(30),
     ROOM6(30),
-    ROOM7(50),
+    ROOM7(30),
+    MUMMY(30),
+    SPEAKER(16),
     UNKNOWN(0);
 }
