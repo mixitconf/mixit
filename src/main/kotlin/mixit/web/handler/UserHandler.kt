@@ -130,7 +130,7 @@ class UserHandler(private val repository: UserRepository,
                                         Pair("user", user.toDto(req.language(), markdownConverter)),
                                         Pair("canUpdateProfile", true),
                                         Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8))
-                                        ))
+                                ))
                         )
             } else {
                 talkRepository
@@ -257,6 +257,11 @@ class UserHandler(private val repository: UserRepository,
 
     fun findOneStaff(req: ServerRequest) = ok().json().body(repository.findOneByRoles(req.pathVariable("login"), listOf(Role.STAFF, Role.STAFF_IN_PAUSE)))
 
+
+    fun findSpeakerByEventId(req: ServerRequest) =
+            ok().json().body(talkRepository.findByEvent(req.pathVariable("year")).flatMap { repository.findMany(it.speakerIds) }.distinct())
+
+
     fun create(req: ServerRequest) = repository.save(req.bodyToMono<User>()).flatMap {
         created(create("/api/user/${it.login}")).json().body(it.toMono())
     }
@@ -302,7 +307,7 @@ class UserDto(
         val logoType: String?,
         val logoWebpUrl: String? = null,
         val isAbsoluteLogo: Boolean = if (photoUrl == null) false else photoUrl.startsWith("http"),
-        val path:String = login.toUrlPath()
+        val path: String = login.toUrlPath()
 )
 
 fun User.toDto(language: Language, markdownConverter: MarkdownConverter, searchTerms: List<String> = emptyList()) =

@@ -44,6 +44,8 @@ class ApiRoutes(private val blogHandler: BlogHandler,
             POST("/favorites/{email}/talks/{id}/toggle", favoriteHandler::toggleFavorite)
 
             // users
+            GET("/{year}/speaker", userHandler::findSpeakerByEventId)
+
             "/user".nest {
                 GET("/", userHandler::findAll)
                 POST("/", userHandler::create)
