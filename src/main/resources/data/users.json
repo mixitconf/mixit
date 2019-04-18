@@ -5480,8 +5480,8 @@
         "login": "Charles Bouttaz",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "b1c1d2af158c",
-        "tokenExpiration": "2019-01-23T13:22:50.099"
+        "token": "a3ddc7b0f3c8",
+        "tokenExpiration": "2019-04-18T17:33:55.787"
     },
     {
         "company": "",
@@ -9066,8 +9066,8 @@
     {
         "company": "Groupe SII",
         "description": {
-            "ENGLISH": "SII Rh\u00f4ne Alpes: a dynamic agency that keeps growing.",
-            "FRENCH": "SII Rh\u00f4ne Alpes: une agence dynamique et en plein d\u00e9veloppement."
+            "ENGLISH": "After 40 years of partnering with corporations for their engineering needs, the SII Group finds itself at the forefront of innovation and digital transformation. It relies on teams of expert engineers and on methods at the cutting-edge of quality standards for its business centered on engineering consulting (information technology, electronics and telecommunications) and digital services (engineering and network information technology).\r\n\r\nWith nine field offices in France, the Group has built close relationships with local firms and offers a wide spectrum of career opportunities. Its presence in 18 countries and four continents also gives SII the ability to provide support for the international operations of major corporations.",
+            "FRENCH": "Partenaire technologique depuis 40 ans, le Groupe SII est au c\u0153ur m\u00eame de l\u2019innovation et de la transformation digitale. S\u2019appuyant sur des \u00e9quipes d\u2019ing\u00e9nieurs experts et des m\u00e9thodes \u00e0 la pointe des normes de qualit\u00e9, l\u2019activit\u00e9 de SII est ax\u00e9e autour du Conseil en Technologies (informatique, \u00e9lectronique et t\u00e9l\u00e9com) et des Services Num\u00e9riques (informatique technique et r\u00e9seaux).\r\nGr\u00e2ce \u00e0 ses 9 agences en France, le Groupe d\u00e9veloppe une relation de proximit\u00e9 avec les acteurs des tissus locaux et propose des opportunit\u00e9s de carri\u00e8res vari\u00e9es. Il a \u00e9galement la capacit\u00e9 d\u2019accompagner les grands donneurs d\u2019ordre \u00e0 l\u2019international dans 18 pays sur quatre continents."
         },
         "email": null,
         "emailHash": null,
@@ -9078,13 +9078,17 @@
             {
                 "name": "Site SII Lyon",
                 "url": "http://lyon.groupe-sii.com/fr/"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://fr.linkedin.com/company/sii"
             }
         ],
         "login": "SII_rhonealpes",
         "photoUrl": "https://mixitconf.org/images/sponsors/logo-sii.svg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:08:13.434"
+        "tokenExpiration": "2019-04-15T17:37:36.138"
     },
     {
         "company": "",
@@ -11983,8 +11987,8 @@
         "login": "anne-laure",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "019de42eafd0",
-        "tokenExpiration": "2019-04-06T10:13:14.856"
+        "token": "7f47ebc84714",
+        "tokenExpiration": "2019-04-19T10:51:26.168"
     },
     {
         "company": "Ippon Technologies",
@@ -13479,8 +13483,8 @@
         "login": "b.dauvissat",
         "photoUrl": null,
         "role": "USER",
-        "token": "1628d19ade0a",
-        "tokenExpiration": "2019-03-15T08:38:52.572"
+        "token": "15bd5e63778f",
+        "tokenExpiration": "2019-04-18T10:10:44.126"
     },
     {
         "company": "",
@@ -16875,8 +16879,8 @@
         "login": "clacote",
         "photoUrl": null,
         "role": "STAFF_IN_PAUSE",
-        "token": "8849ed4fc34a",
-        "tokenExpiration": "2019-04-12T21:28:36.325"
+        "token": "1314afe66d93",
+        "tokenExpiration": "2019-04-12T23:36:24.26"
     },
     {
         "company": "",
@@ -23389,8 +23393,8 @@
         "login": "guillaumeehret",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "c7b7094ca31c",
-        "tokenExpiration": "2019-04-07T06:06:14.685"
+        "token": "58e713960de1",
+        "tokenExpiration": "2019-04-20T09:36:58.048"
     },
     {
         "company": "",
@@ -26375,8 +26379,8 @@
         "login": "jouve.thomas",
         "photoUrl": null,
         "role": "USER",
-        "token": "07bcd5fe6234",
-        "tokenExpiration": "2019-03-15T09:20:50.648"
+        "token": "3d7e32a791b1",
+        "tokenExpiration": "2019-04-20T13:34:38.18"
     },
     {
         "company": "Xebia",
@@ -34216,8 +34220,8 @@
         "login": "olivier.orand",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "ec30cc143146",
-        "tokenExpiration": "2019-03-16T09:32:42.276"
+        "token": "19d9c1e8f83f",
+        "tokenExpiration": "2019-04-13T15:42:28.638"
     },
     {
         "company": "",
@@ -35325,7 +35329,7 @@
     {
         "company": "",
         "description": {},
-        "email": null,
+        "email": "bFN9DzWFjLEa4Mm3jbMWcwXAkGIiFcgOuKUssz6p5CY=",
         "emailHash": "41252e56ea2e19277eabfd24c51f1a06",
         "firstname": "Philippe",
         "lastname": "Laumay",
@@ -35334,8 +35338,8 @@
         "login": "philippe.laumay@gmail.com",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.528"
+        "token": "2e93b0f46a8a",
+        "tokenExpiration": "2019-04-17T15:50:21.157"
     },
     {
         "company": "",
@@ -41794,8 +41798,8 @@
         "login": "thomas.franconville",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "3f8a3505afeb",
-        "tokenExpiration": "2019-03-15T10:09:16.012"
+        "token": "5c867834f398",
+        "tokenExpiration": "2019-04-13T13:08:00.195"
     },
     {
         "company": "",
@@ -47589,8 +47593,8 @@
         "login": "raphael.ruelle",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "982906665f55",
-        "tokenExpiration": "2019-03-16T12:54:51.294"
+        "token": "b38d072e9f2b",
+        "tokenExpiration": "2019-04-20T11:48:06.045"
     },
     {
         "company": null,
@@ -47754,8 +47758,8 @@
         "login": "christophe.michard",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "62bda0748f8f",
-        "tokenExpiration": "2019-03-17T10:26:08.552"
+        "token": "3a6c8101aa5d",
+        "tokenExpiration": "2019-04-19T10:26:02.948"
     },
     {
         "company": null,
@@ -47982,8 +47986,8 @@
         "login": "madeline",
         "photoUrl": null,
         "role": "USER",
-        "token": "09f8f9f08c44",
-        "tokenExpiration": "2019-03-15T09:12:59.743"
+        "token": "1976d0a6d572",
+        "tokenExpiration": "2019-04-13T13:46:48.239"
     },
     {
         "company": null,
@@ -48282,8 +48286,8 @@
         "login": "boualila.mouad",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "30acfa6df96e",
-        "tokenExpiration": "2019-03-15T09:34:40.336"
+        "token": "3da80279f628",
+        "tokenExpiration": "2019-04-18T07:38:55.87"
     },
     {
         "company": null,
@@ -48357,8 +48361,8 @@
         "login": "david.aparicio",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "27325a1b2cb8",
-        "tokenExpiration": "2019-03-15T09:43:06.282"
+        "token": "1a4b560a6ee3",
+        "tokenExpiration": "2019-04-19T12:30:16.226"
     },
     {
         "company": null,
@@ -48387,8 +48391,8 @@
         "login": "dgaussinel",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "999b2e20c875",
-        "tokenExpiration": "2019-04-07T10:54:41.745"
+        "token": "e2fa285d8d44",
+        "tokenExpiration": "2019-04-20T10:49:27.711"
     },
     {
         "company": null,
@@ -49431,8 +49435,8 @@
         "login": "nath.ruppli",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "43549ca5d47b",
-        "tokenExpiration": "2019-03-29T19:45:42.434"
+        "token": "abe2dd4ba525",
+        "tokenExpiration": "2019-04-15T09:22:04.928"
     },
     {
         "company": null,
@@ -49476,8 +49480,8 @@
         "login": "a_defanti",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "d8df257003f5",
-        "tokenExpiration": "2019-03-27T21:02:26.47"
+        "token": "fb68abe85ae7",
+        "tokenExpiration": "2019-04-13T07:01:17.721"
     },
     {
         "company": null,
@@ -50052,8 +50056,8 @@
         "login": "amand.witters",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "c823bed2a626",
-        "tokenExpiration": "2019-04-05T08:01:18.823"
+        "token": "0a1f051af256",
+        "tokenExpiration": "2019-04-20T12:28:04.439"
     },
     {
         "company": null,
@@ -50082,8 +50086,8 @@
         "login": "witters.amand",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "e39d7b1fb567",
-        "tokenExpiration": "2019-04-05T08:04:19.211"
+        "token": "11101a355ae7",
+        "tokenExpiration": "2019-04-20T12:28:33.103"
     },
     {
         "company": null,
@@ -52120,8 +52124,8 @@
         "login": "serres-julien",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "90a17b99acce",
-        "tokenExpiration": "2019-03-31T12:49:00.696"
+        "token": "03bf7402a7c5",
+        "tokenExpiration": "2019-04-19T08:18:11.694"
     },
     {
         "company": null,
@@ -52522,8 +52526,8 @@
         "login": "r-perreol",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "4832ceb03592",
-        "tokenExpiration": "2019-04-04T14:02:10.31"
+        "token": "4db53aabaa0c",
+        "tokenExpiration": "2019-04-18T15:24:49.99"
     },
     {
         "company": null,
@@ -52636,10 +52640,10 @@
             }
         ],
         "login": "keyrus",
-        "photoUrl": "https://mixitconf.org/images/sponsors/logo-keyrus.svg",
+        "photoUrl": "https://mixitconf.org/images/sponsors/logo-keyrus.png",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-04-04T06:10:25.413"
+        "tokenExpiration": "2019-04-10T07:15:25"
     },
     {
         "company": null,
@@ -52698,8 +52702,8 @@
         "login": "loic-gangloff",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "6d25ec057009",
-        "tokenExpiration": "2019-04-06T07:24:33.53"
+        "token": "05796cb7d390",
+        "tokenExpiration": "2019-04-15T18:52:42.358"
     },
     {
         "company": null,
@@ -52713,8 +52717,8 @@
         "login": "guy-champollion",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "f996dec5d23c",
-        "tokenExpiration": "2019-04-06T07:23:14.189"
+        "token": "13791fdd93ad",
+        "tokenExpiration": "2019-04-14T13:42:42.408"
     },
     {
         "company": null,
@@ -53196,8 +53200,8 @@
         "login": "achraf-abdessalem",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "33fb5ae0189a",
-        "tokenExpiration": "2019-04-10T10:09:30.906"
+        "token": "c9d7dbefbac5",
+        "tokenExpiration": "2019-04-17T08:21:12.918"
     },
     {
         "company": null,
@@ -53361,8 +53365,8 @@
         "login": "n-mangue",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "735b886d4f30",
-        "tokenExpiration": "2019-04-12T05:52:37.739"
+        "token": "6adf8db7cd22",
+        "tokenExpiration": "2019-04-20T10:46:57.882"
     },
     {
         "company": null,
@@ -53423,5 +53427,305 @@
         "role": "USER",
         "token": "e7e35dd446b9",
         "tokenExpiration": "2019-04-12T12:23:16.322"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "pGCOu9nKbh8l+1Mn5uKL+WvAFlPxWQGCNV0XNngcaqs=",
+        "emailHash": null,
+        "firstname": "Nombusoh0020",
+        "lastname": "Nombusoh",
+        "legacyId": null,
+        "links": [],
+        "login": "ntombizodw4",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "8627404e882f",
+        "tokenExpiration": "2019-04-13T08:04:52.779"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "UBbt9gx4yFZtzvTHoAf2uVBhPQwp/MPTwJSvZ7GCt3g=",
+        "emailHash": null,
+        "firstname": "Aco",
+        "lastname": "Alhona",
+        "legacyId": null,
+        "links": [],
+        "login": "akho",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "31217a5732ed",
+        "tokenExpiration": "2019-04-13T09:34:07.127"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "9oqaWy6Xf1LIMwIpiQDQ+xoDBTosNK49IvrmEfOEh5I=",
+        "emailHash": null,
+        "firstname": "Fr\u00e9d\u00e9rik",
+        "lastname": "Rouleau",
+        "legacyId": null,
+        "links": [],
+        "login": "frouleau",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "08134b72021c",
+        "tokenExpiration": "2019-04-14T06:20:20.035"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "N/1+Z9BkXsh2fw9gRHuZ7YaJvqSnRnPlj5qbYExjyEQ=",
+        "emailHash": null,
+        "firstname": "Nadhira",
+        "lastname": "Padayachee",
+        "legacyId": null,
+        "links": [],
+        "login": "nadhirapadayachee6",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "8aed995decbf",
+        "tokenExpiration": "2019-04-20T12:35:33.783"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "w2dzX6a4ZHpqXAE/5gxyplld8HDrVxNdIZdLWQJMmgaiLYDHPfUAerkvDcLgU7Wu",
+        "emailHash": null,
+        "firstname": "Jb",
+        "lastname": "Roux",
+        "legacyId": null,
+        "links": [],
+        "login": "jean-baptiste-roux",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "de481e62c34c",
+        "tokenExpiration": "2019-04-14T13:10:05.023"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "8DNlocWH2S0AvmSbjAF1xo83+vopniHMxQb6o/TrYdo=",
+        "emailHash": null,
+        "firstname": "Shane",
+        "lastname": "0843828646",
+        "legacyId": null,
+        "links": [],
+        "login": "shanevanheerden96",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "797c71588757",
+        "tokenExpiration": "2019-04-15T14:59:44.759"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "7G8jI24Me40HVyt+/Qha2t008a2ncHiIfrEaYYXC8jg=",
+        "emailHash": null,
+        "firstname": "Sva",
+        "lastname": "Svarara",
+        "legacyId": null,
+        "links": [],
+        "login": "zenajonga",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "5dd8663bad20",
+        "tokenExpiration": "2019-04-17T03:07:27.281"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "H5pIsOOnt2tD568xqFb6MnvIAZpgdsr1GGMxUqfAGJY=",
+        "emailHash": null,
+        "firstname": "Berenger",
+        "lastname": "Seveyrac",
+        "legacyId": null,
+        "links": [],
+        "login": "b-seveyrac",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "6c4b99376061",
+        "tokenExpiration": "2019-04-17T14:07:59.681"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "aXDLiRN4FDn17rHlkc7tlwv8AIBaKsqIb0rpUHVEoQc=",
+        "emailHash": null,
+        "firstname": "Monde",
+        "lastname": "Monde",
+        "legacyId": null,
+        "links": [],
+        "login": "mondemagoloza",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "8c30477863c8",
+        "tokenExpiration": "2019-04-18T01:12:56.391"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "ukO8+iXTAYQjTMkk2u21kIj3ZgdacDaBBKnErZ1IL1A=",
+        "emailHash": null,
+        "firstname": "Mardene",
+        "lastname": "Badenhorst",
+        "legacyId": null,
+        "links": [],
+        "login": "mardeneb16",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "70670c765f9f",
+        "tokenExpiration": "2019-04-18T09:07:57.523"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "La6B7EiySF5VNvEHwQHwmK0fGFHAaVS+YMC+KC1E2gG6VxpQhVVAg1UuiUCHclWO",
+        "emailHash": null,
+        "firstname": "Samuel",
+        "lastname": "Marques antunes",
+        "legacyId": null,
+        "links": [],
+        "login": "samuel-marques-antunes",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "b1e9a7c7e702",
+        "tokenExpiration": "2019-04-18T09:44:52.704"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "agZI4QYDKse9Y+VQZMeJs7Jg+CxeiZ1SyXqiDqPhm0Y=",
+        "emailHash": null,
+        "firstname": "Marc-olivier",
+        "lastname": "Alfonsi",
+        "legacyId": null,
+        "links": [],
+        "login": "marc-olivier-alfonsi",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "aa6c35215df4",
+        "tokenExpiration": "2019-04-18T14:32:39.674"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "kbLONW29zhGkvAWBeAO8i+hm7uv5npGSFhsIoizdb6Q=",
+        "emailHash": null,
+        "firstname": "Cedric",
+        "lastname": "Cedric",
+        "legacyId": null,
+        "links": [],
+        "login": "lebitsacedric",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "46e9f2b237f3",
+        "tokenExpiration": "2019-04-19T09:32:20.848"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "F1qRyWmsKqGAQkgrohcqP6T8+RdprhkFfGbDXxRYWx0=",
+        "emailHash": null,
+        "firstname": "Joseph",
+        "lastname": "Tabulo",
+        "legacyId": null,
+        "links": [],
+        "login": "0716303675",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "316423bc1d1d",
+        "tokenExpiration": "2019-04-19T10:04:54.229"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "v1VebrGm5Nbvci008Mg1PAfdmXCYFujWnu9Z+jUjmkA=",
+        "emailHash": null,
+        "firstname": "Mandla joel",
+        "lastname": "Mgidi",
+        "legacyId": null,
+        "links": [],
+        "login": "mandlamgidi29",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "422d8deaf83f",
+        "tokenExpiration": "2019-04-19T10:07:30.655"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "5AZ/JYyVV7+vPd0nSSzUaZ5caZzWwFFxQb0su/N9rZ0=",
+        "emailHash": null,
+        "firstname": "Nizar",
+        "lastname": "Aouisaoui",
+        "legacyId": null,
+        "links": [],
+        "login": "nizar-aouissaoui-ext",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "2301f8781b43",
+        "tokenExpiration": "2019-04-20T08:47:47.174"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "mcc9pFbp7kRYU9wHk9u0BD2Nk+D/4L/PA5zu4ZxkKfw=",
+        "emailHash": null,
+        "firstname": "Kevin",
+        "lastname": "Beaucoral",
+        "legacyId": null,
+        "links": [],
+        "login": "beaucoral-kevin",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "da4f96c0bc82",
+        "tokenExpiration": "2019-04-20T08:57:41.087"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "8qLKKfpUgp6qX4vvuGmx8xEyl+j0K6LfmdLMlzGC3Lw=",
+        "emailHash": null,
+        "firstname": "Marie",
+        "lastname": "Carpin",
+        "legacyId": null,
+        "links": [],
+        "login": "mcarpin",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "ba2ae3811288",
+        "tokenExpiration": "2019-04-20T09:31:50.974"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "GlDvxW4R58bYgyrT6toszQsNC4AKyBYqFSgE967zbXI=",
+        "emailHash": null,
+        "firstname": "Olivier",
+        "lastname": "Margerit",
+        "legacyId": null,
+        "links": [],
+        "login": "margerit-olivier",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "c715a12b0795",
+        "tokenExpiration": "2019-04-20T10:53:24.687"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "4UBEVd6TRIE9y0DGNIvoBB0mDYw6F3bQ3CmP1Z0waY1YiXvPlIGbK6rVzWS0UJlo",
+        "emailHash": null,
+        "firstname": "Rapha\u00ebl",
+        "lastname": "Ruelle",
+        "legacyId": null,
+        "links": [],
+        "login": "raphael-externe-ruelle",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "d8027e4c28c8",
+        "tokenExpiration": "2019-04-20T11:47:38.811"
     }
 ]
