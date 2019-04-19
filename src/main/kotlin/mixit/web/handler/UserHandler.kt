@@ -266,6 +266,12 @@ class UserHandler(private val repository: UserRepository,
         created(create("/api/user/${it.login}")).json().body(it.toMono())
     }
 
+    fun check(req: ServerRequest) = ok().json().body(repository.findByEmail(req.pathVariable("email"))
+            .filter { it.token == req.headers().header("token").get(0) }
+            .map { it.toDto(req.language(), markdownConverter) }
+    )
+
+
 }
 
 class LinkDto(

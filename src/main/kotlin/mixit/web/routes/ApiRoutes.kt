@@ -48,6 +48,7 @@ class ApiRoutes(private val blogHandler: BlogHandler,
 
             "/user".nest {
                 GET("/", userHandler::findAll)
+                GET("/check/{email}", userHandler::check)
                 POST("/", userHandler::create)
                 GET("/{login}", userHandler::findOne)
             }

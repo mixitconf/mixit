@@ -34,6 +34,8 @@ class FavoriteHandler(private val favoriteRepository: FavoriteRepository, privat
     )
 
     fun getFavorites(req: ServerRequest) = ok().json().body(favoriteRepository.findByEmail(req.pathVariable("email")))
+
+
 }
 
 class FavoriteDto(
