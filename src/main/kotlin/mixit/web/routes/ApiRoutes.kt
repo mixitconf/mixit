@@ -35,16 +35,16 @@ class ApiRoutes(private val blogHandler: BlogHandler,
                 GET("/{year}/talk", talkHandler::findAdminByEventId)
             }
 
-            // Talks
-            GET("/talk/{login}", talkHandler::findOne)
+            // Edition data
             GET("/{year}/talk", talkHandler::findByEventId)
+            GET("/{year}/speaker", userHandler::findSpeakerByEventId)
+            GET("/{year}/event", eventHandler::findByEventID)
 
+
+            GET("/talk/{login}", talkHandler::findOne)
             GET("/favorites/{email}/talks/{id}", favoriteHandler::getFavorite)
             GET("/favorites/{email}", favoriteHandler::getFavorites)
             POST("/favorites/{email}/talks/{id}/toggle", favoriteHandler::toggleFavorite)
-
-            // users
-            GET("/{year}/speaker", userHandler::findSpeakerByEventId)
 
             "/user".nest {
                 GET("/", userHandler::findAll)
