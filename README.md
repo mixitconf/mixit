@@ -63,11 +63,14 @@ Sass, TypeScript, `messages*.properties` and templates should be live reloaded.
 java -jar build/libs/mixit-1.0.0-SNAPSHOT.jar
 ```
 
-### Deploy the app on Cloud Foundry
+### Deploy the app on ~Cloud Foundry~ Clever Cloud
+```diff
+- ./gradlew clean build
+- cf push
 ```
-./gradlew clean build
-cf push
-```
+
+Quoting @javamind:
+> Pour que ça déploie tu dois merger `master` sur la branche `prod`
 
 ### Copy PROD data to src/main/resources/data
  
