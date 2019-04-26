@@ -5,25 +5,8 @@
         <div class="columns large-12">
             <h1 class="text-center">{{#i18n}}come.title{{/i18n}}</h1>
             <p class="text-center">
-                CPE Lyon - Domaine Scientifique de la Doua - 69100 Villeurbanne
+                Manufacture des tabacs - 6 rue Professeur Rollet - 69008 Lyon
             </p>
-            <ul class="menu simple mxt-menu--nav text-center">
-                <li><a href="#bike" class="mxt-menu__item--nav">
-                    <img src="/images/svg/transport/transport_bike.svg" class="mxt-icon--social" alt="Come by bike"></a>
-                </li>
-                <li><a href="#public" class="mxt-menu__item--nav">
-                    <img src="/images/svg/transport/transport_bus.svg" class="mxt-icon--social"
-                         alt="Come by public transportation"></a></li>
-                <li><a href="#train" class="mxt-menu__item--nav">
-                    <img src="/images/svg/transport/transport_railway.svg" class="mxt-icon--social"
-                         alt="Come by car"></a></li>
-                <li><a href="#car" class="mxt-menu__item--nav">
-                    <img src="/images/svg/transport/transport_flight.svg" class="mxt-icon--social" alt="Come by flight"></a>
-                </li>
-                <li><a href="#flight" class="mxt-menu__item--nav">
-                    <img src="/images/svg/transport/transport_car.svg" class="mxt-icon--social"
-                         alt="Come by flight"></a></li>
-            </ul>
         </div>
     </div>
 </div>
@@ -33,97 +16,128 @@
         <div class="column large-12">
 
             <div class="callout">
-                <p class="text-center lead">{{#i18n}}come.map.label{{/i18n}}</p>
+                <p class="text-center lead">{{#i18n}}come.ticket{{/i18n}}</p>
 
                 <h2 class="text-center mxt-subheader--space">{{#i18n}}come.orientation.tocome.title{{/i18n}}</h2>
 
                 <div>
-                    <a target="_blank" href="http://www.cpe.fr/">CPE Lyon</a> : Rue Victor Grignard 69100 Villeurbanne
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2782.373042200367!2d4.8690248!3d45.7837537!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea977b847259%3A0x9efbb71d73134a76!2sCPE+Lyon!5e0!3m2!1sen!2sfr!4v1395092643710"
-                            width="100%" height="300" frameborder="0" style="border:0;width:100%"></iframe>
-                    <a href="https://www.google.fr/maps/place/CPE+Lyon/@45.7837537,4.8690248,17z/data=!3m1!4b1!4m2!3m1!1s0x47f4ea977b847259:0x9efbb71d73134a76"
+                    Conference take place at <a target="_blank" href="http://www.cpe.fr/">Manufacture des tabacsn</a> : 6 rue Professeur Rollet
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1222.4017769127167!2d4.861762700872849!3d45.74885156583528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea7236bdf0d9%3A0xe6b51aaf8ec933da!2s6+Rue+Professeur+Rollet!5e0!3m2!1sen!2sfr!4v1556227083061!5m2!1sen!2sfr"
+                            width="100%" height="300" frameborder="0" style="border:0;width:100%" allowfullscreen></iframe>
+                    <a href="https://www.google.com/maps/place/6+Rue+Professeur+Rollet/@45.7488516,4.8617627,18.19z"
                        target="_blank">{{#i18n}}come.map.link{{/i18n}}</a><br/>
                 </div>
 
-                <h3 class="text-center subheader">
-                    <a name="bike"><img src="/images/svg/transport/primary/transport_bike.svg" class="mxt-icon--transport" alt="Come by bike"></a>
-                    {{#i18n}}come.bike.title{{/i18n}}
-                </h3>
-                <p>{{#i18n}}come.bike.detail{{/i18n}}</p>
+                <p class="text-center lead">{{#i18n}}come.map.label{{/i18n}}</p>
 
-                <h3 class="text-center subheader">
-                    <a name="public"><img src="/images/svg/transport/primary/transport_bus.svg" class="mxt-icon--transport" alt="Come by public transportation"></a>
-                    {{#i18n}}come.public.title{{/i18n}}
-                </h3>
-                <p>{{#i18n}}come.public.detail{{/i18n}}</p>
-
-                    <h3 class="text-center subheader">
-                    <a name="train"><img src="/images/svg/transport/primary/transport_railway.svg" class="mxt-icon--transport" alt="Come by train"></a>
-                    {{#i18n}}come.train.title{{/i18n}}
-                </h3>
-                <p>{{#i18n}}come.train.detail{{/i18n}}</p>
-
-                <h3 class="text-center subheader">
-                    <a name="plane"><img src="/images/svg/transport/primary/transport_flight.svg" class="mxt-icon--transport" alt="Come by flight"></a>
-                    {{#i18n}}come.plane.title{{/i18n}}
-                </h3>
-                <p>{{#i18n}}come.plane.detail{{/i18n}}</p>
-
-                <h3 class="text-center subheader">
-                    <a name="car"><img src="/images/svg/transport/primary/transport_car.svg" class="mxt-icon--transport" alt="Come by car"></a>
-                    {{#i18n}}come.car.title{{/i18n}}
-                </h3>
-                <p>{{#i18n}}come.car.detail{{/i18n}}</p>
+                <div class="row align-middle">
+                    <div class="column small-1">
+                        <img src="/images/svg/transport/primary/transport_flight.svg" class="mxt-icon--social" alt="Come by flight">
+                    </div>
+                    <div class="column small-11">
+                        <p>{{#i18n}}come.plane.detail{{/i18n}}</p>
+                    </div>
+                </div>
+                <div class="row align-middle">
+                    <div class="column small-1">
+                        <img src="/images/svg/transport/primary/transport_railway.svg" class="mxt-icon--social" alt="Come by train">
+                    </div>
+                    <div class="column small-11">
+                        <p>{{#i18n}}come.train.detail{{/i18n}}</p>
+                    </div>
+                </div>
+                <div class="row align-middle">
+                    <div class="column small-1">
+                        <img src="/images/svg/transport/primary/transport_bus.svg" class="mxt-icon--social" alt="Come by public transportation">
+                    </div>
+                    <div class="column small-11">
+                        <p>{{#i18n}}come.public.detail{{/i18n}}</p>
+                    </div>
+                </div>
+                <div class="row align-middle">
+                    <div class="column small-1">
+                        <img src="/images/svg/transport/primary/transport_bike.svg" class="mxt-icon--social" alt="Come by bike">
+                    </div>
+                    <div class="column small-11">
+                        <p>{{#i18n}}come.bike.detail{{/i18n}}</p>
+                    </div>
+                </div>
+                <div class="row align-middle">
+                    <div class="column small-1">
+                        <img src="/images/svg/transport/primary/transport_car.svg" class="mxt-icon--social" alt="Come by car">
+                    </div>
+                    <div class="column small-11">
+                        <p>{{#i18n}}come.car.detail{{/i18n}}</p>
+                    </div>
+                </div>
             </div>
 
+
             <div class="callout">
-                <h2 class="text-center mxt-subheader--space">{{#i18n}}come.orientation.cpe.title{{/i18n}}</h2>
-                
-                <p>{{#i18n}}come.facilities.summary{{/i18n}}</p>
+                <h2 class="text-center mxt-subheader--space">{{#i18n}}come.orientation.manuf.title{{/i18n}}</h2>
 
-                <h3 class="text-center subheader">{{#i18n}}come.floor-1.title{{/i18n}}</h3>
-                <p>{{#i18n}}come.floor-1.summary{{/i18n}}</p>
+                <p class="text-center lead">{{#i18n}}come.orientation.manuf.lead{{/i18n}}</p>
 
-                <picture>
-                    <source srcset="images/facilities/cpe-map-floor0-640.webp 640w,images/facilities/cpe-map-floor0-1200.webp"
-                            type="image/webp"/>
-                    <source srcset="images/facilities/cpe-map-floor0_640.png 640w, images/facilities/cpe-map-floor0-1200.png"/>
-                    <img src="images/facilities/cpe-map-floor0-640.png" alt="CPE floor 0">
-                </picture>
-                <p>{{#i18n}}come.floor-1.sponsor{{/i18n}}</p>
+
+                <p>{{#i18n}}come.orientation.manuf.desc{{/i18n}}</p>
 
                 <h3 class="text-center subheader">{{#i18n}}come.floor0.title{{/i18n}}</h3>
                 <p>{{#i18n}}come.floor0.summary{{/i18n}}</p>
+                <picture>
+                    <source srcset="images/facilities/manu-map-floor0-640.webp 640w,images/facilities/manu-map-floor0-1200.webp"
+                            type="image/webp"/>
+                    <source srcset="images/facilities/manu-map-floor0_640.png 640w, images/facilities/manu-map-floor0-1200.png"/>
+                    <img src="images/facilities/manu-map-floor0-640.png" alt="Manufacture des tabacs floor 0">
+                </picture>
+
 
                 <h3 class="text-center subheader">{{#i18n}}come.floor1.title{{/i18n}}</h3>
                 <p>{{#i18n}}come.floor1.summary{{/i18n}}</p>
-
                 <picture>
-                    <source srcset="images/facilities/cpe-map-floor1-640.webp 640w,images/facilities/cpe-map-floor1-1200.webp"
+                    <source srcset="images/facilities/manu-map-floor1-640.webp 640w,images/facilities/manu-map-floor1-1200.webp"
                             type="image/webp"/>
-                    <source srcset="images/facilities/cpe-map-floor1_640.png 640w, images/facilities/cpe-map-floor1-1200.png"/>
-                    <img src="images/facilities/cpe-map-floor1-640.png" alt="CPE floor 1">
+                    <source srcset="images/facilities/manu-map-floor1_640.png 640w, images/facilities/manu-map-floor1-1200.png"/>
+                    <img src="images/facilities/manu-map-floor1-640.png" alt="Manufacture des tabacs floor 1">
                 </picture>
 
-                <h3 class="text-center subheader">{{#i18n}}come.floor2.title{{/i18n}}</h3>
-                <p>{{#i18n}}come.floor2.summary{{/i18n}}</p>
+                <p>{{#i18n}}come.floor1.sponsor{{/i18n}}</p>
 
                 <picture>
-                    <source srcset="images/facilities/cpe-map-floor2-640.webp 640w,images/facilities/cpe-map-floor2-1200.webp"
+                    <source srcset="images/facilities/manu-map-sponsor-640.webp 640w,images/facilities/manu-map-sponsor-1200.webp"
                             type="image/webp"/>
-                    <source srcset="images/facilities/cpe-map-floor2_640.png 640w, images/facilities/cpe-map-floor2-1200.png"/>
-                    <img src="images/facilities/cpe-map-floor2-640.png" alt="CPE floor 0">
+                    <source srcset="images/facilities/manu-map-sponsor.png 640w, images/facilities/manu-map-sponsor-1200.png"/>
+                    <img src="images/facilities/manu-map-sponsor-640.png" alt="Manufacture des tabacs floor 0">
                 </picture>
 
-                <h3 class="text-center subheader">{{#i18n}}come.floor3.title{{/i18n}}</h3>
-                <p>{{#i18n}}come.floor3.summary{{/i18n}}</p>
-
-                <picture>
-                    <source srcset="images/facilities/cpe-map-floor3-640.webp 640w,images/facilities/cpe-map-floor3-1200.webp"
-                            type="image/webp"/>
-                    <source srcset="images/facilities/cpe-map-floor3_640.png 640w, images/facilities/cpe-map-floor3-1200.png"/>
-                    <img src="images/facilities/cpe-map-floor3-640.png" alt="CPE floor 0">
-                </picture>
+                <div class="row align-middle">
+                    <div class="column small-4">
+                        <ul>
+                            <li>A : SOCIETE GENERALE</li>
+                            <li>B : BONITASOFT</li>
+                            <li>C : SOPRA STERIA</li>
+                            <li>D : MALT</li>
+                            <li>E : MICROSOFT</li>
+                        </ul>
+                    </div>
+                    <div class="column small-4">
+                        <ul>
+                            <li>F : CREDIT AGRICOLE</li>
+                            <li>G : LINK VALUE</li>
+                            <li>H : COSSILYS21</li>
+                            <li>I : ZENIKA</li>
+                            <li>J : </li>
+                        </ul>
+                    </div>
+                    <div class="column small-4">
+                        <ul>
+                            <li>K : WORLINE</li>
+                            <li>L : VISEO</li>
+                            <li>M : TALAN</li>
+                            <li>N : THALES</li>
+                            <li>O : CLEVER CLOUD</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
     </div>
 </div>
