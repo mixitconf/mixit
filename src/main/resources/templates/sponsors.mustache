@@ -49,6 +49,13 @@
             </div>
 
             <div class="mxt-wrapper--callout callout">
+                <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.ecology{{/i18n}}</h2>
+                {{#sponsors-ecology}}
+                    {{> sponsor }}
+                {{/sponsors-ecology}}
+            </div>
+
+            <div class="mxt-wrapper--callout callout">
                 <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.mixteen{{/i18n}}</h2>
                 {{#sponsors-mixteen}}
                     {{> sponsor }}
