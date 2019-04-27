@@ -914,6 +914,16 @@
                 "level": "MIXTEEN",
                 "sponsorId": "keyrus",
                 "subscriptionDate": "2019-04-05"
+            },
+            {
+                "level": "ACCESSIBILITY",
+                "sponsorId": "redfroggy",
+                "subscriptionDate": "2019-03-15"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "cabinet-asi",
+                "subscriptionDate": "2019-04-23"
             }
         ],
         "start": "2019-05-23",

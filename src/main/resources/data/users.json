@@ -4660,8 +4660,8 @@
         "login": "@tomnwk",
         "photoUrl": null,
         "role": "USER",
-        "token": "e08c566351de",
-        "tokenExpiration": "2019-03-17T10:39:05.744"
+        "token": "c3efe8da7ee7",
+        "tokenExpiration": "2019-04-25T09:01:24.189"
     },
     {
         "company": "",
@@ -5255,8 +5255,8 @@
         "login": "Bilgetz",
         "photoUrl": null,
         "role": "USER",
-        "token": "e4106827728c",
-        "tokenExpiration": "2019-04-21T19:35:37.17"
+        "token": "80140565001d",
+        "tokenExpiration": "2019-04-25T09:44:29.533"
     },
     {
         "company": "",
@@ -5480,8 +5480,8 @@
         "login": "Charles Bouttaz",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "a3ddc7b0f3c8",
-        "tokenExpiration": "2019-04-18T17:33:55.787"
+        "token": "60aa00c1e81d",
+        "tokenExpiration": "2019-04-28T09:31:45.318"
     },
     {
         "company": "",
@@ -11987,8 +11987,8 @@
         "login": "anne-laure",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "21168b9432b8",
-        "tokenExpiration": "2019-04-21T11:19:59.097"
+        "token": "5b0fca1bda52",
+        "tokenExpiration": "2019-04-28T07:19:17.563"
     },
     {
         "company": "Ippon Technologies",
@@ -14679,8 +14679,8 @@
         "login": "bmarron",
         "photoUrl": null,
         "role": "USER",
-        "token": "359b6cd7c1de",
-        "tokenExpiration": "2019-03-15T08:43:22.374"
+        "token": "51b2dd6dc06e",
+        "tokenExpiration": "2019-04-26T15:24:08.938"
     },
     {
         "company": "",
@@ -17427,13 +17427,13 @@
         "tokenExpiration": "2018-12-18T11:23:45.353"
     },
     {
-        "company": "",
+        "company": "Worteks",
         "description": {
-            "ENGLISH": "Vagabonde dans le milieu de la gestion des identit\u00e9s Open Source, leader des projets LemonLDAP::NG et LDAP Tool Box",
-            "FRENCH": "Vagabonde dans le milieu de la gestion des identit\u00e9s Open Source, leader des projets LemonLDAP::NG et LDAP Tool Box"
+            "ENGLISH": "### Pro\r\nIdentity Solutions Manager by [Worteks](https://www.worteks.com), expert in Open Source identity and access management, leader of projects [LemonLDAP::NG](https://lemonldap-ng.org) and [LDAP Tool Box](https://ltb-project.org/)\r\n\r\n### Perso\r\nMember of [Improcit\u00e9](https://improcite.com/), actor in WebSerie [DonJon Legacy](http://donjonlegacy.com), free music creator [KPTN](https://kptn.oodo.net/)",
+            "FRENCH": "### Pro\r\nResponsable des solutions d&#39;identit\u00e9s chez [Worteks](https://www.worteks.com), expert dans la gestion des identit\u00e9s Open Source, leader des projets [LemonLDAP::NG](https://lemonldap-ng.org) et [LDAP Tool Box](https://ltb-project.org/).\r\n\r\n### Perso\r\nMembre de la troupe d&#39;improvisation th\u00e9\u00e2trale [Improcit\u00e9](https://improcite.com/), acteur dans la WebS\u00e9rie [DonJon Legacy](http://donjonlegacy.com), cr\u00e9ateur de musique libre [KPTN](https://kptn.oodo.net/)"
         },
-        "email": null,
-        "emailHash": "6a1752bce22dc351458277dac0c636a7",
+        "email": "gXhk9kaswVHoOih4IBPNbUI1qciXjAzvfT2V0yyvFKs=",
+        "emailHash": null,
         "firstname": "Cl\u00e9ment",
         "lastname": "OUDOT",
         "legacyId": null,
@@ -17449,13 +17449,17 @@
             {
                 "name": "Company Website",
                 "url": "https://www.worteks.com"
+            },
+            {
+                "name": "Personal Website",
+                "url": "https://kptn.oodo.net/"
             }
         ],
         "login": "coudot",
         "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/oudot.jpg",
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.274"
+        "token": "6e6a8aa20086",
+        "tokenExpiration": "2019-04-28T08:30:05.405"
     },
     {
         "company": "",
@@ -21520,8 +21524,8 @@
         "login": "franck",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "bdd3197311f3",
-        "tokenExpiration": "2019-04-12T20:55:56.992"
+        "token": "88d0a4e5ab87",
+        "tokenExpiration": "2019-04-27T19:24:11.631"
     },
     {
         "company": "",
@@ -23002,8 +23006,8 @@
         "login": "greg",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "4247004ce8e7",
-        "tokenExpiration": "2019-04-06T08:16:03.872"
+        "token": "3b9f8f175eeb",
+        "tokenExpiration": "2019-04-26T06:59:31.649"
     },
     {
         "company": "",
@@ -23393,8 +23397,8 @@
         "login": "guillaumeehret",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "58e713960de1",
-        "tokenExpiration": "2019-04-20T09:36:58.048"
+        "token": "c0d4484d6148",
+        "tokenExpiration": "2019-04-29T05:52:15.919"
     },
     {
         "company": "",
@@ -32066,8 +32070,8 @@
         "login": "mpetitdant",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "1e657f54874a",
-        "tokenExpiration": "2019-04-10T11:53:34.718"
+        "token": "4153e8cdd728",
+        "tokenExpiration": "2019-04-25T20:14:12.275"
     },
     {
         "company": null,
@@ -35422,8 +35426,8 @@
         "login": "picaut.marine",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "d2d5a7018d3e",
-        "tokenExpiration": "2018-04-18T10:39:35.842"
+        "token": "856462a9cc3a",
+        "tokenExpiration": "2019-04-26T10:52:09.333"
     },
     {
         "company": "",
@@ -47638,8 +47642,8 @@
         "login": "fleurine.a",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "7c82ce58c5c0",
-        "tokenExpiration": "2019-04-05T13:44:03.367"
+        "token": "702cc6f1da2b",
+        "tokenExpiration": "2019-04-26T08:01:19.903"
     },
     {
         "company": null,
@@ -47923,8 +47927,8 @@
         "login": "jeremy.styczen",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "cafc2fe46478",
-        "tokenExpiration": "2019-03-15T09:03:26.083"
+        "token": "fb0cfc58b721",
+        "tokenExpiration": "2019-04-25T09:09:17.328"
     },
     {
         "company": null,
@@ -48619,8 +48623,8 @@
         "login": "donolwenn",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "2fc6213243f8",
-        "tokenExpiration": "2019-04-04T21:40:37.313"
+        "token": "c7dec8c75f31",
+        "tokenExpiration": "2019-04-27T16:25:34.733"
     },
     {
         "company": null,
@@ -49708,8 +49712,8 @@
         "login": "jerome.spanogeorges",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "e7e30f2661f7",
-        "tokenExpiration": "2019-04-03T12:01:24.57"
+        "token": "77a9c05772c7",
+        "tokenExpiration": "2019-04-25T12:05:51.679"
     },
     {
         "company": null,
@@ -50116,8 +50120,8 @@
         "login": "samuel.abiassi",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "5404cf8a3bf4",
-        "tokenExpiration": "2019-03-28T20:09:27.972"
+        "token": "2444b81bc913",
+        "tokenExpiration": "2019-04-26T07:54:32.518"
     },
     {
         "company": null,
@@ -50629,8 +50633,8 @@
         "login": "rea",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "6989be3e340a",
-        "tokenExpiration": "2019-03-17T09:07:12.816"
+        "token": "eda0814c38af",
+        "tokenExpiration": "2019-04-27T07:42:10.505"
     },
     {
         "company": null,
@@ -50644,8 +50648,8 @@
         "login": "mazouzi",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "ceb8ef9d72b7",
-        "tokenExpiration": "2019-03-22T14:15:14.086"
+        "token": "6fae0aacab8b",
+        "tokenExpiration": "2019-04-27T07:42:22.314"
     },
     {
         "company": null,
@@ -51781,8 +51785,8 @@
         "login": "mcp",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "170733c49440",
-        "tokenExpiration": "2019-04-21T12:24:02.504"
+        "token": "796018a909d8",
+        "tokenExpiration": "2019-04-25T08:41:10.664"
     },
     {
         "company": null,
@@ -53854,5 +53858,162 @@
         "role": "USER",
         "token": "f9c7ba88457d",
         "tokenExpiration": "2019-04-24T21:39:38.063"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "anLiiUwhAo3TZfL6qhsSZHn2sN8zMyBcnXy4Vq8okVo=",
+        "emailHash": null,
+        "firstname": "Cyril",
+        "lastname": "Dupraz",
+        "legacyId": null,
+        "links": [],
+        "login": "cyril-dupraz",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "ed57b9d49820",
+        "tokenExpiration": "2019-04-25T08:57:09.737"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "N2CFd7VGAYAh5zSVXagX1ViztreiJpErq98MLqb3AZc=",
+        "emailHash": null,
+        "firstname": "Elodie",
+        "lastname": "Talbot",
+        "legacyId": null,
+        "links": [],
+        "login": "elodie-talbot",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "a45d15a1bbaa",
+        "tokenExpiration": "2019-04-25T15:56:17.741"
+    },
+    {
+        "company": "ASI",
+        "description": {
+            "ENGLISH": "",
+            "FRENCH": "Cabinet d\u2019expertises num\u00e9riques, ASI accompagne dans leur transformation digitale les organisations publiques et priv\u00e9es, ETI et grandes entreprises. Notre m\u00e9tier est de comprendre les besoins et d\u2019identifier les usages \u00e0 valeur ajout\u00e9e afin de concevoir, r\u00e9aliser et d\u00e9ployer des solutions digitales qui am\u00e9liorent l\u2019Exp\u00e9rience des collaborateurs et des clients dans 3 grands domaines :\r\n\r\n- La Digitalisation des Processus et Services : conception et d\u00e9veloppement d\u2019applications web et mobiles\u2026\r\n- La Data Intelligence : analyse, gouvernance des donn\u00e9es, Big Data\u2026\r\n- La Connaissance et la Collaboration : intranet/portail collaboratif, r\u00e9seau social d'entreprise, base de connaissances, CRM\u2026\r\n\r\nCr\u00e9\u00e9e il y a 25 ans et implant\u00e9e dans 7 villes en France (Lyon, Paris, Bordeaux, Niort, Rennes, Brest et Nantes), ASI compte 440 collaborateurs et a r\u00e9alis\u00e9 en 2018 un chiffre d\u2019affaires de 35.2 millions d\u2019euros.\r\n\r\nLabellis\u00e9e \u00ab HappyAtWork \u00bb depuis 2016, ASI figure dans le top des ETI o\u00f9 l\u2019on se sent le mieux et dans laquelle il fait bon travailler gr\u00e2ce \u00e0 l\u2019ambiance, la convivialit\u00e9, l\u2019entraide entre les \u00e9quipes, la proximit\u00e9 des managers, la reconnaissance du travail accompli et la promotion interne."
+        },
+        "email": "GfMj/xHErkZHUUsYvnLt9g==",
+        "emailHash": null,
+        "firstname": "ASI",
+        "lastname": "ASI",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Website",
+                "url": "http://www.asi.fr/"
+            },
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/asi_informatic"
+            },
+            {
+                "name": "Linkedin",
+                "url": "https://www.linkedin.com/company/asi-informatique"
+            },
+            {
+                "name": "Facebook",
+                "url": "https://www.facebook.com/asi.informatique"
+            },
+            {
+                "name": "Youtube",
+                "url": "https://www.youtube.com/user/Asicommunication/"
+            },
+            {
+                "name": "Instagram",
+                "url": "https://www.instagram.com/la_team_asi/"
+            }
+        ],
+        "login": "cabinet-asi",
+        "photoUrl": "https://mixitconf.org/images/sponsors/logo-asi.svg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-04-25T13:19:14.726"
+    },
+    {
+        "company": "RedFroggy",
+        "description": {
+            "ENGLISH": "At Red Froggy, we bring all our expertise to offer technical support for the realization of new projects of our customers.\r\nWe work mainly with startups, and since a startup is all about people, we are happy to work with them and to help these entrepreneurs to achieve their ambitions.\r\nArchitecture, design, realization, project management, expertise, training, our mission is to support our customers from the early stages of their project and until they are autonomous.\r\nOur strengths: responsiveness, innovation in the proposed solutions and pragmatism.",
+            "FRENCH": "Chez Red Froggy, nous apportons toute notre expertise pour proposer un support technique de pointe \u00e0 la r\u00e9alisation des nouveaux projets de nos clients.\r\nNous travaillons principalement avec des Startups, et vu qu'une startup c'est avant tout des personnes, nous sommes heureux de pouvoir travailler en confiance avec eux et d'aider ces entrepreneurs \u00e0 r\u00e9aliser leurs ambitions.\r\nArchitecture, conception, r\u00e9alisation, pilotage, expertise, formation, notre mission est d'accompagner nos clients d\u00e8s les premi\u00e8res phases de leur projet et jusqu'\u00e0 ce qu'ils soient autonome.\r\nNos points forts, la r\u00e9activit\u00e9, l'innovation dans les solutions propos\u00e9es et le pragmatisme."
+        },
+        "email": "vkvp3+OiMopw413mW7NcmNBJN7oMcwu9hHecizX5CqY=",
+        "emailHash": null,
+        "firstname": "RedFroggy",
+        "lastname": "RedFroggy",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Website",
+                "url": "https://www.redfroggy.fr"
+            },
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/RedFroggySAS"
+            },
+            {
+                "name": "Linkedin",
+                "url": "https://www.linkedin.com/company/red-froggy"
+            },
+            {
+                "name": "Github",
+                "url": "https://github.com/RedFroggy"
+            },
+            {
+                "name": "Facebook",
+                "url": "https://www.facebook.com/Red-Froggy-697550470336210"
+            }
+        ],
+        "login": "redfroggy",
+        "photoUrl": "https://mixitconf.org/images/sponsors/logo-redfroggy.svg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-04-25T13:11:21.449"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "gfvKRowtJdcTMmkuUgHvSn0aq2TvP7i1XTQkxj8YSiA=",
+        "emailHash": null,
+        "firstname": "Cedrick",
+        "lastname": "Titus",
+        "legacyId": null,
+        "links": [],
+        "login": "ysterperd",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "41321f5d93e4",
+        "tokenExpiration": "2019-04-25T19:11:12.423"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "RmAil8uzG2OnedMYjFO7sbzmYI7Wkj9kWLcxuipoVvU=",
+        "emailHash": null,
+        "firstname": "Christophe",
+        "lastname": "Gomes",
+        "legacyId": null,
+        "links": [],
+        "login": "christophe-gomes",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "dcf2773db359",
+        "tokenExpiration": "2019-04-28T15:01:12.983"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "VYqQHxRWiSRT9FzqzpE/I54Ka62vOy1vewKoDoEw0zg=",
+        "emailHash": null,
+        "firstname": "Nell",
+        "lastname": "Naidoo",
+        "legacyId": null,
+        "links": [],
+        "login": "nellistranaidoo44",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "c39178d7a917",
+        "tokenExpiration": "2019-04-28T15:47:44.362"
     }
 ]

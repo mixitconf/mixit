@@ -31,8 +31,8 @@
 <div class="mxt-wrapper--page-content">
     <div class="row mxt-wrapper--row">
         {{#talks.entrySet}}
-            <div class="columns small-12 medium-12 {{#has2Columns}}large-6{{/has2Columns}}{{^has2Columns}}large-12{{/has2Columns}} callout">
-                <!--{{#key}}<h2>{{key}}</h2><br/>{{/key}}-->
+            <div class="columns small-12 medium-12 large-12 callout">
+                {{#key}}<h2>{{key}}</h2><br/>{{/key}}
                 <ul class="accordion" data-accordion>
                     {{#value}}
                         <li class="accordion-item" data-accordion-item>
@@ -44,6 +44,7 @@
                                              alt="{{#i18n}}home.topics.{{topic}}.title{{/i18n}}"/>
                                         <span>{{#i18n}}home.topics.{{topic}}.title{{/i18n}}</span>
                                     </div>{{/topic}}
+                                <small>{{#date}}{{date}}{{/date}}</small> <strong>{{#start}}{{start}} - {{end}}{{/start}}</strong>
                                 <h3 class="mxt-text--talktitle">
                                     {{#connected}}
                                         <button class="mxt-img--favorite" id="favorite-{{id}}">
@@ -65,33 +66,36 @@
 
                                         <li class="mxt-text--cat-format">#{{format}}</li>
                                 </ul>
+                                <ul class="menu">
+                                    {{#speakers}}
+                                        <li>
+                                            <span class="mxt-text--cat-speaker mxt-text--cat">{{firstname}}&nbsp;{{lastname}}</span>
+                                        </li>
+                                    {{/speakers}}
+                                </ul>
                             </a>
-                            <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
-                            <div class="accordion-content" data-tab-content>
+                            <div class="accordion-content active" data-tab-content>
                                 <div class="row mxt-wrapper--row">
                                     <div class="small-7 medium-9 large-8 columns">
-                                        <p class="mxt-text--cat-room">{{#i18n}}{{room}}{{/i18n}}</p>
-                                        <p>
-                                            {{#date}}{{date}}{{/date}}<br>
-                                            {{#start}}{{start}} - {{end}}{{/start}}
-                                        </p>
-                                        <div>{{#markdown}}{{summary}}{{/markdown}}</div>
+                                <p class="mxt-text--cat-room">{{#i18n}}{{room}}{{/i18n}}</p>
                                     </div>
                                     <div class="small-5 medium-3 large-4 columns text-center">
-                                        <ul class="menu vertical">
-                                            {{#speakers}}
-                                                <li class="menu-text">
-                                                    <div class="mxt-img-avatar__wrapper"><a href="/user/{{login}}"><img
-                                                            data-src="{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{^photoUrl}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/photoUrl}}"
-                                                            class="mxt-img-avatar__speaker mxt-img--lazyload"></a></div>
-                                                    <span><a href="/user/{{login}}">{{firstname}}&nbsp;{{lastname}}</a></span>
-                                                </li>
-                                            {{/speakers}}
-                                        </ul>
-                                        <hr/>
                                         <a href="{{localePrefix}}/{{event}}/{{slug}}" class="button hollow">{{#i18n}}talks.readmore{{/i18n}}</a>
                                     </div>
                                 </div>
+                                <div>{{#markdown}}{{summary}}{{/markdown}}</div>
+
+
+                                <ul class="menu">
+                                    {{#speakers}}
+                                        <li class="menu-text">
+                                            <div class="mxt-img-avatar__wrapper"><a href="/user/{{login}}"><img
+                                                    data-src="{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{^photoUrl}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/photoUrl}}"
+                                                class="mxt-img-avatar__speaker mxt-img--lazyload"></a></div>
+                                            <span><a href="/user/{{login}}">{{firstname}}&nbsp;{{lastname}}</a></span>
+                                        </li>
+                                    {{/speakers}}
+                                </ul>
                             </div>
                         </li>
                     {{/value}}
