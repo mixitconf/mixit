@@ -71,7 +71,7 @@
                                                                                   alt="{{#i18n}}home.topics.{{talk.topic}}.title{{/i18n}}"></a>
                     <p class="mxt-text--cat mxt-text--cat5">{{#i18n}}home.topics.{{talk.topic}}.title{{/i18n}}</p>
                     <p>—</p>{{/talk.topic}}
-                <div><strong>#{{talk.format}}</strong> {{#i18n}}talk.in{{/i18n}} {{#i18n}}talk.language.{{talk.language}}{{/i18n}}</div>
+                <div><strong>#{{#i18n}}talk.format.{{talk.format}}{{/i18n}}</strong> {{#i18n}}talk.in{{/i18n}} {{#i18n}}talk.language.{{talk.language}}{{/i18n}}</div>
                 <ul class="menu vertical">
                     <li>{{#talk.date}}{{talk.date}}{{/talk.date}}</li>
                     <li>{{#talk.start}}{{talk.start}} - {{talk.end}}{{/talk.start}}</li>
@@ -97,8 +97,8 @@
         </div>
         <hr/>
         {{#hasOthertalks}}
-            {{#talk.speakersFirstNames}}<h2>{{#i18n}}talk.others| {{talk.speakersFirstNames}}{{/i18n}}</h2>{{/talk.speakersFirstNames}}
             <div class="row">
+                {{#talk.speakersFirstNames}}<h2>{{#i18n}}talk.others| {{talk.speakersFirstNames}}{{/i18n}}</h2>{{/talk.speakersFirstNames}}
 
                 <div class="columns small-12 medium-12 {{#has2Columns}}large-6{{/has2Columns}}{{^has2Columns}}large-12{{/has2Columns}} callout">
                     <ul class="accordion" data-accordion>
