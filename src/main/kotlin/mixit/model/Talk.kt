@@ -33,7 +33,8 @@ enum class TalkFormat(val duration: Int) {
     WORKSHOP(110),
     RANDOM(25),
     KEYNOTE(25),
-    KEYNOTE_SURPRISE(25)
+    KEYNOTE_SURPRISE(25),
+    CLOSING_SESSION(25)
 }
 
 @Suppress("UNUSED_PARAMETER")

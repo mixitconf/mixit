@@ -143,7 +143,8 @@ class AdminHandler(private val ticketRepository: TicketRepository,
                     Pair(WORKSHOP, WORKSHOP == talk.format),
                     Pair(RANDOM, RANDOM == talk.format),
                     Pair(KEYNOTE, KEYNOTE == talk.format),
-                    Pair(KEYNOTE_SURPRISE, KEYNOTE_SURPRISE == talk.format)
+                    Pair(KEYNOTE_SURPRISE, KEYNOTE_SURPRISE == talk.format),
+                    Pair(CLOSING_SESSION, CLOSING_SESSION == talk.format)
             )),
             Pair("languages", listOf(
                     Pair(ENGLISH, ENGLISH == talk.language),

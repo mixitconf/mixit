@@ -315,7 +315,7 @@ fun Talk.summary(convertRandomLabel: Boolean): String {
                 else
                     "Ce talk est de type \"random\". Pour cette track, nous choisissons le programme pour vous. Vous êtes dans une pièce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 20 minutes. Comme c'est une surprise, nous n'affichons pas le résumé de la session avant ..."
             }
-            TalkFormat.KEYNOTE_SURPRISE -> {
+            TalkFormat.KEYNOTE_SURPRISE, TalkFormat.CLOSING_SESSION -> {
                 if (language == Language.ENGLISH)
                     "This is a \"surprise\" talk. For our keynote we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 30 minutes. As it's a surprise we don't display the session summary before...   "
                 else
@@ -328,9 +328,9 @@ fun Talk.summary(convertRandomLabel: Boolean): String {
 }
 
 
-fun Talk.title(convertRandomLabel: Boolean, searchTerms: List<String> = emptyList()): String = if (convertRandomLabel && format == TalkFormat.KEYNOTE_SURPRISE && event == "2019") "A surprise keynote... is a surprise"
+fun Talk.title(convertRandomLabel: Boolean, searchTerms: List<String> = emptyList()): String = if (convertRandomLabel && (format == TalkFormat.KEYNOTE_SURPRISE || format == TalkFormat.CLOSING_SESSION) && event == "2019") "A surprise keynote... is a surprise"
 else title.markFoundOccurrences(searchTerms)
 
-fun Talk.description(convertRandomLabel: Boolean) = if (convertRandomLabel && (format == TalkFormat.RANDOM || format == TalkFormat.KEYNOTE_SURPRISE) && event == "2019") "" else description
+fun Talk.description(convertRandomLabel: Boolean) = if (convertRandomLabel && (format == TalkFormat.RANDOM || format == TalkFormat.KEYNOTE_SURPRISE || format == TalkFormat.CLOSING_SESSION) && event == "2019") "" else description
 
 fun Talk.sanitizeForApi() = Talk(format, event, title(true), summary(true), speakerIds, language, addedAt, description(true), topic, video, room, start, end, photoUrls, slug, id)
