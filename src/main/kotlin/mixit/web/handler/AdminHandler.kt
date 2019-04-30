@@ -133,6 +133,7 @@ class AdminHandler(private val ticketRepository: TicketRepository,
                     Triple(AMPHIC, "rooms.${AMPHIC.name.toLowerCase()}", AMPHIC == talk.room),
                     Triple(AMPHID, "rooms.${AMPHID.name.toLowerCase()}", AMPHID == talk.room),
                     Triple(AMPHIK, "rooms.${AMPHIK.name.toLowerCase()}", AMPHIK == talk.room),
+                    Triple(SURPRISE, "rooms.${SURPRISE.name.toLowerCase()}", SURPRISE == talk.room),
                     Triple(SPEAKER, "rooms.${SPEAKER.name.toLowerCase()}", SPEAKER == talk.room),
                     Triple(MUMMY, "rooms.${MUMMY.name.toLowerCase()}", MUMMY == talk.room),
                     Triple(UNKNOWN, "rooms.${UNKNOWN.name.toLowerCase()}", UNKNOWN == talk.room)
