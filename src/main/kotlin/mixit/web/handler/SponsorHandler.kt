@@ -42,7 +42,7 @@ class SponsorHandler(private val userRepository: UserRepository,
                         }
                     }
 
-    fun viewWithSponsors(view: String, spolight: SponsorshipLevel, title: String?, year: Int, req: ServerRequest) =
+    fun viewWithSponsors(view: String, spolights: Array<SponsorshipLevel>, title: String?, year: Int, req: ServerRequest) =
             eventRepository
                     .findByYear(year)
                     .flatMap { event ->
@@ -50,7 +50,7 @@ class SponsorHandler(private val userRepository: UserRepository,
 
                         val ids = event.sponsors.map { it.sponsorId }.toMutableList()
 
-                        if(isHomePage){
+                        if (isHomePage) {
                             // We adds speaker stars
                             ids.addAll(UserHandler.speakerStarInCurrentEvent)
                             ids.addAll(UserHandler.speakerStarInHistory)
@@ -60,17 +60,18 @@ class SponsorHandler(private val userRepository: UserRepository,
                                 .findMany(ids)
                                 .collectMap(User::login)
                                 .flatMap { usersByLogin ->
-                                    val sponsorsByEvent = event.sponsors.groupBy { it.level }
-                                    val mainSponsor=sponsorsByEvent[spolight]?.map { it.toSponsorDto(usersByLogin[it.sponsorId]!!) }
-
-                                    val otherSponsors = event.sponsors
-                                            .filter { it.level != SponsorshipLevel.GOLD }
+                                    val mainSponsor = event.sponsors.filter { !spolights.contains(it.level) }
                                             .map { it.toSponsorDto(usersByLogin[it.sponsorId]!!) }
                                             .distinctBy { it.login }
 
-                                    if(view.equals("home")){
-                                        val oldStars =  UserHandler.speakerStarInHistory.map { usersByLogin[it]!!.toSpeakerStarDto() }.toMutableList()
-                                        val currentStars =  UserHandler.speakerStarInCurrentEvent.map { usersByLogin[it]!!.toSpeakerStarDto() }.toMutableList()
+                                    val otherSponsors = event.sponsors
+                                            .filter { !spolights.contains(it.level) }
+                                            .map { it.toSponsorDto(usersByLogin[it.sponsorId]!!) }
+                                            .distinctBy { it.login }
+
+                                    if (view.equals("home")) {
+                                        val oldStars = UserHandler.speakerStarInHistory.map { usersByLogin[it]!!.toSpeakerStarDto() }.toMutableList()
+                                        val currentStars = UserHandler.speakerStarInCurrentEvent.map { usersByLogin[it]!!.toSpeakerStarDto() }.toMutableList()
                                         Collections.shuffle(oldStars)
                                         Collections.shuffle(currentStars)
 
@@ -80,11 +81,10 @@ class SponsorHandler(private val userRepository: UserRepository,
                                                 Pair("title", if (!view.equals("sponsors")) title else "$title|$year"),
                                                 Pair("sponsors-main", mainSponsor),
                                                 Pair("sponsors-others", otherSponsors),
-                                                Pair("stars-old", oldStars.subList(0,6)),
-                                                Pair("stars-current", currentStars.subList(0,6))
+                                                Pair("stars-old", oldStars.subList(0, 6)),
+                                                Pair("stars-current", currentStars.subList(0, 6))
                                         ))
-                                    }
-                                    else{
+                                    } else {
                                         ServerResponse.ok().render(view, mapOf(
                                                 Pair("year", year),
                                                 Pair("imagepath", "/"),
