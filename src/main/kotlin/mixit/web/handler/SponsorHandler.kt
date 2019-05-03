@@ -60,12 +60,18 @@ class SponsorHandler(private val userRepository: UserRepository,
                                 .findMany(ids)
                                 .collectMap(User::login)
                                 .flatMap { usersByLogin ->
-                                    val mainSponsor = event.sponsors.filter { !spolights.contains(it.level) }
-                                            .map { it.toSponsorDto(usersByLogin[it.sponsorId]!!) }
-                                            .distinctBy { it.login }
+                                    val sponsorsByEvent = event.sponsors.groupBy { it.level }
+                                    val mainSponsors = mutableListOf<SponsorDto>()
+
+                                    spolights.forEach {
+                                        val elements = sponsorsByEvent[it]?.map { it.toSponsorDto(usersByLogin[it.sponsorId]!!) }?.toList()
+                                        mainSponsors.addAll(elements!!)
+                                    }
+
+                                    val mainSponsorIds = mainSponsors.map { it.login }
 
                                     val otherSponsors = event.sponsors
-                                            .filter { !spolights.contains(it.level) }
+                                            .filter { !spolights.contains(it.level) && !mainSponsorIds.contains(it.sponsorId)}
                                             .map { it.toSponsorDto(usersByLogin[it.sponsorId]!!) }
                                             .distinctBy { it.login }
 
@@ -79,7 +85,7 @@ class SponsorHandler(private val userRepository: UserRepository,
                                                 Pair("year", year),
                                                 Pair("imagepath", "/"),
                                                 Pair("title", if (!view.equals("sponsors")) title else "$title|$year"),
-                                                Pair("sponsors-main", mainSponsor),
+                                                Pair("sponsors-main", mainSponsors),
                                                 Pair("sponsors-others", otherSponsors),
                                                 Pair("stars-old", oldStars.subList(0, 6)),
                                                 Pair("stars-current", currentStars.subList(0, 6))
@@ -89,7 +95,7 @@ class SponsorHandler(private val userRepository: UserRepository,
                                                 Pair("year", year),
                                                 Pair("imagepath", "/"),
                                                 Pair("title", if (!view.equals("sponsors")) title else "$title|$year"),
-                                                Pair("sponsors-main", mainSponsor),
+                                                Pair("sponsors-main", mainSponsors),
                                                 Pair("sponsors-others", otherSponsors)
                                         ))
                                     }
