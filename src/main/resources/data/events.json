@@ -916,14 +916,24 @@
                 "subscriptionDate": "2019-04-05"
             },
             {
-                "level": "ACCESSIBILITY",
-                "sponsorId": "redfroggy",
-                "subscriptionDate": "2019-03-15"
-            },
-            {
                 "level": "SILVER",
                 "sponsorId": "cabinet-asi",
                 "subscriptionDate": "2019-04-23"
+            },
+            {
+                "level": "ECOLOGY",
+                "sponsorId": "redfroggy",
+                "subscriptionDate": "2019-04-28"
+            },
+            {
+                "level": "MIXTEEN",
+                "sponsorId": "esker",
+                "subscriptionDate": "2019-04-29"
+            },
+            {
+                "level": "ECOLOGY",
+                "sponsorId": "mdbat",
+                "subscriptionDate": "2019-05-01"
             }
         ],
         "start": "2019-05-23",
