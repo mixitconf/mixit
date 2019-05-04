@@ -5255,8 +5255,8 @@
         "login": "Bilgetz",
         "photoUrl": null,
         "role": "USER",
-        "token": "80140565001d",
-        "tokenExpiration": "2019-04-25T09:44:29.533"
+        "token": "da99d2f57bb0",
+        "tokenExpiration": "2019-05-05T08:26:57.593"
     },
     {
         "company": "",
@@ -5480,8 +5480,8 @@
         "login": "Charles Bouttaz",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "60aa00c1e81d",
-        "tokenExpiration": "2019-04-28T09:31:45.318"
+        "token": "fca67e484d40",
+        "tokenExpiration": "2019-05-03T12:14:29.032"
     },
     {
         "company": "",
@@ -8863,10 +8863,10 @@
             }
         ],
         "login": "Redhat",
-        "photoUrl": "https://mixitconf.org/images/sponsors/logo-redhat2.svg",
+        "photoUrl": "https://mixitconf.org/images/sponsors/logo-redhat3.svg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-13T09:57:16.964"
+        "tokenExpiration": "2019-05-02T17:59:58.155"
     },
     {
         "company": "",
@@ -9644,8 +9644,8 @@
         "login": "Tom32i",
         "photoUrl": null,
         "role": "USER",
-        "token": "107757a86dc3",
-        "tokenExpiration": "2019-04-06T13:15:25.291"
+        "token": "1b7b2850b15d",
+        "tokenExpiration": "2019-05-01T11:11:34.703"
     },
     {
         "company": "",
@@ -11987,8 +11987,8 @@
         "login": "anne-laure",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "5b0fca1bda52",
-        "tokenExpiration": "2019-04-28T07:19:17.563"
+        "token": "3c263090bd8a",
+        "tokenExpiration": "2019-05-05T06:53:28.095"
     },
     {
         "company": "Ippon Technologies",
@@ -16281,8 +16281,8 @@
         "login": "charles.de-magneval",
         "photoUrl": null,
         "role": "USER",
-        "token": "1988d129f91f",
-        "tokenExpiration": "2019-03-15T15:03:38.273"
+        "token": "6b37f5e65cda",
+        "tokenExpiration": "2019-05-02T14:45:27.172"
     },
     {
         "company": "",
@@ -20618,7 +20618,7 @@
         "company": null,
         "description": {
             "ENGLISH": "Florence Chabanois exerce dans le milieu agile depuis une dizaine d'ann\u00e9es. Sa forme de t\u00eate ni ronde ni carr\u00e9 lui a permis d'endosser des casquettes en tissus diff\u00e9rents : d\u00e9veloppeur, coach, ScrumMaster, manager, product owner.",
-            "FRENCH": "Florence Chabanois exerce dans le milieu agile depuis une dizaine d'ann\u00e9es. Sa forme de t\u00eate ni ronde ni carr\u00e9 lui a permis d'endosser des casquettes en tissus diff\u00e9rents : d\u00e9veloppeur, coach, ScrumMaster, manager, product owner."
+            "FRENCH": "Florence Chabanois exerce dans le milieu agile depuis une dizaine d'ann\u00e9es. Sa forme de t\u00eate ni ronde ni carr\u00e9 lui a permis d'endosser des casquettes de tissus diff\u00e9rents : d\u00e9veloppeur, coach, ScrumMaster, manager, product owner, data protection officer. Actuellement Deputy CTO chez CarBoat M\u00e9dia (LaCentrale.fr, Ma Voiture Cash), elle recrute aussi des devs qui 1. aiment leur taff, 2. aiment encore plus livrer de la valeur aux internautes #FinDuMomentPub. \r\n"
         },
         "email": "cQbzVpgbFDtk49C8axUpQlufM3qVtX/8RN2RNHqtgBg=",
         "emailHash": "21440364f1515ce54e72e9b2e172a6ac",
@@ -20647,7 +20647,7 @@
         "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-06T12:28:45.822"
+        "tokenExpiration": "2019-04-27T19:33:47.182"
     },
     {
         "company": "",
@@ -23397,8 +23397,8 @@
         "login": "guillaumeehret",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "c0d4484d6148",
-        "tokenExpiration": "2019-04-29T05:52:15.919"
+        "token": "4e06ef3ff32d",
+        "tokenExpiration": "2019-05-05T17:55:03.209"
     },
     {
         "company": "",
@@ -34079,10 +34079,10 @@
         "tokenExpiration": "2018-03-03T17:17:35.533"
     },
     {
-        "company": "",
+        "company": null,
         "description": {
-            "ENGLISH": "Passionn\u00e9 de cr\u00e9ation logicielle. Consultant et formateur avant tout.",
-            "FRENCH": "Passionn\u00e9 de cr\u00e9ation logicielle. Consultant et formateur avant tout."
+            "ENGLISH": "",
+            "FRENCH": "Responsable P\u00e9dagogique Formation \u00e0 Zenika\r\n\r\nOlivier Huber est un passionn\u00e9 de cr\u00e9ation logicielle.\r\n\r\nPour lui, notre m\u00e9tier est l'un des rares \u00e0 nous donner la capacit\u00e9 de mat\u00e9rialiser une id\u00e9e rapidement et \u00e0 faible co\u00fbt.\r\n\r\nIniti\u00e9 il y a plus de 15 ans \u00e0 l'agilit\u00e9 par la pratique de l'eXtr\u00eame Programming, il devient Agiliste convaincu et Scrum Master par la suite.\r\n\r\nIl intervient principalement pendant 15 ans en d\u00e9veloppement / conseil / formation chez des clients qui ont des besoins Java et Web.\r\n\r\nOccasionnellement il donne des conf\u00e9rences (Devoxx, Mix-IT, Breizchamp, \u2026) sur des sujets comme AngularJS, Vert.x, \u2026\r\n\r\nIl rejoint Zenika en septembre 2008 pour \u00e9voluer parmi des coll\u00e8gues qui ont la m\u00eame ferveur et afin de partager (formations, conf\u00e9rences, \u2026) au maximum ses connaissances."
         },
         "email": null,
         "emailHash": "f3297524e6d2f113a5874d43514015b1",
@@ -34104,10 +34104,10 @@
             }
         ],
         "login": "olivier.huber",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/huber.jpg",
+        "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.464"
+        "tokenExpiration": "2019-04-29T13:42:46.272"
     },
     {
         "company": "",
@@ -37814,8 +37814,8 @@
         "login": "s_colson",
         "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/colson.jpg",
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.532"
+        "token": "75de908e6e27",
+        "tokenExpiration": "2019-04-30T11:35:42.729"
     },
     {
         "company": "",
@@ -45994,8 +45994,8 @@
     {
         "company": null,
         "description": {
-            "ENGLISH": "J'aime travailler en groupe, rencontrer des gens, d\u00e9couvrir des m\u00e9tier et r\u00e9fl\u00e9chir sur des probl\u00e8mes. Je suis ergonome et mon travail consiste \u00e0 r\u00e9colter des informations aupr\u00e8s des utilisateurs afin d'offrir une exp\u00e9rience simple, intuitive et ad\u00e9quation avec les usages des utilisateurs. Au plaisir d'\u00e9changer avec vous \u00e0 propos de vos probl\u00e9matiques du moment.",
-            "FRENCH": "J'aime travailler en groupe, rencontrer des gens, d\u00e9couvrir des m\u00e9tier et r\u00e9fl\u00e9chir sur des probl\u00e8mes. Je suis ergonome et mon travail consiste \u00e0 r\u00e9colter des informations aupr\u00e8s des utilisateurs afin d'offrir une exp\u00e9rience simple, intuitive et ad\u00e9quation avec les usages des utilisateurs. Au plaisir d'\u00e9changer avec vous \u00e0 propos de vos probl\u00e9matiques du moment."
+            "ENGLISH": "J'aime d\u00e9couvrir des m\u00e9tiers et r\u00e9fl\u00e9chir aux probl\u00e8mes et aider \u00e0 trouver des solutions. C'est d'ailleurs une grosse partie de mon travail d'ergonome : discuter avec les utilisateurs finaux dans le but de comprendre de quoi ils ont besoin, \u00e0 quel moment et pour faire quoi. \r\nJ'aime aussi travailler en groupe, et depuis quelques temps cr\u00e9er des outils pour diffuser autrement les fondamentaux d'ergonomie. \r\nAu plaisir d'\u00e9changer avec vous \u00e0 propos de vos probl\u00e9matiques UX du moment.",
+            "FRENCH": "J'aime d\u00e9couvrir des m\u00e9tiers et r\u00e9fl\u00e9chir aux probl\u00e8mes et aider \u00e0 trouver des solutions. C'est d'ailleurs une grosse partie de mon travail d'ergonome : discuter avec les utilisateurs finaux dans le but de comprendre de quoi ils ont besoin, \u00e0 quel moment et pour faire quoi. \r\nJ'aime aussi travailler en groupe, et depuis quelques temps cr\u00e9er des outils pour diffuser autrement les fondamentaux d'ergonomie. \r\nAu plaisir d'\u00e9changer avec vous \u00e0 propos de vos probl\u00e9matiques UX du moment."
         },
         "email": "Rjm8pEj4MAbEOLJrEOrId2/wnxFtDf9hMVedJ0GPSGc=",
         "emailHash": "5361d075c1ae9964fddb9f633e4f876b",
@@ -46017,10 +46017,10 @@
             }
         ],
         "login": "marion",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/georges.jpg",
+        "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.422"
+        "tokenExpiration": "2019-04-28T14:38:28.912"
     },
     {
         "company": null,
@@ -46112,7 +46112,7 @@
         "links": [
             {
                 "name": "Twitter",
-                "url": "https://twitter.com/nnodot"
+                "url": "https://twitter.com/ogadaki"
             },
             {
                 "name": "Company Website",
@@ -46120,10 +46120,10 @@
             }
         ],
         "login": "decoster",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/decoster.jpg",
+        "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.456"
+        "tokenExpiration": "2019-04-27T19:42:33.356"
     },
     {
         "company": null,
@@ -47103,17 +47103,17 @@
     {
         "company": null,
         "description": {},
-        "email": "XblPvj1xBWsyW+jkKi9w12upK3ntwUs1h1nA94yHMa0=",
+        "email": "ajUKfxl7TVOxB64nxeKhm11ZcUHOxmWYI3I2h00lSuQ=",
         "emailHash": null,
-        "firstname": "St\u00e9phane",
-        "lastname": "Azzopardi",
+        "firstname": "Myl\u00e8ne",
+        "lastname": "Boyrie",
         "legacyId": null,
         "links": [],
         "login": "contact",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "7adc839cfded",
-        "tokenExpiration": "2019-04-25T07:45:44.276"
+        "token": "e1a31c5e6bd8",
+        "tokenExpiration": "2019-05-02T14:50:42.493"
     },
     {
         "company": null,
@@ -49484,8 +49484,8 @@
         "login": "a_defanti",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "fb68abe85ae7",
-        "tokenExpiration": "2019-04-13T07:01:17.721"
+        "token": "337362a73056",
+        "tokenExpiration": "2019-05-04T22:02:37.322"
     },
     {
         "company": null,
@@ -49775,8 +49775,8 @@
         "login": "aurelie.bressol",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "22a54674bfea",
-        "tokenExpiration": "2019-04-11T15:03:20.569"
+        "token": "bc5324573b78",
+        "tokenExpiration": "2019-05-05T11:34:53.552"
     },
     {
         "company": null,
@@ -52770,8 +52770,8 @@
         "login": "gregory-liauzun",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "5192f3b993b8",
-        "tokenExpiration": "2019-04-06T14:15:46.678"
+        "token": "f544f863b0b9",
+        "tokenExpiration": "2019-05-04T07:58:08.247"
     },
     {
         "company": null,
@@ -53268,8 +53268,8 @@
         "login": "remy-pinget",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "657b0d0e976b",
-        "tokenExpiration": "2019-04-10T13:18:59.139"
+        "token": "01fd6fe781e8",
+        "tokenExpiration": "2019-05-02T09:17:30.589"
     },
     {
         "company": null,
@@ -53613,8 +53613,8 @@
         "login": "marc-olivier-alfonsi",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "aa6c35215df4",
-        "tokenExpiration": "2019-04-18T14:32:39.674"
+        "token": "0ff0ab425fb4",
+        "tokenExpiration": "2019-05-01T12:31:58.458"
     },
     {
         "company": null,
@@ -53871,8 +53871,8 @@
         "login": "cyril-dupraz",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "ed57b9d49820",
-        "tokenExpiration": "2019-04-25T08:57:09.737"
+        "token": "37f850731102",
+        "tokenExpiration": "2019-05-01T15:48:29.368"
     },
     {
         "company": null,
@@ -54015,5 +54015,176 @@
         "role": "USER",
         "token": "c39178d7a917",
         "tokenExpiration": "2019-04-28T15:47:44.362"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "5jpmn81VvIMGWdlKawPZ8SXgM9RyYVaGcPaKDFfYlqM=",
+        "emailHash": null,
+        "firstname": "Andile23",
+        "lastname": "Andile",
+        "legacyId": null,
+        "links": [],
+        "login": "andile10",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "0819400b03bb",
+        "tokenExpiration": "2019-04-30T21:43:04.695"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "KXl//7fYsdF+n7Qv80SpPVvVIXRJb6GTMtFvvrMYzH8=",
+        "emailHash": null,
+        "firstname": "Andile23",
+        "lastname": "Andile",
+        "legacyId": null,
+        "links": [],
+        "login": "andilen050",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "cea6ab18f32a",
+        "tokenExpiration": "2019-05-01T01:35:59.694"
+    },
+    {
+        "company": "Esker",
+        "description": {
+            "ENGLISH": "Esker is a worldwide leader in cloud-based document process automation software. Used by more than 6,000 companies worldwide, Esker\u2019s solutions incorporate technologies like artificial intelligence (AI) to drive increased productivity, enhanced visibility, reduced fraud risk, and improved collaboration with customers, suppliers and internally. Esker operates in North America, Latin America, Europe and Asia Pacific with global headquarters in Lyon, France, and generated 86,9 million euros in revenue in 2018, of which 59% from export.\r\n\r\nRanked #14 in Great Place To Work France 2019 ranking, Esker is an Agile company, committed to its 600 employees\u2019 well-being, of which 350 are based in Lyon. In a dynamic and friendly work environment where team spirit and mutual support is encouraged, all our Eskerians contribute to the company\u2019s success, which makes available to them all the resources they need to accomplish their mission. \r\n\r\nAs part of our CSR policy, Esker is active among young people to give them access to professions of the future. We support MixTeen organisation which allows teens to discover software development.",
+            "FRENCH": "Esker est un des principaux \u00e9diteurs mondiaux de solutions de d\u00e9mat\u00e9rialisation des documents en mode Cloud. D\u00e9velopp\u00e9e sur la base de technologies innovantes d\u2019IA et de RPA, notre solution est utilis\u00e9e par plus de 6 000 entreprises dans le monde pour gagner en productivit\u00e9 et en visibilit\u00e9 et am\u00e9liorer la collaboration en interne, ainsi qu\u2019avec leurs clients et fournisseurs. Pr\u00e9sent en Europe, en Am\u00e9rique du Nord, en Asie/Pacifique et en Am\u00e9rique du Sud, Esker a r\u00e9alis\u00e9 86,9 millions d\u2019euros de chiffre d\u2019affaires en 2018 dont 59% \u00e0 l\u2019international.\r\n\r\nClass\u00e9e #14 du Palmar\u00e8s Great Place To Work France 2019, Esker est une entreprise Agile, investie dans le bien-\u00eatre de ses 600 salari\u00e9s, dont 350 sont bas\u00e9s au si\u00e8ge lyonnais. Dans un cadre de travail dynamique et une ambiance conviviale o\u00f9 l\u2019esprit d\u2019\u00e9quipe et l\u2019entraide sont encourag\u00e9s, l\u2019ensemble des Esk\u00e9riens participent \u00e0 la r\u00e9ussite de l\u2019entreprise, qui met \u00e0 leur disposition toutes les ressources n\u00e9cessaires pour accomplir leur mission.\r\n\r\nDans le cadre de notre politique RSE, Esker s\u2019engage aupr\u00e8s des jeunes pour leur donner acc\u00e8s \u00e0 des m\u00e9tiers d\u2019avenir et soutient l\u2019association MixTeen qui permet \u00e0 des ados de d\u00e9couvrir l\u2019informatique."
+        },
+        "email": "4+jiu8mtDQkRBwdxUI2vpXF62nR127M+NQ0+4bTLxaE=",
+        "emailHash": null,
+        "firstname": "Esker",
+        "lastname": "Esker",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "site web",
+                "url": "https://www.esker.fr"
+            },
+            {
+                "name": "linkedin",
+                "url": "https://www.linkedin.com/company/esker-france"
+            },
+            {
+                "name": "twitter",
+                "url": "https://twitter.com/Eskerfrance"
+            },
+            {
+                "name": "facebook",
+                "url": "https://www.facebook.com/EskerRecrute/"
+            },
+            {
+                "name": "instagram",
+                "url": "https://www.instagram.com/eskerlife/"
+            },
+            {
+                "name": "blog technique",
+                "url": "https://medium.com/esker-labs"
+            }
+        ],
+        "login": "esker",
+        "photoUrl": "https://mixitconf.org/images/sponsors/logo-esker.svg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-04-28T17:33:21.353"
+    },
+    {
+        "company": "MDBat",
+        "description": {
+            "ENGLISH": "MDBat est une TPE qui r\u00e9alise des logiciels de calcul de structures pour la construction bois\r\n\r\nDepuis plus de 20 ans elle apporte son savoir faire a de jeunes entrepreneurs, \r\nartisans charpentiers bureaux d\u2019\u00e9tudes, experts, \u00e9tudiants, enseignants\r\n\r\nL\u2019\u00e9quipe MDBat est la combinaison de comp\u00e9tences informatiques\r\nmath\u00e9matiques, m\u00e9canique, g\u00e9nie civil\u2026 et de constructions sur le terrain",
+            "FRENCH": "MDBat est une TPE qui r\u00e9alise des logiciels de calcul de structures pour la construction bois\r\n\r\nDepuis plus de 20 ans elle apporte son savoir faire a de jeunes entrepreneurs, \r\nartisans charpentiers bureaux d\u2019\u00e9tudes, experts, \u00e9tudiants, enseignants\r\n\r\nL\u2019\u00e9quipe MDBat est la combinaison de comp\u00e9tences informatiques\r\nmath\u00e9matiques, m\u00e9canique, g\u00e9nie civil\u2026 et de constructions sur le terrain"
+        },
+        "email": "sIKWLyvx0mPx9SqX0Nw0EJAI/e5RnrcROdJL6eSsK2Q=",
+        "emailHash": null,
+        "firstname": "MDBat",
+        "lastname": "MDBat",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "MDBat",
+                "url": "http://mdbat.com"
+            }
+        ],
+        "login": "mdbat",
+        "photoUrl": "https://mixitconf.org/images/sponsors/logo-mdbat.jpg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-04-30T12:25:55.715"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "c0yWoZDKwqaEHSiVJVt4Y+iachuNjM5IXIhEUw08a0Q=",
+        "emailHash": null,
+        "firstname": "Thuthukani",
+        "lastname": "Malinga",
+        "legacyId": null,
+        "links": [],
+        "login": "thuthukanimalinga1",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "290422cd0359",
+        "tokenExpiration": "2019-05-03T18:20:27.435"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "GF3PeCKdT/ohYTb+hvyhnUOINdH0Ebvk8BmyRBnir5Q=",
+        "emailHash": null,
+        "firstname": "662742",
+        "lastname": "662742",
+        "legacyId": null,
+        "links": [],
+        "login": "melissachetty16",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "4dedc675c9cd",
+        "tokenExpiration": "2019-05-03T21:19:26.627"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "lcwcCh008dqehaAnyLjAGkzJ4xm+47LwXbDRGG+w0nQ=",
+        "emailHash": null,
+        "firstname": "Mphemba",
+        "lastname": "Zeeh",
+        "legacyId": null,
+        "links": [],
+        "login": "thabisilezinhle25",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "89de80e75a53",
+        "tokenExpiration": "2019-05-04T12:11:05.511"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "sWuU5xME+6mDXRjKVLPMY3i7WupaFHisLdP7ZfWfdrM=",
+        "emailHash": null,
+        "firstname": "Ramokhoase",
+        "lastname": "Moses",
+        "legacyId": null,
+        "links": [],
+        "login": "ramokhoase1126nokia",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "ea955ca0e781",
+        "tokenExpiration": "2019-05-04T15:38:25.748"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "hSNv6YLPHbGvzSJumUyr0nWNQXhV4I4LQEwWIy/87g8=",
+        "emailHash": null,
+        "firstname": "Salmane",
+        "lastname": "Hmiza",
+        "legacyId": null,
+        "links": [],
+        "login": "salmane",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "00bee84e06f3",
+        "tokenExpiration": "2019-05-05T11:01:09.967"
     }
 ]
