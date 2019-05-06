@@ -11987,8 +11987,8 @@
         "login": "anne-laure",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "3c263090bd8a",
-        "tokenExpiration": "2019-05-05T06:53:28.095"
+        "token": "0968dde16308",
+        "tokenExpiration": "2019-05-08T11:41:47.034"
     },
     {
         "company": "Ippon Technologies",
@@ -23397,8 +23397,8 @@
         "login": "guillaumeehret",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "4e06ef3ff32d",
-        "tokenExpiration": "2019-05-05T17:55:03.209"
+        "token": "57c911220a17",
+        "tokenExpiration": "2019-05-08T05:48:28.413"
     },
     {
         "company": "",
@@ -48623,8 +48623,8 @@
         "login": "donolwenn",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "c7dec8c75f31",
-        "tokenExpiration": "2019-04-27T16:25:34.733"
+        "token": "e263705b1041",
+        "tokenExpiration": "2019-05-05T21:17:08.454"
     },
     {
         "company": null,
@@ -49775,8 +49775,8 @@
         "login": "aurelie.bressol",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "bc5324573b78",
-        "tokenExpiration": "2019-05-05T11:34:53.552"
+        "token": "6f130ce7cc41",
+        "tokenExpiration": "2019-05-08T07:25:48.242"
     },
     {
         "company": null,
@@ -52968,8 +52968,8 @@
         "login": "mathieu-sivade",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "a87239a16887",
-        "tokenExpiration": "2019-04-07T11:57:42.725"
+        "token": "b761ec94d754",
+        "tokenExpiration": "2019-05-08T07:26:02.284"
     },
     {
         "company": null,
@@ -53871,8 +53871,8 @@
         "login": "cyril-dupraz",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "37f850731102",
-        "tokenExpiration": "2019-05-01T15:48:29.368"
+        "token": "4fc645d6f6a2",
+        "tokenExpiration": "2019-05-06T18:08:27.285"
     },
     {
         "company": null,
@@ -54186,5 +54186,20 @@
         "role": "USER",
         "token": "00bee84e06f3",
         "tokenExpiration": "2019-05-05T11:01:09.967"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "ApEz8Vt8YYP6t+T+1gDHFnzFphdgcRtMYycW9f2WP48=",
+        "emailHash": null,
+        "firstname": "Monica",
+        "lastname": "Lambinon",
+        "legacyId": null,
+        "links": [],
+        "login": "lambinonmonica0658",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "4e879def7743",
+        "tokenExpiration": "2019-05-06T19:36:57.662"
     }
 ]
