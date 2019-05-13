@@ -18,6 +18,12 @@
                     </ul>
                 </li>
             </ul>
+            {{#schedulingFile}}
+                <p>
+                <a href="{{localePrefix}}/{{schedulingFile}}" target="_blank" class="button hollow mxt-anchor--uppercase">{{#i18n}}talks.schedule.download{{/i18n}}</a>
+                </p>
+            {{/schedulingFile}}
+
             {{#connected}}
                 {{#filtered}}<p>{{#i18n}}talks.favorites.filter.active{{/i18n}}</p>{{/filtered}}
                 {{^filtered}}<p><a href="{{localePrefix}}/{{year}}{{#topic}}/{{topic}}{{/topic}}/favorite">{{#i18n}}talks.favorites.filter{{/i18n}}</a></p>{{/filtered}}
@@ -32,7 +38,15 @@
     <div class="row mxt-wrapper--row">
         {{#talks.entrySet}}
             <div class="columns small-12 medium-12 large-12 callout">
-                {{#key}}<h2>{{key}}</h2><br/>{{/key}}
+                {{#key}}
+                    {{#key.schedulingImages}}
+                        <img src="/images/png/planning/{{.}}" class="" alt="planning {{key.date}} 2019" />
+                            <hr />
+                    {{/key.schedulingImages}}
+                    {{^key.schedulingImages}}
+                        <h2>{{key.date}}</h2><br/>
+                    {{/key.schedulingImages}}
+                {{/key}}
                 <ul class="accordion" data-accordion>
                     {{#value}}
                         <li class="accordion-item" data-accordion-item>
