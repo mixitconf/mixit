@@ -33,17 +33,11 @@ class TalkHandler(private val repository: TalkRepository,
                   private val markdownValidator: MarkdownValidator) {
 
 
-    class DayWithSchedulingImage(
-            val date: String,
-            val schedulingImages: List<String>
-    )
-
     fun findByEventView(year: Int, req: ServerRequest, filterOnFavorite: Boolean, topic: String? = null): Mono<ServerResponse> =
             req.session().flatMap {
                 val currentUserEmail = it.getAttribute<String>("email")
                 val talks = loadTalkAndFavorites(year, req.language(), filterOnFavorite, currentUserEmail, topic)
                         .map { it.groupBy { if (it.date == null) "" else it.date } }
-                        .map { it.mapKeys{ DayWithSchedulingImage(it.key, getSchedulingImage(year, it.key))} }
 
                 val sponsors = loadSponsors(year, req)
 
@@ -351,21 +345,3 @@ private fun getSchedulingFile(event: Int): String? = when (event) {
     2017 -> "/pdf/planning2017.pdf"
     else -> null
 }
-
-// TODO put these data in Event table and add element on admin page to update them
-private fun getSchedulingImage(event: Int, day:String): List<String> {
-    if(event == 2019){
-        if(day.contains("23")){
-            return listOf(getSchedulingImageName(event, 1, "AM", 3), getSchedulingImageName(event, 1, "PM", 2))
-        }
-        if(day.contains("24")){
-            return listOf(getSchedulingImageName(event, 1, "AM", 3), getSchedulingImageName(event, 1, "PM", 2))
-        }
-    }
-    return emptyList()
-}
-
-
-// TODO put these data in Event table and add element on admin page to update them
-private fun getSchedulingImageName(event: Int, day:Int, prefix: String, version: Int) = "planning_${event}_J${day}_${prefix}_v${version}.png"
-

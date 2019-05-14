@@ -20,7 +20,7 @@
             </ul>
             {{#schedulingFile}}
                 <p>
-                <a href="{{localePrefix}}/{{schedulingFile}}" target="_blank" class="button hollow mxt-anchor--uppercase">{{#i18n}}talks.schedule.download{{/i18n}}</a>
+                <a href="{{schedulingFile}}" target="_blank" class="button hollow mxt-anchor--uppercase">{{#i18n}}talks.schedule.download{{/i18n}}</a>
                 </p>
             {{/schedulingFile}}
 
@@ -35,17 +35,31 @@
 
 
 <div class="mxt-wrapper--page-content">
+    {{#current}}
+    <div class="row mxt-wrapper--row">
+        <div class="columns small-12 medium-12 large-12 callout">
+            <div class="row">
+                <div class="columns small-3 medium-3 large-3">
+                    <a href="images/png/planning/planning_2019_J1_AM_v3.png"><img src="/images/png/planning/planning_2019_J1_AM_v3.png" class="" alt="planning jour 1 matin 2019" /></a>
+                </div>
+                <div class="columns small-3 medium-3 large-3">
+                    <a href="images/png/planning/planning_2019_J1_PM_v2.png"><img src="/images/png/planning/planning_2019_J1_PM_v2.png" class="" alt="planning jour 1 après midi 2019" /></a>
+                </div>
+                <div class="columns small-3 medium-3 large-3">
+                    <a href="images/png/planning/planning_2019_J2_AM_v3.png"><img src="/images/png/planning/planning_2019_J2_AM_v3.png" class="" alt="planning jour 2 matin 2019" /></a>
+                </div>
+                <div class="columns small-3 medium-3 large-3">
+                    <a href="images/png/planning/planning_2019_J2_PM_v3.png"><img src="/images/png/planning/planning_2019_J2_PM_v2.png" class="" alt="planning jour 2 après midi 2019" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/current}}
     <div class="row mxt-wrapper--row">
         {{#talks.entrySet}}
             <div class="columns small-12 medium-12 large-12 callout">
                 {{#key}}
-                    {{#key.schedulingImages}}
-                        <img src="/images/png/planning/{{.}}" class="" alt="planning {{key.date}} 2019" />
-                            <hr />
-                    {{/key.schedulingImages}}
-                    {{^key.schedulingImages}}
-                        <h2>{{key.date}}</h2><br/>
-                    {{/key.schedulingImages}}
+                    <h2>{{key}}</h2><br/>
                 {{/key}}
                 <ul class="accordion" data-accordion>
                     {{#value}}
