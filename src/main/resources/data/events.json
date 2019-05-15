@@ -934,6 +934,16 @@
                 "level": "ECOLOGY",
                 "sponsorId": "mdbat",
                 "subscriptionDate": "2019-05-01"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "niji",
+                "subscriptionDate": "2019-05-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "credit-agricole",
+                "subscriptionDate": "2019-05-13"
             }
         ],
         "start": "2019-05-23",
