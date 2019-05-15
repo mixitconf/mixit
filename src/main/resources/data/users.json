@@ -1092,7 +1092,7 @@
             "ENGLISH": "Product Owner. Fascin\u00e9e par les facult\u00e9s des enfants \u00e0 coder en moins de deux ... Mix-teen addict depuis 2014",
             "FRENCH": "Product Owner. Fascin\u00e9e par les facult\u00e9s des enfants \u00e0 coder en moins de deux ... Mix-teen addict depuis 2014"
         },
-        "email": null,
+        "email": "NWZ188kL91I2sJPlaprtN33JqJQM7KS+nfye3zNtZQs=",
         "emailHash": "9e6fe8bdae1260bc3351bc952cfc8131",
         "firstname": "Aude",
         "lastname": "Lemar-Verrier",
@@ -1101,8 +1101,8 @@
         "login": "106329914971209052078",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-12T12:05:46.575"
+        "token": "9555c0e97180",
+        "tokenExpiration": "2019-05-16T08:29:32.077"
     },
     {
         "company": "",
@@ -4885,7 +4885,7 @@
             "ENGLISH": "Mac Gyver de l'IT, je suis curieuse et touche \u00e0 tout, j'aime mixer les outils pour arriver \u00e0 mes fins.",
             "FRENCH": "Mac Gyver de l'IT, je suis curieuse et touche \u00e0 tout, j'aime mixer les outils pour arriver \u00e0 mes fins."
         },
-        "email": null,
+        "email": "gQ4UT4APlXimPqLlXaNY57wWdY7r8V8wz1KDNMElDAw=",
         "emailHash": "c9306cebd4c6e1b62ccdff8e45b3bd7b",
         "firstname": "Ang\u00e9lique",
         "lastname": "Henry",
@@ -4894,8 +4894,8 @@
         "login": "Angelique",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.468"
+        "token": "911b6479ffdf",
+        "tokenExpiration": "2019-05-15T14:02:00.464"
     },
     {
         "company": "",
@@ -5480,8 +5480,8 @@
         "login": "Charles Bouttaz",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "fca67e484d40",
-        "tokenExpiration": "2019-05-03T12:14:29.032"
+        "token": "5509a2a71007",
+        "tokenExpiration": "2019-05-15T12:51:20.788"
     },
     {
         "company": "",
@@ -11987,8 +11987,8 @@
         "login": "anne-laure",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "0968dde16308",
-        "tokenExpiration": "2019-05-08T11:41:47.034"
+        "token": "d4adf799cb31",
+        "tokenExpiration": "2019-05-16T11:46:33.748"
     },
     {
         "company": "Ippon Technologies",
@@ -12118,7 +12118,7 @@
         "company": "TEA",
         "description": {
             "ENGLISH": "\\#linux #web #livre #photo #ebook #geekeries_diverses\r\n\r\n\r\n",
-            "FRENCH": "\\#linux #web #livre #photo #ebook #geekeries_diverses\r\n\r\n\r\n"
+            "FRENCH": "Apr\u00e8s avoir cod\u00e9 sous Linux pendant 6 ans chez TEA, j\u2019ai retourn\u00e9 ma veste pour devenir UX Designer. La d\u00e9veloppeuse en moi qui a tout appris en d\u00e9veloppant pour des logiciels libres est scandalis\u00e9e de me voir travailler aujourd\u2019hui sous Mac, mais un peu in love aussi car Sketch, c\u2019est la vie.\r\n\r\n"
         },
         "email": null,
         "emailHash": "636aad17557106adcc64fc179556ed3f",
@@ -12130,7 +12130,7 @@
         "photoUrl": null,
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.467"
+        "tokenExpiration": "2019-05-13T12:27:14.51"
     },
     {
         "company": "",
@@ -16281,8 +16281,8 @@
         "login": "charles.de-magneval",
         "photoUrl": null,
         "role": "USER",
-        "token": "6b37f5e65cda",
-        "tokenExpiration": "2019-05-02T14:45:27.172"
+        "token": "5b2d5278f208",
+        "tokenExpiration": "2019-05-15T16:08:52.899"
     },
     {
         "company": "",
@@ -19545,13 +19545,13 @@
         "tokenExpiration": "2018-03-03T17:17:35.488"
     },
     {
-        "company": "",
+        "company": null,
         "description": {
             "ENGLISH": "Facilitateur, Agile Coach at Orange Business Services",
-            "FRENCH": "Facilitateur, Agile Coach at Orange Business Services"
+            "FRENCH": "Facilitateur, Agile Coach at ZENIKA\r\n\r\nTomb\u00e9 dans la marmite en 2007, \u00e0 un moment o\u00f9 l\u2019Agilit\u00e9 n\u2019\u00e9tait pas encore \u00e0 la mode, je consacre d\u00e9sormais mon temps et mon \u00e9nergie au service des individus, des \u00e9quipes et des organisations.\r\n\r\nAssez joueur et plut\u00f4t cr\u00e9atif, en charge de l\u2019Agilit\u00e9 au sein de Zenika Lyon, je suis aussi membre du CARA Valence-Lyon-Grenoble :-) organisateur d\u2019\u00e9v\u00e8nements et speakers dans plusieurs conf\u00e9rences. \r\n\u201cN\u2019oublie jamais d\u2019essayer !\u201d - Robots\r\n"
         },
-        "email": null,
-        "emailHash": "cd688f11de2715c5b4a1245b637ddb5e",
+        "email": "kL6jrqyY2iNXiIOKU9yx+9I0+nOtoUrLEjq7H0D8Ygo=",
+        "emailHash": null,
         "firstname": "Emmanuel",
         "lastname": "Herv\u00e9",
         "legacyId": null,
@@ -19565,15 +19565,15 @@
                 "url": "https://www.linkedin.com/in/emmanuelherve/"
             },
             {
-                "name": "Company Website",
+                "name": "ZENIKA",
                 "url": "https://www.zenika.com/"
             }
         ],
         "login": "emmanuel.herve",
         "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/herve.jpg",
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2019-03-03T22:24:54.3"
+        "token": "c1fd481289f3",
+        "tokenExpiration": "2019-05-12T14:12:56.98"
     },
     {
         "company": "",
@@ -23397,8 +23397,8 @@
         "login": "guillaumeehret",
         "photoUrl": null,
         "role": "STAFF",
-        "token": "57c911220a17",
-        "tokenExpiration": "2019-05-08T05:48:28.413"
+        "token": "38774ca31eae",
+        "tokenExpiration": "2019-05-15T09:33:43.263"
     },
     {
         "company": "",
@@ -36249,7 +36249,7 @@
             "ENGLISH": "Whatever.",
             "FRENCH": "Whatever."
         },
-        "email": null,
+        "email": "Ss0Y4VFvzWdnq90tl42qMAY1x5d4B7BRECU0AR8Y0+s=",
         "emailHash": "93c810cdbe43357250ab577977464a20",
         "firstname": "S\u00e9bastien",
         "lastname": "Mendez",
@@ -36258,8 +36258,8 @@
         "login": "rAkIz",
         "photoUrl": null,
         "role": "USER",
-        "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.48"
+        "token": "a395229b203a",
+        "tokenExpiration": "2019-05-15T13:44:30.467"
     },
     {
         "company": null,
@@ -39803,8 +39803,8 @@
     {
         "company": "ISR",
         "description": {
-            "ENGLISH": "Entreprise de service num\u00e9rique, nous accompagnons nos clients dans l'\u00e9volution de leurs SI depuis 1996.",
-            "FRENCH": "Entreprise de service num\u00e9rique, nous accompagnons nos clients dans l'\u00e9volution de leurs SI depuis 1996."
+            "ENGLISH": "Entreprise de services num\u00e9riques Lyonnaise, nous accompagnons nos clients dans l\u2019\u00e9volution de leurs syst\u00e8mes d\u2019information depuis 1996.\r\n\r\nDepuis quelques ann\u00e9es d\u00e9j\u00e0, nous nous sommes sp\u00e9cialis\u00e9s dans l\u2019assistance \u00e0 maitrise d\u2019ouvrage de projets en environnements multiculturels pour le compte de multinationales.\r\n\r\nNous aidons nos clients \u00e0 constituer des \u00e9quipes pluridisciplinaires compos\u00e9es de Chefs de projets, Analystes m\u00e9tiers et autres Gestionnaires du changement.\r\n\r\nV\u00e9ritables chefs d\u2019orchestres, nos collaborateurs poss\u00e8dent une culture d\u2019entreprise leur permettant de comprendre les enjeux, de challenger les parties prenantes et de mettre en place des strat\u00e9gies de pilotage de projets gagnantes.   ",
+            "FRENCH": "Entreprise de services num\u00e9riques Lyonnaise, nous accompagnons nos clients dans l\u2019\u00e9volution de leurs syst\u00e8mes d\u2019information depuis 1996.\r\n\r\nDepuis quelques ann\u00e9es d\u00e9j\u00e0, nous nous sommes sp\u00e9cialis\u00e9s dans l\u2019assistance \u00e0 maitrise d\u2019ouvrage de projets en environnements multiculturels pour le compte de multinationales.\r\n\r\nNous aidons nos clients \u00e0 constituer des \u00e9quipes pluridisciplinaires compos\u00e9es de Chefs de projets, Analystes m\u00e9tiers et autres Gestionnaires du changement.\r\n\r\nV\u00e9ritables chefs d\u2019orchestres, nos collaborateurs poss\u00e8dent une culture d\u2019entreprise leur permettant de comprendre les enjeux, de challenger les parties prenantes et de mettre en place des strat\u00e9gies de pilotage de projets gagnantes.   "
         },
         "email": null,
         "emailHash": null,
@@ -39829,7 +39829,7 @@
         "photoUrl": "images/sponsors/logo-isr.jpg",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2018-03-03T17:17:35.475"
+        "tokenExpiration": "2019-05-12T14:21:57.288"
     },
     {
         "company": "",
@@ -40819,8 +40819,8 @@
         "login": "t.rohart",
         "photoUrl": null,
         "role": "USER",
-        "token": "555f60add0c4",
-        "tokenExpiration": "2018-12-30T14:37:28.702"
+        "token": "942b65c88c17",
+        "tokenExpiration": "2019-05-11T07:17:27.338"
     },
     {
         "company": "",
@@ -42033,10 +42033,10 @@
         "legacyId": null,
         "links": [],
         "login": "titimoby",
-        "photoUrl": "https://mixitconf.cleverapps.io/images/speakers/chantier.jpg",
-        "role": "STAFF_IN_PAUSE",
-        "token": "00a5208c577f",
-        "tokenExpiration": "2019-03-16T13:46:47.177"
+        "photoUrl": null,
+        "role": "STAFF",
+        "token": "96259ce6c07d",
+        "tokenExpiration": "2019-05-16T08:56:34.657"
     },
     {
         "company": "",
@@ -42799,8 +42799,8 @@
         "login": "vbonnefond",
         "photoUrl": null,
         "role": "USER",
-        "token": "7bb8ac5e0059",
-        "tokenExpiration": "2019-03-30T13:43:04.083"
+        "token": "06741870da7c",
+        "tokenExpiration": "2019-05-15T09:34:04.247"
     },
     {
         "company": "",
@@ -46717,8 +46717,8 @@
         "login": "daubiflo",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "0afa125f23ee",
-        "tokenExpiration": "2019-03-16T13:14:24.115"
+        "token": "d11d98020790",
+        "tokenExpiration": "2019-05-15T19:02:32.335"
     },
     {
         "company": null,
@@ -48005,8 +48005,8 @@
         "login": "pierre.sassoulas",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "3f2d09643968",
-        "tokenExpiration": "2019-03-15T09:10:18.864"
+        "token": "d4632aec26b4",
+        "tokenExpiration": "2019-05-15T18:09:17.317"
     },
     {
         "company": null,
@@ -48713,8 +48713,8 @@
         "login": "jerome.thiard",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "40ce0d498f69",
-        "tokenExpiration": "2019-04-21T12:10:41.452"
+        "token": "da29d56b648f",
+        "tokenExpiration": "2019-05-15T16:07:44.18"
     },
     {
         "company": null,
@@ -48803,8 +48803,8 @@
         "login": "wisrou",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "b40067128da8",
-        "tokenExpiration": "2019-03-15T11:58:13.806"
+        "token": "f51105ee4e65",
+        "tokenExpiration": "2019-05-12T06:28:11.892"
     },
     {
         "company": null,
@@ -49369,18 +49369,21 @@
     },
     {
         "company": null,
-        "description": {},
+        "description": {
+            "ENGLISH": "Web &amp; Mobile developer\r\nMember of MixTeen, association to promote the computer world to children.",
+            "FRENCH": "Web &amp; Mobile d\u00e9veloppeur\r\nMembre de MixTeen, association pour la d\u00e9couverte du monde informatique aux enfants."
+        },
         "email": "t+77998hikdtx7gOCjV1YpKcHBzkrcQyZWKNDVhKSKA=",
-        "emailHash": null,
+        "emailHash": "c174c0b025b15194486f650bc8693e4a",
         "firstname": "Bastien",
         "lastname": "Chapellier",
         "legacyId": null,
         "links": [],
         "login": "bastienchapellier",
-        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "photoUrl": null,
         "role": "USER",
-        "token": "d37b3a38dadf",
-        "tokenExpiration": "2019-03-15T16:28:53.072"
+        "token": "909eee9e7f22",
+        "tokenExpiration": "2019-05-15T09:41:39.382"
     },
     {
         "company": null,
@@ -49484,8 +49487,8 @@
         "login": "a_defanti",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "337362a73056",
-        "tokenExpiration": "2019-05-04T22:02:37.322"
+        "token": "c17f4548a73e",
+        "tokenExpiration": "2019-05-11T21:44:29.486"
     },
     {
         "company": null,
@@ -49895,8 +49898,8 @@
         "login": "alexandre.carrabin",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "60e0c2d862c1",
-        "tokenExpiration": "2019-03-16T12:58:06.321"
+        "token": "77d53b295847",
+        "tokenExpiration": "2019-05-15T13:35:56.857"
     },
     {
         "company": null,
@@ -50761,8 +50764,8 @@
         "login": "juan-manuel.martinezromero",
         "photoUrl": "https://media.licdn.com/dms/image/C5603AQFls-PpZMXXqA/profile-displayphoto-shrink_200_200/0?e=1554336000&v=beta&t=fO-lR886J8WZEABOhKI7uhrXd2QT9DROiFqRNMQiaxs",
         "role": "USER",
-        "token": "54f3fd3feaf7",
-        "tokenExpiration": "2019-03-17T10:59:25.9"
+        "token": "a78f0b2badfc",
+        "tokenExpiration": "2019-05-09T13:30:52.976"
     },
     {
         "company": null,
@@ -50986,8 +50989,8 @@
         "login": "jasmina-travnjak",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "9cdedf4068c9",
-        "tokenExpiration": "2019-03-19T19:42:50.007"
+        "token": "c918b5146251",
+        "tokenExpiration": "2019-05-15T19:52:36.352"
     },
     {
         "company": null,
@@ -52177,8 +52180,8 @@
         "login": "fabien-forestier",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "0cb2085dcf34",
-        "tokenExpiration": "2019-03-31T15:48:25.163"
+        "token": "bd0c80a1a842",
+        "tokenExpiration": "2019-05-16T16:17:44.699"
     },
     {
         "company": null,
@@ -53544,7 +53547,7 @@
     {
         "company": null,
         "description": {},
-        "email": "H5pIsOOnt2tD568xqFb6MnvIAZpgdsr1GGMxUqfAGJY=",
+        "email": "axeu4CRaEFoU7DTk3xRsLm+9JmUpziWAm8kH+c8nN8o=",
         "emailHash": null,
         "firstname": "Berenger",
         "lastname": "Seveyrac",
@@ -53553,8 +53556,8 @@
         "login": "b-seveyrac",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "6c4b99376061",
-        "tokenExpiration": "2019-04-17T14:07:59.681"
+        "token": "8484c7d5dffa",
+        "tokenExpiration": "2019-05-11T08:50:29.292"
     },
     {
         "company": null,
@@ -53871,8 +53874,8 @@
         "login": "cyril-dupraz",
         "photoUrl": "/images/png/mxt-icon--default-avatar.png",
         "role": "USER",
-        "token": "4fc645d6f6a2",
-        "tokenExpiration": "2019-05-06T18:08:27.285"
+        "token": "90ed0d7b5656",
+        "tokenExpiration": "2019-05-15T06:47:48.35"
     },
     {
         "company": null,
@@ -54107,10 +54110,10 @@
             }
         ],
         "login": "mdbat",
-        "photoUrl": "https://mixitconf.org/images/sponsors/logo-mdbat.jpg",
+        "photoUrl": "https://mixitconf.org/images/sponsors/logo-mdbat.png",
         "role": "USER",
         "token": "empty-token",
-        "tokenExpiration": "2019-04-30T12:25:55.715"
+        "tokenExpiration": "2019-05-07T19:10:54.02"
     },
     {
         "company": null,
@@ -54201,5 +54204,170 @@
         "role": "USER",
         "token": "4e879def7743",
         "tokenExpiration": "2019-05-06T19:36:57.662"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "bwLTq0b1X1StD00hyRBr7Kb95uxhe0rjLq1DUbdV0Lo=",
+        "emailHash": null,
+        "firstname": "Mkhize ",
+        "lastname": "Lindani ",
+        "legacyId": null,
+        "links": [],
+        "login": "lindani",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "93ceacaf1967",
+        "tokenExpiration": "2019-05-10T06:00:35.756"
+    },
+    {
+        "company": "Niji",
+        "description": {
+            "ENGLISH": "Niji est une soci\u00e9t\u00e9 enti\u00e8rement d\u00e9di\u00e9e \u00e0 la transformation num\u00e9rique des entreprises, Grands Groupes, ETI et PME des territoires dans lesquels nous sommes implant\u00e9s.\r\n\r\nNous accompagnons nos clients dans l\u2019acc\u00e9l\u00e9ration et la r\u00e9ussite de leur mutation digitale au service de leur strat\u00e9gie, de leur distribution multicanale et de leur fonctionnement interne. De l\u2019id\u00e9e \u00e0 la r\u00e9alit\u00e9, Niji associe dans une m\u00eame cha\u00eene de valeur conseil en strat\u00e9gie num\u00e9rique, ing\u00e9nierie et conseil technologique, design de services et r\u00e9alisation logicielle.\r\n\r\nPr\u00e9sente \u00e0 Rennes, Paris, Lille, Nantes, Bordeaux mais aussi \u00e0 Lyon depuis 2017 avec une \u00e9quipe de 50 personnes, Niji emploie plus de 850 talents pluridisciplinaires \u00e0 date et a r\u00e9alis\u00e9 en 2018 un chiffre d'affaires cumul\u00e9 de plus de 70 M\u20ac, en croissance pr\u00e9visionnelle de plus de 20% pour 2019.",
+            "FRENCH": "Niji est une soci\u00e9t\u00e9 enti\u00e8rement d\u00e9di\u00e9e \u00e0 la transformation num\u00e9rique des entreprises, Grands Groupes, ETI et PME des territoires dans lesquels nous sommes implant\u00e9s.\r\n\r\nNous accompagnons nos clients dans l\u2019acc\u00e9l\u00e9ration et la r\u00e9ussite de leur mutation digitale au service de leur strat\u00e9gie, de leur distribution multicanale et de leur fonctionnement interne. De l\u2019id\u00e9e \u00e0 la r\u00e9alit\u00e9, Niji associe dans une m\u00eame cha\u00eene de valeur conseil en strat\u00e9gie num\u00e9rique, ing\u00e9nierie et conseil technologique, design de services et r\u00e9alisation logicielle.\r\n\r\nPr\u00e9sente \u00e0 Rennes, Paris, Lille, Nantes, Bordeaux mais aussi \u00e0 Lyon depuis 2017 avec une \u00e9quipe de 50 personnes, Niji emploie plus de 850 talents pluridisciplinaires \u00e0 date et a r\u00e9alis\u00e9 en 2018 un chiffre d'affaires cumul\u00e9 de plus de 70 M\u20ac, en croissance pr\u00e9visionnelle de plus de 20% pour 2019."
+        },
+        "email": "ScPXfe3rK7PSZ0k2hQDA3K7chjOMKPlmBpLCleCHhsQ=",
+        "emailHash": null,
+        "firstname": "niji",
+        "lastname": "niji",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "Site web",
+                "url": "https://www.niji.fr/"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/company/niji/"
+            },
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/Niji_Digital"
+            },
+            {
+                "name": "Facebook",
+                "url": "https://fr-fr.facebook.com/niji"
+            },
+            {
+                "name": "YouTube",
+                "url": "https://www.youtube.com/user/Nijivideo"
+            }
+        ],
+        "login": "niji",
+        "photoUrl": "https://mixitconf.org/images/sponsors/logo-niji.svg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-05-07T14:12:39.432"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "acnI0xfM0BwKKRGvfAyjVOuh6QU8FWtJTDly1S3OY60=",
+        "emailHash": null,
+        "firstname": "Camille",
+        "lastname": "Roux",
+        "legacyId": null,
+        "links": [],
+        "login": "roux-camille",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "40e5528b68b4",
+        "tokenExpiration": "2019-05-13T14:50:35.723"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "TwEg/G86mQwT1SDstsGzNCz6GVIJJdZvL4IK02Xax8Y=",
+        "emailHash": null,
+        "firstname": "Zuma",
+        "lastname": "Siyabonga",
+        "legacyId": null,
+        "links": [],
+        "login": "siyabongangcedezuma",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "53a9446d9669",
+        "tokenExpiration": "2019-05-15T03:50:30.98"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "cZUvyuRof2JO4iazYvxXOb6F2dM3vNjIyEQkbA/VEu9m3RMMBuiRX8Kq8/qEaO15",
+        "emailHash": null,
+        "firstname": "Ludovic",
+        "lastname": "Garcia",
+        "legacyId": null,
+        "links": [],
+        "login": "ludovic-garcia",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "e709d04d57ee",
+        "tokenExpiration": "2019-05-15T09:27:28.89"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Freelance Developer and JobHacker",
+            "FRENCH": "D\u00e9veloppeur Freelance et JobHacker"
+        },
+        "email": "wc83m/DygKV4aQWrLUVrLjpenobvvLcmn/K6mhMHfNg=",
+        "emailHash": "0af734d7538c74edb7e2970e675b066e",
+        "firstname": "Lucas",
+        "lastname": "Saudon",
+        "legacyId": null,
+        "links": [],
+        "login": "lsaudon",
+        "photoUrl": null,
+        "role": "USER",
+        "token": "cfa23e990cd5",
+        "tokenExpiration": "2019-05-15T12:35:05.574"
+    },
+    {
+        "company": "Cr\u00e9dit Agricole",
+        "description": {
+            "ENGLISH": "Cr\u00e9dit Agricole Technologies et Services assure la conception, la fabrication, la maintenance et l'exploitation du Syst\u00e8me d'Information bancaire des Caisses r\u00e9gionales (Banque de d\u00e9tail du Groupe Cr\u00e9dit Agricole) . Les \u00e9quipes pilotent les projets jusqu\u2019\u00e0 leur mise en production, accompagnent le changement et assurent leur suivi. Notre ambition est de faire \u00e9voluer l'offre bancaire des caisses r\u00e9gionales du Cr\u00e9dit Agricole et faciliter la relation de proximit\u00e9 avec leurs clients dans un mode 100% Humain 100% Digital. Nos \u00e9quipes accompagnent quotidiennement 6000+ agences bancaires, 39 Caisses r\u00e9gionales et leurs 70.000 conseillers bancaires (90.000 postes de travail, 42.000 tablettes) agence et 21 millions de clients.\r\n\r\nCA-TS s'engage dans une transformation Agile visant trois objectifs : am\u00e9liorer le retour sur investissement (ROI), l'exp\u00e9rience utilisateur (UX) et le \"time to market\" (TTM). Nos valeurs humaines sont fond\u00e9es sur le respect, l'\u00e9coute et une approche collaborative.",
+            "FRENCH": "Cr\u00e9dit Agricole Technologies et Services assure la conception, la fabrication, la maintenance et l'exploitation du Syst\u00e8me d'Information bancaire des Caisses r\u00e9gionales (Banque de d\u00e9tail du Groupe Cr\u00e9dit Agricole) . Les \u00e9quipes pilotent les projets jusqu\u2019\u00e0 leur mise en production, accompagnent le changement et assurent leur suivi. Notre ambition est de faire \u00e9voluer l'offre bancaire des caisses r\u00e9gionales du Cr\u00e9dit Agricole et faciliter la relation de proximit\u00e9 avec leurs clients dans un mode 100% Humain 100% Digital. Nos \u00e9quipes accompagnent quotidiennement 6000+ agences bancaires, 39 Caisses r\u00e9gionales et leurs 70.000 conseillers bancaires (90.000 postes de travail, 42.000 tablettes) agence et 21 millions de clients.\r\n\r\nCA-TS s'engage dans une transformation Agile visant trois objectifs : am\u00e9liorer le retour sur investissement (ROI), l'exp\u00e9rience utilisateur (UX) et le \"time to market\" (TTM). Nos valeurs humaines sont fond\u00e9es sur le respect, l'\u00e9coute et une approche collaborative."
+        },
+        "email": "WNIZRewX27/zGAMxRgbAWqhk/v/w+c9ju4ppIVoRxoE=",
+        "emailHash": null,
+        "firstname": "Cr\u00e9dit Agricole",
+        "lastname": "Cr\u00e9dit Agricole",
+        "legacyId": null,
+        "links": [],
+        "login": "credit-agricole",
+        "photoUrl": "https://mixitconf.org/images/sponsors/logo-credit-agricole.svg",
+        "role": "USER",
+        "token": "empty-token",
+        "tokenExpiration": "2019-05-12T12:55:07.187"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "jvQITvdDQNz6w8XDB8F21z60B9/0GSf02CQwXlzdZFE=",
+        "emailHash": null,
+        "firstname": "Chuma",
+        "lastname": "Coster",
+        "legacyId": null,
+        "links": [],
+        "login": "costerchuma7",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "3da00413a150",
+        "tokenExpiration": "2019-05-15T19:36:11.371"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "fbcM6N2zLSPo0BSgviQ+zvx3LaKh0CSHUVlAV1GUChY=",
+        "emailHash": null,
+        "firstname": "St\u00e9phanie",
+        "lastname": "Fourrier",
+        "legacyId": null,
+        "links": [],
+        "login": "stephanie-fourrier",
+        "photoUrl": "/images/png/mxt-icon--default-avatar.png",
+        "role": "USER",
+        "token": "9161055c402e",
+        "tokenExpiration": "2019-05-16T08:37:24.718"
     }
 ]
