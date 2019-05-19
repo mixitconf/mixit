@@ -51,6 +51,7 @@ enum class Room(capacity: Int) {
     ROOM5(30),
     ROOM6(30),
     ROOM7(30),
+    ROOM8(30),
     OUTSIDE(50),
     MUMMY(30),
     SPEAKER(16),
