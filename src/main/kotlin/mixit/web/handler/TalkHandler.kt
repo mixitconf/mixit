@@ -340,7 +340,7 @@ fun Talk.sanitizeForApi() = Talk(format, event, title(true), summary(true), spea
 
 // TODO put these data in Event table and add element on admin page to update them
 private fun getSchedulingFile(event: Int): String? = when (event) {
-    2019 -> "/pdf/planning2019v4.pdf"
+    2019 -> "/pdf/planning2019v5.pdf"
     2018 -> "/pdf/planning2018.pdf"
     2017 -> "/pdf/planning2017.pdf"
     else -> null
