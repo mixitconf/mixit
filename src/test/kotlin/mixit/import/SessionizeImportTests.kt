@@ -21,7 +21,6 @@ import java.net.URL
 
 inline fun <reified T> ObjectMapper.readValue(src: InputStream): T = readValue(src, jacksonTypeRef<T>())
 
-@ExtendWith(SpringExtension::class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Disabled
 class SessionizeImportTests(@Autowired val objectMapper: ObjectMapper,
