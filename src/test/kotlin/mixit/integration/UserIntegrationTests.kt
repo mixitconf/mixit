@@ -52,7 +52,7 @@ class UserIntegrationTests(@Autowired val client: WebTestClient) {
                 .exchange()
                 .expectStatus().is2xxSuccessful
                 .expectBodyList<User>()
-                .hasSize(10)
+                .hasSize(11)
     }
 
     @Test
