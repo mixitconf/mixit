@@ -13,7 +13,7 @@ class MarkdownValidator {
     val escaper = StringEscapers().MARKDOWN
 
     fun sanitize(value: String?): String {
-        if (value == null || value.length == 0) {
+        if (value == null || value.isEmpty()) {
             return ""
         }
         return value
@@ -30,13 +30,13 @@ class MarkdownValidator {
     }
 
     fun isValid(value: String?): Boolean {
-        if (value == null || value.length == 0) {
+        if (value == null || value.isEmpty()) {
             return true
         }
-        if(!value.equals(escaper.escape(value))){
+        if(value != escaper.escape(value)){
             System.out.println(value)
             System.out.println(escaper.escape(value))
         }
-        return value.equals(escaper.escape(value))
+        return value == escaper.escape(value)
     }
 }

@@ -35,15 +35,15 @@ class ErrorWebFluxConfiguration(private val serverProperties: ServerProperties,
         val exceptionHandler = ErrorWebFluxExceptionHandler(
                 errorAttributes,
                 this.resourceProperties,
-                this.serverProperties.getError(),
+                this.serverProperties.error,
                 this.applicationContext,
                 messageSource,
                 properties,
                 markdownConverter)
 
         exceptionHandler.setViewResolvers(this.viewResolvers)
-        exceptionHandler.setMessageWriters(this.serverCodecConfigurer.getWriters())
-        exceptionHandler.setMessageReaders(this.serverCodecConfigurer.getReaders())
+        exceptionHandler.setMessageWriters(this.serverCodecConfigurer.writers)
+        exceptionHandler.setMessageReaders(this.serverCodecConfigurer.readers)
         return exceptionHandler
     }
 }

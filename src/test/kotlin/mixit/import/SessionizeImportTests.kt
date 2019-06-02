@@ -28,7 +28,7 @@ class SessionizeImportTests(@Autowired val objectMapper: ObjectMapper,
                             @Autowired val cryptographer: Cryptographer) {
 
 
-    val speakerWithPngImage = listOf<String>("chabanois", "engel", "galson", "gilet", "grangeau", "jakobs", "mccullagh00", "paccard", "poppendieck", "stormacq", "topçu", "vuillard")
+    val speakerWithPngImage = listOf("chabanois", "engel", "galson", "gilet", "grangeau", "jakobs", "mccullagh00", "paccard", "poppendieck", "stormacq", "topçu", "vuillard")
 
     @Test
     fun `load speakers`() {
@@ -80,7 +80,7 @@ class SessionizeImportTests(@Autowired val objectMapper: ObjectMapper,
                 val userCheck = userRepository.findOne(login).block()
                 if(userCheck !=null){
                     println("Login already exist")
-                    login = login + speakerId.lastName
+					login += speakerId.lastName
                     val userCheck = userRepository.findOne(login).block()
                     if(userCheck !=null){
                         println("Login already exist")
@@ -179,7 +179,7 @@ fun initializeFolder() {
 }
 
 fun downloadImage(url: String, filename: String) {
-    val emplacement = File("/tmp/mixit/${filename}")
+    val emplacement = File("/tmp/mixit/$filename")
     if (emplacement.exists()) {
         emplacement.delete()
     }

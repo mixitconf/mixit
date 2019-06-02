@@ -36,7 +36,7 @@ class EmailService(private val properties: MixitProperties,
 
     fun send(templateName: String, user: User, locale: Locale) {
 
-        val subject = messageSource.getMessage("${templateName}-subject", null, locale)
+        val subject = messageSource.getMessage("$templateName-subject", null, locale)
         val context = generateModelForExernalCall(properties.baseUri, locale, messageSource)
         val email = cryptographer.decrypt(user.email)!!
 
@@ -47,8 +47,8 @@ class EmailService(private val properties: MixitProperties,
             emailSender.send(EmailMessage(email, subject, content))
 
         } catch (e: MessagingException) {
-            logger.error("Not possible to send email [${subject}] to ${user.email}", e)
-            throw RuntimeException("Error when system send the mail " + subject, e)
+            logger.error("Not possible to send email [$subject] to ${user.email}", e)
+            throw RuntimeException("Error when system send the mail $subject", e)
         }
     }
 

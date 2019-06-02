@@ -78,6 +78,6 @@ class EmailValidator {
         /**
          * Regular expression for the domain part of an email address (everything after '@')
          */
-        private val DOMAIN_PATTERN = Pattern.compile(DOMAIN + "|" + IP_DOMAIN, Pattern.CASE_INSENSITIVE)
+        private val DOMAIN_PATTERN = Pattern.compile("$DOMAIN|$IP_DOMAIN", Pattern.CASE_INSENSITIVE)
     }
 }

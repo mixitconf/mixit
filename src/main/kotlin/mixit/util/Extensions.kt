@@ -173,7 +173,7 @@ private fun hex(digested: ByteArray): String {
 }
 
 fun <T> Iterable<T>.shuffle(): Iterable<T> =
-        toMutableList().apply { Collections.shuffle(this) }
+        toMutableList().apply { this.shuffle() }
 
 fun localePrefix(locale: Locale) = if (locale.language == "en") "/en" else ""
 
