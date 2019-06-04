@@ -291,7 +291,7 @@ class TalkDto(
         val speakersFirstNames: String = (speakers.joinToString { it.firstname })
 )
 
-fun Talk.toDto(lang: Language, speakers: List<User>, favorite: Boolean = false, convertRandomLabel: Boolean = true, searchTerms: List<String> = emptyList()) = TalkDto(
+fun Talk.toDto(lang: Language, speakers: List<User>, favorite: Boolean = false, convertRandomLabel: Boolean = false, searchTerms: List<String> = emptyList()) = TalkDto(
         id, slug, format, event,
         title(convertRandomLabel, searchTerms),
         summary(convertRandomLabel).markFoundOccurrences(searchTerms),
@@ -336,7 +336,7 @@ else title.markFoundOccurrences(searchTerms)
 
 fun Talk.description(convertRandomLabel: Boolean) = if (convertRandomLabel && (format == TalkFormat.RANDOM || format == TalkFormat.KEYNOTE_SURPRISE || format == TalkFormat.CLOSING_SESSION) && event == "2019") "" else description
 
-fun Talk.sanitizeForApi() = Talk(format, event, title(true), summary(true), speakerIds, language, addedAt, description(true), topic, video, room, start, end, photoUrls, slug, id)
+fun Talk.sanitizeForApi() = Talk(format, event, title(false), summary(false), speakerIds, language, addedAt, description(true), topic, video, room, start, end, photoUrls, slug, id)
 
 // TODO put these data in Event table and add element on admin page to update them
 private fun getSchedulingFile(event: Int): String? = when (event) {
