@@ -21,6 +21,7 @@ import reactor.core.publisher.toMono
 import java.nio.charset.StandardCharsets
 import java.time.LocalDateTime
 
+const val SURPRISE_RANDOM = false
 
 @Component
 class TalkHandler(private val repository: TalkRepository,
@@ -291,7 +292,7 @@ class TalkDto(
         val speakersFirstNames: String = (speakers.joinToString { it.firstname })
 )
 
-fun Talk.toDto(lang: Language, speakers: List<User>, favorite: Boolean = false, convertRandomLabel: Boolean = false, searchTerms: List<String> = emptyList()) = TalkDto(
+fun Talk.toDto(lang: Language, speakers: List<User>, favorite: Boolean = false, convertRandomLabel: Boolean = SURPRISE_RANDOM, searchTerms: List<String> = emptyList()) = TalkDto(
         id, slug, format, event,
         title(convertRandomLabel, searchTerms),
         summary(convertRandomLabel).markFoundOccurrences(searchTerms),
@@ -314,7 +315,7 @@ fun Talk.summary(convertRandomLabel: Boolean): String {
         return when (format) {
             TalkFormat.RANDOM -> {
                 if (language == Language.ENGLISH)
-                    "This is a \"Random\" talk. For this track we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 20 minutes. As it's a surprise we don't display the session summary before...   "
+                    "This is a \"Random\" talk. For this track we choose the program for you. You are in a room, and a speaker comes to speak about a subject for which you ignore the content. Don't be afraid it's only for 20 minutes. As it's a surprise we don't display the session summary before...   "
                 else
                     "Ce talk est de type \"random\". Pour cette track, nous choisissons le programme pour vous. Vous êtes dans une pièce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 20 minutes. Comme c'est une surprise, nous n'affichons pas le résumé de la session avant ..."
             }
@@ -336,7 +337,7 @@ else title.markFoundOccurrences(searchTerms)
 
 fun Talk.description(convertRandomLabel: Boolean) = if (convertRandomLabel && (format == TalkFormat.RANDOM || format == TalkFormat.KEYNOTE_SURPRISE || format == TalkFormat.CLOSING_SESSION) && event == "2019") "" else description
 
-fun Talk.sanitizeForApi() = Talk(format, event, title(false), summary(false), speakerIds, language, addedAt, description(true), topic, video, room, start, end, photoUrls, slug, id)
+fun Talk.sanitizeForApi() = Talk(format, event, title(SURPRISE_RANDOM), summary(SURPRISE_RANDOM), speakerIds, language, addedAt, description(SURPRISE_RANDOM), topic, video, room, start, end, photoUrls, slug, id)
 
 // TODO put these data in Event table and add element on admin page to update them
 private fun getSchedulingFile(event: Int): String? = when (event) {
