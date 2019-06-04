@@ -12,7 +12,7 @@ import java.net.URL
 class UrlValidator {
 
     fun isValid(value: String?): Boolean {
-        if (value == null || value.length == 0) {
+        if (value == null || value.isEmpty()) {
             return true
         }
 
@@ -23,7 +23,7 @@ class UrlValidator {
             return false
         }
 
-        if (!"http".equals(url.protocol) && !"https".equals(url.protocol)) {
+        if ("http" != url.protocol && "https" != url.protocol) {
             return false
         }
 

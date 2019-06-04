@@ -2,16 +2,13 @@ package mixit.integration
 
 import mixit.model.Talk
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.http.MediaType.APPLICATION_JSON
-import org.springframework.test.context.junit.jupiter.SpringExtension
 import org.springframework.test.web.reactive.server.WebTestClient
 import org.springframework.test.web.reactive.server.expectBodyList
 
 
-@ExtendWith(SpringExtension::class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class TalkIntegrationTests(@Autowired val client: WebTestClient) {
 

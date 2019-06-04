@@ -11,7 +11,7 @@ enum class Language {
 
     companion object {
         fun findByTag(name: String): Language {
-            val language = Language.values().filter { value -> value.name.toLowerCase().substring(0, 2) == name }
+            val language = values().filter { value -> value.name.toLowerCase().substring(0, 2) == name }
             if (language.isEmpty()) {
                 throw IllegalArgumentException()
             }

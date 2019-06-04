@@ -44,7 +44,7 @@ private fun switchLangUrl(path: String, locale: Locale) : String {
     if (locale.language == "en" && (path == "/" || path == "/en/" || path == "/en")){
         return "/fr/"
     }
-    return if (locale.language == "en") path else "/en" + path
+    return if (locale.language == "en") path else "/en$path"
 }
 
 fun generateModelForExernalCall(baseUri: String,
