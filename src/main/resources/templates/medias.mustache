@@ -68,14 +68,15 @@
                                          alt="{{#i18n}}home.topics.{{topic}}.title{{/i18n}}"/>
                                     <span>{{#i18n}}home.topics.{{topic}}.title{{/i18n}}</span>
                                 </div>{{/topic}}
+                            <small>{{#date}}{{date}}{{/date}}</small> <strong>{{#start}}{{start}} - {{end}}{{/start}}</strong>
                             <h3 class="mxt-text--talktitle">
                                 {{#connected}}
-                                    <button class="mxt-img--favorite">
+                                    <button class="mxt-img--favorite" id="favorite-{{id}}">
                                         {{#favorite}}
-                                            <img src="/images/svg/favorites/mxt-favorite.svg" id="favorite-{{id}}" class="mxt-icon--cat__talks" onclick="ctrl.favoriteToggle(event)"/>
+                                            <img src="/images/svg/favorites/mxt-favorite.svg" class="mxt-icon--cat__talks" id="favorite-{{id}}"/>
                                         {{/favorite}}
                                         {{^favorite}}
-                                            <img src="/images/svg/favorites/mxt-favorite-non.svg" id="favorite-{{id}}" class="mxt-icon--cat__talks" onclick="ctrl.favoriteToggle(event)"/>
+                                            <img src="/images/svg/favorites/mxt-favorite-non.svg" class="mxt-icon--cat__talks" id="favorite-{{id}}"/>
                                         {{/favorite}}
                                     </button>
                                 {{/connected}}
@@ -85,34 +86,40 @@
                             <ul class="menu simple mxt-menu--accordion">
                                 <!--<li>{{#start}}{{start}}{{/start}} - {{#end}}{{end}}{{/end}}</li>-->
                                 {{#video}}
-                                    <li><strong>&#x25ba; {{#i18n}}medias.html.plus{{/i18n}}</strong></li>{{/video}}
-                                {{^isTalk}}
-                                    <li class="mxt-text--cat-format">#{{format}}</li>
-                                {{/isTalk}}
+                                    <li><strong>&#x25ba; {{#i18n}}talks.title.video{{/i18n}}</strong></li>{{/video}}
+
+                                <li class="mxt-text--cat-format">#{{#i18n}}talk.format.{{format}}{{/i18n}}</li>
+                            </ul>
+                            <ul class="menu">
+                                {{#speakers}}
+                                    <li>
+                                        <span class="mxt-text--cat mxt-text--cat-speaker" style="background-color: #e6e6e6; padding: 0.3em;color: #2c233d">{{firstname}}&nbsp;{{lastname}}</span>
+                                    </li>
+                                {{/speakers}}
                             </ul>
                         </a>
-                        <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
-                        <div class="accordion-content" data-tab-content>
+                        <div class="accordion-content active" data-tab-content>
                             <div class="row mxt-wrapper--row">
                                 <div class="small-7 medium-9 large-8 columns">
                                     <p class="mxt-text--cat-room">{{#i18n}}{{room}}{{/i18n}}</p>
-                                    <div>{{#markdown}}{{summary}}{{/markdown}}</div>
                                 </div>
                                 <div class="small-5 medium-3 large-4 columns text-center">
-                                    <ul class="menu vertical">
-                                        {{#speakers}}
-                                            <li class="menu-text">
-                                                <div class="mxt-img-avatar__wrapper"><a href="/user/{{login}}"><img
-                                                        data-src="{{^emailHash}}{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{/emailHash}}{{#emailHash}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/emailHash}}"
-                                                        class="mxt-img-avatar__speaker mxt-img--lazyload"></a></div>
-                                                <span><a href="/user/{{login}}">{{firstname}}&nbsp;{{lastname}}</a></span>
-                                            </li>
-                                        {{/speakers}}
-                                    </ul>
-                                    <hr/>
                                     <a href="{{localePrefix}}/{{event}}/{{slug}}" class="button hollow">{{#i18n}}talks.readmore{{/i18n}}</a>
                                 </div>
                             </div>
+                            <div>{{#markdown}}{{summary}}{{/markdown}}</div>
+
+
+                            <ul class="menu">
+                                {{#speakers}}
+                                    <li class="menu-text">
+                                        <div class="mxt-img-avatar__wrapper"><a href="/user/{{login}}"><img
+                                                data-src="{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{^photoUrl}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/photoUrl}}"
+                                            class="mxt-img-avatar__speaker mxt-img--lazyload"></a></div>
+                                        <span><a href="/user/{{login}}">{{firstname}}&nbsp;{{lastname}}</a></span>
+                                    </li>
+                                {{/speakers}}
+                            </ul>
                         </div>
                     </li>
                 </ul>
