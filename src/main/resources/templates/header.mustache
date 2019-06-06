@@ -53,6 +53,8 @@
                     <li class="show-for-small-only"><a href="{{localePrefix}}/faq" class="mxt-menu__item--nav" target="_blank">{{#i18n}}footer.menu.faq{{/i18n}}</a></li>
                     <li class="show-for-small-only"><a href="{{localePrefix}}/about" class="mxt-menu__item--nav">{{#i18n}}header.menu.about{{/i18n}}</a></li>
                     <li class="hide-for-small-only mxt-menu__item--bullet">&bull;</li>
+                    <li class="show-for-small-only"><a href="{{localePrefix}}/search" class="mxt-menu__item--nav mxt-menu__item--close-nav" title="{{#i18n}}search.title{{/i18n}}">{{#i18n}}search.title{{/i18n}}</a></li>
+
                     <li class="show-for-small-only">
                         {{#connected}}<a href="{{localePrefix}}/me"
                                          class="mxt-menu__item--nav mxt-menu__item--close-nav">{{#i18n}}header.menu.profile{{/i18n}}</a>{{/connected}}
@@ -62,10 +64,12 @@
                         {{^connected}}<a href="{{localePrefix}}/login"
                                          class="mxt-menu__item--nav mxt-menu__item--close-nav">{{#i18n}}header.menu.login{{/i18n}}</a>{{/connected}}
                     </li>
+
                     <li>
                         {{#en}}<a class="mxt-menu__item--lang" href="{{switchLangUrl}}">Français</a>{{/en}}
                         {{#fr}}<a href="{{switchLangUrl}}" class="mxt-menu__item--lang">English</a>{{/fr}}
                     </li>
+
                     <li class="hide-for-small-only"><a href="{{localePrefix}}/search" class="mxt-menu__item--nav mxt-menu__item--close-nav"><img
                             src="/images/svg/mxt-search.svg" title="{{#i18n}}header.menu.search{{/i18n}}" class="mxt-icon--top-bar"></a>
                     </li>
