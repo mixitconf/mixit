@@ -778,7 +778,36 @@
         "current": true,
         "end": "2019-05-24",
         "id": "mixit19",
-        "photoUrls": [],
+        "photoUrls": [
+            {
+                "name": "MiXiT 2019 jour 1",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708938281588"
+            },
+            {
+                "name": "MiXiT 2019 jour 2",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708938067278"
+            },
+            {
+                "name": "MiXiT 2019 random",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708938382416"
+            },
+            {
+                "name": "MiXiT 2019 soir\u00e9e Sucre",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708935015437"
+            },
+            {
+                "name": "MiXiT 2019 repas speaker",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708935015437"
+            },
+            {
+                "name": "MiXiT 2019 visite Lyon",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708935233072"
+            },
+            {
+                "name": "MiXiT 2019 mixteen",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708824798947"
+            }
+        ],
         "sponsors": [
             {
                 "level": "SILVER",
@@ -944,6 +973,16 @@
                 "level": "GOLD",
                 "sponsorId": "credit-agricole",
                 "subscriptionDate": "2019-05-13"
+            },
+            {
+                "level": "ECOLOGY",
+                "sponsorId": "data2viz",
+                "subscriptionDate": "2019-05-16"
+            },
+            {
+                "level": "MIXTEEN",
+                "sponsorId": "soluxan",
+                "subscriptionDate": "2019-05-20"
             }
         ],
         "start": "2019-05-23",
