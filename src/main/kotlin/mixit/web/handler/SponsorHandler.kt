@@ -88,7 +88,8 @@ class SponsorHandler(private val userRepository: UserRepository,
                                                 Pair("sponsors-main", mainSponsors),
                                                 Pair("sponsors-others", otherSponsors),
                                                 Pair("stars-old", oldStars.subList(0, 6)),
-                                                Pair("stars-current", currentStars.subList(0, 6))
+                                                //Pair("stars-current", currentStars.subList(0, 6))
+												Pair("stars-current", currentStars)
                                         ))
                                     } else {
                                         ServerResponse.ok().render(view, mapOf(

@@ -63,17 +63,16 @@ class UserHandler(private val repository: UserRepository,
                 "dgageot",
                 "romainguy",
                 "graphicsgeek1",
-                "sambrannen")
-        val speakerStarInCurrentEvent = listOf(
-                "bodil",
                 "andre",
-                "mary",
-                "Woody.Zuill",
-                "james.carlson",
-                "egorcenski",
-                "ojuncu",
-                "hsablonniere",
-                "nitot")
+				"mary",
+				"Woody.Zuill",
+				"james.carlson",
+				"egorcenski",
+				"ojuncu",
+				"hsablonniere",
+				"nitot"
+				)
+        val speakerStarInCurrentEvent = listOf<String>()
     }
 
     enum class ViewMode { ViewMyProfile, ViewUser, EditProfile }
