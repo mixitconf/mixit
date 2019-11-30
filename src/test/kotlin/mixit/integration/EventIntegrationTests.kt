@@ -28,7 +28,7 @@ class EventIntegrationTests(@Autowired val client: WebTestClient) {
                 .exchange()
                 .expectStatus().is2xxSuccessful
                 .expectBodyList<Event>()
-                .hasSize(8)
+                .hasSize(9)
 
     }
     
