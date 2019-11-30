@@ -65,7 +65,7 @@ class SponsorHandler(private val userRepository: UserRepository,
 
                                     spolights.forEach {
                                         val elements = sponsorsByEvent[it]?.map { it.toSponsorDto(usersByLogin[it.sponsorId]!!) }?.toList()
-                                        mainSponsors.addAll(elements!!)
+                                        mainSponsors.addAll(elements.orEmpty())
                                     }
 
                                     val mainSponsorIds = mainSponsors.map { it.login }
