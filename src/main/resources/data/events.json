@@ -1004,6 +1004,26 @@
                 "level": "ECOLOGY",
                 "sponsorId": "data2viz",
                 "subscriptionDate": "2019-11-26"
+            },
+            {
+              "level": "GOLD",
+              "sponsorId": "VISEO",
+              "subscriptionDate": "2019-12-18"
+            },
+            {
+              "level": "GOLD",
+              "sponsorId": "Hopwork",
+              "subscriptionDate": "2019-12-30"
+            },
+            {
+              "level": "GOLD",
+              "sponsorId": "Sopra Steria",
+              "subscriptionDate": "2020-01-06"
+            },
+            {
+              "level": "PARTY",
+              "sponsorId": "braincube",
+              "subscriptionDate": "2019-12-24"
             }
         ],
         "start": "2020-04-29",
