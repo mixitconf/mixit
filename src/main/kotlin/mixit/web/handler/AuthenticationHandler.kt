@@ -3,6 +3,8 @@ package mixit.web.handler
 import mixit.MixitProperties
 import mixit.model.Role
 import mixit.model.User
+import mixit.model.generateNewToken
+import mixit.model.updateEmail
 import mixit.repository.TicketRepository
 import mixit.repository.UserRepository
 import mixit.util.*
@@ -23,7 +25,6 @@ import java.time.Duration
 import java.time.LocalDateTime
 import java.util.*
 
-
 @Component
 class AuthenticationHandler(private val userRepository: UserRepository,
                             private val ticketRepository: TicketRepository,
@@ -34,6 +35,8 @@ class AuthenticationHandler(private val userRepository: UserRepository,
 
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
+
+    private fun renderError(error: String?): Mono<ServerResponse> = ok().render("login-error", mapOf(Pair("description", error)))
 
     /**
      * Display a view with a form to send the email of the user
@@ -80,7 +83,7 @@ class AuthenticationHandler(private val userRepository: UserRepository,
         return temporaryRedirect(URI("${properties.baseUri}/")).build()
     }
 
-    private fun renderError(error: String?): Mono<ServerResponse> = ok().render("login-error", mapOf(Pair("description", error)))
+
 
     /**
      * Email is required for the sign in process. If email is not in our database, we ask to the visitor to create
@@ -241,9 +244,3 @@ class AuthenticationHandler(private val userRepository: UserRepository,
 
 }
 
-fun User.generateNewToken() = User(login, firstname, lastname, email, company, description, emailHash,
-        photoUrl, role, links, legacyId, LocalDateTime.now().plusHours(48),
-        UUID.randomUUID().toString().substring(0, 14).replace("-", ""))
-
-fun User.updateEmail(cryptographer: Cryptographer, newEmail: String) = User(login, firstname, lastname, cryptographer.encrypt(newEmail), company, description, emailHash,
-        photoUrl, role, links, legacyId, tokenExpiration, token)
