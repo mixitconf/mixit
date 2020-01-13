@@ -1,9 +1,11 @@
 package mixit.model
 
+import mixit.util.Cryptographer
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.index.TextIndexed
 import org.springframework.data.mongodb.core.mapping.Document
 import java.time.LocalDateTime
+import java.util.*
 
 
 @Document
@@ -28,3 +30,10 @@ enum class Role {
     STAFF_IN_PAUSE,
     USER
 }
+
+fun User.generateNewToken() = this.copy(
+        tokenExpiration = LocalDateTime.now().plusHours(48),
+        token = UUID.randomUUID().toString().substring(0, 14).replace("-", "")
+)
+
+fun User.updateEmail(cryptographer: Cryptographer, newEmail: String) = this.copy(email = cryptographer.encrypt(newEmail))
