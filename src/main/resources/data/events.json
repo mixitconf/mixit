@@ -991,11 +991,22 @@
     },
     {
         "current": true,
-        "end": "2020-04-29",
+        "end": "2020-04-30",
         "id": "mixit20",
         "photoUrls": [],
-        "sponsors": [],
-        "start": "2020-04-30",
+        "sponsors": [
+            {
+                "level": "SILVER",
+                "sponsorId": "feelinjob",
+                "subscriptionDate": "2019-11-18"
+            },
+            {
+                "level": "ECOLOGY",
+                "sponsorId": "data2viz",
+                "subscriptionDate": "2019-11-26"
+            }
+        ],
+        "start": "2020-04-29",
         "videoUrl": null,
         "year": 2020
     }
