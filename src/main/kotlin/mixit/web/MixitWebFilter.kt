@@ -23,6 +23,10 @@ import java.util.stream.Stream
 @Component
 class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRepository) : WebFilter {
 
+    data class Credential(val email: String, val token: String)
+
+    fun readCredentialsFromCookie(request: ServerHttpRequest):Credential? = (request.cookies).get("XSRF-TOKEN")?.first()?.value?.decodeFromBase64()?.split(":")?.let { Credential(it[0], it[1]) }
+
     private fun readUserInfo(request: ServerHttpRequest) = (request.cookies).get("XSRF-TOKEN")?.first()?.value?.decodeFromBase64()?.split(":")
 
     override fun filter(exchange: ServerWebExchange, chain: WebFilterChain) = exchange.session.flatMap { session ->
@@ -62,7 +66,7 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
     }
 
     fun filter(exchange: ServerWebExchange, chain: WebFilterChain, user: User?) =
-    // People who used the old URL are directly redirected
+            // People who used the old URL are directly redirected
             if (exchange.request.headers.host?.hostString?.endsWith("mix-it.fr") == true) {
                 val response = exchange.response
                 response.statusCode = HttpStatus.PERMANENT_REDIRECT

@@ -13,7 +13,7 @@ import org.springframework.context.MessageSource
 import org.springframework.web.reactive.function.server.RenderingResponse
 import org.springframework.web.reactive.function.server.RouterFunction
 import org.springframework.web.reactive.function.server.ServerResponse
-import reactor.core.publisher.toMono
+import reactor.kotlin.core.publisher.toMono
 import java.util.*
 
 /**
@@ -34,10 +34,11 @@ class ErrorWebFluxExceptionHandler(errorAttributes: ErrorAttributes,
                 .filter { request, next ->
                     val locale: Locale = request.locale()
                     val path = request.uri().path
-					request.session().flatMap {session ->
-						val model = generateModel(properties, path, locale, session, messageSource, markdownConverter)
-						next.handle(request).flatMap { if (it is RenderingResponse) RenderingResponse.from(it).modelAttributes(model).build() else it.toMono() }
-					}
+                    request.session().flatMap { session ->
+                        val model = generateModel(properties, path, locale, session, messageSource, markdownConverter)
+                        next.handle(request)
+                                .flatMap { if (it is RenderingResponse) RenderingResponse.from(it).modelAttributes(model).build() else it.toMono() }
+                    }
                 }
     }
 
