@@ -23,7 +23,7 @@ import org.springframework.web.reactive.function.server.body
 import org.springframework.web.reactive.function.server.bodyToMono
 import org.springframework.web.util.UriUtils
 import reactor.core.publisher.Mono
-import reactor.core.publisher.toMono
+import reactor.kotlin.core.publisher.toMono
 import java.net.URI.create
 import java.net.URLDecoder
 import java.nio.charset.StandardCharsets
