@@ -1,6 +1,7 @@
 package mixit.model
 
 import mixit.util.Cryptographer
+import mixit.util.encodeToBase64
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.index.TextIndexed
 import org.springframework.data.mongodb.core.mapping.Document
@@ -37,3 +38,5 @@ fun User.generateNewToken() = this.copy(
 )
 
 fun User.updateEmail(cryptographer: Cryptographer, newEmail: String) = this.copy(email = cryptographer.encrypt(newEmail))
+
+fun User.jsonToken(cryptographer: Cryptographer) = "${cryptographer.decrypt(email)}:${token}".encodeToBase64()!!
