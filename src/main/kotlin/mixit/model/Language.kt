@@ -5,13 +5,11 @@ enum class Language {
     FRENCH,
     ENGLISH;
 
-    fun toLanguageTag() {
-        name.toLowerCase().subSequence(0, 2)
-    }
+    fun toLanguageTag(): String = name.toLowerCase().subSequence(0, 2).toString()
 
     companion object {
         fun findByTag(name: String): Language {
-            val language = values().filter { value -> value.name.toLowerCase().substring(0, 2) == name }
+            val language = values().filter { value -> value.toLanguageTag() == name }
             if (language.isEmpty()) {
                 throw IllegalArgumentException()
             }
