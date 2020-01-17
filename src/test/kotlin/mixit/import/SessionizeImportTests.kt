@@ -8,11 +8,9 @@ import mixit.util.Cryptographer
 import mixit.util.encodeToMd5
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
-import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.core.io.ClassPathResource
-import org.springframework.test.context.junit.jupiter.SpringExtension
 import java.io.File
 import java.io.FileOutputStream
 import java.io.InputStream
@@ -51,7 +49,7 @@ class SessionizeImportTests(@Autowired val objectMapper: ObjectMapper,
             val filenameImage = imageName + if (speakerWithPngImage.any { it == imageName }) ".png" else ".jpg"
 
             // 1. we find user in our database
-            val user = userRepository.findByEmail(speakerId.email).block()
+            val user = userRepository.findByNonEncryptedEmail(speakerId.email).block()
             if (user != null) {
                 println("User found => ${speakerId.id} : ${speakerId.lastName} ${speakerId.firstName}")
 

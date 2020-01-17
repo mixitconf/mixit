@@ -103,7 +103,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
 
     @Test
     fun `a connected user should see an unsecured uri`() {
-        every { userRepository.findByEmail(any()) } returns Mono.just(aUser())
+        every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.just(aUser())
 
         client.get().uri("/api/talk/2421")
                 .cookie(MixitWebFilter.AUTENT_COOKIE, aUser().jsonToken(cryptographer))
@@ -117,7 +117,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
 
     @Test
     fun `a connected user should load a web resource`() {
-        every { userRepository.findByEmail(any()) } returns Mono.just(aUser())
+        every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.just(aUser())
 
         assertThat(client.get().uri("/images/svg/mxt-icon--heart.svg")
                 .cookie(MixitWebFilter.AUTENT_COOKIE, aUser().jsonToken(cryptographer))
@@ -131,7 +131,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
 
     @Test
     fun `a connected user should be redirected if he used the old website url`() {
-        every { userRepository.findByEmail(any()) } returns Mono.just(aUser())
+        every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.just(aUser())
 
         assertThat(client.get().uri("http://mix-it.fr/api/talk/2421")
                 .cookie(MixitWebFilter.AUTENT_COOKIE, aUser().jsonToken(cryptographer))
@@ -144,7 +144,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
 
     @Test
     fun `a connected user who launch home page with a locale different from france is redirected on english version`() {
-        every { userRepository.findByEmail(any()) } returns Mono.just(aUser())
+        every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.just(aUser())
 
         client.get().uri("/")
                 .header(HttpHeaders.ACCEPT_LANGUAGE, "en-US,en;q=0.5")
@@ -157,7 +157,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
 
     @Test
     fun `a connected user can open a secured URL`() {
-        every { userRepository.findByEmail(any()) } returns Mono.just(aUser())
+        every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.just(aUser())
 
         assertThat(client.get().uri("/me")
                 .cookie(MixitWebFilter.AUTENT_COOKIE, aUser().jsonToken(cryptographer))
@@ -171,7 +171,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
 
     @Test
     fun `a connected user can not open a secured URL if his token is expired`() {
-        every { userRepository.findByEmail(any()) } returns Mono.just(aUser().copy(tokenExpiration = LocalDateTime.now().minusMinutes(30)))
+        every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.just(aUser().copy(tokenExpiration = LocalDateTime.now().minusMinutes(30)))
 
         client.get().uri("/me")
                 .cookie(MixitWebFilter.AUTENT_COOKIE, aUser().jsonToken(cryptographer))
@@ -184,7 +184,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
 
     @Test
     fun `a connected user can not open an admin URL`() {
-        every { userRepository.findByEmail(any()) } returns Mono.just(aUser())
+        every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.just(aUser())
 
         client.get().uri("/admin")
                 .cookie(MixitWebFilter.AUTENT_COOKIE, aUser().jsonToken(cryptographer))
@@ -197,7 +197,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
 
     @Test
     fun `an admin user should see an unsecured uri`() {
-        every { userRepository.findByEmail(any()) } returns Mono.just(anAdmin())
+        every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.just(anAdmin())
 
         client.get().uri("/api/talk/2421")
                 .cookie(MixitWebFilter.AUTENT_COOKIE, anAdmin().jsonToken(cryptographer))
@@ -211,7 +211,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
 
     @Test
     fun `an admin user should load a web resource`() {
-        every { userRepository.findByEmail(any()) } returns Mono.just(anAdmin())
+        every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.just(anAdmin())
 
         assertThat(client.get().uri("/images/svg/mxt-icon--heart.svg")
                 .cookie(MixitWebFilter.AUTENT_COOKIE, anAdmin().jsonToken(cryptographer))
@@ -225,7 +225,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
 
     @Test
     fun `an admin user should be redirected if he used the old website url`() {
-        every { userRepository.findByEmail(any()) } returns Mono.just(anAdmin())
+        every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.just(anAdmin())
 
         assertThat(client.get().uri("http://mix-it.fr/api/talk/2421")
                 .cookie(MixitWebFilter.AUTENT_COOKIE, anAdmin().jsonToken(cryptographer))
@@ -238,7 +238,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
 
     @Test
     fun `an admin user who launch home page with a locale different from france is redirected on english version`() {
-        every { userRepository.findByEmail(any()) } returns Mono.just(anAdmin())
+        every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.just(anAdmin())
 
         client.get().uri("/")
                 .header(HttpHeaders.ACCEPT_LANGUAGE, "en-US,en;q=0.5")
@@ -251,7 +251,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
 
     @Test
     fun `an admin user can open a secured URL`() {
-        every { userRepository.findByEmail(any()) } returns Mono.just(anAdmin())
+        every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.just(anAdmin())
 
         assertThat(client.get().uri("/me")
                 .cookie(MixitWebFilter.AUTENT_COOKIE, anAdmin().jsonToken(cryptographer))
@@ -265,7 +265,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
 
     @Test
     fun `an admin user can not open a secured URL if his token is expired`() {
-        every { userRepository.findByEmail(any()) } returns Mono.just(anAdmin().copy(tokenExpiration = LocalDateTime.now().minusMinutes(30)))
+        every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.just(anAdmin().copy(tokenExpiration = LocalDateTime.now().minusMinutes(30)))
 
         client.get().uri("/me")
                 .cookie(MixitWebFilter.AUTENT_COOKIE, anAdmin().jsonToken(cryptographer))
@@ -278,7 +278,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
 
     @Test
     fun `an admin user can not open an admin URL`() {
-        every { userRepository.findByEmail(any()) } returns Mono.just(anAdmin())
+        every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.just(anAdmin())
 
         assertThat(client.get().uri("/admin")
                 .cookie(MixitWebFilter.AUTENT_COOKIE, anAdmin().jsonToken(cryptographer))
@@ -293,7 +293,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
 
     @Test
     fun `an admin user can not open an admin URL if his token is expired`() {
-        every { userRepository.findByEmail(any()) } returns Mono.just(anAdmin().copy(tokenExpiration = LocalDateTime.now().minusMinutes(30)))
+        every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.just(anAdmin().copy(tokenExpiration = LocalDateTime.now().minusMinutes(30)))
 
         client.get().uri("/admin")
                 .cookie(MixitWebFilter.AUTENT_COOKIE, anAdmin().jsonToken(cryptographer))
