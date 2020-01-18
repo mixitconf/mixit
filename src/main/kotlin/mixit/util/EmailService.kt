@@ -4,6 +4,7 @@ import com.samskivert.mustache.Mustache
 import mixit.MixitProperties
 import mixit.model.User
 import mixit.web.generateModelForExernalCall
+import mixit.web.service.EmailSenderException
 import org.slf4j.LoggerFactory
 import org.springframework.context.MessageSource
 import org.springframework.core.io.ResourceLoader
@@ -47,7 +48,7 @@ class EmailService(private val properties: MixitProperties,
             }
         }.onFailure {
             logger.error("Not possible to send email [$subject] to ${user.email}", it)
-            throw RuntimeException("Error when system send the mail $subject", it)
+            throw EmailSenderException("Error when system send the mail $subject")
         }
     }
 

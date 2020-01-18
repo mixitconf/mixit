@@ -4,6 +4,7 @@ import io.mockk.confirmVerified
 import io.mockk.every
 import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.MockK
+import io.mockk.impl.annotations.SpyK
 import io.mockk.junit5.MockKExtension
 import io.mockk.verify
 import mixit.model.Role
@@ -13,6 +14,7 @@ import mixit.repository.TicketRepository
 import mixit.repository.UserRepository
 import mixit.util.Cryptographer
 import mixit.util.EmailService
+import mixit.util.validator.EmailValidator
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import reactor.core.publisher.Mono
@@ -29,6 +31,8 @@ internal class AuthenticationServiceTest {
     lateinit var ticketRepository: TicketRepository
     @MockK
     lateinit var emailService: EmailService
+    @SpyK
+    var emailValidator: EmailValidator = EmailValidator()
     @MockK
     lateinit var cryptographer: Cryptographer
 
@@ -144,24 +148,13 @@ internal class AuthenticationServiceTest {
                 .verify()
     }
 
-    @Test
-    fun `should generate and save new user token but not send it`() {
-        every { userRepository.save(any() as User) } returns Mono.just(aUser)
-
-        StepVerifier.create(service.generateAndSendToken(aUser, Locale.FRANCE, false))
-                .expectNext(aUser)
-                .verifyComplete()
-
-        // We check that email service was not called
-        confirmVerified(emailService)
-    }
 
     @Test
     fun `should generate, save and send new user token`() {
         every { userRepository.save(any() as User) } returns Mono.just(aUser)
         every { emailService.send(any(), any(), any()) } answers {}
 
-        StepVerifier.create(service.generateAndSendToken(aUser, Locale.FRANCE, true))
+        StepVerifier.create(service.generateAndSendToken(aUser, Locale.FRANCE))
                 .expectNext(aUser)
                 .verifyComplete()
 
@@ -174,11 +167,21 @@ internal class AuthenticationServiceTest {
         every { userRepository.save(any() as User) } returns Mono.just(aUser)
         every { emailService.send(any(), any(), any()) } throws EmailSenderException("Error on mail sent")
 
-        StepVerifier.create(service.generateAndSendToken(aUser, Locale.FRANCE, true))
+        StepVerifier.create(service.generateAndSendToken(aUser, Locale.FRANCE))
                 .consumeErrorWith { EmailSenderException("Error on mail sent") }
                 .verify()
 
         verify { emailService.send(any(), any(), any()) }
         confirmVerified(emailService)
+    }
+
+    @Test
+    fun `should clear token`() {
+        every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.just(aUser)
+        every { userRepository.save(any() as User) } returns Mono.just(aUser)
+
+        StepVerifier.create(service.clearToken(anEmail))
+                .expectNext(aUser)
+                .verifyComplete()
     }
 }
