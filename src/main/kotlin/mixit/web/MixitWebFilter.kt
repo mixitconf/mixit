@@ -56,7 +56,7 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
     fun filterAndCheckCredentials(exchange: ServerWebExchange, chain: WebFilterChain, session: WebSession, credential: Credential?): Mono<Void> =
             credential?.let {
                 // If session contains credentials we check data
-                userRepository.findByEmail(it.email).flatMap { user ->
+                userRepository.findByNonEncryptedEmail(it.email).flatMap { user ->
                     // We have to see if the token is the good one anf if it is yet valid
                     if (user.token.equals(it.token) && user.tokenExpiration.isAfter(LocalDateTime.now())) {
                         // If user is found we need to restore infos in session
