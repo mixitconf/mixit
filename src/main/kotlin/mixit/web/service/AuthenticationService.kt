@@ -1,0 +1,121 @@
+package mixit.web.service
+
+import mixit.model.Role
+import mixit.model.User
+import mixit.model.generateNewToken
+import mixit.model.jsonToken
+import mixit.repository.TicketRepository
+import mixit.repository.UserRepository
+import mixit.util.Cryptographer
+import mixit.util.EmailService
+import mixit.util.toSlug
+import mixit.util.validator.EmailValidator
+import org.slf4j.LoggerFactory
+import org.springframework.http.ResponseCookie
+import org.springframework.stereotype.Service
+import reactor.core.publisher.Mono
+import java.time.Duration
+import java.time.LocalDateTime
+import java.util.*
+
+@Service
+class AuthenticationService(private val userRepository: UserRepository,
+                            private val ticketRepository: TicketRepository,
+                            private val emailService: EmailService,
+                            private val emailValidator: EmailValidator,
+                            private val cryptographer: Cryptographer) {
+
+    private val logger = LoggerFactory.getLogger(this.javaClass)
+
+    /**
+     * Create user from HTTP form or from a ticket
+     */
+    fun createUser(nonEncryptedMail: String?, firstname: String?, lastname: String?): Pair<String, User> =
+            emailValidator.check(nonEncryptedMail).let { email ->
+                if (firstname == null || lastname == null) {
+                    throw CredentialValidatorException()
+                }
+                Pair(email, User(
+                        login = email.split("@").get(0).toSlug(),
+                        firstname = firstname.toLowerCase().capitalize(),
+                        lastname = lastname.toLowerCase().capitalize(),
+                        email = cryptographer.encrypt(email),
+                        role = Role.USER
+                ))
+            }
+
+
+    /**
+     * Create user if he does not exist
+     */
+    fun createUserIfEmailDoesNotExist(nonEncryptedMail: String, user: User): Mono<User> =
+            userRepository.findOne(user.login)
+                    .flatMap { Mono.error<User> { DuplicateException("Login already exist") } }
+                    .switchIfEmpty(
+                            Mono.defer {
+                                userRepository.findByNonEncryptedEmail(nonEncryptedMail)
+                                        // Email is unique and if an email is found we return an error
+                                        .flatMap { Mono.error<User> { DuplicateException("Email already exist") } }
+                                        .switchIfEmpty(Mono.defer { userRepository.save(user) })
+                            })
+
+
+    /**
+     * This function try to find a user in the user table and if not try to read his information in
+     * ticketing table to create a new one.
+     */
+    fun searchUserByEmailOrCreateHimFromTicket(nonEncryptedMail: String): Mono<User> =
+            userRepository.findByNonEncryptedEmail(nonEncryptedMail)
+                    .switchIfEmpty(Mono.defer {
+                        ticketRepository.findByEmail(nonEncryptedMail)
+                                .flatMap { createUserIfEmailDoesNotExist(nonEncryptedMail, createUser(nonEncryptedMail, it.firstname, it.lastname).second) }
+                                .switchIfEmpty(Mono.empty<User>())
+                    })
+
+
+    fun createCookie(user: User) = ResponseCookie
+            .from("XSRF-TOKEN", user.jsonToken(cryptographer))
+            .maxAge(Duration.between(LocalDateTime.now(), user.tokenExpiration))
+            .build()
+
+    /**
+     * Function used on login to check if user email and token are valids
+     */
+    fun checkUserEmailAndToken(nonEncryptedMail: String, token: String): Mono<User> =
+            userRepository.findByNonEncryptedEmail(nonEncryptedMail)
+                    .flatMap {
+                        if (token.trim() == it.token && it.tokenExpiration.isAfter(LocalDateTime.now())) {
+                            return@flatMap Mono.just(it)
+                        }
+                        throw TokenException("Token is invalid or is expired")
+                    }
+                    .switchIfEmpty(Mono.defer { throw NotFoundException() })
+
+    /**
+     * Sends an email with a token to the user. We don't need validation of the email adress. If he receives
+     * the email it's OK. If he retries a login a new token is sent. Be careful email service can throw
+     * an EmailSenderException
+     */
+    fun generateAndSendToken(user: User, locale: Locale): Mono<User> =
+            user.generateNewToken().let { newUser ->
+                try {
+                    logger.info("A token ${newUser.token} was sent by email")
+                    emailService.send("email-token", newUser, locale)
+                    userRepository.save(newUser)
+                } catch (e: EmailSenderException) {
+                    Mono.error<User> { e }
+                }
+            }
+
+    /**
+     * Sends an email with a token to the user. We don't need validation of the email adress.
+     */
+    fun clearToken(nonEncryptedMail: String): Mono<User> =
+            userRepository
+                    .findByNonEncryptedEmail(nonEncryptedMail)
+                    .flatMap { user -> user.generateNewToken().let { userRepository.save(it) } }
+
+}
+
+
+

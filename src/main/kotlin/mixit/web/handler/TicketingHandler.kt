@@ -42,7 +42,8 @@ class TicketingHandler(private val ticketRepository: TicketRepository,
     fun submit(req: ServerRequest) = req.body(BodyExtractors.toFormData()).flatMap {
         val formData = it.toSingleValueMap()
 
-        val ticket = Ticket(formData["email"]!!.toLowerCase(),
+        val ticket = Ticket(
+                formData["email"]!!.toLowerCase(),
                 formData["firstname"]!!,
                 formData["lastname"]!!)
 

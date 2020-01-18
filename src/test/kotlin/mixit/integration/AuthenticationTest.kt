@@ -1,14 +1,15 @@
 package mixit.integration
 
+import com.ninjasquad.springmockk.MockkBean
 import com.ninjasquad.springmockk.SpykBean
 import io.mockk.every
-import io.mockk.slot
 import io.mockk.verify
 import mixit.model.Role
 import mixit.model.User
-import mixit.repository.UserRepository
-import mixit.util.Cryptographer
-import mixit.util.EmailService
+import mixit.util.encodeToBase64
+import mixit.util.validator.EmailValidator
+import mixit.web.service.AuthenticationService
+import mixit.web.service.DuplicateException
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
@@ -20,90 +21,211 @@ import reactor.core.publisher.Mono
 import java.time.LocalDateTime
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class AuthenticationTest(@Autowired val client: WebTestClient,
-                         @Autowired val cryptographer: Cryptographer) {
+class AuthenticationTest(@Autowired val client: WebTestClient) {
 
     @SpykBean
-    private lateinit var userRepository: UserRepository
+    lateinit var authenticationService: AuthenticationService
 
-    @SpykBean
-    private lateinit var emailService: EmailService
-
-    fun aUser() = User("tastapod", "Dan", "North", cryptographer.encrypt("dan@north.uk"), role = Role.USER, token = "token", tokenExpiration = LocalDateTime.now().plusDays(1))
+    val aUser = User("tastapod", "Dan", "North", "dan@north.uk", role = Role.USER, token = "token", tokenExpiration = LocalDateTime.now().plusDays(1))
 
 
     @Test
     fun `should open the login page`() {
-        val template = client.get().uri("/login").exchange().expectStatus().isOk.expectBody(String::class.java).returnResult().responseBody
-        assertThat(template)
+        val result = client.get().uri("/login")
+                .exchange()
+                .expectStatus().isOk
+                .expectBody(String::class.java)
+                .returnResult().responseBody
+
+        assertThat(result)
                 .contains("<h1 class=\"text-center\">Authentification</h1>")
-                // In the first step we don't ask for a token
-                .doesNotContain("<input type=\"password\" name=\"token\" placeholder=\"Token\" />")
-                // but only a password
+                // A field to send email
+                .contains("<input type=\"text\" name=\"email\" placeholder=\"contact@mix-it.fr\" />")
+                // A button to log in
                 .contains("<input type=\"submit\" class=\"button expand\" value=\"Se connecter\"/>")
     }
 
     @Test
-    fun `should not send a token when user send a wrong email`() {
-
-        val template = client.post()
-                .uri("/login")
-                .contentType(MediaType.APPLICATION_FORM_URLENCODED)
-                .body(BodyInserters.fromFormData("email", "wrongemail"))
+    fun `should open the login page with token when the user click on the link received by email`() {
+        val result = client.get().uri("/signin/${"my-token"}/${"dan@north.uk".encodeToBase64()}")
                 .exchange()
-                .expectStatus()
-                .isOk.expectBody(String::class.java)
+                .expectStatus().isOk
+                .expectBody(String::class.java)
                 .returnResult().responseBody
 
-        assertThat(template).contains("Votre email est invalid")
+        assertThat(result)
+                .contains("<h1 class=\"text-center\">Authentification</h1>")
+                // An hidden field to send email
+                .contains("<input type=\"hidden\" name=\"email\" value=\"dan&#64;north.uk\" />")
+                // A field to send token
+                .contains("<input type=\"password\" name=\"token\" placeholder=\"Token\" value=\"my-token\"/>")
+                // A button to log in
+                .contains("<input type=\"submit\" class=\"button expand\" value=\"Log In\"/>")
     }
 
     @Test
-    fun `should not send a token when user send nothing`() {
+    fun `should send a token when a user send his email on the login page`() {
+        every { authenticationService.searchUserByEmailOrCreateHimFromTicket(any()) } returns Mono.just(aUser)
+        every { authenticationService.generateAndSendToken(any(), any()) } returns Mono.just(aUser)
 
-        val template = client.post()
-                .uri("/login")
-                .contentType(MediaType.APPLICATION_FORM_URLENCODED)
-                .body(BodyInserters.fromFormData("email", ""))
-                .exchange()
-                .expectStatus()
-                .isOk.expectBody(String::class.java)
-                .returnResult().responseBody
-
-        assertThat(template).contains("Votre email est invalid")
-    }
-
-    @Test
-    fun `should send a token when user send his email and when he is known in our user database`() {
-        val slot = slot<User>()
-        val user = aUser()
-        every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.just(user)
-        every { emailService.send("email-token", any(), any()) } answers {}
-        every { userRepository.save(capture(slot)) } returns Mono.just(user)
-
-        val template = client.post()
-                .uri("/login")
+        val result = client.post().uri("/login")
                 .contentType(MediaType.APPLICATION_FORM_URLENCODED)
                 .body(BodyInserters.fromFormData("email", "dan@north.uk"))
                 .exchange()
-                .expectStatus()
-                .isOk.expectBody(String::class.java)
+                .expectBody(String::class.java)
                 .returnResult().responseBody
 
-        assertThat(template)
+        assertThat(result)
                 .contains("<h1 class=\"text-center\">Authentification</h1>")
-                // In the second step password is hidden
-                .contains("<input type=\"hidden\" name=\"email\" value=\"dan&#64;north.uk\" />")
-                // And we ask to send a token
+                // A message to say that a token was sent
+                .contains("Un token de connexion vient de vous être envoyé par email. Vous pouvez soit utiliser le " +
+                        "lien contenu dans ce mail pour vous connecter, soit coller dans le champ correspondant le " +
+                        "token reçu. ")
+                // A field to copy this token
                 .contains("<input type=\"password\" name=\"token\" placeholder=\"Token\" />")
+                // A button to send informations
+                .contains(" <input type=\"submit\" class=\"button expand\" value=\"Log In\"/>")
 
-        assertThat(slot.captured.login).isEqualTo(user.login)
-        assertThat(slot.captured.token).isNotEqualTo(user.token)
-        assertThat(slot.captured.tokenExpiration).isNotEqualTo(user.tokenExpiration)
-
-        verify { emailService.send("email-token", any(), any()) }
+        verify { authenticationService.searchUserByEmailOrCreateHimFromTicket(any()) }
+        verify { authenticationService.generateAndSendToken(any(), any()) }
     }
 
-    // TODO send a token
+    @Test
+    fun `should display error page when a user send an invalid email on the login page`() {
+        val result = client.post().uri("/login")
+                .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+                .body(BodyInserters.fromFormData("email", "dannorth.uk"))
+                .exchange()
+                .expectBody(String::class.java)
+                .returnResult().responseBody
+
+        assertThat(result)
+                .contains("<h1 class=\"text-center\">Authentification</h1>")
+                // An error message
+                .contains("Votre email est invalide")
+                // A button to go back
+                .contains("<p><a href=\"/login\">Retour vers le formulaire</a></p>")
+    }
+
+
+    @Test
+    fun `should display error page when a token can't be send because email service failed`() {
+        every { authenticationService.searchUserByEmailOrCreateHimFromTicket(any()) } returns Mono.just(aUser)
+        every { authenticationService.generateAndSendToken(any(), any()) } returns Mono.error { DuplicateException("Login duplicated") }
+
+        val result = client.post().uri("/login")
+                .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+                .body(BodyInserters.fromFormData("email", "dan@north.uk"))
+                .exchange()
+                .expectBody(String::class.java)
+                .returnResult().responseBody
+
+        assertThat(result)
+                .contains("<h1 class=\"text-center\">Authentification</h1>")
+                // An error message
+                .contains("Erreur lors de l'envoi du mail contenant le token de connexion. Essayez une nouvelle fois ou contacter nous")
+                // A button to go back
+                .contains("<p><a href=\"/login\">Retour vers le formulaire</a></p>")
+
+        verify { authenticationService.searchUserByEmailOrCreateHimFromTicket(any()) }
+        verify { authenticationService.generateAndSendToken(any(), any()) }
+    }
+
+    @Test
+    fun `should ask more informations to a user to create his account after he send his email on the login page`() {
+        val result = client.post().uri("/login")
+                .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+                .body(BodyInserters.fromFormData("email", "dan@north.uk"))
+                .exchange()
+                .expectBody(String::class.java)
+                .returnResult().responseBody
+
+        assertThat(result)
+                .contains("<h1 class=\"text-center\">Authentification</h1>")
+                // a message to alert user
+                .contains("Votre e-mail n'est pas associé à un compte. Si vous voulez créer un compte, donnez nous un peu plus de détail ")
+                // an hidden field with user email
+                .contains("<input type=\"hidden\" name=\"email\" value=\"dan&#64;north.uk\"/>")
+                // firstname
+                .contains("<input type=\"text\" name=\"firstname\" required/>")
+                // lastname
+                .contains("<input type=\"text\" name=\"lastname\" required/>")
+                // a button to create an account
+                .contains("<input type=\"submit\" class=\"button expand\" value=\"Créer un compte\"/>")
+    }
+
+    @Test
+    fun `should create user and him send a cookie to the user if his email and token are valids`() {
+        //every { authenticationService.createUser(any(), any(), any()) } returns Pair("dan@north.uk", aUser)
+        every { authenticationService.createUserIfEmailDoesNotExist(any(), any()) } returns Mono.just(aUser)
+        every { authenticationService.generateAndSendToken(any(), any()) } returns Mono.just(aUser)
+
+        val result = client.post().uri("/signup")
+                .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+                .body(BodyInserters.fromFormData("email", "dan@north.uk")
+                        .with("firstname", "dan")
+                        .with("lastname", "north"))
+                .exchange()
+                .expectBody(String::class.java)
+                .returnResult().responseBody
+
+        assertThat(result)
+                .contains("<h1 class=\"text-center\">Authentification</h1>")
+                // A message to say that a token was sent
+                .contains("Un token de connexion vient de vous être envoyé par email. Vous pouvez soit utiliser le " +
+                        "lien contenu dans ce mail pour vous connecter, soit coller dans le champ correspondant le " +
+                        "token reçu. ")
+                // A field to copy this token
+                .contains("<input type=\"password\" name=\"token\" placeholder=\"Token\" />")
+                // A button to send informations
+                .contains(" <input type=\"submit\" class=\"button expand\" value=\"Log In\"/>")
+
+        verify { authenticationService.createUserIfEmailDoesNotExist(any(), any()) }
+        verify { authenticationService.generateAndSendToken(any(), any()) }
+    }
+
+    @Test
+    fun `should not create new user if firstname or lastname are missing`() {
+        //every { authenticationService.createUser(any(), any(), any()) } returns ("dan@north.uk", aUser)
+        every { authenticationService.createUserIfEmailDoesNotExist(any(), any()) } returns Mono.just(aUser)
+        every { authenticationService.generateAndSendToken(any(), any()) } returns Mono.just(aUser)
+
+        val result = client.post().uri("/signup")
+                .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+                .body(BodyInserters.fromFormData("email", "dan@north.uk"))
+                .exchange()
+                .expectBody(String::class.java)
+                .returnResult().responseBody
+
+        assertThat(result)
+                .contains("<h1 class=\"text-center\">Authentification</h1>")
+                // A message to say that a token was sent
+                .contains("Tous les champs sont requis.")
+                // A button to go back
+                .contains("<p><a href=\"/login\">Retour vers le formulaire</a></p>")
+    }
+
+    @Test
+    fun `should not create new user if email is invalid`() {
+        //every { authenticationService.createUser(any(), any(), any()) } returns ("dan@north.uk", aUser)
+        every { authenticationService.createUserIfEmailDoesNotExist(any(), any()) } returns Mono.just(aUser)
+        every { authenticationService.generateAndSendToken(any(), any()) } returns Mono.just(aUser)
+
+        val result = client.post().uri("/signup")
+                .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+                .body(BodyInserters.fromFormData("email", "dannorth.uk")
+                        .with("firstname", "dan")
+                        .with("lastname", "north"))
+                .exchange()
+                .expectBody(String::class.java)
+                .returnResult().responseBody
+
+        assertThat(result)
+                .contains("<h1 class=\"text-center\">Authentification</h1>")
+                // A message to say that a token was sent
+                .contains("Votre email est invalide")
+                // A button to go back
+                .contains("<p><a href=\"/login\">Retour vers le formulaire</a></p>")
+    }
 
 }

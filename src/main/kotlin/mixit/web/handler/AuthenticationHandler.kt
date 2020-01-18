@@ -1,18 +1,16 @@
 package mixit.web.handler
 
 import mixit.MixitProperties
-import mixit.model.Role
 import mixit.model.User
-import mixit.model.generateNewToken
-import mixit.model.updateEmail
-import mixit.repository.TicketRepository
-import mixit.repository.UserRepository
-import mixit.util.*
+import mixit.util.Cryptographer
+import mixit.util.decodeFromBase64
+import mixit.util.locale
 import mixit.util.validator.EmailValidator
-import org.slf4j.LoggerFactory
-import org.springframework.http.ResponseCookie
+import mixit.web.handler.AuthenticationHandler.LoginError.*
+import mixit.web.service.AuthenticationService
+import mixit.web.service.CredentialValidatorException
+import mixit.web.service.EmailValidatorException
 import org.springframework.stereotype.Component
-import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.BodyExtractors.toFormData
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
@@ -21,150 +19,91 @@ import org.springframework.web.server.WebSession
 import reactor.core.publisher.Mono
 import java.net.URI
 import java.net.URLDecoder
-import java.time.Duration
-import java.time.LocalDateTime
-import java.util.*
+
 
 @Component
-class AuthenticationHandler(private val userRepository: UserRepository,
-                            private val ticketRepository: TicketRepository,
+class AuthenticationHandler(private val authenticationService: AuthenticationService,
                             private val properties: MixitProperties,
-                            private val emailService: EmailService,
                             private val emailValidator: EmailValidator,
                             private val cryptographer: Cryptographer) {
 
+    private fun displayView(page: LoginPage, context: Map<String, String> = emptyMap()) = ok().render(page.template, context)
+    private fun displayErrorView(error: LoginError): Mono<ServerResponse> = displayView(LoginPage.ERROR, mapOf(Pair("description", error.i18n)))
 
-    private val logger = LoggerFactory.getLogger(this.javaClass)
+    private enum class LoginPage(val template: String) {
+        // Page with a field to send his email
+        LOGIN("login"),
+        // An error page with a description of this error
+        ERROR("login-error"),
+        // Page with a field to send his token (received by email)
+        CONFIRMATION("login-confirmation"),
+        // Page displayed when a user is unknown
+        CREATION("login-creation")
+    }
 
-    private fun renderError(error: String?): Mono<ServerResponse> = ok().render("login-error", mapOf(Pair("description", error)))
+    private enum class LoginError(val i18n: String) {
+        // Email is invalid
+        INVALID_EMAIL("login.error.creation.mail"),
+        INVALID_TOKEN("login.error.badtoken.text"),
+        TOKEN_SENT("login.error.sendtoken.text"),
+        DUPLICATE_LOGIN("login.error.uniquelogin.text"),
+        DUPLICATE_EMAIL("login.error.uniqueemail.text"),
+        SIGN_UP_ERROR("login.error.field.text"),
+        REQUIRED_CREDENTIALS("login.error.required.text")
+    }
+
+    private fun duplicateException(e: Throwable): LoginError = if (e.message != null && e.message!!.contains("login")) DUPLICATE_LOGIN else DUPLICATE_EMAIL
+
 
     /**
      * Display a view with a form to send the email of the user
      */
-    fun loginView(req: ServerRequest) = ok().render("login")
+    fun loginView(req: ServerRequest) = displayView(LoginPage.LOGIN)
 
     /**
-     * Action when user wants to sign in
+     * Action called by an HTTP post when a user send his email to connect to our application. If user is found
+     * we send him a token by email. If not we ask him more informations to create an account. But before we
+     * try to find him in ticket database
      */
-    fun login(req: ServerRequest): Mono<ServerResponse> = req.body(toFormData()).flatMap { data ->
-        // Email is required
-        if (data.toSingleValueMap()["email"] == null) {
-            renderError("login.error.text")
-        } else if (!emailValidator.isValid(data.toSingleValueMap()["email"]!!)) {
-            renderError("login.error.creation.mail")
-        } else {
-            searchUserAndSendToken(req, data.toSingleValueMap()["email"]!!.trim().toLowerCase())
+    fun login(req: ServerRequest): Mono<ServerResponse> = req.body(toFormData()).flatMap {
+        try {
+            val nonEncryptedMail = emailValidator.check(it.toSingleValueMap()["email"])
+            authenticationService.searchUserByEmailOrCreateHimFromTicket(nonEncryptedMail)
+                    // If user is found we send him a token
+                    .flatMap { generateAndSendToken(req, it, nonEncryptedMail) }
+                    // An error can be thrown when we try to create a user from ticketting
+                    .onErrorResume { displayErrorView(duplicateException(it)) }
+                    // if user is not found we ask him if he wants to create a new account
+                    .switchIfEmpty(Mono.defer { displayView(LoginPage.CREATION, mapOf(Pair("email", nonEncryptedMail))) })
+        } catch (e: EmailValidatorException) {
+            displayErrorView(LoginError.INVALID_EMAIL)
         }
     }
 
     /**
-     * Action when user wants to log out
+     * Action called by an HTTP post when a user want to sign up to our application and create his account. If creation
+     * is OK, we send him a token by email
      */
-    fun logout(req: ServerRequest): Mono<ServerResponse> = req.session().flatMap { session ->
-        Mono.justOrEmpty(session.getAttribute<String>("email"))
-                .flatMap {
-                    userRepository
-                            .findByEmail(it)
-                            .flatMap {
-                                updateUserToken(it, req.locale())
-                                        .flatMap { clearSession(session) }
-                                        .switchIfEmpty(clearSession(session))
-                            }
-                            .switchIfEmpty(clearSession(session))
-                }
-                .switchIfEmpty(clearSession(session))
-    }
-
-    private fun clearSession(session: WebSession): Mono<ServerResponse> {
-        session.attributes.remove("email")
-        session.attributes.remove("login")
-        session.attributes.remove("token")
-        session.attributes.remove("role")
-        return temporaryRedirect(URI("${properties.baseUri}/")).build()
-    }
-
-
-
-    /**
-     * Email is required for the sign in process. If email is not in our database, we ask to the visitor to create
-     * a new account. If the account already exists we send him a token by email
-     */
-    private fun searchUserAndSendToken(req: ServerRequest, email: String): Mono<ServerResponse> {
-
-        val context = mapOf(Pair("email", email))
-
-        // We need to know if user exists or not
-        return userRepository.findByEmail(email)
-                .flatMap { user ->
-                    // if user exists we send a token by email
-                    updateUserToken(if (user.email == null) user.updateEmail(cryptographer, email) else user, req.locale(), sendToken = true)
-                            // if token is sent we call the the screen where user can type this token
-                            .flatMap { ok().render("login-confirmation", context) }
-                            // if not this is an error
-                            .switchIfEmpty(renderError("login.error.sendtoken.text"))
-                }
-                // if user is not found we ask him if he wants to create a new account
-                .switchIfEmpty(searchUserInTicketsAndSendToken(req, email, context))
-    }
-
-
-    private fun searchUserInTicketsAndSendToken(req: ServerRequest, email: String, context: Map<String, String>): Mono<ServerResponse> =
-            ticketRepository.findByEmail(email)
-                .flatMap { ticket ->
-                    createUser(
-                            req,
-                            email,
-                            User(
-                                    login = email.split("@").get(0).toSlug(),
-                                    firstname = ticket.firstname.toLowerCase().capitalize(),
-                                    lastname = ticket.lastname.toLowerCase().capitalize(),
-                                    email = cryptographer.encrypt(email),
-                                    photoUrl = "/images/png/mxt-icon--default-avatar.png",
-                                    role = Role.USER
-                            )
-                    )
-                }
-                // if user is not found we ask him if he wants to create a new account
-                .switchIfEmpty(ServerResponse.ok().render("login-creation", context))
-
-    /**
-     * Action to create a new account. Email, firstname, lastname are required in the form sent by the user
-     */
-    fun signUp(req: ServerRequest): Mono<ServerResponse> = req.body(BodyExtractors.toFormData()).flatMap {
-        val formData = it.toSingleValueMap()
-
-        if (formData["email"] == null || formData["firstname"] == null || formData["lastname"] == null)
-            renderError("login.error.field.text")
-
-        val email = formData["email"]!!.trim().toLowerCase()
-        val user = User(
-                login = email.split("@").get(0).toSlug(),
-                firstname = formData["firstname"]!!.toLowerCase().capitalize(),
-                lastname = formData["lastname"]!!.toLowerCase().capitalize(),
-                email = cryptographer.encrypt(email),
-                photoUrl = "/images/png/mxt-icon--default-avatar.png",
-                role = Role.USER
-        )
-
-        if (!emailValidator.isValid(email)) {
-            renderError("login.error.creation.mail")
-        } else {
-            createUser(req, email, user)
+    fun signUp(req: ServerRequest): Mono<ServerResponse> = req.body(toFormData()).flatMap {
+        it.toSingleValueMap().let { formData ->
+            try {
+                val newUser = authenticationService.createUser(formData["email"], formData["firstname"], formData["lastname"])
+                authenticationService.createUserIfEmailDoesNotExist(nonEncryptedMail = newUser.first, user = newUser.second)
+                        .flatMap { generateAndSendToken(req, nonEncryptedMail = newUser.first, user = newUser.second) }
+            } catch (e: EmailValidatorException) {
+                displayErrorView(INVALID_EMAIL)
+            } catch (e: CredentialValidatorException) {
+                displayErrorView(SIGN_UP_ERROR)
+            }
         }
     }
 
-    fun createUser(req: ServerRequest, nonEncryptedEmail: String, user: User): Mono<ServerResponse> = userRepository
-            .findByEmail(nonEncryptedEmail)
-            // Email is unique and if an email is found we return an error
-            .flatMap { renderError("login.error.uniqueemail.text") }
-            .switchIfEmpty(
-                    userRepository
-                            .save(user)
-                            // if user is created we send him a token by email
-                            .flatMap { searchUserAndSendToken(req, nonEncryptedEmail.trim().toLowerCase()) }
-                            // otherwise we display an error
-                            .switchIfEmpty(renderError("login.error.creation.text"))
-            )
+    private fun generateAndSendToken(req: ServerRequest, user: User, nonEncryptedMail: String): Mono<ServerResponse> =
+            authenticationService.generateAndSendToken(user, req.locale())
+                    // if token is sent we call the the screen where user can type this token
+                    .flatMap { displayView(LoginPage.CONFIRMATION, mapOf(Pair("email", nonEncryptedMail))) }
+                    // An error can occur when email is sent
+                    .onErrorResume { displayErrorView(LoginError.TOKEN_SENT) }
 
 
     /**
@@ -174,73 +113,58 @@ class AuthenticationHandler(private val userRepository: UserRepository,
     fun signInViaUrl(req: ServerRequest): Mono<ServerResponse> {
         val email = URLDecoder.decode(req.pathVariable("email"), "UTF-8").decodeFromBase64()
         val token = req.pathVariable("token")
-
-        val context = mapOf(Pair("email", email), Pair("token", token))
-        return ok().render("login-confirmation", context)
+        return displayView(LoginPage.CONFIRMATION, mapOf(
+                Pair("email", emailValidator.check(email)),
+                Pair("token", token)))
     }
 
 
     /**
-     * Action when user wants to send his token to open a session. This token is valid only for a limited time
-     * This action is launched when user copy the token in the website
+     * Action called by an HTTP post when user wants to send his email and his token to open a session.
      */
-    fun signIn(req: ServerRequest): Mono<ServerResponse> = req.body(toFormData()).flatMap { data ->
-        val formData = data.toSingleValueMap()
+    fun signIn(req: ServerRequest): Mono<ServerResponse> = req.body(toFormData()).flatMap {
+        it.toSingleValueMap().let { formData ->
+            // If email or token are null we can't open a session
+            if (formData["email"] == null || formData["token"] == null) {
+                displayErrorView(REQUIRED_CREDENTIALS)
+            } else {
+                // Email sent can be crypted or not
+                val nonEncryptedMail = if (formData["email"]!!.contains("@")) formData["email"] else cryptographer.decrypt(formData["email"])
+                val token = formData["token"]!!
 
-        // If email or token are null we can't open a session
-        if (formData["email"] == null || formData["token"] == null) {
-            renderError("login.error.required.text")
-        }
-
-        val email = if (formData["email"]!!.contains("@")) formData["email"] else cryptographer.decrypt(formData["email"])
-        val token = formData["token"]!!
-
-        req.session().flatMap { session ->
-            userRepository.findByEmail(email!!)
-                    // User must exist at this point
-                    .flatMap { user ->
-                        if (token.trim() == user.token) {
-                            if (user.tokenExpiration.isBefore(LocalDateTime.now())) {
-                                // token has to be valid
-                                renderError("login.error.token.text")
-                            } else {
-                                session.attributes["role"] = user.role
-                                session.attributes["email"] = email
-                                session.attributes["token"] = token
-
-                                seeOther(URI("${properties.baseUri}/me"))
-                                        .cookie(ResponseCookie
-                                                .from("XSRF-TOKEN", "${email}:${token}".encodeToBase64()!!)
-                                                .maxAge(Duration.between(LocalDateTime.now(), user.tokenExpiration))
-                                                .build())
-                                        .build()
+                authenticationService.checkUserEmailAndToken(nonEncryptedMail!!, token)
+                        .flatMap { user ->
+                            req.session().flatMap { session ->
+                                session.apply {
+                                    attributes["role"] = user.role
+                                    attributes["email"] = nonEncryptedMail
+                                    attributes["token"] = token
+                                }
+                                seeOther(URI("${properties.baseUri}/me")).cookie(authenticationService.createCookie(user)).build()
                             }
-                        } else {
-                            renderError("login.error.badtoken.text")
                         }
-
-                    }
-                    .switchIfEmpty(renderError("login.error.bademail.text"))
+                        .onErrorResume { displayErrorView(LoginError.INVALID_TOKEN) }
+            }
         }
     }
 
     /**
-     * Sends an email with a token to the user. We don't need validation of the email adress. If he receives
-     * the email it's OK. If he retries a login a new token is sent
+     * Action when user wants to log out
      */
-    private fun updateUserToken(user: User, locale: Locale, sendToken: Boolean = false): Mono<User> {
-        val userToUpdate = user.generateNewToken()
-        try {
-            if (sendToken) {
-                logger.info("A token ${userToUpdate.token} was sent by email")
-                emailService.send("email-token", userToUpdate, locale)
-            }
-            return userRepository.save(userToUpdate)
-        } catch (e: RuntimeException) {
-            logger.error(e.message, e)
-            return Mono.empty()
-        }
+    fun logout(req: ServerRequest): Mono<ServerResponse> = req.session().flatMap { session ->
+        Mono.justOrEmpty(session.getAttribute<String>("email"))
+                .flatMap { authenticationService.clearToken(it).flatMap { clearSession(session) } }
+                .switchIfEmpty(Mono.defer { clearSession(session) })
     }
 
+    private fun clearSession(session: WebSession): Mono<ServerResponse> {
+        session.attributes.apply {
+            remove("email")
+            remove("login")
+            remove("token")
+            remove("role")
+        }
+        return temporaryRedirect(URI("${properties.baseUri}/")).build()
+    }
 }
 

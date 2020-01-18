@@ -90,13 +90,13 @@ class UserHandler(private val repository: UserRepository,
     fun findProfileView(req: ServerRequest) =
             req.session().flatMap {
                 val currentUserEmail = it.getAttribute<String>("email")
-                repository.findByEmail(currentUserEmail!!).flatMap { findOneViewDetail(req, it, ViewMode.ViewMyProfile) }
+                repository.findByNonEncryptedEmail(currentUserEmail!!).flatMap { findOneViewDetail(req, it, ViewMode.ViewMyProfile) }
             }
 
     fun editProfileView(req: ServerRequest) =
             req.session().flatMap {
                 val currentUserEmail = it.getAttribute<String>("email")
-                repository.findByEmail(currentUserEmail!!).flatMap { findOneViewDetail(req, it, ViewMode.EditProfile) }
+                repository.findByNonEncryptedEmail(currentUserEmail!!).flatMap { findOneViewDetail(req, it, ViewMode.EditProfile) }
             }
 
     private fun findOneViewDetail(req: ServerRequest,
@@ -155,7 +155,7 @@ class UserHandler(private val repository: UserRepository,
             val formData = it.toSingleValueMap()
 
             // In his profile screen a user can't change all the data. In the first step we load the user
-            repository.findByEmail(currentUserEmail!!).flatMap {
+            repository.findByNonEncryptedEmail(currentUserEmail!!).flatMap {
 
                 val errors = mutableMapOf<String, String>()
 
@@ -265,7 +265,7 @@ class UserHandler(private val repository: UserRepository,
         created(create("/api/user/${it.login}")).json().body(it.toMono())
     }
 
-    fun check(req: ServerRequest) = ok().json().body(repository.findByEmail(req.pathVariable("email"))
+    fun check(req: ServerRequest) = ok().json().body(repository.findByNonEncryptedEmail(req.pathVariable("email"))
             .filter { it.token == req.headers().header("token").get(0) }
             .map { it.toDto(req.language(), markdownConverter) }
     )
