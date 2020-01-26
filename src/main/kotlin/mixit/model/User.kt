@@ -8,7 +8,9 @@ import org.springframework.data.mongodb.core.mapping.Document
 import java.time.LocalDateTime
 import java.util.*
 
-
+object Users {
+    val DEFAULT_IMG_URL =  "/images/png/mxt-icon--default-avatar.png"
+}
 @Document
 data class User(
         @Id val login: String,
@@ -18,7 +20,7 @@ data class User(
         val company: String? = null,
         @TextIndexed(weight = 5F) val description: Map<Language, String> = emptyMap(),
         val emailHash: String? = null,
-        val photoUrl: String? = "/images/png/mxt-icon--default-avatar.png",
+        val photoUrl: String? = Users.DEFAULT_IMG_URL,
         val role: Role = Role.USER,
         val links: List<Link> = emptyList(),
         val legacyId: Long? = null,

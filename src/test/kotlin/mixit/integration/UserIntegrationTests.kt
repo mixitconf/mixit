@@ -12,16 +12,6 @@ import org.springframework.test.web.reactive.server.expectBodyList
 class UserIntegrationTests(@Autowired val client: WebTestClient) {
 
     @Test
-    fun `Create a new user`() {
-        client.post().uri("/api/user/").accept(APPLICATION_JSON).contentType(APPLICATION_JSON)
-                .syncBody(User("brian", "Brian", "Clozel", "bc@gm.com"))
-                .exchange()
-                .expectStatus().is2xxSuccessful
-                .expectBody()
-                .jsonPath("\$.login").isEqualTo("brian")
-    }
-
-    @Test
     fun `Find Dan North`() {
         client.get().uri("/api/user/tastapod").accept(APPLICATION_JSON)
                 .exchange()
