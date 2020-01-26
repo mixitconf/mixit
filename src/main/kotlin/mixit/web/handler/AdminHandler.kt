@@ -340,7 +340,7 @@ class AdminHandler(private val ticketRepository: TicketRepository,
                     email = if (formData["email"] == "") null else cryptographer.encrypt(formData["email"]),
                     emailHash = if (formData["emailHash"] == "") null else formData["emailHash"],
                     photoUrl = if (formData["photoUrl"] == "") {
-                        if (formData["emailHash"] == "") "/images/png/mxt-icon--default-avatar.png" else null
+                        if (formData["emailHash"] == "") Users.DEFAULT_IMG_URL else null
                     } else {
                         if (formData["emailHash"] == "") formData["photoUrl"] else null
                     },

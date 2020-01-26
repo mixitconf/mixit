@@ -1,13 +1,11 @@
 package mixit.integration
 
-import com.ninjasquad.springmockk.MockkBean
 import com.ninjasquad.springmockk.SpykBean
 import io.mockk.every
 import io.mockk.verify
 import mixit.model.Role
 import mixit.model.User
 import mixit.util.encodeToBase64
-import mixit.util.validator.EmailValidator
 import mixit.web.service.AuthenticationService
 import mixit.web.service.DuplicateException
 import org.assertj.core.api.Assertions.assertThat

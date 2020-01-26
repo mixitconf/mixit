@@ -40,11 +40,6 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
 
     private val logger = LoggerFactory.getLogger(WebsiteRoutes::class.java)
 
-    companion object {
-        val securedAdminUrl: List<String> = listOf("/admin", "/api/admin")
-        val securedUrl: List<String> = listOf("/me")
-    }
-
     @Bean
     fun websiteRouter() = router {
         GET("/blog/feed", blogHandler::feed)
