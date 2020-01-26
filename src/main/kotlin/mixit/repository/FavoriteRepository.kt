@@ -34,7 +34,7 @@ class FavoriteRepository(private val template: ReactiveMongoTemplate, val crypto
 
     fun findAll() = template.findAll<Favorite>()
 
-    fun findByEmail(email: String): Flux<Favorite> = template.find<Favorite>(Query(Criteria.where("email").isEqualTo(cryptographer.encrypt(email))))
+    fun findByEmail(email: String): Flux<Favorite> = template.find(Query(Criteria.where("email").isEqualTo(cryptographer.encrypt(email))))
 
     fun findByEmailAndTalk(email: String, talkId: String): Mono<Favorite> = template.findOne(Query(Criteria.where("email").isEqualTo(cryptographer.encrypt(email))
             .andOperator(Criteria.where("talkId").isEqualTo(talkId))), Favorite::class.java)

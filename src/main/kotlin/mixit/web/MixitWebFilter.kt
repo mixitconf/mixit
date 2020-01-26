@@ -2,11 +2,13 @@ package mixit.web
 
 import com.google.common.annotations.VisibleForTesting
 import mixit.MixitProperties
+import mixit.model.Credential
 import mixit.model.Language
 import mixit.model.Role
 import mixit.model.User
 import mixit.repository.UserRepository
 import mixit.util.decodeFromBase64
+import mixit.web.routes.Routes
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpHeaders.CONTENT_LANGUAGE
 import org.springframework.http.HttpStatus
@@ -100,8 +102,6 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
         }
     }
 
-    data class Credential(val email: String, val token: String)
-
     @VisibleForTesting
     fun readCredentialsFromCookie(request: ServerHttpRequest): Credential? =
             runCatching { (request.cookies).get(AUTENT_COOKIE)?.first()?.value?.decodeFromBase64()?.split(":")?.let { if (it.size != 2) null else Credential(it[0], it[1]) } }
@@ -127,10 +127,10 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
 
     @VisibleForTesting
     fun isASecuredUrl(path: String) =
-            Stream.concat(WebsiteRoutes.securedUrl.stream(), WebsiteRoutes.securedAdminUrl.stream()).anyMatch { path.startsWith(it) }
+            Stream.concat(Routes.securedUrl.stream(), Routes.securedAdminUrl.stream()).anyMatch { path.startsWith(it) }
 
     @VisibleForTesting
-    fun isAnAdminUrl(path: String) = WebsiteRoutes.securedAdminUrl.stream().anyMatch { path.startsWith(it) }
+    fun isAnAdminUrl(path: String) = Routes.securedAdminUrl.stream().anyMatch { path.startsWith(it) }
 
     private fun redirect(exchange: ServerWebExchange, uri: String, statusCode: HttpStatus = HttpStatus.TEMPORARY_REDIRECT): Mono<Void> =
             exchange.response.let {
