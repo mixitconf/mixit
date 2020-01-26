@@ -5,6 +5,7 @@ import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.RelaxedMockK
 import io.mockk.junit5.MockKExtension
 import mixit.MixitProperties
+import mixit.model.Credential
 import mixit.repository.UserRepository
 import mixit.util.encodeToBase64
 import mixit.web.MixitWebFilter.Companion.AUTENT_COOKIE
@@ -105,7 +106,7 @@ class MixitWebFilterTest() {
 
         // When cookie value is valid we have a credential
         cookies.put(AUTENT_COOKIE, listOf(HttpCookie(AUTENT_COOKIE, "email:token".encodeToBase64())))
-        assertThat(filter.readCredentialsFromCookie(request)).isEqualTo(MixitWebFilter.Credential("email", "token"))
+        assertThat(filter.readCredentialsFromCookie(request)).isEqualTo(Credential("email", "token"))
     }
 
     @Test
