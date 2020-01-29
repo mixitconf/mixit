@@ -23,7 +23,7 @@ class ExternalHandler(private val authenticationService: AuthenticationService,
                       private val favoriteRepository: FavoriteRepository,
                       private val ticketRepository: TicketRepository) {
 
-    private class MixiTResponse(val message: String)
+    private data class MixiTResponse(val message: String)
 
     private enum class MixiTResponses(val message: MixiTResponse, val status: HttpStatus) {
         CREDENTIAL_VALID(MixiTResponse("Credentials are valids"), OK),

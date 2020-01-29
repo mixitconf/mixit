@@ -1,9 +1,6 @@
 package mixit.web.service
 
-import mixit.model.Role
-import mixit.model.User
-import mixit.model.generateNewToken
-import mixit.model.jsonToken
+import mixit.model.*
 import mixit.repository.TicketRepository
 import mixit.repository.UserRepository
 import mixit.util.Cryptographer
@@ -75,7 +72,7 @@ class AuthenticationService(private val userRepository: UserRepository,
 
     fun createCookie(user: User) = ResponseCookie
             .from("XSRF-TOKEN", user.jsonToken(cryptographer))
-            .maxAge(Duration.between(LocalDateTime.now(), user.tokenExpiration))
+            .maxAge(user.tokenLifeTime)
             .build()
 
     /**
@@ -84,7 +81,7 @@ class AuthenticationService(private val userRepository: UserRepository,
     fun checkUserEmailAndToken(nonEncryptedMail: String, token: String): Mono<User> =
             userRepository.findByNonEncryptedEmail(nonEncryptedMail)
                     .flatMap {
-                        if (token.trim() == it.token && it.tokenExpiration.isAfter(LocalDateTime.now())) {
+                        if (it.hasValidToken(token.trim())) {
                             return@flatMap Mono.just(it)
                         }
                         throw TokenException("Token is invalid or is expired")

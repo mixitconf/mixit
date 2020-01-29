@@ -2,10 +2,7 @@ package mixit.web
 
 import com.google.common.annotations.VisibleForTesting
 import mixit.MixitProperties
-import mixit.model.Credential
-import mixit.model.Language
-import mixit.model.Role
-import mixit.model.User
+import mixit.model.*
 import mixit.repository.UserRepository
 import mixit.util.decodeFromBase64
 import mixit.web.routes.Routes
@@ -20,7 +17,6 @@ import org.springframework.web.server.WebFilterChain
 import org.springframework.web.server.WebSession
 import reactor.core.publisher.Mono
 import java.net.URI
-import java.time.LocalDateTime
 import java.util.*
 import java.util.stream.Stream
 
@@ -60,7 +56,7 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
                 // If session contains credentials we check data
                 userRepository.findByNonEncryptedEmail(it.email).flatMap { user ->
                     // We have to see if the token is the good one anf if it is yet valid
-                    if (user.token.equals(it.token) && user.tokenExpiration.isAfter(LocalDateTime.now())) {
+                    if (user.hasValidToken(it.token)) {
                         // If user is found we need to restore infos in session
                         session.attributes.let {
                             it["role"] = user.role
