@@ -45,7 +45,7 @@ fun User.updateEmail(cryptographer: Cryptographer, newEmail: String) = this.copy
 
 fun User.jsonToken(cryptographer: Cryptographer) = "${cryptographer.decrypt(email)}:${token}".encodeToBase64()!!
 
-fun User.hasValidToken(token: String) = this.token === token.trim() && tokenExpiration.isAfter(LocalDateTime.now())
+fun User.hasValidToken(token: String) = this.token == token.trim() && tokenExpiration.isAfter(LocalDateTime.now())
 
 val User.tokenLifeTime
     get() = Duration.between(LocalDateTime.now(), tokenExpiration)
