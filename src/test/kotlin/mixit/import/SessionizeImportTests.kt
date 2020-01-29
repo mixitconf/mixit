@@ -79,8 +79,8 @@ class SessionizeImportTests(@Autowired val objectMapper: ObjectMapper,
                 if(userCheck !=null){
                     println("Login already exist")
 					login += speakerId.lastName
-                    val userCheck = userRepository.findOne(login).block()
-                    if(userCheck !=null){
+                    val anotherUserCheck = userRepository.findOne(login).block()
+                    if(anotherUserCheck !=null){
                         println("Login already exist")
                         throw IllegalArgumentException()
                     }
