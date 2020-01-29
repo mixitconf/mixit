@@ -23,15 +23,15 @@ class ExternalHandler(private val authenticationService: AuthenticationService,
                       private val favoriteRepository: FavoriteRepository,
                       private val ticketRepository: TicketRepository) {
 
-    private data class MixiTResponse(val message: String)
+    private data class MixiTResponse(val status: Int, val message: String)
 
     private enum class MixiTResponses(val message: MixiTResponse, val status: HttpStatus) {
-        CREDENTIAL_VALID(MixiTResponse("Credentials are valids"), OK),
-        TOKEN_SENT(MixiTResponse("A token was send by email. Please check your mailbox and send it in the future request"), OK),
-        INVALID_EMAIL(MixiTResponse("Email is invalid"), INTERNAL_SERVER_ERROR),
-        INVALID_CREDENTIALS(MixiTResponse("Credentials are invalid"), BAD_REQUEST),
-        EMAIL_NOT_KNOWN(MixiTResponse("This email is not known. You have to create an account on our website if you want to use this functionnality"), BAD_REQUEST),
-        EMAIL_SENT_ERROR(MixiTResponse("An expected error occured on email sent"), INTERNAL_SERVER_ERROR);
+        CREDENTIAL_VALID(MixiTResponse(OK.value(), "Credentials are valids"), OK),
+        TOKEN_SENT(MixiTResponse(OK.value(), "A token was send by email. Please check your mailbox and send it in the future request"), OK),
+        INVALID_EMAIL(MixiTResponse(INTERNAL_SERVER_ERROR.value(), "Email is invalid"), INTERNAL_SERVER_ERROR),
+        INVALID_CREDENTIALS(MixiTResponse(BAD_REQUEST.value(),"Credentials are invalid"), BAD_REQUEST),
+        EMAIL_NOT_KNOWN(MixiTResponse(BAD_REQUEST.value(),"This email is not known. You have to create an account on our website if you want to use this functionnality"), BAD_REQUEST),
+        EMAIL_SENT_ERROR(MixiTResponse(INTERNAL_SERVER_ERROR.value(),"An expected error occured on email sent"), INTERNAL_SERVER_ERROR);
 
         fun response(): Mono<ServerResponse> = status(this.status).json().bodyValue(this.message)
     }
