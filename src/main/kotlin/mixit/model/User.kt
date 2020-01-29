@@ -5,12 +5,14 @@ import mixit.util.encodeToBase64
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.index.TextIndexed
 import org.springframework.data.mongodb.core.mapping.Document
+import java.time.Duration
 import java.time.LocalDateTime
 import java.util.*
 
 object Users {
-    val DEFAULT_IMG_URL =  "/images/png/mxt-icon--default-avatar.png"
+    val DEFAULT_IMG_URL = "/images/png/mxt-icon--default-avatar.png"
 }
+
 @Document
 data class User(
         @Id val login: String,
@@ -42,3 +44,8 @@ fun User.generateNewToken() = this.copy(
 fun User.updateEmail(cryptographer: Cryptographer, newEmail: String) = this.copy(email = cryptographer.encrypt(newEmail))
 
 fun User.jsonToken(cryptographer: Cryptographer) = "${cryptographer.decrypt(email)}:${token}".encodeToBase64()!!
+
+fun User.hasValidToken(token: String) = this.token === token.trim() && tokenExpiration.isAfter(LocalDateTime.now())
+
+val User.tokenLifeTime
+    get() = Duration.between(LocalDateTime.now(), tokenExpiration)
