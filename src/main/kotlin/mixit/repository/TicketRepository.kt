@@ -2,21 +2,14 @@ package mixit.repository
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import mixit.model.Role
-import mixit.model.Talk
 import mixit.model.Ticket
-import mixit.model.User
-import mixit.util.Cryptographer
-import mixit.util.encodeToMd5
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.mongodb.core.*
 import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Query
-import org.springframework.data.mongodb.core.query.inValues
 import org.springframework.data.mongodb.core.query.isEqualTo
 import org.springframework.stereotype.Repository
-import reactor.core.publisher.Flux
 
 
 @Repository

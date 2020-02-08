@@ -1,10 +1,11 @@
 package mixit.web
 
+import com.google.common.annotations.VisibleForTesting
 import mixit.MixitProperties
-import mixit.model.Role
-import mixit.model.User
+import mixit.model.*
 import mixit.repository.UserRepository
 import mixit.util.decodeFromBase64
+import mixit.web.routes.Routes
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpHeaders.CONTENT_LANGUAGE
 import org.springframework.http.HttpStatus
@@ -13,9 +14,9 @@ import org.springframework.stereotype.Component
 import org.springframework.web.server.ServerWebExchange
 import org.springframework.web.server.WebFilter
 import org.springframework.web.server.WebFilterChain
+import org.springframework.web.server.WebSession
 import reactor.core.publisher.Mono
 import java.net.URI
-import java.time.LocalDateTime
 import java.util.*
 import java.util.stream.Stream
 
@@ -23,114 +24,116 @@ import java.util.stream.Stream
 @Component
 class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRepository) : WebFilter {
 
-    private fun readUserInfo(request: ServerHttpRequest) = (request.cookies).get("XSRF-TOKEN")?.first()?.value?.decodeFromBase64()?.split(":")
-
-    override fun filter(exchange: ServerWebExchange, chain: WebFilterChain) = exchange.session.flatMap { session ->
-        // For web resource we don't need to know if the user is connected or not
-        if(isWebResource(exchange.request.uri.path)){
-            filter(exchange, chain, null)
-        }
-        else {
-            try {
-                // We need to
-                val userInfo = readUserInfo(exchange.request)
-
-                if (userInfo != null && userInfo.size == 2) {
-                    val email = userInfo.get(0)
-                    val token = userInfo.get(1)
-
-                    // If session contains an email we load the user
-                    userRepository.findByEmail(email).flatMap {
-                        // We have to see if the token is the good one anf if it is yet valid
-                        if (it.token.equals(token) && it.tokenExpiration.isAfter(LocalDateTime.now())) {
-                            // If user is found we need to restore infos in session
-                            session.attributes["role"] = it.role
-                            session.attributes["email"] = email
-                            session.attributes["token"] = token
-                            filter(exchange, chain, it)
-                        } else {
-                            filter(exchange, chain, null)
-                        }
-                    }
-                } else {
-                    filter(exchange, chain, null)
-                }
-            } catch (e: IllegalArgumentException) {
-                filter(exchange, chain, null)
-            }
-        }
+    companion object {
+        val AUTENT_COOKIE = "XSRF-TOKEN"
+        val BOTS = arrayOf("Google", "Bingbot", "Qwant", "Bingbot", "Slurp", "DuckDuckBot", "Baiduspider")
+        val WEB_RESSOURCE_EXTENSIONS = arrayOf(".css", ".js", ".svg", ".jpg", ".png", ".webp", ".webapp", ".pdf", ".icns", ".ico", ".html")
     }
 
-    fun filter(exchange: ServerWebExchange, chain: WebFilterChain, user: User?) =
-    // People who used the old URL are directly redirected
-            if (exchange.request.headers.host?.hostString?.endsWith("mix-it.fr") == true) {
-                val response = exchange.response
-                response.statusCode = HttpStatus.PERMANENT_REDIRECT
-                response.headers.location = URI("${properties.baseUri}${exchange.request.uri.path}")
-                Mono.empty()
+    override fun filter(exchange: ServerWebExchange, chain: WebFilterChain): Mono<Void> =
+            // People who used the old URL are directly redirected
+            if (isACallOnOldUrl(exchange)) {
+                redirect(exchange, exchange.request.uri.path, HttpStatus.PERMANENT_REDIRECT)
             }
-            // For those who arrive on our home page with another language tha french, we need to load the site in english
-            else if (exchange.request.uri.path == "/" &&
-                    (exchange.request.headers.acceptLanguageAsLocales.firstOrNull()
-                            ?: Locale.FRENCH).language != "fr" &&
-                    !isSearchEngineCrawler(exchange)) {
-                val response = exchange.response
-                response.statusCode = HttpStatus.TEMPORARY_REDIRECT
-                response.headers.location = URI("${properties.baseUri}/en/")
-                Mono.empty()
+            // For those who arrive on our home page with another language than french, we need to load the site in english
+            else if (isAHomePageCallFromForeignLanguage(exchange)) {
+                redirect(exchange, "/${Language.ENGLISH.toLanguageTag()}/")
             }
-            // In other case we have to see if the page is secured or not
+            // For web resource we don't need to know if the user is connected or not
+            else if (isWebResource(exchange.request.uri.path)) {
+                chain.filter(exchange)
+            }
+            // For other calls we have to check credentials
             else {
-                // When a user wants to see a page in english uri path starts with 'en'
-                val initUriPath = exchange.request.uri.rawPath
-                val languageEn = initUriPath.startsWith("/en/")
-                val uriPath = if (initUriPath.startsWith("/en/") || initUriPath.startsWith("/fr/")) initUriPath.substring(3) else initUriPath
-
-                // If url is securized we have to check the credentials information
-                if (startWithSecuredUrl(uriPath)) {
-                    if (user == null) {
-                        redirectForLogin(exchange, "login")
-                    } else {
-                        // If admin page we see if user is a staff member
-                        if (startWithAdminSecuredUrl(uriPath) && user.role != Role.STAFF) {
-                            redirectForLogin(exchange, "")
-                        } else {
-                            val req = exchange.request.mutate().path(uriPath).header(CONTENT_LANGUAGE, if (languageEn) "en" else "fr").build()
-                            chain.filter(exchange.mutate().request(req).build())
-                        }
-                    }
-                } else {
-                    chain.filter(exchange.mutate().request(exchange.request.mutate()
-                            .path(uriPath)
-                            .header(CONTENT_LANGUAGE, if (languageEn) "en" else "fr").build())
-                            .build())
-                }
+                exchange.session.flatMap { filterAndCheckCredentials(exchange, chain, it, readCredentialsFromCookie(exchange.request)) }
             }
 
-    private fun isWebResource(initUriPath: String): Boolean = initUriPath.endsWith(".css") ||
-                    initUriPath.endsWith(".js") ||
-                    initUriPath.endsWith(".svg") ||
-                    initUriPath.endsWith(".jpg") ||
-                    initUriPath.endsWith(".png") ||
-                    initUriPath.endsWith(".webp") ||
-                    initUriPath.endsWith(".webapp")
+    /**
+     * In this method we try to read user credentials in request cookies
+     */
+    fun filterAndCheckCredentials(exchange: ServerWebExchange, chain: WebFilterChain, session: WebSession, credential: Credential?): Mono<Void> =
+            credential?.let {
+                // If session contains credentials we check data
+                userRepository.findByNonEncryptedEmail(it.email).flatMap { user ->
+                    // We have to see if the token is the good one anf if it is yet valid
+                    if (user.hasValidToken(it.token)) {
+                        // If user is found we need to restore infos in session
+                        session.attributes.let {
+                            it["role"] = user.role
+                            it["email"] = credential.email
+                            it["token"] = credential.token
+                            filterWithCredential(exchange, chain, user)
+                        }
+                    } else {
+                        filterWithCredential(exchange, chain)
+                    }
+                }
+            } ?: run {
+                // If credentials are not read
+                filterWithCredential(exchange, chain)
+            }
 
-    private fun redirectForLogin(exchange: ServerWebExchange, uri: String): Mono<Void> {
-        val response = exchange.response
-        response.statusCode = HttpStatus.TEMPORARY_REDIRECT
-        response.headers.location = URI("${properties.baseUri}/${uri}")
-        return Mono.empty()
+    private fun filterWithCredential(exchange: ServerWebExchange, chain: WebFilterChain, user: User? = null): Mono<Void> {
+        // When a user wants to see a page in english uri path starts with 'en'
+        val initUriPath = exchange.request.uri.rawPath
+        val languageEn = initUriPath.startsWith("/en/")
+        val uriPath = if (languageEn || initUriPath.startsWith("/fr/")) initUriPath.substring(3) else initUriPath
+
+        val req = exchange.request.mutate().path(uriPath).header(CONTENT_LANGUAGE, if (languageEn) "en" else "fr").build()
+
+        // If url is securized we have to check the credentials information
+        return if (isASecuredUrl(uriPath)) {
+            if (user == null) {
+                redirect(exchange, "/login")
+            } else {
+                // If admin page we see if user is a staff member
+                if (isAnAdminUrl(uriPath) && user.role != Role.STAFF) {
+                    redirect(exchange, "/")
+                } else {
+                    chain.filter(exchange.mutate().request(req).build())
+                }
+            }
+        } else {
+            chain.filter(exchange.mutate().request(req).build())
+        }
     }
 
-    private fun startWithSecuredUrl(path: String): Boolean =
-            Stream.concat(WebsiteRoutes.securedUrl.stream(), WebsiteRoutes.securedAdminUrl.stream()).anyMatch { path.startsWith(it) }
+    @VisibleForTesting
+    fun readCredentialsFromCookie(request: ServerHttpRequest): Credential? =
+            runCatching { (request.cookies).get(AUTENT_COOKIE)?.first()?.value?.decodeFromBase64()?.split(":")?.let { if (it.size != 2) null else Credential(it[0], it[1]) } }
+                    .getOrNull()
 
-    private fun startWithAdminSecuredUrl(path: String): Boolean = WebsiteRoutes.securedAdminUrl.stream().anyMatch { path.startsWith(it) }
+    @VisibleForTesting
+    fun isACallOnOldUrl(exchange: ServerWebExchange): Boolean = exchange.request.headers.host?.hostString?.endsWith("mix-it.fr") == true
 
-    private fun isSearchEngineCrawler(exchange: ServerWebExchange): Boolean {
-        val userAgent = exchange.request.headers.getFirst(HttpHeaders.USER_AGENT) ?: ""
-        val bots = arrayOf("Google", "Bingbot", "Qwant", "Bingbot", "Slurp", "DuckDuckBot", "Baiduspider")
-        return bots.any { userAgent.contains(it) }
+
+    @VisibleForTesting
+    fun isAHomePageCallFromForeignLanguage(exchange: ServerWebExchange): Boolean = exchange.request.uri.path == "/" &&
+            (exchange.request.headers.acceptLanguageAsLocales.firstOrNull()
+                    ?: Locale.FRENCH).language != Language.FRENCH.toLanguageTag() &&
+            !isSearchEngineCrawler(exchange.request)
+
+    @VisibleForTesting
+    fun isWebResource(initUriPath: String) = WEB_RESSOURCE_EXTENSIONS.any { initUriPath.endsWith(it) }
+
+    @VisibleForTesting
+    fun isSearchEngineCrawler(request: ServerHttpRequest) = BOTS.any {
+        (request.headers.getFirst(HttpHeaders.USER_AGENT) ?: "").contains(it)
     }
+
+    @VisibleForTesting
+    fun isASecuredUrl(path: String) =
+            Stream.concat(Routes.securedUrl.stream(), Routes.securedAdminUrl.stream()).anyMatch { path.startsWith(it) }
+
+    @VisibleForTesting
+    fun isAnAdminUrl(path: String) = Routes.securedAdminUrl.stream().anyMatch { path.startsWith(it) }
+
+    private fun redirect(exchange: ServerWebExchange, uri: String, statusCode: HttpStatus = HttpStatus.TEMPORARY_REDIRECT): Mono<Void> =
+            exchange.response.let {
+                it.statusCode = statusCode
+                it.headers.location = URI("${properties.baseUri}${uri}")
+                Mono.empty()
+            }
+
 }
 

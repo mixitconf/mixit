@@ -36,7 +36,7 @@ fun ServerRequest.language() =
 fun ServerRequest.locale(): Locale =
         this.headers().asHttpHeaders().contentLanguage ?: Locale.ENGLISH
 
-fun ServerResponse.BodyBuilder.json() = contentType(APPLICATION_JSON_UTF8)
+fun ServerResponse.BodyBuilder.json() = contentType(APPLICATION_JSON)
 
 fun ServerResponse.BodyBuilder.xml() = contentType(APPLICATION_XML)
 

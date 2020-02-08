@@ -3,14 +3,14 @@ import com.moowork.gradle.node.yarn.YarnInstallTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    val kotlinVersion = "1.3.41"
+    val kotlinVersion = "1.3.61"
     id("org.jetbrains.kotlin.jvm") version kotlinVersion
     id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion
     id("org.jetbrains.kotlin.kapt") version kotlinVersion
     id("com.moowork.node") version "1.3.1"
     id("com.moowork.gulp") version "1.3.0"
-    id("org.springframework.boot") version "2.1.7.RELEASE"
-    id("io.spring.dependency-management") version "1.0.7.RELEASE"
+    id("org.springframework.boot") version "2.2.2.RELEASE"
+    id("io.spring.dependency-management") version "1.0.8.RELEASE"
 }
 
 version = "1.0.0-SNAPSHOT"
@@ -46,6 +46,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-webflux") {
         exclude(module = "hibernate-validator")
     }
+    compile("io.projectreactor.kotlin:reactor-kotlin-extensions")
     compileOnly("org.springframework:spring-context-indexer")
     compile("org.springframework.boot:spring-boot-starter-mail")
     compile("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
@@ -64,8 +65,11 @@ dependencies {
         exclude(module = "junit")
     }
     testImplementation("org.junit.jupiter:junit-jupiter-api")
+    testImplementation("com.ninja-squad:springmockk:2.0.0")
+    testImplementation("io.mockk:mockk:1.9.3")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
     testCompile("io.projectreactor:reactor-test")
+
 }
 
 task<GulpTask>("gulpBuild") {

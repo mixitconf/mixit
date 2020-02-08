@@ -13,6 +13,7 @@ class ApiRoutes(private val blogHandler: BlogHandler,
                 private val talkHandler: TalkHandler,
                 private val favoriteHandler: FavoriteHandler,
                 private val ticketingHandler: TicketingHandler,
+                private val externalHandler: ExternalHandler,
                 private val userHandler: UserHandler) {
 
     @Bean
@@ -40,21 +41,37 @@ class ApiRoutes(private val blogHandler: BlogHandler,
             GET("/{year}/speaker", userHandler::findSpeakerByEventId)
             GET("/{year}/event", eventHandler::findByEventID)
 
-
             GET("/talk/{login}", talkHandler::findOne)
-            GET("/favorites/{email}/talks/{id}", favoriteHandler::getFavorite)
-            GET("/favorites/{email}", favoriteHandler::getFavorites)
-            POST("/favorites/{email}/talks/{id}/toggle", favoriteHandler::toggleFavorite)
+
+            "/favorites".nest {
+                GET("/{email}/talks/{id}", favoriteHandler::getFavorite)
+                GET("/{email}", favoriteHandler::getFavorites)
+                POST("/{email}/talks/{id}/toggle", favoriteHandler::toggleFavorite)
+            }
 
             "/user".nest {
                 GET("/", userHandler::findAll)
-                GET("/check/{email}", userHandler::check)
-                POST("/", userHandler::create)
                 GET("/{login}", userHandler::findOne)
             }
             "/staff".nest {
                 GET("/", userHandler::findStaff)
                 GET("/{login}", userHandler::findOneStaff)
+            }
+
+            // Some external request needs to be secured. So for them we need in the request the email and token. Values
+            "/external".nest {
+                // Require a token as arg
+                GET("/token", externalHandler::sendToken)
+                // Require a token and email as arg
+                GET("/token/check", externalHandler::checkToken)
+                // Needs authent and requires a token and email as arg
+                GET("/me", externalHandler::profile)
+                // Needs authent and requires a token and email as arg
+                GET("/favorites", externalHandler::favorites)
+                // Needs authent and requires a token and email as arg
+                GET("/favorites/talks/{id}", externalHandler::favorite)
+                // Needs authent and requires a token and email as arg
+                POST("/favorites/talks/{id}/toggle", externalHandler::toggleFavorite)
             }
         }
     }
