@@ -1,0 +1,713 @@
+[
+  {
+    "id": 108883,
+    "state": "accepted",
+    "confirmed": false,
+    "created_at": "2020-01-15T16:20:04.913Z",
+    "updated_at": "2020-02-21T14:23:09.021Z",
+    "additional_info": null,
+    "rating": 90.0,
+    "trust": 100.0,
+    "tags": [
+      "Life style",
+      "Ethic"
+    ],
+    "co_presenter_profiles": [],
+    "profile": {
+      "name": "Les écoloHumanistes",
+      "bio": "# Romain \u0026 Jeff, les écoloHumanistes\r\n\r\n*Notre leitmotiv : faciliter la transition personnelle de chacun·e !*\r\n\r\nDepuis 2014, nous mettons nos compétences en commun pour :\r\n\r\n- illustrer et faire connaitre les initiatives qui font la transition,\r\n- partager des outils pratiques,\r\n- et parler de revenu universel comme outil d'émancipation.\r\n\r\nEn 2018, nous avons lancé Animacoop Lyon, une formation à la coopération, avec la volonté de changer d'échelle et de mieux coller aux aspirations de chacun·e de travailler de manière plus horizontale, \r\n\r\nNous nous connaissons depuis 2005 alors que nous étions coturnes à l’internat, en classe prépa à Jean Perrin. Nous avons traversé ensemble cette année de « Maths Sup », sans être particulièrement emballés par la méthode pédagogique qui ne place pas vraiment l’individu au cœur de l’apprentissage. C'est peut-être d'ailleurs ce qui explique nos changements de chemin. En 2012, après nos études, nous sommes de nouveau rassemblés à Lyon. Nous partageons depuis de nombreuses discussions politiques, écologiques, philosophiques avec une constante : l’humain doit rester l’objectif ! C'est ainsi qu'en 2014, graphisme et vision globale d’un côté, webmarketing et pédagogie de l’autre, nous décidons de mettre nos compétences en commun pour créer notre blog afin de comprendre, simplifier et transmettre les initiatives écoloHumanistes.",
+      "twitter": "ecoloHumanistes",
+      "company": "",
+      "url": "https://lesecolohumanistes.fr/",
+      "email": "bonjour@lesecolohumanistes.fr",
+      "location": "Lyon",
+      "avatar": "https://secure.gravatar.com/avatar/2ebc976ae73424199dbd2a36c5da67a8?s=500"
+    },
+    "talk": {
+      "title": "3 étapes pour arrêter de subir la société de consommation",
+      "description": "Vous avez l'impression d'être dans un cercle vicieux ? Vous avez du mal à faire un pas de côté pour en sortir ? Nous vous proposons 3 méthodes étapes pratiques pour (re)prendre le contrôle sur votre vie, illustrées par des exemples concrets issus de notre histoire personnelle. Découvrez l'équation économique de votre quotidien, développez vos ressources, questionnez vos besoins, ne perdez plus votre vie à la gagner… vous serez heureux·se ! \r\n\r\n*Le déroulé du talk en points clés :*\r\n\r\n- Pose du problème\r\n- Notre histoire et pourquoi nous sommes bien placés pour répondre à cette question\r\n- Étape 1 - Comprendre l'équation économique : revenus + ressources \u003e besoins + envies\r\n- Exemple de nos ressources\r\n- Étape 2 - Réinterroger ses besoins\r\n- La méthode BISOU, un acronyme simple pour ne pas succomber\r\n- Étape 3 - Calculez votre RIB\r\n- Un autre acronyme pratique pour travailler juste le temps nécessaire à ses besoins\r\n- Des solutions collectives face aux problèmes que les 3 étapes soulèvent\r\n- Conclusion sous forme de répétition des 3 points : équation + BISOU + RIB\r\n\r\n2 vidéo :\r\n\r\n- [une intervention sur ce sujet](https://www.facebook.com/tribetobeinspiredLyon/videos/650635448804708/)\r\n- [notre intervention à Mixit 2017 sur le revenu universel](https://mixitconf.org/2017/revenu-universel-25-minutes-pour-tout-comprendre)",
+      "notes": "Un vidéo-projecteur serait un plus.\r\n\r\nCe talk est la version orale de notre livre \"Vivre avec moins pour vivre heureux\", publié en 2019. Il est issu des réflexions et contenus que nous publions depuis 6 ans sur notre site internet, autour des questions de sobriété et comporte de nombreuses solutions à mettre en place au quotidien. Nous l'avons voulu pratique, ludique et graphique et il en sera de même de ce talk.",
+      "abstract": "Nous sommes Jeff \u0026 Romain, 2 ex-paumés dans la société de consommation. C'est à partir de notre expérience que nous vous proposons 3 étapes pour ne plus la subir. Un témoignage pratique et ludique pour comprendre l'équation économique de votre quotidien et ne plus perdre votre vie à la gagner.",
+      "audience_level": "All",
+      "talk_format": "Short talk (20 minutes)"
+    }
+  },
+  {
+    "id": 109064,
+    "state": "accepted",
+    "confirmed": false,
+    "created_at": "2020-01-15T22:18:37.136Z",
+    "updated_at": "2020-01-24T15:15:13.506Z",
+    "additional_info": null,
+    "rating": 70.9090909090909,
+    "trust": 100.0,
+    "tags": [
+      "Ethic",
+      "Tech"
+    ],
+    "co_presenter_profiles": [],
+    "profile": {
+      "name": "Adrien Montagut-Romans",
+      "bio": "After a Phd in organic chemistry and 3 years of research in different fields from new rat poisons to new cosmetics, I decided to realign my career. Indeed I was searching for a job more in line with my values and my environmental preoccupations. So when my friend Elie presented the opportunity to co-create a cooperative to fight against planned obsolescence, I jumped in. So here I am co-founder of Commown !",
+      "twitter": "AdrienMontagut",
+      "company": "https://commown.coop/",
+      "url": "",
+      "email": "adrien.montagut@gmail.com",
+      "location": "Unknown",
+      "avatar": "https://secure.gravatar.com/avatar/4b279f561c9a471696dc6692aa55a470?s=500"
+    },
+    "talk": {
+      "title": "5G mirage ! Beware !",
+      "description": "This talk will first state the actual drawbacks of information technology, mainly regarding environmental and social issues. \r\nThen we will discuss several aspects of the 5G : \r\nEconomical growth potential\r\nResources consumption\r\nEnergy consumption\r\nData privacy \r\nHealth\r\nTo conclude by the fundamental question : which technology do we really NEED ?\r\n\r\n[NB : I could try to do it in 20 min if needed] ",
+      "notes": "",
+      "abstract": "The 5G seems to be the new disruptive technology able to change the world. But it will be a huge waste of resources and energy while the Earth overshoot day arrives sooner every year! We have to fight against this magic thought: \"technology will solve everything and growth could last forever!\"",
+      "audience_level": "All",
+      "talk_format": "Long talk (50 minutes)"
+    }
+  },
+  {
+    "id": 108654,
+    "state": "accepted",
+    "confirmed": true,
+    "created_at": "2020-01-14T23:14:26.367Z",
+    "updated_at": "2020-02-11T18:23:54.897Z",
+    "additional_info": null,
+    "rating": 77.7777777777778,
+    "trust": 81.8181818181818,
+    "tags": [
+      "Tech",
+      "GraphQL"
+    ],
+    "co_presenter_profiles": [],
+    "profile": {
+      "name": "Bertrand Dubaut",
+      "bio": "I'm Bertrand, I'm an Engineering Manager and I'm passionate about building systems, sometimes with code, sometimes with people. My life has taken me to the US, Australia, and I now live in Amsterdam.",
+      "twitter": "bdubaut",
+      "company": "",
+      "url": "http://github.com/bdubaut",
+      "email": "b.dubaut@gmail.com",
+      "location": "Amsterdam",
+      "avatar": "https://secure.gravatar.com/avatar/01f7788e03dfe4cddfb938bcaea33e5f?s=500"
+    },
+    "talk": {
+      "title": "Accelerating development with GraphQL",
+      "description": "- GraphQL primer\r\n  - Type system\r\n  - Patterns\r\n  - Shortcomings\r\n- GraphQL hygene \u0026 best practices\r\n  - Schema versioning\r\n  - Schema subsets\r\n  - Collection patterns\r\n  - Schema Analytics\r\n- GraphQL Architecture patterns\r\n  - GraphQL over REST\r\n  - GraphQL schema federation\r\n  - Monolithic GraphQL\r\n  - GraphQL all the things!\r\n- Augmenting a GraphQL API with remote sources\r\n- One Business, One graph",
+      "notes": "I have been building GraphQL APIs for the past 3 years, I have already spoken at meetups about GraphQL best practices, and I help teams modelling their graph with Ruby and Elixir on an ongoing basis. Over the years a lot of practices have emerged with this technology, and I would love to share my experience teaching it, working with it and what I believe it can do for the businesses that choose to use it.",
+      "abstract": "GraphQL is a wonderful API technology that enables more and more businesses worldwide. Let's see how it can help test ideas quickly and bring products to market faster with less overhead than what was previously available and how it can enable a whole business to rely on their data",
+      "audience_level": "Intermediate",
+      "talk_format": "Short talk (20 minutes)"
+    }
+  },
+  {
+    "id": 105096,
+    "state": "accepted",
+    "confirmed": false,
+    "created_at": "2019-12-22T14:37:33.540Z",
+    "updated_at": "2020-02-20T19:51:09.731Z",
+    "additional_info": null,
+    "rating": 84.4444444444444,
+    "trust": 81.8181818181818,
+    "tags": [
+      "système",
+      "diagnostic",
+      "performance",
+      "java",
+      "docker",
+      "flame graph",
+      "ebpf",
+      "Tech"
+    ],
+    "co_presenter_profiles": [],
+    "profile": {
+      "name": "Vladislav Pernin",
+      "bio": "Directeur technique d'un des pôles de la DSI chez Enedis, pôle d'environ 1000 personnes sur Lyon et Paris.\r\nEn charge de l'écosystème Linky, son pendant sur les compteurs industriels, la partie poste source, de l'IOT et quelques plus petits projets.\r\nA l'origine expert technique, architecte (Java, système distribué, bigdata, messaging, ...) avec une grosse sensibilité ops et pas mal d'affinités sur les sujet de troubleshooting et performance.",
+      "twitter": "vladislavpernin",
+      "company": "Enedis",
+      "url": "",
+      "email": "vladislav.pernin@gmail.com",
+      "location": "Lyon",
+      "avatar": "https://secure.gravatar.com/avatar/edc84722f6c279f6a3ef1584fc03acff?s=500"
+    },
+    "talk": {
+      "title": "\"Allo Houston : ça marche pas - c’est lent …\" : performance et diagnostic - méthodologie et outils",
+      "description": "## Allo Houston : ça marche pas - c’est lent …\r\n\r\n* Notions \u0026 méthodologie\r\n    * Boîte noire/blanche\r\n    * Anti méthodologies\r\n    * USE, RED\r\n    * Monitoring\r\n* Etat des lieux rapide\r\n    * Commandes Linux à connaître\r\n    * Outils plus perfectionnés\r\n    * Flame graph\r\n* Outils et diagnostic plus avancés\r\n    * strace, perf, ...\r\n* Zoom sur une JVM\r\n    * Méthodologie\r\n    * Thread dump, heap dump, GC, JMX, MNT\r\n    * Profiling avancé\r\n* Spécificités avec Docker\r\n* Démo",
+      "notes": "\u003e Cela sera la version courte d'un atelier de 2 heures donné de nombreuses fois en interne, en BBL ou au Café DevOps Lyon.\r\n\r\nLien vers [Présentation complète donnée au café DevOps Lyon](https://speakerdeck.com/vladislavpernin/performance-et-diagnostic-methodologie-et-outils-6a2e67d5-3244-4502-b4d1-c58481cd5616).\r\n\r\nC'est une présentation dense et très technique.\r\nL'idée est vraiment de donner l'approche qui va bien et de faire le pont entre les deux mondes purement infra/linux/... et la JVM, bien que cela soit applicable à beaucoup de logiciels.\r\n\r\nJe ne sais pas si je suis la meilleure personne, mais j'ai beaucoup d'expérience de production sur ces problématiques.",
+      "abstract": "L'objectif est de donner les clés qui vont bien, en terme de méthodologie et d’outils, pour être capable de se débrouiller sur un dysfonctionnement important ou un problème de performance.\nLa réunification des mondes : des métriques systèmes Linux à l'outillage Java en passant par Docker.",
+      "audience_level": "Intermediate",
+      "talk_format": "Long talk (50 minutes)"
+    }
+  },
+  {
+    "id": 107532,
+    "state": "accepted",
+    "confirmed": false,
+    "created_at": "2020-01-10T07:48:23.750Z",
+    "updated_at": "2020-01-29T14:41:05.704Z",
+    "additional_info": null,
+    "rating": 86.6666666666667,
+    "trust": 81.8181818181818,
+    "tags": [
+      "WebAssembly",
+      "Frontend",
+      "Blockchain",
+      "Cryptography",
+      "Workshop"
+    ],
+    "co_presenter_profiles": [],
+    "profile": {
+      "name": "m4dz",
+      "bio": "m4dz is a \"curious pet\". Tech Evangelist at alwaysdata, a PaaS hosting provider, he has made security and privacy one of his challenges for the Web. All the technologies are under his radar, to make all the digital players aware of our realities. Chronic optimist, his favourite book will always remain \"Alice in Wonderland\".",
+      "twitter": "m4d_z",
+      "company": "alwaysdata",
+      "url": "https://m4dz.net",
+      "email": "m4dz@alwaysdata.com",
+      "location": "Lyon, FR",
+      "avatar": "https://papercallio-production.s3.amazonaws.com/uploads/user/avatar/5637/_c__Bruno_Lavit.jpg"
+    },
+    "talk": {
+      "title": "A State Of WebAssembly - The Browser is now a real VM",
+      "description": "WebAssembly is a new virtual machine embedded in the browser. It doesn't transpile to JavaScript like its forerunners; it produces a new binary format, like the old assembler, executed in a dedicated VM into your browser. Genius, it exposes a bridge between JS APIs and WebAssembly executables. Last browsers engines developments allow very fast exchanges between JS and WASM code.\r\n\r\nSo, let's start with a projet that need a huge computing time. We will develop the core code in Rust, compile it to WASM using LLVM, and we will display the results in a front view powered via JavaScript. No need to know how does it work, we will see it together.\r\n\r\nThis talk takes place in a new series named #StartFromNowhere: let's start from front-end developers skills, and deep dive into a new technology. In 45', let's learn the basics.",
+      "notes": "I gave this talk at the last JSDay.IT edition: https://vimeo.com/345747861\r\n\r\n---\r\n\r\nThis version is a workshop version I gave at last Paris Web edition: https://www.paris-web.fr/2019/ateliers/webassembly-un-etat-des-lieux.php. It's an hands on workshop on WASM basics, how to create, compile, and run a simple blockchain example with WebAssembly.",
+      "abstract": "WebAssembly is a new langage embedded into the Web Browser, close to the venerable assembly, able to improve and fasterize computational tasks. Power the Web at lightning speed!",
+      "audience_level": "Intermediate",
+      "talk_format": "Long talk (50 minutes)"
+    }
+  },
+  {
+    "id": 108955,
+    "state": "accepted",
+    "confirmed": true,
+    "created_at": "2020-01-15T19:04:41.555Z",
+    "updated_at": "2020-02-12T15:32:17.443Z",
+    "additional_info": null,
+    "rating": 76.0,
+    "trust": 90.9090909090909,
+    "tags": [
+      "autonomie",
+      "management",
+      "leadership",
+      "motivation",
+      "compétence",
+      "résultat",
+      "collaboration"
+    ],
+    "co_presenter_profiles": [],
+    "profile": {
+      "name": "Isabelle Gauthier",
+      "bio": "Isabelle accompagne les équipes et managers par le coaching, la facilitation, la formation le conseil en management. Successivement directrice marketing, directrice d'agence digitale et consultante \"expérience client\", elle apporte une vision globale des organisations depuis le projet stratégique jusque sa mise en oeuvre opérationnelle dans l'organisation. Elle est récemment intervenue auprès de Groupama (accompagnement nouvelle organisation), Engie Axima (nouvelle culture managériale), Enedis (coaching équipe managériale et qualité de coopération globale), Solocal (plan de développement individuel des managers, coachings individuels). Elle anime également des stages \"manager agile\" (Oui SNCF, Groupama, CCO).",
+      "twitter": "I_Gauthier",
+      "company": "GOOOD",
+      "url": "https://blog.goood.com/author/igauthier91189542/",
+      "email": "ckens.info@gmail.com",
+      "location": "Lyon",
+      "avatar": "https://secure.gravatar.com/avatar/1df6b66cfff688a62b8f0039603d1cfb?s=500"
+    },
+    "talk": {
+      "title": "Autonomie et leadership : les liaisons dangereuses ",
+      "description": "Comment concilier le respect d’un cadre et la définition d’espaces de liberté, l’épanouissement personnel et la focalisation sur l’objectif du projet ?\r\nDe nombreux managers et équipes en quête d’autonomie se questionnent sur cet équilibre.\r\n\r\nIl n’y a pas de modèle idéal, mais quelque soit le modèle, s’il n’est pas clairement assumé, il générera gâchis, démotivation et sous-emploi des compétences.\r\nNous vous proposons dans cet atelier d’y voir plus clair :\r\n-       En articulant ces deux enjeux d’autonomie et de leadership\r\n-       En partageant nos expériences respectifs\r\n-       En analysant les différents stades d’autonomisation des équipes\r\n-       En réalisant la modélisation de votre système d’organisation-équipe pour en clarifier les limites et définir vos axes de travail pour créer un environnement capacitant",
+      "notes": "Un atelier pour regarder avec lucidité son système équipe, partager son expérience avec ses pairs et repartir avec de nouvelles envies de changer la donne !\r\n\r\nDesign et animation par Olivier Lequeux et Isabelle Gauthier",
+      "abstract": "Quelle est la bonne recette entre autonomie et le leadership, le respect d’un cadre et la définition d’espaces de liberté ?\nVenez modéliser votre système d’organisation-équipe pour en clarifier les limites et définir vos axes de travail pour créer un environnement puissant.",
+      "audience_level": "All",
+      "talk_format": "Workshop (110 minutes)"
+    }
+  },
+  {
+    "id": 107176,
+    "state": "accepted",
+    "confirmed": false,
+    "created_at": "2020-01-08T11:19:21.742Z",
+    "updated_at": "2020-01-29T14:36:08.085Z",
+    "additional_info": null,
+    "rating": 80.0,
+    "trust": 81.8181818181818,
+    "tags": [
+      "bash",
+      "Tech"
+    ],
+    "co_presenter_profiles": [],
+    "profile": {
+      "name": "René Ribaud",
+      "bio": "$ cat ~/.bash_profile\r\nNAME=″René Ribaud″\r\nAGE=44\r\n\r\nsource ./1998.sh\r\n\r\nPROFESSION=″Unices system and storage administrator , since 2003″\r\n\r\nHISTORY=″Lots (too many) of infrastructure implementation projects″ \\\r\n″Discover Linux \u0026 FLOSS between 1995 / 2000″ \\\r\n″First step in the cloud around 2011, pre-sales solution architect 2014 (Cloud, DevOps)″ \\\r\n″I’m an Ops !″\r\n\r\nCOMPANY=″CGI 20th November 2017″\r\n\r\nJOB=″Information system architect specialized around DevOps technologies”\r\n\r\nVARIOUS=”Curious \u0026 self-learner, I spend part of my time monitoring new\r\ntechnologies in order to provide new and original solutions and sharing my\r\nknowledge.”",
+      "twitter": "uggla_",
+      "company": "CGI",
+      "url": "https://www.linkedin.com/in/ren%C3%A9-ribaud-44145137",
+      "email": "rene.ribaud@gmail.com",
+      "location": "Grenoble",
+      "avatar": "https://secure.gravatar.com/avatar/48ad6beafb60a60f4768ab679dee53f6?s=500"
+    },
+    "talk": {
+      "title": "Bash n'est pas un langage de programmation de seconde zone",
+      "description": "Bash est utilisé partout et pour des actions critiques parfois.\r\nLes participants à cette présentation apprendront comment avec quelques bonnes pratiques, ils pourront produire des bash de bien meilleures qualités et s'éviter des heures de recherches de bugs.",
+      "notes": "* Cette présentation a été donnée a Agile Grenoble 2019, vous pouvez consulter les slides ici: [https://drive.google.com/file/d/15Aa-HFafJnTnCvVc-dTP4cZLw-TqTFZw/view](https://drive.google.com/file/d/15Aa-HFafJnTnCvVc-dTP4cZLw-TqTFZw/view)\r\n* J'ai eu de bons retours des auditeurs, malgré le fait que c’était la dernière présentation de la dernière journée et pas sur un sujet liée à l'agilité. Le lien vers le roti est ici : [https://drive.google.com/file/d/1jirB79FVtt5xcvB_1i82x8eUdY0OKqFd/view](https://drive.google.com/file/d/1jirB79FVtt5xcvB_1i82x8eUdY0OKqFd/view)\r\n* Lors de cette session, il y a eu de bons échanges et les personnes étaient contentes. J'ai eu des retours assez sympa de personnes qui connaissaient déjà bien  le sujet en me disant qu'elles avaient appris des choses.\r\n* Je revendique le coté non \"hype\" de bash ! Oui ce n'est pas le dernier sujet à la mode, mais un outil utilisé par énormément de personnes. Et finalement est ce que ce sujet n'est pas plus original que le nième dernier framework js qui sera bientôt obsolète ?\r\n* Mon objectif lors de cette présentation est de transmettre du savoir et facilité la vie des utilisateurs, mais aussi de passer un bon moment.",
+      "abstract": "Le but de cette session est d’expliquer comment et pourquoi produire des scripts bash de meilleures qualités et les rendre plus robustes.",
+      "audience_level": "Intermediate",
+      "talk_format": "Long talk (50 minutes)"
+    }
+  },
+  {
+    "id": 107941,
+    "state": "accepted",
+    "confirmed": false,
+    "created_at": "2020-01-11T22:57:01.274Z",
+    "updated_at": "2020-01-29T14:25:40.021Z",
+    "additional_info": null,
+    "rating": 91.0,
+    "trust": 90.9090909090909,
+    "tags": [],
+    "co_presenter_profiles": [],
+    "profile": {
+      "name": "Romeu Moura",
+      "bio": "Endless conversation — with friends, compilers — on art, Symmathesy, methods, absurdism, dialectic, paradigm jumps, serendipity.\r\n",
+      "twitter": "malk_zameth",
+      "company": "BCG",
+      "url": "",
+      "email": "malk@zameth.org",
+      "location": "Unknown",
+      "avatar": "https://papercallio-production.s3.amazonaws.com/uploads/user/avatar/20199/avatar2020.jpg"
+    },
+    "talk": {
+      "title": "Bourdieu's social theory applied to tech",
+      "description": "Every workplace, every community, and in fact every social interaction, is governed by various forces, hidden power structures, implicit oppression and submission. We oppress people by accident, and we are oppressed by others by accident.\r\n\r\nBourdieu's social theory (with concepts like “symbolic violence\", “cultural capital” and “hexis”) explain what is happening. By understanding what he meant, we learn how each of us influences and is influenced by the people around us, in ways that we wouldn't expect.\r\n\r\nThis talk tries to make Bourdieu's ideas accessible. Learn how to improve your environment immediately; see why meritocracy is a dangerous lie; recognise oppression and submission when it happens; and gain the tools to fight it day to day.",
+      "notes": "Une version initiale du talk a été décrite en blog post ici : https://medium.com/@Romeu/agility-should-pay-attention-to-sociology-b671fd056933\r\n\r\nUne version très récente est filmé ici : https://www.youtube.com/watch?v=3P1sRZ56YRg",
+      "abstract": "Obscure though it may seem: the sociologist Bourdieu \u0026 his social theory \ntell us a lot about what is happening in the workplace and society around us. By understanding what he meant we see how we influence and are  influenced and see that meritocracy is a dangerous lie.",
+      "audience_level": "All",
+      "talk_format": "Long talk (50 minutes)"
+    }
+  },
+  {
+    "id": 103112,
+    "state": "accepted",
+    "confirmed": false,
+    "created_at": "2019-12-06T15:50:45.622Z",
+    "updated_at": "2020-01-24T15:14:56.750Z",
+    "additional_info": null,
+    "rating": 100.0,
+    "trust": 45.4545454545455,
+    "tags": [
+      "UX",
+      "Design",
+      "Personality"
+    ],
+    "co_presenter_profiles": [],
+    "profile": {
+      "name": "Vitaly Friedman",
+      "bio": "Vitaly loves beautiful content and does not give up easily. Born in Minsk, Belarus, he studied computer science and mathematics in Germany. While writing algebra proofs and preparing for software engineering at nights in the kitchen, at the same time he discovered passion for typography, interface design and writing. After working as a freelance designer and developer for 6 years, he co-founded Smashing Magazine back in 2006, a leading online magazine for designers and developers. His curiosity drove him from interface design to front-end to performance optimization to accessibility and back to user experience over all the years.\r\n\r\nVitaly is the author, co-author and editor of all Smashing books (https://www.smashingmagazine.com/books), and a curator of all Smashing Conferences (https://www.smashingconf.com). He currently works as creative lead of Smashing Magazine (www.smashingmagazine.com) and front-end/UX consultant in Europe and abroad, working with European Parliament, Haufe-Lexware, Axel-Springer and a few other companies.",
+      "twitter": "smashingmag",
+      "company": "Smashing Media AG",
+      "url": "https://www.smashingmagazine.com",
+      "email": "vitaly@smashingconf.com",
+      "location": "Unknown",
+      "avatar": "https://secure.gravatar.com/avatar/0dbade17ef65c7e33e20732476ef5332?s=500"
+    },
+    "talk": {
+      "title": "Bringing Personality Back To The Web",
+      "description": "Generic web layouts have become somewhat of a misnomer in conversations circling around web design these days. As creatives, we’re bored and slightly annoyed by how predictable and uninspired most web experiences have become. How do we break out of predictable and boring designs without breaking the usability and functionality of our experiences?\r\n\r\nIn this talk, Vitaly Friedman, the co-founder of Smashing Magazine, will shed some light into a strategy of how to bring personality back to web design, and how we can make our experiences more humane while also having a higher ROI. Beware: you might not be able to unlearn what you’ll learn in this session. Bonus: you’ll see some slightly dirty examples of things being done out there, so bring along some pragmatism to this talk.",
+      "notes": "",
+      "abstract": "Generic web layouts have become a misnomer in conversations circling around design these days. As creatives, we’re bored and slightly annoyed by how predictable and uninspired most web experiences have become. How do we break out without breaking the usability and functionality of our experiences?",
+      "audience_level": "All",
+      "talk_format": "Long talk (50 minutes)"
+    }
+  },
+  {
+    "id": 109087,
+    "state": "accepted",
+    "confirmed": false,
+    "created_at": "2020-01-15T23:21:46.400Z",
+    "updated_at": "2020-02-05T09:42:36.506Z",
+    "additional_info": null,
+    "rating": 76.6666666666667,
+    "trust": 81.8181818181818,
+    "tags": [
+      "UX",
+      "UXdesign",
+      "Design UX",
+      "Designer",
+      "Formation",
+      "Design",
+      "Team",
+      "junior",
+      "etudiants",
+      "etudes",
+      "ecoles",
+      "pedagogie",
+      "coaching",
+      "collaboration",
+      "amelioration",
+      "formation continue",
+      "mentoring",
+      "Ethic",
+      "Code",
+      "Developpement",
+      "Ethique",
+      "Dark Patterns",
+      "Interfaces truquées",
+      "Interfaces",
+      "IXD",
+      "UI",
+      "UI Design",
+      "UX Design",
+      "Expérience Utilisateur",
+      "Valeurs d'entreprise",
+      "Valeurs d'équipe"
+    ],
+    "co_presenter_profiles": [],
+    "profile": {
+      "name": "Sophie Freiermuth",
+      "bio": "Sophie est designer d'expériences utilisateur depuis près de 15 ans, et formatrice depuis plus de 6 ans. Elle alterne le design pour de grandes marques (Eurostar, L'Oréal, etc) ou bien des services publics (en Grande-Bretagne où elle a résidé 16 ans) et l'animation de formations en entreprise ou publiques, afin de contribuer à former les designers de demain et  faire grandir une discipline qu'elle adore. Elle partage également son travail en conférences dans le monde entier via des session où elle construit un paradigme entre design, agilité et conception de produits, éclairant les praticiens d'une discipline à l'autre. Elle est enfin mentor, co-organisatrice de la Balanced Team London Unconference (3eme édition cette année à Londres) et danseuse de tango argentin, où sa créativité et sa démarche collaborative et dynamique s'expriment musicalement.\r\n",
+      "twitter": "wickedgeekie",
+      "company": "Baguette UX",
+      "url": "https://www.linked.in/sophiefrei",
+      "email": "sophie@baguetteUX.com",
+      "location": "London, United Kingdom",
+      "avatar": "https://secure.gravatar.com/avatar/d4d8c22875ced66cbb356912cfef65d0?s=500"
+    },
+    "talk": {
+      "title": "Comment bien faire du mal: les dark patterns (interfaces truquées).",
+      "description": "A RAFFINER - SI OK, JE PEAUFINERAI POUR LE 1er MARS\r\n------------\r\n\r\nIntro: Exploration avec l'audience des definitions, et des pratiques de chacun. Mise en question des concepts.\r\n\r\n1. Etat des lieux 2020: Etat des lieux, catalogue de pratiques, scandales publics, législation et règlementation\r\n2. Bonnes intentions au départ, interfaces truquées à l'arrivée: comment détecter les dérapages: \r\n3. L'éthique, notre radar/GPS interne. L'identifier, l'entendre. L'éthique collective: en équipe, au niveau entreprise.\r\n\r\nConclusion: Good tech / Evil tech, dichotomie ou paradigme? Et comment y positionner sa carrière à court, moyen et long terme?\r\n",
+      "notes": "Une session qui fait réfléchir et invite à prendre ses responsabilités dans la croissance des technologies et pratiques aux conséquences néfastes. \r\n\r\nA COMPLETER",
+      "abstract": "La tech a 1000 moyens de faire du mal et les interfaces truquées sont une série de pratiques de design et de code qui jouent un rôle aussi peu règlementé que potentiellement lucratif. Je vous invite à les explorer, comprendre votre propre éthique et celle des entreprises: voyage dans le côté obscur.",
+      "audience_level": "All",
+      "talk_format": "Long talk (50 minutes)"
+    }
+  },
+  {
+    "id": 108662,
+    "state": "accepted",
+    "confirmed": false,
+    "created_at": "2020-01-14T23:51:50.798Z",
+    "updated_at": "2020-01-29T14:27:17.880Z",
+    "additional_info": null,
+    "rating": 84.4444444444444,
+    "trust": 81.8181818181818,
+    "tags": [
+      "Tech",
+      "Passwords",
+      "Bitwarden",
+      "Security"
+    ],
+    "co_presenter_profiles": [],
+    "profile": {
+      "name": "Éric Daspet",
+      "bio": "Après des années comme développeur web, j'ai un peu changé de métier pour faire de la direction technique et du management.  Non ce n'est pas sale, juste un autre rôle dans la même direction.\r\n\r\nPar le passé j'ai eu l'occasion de fonder les conférences Paris-Web, co-écrire le livre « PHP 5 avancé » (désormais PHP 7 avancé), co-fonder la plateforme de livres numériques TEA (maintenant Vivlio) et diriger les équipes de La Ruche Qui Dit Oui.\r\n\r\nAujourd'hui j'oriente les équipes de Cozy Cloud, à moitié dans le management et à moitié les mains dans le code. Je parle beaucoup vie privée, responsabilité et éthique, sécurité, et architecture des applications web.",
+      "twitter": "e3d5_fr",
+      "company": "Cozy Cloud",
+      "url": "https://eric.daspet.name/",
+      "email": "eric.daspet@survol.fr",
+      "location": "Lyon",
+      "avatar": "https://secure.gravatar.com/avatar/a83a70aa42afa4c45563213e6ffc03ce?s=500"
+    },
+    "talk": {
+      "title": "Comment fonctionne un gestionnaire de mots de passe ?",
+      "description": "Difficile de se passer d'un gestionnaire de mots de passe si on veut respecter les bonnes pratiques : des mots de passe uniques et complexes. C'est encore plus vrai s'il faut partager les mots de passe avec des collègues ou des membres de la famille.\r\n\r\nCes gestionnaires de mots de passe sont souvent des boites noires. On vous dit que les mots de passe sont chiffrés mais je vous propose d'aller un peu plus loin et comprendre comment ça fonctionne et pourquoi, puis comment on peut partager des mots de passe synchronisés en ligne sans faire confiance à personne pour ses mots de passe.\r\n\r\nÀ Cozy Cloud nous avons étudié le gestionnaire open source Bitwarden, puis implémenté nos propres solutions autour de la même API. Je vous propose une plongée dans tout ce que nous avons appris, pour satisfaire la curiosité ou pour vous rassurer quant à l'utilisation de ces outils.\r\n\r\nOn parlera chiffrement et architecture mais ça sera compréhensible pour tout le monde sans prérequis particulier.",
+      "notes": "Pour les conférences passées les plus récentes : \r\n\r\n* AFUP : https://www.youtube.com/watch?v=gW_TJ7kAu78\r\n* ParisWeb : https://www.paris-web.fr/orateurs/eric-daspet.php\r\n* ou à Mixit : https://mixitconf.org/2018/plan-de-vol-ground-control-to-major-tom\r\n\r\nPour la conférence proposée, il y a une base de travail déjà publiée sur https://n.survol.fr/n/dis-tonton-comment-ca-fonctionne-la-securite-dun-gestionnaire-de-mots-de-passe-introduction-cryptographique\r\n\r\n* Les bases de ce que je vais présenter\r\n* Ce qu'est un gestionnaire de mot de passe\r\n* Les enjeux (chiffrement côté client)\r\n* Le chiffrement des mots de passe\r\n* Garder une clef maitresse\r\n* Fonctionnement d'un gestionnaire local\r\n* Sécurité\r\n* Changer la clef maitresse\r\n* Le partage de mots de passe\r\n* La sécurité du partage\r\n* Différentes solutions ouvertes et leurs choix respectifs",
+      "abstract": "Pas de blabla lu cent fois ailleurs. Nous parlerons cryptographie et architecture d'une implémentation réelle.\n\nVous apprendrez tout ce que j'ai moi-même appris en implémentant un gestionnaire de mots de passe compatible avec l'API de Bitwarden.",
+      "audience_level": "All",
+      "talk_format": "Long talk (50 minutes)"
+    }
+  },
+  {
+    "id": 102029,
+    "state": "accepted",
+    "confirmed": false,
+    "created_at": "2019-11-27T15:29:16.991Z",
+    "updated_at": "2020-01-29T14:32:32.740Z",
+    "additional_info": null,
+    "rating": 87.2727272727273,
+    "trust": 100.0,
+    "tags": [
+      "Team",
+      "Life style"
+    ],
+    "co_presenter_profiles": [],
+    "profile": {
+      "name": "Marilyn Kol",
+      "bio": "En tant que développeuse, puis chef de projet, j'ai vécu de l'intérieur les problématiques liées aux méthodologies traditionnelles. En réponse à ces problématiques, j'ai étudié l'agilité et je suis devenue Scrum Master. Aujourd'hui, je mène deux activités en parallèle qui font écho à mes deux passions : l'agilité et le développement personnel. En tant que Coach Agile, j'accompagne des équipes en revenant aux bases de l’agilité. Et en tant que Coach Professionnelle, j'accompagne des individus sur des demandes personnelles.",
+      "twitter": "Mari7yn",
+      "company": "Freelance",
+      "url": "https://marilynkol.com",
+      "email": "vismaviedagiliste@gmail.com",
+      "location": "Unknown",
+      "avatar": "https://secure.gravatar.com/avatar/622ddc8acf3d57af34c73a78fed83609?s=500"
+    },
+    "talk": {
+      "title": "Comment réduire soi-même sa dette émotionnelle pour mieux collaborer dans une équipe?",
+      "description": "En tant que membre d'une équipe, est-ce que cela vous arrive de \"prendre sur vous\" pour continuer à travailler en équipe? Et à force de prendre sur vous, votre vase se remplit-il et votre mal-être au travail avec? Je vous propose une méthode basée sur mon expérience pour vous permettre de vider efficacement votre vase en douceur, et pour éviter qu'il continue de se remplir, sans l'aide d'un professionnel.\r\n\r\nEn tant qu'entreprise, avez-vous conscience que si un membre de votre équipe ne va pas bien, l'intelligence collective de l'équipe en pâtit forcément? Et vous ne pouvez pas forcer quelqu'un à être coaché s'il ne le souhaite pas. Lui donner les clés pour travailler sur lui de son plein gré et de manière autonome peut être une solution.",
+      "notes": "Je ne souhaite pas être filmé. Cela me permet de parler en toute liberté de choses assez personnelles. Et c'est ce qui plait autant aux participants car ils sentent cette franchise, cette authenticité et cette proximité. \r\n\r\nLes slides sont ici : https://speakerdeck.com/marilynkol/comment-reduire-soi-meme-sa-dette-emotionnelle-pour-mieux-collaborer-dans-une-equipe-agile\r\n\r\n",
+      "abstract": "Est-ce que cela vous arrive de \"prendre sur vous\" pour continuer à travailler en équipe? Et à force, votre vase se remplit-il et votre mal-être au travail avec? Je vous propose une méthode basée sur mon expérience pour vous permettre de vider votre vase, sans l'aide d'un professionnel.",
+      "audience_level": "All",
+      "talk_format": "Long talk (50 minutes)"
+    }
+  },
+  {
+    "id": 107395,
+    "state": "accepted",
+    "confirmed": false,
+    "created_at": "2020-01-09T14:25:08.841Z",
+    "updated_at": "2020-01-29T14:56:22.939Z",
+    "additional_info": null,
+    "rating": 87.0,
+    "trust": 90.9090909090909,
+    "tags": [
+      "Ethic",
+      "Aliens"
+    ],
+    "co_presenter_profiles": [],
+    "profile": {
+      "name": "Stéphane Nicoll",
+      "bio": "Stéphane has 20 years of experience in software engineering with a strong focus on API development on the JVM. After having spent more than a decade developing large scale Java enterprise applications in the geospatial, financial, or logistics sectors, he joins the core Spring Framework development team in 2014. Stéphane is now working on Spring Boot and is the lead of start.spring.io, a service that helps millions of users start their next applications.",
+      "twitter": "snicoll",
+      "company": "Pivotal",
+      "url": "https://spring.io/team/snicoll",
+      "email": "snicoll@pivotal.io",
+      "location": "Liège, Belgium",
+      "avatar": "https://secure.gravatar.com/avatar/33d0963a20138828608f3f61927545b8?s=500"
+    },
+    "talk": {
+      "title": "Comment repenser nos métiers et nos passions à l'époque du changement climatique?",
+      "description": "Dans ce talk, j’aimerais parler de mon parcours et ce qui m’a amené à vouloir changer mon mode de vie à nouveau. Le changement climatique nous amène à nous questionner en tant que professionnels de l’IT et consommateurs. Mais la vue d’ensemble prend bien plus de sens dans l’engagement politique et citoyen.",
+      "notes": "# Avant 2019\r\n\r\n* Voiture de société pendant plus de 10 ans. Quand j’y repense, je l’ai échappé belle (nervosité, impossibilité de passer trop de temps dans une voiture pour aller en vacances, etc).\r\n* _Du fait d’être bien entouré_: lorsque je commence ce nouveau job 100% remote (sans bureau), je suis perdu à l’idée de ne plus avoir de voiture personnelle. Quid de ma mobilité? De mes habitudes? Je scanne les sites d’occasions à la recherche d’une voiture. Mon épouse arrive à me convaincre d’attendre quelques semaines “pour voir”. Ca fait 6 ans, je n’ai plus jamais été regarder\r\n* Spring Boot commence à décoller en 2014, il y a des demandes pour des présentations. Néophyte, je cherche d’abord des conférences en Francais et je commence à prendre beaucoup le train. J’y prend goût!\r\n* Les conférences me permettent de voyager plus loin et plus souvent. J’utilise ces voyages comme une contre-mesure d’être seul (professionnellement) la majorité du temps: mes collègues directs les plus proches sont à Lyon ou le sud de l’Angleterre\r\n* Chaque voyage aux US est une claque. Une claque culturelle et écologique:\r\n* A côté de cela, le mode de vie en transport en commun professionnel commence à transparaître dans la vie privée. Depuis 2 ans, mon épouse et moi partons en vacances en train\r\n\r\n# 2019, professionnellement\r\n* Un collègue initie un groupe de travail pour étudier l’impact co2 des déplacements professionnel de la boîte \r\n* _Mon entourage a bien plus d’impact que je ne le pensais_: mon équipe se réunit une semaine début d’année pour parler de la roadmap de Spring Boot. Cela devient compliqué, voir impossible à organiser cette fois-ci car une personne ne peut vraiment pas se déplacer. Je peste un peu, je me réjouis à chaque fois de passer une semaine à New York, ma ville préférée aux US. J’essaie de trouver des solutions pour l’organiser quand même. Et là, un autre collègue annonce qu’il ne montera plus jamais dans un avion de sa vie et propose de faire la réunion via Zoom. Sa décision a un effet de boule de neige chez moi\r\n* Je m’intéresse de plus en plus à ma consommation annuelle en CO2 et au carbon offset. Mettre les choses en perspective aide beaucoup. Après les quelques conférences déjà planifiées, Je décide d’arrêter de prendre l’avion sauf si c’est absolument nécessaire. \r\n\r\n# 2019, personnellement\r\n* Après un week-end imprévu en Ardèche au milieu de nul part, je commence une dépression. Les Collapsos on eut raison de moi, je vais trouver un endroit pour y vivre le mieux possible et le plus longtemps possible. Avec l’aide de mes proches, je remonte la pente\r\n* Mon épouse s’intéresse au zéro déchet. J’essaie d’amener mes contenants au magasin pour éviter le “papier” à usage unique. J’oublie 2 fois sur 3, 2 magasins sur 3 ne sont pas vraiment préparé (ex: pèse sur un papier qu’ils jettent après utilisation). Bref, ça colle pas et j’abandonne.\r\n* Par contre, je découvre d’autres formes de faire du café. Après avoir acheté des capsules bio-dégradable, je découvre les cafetières à pression (presse française) et plus récemment les cafetières italienne. Adieu, cafetière à capsule.\r\n\r\n# 2019, citoyen\r\n* Marche pour le climat, action concrète pour montrer aux politiques que l'on souhaite un changement\r\n* HackYourFuture: partager ma connaissance avec ceux qui ent ont le plus besoin. HackYourFuture est un école pour réfugiés\r\n* Brasserie Coopérative Liégeoise: en m'inscrivant dans une coopérative locale, j'ouvre mon cercle social \"local\" à de nouvelles personnes\r\n\r\n# Conclusion\r\n* Chaque parcourt est différent. Est-ce que j'aurais pris cette décision sans avoir cette liberté/chance d'explorer le monde?\r\n* Il y a encore beaucoup de chemin à faire: le prix des trains reste vraiment élevé, très déprimant quand on cherche un chemin dans google maps et qu’il suggère de prendre l’avion pour 10 fois moins cher et 5 fois plus vite\r\n* Se rendre compte de sa propre consommation, la comparer, déterminer les actions concrètes pour la diminuer m'a emmené bien plus loin que ce que je ne l'aurai imaginé\r\n* Chaque geste compte",
+      "abstract": "Il y a 6 ans, Stéphane a l’opportunité de travailler en remote après des années en SSII et tout le mode de vie qui va avec. Très vite, le monde s’ouvre à lui, conférence après conférence, vol après vol, il voyage à travers le monde. En 2019, il décide de changer à nouveau, venez découvrir pourquoi.",
+      "audience_level": "All",
+      "talk_format": "Short talk (20 minutes)"
+    }
+  },
+  {
+    "id": 107613,
+    "state": "accepted",
+    "confirmed": false,
+    "created_at": "2020-01-10T16:20:07.334Z",
+    "updated_at": "2020-01-29T14:35:14.484Z",
+    "additional_info": null,
+    "rating": 84.4444444444444,
+    "trust": 81.8181818181818,
+    "tags": [
+      "tracking",
+      "tor",
+      "security"
+    ],
+    "co_presenter_profiles": [],
+    "profile": {
+      "name": "Mathieu Mure",
+      "bio": "Développeur Full stack à Zenika, Java et Javascript.\r\nJe suis passionné par le web et j'aime partager mes connaissances à travers des conférences ou des formations.\r\nJ'ai notamment donné un atelier sur Jigsaw à Devoxx et au Devfest Nantes, et un atelier sur Vue lors d'une nightclazz by Zenika et au Alpes Jug.",
+      "twitter": "MathieuMure",
+      "company": "Zenika",
+      "url": "",
+      "email": "mathieu.mure@zenika.com",
+      "location": "Unknown",
+      "avatar": "https://secure.gravatar.com/avatar/3a27cad3441ef3e82a8464770c85f271?s=500"
+    },
+    "talk": {
+      "title": "Comment se faire traquer sur TOR sans s'en rendre compte",
+      "description": "Qui n'a jamais fait l'erreur d'avoir cherché une fois un cadeau pour ses neveux et de se retrouver avec des pubs ciblées sur Dora l'exploratrice pendant plusieurs mois?\r\n\r\nLe tracking sur internet est le nerf de la guerre et il s'agit d'un vrai jeu de chat et de la souris entre les traqueurs et les outils d’anonymat.\r\n\r\nCar vous pensiez être anonyme sur internet car vous utilisez le réseau TOR à travers un VPN ? C'était sans compter les ressources intarissables de certains...\r\n\r\nJe vous propose pendant ce talk de découvrir à travers mon histoire les différents outils de tracking qui existent et les solutions d’anonymat possible...ou pas ?\r\n\r\n\r\n\r\nCe talk a déjà été joué lors de plusieurs conf locales et il a été joué au Devfest Strasbourg\r\n\r\nLien vers mes slides https://t.co/oOP6MP3vLs",
+      "notes": "",
+      "abstract": "Qui n'a jamais fait l'erreur d'avoir cherché une fois un cadeau pour ses neveux et de se retrouver avec des pubs ciblées sur Dora l'exploratrice pendant plusieurs mois?\n\nVenez découvrir à travers mon histoire les différents outils de tracking qui existent et les solutions d’anonymat possible ou pas?",
+      "audience_level": "All",
+      "talk_format": "Short talk (20 minutes)"
+    }
+  },
+  {
+    "id": 107314,
+    "state": "accepted",
+    "confirmed": false,
+    "created_at": "2020-01-08T22:17:57.386Z",
+    "updated_at": "2020-01-19T22:28:19.678Z",
+    "additional_info": null,
+    "rating": 100.0,
+    "trust": 72.7272727272727,
+    "tags": [
+      "Ethic"
+    ],
+    "co_presenter_profiles": [],
+    "profile": {
+      "name": "Neveu Audrey",
+      "bio": "Audrey est développeur full-stack. Passionnée par son métier, Audrey a toujours été fortement engagée dans la communauté Java au travers de plusieurs JUGs et conférences (Duchess France, Paris JUG, Devoxx France, Devoxx UK) mais aussi au sein d’initiatives visant à faire découvrir la programmation aux plus jeunes (Programatoo, Devoxx4Kids). Plus récemment elle a également rejoint l’équipe des Cast Codeurs.",
+      "twitter": "Audrey_Neveu",
+      "company": "",
+      "url": "",
+      "email": "neveu.audrey@gmail.com",
+      "location": "Rouen",
+      "avatar": "https://secure.gravatar.com/avatar/7e357ae5b0366a29f1f54434791ddefd?s=500"
+    },
+    "talk": {
+      "title": "Community += 10",
+      "description": "Dix ans. \r\n\r\nComment fait-on tenir des initiatives comme des JUGs ou des confs pendant dix ans ? Qu’est ce qui fait que dix ans après, cela fonctionne toujours autant et même que la demande soit toujours plus forte ? Et surtout qu’est ce que l’on peut faire pour faire en sorte que dans dix ans, ces initiatives soient toujours là et qu’elles aient contribué à améliorer le bien du plus grand nombre, et pas seulement le nôtre ?\r\n\r\nDans cette keynote j’aimerais me pencher sur ce qui fait l’essence de nos communautés, et proposer des pistes pour se servir de la force de ces communautés, de l’énergie et des valeurs qui en sont les fondations afin de contribuer, à notre échelle, à quelque chose d’encore plus grand, quelque chose qui bénéficie au plus grand nombre. Car s’il y a une chose que l’on sait faire, c’est partager. Alors pourquoi s’en tenir à la technique ? Pourquoi ne pas en profiter pour s’impliquer dans tout ce qui fait de nous des êtres humains et essayer de transmettre ce qui fonctionne chez nous pour l’appliquer dans d’autres domaines ?\r\n\r\nPour que dans dix ans, nous soyons toujours là, encore plus motivés et encore plus riches de valeur que jamais !",
+      "notes": "Tout d'abord je vous remercie infiniment pour l'invitation, c'est un grand honneur :) Et je vous présente également tous mes voeux pour cette nouvelle année.\r\n\r\nLe titre du talk est probablement amené à évoluer mais concernant le contenu, les pistes de réflexion que j'aimerais amener sont orientées autour de trois axes : inclusivité / diversité, écologie, et responsabilité des “sachant” que nous sommes face à l'évolution, le potentiel et la complexité des technologies telles que média sociaux et IA. Pour chaque axe, j’essayerai en m’appuyant sur des initiatives déjà existantes ou à développer, de donner des idées sur comment à notre niveau on peut avoir un impact dans chacun de ces domaines. \r\n\r\nConcernant le format je n'étais pas sûre, dites moi si j'ai bon :)",
+      "abstract": "Comment fait-on tenir des initiatives comme des JUGs ou des confs pendant dix ans ? Et surtout qu’est ce que l’on peut faire pour faire en sorte que dans dix ans, ces initiatives soient toujours là et qu’elles aient contribué à améliorer le bien du plus grand nombre, et pas seulement le nôtre ?",
+      "audience_level": "All",
+      "talk_format": "Short talk (20 minutes)"
+    }
+  },
+  {
+    "id": 107010,
+    "state": "accepted",
+    "confirmed": false,
+    "created_at": "2020-01-07T16:47:41.784Z",
+    "updated_at": "2020-01-29T14:58:19.380Z",
+    "additional_info": null,
+    "rating": 81.0,
+    "trust": 90.9090909090909,
+    "tags": [
+      "JavaScript",
+      "React",
+      "Hooks",
+      "REX",
+      "Web",
+      "ProtonMail",
+      "Tech"
+    ],
+    "co_presenter_profiles": [],
+    "profile": {
+      "name": "Matthieu Lux",
+      "bio": "Developer @ProtonMail // Ex 🥑 @ZenikaIT #Web and #JavaScript technologies // #React #Vue #Angular #Node // Organizer @LyonJS",
+      "twitter": "Swiip",
+      "company": "ProtonMail",
+      "url": "https://swiip.now.sh/",
+      "email": "matthieu.lux@protonmail.com",
+      "location": "Lyon, France",
+      "avatar": "https://papercallio-production.s3.amazonaws.com/uploads/user/avatar/61501/Swiip.jpg"
+    },
+    "talk": {
+      "title": "D'AngularJS à React chez ProtonMail",
+      "description": "Nous avons été confronté à un défi que de nombreuses entreprises connaissent. Notre stack Web n'est plus au goût du jour, l'application devient trop grosse, n'est plus assez performante et n'est plus maintenable. Mais comment aborder une migration sur une nouvelle stack sans tout recommencer de zéro, tout en continuant à proposer des nouveautés ?\r\n\r\nJe vous proposerai un retour d'expérience sur la démarche. Il y a de nombreuses perspectives à prendre en compte, j'essayerais d'en passer en revu la plupart :\r\n\r\n- ProtonMail, les fonctionnalités principales et les défis particuliers (chiffrement côté client)\r\n- Etat des lieux avant la migration: Angular 1.7, monolithe, beaucoup de code, parfois sans spécifications.\r\n- Pourquoi se lancer dans une migration ?\r\n- Choix de la nouvelle stack: /!\\ spoilers /!\\ React, Hooks, Contexts, sans Redux\r\n- Séparation en plusieurs applications: différentes applications clientes, un nouveau système de maintien de session à mettre en place, nouveau découpage en sous - projets.\r\n- Mise en place, implémentation de la nouvelle stack.\r\n- Migration du code des applications existantes\r\n- Développement en parallèle de nouveaux services.\r\n- Feedbacks: des retours des utilisateurs finaux, du produit, du service qualité, des développeurs, et même quelques chiffres.",
+      "notes": "- Je n'ai pas été dans l'équipe au début mais j'ai (ou je vais) interviewé l'équipe pour avoir la vision globale. Au pire, d'autres membres de l'équipe seront certainement dans la salle.\r\n- J'ai fortement axé le talk sur le côté REX, c'est ce que j'ai compris être votre souhait. Si ce n'est pas le cas ou si c'est trop, je peux faire des ajustements.\r\n- D'ici que le Mixit ait lieu, les choses doivent encore évoluer. Dans le meilleur des cas, la migration sera réellement terminée. Je prévois d'adapter le contenu en conséquence.",
+      "abstract": "Chez ProtonMail, nous sommes presque au bout d'une migration complète de nos applications Web depuis un monolithe AngularJS (1.7) à plusieurs applications React au goût du jour.\n\nJe vous propose un retour d'expérience sur les défis, les choix, les difficultés et les succès de la démarche.",
+      "audience_level": "Beginner",
+      "talk_format": "Long talk (50 minutes)"
+    }
+  },
+  {
+    "id": 107150,
+    "state": "accepted",
+    "confirmed": false,
+    "created_at": "2020-01-08T09:11:02.250Z",
+    "updated_at": "2020-01-29T14:25:52.255Z",
+    "additional_info": null,
+    "rating": 90.0,
+    "trust": 90.9090909090909,
+    "tags": [
+      "Tech",
+      "javascript",
+      "IA",
+      "gamedev"
+    ],
+    "co_presenter_profiles": [],
+    "profile": {
+      "name": "Christophe Camicas",
+      "bio": "Amoureux du développement, fan de technologie et de produits orientés usages, curieux dans l'âme, Christophe accompagne les équipes de développement dans les sujets autant techniques que d'organisation. ",
+      "twitter": "chriscamicas",
+      "company": "Wiidii",
+      "url": "",
+      "email": "krixou+github@gmail.com",
+      "location": "Unknown",
+      "avatar": "https://secure.gravatar.com/avatar/5f8ad866284b8a05c47c84cc0b1c8b0e?s=500"
+    },
+    "talk": {
+      "title": "Découvrir la neuroévolution en créant une voiture autonome dans son navigateur",
+      "description": "Quoi de mieux que d'apprendre par le jeu, me suis-je dit. Quelques heures plus tard, me voilà à créer un jeu de voitures rudimentaire dans mon navigateur afin de tenter de comprendre la neuroévolution. Je vous propose de refaire ensemble ce parcours initiatique.\r\n\r\nOn passera d'abord la première en mettant en place la boucle de jeu avec la physique et le dessin dans un canvas, la seconde, en équipant notre voiture de lidars, puis la troisième en lui greffant un cerveau à base de réseau de neurones artificiels Et enfin on mettra le turbo, en lui donnant les moyens d'apprendre à se déplacer grâce à la neuroévolution.\r\n\r\nCe talk cherche à démocratiser au plus grand nombre, les principes de la neuroévolution et des algorithmes génétiques, mais aussi de vous faire découvrir des techniques de gamedev, comme le raycasting, le tout en JavaScript, dans le navigateur.",
+      "notes": "Les slides de la présentation sont dispo ici : https://speakerdeck.com/chriscamicas/decouvrir-la-neuroevolution-en-creant-une-voiture-autonome-dans-son-navigateur\r\nUne vidéo de ce talk a été faite lors de bdx.io : https://www.youtube.com/watch?v=XbrgDBWCPtE\r\nDes animations (avec du code) pour illustrer les slides sont proposées régulièrement.\r\n\r\nCe talk s'adresse aux développeurs·ses étant curieux·ses de découvrir une technique d'apprentissage automatique, dans des technos abordables (JavaScript, et HTML), qui ne sont pour une fois pas du Python !\r\n\r\nOutre l'aspect technique, je m'attarde sur les problématiques de biais d'apprentissage et autres sujets qu'on rencontre couramment en machine learning, afin de sensibiliser.\r\nCerise sur le gateau, le développement d'un jeu vidéo (minimaliste) permet d'introduire quelques notions de gamedev.\r\n\r\nJe suis preneur de nouvelles blagues à faire si vous avez des idées pour renouveler le contenu  ;)\r\n\r\nBon courage pour la sélection, et merci à l'orga !",
+      "abstract": "Quoi de mieux que d'apprendre par le jeu ! Quelques heures plus tard, me voilà à créer un jeu de voitures rudimentaire dans mon navigateur afin de tenter de comprendre la neuroévolution. Je vous propose de refaire ensemble ce parcours initiatique à coup de javascript, gamedev, et réseaux de neurones",
+      "audience_level": "Beginner",
+      "talk_format": "Long talk (50 minutes)"
+    }
+  },
+  {
+    "id": 108728,
+    "state": "accepted",
+    "confirmed": false,
+    "created_at": "2020-01-15T07:43:50.233Z",
+    "updated_at": "2020-01-31T16:22:47.478Z",
+    "additional_info": null,
+    "rating": 77.5,
+    "trust": 72.7272727272727,
+    "tags": [
+      "Tech",
+      "Maker"
+    ],
+    "co_presenter_profiles": [],
+    "profile": {
+      "name": "Antoine CARON",
+      "bio": "Web Maker at [@TechM6web](https://tech.m6web.fr), internet trublion and despote teacher at [@PolytechLyon](https://polytech.univ-lyon1.fr/)\r\n",
+      "twitter": "Slashgear_",
+      "company": "M6web (Bedrock)",
+      "url": "https://slashgear.github.io/",
+      "email": "antoine395.caron@gmail.com",
+      "location": "Unknown",
+      "avatar": "https://secure.gravatar.com/avatar/7ed66677407ffb62d6d475cdf24fe68e?s=500"
+    },
+    "talk": {
+      "title": "Des applications web performantes grâce à webpack: de débutant à confirmé !",
+      "description": "Faire une application web performante, compatible avec les nouvelles normes peut s'avérer être un vrai challenge.\r\n\r\nIl peut être pratique de se tourner vers des outils en ligne de commande qui créent un stack initiale (Create React App, Angular CLI, Vue CLI).\r\n\r\nCependant, sans prendre connaissance du fonctionnement des outils qu'ils embarquent, la maintenance et l'évolution de la stack sera compliqué.\r\n\r\nLors d'une université, je vous propose de prendre en main webpack, babel, et des pré/post procésseurs CSS en partant de la base.\r\n\r\nPré-requis pour cet atelier\r\nhttps://webpack-workshop.netlify.com/fr/workshops/\r\n",
+      "notes": "Cet atelier est entièrement open source et disponible en Anglais et en Français.\r\nToutes les instructions sont disponibles ici: https://webpack-workshop.netlify.com/fr/\r\nPour animer cet atelier, il me faut un tableau blanc/paper board afin de faire des schémas explicatifs.\r\nLa correction de chaque étape est accessible aux participants.\r\n\r\nJ'ai conçu cet atelier afin d'expliquer à mes collègues d'M6web le fonctionnement interne de webpack en commençant par la base.\r\nJe suis l'auteur de plusieurs plugins et loader webpack et connait très bien son fonctionnement. J'ai même pu proposer quelques contributions à ce projet.\r\n\r\nJ'ai déjà eu la chance de donner cet atelier à Paris Web.",
+      "abstract": "Comme il est simple de faire du développement web aujourd'hui ! Si peu d'outil ! Si simple à configurer !  - Personne\nFaire une application web performante, compatible avec les nouvelles normes peut s'avérer être un vrai challenge.",
+      "audience_level": "Beginner",
+      "talk_format": "Workshop (110 minutes)"
+    }
+  },
+  {
+    "id": 111872,
+    "state": "accepted",
+    "confirmed": false,
+    "created_at": "2020-02-04T10:21:27.859Z",
+    "updated_at": "2020-02-11T09:07:45.272Z",
+    "additional_info": null,
+    "rating": 0.0,
+    "trust": 0.0,
+    "tags": [
+      "design",
+      "persuasive"
+    ],
+    "co_presenter_profiles": [],
+    "profile": {
+      "name": "Estelle landry",
+      "bio": "Passionée par mon métier de Product Owner chez Pix, par l'UX (User eXpérience) et le GameStorming, j'aime participer à l'élaboration d'un produit en étant le lien entre les utilisateurs et les développeurs.\r\n\r\nSpeakeuse en conférence tech, membre des Duchess France, de SunnyTech et du MeetUp UX Flupa Montpellier, je continue à me perfectionner et à discuter de nouvelles méthodes ou technologies de l'IT.\r\n",
+      "twitter": "estelandry",
+      "company": "Pix",
+      "url": "https://estellelandry.com/",
+      "email": "estelle.landry@live.fr",
+      "location": "Unknown",
+      "avatar": "https://secure.gravatar.com/avatar/5f96bcdc0d390ad1ce9a0970226aa2ba?s=500"
+    },
+    "talk": {
+      "title": "Design de persuasion : De la séduction à l'engagement",
+      "description": "Qu’est ce qui fait la réussite d’un produit ? \r\nC’est une vaste question que l’on se pose tous lors du démarrage d’un projet.  Et l’on pense - souvent à tort - que l’idée initiale est la clef du succès. On devient alors obnubilé par les statistiques (de clic, de rebond, etc.) en oubliant d'analyser l'expérience de nos utilisateurs.\r\n\r\nB.J Fogg, scientifique du comportement, pense que la clé se trouve dans l'engagement réel que votre produit arrive à susciter à vos utilisateurs. Il suggère d’utiliser des techniques de facilitation et de persuasion afin de créer ce lien et d'initier une relation entre votre service et vos utilisateurs. \r\n\r\nCette présentation est une introduction au design de persuasion et regroupe les principaux mécanismes à utiliser dans vos prochaines conceptions.",
+      "notes": "Bonjour à tous ! \r\n\r\nCe talk a été donné en Keynote au BDX.io en 2019. \r\nhttps://www.youtube.com/watch?v=G5nLsa4SqvU\u0026t=3s\r\nIl a été repensé pour être donné en conférence, avec plus de matière et d'exemples. \r\nJe serais ravie de pouvoir le redonner en conférence pour avoir plus de feedback sur mon travail.\r\n\r\nMerci par avance.\r\nBon courage pour la sélection :) \r\nEstelle.",
+      "abstract": "Qu’est ce qui fait la réussite d’un produit ? \nC’est une vaste question que l’on se pose lors du démarrage d’un projet. \nB.J Fogg, scientifique du comportement, pense que la clé se trouve dans l'engagement réel que votre produit suscite. Découvrons comment créer cet engagement grâce à la persuasion.",
+      "audience_level": "All",
+      "talk_format": "Long talk (50 minutes)"
+    }
+  },
+  {
+    "id": 109052,
+    "state": "accepted",
+    "confirmed": true,
+    "created_at": "2020-01-15T21:57:19.424Z",
+    "updated_at": "2020-02-14T11:35:07.783Z",
+    "additional_info": null,
+    "rating": 96.6666666666667,
+    "trust": 81.8181818181818,
+    "tags": [
+      "Design",
+      "Design de service",
+      "Service public"
+    ],
+    "co_presenter_profiles": [],
+    "profile": {
+      "name": "Julien Dubedout",
+      "bio": "#Présentation \r\n\r\n## En bref\r\n\r\nDA web, graphiste, webdesigner et UX freelance à Paris, j’ai 34 ans dont 14 ans d’expérience dans la communication de marque. Mes spécialités sont le web et les réseaux sociaux, mais mes compétences couvrent de nombreux domaines de la chaîne de création. J'ai eu la chance d'être sélectionné pour la 1re promotion de designer d'intérêt général et de mettre mes compétences au service du public, dans le domaine de la sécurité civile.\r\n\r\nIl m’arrive également de donner des formations sur le graphisme ou la pratique du freelance.\r\n\r\n## En détail\r\n\r\nD’abord webdesigner freelance à Toulouse, je fais un rapide passage chez Publicis Conseil dans la publicité « mainstream » (Presse / TV / Affiches…) avant d’être embauché chez Publicis Modem où je reste 3 ans. Je rejoins ensuite l’agence Roxane fin 2011 pour élargir mon champ d’intervention et toucher à des domaines comme la conception stratégique et le social media. Après un passage chez Gandi en tant que DA/UX pour le projet Caliopen, je rejoins la sécurité civile pour concevoir et prototyper le prototype d'application d'appels d'urgence.\r\n\r\nVoilà plus de 14 ans que je créé pour le web et les réseaux sociaux, pour le compte de nombreux annonceurs internationaux. Je réalise et dirige des projets depuis la conception jusqu’à la production, en choisissant et gérant les éventuels autres métiers connexes au projet (illustrateurs, boîtes de prod…).\r\n\r\nEn plus de mon vrai travail, j’ai co-créé le blog d’entraide mariejulien.com ainsi que quelques autres projets comme l’association Métiers Graphiques dont je suis le président. Actif dans la communauté du design, j’interviens pour aider les graphistes débutants et rédige de nombreux articles sur la pratique du métier. Je participe également à des événements tels que Paris Web pour lesquels j’anime des ateliers ou donne des conférences.\r\n\r\nJe suis parfois sollicité en tant que membre de jury ou formateur par les écoles web comme la Web School Factory ou Sup’internet pour intervenir sur différents sujets directement liés au graphisme ou sur la pratique générale du freelance.\r\n\r\n## En bonus\r\n\r\nJe suis le créateur de la campagne Kickstarter à succès des écussons des métiers du web Cyberspace Building Crew, et j'édite également des goodies d'auteurs de bandes dessinée via ma maison d'édition équitable Capsule Supply.\r\n\r\nGendre idéal, je sais commander chez Subway sans dire « heuu » une seule fois ni me faire refiler les suppléments fromage, j’arrive à composter mon billet SNCF dans le bon sens du premier coup, et je suis le seul homme sur terre à savoir ce que veut dire l’acronyme FNAC.",
+      "twitter": "judbd",
+      "company": "",
+      "url": "https://judbd.com",
+      "email": "julien@judbd.com",
+      "location": "Unknown",
+      "avatar": "https://secure.gravatar.com/avatar/2e15101425181b503ce5aa839d4eddc0?s=500"
+    },
+    "talk": {
+      "title": "Designer l'urgence",
+      "description": "# Retour d'expérience sur la conceptualisation et le prototypage de l'application d'appels d'urgence\r\n\r\n**Dans le cadre du programme des designers d'intérêt général, j'ai été placé au sein de l'Agence du Numérique de la Sécurité Civile pour prototyper dans un temps très court ce qui sera la future application d'appels d'urgence en France.**\r\n\r\nDestinée à être utilisée lorsqu'un appel téléphonique est impossible, ou pour les personnes qui préfèrent se servir de leur téléphone mobile, elle permettra de contacter les secours et de valoriser l'attente en qualifiant son urgence.\r\n\r\n**Dans cette conférence, vous découvrirez un retour d'expérience complet sur :**\r\n\r\n- Les objectifs d'une telle application.\r\n- Les spécificités des services publics critiques, quand la vie humaine est en jeu.\r\n- Un aperçu de la face cachée des services d'urgences (centre d'appel, opérateurs, régulation médicale, casernes de pompiers…)\r\n- La difficile évaluation et la sélection des fonctionnalités retenues dans l'application.\r\n- La rédaction et la sélection du vocabulaire et du ton utilisés dans l'application.\r\n- Le développement d'un prototype fonctionnel en html/css/js quand on est designer\r\n- Les tests utilisateurs sur le terrain avec les pompiers pour développer et valider un parcours utilisateur optimisé à l’extrême.\r\n- La prise en compte de l'accessibilité dès la phase de prototype.\r\n\r\nIl s'agira d'un plongeon dans un monde peu connu du public en général et des designers en particulier, d'un retour d'expérience complet sur cette mission pendant laquelle j'ai dû mettre en œuvre un très large panel de compétences (conception, design, code, rédaction…) pour prototyper un parcours utilisateur dans lequel chaque seconde compte, littéralement.\r\n\r\n_Cf descriptif du déroulé en suivant_",
+      "notes": "# Pourquoi sélectionner cette conférence plutôt qu'une autre ?\r\n\r\nLes designers sont rares dans le service public, et pourtant le gain pour les usagers serait énorme. Les retours d'expérience dans ce secteur sont encore plus rares, et le sujet est porteur car beaucoup de personnes aimeraient œuvrer pour le bien public et voudraient savoir comment contribuer à l'amélioration des services utilisés par leurs concitoyens.\r\n\r\nLe sujet du design intéresse aussi beaucoup les développeurs et non-designers qui aiment voir un peu de variété dans les conférences.\r\n\r\nAvec cette visite des coulisses non seulement du design au sein du programme des designer d'intérêt général, mais aussi de la sécurité civile, nous aborderons des sujets qui concernent tout le monde et dont les rouages sont rarement révélés.\r\n\r\nCe retour d'expérience complet (conception -\u003e maquette -\u003e prototype fonctionnel -\u003e tests -\u003e itérations -\u003e tests terrain) pourra intéresser le public assez demandeur de ce genre de témoignages \"360°\"\r\n\r\n# Pourquoi moi\r\n\r\nJ'ai reçu de nombreuses questions sur cette expérience peu commune, et j'aime transmettre mon savoir et partager ce que j'ai vécu. J'ai donné plusieurs conférences appréciées du public, notamment à Paris Web.\r\n\r\n# Déroulé envisagé, avec certaines parties à développer plus que d'autres selon l'intérêt du public :\r\n\r\n- Présentation du programme gouvernemental de design d'intérêt général\r\n- Pourquoi un designer dans le service public ?\r\n- Le contexte de la mission à l'agence du numérique de la sécurité civile (comment c'est organisé actuellement, comment sont pris les appels, comment sont dispatchés les véhicules etc.)\r\n- Comprendre le métier des services de secours, et plus précisément des pompiers\r\n- Pourquoi une application ?\r\n- Comprendre les enjeux de l'application via l'immersion sur le terrain\r\n- Le rôle prospectif et de conception du designer sur cette mission\r\n- Les casse-têtes que représentent certains cas d'usage\r\n- Anticiper les usages abusifs\r\n- Les moyens pour favoriser l'adoption d'une application d'urgence\r\n- Les fonctionnalités autres que l'appel d'urgence\r\n- La cible visée par l'app 112 et le périmètre de l'application\r\n- La méthodologie de travail via prototype rapide. Pragmatisme avant tout\r\n- Les différentes manières de qualifier l'urgence côté pompiers (nombre de victimes, circulaire de départ réflexe…)\r\n- Du prototype XD/Figma au prototype fonctionnel codé (avec retour d'XP de designer qui code en html/css/js pour de l'interaction)\r\n- Les tests utilisateurs avec la difficulté de trouver un panel représentatif (tests sur le terrain, tests en centre d'appels…)\r\n- L'importance de l'accessibilité en début de processus pour une app qui s'adresse à toute la population\r\n- Les application \"compagnon\" : penser les passerelles et les API (staying alive, 114, géoloc 18-112)\r\n- Les suites et la mide en œuvre de l'app 112",
+      "abstract": "Les designers travaillent à optimiser les parcours utilisateurs pour rendre l'expérience le plus fluide possible et augmenter les taux de transformation. Mais que se passe-t-il quand à la place de ventes on parle de vies sauvées ?\nRetour d'expérience sur le design en mode pompier… chez les pompiers.",
+      "audience_level": "All",
+      "talk_format": "Long talk (50 minutes)"
+    }
+  }
+]

@@ -20,7 +20,6 @@ import java.net.URL
 inline fun <reified T> ObjectMapper.readValue(src: InputStream): T = readValue(src, jacksonTypeRef<T>())
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@Disabled
 class SessionizeImportTests(@Autowired val objectMapper: ObjectMapper,
                             @Autowired val userRepository: UserRepository,
                             @Autowired val cryptographer: Cryptographer) {
@@ -30,89 +29,19 @@ class SessionizeImportTests(@Autowired val objectMapper: ObjectMapper,
 
     @Test
     fun `load speakers`() {
-        val speakersToPersist = mutableListOf<User>()
-        val sessionsToPersist = mutableListOf<Talk>()
-
-        val speakerIdsResource = ClassPathResource("import/speaker_ids.json")
-        val speakerIds: List<SessionizeSpeakerId> = objectMapper.readValue(speakerIdsResource.inputStream)
-
-        val speakersResource = ClassPathResource("import/speakers.json")
-        val speakers: List<SessionizeSpeaker> = objectMapper.readValue(speakersResource.inputStream)
 
         initializeFolder()
 
-        speakerIds.forEach { speakerId ->
-            val speakerWithInfo = speakers.first { s ->
-                s.id == speakerId.id
-            }
-            val imageName = sanitize(speakerWithInfo.lastName)
-            val filenameImage = imageName + if (speakerWithPngImage.any { it == imageName }) ".png" else ".jpg"
-
-            // 1. we find user in our database
-            val user = userRepository.findByNonEncryptedEmail(speakerId.email).block()
-            if (user != null) {
-                println("User found => ${speakerId.id} : ${speakerId.lastName} ${speakerId.firstName}")
-
-                val imageUrl = getImageUrl(user, speakerWithInfo)
-                if (imageUrl != null && imageUrl.contains("sessionize")) {
-                    downloadImage(imageUrl, filenameImage)
-                }
-                speakersToPersist.add(
-                        User(user.login,
-                                speakerId.firstName,
-                                speakerId.lastName,
-                                user.email,
-                                if (speakerWithInfo.company == null) user.company else speakerWithInfo.company,
-                                if (speakerWithInfo.company == null) user.description else bioToMap(speakerWithInfo.bio),
-                                speakerId.email.encodeToMd5(),
-                                "https://mixitconf.cleverapps.io/images/speakers/${filenameImage}",
-                                user.role,
-                                speakerWithInfo.findSpeakerLinks(),
-                                // We store id in token to retrieve speaker later when we will save talk
-                                token = speakerId.id))
-
-                println("User updated")
-
-            } else {
-                var login = speakerId.email.substring(0, speakerId.email.indexOf("@"))
-                val userCheck = userRepository.findOne(login).block()
-                if(userCheck !=null){
-                    println("Login already exist")
-					login += speakerId.lastName
-                    val anotherUserCheck = userRepository.findOne(login).block()
-                    if(anotherUserCheck !=null){
-                        println("Login already exist")
-                        throw IllegalArgumentException()
-                    }
-                }
-                println("User not found => ${speakerId.id} : ${speakerId.lastName} ${speakerId.firstName} => login : $login")
-
-                if (speakerWithInfo.profilePicture != null) {
-                    downloadImage(speakerWithInfo.profilePicture, filenameImage)
-                }
-                speakersToPersist.add(
-                        User(login,
-                                speakerId.firstName,
-                                speakerId.lastName,
-                                cryptographer.encrypt(speakerId.email),
-                                speakerWithInfo.company,
-                                bioToMap(speakerWithInfo.bio),
-                                speakerId.email.encodeToMd5(),
-                                "https://mixitconf.cleverapps.io/images/speakers/${filenameImage}",
-                                Role.USER,
-                                speakerWithInfo.findSpeakerLinks(),
-                                // We store id in token to retrieve speaker later when we will save talk
-                                token = speakerId.id))
-
-                println("User created")
-            }
-        }
-
-        // Now we have a list of speakers and we write this list in a file
+        val speakersToPersist = importSpeakers()
         objectMapper.writeValue(File("/tmp/mixit/speakers_2019.json"), speakersToPersist)
 
-        // In the second step we have to create the sessions
+        val sessionsToPersist = createSessions(speakersToPersist)
+        objectMapper.writeValue(File("/tmp/mixit/talks_2019.json"), sessionsToPersist)
 
+    }
+
+    private fun createSessions(speakersToPersist: MutableList<User>): MutableList<Talk> {
+        val sessionsToPersist = mutableListOf<Talk>()
         val sessionResource = ClassPathResource("import/talks.json")
         val sessions: List<SessionizeTalk> = objectMapper.readValue(sessionResource.inputStream)
 
@@ -125,9 +54,9 @@ class SessionizeImportTests(@Autowired val objectMapper: ObjectMapper,
             val format = session.categoryItems?.filter { elt -> categories.any { it.first == elt } }?.first()
 
             println("Session ${session.title} : speakers ${sessionSpeakers.map { it.lastname }}")
-            println("Lng=${if(language == null) Language.FRENCH else toTalkLanguage(language) } " +
-                    "topic=${if(topic == null) "other" else toTopic(topic) } " +
-                    "format=${if(format == null) TalkFormat.TALK else toTalkFormat(format)}")
+            println("Lng=${if (language == null) Language.FRENCH else toTalkLanguage(language)} " +
+                    "topic=${if (topic == null) "other" else toTopic(topic)} " +
+                    "format=${if (format == null) TalkFormat.TALK else toTalkFormat(format)}")
 
             sessionsToPersist.add(Talk(
                     if (format == null) TalkFormat.TALK else toTalkFormat(format),
@@ -140,7 +69,91 @@ class SessionizeImportTests(@Autowired val objectMapper: ObjectMapper,
             ))
         }
 
-        objectMapper.writeValue(File("/tmp/mixit/talks_2019.json"), sessionsToPersist)
+        return sessionsToPersist
+    }
+
+    private fun importSpeakers(): MutableList<User> {
+        val speakerIds: List<SessionizeSpeakerId> = objectMapper.readValue(ClassPathResource("import/speaker_ids.json").inputStream)
+        val speakers: List<SessionizeSpeaker> = objectMapper.readValue(ClassPathResource("import/speakers.json").inputStream)
+
+        val speakersToPersist:MutableList<User> = mutableListOf()
+
+        speakerIds.forEach { speakerId ->
+            val speakerWithInfo = speakers.first { s ->
+                s.id == speakerId.id
+            }
+            val imageName = sanitize(speakerWithInfo.lastName)
+            val filenameImage = imageName + if (speakerWithPngImage.any { it == imageName }) ".png" else ".jpg"
+
+            // 1. we find user in our database
+            val user = userRepository.findByNonEncryptedEmail(speakerId.email).block()
+            if (user != null) {
+                val updatedUser = updateUser(speakerId, user, speakerWithInfo, filenameImage)
+                speakersToPersist.add(updatedUser)
+            } else {
+                val createdUser = createUser(speakerId, speakerWithInfo, speakerWithInfo.profilePicture!!, filenameImage)
+                speakersToPersist.add(createdUser)
+            }
+        }
+
+        return speakersToPersist
+    }
+
+    private fun createUser(speakerId: SessionizeSpeakerId, speakerWithInfo: SessionizeSpeaker, profilePicture: String, filenameImage: String): User {
+        var login = speakerId.email.substring(0, speakerId.email.indexOf("@"))
+        val userCheck = userRepository.findOne(login).block()
+        if (userCheck != null) {
+            println("Login already exist")
+            login += speakerId.lastName
+            val anotherUserCheck = userRepository.findOne(login).block()
+            if (anotherUserCheck != null) {
+                println("Login already exist")
+                throw IllegalArgumentException()
+            }
+        }
+        println("User not found => ${speakerId.id} : ${speakerId.lastName} ${speakerId.firstName} => login : $login")
+
+        if (speakerWithInfo.profilePicture != null) {
+            downloadImage(profilePicture, filenameImage)
+        }
+        println("User created")
+
+        return User(login,
+                speakerId.firstName,
+                speakerId.lastName,
+                cryptographer.encrypt(speakerId.email),
+                speakerWithInfo.company,
+                bioToMap(speakerWithInfo.bio),
+                speakerId.email.encodeToMd5(),
+                "https://mixitconf.cleverapps.io/images/speakers/${filenameImage}",
+                Role.USER,
+                speakerWithInfo.findSpeakerLinks(),
+                // We store id in token to retrieve speaker later when we will save talk
+                token = speakerId.id)
+
+    }
+
+    private fun updateUser(speakerId: SessionizeSpeakerId, user: User, speakerWithInfo: SessionizeSpeaker, filenameImage: String): User {
+        println("User found => ${speakerId.id} : ${speakerId.lastName} ${speakerId.firstName}")
+
+        val imageUrl = getImageUrl(user, speakerWithInfo)
+        if (imageUrl != null && imageUrl.contains("sessionize")) {
+            downloadImage(imageUrl, filenameImage)
+        }
+        println("User updated")
+
+        return User(user.login,
+                        speakerId.firstName,
+                        speakerId.lastName,
+                        user.email,
+                        if (speakerWithInfo.company == null) user.company else speakerWithInfo.company,
+                        if (speakerWithInfo.company == null) user.description else bioToMap(speakerWithInfo.bio),
+                        speakerId.email.encodeToMd5(),
+                        "https://mixitconf.cleverapps.io/images/speakers/${filenameImage}",
+                        user.role,
+                        speakerWithInfo.findSpeakerLinks(),
+                        // We store id in token to retrieve speaker later when we will save talk
+                        token = speakerId.id)
 
     }
 }
