@@ -47,5 +47,7 @@ fun User.jsonToken(cryptographer: Cryptographer) = "${cryptographer.decrypt(emai
 
 fun User.hasValidToken(token: String) = this.token == token.trim() && tokenExpiration.isAfter(LocalDateTime.now())
 
+fun User.anonymize() = this.copy(tokenExpiration= LocalDateTime.now(), token = "")
+
 val User.tokenLifeTime
     get() = Duration.between(LocalDateTime.now(), tokenExpiration)

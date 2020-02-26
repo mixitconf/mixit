@@ -1,10 +1,7 @@
 package mixit.web.handler
 
 import mixit.MixitProperties
-import mixit.model.Language
-import mixit.model.Link
-import mixit.model.Role
-import mixit.model.User
+import mixit.model.*
 import mixit.repository.TalkRepository
 import mixit.repository.TicketRepository
 import mixit.repository.UserRepository
@@ -248,17 +245,17 @@ class UserHandler(private val repository: UserRepository,
                     .filter { !it.first.isNullOrBlank() && !it.second.isNullOrBlank() }
                     .map { Link(it.first!!, it.second!!) }
 
-    fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("login")))
+    fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("login")).map { it.anonymize() })
 
-    fun findAll(req: ServerRequest) = ok().json().body(repository.findAll())
+    fun findAll(req: ServerRequest) = ok().json().body(repository.findAll().map { it.anonymize() })
 
-    fun findStaff(req: ServerRequest) = ok().json().body(repository.findByRoles(listOf(Role.STAFF)))
+    fun findStaff(req: ServerRequest) = ok().json().body(repository.findByRoles(listOf(Role.STAFF)).map { it.anonymize() })
 
-    fun findOneStaff(req: ServerRequest) = ok().json().body(repository.findOneByRoles(req.pathVariable("login"), listOf(Role.STAFF, Role.STAFF_IN_PAUSE)))
+    fun findOneStaff(req: ServerRequest) = ok().json().body(repository.findOneByRoles(req.pathVariable("login"), listOf(Role.STAFF, Role.STAFF_IN_PAUSE)).map { it.anonymize() })
 
 
     fun findSpeakerByEventId(req: ServerRequest) =
-            ok().json().body(talkRepository.findByEvent(req.pathVariable("year")).flatMap { repository.findMany(it.speakerIds) }.distinct())
+            ok().json().body(talkRepository.findByEvent(req.pathVariable("year")).flatMap { repository.findMany(it.speakerIds).map { it.anonymize() } }.distinct())
 
 
     fun create(req: ServerRequest) = repository.save(req.bodyToMono<User>()).flatMap {
