@@ -551,7 +551,7 @@
     "co_presenter_profiles": [],
     "profile": {
       "name": "Sophie Freiermuth",
-      "bio": "Sophie est designer d'expériences utilisateur depuis près de 15 ans, et formatrice depuis plus de 6 ans. Elle alterne le design pour de grandes marques (Eurostar, L'Oréal, etc) ou bien des services publics (en Grande-Bretagne où elle a résidé 16 ans) et l'animation de formations en entreprise ou publiques, afin de contribuer à former les designers de demain et  faire grandir une discipline qu'elle adore. Elle partage également son travail en conférences dans le monde entier via des session où elle construit un paradigme entre design, agilité et conception de produits, éclairant les praticiens d'une discipline à l'autre. Elle est enfin mentor, co-organisatrice de la Balanced Team London Unconference (3eme édition cette année à Londres) et danseuse de tango argentin, où sa créativité et sa démarche collaborative et dynamique s'expriment musicalement.\r\n",
+      "bio": "Sophie est designer UX depuis plus de 15 ans, et formatrice en UX, recherche utilisateur et agilité depuis plus de 6 ans. Elle alterne le design pour de grandes marques (Eurostar, L'Oréal, etc) ou bien des services publics (en Grande-Bretagne où elle a résidé 16 ans) et l'animation de formations en entreprise ou publiques, afin de contribuer à former les designers de demain et  faire grandir une discipline qu'elle adore. \r\n\r\nElle partage également son travail lors de conférences dans le monde entier via des session où elle construit un paradigme entre design, agilité et conception de produits, éclairant les praticiens d'une discipline à l'autre. Elle est enfin mentor, co-organisatrice de la Balanced Team London Unconference (3eme édition cette année à Londres) et danseuse de tango argentin, où sa créativité et sa démarche collaborative et dynamique s'expriment musicalement.\r\n\r\n\u003e Basée à Barcelone, Française, Anglophone\r\n\u003e\r\n\u003e Fait de l'UX chez Baguette UX, un cabinet de consulting en design d'expériences utilisateurs basé à Londres\r\n\u003e\r\n\u003e Fait de la recherche utilisateur et des formations via Ezenka, agence basée à Dublin\r\n",
       "twitter": "wickedgeekie",
       "company": "Baguette UX",
       "url": "https://www.linked.in/sophiefrei",
@@ -561,8 +561,8 @@
     },
     "talk": {
       "title": "Comment bien faire du mal: les dark patterns (interfaces truquées).",
-      "description": "A RAFFINER - SI OK, JE PEAUFINERAI POUR LE 1er MARS\r\n------------\r\n\r\nIntro: Exploration avec l'audience des definitions, et des pratiques de chacun. Mise en question des concepts.\r\n\r\n1. Etat des lieux 2020: Etat des lieux, catalogue de pratiques, scandales publics, législation et règlementation\r\n2. Bonnes intentions au départ, interfaces truquées à l'arrivée: comment détecter les dérapages: \r\n3. L'éthique, notre radar/GPS interne. L'identifier, l'entendre. L'éthique collective: en équipe, au niveau entreprise.\r\n\r\nConclusion: Good tech / Evil tech, dichotomie ou paradigme? Et comment y positionner sa carrière à court, moyen et long terme?\r\n",
-      "notes": "Une session qui fait réfléchir et invite à prendre ses responsabilités dans la croissance des technologies et pratiques aux conséquences néfastes. \r\n\r\nA COMPLETER",
+      "description": "\u003e ☐ j'accepte les termes et conditions\r\n\u003e\r\n\u003e ☐ je confirme que je suis bien moi\r\n\u003e\r\n\u003e ☐ je refuse de ne pas recevoir les offres promotionnelles de vos partenaires\r\n\r\nLes interfaces truquées sont partout. Dans les bons d'achat, les formulaires de contact, les fonctionnalités d'applications et de sites, partout où la collaboration entre vendeur et client devient un bras de fer voire un braquage de banque. Parfois innocentes, nées de méconnaissance, ou bien réellement délibérées et manipulatrices sans remords, cet ensemble de pratiques qui visent à duper un utilisateur et lui forcer la main fait partie du côté obscur du digital, et je vous invite à y faire un détour informatif, éducatif et divertissant. \r\n\r\nNous commencerons par partager nos définitions des interfaces truquées, et les pratiques et postures que nous adoptons aujourd'hui. En questionnant nos concepts et valeurs, nous allons plonger dans la boue sale qui transforme un encouragement, une incitation (le concept de 'nudge' en anglais), en une manipulation voire un abus.\r\n\r\nCar ces abus et manipulations restent au goût du jour. En passant tout d'abord en revue les pratiques récentes et actuelles, nous parcourons un catalogue qui a donné lieu à des scandales publics ainsi qu'à des changements de législation et réglementation.\r\n\r\nNous regarderons ensuite le coeur de ces pratiques, et comment ce qui n'est au départ qu'une bonne intention, peut devenir une interface truquée. Nous verrons ensemble comment identifier et prévenir les dérapages, et également comment gérer les intentions néfastes des parties prenantes\r\n\r\nPuis nous toucherons au coeur du sujet, et la raison pour laquelle les interfaces truquées génèrent un réel malaise aussi bien du côté des implémentateurs que de celui des utilisateurs: l'éthique. Ce radar ou GPS interne que chacun de nous possède, et qui est également une boussole collective indiquant un Nord fluctuant, est le révélateur du décallage entre intention et résultats, entre parties visible et invisible de l'iceberg, entre ce qui est dit et ce qui se fait. L'identifier, le percevoir, le comprendre, je partagerai des outils qui permettront de dépasser l'inconfort et comprendre ce qui se passe réellement. Nous verrons également comment les concept d'éthique collective joue son rôle en équipe, ainsi qu'au niveau d'une entreprise.\r\n\r\nEnfin, nous réfléchirons à la dichotomie Good Tech / Evil Tech, ne serait-ce pas plutôt un paradigme? Et au delà des définitions et pratiques, comment positionner sa carrière quand les écueils éthiques affleurent à tout moment?\r\n\r\n",
+      "notes": "Une session qui fait réfléchir et invite à prendre ses responsabilités dans la croissance des technologies et pratiques aux conséquences néfastes, et qui partage avec bienveillance et sans jugement.\r\n\r\nCette session comportera autant d'interactions avec le public que se peut, via votes à la romaine (pouce vers le haut ou le bas), appel à interjections du public, et bien sûr prise de questions.",
       "abstract": "La tech a 1000 moyens de faire du mal et les interfaces truquées sont une série de pratiques de design et de code qui jouent un rôle aussi peu règlementé que potentiellement lucratif. Je vous invite à les explorer, comprendre votre propre éthique et celle des entreprises: voyage dans le côté obscur.",
       "audience_level": "All",
       "talk_format": "Long talk (50 minutes)"
@@ -2323,9 +2323,9 @@
   {
     "id": 103697,
     "state": "accepted",
-    "confirmed": false,
+    "confirmed": true,
     "created_at": "2019-12-11T23:12:07.595Z",
-    "updated_at": "2020-01-31T16:20:58.271Z",
+    "updated_at": "2020-02-26T21:34:03.257Z",
     "additional_info": null,
     "rating": 80.0,
     "trust": 72.7272727272727,
@@ -3922,60 +3922,6 @@
     ]
   },
   {
-    "id": 109904,
-    "state": "accepted",
-    "confirmed": false,
-    "created_at": "2020-01-20T20:26:55.195Z",
-    "updated_at": "2020-01-29T14:31:32.754Z",
-    "additional_info": null,
-    "rating": 92.8571428571429,
-    "trust": 63.6363636363636,
-    "tags": [
-      "Ethic"
-    ],
-    "co_presenter_profiles": [],
-    "profile": {
-      "name": "Joy Schlienger",
-      "bio": "Je suis office \u0026 happy office manager au sein de Linkvalue, une ESN du secteur numérique regroupant environ 100 collaborateurs sur Lyon, Lille et Paris. \r\nEt je suis fortement engagée individuellement en faveur de l'environnement. Toutefois j'ai conscience que les actions individuelles ont une portée limitée et qu'elles doivent nécessairement être accompagnées d'actions collectives portées par des groupes d'individus, les municipalités, l'État et les entreprises. ",
-      "twitter": "JoySchlienger",
-      "company": "Linkvalue",
-      "url": "",
-      "email": "bclozel@pivotal.io",
-      "location": "Lyon, France",
-      "avatar": "https://secure.gravatar.com/avatar/7f6b3d65ae30e6fec52287f34e22dcb0?s=500"
-    },
-    "talk": {
-      "title": "Responsabilités et moyens d'actions des entreprises et de leurs collaborateurs",
-      "description": "L'objectif de cette présentation est : \r\n- de démontrer que l'action individuelle bien qu'à moindre impact, reste indispensable\r\n- que la transformation des entreprises est essentielle\r\n- que chacun peut être acteur du changement au sein de son entreprise\r\n- d'expliquer que la transformation doit être totale et s'appliquer à tous les domaines de l'entreprise, en donnant des exemples concrets et des étapes indispensables à suivre \r\n- d'expliquer l'urgence à agir au plus vite et de manière radicale",
-      "notes": "Le talk est encore à consolider mais s'articule comme suit : \r\n- Point global sur la crise écologique et systémique actuelle et à venir\r\n- Objectifs et répartition des responsabilités d'action\r\n- Responsabilité d'action des entreprises et raisons d'agir (urgence, demande des consommateurs, demande des candidats)\r\n- Mise en mouvement : COMMUNICATION INTERNE\r\n- Mise en mouvement : BILAN, PLAN D'ACTIONS, OBJECTIFS et MESURE\r\n- Actions concrètes : VIE AU BUREAU\r\n- Actions concrètes : MODE DE TRAVAIL\r\n- Action concrètes : CONDITIONS DE TRAVAIL\r\n- Actions concrètes : PRODUCTION \r\n- Zoom sur le secteur numérique\r\n- Actions concrètes : R\u0026D\r\n- Actions concrètes : STRATÉGIE ET CULTURE D'ENTREPRISE\r\n- Conclusion : changement culturel et pouvoir individuel\r\n- Sources et références\r\n\r\nJe porte ce sujet, avec d'autres collaborateurs dans mon entreprise et à ce jour nous avons pu mettre en place les actions suivantes : https://docs.google.com/presentation/d/1adIYPxQs1WpuBoVR6as-5uyYTc_LpM2Q56X-ayJeev4/edit?usp=sharing\r\nCette année, nous comptons bien mettre les bouchées doubles en embarquant nos dirigeants et l'ensemble des collaborateurs. \r\nJe serai ravie de porter également ce message auprès d'un plus large public dans la continuité de ma démarche de sensibilisation. \r\n",
-      "abstract": "Il s'agirait d'un talk issu de mon article écrit sur le sujet en novembre 2019, remis à jour et complété : https://blog.link-value.fr/%C3%A0-la-rel%C3%A8ve-du-d%C3%A9fi-%C3%A9cologique-responsabilit%C3%A9s-et-moyens-daction-des-entreprises-51d84ef22bc3",
-      "audience_level": "All",
-      "talk_format": "Short talk (20 minutes)"
-    },
-    "cfp_additional_question_answers": [
-      {
-        "id": 4067,
-        "submission_id": 109904,
-        "cfp_additional_question_id": 21,
-        "question_content": "This is a reminder that you must provide an outline (20-ish bullet points) or a recording for your talk. Did you do it?",
-        "question_type": "boolean",
-        "content": "yes",
-        "created_at": "2020-01-20T20:26:55.209Z",
-        "updated_at": "2020-01-20T20:26:55.209Z"
-      },
-      {
-        "id": 4066,
-        "submission_id": 109904,
-        "cfp_additional_question_id": 20,
-        "question_content": "Do you plan to present your talk in French?",
-        "question_type": "boolean",
-        "content": "yes",
-        "created_at": "2020-01-20T20:26:55.202Z",
-        "updated_at": "2020-01-20T20:26:55.202Z"
-      }
-    ]
-  },
-  {
     "id": 103724,
     "state": "accepted",
     "confirmed": true,
@@ -4872,62 +4818,6 @@
         "content": "yes",
         "created_at": "2020-01-28T18:19:52.323Z",
         "updated_at": "2020-01-28T18:19:52.323Z"
-      }
-    ]
-  },
-  {
-    "id": 105163,
-    "state": "accepted",
-    "confirmed": false,
-    "created_at": "2019-12-23T11:21:03.473Z",
-    "updated_at": "2020-01-29T14:40:28.120Z",
-    "additional_info": null,
-    "rating": 82.8571428571429,
-    "trust": 63.6363636363636,
-    "tags": [
-      "Tech",
-      "Design",
-      "Team"
-    ],
-    "co_presenter_profiles": [],
-    "profile": {
-      "name": "Cedric Soubrie",
-      "bio": "Exemples de projets : \r\n* Une Touche d'Histoire : application iPhone/iPad avec plus de 600 000 téléchargements pour un budget comm' de 0 eurors\r\n* Lelivrescolaire.fr : application iPhone/iPad leader dans les lycées français en 2019\r\n\r\nJe travaille sur des projets logiciels depuis plus de 10 ans en tant que développeur ou UX. Rapidement, je me suis aperçu qu'une bonne collaboration entre les équipes techniques, design et contenu était une clef importante de réussite d'un projet. Je fais donc de l'évangélisation pour passer la bonne parole : cours en école d'informatique, conférence à destination d'entrepreneurs etc... ",
-      "twitter": "cedricsoubrie",
-      "company": "",
-      "url": "",
-      "email": "cedric.soubrie@gmail.com",
-      "location": "Lyon",
-      "avatar": "https://secure.gravatar.com/avatar/14ecf539b34ebf271f5030645a525967?s=500"
-    },
-    "talk": {
-      "title": "UX : le contenu est roi",
-      "description": "## Le contenu est central à tout projet\r\n* Explication de ce que j'entends par \"contenu\" et pourquoi ça touche tous les projets\r\n* Référence à l'article \"Is my software wearing too much make-up ?\".  Voir : https://ux.useronboard.com/is-your-software-wearing-too-much-makeup-a5f1e26f1057\r\n\r\n## Comment les outils de conception centrées utilisateurs peuvent aider\r\n\r\n### Tests utilisateurs : \r\n* repérer rapidement les soucis entrainés par le contenu ou la façon dont il a été intégré\r\n* trucs et astuces pour facilement mettre en place des tests utilisateurs efficaces\r\n* trois exemples en vidéo de projets sauvés de justesse.\r\n\r\n### Personae/brainstorm :\r\n* bien cibler les cas d'usage du contenu en fonction des objectifs des utilisateurs\r\n* limite et écueil à éviter avec les personae ou les brainstorm\r\n* cas concret : AfterClasse Bac sur iPhone, UneTouche d'Histoire sur iPad\r\n\r\n### Analytics et review :\r\n* rester content-oriented et non feature-oriented\r\n\r\n## Symbiose entre conception, développement et contenu:\r\n* Symbiose nécessaire pour arriver à projet pertinent\r\n* Agilité : savoir faire évoluer le contenu / savoir faire évoluer le contenant\r\n* Exemple avec Gotta Yoga qui a su faire son pivot de contenu\r\n* Exemple avec Une Touche d'Histoire où le contenu a profondément modifier l'interface\r\n\r\n## Conclusion et Wrap-up",
-      "notes": "A la croisée entre les différents métiers impliqués dans un projet, je pense que ce talk a sa place au MIX-IT et intéressera de nombreuses personnes.\r\n\r\nJe travaille sur des projets logiciels depuis plus de 10 ans en tant que développeur ou UX. Rapidement, je me suis aperçu qu'une bonne collaboration entre les équipes techniques, design et contenu était une clef importante de réussite d'un projet. Je fais donc de l'évangélisation pour passer la bonne parole : cours en école d'informatique, conférence à destination d'entrepreneurs etc... \r\n\r\nConception centrée utilisateur et agilité sont les outils essentiels pour arriver à cette synergie. Comme ils sont souvent dévoyés, j'insiste sur les bonnes pratiques en donnant des cas concrets d'échec et de réussite. ",
-      "abstract": "Trop souvent, le contenu d'un site ou d'une application est laissé de côté et intégré en fin de projet. C'est pourtant le point central de tout projet informatique.\n\nVoici quelques exemples où une bonne synergie entre développement, conception et création de contenu a fait la différence.",
-      "audience_level": "All",
-      "talk_format": "Long talk (50 minutes)"
-    },
-    "cfp_additional_question_answers": [
-      {
-        "id": 2284,
-        "submission_id": 105163,
-        "cfp_additional_question_id": 21,
-        "question_content": "This is a reminder that you must provide an outline (20-ish bullet points) or a recording for your talk. Did you do it?",
-        "question_type": "boolean",
-        "content": "yes",
-        "created_at": "2019-12-23T11:21:03.479Z",
-        "updated_at": "2019-12-23T11:21:03.479Z"
-      },
-      {
-        "id": 2283,
-        "submission_id": 105163,
-        "cfp_additional_question_id": 20,
-        "question_content": "Do you plan to present your talk in French?",
-        "question_type": "boolean",
-        "content": "yes",
-        "created_at": "2019-12-23T11:21:03.476Z",
-        "updated_at": "2019-12-23T11:21:03.476Z"
       }
     ]
   },

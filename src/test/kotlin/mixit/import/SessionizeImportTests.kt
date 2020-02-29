@@ -11,7 +11,9 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.core.io.ClassPathResource
 import java.io.File
+import java.io.FileOutputStream
 import java.io.InputStream
+import java.net.URL
 import java.util.*
 
 
@@ -22,9 +24,6 @@ class SessionizeImportTests(@Autowired val objectMapper: ObjectMapper,
                             @Autowired val userRepository: UserRepository,
                             @Autowired val cryptographer: Cryptographer) {
 
-
-    val speakerWithPngImage = listOf("julien_dubedout", "marilyn_kol", "benoit", "cedric_spalvieri", "nikola_lohinski")
-
     @Test
     fun `load speakers`() {
 
@@ -33,10 +32,10 @@ class SessionizeImportTests(@Autowired val objectMapper: ObjectMapper,
         val papercallExports = objectMapper.readValue<List<PapercallExport>>(ClassPathResource("import/2020-papercall-export.json").inputStream)
 
         val speakersToPersist = importSpeakers(papercallExports)
-        objectMapper.writeValue(File("/tmp/mixit/speakers_2019.json"), speakersToPersist)
+        objectMapper.writeValue(File("/tmp/mixit/speakers_2020.json"), speakersToPersist)
 
         val sessionsToPersist = createSessions(papercallExports, speakersToPersist)
-        objectMapper.writeValue(File("/tmp/mixit/talks_2019.json"), sessionsToPersist)
+        objectMapper.writeValue(File("/tmp/mixit/talks_2020.json"), sessionsToPersist)
 
     }
 
@@ -44,7 +43,7 @@ class SessionizeImportTests(@Autowired val objectMapper: ObjectMapper,
 
         val papercallSpeakers = extractSpeakers(papercallExports)
 
-        val speakersToPersist:MutableList<User> = mutableListOf()
+        val speakersToPersist: MutableList<User> = mutableListOf()
 
         papercallSpeakers.forEach { papercallSpeaker ->
             val user = userRepository.findByNonEncryptedEmail(papercallSpeaker.email).block()
@@ -61,6 +60,8 @@ class SessionizeImportTests(@Autowired val objectMapper: ObjectMapper,
     }
 
     private fun getImageName(speakerName: String): String {
+        val speakerWithPngImage = listOf("julien_dubedout", "marilyn_kol", "benoit", "cedric_spalvieri", "nikola_lohinski")
+
         val imageName = sanitize(speakerName)
         return imageName + if (speakerWithPngImage.any { it == imageName }) ".png" else ".jpg"
     }
@@ -179,12 +180,12 @@ class SessionizeImportTests(@Autowired val objectMapper: ObjectMapper,
     }
 
     private fun getTalkFormat(export: PapercallExport): TalkFormat =
-        when (export.talk?.talk_format) {
-            "Long talk (50 minutes)" -> TalkFormat.TALK
-            "Short talk (20 minutes)" -> TalkFormat.RANDOM
-            "Workshop (110 minutes)" -> TalkFormat.WORKSHOP
-            else -> TalkFormat.TALK
-        }
+            when (export.talk?.talk_format) {
+                "Long talk (50 minutes)" -> TalkFormat.TALK
+                "Short talk (20 minutes)" -> TalkFormat.RANDOM
+                "Workshop (110 minutes)" -> TalkFormat.WORKSHOP
+                else -> TalkFormat.TALK
+            }
 
     private fun getTopic(export: PapercallExport): String {
         val mixitTopics = listOf("maker", "design", "aliens", "tech", "ethic", "life style", "team")
@@ -236,7 +237,7 @@ fun initializeFolder() {
 }
 
 fun downloadImage(url: String, filename: String) {
-    /*val emplacement = File("/tmp/mixit/$filename")
+    val emplacement = File("/tmp/mixit/$filename")
     if (emplacement.exists()) {
         emplacement.delete()
     }
@@ -258,41 +259,8 @@ fun downloadImage(url: String, filename: String) {
             System.out.println("Impossible to load image for ${filename}")
             e.printStackTrace()
         }
-    }*/
+    }
 }
-
-open class SessionizeSpeakerId(
-        val id: String,
-        val firstName: String,
-        val lastName: String,
-        val email: String
-)
-
-class SessionizeTalk(
-        val id: String,
-        val title: String,
-        val description: String,
-        val speakers: List<String>,
-        val categoryItems: List<Int>? = null,
-        val startsAt: String? = null,
-        val endsAt: String? = null,
-        val isServiceSession: Boolean? = false,
-        val isPlenumSession: Boolean? = false,
-        val questionAnswers: List<String>? = null,
-        val roomId: String? = null
-)
-
-class SessionizeSpeaker(
-        val id: String,
-        val firstName: String,
-        val lastName: String,
-        val fullName: String? = null,
-        val company: String? = null,
-        val bio: String? = null,
-        val tagLine: String? = null,
-        val profilePicture: String? = null,
-        val links: List<SessionizeLink>? = null
-)
 
 class PapercallExport(
         val id: String? = null,
@@ -306,7 +274,7 @@ class PapercallExport(
 
 class PapercallAdditionalQuestion(
         val question_content: String? = null,
-        val content : String? = null
+        val content: String? = null
 )
 
 class PapercallProfile(
@@ -327,58 +295,6 @@ class PapercallTalk(
         val talk_format: String? = null
 )
 
-fun SessionizeSpeaker.findSpeakerLinks(): List<Link> = if (links == null) emptyList() else
-    links.map { Link(it.title, it.url) }
-
-
-class SessionizeLink(
-        val title: String,
-        val url: String,
-        val linkType: String
-)
-
-val categories = arrayOf(
-        Pair(13709, "Session"),
-        Pair(13710, "Workshop"),
-        Pair(20067, "Surprise keynote"),
-        Pair(20068, "Random")
-)
-
-fun toTalkFormat(elt: Int): TalkFormat =
-        when (categories.first { it.first == elt }.second) {
-            "Session" -> TalkFormat.TALK
-            "Workshop" -> TalkFormat.WORKSHOP
-            "Surprise keynote" -> TalkFormat.KEYNOTE_SURPRISE
-            "Random" -> TalkFormat.RANDOM
-            else -> TalkFormat.TALK
-        }
-
-val items = arrayOf(
-        Pair(13714, "Introductory and overview"),
-        Pair(13716, "Advanced")
-)
-
-val language = arrayOf(
-        Pair(13718, "English"),
-        Pair(13722, "French")
-)
-
-fun toTalkLanguage(elt: Int): Language =
-        when (language.first { it.first == elt }.second) {
-            "English" -> Language.ENGLISH
-            else -> Language.FRENCH
-        }
-
-
-val tags = arrayOf(
-        Pair(15603, "Life Style"),
-        Pair(15604, "Ethic"),
-        Pair(15605, "Team"),
-        Pair(15606, "Aliens"),
-        Pair(15607, "Tech"),
-        Pair(15608, "Maker"),
-        Pair(15609, "Design")
-)
 
 fun toMixitTopic(rawTopic: String): String =
         when (rawTopic) {
