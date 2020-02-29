@@ -148,35 +148,59 @@ class SessionizeImportTests(@Autowired val objectMapper: ObjectMapper,
 
     private fun firstNameOf(name: String) = name.split(" ").first()
 
-    private fun createSessions(papercallExports: List<PapercallExport>, speakersToPersist: MutableList<User>): MutableList<Talk> {
-        val sessionsToPersist = mutableListOf<Talk>()
-        val sessions: List<SessionizeTalk> = objectMapper.readValue(ClassPathResource("import/talks.json").inputStream)
-
-        sessions.forEach { session ->
+    private fun createSessions(papercallExports: List<PapercallExport>, speakersToPersist: MutableList<User>): List<Talk> {
+        return papercallExports.map { export ->
             // We have to find the sessions speakers
-            val sessionSpeakers: List<User> = session.speakers.map { sp -> speakersToPersist.first { it.token == sp } }
+            val sessionSpeakers: List<User> = speakersToPersist.filter { it.token == export.id }
 
-            val language = session.categoryItems?.filter { elt -> language.any { it.first == elt } }?.first()
-            val topic = session.categoryItems?.filter { elt -> tags.any { it.first == elt } }?.first()
-            val format = session.categoryItems?.filter { elt -> categories.any { it.first == elt } }?.first()
+            val title = export.talk?.title.orEmpty()
+            val summary = export.talk?.abstract.orEmpty()
+            val language = getLanguage(export)
+            val topic = getTopic(export)
+            val speakerIds = sessionSpeakers.map { it.login }
+            val talkFormat = getTalkFormat(export)
 
-            println("Session ${session.title} : speakers ${sessionSpeakers.map { it.lastname }}")
-            println("Lng=${if (language == null) Language.FRENCH else toTalkLanguage(language)} " +
-                    "topic=${if (topic == null) "other" else toTopic(topic)} " +
-                    "format=${if (format == null) TalkFormat.TALK else toTalkFormat(format)}")
+            println("Session ${title} : speakers ${sessionSpeakers.map { it.firstname + it.lastname }}")
+            println("Lng=$language " +
+                    "topic=$topic " +
+                    "format=$talkFormat"
+            )
 
-            sessionsToPersist.add(Talk(
-                    if (format == null) TalkFormat.TALK else toTalkFormat(format),
-                    "2019",
-                    session.title,
-                    session.description,
-                    sessionSpeakers.map { it.login },
-                    if (language == null) Language.FRENCH else toTalkLanguage(language),
-                    topic = if (topic == null) "other" else toTopic(topic)
-            ))
+            Talk(
+                    talkFormat,
+                    "2020",
+                    title,
+                    summary,
+                    speakerIds,
+                    language,
+                    topic = topic
+            )
+        }
+    }
+
+    private fun getTalkFormat(export: PapercallExport): TalkFormat =
+        when (export.talk?.talk_format) {
+            "Long talk (50 minutes)" -> TalkFormat.TALK
+            "Short talk (20 minutes)" -> TalkFormat.RANDOM
+            "Workshop (110 minutes)" -> TalkFormat.WORKSHOP
+            else -> TalkFormat.TALK
         }
 
-        return sessionsToPersist
+    private fun getTopic(export: PapercallExport): String {
+        val mixitTopics = listOf("maker", "design", "aliens", "tech", "ethic", "life style", "team")
+        val papercallTopics: String = export.tags
+                .map { it.toLowerCase() }
+                .filter { mixitTopics.contains(it) }
+                .firstOrNull().orEmpty().ifEmpty { "other" }
+        return toMixitTopic(papercallTopics)
+    }
+
+    private fun getLanguage(export: PapercallExport): Language {
+        val isInFrench = export.cfp_additional_question_answers
+                .filter { question -> question.question_content == "Do you plan to present your talk in French?" }
+                .filter { question -> question.content == "yes" }
+                .isNotEmpty()
+        return if (isInFrench) Language.FRENCH else Language.ENGLISH
     }
 }
 
@@ -274,8 +298,15 @@ class PapercallExport(
         val id: String? = null,
         val state: String? = null,
         val talk: PapercallTalk? = null,
+        val tags: List<String> = emptyList(),
         val profile: PapercallProfile,
-        val co_presenter_profiles: List<PapercallProfile> = emptyList()
+        val co_presenter_profiles: List<PapercallProfile> = emptyList(),
+        val cfp_additional_question_answers: List<PapercallAdditionalQuestion>
+)
+
+class PapercallAdditionalQuestion(
+        val question_content: String? = null,
+        val content : String? = null
 )
 
 class PapercallProfile(
@@ -349,14 +380,15 @@ val tags = arrayOf(
         Pair(15609, "Design")
 )
 
-fun toTopic(elt: Int): String =
-        when (tags.first { it.first == elt }.second) {
+fun toMixitTopic(rawTopic: String): String =
+        when (rawTopic) {
             "Maker" -> "makers"
             "Design" -> "design"
             "Aliens" -> "aliens"
+            "aliens" -> "aliens"
             "Tech" -> "tech"
             "Ethic" -> "ethics"
-            "Life Style" -> "lifestyle"
+            "Life style" -> "lifestyle"
             "Team" -> "team"
             else -> "other"
         }
