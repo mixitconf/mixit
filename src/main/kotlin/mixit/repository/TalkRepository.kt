@@ -27,13 +27,22 @@ class TalkRepository(private val template: ReactiveMongoTemplate,
 
     fun initData() {
         if (count().block() == 0L) {
-            listOf(2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020).forEach { year ->
+            //TODO CBO revert add 2020
+            listOf(2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019).forEach { year ->
                 val talksResource = ClassPathResource("data/talks_$year.json")
                 val talks: List<Talk> = objectMapper.readValue(talksResource.inputStream)
                 talks.forEach { save(it).block() }
             }
             logger.info("Talks data initialization complete")
         }
+
+        //TODO CBO revert this
+        listOf(2020).forEach { year ->
+            val talksResource = ClassPathResource("data/talks_$year.json")
+            val talks: List<Talk> = objectMapper.readValue(talksResource.inputStream)
+            talks.forEach { save(it).block() }
+        }
+        logger.info("Talks data initialization complete")
     }
 
     fun count() = template.count<Talk>()

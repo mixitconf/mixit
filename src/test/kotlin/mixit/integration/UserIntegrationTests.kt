@@ -30,7 +30,7 @@ class UserIntegrationTests(@Autowired val client: WebTestClient) {
                 .expectBody()
                 .jsonPath("\$.lastname").isEqualTo("Ehret")
                 .jsonPath("\$.firstname").isEqualTo("Guillaume")
-                .jsonPath("\$.role").isEqualTo("STAFF")
+                .jsonPath("\$.role").isEqualTo("STAFF_IN_PAUSE")
     }
 
     @Test
@@ -39,7 +39,7 @@ class UserIntegrationTests(@Autowired val client: WebTestClient) {
                 .exchange()
                 .expectStatus().is2xxSuccessful
                 .expectBodyList<User>()
-                .hasSize(12)
+                .hasSize(14)
     }
 
     @Test

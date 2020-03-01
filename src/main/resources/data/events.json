@@ -1006,24 +1006,94 @@
                 "subscriptionDate": "2019-11-26"
             },
             {
-              "level": "GOLD",
-              "sponsorId": "VISEO",
-              "subscriptionDate": "2019-12-18"
+                "level": "GOLD",
+                "sponsorId": "VISEO",
+                "subscriptionDate": "2019-12-18"
             },
             {
-              "level": "GOLD",
-              "sponsorId": "Hopwork",
-              "subscriptionDate": "2019-12-30"
+                "level": "GOLD",
+                "sponsorId": "Hopwork",
+                "subscriptionDate": "2019-12-30"
             },
             {
-              "level": "GOLD",
-              "sponsorId": "Sopra Steria",
-              "subscriptionDate": "2020-01-06"
+                "level": "GOLD",
+                "sponsorId": "Sopra Steria",
+                "subscriptionDate": "2020-01-06"
             },
             {
-              "level": "PARTY",
-              "sponsorId": "braincube",
-              "subscriptionDate": "2019-12-24"
+                "level": "PARTY",
+                "sponsorId": "braincube",
+                "subscriptionDate": "2019-12-24"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "woonoz",
+                "subscriptionDate": "2020-01-13"
+            },
+            {
+                "level": "MIXTEEN",
+                "sponsorId": "cosmin.molea",
+                "subscriptionDate": "2020-01-14"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "esker",
+                "subscriptionDate": "2020-01-10"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "hiit",
+                "subscriptionDate": "2020-01-17"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Ippon",
+                "subscriptionDate": "2020-01-21"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "sourcingisr",
+                "subscriptionDate": "2020-01-31"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "conserto",
+                "subscriptionDate": "2020-01-31"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "cgi",
+                "subscriptionDate": "2020-02-05"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "atol",
+                "subscriptionDate": "2020-01-27"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "WorldlineFrance",
+                "subscriptionDate": "2020-02-08"
+            },
+            {
+                "level": "ECOLOGY",
+                "sponsorId": "redfroggy",
+                "subscriptionDate": "2020-02-10"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "Saagie",
+                "subscriptionDate": "2020-02-25"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "talan",
+                "subscriptionDate": "2020-02-17"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "microsoft",
+                "subscriptionDate": "2020-02-27"
             }
         ],
         "start": "2020-04-29",
