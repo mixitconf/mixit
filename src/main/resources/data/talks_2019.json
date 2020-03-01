@@ -154,7 +154,7 @@
         "summary": "Venez d\u00e9couvrir ce que sont les unikernels, entit\u00e9s hybrides repoussant les limites entre OS et applications. Si vous vous demandez comment faire tourner une application en ring 0, cette pr\u00e9sentation est faite pour vous ! En d\u00e9mo : unikernels bare metal, kvm et sur un provider cloud !\r\n\r\nLes architectures logicielles d\u2019aujourd\u2019hui reposent de plus en plus sur les OS g\u00e9n\u00e9ralistes, les conteneurs et les machines virtuelles. Avec tout ce que ces outils ont apport\u00e9, des probl\u00e8mes perdurent : s\u00e9curit\u00e9, temps de d\u00e9marrage, poids des images (embarqu\u00e9)\u2026\r\n\r\nLes unikernels apportent de nouvelles r\u00e9ponses et une approche alternative du d\u00e9ploiement logiciel. Il ne s'agit plus de reposer sur un OS mais d'en extraire les briques utiles \u00e0 votre application. Les outils dans ce domaine progressent dans leur maturit\u00e9 et leur niveau d\u2019industrialisation. Ils d\u00e9placent les fronti\u00e8res entre OS et application, votre application tournant en ring 0 !\r\n\r\nDans cette pr\u00e9sentation, nous aborderons :\r\n\r\n- ce qu\u2019est un unikernel, les concepts associ\u00e9s et son fonctionnement,\r\n- leurs champs d\u2019application et l\u2019\u00e9cosyt\u00e8me,\r\n- une d\u00e9monstration avec une application distribu\u00e9e (standard: un reverse proxy, un front et un back) sur unikernels dans le cloud GCP et en local (le tout connect\u00e9, gr\u00e2ce aux projets IncludeOS, RumpKernels et RuntimeJS),\r\n- Q/A.\r\n\r\nLes d\u00e9mos sont un unikernel sur du bare metal communiquant avec un unikernel tournant dans un kvm en local qui lui-m\u00eame appelle un unikernel d\u00e9ploy\u00e9 sur GCP.",
         "title": "Voyage au pays merveilleux des Unikernels",
         "topic": "tech",
-        "video": null
+        "video": "https://vimeo.com/342931219"
     },
     {
         "addedAt": "2019-03-04T22:33:57.633",
@@ -705,7 +705,7 @@
         "summary": "La documentation est indispensable et tout vos coll\u00e8gues se d\u00e9filent ? Ou tout simplement, personne ne sait trop comment s'y prendre, et votre documentation est un patchwork ?\r\nDans une \u00e9quipe, qui est en charge de la produire, de la relire et d'en assurer la qualit\u00e9 et la coh\u00e9rence ?\r\nComment s'organiser pour mettre \u00e0 jour la documentation et d\u00e9velopper ?\r\nJe vous propose un retour d'exp\u00e9rience de 4 ann\u00e9es en tant que Technical Writer, des conseils que je peux vous apporter, si vous n'avez pas la chance d'avoir une personne d\u00e9di\u00e9e \u00e0 la Documentation.",
         "title": "Great features implies great responsabilities",
         "topic": "team",
-        "video": null
+        "video": "https://vimeo.com/342928662"
     },
     {
         "addedAt": "2019-03-04T22:33:57.64",
@@ -877,7 +877,7 @@
         "summary": "Aujourd'hui de plus en plus de devs cherchent \u00e0 animer leur propre dojo en \u00e9quipe ou en entreprise. Pas \u00e9tonnant quand on constate que c'est le moyen de (auto)formation le plus efficace et marrant pour progresser. Mais comment se renouveler et s'assurer que d'avoir un moment de qualit\u00e9 entre devs?\r\n\r\nDeux pratiques commencent \u00e0 se cristalliser, d'un c\u00f4t\u00e9 l'utilisation de contraintes pour pousser \u00e0 sortir de ses habitudes et faire appelle \u00e0 la cr\u00e9ativit\u00e9, de l'autre c\u00f4t\u00e9 les jeux sociaux, tels que le randori et le mob-programming pour mentionner les plus courants, pour apprendre des autres et pour s'entrainer \u00e0 collaborer mieux. \r\n\r\nLes code retreats o\u00f9 les participants font le m\u00eame algo 7 fois de suite en une journ\u00e9e(!) nous ont montr\u00e9 que ce n'\u00e9tait pas le sujet en lui-m\u00eame qui \u00e9tait le principal. Les contraintes et les jeux sont la principale source de renouvellement.\r\n\r\nNous ferons un tour des qq contraintes et jeux sociaux int\u00e9ressants que l'on esp\u00e8re apporteront du nouveau. Nous jouerons certains devant vous pour les rendre vivants et on discute de leur fonctionnement.\r\n",
         "title": "Contraintes et Jeux sociaux pour des dojos au top!",
         "topic": "team",
-        "video": null
+        "video": "https://vimeo.com/342928118"
     },
     {
         "addedAt": "2019-03-04T22:33:57.658",
@@ -1016,7 +1016,7 @@
         "summary": "Et encore une fuite de num\u00e9ros de cartes de cr\u00e9dit sur internet! https://www.infoq.com/news/2018/11/british-airways-data-breach\r\n\r\nC'est r\u00e9voltant n'est-ce pas ? Mais attends, qu'est-ce qu'on fait nous pour s'assurer que notre appli n'est pas une passoire? \r\n\r\nDans cette live-coding-hacking session, venez d\u00e9couvrir les erreurs les plus communes en s\u00e9curit\u00e9, que la grande majorit\u00e9 d'entre nous font sans m\u00eame le savoir!\r\n\r\nApr\u00e8s cela, vous ne verrez plus votre application de la m\u00eame mani\u00e8re...\r\n",
         "title": "Comment se faire hacker bien comme il faut!",
         "topic": "tech",
-        "video": null
+        "video": "https://vimeo.com/342927452"
     },
     {
         "addedAt": "2019-03-04T22:33:57.636",
@@ -1198,7 +1198,7 @@
         "summary": "Increasingly, machine learning is finding its way into production systems. More and more people are learning data science, and AI tools and frameworks are getting better every day. Nevertheless, researching, implementing, deploying, and maintaining a machine learning application is still a challenge, and many struggle to develop AI systems with the same pace, flexibility, and agility that they develop deterministic software and service. In this talk, we'll explore Continuous Intelligence\u2014a set of working principles to keep machine learning models up-to-date and maintainable, including why it is critically important that they are so.",
         "title": "Machine Learning in an Agile World: Keeping Models Fresh with Continuous Intelligence",
         "topic": "tech",
-        "video": null
+        "video": "https://vimeo.com/342929725"
     },
     {
         "addedAt": "2019-03-04T22:33:57.634",
@@ -1227,7 +1227,7 @@
         "summary": "The centralizing powers of the internet are showing a need for radical change towards freedom and user rights. A new movement is building the new internet, but there are even more difficulties approaching: climate crisis, crowd social engineering, and the next impending economic crisis, all of which are interconnected. This talk will show you how we are coming to the end of an era, and how one promising approach can benefit the environment, the economy, humanity, and the internet: d\u00e9croissance.",
         "title": "The internet in 2030",
         "topic": "aliens",
-        "video": null
+        "video": "https://vimeo.com/342930845"
     },
     {
         "addedAt": "2019-03-26T07:41:04.17",
@@ -1289,7 +1289,7 @@
         "summary": "In this talk, 15 year old software developer Joshua Lowe, will talk about his journey building an open source project. Josh has been running his open source project, EduBlocks, for 2 years and has learnt many things along the way. This talk will discuss the benefits of going open source, why open source may be a good idea for your project, the problems of making your project open source and advice for people who may be interested in building an open source project or may already be maintaining one. As well as discussing open source projects, Josh will talk a bit about his project EduBlocks, which is a visual block based programming tool that he has created to help teachers introduce programming languages, like Python, to children at an earlier age. It's being used in over 120 countries across the world in schools, homes and more!",
         "title": "Building an open source project",
         "topic": "makers",
-        "video": null
+        "video": "https://vimeo.com/342926893"
     },
     {
         "addedAt": "2019-03-04T22:33:57.652",
@@ -1318,7 +1318,7 @@
         "summary": "Every groundbreaking advance in software engineering \u2013 from the iPhone to space exploration to self-driving cars, not to mention the Internet and the Cloud \u2013 has followed the same arc. First there is the impossible challenge. Then there is a long hard slog of learning, with all its ups and downs. Eventually a solution emerges, which always looks obvious in retrospect. Finally, copycats try to achieve the same success, but they bypass the learning part; they don\u2019t buy Thomas Edison\u2019s observation that that innovation is 1% inspiration and 99% perspiration. \r\nThis talk is about Learning Organizations and what they do differently. It draws on examples from our rich history of breakthroughs to show how organizations create a climate that fosters innovation.\r\n",
         "title": "Learning How to Learn",
         "topic": "team",
-        "video": null
+        "video": "https://vimeo.com/342929291"
     },
     {
         "addedAt": "2019-03-04T22:33:57.635",
@@ -1377,7 +1377,7 @@
         "summary": "Quand je con\u00e7ois une page, un service, je vais faire attention aux besoins des utilisateurs, \u00e0 leurs capacit\u00e9s cognitives. Je vais les guider dans le parcours que j\u2019estime pertinent pour eux. Je vais attirer \u00e0 leur attention vers certains \u00e9l\u00e9ments, la d\u00e9tourner d\u2019autres \u00e9l\u00e9ments que je juge secondaire. Je peux jouer avec diff\u00e9rents biais cognitifs pour arriver \u00e0 mes fins.\r\nEn allant plus loin, je peux mettre en place une strat\u00e9gie pour que les utilisateurs adoptent librement certains comportements, voir cr\u00e9er de l\u2019addiction, que se soit num\u00e9rique ou dans la vie r\u00e9elle. Ces comportements peuvent \u00eatre vertueux ou justes servir les int\u00e9r\u00eats d\u2019une entreprise.\r\nQuand est-ce que, moi, designer je passe la ligne rouge\u00a0? Quelles r\u00e8gles je me fixe ou pas\u00a0? Il existe des codes de conduites comme celui de l\u2019UXPA, mais concr\u00e8tement \u00e7a donne quoi quand on essaye de l\u2019appliquer dans la vraie vie\u00a0?",
         "title": "Du design de l\u2019attention \u00e0 l\u2019\u00e9thique du designer",
         "topic": "makers",
-        "video": null
+        "video": "https://vimeo.com/341415998"
     },
     {
         "addedAt": "2019-03-04T22:33:57.636",
@@ -1552,7 +1552,7 @@
         "summary": "Everybody knows the classic cons list. Clojeurs brag about their bitmapped vector tries. Haskell weenies took it up a notch with their impossible finger trees. Rustaceans turned back the clock and gave us simple arrays again.\r\n\r\nAll of these have shortcomings. Hickey tries are magically indexable but the only other thing you can do to them is add things to the end. Finger trees are absurdly flexible but you can't index them efficiently. And so the search goes on...\r\n\r\nAnd today, you're going to learn about the ultimate list data structure: the RRB tree (\"relaxed radix balanced tree\") is an improved version of the tried and tested Hickey trie, which has achieved the impossible: /every/ basic operation is efficient - push and pop on either end, index lookup, split and join. RRB trees pull no punches.\r\n\r\nWatch as Bodil shows you diagrams with brightly coloured boxes in an enthusiastic effort to explain why data structures are amazingly exciting.",
         "title": "Meetings With Remarkable Trees",
         "topic": "tech",
-        "video": null
+        "video": "https://vimeo.com/342930310"
     },
     {
         "addedAt": "2019-03-04T22:33:57.632",
@@ -2343,7 +2343,7 @@
         "summary": "Quoi de mieux que de recoder son jeu pr\u00e9f\u00e9r\u00e9 pour apprendre une nouvelle techno ? Nous allons nous replonger dans notre enfance pour d\u00e9couvrir les concepts de Vue.js en codant un clone de Pokemon Red.\r\n\r\nUn jeu n'est rien d'autre qu'un joueur interagissant avec un univers repr\u00e9sent\u00e9 \u00e0 l\u2019\u00e9cran. Et Vue est un framework pens\u00e9 pour isoler interactions, informations (qui d\u00e9crivent l'univers du jeu) et la repr\u00e9sentation visuelle bas\u00e9e sur ces informations.\r\nNous verrons ensemble pourquoi Vue est un outil adapt\u00e9 au d\u00e9veloppement de jeu et qu'inversement, le d\u00e9veloppement d'un jeu offre un bon angle pour d\u00e9couvrir les concepts cl\u00e9s de Vue.",
         "title": "Remake de jeux r\u00e9tro avec Vue.js",
         "topic": "tech",
-        "video": null
+        "video": "https://vimeo.com/341419717"
     },
     {
         "addedAt": "2019-03-04T22:33:57.653",
@@ -2397,7 +2397,7 @@
         "summary": "2019 sera la derni\u00e8re ann\u00e9e qui ressemblera aux pr\u00e9c\u00e9dentes. Vous n'avez pas pu \u00e9chapper \u00e0 l'arriv\u00e9e des \"collapsologues\", oiseaux de mauvaise augure qui d\u00e9crivent inlassablement les potentiels effondrements syst\u00e9miques dont nous serons victimes dans les prochaines d\u00e9cennies, voire ann\u00e9es. Nous somme entr\u00e9\u00b7es dans l'\u00e8re de l'Anthropoc\u00e8ne, o\u00f9 nous humains sommes devenus une force g\u00e9ologique capable de modifier la plan\u00e8te, le climat et les dynamiques du vivant. Un avenir peu enviable, presque terrifiant se pr\u00e9pare sous nos yeux, la f\u00eate \u00e0 la croissance exponentielle semble bel et bien termin\u00e9e.\r\n\r\nLe design et la tech ont largement particip\u00e9 \u00e0 l'exploitation des ressources naturelles et l\u2019acc\u00e9l\u00e9ration des cycles de production et de consommation. Nous actrices et acteurs des nouvelles technologies avons bien souvent perdu l\u2019ancrage \u00e0 la dimension syst\u00e9mique et politique de notre pratique. Nous avons malgr\u00e9 nous contribu\u00e9 \u00e0 fa\u00e7onner ce monde pr\u00eat \u00e0 s'effondrer.\r\n\r\nIl existe un imaginaire entre l'apocalypse et le monde fantasm\u00e9 des \"g\u00e9nies-milliardaires\". Il existe une posture entre se construire un bunker auto-suffisant et exploiter jusqu'\u00e0 la derni\u00e8re goutte les ressources encore pr\u00e9sentes. Nous voulons voir dans ces constats implacables une invitation puissante \u00e0 nous rassembler et nous questionner sur comment nous sculptons notre quotidien comme notre futur. Loin de nous l'id\u00e9e de pr\u00f4ner la fin de la tech et de l'innovation : nous avons encore plein de cordes technologiques \u00e0 notre arc que nous pouvons mobiliser diff\u00e9remment pour tracer les nouvelles r\u00e8gles d'un monde prosp\u00e8re, digne, r\u00e9silient et circulaire. Nous parlerons des communs, du design du vivre ensemble, d'anthropologie, de logiciel libre, de design ouvert, de coop\u00e9ration, de r\u00e9silience, de permaculture...\r\n\r\nCette intervention est le r\u00e9sultat de deux ans de r\u00e9flexion et de recherches dont nous vous pr\u00e9senterons les premiers r\u00e9sultats pour agir d\u00e8s maintenant et faire muter nos pratiques autant que nos paradigmes : initiatives d\u00e9j\u00e0 existantes qui prouvent qu'on peut faire les choses autrement, principes et heuristiques qui permettent de concevoir les outils pour des futurs d\u00e9sirables.\r\n\r\nPlan :\r\n\r\n1/ \u00c0 travers un constat rapide, nous ferons \u00e9tat des d\u00e9fis climatiques, politiques, syst\u00e9miques d\u00e9j\u00e0 pr\u00e9sents \u00e0 notre porte.\r\n2/ Nous questionnerons le r\u00f4le de la tech et du design dans l'Anthropoc\u00e8ne\r\n3/ \u00c0 travers quatre grands principes de design, nous verrons comment nous pouvons changer notre angle de vue sur le monde que nous cr\u00e9ons.\r\n4/ Nous citerons des exemples et des preuves de concept viables qui soutiennent nos hypoth\u00e8ses.\r\n5/ Enfin, nous vous proposerons des heuristiques de design, open source et adaptables \u00e0 toutes les disciplines, pour agir tout de suite et changer profond\u00e9ment notre fa\u00e7on d'\u00eatre au monde.",
         "title": "Fa\u00e7onner des futurs souhaitables : concevoir \u00e0 l'\u00e8re de l'Anthropoc\u00e8ne",
         "topic": "aliens",
-        "video": null
+        "video": "https://vimeo.com/342949630"
     },
     {
         "addedAt": "2019-03-04T22:33:57.657",
