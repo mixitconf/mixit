@@ -30,6 +30,14 @@ class UserRepository(private val template: ReactiveMongoTemplate,
             users.forEach { save(it).block() }
             logger.info("Users data initialization complete")
         }
+
+
+        //TODO CBO revert this
+        val usersResource = ClassPathResource("data/speakers_2020.json")
+        val users: List<User> = objectMapper.readValue(usersResource.inputStream)
+        users.forEach { save(it).block() }
+        logger.info("Users data initialization complete")
+
     }
 
     fun findFullText(criteria: List<String>): Flux<User> {

@@ -6,7 +6,6 @@ import mixit.model.*
 import mixit.repository.UserRepository
 import mixit.util.Cryptographer
 import mixit.util.encodeToMd5
-import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
@@ -15,137 +14,198 @@ import java.io.File
 import java.io.FileOutputStream
 import java.io.InputStream
 import java.net.URL
+import java.util.*
 
 
 inline fun <reified T> ObjectMapper.readValue(src: InputStream): T = readValue(src, jacksonTypeRef<T>())
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@Disabled
 class SessionizeImportTests(@Autowired val objectMapper: ObjectMapper,
                             @Autowired val userRepository: UserRepository,
                             @Autowired val cryptographer: Cryptographer) {
 
-
-    val speakerWithPngImage = listOf("chabanois", "engel", "galson", "gilet", "grangeau", "jakobs", "mccullagh00", "paccard", "poppendieck", "stormacq", "topçu", "vuillard")
-
     @Test
     fun `load speakers`() {
-        val speakersToPersist = mutableListOf<User>()
-        val sessionsToPersist = mutableListOf<Talk>()
-
-        val speakerIdsResource = ClassPathResource("import/speaker_ids.json")
-        val speakerIds: List<SessionizeSpeakerId> = objectMapper.readValue(speakerIdsResource.inputStream)
-
-        val speakersResource = ClassPathResource("import/speakers.json")
-        val speakers: List<SessionizeSpeaker> = objectMapper.readValue(speakersResource.inputStream)
 
         initializeFolder()
 
-        speakerIds.forEach { speakerId ->
-            val speakerWithInfo = speakers.first { s ->
-                s.id == speakerId.id
-            }
-            val imageName = sanitize(speakerWithInfo.lastName)
-            val filenameImage = imageName + if (speakerWithPngImage.any { it == imageName }) ".png" else ".jpg"
+        val papercallExports = objectMapper.readValue<List<PapercallExport>>(ClassPathResource("import/2020-papercall-export.json").inputStream)
 
-            // 1. we find user in our database
-            val user = userRepository.findByNonEncryptedEmail(speakerId.email).block()
+        val speakersToPersist = importSpeakers(papercallExports)
+        objectMapper.writeValue(File("/tmp/mixit/speakers_2020.json"), speakersToPersist)
+
+        val sessionsToPersist = createSessions(papercallExports, speakersToPersist)
+        objectMapper.writeValue(File("/tmp/mixit/talks_2020.json"), sessionsToPersist)
+
+    }
+
+    private fun importSpeakers(papercallExports: List<PapercallExport>): MutableList<User> {
+
+        val papercallSpeakers = extractSpeakers(papercallExports)
+
+        val speakersToPersist: MutableList<User> = mutableListOf()
+
+        papercallSpeakers.forEach { papercallSpeaker ->
+            val user = userRepository.findByNonEncryptedEmail(papercallSpeaker.email).block()
             if (user != null) {
-                println("User found => ${speakerId.id} : ${speakerId.lastName} ${speakerId.firstName}")
-
-                val imageUrl = getImageUrl(user, speakerWithInfo)
-                if (imageUrl != null && imageUrl.contains("sessionize")) {
-                    downloadImage(imageUrl, filenameImage)
-                }
-                speakersToPersist.add(
-                        User(user.login,
-                                speakerId.firstName,
-                                speakerId.lastName,
-                                user.email,
-                                if (speakerWithInfo.company == null) user.company else speakerWithInfo.company,
-                                if (speakerWithInfo.company == null) user.description else bioToMap(speakerWithInfo.bio),
-                                speakerId.email.encodeToMd5(),
-                                "https://mixitconf.cleverapps.io/images/speakers/${filenameImage}",
-                                user.role,
-                                speakerWithInfo.findSpeakerLinks(),
-                                // We store id in token to retrieve speaker later when we will save talk
-                                token = speakerId.id))
-
-                println("User updated")
-
+                val updatedUser = updateUser(user, papercallSpeaker)
+                speakersToPersist.add(updatedUser)
             } else {
-                var login = speakerId.email.substring(0, speakerId.email.indexOf("@"))
-                val userCheck = userRepository.findOne(login).block()
-                if(userCheck !=null){
-                    println("Login already exist")
-					login += speakerId.lastName
-                    val anotherUserCheck = userRepository.findOne(login).block()
-                    if(anotherUserCheck !=null){
-                        println("Login already exist")
-                        throw IllegalArgumentException()
-                    }
-                }
-                println("User not found => ${speakerId.id} : ${speakerId.lastName} ${speakerId.firstName} => login : $login")
-
-                if (speakerWithInfo.profilePicture != null) {
-                    downloadImage(speakerWithInfo.profilePicture, filenameImage)
-                }
-                speakersToPersist.add(
-                        User(login,
-                                speakerId.firstName,
-                                speakerId.lastName,
-                                cryptographer.encrypt(speakerId.email),
-                                speakerWithInfo.company,
-                                bioToMap(speakerWithInfo.bio),
-                                speakerId.email.encodeToMd5(),
-                                "https://mixitconf.cleverapps.io/images/speakers/${filenameImage}",
-                                Role.USER,
-                                speakerWithInfo.findSpeakerLinks(),
-                                // We store id in token to retrieve speaker later when we will save talk
-                                token = speakerId.id))
-
-                println("User created")
+                val createdUser = createUser(papercallSpeaker)
+                speakersToPersist.add(createdUser)
             }
         }
 
-        // Now we have a list of speakers and we write this list in a file
-        objectMapper.writeValue(File("/tmp/mixit/speakers_2019.json"), speakersToPersist)
+        return speakersToPersist
+    }
 
-        // In the second step we have to create the sessions
+    private fun getImageName(speakerName: String): String {
+        val speakerWithPngImage = listOf("julien_dubedout", "marilyn_kol", "benoit", "cedric_spalvieri", "nikola_lohinski")
 
-        val sessionResource = ClassPathResource("import/talks.json")
-        val sessions: List<SessionizeTalk> = objectMapper.readValue(sessionResource.inputStream)
+        val imageName = sanitize(speakerName)
+        return imageName + if (speakerWithPngImage.any { it == imageName }) ".png" else ".jpg"
+    }
 
-        sessions.forEach { session ->
-            // We have to find the sessions speakers
-            val sessionSpeakers: List<User> = session.speakers.map { sp -> speakersToPersist.first { it.token == sp } }
+    private fun extractSpeakers(papercallExports: List<PapercallExport>): MutableList<PapercallProfile> {
+        val speakers = mutableListOf<PapercallProfile>()
 
-            val language = session.categoryItems?.filter { elt -> language.any { it.first == elt } }?.first()
-            val topic = session.categoryItems?.filter { elt -> tags.any { it.first == elt } }?.first()
-            val format = session.categoryItems?.filter { elt -> categories.any { it.first == elt } }?.first()
-
-            println("Session ${session.title} : speakers ${sessionSpeakers.map { it.lastname }}")
-            println("Lng=${if(language == null) Language.FRENCH else toTalkLanguage(language) } " +
-                    "topic=${if(topic == null) "other" else toTopic(topic) } " +
-                    "format=${if(format == null) TalkFormat.TALK else toTalkFormat(format)}")
-
-            sessionsToPersist.add(Talk(
-                    if (format == null) TalkFormat.TALK else toTalkFormat(format),
-                    "2019",
-                    session.title,
-                    session.description,
-                    sessionSpeakers.map { it.login },
-                    if (language == null) Language.FRENCH else toTalkLanguage(language),
-                    topic = if (topic == null) "other" else toTopic(topic)
-            ))
+        //Add a reference to the talk in the user to be able to link them
+        papercallExports.forEach { talk ->
+            talk.profile.talkId = talk.id
+            talk.co_presenter_profiles.forEach { coPresenter -> coPresenter.talkId = talk.id }
         }
 
-        objectMapper.writeValue(File("/tmp/mixit/talks_2019.json"), sessionsToPersist)
+        papercallExports
+                .map { papercallExport -> papercallExport.profile }
+                .forEach { speakers.add(it) }
 
+        papercallExports
+                .flatMap { papercallExport -> papercallExport.co_presenter_profiles }
+                .forEach { speakers.add(it) }
+
+        return speakers
+    }
+
+    private fun createUser(papercallSpeaker: PapercallProfile): User {
+        var login = papercallSpeaker.email.substring(0, papercallSpeaker.email.indexOf("@"))
+        val userCheck = userRepository.findOne(login).block()
+        if (userCheck != null) {
+            println("Login ${userCheck.login} already exist: try to create one with suffix")
+            login += UUID.randomUUID().toString()
+            val anotherUserCheck = userRepository.findOne(login).block()
+            if (anotherUserCheck != null) {
+                println("Login with suffix ${anotherUserCheck.login} already exist aborting import")
+                throw IllegalArgumentException()
+            }
+        }
+        println("User not found => ${papercallSpeaker.name} => login : $login")
+
+        if (papercallSpeaker.avatar != null) {
+            downloadImage(papercallSpeaker.avatar, getImageName(papercallSpeaker.name))
+        }
+        println("User created")
+
+        return User(login,
+                firstNameOf(papercallSpeaker.name),
+                lastName(papercallSpeaker.name),
+                cryptographer.encrypt(papercallSpeaker.email),
+                papercallSpeaker.company,
+                bioToMap(papercallSpeaker.bio),
+                papercallSpeaker.email.encodeToMd5(),
+                "https://mixitconf.cleverapps.io/images/speakers/${getImageName(papercallSpeaker.name)}",
+                Role.USER,
+                if (papercallSpeaker.url.isNullOrEmpty()) listOf() else listOf(Link("site", papercallSpeaker.url)),
+                // We store id in token to retrieve speaker later when we will save talk
+                token = papercallSpeaker.talkId.orEmpty()
+        )
+
+    }
+
+    private fun updateUser(user: User, papercallSpeaker: PapercallProfile): User {
+        println("User found => ${user.login} : ${user.lastname} ${user.firstname}")
+
+        val imageUrl = getImageUrl(user, papercallSpeaker.avatar)
+        if (imageUrl != null && imageUrl.contains("papercallio")) {
+            downloadImage(imageUrl, getImageName(papercallSpeaker.name))
+        }
+        println("User updated")
+
+        return User(user.login,
+                        firstNameOf(papercallSpeaker.name),
+                        lastName(papercallSpeaker.name),
+                        user.email,
+                        if (papercallSpeaker.company == null) user.company else papercallSpeaker.company,
+                        if (papercallSpeaker.bio == null) user.description else bioToMap(papercallSpeaker.bio),
+                        papercallSpeaker.email.encodeToMd5(),
+                        "https://mixitconf.cleverapps.io/images/speakers/${getImageName(papercallSpeaker.name)}",
+                        user.role,
+                        if (papercallSpeaker.url.isNullOrEmpty()) listOf() else listOf(Link("site", papercallSpeaker.url)),
+                        // We store id in token to retrieve speaker later when we will save talk
+                        token = papercallSpeaker.talkId.orEmpty()
+        )
+    }
+
+    private fun lastName(name: String) = name.split(" ").drop(1).joinToString(" ")
+
+    private fun firstNameOf(name: String) = name.split(" ").first()
+
+    private fun createSessions(papercallExports: List<PapercallExport>, speakersToPersist: MutableList<User>): List<Talk> {
+        return papercallExports.map { export ->
+            // We have to find the sessions speakers
+            val sessionSpeakers: List<User> = speakersToPersist.filter { it.token == export.id }
+
+            val title = export.talk?.title.orEmpty()
+            val summary = export.talk?.abstract.orEmpty()
+            val language = getLanguage(export)
+            val topic = getTopic(export)
+            val speakerIds = sessionSpeakers.map { it.login }
+            val talkFormat = getTalkFormat(export)
+
+            println("Session ${title} : speakers ${sessionSpeakers.map { it.firstname + it.lastname }}")
+            println("Lng=$language " +
+                    "topic=$topic " +
+                    "format=$talkFormat"
+            )
+
+            Talk(
+                    talkFormat,
+                    "2020",
+                    title,
+                    summary,
+                    speakerIds,
+                    language,
+                    topic = topic
+            )
+        }
+    }
+
+    private fun getTalkFormat(export: PapercallExport): TalkFormat =
+            when (export.talk?.talk_format) {
+                "Long talk (50 minutes)" -> TalkFormat.TALK
+                "Short talk (20 minutes)" -> TalkFormat.RANDOM
+                "Workshop (110 minutes)" -> TalkFormat.WORKSHOP
+                else -> TalkFormat.TALK
+            }
+
+    private fun getTopic(export: PapercallExport): String {
+        val mixitTopics = listOf("maker", "design", "aliens", "tech", "ethic", "life style", "team")
+        val papercallTopics: String = export.tags
+                .map { it.toLowerCase() }
+                .filter { mixitTopics.contains(it) }
+                .firstOrNull().orEmpty().ifEmpty { "other" }
+        return toMixitTopic(papercallTopics)
+    }
+
+    private fun getLanguage(export: PapercallExport): Language {
+        val isInFrench = export.cfp_additional_question_answers
+                .filter { question -> question.question_content == "Do you plan to present your talk in French?" }
+                .filter { question -> question.content == "yes" }
+                .isNotEmpty()
+        return if (isInFrench) Language.FRENCH else Language.ENGLISH
     }
 }
 
-fun getImageUrl(user: User, userSessionIze: SessionizeSpeaker): String? {
+fun getImageUrl(user: User, pictureUrl: String?): String? {
     System.out.println("user ${user.lastname} -> ${user.photoUrl}")
     if (!user.photoUrl.isNullOrEmpty()) {
         if (user.photoUrl!!.contains("/mixitconf")) {
@@ -155,10 +215,10 @@ fun getImageUrl(user: User, userSessionIze: SessionizeSpeaker): String? {
             return "https://mixitconf.cleverapps.io${user.photoUrl}"
         }
         return user.photoUrl
-    } else if (userSessionIze.profilePicture.isNullOrEmpty()) {
+    } else if (pictureUrl.isNullOrEmpty()) {
         return "https://www.gravatar.com/avatar/${user.emailHash}?s=400"
     }
-    return userSessionIze.profilePicture
+    return pictureUrl
 }
 
 
@@ -202,100 +262,49 @@ fun downloadImage(url: String, filename: String) {
     }
 }
 
-open class SessionizeSpeakerId(
-        val id: String,
-        val firstName: String,
-        val lastName: String,
-        val email: String
+class PapercallExport(
+        val id: String? = null,
+        val state: String? = null,
+        val talk: PapercallTalk? = null,
+        val tags: List<String> = emptyList(),
+        val profile: PapercallProfile,
+        val co_presenter_profiles: List<PapercallProfile> = emptyList(),
+        val cfp_additional_question_answers: List<PapercallAdditionalQuestion>
 )
 
-class SessionizeTalk(
-        val id: String,
-        val title: String,
-        val description: String,
-        val speakers: List<String>,
-        val categoryItems: List<Int>? = null,
-        val startsAt: String? = null,
-        val endsAt: String? = null,
-        val isServiceSession: Boolean? = false,
-        val isPlenumSession: Boolean? = false,
-        val questionAnswers: List<String>? = null,
-        val roomId: String? = null
+class PapercallAdditionalQuestion(
+        val question_content: String? = null,
+        val content: String? = null
 )
 
-class SessionizeSpeaker(
-        val id: String,
-        val firstName: String,
-        val lastName: String,
-        val fullName: String? = null,
-        val company: String? = null,
+class PapercallProfile(
+        val name: String,
         val bio: String? = null,
-        val tagLine: String? = null,
-        val profilePicture: String? = null,
-        val links: List<SessionizeLink>? = null
+        val twitter: String? = null,
+        val company: String? = null,
+        val url: String? = null,
+        val email: String,
+        val avatar: String? = null,
+        var talkId: String? = null
 )
 
-fun SessionizeSpeaker.findSpeakerLinks(): List<Link> = if (links == null) emptyList() else
-    links.map { Link(it.title, it.url) }
-
-
-class SessionizeLink(
-        val title: String,
-        val url: String,
-        val linkType: String
+class PapercallTalk(
+        val title: String? = null,
+        val abstract: String? = null,
+        val description: String? = null,
+        val talk_format: String? = null
 )
 
-val categories = arrayOf(
-        Pair(13709, "Session"),
-        Pair(13710, "Workshop"),
-        Pair(20067, "Surprise keynote"),
-        Pair(20068, "Random")
-)
 
-fun toTalkFormat(elt: Int): TalkFormat =
-        when (categories.first { it.first == elt }.second) {
-            "Session" -> TalkFormat.TALK
-            "Workshop" -> TalkFormat.WORKSHOP
-            "Surprise keynote" -> TalkFormat.KEYNOTE_SURPRISE
-            "Random" -> TalkFormat.RANDOM
-            else -> TalkFormat.TALK
-        }
-
-val items = arrayOf(
-        Pair(13714, "Introductory and overview"),
-        Pair(13716, "Advanced")
-)
-
-val language = arrayOf(
-        Pair(13718, "English"),
-        Pair(13722, "French")
-)
-
-fun toTalkLanguage(elt: Int): Language =
-        when (language.first { it.first == elt }.second) {
-            "English" -> Language.ENGLISH
-            else -> Language.FRENCH
-        }
-
-
-val tags = arrayOf(
-        Pair(15603, "Life Style"),
-        Pair(15604, "Ethic"),
-        Pair(15605, "Team"),
-        Pair(15606, "Aliens"),
-        Pair(15607, "Tech"),
-        Pair(15608, "Maker"),
-        Pair(15609, "Design")
-)
-
-fun toTopic(elt: Int): String =
-        when (tags.first { it.first == elt }.second) {
+fun toMixitTopic(rawTopic: String): String =
+        when (rawTopic) {
             "Maker" -> "makers"
             "Design" -> "design"
             "Aliens" -> "aliens"
+            "aliens" -> "aliens"
             "Tech" -> "tech"
             "Ethic" -> "ethics"
-            "Life Style" -> "lifestyle"
+            "Life style" -> "lifestyle"
             "Team" -> "team"
             else -> "other"
         }
