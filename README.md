@@ -78,6 +78,6 @@ Quoting @javamind:
 curl https://mixitconf.org/api/blog | python -m json.tool > blog.json
 curl https://mixitconf.org/api/event | python -m json.tool > events.json
 curl https://mixitconf.org/api/user | python -m json.tool > users.json
-curl https://mixitconf.org/api/2019/talk | python -m json.tool > talks_2019.json
+curl https://mixitconf.org/api/2020/talk | python -m json.tool > talks_2020.json
 git commit -a -m "Update data from PROD"
 ```
