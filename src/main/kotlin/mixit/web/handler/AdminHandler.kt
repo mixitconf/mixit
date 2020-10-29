@@ -77,7 +77,7 @@ class AdminHandler(private val ticketRepository: TicketRepository,
             ))
 
 
-    fun adminUsers(req: ServerRequest) = ok().render("admin-users", mapOf(Pair("users", userRepository.findAll()), Pair("title", "admin.users.title")))
+    fun adminUsers(req: ServerRequest) = ok().render("admin-users", mapOf(Pair("users", userRepository.findAll().sort(Comparator.comparing(User::lastname).thenComparing(Comparator.comparing(User::firstname)))), Pair("title", "admin.users.title")))
 
 
     fun createTalk(req: ServerRequest): Mono<ServerResponse> = this.adminTalk()
