@@ -990,7 +990,7 @@
         "year": 2019
     },
     {
-        "current": true,
+        "current": false,
         "end": "2020-04-30",
         "id": "mixit20",
         "photoUrls": [],
@@ -1094,10 +1094,66 @@
                 "level": "GOLD",
                 "sponsorId": "microsoft",
                 "subscriptionDate": "2020-02-27"
+            },
+            {
+                "level": "ACCESSIBILITY",
+                "sponsorId": "softwaymedical",
+                "subscriptionDate": "2020-03-06"
             }
         ],
         "start": "2020-04-29",
         "videoUrl": null,
         "year": 2020
+    },
+    {
+        "current": true,
+        "end": "2021-05-20",
+        "id": "mixit21",
+        "photoUrls": [],
+        "sponsors": [
+            {
+                "level": "SILVER",
+                "sponsorId": "braincube",
+                "subscriptionDate": "2021-02-26"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "redfroggy",
+                "subscriptionDate": "2021-02-26"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "feelinjob",
+                "subscriptionDate": "2021-02-26"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "woonoz",
+                "subscriptionDate": "2021-02-26"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "sourcingisr",
+                "subscriptionDate": "2021-02-26"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "talan",
+                "subscriptionDate": "2021-02-26"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "hiit",
+                "subscriptionDate": "2021-02-26"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "Enedis",
+                "subscriptionDate": "2021-02-26"
+            }
+        ],
+        "start": "2021-05-18",
+        "videoUrl": null,
+        "year": 2021
     }
 ]
