@@ -117,7 +117,7 @@ class AdminHandler(private val ticketRepository: TicketRepository,
             }
 
 
-    private fun adminTalk(talk: Talk = Talk(TALK, "2020", "", "")) = ok().render("admin-talk", mapOf(
+    private fun adminTalk(talk: Talk = Talk(TALK, "2021", "", "")) = ok().render("admin-talk", mapOf(
             Pair("talk", talk),
             Pair("title", "admin.talk.title"),
             Pair("rooms", listOf(

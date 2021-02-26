@@ -45,12 +45,12 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
         GET("/blog/feed", blogHandler::feed)
 
         accept(TEXT_HTML).nest {
-            GET("/") { sponsorHandler.viewWithSponsors("home", arrayOf(SponsorshipLevel.LANYARD, SponsorshipLevel.GOLD), null, 2020, it) }
+            GET("/") { sponsorHandler.viewWithSponsors("home", arrayOf(SponsorshipLevel.LANYARD, SponsorshipLevel.GOLD), null, 2021, it) }
             GET("/about", globalHandler::findAboutView)
             GET("/news", newsHandler::newsView)
             GET("/ticketing", ticketingHandler::ticketing)
-            GET("/sponsors") { sponsorHandler.viewWithSponsors(2020, it) }
-            GET("/mixteen") { sponsorHandler.viewWithSponsors("mixteen", arrayOf(SponsorshipLevel.MIXTEEN), "mixteen.title", 2020, it) }
+            GET("/sponsors") { sponsorHandler.viewWithSponsors(2021, it) }
+            GET("/mixteen") { sponsorHandler.viewWithSponsors("mixteen", arrayOf(SponsorshipLevel.MIXTEEN), "mixteen.title", 2021, it) }
             GET("/faq", globalHandler::faqView)
             GET("/come", globalHandler::comeToMixitView)
             GET("/schedule", globalHandler::scheduleView)
