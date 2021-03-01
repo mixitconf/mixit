@@ -31,8 +31,8 @@ tasks.withType<Test> {
 }
 
 node {
-    version = "9.2.0"
-    yarnVersion = "1.6.0"
+    version = "12.21.0"
+    yarnVersion = "1.22.10"
     download = true
 }
 

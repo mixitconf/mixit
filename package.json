@@ -6,28 +6,25 @@
   "repository": "https://github.com/mix-it/mixit.git",
   "license": "MIT",
   "devDependencies": {
-    "del": "^3.0.0",
-    "gulp": "4.0.0",
-    "gulp-autoprefixer": "^6.0.0",
+    "autoprefixer": "9.8.6",
+    "cssnano": "4.1.10",
+    "del": "^6.0.0",
+    "gulp": "4.0.2",
     "gulp-babel": "^8.0.0",
-    "gulp-cli": "^2.0.1",
+    "gulp-cli": "^2.3.0",
     "gulp-concat": "^2.6.1",
-    "gulp-cssnano": "^2.1.3",
     "gulp-if": "^2.0.2",
-    "gulp-imagemin": "^4.1.0",
-    "gulp-load-plugins": "^1.5.0",
+    "gulp-load-plugins": "^2.0.6",
     "gulp-newer": "^1.4.0",
-    "gulp-sass": "^4.0.1",
-    "gulp-size": "^3.0.0",
-    "gulp-sourcemaps": "^2.6.4",
+    "gulp-postcss": "8.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
     "gulp-typescript": "^4.0.1",
-    "gulp-uglify": "^3.0.1",
-    "gulp-uncss": "^1.0.6",
+    "gulp-uglify": "^3.0.2",
     "gulp-util": "^3.0.8",
     "gulp-webp": "^2.3.0",
     "html-minifier": "^3.5.20",
-    "imagemin-jpegtran": "^5.0.2",
-    "imagemin-mozjpeg": "^6.0.0",
+    "node-sass": "^5.0.0",
     "typescript": "^3.1.3",
     "webpack-stream": "^5.1.1"
   },
@@ -38,5 +35,8 @@
     "motion-ui": "^2.0.3",
     "vinyl-named": "^1.1.0",
     "workbox-build": "3.6.2"
+  },
+  "engines": {
+    "node": ">=12.0.0"
   }
 }
