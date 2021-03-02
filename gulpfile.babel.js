@@ -6,7 +6,9 @@ const wbBuild = require('workbox-build');
 const $ = require('gulp-load-plugins')();
 const named = require('vinyl-named');
 const webpack = require('webpack-stream');
-const ts = require("gulp-typescript");
+const ts = require('gulp-typescript');
+const autoPrefixer = require('autoprefixer');
+const cssnano = require('cssnano');
 
 const paths = {
   main: 'src/main',
@@ -23,34 +25,14 @@ const paths = {
   }
 };
 
-const AUTOPREFIXER_BROWSERS = [
-  'ie >= 10',
-  'ie_mob >= 10',
-  'ff >= 30',
-  'chrome >= 34',
-  'safari >= 6',
-  'opera >= 23',
-  'ios >= 7',
-  'android >= 4.4',
-  'bb >= 10'
-];
-
 // Compile and automatically prefix stylesheets
 gulp.task('styles', () =>
-  gulp.src([`${paths.main}/sass/**/*.scss`])
-      .pipe($.newer(`${paths.tmp}/styles`))
-      .pipe($.sourcemaps.init())
-      .pipe($.sass({
-                     precision: 10
-                   }).on('error', $.sass.logError))
-      .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
+  gulp.src([`${paths.main}/sass/app.scss`])
+      .pipe($.sass({precision: 10}).on('error', $.sass.logError))
       .pipe(gulp.dest(`${paths.tmp}/styles`))
-      .pipe($.if('*.css', $.cssnano()))
-      .pipe($.size({title: 'styles'}))
-      .pipe($.sourcemaps.write('./'))
+      .pipe($.postcss([autoPrefixer(), cssnano()]))
       .pipe(gulp.dest(`${paths.dist.css}`))
 );
-
 
 // We use webp format for Chrome users
 gulp.task('images-webp', () =>
@@ -136,14 +118,12 @@ gulp.task('service-worker-optim', () =>
       .pipe($.sourcemaps.init())
       .pipe($.sourcemaps.write())
       .pipe($.uglify())
-      .pipe($.size({title: 'scripts'}))
       .pipe($.sourcemaps.write('.'))
       .pipe(gulp.dest(`build/dist`))
 );
 
 gulp.task('service-worker-resource', (cb) =>
   gulp.src(['node_modules/workbox-sw/build/*-sw.js'])
-      .pipe($.size({title: 'copy', showFiles: true}))
       .pipe(gulp.dest(`${paths.dist.resources}/static`))
       .on('end', () => cb()));
 

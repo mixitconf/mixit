@@ -7,6 +7,7 @@
                 <li class="mxt-menu--talks-title"><h1>{{#i18n}}sponsors.title{{/i18n}}</h1></li>
                 <li><a href="#" class="mxt-menu--talks-date"><h1>{{year}}</h1></a>
                     <ul class="menu">
+                        <li><a href="{{localePrefix}}/sponsors/2021">2021</a></li>
                         <li><a href="{{localePrefix}}/sponsors/2020">2020</a></li>
                         <li><a href="{{localePrefix}}/sponsors/2019">2019</a></li>
                         <li><a href="{{localePrefix}}/sponsors/2018">2018</a></li>
@@ -28,68 +29,86 @@
     <div class="row">
         <div class="column large-12">
 
+            {{#sponsors-lanyard}}
             <div class="mxt-wrapper--callout callout">
                 <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.lanyard{{/i18n}}</h2>
                 {{#sponsors-lanyard}}
                     {{> sponsor }}
                 {{/sponsors-lanyard}}
             </div>
+            {{/sponsors-lanyard}}
 
+            {{#sponsors-gold}}
             <div class="mxt-wrapper--callout callout">
                 <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.gold{{/i18n}}</h2>
                 {{#sponsors-gold}}
                     {{> sponsor }}
                 {{/sponsors-gold}}
             </div>
+            {{/sponsors-gold}}
 
+            {{#sponsors-accessibility}}
             <div class="mxt-wrapper--callout callout">
                 <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.accessibility{{/i18n}}</h2>
                 {{#sponsors-accessibility}}
                     {{> sponsor }}
                 {{/sponsors-accessibility}}
             </div>
+            {{/sponsors-accessibility}}
 
+            {{#sponsors-ecology}}
             <div class="mxt-wrapper--callout callout">
                 <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.ecology{{/i18n}}</h2>
                 {{#sponsors-ecology}}
                     {{> sponsor }}
                 {{/sponsors-ecology}}
             </div>
+            {{/sponsors-ecology}}
 
+            {{#sponsors-mixteen}}
             <div class="mxt-wrapper--callout callout">
                 <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.mixteen{{/i18n}}</h2>
                 {{#sponsors-mixteen}}
                     {{> sponsor }}
                 {{/sponsors-mixteen}}
             </div>
+            {{/sponsors-mixteen}}
 
+            {{#sponsors-silver}}
             <div class="mxt-wrapper--callout callout">
                 <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.silver{{/i18n}}</h2>
                 {{#sponsors-silver}}
                     {{> sponsor }}
                 {{/sponsors-silver}}
             </div>
+            {{/sponsors-silver}}
 
+            {{#sponsors-party}}
             <div class="mxt-wrapper--callout callout">
                 <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.party{{/i18n}}</h2>
                 {{#sponsors-party}}
                     {{> sponsor }}
                 {{/sponsors-party}}
             </div>
+            {{/sponsors-party}}
 
+            {{#sponsors-hosting}}
             <div class="mxt-wrapper--callout callout">
                 <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.hosting{{/i18n}}</h2>
                 {{#sponsors-hosting}}
                     {{> sponsor }}
                 {{/sponsors-hosting}}
             </div>
+            {{/sponsors-hosting}}
 
+            {{#sponsors-video}}
             <div class="mxt-wrapper--callout callout">
                 <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.videos{{/i18n}}</h2>
                 {{#sponsors-video}}
                     {{> sponsor }}
                 {{/sponsors-video}}
             </div>
+            {{/sponsors-video}}
         </div>
     </div>
 </div>
