@@ -31,7 +31,7 @@
   "dependencies": {
     "@types/node": "^10.12.0",
     "foundation-sites": "^6.4.3",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "motion-ui": "^2.0.3",
     "vinyl-named": "^1.1.0",
     "workbox-build": "3.6.2"
