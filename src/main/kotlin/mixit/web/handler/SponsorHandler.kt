@@ -28,19 +28,34 @@ class SponsorHandler(private val userRepository: UserRepository,
                             ServerResponse.ok().render("sponsors", mapOf(
                                     Pair("year", year),
                                     Pair("imagepath", "/"),
-                                    Pair("sponsors-gold", sponsorsByEvent[SponsorshipLevel.GOLD]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
-                                    Pair("sponsors-silver", sponsorsByEvent[SponsorshipLevel.SILVER]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
-                                    Pair("sponsors-hosting", sponsorsByEvent[SponsorshipLevel.HOSTING]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
-                                    Pair("sponsors-ecology", sponsorsByEvent[SponsorshipLevel.ECOLOGY]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
-                                    Pair("sponsors-lanyard", sponsorsByEvent[SponsorshipLevel.LANYARD]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
-                                    Pair("sponsors-accessibility", sponsorsByEvent[SponsorshipLevel.ACCESSIBILITY]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
-                                    Pair("sponsors-mixteen", sponsorsByEvent[SponsorshipLevel.MIXTEEN]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
-                                    Pair("sponsors-party", sponsorsByEvent[SponsorshipLevel.PARTY]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
-                                    Pair("sponsors-video", sponsorsByEvent[SponsorshipLevel.VIDEO]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, req.language(), markdownConverter) }),
+                                    Pair("sponsors-gold", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.GOLD)),
+                                    Pair("has-sponsors-gold", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.GOLD)?.isNotEmpty()),
+                                    Pair("sponsors-silver", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.SILVER)),
+                                    Pair("has-sponsors-silver", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.SILVER)?.isNotEmpty()),
+                                    Pair("sponsors-hosting", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.HOSTING)),
+                                    Pair("has-sponsors-hosting", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.HOSTING)?.isNotEmpty()),
+                                    Pair("sponsors-ecology", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.ECOLOGY)),
+                                    Pair("has-sponsors-ecology", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.ECOLOGY)?.isNotEmpty()),
+                                    Pair("sponsors-lanyard", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.LANYARD)),
+                                    Pair("has-sponsors-lanyard", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.LANYARD)?.isNotEmpty()),
+                                    Pair("sponsors-accessibility", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.ACCESSIBILITY)),
+                                    Pair("has-sponsors-accessibility", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.ACCESSIBILITY)?.isNotEmpty()),
+                                    Pair("sponsors-mixteen", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.MIXTEEN)),
+                                    Pair("has-sponsors-mixteen", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.MIXTEEN)?.isNotEmpty()),
+                                    Pair("sponsors-party", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.PARTY)),
+                                    Pair("has-sponsors-party", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.PARTY)?.isNotEmpty()),
+                                    Pair("sponsors-video", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.VIDEO)),
+                                    Pair("has-sponsors-video", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.VIDEO)?.isNotEmpty()),
                                     Pair("title", "sponsors.title|$year")
                             ))
                         }
                     }
+
+    private fun getSponsors(sponsorsByEvent: Map<SponsorshipLevel, List<EventSponsoring>>,
+                            sponsorsByLogin: Map<String, User>,
+                            language: Language,
+                            sponsorshipLevel: SponsorshipLevel): List<EventSponsoringDto>? =
+            sponsorsByEvent[sponsorshipLevel]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, language, markdownConverter) }
 
     fun viewWithSponsors(view: String, spolights: Array<SponsorshipLevel>, title: String?, year: Int, req: ServerRequest) =
             eventRepository
