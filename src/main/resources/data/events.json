@@ -1150,6 +1150,16 @@
                 "level": "SILVER",
                 "sponsorId": "Enedis",
                 "subscriptionDate": "2021-02-26"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "Sopra Steria",
+                "subscriptionDate": "2021-03-09"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "shodo",
+                "subscriptionDate": "2021-03-17"
             }
         ],
         "start": "2021-05-18",
