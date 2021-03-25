@@ -26,8 +26,9 @@ class TalkRepository(private val template: ReactiveMongoTemplate,
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
+        deleteByEvent("2020").block()
         if (count().block() == 0L) {
-            listOf(2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020).forEach { year ->
+            listOf(2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019).forEach { year ->
                 val talksResource = ClassPathResource("data/talks_$year.json")
                 val talks: List<Talk> = objectMapper.readValue(talksResource.inputStream)
                 talks.forEach { save(it).block() }
@@ -77,6 +78,8 @@ class TalkRepository(private val template: ReactiveMongoTemplate,
     fun deleteAll() = template.remove<Talk>(Query())
 
     fun deleteOne(id: String) = template.remove<Talk>(Query(where("_id").isEqualTo(id)))
+
+    fun deleteByEvent(event: String) = template.remove<Talk>(Query(where("event").isEqualTo(event)))
 
     fun save(talk: Talk) = template.save(talk)
 
