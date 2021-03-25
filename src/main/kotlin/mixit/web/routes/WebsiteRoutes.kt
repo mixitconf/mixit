@@ -54,7 +54,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
             GET("/faq", globalHandler::faqView)
             GET("/come", globalHandler::comeToMixitView)
             GET("/schedule", globalHandler::scheduleView)
-            GET("/cfp") { talkHandler.findByEventView(2020, it, false) }
+            GET("/cfp") { talkHandler.findByEventView(2021, it, false) }
             GET("/user/{login}") { userHandler.findOneView(it) }
             GET("/me") { userHandler.findProfileView(it) }
             GET("/me/edit", userHandler::editProfileView)
@@ -110,7 +110,7 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
                 GET("/ticketing", adminHandler::adminTicketing)
                 DELETE("/")
                 GET("/talks/edit/{slug}", adminHandler::editTalk)
-                GET("/talks") { adminHandler.adminTalks(it, "2020")}
+                GET("/talks") { adminHandler.adminTalks(it, "2021")}
                 GET("/talks/create", adminHandler::createTalk)
                 GET("/talks/{year}") { adminHandler.adminTalks(it, it.pathVariable("year"))}
                 GET("/users", adminHandler::adminUsers)
