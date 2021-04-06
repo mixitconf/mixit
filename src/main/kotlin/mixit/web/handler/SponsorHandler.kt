@@ -91,20 +91,19 @@ class SponsorHandler(private val userRepository: UserRepository,
                                             .distinctBy { it.login }
 
                                     if (view.equals("home")) {
-                                        val oldStars = UserHandler.speakerStarInHistory.map { usersByLogin[it]!!.toSpeakerStarDto() }.toMutableList()
-                                        val currentStars = UserHandler.speakerStarInCurrentEvent.map { usersByLogin[it]!!.toSpeakerStarDto() }.toMutableList()
-                                        Collections.shuffle(oldStars)
-                                        Collections.shuffle(currentStars)
+                                        // val oldStars = UserHandler.speakerStarInHistory.map { usersByLogin[it]!!.toSpeakerStarDto() }.toMutableList()
+                                        // val currentStars = UserHandler.speakerStarInCurrentEvent.map { usersByLogin[it]!!.toSpeakerStarDto() }.toMutableList()
+                                        // Collections.shuffle(oldStars)
+                                        // Collections.shuffle(currentStars)
 
                                         ServerResponse.ok().render(view, mapOf(
                                                 Pair("year", year),
                                                 Pair("imagepath", "/"),
                                                 Pair("title", if (!view.equals("sponsors")) title else "$title|$year"),
                                                 Pair("sponsors-main", mainSponsors),
-                                                Pair("sponsors-others", otherSponsors),
-                                                Pair("stars-old", oldStars.subList(0, 6)),
-                                                //Pair("stars-current", currentStars.subList(0, 6))
-												Pair("stars-current", currentStars)
+                                                Pair("sponsors-others", otherSponsors)
+                                                // Pair("stars-old", oldStars.subList(0, 6)),
+                                                // Pair("stars-current", currentStars)
                                         ))
                                     } else {
                                         ServerResponse.ok().render(view, mapOf(
