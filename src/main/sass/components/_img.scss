@@ -18,6 +18,16 @@
 	}
 }
 
+.mxt-img--speakers_home {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: grayscale(70%);
+  &:hover {
+    filter: grayscale(0%);
+  }
+}
+
 .mxt-img-avatar__speaker {
   border-radius: 100%;
   border: 7px solid $forth-color;

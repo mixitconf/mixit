@@ -1160,6 +1160,26 @@
                 "level": "SILVER",
                 "sponsorId": "shodo",
                 "subscriptionDate": "2021-03-17"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "cosmin.molea",
+                "subscriptionDate": "2021-03-27"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "cgi",
+                "subscriptionDate": "2021-03-30"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "neo9",
+                "subscriptionDate": "2021-03-30"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "esker",
+                "subscriptionDate": "2021-04-01"
             }
         ],
         "start": "2021-05-18",
