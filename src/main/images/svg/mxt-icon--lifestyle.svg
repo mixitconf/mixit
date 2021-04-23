@@ -1,15 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
-  <title>mxt-icon--cat6_1</title>
-  <g id="Layer_2" data-name="Layer 2">
-    <g id="Layer_1-2" data-name="Layer 1">
-      <rect width="50" height="50" style="fill: #92929a"/>
-      <g>
-        <rect x="15.5" y="10.67" width="19" height="29.33" style="fill: #242539"/>
-        <g>
-          <polygon points="12.99 41.03 12.99 6 20.5 6 20.5 33.53 37.01 33.53 37.01 41.03 12.99 41.03" style="fill: #92929a"/>
-          <path d="M19.5,7V34.53H36V40H14V7h5.5m2-2H12V42H38v-9.5H21.5V5Z" style="fill: #242539"/>
-        </g>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><title>mxt-icon--cat6_1</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect width="50" height="50" style="fill:#92929a"/><g><rect width="19" height="29.33" x="15.5" y="10.67" style="fill:#242539"/><g><polygon points="12.99 41.03 12.99 6 20.5 6 20.5 33.53 37.01 33.53 37.01 41.03 12.99 41.03" style="fill:#92929a"/><path d="M19.5,7V34.53H36V40H14V7h5.5m2-2H12V42H38v-9.5H21.5V5Z" style="fill:#242539"/></g></g></g></g></svg>

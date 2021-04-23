@@ -1,13 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
-  <title>mxt-icon--cat4</title>
-  <g id="Layer_2" data-name="Layer 2">
-    <g id="Layer_1-2" data-name="Layer 1">
-      <rect width="50" height="50" style="fill: #e1629e"/>
-      <rect x="15.75" y="11" width="18" height="27.5" style="fill: #242539;stroke: #242539;stroke-miterlimit: 10"/>
-      <g>
-        <polygon points="21.04 43.75 21.04 14.17 9.21 14.17 9.21 6.25 40.79 6.25 40.79 14.17 28.95 14.17 28.95 43.75 21.04 43.75" style="fill: #e1629e"/>
-        <path d="M39.79,7.25v5.92H28V42.75H22V13.17H10.21V7.25H39.79m2-2H8.21v9.92H20V44.75H30V15.17H41.79V5.25Z" style="fill: #242539"/>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><title>mxt-icon--cat4</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect width="50" height="50" style="fill:#e1629e"/><rect width="18" height="27.5" x="15.75" y="11" style="fill:#242539;stroke:#242539;stroke-miterlimit:10"/><g><polygon points="21.04 43.75 21.04 14.17 9.21 14.17 9.21 6.25 40.79 6.25 40.79 14.17 28.95 14.17 28.95 43.75 21.04 43.75" style="fill:#e1629e"/><path d="M39.79,7.25v5.92H28V42.75H22V13.17H10.21V7.25H39.79m2-2H8.21v9.92H20V44.75H30V15.17H41.79V5.25Z" style="fill:#242539"/></g></g></g></svg>
