@@ -1,15 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="50" height="51" viewBox="0 0 50 51">
-  <title>mxt-icon--cat2</title>
-  <g id="Layer_2" data-name="Layer 2">
-    <g id="Layer_1-2" data-name="Layer 1">
-      <rect width="50" height="51" style="fill: #ff8d4e"/>
-      <g>
-        <rect x="11.66" y="10.76" width="26.34" height="29.55" style="fill: #242539;stroke: #242539;stroke-miterlimit: 10"/>
-        <g>
-          <polygon points="32.17 42.35 32.17 20.55 28.72 20.55 28.72 26 21.27 26 21.27 20.55 17.82 20.55 17.82 42.35 10.38 42.35 10.38 7.65 17.82 7.65 17.82 13.1 23.27 13.1 23.27 18.55 26.72 18.55 26.72 13.1 32.17 13.1 32.17 7.65 39.62 7.65 39.62 42.35 32.17 42.35" style="fill: #ff8d4e"/>
-          <path d="M38.62,8.65v32.7H33.17V19.55H27.72V14.1h5.45V8.65h5.45m-21.8,0V14.1h5.45v5.45H16.82V41.35H11.38V8.65h5.45m10.9,10.9V25H22.27V19.55h5.45m12.9-12.9H31.17V12.1H25.72v5.45H24.27V12.1H18.82V6.65H9.38v36.7h9.45V21.55h1.45V27h9.45V21.55h1.45V43.35h9.45V6.65Z" style="fill: #242539"/>
-        </g>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="51" viewBox="0 0 50 51"><title>mxt-icon--cat2</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><rect width="50" height="51" style="fill:#ff8d4e"/><g><rect width="26.34" height="29.55" x="11.66" y="10.76" style="fill:#242539;stroke:#242539;stroke-miterlimit:10"/><g><polygon points="32.17 42.35 32.17 20.55 28.72 20.55 28.72 26 21.27 26 21.27 20.55 17.82 20.55 17.82 42.35 10.38 42.35 10.38 7.65 17.82 7.65 17.82 13.1 23.27 13.1 23.27 18.55 26.72 18.55 26.72 13.1 32.17 13.1 32.17 7.65 39.62 7.65 39.62 42.35 32.17 42.35" style="fill:#ff8d4e"/><path d="M38.62,8.65v32.7H33.17V19.55H27.72V14.1h5.45V8.65h5.45m-21.8,0V14.1h5.45v5.45H16.82V41.35H11.38V8.65h5.45m10.9,10.9V25H22.27V19.55h5.45m12.9-12.9H31.17V12.1H25.72v5.45H24.27V12.1H18.82V6.65H9.38v36.7h9.45V21.55h1.45V27h9.45V21.55h1.45V43.35h9.45V6.65Z" style="fill:#242539"/></g></g></g></g></svg>

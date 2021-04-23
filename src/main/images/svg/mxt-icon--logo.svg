@@ -1,18 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="189.4" height="46.15" viewBox="0 0 189.4 46.15">
-  <title>mxt-icon--logo</title>
-  <g id="Layer_2" data-name="Layer 2">
-    <g id="Layer_1-2" data-name="Layer 1">
-      <g>
-        <polygon points="104.14 29.77 108.19 24.05 108.18 24.04 104.14 29.77" style="fill: none"/>
-        <line x1="100.67" y1="34.7" x2="100.66" y2="34.72" style="fill: none;stroke: #aecbd6;stroke-linecap: round;stroke-linejoin: round;stroke-width: 0px"/>
-        <polygon points="123.79 46.08 109.69 46.08 102.55 35.48 109.58 24.98 123.79 46.08" style="fill: #ff8d4e"/>
-        <polygon points="124.52 0.11 110.43 0.11 103.45 9.58 110.53 19.26 124.52 0.11" style="fill: #b4b4b5"/>
-        <polygon points="108.42 22.18 92.27 0.18 78.17 0.18 94.27 22.18 78.12 46.15 92.21 46.15 108.42 22.18" style="fill: #fff"/>
-        <path d="M24.28,17.09,43,0H48.5V46.1H36.33V22.44l-12,11L12.17,22.5V46.1H0V0H5.47Z" style="fill: #fff"/>
-        <path d="M57.39,0H69.5V46.1H57.39Z" style="fill: #fff"/>
-        <path d="M133.53,0h12.11V46.1H133.53Z" style="fill: #ff8d4e"/>
-        <path d="M153.12,0H189.4V12H177.19V46.1H165.09V12h-12Z" style="fill: #ff8d4e"/>
-      </g>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="189.4" height="46.15" viewBox="0 0 189.4 46.15"><title>mxt-icon--logo</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><g><polygon points="104.14 29.77 108.19 24.05 108.18 24.04 104.14 29.77" style="fill:none"/><line x1="100.67" x2="100.66" y1="34.7" y2="34.72" style="fill:none;stroke:#aecbd6;stroke-linecap:round;stroke-linejoin:round;stroke-width:0"/><polygon points="123.79 46.08 109.69 46.08 102.55 35.48 109.58 24.98 123.79 46.08" style="fill:#ff8d4e"/><polygon points="124.52 .11 110.43 .11 103.45 9.58 110.53 19.26 124.52 .11" style="fill:#b4b4b5"/><polygon points="108.42 22.18 92.27 .18 78.17 .18 94.27 22.18 78.12 46.15 92.21 46.15 108.42 22.18" style="fill:#fff"/><path d="M24.28,17.09,43,0H48.5V46.1H36.33V22.44l-12,11L12.17,22.5V46.1H0V0H5.47Z" style="fill:#fff"/><path d="M57.39,0H69.5V46.1H57.39Z" style="fill:#fff"/><path d="M133.53,0h12.11V46.1H133.53Z" style="fill:#ff8d4e"/><path d="M153.12,0H189.4V12H177.19V46.1H165.09V12h-12Z" style="fill:#ff8d4e"/></g></g></g></svg>
