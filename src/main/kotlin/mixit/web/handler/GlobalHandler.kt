@@ -45,6 +45,9 @@ class GlobalHandler(val userRepository: UserRepository,
 
     fun speakerView(req: ServerRequest) = ok().render("speaker", mapOf(Pair("title", "speaker.title")))
 
+    fun workAdventureView(req: ServerRequest) = ok().render("work-adventure", mapOf(Pair("title", "work-adventure.title")))
+
+
     fun accessibilityView(req: ServerRequest) = ok().render("accessibility", mapOf(Pair("title", "accessibility.title")))
 
     fun findFullTextView(req: ServerRequest) = ok().render("search", mapOf(Pair("title", "search.title")))
