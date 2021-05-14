@@ -1180,6 +1180,11 @@
                 "level": "SILVER",
                 "sponsorId": "esker",
                 "subscriptionDate": "2021-04-01"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "conserto",
+                "subscriptionDate": "2021-04-23"
             }
         ],
         "start": "2021-05-18",

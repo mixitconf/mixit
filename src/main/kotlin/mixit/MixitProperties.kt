@@ -6,6 +6,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties
 class MixitProperties {
     lateinit var baseUri: String
     lateinit var contact: String
+    lateinit var vimeoTchatUri: String
+    lateinit var vimeoFluxUri: String
+
     val drive = Drive()
     val aes = Aes()
     val googleapi = GoogleApi()
