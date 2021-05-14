@@ -24,19 +24,22 @@ import java.util.*
 
 
 @Configuration
-class WebsiteRoutes(private val adminHandler: AdminHandler,
-                    private val authenticationHandler: AuthenticationHandler,
-                    private val blogHandler: BlogHandler,
-                    private val globalHandler: GlobalHandler,
-                    private val newsHandler: NewsHandler,
-                    private val talkHandler: TalkHandler,
-                    private val sponsorHandler: SponsorHandler,
-                    private val ticketingHandler: TicketingHandler,
-                    private val userHandler: UserHandler,
-                    private val messageSource: MessageSource,
-                    private val properties: MixitProperties,
-                    private val objectMapper: ObjectMapper,
-                    private val markdownConverter: MarkdownConverter) {
+class WebsiteRoutes(
+    private val adminHandler: AdminHandler,
+    private val authenticationHandler: AuthenticationHandler,
+    private val blogHandler: BlogHandler,
+    private val globalHandler: GlobalHandler,
+    private val newsHandler: NewsHandler,
+    private val talkHandler: TalkHandler,
+    private val sponsorHandler: SponsorHandler,
+    private val ticketingHandler: TicketingHandler,
+    private val userHandler: UserHandler,
+    private val messageSource: MessageSource,
+    private val properties: MixitProperties,
+    private val objectMapper: ObjectMapper,
+    private val markdownConverter: MarkdownConverter,
+    private val workAdventureHandler: WorkAdventureHandler
+) {
 
     private val logger = LoggerFactory.getLogger(WebsiteRoutes::class.java)
 
@@ -63,6 +66,9 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
             GET("/speaker", globalHandler::speakerView)
             GET("/accessibility", globalHandler::accessibilityView)
             GET("/progr-espace-virtuel-2021", globalHandler::workAdventureView)
+            GET("/work-adventure-world", workAdventureHandler::openWorkAdventureView)
+            POST("/work-adventure-login", workAdventureHandler::connect)
+            GET("/vimeo-2021", workAdventureHandler::openVimeoView)
 
             // Authentication
             GET("/login", authenticationHandler::loginView)

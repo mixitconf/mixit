@@ -9,13 +9,13 @@
         "language": "FRENCH",
         "photoUrls": [],
         "room": "UNKNOWN",
-        "slug": "tbd",
+        "slug": "covprehension-simulation-multi-agent-pour-expliquer-la-crise-sanitaire",
         "speakerIds": [
             "carole.adam"
         ],
         "start": "2021-05-18T17:00:00",
-        "summary": "Nous sommes nombreux \u00e0 travers le monde \u00e0 nous interroger sur la pand\u00e9mie de COVID-19 et sur les mesures individuelles et collectives mises en oeuvre afin de limiter la propagation du virus. Le site web interactif CovPrehension a \u00e9t\u00e9 cr\u00e9\u00e9 par une \u00e9quipe de chercheurs de diff\u00e9rentes disciplines, tous sp\u00e9cialistes de la mod\u00e9lisation des syst\u00e8mes complexes et d\u00e9sireux de mobiliser leurs comp\u00e9tences pour r\u00e9pondre \u00e0 ces interrogations l\u00e9gitimes. Notre projet est de r\u00e9pondre, par la mod\u00e9lisation et la simulation, \u00e0 des questions sur l\u2019\u00e9pid\u00e9mie de COVID-19.\r\n\r\nDans ce s\u00e9minaire je pr\u00e9senterai l'approche de simulation multi-agent et ses avantages pour la gestion de diverses crises. J'insisterai sur les diff\u00e9rentes utilisations possibles de la simulation lors de telles crises, depuis la pr\u00e9diction de leur \u00e9volution, au test de strat\u00e9gies de r\u00e9ponses, en passant par l'entra\u00eenement des \u00e9quipes de secours. Un autre but est la p\u00e9dagogie, un simulateur interactif permettant d'explorer des sc\u00e9narios pour comprendre les m\u00e9canismes sous-jacents. Je me focaliserai ainsi plus particuli\u00e8rement sur quelques questions pos\u00e9es par l'\u00e9pid\u00e9mie de COVID-19 et la r\u00e9ponse que l'\u00e9quipe de CovPrehension a pu y apporter gr\u00e2ce \u00e0 des simulateurs interactifs.\r\n",
-        "title": "TBD",
+        "summary": "Nous sommes nombreux \u00e0 travers le monde \u00e0 nous interroger sur la pand\u00e9mie de COVID-19 et sur les mesures individuelles et collectives mises en \u0153uvre afin de limiter la propagation du virus. Le site web interactif CovPrehension a \u00e9t\u00e9 cr\u00e9\u00e9 par une \u00e9quipe de chercheurs de diff\u00e9rentes disciplines, tous les sp\u00e9cialistes de la mod\u00e9lisation des syst\u00e8mes complexes et d\u00e9sireux de mobiliser leurs comp\u00e9tences pour r\u00e9pondre \u00e0 ces interrogations l\u00e9gitimes. Notre projet est de r\u00e9pondre, par la mod\u00e9lisation et la simulation, \u00e0 des questions sur l\u2019\u00e9pid\u00e9mie de COVID-19.\r\n\r\nDans ce s\u00e9minaire je pr\u00e9senterai l'approche de simulation multi-agent et ses avantages pour la gestion de diverses crises. J'insiste sur les diff\u00e9rentes utilisations possibles de la simulation lors de telles crises, depuis la pr\u00e9diction de leur \u00e9volution, au test de strat\u00e9gies de r\u00e9ponses, en passant par l'entra\u00eenement des \u00e9quipes de secours. Un autre but est la p\u00e9dagogie, un simulateur interactif d'explorateur de sc\u00e9narios pour comprendre les m\u00e9canismes sous-jacents. Je me focaliserai ainsi plus particuli\u00e8rement sur quelques questions pos\u00e9es par l'\u00e9pid\u00e9mie de COVID-19 et la r\u00e9ponse que l'\u00e9quipe de CovPrehension a pu y apporter gr\u00e2ce \u00e0 des simulateurs interactifs.",
+        "title": "CovPrehension : simulation multi-agent pour expliquer la crise sanitaire",
         "topic": "aliens",
         "video": null
     },
@@ -29,13 +29,13 @@
         "language": "ENGLISH",
         "photoUrls": [],
         "room": "UNKNOWN",
-        "slug": "tbd",
+        "slug": "means-and-ends",
         "speakerIds": [
             "augerment"
         ],
         "start": "2021-05-18T18:00:00",
-        "summary": "TBD",
-        "title": "TBD",
+        "summary": "This presentation is about designed objects, or more specifically \u201csuperlative objects\u201d (Barthes, 2009, p.101) - objects of design that somehow achieve an elevated status. The central thesis is that by placing such a high cultural value on the object, the systems and resources behind its realization are\r\nlargely allowed to be hidden from view, skipped over, taken for granted. This elision gives mainstream design an enormous advantage over alternative approaches, as all the available methods and means - global resources, neo-liberal labor practices, highly sophisticated manufacturing and marketing methods, intricate supply chains and the latest technological advances - can be exploited to achieve the celebrated end. How can more ethical or ecological design processes compete - when only the end product, the superlative object, is valued?",
+        "title": "Means and Ends",
         "topic": "aliens",
         "video": null
     },
@@ -54,7 +54,7 @@
             "guillaume.pitron"
         ],
         "start": "2021-05-18T19:00:00",
-        "summary": "Cette conf\u00e9rence expliquera comment les outils num\u00e9riques d\u00e9pendent fortement de ressources m\u00e9talliques, et en particulier de m\u00e9taux rares. Extraits notamment en Chine dans des conditions peu respectueuses de l'environnement, ces ressources sont \u00e9galement l'objet d'un affrontement commercial entre P\u00e9kin et les pays qui d\u00e9pendent des approvisionnements chinois. ",
+        "summary": "Cette conf\u00e9rence expliquera comment les outils num\u00e9riques d\u00e9pendent fortement de ressources m\u00e9talliques, et en particulier de m\u00e9taux rares. Extraits notamment en Chine dans des conditions peu respectueuses de l'environnement, ces ressources sont \u00e9galement l'objet d'un affrontement commercial entre P\u00e9kin et les pays qui d\u00e9pendent des approvisionnements chinois.",
         "title": "M\u00e9taux rares: l'envers des technologies num\u00e9riques",
         "topic": "aliens",
         "video": null
@@ -120,6 +120,26 @@
         "video": null
     },
     {
+        "addedAt": "2021-04-22T19:30:01.031",
+        "description": null,
+        "end": "2021-05-20T18:00:00",
+        "event": "2021",
+        "format": "TALK",
+        "id": "6081d0efec2a891c90215aaa",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "UNKNOWN",
+        "slug": "comment-l-afrique-questionne-t-elle-notre-innovation-en-2021-",
+        "speakerIds": [
+            "sinatou-saka"
+        ],
+        "start": "2021-05-20T17:00:00",
+        "summary": "C'est la question principale d'un [d\u00e9bat en 2018](https://www.franceculture.fr/conferences/mouton-numerique/comment-lafrique-questionne-t-elle-notre-innovation) que je souhaite vous repr\u00e9senter, avec le regard d'une ann\u00e9e post-covid. Que pouvons-nous apprendre de ce continent? Comment d\u00e9coloniser nos imaginaires, nos m\u00e9dias et ouvrir les yeux sur des alternatives qui ne sont pas parfaites mais qui exp\u00e9rimentent.\r\n",
+        "title": "Comment l\u2019Afrique questionne-t-elle \"notre\" innovation en 2021 ? ",
+        "topic": "aliens",
+        "video": null
+    },
+    {
         "addedAt": "2021-04-05T08:41:36.431",
         "description": null,
         "end": "2021-05-20T19:00:00",
@@ -129,13 +149,13 @@
         "language": "FRENCH",
         "photoUrls": [],
         "room": "UNKNOWN",
-        "slug": "tbd",
+        "slug": "avec-e-os-nos-smartphones-peuvent-devenir-plus-ethiques-",
         "speakerIds": [
             "gaelduval"
         ],
         "start": "2021-05-20T18:00:00",
-        "summary": "TBD",
-        "title": "TBD",
+        "summary": "Avec l'essor du smartphone depuis 13 ans, nous avons vu un duopole capter l'ensemble du march\u00e9 mondial des syst\u00e8mes d'exploitation des smartphones : Apple avec iOS et Google avec Android.\r\n\r\nAvec nos vies qui s'articulent souvent maintenant autour du smartphone, il est devenu tr\u00e8s probl\u00e9matique de ne pas avoir plus de choix en terme de syst\u00e8me d'exploitation. Surtout lorsque les deux leaders du march\u00e9 r\u00e9coltent massivement des donn\u00e9es personnelles pour alimenter des mod\u00e8les \u00e9conomiques bas\u00e9s sur la publicit\u00e9.\r\n\r\nEn cr\u00e9ant /e/OS, nous offrons une nouvelle voie, \u00e0 la fois enti\u00e8rement \"d\u00e9Googlis\u00e9e\" et compatible avec n'importe quelle application mobile, et respectueuse des donn\u00e9es personnelles des utilisateurs.\r\n\r\nDes dizaines de milliers de personnes ont d\u00e9j\u00e0 adopt\u00e9 notre OS en Europe et dans le monde, notamment gr\u00e2ce \u00e0 des partenariats conclus avec des fabricants de smartphones comme Fairphone.",
+        "title": "Avec /e/OS nos smartphones peuvent devenir plus \u00e9thiques !",
         "topic": "aliens",
         "video": null
     },

@@ -14,7 +14,8 @@ class DatabaseConfig{
                             talkRepository: TalkRepository,
                             ticketRepository: TicketRepository,
                             postRepository: PostRepository,
-                            favoriteRepository: FavoriteRepository) = CommandLineRunner {
+                            favoriteRepository: FavoriteRepository,
+                            workedAdventureRepository: WorkedAdventureRepository) = CommandLineRunner {
 
         userRepository.initData()
         eventRepository.initData()
@@ -22,6 +23,7 @@ class DatabaseConfig{
         postRepository.initData()
         ticketRepository.initData()
         favoriteRepository.initData()
+        workedAdventureRepository.initData()
     }
 
 }
