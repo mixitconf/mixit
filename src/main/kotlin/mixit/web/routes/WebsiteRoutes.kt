@@ -65,6 +65,7 @@ class WebsiteRoutes(
             GET("/search") { globalHandler.findFullTextView(it) }
             GET("/speaker", globalHandler::speakerView)
             GET("/accessibility", globalHandler::accessibilityView)
+            GET("/codeofconduct", globalHandler::codeConductView)
 
             // Temporary URLs for 2021
             GET("/2021/help", globalHandler::workAdventureView)
