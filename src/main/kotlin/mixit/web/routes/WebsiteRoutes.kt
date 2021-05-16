@@ -65,10 +65,13 @@ class WebsiteRoutes(
             GET("/search") { globalHandler.findFullTextView(it) }
             GET("/speaker", globalHandler::speakerView)
             GET("/accessibility", globalHandler::accessibilityView)
-            GET("/progr-espace-virtuel-2021", globalHandler::workAdventureView)
-            GET("/work-adventure-world", workAdventureHandler::openWorkAdventureView)
-            POST("/work-adventure-login", workAdventureHandler::connect)
-            GET("/vimeo-2021", workAdventureHandler::openVimeoView)
+
+            // Temporary URLs for 2021
+            GET("/2021/help", globalHandler::workAdventureView)
+            GET("/2021/work-adventure", workAdventureHandler::openWorkAdventureView)
+            POST("/2021/login", workAdventureHandler::connect)
+            GET("/2021/logout", workAdventureHandler::logout)
+            GET("/2021/live", workAdventureHandler::openVimeoView)
 
             // Authentication
             GET("/login", authenticationHandler::loginView)

@@ -1,11 +1,12 @@
 {{> header}}
 <div style="background-color: #2c233d">
+    <div style="float: right;color: white;padding-right: 1em"><a href="/2021/logout">Logout</a></div>
     <div style="color: white;text-align: center">
-        <input type="button"  class="button hollow" disabled value="Work Adventure"></input>
-        <a  class="button expand"
-            href="/vimeo-2021" >Live streaming</a>
+        <input type="button" class="button hollow" disabled value="Work Adventure"></input>
+        <a class="button expand" target="live"
+           href="/2021/live">Live streaming</a>
     </div>
-<iframe src="https://play.workadventu.re/_/global/mixitconf.github.io/workadventure/map.json?token={{token}}"
-        style="width: 100vw; height: 90vh"></iframe>
+    <iframe src="https://play.workadventu.re/_/global/mixitconf.github.io/workadventure/map.json?token={{token}}"
+    style="width: 100vw; height: 90vh"></iframe>
 </div>
 {{> footer-light}}

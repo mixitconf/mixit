@@ -42,12 +42,19 @@ class WorkAdventureHandler(private val workedAdventureRepository: WorkedAdventur
                 .flatMap { workAdventure ->
                     req.session().flatMap { session ->
                         session.attributes["work-adventure-token"] = workAdventure.token
-                        return@flatMap displayWorkedAdventurePage(workAdventure.token)
+                        return@flatMap openVimeoView(req)
                     }
 
                 }
                 .switchIfEmpty(displayWorkedAdventureLoginView("work-adventure.error.ticket-invalid", ticketNumber))
         }
+
+    fun logout(req: ServerRequest): Mono<ServerResponse> = req.session().flatMap { session ->
+        session.attributes.apply {
+            remove("work-adventure-token")
+        }
+        return@flatMap displayWorkedAdventureLoginView()
+    }
 
     fun openWorkAdventureView(req: ServerRequest): Mono<ServerResponse> =
         req.session().flatMap { session ->
