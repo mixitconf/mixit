@@ -2,7 +2,6 @@ package mixit.repository
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import mixit.model.User
 import mixit.model.WorkAdventure
 import mixit.util.Cryptographer
 import org.slf4j.LoggerFactory
@@ -25,11 +24,15 @@ class WorkedAdventureRepository(
         deleteAll().block()
         val workedAdventureResource = ClassPathResource("data/worked-adventure.json")
         val data: List<WorkAdventure> = objectMapper.readValue(workedAdventureResource.inputStream)
-        data.forEach { save(it.copy(
-            ticket = cryptographer.decrypt(it.ticket)!!,
-            token = cryptographer.decrypt(it.token)!!,
-            username = cryptographer.decrypt(it.username)!!
-        )).block() }
+        data.forEach {
+            save(
+                it.copy(
+                    ticket = cryptographer.decrypt(it.ticket)!!,
+                    token = cryptographer.decrypt(it.token)!!,
+                    username = cryptographer.decrypt(it.username) ?: ""
+                )
+            ).block()
+        }
         logger.info("WorkedAdventure Ticket data initialization complete")
     }
 
