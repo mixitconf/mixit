@@ -43,10 +43,11 @@ class GlobalHandler(val userRepository: UserRepository,
 
     fun scheduleView(req: ServerRequest) = ok().render("schedule", mapOf(Pair("title", "schedule.title")))
 
+    fun codeConductView(req: ServerRequest) = ok().render("code-of-conduct", mapOf(Pair("title", "code-of-conduct.title")))
+
     fun speakerView(req: ServerRequest) = ok().render("speaker", mapOf(Pair("title", "speaker.title")))
 
     fun workAdventureView(req: ServerRequest) = ok().render("work-adventure", mapOf(Pair("title", "work-adventure.title")))
-
 
     fun accessibilityView(req: ServerRequest) = ok().render("accessibility", mapOf(Pair("title", "accessibility.title")))
 

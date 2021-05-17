@@ -24,19 +24,22 @@ import java.util.*
 
 
 @Configuration
-class WebsiteRoutes(private val adminHandler: AdminHandler,
-                    private val authenticationHandler: AuthenticationHandler,
-                    private val blogHandler: BlogHandler,
-                    private val globalHandler: GlobalHandler,
-                    private val newsHandler: NewsHandler,
-                    private val talkHandler: TalkHandler,
-                    private val sponsorHandler: SponsorHandler,
-                    private val ticketingHandler: TicketingHandler,
-                    private val userHandler: UserHandler,
-                    private val messageSource: MessageSource,
-                    private val properties: MixitProperties,
-                    private val objectMapper: ObjectMapper,
-                    private val markdownConverter: MarkdownConverter) {
+class WebsiteRoutes(
+    private val adminHandler: AdminHandler,
+    private val authenticationHandler: AuthenticationHandler,
+    private val blogHandler: BlogHandler,
+    private val globalHandler: GlobalHandler,
+    private val newsHandler: NewsHandler,
+    private val talkHandler: TalkHandler,
+    private val sponsorHandler: SponsorHandler,
+    private val ticketingHandler: TicketingHandler,
+    private val userHandler: UserHandler,
+    private val messageSource: MessageSource,
+    private val properties: MixitProperties,
+    private val objectMapper: ObjectMapper,
+    private val markdownConverter: MarkdownConverter,
+    private val workAdventureHandler: WorkAdventureHandler
+) {
 
     private val logger = LoggerFactory.getLogger(WebsiteRoutes::class.java)
 
@@ -62,7 +65,14 @@ class WebsiteRoutes(private val adminHandler: AdminHandler,
             GET("/search") { globalHandler.findFullTextView(it) }
             GET("/speaker", globalHandler::speakerView)
             GET("/accessibility", globalHandler::accessibilityView)
-            GET("/work-adventure", globalHandler::workAdventureView)
+            GET("/codeofconduct", globalHandler::codeConductView)
+
+            // Temporary URLs for 2021
+            GET("/2021/help", globalHandler::workAdventureView)
+            GET("/2021/work-adventure", workAdventureHandler::openWorkAdventureView)
+            POST("/2021/login", workAdventureHandler::connect)
+            GET("/2021/logout", workAdventureHandler::logout)
+            GET("/2021/live", workAdventureHandler::openVimeoView)
 
             // Authentication
             GET("/login", authenticationHandler::loginView)

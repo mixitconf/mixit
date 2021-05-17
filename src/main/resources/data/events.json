@@ -1180,6 +1180,16 @@
                 "level": "SILVER",
                 "sponsorId": "esker",
                 "subscriptionDate": "2021-04-01"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "conserto",
+                "subscriptionDate": "2021-04-23"
+            },
+            {
+                "level": "ACCESSIBILITY",
+                "sponsorId": "maxime.rinna",
+                "subscriptionDate": "2021-05-17"
             }
         ],
         "start": "2021-05-18",
