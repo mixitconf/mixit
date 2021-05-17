@@ -26,11 +26,12 @@ class WorkedAdventureRepository(
         val data: List<WorkAdventure> = objectMapper.readValue(workedAdventureResource.inputStream)
         data.forEach {
             save(
-                it.copy(
-                    ticket = cryptographer.decrypt(it.ticket)!!,
-                    token = cryptographer.decrypt(it.token)!!,
-                    username = cryptographer.decrypt(it.username) ?: ""
-                )
+                it
+//                it.copy(
+//                    ticket = cryptographer.decrypt(it.ticket)!!,
+//                    token = cryptographer.decrypt(it.token)!!,
+//                    username = cryptographer.decrypt(it.username) ?: ""
+//                )
             ).block()
         }
         logger.info("WorkedAdventure Ticket data initialization complete")
