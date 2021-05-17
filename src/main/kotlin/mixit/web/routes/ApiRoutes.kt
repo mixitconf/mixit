@@ -37,8 +37,8 @@ class ApiRoutes(private val blogHandler: BlogHandler,
                 GET("/{year}/talk", talkHandler::findAdminByEventId)
             }
 
-            GET("/wa", workAdventureHandler::findAll)
-            GET("/wac", workAdventureHandler::findAllCrypted)
+//            GET("/wa", workAdventureHandler::findAll)
+//            GET("/wac", workAdventureHandler::findAllCrypted)
 
             // Edition data
             GET("/{year}/talk", talkHandler::findByEventId)
