@@ -14,7 +14,8 @@ class ApiRoutes(private val blogHandler: BlogHandler,
                 private val favoriteHandler: FavoriteHandler,
                 private val ticketingHandler: TicketingHandler,
                 private val externalHandler: ExternalHandler,
-                private val userHandler: UserHandler) {
+                private val userHandler: UserHandler,
+                private val workAdventureHandler: WorkAdventureHandler) {
 
     @Bean
     fun apiRouter() = router {
@@ -35,6 +36,9 @@ class ApiRoutes(private val blogHandler: BlogHandler,
                 GET("/favorite", favoriteHandler::findAll)
                 GET("/{year}/talk", talkHandler::findAdminByEventId)
             }
+
+//            GET("/wa", workAdventureHandler::findAll)
+//            GET("/wac", workAdventureHandler::findAllCrypted)
 
             // Edition data
             GET("/{year}/talk", talkHandler::findByEventId)

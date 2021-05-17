@@ -2,17 +2,29 @@ package mixit.web.handler
 
 import mixit.MixitProperties
 import mixit.repository.WorkedAdventureRepository
+import mixit.util.Cryptographer
+import mixit.util.json
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.BodyExtractors.toFormData
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
+import org.springframework.web.reactive.function.server.body
 import reactor.core.publisher.Mono
 
 
 @Component
-class WorkAdventureHandler(private val workedAdventureRepository: WorkedAdventureRepository,
-                           private val mixitProperties: MixitProperties) {
+class WorkAdventureHandler(private val repository: WorkedAdventureRepository,
+                           private val mixitProperties: MixitProperties,
+                           private val cryptographer: Cryptographer) {
+
+    fun findAll(req: ServerRequest) = ok().json().body(repository.findAll())
+
+    fun findAllCrypted(req: ServerRequest) = ok().json().body(repository.findAll().map { it.copy(
+        ticket = cryptographer.encrypt(it.ticket)!!,
+        token = cryptographer.encrypt(it.token)!!,
+        username = cryptographer.encrypt(it.username)!!
+    ) })
 
     private fun displayWorkedAdventureLoginView(error: String? = null, ticket: String? = null) = ok().render(
         "work-adventure-login", mapOf(
@@ -37,7 +49,7 @@ class WorkAdventureHandler(private val workedAdventureRepository: WorkedAdventur
             val ticketNumber = it.toSingleValueMap()["ticket"]
                 ?: return@flatMap displayWorkedAdventureLoginView("work-adventure.error.ticket-required")
 
-            workedAdventureRepository
+            repository
                 .findOne(ticketNumber)
                 .flatMap { workAdventure ->
                     req.session().flatMap { session ->

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.model.User
 import mixit.model.WorkAdventure
+import mixit.util.Cryptographer
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.mongodb.core.*
@@ -14,7 +15,8 @@ import org.springframework.stereotype.Repository
 @Repository
 class WorkedAdventureRepository(
     private val template: ReactiveMongoTemplate,
-    private val objectMapper: ObjectMapper
+    private val objectMapper: ObjectMapper,
+    private val cryptographer: Cryptographer
 ) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
@@ -23,7 +25,11 @@ class WorkedAdventureRepository(
         deleteAll().block()
         val workedAdventureResource = ClassPathResource("data/worked-adventure.json")
         val data: List<WorkAdventure> = objectMapper.readValue(workedAdventureResource.inputStream)
-        data.forEach { save(it).block() }
+        data.forEach { save(it.copy(
+            ticket = cryptographer.decrypt(it.ticket)!!,
+            token = cryptographer.decrypt(it.token)!!,
+            username = cryptographer.decrypt(it.username)!!
+        )).block() }
         logger.info("WorkedAdventure Ticket data initialization complete")
     }
 

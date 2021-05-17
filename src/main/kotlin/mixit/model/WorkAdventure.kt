@@ -8,5 +8,5 @@ import org.springframework.data.mongodb.core.mapping.Document
 data class WorkAdventure(
         @Id val ticket: String,
         val token: String,
-        val userName: String ?= null
+        val username: String ?= null
 )
