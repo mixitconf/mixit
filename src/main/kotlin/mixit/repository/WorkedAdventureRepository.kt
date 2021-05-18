@@ -24,16 +24,20 @@ class WorkedAdventureRepository(
         deleteAll().block()
         val workedAdventureResource = ClassPathResource("data/worked-adventure.json")
         val data: List<WorkAdventure> = objectMapper.readValue(workedAdventureResource.inputStream)
-        if (cryptographer.decrypt(data[0].ticket) != null) {
-            data.forEach {
-                save(
-                    it.copy(
-                        ticket = cryptographer.decrypt(it.ticket)!!,
-                        token = cryptographer.decrypt(it.token)!!,
-                        username = cryptographer.decrypt(it.username) ?: ""
-                    )
-                ).block()
+        try {
+            if (cryptographer.decrypt(data[0].ticket) != null) {
+                data.forEach {
+                    save(
+                        it.copy(
+                            ticket = cryptographer.decrypt(it.ticket)!!,
+                            token = cryptographer.decrypt(it.token)!!,
+                            username = cryptographer.decrypt(it.username) ?: ""
+                        )
+                    ).block()
+                }
             }
+        } catch (e: Exception) {
+            logger.info("Error on workadenture data loading")
         }
         logger.info("WorkedAdventure Ticket data initialization complete")
     }
