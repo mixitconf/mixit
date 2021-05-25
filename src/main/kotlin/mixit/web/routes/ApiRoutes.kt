@@ -14,8 +14,7 @@ class ApiRoutes(private val blogHandler: BlogHandler,
                 private val favoriteHandler: FavoriteHandler,
                 private val ticketingHandler: TicketingHandler,
                 private val externalHandler: ExternalHandler,
-                private val userHandler: UserHandler,
-                private val workAdventureHandler: WorkAdventureHandler) {
+                private val userHandler: UserHandler) {
 
     @Bean
     fun apiRouter() = router {
