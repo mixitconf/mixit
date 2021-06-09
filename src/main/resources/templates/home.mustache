@@ -5,7 +5,8 @@
         <div class="columns small-12 hide-for-small-only">
             <div class="text-right"><img src="/images/svg/mxt-icon--edition.svg" class="mxt-icon--edition"></div>
             <h1 class="hide">{{#i18n}}home.wrapper.title{{/i18n}}</h1>
-            <span class="mxt-text--bigger">{{#i18n}}home.wrapper.text{{/i18n}}<img src="/images/svg/mxt-icon--heart.svg" class="mxt-icon--heart"></span>
+            <span class="mxt-text--bigger">{{#i18n}}home.wrapper.text{{/i18n}}<img src="/images/svg/mxt-icon--heart.svg"
+                                                                                   class="mxt-icon--heart"></span>
             <br>
             <h2 style="padding-bottom: 2em">
                 <small>{{#i18n}}home.wrapper.dates{{/i18n}}</small>
@@ -13,7 +14,8 @@
         </div>
         <div class="columns small-12 show-for-small-only">
             <h1 class="mxt-text--mobile-bigger">
-            <span>{{#i18n}}home.wrapper.text{{/i18n}}<img src="/images/svg/mxt-icon--heart.svg" class="mxt-icon--heart"></span>
+                <span>{{#i18n}}home.wrapper.text{{/i18n}}<img src="/images/svg/mxt-icon--heart.svg"
+                                                              class="mxt-icon--heart"></span>
             </h1>
             <br>
             <h2 style="padding-bottom: 4em">
@@ -43,7 +45,19 @@
 <div class="row align-spaced">
     <div class="column column-block text-center">
         <h2 class="align-center">{{#i18n}}home.live.title{{/i18n}}</h2>
-        <p>{{#i18n}}home.live.description{{/i18n}}</p>
+        <p>{{#i18n}}home.live.description{{/i18n}}. {{#i18n}}home.quizz.intro{{/i18n}}</p>
+            <div style="display: flex">
+                <div style="flex: 1 0 0" class="hide-for-small-only">&nbsp;</div>
+                <div style="flex: 3 0 0">
+                    <div class="mxt-wrapper--intrinsic">
+                        <iframe src="https://player.vimeo.com/video/560334460" class="mxt-wrapper--video-player vimeo"
+                                allowfullscreen></iframe>
+                    </div>
+
+                </div>
+                <div style="flex: 1 0 0" class="hide-for-small-only">&nbsp;</div>
+            </div>
+        </p>
         <p>{{#i18n}}home.intro.speaker.description{{/i18n}}</p>
     </div>
 </div>
@@ -57,7 +71,8 @@
         <a href="{{localePrefix}}/user/carole.adam">
             <div class="row align-middle">
                 <div class="columns medium-push-9">
-                    <img src="/images/speakers/carole_adam.jpg" alt="Carole Adam" class="mxt-icon--cat mxt-img--speakers_home">
+                    <img src="/images/speakers/carole_adam.jpg" alt="Carole Adam"
+                         class="mxt-icon--cat mxt-img--speakers_home">
                 </div>
                 <div class="columns small-9 medium-pull-3">
                     <h3 class="subheader mxt-subheader--categories">Carole Adam<br><small>17:00-18:00</small></h3>
@@ -69,7 +84,7 @@
     <div class="medium-5 columns hide-for-small-only">
         <p>{{#i18n}}home.speaker.adam{{/i18n}}<br>
             <strong><a href="/2021/covprehension-simulation-multi-agent-pour-expliquer-la-crise-sanitaire"
-                style="color: #2c233d">
+                       style="color: #2c233d">
                 &#x25ba; CovPrehension : simulation multi-agent pour expliquer la crise sanitaire</a></strong>
     </div>
 </div>
@@ -78,7 +93,8 @@
         <a href="{{localePrefix}}/user/augerment">
             <div class="row align-middle">
                 <div class="columns medium-push-9">
-                    <img src="/images/speakers/james_auger.jpg" alt="James Auger" class="mxt-icon--cat mxt-img--speakers_home">
+                    <img src="/images/speakers/james_auger.jpg" alt="James Auger"
+                         class="mxt-icon--cat mxt-img--speakers_home">
                 </div>
                 <div class="columns small-9 medium-pull-3">
                     <h3 class="subheader mxt-subheader--categories">James Auger<br><small>18:00-19:00</small></h3>
@@ -98,7 +114,8 @@
         <a href="{{localePrefix}}/user/guillaume.pitron">
             <div class="row align-middle">
                 <div class="columns medium-push-9">
-                    <img src="/images/speakers/guillaume-pitron.jpg" alt="Guillaume Pitron" class="mxt-icon--cat mxt-img--speakers_home">
+                    <img src="/images/speakers/guillaume-pitron.jpg" alt="Guillaume Pitron"
+                         class="mxt-icon--cat mxt-img--speakers_home">
                 </div>
                 <div class="columns small-9 medium-pull-3">
                     <h3 class="subheader mxt-subheader--categories">Guillaume Pitron<br><small>19:00-20:00</small></h3>
@@ -110,7 +127,7 @@
     <div class="medium-5 columns hide-for-small-only">{{#i18n}}home.speaker.pitron{{/i18n}}<br>
         <strong><a href="/2021/metaux-rares-l-envers-des-technologies-numeriques"
                    style="color: #2c233d">
-            &#x25ba; Métaux rares: l'envers des technologies numériques  </a></strong></div>
+            &#x25ba; Métaux rares: l'envers des technologies numériques </a></strong></div>
 </div>
 
 <div class="row">
@@ -123,7 +140,8 @@
         <a href="{{localePrefix}}/user/antonio.casilli">
             <div class="row align-middle">
                 <div class="columns medium-push-9">
-                    <img src="/images/speakers/antonio-casilli.jpg" alt="Antonio Casilli" class="mxt-icon--cat mxt-img--speakers_home">
+                    <img src="/images/speakers/antonio-casilli.jpg" alt="Antonio Casilli"
+                         class="mxt-icon--cat mxt-img--speakers_home">
                 </div>
                 <div class="columns small-9 medium-pull-3">
                     <h3 class="subheader mxt-subheader--categories">Antonio Casilli<br><small>17:00-18:00</small></h3>
@@ -142,7 +160,8 @@
         <a href="{{localePrefix}}/user/isabelle.collet">
             <div class="row align-middle">
                 <div class="columns medium-push-9">
-                    <img src="/images/speakers/isabelle-collet.jpg" alt="Isabelle Collet" class="mxt-icon--cat mxt-img--speakers_home">
+                    <img src="/images/speakers/isabelle-collet.jpg" alt="Isabelle Collet"
+                         class="mxt-icon--cat mxt-img--speakers_home">
                 </div>
                 <div class="columns small-9 medium-pull-3">
                     <h3 class="subheader mxt-subheader--categories">Isabelle Collet<br><small>18:00-19:00</small></h3>
@@ -162,7 +181,8 @@
         <a href="{{localePrefix}}/user/arviteikari">
             <div class="row align-middle">
                 <div class="columns medium-push-9">
-                    <img src="/images/speakers/arvi-teikari.jpg" alt="Arvi Teikari" class="mxt-icon--cat mxt-img--speakers_home">
+                    <img src="/images/speakers/arvi-teikari.jpg" alt="Arvi Teikari"
+                         class="mxt-icon--cat mxt-img--speakers_home">
                 </div>
                 <div class="columns small-9 medium-pull-3">
                     <h3 class="subheader mxt-subheader--categories">Arvi Teikari<br><small>19:00-20:00</small></h3>
@@ -187,7 +207,8 @@
         <a href="{{localePrefix}}/user/sinatou-saka">
             <div class="row align-middle">
                 <div class="columns medium-push-9">
-                    <img src="/images/speakers/sinatou-saka.jpg" alt="Sinatou Saka" class="mxt-icon--cat mxt-img--speakers_home">
+                    <img src="/images/speakers/sinatou-saka.jpg" alt="Sinatou Saka"
+                         class="mxt-icon--cat mxt-img--speakers_home">
                 </div>
                 <div class="columns small-9 medium-pull-3">
                     <h3 class="subheader mxt-subheader--categories">Sinatou Saka<br><small>17:00-18:00</small></h3>
@@ -206,7 +227,8 @@
         <a href="{{localePrefix}}/user/gaelduval">
             <div class="row align-middle">
                 <div class="columns medium-push-9">
-                    <img src="/images/speakers/gael_duval.jpg" alt="Gaël Duval" class="mxt-icon--cat mxt-img--speakers_home">
+                    <img src="/images/speakers/gael_duval.jpg" alt="Gaël Duval"
+                         class="mxt-icon--cat mxt-img--speakers_home">
                 </div>
                 <div class="columns small-9 medium-pull-3">
                     <h3 class="subheader mxt-subheader--categories">Gaël Duval<br><small>18:00-19:00</small></h3>
@@ -237,14 +259,15 @@
     <div class="medium-5 columns hide-for-small-only">{{#i18n}}home.speaker.esther{{/i18n}}<br>
         <strong><a href="/2021/i-have-a-pwn-in-my-hand"
                    style="color: #2c233d">
-            &#x25ba; I have a pwn in my hand  </a></strong></div>
+            &#x25ba; I have a pwn in my hand </a></strong></div>
 </div>
 <div class="row align-spaced" style="justify-content: center; align-items: center">
     <div class="column mxt-icon--wrapper small-12 medium-6 large-4">
         <a href="{{localePrefix}}/user/pamelafox">
             <div class="row align-middle">
                 <div class="columns medium-push-9">
-                    <img src="/images/speakers/pamela_fox.jpg" alt="Pamela Fox" class="mxt-icon--cat mxt-img--speakers_home">
+                    <img src="/images/speakers/pamela_fox.jpg" alt="Pamela Fox"
+                         class="mxt-icon--cat mxt-img--speakers_home">
                 </div>
                 <div class="columns small-9 medium-pull-3">
                     <h3 class="subheader mxt-subheader--categories">Pamela Fox<br><small>20:00-21:00</small></h3>
@@ -256,12 +279,13 @@
     <div class="medium-5 columns hide-for-small-only">{{#i18n}}home.speaker.fox{{/i18n}}<br>
         <strong><a href="/2021/education-for-all"
                    style="color: #2c233d">
-            &#x25ba; Education for All  </a></strong></div>
+            &#x25ba; Education for All </a></strong></div>
 </div>
 <div class="row">
-    <div  class="columns medium-3 large-3 hide-for-small-only">&nbsp;</div>
-    <div  class="columns medium-6 large-6">
-        <img src="/images/svg/planning/2021_hour.svg" class="mxt-icon--cat"  style="padding: 0.5em" alt="{{#i18n}}home.topics.makers.title{{/i18n}}">
+    <div class="columns medium-3 large-3 hide-for-small-only">&nbsp;</div>
+    <div class="columns medium-6 large-6">
+        <img src="/images/svg/planning/2021_hour.svg" class="mxt-icon--cat" style="padding: 0.5em"
+             alt="{{#i18n}}home.topics.makers.title{{/i18n}}">
     </div>
 </div>
 
