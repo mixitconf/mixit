@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Profile
 import org.springframework.core.io.ClassPathResource
 
 @Configuration
-@Profile("cloud")
+@Profile("cloud", "service-mail")
 class GmailApiConfig {
 
     @Bean
