@@ -8,6 +8,8 @@ import mixit.util.locale
 import mixit.web.handler.ExternalHandler.MixiTResponses.*
 import mixit.web.service.AuthenticationService
 import mixit.web.service.EmailValidatorException
+import mixit.web.service.NotFoundException
+import mixit.web.service.TokenException
 import org.springframework.http.HttpStatus
 import org.springframework.http.HttpStatus.*
 import org.springframework.stereotype.Component
@@ -28,7 +30,8 @@ class ExternalHandler(private val authenticationService: AuthenticationService,
     private enum class MixiTResponses(val message: MixiTResponse, val status: HttpStatus) {
         CREDENTIAL_VALID(MixiTResponse(OK.value(), "Credentials are valids"), OK),
         TOKEN_SENT(MixiTResponse(OK.value(), "A token was send by email. Please check your mailbox and send it in the future request"), OK),
-        INVALID_EMAIL(MixiTResponse(INTERNAL_SERVER_ERROR.value(), "Email is invalid"), INTERNAL_SERVER_ERROR),
+        INVALID_TOKEN(MixiTResponse(BAD_REQUEST.value(), "Token is invalid"), BAD_REQUEST),
+        INVALID_EMAIL(MixiTResponse(NOT_FOUND.value(), "Account not found"), NOT_FOUND),
         INVALID_CREDENTIALS(MixiTResponse(BAD_REQUEST.value(),"Credentials are invalid"), BAD_REQUEST),
         EMAIL_NOT_KNOWN(MixiTResponse(BAD_REQUEST.value(),"This email is not known. You have to create an account on our website if you want to use this functionnality"), BAD_REQUEST),
         EMAIL_SENT_ERROR(MixiTResponse(INTERNAL_SERVER_ERROR.value(),"An expected error occured on email sent"), INTERNAL_SERVER_ERROR);
@@ -47,7 +50,13 @@ class ExternalHandler(private val authenticationService: AuthenticationService,
         }
         return authenticationService.checkUserEmailAndToken(email, token)
                 .flatMap { action.invoke(email, it) }
-                .onErrorResume { INVALID_CREDENTIALS.response() }
+                .onErrorResume {
+                    when(it) {
+                        is TokenException -> INVALID_TOKEN.response()
+                        is NotFoundException -> INVALID_EMAIL.response()
+                        else ->  INVALID_CREDENTIALS.response()
+                    }
+                }
     }
 
     fun sendToken(req: ServerRequest): Mono<ServerResponse> =
