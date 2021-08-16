@@ -84,17 +84,30 @@ class AuthenticationService(private val userRepository: UserRepository,
                         if (it.hasValidToken(token.trim())) {
                             return@flatMap Mono.just(it)
                         }
-                        throw TokenException("Token is invalid or is expired")
+                        return@flatMap Mono.error<User> { TokenException("Token is invalid or is expired") }
                     }
                     .switchIfEmpty(Mono.defer { throw NotFoundException() })
+
+    /**
+     * Function used on login to check if user email and token are valids
+     */
+    fun checkUserEmailAndTokenOrAppToken(nonEncryptedMail: String, token: String?, appToken: String?): Mono<User> =
+        userRepository.findByNonEncryptedEmail(nonEncryptedMail)
+            .flatMap {
+                if (it.hasValidTokens(token, appToken)) {
+                    return@flatMap Mono.just(it)
+                }
+                return@flatMap Mono.error<User> { TokenException("Token is invalid or is expired") }
+            }
+            .switchIfEmpty(Mono.defer { throw NotFoundException() })
 
     /**
      * Sends an email with a token to the user. We don't need validation of the email adress. If he receives
      * the email it's OK. If he retries a login a new token is sent. Be careful email service can throw
      * an EmailSenderException
      */
-    fun generateAndSendToken(user: User, locale: Locale): Mono<User> =
-            user.generateNewToken().let { newUser ->
+    fun generateAndSendToken(user: User, locale: Locale, generateExternalToken: Boolean = false): Mono<User> =
+            user.generateNewToken(generateExternalToken).let { newUser ->
                 try {
                     logger.info("A token ${newUser.token} was sent by email")
                     emailService.send("email-token", newUser, locale)
