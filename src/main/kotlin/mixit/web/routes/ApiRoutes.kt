@@ -1,6 +1,7 @@
 package mixit.web
 
 import mixit.web.handler.*
+import mixit.web.handler.external.ExternalHandler
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.http.MediaType.APPLICATION_JSON
