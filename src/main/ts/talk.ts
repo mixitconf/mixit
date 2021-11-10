@@ -1,7 +1,9 @@
 class TalkCtrl {
     constructor() {
         const favoriteButton = document.getElementById('favorite');
-        favoriteButton.onclick = this.favoriteToggle;
+        if (favoriteButton) {
+            favoriteButton.onclick = this.favoriteToggle;
+        }
     }
 
     favoriteToggle(event: Event) {

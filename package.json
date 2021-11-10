@@ -1,42 +1,31 @@
 {
   "name": "mixit",
-  "version": "1.0.0",
+  "version": "2022.0.0",
   "description": "Site used to manage Mixit conference (Lyon - France)",
-  "main": "index.js",
   "repository": "https://github.com/mix-it/mixit.git",
   "license": "MIT",
-  "devDependencies": {
-    "autoprefixer": "9.8.6",
-    "cssnano": "4.1.10",
-    "del": "^6.0.0",
-    "gulp": "4.0.2",
-    "gulp-babel": "^8.0.0",
-    "gulp-cli": "^2.3.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-if": "^2.0.2",
-    "gulp-load-plugins": "^2.0.6",
-    "gulp-newer": "^1.4.0",
-    "gulp-postcss": "8.0.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-typescript": "^4.0.1",
-    "gulp-uglify": "^3.0.2",
-    "gulp-util": "^3.0.8",
-    "gulp-webp": "^2.3.0",
-    "html-minifier": "^3.5.20",
-    "node-sass": "^5.0.0",
-    "typescript": "^3.1.3",
-    "webpack-stream": "^5.1.1"
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "scripts": {
+    "scss": "node-sass src/main/sass -o build/classes/css;postcss build/classes/css/app.css -u autoprefixer -u cssnano -o build/resources/main/static/css/app.css",
+    "typescript": "tsc src/main/ts/*.ts --target es6 --out build/classes/js/mixit.js;terser build/classes/js/mixit.js -o build/resources/main/static/js/mixit.js",
+    "copy-templates": "copyfiles -f 'src/main/resources/templates/*.*' 'build/resources/main/templates'",
+    "copy-messages": "copyfiles -f 'src/main/resources/messages*.properties' 'build/resources/main'",
+    "watch": "onchange 'src/main/sass/*.*' -- npm run scss & onchange 'src/main/resources/templates/*.*' -- npm run copy-templates & onchange 'src/main/resources/messages*.properties' -- npm run copy-messages"
   },
   "dependencies": {
-    "@types/node": "^10.12.0",
     "foundation-sites": "^6.4.3",
-    "jquery": "^3.4.1",
-    "motion-ui": "^2.0.3",
-    "vinyl-named": "^1.1.0",
-    "workbox-build": "3.6.2"
+    "jquery": "^3.4.1"
   },
-  "engines": {
-    "node": ">=12.0.0"
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "cssnano": "^5.0.10",
+    "copyfiles": "^2.4.1",
+    "node-sass": "^6.0.1",
+    "onchange": "^7.1.0",
+    "postcss-cli": "^9.0.2",
+    "terser": "^5.9.0",
+    "typescript": "^4.4.4"
   }
 }
