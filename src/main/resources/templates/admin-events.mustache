@@ -1,47 +1,37 @@
 {{> header}}
 
 <div class="mxt-wrapper--page-title">
-    <div class="row">
-        <div class="columns large-12">
-            <h1 class="text-center">{{#i18n}}admin.events.title{{/i18n}}</h1>
-        </div>
-    </div>
+    <h1 class="text-center">{{#i18n}}admin.events.title{{/i18n}}</h1>
 </div>
 
-<div class="mxt-wrapper--page-content">
-    <div class="row">
-        <div class="column large-12">
-            <div class="callout">
-                <p>{{#i18n}}admin.events.count{{/i18n}} : {{events.size}} | <a href="/admin/events/create">{{#i18n}}admin.events.actions.create{{/i18n}}</a></p>
-                <table>
-                  <thead>
-                    <tr>
-                        <th>{{#i18n}}admin.events.table.id{{/i18n}}</th>
-                        <th>{{#i18n}}admin.events.table.start{{/i18n}}</th>
-                        <th>{{#i18n}}admin.events.table.end{{/i18n}}</th>
-                        <th>{{#i18n}}admin.events.table.year{{/i18n}}</th>
-                        <th>{{#i18n}}admin.events.table.current{{/i18n}}</th>
-                        <th>{{#i18n}}admin.events.table.actions{{/i18n}}</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {{#events}}
-                    <tr>
-                        <td>{{id}}</td>
-                        <td>{{start}}</td>
-                        <td>{{end}}</td>
-                        <td>{{year}}</td>
-                        <td>{{current}}</td>
-                        <td>
-                            <a href="/admin/events/edit/{{id}}">{{#i18n}}admin.events.actions.update{{/i18n}}</a>
-                        </td>
-                    </tr>
-                    {{/events}}
-                  </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+<div class="container mxt-wrapper--page-content">
+    <p>{{#i18n}}admin.events.count{{/i18n}} : <b>{{events.size}}</b> | <a href="/admin/events/create">{{#i18n}}admin.events.actions.create{{/i18n}}</a></p>
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+            <th>{{#i18n}}admin.events.table.id{{/i18n}}</th>
+            <th>{{#i18n}}admin.events.table.start{{/i18n}}</th>
+            <th>{{#i18n}}admin.events.table.end{{/i18n}}</th>
+            <th>{{#i18n}}admin.events.table.year{{/i18n}}</th>
+            <th>{{#i18n}}admin.events.table.current{{/i18n}}</th>
+            <th>{{#i18n}}admin.events.table.actions{{/i18n}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#events}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{start}}</td>
+            <td>{{end}}</td>
+            <td>{{year}}</td>
+            <td>{{current}}</td>
+            <td>
+                <a href="/admin/events/edit/{{id}}">{{#i18n}}admin.events.actions.update{{/i18n}}</a>
+            </td>
+        </tr>
+        {{/events}}
+      </tbody>
+    </table>
 </div>
 
 {{> footer}}

@@ -1,94 +1,445 @@
-@charset "utf-8";
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../../../node_modules/bootstrap/scss/functions";
 
-@import "../../../node_modules/foundation-sites/scss/foundation";
-@import "../../../node_modules/motion-ui/motion-ui";
-@import "settings";
+$secondary-color: #2C233D;
+$third-color: #aecbd6;
+$primary-color: #FF8D4E;
 
-@include add-foundation-colors;
-@include foundation-global-styles;
-@include foundation-grid;
-@include foundation-flex-grid;
-@include foundation-typography;
-@include foundation-button;
-@include foundation-forms;
-// @include foundation-range-input;
-@include foundation-accordion;
-@include foundation-accordion-menu;
-@include foundation-badge;
-@include foundation-breadcrumbs;
-@include foundation-button-group;
-@include foundation-callout;
-@include foundation-card;
-@include foundation-close-button;
-@include foundation-menu;
-@include foundation-menu-icon;
-@include foundation-drilldown-menu;
-@include foundation-dropdown;
-@include foundation-dropdown-menu;
-@include foundation-responsive-embed;
-@include foundation-label;
-@include foundation-media-object;
-//@include foundation-off-canvas;
-@include foundation-orbit;
-@include foundation-pagination;
-@include foundation-progress-bar;
-// @include foundation-progress-element;
-// @include foundation-meter-element;
-@include foundation-slider;
-@include foundation-sticky;
-//@include foundation-reveal;
-@include foundation-switch;
-@include foundation-table;
-@include foundation-tabs;
-@include foundation-thumbnail;
-@include foundation-title-bar;
-@include foundation-tooltip;
-@include foundation-top-bar;
-@include foundation-visibility-classes;
-@include foundation-float-classes;
-@include foundation-flex-classes;
+// 2. Include any default variable overrides here
+$theme-colors: (
+        "primary": $primary-color,
+        "secondary": $secondary-color,
+        "success": #3adb76,
+        "info": #0dcaf0,
+        "warning": #ffae00,
+        "danger": #cc4b37,
+        "light": #f8f9fa,
+        "dark": #212529
+);
+$font-family-base: 'Lato', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
 
-@include motion-ui-transitions;
-@include motion-ui-animations;
+$accordion-border-radius: 0;
 
-@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+$btn-border-radius: 0;
 
-@import 'components/icons.scss';
-@import 'components/img.scss';
-@import 'components/menu.scss';
-@import 'components/text.scss';
-@import 'components/wrappers.scss';
+$nav-link-height: 1em;
+$nav-link-color: #fefefe;
+
+$navbar-light-color: #fefefe;
+$navbar-light-toggler-border-color: $secondary-color;
+$navbar-toggler-focus-width: 0;
+$navbar-padding-y: 1em;
+$navbar-padding-x: 0;
+$navbar-brand-height: 1em;
+
+$link-color: $primary-color;
+$link-decoration: none;
+$link-hover-decoration: none;
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/root";
+
+// 4. Include any optional Bootstrap CSS as needed
+@import "../../../node_modules/bootstrap/scss/utilities";
+@import "../../../node_modules/bootstrap/scss/root";
+@import "../../../node_modules/bootstrap/scss/reboot";
+@import "../../../node_modules/bootstrap/scss/type";
+@import "../../../node_modules/bootstrap/scss/images";
+@import "../../../node_modules/bootstrap/scss/containers";
+@import "../../../node_modules/bootstrap/scss/grid";
+@import "../../../node_modules/bootstrap/scss/tables";
+@import "../../../node_modules/bootstrap/scss/forms";
+@import "../../../node_modules/bootstrap/scss/buttons";
+@import "../../../node_modules/bootstrap/scss/transitions";
+@import "../../../node_modules/bootstrap/scss/button-group";
+@import "../../../node_modules/bootstrap/scss/dropdown";
+@import "../../../node_modules/bootstrap/scss/navbar";
+@import "../../../node_modules/bootstrap/scss/nav";
+@import "../../../node_modules/bootstrap/scss/accordion";
+
+@import "../../../node_modules/bootstrap/scss/helpers";
+@import "../../../node_modules/bootstrap/scss/utilities/api";
+
+//@import "card";
+//@import "accordion";
+//@import "breadcrumb";
+//@import "pagination";
+//@import "badge";
+//@import "alert";
+//@import "progress";
+//@import "list-group";
+//@import "close";
+//@import "toasts";
+//@import "modal";
+//@import "tooltip";
+//@import "popover";
+//@import "carousel";
+//@import "spinners";
+//@import "offcanvas";
+//@import "placeholders";
+//
 
 
-html {
-    height: 100%;
+// navbar
+
+h3 {
+  font-weight: 300;
 }
 
-body {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
+.mxt-navbar {
+  background-color: $secondary-color !important;
+  text-decoration: none;
+  line-height: 1;
+  display: block;
+  padding: .7rem 1rem;
+  font-weight: 700;
 }
 
-strong {
-	font-weight: $global-weight-bold;
+.mxt-menu__item--bullet {
+  color: #fefefe !important;
+  padding-top: 8px;
 }
 
-/* fix for IE */
-object {
-    width: 100%;
+.mxt-nav-link {
+  color: #fefefe !important;
+  text-transform: uppercase !important;
+  padding: .7rem 1rem;
+  margin-right: 2em;
+  font-size: .75rem;
+  font-weight: 700;
+
+  &:hover {
+    color: #ffffff !important;
+  }
 }
 
-hr {
-	border-color: $light-gray;
-	width: 3em;
+.mxt-icon--logo {
+  width: 4em;
+  margin-left: 1em;
 }
 
-small {
-	text-transform: uppercase;
-	font-weight: $global-weight-normal;
-	margin-top: 0.3em;
-	@include breakpoint(medium) {
-		font-size: 50%;
-	}
+.mxt-icon--top-bar {
+  width: 2em;
+  max-height: 2em;
+  height: 2em;
+  padding: 5px;
+}
+
+.mxt-icon--social {
+  height: 2em;
+  width: 2em;
+  margin: 0 0.5em;
+  padding: 5px;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}
+
+.mxt-icon--heart--footer {
+  position: relative;
+  top: 0.3em;
+  width: 2em;
+
+  path {
+    fill: $primary-color;
+  }
+}
+
+.mxt-icon--cat__talks {
+  min-width: auto;
+  max-width: 1.7em;
+  height: auto;
+}
+
+.mxt-icon--edition {
+  width: 5em;
+  text-align: right;
+  right: 1em;
+  position: fixed;
+  padding-bottom: .3em;
+  top: 4em;
+}
+
+.mxt-img--grayscale {
+  max-width: 100%;
+  filter: grayscale(100%);
+  &:hover {
+    filter: grayscale(70%);
+  }
+}
+
+.mxt-img--sponsors-home {
+  @extend .mxt-img--grayscale;
+  margin: 0.5em auto;
+  max-height: 5em;
+  max-width: 90%;
+}
+
+.mxt-img--sponsors {
+  max-height: 5em;
+  max-width: 10em;
+  margin-bottom: 1em;
+  @include media-breakpoint-up(md) {
+    margin-bottom: 0;
+  }
+}
+
+.mxt-img-avatar__speaker {
+  border-radius: 100%;
+  border: 7px solid #dbb9b8;
+  margin-bottom: 1em;
+  background: #dbb9b8 none repeat scroll 0 0;
+  width: 100px;
+  height: 100px;
+  max-width: 100px;
+  min-height: 100px;
+  max-height: 100px;
+  text-overflow: ellipsis;
+}
+
+.mxt-btn-primary {
+  color: white;
+}
+
+.mxt-dropdown-header {
+  color: #dbb9b8 !important;
+  font-size: 2.5rem !important;
+
+  > li a {
+    color: #dbb9b8;
+    font-size: 1.5rem;
+    line-height: 1.1;
+  }
+}
+
+.mxt-subheader--space {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  margin-bottom: 1em;
+  background-color: #dbb9b8;
+}
+
+.mxt-wrapper-list-inline {
+  padding-left: 0;
+  > li {
+    display: inline;
+    margin-right: 2em;
+  }
+}
+.mxt-wrapper--body {
+  min-height: 99vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-color: #faf8f8;
+}
+
+.mxt-wrapper--header {
+  background: url(/images/svg/mxt-skyline.svg) no-repeat bottom;
+  background-color: rgba(0, 0, 0, 0);
+  background-position-x: center;
+  background-position-y: bottom;
+  background-size: 100%;
+  background-position: 5% bottom !important;
+  background-color: #2c233d;
+  border-bottom: 5px solid #dbb9b8;
+  color: #fefefe;
+  text-align: center;
+  margin-bottom: 2em;
+  padding-top: 2em;
+}
+
+.mxt-wrapper--footer {
+  background-color: #2C233D;
+  padding: 0.5em;
+  margin-top: 2em;
+}
+
+.mxt-wrapper--talks {
+  & .no-svg {
+    background: $secondary-color url('/images/png/mxt-icon--mic.png') no-repeat left top;
+  }
+
+  @include media-breakpoint-up(md) {
+    background-size: 27%;
+    background: $secondary-color url('/images/svg/mxt-icon--mic.svg') no-repeat left 30% bottom 0%;
+  }
+  background: $secondary-color url('/images/svg/mxt-icon--mic.svg') no-repeat left 0% bottom 0%;
+  padding-top: 8em;
+  padding-bottom: 4em;
+  color: #dbb9b8;
+}
+
+.mxt-wrapper--page-title {
+  padding-top: 8em;
+  padding-bottom: 8em;
+  color: #dbb9b8;
+  background-color: $secondary-color;
+  flex: 1;
+}
+
+.mxt-wrapper--page {
+  flex: 1;
+}
+
+.mxt-wrapper--page-content {
+  position: relative;
+  top: -5em;
+  background-color: white;
+  padding: 2em;
+  margin-bottom: -3em;
+}
+
+.mxt-wrapper--callout {
+  position: relative;
+  margin: 0 0 1rem;
+  padding: 2rem;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+  color: #2c233d;
+}
+
+.mxt-wrapper--intrinsic {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%; // 16:9
+}
+
+.mxt-wrapper--intrinsic iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.mxt-accordion-talk {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.mxt-text--cyan {
+  color: $third-color;
+}
+
+.mxt-text--orange {
+  color: $primary-color;
+}
+
+.mxt-text--small {
+  color: $third-color;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+
+.mxt-accordion-talk-line{
+  display: flex;
+  align-items: baseline;
+}
+.mxt-text--page-title {
+  color: #ffffff;
+}
+
+.mxt-text--cat {
+  text-transform: uppercase;
+  color: $white;
+  padding: 0.2em 0.5em 0.1em 0.1em;
+  border-radius: 0.2em;
+  display: inline-block;
+  margin-bottom: 0.5em;
+  font-size: 0.9rem;
+}
+
+.mxt-text--talk-h1 {
+  font-size: 2rem;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.mxt-text--talktitle {
+  font-size: 1.2rem;
+}
+
+.mxt-text--cat-tech {
+  background-color: #e1629e;
+}
+
+.mxt-text--cat-aliens {
+  background-color: #5ab79c;
+}
+
+.mxt-text--cat-design {
+  background-color: #dbb9b8;
+}
+
+.mxt-text--cat-hacktivism {
+  background-color: #aecbd6;
+}
+
+.mxt-text--cat-ethics {
+  background-color: #aecbd6;
+}
+
+.mxt-text--cat-learn {
+  background-color: #92929a;
+}
+
+.mxt-text--cat-lifestyle {
+  background-color: #92929a;
+}
+
+.mxt-text--cat-makers {
+  background-color: $primary-color
+}
+
+.mxt-text--cat-team {
+  background-color: #817353;
+}
+
+.mxt-text--cat-en {
+  background-color: $primary-color;
+  margin: 0 0 0 0.7em;
+  padding: 0.3em 0.3em 0.1em 0.3em;
+  position: relative;
+  top: -2px;
+  font-weight: bold;
+}
+
+.mxt-text--cat-format {
+  color: #cccccc;
+  font-weight: normal;
+}
+
+.mxt-text--cat-room {
+  color: $third-color;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.mxt-text--cat-speaker {
+  background-color: #fefefe;
+  font-weight: normal;
+  text-transform: uppercase;
+  padding: 0.3em;
+  color: $secondary-color
+}
+
+.mxt-text--found {
+  background-color: $primary-color;
+}
+
+.mxt-title--article {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  color: $secondary-color;
+  &:hover {
+    color: $primary-color;
+  }
 }

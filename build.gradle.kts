@@ -95,7 +95,7 @@ tasks.register<NpmTask>("compileSass") {
  * directory
  */
 tasks.register<Copy>("copyJsVendors") {
-    from("node_modules/foundation-sites/dist/js/foundation.js", "node_modules/jquery/dist/jquery.js")
+    from("node_modules/bootstrap/dist/js/bootstrap.bundle.js")
     into(layout.buildDirectory.dir("resources/main/static/js"))
 }
 

@@ -1,176 +1,150 @@
 {{> header}}
 
-<div class="mxt-wrapper--page-title">
-    <div class="row">
-        <div class="columns large-12 menu-centered">
-            <ul class="menu center">
-                {{#speakers}}
-                    <li class="menu-text">
-                        <a href="/user/{{login}}"><img src="{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{^photoUrl}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/photoUrl}}"
-                             class="mxt-img-avatar__speaker"></a>
-
-                        <div><a href="/user/{{login}}">{{firstname}}&nbsp;{{lastname}}</a>   </div>
-                    </li>
-                {{/speakers}}
-            </ul>
-            {{#admin}}
-                <div>
-                    <a href="{{localePrefix}}/admin/talks/edit/{{talk.slug}}" class="button hollow mxt-anchor--uppercase" style="margin-bottom: 0">{{#i18n}}admin.talks.actions.update{{/i18n}}</a>
-                </div>
-            {{/admin}}
-        </div>
+<div class="mxt-wrapper--talks row text-center">
+    <div style="display: flex;flex-wrap: wrap; align-items: center; align-content: center; flex-direction: row">
+        {{#speakers}}
+            <div style="flex: 1">
+                <a href="/user/{{login}}"><img src="{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{^photoUrl}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/photoUrl}}"
+                    class="mxt-img-avatar__speaker"></a>
+                <div><a href="/user/{{login}}">{{firstname}}&nbsp;{{lastname}}</a>   </div>
+            </div>
+        {{/speakers}}
     </div>
+    {{#admin}}
+        <div class="mb-5 mt-2">
+            <a href="{{localePrefix}}/admin/talks/edit/{{talk.slug}}" class="btn btn-outline-primary" style="margin-bottom: 0">{{#i18n}}admin.talks.actions.update{{/i18n}}</a>
+        </div>
+    {{/admin}}
 </div>
 
-<div class="mxt-wrapper--page-content">
-
-
+<div class="container mxt-wrapper--page-content">
     <article class="callout">
+        <h1 class="text-center mxt-text--talk-h1">
+            {{talk.title}}
+            {{#connected}}
+                <button id="favorite" class="btn btn-link">
+                    {{#favorites}}
+                        <img src="/images/svg/favorites/mxt-favorite.svg" class="mxt-icon--cat__talks"/>
+                    {{/favorites}}
+                    {{^favorites}}
+                        <img src="/images/svg/favorites/mxt-favorite-non.svg" class="mxt-icon--cat__talks"/>
+                    {{/favorites}}
+                </button>
+            {{/connected}}
+        </h1>
+        <p>{{#markdown}}{{talk.summary}}{{/markdown}}</p>
+        {{#talk.topic}}
+            <div class="mxt-text--cat mxt-text--cat-{{talk.topic}}">
+                <img src="/images/svg/mxt-icon--{{talk.topic}}.svg" class="mxt-icon--cat mxt-icon--cat__talks"
+                     alt="{{#i18n}}home.topics.{{talk.topic}}.title{{/i18n}}"/>
+                <span>{{#i18n}}home.topics.{{talk.topic}}.title{{/i18n}}</span>
+            </div>
+        {{/talk.topic}}
+        <div><strong>#{{#i18n}}talk.format.{{talk.format}}{{/i18n}}</strong> {{#i18n}}talk.in{{/i18n}} {{#i18n}}talk.language.{{talk.language}}{{/i18n}}</div>
+        <div>{{#talk.date}}{{talk.date}}{{/talk.date}}</div>
+        <div>{{#talk.start}}{{talk.start}} - {{talk.end}}{{/talk.start}}</div>
+        <p class="mxt-text--cat-room">{{#i18n}}{{talk.room}}{{/i18n}}</p>
+
+        {{#talk.description}}
+            <p class="mt-1 mb-1">{{#markdown}}{{talk.description}}{{/markdown}}</p>
+        {{/talk.description}}
+        {{#talk.video}}
+            {{#vimeoPlayer}}
+                <div class="mxt-wrapper--intrinsic mb-3">
+                    <iframe src="{{vimeoPlayer}}" class="mxt-wrapper--video-player" allowfullscreen></iframe>
+                </div>
+            {{/vimeoPlayer}}
+            {{^vimeoPlayer}}
+                &#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{talk.video}}" target="_blank">{{#i18n}}talk.video.thevideo{{/i18n}}</a>
+            {{/vimeoPlayer}}
+        {{/talk.video}}
+
+        {{#speakers}}
+            <h2 class="mxt-text--talktitle pt-3">{{firstname}} {{lastname}}</h2>
+            {{#company}}<p class="mxt-text-speaker-company">{{company}}</p>{{/company}}
+            {{#markdown}}{{description}}{{/markdown}}
+            <ul class="mxt-wrapper-list-inline">
+                {{#links}}
+                    <li><a href="{{url}}">{{name}}</a></li>
+                {{/links}}
+            </ul>
+            <br/>
+        {{/speakers}}
+
         <div class="row">
-            <div class="column large-12">
-                <h1 class="text-center mxt-title--talk">
-                    {{talk.title}}
-                    {{#connected}}
-                        <button id="favorite" class="mxt-img--favorite">
-                            {{#favorites}}
-                                <img src="/images/svg/favorites/mxt-favorite.svg" class="mxt-icon--cat__talks"/>
-                            {{/favorites}}
-                            {{^favorites}}
-                                <img src="/images/svg/favorites/mxt-favorite-non.svg" class="mxt-icon--cat__talks"/>
-                            {{/favorites}}
-                        </button>
-                    {{/connected}}
-                </h1>
-
-                <hr/>
-                <p>{{#markdown}}{{talk.summary}}{{/markdown}}</p>
-                {{#talk.description}}
-                    <hr/>
-                    <p>{{#markdown}}{{talk.description}}{{/markdown}}</p>
-                {{/talk.description}}
-                <p class="subheader"><strong>
-                    {{#talk.video}}
-                        <hr/>
-                        {{#vimeoPlayer}}
-                            <div class="mxt-wrapper--intrinsic">
-                                <iframe src="{{vimeoPlayer}}" class="mxt-wrapper--video-player" allowfullscreen></iframe>
-                            </div>
-                        {{/vimeoPlayer}}
-                        {{^vimeoPlayer}}
-                            &#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{talk.video}}" target="_blank">{{#i18n}}talk.video.thevideo{{/i18n}}</a>
-                        {{/vimeoPlayer}}
-                    {{/talk.video}}
-                </strong></p>
-                <hr/>
-            </div>
-        </div>
-        <div class="row mxt-wrapper--row">
-            <div class="small-12 medium-4 medium-push-8 columns mxt-wrapper--talk-details">
-                {{#talk.topic}}
-                    <a href="{{localePrefix}}/{{talk.event}}/{{talk.topic}}">
-                        <img src="/images/svg/mxt-icon--{{talk.topic}}.svg" class="mxt-icon--cat mxt-icon--cat__talks"
-                                                                                  alt="{{#i18n}}home.topics.{{talk.topic}}.title{{/i18n}}"></a>
-                    <p class="mxt-text--cat mxt-text--cat5">{{#i18n}}home.topics.{{talk.topic}}.title{{/i18n}}</p>
-                    <p>—</p>{{/talk.topic}}
-                <div><strong>#{{#i18n}}talk.format.{{talk.format}}{{/i18n}}</strong> {{#i18n}}talk.in{{/i18n}} {{#i18n}}talk.language.{{talk.language}}{{/i18n}}</div>
-                <ul class="menu vertical">
-                    <li>{{#talk.date}}{{talk.date}}{{/talk.date}}</li>
-                    <li>{{#talk.start}}{{talk.start}} - {{talk.end}}{{/talk.start}}</li>
-<!--                    <li>{{#i18n}}{{talk.room}}{{/i18n}}</li>-->
-                </ul>
-                <div class="show-for-small-only">
-                    <hr/>
-                </div>
-            </div>
-            <div class="small-12 medium-8 medium-pull-4 columns">
-                {{#speakers}}
-                    <h2 class="mxt-text-speaker-name">{{firstname}} {{lastname}}</h2>
-                    {{#company}}<p class="mxt-text-speaker-company">{{company}}</p>{{/company}}
-                    {{#markdown}}{{description}}{{/markdown}}
-                    <ul class="menu simple">
-                        {{#links}}
-                            <li><a href="{{url}}">{{name}}</a></li>
-                        {{/links}}
-                    </ul>
-                    <br/>
-                {{/speakers}}
-            </div>
-        </div>
-        <hr/>
-        {{#hasOthertalks}}
-            <div class="row">
-                {{#talk.speakersFirstNames}}<h2>{{#i18n}}talk.others| {{talk.speakersFirstNames}}{{/i18n}}</h2>{{/talk.speakersFirstNames}}
-
-                <div class="columns small-12 medium-12 {{#has2Columns}}large-6{{/has2Columns}}{{^has2Columns}}large-12{{/has2Columns}} callout">
-                    <ul class="accordion" data-accordion>
-                        {{#othertalks}}
-                            <li class="accordion-item" data-accordion-item>
-                                <!-- Accordion tab title -->
-                                <a href="#" class="accordion-title">
-                                    <h3 class="mxt-text--talktitle"><b>{{event}}</b> - {{title}}{{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
-                                    </h3>
-                                    <ul class="menu simple mxt-menu--accordion">
-                                        {{#video}}
-                                            <li><strong>&#x25ba; {{#i18n}}talks.title.video{{/i18n}}</strong></li>{{/video}}
-                                        {{^isTalk}}
-                                            <li class="mxt-text--cat-format">#{{format}}</li>{{/isTalk}}
-                                    </ul>
-                                </a>
-                                <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
-                                <div class="accordion-content" data-tab-content>
-                                    <div class="row">
-                                        <div class="small-7 medium-9 large-8 columns">
-                                            {{#speakers}}
-                                                <p class="mxt-text--cat-room">{{firstname}} {{lastname}}</p>
-                                            {{/speakers}}
-                                            <div>{{#markdown}}{{summary}}{{/markdown}}</div>
-                                            <br>
-                                        </div>
-                                        <div class="small-5 medium-3 large-4 columns text-center">
-                                            <a href="{{localePrefix}}/{{event}}/{{slug}}" class="button hollow">{{#i18n}}talks.readmore{{/i18n}}</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        {{/othertalks}}
-                    </ul>
-                </div>
-            </div>
-        {{/hasOthertalks}}
-        <div class="row" class="mxt-img--talk__portfolio">
             {{#talk.photoUrls}}
-                <div class="mxt-img--talk"><a href="{{url}}"><img src="{{url}}" aria-label="{{name}}" class="mxt-img--grayscale"/></a></div>
+                <div class="col-4">
+                    <a href="{{url}}"><img src="{{url}}" aria-label="{{name}}" class="mxt-img--grayscale pb-2"/></a>
+                </div>
             {{/talk.photoUrls}}
         </div>
-    </article>
 
+        {{#hasOthertalks}}
+            <p>&nbsp;</p>
+            <div class="row">
+                {{#talk.speakersFirstNames}}<h2 class="mxt-text--talktitle">{{#i18n}}talk.others| {{talk.speakersFirstNames}}{{/i18n}}</h2>{{/talk.speakersFirstNames}}
+
+                {{#othertalks}}
+                    <div class="accordion-item">
+                        <h2 class="accordion-header p-2" id="heading{{id}}">
+                            <h3 class="mxt-text--talktitle">
+                                <b>{{event}}</b> -
+                                {{title}}
+                                {{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
+                            </h3>
+
+                            <ul class="mxt-wrapper-list-inline">
+                                {{#video}}
+                                    <li><strong>&#x25ba; {{#i18n}}talks.title.video{{/i18n}}</strong></li>{{/video}}
+                                <li class="mxt-text--cat-format">#{{#i18n}}talk.format.{{format}}{{/i18n}}</li>
+                            </ul>
+                            <ul class="mxt-wrapper-list-inline mb-0 pb-0">
+                                {{#speakers}}
+                                    <li>
+                                        <span class="mxt-text--cat mxt-text--cat-speaker" style="background-color: #e6e6e6; padding: 0.3em;color: #2c233d">{{firstname}}&nbsp;{{lastname}}</span>
+                                    </li>
+                                {{/speakers}}
+                            </ul>
+                            <div class="row">
+                                <div class="col-12 col-md-9">
+                                    {{#markdown}}{{summary}}{{/markdown}}
+                                </div>
+                                <div class="col-12 col-md-3" style="text-align: right">
+                                    <a href="{{localePrefix}}/{{event}}/{{slug}}" class="btn btn-outline-primary hollow">{{#i18n}}talks.readmore{{/i18n}}</a>
+                                </div>
+                            </div>
+                        </h2>
+                    </div>
+                {{/othertalks}}
+            </div>
+        {{/hasOthertalks}}
+
+    </article>
+</div>
+
+{{#sponsors}}
     <div class="row">
-        <div class="column large-12">
-            {{#sponsors}}
-                <hr/>
-                <div class="align-center align-middle row">
-                    {{#sponsors-gold}}
-                        <div class="columns text-center large-2 medium-2 small-3">
-                            {{> sponsor-detail }}
-                        </div>
-                    {{/sponsors-gold}}
-                    {{#sponsors-others}}
-                        <div class="columns text-center large-1 medium-1 small-2">
-                            {{> sponsor-detail }}
-                        </div>
-                    {{/sponsors-others}}
-                </div>
-            {{/sponsors}}
+        <div class="col-12 col-lg-10 offset-lg-1">
+            <div class="text-center row">
+                {{#sponsors-gold}}
+                    <div class="col-3 text-center col-md-2">
+                        {{> sponsor-detail }}
+                    </div>
+                {{/sponsors-gold}}
+                {{#sponsors-others}}
+                    <div class="col-2 col-md-1 text-center">
+                        {{> sponsor-detail }}
+                    </div>
+                {{/sponsors-others}}
+            </div>
         </div>
     </div>
-
-</div>
+{{/sponsors}}
 
 {{#connected}}
     <input type="hidden" id="talkId" value="{{talk.id}}"/>
     <input type="hidden" id="email" value="{{email}}"/>
 {{/connected}}
 
-<script src="/js/talk.js"></script>
 
 {{> footer}}

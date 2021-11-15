@@ -1,114 +1,89 @@
 {{> header}}
 
 <div class="mxt-wrapper--page-title">
-    <div class="row">
-        <div class="columns large-12">
-            <h1 class="text-center">{{#i18n}}faq.title{{/i18n}}</h1>
-            <p class="text-center">{{#i18n}}faq.noanswer{{/i18n}} <a href="mailto:contact@mix-it.fr"
-                                                                     class="mxt-menu__item--nav" target="_top">
-                <img src="/images/svg/mxt-icon--contact.svg" class="mxt-icon--social" alt="Email"></a></p>
+    <h1 class="text-center">{{#i18n}}faq.title{{/i18n}}</h1>
+    <p class="text-center">
+        {{#i18n}}faq.noanswer{{/i18n}}
+        <a href="mailto:contact@mix-it.fr" class="mxt-menu__item--nav" target="_top">
+            <img src="/images/svg/mxt-icon--contact.svg" class="mxt-icon--social" alt="Email"></a>
+    </p>
+</div>
+<div class="container mxt-wrapper--page-content">
+    <h2 class="text-center">{{#i18n}}faq.title.ticket{{/i18n}}</h2>
+
+    <div class="mxt-wrapper--callout">
+        <div class="row align-middle">
+            <h3 class="subheader">{{#i18n}}faq.buy.title{{/i18n}}</h3>
+            <div>{{#i18n}}faq.buy.detail{{/i18n}}</div>
         </div>
     </div>
-</div>
-
-<div class="mxt-wrapper--page-content">
-    <div class="row">
-        <div class="column large-12">
-
-            <div class="callout">
-                <h2 class="text-center mxt-subheader--space">{{#i18n}}faq.title.ticket{{/i18n}}</h2>
-
-                <div class="mxt-wrapper--callout">
-                    <div class="row align-middle">
-                        <h3 class="subheader">{{#i18n}}faq.buy.title{{/i18n}}</h3>
-                        <p>{{#i18n}}faq.buy.detail{{/i18n}}</p>
-                    </div>
-                </div>
-                <div class="mxt-wrapper--callout">
-                    <div class="row align-middle">
-                        <h3 class="subheader">{{#i18n}}faq.bill.title{{/i18n}}</h3>
-                        <p>{{#i18n}}faq.bill.detail{{/i18n}}</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="callout">
-                <h2 class="text-center mxt-subheader--space">{{#i18n}}faq.title.prog{{/i18n}}</h2>
-
-                <div class="mxt-wrapper--callout">
-                    <div class="row align-middle">
-                        <h3 class="subheader">{{#i18n}}faq.schedule.title{{/i18n}}</h3>
-                        <p>{{#i18n}}faq.schedule.detail{{/i18n}}</p>
-                    </div>
-                </div>
-
-                <div class="mxt-wrapper--callout">
-                    <div class="row align-middle">
-                        <h3 class="subheader">{{#i18n}}faq.app.title{{/i18n}}</h3>
-                        <p>{{#i18n}}faq.app.detail{{/i18n}}</p>
-                    </div>
-                </div>
-
-                <div class="mxt-wrapper--callout">
-                    <div class="row align-middle">
-                        <h3 class="subheader">{{#i18n}}faq.video.title{{/i18n}}</h3>
-                        <p>{{#i18n}}faq.video.detail{{/i18n}}</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="callout">
-                <h2 class="text-center mxt-subheader--space">{{#i18n}}faq.title.activities{{/i18n}}</h2>
-
-                <!--<div class="mxt-wrapper--callout">-->
-                    <!--<div class="row align-middle">-->
-                        <!--<h3 class="subheader">{{#i18n}}faq.party.title{{/i18n}}</h3>-->
-                        <!--<p>{{#i18n}}faq.party.detail{{/i18n}}</p>-->
-                    <!--</div>-->
-                <!--</div>-->
-
-                <div class="mxt-wrapper--callout">
-                    <div class="row align-middle">
-                        <h3 class="subheader">{{#i18n}}faq.food.title{{/i18n}}</h3>
-                        <p>{{#i18n}}faq.food.detail{{/i18n}}</p>
-                    </div>
-                </div>
-
-                <div class="mxt-wrapper--callout">
-                    <div class="row align-middle">
-                        <h3 class="subheader">{{#i18n}}faq.social.title{{/i18n}}</h3>
-                        <p>{{#i18n}}faq.social.detail{{/i18n}}</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="callout">
-                <h2 class="text-center mxt-subheader--space">{{#i18n}}faq.title.training{{/i18n}}</h2>
-
-                <div class="mxt-wrapper--callout">
-                    <div class="row align-middle">
-                        <h3 class="subheader">{{#i18n}}faq.training.title{{/i18n}}</h3>
-                        <p>{{#i18n}}faq.training.detail{{/i18n}}</p>
-                    </div>
-                </div>
-
-                <div class="mxt-wrapper--callout">
-                    <div class="row align-middle">
-                        <h3 class="subheader">{{#i18n}}faq.opca.title{{/i18n}}</h3>
-                        <p>{{#i18n}}faq.opca.detail{{/i18n}}</p>
-                    </div>
-                </div>
-
-                <div class="mxt-wrapper--callout">
-                    <div class="row align-middle">
-                        <h3 class="subheader">{{#i18n}}faq.cpf.title{{/i18n}}</h3>
-                        <p>{{#i18n}}faq.cpf.detail{{/i18n}}</p>
-                    </div>
-                </div>
-            </div>
+    <div class="mxt-wrapper--callout">
+        <div class="row align-middle">
+            <h3 class="subheader">{{#i18n}}faq.bill.title{{/i18n}}</h3>
+            <div>{{#i18n}}faq.bill.detail{{/i18n}}</div>
         </div>
     </div>
-</div>
+
+    <h2 class="text-center mt-5">{{#i18n}}faq.title.prog{{/i18n}}</h2>
+
+    <div class="mxt-wrapper--callout">
+        <div class="row align-middle">
+            <h3 class="subheader">{{#i18n}}faq.schedule.title{{/i18n}}</h3>
+            <div>{{#i18n}}faq.schedule.detail{{/i18n}}</div>
+        </div>
+    </div>
+
+    <div class="mxt-wrapper--callout">
+        <div class="row align-middle">
+            <h3 class="subheader">{{#i18n}}faq.app.title{{/i18n}}</h3>
+            <div>{{#i18n}}faq.app.detail{{/i18n}}</div>
+        </div>
+    </div>
+
+    <div class="mxt-wrapper--callout">
+        <div class="row align-middle">
+            <h3 class="subheader">{{#i18n}}faq.video.title{{/i18n}}</h3>
+            <div>{{#i18n}}faq.video.detail{{/i18n}}</div>
+        </div>
+    </div>
+
+    <h2 class="text-center mt-5">{{#i18n}}faq.title.activities{{/i18n}}</h2>
+
+    <div class="mxt-wrapper--callout">
+        <div class="row align-middle">
+            <h3 class="subheader">{{#i18n}}faq.food.title{{/i18n}}</h3>
+            <p>{{#i18n}}faq.food.detail{{/i18n}}</p>
+        </div>
+    </div>
+
+    <div class="mxt-wrapper--callout">
+        <div class="row align-middle">
+            <h3 class="subheader">{{#i18n}}faq.social.title{{/i18n}}</h3>
+            <p>{{#i18n}}faq.social.detail{{/i18n}}</p>
+        </div>
+    </div>
+
+    <h2 class="text-center mt-5">{{#i18n}}faq.title.training{{/i18n}}</h2>
+
+    <div class="mxt-wrapper--callout">
+        <div class="row align-middle">
+            <h3 class="subheader">{{#i18n}}faq.training.title{{/i18n}}</h3>
+            <p>{{#i18n}}faq.training.detail{{/i18n}}</p>
+        </div>
+    </div>
+
+    <div class="mxt-wrapper--callout">
+        <div class="row align-middle">
+            <h3 class="subheader">{{#i18n}}faq.opca.title{{/i18n}}</h3>
+            <p>{{#i18n}}faq.opca.detail{{/i18n}}</p>
+        </div>
+    </div>
+
+    <div class="mxt-wrapper--callout">
+        <div class="row align-middle">
+            <h3 class="subheader">{{#i18n}}faq.cpf.title{{/i18n}}</h3>
+            <p>{{#i18n}}faq.cpf.detail{{/i18n}}</p>
+        </div>
+    </div>
 </div>
 {{> footer}}

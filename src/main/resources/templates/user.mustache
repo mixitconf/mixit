@@ -1,93 +1,85 @@
 {{> header}}
 
-<div class="{{^hasTalks}}mxt-wrapper--page-title{{/hasTalks}}{{#hasTalks}}mxt-wrapper--talks{{/hasTalks}}">
-    <div class="row">
-        <div class="columns large-12 menu-centered">
-            <ul class="menu center">
-                    <li class="menu-text">
-                        {{#user.photoUrl}}<img src="{{user.photoUrl}}" class="mxt-img-avatar__speaker">{{/user.photoUrl}}
-                        {{^user.photoUrl}}<img src="https://www.gravatar.com/avatar/{{#user.emailHash}}{{user.emailHash}}{{/user.emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png" class="mxt-img-avatar__speaker">{{/user.photoUrl}}
-                        <div>{{#hasTalks}}{{#i18n}}user.speaker{{/i18n}}{{/hasTalks}}{{^hasTalks}}{{#i18n}}user.standard{{/i18n}}{{/hasTalks}}</div>
-                    </li>
-            </ul>
-            {{#connected}}
-                {{^canUpdateProfile}}
-                    {{#admin}}
-                        <div>
-                            <a href="{{localePrefix}}/admin/users/edit/{{user.login}}" class="button hollow mxt-anchor--uppercase" style="margin-bottom: 0">{{#i18n}}admin.talks.actions.update{{/i18n}}</a>
-                        </div>
-                    {{/admin}}
-                {{/canUpdateProfile}}
-                {{#canUpdateProfile}}
-                    <div>
-                        <a href="{{localePrefix}}/me/edit" class="button hollow mxt-anchor--uppercase" style="margin-bottom: 0">{{#i18n}}admin.talks.actions.update{{/i18n}}</a>
-                    </div>
-                {{/canUpdateProfile}}
-            {{/connected}}
-        </div>
-    </div>
+<div class="mxt-wrapper--page-title text-center">
+    <ul class="mxt-wrapper-list-inline">
+        <li>
+            {{#user.photoUrl}}<img src="{{user.photoUrl}}" class="mxt-img-avatar__speaker">{{/user.photoUrl}}
+            {{^user.photoUrl}}<img src="https://www.gravatar.com/avatar/{{#user.emailHash}}{{user.emailHash}}{{/user.emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png" class="mxt-img-avatar__speaker">{{/user.photoUrl}}
+            <div class="mxt-text--page-title">{{#hasTalks}}{{#i18n}}user.speaker{{/i18n}}{{/hasTalks}}{{^hasTalks}}{{#i18n}}user.standard{{/i18n}}{{/hasTalks}}</div>
+        </li>
+    </ul>
+    {{#connected}}
+        {{^canUpdateProfile}}
+            {{#admin}}
+                <div class="mxt-text--page-title">
+                    <a href="{{localePrefix}}/admin/users/edit/{{user.login}}" class="btn-outline-primary btn" style="margin-bottom: 0">{{#i18n}}admin.talks.actions.update{{/i18n}}</a>
+                </div>
+            {{/admin}}
+        {{/canUpdateProfile}}
+        {{#canUpdateProfile}}
+            <div class="mxt-text--page-title">
+                <a href="{{localePrefix}}/me/edit" class="btn-outline-primary btn" style="margin-bottom: 0">{{#i18n}}admin.talks.actions.update{{/i18n}}</a>
+            </div>
+        {{/canUpdateProfile}}
+    {{/connected}}
 </div>
 
-<div class="mxt-wrapper--page-content">
+<div class="container mxt-wrapper--page-content">
+    <h1 class="text-center mxt-title--talk" style="margin-bottom: 0">
+        {{user.firstname}} {{user.lastname}}
+    </h1>
     <div class="row">
-        <div class="column large-12 callout">
-            <h1 class="text-center mxt-title--talk" style="margin-bottom: 0">
-                {{user.firstname}} {{user.lastname}}
-            </h1>
-            <div class="row">
-                <div class="columns small-12 medium-12 large-12 callout">
-                    {{#user.company}}<p class="text-center mxt-text-speaker-company">{{user.company}}</p>{{/user.company}}
+        <div class="columns small-12 medium-12 large-12 callout">
+            {{#user.company}}<p class="text-center mxt-text-speaker-company">{{user.company}}</p>{{/user.company}}
 
-                    {{#markdown}}{{user.description}}{{/markdown}}
-                    <ul class="menu simple">
-                        {{#user.links}}
-                            <li><a href="{{url}}">{{name}}</a></li>
-                        {{/user.links}}
-                    </ul>
-                </div>
-                {{#canUpdateProfile}}
-                <div class="columns small-12 medium-12 large-12 callout">
-                    {{#hasLotteryTicket}}<strong><img src="/images/svg/lottery/mxt-icon--ok.svg" class="mxt-icon--lottery-ok">&nbsp;{{#i18n}}profile.hasticket{{/i18n}}</strong>{{/hasLotteryTicket}}
-                    {{^hasLotteryTicket}}<strong><img src="/images/svg/lottery/mxt-icon--ko.svg" class="mxt-icon--lottery-ko">&nbsp;{{#i18n}}profile.hasnoticket{{/i18n}}</strong>{{/hasLotteryTicket}}
-                </div>
-                {{/canUpdateProfile}}
+            {{#markdown}}{{user.description}}{{/markdown}}
+            <ul class="menu simple">
+                {{#user.links}}
+                    <li><a href="{{url}}">{{name}}</a></li>
+                {{/user.links}}
+            </ul>
+        </div>
+        {{#canUpdateProfile}}
+            <div class="columns small-12 medium-12 large-12 callout">
+                {{#hasLotteryTicket}}<strong><img src="/images/svg/lottery/mxt-icon--ok.svg" class="mxt-icon--lottery-ok">&nbsp;{{#i18n}}profile.hasticket{{/i18n}}</strong>{{/hasLotteryTicket}}
+                {{^hasLotteryTicket}}<strong><img src="/images/svg/lottery/mxt-icon--ko.svg" class="mxt-icon--lottery-ko">&nbsp;{{#i18n}}profile.hasnoticket{{/i18n}}</strong>{{/hasLotteryTicket}}
             </div>
-            <div class="row">
-                <div class="columns small-12 medium-12 large-12 callout">
-                    <ul class="accordion" data-accordion>
-                        {{#talks}}
-                            <li class="accordion-item">
-                                <!-- Accordion tab title -->
-                                <a href="#" class="accordion-title mxt-wrapper--accordion-title-exploded mxt-wrapper--accordion-title-exploded">
-                                    <h3 class="mxt-text--talktitle"><b>{{event}}</b> - {{title}}{{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
-                                    </h3>
-                                    <ul class="menu simple mxt-menu--accordion">
-                                        {{#video}}<li><strong>&#x25ba; {{#i18n}}talks.title.video{{/i18n}}</strong></li>{{/video}}
-                                            <li class="mxt-text--cat-format">#{{format}}</li>
-                                    </ul>
-                                </a>
-                                <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
-                                <div class="accordion-content" style="display: block">
-                                    <div class="row mxt-wrapper--row">
-                                        <div class="small-7 medium-9 large-8 columns">
-                                            <div>{{#markdown}}{{summary}}{{/markdown}}</div>
-                                            <br>
-                                        </div>
-                                        <div class="small-5 medium-3 large-4 columns text-center">
-                                            <a href="{{localePrefix}}/{{event}}/{{slug}}" class="button hollow">{{#i18n}}talks.readmore{{/i18n}}</a>
-                                            {{#isCurrentEdition}}
-                                                {{#canUpdateProfile}}
-                                                    <a href="{{localePrefix}}/me/talks/edit/{{slug}}" class="button hollow">{{#i18n}}talks.update{{/i18n}}</a>
-                                                {{/canUpdateProfile}}
-                                            {{/isCurrentEdition}}
-                                        </div>
-                                    </div>
+        {{/canUpdateProfile}}
+    </div>
+    <div class="row">
+        <div class="columns small-12 medium-12 large-12 callout">
+            <ul class="accordion" data-accordion>
+                {{#talks}}
+                    <li class="accordion-item">
+                        <!-- Accordion tab title -->
+                        <a href="#" class="accordion-title mxt-wrapper--accordion-title-exploded mxt-wrapper--accordion-title-exploded">
+                            <h3 class="mxt-text--talktitle"><b>{{event}}</b> - {{title}}{{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
+                            </h3>
+                            <ul class="menu simple mxt-menu--accordion">
+                                {{#video}}<li><strong>&#x25ba; {{#i18n}}talks.title.video{{/i18n}}</strong></li>{{/video}}
+                                <li class="mxt-text--cat-format">#{{format}}</li>
+                            </ul>
+                        </a>
+                        <!-- Accordion tab content: it would start in the open state due to using the `is-active` state class. -->
+                        <div class="accordion-content" style="display: block">
+                            <div class="row mxt-wrapper--row">
+                                <div class="small-7 medium-9 large-8 columns">
+                                    <div>{{#markdown}}{{summary}}{{/markdown}}</div>
+                                    <br>
                                 </div>
-                            </li>
-                        {{/talks}}
-                    </ul>
-                </div>
-            </div>
+                                <div class="small-5 medium-3 large-4 columns text-center">
+                                    <a href="{{localePrefix}}/{{event}}/{{slug}}" class="button hollow">{{#i18n}}talks.readmore{{/i18n}}</a>
+<!--                                    {{#isCurrentEdition}}-->
+<!--                                        {{#canUpdateProfile}}-->
+<!--                                            <a href="{{localePrefix}}/me/talks/edit/{{slug}}" class="button hollow">{{#i18n}}talks.update{{/i18n}}</a>-->
+<!--                                        {{/canUpdateProfile}}-->
+<!--                                    {{/isCurrentEdition}}-->
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                {{/talks}}
+            </ul>
         </div>
     </div>
 </div>

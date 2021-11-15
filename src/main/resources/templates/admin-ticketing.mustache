@@ -1,44 +1,34 @@
 {{> header}}
 
-<div class="mxt-wrapper--page-title">
-    <div class="row">
-        <div class="columns large-12">
-            <h1 class="text-center">{{#i18n}}admin.ticketing.title{{/i18n}}</h1>
-        </div>
-    </div>
+<div class="mxt-wrapper--page-title text-center">
+    <h1 class="text-center">{{#i18n}}admin.ticketing.title{{/i18n}}</h1>
 </div>
 
-<div class="mxt-wrapper--page-content">
-    <div class="row">
-        <div class="column large-12">
-            <div class="callout">
-                <p>{{#i18n}}admin.ticketing.count{{/i18n}} : {{tickets.size}}</p>
-                <table>
-                  <thead>
-                    <tr>
-                      <th>{{#i18n}}admin.ticketing.table.firstname{{/i18n}}</th>
-                      <th>{{#i18n}}admin.ticketing.table.lastname{{/i18n}}</th>
-                      <th>{{#i18n}}admin.ticketing.table.email{{/i18n}}</th>
-                      <th>&nbsp;</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {{#tickets}}
-                    <tr>
-                      <td>{{firstname}}</td>
-                      <td>{{lastname}}</td>
-                      <td><a href="mailto:{{email}}">{{email}}</a></td>
-                      <td><form action="/admin/ticketing/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.ticketing.delete.confirm{{/i18n}}');">
-                            <input type="hidden" name="email" value="{{email}}"/>
-                            <input type="submit" class="button expand" value="{{#i18n}}admin.ticketing.delete{{/i18n}}"/>
-                        </form></td>
-                    </tr>
-                    {{/tickets}}
-                  </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+<div class="container mxt-wrapper--page-content">
+    <p>{{#i18n}}admin.ticketing.count{{/i18n}} : <b>{{tickets.size}}</b></p>
+    <table class="table-striped table table-bordered">
+      <thead>
+        <tr>
+          <th>{{#i18n}}admin.ticketing.table.firstname{{/i18n}}</th>
+          <th>{{#i18n}}admin.ticketing.table.lastname{{/i18n}}</th>
+          <th>{{#i18n}}admin.ticketing.table.email{{/i18n}}</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#tickets}}
+        <tr>
+          <td>{{firstname}}</td>
+          <td>{{lastname}}</td>
+          <td><a href="mailto:{{email}}">{{email}}</a></td>
+          <td><form action="/admin/ticketing/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.ticketing.delete.confirm{{/i18n}}');">
+                <input type="hidden" name="email" value="{{email}}"/>
+                <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}admin.ticketing.delete{{/i18n}}"/>
+            </form></td>
+        </tr>
+        {{/tickets}}
+      </tbody>
+    </table>
 </div>
 
 {{> footer}}

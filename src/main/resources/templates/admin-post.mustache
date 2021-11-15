@@ -1,98 +1,54 @@
 {{> header}}
 
-<div class="mxt-wrapper--page-title">
-    <div class="row">
-        <div class="columns large-12">
-            <h1 class="text-center">{{#i18n}}admin.post.title{{/i18n}}</h1>
-        </div>
-    </div>
+<div class="mxt-wrapper--page-title text-center">
+    <h1 class="text-center">{{#i18n}}admin.post.title{{/i18n}}</h1>
 </div>
 
-<div class="mxt-wrapper--page-content">
-    <div class="callout">
-        <div class="large-12 large-centered columns">
-            <div class="row">
-                <div class="large-12 columns">
-                    {{#post.id}}<form action="/admin/post/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.post.delete.confirm{{/i18n}}');">
-                        <input type="hidden" name="id" value="{{post.id}}"/>
-                        <input type="submit" class="button expand" value="{{#i18n}}admin.post.delete{{/i18n}}"/>
-                    </form>{{/post.id}}
-                    <form action="/admin/post" method="post">
-                        {{#post.id}}<input type="hidden" name="id" value="{{post.id}}"/>{{/post.id}}
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <label>
-                                    {{#i18n}}admin.post.form.title.fr{{/i18n}}
-                                    <input type="text" name="title-fr" value="{{#title-fr}}{{title-fr}}{{/title-fr}}" required/>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <label>
-                                    {{#i18n}}admin.post.form.title.en{{/i18n}}
-                                    <input type="text" name="title-en" value="{{#title-en}}{{title-en}}{{/title-en}}" required/>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <label>
-                                    {{#i18n}}admin.post.form.author{{/i18n}}
-                                    <input type="text" name="authorId" value="{{#post.authorId}}{{post.authorId}}{{/post.authorId}}" required/>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <label>
-                                    {{#i18n}}admin.post.form.headline.fr{{/i18n}}
-                                    <textarea name="headline-fr" rows="10" required>{{#headline-fr}}{{headline-fr}}{{/headline-fr}}</textarea>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <label>
-                                    {{#i18n}}admin.post.form.headline.en{{/i18n}}
-                                    <textarea name="headline-en" rows="10" required>{{#headline-en}}{{headline-en}}{{/headline-en}}</textarea>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <label>
-                                    {{#i18n}}admin.post.form.content.fr{{/i18n}}
-                                    <textarea name="content-fr" rows="10">{{#content-fr}}{{content-fr}}{{/content-fr}}</textarea>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <label>
-                                    {{#i18n}}admin.post.form.content.en{{/i18n}}
-                                    <textarea name="content-en" rows="10">{{#content-en}}{{content-en}}{{/content-en}}</textarea>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <label>
-                                    {{#i18n}}admin.post.form.addedAt{{/i18n}}
-                                    <input type="text" name="addedAt" value="{{post.addedAt}}" required/>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 large-centered columns">
-                                <input type="submit" class="button expand" value="{{#i18n}}admin.post.save{{/i18n}}"/>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+<div class="container mxt-wrapper--page-content">
+    {{#post.id}}<form action="/admin/post/delete" method="post"
+                      class="text-center"
+                      onsubmit="return confirm('{{#i18n}}admin.post.delete.confirm{{/i18n}}');">
+        <input type="hidden" name="id" value="{{post.id}}"/>
+        <input type="submit" class="btn-primary btn mxt-btn-primary" value="{{#i18n}}admin.post.delete{{/i18n}}"/>
+    </form>{{/post.id}}
+    <form action="/admin/post" method="post">
+        {{#post.id}}<input type="hidden" name="id" value="{{post.id}}"/>{{/post.id}}
+        <div class="mt-4 mb-3">
+            <label class="form-label">{{#i18n}}admin.post.form.title.fr{{/i18n}} </label>
+            <input class="form-control" type="text" name="title-fr" value="{{#title-fr}}{{title-fr}}{{/title-fr}}" required/>
         </div>
-    </div>
+        <div class="mb-3">
+            <label class="form-label">{{#i18n}}admin.post.form.title.en{{/i18n}}</label>
+            <input class="form-control" type="text" name="title-en" value="{{#title-en}}{{title-en}}{{/title-en}}" required/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">{{#i18n}}admin.post.form.author{{/i18n}}</label>
+            <input class="form-control" type="text" name="authorId" value="{{#post.authorId}}{{post.authorId}}{{/post.authorId}}" required/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">{{#i18n}}admin.post.form.headline.fr{{/i18n}} </label>
+            <textarea class="form-control" name="headline-fr" rows="10" required>{{#headline-fr}}{{headline-fr}}{{/headline-fr}}</textarea>
+        </div>
+        <div class="mb-3">
+            <label class="form-label"l>{{#i18n}}admin.post.form.headline.en{{/i18n}}</label>
+            <textarea class="form-control" name="headline-en" rows="10" required>{{#headline-en}}{{headline-en}}{{/headline-en}}</textarea>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">{{#i18n}}admin.post.form.content.fr{{/i18n}}</label>
+            <textarea class="form-control" name="content-fr" rows="10">{{#content-fr}}{{content-fr}}{{/content-fr}}</textarea>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">{{#i18n}}admin.post.form.content.en{{/i18n}}</label>
+            <textarea class="form-control" name="content-en" rows="10">{{#content-en}}{{content-en}}{{/content-en}}</textarea>
+        </div>
+        <div class="mb-5">
+            <label class="form-label">{{#i18n}}admin.post.form.addedAt{{/i18n}}</label>
+            <input class="form-control" type="text" name="addedAt" value="{{post.addedAt}}" required/>
+        </div>
+        <div class="text-center">
+            <input type="submit" class="btn btn-outline-primary" value="{{#i18n}}admin.post.save{{/i18n}}"/>
+        </div>
+    </form>
 </div>
 
 {{> footer}}

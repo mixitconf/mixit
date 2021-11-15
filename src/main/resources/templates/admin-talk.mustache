@@ -1,155 +1,89 @@
 {{> header}}
 
 <div class="mxt-wrapper--page-title">
-    <div class="row">
-        <div class="columns large-12">
-            <h1 class="text-center">{{#i18n}}admin.talk.title{{/i18n}}</h1>
-        </div>
-    </div>
+    <h1 class="text-center">{{#i18n}}admin.talk.title{{/i18n}}</h1>
 </div>
 
-<div class="mxt-wrapper--page-content">
-    <div class="callout">
-        <div class="large-12 large-centered columns">
-            <div class="row">
-                <div class="large-12 columns">
-                    {{#talk.id}}<form action="/admin/talks/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.talk.delete.confirm{{/i18n}}');">
-                        <input type="hidden" name="id" value="{{talk.id}}"/>
-                        <input type="submit" class="button expand" value="{{#i18n}}admin.talk.delete{{/i18n}}"/>
-                    </form>{{/talk.id}}
-                    <form action="/admin/talks" method="post">
-                        {{#talk.id}}<input type="hidden" name="id" value="{{talk.id}}"/>{{/talk.id}}
-                        <input type="hidden" name="event" value="{{talk.event}}"/>
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <label>
-                                    {{#i18n}}admin.talk.form.title{{/i18n}}
-                                    <input type="text" name="title" value="{{talk.title}}" required/>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <label>
-                                    {{#i18n}}admin.talk.form.topic{{/i18n}}
-                                    <select name="topic" required>
-                                        {{#topics}}
-                                            <option value="{{first}}"{{#second}} selected{{/second}}>{{first}}</option>
-                                        {{/topics}}
-                                    </select>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <label>
-                                    {{#i18n}}admin.talk.form.summary{{/i18n}}
-                                    <textarea name="summary" rows="5" required>{{talk.summary}}</textarea>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <label>
-                                    {{#i18n}}admin.talk.form.description{{/i18n}}
-                                    <textarea name="description" rows="10">{{#talk.description}}{{talk.description}}{{/talk.description}}</textarea>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <label>
-                                    {{#i18n}}admin.talk.form.language{{/i18n}}
-                                    <select name="language" required>
-                                        {{#languages}}
-                                        <option value="{{first}}"{{#second}} selected{{/second}}>{{first}}</option>
-                                        {{/languages}}
-                                    </select>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <label>
-                                    {{#i18n}}admin.talk.form.speakers{{/i18n}}
-                                    <input type="text" name="speakers" value="{{speakers}}" required/>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <label>
-                                    {{#i18n}}admin.talk.form.video{{/i18n}}
-                                    <input type="text" name="video" value="{{#talk.video}}{{talk.video}}{{/talk.video}}"/>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <label>
-                                    {{#i18n}}admin.talk.form.room{{/i18n}}
-                                    <select name="room" required>
-                                        {{#rooms}}
-                                        <option value="{{first}}"{{#third}} selected{{/third}}>{{#i18n}}{{second}}{{/i18n}}</option>
-                                        {{/rooms}}
-                                    </select>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <label>
-                                    {{#i18n}}admin.talk.form.format{{/i18n}}
-                                    <select name="format" required>
-                                        {{#formats}}
-                                        <option value="{{first}}"{{#second}} selected{{/second}}>{{first}}</option>
-                                        {{/formats}}
-                                    </select>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <label>
-                                    {{#i18n}}admin.talk.form.addedAt{{/i18n}}
-                                    <input type="text" name="addedAt" value="{{talk.addedAt}}" required/>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <label>
-                                    {{#i18n}}admin.talk.form.start{{/i18n}}
-                                    <input type="text" name="start" value="{{#talk.start}}{{talk.start}}{{/talk.start}}" required/>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <label>
-                                    {{#i18n}}admin.talk.form.end{{/i18n}}
-                                    <input type="text" name="end" value="{{#talk.end}}{{talk.end}}{{/talk.end}}" required/>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <label>
-                                    {{#i18n}}admin.talk.form.photo{{/i18n}}
-                                    <input type="text" name="photoUrls" value="{{#photos}}{{photos}}{{/photos}}"/>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 large-centered columns">
-                                <input type="submit" class="button expand" value="{{#i18n}}admin.talk.save{{/i18n}}"/>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+<div class="container mxt-wrapper--page-content">
+    {{#talk.id}}<form class="text-center mb-4" action="/admin/talks/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.talk.delete.confirm{{/i18n}}');">
+        <input type="hidden" name="id" value="{{talk.id}}"/>
+        <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}admin.talk.delete{{/i18n}}"/>
+    </form>{{/talk.id}}
+    <form action="/admin/talks" method="post">
+        {{#talk.id}}<input type="hidden" name="id" value="{{talk.id}}"/>{{/talk.id}}
+        <input type="hidden" name="event" value="{{talk.event}}"/>
+        <div class="mb-3">
+            <label class="form-label">{{#i18n}}admin.talk.form.title{{/i18n}}</label>
+            <input class="form-control" type="text" name="title" value="{{talk.title}}" required/>
         </div>
-    </div>
+        <div class="mb-3">
+            <label class="form-label">{{#i18n}}admin.talk.form.topic{{/i18n}}</label>
+            <select class="form-control" name="topic" required>
+                {{#topics}}
+                    <option value="{{first}}"{{#second}} selected{{/second}}>{{first}}</option>
+                {{/topics}}
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">{{#i18n}}admin.talk.form.summary{{/i18n}}</label>
+            <textarea class="form-control" name="summary" rows="5" required>{{talk.summary}}</textarea>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">{{#i18n}}admin.talk.form.description{{/i18n}}</label>
+            <textarea class="form-control" name="description" rows="10">{{#talk.description}}{{talk.description}}{{/talk.description}}</textarea>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">{{#i18n}}admin.talk.form.language{{/i18n}}</label>
+            <select class="form-control" name="language" required>
+                {{#languages}}
+                <option value="{{first}}"{{#second}} selected{{/second}}>{{first}}</option>
+                {{/languages}}
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">{{#i18n}}admin.talk.form.speakers{{/i18n}}</label>
+            <input class="form-control" type="text" name="speakers" value="{{speakers}}" required/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">{{#i18n}}admin.talk.form.video{{/i18n}}</label>
+            <input class="form-control" type="text" name="video" value="{{#talk.video}}{{talk.video}}{{/talk.video}}"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">{{#i18n}}admin.talk.form.room{{/i18n}}</label>
+            <select class="form-control" name="room" required>
+                {{#rooms}}
+                <option value="{{first}}"{{#third}} selected{{/third}}>{{#i18n}}{{second}}{{/i18n}}</option>
+                {{/rooms}}
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">{{#i18n}}admin.talk.form.format{{/i18n}}</label>
+            <select class="form-control" name="format" required>
+                {{#formats}}
+                <option value="{{first}}"{{#second}} selected{{/second}}>{{first}}</option>
+                {{/formats}}
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">{{#i18n}}admin.talk.form.addedAt{{/i18n}} </label>
+            <input class="form-control" type="text" name="addedAt" value="{{talk.addedAt}}" required/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">{{#i18n}}admin.talk.form.start{{/i18n}}</label>
+            <input class="form-control" type="text" name="start" value="{{#talk.start}}{{talk.start}}{{/talk.start}}" required/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">{{#i18n}}admin.talk.form.end{{/i18n}}</label>
+            <input class="form-control" type="text" name="end" value="{{#talk.end}}{{talk.end}}{{/talk.end}}" required/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">{{#i18n}}admin.talk.form.photo{{/i18n}}</label>
+            <input class="form-control" type="text" name="photoUrls" value="{{#photos}}{{photos}}{{/photos}}"/>
+        </div>
+        <div class="mb-3 text-center">
+            <input type="submit" class="btn btn-outline-primary" value="{{#i18n}}admin.talk.save{{/i18n}}"/>
+        </div>
+    </form>
 </div>
 
 {{> footer}}

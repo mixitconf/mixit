@@ -51,7 +51,7 @@ class WebsiteRoutes(
             GET("/about", globalHandler::findAboutView)
             GET("/news", newsHandler::newsView)
             GET("/ticketing", ticketingHandler::ticketing)
-            GET("/sponsors") { sponsorHandler.viewWithSponsors(2021, it) }
+            GET("/sponsors") { sponsorHandler.viewWithSponsors(2022, it) }
             GET("/mixteen") { sponsorHandler.viewWithSponsors("mixteen", arrayOf(SponsorshipLevel.MIXTEEN), "mixteen.title", 2021, it) }
             GET("/faq", globalHandler::faqView)
             GET("/come", globalHandler::comeToMixitView)

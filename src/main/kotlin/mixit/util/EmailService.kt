@@ -38,18 +38,18 @@ class EmailService(private val properties: MixitProperties,
         val subject = messageSource.getMessage("$templateName-subject", null, locale)
         val email = cryptographer.decrypt(user.email)!!
 
-        runCatching {
-            generateModelForExernalCall(properties.baseUri, locale, messageSource).apply {
-                put("user", user)
-                put("encodedemail", URLEncoder.encode(email.encodeToBase64(), "UTF-8"))
-
-                val content = templateService.load(templateName, this)
-                emailSender.send(EmailMessage(email, subject, content))
-            }
-        }.onFailure {
-            logger.error("Not possible to send email [$subject] to ${user.email}", it)
-            throw EmailSenderException("Error when system send the mail $subject")
-        }
+//        runCatching {
+//            generateModelForExernalCall(properties.baseUri, locale, messageSource).apply {
+//                put("user", user)
+//                put("encodedemail", URLEncoder.encode(email.encodeToBase64(), "UTF-8"))
+//
+//                val content = templateService.load(templateName, this)
+//                emailSender.send(EmailMessage(email, subject, content))
+//            }
+//        }.onFailure {
+//            logger.error("Not possible to send email [$subject] to ${user.email}", it)
+//            throw EmailSenderException("Error when system send the mail $subject")
+//        }
     }
 
 }

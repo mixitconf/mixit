@@ -1,81 +1,53 @@
 {{> header}}
 
 <div class="mxt-wrapper--page-title">
-    <div class="row">
-        <div class="columns large-8 large-offset-2">
-            <h1 class="text-center">{{#i18n}}admin.event.title{{/i18n}}</h1>
-        </div>
-    </div>
+    <h1 class="text-center">{{#i18n}}admin.event.title{{/i18n}}</h1>
 </div>
 
-<div class="mxt-wrapper--page-content">
-    <div class="callout">
-        <div class="large-12 large-centered columns">
-            <div class="row">
-                <div class="large-12 columns">
-                    {{^creationMode}}<form action="/admin/events/{{eventId}}/sponsors/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.event.sponsors.delete.confirm{{/i18n}}');">
-                        <input type="hidden" name="eventId" value="{{eventId}}"/>
-                        <input type="hidden" name="sponsorId" value="{{eventSponsoring.sponsorId}}"/>
-                        <input type="hidden" name="level" value="{{eventSponsoring.level}}"/>
-                        <input type="submit" class="button expand" value="{{#i18n}}admin.event.sponsors.delete{{/i18n}}"/>
-                    </form>{{/creationMode}}
-                    <form
-                            {{#creationMode}}action="/admin/events/{{eventId}}/sponsors/create"{{/creationMode}}
-                            {{^creationMode}}action="/admin/events/{{eventId}}/sponsors"{{/creationMode}}
-                            method="post">
-                        <input type="hidden" name="eventId" value="{{eventId}}"/>
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <label>
-                                    {{#i18n}}admin.event.sponsors.form.level{{/i18n}}
-                                    {{#creationMode}}
-                                        <select name="level" required>
-                                            {{#levels}}
-                                                <option value="{{first}}"{{#second}} selected{{/second}}>{{first}}</option>
-                                            {{/levels}}
-                                        </select>
-                                    {{/creationMode}}
-                                    {{^creationMode}}
-                                        <input type="text" value="{{eventSponsoring.level}}" disabled="true"/>
-                                        <input type="hidden" name="level" value="{{eventSponsoring.level}}"/>
-                                    {{/creationMode}}
-
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <label>
-                                    {{#i18n}}admin.event.sponsors.form.sponsorId{{/i18n}} <a href="/admin/users">{{#i18n}}admin.event.sponsors.form.sponsorId.text{{/i18n}}</a>
-                                    {{#creationMode}}
-                                        <input type="text" name="sponsorId" value="{{eventSponsoring.sponsorId}}" required />
-                                    {{/creationMode}}
-                                    {{^creationMode}}
-                                        <input type="text" value="{{eventSponsoring.sponsorId}}" disabled="true" />
-                                        <input type="hidden" name="sponsorId" value="{{eventSponsoring.sponsorId}}"/>
-                                    {{/creationMode}}
-
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 columns">
-                                <label>
-                                    {{#i18n}}admin.event.sponsors.form.subscriptiondate{{/i18n}}&nbsp;
-                                    <input type="text" name="subscriptionDate" value="{{eventSponsoring.subscriptionDate}}"/>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="large-12 large-centered columns">
-                                <input type="submit" class="button expand" value="{{#i18n}}admin.event.sponsors.save{{/i18n}}"/>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+<div class="container mxt-wrapper--page-content">
+    {{^creationMode}}<form action="/admin/events/{{eventId}}/sponsors/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.event.sponsors.delete.confirm{{/i18n}}');">
+        <input type="hidden" name="eventId" value="{{eventId}}"/>
+        <input type="hidden" name="sponsorId" value="{{eventSponsoring.sponsorId}}"/>
+        <input type="hidden" name="level" value="{{eventSponsoring.level}}"/>
+        <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}admin.event.sponsors.delete{{/i18n}}"/>
+    </form>{{/creationMode}}
+    <form
+            {{#creationMode}}action="/admin/events/{{eventId}}/sponsors/create"{{/creationMode}}
+            {{^creationMode}}action="/admin/events/{{eventId}}/sponsors"{{/creationMode}}
+            method="post" class="row mt-3">
+        <input type="hidden" name="eventId" value="{{eventId}}"/>
+        <div class="col-12 mb-3">
+            <label class="form-label">{{#i18n}}admin.event.sponsors.form.level{{/i18n}}</label>
+            {{#creationMode}}
+                <select class="form-control" name="level" required>
+                    {{#levels}}
+                        <option value="{{first}}"{{#second}} selected{{/second}}>{{first}}</option>
+                    {{/levels}}
+                </select>
+            {{/creationMode}}
+            {{^creationMode}}
+                <input class="form-control" type="text" value="{{eventSponsoring.level}}" disabled="true"/>
+                <input type="hidden" name="level" value="{{eventSponsoring.level}}"/>
+            {{/creationMode}}
         </div>
-    </div>
+        <div class="col-12 mb-3">
+            <label class="form-label">{{#i18n}}admin.event.sponsors.form.sponsorId{{/i18n}} <a href="/admin/users">{{#i18n}}admin.event.sponsors.form.sponsorId.text{{/i18n}}</a> </label>
+            {{#creationMode}}
+                <input class="form-control" type="text" name="sponsorId" value="{{eventSponsoring.sponsorId}}" required />
+            {{/creationMode}}
+            {{^creationMode}}
+                <input class="form-control" type="text" value="{{eventSponsoring.sponsorId}}" disabled="true" />
+                <input type="hidden" name="sponsorId" value="{{eventSponsoring.sponsorId}}"/>
+            {{/creationMode}}
+        </div>
+        <div class="col-12 mb-3">
+            <label class="form-label">{{#i18n}}admin.event.sponsors.form.subscriptiondate{{/i18n}}&nbsp;</label>
+            <input class="form-control" type="text" name="subscriptionDate" value="{{eventSponsoring.subscriptionDate}}"/>
+        </div>
+        <div class="col-12 mb-3 text-center">
+            <input type="submit" class="btn btn-outline-primary expand" value="{{#i18n}}admin.event.sponsors.save{{/i18n}}"/>
+        </div>
+    </form>
 </div>
 
 {{> footer}}

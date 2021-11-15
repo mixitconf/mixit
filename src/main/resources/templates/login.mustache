@@ -1,34 +1,18 @@
 {{> header}}
 
 <div class="mxt-wrapper--page-title">
+    <h1 class="text-center">{{#i18n}}login.title{{/i18n}}</h1>
+</div>
+
+<div class="container mxt-wrapper--page-content">
     <div class="row">
-        <div class="columns large-12">
-            <h1 class="text-center">{{#i18n}}login.title{{/i18n}}</h1>
-        </div>
-    </div>
-</div>
-
-<div class="mxt-wrapper--page-content">
-    <div class="large-3 large-centered columns">
-      <div class="callout">
-        <div class="row">
-          <div class="large-12 columns">
+        <div class="col-10 offset-1 col-lg-6 offset-lg-3 text-center">
             <form action="/login" method="post">
-              <div class="row">
-                <div class="large-12 columns">
-                  <input type="text" name="email" placeholder="contact@mix-it.fr" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="large-12 large-centered columns">
-                  <input type="submit" class="button expand" value="{{#i18n}}login.action.signin{{/i18n}}"/>
-                </div>
-              </div>
+                <input type="text" class="form-control" name="email" placeholder="contact@mix-it.fr" />
+
+                <button type="submit" class="mt-3 btn btn-primary mxt-btn-primary">{{#i18n}}login.action.signin{{/i18n}}</button>
             </form>
-          </div>
         </div>
-      </div>
     </div>
 </div>
-
 {{> footer}}

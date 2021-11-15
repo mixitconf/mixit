@@ -1,198 +1,163 @@
 {{> header}}
 
-<div class="{{^hasTalks}}mxt-wrapper--page-title{{/hasTalks}}{{#hasTalks}}mxt-wrapper--talks{{/hasTalks}}">
-    <div class="row">
-        <div class="columns large-12 menu-centered">
-            <ul class="menu center">
-                <li class="menu-text">
-                    <img src="{{^user.emailHash}}{{#user.photoUrl}}{{user.photoUrl}}{{/user.photoUrl}}{{/user.emailHash}}{{#user.emailHash}}https://www.gravatar.com/avatar/{{user.emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/user.emailHash}}"
-                         class="mxt-img-avatar__speaker">
-                    <div>{{#hasTalks}}{{#i18n}}user.speaker{{/i18n}}{{/hasTalks}}{{^hasTalks}}{{#i18n}}user.standard{{/i18n}}{{/hasTalks}}</div>
-                </li>
-            </ul>
-            {{#admin}}
-                <div>
-                    <a href="{{localePrefix}}/admin/users/edit/{{user.login}}" class="button hollow mxt-anchor--uppercase" style="margin-bottom: 0">{{#i18n}}admin.talks.actions.update{{/i18n}}</a>
-                </div>
-            {{/admin}}
+<div class="mxt-wrapper--page-title text-center">
+    <ul class="mxt-wrapper-list-inline">
+        <li>
+            <img src="{{^user.emailHash}}{{#user.photoUrl}}{{user.photoUrl}}{{/user.photoUrl}}{{/user.emailHash}}{{#user.emailHash}}https://www.gravatar.com/avatar/{{user.emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/user.emailHash}}"
+            class="mxt-img-avatar__speaker">
+            <div class="mxt-text--page-title">{{#hasTalks}}{{#i18n}}user.speaker{{/i18n}}{{/hasTalks}}{{^hasTalks}}{{#i18n}}user.standard{{/i18n}}{{/hasTalks}}</div>
+        </li>
+    </ul>
+    {{#admin}}
+        <div>
+            <a href="{{localePrefix}}/admin/users/edit/{{user.login}}" class="btn btn-outline-primary" style="margin-bottom: 0">{{#i18n}}admin.talks.actions.update{{/i18n}}</a>
         </div>
-    </div>
+    {{/admin}}
 </div>
 
-<div class="mxt-wrapper--page-content">
+
+<div class="container mxt-wrapper--page-content">
     <form action="/me" method="post">
         <input type="hidden" name="login" value="{{user.login}}"/>
         <div class="row">
-            <div class="column large-12 callout">
-                <div class="large-8 large-centered columns">
-                    {{#hasErrors}}
-                        <div class="callout mxt-wrapper--error-callout">
-                            {{#errors.entrySet}}
-                                {{#i18n}}{{value}}{{/i18n}}<br>
-                            {{/errors.entrySet}}
-                        </div>
-                    {{/hasErrors}}
-                    <div class="row">
-                        <div class="large-12 columns">
-                            <label class="{{#errors.firstname}}is-invalid-label{{/errors.firstname}}">
-                                {{#i18n}}user.form.firstname{{/i18n}}
-                                <input type="text" name="firstname" class="{{#errors.firstname}}is-invalid-input{{/errors.firstname}}"
-                                       value="{{user.firstname}}" required id="firstname" />
-                            </label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="large-12 columns">
-                            <label class="{{#errors.lastname}}is-invalid-label{{/errors.lastname}}">
-                                {{#i18n}}user.form.lastname{{/i18n}}
-                                <input type="text" name="lastname" class="{{#errors.lastname}}is-invalid-input{{/errors.lastname}}"
-                                       value="{{user.lastname}}" required id="lastname"/>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="large-12 columns">
-                            <label class="{{#errors.email}}is-invalid-label{{/errors.email}}">
-                                {{#i18n}}user.form.email{{/i18n}}
-                                <input type="text" name="email" class="{{#errors.email}}is-invalid-input{{/errors.email}}"
-                                       value="{{#usermail}}{{usermail}}{{/usermail}}" required id="email"/>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="large-12 columns">
-                            <label class="{{#errors.company}}is-invalid-label{{/errors.company}}">
-                                {{#i18n}}user.form.company{{/i18n}}
-                                <input type="text" name="company" class="{{#errors.company}}is-invalid-input{{/errors.company}}"
-                                       value="{{#user.company}}{{user.company}}{{/user.company}}" id="company"/>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="large-12 columns">
-                            <label class="{{#errors.description-fr}}is-invalid-label{{/errors.description-fr}}">
-                                {{#i18n}}user.form.description.fr{{/i18n}}&nbsp;<span class="help-text">{{#i18n}}user.form.description.markdown{{/i18n}}</span>
-                                <textarea name="description-fr" rows="10" required class="{{#errors.description-fr}}is-invalid-input{{/errors.description-fr}}"
-                                          id="description.fr">{{#description-fr}}{{description-fr}}{{/description-fr}}</textarea>
-                            </label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="large-12 columns">
-                            <label class="{{#errors.description-en}}is-invalid-label{{/errors.description-en}}">
-                                {{#i18n}}user.form.description.en{{/i18n}}&nbsp;<span class="help-text">{{#i18n}}user.form.description.markdown{{/i18n}}</span>
-                                <textarea name="description-en" rows="10" required class="{{#errors.description-en}}is-invalid-input{{/errors.description-en}}"
-                                          id="description.en">{{#description-en}}{{description-en}}{{/description-en}}</textarea>
-                            </label>
-                        </div>
-                    </div>
-                    <hr/>
-                    <div class="row">
-                        <div class="small-12 columns">
-                            {{#i18n}}user.form.photo{{/i18n}}
-                        </div>
-                        <div class="large-12 columns">
-                            <label class="{{#errors.photoUrl}}is-invalid-label{{/errors.photoUrl}}">
-                                {{#i18n}}user.form.photoUrl{{/i18n}}
-                                <input type="text" name="photoUrl" class="{{#errors.photoUrl}}is-invalid-input{{/errors.photoUrl}}"
-                                       value="{{#user.photoUrl}}{{user.photoUrl}}{{/user.photoUrl}}" id="photoUrl"/>
-                            </label>
-                        </div>
-                    </div>
-                    <hr/>
-                    <div class="row">
-                        <div class="small-12 columns">
-                            {{#i18n}}user.form.links{{/i18n}}
-                        </div>
-                        {{#userlinks}}
-                            {{#userlinks.link1}}
-                                <div class="large-6 small-12 columns">
-                                    <label class="{{#errors.link1Name}}is-invalid-label{{/errors.link1Name}}">
-                                        {{#i18n}}user.form.link.name{{/i18n}} 1
-                                        <input type="text" name="link1Name" class="{{#errors.link1Name}}is-invalid-input{{/errors.link1Name}}"
-                                               value="{{name}}" id="link1Name"/>
-                                    </label>
-                                </div>
-                                <div class="large-6 small-12 columns">
-                                    <label class="{{#errors.link1Url}}is-invalid-label{{/errors.link1Url}}">
-                                        {{#i18n}}user.form.link.url{{/i18n}} 1
-                                        <input type="text" name="link1Url" class="{{#errors.link1Url}}is-invalid-input{{/errors.link1Url}}"
-                                               value="{{url}}" id="link1Url"/>
-                                    </label>
-                                </div>
-                            {{/userlinks.link1}}
-                            {{#userlinks.link2}}
-                                <div class="large-6 small-12 columns">
-                                    <label class="{{#errors.link2Name}}is-invalid-label{{/errors.link2Name}}">
-                                        {{#i18n}}user.form.link.name{{/i18n}} 2
-                                        <input type="text" name="link2Name" class="{{#errors.link2Name}}is-invalid-input{{/errors.link2Name}}"
-                                               value="{{name}}" id="link2Name"/>
-                                    </label>
-                                </div>
-                                <div class="large-6 small-12 columns">
-                                    <label class="{{#errors.link2Url}}is-invalid-label{{/errors.link2Url}}">
-                                        {{#i18n}}user.form.link.url{{/i18n}} 2
-                                        <input type="text" name="link2Url" class="{{#errors.link2Url}}is-invalid-input{{/errors.link2Url}}"
-                                               value="{{url}}" id="link2Url"/>
-                                    </label>
-                                </div>
-                            {{/userlinks.link2}}
-                            {{#userlinks.link3}}
-                                <div class="large-6 small-12 columns">
-                                    <label class="{{#errors.link3Name}}is-invalid-label{{/errors.link3Name}}">
-                                        {{#i18n}}user.form.link.name{{/i18n}} 3
-                                        <input type="text" name="link3Name" class="{{#errors.link3Name}}is-invalid-input{{/errors.link3Name}}"
-                                               value="{{name}}" id="link3Name"/>
-                                    </label>
-                                </div>
-                                <div class="large-6 small-12 columns">
-                                    <label class="{{#errors.link3Url}}is-invalid-label{{/errors.link3Url}}">
-                                        {{#i18n}}user.form.link.url{{/i18n}} 3
-                                        <input type="text" name="link3Url" class="{{#errors.link3Url}}is-invalid-input{{/errors.link3Url}}"
-                                               value="{{url}}" id="link3Url"/>
-                                    </label>
-                                </div>
-                            {{/userlinks.link3}}
-                            {{#userlinks.link4}}
-                                <div class="large-6 small-12 columns">
-                                    <label class="{{#errors.link4Name}}is-invalid-label{{/errors.link4Name}}">
-                                        {{#i18n}}user.form.link.name{{/i18n}} 4
-                                        <input type="text" name="link4Name" class="{{#errors.link4Name}}is-invalid-input{{/errors.link4Name}}"
-                                               value="{{name}}" id="link4Name"/>
-                                    </label>
-                                </div>
-                                <div class="large-6 small-12 columns">
-                                    <label class="{{#errors.link4Url}}is-invalid-label{{/errors.link4Url}}">
-                                        {{#i18n}}user.form.link.url{{/i18n}} 4
-                                        <input type="text" name="link4Url" class="{{#errors.link4Url}}is-invalid-input{{/errors.link4Url}}"
-                                               value="{{url}}" id="link4Url"/>
-                                    </label>
-                                </div>
-                            {{/userlinks.link4}}
-                            {{#userlinks.link5}}
-                                <div class="large-6 small-12 columns">
-                                    <label class="{{#errors.link5Name}}is-invalid-label{{/errors.link5Name}}">
-                                        {{#i18n}}user.form.link.name{{/i18n}} 5
-                                        <input type="text" name="link5Name" class="{{#errors.link5Name}}is-invalid-input{{/errors.link5Name}}"
-                                               value="{{name}}" id="link5Name"/>
-                                    </label>
-                                </div>
-                                <div class="large-6 small-12 columns">
-                                    <label class="{{#errors.link5Url}}is-invalid-label{{/errors.link5Url}}">
-                                        {{#i18n}}user.form.link.url{{/i18n}} 5
-                                        <input type="text" name="link5Url" class="{{#errors.link5Url}}is-invalid-input{{/errors.link5Url}}"
-                                               value="{{url}}" id="link5Url"/>
-                                    </label>
-                                </div>
-                            {{/userlinks.link5}}
-                        {{/userlinks}}
-                    </div>
-                    <div class="row">
-                        <div class="large-12 large-centered columns">
-                            <input type="submit" class="button expand" value="{{#i18n}}user.save{{/i18n}}"/>
-                        </div>
-                    </div>
+            {{#hasErrors}}
+                <div class="callout mxt-wrapper--error-callout">
+                    {{#errors.entrySet}}
+                        {{#i18n}}{{value}}{{/i18n}}<br>
+                    {{/errors.entrySet}}
                 </div>
+            {{/hasErrors}}
+            <div class="col-12 mb-3">
+                <label class="form-label {{#errors.firstname}}is-invalid-label{{/errors.firstname}}">
+                    {{#i18n}}user.form.firstname{{/i18n}}</label>
+                <input type="text" name="firstname" class="form-control {{#errors.firstname}}is-invalid-input{{/errors.firstname}}"
+                           value="{{user.firstname}}" required id="firstname" />
+            </div>
+            <div class="col-12 mb-3">
+                <label class="form-label {{#errors.lastname}}is-invalid-label{{/errors.lastname}}">
+                    {{#i18n}}user.form.lastname{{/i18n}}</label>
+                <input type="text" name="lastname" class="form-control {{#errors.lastname}}is-invalid-input{{/errors.lastname}}"
+                           value="{{user.lastname}}" required id="lastname"/>
+            </div>
+            <div class="col-12 mb-3">
+                <label class="form-label {{#errors.email}}is-invalid-label{{/errors.email}}">
+                    {{#i18n}}user.form.email{{/i18n}}</label>
+                <input type="text" name="email" class="form-control {{#errors.email}}is-invalid-input{{/errors.email}}"
+                           value="{{#usermail}}{{usermail}}{{/usermail}}" required id="email"/>
+
+            </div>
+            <div class="col-12 mb-3">
+                <label class="form-label {{#errors.company}}is-invalid-label{{/errors.company}}">
+                    {{#i18n}}user.form.company{{/i18n}}</label>
+                <input type="text" name="company" class="form-control {{#errors.company}}is-invalid-input{{/errors.company}}"
+                           value="{{#user.company}}{{user.company}}{{/user.company}}" id="company"/>
+            </div>
+            <div class="col-12 mb-3">
+                <label class="form-label {{#errors.description-fr}}is-invalid-label{{/errors.description-fr}}">
+                    {{#i18n}}user.form.description.fr{{/i18n}}&nbsp;<span class="help-text">{{#i18n}}user.form.description.markdown{{/i18n}}</span>
+                </label>
+                <textarea name="description-fr" rows="10" required class="form-control  {{#errors.description-fr}}is-invalid-input{{/errors.description-fr}}"
+                              id="description.fr">{{#description-fr}}{{description-fr}}{{/description-fr}}</textarea>
+            </div>
+            <div class="col-12 mb-3">
+                <label class="form-label {{#errors.description-en}}is-invalid-label{{/errors.description-en}}">
+                    {{#i18n}}user.form.description.en{{/i18n}}&nbsp;<span class="help-text">{{#i18n}}user.form.description.markdown{{/i18n}}</span>
+                </label>
+                <textarea name="description-en" rows="10" required class="form-control  {{#errors.description-en}}is-invalid-input{{/errors.description-en}}"
+                              id="description.en">{{#description-en}}{{description-en}}{{/description-en}}</textarea>
+            </div>
+            <div class="col-12 mb-3 mt-5">
+                <div><b>{{#i18n}}user.form.photo{{/i18n}}</b></div>
+
+                <label class="mt-2 form-label {{#errors.photoUrl}}is-invalid-label{{/errors.photoUrl}}">
+                    {{#i18n}}user.form.photoUrl{{/i18n}} </label>
+                <input type="text" name="photoUrl" class="form-control {{#errors.photoUrl}}is-invalid-input{{/errors.photoUrl}}"
+                           value="{{#user.photoUrl}}{{user.photoUrl}}{{/user.photoUrl}}" id="photoUrl"/>
+
+            </div>
+            <div class="col-12 mb-3 mt-5 row">
+                <div><b>{{#i18n}}user.form.links{{/i18n}}</b></div>
+                {{#userlinks}}
+                    {{#userlinks.link1}}
+                        <div class="col-12 col-md-6 mb-3">
+                            <label class="mt-2 form-label {{#errors.link1Name}}is-invalid-label{{/errors.link1Name}}">
+                                {{#i18n}}user.form.link.name{{/i18n}} 1</label>
+                            <input type="text" name="link1Name" class="form-control {{#errors.link1Name}}is-invalid-input{{/errors.link1Name}}"
+                                       value="{{name}}" id="link1Name"/>
+
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label class="form-label {{#errors.link1Url}}is-invalid-label{{/errors.link1Url}}">
+                                {{#i18n}}user.form.link.url{{/i18n}} 1</label>
+                            <input type="text" name="link1Url" class="form-control {{#errors.link1Url}}is-invalid-input{{/errors.link1Url}}"
+                                       value="{{url}}" id="link1Url"/>
+
+                        </div>
+                    {{/userlinks.link1}}
+                    {{#userlinks.link2}}
+                        <div class="col-12 col-md-6 mb-3">
+                            <label class="form-label {{#errors.link2Name}}is-invalid-label{{/errors.link2Name}}">
+                                {{#i18n}}user.form.link.name{{/i18n}} 2</label>
+                            <input type="text" name="link2Name" class="form-control {{#errors.link2Name}}is-invalid-input{{/errors.link2Name}}"
+                                       value="{{name}}" id="link2Name"/>
+
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label class="form-label {{#errors.link2Url}}is-invalid-label{{/errors.link2Url}}">
+                                {{#i18n}}user.form.link.url{{/i18n}} 2</label>
+                            <input type="text" name="link2Url" class="form-control {{#errors.link2Url}}is-invalid-input{{/errors.link2Url}}"
+                                       value="{{url}}" id="link2Url"/>
+
+                        </div>
+                    {{/userlinks.link2}}
+                    {{#userlinks.link3}}
+                        <div class="col-12 col-md-6 mb-3">
+                            <label class="form-label {{#errors.link3Name}}is-invalid-label{{/errors.link3Name}}">
+                                {{#i18n}}user.form.link.name{{/i18n}} 3</label>
+                            <input type="text" name="link3Name" class="form-control {{#errors.link3Name}}is-invalid-input{{/errors.link3Name}}"
+                                       value="{{name}}" id="link3Name"/>
+
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label class="form-label {{#errors.link3Url}}is-invalid-label{{/errors.link3Url}}">
+                                {{#i18n}}user.form.link.url{{/i18n}} 3</label>
+                            <input type="text" name="link3Url" class="form-control {{#errors.link3Url}}is-invalid-input{{/errors.link3Url}}"
+                                       value="{{url}}" id="link3Url"/>
+
+                        </div>
+                    {{/userlinks.link3}}
+                    {{#userlinks.link4}}
+                        <div class="col-12 col-md-6 mb-3">
+                            <label class="form-label {{#errors.link4Name}}is-invalid-label{{/errors.link4Name}}">
+                                {{#i18n}}user.form.link.name{{/i18n}} 4</label>
+                            <input type="text" name="link4Name" class="form-control {{#errors.link4Name}}is-invalid-input{{/errors.link4Name}}"
+                                       value="{{name}}" id="link4Name"/>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label class="form-label {{#errors.link4Url}}is-invalid-label{{/errors.link4Url}}">
+                                {{#i18n}}user.form.link.url{{/i18n}} 4</label>
+                            <input type="text" name="link4Url" class="form-control {{#errors.link4Url}}is-invalid-input{{/errors.link4Url}}"
+                                       value="{{url}}" id="link4Url"/>
+                        </div>
+                    {{/userlinks.link4}}
+                    {{#userlinks.link5}}
+                        <div class="col-12 col-md-6 mb-3">
+                            <label class="form-label {{#errors.link5Name}}is-invalid-label{{/errors.link5Name}}">
+                                {{#i18n}}user.form.link.name{{/i18n}} 5</label>
+                            <input type="text" name="link5Name" class="form-control {{#errors.link5Name}}is-invalid-input{{/errors.link5Name}}"
+                                       value="{{name}}" id="link5Name"/>
+                        </div>
+                        <div class="col-12 col-md-6 mb-3">
+                            <label class="form-label {{#errors.link5Url}}is-invalid-label{{/errors.link5Url}}">
+                                {{#i18n}}user.form.link.url{{/i18n}} 5</label>
+                            <input type="text" name="link5Url" class="form-control {{#errors.link5Url}}is-invalid-input{{/errors.link5Url}}"
+                                       value="{{url}}" id="link5Url"/>
+                        </div>
+                    {{/userlinks.link5}}
+                {{/userlinks}}
+            </div>
+            <div class="col-12 mt-5 text-center">
+                <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}user.save{{/i18n}}"/>
             </div>
         </div>
     </form>

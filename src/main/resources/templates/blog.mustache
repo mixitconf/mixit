@@ -1,28 +1,18 @@
 {{> header}}
 
 <div class="mxt-wrapper--page-title">
-    <div class="row">
-        <div class="columns large-12">
-            <h1 class="text-center">{{#i18n}}blog.title{{/i18n}}</h1>
-        </div>
-    </div>
+    <h1 class="text-center">{{#i18n}}blog.title{{/i18n}}</h1>
 </div>
 
-<div class="mxt-wrapper--page-content">
-    <div class="row">
-        <div class="column large-12">
-            {{#posts}}
-            <div class="callout">
-                <article>
-                    <h2><a href="{{localePrefix}}/blog/{{slug}}" class="mxt-title--article">{{title}}</a></h2>
-                    <p class="subheader">{{#i18n}}blog.by{{/i18n}} <strong>{{author.firstname}}</strong>, {{#i18n}}blog.on{{/i18n}} <strong>{{addedAt}}</strong></p>
-                    <p>{{#markdown}}{{headline}}{{/markdown}}</p>
-                    <a href="{{localePrefix}}/blog/{{slug}}" class="button hollow align-center">{{#i18n}}blog.readmore{{/i18n}}</a>
-                </article>
-            </div>
-            {{/posts}}
-        </div>
-    </div>
+<div class="container mxt-wrapper--page-content">
+    {{#posts}}
+        <article class="mb-4">
+            <h2><a href="{{localePrefix}}/blog/{{slug}}" class="mxt-title--article">{{title}}</a></h2>
+            <p class="subheader">{{#i18n}}blog.by{{/i18n}} <strong>{{author.firstname}}</strong>, {{#i18n}}blog.on{{/i18n}} <strong>{{addedAt}}</strong></p>
+            <p>{{#markdown}}{{headline}}{{/markdown}}</p>
+            <a href="{{localePrefix}}/blog/{{slug}}" class="btn btn-outline-primary">{{#i18n}}blog.readmore{{/i18n}}</a>
+        </article>
+    {{/posts}}
 </div>
 
 {{> footer}}
