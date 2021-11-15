@@ -188,6 +188,24 @@ h3 {
   }
 }
 
+.mxt-img--container {
+  position: relative;
+  &:hover .mxt-img--overlay {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+}
+
+.mxt-img--speakers {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: grayscale(70%);
+  &:hover {
+    filter: grayscale(30%);
+  }
+}
+
 .mxt-img-avatar__speaker {
   border-radius: 100%;
   border: 7px solid #dbb9b8;
@@ -284,14 +302,23 @@ h3 {
 
 .mxt-wrapper--page {
   flex: 1;
+  background-color: #faf8f8;
 }
 
 .mxt-wrapper--page-content {
   position: relative;
-  top: -5em;
+  top: -3em;
   background-color: white;
   padding: 2em;
-  margin-bottom: -3em;
+  margin-bottom: -1em;
+}
+
+.mxt-wrapper--home-content {
+  position: relative;
+  background-color: white;
+  top: -3em;
+  padding: 2em;
+  margin-bottom: -1em;
 }
 
 .mxt-wrapper--callout {

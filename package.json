@@ -10,9 +10,9 @@
   "scripts": {
     "scss": "node-sass src/main/sass/app.scss -o build/classes/css && postcss build/classes/css/app.css -u autoprefixer -u cssnano -o build/resources/main/static/css/app.css",
     "typescript": "tsc src/main/ts/*.ts --target es6 --out build/classes/js/mixit.js;terser build/classes/js/mixit.js -o build/resources/main/static/js/mixit.js",
-    "copy-templates": "copyfiles -f 'src/main/resources/templates/*.*' 'build/resources/main/templates'",
-    "copy-messages": "copyfiles -f 'src/main/resources/messages*.properties' 'build/resources/main'",
-    "watch": "onchange 'src/main/sass/*.*' -- npm run scss & onchange 'src/main/resources/templates/*.*' -- npm run copy-templates & onchange 'src/main/resources/messages*.properties' -- npm run copy-messages"
+    "copy-templates": "copyfiles -f 'src/main/resources/templates/*.*' 'build/resources/main/templates/' & copyfiles -f 'src/main/resources/templates/error/*.*' 'build/resources/main/templates/error/'",
+    "copy-messages": "copyfiles -f 'src/main/resources/messages*.properties' 'build/resources/main/'",
+    "watch": "onchange 'src/main/sass/*.*' -- npm run scss & onchange 'src/main/resources/templates/*.*' -- npm run copy-templates & onchange 'src/main/resources/messages*.properties' -- npm run copy-messages & echo 'Watch is started'"
   },
   "dependencies": {
     "bootstrap": "^5.1.3",

@@ -9,30 +9,68 @@
             <h1 class="hide">{{#i18n}}home.wrapper.text{{/i18n}}
                 <img src="/images/svg/mxt-icon--heart.svg" class="mxt-icon--heart"
                     alt="{{#i18n}}home.wrapper.title{{/i18n}}"></h1>
-            <h2 class="pb-5 pt-2 mxt-text--small">
+            <h2 class="pt-2 mxt-text--small">
                 <small>{{#i18n}}home.wrapper.dates{{/i18n}}</small>
             </h2>
-
+            <p class="pb-5">
+                <img src="/images/svg/accessibility/mxt-icon--child-care.svg" class="mxt-icon--social" title="{{#i18n}}home.accessibility.childcare{{/i18n}}" alt="{{#i18n}}home.accessibility.childcare{{/i18n}}">
+                <img src="/images/svg/accessibility/mxt-icon--hearing-impaired.svg" class="mxt-icon--social" title="{{#i18n}}home.accessibility.hearing.impaired{{/i18n}}" alt="{{#i18n}}home.accessibility.hearing.impaired{{/i18n}}">
+                <img src="/images/svg/accessibility/mxt-icon--motor-disability.svg" class="mxt-icon--social" title="{{#i18n}}home.accessibility.motor.disability{{/i18n}}" alt="{{#i18n}}home.accessibility.motor.disability{{/i18n}}">
+                <img src="/images/svg/accessibility/mxt-icon--pregnant.svg" class="mxt-icon--social" title="{{#i18n}}home.accessibility.pregnant{{/i18n}}" alt="{{#i18n}}home.accessibility.pregnant{{/i18n}}">
+            </p>
         </div>
     </div>
 </div>
+<div class="container mxt-wrapper--home-content">
+    <p class="lead">{{#i18n}}home.2022.intro{{/i18n}}</p>
 
-<div class="row align-spaced">
-    <div class="column column-block text-center">
-        <h2 class="align-center">{{#i18n}}home.live.title{{/i18n}}</h2>
-        <p>{{#i18n}}home.live.description{{/i18n}}. {{#i18n}}home.quizz.intro{{/i18n}}</p>
-            <div style="display: flex">
-                <div style="flex: 1 0 0" class="hide-for-small-only">&nbsp;</div>
-                <div style="flex: 3 0 0">
-                    <div class="mxt-wrapper--intrinsic">
-                        <iframe src="https://player.vimeo.com/video/560334460" class="mxt-wrapper--video-player vimeo"
-                                allowfullscreen></iframe>
-                    </div>
+    <h2 class="subheader text-center pt-5">{{#i18n}}home.sponsors.title{{/i18n}}</h2>
+    <p class="pt-2">{{#i18n}}home.2022.sponsor{{/i18n}}</p>
+    <p class="text-center">
+        <a class="mxt-anchor--uppercase btn btn-primary mxt-btn-primary" href="{{#i18n}}home.sponsors.pdf.url{{/i18n}}">{{#i18n}}home.sponsors.pdf{{/i18n}}</a>
+    </p>
+</div>
 
-                </div>
-                <div style="flex: 1 0 0" class="hide-for-small-only">&nbsp;</div>
+<div class="container mxt-wrapper--home-content mt-5" style="background-color: #e6e6e6;">
+    <h2 class="subheader pt-2 text-center">{{#i18n}}home.2022.previous{{/i18n}}</h2>
+    <div class="row pt-2">
+        <div class="col-md-5">
+            <h2 class="pt-3" >{{#i18n}}home.outline.title{{/i18n}}</h2>
+            <br/>
+            <p class="lead">{{#i18n}}home.outline.description1{{/i18n}}</p>
+            <p>{{#i18n}}home.outline.description2{{/i18n}}</p>
+        </div>
+        <div class="col-md-7">
+            <div class="mxt-wrapper--intrinsic">
+                <iframe src="https://player.vimeo.com/video/346825478" class="mxt-wrapper--video-player vimeo"
+                        allowfullscreen></iframe>
             </div>
-        </p>
+        </div>
+    </div>
+    <h2 class="text-center pt-4 mb-4">
+        <small>{{#i18n}}home.speakers.title{{/i18n}}</small>
+    </h2>
+    <div class="row">
+        {{#stars-old}}
+            {{> home-speaker }}
+        {{/stars-old}}
+    </div>
+</div>
+
+<div class="container mxt-wrapper--home-content mt-5">
+    <h2 class="subheader pt-2 text-center">{{#i18n}}home.2022.knowledge{{/i18n}}</h2>
+
+    <div class="row pt-2">
+        <div class="col-md-5">
+            <p class="lead pt-5">{{#i18n}}home.2022.quizz{{/i18n}}</p>
+            <p>{{#i18n}}home.2022.videos{{/i18n}}</p>
+        </div>
+        <div class="col-md-7">
+            <div class="mxt-wrapper--intrinsic">
+                <iframe src="https://player.vimeo.com/video/560334460" class="mxt-wrapper--video-player vimeo"
+                        allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -53,13 +91,7 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="column">
-        <h2 class="subheader text-center">{{#i18n}}home.sponsors.title{{/i18n}}</h2>
-        <p class="text-center"><a class="mxt-anchor--uppercase" href="{{#i18n}}home.sponsors.pdf.url{{/i18n}}">{{#i18n}}home.sponsors.pdf{{/i18n}}</a> / <a
-                class="mxt-anchor--uppercase" href="mailto:contact@mix-it.fr" target="_top">{{#i18n}}home.sponsors.contact{{/i18n}}</a></p>
-    </div>
-</div>
+
 
 
 {{> footer}}

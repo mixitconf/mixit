@@ -47,7 +47,7 @@ class WebsiteRoutes(
         GET("/blog/feed", blogHandler::feed)
 
         accept(TEXT_HTML).nest {
-            GET("/") { sponsorHandler.viewWithSponsors("home", arrayOf(SponsorshipLevel.LANYARD, SponsorshipLevel.GOLD), null, 2021, it) }
+            GET("/") { sponsorHandler.viewWithSponsors("home", arrayOf(SponsorshipLevel.LANYARD, SponsorshipLevel.GOLD), null, 2022, it) }
             GET("/about", globalHandler::findAboutView)
             GET("/news", newsHandler::newsView)
             GET("/ticketing", ticketingHandler::ticketing)
