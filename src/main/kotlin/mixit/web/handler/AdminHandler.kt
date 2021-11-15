@@ -3,14 +3,56 @@ package mixit.web.handler
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.MixitProperties
-import mixit.model.*
+import mixit.model.Event
+import mixit.model.EventSponsoring
+import mixit.model.Language
 import mixit.model.Language.ENGLISH
 import mixit.model.Language.FRENCH
-import mixit.model.Role.*
-import mixit.model.Room.*
-import mixit.model.TalkFormat.*
-import mixit.repository.*
+import mixit.model.Link
+import mixit.model.Post
+import mixit.model.Role
+import mixit.model.Role.STAFF
+import mixit.model.Role.STAFF_IN_PAUSE
+import mixit.model.Role.USER
+import mixit.model.Room
+import mixit.model.Room.AMPHI1
+import mixit.model.Room.AMPHI2
+import mixit.model.Room.AMPHIC
+import mixit.model.Room.AMPHID
+import mixit.model.Room.AMPHIK
+import mixit.model.Room.MUMMY
+import mixit.model.Room.OUTSIDE
+import mixit.model.Room.ROOM1
+import mixit.model.Room.ROOM2
+import mixit.model.Room.ROOM3
+import mixit.model.Room.ROOM4
+import mixit.model.Room.ROOM5
+import mixit.model.Room.ROOM6
+import mixit.model.Room.ROOM7
+import mixit.model.Room.ROOM8
+import mixit.model.Room.SPEAKER
+import mixit.model.Room.SURPRISE
+import mixit.model.Room.UNKNOWN
+import mixit.model.SponsorshipLevel
+import mixit.model.Talk
+import mixit.model.TalkFormat
+import mixit.model.TalkFormat.CLOSING_SESSION
+import mixit.model.TalkFormat.KEYNOTE
+import mixit.model.TalkFormat.KEYNOTE_SURPRISE
+import mixit.model.TalkFormat.LIGHTNING_TALK
+import mixit.model.TalkFormat.RANDOM
+import mixit.model.TalkFormat.TALK
+import mixit.model.TalkFormat.WORKSHOP
+import mixit.model.Ticket
+import mixit.model.User
+import mixit.model.Users
+import mixit.repository.EventRepository
+import mixit.repository.PostRepository
+import mixit.repository.TalkRepository
+import mixit.repository.TicketRepository
+import mixit.repository.UserRepository
 import mixit.util.Cryptographer
+import mixit.util.camelCase
 import mixit.util.language
 import mixit.util.seeOther
 import mixit.util.toSlug
@@ -22,7 +64,7 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 import reactor.core.publisher.Mono
 import java.time.LocalDate
 import java.time.LocalDateTime
-import java.util.*
+import java.util.Objects
 import kotlin.streams.toList
 
 
@@ -45,8 +87,8 @@ class AdminHandler(private val ticketRepository: TicketRepository,
                             .map {
                                 Ticket(
                                         it.email,
-                                        it.firstname.trim().toLowerCase().capitalize(),
-                                        it.lastname.trim().toLowerCase().capitalize())
+                                        it.firstname.camelCase(),
+                                        it.lastname.camelCase())
                             }
                             .sort(Comparator.comparing(Ticket::lastname)
                                     .thenComparing(Comparator.comparing(Ticket::firstname)))),
@@ -121,24 +163,24 @@ class AdminHandler(private val ticketRepository: TicketRepository,
             Pair("talk", talk),
             Pair("title", "admin.talk.title"),
             Pair("rooms", listOf(
-                    Triple(AMPHI1, "rooms.${AMPHI1.name.toLowerCase()}", AMPHI1 == talk.room),
-                    Triple(AMPHI2, "rooms.${AMPHI2.name.toLowerCase()}", AMPHI2 == talk.room),
-                    Triple(ROOM1, "rooms.${ROOM1.name.toLowerCase()}", ROOM1 == talk.room),
-                    Triple(ROOM2, "rooms.${ROOM2.name.toLowerCase()}", ROOM2 == talk.room),
-                    Triple(ROOM3, "rooms.${ROOM3.name.toLowerCase()}", ROOM3 == talk.room),
-                    Triple(ROOM4, "rooms.${ROOM4.name.toLowerCase()}", ROOM4 == talk.room),
-                    Triple(ROOM5, "rooms.${ROOM5.name.toLowerCase()}", ROOM5 == talk.room),
-                    Triple(ROOM6, "rooms.${ROOM6.name.toLowerCase()}", ROOM6 == talk.room),
-                    Triple(ROOM7, "rooms.${ROOM7.name.toLowerCase()}", ROOM7 == talk.room),
-                    Triple(ROOM7, "rooms.${ROOM8.name.toLowerCase()}", ROOM8 == talk.room),
-                    Triple(OUTSIDE, "rooms.${OUTSIDE.name.toLowerCase()}", OUTSIDE == talk.room),
-                    Triple(AMPHIC, "rooms.${AMPHIC.name.toLowerCase()}", AMPHIC == talk.room),
-                    Triple(AMPHID, "rooms.${AMPHID.name.toLowerCase()}", AMPHID == talk.room),
-                    Triple(AMPHIK, "rooms.${AMPHIK.name.toLowerCase()}", AMPHIK == talk.room),
-                    Triple(SURPRISE, "rooms.${SURPRISE.name.toLowerCase()}", SURPRISE == talk.room),
-                    Triple(SPEAKER, "rooms.${SPEAKER.name.toLowerCase()}", SPEAKER == talk.room),
-                    Triple(MUMMY, "rooms.${MUMMY.name.toLowerCase()}", MUMMY == talk.room),
-                    Triple(UNKNOWN, "rooms.${UNKNOWN.name.toLowerCase()}", UNKNOWN == talk.room)
+                    Triple(AMPHI1, "rooms.${AMPHI1.name.lowercase()}", AMPHI1 == talk.room),
+                    Triple(AMPHI2, "rooms.${AMPHI2.name.lowercase()}", AMPHI2 == talk.room),
+                    Triple(ROOM1, "rooms.${ROOM1.name.lowercase()}", ROOM1 == talk.room),
+                    Triple(ROOM2, "rooms.${ROOM2.name.lowercase()}", ROOM2 == talk.room),
+                    Triple(ROOM3, "rooms.${ROOM3.name.lowercase()}", ROOM3 == talk.room),
+                    Triple(ROOM4, "rooms.${ROOM4.name.lowercase()}", ROOM4 == talk.room),
+                    Triple(ROOM5, "rooms.${ROOM5.name.lowercase()}", ROOM5 == talk.room),
+                    Triple(ROOM6, "rooms.${ROOM6.name.lowercase()}", ROOM6 == talk.room),
+                    Triple(ROOM7, "rooms.${ROOM7.name.lowercase()}", ROOM7 == talk.room),
+                    Triple(ROOM7, "rooms.${ROOM8.name.lowercase()}", ROOM8 == talk.room),
+                    Triple(OUTSIDE, "rooms.${OUTSIDE.name.lowercase()}", OUTSIDE == talk.room),
+                    Triple(AMPHIC, "rooms.${AMPHIC.name.lowercase()}", AMPHIC == talk.room),
+                    Triple(AMPHID, "rooms.${AMPHID.name.lowercase()}", AMPHID == talk.room),
+                    Triple(AMPHIK, "rooms.${AMPHIK.name.lowercase()}", AMPHIK == talk.room),
+                    Triple(SURPRISE, "rooms.${SURPRISE.name.lowercase()}", SURPRISE == talk.room),
+                    Triple(SPEAKER, "rooms.${SPEAKER.name.lowercase()}", SPEAKER == talk.room),
+                    Triple(MUMMY, "rooms.${MUMMY.name.lowercase()}", MUMMY == talk.room),
+                    Triple(UNKNOWN, "rooms.${UNKNOWN.name.lowercase()}", UNKNOWN == talk.room)
             )),
             Pair("formats", listOf(
                     Pair(TALK, TALK == talk.format),

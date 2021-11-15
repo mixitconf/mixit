@@ -1,7 +1,9 @@
 package mixit.util
 
 import mixit.model.Language
-import org.springframework.http.MediaType.*
+import org.springframework.http.MediaType.APPLICATION_JSON
+import org.springframework.http.MediaType.APPLICATION_XML
+import org.springframework.http.MediaType.TEXT_HTML
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.permanentRedirect
@@ -17,7 +19,8 @@ import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
 import java.time.format.DateTimeFormatterBuilder
 import java.time.temporal.ChronoField
-import java.util.*
+import java.util.Base64
+import java.util.Locale
 import java.util.stream.Collectors
 import java.util.stream.IntStream
 import javax.crypto.Cipher
@@ -111,20 +114,22 @@ fun String.markFoundOccurrences(searchTerms: List<String>? = emptyList()) = if(s
     str
 }
 
-
-
-
 fun String.stripAccents() = Normalizer
         .normalize(this, Normalizer.Form.NFD)
         .replace("\\p{InCombiningDiacriticalMarks}+".toRegex(), "")
 
-fun String.toSlug() = toLowerCase()
+fun String.toSlug() = lowercase()
         .stripAccents()
         .replace("\n", " ")
         .replace("[^a-z\\d\\s]".toRegex(), " ")
         .split(" ")
         .joinToString("-")
         .replace("-+".toRegex(), "-")   // Avoid multiple consecutive "--"
+
+fun String.camelCase() = this
+    .trim()
+    .lowercase()
+    .replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
 
 fun String.toUrlPath() = URLEncoder.encode(this, "UTF-8").replace("+", "%20")
 

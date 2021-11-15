@@ -2,7 +2,6 @@ package mixit.util
 
 import com.google.api.services.gmail.Gmail
 import com.google.api.services.gmail.model.Message
-import com.google.common.html.HtmlEscapers
 import mixit.MixitProperties
 import org.slf4j.LoggerFactory
 import org.springframework.context.annotation.Profile
@@ -11,7 +10,7 @@ import org.springframework.mail.javamail.JavaMailSender
 import org.springframework.mail.javamail.MimeMessageHelper
 import org.springframework.stereotype.Component
 import java.io.ByteArrayOutputStream
-import java.util.*
+import java.util.Properties
 import javax.mail.Session
 import javax.mail.internet.InternetAddress
 import javax.mail.internet.MimeMessage

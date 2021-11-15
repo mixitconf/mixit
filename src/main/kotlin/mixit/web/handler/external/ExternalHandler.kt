@@ -1,12 +1,21 @@
 package mixit.web.handler.external
 
-import mixit.model.*
+import mixit.model.Favorite
+import mixit.model.Language
+import mixit.model.Link
+import mixit.model.User
+import mixit.model.Users
 import mixit.repository.FavoriteRepository
 import mixit.repository.TicketRepository
 import mixit.util.json
 import mixit.util.locale
 import mixit.web.handler.FavoriteDto
-import mixit.web.handler.external.ExternalResponses.*
+import mixit.web.handler.external.ExternalResponses.CREDENTIAL_VALID
+import mixit.web.handler.external.ExternalResponses.EMAIL_SENT_ERROR
+import mixit.web.handler.external.ExternalResponses.INVALID_CREDENTIALS
+import mixit.web.handler.external.ExternalResponses.INVALID_EMAIL
+import mixit.web.handler.external.ExternalResponses.INVALID_TOKEN
+import mixit.web.handler.external.ExternalResponses.TOKEN_SENT
 import mixit.web.service.AuthenticationService
 import mixit.web.service.EmailValidatorException
 import mixit.web.service.NotFoundException

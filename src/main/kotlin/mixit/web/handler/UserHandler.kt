@@ -1,11 +1,22 @@
 package mixit.web.handler
 
 import mixit.MixitProperties
-import mixit.model.*
+import mixit.model.Language
+import mixit.model.Link
+import mixit.model.Role
+import mixit.model.User
+import mixit.model.anonymize
 import mixit.repository.TalkRepository
 import mixit.repository.TicketRepository
 import mixit.repository.UserRepository
-import mixit.util.*
+import mixit.util.Cryptographer
+import mixit.util.MarkdownConverter
+import mixit.util.encodeToMd5
+import mixit.util.json
+import mixit.util.language
+import mixit.util.markFoundOccurrences
+import mixit.util.seeOther
+import mixit.util.toUrlPath
 import mixit.util.validator.EmailValidator
 import mixit.util.validator.MarkdownValidator
 import mixit.util.validator.MaxLengthValidator
@@ -293,7 +304,7 @@ class SpeakerStarDto(
         val name: String
 )
 
-fun User.toSpeakerStarDto() = SpeakerStarDto(login, lastname.toLowerCase().replace("è", "e"), "$firstname $lastname")
+fun User.toSpeakerStarDto() = SpeakerStarDto(login, lastname.lowercase().replace("è", "e"), "$firstname $lastname")
 
 class UserDto(
         val login: String,

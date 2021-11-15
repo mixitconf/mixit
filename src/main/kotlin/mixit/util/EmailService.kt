@@ -3,15 +3,12 @@ package mixit.util
 import com.samskivert.mustache.Mustache
 import mixit.MixitProperties
 import mixit.model.User
-import mixit.web.generateModelForExernalCall
-import mixit.web.service.EmailSenderException
 import org.slf4j.LoggerFactory
 import org.springframework.context.MessageSource
 import org.springframework.core.io.ResourceLoader
 import org.springframework.stereotype.Component
 import java.io.InputStreamReader
-import java.net.URLEncoder
-import java.util.*
+import java.util.Locale
 
 @Component
 class TemplateService(private val mustacheCompiler: Mustache.Compiler,

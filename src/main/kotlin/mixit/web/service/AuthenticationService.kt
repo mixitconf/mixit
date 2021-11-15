@@ -1,19 +1,23 @@
 package mixit.web.service
 
-import mixit.model.*
+import mixit.model.Role
+import mixit.model.User
+import mixit.model.generateNewToken
+import mixit.model.hasValidToken
+import mixit.model.hasValidTokens
+import mixit.model.jsonToken
 import mixit.repository.TicketRepository
 import mixit.repository.UserRepository
 import mixit.util.Cryptographer
 import mixit.util.EmailService
+import mixit.util.camelCase
 import mixit.util.toSlug
 import mixit.util.validator.EmailValidator
 import org.slf4j.LoggerFactory
 import org.springframework.http.ResponseCookie
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Mono
-import java.time.Duration
-import java.time.LocalDateTime
-import java.util.*
+import java.util.Locale
 
 @Service
 class AuthenticationService(private val userRepository: UserRepository,
@@ -33,9 +37,9 @@ class AuthenticationService(private val userRepository: UserRepository,
                     throw CredentialValidatorException()
                 }
                 Pair(email, User(
-                        login = email.split("@").get(0).toSlug(),
-                        firstname = firstname.toLowerCase().capitalize(),
-                        lastname = lastname.toLowerCase().capitalize(),
+                        login = email.split("@")[0].toSlug(),
+                        firstname = firstname.camelCase(),
+                        lastname = lastname.camelCase(),
                         email = cryptographer.encrypt(email),
                         role = Role.USER
                 ))

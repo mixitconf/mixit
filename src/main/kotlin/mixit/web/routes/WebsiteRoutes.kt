@@ -7,20 +7,31 @@ import mixit.model.Event
 import mixit.model.SponsorshipLevel
 import mixit.util.MarkdownConverter
 import mixit.util.locale
-import mixit.web.handler.*
+import mixit.web.handler.AdminHandler
+import mixit.web.handler.AuthenticationHandler
+import mixit.web.handler.BlogHandler
+import mixit.web.handler.GlobalHandler
+import mixit.web.handler.NewsHandler
+import mixit.web.handler.SponsorHandler
+import mixit.web.handler.TalkHandler
+import mixit.web.handler.TicketingHandler
+import mixit.web.handler.UserHandler
 import org.slf4j.LoggerFactory
 import org.springframework.context.MessageSource
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.DependsOn
 import org.springframework.core.io.ClassPathResource
-import org.springframework.http.MediaType.*
+import org.springframework.http.MediaType.APPLICATION_FORM_URLENCODED
+import org.springframework.http.MediaType.TEXT_EVENT_STREAM
+import org.springframework.http.MediaType.TEXT_HTML
+import org.springframework.http.MediaType.TEXT_PLAIN
 import org.springframework.web.reactive.function.server.RenderingResponse
 import org.springframework.web.reactive.function.server.RouterFunctions.resources
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.router
 import reactor.kotlin.core.publisher.toMono
-import java.util.*
+import java.util.Locale
 
 
 @Configuration

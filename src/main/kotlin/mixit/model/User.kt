@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.index.TextIndexed
 import org.springframework.data.mongodb.core.mapping.Document
 import java.time.Duration
 import java.time.LocalDateTime
-import java.util.*
+import java.util.UUID
 
 object Users {
     const val DEFAULT_IMG_URL = "/images/png/mxt-icon--default-avatar.png"

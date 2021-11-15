@@ -14,7 +14,7 @@ import org.springframework.web.reactive.function.server.RenderingResponse
 import org.springframework.web.reactive.function.server.RouterFunction
 import org.springframework.web.reactive.function.server.ServerResponse
 import reactor.kotlin.core.publisher.toMono
-import java.util.*
+import java.util.Locale
 
 /**
  * @author Dev-Mind <guillaume@dev-mind.fr>

@@ -4,7 +4,6 @@ import mixit.MixitProperties
 import mixit.util.permanentRedirect
 import mixit.web.handler.BlogHandler
 import mixit.web.handler.TalkHandler
-import mixit.web.routes.Routes
 import mixit.web.routes.Routes.GOOGLE_DRIVE_URI
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

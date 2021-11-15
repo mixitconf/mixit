@@ -6,7 +6,11 @@ import mixit.util.Cryptographer
 import mixit.util.decodeFromBase64
 import mixit.util.locale
 import mixit.util.validator.EmailValidator
-import mixit.web.handler.AuthenticationHandler.LoginError.*
+import mixit.web.handler.AuthenticationHandler.LoginError.DUPLICATE_EMAIL
+import mixit.web.handler.AuthenticationHandler.LoginError.DUPLICATE_LOGIN
+import mixit.web.handler.AuthenticationHandler.LoginError.INVALID_EMAIL
+import mixit.web.handler.AuthenticationHandler.LoginError.REQUIRED_CREDENTIALS
+import mixit.web.handler.AuthenticationHandler.LoginError.SIGN_UP_ERROR
 import mixit.web.service.AuthenticationService
 import mixit.web.service.CredentialValidatorException
 import mixit.web.service.EmailValidatorException
@@ -14,7 +18,9 @@ import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.BodyExtractors.toFormData
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
-import org.springframework.web.reactive.function.server.ServerResponse.*
+import org.springframework.web.reactive.function.server.ServerResponse.ok
+import org.springframework.web.reactive.function.server.ServerResponse.seeOther
+import org.springframework.web.reactive.function.server.ServerResponse.temporaryRedirect
 import org.springframework.web.server.WebSession
 import reactor.core.publisher.Mono
 import java.net.URI

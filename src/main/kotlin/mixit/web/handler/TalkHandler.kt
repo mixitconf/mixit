@@ -1,12 +1,25 @@
 package mixit.web.handler
 
 import mixit.MixitProperties
-import mixit.model.*
+import mixit.model.Favorite
+import mixit.model.Language
+import mixit.model.Link
+import mixit.model.SponsorshipLevel
+import mixit.model.Talk
+import mixit.model.TalkFormat
+import mixit.model.User
 import mixit.repository.EventRepository
 import mixit.repository.FavoriteRepository
 import mixit.repository.TalkRepository
 import mixit.repository.UserRepository
-import mixit.util.*
+import mixit.util.MarkdownConverter
+import mixit.util.formatTalkDate
+import mixit.util.formatTalkTime
+import mixit.util.json
+import mixit.util.language
+import mixit.util.markFoundOccurrences
+import mixit.util.permanentRedirect
+import mixit.util.seeOther
 import mixit.util.validator.MarkdownValidator
 import mixit.util.validator.MaxLengthValidator
 import org.springframework.stereotype.Component
@@ -297,7 +310,7 @@ fun Talk.toDto(lang: Language, speakers: List<User>, favorite: Boolean = false, 
         title(convertRandomLabel, searchTerms),
         summary(convertRandomLabel).markFoundOccurrences(searchTerms),
         speakers,
-        language.name.toLowerCase(), addedAt,
+        language.name.lowercase(), addedAt,
         description(convertRandomLabel)?.markFoundOccurrences(searchTerms),
         topic,
         video,

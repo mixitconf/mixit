@@ -8,7 +8,7 @@ import mixit.util.localePrefix
 import org.springframework.context.MessageSource
 import org.springframework.web.server.WebSession
 import org.springframework.web.util.UriUtils
-import java.util.*
+import java.util.Locale
 
 fun generateModel(properties: MixitProperties,
                                 path: String,
