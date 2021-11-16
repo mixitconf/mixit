@@ -1,7 +1,7 @@
 {{> header}}
 
-<div class="mxt-wrapper--talks row text-center">
-    <div style="display: flex;flex-wrap: wrap; align-items: center; align-content: center; flex-direction: row">
+<div class="mxt-wrapper--header">
+    <div style="display: flex;flex-wrap: wrap; align-items: center; align-content: center; flex-direction: row" class="pt-5">
         {{#speakers}}
             <div style="flex: 1">
                 <a href="/user/{{login}}"><img src="{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{^photoUrl}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/photoUrl}}"

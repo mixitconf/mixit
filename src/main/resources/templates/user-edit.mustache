@@ -1,7 +1,7 @@
 {{> header}}
 
-<div class="mxt-wrapper--page-title text-center">
-    <ul class="mxt-wrapper-list-inline">
+<div class="mxt-wrapper--header">
+    <ul class="mxt-wrapper-list-inline pt-5">
         <li>
             <img src="{{^user.emailHash}}{{#user.photoUrl}}{{user.photoUrl}}{{/user.photoUrl}}{{/user.emailHash}}{{#user.emailHash}}https://www.gravatar.com/avatar/{{user.emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/user.emailHash}}"
             class="mxt-img-avatar__speaker">
