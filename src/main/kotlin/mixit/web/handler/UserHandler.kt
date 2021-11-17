@@ -11,6 +11,7 @@ import mixit.repository.TicketRepository
 import mixit.repository.UserRepository
 import mixit.util.Cryptographer
 import mixit.util.MarkdownConverter
+import mixit.util.camelCase
 import mixit.util.encodeToMd5
 import mixit.util.json
 import mixit.util.language
@@ -304,7 +305,7 @@ class SpeakerStarDto(
         val name: String
 )
 
-fun User.toSpeakerStarDto() = SpeakerStarDto(login, lastname.lowercase().replace("è", "e"), "$firstname $lastname")
+fun User.toSpeakerStarDto() = SpeakerStarDto(login, lastname.lowercase().replace("è", "e"), "${firstname.camelCase()} ${lastname.camelCase()}")
 
 class UserDto(
         val login: String,

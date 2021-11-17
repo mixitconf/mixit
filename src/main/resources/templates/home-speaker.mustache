@@ -1,9 +1,9 @@
-<div class="col-md-2 col-4">
+<div class="col-md-2 col-6">
     <a href="/user/{{login}}">
         <div class="mxt-img--container">
             <img src="{{baseUri}}/images/speakers/{{key}}.jpg" alt="{{name}}" class="mxt-img--speakers">
         </div>
     </a>
-    <span class="lead">{{name}}</span><br/>
-    <p class="mxt-text--speakers">{{#i18n}}home.speakers.{{key}}{{/i18n}}</p>
+    <div class="lead text-center" style="overflow: hidden; text-overflow: ellipsis;">{{name}}</div><br/>
+    <p class="mxt-text--speakers text-center">{{#i18n}}home.speakers.{{key}}{{/i18n}}</p>
 </div>
