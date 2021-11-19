@@ -29,17 +29,17 @@ class GmailApiConfig {
 
     @Bean
     fun authorize(properties: MixitProperties): Credential = GoogleCredential.Builder()
-            .setTransport(httpTransport())
-            .setJsonFactory(jacksonFactory())
-            .setServiceAccountId(properties.googleapi.clientid)
-            .setServiceAccountPrivateKeyFromP12File(ClassPathResource(properties.googleapi.p12path).file)
-            .setServiceAccountScopes(listOf(GmailScopes.GMAIL_COMPOSE, GmailScopes.GMAIL_INSERT, GmailScopes.MAIL_GOOGLE_COM))
-            .setServiceAccountUser(properties.googleapi.user)
-            .build()
-            .apply { this.refreshToken }
+        .setTransport(httpTransport())
+        .setJsonFactory(jacksonFactory())
+        .setServiceAccountId(properties.googleapi.clientid)
+        .setServiceAccountPrivateKeyFromP12File(ClassPathResource(properties.googleapi.p12path).file)
+        .setServiceAccountScopes(listOf(GmailScopes.GMAIL_COMPOSE, GmailScopes.GMAIL_INSERT, GmailScopes.MAIL_GOOGLE_COM))
+        .setServiceAccountUser(properties.googleapi.user)
+        .build()
+        .apply { this.refreshToken }
 
     @Bean
     fun gmailService(properties: MixitProperties): Gmail = Gmail
-            .Builder(httpTransport(), jacksonFactory(), authorize(properties))
-            .setApplicationName(properties.googleapi.appname).build()
+        .Builder(httpTransport(), jacksonFactory(), authorize(properties))
+        .setApplicationName(properties.googleapi.appname).build()
 }

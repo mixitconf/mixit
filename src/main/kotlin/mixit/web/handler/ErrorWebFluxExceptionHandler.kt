@@ -20,26 +20,27 @@ import java.util.Locale
  * @author Dev-Mind <guillaume@dev-mind.fr>
  * @since 13/12/17.
  */
-class ErrorWebFluxExceptionHandler(errorAttributes: ErrorAttributes,
-                                   resourceProperties: ResourceProperties,
-                                   errorProperties: ErrorProperties,
-                                   applicationContext: ApplicationContext,
-                                   private val messageSource: MessageSource,
-                                   private val properties: MixitProperties,
-                                   private val markdownConverter: MarkdownConverter) :
-        DefaultErrorWebExceptionHandler(errorAttributes, resourceProperties, errorProperties, applicationContext) {
+class ErrorWebFluxExceptionHandler(
+    errorAttributes: ErrorAttributes,
+    resourceProperties: ResourceProperties,
+    errorProperties: ErrorProperties,
+    applicationContext: ApplicationContext,
+    private val messageSource: MessageSource,
+    private val properties: MixitProperties,
+    private val markdownConverter: MarkdownConverter
+) :
+    DefaultErrorWebExceptionHandler(errorAttributes, resourceProperties, errorProperties, applicationContext) {
 
     override fun getRoutingFunction(errorAttributes: ErrorAttributes): RouterFunction<ServerResponse> {
         return super.getRoutingFunction(errorAttributes)
-                .filter { request, next ->
-                    val locale: Locale = request.locale()
-                    val path = request.uri().path
-                    request.session().flatMap { session ->
-                        val model = generateModel(properties, path, locale, session, messageSource, markdownConverter)
-                        next.handle(request)
-                                .flatMap { if (it is RenderingResponse) RenderingResponse.from(it).modelAttributes(model).build() else it.toMono() }
-                    }
+            .filter { request, next ->
+                val locale: Locale = request.locale()
+                val path = request.uri().path
+                request.session().flatMap { session ->
+                    val model = generateModel(properties, path, locale, session, messageSource, markdownConverter)
+                    next.handle(request)
+                        .flatMap { if (it is RenderingResponse) RenderingResponse.from(it).modelAttributes(model).build() else it.toMono() }
                 }
+            }
     }
-
 }

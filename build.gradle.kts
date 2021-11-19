@@ -9,6 +9,7 @@ plugins {
     id("com.github.node-gradle.node") version "3.1.1"
     id("org.springframework.boot") version "2.2.5.RELEASE"
     id("io.spring.dependency-management") version "1.0.8.RELEASE"
+    id("org.jmailen.kotlinter") version "3.7.0"
 }
 
 version = "2022.0.0-SNAPSHOT"

@@ -50,7 +50,7 @@ fun User.generateNewToken(generateExternalToken: Boolean = false) = this.copy(
 fun User.updateEmail(cryptographer: Cryptographer, newEmail: String) =
     this.copy(email = cryptographer.encrypt(newEmail))
 
-fun User.jsonToken(cryptographer: Cryptographer) = "${cryptographer.decrypt(email)}:${token}".encodeToBase64()!!
+fun User.jsonToken(cryptographer: Cryptographer) = "${cryptographer.decrypt(email)}:$token".encodeToBase64()!!
 
 fun User.hasValidToken(token: String) = this.token == token.trim() && tokenExpiration.isAfter(LocalDateTime.now())
 

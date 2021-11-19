@@ -6,9 +6,8 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
 @Configuration
-class TemplateConfig{
+class TemplateConfig {
     @Bean
     fun mustacheCompiler(templateLoader: Mustache.TemplateLoader): Mustache.Compiler =
-            Mustache.compiler().withEscaper(StringEscapers().HTML).withLoader(templateLoader)
-
+        Mustache.compiler().withEscaper(StringEscapers().HTML).withLoader(templateLoader)
 }

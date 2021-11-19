@@ -29,7 +29,6 @@ import org.springframework.web.reactive.function.server.queryParamOrNull
 import reactor.core.publisher.Mono
 import reactor.kotlin.core.publisher.toMono
 
-
 @Component
 class ExternalHandler(
     private val authenticationService: AuthenticationService,
@@ -104,7 +103,6 @@ class ExternalHandler(
             }
         }
 
-
     fun checkToken(req: ServerRequest): Mono<ServerResponse> =
         credentials(req, true) { _, _ -> CREDENTIAL_VALID.response() }
 
@@ -125,9 +123,11 @@ class ExternalHandler(
     }
 
     fun favorite(req: ServerRequest): Mono<ServerResponse> = credentials(req, false) { nonEncryptedEmail, _ ->
-        ok().json().body(favoriteRepository.findByEmailAndTalk(nonEncryptedEmail, req.pathVariable("id"))
-            .flatMap { FavoriteDto(it.talkId, true).toMono() }
-            .switchIfEmpty(FavoriteDto(req.pathVariable("id"), false).toMono()))
+        ok().json().body(
+            favoriteRepository.findByEmailAndTalk(nonEncryptedEmail, req.pathVariable("id"))
+                .flatMap { FavoriteDto(it.talkId, true).toMono() }
+                .switchIfEmpty(FavoriteDto(req.pathVariable("id"), false).toMono())
+        )
     }
 
     fun toggleFavorite(req: ServerRequest): Mono<ServerResponse> = credentials(req, false) { nonEncryptedEmail, user ->
@@ -139,13 +139,14 @@ class ExternalHandler(
                     .flatMap { ok().json().bodyValue(FavoriteDto(favorite.talkId, false)) }
             }
             // otherwise we create it
-            .switchIfEmpty(Mono.defer {
-                favoriteRepository
-                    .save(Favorite(user.email!!, req.pathVariable("id")))
-                    .flatMap { ok().json().bodyValue(FavoriteDto(req.pathVariable("id"), true)) }
-            })
+            .switchIfEmpty(
+                Mono.defer {
+                    favoriteRepository
+                        .save(Favorite(user.email!!, req.pathVariable("id")))
+                        .flatMap { ok().json().bodyValue(FavoriteDto(req.pathVariable("id"), true)) }
+                }
+            )
     }
-
 }
 
 class ExternalUserDto(
@@ -167,4 +168,3 @@ class ExternalUserDto(
         user.company
     )
 }
-

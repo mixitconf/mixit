@@ -3,7 +3,6 @@ package mixit.util.validator
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
-
 /**
  * Test {@link URLValidator}
  */

@@ -23,10 +23,11 @@ import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 
-
 @Repository
-class PostRepository(private val template: ReactiveMongoTemplate,
-                     private val objectMapper: ObjectMapper) {
+class PostRepository(
+    private val template: ReactiveMongoTemplate,
+    private val objectMapper: ObjectMapper
+) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
@@ -44,12 +45,12 @@ class PostRepository(private val template: ReactiveMongoTemplate,
     fun findOne(id: String) = template.findById<Post>(id)
 
     fun findBySlug(slug: String, lang: Language) =
-            template.findOne<Post>(Query(where("slug.$lang").isEqualTo(slug)))
+        template.findOne<Post>(Query(where("slug.$lang").isEqualTo(slug)))
 
     fun findAll(lang: Language? = null): Flux<Post> {
         val query = Query()
         query.with(Sort.by(Order(DESC, "addedAt")))
-        //query.fields().exclude("content")
+        // query.fields().exclude("content")
         if (lang != null) {
             query.addCriteria(where("title.$lang").exists(true))
         }

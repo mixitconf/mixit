@@ -17,23 +17,22 @@ class MarkdownValidator {
             return ""
         }
         return value
-                .replace("&", "&amp;")
-                .replace("\"", "&#${'"'.code};")
-                .replace("'", "&#${'\''.code};")
-                .replace("`", "&#${'`'.code};")
-                .replace("@", "&#${'@'.code};")
-                .replace("=", "&#${'='.code};")
-                .replace("+", "&#${'+'.code};")
-                .replace(">", "&gt;")
-                .replace("<", "&lt;")
-
+            .replace("&", "&amp;")
+            .replace("\"", "&#${'"'.code};")
+            .replace("'", "&#${'\''.code};")
+            .replace("`", "&#${'`'.code};")
+            .replace("@", "&#${'@'.code};")
+            .replace("=", "&#${'='.code};")
+            .replace("+", "&#${'+'.code};")
+            .replace(">", "&gt;")
+            .replace("<", "&lt;")
     }
 
     fun isValid(value: String?): Boolean {
         if (value == null || value.isEmpty()) {
             return true
         }
-        if(value != escaper.escape(value)){
+        if (value != escaper.escape(value)) {
             logger.info("$value -> ${escaper.escape(value)}")
         }
         return value == escaper.escape(value)

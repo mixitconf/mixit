@@ -14,8 +14,10 @@ import java.net.URLEncoder
 import java.util.Locale
 
 @Component
-class TemplateService(private val mustacheCompiler: Mustache.Compiler,
-                      private val resourceLoader: ResourceLoader) {
+class TemplateService(
+    private val mustacheCompiler: Mustache.Compiler,
+    private val resourceLoader: ResourceLoader
+) {
 
     fun load(templateName: String, context: Map<String, Any>): String {
         val resource = resourceLoader.getResource("classpath:templates/$templateName.mustache").inputStream
@@ -25,11 +27,13 @@ class TemplateService(private val mustacheCompiler: Mustache.Compiler,
 }
 
 @Component
-class EmailService(private val properties: MixitProperties,
-                   private val messageSource: MessageSource,
-                   private val cryptographer: Cryptographer,
-                   private val emailSender: EmailSender,
-                   private val templateService: TemplateService) {
+class EmailService(
+    private val properties: MixitProperties,
+    private val messageSource: MessageSource,
+    private val cryptographer: Cryptographer,
+    private val emailSender: EmailSender,
+    private val templateService: TemplateService
+) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
@@ -51,5 +55,4 @@ class EmailService(private val properties: MixitProperties,
             throw EmailSenderException("Error when system send the mail $subject")
         }
     }
-
 }

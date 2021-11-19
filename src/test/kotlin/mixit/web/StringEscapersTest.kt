@@ -4,14 +4,13 @@ import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
 
-
 /**
  * Test {@link SimpleEscapers}
  */
 class StringEscapersTest {
 
     @Nested
-    inner class `HTML escaper`{
+    inner class `HTML escaper` {
 
         val escaper = StringEscapers().HTML
 
@@ -27,31 +26,31 @@ class StringEscapersTest {
         @Test
         fun `should sanitize HTML with pictures`() {
             val html = "<picture>\n" +
-                    "<source srcset=\"img/logoWebpUrl.webp\" type=\"image/webp\" alt=\"company\" class=\"mxt-img--sponsors-home\" />\n" +
-                    "<source srcset=\"img/logoWebpUrl.jpg\" type=\"svg\" alt=\"company\" class=\"mxt-img--sponsors-home\" />\n" +
-                    "<img src=\"img/logoWebpUrl.jpg\" alt=\"company\" class=\"mxt-img--sponsors-home\" />\n" +
-                    "</picture>"
+                "<source srcset=\"img/logoWebpUrl.webp\" type=\"image/webp\" alt=\"company\" class=\"mxt-img--sponsors-home\" />\n" +
+                "<source srcset=\"img/logoWebpUrl.jpg\" type=\"svg\" alt=\"company\" class=\"mxt-img--sponsors-home\" />\n" +
+                "<img src=\"img/logoWebpUrl.jpg\" alt=\"company\" class=\"mxt-img--sponsors-home\" />\n" +
+                "</picture>"
             assertThat(escaper.escape(html)).isEqualTo(html)
         }
 
         @Test
         fun `should not integrate script markup`() {
             val html = "<script>\n" +
-                    "function hello(){} </script>"
+                "function hello(){} </script>"
             assertThat(escaper.escape(html)).isEqualTo("")
         }
     }
 
     @Nested
-    inner class `Markdown escaper`{
+    inner class `Markdown escaper` {
 
         val escaper = StringEscapers().MARKDOWN
 
         @Test
         fun `should change nothing in correct markdown`() {
             val markdown = "Développeur agile passionné par la technique et l&#39;agilité, fondateur de [Dev-Mind](https://dev-mind.fr/)." +
-                    "#Vous pouvez voir mon logo" +
-                    "![Dev-Mind](https://www.dev-mind.fr/img/logo/logo_1500.png)"
+                "#Vous pouvez voir mon logo" +
+                "![Dev-Mind](https://www.dev-mind.fr/img/logo/logo_1500.png)"
 
             assertThat(escaper.escape(markdown)).isEqualTo(markdown)
         }

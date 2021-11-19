@@ -14,43 +14,42 @@ class UserIntegrationTests(@Autowired val client: WebTestClient) {
     @Test
     fun `Find Dan North`() {
         client.get().uri("/api/user/tastapod").accept(APPLICATION_JSON)
-                .exchange()
-                .expectStatus().is2xxSuccessful
-                .expectBody()
-                .jsonPath("\$.lastname").isEqualTo("North")
-                .jsonPath("\$.firstname").isEqualTo("Dan")
-                .jsonPath("\$.role").isEqualTo("USER")
+            .exchange()
+            .expectStatus().is2xxSuccessful
+            .expectBody()
+            .jsonPath("\$.lastname").isEqualTo("North")
+            .jsonPath("\$.firstname").isEqualTo("Dan")
+            .jsonPath("\$.role").isEqualTo("USER")
     }
 
     @Test
     fun `Find Guillaume Ehret staff member`() {
         client.get().uri("/api/staff/guillaumeehret").accept(APPLICATION_JSON)
-                .exchange()
-                .expectStatus().is2xxSuccessful
-                .expectBody()
-                .jsonPath("\$.lastname").isEqualTo("Ehret")
-                .jsonPath("\$.firstname").isEqualTo("Guillaume")
-                .jsonPath("\$.role").isEqualTo("STAFF")
+            .exchange()
+            .expectStatus().is2xxSuccessful
+            .expectBody()
+            .jsonPath("\$.lastname").isEqualTo("Ehret")
+            .jsonPath("\$.firstname").isEqualTo("Guillaume")
+            .jsonPath("\$.role").isEqualTo("STAFF")
     }
 
     @Test
     fun `Find all staff members`() {
         client.get().uri("/api/staff/").accept(APPLICATION_JSON)
-                .exchange()
-                .expectStatus().is2xxSuccessful
-                .expectBodyList<User>()
-                .hasSize(12)
+            .exchange()
+            .expectStatus().is2xxSuccessful
+            .expectBodyList<User>()
+            .hasSize(12)
     }
 
     @Test
     fun `Find Zenika Lyon`() {
         client.get().uri("/api/user/ZenikaLyon").accept(APPLICATION_JSON)
-                .exchange()
-                .expectStatus().is2xxSuccessful
-                .expectBody()
-                .jsonPath("\$.lastname").isEqualTo("Tournayre")
-                .jsonPath("\$.firstname").isEqualTo("Louis")
-                .jsonPath("\$.role").isEqualTo("USER")
+            .exchange()
+            .expectStatus().is2xxSuccessful
+            .expectBody()
+            .jsonPath("\$.lastname").isEqualTo("Tournayre")
+            .jsonPath("\$.firstname").isEqualTo("Louis")
+            .jsonPath("\$.role").isEqualTo("USER")
     }
-
 }

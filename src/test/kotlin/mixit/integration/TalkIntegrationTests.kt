@@ -8,27 +8,25 @@ import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.test.web.reactive.server.WebTestClient
 import org.springframework.test.web.reactive.server.expectBodyList
 
-
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class TalkIntegrationTests(@Autowired val client: WebTestClient) {
 
     @Test
     fun `Find Dan North talk`() {
         client.get().uri("/api/talk/2421").accept(APPLICATION_JSON)
-                .exchange()
-                .expectStatus().is2xxSuccessful
-                .expectBody()
-                .jsonPath("\$.title").isEqualTo("Selling BDD to the Business")
-                .jsonPath("\$.speakerIds").isEqualTo("tastapod")
+            .exchange()
+            .expectStatus().is2xxSuccessful
+            .expectBody()
+            .jsonPath("\$.title").isEqualTo("Selling BDD to the Business")
+            .jsonPath("\$.speakerIds").isEqualTo("tastapod")
     }
 
     @Test
     fun `Find MiXiT 2012 talks`() {
         client.get().uri("/api/2012/talk").accept(APPLICATION_JSON)
-                .exchange()
-                .expectStatus().is2xxSuccessful
-                .expectBodyList<Talk>()
-                .hasSize(27)
+            .exchange()
+            .expectStatus().is2xxSuccessful
+            .expectBodyList<Talk>()
+            .hasSize(27)
     }
-
 }

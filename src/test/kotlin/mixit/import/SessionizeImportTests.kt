@@ -16,13 +16,14 @@ import java.io.InputStream
 import java.net.URL
 import java.util.*
 
-
 inline fun <reified T> ObjectMapper.readValue(src: InputStream): T = readValue(src, jacksonTypeRef<T>())
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class SessionizeImportTests(@Autowired val objectMapper: ObjectMapper,
-                            @Autowired val userRepository: UserRepository,
-                            @Autowired val cryptographer: Cryptographer) {
+class SessionizeImportTests(
+    @Autowired val objectMapper: ObjectMapper,
+    @Autowired val userRepository: UserRepository,
+    @Autowired val cryptographer: Cryptographer
+) {
 
     @Test
     fun `load speakers`() {
@@ -36,7 +37,6 @@ class SessionizeImportTests(@Autowired val objectMapper: ObjectMapper,
 
         val sessionsToPersist = createSessions(papercallExports, speakersToPersist)
         objectMapper.writeValue(File("/tmp/mixit/talks_2020.json"), sessionsToPersist)
-
     }
 
     private fun importSpeakers(papercallExports: List<PapercallExport>): MutableList<User> {
@@ -69,19 +69,19 @@ class SessionizeImportTests(@Autowired val objectMapper: ObjectMapper,
     private fun extractSpeakers(papercallExports: List<PapercallExport>): MutableList<PapercallProfile> {
         val speakers = mutableListOf<PapercallProfile>()
 
-        //Add a reference to the talk in the user to be able to link them
+        // Add a reference to the talk in the user to be able to link them
         papercallExports.forEach { talk ->
             talk.profile.talkId = talk.id
             talk.co_presenter_profiles.forEach { coPresenter -> coPresenter.talkId = talk.id }
         }
 
         papercallExports
-                .map { papercallExport -> papercallExport.profile }
-                .forEach { speakers.add(it) }
+            .map { papercallExport -> papercallExport.profile }
+            .forEach { speakers.add(it) }
 
         papercallExports
-                .flatMap { papercallExport -> papercallExport.co_presenter_profiles }
-                .forEach { speakers.add(it) }
+            .flatMap { papercallExport -> papercallExport.co_presenter_profiles }
+            .forEach { speakers.add(it) }
 
         return speakers
     }
@@ -105,20 +105,20 @@ class SessionizeImportTests(@Autowired val objectMapper: ObjectMapper,
         }
         println("User created")
 
-        return User(login,
-                firstNameOf(papercallSpeaker.name),
-                lastName(papercallSpeaker.name),
-                cryptographer.encrypt(papercallSpeaker.email),
-                papercallSpeaker.company,
-                bioToMap(papercallSpeaker.bio),
-                papercallSpeaker.email.encodeToMd5(),
-                "https://mixitconf.cleverapps.io/images/speakers/${getImageName(papercallSpeaker.name)}",
-                Role.USER,
-                if (papercallSpeaker.url.isNullOrEmpty()) listOf() else listOf(Link("site", papercallSpeaker.url)),
-                // We store id in token to retrieve speaker later when we will save talk
-                token = papercallSpeaker.talkId.orEmpty()
+        return User(
+            login,
+            firstNameOf(papercallSpeaker.name),
+            lastName(papercallSpeaker.name),
+            cryptographer.encrypt(papercallSpeaker.email),
+            papercallSpeaker.company,
+            bioToMap(papercallSpeaker.bio),
+            papercallSpeaker.email.encodeToMd5(),
+            "https://mixitconf.cleverapps.io/images/speakers/${getImageName(papercallSpeaker.name)}",
+            Role.USER,
+            if (papercallSpeaker.url.isNullOrEmpty()) listOf() else listOf(Link("site", papercallSpeaker.url)),
+            // We store id in token to retrieve speaker later when we will save talk
+            token = papercallSpeaker.talkId.orEmpty()
         )
-
     }
 
     private fun updateUser(user: User, papercallSpeaker: PapercallProfile): User {
@@ -130,18 +130,19 @@ class SessionizeImportTests(@Autowired val objectMapper: ObjectMapper,
         }
         println("User updated")
 
-        return User(user.login,
-                        firstNameOf(papercallSpeaker.name),
-                        lastName(papercallSpeaker.name),
-                        user.email,
-                        if (papercallSpeaker.company == null) user.company else papercallSpeaker.company,
-                        if (papercallSpeaker.bio == null) user.description else bioToMap(papercallSpeaker.bio),
-                        papercallSpeaker.email.encodeToMd5(),
-                        "https://mixitconf.cleverapps.io/images/speakers/${getImageName(papercallSpeaker.name)}",
-                        user.role,
-                        if (papercallSpeaker.url.isNullOrEmpty()) listOf() else listOf(Link("site", papercallSpeaker.url)),
-                        // We store id in token to retrieve speaker later when we will save talk
-                        token = papercallSpeaker.talkId.orEmpty()
+        return User(
+            user.login,
+            firstNameOf(papercallSpeaker.name),
+            lastName(papercallSpeaker.name),
+            user.email,
+            if (papercallSpeaker.company == null) user.company else papercallSpeaker.company,
+            if (papercallSpeaker.bio == null) user.description else bioToMap(papercallSpeaker.bio),
+            papercallSpeaker.email.encodeToMd5(),
+            "https://mixitconf.cleverapps.io/images/speakers/${getImageName(papercallSpeaker.name)}",
+            user.role,
+            if (papercallSpeaker.url.isNullOrEmpty()) listOf() else listOf(Link("site", papercallSpeaker.url)),
+            // We store id in token to retrieve speaker later when we will save talk
+            token = papercallSpeaker.talkId.orEmpty()
         )
     }
 
@@ -161,46 +162,47 @@ class SessionizeImportTests(@Autowired val objectMapper: ObjectMapper,
             val speakerIds = sessionSpeakers.map { it.login }
             val talkFormat = getTalkFormat(export)
 
-            println("Session ${title} : speakers ${sessionSpeakers.map { it.firstname + it.lastname }}")
-            println("Lng=$language " +
+            println("Session $title : speakers ${sessionSpeakers.map { it.firstname + it.lastname }}")
+            println(
+                "Lng=$language " +
                     "topic=$topic " +
                     "format=$talkFormat"
             )
 
             Talk(
-                    talkFormat,
-                    "2020",
-                    title,
-                    summary,
-                    speakerIds,
-                    language,
-                    topic = topic
+                talkFormat,
+                "2020",
+                title,
+                summary,
+                speakerIds,
+                language,
+                topic = topic
             )
         }
     }
 
     private fun getTalkFormat(export: PapercallExport): TalkFormat =
-            when (export.talk?.talk_format) {
-                "Long talk (50 minutes)" -> TalkFormat.TALK
-                "Short talk (20 minutes)" -> TalkFormat.RANDOM
-                "Workshop (110 minutes)" -> TalkFormat.WORKSHOP
-                else -> TalkFormat.TALK
-            }
+        when (export.talk?.talk_format) {
+            "Long talk (50 minutes)" -> TalkFormat.TALK
+            "Short talk (20 minutes)" -> TalkFormat.RANDOM
+            "Workshop (110 minutes)" -> TalkFormat.WORKSHOP
+            else -> TalkFormat.TALK
+        }
 
     private fun getTopic(export: PapercallExport): String {
         val mixitTopics = listOf("maker", "design", "aliens", "tech", "ethic", "life style", "team")
         val papercallTopics: String = export.tags
-                .map { it.lowercase() }
-                .filter { mixitTopics.contains(it) }
-                .firstOrNull().orEmpty().ifEmpty { "other" }
+            .map { it.lowercase() }
+            .filter { mixitTopics.contains(it) }
+            .firstOrNull().orEmpty().ifEmpty { "other" }
         return toMixitTopic(papercallTopics)
     }
 
     private fun getLanguage(export: PapercallExport): Language {
         val isInFrench = export.cfp_additional_question_answers
-                .filter { question -> question.question_content == "Do you plan to present your talk in French?" }
-                .filter { question -> question.content == "yes" }
-                .isNotEmpty()
+            .filter { question -> question.question_content == "Do you plan to present your talk in French?" }
+            .filter { question -> question.content == "yes" }
+            .isNotEmpty()
         return if (isInFrench) Language.FRENCH else Language.ENGLISH
     }
 }
@@ -220,7 +222,6 @@ fun getImageUrl(user: User, pictureUrl: String?): String? {
     }
     return pictureUrl
 }
-
 
 fun bioToMap(bio: String?) = if (bio == null) mapOf(Pair(Language.FRENCH, "UNKNOWN"), Pair(Language.ENGLISH, "UNKNOWN")) else mapOf(Pair(Language.FRENCH, bio), Pair(Language.ENGLISH, bio))
 
@@ -256,55 +257,54 @@ fun downloadImage(url: String, filename: String) {
                 }
             }
         } catch (e: Exception) {
-            System.out.println("Impossible to load image for ${filename}")
+            System.out.println("Impossible to load image for $filename")
             e.printStackTrace()
         }
     }
 }
 
 class PapercallExport(
-        val id: String? = null,
-        val state: String? = null,
-        val talk: PapercallTalk? = null,
-        val tags: List<String> = emptyList(),
-        val profile: PapercallProfile,
-        val co_presenter_profiles: List<PapercallProfile> = emptyList(),
-        val cfp_additional_question_answers: List<PapercallAdditionalQuestion>
+    val id: String? = null,
+    val state: String? = null,
+    val talk: PapercallTalk? = null,
+    val tags: List<String> = emptyList(),
+    val profile: PapercallProfile,
+    val co_presenter_profiles: List<PapercallProfile> = emptyList(),
+    val cfp_additional_question_answers: List<PapercallAdditionalQuestion>
 )
 
 class PapercallAdditionalQuestion(
-        val question_content: String? = null,
-        val content: String? = null
+    val question_content: String? = null,
+    val content: String? = null
 )
 
 class PapercallProfile(
-        val name: String,
-        val bio: String? = null,
-        val twitter: String? = null,
-        val company: String? = null,
-        val url: String? = null,
-        val email: String,
-        val avatar: String? = null,
-        var talkId: String? = null
+    val name: String,
+    val bio: String? = null,
+    val twitter: String? = null,
+    val company: String? = null,
+    val url: String? = null,
+    val email: String,
+    val avatar: String? = null,
+    var talkId: String? = null
 )
 
 class PapercallTalk(
-        val title: String? = null,
-        val abstract: String? = null,
-        val description: String? = null,
-        val talk_format: String? = null
+    val title: String? = null,
+    val abstract: String? = null,
+    val description: String? = null,
+    val talk_format: String? = null
 )
 
-
 fun toMixitTopic(rawTopic: String): String =
-        when (rawTopic) {
-            "Maker" -> "makers"
-            "Design" -> "design"
-            "Aliens" -> "aliens"
-            "aliens" -> "aliens"
-            "Tech" -> "tech"
-            "Ethic" -> "ethics"
-            "Life style" -> "lifestyle"
-            "Team" -> "team"
-            else -> "other"
-        }
+    when (rawTopic) {
+        "Maker" -> "makers"
+        "Design" -> "design"
+        "Aliens" -> "aliens"
+        "aliens" -> "aliens"
+        "Tech" -> "tech"
+        "Ethic" -> "ethics"
+        "Life style" -> "lifestyle"
+        "Team" -> "team"
+        else -> "other"
+    }

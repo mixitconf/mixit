@@ -17,10 +17,11 @@ import org.springframework.data.mongodb.core.query.isEqualTo
 import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
 
-
 @Repository
-class EventRepository(private val template: ReactiveMongoTemplate,
-                      private val objectMapper: ObjectMapper) {
+class EventRepository(
+    private val template: ReactiveMongoTemplate,
+    private val objectMapper: ObjectMapper
+) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
@@ -44,5 +45,4 @@ class EventRepository(private val template: ReactiveMongoTemplate,
     fun save(event: Event) = template.save(event)
 
     fun findByYear(year: Int) = template.findOne<Event>(Query(Criteria.where("year").isEqualTo(year)))
-
 }

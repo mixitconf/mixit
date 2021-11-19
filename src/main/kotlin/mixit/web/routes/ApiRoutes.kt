@@ -12,15 +12,16 @@ import org.springframework.context.annotation.Configuration
 import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.web.reactive.function.server.router
 
-
 @Configuration
-class ApiRoutes(private val blogHandler: BlogHandler,
-                private val eventHandler: EventHandler,
-                private val talkHandler: TalkHandler,
-                private val favoriteHandler: FavoriteHandler,
-                private val ticketingHandler: TicketingHandler,
-                private val externalHandler: ExternalHandler,
-                private val userHandler: UserHandler) {
+class ApiRoutes(
+    private val blogHandler: BlogHandler,
+    private val eventHandler: EventHandler,
+    private val talkHandler: TalkHandler,
+    private val favoriteHandler: FavoriteHandler,
+    private val ticketingHandler: TicketingHandler,
+    private val externalHandler: ExternalHandler,
+    private val userHandler: UserHandler
+) {
 
     @Bean
     fun apiRouter() = router {

@@ -24,7 +24,6 @@ import java.net.InetSocketAddress
 import java.net.URI
 import java.util.*
 
-
 @ExtendWith(MockKExtension::class)
 class MixitWebFilterTest() {
     @RelaxedMockK
@@ -145,5 +144,4 @@ class MixitWebFilterTest() {
         headers.set(HttpHeaders.USER_AGENT, "unknown")
         assertThat(filter.isSearchEngineCrawler(request)).isFalse()
     }
-
 }

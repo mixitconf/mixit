@@ -27,17 +27,18 @@ import javax.crypto.Cipher
 import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.SecretKeySpec
 
-
 // -------------------------
 // Spring WebFlux extensions
 // -------------------------
 
 fun ServerRequest.language() =
-        Language.findByTag(if (this.headers().asHttpHeaders().contentLanguage != null) this.headers().asHttpHeaders().contentLanguage!!.language
-        else this.headers().asHttpHeaders().acceptLanguageAsLocales.first().language)
+    Language.findByTag(
+        if (this.headers().asHttpHeaders().contentLanguage != null) this.headers().asHttpHeaders().contentLanguage!!.language
+        else this.headers().asHttpHeaders().acceptLanguageAsLocales.first().language
+    )
 
 fun ServerRequest.locale(): Locale =
-        this.headers().asHttpHeaders().contentLanguage ?: Locale.ENGLISH
+    this.headers().asHttpHeaders().contentLanguage ?: Locale.ENGLISH
 
 fun ServerResponse.BodyBuilder.json() = contentType(APPLICATION_JSON)
 
@@ -54,77 +55,75 @@ fun seeOther(uri: String) = seeOther(URI(uri)).build()
 // --------------------
 
 fun LocalDateTime.formatDate(language: Language): String =
-        if (language == Language.ENGLISH) this.format(englishDateFormatter) else this.format(frenchDateFormatter)
+    if (language == Language.ENGLISH) this.format(englishDateFormatter) else this.format(frenchDateFormatter)
 
 fun LocalDateTime.formatTalkDate(language: Language): String =
-        if (language == Language.ENGLISH) this.format(englishTalkDateFormatter) else this.format(frenchTalkDateFormatter).capitalize()
+    if (language == Language.ENGLISH) this.format(englishTalkDateFormatter) else this.format(frenchTalkDateFormatter)
 
 fun LocalDateTime.formatTalkTime(language: Language): String =
-        if (language == Language.ENGLISH) this.format(englishTalkTimeFormatter) else this.format(frenchTalkTimeFormatter)
+    if (language == Language.ENGLISH) this.format(englishTalkTimeFormatter) else this.format(frenchTalkTimeFormatter)
 
 fun LocalDateTime.toRFC3339(): String = ZonedDateTime.of(this, ZoneOffset.UTC).format(rfc3339Formatter)
 
-
 private val daysLookup: Map<Long, String> =
-        IntStream.rangeClosed(1, 31).boxed().collect(Collectors.toMap(Int::toLong, ::getOrdinal))
+    IntStream.rangeClosed(1, 31).boxed().collect(Collectors.toMap(Int::toLong, ::getOrdinal))
 
 private val frenchDateFormatter = DateTimeFormatter.ofPattern("d MMMM yyyy", Locale.FRENCH)
 
 private val englishDateFormatter = DateTimeFormatterBuilder()
-        .appendPattern("MMMM")
-        .appendLiteral(" ")
-        .appendText(ChronoField.DAY_OF_MONTH, daysLookup)
-        .appendLiteral(" ")
-        .appendPattern("yyyy")
-        .toFormatter(Locale.ENGLISH)
+    .appendPattern("MMMM")
+    .appendLiteral(" ")
+    .appendText(ChronoField.DAY_OF_MONTH, daysLookup)
+    .appendLiteral(" ")
+    .appendPattern("yyyy")
+    .toFormatter(Locale.ENGLISH)
 
 private val frenchTalkDateFormatter = DateTimeFormatter.ofPattern("EEEE d MMMM", Locale.FRENCH)
 
 private val frenchTalkTimeFormatter = DateTimeFormatter.ofPattern("HH'h'mm", Locale.FRENCH)
 
 private val englishTalkDateFormatter = DateTimeFormatterBuilder()
-        .appendPattern("EEEE")
-        .appendLiteral(" ")
-        .appendPattern("MMMM")
-        .appendLiteral(" ")
-        .appendText(ChronoField.DAY_OF_MONTH, daysLookup)
-        .toFormatter(Locale.ENGLISH)
+    .appendPattern("EEEE")
+    .appendLiteral(" ")
+    .appendPattern("MMMM")
+    .appendLiteral(" ")
+    .appendText(ChronoField.DAY_OF_MONTH, daysLookup)
+    .toFormatter(Locale.ENGLISH)
 
 private val englishTalkTimeFormatter = DateTimeFormatter.ofPattern("HH:mm", Locale.ENGLISH)
 
 private val rfc3339Formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ssXXX")
 
-
 private fun getOrdinal(n: Int) =
-        when {
-            n in 11..13 -> "${n}th"
-            n % 10 == 1 -> "${n}st"
-            n % 10 == 2 -> "${n}nd"
-            n % 10 == 3 -> "${n}rd"
-            else -> "${n}th"
-        }
+    when {
+        n in 11..13 -> "${n}th"
+        n % 10 == 1 -> "${n}st"
+        n % 10 == 2 -> "${n}nd"
+        n % 10 == 3 -> "${n}rd"
+        else -> "${n}th"
+    }
 
 // ----------------
 // Other extensions
 // ----------------
 
-fun String.markFoundOccurrences(searchTerms: List<String>? = emptyList()) = if(searchTerms ==null || searchTerms.isEmpty()) this else {
+fun String.markFoundOccurrences(searchTerms: List<String>? = emptyList()) = if (searchTerms == null || searchTerms.isEmpty()) this else {
     var str = this
     searchTerms.forEach { str = str.replace(it, "<span class=\"mxt-text--found\">$it</span>", true) }
     str
 }
 
 fun String.stripAccents() = Normalizer
-        .normalize(this, Normalizer.Form.NFD)
-        .replace("\\p{InCombiningDiacriticalMarks}+".toRegex(), "")
+    .normalize(this, Normalizer.Form.NFD)
+    .replace("\\p{InCombiningDiacriticalMarks}+".toRegex(), "")
 
 fun String.toSlug() = lowercase()
-        .stripAccents()
-        .replace("\n", " ")
-        .replace("[^a-z\\d\\s]".toRegex(), " ")
-        .split(" ")
-        .joinToString("-")
-        .replace("-+".toRegex(), "-")   // Avoid multiple consecutive "--"
+    .stripAccents()
+    .replace("\n", " ")
+    .replace("[^a-z\\d\\s]".toRegex(), " ")
+    .split(" ")
+    .joinToString("-")
+    .replace("-+".toRegex(), "-") // Avoid multiple consecutive "--"
 
 fun String.camelCase() = this
     .trim()
@@ -178,9 +177,6 @@ private fun hex(digested: ByteArray): String {
 }
 
 fun <T> Iterable<T>.shuffle(): Iterable<T> =
-        toMutableList().apply { this.shuffle() }
+    toMutableList().apply { this.shuffle() }
 
 fun localePrefix(locale: Locale) = if (locale.language == "en") "/en" else ""
-
-
-

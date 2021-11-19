@@ -12,7 +12,7 @@ import java.util.regex.Pattern
 @Component
 class EmailValidator {
 
-    fun check(value: String?): String = if(isValid(value)) value!!.trim().lowercase() else throw EmailValidatorException()
+    fun check(value: String?): String = if (isValid(value)) value!!.trim().lowercase() else throw EmailValidatorException()
 
     fun isValid(value: String?): Boolean {
         if (value == null || value.length == 0) {
