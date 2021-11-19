@@ -11,7 +11,6 @@ import mixit.web.handler.AdminHandler
 import mixit.web.handler.AuthenticationHandler
 import mixit.web.handler.BlogHandler
 import mixit.web.handler.GlobalHandler
-import mixit.web.handler.NewsHandler
 import mixit.web.handler.SponsorHandler
 import mixit.web.handler.TalkHandler
 import mixit.web.handler.TicketingHandler
@@ -40,7 +39,6 @@ class WebsiteRoutes(
     private val authenticationHandler: AuthenticationHandler,
     private val blogHandler: BlogHandler,
     private val globalHandler: GlobalHandler,
-    private val newsHandler: NewsHandler,
     private val talkHandler: TalkHandler,
     private val sponsorHandler: SponsorHandler,
     private val ticketingHandler: TicketingHandler,
@@ -60,7 +58,6 @@ class WebsiteRoutes(
         accept(TEXT_HTML).nest {
             GET("/") { sponsorHandler.viewWithSponsors("home", arrayOf(SponsorshipLevel.LANYARD, SponsorshipLevel.GOLD), null, 2022, it) }
             GET("/about", globalHandler::findAboutView)
-            GET("/news", newsHandler::newsView)
             GET("/ticketing", ticketingHandler::ticketing)
             GET("/sponsors") { sponsorHandler.viewWithSponsors(2022, it) }
             GET("/mixteen") { sponsorHandler.viewWithSponsors("mixteen", arrayOf(SponsorshipLevel.MIXTEEN), "mixteen.title", 2021, it) }
@@ -144,10 +141,6 @@ class WebsiteRoutes(
                 GET("/", blogHandler::findAllView)
                 GET("/{slug}", blogHandler::findOneView)
             }
-        }
-
-        accept(TEXT_EVENT_STREAM).nest {
-            GET("/news/sse", newsHandler::newsSse)
         }
 
         contentType(APPLICATION_FORM_URLENCODED).nest {
