@@ -77,6 +77,6 @@ Quoting @javamind:
 curl https://mixitconf.org/api/blog | python -m json.tool > blog.json
 curl https://mixitconf.org/api/event | python -m json.tool > events.json
 curl https://mixitconf.org/api/user | python -m json.tool > users.json
-curl https://mixitconf.org/api/2022/talk | python -m json.tool > talks_2021.json
+curl https://mixitconf.org/api/2022/talk | python -m json.tool > talks_2022.json
 git commit -a -m "Update data from PROD"
 ```
