@@ -1,6 +1,7 @@
 package mixit.util
 
 import com.samskivert.mustache.Mustache
+import java.util.Locale
 import mixit.model.User
 import mixit.web.generateModelForExernalCall
 import org.assertj.core.api.Assertions
@@ -11,7 +12,6 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.context.MessageSource
 import org.springframework.core.io.ResourceLoader
 import org.springframework.test.context.junit.jupiter.SpringExtension
-import java.util.*
 
 /**
  * Test {@link TemplateService}

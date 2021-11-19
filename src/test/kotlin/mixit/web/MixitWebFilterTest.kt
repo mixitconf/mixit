@@ -4,6 +4,9 @@ import io.mockk.every
 import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.RelaxedMockK
 import io.mockk.junit5.MockKExtension
+import java.net.InetSocketAddress
+import java.net.URI
+import java.util.Locale
 import mixit.MixitProperties
 import mixit.model.Credential
 import mixit.repository.UserRepository
@@ -20,9 +23,6 @@ import org.springframework.http.server.reactive.ServerHttpRequest
 import org.springframework.util.LinkedMultiValueMap
 import org.springframework.util.MultiValueMap
 import org.springframework.web.server.ServerWebExchange
-import java.net.InetSocketAddress
-import java.net.URI
-import java.util.*
 
 @ExtendWith(MockKExtension::class)
 class MixitWebFilterTest() {

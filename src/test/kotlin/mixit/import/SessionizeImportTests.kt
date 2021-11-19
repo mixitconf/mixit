@@ -2,7 +2,17 @@ package mixit.import
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.jacksonTypeRef
-import mixit.model.*
+import java.io.File
+import java.io.FileOutputStream
+import java.io.InputStream
+import java.net.URL
+import java.util.UUID
+import mixit.model.Language
+import mixit.model.Link
+import mixit.model.Role
+import mixit.model.Talk
+import mixit.model.TalkFormat
+import mixit.model.User
 import mixit.repository.UserRepository
 import mixit.util.Cryptographer
 import mixit.util.encodeToMd5
@@ -10,11 +20,6 @@ import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.core.io.ClassPathResource
-import java.io.File
-import java.io.FileOutputStream
-import java.io.InputStream
-import java.net.URL
-import java.util.*
 
 inline fun <reified T> ObjectMapper.readValue(src: InputStream): T = readValue(src, jacksonTypeRef<T>())
 
@@ -30,7 +35,8 @@ class SessionizeImportTests(
 
         initializeFolder()
 
-        val papercallExports = objectMapper.readValue<List<PapercallExport>>(ClassPathResource("import/2020-papercall-export.json").inputStream)
+        val papercallExports =
+            objectMapper.readValue<List<PapercallExport>>(ClassPathResource("import/2020-papercall-export.json").inputStream)
 
         val speakersToPersist = importSpeakers(papercallExports)
         objectMapper.writeValue(File("/tmp/mixit/speakers_2020.json"), speakersToPersist)
@@ -60,7 +66,8 @@ class SessionizeImportTests(
     }
 
     private fun getImageName(speakerName: String): String {
-        val speakerWithPngImage = listOf("julien_dubedout", "marilyn_kol", "benoit", "cedric_spalvieri", "nikola_lohinski")
+        val speakerWithPngImage =
+            listOf("julien_dubedout", "marilyn_kol", "benoit", "cedric_spalvieri", "nikola_lohinski")
 
         val imageName = sanitize(speakerName)
         return imageName + if (speakerWithPngImage.any { it == imageName }) ".png" else ".jpg"
@@ -150,7 +157,10 @@ class SessionizeImportTests(
 
     private fun firstNameOf(name: String) = name.split(" ").first()
 
-    private fun createSessions(papercallExports: List<PapercallExport>, speakersToPersist: MutableList<User>): List<Talk> {
+    private fun createSessions(
+        papercallExports: List<PapercallExport>,
+        speakersToPersist: MutableList<User>
+    ): List<Talk> {
         return papercallExports.map { export ->
             // We have to find the sessions speakers
             val sessionSpeakers: List<User> = speakersToPersist.filter { it.token == export.id }
@@ -163,11 +173,7 @@ class SessionizeImportTests(
             val talkFormat = getTalkFormat(export)
 
             println("Session $title : speakers ${sessionSpeakers.map { it.firstname + it.lastname }}")
-            println(
-                "Lng=$language " +
-                    "topic=$topic " +
-                    "format=$talkFormat"
-            )
+            println("Lng=$language topic=$topic  format=$talkFormat")
 
             Talk(
                 talkFormat,
@@ -223,11 +229,25 @@ fun getImageUrl(user: User, pictureUrl: String?): String? {
     return pictureUrl
 }
 
-fun bioToMap(bio: String?) = if (bio == null) mapOf(Pair(Language.FRENCH, "UNKNOWN"), Pair(Language.ENGLISH, "UNKNOWN")) else mapOf(Pair(Language.FRENCH, bio), Pair(Language.ENGLISH, bio))
+fun bioToMap(bio: String?) = if (bio == null) mapOf(
+    Pair(Language.FRENCH, "UNKNOWN"),
+    Pair(Language.ENGLISH, "UNKNOWN")
+) else mapOf(Pair(Language.FRENCH, bio), Pair(Language.ENGLISH, bio))
 
-val SPECIAL_SLUG_CHARACTERS = mapOf(Pair('é', 'e'), Pair('è', 'e'), Pair('ï', 'i'), Pair(' ', '_'), Pair('ê', 'e'), Pair('à', 'a'), Pair('-', '_'), Pair('_', '0'), Pair('∴', '0'))
+val SPECIAL_SLUG_CHARACTERS = mapOf(
+    Pair('é', 'e'),
+    Pair('è', 'e'),
+    Pair('ï', 'i'),
+    Pair(' ', '_'),
+    Pair('ê', 'e'),
+    Pair('à', 'a'),
+    Pair('-', '_'),
+    Pair('_', '0'),
+    Pair('∴', '0')
+)
 
-fun sanitize(value: String): String = value.lowercase().toCharArray().map { if (SPECIAL_SLUG_CHARACTERS.get(it) == null) it else SPECIAL_SLUG_CHARACTERS.get(it) }.joinToString("")
+fun sanitize(value: String): String = value.lowercase().toCharArray()
+    .map { if (SPECIAL_SLUG_CHARACTERS.get(it) == null) it else SPECIAL_SLUG_CHARACTERS.get(it) }.joinToString("")
 
 fun initializeFolder() {
     // Check if /tmp/images/ exists ?

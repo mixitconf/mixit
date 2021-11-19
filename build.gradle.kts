@@ -126,3 +126,7 @@ tasks.getByName("processResources").dependsOn(
     "compileSass",
     "compileTypescript"
 )
+
+kotlinter {
+    disabledRules = arrayOf("import-ordering")
+}

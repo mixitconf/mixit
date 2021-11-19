@@ -30,7 +30,10 @@ class BlogHandler(
     fun findOneView(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug"), req.language())
         .flatMap { post ->
             userRepository.findOne(post.authorId).flatMap { author ->
-                val model = mapOf(Pair("post", post.toDto(author, req.language())), Pair("title", "blog.post.title|${post.title[req.language()]}"))
+                val model = mapOf(
+                    Pair("post", post.toDto(author, req.language())),
+                    Pair("title", "blog.post.title|${post.title[req.language()]}")
+                )
                 ok().render("post", model)
             }
         }.switchIfEmpty(
@@ -43,9 +46,17 @@ class BlogHandler(
         .collectList()
         .flatMap { posts ->
             userRepository.findMany(posts.map { it.authorId }).collectMap { it.login }.flatMap { authors ->
-                val model = mapOf(Pair("posts", posts.map { it.toDto(if (authors[it.authorId] == null) User("mixit", "", "MiXiT", "") else authors[it.authorId]!!, req.language()) }), Pair("title", "blog.title"))
+                val model = mapOf(
+                    Pair(
+                        "posts",
+                        posts.map {
+                            it.toDto(authors[it.authorId] ?: User.miXiTUser(), req.language())
+                        }
+                    ),
+                    Pair("title", "blog.title")
+                )
                 ok().render("blog", model)
-            } 
+            }
         }
 
     fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("id")))
@@ -56,7 +67,18 @@ class BlogHandler(
         permanentRedirect("${properties.baseUri}/blog/${it.slug[req.language()]}")
     }
 
-    fun feed(req: ServerRequest) = ok().contentType(APPLICATION_ATOM_XML).render("feed", mapOf(Pair("feed", repository.findAll(req.language()).collectList().map { it.toFeed(req.language(), "blog.feed.title", "/blog") })))
+    fun feed(req: ServerRequest) = ok().contentType(APPLICATION_ATOM_XML).render(
+        "feed",
+        mapOf(
+            Pair(
+                "feed",
+                repository
+                    .findAll(req.language())
+                    .collectList()
+                    .map { it.toFeed(req.language(), "blog.feed.title", "/blog") }
+            )
+        )
+    )
 }
 
 class PostDto(

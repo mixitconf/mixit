@@ -7,6 +7,8 @@ import io.mockk.impl.annotations.MockK
 import io.mockk.impl.annotations.SpyK
 import io.mockk.junit5.MockKExtension
 import io.mockk.verify
+import java.time.LocalDateTime
+import java.util.Locale
 import mixit.model.Role
 import mixit.model.Ticket
 import mixit.model.User
@@ -19,20 +21,22 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import reactor.core.publisher.Mono
 import reactor.test.StepVerifier
-import java.time.LocalDateTime
-import java.util.*
 
 @ExtendWith(MockKExtension::class)
 internal class AuthenticationServiceTest {
 
     @MockK
     lateinit var userRepository: UserRepository
+
     @MockK
     lateinit var ticketRepository: TicketRepository
+
     @MockK
     lateinit var emailService: EmailService
+
     @SpyK
     var emailValidator: EmailValidator = EmailValidator()
+
     @MockK
     lateinit var cryptographer: Cryptographer
 
@@ -40,7 +44,15 @@ internal class AuthenticationServiceTest {
     lateinit var service: AuthenticationService
 
     val anEmail = "dan@north.uk"
-    val aUser = User("tastapod", "Dan", "North", anEmail, role = Role.USER, token = "token", tokenExpiration = LocalDateTime.now().plusDays(1))
+    val aUser = User(
+        "tastapod",
+        "Dan",
+        "North",
+        anEmail,
+        role = Role.USER,
+        token = "token",
+        tokenExpiration = LocalDateTime.now().plusDays(1)
+    )
 
     @Test
     fun `should create nothing  if a user already use this email`() {
@@ -121,7 +133,11 @@ internal class AuthenticationServiceTest {
 
     @Test
     fun `should check user email and user token and return token exception when token is expired`() {
-        every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.just(aUser.copy(tokenExpiration = LocalDateTime.now().minusMinutes(30)))
+        every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.just(
+            aUser.copy(
+                tokenExpiration = LocalDateTime.now().minusMinutes(30)
+            )
+        )
 
         StepVerifier.create(service.checkUserEmailAndToken(anEmail, aUser.token))
             .consumeErrorWith { TokenException("Token is invalid or is expired") }

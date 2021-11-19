@@ -30,6 +30,10 @@ data class User(
     var token: String = "empty-token",
     var externalAppToken: String? = null
 ) {
+    companion object {
+        fun miXiTUser(): User = User("mixit", "", "MiXiT", "")
+    }
+
     val tokenLifeTime: Duration
         get() = Duration.between(LocalDateTime.now(), tokenExpiration)
 }
