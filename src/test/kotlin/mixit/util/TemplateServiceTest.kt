@@ -1,10 +1,10 @@
 package mixit.util
 
 import com.samskivert.mustache.Mustache
+import java.util.Locale
 import mixit.model.User
 import mixit.web.generateModelForExernalCall
 import org.assertj.core.api.Assertions
-import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.beans.factory.annotation.Autowired
@@ -12,18 +12,17 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.context.MessageSource
 import org.springframework.core.io.ResourceLoader
 import org.springframework.test.context.junit.jupiter.SpringExtension
-import java.util.*
-
 
 /**
  * Test {@link TemplateService}
  */
 @ExtendWith(SpringExtension::class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class TemplateServiceTest(@Autowired val mustacheCompiler: Mustache.Compiler,
-                          @Autowired val resourceLoader: ResourceLoader,
-                          @Autowired val messageSource: MessageSource) {
-
+class TemplateServiceTest(
+    @Autowired val mustacheCompiler: Mustache.Compiler,
+    @Autowired val resourceLoader: ResourceLoader,
+    @Autowired val messageSource: MessageSource
+) {
 
     val templateService: TemplateService = TemplateService(mustacheCompiler, resourceLoader)
 
@@ -38,12 +37,12 @@ class TemplateServiceTest(@Autowired val mustacheCompiler: Mustache.Compiler,
         val content = templateService.load("email-token", params)
 
         Assertions.assertThat(content)
-                // a message to say hello
-                .contains("Bonjour Guillaume")
-                // a link to our website
-                .contains("<a href=\"https://mixitconf.org\">https://mixitconf.org</a>")
-                // a link to be able to end the token
-                .contains("<a href=\"https://mixitconf.org/signin/token-3455-dede/test&#64;gmail.com\" class=\"button mxt-button\">Log In</a>")
+            // a message to say hello
+            .contains("Bonjour Guillaume")
+            // a link to our website
+            .contains("<a href=\"https://mixitconf.org\">https://mixitconf.org</a>")
+            // a link to be able to end the token
+            .contains("<a href=\"https://mixitconf.org/signin/token-3455-dede/test&#64;gmail.com\" class=\"button mxt-button\">Log In</a>")
     }
 
     @Test
@@ -55,12 +54,12 @@ class TemplateServiceTest(@Autowired val mustacheCompiler: Mustache.Compiler,
         val content = templateService.load("email-token", params)
 
         Assertions.assertThat(content)
-                // a message to say hello
-                .contains("Hello Guillaume")
-                // a link to our website
-                .contains("<a href=\"https://mixitconf.org\">https://mixitconf.org</a>")
-                // a link to be able to end the token
-                .contains("<a href=\"https://mixitconf.org/signin/token-3455-dede/test&#64;gmail.com\" class=\"button mxt-button\">Log In</a>")
+            // a message to say hello
+            .contains("Hello Guillaume")
+            // a link to our website
+            .contains("<a href=\"https://mixitconf.org\">https://mixitconf.org</a>")
+            // a link to be able to end the token
+            .contains("<a href=\"https://mixitconf.org/signin/token-3455-dede/test&#64;gmail.com\" class=\"button mxt-button\">Log In</a>")
     }
 
     private fun createUser(): User {
@@ -68,5 +67,4 @@ class TemplateServiceTest(@Autowired val mustacheCompiler: Mustache.Compiler,
         user.token = "token-3455-dede"
         return user
     }
-
 }

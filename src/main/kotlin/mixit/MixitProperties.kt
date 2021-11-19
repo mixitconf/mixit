@@ -37,5 +37,3 @@ class MixitProperties {
         lateinit var appname: String
     }
 }
-
-

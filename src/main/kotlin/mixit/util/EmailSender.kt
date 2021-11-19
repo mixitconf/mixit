@@ -15,7 +15,6 @@ import javax.mail.Session
 import javax.mail.internet.InternetAddress
 import javax.mail.internet.MimeMessage
 
-
 /**
  * Email
  */

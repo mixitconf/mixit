@@ -24,10 +24,11 @@ import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 
-
 @Repository
-class TalkRepository(private val template: ReactiveMongoTemplate,
-                     private val objectMapper: ObjectMapper) {
+class TalkRepository(
+    private val template: ReactiveMongoTemplate,
+    private val objectMapper: ObjectMapper
+) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
@@ -75,10 +76,10 @@ class TalkRepository(private val template: ReactiveMongoTemplate,
     fun findOne(id: String) = template.findById<Talk>(id)
 
     fun findBySlug(slug: String) =
-            template.findOne<Talk>(Query(where("slug").isEqualTo(slug)))
+        template.findOne<Talk>(Query(where("slug").isEqualTo(slug)))
 
     fun findByEventAndSlug(eventId: String, slug: String) =
-            template.findOne<Talk>(Query(where("slug").isEqualTo(slug).and("event").isEqualTo(eventId)))
+        template.findOne<Talk>(Query(where("slug").isEqualTo(slug).and("event").isEqualTo(eventId)))
 
     fun deleteAll() = template.remove<Talk>(Query())
 
@@ -87,5 +88,4 @@ class TalkRepository(private val template: ReactiveMongoTemplate,
     fun deleteByEvent(event: String) = template.remove<Talk>(Query(where("event").isEqualTo(event)))
 
     fun save(talk: Talk) = template.save(talk)
-
 }

@@ -30,6 +30,10 @@ data class User(
     var token: String = "empty-token",
     var externalAppToken: String? = null
 ) {
+    companion object {
+        fun miXiTUser(): User = User("mixit", "", "MiXiT", "")
+    }
+
     val tokenLifeTime: Duration
         get() = Duration.between(LocalDateTime.now(), tokenExpiration)
 }
@@ -50,7 +54,7 @@ fun User.generateNewToken(generateExternalToken: Boolean = false) = this.copy(
 fun User.updateEmail(cryptographer: Cryptographer, newEmail: String) =
     this.copy(email = cryptographer.encrypt(newEmail))
 
-fun User.jsonToken(cryptographer: Cryptographer) = "${cryptographer.decrypt(email)}:${token}".encodeToBase64()!!
+fun User.jsonToken(cryptographer: Cryptographer) = "${cryptographer.decrypt(email)}:$token".encodeToBase64()!!
 
 fun User.hasValidToken(token: String) = this.token == token.trim() && tokenExpiration.isAfter(LocalDateTime.now())
 

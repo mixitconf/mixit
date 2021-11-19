@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test
 /**
  * Test {@link MaxLengthValidator}
  */
-class MaxLengthValidatorTest{
+class MaxLengthValidatorTest {
 
     val validator = MaxLengthValidator()
 

@@ -17,29 +17,34 @@ class FavoriteHandler(private val favoriteRepository: FavoriteRepository, privat
     fun findAll(req: ServerRequest) = ok().json().body(favoriteRepository.findAll())
 
     fun toggleFavorite(req: ServerRequest) = ok().json().body(
-            favoriteRepository.findByEmailAndTalk(req.pathVariable("email"), req.pathVariable("id"))
-                    // if favorite is found we delete it
-                    .flatMap { favoriteRepository.delete(req.pathVariable("email"), it.talkId).map { FavoriteDto(req.pathVariable("id"), false) } }
-                    // otherwise we create it
-                    .switchIfEmpty(Mono.defer { favoriteRepository.save(
-                            Favorite(cryptographer.encrypt(
-                                    req.pathVariable("email"))!!,
-                                    req.pathVariable("id"))).map { FavoriteDto(it.talkId, true) } })
+        favoriteRepository.findByEmailAndTalk(req.pathVariable("email"), req.pathVariable("id"))
+            // if favorite is found we delete it
+            .flatMap { favoriteRepository.delete(req.pathVariable("email"), it.talkId).map { FavoriteDto(req.pathVariable("id"), false) } }
+            // otherwise we create it
+            .switchIfEmpty(
+                Mono.defer {
+                    favoriteRepository.save(
+                        Favorite(
+                            cryptographer.encrypt(
+                                req.pathVariable("email")
+                            )!!,
+                            req.pathVariable("id")
+                        )
+                    ).map { FavoriteDto(it.talkId, true) }
+                }
+            )
     )
 
-
     fun getFavorite(req: ServerRequest) = ok().json().body(
-            favoriteRepository.findByEmailAndTalk(req.pathVariable("email"), req.pathVariable("id"))
-                    .flatMap { FavoriteDto(it.talkId, true).toMono() }
-                    .switchIfEmpty(FavoriteDto(req.pathVariable("id"), false).toMono())
+        favoriteRepository.findByEmailAndTalk(req.pathVariable("email"), req.pathVariable("id"))
+            .flatMap { FavoriteDto(it.talkId, true).toMono() }
+            .switchIfEmpty(FavoriteDto(req.pathVariable("id"), false).toMono())
     )
 
     fun getFavorites(req: ServerRequest) = ok().json().body(favoriteRepository.findByEmail(req.pathVariable("email")))
-
-
 }
 
 class FavoriteDto(
-        val talkId: String,
-        val selected: Boolean
+    val talkId: String,
+    val selected: Boolean
 )

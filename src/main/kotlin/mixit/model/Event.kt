@@ -6,21 +6,21 @@ import java.time.LocalDate
 
 @Document
 data class Event(
-        @Id val id: String,
-        val start: LocalDate,
-        val end: LocalDate,
-        val current: Boolean = false,
-        val sponsors: List<EventSponsoring> = emptyList(),
-        val photoUrls: List<Link> = emptyList(),
-        val videoUrl: Link? = null,
-        val year: Int = start.year
+    @Id val id: String,
+    val start: LocalDate,
+    val end: LocalDate,
+    val current: Boolean = false,
+    val sponsors: List<EventSponsoring> = emptyList(),
+    val photoUrls: List<Link> = emptyList(),
+    val videoUrl: Link? = null,
+    val year: Int = start.year
 )
 
 @Document
 data class EventSponsoring(
-        val level: SponsorshipLevel,
-        val sponsorId: String,
-        val subscriptionDate: LocalDate = LocalDate.now()
+    val level: SponsorshipLevel,
+    val sponsorId: String,
+    val subscriptionDate: LocalDate = LocalDate.now()
 )
 
 enum class SponsorshipLevel {
@@ -40,4 +40,3 @@ enum class SponsorshipLevel {
     ACCESSIBILITY,
     NONE
 }
-

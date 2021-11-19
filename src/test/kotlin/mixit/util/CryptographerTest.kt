@@ -12,10 +12,12 @@ class CryptographerTest {
     /**
      * For this test we can use the real object
      */
-    val service: Cryptographer = Cryptographer(MixitProperties().apply {
-        aes.key = "myKeyIsTheBest01"
-        aes.initvector = "myvectorIsBetter"
-    })
+    val service: Cryptographer = Cryptographer(
+        MixitProperties().apply {
+            aes.key = "myKeyIsTheBest01"
+            aes.initvector = "myvectorIsBetter"
+        }
+    )
 
     @Test
     fun `should encrypt and decrypt a String`() {
@@ -32,4 +34,3 @@ class CryptographerTest {
         Assertions.assertThat(service.decrypt(null)).isNull()
     }
 }
-

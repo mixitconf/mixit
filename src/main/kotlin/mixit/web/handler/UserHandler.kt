@@ -38,124 +38,137 @@ import java.net.URLDecoder
 import java.nio.charset.StandardCharsets
 import java.util.stream.IntStream
 
-
 @Component
-class UserHandler(private val repository: UserRepository,
-                  private val talkRepository: TalkRepository,
-                  private val ticketRepository: TicketRepository,
-                  private val markdownConverter: MarkdownConverter,
-                  private val cryptographer: Cryptographer,
-                  private val properties: MixitProperties,
-                  private val emailValidator: EmailValidator,
-                  private val urlValidator: UrlValidator,
-                  private val maxLengthValidator: MaxLengthValidator,
-                  private val markdownValidator: MarkdownValidator) {
+class UserHandler(
+    private val repository: UserRepository,
+    private val talkRepository: TalkRepository,
+    private val ticketRepository: TicketRepository,
+    private val markdownConverter: MarkdownConverter,
+    private val cryptographer: Cryptographer,
+    private val properties: MixitProperties,
+    private val emailValidator: EmailValidator,
+    private val urlValidator: UrlValidator,
+    private val maxLengthValidator: MaxLengthValidator,
+    private val markdownValidator: MarkdownValidator
+) {
 
     companion object {
         val speakerStarInHistory = listOf(
-                "tastapod",
-                "joel.spolsky",
-                "pamelafox",
-                "MattiSG",
-                "bodil",
-                "mojavelinux",
-                "andrey.breslav",
-                //"kowen",
-                "ppezziardi",
-                "rising.linda",
-                "jhoeller",
-                "sharonsteed",
-                "allan.rennebo",
-                "agilex",
-                "laura.carvajal",
-                "augerment",
-                "dgageot",
-                "romainguy",
-                "graphicsgeek1",
-                "andre",
-				"mary",
-				"Woody.Zuill",
-				"james.carlson",
-				"egorcenski",
-				"ojuncu",
-				"hsablonniere",
-				"nitot"
-				)
+            "tastapod",
+            "joel.spolsky",
+            "pamelafox",
+            "MattiSG",
+            "bodil",
+            "mojavelinux",
+            "andrey.breslav",
+            // "kowen",
+            "ppezziardi",
+            "rising.linda",
+            "jhoeller",
+            "sharonsteed",
+            "allan.rennebo",
+            "agilex",
+            "laura.carvajal",
+            "augerment",
+            "dgageot",
+            "romainguy",
+            "graphicsgeek1",
+            "andre",
+            "mary",
+            "Woody.Zuill",
+            "james.carlson",
+            "egorcenski",
+            "ojuncu",
+            "hsablonniere",
+            "nitot"
+        )
         val speakerStarInCurrentEvent = listOf<String>()
     }
 
     enum class ViewMode { ViewMyProfile, ViewUser, EditProfile }
 
     fun findOneView(req: ServerRequest) =
-            try {
-                val idLegacy = req.pathVariable("login").toLong()
-                repository.findByLegacyId(idLegacy).flatMap { findOneViewDetail(req, it) }
-
-            } catch (e: NumberFormatException) {
-                repository.findOne(URLDecoder.decode(req.pathVariable("login"), "UTF-8"))
-                        .flatMap { findOneViewDetail(req, it) }
-            }
+        try {
+            val idLegacy = req.pathVariable("login").toLong()
+            repository.findByLegacyId(idLegacy).flatMap { findOneViewDetail(req, it) }
+        } catch (e: NumberFormatException) {
+            repository.findOne(URLDecoder.decode(req.pathVariable("login"), "UTF-8"))
+                .flatMap { findOneViewDetail(req, it) }
+        }
 
     fun findProfileView(req: ServerRequest) =
-            req.session().flatMap {
-                val currentUserEmail = it.getAttribute<String>("email")
-                repository.findByNonEncryptedEmail(currentUserEmail!!).flatMap { findOneViewDetail(req, it, ViewMode.ViewMyProfile) }
-            }
+        req.session().flatMap {
+            val currentUserEmail = it.getAttribute<String>("email")
+            repository.findByNonEncryptedEmail(currentUserEmail!!).flatMap { findOneViewDetail(req, it, ViewMode.ViewMyProfile) }
+        }
 
     fun editProfileView(req: ServerRequest) =
-            req.session().flatMap {
-                val currentUserEmail = it.getAttribute<String>("email")
-                repository.findByNonEncryptedEmail(currentUserEmail!!).flatMap { findOneViewDetail(req, it, ViewMode.EditProfile) }
-            }
+        req.session().flatMap {
+            val currentUserEmail = it.getAttribute<String>("email")
+            repository.findByNonEncryptedEmail(currentUserEmail!!).flatMap { findOneViewDetail(req, it, ViewMode.EditProfile) }
+        }
 
-    private fun findOneViewDetail(req: ServerRequest,
-                                  user: User, viewMode: ViewMode = ViewMode.ViewUser,
-                                  errors: Map<String, String> = emptyMap()): Mono<ServerResponse> =
-            if (viewMode == ViewMode.EditProfile) {
-                ok().render("user-edit", mapOf(
-                        Pair("user", user.toDto(req.language(), markdownConverter)),
-                        Pair("usermail", cryptographer.decrypt(user.email)),
-                        Pair("description-fr", user.description[Language.FRENCH]),
-                        Pair("description-en", user.description[Language.ENGLISH]),
-                        Pair("userlinks", user.toLinkDtos()),
-                        Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
-                        Pair("errors", errors),
-                        Pair("hasErrors", errors.isNotEmpty())
-                ))
-            } else if (viewMode == ViewMode.ViewMyProfile) {
-                ticketRepository
-                        .findByEmail(cryptographer.decrypt(user.email)!!)
-                        .flatMap {
-                            ok().render("user", mapOf(
-                                    Pair("user", user.toDto(req.language(), markdownConverter)),
-                                    Pair("hasLotteryTicket", true),
-                                    Pair("canUpdateProfile", true),
-                                    Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8))
-                            ))
-                        }
-                        .switchIfEmpty(
-                                ok().render("user", mapOf(
-                                        Pair("user", user.toDto(req.language(), markdownConverter)),
-                                        Pair("canUpdateProfile", true),
-                                        Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8))
-                                ))
+    private fun findOneViewDetail(
+        req: ServerRequest,
+        user: User,
+        viewMode: ViewMode = ViewMode.ViewUser,
+        errors: Map<String, String> = emptyMap()
+    ): Mono<ServerResponse> =
+        if (viewMode == ViewMode.EditProfile) {
+            ok().render(
+                "user-edit",
+                mapOf(
+                    Pair("user", user.toDto(req.language(), markdownConverter)),
+                    Pair("usermail", cryptographer.decrypt(user.email)),
+                    Pair("description-fr", user.description[Language.FRENCH]),
+                    Pair("description-en", user.description[Language.ENGLISH]),
+                    Pair("userlinks", user.toLinkDtos()),
+                    Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
+                    Pair("errors", errors),
+                    Pair("hasErrors", errors.isNotEmpty())
+                )
+            )
+        } else if (viewMode == ViewMode.ViewMyProfile) {
+            ticketRepository
+                .findByEmail(cryptographer.decrypt(user.email)!!)
+                .flatMap {
+                    ok().render(
+                        "user",
+                        mapOf(
+                            Pair("user", user.toDto(req.language(), markdownConverter)),
+                            Pair("hasLotteryTicket", true),
+                            Pair("canUpdateProfile", true),
+                            Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8))
                         )
-            } else {
-                talkRepository
-                        .findBySpeakerId(listOf(user.login))
-                        .collectList()
-                        .flatMap { talks ->
-                            val talkDtos = talks.map { talk -> talk.toDto(req.language(), listOf(user)) }
-                            ok().render("user", mapOf(
-                                    Pair("user", user.toDto(req.language(), markdownConverter)),
-                                    Pair("talks", talkDtos),
-                                    Pair("hasTalks", talkDtos.isNotEmpty()),
-                                    Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8))
-                            ))
-
-                        }
-            }
-
+                    )
+                }
+                .switchIfEmpty(
+                    ok().render(
+                        "user",
+                        mapOf(
+                            Pair("user", user.toDto(req.language(), markdownConverter)),
+                            Pair("canUpdateProfile", true),
+                            Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8))
+                        )
+                    )
+                )
+        } else {
+            talkRepository
+                .findBySpeakerId(listOf(user.login))
+                .collectList()
+                .flatMap { talks ->
+                    val talkDtos = talks.map { talk -> talk.toDto(req.language(), listOf(user)) }
+                    ok().render(
+                        "user",
+                        mapOf(
+                            Pair("user", user.toDto(req.language(), markdownConverter)),
+                            Pair("talks", talkDtos),
+                            Pair("hasTalks", talkDtos.isNotEmpty()),
+                            Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8))
+                        )
+                    )
+                }
+        }
 
     fun saveProfile(req: ServerRequest): Mono<ServerResponse> = req.session().flatMap {
         val currentUserEmail = it.getAttribute<String>("email")
@@ -190,23 +203,23 @@ class UserHandler(private val repository: UserRepository,
                 }
 
                 val user = User(
-                        it.login,
-                        formData["firstname"]!!,
-                        formData["lastname"]!!,
-                        cryptographer.encrypt(formData["email"]!!),
-                        if (formData["company"] == "") null else formData["company"],
-                        mapOf(
-                                Pair(Language.FRENCH, markdownValidator.sanitize(formData["description-fr"]!!)),
-                                Pair(Language.ENGLISH, markdownValidator.sanitize(formData["description-en"]!!))),
-                        if (formData["photoUrl"].isNullOrBlank()) formData["email"]!!.encodeToMd5() else null,
-                        if (formData["photoUrl"] == "") null else formData["photoUrl"],
-                        it.role,
-                        extractLinks(formData),
-                        it.legacyId,
-                        it.tokenExpiration,
-                        it.token
+                    it.login,
+                    formData["firstname"]!!,
+                    formData["lastname"]!!,
+                    cryptographer.encrypt(formData["email"]!!),
+                    if (formData["company"] == "") null else formData["company"],
+                    mapOf(
+                        Pair(Language.FRENCH, markdownValidator.sanitize(formData["description-fr"]!!)),
+                        Pair(Language.ENGLISH, markdownValidator.sanitize(formData["description-en"]!!))
+                    ),
+                    if (formData["photoUrl"].isNullOrBlank()) formData["email"]!!.encodeToMd5() else null,
+                    if (formData["photoUrl"] == "") null else formData["photoUrl"],
+                    it.role,
+                    extractLinks(formData),
+                    it.legacyId,
+                    it.tokenExpiration,
+                    it.token
                 )
-
 
                 // We want to control data to not save invalid things in our database
                 if (!maxLengthValidator.isValid(user.firstname, 30)) {
@@ -250,12 +263,12 @@ class UserHandler(private val repository: UserRepository,
     }
 
     private fun extractLinks(formData: Map<String, String>): List<Link> =
-            IntStream.range(0, 5)
-                    .toArray()
-                    .asList()
-                    .mapIndexed { index, _ -> Pair(formData["link${index}Name"], formData["link${index}Url"]) }
-                    .filter { !it.first.isNullOrBlank() && !it.second.isNullOrBlank() }
-                    .map { Link(it.first!!, it.second!!) }
+        IntStream.range(0, 5)
+            .toArray()
+            .asList()
+            .mapIndexed { index, _ -> Pair(formData["link${index}Name"], formData["link${index}Url"]) }
+            .filter { !it.first.isNullOrBlank() && !it.second.isNullOrBlank() }
+            .map { Link(it.first!!, it.second!!) }
 
     fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("login")).map { it.anonymize() })
 
@@ -265,93 +278,93 @@ class UserHandler(private val repository: UserRepository,
 
     fun findOneStaff(req: ServerRequest) = ok().json().body(repository.findOneByRoles(req.pathVariable("login"), listOf(Role.STAFF, Role.STAFF_IN_PAUSE)).map { it.anonymize() })
 
-
     fun findSpeakerByEventId(req: ServerRequest) =
-            ok().json().body(talkRepository.findByEvent(req.pathVariable("year")).flatMap { repository.findMany(it.speakerIds).map { it.anonymize() } }.distinct())
-
+        ok().json().body(talkRepository.findByEvent(req.pathVariable("year")).flatMap { repository.findMany(it.speakerIds).map { it.anonymize() } }.distinct())
 
     fun create(req: ServerRequest) = repository.save(req.bodyToMono<User>()).flatMap {
         created(create("/api/user/${it.login}")).json().body(it.toMono())
     }
 
-    fun check(req: ServerRequest) = ok().json().body(repository.findByNonEncryptedEmail(req.pathVariable("email"))
+    fun check(req: ServerRequest) = ok().json().body(
+        repository.findByNonEncryptedEmail(req.pathVariable("email"))
             .filter { it.token == req.headers().header("token").get(0) }
             .map { it.toDto(req.language(), markdownConverter) }
     )
-
-
 }
 
 class LinkDto(
-        val name: String,
-        val url: String,
-        val index: String)
+    val name: String,
+    val url: String,
+    val index: String
+)
 
 fun Link.toLinkDto(index: Int) = LinkDto(name, url, "link${index + 1}")
 
 fun User.toLinkDtos(): Map<String, List<LinkDto>> =
-        if (links.size > 4) {
-            links.mapIndexed { index, link -> link.toLinkDto(index) }.groupBy { it.index }
-        } else {
-            val existingLinks = links.size
-            val userLinks = links.mapIndexed { index, link -> link.toLinkDto(index) }.toMutableList()
-            IntStream.range(0, 5 - existingLinks).forEach { userLinks.add(LinkDto("", "", "link${existingLinks + it + 1}")) }
-            userLinks.groupBy { it.index }
-        }
+    if (links.size > 4) {
+        links.mapIndexed { index, link -> link.toLinkDto(index) }.groupBy { it.index }
+    } else {
+        val existingLinks = links.size
+        val userLinks = links.mapIndexed { index, link -> link.toLinkDto(index) }.toMutableList()
+        IntStream.range(0, 5 - existingLinks).forEach { userLinks.add(LinkDto("", "", "link${existingLinks + it + 1}")) }
+        userLinks.groupBy { it.index }
+    }
 
 class SpeakerStarDto(
-        val login: String,
-        val key: String,
-        val name: String
+    val login: String,
+    val key: String,
+    val name: String
 )
 
 fun User.toSpeakerStarDto() = SpeakerStarDto(login, lastname.lowercase().replace("è", "e"), "${firstname.camelCase()} ${lastname.camelCase()}")
 
 class UserDto(
-        val login: String,
-        val firstname: String,
-        val lastname: String,
-        var email: String? = null,
-        var company: String? = null,
-        var description: String,
-        var emailHash: String? = null,
-        var photoUrl: String? = null,
-        val role: Role,
-        var links: List<Link>,
-        val logoType: String?,
-        val logoWebpUrl: String? = null,
-        val isAbsoluteLogo: Boolean = if (photoUrl == null) false else photoUrl.startsWith("http"),
-        val path: String = login.toUrlPath()
+    val login: String,
+    val firstname: String,
+    val lastname: String,
+    var email: String? = null,
+    var company: String? = null,
+    var description: String,
+    var emailHash: String? = null,
+    var photoUrl: String? = null,
+    val role: Role,
+    var links: List<Link>,
+    val logoType: String?,
+    val logoWebpUrl: String? = null,
+    val isAbsoluteLogo: Boolean = if (photoUrl == null) false else photoUrl.startsWith("http"),
+    val path: String = login.toUrlPath()
 )
 
 fun User.toDto(language: Language, markdownConverter: MarkdownConverter, searchTerms: List<String> = emptyList()) =
-        UserDto(login,
-                firstname.markFoundOccurrences(searchTerms),
-                lastname.markFoundOccurrences(searchTerms),
-                email,
-                company,
-                markdownConverter.toHTML(description[language] ?: "").markFoundOccurrences(searchTerms),
-                emailHash,
-                photoUrl,
-                role,
-                links,
-                logoType(photoUrl),
-                logoWebpUrl(photoUrl))
+    UserDto(
+        login,
+        firstname.markFoundOccurrences(searchTerms),
+        lastname.markFoundOccurrences(searchTerms),
+        email,
+        company,
+        markdownConverter.toHTML(description[language] ?: "").markFoundOccurrences(searchTerms),
+        emailHash,
+        photoUrl,
+        role,
+        links,
+        logoType(photoUrl),
+        logoWebpUrl(photoUrl)
+    )
 
 fun logoWebpUrl(url: String?) =
-        when {
-            url == null -> null
-            url.endsWith("png") -> url.replace("png", "webp")
-            url.endsWith("jpg") -> url.replace("jpg", "webp")
-            else -> null
-        }
+    when {
+        url == null -> null
+        url.endsWith("png") -> url.replace("png", "webp")
+        url.endsWith("jpg") -> url.replace("jpg", "webp")
+        else -> null
+    }
 
 fun logoType(url: String?) =
-        when {
-            url == null -> null
-            url.endsWith("svg") -> "image/svg+xml"
-            url.endsWith("png") -> "image/png"
-            url.endsWith("jpg") -> "image/jpeg"
-            url.endsWith("gif") -> "image/gif"
-            else -> null
-        }
+    when {
+        url == null -> null
+        url.endsWith("svg") -> "image/svg+xml"
+        url.endsWith("png") -> "image/png"
+        url.endsWith("jpg") -> "image/jpeg"
+        url.endsWith("gif") -> "image/gif"
+        else -> null
+    }

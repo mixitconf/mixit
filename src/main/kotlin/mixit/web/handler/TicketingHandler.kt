@@ -20,23 +20,26 @@ import java.util.Locale
 import java.util.Random
 
 @Component
-class TicketingHandler(private val ticketRepository: TicketRepository,
-                       private val cryptographer: Cryptographer,
-                       private val emailService: EmailService) {
+class TicketingHandler(
+    private val ticketRepository: TicketRepository,
+    private val cryptographer: Cryptographer,
+    private val emailService: EmailService
+) {
 
     fun findAll(req: ServerRequest) = ok().json().body(ticketRepository.findAll())
 
     fun randomDraw(req: ServerRequest) =
-            ok().json().body(
-                    ticketRepository
-                            .findAll()
-                            .collectList()
-                            .flatMap {
-                                it.shuffled(Random())
-                                        .distinctBy { listOf(it.firstname, it.lastname) }
-                                        .mapIndexed { index, ticket -> ticket.toDto(index + 1) }
-                                        .toMono()
-                            })
+        ok().json().body(
+            ticketRepository
+                .findAll()
+                .collectList()
+                .flatMap {
+                    it.shuffled(Random())
+                        .distinctBy { listOf(it.firstname, it.lastname) }
+                        .mapIndexed { index, ticket -> ticket.toDto(index + 1) }
+                        .toMono()
+                }
+        )
 
     fun ticketing(req: ServerRequest) = ServerResponse.ok().render("ticketing-closed", mapOf(Pair("title", "ticketing.title")))
 
@@ -44,14 +47,15 @@ class TicketingHandler(private val ticketRepository: TicketRepository,
         val formData = it.toSingleValueMap()
 
         val ticket = Ticket(
-                formData["email"]!!.lowercase(),
-                formData["firstname"]!!,
-                formData["lastname"]!!)
+            formData["email"]!!.lowercase(),
+            formData["firstname"]!!,
+            formData["lastname"]!!
+        )
 
         ticketRepository.save(ticket)
-                .then(sendUserConfirmation(ticket, formData, req.locale()))
-                .onErrorResume(DuplicateKeyException::class.java, { ok().render("ticketing-error", mapOf(Pair("message", "ticketing.error.alreadyexists"), Pair("title", "ticketing.title"))) })
-                .onErrorResume { ok().render("ticketing-error", mapOf(Pair("message", "ticketing.error.default"), Pair("title", "ticketing.title"))) }
+            .then(sendUserConfirmation(ticket, formData, req.locale()))
+            .onErrorResume(DuplicateKeyException::class.java, { ok().render("ticketing-error", mapOf(Pair("message", "ticketing.error.alreadyexists"), Pair("title", "ticketing.title"))) })
+            .onErrorResume { ok().render("ticketing-error", mapOf(Pair("message", "ticketing.error.default"), Pair("title", "ticketing.title"))) }
     }
 
     private fun sendUserConfirmation(ticket: Ticket, formData: Map<String, String>, locale: Locale): Mono<ServerResponse> {
@@ -61,12 +65,11 @@ class TicketingHandler(private val ticketRepository: TicketRepository,
     }
 
     class TicketDto(
-            val rank: Int,
-            val email: String,
-            val firstname: String,
-            val lastname: String
+        val rank: Int,
+        val email: String,
+        val firstname: String,
+        val lastname: String
     )
 
     fun Ticket.toDto(rank: Int) = TicketDto(rank, email, firstname, lastname)
-
 }

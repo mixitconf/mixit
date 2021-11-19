@@ -7,11 +7,12 @@ plugins {
     id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion
     id("org.jetbrains.kotlin.kapt") version kotlinVersion
     id("com.github.node-gradle.node") version "3.1.1"
-    id("org.springframework.boot") version "2.2.2.RELEASE"
+    id("org.springframework.boot") version "2.2.5.RELEASE"
     id("io.spring.dependency-management") version "1.0.8.RELEASE"
+    id("org.jmailen.kotlinter") version "3.7.0"
 }
 
-version = "2022.0.0-SNAPHOT"
+version = "2022.0.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
@@ -47,13 +48,9 @@ dependencies {
     implementation("com.google.apis:google-api-services-gmail:v1-rev81-1.23.0")
     implementation("com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:20171016.1")
 
-    testImplementation("org.springframework.boot:spring-boot-starter-test") {
-        exclude(module = "junit")
-    }
-    testImplementation("org.junit.jupiter:junit-jupiter-api")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("com.ninja-squad:springmockk:2.0.0")
     testImplementation("io.mockk:mockk:1.9.3")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
     testImplementation("io.projectreactor:reactor-test")
 
 }
@@ -95,6 +92,7 @@ tasks.register<NpmTask>("compileSass") {
  * directory
  */
 tasks.register<Copy>("copyJsVendors") {
+    dependsOn(tasks.npmInstall)
     from("node_modules/bootstrap/dist/js/bootstrap.bundle.js")
     into(layout.buildDirectory.dir("resources/main/static/js"))
 }
@@ -128,3 +126,7 @@ tasks.getByName("processResources").dependsOn(
     "compileSass",
     "compileTypescript"
 )
+
+kotlinter {
+    disabledRules = arrayOf("import-ordering")
+}

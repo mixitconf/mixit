@@ -15,10 +15,11 @@ import org.springframework.data.mongodb.core.query.isEqualTo
 import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
 
-
 @Repository
-class TicketRepository(private val template: ReactiveMongoTemplate,
-                       private val objectMapper: ObjectMapper) {
+class TicketRepository(
+    private val template: ReactiveMongoTemplate,
+    private val objectMapper: ObjectMapper
+) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
@@ -34,7 +35,7 @@ class TicketRepository(private val template: ReactiveMongoTemplate,
     fun count() = template.count<Ticket>()
 
     fun save(ticket: Ticket) =
-            template.insert(ticket).doOnSuccess { _ -> logger.info("Save new ticket $ticket") }
+        template.insert(ticket).doOnSuccess { _ -> logger.info("Save new ticket $ticket") }
 
     fun findAll() = template.findAll<Ticket>()
 
@@ -43,5 +44,4 @@ class TicketRepository(private val template: ReactiveMongoTemplate,
     fun deleteOne(id: String) = template.remove<Ticket>(Query(Criteria.where("_id").isEqualTo(id)))
 
     fun findByEmail(email: String) = template.findOne<Ticket>(Query(Criteria.where("email").isEqualTo(email)))
-
 }

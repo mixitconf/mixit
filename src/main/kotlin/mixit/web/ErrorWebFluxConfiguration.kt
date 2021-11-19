@@ -21,25 +21,27 @@ import org.springframework.web.reactive.result.view.ViewResolver
  * @since 13/12/17.
  */
 @Configuration
-class ErrorWebFluxConfiguration(private val serverProperties: ServerProperties,
-                                private val applicationContext: ApplicationContext,
-                                private val resourceProperties: ResourceProperties,
-                                private val viewResolvers: List<ViewResolver>,
-                                private val serverCodecConfigurer: ServerCodecConfigurer) {
-
+class ErrorWebFluxConfiguration(
+    private val serverProperties: ServerProperties,
+    private val applicationContext: ApplicationContext,
+    private val resourceProperties: ResourceProperties,
+    private val viewResolvers: List<ViewResolver>,
+    private val serverCodecConfigurer: ServerCodecConfigurer
+) {
 
     @Bean
     @Primary
     @Order(-1)
     fun errorWebExceptionHandler(errorAttributes: ErrorAttributes, messageSource: MessageSource, properties: MixitProperties, markdownConverter: MarkdownConverter): ErrorWebExceptionHandler {
         val exceptionHandler = ErrorWebFluxExceptionHandler(
-                errorAttributes,
-                this.resourceProperties,
-                this.serverProperties.error,
-                this.applicationContext,
-                messageSource,
-                properties,
-                markdownConverter)
+            errorAttributes,
+            this.resourceProperties,
+            this.serverProperties.error,
+            this.applicationContext,
+            messageSource,
+            properties,
+            markdownConverter
+        )
 
         exceptionHandler.setViewResolvers(this.viewResolvers)
         exceptionHandler.setMessageWriters(this.serverCodecConfigurer.writers)

@@ -26,12 +26,13 @@ import reactor.core.publisher.Mono
 import java.net.URI
 import java.net.URLDecoder
 
-
 @Component
-class AuthenticationHandler(private val authenticationService: AuthenticationService,
-                            private val properties: MixitProperties,
-                            private val emailValidator: EmailValidator,
-                            private val cryptographer: Cryptographer) {
+class AuthenticationHandler(
+    private val authenticationService: AuthenticationService,
+    private val properties: MixitProperties,
+    private val emailValidator: EmailValidator,
+    private val cryptographer: Cryptographer
+) {
 
     private fun displayView(page: LoginPage, context: Map<String, String> = emptyMap()) = ok().render(page.template, context)
     private fun displayErrorView(error: LoginError): Mono<ServerResponse> = displayView(LoginPage.ERROR, mapOf(Pair("description", error.i18n)))
@@ -60,7 +61,6 @@ class AuthenticationHandler(private val authenticationService: AuthenticationSer
 
     private fun duplicateException(e: Throwable): LoginError = if (e.message != null && e.message!!.contains("login")) DUPLICATE_LOGIN else DUPLICATE_EMAIL
 
-
     /**
      * Display a view with a form to send the email of the user
      */
@@ -75,12 +75,12 @@ class AuthenticationHandler(private val authenticationService: AuthenticationSer
         try {
             val nonEncryptedMail = emailValidator.check(it.toSingleValueMap()["email"])
             authenticationService.searchUserByEmailOrCreateHimFromTicket(nonEncryptedMail)
-                    // If user is found we send him a token
-                    .flatMap { generateAndSendToken(req, it, nonEncryptedMail) }
-                    // An error can be thrown when we try to create a user from ticketting
-                    .onErrorResume { displayErrorView(duplicateException(it)) }
-                    // if user is not found we ask him if he wants to create a new account
-                    .switchIfEmpty(Mono.defer { displayView(LoginPage.CREATION, mapOf(Pair("email", nonEncryptedMail))) })
+                // If user is found we send him a token
+                .flatMap { generateAndSendToken(req, it, nonEncryptedMail) }
+                // An error can be thrown when we try to create a user from ticketting
+                .onErrorResume { displayErrorView(duplicateException(it)) }
+                // if user is not found we ask him if he wants to create a new account
+                .switchIfEmpty(Mono.defer { displayView(LoginPage.CREATION, mapOf(Pair("email", nonEncryptedMail))) })
         } catch (e: EmailValidatorException) {
             displayErrorView(LoginError.INVALID_EMAIL)
         }
@@ -95,7 +95,7 @@ class AuthenticationHandler(private val authenticationService: AuthenticationSer
             try {
                 val newUser = authenticationService.createUser(formData["email"], formData["firstname"], formData["lastname"])
                 authenticationService.createUserIfEmailDoesNotExist(nonEncryptedMail = newUser.first, user = newUser.second)
-                        .flatMap { generateAndSendToken(req, nonEncryptedMail = newUser.first, user = newUser.second) }
+                    .flatMap { generateAndSendToken(req, nonEncryptedMail = newUser.first, user = newUser.second) }
             } catch (e: EmailValidatorException) {
                 displayErrorView(INVALID_EMAIL)
             } catch (e: CredentialValidatorException) {
@@ -105,12 +105,11 @@ class AuthenticationHandler(private val authenticationService: AuthenticationSer
     }
 
     private fun generateAndSendToken(req: ServerRequest, user: User, nonEncryptedMail: String): Mono<ServerResponse> =
-            authenticationService.generateAndSendToken(user, req.locale())
-                    // if token is sent we call the the screen where user can type this token
-                    .flatMap { displayView(LoginPage.CONFIRMATION, mapOf(Pair("email", nonEncryptedMail))) }
-                    // An error can occur when email is sent
-                    .onErrorResume { displayErrorView(LoginError.TOKEN_SENT) }
-
+        authenticationService.generateAndSendToken(user, req.locale())
+            // if token is sent we call the the screen where user can type this token
+            .flatMap { displayView(LoginPage.CONFIRMATION, mapOf(Pair("email", nonEncryptedMail))) }
+            // An error can occur when email is sent
+            .onErrorResume { displayErrorView(LoginError.TOKEN_SENT) }
 
     /**
      * Action when user wants to send his token to open a session. This token is valid only for a limited time
@@ -119,11 +118,14 @@ class AuthenticationHandler(private val authenticationService: AuthenticationSer
     fun signInViaUrl(req: ServerRequest): Mono<ServerResponse> {
         val email = URLDecoder.decode(req.pathVariable("email"), "UTF-8").decodeFromBase64()
         val token = req.pathVariable("token")
-        return displayView(LoginPage.CONFIRMATION, mapOf(
+        return displayView(
+            LoginPage.CONFIRMATION,
+            mapOf(
                 Pair("email", emailValidator.check(email)),
-                Pair("token", token)))
+                Pair("token", token)
+            )
+        )
     }
-
 
     /**
      * Action called by an HTTP post when user wants to send his email and his token to open a session.
@@ -139,17 +141,17 @@ class AuthenticationHandler(private val authenticationService: AuthenticationSer
                 val token = formData["token"]!!
 
                 authenticationService.checkUserEmailAndToken(nonEncryptedMail!!, token)
-                        .flatMap { user ->
-                            req.session().flatMap { session ->
-                                session.apply {
-                                    attributes["role"] = user.role
-                                    attributes["email"] = nonEncryptedMail
-                                    attributes["token"] = token
-                                }
-                                seeOther(URI("${properties.baseUri}/me")).cookie(authenticationService.createCookie(user)).build()
+                    .flatMap { user ->
+                        req.session().flatMap { session ->
+                            session.apply {
+                                attributes["role"] = user.role
+                                attributes["email"] = nonEncryptedMail
+                                attributes["token"] = token
                             }
+                            seeOther(URI("${properties.baseUri}/me")).cookie(authenticationService.createCookie(user)).build()
                         }
-                        .onErrorResume { displayErrorView(LoginError.INVALID_TOKEN) }
+                    }
+                    .onErrorResume { displayErrorView(LoginError.INVALID_TOKEN) }
             }
         }
     }
@@ -159,8 +161,8 @@ class AuthenticationHandler(private val authenticationService: AuthenticationSer
      */
     fun logout(req: ServerRequest): Mono<ServerResponse> = req.session().flatMap { session ->
         Mono.justOrEmpty(session.getAttribute<String>("email"))
-                .flatMap { authenticationService.clearToken(it).flatMap { clearSession(session) } }
-                .switchIfEmpty(Mono.defer { clearSession(session) })
+            .flatMap { authenticationService.clearToken(it).flatMap { clearSession(session) } }
+            .switchIfEmpty(Mono.defer { clearSession(session) })
     }
 
     private fun clearSession(session: WebSession): Mono<ServerResponse> {
@@ -173,4 +175,3 @@ class AuthenticationHandler(private val authenticationService: AuthenticationSer
         return temporaryRedirect(URI("${properties.baseUri}/")).build()
     }
 }
-

@@ -22,7 +22,6 @@ import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.DependsOn
 import org.springframework.core.io.ClassPathResource
 import org.springframework.http.MediaType.APPLICATION_FORM_URLENCODED
-import org.springframework.http.MediaType.TEXT_EVENT_STREAM
 import org.springframework.http.MediaType.TEXT_HTML
 import org.springframework.http.MediaType.TEXT_PLAIN
 import org.springframework.web.reactive.function.server.RenderingResponse
@@ -31,7 +30,6 @@ import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.router
 import reactor.kotlin.core.publisher.toMono
 import java.util.Locale
-
 
 @Configuration
 class WebsiteRoutes(
@@ -121,9 +119,9 @@ class WebsiteRoutes(
                 GET("/ticketing", adminHandler::adminTicketing)
                 DELETE("/")
                 GET("/talks/edit/{slug}", adminHandler::editTalk)
-                GET("/talks") { adminHandler.adminTalks(it, "2021")}
+                GET("/talks") { adminHandler.adminTalks(it, "2021") }
                 GET("/talks/create", adminHandler::createTalk)
-                GET("/talks/{year}") { adminHandler.adminTalks(it, it.pathVariable("year"))}
+                GET("/talks/{year}") { adminHandler.adminTalks(it, it.pathVariable("year")) }
                 GET("/users", adminHandler::adminUsers)
                 GET("/users/edit/{login}", adminHandler::editUser)
                 GET("/users/create", adminHandler::createUser)
@@ -176,15 +174,13 @@ class WebsiteRoutes(
     }.filter { request, next ->
         val locale: Locale = request.locale()
         val path = request.uri().path
-		request.session().flatMap { session ->
-			val model = generateModel(properties, path, locale, session, messageSource, markdownConverter)
-			next.handle(request).flatMap { if (it is RenderingResponse) RenderingResponse.from(it).modelAttributes(model).build() else it.toMono() }
-		}
+        request.session().flatMap { session ->
+            val model = generateModel(properties, path, locale, session, messageSource, markdownConverter)
+            next.handle(request).flatMap { if (it is RenderingResponse) RenderingResponse.from(it).modelAttributes(model).build() else it.toMono() }
+        }
     }
 
     @Bean
     @DependsOn("websiteRouter")
     fun resourceRouter() = resources("/**", ClassPathResource("static/"))
-
 }
-

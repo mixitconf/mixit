@@ -3,18 +3,17 @@ package mixit.util.validator
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
-
 /**
  * Test {@link MarkdownValidator}
  */
-class MarkdownValidatorTest{
+class MarkdownValidatorTest {
     val validator = MarkdownValidator()
 
     @Test
     fun `should accept correct markdown`() {
         val markdown = "Développeur agile passionné par la technique et l'agilité, fondateur de [Dev-Mind](https://dev-mind.fr/)." +
-                "#Vous pouvez voir mon logo" +
-                "![Dev-Mind](https://www.dev-mind.fr/img/logo/logo_1500.png)"
+            "#Vous pouvez voir mon logo" +
+            "![Dev-Mind](https://www.dev-mind.fr/img/logo/logo_1500.png)"
 
         assertThat(validator.isValid(validator.sanitize(markdown))).isTrue()
     }

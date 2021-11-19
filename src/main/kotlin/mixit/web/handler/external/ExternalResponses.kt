@@ -9,7 +9,6 @@ import org.springframework.http.HttpStatus.OK
 import org.springframework.web.reactive.function.server.ServerResponse
 import reactor.core.publisher.Mono
 
-
 enum class ExternalResponses(val status: HttpStatus, val message: String) {
     CREDENTIAL_VALID(OK, "Credentials are valids"),
     TOKEN_SENT(OK, "A token was send by email. Please check your mailbox and send it in the future request"),
@@ -20,4 +19,3 @@ enum class ExternalResponses(val status: HttpStatus, val message: String) {
 
     fun response(): Mono<ServerResponse> = ServerResponse.status(this.status).json().bodyValue(this.message)
 }
-

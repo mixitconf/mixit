@@ -7,12 +7,10 @@ import mixit.repository.TalkRepository
 import mixit.repository.UserRepository
 import mixit.util.MarkdownConverter
 import mixit.util.language
-import mixit.util.shuffle
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse.ok
-
 
 @Component
 class GlobalHandler(
@@ -26,10 +24,11 @@ class GlobalHandler(
         .findByRoles(listOf(Role.STAFF, Role.STAFF_IN_PAUSE))
         .collectList()
         .flatMap { users ->
-            val staff = users.filter { it.role == Role.STAFF }.shuffle()
-            val staffInPause = users.filter { it.role == Role.STAFF_IN_PAUSE }.shuffle()
+            val staff = users.filter { it.role == Role.STAFF }.shuffled()
+            val staffInPause = users.filter { it.role == Role.STAFF_IN_PAUSE }.shuffled()
             ok().render(
-                "about", mapOf(
+                "about",
+                mapOf(
                     Pair("staff", staff.map { it.toDto(req.language(), markdownConverter) }),
                     Pair("inactiveStaff", staffInPause.map { it.toDto(req.language(), markdownConverter) }),
                     Pair("title", "about.title")
@@ -59,7 +58,8 @@ class GlobalHandler(
 
             if (formData["search"] == null || formData["search"]!!.trim().length < 3) {
                 ok().render(
-                    "search", mapOf(
+                    "search",
+                    mapOf(
                         Pair("criteria", formData["search"]),
                         Pair("title", "search.title")
                     )
@@ -78,7 +78,8 @@ class GlobalHandler(
                     .map { talk -> talk.toDto(req.language(), emptyList(), false, false, criteria) }
 
                 ok().render(
-                    "search", mapOf(
+                    "search",
+                    mapOf(
                         Pair("criteria", formData["search"]),
                         Pair("title", "search.title"),
                         Pair("users", users),
@@ -95,4 +96,3 @@ class GlobalHandler(
             }
         }
 }
-

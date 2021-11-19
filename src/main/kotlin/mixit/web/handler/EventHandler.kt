@@ -7,7 +7,6 @@ import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.body
 
-
 @Component
 class EventHandler(private val repository: EventRepository) {
 
@@ -16,6 +15,4 @@ class EventHandler(private val repository: EventRepository) {
     fun findAll(req: ServerRequest) = ok().json().body(repository.findAll())
 
     fun findByEventID(req: ServerRequest) = ok().json().body(repository.findByYear(req.pathVariable("year").toInt()))
-
 }
-

@@ -11,15 +11,17 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
 @Configuration
-class DatabaseConfig{
+class DatabaseInitializerConfig {
 
     @Bean
-    fun databaseInitializer(userRepository: UserRepository,
-                            eventRepository: EventRepository,
-                            talkRepository: TalkRepository,
-                            ticketRepository: TicketRepository,
-                            postRepository: PostRepository,
-                            favoriteRepository: FavoriteRepository) = CommandLineRunner {
+    fun databaseInitializer(
+        userRepository: UserRepository,
+        eventRepository: EventRepository,
+        talkRepository: TalkRepository,
+        ticketRepository: TicketRepository,
+        postRepository: PostRepository,
+        favoriteRepository: FavoriteRepository
+    ) = CommandLineRunner {
 
         userRepository.initData()
         eventRepository.initData()
@@ -28,5 +30,4 @@ class DatabaseConfig{
         ticketRepository.initData()
         favoriteRepository.initData()
     }
-
 }
