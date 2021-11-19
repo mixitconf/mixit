@@ -1,107 +1,108 @@
 {{> header}}
 
-<div class="mxt-wrapper--page-title">
-    <div class="row">
-        <div class="columns large-8 large-offset-2 menu-centered text-center">
-            <ul class="dropdown menu simple mxt-menu--talks" data-dropdown-menu>
-                <li class="mxt-menu--talks-title"><h1>{{#i18n}}sponsors.title{{/i18n}}</h1></li>
-                <li><a href="#" class="mxt-menu--talks-date"><h1>{{year}}</h1></a>
-                    <ul class="menu">
-                        <li><a href="{{localePrefix}}/sponsors/2021">2021</a></li>
-                        <li><a href="{{localePrefix}}/sponsors/2019">2019</a></li>
-                        <li><a href="{{localePrefix}}/sponsors/2018">2018</a></li>
-                        <li><a href="{{localePrefix}}/sponsors/2017">2017</a></li>
-                        <li><a href="{{localePrefix}}/sponsors/2016">2016</a></li>
-                        <li><a href="{{localePrefix}}/sponsors/2015">2015</a></li>
-                        <li><a href="{{localePrefix}}/sponsors/2014">2014</a></li>
-                        <li><a href="{{localePrefix}}/sponsors/2013">2013</a></li>
-                        <li><a href="{{localePrefix}}/sponsors/2012">2012</a></li>
-                    </ul>
-                </li>
+<div class="mxt-wrapper--header">
+    <div class="col-12 col-lg-8 offset-lg-2 text-center">
+        <h1 class="pt-5">
+            {{#i18n}}sponsors.title{{#topic}}.{{topic}}{{/topic}}{{/i18n}}
+            <button class="btn btn-secondary dropdown-toggle mxt-dropdown-header" type="button"
+                    id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                {{year}}
+            </button>
+            <ul class="dropdown-menu mxt-dropdown-header" aria-labelledby="dropdownMenuButton1">
+                <li><a href="{{localePrefix}}/sponsors/2022" class="dropdown-item">2022</a></li>
+                <li><a href="{{localePrefix}}/sponsors/2021" class="dropdown-item">2021</a></li>
+                <li><a href="{{localePrefix}}/sponsors/2019" class="dropdown-item">2019</a></li>
+                <li><a href="{{localePrefix}}/sponsors/2018" class="dropdown-item">2018</a></li>
+                <li><a href="{{localePrefix}}/sponsors/2017" class="dropdown-item">2017</a></li>
+                <li><a href="{{localePrefix}}/sponsors/2016" class="dropdown-item">2016</a></li>
+                <li><a href="{{localePrefix}}/sponsors/2015" class="dropdown-item">2015</a></li>
+                <li><a href="{{localePrefix}}/sponsors/2014" class="dropdown-item">2014</a></li>
+                <li><a href="{{localePrefix}}/sponsors/2013" class="dropdown-item">2013</a></li>
+                <li><a href="{{localePrefix}}/sponsors/2012" class="dropdown-item">2012</a></li>
             </ul>
-            <p class="text-center">{{#i18n}}sponsors.become{{/i18n}} <a
-                    href="{{#i18n}}home.sponsors.pdf.url{{/i18n}}">{{#i18n}}sponsors.download{{/i18n}}</a></p>
-        </div>
+        </h1>
+        <p class="text-center mxt-text--page-title">{{#i18n}}sponsors.become{{/i18n}} <a
+                href="{{#i18n}}home.sponsors.pdf.url{{/i18n}}">{{#i18n}}sponsors.download{{/i18n}}</a></p>
     </div>
 </div>
-
-<div class="mxt-wrapper--page-content">
-    <div class="row">
-        <div class="column large-12">
-            {{#has-sponsors-lanyard}}
-                <div class="mxt-wrapper--callout callout">
-                    <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.lanyard{{/i18n}}</h2>
-                    {{#sponsors-lanyard}}
-                        {{> sponsor }}
-                    {{/sponsors-lanyard}}
-                </div>
-            {{/has-sponsors-lanyard}}
-            {{#has-sponsors-gold}}
-                <div class="mxt-wrapper--callout callout">
-                    <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.gold{{/i18n}}</h2>
-                    {{#sponsors-gold}}
-                        {{> sponsor }}
-                    {{/sponsors-gold}}
-                </div>
-            {{/has-sponsors-gold}}
-            {{#has-sponsors-accessibility}}
-                <div class="mxt-wrapper--callout callout">
-                    <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.accessibility{{/i18n}}</h2>
-                    {{#sponsors-accessibility}}
-                        {{> sponsor }}
-                    {{/sponsors-accessibility}}
-                </div>
-            {{/has-sponsors-accessibility}}
-            {{#has-sponsors-ecology}}
-                <div class="mxt-wrapper--callout callout">
-                    <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.ecology{{/i18n}}</h2>
-                    {{#sponsors-ecology}}
-                        {{> sponsor }}
-                    {{/sponsors-ecology}}
-                </div>
-            {{/has-sponsors-ecology}}
-            {{#has-sponsors-mixteen}}
-                <div class="mxt-wrapper--callout callout">
-                    <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.mixteen{{/i18n}}</h2>
-                    {{#sponsors-mixteen}}
-                        {{> sponsor }}
-                    {{/sponsors-mixteen}}
-                </div>
-            {{/has-sponsors-mixteen}}
-            {{#has-sponsors-silver}}
-                <div class="mxt-wrapper--callout callout">
-                    <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.silver{{/i18n}}</h2>
-                    {{#sponsors-silver}}
-                        {{> sponsor }}
-                    {{/sponsors-silver}}
-                </div>
-            {{/has-sponsors-silver}}
-            {{#has-sponsors-party}}
-                <div class="mxt-wrapper--callout callout">
-                    <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.party{{/i18n}}</h2>
-                    {{#sponsors-party}}
-                        {{> sponsor }}
-                    {{/sponsors-party}}
-                </div>
-            {{/has-sponsors-party}}
-            {{#has-sponsors-hosting}}
-                <div class="mxt-wrapper--callout callout">
-                    <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.hosting{{/i18n}}</h2>
-                    {{#sponsors-hosting}}
-                        {{> sponsor }}
-                    {{/sponsors-hosting}}
-                </div>
-            {{/has-sponsors-hosting}}
-            {{#has-sponsors-video}}
-                <div class="mxt-wrapper--callout callout">
-                    <h2 class="text-center mxt-subheader--space">{{#i18n}}sponsors.videos{{/i18n}}</h2>
-                    {{#sponsors-video}}
-                        {{> sponsor }}
-                    {{/sponsors-video}}
-                </div>
-            {{/has-sponsors-video}}
+<div class="container mxt-wrapper--page-content">
+    {{^has-sponsors-gold}}
+        <h2 class="subheader text-center">{{#i18n}}home.sponsors.title{{/i18n}}</h2>
+        <p class="text-center"><a class="mxt-anchor--uppercase" href="{{#i18n}}home.sponsors.pdf.url{{/i18n}}">{{#i18n}}home.sponsors.pdf{{/i18n}}</a> / <a
+                class="mxt-anchor--uppercase" href="mailto:contact@mix-it.fr" target="_top">{{#i18n}}home.sponsors.contact{{/i18n}}</a></p>
+    {{/has-sponsors-gold}}
+    {{#has-sponsors-lanyard}}
+        <div class="mxt-wrapper--callout callout">
+            <h2 class="text-center mt-3 mb-4">{{#i18n}}sponsors.lanyard{{/i18n}}</h2>
+            {{#sponsors-lanyard}}
+                {{> sponsor }}
+            {{/sponsors-lanyard}}
         </div>
-    </div>
+    {{/has-sponsors-lanyard}}
+    {{#has-sponsors-gold}}
+        <div class="mxt-wrapper--callout callout">
+            <h2 class="text-center  mt-3 mb-4">{{#i18n}}sponsors.gold{{/i18n}}</h2>
+            {{#sponsors-gold}}
+                {{> sponsor }}
+            {{/sponsors-gold}}
+        </div>
+    {{/has-sponsors-gold}}
+    {{#has-sponsors-accessibility}}
+        <div class="mxt-wrapper--callout callout">
+            <h2 class="text-center  mt-3 mb-4">{{#i18n}}sponsors.accessibility{{/i18n}}</h2>
+            {{#sponsors-accessibility}}
+                {{> sponsor }}
+            {{/sponsors-accessibility}}
+        </div>
+    {{/has-sponsors-accessibility}}
+    {{#has-sponsors-ecology}}
+        <div class="mxt-wrapper--callout callout">
+            <h2 class="text-center mt-3 mb-4">{{#i18n}}sponsors.ecology{{/i18n}}</h2>
+            {{#sponsors-ecology}}
+                {{> sponsor }}
+            {{/sponsors-ecology}}
+        </div>
+    {{/has-sponsors-ecology}}
+    {{#has-sponsors-mixteen}}
+        <div class="mxt-wrapper--callout callout">
+            <h2 class="text-center mt-3 mb-4">{{#i18n}}sponsors.mixteen{{/i18n}}</h2>
+            {{#sponsors-mixteen}}
+                {{> sponsor }}
+            {{/sponsors-mixteen}}
+        </div>
+    {{/has-sponsors-mixteen}}
+    {{#has-sponsors-silver}}
+        <div class="mxt-wrapper--callout callout">
+            <h2 class="text-center mt-3 mb-4">{{#i18n}}sponsors.silver{{/i18n}}</h2>
+            {{#sponsors-silver}}
+                {{> sponsor }}
+            {{/sponsors-silver}}
+        </div>
+    {{/has-sponsors-silver}}
+    {{#has-sponsors-party}}
+        <div class="mxt-wrapper--callout callout">
+            <h2 class="text-center mt-3 mb-4">{{#i18n}}sponsors.party{{/i18n}}</h2>
+            {{#sponsors-party}}
+                {{> sponsor }}
+            {{/sponsors-party}}
+        </div>
+    {{/has-sponsors-party}}
+    {{#has-sponsors-hosting}}
+        <div class="mxt-wrapper--callout callout">
+            <h2 class="text-center mt-3 mb-4">{{#i18n}}sponsors.hosting{{/i18n}}</h2>
+            {{#sponsors-hosting}}
+                {{> sponsor }}
+            {{/sponsors-hosting}}
+        </div>
+    {{/has-sponsors-hosting}}
+    {{#has-sponsors-video}}
+        <div class="mxt-wrapper--callout callout">
+            <h2 class="text-center mt-3 mb-4">{{#i18n}}sponsors.videos{{/i18n}}</h2>
+            {{#sponsors-video}}
+                {{> sponsor }}
+            {{/sponsors-video}}
+        </div>
+    {{/has-sponsors-video}}
 </div>
 
 {{> footer}}

@@ -11,7 +11,7 @@ import org.springframework.core.io.ResourceLoader
 import org.springframework.stereotype.Component
 import java.io.InputStreamReader
 import java.net.URLEncoder
-import java.util.*
+import java.util.Locale
 
 @Component
 class TemplateService(private val mustacheCompiler: Mustache.Compiler,

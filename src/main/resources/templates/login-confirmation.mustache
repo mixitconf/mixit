@@ -1,41 +1,38 @@
 {{> header}}
 
-<div class="mxt-wrapper--page-title">
-    <div class="row">
-        <div class="columns large-12">
-            <h1 class="text-center">{{#i18n}}login.title{{/i18n}}</h1>
-        </div>
-    </div>
+<div class="mxt-wrapper--header">
+    <h1 class="text-center pt-5">{{#i18n}}login.title{{/i18n}}</h1>
 </div>
 
-<div class="mxt-wrapper--page-content">
-
-    <div class="large-3 large-centered columns">
-      <div class="callout">
-        <div class="row">
-          <p>{{#i18n}}login.confirmation{{/i18n}}</p>
-          <div class="large-12 columns">
+<div class="container mxt-wrapper--page-content">
+    <div class="row">
+        <div class="col-10 offset-1 col-lg-6 offset-lg-3 text-center">
             <form action="/signin" method="post">
-              <div class="row">
-                <div class="large-12 columns">
-                  <input type="hidden" name="email" value="{{email}}" />
-                  {{email}}
+                <div class="row">
+                    <div class="col">
+                        {{#i18n}}login.confirmation{{/i18n}}
+                    </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="large-12 columns">
-                  <input type="password" name="token" placeholder="Token" {{#token}}value="{{token}}"{{/token}}/>
+                <div class="row mt-3">
+                    <div class="col" style="text-align: left">
+                        <label for="email" class="form-label">{{#i18n}}user.form.email{{/i18n}}</label><br>
+                        {{email}}
+                        <input type="hidden" name="email" value="{{email}}"/>
+                    </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="large-12 large-centered columns">
-                  <input type="submit" class="button expand" value="Log In"/>
+                <hr>
+                <div class="row">
+                    <div class="col" style="text-align: left">
+                        <input type="password" class="form-control" name="token" placeholder="Token" {{#token}}value="{{token}}"{{/token}}/>
+                    </div>
                 </div>
-              </div>
+                <div class="row mt-3">
+                    <div class="large-12 large-centered columns">
+                        <button type="submit" class="btn btn-primary mxt-btn-primary">{{#i18n}}login.action.signin{{/i18n}}</button>
+                    </div>
+                </div>
             </form>
-          </div>
         </div>
-      </div>
     </div>
 </div>
 

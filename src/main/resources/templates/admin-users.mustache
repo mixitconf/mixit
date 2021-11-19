@@ -1,42 +1,35 @@
 {{> header}}
 
-<div class="mxt-wrapper--page-title">
-    <div class="row">
-        <div class="columns large-12">
-            <h1 class="text-center">{{#i18n}}admin.users.title{{/i18n}}</h1>
-        </div>
-    </div>
+<div class="mxt-wrapper--header">
+    <h1 class="text-center pt-5">{{#i18n}}admin.users.title{{/i18n}}</h1>
 </div>
 
-<div class="mxt-wrapper--page-content">
-    <div class="row">
-        <div class="column large-12">
-            <div class="callout">
-                <p>{{#i18n}}admin.users.count{{/i18n}} : {{users.size}} | <a href="/admin/users/create">{{#i18n}}admin.users.actions.create{{/i18n}}</a></p>
-                <table>
-                  <thead>
-                    <tr>
-                        <th>{{#i18n}}admin.users.table.login{{/i18n}}</th>
-                        <th>{{#i18n}}admin.users.table.firstname{{/i18n}}</th>
-                        <th>{{#i18n}}admin.users.table.lastname{{/i18n}}</th>
-                        <th>{{#i18n}}admin.users.table.email{{/i18n}}</th>
-                        <th>{{#i18n}}admin.users.table.actions{{/i18n}}</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {{#users}}
-                    <tr>
-                        <td>{{login}}</td>
-                        <td>{{firstname}}</td>
-                        <td>{{lastname}}</td>
-                        <td>{{#email}}<img src="/images/svg/mxt-icon--mail.svg" class="mxt-icon--social" alt="Mail">{{/email}}</td>
-                        <td>
-                            <a href="/admin/users/edit/{{login}}">{{#i18n}}admin.users.actions.update{{/i18n}}</a>
-                        </td>
-                    </tr>
-                    {{/users}}
-                  </tbody>
-                </table>
+<div class="container mxt-wrapper--page-content">
+    <p>{{#i18n}}admin.users.count{{/i18n}} : <b>{{users.size}}</b> | <a href="/admin/users/create">{{#i18n}}admin.users.actions.create{{/i18n}}</a></p>
+    <table class="table-striped table table-bordered">
+      <thead>
+        <tr>
+            <th>{{#i18n}}admin.users.table.login{{/i18n}}</th>
+            <th>{{#i18n}}admin.users.table.firstname{{/i18n}}</th>
+            <th>{{#i18n}}admin.users.table.lastname{{/i18n}}</th>
+            <th>{{#i18n}}admin.users.table.email{{/i18n}}</th>
+            <th>{{#i18n}}admin.users.table.actions{{/i18n}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#users}}
+        <tr>
+            <td>{{login}}</td>
+            <td>{{firstname}}</td>
+            <td>{{lastname}}</td>
+            <td>{{#email}}<img src="/images/svg/mxt-icon--mail.svg" class="mxt-icon--social" alt="Mail">{{/email}}</td>
+            <td>
+                <a href="/admin/users/edit/{{login}}">{{#i18n}}admin.users.actions.update{{/i18n}}</a>
+            </td>
+        </tr>
+        {{/users}}
+      </tbody>
+    </table>
             </div>
         </div>
     </div>

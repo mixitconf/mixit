@@ -1,58 +1,44 @@
 {{> header}}
 
-<div class="mxt-wrapper--page-title">
+<div class="mxt-wrapper--header">
+    <h1 class="text-center pt-5">{{#i18n}}login.title{{/i18n}}</h1>
+</div>
+<div class="container mxt-wrapper--page-content">
     <div class="row">
-        <div class="columns large-12">
-            <h1 class="text-center">{{#i18n}}login.title{{/i18n}}</h1>
-        </div>
-    </div>
-</div>
-
-<div class="mxt-wrapper--page-content">
-    <div class="large-3 large-centered columns">
-      <div class="callout">
-        <div class="row">
-          <div class="large-12 columns">
+        <div class="col-10 offset-1 col-lg-6 offset-lg-3 text-center">
             <form action="/signup" method="post">
-              <div class="row">
-                <div class="large-12 columns">
-                    {{#i18n}}user.form.description{{/i18n}}
+                <div class="row">
+                    <div class="col">
+                        {{#i18n}}user.form.description{{/i18n}}
+                    </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="large-12 columns">
-                   {{#i18n}}user.form.email{{/i18n}}
-                   <input type="text" value="{{email}}" disabled/>
-                   <input type="hidden" name="email" value="{{email}}"/>
+                <div class="row mt-3">
+                    <div class="col" style="text-align: left">
+                        <label for="email" class="form-label">{{#i18n}}user.form.email{{/i18n}}</label>
+                        <input type="text" id="email" class="form-control" value="{{email}}" disabled/>
+                        <input type="hidden" name="email" value="{{email}}"/>
+                    </div>
                 </div>
-              </div>
                 <hr>
-              <div class="row">
-                <div class="large-12 columns">
-                  <label>
-                    {{#i18n}}user.form.firstname{{/i18n}}
-                    <input type="text" name="firstname" required/>
-                  </label>
-              </div>
-              </div>
-              <div class="row">
-                <div class="large-12 columns">
-                  <label>
-                    {{#i18n}}user.form.lastname{{/i18n}}
-                    <input type="text" name="lastname" required/>
-                  </label>
+                <div class="row">
+                    <div class="col" style="text-align: left">
+                        <label for="firstname" class="form-label">{{#i18n}}user.form.firstname{{/i18n}}</label>
+                        <input type="text" id="firstname" name="firstname" class="form-control" required/>
+                    </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="large-12 large-centered columns">
-                  <input type="submit" class="button expand" value="{{#i18n}}login.action.signup{{/i18n}}"/>
+                <div class="row mt-2">
+                    <div class="col" style="text-align: left">
+                        <label for="lastname">{{#i18n}}user.form.lastname{{/i18n}}</label>
+                        <input type="text" id="lastname" class="form-control" name="lastname" required/>
+                    </div>
                 </div>
-              </div>
+                <div class="row mt-3">
+                    <div class="large-12 large-centered columns">
+                        <button type="submit" class="btn btn-primary mxt-btn-primary">{{#i18n}}login.action.signup{{/i18n}}</button>
+                    </div>
+                </div>
             </form>
-          </div>
         </div>
-      </div>
     </div>
 </div>
-
 {{> footer}}

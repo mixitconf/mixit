@@ -1,88 +1,70 @@
 {{> header}}
 
-<div class="mxt-wrapper--page-title">
-    <div class="row">
-        <div class="columns large-12 menu-centered">
-            <h1 class="text-center">{{#i18n}}search.title{{/i18n}}</h1>
-        </div>
-    </div>
+<div class="mxt-wrapper--header">
+    <h1 class="text-center pt-5">{{#i18n}}search.title{{/i18n}}</h1>
 </div>
-
-<div class="mxt-wrapper--page-content">
+<div class="container mxt-wrapper--page-content">
     <form action="/search" method="post">
         <div class="row">
-            <div class="column large-12 callout">
-                <div class="large-8 large-centered columns">
-                    <div class="row">
-                        <div class="large-12 columns input-group">
-                            <input type="search" class="input-group-field" name="search" placeholder="{{#i18n}}search.title{{/i18n}}">
-                            <div class="input-group-button">
-                                <button type="submit" class="button expand"><img src="/images/svg/mxt-search.svg" style="max-width: 1.5em" title="{{#i18n}}header.menu.search{{/i18n}}"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <hr>
-
-                <h2>{{#i18n}}search.talks{{/i18n}}</h2>
-                {{#hasTalks}}
-                    <p>{{#i18n}}search.nb{{/i18n}}{{countTalks}}</p>
-                    {{#talks}}
-                        <article>
-                            <h2><a href="{{localePrefix}}/{{event}}/{{slug}}" class="mxt-title--article">
-                                <b>{{event}}</b> -
-                                {{title}}
-                                {{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
-                            </a></h2>
-                            <ul class="menu simple mxt-menu--accordion">
-                                {{#video}}
-                                    <li><strong>&#x25ba; {{#i18n}}talks.title.video{{/i18n}}</strong></li>{{/video}}
-
-                                <li class="mxt-text--cat-format">#{{format}}</li>
-                            </ul>
-                            <p>{{#markdown}}{{summary}}{{/markdown}}</p>
-                            <a href="{{localePrefix}}/{{event}}/{{slug}}" class="button hollow align-center">{{#i18n}}talks.readmore{{/i18n}}</a>
-                        </article>
-                    {{/talks}}
-                {{/hasTalks}}
-                {{^hasTalks}}
-                    <p>{{#i18n}}search.no.talks{{/i18n}}</p>
-                {{/hasTalks}}
-                <hr/>
-                <h2>{{#i18n}}search.posts{{/i18n}}</h2>
-                {{#hasArticles}}
-                    <p>{{#i18n}}search.nb{{/i18n}}{{countArticles}}</p>
-                    {{#articles}}
-                        <article>
-                            <h2><a href="{{localePrefix}}/blog/{{slug}}" class="mxt-title--article">{{title}}</a></h2>
-                            <p class="subheader">{{#i18n}}blog.on{{/i18n}} <strong>{{addedAt}}</strong></p>
-                            <p>{{#markdown}}{{headline}}{{/markdown}}</p>
-                            <a href="{{localePrefix}}/blog/{{slug}}" class="button hollow align-center">{{#i18n}}blog.readmore{{/i18n}}</a>
-                        </article>
-                    {{/articles}}
-                {{/hasArticles}}
-                {{^hasArticles}}
-                    <p>{{#i18n}}search.no.posts{{/i18n}}</p>
-                {{/hasArticles}}
-                <hr/>
-                <h2>{{#i18n}}search.users{{/i18n}}</h2>
-                {{#hasUsers}}
-                    <p>{{#i18n}}search.nb{{/i18n}}{{countUsers}}</p>
-                    {{#users}}
-                        <article>
-                            <h2><a href="{{localePrefix}}/user/{{login}}" class="mxt-title--article">{{firstname}} {{lastname}}</a></h2>
-                            <p>{{#markdown}}{{description}}{{/markdown}}</p>
-                            <a href="{{localePrefix}}/user/{{login}}" class="button hollow align-center">{{#i18n}}user.readmore{{/i18n}}</a>
-                        </article>
-                    {{/users}}
-                {{/hasUsers}}
-                {{^hasUsers}}
-                    <p>{{#i18n}}search.no.users{{/i18n}}</p>
-                {{/hasUsers}}
+            <div class="col-10">
+                <input type="search" class="form-control" name="search" placeholder="{{#i18n}}search.title{{/i18n}}">
+            </div>
+            <div class="col-2">
+                <button type="submit" class="btn btn-primary"><img src="/images/svg/mxt-search.svg" style="max-width: 1.5em" title="{{#i18n}}header.menu.search{{/i18n}}"></button>
             </div>
         </div>
+        <h2 class="mt-5">{{#i18n}}search.talks{{/i18n}}</h2>
+        {{#hasTalks}}
+            <p>{{#i18n}}search.nb{{/i18n}}<b>{{countTalks}}</b></p>
+            {{#talks}}
+                <article class="mb-4">
+                    <h2><a href="{{localePrefix}}/{{event}}/{{slug}}" class="mxt-title--article">
+                        <b>{{event}}</b> -{{title}}
+                        {{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
+                    </a></h2>
+                    <ul class="mxt-wrapper-list-inline mxt-menu--accordion">
+                        {{#video}}<li><strong>&#x25ba; {{#i18n}}talks.title.video{{/i18n}}</strong></li>{{/video}}
+                        <li class="mxt-text--cat-format">#{{format}}</li>
+                    </ul>
+                    <p>{{#markdown}}{{summary}}{{/markdown}}</p>
+                    <a href="{{localePrefix}}/{{event}}/{{slug}}" class="btn btn-outline-primary align-center">{{#i18n}}talks.readmore{{/i18n}}</a>
+                </article>
+            {{/talks}}
+        {{/hasTalks}}
+        {{^hasTalks}}
+            <p>{{#i18n}}search.no.talks{{/i18n}}</p>
+        {{/hasTalks}}
+        <hr/>
+        <h2 class="mt-5">{{#i18n}}search.posts{{/i18n}}</h2>
+        {{#hasArticles}}
+            <p>{{#i18n}}search.nb{{/i18n}}<b>{{countArticles}}</b></p>
+            {{#articles}}
+                <article class="mb-4">
+                    <h2><a href="{{localePrefix}}/blog/{{slug}}" class="mxt-title--article">{{title}}</a></h2>
+                    <p class="subheader">{{#i18n}}blog.on{{/i18n}} <strong>{{addedAt}}</strong></p>
+                    <p>{{#markdown}}{{headline}}{{/markdown}}</p>
+                    <a href="{{localePrefix}}/blog/{{slug}}" class="btn btn-outline-primary align-center">{{#i18n}}blog.readmore{{/i18n}}</a>
+                </article>
+            {{/articles}}
+        {{/hasArticles}}
+        {{^hasArticles}}
+            <p>{{#i18n}}search.no.posts{{/i18n}}</p>
+        {{/hasArticles}}
+        <hr/>
+        <h2 class="mt-5">{{#i18n}}search.users{{/i18n}}</h2>
+        {{#hasUsers}}
+            <p>{{#i18n}}search.nb{{/i18n}}<b>{{countUsers}}</b></p>
+            {{#users}}
+                <article class="mb-4">
+                    <h2><a href="{{localePrefix}}/user/{{login}}" class="mxt-title--article">{{firstname}} {{lastname}}</a></h2>
+                    <p>{{#markdown}}{{description}}{{/markdown}}</p>
+                    <a href="{{localePrefix}}/user/{{login}}" class="btn btn-outline-primary align-center">{{#i18n}}user.readmore{{/i18n}}</a>
+                </article>
+            {{/users}}
+        {{/hasUsers}}
+        {{^hasUsers}}
+            <p>{{#i18n}}search.no.users{{/i18n}}</p>
+        {{/hasUsers}}
     </form>
 </div>
-
 {{> footer}}

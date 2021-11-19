@@ -2,322 +2,96 @@
 
 <div class="mxt-wrapper--header">
     <div class="row">
-        <div class="columns small-12 hide-for-small-only">
-            <div class="text-right"><img src="/images/svg/mxt-icon--edition.svg" class="mxt-icon--edition"></div>
-            <h1 class="hide">{{#i18n}}home.wrapper.title{{/i18n}}</h1>
-            <span class="mxt-text--bigger">{{#i18n}}home.wrapper.text{{/i18n}}<img src="/images/svg/mxt-icon--heart.svg"
-                                                                                   class="mxt-icon--heart"></span>
-            <br>
-            <h2 style="padding-bottom: 2em">
+        <div class="col-12 text-right d-none d-md-inline">
+            <img src="/images/svg/mxt-icon--edition.svg" class="mxt-icon--edition">
+        </div>
+        <div class="col-12 text-cente pt-5">
+            <h1 class="hide">{{#i18n}}home.wrapper.text{{/i18n}}
+                <img src="/images/svg/mxt-icon--heart.svg" class="mxt-icon--heart"
+                    alt="{{#i18n}}home.wrapper.title{{/i18n}}"></h1>
+            <h2 class="pt-2 mxt-text--small">
                 <small>{{#i18n}}home.wrapper.dates{{/i18n}}</small>
             </h2>
-        </div>
-        <div class="columns small-12 show-for-small-only">
-            <h1 class="mxt-text--mobile-bigger">
-                <span>{{#i18n}}home.wrapper.text{{/i18n}}<img src="/images/svg/mxt-icon--heart.svg"
-                                                              class="mxt-icon--heart"></span>
-            </h1>
-            <br>
-            <h2 style="padding-bottom: 4em">
-                <small>{{#i18n}}home.wrapper.dates{{/i18n}}</small>
-            </h2>
+            <p class="pb-5">
+                <img src="/images/svg/accessibility/mxt-icon--child-care.svg" class="mxt-icon--social" title="{{#i18n}}home.accessibility.childcare{{/i18n}}" alt="{{#i18n}}home.accessibility.childcare{{/i18n}}">
+                <img src="/images/svg/accessibility/mxt-icon--hearing-impaired.svg" class="mxt-icon--social" title="{{#i18n}}home.accessibility.hearing.impaired{{/i18n}}" alt="{{#i18n}}home.accessibility.hearing.impaired{{/i18n}}">
+                <img src="/images/svg/accessibility/mxt-icon--motor-disability.svg" class="mxt-icon--social" title="{{#i18n}}home.accessibility.motor.disability{{/i18n}}" alt="{{#i18n}}home.accessibility.motor.disability{{/i18n}}">
+                <img src="/images/svg/accessibility/mxt-icon--pregnant.svg" class="mxt-icon--social" title="{{#i18n}}home.accessibility.pregnant{{/i18n}}" alt="{{#i18n}}home.accessibility.pregnant{{/i18n}}">
+            </p>
         </div>
     </div>
 </div>
+<div class="container mxt-wrapper--home-content">
+    <p class="lead">{{#i18n}}home.2022.intro{{/i18n}}</p>
 
-<!--<div class="row align-spaced">-->
-<!--    <div class="column column-block text-center">-->
-<!--        <h2 class="align-center">{{#i18n}}home.intro.title{{/i18n}}</h2>-->
-<!--        <p>{{#i18n}}home.intro.description{{/i18n}}</p>-->
-<!--    </div>-->
-<!--</div>-->
-<!--<div class="mxt-wrapper--white" style="padding-bottom: 3em">-->
-<!--    <div class="row align-spaced">-->
-<!--        <div class="columns text-center">-->
-<!--            <h2 class="text-center">{{#i18n}}home.intro.participate{{/i18n}}</h2>-->
-<!--            <p>{{#i18n}}home.intro.participate.description{{/i18n}}</p>-->
-<!--            <p><a href="https://yurplan.com/event/Mi-Xit-2021/66799" target="_blank" class="button mxt-anchor--uppercase">-->
-<!--                {{#i18n}}header.menu.ticketing{{/i18n}}</a></p>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-
-<div class="row align-spaced">
-    <div class="column column-block text-center">
-        <h2 class="align-center">{{#i18n}}home.live.title{{/i18n}}</h2>
-        <p>{{#i18n}}home.live.description{{/i18n}}. {{#i18n}}home.quizz.intro{{/i18n}}</p>
-            <div style="display: flex">
-                <div style="flex: 1 0 0" class="hide-for-small-only">&nbsp;</div>
-                <div style="flex: 3 0 0">
-                    <div class="mxt-wrapper--intrinsic">
-                        <iframe src="https://player.vimeo.com/video/560334460" class="mxt-wrapper--video-player vimeo"
-                                allowfullscreen></iframe>
-                    </div>
-
-                </div>
-                <div style="flex: 1 0 0" class="hide-for-small-only">&nbsp;</div>
-            </div>
-        </p>
-        <p>{{#i18n}}home.intro.speaker.description{{/i18n}}</p>
-    </div>
-</div>
-<div class="row">
-    <div class="column">
-        <h3 class="text-center"><small style="font-weight: bold">{{#i18n}}home.intro.day1{{/i18n}}</small></h3>
-    </div>
-</div>
-<div class="row align-spaced" style="justify-content: center; align-items: center">
-    <div class="column mxt-icon--wrapper small-12 medium-6 large-4">
-        <a href="{{localePrefix}}/user/carole.adam">
-            <div class="row align-middle">
-                <div class="columns medium-push-9">
-                    <img src="/images/speakers/carole_adam.jpg" alt="Carole Adam"
-                         class="mxt-icon--cat mxt-img--speakers_home">
-                </div>
-                <div class="columns small-9 medium-pull-3">
-                    <h3 class="subheader mxt-subheader--categories">Carole Adam<br><small>17:00-18:00</small></h3>
-                    <p class="show-for-small-only" style="color: black">{{#i18n}}home.speaker.adam{{/i18n}}</p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="medium-5 columns hide-for-small-only">
-        <p>{{#i18n}}home.speaker.adam{{/i18n}}<br>
-            <strong><a href="/2021/covprehension-simulation-multi-agent-pour-expliquer-la-crise-sanitaire"
-                       style="color: #2c233d">
-                &#x25ba; CovPrehension : simulation multi-agent pour expliquer la crise sanitaire</a></strong>
-    </div>
-</div>
-<div class="row align-spaced" style="justify-content: center; align-items: center">
-    <div class="column mxt-icon--wrapper small-12 medium-6 large-4">
-        <a href="{{localePrefix}}/user/augerment">
-            <div class="row align-middle">
-                <div class="columns medium-push-9">
-                    <img src="/images/speakers/james_auger.jpg" alt="James Auger"
-                         class="mxt-icon--cat mxt-img--speakers_home">
-                </div>
-                <div class="columns small-9 medium-pull-3">
-                    <h3 class="subheader mxt-subheader--categories">James Auger<br><small>18:00-19:00</small></h3>
-                    <p class="show-for-small-only" style="color: black">{{#i18n}}home.speaker.auger{{/i18n}}</p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="medium-5 columns hide-for-small-only">{{#i18n}}home.speaker.auger{{/i18n}}<br>
-        <strong><a href="/2021/means-and-ends"
-                   style="color: #2c233d">
-            &#x25ba; Means and Ends </a></strong>
-    </div>
-</div>
-<div class="row align-spaced" style="justify-content: center; align-items: center">
-    <div class="column mxt-icon--wrapper small-12 medium-6 large-4">
-        <a href="{{localePrefix}}/user/guillaume.pitron">
-            <div class="row align-middle">
-                <div class="columns medium-push-9">
-                    <img src="/images/speakers/guillaume-pitron.jpg" alt="Guillaume Pitron"
-                         class="mxt-icon--cat mxt-img--speakers_home">
-                </div>
-                <div class="columns small-9 medium-pull-3">
-                    <h3 class="subheader mxt-subheader--categories">Guillaume Pitron<br><small>19:00-20:00</small></h3>
-                    <p class="show-for-small-only" style="color: black">{{#i18n}}home.speaker.pitron{{/i18n}}</p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="medium-5 columns hide-for-small-only">{{#i18n}}home.speaker.pitron{{/i18n}}<br>
-        <strong><a href="/2021/metaux-rares-l-envers-des-technologies-numeriques"
-                   style="color: #2c233d">
-            &#x25ba; Métaux rares: l'envers des technologies numériques </a></strong></div>
+    <h2 class="subheader text-center pt-5">{{#i18n}}home.sponsors.title{{/i18n}}</h2>
+    <p class="pt-2">{{#i18n}}home.2022.sponsor{{/i18n}}</p>
+    <p class="text-center">
+        <a class="mxt-anchor--uppercase btn btn-primary mxt-btn-primary" href="{{#i18n}}home.sponsors.pdf.url{{/i18n}}">{{#i18n}}home.sponsors.pdf{{/i18n}}</a>
+    </p>
 </div>
 
-<div class="row">
-    <div class="column">
-        <h3 class="text-center"><small style="font-weight: bold">{{#i18n}}home.intro.day2{{/i18n}}</small></h3>
-    </div>
-</div>
-<div class="row align-spaced" style="justify-content: center; align-items: center">
-    <div class="column mxt-icon--wrapper small-12 medium-6 large-4">
-        <a href="{{localePrefix}}/user/antonio.casilli">
-            <div class="row align-middle">
-                <div class="columns medium-push-9">
-                    <img src="/images/speakers/antonio-casilli.jpg" alt="Antonio Casilli"
-                         class="mxt-icon--cat mxt-img--speakers_home">
-                </div>
-                <div class="columns small-9 medium-pull-3">
-                    <h3 class="subheader mxt-subheader--categories">Antonio Casilli<br><small>17:00-18:00</small></h3>
-                    <p class="show-for-small-only" style="color: black">{{#i18n}}home.speaker.casilli{{/i18n}}</p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="medium-5 columns hide-for-small-only">{{#i18n}}home.speaker.casilli{{/i18n}}<br>
-        <strong><a href="/2021/tou-tes-travailleur-ses-des-plateformes-le-travail-a-l-heure-du-covid-19"
-                   style="color: #2c233d">
-            &#x25ba; Tou•tes travailleur•ses des plateformes ? Le travail à l’heure du Covid-19 </a></strong></div>
-</div>
-<div class="row align-spaced" style="justify-content: center; align-items: center">
-    <div class="column mxt-icon--wrapper small-12 medium-6 large-4">
-        <a href="{{localePrefix}}/user/isabelle.collet">
-            <div class="row align-middle">
-                <div class="columns medium-push-9">
-                    <img src="/images/speakers/isabelle-collet.jpg" alt="Isabelle Collet"
-                         class="mxt-icon--cat mxt-img--speakers_home">
-                </div>
-                <div class="columns small-9 medium-pull-3">
-                    <h3 class="subheader mxt-subheader--categories">Isabelle Collet<br><small>18:00-19:00</small></h3>
-                    <p class="show-for-small-only" style="color: black">{{#i18n}}home.speaker.collet{{/i18n}}</p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="medium-5 columns hide-for-small-only">{{#i18n}}home.speaker.collet{{/i18n}}<br>
-        <strong><a href="/2021/le-manque-de-femmes-dans-la-tech-n-est-pas-une-fatalite"
-                   style="color: #2c233d">
-            &#x25ba; Le manque de femmes dans la tech n’est pas une fatalité </a></strong>
-    </div>
-</div>
-<div class="row align-spaced" style="justify-content: center; align-items: center">
-    <div class="column mxt-icon--wrapper small-12 medium-6 large-4">
-        <a href="{{localePrefix}}/user/arviteikari">
-            <div class="row align-middle">
-                <div class="columns medium-push-9">
-                    <img src="/images/speakers/arvi-teikari.jpg" alt="Arvi Teikari"
-                         class="mxt-icon--cat mxt-img--speakers_home">
-                </div>
-                <div class="columns small-9 medium-pull-3">
-                    <h3 class="subheader mxt-subheader--categories">Arvi Teikari<br><small>19:00-20:00</small></h3>
-                    <p class="show-for-small-only" style="color: black">{{#i18n}}home.speaker.takiri{{/i18n}}</p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="medium-5 columns hide-for-small-only">{{#i18n}}home.speaker.takiri{{/i18n}}<br>
-        <strong><a href="/2021/creating-baba-is-you"
-                   style="color: #2c233d">
-            &#x25ba; Creating Baba Is You </a></strong></div>
-</div>
-
-<div class="row">
-    <div class="column">
-        <h3 class="text-center"><small style="font-weight: bold">{{#i18n}}home.intro.day3{{/i18n}}</small></h3>
-    </div>
-</div>
-<div class="row align-spaced" style="justify-content: center; align-items: center">
-    <div class="column mxt-icon--wrapper small-12 medium-6 large-4">
-        <a href="{{localePrefix}}/user/sinatou-saka">
-            <div class="row align-middle">
-                <div class="columns medium-push-9">
-                    <img src="/images/speakers/sinatou-saka.jpg" alt="Sinatou Saka"
-                         class="mxt-icon--cat mxt-img--speakers_home">
-                </div>
-                <div class="columns small-9 medium-pull-3">
-                    <h3 class="subheader mxt-subheader--categories">Sinatou Saka<br><small>17:00-18:00</small></h3>
-                    <p class="show-for-small-only" style="color: black">{{#i18n}}home.speaker.saka{{/i18n}}</p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="medium-5 columns hide-for-small-only">{{#i18n}}home.speaker.saka{{/i18n}}<br>
-        <strong><a href="/2021/comment-l-afrique-questionne-t-elle-notre-innovation-en-2021-"
-                   style="color: #2c233d">
-            &#x25ba; Comment l’Afrique questionne-t-elle "notre" innovation en 2021 ? </a></strong></div>
-</div>
-<div class="row align-spaced" style="justify-content: center; align-items: center">
-    <div class="column mxt-icon--wrapper small-12 medium-6 large-4">
-        <a href="{{localePrefix}}/user/gaelduval">
-            <div class="row align-middle">
-                <div class="columns medium-push-9">
-                    <img src="/images/speakers/gael_duval.jpg" alt="Gaël Duval"
-                         class="mxt-icon--cat mxt-img--speakers_home">
-                </div>
-                <div class="columns small-9 medium-pull-3">
-                    <h3 class="subheader mxt-subheader--categories">Gaël Duval<br><small>18:00-19:00</small></h3>
-                    <p class="show-for-small-only" style="color: black">{{#i18n}}home.speaker.duval{{/i18n}}</p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="medium-5 columns hide-for-small-only">{{#i18n}}home.speaker.duval{{/i18n}}<br>
-        <strong><a href="/2021/avec-e-os-nos-smartphones-peuvent-devenir-plus-ethiques-"
-                   style="color: #2c233d">
-            &#x25ba; Avec /e/OS nos smartphones peuvent devenir plus éthiques ! </a></strong></div>
-</div>
-<div class="row align-spaced" style="justify-content: center; align-items: center">
-    <div class="column mxt-icon--wrapper small-12 medium-6 large-4">
-        <a href="{{localePrefix}}/user/esther">
-            <div class="row align-middle">
-                <div class="columns medium-push-9">
-                    <img src="/images/speakers/esther.jpg" alt="Esther" class="mxt-icon--cat mxt-img--speakers_home">
-                </div>
-                <div class="columns small-9 medium-pull-3">
-                    <h3 class="subheader mxt-subheader--categories">Esther<br><small>19:00-20:00</small></h3>
-                    <p class="show-for-small-only" style="color: black">{{#i18n}}home.speaker.esther{{/i18n}}</p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="medium-5 columns hide-for-small-only">{{#i18n}}home.speaker.esther{{/i18n}}<br>
-        <strong><a href="/2021/i-have-a-pwn-in-my-hand"
-                   style="color: #2c233d">
-            &#x25ba; I have a pwn in my hand </a></strong></div>
-</div>
-<div class="row align-spaced" style="justify-content: center; align-items: center">
-    <div class="column mxt-icon--wrapper small-12 medium-6 large-4">
-        <a href="{{localePrefix}}/user/pamelafox">
-            <div class="row align-middle">
-                <div class="columns medium-push-9">
-                    <img src="/images/speakers/pamela_fox.jpg" alt="Pamela Fox"
-                         class="mxt-icon--cat mxt-img--speakers_home">
-                </div>
-                <div class="columns small-9 medium-pull-3">
-                    <h3 class="subheader mxt-subheader--categories">Pamela Fox<br><small>20:00-21:00</small></h3>
-                    <p class="show-for-small-only" style="color: black">{{#i18n}}home.speaker.fox{{/i18n}}</p>
-                </div>
-            </div>
-        </a>
-    </div>
-    <div class="medium-5 columns hide-for-small-only">{{#i18n}}home.speaker.fox{{/i18n}}<br>
-        <strong><a href="/2021/education-for-all"
-                   style="color: #2c233d">
-            &#x25ba; Education for All </a></strong></div>
-</div>
-<div class="row">
-    <div class="columns medium-3 large-3 hide-for-small-only">&nbsp;</div>
-    <div class="columns medium-6 large-6">
-        <img src="/images/svg/planning/2021_hour.svg" class="mxt-icon--cat" style="padding: 0.5em"
-             alt="{{#i18n}}home.topics.makers.title{{/i18n}}">
-    </div>
-</div>
-
-<div class="row">
-    <div class="column">
-        <hr/>
-    </div>
-</div>
-
-<div class="row small-up-2 medium-up-4 align-center align-middle">
-    {{#sponsors-main}}
-        <div class="columns text-center">
-            {{> sponsor-detail }}
+<div class="container mxt-wrapper--home-content mt-5" style="background-color: #e6e6e6;">
+    <h2 class="subheader pt-2 text-center">{{#i18n}}home.2022.previous{{/i18n}}</h2>
+    <div class="row pt-2">
+        <div class="col-md-5">
+            <h2 class="pt-3" >{{#i18n}}home.outline.title{{/i18n}}</h2>
+            <br/>
+            <p class="lead">{{#i18n}}home.outline.description1{{/i18n}}</p>
+            <p>{{#i18n}}home.outline.description2{{/i18n}}</p>
         </div>
-    {{/sponsors-main}}
-</div>
-<hr/>
-<div class="row small-up-3 medium-up-6 align-center align-middle">
-    {{#sponsors-others}}
-        <div class="columns text-center">
-            {{> sponsor-detail }}
+        <div class="col-md-7">
+            <div class="mxt-wrapper--intrinsic">
+                <iframe src="https://player.vimeo.com/video/346825478" class="mxt-wrapper--video-player vimeo"
+                        allowfullscreen></iframe>
+            </div>
         </div>
-    {{/sponsors-others}}
+    </div>
+    <h2 class="text-center pt-4 mb-4">
+        <small>{{#i18n}}home.speakers.title{{/i18n}}</small>
+    </h2>
+    <div class="row">
+        {{#stars-old}}
+            {{> home-speaker }}
+        {{/stars-old}}
+    </div>
 </div>
 
-<!--<div class="row">-->
-<!--    <div class="column">-->
-<!--        <hr/>-->
-<!--        <h2 class="subheader text-center">{{#i18n}}home.sponsors.title{{/i18n}}</h2>-->
-<!--        <p class="text-center"><a class="mxt-anchor--uppercase" href="{{#i18n}}home.sponsors.pdf.url{{/i18n}}">{{#i18n}}home.sponsors.pdf{{/i18n}}</a> / <a-->
-<!--                class="mxt-anchor--uppercase" href="mailto:contact@mix-it.fr" target="_top">{{#i18n}}home.sponsors.contact{{/i18n}}</a></p>-->
-<!--    </div>-->
-<!--</div>-->
+<div class="container mxt-wrapper--home-content mt-5">
+    <h2 class="subheader pt-2 text-center">{{#i18n}}home.2022.knowledge{{/i18n}}</h2>
+
+    <div class="row pt-2">
+        <div class="col-md-5">
+            <p class="lead pt-5">{{#i18n}}home.2022.quizz{{/i18n}}</p>
+            <p>{{#i18n}}home.2022.videos{{/i18n}}</p>
+        </div>
+        <div class="col-md-7">
+            <div class="mxt-wrapper--intrinsic">
+                <iframe src="https://player.vimeo.com/video/560334460" class="mxt-wrapper--video-player vimeo"
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 col-lg-10 offset-lg-1">
+        <div class="text-center row">
+            {{#sponsors-main}}
+                <div class="col-3 text-center col-md-2">
+                    {{> sponsor-detail }}
+                </div>
+            {{/sponsors-main}}
+            {{#sponsors-others}}
+                <div class="col-2 col-md-1 text-center">
+                    {{> sponsor-detail }}
+                </div>
+            {{/sponsors-others}}
+        </div>
+    </div>
+</div>
+
+
+
 
 {{> footer}}

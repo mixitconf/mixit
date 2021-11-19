@@ -1,6 +1,11 @@
 package mixit.web
 
-import mixit.web.handler.*
+import mixit.web.handler.BlogHandler
+import mixit.web.handler.EventHandler
+import mixit.web.handler.FavoriteHandler
+import mixit.web.handler.TalkHandler
+import mixit.web.handler.TicketingHandler
+import mixit.web.handler.UserHandler
 import mixit.web.handler.external.ExternalHandler
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

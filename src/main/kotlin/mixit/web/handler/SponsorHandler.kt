@@ -12,7 +12,6 @@ import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import java.time.LocalDate
-import java.util.*
 
 @Component
 class SponsorHandler(private val userRepository: UserRepository,
@@ -91,19 +90,17 @@ class SponsorHandler(private val userRepository: UserRepository,
                                             .distinctBy { it.login }
 
                                     if (view.equals("home")) {
-                                        // val oldStars = UserHandler.speakerStarInHistory.map { usersByLogin[it]!!.toSpeakerStarDto() }.toMutableList()
-                                        // val currentStars = UserHandler.speakerStarInCurrentEvent.map { usersByLogin[it]!!.toSpeakerStarDto() }.toMutableList()
-                                        // Collections.shuffle(oldStars)
-                                        // Collections.shuffle(currentStars)
+                                        val oldStars = UserHandler.speakerStarInHistory.map { usersByLogin[it]!!.toSpeakerStarDto() }.toMutableList()
+                                        val currentStars = UserHandler.speakerStarInCurrentEvent.map { usersByLogin[it]!!.toSpeakerStarDto() }.toMutableList()
+                                        val stars: List<SpeakerStarDto> = oldStars.plus(currentStars).shuffled()
 
                                         ServerResponse.ok().render(view, mapOf(
                                                 Pair("year", year),
                                                 Pair("imagepath", "/"),
                                                 Pair("title", if (!view.equals("sponsors")) title else "$title|$year"),
                                                 Pair("sponsors-main", mainSponsors),
-                                                Pair("sponsors-others", otherSponsors)
-                                                // Pair("stars-old", oldStars.subList(0, 6)),
-                                                // Pair("stars-current", currentStars)
+                                                Pair("sponsors-others", otherSponsors),
+                                                Pair("stars-old", stars.subList(0, 6))
                                         ))
                                     } else {
                                         ServerResponse.ok().render(view, mapOf(

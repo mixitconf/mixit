@@ -37,12 +37,11 @@ developed with Spring Boot 2, Spring WebFlux and Kotlin can look like:
  - Install [Git](https://git-scm.com/)
  - [Fork](https://github.com/mix-it/mixit#fork-destination-box) and clone [the project](https://github.com/mix-it/mixit)
  - [Install Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
- - [Install Gulp](http://gulpjs.com/) for development mode 
  - Depending on your platform, you may have to install libpng (On mac with `brew install libpng` or on Ubuntu your need to install libpng12 with [this package](http://cz.archive.ubuntu.com/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb) because the default one is too recent)
  
 ### Run the app in dev mod using command line
  - Run `./gradlew bootRun` in another terminal
- - Run `gulp watch` in another terminal
+ - Run `./gradlew watch` in another terminal
  - Open `http://localhost:8080/` in your browser
  - If you want to debug the app, add `--debug-jvm` parameter to Gradle command line
  
@@ -52,7 +51,7 @@ Sass, TypeScript, `messages*.properties` and templates should be live reloaded.
  - Make sure you have at least IntelliJ IDEA `2017.2.x` and IDEA Kotlin plugin `1.1.4+` (menu Tools -> Kotlin -> configure Kotlin Plugin Updates -> make sure "Stable" channel is selected -> check for updates now -> restart IDE after the update)
  - Import it in IDEA as a Gradle project
  - In IntelliJ IDEA, right click on `Application.kt` then `Run ...` or `Debug ...`
- - Run `gulp watch` in another terminal
+ - Run `./gradlew watch` in another terminal
  - Open `http://localhost:8080/` in your browser
  
 Sass, TypeScript, `messages*.properties` and templates should be live reloaded.
@@ -78,6 +77,6 @@ Quoting @javamind:
 curl https://mixitconf.org/api/blog | python -m json.tool > blog.json
 curl https://mixitconf.org/api/event | python -m json.tool > events.json
 curl https://mixitconf.org/api/user | python -m json.tool > users.json
-curl https://mixitconf.org/api/2021/talk | python -m json.tool > talks_2021.json
+curl https://mixitconf.org/api/2022/talk | python -m json.tool > talks_2022.json
 git commit -a -m "Update data from PROD"
 ```

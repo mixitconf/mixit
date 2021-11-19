@@ -1,70 +1,51 @@
 {{> header}}
 
-<div class="mxt-wrapper--page-title">
-    <div class="row">
-        <div class="columns large-8 large-offset-2">
-            <h1 class="text-center">{{#i18n}}about.title{{/i18n}}</h1>
-        </div>
-    </div>
+<div class="mxt-wrapper--header">
+    <h1 class="text-center pt-5">{{#i18n}}about.title{{/i18n}}</h1>
 </div>
 
-<div class="mxt-wrapper--page-content">
-    <div class="row">
-        <div class="column large-12">
-            <div class="callout">
+<div class="container mxt-wrapper--page-content">
+    <p class="text-center lead">{{#i18n}}about.story1{{/i18n}}</p>
+    <p>{{#i18n}}about.story2{{/i18n}}</p>
+    <p>{{#i18n}}about.story3{{/i18n}}</p>
 
-                <p class="text-center lead">{{#i18n}}about.story1{{/i18n}}</p>
-                <p>{{#i18n}}about.story2{{/i18n}}</p>
-                <p>{{#i18n}}about.story3{{/i18n}}</p>
-
-                <h2 class="subheader text-center mxt-subheader--space">{{#i18n}}about.teamtitle{{/i18n}}</h2><br />
-
-                <div class="mxt-wrapper--callout">
-                {{#staff}}
-                    <div class="row align-middle mxt-wrapper--row">
-                        <div class="small-12 medium-4 columns text-center">
-                            <div class="mxt-img-avatar__wrapper">
-                                {{#emailHash}}<img src="https://www.gravatar.com/avatar/{{emailHash}}?size=400" class="mxt-img-avatar__speaker" alt="{{firstname}} {{lastname}} photo"/>{{/emailHash}}
-                                {{^emailHash}}{{#photoUrl}}<img src="{{photoUrl}}" class="mxt-img-avatar__speaker" alt="{{firstname}} {{lastname}} photo"/>{{/photoUrl}}{{/emailHash}}
-                            </div>
-                        </div>
-                        <div class="small-12 medium-8 columns">
-                            <h3>{{firstname}} {{lastname}}</h3>
-                            {{description}}
-                            <ul class="menu simple">
-                            {{#links}}
-                                <li><a href="{{url}}" target="_blank">{{name}}</a></li>
-                            {{/links}}
-                            </ul>
-                        </div>
-                    </div>
-                {{/staff}}
-                </div>
-                <br />
-
-                <h2 class="subheader text-center mxt-subheader--space">{{#i18n}}about.inactiveteamtitle{{/i18n}}</h2><br />
-
-                <div class="mxt-wrapper--callout">
-                    <p>{{#i18n}}about.inactiveteamdesc{{/i18n}}</p>
-                    {{#inactiveStaff}}
-                        <div class="row mxt-wrapper--row align-middle">
-                            <div class="small-12 medium-4 columns text-center">
-                                <div class="mxt-img-avatar__wrapper"><img src="https://www.gravatar.com/avatar/{{emailHash}}?size=400" class="mxt-img-avatar__speaker" alt="{{firstname}} {{lastname}} photo"/></div>
-                            </div>
-                            <div class="small-12 medium-8 columns">
-                                <h3>{{firstname}} {{lastname}}</h3>
-                                {{description}}
-                                <ul class="menu simple">
-                                    {{#links}}
-                                        <li><a href="{{url}}" target="_blank">{{name}}</a></li>
-                                    {{/links}}
-                                </ul>
-                            </div>
-                        </div>
-                    {{/inactiveStaff}}
+    <h2 class="subheader mt-5 text-center">{{#i18n}}about.teamtitle{{/i18n}}</h2><br />
+    {{#staff}}
+        <div class="row">
+            <div class="col-12 col-md-4 text-center">
+                <div class="mxt-img-avatar__wrapper">
+                    {{#emailHash}}<img src="https://www.gravatar.com/avatar/{{emailHash}}?size=400" class="mxt-img-avatar__speaker" aria-label="{{firstname}} {{lastname}} photo"/>{{/emailHash}}
+                    {{^emailHash}}{{#photoUrl}}<img src="{{photoUrl}}" class="mxt-img-avatar__speaker" aria-label="{{firstname}} {{lastname}} photo"/>{{/photoUrl}}{{/emailHash}}
                 </div>
             </div>
+            <div class="col-12 col-md-8">
+                <h3>{{firstname}} {{lastname}}</h3>
+                {{description}}
+                <ul class="mxt-wrapper-list-inline">
+                    {{#links}}
+                        <li><a href="{{url}}" target="_blank">{{name}}</a></li>
+                    {{/links}}
+                </ul>
+            </div>
         </div>
-    </div>
+    {{/staff}}
 
+    <h2 class="subheader mt-5 text-center">{{#i18n}}about.inactiveteamtitle{{/i18n}}</h2><br />
+    {{#inactiveStaff}}
+        <div class="row">
+            <div class="col-12 col-md-4 text-center">
+                <div class="mxt-img-avatar__wrapper"><img src="https://www.gravatar.com/avatar/{{emailHash}}?size=400" class="mxt-img-avatar__speaker" alt="{{firstname}} {{lastname}} photo"/></div>
+            </div>
+            <div class="col-12 col-md-8">
+                <h3>{{firstname}} {{lastname}}</h3>
+                {{description}}
+                <ul class="mxt-wrapper-list-inline">
+                    {{#links}}
+                        <li><a href="{{url}}" target="_blank">{{name}}</a></li>
+                    {{/links}}
+                </ul>
+            </div>
+        </div>
+    {{/inactiveStaff}}
+</div>
 {{> footer}}

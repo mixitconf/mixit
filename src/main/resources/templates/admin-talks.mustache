@@ -1,59 +1,53 @@
 {{> header}}
 
-<div class="mxt-wrapper--page-title">
-    <div class="row">
-        <div class="columns large-12">
-            <ul class="dropdown menu simple mxt-menu--talks text-center" data-dropdown-menu>
-                <li class="mxt-menu--talks-title"><h1>{{#i18n}}admin.talks.title{{/i18n}}</h1></li>
-                <li><a href="#" class="mxt-menu--talks-date"><h1>{{year}}</h1></a>
-                    <ul class="menu">
-                        <li><a href="{{localePrefix}}/admin/talks/2020{{#topic}}/{{topic}}{{/topic}}">2020</a></li>
-                        <li><a href="{{localePrefix}}/admin/talks/2019{{#topic}}/{{topic}}{{/topic}}">2019</a></li>
-                        <li><a href="{{localePrefix}}/admin/talks/2018{{#topic}}/{{topic}}{{/topic}}">2018</a></li>
-                        <li><a href="{{localePrefix}}/admin/talks/2017{{#topic}}/{{topic}}{{/topic}}">2017</a></li>
-                        <li><a href="{{localePrefix}}/admin/talks/2016{{#topic}}/{{topic}}{{/topic}}">2016</a></li>
-                        <li><a href="{{localePrefix}}/admin/talks/2015{{#topic}}/{{topic}}{{/topic}}">2015</a></li>
-                        <li><a href="{{localePrefix}}/admin/talks/2014{{#topic}}/{{topic}}{{/topic}}">2014</a></li>
-                        <li><a href="{{localePrefix}}/admin/talks/2013{{#topic}}/{{topic}}{{/topic}}">2013</a></li>
-                        <li><a href="{{localePrefix}}/admin/talks/2012{{#topic}}/{{topic}}{{/topic}}">2012</a></li>
-                    </ul>
-                </li>
+<div class="mxt-wrapper--header">
+    <div class="col-12 col-lg-8 offset-lg-2 text-center pt-5">
+        <h1>
+            {{#i18n}}admin.talks.title{{/i18n}}
+            <button class="btn btn-secondary dropdown-toggle mxt-dropdown-header" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                {{year}}
+            </button>
+            <ul class="dropdown-menu mxt-dropdown-header" aria-labelledby="dropdownMenuButton1">
+                <li><a href="{{localePrefix}}/admin/talks/2022" class="dropdown-item">2022</a></li>
+                <li><a href="{{localePrefix}}/admin/talks/2021" class="dropdown-item">2021</a></li>
+                <li><a href="{{localePrefix}}/admin/talks/2019" class="dropdown-item">2019</a></li>
+                <li><a href="{{localePrefix}}/admin/talks/2018" class="dropdown-item">2018</a></li>
+                <li><a href="{{localePrefix}}/admin/talks/2017" class="dropdown-item">2017</a></li>
+                <li><a href="{{localePrefix}}/admin/talks/2016" class="dropdown-item">2016</a></li>
+                <li><a href="{{localePrefix}}/admin/talks/2015" class="dropdown-item">2015</a></li>
+                <li><a href="{{localePrefix}}/admin/talks/2014" class="dropdown-item">2014</a></li>
+                <li><a href="{{localePrefix}}/admin/talks/2013" class="dropdown-item">2013</a></li>
+                <li><a href="{{localePrefix}}/admin/talks/2012" class="dropdown-item">2012</a></li>
             </ul>
-        </div>
+        </h1>
+        <p>&nbsp;</p>
     </div>
 </div>
-
-<div class="mxt-wrapper--page-content">
-    <div class="row">
-        <div class="column large-12">
-            <div class="callout">
-                <p>{{#i18n}}admin.talks.count{{/i18n}} : {{talks.size}} | <a href="/admin/talks/create">{{#i18n}}admin.talks.actions.create{{/i18n}}</a></p>
-                <table>
-                  <thead>
-                    <tr>
-                        <th>{{#i18n}}admin.talks.table.format{{/i18n}}</th>
-                        <th>{{#i18n}}admin.talks.table.title{{/i18n}}</th>
-                        <th>{{#i18n}}admin.talks.table.speakers{{/i18n}}</th>
-                        <th>{{#i18n}}admin.talks.table.actions{{/i18n}}</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {{#talks}}
-                    <tr>
-                        <td>{{format}}</td>
-                        <td>{{title}}</td>
-                        <td>{{#speakers}}{{firstname}} {{lastname}} {{/speakers}}</td>
-                        <td>
-                            <a href="/admin/talks/edit/{{slug}}">{{#i18n}}admin.talks.actions.update{{/i18n}}</a> <br />
-                            <a href="/{{event}}/{{slug}}" target="_blank">{{#i18n}}admin.talks.actions.view{{/i18n}}</a>
-                        </td>
-                    </tr>
-                    {{/talks}}
-                  </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+<div class="container mxt-wrapper--page-content">
+    <p>{{#i18n}}admin.talks.count{{/i18n}} : <b>{{talks.size}}</b> | <a href="/admin/talks/create">{{#i18n}}admin.talks.actions.create{{/i18n}}</a></p>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+            <th>{{#i18n}}admin.talks.table.format{{/i18n}}</th>
+            <th>{{#i18n}}admin.talks.table.title{{/i18n}}</th>
+            <th>{{#i18n}}admin.talks.table.speakers{{/i18n}}</th>
+            <th>{{#i18n}}admin.talks.table.actions{{/i18n}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#talks}}
+        <tr>
+            <td>{{format}}</td>
+            <td>{{title}}</td>
+            <td>{{#speakers}}{{firstname}} {{lastname}} {{/speakers}}</td>
+            <td>
+                <a href="/admin/talks/edit/{{slug}}">{{#i18n}}admin.talks.actions.update{{/i18n}}</a> <br />
+                <a href="/{{event}}/{{slug}}" target="_blank">{{#i18n}}admin.talks.actions.view{{/i18n}}</a>
+            </td>
+        </tr>
+        {{/talks}}
+      </tbody>
+    </table>
 </div>
 
 {{> footer}}

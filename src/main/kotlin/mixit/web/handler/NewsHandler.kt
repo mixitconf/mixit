@@ -1,9 +1,10 @@
 package mixit.web.handler
 
-import org.springframework.http.MediaType.*
+import org.springframework.http.MediaType.TEXT_EVENT_STREAM
 import org.springframework.stereotype.Controller
-import org.springframework.web.reactive.function.server.*
+import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse.ok
+import org.springframework.web.reactive.function.server.body
 import reactor.core.publisher.Flux
 import java.time.Duration.ofMillis
 

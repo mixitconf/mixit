@@ -16,7 +16,8 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.body
 import reactor.core.publisher.Mono
 import reactor.kotlin.core.publisher.toMono
-import java.util.*
+import java.util.Locale
+import java.util.Random
 
 @Component
 class TicketingHandler(private val ticketRepository: TicketRepository,
@@ -43,7 +44,7 @@ class TicketingHandler(private val ticketRepository: TicketRepository,
         val formData = it.toSingleValueMap()
 
         val ticket = Ticket(
-                formData["email"]!!.toLowerCase(),
+                formData["email"]!!.lowercase(),
                 formData["firstname"]!!,
                 formData["lastname"]!!)
 

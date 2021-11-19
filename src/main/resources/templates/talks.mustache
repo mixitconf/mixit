@@ -1,168 +1,118 @@
 {{> header}}
 
-<div class="mxt-wrapper--talks">
-    <div class="row">
-        <div class="columns large-8 large-offset-2 menu-centered text-center">
-            <ul class="dropdown menu simple mxt-menu--talks" data-dropdown-menu>
-                <li class="mxt-menu--talks-title"><h1>{{#i18n}}talks.title{{#topic}}.{{topic}}{{/topic}}{{/i18n}}</h1></li>
-                <li><a href="#" class="mxt-menu--talks-date"><h1>{{year}}</h1></a>
-                    <ul class="menu">
-                        <li><a href="{{localePrefix}}/2021{{#topic}}/{{topic}}{{/topic}}">2021</a></li>
-                        <li><a href="{{localePrefix}}/2019{{#topic}}/{{topic}}{{/topic}}">2019</a></li>
-                        <li><a href="{{localePrefix}}/2018{{#topic}}/{{topic}}{{/topic}}">2018</a></li>
-                        <li><a href="{{localePrefix}}/2017{{#topic}}/{{topic}}{{/topic}}">2017</a></li>
-                        <li><a href="{{localePrefix}}/2016{{#topic}}/{{topic}}{{/topic}}">2016</a></li>
-                        <li><a href="{{localePrefix}}/2015{{#topic}}/{{topic}}{{/topic}}">2015</a></li>
-                        <li><a href="{{localePrefix}}/2014{{#topic}}/{{topic}}{{/topic}}">2014</a></li>
-                        <li><a href="{{localePrefix}}/2013{{#topic}}/{{topic}}{{/topic}}">2013</a></li>
-                        <li><a href="{{localePrefix}}/2012{{#topic}}/{{topic}}{{/topic}}">2012</a></li>
-                    </ul>
-                </li>
+<div class="mxt-wrapper--header">
+    <div class="col-12 col-lg-8 offset-lg-2 text-center">
+        <h1 class="pt-5">
+            {{#i18n}}talks.title{{#topic}}.{{topic}}{{/topic}}{{/i18n}}
+            <button class="btn btn-secondary dropdown-toggle mxt-dropdown-header" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                {{year}}
+            </button>
+            <ul class="dropdown-menu mxt-dropdown-header" aria-labelledby="dropdownMenuButton1">
+                <li><a href="{{localePrefix}}/2021{{#topic}}/{{topic}}{{/topic}}" class="dropdown-item">2021</a></li>
+                <li><a href="{{localePrefix}}/2019{{#topic}}/{{topic}}{{/topic}}" class="dropdown-item">2019</a></li>
+                <li><a href="{{localePrefix}}/2018{{#topic}}/{{topic}}{{/topic}}" class="dropdown-item">2018</a></li>
+                <li><a href="{{localePrefix}}/2017{{#topic}}/{{topic}}{{/topic}}" class="dropdown-item">2017</a></li>
+                <li><a href="{{localePrefix}}/2016{{#topic}}/{{topic}}{{/topic}}" class="dropdown-item">2016</a></li>
+                <li><a href="{{localePrefix}}/2015{{#topic}}/{{topic}}{{/topic}}" class="dropdown-item">2015</a></li>
+                <li><a href="{{localePrefix}}/2014{{#topic}}/{{topic}}{{/topic}}" class="dropdown-item">2014</a></li>
+                <li><a href="{{localePrefix}}/2013{{#topic}}/{{topic}}{{/topic}}" class="dropdown-item">2013</a></li>
+                <li><a href="{{localePrefix}}/2012{{#topic}}/{{topic}}{{/topic}}" class="dropdown-item">2012</a></li>
             </ul>
-            {{#schedulingFile}}
-                <p>
+        </h1>
+    </div>
+    <div class="col-12 col-lg-8 offset-lg-2 text-center mxt-text--page-title">
+        {{#schedulingFile}}
+            <p>
                 <a href="{{schedulingFile}}" target="_blank" class="button hollow mxt-anchor--uppercase">{{#i18n}}talks.schedule.download{{/i18n}}</a>
-                </p>
-            {{/schedulingFile}}
+            </p>
+        {{/schedulingFile}}
 
-            {{#connected}}
-                {{#filtered}}<p>{{#i18n}}talks.favorites.filter.active{{/i18n}}</p>{{/filtered}}
-                {{^filtered}}<p><a href="{{localePrefix}}/{{year}}{{#topic}}/{{topic}}{{/topic}}/favorite">{{#i18n}}talks.favorites.filter{{/i18n}}</a></p>{{/filtered}}
-            {{/connected}}
-            <p>{{#i18n}}talks.medias.see{{/i18n}} <a href="{{localePrefix}}/{{year}}/medias{{#topic}}/{{topic}}{{/topic}}">{{#i18n}}talks.medias{{/i18n}}</a></p>
-        </div>
+        {{#connected}}
+            {{#filtered}}<p>{{#i18n}}talks.favorites.filter.active{{/i18n}}</p>{{/filtered}}
+            {{^filtered}}<p><a href="{{localePrefix}}/{{year}}{{#topic}}/{{topic}}{{/topic}}/favorite">{{#i18n}}talks.favorites.filter{{/i18n}}</a></p>{{/filtered}}
+        {{/connected}}
+        <p>{{#i18n}}talks.medias.see{{/i18n}} <a href="{{localePrefix}}/{{year}}/medias{{#topic}}/{{topic}}{{/topic}}">{{#i18n}}talks.medias{{/i18n}}</a></p>
+        <p>&nbsp;</p>
     </div>
 </div>
 
-
-<div class="mxt-wrapper--page-content">
-    {{#current}}
-    <div class="row mxt-wrapper--row">
-        <div class="columns small-12 medium-12 large-12 callout">
-            <div class="row mxt-wrapper--row">
-                <div class="columns small-3 medium-3 large-3">
-                    <a href="/images/png/planning/planning_2019_J1_AM_v6.png"><img src="/images/png/planning/planning_2019_J1_AM_v6.png" class="" alt="planning jour 1 matin 2019" /></a>
-                </div>
-                <div class="columns small-3 medium-3 large-3">
-                    <a href="/images/png/planning/planning_2019_J1_PM_v6.png"><img src="/images/png/planning/planning_2019_J1_PM_v6.png" class="" alt="planning jour 1 après midi 2019" /></a>
-                </div>
-                <div class="columns small-3 medium-3 large-3">
-                    <a href="/images/png/planning/planning_2019_J2_AM_v6.png"><img src="/images/png/planning/planning_2019_J2_AM_v6.png" class="" alt="planning jour 2 matin 2019" /></a>
-                </div>
-                <div class="columns small-3 medium-3 large-3">
-                    <a href="/images/png/planning/planning_2019_J2_PM_v6.png"><img src="/images/png/planning/planning_2019_J2_PM_v6.png" class="" alt="planning jour 2 après midi 2019" /></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    {{/current}}
-    <div class="row mxt-wrapper--row">
-        {{#talks.entrySet}}
-            <div class="columns small-12 medium-12 large-12 callout">
-                {{#key}}
-                    <h2>{{key}}</h2><br/>
-                {{/key}}
-                <ul class="accordion" data-accordion>
-                    {{#value}}
-                        <li class="accordion-item" data-accordion-item>
-                            <!-- Accordion tab title -->
-                            <a href="#" class="accordion-title">
-                                {{#topic}}
-                                    <div class="mxt-text--cat mxt-text--cat-{{topic}}">
-                                        <img src="/images/svg/mxt-icon--{{topic}}.svg" class="mxt-icon--cat mxt-icon--cat__talks"
-                                             alt="{{#i18n}}home.topics.{{topic}}.title{{/i18n}}"/>
-                                        <span>{{#i18n}}home.topics.{{topic}}.title{{/i18n}}</span>
-                                    </div>{{/topic}}
-                                <small>{{#date}}{{date}}{{/date}}</small> <strong>{{#start}}{{start}} - {{end}}{{/start}}</strong>
-                                <h3 class="mxt-text--talktitle">
-                                    {{#connected}}
-                                        <button class="mxt-img--favorite" id="favorite-{{id}}">
-                                            {{#favorite}}
-                                                <img src="/images/svg/favorites/mxt-favorite.svg" class="mxt-icon--cat__talks" id="favorite-{{id}}"/>
-                                            {{/favorite}}
-                                            {{^favorite}}
-                                                <img src="/images/svg/favorites/mxt-favorite-non.svg" class="mxt-icon--cat__talks" id="favorite-{{id}}"/>
-                                            {{/favorite}}
-                                        </button>
-                                    {{/connected}}
-                                    {{title}}
-                                    {{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
-                                </h3>
-                                <ul class="menu simple mxt-menu--accordion">
-                                    <!--<li>{{#start}}{{start}}{{/start}} - {{#end}}{{end}}{{/end}}</li>-->
-                                    {{#video}}
-                                        <li><strong>&#x25ba; {{#i18n}}talks.title.video{{/i18n}}</strong></li>{{/video}}
-
-                                    <li class="mxt-text--cat-format">#{{#i18n}}talk.format.{{format}}{{/i18n}}</li>
-                                </ul>
-                                <ul class="menu">
-                                    {{#speakers}}
-                                        <li>
-                                            <span class="mxt-text--cat mxt-text--cat-speaker" style="background-color: #e6e6e6; padding: 0.3em;color: #2c233d">{{firstname}}&nbsp;{{lastname}}</span>
-                                        </li>
-                                    {{/speakers}}
-                                </ul>
-                            </a>
-                            <div class="accordion-content active" data-tab-content>
-                                <div class="row mxt-wrapper--row">
-<!--                                    <div class="small-7 medium-9 large-8 columns">-->
-<!--                                        <p class="mxt-text--cat-room">{{#i18n}}{{room}}{{/i18n}}</p>-->
-<!--                                    </div>-->
-                                    <div class="small-5 medium-3 large-4 columns text-center">
-                                        <a href="{{localePrefix}}/{{event}}/{{slug}}" class="button hollow">{{#i18n}}talks.readmore{{/i18n}}</a>
-                                    </div>
+<div class="container mxt-wrapper--page-content">
+    {{#talks.entrySet}}
+        {{#key}}<h2>{{key}}</h2>{{/key}}
+        <div class="accordion" id="accordionTalk">
+            {{#value}}
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading{{id}}">
+                        <button class="accordion-button mxt-accordion-talk collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{id}}" aria-expanded="false" aria-controls="collapse{{id}}">
+                            <div class="mxt-accordion-talk-line">
+                            {{#topic}}
+                                <div class="mxt-text--cat mxt-text--cat-{{topic}}">
+                                    <img src="/images/svg/mxt-icon--{{topic}}.svg" class="mxt-icon--cat mxt-icon--cat__talks"
+                                         alt="{{#i18n}}home.topics.{{topic}}.title{{/i18n}}"/>
+                                    <span>{{#i18n}}home.topics.{{topic}}.title{{/i18n}}</span>
                                 </div>
-                                <div>{{#markdown}}{{summary}}{{/markdown}}</div>
-
-
-                                <ul class="menu">
-                                    {{#speakers}}
-                                        <li class="menu-text">
-                                            <div class="mxt-img-avatar__wrapper"><a href="/user/{{login}}"><img
-                                                    data-src="{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{^photoUrl}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/photoUrl}}"
-                                                class="mxt-img-avatar__speaker mxt-img--lazyload"></a></div>
-                                            <span><a href="/user/{{login}}">{{firstname}}&nbsp;{{lastname}}</a></span>
-                                        </li>
-                                    {{/speakers}}
-                                </ul>
+                            {{/topic}}
+                            <div class="p-2"><small >{{#date}}{{date}}{{/date}}</small></div> <strong>{{#start}}{{start}} - {{end}}{{/start}}</strong>
                             </div>
-                        </li>
-                    {{/value}}
-                </ul>
-            </div>
-        {{/talks.entrySet}}
-        {{^talks.entrySet}}
-        <div class="columns small-12 medium-12 large-12 callout">
-            <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
-        </div>
-        {{/talks.entrySet}}
-    </div>
-    <div class="row">
-        <div class="column large-12">
-            {{#sponsors}}
-                <hr/>
-                <div class="align-center align-middle row">
-                    {{#sponsors-gold}}
-                        <div class="columns text-center large-2 medium-2 small-3">
-                            {{> sponsor-detail }}
+                            <h3 class="mxt-text--talktitle">
+                                {{#connected}}
+                                    {{#favorite}}
+                                        <img src="/images/svg/favorites/mxt-favorite.svg" class="mxt-icon--cat__talks" id="favorite-{{id}}"/>
+                                    {{/favorite}}
+                                    {{^favorite}}
+                                        <img src="/images/svg/favorites/mxt-favorite-non.svg" class="mxt-icon--cat__talks" id="favorite-{{id}}"/>
+                                    {{/favorite}}
+                                {{/connected}}
+                                {{title}}
+                                {{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
+                            </h3>
+                            <ul class="mxt-wrapper-list-inline">
+                                {{#video}}
+                                    <li><strong>&#x25ba; {{#i18n}}talks.title.video{{/i18n}}</strong></li>{{/video}}
+                                <li class="mxt-text--cat-format">#{{#i18n}}talk.format.{{format}}{{/i18n}}</li>
+                            </ul>
+                            <ul class="mxt-wrapper-list-inline mb-0 pb-0">
+                                {{#speakers}}
+                                    <li>
+                                        <span class="mxt-text--cat mxt-text--cat-speaker" style="background-color: #e6e6e6; padding: 0.3em;color: #2c233d">{{firstname}}&nbsp;{{lastname}}</span>
+                                    </li>
+                                {{/speakers}}
+                            </ul>
+                        </button>
+                    </h2>
+                    <div id="collapse{{id}}" class="accordion-collapse collapse" aria-labelledby="heading{{id}}" data-bs-parent="#accordionTalk">
+                        <div class="accordion-body">
+                            <div class="row mxt-wrapper--row">
+                                <div class="col-sm-7 col-md-9 col-lg-8">
+                                    <p class="mxt-text--cat-room">{{#i18n}}{{room}}{{/i18n}}</p>
+                                </div>
+                                <div class="col-sm-5 col-md-3 col-lg-4 text-right pb-2" style="text-align: right">
+                                    <a href="{{localePrefix}}/{{event}}/{{slug}}" class="btn btn-outline-primary">{{#i18n}}talks.readmore{{/i18n}}</a>
+                                </div>
+                            </div>
+                            <div>{{#markdown}}{{summary}}{{/markdown}}</div>
+                            <ul class="mxt-wrapper-list-inline" style="display: flex">
+                                {{#speakers}}
+                                    <li class="menu-text">
+                                        <div class="mxt-img-avatar__wrapper"><a href="/user/{{login}}"><img
+                                                data-src="{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{^photoUrl}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/photoUrl}}"
+                                            class="mxt-img-avatar__speaker mxt-img--lazyload"></a></div>
+                                        <span><a href="/user/{{login}}">{{firstname}}&nbsp;{{lastname}}</a></span>
+                                    </li>
+                                {{/speakers}}
+                            </ul>
                         </div>
-                    {{/sponsors-gold}}
-                    {{#sponsors-others}}
-                        <div class="columns text-center large-1 medium-1 small-2">
-                            {{> sponsor-detail }}
-                        </div>
-                    {{/sponsors-others}}
+                    </div>
                 </div>
-            {{/sponsors}}
+            {{/value}}
         </div>
-    </div>
+    {{/talks.entrySet}}
 </div>
+
+{{> sponsor-footer }}
 
 {{#connected}}
     <input type="hidden" id="email" value="{{email}}"/>
 {{/connected}}
 
 {{> footer}}
-
-<script async src="/js/talks.js"></script>
-<script async src="/js/images.js"></script>

@@ -6,10 +6,15 @@ import mixit.model.Event
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.domain.Sort
-import org.springframework.data.mongodb.core.*
+import org.springframework.data.mongodb.core.ReactiveMongoTemplate
+import org.springframework.data.mongodb.core.count
+import org.springframework.data.mongodb.core.find
+import org.springframework.data.mongodb.core.findById
+import org.springframework.data.mongodb.core.findOne
 import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.data.mongodb.core.query.isEqualTo
+import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
 
 

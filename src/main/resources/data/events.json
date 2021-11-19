@@ -1106,7 +1106,7 @@
         "year": 2020
     },
     {
-        "current": true,
+        "current": false,
         "end": "2021-05-20",
         "id": "mixit21",
         "photoUrls": [],
@@ -1195,5 +1195,15 @@
         "start": "2021-05-18",
         "videoUrl": null,
         "year": 2021
+    },
+    {
+        "current": true,
+        "end": "2022-05-25",
+        "id": "mixit22",
+        "photoUrls": [],
+        "sponsors": [],
+        "start": "2022-05-24",
+        "videoUrl": null,
+        "year": 2022
     }
 ]

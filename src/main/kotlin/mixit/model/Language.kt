@@ -5,7 +5,7 @@ enum class Language {
     FRENCH,
     ENGLISH;
 
-    fun toLanguageTag(): String = name.toLowerCase().subSequence(0, 2).toString()
+    fun toLanguageTag(): String = name.lowercase().subSequence(0, 2).toString()
 
     companion object {
         fun findByTag(name: String): Language {
