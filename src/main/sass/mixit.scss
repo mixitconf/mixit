@@ -309,18 +309,26 @@ h3 {
 
 .mxt-wrapper--page-content {
   position: relative;
-  top: -3em;
   background-color: white;
   padding: 2em;
-  margin-bottom: -1em;
+  @include media-breakpoint-up(md) {
+    margin-bottom: -1em;
+    top: -3em;
+  }
+  margin-bottom: 0;
+  top: 0;
 }
 
 .mxt-wrapper--home-content {
   position: relative;
   background-color: white;
-  top: -3em;
   padding: 2em;
-  margin-bottom: -1em;
+  @include media-breakpoint-up(md) {
+    margin-bottom: -1em;
+    top: -3em;
+  }
+  margin-bottom: 0;
+  top: 0;
 }
 
 .mxt-wrapper--callout {
