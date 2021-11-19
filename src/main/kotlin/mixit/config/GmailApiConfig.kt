@@ -3,6 +3,7 @@ package mixit.config
 import com.google.api.client.auth.oauth2.Credential
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential
 import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport
+import com.google.api.client.http.javanet.NetHttpTransport
 import com.google.api.client.json.jackson2.JacksonFactory
 import com.google.api.client.util.store.MemoryDataStoreFactory
 import com.google.api.services.gmail.Gmail
@@ -18,13 +19,13 @@ import org.springframework.core.io.ClassPathResource
 class GmailApiConfig {
 
     @Bean
-    fun jacksonFactory() = JacksonFactory.getDefaultInstance()
+    fun jacksonFactory(): JacksonFactory = JacksonFactory.getDefaultInstance()
 
     @Bean
-    fun dataStoreFactory() = MemoryDataStoreFactory.getDefaultInstance()
+    fun dataStoreFactory(): MemoryDataStoreFactory = MemoryDataStoreFactory.getDefaultInstance()
 
     @Bean
-    fun httpTransport() = GoogleNetHttpTransport.newTrustedTransport()
+    fun httpTransport(): NetHttpTransport = GoogleNetHttpTransport.newTrustedTransport()
 
     @Bean
     fun authorize(properties: MixitProperties): Credential = GoogleCredential.Builder()
@@ -38,7 +39,7 @@ class GmailApiConfig {
             .apply { this.refreshToken }
 
     @Bean
-    fun gmailService(properties: MixitProperties) = Gmail
+    fun gmailService(properties: MixitProperties): Gmail = Gmail
             .Builder(httpTransport(), jacksonFactory(), authorize(properties))
             .setApplicationName(properties.googleapi.appname).build()
 }

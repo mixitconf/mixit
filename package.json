@@ -8,7 +8,7 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "scss": "node-sass src/main/sass/app.scss -o build/classes/css && postcss build/classes/css/app.css -u autoprefixer -u cssnano -o build/resources/main/static/css/app.css",
+    "scss": "node-sass src/main/sass/mixit.scss -o build/classes/css && postcss build/classes/css/mixit.css -u autoprefixer -u cssnano -o build/resources/main/static/css/mixit.css",
     "typescript": "tsc src/main/ts/*.ts --target es6 --out build/classes/js/mixit.js;terser build/classes/js/mixit.js -o build/resources/main/static/js/mixit.js",
     "copy-templates": "copyfiles -f 'src/main/resources/templates/*.*' 'build/resources/main/templates/' & copyfiles -f 'src/main/resources/templates/error/*.*' 'build/resources/main/templates/error/'",
     "copy-messages": "copyfiles -f 'src/main/resources/messages*.properties' 'build/resources/main/'",
