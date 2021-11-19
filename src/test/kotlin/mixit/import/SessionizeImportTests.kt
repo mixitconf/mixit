@@ -190,7 +190,7 @@ class SessionizeImportTests(@Autowired val objectMapper: ObjectMapper,
     private fun getTopic(export: PapercallExport): String {
         val mixitTopics = listOf("maker", "design", "aliens", "tech", "ethic", "life style", "team")
         val papercallTopics: String = export.tags
-                .map { it.toLowerCase() }
+                .map { it.lowercase() }
                 .filter { mixitTopics.contains(it) }
                 .firstOrNull().orEmpty().ifEmpty { "other" }
         return toMixitTopic(papercallTopics)
@@ -226,7 +226,7 @@ fun bioToMap(bio: String?) = if (bio == null) mapOf(Pair(Language.FRENCH, "UNKNO
 
 val SPECIAL_SLUG_CHARACTERS = mapOf(Pair('é', 'e'), Pair('è', 'e'), Pair('ï', 'i'), Pair(' ', '_'), Pair('ê', 'e'), Pair('à', 'a'), Pair('-', '_'), Pair('_', '0'), Pair('∴', '0'))
 
-fun sanitize(value: String): String = value.toLowerCase().toCharArray().map { if (SPECIAL_SLUG_CHARACTERS.get(it) == null) it else SPECIAL_SLUG_CHARACTERS.get(it) }.joinToString("")
+fun sanitize(value: String): String = value.lowercase().toCharArray().map { if (SPECIAL_SLUG_CHARACTERS.get(it) == null) it else SPECIAL_SLUG_CHARACTERS.get(it) }.joinToString("")
 
 fun initializeFolder() {
     // Check if /tmp/images/ exists ?

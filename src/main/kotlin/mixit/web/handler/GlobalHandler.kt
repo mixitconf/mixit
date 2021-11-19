@@ -26,8 +26,8 @@ class GlobalHandler(
         .findByRoles(listOf(Role.STAFF, Role.STAFF_IN_PAUSE))
         .collectList()
         .flatMap { users ->
-            val staff = users.filter { it.role == Role.STAFF }.shuffle()
-            val staffInPause = users.filter { it.role == Role.STAFF_IN_PAUSE }.shuffle()
+            val staff = users.filter { it.role == Role.STAFF }.shuffled()
+            val staffInPause = users.filter { it.role == Role.STAFF_IN_PAUSE }.shuffled()
             ok().render(
                 "about", mapOf(
                     Pair("staff", staff.map { it.toDto(req.language(), markdownConverter) }),

@@ -36,11 +36,11 @@ class AuthenticationTest(@Autowired val client: WebTestClient) {
                 .returnResult().responseBody
 
         assertThat(result)
-                .contains("<h1 class=\"text-center\">Authentification</h1>")
+                .contains("<h1 class=\"text-center pt-5\">Authentification</h1>")
                 // A field to send email
-                .contains("<input type=\"text\" name=\"email\" placeholder=\"contact@mix-it.fr\" />")
+                .contains("<input type=\"text\" class=\"form-control\" name=\"email\" placeholder=\"contact@mix-it.fr\" />")
                 // A button to log in
-                .contains("<input type=\"submit\" class=\"button expand\" value=\"Se connecter\"/>")
+                .contains(">Se connecter<")
     }
 
     @Test
@@ -52,13 +52,13 @@ class AuthenticationTest(@Autowired val client: WebTestClient) {
                 .returnResult().responseBody
 
         assertThat(result)
-                .contains("<h1 class=\"text-center\">Authentification</h1>")
+                .contains("<h1 class=\"text-center pt-5\">Authentification</h1>")
                 // An hidden field to send email
-                .contains("<input type=\"hidden\" name=\"email\" value=\"dan&#64;north.uk\" />")
+                .contains("<input type=\"hidden\" name=\"email\" value=\"dan&#64;north.uk\"/>")
                 // A field to send token
-                .contains("<input type=\"password\" name=\"token\" placeholder=\"Token\" value=\"my-token\"/>")
+                .contains("<input type=\"password\" class=\"form-control\" name=\"token\" placeholder=\"Token\" value=\"my-token\"/>")
                 // A button to log in
-                .contains("<input type=\"submit\" class=\"button expand\" value=\"Log In\"/>")
+                .contains("class=\"nav-link mxt-nav-link\">Se connecter</a>")
     }
 
     @Test
@@ -74,15 +74,15 @@ class AuthenticationTest(@Autowired val client: WebTestClient) {
                 .returnResult().responseBody
 
         assertThat(result)
-                .contains("<h1 class=\"text-center\">Authentification</h1>")
+                .contains("<h1 class=\"text-center pt-5\">Authentification</h1>")
                 // A message to say that a token was sent
                 .contains("Un token de connexion vient de vous être envoyé par email. Vous pouvez soit utiliser le " +
                         "lien contenu dans ce mail pour vous connecter, soit coller dans le champ correspondant le " +
                         "token reçu. ")
                 // A field to copy this token
-                .contains("<input type=\"password\" name=\"token\" placeholder=\"Token\" />")
+                .contains("<input type=\"password\" class=\"form-control\" name=\"token\" placeholder=\"Token\" />")
                 // A button to send informations
-                .contains(" <input type=\"submit\" class=\"button expand\" value=\"Log In\"/>")
+                .contains("<button type=\"submit\" class=\"btn btn-primary mxt-btn-primary\">Se connecter</button>")
 
         verify { authenticationService.searchUserByEmailOrCreateHimFromTicket(any()) }
         verify { authenticationService.generateAndSendToken(any(), any()) }
@@ -98,7 +98,7 @@ class AuthenticationTest(@Autowired val client: WebTestClient) {
                 .returnResult().responseBody
 
         assertThat(result)
-                .contains("<h1 class=\"text-center\">Authentification</h1>")
+                .contains("<h1 class=\"text-center pt-5\">Authentification</h1>")
                 // An error message
                 .contains("Votre email est invalide")
                 // A button to go back
@@ -119,7 +119,7 @@ class AuthenticationTest(@Autowired val client: WebTestClient) {
                 .returnResult().responseBody
 
         assertThat(result)
-                .contains("<h1 class=\"text-center\">Authentification</h1>")
+                .contains("<h1 class=\"text-center pt-5\">Authentification</h1>")
                 // An error message
                 .contains("Erreur lors de l'envoi du mail contenant le token de connexion. Essayez une nouvelle fois ou contacter nous")
                 // A button to go back
@@ -139,17 +139,17 @@ class AuthenticationTest(@Autowired val client: WebTestClient) {
                 .returnResult().responseBody
 
         assertThat(result)
-                .contains("<h1 class=\"text-center\">Authentification</h1>")
+                .contains("<h1 class=\"text-center pt-5\">Authentification</h1>")
                 // a message to alert user
                 .contains("Votre e-mail n'est pas associé à un compte. Si vous voulez créer un compte, donnez nous un peu plus de détail ")
                 // an hidden field with user email
                 .contains("<input type=\"hidden\" name=\"email\" value=\"dan&#64;north.uk\"/>")
                 // firstname
-                .contains("<input type=\"text\" name=\"firstname\" required/>")
+                .contains("<input type=\"text\" id=\"firstname\" name=\"firstname\" class=\"form-control\" required/>")
                 // lastname
-                .contains("<input type=\"text\" name=\"lastname\" required/>")
+                .contains("<input type=\"text\" id=\"lastname\" class=\"form-control\" name=\"lastname\" required/>")
                 // a button to create an account
-                .contains("<input type=\"submit\" class=\"button expand\" value=\"Créer un compte\"/>")
+                .contains("<button type=\"submit\" class=\"btn btn-primary mxt-btn-primary\">Créer un compte</button>")
     }
 
     @Test
@@ -168,15 +168,15 @@ class AuthenticationTest(@Autowired val client: WebTestClient) {
                 .returnResult().responseBody
 
         assertThat(result)
-                .contains("<h1 class=\"text-center\">Authentification</h1>")
+                .contains("<h1 class=\"text-center pt-5\">Authentification</h1>")
                 // A message to say that a token was sent
                 .contains("Un token de connexion vient de vous être envoyé par email. Vous pouvez soit utiliser le " +
                         "lien contenu dans ce mail pour vous connecter, soit coller dans le champ correspondant le " +
                         "token reçu. ")
                 // A field to copy this token
-                .contains("<input type=\"password\" name=\"token\" placeholder=\"Token\" />")
+                .contains("<input type=\"password\" class=\"form-control\" name=\"token\" placeholder=\"Token\" />")
                 // A button to send informations
-                .contains(" <input type=\"submit\" class=\"button expand\" value=\"Log In\"/>")
+                .contains("<button type=\"submit\" class=\"btn btn-primary mxt-btn-primary\">Se connecter</button>")
 
         verify { authenticationService.createUserIfEmailDoesNotExist(any(), any()) }
         verify { authenticationService.generateAndSendToken(any(), any()) }
@@ -196,11 +196,11 @@ class AuthenticationTest(@Autowired val client: WebTestClient) {
                 .returnResult().responseBody
 
         assertThat(result)
-                .contains("<h1 class=\"text-center\">Authentification</h1>")
+                .contains("<h1 class=\"text-center pt-5\">Authentification</h1>")
                 // A message to say that a token was sent
                 .contains("Tous les champs sont requis.")
                 // A button to go back
-                .contains("<p><a href=\"/login\">Retour vers le formulaire</a></p>")
+                .contains("Retour vers le formulaire")
     }
 
     @Test
@@ -219,7 +219,7 @@ class AuthenticationTest(@Autowired val client: WebTestClient) {
                 .returnResult().responseBody
 
         assertThat(result)
-                .contains("<h1 class=\"text-center\">Authentification</h1>")
+                .contains("<h1 class=\"text-center pt-5\">Authentification</h1>")
                 // A message to say that a token was sent
                 .contains("Votre email est invalide")
                 // A button to go back

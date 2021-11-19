@@ -288,7 +288,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
                 .expectBody(String::class.java)
                 .returnResult()
                 // User see his profile
-                .responseBody).contains("<h1 class=\"text-center\">Admin</h1>")
+                .responseBody).contains("<h1 class=\"text-center pt-5\">Admin</h1>")
     }
 
     @Test
