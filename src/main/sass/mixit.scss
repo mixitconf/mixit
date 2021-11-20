@@ -139,11 +139,17 @@ h3 {
   }
 }
 
+.mxt-icon--heart {
+  @include media-breakpoint-up(md) {
+    width: 1.2em;
+  }
+  width: 1em;
+}
+
 .mxt-icon--heart--footer {
   position: relative;
   top: 0.3em;
   width: 2em;
-
   path {
     fill: $primary-color;
   }
@@ -262,7 +268,13 @@ h3 {
   background-color: rgba(0, 0, 0, 0);
   background-position-x: center;
   background-position-y: bottom;
-  background-size: 100%;
+  @include media-breakpoint-up(sm) {
+    background-size: 130%;
+  }
+  @include media-breakpoint-up(md) {
+    background-size: 100%;
+  }
+  background-size: 150%;
   background-position: 5% bottom !important;
   background-color: #2c233d;
   border-bottom: 5px solid #dbb9b8;
