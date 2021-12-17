@@ -225,6 +225,15 @@ h3 {
   text-overflow: ellipsis;
 }
 
+.mxt-img__logo {
+  width: 100%;
+  max-width: 100%;
+  @include media-breakpoint-up(md) {
+    width: 40%;
+    max-width: 40%;
+  }
+}
+
 .mxt-btn-primary {
   color: white;
 }
@@ -300,9 +309,9 @@ h3 {
 
   @include media-breakpoint-up(md) {
     background-size: 27%;
-    background: $secondary-color url('/images/svg/mxt-icon--mic.svg') no-repeat left 30% bottom 0%;
+    background: $secondary-color url('/images/svg/mxt-icon--mic.svg') no-repeat left 30% bottom 0;
   }
-  background: $secondary-color url('/images/svg/mxt-icon--mic.svg') no-repeat left 0% bottom 0%;
+  background: $secondary-color url('/images/svg/mxt-icon--mic.svg') no-repeat left 0 bottom 0;
   padding-top: 8em;
   padding-bottom: 4em;
   color: #dbb9b8;
