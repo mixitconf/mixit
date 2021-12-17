@@ -86,6 +86,21 @@ class AuthenticationHandler(
         }
     }
 
+    fun sendToken(req: ServerRequest): Mono<ServerResponse> = req.body(toFormData()).flatMap {
+        try {
+            val nonEncryptedMail = emailValidator.check(it.toSingleValueMap()["email"])
+            authenticationService.searchUserByEmailOrCreateHimFromTicket(nonEncryptedMail)
+                // If user is found we send him a token
+                .flatMap { displayView(LoginPage.CONFIRMATION, mapOf(Pair("email", nonEncryptedMail))) }
+                // An error can be thrown when we try to create a user from ticketting
+                .onErrorResume { displayErrorView(duplicateException(it)) }
+                // if user is not found we ask him if he wants to create a new account
+                .switchIfEmpty(Mono.defer { displayView(LoginPage.CREATION, mapOf(Pair("email", nonEncryptedMail))) })
+        } catch (e: EmailValidatorException) {
+            displayErrorView(LoginError.INVALID_EMAIL)
+        }
+    }
+
     /**
      * Action called by an HTTP post when a user want to sign up to our application and create his account. If creation
      * is OK, we send him a token by email
