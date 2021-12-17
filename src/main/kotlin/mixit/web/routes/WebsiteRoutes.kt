@@ -143,6 +143,7 @@ class WebsiteRoutes(
 
         contentType(APPLICATION_FORM_URLENCODED).nest {
             POST("/login", authenticationHandler::login)
+            POST("/send-token", authenticationHandler::sendToken)
             POST("/signup", authenticationHandler::signUp)
             POST("/signin", authenticationHandler::signIn)
             POST("/me", userHandler::saveProfile)

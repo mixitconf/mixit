@@ -10,12 +10,12 @@
     <div class="lead">
         {{#i18n}}ticketing.text{{/i18n}}
     </div>
-    <div class="text-center">
-        <img src="/images/svg/mxt-icon--logo-firework.svg" class="mxt-img__logo"
-             style="position: relative; top: -1em">
-    </div>
     <div class="row">
         <div class="col-10 offset-1 col-lg-6 offset-lg-3 text-center">
+            <div class="text-center">
+                <img src="/images/svg/mxt-icon--logo-firework.svg" class="mxt-img__logo"
+                     style="position: relative; top: -1em">
+            </div>
             <form action="/ticketing" method="post">
                 <input type="text" class="form-control" name="firstname"
                        placeholder="{{#i18n}}ticketing.firstname{{/i18n}}" required>
