@@ -1201,7 +1201,33 @@
         "end": "2022-05-25",
         "id": "mixit22",
         "photoUrls": [],
-        "sponsors": [],
+        "sponsors": [
+            {
+                "level": "GOLD",
+                "sponsorId": "WorldlineFrance",
+                "subscriptionDate": "2021-12-05"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "redfroggy",
+                "subscriptionDate": "2021-12-09"
+            },
+            {
+                "level": "NONE",
+                "sponsorId": "hackyourjob",
+                "subscriptionDate": "2021-12-15"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "hiit",
+                "subscriptionDate": "2021-12-15"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "microsoft",
+                "subscriptionDate": "2021-12-17"
+            }
+        ],
         "start": "2022-05-24",
         "videoUrl": null,
         "year": 2022

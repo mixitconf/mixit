@@ -2898,8 +2898,8 @@
     "email": null,
     "company": "Worldline",
     "description": {
-      "ENGLISH": "Worldline is the European leader in the field of payments and transactional services and plays a major role in the fields of merchant services, mobility, e-administration and major state projects thanks to shared services and offerings and the construction of bespoke solutions. We provide our customers with end-to-end collaboration: from business analysis; software development; to dedicated or cloud-based hosting; technical operation.\r\n\r\nOpen Source, Software Craftsmanship, and the Agile and DevOps approaches are key characteristics of our projects. The associated methodologies, techniques and technologies are naturally reflected in Worldline’s culture; they are at the heart of our strategies, organizations and platforms. We work exclusively from our own premises and do not operate in T&M mode. We develop expertise and innovation thanks to a large network of technical, project and business experts coming from all of our teams.\r\n\r\nWorldline pays particular attention to the development of each employee and offers a wide range of training courses. We promote a good work/life balance and pay special attention to gender equality and diversity. Finally, the diversity of projects, clients and challenges that we address provides a great business and technological wealth. It enables everyone to contribute to the construction of ambitious functional and technical solutions.\r\n \r\nWorldline is an Atos company.",
-      "FRENCH": "Worldline, leader européen du paiement  et des services transactionnels, est  également un acteur majeur dans les domaines des services marchands, de la mobilité ou de la e-administration via la mise à disposition d’offres mutualisées ou la construction de solutions sur mesure. Nous proposons à nos clients une collaboration de bout en bout depuis l’accompagnement métier, le développement jusqu’à l’hébergement dédié ou cloud, l’exploitation applicative.\r\n\r\nL’Open Source, le Software Craftsmanship ainsi que les démarches Agile et DevOps constituent des marqueurs forts de nos projets et les méthodologies, techniques et technologies associées sont au cœur de nos stratégies, organisations et plateformes. Nous travaillons exclusivement depuis nos locaux et ne fonctionnons pas en mode régie. Nous développons l’expertise et l’innovation via à un réseau d’experts techniques, projets et métiers, issus de nos équipes.\r\n\r\nWorldline porte une attention particulière au développement de chaque collaborateur et propose une large offre de formations. Nous encourageons un juste équilibre entre vie privée et vie professionnelle et portons une attention particulière à l’égalité femme-homme. Enfin, La diversité de nos projets  offre une grande richesse métier et technologique et permet à chacun, quel que soit son profil, de contribuer à la construction de solutions ambitieuses.\r\n\r\nWorldline est une société du groupe Atos."
+      "FRENCH": "Worldline, leader européen du paiement  et des services transactionnels, est  également un acteur majeur dans les domaines des services marchands, de la mobilité ou de la e-administration via la mise à disposition d’offres mutualisées ou la construction de solutions sur mesure. Nous proposons à nos clients une collaboration de bout en bout depuis l’accompagnement métier, le développement jusqu’à l’hébergement dédié ou cloud, l’exploitation applicative.\r\n\r\nL’Open Source, le Software Craftsmanship ainsi que les démarches Agile et DevOps constituent des marqueurs forts de nos projets et les méthodologies, techniques et technologies associées sont au cœur de nos stratégies, organisations et plateformes. Nous travaillons exclusivement depuis nos locaux et ne fonctionnons pas en mode régie. Nous développons l’expertise et l’innovation via à un réseau d’experts techniques, projets et métiers, issus de nos équipes.\r\n\r\nWorldline porte une attention particulière au développement de chaque collaborateur et propose une large offre de formations. Nous encourageons un juste équilibre entre vie privée et vie professionnelle et portons une attention particulière à l’égalité femme-homme. Enfin, La diversité de nos projets  offre une grande richesse métier et technologique et permet à chacun, quel que soit son profil, de contribuer à la construction de solutions ambitieuses.",
+      "ENGLISH": "Worldline is the European leader in the field of payments and transactional services and plays a major role in the fields of merchant services, mobility, e-administration and major state projects thanks to shared services and offerings and the construction of bespoke solutions. We provide our customers with end-to-end collaboration: from business analysis; software development; to dedicated or cloud-based hosting; technical operation.\r\n\r\nOpen Source, Software Craftsmanship, and the Agile and DevOps approaches are key characteristics of our projects. The associated methodologies, techniques and technologies are naturally reflected in Worldline’s culture; they are at the heart of our strategies, organizations and platforms. We work exclusively from our own premises and do not operate in T&M mode. We develop expertise and innovation thanks to a large network of technical, project and business experts coming from all of our teams.\r\n\r\nWorldline pays particular attention to the development of each employee and offers a wide range of training courses. We promote a good work/life balance and pay special attention to gender equality and diversity. Finally, the diversity of projects, clients and challenges that we address provides a great business and technological wealth. It enables everyone to contribute to the construction of ambitious functional and technical solutions.\r\n"
     },
     "emailHash": null,
     "photoUrl": "images/sponsors/logo-worldline.svg",
@@ -2927,10 +2927,10 @@
       }
     ],
     "legacyId": 2971,
-    "tokenExpiration": "2021-11-17T14:33:18.031106",
+    "tokenExpiration": "2021-12-17T08:28:40.375239",
     "token": "",
     "externalAppToken": null,
-    "tokenLifeTime": -1.960628000
+    "tokenLifeTime": "PT-0.172902S"
   },
   {
     "login": "XebiaLabs",
@@ -7231,8 +7231,8 @@
     "email": "BMzv/WU1oPyQS7vmoYk2s8wOuG39S8R4KUVfNTKooLLzew0FCry9e1FSGndMNIXB",
     "company": "HIIT",
     "description": {
-      "ENGLISH": "HIIT est une Entreprise au Service des clients du Numérique et des consultants qui la composent. Entreprise basée à Lyon, HIIT a pour ambition de répondre aux besoins des grandes entreprises et PME / PMI en matière d'expertise technologique, de respect des coûts et de qualité des prestations, dans leur réalisation et leur suivi. Et de (re)mettre les consultants au cœur de l'organisation en leur assurant des missions en adéquation avec leur niveau et leurs ambitions, un suivi personnalisé et régulier, une implication dans la vie de leur entreprise, un accompagnement dans la réalisation de leurs projets personnels et professionnels. Pour se faire, HIIT associe expérience commerciale et managériale, expertise technique et proximité avec les clients et les consultants, afin de développer une relation de confiance dans la durée.\r\n\r\nEn parallèle, et toujours dans cette démarche de transmission du savoir, nous avons créé School by Hi!T, pensée par des professionnels reconnus pour des passionnés en développement.\r\nCette école est née du constat de l’importance de la qualité de la formation technique pour les personnes qui intègrent le marché de l’emploi, en cohérence avec les évolutions technologiques du monde du travail actuel. Parce que nous sommes convaincus que le meilleur moyen d’apprendre est d’être directement positionné en situation professionnelle, nous vous proposons une formation professionnalisante qui vous permettra de développer vos compétences autour des technologies Java et JS. Le meilleur des deux mondes entre le back et le front est étudié au travers de quinze matières tout au long du programme.\r\nL’agilité est l’un de nos axes fort de développement et se retrouve à tous les niveaux de notre organisation : sprint des cours, logique d’amélioration continue auprès des formateurs, des étudiants... Pour le confort de tous, School by Hi!T intègre le Campus Région du Numérique, pôle majeur en région Auvergne Rhône-Alpes dédié à la formation des nouveaux métiers du digital.",
-      "FRENCH": "HIIT est une Entreprise au Service des clients du Numérique et des consultants qui la composent. Entreprise basée à Lyon, HIIT a pour ambition de répondre aux besoins des grandes entreprises et PME / PMI en matière d'expertise technologique, de respect des coûts et de qualité des prestations, dans leur réalisation et leur suivi. Et de (re)mettre les consultants au cœur de l'organisation en leur assurant des missions en adéquation avec leur niveau et leurs ambitions, un suivi personnalisé et régulier, une implication dans la vie de leur entreprise, un accompagnement dans la réalisation de leurs projets personnels et professionnels. Pour se faire, HIIT associe expérience commerciale et managériale, expertise technique et proximité avec les clients et les consultants, afin de développer une relation de confiance dans la durée.\r\n\r\nEn parallèle, et toujours dans cette démarche de transmission du savoir, nous avons créé School by Hi!T, pensée par des professionnels reconnus pour des passionnés en développement.\r\nCette école est née du constat de l’importance de la qualité de la formation technique pour les personnes qui intègrent le marché de l’emploi, en cohérence avec les évolutions technologiques du monde du travail actuel. Parce que nous sommes convaincus que le meilleur moyen d’apprendre est d’être directement positionné en situation professionnelle, nous vous proposons une formation professionnalisante qui vous permettra de développer vos compétences autour des technologies Java et JS. Le meilleur des deux mondes entre le back et le front est étudié au travers de quinze matières tout au long du programme.\r\nL’agilité est l’un de nos axes fort de développement et se retrouve à tous les niveaux de notre organisation : sprint des cours, logique d’amélioration continue auprès des formateurs, des étudiants... Pour le confort de tous, School by Hi!T intègre le Campus Région du Numérique, pôle majeur en région Auvergne Rhône-Alpes dédié à la formation des nouveaux métiers du digital."
+      "FRENCH": "HIIT est une Entreprise au Service des clients du Numérique et des consultants qui la composent. Entreprise basée à Lyon, HIIT a pour ambition de répondre aux besoins des grandes entreprises et PME / PMI en matière d'expertise technologique, de respect des coûts et de qualité des prestations, dans leur réalisation et leur suivi. Et de (re)mettre les consultants au cœur de l'organisation en leur assurant des missions en adéquation avec leur niveau et leurs ambitions, un suivi personnalisé et régulier, une implication dans la vie de leur entreprise, un accompagnement dans la réalisation de leurs projets personnels et professionnels. Pour se faire, HIIT associe expérience commerciale et managériale, expertise technique et proximité avec les clients et les consultants, afin de développer une relation de confiance dans la durée.\r\n\r\nEn parallèle, et toujours dans cette démarche de transmission du savoir, nous avons créé School by Hi!T, pensée par des professionnels reconnus pour des passionnés en développement.\r\nCette école est née du constat de l’importance de la qualité de la formation technique pour les personnes qui intègrent le marché de l’emploi, en cohérence avec les évolutions technologiques du monde du travail actuel. Parce que nous sommes convaincus que le meilleur moyen d’apprendre est d’être directement positionné en situation professionnelle, nous vous proposons une formation professionnalisante qui vous permettra de développer vos compétences autour des technologies Java et JS. Le meilleur des deux mondes entre le back et le front est étudié au travers de quinze matières tout au long du programme.\r\nL’agilité est l’un de nos axes fort de développement et se retrouve à tous les niveaux de notre organisation : sprint des cours, logique d’amélioration continue auprès des formateurs, des étudiants... Pour le confort de tous, School by Hi!T intègre le Campus Région du Numérique, pôle majeur en région Auvergne Rhône-Alpes dédié à la formation des nouveaux métiers du digital.",
+      "ENGLISH": "HIIT est une Entreprise au Service des clients du Numérique et des consultants qui la composent. Entreprise basée à Lyon, HIIT a pour ambition de répondre aux besoins des grandes entreprises et PME / PMI en matière d'expertise technologique, de respect des coûts et de qualité des prestations, dans leur réalisation et leur suivi. Et de (re)mettre les consultants au cœur de l'organisation en leur assurant des missions en adéquation avec leur niveau et leurs ambitions, un suivi personnalisé et régulier, une implication dans la vie de leur entreprise, un accompagnement dans la réalisation de leurs projets personnels et professionnels. Pour se faire, HIIT associe expérience commerciale et managériale, expertise technique et proximité avec les clients et les consultants, afin de développer une relation de confiance dans la durée.\r\n\r\nEn parallèle, et toujours dans cette démarche de transmission du savoir, nous avons créé School by Hi!T, pensée par des professionnels reconnus pour des passionnés en développement.\r\nCette école est née du constat de l’importance de la qualité de la formation technique pour les personnes qui intègrent le marché de l’emploi, en cohérence avec les évolutions technologiques du monde du travail actuel. Parce que nous sommes convaincus que le meilleur moyen d’apprendre est d’être directement positionné en situation professionnelle, nous vous proposons une formation professionnalisante qui vous permettra de développer vos compétences autour des technologies Java et JS. Le meilleur des deux mondes entre le back et le front est étudié au travers de quinze matières tout au long du programme.\r\nL’agilité est l’un de nos axes fort de développement et se retrouve à tous les niveaux de notre organisation : sprint des cours, logique d’amélioration continue auprès des formateurs, des étudiants... Pour le confort de tous, School by Hi!T intègre le Campus Région du Numérique, pôle majeur en région Auvergne Rhône-Alpes dédié à la formation des nouveaux métiers du digital."
     },
     "emailHash": null,
     "photoUrl": "images/sponsors/logo-hiit.svg",
@@ -7248,10 +7248,10 @@
       }
     ],
     "legacyId": null,
-    "tokenExpiration": "2021-11-17T14:33:18.039031",
+    "tokenExpiration": "2021-12-17T08:28:40.407274",
     "token": "",
     "externalAppToken": null,
-    "tokenLifeTime": -1.959563000
+    "tokenLifeTime": "PT-0.146399S"
   },
   {
     "login": "hintjens",
@@ -14738,8 +14738,8 @@
     "email": "e/4kyvsCs+4H0KtX5NcvnSj9AbGrlWFptOMlaCScOkzQnxObGWg0xE2mPMpOINti",
     "company": "Microsoft",
     "description": {
-      "ENGLISH": "As a leader in productivity platforms and services, Microsoft empowers everyperson and every organization to achieve more in a world based on the cloud and mobility. At the core of the French digital ecosystem for more than 30 years, Microsoft France, chaired by Carlo Purassanta since September 2017, brings together more than 1,600 employees at its Issy-les-Moulineaux Campus, under the sign of openness, creativity and collaboration. \r\n\r\nWith a network of more than 10,500 business, technological, public sector, research or start-up partners, Microsoft France is committed to promoting equal opportunities and digital education alongside non-profit organisations throughout the country.",
-      "FRENCH": "Leader des plateformes et des services de productivité, Microsoft donne à chaque individu et chaque organisation les moyens de réaliser ses ambitions, dans un monde fondé sur le Cloud et la mobilité.Au cœur de l’écosystème numérique français depuis plus de 30 ans, Microsoft France, présidée par Carlo Purassanta depuis septembre 2017, rassemble plus de 1 600 collaborateurs au sein de son Campus d’Issy-les-Moulineaux, sous le signe de l’ouverture, de la créativité et de la collaboration. \r\n\r\nAvec un tissu de plus de 10 500 partenaires business, technologiques, acteurs du secteur public, chercheurs ou start-ups, acteur responsable, Microsoft France s’engage en faveur de l’égalité des chances et de l’éducation au numérique aux côtés des associations sur l’ensemble du territoire"
+      "FRENCH": "Leader des plateformes et des services de productivité, Microsoft donne à chaque individu et chaque organisation les moyens de réaliser ses ambitions, dans un monde fondé sur le Cloud et la mobilité.Au cœur de l’écosystème numérique français depuis plus de 30 ans, Microsoft France, présidée par Carlo Purassanta depuis septembre 2017, rassemble plus de 1 600 collaborateurs au sein de son Campus d’Issy-les-Moulineaux, sous le signe de l’ouverture, de la créativité et de la collaboration. \r\n\r\nAvec un tissu de plus de 10 500 partenaires business, technologiques, acteurs du secteur public, chercheurs ou start-ups, acteur responsable, Microsoft France s’engage en faveur de l’égalité des chances et de l’éducation au numérique aux côtés des associations sur l’ensemble du territoire",
+      "ENGLISH": "As a leader in productivity platforms and services, Microsoft empowers everyperson and every organization to achieve more in a world based on the cloud and mobility. At the core of the French digital ecosystem for more than 30 years, Microsoft France, chaired by Carlo Purassanta since September 2017, brings together more than 1,600 employees at its Issy-les-Moulineaux Campus, under the sign of openness, creativity and collaboration. \r\n\r\nWith a network of more than 10,500 business, technological, public sector, research or start-up partners, Microsoft France is committed to promoting equal opportunities and digital education alongside non-profit organisations throughout the country."
     },
     "emailHash": null,
     "photoUrl": "https://mixitconf.org/images/sponsors/logo-microsoft.svg",
@@ -14755,10 +14755,10 @@
       }
     ],
     "legacyId": null,
-    "tokenExpiration": "2021-11-17T14:33:18.050247",
+    "tokenExpiration": "2021-12-17T08:28:40.487056",
     "token": "",
     "externalAppToken": null,
-    "tokenLifeTime": -1.960638000
+    "tokenLifeTime": "PT-0.078391S"
   },
   {
     "login": "coudert-sylvain",
@@ -15650,5 +15650,34 @@
     "token": "",
     "externalAppToken": null,
     "tokenLifeTime": -1.961033000
+  },
+  {
+    "login": "hackyourjob",
+    "firstname": "hackyourjob",
+    "lastname": "hackyourjob",
+    "email": "COLgkTDujLUl867g8/tmzoo/D/EJeI2mVE1G+AD3AFw=",
+    "company": "Hack Your Job",
+    "description": {
+      "FRENCH": "HackYourJob est une communauté de développeurs passionnés qui veulent travailler autrement.  \r\n\r\nLa principale préoccupation des travailleurs est l’épanouissement dans leur vie professionnelle, devant la rémunération et les responsabilités. Un bon moyen de s'épanouir en tant que développeurs en France consiste à se lancer en Freelance, mais nous voyons cela comme un moyen, et non pas comme une fin.\r\n\r\nNous proposons des solutions pour vous accompagner personnellement, parce que si vous n'investissez pas dans vos rêves, quelqu'un vous embauchera pour investir dans les siens.  ",
+      "ENGLISH": "HackYourJob est une communauté de développeurs passionnés qui veulent travailler autrement.  \r\n\r\nLa principale préoccupation des travailleurs est l’épanouissement dans leur vie professionnelle, devant la rémunération et les responsabilités. Un bon moyen de s'épanouir en tant que développeurs en France consiste à se lancer en Freelance, mais nous voyons cela comme un moyen, et non pas comme une fin.\r\n\r\nNous proposons des solutions pour vous accompagner personnellement, parce que si vous n'investissez pas dans vos rêves, quelqu'un vous embauchera pour investir dans les siens.  "
+    },
+    "emailHash": null,
+    "photoUrl": "/images/sponsors/logo-hackyourjob.png",
+    "role": "USER",
+    "links": [
+      {
+        "name": "Site Web",
+        "url": "https://www.hackyourjob.org/"
+      },
+      {
+        "name": "Twitter",
+        "url": "https://twitter.com/HackYrJob"
+      }
+    ],
+    "legacyId": null,
+    "tokenExpiration": "2021-12-17T08:28:40.543686",
+    "token": "",
+    "externalAppToken": null,
+    "tokenLifeTime": "PT-0.031605S"
   }
 ]
