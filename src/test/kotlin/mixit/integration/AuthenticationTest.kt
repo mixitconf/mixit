@@ -37,7 +37,7 @@ class AuthenticationTest(@Autowired val client: WebTestClient) {
         assertThat(result)
             .contains("<h1 class=\"text-center pt-5\">Authentification</h1>")
             // A field to send email
-            .contains("<input type=\"text\" class=\"form-control\" name=\"email\" placeholder=\"contact@mix-it.fr\" />")
+            .contains("<input type=\"text\" class=\"form-control\" name=\"email\" placeholder=\"contact@mixitconf.org\" />")
             // A button to log in
             .contains(">Se connecter<")
     }
