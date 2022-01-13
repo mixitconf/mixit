@@ -12,7 +12,7 @@ class EmailValidatorTest {
 
     @Test
     fun `should accept correct email`() {
-        assertThat(validator.isValid("contact@mix-it.fr")).isTrue()
+        assertThat(validator.isValid("contact@mixitconf.org")).isTrue()
         assertThat(validator.isValid("guillaume@dev-mind.fr")).isTrue()
     }
 
