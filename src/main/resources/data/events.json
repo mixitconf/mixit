@@ -1218,14 +1218,29 @@
                 "subscriptionDate": "2021-12-15"
             },
             {
-                "level": "SILVER",
-                "sponsorId": "hiit",
-                "subscriptionDate": "2021-12-15"
-            },
-            {
                 "level": "GOLD",
                 "sponsorId": "microsoft",
                 "subscriptionDate": "2021-12-17"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "ZenikaLyon",
+                "subscriptionDate": "2022-01-05"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "annick.challancin@esker.fr",
+                "subscriptionDate": "2022-01-06"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "woonoz",
+                "subscriptionDate": "2022-01-10"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "hiit",
+                "subscriptionDate": "2021-12-10"
             }
         ],
         "start": "2022-05-24",
