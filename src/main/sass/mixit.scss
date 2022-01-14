@@ -333,8 +333,9 @@ h3 {
 .mxt-wrapper--page-content {
   position: relative;
   background-color: white;
-  padding: 2em;
+  padding: 0.5em;
   @include media-breakpoint-up(md) {
+    padding: 2em;
     margin-bottom: -1em;
     top: -3em;
   }
@@ -357,11 +358,14 @@ h3 {
 .mxt-wrapper--callout {
   position: relative;
   margin: 0 0 1rem;
-  padding: 2rem;
+  padding: 0.5rem;
   border: none;
   border-radius: 0;
   background-color: #fff;
   color: #2c233d;
+  @include media-breakpoint-up(md) {
+    padding: 2rem;
+  }
 }
 
 .mxt-wrapper--intrinsic {
