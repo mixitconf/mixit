@@ -141,7 +141,7 @@
     },
     {
         "addedAt": "2017-02-28T15:38:33.346",
-        "description": "M\u00eame si le Cloud promet d'h\u00e9berger toutes vos applications, les choses sont rarement aussi simple que sur la plaquette commerciale, et vous ne pouvez pas benner votre application \"legacy\" \u00e0 base d'EJB 1.0 dans le cloud sans un minimum de refactoring. \r\n\r\nAu cours de cette session, j'expliquerais quelques patterns d'architecture \u00e0 appliquer \u00e0 vos d\u00e9veloppements pour que la transition dans le Cloud se fasse de mani\u00e8re aussi douce que possible. J'utiliserais comme exemples pratiques l'application www.mix-it.fr (\u00e9videment !) ainsi que l'application d'inscription \u00e0 Devoxx, qui a \u00e9t\u00e9 migr\u00e9e en quelques jours sur l'infrastructure Cloudbees.",
+        "description": "M\u00eame si le Cloud promet d'h\u00e9berger toutes vos applications, les choses sont rarement aussi simple que sur la plaquette commerciale, et vous ne pouvez pas benner votre application \"legacy\" \u00e0 base d'EJB 1.0 dans le cloud sans un minimum de refactoring. \r\n\r\nAu cours de cette session, j'expliquerais quelques patterns d'architecture \u00e0 appliquer \u00e0 vos d\u00e9veloppements pour que la transition dans le Cloud se fasse de mani\u00e8re aussi douce que possible. J'utiliserais comme exemples pratiques l'application https://mixitconf.org (\u00e9videment !) ainsi que l'application d'inscription \u00e0 Devoxx, qui a \u00e9t\u00e9 migr\u00e9e en quelques jours sur l'infrastructure Cloudbees.",
         "end": null,
         "event": "2013",
         "format": "TALK",
