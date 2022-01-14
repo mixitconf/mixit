@@ -11,9 +11,15 @@ data class Event(
     val end: LocalDate,
     val current: Boolean = false,
     val sponsors: List<EventSponsoring> = emptyList(),
+    val organizations: List<EventOrganization> = emptyList(),
     val photoUrls: List<Link> = emptyList(),
     val videoUrl: Link? = null,
     val year: Int = start.year
+)
+
+@Document
+data class EventOrganization(
+    val organizationLogin: String,
 )
 
 @Document

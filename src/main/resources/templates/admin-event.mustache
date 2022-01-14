@@ -45,7 +45,33 @@
 
         {{^creationMode}}
 
-        <h3>{{#i18n}}admin.event.sponsors.text{{/i18n}}&nbsp;</h3>
+            <h3>{{#i18n}}admin.event.organizations.text{{/i18n}}&nbsp;</h3>
+
+            <div class="callout">
+                <p>{{#i18n}}admin.event.organizations.count{{/i18n}} : <b>{{event.organizations.size}}</b> |
+                    <a href="/admin/events/{{event.id}}/organizations/create">{{#i18n}}admin.event.organizations.create{{/i18n}}</a></p>
+
+                <table class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                        <th>{{#i18n}}admin.event.organizations.table.login{{/i18n}}</th>
+                        <th>{{#i18n}}admin.event.organizations.table.actions{{/i18n}}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {{#event.organizations}}
+                        <tr>
+                            <td>{{organizationLogin}}</td>
+                            <td>
+                                <a href="/admin/events/{{event.id}}/organizations/edit/{{organizationLogin}}">{{#i18n}}admin.event.organizations.update{{/i18n}}</a>
+                            </td>
+                        </tr>
+                    {{/event.organizations}}
+                    </tbody>
+                </table>
+            </div>
+
+        <h3 class="mt-3">{{#i18n}}admin.event.sponsors.text{{/i18n}}&nbsp;</h3>
 
         <div class="callout">
             <p>{{#i18n}}admin.events.sponsors.count{{/i18n}} : <b>{{event.sponsors.size}}</b> | <a href="/admin/events/{{event.id}}/sponsors/create">{{#i18n}}admin.events.actions.create{{/i18n}}</a></p>

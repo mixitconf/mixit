@@ -2,8 +2,12 @@ package mixit.web.handler
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.util.Objects
 import mixit.MixitProperties
 import mixit.model.Event
+import mixit.model.EventOrganization
 import mixit.model.EventSponsoring
 import mixit.model.Language
 import mixit.model.Language.ENGLISH
@@ -62,9 +66,6 @@ import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import reactor.core.publisher.Mono
-import java.time.LocalDate
-import java.time.LocalDateTime
-import java.util.Objects
 import kotlin.streams.toList
 
 @Component
@@ -270,6 +271,7 @@ class AdminHandler(
                         LocalDate.parse(formData["end"]!!),
                         if (formData["current"] == null) false else formData["current"]!!.toBoolean(),
                         it.sponsors,
+                        it.organizations,
                         if (formData["photoUrls"].isNullOrEmpty()) emptyList() else formData["photoUrls"]!!.toLinks(),
                         if (formData["videoUrl"].isNullOrEmpty()) null else formData["videoUrl"]!!.toLink()
                     )
@@ -289,10 +291,6 @@ class AdminHandler(
     }
 
     fun createEventSponsoring(req: ServerRequest): Mono<ServerResponse> = adminEventSponsoring(req.pathVariable("eventId"))
-
-    fun editEventSponsoring(req: ServerRequest): Mono<ServerResponse> = eventRepository
-        .findOne(req.pathVariable("eventId"))
-        .flatMap { adminEventSponsoring(req.pathVariable("eventId"), it.sponsors.stream().filter { eventSponsoringMatch(req.pathVariable("sponsorId"), req.pathVariable("level"), it) }.findAny().get()) }
 
     private fun adminEventSponsoring(eventId: String, eventSponsoring: EventSponsoring = EventSponsoring(SponsorshipLevel.NONE, "", LocalDate.now())) = ok().render(
         "admin-event-sponsor",
@@ -384,13 +382,89 @@ class AdminHandler(
                     .toList()
                     .requireNoNulls()
 
-                eventRepository.save(Event(it.id, it.start, it.end, it.current, sponsors)).then(seeOther("${properties.baseUri}/admin/events/edit/${formData["eventId"]!!}"))
+                eventRepository.save(Event(it.id, it.start, it.end, it.current, sponsors))
+                    .then(seeOther("${properties.baseUri}/admin/events/edit/${formData["eventId"]!!}"))
             }
     }
 
+    fun editEventSponsoring(req: ServerRequest): Mono<ServerResponse> = eventRepository
+        .findOne(req.pathVariable("eventId"))
+        .flatMap {
+            adminEventSponsoring(
+                req.pathVariable("eventId"),
+                it.sponsors.stream()
+                    .filter { eventSponsoringMatch(req.pathVariable("sponsorId"), req.pathVariable("level"), it) }
+                    .findAny().get()
+            )
+        }
+
+    fun editEventOrganization(req: ServerRequest): Mono<ServerResponse> =
+        req.pathVariable("eventId").let { eventId ->
+            eventRepository
+                .findOne(eventId)
+                .flatMap { event ->
+                    adminEventOrganization(
+                        eventId,
+                        event.organizations.first { it.organizationLogin == req.pathVariable("organizationLogin") }
+                    )
+                }
+        }
+
+    fun createEventOrganization(req: ServerRequest): Mono<ServerResponse> =
+        adminEventOrganization(req.pathVariable("eventId"))
+
+    private fun adminEventOrganization(eventId: String, eventOrganization: EventOrganization? = null) = ok()
+        .render(
+            "admin-event-organization",
+            mapOf(
+                Pair("creationMode", eventOrganization == null),
+                Pair("eventId", eventId),
+                Pair("eventOrganization", eventOrganization)
+            )
+        )
+
+    fun adminUpdateEventOrganization(req: ServerRequest): Mono<ServerResponse> = req.body(BodyExtractors.toFormData()).flatMap {
+        val formData = it.toSingleValueMap()
+        // We need to find the event in database
+        eventRepository
+            .findOne(formData["eventId"]!!)
+            .flatMap {
+                // For the moment we have noting to save
+                seeOther("${properties.baseUri}/admin/events/edit/${formData["eventId"]!!}")
+            }
+    }
+
+    fun adminCreateEventOrganization(req: ServerRequest): Mono<ServerResponse> =
+        req.body(BodyExtractors.toFormData()).flatMap {
+            val formData = it.toSingleValueMap()
+            // We need to find the event in database
+            eventRepository
+                .findOne(formData["eventId"]!!)
+                .flatMap { event ->
+                    val organizations = event.organizations.toMutableList()
+                    organizations.add(EventOrganization(formData["organizationLogin"]!!))
+                    eventRepository.save(Event(event.id, event.start, event.end, event.current, event.sponsors, organizations))
+                        .then(seeOther("${properties.baseUri}/admin/events/edit/${formData["eventId"]!!}"))
+                }
+        }
+
+    fun adminDeleteEventOrganization(req: ServerRequest): Mono<ServerResponse> =
+        req.body(BodyExtractors.toFormData()).flatMap {
+            val formData = it.toSingleValueMap()
+            // We need to find the event in database
+            eventRepository
+                .findOne(formData["eventId"]!!)
+                .flatMap { event ->
+                    val organizations = event.organizations.filter { it.organizationLogin != formData["organizationLogin"]!! }
+                    eventRepository.save(Event(event.id, event.start, event.end, event.current, event.sponsors, organizations))
+                        .then(seeOther("${properties.baseUri}/admin/events/edit/${formData["eventId"]!!}"))
+                }
+        }
+
     fun createUser(req: ServerRequest): Mono<ServerResponse> = this.adminUser()
 
-    fun editUser(req: ServerRequest): Mono<ServerResponse> = userRepository.findOne(req.pathVariable("login")).flatMap(this::adminUser)
+    fun editUser(req: ServerRequest): Mono<ServerResponse> =
+        userRepository.findOne(req.pathVariable("login")).flatMap(this::adminUser)
 
     fun adminDeleteUser(req: ServerRequest): Mono<ServerResponse> =
         req.body(BodyExtractors.toFormData()).flatMap {
