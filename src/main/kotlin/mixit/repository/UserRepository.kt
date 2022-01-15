@@ -60,7 +60,7 @@ class UserRepository(
 
     fun findByNonEncryptedEmail(email: String) = template.findOne<User>(
         Query(
-            where("role").inValues(Role.STAFF, Role.STAFF_IN_PAUSE, Role.USER)
+            where("role").inValues(Role.STAFF, Role.STAFF_IN_PAUSE, Role.USER, Role.VOLUNTEER)
                 .orOperator(where("email").isEqualTo(cryptographer.encrypt(email)), where("emailHash").isEqualTo(email.encodeToMd5()))
         )
     )
