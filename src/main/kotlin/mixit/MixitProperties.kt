@@ -12,7 +12,8 @@ class MixitProperties {
     val drive = Drive()
     val aes = Aes()
     val googleapi = GoogleApi()
-
+    val feature = Feature()
+    
     class Drive {
         val fr = DriveDocuments()
         val en = DriveDocuments()
@@ -35,5 +36,11 @@ class MixitProperties {
         lateinit var p12path: String
         lateinit var user: String
         lateinit var appname: String
+    }
+
+    class Feature {
+        lateinit var donation: String
+        lateinit var lottery: String
+        lateinit var lotteryResult: String
     }
 }
