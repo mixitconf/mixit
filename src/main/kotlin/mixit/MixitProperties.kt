@@ -39,8 +39,8 @@ class MixitProperties {
     }
 
     class Feature {
-        lateinit var donation: String
-        lateinit var lottery: String
-        lateinit var lotteryResult: String
+        var donation: Boolean = false
+        var lottery: Boolean = false
+        var lotteryResult: Boolean = false
     }
 }
