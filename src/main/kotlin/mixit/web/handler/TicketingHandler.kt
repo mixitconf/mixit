@@ -18,12 +18,14 @@ import reactor.core.publisher.Mono
 import reactor.kotlin.core.publisher.toMono
 import java.util.Locale
 import java.util.Random
+import mixit.MixitProperties
 
 @Component
 class TicketingHandler(
     private val ticketRepository: TicketRepository,
     private val cryptographer: Cryptographer,
-    private val emailService: EmailService
+    private val emailService: EmailService,
+    private val properties: MixitProperties
 ) {
 
     fun findAll(req: ServerRequest) = ok().json().body(ticketRepository.findAll())
@@ -41,7 +43,11 @@ class TicketingHandler(
                 }
         )
 
-    fun ticketing(req: ServerRequest) = ServerResponse.ok().render("ticketing", mapOf(Pair("title", "ticketing.title")))
+    fun ticketing(req: ServerRequest) =
+        ok().render(
+            if(properties.feature.lottery) "ticketing" else "ticketing-closed",
+            mapOf(Pair("title", "ticketing.title"))
+        )
 
     fun submit(req: ServerRequest) = req.body(BodyExtractors.toFormData()).flatMap {
         val formData = it.toSingleValueMap()
