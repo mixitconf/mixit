@@ -41,7 +41,8 @@ data class User(
 enum class Role {
     STAFF,
     STAFF_IN_PAUSE,
-    USER
+    USER,
+    VOLUNTEER
 }
 
 fun User.generateNewToken(generateExternalToken: Boolean = false) = this.copy(

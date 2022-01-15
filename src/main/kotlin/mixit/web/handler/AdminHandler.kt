@@ -18,6 +18,7 @@ import mixit.model.Role
 import mixit.model.Role.STAFF
 import mixit.model.Role.STAFF_IN_PAUSE
 import mixit.model.Role.USER
+import mixit.model.Role.VOLUNTEER
 import mixit.model.Room
 import mixit.model.Room.AMPHI1
 import mixit.model.Room.AMPHI2
@@ -486,7 +487,8 @@ class AdminHandler(
                 listOf(
                     Pair(USER, USER == user.role),
                     Pair(STAFF, STAFF == user.role),
-                    Pair(STAFF_IN_PAUSE, STAFF_IN_PAUSE == user.role)
+                    Pair(STAFF_IN_PAUSE, STAFF_IN_PAUSE == user.role),
+                    Pair(VOLUNTEER, VOLUNTEER == user.role)
                 )
             ),
             Pair("links", user.links.toJson())
