@@ -48,7 +48,7 @@ class EmailService(
                 put("encodedemail", URLEncoder.encode(email.encodeToBase64(), "UTF-8"))
 
                 val content = templateService.load(templateName, this)
- //               emailSender.send(EmailMessage(email, subject, content))
+                emailSender.send(EmailMessage(email, subject, content))
             }
         }.onFailure {
             logger.error("Not possible to send email [$subject] to ${user.email}", it)
