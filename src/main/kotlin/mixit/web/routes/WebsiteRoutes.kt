@@ -2,6 +2,7 @@ package mixit.web
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import java.util.Locale
 import mixit.MixitProperties
 import mixit.model.Event
 import mixit.model.SponsorshipLevel
@@ -11,6 +12,7 @@ import mixit.web.handler.AdminHandler
 import mixit.web.handler.AuthenticationHandler
 import mixit.web.handler.BlogHandler
 import mixit.web.handler.GlobalHandler
+import mixit.web.handler.MailingHandler
 import mixit.web.handler.SponsorHandler
 import mixit.web.handler.TalkHandler
 import mixit.web.handler.TicketingHandler
@@ -29,7 +31,6 @@ import org.springframework.web.reactive.function.server.RouterFunctions.resource
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.router
 import reactor.kotlin.core.publisher.toMono
-import java.util.Locale
 
 @Configuration
 class WebsiteRoutes(
@@ -40,6 +41,7 @@ class WebsiteRoutes(
     private val talkHandler: TalkHandler,
     private val sponsorHandler: SponsorHandler,
     private val ticketingHandler: TicketingHandler,
+    private val mailingHandler: MailingHandler,
     private val userHandler: UserHandler,
     private val messageSource: MessageSource,
     private val properties: MixitProperties,
@@ -117,6 +119,9 @@ class WebsiteRoutes(
             "/admin".nest {
                 GET("/", adminHandler::admin)
                 GET("/ticketing", adminHandler::adminTicketing)
+                GET("/mailings", mailingHandler::listMailing)
+                GET("/mailings/create", mailingHandler::createMailing)
+                GET("/mailings/edit/{id}", mailingHandler::editMailing)
                 DELETE("/")
                 GET("/talks/edit/{slug}", adminHandler::editTalk)
                 GET("/talks") { adminHandler.adminTalks(it, "2021") }
@@ -168,6 +173,10 @@ class WebsiteRoutes(
                 POST("/ticketing/delete", adminHandler::adminDeleteTicketing)
                 POST("/post", adminHandler::adminSavePost)
                 POST("/post/delete", adminHandler::adminDeletePost)
+                POST("/mailings/preview", mailingHandler::previewMailing)
+                POST("/mailings", mailingHandler::saveMailing)
+                POST("/mailings/send", mailingHandler::sendMailing)
+                POST("/mailings/delete", mailingHandler::deleteMailing)
             }
         }
 

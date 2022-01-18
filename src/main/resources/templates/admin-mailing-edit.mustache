@@ -1,0 +1,58 @@
+{{> header}}
+
+<div class="mxt-wrapper--header">
+    <h1 class="text-center pt-5">{{#i18n}}mailing.title{{/i18n}}</h1>
+</div>
+
+<div class="container mxt-wrapper--page-content">
+    {{#mailing.id}}<form action="/admin/mailings/delete" method="post"
+                      class="text-center"
+                      onsubmit="return confirm('{{#i18n}}admin.post.delete.confirm{{/i18n}}');">
+        <input type="hidden" name="id" value="{{mailing.id}}"/>
+        <input type="submit" class="btn-primary btn mxt-btn-primary" value="{{#i18n}}admin.post.delete{{/i18n}}"/>
+    </form>{{/mailing.id}}
+    <form method="post"  onsubmit="return confirm('{{#i18n}}mailing.confirm{{/i18n}}');">
+        <input type="hidden" name="id" value="{{#mailing.id}}{{mailing.id}}{{/mailing.id}}"/>
+        <input class="form-control" type="hidden" name="addedAt" value="{{#mailing.addedAt}}{{mailing.addedAt}}{{/mailing.addedAt}}"/>
+        <div class="mt-4 mb-3">
+            <label class="form-label">{{#i18n}}mailing.object{{/i18n}} </label>
+            <input class="form-control" type="text" name="title" value="{{#mailing.title}}{{mailing.title}}{{/mailing.title}}" required/>
+        </div>
+        <div class="mt-4 mb-3">
+            <label class="form-label">{{#i18n}}mailing.addedat{{/i18n}} </label>
+            <input class="form-control" type="text" value="{{#mailing.addedAt}}{{mailing.addedAt}}{{/mailing.addedAt}}" disabled/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">{{#i18n}}mailing.recipients.list{{/i18n}}</label>
+            <select class="form-control" name="recipientType">
+                {{#roles}}
+                    <option value="{{first}}"{{#second}} selected{{/second}}>{{first}}</option>
+                {{/roles}}
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">{{#i18n}}mailing.recipients.login{{/i18n}}</label>
+            <input class="form-control" type="text" name="recipientLogins" value="{{#mailing.recipientLogins}}{{mailing.recipientLogins}}{{/mailing.recipientLogins}}"/>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">{{#i18n}}mailing.message{{/i18n}} </label>
+            <textarea class="form-control" name="content" rows="20" required>{{#mailing.content}}{{mailing.content}}{{/mailing.content}}</textarea>
+        </div>
+        <div class="text-center">
+            <input type="submit"
+                   onclick="document.forms[0].action='/admin/mailings'"
+                   class="btn btn-outline-primary" value="{{#i18n}}mailing.save{{/i18n}}"/>
+
+            <input type="submit"
+                   onclick="document.forms[0].action='/admin/mailings';document.forms[0].submit()"
+                   class="btn btn-outline-primary" value="{{#i18n}}mailing.send{{/i18n}}"/>
+
+            <input type="submit"
+                   onclick="document.forms[0].action='/admin/mailings/preview';document.forms[0].submit()"
+                   target="_blank"
+                   class="btn btn-outline-primary" value="{{#i18n}}mailing.preview{{/i18n}}"/>
+        </div>
+    </form>
+</div>
+
+{{> footer}}

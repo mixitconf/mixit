@@ -1,6 +1,9 @@
 package mixit.util
 
 import com.samskivert.mustache.Mustache
+import java.io.InputStreamReader
+import java.net.URLEncoder
+import java.util.Locale
 import mixit.MixitProperties
 import mixit.model.User
 import mixit.web.generateModelForExernalCall
@@ -9,9 +12,6 @@ import org.slf4j.LoggerFactory
 import org.springframework.context.MessageSource
 import org.springframework.core.io.ResourceLoader
 import org.springframework.stereotype.Component
-import java.io.InputStreamReader
-import java.net.URLEncoder
-import java.util.Locale
 
 @Component
 class TemplateService(
@@ -37,19 +37,26 @@ class EmailService(
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
-    fun send(templateName: String, user: User, locale: Locale) {
+    fun send(
+        templateName: String,
+        user: User,
+        locale: Locale,
+        subject: String? = null,
+        model: Map<String, Any> = emptyMap()
+    ) {
 
-        val subject = messageSource.getMessage("$templateName-subject", null, locale)
+        val emailSubject = subject ?: messageSource.getMessage("$templateName-subject", null, locale)
         val email = cryptographer.decrypt(user.email)!!
 
         runCatching {
             generateModelForExernalCall(properties.baseUri, locale, messageSource).apply {
+                putAll(model)
                 put("user", user)
                 put("encodedemail", URLEncoder.encode(email.encodeToBase64(), "UTF-8"))
 
                 val content = templateService.load(templateName, this)
                 if (properties.feature.email){
-                    emailSender.send(EmailMessage(email, subject, content))
+                    emailSender.send(EmailMessage(email, emailSubject, content))
                 }
             }
         }.onFailure {

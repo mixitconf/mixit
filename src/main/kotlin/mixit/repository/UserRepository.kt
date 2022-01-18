@@ -3,11 +3,13 @@ package mixit.repository
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.model.Role
+import mixit.model.Talk
 import mixit.model.User
 import mixit.util.Cryptographer
 import mixit.util.encodeToMd5
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
+import org.springframework.data.domain.Sort
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.count
 import org.springframework.data.mongodb.core.find
@@ -78,6 +80,16 @@ class UserRepository(
         template.findOne<User>(Query(where("role").inValues(roles).and("_id").isEqualTo(login)))
 
     fun findAll() = template.findAll<User>()
+
+    fun findAllByIds(login: List<String>): Flux<User> {
+        val criteria = where("login").inValues(login)
+        return template.find(Query(criteria))
+    }
+
+    fun findAllByRole(role: Role): Flux<User> {
+        val criteria = where("role").isEqualTo(role)
+        return template.find(Query(criteria))
+    }
 
     fun findOne(login: String) = template.findById<User>(login)
 
