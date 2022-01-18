@@ -42,5 +42,6 @@ class MixitProperties {
         var donation: Boolean = false
         var lottery: Boolean = false
         var lotteryResult: Boolean = false
+        var email: Boolean = false
     }
 }

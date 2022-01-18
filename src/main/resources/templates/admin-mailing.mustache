@@ -1,0 +1,31 @@
+{{> header}}
+
+<div class="mxt-wrapper--header">
+    <h1 class="text-center pt-5">{{#i18n}}mailing.title{{/i18n}}</h1>
+</div>
+
+<div class="container mxt-wrapper--page-content">
+    <p>{{#i18n}}mailing.count{{/i18n}} : <b>{{mailings.size}}</b> | <a href="/admin/mailings/create">{{#i18n}}mailing.create{{/i18n}}</a></p>
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>{{#i18n}}mailing.title{{/i18n}}</th>
+            <th>{{#i18n}}mailing.addedat{{/i18n}}</th>
+            <th>{{#i18n}}admin.blog.table.actions{{/i18n}}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#mailings}}
+            <tr>
+                <td>{{title}}</td>
+                <td>{{addedAt}}</td>
+                <td>
+                    <a href="/admin/mailings/edit/{{id}}">{{#i18n}}mailing.update{{/i18n}}</a>
+                </td>
+            </tr>
+        {{/mailings}}
+        </tbody>
+    </table>
+</div>
+
+{{> footer}}

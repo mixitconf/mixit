@@ -2,6 +2,11 @@ package mixit.util
 
 import com.google.api.services.gmail.Gmail
 import com.google.api.services.gmail.model.Message
+import java.io.ByteArrayOutputStream
+import java.util.Properties
+import javax.mail.Session
+import javax.mail.internet.InternetAddress
+import javax.mail.internet.MimeMessage
 import mixit.MixitProperties
 import org.slf4j.LoggerFactory
 import org.springframework.context.annotation.Profile
@@ -9,16 +14,11 @@ import org.springframework.http.MediaType
 import org.springframework.mail.javamail.JavaMailSender
 import org.springframework.mail.javamail.MimeMessageHelper
 import org.springframework.stereotype.Component
-import java.io.ByteArrayOutputStream
-import java.util.Properties
-import javax.mail.Session
-import javax.mail.internet.InternetAddress
-import javax.mail.internet.MimeMessage
 
 /**
  * Email
  */
-data class EmailMessage(val to: String, val subject: String, val content: String)
+data class EmailMessage(val to: String, val subject: String, val content: String, val bcc: String? = null)
 
 /**
  * An email sender is able to send an HTML message via email to a consignee
@@ -41,6 +41,9 @@ class GmailApiSender(private val properties: MixitProperties, private val gmailS
 
         message.setFrom(InternetAddress(properties.contact))
         message.addRecipient(javax.mail.Message.RecipientType.TO, InternetAddress(email.to))
+        if (email.bcc != null) {
+            message.addRecipients(javax.mail.Message.RecipientType.BCC, email.bcc)
+        }
         message.subject = email.subject
         message.setContent(email.content, "${MediaType.TEXT_HTML_VALUE}; charset=UTF-8")
 
@@ -70,6 +73,9 @@ class GmailSmtpSender(private val javaMailSender: JavaMailSender) : EmailSender 
         val message = javaMailSender.createMimeMessage()
         val helper = MimeMessageHelper(message, true, "UTF-8")
         helper.setTo(email.to)
+        if (email.bcc != null) {
+            helper.setBcc(email.bcc)
+        }
         helper.setSubject(email.subject)
         message.setContent(email.content, MediaType.TEXT_HTML_VALUE)
         javaMailSender.send(message).apply {
