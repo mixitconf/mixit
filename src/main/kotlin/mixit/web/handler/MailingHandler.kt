@@ -73,7 +73,7 @@ class MailingHandler(
                     Pair(Organization, mailing?.type == Organization)
                 )
             ),
-            Pair("mailing", Mailing("", ""))
+            Pair("mailing", mailing)
         )
     )
 
@@ -126,7 +126,7 @@ class MailingHandler(
                 )
             }
 
-    fun saveMailing(req: ServerRequest): Mono<ServerResponse> =
+    fun sendMailing(req: ServerRequest): Mono<ServerResponse> =
         persistMailing(req)
             .flatMap { mailing ->
                 getUsers(mailing).map { users ->
@@ -155,7 +155,7 @@ class MailingHandler(
                 )
             }
 
-    fun sendMailing(req: ServerRequest): Mono<ServerResponse> =
+    fun saveMailing(req: ServerRequest): Mono<ServerResponse> =
         persistMailing((req)).then(seeOther("${properties.baseUri}/admin/mailings"))
 
 
