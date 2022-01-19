@@ -73,7 +73,8 @@ class MailingHandler(
                     Pair(Organization, mailing?.type == Organization)
                 )
             ),
-            Pair("mailing", mailing)
+            Pair("mailing", mailing ?: Mailing("", "")),
+            Pair("recipientLogins", mailing?.recipientLogins?.joinToString() ?: emptyList<String>())
         )
     )
 
@@ -83,7 +84,7 @@ class MailingHandler(
             .flatMap { formData ->
                 mailingRepository
                     .deleteOne(formData["id"]!!)
-                    .then(seeOther("${properties.baseUri}/admin/mailing"))
+                    .then(seeOther("${properties.baseUri}/admin/mailings"))
             }
 
     fun previewMailing(req: ServerRequest): Mono<ServerResponse> =

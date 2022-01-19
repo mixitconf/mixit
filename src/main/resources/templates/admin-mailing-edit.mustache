@@ -5,22 +5,25 @@
 </div>
 
 <div class="container mxt-wrapper--page-content">
-    {{#mailing.id}}<form action="/admin/mailings/delete" method="post"
-                      class="text-center"
-                      onsubmit="return confirm('{{#i18n}}admin.post.delete.confirm{{/i18n}}');">
-        <input type="hidden" name="id" value="{{mailing.id}}"/>
-        <input type="submit" class="btn-primary btn mxt-btn-primary" value="{{#i18n}}admin.post.delete{{/i18n}}"/>
-    </form>{{/mailing.id}}
-    <form method="post"  onsubmit="return confirm('{{#i18n}}mailing.confirm{{/i18n}}');">
+    {{#mailing.id}}
+        <form action="/admin/mailings/delete" method="post"
+              class="text-center"
+              onsubmit="return confirm('{{#i18n}}admin.post.delete.confirm{{/i18n}}');">
+            <input type="hidden" name="id" value="{{mailing.id}}"/>
+            <input type="submit" class="btn-primary btn mxt-btn-primary" value="{{#i18n}}admin.post.delete{{/i18n}}"/>
+        </form>{{/mailing.id}}
+    <form method="post" onsubmit="return confirm('{{#i18n}}mailing.confirm{{/i18n}}');" id="editForm">
         <input type="hidden" name="id" value="{{#mailing.id}}{{mailing.id}}{{/mailing.id}}"/>
-        <input class="form-control" type="hidden" name="addedAt" value="{{#mailing.addedAt}}{{mailing.addedAt}}{{/mailing.addedAt}}"/>
+        <input type="hidden" name="addedAt" value="{{#mailing.addedAt}}{{mailing.addedAt}}{{/mailing.addedAt}}"/>
         <div class="mt-4 mb-3">
             <label class="form-label">{{#i18n}}mailing.object{{/i18n}} </label>
-            <input class="form-control" type="text" name="title" value="{{#mailing.title}}{{mailing.title}}{{/mailing.title}}" required/>
+            <input class="form-control" type="text" name="title"
+                   value="{{#mailing.title}}{{mailing.title}}{{/mailing.title}}" required/>
         </div>
         <div class="mt-4 mb-3">
             <label class="form-label">{{#i18n}}mailing.addedat{{/i18n}} </label>
-            <input class="form-control" type="text" value="{{#mailing.addedAt}}{{mailing.addedAt}}{{/mailing.addedAt}}" disabled/>
+            <input class="form-control" type="text" value="{{#mailing.addedAt}}{{mailing.addedAt}}{{/mailing.addedAt}}"
+                   disabled/>
         </div>
         <div class="mb-3">
             <label class="form-label">{{#i18n}}mailing.recipients.list{{/i18n}}</label>
@@ -32,25 +35,27 @@
         </div>
         <div class="mb-3">
             <label class="form-label">{{#i18n}}mailing.recipients.login{{/i18n}}</label>
-            <input class="form-control" type="text" name="recipientLogins" value="{{#mailing.recipientLogins}}{{mailing.recipientLogins}}{{/mailing.recipientLogins}}"/>
+            <input class="form-control" type="text" name="recipientLogins"
+                   value="{{#recipientLogins}}{{recipientLogins}}{{/recipientLogins}}"/>
         </div>
         <div class="mb-3">
             <label class="form-label">{{#i18n}}mailing.message{{/i18n}} </label>
-            <textarea class="form-control" name="content" rows="20" required>{{#mailing.content}}{{mailing.content}}{{/mailing.content}}</textarea>
+            <textarea class="form-control" name="content" rows="20"
+                      required>{{#mailing.content}}{{mailing.content}}{{/mailing.content}}</textarea>
         </div>
         <div class="text-center">
-            <input type="submit"
-                   onclick="document.forms[0].action='/admin/mailings'"
-                   class="btn btn-outline-primary" value="{{#i18n}}mailing.save{{/i18n}}"/>
+            <button type="submit"
+                    onclick="document.getElementById('editForm').action='/admin/mailings'"
+                    class="btn btn-outline-primary">{{#i18n}}mailing.save{{/i18n}}</button>
 
-            <input type="submit"
-                   onclick="document.forms[0].action='/admin/mailings/send';document.forms[0].submit()"
-                   class="btn btn-outline-primary" value="{{#i18n}}mailing.send{{/i18n}}"/>
+            <button type="submit"
+                    onclick="document.getElementById('editForm').action='/admin/mailings/send'"
+                    class="btn btn-outline-primary">{{#i18n}}mailing.send{{/i18n}}</button>
 
-            <input type="submit"
-                   onclick="document.forms[0].action='/admin/mailings/preview';document.forms[0].submit()"
-                   target="_blank"
-                   class="btn btn-outline-primary" value="{{#i18n}}mailing.preview{{/i18n}}"/>
+            <button type="submit"
+                    onclick="document.getElementById('editForm').action='/admin/mailings/preview'"
+                    target="_blank"
+                    class="btn btn-outline-primary">{{#i18n}}mailing.preview{{/i18n}}</button>
         </div>
     </form>
 </div>
