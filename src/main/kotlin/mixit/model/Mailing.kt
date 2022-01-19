@@ -26,5 +26,5 @@ data class Mailing(
 data class MailingDto(
     val title: String,
     val content: String,
-    val emails: List<String> = emptyList()
+    val users: List<User> = emptyList()
 )

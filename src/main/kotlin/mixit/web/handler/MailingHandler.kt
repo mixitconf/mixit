@@ -131,16 +131,17 @@ class MailingHandler(
         persistMailing(req)
             .flatMap { mailing ->
                 getUsers(mailing).map { users ->
-                    MailingDto(mailing.title, mailing.content, users.mapNotNull { cryptographer.decrypt(it.email) })
+                    MailingDto(mailing.title, mailing.content, users)
                 }
             }
             .flatMap { mailing ->
-                mailing.emails.forEach { email ->
+                mailing.users.forEach { user ->
+                    val email = cryptographer.decrypt(user.email)
                     try {
                         logger.info("Send a mailing to $email")
                         emailService.send(
                             MailingPages.EMAIL.template,
-                            User.miXiTUser().copy(email = cryptographer.encrypt(properties.contact)),
+                            user,
                             Locale.FRANCE,
                             mailing.title,
                             mapOf(Pair("message", markdownConverter.toHTML(mailing.content)))
@@ -151,7 +152,7 @@ class MailingHandler(
                 }
                 ok().render(
                     MailingPages.CONFIRMATION.template, mapOf(
-                        Pair("emails", mailing.emails)
+                        Pair("emails", mailing.users.mapNotNull { cryptographer.decrypt(it.email) })
                     )
                 )
             }
