@@ -58,16 +58,15 @@ $link-hover-decoration: none;
 @import "../../../node_modules/bootstrap/scss/navbar";
 @import "../../../node_modules/bootstrap/scss/nav";
 @import "../../../node_modules/bootstrap/scss/accordion";
+@import "../../../node_modules/bootstrap/scss/alert";
 
 @import "../../../node_modules/bootstrap/scss/helpers";
 @import "../../../node_modules/bootstrap/scss/utilities/api";
 
 //@import "card";
-//@import "accordion";
 //@import "breadcrumb";
 //@import "pagination";
 //@import "badge";
-//@import "alert";
 //@import "progress";
 //@import "list-group";
 //@import "close";
@@ -86,6 +85,10 @@ $link-hover-decoration: none;
 
 h3 {
   font-weight: 300;
+}
+
+.is-invalid {
+  color: #cc4b37;
 }
 
 .mxt-navbar {

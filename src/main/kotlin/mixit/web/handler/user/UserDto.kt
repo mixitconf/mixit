@@ -30,7 +30,7 @@ class UserDto(
     var links: List<Link>,
     val logoType: String?,
     val logoWebpUrl: String? = null,
-    val isAbsoluteLogo: Boolean = if (photoUrl == null) false else photoUrl.startsWith("http"),
+    val isAbsoluteLogo: Boolean = photoUrl?.startsWith("http") ?: false,
     val path: String = login.toUrlPath()
 )
 

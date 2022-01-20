@@ -21,57 +21,57 @@
         <input type="hidden" name="login" value="{{user.login}}"/>
         <div class="row">
             {{#hasErrors}}
-                <div class="callout mxt-wrapper--error-callout">
+                <div class="alert alert-danger mb-3">
                     {{#errors.entrySet}}
                         {{#i18n}}{{value}}{{/i18n}}<br>
                     {{/errors.entrySet}}
                 </div>
             {{/hasErrors}}
             <div class="col-12 mb-3">
-                <label class="form-label {{#errors.firstname}}is-invalid-label{{/errors.firstname}}">
+                <label class="form-label {{#errors.firstname}}is-invalid{{/errors.firstname}}">
                     {{#i18n}}user.form.firstname{{/i18n}}</label>
-                <input type="text" name="firstname" class="form-control {{#errors.firstname}}is-invalid-input{{/errors.firstname}}"
+                <input type="text" name="firstname" class="form-control {{#errors.firstname}}is-invalid{{/errors.firstname}}"
                            value="{{user.firstname}}" required id="firstname" />
             </div>
             <div class="col-12 mb-3">
-                <label class="form-label {{#errors.lastname}}is-invalid-label{{/errors.lastname}}">
+                <label class="form-label {{#errors.lastname}}is-invalid{{/errors.lastname}}">
                     {{#i18n}}user.form.lastname{{/i18n}}</label>
-                <input type="text" name="lastname" class="form-control {{#errors.lastname}}is-invalid-input{{/errors.lastname}}"
+                <input type="text" name="lastname" class="form-control {{#errors.lastname}}is-invalid{{/errors.lastname}}"
                            value="{{user.lastname}}" required id="lastname"/>
             </div>
             <div class="col-12 mb-3">
-                <label class="form-label {{#errors.email}}is-invalid-label{{/errors.email}}">
+                <label class="form-label {{#errors.email}}is-invalid{{/errors.email}}">
                     {{#i18n}}user.form.email{{/i18n}}</label>
-                <input type="text" name="email" class="form-control {{#errors.email}}is-invalid-input{{/errors.email}}"
+                <input type="text" name="email" class="form-control {{#errors.email}}is-invalid{{/errors.email}}"
                            value="{{#usermail}}{{usermail}}{{/usermail}}" required id="email"/>
 
             </div>
             <div class="col-12 mb-3">
-                <label class="form-label {{#errors.company}}is-invalid-label{{/errors.company}}">
+                <label class="form-label {{#errors.company}}is-invalid{{/errors.company}}">
                     {{#i18n}}user.form.company{{/i18n}}</label>
-                <input type="text" name="company" class="form-control {{#errors.company}}is-invalid-input{{/errors.company}}"
+                <input type="text" name="company" class="form-control {{#errors.company}}is-invalid{{/errors.company}}"
                            value="{{#user.company}}{{user.company}}{{/user.company}}" id="company"/>
             </div>
             <div class="col-12 mb-3">
-                <label class="form-label {{#errors.description-fr}}is-invalid-label{{/errors.description-fr}}">
+                <label class="form-label {{#errors.description-fr}}is-invalid{{/errors.description-fr}}">
                     {{#i18n}}user.form.description.fr{{/i18n}}&nbsp;<span class="help-text">{{#i18n}}user.form.description.markdown{{/i18n}}</span>
                 </label>
-                <textarea name="description-fr" rows="10" required class="form-control  {{#errors.description-fr}}is-invalid-input{{/errors.description-fr}}"
+                <textarea name="description-fr" rows="10" required class="form-control  {{#errors.description-fr}}is-invalid{{/errors.description-fr}}"
                               id="description.fr">{{#description-fr}}{{description-fr}}{{/description-fr}}</textarea>
             </div>
             <div class="col-12 mb-3">
-                <label class="form-label {{#errors.description-en}}is-invalid-label{{/errors.description-en}}">
+                <label class="form-label {{#errors.description-en}}is-invalid{{/errors.description-en}}">
                     {{#i18n}}user.form.description.en{{/i18n}}&nbsp;<span class="help-text">{{#i18n}}user.form.description.markdown{{/i18n}}</span>
                 </label>
-                <textarea name="description-en" rows="10" required class="form-control  {{#errors.description-en}}is-invalid-input{{/errors.description-en}}"
+                <textarea name="description-en" rows="10" required class="form-control  {{#errors.description-en}}is-invalid{{/errors.description-en}}"
                               id="description.en">{{#description-en}}{{description-en}}{{/description-en}}</textarea>
             </div>
             <div class="col-12 mb-3 mt-5">
                 <div><b>{{#i18n}}user.form.photo{{/i18n}}</b></div>
 
-                <label class="mt-2 form-label {{#errors.photoUrl}}is-invalid-label{{/errors.photoUrl}}">
+                <label class="mt-2 form-label {{#errors.photoUrl}}is-invalid{{/errors.photoUrl}}">
                     {{#i18n}}user.form.photoUrl{{/i18n}} </label>
-                <input type="text" name="photoUrl" class="form-control {{#errors.photoUrl}}is-invalid-input{{/errors.photoUrl}}"
+                <input type="text" name="photoUrl" class="form-control {{#errors.photoUrl}}is-invalid{{/errors.photoUrl}}"
                            value="{{#user.photoUrl}}{{user.photoUrl}}{{/user.photoUrl}}" id="photoUrl"/>
 
             </div>
@@ -80,77 +80,77 @@
                 {{#userlinks}}
                     {{#userlinks.link1}}
                         <div class="col-12 col-md-6 mb-3">
-                            <label class="mt-2 form-label {{#errors.link1Name}}is-invalid-label{{/errors.link1Name}}">
+                            <label class="mt-2 form-label {{#errors.link1Name}}is-invalid{{/errors.link1Name}}">
                                 {{#i18n}}user.form.link.name{{/i18n}} 1</label>
-                            <input type="text" name="link1Name" class="form-control {{#errors.link1Name}}is-invalid-input{{/errors.link1Name}}"
+                            <input type="text" name="link1Name" class="form-control {{#errors.link1Name}}is-invalid{{/errors.link1Name}}"
                                        value="{{name}}" id="link1Name"/>
 
                         </div>
                         <div class="col-12 col-md-6 mb-3">
-                            <label class="form-label {{#errors.link1Url}}is-invalid-label{{/errors.link1Url}}">
+                            <label class="form-label {{#errors.link1Url}}is-invalid{{/errors.link1Url}}">
                                 {{#i18n}}user.form.link.url{{/i18n}} 1</label>
-                            <input type="text" name="link1Url" class="form-control {{#errors.link1Url}}is-invalid-input{{/errors.link1Url}}"
+                            <input type="text" name="link1Url" class="form-control {{#errors.link1Url}}is-invalid{{/errors.link1Url}}"
                                        value="{{url}}" id="link1Url"/>
 
                         </div>
                     {{/userlinks.link1}}
                     {{#userlinks.link2}}
                         <div class="col-12 col-md-6 mb-3">
-                            <label class="form-label {{#errors.link2Name}}is-invalid-label{{/errors.link2Name}}">
+                            <label class="form-label {{#errors.link2Name}}is-invalid{{/errors.link2Name}}">
                                 {{#i18n}}user.form.link.name{{/i18n}} 2</label>
-                            <input type="text" name="link2Name" class="form-control {{#errors.link2Name}}is-invalid-input{{/errors.link2Name}}"
+                            <input type="text" name="link2Name" class="form-control {{#errors.link2Name}}is-invalid{{/errors.link2Name}}"
                                        value="{{name}}" id="link2Name"/>
 
                         </div>
                         <div class="col-12 col-md-6 mb-3">
-                            <label class="form-label {{#errors.link2Url}}is-invalid-label{{/errors.link2Url}}">
+                            <label class="form-label {{#errors.link2Url}}is-invalid{{/errors.link2Url}}">
                                 {{#i18n}}user.form.link.url{{/i18n}} 2</label>
-                            <input type="text" name="link2Url" class="form-control {{#errors.link2Url}}is-invalid-input{{/errors.link2Url}}"
+                            <input type="text" name="link2Url" class="form-control {{#errors.link2Url}}is-invalid{{/errors.link2Url}}"
                                        value="{{url}}" id="link2Url"/>
 
                         </div>
                     {{/userlinks.link2}}
                     {{#userlinks.link3}}
                         <div class="col-12 col-md-6 mb-3">
-                            <label class="form-label {{#errors.link3Name}}is-invalid-label{{/errors.link3Name}}">
+                            <label class="form-label {{#errors.link3Name}}is-invalid{{/errors.link3Name}}">
                                 {{#i18n}}user.form.link.name{{/i18n}} 3</label>
-                            <input type="text" name="link3Name" class="form-control {{#errors.link3Name}}is-invalid-input{{/errors.link3Name}}"
+                            <input type="text" name="link3Name" class="form-control {{#errors.link3Name}}is-invalid{{/errors.link3Name}}"
                                        value="{{name}}" id="link3Name"/>
 
                         </div>
                         <div class="col-12 col-md-6 mb-3">
-                            <label class="form-label {{#errors.link3Url}}is-invalid-label{{/errors.link3Url}}">
+                            <label class="form-label {{#errors.link3Url}}is-invalid{{/errors.link3Url}}">
                                 {{#i18n}}user.form.link.url{{/i18n}} 3</label>
-                            <input type="text" name="link3Url" class="form-control {{#errors.link3Url}}is-invalid-input{{/errors.link3Url}}"
+                            <input type="text" name="link3Url" class="form-control {{#errors.link3Url}}is-invalid{{/errors.link3Url}}"
                                        value="{{url}}" id="link3Url"/>
 
                         </div>
                     {{/userlinks.link3}}
                     {{#userlinks.link4}}
                         <div class="col-12 col-md-6 mb-3">
-                            <label class="form-label {{#errors.link4Name}}is-invalid-label{{/errors.link4Name}}">
+                            <label class="form-label {{#errors.link4Name}}is-invalid{{/errors.link4Name}}">
                                 {{#i18n}}user.form.link.name{{/i18n}} 4</label>
-                            <input type="text" name="link4Name" class="form-control {{#errors.link4Name}}is-invalid-input{{/errors.link4Name}}"
+                            <input type="text" name="link4Name" class="form-control {{#errors.link4Name}}is-invalid{{/errors.link4Name}}"
                                        value="{{name}}" id="link4Name"/>
                         </div>
                         <div class="col-12 col-md-6 mb-3">
-                            <label class="form-label {{#errors.link4Url}}is-invalid-label{{/errors.link4Url}}">
+                            <label class="form-label {{#errors.link4Url}}is-invalid{{/errors.link4Url}}">
                                 {{#i18n}}user.form.link.url{{/i18n}} 4</label>
-                            <input type="text" name="link4Url" class="form-control {{#errors.link4Url}}is-invalid-input{{/errors.link4Url}}"
+                            <input type="text" name="link4Url" class="form-control {{#errors.link4Url}}is-invalid{{/errors.link4Url}}"
                                        value="{{url}}" id="link4Url"/>
                         </div>
                     {{/userlinks.link4}}
                     {{#userlinks.link5}}
                         <div class="col-12 col-md-6 mb-3">
-                            <label class="form-label {{#errors.link5Name}}is-invalid-label{{/errors.link5Name}}">
+                            <label class="form-label {{#errors.link5Name}}is-invalid{{/errors.link5Name}}">
                                 {{#i18n}}user.form.link.name{{/i18n}} 5</label>
-                            <input type="text" name="link5Name" class="form-control {{#errors.link5Name}}is-invalid-input{{/errors.link5Name}}"
+                            <input type="text" name="link5Name" class="form-control {{#errors.link5Name}}is-invalid{{/errors.link5Name}}"
                                        value="{{name}}" id="link5Name"/>
                         </div>
                         <div class="col-12 col-md-6 mb-3">
-                            <label class="form-label {{#errors.link5Url}}is-invalid-label{{/errors.link5Url}}">
+                            <label class="form-label {{#errors.link5Url}}is-invalid{{/errors.link5Url}}">
                                 {{#i18n}}user.form.link.url{{/i18n}} 5</label>
-                            <input type="text" name="link5Url" class="form-control {{#errors.link5Url}}is-invalid-input{{/errors.link5Url}}"
+                            <input type="text" name="link5Url" class="form-control {{#errors.link5Url}}is-invalid{{/errors.link5Url}}"
                                        value="{{url}}" id="link5Url"/>
                         </div>
                     {{/userlinks.link5}}

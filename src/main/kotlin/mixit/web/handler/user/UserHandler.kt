@@ -178,95 +178,78 @@ class UserHandler(
                 }
         }
 
-    fun saveProfile(req: ServerRequest): Mono<ServerResponse> = req.session().flatMap {
-        val currentUserEmail = it.getAttribute<String>("email")
-        req.extractFormData().flatMap { formData ->
+    fun saveProfile(req: ServerRequest): Mono<ServerResponse> =
+        req.session().flatMap { session ->
+            val currentUserEmail = session.getAttribute<String>("email")
+            req.extractFormData().flatMap { formData ->
 
-            // In his profile screen a user can't change all the data. In the first step we load the user
-            repository.findByNonEncryptedEmail(currentUserEmail!!).flatMap {
-
-                val errors = mutableMapOf<String, String>()
-
-                // Null check
-                if (formData["firstname"].isNullOrBlank()) {
-                    errors.put("firstname", "user.form.error.firstname.required")
-                }
-                if (formData["lastname"].isNullOrBlank()) {
-                    errors.put("lastname", "user.form.error.lastname.required")
-                }
-                if (formData["email"].isNullOrBlank()) {
-                    errors.put("email", "user.form.error.email.required")
-                }
-                if (formData["description-fr"].isNullOrBlank()) {
-                    errors.put("description-fr", "user.form.error.description.fr.required")
-                }
-                if (formData["description-en"].isNullOrBlank()) {
-                    errors.put("description-en", "user.form.error.description.en.required")
-                }
-
-                if (errors.isNotEmpty()) {
-                    findOneViewDetail(req, it, ViewMode.EditProfile, errors = errors)
-                }
-
-                val user = User(
-                    it.login,
-                    formData["firstname"]!!,
-                    formData["lastname"]!!,
-                    cryptographer.encrypt(formData["email"]!!),
-                    if (formData["company"] == "") null else formData["company"],
-                    mapOf(
-                        Pair(Language.FRENCH, markdownValidator.sanitize(formData["description-fr"]!!)),
-                        Pair(Language.ENGLISH, markdownValidator.sanitize(formData["description-en"]!!))
-                    ),
-                    if (formData["photoUrl"].isNullOrBlank()) formData["email"]!!.encodeToMd5() else null,
-                    if (formData["photoUrl"] == "") null else formData["photoUrl"],
-                    it.role,
-                    extractLinks(formData),
-                    it.legacyId,
-                    it.tokenExpiration,
-                    it.token
-                )
-
-                // We want to control data to not save invalid things in our database
-                if (!maxLengthValidator.isValid(user.firstname, 30)) {
-                    errors.put("firstname", "user.form.error.firstname.size")
-                }
-                if (!maxLengthValidator.isValid(user.lastname, 30)) {
-                    errors.put("lastname", "user.form.error.lastname.size")
-                }
-                if (user.company != null && !maxLengthValidator.isValid(user.company, 60)) {
-                    errors.put("company", "user.form.error.company.size")
-                }
-                if (!emailValidator.isValid(formData["email"]!!)) {
-                    errors.put("email", "user.form.error.email")
-                }
-                if (!markdownValidator.isValid(user.description.get(Language.FRENCH))) {
-                    errors.put("description-fr", "user.form.error.description.fr")
-                }
-                if (!markdownValidator.isValid(user.description.get(Language.ENGLISH))) {
-                    errors.put("description-en", "user.form.error.description.en")
-                }
-                if (!urlValidator.isValid(user.photoUrl)) {
-                    errors.put("photoUrl", "user.form.error.photourl")
-                }
-                user.links.forEachIndexed { index, link ->
-                    if (!maxLengthValidator.isValid(link.name, 30)) {
-                        errors.put("link${index + 1}Name", "user.form.error.link${index + 1}.name")
+                // In his profile screen a user can't change all the data. In the first step we load the user
+                repository.findByNonEncryptedEmail(currentUserEmail!!).flatMap { user ->
+                    val requiredFields = listOf("firstname", "lastname", "email", "description-fr", "description-en")
+                    val requiredErrors: Map<String, String> = requiredFields
+                        .mapNotNull { key ->
+                            if (formData[key] == null) key to "user.form.error.$key.required" else null
+                        }
+                        .toMap()
+                    if (requiredErrors.isNotEmpty()) {
+                        return@flatMap findOneViewDetail(req, user, ViewMode.EditProfile, errors = requiredErrors)
                     }
-                    if (!urlValidator.isValid(link.url)) {
-                        errors.put("link${index + 1}Url", "user.form.error.link${index + 1}.url")
-                    }
-                }
 
-                if (errors.isEmpty()) {
-                    // If everything is Ok we save the user
-                    repository.save(user).then(seeOther("${properties.baseUri}/me"))
-                } else {
-                    findOneViewDetail(req, user, ViewMode.EditProfile, errors = errors)
+                    val updatedUser = user.copy(
+                        firstname = formData["firstname"]!!,
+                        lastname = formData["lastname"]!!,
+                        email = cryptographer.encrypt(formData["email"]!!),
+                        company = formData["company"],
+                        description = mapOf(
+                            Pair(Language.FRENCH, markdownValidator.sanitize(formData["description-fr"]!!)),
+                            Pair(Language.ENGLISH, markdownValidator.sanitize(formData["description-en"]!!))
+                        ),
+                        emailHash = if (formData["photoUrl"] == null) formData["email"]!!.encodeToMd5() else null,
+                        photoUrl = formData["photoUrl"],
+                        links = extractLinks(formData)
+                    )
+
+                    val errors = mutableMapOf<String, String>()
+
+                    // We want to control data to not save invalid things in our database
+                    if (!maxLengthValidator.isValid(updatedUser.firstname, 30)) {
+                        errors["firstname"] = "user.form.error.firstname.size"
+                    }
+                    if (!maxLengthValidator.isValid(updatedUser.lastname, 30)) {
+                        errors["lastname"] = "user.form.error.lastname.size"
+                    }
+                    if (updatedUser.company != null && !maxLengthValidator.isValid(updatedUser.company, 60)) {
+                        errors["company"] = "user.form.error.company.size"
+                    }
+                    if (!emailValidator.isValid(formData["email"]!!)) {
+                        errors["email"] = "user.form.error.email"
+                    }
+                    if (!markdownValidator.isValid(updatedUser.description[Language.FRENCH])) {
+                        errors["description-fr"] = "user.form.error.description.fr"
+                    }
+                    if (!markdownValidator.isValid(updatedUser.description[Language.ENGLISH])) {
+                        errors["description-en"] = "user.form.error.description.en"
+                    }
+                    if (updatedUser.photoUrl !=null && !urlValidator.isValid(updatedUser.photoUrl)) {
+                        errors["photoUrl"] = "user.form.error.photourl"
+                    }
+                    user.links.forEachIndexed { index, link ->
+                        if (!maxLengthValidator.isValid(link.name, 30)) {
+                            errors["link${index + 1}Name"] = "user.form.error.link${index + 1}.name"
+                        }
+                        if (!urlValidator.isValid(link.url)) {
+                            errors["link${index + 1}Url"] = "user.form.error.link${index + 1}.url"
+                        }
+                    }
+                    if (errors.isEmpty()) {
+                        // If everything is Ok we save the user
+                        repository.save(updatedUser).then(seeOther("${properties.baseUri}/me"))
+                    } else {
+                        findOneViewDetail(req, updatedUser, ViewMode.EditProfile, errors = errors)
+                    }
                 }
             }
         }
-    }
 
     private fun extractLinks(formData: Map<String, String?>): List<Link> =
         IntStream.range(0, 5)
@@ -276,16 +259,23 @@ class UserHandler(
             .filter { !it.first.isNullOrBlank() && !it.second.isNullOrBlank() }
             .map { Link(it.first!!, it.second!!) }
 
-    fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("login")).map { it.anonymize() })
+    fun findOne(req: ServerRequest) =
+        ok().json().body(repository.findOne(req.pathVariable("login")).map { it.anonymize() })
 
     fun findAll(req: ServerRequest) = ok().json().body(repository.findAll().map { it.anonymize() })
 
-    fun findStaff(req: ServerRequest) = ok().json().body(repository.findByRoles(listOf(Role.STAFF)).map { it.anonymize() })
+    fun findStaff(req: ServerRequest) =
+        ok().json().body(repository.findByRoles(listOf(Role.STAFF)).map { it.anonymize() })
 
-    fun findOneStaff(req: ServerRequest) = ok().json().body(repository.findOneByRoles(req.pathVariable("login"), listOf(Role.STAFF, Role.STAFF_IN_PAUSE)).map { it.anonymize() })
+    fun findOneStaff(req: ServerRequest) = ok().json().body(
+        repository.findOneByRoles(req.pathVariable("login"), listOf(Role.STAFF, Role.STAFF_IN_PAUSE))
+            .map { it.anonymize() })
 
     fun findSpeakerByEventId(req: ServerRequest) =
-        ok().json().body(talkRepository.findByEvent(req.pathVariable("year")).flatMap { repository.findMany(it.speakerIds).map { it.anonymize() } }.distinct())
+        ok().json().body(
+            talkRepository.findByEvent(req.pathVariable("year"))
+                .flatMap { repository.findMany(it.speakerIds).map { it.anonymize() } }.distinct()
+        )
 
     fun create(req: ServerRequest) = repository.save(req.bodyToMono<User>()).flatMap {
         created(create("/api/user/${it.login}")).json().body(it.toMono())
