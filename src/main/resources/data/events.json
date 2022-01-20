@@ -3,12 +3,14 @@
         "current": false,
         "end": "2012-04-26",
         "id": "mixit12",
+        "organizations": [],
         "photoUrls": [
             {
                 "name": "MiXiT 2012",
                 "url": "https://www.flickr.com/photos/132667704@N02/albums/72157688295733061"
             }
         ],
+        "schedulingFileUrl": null,
         "sponsors": [
             {
                 "level": "GOLD",
@@ -53,18 +55,21 @@
         ],
         "start": "2012-04-26",
         "videoUrl": null,
+        "volunteers": [],
         "year": 2012
     },
     {
         "current": false,
         "end": "2013-04-26",
         "id": "mixit13",
+        "organizations": [],
         "photoUrls": [
             {
                 "name": "MiXiT 2013",
                 "url": "https://photos.google.com/b/106629477368826686108/album/AF1QipP_2rgU2AmfHs8jqjqHZssdbptYaq8f2tqAyqLN"
             }
         ],
+        "schedulingFileUrl": null,
         "sponsors": [
             {
                 "level": "SILVER",
@@ -119,18 +124,21 @@
         ],
         "start": "2013-04-25",
         "videoUrl": null,
+        "volunteers": [],
         "year": 2013
     },
     {
         "current": false,
         "end": "2014-04-30",
         "id": "mixit14",
+        "organizations": [],
         "photoUrls": [
             {
                 "name": "MiXiT 2014",
                 "url": "https://photos.google.com/b/106629477368826686108/album/AF1QipNw6ApiPhPzzd-5BtKlIsuLralYcTCm2HaG3GXk"
             }
         ],
+        "schedulingFileUrl": null,
         "sponsors": [
             {
                 "level": "SILVER",
@@ -218,12 +226,14 @@
             "name": "video",
             "url": "https://vimeo.com/214902172"
         },
+        "volunteers": [],
         "year": 2014
     },
     {
         "current": false,
         "end": "2015-04-17",
         "id": "mixit15",
+        "organizations": [],
         "photoUrls": [
             {
                 "name": "MiXiT 2015 jour 1",
@@ -238,6 +248,7 @@
                 "url": "https://www.flickr.com/photos/132667704@N02/albums/72157649826132434"
             }
         ],
+        "schedulingFileUrl": null,
         "sponsors": [
             {
                 "level": "SILVER",
@@ -325,13 +336,16 @@
             "name": "video",
             "url": "https://vimeo.com/214908582"
         },
+        "volunteers": [],
         "year": 2015
     },
     {
         "current": false,
         "end": "2016-04-22",
         "id": "mixit16",
+        "organizations": [],
         "photoUrls": [],
+        "schedulingFileUrl": null,
         "sponsors": [
             {
                 "level": "GOLD",
@@ -446,12 +460,14 @@
         ],
         "start": "2016-04-21",
         "videoUrl": null,
+        "volunteers": [],
         "year": 2016
     },
     {
         "current": false,
         "end": "2017-04-21",
         "id": "mixit17",
+        "organizations": [],
         "photoUrls": [
             {
                 "name": "MiXiT 2017 official",
@@ -462,6 +478,7 @@
                 "url": "https://www.flickr.com/photos/132667704@N02/albums/72157683737519685"
             }
         ],
+        "schedulingFileUrl": "/pdf/planning2017.pdf",
         "sponsors": [
             {
                 "level": "GOLD",
@@ -579,12 +596,14 @@
             "name": "video",
             "url": "https://vimeo.com/215910469"
         },
+        "volunteers": [],
         "year": 2017
     },
     {
         "current": false,
         "end": "2018-04-20",
         "id": "mixit18",
+        "organizations": [],
         "photoUrls": [
             {
                 "name": "MiXiT 2018 - Day 1 - April 19th",
@@ -615,6 +634,7 @@
                 "url": "https://www.flickr.com/photos/132667704@N02/sets/72157692909395252"
             }
         ],
+        "schedulingFileUrl": "/pdf/planning2018.pdf",
         "sponsors": [
             {
                 "level": "SILVER",
@@ -772,12 +792,14 @@
             "name": "video",
             "url": "https://vimeo.com/266571226"
         },
+        "volunteers": [],
         "year": 2018
     },
     {
         "current": false,
         "end": "2019-05-24",
         "id": "mixit19",
+        "organizations": [],
         "photoUrls": [
             {
                 "name": "MiXiT 2019 jour 1",
@@ -808,6 +830,7 @@
                 "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708824798947"
             }
         ],
+        "schedulingFileUrl": "/pdf/planning2019v5.pdf",
         "sponsors": [
             {
                 "level": "SILVER",
@@ -987,13 +1010,16 @@
         ],
         "start": "2019-05-23",
         "videoUrl": null,
+        "volunteers": [],
         "year": 2019
     },
     {
         "current": false,
         "end": "2020-04-30",
         "id": "mixit20",
+        "organizations": [],
         "photoUrls": [],
+        "schedulingFileUrl": null,
         "sponsors": [
             {
                 "level": "SILVER",
@@ -1103,13 +1129,16 @@
         ],
         "start": "2020-04-29",
         "videoUrl": null,
+        "volunteers": [],
         "year": 2020
     },
     {
         "current": false,
         "end": "2021-05-20",
         "id": "mixit21",
+        "organizations": [],
         "photoUrls": [],
+        "schedulingFileUrl": null,
         "sponsors": [
             {
                 "level": "SILVER",
@@ -1194,13 +1223,16 @@
         ],
         "start": "2021-05-18",
         "videoUrl": null,
+        "volunteers": [],
         "year": 2021
     },
     {
         "current": true,
         "end": "2022-05-25",
         "id": "mixit22",
+        "organizations": [],
         "photoUrls": [],
+        "schedulingFileUrl": null,
         "sponsors": [
             {
                 "level": "GOLD",
@@ -1211,11 +1243,6 @@
                 "level": "SILVER",
                 "sponsorId": "redfroggy",
                 "subscriptionDate": "2021-12-09"
-            },
-            {
-                "level": "NONE",
-                "sponsorId": "hackyourjob",
-                "subscriptionDate": "2021-12-15"
             },
             {
                 "level": "GOLD",
@@ -1241,10 +1268,16 @@
                 "level": "SILVER",
                 "sponsorId": "hiit",
                 "subscriptionDate": "2021-12-10"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "hackyourjob",
+                "subscriptionDate": "2021-12-15"
             }
         ],
         "start": "2022-05-24",
         "videoUrl": null,
+        "volunteers": [],
         "year": 2022
     }
 ]
