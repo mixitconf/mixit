@@ -1,5 +1,9 @@
-package mixit.web.handler
+package mixit.web.handler.user
 
+import java.net.URI.create
+import java.net.URLDecoder
+import java.nio.charset.StandardCharsets
+import java.util.stream.IntStream
 import mixit.MixitProperties
 import mixit.model.Language
 import mixit.model.Link
@@ -11,19 +15,17 @@ import mixit.repository.TicketRepository
 import mixit.repository.UserRepository
 import mixit.util.Cryptographer
 import mixit.util.MarkdownConverter
-import mixit.util.camelCase
 import mixit.util.encodeToMd5
+import mixit.util.extractFormData
 import mixit.util.json
 import mixit.util.language
-import mixit.util.markFoundOccurrences
 import mixit.util.seeOther
-import mixit.util.toUrlPath
 import mixit.util.validator.EmailValidator
 import mixit.util.validator.MarkdownValidator
 import mixit.util.validator.MaxLengthValidator
 import mixit.util.validator.UrlValidator
+import mixit.web.handler.talk.toDto
 import org.springframework.stereotype.Component
-import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.created
@@ -33,10 +35,6 @@ import org.springframework.web.reactive.function.server.bodyToMono
 import org.springframework.web.util.UriUtils
 import reactor.core.publisher.Mono
 import reactor.kotlin.core.publisher.toMono
-import java.net.URI.create
-import java.net.URLDecoder
-import java.nio.charset.StandardCharsets
-import java.util.stream.IntStream
 
 @Component
 class UserHandler(
@@ -99,13 +97,23 @@ class UserHandler(
     fun findProfileView(req: ServerRequest) =
         req.session().flatMap {
             val currentUserEmail = it.getAttribute<String>("email")
-            repository.findByNonEncryptedEmail(currentUserEmail!!).flatMap { findOneViewDetail(req, it, ViewMode.ViewMyProfile) }
+            repository.findByNonEncryptedEmail(currentUserEmail!!).flatMap {
+                findOneViewDetail(
+                    req, it,
+                    ViewMode.ViewMyProfile
+                )
+            }
         }
 
     fun editProfileView(req: ServerRequest) =
         req.session().flatMap {
             val currentUserEmail = it.getAttribute<String>("email")
-            repository.findByNonEncryptedEmail(currentUserEmail!!).flatMap { findOneViewDetail(req, it, ViewMode.EditProfile) }
+            repository.findByNonEncryptedEmail(currentUserEmail!!).flatMap {
+                findOneViewDetail(
+                    req, it,
+                    ViewMode.EditProfile
+                )
+            }
         }
 
     private fun findOneViewDetail(
@@ -172,9 +180,7 @@ class UserHandler(
 
     fun saveProfile(req: ServerRequest): Mono<ServerResponse> = req.session().flatMap {
         val currentUserEmail = it.getAttribute<String>("email")
-        req.body(BodyExtractors.toFormData()).flatMap {
-
-            val formData = it.toSingleValueMap()
+        req.extractFormData().flatMap { formData ->
 
             // In his profile screen a user can't change all the data. In the first step we load the user
             repository.findByNonEncryptedEmail(currentUserEmail!!).flatMap {
@@ -262,7 +268,7 @@ class UserHandler(
         }
     }
 
-    private fun extractLinks(formData: Map<String, String>): List<Link> =
+    private fun extractLinks(formData: Map<String, String?>): List<Link> =
         IntStream.range(0, 5)
             .toArray()
             .asList()
@@ -292,64 +298,6 @@ class UserHandler(
     )
 }
 
-class LinkDto(
-    val name: String,
-    val url: String,
-    val index: String
-)
-
-fun Link.toLinkDto(index: Int) = LinkDto(name, url, "link${index + 1}")
-
-fun User.toLinkDtos(): Map<String, List<LinkDto>> =
-    if (links.size > 4) {
-        links.mapIndexed { index, link -> link.toLinkDto(index) }.groupBy { it.index }
-    } else {
-        val existingLinks = links.size
-        val userLinks = links.mapIndexed { index, link -> link.toLinkDto(index) }.toMutableList()
-        IntStream.range(0, 5 - existingLinks).forEach { userLinks.add(LinkDto("", "", "link${existingLinks + it + 1}")) }
-        userLinks.groupBy { it.index }
-    }
-
-class SpeakerStarDto(
-    val login: String,
-    val key: String,
-    val name: String
-)
-
-fun User.toSpeakerStarDto() = SpeakerStarDto(login, lastname.lowercase().replace("è", "e"), "${firstname.camelCase()} ${lastname.camelCase()}")
-
-class UserDto(
-    val login: String,
-    val firstname: String,
-    val lastname: String,
-    var email: String? = null,
-    var company: String? = null,
-    var description: String,
-    var emailHash: String? = null,
-    var photoUrl: String? = null,
-    val role: Role,
-    var links: List<Link>,
-    val logoType: String?,
-    val logoWebpUrl: String? = null,
-    val isAbsoluteLogo: Boolean = if (photoUrl == null) false else photoUrl.startsWith("http"),
-    val path: String = login.toUrlPath()
-)
-
-fun User.toDto(language: Language, markdownConverter: MarkdownConverter, searchTerms: List<String> = emptyList()) =
-    UserDto(
-        login,
-        firstname.markFoundOccurrences(searchTerms),
-        lastname.markFoundOccurrences(searchTerms),
-        email,
-        company,
-        markdownConverter.toHTML(description[language] ?: "").markFoundOccurrences(searchTerms),
-        emailHash,
-        photoUrl,
-        role,
-        links,
-        logoType(photoUrl),
-        logoWebpUrl(photoUrl)
-    )
 
 fun logoWebpUrl(url: String?) =
     when {

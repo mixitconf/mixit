@@ -1,4 +1,4 @@
-package mixit.web
+package mixit.web.routes
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
@@ -8,15 +8,21 @@ import mixit.model.Event
 import mixit.model.SponsorshipLevel
 import mixit.util.MarkdownConverter
 import mixit.util.locale
-import mixit.web.handler.AdminHandler
-import mixit.web.handler.AuthenticationHandler
-import mixit.web.handler.BlogHandler
+import mixit.web.generateModel
+import mixit.web.handler.admin.AdminUserHandler
+import mixit.web.handler.security.AuthenticationHandler
 import mixit.web.handler.GlobalHandler
-import mixit.web.handler.MailingHandler
-import mixit.web.handler.SponsorHandler
-import mixit.web.handler.TalkHandler
-import mixit.web.handler.TicketingHandler
-import mixit.web.handler.UserHandler
+import mixit.web.handler.admin.AdminEventHandler
+import mixit.web.handler.admin.AdminPostHandler
+import mixit.web.handler.admin.AdminTalkHandler
+import mixit.web.handler.admin.AdminTicketingHandler
+import mixit.web.handler.admin.AdminUtils
+import mixit.web.handler.blog.BlogHandler
+import mixit.web.handler.mailing.MailingHandler
+import mixit.web.handler.user.SponsorHandler
+import mixit.web.handler.user.TalkHandler
+import mixit.web.handler.ticketing.TicketingHandler
+import mixit.web.handler.user.UserHandler
 import org.slf4j.LoggerFactory
 import org.springframework.context.MessageSource
 import org.springframework.context.annotation.Bean
@@ -34,7 +40,11 @@ import reactor.kotlin.core.publisher.toMono
 
 @Configuration
 class WebsiteRoutes(
-    private val adminHandler: AdminHandler,
+    private val adminEventHandler: AdminEventHandler,
+    private val adminTicketingHandler: AdminTicketingHandler,
+    private val adminTalkHandler: AdminTalkHandler,
+    private val adminUserHandler: AdminUserHandler,
+    private val adminPostHandler: AdminPostHandler,
     private val authenticationHandler: AuthenticationHandler,
     private val blogHandler: BlogHandler,
     private val globalHandler: GlobalHandler,
@@ -117,29 +127,31 @@ class WebsiteRoutes(
             }
 
             "/admin".nest {
-                GET("/", adminHandler::admin)
-                GET("/ticketing", adminHandler::adminTicketing)
+                GET("/", AdminUtils::admin)
+                GET("/ticketing", adminTicketingHandler::adminTicketing)
                 GET("/mailings", mailingHandler::listMailing)
                 GET("/mailings/create", mailingHandler::createMailing)
                 GET("/mailings/edit/{id}", mailingHandler::editMailing)
                 DELETE("/")
-                GET("/talks/edit/{slug}", adminHandler::editTalk)
-                GET("/talks") { adminHandler.adminTalks(it, "2021") }
-                GET("/talks/create", adminHandler::createTalk)
-                GET("/talks/{year}") { adminHandler.adminTalks(it, it.pathVariable("year")) }
-                GET("/users", adminHandler::adminUsers)
-                GET("/users/edit/{login}", adminHandler::editUser)
-                GET("/users/create", adminHandler::createUser)
-                GET("/events", adminHandler::adminEvents)
-                GET("/events/edit/{eventId}", adminHandler::editEvent)
-                GET("/events/{eventId}/sponsors/edit/{sponsorId}/{level}", adminHandler::editEventSponsoring)
-                GET("/events/{eventId}/sponsors/create", adminHandler::createEventSponsoring)
-                GET("/events/{eventId}/organizations/edit/{organizationLogin}", adminHandler::editEventOrganization)
-                GET("/events/{eventId}/organizations/create", adminHandler::createEventOrganization)
-                GET("/events/create", adminHandler::createEvent)
-                GET("/blog", adminHandler::adminBlog)
-                GET("/post/edit/{id}", adminHandler::editPost)
-                GET("/post/create", adminHandler::createPost)
+                GET("/talks/edit/{slug}", adminTalkHandler::editTalk)
+                GET("/talks") { adminTalkHandler.adminTalks(it, "2021") }
+                GET("/talks/create", adminTalkHandler::createTalk)
+                GET("/talks/{year}") { adminTalkHandler.adminTalks(it, it.pathVariable("year")) }
+                GET("/users", adminUserHandler::adminUsers)
+                GET("/users/edit/{login}", adminUserHandler::editUser)
+                GET("/users/create", adminUserHandler::createUser)
+                GET("/events", adminEventHandler::adminEvents)
+                GET("/events/edit/{eventId}", adminEventHandler::editEvent)
+                GET("/events/{eventId}/sponsors/edit/{sponsorId}/{level}", adminEventHandler::editEventSponsoring)
+                GET("/events/{eventId}/sponsors/create", adminEventHandler::createEventSponsoring)
+                GET("/events/{eventId}/organizations/edit/{organizationLogin}", adminEventHandler::editEventOrganization)
+                GET("/events/{eventId}/organizations/create", adminEventHandler::createEventOrganization)
+                GET("/events/{eventId}/volunteers/edit/{organizationLogin}", adminEventHandler::editEventVolunteer)
+                GET("/events/{eventId}/volunteers/create", adminEventHandler::createEventVolunteer)
+                GET("/events/create", adminEventHandler::createEvent)
+                GET("/blog", adminPostHandler::adminBlog)
+                GET("/post/edit/{id}", adminPostHandler::editPost)
+                GET("/post/create", adminPostHandler::createPost)
             }
 
             "/blog".nest {
@@ -159,20 +171,23 @@ class WebsiteRoutes(
             POST("/ticketing", ticketingHandler::submit)
 
             "/admin".nest {
-                POST("/talks", adminHandler::adminSaveTalk)
-                POST("/talks/delete", adminHandler::adminDeleteTalk)
-                POST("/users", adminHandler::adminSaveUser)
-                POST("/users/delete", adminHandler::adminDeleteUser)
-                POST("/events", adminHandler::adminSaveEvent)
-                POST("/events/{eventId}/sponsors/create", adminHandler::adminCreateEventSponsoring)
-                POST("/events/{eventId}/sponsors/delete", adminHandler::adminDeleteEventSponsoring)
-                POST("/events/{eventId}/sponsors", adminHandler::adminUpdateEventSponsoring)
-                POST("/events/{eventId}/organizations/create", adminHandler::adminCreateEventOrganization)
-                POST("/events/{eventId}/organizations/delete", adminHandler::adminDeleteEventOrganization)
-                POST("/events/{eventId}/organizations", adminHandler::adminUpdateEventOrganization)
-                POST("/ticketing/delete", adminHandler::adminDeleteTicketing)
-                POST("/post", adminHandler::adminSavePost)
-                POST("/post/delete", adminHandler::adminDeletePost)
+                POST("/talks", adminTalkHandler::adminSaveTalk)
+                POST("/talks/delete", adminTalkHandler::adminDeleteTalk)
+                POST("/users", adminUserHandler::adminSaveUser)
+                POST("/users/delete", adminUserHandler::adminDeleteUser)
+                POST("/events", adminEventHandler::adminSaveEvent)
+                POST("/events/{eventId}/sponsors/create", adminEventHandler::adminCreateEventSponsoring)
+                POST("/events/{eventId}/sponsors/delete", adminEventHandler::adminDeleteEventSponsoring)
+                POST("/events/{eventId}/sponsors", adminEventHandler::adminUpdateEventSponsoring)
+                POST("/events/{eventId}/organizations/create", adminEventHandler::adminCreateEventOrganization)
+                POST("/events/{eventId}/organizations/delete", adminEventHandler::adminDeleteEventOrganization)
+                POST("/events/{eventId}/organizations", adminEventHandler::adminUpdateEventOrganization)
+                POST("/events/{eventId}/volunteers/create", adminEventHandler::adminCreateEventVolunteer)
+                POST("/events/{eventId}/volunteers/delete", adminEventHandler::adminDeleteEventVolunteer)
+                POST("/events/{eventId}/volunteers", adminEventHandler::adminUpdateEventVolunteer)
+                POST("/ticketing/delete", adminTicketingHandler::adminDeleteTicketing)
+                POST("/post", adminPostHandler::adminSavePost)
+                POST("/post/delete", adminPostHandler::adminDeletePost)
                 POST("/mailings/preview", mailingHandler::previewMailing)
                 POST("/mailings", mailingHandler::saveMailing)
                 POST("/mailings/send", mailingHandler::sendMailing)

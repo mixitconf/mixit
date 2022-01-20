@@ -7,6 +7,9 @@ import mixit.repository.TalkRepository
 import mixit.repository.UserRepository
 import mixit.util.MarkdownConverter
 import mixit.util.language
+import mixit.web.handler.blog.toDto
+import mixit.web.handler.talk.toDto
+import mixit.web.handler.user.toDto
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.server.ServerRequest
@@ -53,9 +56,9 @@ class GlobalHandler(
     fun findFullTextView(req: ServerRequest) = ok().render("search", mapOf(Pair("title", "search.title")))
 
     fun searchFullTextView(req: ServerRequest) =
-        req.body(BodyExtractors.toFormData()).flatMap {
-            val formData = it.toSingleValueMap()
-
+        req.body(BodyExtractors.toFormData())
+            .map { it.toSingleValueMap() }
+            .flatMap { formData ->
             if (formData["search"] == null || formData["search"]!!.trim().length < 3) {
                 ok().render(
                     "search",

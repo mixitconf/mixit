@@ -15,16 +15,10 @@ enum class RecipientType {
 
 @Document
 data class Mailing(
-    val title: String,
-    val content: String,
+    val title: String = "",
+    val content: String = "",
     val addedAt: LocalDateTime = LocalDateTime.now(),
     val type: RecipientType? = null,
     val recipientLogins: List<String> = emptyList(),
     @Id val id: String? = null,
-)
-
-data class MailingDto(
-    val title: String,
-    val content: String,
-    val users: List<User> = emptyList()
 )
