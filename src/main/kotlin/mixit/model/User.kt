@@ -15,10 +15,10 @@ object Users {
 
 @Document
 data class User(
-    @Id val login: String,
-    @TextIndexed(weight = 10F) val firstname: String,
-    @TextIndexed(weight = 10F) val lastname: String,
-    val email: String?,
+    @Id val login: String = "mixit",
+    @TextIndexed(weight = 10F) val firstname: String = "",
+    @TextIndexed(weight = 10F) val lastname: String = "",
+    val email: String? = null,
     val company: String? = null,
     @TextIndexed(weight = 5F) val description: Map<Language, String> = emptyMap(),
     val emailHash: String? = null,
@@ -30,10 +30,6 @@ data class User(
     var token: String = "empty-token",
     var externalAppToken: String? = null
 ) {
-    companion object {
-        fun miXiTUser(): User = User("mixit", "", "MiXiT", "")
-    }
-
     val tokenLifeTime: Duration
         get() = Duration.between(LocalDateTime.now(), tokenExpiration)
 }

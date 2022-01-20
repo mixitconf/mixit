@@ -1,30 +1,28 @@
-package mixit.web.handler
+package mixit.web.handler.user
 
+import java.nio.charset.StandardCharsets
 import mixit.MixitProperties
 import mixit.model.Favorite
 import mixit.model.Language
-import mixit.model.Link
 import mixit.model.SponsorshipLevel
 import mixit.model.Talk
-import mixit.model.TalkFormat
 import mixit.model.User
 import mixit.repository.EventRepository
 import mixit.repository.FavoriteRepository
 import mixit.repository.TalkRepository
 import mixit.repository.UserRepository
 import mixit.util.MarkdownConverter
-import mixit.util.camelCase
-import mixit.util.formatTalkDate
-import mixit.util.formatTalkTime
+import mixit.util.extractFormData
 import mixit.util.json
 import mixit.util.language
-import mixit.util.markFoundOccurrences
 import mixit.util.permanentRedirect
 import mixit.util.seeOther
 import mixit.util.validator.MarkdownValidator
 import mixit.util.validator.MaxLengthValidator
+import mixit.web.handler.talk.TalkDto
+import mixit.web.handler.talk.sanitizeForApi
+import mixit.web.handler.talk.toDto
 import org.springframework.stereotype.Component
-import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
@@ -32,8 +30,6 @@ import org.springframework.web.reactive.function.server.body
 import org.springframework.web.util.UriUtils
 import reactor.core.publisher.Mono
 import reactor.kotlin.core.publisher.toMono
-import java.nio.charset.StandardCharsets
-import java.time.LocalDateTime
 
 const val SURPRISE_RANDOM = false
 
@@ -50,34 +46,34 @@ class TalkHandler(
 ) {
 
     fun findByEventView(year: Int, req: ServerRequest, filterOnFavorite: Boolean, topic: String? = null): Mono<ServerResponse> =
-        req.session().flatMap {
-            val currentUserEmail = it.getAttribute<String>("email")
-            val talks = loadTalkAndFavorites(year, req.language(), filterOnFavorite, currentUserEmail, topic)
-                .map { it.groupBy { if (it.date == null) "" else it.date } }
+        req.session().flatMap { session ->
+            val currentUserEmail = session.getAttribute<String>("email")
+            eventRepository
+                .findByYear(year)
+                .flatMap { event ->
+                    val talks = loadTalkAndFavorites(year, req.language(), filterOnFavorite, currentUserEmail, topic)
+                        .map { talk -> talk.groupBy { it.date ?: "" } }
 
-            val sponsors = loadSponsors(year, req)
-
-            ok().render(
-                "talks",
-                mapOf(
-                    Pair("talks", talks),
-                    Pair("year", year),
-                    Pair("schedulingFile", getSchedulingFile(year)),
-                    Pair("current", year == 2019),
-                    Pair(
-                        "title",
-                        when (topic) {
-                            null -> "talks.title.html|$year"
-                            else -> "talks.title.html.$topic|$year"
-                        }
-                    ),
-                    Pair("filtered", filterOnFavorite),
-                    Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
-                    Pair("topic", topic),
-                    Pair("has2Columns", talks.map { it.size == 2 }),
-                    Pair("sponsors", sponsors)
-                )
-            )
+                    val sponsors = loadSponsors(year, req)
+                    ok().render(
+                        "talks",
+                        mapOf(
+                            Pair("talks", talks),
+                            Pair("year", year),
+                            Pair("schedulingFile", event.schedulingFileUrl),
+                            Pair("current", year == 2019),
+                            Pair(
+                                "title",
+                                if(topic == null) "talks.title.html|$year" else "talks.title.html.$topic|$year"
+                            ),
+                            Pair("filtered", filterOnFavorite),
+                            Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
+                            Pair("topic", topic),
+                            Pair("has2Columns", talks.map { it.size == 2 }),
+                            Pair("sponsors", sponsors)
+                        )
+                    )
+                }
         }
 
     fun findMediaByEventView(year: Int, req: ServerRequest, filterOnFavorite: Boolean, topic: String? = null): Mono<ServerResponse> =
@@ -204,29 +200,28 @@ class TalkHandler(
         )
     }
 
-    fun saveProfileTalk(req: ServerRequest): Mono<ServerResponse> = req.body(BodyExtractors.toFormData()).flatMap {
-        val formData = it.toSingleValueMap()
+    fun saveProfileTalk(req: ServerRequest): Mono<ServerResponse> =
+        req.extractFormData().flatMap { formData ->
+            repository.findOne(formData["id"]!!).flatMap {
 
-        repository.findOne(formData["id"]!!).flatMap {
+                val errors = mutableMapOf<String, String>()
 
-            val errors = mutableMapOf<String, String>()
+                // Null check
+                if (formData["title"].isNullOrBlank()) {
+                    errors.put("title", "talk.form.error.title.required")
+                }
+                if (formData["summary"].isNullOrBlank()) {
+                    errors.put("title", "talk.form.error.summary.required")
+                }
+                if (formData["language"].isNullOrBlank()) {
+                    errors.put("title", "talk.form.error.language.required")
+                }
 
-            // Null check
-            if (formData["title"].isNullOrBlank()) {
-                errors.put("title", "talk.form.error.title.required")
-            }
-            if (formData["summary"].isNullOrBlank()) {
-                errors.put("title", "talk.form.error.summary.required")
-            }
-            if (formData["language"].isNullOrBlank()) {
-                errors.put("title", "talk.form.error.language.required")
-            }
+                if (errors.isNotEmpty()) {
+                    editTalkViewDetail(req, it, errors)
+                }
 
-            if (errors.isNotEmpty()) {
-                editTalkViewDetail(req, it, errors)
-            }
-
-            val talk = Talk(
+                val talk = Talk(
                 it.format,
                 it.event,
                 formData["title"]!!,
@@ -287,11 +282,14 @@ class TalkHandler(
                 }
         }
 
-    fun findOne(req: ServerRequest) = ok().json().body(repository.findOne(req.pathVariable("login")).map { it.sanitizeForApi() })
+    fun findOne(req: ServerRequest) =
+        ok().json().body(repository.findOne(req.pathVariable("login")).map { it.sanitizeForApi() })
 
-    fun findByEventId(req: ServerRequest) = ok().json().body(repository.findByEvent(req.pathVariable("year")).map { it.sanitizeForApi() })
+    fun findByEventId(req: ServerRequest) =
+        ok().json().body(repository.findByEvent(req.pathVariable("year")).map { it.sanitizeForApi() })
 
-    fun findAdminByEventId(req: ServerRequest) = ok().json().body(repository.findByEvent(req.pathVariable("year")))
+    fun findAdminByEventId(req: ServerRequest) =
+        ok().json().body(repository.findByEvent(req.pathVariable("year")))
 
     fun redirectFromId(req: ServerRequest) = repository.findOne(req.pathVariable("id")).flatMap {
         permanentRedirect("${properties.baseUri}/${it.event}/${it.slug}")
@@ -301,83 +299,4 @@ class TalkHandler(
         permanentRedirect("${properties.baseUri}/${it.event}/${it.slug}")
     }
 }
-class TalkDto(
-    val id: String?,
-    val slug: String,
-    val format: TalkFormat,
-    val event: String,
-    val title: String,
-    val summary: String,
-    val speakers: List<User>,
-    val language: String,
-    val addedAt: LocalDateTime,
-    val description: String?,
-    val topic: String?,
-    val video: String?,
-    val vimeoPlayer: String?,
-    val room: String?,
-    val start: String?,
-    val end: String?,
-    val date: String?,
-    val favorite: Boolean = false,
-    val photoUrls: List<Link> = emptyList(),
-    val isEn: Boolean = (language == "english"),
-    val isTalk: Boolean = (format == TalkFormat.TALK),
-    val isCurrentEdition: Boolean = "2019".equals(event),
-    val multiSpeaker: Boolean = (speakers.size > 1),
-    val speakersFirstNames: String = (speakers.joinToString { it.firstname })
-)
 
-fun Talk.toDto(lang: Language, speakers: List<User>, favorite: Boolean = false, convertRandomLabel: Boolean = SURPRISE_RANDOM, searchTerms: List<String> = emptyList()) = TalkDto(
-    id, slug, format, event,
-    title(convertRandomLabel, searchTerms),
-    summary(convertRandomLabel).markFoundOccurrences(searchTerms),
-    speakers,
-    language.name.lowercase(), addedAt,
-    description(convertRandomLabel)?.markFoundOccurrences(searchTerms),
-    topic,
-    video,
-    if (video?.startsWith("https://vimeo.com/") == true) video.replace("https://vimeo.com/", "https://player.vimeo.com/video/") else null,
-    "rooms.${room?.name?.lowercase()}",
-    start?.formatTalkTime(lang),
-    end?.formatTalkTime(lang),
-    start?.formatTalkDate(lang),
-    favorite,
-    photoUrls
-)
-
-fun Talk.summary(convertRandomLabel: Boolean): String {
-    if (event == "2019" && convertRandomLabel) {
-        return when (format) {
-            TalkFormat.RANDOM -> {
-                if (language == Language.ENGLISH)
-                    "This is a \"Random\" talk. For this track we choose the program for you. You are in a room, and a speaker comes to speak about a subject for which you ignore the content. Don't be afraid it's only for 20 minutes. As it's a surprise we don't display the session summary before...   "
-                else
-                    "Ce talk est de type \"random\". Pour cette track, nous choisissons le programme pour vous. Vous êtes dans une pièce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 20 minutes. Comme c'est une surprise, nous n'affichons pas le résumé de la session avant ..."
-            }
-            TalkFormat.KEYNOTE_SURPRISE, TalkFormat.CLOSING_SESSION -> {
-                if (language == Language.ENGLISH)
-                    "This is a \"surprise\" talk. For our keynote we choose the programm for you. You are in a room, and a speaker come to speak about a subject for which you ignore the content. Don't be afraid it's only for 30 minutes. As it's a surprise we don't display the session summary before...   "
-                else
-                    "Ce talk est une \"surprise\". Pour cette track, nous choisissons le programme pour vous. Vous êtes dans une pièce et un speaker vient parler d'un sujet dont vous ignorez le contenu. N'ayez pas peur, c'est seulement pour 30 minutes. Comme c'est une surprise, nous n'affichons pas le résumé de la session avant ..."
-            }
-            else -> summary
-        }
-    }
-    return summary
-}
-
-fun Talk.title(convertRandomLabel: Boolean, searchTerms: List<String> = emptyList()): String = if (convertRandomLabel && (format == TalkFormat.KEYNOTE_SURPRISE || format == TalkFormat.CLOSING_SESSION) && event == "2019") "A surprise keynote... is a surprise"
-else title.markFoundOccurrences(searchTerms)
-
-fun Talk.description(convertRandomLabel: Boolean) = if (convertRandomLabel && (format == TalkFormat.RANDOM || format == TalkFormat.KEYNOTE_SURPRISE || format == TalkFormat.CLOSING_SESSION) && event == "2019") "" else description
-
-fun Talk.sanitizeForApi() = Talk(format, event, title(SURPRISE_RANDOM), summary(SURPRISE_RANDOM), speakerIds, language, addedAt, description(SURPRISE_RANDOM), topic, video, room, start, end, photoUrls, slug, id)
-
-// TODO put these data in Event table and add element on admin page to update them
-private fun getSchedulingFile(event: Int): String? = when (event) {
-    2019 -> "/pdf/planning2019v5.pdf"
-    2018 -> "/pdf/planning2018.pdf"
-    2017 -> "/pdf/planning2017.pdf"
-    else -> null
-}

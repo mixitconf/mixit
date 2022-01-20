@@ -1,10 +1,10 @@
 package mixit.model
 
+import java.time.LocalDateTime
 import mixit.util.toSlug
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.index.TextIndexed
 import org.springframework.data.mongodb.core.mapping.Document
-import java.time.LocalDateTime
 
 @Document
 data class Talk(
@@ -56,4 +56,21 @@ enum class Room(capacity: Int) {
     SPEAKER(16),
     UNKNOWN(0),
     SURPRISE(0);
+}
+
+enum class Topic(val value: String) {
+    MAKERS("makers"),
+    ALIENS("aliens"),
+    TECH("tech"),
+    TEAM("team"),
+    OTHER("other"),
+    DESIGN("design"),
+    HACK("hacktivism"),
+    ETHICS("ethics"),
+    LIFE_STYLE("lifestyle"),
+    LEARN("learn");
+
+    companion object {
+        fun of(label: String) = values().firstOrNull { it.value == label } ?: OTHER
+    }
 }

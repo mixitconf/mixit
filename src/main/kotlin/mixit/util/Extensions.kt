@@ -1,13 +1,5 @@
 package mixit.util
 
-import mixit.model.Language
-import org.springframework.http.MediaType.APPLICATION_JSON
-import org.springframework.http.MediaType.APPLICATION_XML
-import org.springframework.http.MediaType.TEXT_HTML
-import org.springframework.web.reactive.function.server.ServerRequest
-import org.springframework.web.reactive.function.server.ServerResponse
-import org.springframework.web.reactive.function.server.ServerResponse.permanentRedirect
-import org.springframework.web.reactive.function.server.ServerResponse.seeOther
 import java.net.URI
 import java.net.URLEncoder
 import java.nio.charset.Charset
@@ -26,6 +18,16 @@ import java.util.stream.IntStream
 import javax.crypto.Cipher
 import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.SecretKeySpec
+import mixit.model.Language
+import org.springframework.http.MediaType.APPLICATION_JSON
+import org.springframework.http.MediaType.APPLICATION_XML
+import org.springframework.http.MediaType.TEXT_HTML
+import org.springframework.web.reactive.function.BodyExtractors
+import org.springframework.web.reactive.function.server.ServerRequest
+import org.springframework.web.reactive.function.server.ServerResponse
+import org.springframework.web.reactive.function.server.ServerResponse.permanentRedirect
+import org.springframework.web.reactive.function.server.ServerResponse.seeOther
+import reactor.core.publisher.Mono
 
 // -------------------------
 // Spring WebFlux extensions
@@ -33,12 +35,18 @@ import javax.crypto.spec.SecretKeySpec
 
 fun ServerRequest.language() =
     Language.findByTag(
-        if (this.headers().asHttpHeaders().contentLanguage != null) this.headers().asHttpHeaders().contentLanguage!!.language
+        if (this.headers().asHttpHeaders().contentLanguage != null) this.headers()
+            .asHttpHeaders().contentLanguage!!.language
         else this.headers().asHttpHeaders().acceptLanguageAsLocales.first().language
     )
 
 fun ServerRequest.locale(): Locale =
     this.headers().asHttpHeaders().contentLanguage ?: Locale.ENGLISH
+
+fun ServerRequest.extractFormData(): Mono<Map<String, String?>> =
+    this.body(BodyExtractors.toFormData()).map { data ->
+        data.toSingleValueMap().mapValues { if (it.value.isNullOrEmpty()) null else it.value }
+    }
 
 fun ServerResponse.BodyBuilder.json() = contentType(APPLICATION_JSON)
 

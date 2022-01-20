@@ -1,4 +1,4 @@
-package mixit.web.handler
+package mixit.web.handler.user
 
 import mixit.model.EventSponsoring
 import mixit.model.Language
@@ -11,7 +11,6 @@ import mixit.util.language
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
-import java.time.LocalDate
 
 @Component
 class SponsorHandler(
@@ -128,29 +127,4 @@ class SponsorHandler(
             }
 }
 
-class EventSponsoringDto(
-    val level: SponsorshipLevel,
-    val sponsor: UserDto,
-    val subscriptionDate: LocalDate = LocalDate.now()
-)
 
-class SponsorDto(
-    val login: String,
-    var company: String,
-    var photoUrl: String,
-    val logoType: String?,
-    val logoWebpUrl: String? = null,
-    val isAbsoluteLogo: Boolean = photoUrl.startsWith("http")
-)
-
-fun EventSponsoring.toDto(sponsor: User, language: Language, markdownConverter: MarkdownConverter) =
-    EventSponsoringDto(level, sponsor.toDto(language, markdownConverter), subscriptionDate)
-
-fun EventSponsoring.toSponsorDto(sponsor: User) =
-    SponsorDto(
-        sponsor.login,
-        sponsor.company!!,
-        sponsor.photoUrl!!,
-        logoType(sponsor.photoUrl),
-        logoWebpUrl(sponsor.photoUrl)
-    )

@@ -1,10 +1,9 @@
-package mixit.web.handler
+package mixit.web.handler.mailing
 
 import java.time.LocalDateTime
 import java.util.Locale
 import mixit.MixitProperties
 import mixit.model.Mailing
-import mixit.model.MailingDto
 import mixit.model.RecipientType
 import mixit.model.RecipientType.Organization
 import mixit.model.RecipientType.Sponsor
@@ -18,10 +17,11 @@ import mixit.repository.UserRepository
 import mixit.util.Cryptographer
 import mixit.util.EmailService
 import mixit.util.MarkdownConverter
+import mixit.util.enumMatcher
+import mixit.util.extractFormData
 import mixit.util.seeOther
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
-import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
@@ -63,36 +63,25 @@ class MailingHandler(
         MailingPages.EDIT.template,
         mapOf(
             Pair("title", "mailing.title"),
-            Pair(
-                "roles", listOf(
-                    Pair(RecipientType.User, mailing?.type == RecipientType.User),
-                    Pair(Sponsor, mailing?.type == Sponsor),
-                    Pair(Volunteers, mailing?.type == Volunteers),
-                    Pair(Staff, mailing?.type == Staff),
-                    Pair(StaffInPause, mailing?.type == StaffInPause),
-                    Pair(Organization, mailing?.type == Organization)
-                )
-            ),
-            Pair("mailing", mailing ?: Mailing("", "")),
+            Pair("roles", enumMatcher(mailing) { mailing?.type ?: Staff }),
+            Pair("mailing", mailing ?: Mailing()),
             Pair("recipientLogins", mailing?.recipientLogins?.joinToString() ?: emptyList<String>())
         )
     )
 
     fun deleteMailing(req: ServerRequest): Mono<ServerResponse> =
-        req.body(BodyExtractors.toFormData())
-            .map { it.toSingleValueMap() }
-            .flatMap { formData ->
-                mailingRepository
-                    .deleteOne(formData["id"]!!)
-                    .then(seeOther("${properties.baseUri}/admin/mailings"))
-            }
+        req.extractFormData().flatMap { formData ->
+            mailingRepository
+                .deleteOne(formData["id"]!!)
+                .then(seeOther("${properties.baseUri}/admin/mailings"))
+        }
 
     fun previewMailing(req: ServerRequest): Mono<ServerResponse> =
         persistMailing((req))
             .flatMap {
                 ok().render(
                     MailingPages.EMAIL.template, mapOf(
-                        Pair("user", User.miXiTUser().copy(firstname = "Bot")),
+                        Pair("user", User().copy(firstname = "Bot")),
                         Pair("message", markdownConverter.toHTML(it.content))
                     )
                 )
@@ -112,19 +101,17 @@ class MailingHandler(
     }
 
     private fun persistMailing(req: ServerRequest): Mono<Mailing> =
-        req.body(BodyExtractors.toFormData())
-            .map { it.toSingleValueMap() }
-            .flatMap { formData ->
-                mailingRepository.save(
-                    Mailing(
-                        id = formData["id"],
-                        addedAt = LocalDateTime.parse(formData["addedAt"]),
-                        type = formData["recipientType"]?.let { RecipientType.valueOf(it) },
-                        title = formData["title"]!!,
-                        content = formData["content"]!!,
-                        recipientLogins = formData["recipientLogins"]?.split(",") ?: emptyList()
-                    )
+        req.extractFormData().flatMap { formData ->
+            mailingRepository.save(
+                Mailing(
+                    id = formData["id"],
+                    addedAt = LocalDateTime.parse(formData["addedAt"]),
+                    type = formData["recipientType"]?.let { RecipientType.valueOf(it) },
+                    title = formData["title"]!!,
+                    content = formData["content"]!!,
+                    recipientLogins = formData["recipientLogins"]?.split(",") ?: emptyList()
                 )
+            )
             }
 
     fun sendMailing(req: ServerRequest): Mono<ServerResponse> =

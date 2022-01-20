@@ -1,12 +1,12 @@
-package mixit.web
+package mixit.web.routes
 
-import mixit.web.handler.BlogHandler
-import mixit.web.handler.EventHandler
-import mixit.web.handler.FavoriteHandler
-import mixit.web.handler.TalkHandler
-import mixit.web.handler.TicketingHandler
-import mixit.web.handler.UserHandler
+import mixit.web.handler.blog.BlogHandler
+import mixit.web.handler.event.EventHandler
+import mixit.web.handler.user.TalkHandler
+import mixit.web.handler.ticketing.TicketingHandler
+import mixit.web.handler.user.UserHandler
 import mixit.web.handler.external.ExternalHandler
+import mixit.web.handler.favorite.FavoriteHandler
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.http.MediaType.APPLICATION_JSON

@@ -1,21 +1,18 @@
 package mixit.web.handler.external
 
 import mixit.model.Favorite
-import mixit.model.Language
-import mixit.model.Link
 import mixit.model.User
-import mixit.model.Users
 import mixit.repository.FavoriteRepository
 import mixit.repository.TicketRepository
 import mixit.util.json
 import mixit.util.locale
-import mixit.web.handler.FavoriteDto
 import mixit.web.handler.external.ExternalResponses.CREDENTIAL_VALID
 import mixit.web.handler.external.ExternalResponses.EMAIL_SENT_ERROR
 import mixit.web.handler.external.ExternalResponses.INVALID_CREDENTIALS
 import mixit.web.handler.external.ExternalResponses.INVALID_EMAIL
 import mixit.web.handler.external.ExternalResponses.INVALID_TOKEN
 import mixit.web.handler.external.ExternalResponses.TOKEN_SENT
+import mixit.web.handler.favorite.FavoriteDto
 import mixit.web.service.AuthenticationService
 import mixit.web.service.EmailValidatorException
 import mixit.web.service.NotFoundException
@@ -106,65 +103,53 @@ class ExternalHandler(
     fun checkToken(req: ServerRequest): Mono<ServerResponse> =
         credentials(req, true) { _, _ -> CREDENTIAL_VALID.response() }
 
-    fun profile(req: ServerRequest): Mono<ServerResponse> = credentials(req, false) { nonEncryptedEmail, user ->
+    fun profile(req: ServerRequest): Mono<ServerResponse> =
+        credentials(req, false) { nonEncryptedEmail, user ->
 
-        ticketRepository
-            .findByEmail(nonEncryptedEmail)
-            .flatMap {
-                ok().json().bodyValue(ExternalUserDto(user))
-            }
-            .switchIfEmpty(
-                Mono.defer { ok().json().bodyValue(ExternalUserDto(user)) }
-            )
-    }
-
-    fun favorites(req: ServerRequest): Mono<ServerResponse> = credentials(req, false) { nonEncryptedEmail, _ ->
-        ok().json().body(favoriteRepository.findByEmail(nonEncryptedEmail).map { FavoriteDto(it.talkId, true) })
-    }
-
-    fun favorite(req: ServerRequest): Mono<ServerResponse> = credentials(req, false) { nonEncryptedEmail, _ ->
-        ok().json().body(
-            favoriteRepository.findByEmailAndTalk(nonEncryptedEmail, req.pathVariable("id"))
-                .flatMap { FavoriteDto(it.talkId, true).toMono() }
-                .switchIfEmpty(FavoriteDto(req.pathVariable("id"), false).toMono())
-        )
-    }
-
-    fun toggleFavorite(req: ServerRequest): Mono<ServerResponse> = credentials(req, false) { nonEncryptedEmail, user ->
-        favoriteRepository.findByEmailAndTalk(nonEncryptedEmail, req.pathVariable("id"))
-            // if favorite is found we delete it
-            .flatMap { favorite ->
-                favoriteRepository
-                    .delete(nonEncryptedEmail, favorite.talkId)
-                    .flatMap { ok().json().bodyValue(FavoriteDto(favorite.talkId, false)) }
-            }
-            // otherwise we create it
-            .switchIfEmpty(
-                Mono.defer {
-                    favoriteRepository
-                        .save(Favorite(user.email!!, req.pathVariable("id")))
-                        .flatMap { ok().json().bodyValue(FavoriteDto(req.pathVariable("id"), true)) }
+            ticketRepository
+                .findByEmail(nonEncryptedEmail)
+                .flatMap {
+                    ok().json().bodyValue(ExternalUserDto(user))
                 }
+                .switchIfEmpty(
+                    Mono.defer { ok().json().bodyValue(ExternalUserDto(user)) }
+                )
+        }
+
+    fun favorites(req: ServerRequest): Mono<ServerResponse> =
+        credentials(req, false) { nonEncryptedEmail, _ ->
+            ok().json().body(
+                favoriteRepository.findByEmail(nonEncryptedEmail).map { FavoriteDto(it.talkId, true) }
             )
-    }
+        }
+
+    fun favorite(req: ServerRequest): Mono<ServerResponse> =
+        credentials(req, false) { nonEncryptedEmail, _ ->
+            ok().json().body(
+                favoriteRepository.findByEmailAndTalk(nonEncryptedEmail, req.pathVariable("id"))
+                    .flatMap { FavoriteDto(it.talkId, true).toMono() }
+                    .switchIfEmpty(FavoriteDto(req.pathVariable("id"), false).toMono())
+            )
+        }
+
+    fun toggleFavorite(req: ServerRequest): Mono<ServerResponse> =
+        credentials(req, false) { nonEncryptedEmail, user ->
+            favoriteRepository.findByEmailAndTalk(nonEncryptedEmail, req.pathVariable("id"))
+                // if favorite is found we delete it
+                .flatMap { favorite ->
+                    favoriteRepository
+                        .delete(nonEncryptedEmail, favorite.talkId)
+                        .flatMap { ok().json().bodyValue(FavoriteDto(favorite.talkId, false)) }
+                }
+                // otherwise we create it
+                .switchIfEmpty(
+                    Mono.defer {
+                        favoriteRepository
+                            .save(Favorite(user.email!!, req.pathVariable("id")))
+                            .flatMap { ok().json().bodyValue(FavoriteDto(req.pathVariable("id"), true)) }
+                    }
+                )
+        }
 }
 
-class ExternalUserDto(
-    val login: String,
-    val firstname: String,
-    val lastname: String,
-    val links: List<Link> = listOf(),
-    val description: Map<Language, String> = emptyMap(),
-    val photo: String? = null,
-    val company: String? = null
-) {
-    constructor(user: User) : this(
-        user.login,
-        user.firstname,
-        user.lastname,
-        user.links,
-        user.description,
-        user.photoUrl ?: Users.DEFAULT_IMG_URL,
-        user.company
-    )
-}
+
