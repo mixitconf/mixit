@@ -24,14 +24,14 @@
     </div>
 </div>
 <div class="container mxt-wrapper--page-content">
-    <p>{{#i18n}}admin.talks.count{{/i18n}} : <b>{{talks.size}}</b> | <a href="/admin/talks/create">{{#i18n}}admin.talks.actions.create{{/i18n}}</a></p>
+    <p>{{#i18n}}admin.talks.count{{/i18n}} : <b>{{talks.size}}</b> | <a href="/admin/talks/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
     <table class="table table-bordered table-striped">
       <thead>
         <tr>
             <th>{{#i18n}}admin.talks.table.format{{/i18n}}</th>
             <th>{{#i18n}}admin.talks.table.title{{/i18n}}</th>
             <th>{{#i18n}}admin.talks.table.speakers{{/i18n}}</th>
-            <th>{{#i18n}}admin.talks.table.actions{{/i18n}}</th>
+            <th>{{#i18n}}common.actions{{/i18n}}</th>
         </tr>
       </thead>
       <tbody>
@@ -41,8 +41,8 @@
             <td>{{title}}</td>
             <td>{{#speakers}}{{firstname}} {{lastname}} {{/speakers}}</td>
             <td>
-                <a href="/admin/talks/edit/{{slug}}">{{#i18n}}admin.talks.actions.update{{/i18n}}</a> <br />
-                <a href="/{{event}}/{{slug}}" target="_blank">{{#i18n}}admin.talks.actions.view{{/i18n}}</a>
+                <a href="/admin/talks/edit/{{slug}}">{{#i18n}}common.actions.update{{/i18n}}</a> <br />
+                <a href="/{{event}}/{{slug}}" target="_blank">{{#i18n}}common.actions.view{{/i18n}}</a>
             </td>
         </tr>
         {{/talks}}

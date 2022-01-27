@@ -12,13 +12,13 @@
         {{^canUpdateProfile}}
             {{#admin}}
                 <div class="mxt-text--page-title">
-                    <a href="{{localePrefix}}/admin/users/edit/{{user.login}}" class="btn-outline-primary btn" style="margin-bottom: 0">{{#i18n}}admin.talks.actions.update{{/i18n}}</a>
+                    <a href="{{localePrefix}}/admin/users/edit/{{user.login}}" class="btn-outline-primary btn" style="margin-bottom: 0">{{#i18n}}common.actions.update{{/i18n}}</a>
                 </div>
             {{/admin}}
         {{/canUpdateProfile}}
         {{#canUpdateProfile}}
             <div class="mxt-text--page-title">
-                <a href="{{localePrefix}}/me/edit" class="btn-outline-primary btn" style="margin-bottom: 0">{{#i18n}}admin.talks.actions.update{{/i18n}}</a>
+                <a href="{{localePrefix}}/me/edit" class="btn-outline-primary btn" style="margin-bottom: 0">{{#i18n}}common.actions.update{{/i18n}}</a>
             </div>
         {{/canUpdateProfile}}
     {{/connected}}

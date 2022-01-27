@@ -1,5 +1,6 @@
 package mixit
 
+import java.math.BigDecimal
 import org.springframework.boot.context.properties.ConfigurationProperties
 
 @ConfigurationProperties("mixit")
@@ -8,6 +9,7 @@ class MixitProperties {
     lateinit var contact: String
     lateinit var vimeoTchatUri: String
     lateinit var vimeoFluxUri: String
+    lateinit var mixetteValue: BigDecimal
 
     val drive = Drive()
     val aes = Aes()
@@ -43,5 +45,6 @@ class MixitProperties {
         var lottery: Boolean = false
         var lotteryResult: Boolean = false
         var email: Boolean = false
+        var mixette: Boolean = false
     }
 }

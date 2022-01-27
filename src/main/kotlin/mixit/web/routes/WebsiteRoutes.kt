@@ -9,19 +9,21 @@ import mixit.model.SponsorshipLevel
 import mixit.util.MarkdownConverter
 import mixit.util.locale
 import mixit.web.generateModel
-import mixit.web.handler.admin.AdminUserHandler
-import mixit.web.handler.security.AuthenticationHandler
 import mixit.web.handler.GlobalHandler
 import mixit.web.handler.admin.AdminEventHandler
+import mixit.web.handler.admin.AdminEventHandler.Companion.CURRENT_EVENT
+import mixit.web.handler.admin.AdminMixetteHandler
 import mixit.web.handler.admin.AdminPostHandler
 import mixit.web.handler.admin.AdminTalkHandler
 import mixit.web.handler.admin.AdminTicketingHandler
+import mixit.web.handler.admin.AdminUserHandler
 import mixit.web.handler.admin.AdminUtils
 import mixit.web.handler.blog.BlogHandler
 import mixit.web.handler.mailing.MailingHandler
+import mixit.web.handler.security.AuthenticationHandler
+import mixit.web.handler.ticketing.TicketingHandler
 import mixit.web.handler.user.SponsorHandler
 import mixit.web.handler.user.TalkHandler
-import mixit.web.handler.ticketing.TicketingHandler
 import mixit.web.handler.user.UserHandler
 import org.slf4j.LoggerFactory
 import org.springframework.context.MessageSource
@@ -45,6 +47,7 @@ class WebsiteRoutes(
     private val adminTalkHandler: AdminTalkHandler,
     private val adminUserHandler: AdminUserHandler,
     private val adminPostHandler: AdminPostHandler,
+    private val adminMixetteHandler: AdminMixetteHandler,
     private val authenticationHandler: AuthenticationHandler,
     private val blogHandler: BlogHandler,
     private val globalHandler: GlobalHandler,
@@ -66,15 +69,14 @@ class WebsiteRoutes(
         GET("/blog/feed", blogHandler::feed)
 
         accept(TEXT_HTML).nest {
-            GET("/") { sponsorHandler.viewWithSponsors("home", arrayOf(SponsorshipLevel.LANYARD, SponsorshipLevel.GOLD), null, 2022, it) }
+            GET("/") { sponsorHandler.viewWithSponsors("home", arrayOf(SponsorshipLevel.LANYARD, SponsorshipLevel.GOLD), null, CURRENT_EVENT.toInt(), it) }
             GET("/about", globalHandler::findAboutView)
             GET("/ticketing", ticketingHandler::ticketing)
-            GET("/sponsors") { sponsorHandler.viewWithSponsors(2022, it) }
-            GET("/mixteen") { sponsorHandler.viewWithSponsors("mixteen", arrayOf(SponsorshipLevel.MIXTEEN), "mixteen.title", 2021, it) }
+            GET("/sponsors") { sponsorHandler.viewWithSponsors(CURRENT_EVENT.toInt(), it) }
+            GET("/mixteen") { sponsorHandler.viewWithSponsors("mixteen", arrayOf(SponsorshipLevel.MIXTEEN), "mixteen.title", CURRENT_EVENT.toInt(), it) }
             GET("/faq", globalHandler::faqView)
             GET("/come", globalHandler::comeToMixitView)
             GET("/schedule", globalHandler::scheduleView)
-            GET("/cfp") { talkHandler.findByEventView(2021, it, false) }
             GET("/user/{login}") { userHandler.findOneView(it) }
             GET("/me") { userHandler.findProfileView(it) }
             GET("/me/edit", userHandler::editProfileView)
@@ -134,7 +136,7 @@ class WebsiteRoutes(
                 GET("/mailings/edit/{id}", mailingHandler::editMailing)
                 DELETE("/")
                 GET("/talks/edit/{slug}", adminTalkHandler::editTalk)
-                GET("/talks") { adminTalkHandler.adminTalks(it, "2021") }
+                GET("/talks") { adminTalkHandler.adminTalks(it, AdminTalkHandler.LAST_TALK_EVENT) }
                 GET("/talks/create", adminTalkHandler::createTalk)
                 GET("/talks/{year}") { adminTalkHandler.adminTalks(it, it.pathVariable("year")) }
                 GET("/users", adminUserHandler::adminUsers)
@@ -152,6 +154,10 @@ class WebsiteRoutes(
                 GET("/blog", adminPostHandler::adminBlog)
                 GET("/post/edit/{id}", adminPostHandler::editPost)
                 GET("/post/create", adminPostHandler::createPost)
+                GET("/mixette-organization", adminMixetteHandler::adminOrganizationDonations)
+                GET("/mixette-donor", adminMixetteHandler::adminDonorDonations)
+                GET("/mixette-donation/edit/{id}", adminMixetteHandler::editDonation)
+                GET("/mixette-donation/create", adminMixetteHandler::addDonation)
             }
 
             "/blog".nest {

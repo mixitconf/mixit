@@ -9,7 +9,7 @@
         <form action="/admin/users/delete" method="post" class="text-center"
               onsubmit="return confirm('{{#i18n}}admin.user.delete.confirm{{/i18n}}');">
         <input type="hidden" name="login" value="{{user.login}}"/>
-        <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}admin.user.delete{{/i18n}}"/>
+        <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}common.actions.delete{{/i18n}}"/>
     </form>{{/user.login}}
     <form action="/admin/users" method="post">
         <div class="mb-3">

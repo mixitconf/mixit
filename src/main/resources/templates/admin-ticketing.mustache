@@ -23,7 +23,7 @@
           <td><a href="mailto:{{email}}">{{email}}</a></td>
           <td><form action="/admin/ticketing/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.ticketing.delete.confirm{{/i18n}}');">
                 <input type="hidden" name="email" value="{{email}}"/>
-                <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}admin.ticketing.delete{{/i18n}}"/>
+                <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}common.actions.delete{{/i18n}}"/>
             </form></td>
         </tr>
         {{/tickets}}

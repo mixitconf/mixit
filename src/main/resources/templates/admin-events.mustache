@@ -5,7 +5,7 @@
 </div>
 
 <div class="container mxt-wrapper--page-content">
-    <p>{{#i18n}}admin.events.count{{/i18n}} : <b>{{events.size}}</b> | <a href="/admin/events/create">{{#i18n}}admin.events.actions.create{{/i18n}}</a></p>
+    <p>{{#i18n}}admin.events.count{{/i18n}} : <b>{{events.size}}</b> | <a href="/admin/events/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
     <table class="table table-striped table-bordered">
       <thead>
         <tr>
@@ -14,7 +14,7 @@
             <th>{{#i18n}}admin.events.table.end{{/i18n}}</th>
             <th>{{#i18n}}admin.events.table.year{{/i18n}}</th>
             <th>{{#i18n}}admin.events.table.current{{/i18n}}</th>
-            <th>{{#i18n}}admin.events.table.actions{{/i18n}}</th>
+            <th>{{#i18n}}common.actions{{/i18n}}</th>
         </tr>
       </thead>
       <tbody>
@@ -26,7 +26,7 @@
             <td>{{year}}</td>
             <td>{{current}}</td>
             <td>
-                <a href="/admin/events/edit/{{id}}">{{#i18n}}admin.events.actions.update{{/i18n}}</a>
+                <a href="/admin/events/edit/{{id}}">{{#i18n}}common.actions.update{{/i18n}}</a>
             </td>
         </tr>
         {{/events}}
