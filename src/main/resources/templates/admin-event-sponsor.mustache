@@ -9,7 +9,7 @@
         <input type="hidden" name="eventId" value="{{eventId}}"/>
         <input type="hidden" name="sponsorId" value="{{eventSponsoring.sponsorId}}"/>
         <input type="hidden" name="level" value="{{eventSponsoring.level}}"/>
-        <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}admin.event.sponsors.delete{{/i18n}}"/>
+        <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}common.actions.delete{{/i18n}}"/>
     </form>{{/creationMode}}
     <form
             {{#creationMode}}action="/admin/events/{{eventId}}/sponsors/create"{{/creationMode}}
@@ -45,7 +45,7 @@
             <input class="form-control" type="text" name="subscriptionDate" value="{{eventSponsoring.subscriptionDate}}"/>
         </div>
         <div class="col-12 mb-3 text-center">
-            <input type="submit" class="btn btn-outline-primary expand" value="{{#i18n}}admin.event.sponsors.save{{/i18n}}"/>
+            <input type="submit" class="btn btn-outline-primary expand" value="{{#i18n}}common.actions.save{{/i18n}}"/>
         </div>
     </form>
 </div>

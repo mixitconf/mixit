@@ -10,7 +10,7 @@
               class="text-center"
               onsubmit="return confirm('{{#i18n}}admin.post.delete.confirm{{/i18n}}');">
             <input type="hidden" name="id" value="{{mailing.id}}"/>
-            <input type="submit" class="btn-primary btn mxt-btn-primary" value="{{#i18n}}admin.post.delete{{/i18n}}"/>
+            <input type="submit" class="btn-primary btn mxt-btn-primary" value="{{#i18n}}common.actions.delete{{/i18n}}"/>
         </form>{{/mailing.id}}
     <form method="post" onsubmit="return confirm('{{#i18n}}mailing.confirm{{/i18n}}');" id="editForm">
         <input type="hidden" name="id" value="{{#mailing.id}}{{mailing.id}}{{/mailing.id}}"/>
@@ -46,7 +46,7 @@
         <div class="text-center">
             <button type="submit"
                     onclick="document.getElementById('editForm').action='/admin/mailings'"
-                    class="btn btn-outline-primary">{{#i18n}}mailing.save{{/i18n}}</button>
+                    class="btn btn-outline-primary">{{#i18n}}common.actions.save{{/i18n}}</button>
 
             <button type="submit"
                     onclick="document.getElementById('editForm').action='/admin/mailings/send'"

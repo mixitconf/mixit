@@ -140,11 +140,24 @@ fun String.camelCase() = this
 
 fun String.toUrlPath() = URLEncoder.encode(this, "UTF-8").replace("+", "%20")
 
-fun String.encodeToMd5(): String? = if (isNullOrEmpty()) null else hex(MessageDigest.getInstance("MD5").digest(toByteArray(Charset.forName("CP1252"))))
+fun String.encodeToMd5(): String? =
+    if (isNullOrEmpty()) null else hex(MessageDigest.getInstance("MD5").digest(toByteArray(Charset.forName("CP1252"))))
 
 fun String.encodeToBase64(): String? = if (isNullOrEmpty()) null else Base64.getEncoder().encodeToString(toByteArray())
 
-fun String.decodeFromBase64(): String? = if (isNullOrEmpty()) null else String(Base64.getDecoder().decode(toByteArray()))
+fun String.decodeFromBase64(): String? =
+    if (isNullOrEmpty()) null else String(Base64.getDecoder().decode(toByteArray()))
+
+fun String?.toNumber(): Int? {
+    if (isNullOrEmpty()){
+        return null
+    }
+    return try {
+        this.toInt()
+    } catch (e: NumberFormatException) {
+        null
+    }
+}
 
 fun String.encrypt(key: String, initVector: String): String? {
     try {

@@ -44,7 +44,7 @@
             </label>
         </div>
         <div class="col-12 mb-3 text-center">
-            <input type="submit" class="btn btn-outline-primary expand" value="{{#i18n}}admin.event.save{{/i18n}}"/>
+            <input type="submit" class="btn btn-outline-primary expand" value="{{#i18n}}common.actions.save{{/i18n}}"/>
         </div>
 
         {{^creationMode}}
@@ -53,13 +53,13 @@
 
             <div class="callout">
                 <p>{{#i18n}}admin.event.organizations.count{{/i18n}} : <b>{{event.organizations.size}}</b> |
-                    <a href="/admin/events/{{event.id}}/organizations/create">{{#i18n}}admin.event.organizations.create{{/i18n}}</a></p>
+                    <a href="/admin/events/{{event.id}}/organizations/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
 
                 <table class="table table-bordered table-striped">
                     <thead>
                     <tr>
                         <th>{{#i18n}}admin.event.organizations.table.login{{/i18n}}</th>
-                        <th>{{#i18n}}admin.event.organizations.table.actions{{/i18n}}</th>
+                        <th>{{#i18n}}common.actions{{/i18n}}</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -67,7 +67,7 @@
                         <tr>
                             <td>{{organizationLogin}}</td>
                             <td>
-                                <a href="/admin/events/{{event.id}}/organizations/edit/{{organizationLogin}}">{{#i18n}}admin.event.organizations.update{{/i18n}}</a>
+                                <a href="/admin/events/{{event.id}}/organizations/edit/{{organizationLogin}}">{{#i18n}}common.actions.update{{/i18n}}</a>
                             </td>
                         </tr>
                     {{/event.organizations}}
@@ -78,7 +78,7 @@
             <h3 class="mt-3">{{#i18n}}admin.event.sponsors.text{{/i18n}}&nbsp;</h3>
 
             <div class="callout">
-                <p>{{#i18n}}admin.events.sponsors.count{{/i18n}} : <b>{{event.sponsors.size}}</b> | <a href="/admin/events/{{event.id}}/sponsors/create">{{#i18n}}admin.events.actions.create{{/i18n}}</a></p>
+                <p>{{#i18n}}admin.events.sponsors.count{{/i18n}} : <b>{{event.sponsors.size}}</b> | <a href="/admin/events/{{event.id}}/sponsors/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
 
                 <table class="table table-bordered table-striped">
                     <thead>
@@ -86,7 +86,7 @@
                         <th>{{#i18n}}admin.event.sponsors.table.level{{/i18n}}</th>
                         <th>{{#i18n}}admin.event.sponsors.table.sponsorId{{/i18n}}</th>
                         <th>{{#i18n}}admin.event.sponsors.table.subdate{{/i18n}}</th>
-                        <th>{{#i18n}}admin.event.sponsors.table.actions{{/i18n}}</th>
+                        <th>{{#i18n}}common.actions{{/i18n}}</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -96,7 +96,7 @@
                             <td>{{sponsorId}}</td>
                             <td>{{subscriptionDate}}</td>
                             <td>
-                                <a href="/admin/events/{{event.id}}/sponsors/edit/{{sponsorId}}/{{level}}">{{#i18n}}admin.events.actions.update{{/i18n}}</a>
+                                <a href="/admin/events/{{event.id}}/sponsors/edit/{{sponsorId}}/{{level}}">{{#i18n}}common.actions.update{{/i18n}}</a>
                             </td>
                         </tr>
                     {{/event.sponsors}}
@@ -108,13 +108,13 @@
 
             <div class="callout">
                 <p>{{#i18n}}admin.event.volunteers.count{{/i18n}} : <b>{{event.volunteers.size}}</b> |
-                    <a href="/admin/events/{{event.id}}/volunteers/create">{{#i18n}}admin.event.volunteers.create{{/i18n}}</a></p>
+                    <a href="/admin/events/{{event.id}}/volunteers/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
 
                 <table class="table table-bordered table-striped">
                     <thead>
                     <tr>
                         <th>{{#i18n}}admin.event.volunteers.table.login{{/i18n}}</th>
-                        <th>{{#i18n}}admin.event.volunteers.table.actions{{/i18n}}</th>
+                        <th>{{#i18n}}common.actions{{/i18n}}</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -122,7 +122,7 @@
                         <tr>
                             <td>{{volunteerLogin}}</td>
                             <td>
-                                <a href="/admin/events/{{event.id}}/volunteers/edit/{{volunteerLogin}}">{{#i18n}}admin.event.volunteers.update{{/i18n}}</a>
+                                <a href="/admin/events/{{event.id}}/volunteers/edit/{{volunteerLogin}}">{{#i18n}}common.actions.update{{/i18n}}</a>
                             </td>
                         </tr>
                     {{/event.volunteers}}

@@ -7,7 +7,7 @@
 <div class="container mxt-wrapper--page-content">
     {{#talk.id}}<form class="text-center mb-4" action="/admin/talks/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.talk.delete.confirm{{/i18n}}');">
         <input type="hidden" name="id" value="{{talk.id}}"/>
-        <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}admin.talk.delete{{/i18n}}"/>
+        <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}common.actions.delete{{/i18n}}"/>
     </form>{{/talk.id}}
     <form action="/admin/talks" method="post">
         {{#talk.id}}<input type="hidden" name="id" value="{{talk.id}}"/>{{/talk.id}}

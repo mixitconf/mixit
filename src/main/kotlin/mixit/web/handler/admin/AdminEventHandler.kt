@@ -35,6 +35,7 @@ class AdminEventHandler(
         const val TEMPLATE_ORGANIZATION = "admin-event-organization"
         const val TEMPLATE_VOLUNTEER = "admin-event-volunteer"
         const val LIST_URI = "/admin/events"
+        const val CURRENT_EVENT = "2022"
     }
 
     fun adminEvents(req: ServerRequest) =
