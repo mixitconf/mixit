@@ -1273,6 +1273,11 @@
                 "level": "GOLD",
                 "sponsorId": "hackyourjob",
                 "subscriptionDate": "2021-12-15"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "peaks-sponsor",
+                "subscriptionDate": "2022-01-20"
             }
         ],
         "start": "2022-05-24",
