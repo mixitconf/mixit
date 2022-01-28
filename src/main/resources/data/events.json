@@ -1230,7 +1230,10 @@
         "current": true,
         "end": "2022-05-25",
         "id": "mixit22",
-        "organizations": [],
+        "organizations": [
+            { "organizationLogin": "hackyourjob"},
+            { "organizationLogin": "hiit"}
+        ],
         "photoUrls": [],
         "schedulingFileUrl": null,
         "sponsors": [
@@ -1273,6 +1276,11 @@
                 "level": "GOLD",
                 "sponsorId": "hackyourjob",
                 "subscriptionDate": "2021-12-15"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "peaks-sponsor",
+                "subscriptionDate": "2022-01-20"
             }
         ],
         "start": "2022-05-24",

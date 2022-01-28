@@ -5,26 +5,32 @@
 </div>
 
 <div class="container mxt-wrapper--page-content">
-    <p>{{#i18n}}admin.donations.donor.count{{/i18n}} : <b>{{donations.size}}</b> | <a href="/admin/mixette-donation/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
+    <h2>{{userDonation.name}}</h2>
+
+    <ul>
+        <li>{{#i18n}}admin.donations.orga.number{{/i18n}} : <strong>{{userDonation.number}}</strong></li>
+        <li>{{#i18n}}admin.donations.quantity{{/i18n}} : <strong>{{userDonation.quantity}} Mixettes</strong></li>
+        <li>{{#i18n}}admin.donations.amount{{/i18n}} : <strong>{{userDonation.amount}}</strong></li>
+    </ul>
+
+    <p>{{#i18n}}admin.donations.donor.count{{/i18n}} : <b>{{donations.size}}</b></p>
     <table class="table-striped table table-bordered">
       <thead>
         <tr>
             <th>{{#i18n}}admin.donations.login{{/i18n}}</th>
             <th>{{#i18n}}admin.donations.name{{/i18n}}</th>
-            <th>{{#i18n}}admin.donations.donor.number{{/i18n}}</th>
-            <th>{{#i18n}}admin.donations.amount{{/i18n}}</th>
+            <th>{{#i18n}}admin.donations.quantity{{/i18n}}</th>
             <th>{{#i18n}}common.actions{{/i18n}}</th>
         </tr>
       </thead>
       <tbody>
         {{#donations}}
         <tr>
-            <td>{{login}}</td>
-            <td>{{name}}</td>
-            <td>{{number}}</td>
-            <td>{{amount}}</td>
+            <td>{{organizationLogin}}</td>
+            <td>{{organizationName}}</td>
+            <td>{{quantity}}</td>
             <td>
-                <a href="/admin/users/edit/{{login}}">{{#i18n}}common.actions.update{{/i18n}}</a>
+                <a href="/admin/mixette-donation/edit/{{id}}">{{#i18n}}common.actions.update{{/i18n}}</a>
             </td>
         </tr>
         {{/donations}}
