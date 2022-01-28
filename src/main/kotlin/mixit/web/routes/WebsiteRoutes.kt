@@ -157,6 +157,8 @@ class WebsiteRoutes(
                 GET("/mixette-organization", adminMixetteHandler::adminOrganizationDonations)
                 GET("/mixette-donor", adminMixetteHandler::adminDonorDonations)
                 GET("/mixette-donation/edit/{id}", adminMixetteHandler::editDonation)
+                GET("/mixette-donation/orga/{login}", adminMixetteHandler::editOrga)
+                GET("/mixette-donation/donor/{login}", adminMixetteHandler::editDonor)
                 GET("/mixette-donation/create", adminMixetteHandler::addDonation)
             }
 
@@ -198,6 +200,8 @@ class WebsiteRoutes(
                 POST("/mailings", mailingHandler::saveMailing)
                 POST("/mailings/send", mailingHandler::sendMailing)
                 POST("/mailings/delete", mailingHandler::deleteMailing)
+                POST("/mixette-donation/{id}/delete", adminMixetteHandler::adminDeleteDonation)
+                POST("/mixette-donation", adminMixetteHandler::adminSaveDonation)
             }
         }
 

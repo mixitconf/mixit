@@ -1,0 +1,60 @@
+{{> header}}
+
+<div class="mxt-wrapper--header">
+    <h1 class="text-center pt-5">{{#i18n}}admin.donations.title{{/i18n}}</h1>
+</div>
+
+<div class="container mxt-wrapper--page-content">
+    {{#hasErrors}}
+        <div class="row">
+            <div class="alert alert-danger mb-3">
+                {{#errors.entrySet}}
+                    {{#i18n}}{{value}}{{/i18n}}<br>
+                {{/errors.entrySet}}
+            </div>
+        </div>
+    {{/hasErrors}}
+
+    {{^creationMode}}<form action="/admin/mixette-donation/{{donation.id}}/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.donations.delete.confirm{{/i18n}}');">
+        <input type="hidden" name="id" value="{{donation.id}}"/>
+        <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}common.actions.delete{{/i18n}}"/>
+    </form>{{/creationMode}}
+    <form action="/admin/mixette-donation" method="post" class="row mt-3">
+        <input type="hidden" name="id" value="{{^creationMode}}{{donation.id}}{{/creationMode}}"/>
+        <div class="col-12 mb-3">
+            <label class="form-label {{#errors.organizationLogin}}is-invalid{{/errors.organizationLogin}}">{{#i18n}}admin.donations.orga{{/i18n}}</label>
+            {{#creationMode}}
+                <select class="form-control {{#errors.organizationLogin}}is-invalid{{/errors.organizationLogin}}" name="organizationLogin" required>
+                    {{#organizations}}
+                        <option value="{{login}}" {{#selected}}selected{{/selected}}>{{name}}</option>
+                    {{/organizations}}
+                </select>
+            {{/creationMode}}
+            {{^creationMode}}
+                <input class="form-control" type="text" value="{{donation.organizationName}}" disabled="true"/>
+                <input type="hidden" name="organizationLogin" value="{{donation.organizationLogin}}"/>
+            {{/creationMode}}
+        </div>
+        <div class="col-12 mb-3">
+            <label class="form-label {{#errors.userLogin}}is-invalid{{/errors.userLogin}}">{{#i18n}}admin.donations.donor{{/i18n}} <a href="/admin/users">{{#i18n}}admin.donations.login.text{{/i18n}}</a> </label>
+            {{#creationMode}}
+                <input class="form-control {{#errors.userLogin}}is-invalid{{/errors.userLogin}}"
+                       type="text" name="userLogin" value="{{donation.userLogin}}" required />
+            {{/creationMode}}
+            {{^creationMode}}
+                <input class="form-control" type="text" value="{{donation.userLogin}}" disabled="true" />
+                <input type="hidden" name="userLogin" value="{{donation.userLogin}}"/>
+            {{/creationMode}}
+        </div>
+        <div class="col-12 mb-3">
+            <label class="form-label {{#errors.quantity}}is-invalid{{/errors.quantity}}">{{#i18n}}admin.donations.quantity{{/i18n}}&nbsp;</label>
+            <input class="form-control {{#errors.quantity}}is-invalid{{/errors.quantity}}"
+                   type="number" name="quantity" value="{{donation.quantity}}"/>
+        </div>
+        <div class="col-12 mb-3 text-center">
+            <input type="submit" class="btn btn-outline-primary expand" value="{{#i18n}}common.actions.save{{/i18n}}"/>
+        </div>
+    </form>
+</div>
+
+{{> footer}}
