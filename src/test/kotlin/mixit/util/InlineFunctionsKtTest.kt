@@ -1,8 +1,8 @@
 package mixit.util
 
-import mixit.model.Role
-import mixit.model.User
-import org.junit.jupiter.api.Assertions.*
+import mixit.user.model.Role
+import mixit.user.model.User
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
 internal class InlineFunctionsKtTest {

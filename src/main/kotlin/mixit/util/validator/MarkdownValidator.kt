@@ -1,6 +1,6 @@
 package mixit.util.validator
 
-import mixit.web.StringEscapers
+import mixit.util.StringEscapers
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
 

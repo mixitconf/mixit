@@ -3,11 +3,12 @@ package mixit.integration
 import com.ninjasquad.springmockk.SpykBean
 import io.mockk.every
 import io.mockk.verify
-import mixit.model.Role
-import mixit.model.User
+import java.time.LocalDateTime
+import mixit.security.model.AuthenticationService
+import mixit.user.model.Role
+import mixit.user.model.User
+import mixit.util.DuplicateException
 import mixit.util.encodeToBase64
-import mixit.web.service.AuthenticationService
-import mixit.web.service.DuplicateException
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
@@ -16,7 +17,6 @@ import org.springframework.http.MediaType
 import org.springframework.test.web.reactive.server.WebTestClient
 import org.springframework.web.reactive.function.BodyInserters
 import reactor.core.publisher.Mono
-import java.time.LocalDateTime
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class AuthenticationTest(@Autowired val client: WebTestClient) {

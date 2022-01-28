@@ -2,6 +2,7 @@ package mixit.util
 
 import io.mockk.junit5.MockKExtension
 import mixit.MixitProperties
+import mixit.security.model.Cryptographer
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith

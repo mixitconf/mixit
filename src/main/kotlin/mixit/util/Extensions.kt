@@ -18,7 +18,7 @@ import java.util.stream.IntStream
 import javax.crypto.Cipher
 import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.SecretKeySpec
-import mixit.model.Language
+import mixit.talk.model.Language
 import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.http.MediaType.APPLICATION_XML
 import org.springframework.http.MediaType.TEXT_HTML

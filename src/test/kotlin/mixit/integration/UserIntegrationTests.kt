@@ -1,6 +1,6 @@
 package mixit.integration
 
-import mixit.model.User
+import mixit.user.model.User
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
