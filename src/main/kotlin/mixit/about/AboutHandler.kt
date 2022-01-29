@@ -8,7 +8,6 @@ import mixit.user.handler.toDto
 import mixit.user.model.Role
 import mixit.user.model.User
 import mixit.user.repository.UserRepository
-import mixit.util.MarkdownConverter
 import mixit.util.language
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.BodyExtractors
@@ -19,8 +18,7 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 class AboutHandler(
     val userRepository: UserRepository,
     val postRepository: PostRepository,
-    val talkRepository: TalkRepository,
-    val markdownConverter: MarkdownConverter
+    val talkRepository: TalkRepository
 ) {
 
     fun findAboutView(req: ServerRequest) = userRepository
@@ -32,8 +30,8 @@ class AboutHandler(
             ok().render(
                 "about",
                 mapOf(
-                    Pair("staff", staff.map { it.toDto(req.language(), markdownConverter) }),
-                    Pair("inactiveStaff", staffInPause.map { it.toDto(req.language(), markdownConverter) }),
+                    Pair("staff", staff.map { it.toDto(req.language()) }),
+                    Pair("inactiveStaff", staffInPause.map { it.toDto(req.language()) }),
                     Pair("title", "about.title")
                 )
             )
@@ -67,7 +65,7 @@ class AboutHandler(
                     val criteria = formData["search"]!!.trim().split(" ")
 
                     val users = userRepository.findFullText(criteria)
-                        .map { user -> user.toDto(req.language(), markdownConverter, criteria) }
+                        .map { user -> user.toDto(req.language(), criteria) }
 
                     val articles = postRepository.findFullText(criteria).map { article ->
                         val user = User("MiXiT", "MiXiT", "MiXiT", "MiXiT")

@@ -4,9 +4,9 @@ import mixit.talk.model.Language
 import mixit.user.model.Link
 import mixit.user.model.Role
 import mixit.user.model.User
-import mixit.util.MarkdownConverter
 import mixit.util.camelCase
 import mixit.util.markFoundOccurrences
+import mixit.util.toHTML
 import mixit.util.toUrlPath
 
 class SpeakerStarDto(
@@ -34,14 +34,14 @@ class UserDto(
     val path: String = login.toUrlPath()
 )
 
-fun User.toDto(language: Language, markdownConverter: MarkdownConverter, searchTerms: List<String> = emptyList()) =
+fun User.toDto(language: Language, searchTerms: List<String> = emptyList()) =
     UserDto(
         login,
         firstname.markFoundOccurrences(searchTerms),
         lastname.markFoundOccurrences(searchTerms),
         email,
         company,
-        markdownConverter.toHTML(description[language] ?: "").markFoundOccurrences(searchTerms),
+        description[language]?.toHTML()?.markFoundOccurrences(searchTerms) ?: "",
         emailHash,
         photoUrl,
         role,

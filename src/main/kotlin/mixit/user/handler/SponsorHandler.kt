@@ -6,7 +6,6 @@ import mixit.event.repository.EventRepository
 import mixit.talk.model.Language
 import mixit.user.model.User
 import mixit.user.repository.UserRepository
-import mixit.util.MarkdownConverter
 import mixit.util.language
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
@@ -15,8 +14,7 @@ import org.springframework.web.reactive.function.server.ServerResponse
 @Component
 class SponsorHandler(
     private val userRepository: UserRepository,
-    private val eventRepository: EventRepository,
-    private val markdownConverter: MarkdownConverter
+    private val eventRepository: EventRepository
 ) {
 
     fun viewWithSponsors(year: Int, req: ServerRequest) =
@@ -60,7 +58,7 @@ class SponsorHandler(
         language: Language,
         sponsorshipLevel: SponsorshipLevel
     ): List<EventSponsoringDto>? =
-        sponsorsByEvent[sponsorshipLevel]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, language, markdownConverter) }
+        sponsorsByEvent[sponsorshipLevel]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, language) }
 
     fun viewWithSponsors(view: String, spolights: Array<SponsorshipLevel>, title: String?, year: Int, req: ServerRequest) =
         eventRepository

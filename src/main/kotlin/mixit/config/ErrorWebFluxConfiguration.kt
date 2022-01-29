@@ -2,7 +2,6 @@ package mixit.config
 
 import mixit.MixitProperties
 import mixit.util.ErrorWebFluxExceptionHandler
-import mixit.util.MarkdownConverter
 import org.springframework.boot.autoconfigure.web.ResourceProperties
 import org.springframework.boot.autoconfigure.web.ServerProperties
 import org.springframework.boot.web.reactive.error.ErrorAttributes
@@ -32,15 +31,18 @@ class ErrorWebFluxConfiguration(
     @Bean
     @Primary
     @Order(-1)
-    fun errorWebExceptionHandler(errorAttributes: ErrorAttributes, messageSource: MessageSource, properties: MixitProperties, markdownConverter: MarkdownConverter): ErrorWebExceptionHandler {
+    fun errorWebExceptionHandler(
+        errorAttributes: ErrorAttributes,
+        messageSource: MessageSource,
+        properties: MixitProperties
+    ): ErrorWebExceptionHandler {
         val exceptionHandler = ErrorWebFluxExceptionHandler(
             errorAttributes,
             this.resourceProperties,
             this.serverProperties.error,
             this.applicationContext,
             messageSource,
-            properties,
-            markdownConverter
+            properties
         )
 
         exceptionHandler.setViewResolvers(this.viewResolvers)

@@ -19,6 +19,9 @@ import javax.crypto.Cipher
 import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.SecretKeySpec
 import mixit.talk.model.Language
+import org.commonmark.ext.autolink.AutolinkExtension
+import org.commonmark.parser.Parser
+import org.commonmark.renderer.html.HtmlRenderer
 import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.http.MediaType.APPLICATION_XML
 import org.springframework.http.MediaType.TEXT_HTML
@@ -149,7 +152,7 @@ fun String.decodeFromBase64(): String? =
     if (isNullOrEmpty()) null else String(Base64.getDecoder().decode(toByteArray()))
 
 fun String?.toNumber(): Int? {
-    if (isNullOrEmpty()){
+    if (isNullOrEmpty()) {
         return null
     }
     return try {
@@ -178,6 +181,11 @@ fun String.decrypt(key: String, initVector: String): String? {
     }
     return null
 }
+
+val parser: Parser by lazy { Parser.builder().extensions(listOf(AutolinkExtension.create())).build() }
+val renderer: HtmlRenderer by lazy { HtmlRenderer.builder().build() }
+
+fun String.toHTML(): String = if (this.isEmpty()) "" else renderer.render(parser.parse(this))
 
 private fun cipher(key: String, initVector: String, mode: Int): Cipher {
     val iv = IvParameterSpec(initVector.toByteArray(charset("UTF-8")))

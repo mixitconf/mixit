@@ -22,7 +22,6 @@ import mixit.user.handler.AdminUserHandler
 import mixit.user.handler.SponsorHandler
 import mixit.user.handler.UserHandler
 import mixit.util.AdminUtils
-import mixit.util.MarkdownConverter
 import mixit.util.generateModel
 import mixit.util.locale
 import org.slf4j.LoggerFactory
@@ -58,8 +57,7 @@ class WebsiteRoutes(
     private val userHandler: UserHandler,
     private val messageSource: MessageSource,
     private val properties: MixitProperties,
-    private val objectMapper: ObjectMapper,
-    private val markdownConverter: MarkdownConverter
+    private val objectMapper: ObjectMapper
 ) {
 
     private val logger = LoggerFactory.getLogger(WebsiteRoutes::class.java)
@@ -231,7 +229,7 @@ class WebsiteRoutes(
         val locale: Locale = request.locale()
         val path = request.uri().path
         request.session().flatMap { session ->
-            val model = generateModel(properties, path, locale, session, messageSource, markdownConverter)
+            val model = generateModel(properties, path, locale, session, messageSource)
             next.handle(request).flatMap { if (it is RenderingResponse) RenderingResponse.from(it).modelAttributes(model).build() else it.toMono() }
         }
     }

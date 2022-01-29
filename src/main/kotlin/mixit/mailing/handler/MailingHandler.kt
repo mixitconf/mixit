@@ -15,11 +15,11 @@ import mixit.security.model.Cryptographer
 import mixit.user.model.Role
 import mixit.user.model.User
 import mixit.user.repository.UserRepository
-import mixit.util.MarkdownConverter
 import mixit.util.email.EmailService
 import mixit.util.enumMatcher
 import mixit.util.extractFormData
 import mixit.util.seeOther
+import mixit.util.toHTML
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
@@ -32,7 +32,6 @@ class MailingHandler(
     val userRepository: UserRepository,
     val cryptographer: Cryptographer,
     val mailingRepository: MailingRepository,
-    val markdownConverter: MarkdownConverter,
     val properties: MixitProperties,
     val emailService: EmailService
 ) {
@@ -82,7 +81,7 @@ class MailingHandler(
                 ok().render(
                     MailingPages.EMAIL.template, mapOf(
                         Pair("user", User().copy(firstname = "Bot")),
-                        Pair("message", markdownConverter.toHTML(it.content))
+                        Pair("message", it.content.toHTML())
                     )
                 )
             }
@@ -131,7 +130,7 @@ class MailingHandler(
                             user,
                             Locale.FRANCE,
                             mailing.title,
-                            mapOf(Pair("message", markdownConverter.toHTML(mailing.content)))
+                            mapOf(Pair("message", mailing.content.toHTML()))
                         )
                     } catch (e: Exception) {
                         logger.error("Error on mailing sent to $email", e)

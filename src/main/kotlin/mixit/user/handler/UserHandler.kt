@@ -15,7 +15,6 @@ import mixit.user.model.Role
 import mixit.user.model.User
 import mixit.user.model.anonymize
 import mixit.user.repository.UserRepository
-import mixit.util.MarkdownConverter
 import mixit.util.encodeToMd5
 import mixit.util.extractFormData
 import mixit.util.json
@@ -41,7 +40,6 @@ class UserHandler(
     private val repository: UserRepository,
     private val talkRepository: TalkRepository,
     private val ticketRepository: TicketRepository,
-    private val markdownConverter: MarkdownConverter,
     private val cryptographer: Cryptographer,
     private val properties: MixitProperties,
     private val emailValidator: EmailValidator,
@@ -128,7 +126,7 @@ class UserHandler(
             ok().render(
                 "user-edit",
                 mapOf(
-                    Pair("user", user.toDto(req.language(), markdownConverter)),
+                    Pair("user", user.toDto(req.language())),
                     Pair("usermail", cryptographer.decrypt(user.email)),
                     Pair("description-fr", user.description[Language.FRENCH]),
                     Pair("description-en", user.description[Language.ENGLISH]),
@@ -145,7 +143,7 @@ class UserHandler(
                     ok().render(
                         "user",
                         mapOf(
-                            Pair("user", user.toDto(req.language(), markdownConverter)),
+                            Pair("user", user.toDto(req.language())),
                             Pair("hasLotteryTicket", true),
                             Pair("canUpdateProfile", true),
                             Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8))
@@ -156,7 +154,7 @@ class UserHandler(
                     ok().render(
                         "user",
                         mapOf(
-                            Pair("user", user.toDto(req.language(), markdownConverter)),
+                            Pair("user", user.toDto(req.language())),
                             Pair("canUpdateProfile", true),
                             Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8))
                         )
@@ -171,7 +169,7 @@ class UserHandler(
                     ok().render(
                         "user",
                         mapOf(
-                            Pair("user", user.toDto(req.language(), markdownConverter)),
+                            Pair("user", user.toDto(req.language())),
                             Pair("talks", talkDtos),
                             Pair("hasTalks", talkDtos.isNotEmpty()),
                             Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8))
@@ -286,7 +284,7 @@ class UserHandler(
     fun check(req: ServerRequest) = ok().json().body(
         repository.findByNonEncryptedEmail(req.pathVariable("email"))
             .filter { it.token == req.headers().header("token").get(0) }
-            .map { it.toDto(req.language(), markdownConverter) }
+            .map { it.toDto(req.language()) }
     )
 }
 

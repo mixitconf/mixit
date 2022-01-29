@@ -5,7 +5,6 @@ import mixit.event.model.EventSponsoring
 import mixit.event.model.SponsorshipLevel
 import mixit.talk.model.Language
 import mixit.user.model.User
-import mixit.util.MarkdownConverter
 
 data class EventSponsoringDto(
     val level: SponsorshipLevel,
@@ -22,8 +21,8 @@ data class SponsorDto(
     val isAbsoluteLogo: Boolean = photoUrl.startsWith("http")
 )
 
-fun EventSponsoring.toDto(sponsor: User, language: Language, markdownConverter: MarkdownConverter) =
-    EventSponsoringDto(level, sponsor.toDto(language, markdownConverter), subscriptionDate)
+fun EventSponsoring.toDto(sponsor: User, language: Language) =
+    EventSponsoringDto(level, sponsor.toDto(language), subscriptionDate)
 
 fun EventSponsoring.toSponsorDto(sponsor: User) =
     SponsorDto(

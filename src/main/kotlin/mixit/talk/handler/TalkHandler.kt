@@ -13,7 +13,6 @@ import mixit.user.handler.toDto
 import mixit.user.handler.toSponsorDto
 import mixit.user.model.User
 import mixit.user.repository.UserRepository
-import mixit.util.MarkdownConverter
 import mixit.util.extractFormData
 import mixit.util.json
 import mixit.util.language
@@ -38,7 +37,6 @@ class TalkHandler(
     private val userRepository: UserRepository,
     private val eventRepository: EventRepository,
     private val properties: MixitProperties,
-    private val markdownConverter: MarkdownConverter,
     private val favoriteRepository: FavoriteRepository,
     private val maxLengthValidator: MaxLengthValidator,
     private val markdownValidator: MarkdownValidator
@@ -161,14 +159,29 @@ class TalkHandler(
                     "talk",
                     mapOf(
                         Pair("talk", talk.toDto(req.language(), speakers!!)),
-                        Pair("speakers", speakers.map { speaker -> speaker.toDto(req.language(), markdownConverter) }.sortedBy { talk.speakerIds.indexOf(it.login) }),
+                        Pair(
+                            "speakers",
+                            speakers.map { speaker -> speaker.toDto(req.language()) }
+                                .sortedBy { talk.speakerIds.indexOf(it.login) }),
                         Pair("othertalks", otherTalks),
-                        Pair("favorites", if (currentUserEmail == null) null else favoriteRepository.findByEmailAndTalk(currentUserEmail, talk.id!!)),
+                        Pair(
+                            "favorites",
+                            if (currentUserEmail == null) null else favoriteRepository.findByEmailAndTalk(
+                                currentUserEmail,
+                                talk.id!!
+                            )
+                        ),
                         Pair("year", year),
                         Pair("hasOthertalks", otherTalks.map { it.size > 0 }),
                         Pair("title", "talk.html.title|${talk.title}"),
                         Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
-                        Pair("vimeoPlayer", if (talk.video?.startsWith("https://vimeo.com/") == true) talk.video.replace("https://vimeo.com/", "https://player.vimeo.com/video/") else null),
+                        Pair(
+                            "vimeoPlayer",
+                            if (talk.video?.startsWith("https://vimeo.com/") == true) talk.video.replace(
+                                "https://vimeo.com/",
+                                "https://player.vimeo.com/video/"
+                            ) else null
+                        ),
                         Pair("sponsors", sponsors)
                     )
                 )
@@ -187,7 +200,10 @@ class TalkHandler(
             "talk-edit",
             mapOf(
                 Pair("talk", talk.toDto(req.language(), speakers!!, convertRandomLabel = false)),
-                Pair("speakers", speakers.map { speaker -> speaker.toDto(req.language(), markdownConverter) }.sortedBy { talk.speakerIds.indexOf(it.login) }),
+                Pair(
+                    "speakers",
+                    speakers.map { speaker -> speaker.toDto(req.language()) }
+                        .sortedBy { talk.speakerIds.indexOf(it.login) }),
                 Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
                 Pair("hasErrors", errors.isNotEmpty()),
                 Pair("errors", errors),
