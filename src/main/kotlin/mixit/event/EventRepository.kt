@@ -1,4 +1,4 @@
-package mixit.event.repository
+package mixit.event
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
@@ -36,9 +36,9 @@ class EventRepository(
 
     fun count() = template.count<Event>()
 
-    fun findAll() = template.find<Event>(Query().with(Sort.by("year")))
+    fun findAll() = template.find<Event>(Query().with(Sort.by("year"))).doOnComplete { logger.info("Load all events")  }
 
-    fun findOne(id: String) = template.findById<Event>(id)
+    fun findOne(id: String) = template.findById<Event>(id).doOnSuccess {  logger.info("Try to find event $id") }
 
     fun deleteAll() = template.remove<Event>(Query())
 

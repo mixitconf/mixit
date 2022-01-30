@@ -7,8 +7,8 @@ import mixit.MixitProperties
 import mixit.about.AboutHandler
 import mixit.blog.handler.AdminPostHandler
 import mixit.blog.handler.BlogHandler
-import mixit.event.handler.AdminEventHandler
-import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
+import mixit.event.AdminEventHandler
+import mixit.event.AdminEventHandler.Companion.CURRENT_EVENT
 import mixit.event.model.Event
 import mixit.event.model.SponsorshipLevel
 import mixit.mailing.handler.MailingHandler
@@ -88,6 +88,7 @@ class WebsiteRoutes(
                     it
                 )
             }
+            GET("/admin", AdminUtils::admin)
             GET("/faq", aboutHandler::faqView)
             GET("/come", aboutHandler::comeToMixitView)
             GET("/schedule", talkHandler::scheduleView)
@@ -143,12 +144,10 @@ class WebsiteRoutes(
             }
 
             "/admin".nest {
-                GET("/", AdminUtils::admin)
                 GET("/ticketing", adminTicketingHandler::adminTicketing)
                 GET("/mailings", mailingHandler::listMailing)
                 GET("/mailings/create", mailingHandler::createMailing)
                 GET("/mailings/edit/{id}", mailingHandler::editMailing)
-                DELETE("/")
                 GET("/talks/edit/{slug}", adminTalkHandler::editTalk)
                 GET("/talks") { adminTalkHandler.adminTalks(it, AdminTalkHandler.LAST_TALK_EVENT) }
                 GET("/talks/create", adminTalkHandler::createTalk)
@@ -165,6 +164,9 @@ class WebsiteRoutes(
                 GET("/events/{eventId}/volunteers/edit/{organizationLogin}", adminEventHandler::editEventVolunteer)
                 GET("/events/{eventId}/volunteers/create", adminEventHandler::createEventVolunteer)
                 GET("/events/create", adminEventHandler::createEvent)
+                // TODO move and rewrite
+                GET("/events/cache/invalidate", adminEventHandler::invalidateCache)
+
                 GET("/blog", adminPostHandler::adminBlog)
                 GET("/post/edit/{id}", adminPostHandler::editPost)
                 GET("/post/create", adminPostHandler::createPost)

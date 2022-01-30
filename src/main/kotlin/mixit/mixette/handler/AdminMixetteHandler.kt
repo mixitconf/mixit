@@ -1,8 +1,8 @@
 package mixit.mixette.handler
 
 import mixit.MixitProperties
-import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
-import mixit.event.repository.EventRepository
+import mixit.event.AdminEventHandler.Companion.CURRENT_EVENT
+import mixit.event.EventRepository
 import mixit.mixette.model.MixetteDonation
 import mixit.mixette.repository.MixetteDonationRepository
 import mixit.user.model.User

@@ -1,8 +1,8 @@
 package mixit.user.handler
 
+import mixit.event.EventRepository
 import mixit.event.model.EventSponsoring
 import mixit.event.model.SponsorshipLevel
-import mixit.event.repository.EventRepository
 import mixit.talk.model.Language
 import mixit.user.model.User
 import mixit.user.repository.UserRepository

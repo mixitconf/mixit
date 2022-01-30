@@ -1,4 +1,4 @@
-package mixit.event.handler
+package mixit.event
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import java.time.LocalDate
@@ -8,22 +8,23 @@ import mixit.event.model.EventOrganization
 import mixit.event.model.EventSponsoring
 import mixit.event.model.EventVolunteer
 import mixit.event.model.SponsorshipLevel
-import mixit.event.repository.EventRepository
 import mixit.util.AdminUtils.toJson
 import mixit.util.AdminUtils.toLink
 import mixit.util.AdminUtils.toLinks
 import mixit.util.enumMatcher
 import mixit.util.extractFormData
+import mixit.util.json
 import mixit.util.seeOther
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
+import org.springframework.web.reactive.function.server.body
 import reactor.core.publisher.Mono
 
 @Component
 class AdminEventHandler(
-    private val eventRepository: EventRepository,
+    private val service: EventService,
     private val properties: MixitProperties,
     private val objectMapper: ObjectMapper
 ) {
@@ -38,17 +39,19 @@ class AdminEventHandler(
         const val CURRENT_EVENT = "2022"
     }
 
-    fun adminEvents(req: ServerRequest) =
-        ok().render(
+    fun adminEvents(req: ServerRequest): Mono<ServerResponse> {
+        val events = service.findAll().sort(Comparator.comparing { it.id }).map { it.toEvent() }
+        return ok().render(
             TEMPLATE_LIST,
-            mapOf(Pair("events", eventRepository.findAll()), Pair("title", "admin.events.title"))
+            mapOf(Pair("events", events), Pair("title", "admin.events.title"))
         )
+    }
 
     fun createEvent(req: ServerRequest): Mono<ServerResponse> =
         this.adminEvent()
 
     fun editEvent(req: ServerRequest): Mono<ServerResponse> =
-        eventRepository.findOne(req.pathVariable("eventId")).flatMap { this.adminEvent(it) }
+        service.findOne(req.pathVariable("eventId")).flatMap { this.adminEvent(it.toEvent()) }
 
     private fun adminEvent(event: Event = Event()) =
         ok().render(
@@ -64,10 +67,11 @@ class AdminEventHandler(
     fun adminSaveEvent(req: ServerRequest): Mono<ServerResponse> =
         req.extractFormData().flatMap { formData ->
             // We need to find the event in database
-            eventRepository
+            service
                 .findOne(formData["eventId"]!!)
+                .map { it.toEvent() }
                 .flatMap { event ->
-                    eventRepository.save(
+                    service.save(
                         Event(
                             event.id,
                             LocalDate.parse(formData["start"]!!),
@@ -83,7 +87,7 @@ class AdminEventHandler(
                     ).then(seeOther("${properties.baseUri}$LIST_URI"))
                 }
                 .switchIfEmpty(
-                    eventRepository.save(
+                    service.save(
                         Event(
                             formData["eventId"]!!,
                             LocalDate.parse(formData["start"]!!),
@@ -113,10 +117,11 @@ class AdminEventHandler(
     fun adminUpdateEventSponsoring(req: ServerRequest): Mono<ServerResponse> =
         req.extractFormData().flatMap { formData ->
             // We need to find the event in database
-            eventRepository
+            service
                 .findOne(formData["eventId"]!!)
+                .map { it.toEvent() }
                 .flatMap { event ->
-                    eventRepository
+                    service
                         .save(event.copy(sponsors = event.sponsors.map { sponsoring ->
                             if (sponsoring.sponsorId == formData["sponsorId"] && sponsoring.level.name == formData["level"]) {
                                 EventSponsoring(
@@ -135,8 +140,9 @@ class AdminEventHandler(
     fun adminCreateEventSponsoring(req: ServerRequest): Mono<ServerResponse> =
         req.extractFormData().flatMap { formData ->
             // We need to find the event in database
-            eventRepository
+            service
                 .findOne(formData["eventId"]!!)
+                .map { it.toEvent() }
                 .flatMap { event ->
                     // We create a mutable list
                     val sponsors = event.sponsors.toMutableList()
@@ -147,7 +153,7 @@ class AdminEventHandler(
                             formData["subscriptionDate"]?.let { LocalDate.parse(it) } ?: LocalDate.now()
                         )
                     )
-                    eventRepository.save(event.copy(sponsors = sponsors))
+                    service.save(event.copy(sponsors = sponsors))
                         .then(seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}"))
                 }
         }
@@ -155,11 +161,12 @@ class AdminEventHandler(
     fun adminDeleteEventSponsoring(req: ServerRequest): Mono<ServerResponse> =
         req.extractFormData().flatMap { formData ->
             // We need to find the event in database
-            eventRepository
+            service
                 .findOne(formData["eventId"]!!)
+                .map { it.toEvent() }
                 .flatMap { event ->
                     // We create a mutable list
-                    eventRepository.save(
+                    service.save(
                         event.copy(sponsors = event.sponsors
                             .filterNot { it.sponsorId == formData["sponsorId"] && it.level.name == formData["level"] })
                     )
@@ -168,8 +175,9 @@ class AdminEventHandler(
         }
 
     fun editEventSponsoring(req: ServerRequest): Mono<ServerResponse> =
-        eventRepository
+        service
             .findOne(req.pathVariable("eventId"))
+            .map { it.toEvent() }
             .flatMap { event ->
                 adminEventSponsoring(
                     req.pathVariable("eventId"),
@@ -183,8 +191,9 @@ class AdminEventHandler(
 
     fun editEventOrganization(req: ServerRequest): Mono<ServerResponse> =
         req.pathVariable("eventId").let { eventId ->
-            eventRepository
+            service
                 .findOne(eventId)
+                .map { it.toEvent() }
                 .flatMap { event ->
                     adminEventOrganization(
                         eventId,
@@ -209,7 +218,7 @@ class AdminEventHandler(
     fun adminUpdateEventOrganization(req: ServerRequest): Mono<ServerResponse> =
         req.extractFormData().flatMap { formData ->
             // We need to find the event in database
-            eventRepository
+            service
                 .findOne(formData["eventId"]!!)
                 .flatMap {
                     // For the moment we have noting to save
@@ -220,12 +229,13 @@ class AdminEventHandler(
     fun adminCreateEventOrganization(req: ServerRequest): Mono<ServerResponse> =
         req.extractFormData().flatMap { formData ->
             // We need to find the event in database
-            eventRepository
+            service
                 .findOne(formData["eventId"]!!)
+                .map { it.toEvent() }
                 .flatMap { event ->
                     val organizations = event.organizations.toMutableList()
                     organizations.add(EventOrganization(formData["organizationLogin"]!!))
-                    eventRepository.save(event.copy(organizations = organizations))
+                    service.save(event.copy(organizations = organizations))
                         .then(seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}"))
                 }
         }
@@ -233,20 +243,22 @@ class AdminEventHandler(
     fun adminDeleteEventOrganization(req: ServerRequest): Mono<ServerResponse> =
         req.extractFormData().flatMap { formData ->
             // We need to find the event in database
-            eventRepository
+            service
                 .findOne(formData["eventId"]!!)
+                .map { it.toEvent() }
                 .flatMap { event ->
                     val organizations =
                         event.organizations.filter { it.organizationLogin != formData["organizationLogin"]!! }
-                    eventRepository.save(event.copy(organizations = organizations))
+                    service.save(event.copy(organizations = organizations))
                         .then(seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}"))
                 }
         }
 
     fun editEventVolunteer(req: ServerRequest): Mono<ServerResponse> =
         req.pathVariable("eventId").let { eventId ->
-            eventRepository
+            service
                 .findOne(eventId)
+                .map { it.toEvent() }
                 .flatMap { event ->
                     adminEventVolunteer(
                         eventId,
@@ -271,8 +283,9 @@ class AdminEventHandler(
     fun adminUpdateEventVolunteer(req: ServerRequest): Mono<ServerResponse> =
         req.extractFormData().flatMap { formData ->
             // We need to find the event in database
-            eventRepository
+            service
                 .findOne(formData["eventId"]!!)
+                .map { it.toEvent() }
                 .flatMap {
                     // For the moment we have noting to save
                     seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}")
@@ -282,12 +295,13 @@ class AdminEventHandler(
     fun adminCreateEventVolunteer(req: ServerRequest): Mono<ServerResponse> =
         req.extractFormData().flatMap { formData ->
             // We need to find the event in database
-            eventRepository
+            service
                 .findOne(formData["eventId"]!!)
+                .map { it.toEvent() }
                 .flatMap { event ->
                     val volunteers = event.volunteers.toMutableList()
                     volunteers.add(EventVolunteer(formData["volunteerLogin"]!!))
-                    eventRepository.save(event.copy(volunteers = volunteers))
+                    service.save(event.copy(volunteers = volunteers))
                         .then(seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}"))
                 }
         }
@@ -295,13 +309,23 @@ class AdminEventHandler(
     fun adminDeleteEventVolunteer(req: ServerRequest): Mono<ServerResponse> =
         req.extractFormData().flatMap { formData ->
             // We need to find the event in database
-            eventRepository
+            service
                 .findOne(formData["eventId"]!!)
+                .map { it.toEvent() }
                 .flatMap { event ->
                     val volunteers =
                         event.volunteers.filter { it.volunteerLogin != formData["volunteerLogin"]!! }
-                    eventRepository.save(event.copy(volunteers = volunteers))
+                    service.save(event.copy(volunteers = volunteers))
                         .then(seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}"))
                 }
         }
+
+    fun cacheStats(req: ServerRequest) =
+        ok().json().body(Mono.justOrEmpty(service.cacheStats()))
+
+    fun invalidateCache(req: ServerRequest): Mono<ServerResponse> {
+        service.invalidateCache()
+        return seeOther("${properties.baseUri}$LIST_URI")
+    }
+
 }

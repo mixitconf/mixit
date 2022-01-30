@@ -1,7 +1,8 @@
 package mixit.routes
 
 import mixit.blog.handler.BlogHandler
-import mixit.event.handler.EventHandler
+import mixit.event.AdminEventHandler
+import mixit.event.EventHandler
 import mixit.favorite.handler.FavoriteHandler
 import mixit.security.handler.ExternalHandler
 import mixit.talk.handler.TalkHandler
@@ -16,6 +17,7 @@ import org.springframework.web.reactive.function.server.router
 class ApiRoutes(
     private val blogHandler: BlogHandler,
     private val eventHandler: EventHandler,
+    private val adminEventHandler: AdminEventHandler,
     private val talkHandler: TalkHandler,
     private val favoriteHandler: FavoriteHandler,
     private val ticketingHandler: TicketingHandler,
@@ -41,10 +43,9 @@ class ApiRoutes(
                 GET("/ticket/random", ticketingHandler::randomDraw)
                 GET("/favorite", favoriteHandler::findAll)
                 GET("/{year}/talk", talkHandler::findAdminByEventId)
+                // TODO move and rewrite
+                GET("/events/cache/stats", adminEventHandler::cacheStats)
             }
-
-//            GET("/wa", workAdventureHandler::findAll)
-//            GET("/wac", workAdventureHandler::findAllCrypted)
 
             // Edition data
             GET("/{year}/talk", talkHandler::findByEventId)

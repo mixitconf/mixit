@@ -32,6 +32,7 @@ dependencies {
         exclude(module = "hibernate-validator")
     }
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
+    implementation("io.projectreactor.addons:reactor-extra")
     implementation("org.springframework:spring-context-indexer")
     implementation("org.springframework.boot:spring-boot-starter-mail")
     implementation("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
@@ -41,8 +42,9 @@ dependencies {
     implementation("com.samskivert:jmustache")
     implementation("com.atlassian.commonmark:commonmark:$commonmarkVersion")
     implementation("com.atlassian.commonmark:commonmark-ext-autolink:$commonmarkVersion")
-    implementation("com.google.api-client:google-api-client:1.23.0")
-    implementation("com.google.apis:google-api-services-gmail:v1-rev81-1.23.0")
+    implementation("com.github.ben-manes.caffeine:caffeine")
+    implementation("com.google.api-client:google-api-client:1.24.2")
+    implementation("com.google.apis:google-api-services-gmail:v1-rev101-1.24.1")
     implementation("com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:20171016.1")
 
     kapt("org.springframework.boot:spring-boot-configuration-processor")

@@ -2,8 +2,8 @@ package mixit.talk.handler
 
 import java.nio.charset.StandardCharsets
 import mixit.MixitProperties
+import mixit.event.EventRepository
 import mixit.event.model.SponsorshipLevel
-import mixit.event.repository.EventRepository
 import mixit.favorite.model.Favorite
 import mixit.favorite.repository.FavoriteRepository
 import mixit.talk.model.Language

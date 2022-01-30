@@ -1,6 +1,5 @@
-package mixit.event.handler
+package mixit.event
 
-import mixit.event.repository.EventRepository
 import mixit.util.json
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
