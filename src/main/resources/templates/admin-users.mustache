@@ -9,9 +9,9 @@
     <table class="table-striped table table-bordered">
       <thead>
         <tr>
-            <th>{{#i18n}}admin.users.table.login{{/i18n}}</th>
-            <th>{{#i18n}}admin.users.table.firstname{{/i18n}}</th>
             <th>{{#i18n}}admin.users.table.lastname{{/i18n}}</th>
+            <th>{{#i18n}}admin.users.table.firstname{{/i18n}}</th>
+            <th>{{#i18n}}admin.users.table.login{{/i18n}}</th>
             <th>{{#i18n}}admin.users.table.email{{/i18n}}</th>
             <th>{{#i18n}}common.actions{{/i18n}}</th>
         </tr>
@@ -19,9 +19,9 @@
       <tbody>
         {{#users}}
         <tr>
-            <td>{{login}}</td>
-            <td>{{firstname}}</td>
             <td>{{lastname}}</td>
+            <td>{{firstname}}</td>
+            <td>{{login}}</td>
             <td>{{#email}}<img src="/images/svg/mxt-icon--mail.svg" class="mxt-icon--social" alt="Mail">{{/email}}</td>
             <td>
                 <a href="/admin/users/edit/{{login}}">{{#i18n}}common.actions.update{{/i18n}}</a>
