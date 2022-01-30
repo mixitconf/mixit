@@ -2,17 +2,19 @@ import com.github.gradle.node.npm.task.NpmTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    val kotlinVersion = "1.5.31"
-    id("org.jetbrains.kotlin.jvm") version kotlinVersion
-    id("org.jetbrains.kotlin.plugin.spring") version kotlinVersion
-    id("org.jetbrains.kotlin.kapt") version kotlinVersion
+    val kotlinVersion = "1.5.32"
+
+    id("org.springframework.boot") version "2.5.9"
+    id("io.spring.dependency-management") version "1.0.11.RELEASE"
     id("com.github.node-gradle.node") version "3.1.1"
-    id("org.springframework.boot") version "2.2.5.RELEASE"
-    id("io.spring.dependency-management") version "1.0.8.RELEASE"
     id("org.jmailen.kotlinter") version "3.7.0"
+    kotlin("jvm") version kotlinVersion
+    kotlin("plugin.spring") version kotlinVersion
+    kotlin("kapt") version kotlinVersion
 }
 
 version = "2022.0.0-SNAPSHOT"
+java.sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {
     mavenCentral()
@@ -26,33 +28,35 @@ node {
 dependencies {
     val commonmarkVersion = "0.11.0"
 
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("org.jetbrains.kotlin:kotlin-reflect")
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-
     implementation("org.springframework.boot:spring-boot-starter-webflux") {
         exclude(module = "hibernate-validator")
     }
     implementation("io.projectreactor.kotlin:reactor-kotlin-extensions")
+    implementation("io.projectreactor.addons:reactor-extra")
     implementation("org.springframework:spring-context-indexer")
     implementation("org.springframework.boot:spring-boot-starter-mail")
     implementation("org.springframework.boot:spring-boot-starter-data-mongodb-reactive")
-    implementation("org.springframework.boot:spring-boot-devtools")
-    kapt("org.springframework.boot:spring-boot-configuration-processor")
-
-    runtimeOnly("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
+    implementation("org.jetbrains.kotlin:kotlin-reflect")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("com.samskivert:jmustache")
     implementation("com.atlassian.commonmark:commonmark:$commonmarkVersion")
     implementation("com.atlassian.commonmark:commonmark-ext-autolink:$commonmarkVersion")
-    implementation("com.google.api-client:google-api-client:1.23.0")
-    implementation("com.google.apis:google-api-services-gmail:v1-rev81-1.23.0")
+    implementation("com.github.ben-manes.caffeine:caffeine")
+    implementation("com.google.api-client:google-api-client:1.24.2")
+    implementation("com.google.apis:google-api-services-gmail:v1-rev101-1.24.1")
     implementation("com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:20171016.1")
+
+    kapt("org.springframework.boot:spring-boot-configuration-processor")
+
+    runtimeOnly("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
+
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("com.ninja-squad:springmockk:2.0.0")
     testImplementation("io.mockk:mockk:1.9.3")
     testImplementation("io.projectreactor:reactor-test")
-
 }
 
 tasks.withType<KotlinCompile> {
@@ -65,7 +69,6 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
-
 /**
  * All images are copied in jar resources. Image optimization was made before with a Gulp plugin. Now we use a bot
  * on Github

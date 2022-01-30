@@ -2,12 +2,13 @@ package mixit.integration
 
 import com.ninjasquad.springmockk.SpykBean
 import io.mockk.every
-import mixit.model.Role
-import mixit.model.User
-import mixit.model.jsonToken
-import mixit.repository.UserRepository
-import mixit.util.Cryptographer
-import mixit.web.MixitWebFilter
+import java.time.LocalDateTime
+import mixit.security.model.Cryptographer
+import mixit.user.model.Role
+import mixit.user.model.User
+import mixit.user.model.jsonToken
+import mixit.user.repository.UserRepository
+import mixit.util.web.MixitWebFilter
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
@@ -16,7 +17,6 @@ import org.springframework.http.HttpHeaders
 import org.springframework.http.MediaType
 import org.springframework.test.web.reactive.server.WebTestClient
 import reactor.core.publisher.Mono
-import java.time.LocalDateTime
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val cryptographer: Cryptographer) {

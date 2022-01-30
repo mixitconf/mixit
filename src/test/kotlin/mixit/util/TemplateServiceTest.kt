@@ -2,8 +2,8 @@ package mixit.util
 
 import com.samskivert.mustache.Mustache
 import java.util.Locale
-import mixit.model.User
-import mixit.web.generateModelForExernalCall
+import mixit.user.model.User
+import mixit.util.email.TemplateService
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith

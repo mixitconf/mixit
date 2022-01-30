@@ -1,11 +1,12 @@
 package mixit.config
 
-import mixit.repository.EventRepository
-import mixit.repository.FavoriteRepository
-import mixit.repository.PostRepository
-import mixit.repository.TalkRepository
-import mixit.repository.TicketRepository
-import mixit.repository.UserRepository
+import mixit.blog.repository.PostRepository
+import mixit.event.EventRepository
+import mixit.event.EventService
+import mixit.favorite.repository.FavoriteRepository
+import mixit.talk.repository.TalkRepository
+import mixit.ticket.repository.TicketRepository
+import mixit.user.repository.UserRepository
 import org.springframework.boot.CommandLineRunner
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -29,5 +30,12 @@ class DatabaseInitializerConfig {
         postRepository.initData()
         ticketRepository.initData()
         favoriteRepository.initData()
+    }
+
+    @Bean
+    fun cacheInitializer(
+        eventService: EventService
+    ) = CommandLineRunner {
+        eventService.initializeCache()
     }
 }
