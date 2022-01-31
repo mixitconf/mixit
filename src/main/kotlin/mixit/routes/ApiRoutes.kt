@@ -1,8 +1,8 @@
 package mixit.routes
 
 import mixit.blog.handler.BlogHandler
-import mixit.event.AdminEventHandler
-import mixit.event.EventHandler
+import mixit.event.handler.AdminEventHandler
+import mixit.event.handler.EventHandler
 import mixit.favorite.handler.FavoriteHandler
 import mixit.security.handler.ExternalHandler
 import mixit.talk.handler.TalkHandler

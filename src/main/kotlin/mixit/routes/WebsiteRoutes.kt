@@ -7,8 +7,8 @@ import mixit.MixitProperties
 import mixit.about.AboutHandler
 import mixit.blog.handler.AdminPostHandler
 import mixit.blog.handler.BlogHandler
-import mixit.event.AdminEventHandler
-import mixit.event.AdminEventHandler.Companion.CURRENT_EVENT
+import mixit.event.handler.AdminEventHandler
+import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
 import mixit.event.model.Event
 import mixit.event.model.SponsorshipLevel
 import mixit.mailing.handler.MailingHandler
@@ -100,6 +100,8 @@ class WebsiteRoutes(
             GET("/speaker", userHandler::speakerView)
             GET("/accessibility", aboutHandler::accessibilityView)
             GET("/codeofconduct", aboutHandler::codeConductView)
+            GET("/blog", blogHandler::findAllView)
+            GET("/blog/{slug}", blogHandler::findOneView)
 
             // Authentication
             GET("/login", authenticationHandler::loginView)
@@ -176,11 +178,6 @@ class WebsiteRoutes(
                 GET("/mixette-donation/orga/{login}", adminMixetteHandler::editOrga)
                 GET("/mixette-donation/donor/{login}", adminMixetteHandler::editDonor)
                 GET("/mixette-donation/create", adminMixetteHandler::addDonation)
-            }
-
-            "/blog".nest {
-                GET("/", blogHandler::findAllView)
-                GET("/{slug}", blogHandler::findOneView)
             }
         }
 

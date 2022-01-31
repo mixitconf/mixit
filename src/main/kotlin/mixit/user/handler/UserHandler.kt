@@ -48,39 +48,6 @@ class UserHandler(
     private val markdownValidator: MarkdownValidator
 ) {
 
-    companion object {
-        val speakerStarInHistory = listOf(
-            "tastapod",
-            "joel.spolsky",
-            "pamelafox",
-            "MattiSG",
-            "bodil",
-            "mojavelinux",
-            "andrey.breslav",
-            // "kowen",
-            "ppezziardi",
-            "rising.linda",
-            "jhoeller",
-            "sharonsteed",
-            "allan.rennebo",
-            "agilex",
-            "laura.carvajal",
-            "augerment",
-            "dgageot",
-            "romainguy",
-            "graphicsgeek1",
-            "andre",
-            "mary",
-            "Woody.Zuill",
-            "james.carlson",
-            "egorcenski",
-            "ojuncu",
-            "hsablonniere",
-            "nitot"
-        )
-        val speakerStarInCurrentEvent = listOf<String>()
-    }
-
     enum class ViewMode { ViewMyProfile, ViewUser, EditProfile }
 
     fun speakerView(req: ServerRequest) = ok().render("speaker", mapOf(Pair("title", "speaker.title")))

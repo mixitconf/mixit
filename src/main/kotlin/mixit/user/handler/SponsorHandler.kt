@@ -1,127 +1,95 @@
 package mixit.user.handler
 
-import mixit.event.EventRepository
-import mixit.event.model.EventSponsoring
+import mixit.event.model.EventService
 import mixit.event.model.SponsorshipLevel
-import mixit.talk.model.Language
-import mixit.user.model.User
-import mixit.user.repository.UserRepository
+import mixit.event.model.SponsorshipLevel.ACCESSIBILITY
+import mixit.event.model.SponsorshipLevel.ECOLOGY
+import mixit.event.model.SponsorshipLevel.GOLD
+import mixit.event.model.SponsorshipLevel.HOSTING
+import mixit.event.model.SponsorshipLevel.LANYARD
+import mixit.event.model.SponsorshipLevel.MIXTEEN
+import mixit.event.model.SponsorshipLevel.PARTY
+import mixit.event.model.SponsorshipLevel.SILVER
+import mixit.event.model.SponsorshipLevel.VIDEO
 import mixit.util.language
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 
 @Component
-class SponsorHandler(
-    private val userRepository: UserRepository,
-    private val eventRepository: EventRepository
-) {
+class SponsorHandler(private val eventService: EventService) {
 
     fun viewWithSponsors(year: Int, req: ServerRequest) =
-        eventRepository
+        eventService
             .findByYear(year)
             .flatMap { event ->
-                userRepository.findMany(event.sponsors.map { it.sponsorId }).collectMap(User::login).flatMap { sponsorsByLogin ->
-                    val sponsorsByEvent = event.sponsors.groupBy { it.level }
-                    ServerResponse.ok().render(
-                        "sponsors",
-                        mapOf(
-                            Pair("year", year),
-                            Pair("imagepath", "/"),
-                            Pair("sponsors-gold", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.GOLD)),
-                            Pair("has-sponsors-gold", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.GOLD)?.isNotEmpty()),
-                            Pair("sponsors-silver", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.SILVER)),
-                            Pair("has-sponsors-silver", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.SILVER)?.isNotEmpty()),
-                            Pair("sponsors-hosting", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.HOSTING)),
-                            Pair("has-sponsors-hosting", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.HOSTING)?.isNotEmpty()),
-                            Pair("sponsors-ecology", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.ECOLOGY)),
-                            Pair("has-sponsors-ecology", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.ECOLOGY)?.isNotEmpty()),
-                            Pair("sponsors-lanyard", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.LANYARD)),
-                            Pair("has-sponsors-lanyard", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.LANYARD)?.isNotEmpty()),
-                            Pair("sponsors-accessibility", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.ACCESSIBILITY)),
-                            Pair("has-sponsors-accessibility", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.ACCESSIBILITY)?.isNotEmpty()),
-                            Pair("sponsors-mixteen", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.MIXTEEN)),
-                            Pair("has-sponsors-mixteen", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.MIXTEEN)?.isNotEmpty()),
-                            Pair("sponsors-party", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.PARTY)),
-                            Pair("has-sponsors-party", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.PARTY)?.isNotEmpty()),
-                            Pair("sponsors-video", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.VIDEO)),
-                            Pair("has-sponsors-video", getSponsors(sponsorsByEvent, sponsorsByLogin, req.language(), SponsorshipLevel.VIDEO)?.isNotEmpty()),
-                            Pair("title", "sponsors.title|$year")
-                        )
+                val lg = req.language()
+                val goldSponsors = event.filterBySponsorLevel(GOLD).map { it.toEventSponsoringDto(lg) }
+                val silverSponsors = event.filterBySponsorLevel(SILVER).map { it.toEventSponsoringDto(lg) }
+                val hostSponsors = event.filterBySponsorLevel(HOSTING).map { it.toEventSponsoringDto(lg) }
+                val ecoSponsors = event.filterBySponsorLevel(ECOLOGY).map { it.toEventSponsoringDto(lg) }
+                val lanyardSponsors = event.filterBySponsorLevel(LANYARD).map { it.toEventSponsoringDto(lg) }
+                val accessSponsors = event.filterBySponsorLevel(ACCESSIBILITY).map { it.toEventSponsoringDto(lg) }
+                val mixteenSponsors = event.filterBySponsorLevel(MIXTEEN).map { it.toEventSponsoringDto(lg) }
+                val partySponsors = event.filterBySponsorLevel(PARTY).map { it.toEventSponsoringDto(lg) }
+                val videoSponsors = event.filterBySponsorLevel(VIDEO).map { it.toEventSponsoringDto(lg) }
+
+                ServerResponse.ok().render(
+                    "sponsors",
+                    mapOf(
+                        Pair("year", year),
+                        Pair("imagepath", "/"),
+                        Pair("sponsors-gold", goldSponsors),
+                        Pair("has-sponsors-gold", goldSponsors.isNotEmpty()),
+                        Pair("sponsors-silver", silverSponsors),
+                        Pair("has-sponsors-silver", silverSponsors.isNotEmpty()),
+                        Pair("sponsors-hosting", hostSponsors),
+                        Pair("has-sponsors-hosting", hostSponsors.isNotEmpty()),
+                        Pair("sponsors-ecology", ecoSponsors),
+                        Pair("has-sponsors-ecology", ecoSponsors.isNotEmpty()),
+                        Pair("sponsors-lanyard", lanyardSponsors),
+                        Pair("has-sponsors-lanyard", lanyardSponsors.isNotEmpty()),
+                        Pair("sponsors-accessibility", accessSponsors),
+                        Pair("has-sponsors-accessibility", accessSponsors.isNotEmpty()),
+                        Pair("sponsors-mixteen", mixteenSponsors),
+                        Pair("has-sponsors-mixteen", mixteenSponsors.isNotEmpty()),
+                        Pair("sponsors-party", partySponsors),
+                        Pair("has-sponsors-party", partySponsors.isNotEmpty()),
+                        Pair("sponsors-video", videoSponsors),
+                        Pair("has-sponsors-video", videoSponsors.isNotEmpty()),
+                        Pair("title", "sponsors.title|$year")
                     )
-                }
+                )
             }
 
-    private fun getSponsors(
-        sponsorsByEvent: Map<SponsorshipLevel, List<EventSponsoring>>,
-        sponsorsByLogin: Map<String, User>,
-        language: Language,
-        sponsorshipLevel: SponsorshipLevel
-    ): List<EventSponsoringDto>? =
-        sponsorsByEvent[sponsorshipLevel]?.map { it.toDto(sponsorsByLogin[it.sponsorId]!!, language) }
-
-    fun viewWithSponsors(view: String, spolights: Array<SponsorshipLevel>, title: String?, year: Int, req: ServerRequest) =
-        eventRepository
+    fun viewWithSponsors(
+        view: String,
+        spotLights: Array<SponsorshipLevel>,
+        title: String?,
+        year: Int,
+        req: ServerRequest
+    ) =
+        eventService
             .findByYear(year)
             .flatMap { event ->
-                val isHomePage = view.equals("home")
+                val mainSponsors = event.filterBySponsorLevel(*spotLights)
+                val otherSponsors = event.sponsors.intersect(mainSponsors)
 
-                val ids = event.sponsors.map { it.sponsorId }.toMutableList()
-
-                if (isHomePage) {
-                    // We adds speaker stars
-                    ids.addAll(UserHandler.speakerStarInCurrentEvent)
-                    ids.addAll(UserHandler.speakerStarInHistory)
+                val context = mutableMapOf(
+                    Pair("year", year),
+                    Pair("imagepath", "/"),
+                    Pair("title", if (view != "sponsors") title else "$title|$year"),
+                    Pair("sponsors-main", mainSponsors.map { it.toSponsorDto() }),
+                    Pair("sponsors-others", otherSponsors.map { it.toSponsorDto() })
+                )
+                if (view == "home") {
+                    context["stars-old"] = event.speakerStarInHistory
+                        .shuffled()
+                        .map { it.toSpeakerStarDto() }
+                        .subList(0, 6)
                 }
 
-                userRepository
-                    .findMany(ids)
-                    .collectMap(User::login)
-                    .flatMap { usersByLogin ->
-                        val sponsorsByEvent = event.sponsors.groupBy { it.level }
-                        val mainSponsors = mutableListOf<SponsorDto>()
-
-                        spolights.forEach {
-                            val elements = sponsorsByEvent[it]?.map { it.toSponsorDto(usersByLogin[it.sponsorId]!!) }?.toList()
-                            mainSponsors.addAll(elements.orEmpty())
-                        }
-
-                        val mainSponsorIds = mainSponsors.map { it.login }
-
-                        val otherSponsors = event.sponsors
-                            .filter { !spolights.contains(it.level) && !mainSponsorIds.contains(it.sponsorId) }
-                            .map { it.toSponsorDto(usersByLogin[it.sponsorId]!!) }
-                            .distinctBy { it.login }
-
-                        if (view.equals("home")) {
-                            val oldStars = UserHandler.speakerStarInHistory.map { usersByLogin[it]!!.toSpeakerStarDto() }.toMutableList()
-                            val currentStars = UserHandler.speakerStarInCurrentEvent.map { usersByLogin[it]!!.toSpeakerStarDto() }.toMutableList()
-                            val stars: List<SpeakerStarDto> = oldStars.plus(currentStars).shuffled()
-
-                            ServerResponse.ok().render(
-                                view,
-                                mapOf(
-                                    Pair("year", year),
-                                    Pair("imagepath", "/"),
-                                    Pair("title", if (!view.equals("sponsors")) title else "$title|$year"),
-                                    Pair("sponsors-main", mainSponsors),
-                                    Pair("sponsors-others", otherSponsors),
-                                    Pair("stars-old", stars.subList(0, 6))
-                                )
-                            )
-                        } else {
-                            ServerResponse.ok().render(
-                                view,
-                                mapOf(
-                                    Pair("year", year),
-                                    Pair("imagepath", "/"),
-                                    Pair("title", if (!view.equals("sponsors")) title else "$title|$year"),
-                                    Pair("sponsors-main", mainSponsors),
-                                    Pair("sponsors-others", otherSponsors)
-                                )
-                            )
-                        }
-                    }
+                ServerResponse.ok().render(view, context)
             }
 }
 

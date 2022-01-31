@@ -2,6 +2,7 @@ package mixit.event.model
 
 import java.time.LocalDate
 import mixit.user.cache.CachedOrganization
+import mixit.user.cache.CachedSpeaker
 import mixit.user.cache.CachedSponsor
 import mixit.user.cache.CachedStaff
 import mixit.user.model.Link
@@ -18,6 +19,8 @@ data class CachedEvent(
     val photoUrls: List<Link>,
     val videoUrl: Link?,
     val schedulingFileUrl: String?,
+    val speakerStarInHistory: List<CachedSpeaker>,
+    val speakerStarInCurrent: List<CachedSpeaker>,
     val year: Int
 ) : Cached {
     fun toEvent(): Event =
@@ -34,4 +37,6 @@ data class CachedEvent(
             schedulingFileUrl,
             year
         )
+
+    fun filterBySponsorLevel(vararg levels: SponsorshipLevel) = sponsors.filter { levels.contains(it.level) }
 }
