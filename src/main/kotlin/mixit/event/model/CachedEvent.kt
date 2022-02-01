@@ -9,7 +9,7 @@ import mixit.user.model.Link
 import mixit.util.Cached
 
 data class CachedEvent(
-    val id: String,
+    override val id: String,
     val start: LocalDate,
     val end: LocalDate,
     val current: Boolean,

@@ -19,25 +19,11 @@ class EventService(
     private val userRepository: UserRepository
 ) : CacheTemplate<CachedEvent>() {
 
-    /**
-     * Cache is initialized on startup
-     */
-    fun initializeCache() {
-        findAll().collectList().block()
-    }
-
-    fun cacheStats() = cacheList.stats()
-
-    fun invalidateCache() = cacheList.invalidateAll()
-
-    fun findOne(id: String): Mono<CachedEvent> =
-        findAll().collectList().flatMap { events -> Mono.justOrEmpty(events.firstOrNull { it.id == id }) }
+    override fun findAll(): Flux<CachedEvent> =
+        findAll { eventRepository.findAll().flatMap { event -> loadEventUsers(event) } }
 
     fun findByYear(year: Int): Mono<CachedEvent> =
         findAll().collectList().flatMap { events -> Mono.justOrEmpty(events.firstOrNull { it.year == year }) }
-
-    fun findAll(): Flux<CachedEvent> =
-        findAll { eventRepository.findAll().flatMap { event -> loadEventUsers(event) } }
 
     fun save(event: Event) =
         eventRepository.save(event).also { cacheList.invalidateAll() }

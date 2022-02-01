@@ -10,7 +10,9 @@ import reactor.core.publisher.Signal
 import reactor.core.publisher.SignalType
 
 
-interface Cached
+interface Cached {
+    val id: String
+}
 
 /**
  * All element exposed to user (event, talk, speaker) are put in a cache. For
@@ -26,6 +28,16 @@ abstract class CacheTemplate<T : Cached> {
             .maximumSize(2_500)
             .build()
     }
+
+    /**
+     * Cache is initialized on startup
+     */
+    fun initializeCache() {
+        findAll().collectList().block()
+    }
+
+    fun findOne(id: String): Mono<T> =
+        findAll().collectList().flatMap { elements -> Mono.justOrEmpty(elements.firstOrNull { it.id == id }) }
 
     fun findAll(loader: (String) -> Flux<T>): Flux<T> =
         CacheFlux
@@ -48,5 +60,11 @@ abstract class CacheTemplate<T : Cached> {
                     )
                 }
             }
+
+    abstract fun findAll(): Flux<T>
+
+    fun cacheStats() = cacheList.stats()
+
+    fun invalidateCache() = cacheList.invalidateAll()
 }
 
