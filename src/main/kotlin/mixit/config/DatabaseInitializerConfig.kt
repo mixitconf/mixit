@@ -1,8 +1,9 @@
 package mixit.config
 
+import mixit.blog.model.BlogService
 import mixit.blog.repository.PostRepository
-import mixit.event.EventRepository
-import mixit.event.EventService
+import mixit.event.model.EventService
+import mixit.event.repository.EventRepository
 import mixit.favorite.repository.FavoriteRepository
 import mixit.talk.repository.TalkRepository
 import mixit.ticket.repository.TicketRepository
@@ -34,8 +35,10 @@ class DatabaseInitializerConfig {
 
     @Bean
     fun cacheInitializer(
-        eventService: EventService
+        eventService: EventService,
+        blogService: BlogService
     ) = CommandLineRunner {
         eventService.initializeCache()
+        blogService.initializeCache()
     }
 }

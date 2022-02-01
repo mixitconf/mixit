@@ -1,10 +1,8 @@
 package mixit.blog.handler
 
 import mixit.MixitProperties
-import mixit.blog.repository.PostRepository
-import mixit.talk.model.Language.ENGLISH
-import mixit.talk.model.Language.FRENCH
-import mixit.user.model.User
+import mixit.blog.model.BlogService
+import mixit.blog.model.toFeed
 import mixit.user.repository.UserRepository
 import mixit.util.json
 import mixit.util.language
@@ -12,69 +10,62 @@ import mixit.util.permanentRedirect
 import org.springframework.http.MediaType.APPLICATION_ATOM_XML
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
+import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.body
+import reactor.core.publisher.Mono
 
 @Component
 class BlogHandler(
-    val repository: PostRepository,
+    val service: BlogService,
     val userRepository: UserRepository,
     val properties: MixitProperties
 ) {
+    companion object {
+        const val POST_LIST = "blog"
+        const val POST_VIEW = "post"
+        const val POST_FEED = "feed"
+    }
 
-    fun findOneView(req: ServerRequest) =
-        repository
+    fun findOneView(req: ServerRequest): Mono<ServerResponse> {
+        return service
             .findBySlug(req.pathVariable("slug"), req.language())
             .flatMap { post ->
-                userRepository.findOne(post.authorId).flatMap { author ->
-                    val model = mapOf(
-                        Pair("post", post.toDto(author, req.language())),
+                ok().render(
+                    POST_VIEW, mapOf(
+                        Pair("post", post.toDto(req.language())),
                         Pair("title", "blog.post.title|${post.title[req.language()]}")
                     )
-                    ok().render("post", model)
-                }
-            }.switchIfEmpty(
-                repository
-                    .findBySlug(req.pathVariable("slug"), if (req.language() == FRENCH) FRENCH else ENGLISH)
-                    .flatMap {
-                        permanentRedirect("${properties.baseUri}${if (req.language() == ENGLISH) "/en" else ""}/blog/${it.slug[req.language()]}")
-                    }
-            )
+                )
+            }
+    }
 
-    fun findAllView(req: ServerRequest) = repository.findAll(req.language())
-        .collectList()
-        .flatMap { posts ->
-            userRepository
-                .findMany(posts.map { it.authorId })
-                .collectMap { it.login }
-                .flatMap { authors ->
-                    val dtos = posts.map { it.toDto(authors[it.authorId] ?: User(), req.language()) }
-                    val model = mapOf(Pair("posts", dtos), Pair("title", "blog.title"))
-                    ok().render("blog", model)
-                }
-        }
+    fun findAllView(req: ServerRequest): Mono<ServerResponse> =
+        service
+            .findAll()
+            .collectList()
+            .flatMap { posts ->
+                ok().render(
+                    POST_LIST, mapOf(
+                        Pair("posts", posts.sortedByDescending {  it.addedAt }.map { it.toDto(req.language()) }),
+                        Pair("title", "blog.title")
+                    )
+                )
+            }
 
     fun findOne(req: ServerRequest) =
-        ok().json().body(repository.findOne(req.pathVariable("id")))
+        ok().json().body(service.findOne(req.pathVariable("id")))
 
     fun findAll(req: ServerRequest) =
-        ok().json().body(repository.findAll())
+        ok().json().body(service.findAll())
 
     fun redirect(req: ServerRequest) =
-        repository.findOne(req.pathVariable("id")).flatMap {
+        service.findOne(req.pathVariable("id")).flatMap {
             permanentRedirect("${properties.baseUri}/blog/${it.slug[req.language()]}")
         }
 
-    fun feed(req: ServerRequest) = ok().contentType(APPLICATION_ATOM_XML).render(
-        "feed",
-        mapOf(
-            Pair(
-                "feed",
-                repository
-                    .findAll(req.language())
-                    .collectList()
-                    .map { it.toFeed(req.language(), "blog.feed.title", "/blog") }
-            )
-        )
-    )
+    fun feed(req: ServerRequest): Mono<ServerResponse> {
+        val feeds = service.findAll().collectList().map { it.toFeed(req.language(), "blog.feed.title", "/blog") }
+        return ok().contentType(APPLICATION_ATOM_XML).render(POST_FEED, mapOf(Pair("feed", feeds)))
+    }
 }

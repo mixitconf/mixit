@@ -2,12 +2,10 @@ package mixit.blog.handler
 
 import java.time.LocalDateTime
 import mixit.MixitProperties
+import mixit.blog.model.BlogService
 import mixit.blog.model.Post
-import mixit.blog.repository.PostRepository
 import mixit.talk.model.Language.ENGLISH
 import mixit.talk.model.Language.FRENCH
-import mixit.user.model.User
-import mixit.user.repository.UserRepository
 import mixit.util.extractFormData
 import mixit.util.language
 import mixit.util.seeOther
@@ -19,11 +17,7 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 import reactor.core.publisher.Mono
 
 @Component
-class AdminPostHandler(
-    private val userRepository: UserRepository,
-    private val postRepository: PostRepository,
-    private val properties: MixitProperties
-) {
+class AdminPostHandler(private val service: BlogService, private val properties: MixitProperties) {
 
     companion object {
         const val TEMPLATE_LIST = "admin-blog"
@@ -32,19 +26,10 @@ class AdminPostHandler(
     }
 
     fun adminBlog(req: ServerRequest): Mono<ServerResponse> {
-        val posts = postRepository
+        val posts = service
             .findAll()
             .collectList()
-            .flatMap { posts ->
-                userRepository
-                    .findMany(posts.map { it.authorId })
-                    .collectMap(User::login)
-                    .map { authors ->
-                        posts.map {
-                            it.toDto(authors[it.authorId] ?: User(), req.language())
-                        }
-                    }
-            }
+            .map { posts -> posts.sortedByDescending { it.addedAt }.map { it.toDto(req.language()) } }
         return ok().render(TEMPLATE_LIST, mapOf(Pair("posts", posts)))
     }
 
@@ -52,13 +37,11 @@ class AdminPostHandler(
         this.adminPost()
 
     fun editPost(req: ServerRequest): Mono<ServerResponse> =
-        postRepository.findOne(req.pathVariable("id")).flatMap(this::adminPost)
+        service.findOne(req.pathVariable("id")).map { it.toPost() }.flatMap(this::adminPost)
 
     fun adminDeletePost(req: ServerRequest): Mono<ServerResponse> =
         req.extractFormData().flatMap { formData ->
-            postRepository
-                .deleteOne(formData["id"]!!)
-                .then(seeOther("${properties.baseUri}$LIST_URI"))
+            service.deleteOne(formData["id"]!!).then(seeOther("${properties.baseUri}$LIST_URI"))
         }
 
     private fun adminPost(post: Post = Post("")) = ok().render(
@@ -88,7 +71,7 @@ class AdminPostHandler(
                 headline = mapOf(Pair(FRENCH, formData["headline-fr"]!!), Pair(ENGLISH, formData["headline-en"]!!)),
                 content = mapOf(Pair(FRENCH, formData["content-fr"]!!), Pair(ENGLISH, formData["content-en"]!!))
             )
-            postRepository.save(post).then(seeOther("${properties.baseUri}$LIST_URI"))
+            service.save(post).then(seeOther("${properties.baseUri}$LIST_URI"))
         }
 
 }

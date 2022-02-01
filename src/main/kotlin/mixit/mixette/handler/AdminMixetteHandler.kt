@@ -1,10 +1,11 @@
 package mixit.mixette.handler
 
 import mixit.MixitProperties
-import mixit.event.AdminEventHandler.Companion.CURRENT_EVENT
-import mixit.event.EventRepository
+import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
+import mixit.event.model.EventService
 import mixit.mixette.model.MixetteDonation
 import mixit.mixette.repository.MixetteDonationRepository
+import mixit.user.cache.CachedOrganization
 import mixit.user.model.User
 import mixit.user.repository.UserRepository
 import mixit.util.extractFormData
@@ -20,7 +21,7 @@ import reactor.core.publisher.Mono
 class AdminMixetteHandler(
     private val repository: MixetteDonationRepository,
     private val userRepository: UserRepository,
-    private val eventRepository: EventRepository,
+    private val service: EventService,
     private val properties: MixitProperties
 ) {
 
@@ -113,24 +114,18 @@ class AdminMixetteHandler(
         donation: MixetteDonation = MixetteDonation(CURRENT_EVENT),
         errors: Map<String, String> = emptyMap()
     ): Mono<ServerResponse> =
-        eventRepository
-            .findByYear(CURRENT_EVENT.toInt())
+        service.findByYear(CURRENT_EVENT.toInt())
             .flatMap { event ->
-                userRepository
-                    .findAllByIds(event.organizations.map { it.organizationLogin })
-                    .collectList()
-                    .flatMap { organizations ->
-                        ok().render(
-                            TEMPLATE_EDIT,
-                            mapOf(
-                                Pair("creationMode", donation.id == null),
-                                Pair("donation", donation),
-                                Pair("organizations", organizations.map { OrganizationDto(it, donation) }),
-                                Pair("errors", errors),
-                                Pair("hasErrors", errors.isNotEmpty())
-                            )
-                        )
-                    }
+                ok().render(
+                    TEMPLATE_EDIT,
+                    mapOf(
+                        Pair("creationMode", donation.id == null),
+                        Pair("donation", donation),
+                        Pair("organizations", event.organizations.map { OrganizationDto(it, donation) }),
+                        Pair("errors", errors),
+                        Pair("hasErrors", errors.isNotEmpty())
+                    )
+                )
             }
 
     private fun persistDonation(
@@ -215,9 +210,9 @@ class AdminMixetteHandler(
         val photoUrl: String? = null,
         val selected: Boolean = false
     ) {
-        constructor(user: User, donation: MixetteDonation) : this(
+        constructor(user: CachedOrganization, donation: MixetteDonation) : this(
             user.login,
-            user.company ?: "${user.firstname} ${user.lastname}",
+            user.company,
             user.photoUrl,
             selected = (user.login == donation.organizationLogin)
         )

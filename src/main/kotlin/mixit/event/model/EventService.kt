@@ -1,8 +1,10 @@
-package mixit.event
+package mixit.event.model
 
-import mixit.event.model.CachedEvent
-import mixit.event.model.Event
+import mixit.MixitApplication.Companion.speakerStarInCurrentEvent
+import mixit.MixitApplication.Companion.speakerStarInHistory
+import mixit.event.repository.EventRepository
 import mixit.user.cache.CachedOrganization
+import mixit.user.cache.CachedSpeaker
 import mixit.user.cache.CachedSponsor
 import mixit.user.cache.CachedStaff
 import mixit.user.repository.UserRepository
@@ -17,22 +19,11 @@ class EventService(
     private val userRepository: UserRepository
 ) : CacheTemplate<CachedEvent>() {
 
-    /**
-     * Cache is initialized on startup
-     */
-    fun initializeCache() {
-        findAll().collectList().block()
-    }
-
-    fun cacheStats() = cacheList.stats()
-
-    fun invalidateCache() = cacheList.invalidateAll()
-
-    fun findOne(id: String): Mono<CachedEvent> =
-        findAll().collectList().flatMap { events -> Mono.justOrEmpty(events.firstOrNull { it.id == id }) }
-
-    fun findAll(): Flux<CachedEvent> =
+    override fun findAll(): Flux<CachedEvent> =
         findAll { eventRepository.findAll().flatMap { event -> loadEventUsers(event) } }
+
+    fun findByYear(year: Int): Mono<CachedEvent> =
+        findAll().collectList().flatMap { events -> Mono.justOrEmpty(events.firstOrNull { it.year == year }) }
 
     fun save(event: Event) =
         eventRepository.save(event).also { cacheList.invalidateAll() }
@@ -41,7 +32,9 @@ class EventService(
     private fun loadEventUsers(event: Event): Mono<CachedEvent> {
         val userIds = event.organizations.map { it.organizationLogin } +
                 event.sponsors.map { it.sponsorId } +
-                event.volunteers.map { it.volunteerLogin }
+                event.volunteers.map { it.volunteerLogin } +
+                speakerStarInHistory +
+                speakerStarInCurrentEvent
 
         return userRepository.findAllByIds(userIds).collectList().map { users ->
             CachedEvent(
@@ -62,6 +55,12 @@ class EventService(
                 event.photoUrls,
                 event.videoUrl,
                 event.schedulingFileUrl,
+                speakerStarInHistory.map { starLogin ->
+                    CachedSpeaker(users.first { it.login == starLogin })
+                },
+                speakerStarInCurrentEvent.map { starLogin ->
+                    CachedSpeaker(users.first { it.login == starLogin })
+                },
                 event.year
             )
         }

@@ -1,10 +1,11 @@
-package mixit.event
+package mixit.event.handler
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import java.time.LocalDate
 import mixit.MixitProperties
 import mixit.event.model.Event
 import mixit.event.model.EventOrganization
+import mixit.event.model.EventService
 import mixit.event.model.EventSponsoring
 import mixit.event.model.EventVolunteer
 import mixit.event.model.SponsorshipLevel

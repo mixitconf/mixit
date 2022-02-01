@@ -2,7 +2,8 @@ package mixit.talk.handler
 
 import java.nio.charset.StandardCharsets
 import mixit.MixitProperties
-import mixit.event.EventRepository
+import mixit.event.model.CachedEvent
+import mixit.event.model.EventService
 import mixit.event.model.SponsorshipLevel
 import mixit.favorite.model.Favorite
 import mixit.favorite.repository.FavoriteRepository
@@ -35,7 +36,7 @@ const val SURPRISE_RANDOM = false
 class TalkHandler(
     private val repository: TalkRepository,
     private val userRepository: UserRepository,
-    private val eventRepository: EventRepository,
+    private val service: EventService,
     private val properties: MixitProperties,
     private val favoriteRepository: FavoriteRepository,
     private val maxLengthValidator: MaxLengthValidator,
@@ -48,13 +49,11 @@ class TalkHandler(
     fun findByEventView(year: Int, req: ServerRequest, filterOnFavorite: Boolean, topic: String? = null): Mono<ServerResponse> =
         req.session().flatMap { session ->
             val currentUserEmail = session.getAttribute<String>("email")
-            eventRepository
-                .findByYear(year)
+            service.findByYear(year)
                 .flatMap { event ->
                     val talks = loadTalkAndFavorites(year, req.language(), filterOnFavorite, currentUserEmail, topic)
                         .map { talk -> talk.groupBy { it.date ?: "" } }
 
-                    val sponsors = loadSponsors(year, req)
                     ok().render(
                         "talks",
                         mapOf(
@@ -64,25 +63,35 @@ class TalkHandler(
                             Pair("current", year == 2019),
                             Pair(
                                 "title",
-                                if(topic == null) "talks.title.html|$year" else "talks.title.html.$topic|$year"
+                                if (topic == null) "talks.title.html|$year" else "talks.title.html.$topic|$year"
                             ),
                             Pair("filtered", filterOnFavorite),
                             Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
                             Pair("topic", topic),
                             Pair("has2Columns", talks.map { it.size == 2 }),
-                            Pair("sponsors", sponsors)
+                            Pair("sponsors", loadSponsors(event))
                         )
                     )
                 }
         }
 
-    fun findMediaByEventView(year: Int, req: ServerRequest, filterOnFavorite: Boolean, topic: String? = null): Mono<ServerResponse> =
+    fun findMediaByEventView(
+        year: Int,
+        req: ServerRequest,
+        filterOnFavorite: Boolean,
+        topic: String? = null
+    ): Mono<ServerResponse> =
         req.session().flatMap {
             val currentUserEmail = it.getAttribute<String>("email")
-            val talks = loadTalkAndFavorites(year, req.language(), filterOnFavorite, currentUserEmail, topic).map { it.sortedBy { it.title } }
-            val sponsors = loadSponsors(year, req)
+            val talks = loadTalkAndFavorites(
+                year,
+                req.language(),
+                filterOnFavorite,
+                currentUserEmail,
+                topic
+            ).map { it.sortedBy { it.title } }
 
-            eventRepository
+            service
                 .findByYear(year)
                 .flatMap { event ->
 
@@ -94,10 +103,16 @@ class TalkHandler(
                             Pair("year", year),
                             Pair("title", "medias.title.html|$year"),
                             Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
-                            Pair("sponsors", sponsors),
+                            Pair("sponsors", loadSponsors(event)),
                             Pair("filtered", filterOnFavorite),
-                            Pair("event", event),
-                            Pair("videoUrl", if (event.videoUrl?.url?.startsWith("https://vimeo.com/") == true) event.videoUrl.url.replace("https://vimeo.com/", "https://player.vimeo.com/video/") else null),
+                            Pair("event", event.toEvent()),
+                            Pair(
+                                "videoUrl",
+                                if (event.videoUrl?.url?.startsWith("https://vimeo.com/") == true) event.videoUrl.url.replace(
+                                    "https://vimeo.com/",
+                                    "https://player.vimeo.com/video/"
+                                ) else null
+                            ),
                             Pair("hasPhotosOrVideo", event.videoUrl != null || event.photoUrls.isNotEmpty())
                         )
                     )
@@ -141,50 +156,57 @@ class TalkHandler(
             }
 
     fun findOneView(year: Int, req: ServerRequest): Mono<ServerResponse> = repository.findByEventAndSlug(year.toString(), req.pathVariable("slug")).flatMap { talk ->
-        val sponsors = loadSponsors(year, req)
 
         req.session().flatMap {
             val currentUserEmail = it.getAttribute<String>("email")
 
-            userRepository.findMany(talk.speakerIds).collectList().flatMap { speakers ->
+            service.findByYear(year).flatMap { event ->
+                userRepository.findMany(talk.speakerIds).collectList().flatMap { speakers ->
 
-                val otherTalks = repository
-                    .findBySpeakerId(talk.speakerIds, talk.id)
-                    .collectList()
-                    .flatMap { talks ->
-                        talks.map { talk -> talk.toDto(req.language(), speakers.filter { talk.speakerIds.contains(it.login) }.toList()) }.toMono()
-                    }
+                    val otherTalks = repository
+                        .findBySpeakerId(talk.speakerIds, talk.id)
+                        .collectList()
+                        .flatMap { talks ->
+                            talks.map { talk ->
+                                talk.toDto(
+                                    req.language(),
+                                    speakers.filter { talk.speakerIds.contains(it.login) }.toList()
+                                )
+                            }.toMono()
+                        }
 
-                ok().render(
-                    "talk",
-                    mapOf(
-                        Pair("talk", talk.toDto(req.language(), speakers!!)),
-                        Pair(
-                            "speakers",
-                            speakers.map { speaker -> speaker.toDto(req.language()) }
-                                .sortedBy { talk.speakerIds.indexOf(it.login) }),
-                        Pair("othertalks", otherTalks),
-                        Pair(
-                            "favorites",
-                            if (currentUserEmail == null) null else favoriteRepository.findByEmailAndTalk(
-                                currentUserEmail,
-                                talk.id!!
-                            )
-                        ),
-                        Pair("year", year),
-                        Pair("hasOthertalks", otherTalks.map { it.size > 0 }),
-                        Pair("title", "talk.html.title|${talk.title}"),
-                        Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
-                        Pair(
-                            "vimeoPlayer",
-                            if (talk.video?.startsWith("https://vimeo.com/") == true) talk.video.replace(
-                                "https://vimeo.com/",
-                                "https://player.vimeo.com/video/"
-                            ) else null
-                        ),
-                        Pair("sponsors", sponsors)
+                    ok().render(
+                        "talk",
+                        mapOf(
+                            Pair("talk", talk.toDto(req.language(), speakers!!)),
+                            Pair(
+                                "speakers",
+                                speakers.map { speaker -> speaker.toDto(req.language()) }
+                                    .sortedBy { talk.speakerIds.indexOf(it.login) }),
+                            Pair("othertalks", otherTalks),
+                            Pair(
+                                "favorites",
+                                if (currentUserEmail == null) null else favoriteRepository.findByEmailAndTalk(
+                                    currentUserEmail,
+                                    talk.id!!
+                                )
+                            ),
+                            Pair("year", year),
+                            Pair("hasOthertalks", otherTalks.map { it.size > 0 }),
+                            Pair("title", "talk.html.title|${talk.title}"),
+                            Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
+                            Pair(
+                                "vimeoPlayer",
+                                if (talk.video?.startsWith("https://vimeo.com/") == true) talk.video.replace(
+                                    "https://vimeo.com/",
+                                    "https://player.vimeo.com/video/"
+                                ) else null
+                            ),
+                            Pair("sponsors", loadSponsors(event))
+                        )
                     )
-                )
+                }
+
             }
         }
     }
@@ -279,26 +301,14 @@ class TalkHandler(
         }
     }
 
-    fun loadSponsors(year: Int, req: ServerRequest) = eventRepository
-        .findByYear(year)
-        .flatMap { event ->
-            userRepository
-                .findMany(event.sponsors.map { it.sponsorId })
-                .collectMap(User::login)
-                .map { sponsorsByLogin ->
-                    val sponsorsByEvent = event.sponsors.groupBy { it.level }
-                    mapOf(
-                        Pair("sponsors-gold", sponsorsByEvent[SponsorshipLevel.GOLD]?.map { it.toSponsorDto(sponsorsByLogin[it.sponsorId]!!) }),
-                        Pair(
-                            "sponsors-others",
-                            event.sponsors
-                                .filter { it.level != SponsorshipLevel.GOLD }
-                                .map { it.toSponsorDto(sponsorsByLogin[it.sponsorId]!!) }
-                                .distinctBy { it.login }
-                        )
-                    )
-                }
-        }
+    private fun loadSponsors(event: CachedEvent) = mapOf(
+        Pair(
+            "sponsors-gold",
+            event.filterBySponsorLevel(SponsorshipLevel.GOLD).map { it.toSponsorDto() }),
+        Pair(
+            "sponsors-others",
+            event.sponsors.intersect(event.filterBySponsorLevel(SponsorshipLevel.GOLD)).map { it.toSponsorDto() })
+    )
 
     fun findOne(req: ServerRequest) =
         ok().json().body(repository.findOne(req.pathVariable("login")).map { it.sanitizeForApi() })

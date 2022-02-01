@@ -1,10 +1,12 @@
 package mixit.blog.handler
 
+import mixit.blog.model.CachedPost
 import mixit.blog.model.Post
 import mixit.talk.model.Language
 import mixit.user.model.User
 import mixit.util.formatDate
 import mixit.util.markFoundOccurrences
+import mixit.util.toHTML
 import mixit.util.toRFC3339
 
 data class PostDto(
@@ -15,6 +17,16 @@ data class PostDto(
     val title: String,
     val headline: String,
     val content: String?
+)
+
+fun CachedPost.toDto(language: Language) = PostDto(
+    id,
+    slug[language] ?: "",
+    User(author.login, author.firstname, author.lastname),
+    addedAt.formatDate(language),
+    title[language] ?: "",
+    (headline[language] ?: "").toHTML(),
+    (content[language] ?:"").toHTML()
 )
 
 fun Post.toDto(author: User, language: Language, searchTerms: List<String> = emptyList()) = PostDto(
