@@ -4,7 +4,7 @@ import java.time.LocalDateTime
 import mixit.blog.handler.Feed
 import mixit.blog.handler.FeedEntry
 import mixit.talk.model.Language
-import mixit.user.cache.CachedStaff
+import mixit.user.model.CachedStaff
 import mixit.user.model.User
 import mixit.util.Cached
 import mixit.util.toRFC3339

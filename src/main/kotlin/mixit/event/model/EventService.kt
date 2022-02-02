@@ -3,10 +3,10 @@ package mixit.event.model
 import mixit.MixitApplication.Companion.speakerStarInCurrentEvent
 import mixit.MixitApplication.Companion.speakerStarInHistory
 import mixit.event.repository.EventRepository
-import mixit.user.cache.CachedOrganization
-import mixit.user.cache.CachedSpeaker
-import mixit.user.cache.CachedSponsor
-import mixit.user.cache.CachedStaff
+import mixit.user.model.CachedOrganization
+import mixit.user.model.CachedSpeaker
+import mixit.user.model.CachedSponsor
+import mixit.user.model.CachedStaff
 import mixit.user.repository.UserRepository
 import mixit.util.CacheTemplate
 import org.springframework.stereotype.Service

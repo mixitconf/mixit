@@ -6,9 +6,8 @@ import java.nio.charset.StandardCharsets
 import java.util.stream.IntStream
 import mixit.MixitProperties
 import mixit.security.model.Cryptographer
-import mixit.talk.handler.toDto
 import mixit.talk.model.Language
-import mixit.talk.repository.TalkRepository
+import mixit.talk.model.TalkService
 import mixit.ticket.repository.TicketRepository
 import mixit.user.model.Link
 import mixit.user.model.Role
@@ -38,7 +37,7 @@ import reactor.kotlin.core.publisher.toMono
 @Component
 class UserHandler(
     private val repository: UserRepository,
-    private val talkRepository: TalkRepository,
+    private val service: TalkService,
     private val ticketRepository: TicketRepository,
     private val cryptographer: Cryptographer,
     private val properties: MixitProperties,
@@ -128,17 +127,15 @@ class UserHandler(
                     )
                 )
         } else {
-            talkRepository
-                .findBySpeakerId(listOf(user.login))
-                .collectList()
+            service
+                .findBySpeakerId(listOf(user.login), "all")
                 .flatMap { talks ->
-                    val talkDtos = talks.map { talk -> talk.toDto(req.language(), listOf(user)) }
                     ok().render(
                         "user",
                         mapOf(
                             Pair("user", user.toDto(req.language())),
-                            Pair("talks", talkDtos),
-                            Pair("hasTalks", talkDtos.isNotEmpty()),
+                            Pair("talks", talks.map { it.toDto(req.language()) }),
+                            Pair("hasTalks", talks.isNotEmpty()),
                             Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8))
                         )
                     )
@@ -240,8 +237,9 @@ class UserHandler(
 
     fun findSpeakerByEventId(req: ServerRequest) =
         ok().json().body(
-            talkRepository.findByEvent(req.pathVariable("year"))
-                .flatMap { repository.findMany(it.speakerIds).map { it.anonymize() } }.distinct()
+            service
+                .findByEvent(req.pathVariable("year"))
+                .map { talks -> talks.flatMap { it.speakers }.map { it.anonymize() }.distinct() }
         )
 
     fun create(req: ServerRequest) = repository.save(req.bodyToMono<User>()).flatMap {

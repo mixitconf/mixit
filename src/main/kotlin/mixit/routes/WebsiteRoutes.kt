@@ -5,8 +5,9 @@ import com.fasterxml.jackson.module.kotlin.readValue
 import java.util.Locale
 import mixit.MixitProperties
 import mixit.about.AboutHandler
+import mixit.about.SearchHandler
 import mixit.blog.handler.AdminPostHandler
-import mixit.blog.handler.BlogHandler
+import mixit.blog.handler.WebBlogHandler
 import mixit.event.handler.AdminEventHandler
 import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
 import mixit.event.model.Event
@@ -48,8 +49,9 @@ class WebsiteRoutes(
     private val adminPostHandler: AdminPostHandler,
     private val adminMixetteHandler: AdminMixetteHandler,
     private val authenticationHandler: AuthenticationHandler,
-    private val blogHandler: BlogHandler,
+    private val blogHandler: WebBlogHandler,
     private val aboutHandler: AboutHandler,
+    private val searchHandler: SearchHandler,
     private val talkHandler: TalkHandler,
     private val sponsorHandler: SponsorHandler,
     private val ticketingHandler: TicketingHandler,
@@ -188,7 +190,7 @@ class WebsiteRoutes(
             POST("/signin", authenticationHandler::signIn)
             POST("/me", userHandler::saveProfile)
             POST("/me/talks", talkHandler::saveProfileTalk)
-            POST("/search") { aboutHandler.searchFullTextView(it) }
+            POST("/search") { searchHandler.searchFullTextView(it) }
             POST("/ticketing", ticketingHandler::submit)
 
             "/admin".nest {

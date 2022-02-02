@@ -1,11 +1,11 @@
 package mixit.routes
 
-import mixit.blog.handler.BlogHandler
+import mixit.blog.handler.JsonBlogHandler
 import mixit.event.handler.AdminEventHandler
-import mixit.event.handler.EventHandler
-import mixit.favorite.handler.FavoriteHandler
+import mixit.event.handler.JsonEventHandler
+import mixit.favorite.handler.JsonFavoriteHandler
 import mixit.security.handler.ExternalHandler
-import mixit.talk.handler.TalkHandler
+import mixit.talk.handler.JsonTalkHandler
 import mixit.ticket.handler.TicketingHandler
 import mixit.user.handler.UserHandler
 import org.springframework.context.annotation.Bean
@@ -15,11 +15,11 @@ import org.springframework.web.reactive.function.server.router
 
 @Configuration
 class ApiRoutes(
-    private val blogHandler: BlogHandler,
-    private val eventHandler: EventHandler,
+    private val blogHandler: JsonBlogHandler,
+    private val eventHandler: JsonEventHandler,
     private val adminEventHandler: AdminEventHandler,
-    private val talkHandler: TalkHandler,
-    private val favoriteHandler: FavoriteHandler,
+    private val talkHandler: JsonTalkHandler,
+    private val favoriteHandler: JsonFavoriteHandler,
     private val ticketingHandler: TicketingHandler,
     private val externalHandler: ExternalHandler,
     private val userHandler: UserHandler

@@ -1,10 +1,10 @@
 package mixit.event.model
 
 import java.time.LocalDate
-import mixit.user.cache.CachedOrganization
-import mixit.user.cache.CachedSpeaker
-import mixit.user.cache.CachedSponsor
-import mixit.user.cache.CachedStaff
+import mixit.user.model.CachedOrganization
+import mixit.user.model.CachedSpeaker
+import mixit.user.model.CachedSponsor
+import mixit.user.model.CachedStaff
 import mixit.user.model.Link
 import mixit.util.Cached
 

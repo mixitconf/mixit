@@ -38,6 +38,7 @@ class AdminEventHandler(
         const val TEMPLATE_VOLUNTEER = "admin-event-volunteer"
         const val LIST_URI = "/admin/events"
         const val CURRENT_EVENT = "2022"
+        const val TIMEZONE = "Europe/Paris"
     }
 
     fun adminEvents(req: ServerRequest): Mono<ServerResponse> {

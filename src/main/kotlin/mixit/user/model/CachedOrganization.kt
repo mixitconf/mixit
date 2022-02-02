@@ -1,8 +1,6 @@
-package mixit.user.cache
+package mixit.user.model
 
 import mixit.talk.model.Language
-import mixit.user.model.Link
-import mixit.user.model.User
 import mixit.util.toHTML
 
 data class CachedOrganization(
