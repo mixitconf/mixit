@@ -78,7 +78,7 @@ class UserRepository(
         template.findOne<User>(Query(where("role").inValues(roles).and("_id").isEqualTo(login)))
 
     fun findAll() =
-        template.findAll<User>().doOnComplete { logger.info("Load all talks")  }
+        template.findAll<User>().doOnComplete { logger.info("Load all users")  }
 
     fun findAllByIds(login: List<String>): Flux<User> {
         val criteria = where("login").inValues(login)

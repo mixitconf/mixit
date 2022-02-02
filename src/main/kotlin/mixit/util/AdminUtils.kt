@@ -3,13 +3,8 @@ package mixit.util
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.user.model.Link
-import org.springframework.web.reactive.function.server.ServerRequest
-import org.springframework.web.reactive.function.server.ServerResponse
 
 object AdminUtils {
-
-    fun admin(req: ServerRequest) =
-        ServerResponse.ok().render("admin", mapOf(Pair("title", "admin.title")))
 
     fun Any.toJson(objectMapper: ObjectMapper): String =
         objectMapper.writeValueAsString(this).replace("\"", "&quot;")

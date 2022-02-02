@@ -3,6 +3,7 @@ package mixit.talk.model
 import mixit.talk.repository.TalkRepository
 import mixit.user.repository.UserRepository
 import mixit.util.CacheTemplate
+import mixit.util.CacheZone
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
@@ -12,6 +13,8 @@ class TalkService(
     private val talkRepository: TalkRepository,
     private val userRepository: UserRepository
 ) : CacheTemplate<CachedTalk>() {
+
+    override val cacheZone: CacheZone = CacheZone.TALK
 
     override fun findAll(): Flux<CachedTalk> =
         findAll { talkRepository.findAll().flatMap { talk -> loadSpeakers(talk) } }

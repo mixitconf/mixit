@@ -14,13 +14,11 @@ import mixit.util.AdminUtils.toLink
 import mixit.util.AdminUtils.toLinks
 import mixit.util.enumMatcher
 import mixit.util.extractFormData
-import mixit.util.json
 import mixit.util.seeOther
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
-import org.springframework.web.reactive.function.server.body
 import reactor.core.publisher.Mono
 
 @Component
@@ -321,13 +319,5 @@ class AdminEventHandler(
                         .then(seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}"))
                 }
         }
-
-    fun cacheStats(req: ServerRequest) =
-        ok().json().body(Mono.justOrEmpty(service.cacheStats()))
-
-    fun invalidateCache(req: ServerRequest): Mono<ServerResponse> {
-        service.invalidateCache()
-        return seeOther("${properties.baseUri}$LIST_URI")
-    }
 
 }
