@@ -1,4 +1,4 @@
-package mixit.user.cache
+package mixit.user.model
 
 import java.time.LocalDate
 import mixit.event.model.EventSponsoring
@@ -6,8 +6,6 @@ import mixit.event.model.SponsorshipLevel
 import mixit.talk.model.Language
 import mixit.user.handler.EventSponsoringDto
 import mixit.user.handler.toSponsorDto
-import mixit.user.model.Link
-import mixit.user.model.User
 import mixit.util.toHTML
 
 data class CachedSponsor(

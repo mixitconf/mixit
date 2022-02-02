@@ -34,15 +34,21 @@ class EventRepository(
         }
     }
 
-    fun count() = template.count<Event>()
+    fun count() =
+        template.count<Event>()
 
-    fun findAll() = template.find<Event>(Query().with(Sort.by("year"))).doOnComplete { logger.info("Load all events")  }
+    fun findAll() =
+        template.find<Event>(Query().with(Sort.by("year"))).doOnComplete { logger.info("Load all events")  }
 
-    fun findOne(id: String) = template.findById<Event>(id).doOnSuccess {  logger.info("Try to find event $id") }
+    fun findOne(id: String) =
+        template.findById<Event>(id).doOnSuccess {  logger.info("Try to find event $id") }
 
-    fun deleteAll() = template.remove<Event>(Query())
+    fun deleteAll() =
+        template.remove<Event>(Query())
 
-    fun save(event: Event) = template.save(event)
+    fun save(event: Event) =
+        template.save(event)
 
-    fun findByYear(year: Int) = template.findOne<Event>(Query(Criteria.where("year").isEqualTo(year)))
+    fun findByYear(year: Int) =
+        template.findOne<Event>(Query(Criteria.where("year").isEqualTo(year)))
 }

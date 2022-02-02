@@ -5,8 +5,9 @@ import com.fasterxml.jackson.module.kotlin.readValue
 import java.util.Locale
 import mixit.MixitProperties
 import mixit.about.AboutHandler
+import mixit.about.SearchHandler
 import mixit.blog.handler.AdminPostHandler
-import mixit.blog.handler.BlogHandler
+import mixit.blog.handler.WebBlogHandler
 import mixit.event.handler.AdminEventHandler
 import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
 import mixit.event.model.Event
@@ -21,8 +22,9 @@ import mixit.ticket.handler.TicketingHandler
 import mixit.user.handler.AdminUserHandler
 import mixit.user.handler.SponsorHandler
 import mixit.user.handler.UserHandler
-import mixit.util.AdminUtils
 import mixit.util.generateModel
+import mixit.util.handler.AdminHandler
+import mixit.util.handler.CacheHandler
 import mixit.util.locale
 import org.slf4j.LoggerFactory
 import org.springframework.context.MessageSource
@@ -41,6 +43,8 @@ import reactor.kotlin.core.publisher.toMono
 
 @Configuration
 class WebsiteRoutes(
+    private val adminHandler: AdminHandler,
+    private val cacheHandler: CacheHandler,
     private val adminEventHandler: AdminEventHandler,
     private val adminTicketingHandler: AdminTicketingHandler,
     private val adminTalkHandler: AdminTalkHandler,
@@ -48,8 +52,9 @@ class WebsiteRoutes(
     private val adminPostHandler: AdminPostHandler,
     private val adminMixetteHandler: AdminMixetteHandler,
     private val authenticationHandler: AuthenticationHandler,
-    private val blogHandler: BlogHandler,
+    private val blogHandler: WebBlogHandler,
     private val aboutHandler: AboutHandler,
+    private val searchHandler: SearchHandler,
     private val talkHandler: TalkHandler,
     private val sponsorHandler: SponsorHandler,
     private val ticketingHandler: TicketingHandler,
@@ -88,7 +93,7 @@ class WebsiteRoutes(
                     it
                 )
             }
-            GET("/admin", AdminUtils::admin)
+            GET("/admin", adminHandler::admin)
             GET("/faq", aboutHandler::faqView)
             GET("/come", aboutHandler::comeToMixitView)
             GET("/schedule", talkHandler::scheduleView)
@@ -146,6 +151,7 @@ class WebsiteRoutes(
             }
 
             "/admin".nest {
+                GET("/cache", cacheHandler::view)
                 GET("/ticketing", adminTicketingHandler::adminTicketing)
                 GET("/mailings", mailingHandler::listMailing)
                 GET("/mailings/create", mailingHandler::createMailing)
@@ -166,9 +172,6 @@ class WebsiteRoutes(
                 GET("/events/{eventId}/volunteers/edit/{organizationLogin}", adminEventHandler::editEventVolunteer)
                 GET("/events/{eventId}/volunteers/create", adminEventHandler::createEventVolunteer)
                 GET("/events/create", adminEventHandler::createEvent)
-                // TODO move and rewrite
-                GET("/events/cache/invalidate", adminEventHandler::invalidateCache)
-
                 GET("/blog", adminPostHandler::adminBlog)
                 GET("/post/edit/{id}", adminPostHandler::editPost)
                 GET("/post/create", adminPostHandler::createPost)
@@ -188,7 +191,7 @@ class WebsiteRoutes(
             POST("/signin", authenticationHandler::signIn)
             POST("/me", userHandler::saveProfile)
             POST("/me/talks", talkHandler::saveProfileTalk)
-            POST("/search") { aboutHandler.searchFullTextView(it) }
+            POST("/search") { searchHandler.searchFullTextView(it) }
             POST("/ticketing", ticketingHandler::submit)
 
             "/admin".nest {
@@ -214,7 +217,8 @@ class WebsiteRoutes(
                 POST("/mailings/send", mailingHandler::sendMailing)
                 POST("/mailings/delete", mailingHandler::deleteMailing)
                 POST("/mixette-donation/{id}/delete", adminMixetteHandler::adminDeleteDonation)
-                POST("/mixette-donation", adminMixetteHandler::adminSaveDonation)
+                POST("/mixette-donat:ion", adminMixetteHandler::adminSaveDonation)
+                POST("/cache/{zone}/invalidate", cacheHandler::invalidate)
             }
         }
 

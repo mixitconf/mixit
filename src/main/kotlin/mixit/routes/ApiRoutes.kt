@@ -1,11 +1,10 @@
 package mixit.routes
 
-import mixit.blog.handler.BlogHandler
-import mixit.event.handler.AdminEventHandler
-import mixit.event.handler.EventHandler
-import mixit.favorite.handler.FavoriteHandler
+import mixit.blog.handler.JsonBlogHandler
+import mixit.event.handler.JsonEventHandler
+import mixit.favorite.handler.JsonFavoriteHandler
 import mixit.security.handler.ExternalHandler
-import mixit.talk.handler.TalkHandler
+import mixit.talk.handler.JsonTalkHandler
 import mixit.ticket.handler.TicketingHandler
 import mixit.user.handler.UserHandler
 import org.springframework.context.annotation.Bean
@@ -15,11 +14,10 @@ import org.springframework.web.reactive.function.server.router
 
 @Configuration
 class ApiRoutes(
-    private val blogHandler: BlogHandler,
-    private val eventHandler: EventHandler,
-    private val adminEventHandler: AdminEventHandler,
-    private val talkHandler: TalkHandler,
-    private val favoriteHandler: FavoriteHandler,
+    private val blogHandler: JsonBlogHandler,
+    private val eventHandler: JsonEventHandler,
+    private val talkHandler: JsonTalkHandler,
+    private val favoriteHandler: JsonFavoriteHandler,
     private val ticketingHandler: TicketingHandler,
     private val externalHandler: ExternalHandler,
     private val userHandler: UserHandler
@@ -29,12 +27,12 @@ class ApiRoutes(
     fun apiRouter() = router {
         (accept(APPLICATION_JSON) and "/api").nest {
             "/blog".nest {
-                GET("/", blogHandler::findAll)
+                GET("", blogHandler::findAll)
                 GET("/{id}", blogHandler::findOne)
             }
 
             "/event".nest {
-                GET("/", eventHandler::findAll)
+                GET("", eventHandler::findAll)
                 GET("/{id}", eventHandler::findOne)
             }
 
@@ -43,8 +41,6 @@ class ApiRoutes(
                 GET("/ticket/random", ticketingHandler::randomDraw)
                 GET("/favorite", favoriteHandler::findAll)
                 GET("/{year}/talk", talkHandler::findAdminByEventId)
-                // TODO move and rewrite
-                GET("/events/cache/stats", adminEventHandler::cacheStats)
             }
 
             // Edition data
@@ -61,11 +57,11 @@ class ApiRoutes(
             }
 
             "/user".nest {
-                GET("/", userHandler::findAll)
+                GET("", userHandler::findAll)
                 GET("/{login}", userHandler::findOne)
             }
             "/staff".nest {
-                GET("/", userHandler::findStaff)
+                GET("", userHandler::findStaff)
                 GET("/{login}", userHandler::findOneStaff)
             }
 

@@ -4,7 +4,6 @@ import mixit.MixitProperties
 import mixit.blog.model.BlogService
 import mixit.blog.model.toFeed
 import mixit.user.repository.UserRepository
-import mixit.util.json
 import mixit.util.language
 import mixit.util.permanentRedirect
 import org.springframework.http.MediaType.APPLICATION_ATOM_XML
@@ -12,11 +11,10 @@ import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
-import org.springframework.web.reactive.function.server.body
 import reactor.core.publisher.Mono
 
 @Component
-class BlogHandler(
+class WebBlogHandler(
     val service: BlogService,
     val userRepository: UserRepository,
     val properties: MixitProperties
@@ -52,12 +50,6 @@ class BlogHandler(
                     )
                 )
             }
-
-    fun findOne(req: ServerRequest) =
-        ok().json().body(service.findOne(req.pathVariable("id")))
-
-    fun findAll(req: ServerRequest) =
-        ok().json().body(service.findAll())
 
     fun redirect(req: ServerRequest) =
         service.findOne(req.pathVariable("id")).flatMap {

@@ -1,7 +1,7 @@
 package mixit.routes
 
 import mixit.MixitProperties
-import mixit.blog.handler.BlogHandler
+import mixit.blog.handler.WebBlogHandler
 import mixit.routes.Routes.GOOGLE_DRIVE_URI
 import mixit.talk.handler.TalkHandler
 import mixit.util.permanentRedirect
@@ -12,7 +12,7 @@ import org.springframework.web.reactive.function.server.router
 
 @Configuration
 class RedirectRoutes(
-    private val blogHandler: BlogHandler,
+    private val blogHandler: WebBlogHandler,
     private val talkHandler: TalkHandler,
     private val properties: MixitProperties
 ) {

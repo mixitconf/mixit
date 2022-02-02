@@ -3,12 +3,13 @@ package mixit.event.model
 import mixit.MixitApplication.Companion.speakerStarInCurrentEvent
 import mixit.MixitApplication.Companion.speakerStarInHistory
 import mixit.event.repository.EventRepository
-import mixit.user.cache.CachedOrganization
-import mixit.user.cache.CachedSpeaker
-import mixit.user.cache.CachedSponsor
-import mixit.user.cache.CachedStaff
+import mixit.user.model.CachedOrganization
+import mixit.user.model.CachedSpeaker
+import mixit.user.model.CachedSponsor
+import mixit.user.model.CachedStaff
 import mixit.user.repository.UserRepository
 import mixit.util.CacheTemplate
+import mixit.util.CacheZone
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
@@ -19,6 +20,8 @@ class EventService(
     private val userRepository: UserRepository
 ) : CacheTemplate<CachedEvent>() {
 
+    override val cacheZone: CacheZone = CacheZone.EVENT
+
     override fun findAll(): Flux<CachedEvent> =
         findAll { eventRepository.findAll().flatMap { event -> loadEventUsers(event) } }
 
@@ -26,7 +29,7 @@ class EventService(
         findAll().collectList().flatMap { events -> Mono.justOrEmpty(events.firstOrNull { it.year == year }) }
 
     fun save(event: Event) =
-        eventRepository.save(event).also { cacheList.invalidateAll() }
+        eventRepository.save(event).doOnSuccess { cacheList.invalidateAll() }
 
 
     private fun loadEventUsers(event: Event): Mono<CachedEvent> {

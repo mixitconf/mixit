@@ -8,10 +8,8 @@ import mixit.talk.model.Room
 import mixit.talk.model.Talk
 import mixit.talk.model.TalkFormat
 import mixit.talk.model.TalkFormat.TALK
+import mixit.talk.model.TalkService
 import mixit.talk.model.Topic
-import mixit.talk.repository.TalkRepository
-import mixit.user.model.User
-import mixit.user.repository.UserRepository
 import mixit.util.AdminUtils.toJson
 import mixit.util.AdminUtils.toLinks
 import mixit.util.enumMatcher
@@ -27,8 +25,7 @@ import reactor.core.publisher.Mono
 
 @Component
 class AdminTalkHandler(
-    private val talkRepository: TalkRepository,
-    private val userRepository: UserRepository,
+    private val service: TalkService,
     private val properties: MixitProperties,
     private val objectMapper: ObjectMapper
 ) {
@@ -41,19 +38,10 @@ class AdminTalkHandler(
     }
 
     fun adminTalks(req: ServerRequest, year: String): Mono<ServerResponse> {
-        val talks = talkRepository
+        val talks = service
             .findByEvent(year)
-            .collectList()
-            .flatMap { talks ->
-                userRepository
-                    .findMany(talks.flatMap(Talk::speakerIds))
-                    .collectMap(User::login)
-                    .map { speakers ->
-                        talks.map { talk ->
-                            talk.toDto(req.language(), talk.speakerIds.mapNotNull { speakers[it] })
-                        }
-                    }
-            }
+            .map { talks -> talks.map { it.toDto(req.language()) } }
+
         return ok().render(
             TEMPLATE_LIST,
             mapOf(
@@ -68,7 +56,7 @@ class AdminTalkHandler(
         this.adminTalk()
 
     fun editTalk(req: ServerRequest): Mono<ServerResponse> =
-        talkRepository.findBySlug(req.pathVariable("slug")).flatMap(this::adminTalk)
+        service.findBySlug(req.pathVariable("slug")).flatMap { adminTalk(it.toTalk()) }
 
     fun adminSaveTalk(req: ServerRequest): Mono<ServerResponse> =
         req.extractFormData().flatMap { formData ->
@@ -89,13 +77,13 @@ class AdminTalkHandler(
                 end = LocalDateTime.parse(formData["end"]),
                 photoUrls = formData["photoUrls"]?.toLinks(objectMapper) ?: emptyList()
             )
-            talkRepository.save(talk).then(seeOther("${properties.baseUri}$LIST_URI"))
+            service.save(talk).then(seeOther("${properties.baseUri}$LIST_URI"))
         }
 
 
     fun adminDeleteTalk(req: ServerRequest): Mono<ServerResponse> =
         req.extractFormData().flatMap { formData ->
-            talkRepository
+            service
                 .deleteOne(formData["id"]!!)
                 .then(seeOther("${properties.baseUri}$LIST_URI"))
         }

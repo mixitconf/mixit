@@ -77,7 +77,8 @@ class UserRepository(
     fun findOneByRoles(login: String, roles: List<Role>) =
         template.findOne<User>(Query(where("role").inValues(roles).and("_id").isEqualTo(login)))
 
-    fun findAll() = template.findAll<User>()
+    fun findAll() =
+        template.findAll<User>().doOnComplete { logger.info("Load all users")  }
 
     fun findAllByIds(login: List<String>): Flux<User> {
         val criteria = where("login").inValues(login)
@@ -89,18 +90,24 @@ class UserRepository(
         return template.find(Query(criteria))
     }
 
-    fun findOne(login: String) = template.findById<User>(login)
+    fun findOne(login: String) =
+        template.findById<User>(login)
 
-    fun findMany(logins: List<String>) = template.find<User>(Query(where("_id").inValues(logins)))
+    fun findMany(logins: List<String>) =
+        template.find<User>(Query(where("_id").inValues(logins)))
 
     fun findByLegacyId(id: Long) =
         template.findOne<User>(Query(where("legacyId").isEqualTo(id)))
 
-    fun deleteAll() = template.remove<User>(Query())
+    fun deleteAll() =
+        template.remove<User>(Query())
 
-    fun deleteOne(login: String) = template.remove<User>(Query(where("_id").isEqualTo(login)))
+    fun deleteOne(login: String) =
+        template.remove<User>(Query(where("_id").isEqualTo(login)))
 
-    fun save(user: User) = template.save(user)
+    fun save(user: User) =
+        template.save(user)
 
-    fun save(user: Mono<User>) = template.save(user)
+    fun save(user: Mono<User>) =
+        template.save(user)
 }

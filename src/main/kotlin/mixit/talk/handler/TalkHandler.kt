@@ -7,73 +7,80 @@ import mixit.event.model.EventService
 import mixit.event.model.SponsorshipLevel
 import mixit.favorite.model.Favorite
 import mixit.favorite.repository.FavoriteRepository
+import mixit.talk.model.CachedTalk
 import mixit.talk.model.Language
-import mixit.talk.model.Talk
-import mixit.talk.repository.TalkRepository
+import mixit.talk.model.TalkService
 import mixit.user.handler.toDto
 import mixit.user.handler.toSponsorDto
-import mixit.user.model.User
-import mixit.user.repository.UserRepository
+import mixit.util.currentUserEmail
+import mixit.util.enumMatcher
 import mixit.util.extractFormData
-import mixit.util.json
 import mixit.util.language
 import mixit.util.permanentRedirect
 import mixit.util.seeOther
+import mixit.util.toVimeoPlayerUrl
 import mixit.util.validator.MarkdownValidator
 import mixit.util.validator.MaxLengthValidator
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
-import org.springframework.web.reactive.function.server.body
 import org.springframework.web.util.UriUtils
 import reactor.core.publisher.Mono
-import reactor.kotlin.core.publisher.toMono
-
-const val SURPRISE_RANDOM = false
+import reactor.kotlin.core.publisher.switchIfEmpty
 
 @Component
 class TalkHandler(
-    private val repository: TalkRepository,
-    private val userRepository: UserRepository,
-    private val service: EventService,
+    private val service: TalkService,
+    private val eventService: EventService,
     private val properties: MixitProperties,
     private val favoriteRepository: FavoriteRepository,
     private val maxLengthValidator: MaxLengthValidator,
     private val markdownValidator: MarkdownValidator
 ) {
 
+    companion object {
+        const val TEMPLATE_SCHEDULE = "schedule"
+        const val TEMPLATE_LIST = "talks"
+        const val TEMPLATE_MEDIAS = "medias"
+        const val TEMPLATE_VIEW = "talk"
+        const val TEMPLATE_EDIT = "talk-edit"
+    }
+
     fun scheduleView(req: ServerRequest) =
-        ok().render("schedule", mapOf(Pair("title", "schedule.title")))
+        ok().render(TEMPLATE_SCHEDULE, mapOf(Pair("title", "schedule.title")))
 
-    fun findByEventView(year: Int, req: ServerRequest, filterOnFavorite: Boolean, topic: String? = null): Mono<ServerResponse> =
-        req.session().flatMap { session ->
-            val currentUserEmail = session.getAttribute<String>("email")
-            service.findByYear(year)
-                .flatMap { event ->
-                    val talks = loadTalkAndFavorites(year, req.language(), filterOnFavorite, currentUserEmail, topic)
-                        .map { talk -> talk.groupBy { it.date ?: "" } }
-
+    fun findByEventView(
+        year: Int,
+        req: ServerRequest,
+        filterOnFavorite: Boolean,
+        topic: String? = null
+    ): Mono<ServerResponse> =
+        req.currentUserEmail()
+            .flatMap { currentUserEmail ->
+                loadTalkAndFavorites(year, req.language(), filterOnFavorite, currentUserEmail, topic)
+            }
+            .switchIfEmpty {
+                service.findByEvent(year.toString(), topic).map { talks -> talks.map { it.toDto(req.language()) } }
+            }
+            .flatMap { talks ->
+                eventService.findByYear(year).flatMap { event ->
+                    val title = if (topic == null) "talks.title.html|$year" else "talks.title.html.$topic|$year"
                     ok().render(
-                        "talks",
+                        TEMPLATE_LIST,
                         mapOf(
-                            Pair("talks", talks),
+                            Pair("talks", talks.groupBy { it.date ?: "" }),
                             Pair("year", year),
                             Pair("schedulingFile", event.schedulingFileUrl),
-                            Pair("current", year == 2019),
-                            Pair(
-                                "title",
-                                if (topic == null) "talks.title.html|$year" else "talks.title.html.$topic|$year"
-                            ),
+                            Pair("title", title),
                             Pair("filtered", filterOnFavorite),
                             Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
                             Pair("topic", topic),
-                            Pair("has2Columns", talks.map { it.size == 2 }),
                             Pair("sponsors", loadSponsors(event))
                         )
                     )
                 }
-        }
+            }
 
     fun findMediaByEventView(
         year: Int,
@@ -81,24 +88,19 @@ class TalkHandler(
         filterOnFavorite: Boolean,
         topic: String? = null
     ): Mono<ServerResponse> =
-        req.session().flatMap {
-            val currentUserEmail = it.getAttribute<String>("email")
-            val talks = loadTalkAndFavorites(
-                year,
-                req.language(),
-                filterOnFavorite,
-                currentUserEmail,
-                topic
-            ).map { it.sortedBy { it.title } }
-
-            service
-                .findByYear(year)
-                .flatMap { event ->
-
+        req.currentUserEmail()
+            .flatMap { currentUserEmail ->
+                loadTalkAndFavorites(year, req.language(), filterOnFavorite, currentUserEmail, topic)
+            }
+            .switchIfEmpty {
+                service.findByEvent(year.toString(), topic).map { talks -> talks.map { it.toDto(req.language()) } }
+            }
+            .flatMap { talks ->
+                eventService.findByYear(year).flatMap { event ->
                     ok().render(
-                        "medias",
+                        TEMPLATE_MEDIAS,
                         mapOf(
-                            Pair("talks", talks),
+                            Pair("talks", talks.sortedBy { it.title }),
                             Pair("topic", topic),
                             Pair("year", year),
                             Pair("title", "medias.title.html|$year"),
@@ -106,197 +108,128 @@ class TalkHandler(
                             Pair("sponsors", loadSponsors(event)),
                             Pair("filtered", filterOnFavorite),
                             Pair("event", event.toEvent()),
-                            Pair(
-                                "videoUrl",
-                                if (event.videoUrl?.url?.startsWith("https://vimeo.com/") == true) event.videoUrl.url.replace(
-                                    "https://vimeo.com/",
-                                    "https://player.vimeo.com/video/"
-                                ) else null
-                            ),
+                            Pair("videoUrl", event.videoUrl?.url?.toVimeoPlayerUrl()),
                             Pair("hasPhotosOrVideo", event.videoUrl != null || event.photoUrls.isNotEmpty())
                         )
                     )
                 }
-        }
+            }
 
-    private fun loadTalkAndFavorites(year: Int, language: Language, filterOnFavorite: Boolean, currentUserEmail: String? = null, topic: String? = null): Mono<List<TalkDto>> =
-        if (currentUserEmail != null) {
-            favoriteRepository
-                .findByEmail(currentUserEmail)
-                .collectList()
-                .flatMap { favorites ->
-                    if (filterOnFavorite) {
-                        repository.findByEventAndTalkIds(year.toString(), favorites.map { it.talkId }, topic)
-                            .collectList().flatMap { addUserToTalks(it, favorites, language) }
-                    } else {
-                        repository.findByEvent(year.toString(), topic).collectList().flatMap { addUserToTalks(it, favorites, language) }
-                    }
-                }
-        } else {
-            repository.findByEvent(year.toString(), topic).collectList().flatMap { addUserToTalks(it, emptyList(), language) }
-        }
-
-    private fun addUserToTalks(
-        talks: List<Talk>,
-        favorites: List<Favorite>,
-        language: Language
+    private fun loadTalkAndFavorites(
+        year: Int,
+        language: Language,
+        filterOnFavorite: Boolean,
+        currentUserEmail: String,
+        topic: String? = null
     ): Mono<List<TalkDto>> =
-        userRepository
-            .findMany(talks.flatMap(Talk::speakerIds))
-            .collectMap(User::login)
-            .map { speakers ->
-                talks
-                    .map { talk ->
-                        talk.toDto(
-                            language,
-                            talk.speakerIds.mapNotNull { speakers[it] },
-                            favorites.filter { talk.id!!.equals(it.talkId) }.any()
-                        )
+        favoriteRepository.findByEmail(currentUserEmail).collectList().flatMap { favorites ->
+            val favoriteTalkIds = favorites.map { it.talkId }
+            if (filterOnFavorite) {
+                service.findByEventAndTalkIds(year.toString(), favoriteTalkIds, topic)
+                    .map { talks ->
+                        talks.map { it.toDto(language, favorite = true) }
+                    }
+            } else {
+                service.findByEvent(year.toString(), topic)
+                    .map { talks ->
+                        talks.map { it.toDto(language, favorite = favoriteTalkIds.contains(it.id)) }
                     }
             }
-
-    fun findOneView(year: Int, req: ServerRequest): Mono<ServerResponse> = repository.findByEventAndSlug(year.toString(), req.pathVariable("slug")).flatMap { talk ->
-
-        req.session().flatMap {
-            val currentUserEmail = it.getAttribute<String>("email")
-
-            service.findByYear(year).flatMap { event ->
-                userRepository.findMany(talk.speakerIds).collectList().flatMap { speakers ->
-
-                    val otherTalks = repository
-                        .findBySpeakerId(talk.speakerIds, talk.id)
-                        .collectList()
-                        .flatMap { talks ->
-                            talks.map { talk ->
-                                talk.toDto(
-                                    req.language(),
-                                    speakers.filter { talk.speakerIds.contains(it.login) }.toList()
-                                )
-                            }.toMono()
-                        }
-
-                    ok().render(
-                        "talk",
-                        mapOf(
-                            Pair("talk", talk.toDto(req.language(), speakers!!)),
-                            Pair(
-                                "speakers",
-                                speakers.map { speaker -> speaker.toDto(req.language()) }
-                                    .sortedBy { talk.speakerIds.indexOf(it.login) }),
-                            Pair("othertalks", otherTalks),
-                            Pair(
-                                "favorites",
-                                if (currentUserEmail == null) null else favoriteRepository.findByEmailAndTalk(
-                                    currentUserEmail,
-                                    talk.id!!
-                                )
-                            ),
-                            Pair("year", year),
-                            Pair("hasOthertalks", otherTalks.map { it.size > 0 }),
-                            Pair("title", "talk.html.title|${talk.title}"),
-                            Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
-                            Pair(
-                                "vimeoPlayer",
-                                if (talk.video?.startsWith("https://vimeo.com/") == true) talk.video.replace(
-                                    "https://vimeo.com/",
-                                    "https://player.vimeo.com/video/"
-                                ) else null
-                            ),
-                            Pair("sponsors", loadSponsors(event))
-                        )
-                    )
-                }
-
-            }
         }
-    }
+
+    fun findOneView(year: Int, req: ServerRequest): Mono<ServerResponse> =
+        req.currentUserEmail()
+            .flatMap { currentUserEmail -> favoriteRepository.findByEmail(currentUserEmail).collectList() }
+            .switchIfEmpty { Mono.just(emptyList<Favorite>()) }
+            .flatMap { favorites ->
+                eventService.findByYear(year).flatMap { event ->
+                    service.findByEventAndSlug(year.toString(), req.pathVariable("slug")).flatMap { talk ->
+                        val lang = req.language()
+                        val inFavorite = favorites.any { talk.id == it.talkId }
+                        val speakers = talk.speakers.map { it.toDto(lang) }.sortedBy { it.firstname }
+                        val otherTalks = service.findBySpeakerId(speakers.map { it.login }, talk.id)
+                            .map { talks -> talks.map { it.toDto(lang) } }
+
+                        ok().render(
+                            TEMPLATE_VIEW,
+                            mapOf(
+                                Pair("talk", talk.toDto(req.language())),
+                                Pair("speakers", talk.speakers.map { it.toDto(lang) }.sortedBy { it.firstname }),
+                                Pair("othertalks", otherTalks),
+                                Pair("favorites", inFavorite),
+                                Pair("year", year),
+                                Pair("hasOthertalks", otherTalks.map { it.isNotEmpty() }),
+                                Pair("title", "talk.html.title|${talk.title}"),
+                                Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
+                                Pair("vimeoPlayer", talk.video.toVimeoPlayerUrl()),
+                                Pair("sponsors", loadSponsors(event))
+                            )
+                        )
+                    }
+                }
+            }
 
     fun editTalkView(req: ServerRequest) =
-        repository
+        service
             .findBySlug(req.pathVariable("slug"))
             .flatMap { editTalkViewDetail(req, it, emptyMap()) }
 
-    private fun editTalkViewDetail(req: ServerRequest, talk: Talk, errors: Map<String, String>) = userRepository.findMany(talk.speakerIds).collectList().flatMap { speakers ->
-
+    private fun editTalkViewDetail(req: ServerRequest, talk: CachedTalk, errors: Map<String, String>) =
         ok().render(
-            "talk-edit",
+            TEMPLATE_EDIT,
             mapOf(
-                Pair("talk", talk.toDto(req.language(), speakers!!, convertRandomLabel = false)),
-                Pair(
-                    "speakers",
-                    speakers.map { speaker -> speaker.toDto(req.language()) }
-                        .sortedBy { talk.speakerIds.indexOf(it.login) }),
+                Pair("talk", talk.toDto(req.language())),
+                Pair("speakers", talk.speakers.map { it.toDto(req.language()) }),
                 Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
                 Pair("hasErrors", errors.isNotEmpty()),
                 Pair("errors", errors),
-                Pair(
-                    "languages",
-                    listOf(
-                        Pair(Language.ENGLISH, Language.ENGLISH == talk.language),
-                        Pair(Language.FRENCH, Language.FRENCH == talk.language)
-                    )
-                )
+                Pair("languages", enumMatcher(talk) { talk.language })
             )
         )
-    }
 
     fun saveProfileTalk(req: ServerRequest): Mono<ServerResponse> =
         req.extractFormData().flatMap { formData ->
-            repository.findOne(formData["id"]!!).flatMap {
+            service.findOne(formData["id"]!!).flatMap { talk ->
 
                 val errors = mutableMapOf<String, String>()
 
                 // Null check
                 if (formData["title"].isNullOrBlank()) {
-                    errors.put("title", "talk.form.error.title.required")
+                    errors["title"] = "talk.form.error.title.required"
                 }
                 if (formData["summary"].isNullOrBlank()) {
-                    errors.put("title", "talk.form.error.summary.required")
+                    errors["summary"] = "talk.form.error.summary.required"
                 }
                 if (formData["language"].isNullOrBlank()) {
-                    errors.put("title", "talk.form.error.language.required")
+                    errors["language"] = "talk.form.error.language.required"
                 }
 
                 if (errors.isNotEmpty()) {
-                    editTalkViewDetail(req, it, errors)
+                    editTalkViewDetail(req, talk, errors)
                 }
 
-                val talk = Talk(
-                it.format,
-                it.event,
-                formData["title"]!!,
-                markdownValidator.sanitize(formData["summary"]!!),
-                it.speakerIds,
-                Language.valueOf(formData["language"]!!),
-                it.addedAt,
-                markdownValidator.sanitize(formData["description"]),
-                it.topic,
-                it.video,
-                it.room,
-                it.start,
-                it.end,
-                it.photoUrls,
-                id = it.id
-            )
+                val updatedTalk = talk.copy(
+                    title = formData["title"]!!,
+                    summary = markdownValidator.sanitize(formData["summary"]!!),
+                    description = markdownValidator.sanitize(formData["description"]),
+                    language = Language.valueOf(formData["language"]!!)
+                )
 
             // We want to control data to not save invalid things in our database
-            if (!maxLengthValidator.isValid(talk.title, 255)) {
-                errors.put("title", "talk.form.error.title.size")
+            if (!maxLengthValidator.isValid(updatedTalk.title, 255)) {
+                errors["title"] = "talk.form.error.title.size"
             }
-
-            if (!markdownValidator.isValid(talk.summary)) {
-                errors.put("summary", "talk.form.error.summary")
+            if (!markdownValidator.isValid(updatedTalk.summary)) {
+                errors["summary"] = "talk.form.error.summary"
             }
-
-            if (!markdownValidator.isValid(talk.description)) {
-                errors.put("description", "talk.form.error.description")
+            if (!markdownValidator.isValid(updatedTalk.description)) {
+                errors["description"] = "talk.form.error.description"
             }
-
             if (errors.isEmpty()) {
                 // If everything is Ok we save the user
-                repository.save(talk).then(seeOther("${properties.baseUri}/me"))
+                service.save(updatedTalk.toTalk()).then(seeOther("${properties.baseUri}/me"))
             } else {
-                editTalkViewDetail(req, talk, errors)
+                editTalkViewDetail(req, updatedTalk, errors)
             }
         }
     }
@@ -310,20 +243,11 @@ class TalkHandler(
             event.sponsors.intersect(event.filterBySponsorLevel(SponsorshipLevel.GOLD)).map { it.toSponsorDto() })
     )
 
-    fun findOne(req: ServerRequest) =
-        ok().json().body(repository.findOne(req.pathVariable("login")).map { it.sanitizeForApi() })
-
-    fun findByEventId(req: ServerRequest) =
-        ok().json().body(repository.findByEvent(req.pathVariable("year")).map { it.sanitizeForApi() })
-
-    fun findAdminByEventId(req: ServerRequest) =
-        ok().json().body(repository.findByEvent(req.pathVariable("year")))
-
-    fun redirectFromId(req: ServerRequest) = repository.findOne(req.pathVariable("id")).flatMap {
+    fun redirectFromId(req: ServerRequest) = service.findOne(req.pathVariable("id")).flatMap {
         permanentRedirect("${properties.baseUri}/${it.event}/${it.slug}")
     }
 
-    fun redirectFromSlug(req: ServerRequest) = repository.findBySlug(req.pathVariable("slug")).flatMap {
+    fun redirectFromSlug(req: ServerRequest) = service.findBySlug(req.pathVariable("slug")).flatMap {
         permanentRedirect("${properties.baseUri}/${it.event}/${it.slug}")
     }
 }

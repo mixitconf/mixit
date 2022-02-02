@@ -5,7 +5,7 @@ import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
 import mixit.event.model.EventService
 import mixit.mixette.model.MixetteDonation
 import mixit.mixette.repository.MixetteDonationRepository
-import mixit.user.cache.CachedOrganization
+import mixit.user.model.CachedOrganization
 import mixit.user.model.User
 import mixit.user.repository.UserRepository
 import mixit.util.extractFormData

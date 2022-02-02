@@ -12,7 +12,7 @@ import reactor.core.publisher.Mono
 import reactor.kotlin.core.publisher.toMono
 
 @Controller
-class FavoriteHandler(private val favoriteRepository: FavoriteRepository, private val cryptographer: Cryptographer) {
+class JsonFavoriteHandler(private val favoriteRepository: FavoriteRepository, private val cryptographer: Cryptographer) {
 
     fun findAll(req: ServerRequest) =
         ok().json().body(favoriteRepository.findAll())

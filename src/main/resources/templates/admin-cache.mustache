@@ -1,0 +1,26 @@
+{{> header}}
+
+<div class="mxt-wrapper--header">
+    <h1 class="text-center pt-5">{{#i18n}}admin.cache.title{{/i18n}}</h1>
+</div>
+
+<div class="container mxt-wrapper--page-content">
+    <div class="lead">{{#i18n}}admin.cache.text{{/i18n}}</div>
+    <div>{{#i18n}}admin.cache.desc{{/i18n}}</div>
+
+    {{#zones.entrySet}}
+        <div class="pt-5">
+            {{#value}}
+                <h3>{{#i18n}}{{title}}{{/i18n}}</h3>
+                <div class="lead">{{#i18n}}{{desc}}{{/i18n}}</div>
+                <div >{{#i18n}}admin.cache.refresh{{/i18n}} <strong>{{refreshAt}}</strong></div>
+                <div >{{#i18n}}admin.cache.entries{{/i18n}} <strong>{{entries}}</strong></div>
+                <form action="/admin/cache/{{zone}}/invalidate" method="post">
+                    <button type="submit" class="btn btn-outline-primary mt-2">Invalidate</button>
+                </form>
+            {{/value}}
+        </div>
+    {{/zones.entrySet}}
+</div>
+
+{{> footer}}

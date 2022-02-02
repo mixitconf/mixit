@@ -1,6 +1,6 @@
 package mixit.user.handler
 
-import mixit.user.cache.CachedSpeaker
+import mixit.user.model.CachedSpeaker
 import mixit.util.camelCase
 
 data class SpeakerStarDto(

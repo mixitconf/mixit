@@ -3,7 +3,7 @@ package mixit.user.handler
 import java.time.LocalDate
 import mixit.event.model.SponsorshipLevel
 import mixit.talk.model.Language
-import mixit.user.cache.CachedSponsor
+import mixit.user.model.CachedSponsor
 import mixit.user.model.Link
 import mixit.util.toUrlPath
 

@@ -51,6 +51,10 @@ fun ServerRequest.extractFormData(): Mono<Map<String, String?>> =
         data.toSingleValueMap().mapValues { if (it.value.isNullOrEmpty()) null else it.value }
     }
 
+fun ServerRequest.currentUserEmail(): Mono<String> =
+    this.session().flatMap { Mono.justOrEmpty(it.getAttribute("email")) }
+
+
 fun ServerResponse.BodyBuilder.json() = contentType(APPLICATION_JSON)
 
 fun ServerResponse.BodyBuilder.xml() = contentType(APPLICATION_XML)
@@ -142,6 +146,12 @@ fun String.camelCase() = this
     .replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
 
 fun String.toUrlPath() = URLEncoder.encode(this, "UTF-8").replace("+", "%20")
+
+fun String?.toVimeoPlayerUrl() = this?.let {
+    if (it.startsWith("https://vimeo.com/")) {
+        it.replace("https://vimeo.com/", "https://player.vimeo.com/video/")
+    } else null
+}
 
 fun String.encodeToMd5(): String? =
     if (isNullOrEmpty()) null else hex(MessageDigest.getInstance("MD5").digest(toByteArray(Charset.forName("CP1252"))))
