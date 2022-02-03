@@ -42,9 +42,9 @@ class DatabaseInitializerConfig {
         talkService: TalkService,
         userService: UserService
     ) = CommandLineRunner {
+        userService.initializeCache()
         eventService.initializeCache()
         blogService.initializeCache()
         talkService.initializeCache()
-        userService.initializeCache()
     }
 }
