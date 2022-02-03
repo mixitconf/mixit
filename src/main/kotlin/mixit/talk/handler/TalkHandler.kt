@@ -234,14 +234,13 @@ class TalkHandler(
         }
     }
 
-    private fun loadSponsors(event: CachedEvent) = mapOf(
-        Pair(
-            "sponsors-gold",
-            event.filterBySponsorLevel(SponsorshipLevel.GOLD).map { it.toSponsorDto() }),
-        Pair(
-            "sponsors-others",
-            event.sponsors.intersect(event.filterBySponsorLevel(SponsorshipLevel.GOLD)).map { it.toSponsorDto() })
-    )
+    private fun loadSponsors(event: CachedEvent) =
+        event.filterBySponsorLevel(SponsorshipLevel.GOLD).let { sponsors ->
+            mapOf(
+                Pair("sponsors-gold", sponsors.map { it.toSponsorDto() }),
+                Pair("sponsors-others", event.sponsors.filterNot { sponsors.contains(it) }.map { it.toSponsorDto() })
+            )
+        }
 
     fun redirectFromId(req: ServerRequest) = service.findOne(req.pathVariable("id")).flatMap {
         permanentRedirect("${properties.baseUri}/${it.event}/${it.slug}")

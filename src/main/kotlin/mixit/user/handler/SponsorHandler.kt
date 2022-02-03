@@ -73,7 +73,7 @@ class SponsorHandler(private val eventService: EventService) {
             .findByYear(year)
             .flatMap { event ->
                 val mainSponsors = event.filterBySponsorLevel(*spotLights)
-                val otherSponsors = event.sponsors.intersect(mainSponsors)
+                val otherSponsors = event.sponsors.filterNot { mainSponsors.contains(it) }
 
                 val context = mutableMapOf(
                     Pair("year", year),
