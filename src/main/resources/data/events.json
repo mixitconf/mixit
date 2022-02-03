@@ -1251,11 +1251,6 @@
             },
             {
                 "level": "GOLD",
-                "sponsorId": "ZenikaLyon",
-                "subscriptionDate": "2022-01-05"
-            },
-            {
-                "level": "GOLD",
                 "sponsorId": "annick.challancin@esker.fr",
                 "subscriptionDate": "2022-01-06"
             },
@@ -1285,8 +1280,18 @@
                 "subscriptionDate": "2022-02-03"
             },
             {
+                "level": "LANYARD",
+                "sponsorId": "VISEO",
+                "subscriptionDate": "2022-02-03"
+            },
+            {
+                "level": "LANYARD",
+                "sponsorId": "clevercloud",
+                "subscriptionDate": "2022-02-03"
+            },
+            {
                 "level": "GOLD",
-                "sponsorId": "Viseo technologies",
+                "sponsorId": "credit-agricole",
                 "subscriptionDate": "2022-02-03"
             }
         ],
