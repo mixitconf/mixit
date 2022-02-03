@@ -7,6 +7,7 @@ import mixit.user.model.CachedOrganization
 import mixit.user.model.CachedSpeaker
 import mixit.user.model.CachedSponsor
 import mixit.user.model.CachedStaff
+import mixit.user.model.User
 import mixit.user.repository.UserRepository
 import mixit.util.CacheTemplate
 import mixit.util.CacheZone
@@ -47,15 +48,15 @@ class EventService(
                 event.current,
                 event.sponsors.mapNotNull { eventSponsoring ->
                     val sponsor = users.firstOrNull { it.login == eventSponsoring.sponsorId }
-                    sponsor?.let { CachedSponsor(it, eventSponsoring) }
+                    CachedSponsor(sponsor ?: User(), eventSponsoring)
                 },
                 event.organizations.mapNotNull { orga ->
                     val user = users.first { it.login == orga.organizationLogin }
-                    user?.let { CachedOrganization(it) }
+                    CachedOrganization(user ?: User())
                 },
                 event.volunteers.mapNotNull { volunteer ->
                     val user = users.first { it.login == volunteer.volunteerLogin }
-                    user?.let { CachedStaff(it) }
+                    CachedStaff(user ?: User())
                 },
                 event.photoUrls,
                 event.videoUrl,
