@@ -7,6 +7,7 @@ import mixit.util.CacheZone
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
+import reactor.kotlin.core.publisher.switchIfEmpty
 
 @Service
 class TalkService(
@@ -53,9 +54,11 @@ class TalkService(
         }
 
     private fun loadSpeakers(talk: Talk): Mono<CachedTalk> =
-        userRepository.findAllByIds(talk.speakerIds).collectList().map { speakers ->
-            CachedTalk(talk, speakers)
-        }
+        userRepository.findAllByIds(talk.speakerIds).collectList()
+            .map { speakers ->
+                CachedTalk(talk, speakers)
+            }
+            .switchIfEmpty { Mono.justOrEmpty(CachedTalk(talk, emptyList())) }
 
     fun deleteOne(id: String) =
         talkRepository.deleteOne(id).also { cacheList.invalidateAll() }
