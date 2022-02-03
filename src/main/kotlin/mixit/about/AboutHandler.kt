@@ -1,22 +1,21 @@
 package mixit.about
 
-import mixit.user.handler.toDto
 import mixit.user.model.Role
-import mixit.user.repository.UserRepository
+import mixit.user.model.UserService
 import mixit.util.language
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 
 @Component
-class AboutHandler(val userRepository: UserRepository) {
+class AboutHandler(val userService: UserService) {
 
-    fun findAboutView(req: ServerRequest) = userRepository
-        .findByRoles(listOf(Role.STAFF, Role.STAFF_IN_PAUSE))
-        .collectList()
+    fun findAboutView(req: ServerRequest) = userService
+        .findByRoles(Role.STAFF, Role.STAFF_IN_PAUSE)
         .flatMap { users ->
             val staff = users.filter { it.role == Role.STAFF }.shuffled()
             val staffInPause = users.filter { it.role == Role.STAFF_IN_PAUSE }.shuffled()
+
             ok().render(
                 "about",
                 mapOf(

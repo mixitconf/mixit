@@ -21,7 +21,7 @@ class TalkService(
         findAll { talkRepository.findAll().flatMap { talk -> loadSpeakers(talk) } }
 
     fun save(talk: Talk) =
-        talkRepository.save(talk).also { cacheList.invalidateAll() }
+        talkRepository.save(talk).doOnSuccess { cacheList.invalidateAll() }
 
     fun findByEvent(eventId: String, topic: String? = null): Mono<List<CachedTalk>> =
         findAll().collectList().flatMap { talks ->
@@ -61,6 +61,6 @@ class TalkService(
             .switchIfEmpty { Mono.justOrEmpty(CachedTalk(talk, emptyList())) }
 
     fun deleteOne(id: String) =
-        talkRepository.deleteOne(id).also { cacheList.invalidateAll() }
+        talkRepository.deleteOne(id).doOnSuccess { cacheList.invalidateAll() }
 
 }
