@@ -6,6 +6,7 @@ import mixit.blog.model.BlogService
 import mixit.event.handler.AdminEventHandler.Companion.TIMEZONE
 import mixit.event.model.EventService
 import mixit.talk.model.TalkService
+import mixit.user.model.UserService
 import mixit.util.CacheTemplate
 import mixit.util.CacheZone
 import mixit.util.Cached
@@ -34,7 +35,8 @@ data class CacheZoneStat(
 class CacheHandler(
     private val eventService: EventService,
     private val talkService: TalkService,
-    private val blogService: BlogService
+    private val blogService: BlogService,
+    private val userService: UserService
 ) {
 
     fun view(req: ServerRequest): Mono<ServerResponse> =
@@ -46,7 +48,8 @@ class CacheHandler(
                     "zones", mapOf(
                         Pair("event", CacheZoneStat.init(eventService)),
                         Pair("blog", CacheZoneStat.init(blogService)),
-                        Pair("talk", CacheZoneStat.init(talkService))
+                        Pair("talk", CacheZoneStat.init(talkService)),
+                        Pair("user", CacheZoneStat.init(userService))
                     )
                 )
             )
@@ -58,6 +61,7 @@ class CacheHandler(
                 CacheZone.TALK -> talkService.invalidateCache()
                 CacheZone.BLOG -> blogService.initializeCache()
                 CacheZone.EVENT -> eventService.initializeCache()
+                CacheZone.USER -> userService.initializeCache()
             }
             view(req)
         }

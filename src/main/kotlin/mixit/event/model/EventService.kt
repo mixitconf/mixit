@@ -8,7 +8,7 @@ import mixit.user.model.CachedSpeaker
 import mixit.user.model.CachedSponsor
 import mixit.user.model.CachedStaff
 import mixit.user.model.User
-import mixit.user.repository.UserRepository
+import mixit.user.model.UserService
 import mixit.util.CacheTemplate
 import mixit.util.CacheZone
 import org.springframework.stereotype.Service
@@ -17,20 +17,20 @@ import reactor.core.publisher.Mono
 
 @Service
 class EventService(
-    private val eventRepository: EventRepository,
-    private val userRepository: UserRepository
+    private val repository: EventRepository,
+    private val userService: UserService
 ) : CacheTemplate<CachedEvent>() {
 
     override val cacheZone: CacheZone = CacheZone.EVENT
 
     override fun findAll(): Flux<CachedEvent> =
-        findAll { eventRepository.findAll().flatMap { event -> loadEventUsers(event) } }
+        findAll { repository.findAll().flatMap { event -> loadEventUsers(event) } }
 
     fun findByYear(year: Int): Mono<CachedEvent> =
         findAll().collectList().flatMap { events -> Mono.justOrEmpty(events.firstOrNull { it.year == year }) }
 
     fun save(event: Event) =
-        eventRepository.save(event).doOnSuccess { cacheList.invalidateAll() }
+        repository.save(event).doOnSuccess { cacheList.invalidateAll() }
 
 
     private fun loadEventUsers(event: Event): Mono<CachedEvent> {
@@ -40,7 +40,7 @@ class EventService(
                 speakerStarInHistory +
                 speakerStarInCurrentEvent
 
-        return userRepository.findAllByIds(userIds).collectList().map { users ->
+        return userService.findAllByIds(userIds).map { users ->
             CachedEvent(
                 event.id,
                 event.start,
@@ -48,24 +48,24 @@ class EventService(
                 event.current,
                 event.sponsors.map { eventSponsoring ->
                     val sponsor = users.firstOrNull { it.login == eventSponsoring.sponsorId }
-                    CachedSponsor(sponsor ?: User(), eventSponsoring)
+                    CachedSponsor(sponsor?.toUser() ?: User(), eventSponsoring)
                 },
                 event.organizations.map { orga ->
-                    val user = users.first { it.login == orga.organizationLogin }
-                    CachedOrganization(user ?: User())
+                    val user = users.firstOrNull { it.login == orga.organizationLogin }
+                    CachedOrganization(user?.toUser() ?: User())
                 },
                 event.volunteers.map { volunteer ->
-                    val user = users.first { it.login == volunteer.volunteerLogin }
-                    CachedStaff(user ?: User())
+                    val user = users.firstOrNull { it.login == volunteer.volunteerLogin }
+                    CachedStaff(user?.toUser() ?: User())
                 },
                 event.photoUrls,
                 event.videoUrl,
                 event.schedulingFileUrl,
                 speakerStarInHistory.map { starLogin ->
-                    CachedSpeaker(users.first { it.login == starLogin })
+                    CachedSpeaker(users.firstOrNull { it.login == starLogin }?.toUser() ?: User())
                 },
                 speakerStarInCurrentEvent.map { starLogin ->
-                    CachedSpeaker(users.first { it.login == starLogin })
+                    CachedSpeaker(users.firstOrNull { it.login == starLogin }?.toUser() ?: User())
                 },
                 event.year
             )

@@ -3,7 +3,6 @@ package mixit.blog.handler
 import mixit.MixitProperties
 import mixit.blog.model.BlogService
 import mixit.blog.model.toFeed
-import mixit.user.repository.UserRepository
 import mixit.util.language
 import mixit.util.permanentRedirect
 import org.springframework.http.MediaType.APPLICATION_ATOM_XML
@@ -14,11 +13,7 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 import reactor.core.publisher.Mono
 
 @Component
-class WebBlogHandler(
-    val service: BlogService,
-    val userRepository: UserRepository,
-    val properties: MixitProperties
-) {
+class WebBlogHandler(val service: BlogService, val properties: MixitProperties) {
     companion object {
         const val POST_LIST = "blog"
         const val POST_VIEW = "post"

@@ -12,9 +12,10 @@ import mixit.mailing.model.RecipientType.StaffInPause
 import mixit.mailing.model.RecipientType.Volunteers
 import mixit.mailing.repository.MailingRepository
 import mixit.security.model.Cryptographer
+import mixit.user.model.CachedUser
 import mixit.user.model.Role
 import mixit.user.model.User
-import mixit.user.repository.UserRepository
+import mixit.user.model.UserService
 import mixit.util.email.EmailService
 import mixit.util.enumMatcher
 import mixit.util.extractFormData
@@ -29,7 +30,7 @@ import reactor.core.publisher.Mono
 
 @Component
 class MailingHandler(
-    val userRepository: UserRepository,
+    val userService: UserService,
     val cryptographer: Cryptographer,
     val mailingRepository: MailingRepository,
     val properties: MixitProperties,
@@ -86,14 +87,16 @@ class MailingHandler(
                 )
             }
 
-    private fun getUsers(mailing: Mailing): Mono<List<User>> {
+    private fun getUsers(mailing: Mailing): Mono<List<CachedUser>> {
         if (mailing.recipientLogins.isNotEmpty()) {
-            return userRepository.findAllByIds(mailing.recipientLogins).collectList()
+            return userService.findAllByIds(mailing.recipientLogins)
         }
         if (mailing.type != null) {
             return when (mailing.type) {
-                Staff -> userRepository.findAllByRole(Role.STAFF).collectList()
-                RecipientType.User, Sponsor, StaffInPause, Organization, Volunteers -> Mono.empty()
+                Staff -> userService.findByRoles(Role.STAFF)
+                StaffInPause -> userService.findByRoles(Role.STAFF_IN_PAUSE)
+                Volunteers -> userService.findByRoles(Role.VOLUNTEER)
+                RecipientType.User, Sponsor, Organization -> Mono.empty()
             }
         }
         return Mono.empty()
@@ -117,7 +120,7 @@ class MailingHandler(
         persistMailing(req)
             .flatMap { mailing ->
                 getUsers(mailing).map { users ->
-                    MailingDto(mailing.title, mailing.content, users)
+                    MailingDto(mailing.title, mailing.content, users.map { it.toUser() })
                 }
             }
             .flatMap { mailing ->

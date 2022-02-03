@@ -16,7 +16,7 @@ interface Cached {
     val id: String
 }
 
-enum class CacheZone { EVENT, BLOG, TALK }
+enum class CacheZone { EVENT, BLOG, TALK, USER }
 
 /**
  * All element exposed to user (event, talk, speaker) are put in a cache. For

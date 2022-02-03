@@ -1,6 +1,9 @@
 package mixit.user.model
 
 import mixit.talk.model.Language
+import mixit.user.handler.UserDto
+import mixit.user.handler.logoType
+import mixit.user.handler.logoWebpUrl
 import mixit.util.Cached
 import mixit.util.toHTML
 
@@ -8,6 +11,8 @@ data class CachedUser(
     val login: String,
     val firstname: String,
     val lastname: String,
+    val company: String?,
+    val email: String?,
     val photoUrl: String?,
     val emailHash: String?,
     val description: Map<Language, String>,
@@ -19,10 +24,43 @@ data class CachedUser(
         user.login,
         user.firstname,
         user.lastname,
+        user.company,
+        user.email,
         user.photoUrl,
         user.emailHash,
-        user.description.mapValues { it.value.toHTML() },
+        user.description,
         user.links,
         user.role
     )
+
+    fun toDto(language: Language) =
+        UserDto(
+            login,
+            firstname,
+            lastname,
+            null,
+            company,
+            description[language]?.toHTML() ?: "",
+            emailHash,
+            photoUrl,
+            role,
+            links,
+            logoType(photoUrl),
+            logoWebpUrl(photoUrl)
+        )
+
+    fun toUser() =
+        User(
+            login,
+            firstname,
+            lastname,
+            email,
+            company,
+            description,
+            emailHash,
+            photoUrl,
+            role,
+            links
+        )
+
 }
