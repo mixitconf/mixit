@@ -8,6 +8,7 @@ import mixit.favorite.repository.FavoriteRepository
 import mixit.talk.model.TalkService
 import mixit.talk.repository.TalkRepository
 import mixit.ticket.repository.TicketRepository
+import mixit.user.model.UserService
 import mixit.user.repository.UserRepository
 import org.springframework.boot.CommandLineRunner
 import org.springframework.context.annotation.Bean
@@ -38,10 +39,12 @@ class DatabaseInitializerConfig {
     fun cacheInitializer(
         eventService: EventService,
         blogService: BlogService,
-        talkService: TalkService
+        talkService: TalkService,
+        userService: UserService
     ) = CommandLineRunner {
         eventService.initializeCache()
         blogService.initializeCache()
         talkService.initializeCache()
+        userService.initializeCache()
     }
 }
