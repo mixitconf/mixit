@@ -1230,10 +1230,7 @@
         "current": true,
         "end": "2022-05-25",
         "id": "mixit22",
-        "organizations": [
-            { "organizationLogin": "hackyourjob"},
-            { "organizationLogin": "hiit"}
-        ],
+        "organizations": [],
         "photoUrls": [],
         "schedulingFileUrl": null,
         "sponsors": [
@@ -1281,6 +1278,16 @@
                 "level": "GOLD",
                 "sponsorId": "peaks-sponsor",
                 "subscriptionDate": "2022-01-20"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "hiway",
+                "subscriptionDate": "2022-02-03"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Viseo technologies",
+                "subscriptionDate": "2022-02-03"
             }
         ],
         "start": "2022-05-24",
