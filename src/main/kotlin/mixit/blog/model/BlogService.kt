@@ -2,12 +2,14 @@ package mixit.blog.model
 
 import mixit.blog.repository.PostRepository
 import mixit.talk.model.Language
+import mixit.user.model.User
 import mixit.user.repository.UserRepository
 import mixit.util.CacheTemplate
 import mixit.util.CacheZone
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
+import reactor.kotlin.core.publisher.switchIfEmpty
 
 @Service
 class BlogService(
@@ -28,7 +30,9 @@ class BlogService(
 
 
     private fun loadPostWriters(post: Post): Mono<CachedPost> =
-        userRepository.findOne(post.authorId!!).map { user -> CachedPost(post, user) }
+        userRepository.findOne(post.authorId!!)
+            .map { user -> CachedPost(post, user) }
+            .switchIfEmpty { Mono.justOrEmpty(CachedPost(post, User())) }
 
     fun deleteOne(id: String) =
         postRepository.deleteOne(id).doOnSuccess { cacheList.invalidateAll() }
