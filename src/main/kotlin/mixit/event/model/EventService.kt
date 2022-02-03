@@ -46,15 +46,15 @@ class EventService(
                 event.start,
                 event.end,
                 event.current,
-                event.sponsors.mapNotNull { eventSponsoring ->
+                event.sponsors.map { eventSponsoring ->
                     val sponsor = users.firstOrNull { it.login == eventSponsoring.sponsorId }
                     CachedSponsor(sponsor ?: User(), eventSponsoring)
                 },
-                event.organizations.mapNotNull { orga ->
+                event.organizations.map { orga ->
                     val user = users.first { it.login == orga.organizationLogin }
                     CachedOrganization(user ?: User())
                 },
-                event.volunteers.mapNotNull { volunteer ->
+                event.volunteers.map { volunteer ->
                     val user = users.first { it.login == volunteer.volunteerLogin }
                     CachedStaff(user ?: User())
                 },
