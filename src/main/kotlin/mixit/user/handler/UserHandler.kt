@@ -158,60 +158,61 @@ class UserHandler(
                         }
                         .toMap()
                     if (requiredErrors.isNotEmpty()) {
-                        return@flatMap findOneViewDetail(req, user, ViewMode.EditProfile, errors = requiredErrors)
+                        findOneViewDetail(req, user, ViewMode.EditProfile, errors = requiredErrors)
                     }
+                    else {
+                        val updatedUser = user.copy(
+                            firstname = formData["firstname"]!!,
+                            lastname = formData["lastname"]!!,
+                            email = cryptographer.encrypt(formData["email"]!!),
+                            company = formData["company"],
+                            description = mapOf(
+                                Pair(Language.FRENCH, markdownValidator.sanitize(formData["description-fr"]!!)),
+                                Pair(Language.ENGLISH, markdownValidator.sanitize(formData["description-en"]!!))
+                            ),
+                            emailHash = if (formData["photoUrl"] == null) formData["email"]!!.encodeToMd5() else null,
+                            photoUrl = formData["photoUrl"],
+                            links = extractLinks(formData)
+                        )
 
-                    val updatedUser = user.copy(
-                        firstname = formData["firstname"]!!,
-                        lastname = formData["lastname"]!!,
-                        email = cryptographer.encrypt(formData["email"]!!),
-                        company = formData["company"],
-                        description = mapOf(
-                            Pair(Language.FRENCH, markdownValidator.sanitize(formData["description-fr"]!!)),
-                            Pair(Language.ENGLISH, markdownValidator.sanitize(formData["description-en"]!!))
-                        ),
-                        emailHash = if (formData["photoUrl"] == null) formData["email"]!!.encodeToMd5() else null,
-                        photoUrl = formData["photoUrl"],
-                        links = extractLinks(formData)
-                    )
+                        val errors = mutableMapOf<String, String>()
 
-                    val errors = mutableMapOf<String, String>()
-
-                    // We want to control data to not save invalid things in our database
-                    if (!maxLengthValidator.isValid(updatedUser.firstname, 30)) {
-                        errors["firstname"] = "user.form.error.firstname.size"
-                    }
-                    if (!maxLengthValidator.isValid(updatedUser.lastname, 30)) {
-                        errors["lastname"] = "user.form.error.lastname.size"
-                    }
-                    if (updatedUser.company != null && !maxLengthValidator.isValid(updatedUser.company, 60)) {
-                        errors["company"] = "user.form.error.company.size"
-                    }
-                    if (!emailValidator.isValid(formData["email"]!!)) {
-                        errors["email"] = "user.form.error.email"
-                    }
-                    if (!markdownValidator.isValid(updatedUser.description[Language.FRENCH])) {
-                        errors["description-fr"] = "user.form.error.description.fr"
-                    }
-                    if (!markdownValidator.isValid(updatedUser.description[Language.ENGLISH])) {
-                        errors["description-en"] = "user.form.error.description.en"
-                    }
-                    if (updatedUser.photoUrl !=null && !urlValidator.isValid(updatedUser.photoUrl)) {
-                        errors["photoUrl"] = "user.form.error.photourl"
-                    }
-                    updatedUser.links.forEachIndexed { index, link ->
-                        if (!maxLengthValidator.isValid(link.name, 30)) {
-                            errors["link${index + 1}Name"] = "user.form.error.link${index + 1}.name"
+                        // We want to control data to not save invalid things in our database
+                        if (!maxLengthValidator.isValid(updatedUser.firstname, 30)) {
+                            errors["firstname"] = "user.form.error.firstname.size"
                         }
-                        if (!urlValidator.isValid(link.url)) {
-                            errors["link${index + 1}Url"] = "user.form.error.link${index + 1}.url"
+                        if (!maxLengthValidator.isValid(updatedUser.lastname, 30)) {
+                            errors["lastname"] = "user.form.error.lastname.size"
                         }
-                    }
-                    if (errors.isEmpty()) {
-                        // If everything is Ok we save the user
-                        userService.save(updatedUser).then(seeOther("${properties.baseUri}/me"))
-                    } else {
-                        findOneViewDetail(req, updatedUser, ViewMode.EditProfile, errors = errors)
+                        if (updatedUser.company != null && !maxLengthValidator.isValid(updatedUser.company, 60)) {
+                            errors["company"] = "user.form.error.company.size"
+                        }
+                        if (!emailValidator.isValid(formData["email"]!!)) {
+                            errors["email"] = "user.form.error.email"
+                        }
+                        if (!markdownValidator.isValid(updatedUser.description[Language.FRENCH])) {
+                            errors["description-fr"] = "user.form.error.description.fr"
+                        }
+                        if (!markdownValidator.isValid(updatedUser.description[Language.ENGLISH])) {
+                            errors["description-en"] = "user.form.error.description.en"
+                        }
+                        if (updatedUser.photoUrl !=null && !urlValidator.isValid(updatedUser.photoUrl)) {
+                            errors["photoUrl"] = "user.form.error.photourl"
+                        }
+                        updatedUser.links.forEachIndexed { index, link ->
+                            if (!maxLengthValidator.isValid(link.name, 30)) {
+                                errors["link${index + 1}Name"] = "user.form.error.link${index + 1}.name"
+                            }
+                            if (!urlValidator.isValid(link.url)) {
+                                errors["link${index + 1}Url"] = "user.form.error.link${index + 1}.url"
+                            }
+                        }
+                        if (errors.isEmpty()) {
+                            // If everything is Ok we save the user
+                            userService.save(updatedUser).then(seeOther("${properties.baseUri}/me"))
+                        } else {
+                            findOneViewDetail(req, updatedUser, ViewMode.EditProfile, errors = errors)
+                        }
                     }
                 }
             }

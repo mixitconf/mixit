@@ -25,6 +25,12 @@ node {
     download.set(true)
 }
 
+dependencyManagement {
+    imports {
+        mavenBom ("org.springframework.cloud:spring-cloud-dependencies:2020.0.5")
+    }
+}
+
 dependencies {
     val commonmarkVersion = "0.11.0"
     val gmailApiVersion = "1.24.2"
@@ -48,6 +54,8 @@ dependencies {
     implementation("com.google.api-client:google-api-client:$gmailApiVersion")
     implementation("com.google.apis:google-api-services-gmail:$googleApiVersion")
     implementation("com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:$googleOwaspVersion")
+
+    implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
 
     kapt("org.springframework.boot:spring-boot-configuration-processor")
 

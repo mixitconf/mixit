@@ -1,5 +1,6 @@
 package mixit.routes
 
+import mixit.about.ServiceDiscoveryHandler
 import mixit.blog.handler.JsonBlogHandler
 import mixit.event.handler.JsonEventHandler
 import mixit.favorite.handler.JsonFavoriteHandler
@@ -20,7 +21,8 @@ class ApiRoutes(
     private val favoriteHandler: JsonFavoriteHandler,
     private val ticketingHandler: TicketingHandler,
     private val externalHandler: ExternalHandler,
-    private val userHandler: UserHandler
+    private val userHandler: UserHandler,
+    private val serviceDiscoveryHandler: ServiceDiscoveryHandler
 ) {
 
     @Bean
@@ -42,6 +44,8 @@ class ApiRoutes(
                 GET("/favorite", favoriteHandler::findAll)
                 GET("/{year}/talk", talkHandler::findAdminByEventId)
             }
+
+            GET("/discover/{application}", serviceDiscoveryHandler::serviceInstancesByApplicationName)
 
             // Edition data
             GET("/{year}/talk", talkHandler::findByEventId)
