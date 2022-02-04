@@ -1,9 +1,11 @@
 package mixit.talk.model
 
 import mixit.talk.repository.TalkRepository
+import mixit.user.model.UserUpdateEvent
 import mixit.user.repository.UserRepository
 import mixit.util.CacheTemplate
 import mixit.util.CacheZone
+import org.springframework.context.event.EventListener
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
@@ -52,6 +54,23 @@ class TalkService(
             val eventTalks = talks.filter { it.event == eventId && talkIds.contains(it.id) }.sortedBy { it.start }
             Mono.justOrEmpty(if (topic == null) eventTalks else eventTalks.filter { it.topic == topic })
         }
+
+    @EventListener
+    fun handleUserUpdate(userUpdateEvent: UserUpdateEvent) {
+        findAll()
+            .collectList()
+            .map { talks ->
+                talks.any { talk ->
+                    talk.speakers.map { it.login }.contains(userUpdateEvent.user.login)
+                }
+            }
+            .block()
+            .also {
+                if (it != null && it) {
+                    invalidateCache()
+                }
+            }
+    }
 
     private fun loadSpeakers(talk: Talk): Mono<CachedTalk> =
         userRepository.findAllByIds(talk.speakerIds).collectList()

@@ -12,6 +12,7 @@ import mixit.ticket.repository.TicketRepository
 import mixit.user.model.Link
 import mixit.user.model.Role
 import mixit.user.model.User
+import mixit.user.model.UserService
 import mixit.user.model.anonymize
 import mixit.user.repository.UserRepository
 import mixit.util.encodeToMd5
@@ -37,6 +38,7 @@ import reactor.kotlin.core.publisher.toMono
 @Component
 class UserHandler(
     private val repository: UserRepository,
+    private val userService: UserService,
     private val service: TalkService,
     private val ticketRepository: TicketRepository,
     private val cryptographer: Cryptographer,
@@ -197,7 +199,7 @@ class UserHandler(
                     if (updatedUser.photoUrl !=null && !urlValidator.isValid(updatedUser.photoUrl)) {
                         errors["photoUrl"] = "user.form.error.photourl"
                     }
-                    user.links.forEachIndexed { index, link ->
+                    updatedUser.links.forEachIndexed { index, link ->
                         if (!maxLengthValidator.isValid(link.name, 30)) {
                             errors["link${index + 1}Name"] = "user.form.error.link${index + 1}.name"
                         }
@@ -207,7 +209,7 @@ class UserHandler(
                     }
                     if (errors.isEmpty()) {
                         // If everything is Ok we save the user
-                        repository.save(updatedUser).then(seeOther("${properties.baseUri}/me"))
+                        userService.save(updatedUser).then(seeOther("${properties.baseUri}/me"))
                     } else {
                         findOneViewDetail(req, updatedUser, ViewMode.EditProfile, errors = errors)
                     }

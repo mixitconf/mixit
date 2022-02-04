@@ -9,8 +9,10 @@ import mixit.user.model.CachedSponsor
 import mixit.user.model.CachedStaff
 import mixit.user.model.User
 import mixit.user.model.UserService
+import mixit.user.model.UserUpdateEvent
 import mixit.util.CacheTemplate
 import mixit.util.CacheZone
+import org.springframework.context.event.EventListener
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
@@ -27,11 +29,42 @@ class EventService(
         findAll { repository.findAll().flatMap { event -> loadEventUsers(event) } }
 
     fun findByYear(year: Int): Mono<CachedEvent> =
-        findAll().collectList().flatMap { events -> Mono.justOrEmpty(events.firstOrNull { it.year == year }) }
+        findAll().collectList().map { events -> events.first { it.year == year } }
 
     fun save(event: Event) =
         repository.save(event).doOnSuccess { cacheList.invalidateAll() }
 
+    fun invalidateCacheIfUserFound(user: User): Mono<Boolean> =
+        findAll().collectList().map { events ->
+            events.any { event ->
+                event.organizations.map { it.login }.contains(user.login)
+                event.volunteers.map { it.login }.contains(user.login)
+                event.sponsors.map { it.login }.contains(user.login)
+            }.also {
+                if (it) {
+                    invalidateCache()
+                }
+            }
+        }
+
+    @EventListener
+    fun handleUserUpdate(userUpdateEvent: UserUpdateEvent) {
+        findAll()
+            .collectList()
+            .map { events ->
+                events.any { event ->
+                    event.organizations.map { it.login }.contains(userUpdateEvent.user.login)
+                    event.volunteers.map { it.login }.contains(userUpdateEvent.user.login)
+                    event.sponsors.map { it.login }.contains(userUpdateEvent.user.login)
+                }
+            }
+            .block()
+            .also {
+                if (it != null && it) {
+                    invalidateCache()
+                }
+            }
+    }
 
     private fun loadEventUsers(event: Event): Mono<CachedEvent> {
         val userIds = event.organizations.map { it.organizationLogin } +

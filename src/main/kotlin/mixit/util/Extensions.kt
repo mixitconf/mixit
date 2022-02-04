@@ -52,7 +52,9 @@ fun ServerRequest.extractFormData(): Mono<Map<String, String?>> =
     }
 
 fun ServerRequest.currentUserEmail(): Mono<String> =
-    this.session().flatMap { Mono.justOrEmpty(it.getAttribute("email")) }
+    this.session().map {
+        it.getAttribute("email") ?: ""
+    }
 
 
 fun ServerResponse.BodyBuilder.json() = contentType(APPLICATION_JSON)
