@@ -58,10 +58,10 @@ class TalkHandler(
     ): Mono<ServerResponse> =
         req.currentUserEmail()
             .flatMap { currentUserEmail ->
-                loadTalkAndFavorites(year, req.language(), filterOnFavorite, currentUserEmail, topic)
-            }
-            .switchIfEmpty {
-                service.findByEvent(year.toString(), topic).map { talks -> talks.map { it.toDto(req.language()) } }
+                if (currentUserEmail.isNotEmpty())
+                    loadTalkAndFavorites(year, req.language(), filterOnFavorite, currentUserEmail, topic)
+                else
+                    service.findByEvent(year.toString(), topic).map { talks -> talks.map { it.toDto(req.language()) } }
             }
             .flatMap { talks ->
                 eventService.findByYear(year).flatMap { event ->
