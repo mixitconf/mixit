@@ -1,4 +1,4 @@
-package mixit.util.handler
+package mixit.util
 
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest

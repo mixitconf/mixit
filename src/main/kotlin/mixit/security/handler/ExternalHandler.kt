@@ -12,9 +12,9 @@ import mixit.security.handler.ExternalResponses.TOKEN_SENT
 import mixit.security.model.AuthenticationService
 import mixit.ticket.repository.TicketRepository
 import mixit.user.model.User
-import mixit.util.EmailValidatorException
-import mixit.util.NotFoundException
-import mixit.util.TokenException
+import mixit.util.errors.EmailValidatorException
+import mixit.util.errors.NotFoundException
+import mixit.util.errors.TokenException
 import mixit.util.json
 import mixit.util.locale
 import org.springframework.stereotype.Component

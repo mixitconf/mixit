@@ -1,4 +1,4 @@
-package mixit.util.handler
+package mixit.util.cache
 
 import java.time.LocalDateTime
 import java.time.ZoneId
@@ -17,7 +17,7 @@ import reactor.core.publisher.Mono
 
 data class CacheZoneStat(
     val zone: CacheZone,
-    val entries: Long,
+    val entries: Int,
     val refreshAt: LocalDateTime,
     val title: String = "admin.cache.${zone.name.lowercase()}.title",
     val desc: String = "admin.cache.${zone.name.lowercase()}.desc"
@@ -25,7 +25,7 @@ data class CacheZoneStat(
     companion object {
         fun <I : Cached, T : CacheTemplate<I>> init(cacheService: T): CacheZoneStat = CacheZoneStat(
             cacheService.cacheZone,
-            cacheService.cacheList.estimatedSize(),
+            cacheService.cacheList.asMap().entries.firstOrNull()?.value?.size ?: 0,
             cacheService.refreshInstant.get().atZone(ZoneId.of(TIMEZONE)).toLocalDateTime()
         )
     }

@@ -1,7 +1,9 @@
-package mixit.util
+package mixit.util.errors
 
 import java.util.Locale
 import mixit.MixitProperties
+import mixit.util.generateModel
+import mixit.util.locale
 import org.springframework.boot.autoconfigure.web.ErrorProperties
 import org.springframework.boot.autoconfigure.web.ResourceProperties
 import org.springframework.boot.autoconfigure.web.reactive.error.DefaultErrorWebExceptionHandler

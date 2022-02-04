@@ -2,7 +2,7 @@ package mixit.util.validator
 
 import java.net.IDN
 import java.util.regex.Pattern
-import mixit.util.EmailValidatorException
+import mixit.util.errors.EmailValidatorException
 import org.springframework.stereotype.Component
 
 /**

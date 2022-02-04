@@ -16,11 +16,11 @@ import mixit.ticket.repository.TicketRepository
 import mixit.user.model.Role
 import mixit.user.model.User
 import mixit.user.repository.UserRepository
-import mixit.util.DuplicateException
-import mixit.util.EmailSenderException
-import mixit.util.NotFoundException
-import mixit.util.TokenException
 import mixit.util.email.EmailService
+import mixit.util.errors.DuplicateException
+import mixit.util.errors.EmailSenderException
+import mixit.util.errors.NotFoundException
+import mixit.util.errors.TokenException
 import mixit.util.validator.EmailValidator
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith

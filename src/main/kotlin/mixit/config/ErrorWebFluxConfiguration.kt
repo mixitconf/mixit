@@ -1,7 +1,7 @@
 package mixit.config
 
 import mixit.MixitProperties
-import mixit.util.ErrorWebFluxExceptionHandler
+import mixit.util.errors.ErrorWebFluxExceptionHandler
 import org.springframework.boot.autoconfigure.web.ResourceProperties
 import org.springframework.boot.autoconfigure.web.ServerProperties
 import org.springframework.boot.web.reactive.error.ErrorAttributes

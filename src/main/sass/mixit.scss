@@ -35,8 +35,9 @@ $navbar-brand-height: 1em;
 $link-color: $primary-color;
 $link-decoration: none;
 $link-hover-decoration: none;
+$enable-cssgrid: true;
 
-// 3. Include remainder of required Bootstrap stylesheets
+  // 3. Include remainder of required Bootstrap stylesheets
 @import "../../../node_modules/bootstrap/scss/variables";
 @import "../../../node_modules/bootstrap/scss/mixins";
 @import "../../../node_modules/bootstrap/scss/root";
@@ -47,6 +48,7 @@ $link-hover-decoration: none;
 @import "../../../node_modules/bootstrap/scss/reboot";
 @import "../../../node_modules/bootstrap/scss/type";
 @import "../../../node_modules/bootstrap/scss/images";
+@import "../../../node_modules/bootstrap/scss/card";
 @import "../../../node_modules/bootstrap/scss/containers";
 @import "../../../node_modules/bootstrap/scss/grid";
 @import "../../../node_modules/bootstrap/scss/tables";
@@ -63,7 +65,6 @@ $link-hover-decoration: none;
 @import "../../../node_modules/bootstrap/scss/helpers";
 @import "../../../node_modules/bootstrap/scss/utilities/api";
 
-//@import "card";
 //@import "breadcrumb";
 //@import "pagination";
 //@import "badge";

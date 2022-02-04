@@ -7,8 +7,8 @@ import java.time.LocalDateTime
 import mixit.security.model.AuthenticationService
 import mixit.user.model.Role
 import mixit.user.model.User
-import mixit.util.DuplicateException
 import mixit.util.encodeToBase64
+import mixit.util.errors.DuplicateException
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired

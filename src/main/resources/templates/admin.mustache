@@ -5,47 +5,98 @@
 </div>
 
 <div class="container mxt-wrapper--page-content">
-    <article>
-        <h2><a href="{{localePrefix}}/admin/events" class="mxt-title--article">{{#i18n}}admin.events.title{{/i18n}}</a></h2>
-        <p>{{#i18n}}admin.events.text{{/i18n}}</p>
-        <a href="{{localePrefix}}/admin/events" class="btn btn-outline-primary mb-4">{{#i18n}}admin.link{{/i18n}}</a>
-    </article>
-    <article>
-        <h2><a href="{{localePrefix}}/admin/users" class="mxt-title--article">{{#i18n}}admin.users.title{{/i18n}}</a></h2>
-        <p>{{#i18n}}admin.users.text{{/i18n}}</p>
-        <a href="{{localePrefix}}/admin/users" class="btn btn-outline-primary mb-4">{{#i18n}}admin.link{{/i18n}}</a>
-    </article>
-    <article>
-        <h2><a href="{{localePrefix}}/admin/talks" class="mxt-title--article">{{#i18n}}admin.talks.title{{/i18n}}</a></h2>
-        <p>{{#i18n}}admin.talks.text{{/i18n}}</p>
-        <a href="{{localePrefix}}/admin/talks" class="btn btn-outline-primary mb-4">{{#i18n}}admin.link{{/i18n}}</a>
-    </article>
-    <article>
-        <h2><a href="{{localePrefix}}/admin/ticketing" class="mxt-title--article">{{#i18n}}admin.ticketing.title{{/i18n}}</a></h2>
-        <p>{{#i18n}}admin.ticketing.text{{/i18n}}</p>
-        <a href="{{localePrefix}}/admin/ticketing" class="btn btn-outline-primary mb-4">{{#i18n}}admin.link{{/i18n}}</a>
-    </article>
-    <article>
-        <h2><a href="{{localePrefix}}/admin/blog" class="mxt-title--article">{{#i18n}}admin.blog.title{{/i18n}}</a></h2>
-        <p>{{#i18n}}admin.blog.text{{/i18n}}</p>
-        <a href="{{localePrefix}}/admin/blog" class="btn btn-outline-primary mb-4">{{#i18n}}admin.link{{/i18n}}</a>
-    </article>
-    <article>
-        <h2><a href="{{localePrefix}}/admin/mailings" class="mxt-title--article">{{#i18n}}mailing.title{{/i18n}}</a></h2>
-        <p>{{#i18n}}mailing.text{{/i18n}}</p>
-        <a href="{{localePrefix}}/admin/mailings" class="btn btn-outline-primary mb-4">{{#i18n}}admin.link{{/i18n}}</a>
-    </article>
-    <article>
-        <h2><a href="{{localePrefix}}/admin/mixette-organization" class="mxt-title--article">{{#i18n}}admin.donations.title{{/i18n}}</a></h2>
-        <p>{{#i18n}}admin.donations.text{{/i18n}}</p>
-        <a href="{{localePrefix}}/admin/mixette-organization" class="btn btn-outline-primary mb-4 mr-2">{{#i18n}}admin.donations.link.orga{{/i18n}}</a>
-        <a href="{{localePrefix}}/admin/mixette-donor" class="btn btn-outline-primary mb-4">{{#i18n}}admin.donations.link.donor{{/i18n}}</a>
-    </article>
-    <article>
-        <h2><a href="{{localePrefix}}/admin/cache" class="mxt-title--article">{{#i18n}}admin.cache.title{{/i18n}}</a></h2>
-        <p>{{#i18n}}admin.cache.text{{/i18n}}</p>
-        <a href="{{localePrefix}}/admin/cache" class="btn btn-outline-primary mb-4 mr-2">{{#i18n}}common.actions.view{{/i18n}}</a>
-    </article>
+    <div class="grid">
+        <article class="g-col-4">
+            <div class="card p-3" style="height:100%">
+                <h2 class="card-title"><a href="{{localePrefix}}/admin/events"
+                       class="mxt-title--article">{{#i18n}}admin.events.title{{/i18n}}</a></h2>
+                <p class="card-text">{{#i18n}}admin.events.text{{/i18n}}</p>
+                <p class="input-group">
+                    <a href="{{localePrefix}}/admin/events"
+                       class="btn btn-outline-primary">{{#i18n}}admin.link{{/i18n}}</a>
+                </p>
+            </div>
+        </article>
+        <article class="g-col-4">
+            <div class="card p-3" style="height:100%">
+                <h2 class="card-title"><a href="{{localePrefix}}/admin/users"
+                       class="mxt-title--article">{{#i18n}}admin.users.title{{/i18n}}</a></h2>
+                <p class="card-text">{{#i18n}}admin.users.text{{/i18n}}</p>
+                <p class="input-group">
+                <a href="{{localePrefix}}/admin/users"
+                   class="btn btn-outline-primary">{{#i18n}}admin.link{{/i18n}}</a>
+                </p>
+            </div>
+        </article>
+        <article class="g-col-4">
+            <div class="card p-3" style="height:100%">
+                <h2 class="card-title"><a href="{{localePrefix}}/admin/talks"
+                       class="mxt-title--article">{{#i18n}}admin.talks.title{{/i18n}}</a></h2>
+                <p class="card-text">{{#i18n}}admin.talks.text{{/i18n}}</p>
+                <p class="input-group">
+                    <a href="{{localePrefix}}/admin/talks"
+                   class="btn btn-outline-primary">{{#i18n}}admin.link{{/i18n}}</a>
+                </p>
+            </div>
+        </article>
+        <article class="g-col-4">
+            <div class="card p-3" style="height:100%">
+                <h2 class="card-title"><a href="{{localePrefix}}/admin/ticketing"
+                       class="mxt-title--article">{{#i18n}}admin.ticketing.title{{/i18n}}</a></h2>
+                <p class="card-text">{{#i18n}}admin.ticketing.text{{/i18n}}</p>
+                <p class="input-group">
+                    <a href="{{localePrefix}}/admin/ticketing"
+                   class="btn btn-outline-primary">{{#i18n}}admin.link{{/i18n}}</a>
+                </p>
+            </div>
+        </article>
+        <article class="g-col-4">
+            <div class="card p-3" style="height:100%">
+                <h2 class="card-title"><a href="{{localePrefix}}/admin/blog"
+                       class="mxt-title--article">{{#i18n}}admin.blog.title{{/i18n}}</a></h2>
+                <p class="card-text">{{#i18n}}admin.blog.text{{/i18n}}</p>
+                <p class="input-group">
+                <a href="{{localePrefix}}/admin/blog"
+                   class="btn btn-outline-primary">{{#i18n}}admin.link{{/i18n}}</a>
+                </p>
+            </div>
+        </article>
+        <article class="g-col-4">
+            <div class="card p-3" style="height:100%">
+                <h2 class="card-title"><a href="{{localePrefix}}/admin/mailings"
+                       class="mxt-title--article">{{#i18n}}mailing.title{{/i18n}}</a></h2>
+                <p class="card-text">{{#i18n}}mailing.text{{/i18n}}</p>
+                <p class="input-group">
+                <a href="{{localePrefix}}/admin/mailings"
+                   class="btn btn-outline-primary">{{#i18n}}admin.link{{/i18n}}</a>
+                </p>
+            </div>
+        </article>
+        <article class="g-col-4">
+            <div class="card p-3" style="height:100%">
+                <h2 class="card-title"><a href="{{localePrefix}}/admin/mixette-organization"
+                       class="mxt-title--article">{{#i18n}}admin.donations.title{{/i18n}}</a></h2>
+                <p class="card-text">{{#i18n}}admin.donations.text{{/i18n}}</p>
+                <p class="input-group">
+                <a href="{{localePrefix}}/admin/mixette-organization"
+                   class="btn btn-outline-primary">{{#i18n}}admin.donations.link.orga{{/i18n}}</a>&nbsp;
+                <a href="{{localePrefix}}/admin/mixette-donor"
+                   class="btn btn-outline-primary">{{#i18n}}admin.donations.link.donor{{/i18n}}</a>
+                </p>
+            </div>
+        </article>
+        <article class="g-col-4">
+            <div class="card p-3" style="height:100%">
+                <h2 class="card-title"><a href="{{localePrefix}}/admin/cache"
+                       class="mxt-title--article">{{#i18n}}admin.cache.title{{/i18n}}</a></h2>
+                <p class="card-text">{{#i18n}}admin.cache.text{{/i18n}}</p>
+                <p class="input-group">
+                    <a href="{{localePrefix}}/admin/cache"
+                   class="btn btn-outline-primary mr-2">{{#i18n}}admin.link{{/i18n}}</a>
+                </p>
+            </div>
+        </article>
+    </div>
 </div>
 
 {{> footer}}

@@ -22,9 +22,9 @@ import mixit.ticket.handler.TicketingHandler
 import mixit.user.handler.AdminUserHandler
 import mixit.user.handler.SponsorHandler
 import mixit.user.handler.UserHandler
+import mixit.util.AdminHandler
+import mixit.util.cache.CacheHandler
 import mixit.util.generateModel
-import mixit.util.handler.AdminHandler
-import mixit.util.handler.CacheHandler
 import mixit.util.locale
 import org.slf4j.LoggerFactory
 import org.springframework.context.MessageSource

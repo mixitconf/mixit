@@ -1,7 +1,7 @@
 package mixit.config
 
 import com.samskivert.mustache.Mustache
-import mixit.util.StringEscapers
+import mixit.util.validator.StringEscapers
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 

@@ -1,4 +1,4 @@
-package mixit.util
+package mixit.util.errors
 
 class DuplicateException(message: String) : RuntimeException(message)
 class TokenException(message: String) : RuntimeException(message)
