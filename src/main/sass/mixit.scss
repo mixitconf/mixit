@@ -35,8 +35,9 @@ $navbar-brand-height: 1em;
 $link-color: $primary-color;
 $link-decoration: none;
 $link-hover-decoration: none;
+$enable-cssgrid: true;
 
-// 3. Include remainder of required Bootstrap stylesheets
+  // 3. Include remainder of required Bootstrap stylesheets
 @import "../../../node_modules/bootstrap/scss/variables";
 @import "../../../node_modules/bootstrap/scss/mixins";
 @import "../../../node_modules/bootstrap/scss/root";
