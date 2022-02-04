@@ -4,8 +4,10 @@ import mixit.blog.repository.PostRepository
 import mixit.talk.model.Language
 import mixit.user.model.User
 import mixit.user.model.UserService
+import mixit.user.model.UserUpdateEvent
 import mixit.util.CacheTemplate
 import mixit.util.CacheZone
+import org.springframework.context.event.EventListener
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
@@ -25,6 +27,22 @@ class BlogService(private val repository: PostRepository, private val userServic
     fun save(event: Post) =
         repository.save(event).doOnSuccess { cacheList.invalidateAll() }
 
+    @EventListener
+    fun handleUserUpdate(userUpdateEvent: UserUpdateEvent) {
+        findAll()
+            .collectList()
+            .map { blogs ->
+                blogs.any { blog ->
+                    blog.author.login == userUpdateEvent.user.login
+                }
+            }
+            .block()
+            .also {
+                if (it != null && it) {
+                    invalidateCache()
+                }
+            }
+    }
 
     private fun loadPostWriters(post: Post): Mono<CachedPost> =
         userService.findOne(post.authorId)
