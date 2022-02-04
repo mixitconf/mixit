@@ -17,7 +17,7 @@ class UserService(
     private val eventPublisher: ApplicationEventPublisher,
 ) : CacheTemplate<CachedUser>() {
 
-    override val cacheZone: CacheZone = CacheZone.TALK
+    override val cacheZone: CacheZone = CacheZone.USER
 
     override fun findAll(): Flux<CachedUser> =
         findAll { userRepository.findAll().map { user -> CachedUser(user) } }

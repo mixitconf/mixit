@@ -1,4 +1,4 @@
-package mixit.util
+package mixit.util.validator
 
 import com.samskivert.mustache.Mustache
 import org.owasp.html.HtmlPolicyBuilder

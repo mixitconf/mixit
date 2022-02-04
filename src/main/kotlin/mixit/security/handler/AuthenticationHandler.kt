@@ -11,9 +11,9 @@ import mixit.security.handler.LoginError.SIGN_UP_ERROR
 import mixit.security.model.AuthenticationService
 import mixit.security.model.Cryptographer
 import mixit.user.model.User
-import mixit.util.CredentialValidatorException
-import mixit.util.EmailValidatorException
 import mixit.util.decodeFromBase64
+import mixit.util.errors.CredentialValidatorException
+import mixit.util.errors.EmailValidatorException
 import mixit.util.extractFormData
 import mixit.util.locale
 import mixit.util.validator.EmailValidator

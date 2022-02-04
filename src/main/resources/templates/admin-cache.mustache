@@ -8,19 +8,25 @@
     <div class="lead">{{#i18n}}admin.cache.text{{/i18n}}</div>
     <div>{{#i18n}}admin.cache.desc{{/i18n}}</div>
 
-    {{#zones.entrySet}}
-        <div class="pt-5">
-            {{#value}}
-                <h3>{{#i18n}}{{title}}{{/i18n}}</h3>
-                <div class="lead">{{#i18n}}{{desc}}{{/i18n}}</div>
-                <div >{{#i18n}}admin.cache.refresh{{/i18n}} <strong>{{refreshAt}}</strong></div>
-                <div >{{#i18n}}admin.cache.entries{{/i18n}} <strong>{{entries}}</strong></div>
-                <form action="/admin/cache/{{zone}}/invalidate" method="post">
-                    <button type="submit" class="btn btn-outline-primary mt-2">Invalidate</button>
-                </form>
-            {{/value}}
-        </div>
-    {{/zones.entrySet}}
+    <div class="row pt-5">
+        {{#zones.entrySet}}
+            <div class="col-6">
+                <div class="card m-2 p-3">
+                {{#value}}
+                    <h3 class="card-title">{{#i18n}}{{title}}{{/i18n}}</h3>
+
+                    <div class="card-text lead">{{#i18n}}{{desc}}{{/i18n}}</div>
+                    <div class="card-text">{{#i18n}}admin.cache.refresh{{/i18n}} <strong>{{refreshAt}}</strong></div>
+                    <div class="card-text">{{#i18n}}admin.cache.entries{{/i18n}} <strong>{{entries}}</strong></div>
+                    <form action="/admin/cache/{{zone}}/invalidate" method="post">
+                        <button type="submit" class="btn btn-outline-primary mt-2">Invalidate</button>
+                    </form>
+                {{/value}}
+                </div>
+            </div>
+        {{/zones.entrySet}}
+    </div>
+
 </div>
 
 {{> footer}}

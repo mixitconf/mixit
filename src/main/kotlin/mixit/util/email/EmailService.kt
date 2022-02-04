@@ -7,8 +7,8 @@ import java.util.Locale
 import mixit.MixitProperties
 import mixit.security.model.Cryptographer
 import mixit.user.model.User
-import mixit.util.EmailSenderException
 import mixit.util.encodeToBase64
+import mixit.util.errors.EmailSenderException
 import mixit.util.generateModelForExernalCall
 import org.slf4j.LoggerFactory
 import org.springframework.context.MessageSource

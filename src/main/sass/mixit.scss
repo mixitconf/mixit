@@ -47,6 +47,7 @@ $link-hover-decoration: none;
 @import "../../../node_modules/bootstrap/scss/reboot";
 @import "../../../node_modules/bootstrap/scss/type";
 @import "../../../node_modules/bootstrap/scss/images";
+@import "../../../node_modules/bootstrap/scss/card";
 @import "../../../node_modules/bootstrap/scss/containers";
 @import "../../../node_modules/bootstrap/scss/grid";
 @import "../../../node_modules/bootstrap/scss/tables";
@@ -63,7 +64,6 @@ $link-hover-decoration: none;
 @import "../../../node_modules/bootstrap/scss/helpers";
 @import "../../../node_modules/bootstrap/scss/utilities/api";
 
-//@import "card";
 //@import "breadcrumb";
 //@import "pagination";
 //@import "badge";
