@@ -12,6 +12,7 @@ import mixit.user.model.UserService
 import mixit.user.model.UserUpdateEvent
 import mixit.util.CacheTemplate
 import mixit.util.CacheZone
+import org.springframework.context.ApplicationEventPublisher
 import org.springframework.context.event.EventListener
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Flux
@@ -19,9 +20,10 @@ import reactor.core.publisher.Mono
 
 @Service
 class EventService(
+    eventPublisher: ApplicationEventPublisher,
     private val repository: EventRepository,
     private val userService: UserService
-) : CacheTemplate<CachedEvent>() {
+) : CacheTemplate<CachedEvent>(eventPublisher) {
 
     override val cacheZone: CacheZone = CacheZone.EVENT
 

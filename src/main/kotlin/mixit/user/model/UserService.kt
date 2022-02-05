@@ -14,8 +14,8 @@ data class UserUpdateEvent(val user: User): ApplicationEvent(user)
 @Service
 class UserService(
     private val userRepository: UserRepository,
-    private val eventPublisher: ApplicationEventPublisher,
-) : CacheTemplate<CachedUser>() {
+    eventPublisher: ApplicationEventPublisher
+) : CacheTemplate<CachedUser>(eventPublisher) {
 
     override val cacheZone: CacheZone = CacheZone.USER
 
@@ -44,4 +44,6 @@ class UserService(
                 user
             }
         }
+
+
 }

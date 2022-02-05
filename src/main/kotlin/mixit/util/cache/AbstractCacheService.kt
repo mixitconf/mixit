@@ -5,6 +5,8 @@ import com.github.benmanes.caffeine.cache.Caffeine
 import java.time.Instant
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicReference
+import mixit.util.cache.CacheInvalidationEvent
+import org.springframework.context.ApplicationEventPublisher
 import reactor.cache.CacheFlux
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
@@ -23,7 +25,7 @@ enum class CacheZone { EVENT, BLOG, TALK, USER }
  * each entity we have a cache for the current year data (this cache is reloaded each hour or manually).
  * For old data and the old editions, cache is populated on startup or manually refreshed if necessary
  */
-abstract class CacheTemplate<T : Cached> {
+abstract class CacheTemplate<T : Cached>(protected val eventPublisher: ApplicationEventPublisher) {
 
     abstract val cacheZone: CacheZone
 
@@ -75,6 +77,7 @@ abstract class CacheTemplate<T : Cached> {
     fun invalidateCache() {
         cacheList.invalidateAll()
         refreshInstant.set(Instant.now())
+        eventPublisher.publishEvent(CacheInvalidationEvent(cacheZone, refreshInstant.get()))
     }
 
 }

@@ -7,6 +7,7 @@ import mixit.user.model.UserService
 import mixit.user.model.UserUpdateEvent
 import mixit.util.CacheTemplate
 import mixit.util.CacheZone
+import org.springframework.context.ApplicationEventPublisher
 import org.springframework.context.event.EventListener
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Flux
@@ -14,7 +15,11 @@ import reactor.core.publisher.Mono
 import reactor.kotlin.core.publisher.switchIfEmpty
 
 @Service
-class BlogService(private val repository: PostRepository, private val userService: UserService) : CacheTemplate<CachedPost>() {
+class BlogService(
+    eventPublisher: ApplicationEventPublisher,
+    private val repository: PostRepository,
+    private val userService: UserService
+) : CacheTemplate<CachedPost>(eventPublisher) {
 
     override val cacheZone: CacheZone = CacheZone.BLOG
 

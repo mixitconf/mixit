@@ -5,6 +5,7 @@ import mixit.user.model.UserUpdateEvent
 import mixit.user.repository.UserRepository
 import mixit.util.CacheTemplate
 import mixit.util.CacheZone
+import org.springframework.context.ApplicationEventPublisher
 import org.springframework.context.event.EventListener
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Flux
@@ -14,8 +15,9 @@ import reactor.kotlin.core.publisher.switchIfEmpty
 @Service
 class TalkService(
     private val talkRepository: TalkRepository,
-    private val userRepository: UserRepository
-) : CacheTemplate<CachedTalk>() {
+    private val userRepository: UserRepository,
+    eventPublisher: ApplicationEventPublisher
+) : CacheTemplate<CachedTalk>(eventPublisher) {
 
     override val cacheZone: CacheZone = CacheZone.TALK
 
