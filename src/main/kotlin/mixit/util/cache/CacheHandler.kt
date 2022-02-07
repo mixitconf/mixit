@@ -65,4 +65,20 @@ class CacheHandler(
             }
             view(req)
         }
+
+    /**
+     * TODO
+     * Security: We have to check that the caller is a known service and we have to check the API key defined in header
+     *
+     */
+
+    fun invalidateFromMicroService(req: ServerRequest): Mono<ServerResponse> = CacheZone.valueOf(req.pathVariable("zone")).let {
+        when (it) {
+            CacheZone.TALK -> talkService.invalidateCache(instant)
+            CacheZone.BLOG -> blogService.initializeCache()
+            CacheZone.EVENT -> eventService.initializeCache()
+            CacheZone.USER -> userService.initializeCache()
+        }
+        view(req)
+    }
 }

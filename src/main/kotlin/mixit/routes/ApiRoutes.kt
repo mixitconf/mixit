@@ -8,6 +8,7 @@ import mixit.security.handler.ExternalHandler
 import mixit.talk.handler.JsonTalkHandler
 import mixit.ticket.handler.TicketingHandler
 import mixit.user.handler.UserHandler
+import mixit.util.cache.CacheHandler
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.http.MediaType.APPLICATION_JSON
@@ -21,6 +22,7 @@ class ApiRoutes(
     private val favoriteHandler: JsonFavoriteHandler,
     private val ticketingHandler: TicketingHandler,
     private val externalHandler: ExternalHandler,
+    private val cacheHandler: CacheHandler,
     private val userHandler: UserHandler,
     private val serviceDiscoveryHandler: ServiceDiscoveryHandler
 ) {
@@ -84,6 +86,8 @@ class ApiRoutes(
                 // Needs authent and requires a token and email as arg
                 POST("/favorites/talks/{id}/toggle", externalHandler::toggleFavorite)
             }
+
+            PUT("/cache/{zone}/", cacheHandler::invalidateFromMicroService)
         }
     }
 }

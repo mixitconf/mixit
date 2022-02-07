@@ -74,11 +74,13 @@ abstract class CacheTemplate<T : Cached>(protected val eventPublisher: Applicati
 
     abstract fun findAll(): Flux<T>
 
-    fun invalidateCache() {
-        cacheList.invalidateAll()
-        refreshInstant.set(Instant.now())
-        eventPublisher.publishEvent(CacheInvalidationEvent(cacheZone, refreshInstant.get()))
+    fun invalidateCache(instant: Instant = Instant.now()) {
+        // For an external request we receive an instant
+        if (instant > refreshInstant.get()) {
+            cacheList.invalidateAll()
+            refreshInstant.set(Instant.now())
+            eventPublisher.publishEvent(CacheInvalidationEvent(cacheZone, refreshInstant.get()))
+        }
     }
-
 }
 
