@@ -2,8 +2,8 @@ package mixit.config
 
 import mixit.MixitProperties
 import mixit.util.errors.ErrorWebFluxExceptionHandler
-import org.springframework.boot.autoconfigure.web.ResourceProperties
 import org.springframework.boot.autoconfigure.web.ServerProperties
+import org.springframework.boot.autoconfigure.web.WebProperties
 import org.springframework.boot.web.reactive.error.ErrorAttributes
 import org.springframework.boot.web.reactive.error.ErrorWebExceptionHandler
 import org.springframework.context.ApplicationContext
@@ -23,7 +23,7 @@ import org.springframework.web.reactive.result.view.ViewResolver
 class ErrorWebFluxConfiguration(
     private val serverProperties: ServerProperties,
     private val applicationContext: ApplicationContext,
-    private val resourceProperties: ResourceProperties,
+    private val webProperties: WebProperties,
     private val viewResolvers: List<ViewResolver>,
     private val serverCodecConfigurer: ServerCodecConfigurer
 ) {
@@ -38,7 +38,7 @@ class ErrorWebFluxConfiguration(
     ): ErrorWebExceptionHandler {
         val exceptionHandler = ErrorWebFluxExceptionHandler(
             errorAttributes,
-            this.resourceProperties,
+            this.webProperties,
             this.serverProperties.error,
             this.applicationContext,
             messageSource,

@@ -2,9 +2,9 @@ import com.github.gradle.node.npm.task.NpmTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    val kotlinVersion = "1.5.32"
+    val kotlinVersion = "1.6.10"
 
-    id("org.springframework.boot") version "2.5.9"
+    id("org.springframework.boot") version "2.6.3"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
     id("com.github.node-gradle.node") version "3.1.1"
     id("org.jmailen.kotlinter") version "3.7.0"
@@ -27,7 +27,9 @@ node {
 
 dependencies {
     val commonmarkVersion = "0.11.0"
-
+    val gmailApiVersion = "1.24.2"
+    val googleApiVersion = "v1-rev101-1.24.1"
+    val googleOwaspVersion ="20171016.1"
     implementation("org.springframework.boot:spring-boot-starter-webflux") {
         exclude(module = "hibernate-validator")
     }
@@ -43,9 +45,9 @@ dependencies {
     implementation("com.atlassian.commonmark:commonmark:$commonmarkVersion")
     implementation("com.atlassian.commonmark:commonmark-ext-autolink:$commonmarkVersion")
     implementation("com.github.ben-manes.caffeine:caffeine")
-    implementation("com.google.api-client:google-api-client:1.24.2")
-    implementation("com.google.apis:google-api-services-gmail:v1-rev101-1.24.1")
-    implementation("com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:20171016.1")
+    implementation("com.google.api-client:google-api-client:$gmailApiVersion")
+    implementation("com.google.apis:google-api-services-gmail:$googleApiVersion")
+    implementation("com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:$googleOwaspVersion")
 
     kapt("org.springframework.boot:spring-boot-configuration-processor")
 
