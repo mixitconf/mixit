@@ -27,7 +27,7 @@ node {
 
 dependencyManagement {
     imports {
-        mavenBom ("org.springframework.cloud:spring-cloud-dependencies:2020.0.5")
+        mavenBom ("org.springframework.cloud:spring-cloud-dependencies:2021.0.0")
     }
 }
 

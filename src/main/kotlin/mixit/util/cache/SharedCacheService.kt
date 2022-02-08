@@ -23,6 +23,7 @@ class SharedCacheService(private val client: DiscoveryClient, private val enviro
      */
     @EventListener
     fun handleCacheInvalidation(CacheInvalidationEvent: CacheInvalidationEvent) {
+
         // client.getInstances("mixit-website")[0].uri donne adresse et port
         client.getInstances(environment.getProperty("spring.application.name"))
 
