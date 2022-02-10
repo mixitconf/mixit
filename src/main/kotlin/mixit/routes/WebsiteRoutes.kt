@@ -17,8 +17,8 @@ import mixit.mixette.handler.AdminMixetteHandler
 import mixit.security.handler.AuthenticationHandler
 import mixit.talk.handler.AdminTalkHandler
 import mixit.talk.handler.TalkHandler
-import mixit.ticket.handler.AdminTicketingHandler
-import mixit.ticket.handler.TicketingHandler
+import mixit.ticket.handler.AdminLotteryHandler
+import mixit.ticket.handler.LotteryHandler
 import mixit.user.handler.AdminUserHandler
 import mixit.user.handler.SponsorHandler
 import mixit.user.handler.UserHandler
@@ -46,7 +46,7 @@ class WebsiteRoutes(
     private val adminHandler: AdminHandler,
     private val cacheHandler: CacheHandler,
     private val adminEventHandler: AdminEventHandler,
-    private val adminTicketingHandler: AdminTicketingHandler,
+    private val adminLotteryHandler: AdminLotteryHandler,
     private val adminTalkHandler: AdminTalkHandler,
     private val adminUserHandler: AdminUserHandler,
     private val adminPostHandler: AdminPostHandler,
@@ -57,7 +57,7 @@ class WebsiteRoutes(
     private val searchHandler: SearchHandler,
     private val talkHandler: TalkHandler,
     private val sponsorHandler: SponsorHandler,
-    private val ticketingHandler: TicketingHandler,
+    private val ticketingHandler: LotteryHandler,
     private val mailingHandler: MailingHandler,
     private val userHandler: UserHandler,
     private val messageSource: MessageSource,
@@ -152,7 +152,7 @@ class WebsiteRoutes(
 
             "/admin".nest {
                 GET("/cache", cacheHandler::view)
-                GET("/ticketing", adminTicketingHandler::adminTicketing)
+                GET("/ticketing", adminLotteryHandler::adminTicketing)
                 GET("/mailings", mailingHandler::listMailing)
                 GET("/mailings/create", mailingHandler::createMailing)
                 GET("/mailings/edit/{id}", mailingHandler::editMailing)
@@ -209,7 +209,7 @@ class WebsiteRoutes(
                 POST("/events/{eventId}/volunteers/create", adminEventHandler::adminCreateEventVolunteer)
                 POST("/events/{eventId}/volunteers/delete", adminEventHandler::adminDeleteEventVolunteer)
                 POST("/events/{eventId}/volunteers", adminEventHandler::adminUpdateEventVolunteer)
-                POST("/ticketing/delete", adminTicketingHandler::adminDeleteTicketing)
+                POST("/ticketing/delete", adminLotteryHandler::adminDeleteTicketing)
                 POST("/post", adminPostHandler::adminSavePost)
                 POST("/post/delete", adminPostHandler::adminDeletePost)
                 POST("/mailings/preview", mailingHandler::previewMailing)

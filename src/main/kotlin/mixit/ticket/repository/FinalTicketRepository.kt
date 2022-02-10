@@ -2,12 +2,13 @@ package mixit.ticket.repository
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import mixit.ticket.model.Ticket
+import mixit.ticket.model.FinalTicket
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.count
 import org.springframework.data.mongodb.core.findAll
+import org.springframework.data.mongodb.core.findById
 import org.springframework.data.mongodb.core.findOne
 import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Query
@@ -16,7 +17,7 @@ import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
 
 @Repository
-class TicketRepository(
+class FinalTicketRepository(
     private val template: ReactiveMongoTemplate,
     private val objectMapper: ObjectMapper
 ) {
@@ -25,23 +26,30 @@ class TicketRepository(
 
     fun initData() {
         if (count().block() == 0L) {
-            val usersResource = ClassPathResource("data/ticket.json")
-            val tickets: List<Ticket> = objectMapper.readValue(usersResource.inputStream)
+            val usersResource = ClassPathResource("data/final-ticket.json")
+            val tickets: List<FinalTicket> = objectMapper.readValue(usersResource.inputStream)
             tickets.forEach { save(it).block() }
-            logger.info("Lottery data initialization complete")
+            logger.info("Ticket data initialization complete")
         }
     }
 
-    fun count() = template.count<Ticket>()
+    fun count() = template.count<FinalTicket>()
 
-    fun save(ticket: Ticket) =
-        template.insert(ticket).doOnSuccess { _ -> logger.info("Save new lottery ticket $ticket") }
+    fun save(ticket: FinalTicket) =
+        template.insert(ticket).doOnSuccess { _ -> logger.info("Save new ticket $ticket") }
 
-    fun findAll() = template.findAll<Ticket>()
+    fun findAll() =
+        template.findAll<FinalTicket>()
 
-    fun deleteAll() = template.remove<Ticket>(Query())
+    fun findOne(login: String) =
+        template.findById<FinalTicket>(login)
 
-    fun deleteOne(id: String) = template.remove<Ticket>(Query(Criteria.where("_id").isEqualTo(id)))
+    fun deleteAll() =
+        template.remove<FinalTicket>(Query())
 
-    fun findByEmail(email: String) = template.findOne<Ticket>(Query(Criteria.where("email").isEqualTo(email)))
+    fun deleteOne(id: String) =
+        template.remove<FinalTicket>(Query(Criteria.where("_id").isEqualTo(id)))
+
+    fun findByEmail(email: String) =
+        template.findOne<FinalTicket>(Query(Criteria.where("email").isEqualTo(email)))
 }

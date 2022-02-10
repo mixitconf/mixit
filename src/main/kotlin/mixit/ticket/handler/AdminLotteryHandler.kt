@@ -13,7 +13,7 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 import reactor.core.publisher.Mono
 
 @Component
-class AdminTicketingHandler(
+class AdminLotteryHandler(
     private val ticketRepository: TicketRepository,
     private val properties: MixitProperties
 ) {

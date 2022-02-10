@@ -5,7 +5,7 @@ import mixit.MixitProperties
 import mixit.util.generateModel
 import mixit.util.locale
 import org.springframework.boot.autoconfigure.web.ErrorProperties
-import org.springframework.boot.autoconfigure.web.ResourceProperties
+import org.springframework.boot.autoconfigure.web.WebProperties
 import org.springframework.boot.autoconfigure.web.reactive.error.DefaultErrorWebExceptionHandler
 import org.springframework.boot.web.reactive.error.ErrorAttributes
 import org.springframework.context.ApplicationContext
@@ -21,13 +21,13 @@ import reactor.kotlin.core.publisher.toMono
  */
 class ErrorWebFluxExceptionHandler(
     errorAttributes: ErrorAttributes,
-    resourceProperties: ResourceProperties,
+    webProperties: WebProperties,
     errorProperties: ErrorProperties,
     applicationContext: ApplicationContext,
     private val messageSource: MessageSource,
     private val properties: MixitProperties
 ) :
-    DefaultErrorWebExceptionHandler(errorAttributes, resourceProperties, errorProperties, applicationContext) {
+    DefaultErrorWebExceptionHandler(errorAttributes, webProperties.resources, errorProperties, applicationContext) {
 
     override fun getRoutingFunction(errorAttributes: ErrorAttributes): RouterFunction<ServerResponse> {
         return super.getRoutingFunction(errorAttributes)

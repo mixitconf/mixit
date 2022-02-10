@@ -7,6 +7,7 @@ import mixit.event.repository.EventRepository
 import mixit.favorite.repository.FavoriteRepository
 import mixit.talk.model.TalkService
 import mixit.talk.repository.TalkRepository
+import mixit.ticket.repository.FinalTicketRepository
 import mixit.ticket.repository.TicketRepository
 import mixit.user.model.UserService
 import mixit.user.repository.UserRepository
@@ -24,7 +25,8 @@ class DatabaseInitializerConfig {
         talkRepository: TalkRepository,
         ticketRepository: TicketRepository,
         postRepository: PostRepository,
-        favoriteRepository: FavoriteRepository
+        favoriteRepository: FavoriteRepository,
+        finalTicketRepository: FinalTicketRepository
     ) = CommandLineRunner {
 
         userRepository.initData()
@@ -33,6 +35,7 @@ class DatabaseInitializerConfig {
         postRepository.initData()
         ticketRepository.initData()
         favoriteRepository.initData()
+        finalTicketRepository.initData()
     }
 
     @Bean

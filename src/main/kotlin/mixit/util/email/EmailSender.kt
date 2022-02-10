@@ -31,7 +31,7 @@ interface EmailSender {
  * Gmail API service is used in cloud mode to send email
  */
 @Component
-@Profile("cloud")
+@Profile("service-mail")
 class GmailApiSender(private val properties: MixitProperties, private val gmailService: Gmail) : EmailSender {
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
@@ -64,7 +64,7 @@ class GmailApiSender(private val properties: MixitProperties, private val gmailS
  * or for our different information messages
  */
 @Component
-@Profile("!cloud")
+@Profile("!service-mail")
 class GmailSmtpSender(private val javaMailSender: JavaMailSender) : EmailSender {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
