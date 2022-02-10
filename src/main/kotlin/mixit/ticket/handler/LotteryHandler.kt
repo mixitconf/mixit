@@ -21,7 +21,7 @@ import reactor.core.publisher.Mono
 import reactor.kotlin.core.publisher.toMono
 
 @Component
-class TicketingHandler(
+class LotteryHandler(
     private val ticketRepository: TicketRepository,
     private val cryptographer: Cryptographer,
     private val emailService: EmailService,

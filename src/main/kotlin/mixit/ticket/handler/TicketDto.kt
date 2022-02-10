@@ -1,12 +1,11 @@
 package mixit.ticket.handler
 
-import mixit.ticket.model.Ticket
+import java.time.Instant
 
-class TicketDto(
-    val rank: Int,
+class FinalTicketDto(
     val email: String,
+    val number: String,
     val firstname: String,
-    val lastname: String
+    val lastname: String,
+    val createdAt: Instant
 )
-
-fun Ticket.toDto(rank: Int) = TicketDto(rank, email, firstname, lastname)

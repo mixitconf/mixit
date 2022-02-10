@@ -55,9 +55,6 @@ class UserRepository(
 
     fun count() = template.count<User>()
 
-    fun findByYear(year: Int) =
-        template.find<User>(Query(where("year").isEqualTo(year)))
-
     fun findByNonEncryptedEmail(email: String) = template.findOne<User>(
         Query(
             where("role").inValues(Role.STAFF, Role.STAFF_IN_PAUSE, Role.USER, Role.VOLUNTEER)
@@ -65,14 +62,8 @@ class UserRepository(
         )
     )
 
-    fun findByName(firstname: String, lastname: String) =
-        template.find<User>(Query(where("firstname").isEqualTo(firstname).and("lastname").isEqualTo(lastname)))
-
     fun findByRoles(roles: List<Role>) =
         template.find<User>(Query(where("role").inValues(roles)))
-
-    fun findByRoleAndEvent(role: Role, event: String) =
-        template.find<User>(Query(where("role").isEqualTo(role).and("events").inValues(event)))
 
     fun findOneByRoles(login: String, roles: List<Role>) =
         template.findOne<User>(Query(where("role").inValues(roles).and("_id").isEqualTo(login)))
@@ -82,11 +73,6 @@ class UserRepository(
 
     fun findAllByIds(login: List<String>): Flux<User> {
         val criteria = where("login").inValues(login)
-        return template.find(Query(criteria))
-    }
-
-    fun findAllByRole(role: Role): Flux<User> {
-        val criteria = where("role").isEqualTo(role)
         return template.find(Query(criteria))
     }
 

@@ -5,7 +5,8 @@ import mixit.event.handler.JsonEventHandler
 import mixit.favorite.handler.JsonFavoriteHandler
 import mixit.security.handler.ExternalHandler
 import mixit.talk.handler.JsonTalkHandler
-import mixit.ticket.handler.TicketingHandler
+import mixit.ticket.handler.AdminTicketHandler
+import mixit.ticket.handler.LotteryHandler
 import mixit.user.handler.UserHandler
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -18,9 +19,10 @@ class ApiRoutes(
     private val eventHandler: JsonEventHandler,
     private val talkHandler: JsonTalkHandler,
     private val favoriteHandler: JsonFavoriteHandler,
-    private val ticketingHandler: TicketingHandler,
+    private val ticketingHandler: LotteryHandler,
     private val externalHandler: ExternalHandler,
-    private val userHandler: UserHandler
+    private val userHandler: UserHandler,
+    private val ticketHandler: AdminTicketHandler
 ) {
 
     @Bean
@@ -37,8 +39,9 @@ class ApiRoutes(
             }
 
             "/admin".nest {
-                GET("/ticket", ticketingHandler::findAll)
-                GET("/ticket/random", ticketingHandler::randomDraw)
+                GET("/ticket", ticketHandler::findAll)
+                GET("/lottery", ticketingHandler::findAll)
+                GET("/lottery/random", ticketingHandler::randomDraw)
                 GET("/favorite", favoriteHandler::findAll)
                 GET("/{year}/talk", talkHandler::findAdminByEventId)
             }
