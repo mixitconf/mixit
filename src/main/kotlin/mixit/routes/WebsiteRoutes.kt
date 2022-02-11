@@ -18,6 +18,7 @@ import mixit.security.handler.AuthenticationHandler
 import mixit.talk.handler.AdminTalkHandler
 import mixit.talk.handler.TalkHandler
 import mixit.ticket.handler.AdminLotteryHandler
+import mixit.ticket.handler.AdminTicketHandler
 import mixit.ticket.handler.LotteryHandler
 import mixit.user.handler.AdminUserHandler
 import mixit.user.handler.SponsorHandler
@@ -57,7 +58,8 @@ class WebsiteRoutes(
     private val searchHandler: SearchHandler,
     private val talkHandler: TalkHandler,
     private val sponsorHandler: SponsorHandler,
-    private val ticketingHandler: LotteryHandler,
+    private val lotteryHandler: LotteryHandler,
+    private val ticketHandler: AdminTicketHandler,
     private val mailingHandler: MailingHandler,
     private val userHandler: UserHandler,
     private val messageSource: MessageSource,
@@ -82,7 +84,7 @@ class WebsiteRoutes(
                 )
             }
             GET("/about", aboutHandler::findAboutView)
-            GET("/ticketing", ticketingHandler::ticketing)
+            GET("/ticketing", lotteryHandler::ticketing)
             GET("/sponsors") { sponsorHandler.viewWithSponsors(CURRENT_EVENT.toInt(), it) }
             GET("/mixteen") {
                 sponsorHandler.viewWithSponsors(
@@ -153,6 +155,9 @@ class WebsiteRoutes(
             "/admin".nest {
                 GET("/cache", cacheHandler::view)
                 GET("/ticketing", adminLotteryHandler::adminTicketing)
+                GET("/ticket", ticketHandler::ticketing)
+                GET("/ticket/edit/{number}", ticketHandler::editTicket)
+                GET("/ticket/create", ticketHandler::createTicket)
                 GET("/mailings", mailingHandler::listMailing)
                 GET("/mailings/create", mailingHandler::createMailing)
                 GET("/mailings/edit/{id}", mailingHandler::editMailing)
@@ -192,7 +197,7 @@ class WebsiteRoutes(
             POST("/me", userHandler::saveProfile)
             POST("/me/talks", talkHandler::saveProfileTalk)
             POST("/search") { searchHandler.searchFullTextView(it) }
-            POST("/ticketing", ticketingHandler::submit)
+            POST("/ticketing", lotteryHandler::submit)
 
             "/admin".nest {
                 POST("/talks", adminTalkHandler::adminSaveTalk)
