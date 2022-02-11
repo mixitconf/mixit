@@ -33,7 +33,10 @@ class AdminTicketHandler(
     fun ticketing(req: ServerRequest) =
         ok().render(
             if (properties.feature.lotteryResult) TEMPLATE_LIST else throw NotFoundException(),
-            mapOf(Pair("title", "admin.ticket.title"))
+            mapOf(
+                Pair("title", "admin.ticket.title"),
+                Pair("tickets", repository.findAll().map { it.toDto() })
+            )
         )
 
     fun createTicket(req: ServerRequest): Mono<ServerResponse> =

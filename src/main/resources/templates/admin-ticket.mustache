@@ -2,10 +2,12 @@
 
 <div class="mxt-wrapper--header">
     <h1 class="text-center pt-5">{{#i18n}}admin.ticket.title{{/i18n}}</h1>
+    <p class="text-center mxt-text--page-title">{{#i18n}}admin.ticket.text{{/i18n}}</p>
 </div>
 
 <div class="container mxt-wrapper--page-content">
-    <p>{{#i18n}}admin.ticketing.count{{/i18n}} : <b>{{tickets.size}}</b></p>
+    <p>{{#i18n}}admin.ticket.count{{/i18n}} : <b>{{tickets.size}}</b>
+        | <a href="/admin/ticket/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
     <table class="table-striped table table-bordered">
       <thead>
         <tr>
@@ -21,10 +23,9 @@
           <td>{{firstname}}</td>
           <td>{{lastname}}</td>
           <td><a href="mailto:{{email}}">{{email}}</a></td>
-          <td><form action="/admin/ticketing/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.ticketing.delete.confirm{{/i18n}}');">
-                <input type="hidden" name="email" value="{{email}}"/>
-                <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}common.actions.delete{{/i18n}}"/>
-            </form></td>
+          <td>
+              <a href="/admin/ticket/edit/{{number}}">{{#i18n}}common.actions.update{{/i18n}}</a> <br />
+          </td>
         </tr>
         {{/tickets}}
       </tbody>
