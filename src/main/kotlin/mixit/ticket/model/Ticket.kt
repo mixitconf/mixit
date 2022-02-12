@@ -1,6 +1,7 @@
 package mixit.ticket.model
 
 import java.time.Instant
+import mixit.ticket.handler.FinalTicketDto
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 
@@ -30,7 +31,5 @@ data class FinalTicket(
             FinalTicket(ticket.email, "MXT22-$rank", ticket.firstname, ticket.lastname)
     }
 
-    fun toDto(i: Int) {
-        TODO("Not yet implemented")
-    }
+    fun toDto() = FinalTicketDto(email, number, firstname, lastname, createdAt)
 }

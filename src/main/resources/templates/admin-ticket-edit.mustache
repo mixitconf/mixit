@@ -1,0 +1,39 @@
+{{> header}}
+
+<div class="mxt-wrapper--header">
+    <h1 class="text-center pt-5">{{#i18n}}admin.ticket.title{{/i18n}}</h1>
+    <p class="text-center mxt-text--page-title">{{#i18n}}admin.ticket.text{{/i18n}}</p>
+</div>
+
+<div class="container mxt-wrapper--page-content">
+    {{#user.login}}
+        <form action="/admin/ticket/delete" method="post" class="text-center"
+              onsubmit="return confirm('{{#i18n}}admin.ticket.delete.confirm{{/i18n}}');">
+        <input type="hidden" name="number" value="{{ticket.number}}"/>
+        <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}common.actions.delete{{/i18n}}"/>
+    </form>{{/user.login}}
+    <form action="/admin/ticket" method="post">
+        <div class="mb-3">
+            <label class="form-label">{{#i18n}}admin.ticket.number{{/i18n}}</label>
+            <input class="form-control" type="text" name="login" value="{{ticket.number}}" required/>
+        </div>
+        <div class="mb-3">
+            <label class="label">{{#i18n}}admin.ticket.firstname{{/i18n}}</label>
+            <input class="form-control" type="text" name="firstname" value="{{ticket.firstname}}" required/>
+        </div>
+        <div class="mb-3">
+            <label class="label">{{#i18n}}admin.ticket.lastname{{/i18n}}</label>
+            <input class="form-control" type="text" name="lastname" value="{{ticket.lastname}}" required/>
+        </div>
+        <div class="mb-3">
+            <label class="label">{{#i18n}}admin.ticket.email{{/i18n}}</label>
+            <input class="form-control" type="text" name="email" value="{{ticket.email}}"/>
+        </div>
+        <div class="mb-3">
+            <label class="label">{{#i18n}}admin.ticket.createdat{{/i18n}}</label>
+            <input class="form-control" type="text" name="createdat" value="{{ticket.createdat}}"/>
+        </div>
+    </form>
+</div>
+
+{{> footer}}

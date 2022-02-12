@@ -29,7 +29,7 @@
 
     <h2 class="subheader text-center pt-5">{{#i18n}}cfp.title{{/i18n}}</h2>
     <p class="pt-2">{{#i18n}}cfp.description{{/i18n}}</p>
-    <p class="text-center pt-2">
+    <p class="text-center pt-2 pb-3">
         <a class="mxt-anchor--uppercase btn btn-primary mxt-btn-primary"
            href="https://www.papercall.io/mixit2022">{{#i18n}}cfp.action{{/i18n}}</a>
     </p>
@@ -114,10 +114,6 @@
         <li>{{#i18n}}cfp.format.workshop{{/i18n}}</li>
         <li>{{#i18n}}cfp.format.keynote{{/i18n}}</li>
     </ul>
-
-
-
-
 </div>
 
 <div class="container mxt-wrapper--home-content mt-5" style="background-color: #e6e6e6;">
@@ -168,19 +164,19 @@
     <div class="col-12 col-lg-10 offset-lg-1">
         <h2 class="subheader text-center pt-5">{{#i18n}}home.sponsors.title{{/i18n}}</h2>
         <p class="pt-2">{{#i18n}}home.2022.sponsor{{/i18n}}</p>
-        <p class="text-center">
+        <p class="text-center pb-4">
             <a class="mxt-anchor--uppercase btn btn-primary mxt-btn-primary"
                href="{{#i18n}}home.sponsors.pdf.url{{/i18n}}">{{#i18n}}home.sponsors.pdf{{/i18n}}</a>
         </p>
 
         <div class="text-center row justify-content-md-center">
             {{#sponsors-main}}
-                <div class="col-3 text-center col-md-2">
+                <div class="col-6 text-center col-md-3 col-lg-2">
                     {{> sponsor-detail }}
                 </div>
             {{/sponsors-main}}
             {{#sponsors-others}}
-                <div class="col-2 col-md-1 text-center">
+                <div class="col-3 col-md-2 col-lg-1 text-center">
                     {{> sponsor-detail }}
                 </div>
             {{/sponsors-others}}

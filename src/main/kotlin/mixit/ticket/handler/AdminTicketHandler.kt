@@ -33,13 +33,16 @@ class AdminTicketHandler(
     fun ticketing(req: ServerRequest) =
         ok().render(
             if (properties.feature.lotteryResult) TEMPLATE_LIST else throw NotFoundException(),
-            mapOf(Pair("title", "ticket.title"))
+            mapOf(
+                Pair("title", "admin.ticket.title"),
+                Pair("tickets", repository.findAll().map { it.toDto() })
+            )
         )
 
-    fun createEvent(req: ServerRequest): Mono<ServerResponse> =
+    fun createTicket(req: ServerRequest): Mono<ServerResponse> =
         this.adminTicket()
 
-    fun editEvent(req: ServerRequest): Mono<ServerResponse> =
+    fun editTicket(req: ServerRequest): Mono<ServerResponse> =
         repository.findOne(req.pathVariable("number")).flatMap { this.adminTicket(it) }
 
     private fun adminTicket(ticket: FinalTicket = FinalTicket("","","","")) =
@@ -67,7 +70,7 @@ class AdminTicketHandler(
                 .onErrorResume(DuplicateKeyException::class.java) {
                     ok().render(
                         "ticket-error",
-                        mapOf(Pair("message", "ticket.error.alreadyexists"), Pair("title", "ticket.title"))
+                        mapOf(Pair("message", "ticket.error.alreadyexists"), Pair("title", "admin.ticket.title"))
                     )
                 }
         }

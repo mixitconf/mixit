@@ -66,4 +66,8 @@ fun User.hasValidTokens(token: String?, externalAppToken: String?): Boolean {
     return false
 }
 
-fun User.anonymize() = this.copy(tokenExpiration = LocalDateTime.now(), token = "")
+fun User.anonymize() = this.copy(
+        tokenExpiration = LocalDateTime.now(),
+        token = "",
+        externalAppToken = null
+)
