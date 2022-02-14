@@ -26,7 +26,11 @@ class DatabaseInitializerConfig {
         ticketRepository: TicketRepository,
         postRepository: PostRepository,
         favoriteRepository: FavoriteRepository,
-        finalTicketRepository: FinalTicketRepository
+        finalTicketRepository: FinalTicketRepository,
+        eventService: EventService,
+        blogService: BlogService,
+        talkService: TalkService,
+        userService: UserService
     ) = CommandLineRunner {
 
         userRepository.initData()
@@ -36,15 +40,7 @@ class DatabaseInitializerConfig {
         ticketRepository.initData()
         favoriteRepository.initData()
         finalTicketRepository.initData()
-    }
 
-    @Bean
-    fun cacheInitializer(
-        eventService: EventService,
-        blogService: BlogService,
-        talkService: TalkService,
-        userService: UserService
-    ) = CommandLineRunner {
         userService.initializeCache()
         eventService.initializeCache()
         blogService.initializeCache()

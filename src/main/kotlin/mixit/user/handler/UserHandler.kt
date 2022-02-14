@@ -244,9 +244,9 @@ class UserHandler(
                 .map { talks -> talks.flatMap { it.speakers }.map { it.anonymize() }.distinct() }
         )
 
-    fun create(req: ServerRequest) = repository.save(req.bodyToMono<User>()).flatMap {
-        created(create("/api/user/${it.login}")).json().body(it.toMono())
-    }
+    fun create(req: ServerRequest) = req.bodyToMono<User>()
+            .flatMap { userService.save(it) }
+            .flatMap { created(create("/api/user/${it.login}")).json().body(it.toMono()) }
 
     fun check(req: ServerRequest) = ok().json().body(
         repository.findByNonEncryptedEmail(req.pathVariable("email"))
