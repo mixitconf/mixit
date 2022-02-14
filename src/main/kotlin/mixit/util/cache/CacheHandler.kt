@@ -59,9 +59,9 @@ class CacheHandler(
         CacheZone.valueOf(req.pathVariable("zone")).let {
             when (it) {
                 CacheZone.TALK -> talkService.invalidateCache()
-                CacheZone.BLOG -> blogService.initializeCache()
-                CacheZone.EVENT -> eventService.initializeCache()
-                CacheZone.USER -> userService.initializeCache()
+                CacheZone.BLOG -> blogService.invalidateCache()
+                CacheZone.EVENT -> eventService.invalidateCache()
+                CacheZone.USER -> userService.invalidateCache()
             }
             view(req)
         }
