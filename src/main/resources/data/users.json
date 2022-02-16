@@ -5306,8 +5306,8 @@
     {
         "company": "Clever Cloud",
         "description": {
-            "ENGLISH": "Clever Cloud helps companies and IT professionals to achiveve software delivery faster, reduce their feedback loop, focus on their core value and stop worrying about their hosting infrastructure by providing a solution for application sustainability. We created Clever Cloud because we think that industrialized hosting will allow companies to work faster, be more agile in their market, focus on their added value and stop worrying about their hosting technology.",
-            "FRENCH": "Clever Cloud est une entreprise de PaaS Fran\u00e7aise. Nous aidons les d\u00e9veloppeurs \u00e0 d\u00e9ployer leurs applications en production avec une infrastructure sans faille, \u00e0 un prix juste et des fonctionnalit\u00e9s modernes comme la scalabilit\u00e9 automatique ou le blue-green deployment. Nous construisons un service facile \u00e0 utiliser, sans verrou \u00e9diteur et pouvant grandir selon vos besoins."
+            "ENGLISH": "Clever Cloud is a PaaS solution helping thousands of developers to deploy, host and maintain application in production without any sysadmin, with automatic scalability. Easy to integrate, without any lock-in, compatible with the majority of market's techonologies.",
+            "FRENCH": "Clever Cloud est un \u00e9diteur de solution PaaS qui aide des milliers de devs \u00e0 d\u00e9ployer, h\u00e9berger et maintenir des applications en production sans adminsys, avec une scalabilit\u00e9 automatique. Facile \u00e0 int\u00e9grer, sans lock-in et compatible avec la majorité des technologies du march\u00e9."
         },
         "email": "ABiS/y/PPJ/CGK6dsFmGqXWtAMp19jAP0lh+BFwYpNc=",
         "emailHash": null,
