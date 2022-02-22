@@ -34,19 +34,6 @@ class EventService(
     fun save(event: Event) =
         repository.save(event).doOnSuccess { cacheList.invalidateAll() }
 
-    fun invalidateCacheIfUserFound(user: User): Mono<Boolean> =
-        findAll().collectList().map { events ->
-            events.any { event ->
-                event.organizations.map { it.login }.contains(user.login)
-                event.volunteers.map { it.login }.contains(user.login)
-                event.sponsors.map { it.login }.contains(user.login)
-            }.also {
-                if (it) {
-                    invalidateCache()
-                }
-            }
-        }
-
     @EventListener
     fun handleUserUpdate(userUpdateEvent: UserUpdateEvent) {
         findAll()

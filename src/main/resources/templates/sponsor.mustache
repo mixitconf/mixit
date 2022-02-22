@@ -8,8 +8,8 @@
         {{/sponsor.isAbsoluteLogo}}
         {{^sponsor.isAbsoluteLogo}}
             <picture>
-                <source srcset="{{imagepath}}{{sponsor.photoUrl}}" type="{{sponsor.logoType}}" alt="{{sponsor.company}}" class="mxt-img--sponsors">
-                <img src="{{imagepath}}{{sponsor.photoUrl}}" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}} alt="{{sponsor.company}}" class="mxt-img--sponsors">
+                <source srcset="{{sponsor.photoUrl}}" type="{{sponsor.logoType}}" alt="{{sponsor.company}}" class="mxt-img--sponsors">
+                <img src="{{sponsor.photoUrl}}" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}} alt="{{sponsor.company}}" class="mxt-img--sponsors">
             </picture>
         {{/sponsor.isAbsoluteLogo}}
     </div>

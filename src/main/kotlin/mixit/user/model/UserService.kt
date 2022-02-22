@@ -30,10 +30,9 @@ class UserService(
         findAll().collectList().map { elements -> elements.filter { userIds.contains(it.login) } }
 
     fun save(user: User): Mono<User> =
-        userRepository.save(user).map {
+        userRepository.save(user).doOnSuccess {
             cacheList.invalidateAll()
             eventPublisher.publishEvent(UserUpdateEvent(user))
-            user
         }
 
     fun deleteOne(id: String) =

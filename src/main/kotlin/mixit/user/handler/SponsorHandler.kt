@@ -38,7 +38,6 @@ class SponsorHandler(private val eventService: EventService) {
                     "sponsors",
                     mapOf(
                         Pair("year", year),
-                        Pair("imagepath", "/"),
                         Pair("sponsors-gold", goldSponsors),
                         Pair("has-sponsors-gold", goldSponsors.isNotEmpty()),
                         Pair("sponsors-silver", silverSponsors),
@@ -77,7 +76,6 @@ class SponsorHandler(private val eventService: EventService) {
 
                 val context = mutableMapOf(
                     Pair("year", year),
-                    Pair("imagepath", "/"),
                     Pair("title", if (view != "sponsors") title else "$title|$year"),
                     Pair("sponsors-main", mainSponsors.map { it.toSponsorDto() }),
                     Pair("sponsors-others", otherSponsors.map { it.toSponsorDto() })

@@ -28,9 +28,13 @@
             <label class="label">{{#i18n}}admin.user.form.email{{/i18n}}</label>
             <input class="form-control" type="text" name="email" value="{{#usermail}}{{usermail}}{{/usermail}}"/>
         </div>
+        <div class="mb-3 font-bold">
+            <b>{{#i18n}}admin.user.form.photo{{/i18n}}</b>
+        </div>
         <div class="mb-3">
             <label class="label">{{#i18n}}admin.user.form.emailHash{{/i18n}}</label>
-            <input class="form-control" type="text" name="emailHash" value="{{#user.emailHash}}{{user.emailHash}}{{/user.emailHash}}"/>
+            <input class="form-control" readonly type="text" value="{{#user.emailHash}}{{user.emailHash}}{{/user.emailHash}}"/>
+            <input class="form-control" type="hidden" name="emailHash" value="{{#user.emailHash}}{{user.emailHash}}{{/user.emailHash}}"/>
         </div>
         <div class="mb-3">
             <label class="label">{{#i18n}}admin.user.form.photoUrl{{/i18n}}</label>
