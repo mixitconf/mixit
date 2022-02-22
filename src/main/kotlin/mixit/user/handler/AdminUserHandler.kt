@@ -12,6 +12,7 @@ import mixit.user.model.Users
 import mixit.user.repository.UserRepository
 import mixit.util.AdminUtils.toJson
 import mixit.util.AdminUtils.toLinks
+import mixit.util.encodeToMd5
 import mixit.util.enumMatcher
 import mixit.util.extractFormData
 import mixit.util.seeOther
@@ -80,14 +81,14 @@ class AdminUserHandler(
             userRepository.findOne(formData["login"]!!)
                 .map { it }
                 .switchIfEmpty(Mono.just(User()))
-                .flatMap {
-                    val user = it.copy(
+                .flatMap { oldUser ->
+                    val user = oldUser.copy(
                         login = formData["login"]!!,
                         firstname = formData["firstname"]!!,
                         lastname = formData["lastname"]!!,
                         email = formData["email"]?.let { cryptographer.encrypt(it) },
-                        emailHash = formData["emailHash"],
-                        photoUrl = formData["photoUrl"] ?: formData["emailHash"] ?: Users.DEFAULT_IMG_URL,
+                        emailHash = if (formData["photoUrl"] == null) formData["email"]?.encodeToMd5() else null,
+                        photoUrl = formData["photoUrl"]?.let { sanitizeImage(it) },
                         company = formData["company"],
                         description = mapOf(
                             Pair(FRENCH, formData["description-fr"]!!),
@@ -101,4 +102,12 @@ class AdminUserHandler(
                         .then(seeOther("${properties.baseUri}/admin/users"))
                 }
         }
+
+    private fun sanitizeImage(photoUrl: String): String =
+        if (logoType(photoUrl) == null) {
+            Users.DEFAULT_IMG_URL
+        } else {
+            if (photoUrl.startsWith("images")) "/$photoUrl" else photoUrl
+        }
 }
+
