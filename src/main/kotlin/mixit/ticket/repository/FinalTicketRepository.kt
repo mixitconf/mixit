@@ -36,7 +36,7 @@ class FinalTicketRepository(
     fun count() = template.count<FinalTicket>()
 
     fun save(ticket: FinalTicket) =
-        template.insert(ticket).doOnSuccess { _ -> logger.info("Save new ticket $ticket") }
+        template.save(ticket).doOnSuccess { _ -> logger.info("Save new ticket $ticket") }
 
     fun findAll() =
         template.findAll<FinalTicket>()

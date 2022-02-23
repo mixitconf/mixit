@@ -1,6 +1,5 @@
 package mixit.ticket.handler
 
-import java.time.Instant
 import mixit.MixitProperties
 import mixit.ticket.model.FinalTicket
 import mixit.ticket.repository.FinalTicketRepository
@@ -15,6 +14,7 @@ import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.body
 import reactor.core.publisher.Mono
+import java.time.Instant
 
 @Component
 class AdminTicketHandler(
@@ -45,7 +45,7 @@ class AdminTicketHandler(
     fun editTicket(req: ServerRequest): Mono<ServerResponse> =
         repository.findOne(req.pathVariable("number")).flatMap { this.adminTicket(it) }
 
-    private fun adminTicket(ticket: FinalTicket = FinalTicket("","","","")) =
+    private fun adminTicket(ticket: FinalTicket = FinalTicket(FinalTicket.generateNewNumber(), "", "", "")) =
         ok().render(
             if (properties.feature.lotteryResult) TEMPLATE_EDIT else throw NotFoundException(),
             mapOf(
@@ -56,29 +56,45 @@ class AdminTicketHandler(
 
     fun submit(req: ServerRequest): Mono<ServerResponse> =
         req.extractFormData().flatMap { formData ->
-
-            val ticket = FinalTicket(
-                formData["email"]!!.lowercase(),
-                formData["number"]!!,
-                formData["firstname"]!!,
-                formData["lastname"]!!,
-                Instant.parse(formData["createdAt"])!!
-            )
-
-            repository.save(ticket)
-                .then(seeOther("${properties.baseUri}${LIST_URI}"))
-                .onErrorResume(DuplicateKeyException::class.java) {
-                    ok().render(
-                        "ticket-error",
-                        mapOf(Pair("message", "ticket.error.alreadyexists"), Pair("title", "admin.ticket.title"))
+            repository.findOne(formData["number"]!!)
+                .map {
+                    it.copy(
+                        email = formData["email"]!!.lowercase(),
+                        firstname = formData["firstname"]!!,
+                        lastname = formData["lastname"]!!,
                     )
+                }
+                .switchIfEmpty(
+                    Mono.just(
+                        FinalTicket(
+                            number = formData["number"]!!,
+                            email = formData["email"]!!.lowercase(),
+                            firstname = formData["firstname"]!!,
+                            lastname = formData["lastname"]!!,
+                            lotteryRank = formData["lotteryRank"]?.toInt(),
+                            createdAt = Instant.parse(formData["createdAt"])!!
+                        )
+                    )
+                )
+                .flatMap { ticket ->
+                    repository.save(ticket)
+                        .then(seeOther("${properties.baseUri}${LIST_URI}"))
+                        .onErrorResume(DuplicateKeyException::class.java) {
+                            ok().render(
+                                "ticket-error",
+                                mapOf(
+                                    Pair("message", "admin.ticket.error.alreadyexists"),
+                                    Pair("title", "admin.ticket.title")
+                                )
+                            )
+                        }
                 }
         }
 
-    fun deleteTicket(req: ServerRequest): Mono<ServerResponse> =
+    fun adminDeleteTicket(req: ServerRequest): Mono<ServerResponse> =
         req.extractFormData().flatMap { formData ->
             repository
-                .deleteOne(formData["email"]!!)
+                .deleteOne(formData["number"]!!)
                 .then(seeOther("${properties.baseUri}${LIST_URI}"))
         }
 }

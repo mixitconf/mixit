@@ -6,16 +6,17 @@
 </div>
 
 <div class="container mxt-wrapper--page-content">
-    {{#user.login}}
+    {{^creationMode}}
         <form action="/admin/ticket/delete" method="post" class="text-center"
               onsubmit="return confirm('{{#i18n}}admin.ticket.delete.confirm{{/i18n}}');">
-        <input type="hidden" name="number" value="{{ticket.number}}"/>
-        <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}common.actions.delete{{/i18n}}"/>
-    </form>{{/user.login}}
+            <input type="hidden" name="number" value="{{ticket.number}}"/>
+            <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}common.actions.delete{{/i18n}}"/>
+    </form>{{/creationMode}}
     <form action="/admin/ticket" method="post">
         <div class="mb-3">
             <label class="form-label">{{#i18n}}admin.ticket.number{{/i18n}}</label>
-            <input class="form-control" type="text" name="login" value="{{ticket.number}}" required/>
+            <input class="form-control" type="text" readonly value="{{ticket.number}}"/>
+            <input class="form-control" type="hidden" name="number" value="{{ticket.number}}"/>
         </div>
         <div class="mb-3">
             <label class="label">{{#i18n}}admin.ticket.firstname{{/i18n}}</label>
@@ -30,8 +31,17 @@
             <input class="form-control" type="text" name="email" value="{{ticket.email}}"/>
         </div>
         <div class="mb-3">
+            <label class="label">{{#i18n}}admin.ticket.rank{{/i18n}}</label>
+            <input class="form-control" readonly type="text" value="{{#ticket.lotteryRank}}{{ticket.lotteryRank}}{{/ticket.lotteryRank}}"/>
+            <input class="form-control" type="hidden" name="lotteryRank" value="{{#ticket.lotteryRank}}{{ticket.lotteryRank}}{{/ticket.lotteryRank}}"/>
+        </div>
+        <div class="mb-3">
             <label class="label">{{#i18n}}admin.ticket.createdat{{/i18n}}</label>
-            <input class="form-control" type="text" name="createdat" value="{{ticket.createdat}}"/>
+            <input class="form-control" readonly type="text" value="{{ticket.createdAt}}"/>
+            <input class="form-control" type="hidden" name="createdAt" value="{{ticket.createdAt}}"/>
+        </div>
+        <div class="mb-3 text-center">
+            <input type="submit" class="btn btn-outline-primary expand" value="{{#i18n}}common.actions.save{{/i18n}}"/>
         </div>
     </form>
 </div>

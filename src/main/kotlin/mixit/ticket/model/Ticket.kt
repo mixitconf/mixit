@@ -1,9 +1,11 @@
 package mixit.ticket.model
 
-import java.time.Instant
+import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
 import mixit.ticket.handler.FinalTicketDto
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
+import java.time.Instant
+import java.util.*
 
 /**
  * Should be renamed when the lottery will be closed
@@ -20,16 +22,22 @@ data class Ticket(
  */
 @Document
 data class FinalTicket(
-    @Id val email: String,
-    val number: String,
+    @Id val number: String,
+    val email: String,
     val firstname: String,
     val lastname: String,
+    val lotteryRank: Int? = null,
     val createdAt: Instant = Instant.now()
 ) {
     companion object {
-        fun of(ticket: Ticket, rank: Int) =
-            FinalTicket(ticket.email, "MXT22-$rank", ticket.firstname, ticket.lastname)
+        fun generateNewNumber(): String =
+            "MXT$CURRENT_EVENT-${UUID.randomUUID().toString().substring(0, 14).replace("-", "")}"
+
+        fun createFromLottery(lotteryTicket: Ticket, rank: Int?) =
+            lotteryTicket.let {
+                FinalTicket(it.email, generateNewNumber(), it.firstname, it.lastname, rank)
+            }
     }
 
-    fun toDto() = FinalTicketDto(email, number, firstname, lastname, createdAt)
+    fun toDto() = FinalTicketDto(email, number, firstname, lastname, lotteryRank, createdAt)
 }
