@@ -54,7 +54,9 @@ class AdminUserHandler(
         this.adminUser()
 
     fun editUser(req: ServerRequest): Mono<ServerResponse> =
-        userRepository.findOne(req.pathVariable("login")).flatMap(this::adminUser)
+        userRepository.findOne(req.pathVariable("login"))
+            .map { it.copy(photoUrl = if (it.emailHash !=null && it.photoUrl == Users.DEFAULT_IMG_URL ) null else it.photoUrl) }
+            .flatMap(this::adminUser)
 
     fun adminDeleteUser(req: ServerRequest): Mono<ServerResponse> =
         req.extractFormData().flatMap { formData ->
@@ -87,7 +89,7 @@ class AdminUserHandler(
                         firstname = formData["firstname"]!!,
                         lastname = formData["lastname"]!!,
                         email = formData["email"]?.let { cryptographer.encrypt(it) },
-                        emailHash = if (formData["photoUrl"] == null) formData["email"]?.encodeToMd5() else null,
+                        emailHash = if (formData["photoUrl"] == null) formData["emailHash"] ?: formData["email"]?.encodeToMd5() else null,
                         photoUrl = formData["photoUrl"]?.let { sanitizeImage(it) },
                         company = formData["company"],
                         description = mapOf(
