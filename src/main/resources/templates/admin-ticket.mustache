@@ -9,26 +9,28 @@
     <p>{{#i18n}}admin.ticket.count{{/i18n}} : <b>{{tickets.size}}</b>
         | <a href="/admin/ticket/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
     <table class="table-striped table table-bordered">
-      <thead>
+        <thead>
         <tr>
-          <th>{{#i18n}}admin.ticket.firstname{{/i18n}}</th>
-          <th>{{#i18n}}admin.ticket.lastname{{/i18n}}</th>
-          <th>{{#i18n}}admin.ticket.email{{/i18n}}</th>
-          <th>&nbsp;</th>
+            <th>{{#i18n}}admin.ticket.number{{/i18n}}</th>
+            <th>{{#i18n}}admin.ticket.firstname{{/i18n}}</th>
+            <th>{{#i18n}}admin.ticket.lastname{{/i18n}}</th>
+            <th>{{#i18n}}admin.ticket.email{{/i18n}}</th>
+            <th>&nbsp;</th>
         </tr>
-      </thead>
-      <tbody>
+        </thead>
+        <tbody>
         {{#tickets}}
-        <tr>
-          <td>{{firstname}}</td>
-          <td>{{lastname}}</td>
-          <td><a href="mailto:{{email}}">{{email}}</a></td>
-          <td>
-              <a href="/admin/ticket/edit/{{number}}">{{#i18n}}common.actions.update{{/i18n}}</a> <br />
-          </td>
-        </tr>
+            <tr>
+                <th>{{number}}</th>
+                <td>{{firstname}}</td>
+                <td>{{lastname}}</td>
+                <td><a href="mailto:{{email}}">{{email}}</a></td>
+                <td>
+                    <a href="/admin/ticket/edit/{{number}}">{{#i18n}}common.actions.update{{/i18n}}</a> <br/>
+                </td>
+            </tr>
         {{/tickets}}
-      </tbody>
+        </tbody>
     </table>
 </div>
 

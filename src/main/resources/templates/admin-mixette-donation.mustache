@@ -35,17 +35,29 @@
                 <input type="hidden" name="organizationLogin" value="{{donation.organizationLogin}}"/>
             {{/creationMode}}
         </div>
+
         <div class="col-12 mb-3">
-            <label class="form-label {{#errors.userLogin}}is-invalid{{/errors.userLogin}}">{{#i18n}}admin.donations.donor{{/i18n}} <a href="/admin/users">{{#i18n}}admin.donations.login.text{{/i18n}}</a> </label>
+            <label class="form-label {{#errors.userLogin}}is-invalid{{/errors.userLogin}}">{{#i18n}}admin.donations.email{{/i18n}}</label>
             {{#creationMode}}
                 <input class="form-control {{#errors.userLogin}}is-invalid{{/errors.userLogin}}"
-                       type="text" name="userLogin" value="{{donation.userLogin}}" required />
+                       type="text" name="userEmail" value="{{#donation.userEmail}}{{donation.userEmail}}{{/donation.userEmail}}" required />
             {{/creationMode}}
             {{^creationMode}}
-                <input class="form-control" type="text" value="{{donation.userLogin}}" disabled="true" />
-                <input type="hidden" name="userLogin" value="{{donation.userLogin}}"/>
+                <input class="form-control" type="text" value="{{donation.userEmail}}" disabled="true" />
+                <input type="hidden" name="userEmail" value="{{donation.userEmail}}"/>
             {{/creationMode}}
         </div>
+        {{^creationMode}}
+        <div class="col-12 mb-3">
+            <label class="form-label {{#errors.ticket}}is-invalid{{/errors.ticket}}">{{#i18n}}admin.donations.donor{{/i18n}}</label>
+            <input class="form-control" type="text" value="{{donation.userLogin}}" disabled="true" />
+        </div>
+
+        <div class="col-12 mb-3">
+            <label class="form-label {{#errors.ticket}}is-invalid{{/errors.ticket}}">{{#i18n}}admin.donations.ticket{{/i18n}}</label>
+            <input class="form-control" type="text" value="{{donation.ticketNumber}}" disabled="true" />
+        </div>
+            {{/creationMode}}
         <div class="col-12 mb-3">
             <label class="form-label {{#errors.quantity}}is-invalid{{/errors.quantity}}">{{#i18n}}admin.donations.quantity{{/i18n}}&nbsp;</label>
             <input class="form-control {{#errors.quantity}}is-invalid{{/errors.quantity}}"

@@ -5,16 +5,12 @@ import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.ticket.model.FinalTicket
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
-import org.springframework.data.mongodb.core.ReactiveMongoTemplate
-import org.springframework.data.mongodb.core.count
-import org.springframework.data.mongodb.core.findAll
-import org.springframework.data.mongodb.core.findById
-import org.springframework.data.mongodb.core.findOne
+import org.springframework.data.mongodb.core.*
 import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.data.mongodb.core.query.isEqualTo
-import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
+import reactor.core.publisher.Flux
 
 @Repository
 class FinalTicketRepository(
@@ -38,8 +34,8 @@ class FinalTicketRepository(
     fun save(ticket: FinalTicket) =
         template.save(ticket).doOnSuccess { _ -> logger.info("Save new ticket $ticket") }
 
-    fun findAll() =
-        template.findAll<FinalTicket>()
+    fun findAll(): Flux<FinalTicket> =
+        template.findAll<FinalTicket>().doOnComplete { logger.info("Load all tickets")  }
 
     fun findOne(login: String) =
         template.findById<FinalTicket>(login)

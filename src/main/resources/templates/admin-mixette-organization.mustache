@@ -16,12 +16,13 @@
         <li>{{#i18n}}admin.donations.amount{{/i18n}} : <strong>{{userDonation.amount}}</strong></li>
     </ul>
 
-    <p>{{#i18n}}admin.donations.donor.count{{/i18n}} : <b>{{donations.size}}</b></p>
+    <p>{{#i18n}}admin.donations.donor.count{{/i18n}} : <b>{{donations.size}}</b> | <a href="/admin/mixette-donation/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
     <table class="table-striped table table-bordered">
       <thead>
         <tr>
-            <th>{{#i18n}}admin.donations.login{{/i18n}}</th>
             <th>{{#i18n}}admin.donations.name{{/i18n}}</th>
+            <th>{{#i18n}}admin.donations.login{{/i18n}}</th>
+            <th>{{#i18n}}admin.donations.ticket{{/i18n}}</th>
             <th>{{#i18n}}admin.donations.quantity{{/i18n}}</th>
             <th>{{#i18n}}common.actions{{/i18n}}</th>
         </tr>
@@ -29,8 +30,9 @@
       <tbody>
         {{#donations}}
             <tr>
-                <td>{{userLogin}}</td>
                 <td>{{username}}</td>
+                <td>{{userLogin}}</td>
+                <td>{{ticketNumber}}</td>
                 <td>{{quantity}}</td>
                 <td>
                     <a href="/admin/mixette-donation/edit/{{id}}">{{#i18n}}common.actions.update{{/i18n}}</a>

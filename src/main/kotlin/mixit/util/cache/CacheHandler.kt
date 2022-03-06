@@ -1,11 +1,10 @@
 package mixit.util.cache
 
-import java.time.LocalDateTime
-import java.time.ZoneId
 import mixit.blog.model.BlogService
 import mixit.event.handler.AdminEventHandler.Companion.TIMEZONE
 import mixit.event.model.EventService
 import mixit.talk.model.TalkService
+import mixit.ticket.model.TicketService
 import mixit.user.model.UserService
 import mixit.util.CacheTemplate
 import mixit.util.CacheZone
@@ -14,6 +13,8 @@ import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import reactor.core.publisher.Mono
+import java.time.LocalDateTime
+import java.time.ZoneId
 
 data class CacheZoneStat(
     val zone: CacheZone,
@@ -36,7 +37,8 @@ class CacheHandler(
     private val eventService: EventService,
     private val talkService: TalkService,
     private val blogService: BlogService,
-    private val userService: UserService
+    private val userService: UserService,
+    private val ticketService: TicketService
 ) {
 
     fun view(req: ServerRequest): Mono<ServerResponse> =
@@ -46,10 +48,11 @@ class CacheHandler(
                 Pair("title", "admin.cache.title"),
                 Pair(
                     "zones", mapOf(
-                        Pair("event", CacheZoneStat.init(eventService)),
-                        Pair("blog", CacheZoneStat.init(blogService)),
-                        Pair("talk", CacheZoneStat.init(talkService)),
-                        Pair("user", CacheZoneStat.init(userService))
+                        Pair(CacheZone.EVENT.name.lowercase(), CacheZoneStat.init(eventService)),
+                        Pair(CacheZone.BLOG.name.lowercase(), CacheZoneStat.init(blogService)),
+                        Pair(CacheZone.TALK.name.lowercase(), CacheZoneStat.init(talkService)),
+                        Pair(CacheZone.USER.name.lowercase(), CacheZoneStat.init(userService)),
+                        Pair(CacheZone.TICKET.name.lowercase(), CacheZoneStat.init(ticketService))
                     )
                 )
             )
@@ -62,6 +65,7 @@ class CacheHandler(
                 CacheZone.BLOG -> blogService.invalidateCache()
                 CacheZone.EVENT -> eventService.invalidateCache()
                 CacheZone.USER -> userService.invalidateCache()
+                CacheZone.TICKET -> ticketService.invalidateCache()
             }
             view(req)
         }
