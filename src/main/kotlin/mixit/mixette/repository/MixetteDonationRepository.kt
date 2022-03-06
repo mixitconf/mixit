@@ -2,14 +2,10 @@ package mixit.mixette.repository
 
 import mixit.mixette.model.MixetteDonation
 import org.slf4j.LoggerFactory
-import org.springframework.data.mongodb.core.ReactiveMongoTemplate
-import org.springframework.data.mongodb.core.find
-import org.springframework.data.mongodb.core.findAll
-import org.springframework.data.mongodb.core.findById
+import org.springframework.data.mongodb.core.*
 import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.data.mongodb.core.query.isEqualTo
-import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 
@@ -37,8 +33,8 @@ class MixetteDonationRepository(private val template: ReactiveMongoTemplate) {
     fun deleteOne(id: String) =
         template.remove<MixetteDonation>(Query(Criteria.where("_id").isEqualTo(id)))
 
-    fun findByLogin(login: String, year: String): Flux<MixetteDonation> =
-        template.find(Query(Criteria.where("userLogin").isEqualTo(login).and("year").isEqualTo(year)))
+    fun findByEmail(email: String, year: String): Flux<MixetteDonation> =
+        template.find(Query(Criteria.where("userEmail").isEqualTo(email).and("year").isEqualTo(year)))
 
     fun findByOrganizationLogin(login: String, year: String): Flux<MixetteDonation> =
         template.find(Query(Criteria.where("organizationLogin").isEqualTo(login).and("year").isEqualTo(year)))

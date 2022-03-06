@@ -2,21 +2,21 @@ package mixit.util
 
 import com.github.benmanes.caffeine.cache.Cache
 import com.github.benmanes.caffeine.cache.Caffeine
-import java.time.Instant
-import java.util.concurrent.TimeUnit
-import java.util.concurrent.atomic.AtomicReference
 import reactor.cache.CacheFlux
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 import reactor.core.publisher.Signal
 import reactor.core.publisher.SignalType
+import java.time.Instant
+import java.util.concurrent.TimeUnit
+import java.util.concurrent.atomic.AtomicReference
 
 
 interface Cached {
     val id: String
 }
 
-enum class CacheZone { EVENT, BLOG, TALK, USER }
+enum class CacheZone { EVENT, BLOG, TALK, USER, TICKET }
 
 /**
  * All element exposed to user (event, talk, speaker) are put in a cache. For

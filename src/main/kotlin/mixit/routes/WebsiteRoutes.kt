@@ -2,7 +2,6 @@ package mixit.routes
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import java.util.Locale
 import mixit.MixitProperties
 import mixit.about.AboutHandler
 import mixit.about.SearchHandler
@@ -33,14 +32,13 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.DependsOn
 import org.springframework.core.io.ClassPathResource
-import org.springframework.http.MediaType.APPLICATION_FORM_URLENCODED
-import org.springframework.http.MediaType.TEXT_HTML
-import org.springframework.http.MediaType.TEXT_PLAIN
+import org.springframework.http.MediaType.*
 import org.springframework.web.reactive.function.server.RenderingResponse
 import org.springframework.web.reactive.function.server.RouterFunctions.resources
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.router
 import reactor.kotlin.core.publisher.toMono
+import java.util.*
 
 @Configuration
 class WebsiteRoutes(
@@ -184,9 +182,10 @@ class WebsiteRoutes(
                 GET("/mixette-organization", adminMixetteHandler::adminOrganizationDonations)
                 GET("/mixette-donor", adminMixetteHandler::adminDonorDonations)
                 GET("/mixette-donation/edit/{id}", adminMixetteHandler::editDonation)
-                GET("/mixette-donation/orga/{login}", adminMixetteHandler::editOrga)
-                GET("/mixette-donation/donor/{login}", adminMixetteHandler::editDonor)
+                GET("/mixette-donation/orga", adminMixetteHandler::editOrga)
+                GET("/mixette-donation/donor", adminMixetteHandler::editDonor)
                 GET("/mixette-donation/create", adminMixetteHandler::addDonation)
+                GET("/mixette-donation/create/{number}", adminMixetteHandler::addDonationForAttendee)
             }
         }
 
@@ -225,7 +224,7 @@ class WebsiteRoutes(
                 POST("/mailings/send", mailingHandler::sendMailing)
                 POST("/mailings/delete", mailingHandler::deleteMailing)
                 POST("/mixette-donation/{id}/delete", adminMixetteHandler::adminDeleteDonation)
-                POST("/mixette-donat:ion", adminMixetteHandler::adminSaveDonation)
+                POST("/mixette-donation", adminMixetteHandler::adminSaveDonation)
                 POST("/cache/{zone}/invalidate", cacheHandler::invalidate)
             }
         }

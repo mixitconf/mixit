@@ -22,6 +22,8 @@ class UserService(
     override fun findAll(): Flux<CachedUser> =
         findAll { userRepository.findAll().map { user -> CachedUser(user) } }
 
+    fun findOneByEncryptedEmail(email: String): Mono<CachedUser> =
+        findAll().collectList().flatMap { elements -> Mono.justOrEmpty(elements.firstOrNull { it.email == email }) }
 
     fun findByRoles(vararg roles: Role): Mono<List<CachedUser>> =
         findAll().collectList().map { elements -> elements.filter { roles.contains(it.role) } }

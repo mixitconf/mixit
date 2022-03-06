@@ -1,7 +1,6 @@
 package mixit.ticket.model
 
 import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
-import mixit.ticket.handler.FinalTicketDto
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 import java.time.Instant
@@ -24,9 +23,10 @@ data class Ticket(
 data class FinalTicket(
     @Id val number: String,
     val email: String,
-    val firstname: String,
+    val firstname: String? = null,
     val lastname: String,
     val lotteryRank: Int? = null,
+    val login: String? = null,
     val createdAt: Instant = Instant.now()
 ) {
     companion object {
@@ -39,5 +39,4 @@ data class FinalTicket(
             }
     }
 
-    fun toDto() = FinalTicketDto(email, number, firstname, lastname, lotteryRank, createdAt)
 }

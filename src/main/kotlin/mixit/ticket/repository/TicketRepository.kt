@@ -5,14 +5,10 @@ import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.ticket.model.Ticket
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
-import org.springframework.data.mongodb.core.ReactiveMongoTemplate
-import org.springframework.data.mongodb.core.count
-import org.springframework.data.mongodb.core.findAll
-import org.springframework.data.mongodb.core.findOne
+import org.springframework.data.mongodb.core.*
 import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.data.mongodb.core.query.isEqualTo
-import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
 
 @Repository
@@ -37,7 +33,8 @@ class TicketRepository(
     fun save(ticket: Ticket) =
         template.insert(ticket).doOnSuccess { _ -> logger.info("Save new lottery ticket $ticket") }
 
-    fun findAll() = template.findAll<Ticket>()
+    fun findAll() = template.findAll<Ticket>().doOnComplete { logger.info("Load all lottery tickets")  }
+
 
     fun deleteAll() = template.remove<Ticket>(Query())
 
