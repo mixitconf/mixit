@@ -37,7 +37,7 @@ class AdminTicketHandler(
             if (properties.feature.lotteryResult) TEMPLATE_LIST else throw NotFoundException(),
             mapOf(
                 Pair("title", "admin.ticket.title"),
-                Pair("tickets", service.findAll().map { it.toDto() })
+                Pair("tickets", service.findAll().map { tickets -> tickets.map { it.toDto() } })
             )
         )
 

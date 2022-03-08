@@ -5,11 +5,10 @@ import mixit.talk.model.Language
 import mixit.user.model.User
 import mixit.user.model.UserService
 import mixit.user.model.UserUpdateEvent
-import mixit.util.CacheTemplate
-import mixit.util.CacheZone
+import mixit.util.cache.CacheTemplate
+import mixit.util.cache.CacheZone
 import org.springframework.context.event.EventListener
 import org.springframework.stereotype.Service
-import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 import reactor.kotlin.core.publisher.switchIfEmpty
 
@@ -18,19 +17,18 @@ class BlogService(private val repository: PostRepository, private val userServic
 
     override val cacheZone: CacheZone = CacheZone.BLOG
 
-    override fun findAll(): Flux<CachedPost> =
-        findAll { repository.findAll().flatMap { post -> loadPostWriters(post) } }
+    override fun findAll(): Mono<List<CachedPost>> =
+        findAll { repository.findAll().flatMap { post -> loadPostWriters(post) }.collectList() }
 
     fun findBySlug(slug: String, lang: Language) =
-        findAll().collectList().flatMap { elements -> Mono.justOrEmpty(elements.firstOrNull { it.slug[lang] == slug }) }
+        findAll().flatMap { elements -> Mono.justOrEmpty(elements.firstOrNull { it.slug[lang] == slug }) }
 
     fun save(event: Post) =
-        repository.save(event).doOnSuccess { cacheList.invalidateAll() }
+        repository.save(event).doOnSuccess { cache.invalidateAll() }
 
     @EventListener
     fun handleUserUpdate(userUpdateEvent: UserUpdateEvent) {
         findAll()
-            .collectList()
             .map { blogs ->
                 blogs.any { blog ->
                     blog.author.login == userUpdateEvent.user.login
@@ -50,6 +48,6 @@ class BlogService(private val repository: PostRepository, private val userServic
             .switchIfEmpty { Mono.justOrEmpty(CachedPost(post, User())) }
 
     fun deleteOne(id: String) =
-        repository.deleteOne(id).doOnSuccess { cacheList.invalidateAll() }
+        repository.deleteOne(id).doOnSuccess { cache.invalidateAll() }
 
 }

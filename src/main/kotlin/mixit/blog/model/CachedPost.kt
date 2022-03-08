@@ -1,13 +1,13 @@
 package mixit.blog.model
 
-import java.time.LocalDateTime
 import mixit.blog.handler.Feed
 import mixit.blog.handler.FeedEntry
 import mixit.talk.model.Language
 import mixit.user.model.CachedStaff
 import mixit.user.model.User
-import mixit.util.Cached
+import mixit.util.cache.Cached
 import mixit.util.toRFC3339
+import java.time.LocalDateTime
 
 
 data class CachedPost(

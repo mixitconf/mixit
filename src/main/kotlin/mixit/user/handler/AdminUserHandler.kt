@@ -93,8 +93,8 @@ class AdminUserHandler(
                         photoUrl = formData["photoUrl"]?.let { sanitizeImage(it) },
                         company = formData["company"],
                         description = mapOf(
-                            Pair(FRENCH, formData["description-fr"]!!),
-                            Pair(ENGLISH, formData["description-en"]!!)
+                            Pair(FRENCH, formData["description-fr"] ?: formData["description-en"] ?: ""),
+                            Pair(ENGLISH, formData["description-en"] ?: formData["description-fr"] ?: "" )
                         ),
                         role = Role.valueOf(formData["role"]!!),
                         links = formData["links"]!!.toLinks(objectMapper),

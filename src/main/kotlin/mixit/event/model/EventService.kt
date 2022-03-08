@@ -3,18 +3,11 @@ package mixit.event.model
 import mixit.MixitApplication.Companion.speakerStarInCurrentEvent
 import mixit.MixitApplication.Companion.speakerStarInHistory
 import mixit.event.repository.EventRepository
-import mixit.user.model.CachedOrganization
-import mixit.user.model.CachedSpeaker
-import mixit.user.model.CachedSponsor
-import mixit.user.model.CachedStaff
-import mixit.user.model.User
-import mixit.user.model.UserService
-import mixit.user.model.UserUpdateEvent
-import mixit.util.CacheTemplate
-import mixit.util.CacheZone
+import mixit.user.model.*
+import mixit.util.cache.CacheTemplate
+import mixit.util.cache.CacheZone
 import org.springframework.context.event.EventListener
 import org.springframework.stereotype.Service
-import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 
 @Service
@@ -25,19 +18,18 @@ class EventService(
 
     override val cacheZone: CacheZone = CacheZone.EVENT
 
-    override fun findAll(): Flux<CachedEvent> =
-        findAll { repository.findAll().flatMap { event -> loadEventUsers(event) } }
+    override fun findAll(): Mono<List<CachedEvent>> =
+        findAll { repository.findAll().flatMap { event -> loadEventUsers(event) }.collectList() }
 
     fun findByYear(year: Int): Mono<CachedEvent> =
-        findAll().collectList().map { events -> events.first { it.year == year } }
+        findAll().map { events -> events.first { it.year == year } }
 
     fun save(event: Event) =
-        repository.save(event).doOnSuccess { cacheList.invalidateAll() }
+        repository.save(event).doOnSuccess { cache.invalidateAll() }
 
     @EventListener
     fun handleUserUpdate(userUpdateEvent: UserUpdateEvent) {
         findAll()
-            .collectList()
             .map { events ->
                 events.any { event ->
                     event.organizations.map { it.login }.contains(userUpdateEvent.user.login)

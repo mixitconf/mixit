@@ -4,7 +4,7 @@ import mixit.talk.model.Language
 import mixit.user.handler.UserDto
 import mixit.user.handler.logoType
 import mixit.user.handler.logoWebpUrl
-import mixit.util.Cached
+import mixit.util.cache.Cached
 import mixit.util.toHTML
 
 data class CachedUser(

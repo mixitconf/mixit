@@ -16,7 +16,11 @@
                     <h3 class="card-title">{{#i18n}}{{title}}{{/i18n}}</h3>
 
                     <div class="card-text lead">{{#i18n}}{{desc}}{{/i18n}}</div>
-                    <div class="card-text">{{#i18n}}admin.cache.refresh{{/i18n}} <strong>{{refreshAt}}</strong></div>
+                    <div class="card-text">{{#i18n}}admin.cache.refresh{{/i18n}}
+                        <strong>
+                            {{#refreshAt}}{{refreshAt}}{{/refreshAt}}
+                            {{^refreshAt}}???{{/refreshAt}}
+                        </strong></div>
                     <div class="card-text">{{#i18n}}admin.cache.entries{{/i18n}} <strong>{{entries}}</strong></div>
                     <form action="/admin/cache/{{zone}}/invalidate" method="post">
                         <button type="submit" class="btn btn-outline-primary mt-2">Invalidate</button>
