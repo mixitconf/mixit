@@ -5,7 +5,7 @@
 </div>
 
 <div class="container mxt-wrapper--page-content">
-    <p>{{#i18n}}admin.donations.orga.count{{/i18n}} : <b>{{donations.size}}</b> | <a href="/admin/mixette-donation/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
+    <p>{{#i18n}}admin.donations.orga.count{{/i18n}} : <b>{{donations.size}}</b> | <a href="/{{#admin}}admin{{/admin}}{{#volunteer}}volunteer{{/volunteer}}/mixette-donation/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
     <table class="table-striped table table-bordered">
       <thead>
         <tr>
@@ -24,7 +24,7 @@
             <td>{{number}}</td>
             <td>{{amount}}</td>
             <td>
-                <a href="/admin/mixette-donation/orga?login={{login}}">{{#i18n}}common.actions.view{{/i18n}}</a>
+                <a href="/{{#admin}}admin{{/admin}}{{#volunteer}}volunteer{{/volunteer}}/mixette-donation/orga?login={{login}}">{{#i18n}}common.actions.view{{/i18n}}</a>
             </td>
         </tr>
         {{/donations}}

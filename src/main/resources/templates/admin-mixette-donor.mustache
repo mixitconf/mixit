@@ -13,7 +13,7 @@
         <li>{{#i18n}}admin.donations.amount{{/i18n}} : <strong>{{userDonation.amount}}</strong></li>
     </ul>
 
-    <p>{{#i18n}}admin.donations.donor.count{{/i18n}} : <b>{{donations.size}}</b> | <a href="/admin/mixette-donation/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
+    <p>{{#i18n}}admin.donations.donor.count{{/i18n}} : <b>{{donations.size}}</b> | <a href="/{{#admin}}admin{{/admin}}{{#volunteer}}volunteer{{/volunteer}}/mixette-donation/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
     <table class="table-striped table table-bordered">
       <thead>
         <tr>
@@ -30,7 +30,7 @@
             <td>{{organizationName}}</td>
             <td>{{quantity}}</td>
             <td>
-                <a href="/admin/mixette-donation/edit/{{id}}">{{#i18n}}common.actions.update{{/i18n}}</a>
+                <a href="/{{#admin}}admin{{/admin}}{{#volunteer}}volunteer{{/volunteer}}/mixette-donation/edit/{{id}}">{{#i18n}}common.actions.update{{/i18n}}</a>
             </td>
         </tr>
         {{/donations}}

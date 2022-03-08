@@ -101,23 +101,25 @@ class AdminTicketHandler(
         }
 
     fun showAttendee(req: ServerRequest): Mono<ServerResponse> =
-            service.findByNumber(req.pathVariable("number"))
-                .flatMap { attendee ->
-                    req.session()
-                        .flatMap { session ->
-                            val role = session.getAttribute<Role>("role")
-                            if (role == Role.STAFF || role == Role.VOLUNTEER) {
-                                // A staff member is redirected to Mixette form
-                                seeOther("${properties.baseUri}/mixette-donation/create/${attendee.number}")
-                            }
-                            else {
-                                // Other members could be redirected to user profile in the future
-                                seeOther("${properties.baseUri}/")
-                            }
-                        }
-                        .switchIfEmpty {
-                            // Other members are redirected to user view
+        service.findByNumber(req.pathVariable("number"))
+            .flatMap { attendee ->
+                req.session()
+                    .flatMap { session ->
+                        val role = session.getAttribute<Role>("role")
+                        if (role == Role.STAFF) {
+                            // A staff member is redirected to Mixette form
+                            seeOther("${properties.baseUri}/admin/mixette-donation/create/${attendee.number}")
+                        } else if (role == Role.VOLUNTEER) {
+                            // A staff member is redirected to Mixette form
+                            seeOther("${properties.baseUri}/volunteer/mixette-donation/create/${attendee.number}")
+                        } else {
+                            // Other members could be redirected to user profile in the future
                             seeOther("${properties.baseUri}/")
                         }
-                }
+                    }
+                    .switchIfEmpty {
+                        // Other members are redirected to user view
+                        seeOther("${properties.baseUri}/")
+                    }
+            }
 }

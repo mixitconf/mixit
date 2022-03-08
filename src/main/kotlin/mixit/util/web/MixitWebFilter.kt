@@ -1,9 +1,6 @@
 package mixit.util.web
 
 import com.google.common.annotations.VisibleForTesting
-import java.net.URI
-import java.util.Locale
-import java.util.stream.Stream
 import mixit.MixitProperties
 import mixit.routes.Routes
 import mixit.security.model.Credential
@@ -23,6 +20,8 @@ import org.springframework.web.server.WebFilter
 import org.springframework.web.server.WebFilterChain
 import org.springframework.web.server.WebSession
 import reactor.core.publisher.Mono
+import java.net.URI
+import java.util.*
 
 @Component
 class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRepository) : WebFilter {
@@ -92,6 +91,8 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
                 // If admin page we see if user is a staff member
                 if (isAnAdminUrl(uriPath) && user.role != Role.STAFF) {
                     redirect(exchange, "/")
+                } else if (isAVolunteerUrl(uriPath) && user.role != Role.VOLUNTEER) {
+                    redirect(exchange, "/")
                 } else {
                     chain.filter(exchange.mutate().request(req).build())
                 }
@@ -127,10 +128,14 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
 
     @VisibleForTesting
     fun isASecuredUrl(path: String) =
-        Stream.concat(Routes.securedUrl.stream(), Routes.securedAdminUrl.stream()).anyMatch { path.startsWith(it) }
+        (Routes.securedUrl + Routes.securedAdminUrl).any { path.startsWith(it) }
 
     @VisibleForTesting
-    fun isAnAdminUrl(path: String) = Routes.securedAdminUrl.stream().anyMatch { path.startsWith(it) }
+    fun isAnAdminUrl(path: String) =
+        Routes.securedAdminUrl.stream().anyMatch { path.startsWith(it) }
+
+    fun isAVolunteerUrl(path: String) =
+        Routes.securedVolunteerUrl.stream().anyMatch { path.startsWith(it) }
 
     private fun redirect(exchange: ServerWebExchange, uri: String, statusCode: HttpStatus = HttpStatus.TEMPORARY_REDIRECT): Mono<Void> =
         exchange.response.let {

@@ -1,12 +1,12 @@
 package mixit.util
 
 import com.samskivert.mustache.Mustache
-import java.util.Locale
 import mixit.MixitProperties
 import mixit.user.model.Role
 import org.springframework.context.MessageSource
 import org.springframework.web.server.WebSession
 import org.springframework.web.util.UriUtils
+import java.util.*
 
 fun generateModel(
     properties: MixitProperties,
@@ -21,6 +21,7 @@ fun generateModel(
     email?.let {
         this["email"] = it
         if ((role != null && role == Role.STAFF)) this["admin"] = true
+        if ((role != null && role == Role.VOLUNTEER)) this["volunteer"] = true
         this["connected"] = true
     }
     this["locale"] = locale.toString()
