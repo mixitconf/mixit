@@ -1,14 +1,8 @@
 package mixit.event.handler
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import java.time.LocalDate
 import mixit.MixitProperties
-import mixit.event.model.Event
-import mixit.event.model.EventOrganization
-import mixit.event.model.EventService
-import mixit.event.model.EventSponsoring
-import mixit.event.model.EventVolunteer
-import mixit.event.model.SponsorshipLevel
+import mixit.event.model.*
 import mixit.util.AdminUtils.toJson
 import mixit.util.AdminUtils.toLink
 import mixit.util.AdminUtils.toLinks
@@ -20,6 +14,7 @@ import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import reactor.core.publisher.Mono
+import java.time.LocalDate
 
 @Component
 class AdminEventHandler(
@@ -40,7 +35,7 @@ class AdminEventHandler(
     }
 
     fun adminEvents(req: ServerRequest): Mono<ServerResponse> {
-        val events = service.findAll().sort(Comparator.comparing { it.id }).map { it.toEvent() }
+        val events = service.findAll().map { events -> events.sortedBy { it.id }.map { it.toEvent() } }
         return ok().render(
             TEMPLATE_LIST,
             mapOf(Pair("events", events), Pair("title", "admin.events.title"))

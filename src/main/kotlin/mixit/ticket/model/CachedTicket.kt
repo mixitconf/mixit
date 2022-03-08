@@ -1,7 +1,7 @@
 package mixit.ticket.model
 
 import mixit.ticket.handler.FinalTicketDto
-import mixit.util.Cached
+import mixit.util.cache.Cached
 import org.springframework.data.annotation.Id
 import java.time.Instant
 
@@ -35,7 +35,7 @@ data class CachedFinalTicket(
         lastname = lastname,
         lotteryRank = lotteryRank,
         login = login,
-        createdAt =createdAt
+        createdAt = createdAt
     )
 
     fun toDto() = FinalTicketDto(
@@ -45,6 +45,6 @@ data class CachedFinalTicket(
         lastname = lastname,
         lotteryRank = lotteryRank,
         login = login,
-        createdAt =createdAt
+        createdAt = createdAt
     )
 }

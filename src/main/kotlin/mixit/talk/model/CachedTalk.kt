@@ -1,21 +1,19 @@
 package mixit.talk.model
 
-import java.time.Instant
-import java.time.LocalDateTime
-import java.time.ZoneId
 import mixit.event.handler.AdminEventHandler.Companion.TIMEZONE
 import mixit.talk.handler.TalkDto
 import mixit.talk.model.Language.FRENCH
-import mixit.talk.model.TalkFormat.CLOSING_SESSION
-import mixit.talk.model.TalkFormat.KEYNOTE_SURPRISE
-import mixit.talk.model.TalkFormat.RANDOM
+import mixit.talk.model.TalkFormat.*
 import mixit.user.model.Link
 import mixit.user.model.User
-import mixit.util.Cached
+import mixit.util.cache.Cached
 import mixit.util.formatTalkDate
 import mixit.util.formatTalkTime
 import mixit.util.toSlug
 import mixit.util.toVimeoPlayerUrl
+import java.time.Instant
+import java.time.LocalDateTime
+import java.time.ZoneId
 
 data class CachedTalk(
     override val id: String,

@@ -1,12 +1,10 @@
-package mixit.util
+package mixit.util.cache
 
 import com.github.benmanes.caffeine.cache.Cache
 import com.github.benmanes.caffeine.cache.Caffeine
-import reactor.cache.CacheFlux
-import reactor.core.publisher.Flux
+import reactor.cache.CacheMono
 import reactor.core.publisher.Mono
 import reactor.core.publisher.Signal
-import reactor.core.publisher.SignalType
 import java.time.Instant
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicReference
@@ -27,13 +25,13 @@ abstract class CacheTemplate<T : Cached> {
 
     abstract val cacheZone: CacheZone
 
-    val refreshInstant = AtomicReference<Instant>()
+    val refreshInstant = AtomicReference<Instant?>()
 
-    val cacheList: Cache<String, MutableList<T>> by lazy {
+    val cache: Cache<String, List<T>> by lazy {
         Caffeine
             .newBuilder()
             .expireAfterWrite(1, TimeUnit.DAYS)
-            .maximumSize(2_500)
+            .maximumSize(5_000)
             .build()
     }
 
@@ -42,38 +40,32 @@ abstract class CacheTemplate<T : Cached> {
      */
     fun initializeCache() {
         refreshInstant.set(Instant.now())
-        findAll().collectList().block()
+        findAll().block()
     }
 
     fun findOne(id: String): Mono<T> =
-        findAll().collectList().flatMap { elements -> Mono.justOrEmpty(elements.firstOrNull { it.id == id }) }
+        findAll().flatMap { elements -> Mono.justOrEmpty(elements.firstOrNull { it.id == id }) }
 
-    fun findAll(loader: (String) -> Flux<T>): Flux<T> =
-        CacheFlux
-            .lookup({ k ->
-                val cached = cacheList.getIfPresent(k)
-                if (cached == null) {
-                    Mono.empty()
-                } else {
-                    Mono.just(cached).flatMapMany { Flux.fromIterable(it) }.map { Signal.next(it) }.collectList()
-                }
-            }, "global")
+    fun findAll(loader: () -> Mono<List<T>>): Mono<List<T>> =
+        CacheMono
+            .lookup({ k -> Mono.justOrEmpty(cache.getIfPresent(k)).map { Signal.next(it) }}, "global")
             .onCacheMissResume {
-                loader.invoke("global")
+                loader.invoke()
             }
             .andWriteWith { key, signal ->
                 Mono.fromRunnable {
-                    cacheList.put(
-                        key,
-                        signal.filter { it.type == SignalType.ON_NEXT }.map { it.get()!! }.toMutableList()
-                    )
+                    cache.put(key, signal.get()!!)
                 }
             }
 
-    abstract fun findAll(): Flux<T>
+    fun isEmpty(): Boolean =
+        cache.asMap().entries.isEmpty()
+
+
+    abstract fun findAll(): Mono<List<T>>
 
     fun invalidateCache() {
-        cacheList.invalidateAll()
+        cache.invalidateAll()
         refreshInstant.set(Instant.now())
     }
 

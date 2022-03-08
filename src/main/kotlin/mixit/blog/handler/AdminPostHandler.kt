@@ -1,6 +1,5 @@
 package mixit.blog.handler
 
-import java.time.LocalDateTime
 import mixit.MixitProperties
 import mixit.blog.model.BlogService
 import mixit.blog.model.Post
@@ -15,6 +14,7 @@ import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import reactor.core.publisher.Mono
+import java.time.LocalDateTime
 
 @Component
 class AdminPostHandler(private val service: BlogService, private val properties: MixitProperties) {
@@ -28,7 +28,6 @@ class AdminPostHandler(private val service: BlogService, private val properties:
     fun adminBlog(req: ServerRequest): Mono<ServerResponse> {
         val posts = service
             .findAll()
-            .collectList()
             .map { posts -> posts.sortedByDescending { it.addedAt }.map { it.toDto(req.language()) } }
         return ok().render(TEMPLATE_LIST, mapOf(Pair("posts", posts)))
     }

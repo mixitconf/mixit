@@ -36,7 +36,6 @@ class WebBlogHandler(val service: BlogService, val properties: MixitProperties) 
     fun findAllView(req: ServerRequest): Mono<ServerResponse> =
         service
             .findAll()
-            .collectList()
             .flatMap { posts ->
                 ok().render(
                     POST_LIST, mapOf(
@@ -52,7 +51,7 @@ class WebBlogHandler(val service: BlogService, val properties: MixitProperties) 
         }
 
     fun feed(req: ServerRequest): Mono<ServerResponse> {
-        val feeds = service.findAll().collectList().map { it.toFeed(req.language(), "blog.feed.title", "/blog") }
+        val feeds = service.findAll().map { it.toFeed(req.language(), "blog.feed.title", "/blog") }
         return ok().contentType(APPLICATION_ATOM_XML).render(POST_FEED, mapOf(Pair("feed", feeds)))
     }
 }

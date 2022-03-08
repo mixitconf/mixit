@@ -1,12 +1,8 @@
 package mixit.event.model
 
+import mixit.user.model.*
+import mixit.util.cache.Cached
 import java.time.LocalDate
-import mixit.user.model.CachedOrganization
-import mixit.user.model.CachedSpeaker
-import mixit.user.model.CachedSponsor
-import mixit.user.model.CachedStaff
-import mixit.user.model.Link
-import mixit.util.Cached
 
 data class CachedEvent(
     override val id: String,
