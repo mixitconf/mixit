@@ -15,11 +15,13 @@
         </div>
     {{/hasErrors}}
 
+    {{#admin}}
     {{^creationMode}}<form action="/admin/mixette-donation/{{donation.id}}/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.donations.delete.confirm{{/i18n}}');">
         <input type="hidden" name="id" value="{{donation.id}}"/>
         <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}common.actions.delete{{/i18n}}"/>
     </form>{{/creationMode}}
-    <form action="/admin/mixette-donation" method="post" class="row mt-3">
+    {{/admin}}
+    <form action="/{{#admin}}admin{{/admin}}{{#volunteer}}volunteer{{/volunteer}}/mixette-donation" method="post" class="row mt-3">
         <input type="hidden" name="id" value="{{^creationMode}}{{donation.id}}{{/creationMode}}"/>
         <div class="col-12 mb-3">
             <label class="form-label {{#errors.organizationLogin}}is-invalid{{/errors.organizationLogin}}">{{#i18n}}admin.donations.orga{{/i18n}}</label>

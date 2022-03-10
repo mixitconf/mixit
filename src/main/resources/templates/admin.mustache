@@ -6,6 +6,7 @@
 
 <div class="container mxt-wrapper--page-content">
     <div class="grid">
+        {{#admin}}
         <article class="g-col-lg-4 g-col-md-6 g-col-12">
             <div class="card p-3" style="height:100%">
                 <h2 class="card-title"><a href="{{localePrefix}}/admin/events"
@@ -107,6 +108,22 @@
                 </p>
             </div>
         </article>
+        {{/admin}}
+        {{#volunteer}}
+        <article class="g-col-lg-4 g-col-md-6 g-col-12">
+            <div class="card p-3" style="height:100%">
+                <h2 class="card-title"><a href="{{localePrefix}}/volunteer/mixette-organization"
+                                          class="mxt-title--article">{{#i18n}}admin.donations.title{{/i18n}}</a></h2>
+                <p class="card-text">{{#i18n}}admin.donations.text{{/i18n}}</p>
+                <p class="input-group">
+                    <a href="{{localePrefix}}/volunteer/mixette-organization"
+                       class="btn btn-outline-primary">{{#i18n}}admin.donations.link.orga{{/i18n}}</a>&nbsp;
+                    <a href="{{localePrefix}}/volunteer/mixette-donor"
+                       class="btn btn-outline-primary">{{#i18n}}admin.donations.link.donor{{/i18n}}</a>
+                </p>
+            </div>
+        </article>
+        {{/volunteer}}
     </div>
 </div>
 

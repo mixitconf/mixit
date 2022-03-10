@@ -93,7 +93,6 @@ class WebsiteRoutes(
                     it
                 )
             }
-            GET("/admin", adminHandler::admin)
             GET("/faq", aboutHandler::faqView)
             GET("/come", aboutHandler::comeToMixitView)
             GET("/schedule", talkHandler::scheduleView)
@@ -151,6 +150,7 @@ class WebsiteRoutes(
             }
 
             "/admin".nest {
+                GET("", adminHandler::admin)
                 GET("/cache", cacheHandler::view)
                 GET("/ticketing", adminLotteryHandler::adminTicketing)
                 GET("/ticket", ticketHandler::ticketing)
@@ -179,6 +179,17 @@ class WebsiteRoutes(
                 GET("/post/edit/{id}", adminPostHandler::editPost)
                 GET("/ticket/edit/{number}", ticketHandler::editTicket)
                 GET("/post/create", adminPostHandler::createPost)
+                GET("/mixette-organization", adminMixetteHandler::adminOrganizationDonations)
+                GET("/mixette-donor", adminMixetteHandler::adminDonorDonations)
+                GET("/mixette-donation/edit/{id}", adminMixetteHandler::editDonation)
+                GET("/mixette-donation/orga", adminMixetteHandler::editOrga)
+                GET("/mixette-donation/donor", adminMixetteHandler::editDonor)
+                GET("/mixette-donation/create", adminMixetteHandler::addDonation)
+                GET("/mixette-donation/create/{number}", adminMixetteHandler::addDonationForAttendee)
+            }
+
+            "/volunteer".nest {
+                GET("", adminHandler::admin)
                 GET("/mixette-organization", adminMixetteHandler::adminOrganizationDonations)
                 GET("/mixette-donor", adminMixetteHandler::adminDonorDonations)
                 GET("/mixette-donation/edit/{id}", adminMixetteHandler::editDonation)
@@ -226,6 +237,10 @@ class WebsiteRoutes(
                 POST("/mixette-donation/{id}/delete", adminMixetteHandler::adminDeleteDonation)
                 POST("/mixette-donation", adminMixetteHandler::adminSaveDonation)
                 POST("/cache/{zone}/invalidate", cacheHandler::invalidate)
+            }
+
+            "/volunteer".nest {
+                POST("/mixette-donation", adminMixetteHandler::adminSaveDonation)
             }
         }
 
