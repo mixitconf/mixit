@@ -1,5 +1,6 @@
 package mixit.ticket.model
 
+import mixit.security.model.Cryptographer
 import mixit.ticket.handler.FinalTicketDto
 import mixit.util.cache.Cached
 import org.springframework.data.annotation.Id
@@ -8,7 +9,7 @@ import java.time.Instant
 data class CachedFinalTicket(
     @Id
     val number: String,
-    val email: String,
+    val encryptedEmail: String,
     val firstname: String? = null,
     val lastname: String,
     val lotteryRank: Int? = null,
@@ -17,7 +18,7 @@ data class CachedFinalTicket(
 ) : Cached {
     constructor(ticket: FinalTicket) : this(
         ticket.number,
-        ticket.email,
+        ticket.encryptedEmail,
         ticket.firstname,
         ticket.lastname,
         ticket.lotteryRank,
@@ -30,7 +31,7 @@ data class CachedFinalTicket(
 
     fun toEntity() = FinalTicket(
         number = number,
-        email = email,
+        encryptedEmail = encryptedEmail,
         firstname = firstname,
         lastname = lastname,
         lotteryRank = lotteryRank,
@@ -38,9 +39,9 @@ data class CachedFinalTicket(
         createdAt = createdAt
     )
 
-    fun toDto() = FinalTicketDto(
+    fun toDto(cryptographer: Cryptographer) = FinalTicketDto(
         number = number,
-        email = email,
+        email = cryptographer.decrypt(encryptedEmail)!!,
         firstname = firstname,
         lastname = lastname,
         lotteryRank = lotteryRank,

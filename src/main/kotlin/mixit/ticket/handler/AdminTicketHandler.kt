@@ -1,6 +1,7 @@
 package mixit.ticket.handler
 
 import mixit.MixitProperties
+import mixit.security.model.Cryptographer
 import mixit.ticket.model.FinalTicket
 import mixit.ticket.model.TicketService
 import mixit.user.model.Role
@@ -8,6 +9,7 @@ import mixit.util.errors.NotFoundException
 import mixit.util.extractFormData
 import mixit.util.json
 import mixit.util.seeOther
+import mixit.util.web.MixitWebFilter
 import org.springframework.dao.DuplicateKeyException
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
@@ -21,12 +23,14 @@ import java.time.Instant
 @Component
 class AdminTicketHandler(
     private val service: TicketService,
-    private val properties: MixitProperties
+    private val properties: MixitProperties,
+    private val cryptographer: Cryptographer
 ) {
 
     companion object {
         const val TEMPLATE_LIST = "admin-ticket"
         const val TEMPLATE_EDIT = "admin-ticket-edit"
+        const val TEMPLATE_ERROR = "ticket-error"
         const val LIST_URI = "/admin/ticket"
     }
 
@@ -37,7 +41,7 @@ class AdminTicketHandler(
             if (properties.feature.lotteryResult) TEMPLATE_LIST else throw NotFoundException(),
             mapOf(
                 Pair("title", "admin.ticket.title"),
-                Pair("tickets", service.findAll().map { tickets -> tickets.map { it.toDto() } })
+                Pair("tickets", service.findAll().map { tickets -> tickets.map { it.toDto(cryptographer) } })
             )
         )
 
@@ -51,8 +55,8 @@ class AdminTicketHandler(
         ok().render(
             if (properties.feature.lotteryResult) TEMPLATE_EDIT else throw NotFoundException(),
             mapOf(
-                Pair("creationMode", ticket.email.isEmpty()),
-                Pair("ticket", ticket)
+                Pair("creationMode", ticket.encryptedEmail.isEmpty()),
+                Pair("ticket", FinalTicketDto(ticket, cryptographer))
             )
         )
 
@@ -61,7 +65,7 @@ class AdminTicketHandler(
             service.findByNumber(formData["number"]!!)
                 .map {
                     it.toEntity().copy(
-                        email = formData["email"]!!.lowercase(),
+                        encryptedEmail = cryptographer.encrypt(formData["email"]!!.lowercase())!!,
                         firstname = formData["firstname"]!!,
                         lastname = formData["lastname"]!!,
                     )
@@ -70,7 +74,7 @@ class AdminTicketHandler(
                     Mono.just(
                         FinalTicket(
                             number = formData["number"]!!,
-                            email = formData["email"]!!.lowercase(),
+                            encryptedEmail = cryptographer.encrypt(formData["email"]!!.lowercase())!!,
                             firstname = formData["firstname"]!!,
                             lastname = formData["lastname"]!!,
                             lotteryRank = formData["lotteryRank"]?.toInt(),
@@ -83,7 +87,7 @@ class AdminTicketHandler(
                         .then(seeOther("${properties.baseUri}${LIST_URI}"))
                         .onErrorResume(DuplicateKeyException::class.java) {
                             ok().render(
-                                "ticket-error",
+                                TEMPLATE_ERROR,
                                 mapOf(
                                     Pair("message", "admin.ticket.error.alreadyexists"),
                                     Pair("title", "admin.ticket.title")
@@ -105,16 +109,19 @@ class AdminTicketHandler(
             .flatMap { attendee ->
                 req.session()
                     .flatMap { session ->
-                        val role = session.getAttribute<Role>("role")
-                        if (role == Role.STAFF) {
-                            // A staff member is redirected to Mixette form
-                            seeOther("${properties.baseUri}/admin/mixette-donation/create/${attendee.number}")
-                        } else if (role == Role.VOLUNTEER) {
-                            // A staff member is redirected to Mixette form
-                            seeOther("${properties.baseUri}/volunteer/mixette-donation/create/${attendee.number}")
-                        } else {
-                            // Other members could be redirected to user profile in the future
-                            seeOther("${properties.baseUri}/")
+                        when (session.getAttribute<Role>( MixitWebFilter.SESSION_ROLE_KEY)) {
+                            Role.STAFF -> {
+                                // A staff member is redirected to Mixette form
+                                seeOther("${properties.baseUri}/admin/mixette-donation/create/${attendee.number}")
+                            }
+                            Role.VOLUNTEER -> {
+                                // A staff member is redirected to Mixette form
+                                seeOther("${properties.baseUri}/volunteer/mixette-donation/create/${attendee.number}")
+                            }
+                            else -> {
+                                // Other members could be redirected to user profile in the future
+                                seeOther("${properties.baseUri}/")
+                            }
                         }
                     }
                     .switchIfEmpty {

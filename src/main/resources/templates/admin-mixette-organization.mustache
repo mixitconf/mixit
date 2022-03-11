@@ -30,9 +30,9 @@
       <tbody>
         {{#donations}}
             <tr>
-                <td>{{username}}</td>
-                <td>{{userLogin}}</td>
-                <td>{{ticketNumber}}</td>
+                <td>{{#username}}{{username}}{{/username}}</td>
+                <td>{{#userLogin}}{{userLogin}}{{/userLogin}}</td>
+                <td>{{#ticketNumber}}{{ticketNumber}}{{/ticketNumber}}</td>
                 <td>{{quantity}}</td>
                 <td>
                     <a href="/{{#admin}}admin{{/admin}}{{#volunteer}}volunteer{{/volunteer}}/mixette-donation/edit/{{id}}">{{#i18n}}common.actions.update{{/i18n}}</a>

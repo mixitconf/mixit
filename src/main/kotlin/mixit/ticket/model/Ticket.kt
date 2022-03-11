@@ -22,7 +22,7 @@ data class Ticket(
 @Document
 data class FinalTicket(
     @Id val number: String,
-    val email: String,
+    val encryptedEmail: String,
     val firstname: String? = null,
     val lastname: String,
     val lotteryRank: Int? = null,

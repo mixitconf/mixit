@@ -34,7 +34,7 @@ class MixetteDonationRepository(private val template: ReactiveMongoTemplate) {
         template.remove<MixetteDonation>(Query(Criteria.where("_id").isEqualTo(id)))
 
     fun findByEmail(email: String, year: String): Flux<MixetteDonation> =
-        template.find(Query(Criteria.where("userEmail").isEqualTo(email).and("year").isEqualTo(year)))
+        template.find(Query(Criteria.where("encryptedUserEmail").isEqualTo(email).and("year").isEqualTo(year)))
 
     fun findByOrganizationLogin(login: String, year: String): Flux<MixetteDonation> =
         template.find(Query(Criteria.where("organizationLogin").isEqualTo(login).and("year").isEqualTo(year)))

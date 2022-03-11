@@ -1,9 +1,11 @@
 package mixit.mixette.handler
 
 import mixit.mixette.model.MixetteDonation
+import mixit.security.model.Cryptographer
 import mixit.user.model.CachedOrganization
+import java.time.Instant
 
-interface MixetteDonationDto{
+interface MixetteDonationDto {
     fun populate(number: Int, quantity: Int, amount: Double): MixetteDonationDto
 
     val number: Int
@@ -19,7 +21,7 @@ data class MixetteUserDonationDto(
     override val number: Int = 0,
     override val quantity: Int = 0,
     override val amount: Double = 0.0
-): MixetteDonationDto {
+) : MixetteDonationDto {
     override fun populate(number: Int, quantity: Int, amount: Double) =
         this.copy(name = this.name, number = number, quantity = quantity, amount = amount)
 }
@@ -30,7 +32,7 @@ data class MixetteOrganizationDonationDto(
     override val number: Int = 0,
     override val quantity: Int = 0,
     override val amount: Double = 0.0
-): MixetteDonationDto{
+) : MixetteDonationDto {
     override fun populate(number: Int, quantity: Int, amount: Double) =
         this.copy(name = this.name, number = number, quantity = quantity, amount = amount)
 }
@@ -46,5 +48,40 @@ data class MixetteOrganizationDto(
         user.company,
         user.photoUrl,
         selected = (user.login == donation.organizationLogin)
+    )
+}
+
+data class MixetteDonationDetailedDto(
+    val year: String,
+    val ticketNumber: String?,
+    val userLogin: String?,
+    val userEmail: String,
+    val username: String,
+    val organizationLogin: String,
+    val organizationName: String,
+    val quantity: Int,
+    val createdBy: String?,
+    val updatedBy: String?,
+    val addedAt: Instant,
+    val id: String?
+) {
+    constructor(
+        donation: MixetteDonation,
+        cryptographer: Cryptographer,
+        username: String,
+        organizationName: String
+    ) : this(
+        year = donation.year,
+        ticketNumber = donation.ticketNumber,
+        userLogin = donation.userLogin,
+        userEmail = cryptographer.decrypt(donation.encryptedUserEmail)!!,
+        organizationLogin = donation.organizationLogin,
+        quantity = donation.quantity,
+        createdBy = donation.createdBy,
+        updatedBy = donation.updatedBy,
+        addedAt = donation.addedAt,
+        username = username,
+        organizationName = organizationName,
+        id = donation.id
     )
 }

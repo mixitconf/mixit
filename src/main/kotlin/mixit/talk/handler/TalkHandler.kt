@@ -1,6 +1,5 @@
 package mixit.talk.handler
 
-import java.nio.charset.StandardCharsets
 import mixit.MixitProperties
 import mixit.event.model.CachedEvent
 import mixit.event.model.EventService
@@ -12,13 +11,7 @@ import mixit.talk.model.Language
 import mixit.talk.model.TalkService
 import mixit.user.handler.toDto
 import mixit.user.handler.toSponsorDto
-import mixit.util.currentUserEmail
-import mixit.util.enumMatcher
-import mixit.util.extractFormData
-import mixit.util.language
-import mixit.util.permanentRedirect
-import mixit.util.seeOther
-import mixit.util.toVimeoPlayerUrl
+import mixit.util.*
 import mixit.util.validator.MarkdownValidator
 import mixit.util.validator.MaxLengthValidator
 import org.springframework.stereotype.Component
@@ -28,6 +21,7 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.util.UriUtils
 import reactor.core.publisher.Mono
 import reactor.kotlin.core.publisher.switchIfEmpty
+import java.nio.charset.StandardCharsets
 
 @Component
 class TalkHandler(
@@ -56,7 +50,7 @@ class TalkHandler(
         filterOnFavorite: Boolean,
         topic: String? = null
     ): Mono<ServerResponse> =
-        req.currentUserEmail()
+        req.currentNonEncryptedUserEmail()
             .flatMap { currentUserEmail ->
                 if (currentUserEmail.isNotEmpty())
                     loadTalkAndFavorites(year, req.language(), filterOnFavorite, currentUserEmail, topic)
@@ -88,7 +82,7 @@ class TalkHandler(
         filterOnFavorite: Boolean,
         topic: String? = null
     ): Mono<ServerResponse> =
-        req.currentUserEmail()
+        req.currentNonEncryptedUserEmail()
             .flatMap { currentUserEmail ->
                 loadTalkAndFavorites(year, req.language(), filterOnFavorite, currentUserEmail, topic)
             }
@@ -138,7 +132,7 @@ class TalkHandler(
         }
 
     fun findOneView(year: Int, req: ServerRequest): Mono<ServerResponse> =
-        req.currentUserEmail()
+        req.currentNonEncryptedUserEmail()
             .flatMap { currentUserEmail -> favoriteRepository.findByEmail(currentUserEmail).collectList() }
             .switchIfEmpty { Mono.just(emptyList<Favorite>()) }
             .flatMap { favorites ->

@@ -8,12 +8,16 @@ import mixit.mixette.repository.MixetteDonationRepository
 import mixit.security.model.Cryptographer
 import mixit.ticket.model.FinalTicket
 import mixit.ticket.model.TicketService
+import mixit.user.model.CachedUser
+import mixit.user.model.Role
 import mixit.user.model.User
 import mixit.user.model.UserService
 import mixit.util.extractFormData
 import mixit.util.json
 import mixit.util.seeOther
 import mixit.util.toNumber
+import mixit.util.web.MixitWebFilter.Companion.SESSION_LOGIN_KEY
+import mixit.util.web.MixitWebFilter.Companion.SESSION_ROLE_KEY
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
@@ -39,32 +43,40 @@ class AdminMixetteHandler(
         const val TEMPLATE_BY_USER = "admin-mixette-donor"
         const val TEMPLATE_BY_ORGA = "admin-mixette-organization"
         const val TEMPLATE_EDIT = "admin-mixette-donation"
-        const val LIST_URI = "/admin/mixette-organization"
+        const val LIST_URI_FOR_ADMIN = "/admin/mixette-organization"
+        const val LIST_URI_FOR_VOLUNTEER = "/volunteer/mixette-organization"
     }
 
     fun findAll(req: ServerRequest) = ok().json().body(repository.findAll())
 
+    /**
+     * Used to display aggregated data by donors
+     */
     fun adminDonorDonations(req: ServerRequest): Mono<ServerResponse> =
         adminGroupDonations(TEMPLATE_BY_USER_LIST) {
-            MixetteUserDonationDto(
-                name = it.username,
-                email = cryptographer.decrypt(it.userEmail)!!,
-                ticketNumber = it.ticketNumber,
-                login = it.userLogin
+            findDonorByEncryptedEmail(it.encryptedUserEmail).block() ?: MixetteUserDonationDto(
+                name = "",
+                login = it.userLogin,
+                email = cryptographer.decrypt(it.encryptedUserEmail)!!,
+                ticketNumber = it.ticketNumber
             )
         }
 
+    /**
+     * Used to display aggregated data by organizations
+     */
     fun adminOrganizationDonations(req: ServerRequest): Mono<ServerResponse> =
-        adminGroupDonations(TEMPLATE_BY_ORGA_LIST) {
-            MixetteOrganizationDonationDto(
-                name = it.organizationName,
-                login = it.organizationLogin
-            )
+        adminGroupDonations(TEMPLATE_BY_ORGA_LIST) { donation ->
+            userService.findOne(donation.organizationLogin)
+                .map {
+                    MixetteOrganizationDonationDto(name = it.organizationName, login = it.login)
+                }
+                .block() ?: MixetteOrganizationDonationDto(name = "", login = donation.organizationLogin)
         }
 
-    private fun adminGroupDonations(
+    private fun <T : MixetteDonationDto> adminGroupDonations(
         target: String,
-        transformation: (MixetteDonation) -> MixetteDonationDto
+        transformation: (MixetteDonation) -> T
     ): Mono<ServerResponse> {
         val donationByOrgas = repository.findAllByYear(CURRENT_EVENT).collectList().map { donations ->
             donations
@@ -83,130 +95,177 @@ class AdminMixetteHandler(
         )
     }
 
+    /**
+     * Used to display the page to create a new donation
+     */
     fun addDonation(req: ServerRequest): Mono<ServerResponse> =
-        this.adminDonation()
+        req.session().flatMap { session ->
+            this.adminDonation(MixetteDonation(CURRENT_EVENT, session.getAttribute(SESSION_LOGIN_KEY)))
+        }
 
+
+    /**
+     * Used to display the page to create a new donation, when a volunteer or a staff member has scanned a badge
+     */
     fun addDonationForAttendee(req: ServerRequest): Mono<ServerResponse> =
         ticketService
             .findByNumber(req.pathVariable("number"))
             .flatMap { donor ->
-                this.adminDonation(
-                    MixetteDonation(
-                        year = CURRENT_EVENT,
-                        ticketNumber = donor.number,
-                        userLogin = donor.login,
-                        username = "${donor.firstname} ${donor.lastname}",
-                        userEmail = cryptographer.encrypt(donor.email)!!
+                req.session().flatMap { session ->
+                    this.adminDonation(
+                        MixetteDonation(
+                            year = CURRENT_EVENT,
+                            ticketNumber = donor.number,
+                            userLogin = donor.login,
+                            createdBy = session.getAttribute(SESSION_LOGIN_KEY),
+                            encryptedUserEmail = donor.encryptedEmail
+                        )
                     )
-                )
+                }
             }
 
+    /**
+     * Used to display screen to edit a donation
+     */
     fun editDonation(req: ServerRequest): Mono<ServerResponse> =
         repository.findOne(req.pathVariable("id")).flatMap { this.adminDonation(it) }
 
+    /**
+     * Used to display aggregated data for an organization
+     */
     fun editOrga(req: ServerRequest): Mono<ServerResponse> =
         this.adminGroupDonation(
             TEMPLATE_BY_ORGA,
             repository.findByOrganizationLogin(req.queryParamOrNull("login")!!, CURRENT_EVENT).collectList()
-        ) {
-            MixetteOrganizationDonationDto(name = it.organizationName, login = it.organizationLogin)
+        ) { donation ->
+            userService.findOne(donation.organizationLogin)
+                .map {
+                    MixetteOrganizationDonationDto(
+                        name = it.company ?: "${it.firstname} ${it.lastname}",
+                        login = it.login
+                    )
+                }
         }
 
+    /**
+     * Used to display aggregated data for a donor
+     */
     fun editDonor(req: ServerRequest): Mono<ServerResponse> =
         this.adminGroupDonation(
             TEMPLATE_BY_USER,
             repository.findByEmail(cryptographer.encrypt(req.queryParamOrNull("email"))!!, CURRENT_EVENT).collectList()
         ) {
-            MixetteUserDonationDto(
-                name = it.username,
-                ticketNumber = it.ticketNumber,
-                login = it.userLogin,
-                email = cryptographer.decrypt(it.userEmail)!!
-            )
+            findDonorByEncryptedEmail(it.encryptedUserEmail)
         }
 
-    private fun adminGroupDonation(
+    private fun <T : MixetteDonationDto> adminGroupDonation(
         target: String,
         monoDonations: Mono<List<MixetteDonation>>,
-        transformation: (MixetteDonation) -> MixetteDonationDto
+        transformation: (MixetteDonation) -> Mono<T>
     ): Mono<ServerResponse> =
         monoDonations.flatMap { donations ->
             val quantity = donations.sumOf { it.quantity }
-            val userDonation = transformation.invoke(donations.first()).populate(
-                number = donations.size,
-                quantity = quantity,
-                amount = quantity * properties.mixetteValue.toDouble()
-            )
-            ok().render(
-                target,
-                mapOf(
-                    Pair("donations", donations),
-                    Pair("userDonation", userDonation),
-                    Pair("title", "admin.donations.title")
+            transformation.invoke(donations.first()).flatMap { donation ->
+                val userDonation = donation.populate(
+                    number = donations.size,
+                    quantity = quantity,
+                    amount = quantity * properties.mixetteValue.toDouble()
                 )
-            )
-        }
-
-    private fun adminDonation(
-        donation: MixetteDonation = MixetteDonation(CURRENT_EVENT),
-        errors: Map<String, String> = emptyMap()
-    ): Mono<ServerResponse> =
-        service.findByYear(CURRENT_EVENT.toInt())
-            .flatMap { event ->
                 ok().render(
-                    TEMPLATE_EDIT,
+                    target,
                     mapOf(
-                        Pair("creationMode", donation.id == null),
-                        Pair("donation", donation.copy(userEmail = cryptographer.decrypt(donation.userEmail)!!)),
-                        Pair("organizations", event.organizations.map { MixetteOrganizationDto(it, donation) }),
-                        Pair("errors", errors),
-                        Pair("hasErrors", errors.isNotEmpty())
+                        Pair("donations", donations),
+                        Pair("userDonation", userDonation),
+                        Pair("title", "admin.donations.title")
                     )
                 )
             }
+        }
+
+    private fun adminDonation(
+        donation: MixetteDonation,
+        errors: Map<String, String> = emptyMap()
+    ): Mono<ServerResponse> =
+        service.findByYear(CURRENT_EVENT.toInt()).flatMap { event ->
+            findDonorByEncryptedEmail(donation.encryptedUserEmail).flatMap { donor ->
+                userService.findOne(donation.organizationLogin)
+                    .switchIfEmpty { Mono.just(CachedUser(User(""))) }
+                    .flatMap { organization ->
+                        ok().render(
+                            TEMPLATE_EDIT,
+                            mapOf(
+                                Pair("creationMode", donation.id == null),
+                                Pair(
+                                    "donation", MixetteDonationDetailedDto(
+                                        donation = donation,
+                                        cryptographer = cryptographer,
+                                        username = donor.name,
+                                        organizationName = organization.organizationName
+                                    )
+                                ),
+                                Pair("organizations", event.organizations.map { MixetteOrganizationDto(it, donation) }),
+                                Pair("errors", errors),
+                                Pair("hasErrors", errors.isNotEmpty())
+                            )
+                        )
+                    }
+            }
+        }
 
     private fun persistDonation(
+        req: ServerRequest,
         donation: MixetteDonation,
         donor: MixetteUserDonationDto,
         receiver: User,
         quantity: Int?,
-        errors: Map<String, String>
+        errors: Map<String, String>,
     ): Mono<ServerResponse> {
         if (errors.isNotEmpty()) {
-            return adminDonation(donation, errors)
+            return adminDonation(donation.copy(encryptedUserEmail = cryptographer.encrypt(donor.email)!!), errors)
         }
         val newDonation = donation.copy(
             ticketNumber = donor.ticketNumber,
             userLogin = donor.login,
-            username = donor.name,
-            userEmail = donor.email,
+            encryptedUserEmail = cryptographer.encrypt(donor.email)!!,
             organizationLogin = receiver.login ?: "",
-            organizationName = receiver.company ?: "${receiver.firstname} ${receiver.lastname}",
             quantity = quantity ?: 0
         )
+        return req.session().flatMap { session ->
+            val connectedUser = session.getAttribute<String>(SESSION_LOGIN_KEY)
+            val userRole = session.getAttribute<Role>(SESSION_ROLE_KEY)
 
-        if (newDonation.id == null) {
-            return repository.insert(newDonation).flatMap { seeOther("${properties.baseUri}$LIST_URI") }
+            if (newDonation.id == null) {
+                repository.insert(newDonation.copy(createdBy = connectedUser)).flatMap {
+                    seeOther("${properties.baseUri}${if (userRole == Role.STAFF) LIST_URI_FOR_ADMIN else LIST_URI_FOR_VOLUNTEER}")
+                }
+            } else {
+                repository.update(newDonation.copy(updatedBy = connectedUser)).flatMap {
+                    seeOther("${properties.baseUri}${if (userRole == Role.STAFF) LIST_URI_FOR_ADMIN else LIST_URI_FOR_VOLUNTEER}")
+                }
+            }
         }
-        return repository.update(newDonation).flatMap { seeOther("${properties.baseUri}$LIST_URI") }
+
     }
 
-    private fun findUserNameAndEmail(userEmail: String): Mono<MixetteUserDonationDto> =
+    /**
+     * This function parse users and tickets to find people
+     */
+    private fun findDonorByEncryptedEmail(encryptedUserEmail: String): Mono<MixetteUserDonationDto> =
         // We try to find if user is known
-        userService.findOneByEncryptedEmail(cryptographer.encrypt(userEmail)!!)
+        userService.findOneByEncryptedEmail(encryptedUserEmail)
             .map { it.toUser() }
             .switchIfEmpty { Mono.just(User("")) }
             .flatMap { user ->
                 // Now we search if we have a ticket
-                ticketService.findByEmail(userEmail)
+                ticketService.findByEncryptedEmail(encryptedUserEmail)
                     .map { it.toEntity() }
                     .switchIfEmpty(Mono.just(FinalTicket("", "", lastname = "", firstname = "")))
                     .map { ticket ->
                         // ticket and user can be null but not the two at the same time
                         MixetteUserDonationDto(
                             name = if (!user?.login.isNullOrEmpty()) "${user.firstname} ${user.lastname}"
-                                else ticket?.let { "${ticket.firstname} ${ticket.lastname}" } ?: "",
-                            email = cryptographer.encrypt(userEmail)!!,
+                            else ticket?.let { "${ticket.firstname} ${ticket.lastname}" } ?: "",
+                            email = cryptographer.decrypt(encryptedUserEmail)!!,
                             ticketNumber = ticket?.number,
                             login = user?.login
                         )
@@ -218,7 +277,7 @@ class AdminMixetteHandler(
             val organizationLogin: String = formData["organizationLogin"]!!
             val userEmail: String = formData["userEmail"]!!
             userService.findOne(organizationLogin).flatMap { receiver ->
-                findUserNameAndEmail(userEmail).flatMap { donor ->
+                findDonorByEncryptedEmail(cryptographer.encrypt(userEmail)!!).flatMap { donor ->
                     val errors = mutableMapOf<String, String>()
 
                     if (donor.login.isNullOrEmpty() && donor.ticketNumber.isNullOrEmpty()) {
@@ -237,8 +296,9 @@ class AdminMixetteHandler(
                         .switchIfEmpty { Mono.just(MixetteDonation(CURRENT_EVENT)) }
                         .flatMap {
                             persistDonation(
+                                req = req,
                                 donation = it,
-                                donor = donor,
+                                donor = donor.copy(email = userEmail),
                                 receiver = receiver.toUser(),
                                 quantity = quantity,
                                 errors = errors
@@ -252,6 +312,9 @@ class AdminMixetteHandler(
         req.extractFormData().flatMap { formData ->
             repository
                 .deleteOne(formData["id"]!!)
-                .then(seeOther("${properties.baseUri}$LIST_URI"))
+                .then(seeOther("${properties.baseUri}$LIST_URI_FOR_ADMIN"))
         }
+
+    val CachedUser.organizationName
+        get() = company ?: "${firstname} ${lastname}"
 }

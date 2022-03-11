@@ -1,5 +1,6 @@
 package mixit.user.model
 
+import mixit.security.model.Cryptographer
 import mixit.user.repository.UserRepository
 import mixit.util.cache.CacheTemplate
 import mixit.util.cache.CacheZone
@@ -14,6 +15,7 @@ data class UserUpdateEvent(val user: User): ApplicationEvent(user)
 class UserService(
     private val userRepository: UserRepository,
     private val eventPublisher: ApplicationEventPublisher,
+    private val cryptographer: Cryptographer
 ) : CacheTemplate<CachedUser>() {
 
     override val cacheZone: CacheZone = CacheZone.USER
@@ -23,6 +25,11 @@ class UserService(
 
     fun findOneByEncryptedEmail(email: String): Mono<CachedUser> =
         findAll().flatMap { elements -> Mono.justOrEmpty(elements.firstOrNull { it.email == email }) }
+
+    fun findOneByNonEncryptedEmail(email: String): Mono<CachedUser> =
+        cryptographer.encrypt(email)!!.let {
+            findAll().flatMap { elements -> Mono.justOrEmpty(elements.firstOrNull { it.email == email }) }
+        }
 
     fun findByRoles(vararg roles: Role): Mono<List<CachedUser>> =
         findAll().map { elements -> elements.filter { roles.contains(it.role) } }

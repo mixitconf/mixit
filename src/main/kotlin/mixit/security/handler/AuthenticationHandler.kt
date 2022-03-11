@@ -1,13 +1,7 @@
 package mixit.security.handler
 
-import java.net.URI
-import java.net.URLDecoder
 import mixit.MixitProperties
-import mixit.security.handler.LoginError.DUPLICATE_EMAIL
-import mixit.security.handler.LoginError.DUPLICATE_LOGIN
-import mixit.security.handler.LoginError.INVALID_EMAIL
-import mixit.security.handler.LoginError.REQUIRED_CREDENTIALS
-import mixit.security.handler.LoginError.SIGN_UP_ERROR
+import mixit.security.handler.LoginError.*
 import mixit.security.model.AuthenticationService
 import mixit.security.model.Cryptographer
 import mixit.user.model.User
@@ -17,14 +11,18 @@ import mixit.util.errors.EmailValidatorException
 import mixit.util.extractFormData
 import mixit.util.locale
 import mixit.util.validator.EmailValidator
+import mixit.util.web.MixitWebFilter.Companion.SESSION_EMAIL_KEY
+import mixit.util.web.MixitWebFilter.Companion.SESSION_LOGIN_KEY
+import mixit.util.web.MixitWebFilter.Companion.SESSION_ROLE_KEY
+import mixit.util.web.MixitWebFilter.Companion.SESSION_TOKEN_KEY
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
-import org.springframework.web.reactive.function.server.ServerResponse.ok
-import org.springframework.web.reactive.function.server.ServerResponse.seeOther
-import org.springframework.web.reactive.function.server.ServerResponse.temporaryRedirect
+import org.springframework.web.reactive.function.server.ServerResponse.*
 import org.springframework.web.server.WebSession
 import reactor.core.publisher.Mono
+import java.net.URI
+import java.net.URLDecoder
 
 @Component
 class AuthenticationHandler(
@@ -85,7 +83,7 @@ class AuthenticationHandler(
                         )
                     })
             } catch (e: EmailValidatorException) {
-                displayErrorView(LoginError.INVALID_EMAIL)
+                displayErrorView(INVALID_EMAIL)
             }
         }
 
@@ -106,7 +104,7 @@ class AuthenticationHandler(
                         )
                     })
             } catch (e: EmailValidatorException) {
-                displayErrorView(LoginError.INVALID_EMAIL)
+                displayErrorView(INVALID_EMAIL)
             }
         }
 
@@ -172,9 +170,10 @@ class AuthenticationHandler(
                     .flatMap { user ->
                         req.session().flatMap { session ->
                             session.apply {
-                                attributes["role"] = user.role
-                                attributes["email"] = nonEncryptedMail
-                                attributes["token"] = token
+                                attributes[SESSION_ROLE_KEY] = user.role
+                                attributes[SESSION_EMAIL_KEY] = nonEncryptedMail
+                                attributes[SESSION_TOKEN_KEY] = token
+                                attributes[SESSION_LOGIN_KEY] = user.login
                             }
                             seeOther(URI("${properties.baseUri}/me")).cookie(authenticationService.createCookie(user)).build()
                         }
@@ -195,10 +194,10 @@ class AuthenticationHandler(
 
     private fun clearSession(session: WebSession): Mono<ServerResponse> {
         session.attributes.apply {
-            remove("email")
-            remove("login")
-            remove("token")
-            remove("role")
+            remove(SESSION_EMAIL_KEY)
+            remove(SESSION_LOGIN_KEY)
+            remove(SESSION_TOKEN_KEY)
+            remove(SESSION_ROLE_KEY)
         }
         return temporaryRedirect(URI("${properties.baseUri}/")).build()
     }

@@ -9,7 +9,6 @@
     <table class="table-striped table table-bordered">
       <thead>
         <tr>
-            <th>{{#i18n}}admin.donations.login{{/i18n}}</th>
             <th>{{#i18n}}admin.donations.name{{/i18n}}</th>
             <th>{{#i18n}}admin.donations.donor.number{{/i18n}}</th>
             <th>{{#i18n}}admin.donations.amount{{/i18n}}</th>
@@ -19,9 +18,8 @@
       <tbody>
         {{#donations}}
         <tr>
-            <td>{{login}}</td>
             <td>{{name}}</td>
-            <td>{{number}}</td>
+            <td>{{#number}}{{number}}{{/number}}</td>
             <td>{{amount}}</td>
             <td>
                 <a href="/{{#admin}}admin{{/admin}}{{#volunteer}}volunteer{{/volunteer}}/mixette-donation/donor?email={{email}}">{{#i18n}}common.actions.view{{/i18n}}</a>

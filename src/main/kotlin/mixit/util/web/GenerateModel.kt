@@ -1,8 +1,10 @@
-package mixit.util
+package mixit.util.web
 
 import com.samskivert.mustache.Mustache
 import mixit.MixitProperties
 import mixit.user.model.Role
+import mixit.util.localePrefix
+import mixit.util.toHTML
 import org.springframework.context.MessageSource
 import org.springframework.web.server.WebSession
 import org.springframework.web.util.UriUtils

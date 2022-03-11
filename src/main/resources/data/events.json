@@ -1230,7 +1230,11 @@
         "current": true,
         "end": "2022-05-25",
         "id": "mixit22",
-        "organizations": [],
+        "organizations": [
+            {
+                "organizationLogin": "framasoft"
+            }
+        ],
         "photoUrls": [],
         "schedulingFileUrl": null,
         "sponsors": [
@@ -1298,6 +1302,11 @@
                 "level": "GOLD",
                 "sponsorId": "ZenikaLyon",
                 "subscriptionDate": "2022-02-17"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "conserto",
+                "subscriptionDate": "2022-03-07"
             }
         ],
         "start": "2022-05-24",
