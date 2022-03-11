@@ -1,19 +1,19 @@
 package mixit.util.email
 
 import com.samskivert.mustache.Mustache
-import java.io.InputStreamReader
-import java.net.URLEncoder
-import java.util.Locale
 import mixit.MixitProperties
 import mixit.security.model.Cryptographer
 import mixit.user.model.User
 import mixit.util.encodeToBase64
 import mixit.util.errors.EmailSenderException
-import mixit.util.generateModelForExernalCall
+import mixit.util.web.generateModelForExernalCall
 import org.slf4j.LoggerFactory
 import org.springframework.context.MessageSource
 import org.springframework.core.io.ResourceLoader
 import org.springframework.stereotype.Component
+import java.io.InputStreamReader
+import java.net.URLEncoder
+import java.util.*
 
 @Component
 class TemplateService(

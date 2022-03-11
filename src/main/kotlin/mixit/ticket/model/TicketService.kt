@@ -1,6 +1,5 @@
 package mixit.ticket.model
 
-import mixit.security.model.Cryptographer
 import mixit.ticket.repository.FinalTicketRepository
 import mixit.util.cache.CacheTemplate
 import mixit.util.cache.CacheZone
@@ -10,8 +9,7 @@ import reactor.core.publisher.Mono
 
 @Service
 class TicketService(
-    private val repository: FinalTicketRepository,
-    private val cryptographer: Cryptographer
+    private val repository: FinalTicketRepository
 ) : CacheTemplate<CachedFinalTicket>() {
 
     override val cacheZone: CacheZone = CacheZone.TICKET
@@ -22,8 +20,8 @@ class TicketService(
     fun findByNumber(number: String): Mono<CachedFinalTicket> =
         findAll().flatMap { tickets -> Mono.justOrEmpty(tickets.firstOrNull { it.number == number }) }
 
-    fun findByEmail(email: String): Mono<CachedFinalTicket> =
-        findAll().flatMap { tickets -> Mono.justOrEmpty(tickets.firstOrNull { it.email == email }) }
+    fun findByEncryptedEmail(encryptedEmail: String): Mono<CachedFinalTicket> =
+        findAll().flatMap { tickets -> Mono.justOrEmpty(tickets.firstOrNull { it.encryptedEmail == encryptedEmail }) }
 
     fun findByLogin(login: String?): Mono<CachedFinalTicket> =
         findAll().flatMap { tickets ->
@@ -32,7 +30,7 @@ class TicketService(
         }
 
     fun save(ticket: FinalTicket): Mono<CachedFinalTicket> =
-        findByEmail(ticket.email)
+        findByEncryptedEmail(ticket.encryptedEmail)
             .flatMap { Mono.error<CachedFinalTicket> { DuplicateException("") } }
             .switchIfEmpty(repository.save(ticket).map { CachedFinalTicket(it) }
                 .doOnSuccess { cache.invalidateAll() })

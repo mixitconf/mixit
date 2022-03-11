@@ -18,7 +18,6 @@
       <thead>
         <tr>
             <th>{{#i18n}}admin.donations.login{{/i18n}}</th>
-            <th>{{#i18n}}admin.donations.name{{/i18n}}</th>
             <th>{{#i18n}}admin.donations.quantity{{/i18n}}</th>
             <th>{{#i18n}}common.actions{{/i18n}}</th>
         </tr>
@@ -27,7 +26,6 @@
         {{#donations}}
         <tr>
             <td>{{organizationLogin}}</td>
-            <td>{{organizationName}}</td>
             <td>{{quantity}}</td>
             <td>
                 <a href="/{{#admin}}admin{{/admin}}{{#volunteer}}volunteer{{/volunteer}}/mixette-donation/edit/{{id}}">{{#i18n}}common.actions.update{{/i18n}}</a>

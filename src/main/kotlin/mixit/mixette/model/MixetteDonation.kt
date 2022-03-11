@@ -12,14 +12,12 @@ data class MixetteDonation(
     // Or a donor can be a registered user
     val userLogin: String? = null,
     // But a user has always an email
-    val userEmail: String = "",
-    // Denormalized to make requests easier
-    val username: String = "",
+    val encryptedUserEmail: String = "",
     // organization receives this donation
     val organizationLogin: String = "",
-    // Denormalized to make requests easier
-    val organizationName: String = "",
     val quantity: Int = 0,
+    val createdBy: String? = null,
+    val updatedBy: String? = null,
     val addedAt: Instant = Instant.now(),
     @Id val id: String? = null
 ) {

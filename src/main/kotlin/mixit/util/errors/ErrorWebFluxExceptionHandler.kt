@@ -1,9 +1,8 @@
 package mixit.util.errors
 
-import java.util.Locale
 import mixit.MixitProperties
-import mixit.util.generateModel
 import mixit.util.locale
+import mixit.util.web.generateModel
 import org.springframework.boot.autoconfigure.web.ErrorProperties
 import org.springframework.boot.autoconfigure.web.WebProperties
 import org.springframework.boot.autoconfigure.web.reactive.error.DefaultErrorWebExceptionHandler
@@ -14,6 +13,7 @@ import org.springframework.web.reactive.function.server.RenderingResponse
 import org.springframework.web.reactive.function.server.RouterFunction
 import org.springframework.web.reactive.function.server.ServerResponse
 import reactor.kotlin.core.publisher.toMono
+import java.util.*
 
 /**
  * @author Dev-Mind <guillaume@dev-mind.fr>

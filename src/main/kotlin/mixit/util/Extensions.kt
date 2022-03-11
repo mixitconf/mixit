@@ -1,5 +1,17 @@
 package mixit.util
 
+import mixit.talk.model.Language
+import mixit.util.web.MixitWebFilter
+import org.commonmark.ext.autolink.AutolinkExtension
+import org.commonmark.parser.Parser
+import org.commonmark.renderer.html.HtmlRenderer
+import org.springframework.http.MediaType.*
+import org.springframework.web.reactive.function.BodyExtractors
+import org.springframework.web.reactive.function.server.ServerRequest
+import org.springframework.web.reactive.function.server.ServerResponse
+import org.springframework.web.reactive.function.server.ServerResponse.permanentRedirect
+import org.springframework.web.reactive.function.server.ServerResponse.seeOther
+import reactor.core.publisher.Mono
 import java.net.URI
 import java.net.URLEncoder
 import java.nio.charset.Charset
@@ -11,26 +23,12 @@ import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
 import java.time.format.DateTimeFormatterBuilder
 import java.time.temporal.ChronoField
-import java.util.Base64
-import java.util.Locale
+import java.util.*
 import java.util.stream.Collectors
 import java.util.stream.IntStream
 import javax.crypto.Cipher
 import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.SecretKeySpec
-import mixit.talk.model.Language
-import org.commonmark.ext.autolink.AutolinkExtension
-import org.commonmark.parser.Parser
-import org.commonmark.renderer.html.HtmlRenderer
-import org.springframework.http.MediaType.APPLICATION_JSON
-import org.springframework.http.MediaType.APPLICATION_XML
-import org.springframework.http.MediaType.TEXT_HTML
-import org.springframework.web.reactive.function.BodyExtractors
-import org.springframework.web.reactive.function.server.ServerRequest
-import org.springframework.web.reactive.function.server.ServerResponse
-import org.springframework.web.reactive.function.server.ServerResponse.permanentRedirect
-import org.springframework.web.reactive.function.server.ServerResponse.seeOther
-import reactor.core.publisher.Mono
 
 // -------------------------
 // Spring WebFlux extensions
@@ -51,9 +49,9 @@ fun ServerRequest.extractFormData(): Mono<Map<String, String?>> =
         data.toSingleValueMap().mapValues { if (it.value.isNullOrEmpty()) null else it.value }
     }
 
-fun ServerRequest.currentUserEmail(): Mono<String> =
+fun ServerRequest.currentNonEncryptedUserEmail(): Mono<String> =
     this.session().map {
-        it.getAttribute("email") ?: ""
+        it.getAttribute(MixitWebFilter.SESSION_EMAIL_KEY) ?: ""
     }
 
 

@@ -24,8 +24,8 @@ import mixit.user.handler.SponsorHandler
 import mixit.user.handler.UserHandler
 import mixit.util.AdminHandler
 import mixit.util.cache.CacheHandler
-import mixit.util.generateModel
 import mixit.util.locale
+import mixit.util.web.generateModel
 import org.slf4j.LoggerFactory
 import org.springframework.context.MessageSource
 import org.springframework.context.annotation.Bean

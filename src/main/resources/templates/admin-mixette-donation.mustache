@@ -52,6 +52,11 @@
         {{^creationMode}}
         <div class="col-12 mb-3">
             <label class="form-label {{#errors.ticket}}is-invalid{{/errors.ticket}}">{{#i18n}}admin.donations.donor{{/i18n}}</label>
+            <input class="form-control" type="text" value="{{donation.username}}" disabled="true" />
+        </div>
+
+        <div class="col-12 mb-3">
+            <label class="form-label {{#errors.ticket}}is-invalid{{/errors.ticket}}">{{#i18n}}admin.donations.login{{/i18n}}</label>
             <input class="form-control" type="text" value="{{donation.userLogin}}" disabled="true" />
         </div>
 

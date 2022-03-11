@@ -27,9 +27,14 @@ import java.util.*
 class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRepository) : WebFilter {
 
     companion object {
-        val AUTENT_COOKIE = "XSRF-TOKEN"
+        const val AUTENT_COOKIE = "XSRF-TOKEN"
         val BOTS = arrayOf("Google", "Bingbot", "Qwant", "Bingbot", "Slurp", "DuckDuckBot", "Baiduspider")
         val WEB_RESSOURCE_EXTENSIONS = arrayOf(".css", ".js", ".svg", ".jpg", ".png", ".webp", ".webapp", ".pdf", ".icns", ".ico", ".html")
+
+        const val SESSION_ROLE_KEY = "role"
+        const val SESSION_EMAIL_KEY = "email"
+        const val SESSION_TOKEN_KEY = "token"
+        const val SESSION_LOGIN_KEY = "login"
     }
 
     override fun filter(exchange: ServerWebExchange, chain: WebFilterChain): Mono<Void> =
@@ -54,16 +59,17 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
      * In this method we try to read user credentials in request cookies
      */
     fun filterAndCheckCredentials(exchange: ServerWebExchange, chain: WebFilterChain, session: WebSession, credential: Credential?): Mono<Void> =
-        credential?.let {
+        credential?.let { cred ->
             // If session contains credentials we check data
-            userRepository.findByNonEncryptedEmail(it.email).flatMap { user ->
+            userRepository.findByNonEncryptedEmail(cred.email).flatMap { user ->
                 // We have to see if the token is the good one anf if it is yet valid
-                if (user.hasValidToken(it.token)) {
+                if (user.hasValidToken(cred.token)) {
                     // If user is found we need to restore infos in session
                     session.attributes.let {
-                        it["role"] = user.role
-                        it["email"] = credential.email
-                        it["token"] = credential.token
+                        it[SESSION_ROLE_KEY] = user.role
+                        it[SESSION_EMAIL_KEY] = cred.email
+                        it[SESSION_TOKEN_KEY] = cred.token
+                        it[SESSION_LOGIN_KEY] = user.login
                         filterWithCredential(exchange, chain, user)
                     }
                 } else {
@@ -128,7 +134,7 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
 
     @VisibleForTesting
     fun isASecuredUrl(path: String) =
-        (Routes.securedUrl + Routes.securedAdminUrl).any { path.startsWith(it) }
+        (Routes.securedUrl + Routes.securedAdminUrl + Routes.securedVolunteerUrl).any { path.startsWith(it) }
 
     @VisibleForTesting
     fun isAnAdminUrl(path: String) =

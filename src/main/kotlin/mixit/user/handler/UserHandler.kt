@@ -1,29 +1,18 @@
 package mixit.user.handler
 
-import java.net.URI.create
-import java.net.URLDecoder
-import java.nio.charset.StandardCharsets
-import java.util.stream.IntStream
 import mixit.MixitProperties
 import mixit.security.model.Cryptographer
 import mixit.talk.model.Language
 import mixit.talk.model.TalkService
 import mixit.ticket.repository.TicketRepository
-import mixit.user.model.Link
-import mixit.user.model.Role
-import mixit.user.model.User
-import mixit.user.model.UserService
-import mixit.user.model.anonymize
+import mixit.user.model.*
 import mixit.user.repository.UserRepository
-import mixit.util.encodeToMd5
-import mixit.util.extractFormData
-import mixit.util.json
-import mixit.util.language
-import mixit.util.seeOther
+import mixit.util.*
 import mixit.util.validator.EmailValidator
 import mixit.util.validator.MarkdownValidator
 import mixit.util.validator.MaxLengthValidator
 import mixit.util.validator.UrlValidator
+import mixit.util.web.MixitWebFilter.Companion.SESSION_EMAIL_KEY
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
@@ -34,6 +23,10 @@ import org.springframework.web.reactive.function.server.bodyToMono
 import org.springframework.web.util.UriUtils
 import reactor.core.publisher.Mono
 import reactor.kotlin.core.publisher.toMono
+import java.net.URI.create
+import java.net.URLDecoder
+import java.nio.charset.StandardCharsets
+import java.util.stream.IntStream
 
 @Component
 class UserHandler(
@@ -64,8 +57,8 @@ class UserHandler(
 
     fun findProfileView(req: ServerRequest) =
         req.session().flatMap {
-            val currentUserEmail = it.getAttribute<String>("email")
-            repository.findByNonEncryptedEmail(currentUserEmail!!).flatMap {
+            val currentNonEncryptedUserEmail = it.getAttribute<String>(SESSION_EMAIL_KEY)
+            repository.findByNonEncryptedEmail(currentNonEncryptedUserEmail!!).flatMap {
                 findOneViewDetail(
                     req, it,
                     ViewMode.ViewMyProfile
@@ -75,8 +68,8 @@ class UserHandler(
 
     fun editProfileView(req: ServerRequest) =
         req.session().flatMap {
-            val currentUserEmail = it.getAttribute<String>("email")
-            repository.findByNonEncryptedEmail(currentUserEmail!!).flatMap {
+            val currentNonEncryptedUserEmail = it.getAttribute<String>(SESSION_EMAIL_KEY)
+            repository.findByNonEncryptedEmail(currentNonEncryptedUserEmail!!).flatMap {
                 findOneViewDetail(
                     req, it,
                     ViewMode.EditProfile
@@ -146,11 +139,11 @@ class UserHandler(
 
     fun saveProfile(req: ServerRequest): Mono<ServerResponse> =
         req.session().flatMap { session ->
-            val currentUserEmail = session.getAttribute<String>("email")
+            val currentNonEncryptedUserEmail = session.getAttribute<String>(SESSION_EMAIL_KEY)
             req.extractFormData().flatMap { formData ->
 
                 // In his profile screen a user can't change all the data. In the first step we load the user
-                repository.findByNonEncryptedEmail(currentUserEmail!!).flatMap { user ->
+                repository.findByNonEncryptedEmail(currentNonEncryptedUserEmail!!).flatMap { user ->
                     val requiredFields = listOf("firstname", "lastname", "email", "description-fr", "description-en")
                     val requiredErrors: Map<String, String> = requiredFields
                         .mapNotNull { key ->

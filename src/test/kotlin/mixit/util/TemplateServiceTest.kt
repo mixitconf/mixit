@@ -1,9 +1,9 @@
 package mixit.util
 
 import com.samskivert.mustache.Mustache
-import java.util.Locale
 import mixit.user.model.User
 import mixit.util.email.TemplateService
+import mixit.util.web.generateModelForExernalCall
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
@@ -12,6 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.context.MessageSource
 import org.springframework.core.io.ResourceLoader
 import org.springframework.test.context.junit.jupiter.SpringExtension
+import java.util.*
 
 /**
  * Test {@link TemplateService}
