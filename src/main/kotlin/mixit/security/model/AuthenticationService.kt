@@ -1,7 +1,7 @@
 package mixit.security.model
 
 import mixit.MixitProperties
-import mixit.ticket.repository.TicketRepository
+import mixit.ticket.repository.LotteryRepository
 import mixit.user.model.*
 import mixit.user.repository.UserRepository
 import mixit.util.camelCase
@@ -17,12 +17,12 @@ import java.util.*
 
 @Service
 class AuthenticationService(
-        private val userRepository: UserRepository,
-        private val ticketRepository: TicketRepository,
-        private val emailService: EmailService,
-        private val emailValidator: EmailValidator,
-        private val cryptographer: Cryptographer,
-        private val properties: MixitProperties
+    private val userRepository: UserRepository,
+    private val ticketRepository: LotteryRepository,
+    private val emailService: EmailService,
+    private val emailValidator: EmailValidator,
+    private val cryptographer: Cryptographer,
+    private val properties: MixitProperties
 ) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)

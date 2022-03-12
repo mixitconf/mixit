@@ -7,12 +7,10 @@ import io.mockk.impl.annotations.MockK
 import io.mockk.impl.annotations.SpyK
 import io.mockk.junit5.MockKExtension
 import io.mockk.verify
-import java.time.LocalDateTime
-import java.util.Locale
 import mixit.security.model.AuthenticationService
 import mixit.security.model.Cryptographer
 import mixit.ticket.model.Ticket
-import mixit.ticket.repository.TicketRepository
+import mixit.ticket.repository.LotteryRepository
 import mixit.user.model.Role
 import mixit.user.model.User
 import mixit.user.repository.UserRepository
@@ -26,6 +24,8 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import reactor.core.publisher.Mono
 import reactor.test.StepVerifier
+import java.time.LocalDateTime
+import java.util.*
 
 @ExtendWith(MockKExtension::class)
 internal class AuthenticationServiceTest {
@@ -34,7 +34,7 @@ internal class AuthenticationServiceTest {
     lateinit var userRepository: UserRepository
 
     @MockK
-    lateinit var ticketRepository: TicketRepository
+    lateinit var ticketRepository: LotteryRepository
 
     @MockK
     lateinit var emailService: EmailService

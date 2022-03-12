@@ -44,7 +44,6 @@ class ApiRoutes(
                 GET("/mixette", mixetteHandler::findAll)
                 GET("/ticket", ticketHandler::findAll)
                 GET("/lottery", lotteryHandler::findAll)
-                GET("/lottery/random", lotteryHandler::randomDraw)
                 GET("/favorite", favoriteHandler::findAll)
                 GET("/{year}/talk", talkHandler::findAdminByEventId)
             }

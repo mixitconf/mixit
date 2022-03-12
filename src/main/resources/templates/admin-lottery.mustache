@@ -1,0 +1,52 @@
+{{> header}}
+
+<div class="mxt-wrapper--header">
+    <h1 class="text-center pt-5">{{#i18n}}admin.ticketing.title{{/i18n}}</h1>
+</div>
+
+<div class="container mxt-wrapper--page-content ">
+    <div class="row container pb-5">
+        <form action="/admin/lottery/random/delete" method="post" class="text-right m-auto col-6"
+              style="text-align: right"
+              onsubmit="return confirm('Are you sure to erase all ranks ?');">
+            <input type="submit" class="btn btn-primary mxt-btn-primary" value="Erase rank"/>
+        </form>
+        <form action="/admin/lottery/random" method="post" class="text-left col-6"
+              onsubmit="return confirm('Are you sure to eras random draw by a new one ?');">
+            <input type="submit" class="btn btn-primary mxt-btn-primary" value="Random draw"/>
+        </form>
+    </div>
+
+    <p>{{#i18n}}admin.ticketing.count{{/i18n}} : <b>{{tickets.size}}</b></p>
+    <table class="table-striped table table-bordered">
+        <thead>
+        <tr>
+            <th>{{#i18n}}admin.ticketing.table.lastname{{/i18n}}</th>
+            <th>{{#i18n}}admin.ticketing.table.firstname{{/i18n}}</th>
+            <th>{{#i18n}}admin.ticketing.table.email{{/i18n}}</th>
+            <th>{{#i18n}}admin.ticketing.table.rank{{/i18n}}</th>
+            <th>&nbsp;</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#tickets}}
+            <tr>
+                <td>{{lastname}}</td>
+                <td>{{firstname}}</td>
+                <td><a href="mailto:{{email}}">{{email}}</a></td>
+                <td>{{#rank}}{{rank}}{{/rank}}</td>
+                <td>
+                    <form action="/admin/ticketing/delete" method="post"
+                          onsubmit="return confirm('{{#i18n}}admin.ticketing.delete.confirm{{/i18n}}');">
+                        <input type="hidden" name="email" value="{{email}}"/>
+                        <input type="submit" class="btn btn-primary mxt-btn-primary"
+                               value="{{#i18n}}common.actions.delete{{/i18n}}"/>
+                    </form>
+                </td>
+            </tr>
+        {{/tickets}}
+        </tbody>
+    </table>
+</div>
+
+{{> footer}}

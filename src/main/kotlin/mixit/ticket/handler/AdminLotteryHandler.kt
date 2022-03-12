@@ -2,7 +2,7 @@ package mixit.ticket.handler
 
 import mixit.MixitProperties
 import mixit.ticket.model.Ticket
-import mixit.ticket.repository.TicketRepository
+import mixit.ticket.repository.LotteryRepository
 import mixit.util.camelCase
 import mixit.util.extractFormData
 import mixit.util.seeOther
@@ -11,22 +11,45 @@ import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import reactor.core.publisher.Mono
+import reactor.kotlin.core.publisher.toFlux
+import java.util.*
 
 @Component
 class AdminLotteryHandler(
-    private val ticketRepository: TicketRepository,
+    private val ticketRepository: LotteryRepository,
     private val properties: MixitProperties
 ) {
 
     companion object {
-        const val TEMPLATE_LIST = "admin-ticketing"
-        const val LIST_URI = "/admin/ticketing"
+        const val TEMPLATE_LIST = "admin-lottery"
+        const val LIST_URI = "/admin/lottery"
     }
+
+    fun eraseRank(req: ServerRequest) = ticketRepository.eraseRank().flatMap {
+        adminTicketing(req)
+    }
+
+    fun randomDraw(req: ServerRequest) =
+        ticketRepository
+            .findAll()
+            .collectList()
+            .flatMapMany {
+                it.shuffled(Random())
+                    .distinctBy { listOf(it.firstname, it.lastname) }
+                    .mapIndexed { index, ticket -> ticket.copy(rank = index + 1) }
+                    .toFlux()
+            }
+            .flatMap {
+                ticketRepository.save(it)
+            }
+            .collectList()
+            .flatMap { adminTicketing(req) }
+
 
     fun adminTicketing(req: ServerRequest): Mono<ServerResponse> {
         val tickets = ticketRepository.findAll()
             .map {
-                Ticket(it.email, it.firstname.camelCase(), it.lastname.camelCase())
+                Ticket(it.email, it.firstname.camelCase(), it.lastname.camelCase(), it.rank)
             }
             .sort(Comparator.comparing(Ticket::lastname).thenComparing(Comparator.comparing(Ticket::firstname)))
         return ok().render(

@@ -8,7 +8,7 @@ import mixit.favorite.repository.FavoriteRepository
 import mixit.talk.model.TalkService
 import mixit.talk.repository.TalkRepository
 import mixit.ticket.repository.FinalTicketRepository
-import mixit.ticket.repository.TicketRepository
+import mixit.ticket.repository.LotteryRepository
 import mixit.user.model.UserService
 import mixit.user.repository.UserRepository
 import org.springframework.boot.CommandLineRunner
@@ -23,7 +23,7 @@ class DatabaseInitializerConfig {
         userRepository: UserRepository,
         eventRepository: EventRepository,
         talkRepository: TalkRepository,
-        ticketRepository: TicketRepository,
+        ticketRepository: LotteryRepository,
         postRepository: PostRepository,
         favoriteRepository: FavoriteRepository,
         finalTicketRepository: FinalTicketRepository,

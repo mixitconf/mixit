@@ -152,7 +152,7 @@ class WebsiteRoutes(
             "/admin".nest {
                 GET("", adminHandler::admin)
                 GET("/cache", cacheHandler::view)
-                GET("/ticketing", adminLotteryHandler::adminTicketing)
+                GET("/lottery", adminLotteryHandler::adminTicketing)
                 GET("/ticket", ticketHandler::ticketing)
                 GET("/ticket/edit/{number}", ticketHandler::editTicket)
                 GET("/ticket/create", ticketHandler::createTicket)
@@ -215,6 +215,8 @@ class WebsiteRoutes(
                 POST("/talks/delete", adminTalkHandler::adminDeleteTalk)
                 POST("/users", adminUserHandler::adminSaveUser)
                 POST("/users/delete", adminUserHandler::adminDeleteUser)
+                POST("/lottery/random", adminLotteryHandler::randomDraw)
+                POST("/lottery/random/delete", adminLotteryHandler::eraseRank)
                 POST("/events", adminEventHandler::adminSaveEvent)
                 POST("/events/{eventId}/sponsors/create", adminEventHandler::adminCreateEventSponsoring)
                 POST("/events/{eventId}/sponsors/delete", adminEventHandler::adminDeleteEventSponsoring)
