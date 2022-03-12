@@ -49,6 +49,7 @@ $enable-cssgrid: true;
 @import "../../../node_modules/bootstrap/scss/type";
 @import "../../../node_modules/bootstrap/scss/images";
 @import "../../../node_modules/bootstrap/scss/card";
+@import "../../../node_modules/bootstrap/scss/badge";
 @import "../../../node_modules/bootstrap/scss/containers";
 @import "../../../node_modules/bootstrap/scss/grid";
 @import "../../../node_modules/bootstrap/scss/tables";
@@ -67,7 +68,6 @@ $enable-cssgrid: true;
 
 //@import "breadcrumb";
 //@import "pagination";
-//@import "badge";
 //@import "progress";
 //@import "list-group";
 //@import "close";
@@ -117,6 +117,10 @@ h3 {
   &:hover {
     color: #ffffff !important;
   }
+}
+
+.mxt-icon--profile {
+  max-width: 2em;
 }
 
 .mxt-icon--logo {

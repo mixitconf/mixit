@@ -1,9 +1,11 @@
 package mixit.user.handler
 
 import mixit.MixitProperties
+import mixit.event.handler.AdminEventHandler
 import mixit.security.model.Cryptographer
 import mixit.talk.model.Language
 import mixit.talk.model.TalkService
+import mixit.ticket.model.TicketService
 import mixit.ticket.repository.LotteryRepository
 import mixit.user.model.*
 import mixit.user.repository.UserRepository
@@ -33,7 +35,8 @@ class UserHandler(
     private val repository: UserRepository,
     private val userService: UserService,
     private val service: TalkService,
-    private val ticketRepository: LotteryRepository,
+    private val lotteryRepository: LotteryRepository,
+    private val ticketService: TicketService,
     private val cryptographer: Cryptographer,
     private val properties: MixitProperties,
     private val emailValidator: EmailValidator,
@@ -42,9 +45,15 @@ class UserHandler(
     private val markdownValidator: MarkdownValidator
 ) {
 
+    companion object {
+        const val SPEAKER_TEMPLATE = "speaker"
+        const val USER_EDIT_TEMPLATE = "user-edit"
+        const val USER_TEMPLATE = "user"
+    }
+
     enum class ViewMode { ViewMyProfile, ViewUser, EditProfile }
 
-    fun speakerView(req: ServerRequest) = ok().render("speaker", mapOf(Pair("title", "speaker.title")))
+    fun speakerView(req: ServerRequest) = ok().render(SPEAKER_TEMPLATE, mapOf(Pair("title", "speaker.title")))
 
     fun findOneView(req: ServerRequest) =
         try {
@@ -85,7 +94,7 @@ class UserHandler(
     ): Mono<ServerResponse> =
         if (viewMode == ViewMode.EditProfile) {
             ok().render(
-                "user-edit",
+                USER_EDIT_TEMPLATE,
                 mapOf(
                     Pair("user", user.toDto(req.language())),
                     Pair("usermail", cryptographer.decrypt(user.email)),
@@ -98,14 +107,23 @@ class UserHandler(
                 )
             )
         } else if (viewMode == ViewMode.ViewMyProfile) {
-            ticketRepository
+            val isSpeaker = service
+                .findBySpeakerId(listOf(user.login), "null")
+                .filter { talks -> talks.any { it.event == AdminEventHandler.CURRENT_EVENT } }
+                .map { true }
+
+            val attendeeTicket = ticketService.findByEncryptedEmail(user.email!!)
+
+            lotteryRepository
                 .findByEmail(cryptographer.decrypt(user.email)!!)
-                .flatMap {
+                .flatMap { ticket ->
                     ok().render(
-                        "user",
+                        USER_TEMPLATE,
                         mapOf(
                             Pair("user", user.toDto(req.language())),
-                            Pair("hasLotteryTicket", true),
+                            Pair("lotteryTicket", ticket),
+                            Pair("attendeeTicket", attendeeTicket),
+                            Pair("isSpeaker", isSpeaker),
                             Pair("canUpdateProfile", true),
                             Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8))
                         )
@@ -113,10 +131,12 @@ class UserHandler(
                 }
                 .switchIfEmpty(
                     ok().render(
-                        "user",
+                        USER_TEMPLATE,
                         mapOf(
                             Pair("user", user.toDto(req.language())),
                             Pair("canUpdateProfile", true),
+                            Pair("attendeeTicket", attendeeTicket),
+                            Pair("isSpeaker", isSpeaker),
                             Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8))
                         )
                     )
@@ -126,7 +146,7 @@ class UserHandler(
                 .findBySpeakerId(listOf(user.login), "all")
                 .flatMap { talks ->
                     ok().render(
-                        "user",
+                        USER_TEMPLATE,
                         mapOf(
                             Pair("user", user.toDto(req.language())),
                             Pair("talks", talks.map { it.toDto(req.language()) }),
@@ -189,7 +209,7 @@ class UserHandler(
                     if (!markdownValidator.isValid(updatedUser.description[Language.ENGLISH])) {
                         errors["description-en"] = "user.form.error.description.en"
                     }
-                    if (updatedUser.photoUrl !=null && !urlValidator.isValid(updatedUser.photoUrl)) {
+                    if (updatedUser.photoUrl != null && !urlValidator.isValid(updatedUser.photoUrl)) {
                         errors["photoUrl"] = "user.form.error.photourl"
                     }
                     updatedUser.links.forEachIndexed { index, link ->
@@ -238,8 +258,8 @@ class UserHandler(
         )
 
     fun create(req: ServerRequest) = req.bodyToMono<User>()
-            .flatMap { userService.save(it) }
-            .flatMap { created(create("/api/user/${it.login}")).json().body(it.toMono()) }
+        .flatMap { userService.save(it) }
+        .flatMap { created(create("/api/user/${it.login}")).json().body(it.toMono()) }
 
     fun check(req: ServerRequest) = ok().json().body(
         repository.findByNonEncryptedEmail(req.pathVariable("email"))

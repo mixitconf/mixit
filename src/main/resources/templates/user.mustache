@@ -23,8 +23,8 @@
         {{/canUpdateProfile}}
     {{/connected}}
 </div>
-
-<div class="container mxt-wrapper--page-content">
+<p class="pb-2">&nbsp;</p>
+<div class="container mxt-wrapper--page-content mt-4">
     <h1 class="text-center mxt-title--talk" style="margin-bottom: 0">
         {{user.firstname}} {{user.lastname}}
     </h1>
@@ -41,8 +41,22 @@
         </div>
         {{#canUpdateProfile}}
             <div class="columns small-12 medium-12 large-12 callout">
-                {{#hasLotteryTicket}}<strong><img src="/images/svg/lottery/mxt-icon--ok.svg" class="mxt-icon--lottery-ok">&nbsp;{{#i18n}}profile.hasticket{{/i18n}}</strong>{{/hasLotteryTicket}}
-                {{^hasLotteryTicket}}<strong><img src="/images/svg/lottery/mxt-icon--ko.svg" class="mxt-icon--lottery-ko">&nbsp;{{#i18n}}profile.hasnoticket{{/i18n}}</strong>{{/hasLotteryTicket}}
+                <p>
+                    {{#hasFeatureLottery}}
+                        {{#lotteryTicket}}<strong><img src="/images/svg/lottery/mxt-icon--ok.svg" class="mxt-icon--profile">&nbsp;{{#i18n}}profile.hasticket{{/i18n}}</strong>{{/lotteryTicket}}
+                        {{^lotteryTicket}}<strong><img src="/images/svg/lottery/mxt-icon--ko.svg" class="mxt-icon--profile">&nbsp;{{#i18n}}profile.hasnoticket{{/i18n}}</strong>{{/lotteryTicket}}
+                    {{/hasFeatureLottery}}
+                    {{#hasFeatureLotteryResult}}
+                        {{#lotteryTicket}}<strong>{{#i18n}}profile.hasticket.result{{/i18n}}</strong>
+                            {{#lotteryTicket.rank}}<span class="badge bg-secondary font-bold">{{lotteryTicket.rank}}{{/lotteryTicket.rank}}</span>{{/lotteryTicket}}
+                    {{/hasFeatureLotteryResult}}
+                </p>
+                <p>
+                    {{#hasFeatureProfileWithMessages}}
+                        {{#isSpeaker}}<strong><img src="/images/svg/lottery/mxt-ixon--clap.svg" class="mxt-icon--profile">&nbsp;{{#i18n}}profile.speaker{{/i18n}}</strong>{{/isSpeaker}}
+                        {{^isSpeaker}}{{#attendeeTicket}}<strong><img src="/images/svg/lottery/mxt-ixon--clap.svg" class="mxt-icon--profile">&nbsp;{{#i18n}}profile.attendee{{/i18n}}</strong>{{/attendeeTicket}}{{/isSpeaker}}
+                    {{/hasFeatureProfileWithMessages}}
+                </p>
             </div>
         {{/canUpdateProfile}}
     </div>

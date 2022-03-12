@@ -1,7 +1,7 @@
 package mixit
 
-import java.math.BigDecimal
 import org.springframework.boot.context.properties.ConfigurationProperties
+import java.math.BigDecimal
 
 @ConfigurationProperties("mixit")
 class MixitProperties {
@@ -46,5 +46,6 @@ class MixitProperties {
         var lotteryResult: Boolean = false
         var email: Boolean = false
         var mixette: Boolean = false
+        var profilemsg: Boolean = false
     }
 }

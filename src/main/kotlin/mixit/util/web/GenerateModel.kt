@@ -39,6 +39,10 @@ fun generateModel(
     }
     this["urlEncode"] = Mustache.Lambda { frag, out -> out.write(UriUtils.encodePathSegment(frag.execute(), "UTF-8")) }
     this["markdown"] = Mustache.Lambda { frag, out -> out.write(frag.execute().toHTML()) }
+    this["hasFeatureLottery"] = properties.feature.lottery
+    this["hasFeatureLotteryResult"] = properties.feature.lotteryResult
+    this["hasFeatureMixette"] = properties.feature.mixette
+    this["hasFeatureProfileWithMessages"] = properties.feature.profilemsg
 }.toMap()
 
 private fun switchLangUrl(path: String, locale: Locale): String {
