@@ -8,11 +8,12 @@ import org.springframework.core.io.ClassPathResource
 import org.springframework.data.mongodb.core.*
 import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Query
+import org.springframework.data.mongodb.core.query.Update
 import org.springframework.data.mongodb.core.query.isEqualTo
 import org.springframework.stereotype.Repository
 
 @Repository
-class TicketRepository(
+class LotteryRepository(
     private val template: ReactiveMongoTemplate,
     private val objectMapper: ObjectMapper
 ) {
@@ -31,14 +32,17 @@ class TicketRepository(
     fun count() = template.count<Ticket>()
 
     fun save(ticket: Ticket) =
-        template.insert(ticket).doOnSuccess { _ -> logger.info("Save new lottery ticket $ticket") }
+        template.save(ticket).doOnSuccess { _ -> logger.info("Save new lottery ticket $ticket") }
 
     fun findAll() = template.findAll<Ticket>().doOnComplete { logger.info("Load all lottery tickets")  }
 
+    fun eraseRank() = template.updateMulti<Ticket>(Query(), Update().set("rank", null))
 
     fun deleteAll() = template.remove<Ticket>(Query())
 
     fun deleteOne(id: String) = template.remove<Ticket>(Query(Criteria.where("_id").isEqualTo(id)))
 
     fun findByEmail(email: String) = template.findOne<Ticket>(Query(Criteria.where("email").isEqualTo(email)))
+
+
 }

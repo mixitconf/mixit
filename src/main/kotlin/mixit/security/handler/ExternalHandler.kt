@@ -3,14 +3,9 @@ package mixit.security.handler
 import mixit.favorite.handler.FavoriteDto
 import mixit.favorite.model.Favorite
 import mixit.favorite.repository.FavoriteRepository
-import mixit.security.handler.ExternalResponses.CREDENTIAL_VALID
-import mixit.security.handler.ExternalResponses.EMAIL_SENT_ERROR
-import mixit.security.handler.ExternalResponses.INVALID_CREDENTIALS
-import mixit.security.handler.ExternalResponses.INVALID_EMAIL
-import mixit.security.handler.ExternalResponses.INVALID_TOKEN
-import mixit.security.handler.ExternalResponses.TOKEN_SENT
+import mixit.security.handler.ExternalResponses.*
 import mixit.security.model.AuthenticationService
-import mixit.ticket.repository.TicketRepository
+import mixit.ticket.repository.LotteryRepository
 import mixit.user.model.User
 import mixit.util.errors.EmailValidatorException
 import mixit.util.errors.NotFoundException
@@ -30,7 +25,7 @@ import reactor.kotlin.core.publisher.toMono
 class ExternalHandler(
     private val authenticationService: AuthenticationService,
     private val favoriteRepository: FavoriteRepository,
-    private val ticketRepository: TicketRepository
+    private val ticketRepository: LotteryRepository
 ) {
 
     /**

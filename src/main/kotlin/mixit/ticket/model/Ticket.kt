@@ -13,7 +13,8 @@ import java.util.*
 data class Ticket(
     @Id val email: String,
     val firstname: String,
-    val lastname: String
+    val lastname: String,
+    val rank: Int? = null
 )
 
 /**
@@ -33,9 +34,9 @@ data class FinalTicket(
         fun generateNewNumber(): String =
             "MXT$CURRENT_EVENT-${UUID.randomUUID().toString().substring(0, 14).replace("-", "")}"
 
-        fun createFromLottery(lotteryTicket: Ticket, rank: Int?) =
+        fun createFromLottery(lotteryTicket: Ticket) =
             lotteryTicket.let {
-                FinalTicket(it.email, generateNewNumber(), it.firstname, it.lastname, rank)
+                FinalTicket(it.email, generateNewNumber(), it.firstname, it.lastname, it.rank)
             }
     }
 

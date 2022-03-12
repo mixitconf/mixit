@@ -4,7 +4,7 @@ import mixit.MixitProperties
 import mixit.security.model.Cryptographer
 import mixit.talk.model.Language
 import mixit.talk.model.TalkService
-import mixit.ticket.repository.TicketRepository
+import mixit.ticket.repository.LotteryRepository
 import mixit.user.model.*
 import mixit.user.repository.UserRepository
 import mixit.util.*
@@ -33,7 +33,7 @@ class UserHandler(
     private val repository: UserRepository,
     private val userService: UserService,
     private val service: TalkService,
-    private val ticketRepository: TicketRepository,
+    private val ticketRepository: LotteryRepository,
     private val cryptographer: Cryptographer,
     private val properties: MixitProperties,
     private val emailValidator: EmailValidator,
