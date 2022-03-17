@@ -3,6 +3,12 @@ package mixit.security.handler
 import mixit.favorite.handler.FavoriteDto
 import mixit.favorite.model.Favorite
 import mixit.favorite.repository.FavoriteRepository
+import mixit.security.handler.ExternalResponses.CREDENTIAL_VALID
+import mixit.security.handler.ExternalResponses.EMAIL_SENT_ERROR
+import mixit.security.handler.ExternalResponses.INVALID_CREDENTIALS
+import mixit.security.handler.ExternalResponses.INVALID_EMAIL
+import mixit.security.handler.ExternalResponses.INVALID_TOKEN
+import mixit.security.handler.ExternalResponses.TOKEN_SENT
 import mixit.security.model.AuthenticationService
 import mixit.ticket.repository.LotteryRepository
 import mixit.user.model.User
