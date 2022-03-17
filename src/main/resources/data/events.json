@@ -1307,6 +1307,26 @@
                 "level": "GOLD",
                 "sponsorId": "conserto",
                 "subscriptionDate": "2022-03-07"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "neo9",
+                "subscriptionDate": "2022-03-11"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "feelinjob",
+                "subscriptionDate": "2022-03-14"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "SII_rhonealpes",
+                "subscriptionDate": "2022-03-15"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "dataiku",
+                "subscriptionDate": "2022-03-17"
             }
         ],
         "start": "2022-05-24",
