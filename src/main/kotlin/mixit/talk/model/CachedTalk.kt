@@ -3,6 +3,9 @@ package mixit.talk.model
 import mixit.event.handler.AdminEventHandler.Companion.TIMEZONE
 import mixit.talk.handler.TalkDto
 import mixit.talk.model.Language.FRENCH
+import mixit.talk.model.TalkFormat.CLOSING_SESSION
+import mixit.talk.model.TalkFormat.KEYNOTE_SURPRISE
+import mixit.talk.model.TalkFormat.RANDOM
 import mixit.user.model.Link
 import mixit.user.model.User
 import mixit.util.cache.Cached
