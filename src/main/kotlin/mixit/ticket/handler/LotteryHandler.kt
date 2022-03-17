@@ -16,7 +16,7 @@ import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.body
 import reactor.core.publisher.Mono
-import java.util.*
+import java.util.Locale
 
 @Component
 class LotteryHandler(

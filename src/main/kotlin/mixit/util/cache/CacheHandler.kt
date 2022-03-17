@@ -44,7 +44,8 @@ class CacheHandler(
             mapOf(
                 Pair("title", "admin.cache.title"),
                 Pair(
-                    "zones", mapOf(
+                    "zones",
+                    mapOf(
                         Pair(CacheZone.EVENT.name.lowercase(), CacheZoneStat.init(eventService)),
                         Pair(CacheZone.BLOG.name.lowercase(), CacheZoneStat.init(blogService)),
                         Pair(CacheZone.TALK.name.lowercase(), CacheZoneStat.init(talkService)),

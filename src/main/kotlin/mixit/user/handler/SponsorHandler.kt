@@ -90,5 +90,3 @@ class SponsorHandler(private val eventService: EventService) {
                 ServerResponse.ok().render(view, context)
             }
 }
-
-

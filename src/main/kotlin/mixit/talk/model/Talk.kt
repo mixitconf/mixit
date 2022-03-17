@@ -1,11 +1,11 @@
 package mixit.talk.model
 
-import java.time.LocalDateTime
 import mixit.user.model.Link
 import mixit.util.toSlug
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.index.TextIndexed
 import org.springframework.data.mongodb.core.mapping.Document
+import java.time.LocalDateTime
 
 @Document
 data class Talk(

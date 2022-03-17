@@ -32,13 +32,15 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.DependsOn
 import org.springframework.core.io.ClassPathResource
-import org.springframework.http.MediaType.*
+import org.springframework.http.MediaType.APPLICATION_FORM_URLENCODED
+import org.springframework.http.MediaType.TEXT_HTML
+import org.springframework.http.MediaType.TEXT_PLAIN
 import org.springframework.web.reactive.function.server.RenderingResponse
 import org.springframework.web.reactive.function.server.RouterFunctions.resources
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.router
 import reactor.kotlin.core.publisher.toMono
-import java.util.*
+import java.util.Locale
 
 @Configuration
 class WebsiteRoutes(

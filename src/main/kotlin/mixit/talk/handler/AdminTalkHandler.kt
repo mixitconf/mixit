@@ -1,7 +1,6 @@
 package mixit.talk.handler
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import java.time.LocalDateTime
 import mixit.MixitProperties
 import mixit.talk.model.Language
 import mixit.talk.model.Room
@@ -22,6 +21,7 @@ import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import reactor.core.publisher.Mono
+import java.time.LocalDateTime
 
 @Component
 class AdminTalkHandler(
@@ -79,7 +79,6 @@ class AdminTalkHandler(
             )
             service.save(talk).then(seeOther("${properties.baseUri}$LIST_URI"))
         }
-
 
     fun adminDeleteTalk(req: ServerRequest): Mono<ServerResponse> =
         req.extractFormData().flatMap { formData ->

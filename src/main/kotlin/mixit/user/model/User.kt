@@ -1,14 +1,14 @@
 package mixit.user.model
 
-import java.time.Duration
-import java.time.LocalDateTime
-import java.util.UUID
 import mixit.security.model.Cryptographer
 import mixit.talk.model.Language
 import mixit.util.encodeToBase64
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.index.TextIndexed
 import org.springframework.data.mongodb.core.mapping.Document
+import java.time.Duration
+import java.time.LocalDateTime
+import java.util.UUID
 
 object Users {
     const val DEFAULT_IMG_URL = "/images/png/mxt-icon--default-avatar.png"
@@ -67,7 +67,7 @@ fun User.hasValidTokens(token: String?, externalAppToken: String?): Boolean {
 }
 
 fun User.anonymize() = this.copy(
-        tokenExpiration = LocalDateTime.parse("2018-01-01T00:00:00.00"),
-        token = "",
-        externalAppToken = null
+    tokenExpiration = LocalDateTime.parse("2018-01-01T00:00:00.00"),
+    token = "",
+    externalAppToken = null
 )

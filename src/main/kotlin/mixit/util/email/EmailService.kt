@@ -13,7 +13,7 @@ import org.springframework.core.io.ResourceLoader
 import org.springframework.stereotype.Component
 import java.io.InputStreamReader
 import java.net.URLEncoder
-import java.util.*
+import java.util.Locale
 
 @Component
 class TemplateService(
@@ -57,7 +57,7 @@ class EmailService(
                 put("encodedemail", URLEncoder.encode(email.encodeToBase64(), "UTF-8"))
 
                 val content = templateService.load(templateName, this)
-                if (properties.feature.email){
+                if (properties.feature.email) {
                     emailSender.send(EmailMessage(email, emailSubject, content))
                 }
             }

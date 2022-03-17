@@ -49,5 +49,4 @@ class BlogService(private val repository: PostRepository, private val userServic
 
     fun deleteOne(id: String) =
         repository.deleteOne(id).doOnSuccess { cache.invalidateAll() }
-
 }

@@ -12,7 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.context.MessageSource
 import org.springframework.core.io.ResourceLoader
 import org.springframework.test.context.junit.jupiter.SpringExtension
-import java.util.*
+import java.util.Locale
 
 /**
  * Test {@link TemplateService}

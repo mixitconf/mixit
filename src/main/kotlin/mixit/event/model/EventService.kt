@@ -3,7 +3,13 @@ package mixit.event.model
 import mixit.MixitApplication.Companion.speakerStarInCurrentEvent
 import mixit.MixitApplication.Companion.speakerStarInHistory
 import mixit.event.repository.EventRepository
-import mixit.user.model.*
+import mixit.user.model.CachedOrganization
+import mixit.user.model.CachedSpeaker
+import mixit.user.model.CachedSponsor
+import mixit.user.model.CachedStaff
+import mixit.user.model.User
+import mixit.user.model.UserService
+import mixit.user.model.UserUpdateEvent
 import mixit.util.cache.CacheTemplate
 import mixit.util.cache.CacheZone
 import org.springframework.context.event.EventListener
@@ -47,10 +53,10 @@ class EventService(
 
     private fun loadEventUsers(event: Event): Mono<CachedEvent> {
         val userIds = event.organizations.map { it.organizationLogin } +
-                event.sponsors.map { it.sponsorId } +
-                event.volunteers.map { it.volunteerLogin } +
-                speakerStarInHistory +
-                speakerStarInCurrentEvent
+            event.sponsors.map { it.sponsorId } +
+            event.volunteers.map { it.volunteerLogin } +
+            speakerStarInHistory +
+            speakerStarInCurrentEvent
 
         return userService.findAllByIds(userIds).map { users ->
             CachedEvent(

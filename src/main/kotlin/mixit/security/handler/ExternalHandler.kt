@@ -3,7 +3,6 @@ package mixit.security.handler
 import mixit.favorite.handler.FavoriteDto
 import mixit.favorite.model.Favorite
 import mixit.favorite.repository.FavoriteRepository
-import mixit.security.handler.ExternalResponses.*
 import mixit.security.model.AuthenticationService
 import mixit.ticket.repository.LotteryRepository
 import mixit.user.model.User
@@ -146,5 +145,3 @@ class ExternalHandler(
                 )
         }
 }
-
-

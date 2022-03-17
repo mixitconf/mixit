@@ -25,7 +25,7 @@ import org.junit.jupiter.api.extension.ExtendWith
 import reactor.core.publisher.Mono
 import reactor.test.StepVerifier
 import java.time.LocalDateTime
-import java.util.*
+import java.util.Locale
 
 @ExtendWith(MockKExtension::class)
 internal class AuthenticationServiceTest {

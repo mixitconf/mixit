@@ -1,7 +1,6 @@
 package mixit.security.handler
 
 import mixit.MixitProperties
-import mixit.security.handler.LoginError.*
 import mixit.security.model.AuthenticationService
 import mixit.security.model.Cryptographer
 import mixit.user.model.User
@@ -18,7 +17,9 @@ import mixit.util.web.MixitWebFilter.Companion.SESSION_TOKEN_KEY
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
-import org.springframework.web.reactive.function.server.ServerResponse.*
+import org.springframework.web.reactive.function.server.ServerResponse.ok
+import org.springframework.web.reactive.function.server.ServerResponse.seeOther
+import org.springframework.web.reactive.function.server.ServerResponse.temporaryRedirect
 import org.springframework.web.server.WebSession
 import reactor.core.publisher.Mono
 import java.net.URI
@@ -53,7 +54,7 @@ class AuthenticationHandler(
     }
 
     private fun duplicateException(e: Throwable): LoginError =
-        if (e.message != null && e.message!!.contains("login")) DUPLICATE_LOGIN else DUPLICATE_EMAIL
+        if (e.message != null && e.message!!.contains("login")) LoginError.DUPLICATE_LOGIN else LoginError.DUPLICATE_EMAIL
 
     /**
      * Display a view with a form to send the email of the user
@@ -76,14 +77,16 @@ class AuthenticationHandler(
                     // An error can be thrown when we try to create a user from ticketting
                     .onErrorResume { displayErrorView(duplicateException(it)) }
                     // if user is not found we ask him if he wants to create a new account
-                    .switchIfEmpty(Mono.defer {
-                        displayView(
-                            LoginPage.CREATION,
-                            mapOf(Pair("email", nonEncryptedMail))
-                        )
-                    })
+                    .switchIfEmpty(
+                        Mono.defer {
+                            displayView(
+                                LoginPage.CREATION,
+                                mapOf(Pair("email", nonEncryptedMail))
+                            )
+                        }
+                    )
             } catch (e: EmailValidatorException) {
-                displayErrorView(INVALID_EMAIL)
+                displayErrorView(LoginError.INVALID_EMAIL)
             }
         }
 
@@ -97,14 +100,16 @@ class AuthenticationHandler(
                     // An error can be thrown when we try to create a user from ticketting
                     .onErrorResume { displayErrorView(duplicateException(it)) }
                     // if user is not found we ask him if he wants to create a new account
-                    .switchIfEmpty(Mono.defer {
-                        displayView(
-                            LoginPage.CREATION,
-                            mapOf(Pair("email", nonEncryptedMail))
-                        )
-                    })
+                    .switchIfEmpty(
+                        Mono.defer {
+                            displayView(
+                                LoginPage.CREATION,
+                                mapOf(Pair("email", nonEncryptedMail))
+                            )
+                        }
+                    )
             } catch (e: EmailValidatorException) {
-                displayErrorView(INVALID_EMAIL)
+                displayErrorView(LoginError.INVALID_EMAIL)
             }
         }
 
@@ -123,9 +128,9 @@ class AuthenticationHandler(
                 )
                     .flatMap { generateAndSendToken(req, nonEncryptedMail = newUser.first, user = newUser.second) }
             } catch (e: EmailValidatorException) {
-                displayErrorView(INVALID_EMAIL)
+                displayErrorView(LoginError.INVALID_EMAIL)
             } catch (e: CredentialValidatorException) {
-                displayErrorView(SIGN_UP_ERROR)
+                displayErrorView(LoginError.SIGN_UP_ERROR)
             }
         }
 
@@ -159,7 +164,7 @@ class AuthenticationHandler(
         req.extractFormData().flatMap { formData ->
             // If email or token are null we can't open a session
             if (formData["email"] == null || formData["token"] == null) {
-                displayErrorView(REQUIRED_CREDENTIALS)
+                displayErrorView(LoginError.REQUIRED_CREDENTIALS)
             } else {
                 // Email sent can be crypted or not
                 val nonEncryptedMail =

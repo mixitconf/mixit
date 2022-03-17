@@ -4,7 +4,7 @@ import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 import java.time.Instant
-import java.util.*
+import java.util.UUID
 
 /**
  * Should be renamed when the lottery will be closed
@@ -39,5 +39,4 @@ data class FinalTicket(
                 FinalTicket(it.email, generateNewNumber(), it.firstname, it.lastname, it.rank)
             }
     }
-
 }

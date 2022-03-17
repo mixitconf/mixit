@@ -1,8 +1,8 @@
 package mixit.user.handler
 
-import java.util.stream.IntStream
 import mixit.user.model.Link
 import mixit.user.model.User
+import java.util.stream.IntStream
 
 data class LinkDto(val name: String, val url: String, val index: String)
 

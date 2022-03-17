@@ -10,11 +10,11 @@ data class CachedOrganization(
     val description: Map<Language, String>,
     val links: List<Link>,
 ) {
-    constructor(user: User): this(
+    constructor(user: User) : this(
         user.login,
         user.company ?: "${user.lastname} ${user.firstname}",
         user.photoUrl,
-        user.description.mapValues {it.value.toHTML() },
+        user.description.mapValues { it.value.toHTML() },
         user.links
     )
 }

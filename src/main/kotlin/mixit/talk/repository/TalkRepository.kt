@@ -8,12 +8,16 @@ import org.springframework.core.io.ClassPathResource
 import org.springframework.data.domain.Sort.Direction.ASC
 import org.springframework.data.domain.Sort.Order
 import org.springframework.data.domain.Sort.by
-import org.springframework.data.mongodb.core.*
+import org.springframework.data.mongodb.core.ReactiveMongoTemplate
+import org.springframework.data.mongodb.core.count
+import org.springframework.data.mongodb.core.find
+import org.springframework.data.mongodb.core.findById
 import org.springframework.data.mongodb.core.query.Criteria.where
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.data.mongodb.core.query.TextCriteria
 import org.springframework.data.mongodb.core.query.TextQuery
 import org.springframework.data.mongodb.core.query.isEqualTo
+import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 
@@ -40,7 +44,7 @@ class TalkRepository(
         template.count<Talk>()
 
     fun findAll(): Flux<Talk> =
-        template.find<Talk>(Query().with(by(Order(ASC, "start")))).doOnComplete { logger.info("Load all talks")  }
+        template.find<Talk>(Query().with(by(Order(ASC, "start")))).doOnComplete { logger.info("Load all talks") }
 
     fun findFullText(criteria: List<String>): Flux<Talk> {
         val textCriteria = TextCriteria()

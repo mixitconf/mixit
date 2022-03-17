@@ -84,7 +84,7 @@ class AdminTicketHandler(
                 )
                 .flatMap { ticket ->
                     service.save(ticket)
-                        .then(seeOther("${properties.baseUri}${LIST_URI}"))
+                        .then(seeOther("${properties.baseUri}$LIST_URI"))
                         .onErrorResume(DuplicateKeyException::class.java) {
                             ok().render(
                                 TEMPLATE_ERROR,
@@ -101,7 +101,7 @@ class AdminTicketHandler(
         req.extractFormData().flatMap { formData ->
             service
                 .deleteOne(formData["number"]!!)
-                .then(seeOther("${properties.baseUri}${LIST_URI}"))
+                .then(seeOther("${properties.baseUri}$LIST_URI"))
         }
 
     fun showAttendee(req: ServerRequest): Mono<ServerResponse> =
@@ -109,7 +109,7 @@ class AdminTicketHandler(
             .flatMap { attendee ->
                 req.session()
                     .flatMap { session ->
-                        when (session.getAttribute<Role>( MixitWebFilter.SESSION_ROLE_KEY)) {
+                        when (session.getAttribute<Role>(MixitWebFilter.SESSION_ROLE_KEY)) {
                             Role.STAFF -> {
                                 // A staff member is redirected to Mixette form
                                 seeOther("${properties.baseUri}/admin/mixette-donation/create/${attendee.number}")

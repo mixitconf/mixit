@@ -9,7 +9,6 @@ import mixit.util.cache.Cached
 import mixit.util.toRFC3339
 import java.time.LocalDateTime
 
-
 data class CachedPost(
     override val id: String,
     val author: CachedStaff,
@@ -53,4 +52,3 @@ fun List<CachedPost>.toFeed(language: Language, title: String, link: String) = F
     first().addedAt.toRFC3339(),
     map { it.toFeedEntry(language) }
 )
-

@@ -15,5 +15,4 @@ class JsonBlogHandler(val blogRepository: PostRepository) {
 
     fun findAll(req: ServerRequest) =
         ok().json().body(blogRepository.findAll())
-
 }

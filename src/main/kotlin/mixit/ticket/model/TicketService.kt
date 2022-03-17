@@ -32,8 +32,10 @@ class TicketService(
     fun save(ticket: FinalTicket): Mono<CachedFinalTicket> =
         findByEncryptedEmail(ticket.encryptedEmail)
             .flatMap { Mono.error<CachedFinalTicket> { DuplicateException("") } }
-            .switchIfEmpty(repository.save(ticket).map { CachedFinalTicket(it) }
-                .doOnSuccess { cache.invalidateAll() })
+            .switchIfEmpty(
+                repository.save(ticket).map { CachedFinalTicket(it) }
+                    .doOnSuccess { cache.invalidateAll() }
+            )
 
     fun deleteOne(id: String) =
         repository.deleteOne(id).doOnSuccess { cache.invalidateAll() }

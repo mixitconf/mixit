@@ -103,7 +103,6 @@ class AdminMixetteHandler(
             this.adminDonation(MixetteDonation(CURRENT_EVENT, session.getAttribute(SESSION_LOGIN_KEY)))
         }
 
-
     /**
      * Used to display the page to create a new donation, when a volunteer or a staff member has scanned a badge
      */
@@ -196,7 +195,8 @@ class AdminMixetteHandler(
                             mapOf(
                                 Pair("creationMode", donation.id == null),
                                 Pair(
-                                    "donation", MixetteDonationDetailedDto(
+                                    "donation",
+                                    MixetteDonationDetailedDto(
                                         donation = donation,
                                         cryptographer = cryptographer,
                                         username = donor.name,
@@ -244,7 +244,6 @@ class AdminMixetteHandler(
                 }
             }
         }
-
     }
 
     /**
@@ -316,5 +315,5 @@ class AdminMixetteHandler(
         }
 
     val CachedUser.organizationName
-        get() = company ?: "${firstname} ${lastname}"
+        get() = company ?: "$firstname $lastname"
 }
