@@ -8,19 +8,9 @@ import mixit.user.model.User
 import mixit.util.encodeToMd5
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
-import org.springframework.data.mongodb.core.ReactiveMongoTemplate
-import org.springframework.data.mongodb.core.count
-import org.springframework.data.mongodb.core.find
-import org.springframework.data.mongodb.core.findAll
-import org.springframework.data.mongodb.core.findById
-import org.springframework.data.mongodb.core.findOne
+import org.springframework.data.mongodb.core.*
+import org.springframework.data.mongodb.core.query.*
 import org.springframework.data.mongodb.core.query.Criteria.where
-import org.springframework.data.mongodb.core.query.Query
-import org.springframework.data.mongodb.core.query.TextCriteria
-import org.springframework.data.mongodb.core.query.TextQuery
-import org.springframework.data.mongodb.core.query.inValues
-import org.springframework.data.mongodb.core.query.isEqualTo
-import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
@@ -35,8 +25,6 @@ class UserRepository(
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
-        // We delete all users to recreate them since next MEP
-        deleteAll()
         if (count().block() == 0L) {
             val usersResource = ClassPathResource("data/users.json")
             val users: List<User> = objectMapper.readValue(usersResource.inputStream)
