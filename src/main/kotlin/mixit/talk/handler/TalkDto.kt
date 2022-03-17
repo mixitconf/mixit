@@ -1,9 +1,9 @@
 package mixit.talk.handler
 
-import java.time.LocalDateTime
 import mixit.talk.model.TalkFormat
 import mixit.user.model.Link
 import mixit.user.model.User
+import java.time.LocalDateTime
 
 class TalkDto(
     val id: String?,

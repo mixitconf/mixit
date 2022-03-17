@@ -9,7 +9,7 @@ import org.springframework.context.ApplicationEventPublisher
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Mono
 
-data class UserUpdateEvent(val user: User): ApplicationEvent(user)
+data class UserUpdateEvent(val user: User) : ApplicationEvent(user)
 
 @Service
 class UserService(

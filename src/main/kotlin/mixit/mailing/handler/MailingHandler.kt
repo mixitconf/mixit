@@ -1,7 +1,5 @@
 package mixit.mailing.handler
 
-import java.time.LocalDateTime
-import java.util.Locale
 import mixit.MixitProperties
 import mixit.mailing.model.Mailing
 import mixit.mailing.model.RecipientType
@@ -27,6 +25,8 @@ import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import reactor.core.publisher.Mono
+import java.time.LocalDateTime
+import java.util.Locale
 
 @Component
 class MailingHandler(
@@ -80,7 +80,8 @@ class MailingHandler(
         persistMailing((req))
             .flatMap {
                 ok().render(
-                    MailingPages.EMAIL.template, mapOf(
+                    MailingPages.EMAIL.template,
+                    mapOf(
                         Pair("user", User().copy(firstname = "Bot")),
                         Pair("message", it.content.toHTML())
                     )
@@ -114,7 +115,7 @@ class MailingHandler(
                     recipientLogins = formData["recipientLogins"]?.split(",") ?: emptyList()
                 )
             )
-            }
+        }
 
     fun sendMailing(req: ServerRequest): Mono<ServerResponse> =
         persistMailing(req)
@@ -140,7 +141,8 @@ class MailingHandler(
                     }
                 }
                 ok().render(
-                    MailingPages.CONFIRMATION.template, mapOf(
+                    MailingPages.CONFIRMATION.template,
+                    mapOf(
                         Pair("emails", mailing.users.mapNotNull { cryptographer.decrypt(it.email) })
                     )
                 )
@@ -148,6 +150,4 @@ class MailingHandler(
 
     fun saveMailing(req: ServerRequest): Mono<ServerResponse> =
         persistMailing((req)).then(seeOther("${properties.baseUri}/admin/mailings"))
-
-
 }

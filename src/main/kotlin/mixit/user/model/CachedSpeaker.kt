@@ -3,7 +3,6 @@ package mixit.user.model
 import mixit.talk.model.Language
 import mixit.util.toHTML
 
-
 data class CachedSpeaker(
     val login: String,
     val firstname: String,

@@ -7,9 +7,17 @@ import mixit.talk.model.Language
 import mixit.talk.model.TalkService
 import mixit.ticket.model.TicketService
 import mixit.ticket.repository.LotteryRepository
-import mixit.user.model.*
+import mixit.user.model.Link
+import mixit.user.model.Role
+import mixit.user.model.User
+import mixit.user.model.UserService
+import mixit.user.model.anonymize
 import mixit.user.repository.UserRepository
-import mixit.util.*
+import mixit.util.encodeToMd5
+import mixit.util.extractFormData
+import mixit.util.json
+import mixit.util.language
+import mixit.util.seeOther
 import mixit.util.validator.EmailValidator
 import mixit.util.validator.MarkdownValidator
 import mixit.util.validator.MaxLengthValidator
@@ -248,7 +256,8 @@ class UserHandler(
 
     fun findOneStaff(req: ServerRequest) = ok().json().body(
         repository.findOneByRoles(req.pathVariable("login"), listOf(Role.STAFF, Role.STAFF_IN_PAUSE))
-            .map { it.anonymize() })
+            .map { it.anonymize() }
+    )
 
     fun findSpeakerByEventId(req: ServerRequest) =
         ok().json().body(
@@ -267,7 +276,6 @@ class UserHandler(
             .map { it.toDto(req.language()) }
     )
 }
-
 
 fun logoWebpUrl(url: String?) =
     when {

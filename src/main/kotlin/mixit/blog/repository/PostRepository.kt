@@ -54,7 +54,7 @@ class PostRepository(
         if (lang != null) {
             query.addCriteria(where("title.$lang").exists(true))
         }
-        return template.find<Post>(query).doOnComplete { logger.info("Load all posts")  }
+        return template.find<Post>(query).doOnComplete { logger.info("Load all posts") }
     }
 
     fun findFullText(criteria: List<String>): Flux<Post> {

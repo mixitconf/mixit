@@ -21,7 +21,7 @@ import org.springframework.web.server.WebFilterChain
 import org.springframework.web.server.WebSession
 import reactor.core.publisher.Mono
 import java.net.URI
-import java.util.*
+import java.util.Locale
 
 @Component
 class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRepository) : WebFilter {

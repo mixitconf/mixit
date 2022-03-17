@@ -15,7 +15,7 @@ class MixitProperties {
     val aes = Aes()
     val googleapi = GoogleApi()
     val feature = Feature()
-    
+
     class Drive {
         val fr = DriveDocuments()
         val en = DriveDocuments()

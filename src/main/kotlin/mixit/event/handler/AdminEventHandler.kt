@@ -2,7 +2,12 @@ package mixit.event.handler
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import mixit.MixitProperties
-import mixit.event.model.*
+import mixit.event.model.Event
+import mixit.event.model.EventOrganization
+import mixit.event.model.EventService
+import mixit.event.model.EventSponsoring
+import mixit.event.model.EventVolunteer
+import mixit.event.model.SponsorshipLevel
 import mixit.util.AdminUtils.toJson
 import mixit.util.AdminUtils.toLink
 import mixit.util.AdminUtils.toLinks
@@ -93,10 +98,8 @@ class AdminEventHandler(
                 )
         }
 
-
     fun createEventSponsoring(req: ServerRequest): Mono<ServerResponse> =
         adminEventSponsoring(req.pathVariable("eventId"))
-
 
     private fun adminEventSponsoring(eventId: String, eventSponsoring: EventSponsoring = EventSponsoring()) =
         ok().render(
@@ -117,17 +120,21 @@ class AdminEventHandler(
                 .map { it.toEvent() }
                 .flatMap { event ->
                     service
-                        .save(event.copy(sponsors = event.sponsors.map { sponsoring ->
-                            if (sponsoring.sponsorId == formData["sponsorId"] && sponsoring.level.name == formData["level"]) {
-                                EventSponsoring(
-                                    sponsoring.level,
-                                    sponsoring.sponsorId,
-                                    formData["subscriptionDate"]?.let { LocalDate.parse(it) } ?: LocalDate.now()
-                                )
-                            } else {
-                                sponsoring
-                            }
-                        }))
+                        .save(
+                            event.copy(
+                                sponsors = event.sponsors.map { sponsoring ->
+                                    if (sponsoring.sponsorId == formData["sponsorId"] && sponsoring.level.name == formData["level"]) {
+                                        EventSponsoring(
+                                            sponsoring.level,
+                                            sponsoring.sponsorId,
+                                            formData["subscriptionDate"]?.let { LocalDate.parse(it) } ?: LocalDate.now()
+                                        )
+                                    } else {
+                                        sponsoring
+                                    }
+                                }
+                            )
+                        )
                         .then(seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}"))
                 }
         }
@@ -162,8 +169,10 @@ class AdminEventHandler(
                 .flatMap { event ->
                     // We create a mutable list
                     service.save(
-                        event.copy(sponsors = event.sponsors
-                            .filterNot { it.sponsorId == formData["sponsorId"] && it.level.name == formData["level"] })
+                        event.copy(
+                            sponsors = event.sponsors
+                                .filterNot { it.sponsorId == formData["sponsorId"] && it.level.name == formData["level"] }
+                        )
                     )
                         .then(seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}"))
                 }
@@ -178,8 +187,8 @@ class AdminEventHandler(
                     req.pathVariable("eventId"),
                     event.sponsors
                         .first {
-                            it.sponsorId == req.pathVariable("sponsorId")
-                                    && it.level.name == req.pathVariable("level")
+                            it.sponsorId == req.pathVariable("sponsorId") &&
+                                it.level.name == req.pathVariable("level")
                         }
                 )
             }
@@ -314,5 +323,4 @@ class AdminEventHandler(
                         .then(seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}"))
                 }
         }
-
 }

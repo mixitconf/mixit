@@ -37,15 +37,17 @@ class TalkService(
 
     fun findByEventAndSlug(eventId: String, slug: String) =
         findAll().flatMap { talks ->
-            Mono.justOrEmpty(talks.first { it.slug == slug && it.event == eventId})
+            Mono.justOrEmpty(talks.first { it.slug == slug && it.event == eventId })
         }
 
     fun findBySpeakerId(speakerIds: List<String>, talkIdExcluded: String): Mono<List<CachedTalk>> =
         findAll().flatMap { talks ->
-            Mono.justOrEmpty(talks.filter { talk ->
-                val speakers = talk.speakers.map { it.login }
-                speakers.any { speakerIds.contains(it) } && talk.id != talkIdExcluded
-            })
+            Mono.justOrEmpty(
+                talks.filter { talk ->
+                    val speakers = talk.speakers.map { it.login }
+                    speakers.any { speakerIds.contains(it) } && talk.id != talkIdExcluded
+                }
+            )
         }
 
     fun findByEventAndTalkIds(eventId: String, talkIds: List<String>, topic: String? = null): Mono<List<CachedTalk>> =
@@ -79,5 +81,4 @@ class TalkService(
 
     fun deleteOne(id: String) =
         talkRepository.deleteOne(id).doOnSuccess { cache.invalidateAll() }
-
 }

@@ -72,5 +72,4 @@ class AdminPostHandler(private val service: BlogService, private val properties:
             )
             service.save(post).then(seeOther("${properties.baseUri}$LIST_URI"))
         }
-
 }

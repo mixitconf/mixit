@@ -26,7 +26,7 @@ fun CachedPost.toDto(language: Language) = PostDto(
     addedAt.formatDate(language),
     title[language] ?: "",
     (headline[language] ?: "").toHTML(),
-    (content[language] ?:"").toHTML()
+    (content[language] ?: "").toHTML()
 )
 
 fun Post.toDto(author: User, language: Language, searchTerms: List<String> = emptyList()) = PostDto(

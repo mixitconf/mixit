@@ -11,7 +11,13 @@ import mixit.talk.model.Language
 import mixit.talk.model.TalkService
 import mixit.user.handler.toDto
 import mixit.user.handler.toSponsorDto
-import mixit.util.*
+import mixit.util.currentNonEncryptedUserEmail
+import mixit.util.enumMatcher
+import mixit.util.extractFormData
+import mixit.util.language
+import mixit.util.permanentRedirect
+import mixit.util.seeOther
+import mixit.util.toVimeoPlayerUrl
 import mixit.util.validator.MarkdownValidator
 import mixit.util.validator.MaxLengthValidator
 import org.springframework.stereotype.Component
@@ -209,24 +215,24 @@ class TalkHandler(
                     language = Language.valueOf(formData["language"]!!)
                 )
 
-            // We want to control data to not save invalid things in our database
-            if (!maxLengthValidator.isValid(updatedTalk.title, 255)) {
-                errors["title"] = "talk.form.error.title.size"
-            }
-            if (!markdownValidator.isValid(updatedTalk.summary)) {
-                errors["summary"] = "talk.form.error.summary"
-            }
-            if (!markdownValidator.isValid(updatedTalk.description)) {
-                errors["description"] = "talk.form.error.description"
-            }
-            if (errors.isEmpty()) {
-                // If everything is Ok we save the user
-                service.save(updatedTalk.toTalk()).then(seeOther("${properties.baseUri}/me"))
-            } else {
-                editTalkViewDetail(req, updatedTalk, errors)
+                // We want to control data to not save invalid things in our database
+                if (!maxLengthValidator.isValid(updatedTalk.title, 255)) {
+                    errors["title"] = "talk.form.error.title.size"
+                }
+                if (!markdownValidator.isValid(updatedTalk.summary)) {
+                    errors["summary"] = "talk.form.error.summary"
+                }
+                if (!markdownValidator.isValid(updatedTalk.description)) {
+                    errors["description"] = "talk.form.error.description"
+                }
+                if (errors.isEmpty()) {
+                    // If everything is Ok we save the user
+                    service.save(updatedTalk.toTalk()).then(seeOther("${properties.baseUri}/me"))
+                } else {
+                    editTalkViewDetail(req, updatedTalk, errors)
+                }
             }
         }
-    }
 
     private fun loadSponsors(event: CachedEvent) =
         event.filterBySponsorLevel(SponsorshipLevel.GOLD).let { sponsors ->
@@ -244,4 +250,3 @@ class TalkHandler(
         permanentRedirect("${properties.baseUri}/${it.event}/${it.slug}")
     }
 }
-

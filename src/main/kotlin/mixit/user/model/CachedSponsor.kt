@@ -1,12 +1,12 @@
 package mixit.user.model
 
-import java.time.LocalDate
 import mixit.event.model.EventSponsoring
 import mixit.event.model.SponsorshipLevel
 import mixit.talk.model.Language
 import mixit.user.handler.EventSponsoringDto
 import mixit.user.handler.toSponsorDto
 import mixit.util.toHTML
+import java.time.LocalDate
 
 data class CachedSponsor(
     val login: String,

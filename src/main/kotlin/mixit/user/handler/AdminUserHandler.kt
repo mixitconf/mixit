@@ -55,7 +55,7 @@ class AdminUserHandler(
 
     fun editUser(req: ServerRequest): Mono<ServerResponse> =
         userRepository.findOne(req.pathVariable("login"))
-            .map { it.copy(photoUrl = if (it.emailHash !=null && it.photoUrl == Users.DEFAULT_IMG_URL ) null else it.photoUrl) }
+            .map { it.copy(photoUrl = if (it.emailHash != null && it.photoUrl == Users.DEFAULT_IMG_URL) null else it.photoUrl) }
             .flatMap(this::adminUser)
 
     fun adminDeleteUser(req: ServerRequest): Mono<ServerResponse> =
@@ -94,7 +94,7 @@ class AdminUserHandler(
                         company = formData["company"],
                         description = mapOf(
                             Pair(FRENCH, formData["description-fr"] ?: formData["description-en"] ?: ""),
-                            Pair(ENGLISH, formData["description-en"] ?: formData["description-fr"] ?: "" )
+                            Pair(ENGLISH, formData["description-en"] ?: formData["description-fr"] ?: "")
                         ),
                         role = Role.valueOf(formData["role"]!!),
                         links = formData["links"]!!.toLinks(objectMapper),
@@ -112,4 +112,3 @@ class AdminUserHandler(
             if (photoUrl.startsWith("images")) "/$photoUrl" else photoUrl
         }
 }
-

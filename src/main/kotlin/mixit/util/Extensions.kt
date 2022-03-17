@@ -5,7 +5,9 @@ import mixit.util.web.MixitWebFilter
 import org.commonmark.ext.autolink.AutolinkExtension
 import org.commonmark.parser.Parser
 import org.commonmark.renderer.html.HtmlRenderer
-import org.springframework.http.MediaType.*
+import org.springframework.http.MediaType.APPLICATION_JSON
+import org.springframework.http.MediaType.APPLICATION_XML
+import org.springframework.http.MediaType.TEXT_HTML
 import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
@@ -23,7 +25,8 @@ import java.time.ZonedDateTime
 import java.time.format.DateTimeFormatter
 import java.time.format.DateTimeFormatterBuilder
 import java.time.temporal.ChronoField
-import java.util.*
+import java.util.Base64
+import java.util.Locale
 import java.util.stream.Collectors
 import java.util.stream.IntStream
 import javax.crypto.Cipher
@@ -53,7 +56,6 @@ fun ServerRequest.currentNonEncryptedUserEmail(): Mono<String> =
     this.session().map {
         it.getAttribute(MixitWebFilter.SESSION_EMAIL_KEY) ?: ""
     }
-
 
 fun ServerResponse.BodyBuilder.json() = contentType(APPLICATION_JSON)
 

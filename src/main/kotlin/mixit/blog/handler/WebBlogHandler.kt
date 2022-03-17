@@ -25,7 +25,8 @@ class WebBlogHandler(val service: BlogService, val properties: MixitProperties) 
             .findBySlug(req.pathVariable("slug"), req.language())
             .flatMap { post ->
                 ok().render(
-                    POST_VIEW, mapOf(
+                    POST_VIEW,
+                    mapOf(
                         Pair("post", post.toDto(req.language())),
                         Pair("title", "blog.post.title|${post.title[req.language()]}")
                     )
@@ -38,8 +39,9 @@ class WebBlogHandler(val service: BlogService, val properties: MixitProperties) 
             .findAll()
             .flatMap { posts ->
                 ok().render(
-                    POST_LIST, mapOf(
-                        Pair("posts", posts.sortedByDescending {  it.addedAt }.map { it.toDto(req.language()) }),
+                    POST_LIST,
+                    mapOf(
+                        Pair("posts", posts.sortedByDescending { it.addedAt }.map { it.toDto(req.language()) }),
                         Pair("title", "blog.title")
                     )
                 )

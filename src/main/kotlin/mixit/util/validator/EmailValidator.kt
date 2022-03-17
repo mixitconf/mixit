@@ -1,9 +1,9 @@
 package mixit.util.validator
 
-import java.net.IDN
-import java.util.regex.Pattern
 import mixit.util.errors.EmailValidatorException
 import org.springframework.stereotype.Component
+import java.net.IDN
+import java.util.regex.Pattern
 
 /**
  * @author Dev-Mind <guillaume@dev-mind.fr>

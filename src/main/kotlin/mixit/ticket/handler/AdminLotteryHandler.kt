@@ -12,7 +12,7 @@ import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import reactor.core.publisher.Mono
 import reactor.kotlin.core.publisher.toFlux
-import java.util.*
+import java.util.Random
 
 @Component
 class AdminLotteryHandler(
@@ -44,7 +44,6 @@ class AdminLotteryHandler(
             }
             .collectList()
             .flatMap { adminTicketing(req) }
-
 
     fun adminTicketing(req: ServerRequest): Mono<ServerResponse> {
         val tickets = ticketRepository.findAll()

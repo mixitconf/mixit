@@ -1,11 +1,11 @@
 package mixit.user.handler
 
-import java.time.LocalDate
 import mixit.event.model.SponsorshipLevel
 import mixit.talk.model.Language
 import mixit.user.model.CachedSponsor
 import mixit.user.model.Link
 import mixit.util.toUrlPath
+import java.time.LocalDate
 
 data class EventSponsoringDto(
     val level: SponsorshipLevel,
@@ -22,7 +22,7 @@ data class SponsorDto(
     var description: String? = null,
     var links: List<Link> = emptyList(),
     val isAbsoluteLogo: Boolean = photoUrl.startsWith("http"),
-    val path:String = login.toUrlPath()
+    val path: String = login.toUrlPath()
 )
 
 fun CachedSponsor.toSponsorDto(language: Language = Language.FRENCH) =

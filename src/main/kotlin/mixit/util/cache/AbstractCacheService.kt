@@ -9,7 +9,6 @@ import java.time.Instant
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicReference
 
-
 interface Cached {
     val id: String
 }
@@ -48,7 +47,7 @@ abstract class CacheTemplate<T : Cached> {
 
     fun findAll(loader: () -> Mono<List<T>>): Mono<List<T>> =
         CacheMono
-            .lookup({ k -> Mono.justOrEmpty(cache.getIfPresent(k)).map { Signal.next(it) }}, "global")
+            .lookup({ k -> Mono.justOrEmpty(cache.getIfPresent(k)).map { Signal.next(it) } }, "global")
             .onCacheMissResume {
                 loader.invoke()
             }
@@ -61,13 +60,10 @@ abstract class CacheTemplate<T : Cached> {
     fun isEmpty(): Boolean =
         cache.asMap().entries.isEmpty()
 
-
     abstract fun findAll(): Mono<List<T>>
 
     fun invalidateCache() {
         cache.invalidateAll()
         refreshInstant.set(Instant.now())
     }
-
 }
-
