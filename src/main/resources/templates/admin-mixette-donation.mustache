@@ -71,7 +71,7 @@
                    type="number" name="quantity" value="{{donation.quantity}}"/>
         </div>
         <div class="col-12 mb-3 text-center">
-            <p class="mb-3"><small >Created by {{donation.createdBy}}{{#donation.updatedBy}}
+            <p class="mb-3"><small >Created by {{#donation.createdBy}}{{donation.createdBy}}{{/donation.createdBy}}{{#donation.updatedBy}}
                 updated by {{donation.updatedBy}}{{/donation.updatedBy}}</small></p>
             <input type="submit" class="btn btn-outline-primary expand" value="{{#i18n}}common.actions.save{{/i18n}}"/>
         </div>
