@@ -26,6 +26,7 @@ import org.springframework.web.reactive.function.server.body
 import org.springframework.web.reactive.function.server.queryParamOrNull
 import reactor.core.publisher.Mono
 import reactor.kotlin.core.publisher.switchIfEmpty
+import java.time.Duration
 
 @Component
 class AdminMixetteHandler(
@@ -54,7 +55,7 @@ class AdminMixetteHandler(
      */
     fun adminDonorDonations(req: ServerRequest): Mono<ServerResponse> =
         adminGroupDonations(TEMPLATE_BY_USER_LIST) {
-            findDonorByEncryptedEmail(it.encryptedUserEmail).block() ?: MixetteUserDonationDto(
+            findDonorByEncryptedEmail(it.encryptedUserEmail).block(Duration.ofSeconds(10)) ?: MixetteUserDonationDto(
                 name = "",
                 login = it.userLogin,
                 email = cryptographer.decrypt(it.encryptedUserEmail)!!,
@@ -71,7 +72,7 @@ class AdminMixetteHandler(
                 .map {
                     MixetteOrganizationDonationDto(name = it.organizationName, login = it.login)
                 }
-                .block() ?: MixetteOrganizationDonationDto(name = "", login = donation.organizationLogin)
+                .block(Duration.ofSeconds(10)) ?: MixetteOrganizationDonationDto(name = "", login = donation.organizationLogin)
         }
 
     private fun <T : MixetteDonationDto> adminGroupDonations(

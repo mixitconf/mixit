@@ -16,6 +16,7 @@ import org.springframework.data.mongodb.core.query.Query
 import org.springframework.data.mongodb.core.query.isEqualTo
 import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
+import java.time.Duration
 
 @Repository
 class EventRepository(
@@ -29,7 +30,7 @@ class EventRepository(
         if (count().block() == 0L) {
             val eventsResource = ClassPathResource("data/events.json")
             val events: List<Event> = objectMapper.readValue(eventsResource.inputStream)
-            events.forEach { save(it).block() }
+            events.forEach { save(it).block(Duration.ofSeconds(10)) }
             logger.info("Events data initialization complete")
         }
     }

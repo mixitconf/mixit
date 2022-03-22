@@ -18,6 +18,7 @@ import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
+import java.time.Duration
 
 @Repository
 class FavoriteRepository(
@@ -32,7 +33,7 @@ class FavoriteRepository(
         if (count().block() == 0L) {
             val favoriteResource = ClassPathResource("data/favorite.json")
             val favorites: List<Favorite> = objectMapper.readValue(favoriteResource.inputStream)
-            favorites.forEach { save(it).block() }
+            favorites.forEach { save(it).block(Duration.ofSeconds(10)) }
             logger.info("Favorite data initialization complete")
         }
     }

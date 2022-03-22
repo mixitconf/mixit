@@ -16,6 +16,7 @@ import org.springframework.context.event.EventListener
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Mono
 import reactor.kotlin.core.publisher.switchIfEmpty
+import java.time.Duration
 
 @Service
 class EventService(
@@ -45,7 +46,7 @@ class EventService(
                     event.sponsors.map { it.login }.contains(userUpdateEvent.user.login)
                 }
             }
-            .block()
+            .block(Duration.ofSeconds(10))
             .also {
                 if (it != null && it) {
                     invalidateCache()

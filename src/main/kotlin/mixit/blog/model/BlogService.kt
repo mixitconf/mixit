@@ -11,6 +11,7 @@ import org.springframework.context.event.EventListener
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Mono
 import reactor.kotlin.core.publisher.switchIfEmpty
+import java.time.Duration
 
 @Service
 class BlogService(private val repository: PostRepository, private val userService: UserService) : CacheTemplate<CachedPost>() {
@@ -35,7 +36,7 @@ class BlogService(private val repository: PostRepository, private val userServic
                     blog.author.login == userUpdateEvent.user.login
                 }
             }
-            .block()
+            .block(Duration.ofSeconds(10))
             .also {
                 if (it != null && it) {
                     invalidateCache()
