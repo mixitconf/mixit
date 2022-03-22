@@ -1327,6 +1327,16 @@
                 "level": "GOLD",
                 "sponsorId": "dataiku",
                 "subscriptionDate": "2022-03-17"
+            },
+            {
+                "level": "PARTY",
+                "sponsorId": "lepermislibre",
+                "subscriptionDate": "2022-03-18"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "prismea",
+                "subscriptionDate": "2022-03-22"
             }
         ],
         "start": "2022-05-24",

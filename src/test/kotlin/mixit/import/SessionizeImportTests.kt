@@ -2,11 +2,6 @@ package mixit.import
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.jacksonTypeRef
-import java.io.File
-import java.io.FileOutputStream
-import java.io.InputStream
-import java.net.URL
-import java.util.UUID
 import mixit.security.model.Cryptographer
 import mixit.talk.model.Language
 import mixit.talk.model.Talk
@@ -20,6 +15,12 @@ import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.core.io.ClassPathResource
+import java.io.File
+import java.io.FileOutputStream
+import java.io.InputStream
+import java.net.URL
+import java.time.Duration
+import java.util.UUID
 
 inline fun <reified T> ObjectMapper.readValue(src: InputStream): T = readValue(src, jacksonTypeRef<T>())
 
@@ -52,7 +53,7 @@ class SessionizeImportTests(
         val speakersToPersist: MutableList<User> = mutableListOf()
 
         papercallSpeakers.forEach { papercallSpeaker ->
-            val user = userRepository.findByNonEncryptedEmail(papercallSpeaker.email).block()
+            val user = userRepository.findByNonEncryptedEmail(papercallSpeaker.email).block(Duration.ofSeconds(10))
             if (user != null) {
                 val updatedUser = updateUser(user, papercallSpeaker)
                 speakersToPersist.add(updatedUser)
@@ -95,11 +96,11 @@ class SessionizeImportTests(
 
     private fun createUser(papercallSpeaker: PapercallProfile): User {
         var login = papercallSpeaker.email.substring(0, papercallSpeaker.email.indexOf("@"))
-        val userCheck = userRepository.findOne(login).block()
+        val userCheck = userRepository.findOne(login).block(Duration.ofSeconds(10))
         if (userCheck != null) {
             println("Login ${userCheck.login} already exist: try to create one with suffix")
             login += UUID.randomUUID().toString()
-            val anotherUserCheck = userRepository.findOne(login).block()
+            val anotherUserCheck = userRepository.findOne(login).block(Duration.ofSeconds(10))
             if (anotherUserCheck != null) {
                 println("Login with suffix ${anotherUserCheck.login} already exist aborting import")
                 throw IllegalArgumentException()
