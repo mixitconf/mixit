@@ -15,6 +15,7 @@ import mixit.util.cache.CacheZone
 import org.springframework.context.event.EventListener
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Mono
+import reactor.kotlin.core.publisher.switchIfEmpty
 
 @Service
 class EventService(
@@ -36,6 +37,7 @@ class EventService(
     @EventListener
     fun handleUserUpdate(userUpdateEvent: UserUpdateEvent) {
         findAll()
+            .switchIfEmpty { Mono.just(emptyList()) }
             .map { events ->
                 events.any { event ->
                     event.organizations.map { it.login }.contains(userUpdateEvent.user.login)
