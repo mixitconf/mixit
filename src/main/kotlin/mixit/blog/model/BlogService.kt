@@ -29,6 +29,7 @@ class BlogService(private val repository: PostRepository, private val userServic
     @EventListener
     fun handleUserUpdate(userUpdateEvent: UserUpdateEvent) {
         findAll()
+            .switchIfEmpty { Mono.just(emptyList()) }
             .map { blogs ->
                 blogs.any { blog ->
                     blog.author.login == userUpdateEvent.user.login

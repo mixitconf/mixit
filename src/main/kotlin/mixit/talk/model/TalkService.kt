@@ -59,6 +59,7 @@ class TalkService(
     @EventListener
     fun handleUserUpdate(userUpdateEvent: UserUpdateEvent) {
         findAll()
+            .switchIfEmpty { Mono.just(emptyList()) }
             .map { talks ->
                 talks.any { talk ->
                     talk.speakers.map { it.login }.contains(userUpdateEvent.user.login)
