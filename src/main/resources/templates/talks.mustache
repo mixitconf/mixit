@@ -95,7 +95,7 @@
                                 {{#speakers}}
                                     <li class="menu-text">
                                         <div class="mxt-img-avatar__wrapper"><a href="/user/{{login}}"><img
-                                                data-src="{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{^photoUrl}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/photoUrl}}"
+                                                data-src="{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{^photoUrl}}https://www.gravatar.com/avatar/{{#emailHash}}{{emailHash}}{{/emailHash}}?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/photoUrl}}"
                                             class="mxt-img-avatar__speaker mxt-img--lazyload"></a></div>
                                         <span><a href="/user/{{login}}">{{firstname}}&nbsp;{{lastname}}</a></span>
                                     </li>
