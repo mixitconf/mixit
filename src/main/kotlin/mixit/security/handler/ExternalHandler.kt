@@ -85,7 +85,7 @@ class ExternalHandler(
                 authenticationService.searchUserByEmailOrCreateHimFromTicket(it)
                     .flatMap { user ->
                         // If user is found we send him a token
-                        authenticationService.generateAndSendToken(user, req.locale(), generateExternalToken = true)
+                        authenticationService.generateAndSendToken(user, req.locale(), it, generateExternalToken = true)
                             // if token is sent we return a reponse to the caller
                             .flatMap { TOKEN_SENT.response() }
                             // An error can occur when email is sent

@@ -135,7 +135,7 @@ class AuthenticationHandler(
         }
 
     private fun generateAndSendToken(req: ServerRequest, user: User, nonEncryptedMail: String): Mono<ServerResponse> =
-        authenticationService.generateAndSendToken(user, req.locale())
+        authenticationService.generateAndSendToken(user, req.locale(), nonEncryptedMail)
             // if token is sent we call the the screen where user can type this token
             .flatMap { displayView(LoginPage.CONFIRMATION, mapOf(Pair("email", nonEncryptedMail))) }
             // An error can occur when email is sent
