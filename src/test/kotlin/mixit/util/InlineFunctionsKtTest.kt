@@ -15,6 +15,6 @@ internal class InlineFunctionsKtTest {
             Pair(Role.VOLUNTEER, false)
         )
         val user = User().copy(role = Role.USER)
-        assertEquals(enumMatcher(user) { it.role }, expected)
+        assertEquals(enumMatcher(user) { it!!.role }, expected)
     }
 }
