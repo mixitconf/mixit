@@ -27,8 +27,8 @@ class UserService(
         findAll().flatMap { elements -> Mono.justOrEmpty(elements.firstOrNull { it.email == email }) }
 
     fun findOneByNonEncryptedEmail(email: String): Mono<CachedUser> =
-        cryptographer.encrypt(email)!!.let {
-            findAll().flatMap { elements -> Mono.justOrEmpty(elements.firstOrNull { it.email == email }) }
+        cryptographer.encrypt(email)!!.let { encryptedEmail ->
+            findAll().flatMap { elements -> Mono.justOrEmpty(elements.firstOrNull { it.email == encryptedEmail }) }
         }
 
     fun findByRoles(vararg roles: Role): Mono<List<CachedUser>> =
