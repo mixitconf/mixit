@@ -11,7 +11,6 @@ import mixit.user.model.Role
 import mixit.user.model.User
 import mixit.user.repository.UserRepository
 import mixit.util.encodeToMd5
-import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.core.io.ClassPathResource
@@ -31,7 +30,7 @@ class SessionizeImportTests(
     @Autowired val cryptographer: Cryptographer
 ) {
 
-    @Test
+    // @Test
     fun `load speakers`() {
 
         initializeFolder()
