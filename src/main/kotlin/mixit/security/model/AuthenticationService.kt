@@ -126,8 +126,13 @@ class AuthenticationService(
      * the email it's OK. If he retries a login a new token is sent. Be careful email service can throw
      * an EmailSenderException
      */
-    fun generateAndSendToken(user: User, locale: Locale, generateExternalToken: Boolean = false): Mono<User> =
-        user.generateNewToken(generateExternalToken).let { newUser ->
+    fun generateAndSendToken(user: User,
+                             locale: Locale,
+                             nonEncryptedMail: String,
+                             generateExternalToken: Boolean = false): Mono<User> =
+        // Sometimes we can have a email hash in the DB but not the email (for legacy users). So in this case
+        // we store the email
+        user.generateNewToken(cryptographer.encrypt(nonEncryptedMail)!!, generateExternalToken).let { newUser ->
             try {
                 if (!properties.feature.email) {
                     logger.info("A token ${newUser.token} was sent by email")
@@ -145,5 +150,5 @@ class AuthenticationService(
     fun clearToken(nonEncryptedMail: String): Mono<User> =
         userRepository
             .findByNonEncryptedEmail(nonEncryptedMail)
-            .flatMap { user -> user.generateNewToken().let { userRepository.save(it) } }
+            .flatMap { user -> user.generateNewToken(nonEncryptedMail).let { userRepository.save(it) } }
 }

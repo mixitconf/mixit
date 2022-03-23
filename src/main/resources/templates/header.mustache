@@ -45,9 +45,11 @@
                         {{#volunteer}}<li class="nav-item">
                             <a href="{{localePrefix}}/volunteer" class="nav-link mxt-nav-link">{{#i18n}}header.menu.admin{{/i18n}}</a>
                         </li>{{/volunteer}}
+                        {{#hasFeatureLottery}}
                         <li class="nav-item">
                             <a href="{{localePrefix}}/ticketing" class="nav-link mxt-nav-link">{{#i18n}}header.menu.ticketing{{/i18n}}</a>
                         </li>
+                        {{/hasFeatureLottery}}
                         <li class="nav-item">
                             <a href="{{localePrefix}}/2021" class="nav-link mxt-nav-link">{{#i18n}}header.menu.talks{{/i18n}}</a>
                         </li>

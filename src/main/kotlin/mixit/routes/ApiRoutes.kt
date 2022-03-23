@@ -24,7 +24,7 @@ class ApiRoutes(
     private val externalHandler: ExternalHandler,
     private val userHandler: UserHandler,
     private val ticketHandler: AdminTicketHandler,
-    private val mixetteHandler: AdminMixetteHandler
+    private val adminMixetteHandler: AdminMixetteHandler
 ) {
 
     @Bean
@@ -41,7 +41,7 @@ class ApiRoutes(
             }
 
             "/admin".nest {
-                GET("/mixette", mixetteHandler::findAll)
+                GET("/mixette", adminMixetteHandler::findAll)
                 GET("/ticket", ticketHandler::findAll)
                 GET("/lottery", lotteryHandler::findAll)
                 GET("/favorite", favoriteHandler::findAll)

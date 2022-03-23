@@ -5,6 +5,7 @@ import mixit.blog.repository.PostRepository
 import mixit.event.model.EventService
 import mixit.event.repository.EventRepository
 import mixit.favorite.repository.FavoriteRepository
+import mixit.mixette.repository.MixetteDonationRepository
 import mixit.talk.model.TalkService
 import mixit.talk.repository.TalkRepository
 import mixit.ticket.repository.FinalTicketRepository
@@ -27,6 +28,7 @@ class DatabaseInitializerConfig {
         postRepository: PostRepository,
         favoriteRepository: FavoriteRepository,
         finalTicketRepository: FinalTicketRepository,
+        mixetteDonationRepository: MixetteDonationRepository,
         eventService: EventService,
         blogService: BlogService,
         talkService: TalkService,
@@ -40,6 +42,7 @@ class DatabaseInitializerConfig {
         ticketRepository.initData()
         favoriteRepository.initData()
         finalTicketRepository.initData()
+        mixetteDonationRepository.initData()
 
         userService.initializeCache()
         eventService.initializeCache()

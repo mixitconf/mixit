@@ -1,8 +1,12 @@
 package mixit.mixette.repository
 
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.mixette.model.MixetteDonation
 import org.slf4j.LoggerFactory
+import org.springframework.core.io.ClassPathResource
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
+import org.springframework.data.mongodb.core.count
 import org.springframework.data.mongodb.core.find
 import org.springframework.data.mongodb.core.findAll
 import org.springframework.data.mongodb.core.findById
@@ -12,11 +16,26 @@ import org.springframework.data.mongodb.core.query.isEqualTo
 import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
+import java.time.Instant
 
 @Repository
-class MixetteDonationRepository(private val template: ReactiveMongoTemplate) {
+class MixetteDonationRepository(
+    private val template: ReactiveMongoTemplate,
+    private val objectMapper: ObjectMapper
+) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
+
+    fun initData() {
+        if (count().block() == 0L) {
+            val usersResource = ClassPathResource("data/mixette.json")
+            val donations: List<MixetteDonation> = objectMapper.readValue(usersResource.inputStream)
+            donations.forEach { insert(it).block() }
+            logger.info("Mixette data initialization complete")
+        }
+    }
+
+    fun count() = template.count<MixetteDonation>()
 
     fun insert(donation: MixetteDonation) =
         template.insert(donation).doOnSuccess { _ -> logger.info("Save new Mixette donation $donation") }
@@ -29,6 +48,9 @@ class MixetteDonationRepository(private val template: ReactiveMongoTemplate) {
 
     fun findAllByYear(year: String): Flux<MixetteDonation> =
         template.find(Query(Criteria.where("year").isEqualTo(year)))
+
+    fun findByYearAfterNow(year: String): Flux<MixetteDonation> =
+        template.find(Query(Criteria.where("year").isEqualTo(year).and("createdBy").gt(Instant.now())))
 
     fun findOne(id: String) =
         template.findById<MixetteDonation>(id)

@@ -314,7 +314,4 @@ class AdminMixetteHandler(
                 .deleteOne(formData["id"]!!)
                 .then(seeOther("${properties.baseUri}$LIST_URI_FOR_ADMIN"))
         }
-
-    val CachedUser.organizationName
-        get() = company ?: "$firstname $lastname"
 }

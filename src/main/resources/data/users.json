@@ -19101,9 +19101,18 @@
         "firstname": "framasoft",
         "lastname": "framasoft",
         "legacyId": null,
-        "links": [],
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/framasoft"
+            },
+            {
+                "name": "Blog",
+                "url": "http://www.framasoft.org/"
+            }
+        ],
         "login": "framasoft",
-        "photoUrl": null,
+        "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Framasoft_Logo.svg",
         "role": "USER",
         "token": "",
         "tokenExpiration": "2018-01-01T00:00:00",

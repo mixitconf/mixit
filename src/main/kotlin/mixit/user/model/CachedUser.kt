@@ -65,4 +65,8 @@ data class CachedUser(
             links,
             legacyId
         )
+
+    val organizationName
+        get() = company ?: "$firstname $lastname"
+
 }

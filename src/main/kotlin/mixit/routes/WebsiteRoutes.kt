@@ -13,6 +13,7 @@ import mixit.event.model.Event
 import mixit.event.model.SponsorshipLevel
 import mixit.mailing.handler.MailingHandler
 import mixit.mixette.handler.AdminMixetteHandler
+import mixit.mixette.handler.MixetteHandler
 import mixit.security.handler.AuthenticationHandler
 import mixit.talk.handler.AdminTalkHandler
 import mixit.talk.handler.TalkHandler
@@ -33,6 +34,7 @@ import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.DependsOn
 import org.springframework.core.io.ClassPathResource
 import org.springframework.http.MediaType.APPLICATION_FORM_URLENCODED
+import org.springframework.http.MediaType.TEXT_EVENT_STREAM
 import org.springframework.http.MediaType.TEXT_HTML
 import org.springframework.http.MediaType.TEXT_PLAIN
 import org.springframework.web.reactive.function.server.RenderingResponse
@@ -61,6 +63,7 @@ class WebsiteRoutes(
     private val lotteryHandler: LotteryHandler,
     private val ticketHandler: AdminTicketHandler,
     private val mailingHandler: MailingHandler,
+    private val mixetteHandler: MixetteHandler,
     private val userHandler: UserHandler,
     private val messageSource: MessageSource,
     private val properties: MixitProperties,
@@ -72,6 +75,10 @@ class WebsiteRoutes(
     @Bean
     fun websiteRouter() = router {
         GET("/blog/feed", blogHandler::feed)
+
+        accept(TEXT_EVENT_STREAM).nest {
+            GET("/mixette/dashboard/sse", mixetteHandler::mixetteRealTime)
+        }
 
         accept(TEXT_HTML).nest {
             GET("/") {
@@ -108,6 +115,7 @@ class WebsiteRoutes(
             GET("/codeofconduct", aboutHandler::codeConductView)
             GET("/blog", blogHandler::findAllView)
             GET("/blog/{slug}", blogHandler::findOneView)
+            GET("/mixette/dashboard", mixetteHandler::mixette)
 
             // Authentication
             GET("/login", authenticationHandler::loginView)

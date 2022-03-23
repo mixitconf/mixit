@@ -42,7 +42,8 @@ enum class Role {
     VOLUNTEER
 }
 
-fun User.generateNewToken(generateExternalToken: Boolean = false) = this.copy(
+fun User.generateNewToken(encryptedEmail: String, generateExternalToken: Boolean = false) = this.copy(
+    email = encryptedEmail,
     tokenExpiration = LocalDateTime.now().plusHours(48),
     token = UUID.randomUUID().toString().substring(0, 14).replace("-", ""),
     externalAppToken = if (generateExternalToken) UUID.randomUUID().toString().substring(0, 14)
