@@ -164,6 +164,7 @@ class WebsiteRoutes(
                 GET("/cache", cacheHandler::view)
                 GET("/lottery", adminLotteryHandler::adminTicketing)
                 GET("/ticket", ticketHandler::ticketing)
+                GET("/ticket/print", ticketHandler::printTicketing)
                 GET("/ticket/edit/{number}", ticketHandler::editTicket)
                 GET("/ticket/create", ticketHandler::createTicket)
                 GET("/mailings", mailingHandler::listMailing)

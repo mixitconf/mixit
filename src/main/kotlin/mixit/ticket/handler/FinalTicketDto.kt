@@ -4,7 +4,7 @@ import mixit.security.model.Cryptographer
 import mixit.ticket.model.FinalTicket
 import java.time.Instant
 
-class FinalTicketDto(
+data class FinalTicketDto(
     val email: String,
     val number: String,
     val firstname: String?,

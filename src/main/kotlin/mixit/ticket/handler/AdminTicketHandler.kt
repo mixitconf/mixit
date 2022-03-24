@@ -29,6 +29,7 @@ class AdminTicketHandler(
 
     companion object {
         const val TEMPLATE_LIST = "admin-ticket"
+        const val TEMPLATE_PRINT = "admin-ticket-print"
         const val TEMPLATE_EDIT = "admin-ticket-edit"
         const val TEMPLATE_ERROR = "ticket-error"
         const val LIST_URI = "/admin/ticket"
@@ -42,6 +43,23 @@ class AdminTicketHandler(
             mapOf(
                 Pair("title", "admin.ticket.title"),
                 Pair("tickets", service.findAll().map { tickets -> tickets.map { it.toDto(cryptographer) } })
+            )
+        )
+
+    fun printTicketing(req: ServerRequest) =
+        ok().render(
+            if (properties.feature.lotteryResult) TEMPLATE_PRINT else throw NotFoundException(),
+            mapOf(
+                Pair("title", "admin.ticket.title"),
+                Pair("tickets", service.findAll().map { tickets ->
+                    tickets.map { ticket ->
+                        ticket.toDto(cryptographer)
+                            .copy(
+                                firstname = ticket.firstname?.uppercase() ?: ticket.lastname.uppercase(),
+                                lastname = if (ticket.firstname == null) "" else ticket.lastname.uppercase()
+                            )
+                    }
+                })
             )
         )
 
