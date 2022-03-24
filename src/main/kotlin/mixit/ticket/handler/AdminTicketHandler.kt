@@ -1,6 +1,7 @@
 package mixit.ticket.handler
 
 import mixit.MixitProperties
+import mixit.security.MixitWebFilter
 import mixit.security.model.Cryptographer
 import mixit.ticket.model.FinalTicket
 import mixit.ticket.model.TicketService
@@ -9,7 +10,6 @@ import mixit.util.errors.NotFoundException
 import mixit.util.extractFormData
 import mixit.util.json
 import mixit.util.seeOther
-import mixit.util.web.MixitWebFilter
 import org.springframework.dao.DuplicateKeyException
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest

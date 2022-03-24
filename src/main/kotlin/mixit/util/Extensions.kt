@@ -1,7 +1,7 @@
 package mixit.util
 
+import mixit.security.MixitWebFilter
 import mixit.talk.model.Language
-import mixit.util.web.MixitWebFilter
 import org.commonmark.ext.autolink.AutolinkExtension
 import org.commonmark.parser.Parser
 import org.commonmark.renderer.html.HtmlRenderer
