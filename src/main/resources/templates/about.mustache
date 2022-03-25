@@ -29,7 +29,25 @@
             </div>
         </div>
     {{/staff}}
-
+    {{#hasVolunteers}}
+        <h2 class="subheader mt-5 text-center">{{#i18n}}about.volunteers{{/i18n}}</h2><br />
+        {{#volunteers}}
+            <div class="row">
+                <div class="col-12 col-md-4 text-center">
+                    <div class="mxt-img-avatar__wrapper"><img src="https://www.gravatar.com/avatar/{{emailHash}}?size=400" class="mxt-img-avatar__speaker" alt="{{firstname}} {{lastname}} photo"/></div>
+                </div>
+                <div class="col-12 col-md-8">
+                    <h3>{{firstname}} {{lastname}}</h3>
+                    {{description}}
+                    <ul class="mxt-wrapper-list-inline">
+                        {{#links}}
+                            <li><a href="{{url}}" target="_blank">{{name}}</a></li>
+                        {{/links}}
+                    </ul>
+                </div>
+            </div>
+        {{/volunteers}}
+    {{/hasVolunteers}}
     <h2 class="subheader mt-5 text-center">{{#i18n}}about.inactiveteamtitle{{/i18n}}</h2><br />
     {{#inactiveStaff}}
         <div class="row">

@@ -1,6 +1,9 @@
 package mixit.user.model
 
 import mixit.talk.model.Language
+import mixit.user.handler.UserDto
+import mixit.user.handler.logoType
+import mixit.user.handler.logoWebpUrl
 import mixit.util.toHTML
 
 data class CachedStaff(
@@ -23,4 +26,20 @@ data class CachedStaff(
         user.links,
         user.role
     )
+
+    fun toDto(language: Language) =
+        UserDto(
+            login,
+            firstname,
+            lastname,
+            null,
+            "",
+            description[language]?.toHTML() ?: "",
+            emailHash,
+            photoUrl,
+            role,
+            links,
+            logoType(photoUrl),
+            logoWebpUrl(photoUrl)
+        )
 }
