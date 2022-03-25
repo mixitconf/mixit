@@ -1,5 +1,7 @@
 package mixit.about
 
+import mixit.event.handler.AdminEventHandler
+import mixit.event.model.EventService
 import mixit.user.model.Role
 import mixit.user.model.UserService
 import mixit.util.language
@@ -8,22 +10,28 @@ import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 
 @Component
-class AboutHandler(val userService: UserService) {
+class AboutHandler(val userService: UserService, val eventService: EventService) {
 
     fun findAboutView(req: ServerRequest) = userService
         .findByRoles(Role.STAFF, Role.STAFF_IN_PAUSE)
         .flatMap { users ->
-            val staff = users.filter { it.role == Role.STAFF }.shuffled()
-            val staffInPause = users.filter { it.role == Role.STAFF_IN_PAUSE }.shuffled()
-
-            ok().render(
-                "about",
-                mapOf(
-                    Pair("staff", staff.map { it.toDto(req.language()) }),
-                    Pair("inactiveStaff", staffInPause.map { it.toDto(req.language()) }),
-                    Pair("title", "about.title")
-                )
-            )
+            eventService
+                .findByYear(AdminEventHandler.CURRENT_EVENT.toInt())
+                .flatMap { event ->
+                    val staff = users.filter { it.role == Role.STAFF }.shuffled()
+                    val staffInPause = users.filter { it.role == Role.STAFF_IN_PAUSE }.shuffled()
+                    val volunteers = event.volunteers.shuffled()
+                    ok().render(
+                        "about",
+                        mapOf(
+                            Pair("volunteers", volunteers.map { it.toDto(req.language()) }),
+                            Pair("hasVolunteers", volunteers.isNotEmpty()),
+                            Pair("staff", staff.map { it.toDto(req.language()) }),
+                            Pair("inactiveStaff", staffInPause.map { it.toDto(req.language()) }),
+                            Pair("title", "about.title")
+                        )
+                    )
+            }
         }
 
     fun faqView(req: ServerRequest) =

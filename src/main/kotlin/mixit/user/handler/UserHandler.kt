@@ -2,6 +2,7 @@ package mixit.user.handler
 
 import mixit.MixitProperties
 import mixit.event.handler.AdminEventHandler
+import mixit.security.MixitWebFilter.Companion.SESSION_EMAIL_KEY
 import mixit.security.model.Cryptographer
 import mixit.talk.model.Language
 import mixit.talk.model.TalkService
@@ -22,7 +23,6 @@ import mixit.util.validator.EmailValidator
 import mixit.util.validator.MarkdownValidator
 import mixit.util.validator.MaxLengthValidator
 import mixit.util.validator.UrlValidator
-import mixit.util.web.MixitWebFilter.Companion.SESSION_EMAIL_KEY
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse

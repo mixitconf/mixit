@@ -1,0 +1,63 @@
+<style>
+    @media print {
+        @page {
+            margin: 1cm;
+        }
+
+        body {
+            width: 21cm;
+            height: 29.7cm;
+        }
+    }
+
+    body {
+        width: 21cm;
+        height: 29.7cm;
+        margin: 10px;
+        font-family: "Lato Light", Arial;
+    }
+
+    .grid-container {
+        border: 1px solid #232323;
+        display: grid;
+        column-gap: 0.5cm;
+        row-gap: 0.5cm;
+        grid-template-columns: auto auto auto;
+    }
+
+    .grid-cell {
+        border: 1px solid #eeeeee;
+        background-color: #0dcaf0;
+        page-break-inside: avoid;
+        text-align: center;
+        width: 6.4cm;
+        max-width: 6.4cm;
+        max-height: 5cm;
+    }
+</style>
+<script src="/js/qrcode.min.js"></script>
+
+<div class="grid-container">
+    {{#tickets}}
+        <div class="grid-cell">
+            <div style="font-size: 33px; font-family: Lato">{{ firstname }}</div>
+            <div style="font-size: 25px">{{ lastname }}</div>
+            <div style="height: 2cm;width: 2cm; text-align: center;margin: auto" id="{{ number }}"></div>
+            <script>
+                document.getElementById('{{ number }}').innerHTML = new QRCode({
+                    content: 'https://mixitconf.org/volunteer/mixette-donation/create/{{ number }}',
+                    container: 'svg-viewbox',
+                    join: true,
+                    ecl: 'L'
+                }).svg();
+                // QRCode.toCanvas(
+                //         ,
+                //         ,
+                //         function (error) {
+                //             if (error) console.error(error)
+                //         })
+            </script>
+        </div>
+    {{/tickets}}
+</div>
+{{^tickets}}No ticket to print for the moment{{/tickets}}

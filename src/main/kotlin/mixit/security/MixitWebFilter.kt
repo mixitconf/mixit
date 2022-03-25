@@ -1,4 +1,4 @@
-package mixit.util.web
+package mixit.security
 
 import com.google.common.annotations.VisibleForTesting
 import mixit.MixitProperties
@@ -27,7 +27,7 @@ import java.util.Locale
 class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRepository) : WebFilter {
 
     companion object {
-        const val AUTENT_COOKIE = "XSRF-TOKEN"
+        const val AUTHENT_COOKIE = "XSRF-TOKEN"
         val BOTS = arrayOf("Google", "Bingbot", "Qwant", "Bingbot", "Slurp", "DuckDuckBot", "Baiduspider")
         val WEB_RESSOURCE_EXTENSIONS = arrayOf(".css", ".js", ".svg", ".jpg", ".png", ".webp", ".webapp", ".pdf", ".icns", ".ico", ".html")
 
@@ -97,7 +97,7 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
                 // If admin page we see if user is a staff member
                 if (isAnAdminUrl(uriPath) && user.role != Role.STAFF) {
                     redirect(exchange, "/")
-                } else if (isAVolunteerUrl(uriPath) && user.role != Role.VOLUNTEER) {
+                } else if (isAVolunteerUrl(uriPath) && !listOf(Role.VOLUNTEER, Role.STAFF).contains(user.role)) {
                     redirect(exchange, "/")
                 } else {
                     chain.filter(exchange.mutate().request(req).build())
@@ -110,7 +110,7 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
 
     @VisibleForTesting
     fun readCredentialsFromCookie(request: ServerHttpRequest): Credential? =
-        runCatching { (request.cookies).get(AUTENT_COOKIE)?.first()?.value?.decodeFromBase64()?.split(":")?.let { if (it.size != 2) null else Credential(it[0], it[1]) } }
+        runCatching { (request.cookies).get(AUTHENT_COOKIE)?.first()?.value?.decodeFromBase64()?.split(":")?.let { if (it.size != 2) null else Credential(it[0], it[1]) } }
             .getOrNull()
 
     @VisibleForTesting

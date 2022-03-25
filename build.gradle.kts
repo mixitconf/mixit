@@ -92,13 +92,9 @@ tasks.register<NpmTask>("compileSass") {
     outputs.dir("${buildDir}/resources/main/static/css")
 }
 
-/**
- * For the moment website use CSS foundation framework based on Jquery. We need to copy vendor libs in the ressources
- * directory
- */
 tasks.register<Copy>("copyJsVendors") {
     dependsOn(tasks.npmInstall)
-    from("node_modules/bootstrap/dist/js/bootstrap.bundle.js")
+    from("node_modules/bootstrap/dist/js/bootstrap.bundle.js","node_modules/qrcode-svg/dist/qrcode.min.js")
     into(layout.buildDirectory.dir("resources/main/static/js"))
 }
 

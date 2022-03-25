@@ -1,6 +1,10 @@
 package mixit.security.handler
 
 import mixit.MixitProperties
+import mixit.security.MixitWebFilter.Companion.SESSION_EMAIL_KEY
+import mixit.security.MixitWebFilter.Companion.SESSION_LOGIN_KEY
+import mixit.security.MixitWebFilter.Companion.SESSION_ROLE_KEY
+import mixit.security.MixitWebFilter.Companion.SESSION_TOKEN_KEY
 import mixit.security.model.AuthenticationService
 import mixit.security.model.Cryptographer
 import mixit.user.model.User
@@ -10,10 +14,6 @@ import mixit.util.errors.EmailValidatorException
 import mixit.util.extractFormData
 import mixit.util.locale
 import mixit.util.validator.EmailValidator
-import mixit.util.web.MixitWebFilter.Companion.SESSION_EMAIL_KEY
-import mixit.util.web.MixitWebFilter.Companion.SESSION_LOGIN_KEY
-import mixit.util.web.MixitWebFilter.Companion.SESSION_ROLE_KEY
-import mixit.util.web.MixitWebFilter.Companion.SESSION_TOKEN_KEY
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse

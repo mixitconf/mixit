@@ -2,13 +2,12 @@ package mixit.integration
 
 import com.ninjasquad.springmockk.SpykBean
 import io.mockk.every
-import java.time.LocalDateTime
+import mixit.security.MixitWebFilter
 import mixit.security.model.Cryptographer
 import mixit.user.model.Role
 import mixit.user.model.User
 import mixit.user.model.jsonToken
 import mixit.user.repository.UserRepository
-import mixit.util.web.MixitWebFilter
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
@@ -17,6 +16,7 @@ import org.springframework.http.HttpHeaders
 import org.springframework.http.MediaType
 import org.springframework.test.web.reactive.server.WebTestClient
 import reactor.core.publisher.Mono
+import java.time.LocalDateTime
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val cryptographer: Cryptographer) {
@@ -111,7 +111,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
         every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.just(aUser())
 
         client.get().uri("/api/talk/2421")
-            .cookie(MixitWebFilter.AUTENT_COOKIE, aUser().jsonToken(cryptographer))
+            .cookie(MixitWebFilter.AUTHENT_COOKIE, aUser().jsonToken(cryptographer))
             .accept(MediaType.APPLICATION_JSON)
             .exchange()
             .expectStatus().isOk
@@ -126,7 +126,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
 
         assertThat(
             client.get().uri("/images/svg/mxt-icon--heart.svg")
-                .cookie(MixitWebFilter.AUTENT_COOKIE, aUser().jsonToken(cryptographer))
+                .cookie(MixitWebFilter.AUTHENT_COOKIE, aUser().jsonToken(cryptographer))
                 .exchange()
                 .expectStatus().isOk
                 .expectBody(String::class.java)
@@ -141,7 +141,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
 
         assertThat(
             client.get().uri("http://mix-it.fr/api/talk/2421")
-                .cookie(MixitWebFilter.AUTENT_COOKIE, aUser().jsonToken(cryptographer))
+                .cookie(MixitWebFilter.AUTHENT_COOKIE, aUser().jsonToken(cryptographer))
                 .exchange()
                 .expectStatus().is3xxRedirection
                 .expectBody(String::class.java)
@@ -156,7 +156,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
 
         client.get().uri("/")
             .header(HttpHeaders.ACCEPT_LANGUAGE, "en-US,en;q=0.5")
-            .cookie(MixitWebFilter.AUTENT_COOKIE, aUser().jsonToken(cryptographer))
+            .cookie(MixitWebFilter.AUTHENT_COOKIE, aUser().jsonToken(cryptographer))
             .exchange()
             .expectStatus().is3xxRedirection
             .expectHeader()
@@ -169,7 +169,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
 
         assertThat(
             client.get().uri("/me")
-                .cookie(MixitWebFilter.AUTENT_COOKIE, aUser().jsonToken(cryptographer))
+                .cookie(MixitWebFilter.AUTHENT_COOKIE, aUser().jsonToken(cryptographer))
                 .exchange()
                 .expectStatus().isOk
                 .expectBody(String::class.java)
@@ -184,7 +184,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
         every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.just(aUser().copy(tokenExpiration = LocalDateTime.now().minusMinutes(30)))
 
         client.get().uri("/me")
-            .cookie(MixitWebFilter.AUTENT_COOKIE, aUser().jsonToken(cryptographer))
+            .cookie(MixitWebFilter.AUTHENT_COOKIE, aUser().jsonToken(cryptographer))
             .exchange()
             // User is redirected
             .expectStatus().is3xxRedirection
@@ -197,7 +197,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
         every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.just(aUser())
 
         client.get().uri("/admin")
-            .cookie(MixitWebFilter.AUTENT_COOKIE, aUser().jsonToken(cryptographer))
+            .cookie(MixitWebFilter.AUTHENT_COOKIE, aUser().jsonToken(cryptographer))
             .exchange()
             // User is redirected on home page
             .expectStatus().is3xxRedirection
@@ -210,7 +210,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
         every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.just(anAdmin())
 
         client.get().uri("/api/talk/2421")
-            .cookie(MixitWebFilter.AUTENT_COOKIE, anAdmin().jsonToken(cryptographer))
+            .cookie(MixitWebFilter.AUTHENT_COOKIE, anAdmin().jsonToken(cryptographer))
             .accept(MediaType.APPLICATION_JSON)
             .exchange()
             .expectStatus().isOk
@@ -225,7 +225,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
 
         assertThat(
             client.get().uri("/images/svg/mxt-icon--heart.svg")
-                .cookie(MixitWebFilter.AUTENT_COOKIE, anAdmin().jsonToken(cryptographer))
+                .cookie(MixitWebFilter.AUTHENT_COOKIE, anAdmin().jsonToken(cryptographer))
                 .exchange()
                 .expectStatus().isOk
                 .expectBody(String::class.java)
@@ -240,7 +240,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
 
         assertThat(
             client.get().uri("http://mix-it.fr/api/talk/2421")
-                .cookie(MixitWebFilter.AUTENT_COOKIE, anAdmin().jsonToken(cryptographer))
+                .cookie(MixitWebFilter.AUTHENT_COOKIE, anAdmin().jsonToken(cryptographer))
                 .exchange()
                 .expectStatus().is3xxRedirection
                 .expectBody(String::class.java)
@@ -255,7 +255,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
 
         client.get().uri("/")
             .header(HttpHeaders.ACCEPT_LANGUAGE, "en-US,en;q=0.5")
-            .cookie(MixitWebFilter.AUTENT_COOKIE, anAdmin().jsonToken(cryptographer))
+            .cookie(MixitWebFilter.AUTHENT_COOKIE, anAdmin().jsonToken(cryptographer))
             .exchange()
             .expectStatus().is3xxRedirection
             .expectHeader()
@@ -268,7 +268,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
 
         assertThat(
             client.get().uri("/me")
-                .cookie(MixitWebFilter.AUTENT_COOKIE, anAdmin().jsonToken(cryptographer))
+                .cookie(MixitWebFilter.AUTHENT_COOKIE, anAdmin().jsonToken(cryptographer))
                 .exchange()
                 .expectStatus().isOk
                 .expectBody(String::class.java)
@@ -283,7 +283,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
         every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.just(anAdmin().copy(tokenExpiration = LocalDateTime.now().minusMinutes(30)))
 
         client.get().uri("/me")
-            .cookie(MixitWebFilter.AUTENT_COOKIE, anAdmin().jsonToken(cryptographer))
+            .cookie(MixitWebFilter.AUTHENT_COOKIE, anAdmin().jsonToken(cryptographer))
             .exchange()
             // User is redirected
             .expectStatus().is3xxRedirection
@@ -297,7 +297,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
 
         assertThat(
             client.get().uri("/admin")
-                .cookie(MixitWebFilter.AUTENT_COOKIE, anAdmin().jsonToken(cryptographer))
+                .cookie(MixitWebFilter.AUTHENT_COOKIE, anAdmin().jsonToken(cryptographer))
                 .exchange()
                 // User is redirected on home page
                 .expectStatus().isOk
@@ -313,7 +313,7 @@ class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val c
         every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.just(anAdmin().copy(tokenExpiration = LocalDateTime.now().minusMinutes(30)))
 
         client.get().uri("/admin")
-            .cookie(MixitWebFilter.AUTENT_COOKIE, anAdmin().jsonToken(cryptographer))
+            .cookie(MixitWebFilter.AUTHENT_COOKIE, anAdmin().jsonToken(cryptographer))
             .exchange()
             // User is redirected on home page
             .expectStatus().is3xxRedirection

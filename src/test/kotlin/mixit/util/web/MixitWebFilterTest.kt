@@ -4,15 +4,13 @@ import io.mockk.every
 import io.mockk.impl.annotations.InjectMockKs
 import io.mockk.impl.annotations.RelaxedMockK
 import io.mockk.junit5.MockKExtension
-import java.net.InetSocketAddress
-import java.net.URI
-import java.util.Locale
 import mixit.MixitProperties
+import mixit.security.MixitWebFilter
+import mixit.security.MixitWebFilter.Companion.AUTHENT_COOKIE
+import mixit.security.MixitWebFilter.Companion.BOTS
 import mixit.security.model.Credential
 import mixit.user.repository.UserRepository
 import mixit.util.encodeToBase64
-import mixit.util.web.MixitWebFilter.Companion.AUTENT_COOKIE
-import mixit.util.web.MixitWebFilter.Companion.BOTS
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -23,6 +21,9 @@ import org.springframework.http.server.reactive.ServerHttpRequest
 import org.springframework.util.LinkedMultiValueMap
 import org.springframework.util.MultiValueMap
 import org.springframework.web.server.ServerWebExchange
+import java.net.InetSocketAddress
+import java.net.URI
+import java.util.Locale
 
 @ExtendWith(MockKExtension::class)
 class MixitWebFilterTest() {
@@ -96,15 +97,15 @@ class MixitWebFilterTest() {
         assertThat(filter.readCredentialsFromCookie(request)).isNull()
 
         // When cookie value is null credentials are null
-        cookies.put(AUTENT_COOKIE, null)
+        cookies.put(AUTHENT_COOKIE, null)
         assertThat(filter.readCredentialsFromCookie(request)).isNull()
 
         // When cookie value is invalid credentials are null
-        cookies.put(AUTENT_COOKIE, listOf(HttpCookie(AUTENT_COOKIE, "invalid")))
+        cookies.put(AUTHENT_COOKIE, listOf(HttpCookie(AUTHENT_COOKIE, "invalid")))
         assertThat(filter.readCredentialsFromCookie(request)).isNull()
 
         // When cookie value is valid we have a credential
-        cookies.put(AUTENT_COOKIE, listOf(HttpCookie(AUTENT_COOKIE, "email:token".encodeToBase64())))
+        cookies.put(AUTHENT_COOKIE, listOf(HttpCookie(AUTHENT_COOKIE, "email:token".encodeToBase64())))
         assertThat(filter.readCredentialsFromCookie(request)).isEqualTo(Credential("email", "token"))
     }
 
