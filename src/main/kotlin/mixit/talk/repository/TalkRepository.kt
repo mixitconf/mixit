@@ -30,14 +30,17 @@ class TalkRepository(
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
+        loadYear(2022)
         if (count().block() == 0L) {
-            listOf(2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022).forEach { year ->
-                val talksResource = ClassPathResource("data/talks_$year.json")
-                val talks: List<Talk> = objectMapper.readValue(talksResource.inputStream)
-                talks.forEach { save(it).block() }
-            }
-            logger.info("Talks data initialization complete")
+            listOf(2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022).forEach { loadYear(it) }
         }
+    }
+
+    private fun loadYear(year: Int) {
+        val talksResource = ClassPathResource("data/talks_$year.json")
+        val talks: List<Talk> = objectMapper.readValue(talksResource.inputStream)
+        talks.forEach { save(it).block() }
+        logger.info("Talks data for $year initialization complete")
     }
 
     fun count() =
