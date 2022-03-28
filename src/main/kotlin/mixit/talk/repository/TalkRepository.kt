@@ -30,7 +30,6 @@ class TalkRepository(
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
-        loadYear(2022)
         if (count().block() == 0L) {
             listOf(2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021, 2022).forEach { loadYear(it) }
         }
