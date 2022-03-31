@@ -1337,6 +1337,16 @@
                 "level": "SILVER",
                 "sponsorId": "prismea",
                 "subscriptionDate": "2022-03-22"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "capgemini",
+                "subscriptionDate": "2022-03-28"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Sopra Steria",
+                "subscriptionDate": "2022-03-28"
             }
         ],
         "start": "2022-05-24",
