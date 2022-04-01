@@ -75,6 +75,13 @@
                            value="{{#user.photoUrl}}{{user.photoUrl}}{{/user.photoUrl}}" id="photoUrl"/>
 
             </div>
+            <div class="col-12 mb-3 mt-5">
+                <label class="form-label">
+                    <b>{{#i18n}}admin.user.form.newsletterSubscriber{{/i18n}}&nbsp;</b>
+                    <input type="checkbox" name="newsletterSubscriber" value="true"
+                           {{#user.newsletterSubscriber}}checked{{/user.newsletterSubscriber}}/>
+                </label>
+            </div>
             <div class="col-12 mb-3 mt-5 row">
                 <div><b>{{#i18n}}user.form.links{{/i18n}}</b></div>
                 {{#userlinks}}

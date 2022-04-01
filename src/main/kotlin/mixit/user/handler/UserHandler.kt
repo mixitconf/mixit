@@ -193,7 +193,8 @@ class UserHandler(
                         ),
                         emailHash = if (formData["photoUrl"] == null) formData["email"]!!.encodeToMd5() else null,
                         photoUrl = formData["photoUrl"],
-                        links = extractLinks(formData)
+                        links = extractLinks(formData),
+                        newsletterSubscriber = formData["newsletterSubscriber"]?.toBoolean() ?: false
                     )
 
                     val errors = mutableMapOf<String, String>()

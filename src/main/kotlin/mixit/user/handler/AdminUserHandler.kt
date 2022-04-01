@@ -98,7 +98,8 @@ class AdminUserHandler(
                         ),
                         role = Role.valueOf(formData["role"]!!),
                         links = formData["links"]!!.toLinks(objectMapper),
-                        legacyId = formData["legacyId"]?.toLong()
+                        legacyId = formData["legacyId"]?.toLong(),
+                        newsletterSubscriber = formData["newsletterSubscriber"]?.toBoolean() ?: false
                     )
                     userService.save(user)
                         .then(seeOther("${properties.baseUri}/admin/users"))
