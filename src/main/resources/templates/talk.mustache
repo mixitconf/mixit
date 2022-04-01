@@ -3,7 +3,7 @@
 <div class="mxt-wrapper--header">
     <div style="display: flex;flex-wrap: wrap; align-items: center; align-content: center; flex-direction: row" class="pt-5">
         {{#speakers}}
-            <div style="flex: 1">
+            <div style="flex: 1" class="p-2">
                 <a href="/user/{{login}}"><img src="{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{^photoUrl}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/photoUrl}}"
                     class="mxt-img-avatar__speaker"></a>
                 <div><a href="/user/{{login}}">{{firstname}}&nbsp;{{lastname}}</a>   </div>
