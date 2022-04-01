@@ -3,7 +3,7 @@
 <div class="mxt-wrapper--header">
     <div style="display: flex;flex-wrap: wrap; align-items: center; align-content: center; flex-direction: row" class="pt-5">
         {{#speakers}}
-            <div style="flex: 1">
+            <div style="flex: 1" class="p-2">
                 <a href="/user/{{login}}"><img src="{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{^photoUrl}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/photoUrl}}"
                     class="mxt-img-avatar__speaker"></a>
                 <div><a href="/user/{{login}}">{{firstname}}&nbsp;{{lastname}}</a>   </div>
@@ -109,7 +109,7 @@
                                 <div class="col-12 col-md-9">
                                     {{#markdown}}{{summary}}{{/markdown}}
                                 </div>
-                                <div class="col-12 col-md-3" style="text-align: right">
+                                <div class="col-12 col-md-3 mb-4" style="text-align: right">
                                     <a href="{{localePrefix}}/{{event}}/{{slug}}" class="btn btn-outline-primary hollow">{{#i18n}}talks.readmore{{/i18n}}</a>
                                 </div>
                             </div>
@@ -127,12 +127,12 @@
         <div class="col-12 col-lg-10 offset-lg-1">
             <div class="text-center row">
                 {{#sponsors-gold}}
-                    <div class="col-3 text-center col-md-2">
+                    <div class="col-6 text-center col-md-4 col-lg-2">
                         {{> sponsor-detail }}
                     </div>
                 {{/sponsors-gold}}
                 {{#sponsors-others}}
-                    <div class="col-2 col-md-1 text-center">
+                    <div class="col-6 text-center col-md-4 col-lg-2">
                         {{> sponsor-detail }}
                     </div>
                 {{/sponsors-others}}
