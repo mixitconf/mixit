@@ -131,6 +131,7 @@ class UserHandler(
                             Pair("user", user.toDto(req.language())),
                             Pair("lotteryTicket", ticket),
                             Pair("attendeeTicket", attendeeTicket),
+                            Pair("viewMyProfile", true),
                             Pair("isSpeaker", isSpeaker),
                             Pair("canUpdateProfile", true),
                             Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8))
@@ -143,6 +144,7 @@ class UserHandler(
                         mapOf(
                             Pair("user", user.toDto(req.language())),
                             Pair("canUpdateProfile", true),
+                            Pair("viewMyProfile", true),
                             Pair("attendeeTicket", attendeeTicket),
                             Pair("isSpeaker", isSpeaker),
                             Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8))
