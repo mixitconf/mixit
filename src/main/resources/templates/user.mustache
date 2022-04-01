@@ -48,7 +48,9 @@
                     {{/hasFeatureLottery}}
                     {{#hasFeatureLotteryResult}}
                         {{#lotteryTicket}}<strong>{{#i18n}}profile.hasticket.result{{/i18n}}</strong>
-                            {{#lotteryTicket.rank}}<span class="badge bg-secondary font-bold">{{lotteryTicket.rank}}{{/lotteryTicket.rank}}</span>{{/lotteryTicket}}
+                            {{#lotteryTicket.rank}}<span class="badge bg-secondary font-bold">{{lotteryTicket.rank}}{{/lotteryTicket.rank}}</span>.
+                            <br/>{{#i18n}}profile.hasticket.result2{{/i18n}}.
+                        {{/lotteryTicket}}
                     {{/hasFeatureLotteryResult}}
                 </p>
                 <p>

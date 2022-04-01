@@ -33,7 +33,7 @@ class AdminTalkHandler(
     companion object {
         const val TEMPLATE_LIST = "admin-talks"
         const val TEMPLATE_EDIT = "admin-talk"
-        const val LAST_TALK_EVENT = "2021"
+        const val LAST_TALK_EVENT = "2022"
         const val LIST_URI = "/admin/talks"
     }
 

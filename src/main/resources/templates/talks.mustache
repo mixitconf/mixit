@@ -91,16 +91,16 @@
                                 </div>
                             </div>
                             <div>{{#markdown}}{{summary}}{{/markdown}}</div>
-                            <ul class="mxt-wrapper-list-inline" style="display: flex">
+                            <div class="row">
                                 {{#speakers}}
-                                    <li class="menu-text">
+                                    <div class="menu-text col-6 col-md-2 text-center">
                                         <div class="mxt-img-avatar__wrapper"><a href="/user/{{login}}"><img
                                                 data-src="{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{^photoUrl}}https://www.gravatar.com/avatar/{{#emailHash}}{{emailHash}}{{/emailHash}}?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/photoUrl}}"
                                             class="mxt-img-avatar__speaker mxt-img--lazyload"></a></div>
                                         <span><a href="/user/{{login}}">{{firstname}}&nbsp;{{lastname}}</a></span>
-                                    </li>
+                                    </div>
                                 {{/speakers}}
-                            </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
