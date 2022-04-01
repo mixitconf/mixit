@@ -66,6 +66,7 @@ class TalkService(
                     talk.speakers.map { it.login }.contains(userUpdateEvent.user.login)
                 }
             }
+            .switchIfEmpty { Mono.just(true) }
             .block(Duration.ofSeconds(10))
             .also {
                 if (it != null && it) {
