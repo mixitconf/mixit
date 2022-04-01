@@ -39,6 +39,7 @@
                 {{/user.links}}
             </ul>
         </div>
+        {{#viewMyProfile}}
         <div class="columns small-12 medium-12 large-12 callout">
             {{#user.newsletterSubscriber}}
                 <b>{{#i18n}}user.form.newsletterSubscriber{{/i18n}}</b><br>
@@ -49,6 +50,7 @@
                 <small>{{#i18n}}user.form.not.newsletterSubscriber.desc{{/i18n}}</small>
             {{/user.newsletterSubscriber}}
         </div>
+        {{/viewMyProfile}}
         {{#canUpdateProfile}}
             <div class="columns small-12 medium-12 large-12 callout mt-3">
                 <p>
