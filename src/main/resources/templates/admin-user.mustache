@@ -68,6 +68,13 @@
             <label class="label">{{#i18n}}admin.user.form.legacyId{{/i18n}}</label>
             <input class="form-control" type="text" name="legacyId" value="{{#user.legacyId}}{{user.legacyId}}{{/user.legacyId}}"/>
         </div>
+        <div class="col-12 mb-3">
+            <label class="form-label">
+                <b>{{#i18n}}admin.user.form.newsletterSubscriber{{/i18n}}&nbsp;</b>
+                <input type="checkbox" name="newsletterSubscriber" value="true"
+                       {{#user.newsletterSubscriber}}checked{{/user.newsletterSubscriber}}/>
+            </label>
+        </div>
         <div class="mb-3 text-center">
             <input type="submit" class="btn btn-outline-primary expand" value="{{#i18n}}common.actions.save{{/i18n}}"/>
         </div>

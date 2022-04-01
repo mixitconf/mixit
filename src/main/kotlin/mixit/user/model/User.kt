@@ -29,7 +29,8 @@ data class User(
     val legacyId: Long? = null,
     var tokenExpiration: LocalDateTime = LocalDateTime.now().minusDays(1),
     var token: String = "empty-token",
-    var externalAppToken: String? = null
+    var externalAppToken: String? = null,
+    var newsletterSubscriber: Boolean = false
 ) {
     val tokenLifeTime: Duration
         get() = Duration.between(LocalDateTime.now(), tokenExpiration)

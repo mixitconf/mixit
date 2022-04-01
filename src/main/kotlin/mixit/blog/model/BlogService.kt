@@ -4,14 +4,11 @@ import mixit.blog.repository.PostRepository
 import mixit.talk.model.Language
 import mixit.user.model.User
 import mixit.user.model.UserService
-import mixit.user.model.UserUpdateEvent
 import mixit.util.cache.CacheTemplate
 import mixit.util.cache.CacheZone
-import org.springframework.context.event.EventListener
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Mono
 import reactor.kotlin.core.publisher.switchIfEmpty
-import java.time.Duration
 
 @Service
 class BlogService(private val repository: PostRepository, private val userService: UserService) : CacheTemplate<CachedPost>() {
@@ -26,23 +23,6 @@ class BlogService(private val repository: PostRepository, private val userServic
 
     fun save(event: Post) =
         repository.save(event).doOnSuccess { cache.invalidateAll() }
-
-    @EventListener
-    fun handleUserUpdate(userUpdateEvent: UserUpdateEvent) {
-        findAll()
-            .switchIfEmpty { Mono.just(emptyList()) }
-            .map { blogs ->
-                blogs.any { blog ->
-                    blog.author.login == userUpdateEvent.user.login
-                }
-            }
-            .block(Duration.ofSeconds(10))
-            .also {
-                if (it != null && it) {
-                    invalidateCache()
-                }
-            }
-    }
 
     private fun loadPostWriters(post: Post): Mono<CachedPost> =
         userService.findOne(post.authorId)

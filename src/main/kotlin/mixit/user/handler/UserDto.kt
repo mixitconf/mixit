@@ -22,7 +22,8 @@ class UserDto(
     val logoType: String?,
     val logoWebpUrl: String? = null,
     val isAbsoluteLogo: Boolean = photoUrl?.startsWith("http") ?: false,
-    val path: String = login.toUrlPath()
+    val path: String = login.toUrlPath(),
+    val newsletterSubscriber: Boolean = false
 )
 
 fun User.toDto(language: Language, searchTerms: List<String> = emptyList()) =
@@ -38,5 +39,6 @@ fun User.toDto(language: Language, searchTerms: List<String> = emptyList()) =
         role,
         links,
         logoType(photoUrl),
-        logoWebpUrl(photoUrl)
+        logoWebpUrl(photoUrl),
+        newsletterSubscriber = newsletterSubscriber
     )

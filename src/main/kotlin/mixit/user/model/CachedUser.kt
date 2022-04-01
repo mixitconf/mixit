@@ -19,6 +19,7 @@ data class CachedUser(
     val links: List<Link>,
     val legacyId: Long? = null,
     val role: Role,
+    val newsletterSubscriber: Boolean,
     override val id: String = login
 ) : Cached {
     constructor(user: User) : this(
@@ -32,7 +33,8 @@ data class CachedUser(
         user.description,
         user.links,
         user.legacyId,
-        user.role
+        user.role,
+        user.newsletterSubscriber
     )
 
     fun toDto(language: Language) =
@@ -48,7 +50,8 @@ data class CachedUser(
             role,
             links,
             logoType(photoUrl),
-            logoWebpUrl(photoUrl)
+            logoWebpUrl(photoUrl),
+            newsletterSubscriber = newsletterSubscriber
         )
 
     fun toUser() =
@@ -63,7 +66,8 @@ data class CachedUser(
             photoUrl,
             role,
             links,
-            legacyId
+            legacyId,
+            newsletterSubscriber = newsletterSubscriber
         )
 
     val organizationName
