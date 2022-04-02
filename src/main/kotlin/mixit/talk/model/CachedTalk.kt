@@ -50,13 +50,13 @@ data class CachedTalk(
         talk.slug
     )
 
-    fun toDto(language: Language, favorite: Boolean = false) = TalkDto(
+    fun toDto(lang: Language, favorite: Boolean = false) = TalkDto(
         id,
         title.toSlug(),
         format,
         event,
-        title(language),
-        summary(language),
+        title(lang),
+        summary(lang),
         speakers,
         language.name.lowercase(),
         addedAt,
@@ -65,9 +65,9 @@ data class CachedTalk(
         video,
         video.toVimeoPlayerUrl(),
         "rooms.${room.name.lowercase()}",
-        start?.formatTalkTime(language),
-        end?.formatTalkTime(language),
-        start?.formatTalkDate(language),
+        start?.formatTalkTime(lang),
+        end?.formatTalkTime(lang),
+        start?.formatTalkDate(lang),
         favorite,
         photoUrls
     )
