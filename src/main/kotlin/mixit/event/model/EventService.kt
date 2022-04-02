@@ -59,8 +59,8 @@ class EventService(
         val userIds = event.organizations.map { it.organizationLogin } +
             event.sponsors.map { it.sponsorId } +
             event.volunteers.map { it.volunteerLogin } +
-            speakerStarInHistory +
-            speakerStarInCurrentEvent
+            speakerStarInHistory.map { it.login } +
+            speakerStarInCurrentEvent.map { it.login }
 
         return userService.findAllByIds(userIds).map { users ->
             CachedEvent(
@@ -84,10 +84,12 @@ class EventService(
                 event.videoUrl,
                 event.schedulingFileUrl,
                 speakerStarInHistory.map { starLogin ->
-                    CachedSpeaker(users.firstOrNull { it.login == starLogin }?.toUser() ?: User())
+                    val user = users.firstOrNull { it.login == starLogin.login }?.toUser() ?: User()
+                    CachedSpeaker(user, starLogin.year)
                 },
                 speakerStarInCurrentEvent.map { starLogin ->
-                    CachedSpeaker(users.firstOrNull { it.login == starLogin }?.toUser() ?: User())
+                    val user = users.firstOrNull { it.login == starLogin.login }?.toUser() ?: User()
+                    CachedSpeaker(user, starLogin.year)
                 },
                 event.year
             )

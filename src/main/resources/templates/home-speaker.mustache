@@ -1,7 +1,7 @@
 <div class="col-md-2 col-6">
     <a href="/user/{{login}}">
         <div class="mxt-img--container">
-            <img src="{{baseUri}}/images/speakers/{{key}}.jpg" alt="{{name}}" class="mxt-img--speakers">
+            <img src="{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{^photoUrl}}{{baseUri}}/images/speakers/{{key}}.jpg{{/photoUrl}}" alt="{{name}}" class="mxt-img--speakers">
         </div>
     </a>
     <div class="lead text-center" style="overflow: hidden; text-overflow: ellipsis;">{{name}}</div><br/>

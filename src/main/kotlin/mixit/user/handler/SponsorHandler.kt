@@ -85,6 +85,10 @@ class SponsorHandler(private val eventService: EventService) {
                         .shuffled()
                         .map { it.toSpeakerStarDto() }
                         .subList(0, 6)
+                    context["stars-current"] = event.speakerStarInCurrent
+                        .shuffled()
+                        .map { it.toSpeakerStarDto() }
+                        .subList(0, 6)
                 }
 
                 ServerResponse.ok().render(view, context)
