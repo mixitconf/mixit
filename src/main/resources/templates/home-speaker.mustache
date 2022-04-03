@@ -4,6 +4,7 @@
             <img src="{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{^photoUrl}}{{baseUri}}/images/speakers/{{key}}.jpg{{/photoUrl}}" alt="{{name}}" class="mxt-img--speakers">
         </div>
     </a>
-    <div class="lead text-center" style="overflow: hidden; text-overflow: ellipsis;">{{name}}</div><br/>
+    <div class="mt-2 text-center"><a href="/{{year}}">#{{year}}</a></div>
+    <div class="lead text-center" style="overflow: hidden; text-overflow: ellipsis;">{{name}}</div>
     <p class="mxt-text--speakers text-center">{{#i18n}}home.speakers.{{key}}{{/i18n}}</p>
 </div>
