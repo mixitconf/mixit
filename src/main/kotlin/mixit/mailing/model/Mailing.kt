@@ -5,12 +5,13 @@ import org.springframework.data.mongodb.core.mapping.Document
 import java.time.LocalDateTime
 
 enum class RecipientType {
-    User,
+    Attendee,
     Sponsor,
     Volunteers,
     Staff,
     StaffInPause,
-    Organization
+    Organization,
+    Speaker
 }
 
 @Document

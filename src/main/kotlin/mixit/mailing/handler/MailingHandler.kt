@@ -4,6 +4,7 @@ import mixit.MixitProperties
 import mixit.mailing.model.Mailing
 import mixit.mailing.model.RecipientType
 import mixit.mailing.model.RecipientType.Organization
+import mixit.mailing.model.RecipientType.Speaker
 import mixit.mailing.model.RecipientType.Sponsor
 import mixit.mailing.model.RecipientType.Staff
 import mixit.mailing.model.RecipientType.StaffInPause
@@ -30,11 +31,11 @@ import java.util.Locale
 
 @Component
 class MailingHandler(
-    val userService: UserService,
-    val cryptographer: Cryptographer,
-    val mailingRepository: MailingRepository,
-    val properties: MixitProperties,
-    val emailService: EmailService
+    private val userService: UserService,
+    private val cryptographer: Cryptographer,
+    private val mailingRepository: MailingRepository,
+    private val properties: MixitProperties,
+    private val emailService: EmailService
 ) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
@@ -97,7 +98,7 @@ class MailingHandler(
                 Staff -> userService.findByRoles(Role.STAFF)
                 StaffInPause -> userService.findByRoles(Role.STAFF_IN_PAUSE)
                 Volunteers -> userService.findByRoles(Role.VOLUNTEER)
-                RecipientType.User, Sponsor, Organization -> Mono.empty()
+                RecipientType.Attendee, Sponsor, Organization, Speaker -> Mono.empty()
             }
         }
         return Mono.empty()

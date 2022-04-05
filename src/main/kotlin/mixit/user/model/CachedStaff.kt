@@ -14,7 +14,8 @@ data class CachedStaff(
     val emailHash: String?,
     val description: Map<Language, String>,
     val links: List<Link>,
-    val role: Role
+    val role: Role,
+    val email: String? = null
 ) {
     constructor(user: User) : this(
         user.login,
@@ -24,7 +25,8 @@ data class CachedStaff(
         user.emailHash,
         user.description.mapValues { it.value.toHTML() },
         user.links,
-        user.role
+        user.role,
+        user.email
     )
 
     fun toDto(language: Language) =

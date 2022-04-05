@@ -12,6 +12,7 @@ import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
 import mixit.event.model.Event
 import mixit.event.model.SponsorshipLevel
 import mixit.mailing.handler.MailingHandler
+import mixit.mailing.handler.MailingListHandler
 import mixit.mixette.handler.AdminMixetteHandler
 import mixit.mixette.handler.MixetteHandler
 import mixit.security.handler.AuthenticationHandler
@@ -63,6 +64,7 @@ class WebsiteRoutes(
     private val lotteryHandler: LotteryHandler,
     private val ticketHandler: AdminTicketHandler,
     private val mailingHandler: MailingHandler,
+    private val mailingListHandler: MailingListHandler,
     private val mixetteHandler: MixetteHandler,
     private val userHandler: UserHandler,
     private val messageSource: MessageSource,
@@ -170,6 +172,7 @@ class WebsiteRoutes(
                 GET("/mailings", mailingHandler::listMailing)
                 GET("/mailings/create", mailingHandler::createMailing)
                 GET("/mailings/edit/{id}", mailingHandler::editMailing)
+                GET("/mailing-lists", mailingListHandler::listMailing)
                 GET("/talks/edit/{slug}", adminTalkHandler::editTalk)
                 GET("/talks") { adminTalkHandler.adminTalks(it, AdminTalkHandler.LAST_TALK_EVENT) }
                 GET("/talks/create", adminTalkHandler::createTalk)
@@ -247,6 +250,7 @@ class WebsiteRoutes(
                 POST("/mailings", mailingHandler::saveMailing)
                 POST("/mailings/send", mailingHandler::sendMailing)
                 POST("/mailings/delete", mailingHandler::deleteMailing)
+                POST("/mailing-lists", mailingListHandler::generateMailinglist)
                 POST("/mixette-donation/{id}/delete", adminMixetteHandler::adminDeleteDonation)
                 POST("/mixette-donation", adminMixetteHandler::adminSaveDonation)
                 POST("/cache/{zone}/invalidate", cacheHandler::invalidate)

@@ -1,0 +1,43 @@
+{{> header}}
+
+<div class="mxt-wrapper--header">
+    <h1 class="text-center pt-5">{{#i18n}}mailinglist.title{{/i18n}}</h1>
+</div>
+
+<div class="container mxt-wrapper--page-content">
+    <form method="post" id="editForm" action="/admin/mailing-lists">
+        <div class="mb-3">
+            <label class="form-label">{{#i18n}}mailing.recipients.list{{/i18n}}</label>
+            <select class="form-control" name="recipientType">
+                {{#roles}}
+                    <option value="{{first}}"{{#second}} selected{{/second}}>{{first}}</option>
+                {{/roles}}
+            </select>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-outline-primary">{{#i18n}}mailing.preview{{/i18n}}</button>
+        </div>
+    </form>
+
+    <p>{{#i18n}}mailing.count{{/i18n}} : <b>{{#mamailinglist}}{{mailinglist.size}}{{/mamailinglist}}</b></p>
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>{{#i18n}}mailinglist.lastname{{/i18n}}</th>
+            <th>{{#i18n}}mailinglist.firstname{{/i18n}}</th>
+            <th>{{#i18n}}mailinglist.email{{/i18n}}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#mailinglist}}
+            <tr>
+                <td>{{lastname}}</td>
+                <td>{{firstname}}</td>
+                <td>{{email}}</td>
+            </tr>
+        {{/mailinglist}}
+        </tbody>
+    </table>
+</div>
+
+{{> footer}}

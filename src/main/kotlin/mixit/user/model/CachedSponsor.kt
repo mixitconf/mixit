@@ -15,7 +15,8 @@ data class CachedSponsor(
     val description: Map<Language, String>,
     val links: List<Link>,
     val level: SponsorshipLevel,
-    val subscriptionDate: LocalDate
+    val subscriptionDate: LocalDate,
+    val email: String? = null
 ) {
     constructor(user: User, sponsoring: EventSponsoring) : this(
         user.login,
@@ -24,7 +25,8 @@ data class CachedSponsor(
         user.description.mapValues { it.value.toHTML() },
         user.links,
         sponsoring.level,
-        sponsoring.subscriptionDate
+        sponsoring.subscriptionDate,
+        user.email
     )
 
     fun toEventSponsoringDto(language: Language) =

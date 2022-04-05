@@ -1222,7 +1222,10 @@
             }
         ],
         "start": "2021-05-18",
-        "videoUrl": null,
+        "videoUrl": {
+            "name": "Le quizz MiXiT",
+            "url": "https://vimeo.com/560334460"
+        },
         "volunteers": [],
         "year": 2021
     },
@@ -1347,6 +1350,16 @@
                 "level": "GOLD",
                 "sponsorId": "Sopra Steria",
                 "subscriptionDate": "2022-03-28"
+            },
+            {
+                "level": "PARTY",
+                "sponsorId": "grandlyon",
+                "subscriptionDate": "2022-04-03"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "avanade",
+                "subscriptionDate": "2022-04-05"
             }
         ],
         "start": "2022-05-24",
