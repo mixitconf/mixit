@@ -10,13 +10,30 @@
                 <img src="/images/svg/mxt-icon--heart.svg" class="mxt-icon--heart"
                     alt="{{#i18n}}home.wrapper.title{{/i18n}}"></h1>
             <h2 class="pt-2 mxt-text--small">
-                <small>{{#i18n}}home.wrapper.dates{{/i18n}}</small>
+                {{#i18n}}home.wrapper.dates{{/i18n}}
             </h2>
             <p class="pb-5">
-                <img src="/images/svg/accessibility/mxt-icon--child-care.svg" class="mxt-icon--social" title="{{#i18n}}home.accessibility.childcare{{/i18n}}" alt="{{#i18n}}home.accessibility.childcare{{/i18n}}">
-                <img src="/images/svg/accessibility/mxt-icon--hearing-impaired.svg" class="mxt-icon--social" title="{{#i18n}}home.accessibility.hearing.impaired{{/i18n}}" alt="{{#i18n}}home.accessibility.hearing.impaired{{/i18n}}">
-                <img src="/images/svg/accessibility/mxt-icon--motor-disability.svg" class="mxt-icon--social" title="{{#i18n}}home.accessibility.motor.disability{{/i18n}}" alt="{{#i18n}}home.accessibility.motor.disability{{/i18n}}">
-                <img src="/images/svg/accessibility/mxt-icon--pregnant.svg" class="mxt-icon--social" title="{{#i18n}}home.accessibility.pregnant{{/i18n}}" alt="{{#i18n}}home.accessibility.pregnant{{/i18n}}">
+                <a href="/accessibility">
+                    <img src="/images/svg/accessibility/mxt-icon--child-care.svg" class="mxt-icon--social"
+                     container="body"
+                     data-bs-toggle="tooltip" data-bs-placement="bottom"
+                     title="{{#i18n}}home.accessibility.childcare{{/i18n}}" alt="{{#i18n}}home.accessibility.childcare{{/i18n}}">
+                </a>
+                <a href="/accessibility">
+                <img src="/images/svg/accessibility/mxt-icon--hearing-impaired.svg"
+                     data-bs-toggle="tooltip" data-bs-placement="bottom"
+                     class="mxt-icon--social" title="{{#i18n}}home.accessibility.hearing.impaired{{/i18n}}" alt="{{#i18n}}home.accessibility.hearing.impaired{{/i18n}}">
+                </a>
+                <a href="/accessibility">
+                    <img src="/images/svg/accessibility/mxt-icon--motor-disability.svg" class="mxt-icon--social"
+                     data-bs-toggle="tooltip" data-bs-placement="bottom"
+                     title="{{#i18n}}home.accessibility.motor.disability{{/i18n}}" alt="{{#i18n}}home.accessibility.motor.disability{{/i18n}}">
+                </a>
+                <a href="/accessibility">
+                        <img src="/images/svg/accessibility/mxt-icon--pregnant.svg" class="mxt-icon--social"
+                     data-bs-toggle="tooltip" data-bs-placement="bottom"
+                     title="{{#i18n}}home.accessibility.pregnant{{/i18n}}" alt="{{#i18n}}home.accessibility.pregnant{{/i18n}}">
+                </a>
             </p>
         </div>
     </div>
@@ -127,22 +144,7 @@
     </div>
 </div>
 
-<div class="container mxt-wrapper--home-content mt-5">
-    <h2 class="subheader pt-2 text-center">{{#i18n}}home.2022.knowledge{{/i18n}}</h2>
 
-    <div class="row pt-2">
-        <div class="col-md-5">
-            <p class="lead pt-5">{{#i18n}}home.2022.quizz{{/i18n}}</p>
-            <p>{{#i18n}}home.2022.videos{{/i18n}}</p>
-        </div>
-        <div class="col-md-7">
-            <div class="mxt-wrapper--intrinsic">
-                <iframe src="https://player.vimeo.com/video/560334460" class="mxt-wrapper--video-player vimeo"
-                        allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="row">
     <div class="col-12 col-lg-10 offset-lg-1">
         <div class="text-center row justify-content-md-center">
