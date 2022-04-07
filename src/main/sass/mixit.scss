@@ -183,8 +183,14 @@ h3 {
   max-width: 100%;
   filter: grayscale(100%);
   &:hover {
-    filter: grayscale(70%);
+    filter: grayscale(0%);
   }
+}
+
+.mxt-img--event-home {
+  @extend .mxt-img--grayscale;
+  max-width: 100%;
+  margin-top: 0.5em;
 }
 
 .mxt-img--sponsors-home {
