@@ -1,9 +1,11 @@
 package mixit.security.model
 
 import mixit.MixitProperties
+import mixit.security.MixitWebFilter.Companion.AUTHENT_COOKIE
 import mixit.ticket.repository.LotteryRepository
 import mixit.user.model.Role
 import mixit.user.model.User
+import mixit.user.model.UserService
 import mixit.user.model.generateNewToken
 import mixit.user.model.hasValidToken
 import mixit.user.model.hasValidTokens
@@ -27,6 +29,7 @@ import java.util.Locale
 @Service
 class AuthenticationService(
     private val userRepository: UserRepository,
+    private val userService: UserService,
     private val ticketRepository: LotteryRepository,
     private val emailService: EmailService,
     private val emailValidator: EmailValidator,
@@ -91,7 +94,9 @@ class AuthenticationService(
             )
 
     fun createCookie(user: User) = ResponseCookie
-        .from("XSRF-TOKEN", user.jsonToken(cryptographer))
+        .from(AUTHENT_COOKIE, user.jsonToken(cryptographer))
+        .secure(properties.baseUri.startsWith("https"))
+        .httpOnly(true)
         .maxAge(user.tokenLifeTime)
         .build()
 
@@ -129,15 +134,15 @@ class AuthenticationService(
     fun generateAndSendToken(user: User,
                              locale: Locale,
                              nonEncryptedMail: String,
+                             tokenForNewsletter: Boolean,
                              generateExternalToken: Boolean = false): Mono<User> =
-        // Sometimes we can have a email hash in the DB but not the email (for legacy users). So in this case
-        // we store the email
-        user.generateNewToken(cryptographer.encrypt(nonEncryptedMail)!!, generateExternalToken).let { newUser ->
+
+        user.generateNewToken(generateExternalToken).let { newUser ->
             try {
                 if (!properties.feature.email) {
                     logger.info("A token ${newUser.token} was sent by email")
                 }
-                emailService.send("email-token", newUser, locale)
+                emailService.send(if(tokenForNewsletter) "email-newsletter-subscribe" else "email-token", newUser, locale)
                 userRepository.save(newUser)
             } catch (e: EmailSenderException) {
                 Mono.error<User> { e }
@@ -150,5 +155,20 @@ class AuthenticationService(
     fun clearToken(nonEncryptedMail: String): Mono<User> =
         userRepository
             .findByNonEncryptedEmail(nonEncryptedMail)
-            .flatMap { user -> user.generateNewToken(nonEncryptedMail).let { userRepository.save(it) } }
+            .flatMap { user -> user.generateNewToken().let { userRepository.save(it) } }
+
+    fun updateNewsletterSubscription(user: User, tokenForNewsletter: Boolean): Mono<User> =
+        if(tokenForNewsletter) {
+            userRepository
+                .save(user.copy(newsletterSubscriber = true))
+                .flatMap { userService.updateReference(it) }
+        } else if(user.email == null){
+            // Sometimes we can have a email hash in the DB but not the email (for legacy users). So in this case
+            // we store the email
+            userRepository
+                .save(user.copy(newsletterSubscriber = true))
+                .flatMap { userService.updateReference(it) }
+        } else {
+            Mono.just(user)
+        }
 }

@@ -20,6 +20,7 @@ import org.springframework.web.server.WebFilter
 import org.springframework.web.server.WebFilterChain
 import org.springframework.web.server.WebSession
 import reactor.core.publisher.Mono
+import reactor.kotlin.core.publisher.switchIfEmpty
 import java.net.URI
 import java.util.Locale
 
@@ -29,7 +30,8 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
     companion object {
         const val AUTHENT_COOKIE = "XSRF-TOKEN"
         val BOTS = arrayOf("Google", "Bingbot", "Qwant", "Bingbot", "Slurp", "DuckDuckBot", "Baiduspider")
-        val WEB_RESSOURCE_EXTENSIONS = arrayOf(".css", ".js", ".svg", ".jpg", ".png", ".webp", ".webapp", ".pdf", ".icns", ".ico", ".html")
+        val WEB_RESSOURCE_EXTENSIONS =
+            arrayOf(".css", ".js", ".svg", ".jpg", ".png", ".webp", ".webapp", ".pdf", ".icns", ".ico", ".html")
 
         const val SESSION_ROLE_KEY = "role"
         const val SESSION_EMAIL_KEY = "email"
@@ -52,42 +54,62 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
         }
         // For other calls we have to check credentials
         else {
-            exchange.session.flatMap { filterAndCheckCredentials(exchange, chain, it, readCredentialsFromCookie(exchange.request)) }
+            exchange.session.flatMap {
+                filterAndCheckCredentials(
+                    exchange,
+                    chain,
+                    it,
+                    readCredentialsFromCookie(exchange.request)
+                )
+            }
         }
 
     /**
      * In this method we try to read user credentials in request cookies
      */
-    fun filterAndCheckCredentials(exchange: ServerWebExchange, chain: WebFilterChain, session: WebSession, credential: Credential?): Mono<Void> =
+    fun filterAndCheckCredentials(
+        exchange: ServerWebExchange,
+        chain: WebFilterChain,
+        session: WebSession,
+        credential: Credential?
+    ): Mono<Void> =
         credential?.let { cred ->
             // If session contains credentials we check data
-            userRepository.findByNonEncryptedEmail(cred.email).flatMap { user ->
-                // We have to see if the token is the good one anf if it is yet valid
-                if (user.hasValidToken(cred.token)) {
-                    // If user is found we need to restore infos in session
-                    session.attributes.let {
-                        it[SESSION_ROLE_KEY] = user.role
-                        it[SESSION_EMAIL_KEY] = cred.email
-                        it[SESSION_TOKEN_KEY] = cred.token
-                        it[SESSION_LOGIN_KEY] = user.login
-                        filterWithCredential(exchange, chain, user)
+            userRepository
+                .findByNonEncryptedEmail(cred.email)
+                .switchIfEmpty { Mono.just(User()) }
+                .flatMap { user ->
+                    // We have to see if the token is the good one anf if it is yet valid
+                    if (user.hasValidToken(cred.token)) {
+                        // If user is found we need to restore infos in session
+                        session.attributes.let {
+                            it[SESSION_ROLE_KEY] = user.role
+                            it[SESSION_EMAIL_KEY] = cred.email
+                            it[SESSION_TOKEN_KEY] = cred.token
+                            it[SESSION_LOGIN_KEY] = user.login
+                            filterWithCredential(exchange, chain, user)
+                        }
+                    } else {
+                        filterWithCredential(exchange, chain)
                     }
-                } else {
-                    filterWithCredential(exchange, chain)
                 }
-            }
         } ?: run {
             // If credentials are not read
             filterWithCredential(exchange, chain)
         }
 
-    private fun filterWithCredential(exchange: ServerWebExchange, chain: WebFilterChain, user: User? = null): Mono<Void> {
+    private fun filterWithCredential(
+        exchange: ServerWebExchange,
+        chain: WebFilterChain,
+        user: User? = null
+    ): Mono<Void> {
         // When a user wants to see a page in english uri path starts with 'en'
         val initUriPath = exchange.request.uri.rawPath
         val languageEn = initUriPath.startsWith("/en/")
         val uriPath = if (languageEn || initUriPath.startsWith("/fr/")) initUriPath.substring(3) else initUriPath
 
-        val req = exchange.request.mutate().path(uriPath).header(CONTENT_LANGUAGE, if (languageEn) "en" else "fr").build()
+        val req =
+            exchange.request.mutate().path(uriPath).header(CONTENT_LANGUAGE, if (languageEn) "en" else "fr").build()
 
         // If url is securized we have to check the credentials information
         return if (isASecuredUrl(uriPath)) {
@@ -110,19 +132,23 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
 
     @VisibleForTesting
     fun readCredentialsFromCookie(request: ServerHttpRequest): Credential? =
-        runCatching { (request.cookies).get(AUTHENT_COOKIE)?.first()?.value?.decodeFromBase64()?.split(":")?.let { if (it.size != 2) null else Credential(it[0], it[1]) } }
+        runCatching {
+            (request.cookies)[AUTHENT_COOKIE]?.first()?.value?.decodeFromBase64()?.split(":")
+                ?.let { if (it.size != 2) null else Credential(it[0], it[1]) }
+        }
             .getOrNull()
 
     @VisibleForTesting
-    fun isACallOnOldUrl(exchange: ServerWebExchange): Boolean = exchange.request.headers.host?.hostString?.endsWith("mix-it.fr") == true
+    fun isACallOnOldUrl(exchange: ServerWebExchange): Boolean =
+        exchange.request.headers.host?.hostString?.endsWith("mix-it.fr") == true
 
     @VisibleForTesting
     fun isAHomePageCallFromForeignLanguage(exchange: ServerWebExchange): Boolean = exchange.request.uri.path == "/" &&
-        (
-        exchange.request.headers.acceptLanguageAsLocales.firstOrNull()
-            ?: Locale.FRENCH
-        ).language != Language.FRENCH.toLanguageTag() &&
-        !isSearchEngineCrawler(exchange.request)
+            (
+                    exchange.request.headers.acceptLanguageAsLocales.firstOrNull()
+                        ?: Locale.FRENCH
+                    ).language != Language.FRENCH.toLanguageTag() &&
+            !isSearchEngineCrawler(exchange.request)
 
     @VisibleForTesting
     fun isWebResource(initUriPath: String) = WEB_RESSOURCE_EXTENSIONS.any { initUriPath.endsWith(it) }
@@ -143,7 +169,11 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
     fun isAVolunteerUrl(path: String) =
         Routes.securedVolunteerUrl.stream().anyMatch { path.startsWith(it) }
 
-    private fun redirect(exchange: ServerWebExchange, uri: String, statusCode: HttpStatus = HttpStatus.TEMPORARY_REDIRECT): Mono<Void> =
+    private fun redirect(
+        exchange: ServerWebExchange,
+        uri: String,
+        statusCode: HttpStatus = HttpStatus.TEMPORARY_REDIRECT
+    ): Mono<Void> =
         exchange.response.let {
             it.statusCode = statusCode
             it.headers.location = URI("${properties.baseUri}$uri")

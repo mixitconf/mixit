@@ -27,6 +27,7 @@ import java.time.format.DateTimeFormatterBuilder
 import java.time.temporal.ChronoField
 import java.util.Base64
 import java.util.Locale
+import java.util.UUID
 import java.util.stream.Collectors
 import java.util.stream.IntStream
 import javax.crypto.Cipher
@@ -193,6 +194,8 @@ fun String.decrypt(key: String, initVector: String): String? {
     }
     return null
 }
+
+fun newToken():String = UUID.randomUUID().toString().substring(0, 14).replace("-", "")
 
 val parser: Parser by lazy { Parser.builder().extensions(listOf(AutolinkExtension.create())).build() }
 val renderer: HtmlRenderer by lazy { HtmlRenderer.builder().build() }

@@ -51,4 +51,12 @@ class UserService(
                 user
             }
         }
+
+    fun updateReference(user: User): Mono<User> =
+        findOne(user.login)
+            .map {
+                it.email = it.email ?: user.email
+                it.newsletterSubscriber = user.newsletterSubscriber
+                user
+            }
 }

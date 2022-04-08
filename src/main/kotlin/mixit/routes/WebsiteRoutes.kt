@@ -124,6 +124,10 @@ class WebsiteRoutes(
             GET("/disconnect", authenticationHandler::logout)
             GET("/signin/{token}/{email:.*}", authenticationHandler::signInViaUrl)
 
+            // Newsletter
+            GET("/newsletter-login", authenticationHandler::newsletterView)
+            GET("/newsletter-signin/{token}/{email:.*}", authenticationHandler::signInViaUrlForNewsletter)
+
             val eventsResource = ClassPathResource("data/events.json")
             val events: List<Event> = objectMapper.readValue(eventsResource.inputStream)
 
@@ -219,6 +223,10 @@ class WebsiteRoutes(
             POST("/send-token", authenticationHandler::sendToken)
             POST("/signup", authenticationHandler::signUp)
             POST("/signin", authenticationHandler::signIn)
+            POST("/newsletter-login", authenticationHandler::sendEmailForNewsletter)
+            POST("/newsletter-send-token", authenticationHandler::sendTokenForNewsletter)
+            POST("/newsletter-signup", authenticationHandler::signUpForNewsletter)
+            POST("/newsletter-subscribe", authenticationHandler::subscribeNewsletter)
             POST("/me", userHandler::saveProfile)
             POST("/me/talks", talkHandler::saveProfileTalk)
             POST("/search") { searchHandler.searchFullTextView(it) }

@@ -1,12 +1,17 @@
 {{> header}}
 
 <div class="mxt-wrapper--header">
-    <h1 class="text-center pt-5">{{#i18n}}login.title{{/i18n}}</h1>
+    <h1 class="text-center pt-5">
+        {{#isLogin}}{{#i18n}}login.title{{/i18n}}{{/isLogin}}
+        {{^isLogin}}{{#i18n}}newsletter.title{{/i18n}}{{/isLogin}}
+    </h1>
 </div>
 <div class="container mxt-wrapper--page-content">
     <div class="row">
         <div class="col-10 offset-1 col-lg-6 offset-lg-3 text-center">
-            <form action="/signup" method="post">
+            <form {{#isLogin}}action="/signup"{{/isLogin}}
+                  {{^isLogin}}action="/newsletter-signup"{{/isLogin}}
+                  method="post">
                 <div class="row">
                     <div class="col">
                         {{#i18n}}user.form.description{{/i18n}}
@@ -34,11 +39,17 @@
                 </div>
                 <div class="row mt-3">
                     <div class="large-12 large-centered columns">
-                        <button type="submit" class="btn btn-primary mxt-btn-primary">{{#i18n}}login.action.signup{{/i18n}}</button>
+                        <button type="submit" class="btn btn-primary mxt-btn-primary">
+                            {{#isLogin}}{{#i18n}}login.action.signup{{/i18n}}{{/isLogin}}
+                            {{^isLogin}}{{#i18n}}newsletter.action.signup{{/i18n}}{{/isLogin}}
+                        </button>
                     </div>
                 </div>
             </form>
         </div>
+    </div>
+    <div class="container mxt-wrapper--page-content mt-5">
+        <div><small>{{#i18n}}user.form.rgpd{{/i18n}}</small></div>
     </div>
 </div>
 {{> footer}}

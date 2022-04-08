@@ -3,12 +3,12 @@ package mixit.user.model
 import mixit.security.model.Cryptographer
 import mixit.talk.model.Language
 import mixit.util.encodeToBase64
+import mixit.util.newToken
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.index.TextIndexed
 import org.springframework.data.mongodb.core.mapping.Document
 import java.time.Duration
 import java.time.LocalDateTime
-import java.util.UUID
 
 object Users {
     const val DEFAULT_IMG_URL = "/images/png/mxt-icon--default-avatar.png"
@@ -43,12 +43,10 @@ enum class Role {
     VOLUNTEER
 }
 
-fun User.generateNewToken(encryptedEmail: String, generateExternalToken: Boolean = false) = this.copy(
-    email = encryptedEmail,
+fun User.generateNewToken(generateExternalToken: Boolean = false) = this.copy(
     tokenExpiration = LocalDateTime.now().plusHours(48),
-    token = UUID.randomUUID().toString().substring(0, 14).replace("-", ""),
-    externalAppToken = if (generateExternalToken) UUID.randomUUID().toString().substring(0, 14)
-        .replace("-", "") else externalAppToken
+    token = newToken(),
+    externalAppToken = if (generateExternalToken) newToken() else externalAppToken
 )
 
 fun User.updateEmail(cryptographer: Cryptographer, newEmail: String) =

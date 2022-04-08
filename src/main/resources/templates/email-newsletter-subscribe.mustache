@@ -41,25 +41,29 @@
         </div>
         <div style="padding:1em;background-color: #ffffff">
 
-                {{#i18n}}email-token-hi{{/i18n}} {{user.firstname}}
+                {{#i18n}}email-newsletter-subscribe-hi{{/i18n}} {{user.firstname}}
 
                 <p>&nbsp;</p>
 
                 <p>
-                    {{#i18n}}email-token-intro{{/i18n}}&nbsp;<a href="{{baseUri}}">{{baseUri}}</a>.
-                    {{#i18n}}email-token-click{{/i18n}}&nbsp;<b>{{user.token}}</b>&nbsp;
-                    {{#i18n}}email-token-past{{/i18n}}
+                    {{#i18n}}email-newsletter-subscribe-intro{{/i18n}}&nbsp;<a href="{{baseUri}}">{{baseUri}}</a>.
+                    {{#i18n}}email-newsletter-subscribe-click{{/i18n}}&nbsp;<b>{{user.token}}</b>&nbsp;
+                    {{#i18n}}email-newsletter-subscribe-past{{/i18n}}
                 </p>
                 <p>&nbsp;</p>
                 <p>&nbsp;</p>
 
-                <a href="{{baseUri}}/signin/{{user.token}}/{{encodedemail}}" class="button mxt-button">
-                    {{#i18n}}email-token-action{{/i18n}}
+                <a href="{{baseUri}}/newsletter-signin/{{user.token}}/{{encodedemail}}" class="button mxt-button">
+                    {{#i18n}}email-newsletter-subscribe-action{{/i18n}}
                 </a>
 
                 <p>&nbsp;</p>
 
-                <p>{{#i18n}}email-token-signature{{/i18n}}</p>
+                <p>{{#i18n}}email-newsletter-subscribe-signature{{/i18n}}</p>
+
+                <p>&nbsp;</p>
+
+                <p>{{#i18n}}email-newsletter-subscribe-note{{/i18n}}</p>
 
         </div>
         <div style="background-color:#2c233d;color:white;padding:0.5em">

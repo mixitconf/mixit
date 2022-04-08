@@ -12,14 +12,14 @@ data class CachedUser(
     val firstname: String,
     val lastname: String,
     val company: String?,
-    val email: String?,
+    var email: String?,
     val photoUrl: String?,
     val emailHash: String?,
     val description: Map<Language, String>,
     val links: List<Link>,
     val legacyId: Long? = null,
     val role: Role,
-    val newsletterSubscriber: Boolean,
+    var newsletterSubscriber: Boolean,
     override val id: String = login
 ) : Cached {
     constructor(user: User) : this(
