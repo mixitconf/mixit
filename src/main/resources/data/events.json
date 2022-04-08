@@ -1360,6 +1360,11 @@
                 "level": "SILVER",
                 "sponsorId": "avanade",
                 "subscriptionDate": "2022-04-05"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "energypool",
+                "subscriptionDate": "2022-04-06"
             }
         ],
         "start": "2022-05-24",
