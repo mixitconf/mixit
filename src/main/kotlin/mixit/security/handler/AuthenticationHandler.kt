@@ -23,6 +23,7 @@ import org.springframework.web.reactive.function.server.ServerResponse.seeOther
 import org.springframework.web.reactive.function.server.ServerResponse.temporaryRedirect
 import org.springframework.web.server.WebSession
 import reactor.core.publisher.Mono
+import reactor.kotlin.core.publisher.switchIfEmpty
 import java.net.URI
 import java.net.URLDecoder
 
@@ -73,7 +74,24 @@ class AuthenticationHandler(
      * Display a view with a form to let user subscribe to our newsletter
      */
     fun newsletterView(req: ServerRequest) =
-        displayView(LoginPage.LOGIN, Context.Newsletter)
+        req.session()
+            .flatMap { session ->
+                with(session) {
+                    if (attributes[SESSION_EMAIL_KEY] != null &&
+                        attributes[SESSION_TOKEN_KEY] != null &&
+                        attributes[SESSION_LOGIN_KEY] != null
+                    ) {
+                        return@flatMap doSignIn(
+                            req,
+                            Context.Newsletter,
+                            attributes[SESSION_EMAIL_KEY]?.toString(),
+                            attributes[SESSION_TOKEN_KEY]?.toString()
+                        )
+                    }
+                }
+                displayView(LoginPage.LOGIN, Context.Newsletter)
+            }
+            .switchIfEmpty { displayView(LoginPage.LOGIN, Context.Newsletter) }
 
     /**
      * Action called by an HTTP post when a user send his email to connect to our application. If user is found
@@ -238,42 +256,42 @@ class AuthenticationHandler(
      * Action called by an HTTP post when user wants to send his email and his token to open a session.
      */
     fun signIn(req: ServerRequest) =
-        doSignIn(req, Context.Login)
+        req.extractFormData().flatMap { formData ->
+            doSignIn(req, Context.Login, formData["email"], formData["token"])
+        }
 
     /**
      * Action called by an HTTP post when user wants to subscribe our newskletter
      */
     fun subscribeNewsletter(req: ServerRequest) =
-        doSignIn(req, Context.Newsletter)
-
-    private fun doSignIn(req: ServerRequest, context: Context): Mono<ServerResponse> =
         req.extractFormData().flatMap { formData ->
-            // If email or token are null we can't open a session
-            if (formData["email"] == null || formData["token"] == null) {
-                displayErrorView(LoginError.REQUIRED_CREDENTIALS, context)
-            } else {
-                // Email sent can be crypted or not
-                val nonEncryptedMail =
-                    if (formData["email"]!!.contains("@")) formData["email"] else cryptographer.decrypt(formData["email"])
-                val token = formData["token"]!!
+            doSignIn(req, Context.Newsletter, formData["email"], formData["token"])
+        }
 
-                authenticationService.checkUserEmailAndToken(nonEncryptedMail!!, token)
-                    .flatMap { authenticationService.updateNewsletterSubscription(it, context == Context.Newsletter) }
-                    .flatMap { user ->
-                        req.session().flatMap { session ->
-                            val test = user.jsonToken(cryptographer)
-                            val cookie = authenticationService.createCookie(user)
-                            session.apply {
-                                attributes[SESSION_ROLE_KEY] = user.role
-                                attributes[SESSION_EMAIL_KEY] = nonEncryptedMail
-                                attributes[SESSION_TOKEN_KEY] = token
-                                attributes[SESSION_LOGIN_KEY] = user.login
-                            }
-                            seeOther(URI("${properties.baseUri}/me")).cookie(cookie).build()
+    private fun doSignIn(req: ServerRequest, context: Context, email: String?, token: String?): Mono<ServerResponse> =
+        // If email or token are null we can't open a session
+        if (email == null || token == null) {
+            displayErrorView(LoginError.REQUIRED_CREDENTIALS, context)
+        } else {
+            // Email sent can be crypted or not
+            val nonEncryptedMail = if (email.contains("@")) email else cryptographer.decrypt(email)
+
+            authenticationService.checkUserEmailAndToken(nonEncryptedMail!!, token)
+                .flatMap { authenticationService.updateNewsletterSubscription(it, context == Context.Newsletter) }
+                .flatMap { user ->
+                    req.session().flatMap { session ->
+                        val test = user.jsonToken(cryptographer)
+                        val cookie = authenticationService.createCookie(user)
+                        session.apply {
+                            attributes[SESSION_ROLE_KEY] = user.role
+                            attributes[SESSION_EMAIL_KEY] = nonEncryptedMail
+                            attributes[SESSION_TOKEN_KEY] = token
+                            attributes[SESSION_LOGIN_KEY] = user.login
                         }
+                        seeOther(URI("${properties.baseUri}/me")).cookie(cookie).build()
                     }
-                    .onErrorResume { displayErrorView(LoginError.INVALID_TOKEN, context) }
-            }
+                }
+                .onErrorResume { displayErrorView(LoginError.INVALID_TOKEN, context) }
         }
 
 

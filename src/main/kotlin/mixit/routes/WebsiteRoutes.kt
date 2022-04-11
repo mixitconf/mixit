@@ -125,7 +125,7 @@ class WebsiteRoutes(
             GET("/signin/{token}/{email:.*}", authenticationHandler::signInViaUrl)
 
             // Newsletter
-            GET("/newsletter-login", authenticationHandler::newsletterView)
+            GET("/newsletter-subscribe", authenticationHandler::newsletterView)
             GET("/newsletter-signin/{token}/{email:.*}", authenticationHandler::signInViaUrlForNewsletter)
 
             val eventsResource = ClassPathResource("data/events.json")

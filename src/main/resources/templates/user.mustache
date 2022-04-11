@@ -47,7 +47,8 @@
             {{/user.newsletterSubscriber}}
             {{^user.newsletterSubscriber}}
                 <b>{{#i18n}}user.form.not.newsletterSubscriber{{/i18n}}</b><br>
-                <small>{{#i18n}}user.form.not.newsletterSubscriber.desc{{/i18n}}</small>
+                <small>{{#i18n}}user.form.not.newsletterSubscriber.desc{{/i18n}}
+                    <a href="/newsletter-subscribe">{{#i18n}}user.form.not.newsletterSubscriber.link{{/i18n}}</a> </small>
             {{/user.newsletterSubscriber}}
         </div>
         {{/viewMyProfile}}
@@ -95,5 +96,7 @@
         </div>
     </div>
 </div>
-
+<div class="container mxt-wrapper--page-content">
+    <div><small>{{#i18n}}user.form.rgpd{{/i18n}}</small></div>
+</div>
 {{> footer}}
