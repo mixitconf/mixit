@@ -177,7 +177,7 @@ class WebsiteRoutes(
                 GET("/mailings/create", mailingHandler::createMailing)
                 GET("/mailings/edit/{id}", mailingHandler::editMailing)
                 GET("/mailing-lists", mailingListHandler::listMailing)
-                GET("/talks/edit/{slug}", adminTalkHandler::editTalk)
+                GET("/talks/edit/{id}", adminTalkHandler::editTalk)
                 GET("/talks") { adminTalkHandler.adminTalks(it, AdminTalkHandler.LAST_TALK_EVENT) }
                 GET("/talks/create", adminTalkHandler::createTalk)
                 GET("/talks/{year}") { adminTalkHandler.adminTalks(it, it.pathVariable("year")) }

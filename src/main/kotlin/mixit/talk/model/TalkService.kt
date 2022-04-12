@@ -36,6 +36,11 @@ class TalkService(
             Mono.justOrEmpty(talks.first { it.slug == slug })
         }
 
+    fun findById(id: String) =
+        findAll().flatMap { talks ->
+            Mono.justOrEmpty(talks.first { it.id == id })
+        }
+
     fun findByEventAndSlug(eventId: String, slug: String) =
         findAll().flatMap { talks ->
             Mono.justOrEmpty(talks.first { it.slug == slug && it.event == eventId })

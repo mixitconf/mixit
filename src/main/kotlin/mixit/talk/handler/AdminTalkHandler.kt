@@ -56,7 +56,7 @@ class AdminTalkHandler(
         this.adminTalk()
 
     fun editTalk(req: ServerRequest): Mono<ServerResponse> =
-        service.findBySlug(req.pathVariable("slug")).flatMap { adminTalk(it.toTalk()) }
+        service.findById(req.pathVariable("id")).flatMap { adminTalk(it.toTalk()) }
 
     fun adminSaveTalk(req: ServerRequest): Mono<ServerResponse> =
         req.extractFormData().flatMap { formData ->
