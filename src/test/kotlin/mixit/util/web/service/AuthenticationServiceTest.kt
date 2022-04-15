@@ -9,7 +9,7 @@ import io.mockk.junit5.MockKExtension
 import io.mockk.verify
 import mixit.security.model.AuthenticationService
 import mixit.security.model.Cryptographer
-import mixit.ticket.model.Ticket
+import mixit.ticket.model.LotteryTicket
 import mixit.ticket.repository.LotteryRepository
 import mixit.user.model.Role
 import mixit.user.model.User
@@ -103,7 +103,7 @@ internal class AuthenticationServiceTest {
         // User does not exist
         every { userRepository.findByNonEncryptedEmail(any()) } returns Mono.empty()
         // we find him in tickets
-        every { ticketRepository.findByEmail(any()) } returns Mono.just(Ticket(anEmail, "Dan", "North"))
+        every { ticketRepository.findByEmail(any()) } returns Mono.just(LotteryTicket(anEmail, "Dan", "North"))
         // the cryptographer is used when the user with an encrypted email is created
         every { cryptographer.encrypt(any()) } returns anEmail
         // No user use this login

@@ -8,8 +8,9 @@ import mixit.mixette.repository.MixetteDonationRepository
 import mixit.security.MixitWebFilter.Companion.SESSION_LOGIN_KEY
 import mixit.security.MixitWebFilter.Companion.SESSION_ROLE_KEY
 import mixit.security.model.Cryptographer
-import mixit.ticket.model.FinalTicket
+import mixit.ticket.model.Ticket
 import mixit.ticket.model.TicketService
+import mixit.ticket.model.TicketType
 import mixit.user.model.CachedUser
 import mixit.user.model.Role
 import mixit.user.model.User
@@ -259,7 +260,7 @@ class AdminMixetteHandler(
                 // Now we search if we have a ticket
                 ticketService.findByEncryptedEmail(encryptedUserEmail)
                     .map { it.toEntity() }
-                    .switchIfEmpty(Mono.just(FinalTicket("", "", lastname = "", firstname = "")))
+                    .switchIfEmpty(Mono.just(Ticket("", "", lastname = "", firstname = "", type = TicketType.ATTENDEE)))
                     .map { ticket ->
                         // ticket and user can be null but not the two at the same time
                         MixetteUserDonationDto(

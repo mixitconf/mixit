@@ -17,6 +17,7 @@
             <th>{{#i18n}}admin.ticket.number{{/i18n}}</th>
             <th>{{#i18n}}admin.ticket.firstname{{/i18n}}</th>
             <th>{{#i18n}}admin.ticket.lastname{{/i18n}}</th>
+            <th>{{#i18n}}admin.ticket.type{{/i18n}}</th>
             <th>{{#i18n}}admin.ticket.email{{/i18n}}</th>
             <th>&nbsp;</th>
         </tr>
@@ -27,6 +28,7 @@
                 <th>{{number}}</th>
                 <td>{{firstname}}</td>
                 <td>{{lastname}}</td>
+                <td>{{type}}</td>
                 <td><a href="mailto:{{email}}">{{email}}</a></td>
                 <td>
                     <a href="/admin/ticket/edit/{{number}}">{{#i18n}}common.actions.update{{/i18n}}</a> <br/>

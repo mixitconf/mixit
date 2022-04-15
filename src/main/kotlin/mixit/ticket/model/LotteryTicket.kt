@@ -10,7 +10,7 @@ import java.util.UUID
  * Should be renamed when the lottery will be closed
  */
 @Document
-data class Ticket(
+data class LotteryTicket(
     @Id val email: String,
     val firstname: String,
     val lastname: String,
@@ -21,9 +21,10 @@ data class Ticket(
  * Should be renamed when the lottery will be closed
  */
 @Document
-data class FinalTicket(
+data class Ticket(
     @Id val number: String,
     val encryptedEmail: String,
+    val type: TicketType,
     val firstname: String? = null,
     val lastname: String,
     val lotteryRank: Int? = null,
@@ -34,9 +35,9 @@ data class FinalTicket(
         fun generateNewNumber(): String =
             "MXT$CURRENT_EVENT-${UUID.randomUUID().toString().substring(0, 14).replace("-", "")}"
 
-        fun createFromLottery(lotteryTicket: Ticket) =
+        fun createFromLottery(lotteryTicket: LotteryTicket) =
             lotteryTicket.let {
-                FinalTicket(it.email, generateNewNumber(), it.firstname, it.lastname, it.rank)
+                Ticket(it.email, generateNewNumber(), TicketType.ATTENDEE, it.firstname, it.lastname, it.rank)
             }
     }
 }

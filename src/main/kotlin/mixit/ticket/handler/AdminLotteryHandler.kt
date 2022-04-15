@@ -1,7 +1,7 @@
 package mixit.ticket.handler
 
 import mixit.MixitProperties
-import mixit.ticket.model.Ticket
+import mixit.ticket.model.LotteryTicket
 import mixit.ticket.repository.LotteryRepository
 import mixit.util.camelCase
 import mixit.util.extractFormData
@@ -48,9 +48,9 @@ class AdminLotteryHandler(
     fun adminTicketing(req: ServerRequest): Mono<ServerResponse> {
         val tickets = ticketRepository.findAll()
             .map {
-                Ticket(it.email, it.firstname.camelCase(), it.lastname.camelCase(), it.rank)
+                LotteryTicket(it.email, it.firstname.camelCase(), it.lastname.camelCase(), it.rank)
             }
-            .sort(Comparator.comparing(Ticket::lastname).thenComparing(Comparator.comparing(Ticket::firstname)))
+            .sort(Comparator.comparing(LotteryTicket::lastname).thenComparing(Comparator.comparing(LotteryTicket::firstname)))
         return ok().render(
             TEMPLATE_LIST,
             mapOf(

@@ -12,7 +12,7 @@ import mixit.mailing.model.RecipientType.StaffInPause
 import mixit.mailing.model.RecipientType.Volunteers
 import mixit.security.model.Cryptographer
 import mixit.talk.model.TalkService
-import mixit.ticket.model.CachedFinalTicket
+import mixit.ticket.model.CachedTicket
 import mixit.ticket.model.TicketService
 import mixit.user.model.CachedOrganization
 import mixit.user.model.CachedSponsor
@@ -118,7 +118,7 @@ class MailingListHandler(
             user.email?.let { cryptographer.decrypt(it) } ?: "unknown"
         )
 
-        constructor(user: CachedFinalTicket) : this(
+        constructor(user: CachedTicket) : this(
             user.firstname,
             user.lastname,
             user.encryptedEmail.let { cryptographer.decrypt(it) } ?: "unknown"

@@ -93,7 +93,7 @@ class WebsiteRoutes(
                 )
             }
             GET("/about", aboutHandler::findAboutView)
-            GET("/ticketing", lotteryHandler::ticketing)
+            GET("/lottery", lotteryHandler::ticketing)
             GET("/sponsors") { sponsorHandler.viewWithSponsors(CURRENT_EVENT.toInt(), it) }
             GET("/mixteen") {
                 sponsorHandler.viewWithSponsors(
@@ -230,7 +230,7 @@ class WebsiteRoutes(
             POST("/me", userHandler::saveProfile)
             POST("/me/talks", talkHandler::saveProfileTalk)
             POST("/search") { searchHandler.searchFullTextView(it) }
-            POST("/ticketing", lotteryHandler::submit)
+            POST("/lottery", lotteryHandler::submit)
 
             "/admin".nest {
                 POST("/talks", adminTalkHandler::adminSaveTalk)
@@ -249,7 +249,7 @@ class WebsiteRoutes(
                 POST("/events/{eventId}/volunteers/create", adminEventHandler::adminCreateEventVolunteer)
                 POST("/events/{eventId}/volunteers/delete", adminEventHandler::adminDeleteEventVolunteer)
                 POST("/events/{eventId}/volunteers", adminEventHandler::adminUpdateEventVolunteer)
-                POST("/ticketing/delete", adminLotteryHandler::adminDeleteTicketing)
+                POST("/lottery/delete", adminLotteryHandler::adminDeleteTicketing)
                 POST("/ticket", ticketHandler::submit)
                 POST("/ticket/delete", ticketHandler::adminDeleteTicket)
                 POST("/post", adminPostHandler::adminSavePost)

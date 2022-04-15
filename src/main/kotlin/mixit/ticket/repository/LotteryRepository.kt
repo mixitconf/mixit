@@ -2,7 +2,7 @@ package mixit.ticket.repository
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import mixit.ticket.model.Ticket
+import mixit.ticket.model.LotteryTicket
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
@@ -28,24 +28,24 @@ class LotteryRepository(
     fun initData() {
         if (count().block() == 0L) {
             val usersResource = ClassPathResource("data/ticket.json")
-            val tickets: List<Ticket> = objectMapper.readValue(usersResource.inputStream)
+            val tickets: List<LotteryTicket> = objectMapper.readValue(usersResource.inputStream)
             tickets.forEach { save(it).block() }
             logger.info("Lottery data initialization complete")
         }
     }
 
-    fun count() = template.count<Ticket>()
+    fun count() = template.count<LotteryTicket>()
 
-    fun save(ticket: Ticket) =
+    fun save(ticket: LotteryTicket) =
         template.save(ticket).doOnSuccess { _ -> logger.info("Save new lottery ticket $ticket") }
 
-    fun findAll() = template.findAll<Ticket>().doOnComplete { logger.info("Load all lottery tickets") }
+    fun findAll() = template.findAll<LotteryTicket>().doOnComplete { logger.info("Load all lottery tickets") }
 
-    fun eraseRank() = template.updateMulti<Ticket>(Query(), Update().set("rank", null))
+    fun eraseRank() = template.updateMulti<LotteryTicket>(Query(), Update().set("rank", null))
 
-    fun deleteAll() = template.remove<Ticket>(Query())
+    fun deleteAll() = template.remove<LotteryTicket>(Query())
 
-    fun deleteOne(id: String) = template.remove<Ticket>(Query(Criteria.where("_id").isEqualTo(id)))
+    fun deleteOne(id: String) = template.remove<LotteryTicket>(Query(Criteria.where("_id").isEqualTo(id)))
 
-    fun findByEmail(email: String) = template.findOne<Ticket>(Query(Criteria.where("email").isEqualTo(email)))
+    fun findByEmail(email: String) = template.findOne<LotteryTicket>(Query(Criteria.where("email").isEqualTo(email)))
 }
