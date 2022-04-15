@@ -20,6 +20,47 @@
         "video": null
     },
     {
+        "addedAt": "2022-03-23T09:12:44.709",
+        "description": "Apr\u00e8s le Rescue-game \u201cIl faut sauver LoRa\u201d, on revient te proposer le Handson le plus fou de l\u2019ann\u00e9e. Cette fois-ci, pas de radio ou de catastrophe naturelle. Si on allait plut\u00f4t chercher le contenu d\u2019un coffre fort?\r\nIci, le seul IDE dont tu auras besoin sera Arduino. Tu vas apprendre \u00e0 bruteforcer une valise \u00e9lectronique, trouver les bons fils \u00e0 brancher, sniffer des trames r\u00e9seau, hacker une webapp et re-programmer des badges NFC. Il te reste moins de 2h en comp\u00e9tition pour gagner le contenu du coffre. On te conseille de venir en bin\u00f4me !",
+        "end": "2022-05-24T12:30:00",
+        "event": "2022",
+        "format": "WORKSHOP",
+        "id": "623ad67c8a5c755e7139c6f6",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM3",
+        "slug": "hacking-game-crack-the-safe",
+        "speakerIds": [
+            "LoicOrtola",
+            "antoleb"
+        ],
+        "start": "2022-05-24T10:40:00",
+        "summary": "Les autres workshops sont \"So-2019\"?\r\n\r\nEt si on allait plut\u00f4t hacker un coffre-fort? \r\nViens bruteforcer une valise \u00e9lectronique et bouffer de l'hexa pour hacker un badge NFC. Il te reste 2h en comp\u00e9tition pour gagner le contenu du coffre. On te conseille de venir en bin\u00f4me !",
+        "title": "Hacking Game : Crack the safe",
+        "topic": "makers",
+        "video": null
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.717",
+        "description": "Une personne paralys\u00e9e des membres sup\u00e9rieurs est grandement handicap\u00e9e dans sa vie de tous les jours pour effectuer des actions qui sont banales pour les autres. Gr\u00e2ce au monde num\u00e9rique et \u00e0 internet cette personne peut retrouver une certaine autonomie pour communiquer avec ses proches, consommer, se cultiver, effectuer des d\u00e9marches administratives\u2026 Le num\u00e9rique est donc une formidable promesse pour cette personne \u00e0 condition que nos sites internet soient accessibles ! \ud83d\ude30\r\n\r\n\r\nCette conf\u00e9rence pr\u00e9sente comment ces personnes peuvent naviguer sur internet et les difficult\u00e9s auxquelles elles sont confront\u00e9es. Ensuite, nous verrons comment apporter quelques modifications simples \u00e0 nos sites internet pour les rendre accessibles pour ces personnes. Cela sera mis en pratique sur un site internet en live-coding.\r\n",
+        "end": "2022-05-24T11:30:00",
+        "event": "2022",
+        "format": "TALK",
+        "id": "623ad67c8a5c755e7139c6fd",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM2",
+        "slug": "le-handi-surf-l-accessibilite-d-un-site-internet-pour-une-personne-tetraplegique",
+        "speakerIds": [
+            "hboisgontier"
+        ],
+        "start": "2022-05-24T10:40:00",
+        "summary": "Venez d\u00e9couvrir l'accessibilit\u00e9 num\u00e9rique, son importance et surtout comment commencer \u00e0 la mettre en \u0153uvre !",
+        "title": "Le handi-surf : l'accessibilit\u00e9 d'un site internet pour une personne t\u00e9trapl\u00e9gique",
+        "topic": "tech",
+        "video": null
+    },
+    {
         "addedAt": "2022-03-23T09:12:44.701",
         "description": "O\u00f9 l'on parlera de design pour le service public.\r\n\u00c0 qui s'adressent les services num\u00e9riques du service public : aux citoyens et citoyennes, mais pas seulement !\r\nQuels genres de produits d\u00e9veloppe-t-on ? \r\nComment on travaille avec une administration ? Comment int\u00e9grer les m\u00e9thodologies agile et lean dans des administrations ?\r\nQu'est-ce que \u00e7a change par rapport au priv\u00e9 ? Quels points d'attention \u00e0 avoir ? Quels pi\u00e8ges \u00e9viter quand on vient du public ? \r\n",
         "end": "2022-05-24T11:30:00",
@@ -40,27 +81,6 @@
         "video": null
     },
     {
-        "addedAt": "2022-03-23T09:12:44.709",
-        "description": "Apr\u00e8s le Rescue-game \u201cIl faut sauver LoRa\u201d, on revient te proposer le Handson le plus fou de l\u2019ann\u00e9e. Cette fois-ci, pas de radio ou de catastrophe naturelle. Si on allait plut\u00f4t chercher le contenu d\u2019un coffre fort?\r\nIci, le seul IDE dont tu auras besoin sera Arduino. Tu vas apprendre \u00e0 bruteforcer une valise \u00e9lectronique, trouver les bons fils \u00e0 brancher, sniffer des trames r\u00e9seau, hacker une webapp et re-programmer des badges NFC. Il te reste moins de 2h en comp\u00e9tition pour gagner le contenu du coffre. On te conseille de venir en bin\u00f4me !",
-        "end": "2022-05-24T12:30:00",
-        "event": "2022",
-        "format": "WORKSHOP",
-        "id": "623ad67c8a5c755e7139c6f6",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "hacking-game-crack-the-safe",
-        "speakerIds": [
-            "LoicOrtola",
-            "antoleb"
-        ],
-        "start": "2022-05-24T10:40:00",
-        "summary": "Les autres workshops sont \"So-2019\"?\r\n\r\nEt si on allait plut\u00f4t hacker un coffre-fort? \r\nViens bruteforcer une valise \u00e9lectronique et bouffer de l'hexa pour hacker un badge NFC. Il te reste 2h en comp\u00e9tition pour gagner le contenu du coffre. On te conseille de venir en bin\u00f4me !",
-        "title": "Hacking Game : Crack the safe",
-        "topic": "makers",
-        "video": null
-    },
-    {
         "addedAt": "2022-03-23T09:12:44.711",
         "description": "Biais cognitifs, sciences comportementales, incitations douces : le cerveau des utilisateurs/trices est devenu notre terrain de jeu \u2014 et l\u2019infantilisation notre meilleur business model.\r\n\r\nFace aux hochets attentionnels et aux biberons de dopamine, notre capacit\u00e9 \u00e0 proposer un num\u00e9rique adulte, \u00e9mancipateur est la victime collat\u00e9rale du capitalisme de l\u2019attention. Ne jetons pas le b\u00e9b\u00e9 avec l\u2019eau du bain : la science comportementale, c\u2019est aussi le rem\u00e8de dans le mal.",
         "end": "2022-05-24T11:30:00",
@@ -69,7 +89,7 @@
         "id": "623ad67c8a5c755e7139c6f8",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "UNKNOWN",
+        "room": "AMPHID",
         "slug": "homo-stimulus-au-bonheur-des-likes",
         "speakerIds": [
             "nina-cercy"
@@ -81,46 +101,6 @@
         "video": null
     },
     {
-        "addedAt": "2022-04-12T07:04:25.221",
-        "description": "Sander will explain this model and propose how we can use it to develop a roadmap to build technologies with the public interest at heart. What are the foundational issues to consider? What do design and development processes look like to build these other technologies? And how do we ensure that the wider society is involved in the crucial choices that need to be made to build it right? There are currently no alternative social media platforms that operate at scale AND put the public interest truly at their core. However, there are many initiatives that operate on a smaller scale that do provide an alternative platform or a piece of the solution for preserving people\u2019s rights online. Sander will address the question of how we can build ecosystems of technologies in the public interest so that they are a true alternative for the commercial platforms of today.  ",
-        "end": "2022-05-24T11:30:00",
-        "event": "2022",
-        "format": "TALK",
-        "id": "6255260ae536d64281c4062c",
-        "language": "ENGLISH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "building-online-spaces-with-the-public-interest-at-heart-",
-        "speakerIds": [
-            "van.der.waal"
-        ],
-        "start": "2022-05-24T10:40:00",
-        "summary": "Sander van der Waal is Research Director at the research institute and cultural institution Waag, based in Amsterdam. Waag\u2019s research into technology and its experiments and proposals to build technologies with public values at the center has culminated in the model \u2018Public Stack\u2019 (https://publicstack.net).",
-        "title": "Building online spaces with the public interest at heart \ud83d\udc9a ",
-        "topic": "design",
-        "video": null
-    },
-    {
-        "addedAt": "2022-03-23T09:12:44.717",
-        "description": "Une personne paralys\u00e9e des membres sup\u00e9rieurs est grandement handicap\u00e9e dans sa vie de tous les jours pour effectuer des actions qui sont banales pour les autres. Gr\u00e2ce au monde num\u00e9rique et \u00e0 internet cette personne peut retrouver une certaine autonomie pour communiquer avec ses proches, consommer, se cultiver, effectuer des d\u00e9marches administratives\u2026 Le num\u00e9rique est donc une formidable promesse pour cette personne \u00e0 condition que nos sites internet soient accessibles ! \ud83d\ude30\r\n\r\n\r\nCette conf\u00e9rence pr\u00e9sente comment ces personnes peuvent naviguer sur internet et les difficult\u00e9s auxquelles elles sont confront\u00e9es. Ensuite, nous verrons comment apporter quelques modifications simples \u00e0 nos sites internet pour les rendre accessibles pour ces personnes. Cela sera mis en pratique sur un site internet en live-coding.\r\n",
-        "end": "2022-05-24T11:30:00",
-        "event": "2022",
-        "format": "TALK",
-        "id": "623ad67c8a5c755e7139c6fd",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "le-handi-surf-l-accessibilite-d-un-site-internet-pour-une-personne-tetraplegique",
-        "speakerIds": [
-            "hboisgontier"
-        ],
-        "start": "2022-05-24T10:40:00",
-        "summary": "Venez d\u00e9couvrir l'accessibilit\u00e9 num\u00e9rique, son importance et surtout comment commencer \u00e0 la mettre en \u0153uvre !",
-        "title": "Le handi-surf : l'accessibilit\u00e9 d'un site internet pour une personne t\u00e9trapl\u00e9gique",
-        "topic": "tech",
-        "video": null
-    },
-    {
         "addedAt": "2022-03-23T09:12:44.696",
         "description": "Tester sans scripts et sans cahiers de recette dans un environnement avec peu de sp\u00e9cifications fonctionnelles peut en perturber plus d'un\u00b7e. Dans ces conditions, comment faire de la non-r\u00e9gression ou trouver le cas un peu tordu qui va \"casser\" l'exp\u00e9rience utilisateur ?\r\n\r\nSuffit-il de tester comme un singe, un chat ou un enfant de 3 ans en tapant sur toutes les touches ou en cliquant sur tous les boutons au hasard ? Bien s\u00fbr que non!\r\nIl existe des m\u00e9thodes de tests pour trouver des bugs qu'on n'avait pas anticip\u00e9s et sur lesquels nos utilisateurs risquent de tomber avant nous.\r\nDans cet atelier, nous ferons une introduction aux sessions de tests exploratoires avec mise en pratique, pour que vous appreniez la technique en mettant les mains dans le cambouis.\r\n\r\n## Ce que vous allez apprendre\r\n* Comprendre la d\u00e9marche du test exploratoire comme une approche guid\u00e9e, r\u00e9fl\u00e9chie, et qui peut se passer de sc\u00e9narios de tests\r\n* Int\u00e9grer les tests exploratoires \u00e0 votre strat\u00e9gie de test : ils sont une approche compl\u00e9mentaire aux tests de non-r\u00e9gression classiques, qu'ils soient manuels ou automatiques\r\n* Utiliser des concepts comme les oracles, les heuristiques ou les tests guid\u00e9s par le risque\r\n* Comment trouver des bugs utiles pour les clients et les utilisateurs\r\n\r\n## Public vis\u00e9 :\r\n* Les testeurs fonctionnels, les d\u00e9veloppeurs de tests fonctionnels, les tests managers, coaches QA, lead testeurs\u2026\r\n* Les responsables de produit, PO\r\n* Toute personne souhaitant mieux tester fonctionnellement son code.",
         "end": "2022-05-24T12:30:00",
@@ -129,7 +109,7 @@
         "id": "623ad67c8a5c755e7139c6ed",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "UNKNOWN",
+        "room": "ROOM4",
         "slug": "comment-tester-avec-son-cerveau-introduction-aux-tests-exploratoires-un-outil-essentiel-pour-tous",
         "speakerIds": [
             "nitcheasatester",
@@ -143,6 +123,27 @@
         "video": null
     },
     {
+        "addedAt": "2022-03-23T09:12:44.681",
+        "description": "J'ai jou\u00e9 cet atelier lors du DevFestNantes 2021 et 6/7 \u00e9v\u00e8nements Agile.\r\n\r\nIl est adapt\u00e9 \u00e0 un public tech mais aussi plus op\u00e9rationnel, voire fonctionnelle car Accelerate (the science behind DevOps) cherche \u00e0 mobiliser tout les r\u00f4les d'une organisation IT.\r\n\r\nJ'anime cet atelier en duo en g\u00e9n\u00e9ral (nom de la personne \u00e0 venir) sinon je suis enti\u00e8rement capable de l'animer seul.\r\n\r\n2 formats possibles : pr\u00e9sentiel ou distanciel\r\nSi pr\u00e9sentiel:\r\nJusqu'\u00e0 42 personnes max :  7 personnes r\u00e9partis sur 6 table.\r\nSi distanciel: \r\n2 salles virtuelles pr\u00e9vues (1 par animateur)\r\nPossibilit\u00e9 d'accueillir en 5 \u00e0 10 personnes par salle.  La fluidit\u00e9 des \u00e9changes est bien \u00e0 7 personnes et permet aux plus discrets de s'exprimer.",
+        "end": "2022-05-24T12:30:44",
+        "event": "2022",
+        "format": "WORKSHOP",
+        "id": "623ad67c8a5c755e7139c6e6",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM5",
+        "slug": "a-la-decouverte-d-accelerate",
+        "speakerIds": [
+            "geoffrey.graveaud",
+            "ilyes_semlali"
+        ],
+        "start": "2022-05-24T10:40:44",
+        "summary": "Les organisations veulent d\u00e9ployer plus vite et \u00eatre stable pour atteindre leurs objectifs.\r\nAccelerate est une recherche de 4 ans qui a d\u00e9fini les pratiques pour allier vitesse et stabilit\u00e9.\r\nA travers cet atelier, vous d\u00e9couvrirez l'id\u00e9e g\u00e9n\u00e9rale, les m\u00e9canismes et les r\u00e9sultats pr\u00e9dits d'Accelerate",
+        "title": "A la d\u00e9couverte d'Accelerate",
+        "topic": "tech",
+        "video": null
+    },
+    {
         "addedAt": "2022-03-23T09:12:44.693",
         "description": "Difficile de se passer d'un gestionnaire de mots de passe si on veut respecter les bonnes pratiques : des mots de passe uniques et complexes. C'est encore plus vrai s'il faut partager les mots de passe avec des coll\u00e8gues ou des membres de la famille.\r\n\r\nCes gestionnaires de mots de passe sont souvent des boites noires. On vous dit que les mots de passe sont chiffr\u00e9s mais je vous propose d'aller un peu plus loin et comprendre comment \u00e7a fonctionne et pourquoi, puis comment on peut partager des mots de passe synchronis\u00e9s en ligne sans faire confiance \u00e0 personne pour ses mots de passe.\r\n\r\n\u00c0 Cozy Cloud nous avons \u00e9tudi\u00e9 le gestionnaire open source Bitwarden, puis impl\u00e9ment\u00e9 nos propres solutions autour de la m\u00eame API. Je vous propose une plong\u00e9e dans tout ce que nous avons appris, pour satisfaire la curiosit\u00e9 ou pour vous rassurer quant \u00e0 l'utilisation de ces outils.\r\n\r\nOn parlera chiffrement et architecture mais \u00e7a sera compr\u00e9hensible pour tout le monde sans pr\u00e9requis particulier.",
         "end": "2022-05-24T11:30:44",
@@ -151,7 +152,7 @@
         "id": "623ad67c8a5c755e7139c6eb",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "UNKNOWN",
+        "room": "ROOM1",
         "slug": "comment-fonctionne-un-gestionnaire-de-mots-de-passe-",
         "speakerIds": [
             "edas"
@@ -163,24 +164,23 @@
         "video": null
     },
     {
-        "addedAt": "2022-03-23T09:12:44.681",
-        "description": "J'ai jou\u00e9 cet atelier lors du DevFestNantes 2021 et 6/7 \u00e9v\u00e8nements Agile.\r\n\r\nIl est adapt\u00e9 \u00e0 un public tech mais aussi plus op\u00e9rationnel, voire fonctionnelle car Accelerate (the science behind DevOps) cherche \u00e0 mobiliser tout les r\u00f4les d'une organisation IT.\r\n\r\nJ'anime cet atelier en duo en g\u00e9n\u00e9ral (nom de la personne \u00e0 venir) sinon je suis enti\u00e8rement capable de l'animer seul.\r\n\r\n2 formats possibles : pr\u00e9sentiel ou distanciel\r\nSi pr\u00e9sentiel:\r\nJusqu'\u00e0 42 personnes max :  7 personnes r\u00e9partis sur 6 table.\r\nSi distanciel: \r\n2 salles virtuelles pr\u00e9vues (1 par animateur)\r\nPossibilit\u00e9 d'accueillir en 5 \u00e0 10 personnes par salle.  La fluidit\u00e9 des \u00e9changes est bien \u00e0 7 personnes et permet aux plus discrets de s'exprimer.",
-        "end": "2022-05-24T12:30:44",
+        "addedAt": "2022-04-01T14:19:12.536",
+        "description": "TBD",
+        "end": "2022-05-24T12:30:00",
         "event": "2022",
-        "format": "WORKSHOP",
-        "id": "623ad67c8a5c755e7139c6e6",
+        "format": "TALK",
+        "id": "62470a2da88168213377c693",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "a-la-decouverte-d-accelerate",
+        "room": "ROOM2",
+        "slug": "discrimination-et-harcelement-au-travail",
         "speakerIds": [
-            "geoffrey.graveaud",
-            "ilyes_semlali"
+            "cjf.avocat"
         ],
-        "start": "2022-05-24T10:40:44",
-        "summary": "Les organisations veulent d\u00e9ployer plus vite et \u00eatre stable pour atteindre leurs objectifs.\r\nAccelerate est une recherche de 4 ans qui a d\u00e9fini les pratiques pour allier vitesse et stabilit\u00e9.\r\nA travers cet atelier, vous d\u00e9couvrirez l'id\u00e9e g\u00e9n\u00e9rale, les m\u00e9canismes et les r\u00e9sultats pr\u00e9dits d'Accelerate",
-        "title": "A la d\u00e9couverte d'Accelerate",
-        "topic": "tech",
+        "start": "2022-05-24T11:40:00",
+        "summary": "TBD",
+        "title": "Discrimination et harc\u00e8lement au travail",
+        "topic": "ethics",
         "video": null
     },
     {
@@ -204,26 +204,6 @@
         "video": null
     },
     {
-        "addedAt": "2022-04-01T14:11:16.262",
-        "description": "Comment WebAssembly pourrait changer la fa\u00e7on dont nous d\u00e9veloppons nos applications dans les ann\u00e9es \u00e0 venir ? S\u00e9bastien partagera des pistes de r\u00e9flexion ainsi que des exp\u00e9rimentations pour vous donner un aper\u00e7u de ce qu\u2019est WebAssembly en 2022 et de sa possible \u00e9volution. On parlera d\u00e9centralisation, mod\u00e8le de s\u00e9curit\u00e9, WASI, WebAssembly Component Model, int\u00e9gration de WebAssembly avec les diff\u00e9rents langages (Rust, Go, Kotlin, JavaScript, Java, Python, Ruby), performance, outillage et d\u00e9ploiement sans containeur.",
-        "end": "2022-05-24T12:30:00",
-        "event": "2022",
-        "format": "TALK",
-        "id": "6247085ca88168213377c692",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "webassembly-developer-experience",
-        "speakerIds": [
-            "sdeleuze"
-        ],
-        "start": "2022-05-24T11:40:00",
-        "summary": "Comment WebAssembly pourrait changer la fa\u00e7on dont nous d\u00e9veloppons nos applications dans les ann\u00e9es \u00e0 venir ?",
-        "title": "WebAssembly Developer Experience",
-        "topic": "tech",
-        "video": null
-    },
-    {
         "addedAt": "2022-04-01T12:42:12.815",
         "description": "TBD",
         "end": "2022-05-24T12:30:00",
@@ -232,7 +212,7 @@
         "id": "6246f38892dbc531f141eaee",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "UNKNOWN",
+        "room": "ROOM1",
         "slug": "gerer-l-incertitude-dans-le-batiment",
         "speakerIds": [
             "cagicquel"
@@ -244,23 +224,23 @@
         "video": null
     },
     {
-        "addedAt": "2022-04-01T14:19:12.536",
-        "description": "TBD",
+        "addedAt": "2022-04-01T14:11:16.262",
+        "description": "Comment WebAssembly pourrait changer la fa\u00e7on dont nous d\u00e9veloppons nos applications dans les ann\u00e9es \u00e0 venir ? S\u00e9bastien partagera des pistes de r\u00e9flexion ainsi que des exp\u00e9rimentations pour vous donner un aper\u00e7u de ce qu\u2019est WebAssembly en 2022 et de sa possible \u00e9volution. On parlera d\u00e9centralisation, mod\u00e8le de s\u00e9curit\u00e9, WASI, WebAssembly Component Model, int\u00e9gration de WebAssembly avec les diff\u00e9rents langages (Rust, Go, Kotlin, JavaScript, Java, Python, Ruby), performance, outillage et d\u00e9ploiement sans containeur.",
         "end": "2022-05-24T12:30:00",
         "event": "2022",
         "format": "TALK",
-        "id": "62470a2da88168213377c693",
+        "id": "6247085ca88168213377c692",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "discrimination-et-harcelement-au-travail",
+        "room": "AMPHID",
+        "slug": "webassembly-developer-experience",
         "speakerIds": [
-            "cjf.avocat"
+            "sdeleuze"
         ],
         "start": "2022-05-24T11:40:00",
-        "summary": "TBD",
-        "title": "Discrimination et harc\u00e8lement au travail",
-        "topic": "ethics",
+        "summary": "Comment WebAssembly pourrait changer la fa\u00e7on dont nous d\u00e9veloppons nos applications dans les ann\u00e9es \u00e0 venir ?",
+        "title": "WebAssembly Developer Experience",
+        "topic": "tech",
         "video": null
     },
     {
@@ -272,7 +252,7 @@
         "id": "623ad67c8a5c755e7139c6f3",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "UNKNOWN",
+        "room": "AMPHIC",
         "slug": "enjeux-geopolitiques-des-infrastructures-numeriques",
         "speakerIds": [
             "ophelie.coelho"
@@ -284,26 +264,6 @@
         "video": null
     },
     {
-        "addedAt": "2022-03-23T09:12:44.71",
-        "description": "Even if many have heard of it but few have seen it, the hexagonal architecture is not an Arlesian.\r\nThe goal here will be to show everyone, both beginners and experts, that this architecture is really simple to implement.\r\nIt has many advantages:\r\n\r\n- separation of business and technical code,\r\n- establishment of a Domain Specific Language,\r\n- testability of the business code,\r\n- scalability of the technical code relating to infrastructure,\r\n- facility for technological monitoring.\r\n\r\nIn short, everything is good in hexagonal architecture.\r\n\r\nThis three-hour session will be divided as follows:\r\n\r\n- a presentation of 30 minutes maximum alternating definition of each of its concepts and their implementation in a Java project.\r\n- a kata of 60 minutes max on a business domain to be used in the next part\r\n- implementation for 60 minutes max of adapters showing the power and simplicity of this architecture.\r\n- 15 minutes of Q / A and concept development\r\n\r\nThe result of this workshop was implemented on new projects in the banking sector. This made it possible to avoid recurring pitfalls on the testability and quality of the developed code ^^.\r\nReferences\r\n\r\nMeetup where this workshop has been facilitated: https://www.meetup.com/fr-FR/Nov-NCraft/events/248998729/?_xtd=gatlbWFpbF9jbGlja9oAJGMyYjA2OTYzLTRkODYtNDc4ZC04ZTQ3LTA5OGQwNjYwZmE4Yg\r\n\r\nHere is a the kata's github: https://github.com/HEIWA-IT/TripAgency/\r\n",
-        "end": "2022-05-24T16:40:00",
-        "event": "2022",
-        "format": "WORKSHOP",
-        "id": "623ad67c8a5c755e7139c6f7",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "hexagonal-architecture-a-simple-and-powerful-architecture-set-up-quickly",
-        "speakerIds": [
-            "MagierDan"
-        ],
-        "start": "2022-05-24T14:50:00",
-        "summary": "Even if many have heard of it but few have seen it, the hexagonal architecture is not an Arlesian.\r\nThe goal here will be to show everyone, both beginners and experts, that this architecture is really simple to implement.",
-        "title": "Hexagonal architecture: a simple and powerful architecture, set up quickly",
-        "topic": "tech",
-        "video": null
-    },
-    {
         "addedAt": "2022-03-23T09:12:00",
         "description": "Remplacez \u201cmouton\u201d par \u201cappli\u201d, et vous retrouvez un dialogue courant entre d\u00e9veloppeurs, architectes, et utilisateur m\u00e9tier. Comment se comprendre quand on n'a pas le m\u00eame point de vue sur l'appli \u00e0 produire?\r\nIl faudrait pouvoir travailler sur les m\u00eames donn\u00e9es, celles qui d\u00e9crivent l'appli, mais en faisant varier les repr\u00e9sentations, en fonction des points de vue. Pour \u00e7a il nous faudrait un outil pour \u00e9diter des donn\u00e9es et les repr\u00e9senter diff\u00e9remment, de mani\u00e8re tr\u00e8s flexible, tout en gardant leur coh\u00e9rence. Sirius Web est un nouveau projet open-source, qui simplifie la cr\u00e9ation de ce genre d\u2019outil : d\u00e9finition d\u2019un domaine, cr\u00e9ation d\u2019\u00e9diteurs graphiques, le tout depuis un navigateur web. Durant ce talk nous reviendrons sur les diff\u00e9rents cas d\u2019usage, l\u2019architecture et les choix techniques, pour laisser la place aux d\u00e9mos des principales fonctionnalit\u00e9s.",
         "end": "2022-05-24T15:40:00",
@@ -312,7 +272,7 @@
         "id": "623ad67c8a5c755e7139c710",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "UNKNOWN",
+        "room": "ROOM1",
         "slug": "s-il-vous-plait-dessine-moi-une-appli-",
         "speakerIds": [
             "melaniebats"
@@ -325,22 +285,24 @@
     },
     {
         "addedAt": "2022-03-23T09:12:00",
-        "description": "Envie de feedback qui ont vraiment du sens ? D'ailleurs quel sens peut-on r\u00e9ellement donner au feedback. Je vous propose un atelier pour entrer plus en profondeur dans le sujet et vous partager l'amour que j'ai de cette pratique.\r\n\r\nRecette de l'atelier :\r\n- un peu d'alignement pour commencer\r\n- th\u00e9orie pour modaliser le geste\r\n- on s'entraine pour de rire\r\n- opportunit\u00e9 de donner un feedback sur l'atelier... mais vraiment pour le bien-\u00eatre des participant.e.s !!\r\n\r\nDes \u00e9changes, des partages, de la pratique, beaucoup d'ouverture, et de la responsabilit\u00e9 pour soutenir la libert\u00e9. Une vraie exp\u00e9rience immersive au c\u0153ur d'une vision tr\u00e8s engag\u00e9e du feedback, qui, je n'en doute pas, vous permettra de toucher du doigt une certaine magie dans la d\u00e9marche.\r\nDisclaimer : ami.e.s de la Communication NonViolente, il est possible que vous y visitiez quelques territoires connus.",
-        "end": "2022-05-24T16:40:00",
+        "description": "Le Collectif Mauvaises Herbes est une initiative qui a pour objectif de mettre en valeur et \u00e0 prot\u00e9ger la diversit\u00e9 des expertises dans le jeu vid\u00e9o.\r\nLors de cette intervention, les trois fondatrices du Collectif pr\u00e9senteront ses actions et les valeurs fortes qui sont \u00e0 son origine. Nous aborderons ensemble les probl\u00e9matiques rencontr\u00e9es par les personnes marginalis\u00e9es dans le jeu vid\u00e9o et nos pistes pour cr\u00e9er d'autres dynamiques.",
+        "end": "2022-05-24T15:30:00",
         "event": "2022",
-        "format": "WORKSHOP",
-        "id": "623ad67c8a5c755e7139c70a",
+        "format": "TALK",
+        "id": "623ad67c8a5c755e7139c6ea",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "parlez-de-vous-faites-des-feedbacks-",
+        "room": "ROOM2",
+        "slug": "collectif-mauvaises-herbes-notre-demarche-pour-valoriser-les-expertises-des-personnes-marginalisees-du-jeu-video",
         "speakerIds": [
-            "jquille"
+            "camille.moreau",
+            "clementine.plissonnier",
+            "thais.arias"
         ],
         "start": "2022-05-24T14:50:00",
-        "summary": "Vous avez d\u00e9j\u00e0 \u00e9t\u00e9 exasp\u00e9r\u00e9 par un feedback ?  L\u2019id\u00e9e de donner, ou recevoir un feedback vous semble plus une corv\u00e9e qu\u2019un plaisir ?\r\nVoyons ensemble comment cette pratique, au-del\u00e0 d\u2019une mode de management, peut \u00eatre un acte r\u00e9volutionnaire en faveur des individus et des organisations apprenantes !",
-        "title": "Parlez de vous, faites des feedbacks !",
-        "topic": "team",
+        "summary": "Pr\u00e9sentation de notre collectif, qui vise \u00e0 mettre en valeur et \u00e0 prot\u00e9ger la diversit\u00e9 des expertises dans le jeu vid\u00e9o. Nous pr\u00e9senterons notre collectif et ses initiatives, puis quelques valeurs fortes qui guident nos r\u00e9flexions.",
+        "title": "Collectif Mauvaises Herbes : notre d\u00e9marche pour valoriser les expertises des personnes marginalis\u00e9es du jeu vid\u00e9o",
+        "topic": "ethics",
         "video": null
     },
     {
@@ -365,44 +327,22 @@
     },
     {
         "addedAt": "2022-03-23T09:12:00",
-        "description": "Le Collectif Mauvaises Herbes est une initiative qui a pour objectif de mettre en valeur et \u00e0 prot\u00e9ger la diversit\u00e9 des expertises dans le jeu vid\u00e9o.\r\nLors de cette intervention, les trois fondatrices du Collectif pr\u00e9senteront ses actions et les valeurs fortes qui sont \u00e0 son origine. Nous aborderons ensemble les probl\u00e9matiques rencontr\u00e9es par les personnes marginalis\u00e9es dans le jeu vid\u00e9o et nos pistes pour cr\u00e9er d'autres dynamiques.",
-        "end": "2022-05-24T15:30:00",
-        "event": "2022",
-        "format": "TALK",
-        "id": "623ad67c8a5c755e7139c6ea",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "collectif-mauvaises-herbes-notre-demarche-pour-valoriser-les-expertises-des-personnes-marginalisees-du-jeu-video",
-        "speakerIds": [
-            "camille.moreau",
-            "clementine.plissonnier",
-            "thais.arias"
-        ],
-        "start": "2022-05-24T14:50:00",
-        "summary": "Pr\u00e9sentation de notre collectif, qui vise \u00e0 mettre en valeur et \u00e0 prot\u00e9ger la diversit\u00e9 des expertises dans le jeu vid\u00e9o. Nous pr\u00e9senterons notre collectif et ses initiatives, puis quelques valeurs fortes qui guident nos r\u00e9flexions.",
-        "title": "Collectif Mauvaises Herbes : notre d\u00e9marche pour valoriser les expertises des personnes marginalis\u00e9es du jeu vid\u00e9o",
-        "topic": "ethics",
-        "video": null
-    },
-    {
-        "addedAt": "2022-03-23T09:12:44.757",
-        "description": "[Apache Kafka](https://kafka.apache.org/) est aujourd\u2019hui l'une des plateformes de messaging les plus populaires pour g\u00e9rer les flux de donn\u00e9es en temps r\u00e9el. Beaucoup d\u2019entreprises l\u2019utilisent comme pilier dans une architecture microservice \u00e9venementielle ou pour construire leur plateforme de streaming.\r\n[Kafka Streams](https://kafka.apache.org/documentation/streams/) est la biblioth\u00e8que ultra-l\u00e8gere permettant de manipuler, transformer, filter, enrichir,....les donn\u00e9es au sein d\u2019un cluster Apache Kafka et cela en s\u2019abstrayant compl\u00e9tement du code de plomberie.\r\n\r\nRien de mieux qu\u2019une petite mise en situation pour comprendre les concepts derri\u00e8re Kafka Streams. Imaginez, vous travaillez pour une grande institution bancaire, The Bank Corp! Le salaire et les jours de cong\u00e9s vous ont fait accepter ce poste mais c\u2019\u00e9tait sans compter le travail. Au sein de cette derni\u00e8re, votre \u00e9quipe business souhaiterait mettre en place des traitements en temps r\u00e9el des transactions que vos clients r\u00e9alisent. Ils souhaitent \u00eatre en capacit\u00e9 de d\u00e9tecter des transactions financi\u00e8res particuli\u00e8rement \u00e9lev\u00e9es, des potentielles fraudes mais \u00e9galement de pouvoir conna\u00eetre le solde des comptes et tout cela en temps r\u00e9el!\r\n\r\nDurant ce workshop, vous allez mettre en place la libraire Kafka Streams afin de r\u00e9pondre aux besoins de l\u2019\u00e9quipe m\u00e9tier.\r\nVous d\u00e9couvrirez les principaux concepts derri\u00e8re Apache Kafka. Qu\u2019est-ce qu\u2019un topic, une partition, les offsets, la compaction, le co-partitioning ? Toutes ces notions que vous avez peut-\u00eatre d\u00e9j\u00e0 entendu sans trop comprendre de quoi il en retourne. \r\nVous d\u00e9couvrirez \u00e9galement les caract\u00e9ristiques d\u2019une application Kafka Streams comme les notions de KStream, KTable, la s\u00e9mantique exactly-once, en quoi ces applications sont r\u00e9silientes, scalables, etc...\r\n\r\nCe workshop s\u2019adresse aussi bien aux personnes ne connaissant pas le monde Kafka et aux personnes ayant d\u00e9j\u00e0 des notions souhaitant d\u00e9couvrir Kafka Streams.\r\n\r\nPr\u00e9-requis :\r\n\r\n - JDK 11+\r\n - Maven\r\n - Git\r\n - Docker / Docker Compose\r\n - Votre IDE pr\u00e9f\u00e9r\u00e9\r\n",
+        "description": "Envie de feedback qui ont vraiment du sens ? D'ailleurs quel sens peut-on r\u00e9ellement donner au feedback. Je vous propose un atelier pour entrer plus en profondeur dans le sujet et vous partager l'amour que j'ai de cette pratique.\r\n\r\nRecette de l'atelier :\r\n- un peu d'alignement pour commencer\r\n- th\u00e9orie pour modaliser le geste\r\n- on s'entraine pour de rire\r\n- opportunit\u00e9 de donner un feedback sur l'atelier... mais vraiment pour le bien-\u00eatre des participant.e.s !!\r\n\r\nDes \u00e9changes, des partages, de la pratique, beaucoup d'ouverture, et de la responsabilit\u00e9 pour soutenir la libert\u00e9. Une vraie exp\u00e9rience immersive au c\u0153ur d'une vision tr\u00e8s engag\u00e9e du feedback, qui, je n'en doute pas, vous permettra de toucher du doigt une certaine magie dans la d\u00e9marche.\r\nDisclaimer : ami.e.s de la Communication NonViolente, il est possible que vous y visitiez quelques territoires connus.",
         "end": "2022-05-24T16:40:00",
         "event": "2022",
         "format": "WORKSHOP",
-        "id": "623ad67c8a5c755e7139c71b",
+        "id": "623ad67c8a5c755e7139c70a",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "workshop-kafka-streams-101",
+        "room": "ROOM3",
+        "slug": "parlez-de-vous-faites-des-feedbacks-",
         "speakerIds": [
-            "victor.gallet"
+            "jquille"
         ],
         "start": "2022-05-24T14:50:00",
-        "summary": "Apache Kafka est aujourd\u2019hui l'une des plateformes de messaging les plus populaires. Durant ce workshop, vous d\u00e9couvrirez les caract\u00e9ristiques d\u2019une application Kafka Streams : les notions de KStream, KTable, la s\u00e9mantique exactly-once, et quoi ces applications sont r\u00e9silientes, scalables, etc...",
-        "title": "Workshop Kafka Streams 101",
-        "topic": "tech",
+        "summary": "Vous avez d\u00e9j\u00e0 \u00e9t\u00e9 exasp\u00e9r\u00e9 par un feedback ?  L\u2019id\u00e9e de donner, ou recevoir un feedback vous semble plus une corv\u00e9e qu\u2019un plaisir ?\r\nVoyons ensemble comment cette pratique, au-del\u00e0 d\u2019une mode de management, peut \u00eatre un acte r\u00e9volutionnaire en faveur des individus et des organisations apprenantes !",
+        "title": "Parlez de vous, faites des feedbacks !",
+        "topic": "team",
         "video": null
     },
     {
@@ -426,6 +366,66 @@
         "video": null
     },
     {
+        "addedAt": "2022-03-23T09:12:44.71",
+        "description": "Even if many have heard of it but few have seen it, the hexagonal architecture is not an Arlesian.\r\nThe goal here will be to show everyone, both beginners and experts, that this architecture is really simple to implement.\r\nIt has many advantages:\r\n\r\n- separation of business and technical code,\r\n- establishment of a Domain Specific Language,\r\n- testability of the business code,\r\n- scalability of the technical code relating to infrastructure,\r\n- facility for technological monitoring.\r\n\r\nIn short, everything is good in hexagonal architecture.\r\n\r\nThis three-hour session will be divided as follows:\r\n\r\n- a presentation of 30 minutes maximum alternating definition of each of its concepts and their implementation in a Java project.\r\n- a kata of 60 minutes max on a business domain to be used in the next part\r\n- implementation for 60 minutes max of adapters showing the power and simplicity of this architecture.\r\n- 15 minutes of Q / A and concept development\r\n\r\nThe result of this workshop was implemented on new projects in the banking sector. This made it possible to avoid recurring pitfalls on the testability and quality of the developed code ^^.\r\nReferences\r\n\r\nMeetup where this workshop has been facilitated: https://www.meetup.com/fr-FR/Nov-NCraft/events/248998729/?_xtd=gatlbWFpbF9jbGlja9oAJGMyYjA2OTYzLTRkODYtNDc4ZC04ZTQ3LTA5OGQwNjYwZmE4Yg\r\n\r\nHere is a the kata's github: https://github.com/HEIWA-IT/TripAgency/\r\n",
+        "end": "2022-05-24T16:40:00",
+        "event": "2022",
+        "format": "WORKSHOP",
+        "id": "623ad67c8a5c755e7139c6f7",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM5",
+        "slug": "hexagonal-architecture-a-simple-and-powerful-architecture-set-up-quickly",
+        "speakerIds": [
+            "MagierDan"
+        ],
+        "start": "2022-05-24T14:50:00",
+        "summary": "Even if many have heard of it but few have seen it, the hexagonal architecture is not an Arlesian.\r\nThe goal here will be to show everyone, both beginners and experts, that this architecture is really simple to implement.",
+        "title": "Hexagonal architecture: a simple and powerful architecture, set up quickly",
+        "topic": "tech",
+        "video": null
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.757",
+        "description": "[Apache Kafka](https://kafka.apache.org/) est aujourd\u2019hui l'une des plateformes de messaging les plus populaires pour g\u00e9rer les flux de donn\u00e9es en temps r\u00e9el. Beaucoup d\u2019entreprises l\u2019utilisent comme pilier dans une architecture microservice \u00e9venementielle ou pour construire leur plateforme de streaming.\r\n[Kafka Streams](https://kafka.apache.org/documentation/streams/) est la biblioth\u00e8que ultra-l\u00e8gere permettant de manipuler, transformer, filter, enrichir,....les donn\u00e9es au sein d\u2019un cluster Apache Kafka et cela en s\u2019abstrayant compl\u00e9tement du code de plomberie.\r\n\r\nRien de mieux qu\u2019une petite mise en situation pour comprendre les concepts derri\u00e8re Kafka Streams. Imaginez, vous travaillez pour une grande institution bancaire, The Bank Corp! Le salaire et les jours de cong\u00e9s vous ont fait accepter ce poste mais c\u2019\u00e9tait sans compter le travail. Au sein de cette derni\u00e8re, votre \u00e9quipe business souhaiterait mettre en place des traitements en temps r\u00e9el des transactions que vos clients r\u00e9alisent. Ils souhaitent \u00eatre en capacit\u00e9 de d\u00e9tecter des transactions financi\u00e8res particuli\u00e8rement \u00e9lev\u00e9es, des potentielles fraudes mais \u00e9galement de pouvoir conna\u00eetre le solde des comptes et tout cela en temps r\u00e9el!\r\n\r\nDurant ce workshop, vous allez mettre en place la libraire Kafka Streams afin de r\u00e9pondre aux besoins de l\u2019\u00e9quipe m\u00e9tier.\r\nVous d\u00e9couvrirez les principaux concepts derri\u00e8re Apache Kafka. Qu\u2019est-ce qu\u2019un topic, une partition, les offsets, la compaction, le co-partitioning ? Toutes ces notions que vous avez peut-\u00eatre d\u00e9j\u00e0 entendu sans trop comprendre de quoi il en retourne. \r\nVous d\u00e9couvrirez \u00e9galement les caract\u00e9ristiques d\u2019une application Kafka Streams comme les notions de KStream, KTable, la s\u00e9mantique exactly-once, en quoi ces applications sont r\u00e9silientes, scalables, etc...\r\n\r\nCe workshop s\u2019adresse aussi bien aux personnes ne connaissant pas le monde Kafka et aux personnes ayant d\u00e9j\u00e0 des notions souhaitant d\u00e9couvrir Kafka Streams.\r\n\r\nPr\u00e9-requis :\r\n\r\n - JDK 11+\r\n - Maven\r\n - Git\r\n - Docker / Docker Compose\r\n - Votre IDE pr\u00e9f\u00e9r\u00e9\r\n",
+        "end": "2022-05-24T16:40:00",
+        "event": "2022",
+        "format": "WORKSHOP",
+        "id": "623ad67c8a5c755e7139c71b",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM4",
+        "slug": "workshop-kafka-streams-101",
+        "speakerIds": [
+            "victor.gallet"
+        ],
+        "start": "2022-05-24T14:50:00",
+        "summary": "Apache Kafka est aujourd\u2019hui l'une des plateformes de messaging les plus populaires. Durant ce workshop, vous d\u00e9couvrirez les caract\u00e9ristiques d\u2019une application Kafka Streams : les notions de KStream, KTable, la s\u00e9mantique exactly-once, et quoi ces applications sont r\u00e9silientes, scalables, etc...",
+        "title": "Workshop Kafka Streams 101",
+        "topic": "tech",
+        "video": null
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.753",
+        "description": "Gladys Diandoki explique ce qu'est l'UX Writing, nouveau m\u00e9tier du Design qui allie contenu et UX. Elle reviendra sur les 10 erreurs les plus fr\u00e9quentes et les choses \u00e0 mettre en place pour collaborer avec ces nouveaux profils du Design.\r\n\r\nObjectif :\r\n- Permettre de comprendre ce poste\r\n- Comprendre son r\u00f4le et son process\r\n- Collaborer avec les Product Designers/ UX Designers, les researchers, d\u00e9veloppeurs etc.\r\n- Les erreurs les plus fr\u00e9quentes\r\n- Les bonnes pratiques\r\n\r\nCe que l'on doit retenir :\r\n- Ce que fait un UX Writer\r\n- Comment travailler ensemble\r\n- Quelques bases\r\n",
+        "end": "2022-05-24T16:40:00",
+        "event": "2022",
+        "format": "TALK",
+        "id": "623ad67c8a5c755e7139c717",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM1",
+        "slug": "ux-writing-10-idees-recues-revues-et-corrigees",
+        "speakerIds": [
+            "Gladysdit"
+        ],
+        "start": "2022-05-24T15:50:00",
+        "summary": "Gladys Diandoki explique ce qu'est l'UX Writing, nouveau m\u00e9tier du Design qui allie contenu et UX. Elle reviendra sur les 10 erreurs les plus fr\u00e9quentes et les choses \u00e0 mettre en place pour collaborer avec ces nouveaux profils du Design.",
+        "title": "UX Writing : 10 id\u00e9es re\u00e7ues revues et corrig\u00e9es",
+        "topic": "design",
+        "video": null
+    },
+    {
         "addedAt": "2022-03-23T09:12:44.699",
         "description": "JetPack Compose est un outil \u00e9tonnant que Google a pris 4 ans \u00e0 mettre au point. \r\n\r\nInspir\u00e9 des mod\u00e8les de d\u00e9veloppement des interfaces utilisateurs tels que React, il propose un nouveau mode de programmation. Avec des m\u00e9canismes qui agissent lors de la compilation et d\u2019autres au runtime, il garantit d\u2019excellentes performances.\r\n\r\nCet outil a \u00e9t\u00e9 amen\u00e9 un cran plus loin par JetBrains en le rendant multi-plateforme. Il s\u2019agit d\u00e9sormais d\u2019utiliser le m\u00eame code Kotlin pour cr\u00e9er des interfaces qui seront d\u00e9ploy\u00e9es dans des environnement aussi bien mobiles, que desktop et web.\r\n\r\nLors de cette pr\u00e9sentation, j\u2019expliquerai les m\u00e9canismes mis en \u0153uvre, et partagerai du code et des exemples permettant de comprendre les cas d\u2019utilisation de ce nouvel outil.\r\n",
         "end": "2022-05-24T16:40:00",
@@ -446,22 +446,22 @@
         "video": null
     },
     {
-        "addedAt": "2022-03-23T09:12:44.753",
-        "description": "Gladys Diandoki explique ce qu'est l'UX Writing, nouveau m\u00e9tier du Design qui allie contenu et UX. Elle reviendra sur les 10 erreurs les plus fr\u00e9quentes et les choses \u00e0 mettre en place pour collaborer avec ces nouveaux profils du Design.\r\n\r\nObjectif :\r\n- Permettre de comprendre ce poste\r\n- Comprendre son r\u00f4le et son process\r\n- Collaborer avec les Product Designers/ UX Designers, les researchers, d\u00e9veloppeurs etc.\r\n- Les erreurs les plus fr\u00e9quentes\r\n- Les bonnes pratiques\r\n\r\nCe que l'on doit retenir :\r\n- Ce que fait un UX Writer\r\n- Comment travailler ensemble\r\n- Quelques bases\r\n",
+        "addedAt": "2022-04-12T07:04:25.221",
+        "description": "Sander will explain this model and propose how we can use it to develop a roadmap to build technologies with the public interest at heart. What are the foundational issues to consider? What do design and development processes look like to build these other technologies? And how do we ensure that the wider society is involved in the crucial choices that need to be made to build it right? There are currently no alternative social media platforms that operate at scale AND put the public interest truly at their core. However, there are many initiatives that operate on a smaller scale that do provide an alternative platform or a piece of the solution for preserving people\u2019s rights online. Sander will address the question of how we can build ecosystems of technologies in the public interest so that they are a true alternative for the commercial platforms of today.  ",
         "end": "2022-05-24T16:40:00",
         "event": "2022",
         "format": "TALK",
-        "id": "623ad67c8a5c755e7139c717",
-        "language": "FRENCH",
+        "id": "6255260ae536d64281c4062c",
+        "language": "ENGLISH",
         "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "ux-writing-10-idees-recues-revues-et-corrigees",
+        "room": "ROOM2",
+        "slug": "building-online-spaces-with-the-public-interest-at-heart-",
         "speakerIds": [
-            "Gladysdit"
+            "van.der.waal"
         ],
         "start": "2022-05-24T15:50:00",
-        "summary": "Gladys Diandoki explique ce qu'est l'UX Writing, nouveau m\u00e9tier du Design qui allie contenu et UX. Elle reviendra sur les 10 erreurs les plus fr\u00e9quentes et les choses \u00e0 mettre en place pour collaborer avec ces nouveaux profils du Design.",
-        "title": "UX Writing : 10 id\u00e9es re\u00e7ues revues et corrig\u00e9es",
+        "summary": "Sander van der Waal is Research Director at the research institute and cultural institution Waag, based in Amsterdam. Waag\u2019s research into technology and its experiments and proposals to build technologies with public values at the center has culminated in the model \u2018Public Stack\u2019 (https://publicstack.net).",
+        "title": "Building online spaces with the public interest at heart \ud83d\udc9a ",
         "topic": "design",
         "video": null
     },
@@ -474,7 +474,7 @@
         "id": "623ad67c8a5c755e7139c6ec",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "UNKNOWN",
+        "room": "AMPHIC",
         "slug": "comment-recruter-des-femmes-dans-un-milieu-d-hommes-et-enfin-avoir-des-equipes-diverses-et-la-competence-alors-",
         "speakerIds": [
             "fchabanois"
@@ -486,26 +486,6 @@
         "video": null
     },
     {
-        "addedAt": "2022-03-23T09:12:44.734",
-        "description": "La mutualisation de ressources informatiques a apport\u00e9 tr\u00e8s t\u00f4t des gains \u00e9conomiques pour les clients et \u00e9tabli une s\u00e9paration des responsabilit\u00e9s entre fournisseur de services et client.\r\nCe nouveau m\u00e9tier de l'h\u00e9bergement puis du Cloud a fait apparaitre des enjeux d'efficience \u00e9nerg\u00e9tique pour ces fournisseurs depuis de nombreuses ann\u00e9es.\r\nMais en 2022, concr\u00e8tement, qu'est-ce que cela veut dire ?\r\nCe talk propose de tout d'abord faire un statut sur l'impact \u00e9cologique du num\u00e9rique en France et les projections pour 2025 et 2050 suivant diff\u00e9rents sc\u00e9narios de sobri\u00e9t\u00e9 \u00e9tablis par l'ADEME dans son \u00e9tude \u00ab Transition(s) 2050\u00bb.\r\nNous nous int\u00e9resserons ensuite \u00e0 des initiatives et engagements de plusieurs h\u00e9bergeurs et fournisseurs Cloud europ\u00e9ens comme Interxion, Scaleway ou Orange et \u00e9galement am\u00e9ricains comme GCP ou AWS.\r\nA travers ces exemples concrets, cela nous am\u00e8nera \u00e0 discuter thermodynamique dans un centre de donn\u00e9es, \u00e9conomie circulaire, indicateurs \u00e9nerg\u00e9tiques des centres donn\u00e9es comme le Power Usage Effectiveness (PUE) ou encore donn\u00e9es rafra\u00eechies r\u00e9guli\u00e8rement par les fournisseurs Cloud permettant d'appr\u00e9hender au quotidien l'impact \u00e9cologique de nos d\u00e9ploiements Cloud",
-        "end": "2022-05-24T17:50:00",
-        "event": "2022",
-        "format": "TALK",
-        "id": "623ad67c8a5c755e7139c708",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "AMPHIC",
-        "slug": "numerique-responsable-ouvrons-le-capot-des-fournisseurs-cloud",
-        "speakerIds": [
-            "clement0210"
-        ],
-        "start": "2022-05-24T17:00:00",
-        "summary": "En 2022, le num\u00e9rique responsable dans le Cloud devient tout autant un enjeu que la qualit\u00e9 de service ou le prix. Entre mythe et r\u00e9alit\u00e9, regardons ensemble comment nos fournisseurs Cloud adoptent des strat\u00e9gies vertueuses pour l'environnement",
-        "title": "Num\u00e9rique responsable, ouvrons le capot des fournisseurs Cloud",
-        "topic": "ethics",
-        "video": null
-    },
-    {
         "addedAt": "2022-04-01T15:04:41.929",
         "description": "Votre organisation n\u2019est pas efficace, vos collaborateurs ne sont pas motiv\u00e9s ? Vous \u00eates probablement victime de sabotage ! Gr\u00e2ce \u00e0 un manuel de la CIA, je vous expliquerai comment \u00e9liminer les 3 grands sabotages organisationnels, pour rendre votre entreprise plus performante et plus \u00e9panouissante.",
         "end": "2022-05-24T17:50:00",
@@ -514,7 +494,7 @@
         "id": "624714f898ef0817db1fb6be",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "UNKNOWN",
+        "room": "ROOM1",
         "slug": "manuel-d-anti-sabotage-a-l-usage-des-dirigeants",
         "speakerIds": [
             "emilie.esposito"
@@ -523,27 +503,6 @@
         "summary": "Votre organisation n\u2019est pas efficace, vos collaborateurs ne sont pas motiv\u00e9s ? Vous \u00eates probablement victime de sabotage ! Gr\u00e2ce \u00e0 un manuel de la CIA, je vous expliquerai comment \u00e9liminer les 3 grands sabotages organisationnels, pour rendre votre entreprise plus performante et plus \u00e9panouissante.",
         "title": "Manuel d'anti-sabotage \u00e0 l'usage des dirigeants",
         "topic": "team",
-        "video": null
-    },
-    {
-        "addedAt": "2022-04-06T08:52:00",
-        "description": "",
-        "end": "2022-05-24T17:50:00",
-        "event": "2022",
-        "format": "TALK",
-        "id": "624d5529e9e5e322c69dfa1a",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "l-aventure-chut-",
-        "speakerIds": [
-            "aurore.bisicchia",
-            "sophie.comte"
-        ],
-        "start": "2022-05-24T17:00:00",
-        "summary": "TBD",
-        "title": "L'aventure Chut!",
-        "topic": "aliens",
         "video": null
     },
     {
@@ -567,35 +526,76 @@
         "video": null
     },
     {
-        "addedAt": "2022-03-23T09:12:44.725",
-        "description": "Le d\u00e9veloppement de technologies relevant de \"l'intelligence artificielle\" (IA) occupe une place importante de l'espace m\u00e9diatique contemporain et oriente de plus en plus les programmes d'investissements publics et priv\u00e9s. Ce d\u00e9veloppement s'accompagne de mouvements civiques plus ou moins organiques, dont l'\u00e9mergence d'organisations non-gouvernementales d\u00e9di\u00e9es. Ces mouvements semblent privil\u00e9gier une \"\u00e9thique de l'algorithme\" aux \"droits num\u00e9riques fondamentaux\" qui sont plus fr\u00e9quemment associ\u00e9s avec des revendications d'accessibilit\u00e9 et d'usages \u00e9quitables pour toutes et tous. Ces mouvements ainsi que des think tanks plus traditionnels souhaitent ainsi infl\u00e9chir les mani\u00e8res dont \"on fait de l'IA\" en \u00e9ditant, notamment, des guides et autres position papers sur les syst\u00e8mes \u00e9thiques que la masse informe des \"d\u00e9veloppeurs d'IA/d'algorithmes\" devrait adopter pour le salut de l'humanit\u00e9.\r\n\r\nSi ces activit\u00e9s sont n\u00e9cessaires pour permettre \u00e0 des visions d'\u00e9merger et signent une vivacit\u00e9 intellectuelle, l'impact r\u00e9el de leurs apports reste encore \u00e0 d\u00e9montrer. Mais plus pr\u00e9gnante encore est la relative homog\u00e9n\u00e9it\u00e9 des valeurs dans ces activit\u00e9s et de leur tendance \u00e0 dessiner une morphologie particuli\u00e8re de \"l'\u00e9thique de l'IA\". Ainsi, l'analyse de pr\u00e8s de 200 guides pr\u00e9sentant de bonnes pratiques et des recommandations pour une \"IA \u00e9thique\" permet d'identifier les pr\u00e9occupations principales de ces initiatives telles que les tensions entre d\u00e9veloppement \u00e9conomique et les limites d'une prise de d\u00e9cision automatis\u00e9e appliqu\u00e9e \u00e0 large \u00e9chelle. D'une part, ces guides font \u00e9merger une \"\u00e9thique de l'AI\" difficilement dissociable d'une \u00e9thique business. D'autre part, lorsque les guides portent sur les droits fondamentaux, le parti pris est celui d'un universalisme occidental. Ainsi par ex., plus d'un quart de ces guides \u00e9manent d'initiatives nord-am\u00e9ricaines et pratiquement autant d'initiatives d'Europe de l'Ouest ; une seule telle initiative provient d'Europe centrale et il ne semble pas y avoir de telles initiatives \u00e9manant d'Europe de l'Est ou de l'Afrique. Au-del\u00e0 de la question de \"qui\" impose un syst\u00e8me de valeurs \u00e9merge aussi la question de la forme que prennent ces recommandations et, ainsi, du danger du d\u00e9voiement de sens du mot \"\u00e9thique\".\r\n\r\nCette intervention propose une exploration des diff\u00e9rents guides publi\u00e9s \u00e0 ce jour pour provoquer une discussion sur l'avenir moral qu'ils dessinent.",
-        "end": "2022-05-24T18:20:00",
+        "addedAt": "2022-04-06T08:52:00",
+        "description": "",
+        "end": "2022-05-24T17:50:00",
         "event": "2022",
-        "format": "KEYNOTE",
-        "id": "623ad67c8a5c755e7139c700",
+        "format": "TALK",
+        "id": "624d5529e9e5e322c69dfa1a",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM2",
+        "slug": "l-aventure-chut-",
+        "speakerIds": [
+            "aurore.bisicchia",
+            "sophie.comte"
+        ],
+        "start": "2022-05-24T17:00:00",
+        "summary": "TBD",
+        "title": "L'aventure Chut!",
+        "topic": "aliens",
+        "video": null
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.734",
+        "description": "La mutualisation de ressources informatiques a apport\u00e9 tr\u00e8s t\u00f4t des gains \u00e9conomiques pour les clients et \u00e9tabli une s\u00e9paration des responsabilit\u00e9s entre fournisseur de services et client.\r\nCe nouveau m\u00e9tier de l'h\u00e9bergement puis du Cloud a fait apparaitre des enjeux d'efficience \u00e9nerg\u00e9tique pour ces fournisseurs depuis de nombreuses ann\u00e9es.\r\nMais en 2022, concr\u00e8tement, qu'est-ce que cela veut dire ?\r\nCe talk propose de tout d'abord faire un statut sur l'impact \u00e9cologique du num\u00e9rique en France et les projections pour 2025 et 2050 suivant diff\u00e9rents sc\u00e9narios de sobri\u00e9t\u00e9 \u00e9tablis par l'ADEME dans son \u00e9tude \u00ab Transition(s) 2050\u00bb.\r\nNous nous int\u00e9resserons ensuite \u00e0 des initiatives et engagements de plusieurs h\u00e9bergeurs et fournisseurs Cloud europ\u00e9ens comme Interxion, Scaleway ou Orange et \u00e9galement am\u00e9ricains comme GCP ou AWS.\r\nA travers ces exemples concrets, cela nous am\u00e8nera \u00e0 discuter thermodynamique dans un centre de donn\u00e9es, \u00e9conomie circulaire, indicateurs \u00e9nerg\u00e9tiques des centres donn\u00e9es comme le Power Usage Effectiveness (PUE) ou encore donn\u00e9es rafra\u00eechies r\u00e9guli\u00e8rement par les fournisseurs Cloud permettant d'appr\u00e9hender au quotidien l'impact \u00e9cologique de nos d\u00e9ploiements Cloud",
+        "end": "2022-05-24T17:50:00",
+        "event": "2022",
+        "format": "TALK",
+        "id": "623ad67c8a5c755e7139c708",
         "language": "FRENCH",
         "photoUrls": [],
         "room": "AMPHIC",
-        "slug": "quelles-valeurs-pour-une-regulation-de-l-ia-par-l-ethique-",
+        "slug": "numerique-responsable-ouvrons-le-capot-des-fournisseurs-cloud",
         "speakerIds": [
-            "MaliciaRogue"
+            "clement0210"
+        ],
+        "start": "2022-05-24T17:00:00",
+        "summary": "En 2022, le num\u00e9rique responsable dans le Cloud devient tout autant un enjeu que la qualit\u00e9 de service ou le prix. Entre mythe et r\u00e9alit\u00e9, regardons ensemble comment nos fournisseurs Cloud adoptent des strat\u00e9gies vertueuses pour l'environnement",
+        "title": "Num\u00e9rique responsable, ouvrons le capot des fournisseurs Cloud",
+        "topic": "ethics",
+        "video": null
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.738",
+        "description": "Le geek supr\u00eame, Steve Jobs, l'a \u00e9crit : \" Je suis convaincu que la moiti\u00e9 qui s\u00e9pare les entrepreneurs qui r\u00e9ussissent de ceux qui \u00e9chouent est purement la pers\u00e9v\u00e9rance. \" \r\nR\u00e9ussir serait donc une question de volont\u00e9 : quand on veut, on peut ! Les gens qui r\u00e9ussissent le doivent \u00e0 leur travail et \u00e0 leurs efforts, et les gens qui \u00e9chouent, consid\u00e9r\u00e9s comme des rat\u00e9s, n'ont tout simplement aucune volont\u00e9. Dans la vie, tout ne serait donc qu'une affaire de m\u00e9rite \r\npersonnel. \r\n\u00c0 premi\u00e8re vue, la m\u00e9ritocratie semble juste, assurant une \u00e9galit\u00e9 des chances pour permettre aux plus m\u00e9ritants de s'en sortir par le haut. Cependant, cela n'est-il pas aussi illusoire que dangereux ? Qu'est-ce que r\u00e9ussir sa vie ? Une vie r\u00e9ussie est-elle forc\u00e9ment celle d'un startuppeur ? Est-il bien vrai que la vie ne nous offre que ce que nous m\u00e9ritons ? La croyance dans le m\u00e9rite ne permet-elle pas surtout de culpabiliser \" ceux qui ne sont rien \", et de tranquilliser ceux qui ont r\u00e9ussi, souvent privil\u00e9gi\u00e9s, convaincus qu'ils n'ont de compte \u00e0 rendre \u00e0 \r\npersonne ? ",
+        "end": "2022-05-24T18:20:00",
+        "event": "2022",
+        "format": "KEYNOTE",
+        "id": "623ad67c8a5c755e7139c70b",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHIC",
+        "slug": "peut-on-reussir-sans-effort-ni-aucun-talent-",
+        "speakerIds": [
+            "GVervisch"
         ],
         "start": "2022-05-24T17:50:00",
-        "summary": "Le d\u00e9veloppement de technologies relevant de \"l'intelligence artificielle\" (IA) occupe une place importante de l'espace m\u00e9diatique contemporain et oriente de plus en plus les programmes d'investissements publics et priv\u00e9s. Ce d\u00e9veloppement s'accompagne de mouvements civiques plus ou moins organiques, dont l'\u00e9mergence d'organisations non-gouvernementales d\u00e9di\u00e9es. Ces mouvements semblent privil\u00e9gier une \"\u00e9thique de l'algorithme\" aux \"droits num\u00e9riques fondamentaux\" qui sont plus fr\u00e9quemment associ\u00e9s avec des revendications d'accessibilit\u00e9 et d'usages \u00e9quitables pour toutes et tous. Ces mouvements ainsi que des think tanks plus traditionnels souhaitent ainsi infl\u00e9chir les mani\u00e8res dont \"on fait de l'IA\" en \u00e9ditant, notamment, des guides et autres position papers sur les syst\u00e8mes \u00e9thiques que la masse informe des \"d\u00e9veloppeurs d'IA/d'algorithmes\" devrait adopter pour le salut de l'humanit\u00e9.",
-        "title": "Quelles valeurs pour une \"r\u00e9gulation de l'IA par l'\u00e9thique\" ?",
-        "topic": "ethics",
+        "summary": "Le geek supr\u00eame, Steve Jobs, a \u00e9crit : \" la moiti\u00e9 qui s\u00e9pare les entrepreneurs qui r\u00e9ussissent de ceux qui \u00e9chouent est purement la pers\u00e9v\u00e9rance. \" \r\nMais cette croyance dans le m\u00e9rite ne permet-elle pas de tranquilliser ceux qui ont \"r\u00e9ussi\", convaincus qu'ils n'ont de compte \u00e0 rendre \u00e0 \r\npersonne ?",
+        "title": "Peut-on r\u00e9ussir sans effort ni aucun talent? ",
+        "topic": "aliens",
         "video": null
     },
     {
         "addedAt": "2022-03-23T09:12:44.712",
         "description": "France will host the 2024 Summer Olympics, but our emergency and warning system is based on World War II outdated sirens. Latest technological and natural disasters remind us how weak our country can be when calamities happens. In the same times we are proud of new tech, high tech, french tech. But how GOOD tech can saving lives in case of emergency? This talk will be about Tech State of The Art warning systems in order to be ready for the Games of the XXXIII Olympiad",
-        "end": "2022-05-25T10:30:00",
+        "end": "2022-05-25T10:00:00",
         "event": "2022",
         "format": "KEYNOTE",
         "id": "623ad67c8a5c755e7139c6f9",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "UNKNOWN",
+        "room": "AMPHIC",
         "slug": "how-to-build-the-alert-system-that-france-deserves-",
         "speakerIds": [
             "RatZillaS"
@@ -615,7 +615,7 @@
         "id": "623ad67c8a5c755e7139c6f4",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "UNKNOWN",
+        "room": "ROOM5",
         "slug": "fear-the-ponies-let-s-re-discover-cryptography-basics",
         "speakerIds": [
             "mmetesreau",
@@ -625,6 +625,66 @@
         "summary": "Ponies just forged a secret alliance in order to end human civilization and their first move should happen in less than 1 hour. During this new escape game style coding dojo, we offer to challenge your knowledge and skills about encryption and to improve them while having fun !",
         "title": "Fear the ponies, let's (re)discover cryptography basics",
         "topic": "tech",
+        "video": null
+    },
+    {
+        "addedAt": "2022-05-25T14:50:44",
+        "description": "Nous avons tou.te.s des certitudes, que l\u2019on porte sur soi, les autres ou la vie en g\u00e9n\u00e9ral... Et c'est normal !\r\nToutefois, ces derni\u00e8res, conscientes ou inconscientes, influencent nos actions et peuvent parfois nous limiter. Je vous propose dans cet atelier, \u00e0 faire seul.e ou en \u00e9quipe, les cl\u00e9s pour reconnaitre, comprendre et agir sur vos croyances afin d\u2019en faire les atouts de vos projets. \r\n\r\nAlors si vous ne voulez pas vous r\u00e9veiller au m\u00eame point dans 3 ans, passez \u00e0 l\u2019action en apprenant \u00e0 sortir de votre sch\u00e9ma de r\u00e9signation ! \r\nVia cet atelier qui s'\u00e9quilibre entre th\u00e9orie et pratique, faites le choix de vous d\u00e9tacher d'une croyance limitante afin de cr\u00e9er et/ou renforcer une croyance aidante.\r\n\r\nCet atelier peut vous aider \u00e0 prendre conscience de vos croyances parfois tellement ancr\u00e9es que vous pensez que c\u2019est dans votre ADN. \r\n\r\nAvec cet atelier vous serez en mesure de : \r\n- D\u00e9tecter ce qui vous emp\u00eache d\u2019avancer \r\n- Lever vos blocages \r\n- Mettre en place des projets qui vous semblaient impossibles \r\n- Vous lib\u00e9rer des pens\u00e9es qui vous freinent et vous prennent de l\u2019\u00e9nergie\r\n- D\u00e9samorcer des tensions en \u00e9quipe\r\n",
+        "end": "2022-05-25T12:30:00",
+        "event": "2022",
+        "format": "WORKSHOP",
+        "id": "623ad67c8a5c755e7139c6e8",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM4",
+        "slug": "-arretez-l-auto-sabotage-et-sortez-de-votre-boucle-systemique-",
+        "speakerIds": [
+            "albane.fagot"
+        ],
+        "start": "2022-05-25T10:40:00",
+        "summary": "Combien de fois avez-vous renonc\u00e9 \u00e0 un projet sous pr\u00e9texte que \u201c\u00e7a ne marchera jamais\u201d, \u201cOn ne peut pas tout avoir\u201d, ou encore [ins\u00e9rez ici votre conviction] ?\r\nParce que vos croyances influencent vos actions, apprenez \u00e0 sortir de ce sch\u00e9ma de r\u00e9signation gr\u00e2ce \u00e0 la syst\u00e9mique et aux neurosciences.",
+        "title": "\ud83e\udd2f Arr\u00eatez l\u2019auto sabotage et sortez de votre boucle (syst\u00e9mique)",
+        "topic": "team",
+        "video": null
+    },
+    {
+        "addedAt": "2022-04-12T08:24:13.931",
+        "description": "",
+        "end": "2022-05-25T11:30:00",
+        "event": "2022",
+        "format": "TALK",
+        "id": "6255383ead7883553e81977b",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM1",
+        "slug": "le-lean-startup-ca-donne-quoi-dans-la-realite-",
+        "speakerIds": [
+            "cedric.soubrie"
+        ],
+        "start": "2022-05-25T10:40:00",
+        "summary": "Cr\u00e9er un business en quelques mois, c\u2019est ce que promet le Lean Startup. Dans la r\u00e9alit\u00e9 c\u2019est plus compliqu\u00e9.\r\n\r\nRetour d\u2019exp\u00e9rience sur la 1er ann\u00e9e de Treely.\r\n\r\nDe l\u2019id\u00e9e initiale \u201cplus vous marchez \ud83d\udeb6\u200d\u2640\ufe0f, plus nous plantons \ud83c\udf33\u201d, jusqu\u2019aux premiers clients en passant par des occasions inesp\u00e9r\u00e9es.",
+        "title": "Le lean startup, \u00e7a donne quoi dans la r\u00e9alit\u00e9 ?",
+        "topic": "learn",
+        "video": null
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.733",
+        "description": "Cet atelier est n\u00e9 de la rencontre entre une pratique de la communication non violente d'un c\u00f4t\u00e9 et la lecture des conclusions de recherche d'une neuro-scientifique de Harvard de l'autre.\r\n\r\nDans l'atelier nous aurons \r\n-de l'empathie avec de l'\u00e9coute active et de la relecture en bin\u00f4mes de situations \u00e9motionnellement charg\u00e9es plus ou moins agr\u00e9ables.\r\n-de la th\u00e9orie avec la d\u00e9couverte de la th\u00e9orie des \u00e9motions construites, d'un mod\u00e8le sur les \u00e9l\u00e9ments qui collectivement d\u00e9finissent une \u00e9motion et de l'essentiel de la communication non-violente.\r\n-de la cr\u00e9ativit\u00e9 avec, \u00e0 partir de ces situations, la cr\u00e9ation de n\u00e9ologismes, de nouveaux mots-\u00e9motions qui viennent t\u00e9moigner de notre r\u00e9el.\r\n\r\nJe suis Francois-Xavier Pasquier, un facilitateur en intelligence collective, \u00e0 la fois curieux et exigeant sur le \"pourquoi \u00e7a marche ?\" ce qui m'a amen\u00e9 \u00e0 ces recherches sur la nature des \u00e9motions et en quoi elles emp\u00eachent ou permettent la r\u00e9alisation de l'individu et du collectif. Un facilitateur cr\u00e9e les conditions des dialogues, des d\u00e9cisions et in fine des organisations qui prennent sens. Je ne peux juste pas faire l'\u00e9conomie des \u00e9motions dans mon m\u00e9tier... et en fait, qui que vous soyez vous non plus ! \r\n\r\nSi je ne m'occupe pas de mes \u00e9motions, mes \u00e9motions s'occupent de moi ! Alors autant plut\u00f4t les co-cr\u00e9er.\r\n\r\nH\u00e2te de vivre cet atelier ensemble !",
+        "end": "2022-05-25T12:30:00",
+        "event": "2022",
+        "format": "WORKSHOP",
+        "id": "623ad67c8a5c755e7139c707",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM3",
+        "slug": "nous-ne-sommes-pas-a-la-merci-de-nos-emotions-nous-les-co-creons",
+        "speakerIds": [
+            "fxpasquier"
+        ],
+        "start": "2022-05-25T10:40:00",
+        "summary": "Venez changer de regard sur la nature des \u00e9motions et en co-cr\u00e9er de nouvelles. Oui, une \u00e9motion \u00e7a se cr\u00e9\u00e9.\r\n\r\nTelles sont les conclusion d'une neuro-scientifique de Harvard qui rejoignent la Communication Non-Violente. Actionnons \u00e0 la fois intellects, coeurs et cr\u00e9ativit\u00e9 dans cet atelier facilit\u00e9.",
+        "title": "Nous ne sommes pas \u00e0 la merci de nos \u00e9motions. Nous les co-cr\u00e9ons",
+        "topic": "team",
         "video": null
     },
     {
@@ -648,43 +708,23 @@
         "video": null
     },
     {
-        "addedAt": "2022-03-23T09:12:44.733",
-        "description": "Cet atelier est n\u00e9 de la rencontre entre une pratique de la communication non violente d'un c\u00f4t\u00e9 et la lecture des conclusions de recherche d'une neuro-scientifique de Harvard de l'autre.\r\n\r\nDans l'atelier nous aurons \r\n-de l'empathie avec de l'\u00e9coute active et de la relecture en bin\u00f4mes de situations \u00e9motionnellement charg\u00e9es plus ou moins agr\u00e9ables.\r\n-de la th\u00e9orie avec la d\u00e9couverte de la th\u00e9orie des \u00e9motions construites, d'un mod\u00e8le sur les \u00e9l\u00e9ments qui collectivement d\u00e9finissent une \u00e9motion et de l'essentiel de la communication non-violente.\r\n-de la cr\u00e9ativit\u00e9 avec, \u00e0 partir de ces situations, la cr\u00e9ation de n\u00e9ologismes, de nouveaux mots-\u00e9motions qui viennent t\u00e9moigner de notre r\u00e9el.\r\n\r\nJe suis Francois-Xavier Pasquier, un facilitateur en intelligence collective, \u00e0 la fois curieux et exigeant sur le \"pourquoi \u00e7a marche ?\" ce qui m'a amen\u00e9 \u00e0 ces recherches sur la nature des \u00e9motions et en quoi elles emp\u00eachent ou permettent la r\u00e9alisation de l'individu et du collectif. Un facilitateur cr\u00e9e les conditions des dialogues, des d\u00e9cisions et in fine des organisations qui prennent sens. Je ne peux juste pas faire l'\u00e9conomie des \u00e9motions dans mon m\u00e9tier... et en fait, qui que vous soyez vous non plus ! \r\n\r\nSi je ne m'occupe pas de mes \u00e9motions, mes \u00e9motions s'occupent de moi ! Alors autant plut\u00f4t les co-cr\u00e9er.\r\n\r\nH\u00e2te de vivre cet atelier ensemble !",
-        "end": "2022-05-25T12:30:00",
-        "event": "2022",
-        "format": "WORKSHOP",
-        "id": "623ad67c8a5c755e7139c707",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "nous-ne-sommes-pas-a-la-merci-de-nos-emotions-nous-les-co-creons",
-        "speakerIds": [
-            "fxpasquier"
-        ],
-        "start": "2022-05-25T10:40:00",
-        "summary": "Venez changer de regard sur la nature des \u00e9motions et en co-cr\u00e9er de nouvelles. Oui, une \u00e9motion \u00e7a se cr\u00e9\u00e9.\r\n\r\nTelles sont les conclusion d'une neuro-scientifique de Harvard qui rejoignent la Communication Non-Violente. Actionnons \u00e0 la fois intellects, coeurs et cr\u00e9ativit\u00e9 dans cet atelier facilit\u00e9.",
-        "title": "Nous ne sommes pas \u00e0 la merci de nos \u00e9motions. Nous les co-cr\u00e9ons",
-        "topic": "team",
-        "video": null
-    },
-    {
-        "addedAt": "2022-04-12T08:24:13.931",
-        "description": "",
+        "addedAt": "2022-03-23T09:12:44.731",
+        "description": "Of course, you know everything you need to know about NULL in SQL! Well, are you sure ?\r\n\r\nNULL and three-valued logic are often misunderstood and can induce poor written queries, wrong written queries (when the result is not as expected) and a lot of time lost trying to figure out what your missing colleague wanted to do with such a tricky and bad-twisted SQL code.\r\n\r\nAfter defining NULL and UNKNOWN (and you'll see that it's not so simple), we'll go through different use cases where 3-valued is used, what pit you don't want\r\nto fall into and how you can improve query writing, now that you fully understand what's behind NULL in SQL. The queries will be run under PostgreSQL, as it is the most SQL-compliant RDBMS.",
         "end": "2022-05-25T11:30:00",
         "event": "2022",
         "format": "TALK",
-        "id": "6255383ead7883553e81977b",
+        "id": "623ad67c8a5c755e7139c705",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "le-lean-startup-ca-donne-quoi-dans-la-realite-",
+        "room": "ROOM2",
+        "slug": "meet-null-the-unknown",
         "speakerIds": [
-            "cedric.soubrie"
+            "l_avrot"
         ],
         "start": "2022-05-25T10:40:00",
-        "summary": "Cr\u00e9er un business en quelques mois, c\u2019est ce que promet le Lean Startup. Dans la r\u00e9alit\u00e9 c\u2019est plus compliqu\u00e9.\r\n\r\nRetour d\u2019exp\u00e9rience sur la 1er ann\u00e9e de Treely.\r\n\r\nDe l\u2019id\u00e9e initiale \u201cplus vous marchez \ud83d\udeb6\u200d\u2640\ufe0f, plus nous plantons \ud83c\udf33\u201d, jusqu\u2019aux premiers clients en passant par des occasions inesp\u00e9r\u00e9es.",
-        "title": "Le lean startup, \u00e7a donne quoi dans la r\u00e9alit\u00e9 ?",
-        "topic": "learn",
+        "summary": "NULL in SQL is a pretty tricky concept. Wether you think you know it all or you admit that you could learn some things about it, come see this talk!\r\n\r\nAfter some explanations, this session will turn into a crazy quiz and I challenge you to achieve a faultless performance!",
+        "title": "Meet NULL the UNKNOWN",
+        "topic": "tech",
         "video": null
     },
     {
@@ -708,47 +748,6 @@
         "video": null
     },
     {
-        "addedAt": "2022-03-23T09:12:44.724",
-        "description": "Quel est le point commun entre une base de code entre les mains d'une \u00e9quipe de d\u00e9v, une \u00e9quipe de d\u00e9v au sein d'une entreprise, un produit vis-\u00e0-vis de ses utilisateurs, une entreprise vis-\u00e0-vis de son march\u00e9 ?\r\n\r\nSi vous avez r\u00e9pondu du tac au tac \"ce sont des syst\u00e8mes complexes soumis \u00e0 des forces nombreuses avec des effets et des temporalit\u00e9s souvent difficiles \u00e0 analyser\", vous devriez appr\u00e9cier les d\u00e9fis propos\u00e9s lors de cet atelier. Si vous n'avez pas fait le lien imm\u00e9diatement, vous pourriez y faire une d\u00e9couverte utile voire salutaire.\r\n\r\nLe propos de cet atelier est d'explorer ce qui rend les syst\u00e8mes si difficiles \u00e0 gouverner, qu'il s'agisse de lignes de code ou de populations expos\u00e9es \u00e0 une pand\u00e9mie, mais aussi de montrer en quoi certaines \"lois\" se retrouvent ind\u00e9pendamment des domaines et nous fournissent des outils et des r\u00e9flexes \u00e0 cultiver.",
-        "end": "2022-05-25T12:30:00",
-        "event": "2022",
-        "format": "WORKSHOP",
-        "id": "623ad67c8a5c755e7139c6ff",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "le-jeu-du-frigo-petit-exercice-de-pensee-systemique",
-        "speakerIds": [
-            "Morendil",
-            "christophe.thibaut"
-        ],
-        "start": "2022-05-25T10:40:00",
-        "summary": "Dette technique, conflit dans une \u00e9quipe, gestion d'une pand\u00e9mie\u2026 sont autant d'exemples des difficult\u00e9s qu'on rencontre pour analyser et ma\u00eetriser des syst\u00e8mes complexes. Nous vous proposons un atelier pour partir \u00e0 la d\u00e9couverte des lois qui les gouvernent, et des outils et r\u00e9flexes \u00e0 cultiver.",
-        "title": "Le jeu du frigo - petit exercice de pens\u00e9e syst\u00e9mique",
-        "topic": "team",
-        "video": null
-    },
-    {
-        "addedAt": "2022-03-23T09:12:44.731",
-        "description": "Of course, you know everything you need to know about NULL in SQL! Well, are you sure ?\r\n\r\nNULL and three-valued logic are often misunderstood and can induce poor written queries, wrong written queries (when the result is not as expected) and a lot of time lost trying to figure out what your missing colleague wanted to do with such a tricky and bad-twisted SQL code.\r\n\r\nAfter defining NULL and UNKNOWN (and you'll see that it's not so simple), we'll go through different use cases where 3-valued is used, what pit you don't want\r\nto fall into and how you can improve query writing, now that you fully understand what's behind NULL in SQL. The queries will be run under PostgreSQL, as it is the most SQL-compliant RDBMS.",
-        "end": "2022-05-25T11:30:00",
-        "event": "2022",
-        "format": "TALK",
-        "id": "623ad67c8a5c755e7139c705",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "meet-null-the-unknown",
-        "speakerIds": [
-            "l_avrot"
-        ],
-        "start": "2022-05-25T10:40:00",
-        "summary": "NULL in SQL is a pretty tricky concept. Wether you think you know it all or you admit that you could learn some things about it, come see this talk!\r\n\r\nAfter some explanations, this session will turn into a crazy quiz and I challenge you to achieve a faultless performance!",
-        "title": "Meet NULL the UNKNOWN",
-        "topic": "tech",
-        "video": null
-    },
-    {
         "addedAt": "2022-03-23T09:12:00",
         "description": "Autrices : Natacha Portier et Nathalie Revol\r\nOrganisation lyonnaise : Natacha Portier (ENS de Lyon), Nathalie Revol (Inria), J\u00e9r\u00f4me Germoni (Universit\u00e9 Claude Bernard - Lyon 1)\r\n\r\nPeu de femmes dans les m\u00e9tiers de l'informatique : moins de 30%, et m\u00eame plut\u00f4t 15% si on se concentre sur les fonctions techniques. Ces chiffres ne sont h\u00e9las pas en progression, il ne suffit donc pas d'attendre beno\u00eetement que la parit\u00e9 s'instaure d'elle-m\u00eame. En effet, si on observe l'\u00e9volution des pourcentages depuis les ann\u00e9es 1940 ou 1950, on constate une lente mais solide augmentation jusqu'en 1985 environ, puis une d\u00e9croissance. Si on se concentre plut\u00f4t sur les effectifs, on observe que le nombre de femmes stagne alors que celui d'hommes a \u00e9t\u00e9 multipli\u00e9 par 3. Ce ph\u00e9nom\u00e8ne n'est pas propre \u00e0 la France, il s'observe dans tous les pays occidentaux.\r\n\r\nSup\u00e9riorit\u00e9 suppos\u00e9e de l'\u00e9lectronique sur le logiciel (o\u00f9 \u00e9taient cantonn\u00e9es les femmes) aux d\u00e9buts de l'informatique, assimilation des m\u00e9tiers de l'informatique \u00e0 ceux de la bureautique, puis apparition de l'ordinateur personnel dans les foyers autour de 1985 et avec lui de la figure du geek asocial... entre des explications historiques et une vision de l'informaticien peu faite pour s\u00e9duire les jeunes filles au moment de choisir leur orientation, les explications de ce ph\u00e9nom\u00e8ne sont multiples. Dans d'autres pays cependant, tels que la Malaisie, o\u00f9 les m\u00e9tiers de l'informatique sont vus comme requ\u00e9rant peu de force physique et permettent de travailler depuis son domicile, et donc de concilier vie personnelle et vie professionnelle, on observe un renversement complet des statistiques.\r\n\r\nPour contrer cette rar\u00e9faction des femmes dans les m\u00e9tiers li\u00e9s aux math\u00e9matiques et \u00e0 l'informatique, plus d'une centaine de journ\u00e9es \"Filles et maths-info : une \u00e9quation lumineuse !\" \u00e0 destination des lyc\u00e9ennes ont eu lieu depuis 2009, organis\u00e9es par les associations Femmes&Math et Animath, soutenues par la Fondation Blaise Pascal. Nous organisons \u00e0 Lyon une journ\u00e9e par an depuis 2015 et nous accueillons de 70 \u00e0 90 lyc\u00e9ennes pour chaque \u00e9dition.\r\n\r\nLes objectifs de ces journ\u00e9es sont d'aider les jeunes filles \u00e0 d\u00e9passer leur repr\u00e9sentation des m\u00e9tiers scientifiques et techniques, \u00e0 ne pas minorer leurs ambitions, \u00e0 ouvrir l\u2019\u00e9ventail des choix possibles vers les fili\u00e8res scientifiques.\r\n\r\nLe format de ces journ\u00e9es est le suivant : puisque le th\u00e8me central est l'informatique ou les math\u00e9matiques, nous commen\u00e7ons par une conf\u00e9rence scientifique, donn\u00e9e par une chercheuse locale sur son domaine de recherche ou tout autre sujet de son choix, en lien bien s\u00fbr avec l'informatique ou les math\u00e9matiques (souvent appliqu\u00e9es). La deuxi\u00e8me partie de la matin\u00e9e est consacr\u00e9e \u00e0 un atelier sur les st\u00e9r\u00e9otypes : il s'agit \u00e0 la fois d'informer, de mettre en \u00e9vidence le poids des st\u00e9r\u00e9otypes qui freinent les jeunes filles quand il s'agit de s'orienter vers un m\u00e9tier li\u00e9 \u00e0 l'informatique ou aux math\u00e9matiques, sans pour autant minorer leur importance, ni la majorer. L'\u00e9quilibre est d\u00e9licat et nous \u00e9laborons et am\u00e9liorons ces ateliers en lien avec des sociologues sp\u00e9cialistes du sujet, Isabelle Collet et Cl\u00e9mence Perronnet. Ces ateliers s'effectuent en groupes de 25 \u00e0 30 lyc\u00e9ennes, ce qui permet \u00e0 chacune de pouvoir s'exprimer.\r\n\r\nRencontrer des femmes qui travaillent dans l'informatique ou les math\u00e9matiques et \u00e9changer avec elles est primordial, pour une lyc\u00e9enne, afin de pouvoir se projeter \u00e0 son tour dans ces m\u00e9tiers, pour pouvoir s'imaginer les exercer : c'est pour cela que le d\u00e9but de l'apr\u00e8s-midi est r\u00e9serv\u00e9 \u00e0 des speed-meetings o\u00f9 les lyc\u00e9ennes, en petits groupes de 10 au plus, rencontrent tour \u00e0 tour 5 femmes pendant un quart d'heure. Ces femmes sont \u00e0 des stades divers de leurs parcours : \u00e9tudiantes ou en activit\u00e9, et exercent dans des domaines vari\u00e9s : recherche ou priv\u00e9, grosse entreprise ou petite structure...\r\nEnfin les lyc\u00e9ennes se retrouvent \u00e0 nouveau toutes ensemble pour une repr\u00e9sentation de th\u00e9\u00e2tre-forum, avec une pi\u00e8ce con\u00e7ue pour ces journ\u00e9es, adapt\u00e9e \u00e0 leurs pr\u00e9occupations... et interactive.\r\n\r\nAvec Natacha Portier, nous pr\u00e9senterons ces journ\u00e9es, leur format, nos interrogations pour qu'elles soient le plus efficaces possible... et notre frustration de ne pas avoir de bilan chiffr\u00e9, puisqu'il est difficile de savoir si nos actions ont permis \u00e0 certaines lyc\u00e9ennes de consid\u00e9rer que les m\u00e9tiers de l'informatique et des math\u00e9matiques sont faits pour elles ou non, ni si elles ont franchi le pas.\r\n",
         "end": "2022-05-25T12:30:00",
@@ -757,7 +756,7 @@
         "id": "623ad67c8a5c755e7139c70c",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "UNKNOWN",
+        "room": "ROOM2",
         "slug": "presentation-des-journees-filles-et-math-info-une-equation-lumineuse-",
         "speakerIds": [
             "natacha.portier",
@@ -767,6 +766,27 @@
         "summary": "Moins de 30% de femmes dans les m\u00e9tiers de l'informatique et les chiffres sont en baisse.\r\n\r\nPour contrer cela, nous organisons \u00e0 Lyon une journ\u00e9e \"Filles et maths-info : une \u00e9quation lumineuse !\" par an depuis 2015, \u00e0 destination des lyc\u00e9ennes.  Nous d\u00e9taillerons le contenu de ces journ\u00e9ees.",
         "title": "Pr\u00e9sentation des journ\u00e9es \"Filles et math-info : une \u00e9quation lumineuse !\"",
         "topic": "learn",
+        "video": null
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.756",
+        "description": "Vous avez peut-\u00eatre parfois de la difficult\u00e9 \u00e0 d\u00e9chiffrer certains concepts, \u00e0 comprendre le point de vue ou le comportement de l'autre, ou ce qui provoque une certaine g\u00eane ou tension chez vous.\r\nLorsque vous arrivez \u00e0 donner du sens \u00e0 un ph\u00e9nom\u00e8ne qui pouvait sembler n\u00e9buleux ou dont vous n'arriviez pas \u00e0 relier tous les signes, vous faites de l\u2019herm\u00e9neutique.\r\nLa violence herm\u00e9neutique, c\u2019est quand on rend l\u2019interpr\u00e9tation difficile pour l\u2019autre, volontairement ou non.\r\nCe talk vise \u00e0 faire prendre conscience du processus et \u00e0 \u00e9viter ou s'armer contre ce type de violence.",
+        "end": "2022-05-25T12:30:00",
+        "event": "2022",
+        "format": "TALK",
+        "id": "623ad67c8a5c755e7139c71a",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHID",
+        "slug": "violence-hermeneutique-comment-eviter-le-malaise-",
+        "speakerIds": [
+            "Sara.Dufour",
+            "malk_zameth"
+        ],
+        "start": "2022-05-25T11:40:00",
+        "summary": "Apprendre \u00e0 nous d\u00e9fendre des m\u00e9canismes qui nous emp\u00eachent de faire sens.\r\nDes m\u00e9canismes qui nous forcent \u00e0 rester dans une situation de g\u00eane de l\u2019incompr\u00e9hension. Qui nous font m\u00eame douter de notre v\u00e9cu.",
+        "title": "Violence herm\u00e9neutique - comment \u00e9viter le malaise ?",
+        "topic": "team",
         "video": null
     },
     {
@@ -791,27 +811,6 @@
         "video": null
     },
     {
-        "addedAt": "2022-03-23T09:12:44.756",
-        "description": "Vous avez peut-\u00eatre parfois de la difficult\u00e9 \u00e0 d\u00e9chiffrer certains concepts, \u00e0 comprendre le point de vue ou le comportement de l'autre, ou ce qui provoque une certaine g\u00eane ou tension chez vous.\r\nLorsque vous arrivez \u00e0 donner du sens \u00e0 un ph\u00e9nom\u00e8ne qui pouvait sembler n\u00e9buleux ou dont vous n'arriviez pas \u00e0 relier tous les signes, vous faites de l\u2019herm\u00e9neutique.\r\nLa violence herm\u00e9neutique, c\u2019est quand on rend l\u2019interpr\u00e9tation difficile pour l\u2019autre, volontairement ou non.\r\nCe talk vise \u00e0 faire prendre conscience du processus et \u00e0 \u00e9viter ou s'armer contre ce type de violence.",
-        "end": "2022-05-25T12:30:00",
-        "event": "2022",
-        "format": "TALK",
-        "id": "623ad67c8a5c755e7139c71a",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "violence-hermeneutique-comment-eviter-le-malaise-",
-        "speakerIds": [
-            "Sara.Dufour",
-            "malk_zameth"
-        ],
-        "start": "2022-05-25T11:40:00",
-        "summary": "Apprendre \u00e0 nous d\u00e9fendre des m\u00e9canismes qui nous emp\u00eachent de faire sens.\r\nDes m\u00e9canismes qui nous forcent \u00e0 rester dans une situation de g\u00eane de l\u2019incompr\u00e9hension. Qui nous font m\u00eame douter de notre v\u00e9cu.",
-        "title": "Violence herm\u00e9neutique - comment \u00e9viter le malaise ?",
-        "topic": "team",
-        "video": null
-    },
-    {
         "addedAt": "2022-03-23T09:12:44.688",
         "description": "Un journal de codeur(se) vous permettra d'am\u00e9liorer la qualit\u00e9 de votre code, de vous fixer et de suivre vos objectifs, de garder la trace de vos succ\u00e8s, de vos d\u00e9couvertes, de vos lectures, de soulager le stress de votre travail... C'est un outil presque sans limite, personnel et que vous pouvez tailler exactement \u00e0 la mesure de vos besoins. ",
         "end": "2022-05-25T12:30:44",
@@ -820,7 +819,7 @@
         "id": "623ad67c8a5c755e7139c6e9",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "UNKNOWN",
+        "room": "ROOM1",
         "slug": "avoir-un-journal-de-codeur",
         "speakerIds": [
             "cosjava"
@@ -832,23 +831,23 @@
         "video": null
     },
     {
-        "addedAt": "2022-03-23T09:12:44.738",
-        "description": "Le geek supr\u00eame, Steve Jobs, l'a \u00e9crit : \" Je suis convaincu que la moiti\u00e9 qui s\u00e9pare les entrepreneurs qui r\u00e9ussissent de ceux qui \u00e9chouent est purement la pers\u00e9v\u00e9rance. \" \r\nR\u00e9ussir serait donc une question de volont\u00e9 : quand on veut, on peut ! Les gens qui r\u00e9ussissent le doivent \u00e0 leur travail et \u00e0 leurs efforts, et les gens qui \u00e9chouent, consid\u00e9r\u00e9s comme des rat\u00e9s, n'ont tout simplement aucune volont\u00e9. Dans la vie, tout ne serait donc qu'une affaire de m\u00e9rite \r\npersonnel. \r\n\u00c0 premi\u00e8re vue, la m\u00e9ritocratie semble juste, assurant une \u00e9galit\u00e9 des chances pour permettre aux plus m\u00e9ritants de s'en sortir par le haut. Cependant, cela n'est-il pas aussi illusoire que dangereux ? Qu'est-ce que r\u00e9ussir sa vie ? Une vie r\u00e9ussie est-elle forc\u00e9ment celle d'un startuppeur ? Est-il bien vrai que la vie ne nous offre que ce que nous m\u00e9ritons ? La croyance dans le m\u00e9rite ne permet-elle pas surtout de culpabiliser \" ceux qui ne sont rien \", et de tranquilliser ceux qui ont r\u00e9ussi, souvent privil\u00e9gi\u00e9s, convaincus qu'ils n'ont de compte \u00e0 rendre \u00e0 \r\npersonne ? ",
+        "addedAt": "2022-03-23T09:12:44.725",
+        "description": "Le d\u00e9veloppement de technologies relevant de \"l'intelligence artificielle\" (IA) occupe une place importante de l'espace m\u00e9diatique contemporain et oriente de plus en plus les programmes d'investissements publics et priv\u00e9s. Ce d\u00e9veloppement s'accompagne de mouvements civiques plus ou moins organiques, dont l'\u00e9mergence d'organisations non-gouvernementales d\u00e9di\u00e9es. Ces mouvements semblent privil\u00e9gier une \"\u00e9thique de l'algorithme\" aux \"droits num\u00e9riques fondamentaux\" qui sont plus fr\u00e9quemment associ\u00e9s avec des revendications d'accessibilit\u00e9 et d'usages \u00e9quitables pour toutes et tous. Ces mouvements ainsi que des think tanks plus traditionnels souhaitent ainsi infl\u00e9chir les mani\u00e8res dont \"on fait de l'IA\" en \u00e9ditant, notamment, des guides et autres position papers sur les syst\u00e8mes \u00e9thiques que la masse informe des \"d\u00e9veloppeurs d'IA/d'algorithmes\" devrait adopter pour le salut de l'humanit\u00e9.\r\n\r\nSi ces activit\u00e9s sont n\u00e9cessaires pour permettre \u00e0 des visions d'\u00e9merger et signent une vivacit\u00e9 intellectuelle, l'impact r\u00e9el de leurs apports reste encore \u00e0 d\u00e9montrer. Mais plus pr\u00e9gnante encore est la relative homog\u00e9n\u00e9it\u00e9 des valeurs dans ces activit\u00e9s et de leur tendance \u00e0 dessiner une morphologie particuli\u00e8re de \"l'\u00e9thique de l'IA\". Ainsi, l'analyse de pr\u00e8s de 200 guides pr\u00e9sentant de bonnes pratiques et des recommandations pour une \"IA \u00e9thique\" permet d'identifier les pr\u00e9occupations principales de ces initiatives telles que les tensions entre d\u00e9veloppement \u00e9conomique et les limites d'une prise de d\u00e9cision automatis\u00e9e appliqu\u00e9e \u00e0 large \u00e9chelle. D'une part, ces guides font \u00e9merger une \"\u00e9thique de l'AI\" difficilement dissociable d'une \u00e9thique business. D'autre part, lorsque les guides portent sur les droits fondamentaux, le parti pris est celui d'un universalisme occidental. Ainsi par ex., plus d'un quart de ces guides \u00e9manent d'initiatives nord-am\u00e9ricaines et pratiquement autant d'initiatives d'Europe de l'Ouest ; une seule telle initiative provient d'Europe centrale et il ne semble pas y avoir de telles initiatives \u00e9manant d'Europe de l'Est ou de l'Afrique. Au-del\u00e0 de la question de \"qui\" impose un syst\u00e8me de valeurs \u00e9merge aussi la question de la forme que prennent ces recommandations et, ainsi, du danger du d\u00e9voiement de sens du mot \"\u00e9thique\".\r\n\r\nCette intervention propose une exploration des diff\u00e9rents guides publi\u00e9s \u00e0 ce jour pour provoquer une discussion sur l'avenir moral qu'ils dessinent.",
         "end": "2022-05-25T14:30:00",
         "event": "2022",
         "format": "KEYNOTE",
-        "id": "623ad67c8a5c755e7139c70b",
+        "id": "623ad67c8a5c755e7139c700",
         "language": "FRENCH",
         "photoUrls": [],
         "room": "AMPHIC",
-        "slug": "peut-on-reussir-sans-effort-ni-aucun-talent-",
+        "slug": "quelles-valeurs-pour-une-regulation-de-l-ia-par-l-ethique-",
         "speakerIds": [
-            "GVervisch"
+            "MaliciaRogue"
         ],
         "start": "2022-05-25T14:00:00",
-        "summary": "Le geek supr\u00eame, Steve Jobs, a \u00e9crit : \" la moiti\u00e9 qui s\u00e9pare les entrepreneurs qui r\u00e9ussissent de ceux qui \u00e9chouent est purement la pers\u00e9v\u00e9rance. \" \r\nMais cette croyance dans le m\u00e9rite ne permet-elle pas de tranquilliser ceux qui ont \"r\u00e9ussi\", convaincus qu'ils n'ont de compte \u00e0 rendre \u00e0 \r\npersonne ?",
-        "title": "Peut-on r\u00e9ussir sans effort ni aucun talent? ",
-        "topic": "aliens",
+        "summary": "Le d\u00e9veloppement de technologies relevant de \"l'intelligence artificielle\" (IA) occupe une place importante de l'espace m\u00e9diatique contemporain et oriente de plus en plus les programmes d'investissements publics et priv\u00e9s. Ce d\u00e9veloppement s'accompagne de mouvements civiques plus ou moins organiques, dont l'\u00e9mergence d'organisations non-gouvernementales d\u00e9di\u00e9es. Ces mouvements semblent privil\u00e9gier une \"\u00e9thique de l'algorithme\" aux \"droits num\u00e9riques fondamentaux\" qui sont plus fr\u00e9quemment associ\u00e9s avec des revendications d'accessibilit\u00e9 et d'usages \u00e9quitables pour toutes et tous. Ces mouvements ainsi que des think tanks plus traditionnels souhaitent ainsi infl\u00e9chir les mani\u00e8res dont \"on fait de l'IA\" en \u00e9ditant, notamment, des guides et autres position papers sur les syst\u00e8mes \u00e9thiques que la masse informe des \"d\u00e9veloppeurs d'IA/d'algorithmes\" devrait adopter pour le salut de l'humanit\u00e9.",
+        "title": "Quelles valeurs pour une \"r\u00e9gulation de l'IA par l'\u00e9thique\" ?",
+        "topic": "ethics",
         "video": null
     },
     {
@@ -860,7 +859,7 @@
         "id": "623ad67c8a5c755e7139c6f2",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "UNKNOWN",
+        "room": "ROOM4",
         "slug": "deviens-un-e-veritable-pirate-",
         "speakerIds": [
             "alison.jorre"
@@ -869,6 +868,26 @@
         "summary": "\"Je ne peux rien faire changer dans cette bo\u00eete, je suis seulement  !\"\ud83d\ude14\r\nC'est ce que tu penses en regardant ta job ?\r\nAlors monte sur le pont et apprends \u00e0 faire bouger les choses avec des techniques de Pirate ! \ud83c\udff4\u200d\u2620\ufe0f\r\nCartographie \ud83d\uddfa, pieuvre \ud83d\udc19 et manipulation \ud83d\ude08 au rendez-vous !",
         "title": "Deviens un.e v\u00e9ritable Pirate ! \ud83c\udff4\u200d\u2620\ufe0f",
         "topic": "team",
+        "video": null
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.746",
+        "description": "97.4% \u2013 that\u2019s how many of the world\u2019s top 1M homepages have basic accessibility issues, according to the [WebAIM Million analysis](https://webaim.org/projects/million/). This appalling number is a reminder of how our choices as an industry have an impact on website users. It\u2019s also a call to action! We\u2019ll see how we got there, what systemic problems we\u2019re dealing with, and potential solutions.\r\n\r\nAlong the way, we\u2019ll learn about the choices the team behind [Wagtail](https://wagtail.org/) made, to improve the accessibility of all sites built with the CMS.",
+        "end": "2022-05-25T15:40:00",
+        "event": "2022",
+        "format": "TALK",
+        "id": "623ad67c8a5c755e7139c711",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHIC",
+        "slug": "the-97-4-north-star",
+        "speakerIds": [
+            "thibaud_colas"
+        ],
+        "start": "2022-05-25T14:50:00",
+        "summary": "97.4% \u2013 that\u2019s how many of the world\u2019s top 1M homepages have basic accessibility issues, according to the WebAIM Million. This is unacceptable. We can do better. We\u2019ll consider the impact of technology on accessibility, and potential solutions. We\u2019ll look at how Wagtail tries to tackle this reality.",
+        "title": "The 97.4% North Star",
+        "topic": "tech",
         "video": null
     },
     {
@@ -893,23 +912,24 @@
         "video": null
     },
     {
-        "addedAt": "2022-03-23T09:12:44.746",
-        "description": "97.4% \u2013 that\u2019s how many of the world\u2019s top 1M homepages have basic accessibility issues, according to the [WebAIM Million analysis](https://webaim.org/projects/million/). This appalling number is a reminder of how our choices as an industry have an impact on website users. It\u2019s also a call to action! We\u2019ll see how we got there, what systemic problems we\u2019re dealing with, and potential solutions.\r\n\r\nAlong the way, we\u2019ll learn about the choices the team behind [Wagtail](https://wagtail.org/) made, to improve the accessibility of all sites built with the CMS.",
-        "end": "2022-05-25T15:40:00",
+        "addedAt": "2022-03-23T09:12:44.724",
+        "description": "Quel est le point commun entre une base de code entre les mains d'une \u00e9quipe de d\u00e9v, une \u00e9quipe de d\u00e9v au sein d'une entreprise, un produit vis-\u00e0-vis de ses utilisateurs, une entreprise vis-\u00e0-vis de son march\u00e9 ?\r\n\r\nSi vous avez r\u00e9pondu du tac au tac \"ce sont des syst\u00e8mes complexes soumis \u00e0 des forces nombreuses avec des effets et des temporalit\u00e9s souvent difficiles \u00e0 analyser\", vous devriez appr\u00e9cier les d\u00e9fis propos\u00e9s lors de cet atelier. Si vous n'avez pas fait le lien imm\u00e9diatement, vous pourriez y faire une d\u00e9couverte utile voire salutaire.\r\n\r\nLe propos de cet atelier est d'explorer ce qui rend les syst\u00e8mes si difficiles \u00e0 gouverner, qu'il s'agisse de lignes de code ou de populations expos\u00e9es \u00e0 une pand\u00e9mie, mais aussi de montrer en quoi certaines \"lois\" se retrouvent ind\u00e9pendamment des domaines et nous fournissent des outils et des r\u00e9flexes \u00e0 cultiver.",
+        "end": "2022-05-25T16:40:00",
         "event": "2022",
-        "format": "TALK",
-        "id": "623ad67c8a5c755e7139c711",
+        "format": "WORKSHOP",
+        "id": "623ad67c8a5c755e7139c6ff",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "AMPHIC",
-        "slug": "the-97-4-north-star",
+        "room": "ROOM3",
+        "slug": "le-jeu-du-frigo-petit-exercice-de-pensee-systemique",
         "speakerIds": [
-            "thibaud_colas"
+            "Morendil",
+            "christophe.thibaut"
         ],
         "start": "2022-05-25T14:50:00",
-        "summary": "97.4% \u2013 that\u2019s how many of the world\u2019s top 1M homepages have basic accessibility issues, according to the WebAIM Million. This is unacceptable. We can do better. We\u2019ll consider the impact of technology on accessibility, and potential solutions. We\u2019ll look at how Wagtail tries to tackle this reality.",
-        "title": "The 97.4% North Star",
-        "topic": "tech",
+        "summary": "Dette technique, conflit dans une \u00e9quipe, gestion d'une pand\u00e9mie\u2026 sont autant d'exemples des difficult\u00e9s qu'on rencontre pour analyser et ma\u00eetriser des syst\u00e8mes complexes. Nous vous proposons un atelier pour partir \u00e0 la d\u00e9couverte des lois qui les gouvernent, et des outils et r\u00e9flexes \u00e0 cultiver.",
+        "title": "Le jeu du frigo - petit exercice de pens\u00e9e syst\u00e9mique",
+        "topic": "team",
         "video": null
     },
     {
@@ -921,7 +941,7 @@
         "id": "623ad67c8a5c755e7139c6fe",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "UNKNOWN",
+        "room": "ROOM2",
         "slug": "le-jaillissement-de-l-esprit-7-ans-apres-",
         "speakerIds": [
             "Saskia_Blanc"
@@ -933,6 +953,26 @@
         "video": null
     },
     {
+        "addedAt": "2022-03-23T09:12:44",
+        "description": "Cette conf\u00e9rence se veut un retour d'exp\u00e9rience de mon utilisation de l'atelier Example Mapping introduit par Matt Wynne & les \u00e9quipes de Cucumber Londres il y a 6 ans\r\n\r\nLe format de l'atelier est des plus simples. Je l'ai d\u00e9couvert \u00e0 l'occasion d'un meetup DDD Paris en 2017 ou 2018 et ai voulu l'appliquer rapidement sur mes projets. Et l\u00e0, ce f\u00fbt le drame !\r\n\r\nJe partagerai donc ici avec l'audience mes 11 heuristiques pour r\u00e9ussi \u00e0 coup s\u00fbr son atelier (ou plus probablement, r\u00e9duire les chances de se planter ;)). Apr\u00e8s avoir fait quelques rappels sur le Behavior-Driven Development, j'aborderai (dans cet ordre ou pas...) :\r\n\r\n1. Il faut savoir poser un exemple concret !\r\n2. Pas besoin d\u2019\u00e9crire ses exemples au format Gherkin ! Faites au plus simple, croquis, sch\u00e9mas, etc.\r\n3. La pierre angulaire, c\u2019est l\u2019exemple concret. \r\n> Les r\u00e8gles et US ne sont que des blocs pour classifier les exemples entre eux de mani\u00e8re coh\u00e9rente et compr\u00e9hensible. \u2028Corollaire : ne pas toujours d\u00e9marrer par les cartes jaunes et bleues (US et r\u00e8gles) : commencez par donner des exemples.\r\n\r\n4. Les cartes jaunes ne sont pas que rarement des US au d\u00e9marrage de l\u2019atelier.\u2028\r\n> Et on s\u2019en fout ! L\u2019atelier est un formidable outil pour grouper des exemples (cf. heuristique n\u00b03).\r\n\r\n5. Le vote de confiance sera tr\u00e8s souvent n\u00e9gatif sur l\u2019ensemble de la carte : il reste souvent des inconnus. Le faire alors sur des sous-ensemble coh\u00e9rents et qui sont pr\u00eats.\u2028\r\n\r\n6. Atelier difficile \u00e0 tenir \u00e0 distance. \r\n> M\u00eame si des outils tels que Miro proposent un template sp\u00e9cifique, on est en difficult\u00e9 pour \u00e9crire les exemples efficacement (cf. heuristique n\u00b02).\r\n\r\n7. S\u2019assurer de capter toute la connaissance.\r\n> Chaque question / interrogation doit donner lieu \u00e0 une carte rouge ou un exemple concret : souvent besoin d\u2019un facilitateur d\u00e9di\u00e9 \u00e0 cette t\u00e2che. Dur d\u2019\u00eatre partie prenante.\r\n\r\n8. S\u2019assurer d\u2019avancer : fast & furious @Bruno Boucard\r\n\r\n9. Pr\u00e9parez-vous au chaos  !\r\n> Inconfort car l\u2019on ne navigue pas forc\u00e9ment dans la direction attendue. On peut d\u00e9couvrir des pans complets du m\u00e9tier et ce n\u2019est pas forc\u00e9ment ce qui \u00e9tait attendu / pr\u00e9vu par le PO ou expert m\u00e9tier. _\u00ab Vous ne saviez pas que vous ne saviez pas. Maintenant, vous le savez ! \u00bb_.\r\n\u2028\r\n10. La couleur dominante de votre carte vous dira beaucoup sur l\u2019avanc\u00e9e de l\u2019atelier et le partage de votre connaissance.\r\n11. De l\u2019art de trouver la fr\u00e9quence id\u00e9ale.\u2028\r\n> 25 minutes, c\u2019est souvent court et frustrant. Alors comment optimiser cet atelier ? Quelle fr\u00e9quence ? Combien de sessions \u00e0 la suite ?",
+        "end": "2022-05-25T15:40:44",
+        "event": "2022",
+        "format": "TALK",
+        "id": "623ad67c8a5c755e7139c6e4",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM1",
+        "slug": "11-heuristiques-pour-reussir-a-coup-sur-ses-ateliers-d-example-mapping",
+        "speakerIds": [
+            "c_heliou"
+        ],
+        "start": "2022-05-25T14:50:44",
+        "summary": "L'Example Mapping apporte un cadre structurant \u00e0 la pratique du BDD. Cet atelier efficace redonne ses lettres de noblesses \u00e0 la collaboration entre experts m\u00e9tiers, d\u00e9veloppeurs et testeurs. Mais son format accessible cache bon nombre de pi\u00e8ges. Voici 11 heuristiques pour le r\u00e9ussir \u00e0 coup s\u00fbr.",
+        "title": "11 heuristiques pour r\u00e9ussir \u00e0 coup s\u00fbr ses ateliers d'Example Mapping",
+        "topic": "tech",
+        "video": null
+    },
+    {
         "addedAt": "2022-03-23T09:12:44.697",
         "description": "Vous ne connaissez pas Elm ? Ce n'est pas tr\u00e8s grave, le compilateur de ce langage frontend qui garantit l'absence d\u2019erreur d\u2019ex\u00e9cution est l\u00e0 pour vous aider ! \r\n \r\nJe vous propose de coder sans conna\u00eetre le langage avec ce format un peu particulier : \u00e9tant des d\u00e9veloppeurs tr\u00e8s distraits, nous avons commenc\u00e9 pas mal de refactorings et fonctionnalit\u00e9s sans vraiment les finir... \u00e0 vous de prendre le relais pour achever la fonctionnalit\u00e9, assist\u00e9 par les messages d'erreur.\r\n \r\nPari un peu fou ou confiance absolue dans les capacit\u00e9s de mentoring du compilateur ? Venez et vous le saurez !",
         "end": "2022-05-25T16:40:44",
@@ -941,7 +981,7 @@
         "id": "623ad67c8a5c755e7139c6ee",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "UNKNOWN",
+        "room": "ROOM5",
         "slug": "compiler-driven-development-avec-elm",
         "speakerIds": [
             "jordane.grenat",
@@ -954,46 +994,6 @@
         "video": null
     },
     {
-        "addedAt": "2022-05-25T14:50:44",
-        "description": "Nous avons tou.te.s des certitudes, que l\u2019on porte sur soi, les autres ou la vie en g\u00e9n\u00e9ral... Et c'est normal !\r\nToutefois, ces derni\u00e8res, conscientes ou inconscientes, influencent nos actions et peuvent parfois nous limiter. Je vous propose dans cet atelier, \u00e0 faire seul.e ou en \u00e9quipe, les cl\u00e9s pour reconnaitre, comprendre et agir sur vos croyances afin d\u2019en faire les atouts de vos projets. \r\n\r\nAlors si vous ne voulez pas vous r\u00e9veiller au m\u00eame point dans 3 ans, passez \u00e0 l\u2019action en apprenant \u00e0 sortir de votre sch\u00e9ma de r\u00e9signation ! \r\nVia cet atelier qui s'\u00e9quilibre entre th\u00e9orie et pratique, faites le choix de vous d\u00e9tacher d'une croyance limitante afin de cr\u00e9er et/ou renforcer une croyance aidante.\r\n\r\nCet atelier peut vous aider \u00e0 prendre conscience de vos croyances parfois tellement ancr\u00e9es que vous pensez que c\u2019est dans votre ADN. \r\n\r\nAvec cet atelier vous serez en mesure de : \r\n- D\u00e9tecter ce qui vous emp\u00eache d\u2019avancer \r\n- Lever vos blocages \r\n- Mettre en place des projets qui vous semblaient impossibles \r\n- Vous lib\u00e9rer des pens\u00e9es qui vous freinent et vous prennent de l\u2019\u00e9nergie\r\n- D\u00e9samorcer des tensions en \u00e9quipe\r\n",
-        "end": "2022-05-25T16:40:44",
-        "event": "2022",
-        "format": "WORKSHOP",
-        "id": "623ad67c8a5c755e7139c6e8",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "-arretez-l-auto-sabotage-et-sortez-de-votre-boucle-systemique-",
-        "speakerIds": [
-            "albane.fagot"
-        ],
-        "start": "2022-05-25T14:50:44",
-        "summary": "Combien de fois avez-vous renonc\u00e9 \u00e0 un projet sous pr\u00e9texte que \u201c\u00e7a ne marchera jamais\u201d, \u201cOn ne peut pas tout avoir\u201d, ou encore [ins\u00e9rez ici votre conviction] ?\r\nParce que vos croyances influencent vos actions, apprenez \u00e0 sortir de ce sch\u00e9ma de r\u00e9signation gr\u00e2ce \u00e0 la syst\u00e9mique et aux neurosciences.",
-        "title": "\ud83e\udd2f Arr\u00eatez l\u2019auto sabotage et sortez de votre boucle (syst\u00e9mique)",
-        "topic": "team",
-        "video": null
-    },
-    {
-        "addedAt": "2022-03-23T09:12:44",
-        "description": "Bonjour cher comit\u00e9 !\r\n\r\nCette conf\u00e9rence se veut un retour d'exp\u00e9rience de mon utilisation de l'atelier Example Mapping introduit par Matt Wynne & les \u00e9quipes de Cucumber Londres il y a 6 ans\r\n\r\nLe format de l'atelier est des plus simples. Je l'ai d\u00e9couvert \u00e0 l'occasion d'un meetup DDD Paris en 2017 ou 2018 et ai voulu l'appliquer rapidement sur mes projets. Et l\u00e0, ce f\u00fbt le drame !\r\n\r\nJe partagerai donc ici avec l'audience mes 11 heuristiques pour r\u00e9ussi \u00e0 coup s\u00fbr son atelier (ou plus probablement, r\u00e9duire les chances de se planter ;)). Apr\u00e8s avoir fait quelques rappels sur le Behavior-Driven Development, j'aborderai (dans cet ordre ou pas...) :\r\n\r\n1. Il faut savoir poser un exemple concret !\r\n2. Pas besoin d\u2019\u00e9crire ses exemples au format Gherkin ! Faites au plus simple, croquis, sch\u00e9mas, etc.\r\n3. La pierre angulaire, c\u2019est l\u2019exemple concret. \r\n> Les r\u00e8gles et US ne sont que des blocs pour classifier les exemples entre eux de mani\u00e8re coh\u00e9rente et compr\u00e9hensible. \u2028Corollaire : ne pas toujours d\u00e9marrer par les cartes jaunes et bleues (US et r\u00e8gles) : commencez par donner des exemples.\r\n\r\n4. Les cartes jaunes ne sont pas que rarement des US au d\u00e9marrage de l\u2019atelier.\u2028\r\n> Et on s\u2019en fout ! L\u2019atelier est un formidable outil pour grouper des exemples (cf. heuristique n\u00b03).\r\n\r\n5. Le vote de confiance sera tr\u00e8s souvent n\u00e9gatif sur l\u2019ensemble de la carte : il reste souvent des inconnus. Le faire alors sur des sous-ensemble coh\u00e9rents et qui sont pr\u00eats.\u2028\r\n\r\n6. Atelier difficile \u00e0 tenir \u00e0 distance. \r\n> M\u00eame si des outils tels que Miro proposent un template sp\u00e9cifique, on est en difficult\u00e9 pour \u00e9crire les exemples efficacement (cf. heuristique n\u00b02).\r\n\r\n7. S\u2019assurer de capter toute la connaissance.\r\n> Chaque question / interrogation doit donner lieu \u00e0 une carte rouge ou un exemple concret : souvent besoin d\u2019un facilitateur d\u00e9di\u00e9 \u00e0 cette t\u00e2che. Dur d\u2019\u00eatre partie prenante.\r\n\r\n8. S\u2019assurer d\u2019avancer : fast & furious @Bruno Boucard\r\n\r\n9. Pr\u00e9parez-vous au chaos  !\r\n> Inconfort car l\u2019on ne navigue pas forc\u00e9ment dans la direction attendue. On peut d\u00e9couvrir des pans complets du m\u00e9tier et ce n\u2019est pas forc\u00e9ment ce qui \u00e9tait attendu / pr\u00e9vu par le PO ou expert m\u00e9tier. _\u00ab Vous ne saviez pas que vous ne saviez pas. Maintenant, vous le savez ! \u00bb_.\r\n\u2028\r\n10. La couleur dominante de votre carte vous dira beaucoup sur l\u2019avanc\u00e9e de l\u2019atelier et le partage de votre connaissance.\r\n11. De l\u2019art de trouver la fr\u00e9quence id\u00e9ale.\u2028\r\n> 25 minutes, c\u2019est souvent court et frustrant. Alors comment optimiser cet atelier ? Quelle fr\u00e9quence ? Combien de sessions \u00e0 la suite ?\r\n\r\nCette conf\u00e9rence est issue d'une pr\u00e9sentation et d'un atelier d\u00e9j\u00e0 donn\u00e9s \u00e0 plusieurs reprises chez des clients, en interne (XKE) et lors du mois du PO 2019 chez Publicis Sapient. C'est une version 2.0 enrichie.",
-        "end": "2022-05-25T15:40:44",
-        "event": "2022",
-        "format": "TALK",
-        "id": "623ad67c8a5c755e7139c6e4",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "11-heuristiques-pour-reussir-a-coup-sur-ses-ateliers-d-example-mapping",
-        "speakerIds": [
-            "c_heliou"
-        ],
-        "start": "2022-05-25T14:50:44",
-        "summary": "L'Example Mapping apporte un cadre structurant \u00e0 la pratique du BDD. Cet atelier efficace redonne ses lettres de noblesses \u00e0 la collaboration entre experts m\u00e9tiers, d\u00e9veloppeurs et testeurs. Mais son format accessible cache bon nombre de pi\u00e8ges. Voici 11 heuristiques pour le r\u00e9ussir \u00e0 coup s\u00fbr.",
-        "title": "11 heuristiques pour r\u00e9ussir \u00e0 coup s\u00fbr ses ateliers d'Example Mapping",
-        "topic": "tech",
-        "video": null
-    },
-    {
         "addedAt": "2022-05-25T15:50:00",
         "description": "D\u00e9roul\u00e9 de l'intervention (20 minutes de pr\u00e9sentation et le reste d'\u00e9changes) :\r\n- Le probl\u00e8me\r\n- Notre histoire et pourquoi nous sommes bien plac\u00e9s pour r\u00e9pondre \u00e0 cette question\r\n- \u00c9tape 1 - Comprendre l'\u00e9quation \u00e9conomique de la vie\r\n- \u00c9tape 2 - R\u00e9interroger ses besoins\r\n- \u00c9tape 3 - Calculez votre RIB\r\n- Est-ce bien r\u00e9aliste ?\r\n- Conclusion\r\n- D\u00e9bat !\r\n",
         "end": "2022-05-25T16:40:00",
@@ -1002,7 +1002,7 @@
         "id": "623ad67c8a5c755e7139c6e5",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "UNKNOWN",
+        "room": "AMPHID",
         "slug": "3-etapes-pour-arreter-de-subir-la-societe-de-consommation",
         "speakerIds": [
             "jeff.rochas-parrot"
@@ -1022,7 +1022,7 @@
         "id": "623ad67c8a5c755e7139c6fc",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "UNKNOWN",
+        "room": "AMPHIC",
         "slug": "le-design-manipulatif-oui-mais-non",
         "speakerIds": [
             "sophie.freiermuth"
@@ -1042,7 +1042,7 @@
         "id": "623ad67c8a5c755e7139c716",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "UNKNOWN",
+        "room": "ROOM1",
         "slug": "un-peu-de-confiture-dans-votre-architecture-",
         "speakerIds": [
             "ceciliaBossard"
@@ -1062,7 +1062,7 @@
         "id": "623ad67c8a5c755e7139c6e7",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "UNKNOWN",
+        "room": "ROOM2",
         "slug": "appwrite-est-il-pret-a-eteindre-firebase-",
         "speakerIds": [
             "alves.mckl",
@@ -1071,66 +1071,6 @@
         "start": "2022-05-25T15:50:44",
         "summary": "Est-ce que Firebase vous dit quelque chose ? Vous en avez s\u00fbrement entendu parl\u00e9 et vous l'avez peut-\u00eatre m\u00eame d\u00e9j\u00e0 utilis\u00e9 ! Mais avez-vous d\u00e9j\u00e0 entendu parler d'Appwrite \u2753 Venez d\u00e9couvrir avec nous le duel entre Appwrite la jeune solution open-source et Firebase la flamme de Google \ud83e\udd4a",
         "title": "Appwrite est-il pr\u00eat \u00e0 \u00e9teindre Firebase ? \ud83d\udd25",
-        "topic": "tech",
-        "video": null
-    },
-    {
-        "addedAt": "2022-03-23T09:12:44.732",
-        "description": "Dans ce talk, vous d\u00e9couvrirez un peu de th\u00e9orie de l'apprentissage, du triangle p\u00e9dagogique de Houssaye... Mais surtout vous apprendrez \u00e0 reconna\u00eetre les situations d'enseignement dans lesquelles vous vous trouvez.\r\n\r\nJe pr\u00e9senterai quelques le\u00e7ons apprises dans ma carri\u00e8re en tant que consultant, mentor, et aussi enseignant en informatique - et comment les diff\u00e9rentes techniques se transposent d'un domaine \u00e0 l'autre.",
-        "end": "2022-05-25T17:20:00",
-        "event": "2022",
-        "format": "LIGHTNING_TALK",
-        "id": "623ad67c8a5c755e7139c706",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "mentor-consultant-prof-memes-combats-memes-techniques-",
-        "speakerIds": [
-            "Kehrlann"
-        ],
-        "start": "2022-05-25T17:00:00",
-        "summary": "Avec un peu d'exp\u00e9rience, les devs sont amen\u00e9\u00b7e\u00b7s \u00e0 accompagner et former des d\u00e9butant\u00b7e\u00b7s. Si nous avons tou\u00b7te\u00b7s \u00e9t\u00e9 \u00e9l\u00e8ves, \u00e7a ne fait pas pour autant de nous de bon\u00b7ne\u00b7s profs! \r\n\r\nVenez d\u00e9couvrir un peu de th\u00e9orie de l'enseignement, et des techniques pratiques \u00e0 appliquer avec vos mentor\u00e9\u00b7e\u00b7s.",
-        "title": "Mentor, consultant, prof... m\u00eames combats, m\u00eames techniques!",
-        "topic": "learn",
-        "video": null
-    },
-    {
-        "addedAt": "2022-03-23T09:12:44.7",
-        "description": "Pour tout projet informatique, avant la premi\u00e8re ligne de code, avant m\u00eame le choix des langages ou frameworks utilis\u00e9s, il faut des d\u00e9veloppeur\u00b7ses. Bien que l'explosion des besoins dans le secteur ne date pas d'hier, il y a toujours un gap consid\u00e9rable entre le nombre de d\u00e9veloppeur\u00b7ses disponibles sur le march\u00e9 et le nombre de postes \u00e0 pourvoir.\r\nNous sommes face \u00e0 un m\u00e9tier dit p\u00e9nurique qui chamboule compl\u00e8tement les modes de recrutement traditionnels. Ce n'est plus le candidat qui cherche un employeur mais l'employeur qui cherche des candidats. Pour cela, les entreprises travaillent leur marque employeur. C'est-\u00e0-dire qu'elles se montrent sous leur plus beau jour pour attirer les candidats qu'elles recherchent. Mais leur atout num\u00e9ro 1 pour trouver de futurs employ\u00e9s, ce sont les recruteurs.\r\nIl existe deux types de recruteurs : les internes qui recrutent uniquement pour leur soci\u00e9t\u00e9 et les externes qui recrutent pour diff\u00e9rentes soci\u00e9t\u00e9s.\r\nEn ce qui me concerne, je me suis positionn\u00e9 comme recruteur externe pour accompagner des soci\u00e9t\u00e9s dans leur recherche de d\u00e9veloppeur iOS.\r\nJ'\u00e9tais d\u00e9veloppeur iOS pendant plus de 10 ans et je suis tr\u00e8s actif dans la communaut\u00e9 des d\u00e9veloppeur\u00b7ses iOS depuis 2016 \u00e0 travers l'organisation de meetups et de conf\u00e9rences ou via les r\u00e9seaux sociaux. Fort de cette connaissance du m\u00e9tier et de sa communaut\u00e9, je me suis lanc\u00e9 d\u00e9but 2019 dans l'aventure malgr\u00e9 l'assez mauvaise image que j'avais du m\u00e9tier de recruteur.\r\nJ'y ai d\u00e9couvert pas mal de choses, des bonnes comme des moins bonnes. \u00c9tonnamment, j'ai \u00e9galement aussi beaucoup appris sur le m\u00e9tier de d\u00e9veloppeur, a posteriori. On ne se rend pas compte de certains aspect de notre m\u00e9tier tant qu'on n'a pas pris un certain recul ou c\u00f4toy\u00e9 de plus pr\u00e8s d'autres communaut\u00e9s de m\u00e9tiers.\r\nVenez assister \u00e0 ce talk si vous voulez mieux comprendre ce m\u00e9tier \u00e0 la r\u00e9putation sulfureuse mais qui, quand il est bien compris, peut \u00eatre un atout incroyable dans la carri\u00e8re de tout d\u00e9veloppeur !",
-        "end": "2022-05-25T17:20:00",
-        "event": "2022",
-        "format": "LIGHTNING_TALK",
-        "id": "623ad67c8a5c755e7139c6f0",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "de-developpeur-a-recruteur-la-reconversion-improbable",
-        "speakerIds": [
-            "greg3z"
-        ],
-        "start": "2022-05-25T17:00:00",
-        "summary": "Apr\u00e8s avoir \u00e9t\u00e9 d\u00e9veloppeur pendant plus de 10 ans, j'ai eu la dr\u00f4le d'id\u00e9e de devenir recruteur de d\u00e9veloppeur\u00b7ses en 2019.\r\nPourquoi ?\r\nComment ?\r\nEt surtout, qu'est-ce qu'on apprend quand on passe de l'autre c\u00f4t\u00e9 du miroir ?\r\nD\u00e9cryptage du m\u00e9tier que les d\u00e9veloppeur\u00b7ses aiment tant d\u00e9tester.",
-        "title": "De d\u00e9veloppeur \u00e0 recruteur, la reconversion improbable",
-        "topic": "aliens",
-        "video": null
-    },
-    {
-        "addedAt": "2022-03-23T09:12:44.735",
-        "description": "\u00c7a y est, vous venez de terminer l'impl\u00e9mentation de votre derni\u00e8re user story. Une semaine de travail, des dizaines de fichiers modifi\u00e9s, des commits en pagaille, mais \u00e7a tourne et les tests sont au vert, alors place \u00e0 la revue de code !\r\n\r\nDes revues de ce style, vous en avez s\u00fbrement d\u00e9j\u00e0 relu. Vous essayez tant bien que mal d'y trouver du sens, avant de vous rabattre sur le strict minimum (les noms de fonction, ils sont bien en _camelcase_ ?).\r\n\r\nQuel dommage, car la revue de code, lorsqu'elle est pr\u00e9par\u00e9e avec soin, peut \u00eatre un atout majeur de votre cycle de d\u00e9veloppement !\r\n\r\nJe vous propose, au travers d'un exemple simple, d'utiliser le **rebase interactif** pour nettoyer, r\u00e9organiser et clarifier votre historique de commits. 3 \u00e9tapes, 10 minutes chrono pour passer vos revues de code au niveau sup\u00e9rieur et exploiter leur plein potentiel !",
-        "end": "2022-05-25T17:20:00",
-        "event": "2022",
-        "format": "LIGHTNING_TALK",
-        "id": "623ad67c8a5c755e7139c709",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "optimisez-vos-revues-de-code-avec-le-rebase-interactif-",
-        "speakerIds": [
-            "sonia.seddiki"
-        ],
-        "start": "2022-05-25T17:00:00",
-        "summary": "La revue de code est une \u00e9tape cruciale qui reste souvent n\u00e9glig\u00e9e. Pourtant, pr\u00e9par\u00e9e avec soin, elle peut avoir un impact bien au del\u00e0 de l'am\u00e9lioration de la qualit\u00e9 ! D\u00e9couvrons comment le rebase interactif peut vous aider \u00e0 mieux pr\u00e9senter votre code, sans y passer la journ\u00e9e.",
-        "title": "Optimisez vos revues de code avec le rebase interactif !",
         "topic": "tech",
         "video": null
     },
@@ -1155,22 +1095,82 @@
         "video": null
     },
     {
-        "addedAt": "2022-03-23T09:12:44.713",
-        "description": "Ing\u00e9nieure informaticienne, j\u2019ai quitt\u00e9 mon bled en 2010 pour immigrer chez les Gaulois. Je partage avec vous de \u00ab l\u2019enfer \u00bb  v\u00e9cu \u00e0 la pr\u00e9fecture de Bobigny dans le 9-3, pour renouveler le titre de s\u00e9jour.\r\nComment j\u2019ai mont\u00e9 le GDGRennes-Android? Est-ce que mon premier pr\u00e9nom, \u00e0 connotation africaine, a \u00e9t\u00e9 un frein pour ma recherche d\u2019emploi?  Est-ce que j\u2019ai r\u00e9ussi \u00e0 me faire une petite place dans l\u2019\u00e9cosyst\u00e8me informatique, associatif, collaboratif en France? Que suis-je devenue aujourd\u2019hui?  Venez me poser toutes les questions, sans tabou. Je vous ferais un bilan de 12 ans de vie, d\u2019une ing\u00e9nieure informaticienne immigr\u00e9e, vivant chez les Gaulois...InchAllah. ",
+        "addedAt": "2022-03-23T09:12:44.732",
+        "description": "Dans ce talk, vous d\u00e9couvrirez un peu de th\u00e9orie de l'apprentissage, du triangle p\u00e9dagogique de Houssaye... Mais surtout vous apprendrez \u00e0 reconna\u00eetre les situations d'enseignement dans lesquelles vous vous trouvez.\r\n\r\nJe pr\u00e9senterai quelques le\u00e7ons apprises dans ma carri\u00e8re en tant que consultant, mentor, et aussi enseignant en informatique - et comment les diff\u00e9rentes techniques se transposent d'un domaine \u00e0 l'autre.",
+        "end": "2022-05-25T17:20:00",
+        "event": "2022",
+        "format": "LIGHTNING_TALK",
+        "id": "623ad67c8a5c755e7139c706",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHID",
+        "slug": "mentor-consultant-prof-memes-combats-memes-techniques-",
+        "speakerIds": [
+            "Kehrlann"
+        ],
+        "start": "2022-05-25T17:00:00",
+        "summary": "Avec un peu d'exp\u00e9rience, les devs sont amen\u00e9\u00b7e\u00b7s \u00e0 accompagner et former des d\u00e9butant\u00b7e\u00b7s. Si nous avons tou\u00b7te\u00b7s \u00e9t\u00e9 \u00e9l\u00e8ves, \u00e7a ne fait pas pour autant de nous de bon\u00b7ne\u00b7s profs! \r\n\r\nVenez d\u00e9couvrir un peu de th\u00e9orie de l'enseignement, et des techniques pratiques \u00e0 appliquer avec vos mentor\u00e9\u00b7e\u00b7s.",
+        "title": "Mentor, consultant, prof... m\u00eames combats, m\u00eames techniques!",
+        "topic": "learn",
+        "video": null
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.7",
+        "description": "Pour tout projet informatique, avant la premi\u00e8re ligne de code, avant m\u00eame le choix des langages ou frameworks utilis\u00e9s, il faut des d\u00e9veloppeur\u00b7ses. Bien que l'explosion des besoins dans le secteur ne date pas d'hier, il y a toujours un gap consid\u00e9rable entre le nombre de d\u00e9veloppeur\u00b7ses disponibles sur le march\u00e9 et le nombre de postes \u00e0 pourvoir.\r\nNous sommes face \u00e0 un m\u00e9tier dit p\u00e9nurique qui chamboule compl\u00e8tement les modes de recrutement traditionnels. Ce n'est plus le candidat qui cherche un employeur mais l'employeur qui cherche des candidats. Pour cela, les entreprises travaillent leur marque employeur. C'est-\u00e0-dire qu'elles se montrent sous leur plus beau jour pour attirer les candidats qu'elles recherchent. Mais leur atout num\u00e9ro 1 pour trouver de futurs employ\u00e9s, ce sont les recruteurs.\r\nIl existe deux types de recruteurs : les internes qui recrutent uniquement pour leur soci\u00e9t\u00e9 et les externes qui recrutent pour diff\u00e9rentes soci\u00e9t\u00e9s.\r\nEn ce qui me concerne, je me suis positionn\u00e9 comme recruteur externe pour accompagner des soci\u00e9t\u00e9s dans leur recherche de d\u00e9veloppeur iOS.\r\nJ'\u00e9tais d\u00e9veloppeur iOS pendant plus de 10 ans et je suis tr\u00e8s actif dans la communaut\u00e9 des d\u00e9veloppeur\u00b7ses iOS depuis 2016 \u00e0 travers l'organisation de meetups et de conf\u00e9rences ou via les r\u00e9seaux sociaux. Fort de cette connaissance du m\u00e9tier et de sa communaut\u00e9, je me suis lanc\u00e9 d\u00e9but 2019 dans l'aventure malgr\u00e9 l'assez mauvaise image que j'avais du m\u00e9tier de recruteur.\r\nJ'y ai d\u00e9couvert pas mal de choses, des bonnes comme des moins bonnes. \u00c9tonnamment, j'ai \u00e9galement aussi beaucoup appris sur le m\u00e9tier de d\u00e9veloppeur, a posteriori. On ne se rend pas compte de certains aspect de notre m\u00e9tier tant qu'on n'a pas pris un certain recul ou c\u00f4toy\u00e9 de plus pr\u00e8s d'autres communaut\u00e9s de m\u00e9tiers.\r\nVenez assister \u00e0 ce talk si vous voulez mieux comprendre ce m\u00e9tier \u00e0 la r\u00e9putation sulfureuse mais qui, quand il est bien compris, peut \u00eatre un atout incroyable dans la carri\u00e8re de tout d\u00e9veloppeur !",
+        "end": "2022-05-25T17:20:00",
+        "event": "2022",
+        "format": "LIGHTNING_TALK",
+        "id": "623ad67c8a5c755e7139c6f0",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM1",
+        "slug": "de-developpeur-a-recruteur-la-reconversion-improbable",
+        "speakerIds": [
+            "greg3z"
+        ],
+        "start": "2022-05-25T17:00:00",
+        "summary": "Apr\u00e8s avoir \u00e9t\u00e9 d\u00e9veloppeur pendant plus de 10 ans, j'ai eu la dr\u00f4le d'id\u00e9e de devenir recruteur de d\u00e9veloppeur\u00b7ses en 2019.\r\nPourquoi ?\r\nComment ?\r\nEt surtout, qu'est-ce qu'on apprend quand on passe de l'autre c\u00f4t\u00e9 du miroir ?\r\nD\u00e9cryptage du m\u00e9tier que les d\u00e9veloppeur\u00b7ses aiment tant d\u00e9tester.",
+        "title": "De d\u00e9veloppeur \u00e0 recruteur, la reconversion improbable",
+        "topic": "aliens",
+        "video": null
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.735",
+        "description": "\u00c7a y est, vous venez de terminer l'impl\u00e9mentation de votre derni\u00e8re user story. Une semaine de travail, des dizaines de fichiers modifi\u00e9s, des commits en pagaille, mais \u00e7a tourne et les tests sont au vert, alors place \u00e0 la revue de code !\r\n\r\nDes revues de ce style, vous en avez s\u00fbrement d\u00e9j\u00e0 relu. Vous essayez tant bien que mal d'y trouver du sens, avant de vous rabattre sur le strict minimum (les noms de fonction, ils sont bien en _camelcase_ ?).\r\n\r\nQuel dommage, car la revue de code, lorsqu'elle est pr\u00e9par\u00e9e avec soin, peut \u00eatre un atout majeur de votre cycle de d\u00e9veloppement !\r\n\r\nJe vous propose, au travers d'un exemple simple, d'utiliser le **rebase interactif** pour nettoyer, r\u00e9organiser et clarifier votre historique de commits. 3 \u00e9tapes, 10 minutes chrono pour passer vos revues de code au niveau sup\u00e9rieur et exploiter leur plein potentiel !",
+        "end": "2022-05-25T17:20:00",
+        "event": "2022",
+        "format": "LIGHTNING_TALK",
+        "id": "623ad67c8a5c755e7139c709",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM2",
+        "slug": "optimisez-vos-revues-de-code-avec-le-rebase-interactif-",
+        "speakerIds": [
+            "sonia.seddiki"
+        ],
+        "start": "2022-05-25T17:00:00",
+        "summary": "La revue de code est une \u00e9tape cruciale qui reste souvent n\u00e9glig\u00e9e. Pourtant, pr\u00e9par\u00e9e avec soin, elle peut avoir un impact bien au del\u00e0 de l'am\u00e9lioration de la qualit\u00e9 ! D\u00e9couvrons comment le rebase interactif peut vous aider \u00e0 mieux pr\u00e9senter votre code, sans y passer la journ\u00e9e.",
+        "title": "Optimisez vos revues de code avec le rebase interactif !",
+        "topic": "tech",
+        "video": null
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.714",
+        "description": "Une \u00e9toile ne peut vivre sans l\u2019\u00e9nergie de ses atomes, tout comme l\u2019entreprise sans celle de ses collaborateur/trices. \r\n\r\nAstrophysicienne, mes recherches portaient sur la formation des \u00e9toiles. Aujourd\u2019hui coach agile, j\u2019ai analys\u00e9 dans le d\u00e9tail 2 ans de transformation sur un d\u00e9partement de 150 personnes et vous ne devinerez jamais les liens que j\u2019ai pu d\u00e9couvrir.\r\n\r\nDe retour sur Terre, non seulement vous saurez expliquer la naissance d\u2019une \u00e9toile mais \u00e9galement trouver votre chemin avec pr\u00e9cision dans les transformations que vous rencontrerez.\r\n",
         "end": "2022-05-25T17:50:00",
         "event": "2022",
         "format": "LIGHTNING_TALK",
-        "id": "623ad67c8a5c755e7139c6fa",
+        "id": "623ad67c8a5c755e7139c6fb",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "AMPHIC",
-        "slug": "journal-d-une-immigree-fondatrice-du-gdgrennes-android",
+        "room": "ROOM2",
+        "slug": "l-astrophysique-peut-vous-aider-a-trouver-votre-place-lors-d-une-transformation-rex-d-une-etoile-",
         "speakerIds": [
-            "AnnetLenaNdiaye"
+            "albane.fagot"
         ],
         "start": "2022-05-25T17:30:00",
-        "summary": "En 2010, j\u2019ai immigr\u00e9 chez les Gaulois. Je partagerai avec vous de l\u2019enfer \u00e0 la pr\u00e9fecture de Bobigny dans le 9-3, pour renouveler le titre de s\u00e9jour. Est-ce que mon premier pr\u00e9nom, a \u00e9t\u00e9 un frein pour ma recherche d\u2019emploi? Je vous ferais un bilan de 12 ans de vie, d\u2019une immigr\u00e9e chez les Gaulois.",
-        "title": "Journal d'une immigr\u00e9e, Fondatrice du GDGRennes-Android",
+        "summary": "Voil\u00e0, votre manager vous a annonc\u00e9 la N-i\u00e8me r\u00e9organisation d\u2019\u00e9quipe/de service. Quelle va \u00eatre votre place cette fois-ci ?\r\nVoyageons ensemble au plus pr\u00e8s de la naissance d'une \u00e9toile. Elle vous d\u00e9voilera comment agir et trouver votre place dans chacune des \u00e9tapes d'une transformation agile.",
+        "title": "L\u2019astrophysique peut vous aider \u00e0 trouver votre place lors d\u2019une transformation : REX d\u2019une \u00e9toile \u2b50",
         "topic": "aliens",
         "video": null
     },
@@ -1195,26 +1195,6 @@
         "video": null
     },
     {
-        "addedAt": "2022-03-23T09:12:44.714",
-        "description": "Une \u00e9toile ne peut vivre sans l\u2019\u00e9nergie de ses atomes, tout comme l\u2019entreprise sans celle de ses collaborateur/trices. \r\n\r\nAstrophysicienne, mes recherches portaient sur la formation des \u00e9toiles. Aujourd\u2019hui coach agile, j\u2019ai analys\u00e9 dans le d\u00e9tail 2 ans de transformation sur un d\u00e9partement de 150 personnes et vous ne devinerez jamais les liens que j\u2019ai pu d\u00e9couvrir.\r\n\r\nDe retour sur Terre, non seulement vous saurez expliquer la naissance d\u2019une \u00e9toile mais \u00e9galement trouver votre chemin avec pr\u00e9cision dans les transformations que vous rencontrerez.\r\n",
-        "end": "2022-05-25T17:50:00",
-        "event": "2022",
-        "format": "LIGHTNING_TALK",
-        "id": "623ad67c8a5c755e7139c6fb",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "UNKNOWN",
-        "slug": "l-astrophysique-peut-vous-aider-a-trouver-votre-place-lors-d-une-transformation-rex-d-une-etoile-",
-        "speakerIds": [
-            "albane.fagot"
-        ],
-        "start": "2022-05-25T17:30:00",
-        "summary": "Voil\u00e0, votre manager vous a annonc\u00e9 la N-i\u00e8me r\u00e9organisation d\u2019\u00e9quipe/de service. Quelle va \u00eatre votre place cette fois-ci ?\r\nVoyageons ensemble au plus pr\u00e8s de la naissance d'une \u00e9toile. Elle vous d\u00e9voilera comment agir et trouver votre place dans chacune des \u00e9tapes d'une transformation agile.",
-        "title": "L\u2019astrophysique peut vous aider \u00e0 trouver votre place lors d\u2019une transformation : REX d\u2019une \u00e9toile \u2b50",
-        "topic": "aliens",
-        "video": null
-    },
-    {
         "addedAt": "2022-03-23T09:12:44.743",
         "description": "Je me suis vraiment \u00e9clat\u00e9 en codant [maposaic.com](maposaic.com) et je voudrais en partager les apprentissages en zoomant sur l'optimisation de l\u2019algorithme avec Rust.\r\nC\u2019est la v2 de [cette pr\u00e9sentation](https://www.conf42.com/JavaScript_2020_Victor_Lebrun_canvas_pixel_transformation) o\u00f9 je m\u2019arr\u00eatais \u00e0 dire que le r\u00e9sultat \u00e9tait beau, mais lent. Maintenant, il est rapide ! Et ce gr\u00e2ce \u00e0 Rust, un langage permettant de compiler facilement en Web Assembly. Rust c\u2019est aussi une super communaut\u00e9. Ne constatant pas d\u2019am\u00e9lioration de performance en premier lieu, j\u2019ai [demand\u00e9 de l\u2019aide](https://www.reddit.com/r/rust/comments/kwdnlo/rust_program_twice_slower_than_javascript_where/) au groupe rust de reddit qui m\u2019a beaucoup aid\u00e9 !",
         "end": "2022-05-25T17:50:00",
@@ -1223,7 +1203,7 @@
         "id": "623ad67c8a5c755e7139c70f",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "UNKNOWN",
+        "room": "ROOM1",
         "slug": "rust-a-la-rescousse-des-performances-de-javascript",
         "speakerIds": [
             "viconnex"
@@ -1232,6 +1212,26 @@
         "summary": "Un fond de carte dans un Canvas. Un algorithme qui parcourt tous ses pixels. Une mosa\u00efque en couleurs. C\u2019est beau ! Mais il faut attendre longtemps... Venez voir comment Rust m\u2019a permis de booster les performances de ces calculs de pixels !",
         "title": "Rust \u00e0 la rescousse des performances de javascript",
         "topic": "tech",
+        "video": null
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.713",
+        "description": "Ing\u00e9nieure informaticienne, j\u2019ai quitt\u00e9 mon bled en 2010 pour immigrer chez les Gaulois. Je partage avec vous de \u00ab l\u2019enfer \u00bb  v\u00e9cu \u00e0 la pr\u00e9fecture de Bobigny dans le 9-3, pour renouveler le titre de s\u00e9jour.\r\nComment j\u2019ai mont\u00e9 le GDGRennes-Android? Est-ce que mon premier pr\u00e9nom, \u00e0 connotation africaine, a \u00e9t\u00e9 un frein pour ma recherche d\u2019emploi?  Est-ce que j\u2019ai r\u00e9ussi \u00e0 me faire une petite place dans l\u2019\u00e9cosyst\u00e8me informatique, associatif, collaboratif en France? Que suis-je devenue aujourd\u2019hui?  Venez me poser toutes les questions, sans tabou. Je vous ferais un bilan de 12 ans de vie, d\u2019une ing\u00e9nieure informaticienne immigr\u00e9e, vivant chez les Gaulois...InchAllah. ",
+        "end": "2022-05-25T17:50:00",
+        "event": "2022",
+        "format": "LIGHTNING_TALK",
+        "id": "623ad67c8a5c755e7139c6fa",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHIC",
+        "slug": "journal-d-une-immigree-fondatrice-du-gdgrennes-android",
+        "speakerIds": [
+            "AnnetLenaNdiaye"
+        ],
+        "start": "2022-05-25T17:30:00",
+        "summary": "En 2010, j\u2019ai immigr\u00e9 chez les Gaulois. Je partagerai avec vous de l\u2019enfer \u00e0 la pr\u00e9fecture de Bobigny dans le 9-3, pour renouveler le titre de s\u00e9jour. Est-ce que mon premier pr\u00e9nom, a \u00e9t\u00e9 un frein pour ma recherche d\u2019emploi? Je vous ferais un bilan de 12 ans de vie, d\u2019une immigr\u00e9e chez les Gaulois.",
+        "title": "Journal d'une immigr\u00e9e, Fondatrice du GDGRennes-Android",
+        "topic": "aliens",
         "video": null
     },
     {

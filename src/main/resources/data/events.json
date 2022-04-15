@@ -1352,11 +1352,6 @@
                 "subscriptionDate": "2022-03-28"
             },
             {
-                "level": "PARTY",
-                "sponsorId": "grandlyon",
-                "subscriptionDate": "2022-04-03"
-            },
-            {
                 "level": "SILVER",
                 "sponsorId": "avanade",
                 "subscriptionDate": "2022-04-05"
@@ -1365,6 +1360,11 @@
                 "level": "GOLD",
                 "sponsorId": "energypool",
                 "subscriptionDate": "2022-04-06"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "grandlyon",
+                "subscriptionDate": "2022-04-12"
             }
         ],
         "start": "2022-05-24",
