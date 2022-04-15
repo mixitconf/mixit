@@ -10,30 +10,30 @@ import reactor.core.publisher.Mono
 @Service
 class TicketService(
     private val repository: FinalTicketRepository
-) : CacheTemplate<CachedFinalTicket>() {
+) : CacheTemplate<CachedTicket>() {
 
     override val cacheZone: CacheZone = CacheZone.TICKET
 
-    override fun findAll(): Mono<List<CachedFinalTicket>> =
-        findAll { repository.findAll().map { ticket -> CachedFinalTicket(ticket) }.collectList() }
+    override fun findAll(): Mono<List<CachedTicket>> =
+        findAll { repository.findAll().map { ticket -> CachedTicket(ticket) }.collectList() }
 
-    fun findByNumber(number: String): Mono<CachedFinalTicket> =
+    fun findByNumber(number: String): Mono<CachedTicket> =
         findAll().flatMap { tickets -> Mono.justOrEmpty(tickets.firstOrNull { it.number == number }) }
 
-    fun findByEncryptedEmail(encryptedEmail: String): Mono<CachedFinalTicket> =
+    fun findByEncryptedEmail(encryptedEmail: String): Mono<CachedTicket> =
         findAll().flatMap { tickets -> Mono.justOrEmpty(tickets.firstOrNull { it.encryptedEmail == encryptedEmail }) }
 
-    fun findByLogin(login: String?): Mono<CachedFinalTicket> =
+    fun findByLogin(login: String?): Mono<CachedTicket> =
         findAll().flatMap { tickets ->
             val ticket = tickets.filter { it.login != null }.firstOrNull() { it.login == login }
             return@flatMap if (ticket == null) Mono.empty() else Mono.just(ticket)
         }
 
-    fun save(ticket: FinalTicket): Mono<CachedFinalTicket> =
+    fun save(ticket: Ticket): Mono<CachedTicket> =
         findByEncryptedEmail(ticket.encryptedEmail)
-            .flatMap { Mono.error<CachedFinalTicket> { DuplicateException("") } }
+            .flatMap { Mono.error<CachedTicket> { DuplicateException("") } }
             .switchIfEmpty(
-                repository.save(ticket).map { CachedFinalTicket(it) }
+                repository.save(ticket).map { CachedTicket(it) }
                     .doOnSuccess { cache.invalidateAll() }
             )
 

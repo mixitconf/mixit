@@ -2,7 +2,7 @@ package mixit.ticket.handler
 
 import mixit.MixitProperties
 import mixit.security.model.Cryptographer
-import mixit.ticket.model.Ticket
+import mixit.ticket.model.LotteryTicket
 import mixit.ticket.repository.LotteryRepository
 import mixit.user.model.User
 import mixit.util.email.EmailService
@@ -26,18 +26,25 @@ class LotteryHandler(
     private val properties: MixitProperties
 ) {
 
+    companion object {
+        const val TEMPLATE_SUB = "lottery-submission"
+        const val TEMPLATE_EDIT = "lottery"
+        const val TEMPLATE_CLOSE = "lottery-closed"
+        const val TEMPLATE_ERROR = "lottery-error"
+    }
+
     fun findAll(req: ServerRequest) = ok().json().body(ticketRepository.findAll())
 
     fun ticketing(req: ServerRequest) =
         ok().render(
-            if (properties.feature.lottery) "ticketing" else "ticketing-closed",
+            if (properties.feature.lottery) TEMPLATE_EDIT else TEMPLATE_CLOSE,
             mapOf(Pair("title", "ticketing.title"))
         )
 
     fun submit(req: ServerRequest) =
         req.extractFormData().flatMap { formData ->
 
-            val ticket = Ticket(
+            val ticket = LotteryTicket(
                 formData["email"]!!.lowercase(),
                 formData["firstname"]!!,
                 formData["lastname"]!!
@@ -47,25 +54,25 @@ class LotteryHandler(
                 .then(sendUserConfirmation(ticket, formData, req.locale()))
                 .onErrorResume(DuplicateKeyException::class.java) {
                     ok().render(
-                        "ticketing-error",
+                        TEMPLATE_ERROR,
                         mapOf(Pair("message", "ticketing.error.alreadyexists"), Pair("title", "ticketing.title"))
                     )
                 }
                 .onErrorResume {
                     ok().render(
-                        "ticketing-error",
+                        TEMPLATE_ERROR,
                         mapOf(Pair("message", "ticketing.error.default"), Pair("title", "ticketing.title"))
                     )
                 }
         }
 
     private fun sendUserConfirmation(
-        ticket: Ticket,
+        ticket: LotteryTicket,
         formData: Map<String, String?>,
         locale: Locale
     ): Mono<ServerResponse> {
         val user = User(ticket.email, ticket.firstname, ticket.lastname, cryptographer.encrypt(ticket.email))
         emailService.send("email-ticketing", user, locale)
-        return ok().render("ticketing-submission", formData)
+        return ok().render(TEMPLATE_SUB, formData)
     }
 }

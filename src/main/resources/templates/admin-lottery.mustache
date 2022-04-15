@@ -36,7 +36,7 @@
                 <td><a href="mailto:{{email}}">{{email}}</a></td>
                 <td>{{#rank}}{{rank}}{{/rank}}</td>
                 <td>
-                    <form action="/admin/ticketing/delete" method="post"
+                    <form action="/admin/lottery/delete" method="post"
                           onsubmit="return confirm('{{#i18n}}admin.ticketing.delete.confirm{{/i18n}}');">
                         <input type="hidden" name="email" value="{{email}}"/>
                         <input type="submit" class="btn btn-primary mxt-btn-primary"

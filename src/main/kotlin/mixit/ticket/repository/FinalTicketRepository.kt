@@ -2,7 +2,7 @@ package mixit.ticket.repository
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
-import mixit.ticket.model.FinalTicket
+import mixit.ticket.model.Ticket
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
@@ -28,29 +28,29 @@ class FinalTicketRepository(
     fun initData() {
         if (count().block() == 0L) {
             val usersResource = ClassPathResource("data/final-ticket.json")
-            val tickets: List<FinalTicket> = objectMapper.readValue(usersResource.inputStream)
+            val tickets: List<Ticket> = objectMapper.readValue(usersResource.inputStream)
             tickets.forEach { save(it).block() }
             logger.info("Ticket data initialization complete")
         }
     }
 
-    fun count() = template.count<FinalTicket>()
+    fun count() = template.count<Ticket>()
 
-    fun save(ticket: FinalTicket) =
+    fun save(ticket: Ticket) =
         template.save(ticket).doOnSuccess { _ -> logger.info("Save new ticket $ticket") }
 
-    fun findAll(): Flux<FinalTicket> =
-        template.findAll<FinalTicket>().doOnComplete { logger.info("Load all tickets") }
+    fun findAll(): Flux<Ticket> =
+        template.findAll<Ticket>().doOnComplete { logger.info("Load all tickets") }
 
     fun findOne(login: String) =
-        template.findById<FinalTicket>(login)
+        template.findById<Ticket>(login)
 
     fun deleteAll() =
-        template.remove<FinalTicket>(Query())
+        template.remove<Ticket>(Query())
 
     fun deleteOne(id: String) =
-        template.remove<FinalTicket>(Query(Criteria.where("_id").isEqualTo(id)))
+        template.remove<Ticket>(Query(Criteria.where("_id").isEqualTo(id)))
 
     fun findByEmail(email: String) =
-        template.findOne<FinalTicket>(Query(Criteria.where("email").isEqualTo(email)))
+        template.findOne<Ticket>(Query(Criteria.where("email").isEqualTo(email)))
 }

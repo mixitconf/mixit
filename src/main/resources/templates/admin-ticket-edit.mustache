@@ -27,6 +27,14 @@
             <input class="form-control" type="text" name="lastname" value="{{ticket.lastname}}" required/>
         </div>
         <div class="mb-3">
+            <label class="form-label">{{#i18n}}admin.ticket.type{{/i18n}}</label>
+            <select class="form-control" name="type" required>
+                {{#types}}
+                    <option value="{{first}}"{{#second}} selected{{/second}}>{{first}}</option>
+                {{/types}}
+            </select>
+        </div>
+        <div class="mb-3">
             <label class="label">{{#i18n}}admin.ticket.email{{/i18n}}</label>
             <input class="form-control" type="text" name="email" value="{{ticket.email}}"/>
         </div>

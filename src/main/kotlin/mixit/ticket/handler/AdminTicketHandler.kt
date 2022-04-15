@@ -3,9 +3,11 @@ package mixit.ticket.handler
 import mixit.MixitProperties
 import mixit.security.MixitWebFilter
 import mixit.security.model.Cryptographer
-import mixit.ticket.model.FinalTicket
+import mixit.ticket.model.Ticket
 import mixit.ticket.model.TicketService
+import mixit.ticket.model.TicketType
 import mixit.user.model.Role
+import mixit.util.enumMatcher
 import mixit.util.errors.NotFoundException
 import mixit.util.extractFormData
 import mixit.util.json
@@ -69,12 +71,13 @@ class AdminTicketHandler(
     fun editTicket(req: ServerRequest): Mono<ServerResponse> =
         service.findOne(req.pathVariable("number")).flatMap { this.adminTicket(it.toEntity()) }
 
-    private fun adminTicket(ticket: FinalTicket = FinalTicket(FinalTicket.generateNewNumber(), "", "", "")) =
+    private fun adminTicket(ticket: Ticket = Ticket(Ticket.generateNewNumber(), "", TicketType.ATTENDEE, "", "")) =
         ok().render(
             if (properties.feature.lotteryResult) TEMPLATE_EDIT else throw NotFoundException(),
             mapOf(
                 Pair("creationMode", ticket.encryptedEmail.isEmpty()),
-                Pair("ticket", FinalTicketDto(ticket, cryptographer))
+                Pair("ticket", TicketDto(ticket, cryptographer)),
+                Pair("types", enumMatcher(ticket) { ticket.type })
             )
         )
 
@@ -86,17 +89,19 @@ class AdminTicketHandler(
                         encryptedEmail = cryptographer.encrypt(formData["email"]!!.lowercase())!!,
                         firstname = formData["firstname"]!!,
                         lastname = formData["lastname"]!!,
+                        type = TicketType.valueOf(formData["type"]!!),
                     )
                 }
                 .switchIfEmpty(
                     Mono.just(
-                        FinalTicket(
+                        Ticket(
                             number = formData["number"]!!,
                             encryptedEmail = cryptographer.encrypt(formData["email"]!!.lowercase())!!,
                             firstname = formData["firstname"]!!,
                             lastname = formData["lastname"]!!,
                             lotteryRank = formData["lotteryRank"]?.toInt(),
-                            createdAt = Instant.parse(formData["createdAt"])!!
+                            createdAt = Instant.parse(formData["createdAt"])!!,
+                            type = TicketType.valueOf(formData["type"]!!),
                         )
                     )
                 )
