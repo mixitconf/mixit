@@ -2,7 +2,9 @@ package mixit.ticket.model
 
 enum class TicketType {
     SPEAKER,
-    SPONSOR,
+    SPONSOR_STAND,
+    SPONSOR_PARTY,
+    SPONSOR_PARTNER,
     STAFF,
     ATTENDEE,
     VOLUNTEER,
