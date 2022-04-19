@@ -1,6 +1,6 @@
 package mixit.ticket.model
 
-import mixit.ticket.repository.FinalTicketRepository
+import mixit.ticket.repository.TicketRepository
 import mixit.util.cache.CacheTemplate
 import mixit.util.cache.CacheZone
 import mixit.util.errors.DuplicateException
@@ -9,7 +9,7 @@ import reactor.core.publisher.Mono
 
 @Service
 class TicketService(
-    private val repository: FinalTicketRepository
+    private val repository: TicketRepository
 ) : CacheTemplate<CachedTicket>() {
 
     override val cacheZone: CacheZone = CacheZone.TICKET

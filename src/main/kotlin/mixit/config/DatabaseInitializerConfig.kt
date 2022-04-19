@@ -8,8 +8,8 @@ import mixit.favorite.repository.FavoriteRepository
 import mixit.mixette.repository.MixetteDonationRepository
 import mixit.talk.model.TalkService
 import mixit.talk.repository.TalkRepository
-import mixit.ticket.repository.FinalTicketRepository
 import mixit.ticket.repository.LotteryRepository
+import mixit.ticket.repository.TicketRepository
 import mixit.user.model.UserService
 import mixit.user.repository.UserRepository
 import org.springframework.boot.CommandLineRunner
@@ -24,10 +24,10 @@ class DatabaseInitializerConfig {
         userRepository: UserRepository,
         eventRepository: EventRepository,
         talkRepository: TalkRepository,
-        ticketRepository: LotteryRepository,
+        lotteryRepository: LotteryRepository,
         postRepository: PostRepository,
         favoriteRepository: FavoriteRepository,
-        finalTicketRepository: FinalTicketRepository,
+        ticketRepository: TicketRepository,
         mixetteDonationRepository: MixetteDonationRepository,
         eventService: EventService,
         blogService: BlogService,
@@ -39,9 +39,9 @@ class DatabaseInitializerConfig {
         eventRepository.initData()
         talkRepository.initData()
         postRepository.initData()
-        ticketRepository.initData()
+        lotteryRepository.initData()
         favoriteRepository.initData()
-        finalTicketRepository.initData()
+        ticketRepository.initData()
         mixetteDonationRepository.initData()
 
         userService.initializeCache()

@@ -1,7 +1,10 @@
 <style>
     @media print {
         @page {
-            margin: 1cm;
+            margin-top: 2.3cm;
+            margin-bottom: 2.3cm;
+            margin-left: 0.8cm;
+            margin-right: 0.8cm;
         }
 
         body {
@@ -40,7 +43,7 @@
 <div class="grid-container">
     {{#tickets}}
         <div class="grid-cell">
-            <div style="font-size: 33px; font-family: Lato">{{ firstname }}</div>
+            <div style="font-size: 33px; font-family: Lato; margin-top: 5px">{{ firstname }}</div>
             <div style="font-size: 25px">{{ lastname }}</div>
             <div style="height: 2cm;width: 2cm; text-align: center;margin: auto" id="{{ number }}"></div>
             <script>
@@ -50,13 +53,9 @@
                     join: true,
                     ecl: 'L'
                 }).svg();
-                // QRCode.toCanvas(
-                //         ,
-                //         ,
-                //         function (error) {
-                //             if (error) console.error(error)
-                //         })
             </script>
+            <div style="font-size: 12px;font-family: 'Lato Black'; margin-top: 5px">{{ type }}</div>
+            <div>&nbsp;</div>
         </div>
     {{/tickets}}
 </div>

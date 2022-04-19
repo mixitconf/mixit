@@ -38,25 +38,25 @@ enum class TalkFormat(val duration: Int) {
 }
 
 @Suppress("UNUSED_PARAMETER")
-enum class Room(capacity: Int) {
-    AMPHI1(500),
-    AMPHI2(200),
-    AMPHIC(445),
-    AMPHID(445),
-    AMPHIK(300),
-    ROOM1(198),
-    ROOM2(108),
-    ROOM3(30),
-    ROOM4(30),
-    ROOM5(30),
-    ROOM6(30),
-    ROOM7(30),
-    ROOM8(30),
-    OUTSIDE(50),
-    MUMMY(30),
-    SPEAKER(16),
-    UNKNOWN(0),
-    SURPRISE(0);
+enum class Room(capacity: Int, val hasLink: Boolean) {
+    AMPHI1(500, true),
+    AMPHI2(200, true),
+    AMPHIC(445,false),
+    AMPHID(445,false),
+    AMPHIK(300,false),
+    ROOM1(48,true),
+    ROOM2(48,true),
+    ROOM3(36,true),
+    ROOM4(36,true),
+    ROOM5(36,true),
+    ROOM6(36,true),
+    ROOM7(36,true),
+    ROOM8(36,false),
+    OUTSIDE(50,false),
+    MUMMY(30,false),
+    SPEAKER(16,false),
+    UNKNOWN(0,false),
+    SURPRISE(0,false);
 }
 
 enum class Topic(val value: String) {

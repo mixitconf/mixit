@@ -18,7 +18,7 @@ import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 
 @Repository
-class FinalTicketRepository(
+class TicketRepository(
     private val template: ReactiveMongoTemplate,
     private val objectMapper: ObjectMapper
 ) {
@@ -26,10 +26,13 @@ class FinalTicketRepository(
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
+        deleteAll().block()
         if (count().block() == 0L) {
-            val usersResource = ClassPathResource("data/final-ticket.json")
-            val tickets: List<Ticket> = objectMapper.readValue(usersResource.inputStream)
-            tickets.forEach { save(it).block() }
+            listOf("data/ticket-speaker.json", "data/ticket-speaker.json").forEach { file ->
+                val resource = ClassPathResource(file)
+                val tickets: List<Ticket> = objectMapper.readValue(resource.inputStream)
+                tickets.forEach { save(it).block() }
+            }
             logger.info("Ticket data initialization complete")
         }
     }
