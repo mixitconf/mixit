@@ -65,7 +65,7 @@ data class CachedTalk(
         video,
         video.toVimeoPlayerUrl(),
         "rooms.${room.name.lowercase()}",
-        room.takeIf { it.hasLink }.let { "rooms.${room.name.lowercase()}.link" },
+        if(room.hasLink) "rooms.${room.name.lowercase()}.link" else null,
         start?.formatTalkTime(lang),
         end?.formatTalkTime(lang),
         start?.formatTalkDate(lang),
