@@ -85,7 +85,10 @@
                         <div class="accordion-body">
                             <div class="row mxt-wrapper--row">
                                 <div class="col-sm-7 col-md-9 col-lg-8">
-                                    <p class="mxt-text--cat-room">{{#i18n}}{{room}}{{/i18n}}</p>
+                                    <p class="mxt-text--cat-room">
+                                        {{#roomLink}}<a href="{{#i18n}}{{roomLink}}{{/i18n}}" aria-label="{{#i18n}}{{room}}{{/i18n}}">{{#i18n}}{{room}}{{/i18n}}</a>{{/roomLink}}
+                                        {{^roomLink}}{{#i18n}}{{room}}{{/i18n}}{{/roomLink}}
+                                    </p>
                                 </div>
                                 <div class="col-sm-5 col-md-3 col-lg-4 text-right pb-2" style="text-align: right">
                                     <a href="{{localePrefix}}/{{event}}/{{slug}}" class="btn btn-outline-primary">{{#i18n}}talks.readmore{{/i18n}}</a>

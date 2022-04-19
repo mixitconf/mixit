@@ -21,6 +21,7 @@ class TalkDto(
     val video: String?,
     val vimeoPlayer: String?,
     val room: String?,
+    val roomLink: String?,
     val start: String?,
     val end: String?,
     val date: String?,
