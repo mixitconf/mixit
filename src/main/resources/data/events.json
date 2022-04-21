@@ -1369,7 +1369,17 @@
         ],
         "start": "2022-05-24",
         "videoUrl": null,
-        "volunteers": [],
+        "volunteers": [
+            {
+                "volunteerLogin": "silia.taider"
+            },
+            {
+                "volunteerLogin": "lorie.pisicchio"
+            },
+            {
+                "volunteerLogin": "pierre.lemasson"
+            }
+        ],
         "year": 2022
     }
 ]
