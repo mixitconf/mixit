@@ -1,27 +1,28 @@
 package mixit.ticket.model
 
+import mixit.security.model.Cryptographer
 import mixit.ticket.repository.TicketRepository
 import mixit.util.cache.CacheTemplate
 import mixit.util.cache.CacheZone
-import mixit.util.errors.DuplicateException
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Mono
 
 @Service
 class TicketService(
-    private val repository: TicketRepository
+    private val repository: TicketRepository,
+    private val cryptographer: Cryptographer
 ) : CacheTemplate<CachedTicket>() {
 
     override val cacheZone: CacheZone = CacheZone.TICKET
 
     override fun findAll(): Mono<List<CachedTicket>> =
-        findAll { repository.findAll().map { ticket -> CachedTicket(ticket) }.collectList() }
+        findAll { repository.findAll().map { ticket -> CachedTicket(cryptographer, ticket) }.collectList() }
 
     fun findByNumber(number: String): Mono<CachedTicket> =
         findAll().flatMap { tickets -> Mono.justOrEmpty(tickets.firstOrNull { it.number == number }) }
 
-    fun findByEncryptedEmail(encryptedEmail: String): Mono<CachedTicket> =
-        findAll().flatMap { tickets -> Mono.justOrEmpty(tickets.firstOrNull { it.encryptedEmail == encryptedEmail }) }
+    fun findByEmail(email: String): Mono<CachedTicket> =
+        findAll().flatMap { tickets -> Mono.justOrEmpty(tickets.firstOrNull { it.email == email }) }
 
     fun findByLogin(login: String?): Mono<CachedTicket> =
         findAll().flatMap { tickets ->
@@ -30,12 +31,10 @@ class TicketService(
         }
 
     fun save(ticket: Ticket): Mono<CachedTicket> =
-        findByEncryptedEmail(ticket.encryptedEmail)
-            .flatMap { Mono.error<CachedTicket> { DuplicateException("") } }
-            .switchIfEmpty(
-                repository.save(ticket).map { CachedTicket(it) }
-                    .doOnSuccess { cache.invalidateAll() }
-            )
+        repository
+            .save(ticket)
+            .map { CachedTicket(cryptographer, it) }
+            .doOnSuccess { cache.invalidateAll() }
 
     fun deleteOne(id: String) =
         repository.deleteOne(id).doOnSuccess { cache.invalidateAll() }

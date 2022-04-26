@@ -5,6 +5,7 @@ import mixit.security.model.Cryptographer
 import mixit.ticket.model.LotteryTicket
 import mixit.ticket.repository.LotteryRepository
 import mixit.user.model.User
+import mixit.util.camelCase
 import mixit.util.email.EmailService
 import mixit.util.extractFormData
 import mixit.util.json
@@ -50,7 +51,14 @@ class LotteryHandler(
                 formData["lastname"]!!
             )
 
-            ticketRepository.save(ticket)
+            // Data are encrypted
+            ticketRepository.save(
+                ticket.copy(
+                    email = cryptographer.encrypt(ticket.email)!!,
+                    firstname = cryptographer.encrypt(ticket.firstname.camelCase())!!,
+                    lastname = cryptographer.encrypt(ticket.lastname.camelCase())!!
+                )
+            )
                 .then(sendUserConfirmation(ticket, formData, req.locale()))
                 .onErrorResume(DuplicateKeyException::class.java) {
                     ok().render(

@@ -29,7 +29,9 @@ class LotteryRepository(
         if (count().block() == 0L) {
             val usersResource = ClassPathResource("data/lottery.json")
             val tickets: List<LotteryTicket> = objectMapper.readValue(usersResource.inputStream)
-            tickets.forEach { save(it).block() }
+            tickets.forEach {
+                save(it).block()
+            }
             logger.info("Lottery data initialization complete")
         }
     }
@@ -47,5 +49,5 @@ class LotteryRepository(
 
     fun deleteOne(id: String) = template.remove<LotteryTicket>(Query(Criteria.where("_id").isEqualTo(id)))
 
-    fun findByEmail(email: String) = template.findOne<LotteryTicket>(Query(Criteria.where("email").isEqualTo(email)))
+    fun findByEncryptedEmail(email: String) = template.findOne<LotteryTicket>(Query(Criteria.where("email").isEqualTo(email)))
 }

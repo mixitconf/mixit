@@ -10,6 +10,7 @@ import mixit.security.handler.ExternalResponses.INVALID_EMAIL
 import mixit.security.handler.ExternalResponses.INVALID_TOKEN
 import mixit.security.handler.ExternalResponses.TOKEN_SENT
 import mixit.security.model.AuthenticationService
+import mixit.security.model.Cryptographer
 import mixit.ticket.repository.LotteryRepository
 import mixit.user.model.User
 import mixit.util.errors.EmailValidatorException
@@ -30,7 +31,8 @@ import reactor.kotlin.core.publisher.toMono
 class ExternalHandler(
     private val authenticationService: AuthenticationService,
     private val favoriteRepository: FavoriteRepository,
-    private val ticketRepository: LotteryRepository
+    private val ticketRepository: LotteryRepository,
+    private val cryptographer: Cryptographer
 ) {
 
     /**
@@ -113,7 +115,7 @@ class ExternalHandler(
         credentials(req, false) { nonEncryptedEmail, user ->
 
             ticketRepository
-                .findByEmail(nonEncryptedEmail)
+                .findByEncryptedEmail(cryptographer.encrypt(nonEncryptedEmail)!!)
                 .flatMap {
                     ok().json().bodyValue(ExternalUserDto(user))
                 }

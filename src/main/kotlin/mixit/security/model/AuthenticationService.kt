@@ -82,7 +82,7 @@ class AuthenticationService(
         userRepository.findByNonEncryptedEmail(nonEncryptedMail)
             .switchIfEmpty(
                 Mono.defer {
-                    ticketRepository.findByEmail(nonEncryptedMail)
+                    ticketRepository.findByEncryptedEmail(cryptographer.decrypt(nonEncryptedMail)!!)
                         .flatMap {
                             createUserIfEmailDoesNotExist(
                                 nonEncryptedMail,

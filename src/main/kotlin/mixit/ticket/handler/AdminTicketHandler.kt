@@ -37,14 +37,18 @@ class AdminTicketHandler(
         const val LIST_URI = "/admin/ticket"
     }
 
-    fun findAll(req: ServerRequest) = ok().json().body(service.findAll())
+    fun findAll(req: ServerRequest) = ok().json().body(service.findAll().map { tickets ->
+        tickets.map { it.toEntity(cryptographer) }
+    })
 
     fun ticketing(req: ServerRequest) =
         ok().render(
             if (properties.feature.lotteryResult) TEMPLATE_LIST else throw NotFoundException(),
             mapOf(
                 Pair("title", "admin.ticket.title"),
-                Pair("tickets", service.findAll().map { tickets -> tickets.map { it.toDto(cryptographer) } })
+                Pair("tickets", service.findAll().map { tickets ->
+                    tickets.map { it.toDto(cryptographer) }
+                })
             )
         )
 
@@ -69,9 +73,9 @@ class AdminTicketHandler(
         this.adminTicket()
 
     fun editTicket(req: ServerRequest): Mono<ServerResponse> =
-        service.findOne(req.pathVariable("number")).flatMap { this.adminTicket(it.toEntity()) }
+        service.findOne(req.pathVariable("number")).flatMap { this.adminTicket(it.toEntity(cryptographer)) }
 
-    private fun adminTicket(ticket: Ticket = Ticket(Ticket.generateNewNumber(), "", TicketType.ATTENDEE, "", "")) =
+    private fun adminTicket(ticket: Ticket = Ticket(cryptographer.encrypt(Ticket.generateNewNumber())!!, "", TicketType.ATTENDEE, "", "")) =
         ok().render(
             if (properties.feature.lotteryResult) TEMPLATE_EDIT else throw NotFoundException(),
             mapOf(
@@ -85,20 +89,22 @@ class AdminTicketHandler(
         req.extractFormData().flatMap { formData ->
             service.findByNumber(formData["number"]!!)
                 .map {
-                    it.toEntity().copy(
+                    it.toEntity(cryptographer).copy(
                         encryptedEmail = cryptographer.encrypt(formData["email"]!!.lowercase())!!,
-                        firstname = formData["firstname"]!!,
-                        lastname = formData["lastname"]!!,
+                        firstname = cryptographer.encrypt(formData["firstname"]),
+                        lastname = cryptographer.encrypt(formData["lastname"])!!,
+                        externalId = cryptographer.encrypt(formData["externalId"]),
                         type = TicketType.valueOf(formData["type"]!!),
                     )
                 }
                 .switchIfEmpty(
                     Mono.just(
                         Ticket(
-                            number = formData["number"]!!,
+                            number = cryptographer.encrypt(formData["number"])!!,
                             encryptedEmail = cryptographer.encrypt(formData["email"]!!.lowercase())!!,
-                            firstname = formData["firstname"]!!,
-                            lastname = formData["lastname"]!!,
+                            firstname = cryptographer.encrypt(formData["firstname"]),
+                            lastname = cryptographer.encrypt(formData["lastname"])!!,
+                            externalId = cryptographer.encrypt(formData["externalId"]),
                             lotteryRank = formData["lotteryRank"]?.toInt(),
                             createdAt = Instant.parse(formData["createdAt"])!!,
                             type = TicketType.valueOf(formData["type"]!!),

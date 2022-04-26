@@ -6,6 +6,7 @@ enum class TicketType {
     SPONSOR_PARTY,
     SPONSOR_PARTNER,
     STAFF,
+    MIXTEEN,
     ATTENDEE,
     VOLUNTEER,
     GUEST

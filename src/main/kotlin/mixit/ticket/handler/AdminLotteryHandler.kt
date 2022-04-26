@@ -1,9 +1,9 @@
 package mixit.ticket.handler
 
 import mixit.MixitProperties
+import mixit.security.model.Cryptographer
 import mixit.ticket.model.LotteryTicket
 import mixit.ticket.repository.LotteryRepository
-import mixit.util.camelCase
 import mixit.util.extractFormData
 import mixit.util.seeOther
 import org.springframework.stereotype.Component
@@ -17,7 +17,8 @@ import java.util.Random
 @Component
 class AdminLotteryHandler(
     private val ticketRepository: LotteryRepository,
-    private val properties: MixitProperties
+    private val properties: MixitProperties,
+    private val cryptographer: Cryptographer
 ) {
 
     companion object {
@@ -48,9 +49,17 @@ class AdminLotteryHandler(
     fun adminTicketing(req: ServerRequest): Mono<ServerResponse> {
         val tickets = ticketRepository.findAll()
             .map {
-                LotteryTicket(it.email, it.firstname.camelCase(), it.lastname.camelCase(), it.rank)
+                LotteryTicket(
+                    cryptographer.decrypt(it.email)!!,
+                    cryptographer.decrypt(it.firstname)!!,
+                    cryptographer.decrypt(it.lastname)!!,
+                    it.rank
+                )
             }
-            .sort(Comparator.comparing(LotteryTicket::lastname).thenComparing(Comparator.comparing(LotteryTicket::firstname)))
+            .sort(
+                Comparator.comparing(LotteryTicket::lastname)
+                    .thenComparing(Comparator.comparing(LotteryTicket::firstname))
+            )
         return ok().render(
             TEMPLATE_LIST,
             mapOf(
@@ -63,7 +72,7 @@ class AdminLotteryHandler(
     fun adminDeleteTicketing(req: ServerRequest): Mono<ServerResponse> =
         req.extractFormData().flatMap { formData ->
             ticketRepository
-                .deleteOne(formData["email"]!!)
+                .deleteOne(cryptographer.encrypt(formData["email"])!!)
                 .then(seeOther("${properties.baseUri}$LIST_URI"))
         }
 }

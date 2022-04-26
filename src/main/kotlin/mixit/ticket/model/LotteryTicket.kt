@@ -28,16 +28,12 @@ data class Ticket(
     val firstname: String? = null,
     val lastname: String,
     val lotteryRank: Int? = null,
+    val externalId: String? = null,
     val login: String? = null,
     val createdAt: Instant = Instant.now()
 ) {
     companion object {
         fun generateNewNumber(): String =
             "MXT$CURRENT_EVENT-${UUID.randomUUID().toString().substring(0, 14).replace("-", "")}"
-
-        fun createFromLottery(lotteryTicket: LotteryTicket) =
-            lotteryTicket.let {
-                Ticket(it.email, generateNewNumber(), TicketType.ATTENDEE, it.firstname, it.lastname, it.rank)
-            }
     }
 }

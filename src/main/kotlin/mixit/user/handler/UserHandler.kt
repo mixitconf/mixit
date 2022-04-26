@@ -120,10 +120,10 @@ class UserHandler(
                 .filter { talks -> talks.any { it.event == AdminEventHandler.CURRENT_EVENT } }
                 .map { true }
 
-            val attendeeTicket = ticketService.findByEncryptedEmail(user.email!!)
+            val attendeeTicket = ticketService.findByEmail(cryptographer.decrypt(user.email)!!)
 
             lotteryRepository
-                .findByEmail(cryptographer.decrypt(user.email)!!)
+                .findByEncryptedEmail(user.email ?: "unknown")
                 .flatMap { ticket ->
                     ok().render(
                         USER_TEMPLATE,
