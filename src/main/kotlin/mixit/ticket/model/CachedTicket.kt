@@ -10,46 +10,40 @@ data class CachedTicket(
     @Id
     val number: String,
     val type: TicketType,
-    val encryptedEmail: String,
+    val email: String,
     val firstname: String? = null,
     val lastname: String,
     val lotteryRank: Int? = null,
+    val externalId: String? = null,
     val login: String?,
     val createdAt: Instant = Instant.now()
 ) : Cached {
-    constructor(ticket: Ticket) : this(
-        ticket.number,
+    constructor(cryptographer: Cryptographer, ticket: Ticket) : this(
+        cryptographer.decrypt(ticket.number)!!,
         ticket.type,
-        ticket.encryptedEmail,
-        ticket.firstname,
-        ticket.lastname,
+        cryptographer.decrypt(ticket.encryptedEmail)!!,
+        cryptographer.decrypt(ticket.firstname),
+        cryptographer.decrypt(ticket.lastname)!!,
         ticket.lotteryRank,
-        ticket.login,
+        cryptographer.decrypt(ticket.externalId),
+        cryptographer.decrypt(ticket.login),
         ticket.createdAt
     )
 
     override val id: String
         get() = number
 
-    fun toEntity() = Ticket(
-        number = number,
-        encryptedEmail = encryptedEmail,
-        firstname = firstname,
-        lastname = lastname,
+    fun toEntity(cryptographer: Cryptographer) = Ticket(
+        number = cryptographer.encrypt(number)!!,
+        encryptedEmail = cryptographer.encrypt(email)!!,
+        firstname = cryptographer.encrypt(firstname),
+        lastname = cryptographer.encrypt(lastname)!!,
         lotteryRank = lotteryRank,
-        login = login,
+        login = cryptographer.encrypt(login),
+        externalId = cryptographer.encrypt(externalId),
         createdAt = createdAt,
         type = type
     )
 
-    fun toDto(cryptographer: Cryptographer) = TicketDto(
-        number = number,
-        email = cryptographer.decrypt(encryptedEmail)!!,
-        firstname = firstname,
-        lastname = lastname,
-        lotteryRank = lotteryRank,
-        login = login,
-        createdAt = createdAt,
-        type = type
-    )
+    fun toDto(cryptographer: Cryptographer) = TicketDto(toEntity(cryptographer), cryptographer)
 }

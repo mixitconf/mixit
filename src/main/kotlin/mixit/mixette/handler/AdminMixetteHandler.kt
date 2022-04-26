@@ -119,7 +119,7 @@ class AdminMixetteHandler(
                             ticketNumber = donor.number,
                             userLogin = donor.login,
                             createdBy = session.getAttribute(SESSION_LOGIN_KEY),
-                            encryptedUserEmail = donor.encryptedEmail
+                            encryptedUserEmail = cryptographer.encrypt(donor.email)!!
                         )
                     )
                 }
@@ -229,7 +229,7 @@ class AdminMixetteHandler(
             ticketNumber = donor.ticketNumber,
             userLogin = donor.login,
             encryptedUserEmail = cryptographer.encrypt(donor.email)!!,
-            organizationLogin = receiver.login ?: "",
+            organizationLogin = receiver.login,
             quantity = quantity ?: 0
         )
         return req.session().flatMap { session ->
@@ -258,8 +258,8 @@ class AdminMixetteHandler(
             .switchIfEmpty { Mono.just(User("")) }
             .flatMap { user ->
                 // Now we search if we have a ticket
-                ticketService.findByEncryptedEmail(encryptedUserEmail)
-                    .map { it.toEntity() }
+                ticketService.findByEmail(cryptographer.decrypt(encryptedUserEmail)!!)
+                    .map { it.toEntity(cryptographer) }
                     .switchIfEmpty(Mono.just(Ticket("", "", lastname = "", firstname = "", type = TicketType.ATTENDEE)))
                     .map { ticket ->
                         // ticket and user can be null but not the two at the same time

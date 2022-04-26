@@ -20,7 +20,8 @@
         </div>
         <div class="mb-3">
             <label class="label">{{#i18n}}admin.ticket.firstname{{/i18n}}</label>
-            <input class="form-control" type="text" name="firstname" value="{{ticket.firstname}}" required/>
+            <input class="form-control" type="text" name="firstname"
+                   value="{{#ticket.firstname}}{{ticket.firstname}}{{/ticket.firstname}}"/>
         </div>
         <div class="mb-3">
             <label class="label">{{#i18n}}admin.ticket.lastname{{/i18n}}</label>
@@ -35,8 +36,14 @@
             </select>
         </div>
         <div class="mb-3">
+            <label class="label">{{#i18n}}admin.ticket.externalId{{/i18n}}</label>
+            <input class="form-control" type="text" name="externalId"
+                   value="{{#ticket.externalId}}{{ticket.externalId}}{{/ticket.externalId}}" required/>
+        </div>
+        <div class="mb-3">
             <label class="label">{{#i18n}}admin.ticket.email{{/i18n}}</label>
-            <input class="form-control" type="text" name="email" value="{{ticket.email}}"/>
+            <input class="form-control" required
+                   type="text" name="email" value="{{ticket.email}}"/>
         </div>
         <div class="mb-3">
             <label class="label">{{#i18n}}admin.ticket.rank{{/i18n}}</label>

@@ -121,7 +121,7 @@ class MailingListHandler(
         constructor(user: CachedTicket) : this(
             user.firstname,
             user.lastname,
-            user.encryptedEmail.let { cryptographer.decrypt(it) } ?: "unknown"
+            user.email
         )
     }
 }
