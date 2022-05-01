@@ -39,16 +39,23 @@
         </div>
 
         <div class="col-12 mb-3">
-            <label class="form-label {{#errors.userLogin}}is-invalid{{/errors.userLogin}}">{{#i18n}}admin.donations.email{{/i18n}}</label>
+            <label class="form-label {{#errors.userLogin}}is-invalid{{/errors.userLogin}}">{{#i18n}}admin.donations.ticket{{/i18n}}</label>
             {{#creationMode}}
                 <input class="form-control {{#errors.userLogin}}is-invalid{{/errors.userLogin}}"
-                       type="text" name="userEmail" value="{{#donation.userEmail}}{{donation.userEmail}}{{/donation.userEmail}}" required />
+                       type="text" name="ticketNumber" value="{{#donation.ticketNumber}}{{donation.ticketNumber}}{{/donation.ticketNumber}}" required />
             {{/creationMode}}
             {{^creationMode}}
-                <input class="form-control" type="text" value="{{donation.userEmail}}" disabled="true" />
-                <input type="hidden" name="userEmail" value="{{donation.userEmail}}"/>
+                <input class="form-control" type="text" value="{{donation.ticketNumber}}" disabled="true" />
+                <input type="hidden" name="ticketNumber" value="{{donation.ticketNumber}}"/>
             {{/creationMode}}
         </div>
+
+        <div class="col-12 mb-3">
+            <label class="form-label {{#errors.userLogin}}is-invalid{{/errors.userLogin}}">{{#i18n}}admin.donations.email{{/i18n}}</label>
+            <input class="form-control" type="text" value="{{donation.userEmail}}" disabled="true" />
+            <input type="hidden" name="userEmail" value="{{donation.userEmail}}"/>
+        </div>
+
         {{^creationMode}}
         <div class="col-12 mb-3">
             <label class="form-label {{#errors.ticket}}is-invalid{{/errors.ticket}}">{{#i18n}}admin.donations.donor{{/i18n}}</label>

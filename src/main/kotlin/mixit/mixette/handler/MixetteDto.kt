@@ -72,7 +72,7 @@ data class MixetteDonationDetailedDto(
         organizationName: String
     ) : this(
         year = donation.year,
-        ticketNumber = donation.ticketNumber,
+        ticketNumber = cryptographer.decrypt(donation.ticketNumber),
         userLogin = donation.userLogin,
         userEmail = cryptographer.decrypt(donation.encryptedUserEmail)!!,
         organizationLogin = donation.organizationLogin,

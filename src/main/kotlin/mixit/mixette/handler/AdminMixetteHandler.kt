@@ -56,11 +56,11 @@ class AdminMixetteHandler(
      */
     fun adminDonorDonations(req: ServerRequest): Mono<ServerResponse> =
         adminGroupDonations(TEMPLATE_BY_USER_LIST) {
-            findDonorByEncryptedEmail(it.encryptedUserEmail).block(Duration.ofSeconds(10)) ?: MixetteUserDonationDto(
+            findDonorByTicketNumber(it.ticketNumber!!).block(Duration.ofSeconds(10)) ?: MixetteUserDonationDto(
                 name = "",
                 login = it.userLogin,
                 email = cryptographer.decrypt(it.encryptedUserEmail)!!,
-                ticketNumber = it.ticketNumber
+                ticketNumber = cryptographer.decrypt(it.ticketNumber)
             )
         }
 
@@ -102,7 +102,7 @@ class AdminMixetteHandler(
      */
     fun addDonation(req: ServerRequest): Mono<ServerResponse> =
         req.session().flatMap { session ->
-            this.adminDonation(MixetteDonation(CURRENT_EVENT, session.getAttribute(SESSION_LOGIN_KEY)))
+            this.adminDonation(MixetteDonation(CURRENT_EVENT, userLogin = session.getAttribute(SESSION_LOGIN_KEY)))
         }
 
     /**
@@ -116,7 +116,7 @@ class AdminMixetteHandler(
                     this.adminDonation(
                         MixetteDonation(
                             year = CURRENT_EVENT,
-                            ticketNumber = donor.number,
+                            ticketNumber = cryptographer.encrypt(donor.number),
                             userLogin = donor.login,
                             createdBy = session.getAttribute(SESSION_LOGIN_KEY),
                             encryptedUserEmail = cryptographer.encrypt(donor.email)!!
@@ -156,7 +156,7 @@ class AdminMixetteHandler(
             TEMPLATE_BY_USER,
             repository.findByEmail(cryptographer.encrypt(req.queryParamOrNull("email"))!!, CURRENT_EVENT).collectList()
         ) {
-            findDonorByEncryptedEmail(it.encryptedUserEmail)
+            findDonorByTicketNumber(it.ticketNumber!!)
         }
 
     private fun <T : MixetteDonationDto> adminGroupDonation(
@@ -188,7 +188,7 @@ class AdminMixetteHandler(
         errors: Map<String, String> = emptyMap()
     ): Mono<ServerResponse> =
         service.findByYear(CURRENT_EVENT.toInt()).flatMap { event ->
-            findDonorByEncryptedEmail(donation.encryptedUserEmail).flatMap { donor ->
+            findDonorByTicketNumber(donation.ticketNumber ?: "").flatMap { donor ->
                 userService.findOne(donation.organizationLogin)
                     .switchIfEmpty { Mono.just(CachedUser(User(""))) }
                     .flatMap { organization ->
@@ -222,9 +222,6 @@ class AdminMixetteHandler(
         quantity: Int?,
         errors: Map<String, String>,
     ): Mono<ServerResponse> {
-        if (errors.isNotEmpty()) {
-            return adminDonation(donation.copy(encryptedUserEmail = cryptographer.encrypt(donor.email)!!), errors)
-        }
         val newDonation = donation.copy(
             ticketNumber = donor.ticketNumber,
             userLogin = donor.login,
@@ -232,6 +229,9 @@ class AdminMixetteHandler(
             organizationLogin = receiver.login,
             quantity = quantity ?: 0
         )
+        if (errors.isNotEmpty()) {
+            return adminDonation(newDonation, errors)
+        }
         return req.session().flatMap { session ->
             val connectedUser = session.getAttribute<String>(SESSION_LOGIN_KEY)
             val userRole = session.getAttribute<Role>(SESSION_ROLE_KEY)
@@ -251,22 +251,22 @@ class AdminMixetteHandler(
     /**
      * This function parse users and tickets to find people
      */
-    private fun findDonorByEncryptedEmail(encryptedUserEmail: String): Mono<MixetteUserDonationDto> =
-        // We try to find if user is known
-        userService.findOneByEncryptedEmail(encryptedUserEmail)
-            .map { it.toUser() }
-            .switchIfEmpty { Mono.just(User("")) }
-            .flatMap { user ->
-                // Now we search if we have a ticket
-                ticketService.findByEmail(cryptographer.decrypt(encryptedUserEmail)!!)
-                    .map { it.toEntity(cryptographer) }
-                    .switchIfEmpty(Mono.just(Ticket("", "", lastname = "", firstname = "", type = TicketType.ATTENDEE)))
-                    .map { ticket ->
+    private fun findDonorByTicketNumber(ticketNumber: String): Mono<MixetteUserDonationDto> =
+        // We find the ticket
+        ticketService.findByNumber(ticketNumber)
+            .map { it.toEntity(cryptographer) }
+            .switchIfEmpty(Mono.just(Ticket("", "", lastname = "", firstname = "", type = TicketType.ATTENDEE)))
+            .flatMap { ticket ->
+                // We try to find if user is known
+                userService.findOneByEncryptedEmail(ticket.encryptedEmail)
+                    .map { it.toUser() }
+                    .switchIfEmpty { Mono.just(User("")) }
+                    .map { user ->
                         // ticket and user can be null but not the two at the same time
                         MixetteUserDonationDto(
                             name = if (!user?.login.isNullOrEmpty()) "${user.firstname} ${user.lastname}"
                             else ticket?.let { "${ticket.firstname} ${ticket.lastname}" } ?: "",
-                            email = cryptographer.decrypt(encryptedUserEmail)!!,
+                            email = cryptographer.decrypt(ticket.encryptedEmail)!!,
                             ticketNumber = ticket?.number,
                             login = user?.login
                         )
@@ -276,9 +276,9 @@ class AdminMixetteHandler(
     fun adminSaveDonation(req: ServerRequest): Mono<ServerResponse> =
         req.extractFormData().flatMap { formData ->
             val organizationLogin: String = formData["organizationLogin"]!!
-            val userEmail: String = formData["userEmail"]!!
+            val ticketNumber: String = formData["ticketNumber"]!!
             userService.findOne(organizationLogin).flatMap { receiver ->
-                findDonorByEncryptedEmail(cryptographer.encrypt(userEmail)!!).flatMap { donor ->
+                findDonorByTicketNumber(ticketNumber).flatMap { donor ->
                     val errors = mutableMapOf<String, String>()
 
                     if (donor.login.isNullOrEmpty() && donor.ticketNumber.isNullOrEmpty()) {
@@ -299,7 +299,7 @@ class AdminMixetteHandler(
                             persistDonation(
                                 req = req,
                                 donation = it,
-                                donor = donor.copy(email = userEmail),
+                                donor = donor.copy(email = donor.email),
                                 receiver = receiver.toUser(),
                                 quantity = quantity,
                                 errors = errors
