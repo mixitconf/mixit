@@ -22,11 +22,11 @@
         </h1>
     </div>
     <div class="col-12 col-lg-8 offset-lg-2 text-center mxt-text--page-title">
-        {{#schedulingFile}}
+        {{#schedulingFileUrl}}
             <p>
-                <a href="{{schedulingFile}}" target="_blank" class="button hollow mxt-anchor--uppercase">{{#i18n}}talks.schedule.download{{/i18n}}</a>
+                <a href="{{schedulingFileUrl}}" target="_blank" class="button hollow mxt-anchor--uppercase">{{#i18n}}talks.schedule.download{{/i18n}}</a>
             </p>
-        {{/schedulingFile}}
+        {{/schedulingFileUrl}}
 
         {{#connected}}
             {{#filtered}}<p>{{#i18n}}talks.favorites.filter.active{{/i18n}}</p>{{/filtered}}
