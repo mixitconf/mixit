@@ -92,7 +92,10 @@ class AdminEventHandler(
                             formData["eventId"]!!,
                             LocalDate.parse(formData["start"]!!),
                             LocalDate.parse(formData["end"]!!),
-                            formData["current"]?.toBoolean() ?: false
+                            formData["current"]?.toBoolean() ?: false,
+                            photoUrls = formData["photoUrls"]?.toLinks(objectMapper) ?: emptyList(),
+                            videoUrl = formData["videoUrl"]?.toLink(objectMapper),
+                            schedulingFileUrl = formData["schedulingFileUrl"]
                         )
                     ).then(seeOther("${properties.baseUri}$LIST_URI"))
                 )

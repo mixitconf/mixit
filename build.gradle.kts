@@ -2,9 +2,9 @@ import com.github.gradle.node.npm.task.NpmTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    val kotlinVersion = "1.6.10"
+    val kotlinVersion = "1.6.21"
 
-    id("org.springframework.boot") version "2.6.4"
+    id("org.springframework.boot") version "2.6.7"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
     id("com.github.node-gradle.node") version "3.1.1"
     id("org.jmailen.kotlinter") version "3.7.0"

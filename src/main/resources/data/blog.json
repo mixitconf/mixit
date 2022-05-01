@@ -1647,25 +1647,6 @@
         }
     },
     {
-        "addedAt": "2013-03-23T20:04:32",
-        "authorId": "clacote",
-        "content": {
-            "FRENCH": "Notre partenaire [YurPlan](http://yurplan.com), illustrant \u00e0 merveille la r\u00e9activit\u00e9 des startups, vient de d\u00e9velopper sp\u00e9cialement pour nous l'envoi de facture depuis notre _backend_ d'administration.\r\n\r\nIl vous suffit donc de r\u00e9clamer votre facture, via [le formulaire de contact](/infos/contact) ou <a href=\"http://twitter.com/MiXiT_conf\">Twitter</a>, pour que nous puissions vous l'envoyer dans la foul\u00e9e.\r\n\r\nPlaisir d'offrir des factures, joie de se faire rembourser par votre entreprise."
-        },
-        "headline": {
-            "FRENCH": "Votre entreprise vous paie les entr\u00e9es \u00e0 MiXiT, et vous voulez-vous faire rembourser? Demandez une facture."
-        },
-        "id": "44",
-        "indexedContent": "Notre partenaire [YurPlan](http://yurplan.com), illustrant \u00e0 merveille la r\u00e9activit\u00e9 des startups, vient de d\u00e9velopper sp\u00e9cialement pour nous l'envoi de facture depuis notre _backend_ d'administration.\r\n\r\nIl vous suffit donc de r\u00e9clamer votre facture, via [le formulaire de contact](/infos/contact) ou <a href=\"http://twitter.com/MiXiT_conf\">Twitter</a>, pour que nous puissions vous l'envoyer dans la foul\u00e9e.\r\n\r\nPlaisir d'offrir des factures, joie de se faire rembourser par votre entreprise.",
-        "indexedHeadline": "Votre entreprise vous paie les entr\u00e9es \u00e0 MiXiT, et vous voulez-vous faire rembourser? Demandez une facture.",
-        "slug": {
-            "FRENCH": "besoin-d-une-facture-"
-        },
-        "title": {
-            "FRENCH": "Besoin d'une facture?"
-        }
-    },
-    {
         "addedAt": "2013-03-22T00:56:39",
         "authorId": "clacote",
         "content": {

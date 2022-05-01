@@ -71,7 +71,7 @@ class TalkHandler(
                         mapOf(
                             Pair("talks", talks.groupBy { it.date ?: "" }),
                             Pair("year", year),
-                            Pair("schedulingFile", event.schedulingFileUrl),
+                            Pair("schedulingFileUrl", event.schedulingFileUrl),
                             Pair("title", title),
                             Pair("filtered", filterOnFavorite),
                             Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
