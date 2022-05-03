@@ -1239,7 +1239,7 @@
             }
         ],
         "photoUrls": [],
-        "schedulingFileUrl": null,
+        "schedulingFileUrl": "/pdf/planning2022_v1.pdf",
         "sponsors": [
             {
                 "level": "GOLD",
@@ -1381,6 +1381,15 @@
             },
             {
                 "volunteerLogin": "marion.charlotte"
+            },
+            {
+                "volunteerLogin": "joannitalac"
+            },
+            {
+                "volunteerLogin": "yves.hurdequint"
+            },
+            {
+                "volunteerLogin": "mathieu.tourrette"
             }
         ],
         "year": 2022

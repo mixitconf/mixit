@@ -123,14 +123,16 @@
     <div class="column large-12">
         {{#sponsors}}
             <hr/>
-            <div class="align-center align-middle row">
+            <div class="text-center row justify-content-md-center">
                 {{#sponsors-gold}}
-                    <div class="columns text-center large-2 medium-2 small-3">
+                    <div class="col-4 text-center col-md-3 col-lg-2">
                         {{> sponsor-detail }}
                     </div>
                 {{/sponsors-gold}}
+            </div>
+            <div class="text-center row justify-content-md-center">
                 {{#sponsors-others}}
-                    <div class="columns text-center large-1 medium-1 small-2">
+                    <div class="col-3 col-md-2 col-lg-1 text-center">
                         {{> sponsor-detail }}
                     </div>
                 {{/sponsors-others}}

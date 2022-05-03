@@ -41,6 +41,14 @@
             <input class="form-control" type="text" name="photoUrl" value="{{#user.photoUrl}}{{user.photoUrl}}{{/user.photoUrl}}"/>
         </div>
         <div class="mb-3">
+            <label class="label">{{#i18n}}admin.user.form.shape{{/i18n}}</label>
+            <select class="form-control" name="photoShape">
+                {{#photoShapes}}
+                    <option value="{{first}}"{{#second}} selected{{/second}}>{{first}}</option>
+                {{/photoShapes}}
+            </select>
+        </div>
+        <div class="mb-3">
             <label class="label">{{#i18n}}admin.user.form.company{{/i18n}}</label>
             <input class="form-control" type="text" name="company" value="{{#user.company}}{{user.company}}{{/user.company}}"/>
         </div>
