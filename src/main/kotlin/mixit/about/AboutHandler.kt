@@ -2,6 +2,8 @@ package mixit.about
 
 import mixit.event.handler.AdminEventHandler
 import mixit.event.model.EventService
+import mixit.event.model.SponsorshipLevel
+import mixit.user.handler.toSponsorDto
 import mixit.user.model.Role
 import mixit.user.model.UserService
 import mixit.util.language
@@ -31,14 +33,30 @@ class AboutHandler(val userService: UserService, val eventService: EventService)
                             Pair("title", "about.title")
                         )
                     )
-            }
+                }
         }
 
     fun faqView(req: ServerRequest) =
         ok().render("faq", mapOf(Pair("title", "faq.title")))
 
     fun comeToMixitView(req: ServerRequest) =
-        ok().render("come", mapOf(Pair("title", "come.title")))
+        eventService
+            .findByYear(AdminEventHandler.CURRENT_EVENT.toInt())
+            .flatMap { event ->
+                event.filterBySponsorLevel(SponsorshipLevel.GOLD).let { sponsors ->
+                    ok().render(
+                        "come", mapOf(
+                            Pair("title", "come.title"),
+                            Pair("year", event.year),
+                            Pair("sponsors", mapOf(
+                                Pair("sponsors-gold", sponsors.map { it.toSponsorDto() }),
+                                Pair("sponsors-others", event.sponsors.filterNot { sponsors.contains(it) }.map { it.toSponsorDto() })
+                            )),
+
+                        )
+                    )
+                }
+            }
 
     fun codeConductView(req: ServerRequest) =
         ok().render("code-of-conduct", mapOf(Pair("title", "code-of-conduct.title")))

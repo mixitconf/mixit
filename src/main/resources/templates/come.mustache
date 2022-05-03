@@ -113,4 +113,24 @@
         </div>
     </div>
 </div>
+
+{{#sponsors}}
+    <div class="row">
+        <div class="col-12 col-lg-10 offset-lg-1">
+            <div class="text-center row">
+                {{#sponsors-gold}}
+                    <div class="col-4 text-center col-md-4 col-lg-2">
+                        {{> sponsor-detail }}
+                    </div>
+                {{/sponsors-gold}}
+                {{#sponsors-others}}
+                    <div class="col-3 text-center col-md-4 col-lg-2">
+                        {{> sponsor-detail }}
+                    </div>
+                {{/sponsors-others}}
+            </div>
+        </div>
+    </div>
+{{/sponsors}}
+
 {{> footer}}
