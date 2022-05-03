@@ -29,6 +29,7 @@ data class CachedOrganization(
         login,
         company,
         photoUrl ?: "unknown",
+        photoShape ==  PhotoShape.Rectangle,
         logoType(photoUrl),
         logoWebpUrl(photoUrl),
         description[language],

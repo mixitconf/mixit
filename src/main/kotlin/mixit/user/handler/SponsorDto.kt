@@ -4,6 +4,7 @@ import mixit.event.model.SponsorshipLevel
 import mixit.talk.model.Language
 import mixit.user.model.CachedSponsor
 import mixit.user.model.Link
+import mixit.user.model.PhotoShape
 import mixit.util.toUrlPath
 import java.time.LocalDate
 
@@ -17,6 +18,7 @@ data class SponsorDto(
     val login: String,
     var company: String,
     var photoUrl: String,
+    val isRectangleLogo: Boolean,
     val logoType: String?,
     val logoWebpUrl: String? = null,
     var description: String? = null,
@@ -30,6 +32,7 @@ fun CachedSponsor.toSponsorDto(language: Language = Language.FRENCH) =
         login,
         company,
         photoUrl ?: "unknown",
+        photoShape == PhotoShape.Rectangle,
         logoType(photoUrl),
         logoWebpUrl(photoUrl),
         description[language],
