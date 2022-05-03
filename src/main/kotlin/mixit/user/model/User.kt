@@ -24,6 +24,7 @@ data class User(
     @TextIndexed(weight = 5F) val description: Map<Language, String> = emptyMap(),
     val emailHash: String? = null,
     val photoUrl: String? = null,
+    val photoShape: PhotoShape? = null,
     val role: Role = Role.USER,
     val links: List<Link> = emptyList(),
     val legacyId: Long? = null,
@@ -34,6 +35,11 @@ data class User(
 ) {
     val tokenLifeTime: Duration
         get() = Duration.between(LocalDateTime.now(), tokenExpiration)
+}
+
+enum class PhotoShape {
+    Square,
+    Rectangle
 }
 
 enum class Role {

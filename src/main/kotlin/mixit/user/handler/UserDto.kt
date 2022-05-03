@@ -2,6 +2,7 @@ package mixit.user.handler
 
 import mixit.talk.model.Language
 import mixit.user.model.Link
+import mixit.user.model.PhotoShape
 import mixit.user.model.Role
 import mixit.user.model.User
 import mixit.util.markFoundOccurrences
@@ -17,6 +18,7 @@ class UserDto(
     var description: String,
     var emailHash: String? = null,
     var photoUrl: String? = null,
+    val photoShape: PhotoShape? = null,
     val role: Role,
     var links: List<Link>,
     val logoType: String?,
@@ -36,6 +38,7 @@ fun User.toDto(language: Language, searchTerms: List<String> = emptyList()) =
         description[language]?.toHTML()?.markFoundOccurrences(searchTerms) ?: "",
         emailHash,
         photoUrl,
+        photoShape ?: PhotoShape.Square,
         role,
         links,
         logoType(photoUrl),

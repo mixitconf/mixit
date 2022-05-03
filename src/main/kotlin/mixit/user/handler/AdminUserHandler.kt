@@ -5,6 +5,7 @@ import mixit.MixitProperties
 import mixit.security.model.Cryptographer
 import mixit.talk.model.Language.ENGLISH
 import mixit.talk.model.Language.FRENCH
+import mixit.user.model.PhotoShape
 import mixit.user.model.Role
 import mixit.user.model.User
 import mixit.user.model.UserService
@@ -73,8 +74,8 @@ class AdminUserHandler(
             Pair("description-fr", user.description[FRENCH]),
             Pair("description-en", user.description[ENGLISH]),
             Pair("roles", enumMatcher(user) { user.role }),
-            Pair("links", user.links.toJson(objectMapper))
-
+            Pair("links", user.links.toJson(objectMapper)),
+            Pair("photoShapes", enumMatcher(user) { user.photoShape ?: PhotoShape.Square }),
         )
     )
 
@@ -91,6 +92,7 @@ class AdminUserHandler(
                         email = formData["email"]?.let { cryptographer.encrypt(it) },
                         emailHash = if (formData["photoUrl"] == null) formData["emailHash"] ?: formData["email"]?.encodeToMd5() else null,
                         photoUrl = formData["photoUrl"]?.let { sanitizeImage(it) },
+                        photoShape = formData["photoShape"]?.let { PhotoShape.valueOf(it) },
                         company = formData["company"],
                         description = mapOf(
                             Pair(FRENCH, formData["description-fr"] ?: formData["description-en"] ?: ""),
