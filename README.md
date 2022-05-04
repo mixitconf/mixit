@@ -63,13 +63,7 @@ java -jar build/libs/mixit-1.0.0-SNAPSHOT.jar
 ```
 
 ### Deploy the app on  Clever Cloud
-```diff
-- ./gradlew clean build
-- cf push
-```
-
-Quoting @javamind:
-> Pour que ça déploie tu dois merger `master` sur la branche `prod`
+> When you merge a PR into `prod` branch (usually from `master` branch) it will trigger a deployment on Clever Cloud.
 
 ### Copy PROD data to src/main/resources/data
  
