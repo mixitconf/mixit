@@ -32,12 +32,53 @@
         "slug": "hacking-game-crack-the-safe",
         "speakerIds": [
             "LoicOrtola",
-            "antoleb"
+            "antoleb",
+            "de.guibert"
         ],
         "start": "2022-05-24T10:40:00",
         "summary": "Les autres workshops sont \"So-2019\"?\r\n\r\nEt si on allait plut\u00f4t hacker un coffre-fort? \r\nViens bruteforcer une valise \u00e9lectronique et bouffer de l'hexa pour hacker un badge NFC. Il te reste 2h en comp\u00e9tition pour gagner le contenu du coffre. On te conseille de venir en bin\u00f4me !",
         "title": "Hacking Game : Crack the safe",
         "topic": "makers",
+        "video": null
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.711",
+        "description": "Biais cognitifs, sciences comportementales, incitations douces : le cerveau des utilisateurs/trices est devenu notre terrain de jeu \u2014 et l\u2019infantilisation notre meilleur business model.\r\n\r\nFace aux hochets attentionnels et aux biberons de dopamine, notre capacit\u00e9 \u00e0 proposer un num\u00e9rique adulte, \u00e9mancipateur est la victime collat\u00e9rale du capitalisme de l\u2019attention. Ne jetons pas le b\u00e9b\u00e9 avec l\u2019eau du bain : la science comportementale, c\u2019est aussi le rem\u00e8de dans le mal.",
+        "end": "2022-05-24T11:30:00",
+        "event": "2022",
+        "format": "TALK",
+        "id": "623ad67c8a5c755e7139c6f8",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHID",
+        "slug": "homo-stimulus-au-bonheur-des-likes",
+        "speakerIds": [
+            "nina-cercy"
+        ],
+        "start": "2022-05-24T10:40:00",
+        "summary": "Biais cognitifs, sciences comportementales, incitations douces : le cerveau des utilisateurs/trices est devenu un terrain de jeu \u2014 et l\u2019infantilisation notre meilleur business model. Face aux hochets attentionnels et aux biberons de dopamine, que reste-t-il \u00e0 proposer pour un num\u00e9rique \u00e9mancipateur?",
+        "title": "Homo stimulus : au bonheur des likes",
+        "topic": "aliens",
+        "video": null
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.717",
+        "description": "Une personne paralys\u00e9e des membres sup\u00e9rieurs est grandement handicap\u00e9e dans sa vie de tous les jours pour effectuer des actions qui sont banales pour les autres. Gr\u00e2ce au monde num\u00e9rique et \u00e0 internet cette personne peut retrouver une certaine autonomie pour communiquer avec ses proches, consommer, se cultiver, effectuer des d\u00e9marches administratives\u2026 Le num\u00e9rique est donc une formidable promesse pour cette personne \u00e0 condition que nos sites internet soient accessibles ! \ud83d\ude30\r\n\r\n\r\nCette conf\u00e9rence pr\u00e9sente comment ces personnes peuvent naviguer sur internet et les difficult\u00e9s auxquelles elles sont confront\u00e9es. Ensuite, nous verrons comment apporter quelques modifications simples \u00e0 nos sites internet pour les rendre accessibles pour ces personnes. Cela sera mis en pratique sur un site internet en live-coding.\r\n",
+        "end": "2022-05-24T11:30:00",
+        "event": "2022",
+        "format": "TALK",
+        "id": "623ad67c8a5c755e7139c6fd",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM2",
+        "slug": "le-handi-surf-l-accessibilite-d-un-site-internet-pour-une-personne-tetraplegique",
+        "speakerIds": [
+            "hboisgontier"
+        ],
+        "start": "2022-05-24T10:40:00",
+        "summary": "Venez d\u00e9couvrir l'accessibilit\u00e9 num\u00e9rique, son importance et surtout comment commencer \u00e0 la mettre en \u0153uvre !",
+        "title": "Le handi-surf : l'accessibilit\u00e9 d'un site internet pour une personne t\u00e9trapl\u00e9gique",
+        "topic": "tech",
         "video": null
     },
     {
@@ -63,26 +104,6 @@
         "video": null
     },
     {
-        "addedAt": "2022-03-23T09:12:44.711",
-        "description": "Biais cognitifs, sciences comportementales, incitations douces : le cerveau des utilisateurs/trices est devenu notre terrain de jeu \u2014 et l\u2019infantilisation notre meilleur business model.\r\n\r\nFace aux hochets attentionnels et aux biberons de dopamine, notre capacit\u00e9 \u00e0 proposer un num\u00e9rique adulte, \u00e9mancipateur est la victime collat\u00e9rale du capitalisme de l\u2019attention. Ne jetons pas le b\u00e9b\u00e9 avec l\u2019eau du bain : la science comportementale, c\u2019est aussi le rem\u00e8de dans le mal.",
-        "end": "2022-05-24T11:30:00",
-        "event": "2022",
-        "format": "TALK",
-        "id": "623ad67c8a5c755e7139c6f8",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "AMPHID",
-        "slug": "homo-stimulus-au-bonheur-des-likes",
-        "speakerIds": [
-            "nina-cercy"
-        ],
-        "start": "2022-05-24T10:40:00",
-        "summary": "Biais cognitifs, sciences comportementales, incitations douces : le cerveau des utilisateurs/trices est devenu un terrain de jeu \u2014 et l\u2019infantilisation notre meilleur business model. Face aux hochets attentionnels et aux biberons de dopamine, que reste-t-il \u00e0 proposer pour un num\u00e9rique \u00e9mancipateur?",
-        "title": "Homo stimulus : au bonheur des likes",
-        "topic": "aliens",
-        "video": null
-    },
-    {
         "addedAt": "2022-03-23T09:12:44.701",
         "description": "O\u00f9 l'on parlera de design pour le service public.\r\n\u00c0 qui s'adressent les services num\u00e9riques du service public : aux citoyens et citoyennes, mais pas seulement !\r\nQuels genres de produits d\u00e9veloppe-t-on ? \r\nComment on travaille avec une administration ? Comment int\u00e9grer les m\u00e9thodologies agile et lean dans des administrations ?\r\nQu'est-ce que \u00e7a change par rapport au priv\u00e9 ? Quels points d'attention \u00e0 avoir ? Quels pi\u00e8ges \u00e9viter quand on vient du public ? \r\n",
         "end": "2022-05-24T11:30:00",
@@ -100,26 +121,6 @@
         "summary": "Qu'est-ce que \u00e7a veut dire, \u00eatre UX designer pour le service public, apr\u00e8s 10 ans dans des entreprises priv\u00e9es ? Qu'est-ce que \u00e7a change, de concevoir pour des citoyen\u00b7nes ? Comment travailler dans l'administration ?",
         "title": "Designer pour le service public",
         "topic": "design",
-        "video": null
-    },
-    {
-        "addedAt": "2022-03-23T09:12:44.717",
-        "description": "Une personne paralys\u00e9e des membres sup\u00e9rieurs est grandement handicap\u00e9e dans sa vie de tous les jours pour effectuer des actions qui sont banales pour les autres. Gr\u00e2ce au monde num\u00e9rique et \u00e0 internet cette personne peut retrouver une certaine autonomie pour communiquer avec ses proches, consommer, se cultiver, effectuer des d\u00e9marches administratives\u2026 Le num\u00e9rique est donc une formidable promesse pour cette personne \u00e0 condition que nos sites internet soient accessibles ! \ud83d\ude30\r\n\r\n\r\nCette conf\u00e9rence pr\u00e9sente comment ces personnes peuvent naviguer sur internet et les difficult\u00e9s auxquelles elles sont confront\u00e9es. Ensuite, nous verrons comment apporter quelques modifications simples \u00e0 nos sites internet pour les rendre accessibles pour ces personnes. Cela sera mis en pratique sur un site internet en live-coding.\r\n",
-        "end": "2022-05-24T11:30:00",
-        "event": "2022",
-        "format": "TALK",
-        "id": "623ad67c8a5c755e7139c6fd",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "ROOM2",
-        "slug": "le-handi-surf-l-accessibilite-d-un-site-internet-pour-une-personne-tetraplegique",
-        "speakerIds": [
-            "hboisgontier"
-        ],
-        "start": "2022-05-24T10:40:00",
-        "summary": "Venez d\u00e9couvrir l'accessibilit\u00e9 num\u00e9rique, son importance et surtout comment commencer \u00e0 la mettre en \u0153uvre !",
-        "title": "Le handi-surf : l'accessibilit\u00e9 d'un site internet pour une personne t\u00e9trapl\u00e9gique",
-        "topic": "tech",
         "video": null
     },
     {
@@ -164,26 +165,6 @@
         "video": null
     },
     {
-        "addedAt": "2022-03-23T09:12:44.708",
-        "description": "Les objets connect\u00e9s sont partout, de plus en plus pr\u00e9sents, mais aussi dans nos poubelles !\r\nEn effet, un grand nombre de ces derniers finissent en briques inutilisables car les soci\u00e9t\u00e9s\r\nles commercialisant mettent la cl\u00e9 sous la porte ou d\u00e9cident unilat\u00e9ralement d'arr\u00eater les\r\nservices (et donc les serveurs et applications) associ\u00e9s. Sans compter le g\u00e2chis technologique\r\n\u00e0 l'heure o\u00f9 l'on cherche \u00e0 faire prolonger la dur\u00e9e de vie des \u00e9quipements pour cause de\r\np\u00e9nurie de semiconducteurs !\r\n\r\nCe talk propose une r\u00e9flexion sur l'avenir que l'on peut donner aux \u00e9quipements connect\u00e9s, les\r\npr\u00e9-requis pour pouvoir leur offrir une seconde vie et l'impact que cela peut avoir en terme\r\nde s\u00e9curit\u00e9. Nous aborderons bien s\u00fbr les challenges techniques que posent ces syst\u00e8mes, et en\r\nparticulier les verrous que sont les mesures techniques de protection que l'industrie de la\r\ns\u00e9curit\u00e9 informatique pr\u00f4ne pour assurer la s\u00e9curit\u00e9. ",
-        "end": "2022-05-24T12:30:00",
-        "event": "2022",
-        "format": "TALK",
-        "id": "623ad67c8a5c755e7139c6f5",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "AMPHIC",
-        "slug": "hackers-reprenez-le-controle-des-objets-connectes-",
-        "speakerIds": [
-            "damien.cauquil"
-        ],
-        "start": "2022-05-24T11:40:00",
-        "summary": "La p\u00e9nurie des composants \u00e9lectroniques a cependant permis de mettre en \u00e9vidence une r\u00e9alit\u00e9: celles des d\u00e9chets \u00e9lectroniques engendr\u00e9s par l'innovation technologique et l'obsolescence programm\u00e9e. Et si nous reprenions le contr\u00f4le de nos anciens \u00e9quipements pour leur donner une seconde vie ?",
-        "title": "Hackers, reprenez le contr\u00f4le des objets connect\u00e9s !",
-        "topic": "makers",
-        "video": null
-    },
-    {
         "addedAt": "2022-04-01T12:42:12.815",
         "description": "Un parcours professionnel qui commence par 11 ann\u00e9es dans diff\u00e9rentes agences d\u2019architecture en tant qu\u2019architecte. \r\nApr\u00e8s une formation de 10 mois sur la qualit\u00e9 environnementale des b\u00e2timents, j'ai souhait\u00e9 travailler pour l\u2019action publique en me rapprochant des d\u00e9cideurs pour \u00eatre acteur des \u00e9volutions. Ainsi j'ai l\u2019opportunit\u00e9 d\u2019exercer pendant 10 ans, dans une collectivit\u00e9 territoriale, un poste de responsable du service Architecture et Patrimoine de la ville de Chalon-sur-Sa\u00f4ne. Depuis une ann\u00e9e, je suis retourn\u00e9 aux aspirations d\u2019origine pour valoriser mon dipl\u00f4me d\u2019architecte du Patrimoine.",
         "end": "2022-05-24T12:30:00",
@@ -204,26 +185,6 @@
         "video": null
     },
     {
-        "addedAt": "2022-04-01T14:11:16.262",
-        "description": "Comment WebAssembly pourrait changer la fa\u00e7on dont nous d\u00e9veloppons nos applications dans les ann\u00e9es \u00e0 venir ? S\u00e9bastien partagera des pistes de r\u00e9flexion ainsi que des exp\u00e9rimentations pour vous donner un aper\u00e7u de ce qu\u2019est WebAssembly en 2022 et de sa possible \u00e9volution. On parlera d\u00e9centralisation, mod\u00e8le de s\u00e9curit\u00e9, WASI, WebAssembly Component Model, int\u00e9gration de WebAssembly avec les diff\u00e9rents langages (Rust, Go, Kotlin, JavaScript, Java, Python, Ruby), performance, outillage et d\u00e9ploiement sans containeur.",
-        "end": "2022-05-24T12:30:00",
-        "event": "2022",
-        "format": "TALK",
-        "id": "6247085ca88168213377c692",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "AMPHID",
-        "slug": "webassembly-developer-experience",
-        "speakerIds": [
-            "sdeleuze"
-        ],
-        "start": "2022-05-24T11:40:00",
-        "summary": "Comment WebAssembly pourrait changer la fa\u00e7on dont nous d\u00e9veloppons nos applications dans les ann\u00e9es \u00e0 venir ?",
-        "title": "WebAssembly Developer Experience",
-        "topic": "tech",
-        "video": null
-    },
-    {
         "addedAt": "2022-04-01T14:19:12.536",
         "description": "TBD",
         "end": "2022-05-24T12:30:00",
@@ -241,6 +202,46 @@
         "summary": "TBD",
         "title": "Discrimination et harc\u00e8lement au travail",
         "topic": "ethics",
+        "video": null
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.708",
+        "description": "Les objets connect\u00e9s sont partout, de plus en plus pr\u00e9sents, mais aussi dans nos poubelles !\r\nEn effet, un grand nombre de ces derniers finissent en briques inutilisables car les soci\u00e9t\u00e9s\r\nles commercialisant mettent la cl\u00e9 sous la porte ou d\u00e9cident unilat\u00e9ralement d'arr\u00eater les\r\nservices (et donc les serveurs et applications) associ\u00e9s. Sans compter le g\u00e2chis technologique\r\n\u00e0 l'heure o\u00f9 l'on cherche \u00e0 faire prolonger la dur\u00e9e de vie des \u00e9quipements pour cause de\r\np\u00e9nurie de semiconducteurs !\r\n\r\nCe talk propose une r\u00e9flexion sur l'avenir que l'on peut donner aux \u00e9quipements connect\u00e9s, les\r\npr\u00e9-requis pour pouvoir leur offrir une seconde vie et l'impact que cela peut avoir en terme\r\nde s\u00e9curit\u00e9. Nous aborderons bien s\u00fbr les challenges techniques que posent ces syst\u00e8mes, et en\r\nparticulier les verrous que sont les mesures techniques de protection que l'industrie de la\r\ns\u00e9curit\u00e9 informatique pr\u00f4ne pour assurer la s\u00e9curit\u00e9. ",
+        "end": "2022-05-24T12:30:00",
+        "event": "2022",
+        "format": "TALK",
+        "id": "623ad67c8a5c755e7139c6f5",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHIC",
+        "slug": "hackers-reprenez-le-controle-des-objets-connectes-",
+        "speakerIds": [
+            "damien.cauquil"
+        ],
+        "start": "2022-05-24T11:40:00",
+        "summary": "La p\u00e9nurie des composants \u00e9lectroniques a cependant permis de mettre en \u00e9vidence une r\u00e9alit\u00e9: celles des d\u00e9chets \u00e9lectroniques engendr\u00e9s par l'innovation technologique et l'obsolescence programm\u00e9e. Et si nous reprenions le contr\u00f4le de nos anciens \u00e9quipements pour leur donner une seconde vie ?",
+        "title": "Hackers, reprenez le contr\u00f4le des objets connect\u00e9s !",
+        "topic": "makers",
+        "video": null
+    },
+    {
+        "addedAt": "2022-04-01T14:11:16.262",
+        "description": "Comment WebAssembly pourrait changer la fa\u00e7on dont nous d\u00e9veloppons nos applications dans les ann\u00e9es \u00e0 venir ? S\u00e9bastien partagera des pistes de r\u00e9flexion ainsi que des exp\u00e9rimentations pour vous donner un aper\u00e7u de ce qu\u2019est WebAssembly en 2022 et de sa possible \u00e9volution. On parlera d\u00e9centralisation, mod\u00e8le de s\u00e9curit\u00e9, WASI, WebAssembly Component Model, int\u00e9gration de WebAssembly avec les diff\u00e9rents langages (Rust, Go, Kotlin, JavaScript, Java, Python, Ruby), performance, outillage et d\u00e9ploiement sans containeur.",
+        "end": "2022-05-24T12:30:00",
+        "event": "2022",
+        "format": "TALK",
+        "id": "6247085ca88168213377c692",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHID",
+        "slug": "webassembly-developer-experience",
+        "speakerIds": [
+            "sdeleuze"
+        ],
+        "start": "2022-05-24T11:40:00",
+        "summary": "Comment WebAssembly pourrait changer la fa\u00e7on dont nous d\u00e9veloppons nos applications dans les ann\u00e9es \u00e0 venir ?",
+        "title": "WebAssembly Developer Experience",
+        "topic": "tech",
         "video": null
     },
     {
@@ -286,26 +287,6 @@
         "video": null
     },
     {
-        "addedAt": "2022-03-23T09:12:44.727",
-        "description": "L\u2019informatique et la musique partagent une grande histoire commune depuis les ann\u00e9es 80, mais une nouvelle dimension s\u2019ouvre depuis que les instruments deviennent accessibles directement depuis un navigateur (API WebMIDI). Ce talk r\u00e9unit deux grandes passions, et se sert de l'une pour parler de l'autre. Venez comprendre la musique _from scratch_ et trouver ses parall\u00e8les avec l'informatique. Tentons d'expliquer rationnellement ce que quelques notes peuvent nous faire ressentir. D\u00e9couvrez le protocole MIDI et comment y acc\u00e9der depuis votre navigateur pour retrouver le Web que l'on aime, celui qui d\u00e9mocratise les technologies.",
-        "end": "2022-05-24T15:40:00",
-        "event": "2022",
-        "format": "TALK",
-        "id": "623ad67c8a5c755e7139c702",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "AMPHIC",
-        "slug": "l-importance-majeure-des-accords-mineurs",
-        "speakerIds": [
-            "b_viguier"
-        ],
-        "start": "2022-05-24T14:50:00",
-        "summary": "Voici un MusiTalk: une conf\u00e9rence musicale interactive pour parler d'informatique (ou l'inverse?). Quand est ce que la musique est bonne? Quels sont ses Design Pattern? Comment bien taper dans les mains? Pour r\u00e9pondre: un navigateur web, quelques instruments et une passion \u00e0 partager en LIVE.",
-        "title": "L'importance majeure des accords mineurs",
-        "topic": "aliens",
-        "video": null
-    },
-    {
         "addedAt": "2022-03-23T09:12:44.71",
         "description": "Even if many have heard of it but few have seen it, the hexagonal architecture is not an Arlesian.\r\nThe goal here will be to show everyone, both beginners and experts, that this architecture is really simple to implement.\r\nIt has many advantages:\r\n\r\n- separation of business and technical code,\r\n- establishment of a Domain Specific Language,\r\n- testability of the business code,\r\n- scalability of the technical code relating to infrastructure,\r\n- facility for technological monitoring.\r\n\r\nIn short, everything is good in hexagonal architecture.\r\n\r\nThis three-hour session will be divided as follows:\r\n\r\n- a presentation of 30 minutes maximum alternating definition of each of its concepts and their implementation in a Java project.\r\n- a kata of 60 minutes max on a business domain to be used in the next part\r\n- implementation for 60 minutes max of adapters showing the power and simplicity of this architecture.\r\n- 15 minutes of Q / A and concept development\r\n\r\nThe result of this workshop was implemented on new projects in the banking sector. This made it possible to avoid recurring pitfalls on the testability and quality of the developed code ^^.\r\nReferences\r\n\r\nMeetup where this workshop has been facilitated: https://www.meetup.com/fr-FR/Nov-NCraft/events/248998729/?_xtd=gatlbWFpbF9jbGlja9oAJGMyYjA2OTYzLTRkODYtNDc4ZC04ZTQ3LTA5OGQwNjYwZmE4Yg\r\n\r\nHere is a the kata's github: https://github.com/HEIWA-IT/TripAgency/\r\n\r\nThe attendees needs to have a JDK and Maven installed and an IDE of their choice. \r\n",
         "end": "2022-05-24T16:40:00",
@@ -323,6 +304,26 @@
         "summary": "Even if many have heard of it but few have seen it, the hexagonal architecture is not an Arlesian.\r\nThe goal here will be to show everyone, both beginners and experts, that this architecture is really simple to implement.",
         "title": "Hexagonal architecture: a simple and powerful architecture, set up quickly",
         "topic": "tech",
+        "video": null
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.727",
+        "description": "L\u2019informatique et la musique partagent une grande histoire commune depuis les ann\u00e9es 80, mais une nouvelle dimension s\u2019ouvre depuis que les instruments deviennent accessibles directement depuis un navigateur (API WebMIDI). Ce talk r\u00e9unit deux grandes passions, et se sert de l'une pour parler de l'autre. Venez comprendre la musique _from scratch_ et trouver ses parall\u00e8les avec l'informatique. Tentons d'expliquer rationnellement ce que quelques notes peuvent nous faire ressentir. D\u00e9couvrez le protocole MIDI et comment y acc\u00e9der depuis votre navigateur pour retrouver le Web que l'on aime, celui qui d\u00e9mocratise les technologies.",
+        "end": "2022-05-24T15:40:00",
+        "event": "2022",
+        "format": "TALK",
+        "id": "623ad67c8a5c755e7139c702",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHIC",
+        "slug": "l-importance-majeure-des-accords-mineurs",
+        "speakerIds": [
+            "b_viguier"
+        ],
+        "start": "2022-05-24T14:50:00",
+        "summary": "Voici un MusiTalk: une conf\u00e9rence musicale interactive pour parler d'informatique (ou l'inverse?). Quand est ce que la musique est bonne? Quels sont ses Design Pattern? Comment bien taper dans les mains? Pour r\u00e9pondre: un navigateur web, quelques instruments et une passion \u00e0 partager en LIVE.",
+        "title": "L'importance majeure des accords mineurs",
+        "topic": "aliens",
         "video": null
     },
     {
@@ -346,26 +347,6 @@
         "video": null
     },
     {
-        "addedAt": "2022-03-23T09:12:44.747",
-        "description": "Dans ce talk, on parlera d'IA et de robots... mais on fera l'impasse sur le discours habituel que l'on entend trop souvent en ce moment ! \u00c0 la place, voil\u00e0 le menu : \r\n- en entr\u00e9e, un petit cours d'histoire... car pour prendre du recul, il faut comprendre le pass\u00e9. On apprendra notamment que l'IA dont on parle aujourd'hui n'a rien \u00e0 voir avec les r\u00eaves des scientifiques qui ont pos\u00e9 les premi\u00e8res pierres de cette discipline !\r\n- pour continuer, on explorera quelques exemples d'application qui montreront qu'il n'y a pas que la data science et le deep learning dans la vie. \r\n- en dessert, on d\u00e9cortiquera la vie de Bob le robot... Cela montrera pourquoi il faut d\u00e9velopper plusieurs \"formes\" d'intelligences... et permettra de mieux comprendre les limites des approches actuelles et les prochains d\u00e9fis de l'IA !",
-        "end": "2022-05-24T15:40:00",
-        "event": "2022",
-        "format": "TALK",
-        "id": "623ad67c8a5c755e7139c712",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "AMPHID",
-        "slug": "tout-ce-que-l-on-ne-vous-dit-pas-sur-l-intelligence-artificielle-ia-",
-        "speakerIds": [
-            "amcordier"
-        ],
-        "start": "2022-05-24T14:50:00",
-        "summary": "L'IA ? La 4\u00e8me r\u00e9volution industrielle ! Les data ? Le nouveau p\u00e9trole ! L'\u00e9thique ? Vitale ! La voix ? L'avenir ! On vous raconte toujours la m\u00eame chose non ? Pour changer, en partant des anecdotes historiques jusqu'aux exemples avec les robots, je vous montrerai les dessous de l'IA, sans bullshit.",
-        "title": "Tout ce que l'on ne vous dit pas sur l'Intelligence Artificielle (IA)",
-        "topic": "ethics",
-        "video": null
-    },
-    {
         "addedAt": "2022-03-23T09:12:00",
         "description": "Remplacez \u201cmouton\u201d par \u201cappli\u201d, et vous retrouvez un dialogue courant entre d\u00e9veloppeurs, architectes, et utilisateur m\u00e9tier. Comment se comprendre quand on n'a pas le m\u00eame point de vue sur l'appli \u00e0 produire?\r\nIl faudrait pouvoir travailler sur les m\u00eames donn\u00e9es, celles qui d\u00e9crivent l'appli, mais en faisant varier les repr\u00e9sentations, en fonction des points de vue. Pour \u00e7a il nous faudrait un outil pour \u00e9diter des donn\u00e9es et les repr\u00e9senter diff\u00e9remment, de mani\u00e8re tr\u00e8s flexible, tout en gardant leur coh\u00e9rence. Sirius Web est un nouveau projet open-source, qui simplifie la cr\u00e9ation de ce genre d\u2019outil : d\u00e9finition d\u2019un domaine, cr\u00e9ation d\u2019\u00e9diteurs graphiques, le tout depuis un navigateur web. Durant ce talk nous reviendrons sur les diff\u00e9rents cas d\u2019usage, l\u2019architecture et les choix techniques, pour laisser la place aux d\u00e9mos des principales fonctionnalit\u00e9s.",
         "end": "2022-05-24T15:40:00",
@@ -383,6 +364,26 @@
         "summary": "\"Non ! Celui-l\u00e0 est d\u00e9j\u00e0 tr\u00e8s malade. Fais-en un autre.\"\r\n\"Tu vois bien, ce n'est pas un mouton, c'est un b\u00e9lier. Il a des cornes.\"\r\n\"Celui-l\u00e0 est trop vieux.\"\r\nAlors, je griffonnais et je lan\u00e7ais:\r\n\"\u00c7a c'est la caisse. Le mouton que tu veux est dedans.\"\r\n\" C'est tout \u00e0 fait comme \u00e7a que je le voulais !\"",
         "title": "S'il vous pla\u00eet... dessine-moi une appli !",
         "topic": "design",
+        "video": null
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.747",
+        "description": "Dans ce talk, on parlera d'IA et de robots... mais on fera l'impasse sur le discours habituel que l'on entend trop souvent en ce moment ! \u00c0 la place, voil\u00e0 le menu : \r\n- en entr\u00e9e, un petit cours d'histoire... car pour prendre du recul, il faut comprendre le pass\u00e9. On apprendra notamment que l'IA dont on parle aujourd'hui n'a rien \u00e0 voir avec les r\u00eaves des scientifiques qui ont pos\u00e9 les premi\u00e8res pierres de cette discipline !\r\n- pour continuer, on explorera quelques exemples d'application qui montreront qu'il n'y a pas que la data science et le deep learning dans la vie. \r\n- en dessert, on d\u00e9cortiquera la vie de Bob le robot... Cela montrera pourquoi il faut d\u00e9velopper plusieurs \"formes\" d'intelligences... et permettra de mieux comprendre les limites des approches actuelles et les prochains d\u00e9fis de l'IA !",
+        "end": "2022-05-24T15:40:00",
+        "event": "2022",
+        "format": "TALK",
+        "id": "623ad67c8a5c755e7139c712",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHID",
+        "slug": "tout-ce-que-l-on-ne-vous-dit-pas-sur-l-intelligence-artificielle-ia-",
+        "speakerIds": [
+            "amcordier"
+        ],
+        "start": "2022-05-24T14:50:00",
+        "summary": "L'IA ? La 4\u00e8me r\u00e9volution industrielle ! Les data ? Le nouveau p\u00e9trole ! L'\u00e9thique ? Vitale ! La voix ? L'avenir ! On vous raconte toujours la m\u00eame chose non ? Pour changer, en partant des anecdotes historiques jusqu'aux exemples avec les robots, je vous montrerai les dessous de l'IA, sans bullshit.",
+        "title": "Tout ce que l'on ne vous dit pas sur l'Intelligence Artificielle (IA)",
+        "topic": "ethics",
         "video": null
     },
     {
@@ -406,26 +407,6 @@
         "video": null
     },
     {
-        "addedAt": "2022-03-23T09:12:44.753",
-        "description": "Gladys Diandoki explique ce qu'est l'UX Writing, nouveau m\u00e9tier du Design qui allie contenu et UX. Elle reviendra sur les 10 erreurs les plus fr\u00e9quentes et les choses \u00e0 mettre en place pour collaborer avec ces nouveaux profils du Design.\r\n\r\nObjectif :\r\n- Permettre de comprendre ce poste\r\n- Comprendre son r\u00f4le et son process\r\n- Collaborer avec les Product Designers/ UX Designers, les researchers, d\u00e9veloppeurs etc.\r\n- Les erreurs les plus fr\u00e9quentes\r\n- Les bonnes pratiques\r\n\r\nCe que l'on doit retenir :\r\n- Ce que fait un UX Writer\r\n- Comment travailler ensemble\r\n- Quelques bases\r\n",
-        "end": "2022-05-24T16:40:00",
-        "event": "2022",
-        "format": "TALK",
-        "id": "623ad67c8a5c755e7139c717",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "ROOM1",
-        "slug": "ux-writing-10-idees-recues-revues-et-corrigees",
-        "speakerIds": [
-            "Gladysdit"
-        ],
-        "start": "2022-05-24T15:50:00",
-        "summary": "Gladys Diandoki explique ce qu'est l'UX Writing, nouveau m\u00e9tier du Design qui allie contenu et UX. Elle reviendra sur les 10 erreurs les plus fr\u00e9quentes et les choses \u00e0 mettre en place pour collaborer avec ces nouveaux profils du Design.",
-        "title": "UX Writing : 10 id\u00e9es re\u00e7ues revues et corrig\u00e9es",
-        "topic": "design",
-        "video": null
-    },
-    {
         "addedAt": "2022-04-12T07:04:25.221",
         "description": "Sander will explain this model and propose how we can use it to develop a roadmap to build technologies with the public interest at heart. What are the foundational issues to consider? What do design and development processes look like to build these other technologies? And how do we ensure that the wider society is involved in the crucial choices that need to be made to build it right? There are currently no alternative social media platforms that operate at scale AND put the public interest truly at their core. However, there are many initiatives that operate on a smaller scale that do provide an alternative platform or a piece of the solution for preserving people\u2019s rights online. Sander will address the question of how we can build ecosystems of technologies in the public interest so that they are a true alternative for the commercial platforms of today.  ",
         "end": "2022-05-24T16:40:00",
@@ -442,6 +423,26 @@
         "start": "2022-05-24T15:50:00",
         "summary": "Sander van der Waal is Research Director at the research institute and cultural institution Waag, based in Amsterdam. Waag\u2019s research into technology and its experiments and proposals to build technologies with public values at the center has culminated in the model \u2018Public Stack\u2019 (https://publicstack.net).",
         "title": "Building online spaces with the public interest at heart \ud83d\udc9a ",
+        "topic": "design",
+        "video": null
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.753",
+        "description": "Gladys Diandoki explique ce qu'est l'UX Writing, nouveau m\u00e9tier du Design qui allie contenu et UX. Elle reviendra sur les 10 erreurs les plus fr\u00e9quentes et les choses \u00e0 mettre en place pour collaborer avec ces nouveaux profils du Design.\r\n\r\nObjectif :\r\n- Permettre de comprendre ce poste\r\n- Comprendre son r\u00f4le et son process\r\n- Collaborer avec les Product Designers/ UX Designers, les researchers, d\u00e9veloppeurs etc.\r\n- Les erreurs les plus fr\u00e9quentes\r\n- Les bonnes pratiques\r\n\r\nCe que l'on doit retenir :\r\n- Ce que fait un UX Writer\r\n- Comment travailler ensemble\r\n- Quelques bases\r\n",
+        "end": "2022-05-24T16:40:00",
+        "event": "2022",
+        "format": "TALK",
+        "id": "623ad67c8a5c755e7139c717",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM1",
+        "slug": "ux-writing-10-idees-recues-revues-et-corrigees",
+        "speakerIds": [
+            "Gladysdit"
+        ],
+        "start": "2022-05-24T15:50:00",
+        "summary": "Gladys Diandoki explique ce qu'est l'UX Writing, nouveau m\u00e9tier du Design qui allie contenu et UX. Elle reviendra sur les 10 erreurs les plus fr\u00e9quentes et les choses \u00e0 mettre en place pour collaborer avec ces nouveaux profils du Design.",
+        "title": "UX Writing : 10 id\u00e9es re\u00e7ues revues et corrig\u00e9es",
         "topic": "design",
         "video": null
     },
@@ -486,6 +487,26 @@
         "video": null
     },
     {
+        "addedAt": "2022-03-23T09:12:44.734",
+        "description": "La mutualisation de ressources informatiques a apport\u00e9 tr\u00e8s t\u00f4t des gains \u00e9conomiques pour les clients et \u00e9tabli une s\u00e9paration des responsabilit\u00e9s entre fournisseur de services et client.\r\nCe nouveau m\u00e9tier de l'h\u00e9bergement puis du Cloud a fait apparaitre des enjeux d'efficience \u00e9nerg\u00e9tique pour ces fournisseurs depuis de nombreuses ann\u00e9es.\r\nMais en 2022, concr\u00e8tement, qu'est-ce que cela veut dire ?\r\nCe talk propose de tout d'abord faire un statut sur l'impact \u00e9cologique du num\u00e9rique en France et les projections pour 2025 et 2050 suivant diff\u00e9rents sc\u00e9narios de sobri\u00e9t\u00e9 \u00e9tablis par l'ADEME dans son \u00e9tude \u00ab Transition(s) 2050\u00bb.\r\nNous nous int\u00e9resserons ensuite \u00e0 des initiatives et engagements de plusieurs h\u00e9bergeurs et fournisseurs Cloud europ\u00e9ens comme Interxion, Scaleway ou Orange et \u00e9galement am\u00e9ricains comme GCP ou AWS.\r\nA travers ces exemples concrets, cela nous am\u00e8nera \u00e0 discuter thermodynamique dans un centre de donn\u00e9es, \u00e9conomie circulaire, indicateurs \u00e9nerg\u00e9tiques des centres donn\u00e9es comme le Power Usage Effectiveness (PUE) ou encore donn\u00e9es rafra\u00eechies r\u00e9guli\u00e8rement par les fournisseurs Cloud permettant d'appr\u00e9hender au quotidien l'impact \u00e9cologique de nos d\u00e9ploiements Cloud",
+        "end": "2022-05-24T17:50:00",
+        "event": "2022",
+        "format": "TALK",
+        "id": "623ad67c8a5c755e7139c708",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHIC",
+        "slug": "numerique-responsable-ouvrons-le-capot-des-fournisseurs-cloud",
+        "speakerIds": [
+            "clement0210"
+        ],
+        "start": "2022-05-24T17:00:00",
+        "summary": "En 2022, le num\u00e9rique responsable dans le Cloud devient tout autant un enjeu que la qualit\u00e9 de service ou le prix. Entre mythe et r\u00e9alit\u00e9, regardons ensemble comment nos fournisseurs Cloud adoptent des strat\u00e9gies vertueuses pour l'environnement",
+        "title": "Num\u00e9rique responsable, ouvrons le capot des fournisseurs Cloud",
+        "topic": "ethics",
+        "video": null
+    },
+    {
         "addedAt": "2022-03-23T09:12:44.75",
         "description": "Dans les moteurs de recherche du Web, la pertinence et l'ordre des r\u00e9sultats sont g\u00e9r\u00e9s par le nombre de liens, la qualit\u00e9 et la conformit\u00e9 avec certaines r\u00e8gles, et un peu de personnalisation. Les sites e-commerce classent et filtrent les r\u00e9sultats au moyen d'algorithmes business. En entreprise, la pertinence des r\u00e9sultats peut \u00eatre configur\u00e9e par les experts et expertes des diff\u00e9rents domaines. D'un autre c\u00f4t\u00e9, les r\u00e9seaux sociaux fournissent une exp\u00e9rience bas\u00e9e principalement sur la notori\u00e9t\u00e9 : les pr\u00e9f\u00e9rences et le suivi des autres utilisateurs.\r\nNous tentons de regrouper le meilleur de ces mondes en cr\u00e9ant [all.site](https://all.site) - un moteur de recherche collaboratif dont le contenu et la pertinence seraient propos\u00e9s par la communaut\u00e9 \u00e0 la mani\u00e8re de Wikipedia ou GitHub.\r\nDans cette pr\u00e9sentation nous partagerons avec vous l\u2019exp\u00e9rience de cette aventure : ce que nous avons essay\u00e9, ce que nous avons appris, les limites que nous avons rencontr\u00e9es et les \u00e9tapes \u00e0 venir. Nous vous pr\u00e9senterons le fonctionnement interne d'un moteur de recherche avec ses diff\u00e9rentes \u00e9tapes, l\u2019architecture et l\u2019infrastructure d\u2019une telle plateforme, les notions de s\u00e9curit\u00e9, le passage \u00e0 l\u2019\u00e9chelle et la performance. ",
         "end": "2022-05-24T17:50:00",
@@ -506,6 +527,26 @@
         "video": null
     },
     {
+        "addedAt": "2022-04-06T08:52:00",
+        "description": "",
+        "end": "2022-05-24T17:50:00",
+        "event": "2022",
+        "format": "TALK",
+        "id": "624d5529e9e5e322c69dfa1a",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM2",
+        "slug": "l-aventure-chut-",
+        "speakerIds": [
+            "sophie.comte"
+        ],
+        "start": "2022-05-24T17:00:00",
+        "summary": "TBD",
+        "title": "L'aventure Chut!",
+        "topic": "aliens",
+        "video": null
+    },
+    {
         "addedAt": "2022-04-01T15:04:41.929",
         "description": "Votre organisation n\u2019est pas efficace, vos collaborateurs ne sont pas motiv\u00e9s ? Vous \u00eates probablement victime de sabotage ! Gr\u00e2ce \u00e0 un manuel de la CIA, je vous expliquerai comment \u00e9liminer les 3 grands sabotages organisationnels, pour rendre votre entreprise plus performante et plus \u00e9panouissante.",
         "end": "2022-05-24T17:50:00",
@@ -523,47 +564,6 @@
         "summary": "Votre organisation n\u2019est pas efficace, vos collaborateurs ne sont pas motiv\u00e9s ? Vous \u00eates probablement victime de sabotage ! Gr\u00e2ce \u00e0 un manuel de la CIA, je vous expliquerai comment \u00e9liminer les 3 grands sabotages organisationnels, pour rendre votre entreprise plus performante et plus \u00e9panouissante.",
         "title": "Manuel d'anti-sabotage \u00e0 l'usage des dirigeants",
         "topic": "team",
-        "video": null
-    },
-    {
-        "addedAt": "2022-04-06T08:52:00",
-        "description": "",
-        "end": "2022-05-24T17:50:00",
-        "event": "2022",
-        "format": "TALK",
-        "id": "624d5529e9e5e322c69dfa1a",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "ROOM2",
-        "slug": "l-aventure-chut-",
-        "speakerIds": [
-            "aurore.bisicchia",
-            "sophie.comte"
-        ],
-        "start": "2022-05-24T17:00:00",
-        "summary": "TBD",
-        "title": "L'aventure Chut!",
-        "topic": "aliens",
-        "video": null
-    },
-    {
-        "addedAt": "2022-03-23T09:12:44.734",
-        "description": "La mutualisation de ressources informatiques a apport\u00e9 tr\u00e8s t\u00f4t des gains \u00e9conomiques pour les clients et \u00e9tabli une s\u00e9paration des responsabilit\u00e9s entre fournisseur de services et client.\r\nCe nouveau m\u00e9tier de l'h\u00e9bergement puis du Cloud a fait apparaitre des enjeux d'efficience \u00e9nerg\u00e9tique pour ces fournisseurs depuis de nombreuses ann\u00e9es.\r\nMais en 2022, concr\u00e8tement, qu'est-ce que cela veut dire ?\r\nCe talk propose de tout d'abord faire un statut sur l'impact \u00e9cologique du num\u00e9rique en France et les projections pour 2025 et 2050 suivant diff\u00e9rents sc\u00e9narios de sobri\u00e9t\u00e9 \u00e9tablis par l'ADEME dans son \u00e9tude \u00ab Transition(s) 2050\u00bb.\r\nNous nous int\u00e9resserons ensuite \u00e0 des initiatives et engagements de plusieurs h\u00e9bergeurs et fournisseurs Cloud europ\u00e9ens comme Interxion, Scaleway ou Orange et \u00e9galement am\u00e9ricains comme GCP ou AWS.\r\nA travers ces exemples concrets, cela nous am\u00e8nera \u00e0 discuter thermodynamique dans un centre de donn\u00e9es, \u00e9conomie circulaire, indicateurs \u00e9nerg\u00e9tiques des centres donn\u00e9es comme le Power Usage Effectiveness (PUE) ou encore donn\u00e9es rafra\u00eechies r\u00e9guli\u00e8rement par les fournisseurs Cloud permettant d'appr\u00e9hender au quotidien l'impact \u00e9cologique de nos d\u00e9ploiements Cloud",
-        "end": "2022-05-24T17:50:00",
-        "event": "2022",
-        "format": "TALK",
-        "id": "623ad67c8a5c755e7139c708",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "AMPHIC",
-        "slug": "numerique-responsable-ouvrons-le-capot-des-fournisseurs-cloud",
-        "speakerIds": [
-            "clement0210"
-        ],
-        "start": "2022-05-24T17:00:00",
-        "summary": "En 2022, le num\u00e9rique responsable dans le Cloud devient tout autant un enjeu que la qualit\u00e9 de service ou le prix. Entre mythe et r\u00e9alit\u00e9, regardons ensemble comment nos fournisseurs Cloud adoptent des strat\u00e9gies vertueuses pour l'environnement",
-        "title": "Num\u00e9rique responsable, ouvrons le capot des fournisseurs Cloud",
-        "topic": "ethics",
         "video": null
     },
     {
@@ -603,6 +603,27 @@
         "start": "2022-05-25T09:30:00",
         "summary": "Lubrizol, Irma, forest fires and all the winter storms in 2019 make us aware how much we need a strong emergency warning system in France. We are all almost excited by the the latest flagship handset, 5G but how these new devices, softwares and protocols can make our country safer and resilient ?",
         "title": "How to build the alert system that France deserves?",
+        "topic": "tech",
+        "video": null
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.707",
+        "description": "Fear the ponies is a hacking workshop in the form of a code dojo having as main theme cryptography. It is a great problem solving training, an opportunity to share knowledge while programming and more important, it\u2019s fun !",
+        "end": "2022-05-25T12:30:00",
+        "event": "2022",
+        "format": "WORKSHOP",
+        "id": "623ad67c8a5c755e7139c6f4",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM5",
+        "slug": "fear-the-ponies-let-s-re-discover-cryptography-basics",
+        "speakerIds": [
+            "mmetesreau",
+            "raphaelwach"
+        ],
+        "start": "2022-05-25T10:40:00",
+        "summary": "Ponies just forged a secret alliance in order to end human civilization and their first move should happen in less than 1 hour. During this new escape game style coding dojo, we offer to challenge your knowledge and skills about encryption and to improve them while having fun !",
+        "title": "Fear the ponies, let's (re)discover cryptography basics",
         "topic": "tech",
         "video": null
     },
@@ -648,24 +669,43 @@
         "video": null
     },
     {
-        "addedAt": "2022-03-23T09:12:44.707",
-        "description": "Fear the ponies is a hacking workshop in the form of a code dojo having as main theme cryptography. It is a great problem solving training, an opportunity to share knowledge while programming and more important, it\u2019s fun !",
-        "end": "2022-05-25T12:30:00",
+        "addedAt": "2022-03-23T09:12:00",
+        "description": "Ca fait pas mal d'ann\u00e9e que l'on a commenc\u00e9 le projet Valhalla au niveau de l'OpenJDK, on doit \u00eatre au quatri\u00e8me prototype et on commence \u00e0 avoir une id\u00e9e assez pr\u00e9cise de comment cela doit fonctionner. Le but de ce talk est d'expliquer le mod\u00e8le sur lequel on travaille, quels sont les choix que l'on \u00e0 fait, comment cela s'int\u00e8gre avec le reste de Java, comment les diff\u00e9rentes features vont \u00eatre d\u00e9livr\u00e9 dans le temps et aussi de recueillir du feedback.\r\n\r\n",
+        "end": "2022-05-25T11:30:00",
         "event": "2022",
-        "format": "WORKSHOP",
-        "id": "623ad67c8a5c755e7139c6f4",
+        "format": "TALK",
+        "id": "623ad67c8a5c755e7139c718",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "ROOM5",
-        "slug": "fear-the-ponies-let-s-re-discover-cryptography-basics",
+        "room": "AMPHIC",
+        "slug": "valhalla-to-the-hell-and-back",
         "speakerIds": [
-            "mmetesreau",
-            "raphaelwach"
+            "remi.forax"
         ],
         "start": "2022-05-25T10:40:00",
-        "summary": "Ponies just forged a secret alliance in order to end human civilization and their first move should happen in less than 1 hour. During this new escape game style coding dojo, we offer to challenge your knowledge and skills about encryption and to improve them while having fun !",
-        "title": "Fear the ponies, let's (re)discover cryptography basics",
+        "summary": "Valhalla veut r\u00e9volutionner Java en introduisant une nouvelle sorte de classe qui marche plus ou moins comme des types primitifs mais d\u00e9fini par l'utilisateur.\r\n\r\nMais c'est quoi vraiment un type primitif ? java.lang.Object reste la classe m\u00e8re de toutes les classes ? Et plein d'autres questions.",
+        "title": "Valhalla: To the Hell and Back",
         "topic": "tech",
+        "video": null
+    },
+    {
+        "addedAt": "2022-04-12T08:24:13.931",
+        "description": "",
+        "end": "2022-05-25T11:30:00",
+        "event": "2022",
+        "format": "TALK",
+        "id": "6255383ead7883553e81977b",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM1",
+        "slug": "le-lean-startup-ca-donne-quoi-dans-la-realite-",
+        "speakerIds": [
+            "cedric.soubrie"
+        ],
+        "start": "2022-05-25T10:40:00",
+        "summary": "Cr\u00e9er un business en quelques mois, c'est ce que promet le Lean Startup. Dans la r\u00e9alit\u00e9 c'est plus compliqu\u00e9.\r\n\r\nRetour d'exp\u00e9rience sur la premi\u00e8re ann\u00e9e de Treely et 5 conseils qui nous ont bien aid\u00e9.\r\n\r\nDe l'id\u00e9e initiale, jusqu'aux premiers clients en passant par des occasions inesp\u00e9r\u00e9es.",
+        "title": "Le lean startup, \u00e7a donne quoi dans la r\u00e9alit\u00e9 ?",
+        "topic": "team",
         "video": null
     },
     {
@@ -705,46 +745,6 @@
         "start": "2022-05-25T10:40:00",
         "summary": "Venez changer de regard sur la nature des \u00e9motions et en co-cr\u00e9er de nouvelles. Oui, une \u00e9motion \u00e7a se cr\u00e9\u00e9.\r\n\r\nTelles sont les conclusion d'une neuro-scientifique de Harvard qui rejoignent la Communication Non-Violente. Actionnons \u00e0 la fois intellects, coeurs et cr\u00e9ativit\u00e9 dans cet atelier facilit\u00e9.",
         "title": "Nous ne sommes pas \u00e0 la merci de nos \u00e9motions. Nous les co-cr\u00e9ons",
-        "topic": "team",
-        "video": null
-    },
-    {
-        "addedAt": "2022-03-23T09:12:00",
-        "description": "Ca fait pas mal d'ann\u00e9e que l'on a commenc\u00e9 le projet Valhalla au niveau de l'OpenJDK, on doit \u00eatre au quatri\u00e8me prototype et on commence \u00e0 avoir une id\u00e9e assez pr\u00e9cise de comment cela doit fonctionner. Le but de ce talk est d'expliquer le mod\u00e8le sur lequel on travaille, quels sont les choix que l'on \u00e0 fait, comment cela s'int\u00e8gre avec le reste de Java, comment les diff\u00e9rentes features vont \u00eatre d\u00e9livr\u00e9 dans le temps et aussi de recueillir du feedback.\r\n\r\n",
-        "end": "2022-05-25T11:30:00",
-        "event": "2022",
-        "format": "TALK",
-        "id": "623ad67c8a5c755e7139c718",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "AMPHIC",
-        "slug": "valhalla-to-the-hell-and-back",
-        "speakerIds": [
-            "remi.forax"
-        ],
-        "start": "2022-05-25T10:40:00",
-        "summary": "Valhalla veut r\u00e9volutionner Java en introduisant une nouvelle sorte de classe qui marche plus ou moins comme des types primitifs mais d\u00e9fini par l'utilisateur.\r\n\r\nMais c'est quoi vraiment un type primitif ? java.lang.Object reste la classe m\u00e8re de toutes les classes ? Et plein d'autres questions.",
-        "title": "Valhalla: To the Hell and Back",
-        "topic": "tech",
-        "video": null
-    },
-    {
-        "addedAt": "2022-04-12T08:24:13.931",
-        "description": "",
-        "end": "2022-05-25T11:30:00",
-        "event": "2022",
-        "format": "TALK",
-        "id": "6255383ead7883553e81977b",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "ROOM1",
-        "slug": "le-lean-startup-ca-donne-quoi-dans-la-realite-",
-        "speakerIds": [
-            "cedric.soubrie"
-        ],
-        "start": "2022-05-25T10:40:00",
-        "summary": "Cr\u00e9er un business en quelques mois, c'est ce que promet le Lean Startup. Dans la r\u00e9alit\u00e9 c'est plus compliqu\u00e9.\r\n\r\nRetour d'exp\u00e9rience sur la premi\u00e8re ann\u00e9e de Treely et 5 conseils qui nous ont bien aid\u00e9.\r\n\r\nDe l'id\u00e9e initiale, jusqu'aux premiers clients en passant par des occasions inesp\u00e9r\u00e9es.",
-        "title": "Le lean startup, \u00e7a donne quoi dans la r\u00e9alit\u00e9 ?",
         "topic": "team",
         "video": null
     },
@@ -851,23 +851,61 @@
         "video": null
     },
     {
-        "addedAt": "2022-05-25T14:50:44",
-        "description": "Nous avons tou.te.s des certitudes, que l\u2019on porte sur soi, les autres ou la vie en g\u00e9n\u00e9ral... Et c'est normal !\r\nToutefois, ces derni\u00e8res, conscientes ou inconscientes, influencent nos actions et peuvent parfois nous limiter. Je vous propose dans cet atelier, \u00e0 faire seul.e ou en \u00e9quipe, les cl\u00e9s pour reconnaitre, comprendre et agir sur vos croyances afin d\u2019en faire les atouts de vos projets. \r\n\r\nAlors si vous ne voulez pas vous r\u00e9veiller au m\u00eame point dans 3 ans, passez \u00e0 l\u2019action en apprenant \u00e0 sortir de votre sch\u00e9ma de r\u00e9signation ! \r\nVia cet atelier qui s'\u00e9quilibre entre th\u00e9orie et pratique, faites le choix de vous d\u00e9tacher d'une croyance limitante afin de cr\u00e9er et/ou renforcer une croyance aidante.\r\n\r\nCet atelier peut vous aider \u00e0 prendre conscience de vos croyances parfois tellement ancr\u00e9es que vous pensez que c\u2019est dans votre ADN. \r\n\r\nAvec cet atelier vous serez en mesure de : \r\n- D\u00e9tecter ce qui vous emp\u00eache d\u2019avancer \r\n- Lever vos blocages \r\n- Mettre en place des projets qui vous semblaient impossibles \r\n- Vous lib\u00e9rer des pens\u00e9es qui vous freinent et vous prennent de l\u2019\u00e9nergie\r\n- D\u00e9samorcer des tensions en \u00e9quipe\r\n",
-        "end": "2022-05-25T16:40:00",
+        "addedAt": "2022-05-03T20:29:15.022",
+        "description": "Les inscriptions se font exclusivement via la billetterie [BilletWeb.fr](https://www.billetweb.fr/atelier-mixteen-2022). \r\nVous pouvez suivre les news sur le [compte Twitter](https://twitter.com/mixteen_lyon) et la page [Facebook](https://www.facebook.com/mixteen.lyon/).\r\n\r\nPlusieurs activit\u00e9s seront propos\u00e9es:\r\n\r\n* Pour tous : Scratch\r\n* Ateliers de d\u00e9couverte des principes de l'informatique : jeux pour d\u00e9couvrir le binaire, le codage d'images...\r\n* Thymio : un petit robot facile \u00e0 programmer qui permet de comprendre les bases de la robotique, et se d\u00e9place suivant les diff\u00e9rentes instructions des enfants.\r\n* Micro:bit : une carte \u00e9labor\u00e9 sous la supervision de la BBC \u00e0 destination des \u00e9coliers anglais. Elle permet l\u2019initiation \u00e0 l\u2019\u00e9lectronique, l\u2019IoT et la programmation.\r\n\r\nLes enfants peuvent venir avec leur ordinateur portable et un go\u00fbter \u00e0 base des c\u00e9l\u00e8bres cr\u00eapes de MiXiT leur servi\r\n\r\n* Accueil des enfants \u00e0 partir de 14h pour d\u00e9marrer l'atelier \u00e0 14h30\r\n* Accueil des parents \u00e0 partir de 17h30 pour voir ce que les enfants ont cod\u00e9 \r\n* A 18h15, tout ce petit monde montera sur sc\u00e8ne devant l'assembl\u00e9e r\u00e9unie de MiXiT.\r\n",
+        "end": "2022-05-25T18:30:00",
         "event": "2022",
-        "format": "WORKSHOP",
-        "id": "623ad67c8a5c755e7139c6e8",
+        "format": "TALK",
+        "id": "627191cf79f6111e95ace03e",
         "language": "FRENCH",
-        "photoUrls": [],
-        "room": "ROOM3",
-        "slug": "-arretez-l-auto-sabotage-et-sortez-de-votre-boucle-systemique-",
-        "speakerIds": [
-            "albane.fagot"
+        "photoUrls": [
+            {
+                "name": "MixTeen",
+                "url": "https://farm1.staticflickr.com/948/40967510324_55436b510f_z_d.jpg"
+            },
+            {
+                "name": "MixTeen",
+                "url": "https://farm1.staticflickr.com/969/39870848370_af1db19128_z_d.jpg"
+            },
+            {
+                "name": "MixTeen",
+                "url": "https://farm1.staticflickr.com/909/40967509974_01d12b345e_z_d.jpg"
+            },
+            {
+                "name": "MixTeen",
+                "url": "https://farm1.staticflickr.com/944/40786994345_3cf4c3c3d2_z_d.jpg"
+            },
+            {
+                "name": "MixTeen",
+                "url": "https://farm1.staticflickr.com/965/40786995285_3bee2947d5_z_d.jpg"
+            },
+            {
+                "name": "MixTeen",
+                "url": "https://farm1.staticflickr.com/829/41676895901_0b2ecb4f29_z_d.jpg"
+            },
+            {
+                "name": "MixTeen",
+                "url": "https://farm1.staticflickr.com/907/41676895381_f91fb6a346_z_d.jpg"
+            }
         ],
-        "start": "2022-05-25T14:50:00",
-        "summary": "Combien de fois avez-vous renonc\u00e9 \u00e0 un projet sous pr\u00e9texte que \u201c\u00e7a ne marchera jamais\u201d, \u201cOn ne peut pas tout avoir\u201d, ou encore [ins\u00e9rez ici votre conviction] ?\r\nParce que vos croyances influencent vos actions, apprenez \u00e0 sortir de ce sch\u00e9ma de r\u00e9signation gr\u00e2ce \u00e0 la syst\u00e9mique et aux neurosciences.",
-        "title": "\ud83e\udd2f Arr\u00eatez l\u2019auto sabotage et sortez de votre boucle (syst\u00e9mique)",
-        "topic": "team",
+        "room": "ROOM7",
+        "slug": "mixteen-2022-born-to-code",
+        "speakerIds": [
+            "106329914971209052078",
+            "115833292931696563446",
+            "Angelique",
+            "anoseda",
+            "charles.de-magneval",
+            "clem",
+            "gerald.quintana",
+            "pierre.sassoulas",
+            "titimoby",
+            "vbonnefond"
+        ],
+        "start": "2022-05-25T14:30:00",
+        "summary": "Cet atelier r\u00e9serv\u00e9 aux enfants inscrits au pr\u00e9alable et aura lieu sur la mezzanine. \r\nSuivez les panneaux si vous voulez voir les ateliers et \u00e9changer avec les diff\u00e9rents intervenants. \r\nLes participants, les enfants apprennent \u00e0 cr\u00e9er des mini-jeux, \u00e0 programmer des robots, \u00e0 assembler des composants \u00e9lectroniques... \r\n",
+        "title": "Mixteen 2022 : Born to code",
+        "topic": "learn",
         "video": null
     },
     {
@@ -892,6 +930,26 @@
         "video": null
     },
     {
+        "addedAt": "2022-03-23T09:12:44.746",
+        "description": "97.4% \u2013 that\u2019s how many of the world\u2019s top 1M homepages have basic accessibility issues, according to the [WebAIM Million analysis](https://webaim.org/projects/million/). This appalling number is a reminder of how our choices as an industry have an impact on website users. It\u2019s also a call to action! We\u2019ll see how we got there, what systemic problems we\u2019re dealing with, and potential solutions.\r\n\r\nAlong the way, we\u2019ll learn about the choices the team behind [Wagtail](https://wagtail.org/) made, to improve the accessibility of all sites built with the CMS.",
+        "end": "2022-05-25T15:40:00",
+        "event": "2022",
+        "format": "TALK",
+        "id": "623ad67c8a5c755e7139c711",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHIC",
+        "slug": "the-97-4-north-star",
+        "speakerIds": [
+            "thibaud_colas"
+        ],
+        "start": "2022-05-25T14:50:00",
+        "summary": "97.4% \u2013 that\u2019s how many of the world\u2019s top 1M homepages have basic accessibility issues, according to the WebAIM Million. This is unacceptable. We can do better. We\u2019ll consider the impact of technology on accessibility, and potential solutions. We\u2019ll look at how Wagtail tries to tackle this reality.",
+        "title": "The 97.4% North Star",
+        "topic": "tech",
+        "video": null
+    },
+    {
         "addedAt": "2022-03-23T09:12:44.703",
         "description": "> \"Je ne peux rien faire changer dans cette bo\u00eete, je suis seulement [ton titre de job] !\"\r\n\r\nPas terrible comme constat.\r\n\r\nEt pourtant, dans tes missions ce n'est pas rare qu'il faille sauver le projet de la noyade, ou \u00e9teindre les incendies. Alors de ton c\u00f4t\u00e9, tu finis avec **ce sentiment frustrant d'impuissance**.\r\n\r\nParce que, forc\u00e9ment, tu dois :\r\n\r\n- travailler dans le rush, parce que certaines US ne sont pr\u00eates que 4 jours avant la fin du sprint en cours\r\n- rattraper les 3 mois de retards sur la livraison de la release 1.5.2\r\n- reprendre l'activit\u00e9 de quelqu'un qui sort du projet avec seulement 5 jours de biseau (dans le meilleur des cas)\r\n\r\nAlors tu proposes des changements, des am\u00e9liorations pour aider.\r\n\r\nMais comme d'habitude, dans *ce* contexte tous les changements sont difficiles \u00e0 entreprendre, tout est lent \u00e0 mettre en place...\r\n\r\nEt les seules r\u00e9ponses que tu obtiens c'est :\r\n\r\n- \"*Mettre en place une int\u00e9gration continue ? On y a pens\u00e9, mais chez nous on ne peut pas, c'est TELLEMENT compliqu\u00e9.*\"\r\n\r\n- \"*La r\u00e9trospective ? Laisse tomber, nous on y va pas, \u00e7a sert \u00e0 rien.*\"\r\n\r\n- \"*Bien s\u00fbr qu'on aimerait bien am\u00e9liorer la couverture de tests, mais on a vraiment pas le temps.*\"\r\n\r\n**Et j\u2019imagine que tu pourrais en citer d\u2019autres.**\r\n\r\nDans ces conditions, tu t'\u00e9puises sans doute \u00e0 essayer de faire bouger les choses sans r\u00e9sultat. \r\n\r\nPeut-\u00eatre m\u00eame que tu te demandes comment tu vas r\u00e9ussir la mission qu'on t'a confi\u00e9e vu le contexte ?\r\n\r\n**Et c'est bien normal.** \r\n\r\nN'importe qui douterait..\r\n\r\nMais tu n'es peut-\u00eatre pas n'importe qui... ?\r\n\r\nSi tu veux enfin savoir comment \r\n\r\n- mieux utiliser ton \u00e9nergie, \r\n- redonner l'envie \u00e0 ton \u00e9quipe de s'am\u00e9liorer sans que tu aies besoin de tout porter seul.e, \r\n- d\u00e9clencher le tilt pour que les choses changent, \r\n\r\n\ud83c\udfc6 Alors tu as trouv\u00e9 le bon atelier !\r\n\r\nAu travers d'*exemples concrets* et de *mise en pratique*, nous allons t'initier \u00e0 l\u2019art subtile de faire bouger les choses en **d\u00e9tournant les pratiques des coachs et des managers**.\r\n\r\nMonte \u00e0 bord de notre navire Pirate pour d\u00e9couvrir \r\n- les secrets de la *Strat\u00e9gie des Alli\u00e9s* \u2694, \r\n- le *Dead Poulpe* \ud83d\udc19 \r\n- et des petites *techniques de manipulation* \ud83d\ude07... \r\n\r\n**Lance-toi et r\u00e9veille la/le v\u00e9ritable pirate qui sommeille en toi.**\r\n\r\nQu'est-ce que tu attends ? arr\u00eate de frotter le pont moussaillon et... **\u00c0 L'ABORDAGE** ! \ud83c\udff4\u200d\u2620\ufe0f",
         "end": "2022-05-25T16:40:00",
@@ -910,26 +968,6 @@
         "summary": "\"Je ne peux rien faire changer dans cette bo\u00eete, je suis seulement  !\"\ud83d\ude14\r\nC'est ce que tu penses en regardant ta job ?\r\nAlors monte sur le pont et apprends \u00e0 faire bouger les choses avec des techniques de Pirate ! \ud83c\udff4\u200d\u2620\ufe0f\r\nCartographie \ud83d\uddfa, pieuvre \ud83d\udc19 et manipulation \ud83d\ude08 au rendez-vous !",
         "title": "Deviens un.e v\u00e9ritable Pirate ! \ud83c\udff4\u200d\u2620\ufe0f",
         "topic": "team",
-        "video": null
-    },
-    {
-        "addedAt": "2022-03-23T09:12:44.746",
-        "description": "97.4% \u2013 that\u2019s how many of the world\u2019s top 1M homepages have basic accessibility issues, according to the [WebAIM Million analysis](https://webaim.org/projects/million/). This appalling number is a reminder of how our choices as an industry have an impact on website users. It\u2019s also a call to action! We\u2019ll see how we got there, what systemic problems we\u2019re dealing with, and potential solutions.\r\n\r\nAlong the way, we\u2019ll learn about the choices the team behind [Wagtail](https://wagtail.org/) made, to improve the accessibility of all sites built with the CMS.",
-        "end": "2022-05-25T15:40:00",
-        "event": "2022",
-        "format": "TALK",
-        "id": "623ad67c8a5c755e7139c711",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "AMPHIC",
-        "slug": "the-97-4-north-star",
-        "speakerIds": [
-            "thibaud_colas"
-        ],
-        "start": "2022-05-25T14:50:00",
-        "summary": "97.4% \u2013 that\u2019s how many of the world\u2019s top 1M homepages have basic accessibility issues, according to the WebAIM Million. This is unacceptable. We can do better. We\u2019ll consider the impact of technology on accessibility, and potential solutions. We\u2019ll look at how Wagtail tries to tackle this reality.",
-        "title": "The 97.4% North Star",
-        "topic": "tech",
         "video": null
     },
     {
@@ -953,24 +991,23 @@
         "video": null
     },
     {
-        "addedAt": "2022-03-23T09:12:44.697",
-        "description": "Vous ne connaissez pas Elm ? Ce n'est pas tr\u00e8s grave, le compilateur de ce langage frontend qui garantit l'absence d\u2019erreur d\u2019ex\u00e9cution est l\u00e0 pour vous aider ! \r\n \r\nJe vous propose de coder sans conna\u00eetre le langage avec ce format un peu particulier : \u00e9tant des d\u00e9veloppeurs tr\u00e8s distraits, nous avons commenc\u00e9 pas mal de refactorings et fonctionnalit\u00e9s sans vraiment les finir... \u00e0 vous de prendre le relais pour achever la fonctionnalit\u00e9, assist\u00e9 par les messages d'erreur.\r\n \r\nPari un peu fou ou confiance absolue dans les capacit\u00e9s de mentoring du compilateur ? Venez et vous le saurez !",
-        "end": "2022-05-25T16:40:44",
+        "addedAt": "2022-05-25T14:50:44",
+        "description": "Nous avons tou.te.s des certitudes, que l\u2019on porte sur soi, les autres ou la vie en g\u00e9n\u00e9ral... Et c'est normal !\r\nToutefois, ces derni\u00e8res, conscientes ou inconscientes, influencent nos actions et peuvent parfois nous limiter. Je vous propose dans cet atelier, \u00e0 faire seul.e ou en \u00e9quipe, les cl\u00e9s pour reconnaitre, comprendre et agir sur vos croyances afin d\u2019en faire les atouts de vos projets. \r\n\r\nAlors si vous ne voulez pas vous r\u00e9veiller au m\u00eame point dans 3 ans, passez \u00e0 l\u2019action en apprenant \u00e0 sortir de votre sch\u00e9ma de r\u00e9signation ! \r\nVia cet atelier qui s'\u00e9quilibre entre th\u00e9orie et pratique, faites le choix de vous d\u00e9tacher d'une croyance limitante afin de cr\u00e9er et/ou renforcer une croyance aidante.\r\n\r\nCet atelier peut vous aider \u00e0 prendre conscience de vos croyances parfois tellement ancr\u00e9es que vous pensez que c\u2019est dans votre ADN. \r\n\r\nAvec cet atelier vous serez en mesure de : \r\n- D\u00e9tecter ce qui vous emp\u00eache d\u2019avancer \r\n- Lever vos blocages \r\n- Mettre en place des projets qui vous semblaient impossibles \r\n- Vous lib\u00e9rer des pens\u00e9es qui vous freinent et vous prennent de l\u2019\u00e9nergie\r\n- D\u00e9samorcer des tensions en \u00e9quipe\r\n",
+        "end": "2022-05-25T16:40:00",
         "event": "2022",
         "format": "WORKSHOP",
-        "id": "623ad67c8a5c755e7139c6ee",
+        "id": "623ad67c8a5c755e7139c6e8",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "ROOM5",
-        "slug": "compiler-driven-development-avec-elm",
+        "room": "ROOM3",
+        "slug": "-arretez-l-auto-sabotage-et-sortez-de-votre-boucle-systemique-",
         "speakerIds": [
-            "jordane.grenat",
-            "sebastien-fabrice-besnier"
+            "albane.fagot"
         ],
-        "start": "2022-05-25T14:50:44",
-        "summary": "Un langage frontend sans aucune erreur d\u2019ex\u00e9cution, c\u2019est possible ? C\u2019est le pari r\u00e9ussi de Elm ! Et bonne nouvelle, son compilateur est un mentor tr\u00e8s p\u00e9dagogique pour apprendre ce langage. Venez le d\u00e9couvrir lors de cet atelier !",
-        "title": "Compiler-Driven Development avec Elm",
-        "topic": "tech",
+        "start": "2022-05-25T14:50:00",
+        "summary": "Combien de fois avez-vous renonc\u00e9 \u00e0 un projet sous pr\u00e9texte que \u201c\u00e7a ne marchera jamais\u201d, \u201cOn ne peut pas tout avoir\u201d, ou encore [ins\u00e9rez ici votre conviction] ?\r\nParce que vos croyances influencent vos actions, apprenez \u00e0 sortir de ce sch\u00e9ma de r\u00e9signation gr\u00e2ce \u00e0 la syst\u00e9mique et aux neurosciences.",
+        "title": "\ud83e\udd2f Arr\u00eatez l\u2019auto sabotage et sortez de votre boucle (syst\u00e9mique)",
+        "topic": "team",
         "video": null
     },
     {
@@ -994,22 +1031,23 @@
         "video": null
     },
     {
-        "addedAt": "2022-03-23T09:12:44.751",
-        "description": "Un de nos clients nous a fait part de son besoin de refondre un de ses sites grand public r\u00e9alis\u00e9 avec Drupal. \r\n\r\nSes contraintes : plusieurs milliers de visites par jour, un futur site attractif et dynamique et un faible impact sur l'environnement.\r\nL'occasion r\u00eav\u00e9e de mettre en place un site statique avec une architecture JAMStack ! \r\n\r\nCette stack saura t-elle g\u00e9n\u00e9rer les 70000 pages n\u00e9cessaires au site ? Tiendra t-elle ses promesses de mont\u00e9e en charge ? Et du c\u00f4t\u00e9 de l'impact \u00e9cologique et de l'\u00e9co-conception ?\r\n\r\nNous vous pr\u00e9senterons le principe de l'architecture JAMStack, les difficult\u00e9s que nous avons rencontr\u00e9es, et les adaptations que nous avons mises en \u0153uvre pour aboutir \u00e0 la nouvelle version du site.\r\n\r\nAlors, promesses tenues ?",
-        "end": "2022-05-25T16:40:00",
+        "addedAt": "2022-03-23T09:12:44.697",
+        "description": "Vous ne connaissez pas Elm ? Ce n'est pas tr\u00e8s grave, le compilateur de ce langage frontend qui garantit l'absence d\u2019erreur d\u2019ex\u00e9cution est l\u00e0 pour vous aider ! \r\n \r\nJe vous propose de coder sans conna\u00eetre le langage avec ce format un peu particulier : \u00e9tant des d\u00e9veloppeurs tr\u00e8s distraits, nous avons commenc\u00e9 pas mal de refactorings et fonctionnalit\u00e9s sans vraiment les finir... \u00e0 vous de prendre le relais pour achever la fonctionnalit\u00e9, assist\u00e9 par les messages d'erreur.\r\n \r\nPari un peu fou ou confiance absolue dans les capacit\u00e9s de mentoring du compilateur ? Venez et vous le saurez !",
+        "end": "2022-05-25T16:40:44",
         "event": "2022",
-        "format": "TALK",
-        "id": "623ad67c8a5c755e7139c716",
+        "format": "WORKSHOP",
+        "id": "623ad67c8a5c755e7139c6ee",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "ROOM1",
-        "slug": "un-peu-de-confiture-dans-votre-architecture-",
+        "room": "ROOM5",
+        "slug": "compiler-driven-development-avec-elm",
         "speakerIds": [
-            "ceciliaBossard"
+            "jordane.grenat",
+            "sebastien-fabrice-besnier"
         ],
-        "start": "2022-05-25T15:50:00",
-        "summary": "R\u00e9aliser un site le plus \u00e9co-con\u00e7u possible, attractif visuellement et avec des technos r\u00e9centes ? L'occasion r\u00eav\u00e9e de mettre en place un site statique avec une architecture JAMStack !\r\nCette stack saura t-elle g\u00e9n\u00e9rer les 70000 pages n\u00e9cessaires et tiendra t-elle ses promesses de mont\u00e9e en charge ?",
-        "title": "Un peu de confiture dans votre architecture ? ",
+        "start": "2022-05-25T14:50:44",
+        "summary": "Un langage frontend sans aucune erreur d\u2019ex\u00e9cution, c\u2019est possible ? C\u2019est le pari r\u00e9ussi de Elm ! Et bonne nouvelle, son compilateur est un mentor tr\u00e8s p\u00e9dagogique pour apprendre ce langage. Venez le d\u00e9couvrir lors de cet atelier !",
+        "title": "Compiler-Driven Development avec Elm",
         "topic": "tech",
         "video": null
     },
@@ -1051,6 +1089,26 @@
         "summary": "Je crois confirmer un b\u00e9n\u00e9fice gratuit, me voil\u00e0 abonn\u00e9e \u00e0 un service payant. Entre camoufler un bouton pour faire croire \u00e0 autre chose, et mettre un titre un peu trompeur, manipuler un utilisateur par le design est relativement facile, et... oui, mais non. On va voir \u00e7a ensemble, via l'\u00e9thique.",
         "title": "Le design manipulatif: oui, mais non",
         "topic": "ethics",
+        "video": null
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.751",
+        "description": "Un de nos clients nous a fait part de son besoin de refondre un de ses sites grand public r\u00e9alis\u00e9 avec Drupal. \r\n\r\nSes contraintes : plusieurs milliers de visites par jour, un futur site attractif et dynamique et un faible impact sur l'environnement.\r\nL'occasion r\u00eav\u00e9e de mettre en place un site statique avec une architecture JAMStack ! \r\n\r\nCette stack saura t-elle g\u00e9n\u00e9rer les 70000 pages n\u00e9cessaires au site ? Tiendra t-elle ses promesses de mont\u00e9e en charge ? Et du c\u00f4t\u00e9 de l'impact \u00e9cologique et de l'\u00e9co-conception ?\r\n\r\nNous vous pr\u00e9senterons le principe de l'architecture JAMStack, les difficult\u00e9s que nous avons rencontr\u00e9es, et les adaptations que nous avons mises en \u0153uvre pour aboutir \u00e0 la nouvelle version du site.\r\n\r\nAlors, promesses tenues ?",
+        "end": "2022-05-25T16:40:00",
+        "event": "2022",
+        "format": "TALK",
+        "id": "623ad67c8a5c755e7139c716",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM1",
+        "slug": "un-peu-de-confiture-dans-votre-architecture-",
+        "speakerIds": [
+            "ceciliaBossard"
+        ],
+        "start": "2022-05-25T15:50:00",
+        "summary": "R\u00e9aliser un site le plus \u00e9co-con\u00e7u possible, attractif visuellement et avec des technos r\u00e9centes ? L'occasion r\u00eav\u00e9e de mettre en place un site statique avec une architecture JAMStack !\r\nCette stack saura t-elle g\u00e9n\u00e9rer les 70000 pages n\u00e9cessaires et tiendra t-elle ses promesses de mont\u00e9e en charge ?",
+        "title": "Un peu de confiture dans votre architecture ? ",
+        "topic": "tech",
         "video": null
     },
     {
@@ -1155,22 +1213,42 @@
         "video": null
     },
     {
-        "addedAt": "2022-03-23T09:12:44.743",
-        "description": "Je me suis vraiment \u00e9clat\u00e9 en codant [maposaic.com](maposaic.com) et je voudrais en partager les apprentissages en zoomant sur l'optimisation de l\u2019algorithme avec Rust.\r\nC\u2019est la v2 de [cette pr\u00e9sentation](https://www.conf42.com/JavaScript_2020_Victor_Lebrun_canvas_pixel_transformation) o\u00f9 je m\u2019arr\u00eatais \u00e0 dire que le r\u00e9sultat \u00e9tait beau, mais lent. Maintenant, il est rapide ! Et ce gr\u00e2ce \u00e0 Rust, un langage permettant de compiler facilement en Web Assembly. Rust c\u2019est aussi une super communaut\u00e9. Ne constatant pas d\u2019am\u00e9lioration de performance en premier lieu, j\u2019ai [demand\u00e9 de l\u2019aide](https://www.reddit.com/r/rust/comments/kwdnlo/rust_program_twice_slower_than_javascript_where/) au groupe rust de reddit qui m\u2019a beaucoup aid\u00e9 !",
+        "addedAt": "2022-03-23T09:12:44.713",
+        "description": "Ing\u00e9nieure informaticienne, j\u2019ai quitt\u00e9 mon bled en 2010 pour immigrer chez les Gaulois. Je partage avec vous de \u00ab l\u2019enfer \u00bb  v\u00e9cu \u00e0 la pr\u00e9fecture de Bobigny dans le 9-3, pour renouveler le titre de s\u00e9jour.\r\nComment j\u2019ai mont\u00e9 le GDGRennes-Android? Est-ce que mon premier pr\u00e9nom, \u00e0 connotation africaine, a \u00e9t\u00e9 un frein pour ma recherche d\u2019emploi?  Est-ce que j\u2019ai r\u00e9ussi \u00e0 me faire une petite place dans l\u2019\u00e9cosyst\u00e8me informatique, associatif, collaboratif en France? Que suis-je devenue aujourd\u2019hui?  Venez me poser toutes les questions, sans tabou. Je vous ferais un bilan de 12 ans de vie, d\u2019une ing\u00e9nieure informaticienne immigr\u00e9e, vivant chez les Gaulois...InchAllah. ",
         "end": "2022-05-25T17:50:00",
         "event": "2022",
         "format": "LIGHTNING_TALK",
-        "id": "623ad67c8a5c755e7139c70f",
+        "id": "623ad67c8a5c755e7139c6fa",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "ROOM1",
-        "slug": "rust-a-la-rescousse-des-performances-de-javascript",
+        "room": "AMPHIC",
+        "slug": "journal-d-une-immigree-fondatrice-du-gdgrennes-android",
         "speakerIds": [
-            "viconnex"
+            "AnnetLenaNdiaye"
         ],
         "start": "2022-05-25T17:30:00",
-        "summary": "Un fond de carte dans un Canvas. Un algorithme qui parcourt tous ses pixels. Une mosa\u00efque en couleurs. C\u2019est beau ! Mais il faut attendre longtemps... Venez voir comment Rust m\u2019a permis de booster les performances de ces calculs de pixels !",
-        "title": "Rust \u00e0 la rescousse des performances de javascript",
+        "summary": "En 2010, j\u2019ai immigr\u00e9 chez les Gaulois. Je partagerai avec vous de l\u2019enfer \u00e0 la pr\u00e9fecture de Bobigny dans le 9-3, pour renouveler le titre de s\u00e9jour. Est-ce que mon premier pr\u00e9nom, a \u00e9t\u00e9 un frein pour ma recherche d\u2019emploi? Je vous ferais un bilan de 12 ans de vie, d\u2019une immigr\u00e9e chez les Gaulois.",
+        "title": "Journal d'une immigr\u00e9e, Fondatrice du GDGRennes-Android",
+        "topic": "aliens",
+        "video": null
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.728",
+        "description": "Chez **Innovorder**, nous sommes sp\u00e9cialis\u00e9s dans les solutions Android pour les restaurants et nous n'utilisons pas les Play Services. Nous avons donc d\u00e9ploy\u00e9 un micro-service en **Ktor** d\u00e9di\u00e9 \u00e0 la mise \u00e0 jour de nos applications mobiles pour avoir un contr\u00f4le total sur les d\u00e9ploiements de nos mises \u00e0 jour.\r\n\r\nNous croyons fermement en **Ktor** et avons massivement investi dans **Kotlin** au sein de l'entreprise.\r\n\r\nJ'ai \u00e9crit une s\u00e9rie de 3 articles, dont deux ont \u00e9t\u00e9 publi\u00e9s par **Kotlin Weekly**, la plus grande newsletter **Kotlin**.\r\n\r\n- **[D\u00e9ployer un microservice dans Kotlin avec Ktor \u2014 Partie 1](https://innovorder.dev/deploy-a-microservice-in-kotlin-with-ktor-part-1-2691fef75e1d)**\r\n- **[D\u00e9ployer un microservice dans Kotlin avec Ktor \u2014 Partie 2](https://innovorder.dev/deploy-a-microservice-in-kotlin-with-ktor-part-2-8c431b56dc51)**\r\n- **[D\u00e9ployer un microservice dans Kotlin avec Ktor \u2014 Partie 3](https://innovorder.dev/deploy-a-microservice-in-kotlin-with-ktor-part-3-e99312f0e7f8)**",
+        "end": "2022-05-25T17:50:00",
+        "event": "2022",
+        "format": "LIGHTNING_TALK",
+        "id": "623ad67c8a5c755e7139c703",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHID",
+        "slug": "live-coding-d-un-serveur-web-avec-ktor",
+        "speakerIds": [
+            "renaud_mathieu"
+        ],
+        "start": "2022-05-25T17:30:00",
+        "summary": "Ktor est un framework Kotlin d\u00e9di\u00e9 \u00e0 la cr\u00e9ation de serveurs et de clients asynchrones dans des syst\u00e8mes connect\u00e9s. Dans cette session, nous d\u00e9couvrirons les concepts de base de Ktor 2 en codant en live un serveur HTTP \u00e0 partir de z\u00e9ro \u00e0 l'aide de Ktor Server !",
+        "title": "Live-coding d'un serveur web avec Ktor",
         "topic": "tech",
         "video": null
     },
@@ -1195,43 +1273,23 @@
         "video": null
     },
     {
-        "addedAt": "2022-03-23T09:12:44.728",
-        "description": "Chez **Innovorder**, nous sommes sp\u00e9cialis\u00e9s dans les solutions Android pour les restaurants et nous n'utilisons pas les Play Services. Nous avons donc d\u00e9ploy\u00e9 un micro-service en **Ktor** d\u00e9di\u00e9 \u00e0 la mise \u00e0 jour de nos applications mobiles pour avoir un contr\u00f4le total sur les d\u00e9ploiements de nos mises \u00e0 jour.\r\n\r\nNous croyons fermement en **Ktor** et avons massivement investi dans **Kotlin** au sein de l'entreprise.\r\n\r\nJ'ai \u00e9crit une s\u00e9rie de 3 articles, dont deux ont \u00e9t\u00e9 publi\u00e9s par **Kotlin Weekly**, la plus grande newsletter **Kotlin**.\r\n\r\n- **[D\u00e9ployer un microservice dans Kotlin avec Ktor \u2014 Partie 1](https://innovorder.dev/deploy-a-microservice-in-kotlin-with-ktor-part-1-2691fef75e1d)**\r\n- **[D\u00e9ployer un microservice dans Kotlin avec Ktor \u2014 Partie 2](https://innovorder.dev/deploy-a-microservice-in-kotlin-with-ktor-part-2-8c431b56dc51)**\r\n- **[D\u00e9ployer un microservice dans Kotlin avec Ktor \u2014 Partie 3](https://innovorder.dev/deploy-a-microservice-in-kotlin-with-ktor-part-3-e99312f0e7f8)**",
+        "addedAt": "2022-03-23T09:12:44.743",
+        "description": "Je me suis vraiment \u00e9clat\u00e9 en codant [maposaic.com](maposaic.com) et je voudrais en partager les apprentissages en zoomant sur l'optimisation de l\u2019algorithme avec Rust.\r\nC\u2019est la v2 de [cette pr\u00e9sentation](https://www.conf42.com/JavaScript_2020_Victor_Lebrun_canvas_pixel_transformation) o\u00f9 je m\u2019arr\u00eatais \u00e0 dire que le r\u00e9sultat \u00e9tait beau, mais lent. Maintenant, il est rapide ! Et ce gr\u00e2ce \u00e0 Rust, un langage permettant de compiler facilement en Web Assembly. Rust c\u2019est aussi une super communaut\u00e9. Ne constatant pas d\u2019am\u00e9lioration de performance en premier lieu, j\u2019ai [demand\u00e9 de l\u2019aide](https://www.reddit.com/r/rust/comments/kwdnlo/rust_program_twice_slower_than_javascript_where/) au groupe rust de reddit qui m\u2019a beaucoup aid\u00e9 !",
         "end": "2022-05-25T17:50:00",
         "event": "2022",
         "format": "LIGHTNING_TALK",
-        "id": "623ad67c8a5c755e7139c703",
+        "id": "623ad67c8a5c755e7139c70f",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "AMPHID",
-        "slug": "live-coding-d-un-serveur-web-avec-ktor",
+        "room": "ROOM1",
+        "slug": "rust-a-la-rescousse-des-performances-de-javascript",
         "speakerIds": [
-            "renaud_mathieu"
+            "viconnex"
         ],
         "start": "2022-05-25T17:30:00",
-        "summary": "Ktor est un framework Kotlin d\u00e9di\u00e9 \u00e0 la cr\u00e9ation de serveurs et de clients asynchrones dans des syst\u00e8mes connect\u00e9s. Dans cette session, nous d\u00e9couvrirons les concepts de base de Ktor 2 en codant en live un serveur HTTP \u00e0 partir de z\u00e9ro \u00e0 l'aide de Ktor Server !",
-        "title": "Live-coding d'un serveur web avec Ktor",
+        "summary": "Un fond de carte dans un Canvas. Un algorithme qui parcourt tous ses pixels. Une mosa\u00efque en couleurs. C\u2019est beau ! Mais il faut attendre longtemps... Venez voir comment Rust m\u2019a permis de booster les performances de ces calculs de pixels !",
+        "title": "Rust \u00e0 la rescousse des performances de javascript",
         "topic": "tech",
-        "video": null
-    },
-    {
-        "addedAt": "2022-03-23T09:12:44.713",
-        "description": "Ing\u00e9nieure informaticienne, j\u2019ai quitt\u00e9 mon bled en 2010 pour immigrer chez les Gaulois. Je partage avec vous de \u00ab l\u2019enfer \u00bb  v\u00e9cu \u00e0 la pr\u00e9fecture de Bobigny dans le 9-3, pour renouveler le titre de s\u00e9jour.\r\nComment j\u2019ai mont\u00e9 le GDGRennes-Android? Est-ce que mon premier pr\u00e9nom, \u00e0 connotation africaine, a \u00e9t\u00e9 un frein pour ma recherche d\u2019emploi?  Est-ce que j\u2019ai r\u00e9ussi \u00e0 me faire une petite place dans l\u2019\u00e9cosyst\u00e8me informatique, associatif, collaboratif en France? Que suis-je devenue aujourd\u2019hui?  Venez me poser toutes les questions, sans tabou. Je vous ferais un bilan de 12 ans de vie, d\u2019une ing\u00e9nieure informaticienne immigr\u00e9e, vivant chez les Gaulois...InchAllah. ",
-        "end": "2022-05-25T17:50:00",
-        "event": "2022",
-        "format": "LIGHTNING_TALK",
-        "id": "623ad67c8a5c755e7139c6fa",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "AMPHIC",
-        "slug": "journal-d-une-immigree-fondatrice-du-gdgrennes-android",
-        "speakerIds": [
-            "AnnetLenaNdiaye"
-        ],
-        "start": "2022-05-25T17:30:00",
-        "summary": "En 2010, j\u2019ai immigr\u00e9 chez les Gaulois. Je partagerai avec vous de l\u2019enfer \u00e0 la pr\u00e9fecture de Bobigny dans le 9-3, pour renouveler le titre de s\u00e9jour. Est-ce que mon premier pr\u00e9nom, a \u00e9t\u00e9 un frein pour ma recherche d\u2019emploi? Je vous ferais un bilan de 12 ans de vie, d\u2019une immigr\u00e9e chez les Gaulois.",
-        "title": "Journal d'une immigr\u00e9e, Fondatrice du GDGRennes-Android",
-        "topic": "aliens",
         "video": null
     },
     {
