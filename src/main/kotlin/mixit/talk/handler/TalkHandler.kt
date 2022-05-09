@@ -50,11 +50,15 @@ class TalkHandler(
     fun scheduleView(req: ServerRequest) =
         ok().render(TEMPLATE_SCHEDULE, mapOf(Pair("title", "schedule.title")))
 
+    fun findByEventViewForFeedbackWall(year: Int, req: ServerRequest) =
+        findByEventView(year, req, false, template= "talks-feedback-wall")
+
     fun findByEventView(
         year: Int,
         req: ServerRequest,
         filterOnFavorite: Boolean,
-        topic: String? = null
+        topic: String? = null,
+        template: String = TEMPLATE_LIST
     ): Mono<ServerResponse> =
         req.currentNonEncryptedUserEmail()
             .flatMap { currentUserEmail ->
@@ -67,7 +71,7 @@ class TalkHandler(
                 eventService.findByYear(year).flatMap { event ->
                     val title = if (topic == null) "talks.title.html|$year" else "talks.title.html.$topic|$year"
                     ok().render(
-                        TEMPLATE_LIST,
+                        template,
                         mapOf(
                             Pair("talks", talks.groupBy { it.date ?: "" }),
                             Pair("year", year),

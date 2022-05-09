@@ -139,6 +139,7 @@ class WebsiteRoutes(
             // Talks
             events.map { it.year }.forEach { year ->
                 GET("/$year") { talkHandler.findByEventView(year, it, false) }
+                GET("/admin/$year/feedback-wall") { talkHandler.findByEventViewForFeedbackWall(year, it) }
                 GET("/$year/favorite") { talkHandler.findByEventView(year, it, true) }
                 GET("/$year/makers") { talkHandler.findByEventView(year, it, false, "makers") }
                 GET("/$year/makers/favorite") { talkHandler.findByEventView(year, it, true, "makers") }
