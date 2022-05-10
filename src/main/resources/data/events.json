@@ -1235,7 +1235,13 @@
         "id": "mixit22",
         "organizations": [
             {
-                "organizationLogin": "framasoft"
+                "organizationLogin": "chezdaddy"
+            },
+            {
+                "organizationLogin": "weeefund"
+            },
+            {
+                "organizationLogin": "mixit"
             }
         ],
         "photoUrls": [],
@@ -1365,6 +1371,11 @@
                 "level": "GOLD",
                 "sponsorId": "grandlyon",
                 "subscriptionDate": "2022-04-12"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "cgi",
+                "subscriptionDate": "2022-05-09"
             }
         ],
         "start": "2022-05-24",
@@ -1390,6 +1401,9 @@
             },
             {
                 "volunteerLogin": "mathieu.tourrette"
+            },
+            {
+                "volunteerLogin": "ludovic.bruno"
             }
         ],
         "year": 2022
