@@ -22,7 +22,7 @@ class WebBlogHandler(val service: BlogService, val properties: MixitProperties) 
 
     fun findOneView(req: ServerRequest): Mono<ServerResponse> {
         return service
-            .findBySlug(req.pathVariable("slug"), req.language())
+            .findBySlug(req.pathVariable("slug"))
             .flatMap { post ->
                 ok().render(
                     POST_VIEW,
