@@ -9,5 +9,9 @@ enum class TicketType {
     MIXTEEN,
     ATTENDEE,
     VOLUNTEER,
-    GUEST
+    GUEST,
+    COMPETITION_WINNER,
+    FOOD,
+    MEDIA,
+    MIXETTE
 }
