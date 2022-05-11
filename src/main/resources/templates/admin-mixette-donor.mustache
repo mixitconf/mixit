@@ -25,10 +25,10 @@
       <tbody>
         {{#donations}}
         <tr>
-            <td>{{organizationLogin}}</td>
+            <td>{{login}}</td>
             <td>{{quantity}}</td>
             <td>
-                <a href="/{{#admin}}admin{{/admin}}{{#volunteer}}volunteer{{/volunteer}}/mixette-donation/edit/{{id}}">{{#i18n}}common.actions.update{{/i18n}}</a>
+                <a href="/{{#admin}}admin{{/admin}}{{#volunteer}}volunteer{{/volunteer}}/mixette-donation/edit/{{#id}}{{id}}{{/id}}">{{#i18n}}common.actions.update{{/i18n}}</a>
             </td>
         </tr>
         {{/donations}}

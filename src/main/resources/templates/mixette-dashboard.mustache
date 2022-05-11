@@ -6,22 +6,18 @@
 <div class="container mxt-wrapper--page-content">
     <div class="row">
         <script src="https://code.highcharts.com/highcharts.js"></script>
-        <script src="https://code.highcharts.com/modules/data.js"></script>
-        <script src="https://code.highcharts.com/modules/drilldown.js"></script>
-        <script src="https://code.highcharts.com/modules/exporting.js"></script>
-        <script src="https://code.highcharts.com/modules/export-data.js"></script>
-        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
 
         <figure class="highcharts-figure">
             <div id="container"></div>
         </figure>
 
         <script>
-            // Create the chart
+            console.log('hello');
+
             Highcharts.chart('container', {
                 chart: {type: 'column'},
                 title: {text: '{{#i18n}}mixette.dashboard.chart.title{{/i18n}}'},
-                subtitle: {text: '{{#i18n}}mixette.dashboard.chart.subtitle{{/i18n}}'},
+                subtitle: {text: '{{#i18n}}mixette.dashboard.chart.subtitle{{/i18n}} {{loadAt}}'},
                 xAxis: {type: 'category'},
                 yAxis: {
                     title: {text: '{{#i18n}}mixette.dashboard.chart.axis{{/i18n}}'}
@@ -40,8 +36,8 @@
                         colorByPoint: true,
                         data: [
                         {{#donations}}
-                            { name: '{{name}}', y : {{amount}} }
-                        {{/donations}}
+                            { name: '{{name}}', y : {{amount}} },
+                       {{/donations}}
                         ]
                     }
                 ]
@@ -50,22 +46,19 @@
     </div>
     <div class="row">
         {{#organizations}}
-            <div class="col-6">
+            <div class="col-4">
                 <div class="row">
                     <div class="col-2">
-                        {{#photoUrl}}<img src="{{photoUrl}}" alt="{{company}}" class="mxt-img--sponsors">{{/photoUrl}}
+                        <a href="/user/{{login}}">
+                        {{#photoUrl}}<img src="{{photoUrl}}" alt="{{company}}" class="mxt-img--sponsors" style="max-width: 100%">{{/photoUrl}}
+                        </a>
                     </div>
                     <div class="col-10">
                         <h2>{{company}}</h2>
                     </div>
                 </div>
-                <div class="text-center row">
-                    <ul class="mxt-wrapper-list-inline">
-                        {{#links}}
-                            <li><a href="{{url}}" target="_blank">{{name}}</a></li>
-                        {{/links}}
-                    </ul>
-                </div>
+                <br>
+                <br>
                 {{description}}
             </div>
         {{/organizations}}

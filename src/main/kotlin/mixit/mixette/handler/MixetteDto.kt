@@ -7,10 +7,12 @@ import java.time.Instant
 
 interface MixetteDonationDto {
     fun populate(number: Int, quantity: Int, amount: Double): MixetteDonationDto
+    fun updateRank(number: Int): MixetteDonationDto
 
     val number: Int
     val quantity: Int
     val amount: Double
+    val rank: Int
 }
 
 data class MixetteUserDonationDto(
@@ -18,23 +20,33 @@ data class MixetteUserDonationDto(
     val email: String,
     val ticketNumber: String? = null,
     val login: String? = null,
+    val id: String? = null,
+    override val rank: Int = 0,
     override val number: Int = 0,
     override val quantity: Int = 0,
     override val amount: Double = 0.0
 ) : MixetteDonationDto {
     override fun populate(number: Int, quantity: Int, amount: Double) =
         this.copy(name = this.name, number = number, quantity = quantity, amount = amount)
+
+    override fun updateRank(number: Int): MixetteDonationDto =
+        this.copy(rank = number)
+
 }
 
 data class MixetteOrganizationDonationDto(
     val name: String,
     val login: String,
+    override val rank: Int = 0,
     override val number: Int = 0,
     override val quantity: Int = 0,
     override val amount: Double = 0.0
 ) : MixetteDonationDto {
     override fun populate(number: Int, quantity: Int, amount: Double) =
         this.copy(name = this.name, number = number, quantity = quantity, amount = amount)
+
+    override fun updateRank(number: Int): MixetteDonationDto =
+        this.copy(rank = number)
 }
 
 data class MixetteOrganizationDto(
@@ -72,7 +84,7 @@ data class MixetteDonationDetailedDto(
         organizationName: String
     ) : this(
         year = donation.year,
-        ticketNumber = cryptographer.decrypt(donation.ticketNumber),
+        ticketNumber = cryptographer.decrypt(donation.encryptedTicketNumber),
         userLogin = donation.userLogin,
         userEmail = cryptographer.decrypt(donation.encryptedUserEmail)!!,
         organizationLogin = donation.organizationLogin,
