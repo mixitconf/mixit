@@ -2,8 +2,10 @@ package mixit.mixette.handler
 
 import mixit.MixitProperties
 import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
+import mixit.event.handler.AdminEventHandler.Companion.TIMEZONE
 import mixit.event.model.EventService
 import mixit.mixette.repository.MixetteDonationRepository
+import mixit.util.frenchTalkTimeFormatter
 import mixit.util.language
 import org.springframework.http.MediaType
 import org.springframework.stereotype.Component
@@ -12,6 +14,8 @@ import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.body
 import reactor.core.publisher.Mono
+import java.time.LocalTime
+import java.time.ZoneId
 
 @Component
 class MixetteHandler(
@@ -52,6 +56,7 @@ class MixetteHandler(
                     mapOf(
                         Pair("organizations", organizations.map { it.toSponsorDto(req.language()) }),
                         Pair("donations", donationByOrgas),
+                        Pair("loadAt", LocalTime.now(ZoneId.of(TIMEZONE)).format(frenchTalkTimeFormatter)),
                         Pair("title", "mixette.dashboard.title")
                     )
                 )

@@ -98,7 +98,7 @@ private val englishDateFormatter = DateTimeFormatterBuilder()
 
 private val frenchTalkDateFormatter = DateTimeFormatter.ofPattern("EEEE d MMMM", Locale.FRENCH)
 
-private val frenchTalkTimeFormatter = DateTimeFormatter.ofPattern("HH'h'mm", Locale.FRENCH)
+val frenchTalkTimeFormatter = DateTimeFormatter.ofPattern("HH'h'mm", Locale.FRENCH)
 
 private val englishTalkDateFormatter = DateTimeFormatterBuilder()
     .appendPattern("EEEE")
