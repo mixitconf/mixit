@@ -8,7 +8,7 @@ import java.time.Instant
 data class MixetteDonation(
     val year: String,
     // A donor can be an attendee with a ticket
-    val ticketNumber: String? = null,
+    val encryptedTicketNumber: String? = null,
     // Or a donor can be a registered user
     val userLogin: String? = null,
     // But a user has always an email
@@ -22,7 +22,7 @@ data class MixetteDonation(
     @Id val id: String? = null
 ) {
     init {
-        assert(ticketNumber != null || userLogin != null) {
+        assert(encryptedTicketNumber != null || userLogin != null) {
             "A donation must be made by an attendee with a ticket or a registered login"
         }
     }

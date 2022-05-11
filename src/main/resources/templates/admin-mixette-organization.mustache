@@ -20,9 +20,8 @@
     <table class="table-striped table table-bordered">
       <thead>
         <tr>
-            <th>{{#i18n}}admin.donations.name{{/i18n}}</th>
-            <th>{{#i18n}}admin.donations.login{{/i18n}}</th>
             <th>{{#i18n}}admin.donations.ticket{{/i18n}}</th>
+            <th>{{#i18n}}admin.donations.login{{/i18n}}</th>
             <th>{{#i18n}}admin.donations.quantity{{/i18n}}</th>
             <th>{{#i18n}}common.actions{{/i18n}}</th>
         </tr>
@@ -30,9 +29,8 @@
       <tbody>
         {{#donations}}
             <tr>
-                <td>{{#username}}{{username}}{{/username}}</td>
-                <td>{{#userLogin}}{{userLogin}}{{/userLogin}}</td>
                 <td>{{#ticketNumber}}{{ticketNumber}}{{/ticketNumber}}</td>
+                <td>{{#userLogin}}{{userLogin}}{{/userLogin}}</td>
                 <td>{{quantity}}</td>
                 <td>
                     <a href="/{{#admin}}admin{{/admin}}{{#volunteer}}volunteer{{/volunteer}}/mixette-donation/edit/{{id}}">{{#i18n}}common.actions.update{{/i18n}}</a>

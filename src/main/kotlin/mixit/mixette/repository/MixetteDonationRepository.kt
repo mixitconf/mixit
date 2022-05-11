@@ -58,6 +58,9 @@ class MixetteDonationRepository(
     fun deleteOne(id: String) =
         template.remove<MixetteDonation>(Query(Criteria.where("_id").isEqualTo(id)))
 
+    fun findByTicketNumber(ticketNumber: String, year: String): Flux<MixetteDonation> =
+        template.find(Query(Criteria.where("encryptedTicketNumber").isEqualTo(ticketNumber).and("year").isEqualTo(year)))
+
     fun findByEmail(email: String, year: String): Flux<MixetteDonation> =
         template.find(Query(Criteria.where("encryptedUserEmail").isEqualTo(email).and("year").isEqualTo(year)))
 
