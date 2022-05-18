@@ -1358,11 +1358,6 @@
                 "subscriptionDate": "2022-03-28"
             },
             {
-                "level": "SILVER",
-                "sponsorId": "avanade",
-                "subscriptionDate": "2022-04-05"
-            },
-            {
                 "level": "GOLD",
                 "sponsorId": "energypool",
                 "subscriptionDate": "2022-04-06"
@@ -1376,6 +1371,11 @@
                 "level": "SILVER",
                 "sponsorId": "cgi",
                 "subscriptionDate": "2022-05-09"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "avanade",
+                "subscriptionDate": "2022-05-17"
             }
         ],
         "start": "2022-05-24",
@@ -1404,6 +1404,9 @@
             },
             {
                 "volunteerLogin": "ludovic.bruno"
+            },
+            {
+                "volunteerLogin": "clement-moysan"
             }
         ],
         "year": 2022
