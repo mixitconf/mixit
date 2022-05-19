@@ -10,6 +10,7 @@ enum class TicketType {
     ATTENDEE,
     VOLUNTEER,
     GUEST,
+    GUEST_ONE_TALK,
     COMPETITION_WINNER,
     FOOD,
     MEDIA,
