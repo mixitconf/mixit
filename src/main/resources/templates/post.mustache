@@ -2,15 +2,25 @@
 
 <div class="mxt-wrapper--header">
     <h1 class="text-center pt-5">{{post.title}}</h1>
-    <p class="text-center subheader mxt-text--page-title">{{#i18n}}blog.by{{/i18n}} <strong>{{post.author.firstname}}</strong>, {{#i18n}}blog.on{{/i18n}} <strong>{{post.addedAt}}</strong></p><br />
+    <p class="text-center subheader mxt-text--page-title">{{#i18n}}blog.by{{/i18n}}
+        <strong>{{post.author.firstname}}</strong>, {{#i18n}}blog.on{{/i18n}} <strong>{{post.addedAt}}</strong></p><br/>
 </div>
 
 <div class="container mxt-wrapper--page-content mxt-blog">
     <p>{{#markdown}}{{post.headline}}{{/markdown}}</p>
     {{#post.content}}
-    <hr />
-    <p>{{#markdown}}{{post.content}}{{/markdown}}</p>
+        <hr/>
+        <p>{{#markdown}}{{post.content}}{{/markdown}}</p>
     {{/post.content}}
 </div>
 
+<script>
+    const imgs = document.getElementsByTagName('img');
+    for (const img of imgs) {
+        const parent = img.parentElement;
+        if (parent) {
+            parent.style.textAlign = 'center';
+        }
+    }
+</script>
 {{> footer}}
