@@ -37,7 +37,7 @@ $link-decoration: none;
 $link-hover-decoration: none;
 $enable-cssgrid: true;
 
-  // 3. Include remainder of required Bootstrap stylesheets
+// 3. Include remainder of required Bootstrap stylesheets
 @import "../../../node_modules/bootstrap/scss/variables";
 @import "../../../node_modules/bootstrap/scss/mixins";
 @import "../../../node_modules/bootstrap/scss/root";
@@ -159,6 +159,7 @@ h3 {
   position: relative;
   top: 0.3em;
   width: 2em;
+
   path {
     fill: $primary-color;
   }
@@ -182,6 +183,7 @@ h3 {
 .mxt-img--grayscale {
   max-width: 100%;
   filter: grayscale(100%);
+
   &:hover {
     filter: grayscale(0%);
   }
@@ -211,6 +213,7 @@ h3 {
 
 .mxt-img--container {
   position: relative;
+
   &:hover .mxt-img--overlay {
     opacity: 0.8;
     cursor: pointer;
@@ -222,6 +225,7 @@ h3 {
   height: auto;
   display: block;
   filter: grayscale(70%);
+
   &:hover {
     filter: grayscale(30%);
   }
@@ -282,11 +286,13 @@ h3 {
 
 .mxt-wrapper-list-inline {
   padding-left: 0;
+
   > li {
     display: inline;
     margin-right: 2em;
   }
 }
+
 .mxt-wrapper--body {
   min-height: 99vh;
   display: flex;
@@ -401,7 +407,7 @@ h3 {
 
 .mxt-wrapper--intrinsic iframe {
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -427,10 +433,11 @@ h3 {
   font-size: 1.3rem;
 }
 
-.mxt-accordion-talk-line{
+.mxt-accordion-talk-line {
   display: flex;
   align-items: baseline;
 }
+
 .mxt-text--page-title {
   color: #ffffff;
 }
@@ -527,19 +534,23 @@ h3 {
   text-transform: uppercase;
   font-size: 1.3rem;
   color: $secondary-color;
+
   &:hover {
     color: $primary-color;
   }
 }
 
-.mxt-tracks{
+.mxt-tracks {
   padding-bottom: 1rem;
   padding-top: 1rem;
 }
 
 .mxt-blog {
-    img {
-        max-width: 100%;
-        margin-bottom: 1em;
-    }
+  img {
+    max-width: 100%;
+    max-height: 60vh;
+    margin-bottom: 1em;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
