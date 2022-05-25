@@ -27,9 +27,11 @@
             <label class="form-label {{#errors.organizationLogin}}is-invalid{{/errors.organizationLogin}}">{{#i18n}}admin.donations.orga{{/i18n}}</label>
             {{#creationMode}}
                 <select class="form-control {{#errors.organizationLogin}}is-invalid{{/errors.organizationLogin}}" name="organizationLogin" required>
+                    <option value=""></option>
                     {{#organizations}}
                         <option value="{{login}}" {{#selected}}selected{{/selected}}>{{name}}</option>
                     {{/organizations}}
+
                 </select>
             {{/creationMode}}
             {{^creationMode}}
