@@ -30,7 +30,7 @@ import java.util.Locale
 class AuthenticationService(
     private val userRepository: UserRepository,
     private val userService: UserService,
-    private val ticketRepository: LotteryRepository,
+    private val lotteryRepository: LotteryRepository,
     private val emailService: EmailService,
     private val emailValidator: EmailValidator,
     private val cryptographer: Cryptographer,
@@ -82,14 +82,14 @@ class AuthenticationService(
         userRepository.findByNonEncryptedEmail(nonEncryptedMail)
             .switchIfEmpty(
                 Mono.defer {
-                    ticketRepository.findByEncryptedEmail(cryptographer.decrypt(nonEncryptedMail)!!)
+                    lotteryRepository.findByEncryptedEmail(cryptographer.encrypt(nonEncryptedMail)!!)
                         .flatMap {
                             createUserIfEmailDoesNotExist(
                                 nonEncryptedMail,
                                 createUser(nonEncryptedMail, it.firstname, it.lastname).second
                             )
                         }
-                        .switchIfEmpty(Mono.empty<User>())
+                        .switchIfEmpty(Mono.empty())
                 }
             )
 
@@ -159,15 +159,11 @@ class AuthenticationService(
 
     fun updateNewsletterSubscription(user: User, tokenForNewsletter: Boolean): Mono<User> =
         if(tokenForNewsletter) {
-            userRepository
-                .save(user.copy(newsletterSubscriber = true))
-                .flatMap { userService.updateReference(it) }
+            userRepository.save(user.copy(newsletterSubscriber = true))
         } else if(user.email == null){
             // Sometimes we can have a email hash in the DB but not the email (for legacy users). So in this case
             // we store the email
-            userRepository
-                .save(user.copy(newsletterSubscriber = true))
-                .flatMap { userService.updateReference(it) }
+            userService.updateReference(user).flatMap { userRepository.save(it) }
         } else {
             Mono.just(user)
         }
