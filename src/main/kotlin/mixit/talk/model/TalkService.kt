@@ -1,5 +1,6 @@
 package mixit.talk.model
 
+import kotlinx.coroutines.reactor.awaitSingle
 import mixit.talk.repository.TalkRepository
 import mixit.user.model.UserUpdateEvent
 import mixit.user.repository.UserRepository
@@ -31,6 +32,9 @@ class TalkService(
             Mono.justOrEmpty(if (topic == null) eventTalks else eventTalks.filter { it.topic == topic })
         }
 
+    suspend fun coFindByEvent(eventId: String, topic: String? = null): List<CachedTalk> =
+        findByEvent(eventId, topic).awaitSingle()
+
     fun findBySlug(slug: String) =
         findAll().flatMap { talks ->
             Mono.justOrEmpty(talks.first { it.slug == slug })
@@ -41,10 +45,12 @@ class TalkService(
             Mono.justOrEmpty(talks.first { it.id == id })
         }
 
-    fun findByEventAndSlug(eventId: String, slug: String) =
-        findAll().flatMap { talks ->
-            Mono.justOrEmpty(talks.first { it.slug == slug && it.event == eventId })
-        }
+    suspend fun findByEventAndSlug(eventId: String, slug: String) =
+        findAll()
+            .flatMap { talks ->
+                Mono.justOrEmpty(talks.first { it.slug == slug && it.event == eventId })
+            }
+            .awaitSingle()
 
     fun findBySpeakerId(speakerIds: List<String>, talkIdExcluded: String): Mono<List<CachedTalk>> =
         findAll().flatMap { talks ->
@@ -56,11 +62,21 @@ class TalkService(
             )
         }
 
+    suspend fun coFindBySpeakerId(speakerIds: List<String>, talkIdExcluded: String): List<CachedTalk> =
+        findBySpeakerId(speakerIds, talkIdExcluded).awaitSingle()
+
     fun findByEventAndTalkIds(eventId: String, talkIds: List<String>, topic: String? = null): Mono<List<CachedTalk>> =
         findAll().flatMap { talks ->
             val eventTalks = talks.filter { it.event == eventId && talkIds.contains(it.id) }.sortedBy { it.start }
             Mono.justOrEmpty(if (topic == null) eventTalks else eventTalks.filter { it.topic == topic })
         }
+
+    suspend fun coFindByEventAndTalkIds(
+        eventId: String,
+        talkIds: List<String>,
+        topic: String? = null
+    ): List<CachedTalk> =
+        findByEventAndTalkIds(eventId, talkIds, topic).awaitSingle()
 
     @EventListener
     fun handleUserUpdate(userUpdateEvent: UserUpdateEvent) {

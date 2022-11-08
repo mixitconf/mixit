@@ -1,17 +1,24 @@
 package mixit.talk.handler
 
+import kotlinx.coroutines.reactor.awaitSingle
 import mixit.MixitProperties
 import mixit.event.model.CachedEvent
 import mixit.event.model.EventService
 import mixit.event.model.SponsorshipLevel
-import mixit.favorite.model.Favorite
 import mixit.favorite.repository.FavoriteRepository
+import mixit.routes.MustacheI18n
+import mixit.routes.MustacheTemplate.FeedbackWall
+import mixit.routes.MustacheTemplate.Media
+import mixit.routes.MustacheTemplate.Schedule
+import mixit.routes.MustacheTemplate.TalkDetail
+import mixit.routes.MustacheTemplate.TalkEdit
+import mixit.routes.MustacheTemplate.TalkList
 import mixit.talk.model.CachedTalk
 import mixit.talk.model.Language
 import mixit.talk.model.TalkService
 import mixit.user.handler.toDto
 import mixit.user.handler.toSponsorDto
-import mixit.util.currentNonEncryptedUserEmail
+import mixit.util.coCurrentNonEncryptedUserEmail
 import mixit.util.enumMatcher
 import mixit.util.extractFormData
 import mixit.util.language
@@ -26,8 +33,8 @@ import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.util.UriUtils
 import reactor.core.publisher.Mono
-import reactor.kotlin.core.publisher.switchIfEmpty
 import java.nio.charset.StandardCharsets
+
 
 @Component
 class TalkHandler(
@@ -40,138 +47,120 @@ class TalkHandler(
 ) {
 
     companion object {
-        const val TEMPLATE_SCHEDULE = "schedule"
-        const val TEMPLATE_LIST = "talks"
-        const val TEMPLATE_MEDIAS = "medias"
-        const val TEMPLATE_VIEW = "talk"
-        const val TEMPLATE_EDIT = "talk-edit"
+        fun media(req: ServerRequest, year: Int, topic: String? = null) =
+            TalkViewConfig(
+                year,
+                req,
+                topic,
+                template = Media.template,
+                title = "medias.title.html"
+            )
+
+        fun mediaWithFavorites(req: ServerRequest, year: Int, topic: String? = null) =
+            TalkViewConfig(
+                year,
+                req,
+                topic,
+                template = Media.template,
+                filterOnFavorite = true,
+                title = "medias.title.html"
+            )
+
+        fun talks(req: ServerRequest, year: Int, topic: String? = null) =
+            TalkViewConfig(year, req, topic)
+
+        fun feedbackWall(req: ServerRequest, year: Int, topic: String? = null) =
+            TalkViewConfig(year, req, topic, template = FeedbackWall.template)
+
+        fun talksWithFavorites(req: ServerRequest, year: Int, topic: String? = null) =
+            TalkViewConfig(year, req, topic, filterOnFavorite = true)
     }
 
+    data class TalkViewConfig(
+        val year: Int,
+        val req: ServerRequest,
+        val topic: String? = null,
+        val filterOnFavorite: Boolean = false,
+        val template: String = TalkList.template,
+        val title: String = "talks.title.html"
+    )
+
+
     fun scheduleView(req: ServerRequest) =
-        ok().render(TEMPLATE_SCHEDULE, mapOf(Pair("title", "schedule.title")))
+        ok().render(Schedule.template, mapOf("title" to "schedule.title"))
 
-    fun findByEventViewForFeedbackWall(year: Int, req: ServerRequest) =
-        findByEventView(year, req, false, template= "talks-feedback-wall")
 
-    fun findByEventView(
-        year: Int,
-        req: ServerRequest,
-        filterOnFavorite: Boolean,
-        topic: String? = null,
-        template: String = TEMPLATE_LIST
-    ): Mono<ServerResponse> =
-        req.currentNonEncryptedUserEmail()
-            .flatMap { currentUserEmail ->
-                if (currentUserEmail.isNotEmpty())
-                    loadTalkAndFavorites(year, req.language(), filterOnFavorite, currentUserEmail, topic)
-                else
-                    service.findByEvent(year.toString(), topic).map { talks -> talks.map { it.toDto(req.language()) } }
-            }
-            .flatMap { talks ->
-                eventService.findByYear(year).flatMap { event ->
-                    val title = if (topic == null) "talks.title.html|$year" else "talks.title.html.$topic|$year"
-                    ok().render(
-                        template,
-                        mapOf(
-                            Pair("talks", talks.groupBy { it.date ?: "" }),
-                            Pair("year", year),
-                            Pair("schedulingFileUrl", event.schedulingFileUrl),
-                            Pair("title", title),
-                            Pair("filtered", filterOnFavorite),
-                            Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
-                            Pair("topic", topic),
-                            Pair("sponsors", loadSponsors(event))
-                        )
-                    )
+    suspend fun findByEventView(config: TalkViewConfig): ServerResponse {
+        val currentUserEmail = config.req.coCurrentNonEncryptedUserEmail()
+        val talks = loadTalkAndFavorites(config, currentUserEmail)
+        val event = eventService.coFindByYear(config.year)
+        val title = if (config.topic == null) "${config.title}|${config.year}" else
+            "${config.title}.${config.topic}|${config.year}"
+
+        return ok()
+            .render(
+                config.template,
+                mapOf(
+                    MustacheI18n.BASE_URI to UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8),
+                    MustacheI18n.EVENT to event.toEvent(),
+                    MustacheI18n.SPONSORS to loadSponsors(event),
+                    MustacheI18n.TALKS to talks.groupBy { it.date ?: "" },
+                    MustacheI18n.TITLE to title,
+                    MustacheI18n.YEAR to config.year,
+                    "schedulingFileUrl" to event.schedulingFileUrl,
+                    "filtered" to config.filterOnFavorite,
+                    "topic" to config.topic,
+                    "filtered" to config.filterOnFavorite,
+                    "videoUrl" to event.videoUrl?.url?.toVimeoPlayerUrl(),
+                    "hasPhotosOrVideo" to (event.videoUrl != null || event.photoUrls.isNotEmpty())
+                )
+            )
+            .awaitSingle()
+    }
+
+    private suspend fun loadTalkAndFavorites(config: TalkViewConfig, currentUserEmail: String): List<TalkDto> =
+        if (currentUserEmail.isEmpty()) {
+            service.coFindByEvent(config.year.toString(), config.topic).map { it.toDto(config.req.language()) }
+        } else {
+            val favoriteTalkIds = favoriteRepository.coFindByEmail(currentUserEmail).map { it.talkId }
+            if (config.filterOnFavorite) {
+                service.coFindByEventAndTalkIds(config.year.toString(), favoriteTalkIds, config.topic).map {
+                    it.toDto(config.req.language(), favorite = true)
                 }
-            }
-
-    fun findMediaByEventView(
-        year: Int,
-        req: ServerRequest,
-        filterOnFavorite: Boolean,
-        topic: String? = null
-    ): Mono<ServerResponse> =
-        req.currentNonEncryptedUserEmail()
-            .flatMap { currentUserEmail ->
-                loadTalkAndFavorites(year, req.language(), filterOnFavorite, currentUserEmail, topic)
-            }
-            .switchIfEmpty {
-                service.findByEvent(year.toString(), topic).map { talks -> talks.map { it.toDto(req.language()) } }
-            }
-            .flatMap { talks ->
-                eventService.findByYear(year).flatMap { event ->
-                    ok().render(
-                        TEMPLATE_MEDIAS,
-                        mapOf(
-                            Pair("talks", talks.sortedBy { it.title }),
-                            Pair("topic", topic),
-                            Pair("year", year),
-                            Pair("title", "medias.title.html|$year"),
-                            Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
-                            Pair("sponsors", loadSponsors(event)),
-                            Pair("filtered", filterOnFavorite),
-                            Pair("event", event.toEvent()),
-                            Pair("videoUrl", event.videoUrl?.url?.toVimeoPlayerUrl()),
-                            Pair("hasPhotosOrVideo", event.videoUrl != null || event.photoUrls.isNotEmpty())
-                        )
-                    )
-                }
-            }
-
-    private fun loadTalkAndFavorites(
-        year: Int,
-        language: Language,
-        filterOnFavorite: Boolean,
-        currentUserEmail: String,
-        topic: String? = null
-    ): Mono<List<TalkDto>> =
-        favoriteRepository.findByEmail(currentUserEmail).collectList().flatMap { favorites ->
-            val favoriteTalkIds = favorites.map { it.talkId }
-            if (filterOnFavorite) {
-                service.findByEventAndTalkIds(year.toString(), favoriteTalkIds, topic)
-                    .map { talks ->
-                        talks.map { it.toDto(language, favorite = true) }
-                    }
             } else {
-                service.findByEvent(year.toString(), topic)
-                    .map { talks ->
-                        talks.map { it.toDto(language, favorite = favoriteTalkIds.contains(it.id)) }
-                    }
+                service.coFindByEvent(config.year.toString(), config.topic).map {
+                    it.toDto(config.req.language(), favorite = favoriteTalkIds.contains(it.id))
+                }
             }
         }
 
-    fun findOneView(year: Int, req: ServerRequest): Mono<ServerResponse> =
-        req.currentNonEncryptedUserEmail()
-            .flatMap { currentUserEmail -> favoriteRepository.findByEmail(currentUserEmail).collectList() }
-            .switchIfEmpty { Mono.just(emptyList<Favorite>()) }
-            .flatMap { favorites ->
-                eventService.findByYear(year).flatMap { event ->
-                    service.findByEventAndSlug(year.toString(), req.pathVariable("slug")).flatMap { talk ->
-                        val lang = req.language()
-                        val inFavorite = favorites.any { talk.id == it.talkId }
-                        val speakers = talk.speakers.map { it.toDto(lang) }.sortedBy { it.firstname }
-                        val otherTalks = service.findBySpeakerId(speakers.map { it.login }, talk.id)
-                            .map { talks -> talks.map { it.toDto(lang) } }
+    suspend fun findOneView(req: ServerRequest, year: Int): ServerResponse {
+        val lang = req.language()
+        val currentUserEmail = req.coCurrentNonEncryptedUserEmail()
+        val event = eventService.coFindByYear(year)
+        val favoriteTalkIds = favoriteRepository.coFindByEmail(currentUserEmail).map { it.talkId }
+        val talk = service.findByEventAndSlug(year.toString(), req.pathVariable("slug"))
+        val speakers = talk.speakers.map { it.toDto(lang) }.sortedBy { it.firstname }
+        val otherTalks = service.coFindBySpeakerId(speakers.map { it.login }, talk.id).map { it.toDto(lang) }
 
-                        ok().render(
-                            TEMPLATE_VIEW,
-                            mapOf(
-                                Pair("talk", talk.toDto(req.language())),
-                                Pair("speakers", talk.speakers.map { it.toDto(lang) }.sortedBy { it.firstname }),
-                                Pair("othertalks", otherTalks),
-                                Pair("favorites", inFavorite),
-                                Pair("year", year),
-                                Pair("hasOthertalks", otherTalks.map { it.isNotEmpty() }),
-                                Pair("title", "talk.html.title|${talk.title}"),
-                                Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
-                                Pair("vimeoPlayer", talk.video.toVimeoPlayerUrl()),
-                                Pair("sponsors", loadSponsors(event))
-                            )
-                        )
-                    }
-                }
-            }
+        return ok()
+            .render(
+                TalkDetail.template,
+                mapOf(
+                    MustacheI18n.YEAR to year,
+                    MustacheI18n.TITLE to "talk.html.title|${talk.title}",
+                    MustacheI18n.BASE_URI to UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8),
+                    MustacheI18n.SPONSORS to loadSponsors(event),
+                    "talk" to talk.toDto(req.language()),
+                    "speakers" to talk.speakers.map { it.toDto(lang) }.sortedBy { it.firstname },
+                    "othertalks" to otherTalks,
+                    "favorites" to favoriteTalkIds.any { talk.id == it },
+                    "hasOthertalks" to otherTalks.isNotEmpty(),
+                    "vimeoPlayer" to talk.video.toVimeoPlayerUrl()
+                )
+            )
+            .awaitSingle()
+    }
 
     fun editTalkView(req: ServerRequest) =
         service
@@ -180,7 +169,7 @@ class TalkHandler(
 
     private fun editTalkViewDetail(req: ServerRequest, talk: CachedTalk, errors: Map<String, String>) =
         ok().render(
-            TEMPLATE_EDIT,
+            TalkEdit.template,
             mapOf(
                 Pair("talk", talk.toDto(req.language())),
                 Pair("speakers", talk.speakers.map { it.toDto(req.language()) }),

@@ -2,6 +2,8 @@ package mixit.user.repository
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import kotlinx.coroutines.reactor.awaitSingle
+import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.security.model.Cryptographer
 import mixit.user.model.Role
 import mixit.user.model.User
@@ -69,6 +71,9 @@ class UserRepository(
     fun findAll() =
         template.findAll<User>().doOnComplete { logger.info("Load all users") }
 
+    suspend fun coFindAll(): List<User> =
+        findAll().collectList().awaitSingle()
+
     fun findAllByIds(login: List<String>): Flux<User> {
         val criteria = where("login").inValues(login)
         return template.find(Query(criteria))
@@ -76,6 +81,9 @@ class UserRepository(
 
     fun findOne(login: String) =
         template.findById<User>(login)
+
+    suspend fun coFindOne(login: String): User? =
+        findOne(login).awaitSingleOrNull()
 
     fun findMany(logins: List<String>) =
         template.find<User>(Query(where("_id").inValues(logins)))

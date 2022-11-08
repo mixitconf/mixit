@@ -1,5 +1,6 @@
 package mixit.user.model
 
+import kotlinx.coroutines.reactor.awaitSingle
 import mixit.security.model.Cryptographer
 import mixit.user.repository.UserRepository
 import mixit.util.cache.CacheTemplate
@@ -34,6 +35,9 @@ class UserService(
     fun findByRoles(vararg roles: Role): Mono<List<CachedUser>> =
         findAll().map { elements -> elements.filter { roles.contains(it.role) } }
 
+    suspend fun coFindByRoles(staff: Role, staffInPause: Role) =
+        findByRoles(staff, staffInPause).awaitSingle()
+
     fun findAllByIds(userIds: List<String>): Mono<List<CachedUser>> =
         findAll().map { elements -> elements.filter { userIds.contains(it.login) } }
 
@@ -59,4 +63,6 @@ class UserService(
                 it.newsletterSubscriber = user.newsletterSubscriber
                 user
             }
+
+
 }

@@ -1,5 +1,6 @@
 package mixit.util
 
+import kotlinx.coroutines.reactor.awaitSingle
 import mixit.security.MixitWebFilter
 import mixit.talk.model.Language
 import org.commonmark.ext.autolink.AutolinkExtension
@@ -38,11 +39,10 @@ import javax.crypto.spec.SecretKeySpec
 // Spring WebFlux extensions
 // -------------------------
 
-fun ServerRequest.language() =
+fun ServerRequest.language(): Language =
     Language.findByTag(
-        if (this.headers().asHttpHeaders().contentLanguage != null) this.headers()
-            .asHttpHeaders().contentLanguage!!.language
-        else this.headers().asHttpHeaders().acceptLanguageAsLocales.first().language
+        this.headers().asHttpHeaders().contentLanguage?.language ?: this.headers()
+            .asHttpHeaders().acceptLanguageAsLocales.first().language
     )
 
 fun ServerRequest.locale(): Locale =
@@ -53,10 +53,19 @@ fun ServerRequest.extractFormData(): Mono<Map<String, String?>> =
         data.toSingleValueMap().mapValues { if (it.value.isNullOrEmpty()) null else it.value }
     }
 
+suspend fun ServerRequest.coExtractFormData(): Map<String, String?> =
+    this.extractFormData().awaitSingle()
+
 fun ServerRequest.currentNonEncryptedUserEmail(): Mono<String> =
     this.session().map {
         it.getAttribute(MixitWebFilter.SESSION_EMAIL_KEY) ?: ""
     }
+
+// TODO rename
+suspend fun ServerRequest.coCurrentNonEncryptedUserEmail(): String =
+    this.session()
+        .map { it.getAttribute(MixitWebFilter.SESSION_EMAIL_KEY) ?: "" }
+        .awaitSingle()
 
 fun ServerResponse.BodyBuilder.json() = contentType(APPLICATION_JSON)
 
@@ -124,12 +133,12 @@ private fun getOrdinal(n: Int) =
 // ----------------
 // Other extensions
 // ----------------
-
-fun String.markFoundOccurrences(searchTerms: List<String>? = emptyList()) = if (searchTerms == null || searchTerms.isEmpty()) this else {
-    var str = this
-    searchTerms.forEach { str = str.replace(it, "<span class=\"mxt-text--found\">$it</span>", true) }
-    str
-}
+fun String.markFoundOccurrences(searchTerms: List<String> = emptyList()): String =
+    if (searchTerms.isEmpty()) this else {
+        var str = this
+        searchTerms.forEach { str = str.replace(it, "<span class=\"mxt-text--found\">$it</span>", true) }
+        str
+    }
 
 fun String.stripAccents() = Normalizer
     .normalize(this, Normalizer.Form.NFD)
@@ -195,7 +204,7 @@ fun String.decrypt(key: String, initVector: String): String? {
     return null
 }
 
-fun newToken():String = UUID.randomUUID().toString().substring(0, 14).replace("-", "")
+fun newToken(): String = UUID.randomUUID().toString().substring(0, 14).replace("-", "")
 
 val parser: Parser by lazy { Parser.builder().extensions(listOf(AutolinkExtension.create())).build() }
 val renderer: HtmlRenderer by lazy { HtmlRenderer.builder().build() }

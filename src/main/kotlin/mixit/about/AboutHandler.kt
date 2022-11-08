@@ -1,69 +1,87 @@
 package mixit.about
 
+import kotlinx.coroutines.reactor.awaitSingle
 import mixit.event.handler.AdminEventHandler
 import mixit.event.model.EventService
 import mixit.event.model.SponsorshipLevel
+import mixit.routes.MustacheI18n
+import mixit.routes.MustacheTemplate.About
+import mixit.routes.MustacheTemplate.Accessibility
+import mixit.routes.MustacheTemplate.CodeOfConduct
+import mixit.routes.MustacheTemplate.Come
+import mixit.routes.MustacheTemplate.Faq
+import mixit.routes.MustacheTemplate.Search
 import mixit.user.handler.toSponsorDto
 import mixit.user.model.Role
 import mixit.user.model.UserService
 import mixit.util.language
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
+import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 
 @Component
 class AboutHandler(val userService: UserService, val eventService: EventService) {
 
-    fun findAboutView(req: ServerRequest) = userService
-        .findByRoles(Role.STAFF, Role.STAFF_IN_PAUSE)
-        .flatMap { users ->
-            eventService
-                .findByYear(AdminEventHandler.CURRENT_EVENT.toInt())
-                .flatMap { event ->
-                    val staff = users.filter { it.role == Role.STAFF }.shuffled()
-                    val staffInPause = users.filter { it.role == Role.STAFF_IN_PAUSE }.shuffled()
-                    val volunteers = event.volunteers.shuffled()
-                    ok().render(
-                        "about",
-                        mapOf(
-                            Pair("volunteers", volunteers.map { it.toDto(req.language()) }),
-                            Pair("hasVolunteers", volunteers.isNotEmpty()),
-                            Pair("staff", staff.map { it.toDto(req.language()) }),
-                            Pair("inactiveStaff", staffInPause.map { it.toDto(req.language()) }),
-                            Pair("title", "about.title")
-                        )
+    suspend fun findAboutView(req: ServerRequest): ServerResponse {
+        val users = userService.coFindByRoles(Role.STAFF, Role.STAFF_IN_PAUSE)
+        val event = eventService.coFindByYear(AdminEventHandler.CURRENT_EVENT.toInt())
+
+        val staff = users.filter { it.role == Role.STAFF }.shuffled()
+        val staffInPause = users.filter { it.role == Role.STAFF_IN_PAUSE }.shuffled()
+        val volunteers = event.volunteers.shuffled()
+        val lang = req.language()
+        return ok()
+            .render(
+                About.template,
+                mapOf(
+                    MustacheI18n.TITLE to "about.title",
+                    "volunteers" to volunteers.map { it.toDto(lang) },
+                    "hasVolunteers" to volunteers.isNotEmpty(),
+                    "staff" to staff.map { it.toDto(lang) },
+                    "inactiveStaff" to staffInPause.map { it.toDto(lang) }
+                )
+            )
+            .awaitSingle()
+    }
+
+    suspend fun faqView(req: ServerRequest): ServerResponse =
+        ok()
+            .render(Faq.template, mapOf(MustacheI18n.TITLE to "faq.title"))
+            .awaitSingle()
+
+    suspend fun comeToMixitView(req: ServerRequest): ServerResponse {
+        val event = eventService.coFindByYear(AdminEventHandler.CURRENT_EVENT.toInt())
+        val goldSponsors = event.filterBySponsorLevel(SponsorshipLevel.GOLD)
+
+        return ok()
+            .render(
+                Come.template,
+                mapOf(
+                    MustacheI18n.TITLE to "come.title",
+                    MustacheI18n.YEAR to event.year,
+                    MustacheI18n.SPONSORS to mapOf(
+                        "sponsors-gold" to goldSponsors.map { it.toSponsorDto() },
+                        "sponsors-others" to event.sponsors.filterNot { goldSponsors.contains(it) }
+                            .map { it.toSponsorDto() }
                     )
-                }
-        }
+                )
+            )
+            .awaitSingle()
+    }
 
-    fun faqView(req: ServerRequest) =
-        ok().render("faq", mapOf(Pair("title", "faq.title")))
+    suspend fun codeConductView(req: ServerRequest): ServerResponse =
+        ok()
+            .render(CodeOfConduct.template, mapOf(MustacheI18n.TITLE to "code-of-conduct.title"))
+            .awaitSingle()
 
-    fun comeToMixitView(req: ServerRequest) =
-        eventService
-            .findByYear(AdminEventHandler.CURRENT_EVENT.toInt())
-            .flatMap { event ->
-                event.filterBySponsorLevel(SponsorshipLevel.GOLD).let { sponsors ->
-                    ok().render(
-                        "come", mapOf(
-                            Pair("title", "come.title"),
-                            Pair("year", event.year),
-                            Pair("sponsors", mapOf(
-                                Pair("sponsors-gold", sponsors.map { it.toSponsorDto() }),
-                                Pair("sponsors-others", event.sponsors.filterNot { sponsors.contains(it) }.map { it.toSponsorDto() })
-                            )),
+    suspend fun accessibilityView(req: ServerRequest): ServerResponse =
+        ok()
+            .render(Accessibility.template, mapOf(MustacheI18n.TITLE to "accessibility.title"))
+            .awaitSingle()
 
-                        )
-                    )
-                }
-            }
-
-    fun codeConductView(req: ServerRequest) =
-        ok().render("code-of-conduct", mapOf(Pair("title", "code-of-conduct.title")))
-
-    fun accessibilityView(req: ServerRequest) =
-        ok().render("accessibility", mapOf(Pair("title", "accessibility.title")))
-
-    fun findFullTextView(req: ServerRequest) =
-        ok().render("search", mapOf(Pair("title", "search.title")))
+    suspend fun findFullTextView(req: ServerRequest): ServerResponse =
+        ok()
+            .render(Search.template, mapOf(MustacheI18n.TITLE to "search.title"))
+            .awaitSingle()
 }

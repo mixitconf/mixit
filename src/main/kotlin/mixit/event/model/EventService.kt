@@ -1,5 +1,6 @@
 package mixit.event.model
 
+import kotlinx.coroutines.reactor.awaitSingle
 import mixit.MixitApplication.Companion.speakerStarInCurrentEvent
 import mixit.MixitApplication.Companion.speakerStarInHistory
 import mixit.event.repository.EventRepository
@@ -29,8 +30,14 @@ class EventService(
     override fun findAll(): Mono<List<CachedEvent>> =
         findAll { repository.findAll().flatMap { event -> loadEventUsers(event) }.collectList() }
 
+    suspend fun coFindAll(): List<CachedEvent> =
+        findAll().awaitSingle()
+
     fun findByYear(year: Int): Mono<CachedEvent> =
         findAll().map { events -> events.first { it.year == year } }
+
+    suspend fun coFindByYear(year: Int): CachedEvent =
+        findByYear(year).awaitSingle()
 
     fun save(event: Event) =
         repository.save(event).doOnSuccess { cache.invalidateAll() }

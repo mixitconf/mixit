@@ -10,6 +10,7 @@ import mixit.blog.handler.WebBlogHandler
 import mixit.event.handler.AdminEventHandler
 import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
 import mixit.event.model.Event
+import mixit.event.model.EventService
 import mixit.event.model.SponsorshipLevel
 import mixit.mailing.handler.MailingHandler
 import mixit.mailing.handler.MailingListHandler
@@ -18,6 +19,12 @@ import mixit.mixette.handler.MixetteHandler
 import mixit.security.handler.AuthenticationHandler
 import mixit.talk.handler.AdminTalkHandler
 import mixit.talk.handler.TalkHandler
+import mixit.talk.handler.TalkHandler.Companion.feedbackWall
+import mixit.talk.handler.TalkHandler.Companion.media
+import mixit.talk.handler.TalkHandler.Companion.mediaWithFavorites
+import mixit.talk.handler.TalkHandler.Companion.talks
+import mixit.talk.handler.TalkHandler.Companion.talksWithFavorites
+import mixit.talk.model.Topic
 import mixit.ticket.handler.AdminLotteryHandler
 import mixit.ticket.handler.AdminTicketHandler
 import mixit.ticket.handler.LotteryHandler
@@ -33,6 +40,7 @@ import org.springframework.context.MessageSource
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.DependsOn
+import org.springframework.core.annotation.Order
 import org.springframework.core.io.ClassPathResource
 import org.springframework.http.MediaType.APPLICATION_FORM_URLENCODED
 import org.springframework.http.MediaType.TEXT_EVENT_STREAM
@@ -41,6 +49,7 @@ import org.springframework.http.MediaType.TEXT_PLAIN
 import org.springframework.web.reactive.function.server.RenderingResponse
 import org.springframework.web.reactive.function.server.RouterFunctions.resources
 import org.springframework.web.reactive.function.server.ServerResponse
+import org.springframework.web.reactive.function.server.coRouter
 import org.springframework.web.reactive.function.server.router
 import reactor.kotlin.core.publisher.toMono
 import java.util.Locale
@@ -69,12 +78,81 @@ class WebsiteRoutes(
     private val userHandler: UserHandler,
     private val messageSource: MessageSource,
     private val properties: MixitProperties,
-    private val objectMapper: ObjectMapper
+    private val objectMapper: ObjectMapper,
+    private val eventService: EventService
 ) {
 
     private val logger = LoggerFactory.getLogger(WebsiteRoutes::class.java)
 
     @Bean
+    @Order(2)
+    fun websiteCoRouter() =
+        coRouter {
+            accept(TEXT_HTML).nest {
+                "/admin".nest {
+                    GET("/admin/users", adminUserHandler::adminUsers)
+                    GET("/admin/users/edit/{login}", adminUserHandler::editUser)
+                    GET("/admin/users/create", adminUserHandler::createUser)
+                }
+
+                GET("/about", aboutHandler::findAboutView)
+                GET("/accessibility", aboutHandler::accessibilityView)
+                GET("/codeofconduct", aboutHandler::codeConductView)
+                GET("/code-of-conduct", aboutHandler::codeConductView)
+                GET("/come", aboutHandler::comeToMixitView)
+                GET("/faq", aboutHandler::faqView)
+                GET("/search") { aboutHandler.findFullTextView(it) }
+
+                // TODO refactoring
+                val eventsResource = ClassPathResource("data/events.json")
+                val events: List<Event> = objectMapper.readValue(eventsResource.inputStream)
+
+                // Talks
+                events.map { it.year }.forEach { year ->
+                    GET("/admin/$year/feedback-wall") { talkHandler.findByEventView(feedbackWall(it, year)) }
+
+                    GET("/$year") { talkHandler.findByEventView(talks(it, year)) }
+                    GET("/$year/favorite") { talkHandler.findByEventView(talksWithFavorites(it, year)) }
+                    GET("/$year/medias") { talkHandler.findByEventView(media(it, year)) }
+                    GET("/$year/medias/favorite") { talkHandler.findByEventView(mediaWithFavorites(it, year)) }
+
+                    Topic.values()
+                        .map { it.value }
+                        .onEach { topic ->
+                            GET("/$year/$topic") { talkHandler.findByEventView(talks(it, year, topic)) }
+                            GET("/$year/$topic/favorite") {
+                                talkHandler.findByEventView(talksWithFavorites(it, year, topic))
+                            }
+                            GET("/$year/medias/$topic") { talkHandler.findByEventView(media(it, year, topic)) }
+                            GET("/$year/medias/$topic/favorite") {
+                                talkHandler.findByEventView(mediaWithFavorites(it, year, topic))
+                            }
+                        }
+
+                    GET("/$year/{slug}") { talkHandler.findOneView(it, year) }
+                }
+            }
+
+            contentType(APPLICATION_FORM_URLENCODED).nest {
+                "/admin".nest {
+                    POST("/users", adminUserHandler::adminSaveUser)
+                    POST("/users/delete", adminUserHandler::adminDeleteUser)
+                }
+            }
+        }.filter { request, next ->
+            val locale: Locale = request.locale()
+            val path = request.uri().path
+            request.session().flatMap { session ->
+                val model = generateModel(properties, path, locale, session, messageSource)
+                next.handle(request).flatMap {
+                    if (it is RenderingResponse) RenderingResponse.from(it).modelAttributes(model)
+                        .build() else it.toMono()
+                }
+            }
+        }
+
+    @Bean
+    @Order(1)
     fun websiteRouter() = router {
         GET("/blog/feed", blogHandler::feed)
 
@@ -92,7 +170,7 @@ class WebsiteRoutes(
                     it
                 )
             }
-            GET("/about", aboutHandler::findAboutView)
+
             GET("/lottery", lotteryHandler::ticketing)
             GET("/sponsors") { sponsorHandler.viewWithSponsors(CURRENT_EVENT.toInt(), it) }
             GET("/mixteen") {
@@ -104,17 +182,14 @@ class WebsiteRoutes(
                     it
                 )
             }
-            GET("/faq", aboutHandler::faqView)
-            GET("/come", aboutHandler::comeToMixitView)
+
+
             GET("/schedule", talkHandler::scheduleView)
             GET("/user/{login}") { userHandler.findOneView(it) }
             GET("/me") { userHandler.findProfileView(it) }
             GET("/me/edit", userHandler::editProfileView)
             GET("/me/talks/edit/{slug}", talkHandler::editTalkView)
-            GET("/search") { aboutHandler.findFullTextView(it) }
             GET("/speaker", userHandler::speakerView)
-            GET("/accessibility", aboutHandler::accessibilityView)
-            GET("/codeofconduct", aboutHandler::codeConductView)
             GET("/blog", blogHandler::findAllView)
             GET("/blog/{slug}", blogHandler::findOneView)
             GET("/mixette/dashboard", mixetteHandler::mixette)
@@ -136,35 +211,6 @@ class WebsiteRoutes(
                 GET("/sponsors/$year") { sponsorHandler.viewWithSponsors(year, it) }
             }
 
-            // Talks
-            events.map { it.year }.forEach { year ->
-                GET("/$year") { talkHandler.findByEventView(year, it, false) }
-                GET("/admin/$year/feedback-wall") { talkHandler.findByEventViewForFeedbackWall(year, it) }
-                GET("/$year/favorite") { talkHandler.findByEventView(year, it, true) }
-                GET("/$year/makers") { talkHandler.findByEventView(year, it, false, "makers") }
-                GET("/$year/makers/favorite") { talkHandler.findByEventView(year, it, true, "makers") }
-                GET("/$year/aliens") { talkHandler.findByEventView(year, it, false, "aliens") }
-                GET("/$year/aliens/favorite") { talkHandler.findByEventView(year, it, true, "aliens") }
-                GET("/$year/tech") { talkHandler.findByEventView(year, it, false, "tech") }
-                GET("/$year/tech/favorite") { talkHandler.findByEventView(year, it, true, "tech") }
-                GET("/$year/design") { talkHandler.findByEventView(year, it, false, "design") }
-                GET("/$year/design/favorite") { talkHandler.findByEventView(year, it, true, "design") }
-                GET("/$year/hacktivism") { talkHandler.findByEventView(year, it, false, "hacktivism") }
-                GET("/$year/hacktivism/favorite") { talkHandler.findByEventView(year, it, true, "hacktivism") }
-                GET("/$year/learn") { talkHandler.findByEventView(year, it, false, "learn") }
-                GET("/$year/learn/favorite") { talkHandler.findByEventView(year, it, true, "learn") }
-                GET("/$year/ethics") { talkHandler.findByEventView(year, it, false, "ethics") }
-                GET("/$year/ethics/favorite") { talkHandler.findByEventView(year, it, true, "ethics") }
-                GET("/$year/lifestyle") { talkHandler.findByEventView(year, it, false, "lifestyle") }
-                GET("/$year/lifestyle/favorite") { talkHandler.findByEventView(year, it, true, "lifestyle") }
-                GET("/$year/team") { talkHandler.findByEventView(year, it, false, "team") }
-                GET("/$year/team/favorite") { talkHandler.findByEventView(year, it, true, "team") }
-                GET("/$year/medias") { talkHandler.findMediaByEventView(year, it, false) }
-                GET("/$year/medias/favorite") { talkHandler.findMediaByEventView(year, it, true) }
-                GET("/$year/medias/{topic}") { talkHandler.findMediaByEventView(year, it, false, it.pathVariable("topic")) }
-                GET("/$year/medias/{topic}/favorite") { talkHandler.findMediaByEventView(year, it, true, it.pathVariable("topic")) }
-                GET("/$year/{slug}") { talkHandler.findOneView(year, it) }
-            }
 
             "/admin".nest {
                 GET("", adminHandler::admin)
@@ -182,14 +228,14 @@ class WebsiteRoutes(
                 GET("/talks") { adminTalkHandler.adminTalks(it, AdminTalkHandler.LAST_TALK_EVENT) }
                 GET("/talks/create", adminTalkHandler::createTalk)
                 GET("/talks/{year}") { adminTalkHandler.adminTalks(it, it.pathVariable("year")) }
-                GET("/users", adminUserHandler::adminUsers)
-                GET("/users/edit/{login}", adminUserHandler::editUser)
-                GET("/users/create", adminUserHandler::createUser)
                 GET("/events", adminEventHandler::adminEvents)
                 GET("/events/edit/{eventId}", adminEventHandler::editEvent)
                 GET("/events/{eventId}/sponsors/edit/{sponsorId}/{level}", adminEventHandler::editEventSponsoring)
                 GET("/events/{eventId}/sponsors/create", adminEventHandler::createEventSponsoring)
-                GET("/events/{eventId}/organizations/edit/{organizationLogin}", adminEventHandler::editEventOrganization)
+                GET(
+                    "/events/{eventId}/organizations/edit/{organizationLogin}",
+                    adminEventHandler::editEventOrganization
+                )
                 GET("/events/{eventId}/organizations/create", adminEventHandler::createEventOrganization)
                 GET("/events/{eventId}/volunteers/edit/{organizationLogin}", adminEventHandler::editEventVolunteer)
                 GET("/events/{eventId}/volunteers/create", adminEventHandler::createEventVolunteer)
@@ -236,8 +282,6 @@ class WebsiteRoutes(
             "/admin".nest {
                 POST("/talks", adminTalkHandler::adminSaveTalk)
                 POST("/talks/delete", adminTalkHandler::adminDeleteTalk)
-                POST("/users", adminUserHandler::adminSaveUser)
-                POST("/users/delete", adminUserHandler::adminDeleteUser)
                 POST("/lottery/random", adminLotteryHandler::randomDraw)
                 POST("/lottery/random/delete", adminLotteryHandler::eraseRank)
                 POST("/events", adminEventHandler::adminSaveEvent)
@@ -281,7 +325,9 @@ class WebsiteRoutes(
         val path = request.uri().path
         request.session().flatMap { session ->
             val model = generateModel(properties, path, locale, session, messageSource)
-            next.handle(request).flatMap { if (it is RenderingResponse) RenderingResponse.from(it).modelAttributes(model).build() else it.toMono() }
+            next.handle(request).flatMap {
+                if (it is RenderingResponse) RenderingResponse.from(it).modelAttributes(model).build() else it.toMono()
+            }
         }
     }
 

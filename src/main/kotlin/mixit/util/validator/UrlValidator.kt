@@ -1,18 +1,12 @@
 package mixit.util.validator
 
-import org.springframework.stereotype.Component
 import java.net.MalformedURLException
 import java.net.URL
 
-/**
- * @author Dev-Mind <guillaume@dev-mind.fr>
- * @since 11/02/18.
- */
-@Component
-class UrlValidator {
+object UrlValidator {
 
     fun isValid(value: String?): Boolean {
-        if (value == null || value.isEmpty()) {
+        if (value.isNullOrEmpty()) {
             return true
         }
 

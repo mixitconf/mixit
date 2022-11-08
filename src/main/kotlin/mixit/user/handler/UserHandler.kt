@@ -48,7 +48,6 @@ class UserHandler(
     private val cryptographer: Cryptographer,
     private val properties: MixitProperties,
     private val emailValidator: EmailValidator,
-    private val urlValidator: UrlValidator,
     private val maxLengthValidator: MaxLengthValidator,
     private val markdownValidator: MarkdownValidator
 ) {
@@ -220,14 +219,14 @@ class UserHandler(
                     if (!markdownValidator.isValid(updatedUser.description[Language.ENGLISH])) {
                         errors["description-en"] = "user.form.error.description.en"
                     }
-                    if (updatedUser.photoUrl != null && !urlValidator.isValid(updatedUser.photoUrl)) {
+                    if (updatedUser.photoUrl != null && !UrlValidator.isValid(updatedUser.photoUrl)) {
                         errors["photoUrl"] = "user.form.error.photourl"
                     }
                     updatedUser.links.forEachIndexed { index, link ->
                         if (!maxLengthValidator.isValid(link.name, 30)) {
                             errors["link${index + 1}Name"] = "user.form.error.link${index + 1}.name"
                         }
-                        if (!urlValidator.isValid(link.url)) {
+                        if (!UrlValidator.isValid(link.url)) {
                             errors["link${index + 1}Url"] = "user.form.error.link${index + 1}.url"
                         }
                     }

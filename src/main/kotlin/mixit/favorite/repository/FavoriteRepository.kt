@@ -2,6 +2,7 @@ package mixit.favorite.repository
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import kotlinx.coroutines.reactor.awaitSingle
 import mixit.favorite.model.Favorite
 import mixit.security.model.Cryptographer
 import org.slf4j.LoggerFactory
@@ -42,7 +43,11 @@ class FavoriteRepository(
 
     fun findAll() = template.findAll<Favorite>()
 
-    fun findByEmail(email: String): Flux<Favorite> = template.find(Query(Criteria.where("email").isEqualTo(cryptographer.encrypt(email))))
+    fun findByEmail(email: String): Flux<Favorite> =
+        template.find(Query(Criteria.where("email").isEqualTo(cryptographer.encrypt(email))))
+
+    suspend fun coFindByEmail(email: String): List<Favorite> =
+        findByEmail(email).collectList().awaitSingle()
 
     fun findByEmailAndTalk(email: String, talkId: String): Mono<Favorite> = template.findOne(
         Query(
@@ -51,6 +56,9 @@ class FavoriteRepository(
         ),
         Favorite::class.java
     )
+
+    suspend fun coFindByEmailAndTalk(email: String, talkId: String): Favorite =
+        findByEmailAndTalk(email, talkId).awaitSingle()
 
     fun findByEmailAndTalks(email: String, talkIds: List<String>) = template.find<Favorite>(
         Query(

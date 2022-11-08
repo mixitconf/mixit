@@ -33,6 +33,10 @@ data class User(
     var externalAppToken: String? = null,
     var newsletterSubscriber: Boolean = false
 ) {
+    companion object {
+        fun empty(): User =
+            User(login = "", firstname = "", lastname = "", email = "")
+    }
     val tokenLifeTime: Duration
         get() = Duration.between(LocalDateTime.now(), tokenExpiration)
 }
