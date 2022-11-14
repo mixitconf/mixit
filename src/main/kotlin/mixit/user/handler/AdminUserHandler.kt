@@ -43,7 +43,8 @@ class AdminUserHandler(
 
     suspend fun adminUsers(req: ServerRequest): ServerResponse =
         ok().render(
-            AdminUsers.template, mapOf(
+            AdminUsers.template,
+            mapOf(
                 USERS to userRepository.coFindAll().sortedWith(compareBy<User> { it.lastname }.thenBy { it.firstname }),
                 TITLE to "admin.users.title"
             )
@@ -69,7 +70,8 @@ class AdminUserHandler(
 
     private suspend fun adminUser(user: User = User.empty()): ServerResponse =
         ok().render(
-            AdminUser.template, mapOf(
+            AdminUser.template,
+            mapOf(
                 USER to user,
                 "usermail" to cryptographer.decrypt(user.email),
                 "description-fr" to user.description[FRENCH],

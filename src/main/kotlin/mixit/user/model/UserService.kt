@@ -63,6 +63,4 @@ class UserService(
                 it.newsletterSubscriber = user.newsletterSubscriber
                 user
             }
-
-
 }

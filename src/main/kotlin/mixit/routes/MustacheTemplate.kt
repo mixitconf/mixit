@@ -41,5 +41,4 @@ enum class MustacheTemplate(val template: String) {
     TalkList("talks"),
     TalkDetail("talk"),
     TalkEdit("talk-edit"),
-
 }

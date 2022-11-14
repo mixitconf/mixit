@@ -152,7 +152,6 @@ class AdminMixetteHandler(
                         login = it.login
                     )
                 }
-
         }
 
     /**
@@ -183,16 +182,19 @@ class AdminMixetteHandler(
                 ok().render(
                     target,
                     mapOf(
-                        Pair("donations", donations.map {
-                            MixetteUserDonationDto(
-                                name = "",
-                                email = cryptographer.decrypt(it.encryptedUserEmail)!!,
-                                ticketNumber = cryptographer.decrypt(it.encryptedTicketNumber),
-                                login = if(target == TEMPLATE_BY_USER) it.organizationLogin else it.userLogin,
-                                id = it.id,
-                                quantity = it.quantity
-                            )
-                        }),
+                        Pair(
+                            "donations",
+                            donations.map {
+                                MixetteUserDonationDto(
+                                    name = "",
+                                    email = cryptographer.decrypt(it.encryptedUserEmail)!!,
+                                    ticketNumber = cryptographer.decrypt(it.encryptedTicketNumber),
+                                    login = if (target == TEMPLATE_BY_USER) it.organizationLogin else it.userLogin,
+                                    id = it.id,
+                                    quantity = it.quantity
+                                )
+                            }
+                        ),
                         Pair("userDonation", userDonation),
                         Pair("title", "admin.donations.title")
                     )
@@ -284,9 +286,9 @@ class AdminMixetteHandler(
                             name = if (!user?.login.isNullOrEmpty()) "${user.firstname} ${user.lastname}"
                             else ticket?.let {
                                 "${cryptographer.decrypt(ticket.firstname)} ${
-                                    cryptographer.decrypt(
-                                        ticket.lastname
-                                    )
+                                cryptographer.decrypt(
+                                    ticket.lastname
+                                )
                                 }"
                             } ?: "",
                             email = cryptographer.decrypt(ticket.encryptedEmail)!!,

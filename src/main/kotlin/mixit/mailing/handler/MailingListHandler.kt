@@ -86,7 +86,6 @@ class MailingListHandler(
             // TODO add user who have subscribed to our newletter
         }
 
-
     inner class MailinglistEntry(val firstname: String?, val lastname: String, val email: String) {
         constructor(user: CachedUser) : this(
             user.firstname,

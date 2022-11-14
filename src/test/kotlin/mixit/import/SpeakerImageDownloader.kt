@@ -12,7 +12,6 @@ import java.io.File
 import java.io.FileOutputStream
 import java.net.URL
 
-
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class SpeakerImageDownloader(
     @Autowired val objectMapper: ObjectMapper,
@@ -85,5 +84,3 @@ class SpeakerImageDownloader(
         }
     }
 }
-
-

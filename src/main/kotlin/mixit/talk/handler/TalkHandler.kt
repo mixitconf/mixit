@@ -35,7 +35,6 @@ import org.springframework.web.util.UriUtils
 import reactor.core.publisher.Mono
 import java.nio.charset.StandardCharsets
 
-
 @Component
 class TalkHandler(
     private val service: TalkService,
@@ -85,10 +84,8 @@ class TalkHandler(
         val title: String = "talks.title.html"
     )
 
-
     fun scheduleView(req: ServerRequest) =
         ok().render(Schedule.template, mapOf("title" to "schedule.title"))
-
 
     suspend fun findByEventView(config: TalkViewConfig): ServerResponse {
         val currentUserEmail = config.req.coCurrentNonEncryptedUserEmail()

@@ -104,6 +104,7 @@ class WebsiteRoutes(
                 GET("/search") { aboutHandler.findFullTextView(it) }
 
                 // TODO refactoring
+
                 val eventsResource = ClassPathResource("data/events.json")
                 val events: List<Event> = objectMapper.readValue(eventsResource.inputStream)
 
@@ -183,7 +184,6 @@ class WebsiteRoutes(
                 )
             }
 
-
             GET("/schedule", talkHandler::scheduleView)
             GET("/user/{login}") { userHandler.findOneView(it) }
             GET("/me") { userHandler.findProfileView(it) }
@@ -210,7 +210,6 @@ class WebsiteRoutes(
             events.map { it.year }.forEach { year ->
                 GET("/sponsors/$year") { sponsorHandler.viewWithSponsors(year, it) }
             }
-
 
             "/admin".nest {
                 GET("", adminHandler::admin)

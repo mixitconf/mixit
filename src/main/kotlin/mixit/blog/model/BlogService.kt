@@ -19,7 +19,7 @@ class BlogService(private val repository: PostRepository, private val userServic
         findAll { repository.findAll().flatMap { post -> loadPostWriters(post) }.collectList() }
 
     fun findBySlug(slug: String) =
-        findAll().flatMap { elements -> Mono.justOrEmpty(elements.firstOrNull { it.slug[Language.ENGLISH] == slug  || it.slug[Language.FRENCH] == slug }) }
+        findAll().flatMap { elements -> Mono.justOrEmpty(elements.firstOrNull { it.slug[Language.ENGLISH] == slug || it.slug[Language.FRENCH] == slug }) }
 
     fun save(event: Post) =
         repository.save(event).doOnSuccess { cache.invalidateAll() }

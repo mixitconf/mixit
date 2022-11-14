@@ -76,5 +76,4 @@ data class CachedUser(
 
     val organizationName
         get() = company ?: "$firstname $lastname"
-
 }

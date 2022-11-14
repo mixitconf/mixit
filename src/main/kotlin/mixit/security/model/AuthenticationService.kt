@@ -131,18 +131,20 @@ class AuthenticationService(
      * the email it's OK. If he retries a login a new token is sent. Be careful email service can throw
      * an EmailSenderException
      */
-    fun generateAndSendToken(user: User,
-                             locale: Locale,
-                             nonEncryptedMail: String,
-                             tokenForNewsletter: Boolean,
-                             generateExternalToken: Boolean = false): Mono<User> =
+    fun generateAndSendToken(
+        user: User,
+        locale: Locale,
+        nonEncryptedMail: String,
+        tokenForNewsletter: Boolean,
+        generateExternalToken: Boolean = false
+    ): Mono<User> =
 
         user.generateNewToken(generateExternalToken).let { newUser ->
             try {
                 if (!properties.feature.email) {
                     logger.info("A token ${newUser.token} was sent by email")
                 }
-                emailService.send(if(tokenForNewsletter) "email-newsletter-subscribe" else "email-token", newUser, locale)
+                emailService.send(if (tokenForNewsletter) "email-newsletter-subscribe" else "email-token", newUser, locale)
                 userRepository.save(newUser)
             } catch (e: EmailSenderException) {
                 Mono.error<User> { e }
@@ -158,9 +160,9 @@ class AuthenticationService(
             .flatMap { user -> user.generateNewToken().let { userRepository.save(it) } }
 
     fun updateNewsletterSubscription(user: User, tokenForNewsletter: Boolean): Mono<User> =
-        if(tokenForNewsletter) {
+        if (tokenForNewsletter) {
             userRepository.save(user.copy(newsletterSubscriber = true))
-        } else if(user.email == null){
+        } else if (user.email == null) {
             // Sometimes we can have a email hash in the DB but not the email (for legacy users). So in this case
             // we store the email
             userService.updateReference(user).flatMap { userRepository.save(it) }

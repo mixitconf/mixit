@@ -144,11 +144,11 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
 
     @VisibleForTesting
     fun isAHomePageCallFromForeignLanguage(exchange: ServerWebExchange): Boolean = exchange.request.uri.path == "/" &&
-            (
-                    exchange.request.headers.acceptLanguageAsLocales.firstOrNull()
-                        ?: Locale.FRENCH
-                    ).language != Language.FRENCH.toLanguageTag() &&
-            !isSearchEngineCrawler(exchange.request)
+        (
+        exchange.request.headers.acceptLanguageAsLocales.firstOrNull()
+            ?: Locale.FRENCH
+        ).language != Language.FRENCH.toLanguageTag() &&
+        !isSearchEngineCrawler(exchange.request)
 
     @VisibleForTesting
     fun isWebResource(initUriPath: String) = WEB_RESSOURCE_EXTENSIONS.any { initUriPath.endsWith(it) }

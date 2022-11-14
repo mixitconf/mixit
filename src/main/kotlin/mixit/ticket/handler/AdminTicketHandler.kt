@@ -37,18 +37,23 @@ class AdminTicketHandler(
         const val LIST_URI = "/admin/ticket"
     }
 
-    fun findAll(req: ServerRequest) = ok().json().body(service.findAll().map { tickets ->
-        tickets.map { it.toEntity(cryptographer) }
-    })
+    fun findAll(req: ServerRequest) = ok().json().body(
+        service.findAll().map { tickets ->
+            tickets.map { it.toEntity(cryptographer) }
+        }
+    )
 
     fun ticketing(req: ServerRequest) =
         ok().render(
             if (properties.feature.lotteryResult) TEMPLATE_LIST else throw NotFoundException(),
             mapOf(
                 Pair("title", "admin.ticket.title"),
-                Pair("tickets", service.findAll().map { tickets ->
-                    tickets.map { it.toDto(cryptographer) }
-                })
+                Pair(
+                    "tickets",
+                    service.findAll().map { tickets ->
+                        tickets.map { it.toDto(cryptographer) }
+                    }
+                )
             )
         )
 
@@ -57,15 +62,18 @@ class AdminTicketHandler(
             if (properties.feature.lotteryResult) TEMPLATE_PRINT else throw NotFoundException(),
             mapOf(
                 Pair("title", "admin.ticket.title"),
-                Pair("tickets", service.findAll().map { tickets ->
-                    tickets.map { ticket ->
-                        ticket.toDto(cryptographer)
-                            .copy(
-                                firstname = ticket.firstname?.uppercase() ?: ticket.lastname.uppercase(),
-                                lastname = if (ticket.firstname == null) "" else ticket.lastname.uppercase()
-                            )
+                Pair(
+                    "tickets",
+                    service.findAll().map { tickets ->
+                        tickets.map { ticket ->
+                            ticket.toDto(cryptographer)
+                                .copy(
+                                    firstname = ticket.firstname?.uppercase() ?: ticket.lastname.uppercase(),
+                                    lastname = if (ticket.firstname == null) "" else ticket.lastname.uppercase()
+                                )
+                        }
                     }
-                })
+                )
             )
         )
 

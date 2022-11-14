@@ -294,7 +294,6 @@ class AuthenticationHandler(
                 .onErrorResume { displayErrorView(LoginError.INVALID_TOKEN, context) }
         }
 
-
     /**
      * Action when user wants to log out
      */

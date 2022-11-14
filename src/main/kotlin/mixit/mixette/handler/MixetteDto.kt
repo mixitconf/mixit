@@ -31,7 +31,6 @@ data class MixetteUserDonationDto(
 
     override fun updateRank(number: Int): MixetteDonationDto =
         this.copy(rank = number)
-
 }
 
 data class MixetteOrganizationDonationDto(
