@@ -3,8 +3,8 @@ package mixit.user.model
 import mixit.event.model.EventSponsoring
 import mixit.event.model.SponsorshipLevel
 import mixit.talk.model.Language
-import mixit.user.handler.EventSponsoringDto
-import mixit.user.handler.toSponsorDto
+import mixit.user.handler.dto.EventSponsoringDto
+import mixit.user.handler.dto.toSponsorDto
 import mixit.util.toHTML
 import java.time.LocalDate
 

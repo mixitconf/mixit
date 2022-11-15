@@ -7,7 +7,9 @@ import mixit.talk.handler.TalkHandler
 import mixit.util.permanentRedirect
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
+import org.springframework.core.annotation.Order
 import org.springframework.http.MediaType.TEXT_HTML
+import org.springframework.web.reactive.function.server.coRouter
 import org.springframework.web.reactive.function.server.router
 
 @Configuration
@@ -18,6 +20,19 @@ class RedirectRoutes(
 ) {
 
     @Bean
+    @Order(2)
+    fun redirectCoRouter() = coRouter {
+        accept(TEXT_HTML).nest {
+            GET("/session/{id}", talkHandler::redirectFromId)
+            GET("/session/{id}/", talkHandler::redirectFromId)
+            GET("/session/{id}/{sluggifiedTitle}/", talkHandler::redirectFromId)
+            GET("/session/{id}/{sluggifiedTitle}", talkHandler::redirectFromId)
+            GET("/talk/{slug}", talkHandler::redirectFromSlug)
+        }
+    }
+
+    @Bean
+    @Order(1)
     fun redirectRouter() = router {
         accept(TEXT_HTML).nest {
             "/articles".nest {
@@ -42,13 +57,6 @@ class RedirectRoutes(
             GET("/2014/") { permanentRedirect("${properties.baseUri}/2014") }
             GET("/2013/") { permanentRedirect("${properties.baseUri}/2013") }
             GET("/2012/") { permanentRedirect("${properties.baseUri}/2012") }
-            (
-                GET("/session/{id}")
-                    or GET("/session/{id}/")
-                    or GET("/session/{id}/{sluggifiedTitle}/")
-                    or GET("/session/{id}/{sluggifiedTitle}")
-                ).invoke(talkHandler::redirectFromId)
-            GET("/talk/{slug}", talkHandler::redirectFromSlug)
 
             (
                 GET("/member/{login}")

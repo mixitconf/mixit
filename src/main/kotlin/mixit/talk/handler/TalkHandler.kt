@@ -16,11 +16,12 @@ import mixit.routes.MustacheTemplate.TalkList
 import mixit.talk.model.CachedTalk
 import mixit.talk.model.Language
 import mixit.talk.model.TalkService
-import mixit.user.handler.toDto
-import mixit.user.handler.toSponsorDto
+import mixit.user.handler.dto.toDto
+import mixit.user.handler.dto.toSponsorDto
 import mixit.util.coCurrentNonEncryptedUserEmail
+import mixit.util.coExtractFormData
 import mixit.util.enumMatcher
-import mixit.util.extractFormData
+import mixit.util.errors.NotFoundException
 import mixit.util.language
 import mixit.util.permanentRedirect
 import mixit.util.seeOther
@@ -32,7 +33,6 @@ import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.util.UriUtils
-import reactor.core.publisher.Mono
 import java.nio.charset.StandardCharsets
 
 @Component
@@ -159,84 +159,88 @@ class TalkHandler(
             .awaitSingle()
     }
 
-    fun editTalkView(req: ServerRequest) =
-        service
-            .findBySlug(req.pathVariable("slug"))
-            .flatMap { editTalkViewDetail(req, it, emptyMap()) }
-
-    private fun editTalkViewDetail(req: ServerRequest, talk: CachedTalk, errors: Map<String, String>) =
-        ok().render(
-            TalkEdit.template,
-            mapOf(
-                Pair("talk", talk.toDto(req.language())),
-                Pair("speakers", talk.speakers.map { it.toDto(req.language()) }),
-                Pair("baseUri", UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)),
-                Pair("hasErrors", errors.isNotEmpty()),
-                Pair("errors", errors),
-                Pair("languages", enumMatcher(talk) { talk.language })
-            )
-        )
-
-    fun saveProfileTalk(req: ServerRequest): Mono<ServerResponse> =
-        req.extractFormData().flatMap { formData ->
-            service.findOne(formData["id"]!!).flatMap { talk ->
-
-                val errors = mutableMapOf<String, String>()
-
-                // Null check
-                if (formData["title"].isNullOrBlank()) {
-                    errors["title"] = "talk.form.error.title.required"
-                }
-                if (formData["summary"].isNullOrBlank()) {
-                    errors["summary"] = "talk.form.error.summary.required"
-                }
-                if (formData["language"].isNullOrBlank()) {
-                    errors["language"] = "talk.form.error.language.required"
-                }
-
-                if (errors.isNotEmpty()) {
-                    editTalkViewDetail(req, talk, errors)
-                }
-
-                val updatedTalk = talk.copy(
-                    title = formData["title"]!!,
-                    summary = markdownValidator.sanitize(formData["summary"]!!),
-                    description = markdownValidator.sanitize(formData["description"]),
-                    language = Language.valueOf(formData["language"]!!)
-                )
-
-                // We want to control data to not save invalid things in our database
-                if (!maxLengthValidator.isValid(updatedTalk.title, 255)) {
-                    errors["title"] = "talk.form.error.title.size"
-                }
-                if (!markdownValidator.isValid(updatedTalk.summary)) {
-                    errors["summary"] = "talk.form.error.summary"
-                }
-                if (!markdownValidator.isValid(updatedTalk.description)) {
-                    errors["description"] = "talk.form.error.description"
-                }
-                if (errors.isEmpty()) {
-                    // If everything is Ok we save the user
-                    service.save(updatedTalk.toTalk()).then(seeOther("${properties.baseUri}/me"))
-                } else {
-                    editTalkViewDetail(req, updatedTalk, errors)
-                }
-            }
-        }
-
-    private fun loadSponsors(event: CachedEvent) =
-        event.filterBySponsorLevel(SponsorshipLevel.GOLD).let { sponsors ->
-            mapOf(
-                Pair("sponsors-gold", sponsors.map { it.toSponsorDto() }),
-                Pair("sponsors-others", event.sponsors.filterNot { sponsors.contains(it) }.map { it.toSponsorDto() })
-            )
-        }
-
-    fun redirectFromId(req: ServerRequest) = service.findOne(req.pathVariable("id")).flatMap {
-        permanentRedirect("${properties.baseUri}/${it.event}/${it.slug}")
+    suspend fun editTalkView(req: ServerRequest): ServerResponse {
+        val talk = service.coFindBySlug(req.pathVariable("slug")) ?: throw NotFoundException()
+        return editTalkViewDetail(req, talk, emptyMap())
     }
 
-    fun redirectFromSlug(req: ServerRequest) = service.findBySlug(req.pathVariable("slug")).flatMap {
-        permanentRedirect("${properties.baseUri}/${it.event}/${it.slug}")
+    private suspend fun editTalkViewDetail(
+        req: ServerRequest,
+        talk: CachedTalk,
+        errors: Map<String, String>
+    ): ServerResponse {
+        val params = mapOf(
+            MustacheI18n.TALK to talk.toDto(req.language()),
+            MustacheI18n.SPEAKERS to talk.speakers.map { it.toDto(req.language()) },
+            MustacheI18n.BASE_URI to UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8),
+            MustacheI18n.HAS_ERRORS to errors.isNotEmpty(),
+            MustacheI18n.ERRORS to errors,
+            MustacheI18n.LANGUAGES to enumMatcher(talk) { talk.language }
+        )
+        return ok().render(TalkEdit.template, params).awaitSingle()
+    }
+
+    suspend fun saveProfileTalk(req: ServerRequest): ServerResponse {
+        val formData = req.coExtractFormData()
+        val talk = service.coFindOne(formData["id"]!!)
+
+        val errors = mutableMapOf<String, String>()
+
+        // Null check
+        if (formData["title"].isNullOrBlank()) {
+            errors["title"] = "talk.form.error.title.required"
+        }
+        if (formData["summary"].isNullOrBlank()) {
+            errors["summary"] = "talk.form.error.summary.required"
+        }
+        if (formData["language"].isNullOrBlank()) {
+            errors["language"] = "talk.form.error.language.required"
+        }
+
+        if (errors.isNotEmpty()) {
+            editTalkViewDetail(req, talk, errors)
+        }
+
+        val updatedTalk = talk.copy(
+            title = formData["title"]!!,
+            summary = markdownValidator.sanitize(formData["summary"]!!),
+            description = markdownValidator.sanitize(formData["description"]),
+            language = Language.valueOf(formData["language"]!!)
+        )
+
+        // We want to control data to not save invalid things in our database
+        if (!maxLengthValidator.isValid(updatedTalk.title, 255)) {
+            errors["title"] = "talk.form.error.title.size"
+        }
+        if (!markdownValidator.isValid(updatedTalk.summary)) {
+            errors["summary"] = "talk.form.error.summary"
+        }
+        if (!markdownValidator.isValid(updatedTalk.description)) {
+            errors["description"] = "talk.form.error.description"
+        }
+        if (errors.isEmpty()) {
+            // If everything is Ok we save the user
+            return service.save(updatedTalk.toTalk()).then(seeOther("${properties.baseUri}/me")).awaitSingle()
+        } else {
+            return editTalkViewDetail(req, updatedTalk, errors)
+        }
+    }
+
+    private fun loadSponsors(event: CachedEvent): Map<String, Any> {
+        val sponsors = event.filterBySponsorLevel(SponsorshipLevel.GOLD)
+        return mapOf(
+            Pair("sponsors-gold", sponsors.map { it.toSponsorDto() }),
+            Pair("sponsors-others", event.sponsors.filterNot { sponsors.contains(it) }.map { it.toSponsorDto() })
+        )
+    }
+
+    suspend fun redirectFromId(req: ServerRequest): ServerResponse {
+        val talk = service.coFindOne("id")
+        return permanentRedirect("${properties.baseUri}/${talk.event}/${talk.slug}").awaitSingle()
+    }
+
+    suspend fun redirectFromSlug(req: ServerRequest): ServerResponse {
+        val talk = service.coFindBySlug(req.pathVariable("slug")) ?: throw NotFoundException()
+        return permanentRedirect("${properties.baseUri}/${talk.event}/${talk.slug}").awaitSingle()
     }
 }

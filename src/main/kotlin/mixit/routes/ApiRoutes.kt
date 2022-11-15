@@ -5,29 +5,50 @@ import mixit.event.handler.JsonEventHandler
 import mixit.favorite.handler.JsonFavoriteHandler
 import mixit.mixette.handler.AdminMixetteHandler
 import mixit.security.handler.ExternalHandler
-import mixit.talk.handler.JsonTalkHandler
+import mixit.talk.handler.TalkJsonHandler
 import mixit.ticket.handler.AdminTicketHandler
 import mixit.ticket.handler.LotteryHandler
-import mixit.user.handler.UserHandler
+import mixit.user.handler.UserJsonHandler
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
+import org.springframework.core.annotation.Order
 import org.springframework.http.MediaType.APPLICATION_JSON
+import org.springframework.web.reactive.function.server.coRouter
 import org.springframework.web.reactive.function.server.router
 
 @Configuration
 class ApiRoutes(
     private val blogHandler: JsonBlogHandler,
     private val eventHandler: JsonEventHandler,
-    private val talkHandler: JsonTalkHandler,
+    private val talkHandler: TalkJsonHandler,
     private val favoriteHandler: JsonFavoriteHandler,
     private val lotteryHandler: LotteryHandler,
     private val externalHandler: ExternalHandler,
-    private val userHandler: UserHandler,
+    private val userHandler: UserJsonHandler,
     private val ticketHandler: AdminTicketHandler,
     private val adminMixetteHandler: AdminMixetteHandler
 ) {
 
     @Bean
+    @Order(2)
+    fun apiCoRouter() = coRouter {
+        (accept(APPLICATION_JSON) and "/api").nest {
+            "/admin".nest {
+                GET("/{year}/talk", talkHandler::findAdminByEventId)
+            }
+            GET("/staff", userHandler::findStaff)
+            GET("/staff/{login}", userHandler::findOneStaff)
+            GET("/talk/{login}", talkHandler::findOne)
+            GET("/user", userHandler::findAll)
+            GET("/user/{login}", userHandler::findOne)
+
+            GET("/{year}/speaker", userHandler::findSpeakerByEventId)
+            GET("/{year}/talk", talkHandler::findByEventId)
+        }
+    }
+
+    @Bean
+    @Order(1)
     fun apiRouter() = router {
         (accept(APPLICATION_JSON) and "/api").nest {
             "/blog".nest {
@@ -45,29 +66,16 @@ class ApiRoutes(
                 GET("/ticket", ticketHandler::findAll)
                 GET("/lottery", lotteryHandler::findAll)
                 GET("/favorite", favoriteHandler::findAll)
-                GET("/{year}/talk", talkHandler::findAdminByEventId)
             }
 
             // Edition data
-            GET("/{year}/talk", talkHandler::findByEventId)
-            GET("/{year}/speaker", userHandler::findSpeakerByEventId)
-            GET("/{year}/event", eventHandler::findByEventID)
 
-            GET("/talk/{login}", talkHandler::findOne)
+            GET("/{year}/event", eventHandler::findByEventID)
 
             "/favorites".nest {
                 GET("/{email}/talks/{id}", favoriteHandler::getFavorite)
                 GET("/{email}", favoriteHandler::getFavorites)
                 POST("/{email}/talks/{id}/toggle", favoriteHandler::toggleFavorite)
-            }
-
-            "/user".nest {
-                GET("", userHandler::findAll)
-                GET("/{login}", userHandler::findOne)
-            }
-            "/staff".nest {
-                GET("", userHandler::findStaff)
-                GET("/{login}", userHandler::findOneStaff)
             }
 
             // Some external request needs to be secured. So for them we need in the request the email and token. Values

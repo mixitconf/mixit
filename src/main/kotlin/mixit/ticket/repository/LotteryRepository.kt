@@ -2,6 +2,7 @@ package mixit.ticket.repository
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.ticket.model.LotteryTicket
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
@@ -50,4 +51,7 @@ class LotteryRepository(
     fun deleteOne(id: String) = template.remove<LotteryTicket>(Query(Criteria.where("_id").isEqualTo(id)))
 
     fun findByEncryptedEmail(email: String) = template.findOne<LotteryTicket>(Query(Criteria.where("email").isEqualTo(email)))
+
+    suspend fun coFindByEncryptedEmail(email: String): LotteryTicket? =
+        findByEncryptedEmail(email).awaitSingleOrNull()
 }

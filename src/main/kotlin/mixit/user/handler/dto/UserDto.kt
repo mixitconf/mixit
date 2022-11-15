@@ -1,6 +1,8 @@
-package mixit.user.handler
+package mixit.user.handler.dto
 
 import mixit.talk.model.Language
+import mixit.user.handler.logoType
+import mixit.user.handler.logoWebpUrl
 import mixit.user.model.Link
 import mixit.user.model.PhotoShape
 import mixit.user.model.Role

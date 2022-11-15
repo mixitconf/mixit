@@ -1,5 +1,6 @@
 package mixit.ticket.model
 
+import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.security.model.Cryptographer
 import mixit.ticket.repository.TicketRepository
 import mixit.util.cache.CacheTemplate
@@ -23,6 +24,9 @@ class TicketService(
 
     fun findByEmail(email: String): Mono<CachedTicket> =
         findAll().flatMap { tickets -> Mono.justOrEmpty(tickets.firstOrNull { it.email == email }) }
+
+    suspend fun coFindByEmail(email: String): CachedTicket? =
+        findByEmail(email).awaitSingleOrNull()
 
     fun findByLogin(login: String?): Mono<CachedTicket> =
         findAll().flatMap { tickets ->

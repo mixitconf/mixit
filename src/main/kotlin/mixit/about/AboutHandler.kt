@@ -11,7 +11,7 @@ import mixit.routes.MustacheTemplate.CodeOfConduct
 import mixit.routes.MustacheTemplate.Come
 import mixit.routes.MustacheTemplate.Faq
 import mixit.routes.MustacheTemplate.Search
-import mixit.user.handler.toSponsorDto
+import mixit.user.handler.dto.toSponsorDto
 import mixit.user.model.Role
 import mixit.user.model.UserService
 import mixit.util.language

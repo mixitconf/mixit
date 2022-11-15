@@ -2,6 +2,7 @@ package mixit.util.cache
 
 import com.github.benmanes.caffeine.cache.Cache
 import com.github.benmanes.caffeine.cache.Caffeine
+import kotlinx.coroutines.reactor.awaitSingle
 import reactor.cache.CacheMono
 import reactor.core.publisher.Mono
 import reactor.core.publisher.Signal
@@ -44,6 +45,9 @@ abstract class CacheTemplate<T : Cached> {
 
     fun findOne(id: String): Mono<T> =
         findAll().flatMap { elements -> Mono.justOrEmpty(elements.firstOrNull { it.id == id }) }
+
+    suspend fun coFindOne(id: String): T =
+        findOne(id).awaitSingle()
 
     fun findAll(loader: () -> Mono<List<T>>): Mono<List<T>> =
         CacheMono

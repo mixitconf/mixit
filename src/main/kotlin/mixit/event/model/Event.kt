@@ -50,5 +50,10 @@ enum class SponsorshipLevel {
     MIXTEEN,
     ECOCUP,
     ACCESSIBILITY,
-    NONE
+    NONE;
+
+    companion object {
+        fun sponsorshipLevels() =
+            listOf(GOLD, SILVER, HOSTING, ECOLOGY, LANYARD, ACCESSIBILITY, MIXTEEN, PARTY, VIDEO)
+    }
 }

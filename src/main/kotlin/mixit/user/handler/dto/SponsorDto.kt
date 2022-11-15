@@ -1,7 +1,9 @@
-package mixit.user.handler
+package mixit.user.handler.dto
 
 import mixit.event.model.SponsorshipLevel
 import mixit.talk.model.Language
+import mixit.user.handler.logoType
+import mixit.user.handler.logoWebpUrl
 import mixit.user.model.CachedSponsor
 import mixit.user.model.Link
 import mixit.user.model.PhotoShape

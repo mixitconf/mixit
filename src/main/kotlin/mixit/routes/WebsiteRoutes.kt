@@ -8,14 +8,15 @@ import mixit.about.SearchHandler
 import mixit.blog.handler.AdminPostHandler
 import mixit.blog.handler.WebBlogHandler
 import mixit.event.handler.AdminEventHandler
-import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
 import mixit.event.model.Event
 import mixit.event.model.EventService
-import mixit.event.model.SponsorshipLevel
+import mixit.event.model.SponsorshipLevel.MIXTEEN
 import mixit.mailing.handler.MailingHandler
 import mixit.mailing.handler.MailingListHandler
 import mixit.mixette.handler.AdminMixetteHandler
 import mixit.mixette.handler.MixetteHandler
+import mixit.routes.MustacheTemplate.Home
+import mixit.routes.MustacheTemplate.Mixteen
 import mixit.security.handler.AuthenticationHandler
 import mixit.talk.handler.AdminTalkHandler
 import mixit.talk.handler.TalkHandler
@@ -89,6 +90,8 @@ class WebsiteRoutes(
     fun websiteCoRouter() =
         coRouter {
             accept(TEXT_HTML).nest {
+                GET("/") { sponsorHandler.viewWithSponsors(it, Home.template) }
+
                 "/admin".nest {
                     GET("/admin/users", adminUserHandler::adminUsers)
                     GET("/admin/users/edit/{login}", adminUserHandler::editUser)
@@ -101,22 +104,32 @@ class WebsiteRoutes(
                 GET("/code-of-conduct", aboutHandler::codeConductView)
                 GET("/come", aboutHandler::comeToMixitView)
                 GET("/faq", aboutHandler::faqView)
+                GET("/me") { userHandler.findProfileView(it) }
+                GET("/me/edit", userHandler::editProfileView)
+                GET("/me/talks/edit/{slug}", talkHandler::editTalkView)
                 GET("/search") { aboutHandler.findFullTextView(it) }
+                GET("/speaker", userHandler::speakerView)
+                GET("/sponsors") { sponsorHandler.viewSponsors(it) }
+                GET("/mixteen") {
+                    sponsorHandler.viewWithSponsors(it, Mixteen.template, "mixteen.title", arrayOf(MIXTEEN))
+                }
+                GET("/user/{login}") { userHandler.findOneView(it) }
 
                 // TODO refactoring
-
                 val eventsResource = ClassPathResource("data/events.json")
                 val events: List<Event> = objectMapper.readValue(eventsResource.inputStream)
 
-                // Talks
                 events.map { it.year }.forEach { year ->
                     GET("/admin/$year/feedback-wall") { talkHandler.findByEventView(feedbackWall(it, year)) }
 
+                    // Sponsors
+                    GET("/sponsors/$year") { sponsorHandler.viewSponsors(it, year) }
+
+                    // Talks
                     GET("/$year") { talkHandler.findByEventView(talks(it, year)) }
                     GET("/$year/favorite") { talkHandler.findByEventView(talksWithFavorites(it, year)) }
                     GET("/$year/medias") { talkHandler.findByEventView(media(it, year)) }
                     GET("/$year/medias/favorite") { talkHandler.findByEventView(mediaWithFavorites(it, year)) }
-
                     Topic.values()
                         .map { it.value }
                         .onEach { topic ->
@@ -139,6 +152,8 @@ class WebsiteRoutes(
                     POST("/users", adminUserHandler::adminSaveUser)
                     POST("/users/delete", adminUserHandler::adminDeleteUser)
                 }
+                POST("/me", userHandler::saveProfile)
+                POST("/me/talks", talkHandler::saveProfileTalk)
             }
         }.filter { request, next ->
             val locale: Locale = request.locale()
@@ -162,34 +177,11 @@ class WebsiteRoutes(
         }
 
         accept(TEXT_HTML).nest {
-            GET("/") {
-                sponsorHandler.viewWithSponsors(
-                    "home",
-                    arrayOf(SponsorshipLevel.LANYARD, SponsorshipLevel.GOLD),
-                    null,
-                    CURRENT_EVENT.toInt(),
-                    it
-                )
-            }
 
             GET("/lottery", lotteryHandler::ticketing)
-            GET("/sponsors") { sponsorHandler.viewWithSponsors(CURRENT_EVENT.toInt(), it) }
-            GET("/mixteen") {
-                sponsorHandler.viewWithSponsors(
-                    "mixteen",
-                    arrayOf(SponsorshipLevel.MIXTEEN),
-                    "mixteen.title",
-                    CURRENT_EVENT.toInt(),
-                    it
-                )
-            }
 
             GET("/schedule", talkHandler::scheduleView)
-            GET("/user/{login}") { userHandler.findOneView(it) }
-            GET("/me") { userHandler.findProfileView(it) }
-            GET("/me/edit", userHandler::editProfileView)
-            GET("/me/talks/edit/{slug}", talkHandler::editTalkView)
-            GET("/speaker", userHandler::speakerView)
+
             GET("/blog", blogHandler::findAllView)
             GET("/blog/{slug}", blogHandler::findOneView)
             GET("/mixette/dashboard", mixetteHandler::mixette)
@@ -202,14 +194,6 @@ class WebsiteRoutes(
             // Newsletter
             GET("/newsletter-subscribe", authenticationHandler::newsletterView)
             GET("/newsletter-signin/{token}/{email:.*}", authenticationHandler::signInViaUrlForNewsletter)
-
-            val eventsResource = ClassPathResource("data/events.json")
-            val events: List<Event> = objectMapper.readValue(eventsResource.inputStream)
-
-            // Sponsors
-            events.map { it.year }.forEach { year ->
-                GET("/sponsors/$year") { sponsorHandler.viewWithSponsors(year, it) }
-            }
 
             "/admin".nest {
                 GET("", adminHandler::admin)
@@ -273,8 +257,6 @@ class WebsiteRoutes(
             POST("/newsletter-send-token", authenticationHandler::sendTokenForNewsletter)
             POST("/newsletter-signup", authenticationHandler::signUpForNewsletter)
             POST("/newsletter-subscribe", authenticationHandler::subscribeNewsletter)
-            POST("/me", userHandler::saveProfile)
-            POST("/me/talks", talkHandler::saveProfileTalk)
             POST("/search") { searchHandler.searchFullTextView(it) }
             POST("/lottery", lotteryHandler::submit)
 

@@ -3,7 +3,7 @@ package mixit.about
 import mixit.blog.handler.toDto
 import mixit.blog.repository.PostRepository
 import mixit.talk.repository.TalkRepository
-import mixit.user.handler.toDto
+import mixit.user.handler.dto.toDto
 import mixit.user.model.User
 import mixit.user.repository.UserRepository
 import mixit.util.language

@@ -62,11 +62,20 @@ class UserRepository(
         )
     )
 
+    suspend fun coFindByNonEncryptedEmail(email: String): User =
+        findByNonEncryptedEmail(email).awaitSingle()
+
     fun findByRoles(roles: List<Role>) =
         template.find<User>(Query(where("role").inValues(roles)))
 
+    suspend fun coFindByRoles(roles: List<Role>): List<User> =
+        findByRoles(roles).collectList().awaitSingle()
+
     fun findOneByRoles(login: String, roles: List<Role>) =
         template.findOne<User>(Query(where("role").inValues(roles).and("_id").isEqualTo(login)))
+
+    suspend fun coFindOneByRoles(login: String, roles: List<Role>) =
+        findOneByRoles(login, roles).awaitSingle()
 
     fun findAll() =
         template.findAll<User>().doOnComplete { logger.info("Load all users") }
@@ -90,6 +99,9 @@ class UserRepository(
 
     fun findByLegacyId(id: Long) =
         template.findOne<User>(Query(where("legacyId").isEqualTo(id)))
+
+    suspend fun coFindByLegacyId(id: Long) =
+        findByLegacyId(id).awaitSingleOrNull()
 
     fun deleteAll() =
         template.remove<User>(Query())

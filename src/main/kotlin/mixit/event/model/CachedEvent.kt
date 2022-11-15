@@ -38,5 +38,6 @@ data class CachedEvent(
             year
         )
 
-    fun filterBySponsorLevel(vararg levels: SponsorshipLevel) = sponsors.filter { levels.contains(it.level) }
+    fun filterBySponsorLevel(vararg levels: SponsorshipLevel): List<CachedSponsor> =
+        sponsors.filter { levels.contains(it.level) }
 }

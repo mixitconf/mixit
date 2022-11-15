@@ -1,6 +1,7 @@
 package mixit.talk.model
 
 import kotlinx.coroutines.reactor.awaitSingle
+import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.talk.repository.TalkRepository
 import mixit.user.model.UserUpdateEvent
 import mixit.user.repository.UserRepository
@@ -39,6 +40,9 @@ class TalkService(
         findAll().flatMap { talks ->
             Mono.justOrEmpty(talks.first { it.slug == slug })
         }
+
+    suspend fun coFindBySlug(slug: String) =
+        findBySlug(slug).awaitSingleOrNull()
 
     fun findById(id: String) =
         findAll().flatMap { talks ->
