@@ -4,18 +4,19 @@ import mixit.event.repository.EventRepository
 import mixit.util.json
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
+import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
-import org.springframework.web.reactive.function.server.body
+import org.springframework.web.reactive.function.server.bodyValueAndAwait
 
 @Component
 class JsonEventHandler(private val repository: EventRepository) {
 
-    fun findOne(req: ServerRequest) =
-        ok().json().body(repository.findOne(req.pathVariable("id")))
+    suspend fun findOne(req: ServerRequest): ServerResponse =
+        repository.coFindOne(req.pathVariable("id")).let { ok().json().bodyValueAndAwait(it) }
 
-    fun findAll(req: ServerRequest) =
-        ok().json().body(repository.findAll())
+    suspend fun findAll(req: ServerRequest): ServerResponse =
+        repository.coFindAll().let { ok().json().bodyValueAndAwait(it) }
 
-    fun findByEventID(req: ServerRequest) =
-        ok().json().body(repository.findByYear(req.pathVariable("year").toInt()))
+    suspend fun findByEventID(req: ServerRequest): ServerResponse =
+        repository.coFindByYear(req.pathVariable("year").toInt()).let { ok().json().bodyValueAndAwait(it) }
 }

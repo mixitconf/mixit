@@ -36,12 +36,15 @@ class ApiRoutes(
             "/admin".nest {
                 GET("/{year}/talk", talkHandler::findAdminByEventId)
             }
+            GET("/event", eventHandler::findAll)
+            GET("/event/{id}", eventHandler::findOne)
             GET("/staff", userHandler::findStaff)
             GET("/staff/{login}", userHandler::findOneStaff)
             GET("/talk/{login}", talkHandler::findOne)
             GET("/user", userHandler::findAll)
             GET("/user/{login}", userHandler::findOne)
 
+            GET("/{year}/event", eventHandler::findByEventID)
             GET("/{year}/speaker", userHandler::findSpeakerByEventId)
             GET("/{year}/talk", talkHandler::findByEventId)
         }
@@ -56,11 +59,6 @@ class ApiRoutes(
                 GET("/{id}", blogHandler::findOne)
             }
 
-            "/event".nest {
-                GET("", eventHandler::findAll)
-                GET("/{id}", eventHandler::findOne)
-            }
-
             "/admin".nest {
                 GET("/mixette", adminMixetteHandler::findAll)
                 GET("/ticket", ticketHandler::findAll)
@@ -69,9 +67,6 @@ class ApiRoutes(
             }
 
             // Edition data
-
-            GET("/{year}/event", eventHandler::findByEventID)
-
             "/favorites".nest {
                 GET("/{email}/talks/{id}", favoriteHandler::getFavorite)
                 GET("/{email}", favoriteHandler::getFavorites)

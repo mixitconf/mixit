@@ -1,6 +1,7 @@
 package mixit.event.handler
 
 import com.fasterxml.jackson.databind.ObjectMapper
+import kotlinx.coroutines.reactor.awaitSingle
 import mixit.MixitProperties
 import mixit.event.model.Event
 import mixit.event.model.EventOrganization
@@ -8,17 +9,28 @@ import mixit.event.model.EventService
 import mixit.event.model.EventSponsoring
 import mixit.event.model.EventVolunteer
 import mixit.event.model.SponsorshipLevel
+import mixit.routes.MustacheI18n.CREATION_MODE
+import mixit.routes.MustacheI18n.EVENT
+import mixit.routes.MustacheI18n.EVENTS
+import mixit.routes.MustacheI18n.EVENT_ID
+import mixit.routes.MustacheI18n.LINKS
+import mixit.routes.MustacheI18n.TITLE
+import mixit.routes.MustacheTemplate
+import mixit.routes.MustacheTemplate.AdminEventOrganization
+import mixit.routes.MustacheTemplate.AdminEventSponsor
+import mixit.routes.MustacheTemplate.AdminEventVolunteer
+import mixit.routes.MustacheTemplate.AdminEvents
 import mixit.util.AdminUtils.toJson
 import mixit.util.AdminUtils.toLink
 import mixit.util.AdminUtils.toLinks
+import mixit.util.coExtractFormData
 import mixit.util.enumMatcher
-import mixit.util.extractFormData
+import mixit.util.errors.NotFoundException
 import mixit.util.seeOther
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
-import reactor.core.publisher.Mono
 import java.time.LocalDate
 
 @Component
@@ -29,301 +41,262 @@ class AdminEventHandler(
 ) {
 
     companion object {
-        const val TEMPLATE_LIST = "admin-events"
-        const val TEMPLATE_EDIT = "admin-event"
-        const val TEMPLATE_SPONSOR = "admin-event-sponsor"
-        const val TEMPLATE_ORGANIZATION = "admin-event-organization"
-        const val TEMPLATE_VOLUNTEER = "admin-event-volunteer"
         const val LIST_URI = "/admin/events"
         const val CURRENT_EVENT = "2022"
         const val TIMEZONE = "Europe/Paris"
     }
 
-    fun adminEvents(req: ServerRequest): Mono<ServerResponse> {
-        val events = service.findAll().map { events -> events.sortedBy { it.id }.map { it.toEvent() } }
-        return ok().render(
-            TEMPLATE_LIST,
-            mapOf(Pair("events", events), Pair("title", "admin.events.title"))
+    suspend fun adminEvents(req: ServerRequest): ServerResponse {
+        val events = service.coFindAll().sortedBy { it.id }.map { it.toEvent() }
+        return ok()
+            .render(
+                AdminEvents.template,
+                mapOf(
+                    TITLE to "admin.events.title",
+                    EVENTS to events
+                )
+            ).awaitSingle()
+    }
+
+    suspend fun createEvent(req: ServerRequest): ServerResponse =
+        this.adminEvent()
+
+    suspend fun editEvent(req: ServerRequest): ServerResponse =
+        service
+            .coFindOne(req.pathVariable("eventId"))
+            .let { this.adminEvent(it.toEvent()) }
+
+    private suspend fun adminEvent(event: Event = Event()): ServerResponse =
+        ok()
+            .render(
+                MustacheTemplate.AdminEvent.template,
+                mapOf(
+                    CREATION_MODE to event.id.isEmpty(),
+                    EVENT to event,
+                    LINKS to event.photoUrls.toJson(objectMapper),
+                    "videolink" to (event.videoUrl?.toJson(objectMapper) ?: "")
+                )
+            )
+            .awaitSingle()
+
+    suspend fun adminSaveEvent(req: ServerRequest): ServerResponse {
+        val formData = req.coExtractFormData()
+        // We need to find the event in database
+        val existingEvent = service.coFindOneOrNull(formData["eventId"] ?: throw NotFoundException())?.toEvent()
+        val updatedEvent = if (existingEvent == null) {
+            Event(
+                formData["eventId"]!!,
+                LocalDate.parse(formData["start"]!!),
+                LocalDate.parse(formData["end"]!!),
+                formData["current"]?.toBoolean() ?: false,
+                photoUrls = formData["photoUrls"]?.toLinks(objectMapper) ?: emptyList(),
+                videoUrl = formData["videoUrl"]?.toLink(objectMapper),
+                schedulingFileUrl = formData["schedulingFileUrl"]
+            )
+        } else {
+            Event(
+                existingEvent.id,
+                LocalDate.parse(formData["start"]!!),
+                LocalDate.parse(formData["end"]!!),
+                formData["current"]?.toBoolean() ?: false,
+                existingEvent.sponsors,
+                existingEvent.organizations,
+                existingEvent.volunteers,
+                formData["photoUrls"]?.toLinks(objectMapper) ?: emptyList(),
+                formData["videoUrl"]?.toLink(objectMapper),
+                formData["schedulingFileUrl"]
+            )
+        }
+        return service
+            .save(updatedEvent)
+            .then(seeOther("${properties.baseUri}$LIST_URI"))
+            .awaitSingle()
+    }
+
+    suspend fun createEventSponsoring(req: ServerRequest): ServerResponse =
+        adminEventSponsoring(req.pathVariable("eventId"))
+
+    private suspend fun adminEventSponsoring(eventId: String, eventSponsoring: EventSponsoring = EventSponsoring()) =
+        ok()
+            .render(
+                AdminEventSponsor.template,
+                mapOf(
+                    CREATION_MODE to (eventSponsoring.sponsorId == ""),
+                    EVENT_ID to eventId,
+                    "eventSponsoring" to eventSponsoring,
+                    "levels" to enumMatcher(eventSponsoring) { it?.level ?: SponsorshipLevel.NONE }
+                )
+            )
+            .awaitSingle()
+
+    suspend fun adminUpdateEventSponsoring(req: ServerRequest): ServerResponse {
+        val formData = req.coExtractFormData()
+        // We need to find the event in database
+        val event = service.coFindOne(formData["eventId"] ?: throw NotFoundException()).toEvent()
+
+        val updatedSponsors = event.sponsors.map { sponsoring ->
+            if (sponsoring.sponsorId == formData["sponsorId"] && sponsoring.level.name == formData["level"]) {
+                EventSponsoring(
+                    sponsoring.level,
+                    sponsoring.sponsorId,
+                    formData["subscriptionDate"]?.let { LocalDate.parse(it) } ?: LocalDate.now()
+                )
+            } else {
+                sponsoring
+            }
+        }
+        return service
+            .save(event.copy(sponsors = updatedSponsors))
+            .then(seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}"))
+            .awaitSingle()
+    }
+
+    suspend fun adminCreateEventSponsoring(req: ServerRequest): ServerResponse {
+        val formData = req.coExtractFormData()
+        // We need to find the event in database
+        val event = service.coFindOne(formData["eventId"] ?: throw NotFoundException()).toEvent()
+
+        // We create a mutable list to add the new element
+        val sponsors = event.sponsors.toMutableList().apply {
+            add(
+                EventSponsoring(
+                    SponsorshipLevel.valueOf(formData["level"]!!),
+                    formData["sponsorId"]!!,
+                    formData["subscriptionDate"]?.let { LocalDate.parse(it) } ?: LocalDate.now()
+                )
+            )
+        }
+
+        return service.save(event.copy(sponsors = sponsors))
+            .then(seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}"))
+            .awaitSingle()
+    }
+
+    suspend fun adminDeleteEventSponsoring(req: ServerRequest): ServerResponse {
+        val formData = req.coExtractFormData()
+        // We need to find the event in database
+        val event = service.coFindOne(formData["eventId"] ?: throw NotFoundException()).toEvent()
+
+        val newSponsors = event.sponsors
+            .filterNot { it.sponsorId == formData["sponsorId"] && it.level.name == formData["level"] }
+
+        // We create a mutable list
+        return service.save(event.copy(sponsors = newSponsors))
+            .then(seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}"))
+            .awaitSingle()
+    }
+
+    suspend fun editEventSponsoring(req: ServerRequest): ServerResponse {
+        val event = service.coFindOne(req.pathVariable("eventId")).toEvent()
+        return adminEventSponsoring(
+            event.id,
+            event.sponsors.first {
+                it.sponsorId == req.pathVariable("sponsorId") && it.level.name == req.pathVariable("level")
+            }
         )
     }
 
-    fun createEvent(req: ServerRequest): Mono<ServerResponse> =
-        this.adminEvent()
-
-    fun editEvent(req: ServerRequest): Mono<ServerResponse> =
-        service.findOne(req.pathVariable("eventId")).flatMap { this.adminEvent(it.toEvent()) }
-
-    private fun adminEvent(event: Event = Event()) =
-        ok().render(
-            TEMPLATE_EDIT,
-            mapOf(
-                Pair("creationMode", event.id.isEmpty()),
-                Pair("event", event),
-                Pair("links", event.photoUrls.toJson(objectMapper)),
-                Pair("videolink", event.videoUrl?.toJson(objectMapper) ?: "")
-            )
+    suspend fun editEventOrga(req: ServerRequest): ServerResponse {
+        val event = service.coFindOne(req.pathVariable("eventId")).toEvent()
+        return adminEventOrganization(
+            event.id,
+            event.organizations.first { it.organizationLogin == req.pathVariable("organizationLogin") }
         )
+    }
 
-    fun adminSaveEvent(req: ServerRequest): Mono<ServerResponse> =
-        req.extractFormData().flatMap { formData ->
-            // We need to find the event in database
-            service
-                .findOne(formData["eventId"]!!)
-                .map { it.toEvent() }
-                .flatMap { event ->
-                    service.save(
-                        Event(
-                            event.id,
-                            LocalDate.parse(formData["start"]!!),
-                            LocalDate.parse(formData["end"]!!),
-                            formData["current"]?.toBoolean() ?: false,
-                            event.sponsors,
-                            event.organizations,
-                            event.volunteers,
-                            formData["photoUrls"]?.toLinks(objectMapper) ?: emptyList(),
-                            formData["videoUrl"]?.toLink(objectMapper),
-                            formData["schedulingFileUrl"]
-                        )
-                    ).then(seeOther("${properties.baseUri}$LIST_URI"))
-                }
-                .switchIfEmpty(
-                    service.save(
-                        Event(
-                            formData["eventId"]!!,
-                            LocalDate.parse(formData["start"]!!),
-                            LocalDate.parse(formData["end"]!!),
-                            formData["current"]?.toBoolean() ?: false,
-                            photoUrls = formData["photoUrls"]?.toLinks(objectMapper) ?: emptyList(),
-                            videoUrl = formData["videoUrl"]?.toLink(objectMapper),
-                            schedulingFileUrl = formData["schedulingFileUrl"]
-                        )
-                    ).then(seeOther("${properties.baseUri}$LIST_URI"))
-                )
-        }
-
-    fun createEventSponsoring(req: ServerRequest): Mono<ServerResponse> =
-        adminEventSponsoring(req.pathVariable("eventId"))
-
-    private fun adminEventSponsoring(eventId: String, eventSponsoring: EventSponsoring = EventSponsoring()) =
-        ok().render(
-            TEMPLATE_SPONSOR,
-            mapOf(
-                Pair("creationMode", eventSponsoring.sponsorId == ""),
-                Pair("eventId", eventId),
-                Pair("eventSponsoring", eventSponsoring),
-                Pair("levels", enumMatcher(eventSponsoring) { it?.level ?: SponsorshipLevel.NONE })
-            )
-        )
-
-    fun adminUpdateEventSponsoring(req: ServerRequest): Mono<ServerResponse> =
-        req.extractFormData().flatMap { formData ->
-            // We need to find the event in database
-            service
-                .findOne(formData["eventId"]!!)
-                .map { it.toEvent() }
-                .flatMap { event ->
-                    service
-                        .save(
-                            event.copy(
-                                sponsors = event.sponsors.map { sponsoring ->
-                                    if (sponsoring.sponsorId == formData["sponsorId"] && sponsoring.level.name == formData["level"]) {
-                                        EventSponsoring(
-                                            sponsoring.level,
-                                            sponsoring.sponsorId,
-                                            formData["subscriptionDate"]?.let { LocalDate.parse(it) } ?: LocalDate.now()
-                                        )
-                                    } else {
-                                        sponsoring
-                                    }
-                                }
-                            )
-                        )
-                        .then(seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}"))
-                }
-        }
-
-    fun adminCreateEventSponsoring(req: ServerRequest): Mono<ServerResponse> =
-        req.extractFormData().flatMap { formData ->
-            // We need to find the event in database
-            service
-                .findOne(formData["eventId"]!!)
-                .map { it.toEvent() }
-                .flatMap { event ->
-                    // We create a mutable list
-                    val sponsors = event.sponsors.toMutableList()
-                    sponsors.add(
-                        EventSponsoring(
-                            SponsorshipLevel.valueOf(formData["level"]!!),
-                            formData["sponsorId"]!!,
-                            formData["subscriptionDate"]?.let { LocalDate.parse(it) } ?: LocalDate.now()
-                        )
-                    )
-                    service.save(event.copy(sponsors = sponsors))
-                        .then(seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}"))
-                }
-        }
-
-    fun adminDeleteEventSponsoring(req: ServerRequest): Mono<ServerResponse> =
-        req.extractFormData().flatMap { formData ->
-            // We need to find the event in database
-            service
-                .findOne(formData["eventId"]!!)
-                .map { it.toEvent() }
-                .flatMap { event ->
-                    // We create a mutable list
-                    service.save(
-                        event.copy(
-                            sponsors = event.sponsors
-                                .filterNot { it.sponsorId == formData["sponsorId"] && it.level.name == formData["level"] }
-                        )
-                    )
-                        .then(seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}"))
-                }
-        }
-
-    fun editEventSponsoring(req: ServerRequest): Mono<ServerResponse> =
-        service
-            .findOne(req.pathVariable("eventId"))
-            .map { it.toEvent() }
-            .flatMap { event ->
-                adminEventSponsoring(
-                    req.pathVariable("eventId"),
-                    event.sponsors
-                        .first {
-                            it.sponsorId == req.pathVariable("sponsorId") &&
-                                it.level.name == req.pathVariable("level")
-                        }
-                )
-            }
-
-    fun editEventOrganization(req: ServerRequest): Mono<ServerResponse> =
-        req.pathVariable("eventId").let { eventId ->
-            service
-                .findOne(eventId)
-                .map { it.toEvent() }
-                .flatMap { event ->
-                    adminEventOrganization(
-                        eventId,
-                        event.organizations.first { it.organizationLogin == req.pathVariable("organizationLogin") }
-                    )
-                }
-        }
-
-    fun createEventOrganization(req: ServerRequest): Mono<ServerResponse> =
+    suspend fun createEventOrganization(req: ServerRequest): ServerResponse =
         adminEventOrganization(req.pathVariable("eventId"))
 
-    private fun adminEventOrganization(eventId: String, eventOrganization: EventOrganization? = null) = ok()
-        .render(
-            TEMPLATE_ORGANIZATION,
-            mapOf(
-                Pair("creationMode", eventOrganization == null),
-                Pair("eventId", eventId),
-                Pair("eventOrganization", eventOrganization)
+    private suspend fun adminEventOrganization(eventId: String, eventOrganization: EventOrganization? = null) =
+        ok()
+            .render(
+                AdminEventOrganization.template,
+                mapOf(
+                    CREATION_MODE to (eventOrganization == null),
+                    EVENT_ID to eventId,
+                    "eventOrganization" to eventOrganization
+                )
             )
+            .awaitSingle()
+
+    suspend fun adminUpdateEventOrganization(req: ServerRequest): ServerResponse {
+        val formData = req.coExtractFormData()
+        val event = service.coFindOne(formData["eventId"] ?: throw NotFoundException())
+        // For the moment we have noting to save
+        return seeOther("${properties.baseUri}$LIST_URI/edit/${event.id}").awaitSingle()
+    }
+
+    suspend fun adminCreateEventOrganization(req: ServerRequest): ServerResponse {
+        val formData = req.coExtractFormData()
+        val event = service.coFindOne(formData["eventId"] ?: throw NotFoundException()).toEvent()
+        val organizations = event.organizations.toMutableList().apply {
+            add(EventOrganization(formData["organizationLogin"]!!))
+        }
+        return service
+            .save(event.copy(organizations = organizations))
+            .then(seeOther("${properties.baseUri}$LIST_URI/edit/${event.id}"))
+            .awaitSingle()
+    }
+
+    suspend fun adminDeleteEventOrganization(req: ServerRequest): ServerResponse {
+        val formData = req.coExtractFormData()
+        val event = service.coFindOne(formData["eventId"] ?: throw NotFoundException()).toEvent()
+        val organizations = event.organizations.filter { it.organizationLogin != formData["organizationLogin"]!! }
+        return service
+            .save(event.copy(organizations = organizations))
+            .then(seeOther("${properties.baseUri}$LIST_URI/edit/${event.id}"))
+            .awaitSingle()
+    }
+
+    suspend fun editEventVolunteer(req: ServerRequest): ServerResponse {
+        val event = service.coFindOne(req.pathVariable("eventId")).toEvent()
+        return adminEventVolunteer(
+            event.id,
+            event.volunteers.first { it.volunteerLogin == req.pathVariable("volunteerLogin") }
         )
+    }
 
-    fun adminUpdateEventOrganization(req: ServerRequest): Mono<ServerResponse> =
-        req.extractFormData().flatMap { formData ->
-            // We need to find the event in database
-            service
-                .findOne(formData["eventId"]!!)
-                .flatMap {
-                    // For the moment we have noting to save
-                    seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}")
-                }
-        }
-
-    fun adminCreateEventOrganization(req: ServerRequest): Mono<ServerResponse> =
-        req.extractFormData().flatMap { formData ->
-            // We need to find the event in database
-            service
-                .findOne(formData["eventId"]!!)
-                .map { it.toEvent() }
-                .flatMap { event ->
-                    val organizations = event.organizations.toMutableList()
-                    organizations.add(EventOrganization(formData["organizationLogin"]!!))
-                    service.save(event.copy(organizations = organizations))
-                        .then(seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}"))
-                }
-        }
-
-    fun adminDeleteEventOrganization(req: ServerRequest): Mono<ServerResponse> =
-        req.extractFormData().flatMap { formData ->
-            // We need to find the event in database
-            service
-                .findOne(formData["eventId"]!!)
-                .map { it.toEvent() }
-                .flatMap { event ->
-                    val organizations =
-                        event.organizations.filter { it.organizationLogin != formData["organizationLogin"]!! }
-                    service.save(event.copy(organizations = organizations))
-                        .then(seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}"))
-                }
-        }
-
-    fun editEventVolunteer(req: ServerRequest): Mono<ServerResponse> =
-        req.pathVariable("eventId").let { eventId ->
-            service
-                .findOne(eventId)
-                .map { it.toEvent() }
-                .flatMap { event ->
-                    adminEventVolunteer(
-                        eventId,
-                        event.volunteers.first { it.volunteerLogin == req.pathVariable("volunteerLogin") }
-                    )
-                }
-        }
-
-    fun createEventVolunteer(req: ServerRequest): Mono<ServerResponse> =
+    suspend fun createEventVolunteer(req: ServerRequest): ServerResponse =
         adminEventVolunteer(req.pathVariable("eventId"))
 
-    private fun adminEventVolunteer(eventId: String, eventVolunteer: EventVolunteer? = null) = ok()
-        .render(
-            TEMPLATE_VOLUNTEER,
-            mapOf(
-                Pair("creationMode", eventVolunteer == null),
-                Pair("eventId", eventId),
-                Pair("eventOrganization", eventVolunteer)
+    private suspend fun adminEventVolunteer(eventId: String, eventVolunteer: EventVolunteer? = null): ServerResponse =
+        ok()
+            .render(
+                AdminEventVolunteer.template,
+                mapOf(
+                    CREATION_MODE to (eventVolunteer == null),
+                    EVENT_ID to eventId,
+                    "eventOrganization" to eventVolunteer
+                )
             )
-        )
+            .awaitSingle()
 
-    fun adminUpdateEventVolunteer(req: ServerRequest): Mono<ServerResponse> =
-        req.extractFormData().flatMap { formData ->
-            // We need to find the event in database
-            service
-                .findOne(formData["eventId"]!!)
-                .map { it.toEvent() }
-                .flatMap {
-                    // For the moment we have noting to save
-                    seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}")
-                }
-        }
+    suspend fun adminUpdateEventVolunteer(req: ServerRequest): ServerResponse {
+        val formData = req.coExtractFormData()
+        val event = service.coFindOne(formData["eventId"] ?: throw NotFoundException()).toEvent()
+        // For the moment we have noting to save
+        return seeOther("${properties.baseUri}$LIST_URI/edit/${event.id}").awaitSingle()
+    }
 
-    fun adminCreateEventVolunteer(req: ServerRequest): Mono<ServerResponse> =
-        req.extractFormData().flatMap { formData ->
-            // We need to find the event in database
-            service
-                .findOne(formData["eventId"]!!)
-                .map { it.toEvent() }
-                .flatMap { event ->
-                    val volunteers = event.volunteers.toMutableList()
-                    volunteers.add(EventVolunteer(formData["volunteerLogin"]!!))
-                    service.save(event.copy(volunteers = volunteers))
-                        .then(seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}"))
-                }
-        }
+    suspend fun adminCreateEventVolunteer(req: ServerRequest): ServerResponse {
+        val formData = req.coExtractFormData()
+        val event = service.coFindOne(formData["eventId"] ?: throw NotFoundException()).toEvent()
+        val volunteers = event.volunteers.toMutableList()
+        volunteers.add(EventVolunteer(formData["volunteerLogin"]!!))
+        return service
+            .save(event.copy(volunteers = volunteers))
+            .then(seeOther("${properties.baseUri}$LIST_URI/edit/${event.id}"))
+            .awaitSingle()
+    }
 
-    fun adminDeleteEventVolunteer(req: ServerRequest): Mono<ServerResponse> =
-        req.extractFormData().flatMap { formData ->
-            // We need to find the event in database
-            service
-                .findOne(formData["eventId"]!!)
-                .map { it.toEvent() }
-                .flatMap { event ->
-                    val volunteers =
-                        event.volunteers.filter { it.volunteerLogin != formData["volunteerLogin"]!! }
-                    service.save(event.copy(volunteers = volunteers))
-                        .then(seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}"))
-                }
-        }
+    suspend fun adminDeleteEventVolunteer(req: ServerRequest): ServerResponse {
+        val formData = req.coExtractFormData()
+        val event = service.coFindOne(formData["eventId"] ?: throw NotFoundException()).toEvent()
+        val volunteers =
+            event.volunteers.filter { it.volunteerLogin != formData["volunteerLogin"]!! }
+        return service
+            .save(event.copy(volunteers = volunteers))
+            .then(seeOther("${properties.baseUri}$LIST_URI/edit/${event.id}"))
+            .awaitSingle()
+    }
 }

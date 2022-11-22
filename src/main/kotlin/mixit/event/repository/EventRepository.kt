@@ -2,6 +2,7 @@ package mixit.event.repository
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import kotlinx.coroutines.reactor.awaitSingle
 import mixit.event.model.Event
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
@@ -41,8 +42,14 @@ class EventRepository(
     fun findAll() =
         template.find<Event>(Query().with(Sort.by("year"))).doOnComplete { logger.info("Load all events") }
 
+    suspend fun coFindAll() =
+        findAll().collectList().awaitSingle()
+
     fun findOne(id: String) =
         template.findById<Event>(id).doOnSuccess { logger.info("Try to find event $id") }
+
+    suspend fun coFindOne(id: String) =
+        findOne(id).awaitSingle()
 
     fun deleteAll() =
         template.remove<Event>(Query())
@@ -52,4 +59,7 @@ class EventRepository(
 
     fun findByYear(year: Int) =
         template.findOne<Event>(Query(Criteria.where("year").isEqualTo(year)))
+
+    suspend fun coFindByYear(year: Int) =
+        findByYear(year).awaitSingle()
 }
