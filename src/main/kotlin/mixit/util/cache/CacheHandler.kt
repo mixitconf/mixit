@@ -1,15 +1,17 @@
 package mixit.util.cache
 
+import kotlinx.coroutines.reactor.awaitSingle
 import mixit.blog.model.BlogService
 import mixit.event.handler.AdminEventHandler.Companion.TIMEZONE
 import mixit.event.model.EventService
+import mixit.routes.MustacheI18n
+import mixit.routes.MustacheTemplate.AdminCache
 import mixit.talk.model.TalkService
 import mixit.ticket.model.TicketService
 import mixit.user.model.UserService
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
-import reactor.core.publisher.Mono
 import java.time.LocalDateTime
 import java.time.ZoneId
 
@@ -38,33 +40,32 @@ class CacheHandler(
     private val ticketService: TicketService
 ) {
 
-    fun view(req: ServerRequest): Mono<ServerResponse> =
-        ServerResponse.ok().render(
-            "admin-cache",
-            mapOf(
-                Pair("title", "admin.cache.title"),
-                Pair(
-                    "zones",
-                    mapOf(
-                        Pair(CacheZone.EVENT.name.lowercase(), CacheZoneStat.init(eventService)),
-                        Pair(CacheZone.BLOG.name.lowercase(), CacheZoneStat.init(blogService)),
-                        Pair(CacheZone.TALK.name.lowercase(), CacheZoneStat.init(talkService)),
-                        Pair(CacheZone.USER.name.lowercase(), CacheZoneStat.init(userService)),
-                        Pair(CacheZone.TICKET.name.lowercase(), CacheZoneStat.init(ticketService))
-                    )
-                )
+    suspend fun view(req: ServerRequest): ServerResponse {
+        val params = mapOf(
+            MustacheI18n.TITLE to "admin.cache.title",
+            "zones" to mapOf(
+                CacheZone.EVENT.name.lowercase() to CacheZoneStat.init(eventService),
+                CacheZone.BLOG.name.lowercase() to CacheZoneStat.init(blogService),
+                CacheZone.TALK.name.lowercase() to CacheZoneStat.init(talkService),
+                CacheZone.USER.name.lowercase() to CacheZoneStat.init(userService),
+                CacheZone.TICKET.name.lowercase() to CacheZoneStat.init(ticketService)
             )
         )
 
-    fun invalidate(req: ServerRequest): Mono<ServerResponse> =
-        CacheZone.valueOf(req.pathVariable("zone")).let {
-            when (it) {
-                CacheZone.TALK -> talkService.invalidateCache()
-                CacheZone.BLOG -> blogService.invalidateCache()
-                CacheZone.EVENT -> eventService.invalidateCache()
-                CacheZone.USER -> userService.invalidateCache()
-                CacheZone.TICKET -> ticketService.invalidateCache()
+        return ServerResponse.ok().render(AdminCache.template, params).awaitSingle()
+    }
+
+    suspend fun invalidate(req: ServerRequest): ServerResponse =
+        CacheZone
+            .valueOf(req.pathVariable("zone"))
+            .let {
+                when (it) {
+                    CacheZone.TALK -> talkService.invalidateCache()
+                    CacheZone.BLOG -> blogService.invalidateCache()
+                    CacheZone.EVENT -> eventService.invalidateCache()
+                    CacheZone.USER -> userService.invalidateCache()
+                    CacheZone.TICKET -> ticketService.invalidateCache()
+                }
+                view(req)
             }
-            view(req)
-        }
 }

@@ -14,6 +14,7 @@ import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.permanentRedirect
 import org.springframework.web.reactive.function.server.ServerResponse.seeOther
+import org.springframework.web.server.WebSession
 import reactor.core.publisher.Mono
 import java.net.URI
 import java.net.URLEncoder
@@ -55,6 +56,9 @@ fun ServerRequest.extractFormData(): Mono<Map<String, String?>> =
 
 suspend fun ServerRequest.coExtractFormData(): Map<String, String?> =
     this.extractFormData().awaitSingle()
+
+suspend fun ServerRequest.coWebSession(): WebSession =
+    this.session().awaitSingle()
 
 fun ServerRequest.currentNonEncryptedUserEmail(): Mono<String> =
     this.session().map {

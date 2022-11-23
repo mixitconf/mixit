@@ -22,6 +22,9 @@ class TicketService(
     fun findByNumber(number: String): Mono<CachedTicket> =
         findAll().flatMap { tickets -> Mono.justOrEmpty(tickets.firstOrNull { it.number == number }) }
 
+    suspend fun coFindByNumber(number: String): CachedTicket? =
+        findByNumber(number).awaitSingleOrNull()
+
     fun findByEmail(email: String): Mono<CachedTicket> =
         findAll().flatMap { tickets -> Mono.justOrEmpty(tickets.firstOrNull { it.email == email }) }
 

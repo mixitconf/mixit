@@ -1,6 +1,7 @@
 package mixit.user.model
 
 import kotlinx.coroutines.reactor.awaitSingle
+import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.security.model.Cryptographer
 import mixit.user.repository.UserRepository
 import mixit.util.cache.CacheTemplate
@@ -26,6 +27,9 @@ class UserService(
 
     fun findOneByEncryptedEmail(email: String): Mono<CachedUser> =
         findAll().flatMap { elements -> Mono.justOrEmpty(elements.firstOrNull { it.email == email }) }
+
+    suspend fun coFindOneByEncryptedEmail(email: String): CachedUser? =
+        findOneByEncryptedEmail(email).awaitSingleOrNull()
 
     fun findOneByNonEncryptedEmail(email: String): Mono<CachedUser> =
         cryptographer.encrypt(email)!!.let { encryptedEmail ->

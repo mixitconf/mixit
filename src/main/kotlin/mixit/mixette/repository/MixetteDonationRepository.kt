@@ -2,6 +2,8 @@ package mixit.mixette.repository
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import kotlinx.coroutines.reactor.awaitSingle
+import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.mixette.model.MixetteDonation
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
@@ -49,11 +51,20 @@ class MixetteDonationRepository(
     fun findAllByYear(year: String): Flux<MixetteDonation> =
         template.find(Query(Criteria.where("year").isEqualTo(year)))
 
+    suspend fun coFindAllByYear(year: String): List<MixetteDonation> =
+        findAllByYear(year).collectList().awaitSingle()
+
     fun findByYearAfterNow(year: String): Flux<MixetteDonation> =
         template.find(Query(Criteria.where("year").isEqualTo(year).and("createdBy").gt(Instant.now())))
 
     fun findOne(id: String) =
         template.findById<MixetteDonation>(id)
+
+    suspend fun coFindOne(id: String) =
+        findOne(id).awaitSingle()
+
+    suspend fun coFindOneOrNull(id: String) =
+        findOne(id).awaitSingleOrNull()
 
     fun deleteOne(id: String) =
         template.remove<MixetteDonation>(Query(Criteria.where("_id").isEqualTo(id)))
@@ -61,9 +72,15 @@ class MixetteDonationRepository(
     fun findByTicketNumber(ticketNumber: String, year: String): Flux<MixetteDonation> =
         template.find(Query(Criteria.where("encryptedTicketNumber").isEqualTo(ticketNumber).and("year").isEqualTo(year)))
 
+    suspend fun coFindByTicketNumber(ticketNumber: String, year: String): List<MixetteDonation> =
+        findByTicketNumber(ticketNumber, year).collectList().awaitSingle()
+
     fun findByEmail(email: String, year: String): Flux<MixetteDonation> =
         template.find(Query(Criteria.where("encryptedUserEmail").isEqualTo(email).and("year").isEqualTo(year)))
 
     fun findByOrganizationLogin(login: String, year: String): Flux<MixetteDonation> =
         template.find(Query(Criteria.where("organizationLogin").isEqualTo(login).and("year").isEqualTo(year)))
+
+    suspend fun coFindByOrganizationLogin(login: String, year: String): List<MixetteDonation> =
+        findByOrganizationLogin(login, year).collectList().awaitSingle()
 }

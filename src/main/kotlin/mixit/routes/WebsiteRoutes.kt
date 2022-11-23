@@ -1,15 +1,12 @@
 package mixit.routes
 
-import com.fasterxml.jackson.databind.ObjectMapper
-import com.fasterxml.jackson.module.kotlin.readValue
 import mixit.MixitProperties
 import mixit.about.AboutHandler
 import mixit.about.SearchHandler
 import mixit.blog.handler.AdminPostHandler
 import mixit.blog.handler.WebBlogHandler
 import mixit.event.handler.AdminEventHandler
-import mixit.event.model.Event
-import mixit.event.model.EventService
+import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
 import mixit.event.model.SponsorshipLevel.MIXTEEN
 import mixit.mailing.handler.MailingHandler
 import mixit.mailing.handler.MailingListHandler
@@ -78,113 +75,127 @@ class WebsiteRoutes(
     private val mixetteHandler: MixetteHandler,
     private val userHandler: UserHandler,
     private val messageSource: MessageSource,
-    private val properties: MixitProperties,
-    private val objectMapper: ObjectMapper,
-    private val eventService: EventService
+    private val properties: MixitProperties
 ) {
 
     private val logger = LoggerFactory.getLogger(WebsiteRoutes::class.java)
 
     @Bean
     @Order(2)
-    fun websiteCoRouter() =
-        coRouter {
-            accept(TEXT_HTML).nest {
-                GET("/") { sponsorHandler.viewWithSponsors(it, Home.template) }
+    fun websiteCoRouter() = coRouter {
+        accept(TEXT_HTML).nest {
+            GET("/") { sponsorHandler.viewWithSponsors(it, Home.template) }
 
-                "/admin".nest {
-                    GET("/admin/users", adminUserHandler::adminUsers)
-                    GET("/admin/users/edit/{login}", adminUserHandler::editUser)
-                    GET("/admin/users/create", adminUserHandler::createUser)
-                }
+            GET("/admin", adminHandler::admin)
+            GET("/admin/cache", cacheHandler::view)
+            GET("/admin/users", adminUserHandler::adminUsers)
+            GET("/admin/users/edit/{login}", adminUserHandler::editUser)
+            GET("/admin/users/create", adminUserHandler::createUser)
+            GET("/admin/mixette-organization", adminMixetteHandler::adminOrganizationDonations)
+            GET("/admin/mixette-donor", adminMixetteHandler::adminDonorDonations)
+            GET("/admin/mixette-donation/edit/{id}", adminMixetteHandler::editDonation)
+            GET("/admin/mixette-donation/orga", adminMixetteHandler::editOrganization)
+            GET("/admin/mixette-donation/donor", adminMixetteHandler::editDonor)
+            GET("/admin/mixette-donation/create", adminMixetteHandler::addDonation)
+            GET("/admin/mixette-donation/create/{number}", adminMixetteHandler::addDonationForAttendee)
 
-                GET("/about", aboutHandler::findAboutView)
-                GET("/accessibility", aboutHandler::accessibilityView)
-                GET("/codeofconduct", aboutHandler::codeConductView)
-                GET("/code-of-conduct", aboutHandler::codeConductView)
-                GET("/come", aboutHandler::comeToMixitView)
-                GET("/events", adminEventHandler::adminEvents)
-                GET("/events/edit/{eventId}", adminEventHandler::editEvent)
-                GET("/events/{eventId}/sponsors/edit/{sponsorId}/{level}", adminEventHandler::editEventSponsoring)
-                GET("/events/{eventId}/sponsors/create", adminEventHandler::createEventSponsoring)
-                GET("/events/{eventId}/organizations/edit/{organizationLogin}", adminEventHandler::editEventOrga)
-                GET("/events/{eventId}/organizations/create", adminEventHandler::createEventOrganization)
-                GET("/events/{eventId}/volunteers/edit/{organizationLogin}", adminEventHandler::editEventVolunteer)
-                GET("/events/{eventId}/volunteers/create", adminEventHandler::createEventVolunteer)
-                GET("/events/create", adminEventHandler::createEvent)
-                GET("/faq", aboutHandler::faqView)
-                GET("/me") { userHandler.findProfileView(it) }
-                GET("/me/edit", userHandler::editProfileView)
-                GET("/me/talks/edit/{slug}", talkHandler::editTalkView)
-                GET("/search") { aboutHandler.findFullTextView(it) }
-                GET("/speaker", userHandler::speakerView)
-                GET("/sponsors") { sponsorHandler.viewSponsors(it) }
-                GET("/mixteen") {
-                    sponsorHandler.viewWithSponsors(it, Mixteen.template, "mixteen.title", arrayOf(MIXTEEN))
-                }
-                GET("/user/{login}") { userHandler.findOneView(it) }
+            GET("/volunteer", adminHandler::admin)
+            GET("/volunteer/mixette-organization", adminMixetteHandler::adminOrganizationDonations)
+            GET("/volunteer/mixette-donor", adminMixetteHandler::adminDonorDonations)
+            GET("/volunteer/mixette-donation/edit/{id}", adminMixetteHandler::editDonation)
+            GET("/volunteer/mixette-donation/orga", adminMixetteHandler::editOrganization)
+            GET("/volunteer/mixette-donation/donor", adminMixetteHandler::editDonor)
+            GET("/volunteer/mixette-donation/create", adminMixetteHandler::addDonation)
+            GET("/volunteer/mixette-donation/create/{number}", adminMixetteHandler::addDonationForAttendee)
 
-                // TODO refactoring
-                val eventsResource = ClassPathResource("data/events.json")
-                val events: List<Event> = objectMapper.readValue(eventsResource.inputStream)
-
-                events.map { it.year }.forEach { year ->
-                    GET("/admin/$year/feedback-wall") { talkHandler.findByEventView(feedbackWall(it, year)) }
-
-                    // Sponsors
-                    GET("/sponsors/$year") { sponsorHandler.viewSponsors(it, year) }
-
-                    // Talks
-                    GET("/$year") { talkHandler.findByEventView(talks(it, year)) }
-                    GET("/$year/favorite") { talkHandler.findByEventView(talksWithFavorites(it, year)) }
-                    GET("/$year/medias") { talkHandler.findByEventView(media(it, year)) }
-                    GET("/$year/medias/favorite") { talkHandler.findByEventView(mediaWithFavorites(it, year)) }
-                    Topic.values()
-                        .map { it.value }
-                        .onEach { topic ->
-                            GET("/$year/$topic") { talkHandler.findByEventView(talks(it, year, topic)) }
-                            GET("/$year/$topic/favorite") {
-                                talkHandler.findByEventView(talksWithFavorites(it, year, topic))
-                            }
-                            GET("/$year/medias/$topic") { talkHandler.findByEventView(media(it, year, topic)) }
-                            GET("/$year/medias/$topic/favorite") {
-                                talkHandler.findByEventView(mediaWithFavorites(it, year, topic))
-                            }
-                        }
-
-                    GET("/$year/{slug}") { talkHandler.findOneView(it, year) }
-                }
+            GET("/about", aboutHandler::findAboutView)
+            GET("/accessibility", aboutHandler::accessibilityView)
+            GET("/codeofconduct", aboutHandler::codeConductView)
+            GET("/code-of-conduct", aboutHandler::codeConductView)
+            GET("/come", aboutHandler::comeToMixitView)
+            GET("/events", adminEventHandler::adminEvents)
+            GET("/events/edit/{eventId}", adminEventHandler::editEvent)
+            GET("/events/{eventId}/sponsors/edit/{sponsorId}/{level}", adminEventHandler::editEventSponsoring)
+            GET("/events/{eventId}/sponsors/create", adminEventHandler::createEventSponsoring)
+            GET("/events/{eventId}/organizations/edit/{organizationLogin}", adminEventHandler::editEventOrga)
+            GET("/events/{eventId}/organizations/create", adminEventHandler::createEventOrganization)
+            GET("/events/{eventId}/volunteers/edit/{organizationLogin}", adminEventHandler::editEventVolunteer)
+            GET("/events/{eventId}/volunteers/create", adminEventHandler::createEventVolunteer)
+            GET("/events/create", adminEventHandler::createEvent)
+            GET("/faq", aboutHandler::faqView)
+            GET("/me") { userHandler.findProfileView(it) }
+            GET("/me/edit", userHandler::editProfileView)
+            GET("/me/talks/edit/{slug}", talkHandler::editTalkView)
+            GET("/search") { aboutHandler.findFullTextView(it) }
+            GET("/speaker", userHandler::speakerView)
+            GET("/sponsors") { sponsorHandler.viewSponsors(it) }
+            GET("/mixette/dashboard", mixetteHandler::mixette)
+            GET("/mixteen") {
+                sponsorHandler.viewWithSponsors(it, Mixteen.template, "mixteen.title", arrayOf(MIXTEEN))
             }
+            GET("/user/{login}") { userHandler.findOneView(it) }
 
-            contentType(APPLICATION_FORM_URLENCODED).nest {
-                "/admin".nest {
-                    POST("/users", adminUserHandler::adminSaveUser)
-                    POST("/users/delete", adminUserHandler::adminDeleteUser)
+            (2012..CURRENT_EVENT.toInt()).forEach { year ->
+                GET("/admin/$year/feedback-wall") { talkHandler.findByEventView(feedbackWall(it, year)) }
+
+                // Sponsors
+                GET("/sponsors/$year") { sponsorHandler.viewSponsors(it, year) }
+
+                // Talks
+                GET("/$year") { talkHandler.findByEventView(talks(it, year)) }
+                GET("/$year/favorite") { talkHandler.findByEventView(talksWithFavorites(it, year)) }
+                GET("/$year/medias") { talkHandler.findByEventView(media(it, year)) }
+                GET("/$year/medias/favorite") { talkHandler.findByEventView(mediaWithFavorites(it, year)) }
+                Topic.values().map { it.value }.onEach { topic ->
+                    GET("/$year/$topic") { talkHandler.findByEventView(talks(it, year, topic)) }
+                    GET("/$year/$topic/favorite") {
+                        talkHandler.findByEventView(talksWithFavorites(it, year, topic))
+                    }
+                    GET("/$year/medias/$topic") { talkHandler.findByEventView(media(it, year, topic)) }
+                    GET("/$year/medias/$topic/favorite") {
+                        talkHandler.findByEventView(mediaWithFavorites(it, year, topic))
+                    }
                 }
-                POST("/events", adminEventHandler::adminSaveEvent)
-                POST("/events/{eventId}/sponsors/create", adminEventHandler::adminCreateEventSponsoring)
-                POST("/events/{eventId}/sponsors/delete", adminEventHandler::adminDeleteEventSponsoring)
-                POST("/events/{eventId}/sponsors", adminEventHandler::adminUpdateEventSponsoring)
-                POST("/events/{eventId}/organizations/create", adminEventHandler::adminCreateEventOrganization)
-                POST("/events/{eventId}/organizations/delete", adminEventHandler::adminDeleteEventOrganization)
-                POST("/events/{eventId}/organizations", adminEventHandler::adminUpdateEventOrganization)
-                POST("/events/{eventId}/volunteers/create", adminEventHandler::adminCreateEventVolunteer)
-                POST("/events/{eventId}/volunteers/delete", adminEventHandler::adminDeleteEventVolunteer)
-                POST("/events/{eventId}/volunteers", adminEventHandler::adminUpdateEventVolunteer)
-                POST("/me", userHandler::saveProfile)
-                POST("/me/talks", talkHandler::saveProfileTalk)
-            }
-        }.filter { request, next ->
-            val locale: Locale = request.locale()
-            val path = request.uri().path
-            request.session().flatMap { session ->
-                val model = generateModel(properties, path, locale, session, messageSource)
-                next.handle(request).flatMap {
-                    if (it is RenderingResponse) RenderingResponse.from(it).modelAttributes(model)
-                        .build() else it.toMono()
-                }
+
+                GET("/$year/{slug}") { talkHandler.findOneView(it, year) }
             }
         }
+
+        contentType(APPLICATION_FORM_URLENCODED).nest {
+            "/admin".nest {
+                POST("/users", adminUserHandler::adminSaveUser)
+                POST("/users/delete", adminUserHandler::adminDeleteUser)
+            }
+            POST("/cache/{zone}/invalidate", cacheHandler::invalidate)
+            POST("/events", adminEventHandler::adminSaveEvent)
+            POST("/events/{eventId}/sponsors/create", adminEventHandler::adminCreateEventSponsoring)
+            POST("/events/{eventId}/sponsors/delete", adminEventHandler::adminDeleteEventSponsoring)
+            POST("/events/{eventId}/sponsors", adminEventHandler::adminUpdateEventSponsoring)
+            POST("/events/{eventId}/organizations/create", adminEventHandler::adminCreateEventOrganization)
+            POST("/events/{eventId}/organizations/delete", adminEventHandler::adminDeleteEventOrganization)
+            POST("/events/{eventId}/organizations", adminEventHandler::adminUpdateEventOrganization)
+            POST("/events/{eventId}/volunteers/create", adminEventHandler::adminCreateEventVolunteer)
+            POST("/events/{eventId}/volunteers/delete", adminEventHandler::adminDeleteEventVolunteer)
+            POST("/events/{eventId}/volunteers", adminEventHandler::adminUpdateEventVolunteer)
+            POST("/me", userHandler::saveProfile)
+            POST("/me/talks", talkHandler::saveProfileTalk)
+            POST("/mixette-donation/{id}/delete", adminMixetteHandler::adminDeleteDonation)
+            POST("/mixette-donation", adminMixetteHandler::adminSaveDonation)
+        }
+
+        "/volunteer".nest {
+            POST("/mixette-donation", adminMixetteHandler::adminSaveDonation)
+        }
+    }.filter { request, next ->
+        val locale: Locale = request.locale()
+        val path = request.uri().path
+        request.session().flatMap { session ->
+            val model = generateModel(properties, path, locale, session, messageSource)
+            next.handle(request).flatMap {
+                if (it is RenderingResponse) RenderingResponse.from(it).modelAttributes(model).build() else it.toMono()
+            }
+        }
+    }
 
     @Bean
     @Order(1)
@@ -203,7 +214,7 @@ class WebsiteRoutes(
 
             GET("/blog", blogHandler::findAllView)
             GET("/blog/{slug}", blogHandler::findOneView)
-            GET("/mixette/dashboard", mixetteHandler::mixette)
+
 
             // Authentication
             GET("/login", authenticationHandler::loginView)
@@ -215,8 +226,7 @@ class WebsiteRoutes(
             GET("/newsletter-signin/{token}/{email:.*}", authenticationHandler::signInViaUrlForNewsletter)
 
             "/admin".nest {
-                GET("", adminHandler::admin)
-                GET("/cache", cacheHandler::view)
+
                 GET("/lottery", adminLotteryHandler::adminTicketing)
                 GET("/ticket", ticketHandler::ticketing)
                 GET("/ticket/print", ticketHandler::printTicketing)
@@ -234,25 +244,10 @@ class WebsiteRoutes(
                 GET("/post/edit/{id}", adminPostHandler::editPost)
                 GET("/ticket/edit/{number}", ticketHandler::editTicket)
                 GET("/post/create", adminPostHandler::createPost)
-                GET("/mixette-organization", adminMixetteHandler::adminOrganizationDonations)
-                GET("/mixette-donor", adminMixetteHandler::adminDonorDonations)
-                GET("/mixette-donation/edit/{id}", adminMixetteHandler::editDonation)
-                GET("/mixette-donation/orga", adminMixetteHandler::editOrga)
-                GET("/mixette-donation/donor", adminMixetteHandler::editDonor)
-                GET("/mixette-donation/create", adminMixetteHandler::addDonation)
-                GET("/mixette-donation/create/{number}", adminMixetteHandler::addDonationForAttendee)
+
             }
 
-            "/volunteer".nest {
-                GET("", adminHandler::admin)
-                GET("/mixette-organization", adminMixetteHandler::adminOrganizationDonations)
-                GET("/mixette-donor", adminMixetteHandler::adminDonorDonations)
-                GET("/mixette-donation/edit/{id}", adminMixetteHandler::editDonation)
-                GET("/mixette-donation/orga", adminMixetteHandler::editOrga)
-                GET("/mixette-donation/donor", adminMixetteHandler::editDonor)
-                GET("/mixette-donation/create", adminMixetteHandler::addDonation)
-                GET("/mixette-donation/create/{number}", adminMixetteHandler::addDonationForAttendee)
-            }
+
         }
 
         contentType(APPLICATION_FORM_URLENCODED).nest {
@@ -282,13 +277,6 @@ class WebsiteRoutes(
                 POST("/mailings/send", mailingHandler::sendMailing)
                 POST("/mailings/delete", mailingHandler::deleteMailing)
                 POST("/mailing-lists", mailingListHandler::generateMailinglist)
-                POST("/mixette-donation/{id}/delete", adminMixetteHandler::adminDeleteDonation)
-                POST("/mixette-donation", adminMixetteHandler::adminSaveDonation)
-                POST("/cache/{zone}/invalidate", cacheHandler::invalidate)
-            }
-
-            "/volunteer".nest {
-                POST("/mixette-donation", adminMixetteHandler::adminSaveDonation)
             }
         }
 
