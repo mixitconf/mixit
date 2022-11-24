@@ -39,11 +39,14 @@ class UserService(
     fun findByRoles(vararg roles: Role): Mono<List<CachedUser>> =
         findAll().map { elements -> elements.filter { roles.contains(it.role) } }
 
-    suspend fun coFindByRoles(staff: Role, staffInPause: Role) =
-        findByRoles(staff, staffInPause).awaitSingle()
+    suspend fun coFindByRoles(vararg roles: Role) =
+        findByRoles(*roles).awaitSingle()
 
     fun findAllByIds(userIds: List<String>): Mono<List<CachedUser>> =
         findAll().map { elements -> elements.filter { userIds.contains(it.login) } }
+
+    suspend fun coFindAllByIds(userIds: List<String>): List<CachedUser> =
+        findAllByIds(userIds).awaitSingle()
 
     fun save(user: User): Mono<User> =
         userRepository.save(user).doOnSuccess {

@@ -194,7 +194,7 @@ class AdminMixetteHandler(
         donation: MixetteDonation,
         errors: Map<String, String> = emptyMap()
     ): ServerResponse {
-        val event = service.coFindByYear(CURRENT_EVENT.toInt())
+        val event = service.coFindByYear(CURRENT_EVENT)
         val donor = findDonorByEncryptedTicketNumber(donation.encryptedTicketNumber ?: "") ?: throw NotFoundException()
         val organization = userService.coFindOne(donation.organizationLogin)
 

@@ -1,5 +1,6 @@
 package mixit.mailing.repository
 
+import kotlinx.coroutines.reactor.awaitSingle
 import mixit.mailing.model.Mailing
 import org.springframework.data.domain.Sort
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
@@ -15,6 +16,8 @@ import org.springframework.stereotype.Repository
 class MailingRepository(private val template: ReactiveMongoTemplate) {
 
     fun findOne(id: String) = template.findById<Mailing>(id)
+
+    suspend fun coFindOne(id: String) = findOne(id).awaitSingle()
 
     fun findAll() = template.find<Mailing>(Query().with(Sort.by("addedAt")))
 

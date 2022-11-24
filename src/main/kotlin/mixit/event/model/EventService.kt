@@ -39,6 +39,9 @@ class EventService(
     suspend fun coFindByYear(year: Int): CachedEvent =
         findByYear(year).awaitSingle()
 
+    suspend fun coFindByYear(year: String): CachedEvent =
+        findByYear(year.toInt()).awaitSingle()
+
     fun save(event: Event) =
         repository.save(event).doOnSuccess { cache.invalidateAll() }
 

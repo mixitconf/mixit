@@ -47,6 +47,7 @@ import org.springframework.http.MediaType.TEXT_PLAIN
 import org.springframework.web.reactive.function.server.RenderingResponse
 import org.springframework.web.reactive.function.server.RouterFunctions.resources
 import org.springframework.web.reactive.function.server.ServerResponse
+import org.springframework.web.reactive.function.server.bodyValueAndAwait
 import org.springframework.web.reactive.function.server.coRouter
 import org.springframework.web.reactive.function.server.router
 import reactor.kotlin.core.publisher.toMono
@@ -91,6 +92,10 @@ class WebsiteRoutes(
             GET("/admin/users", adminUserHandler::adminUsers)
             GET("/admin/users/edit/{login}", adminUserHandler::editUser)
             GET("/admin/users/create", adminUserHandler::createUser)
+            GET("/admin/mailings", mailingHandler::listMailing)
+            GET("/admin/mailings/create", mailingHandler::createMailing)
+            GET("/admin/mailings/edit/{id}", mailingHandler::editMailing)
+            GET("/admin/mailing-lists", mailingListHandler::listMailing)
             GET("/admin/mixette-organization", adminMixetteHandler::adminOrganizationDonations)
             GET("/admin/mixette-donor", adminMixetteHandler::adminDonorDonations)
             GET("/admin/mixette-donation/edit/{id}", adminMixetteHandler::editDonation)
@@ -163,6 +168,11 @@ class WebsiteRoutes(
 
         contentType(APPLICATION_FORM_URLENCODED).nest {
             "/admin".nest {
+                POST("/mailings/preview", mailingHandler::previewMailing)
+                POST("/mailings", mailingHandler::saveMailing)
+                POST("/mailings/send", mailingHandler::sendMailing)
+                POST("/mailings/delete", mailingHandler::deleteMailing)
+                POST("/mailing-lists", mailingListHandler::generateMailinglist)
                 POST("/users", adminUserHandler::adminSaveUser)
                 POST("/users/delete", adminUserHandler::adminDeleteUser)
             }
@@ -185,6 +195,13 @@ class WebsiteRoutes(
 
         "/volunteer".nest {
             POST("/mixette-donation", adminMixetteHandler::adminSaveDonation)
+        }
+
+        if (properties.baseUri != "https://mixitconf.org") {
+            logger.warn("SEO disabled via robots.txt because ${properties.baseUri} baseUri is not the production one (https://mixitconf.org)")
+            GET("/robots.txt") {
+                ServerResponse.ok().contentType(TEXT_PLAIN).bodyValueAndAwait("User-agent: *\nDisallow: /")
+            }
         }
     }.filter { request, next ->
         val locale: Locale = request.locale()
@@ -232,10 +249,7 @@ class WebsiteRoutes(
                 GET("/ticket/print", ticketHandler::printTicketing)
                 GET("/ticket/edit/{number}", ticketHandler::editTicket)
                 GET("/ticket/create", ticketHandler::createTicket)
-                GET("/mailings", mailingHandler::listMailing)
-                GET("/mailings/create", mailingHandler::createMailing)
-                GET("/mailings/edit/{id}", mailingHandler::editMailing)
-                GET("/mailing-lists", mailingListHandler::listMailing)
+
                 GET("/talks/edit/{id}", adminTalkHandler::editTalk)
                 GET("/talks") { adminTalkHandler.adminTalks(it, AdminTalkHandler.LAST_TALK_EVENT) }
                 GET("/talks/create", adminTalkHandler::createTalk)
@@ -272,20 +286,11 @@ class WebsiteRoutes(
                 POST("/ticket/delete", ticketHandler::adminDeleteTicket)
                 POST("/post", adminPostHandler::adminSavePost)
                 POST("/post/delete", adminPostHandler::adminDeletePost)
-                POST("/mailings/preview", mailingHandler::previewMailing)
-                POST("/mailings", mailingHandler::saveMailing)
-                POST("/mailings/send", mailingHandler::sendMailing)
-                POST("/mailings/delete", mailingHandler::deleteMailing)
-                POST("/mailing-lists", mailingListHandler::generateMailinglist)
+
             }
         }
 
-        if (properties.baseUri != "https://mixitconf.org") {
-            logger.warn("SEO disabled via robots.txt because ${properties.baseUri} baseUri is not the production one (https://mixitconf.org)")
-            GET("/robots.txt") {
-                ServerResponse.ok().contentType(TEXT_PLAIN).bodyValue("User-agent: *\nDisallow: /")
-            }
-        }
+
     }.filter { request, next ->
         val locale: Locale = request.locale()
         val path = request.uri().path

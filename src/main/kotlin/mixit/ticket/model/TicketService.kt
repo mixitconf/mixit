@@ -1,5 +1,6 @@
 package mixit.ticket.model
 
+import kotlinx.coroutines.reactor.awaitSingle
 import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.security.model.Cryptographer
 import mixit.ticket.repository.TicketRepository
@@ -18,6 +19,9 @@ class TicketService(
 
     override fun findAll(): Mono<List<CachedTicket>> =
         findAll { repository.findAll().map { ticket -> CachedTicket(cryptographer, ticket) }.collectList() }
+
+    suspend fun coFindAll(): List<CachedTicket> =
+        findAll().awaitSingle()
 
     fun findByNumber(number: String): Mono<CachedTicket> =
         findAll().flatMap { tickets -> Mono.justOrEmpty(tickets.firstOrNull { it.number == number }) }
