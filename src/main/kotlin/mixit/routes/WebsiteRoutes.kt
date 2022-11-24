@@ -115,6 +115,8 @@ class WebsiteRoutes(
 
             GET("/about", aboutHandler::findAboutView)
             GET("/accessibility", aboutHandler::accessibilityView)
+            GET("/blog", blogHandler::findAllView)
+            GET("/blog/{slug}", blogHandler::findOneView)
             GET("/codeofconduct", aboutHandler::codeConductView)
             GET("/code-of-conduct", aboutHandler::codeConductView)
             GET("/come", aboutHandler::comeToMixitView)
@@ -167,15 +169,13 @@ class WebsiteRoutes(
         }
 
         contentType(APPLICATION_FORM_URLENCODED).nest {
-            "/admin".nest {
-                POST("/mailings/preview", mailingHandler::previewMailing)
-                POST("/mailings", mailingHandler::saveMailing)
-                POST("/mailings/send", mailingHandler::sendMailing)
-                POST("/mailings/delete", mailingHandler::deleteMailing)
-                POST("/mailing-lists", mailingListHandler::generateMailinglist)
-                POST("/users", adminUserHandler::adminSaveUser)
-                POST("/users/delete", adminUserHandler::adminDeleteUser)
-            }
+            POST("/admin/mailings/preview", mailingHandler::previewMailing)
+            POST("/admin/mailings", mailingHandler::saveMailing)
+            POST("/admin/mailings/send", mailingHandler::sendMailing)
+            POST("/admin/mailings/delete", mailingHandler::deleteMailing)
+            POST("/admin/mailing-lists", mailingListHandler::generateMailinglist)
+            POST("/admin/users", adminUserHandler::adminSaveUser)
+            POST("/admin/users/delete", adminUserHandler::adminDeleteUser)
             POST("/cache/{zone}/invalidate", cacheHandler::invalidate)
             POST("/events", adminEventHandler::adminSaveEvent)
             POST("/events/{eventId}/sponsors/create", adminEventHandler::adminCreateEventSponsoring)
@@ -191,10 +191,7 @@ class WebsiteRoutes(
             POST("/me/talks", talkHandler::saveProfileTalk)
             POST("/mixette-donation/{id}/delete", adminMixetteHandler::adminDeleteDonation)
             POST("/mixette-donation", adminMixetteHandler::adminSaveDonation)
-        }
-
-        "/volunteer".nest {
-            POST("/mixette-donation", adminMixetteHandler::adminSaveDonation)
+            POST("/volunteer/mixette-donation", adminMixetteHandler::adminSaveDonation)
         }
 
         if (properties.baseUri != "https://mixitconf.org") {
@@ -217,8 +214,6 @@ class WebsiteRoutes(
     @Bean
     @Order(1)
     fun websiteRouter() = router {
-        GET("/blog/feed", blogHandler::feed)
-
         accept(TEXT_EVENT_STREAM).nest {
             GET("/mixette/dashboard/sse", mixetteHandler::mixetteRealTime)
         }
@@ -229,8 +224,6 @@ class WebsiteRoutes(
 
             GET("/schedule", talkHandler::scheduleView)
 
-            GET("/blog", blogHandler::findAllView)
-            GET("/blog/{slug}", blogHandler::findOneView)
 
 
             // Authentication

@@ -2,15 +2,14 @@ package mixit.routes
 
 import mixit.MixitProperties
 import mixit.blog.handler.WebBlogHandler
+import mixit.event.handler.AdminEventHandler
 import mixit.routes.Routes.GOOGLE_DRIVE_URI
 import mixit.talk.handler.TalkHandler
 import mixit.util.permanentRedirect
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
-import org.springframework.core.annotation.Order
 import org.springframework.http.MediaType.TEXT_HTML
 import org.springframework.web.reactive.function.server.coRouter
-import org.springframework.web.reactive.function.server.router
 
 @Configuration
 class RedirectRoutes(
@@ -20,27 +19,11 @@ class RedirectRoutes(
 ) {
 
     @Bean
-    @Order(2)
     fun redirectCoRouter() = coRouter {
         accept(TEXT_HTML).nest {
-            GET("/session/{id}", talkHandler::redirectFromId)
-            GET("/session/{id}/", talkHandler::redirectFromId)
-            GET("/session/{id}/{sluggifiedTitle}/", talkHandler::redirectFromId)
-            GET("/session/{id}/{sluggifiedTitle}", talkHandler::redirectFromId)
-            GET("/talk/{slug}", talkHandler::redirectFromSlug)
-        }
-    }
-
-    @Bean
-    @Order(1)
-    fun redirectRouter() = router {
-        accept(TEXT_HTML).nest {
-            "/articles".nest {
-                GET("/") { permanentRedirect("${properties.baseUri}/blog") }
-                (GET("/{id}") or GET("/{id}/")).invoke(blogHandler::redirect)
-            }
+            GET("/articles") { permanentRedirect("${properties.baseUri}/blog") }
+            GET("/article/{id}", blogHandler::redirect)
             GET("/article/{id}/", blogHandler::redirect)
-            GET("/mixteen") { permanentRedirect("${properties.baseUri}/2022/mixteen-2022-born-to-code") }
 
             GET("/docs/sponsor/leaflet/en") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${properties.drive.en.sponsor}") }
             GET("/docs/sponsor/leaflet/fr") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${properties.drive.fr.sponsor}") }
@@ -51,23 +34,30 @@ class RedirectRoutes(
             GET("/docs/presse/leaflet/en") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${properties.drive.en.press}") }
             GET("/docs/presse/leaflet/fr") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${properties.drive.fr.press}") }
 
-            GET("/2017/") { permanentRedirect("${properties.baseUri}/2017") }
-            GET("/2016/") { permanentRedirect("${properties.baseUri}/2016") }
-            GET("/2015/") { permanentRedirect("${properties.baseUri}/2015") }
-            GET("/2014/") { permanentRedirect("${properties.baseUri}/2014") }
-            GET("/2013/") { permanentRedirect("${properties.baseUri}/2013") }
-            GET("/2012/") { permanentRedirect("${properties.baseUri}/2012") }
+            (2012..AdminEventHandler.CURRENT_EVENT.toInt()).forEach { year ->
+                GET("/$year/") { permanentRedirect("${properties.baseUri}/$year") }
+            }
 
-            (
-                GET("/member/{login}")
+            GET("/mixteen") { permanentRedirect("${properties.baseUri}/2022/mixteen-2022-born-to-code") }
+
+            GET("/session/{id}", talkHandler::redirectFromId)
+            GET("/session/{id}/", talkHandler::redirectFromId)
+            GET("/session/{id}/{sluggifiedTitle}/", talkHandler::redirectFromId)
+            GET("/session/{id}/{sluggifiedTitle}", talkHandler::redirectFromId)
+            GET("/talk/{slug}", talkHandler::redirectFromSlug)
+
+            (GET("/member/{login}")
                     or GET("/profile/{login}")
                     or GET("/member/sponsor/{login}")
                     or GET("/member/member/{login}")
-                ) { permanentRedirect("${properties.baseUri}/user/${it.pathVariable("login")}") }
+                    ) {
+                permanentRedirect("${properties.baseUri}/user/${it.pathVariable("login")}")
+            }
             GET("/sponsors/") { permanentRedirect("$${properties.baseUri}/sponsors") }
 
             GET("/about/") { permanentRedirect("${properties.baseUri}/about") }
             GET("/home") { permanentRedirect("${properties.baseUri}/") }
         }
     }
+
 }

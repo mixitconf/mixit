@@ -236,11 +236,11 @@ class TalkHandler(
 
     suspend fun redirectFromId(req: ServerRequest): ServerResponse {
         val talk = service.coFindOne("id")
-        return permanentRedirect("${properties.baseUri}/${talk.event}/${talk.slug}").awaitSingle()
+        return permanentRedirect("${properties.baseUri}/${talk.event}/${talk.slug}")
     }
 
     suspend fun redirectFromSlug(req: ServerRequest): ServerResponse {
         val talk = service.coFindBySlug(req.pathVariable("slug")) ?: throw NotFoundException()
-        return permanentRedirect("${properties.baseUri}/${talk.event}/${talk.slug}").awaitSingle()
+        return permanentRedirect("${properties.baseUri}/${talk.event}/${talk.slug}")
     }
 }

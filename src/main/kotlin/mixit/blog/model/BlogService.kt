@@ -1,5 +1,6 @@
 package mixit.blog.model
 
+import kotlinx.coroutines.reactor.awaitSingle
 import mixit.blog.repository.PostRepository
 import mixit.talk.model.Language
 import mixit.user.model.User
@@ -18,8 +19,11 @@ class BlogService(private val repository: PostRepository, private val userServic
     override fun findAll(): Mono<List<CachedPost>> =
         findAll { repository.findAll().flatMap { post -> loadPostWriters(post) }.collectList() }
 
-    fun findBySlug(slug: String) =
-        findAll().flatMap { elements -> Mono.justOrEmpty(elements.firstOrNull { it.slug[Language.ENGLISH] == slug || it.slug[Language.FRENCH] == slug }) }
+    suspend fun coFindAll(): List<CachedPost> =
+        findAll().awaitSingle()
+
+    suspend fun findBySlug(slug: String): CachedPost? =
+        coFindAll().firstOrNull { it.slug[Language.ENGLISH] == slug || it.slug[Language.FRENCH] == slug }
 
     fun save(event: Post) =
         repository.save(event).doOnSuccess { cache.invalidateAll() }

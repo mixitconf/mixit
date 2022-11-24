@@ -77,7 +77,7 @@ fun ServerResponse.BodyBuilder.xml() = contentType(APPLICATION_XML)
 
 fun ServerResponse.BodyBuilder.html() = contentType(TEXT_HTML)
 
-fun permanentRedirect(uri: String) = permanentRedirect(URI(uri)).build()
+suspend fun permanentRedirect(uri: String) = permanentRedirect(URI(uri)).build().awaitSingle()
 
 fun seeOther(uri: String) = seeOther(URI(uri)).build()
 
