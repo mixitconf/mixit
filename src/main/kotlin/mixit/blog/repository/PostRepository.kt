@@ -2,6 +2,7 @@ package mixit.blog.repository
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import kotlinx.coroutines.reactor.awaitSingle
 import mixit.blog.model.Post
 import mixit.talk.model.Language
 import org.slf4j.LoggerFactory
@@ -42,19 +43,19 @@ class PostRepository(
 
     fun count() = template.count<Post>()
 
-    fun findOne(id: String) = template.findById<Post>(id)
+    suspend fun findOne(id: String) = template.findById<Post>(id).awaitSingle()
 
     fun findBySlug(slug: String, lang: Language) =
         template.findOne<Post>(Query(where("slug.$lang").isEqualTo(slug)))
 
-    fun findAll(lang: Language? = null): Flux<Post> {
+    suspend fun findAll(lang: Language? = null): List<Post> {
         val query = Query()
         query.with(Sort.by(Order(DESC, "addedAt")))
         // query.fields().exclude("content")
         if (lang != null) {
             query.addCriteria(where("title.$lang").exists(true))
         }
-        return template.find<Post>(query).doOnComplete { logger.info("Load all posts") }
+        return template.find<Post>(query).doOnComplete { logger.info("Load all posts") }.collectList().awaitSingle()
     }
 
     fun findFullText(criteria: List<String>): Flux<Post> {

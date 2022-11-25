@@ -1,11 +1,12 @@
 package mixit.blog.handler
 
+import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.MixitProperties
 import mixit.blog.model.BlogService
 import mixit.blog.model.Post
 import mixit.talk.model.Language.ENGLISH
 import mixit.talk.model.Language.FRENCH
-import mixit.util.extractFormData
+import mixit.util.coExtractFormData
 import mixit.util.language
 import mixit.util.seeOther
 import mixit.util.toSlug
@@ -38,10 +39,11 @@ class AdminPostHandler(private val service: BlogService, private val properties:
     fun editPost(req: ServerRequest): Mono<ServerResponse> =
         service.findOne(req.pathVariable("id")).map { it.toPost() }.flatMap(this::adminPost)
 
-    fun adminDeletePost(req: ServerRequest): Mono<ServerResponse> =
-        req.extractFormData().flatMap { formData ->
-            service.deleteOne(formData["id"]!!).then(seeOther("${properties.baseUri}$LIST_URI"))
-        }
+    suspend fun adminDeletePost(req: ServerRequest): ServerResponse {
+        val formData = req.coExtractFormData()
+        service.deleteOne(formData["id"]!!).awaitSingleOrNull()
+        return seeOther("${properties.baseUri}$LIST_URI")
+    }
 
     private fun adminPost(post: Post = Post("")) = ok().render(
         TEMPLATE_EDIT,
@@ -56,20 +58,21 @@ class AdminPostHandler(private val service: BlogService, private val properties:
         )
     )
 
-    fun adminSavePost(req: ServerRequest): Mono<ServerResponse> =
-        req.extractFormData().flatMap { formData ->
-            val post = Post(
-                id = formData["id"],
-                addedAt = LocalDateTime.parse(formData["addedAt"]),
-                authorId = formData["authorId"]!!,
-                title = mapOf(Pair(FRENCH, formData["title-fr"]!!), Pair(ENGLISH, formData["title-en"]!!)),
-                slug = mapOf(
-                    Pair(FRENCH, formData["title-fr"]!!.toSlug()),
-                    Pair(ENGLISH, formData["title-en"]!!.toSlug())
-                ),
-                headline = mapOf(Pair(FRENCH, formData["headline-fr"]!!), Pair(ENGLISH, formData["headline-en"]!!)),
-                content = mapOf(Pair(FRENCH, formData["content-fr"]!!), Pair(ENGLISH, formData["content-en"]!!))
-            )
-            service.save(post).then(seeOther("${properties.baseUri}$LIST_URI"))
-        }
+    suspend fun adminSavePost(req: ServerRequest): ServerResponse {
+        val formData = req.coExtractFormData()
+        val post = Post(
+            id = formData["id"],
+            addedAt = LocalDateTime.parse(formData["addedAt"]),
+            authorId = formData["authorId"]!!,
+            title = mapOf(Pair(FRENCH, formData["title-fr"]!!), Pair(ENGLISH, formData["title-en"]!!)),
+            slug = mapOf(
+                Pair(FRENCH, formData["title-fr"]!!.toSlug()),
+                Pair(ENGLISH, formData["title-en"]!!.toSlug())
+            ),
+            headline = mapOf(Pair(FRENCH, formData["headline-fr"]!!), Pair(ENGLISH, formData["headline-en"]!!)),
+            content = mapOf(Pair(FRENCH, formData["content-fr"]!!), Pair(ENGLISH, formData["content-en"]!!))
+        )
+        service.save(post).awaitSingleOrNull()
+        return seeOther("${properties.baseUri}$LIST_URI")
+    }
 }

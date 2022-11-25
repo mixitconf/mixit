@@ -38,6 +38,10 @@ enum class MustacheTemplate(val template: String) {
     Home("home"),
     EmailMailing("email-mailing"),
     FeedbackWall("talks-feedback-wall"),
+    LotterySubmission("lottery-submission"),
+    LotteryEdit("lottery"),
+    LotteryClosed("lottery-closed"),
+    LotteryError("lottery-error"),
     Media("medias"),
     MixetteDashboard("mixette-dashboard"),
     Mixteen("mixteen"),
@@ -49,6 +53,7 @@ enum class MustacheTemplate(val template: String) {
     TalkList("talks"),
     TalkDetail("talk"),
     TalkEdit("talk-edit"),
+    TicketError("ticket-error"),
     User("user"),
     UserEdit("user-edit")
 }

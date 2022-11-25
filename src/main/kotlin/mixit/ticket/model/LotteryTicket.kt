@@ -1,6 +1,7 @@
 package mixit.ticket.model
 
 import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
+import mixit.security.model.Cryptographer
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 import java.time.Instant
@@ -33,6 +34,8 @@ data class Ticket(
     val createdAt: Instant = Instant.now()
 ) {
     companion object {
+        fun empty(cryptographer: Cryptographer) =
+            Ticket(cryptographer.encrypt(Ticket.generateNewNumber())!!, "", TicketType.ATTENDEE, "", "")
         fun generateNewNumber(): String =
             "MXT$CURRENT_EVENT-${UUID.randomUUID().toString().substring(0, 14).replace("-", "")}"
     }

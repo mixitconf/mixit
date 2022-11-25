@@ -1,6 +1,7 @@
 package mixit.mailing.handler
 
 import kotlinx.coroutines.reactor.awaitSingle
+import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.MixitProperties
 import mixit.mailing.model.Mailing
 import mixit.mailing.model.RecipientType
@@ -31,6 +32,7 @@ import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
+import org.springframework.web.reactive.function.server.renderAndAwait
 import java.time.LocalDateTime
 import java.util.Locale
 
@@ -45,12 +47,10 @@ class MailingHandler(
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
     suspend fun listMailing(req: ServerRequest): ServerResponse =
-        ok()
-            .render(
-                AdminMailingList.template,
-                mapOf(TITLE to "mailing.title", "mailings" to mailingRepository.findAll())
-            )
-            .awaitSingle()
+        ok().renderAndAwait(
+            AdminMailingList.template,
+            mapOf(TITLE to "mailing.title", "mailings" to mailingRepository.findAll())
+        )
 
     suspend fun createMailing(req: ServerRequest): ServerResponse =
         this.displayMailing()
@@ -61,24 +61,20 @@ class MailingHandler(
     }
 
     private suspend fun displayMailing(mailing: Mailing? = null): ServerResponse =
-        ok()
-            .render(
-                AdminMailingEdit.template,
-                mapOf(
-                    TITLE to "mailing.title",
-                    "roles" to enumMatcher(mailing) { mailing?.type ?: Staff },
-                    "mailing" to (mailing ?: Mailing()),
-                    "recipientLogins" to (mailing?.recipientLogins?.joinToString() ?: emptyList<String>())
-                )
+        ok().renderAndAwait(
+            AdminMailingEdit.template,
+            mapOf(
+                TITLE to "mailing.title",
+                "roles" to enumMatcher(mailing) { mailing?.type ?: Staff },
+                "mailing" to (mailing ?: Mailing()),
+                "recipientLogins" to (mailing?.recipientLogins?.joinToString() ?: emptyList<String>())
             )
-            .awaitSingle()
+        )
 
     suspend fun deleteMailing(req: ServerRequest): ServerResponse {
         val formData = req.coExtractFormData()
-        return mailingRepository
-            .deleteOne(formData["id"]!!)
-            .then(seeOther("${properties.baseUri}/admin/mailings"))
-            .awaitSingle()
+        mailingRepository.deleteOne(formData["id"]!!).awaitSingleOrNull()
+        return seeOther("${properties.baseUri}/admin/mailings")
     }
 
     suspend fun previewMailing(req: ServerRequest): ServerResponse {
@@ -87,7 +83,7 @@ class MailingHandler(
             "user" to User().copy(firstname = "Bot"),
             "message" to mailing.content.toHTML()
         )
-        return ok().render(EmailMailing.template, params).awaitSingle()
+        return ok().renderAndAwait(EmailMailing.template, params)
     }
 
     private suspend fun getUsers(mailing: Mailing): List<CachedUser> {
@@ -141,15 +137,16 @@ class MailingHandler(
             }
         }
         return ok()
-            .render(AdminMailingConfirmation.template, mapOf(
-                "emails" to mailing.users.mapNotNull { cryptographer.decrypt(it.email) }
-            ))
-            .awaitSingle()
+            .renderAndAwait(
+                AdminMailingConfirmation.template,
+                mapOf(
+                    "emails" to mailing.users.mapNotNull { cryptographer.decrypt(it.email) }
+                )
+            )
     }
 
     suspend fun saveMailing(req: ServerRequest): ServerResponse {
         persistMailing(req)
-        return seeOther("${properties.baseUri}/admin/mailings").awaitSingle()
+        return seeOther("${properties.baseUri}/admin/mailings")
     }
-
 }

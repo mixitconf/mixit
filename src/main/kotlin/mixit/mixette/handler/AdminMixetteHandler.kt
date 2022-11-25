@@ -1,6 +1,7 @@
 package mixit.mixette.handler
 
 import kotlinx.coroutines.reactor.awaitSingle
+import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.MixitProperties
 import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
 import mixit.event.model.EventService
@@ -30,8 +31,9 @@ import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
-import org.springframework.web.reactive.function.server.body
+import org.springframework.web.reactive.function.server.bodyValueAndAwait
 import org.springframework.web.reactive.function.server.queryParamOrNull
+import org.springframework.web.reactive.function.server.renderAndAwait
 
 @Component
 class AdminMixetteHandler(
@@ -48,7 +50,7 @@ class AdminMixetteHandler(
         const val LIST_URI_FOR_VOLUNTEER = "/volunteer/mixette-organization"
     }
 
-    fun findAll(req: ServerRequest) = ok().json().body(repository.findAll())
+    suspend fun findAll(req: ServerRequest) = ok().json().bodyValueAndAwait(repository.findAll())
 
     /**
      * Used to display aggregated data by donors
@@ -90,9 +92,7 @@ class AdminMixetteHandler(
             .sortedByDescending { it.quantity }
             .mapIndexed { index, donation -> donation.updateRank(index + 1) }
 
-        return ok()
-            .render(target, mapOf("donations" to donationByOrgas, TITLE to "admin.donations.title"))
-            .awaitSingle()
+        return ok().renderAndAwait(target, mapOf("donations" to donationByOrgas, TITLE to "admin.donations.title"))
     }
 
     /**
@@ -145,7 +145,6 @@ class AdminMixetteHandler(
         }
     }
 
-
     /**
      * Used to display aggregated data for a donor
      */
@@ -156,7 +155,6 @@ class AdminMixetteHandler(
             findDonorByEncryptedTicketNumber(it.encryptedTicketNumber!!) ?: throw NotFoundException()
         }
     }
-
 
     private suspend fun <T : MixetteDonationDto> adminGroupDonation(
         target: String,
@@ -186,9 +184,8 @@ class AdminMixetteHandler(
         val params = mapOf(
             TITLE to "admin.donations.title", "donations" to dtos, "userDonation" to userDonation
         )
-        return ok().render(target, params).awaitSingle()
+        return ok().renderAndAwait(target, params)
     }
-
 
     private suspend fun adminDonation(
         donation: MixetteDonation,
@@ -211,7 +208,7 @@ class AdminMixetteHandler(
             "hasErrors" to errors.isNotEmpty()
         )
 
-        return ok().render(AdminMixetteDonation.template, params).awaitSingle()
+        return ok().renderAndAwait(AdminMixetteDonation.template, params)
     }
 
     private suspend fun persistDonation(
@@ -242,7 +239,7 @@ class AdminMixetteHandler(
             repository.update(newDonation.copy(updatedBy = connectedUser)).awaitSingle()
         }
 
-        return seeOther("${properties.baseUri}${if (userRole == Role.STAFF) LIST_URI_FOR_ADMIN else LIST_URI_FOR_VOLUNTEER}").awaitSingle()
+        return seeOther("${properties.baseUri}${if (userRole == Role.STAFF) LIST_URI_FOR_ADMIN else LIST_URI_FOR_VOLUNTEER}")
     }
 
     /**
@@ -302,9 +299,7 @@ class AdminMixetteHandler(
 
     suspend fun adminDeleteDonation(req: ServerRequest): ServerResponse {
         val formData = req.coExtractFormData()
-        return repository
-            .deleteOne(formData["id"]!!)
-            .then(seeOther("${properties.baseUri}$LIST_URI_FOR_ADMIN"))
-            .awaitSingle()
+        repository.deleteOne(formData["id"]!!).awaitSingleOrNull()
+        return seeOther("${properties.baseUri}$LIST_URI_FOR_ADMIN")
     }
 }

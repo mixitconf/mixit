@@ -36,8 +36,16 @@ class ApiRoutes(
             "/admin".nest {
                 GET("/{year}/talk", talkHandler::findAdminByEventId)
             }
+            GET("/admin/favorite", favoriteHandler::findAll)
+            GET("/admin/mixette", adminMixetteHandler::findAll)
+            GET("/admin/ticket", ticketHandler::findAll)
+            GET("/admin/lottery", lotteryHandler::findAll)
+            GET("/blog", blogHandler::findAll)
+            GET("/blog/{id}", blogHandler::findOne)
             GET("/event", eventHandler::findAll)
             GET("/event/{id}", eventHandler::findOne)
+            GET("/favorites/{email}/talks/{id}", favoriteHandler::getFavorite)
+            GET("/favorites/{email}", favoriteHandler::getFavorites)
             GET("/staff", userHandler::findStaff)
             GET("/staff/{login}", userHandler::findOneStaff)
             GET("/talk/{login}", talkHandler::findOne)
@@ -54,40 +62,29 @@ class ApiRoutes(
     @Order(1)
     fun apiRouter() = router {
         (accept(APPLICATION_JSON) and "/api").nest {
-            "/blog".nest {
-                GET("", blogHandler::findAll)
-                GET("/{id}", blogHandler::findOne)
-            }
 
-            "/admin".nest {
-                GET("/mixette", adminMixetteHandler::findAll)
-                GET("/ticket", ticketHandler::findAll)
-                GET("/lottery", lotteryHandler::findAll)
-                GET("/favorite", favoriteHandler::findAll)
-            }
 
             // Edition data
             "/favorites".nest {
-                GET("/{email}/talks/{id}", favoriteHandler::getFavorite)
-                GET("/{email}", favoriteHandler::getFavorites)
+
                 POST("/{email}/talks/{id}/toggle", favoriteHandler::toggleFavorite)
             }
 
             // Some external request needs to be secured. So for them we need in the request the email and token. Values
-            "/external".nest {
+
                 // Require a token as arg
-                GET("/token", externalHandler::sendToken)
+                GET("/external/token", externalHandler::sendToken)
                 // Require a token and email as arg
-                GET("/token/check", externalHandler::checkToken)
+                GET("/external/token/check", externalHandler::checkToken)
                 // Needs authent and requires a token and email as arg
-                GET("/me", externalHandler::profile)
+                GET("/external/me", externalHandler::profile)
                 // Needs authent and requires a token and email as arg
-                GET("/favorites", externalHandler::favorites)
+                GET("/external/favorites", externalHandler::favorites)
                 // Needs authent and requires a token and email as arg
-                GET("/favorites/talks/{id}", externalHandler::favorite)
+                GET("/external/favorites/talks/{id}", externalHandler::favorite)
                 // Needs authent and requires a token and email as arg
-                POST("/favorites/talks/{id}/toggle", externalHandler::toggleFavorite)
-            }
+                POST("/external/favorites/talks/{id}/toggle", externalHandler::toggleFavorite)
+
         }
     }
 }

@@ -1,6 +1,5 @@
 package mixit.user.handler
 
-import kotlinx.coroutines.reactor.awaitSingle
 import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
 import mixit.event.model.EventService
 import mixit.event.model.SponsorshipLevel
@@ -16,6 +15,7 @@ import mixit.util.language
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
+import org.springframework.web.reactive.function.server.renderAndAwait
 
 @Suppress("CANDIDATE_CHOSEN_USING_OVERLOAD_RESOLUTION_BY_LAMBDA_ANNOTATION")
 @Component
@@ -38,7 +38,7 @@ class SponsorHandler(private val eventService: EventService) {
             MustacheI18n.YEAR to year,
             MustacheI18n.TITLE to "sponsors.title|$year"
         )
-        return ServerResponse.ok().render(Sponsors.template, context).awaitSingle()
+        return ServerResponse.ok().renderAndAwait(Sponsors.template, context)
     }
 
     suspend fun viewWithSponsors(
@@ -69,6 +69,6 @@ class SponsorHandler(private val eventService: EventService) {
                 .subList(0, 6)
         }
 
-        return ServerResponse.ok().render(template, context).awaitSingle()
+        return ServerResponse.ok().renderAndAwait(template, context)
     }
 }

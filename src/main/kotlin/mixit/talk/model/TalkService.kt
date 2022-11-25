@@ -44,10 +44,10 @@ class TalkService(
     suspend fun coFindBySlug(slug: String) =
         findBySlug(slug).awaitSingleOrNull()
 
-    fun findById(id: String) =
-        findAll().flatMap { talks ->
-            Mono.justOrEmpty(talks.first { it.id == id })
-        }
+    suspend fun findById(id: String) =
+        findAll()
+            .flatMap { talks -> Mono.justOrEmpty(talks.first { it.id == id }) }
+            .awaitSingle()
 
     suspend fun findByEventAndSlug(eventId: String, slug: String) =
         findAll()

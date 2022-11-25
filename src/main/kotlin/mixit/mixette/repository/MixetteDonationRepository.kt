@@ -45,8 +45,8 @@ class MixetteDonationRepository(
     fun update(donation: MixetteDonation) =
         template.save(donation).doOnSuccess { _ -> logger.info("Update Mixette donation $donation") }
 
-    fun findAll() =
-        template.findAll<MixetteDonation>()
+    suspend fun findAll() =
+        template.findAll<MixetteDonation>().collectList().awaitSingle()
 
     fun findAllByYear(year: String): Flux<MixetteDonation> =
         template.find(Query(Criteria.where("year").isEqualTo(year)))
@@ -56,6 +56,9 @@ class MixetteDonationRepository(
 
     fun findByYearAfterNow(year: String): Flux<MixetteDonation> =
         template.find(Query(Criteria.where("year").isEqualTo(year).and("createdBy").gt(Instant.now())))
+
+    suspend fun coFindByYearAfterNow(year: String): List<MixetteDonation> =
+        findByYearAfterNow(year).collectList().awaitSingle()
 
     fun findOne(id: String) =
         template.findById<MixetteDonation>(id)

@@ -2,6 +2,7 @@ package mixit.ticket.repository
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import kotlinx.coroutines.reactor.awaitSingle
 import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.ticket.model.LotteryTicket
 import org.slf4j.LoggerFactory
@@ -42,16 +43,14 @@ class LotteryRepository(
     fun save(ticket: LotteryTicket) =
         template.save(ticket).doOnSuccess { _ -> logger.info("Save new lottery ticket $ticket") }
 
-    fun findAll() = template.findAll<LotteryTicket>().doOnComplete { logger.info("Load all lottery tickets") }
+    fun findAll() = template.findAll<LotteryTicket>().doOnComplete { logger.info("Load all lottery tickets") }.collectList().awa
 
-    fun eraseRank() = template.updateMulti<LotteryTicket>(Query(), Update().set("rank", null))
+    suspend fun eraseRank() = template.updateMulti<LotteryTicket>(Query(), Update().set("rank", null)).awaitSingle()
 
     fun deleteAll() = template.remove<LotteryTicket>(Query())
 
     fun deleteOne(id: String) = template.remove<LotteryTicket>(Query(Criteria.where("_id").isEqualTo(id)))
 
-    fun findByEncryptedEmail(email: String) = template.findOne<LotteryTicket>(Query(Criteria.where("email").isEqualTo(email)))
-
-    suspend fun coFindByEncryptedEmail(email: String): LotteryTicket? =
-        findByEncryptedEmail(email).awaitSingleOrNull()
+    suspend fun findByEncryptedEmail(email: String) =
+        template.findOne<LotteryTicket>(Query(Criteria.where("email").isEqualTo(email))).awaitSingleOrNull()
 }

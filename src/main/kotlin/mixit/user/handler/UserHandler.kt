@@ -1,6 +1,6 @@
 package mixit.user.handler
 
-import kotlinx.coroutines.reactor.awaitSingle
+import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.MixitProperties
 import mixit.event.handler.AdminEventHandler
 import mixit.routes.MustacheI18n
@@ -30,6 +30,7 @@ import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
+import org.springframework.web.reactive.function.server.renderAndAwait
 import org.springframework.web.util.UriUtils
 import java.net.URLDecoder
 import java.nio.charset.StandardCharsets
@@ -52,9 +53,7 @@ class UserHandler(
     enum class ViewMode { ViewMyProfile, ViewUser, EditProfile }
 
     suspend fun speakerView(req: ServerRequest): ServerResponse =
-        ok()
-            .render(Speaker.template, mapOf(Pair(MustacheI18n.TITLE, "speaker.title")))
-            .awaitSingle()
+        ok().renderAndAwait(Speaker.template, mapOf(Pair(MustacheI18n.TITLE, "speaker.title")))
 
     suspend fun findOneView(req: ServerRequest): ServerResponse {
         val login = URLDecoder.decode(req.pathVariable("login"), "UTF-8")
@@ -91,7 +90,7 @@ class UserHandler(
                     "description-en" to user.description[Language.ENGLISH],
                     "userlinks" to user.toLinkDtos()
                 )
-                ok().render(UserEdit.template, params).awaitSingle()
+                ok().renderAndAwait(UserEdit.template, params)
             }
 
             ViewMode.ViewUser -> {
@@ -100,7 +99,7 @@ class UserHandler(
                     .any { it.event == AdminEventHandler.CURRENT_EVENT }
 
                 val attendeeTicket = ticketService.coFindByEmail(cryptographer.decrypt(user.email)!!)
-                val lottery = lotteryRepository.coFindByEncryptedEmail(user.email ?: "unknown")
+                val lottery = lotteryRepository.findByEncryptedEmail(user.email ?: "unknown")
                 val params = mapOf(
                     MustacheI18n.USER to user.toDto(req.language()),
                     MustacheI18n.BASE_URI to UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8),
@@ -110,7 +109,7 @@ class UserHandler(
                     "isSpeaker" to isSpeaker,
                     "canUpdateProfile" to true,
                 )
-                ok().render(UserEdit.template, params).awaitSingle()
+                ok().renderAndAwait(UserEdit.template, params)
             }
 
             ViewMode.EditProfile -> {
@@ -121,7 +120,7 @@ class UserHandler(
                     MustacheI18n.TALKS to talks.map { it.toDto(req.language()) },
                     "hasTalks" to talks.isNotEmpty()
                 )
-                ok().render(UserEdit.template, params).awaitSingle()
+                ok().renderAndAwait(UserEdit.template, params)
             }
         }
 
@@ -190,7 +189,8 @@ class UserHandler(
         }
         if (errors.isEmpty()) {
             // If everything is Ok we save the user
-            return userService.save(updatedUser).then(seeOther("${properties.baseUri}/me")).awaitSingle()
+            userService.save(updatedUser).awaitSingleOrNull()
+            return seeOther("${properties.baseUri}/me")
         }
         return findOneViewDetail(req, updatedUser, ViewMode.EditProfile, errors = errors)
     }

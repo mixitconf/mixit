@@ -1,7 +1,7 @@
 package mixit.event.handler
 
 import com.fasterxml.jackson.databind.ObjectMapper
-import kotlinx.coroutines.reactor.awaitSingle
+import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.MixitProperties
 import mixit.event.model.Event
 import mixit.event.model.EventOrganization
@@ -31,6 +31,7 @@ import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
+import org.springframework.web.reactive.function.server.renderAndAwait
 import java.time.LocalDate
 
 @Component
@@ -48,14 +49,13 @@ class AdminEventHandler(
 
     suspend fun adminEvents(req: ServerRequest): ServerResponse {
         val events = service.coFindAll().sortedBy { it.id }.map { it.toEvent() }
-        return ok()
-            .render(
-                AdminEvents.template,
-                mapOf(
-                    TITLE to "admin.events.title",
-                    EVENTS to events
-                )
-            ).awaitSingle()
+        return ok().renderAndAwait(
+            AdminEvents.template,
+            mapOf(
+                TITLE to "admin.events.title",
+                EVENTS to events
+            )
+        )
     }
 
     suspend fun createEvent(req: ServerRequest): ServerResponse =
@@ -67,17 +67,15 @@ class AdminEventHandler(
             .let { this.adminEvent(it.toEvent()) }
 
     private suspend fun adminEvent(event: Event = Event()): ServerResponse =
-        ok()
-            .render(
-                MustacheTemplate.AdminEvent.template,
-                mapOf(
-                    CREATION_MODE to event.id.isEmpty(),
-                    EVENT to event,
-                    LINKS to event.photoUrls.toJson(objectMapper),
-                    "videolink" to (event.videoUrl?.toJson(objectMapper) ?: "")
-                )
+        ok().renderAndAwait(
+            MustacheTemplate.AdminEvent.template,
+            mapOf(
+                CREATION_MODE to event.id.isEmpty(),
+                EVENT to event,
+                LINKS to event.photoUrls.toJson(objectMapper),
+                "videolink" to (event.videoUrl?.toJson(objectMapper) ?: "")
             )
-            .awaitSingle()
+        )
 
     suspend fun adminSaveEvent(req: ServerRequest): ServerResponse {
         val formData = req.coExtractFormData()
@@ -107,27 +105,23 @@ class AdminEventHandler(
                 formData["schedulingFileUrl"]
             )
         }
-        return service
-            .save(updatedEvent)
-            .then(seeOther("${properties.baseUri}$LIST_URI"))
-            .awaitSingle()
+        service.save(updatedEvent).awaitSingleOrNull()
+        return seeOther("${properties.baseUri}$LIST_URI")
     }
 
     suspend fun createEventSponsoring(req: ServerRequest): ServerResponse =
         adminEventSponsoring(req.pathVariable("eventId"))
 
     private suspend fun adminEventSponsoring(eventId: String, eventSponsoring: EventSponsoring = EventSponsoring()) =
-        ok()
-            .render(
-                AdminEventSponsor.template,
-                mapOf(
-                    CREATION_MODE to (eventSponsoring.sponsorId == ""),
-                    EVENT_ID to eventId,
-                    "eventSponsoring" to eventSponsoring,
-                    "levels" to enumMatcher(eventSponsoring) { it?.level ?: SponsorshipLevel.NONE }
-                )
+        ok().renderAndAwait(
+            AdminEventSponsor.template,
+            mapOf(
+                CREATION_MODE to (eventSponsoring.sponsorId == ""),
+                EVENT_ID to eventId,
+                "eventSponsoring" to eventSponsoring,
+                "levels" to enumMatcher(eventSponsoring) { it?.level ?: SponsorshipLevel.NONE }
             )
-            .awaitSingle()
+        )
 
     suspend fun adminUpdateEventSponsoring(req: ServerRequest): ServerResponse {
         val formData = req.coExtractFormData()
@@ -145,10 +139,8 @@ class AdminEventHandler(
                 sponsoring
             }
         }
-        return service
-            .save(event.copy(sponsors = updatedSponsors))
-            .then(seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}"))
-            .awaitSingle()
+        service.save(event.copy(sponsors = updatedSponsors)).awaitSingleOrNull()
+        return seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}")
     }
 
     suspend fun adminCreateEventSponsoring(req: ServerRequest): ServerResponse {
@@ -167,9 +159,8 @@ class AdminEventHandler(
             )
         }
 
-        return service.save(event.copy(sponsors = sponsors))
-            .then(seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}"))
-            .awaitSingle()
+        service.save(event.copy(sponsors = sponsors)).awaitSingleOrNull()
+        return seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}")
     }
 
     suspend fun adminDeleteEventSponsoring(req: ServerRequest): ServerResponse {
@@ -181,9 +172,8 @@ class AdminEventHandler(
             .filterNot { it.sponsorId == formData["sponsorId"] && it.level.name == formData["level"] }
 
         // We create a mutable list
-        return service.save(event.copy(sponsors = newSponsors))
-            .then(seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}"))
-            .awaitSingle()
+        service.save(event.copy(sponsors = newSponsors)).awaitSingleOrNull()
+        return seeOther("${properties.baseUri}$LIST_URI/edit/${formData["eventId"]!!}")
     }
 
     suspend fun editEventSponsoring(req: ServerRequest): ServerResponse {
@@ -208,22 +198,20 @@ class AdminEventHandler(
         adminEventOrganization(req.pathVariable("eventId"))
 
     private suspend fun adminEventOrganization(eventId: String, eventOrganization: EventOrganization? = null) =
-        ok()
-            .render(
-                AdminEventOrganization.template,
-                mapOf(
-                    CREATION_MODE to (eventOrganization == null),
-                    EVENT_ID to eventId,
-                    "eventOrganization" to eventOrganization
-                )
+        ok().renderAndAwait(
+            AdminEventOrganization.template,
+            mapOf(
+                CREATION_MODE to (eventOrganization == null),
+                EVENT_ID to eventId,
+                "eventOrganization" to eventOrganization
             )
-            .awaitSingle()
+        )
 
     suspend fun adminUpdateEventOrganization(req: ServerRequest): ServerResponse {
         val formData = req.coExtractFormData()
         val event = service.coFindOne(formData["eventId"] ?: throw NotFoundException())
         // For the moment we have noting to save
-        return seeOther("${properties.baseUri}$LIST_URI/edit/${event.id}").awaitSingle()
+        return seeOther("${properties.baseUri}$LIST_URI/edit/${event.id}")
     }
 
     suspend fun adminCreateEventOrganization(req: ServerRequest): ServerResponse {
@@ -232,20 +220,16 @@ class AdminEventHandler(
         val organizations = event.organizations.toMutableList().apply {
             add(EventOrganization(formData["organizationLogin"]!!))
         }
-        return service
-            .save(event.copy(organizations = organizations))
-            .then(seeOther("${properties.baseUri}$LIST_URI/edit/${event.id}"))
-            .awaitSingle()
+        service.save(event.copy(organizations = organizations)).awaitSingleOrNull()
+        return seeOther("${properties.baseUri}$LIST_URI/edit/${event.id}")
     }
 
     suspend fun adminDeleteEventOrganization(req: ServerRequest): ServerResponse {
         val formData = req.coExtractFormData()
         val event = service.coFindOne(formData["eventId"] ?: throw NotFoundException()).toEvent()
         val organizations = event.organizations.filter { it.organizationLogin != formData["organizationLogin"]!! }
-        return service
-            .save(event.copy(organizations = organizations))
-            .then(seeOther("${properties.baseUri}$LIST_URI/edit/${event.id}"))
-            .awaitSingle()
+        service.save(event.copy(organizations = organizations)).awaitSingleOrNull()
+        return seeOther("${properties.baseUri}$LIST_URI/edit/${event.id}")
     }
 
     suspend fun editEventVolunteer(req: ServerRequest): ServerResponse {
@@ -260,22 +244,20 @@ class AdminEventHandler(
         adminEventVolunteer(req.pathVariable("eventId"))
 
     private suspend fun adminEventVolunteer(eventId: String, eventVolunteer: EventVolunteer? = null): ServerResponse =
-        ok()
-            .render(
-                AdminEventVolunteer.template,
-                mapOf(
-                    CREATION_MODE to (eventVolunteer == null),
-                    EVENT_ID to eventId,
-                    "eventOrganization" to eventVolunteer
-                )
+        ok().renderAndAwait(
+            AdminEventVolunteer.template,
+            mapOf(
+                CREATION_MODE to (eventVolunteer == null),
+                EVENT_ID to eventId,
+                "eventOrganization" to eventVolunteer
             )
-            .awaitSingle()
+        )
 
     suspend fun adminUpdateEventVolunteer(req: ServerRequest): ServerResponse {
         val formData = req.coExtractFormData()
         val event = service.coFindOne(formData["eventId"] ?: throw NotFoundException()).toEvent()
         // For the moment we have noting to save
-        return seeOther("${properties.baseUri}$LIST_URI/edit/${event.id}").awaitSingle()
+        return seeOther("${properties.baseUri}$LIST_URI/edit/${event.id}")
     }
 
     suspend fun adminCreateEventVolunteer(req: ServerRequest): ServerResponse {
@@ -283,10 +265,8 @@ class AdminEventHandler(
         val event = service.coFindOne(formData["eventId"] ?: throw NotFoundException()).toEvent()
         val volunteers = event.volunteers.toMutableList()
         volunteers.add(EventVolunteer(formData["volunteerLogin"]!!))
-        return service
-            .save(event.copy(volunteers = volunteers))
-            .then(seeOther("${properties.baseUri}$LIST_URI/edit/${event.id}"))
-            .awaitSingle()
+        service.save(event.copy(volunteers = volunteers)).awaitSingleOrNull()
+        return seeOther("${properties.baseUri}$LIST_URI/edit/${event.id}")
     }
 
     suspend fun adminDeleteEventVolunteer(req: ServerRequest): ServerResponse {
@@ -294,9 +274,7 @@ class AdminEventHandler(
         val event = service.coFindOne(formData["eventId"] ?: throw NotFoundException()).toEvent()
         val volunteers =
             event.volunteers.filter { it.volunteerLogin != formData["volunteerLogin"]!! }
-        return service
-            .save(event.copy(volunteers = volunteers))
-            .then(seeOther("${properties.baseUri}$LIST_URI/edit/${event.id}"))
-            .awaitSingle()
+        service.save(event.copy(volunteers = volunteers)).awaitSingleOrNull()
+        return seeOther("${properties.baseUri}$LIST_URI/edit/${event.id}")
     }
 }

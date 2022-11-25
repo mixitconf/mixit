@@ -79,7 +79,7 @@ fun ServerResponse.BodyBuilder.html() = contentType(TEXT_HTML)
 
 suspend fun permanentRedirect(uri: String) = permanentRedirect(URI(uri)).build().awaitSingle()
 
-fun seeOther(uri: String) = seeOther(URI(uri)).build()
+suspend fun seeOther(uri: String) = seeOther(URI(uri)).build().awaitSingle()
 
 // --------------------
 // Date/Time extensions

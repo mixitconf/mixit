@@ -2,6 +2,7 @@ package mixit.user.handler
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import kotlinx.coroutines.reactor.awaitSingle
+import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.MixitProperties
 import mixit.routes.MustacheI18n.TITLE
 import mixit.routes.MustacheI18n.USER
@@ -27,6 +28,7 @@ import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
+import org.springframework.web.reactive.function.server.renderAndAwait
 
 @Component
 class AdminUserHandler(
@@ -42,13 +44,13 @@ class AdminUserHandler(
     }
 
     suspend fun adminUsers(req: ServerRequest): ServerResponse =
-        ok().render(
+        ok().renderAndAwait(
             AdminUsers.template,
             mapOf(
                 USERS to userRepository.coFindAll().sortedWith(compareBy<User> { it.lastname }.thenBy { it.firstname }),
                 TITLE to "admin.users.title"
             )
-        ).awaitSingle()
+        )
 
     suspend fun createUser(req: ServerRequest): ServerResponse = this.adminUser()
 
@@ -62,14 +64,12 @@ class AdminUserHandler(
 
     suspend fun adminDeleteUser(req: ServerRequest): ServerResponse {
         val formData = req.coExtractFormData()
-        return userService
-            .deleteOne(formData["login"]!!)
-            .then(seeOther("${properties.baseUri}$LIST_URI"))
-            .awaitSingle()
+        userService.deleteOne(formData["login"]!!).awaitSingleOrNull()
+        return seeOther("${properties.baseUri}$LIST_URI")
     }
 
     private suspend fun adminUser(user: User = User.empty()): ServerResponse =
-        ok().render(
+        ok().renderAndAwait(
             AdminUser.template,
             mapOf(
                 USER to user,
@@ -80,7 +80,7 @@ class AdminUserHandler(
                 "links" to user.links.toJson(objectMapper),
                 "photoShapes" to enumMatcher(user) { user.photoShape ?: PhotoShape.Square },
             )
-        ).awaitSingle()
+        )
 
     suspend fun adminSaveUser(req: ServerRequest): ServerResponse {
         val formData = req.coExtractFormData()
@@ -104,10 +104,8 @@ class AdminUserHandler(
             legacyId = formData["legacyId"]?.toLong(),
             newsletterSubscriber = formData["newsletterSubscriber"]?.toBoolean() ?: false
         )
-        return userService
-            .save(updatedUser)
-            .then(seeOther("${properties.baseUri}/admin/users"))
-            .awaitSingle()
+        userService.save(updatedUser).awaitSingle()
+        return seeOther("${properties.baseUri}/admin/users")
     }
 
     private fun sanitizeImage(photoUrl: String): String = if (logoType(photoUrl) == null) {

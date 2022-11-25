@@ -8,14 +8,14 @@ import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.body
+import org.springframework.web.reactive.function.server.bodyValueAndAwait
 import reactor.core.publisher.Mono
-import reactor.kotlin.core.publisher.toMono
 
 @Controller
 class JsonFavoriteHandler(private val favoriteRepository: FavoriteRepository, private val cryptographer: Cryptographer) {
 
-    fun findAll(req: ServerRequest) =
-        ok().json().body(favoriteRepository.findAll())
+    suspend fun findAll(req: ServerRequest) =
+        ok().json().bodyValueAndAwait(favoriteRepository.findAll())
 
     fun toggleFavorite(req: ServerRequest) =
         ok().json().body(
@@ -40,13 +40,13 @@ class JsonFavoriteHandler(private val favoriteRepository: FavoriteRepository, pr
                 )
         )
 
-    fun getFavorite(req: ServerRequest) =
-        ok().json().body(
-            favoriteRepository.findByEmailAndTalk(req.pathVariable("email"), req.pathVariable("id"))
-                .flatMap { FavoriteDto(it.talkId, true).toMono() }
-                .switchIfEmpty(FavoriteDto(req.pathVariable("id"), false).toMono())
+    suspend fun getFavorite(req: ServerRequest) =
+        ok().json().bodyValueAndAwait(
+            favoriteRepository.coFindByEmailAndTalk(req.pathVariable("email"), req.pathVariable("id"))
+                ?.let { FavoriteDto(it.talkId, true) }
+                ?: FavoriteDto(req.pathVariable("id"), false)
         )
 
-    fun getFavorites(req: ServerRequest) =
-        ok().json().body(favoriteRepository.findByEmail(req.pathVariable("email")))
+    suspend fun getFavorites(req: ServerRequest) =
+        ok().json().bodyValueAndAwait(favoriteRepository.coFindByEmail(req.pathVariable("email")))
 }

@@ -19,6 +19,7 @@ import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
+import org.springframework.web.reactive.function.server.renderAndAwait
 
 @Component
 class AboutHandler(val userService: UserService, val eventService: EventService) {
@@ -71,17 +72,11 @@ class AboutHandler(val userService: UserService, val eventService: EventService)
     }
 
     suspend fun codeConductView(req: ServerRequest): ServerResponse =
-        ok()
-            .render(CodeOfConduct.template, mapOf(MustacheI18n.TITLE to "code-of-conduct.title"))
-            .awaitSingle()
+        ok().renderAndAwait(CodeOfConduct.template, mapOf(MustacheI18n.TITLE to "code-of-conduct.title"))
 
     suspend fun accessibilityView(req: ServerRequest): ServerResponse =
-        ok()
-            .render(Accessibility.template, mapOf(MustacheI18n.TITLE to "accessibility.title"))
-            .awaitSingle()
+        ok().renderAndAwait(Accessibility.template, mapOf(MustacheI18n.TITLE to "accessibility.title"))
 
     suspend fun findFullTextView(req: ServerRequest): ServerResponse =
-        ok()
-            .render(Search.template, mapOf(MustacheI18n.TITLE to "search.title"))
-            .awaitSingle()
+        ok().renderAndAwait(Search.template, mapOf(MustacheI18n.TITLE to "search.title"))
 }

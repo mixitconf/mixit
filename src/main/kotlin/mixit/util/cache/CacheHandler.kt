@@ -1,6 +1,5 @@
 package mixit.util.cache
 
-import kotlinx.coroutines.reactor.awaitSingle
 import mixit.blog.model.BlogService
 import mixit.event.handler.AdminEventHandler.Companion.TIMEZONE
 import mixit.event.model.EventService
@@ -12,6 +11,7 @@ import mixit.user.model.UserService
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
+import org.springframework.web.reactive.function.server.renderAndAwait
 import java.time.LocalDateTime
 import java.time.ZoneId
 
@@ -52,7 +52,7 @@ class CacheHandler(
             )
         )
 
-        return ServerResponse.ok().render(AdminCache.template, params).awaitSingle()
+        return ServerResponse.ok().renderAndAwait(AdminCache.template, params)
     }
 
     suspend fun invalidate(req: ServerRequest): ServerResponse =

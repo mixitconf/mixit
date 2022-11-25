@@ -84,6 +84,10 @@ class WebsiteRoutes(
     @Bean
     @Order(2)
     fun websiteCoRouter() = coRouter {
+        accept(TEXT_EVENT_STREAM).nest {
+            GET("/mixette/dashboard/sse", mixetteHandler::mixetteRealTime)
+        }
+
         accept(TEXT_HTML).nest {
             GET("/") { sponsorHandler.viewWithSponsors(it, Home.template) }
 
@@ -103,6 +107,17 @@ class WebsiteRoutes(
             GET("/admin/mixette-donation/donor", adminMixetteHandler::editDonor)
             GET("/admin/mixette-donation/create", adminMixetteHandler::addDonation)
             GET("/admin/mixette-donation/create/{number}", adminMixetteHandler::addDonationForAttendee)
+            GET("/admin/lottery", adminLotteryHandler::adminTicketing)
+            GET("/admin/ticket", ticketHandler::ticketing)
+            GET("/admin/ticket/print", ticketHandler::printTicketing)
+            GET("/admin/ticket/edit/{number}", ticketHandler::editTicket)
+            GET("/admin/ticket/create", ticketHandler::createTicket)
+            GET("/admin/ticket/edit/{number}", ticketHandler::editTicket)
+
+            GET("/admin/talks/edit/{id}", adminTalkHandler::editTalk)
+            GET("/admin/talks") { adminTalkHandler.adminTalks(it, AdminTalkHandler.LAST_TALK_EVENT) }
+            GET("/admin/talks/create", adminTalkHandler::createTalk)
+            GET("/admin/talks/{year}") { adminTalkHandler.adminTalks(it, it.pathVariable("year")) }
 
             GET("/volunteer", adminHandler::admin)
             GET("/volunteer/mixette-organization", adminMixetteHandler::adminOrganizationDonations)
@@ -130,6 +145,7 @@ class WebsiteRoutes(
             GET("/events/{eventId}/volunteers/create", adminEventHandler::createEventVolunteer)
             GET("/events/create", adminEventHandler::createEvent)
             GET("/faq", aboutHandler::faqView)
+            GET("/lottery", lotteryHandler::ticketing)
             GET("/me") { userHandler.findProfileView(it) }
             GET("/me/edit", userHandler::editProfileView)
             GET("/me/talks/edit/{slug}", talkHandler::editTalkView)
@@ -174,6 +190,15 @@ class WebsiteRoutes(
             POST("/admin/mailings/send", mailingHandler::sendMailing)
             POST("/admin/mailings/delete", mailingHandler::deleteMailing)
             POST("/admin/mailing-lists", mailingListHandler::generateMailinglist)
+            POST("/admin/talks", adminTalkHandler::adminSaveTalk)
+            POST("/admin/talks/delete", adminTalkHandler::adminDeleteTalk)
+            POST("/admin/lottery/random", adminLotteryHandler::randomDraw)
+            POST("/admin/lottery/random/delete", adminLotteryHandler::eraseRank)
+            POST("/admin/lottery/delete", adminLotteryHandler::adminDeleteTicketing)
+            POST("/admin/ticket", ticketHandler::submit)
+            POST("/admin/ticket/delete", ticketHandler::adminDeleteTicket)
+            POST("/admin/post", adminPostHandler::adminSavePost)
+            POST("/admin/post/delete", adminPostHandler::adminDeletePost)
             POST("/admin/users", adminUserHandler::adminSaveUser)
             POST("/admin/users/delete", adminUserHandler::adminDeleteUser)
             POST("/cache/{zone}/invalidate", cacheHandler::invalidate)
@@ -187,6 +212,7 @@ class WebsiteRoutes(
             POST("/events/{eventId}/volunteers/create", adminEventHandler::adminCreateEventVolunteer)
             POST("/events/{eventId}/volunteers/delete", adminEventHandler::adminDeleteEventVolunteer)
             POST("/events/{eventId}/volunteers", adminEventHandler::adminUpdateEventVolunteer)
+            POST("/lottery", lotteryHandler::submit)
             POST("/me", userHandler::saveProfile)
             POST("/me/talks", talkHandler::saveProfileTalk)
             POST("/mixette-donation/{id}/delete", adminMixetteHandler::adminDeleteDonation)
@@ -214,17 +240,10 @@ class WebsiteRoutes(
     @Bean
     @Order(1)
     fun websiteRouter() = router {
-        accept(TEXT_EVENT_STREAM).nest {
-            GET("/mixette/dashboard/sse", mixetteHandler::mixetteRealTime)
-        }
 
         accept(TEXT_HTML).nest {
 
-            GET("/lottery", lotteryHandler::ticketing)
-
             GET("/schedule", talkHandler::scheduleView)
-
-
 
             // Authentication
             GET("/login", authenticationHandler::loginView)
@@ -237,24 +256,10 @@ class WebsiteRoutes(
 
             "/admin".nest {
 
-                GET("/lottery", adminLotteryHandler::adminTicketing)
-                GET("/ticket", ticketHandler::ticketing)
-                GET("/ticket/print", ticketHandler::printTicketing)
-                GET("/ticket/edit/{number}", ticketHandler::editTicket)
-                GET("/ticket/create", ticketHandler::createTicket)
-
-                GET("/talks/edit/{id}", adminTalkHandler::editTalk)
-                GET("/talks") { adminTalkHandler.adminTalks(it, AdminTalkHandler.LAST_TALK_EVENT) }
-                GET("/talks/create", adminTalkHandler::createTalk)
-                GET("/talks/{year}") { adminTalkHandler.adminTalks(it, it.pathVariable("year")) }
                 GET("/blog", adminPostHandler::adminBlog)
                 GET("/post/edit/{id}", adminPostHandler::editPost)
-                GET("/ticket/edit/{number}", ticketHandler::editTicket)
                 GET("/post/create", adminPostHandler::createPost)
-
             }
-
-
         }
 
         contentType(APPLICATION_FORM_URLENCODED).nest {
@@ -267,23 +272,11 @@ class WebsiteRoutes(
             POST("/newsletter-signup", authenticationHandler::signUpForNewsletter)
             POST("/newsletter-subscribe", authenticationHandler::subscribeNewsletter)
             POST("/search") { searchHandler.searchFullTextView(it) }
-            POST("/lottery", lotteryHandler::submit)
 
             "/admin".nest {
-                POST("/talks", adminTalkHandler::adminSaveTalk)
-                POST("/talks/delete", adminTalkHandler::adminDeleteTalk)
-                POST("/lottery/random", adminLotteryHandler::randomDraw)
-                POST("/lottery/random/delete", adminLotteryHandler::eraseRank)
-                POST("/lottery/delete", adminLotteryHandler::adminDeleteTicketing)
-                POST("/ticket", ticketHandler::submit)
-                POST("/ticket/delete", ticketHandler::adminDeleteTicket)
-                POST("/post", adminPostHandler::adminSavePost)
-                POST("/post/delete", adminPostHandler::adminDeletePost)
 
             }
         }
-
-
     }.filter { request, next ->
         val locale: Locale = request.locale()
         val path = request.uri().path

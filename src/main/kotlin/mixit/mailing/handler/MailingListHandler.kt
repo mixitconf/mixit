@@ -1,6 +1,5 @@
 package mixit.mailing.handler
 
-import kotlinx.coroutines.reactor.awaitSingle
 import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
 import mixit.event.model.EventService
 import mixit.mailing.model.RecipientType
@@ -29,6 +28,7 @@ import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
+import org.springframework.web.reactive.function.server.renderAndAwait
 
 @Component
 class MailingListHandler(
@@ -44,7 +44,7 @@ class MailingListHandler(
             TITLE to "mailinglist.title",
             "roles" to RecipientType.values().sorted().map { Pair(it, false) }.toList()
         )
-        return ok().render(AdminMailingList.template, params).awaitSingle()
+        return ok().renderAndAwait(AdminMailingList.template, params)
     }
 
     suspend fun generateMailinglist(req: ServerRequest): ServerResponse {
@@ -55,7 +55,7 @@ class MailingListHandler(
             "roles" to RecipientType.values().sorted().map { Pair(it, it == recipientType) }.toList(),
             "mailinglist" to getMailingList(recipientType)
         )
-        return ok().render(AdminMailingList.template, params).awaitSingle()
+        return ok().renderAndAwait(AdminMailingList.template, params)
     }
 
     private suspend fun getMailingList(recipientType: RecipientType): List<MailinglistEntry> =
