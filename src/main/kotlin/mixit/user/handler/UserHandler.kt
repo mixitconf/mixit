@@ -1,8 +1,8 @@
 package mixit.user.handler
 
 import kotlinx.coroutines.reactor.awaitSingleOrNull
+import mixit.MixitApplication.Companion.CURRENT_EVENT
 import mixit.MixitProperties
-import mixit.event.handler.AdminEventHandler
 import mixit.routes.MustacheI18n
 import mixit.routes.MustacheTemplate.Speaker
 import mixit.routes.MustacheTemplate.UserEdit
@@ -17,9 +17,10 @@ import mixit.user.model.Link
 import mixit.user.model.User
 import mixit.user.model.UserService
 import mixit.user.repository.UserRepository
-import mixit.util.coCurrentNonEncryptedUserEmail
-import mixit.util.coExtractFormData
+import mixit.util.currentNonEncryptedUserEmail
+import mixit.util.decode
 import mixit.util.encodeToMd5
+import mixit.util.extractFormData
 import mixit.util.language
 import mixit.util.seeOther
 import mixit.util.validator.EmailValidator
@@ -32,7 +33,6 @@ import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.renderAndAwait
 import org.springframework.web.util.UriUtils
-import java.net.URLDecoder
 import java.nio.charset.StandardCharsets
 import java.util.stream.IntStream
 
@@ -56,19 +56,19 @@ class UserHandler(
         ok().renderAndAwait(Speaker.template, mapOf(Pair(MustacheI18n.TITLE, "speaker.title")))
 
     suspend fun findOneView(req: ServerRequest): ServerResponse {
-        val login = URLDecoder.decode(req.pathVariable("login"), "UTF-8")
+        val login = req.decode("login")!!
         val user =
-            repository.coFindOne(login) ?: repository.coFindByLegacyId(login.toLong()) ?: throw RuntimeException()
+            repository.coFindOneOrNull(login) ?: repository.coFindByLegacyId(login.toLong()) ?: throw RuntimeException()
         return findOneViewDetail(req, user)
     }
 
     suspend fun findProfileView(req: ServerRequest): ServerResponse {
-        val user = repository.coFindByNonEncryptedEmail(req.coCurrentNonEncryptedUserEmail())
+        val user = repository.coFindByNonEncryptedEmail(req.currentNonEncryptedUserEmail())
         return findOneViewDetail(req, user, ViewMode.ViewMyProfile)
     }
 
     suspend fun editProfileView(req: ServerRequest): ServerResponse {
-        val user = repository.coFindByNonEncryptedEmail(req.coCurrentNonEncryptedUserEmail())
+        val user = repository.coFindByNonEncryptedEmail(req.currentNonEncryptedUserEmail())
         return findOneViewDetail(req, user, ViewMode.EditProfile)
     }
 
@@ -96,7 +96,7 @@ class UserHandler(
             ViewMode.ViewUser -> {
                 val isSpeaker = service
                     .coFindBySpeakerId(listOf(user.login), "null")
-                    .any { it.event == AdminEventHandler.CURRENT_EVENT }
+                    .any { it.event == CURRENT_EVENT }
 
                 val attendeeTicket = ticketService.coFindByEmail(cryptographer.decrypt(user.email)!!)
                 val lottery = lotteryRepository.findByEncryptedEmail(user.email ?: "unknown")
@@ -125,8 +125,8 @@ class UserHandler(
         }
 
     suspend fun saveProfile(req: ServerRequest): ServerResponse {
-        val user = repository.coFindByNonEncryptedEmail(req.coCurrentNonEncryptedUserEmail())
-        val formData = req.coExtractFormData()
+        val user = repository.coFindByNonEncryptedEmail(req.currentNonEncryptedUserEmail())
+        val formData = req.extractFormData()
 
         // In his profile screen a user can't change all the data. In the first step we load the user
         val requiredFields = listOf("firstname", "lastname", "email", "description-fr", "description-en")

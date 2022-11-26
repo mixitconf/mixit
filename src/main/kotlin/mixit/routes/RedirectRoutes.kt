@@ -1,8 +1,8 @@
 package mixit.routes
 
+import mixit.MixitApplication.Companion.CURRENT_EVENT
 import mixit.MixitProperties
 import mixit.blog.handler.WebBlogHandler
-import mixit.event.handler.AdminEventHandler
 import mixit.routes.Routes.GOOGLE_DRIVE_URI
 import mixit.talk.handler.TalkHandler
 import mixit.util.permanentRedirect
@@ -34,7 +34,7 @@ class RedirectRoutes(
             GET("/docs/presse/leaflet/en") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${properties.drive.en.press}") }
             GET("/docs/presse/leaflet/fr") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${properties.drive.fr.press}") }
 
-            (2012..AdminEventHandler.CURRENT_EVENT.toInt()).forEach { year ->
+            (2012..CURRENT_EVENT.toInt()).forEach { year ->
                 GET("/$year/") { permanentRedirect("${properties.baseUri}/$year") }
             }
 

@@ -7,14 +7,13 @@ import mixit.routes.MustacheTemplate
 import mixit.security.model.Cryptographer
 import mixit.ticket.model.LotteryTicket
 import mixit.ticket.repository.LotteryRepository
-import mixit.util.coExtractFormData
+import mixit.util.extractFormData
 import mixit.util.seeOther
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.renderAndAwait
-import reactor.kotlin.core.publisher.toFlux
 import java.util.Random
 
 @Component
@@ -33,22 +32,15 @@ class AdminLotteryHandler(
         return adminTicketing(req)
     }
 
-    suspend fun randomDraw(req: ServerRequest) =
-        ticketRepository
-            .findAll()
-            .collectList()
-            .flatMapMany {
-                it.shuffled(Random())
-                    .distinctBy { listOf(it.firstname, it.lastname) }
-                    .mapIndexed { index, ticket -> ticket.copy(rank = index + 1) }
-                    .toFlux()
-            }
-            .flatMap {
-                ticketRepository.save(it)
-            }
-            .collectList()
-            .awaitSingle()
-            .let { adminTicketing(req) }
+    suspend fun randomDraw(req: ServerRequest): ServerResponse {
+        val tickets = ticketRepository.findAll()
+        tickets.shuffled(Random())
+            .distinctBy { listOf(it.firstname, it.lastname) }
+            .mapIndexed { index, ticket -> ticket.copy(rank = index + 1) }
+            .onEach { ticketRepository.save(it).awaitSingle() }
+
+        return adminTicketing(req)
+    }
 
     suspend fun adminTicketing(req: ServerRequest): ServerResponse {
         val tickets = ticketRepository.findAll()
@@ -60,10 +52,7 @@ class AdminLotteryHandler(
                     it.rank
                 )
             }
-            .sort(
-                Comparator.comparing(LotteryTicket::lastname)
-                    .thenComparing(Comparator.comparing(LotteryTicket::firstname))
-            )
+            .sortedBy { it.lastname }
         return ok().renderAndAwait(
             MustacheTemplate.AdminLottery.template,
             mapOf("tickets" to tickets, TITLE to "admin.ticketing.title")
@@ -71,7 +60,7 @@ class AdminLotteryHandler(
     }
 
     suspend fun adminDeleteTicketing(req: ServerRequest): ServerResponse {
-        val formData = req.coExtractFormData()
+        val formData = req.extractFormData()
         ticketRepository.deleteOne(cryptographer.encrypt(formData["email"])!!).awaitSingle()
         return seeOther("${properties.baseUri}$LIST_URI")
     }

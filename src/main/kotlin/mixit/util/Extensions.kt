@@ -1,6 +1,9 @@
 package mixit.util
 
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.reactor.awaitSingle
+import kotlinx.coroutines.reactor.awaitSingleOrNull
+import kotlinx.coroutines.withContext
 import mixit.security.MixitWebFilter
 import mixit.talk.model.Language
 import org.commonmark.ext.autolink.AutolinkExtension
@@ -9,14 +12,15 @@ import org.commonmark.renderer.html.HtmlRenderer
 import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.http.MediaType.APPLICATION_XML
 import org.springframework.http.MediaType.TEXT_HTML
+import org.springframework.http.ResponseCookie
 import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.permanentRedirect
 import org.springframework.web.reactive.function.server.ServerResponse.seeOther
 import org.springframework.web.server.WebSession
-import reactor.core.publisher.Mono
 import java.net.URI
+import java.net.URLDecoder
 import java.net.URLEncoder
 import java.nio.charset.Charset
 import java.security.MessageDigest
@@ -49,27 +53,28 @@ fun ServerRequest.language(): Language =
 fun ServerRequest.locale(): Locale =
     this.headers().asHttpHeaders().contentLanguage ?: Locale.ENGLISH
 
-fun ServerRequest.extractFormData(): Mono<Map<String, String?>> =
-    this.body(BodyExtractors.toFormData()).map { data ->
-        data.toSingleValueMap().mapValues { if (it.value.isNullOrEmpty()) null else it.value }
-    }
+suspend fun ServerRequest.extractFormData(): Map<String, String?> =
+    this.body(BodyExtractors.toFormData())
+        .map { data ->
+            data.toSingleValueMap().mapValues { if (it.value.isNullOrEmpty()) null else it.value }
+        }
+        .awaitSingle()
 
-suspend fun ServerRequest.coExtractFormData(): Map<String, String?> =
-    this.extractFormData().awaitSingle()
-
-suspend fun ServerRequest.coWebSession(): WebSession =
+suspend fun ServerRequest.webSession(): WebSession =
     this.session().awaitSingle()
 
-fun ServerRequest.currentNonEncryptedUserEmail(): Mono<String> =
-    this.session().map {
-        it.getAttribute(MixitWebFilter.SESSION_EMAIL_KEY) ?: ""
-    }
+suspend fun ServerRequest.webSessionOrNull(): WebSession? =
+    this.session().awaitSingleOrNull()
 
-// TODO rename
-suspend fun ServerRequest.coCurrentNonEncryptedUserEmail(): String =
+suspend fun ServerRequest.currentNonEncryptedUserEmail(): String =
     this.session()
         .map { it.getAttribute(MixitWebFilter.SESSION_EMAIL_KEY) ?: "" }
         .awaitSingle()
+
+suspend fun ServerRequest.decode(pathVariable: String): String? =
+    withContext(Dispatchers.IO) {
+        URLDecoder.decode(pathVariable(pathVariable), "UTF-8")
+    }.decodeFromBase64()
 
 fun ServerResponse.BodyBuilder.json() = contentType(APPLICATION_JSON)
 
@@ -77,9 +82,15 @@ fun ServerResponse.BodyBuilder.xml() = contentType(APPLICATION_XML)
 
 fun ServerResponse.BodyBuilder.html() = contentType(TEXT_HTML)
 
-suspend fun permanentRedirect(uri: String) = permanentRedirect(URI(uri)).build().awaitSingle()
+suspend fun permanentRedirect(uri: String): ServerResponse = permanentRedirect(URI(uri)).build().awaitSingle()
 
-suspend fun seeOther(uri: String) = seeOther(URI(uri)).build().awaitSingle()
+suspend fun seeOther(uri: String): ServerResponse = seeOther(URI(uri)).build().awaitSingle()
+
+suspend fun seeOther(uri: String, cookie: ResponseCookie): ServerResponse =
+    seeOther(URI(uri)).cookie(cookie).build().awaitSingle()
+
+suspend fun temporaryRedirect(uri: String): ServerResponse =
+    ServerResponse.temporaryRedirect(URI(uri)).build().awaitSingle()
 
 // --------------------
 // Date/Time extensions

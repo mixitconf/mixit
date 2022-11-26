@@ -25,9 +25,9 @@ import mixit.talk.model.TalkService
 import mixit.talk.model.Topic
 import mixit.util.AdminUtils.toJson
 import mixit.util.AdminUtils.toLinks
-import mixit.util.coExtractFormData
 import mixit.util.enumMatcher
 import mixit.util.enumMatcherWithI18nKey
+import mixit.util.extractFormData
 import mixit.util.language
 import mixit.util.seeOther
 import org.springframework.stereotype.Component
@@ -66,7 +66,7 @@ class AdminTalkHandler(
         adminTalk(service.findById(req.pathVariable("id")).toTalk())
 
     suspend fun adminSaveTalk(req: ServerRequest): ServerResponse {
-        val formData = req.coExtractFormData()
+        val formData = req.extractFormData()
         val talk = Talk(
             id = formData["id"],
             event = formData["event"]!!,
@@ -89,7 +89,7 @@ class AdminTalkHandler(
     }
 
     suspend fun adminDeleteTalk(req: ServerRequest): ServerResponse {
-        val formData = req.coExtractFormData()
+        val formData = req.extractFormData()
         service.deleteOne(formData["id"]!!).awaitSingleOrNull()
         return seeOther("${properties.baseUri}$LIST_URI")
     }

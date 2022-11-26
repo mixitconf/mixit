@@ -27,7 +27,7 @@ class UserJsonHandler(
     private val service: TalkService
 ) {
     suspend fun findOne(req: ServerRequest): ServerResponse =
-        repository.coFindOne(req.pathVariable("login"))
+        repository.coFindOneOrNull(req.pathVariable("login"))
             ?.let { ok().json().bodyValueAndAwait(it.anonymize()) }
             ?: throw NotFoundException()
 

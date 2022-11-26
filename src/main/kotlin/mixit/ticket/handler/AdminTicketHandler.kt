@@ -16,12 +16,12 @@ import mixit.ticket.model.Ticket
 import mixit.ticket.model.TicketService
 import mixit.ticket.model.TicketType
 import mixit.user.model.Role
-import mixit.util.coExtractFormData
-import mixit.util.coWebSession
 import mixit.util.enumMatcher
 import mixit.util.errors.NotFoundException
+import mixit.util.extractFormData
 import mixit.util.json
 import mixit.util.seeOther
+import mixit.util.webSession
 import org.springframework.dao.DuplicateKeyException
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
@@ -94,7 +94,7 @@ class AdminTicketHandler(
     }
 
     suspend fun submit(req: ServerRequest): ServerResponse {
-        val formData = req.coExtractFormData()
+        val formData = req.extractFormData()
         val existingTicket = service.coFindByNumber(formData["number"]!!)
         val ticket = if (existingTicket != null)
             existingTicket.toEntity(cryptographer).copy(
@@ -130,9 +130,8 @@ class AdminTicketHandler(
         )
     }
 
-
     suspend fun adminDeleteTicket(req: ServerRequest): ServerResponse {
-        val formData = req.coExtractFormData()
+        val formData = req.extractFormData()
         service.deleteOne(formData["number"]!!).awaitSingleOrNull()
         return seeOther("${properties.baseUri}$LIST_URI")
     }
@@ -141,7 +140,7 @@ class AdminTicketHandler(
         val attendee = service.coFindByNumber(req.pathVariable("number"))
             ?: return seeOther("${properties.baseUri}/")
 
-        val session = req.coWebSession()
+        val session = req.webSession()
         return when (session.getAttribute<Role>(MixitWebFilter.SESSION_ROLE_KEY)) {
             Role.STAFF -> {
                 // A staff member is redirected to Mixette form

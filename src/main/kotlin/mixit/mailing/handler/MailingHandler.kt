@@ -22,9 +22,9 @@ import mixit.user.model.CachedUser
 import mixit.user.model.Role
 import mixit.user.model.User
 import mixit.user.model.UserService
-import mixit.util.coExtractFormData
 import mixit.util.email.EmailService
 import mixit.util.enumMatcher
+import mixit.util.extractFormData
 import mixit.util.seeOther
 import mixit.util.toHTML
 import org.slf4j.LoggerFactory
@@ -72,7 +72,7 @@ class MailingHandler(
         )
 
     suspend fun deleteMailing(req: ServerRequest): ServerResponse {
-        val formData = req.coExtractFormData()
+        val formData = req.extractFormData()
         mailingRepository.deleteOne(formData["id"]!!).awaitSingleOrNull()
         return seeOther("${properties.baseUri}/admin/mailings")
     }
@@ -102,7 +102,7 @@ class MailingHandler(
     }
 
     private suspend fun persistMailing(req: ServerRequest): Mailing {
-        val formData = req.coExtractFormData()
+        val formData = req.extractFormData()
         return mailingRepository
             .save(
                 Mailing(

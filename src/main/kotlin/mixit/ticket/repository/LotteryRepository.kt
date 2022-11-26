@@ -43,7 +43,7 @@ class LotteryRepository(
     fun save(ticket: LotteryTicket) =
         template.save(ticket).doOnSuccess { _ -> logger.info("Save new lottery ticket $ticket") }
 
-    fun findAll() = template.findAll<LotteryTicket>().doOnComplete { logger.info("Load all lottery tickets") }.collectList().awa
+    suspend fun findAll() = template.findAll<LotteryTicket>().doOnComplete { logger.info("Load all lottery tickets") }.collectList().awaitSingle()
 
     suspend fun eraseRank() = template.updateMulti<LotteryTicket>(Query(), Update().set("rank", null)).awaitSingle()
 

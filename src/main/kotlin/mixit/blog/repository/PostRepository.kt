@@ -22,7 +22,6 @@ import org.springframework.data.mongodb.core.query.TextQuery
 import org.springframework.data.mongodb.core.query.isEqualTo
 import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
-import reactor.core.publisher.Flux
 
 @Repository
 class PostRepository(
@@ -58,12 +57,12 @@ class PostRepository(
         return template.find<Post>(query).doOnComplete { logger.info("Load all posts") }.collectList().awaitSingle()
     }
 
-    fun findFullText(criteria: List<String>): Flux<Post> {
+    suspend fun findFullText(criteria: List<String>): List<Post> {
         val textCriteria = TextCriteria()
         criteria.forEach { textCriteria.matching(it) }
 
         val query = TextQuery(textCriteria).sortByScore()
-        return template.find(query)
+        return template.find<Post>(query).collectList().awaitSingle()
     }
 
     fun deleteAll() = template.remove<Post>(Query())

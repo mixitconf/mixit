@@ -1,7 +1,7 @@
 package mixit.about
 
 import kotlinx.coroutines.reactor.awaitSingle
-import mixit.event.handler.AdminEventHandler
+import mixit.MixitApplication
 import mixit.event.model.EventService
 import mixit.event.model.SponsorshipLevel
 import mixit.routes.MustacheI18n
@@ -26,7 +26,7 @@ class AboutHandler(val userService: UserService, val eventService: EventService)
 
     suspend fun findAboutView(req: ServerRequest): ServerResponse {
         val users = userService.coFindByRoles(Role.STAFF, Role.STAFF_IN_PAUSE)
-        val event = eventService.coFindByYear(AdminEventHandler.CURRENT_EVENT)
+        val event = eventService.coFindByYear(MixitApplication.CURRENT_EVENT)
 
         val staff = users.filter { it.role == Role.STAFF }.shuffled()
         val staffInPause = users.filter { it.role == Role.STAFF_IN_PAUSE }.shuffled()
@@ -52,7 +52,7 @@ class AboutHandler(val userService: UserService, val eventService: EventService)
             .awaitSingle()
 
     suspend fun comeToMixitView(req: ServerRequest): ServerResponse {
-        val event = eventService.coFindByYear(AdminEventHandler.CURRENT_EVENT)
+        val event = eventService.coFindByYear(MixitApplication.CURRENT_EVENT)
         val goldSponsors = event.filterBySponsorLevel(SponsorshipLevel.GOLD)
 
         return ok()

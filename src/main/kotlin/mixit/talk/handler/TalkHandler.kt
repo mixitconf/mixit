@@ -7,6 +7,7 @@ import mixit.event.model.EventService
 import mixit.event.model.SponsorshipLevel
 import mixit.favorite.repository.FavoriteRepository
 import mixit.routes.MustacheI18n
+import mixit.routes.MustacheI18n.TITLE
 import mixit.routes.MustacheTemplate.FeedbackWall
 import mixit.routes.MustacheTemplate.Media
 import mixit.routes.MustacheTemplate.Schedule
@@ -18,10 +19,10 @@ import mixit.talk.model.Language
 import mixit.talk.model.TalkService
 import mixit.user.handler.dto.toDto
 import mixit.user.handler.dto.toSponsorDto
-import mixit.util.coCurrentNonEncryptedUserEmail
-import mixit.util.coExtractFormData
+import mixit.util.currentNonEncryptedUserEmail
 import mixit.util.enumMatcher
 import mixit.util.errors.NotFoundException
+import mixit.util.extractFormData
 import mixit.util.language
 import mixit.util.permanentRedirect
 import mixit.util.seeOther
@@ -32,6 +33,7 @@ import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
+import org.springframework.web.reactive.function.server.renderAndAwait
 import org.springframework.web.util.UriUtils
 import java.nio.charset.StandardCharsets
 
@@ -84,11 +86,11 @@ class TalkHandler(
         val title: String = "talks.title.html"
     )
 
-    fun scheduleView(req: ServerRequest) =
-        ok().render(Schedule.template, mapOf("title" to "schedule.title"))
+    suspend fun scheduleView(req: ServerRequest) =
+        ok().renderAndAwait(Schedule.template, mapOf(TITLE to "schedule.title"))
 
     suspend fun findByEventView(config: TalkViewConfig): ServerResponse {
-        val currentUserEmail = config.req.coCurrentNonEncryptedUserEmail()
+        val currentUserEmail = config.req.currentNonEncryptedUserEmail()
         val talks = loadTalkAndFavorites(config, currentUserEmail)
         val event = eventService.coFindByYear(config.year)
         val title = if (config.topic == null) "${config.title}|${config.year}" else
@@ -102,7 +104,7 @@ class TalkHandler(
                     MustacheI18n.EVENT to event.toEvent(),
                     MustacheI18n.SPONSORS to loadSponsors(event),
                     MustacheI18n.TALKS to talks.groupBy { it.date ?: "" },
-                    MustacheI18n.TITLE to title,
+                    TITLE to title,
                     MustacheI18n.YEAR to config.year,
                     "schedulingFileUrl" to event.schedulingFileUrl,
                     "filtered" to config.filterOnFavorite,
@@ -133,7 +135,7 @@ class TalkHandler(
 
     suspend fun findOneView(req: ServerRequest, year: Int): ServerResponse {
         val lang = req.language()
-        val currentUserEmail = req.coCurrentNonEncryptedUserEmail()
+        val currentUserEmail = req.currentNonEncryptedUserEmail()
         val event = eventService.coFindByYear(year)
         val favoriteTalkIds = favoriteRepository.coFindByEmail(currentUserEmail).map { it.talkId }
         val talk = service.findByEventAndSlug(year.toString(), req.pathVariable("slug"))
@@ -145,7 +147,7 @@ class TalkHandler(
                 TalkDetail.template,
                 mapOf(
                     MustacheI18n.YEAR to year,
-                    MustacheI18n.TITLE to "talk.html.title|${talk.title}",
+                    TITLE to "talk.html.title|${talk.title}",
                     MustacheI18n.BASE_URI to UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8),
                     MustacheI18n.SPONSORS to loadSponsors(event),
                     "talk" to talk.toDto(req.language()),
@@ -181,7 +183,7 @@ class TalkHandler(
     }
 
     suspend fun saveProfileTalk(req: ServerRequest): ServerResponse {
-        val formData = req.coExtractFormData()
+        val formData = req.extractFormData()
         val talk = service.coFindOne(formData["id"]!!)
 
         val errors = mutableMapOf<String, String>()
@@ -220,7 +222,8 @@ class TalkHandler(
         }
         if (errors.isEmpty()) {
             // If everything is Ok we save the user
-            return service.save(updatedTalk.toTalk()).then(seeOther("${properties.baseUri}/me")).awaitSingle()
+            service.save(updatedTalk.toTalk()).awaitSingle()
+            return seeOther("${properties.baseUri}/me")
         } else {
             return editTalkViewDetail(req, updatedTalk, errors)
         }

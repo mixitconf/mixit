@@ -1,6 +1,6 @@
 package mixit.user.handler
 
-import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
+import mixit.MixitApplication.Companion.CURRENT_EVENT
 import mixit.event.model.EventService
 import mixit.event.model.SponsorshipLevel
 import mixit.event.model.SponsorshipLevel.Companion.sponsorshipLevels

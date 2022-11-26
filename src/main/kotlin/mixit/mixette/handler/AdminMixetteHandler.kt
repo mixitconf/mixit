@@ -2,8 +2,8 @@ package mixit.mixette.handler
 
 import kotlinx.coroutines.reactor.awaitSingle
 import kotlinx.coroutines.reactor.awaitSingleOrNull
+import mixit.MixitApplication.Companion.CURRENT_EVENT
 import mixit.MixitProperties
-import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
 import mixit.event.model.EventService
 import mixit.mixette.model.MixetteDonation
 import mixit.mixette.repository.MixetteDonationRepository
@@ -21,12 +21,12 @@ import mixit.ticket.model.TicketService
 import mixit.user.model.Role
 import mixit.user.model.User
 import mixit.user.model.UserService
-import mixit.util.coExtractFormData
-import mixit.util.coWebSession
 import mixit.util.errors.NotFoundException
+import mixit.util.extractFormData
 import mixit.util.json
 import mixit.util.seeOther
 import mixit.util.toNumber
+import mixit.util.webSession
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
@@ -99,7 +99,7 @@ class AdminMixetteHandler(
      * Used to display the page to create a new donation
      */
     suspend fun addDonation(req: ServerRequest): ServerResponse =
-        req.coWebSession().let {
+        req.webSession().let {
             this.adminDonation(MixetteDonation(CURRENT_EVENT, userLogin = it.getAttribute(SESSION_LOGIN_KEY)))
         }
 
@@ -109,7 +109,7 @@ class AdminMixetteHandler(
     suspend fun addDonationForAttendee(req: ServerRequest): ServerResponse {
         val donor = ticketService.coFindByNumber(req.pathVariable("number")) ?: throw NotFoundException()
         return req
-            .coWebSession()
+            .webSession()
             .let {
                 this.adminDonation(
                     MixetteDonation(
@@ -229,7 +229,7 @@ class AdminMixetteHandler(
         if (errors.isNotEmpty()) {
             return adminDonation(newDonation, errors)
         }
-        val session = req.coWebSession()
+        val session = req.webSession()
         val connectedUser = session.getAttribute<String>(SESSION_LOGIN_KEY)
         val userRole = session.getAttribute<Role>(SESSION_ROLE_KEY)
 
@@ -266,7 +266,7 @@ class AdminMixetteHandler(
     }
 
     suspend fun adminSaveDonation(req: ServerRequest): ServerResponse {
-        val formData = req.coExtractFormData()
+        val formData = req.extractFormData()
         val organizationLogin: String = formData["organizationLogin"]!!
         val ticketNumber: String = cryptographer.encrypt(formData["ticketNumber"])!!
 
@@ -298,7 +298,7 @@ class AdminMixetteHandler(
     }
 
     suspend fun adminDeleteDonation(req: ServerRequest): ServerResponse {
-        val formData = req.coExtractFormData()
+        val formData = req.extractFormData()
         repository.deleteOne(formData["id"]!!).awaitSingleOrNull()
         return seeOther("${properties.baseUri}$LIST_URI_FOR_ADMIN")
     }

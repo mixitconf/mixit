@@ -1,7 +1,7 @@
 package mixit.util.cache
 
+import mixit.MixitApplication.Companion.TIMEZONE
 import mixit.blog.model.BlogService
-import mixit.event.handler.AdminEventHandler.Companion.TIMEZONE
 import mixit.event.model.EventService
 import mixit.routes.MustacheI18n
 import mixit.routes.MustacheTemplate.AdminCache

@@ -1,6 +1,6 @@
 package mixit.ticket.model
 
-import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
+import mixit.MixitApplication.Companion.CURRENT_EVENT
 import mixit.security.model.Cryptographer
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document

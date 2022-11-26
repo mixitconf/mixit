@@ -6,7 +6,7 @@ import mixit.blog.model.BlogService
 import mixit.blog.model.Post
 import mixit.talk.model.Language.ENGLISH
 import mixit.talk.model.Language.FRENCH
-import mixit.util.coExtractFormData
+import mixit.util.extractFormData
 import mixit.util.language
 import mixit.util.seeOther
 import mixit.util.toSlug
@@ -40,7 +40,7 @@ class AdminPostHandler(private val service: BlogService, private val properties:
         service.findOne(req.pathVariable("id")).map { it.toPost() }.flatMap(this::adminPost)
 
     suspend fun adminDeletePost(req: ServerRequest): ServerResponse {
-        val formData = req.coExtractFormData()
+        val formData = req.extractFormData()
         service.deleteOne(formData["id"]!!).awaitSingleOrNull()
         return seeOther("${properties.baseUri}$LIST_URI")
     }
@@ -59,7 +59,7 @@ class AdminPostHandler(private val service: BlogService, private val properties:
     )
 
     suspend fun adminSavePost(req: ServerRequest): ServerResponse {
-        val formData = req.coExtractFormData()
+        val formData = req.extractFormData()
         val post = Post(
             id = formData["id"],
             addedAt = LocalDateTime.parse(formData["addedAt"]),

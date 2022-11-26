@@ -2,6 +2,7 @@ package mixit.talk.repository
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import kotlinx.coroutines.reactor.awaitSingle
 import mixit.talk.model.Talk
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
@@ -48,12 +49,12 @@ class TalkRepository(
     fun findAll(): Flux<Talk> =
         template.find<Talk>(Query().with(by(Order(ASC, "start")))).doOnComplete { logger.info("Load all talks") }
 
-    fun findFullText(criteria: List<String>): Flux<Talk> {
+    suspend fun findFullText(criteria: List<String>): List<Talk> {
         val textCriteria = TextCriteria()
         criteria.forEach { textCriteria.matching(it) }
 
         val query = TextQuery(textCriteria).sortByScore()
-        return template.find(query)
+        return template.find<Talk>(query).collectList().awaitSingle()
     }
 
     fun findOne(id: String) =

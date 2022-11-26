@@ -1,12 +1,12 @@
 package mixit.routes
 
+import mixit.MixitApplication.Companion.CURRENT_EVENT
 import mixit.MixitProperties
 import mixit.about.AboutHandler
 import mixit.about.SearchHandler
 import mixit.blog.handler.AdminPostHandler
 import mixit.blog.handler.WebBlogHandler
 import mixit.event.handler.AdminEventHandler
-import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
 import mixit.event.model.SponsorshipLevel.MIXTEEN
 import mixit.mailing.handler.MailingHandler
 import mixit.mailing.handler.MailingListHandler
@@ -91,6 +91,12 @@ class WebsiteRoutes(
         accept(TEXT_HTML).nest {
             GET("/") { sponsorHandler.viewWithSponsors(it, Home.template) }
 
+            // Authentication
+            GET("/login", authenticationHandler::loginView)
+            GET("/disconnect", authenticationHandler::logout)
+            GET("/logout", authenticationHandler::logout)
+            GET("/signin/{token}/{email:.*}", authenticationHandler::signInViaUrl)
+
             GET("/admin", adminHandler::admin)
             GET("/admin/cache", cacheHandler::view)
             GET("/admin/users", adminUserHandler::adminUsers)
@@ -149,6 +155,8 @@ class WebsiteRoutes(
             GET("/me") { userHandler.findProfileView(it) }
             GET("/me/edit", userHandler::editProfileView)
             GET("/me/talks/edit/{slug}", talkHandler::editTalkView)
+            GET("/newsletter-subscribe", authenticationHandler::newsletterView)
+            GET("/newsletter-signin/{token}/{email:.*}", authenticationHandler::signInViaUrlForNewsletter)
             GET("/search") { aboutHandler.findFullTextView(it) }
             GET("/speaker", userHandler::speakerView)
             GET("/sponsors") { sponsorHandler.viewSponsors(it) }
@@ -156,6 +164,7 @@ class WebsiteRoutes(
             GET("/mixteen") {
                 sponsorHandler.viewWithSponsors(it, Mixteen.template, "mixteen.title", arrayOf(MIXTEEN))
             }
+            GET("/schedule", talkHandler::scheduleView)
             GET("/user/{login}") { userHandler.findOneView(it) }
 
             (2012..CURRENT_EVENT.toInt()).forEach { year ->
@@ -212,11 +221,20 @@ class WebsiteRoutes(
             POST("/events/{eventId}/volunteers/create", adminEventHandler::adminCreateEventVolunteer)
             POST("/events/{eventId}/volunteers/delete", adminEventHandler::adminDeleteEventVolunteer)
             POST("/events/{eventId}/volunteers", adminEventHandler::adminUpdateEventVolunteer)
+            POST("/login", authenticationHandler::login)
+            POST("/send-token", authenticationHandler::sendToken)
+            POST("/signup", authenticationHandler::signUp)
+            POST("/signin", authenticationHandler::signIn)
+            POST("/newsletter-login", authenticationHandler::sendEmailForNewsletter)
+            POST("/newsletter-send-token", authenticationHandler::sendTokenForNewsletter)
+            POST("/newsletter-signup", authenticationHandler::signUpForNewsletter)
+            POST("/newsletter-subscribe", authenticationHandler::subscribeNewsletter)
             POST("/lottery", lotteryHandler::submit)
             POST("/me", userHandler::saveProfile)
             POST("/me/talks", talkHandler::saveProfileTalk)
             POST("/mixette-donation/{id}/delete", adminMixetteHandler::adminDeleteDonation)
             POST("/mixette-donation", adminMixetteHandler::adminSaveDonation)
+            POST("/search") { searchHandler.searchFullTextView(it) }
             POST("/volunteer/mixette-donation", adminMixetteHandler::adminSaveDonation)
         }
 
@@ -243,17 +261,6 @@ class WebsiteRoutes(
 
         accept(TEXT_HTML).nest {
 
-            GET("/schedule", talkHandler::scheduleView)
-
-            // Authentication
-            GET("/login", authenticationHandler::loginView)
-            GET("/disconnect", authenticationHandler::logout)
-            GET("/signin/{token}/{email:.*}", authenticationHandler::signInViaUrl)
-
-            // Newsletter
-            GET("/newsletter-subscribe", authenticationHandler::newsletterView)
-            GET("/newsletter-signin/{token}/{email:.*}", authenticationHandler::signInViaUrlForNewsletter)
-
             "/admin".nest {
 
                 GET("/blog", adminPostHandler::adminBlog)
@@ -262,21 +269,6 @@ class WebsiteRoutes(
             }
         }
 
-        contentType(APPLICATION_FORM_URLENCODED).nest {
-            POST("/login", authenticationHandler::login)
-            POST("/send-token", authenticationHandler::sendToken)
-            POST("/signup", authenticationHandler::signUp)
-            POST("/signin", authenticationHandler::signIn)
-            POST("/newsletter-login", authenticationHandler::sendEmailForNewsletter)
-            POST("/newsletter-send-token", authenticationHandler::sendTokenForNewsletter)
-            POST("/newsletter-signup", authenticationHandler::signUpForNewsletter)
-            POST("/newsletter-subscribe", authenticationHandler::subscribeNewsletter)
-            POST("/search") { searchHandler.searchFullTextView(it) }
-
-            "/admin".nest {
-
-            }
-        }
     }.filter { request, next ->
         val locale: Locale = request.locale()
         val path = request.uri().path

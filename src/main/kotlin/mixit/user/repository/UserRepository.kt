@@ -45,12 +45,12 @@ class UserRepository(
         }
     }
 
-    fun findFullText(criteria: List<String>): Flux<User> {
+    suspend fun findFullText(criteria: List<String>): List<User> {
         val textCriteria = TextCriteria()
         criteria.forEach { textCriteria.matching(it) }
 
         val query = TextQuery(textCriteria).sortByScore()
-        return template.find(query)
+        return template.find<User>(query).collectList().awaitSingle()
     }
 
     fun count() = template.count<User>()
@@ -64,6 +64,9 @@ class UserRepository(
 
     suspend fun coFindByNonEncryptedEmail(email: String): User =
         findByNonEncryptedEmail(email).awaitSingle()
+
+    suspend fun coFindByNonEncryptedEmailOrNull(email: String): User? =
+        findByNonEncryptedEmail(email).awaitSingleOrNull()
 
     fun findByRoles(roles: List<Role>) =
         template.find<User>(Query(where("role").inValues(roles)))
@@ -91,7 +94,7 @@ class UserRepository(
     fun findOne(login: String) =
         template.findById<User>(login)
 
-    suspend fun coFindOne(login: String): User? =
+    suspend fun coFindOneOrNull(login: String): User? =
         findOne(login).awaitSingleOrNull()
 
     fun findMany(logins: List<String>) =

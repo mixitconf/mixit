@@ -1,8 +1,8 @@
 package mixit.mixette.handler
 
+import mixit.MixitApplication.Companion.CURRENT_EVENT
+import mixit.MixitApplication.Companion.TIMEZONE
 import mixit.MixitProperties
-import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
-import mixit.event.handler.AdminEventHandler.Companion.TIMEZONE
 import mixit.event.model.EventService
 import mixit.mixette.repository.MixetteDonationRepository
 import mixit.routes.MustacheI18n.TITLE

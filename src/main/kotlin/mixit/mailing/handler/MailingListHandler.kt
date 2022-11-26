@@ -1,6 +1,6 @@
 package mixit.mailing.handler
 
-import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
+import mixit.MixitApplication.Companion.CURRENT_EVENT
 import mixit.event.model.EventService
 import mixit.mailing.model.RecipientType
 import mixit.mailing.model.RecipientType.Attendee
@@ -23,7 +23,7 @@ import mixit.user.model.CachedUser
 import mixit.user.model.Role
 import mixit.user.model.User
 import mixit.user.model.UserService
-import mixit.util.coExtractFormData
+import mixit.util.extractFormData
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
@@ -48,7 +48,7 @@ class MailingListHandler(
     }
 
     suspend fun generateMailinglist(req: ServerRequest): ServerResponse {
-        val formData = req.coExtractFormData()
+        val formData = req.extractFormData()
         val recipientType = formData["recipientType"]?.let { RecipientType.valueOf(it) } ?: Staff
         val params = mapOf(
             TITLE to "mailinglist.title",

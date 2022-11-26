@@ -23,9 +23,9 @@ import mixit.routes.MustacheTemplate.AdminEvents
 import mixit.util.AdminUtils.toJson
 import mixit.util.AdminUtils.toLink
 import mixit.util.AdminUtils.toLinks
-import mixit.util.coExtractFormData
 import mixit.util.enumMatcher
 import mixit.util.errors.NotFoundException
+import mixit.util.extractFormData
 import mixit.util.seeOther
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
@@ -43,8 +43,6 @@ class AdminEventHandler(
 
     companion object {
         const val LIST_URI = "/admin/events"
-        const val CURRENT_EVENT = "2022"
-        const val TIMEZONE = "Europe/Paris"
     }
 
     suspend fun adminEvents(req: ServerRequest): ServerResponse {
@@ -78,7 +76,7 @@ class AdminEventHandler(
         )
 
     suspend fun adminSaveEvent(req: ServerRequest): ServerResponse {
-        val formData = req.coExtractFormData()
+        val formData = req.extractFormData()
         // We need to find the event in database
         val existingEvent = service.coFindOneOrNull(formData["eventId"] ?: throw NotFoundException())?.toEvent()
         val updatedEvent = if (existingEvent == null) {
@@ -124,7 +122,7 @@ class AdminEventHandler(
         )
 
     suspend fun adminUpdateEventSponsoring(req: ServerRequest): ServerResponse {
-        val formData = req.coExtractFormData()
+        val formData = req.extractFormData()
         // We need to find the event in database
         val event = service.coFindOne(formData["eventId"] ?: throw NotFoundException()).toEvent()
 
@@ -144,7 +142,7 @@ class AdminEventHandler(
     }
 
     suspend fun adminCreateEventSponsoring(req: ServerRequest): ServerResponse {
-        val formData = req.coExtractFormData()
+        val formData = req.extractFormData()
         // We need to find the event in database
         val event = service.coFindOne(formData["eventId"] ?: throw NotFoundException()).toEvent()
 
@@ -164,7 +162,7 @@ class AdminEventHandler(
     }
 
     suspend fun adminDeleteEventSponsoring(req: ServerRequest): ServerResponse {
-        val formData = req.coExtractFormData()
+        val formData = req.extractFormData()
         // We need to find the event in database
         val event = service.coFindOne(formData["eventId"] ?: throw NotFoundException()).toEvent()
 
@@ -208,14 +206,14 @@ class AdminEventHandler(
         )
 
     suspend fun adminUpdateEventOrganization(req: ServerRequest): ServerResponse {
-        val formData = req.coExtractFormData()
+        val formData = req.extractFormData()
         val event = service.coFindOne(formData["eventId"] ?: throw NotFoundException())
         // For the moment we have noting to save
         return seeOther("${properties.baseUri}$LIST_URI/edit/${event.id}")
     }
 
     suspend fun adminCreateEventOrganization(req: ServerRequest): ServerResponse {
-        val formData = req.coExtractFormData()
+        val formData = req.extractFormData()
         val event = service.coFindOne(formData["eventId"] ?: throw NotFoundException()).toEvent()
         val organizations = event.organizations.toMutableList().apply {
             add(EventOrganization(formData["organizationLogin"]!!))
@@ -225,7 +223,7 @@ class AdminEventHandler(
     }
 
     suspend fun adminDeleteEventOrganization(req: ServerRequest): ServerResponse {
-        val formData = req.coExtractFormData()
+        val formData = req.extractFormData()
         val event = service.coFindOne(formData["eventId"] ?: throw NotFoundException()).toEvent()
         val organizations = event.organizations.filter { it.organizationLogin != formData["organizationLogin"]!! }
         service.save(event.copy(organizations = organizations)).awaitSingleOrNull()
@@ -254,14 +252,14 @@ class AdminEventHandler(
         )
 
     suspend fun adminUpdateEventVolunteer(req: ServerRequest): ServerResponse {
-        val formData = req.coExtractFormData()
+        val formData = req.extractFormData()
         val event = service.coFindOne(formData["eventId"] ?: throw NotFoundException()).toEvent()
         // For the moment we have noting to save
         return seeOther("${properties.baseUri}$LIST_URI/edit/${event.id}")
     }
 
     suspend fun adminCreateEventVolunteer(req: ServerRequest): ServerResponse {
-        val formData = req.coExtractFormData()
+        val formData = req.extractFormData()
         val event = service.coFindOne(formData["eventId"] ?: throw NotFoundException()).toEvent()
         val volunteers = event.volunteers.toMutableList()
         volunteers.add(EventVolunteer(formData["volunteerLogin"]!!))
@@ -270,7 +268,7 @@ class AdminEventHandler(
     }
 
     suspend fun adminDeleteEventVolunteer(req: ServerRequest): ServerResponse {
-        val formData = req.coExtractFormData()
+        val formData = req.extractFormData()
         val event = service.coFindOne(formData["eventId"] ?: throw NotFoundException()).toEvent()
         val volunteers =
             event.volunteers.filter { it.volunteerLogin != formData["volunteerLogin"]!! }

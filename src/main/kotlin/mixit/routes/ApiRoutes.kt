@@ -63,7 +63,6 @@ class ApiRoutes(
     fun apiRouter() = router {
         (accept(APPLICATION_JSON) and "/api").nest {
 
-
             // Edition data
             "/favorites".nest {
 
@@ -72,19 +71,18 @@ class ApiRoutes(
 
             // Some external request needs to be secured. So for them we need in the request the email and token. Values
 
-                // Require a token as arg
-                GET("/external/token", externalHandler::sendToken)
-                // Require a token and email as arg
-                GET("/external/token/check", externalHandler::checkToken)
-                // Needs authent and requires a token and email as arg
-                GET("/external/me", externalHandler::profile)
-                // Needs authent and requires a token and email as arg
-                GET("/external/favorites", externalHandler::favorites)
-                // Needs authent and requires a token and email as arg
-                GET("/external/favorites/talks/{id}", externalHandler::favorite)
-                // Needs authent and requires a token and email as arg
-                POST("/external/favorites/talks/{id}/toggle", externalHandler::toggleFavorite)
-
+            // Require a token as arg
+            GET("/external/token", externalHandler::sendToken)
+            // Require a token and email as arg
+            GET("/external/token/check", externalHandler::checkToken)
+            // Needs authent and requires a token and email as arg
+            GET("/external/me", externalHandler::profile)
+            // Needs authent and requires a token and email as arg
+            GET("/external/favorites", externalHandler::favorites)
+            // Needs authent and requires a token and email as arg
+            GET("/external/favorites/talks/{id}", externalHandler::favorite)
+            // Needs authent and requires a token and email as arg
+            POST("/external/favorites/talks/{id}/toggle", externalHandler::toggleFavorite)
         }
     }
 }

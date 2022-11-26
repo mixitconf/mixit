@@ -12,8 +12,8 @@ import mixit.ticket.model.LotteryTicket
 import mixit.ticket.repository.LotteryRepository
 import mixit.user.model.User
 import mixit.util.camelCase
-import mixit.util.coExtractFormData
 import mixit.util.email.EmailService
+import mixit.util.extractFormData
 import mixit.util.json
 import mixit.util.locale
 import org.springframework.dao.DuplicateKeyException
@@ -43,7 +43,7 @@ class LotteryHandler(
         )
 
     suspend fun submit(req: ServerRequest): ServerResponse {
-        val formData = req.coExtractFormData()
+        val formData = req.extractFormData()
         val ticket = LotteryTicket(
             formData["email"]!!.lowercase(),
             formData["firstname"]!!,

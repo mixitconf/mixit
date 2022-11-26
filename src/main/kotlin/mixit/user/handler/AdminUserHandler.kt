@@ -20,9 +20,9 @@ import mixit.user.model.Users.DEFAULT_IMG_URL
 import mixit.user.repository.UserRepository
 import mixit.util.AdminUtils.toJson
 import mixit.util.AdminUtils.toLinks
-import mixit.util.coExtractFormData
 import mixit.util.encodeToMd5
 import mixit.util.enumMatcher
+import mixit.util.extractFormData
 import mixit.util.seeOther
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
@@ -55,7 +55,7 @@ class AdminUserHandler(
     suspend fun createUser(req: ServerRequest): ServerResponse = this.adminUser()
 
     suspend fun editUser(req: ServerRequest): ServerResponse {
-        val existingUser = userRepository.coFindOne(req.pathVariable("login"))!!
+        val existingUser = userRepository.coFindOneOrNull(req.pathVariable("login"))!!
         val updatedUser = existingUser.copy(
             photoUrl = if (existingUser.emailHash != null && existingUser.photoUrl == DEFAULT_IMG_URL) null else existingUser.photoUrl
         )
@@ -63,7 +63,7 @@ class AdminUserHandler(
     }
 
     suspend fun adminDeleteUser(req: ServerRequest): ServerResponse {
-        val formData = req.coExtractFormData()
+        val formData = req.extractFormData()
         userService.deleteOne(formData["login"]!!).awaitSingleOrNull()
         return seeOther("${properties.baseUri}$LIST_URI")
     }
@@ -83,8 +83,8 @@ class AdminUserHandler(
         )
 
     suspend fun adminSaveUser(req: ServerRequest): ServerResponse {
-        val formData = req.coExtractFormData()
-        val existingUser = userRepository.coFindOne(req.pathVariable("login")) ?: User()
+        val formData = req.extractFormData()
+        val existingUser = userRepository.coFindOneOrNull(req.pathVariable("login")) ?: User()
         val updatedUser = existingUser.copy(
             login = formData["login"]!!,
             firstname = formData["firstname"]!!,
