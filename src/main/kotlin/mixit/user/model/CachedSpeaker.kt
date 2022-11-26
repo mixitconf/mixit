@@ -1,6 +1,6 @@
 package mixit.user.model
 
-import mixit.event.handler.AdminEventHandler
+import mixit.MixitApplication
 import mixit.talk.model.Language
 import mixit.util.toHTML
 
@@ -15,7 +15,7 @@ data class CachedSpeaker(
     val links: List<Link>,
     val year: Int
 ) {
-    constructor(user: User, year: Int = AdminEventHandler.CURRENT_EVENT.toInt()) : this(
+    constructor(user: User, year: Int = MixitApplication.CURRENT_EVENT.toInt()) : this(
         user.login,
         user.firstname,
         user.lastname,

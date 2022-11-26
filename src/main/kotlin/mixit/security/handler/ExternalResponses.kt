@@ -7,7 +7,7 @@ import org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR
 import org.springframework.http.HttpStatus.NOT_FOUND
 import org.springframework.http.HttpStatus.OK
 import org.springframework.web.reactive.function.server.ServerResponse
-import reactor.core.publisher.Mono
+import org.springframework.web.reactive.function.server.bodyValueAndAwait
 
 enum class ExternalResponses(val status: HttpStatus, val message: String) {
     CREDENTIAL_VALID(OK, "Credentials are valids"),
@@ -17,5 +17,5 @@ enum class ExternalResponses(val status: HttpStatus, val message: String) {
     INVALID_EMAIL(NOT_FOUND, "Account not found"),
     EMAIL_SENT_ERROR(INTERNAL_SERVER_ERROR, "An unexpected error occurred on email sent");
 
-    fun response(): Mono<ServerResponse> = ServerResponse.status(this.status).json().bodyValue(this.message)
+    suspend fun response(): ServerResponse = ServerResponse.status(this.status).json().bodyValueAndAwait(this.message)
 }

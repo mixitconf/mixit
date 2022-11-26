@@ -4,6 +4,9 @@ import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.MixitProperties
 import mixit.blog.model.BlogService
 import mixit.blog.model.Post
+import mixit.routes.MustacheI18n
+import mixit.routes.MustacheTemplate.AdminBlog
+import mixit.routes.MustacheTemplate.AdminPost
 import mixit.talk.model.Language.ENGLISH
 import mixit.talk.model.Language.FRENCH
 import mixit.util.extractFormData
@@ -14,30 +17,31 @@ import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
-import reactor.core.publisher.Mono
+import org.springframework.web.reactive.function.server.renderAndAwait
 import java.time.LocalDateTime
 
 @Component
 class AdminPostHandler(private val service: BlogService, private val properties: MixitProperties) {
 
     companion object {
-        const val TEMPLATE_LIST = "admin-blog"
-        const val TEMPLATE_EDIT = "admin-post"
+        //        const val TEMPLATE_LIST = "admin-blog"
+//        const val TEMPLATE_EDIT = "admin-post"
         const val LIST_URI = "/admin/blog"
     }
 
-    fun adminBlog(req: ServerRequest): Mono<ServerResponse> {
+    suspend fun adminBlog(req: ServerRequest): ServerResponse {
         val posts = service
-            .findAll()
-            .map { posts -> posts.sortedByDescending { it.addedAt }.map { it.toDto(req.language()) } }
-        return ok().render(TEMPLATE_LIST, mapOf(Pair("posts", posts)))
+            .coFindAll()
+            .sortedBy { it.addedAt }
+            .map { it.toDto(req.language()) }
+        return ok().renderAndAwait(AdminBlog.template, mapOf(MustacheI18n.POSTS to posts))
     }
 
-    fun createPost(req: ServerRequest): Mono<ServerResponse> =
+    suspend fun createPost(req: ServerRequest): ServerResponse =
         this.adminPost()
 
-    fun editPost(req: ServerRequest): Mono<ServerResponse> =
-        service.findOne(req.pathVariable("id")).map { it.toPost() }.flatMap(this::adminPost)
+    suspend fun editPost(req: ServerRequest): ServerResponse =
+        this.adminPost(service.coFindOne(req.pathVariable("id")).toPost())
 
     suspend fun adminDeletePost(req: ServerRequest): ServerResponse {
         val formData = req.extractFormData()
@@ -45,8 +49,8 @@ class AdminPostHandler(private val service: BlogService, private val properties:
         return seeOther("${properties.baseUri}$LIST_URI")
     }
 
-    private fun adminPost(post: Post = Post("")) = ok().render(
-        TEMPLATE_EDIT,
+    private suspend fun adminPost(post: Post = Post("")): ServerResponse = ok().renderAndAwait(
+        AdminPost.template,
         mapOf(
             Pair("post", post),
             Pair("title-fr", post.title[FRENCH]),

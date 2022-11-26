@@ -38,7 +38,6 @@ import org.springframework.context.MessageSource
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.DependsOn
-import org.springframework.core.annotation.Order
 import org.springframework.core.io.ClassPathResource
 import org.springframework.http.MediaType.APPLICATION_FORM_URLENCODED
 import org.springframework.http.MediaType.TEXT_EVENT_STREAM
@@ -49,7 +48,6 @@ import org.springframework.web.reactive.function.server.RouterFunctions.resource
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.bodyValueAndAwait
 import org.springframework.web.reactive.function.server.coRouter
-import org.springframework.web.reactive.function.server.router
 import reactor.kotlin.core.publisher.toMono
 import java.util.Locale
 
@@ -82,8 +80,7 @@ class WebsiteRoutes(
     private val logger = LoggerFactory.getLogger(WebsiteRoutes::class.java)
 
     @Bean
-    @Order(2)
-    fun websiteCoRouter() = coRouter {
+    fun websiteRouter() = coRouter {
         accept(TEXT_EVENT_STREAM).nest {
             GET("/mixette/dashboard/sse", mixetteHandler::mixetteRealTime)
         }
@@ -98,6 +95,9 @@ class WebsiteRoutes(
             GET("/signin/{token}/{email:.*}", authenticationHandler::signInViaUrl)
 
             GET("/admin", adminHandler::admin)
+            GET("/admin/blog", adminPostHandler::adminBlog)
+            GET("/admin/post/edit/{id}", adminPostHandler::editPost)
+            GET("/admin/post/create", adminPostHandler::createPost)
             GET("/admin/cache", cacheHandler::view)
             GET("/admin/users", adminUserHandler::adminUsers)
             GET("/admin/users/edit/{login}", adminUserHandler::editUser)
@@ -244,31 +244,6 @@ class WebsiteRoutes(
                 ServerResponse.ok().contentType(TEXT_PLAIN).bodyValueAndAwait("User-agent: *\nDisallow: /")
             }
         }
-    }.filter { request, next ->
-        val locale: Locale = request.locale()
-        val path = request.uri().path
-        request.session().flatMap { session ->
-            val model = generateModel(properties, path, locale, session, messageSource)
-            next.handle(request).flatMap {
-                if (it is RenderingResponse) RenderingResponse.from(it).modelAttributes(model).build() else it.toMono()
-            }
-        }
-    }
-
-    @Bean
-    @Order(1)
-    fun websiteRouter() = router {
-
-        accept(TEXT_HTML).nest {
-
-            "/admin".nest {
-
-                GET("/blog", adminPostHandler::adminBlog)
-                GET("/post/edit/{id}", adminPostHandler::editPost)
-                GET("/post/create", adminPostHandler::createPost)
-            }
-        }
-
     }.filter { request, next ->
         val locale: Locale = request.locale()
         val path = request.uri().path

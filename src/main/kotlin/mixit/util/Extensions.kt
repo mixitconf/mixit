@@ -74,7 +74,7 @@ suspend fun ServerRequest.currentNonEncryptedUserEmail(): String =
 suspend fun ServerRequest.decode(pathVariable: String): String? =
     withContext(Dispatchers.IO) {
         URLDecoder.decode(pathVariable(pathVariable), "UTF-8")
-    }.decodeFromBase64()
+    }
 
 fun ServerResponse.BodyBuilder.json() = contentType(APPLICATION_JSON)
 

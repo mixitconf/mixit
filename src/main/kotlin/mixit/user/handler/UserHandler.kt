@@ -4,6 +4,7 @@ import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.MixitApplication.Companion.CURRENT_EVENT
 import mixit.MixitProperties
 import mixit.routes.MustacheI18n
+import mixit.routes.MustacheTemplate
 import mixit.routes.MustacheTemplate.Speaker
 import mixit.routes.MustacheTemplate.UserEdit
 import mixit.security.model.Cryptographer
@@ -90,7 +91,7 @@ class UserHandler(
                     "description-en" to user.description[Language.ENGLISH],
                     "userlinks" to user.toLinkDtos()
                 )
-                ok().renderAndAwait(UserEdit.template, params)
+                ok().renderAndAwait(MustacheTemplate.User.template, params)
             }
 
             ViewMode.ViewUser -> {
@@ -105,11 +106,11 @@ class UserHandler(
                     MustacheI18n.BASE_URI to UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8),
                     "lotteryTicket" to lottery,
                     "attendeeTicket" to attendeeTicket,
-                    "viewMyProfile" to true,
+                    "viewMyProfile" to false,
                     "isSpeaker" to isSpeaker,
                     "canUpdateProfile" to true,
                 )
-                ok().renderAndAwait(UserEdit.template, params)
+                ok().renderAndAwait(MustacheTemplate.User.template, params)
             }
 
             ViewMode.EditProfile -> {

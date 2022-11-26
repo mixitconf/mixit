@@ -3,7 +3,7 @@ package mixit.security.handler
 import mixit.MixitProperties
 import mixit.routes.MustacheI18n.DESCRIPTION
 import mixit.routes.MustacheI18n.EMAIL
-import mixit.routes.MustacheI18n.TOCKEN
+import mixit.routes.MustacheI18n.TOKEN
 import mixit.routes.MustacheTemplate
 import mixit.routes.MustacheTemplate.Login
 import mixit.routes.MustacheTemplate.LoginConfirmation
@@ -17,8 +17,8 @@ import mixit.security.handler.LoginError.DUPLICATE_LOGIN
 import mixit.security.model.AuthenticationService
 import mixit.security.model.Cryptographer
 import mixit.user.model.User
-import mixit.user.model.jsonToken
 import mixit.util.decode
+import mixit.util.decodeFromBase64
 import mixit.util.errors.CredentialValidatorException
 import mixit.util.errors.DuplicateException
 import mixit.util.errors.EmailSenderException
@@ -231,12 +231,12 @@ class AuthenticationHandler(
         doSignInViaUrl(req, Context.Newsletter)
 
     private suspend fun doSignInViaUrl(req: ServerRequest, context: Context): ServerResponse {
-        val email = req.decode(EMAIL)
-        val token = req.pathVariable(TOCKEN)
+        val email = req.decode(EMAIL)?.decodeFromBase64()
+        val token = req.pathVariable(TOKEN)
         return displayView(
             LoginConfirmation,
             context,
-            mapOf(EMAIL to emailValidator.check(email), TOCKEN to token)
+            mapOf(EMAIL to emailValidator.check(email), TOKEN to token)
         )
     }
 
@@ -245,7 +245,7 @@ class AuthenticationHandler(
      */
     suspend fun signIn(req: ServerRequest): ServerResponse {
         val formData = req.extractFormData()
-        return doSignIn(req, Context.Login, formData[EMAIL], formData[TOCKEN])
+        return doSignIn(req, Context.Login, formData[EMAIL], formData[TOKEN])
     }
 
     /**
@@ -253,7 +253,7 @@ class AuthenticationHandler(
      */
     suspend fun subscribeNewsletter(req: ServerRequest): ServerResponse {
         val formData = req.extractFormData()
-        return doSignIn(req, Context.Newsletter, formData[EMAIL], formData[TOCKEN])
+        return doSignIn(req, Context.Newsletter, formData[EMAIL], formData[TOKEN])
     }
 
     private suspend fun doSignIn(
@@ -273,7 +273,6 @@ class AuthenticationHandler(
                 .let { authenticationService.updateNewsletterSubscription(it, context == Context.Newsletter) }
 
             val session = req.webSession()
-            val test = user.jsonToken(cryptographer)
             val cookie = authenticationService.createCookie(user)
             session.apply {
                 attributes[SESSION_ROLE_KEY] = user.role

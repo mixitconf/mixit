@@ -124,7 +124,7 @@ class AdminTicketHandler(
             .onErrorResume(DuplicateKeyException::class.java) { Mono.empty() }
             .awaitSingleOrNull()
 
-        return result.let { seeOther("${properties.baseUri}$LIST_URI") } ?: ok().renderAndAwait(
+        return result?.let { seeOther("${properties.baseUri}$LIST_URI") } ?: ok().renderAndAwait(
             TicketError.template,
             params
         )

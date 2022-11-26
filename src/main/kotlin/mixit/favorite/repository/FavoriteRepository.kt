@@ -19,7 +19,6 @@ import org.springframework.data.mongodb.core.query.isEqualTo
 import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
-import reactor.core.publisher.Mono
 import java.time.Duration
 
 @Repository
@@ -50,16 +49,13 @@ class FavoriteRepository(
     suspend fun coFindByEmail(email: String): List<Favorite> =
         findByEmail(email).collectList().awaitSingle()
 
-    fun findByEmailAndTalk(email: String, talkId: String): Mono<Favorite> = template.findOne(
+    suspend fun findByEmailAndTalk(email: String, talkId: String): Favorite? = template.findOne(
         Query(
             Criteria.where("email").isEqualTo(cryptographer.encrypt(email))
                 .andOperator(Criteria.where("talkId").isEqualTo(talkId))
         ),
         Favorite::class.java
-    )
-
-    suspend fun coFindByEmailAndTalk(email: String, talkId: String): Favorite? =
-        findByEmailAndTalk(email, talkId).awaitSingleOrNull()
+    ).awaitSingleOrNull()
 
     fun findByEmailAndTalks(email: String, talkIds: List<String>) = template.find<Favorite>(
         Query(

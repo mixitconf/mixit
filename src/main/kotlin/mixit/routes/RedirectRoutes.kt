@@ -19,7 +19,7 @@ class RedirectRoutes(
 ) {
 
     @Bean
-    fun redirectCoRouter() = coRouter {
+    fun redirectRouter() = coRouter {
         accept(TEXT_HTML).nest {
             GET("/articles") { permanentRedirect("${properties.baseUri}/blog") }
             GET("/article/{id}", blogHandler::redirect)

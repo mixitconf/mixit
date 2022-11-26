@@ -11,10 +11,8 @@ import mixit.ticket.handler.LotteryHandler
 import mixit.user.handler.UserJsonHandler
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
-import org.springframework.core.annotation.Order
 import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.web.reactive.function.server.coRouter
-import org.springframework.web.reactive.function.server.router
 
 @Configuration
 class ApiRoutes(
@@ -30,8 +28,7 @@ class ApiRoutes(
 ) {
 
     @Bean
-    @Order(2)
-    fun apiCoRouter() = coRouter {
+    fun apiRouter() = coRouter {
         (accept(APPLICATION_JSON) and "/api").nest {
             "/admin".nest {
                 GET("/{year}/talk", talkHandler::findAdminByEventId)
@@ -46,30 +43,12 @@ class ApiRoutes(
             GET("/event/{id}", eventHandler::findOne)
             GET("/favorites/{email}/talks/{id}", favoriteHandler::getFavorite)
             GET("/favorites/{email}", favoriteHandler::getFavorites)
+            POST("/favorites/{email}/talks/{id}/toggle", favoriteHandler::toggleFavorite)
             GET("/staff", userHandler::findStaff)
             GET("/staff/{login}", userHandler::findOneStaff)
             GET("/talk/{login}", talkHandler::findOne)
             GET("/user", userHandler::findAll)
             GET("/user/{login}", userHandler::findOne)
-
-            GET("/{year}/event", eventHandler::findByEventID)
-            GET("/{year}/speaker", userHandler::findSpeakerByEventId)
-            GET("/{year}/talk", talkHandler::findByEventId)
-        }
-    }
-
-    @Bean
-    @Order(1)
-    fun apiRouter() = router {
-        (accept(APPLICATION_JSON) and "/api").nest {
-
-            // Edition data
-            "/favorites".nest {
-
-                POST("/{email}/talks/{id}/toggle", favoriteHandler::toggleFavorite)
-            }
-
-            // Some external request needs to be secured. So for them we need in the request the email and token. Values
 
             // Require a token as arg
             GET("/external/token", externalHandler::sendToken)
@@ -83,6 +62,10 @@ class ApiRoutes(
             GET("/external/favorites/talks/{id}", externalHandler::favorite)
             // Needs authent and requires a token and email as arg
             POST("/external/favorites/talks/{id}/toggle", externalHandler::toggleFavorite)
+
+            GET("/{year}/event", eventHandler::findByEventID)
+            GET("/{year}/speaker", userHandler::findSpeakerByEventId)
+            GET("/{year}/talk", talkHandler::findByEventId)
         }
     }
 }

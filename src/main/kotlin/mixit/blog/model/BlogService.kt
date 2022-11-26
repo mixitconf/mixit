@@ -17,7 +17,7 @@ class BlogService(private val repository: PostRepository, private val userServic
     override val cacheZone: CacheZone = CacheZone.BLOG
 
     override fun findAll(): Mono<List<CachedPost>> =
-        findAll { repository.findAll().flatMap { post -> loadPostWriters(post) }.collectList() }
+        findAll { repository.findAllInMono().flatMap { post -> loadPostWriters(post) }.collectList() }
 
     suspend fun coFindAll(): List<CachedPost> =
         findAll().awaitSingle()

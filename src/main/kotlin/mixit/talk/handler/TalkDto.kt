@@ -1,6 +1,6 @@
 package mixit.talk.handler
 
-import mixit.event.handler.AdminEventHandler
+import mixit.MixitApplication
 import mixit.talk.model.TalkFormat
 import mixit.user.model.Link
 import mixit.user.model.User
@@ -29,7 +29,7 @@ class TalkDto(
     val photoUrls: List<Link> = emptyList(),
     val isEn: Boolean = (language == "english"),
     val isTalk: Boolean = (format == TalkFormat.TALK),
-    val isCurrentEdition: Boolean = AdminEventHandler.CURRENT_EVENT == event,
+    val isCurrentEdition: Boolean = MixitApplication.CURRENT_EVENT == event,
     val multiSpeaker: Boolean = (speakers.size > 1),
     val speakersFirstNames: String = (speakers.joinToString { it.firstname })
 )
