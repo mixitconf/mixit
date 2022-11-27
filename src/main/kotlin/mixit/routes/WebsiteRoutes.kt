@@ -210,7 +210,7 @@ class WebsiteRoutes(
             POST("/admin/post/delete", adminPostHandler::adminDeletePost)
             POST("/admin/users", adminUserHandler::adminSaveUser)
             POST("/admin/users/delete", adminUserHandler::adminDeleteUser)
-            POST("/cache/{zone}/invalidate", cacheHandler::invalidate)
+            POST("/admin/cache/{zone}/invalidate", cacheHandler::invalidate)
             POST("/events", adminEventHandler::adminSaveEvent)
             POST("/events/{eventId}/sponsors/create", adminEventHandler::adminCreateEventSponsoring)
             POST("/events/{eventId}/sponsors/delete", adminEventHandler::adminDeleteEventSponsoring)
