@@ -92,7 +92,7 @@ class TalkHandler(
     suspend fun findByEventView(config: TalkViewConfig): ServerResponse {
         val currentUserEmail = config.req.currentNonEncryptedUserEmail()
         val talks = loadTalkAndFavorites(config, currentUserEmail)
-        val event = eventService.coFindByYear(config.year)
+        val event = eventService.findByYear(config.year)
         val title = if (config.topic == null) "${config.title}|${config.year}" else
             "${config.title}.${config.topic}|${config.year}"
 
@@ -119,15 +119,15 @@ class TalkHandler(
 
     private suspend fun loadTalkAndFavorites(config: TalkViewConfig, currentUserEmail: String): List<TalkDto> =
         if (currentUserEmail.isEmpty()) {
-            service.coFindByEvent(config.year.toString(), config.topic).map { it.toDto(config.req.language()) }
+            service.findByEvent(config.year.toString(), config.topic).map { it.toDto(config.req.language()) }
         } else {
-            val favoriteTalkIds = favoriteRepository.coFindByEmail(currentUserEmail).map { it.talkId }
+            val favoriteTalkIds = favoriteRepository.findByEmail(currentUserEmail).map { it.talkId }
             if (config.filterOnFavorite) {
-                service.coFindByEventAndTalkIds(config.year.toString(), favoriteTalkIds, config.topic).map {
+                service.findByEventAndTalkIds(config.year.toString(), favoriteTalkIds, config.topic).map {
                     it.toDto(config.req.language(), favorite = true)
                 }
             } else {
-                service.coFindByEvent(config.year.toString(), config.topic).map {
+                service.findByEvent(config.year.toString(), config.topic).map {
                     it.toDto(config.req.language(), favorite = favoriteTalkIds.contains(it.id))
                 }
             }
@@ -136,11 +136,11 @@ class TalkHandler(
     suspend fun findOneView(req: ServerRequest, year: Int): ServerResponse {
         val lang = req.language()
         val currentUserEmail = req.currentNonEncryptedUserEmail()
-        val event = eventService.coFindByYear(year)
-        val favoriteTalkIds = favoriteRepository.coFindByEmail(currentUserEmail).map { it.talkId }
+        val event = eventService.findByYear(year)
+        val favoriteTalkIds = favoriteRepository.findByEmail(currentUserEmail).map { it.talkId }
         val talk = service.findByEventAndSlug(year.toString(), req.pathVariable("slug"))
         val speakers = talk.speakers.map { it.toDto(lang) }.sortedBy { it.firstname }
-        val otherTalks = service.coFindBySpeakerId(speakers.map { it.login }, talk.id).map { it.toDto(lang) }
+        val otherTalks = service.findBySpeakerId(speakers.map { it.login }, talk.id).map { it.toDto(lang) }
 
         return ok()
             .render(
@@ -162,7 +162,7 @@ class TalkHandler(
     }
 
     suspend fun editTalkView(req: ServerRequest): ServerResponse {
-        val talk = service.coFindBySlug(req.pathVariable("slug")) ?: throw NotFoundException()
+        val talk = service.findBySlug(req.pathVariable("slug")) ?: throw NotFoundException()
         return editTalkViewDetail(req, talk, emptyMap())
     }
 
@@ -184,7 +184,7 @@ class TalkHandler(
 
     suspend fun saveProfileTalk(req: ServerRequest): ServerResponse {
         val formData = req.extractFormData()
-        val talk = service.coFindOne(formData["id"]!!)
+        val talk = service.findOneOrNull(formData["id"]!!) ?: throw NotFoundException()
 
         val errors = mutableMapOf<String, String>()
 
@@ -238,12 +238,12 @@ class TalkHandler(
     }
 
     suspend fun redirectFromId(req: ServerRequest): ServerResponse {
-        val talk = service.coFindOne("id")
+        val talk = service.findOneOrNull("id") ?: throw NotFoundException()
         return permanentRedirect("${properties.baseUri}/${talk.event}/${talk.slug}")
     }
 
     suspend fun redirectFromSlug(req: ServerRequest): ServerResponse {
-        val talk = service.coFindBySlug(req.pathVariable("slug")) ?: throw NotFoundException()
+        val talk = service.findBySlug(req.pathVariable("slug")) ?: throw NotFoundException()
         return permanentRedirect("${properties.baseUri}/${talk.event}/${talk.slug}")
     }
 }

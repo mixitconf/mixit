@@ -12,11 +12,11 @@ import org.springframework.web.reactive.function.server.bodyValueAndAwait
 class JsonEventHandler(private val repository: EventRepository) {
 
     suspend fun findOne(req: ServerRequest): ServerResponse =
-        repository.coFindOne(req.pathVariable("id")).let { ok().json().bodyValueAndAwait(it) }
+        repository.findOne(req.pathVariable("id")).let { ok().json().bodyValueAndAwait(it) }
 
     suspend fun findAll(req: ServerRequest): ServerResponse =
-        repository.coFindAll().let { ok().json().bodyValueAndAwait(it) }
+        repository.findAll().let { ok().json().bodyValueAndAwait(it) }
 
     suspend fun findByEventID(req: ServerRequest): ServerResponse =
-        repository.coFindByYear(req.pathVariable("year").toInt()).let { ok().json().bodyValueAndAwait(it) }
+        repository.findByYear(req.pathVariable("year").toInt()).let { ok().json().bodyValueAndAwait(it) }
 }

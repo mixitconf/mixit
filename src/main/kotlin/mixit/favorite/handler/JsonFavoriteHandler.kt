@@ -49,5 +49,5 @@ class JsonFavoriteHandler(
         )
 
     suspend fun getFavorites(req: ServerRequest) =
-        ok().json().bodyValueAndAwait(favoriteRepository.coFindByEmail(req.pathVariable("email")))
+        ok().json().bodyValueAndAwait(favoriteRepository.findByEmail(req.pathVariable("email")))
 }

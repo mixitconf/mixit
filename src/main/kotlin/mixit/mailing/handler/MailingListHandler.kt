@@ -61,27 +61,27 @@ class MailingListHandler(
     private suspend fun getMailingList(recipientType: RecipientType): List<MailinglistEntry> =
         when (recipientType) {
             Staff ->
-                userService.coFindByRoles(Role.STAFF).map { staff -> MailinglistEntry(staff) }
+                userService.findByRoles(Role.STAFF).map { staff -> MailinglistEntry(staff) }
 
             StaffInPause ->
-                userService.coFindByRoles(Role.STAFF_IN_PAUSE).map { staff -> MailinglistEntry(staff) }
+                userService.findByRoles(Role.STAFF_IN_PAUSE).map { staff -> MailinglistEntry(staff) }
 
             Volunteers ->
-                eventService.coFindByYear(CURRENT_EVENT).volunteers.map { volunteer -> MailinglistEntry(volunteer) }
+                eventService.findByYear(CURRENT_EVENT).volunteers.map { volunteer -> MailinglistEntry(volunteer) }
 
             Sponsor ->
-                eventService.coFindByYear(CURRENT_EVENT).sponsors.map { sponsor -> MailinglistEntry(sponsor) }
+                eventService.findByYear(CURRENT_EVENT).sponsors.map { sponsor -> MailinglistEntry(sponsor) }
 
             Speaker ->
-                talkService.coFindByEvent(CURRENT_EVENT)
+                talkService.findByEvent(CURRENT_EVENT)
                     .flatMap { talk -> talk.speakers }
                     .map { speaker -> MailinglistEntry(speaker) }
 
             Organization ->
-                eventService.coFindByYear(CURRENT_EVENT).organizations.map { sponsor -> MailinglistEntry(sponsor) }
+                eventService.findByYear(CURRENT_EVENT).organizations.map { sponsor -> MailinglistEntry(sponsor) }
 
             Attendee ->
-                ticketService.coFindAll().map { attendee -> MailinglistEntry(attendee) }
+                ticketService.findAll().map { attendee -> MailinglistEntry(attendee) }
             // TODO add user who have subscribed to our newletter
         }
 

@@ -57,8 +57,8 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("com.ninja-squad:springmockk:2.0.0")
-    testImplementation("io.mockk:mockk:1.9.3")
+    testImplementation("com.ninja-squad:springmockk:3.1.1")
+    testImplementation("io.mockk:mockk:1.13.2")
     testImplementation("io.projectreactor:reactor-test")
 }
 

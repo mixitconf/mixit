@@ -28,6 +28,7 @@ import mixit.util.validator.EmailValidator
 import mixit.util.validator.MarkdownValidator
 import mixit.util.validator.MaxLengthValidator
 import mixit.util.validator.UrlValidator
+import org.springframework.data.crossstore.ChangeSetPersister.NotFoundException
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
@@ -59,17 +60,17 @@ class UserHandler(
     suspend fun findOneView(req: ServerRequest): ServerResponse {
         val login = req.decode("login")!!
         val user =
-            repository.coFindOneOrNull(login) ?: repository.coFindByLegacyId(login.toLong()) ?: throw RuntimeException()
+            repository.findOneOrNull(login) ?: repository.findByLegacyId(login.toLong()) ?: throw NotFoundException()
         return findOneViewDetail(req, user)
     }
 
     suspend fun findProfileView(req: ServerRequest): ServerResponse {
-        val user = repository.coFindByNonEncryptedEmail(req.currentNonEncryptedUserEmail())
+        val user = repository.findByNonEncryptedEmail(req.currentNonEncryptedUserEmail()) ?: throw NotFoundException()
         return findOneViewDetail(req, user, ViewMode.ViewMyProfile)
     }
 
     suspend fun editProfileView(req: ServerRequest): ServerResponse {
-        val user = repository.coFindByNonEncryptedEmail(req.currentNonEncryptedUserEmail())
+        val user = repository.findByNonEncryptedEmail(req.currentNonEncryptedUserEmail()) ?: throw NotFoundException()
         return findOneViewDetail(req, user, ViewMode.EditProfile)
     }
 
@@ -96,10 +97,10 @@ class UserHandler(
 
             ViewMode.ViewUser -> {
                 val isSpeaker = service
-                    .coFindBySpeakerId(listOf(user.login), "null")
+                    .findBySpeakerId(listOf(user.login), "null")
                     .any { it.event == CURRENT_EVENT }
 
-                val attendeeTicket = ticketService.coFindByEmail(cryptographer.decrypt(user.email)!!)
+                val attendeeTicket = ticketService.findByEmail(cryptographer.decrypt(user.email)!!)
                 val lottery = lotteryRepository.findByEncryptedEmail(user.email ?: "unknown")
                 val params = mapOf(
                     MustacheI18n.USER to user.toDto(req.language()),
@@ -114,7 +115,7 @@ class UserHandler(
             }
 
             ViewMode.EditProfile -> {
-                val talks = service.coFindBySpeakerId(listOf(user.login), "all")
+                val talks = service.findBySpeakerId(listOf(user.login), "all")
                 val params = mapOf(
                     MustacheI18n.USER to user.toDto(req.language()),
                     MustacheI18n.BASE_URI to UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8),
@@ -126,7 +127,7 @@ class UserHandler(
         }
 
     suspend fun saveProfile(req: ServerRequest): ServerResponse {
-        val user = repository.coFindByNonEncryptedEmail(req.currentNonEncryptedUserEmail())
+        val user = repository.findByNonEncryptedEmail(req.currentNonEncryptedUserEmail()) ?: throw NotFoundException()
         val formData = req.extractFormData()
 
         // In his profile screen a user can't change all the data. In the first step we load the user
@@ -180,6 +181,7 @@ class UserHandler(
         if (updatedUser.photoUrl != null && !UrlValidator.isValid(updatedUser.photoUrl)) {
             errors["photoUrl"] = "user.form.error.photourl"
         }
+
         updatedUser.links.forEachIndexed { index, link ->
             if (!maxLengthValidator.isValid(link.name, 30)) {
                 errors["link${index + 1}Name"] = "user.form.error.link${index + 1}.name"
@@ -197,10 +199,9 @@ class UserHandler(
     }
 
     private fun extractLinks(formData: Map<String, String?>): List<Link> =
-        IntStream.range(0, 5)
-            .toArray()
-            .asList()
-            .mapIndexed { index, _ -> Pair(formData["link${index}Name"], formData["link${index}Url"]) }
+        List(IntStream.range(0, 5).toArray().asList().size) { index ->
+            Pair(formData["link${index}Name"], formData["link${index}Url"])
+        }
             .filter { !it.first.isNullOrBlank() && !it.second.isNullOrBlank() }
             .map { Link(it.first!!, it.second!!) }
 }

@@ -1,6 +1,7 @@
 package mixit.security
 
 import com.google.common.annotations.VisibleForTesting
+import kotlinx.coroutines.runBlocking
 import mixit.MixitProperties
 import mixit.routes.Routes
 import mixit.security.model.Credential
@@ -20,7 +21,6 @@ import org.springframework.web.server.WebFilter
 import org.springframework.web.server.WebFilterChain
 import org.springframework.web.server.WebSession
 import reactor.core.publisher.Mono
-import reactor.kotlin.core.publisher.switchIfEmpty
 import java.net.URI
 import java.util.Locale
 
@@ -44,7 +44,7 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
         if (isACallOnOldUrl(exchange)) {
             redirect(exchange, exchange.request.uri.path, HttpStatus.PERMANENT_REDIRECT)
         }
-        // For those who arrive on our home page with another language than french, we need to load the site in english
+        // For those who arrive at our home page with another language than french, we need to load the site in english
         else if (isAHomePageCallFromForeignLanguage(exchange)) {
             redirect(exchange, "/${Language.ENGLISH.toLanguageTag()}/")
         }
@@ -55,45 +55,44 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
         // For other calls we have to check credentials
         else {
             exchange.session.flatMap {
-                filterAndCheckCredentials(
-                    exchange,
-                    chain,
-                    it,
-                    readCredentialsFromCookie(exchange.request)
-                )
+                runBlocking {
+                    filterAndCheckCredentials(
+                        exchange,
+                        chain,
+                        it,
+                        readCredentialsFromCookie(exchange.request)
+                    )
+                }
             }
         }
 
     /**
      * In this method we try to read user credentials in request cookies
      */
-    fun filterAndCheckCredentials(
+    suspend fun filterAndCheckCredentials(
         exchange: ServerWebExchange,
         chain: WebFilterChain,
         session: WebSession,
         credential: Credential?
     ): Mono<Void> =
-        credential?.let { cred ->
-            // If session contains credentials we check data
-            userRepository
-                .findByNonEncryptedEmail(cred.email)
-                .switchIfEmpty { Mono.just(User()) }
-                .flatMap { user ->
-                    // We have to see if the token is the good one anf if it is yet valid
-                    if (user.hasValidToken(cred.token)) {
-                        // If user is found we need to restore infos in session
-                        session.attributes.let {
-                            it[SESSION_ROLE_KEY] = user.role
-                            it[SESSION_EMAIL_KEY] = cred.email
-                            it[SESSION_TOKEN_KEY] = cred.token
-                            it[SESSION_LOGIN_KEY] = user.login
-                            filterWithCredential(exchange, chain, user)
-                        }
-                    } else {
-                        filterWithCredential(exchange, chain)
+        credential
+            ?.let { cred ->
+                // If session contains credentials we check data
+                val user = userRepository.findByNonEncryptedEmail(cred.email) ?: User()
+                // We have to see if the token is the good one anf if it is yet valid
+                if (user.hasValidToken(cred.token)) {
+                    // If user is found we need to restore infos in session
+                    session.attributes.let {
+                        it[SESSION_ROLE_KEY] = user.role
+                        it[SESSION_EMAIL_KEY] = cred.email
+                        it[SESSION_TOKEN_KEY] = cred.token
+                        it[SESSION_LOGIN_KEY] = user.login
+                        filterWithCredential(exchange, chain, user)
                     }
+                } else {
+                    filterWithCredential(exchange, chain)
                 }
-        } ?: run {
+            } ?: run {
             // If credentials are not read
             filterWithCredential(exchange, chain)
         }

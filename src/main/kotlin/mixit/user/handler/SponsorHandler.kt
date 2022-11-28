@@ -22,7 +22,7 @@ import org.springframework.web.reactive.function.server.renderAndAwait
 class SponsorHandler(private val eventService: EventService) {
 
     suspend fun viewSponsors(req: ServerRequest, year: Int = CURRENT_EVENT.toInt()): ServerResponse {
-        val event = eventService.coFindByYear(year)
+        val event = eventService.findByYear(year)
         val lg = req.language()
 
         val levels: List<Pair<String, *>> = sponsorshipLevels()
@@ -48,7 +48,7 @@ class SponsorHandler(private val eventService: EventService) {
         spotLights: Array<SponsorshipLevel> = arrayOf(LANYARD, GOLD, PARTY),
         year: Int = CURRENT_EVENT.toInt(),
     ): ServerResponse {
-        val event = eventService.coFindByYear(year)
+        val event = eventService.findByYear(year)
         val mainSponsors = event.filterBySponsorLevel(*spotLights)
         val otherSponsors = event.sponsors.filterNot { mainSponsors.contains(it) }
 

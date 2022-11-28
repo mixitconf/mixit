@@ -1,37 +1,32 @@
 package mixit.blog.model
 
-import kotlinx.coroutines.reactor.awaitSingle
 import mixit.blog.repository.PostRepository
 import mixit.talk.model.Language
 import mixit.user.model.User
 import mixit.user.model.UserService
-import mixit.util.cache.CacheTemplate
+import mixit.util.cache.CacheCaffeineTemplate
 import mixit.util.cache.CacheZone
 import org.springframework.stereotype.Service
-import reactor.core.publisher.Mono
-import reactor.kotlin.core.publisher.switchIfEmpty
 
 @Service
-class BlogService(private val repository: PostRepository, private val userService: UserService) : CacheTemplate<CachedPost>() {
+class BlogService(private val repository: PostRepository, private val userService: UserService) :
+    CacheCaffeineTemplate<CachedPost>() {
 
     override val cacheZone: CacheZone = CacheZone.BLOG
 
-    override fun findAll(): Mono<List<CachedPost>> =
-        findAll { repository.findAllInMono().flatMap { post -> loadPostWriters(post) }.collectList() }
-
-    suspend fun coFindAll(): List<CachedPost> =
-        findAll().awaitSingle()
+    override fun loader(): suspend () -> List<CachedPost> =
+        { repository.findAll().map { post -> loadPostWriters(post) } }
 
     suspend fun findBySlug(slug: String): CachedPost? =
-        coFindAll().firstOrNull { it.slug[Language.ENGLISH] == slug || it.slug[Language.FRENCH] == slug }
+        findAll().firstOrNull { it.slug[Language.ENGLISH] == slug || it.slug[Language.FRENCH] == slug }
 
     fun save(event: Post) =
         repository.save(event).doOnSuccess { cache.invalidateAll() }
 
-    private fun loadPostWriters(post: Post): Mono<CachedPost> =
-        userService.findOne(post.authorId)
-            .map { user -> CachedPost(post, user.toUser()) }
-            .switchIfEmpty { Mono.justOrEmpty(CachedPost(post, User())) }
+    private suspend fun loadPostWriters(post: Post): CachedPost =
+        userService.findOneOrNull(post.authorId)
+            ?.let { CachedPost(post, it.toUser()) }
+            ?: CachedPost(post, User())
 
     fun deleteOne(id: String) =
         repository.deleteOne(id).doOnSuccess { cache.invalidateAll() }

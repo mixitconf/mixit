@@ -48,42 +48,36 @@ class MixetteDonationRepository(
     suspend fun findAll() =
         template.findAll<MixetteDonation>().collectList().awaitSingle()
 
-    fun findAllByYear(year: String): Flux<MixetteDonation> =
-        template.find(Query(Criteria.where("year").isEqualTo(year)))
+    suspend fun findAllByYear(year: String): List<MixetteDonation> =
+        template
+            .find<MixetteDonation>(Query(Criteria.where("year").isEqualTo(year)))
+            .collectList()
+            .awaitSingle()
 
-    suspend fun coFindAllByYear(year: String): List<MixetteDonation> =
-        findAllByYear(year).collectList().awaitSingle()
+    suspend fun findByYearAfterNow(year: String): List<MixetteDonation> =
+        template
+            .find<MixetteDonation>(Query(Criteria.where("year").isEqualTo(year).and("createdBy").gt(Instant.now())))
+            .collectList()
+            .awaitSingle()
 
-    fun findByYearAfterNow(year: String): Flux<MixetteDonation> =
-        template.find(Query(Criteria.where("year").isEqualTo(year).and("createdBy").gt(Instant.now())))
-
-    suspend fun coFindByYearAfterNow(year: String): List<MixetteDonation> =
-        findByYearAfterNow(year).collectList().awaitSingle()
-
-    fun findOne(id: String) =
-        template.findById<MixetteDonation>(id)
-
-    suspend fun coFindOne(id: String) =
-        findOne(id).awaitSingle()
-
-    suspend fun coFindOneOrNull(id: String) =
-        findOne(id).awaitSingleOrNull()
+    suspend fun findOneOrNull(id: String) =
+        template.findById<MixetteDonation>(id).awaitSingleOrNull()
 
     fun deleteOne(id: String) =
         template.remove<MixetteDonation>(Query(Criteria.where("_id").isEqualTo(id)))
 
-    fun findByTicketNumber(ticketNumber: String, year: String): Flux<MixetteDonation> =
-        template.find(Query(Criteria.where("encryptedTicketNumber").isEqualTo(ticketNumber).and("year").isEqualTo(year)))
-
-    suspend fun coFindByTicketNumber(ticketNumber: String, year: String): List<MixetteDonation> =
-        findByTicketNumber(ticketNumber, year).collectList().awaitSingle()
+    suspend fun findByTicketNumber(ticketNumber: String, year: String): List<MixetteDonation> =
+        template
+            .find<MixetteDonation>(Query(Criteria.where("encryptedTicketNumber").isEqualTo(ticketNumber).and("year").isEqualTo(year)))
+            .collectList()
+            .awaitSingle()
 
     fun findByEmail(email: String, year: String): Flux<MixetteDonation> =
         template.find(Query(Criteria.where("encryptedUserEmail").isEqualTo(email).and("year").isEqualTo(year)))
 
-    fun findByOrganizationLogin(login: String, year: String): Flux<MixetteDonation> =
-        template.find(Query(Criteria.where("organizationLogin").isEqualTo(login).and("year").isEqualTo(year)))
-
-    suspend fun coFindByOrganizationLogin(login: String, year: String): List<MixetteDonation> =
-        findByOrganizationLogin(login, year).collectList().awaitSingle()
+    suspend fun findByOrganizationLogin(login: String, year: String): List<MixetteDonation> =
+        template
+            .find<MixetteDonation>(Query(Criteria.where("organizationLogin").isEqualTo(login).and("year").isEqualTo(year)))
+            .collectList()
+            .awaitSingle()
 }

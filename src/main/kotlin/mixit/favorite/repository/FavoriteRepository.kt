@@ -14,17 +14,15 @@ import org.springframework.data.mongodb.core.find
 import org.springframework.data.mongodb.core.findAll
 import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Query
-import org.springframework.data.mongodb.core.query.inValues
 import org.springframework.data.mongodb.core.query.isEqualTo
 import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
-import reactor.core.publisher.Flux
 import java.time.Duration
 
 @Repository
 class FavoriteRepository(
     private val template: ReactiveMongoTemplate,
-    val cryptographer: Cryptographer,
+    private val cryptographer: Cryptographer,
     private val objectMapper: ObjectMapper
 ) {
 
@@ -41,13 +39,14 @@ class FavoriteRepository(
 
     fun count() = template.count<Favorite>()
 
-    suspend fun findAll() = template.findAll<Favorite>().collectList().awaitSingle()
+    suspend fun findAll(): List<Favorite> =
+        template.findAll<Favorite>().collectList().awaitSingle()
 
-    fun findByEmail(email: String): Flux<Favorite> =
-        template.find(Query(Criteria.where("email").isEqualTo(cryptographer.encrypt(email))))
-
-    suspend fun coFindByEmail(email: String): List<Favorite> =
-        findByEmail(email).collectList().awaitSingle()
+    suspend fun findByEmail(email: String): List<Favorite> =
+        template
+            .find<Favorite>(Query(Criteria.where("email").isEqualTo(cryptographer.encrypt(email))))
+            .collectList()
+            .awaitSingle()
 
     suspend fun findByEmailAndTalk(email: String, talkId: String): Favorite? = template.findOne(
         Query(
@@ -56,13 +55,6 @@ class FavoriteRepository(
         ),
         Favorite::class.java
     ).awaitSingleOrNull()
-
-    fun findByEmailAndTalks(email: String, talkIds: List<String>) = template.find<Favorite>(
-        Query(
-            Criteria.where("email").isEqualTo(cryptographer.encrypt(email))
-                .andOperator(Criteria.where("talkId").inValues(talkIds))
-        )
-    )
 
     fun save(favorite: Favorite) = template.save(favorite)
 

@@ -20,7 +20,6 @@ import org.springframework.data.mongodb.core.query.TextQuery
 import org.springframework.data.mongodb.core.query.isEqualTo
 import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
-import reactor.core.publisher.Flux
 
 @Repository
 class TalkRepository(
@@ -46,8 +45,11 @@ class TalkRepository(
     fun count() =
         template.count<Talk>()
 
-    fun findAll(): Flux<Talk> =
-        template.find<Talk>(Query().with(by(Order(ASC, "start")))).doOnComplete { logger.info("Load all talks") }
+    suspend fun findAll(): List<Talk> =
+        template
+            .find<Talk>(Query().with(by(Order(ASC, "start")))).doOnComplete { logger.info("Load all talks") }
+            .collectList()
+            .awaitSingle()
 
     suspend fun findFullText(criteria: List<String>): List<Talk> {
         val textCriteria = TextCriteria()
@@ -60,11 +62,7 @@ class TalkRepository(
     fun findOne(id: String) =
         template.findById<Talk>(id)
 
-    fun deleteAll() = template.remove<Talk>(Query())
-
     fun deleteOne(id: String) = template.remove<Talk>(Query(where("_id").isEqualTo(id)))
-
-    fun deleteByEvent(event: String) = template.remove<Talk>(Query(where("event").isEqualTo(event)))
 
     fun save(talk: Talk) = template.save(talk)
 }

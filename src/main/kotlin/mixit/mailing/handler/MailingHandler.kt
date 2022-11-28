@@ -56,7 +56,7 @@ class MailingHandler(
         this.displayMailing()
 
     suspend fun editMailing(req: ServerRequest): ServerResponse {
-        val mailing = mailingRepository.coFindOne(req.pathVariable("id"))
+        val mailing = mailingRepository.findOne(req.pathVariable("id"))
         return displayMailing(mailing)
     }
 
@@ -88,13 +88,13 @@ class MailingHandler(
 
     private suspend fun getUsers(mailing: Mailing): List<CachedUser> {
         if (mailing.recipientLogins.isNotEmpty()) {
-            return userService.coFindAllByIds(mailing.recipientLogins)
+            return userService.findAllByIds(mailing.recipientLogins)
         }
         if (mailing.type != null) {
             return when (mailing.type) {
-                Staff -> userService.coFindByRoles(Role.STAFF)
-                StaffInPause -> userService.coFindByRoles(Role.STAFF_IN_PAUSE)
-                Volunteers -> userService.coFindByRoles(Role.VOLUNTEER)
+                Staff -> userService.findByRoles(Role.STAFF)
+                StaffInPause -> userService.findByRoles(Role.STAFF_IN_PAUSE)
+                Volunteers -> userService.findByRoles(Role.VOLUNTEER)
                 RecipientType.Attendee, Sponsor, Organization, Speaker -> emptyList()
             }
         }

@@ -44,12 +44,12 @@ class AdminTicketHandler(
     }
 
     suspend fun findAll(req: ServerRequest): ServerResponse {
-        val tickets = service.coFindAll().map { it.toEntity(cryptographer) }
+        val tickets = service.findAll().map { it.toEntity(cryptographer) }
         return ok().json().bodyValueAndAwait(tickets)
     }
 
     suspend fun ticketing(req: ServerRequest): ServerResponse {
-        val tickets = service.coFindAll().map { it.toDto(cryptographer) }
+        val tickets = service.findAll().map { it.toDto(cryptographer) }
         val params = mapOf(
             TITLE to "admin.ticket.title",
             TICKETS to tickets
@@ -59,7 +59,7 @@ class AdminTicketHandler(
     }
 
     suspend fun printTicketing(req: ServerRequest): ServerResponse {
-        val tickets = service.coFindAll().map { ticket ->
+        val tickets = service.findAll().map { ticket ->
             ticket.toDto(cryptographer)
                 .copy(
                     firstname = ticket.firstname?.uppercase() ?: ticket.lastname.uppercase(),
@@ -79,7 +79,12 @@ class AdminTicketHandler(
         this.adminTicket()
 
     suspend fun editTicket(req: ServerRequest): ServerResponse =
-        this.adminTicket(service.coFindOne(req.pathVariable("number")).toEntity(cryptographer))
+        this.adminTicket(
+            service
+                .findOneOrNull(req.pathVariable("number"))
+                ?.toEntity(cryptographer)
+                ?: throw NotFoundException()
+        )
 
     private suspend fun adminTicket(ticket: Ticket = Ticket.empty(cryptographer)): ServerResponse {
         val template =
@@ -95,25 +100,26 @@ class AdminTicketHandler(
 
     suspend fun submit(req: ServerRequest): ServerResponse {
         val formData = req.extractFormData()
-        val existingTicket = service.coFindByNumber(formData["number"]!!)
-        val ticket = if (existingTicket != null)
-            existingTicket.toEntity(cryptographer).copy(
+        val existingTicket = service.findByNumber(formData["number"]!!)
+        val ticket = existingTicket
+            ?.toEntity(cryptographer)
+            ?.copy(
                 encryptedEmail = cryptographer.encrypt(formData["email"]!!.lowercase())!!,
                 firstname = cryptographer.encrypt(formData["firstname"]),
                 lastname = cryptographer.encrypt(formData["lastname"])!!,
                 externalId = cryptographer.encrypt(formData["externalId"]),
                 type = TicketType.valueOf(formData["type"]!!),
             )
-        else Ticket(
-            number = cryptographer.encrypt(formData["number"])!!,
-            encryptedEmail = cryptographer.encrypt(formData["email"]!!.lowercase())!!,
-            firstname = cryptographer.encrypt(formData["firstname"]),
-            lastname = cryptographer.encrypt(formData["lastname"])!!,
-            externalId = cryptographer.encrypt(formData["externalId"]),
-            lotteryRank = formData["lotteryRank"]?.toInt(),
-            createdAt = Instant.parse(formData["createdAt"])!!,
-            type = TicketType.valueOf(formData["type"]!!),
-        )
+            ?: Ticket(
+                number = cryptographer.encrypt(formData["number"])!!,
+                encryptedEmail = cryptographer.encrypt(formData["email"]!!.lowercase())!!,
+                firstname = cryptographer.encrypt(formData["firstname"]),
+                lastname = cryptographer.encrypt(formData["lastname"])!!,
+                externalId = cryptographer.encrypt(formData["externalId"]),
+                lotteryRank = formData["lotteryRank"]?.toInt(),
+                createdAt = Instant.parse(formData["createdAt"])!!,
+                type = TicketType.valueOf(formData["type"]!!),
+            )
 
         val params = mapOf(
             TITLE to "admin.ticket.title",
@@ -137,7 +143,7 @@ class AdminTicketHandler(
     }
 
     suspend fun showAttendee(req: ServerRequest): ServerResponse {
-        val attendee = service.coFindByNumber(req.pathVariable("number"))
+        val attendee = service.findByNumber(req.pathVariable("number"))
             ?: return seeOther("${properties.baseUri}/")
 
         val session = req.webSession()

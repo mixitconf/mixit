@@ -11,6 +11,7 @@ import mixit.user.repository.UserRepository
 import mixit.util.errors.NotFoundException
 import mixit.util.json
 import mixit.util.language
+import org.springframework.data.crossstore.ChangeSetPersister
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
@@ -27,30 +28,31 @@ class UserJsonHandler(
     private val service: TalkService
 ) {
     suspend fun findOne(req: ServerRequest): ServerResponse =
-        repository.coFindOneOrNull(req.pathVariable("login"))
+        repository.findOneOrNull(req.pathVariable("login"))
             ?.let { ok().json().bodyValueAndAwait(it.anonymize()) }
             ?: throw NotFoundException()
 
     suspend fun findAll(req: ServerRequest): ServerResponse =
         repository
-            .coFindAll()
+            .findAll()
             .map { it.anonymize() }
             .let { ok().json().bodyValueAndAwait(it) }
 
     suspend fun findStaff(req: ServerRequest): ServerResponse =
         repository
-            .coFindByRoles(listOf(Role.STAFF))
+            .findByRoles(listOf(Role.STAFF))
             .map { it.anonymize() }
             .let { ok().json().bodyValueAndAwait(it) }
 
     suspend fun findOneStaff(req: ServerRequest): ServerResponse =
         repository
-            .coFindOneByRoles(req.pathVariable("login"), listOf(Role.STAFF, Role.STAFF_IN_PAUSE))
-            .let { ok().json().bodyValueAndAwait(it) }
+            .findOneByRoles(req.pathVariable("login"), listOf(Role.STAFF, Role.STAFF_IN_PAUSE))
+            ?.let { ok().json().bodyValueAndAwait(it) }
+            ?: throw ChangeSetPersister.NotFoundException()
 
     suspend fun findSpeakerByEventId(req: ServerRequest): ServerResponse =
         service
-            .coFindByEvent(req.pathVariable("year"))
+            .findByEvent(req.pathVariable("year"))
             .map { talk -> talk.speakers.map { it.anonymize() }.distinct() }
             .let { ok().json().bodyValueAndAwait(it) }
 
@@ -61,8 +63,8 @@ class UserJsonHandler(
             .awaitSingle()
 
     suspend fun check(req: ServerRequest): ServerResponse =
-        repository.coFindByNonEncryptedEmail(req.pathVariable("email"))
-            .takeIf { it.token == req.headers().header("token")[0] }?.toDto(req.language())
+        repository.findByNonEncryptedEmail(req.pathVariable("email"))
+            ?.takeIf { it.token == req.headers().header("token")[0] }?.toDto(req.language())
             ?.let { ok().json().bodyValueAndAwait(it) }
             ?: throw NotFoundException()
 }

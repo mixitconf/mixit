@@ -71,7 +71,7 @@ class AdminMixetteHandler(
      */
     suspend fun adminOrganizationDonations(req: ServerRequest): ServerResponse =
         adminGroupDonations(AdminMixetteOrganizations.template) { donation ->
-            val user = userService.coFindOne(donation.organizationLogin)
+            val user = userService.findOneOrNull(donation.organizationLogin) ?: throw NotFoundException()
             MixetteOrganizationDonationDto(name = user.organizationName, login = user.login)
         }
 
@@ -79,7 +79,7 @@ class AdminMixetteHandler(
         target: String,
         transformation: suspend (MixetteDonation) -> T
     ): ServerResponse {
-        val donations = repository.coFindAllByYear(CURRENT_EVENT)
+        val donations = repository.findAllByYear(CURRENT_EVENT)
         val donationByOrgas = donations
             .groupBy { transformation.invoke(it) }
             .map { entry ->
@@ -107,7 +107,7 @@ class AdminMixetteHandler(
      * Used to display the page to create a new donation, when a volunteer or a staff member has scanned a badge
      */
     suspend fun addDonationForAttendee(req: ServerRequest): ServerResponse {
-        val donor = ticketService.coFindByNumber(req.pathVariable("number")) ?: throw NotFoundException()
+        val donor = ticketService.findByNumber(req.pathVariable("number")) ?: throw NotFoundException()
         return req
             .webSession()
             .let {
@@ -127,17 +127,17 @@ class AdminMixetteHandler(
      * Used to display screen to edit a donation
      */
     suspend fun editDonation(req: ServerRequest): ServerResponse =
-        this.adminDonation(repository.coFindOne(req.pathVariable("id")))
+        this.adminDonation(repository.findOneOrNull(req.pathVariable("id")) ?: throw NotFoundException())
 
     /**
      * Used to display aggregated data for an organization
      */
     suspend fun editOrganization(req: ServerRequest): ServerResponse {
         val login = req.queryParamOrNull("login") ?: throw NotFoundException()
-        val donations = repository.coFindByOrganizationLogin(login, CURRENT_EVENT)
+        val donations = repository.findByOrganizationLogin(login, CURRENT_EVENT)
 
         return this.adminGroupDonation(AdminMixetteOrganization.template, donations) {
-            val organization = userService.coFindOne(it.organizationLogin)
+            val organization = userService.findOneOrNull(it.organizationLogin) ?: throw NotFoundException()
             MixetteOrganizationDonationDto(
                 name = organization.company ?: "${organization.firstname} ${organization.lastname}",
                 login = organization.login
@@ -150,7 +150,7 @@ class AdminMixetteHandler(
      */
     suspend fun editDonor(req: ServerRequest): ServerResponse {
         val ticketNumber = req.queryParamOrNull("ticketNumber") ?: throw NotFoundException()
-        val donations = repository.coFindByTicketNumber(ticketNumber, CURRENT_EVENT)
+        val donations = repository.findByTicketNumber(ticketNumber, CURRENT_EVENT)
         return this.adminGroupDonation(AdminMixetteDonor.template, donations) {
             findDonorByEncryptedTicketNumber(it.encryptedTicketNumber!!) ?: throw NotFoundException()
         }
@@ -191,9 +191,9 @@ class AdminMixetteHandler(
         donation: MixetteDonation,
         errors: Map<String, String> = emptyMap()
     ): ServerResponse {
-        val event = service.coFindByYear(CURRENT_EVENT)
+        val event = service.findByYear(CURRENT_EVENT)
         val donor = findDonorByEncryptedTicketNumber(donation.encryptedTicketNumber ?: "") ?: throw NotFoundException()
-        val organization = userService.coFindOne(donation.organizationLogin)
+        val organization = userService.findOneOrNull(donation.organizationLogin) ?: throw NotFoundException()
 
         val params = mapOf(
             CREATION_MODE to (donation.id == null),
@@ -247,9 +247,9 @@ class AdminMixetteHandler(
      */
     private suspend fun findDonorByEncryptedTicketNumber(ticketNumber: String): MixetteUserDonationDto? {
         // We find the ticket
-        val ticket = ticketService.coFindByNumber(cryptographer.decrypt(ticketNumber)!!)?.toEntity(cryptographer)
+        val ticket = ticketService.findByNumber(cryptographer.decrypt(ticketNumber)!!)?.toEntity(cryptographer)
         // We try to find if user is known
-        val user = ticket?.let { userService.coFindOneByEncryptedEmail(it.encryptedEmail) }?.toUser()
+        val user = ticket?.let { userService.findOneByEncryptedEmailOrNull(it.encryptedEmail) }?.toUser()
 
         if (ticket == null) {
             return null
@@ -270,7 +270,7 @@ class AdminMixetteHandler(
         val organizationLogin: String = formData["organizationLogin"]!!
         val ticketNumber: String = cryptographer.encrypt(formData["ticketNumber"])!!
 
-        val receiver = userService.coFindOneOrNull(organizationLogin)
+        val receiver = userService.findOneOrNull(organizationLogin)
         val donor = findDonorByEncryptedTicketNumber(ticketNumber) ?: throw NotFoundException()
 
         val errors = mutableMapOf<String, String>()
@@ -286,7 +286,7 @@ class AdminMixetteHandler(
             errors["quantity"] = "admin.donations.error.quantity.invalid"
         }
 
-        val donation = repository.coFindOneOrNull(formData["id"] ?: "") ?: MixetteDonation(CURRENT_EVENT)
+        val donation = repository.findOneOrNull(formData["id"] ?: "") ?: MixetteDonation(CURRENT_EVENT)
         return persistDonation(
             req = req,
             donation = donation,

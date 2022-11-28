@@ -27,6 +27,7 @@ import mixit.util.AdminUtils.toJson
 import mixit.util.AdminUtils.toLinks
 import mixit.util.enumMatcher
 import mixit.util.enumMatcherWithI18nKey
+import mixit.util.errors.NotFoundException
 import mixit.util.extractFormData
 import mixit.util.language
 import mixit.util.seeOther
@@ -50,7 +51,7 @@ class AdminTalkHandler(
     }
 
     suspend fun adminTalks(req: ServerRequest, year: String): ServerResponse {
-        val talks = service.coFindByEvent(year).map { it.toDto(req.language()) }
+        val talks = service.findByEvent(year).map { it.toDto(req.language()) }
         val params = mapOf(
             TITLE to "admin.talks.title",
             YEAR to year,
@@ -63,7 +64,7 @@ class AdminTalkHandler(
         this.adminTalk()
 
     suspend fun editTalk(req: ServerRequest): ServerResponse =
-        adminTalk(service.findById(req.pathVariable("id")).toTalk())
+        adminTalk(service.findOneOrNull(req.pathVariable("id"))?.toTalk() ?: throw NotFoundException())
 
     suspend fun adminSaveTalk(req: ServerRequest): ServerResponse {
         val formData = req.extractFormData()

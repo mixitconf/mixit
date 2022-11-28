@@ -27,8 +27,8 @@ class MixetteHandler(
 ) {
 
     suspend fun mixette(req: ServerRequest): ServerResponse {
-        val organizations = eventService.coFindByYear(CURRENT_EVENT).organizations
-        val donationByOrgas = repository.coFindAllByYear(CURRENT_EVENT)
+        val organizations = eventService.findByYear(CURRENT_EVENT).organizations
+        val donationByOrgas = repository.findAllByYear(CURRENT_EVENT)
             .groupBy { donation ->
                 organizations.first { it.login == donation.organizationLogin }.let {
                     MixetteOrganizationDonationDto(name = it.company, login = it.login)
@@ -54,5 +54,5 @@ class MixetteHandler(
     suspend fun mixetteRealTime(req: ServerRequest): ServerResponse =
         ok()
             .contentType(MediaType.TEXT_EVENT_STREAM)
-            .bodyValueAndAwait(repository.coFindByYearAfterNow(CURRENT_EVENT))
+            .bodyValueAndAwait(repository.findByYearAfterNow(CURRENT_EVENT))
 }

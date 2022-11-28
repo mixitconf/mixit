@@ -25,7 +25,7 @@ class WebBlogHandler(val service: BlogService, val properties: MixitProperties) 
     }
 
     suspend fun findAllView(req: ServerRequest): ServerResponse {
-        val posts = service.coFindAll()
+        val posts = service.findAll()
         val params = mapOf(
             TITLE to "blog.title",
             "posts" to posts.sortedByDescending { it.addedAt }.map { it.toDto(req.language()) }
@@ -34,7 +34,7 @@ class WebBlogHandler(val service: BlogService, val properties: MixitProperties) 
     }
 
     suspend fun redirect(req: ServerRequest): ServerResponse {
-        val post = service.coFindOne(req.pathVariable("id"))
+        val post = service.findOneOrNull(req.pathVariable("id")) ?: throw NotFoundException()
         return permanentRedirect("${properties.baseUri}/blog/${post.slug[req.language()]}")
     }
 }

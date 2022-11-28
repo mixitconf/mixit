@@ -31,17 +31,17 @@ class AdminPostHandler(private val service: BlogService, private val properties:
 
     suspend fun adminBlog(req: ServerRequest): ServerResponse {
         val posts = service
-            .coFindAll()
+            .findAll()
             .sortedBy { it.addedAt }
             .map { it.toDto(req.language()) }
         return ok().renderAndAwait(AdminBlog.template, mapOf(MustacheI18n.POSTS to posts))
     }
 
     suspend fun createPost(req: ServerRequest): ServerResponse =
-        this.adminPost()
+        this.adminPost(null)
 
     suspend fun editPost(req: ServerRequest): ServerResponse =
-        this.adminPost(service.coFindOne(req.pathVariable("id")).toPost())
+        this.adminPost(service.findOneOrNull(req.pathVariable("id"))?.toPost())
 
     suspend fun adminDeletePost(req: ServerRequest): ServerResponse {
         val formData = req.extractFormData()
@@ -49,18 +49,22 @@ class AdminPostHandler(private val service: BlogService, private val properties:
         return seeOther("${properties.baseUri}$LIST_URI")
     }
 
-    private suspend fun adminPost(post: Post = Post("")): ServerResponse = ok().renderAndAwait(
-        AdminPost.template,
-        mapOf(
-            Pair("post", post),
-            Pair("title-fr", post.title[FRENCH]),
-            Pair("title-en", post.title[ENGLISH]),
-            Pair("headline-fr", post.headline[FRENCH]),
-            Pair("headline-en", post.headline[ENGLISH]),
-            Pair("content-fr", post.content?.get(FRENCH)),
-            Pair("content-en", post.content?.get(ENGLISH))
+    private suspend fun adminPost(post: Post?): ServerResponse {
+        val blogpost = post ?: Post("")
+
+        return ok().renderAndAwait(
+            AdminPost.template,
+            mapOf(
+                Pair("post", blogpost),
+                Pair("title-fr", blogpost.title[FRENCH]),
+                Pair("title-en", blogpost.title[ENGLISH]),
+                Pair("headline-fr", blogpost.headline[FRENCH]),
+                Pair("headline-en", blogpost.headline[ENGLISH]),
+                Pair("content-fr", blogpost.content?.get(FRENCH)),
+                Pair("content-en", blogpost.content?.get(ENGLISH))
+            )
         )
-    )
+    }
 
     suspend fun adminSavePost(req: ServerRequest): ServerResponse {
         val formData = req.extractFormData()

@@ -62,12 +62,12 @@ class AuthenticationService(
      * Create user if he does not exist
      */
     suspend fun createUserIfEmailDoesNotExist(nonEncryptedMail: String, user: User): User {
-        userRepository.coFindOneOrNull(user.login)
+        userRepository.findOneOrNull(user.login)
             ?.also {
                 throw DuplicateException("Login already exist")
             }
         // Email is unique and if an email is found we return an error
-        userRepository.coFindByNonEncryptedEmailOrNull(nonEncryptedMail)
+        userRepository.findByNonEncryptedEmail(nonEncryptedMail)
             ?.also {
                 throw DuplicateException("Email already exist")
             }
@@ -79,7 +79,7 @@ class AuthenticationService(
      * ticketing table to create a new one.
      */
     suspend fun searchUserByEmailOrCreateHimFromTicket(nonEncryptedMail: String): User? =
-        userRepository.coFindByNonEncryptedEmailOrNull(nonEncryptedMail)
+        userRepository.findByNonEncryptedEmail(nonEncryptedMail)
             // If user is not found we search in the lottery
             ?: lotteryRepository
                 .findByEncryptedEmail(cryptographer.encrypt(nonEncryptedMail)!!)
@@ -101,7 +101,7 @@ class AuthenticationService(
      * Function used on login to check if user email and token are valids
      */
     suspend fun checkUserEmailAndToken(nonEncryptedMail: String, token: String): User =
-        userRepository.coFindByNonEncryptedEmailOrNull(nonEncryptedMail)
+        userRepository.findByNonEncryptedEmail(nonEncryptedMail)
             ?.let {
                 if (it.hasValidToken(token.trim())) {
                     return it
@@ -114,7 +114,7 @@ class AuthenticationService(
      * Function used on login to check if user email and token are valids
      */
     suspend fun checkUserEmailAndTokenOrAppToken(nonEncryptedMail: String, token: String?, appToken: String?): User =
-        userRepository.coFindByNonEncryptedEmailOrNull(nonEncryptedMail)
+        userRepository.findByNonEncryptedEmail(nonEncryptedMail)
             ?.let {
                 if (it.hasValidTokens(token, appToken)) {
                     return it
@@ -148,10 +148,12 @@ class AuthenticationService(
      */
     suspend fun clearToken(nonEncryptedMail: String): User =
         userRepository
-            .coFindByNonEncryptedEmail(nonEncryptedMail)
-            .generateNewToken().let {
+            .findByNonEncryptedEmail(nonEncryptedMail)
+            ?.generateNewToken()
+            ?.let {
                 userRepository.save(it).awaitSingle()
             }
+            ?: throw NotFoundException()
 
     suspend fun updateNewsletterSubscription(user: User, tokenForNewsletter: Boolean): User =
         if (tokenForNewsletter) {
@@ -159,7 +161,7 @@ class AuthenticationService(
         } else if (user.email == null) {
             // Sometimes we can have a email hash in the DB but not the email (for legacy users). So in this case
             // we store the email
-            userRepository.save(userService.updateReference(user)).awaitSingle()
+            userRepository.save(userService.updateReference(user) ?: throw NotFoundException()).awaitSingle()
         } else {
             user
         }

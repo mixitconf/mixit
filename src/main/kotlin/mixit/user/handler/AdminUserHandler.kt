@@ -47,7 +47,7 @@ class AdminUserHandler(
         ok().renderAndAwait(
             AdminUsers.template,
             mapOf(
-                USERS to userRepository.coFindAll().sortedWith(compareBy<User> { it.lastname }.thenBy { it.firstname }),
+                USERS to userRepository.findAll().sortedWith(compareBy<User> { it.lastname }.thenBy { it.firstname }),
                 TITLE to "admin.users.title"
             )
         )
@@ -55,7 +55,7 @@ class AdminUserHandler(
     suspend fun createUser(req: ServerRequest): ServerResponse = this.adminUser()
 
     suspend fun editUser(req: ServerRequest): ServerResponse {
-        val existingUser = userRepository.coFindOneOrNull(req.pathVariable("login"))!!
+        val existingUser = userRepository.findOneOrNull(req.pathVariable("login"))!!
         val updatedUser = existingUser.copy(
             photoUrl = if (existingUser.emailHash != null && existingUser.photoUrl == DEFAULT_IMG_URL) null else existingUser.photoUrl
         )
@@ -84,7 +84,7 @@ class AdminUserHandler(
 
     suspend fun adminSaveUser(req: ServerRequest): ServerResponse {
         val formData = req.extractFormData()
-        val existingUser = userRepository.coFindOneOrNull(req.pathVariable("login")) ?: User()
+        val existingUser = userRepository.findOneOrNull(req.pathVariable("login")) ?: User()
         val updatedUser = existingUser.copy(
             login = formData["login"]!!,
             firstname = formData["firstname"]!!,

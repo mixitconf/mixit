@@ -23,7 +23,7 @@ data class CacheZoneStat(
     val desc: String = "admin.cache.${zone.name.lowercase()}.desc"
 ) {
     companion object {
-        fun <I : Cached, T : CacheTemplate<I>> init(cacheService: T): CacheZoneStat = CacheZoneStat(
+        fun <I : Cached, T : CacheCaffeineTemplate<I>> init(cacheService: T): CacheZoneStat = CacheZoneStat(
             cacheService.cacheZone,
             cacheService.cache.asMap().entries.firstOrNull()?.value?.size ?: 0,
             cacheService.refreshInstant.get()?.atZone(ZoneId.of(TIMEZONE))?.toLocalDateTime()

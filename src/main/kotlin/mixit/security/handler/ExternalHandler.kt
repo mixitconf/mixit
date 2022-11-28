@@ -114,8 +114,7 @@ class ExternalHandler(
     suspend fun favorites(req: ServerRequest): ServerResponse =
         credentials(req, false) { nonEncryptedEmail, _ ->
             ok().json().bodyValueAndAwait(
-                favoriteRepository.findByEmail(nonEncryptedEmail).collectList().awaitSingle()
-                    .map { FavoriteDto(it.talkId, true) }
+                favoriteRepository.findByEmail(nonEncryptedEmail).map { FavoriteDto(it.talkId, true) }
             )
         }
 
