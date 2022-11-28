@@ -7,7 +7,9 @@ import mixit.event.model.EventService
 import mixit.event.model.SponsorshipLevel
 import mixit.favorite.repository.FavoriteRepository
 import mixit.routes.MustacheI18n
+import mixit.routes.MustacheI18n.SPONSORS
 import mixit.routes.MustacheI18n.TITLE
+import mixit.routes.MustacheI18n.YEAR
 import mixit.routes.MustacheTemplate.FeedbackWall
 import mixit.routes.MustacheTemplate.Media
 import mixit.routes.MustacheTemplate.Schedule
@@ -34,8 +36,6 @@ import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.renderAndAwait
-import org.springframework.web.util.UriUtils
-import java.nio.charset.StandardCharsets
 
 @Component
 class TalkHandler(
@@ -100,12 +100,11 @@ class TalkHandler(
             .render(
                 config.template,
                 mapOf(
-                    MustacheI18n.BASE_URI to UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8),
                     MustacheI18n.EVENT to event.toEvent(),
-                    MustacheI18n.SPONSORS to loadSponsors(event),
+                    SPONSORS to loadSponsors(event),
                     MustacheI18n.TALKS to talks.groupBy { it.date ?: "" },
                     TITLE to title,
-                    MustacheI18n.YEAR to config.year,
+                    YEAR to config.year,
                     "schedulingFileUrl" to event.schedulingFileUrl,
                     "filtered" to config.filterOnFavorite,
                     "topic" to config.topic,
@@ -146,10 +145,9 @@ class TalkHandler(
             .render(
                 TalkDetail.template,
                 mapOf(
-                    MustacheI18n.YEAR to year,
+                    YEAR to year,
                     TITLE to "talk.html.title|${talk.title}",
-                    MustacheI18n.BASE_URI to UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8),
-                    MustacheI18n.SPONSORS to loadSponsors(event),
+                    SPONSORS to loadSponsors(event),
                     "talk" to talk.toDto(req.language()),
                     "speakers" to talk.speakers.map { it.toDto(lang) }.sortedBy { it.firstname },
                     "othertalks" to otherTalks,
@@ -174,7 +172,6 @@ class TalkHandler(
         val params = mapOf(
             MustacheI18n.TALK to talk.toDto(req.language()),
             MustacheI18n.SPEAKERS to talk.speakers.map { it.toDto(req.language()) },
-            MustacheI18n.BASE_URI to UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8),
             MustacheI18n.HAS_ERRORS to errors.isNotEmpty(),
             MustacheI18n.ERRORS to errors,
             MustacheI18n.LANGUAGES to enumMatcher(talk) { talk.language }

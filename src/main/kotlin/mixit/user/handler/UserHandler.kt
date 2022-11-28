@@ -4,6 +4,11 @@ import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.MixitApplication.Companion.CURRENT_EVENT
 import mixit.MixitProperties
 import mixit.routes.MustacheI18n
+import mixit.routes.MustacheI18n.ERRORS
+import mixit.routes.MustacheI18n.HAS_ERRORS
+import mixit.routes.MustacheI18n.HAS_TALKS
+import mixit.routes.MustacheI18n.TALKS
+import mixit.routes.MustacheI18n.USER
 import mixit.routes.MustacheTemplate
 import mixit.routes.MustacheTemplate.Speaker
 import mixit.routes.MustacheTemplate.UserEdit
@@ -34,8 +39,6 @@ import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.renderAndAwait
-import org.springframework.web.util.UriUtils
-import java.nio.charset.StandardCharsets
 import java.util.stream.IntStream
 
 @Component
@@ -83,10 +86,9 @@ class UserHandler(
         when (viewMode) {
             ViewMode.ViewMyProfile -> {
                 val params = mapOf(
-                    MustacheI18n.USER to user.toDto(req.language()),
-                    MustacheI18n.BASE_URI to UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8),
-                    MustacheI18n.ERRORS to errors,
-                    MustacheI18n.HAS_ERRORS to errors.isNotEmpty(),
+                    USER to user.toDto(req.language()),
+                    ERRORS to errors,
+                    HAS_ERRORS to errors.isNotEmpty(),
                     "usermail" to cryptographer.decrypt(user.email),
                     "description-fr" to user.description[Language.FRENCH],
                     "description-en" to user.description[Language.ENGLISH],
@@ -103,8 +105,7 @@ class UserHandler(
                 val attendeeTicket = ticketService.findByEmail(cryptographer.decrypt(user.email)!!)
                 val lottery = lotteryRepository.findByEncryptedEmail(user.email ?: "unknown")
                 val params = mapOf(
-                    MustacheI18n.USER to user.toDto(req.language()),
-                    MustacheI18n.BASE_URI to UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8),
+                    USER to user.toDto(req.language()),
                     "lotteryTicket" to lottery,
                     "attendeeTicket" to attendeeTicket,
                     "viewMyProfile" to false,
@@ -117,10 +118,9 @@ class UserHandler(
             ViewMode.EditProfile -> {
                 val talks = service.findBySpeakerId(listOf(user.login), "all")
                 val params = mapOf(
-                    MustacheI18n.USER to user.toDto(req.language()),
-                    MustacheI18n.BASE_URI to UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8),
-                    MustacheI18n.TALKS to talks.map { it.toDto(req.language()) },
-                    "hasTalks" to talks.isNotEmpty()
+                    USER to user.toDto(req.language()),
+                    TALKS to talks.map { it.toDto(req.language()) },
+                    HAS_TALKS to talks.isNotEmpty()
                 )
                 ok().renderAndAwait(UserEdit.template, params)
             }

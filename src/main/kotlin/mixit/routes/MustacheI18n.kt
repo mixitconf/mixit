@@ -2,7 +2,6 @@ package mixit.routes
 
 object MustacheI18n {
     const val ARTICLES = "articles"
-    const val BASE_URI = "baseUri"
     const val COUNT_ARTICLES = "countArticles"
     const val COUNT_USERS = "countUsers"
     const val COUNT_TALKS = "countTalks"

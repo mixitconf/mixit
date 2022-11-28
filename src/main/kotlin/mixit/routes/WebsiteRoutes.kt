@@ -31,10 +31,7 @@ import mixit.user.handler.SponsorHandler
 import mixit.user.handler.UserHandler
 import mixit.util.AdminHandler
 import mixit.util.cache.CacheHandler
-import mixit.util.locale
-import mixit.util.web.generateModel
 import org.slf4j.LoggerFactory
-import org.springframework.context.MessageSource
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.context.annotation.DependsOn
@@ -43,13 +40,10 @@ import org.springframework.http.MediaType.APPLICATION_FORM_URLENCODED
 import org.springframework.http.MediaType.TEXT_EVENT_STREAM
 import org.springframework.http.MediaType.TEXT_HTML
 import org.springframework.http.MediaType.TEXT_PLAIN
-import org.springframework.web.reactive.function.server.RenderingResponse
 import org.springframework.web.reactive.function.server.RouterFunctions.resources
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.bodyValueAndAwait
 import org.springframework.web.reactive.function.server.coRouter
-import reactor.kotlin.core.publisher.toMono
-import java.util.Locale
 
 @Configuration
 class WebsiteRoutes(
@@ -73,8 +67,8 @@ class WebsiteRoutes(
     private val mailingListHandler: MailingListHandler,
     private val mixetteHandler: MixetteHandler,
     private val userHandler: UserHandler,
-    private val messageSource: MessageSource,
-    private val properties: MixitProperties
+    private val properties: MixitProperties,
+    private val routeFilterUtils: RouteFilterUtils
 ) {
 
     private val logger = LoggerFactory.getLogger(WebsiteRoutes::class.java)
@@ -244,16 +238,7 @@ class WebsiteRoutes(
                 ServerResponse.ok().contentType(TEXT_PLAIN).bodyValueAndAwait("User-agent: *\nDisallow: /")
             }
         }
-    }.filter { request, next ->
-        val locale: Locale = request.locale()
-        val path = request.uri().path
-        request.session().flatMap { session ->
-            val model = generateModel(properties, path, locale, session, messageSource)
-            next.handle(request).flatMap {
-                if (it is RenderingResponse) RenderingResponse.from(it).modelAttributes(model).build() else it.toMono()
-            }
-        }
-    }
+    }.filter { request, next -> routeFilterUtils.addModelToResponse(request, next) }
 
     @Bean
     @DependsOn("websiteRouter")
