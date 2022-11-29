@@ -11,5 +11,5 @@ import org.springframework.web.reactive.function.server.renderAndAwait
 class AdminHandler {
 
     suspend fun admin(req: ServerRequest): ServerResponse =
-        ServerResponse.ok().renderAndAwait(Admin.template, mapOf(MustacheI18n.TITLE to "admin.title"))
+        ServerResponse.ok().renderAndAwait(Admin.template, mapOf(MustacheI18n.TITLE to Admin.title))
 }

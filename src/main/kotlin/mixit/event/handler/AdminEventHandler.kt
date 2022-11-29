@@ -15,7 +15,7 @@ import mixit.routes.MustacheI18n.EVENTS
 import mixit.routes.MustacheI18n.EVENT_ID
 import mixit.routes.MustacheI18n.LINKS
 import mixit.routes.MustacheI18n.TITLE
-import mixit.routes.MustacheTemplate
+import mixit.routes.MustacheTemplate.AdminEvent
 import mixit.routes.MustacheTemplate.AdminEventOrganization
 import mixit.routes.MustacheTemplate.AdminEventSponsor
 import mixit.routes.MustacheTemplate.AdminEventVolunteer
@@ -50,7 +50,7 @@ class AdminEventHandler(
         return ok().renderAndAwait(
             AdminEvents.template,
             mapOf(
-                TITLE to "admin.events.title",
+                TITLE to AdminEvents.title,
                 EVENTS to events
             )
         )
@@ -67,8 +67,9 @@ class AdminEventHandler(
 
     private suspend fun adminEvent(event: Event = Event()): ServerResponse =
         ok().renderAndAwait(
-            MustacheTemplate.AdminEvent.template,
+            AdminEvent.template,
             mapOf(
+                TITLE to AdminEvent.title,
                 CREATION_MODE to event.id.isEmpty(),
                 EVENT to event,
                 LINKS to event.photoUrls.toJson(objectMapper),
@@ -115,6 +116,7 @@ class AdminEventHandler(
         ok().renderAndAwait(
             AdminEventSponsor.template,
             mapOf(
+                TITLE to AdminEventSponsor.title,
                 CREATION_MODE to (eventSponsoring.sponsorId == ""),
                 EVENT_ID to eventId,
                 "eventSponsoring" to eventSponsoring,
@@ -204,6 +206,7 @@ class AdminEventHandler(
         ok().renderAndAwait(
             AdminEventOrganization.template,
             mapOf(
+                TITLE to AdminEventOrganization.title,
                 CREATION_MODE to (eventOrganization == null),
                 EVENT_ID to eventId,
                 "eventOrganization" to eventOrganization

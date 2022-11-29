@@ -182,7 +182,7 @@ class AdminMixetteHandler(
         }
 
         val params = mapOf(
-            TITLE to "admin.donations.title", "donations" to dtos, "userDonation" to userDonation
+            TITLE to AdminMixetteDonor.title, "donations" to dtos, "userDonation" to userDonation
         )
         return ok().renderAndAwait(target, params)
     }

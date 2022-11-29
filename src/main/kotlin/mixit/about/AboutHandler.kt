@@ -5,6 +5,7 @@ import mixit.MixitApplication
 import mixit.event.model.EventService
 import mixit.event.model.SponsorshipLevel
 import mixit.routes.MustacheI18n
+import mixit.routes.MustacheI18n.TITLE
 import mixit.routes.MustacheTemplate.About
 import mixit.routes.MustacheTemplate.Accessibility
 import mixit.routes.MustacheTemplate.CodeOfConduct
@@ -36,7 +37,7 @@ class AboutHandler(val userService: UserService, val eventService: EventService)
             .render(
                 About.template,
                 mapOf(
-                    MustacheI18n.TITLE to "about.title",
+                    TITLE to About.title,
                     "volunteers" to volunteers.map { it.toDto(lang) },
                     "hasVolunteers" to volunteers.isNotEmpty(),
                     "staff" to staff.map { it.toDto(lang) },
@@ -48,7 +49,7 @@ class AboutHandler(val userService: UserService, val eventService: EventService)
 
     suspend fun faqView(req: ServerRequest): ServerResponse =
         ok()
-            .render(Faq.template, mapOf(MustacheI18n.TITLE to "faq.title"))
+            .render(Faq.template, mapOf(TITLE to Faq.title))
             .awaitSingle()
 
     suspend fun comeToMixitView(req: ServerRequest): ServerResponse {
@@ -59,7 +60,7 @@ class AboutHandler(val userService: UserService, val eventService: EventService)
             .render(
                 Come.template,
                 mapOf(
-                    MustacheI18n.TITLE to "come.title",
+                    TITLE to Come.title,
                     MustacheI18n.YEAR to event.year,
                     MustacheI18n.SPONSORS to mapOf(
                         "sponsors-gold" to goldSponsors.map { it.toSponsorDto() },
@@ -72,11 +73,11 @@ class AboutHandler(val userService: UserService, val eventService: EventService)
     }
 
     suspend fun codeConductView(req: ServerRequest): ServerResponse =
-        ok().renderAndAwait(CodeOfConduct.template, mapOf(MustacheI18n.TITLE to "code-of-conduct.title"))
+        ok().renderAndAwait(CodeOfConduct.template, mapOf(TITLE to CodeOfConduct.title))
 
     suspend fun accessibilityView(req: ServerRequest): ServerResponse =
-        ok().renderAndAwait(Accessibility.template, mapOf(MustacheI18n.TITLE to "accessibility.title"))
+        ok().renderAndAwait(Accessibility.template, mapOf(TITLE to Accessibility.title))
 
     suspend fun findFullTextView(req: ServerRequest): ServerResponse =
-        ok().renderAndAwait(Search.template, mapOf(MustacheI18n.TITLE to "search.title"))
+        ok().renderAndAwait(Search.template, mapOf(TITLE to Search.title))
 }

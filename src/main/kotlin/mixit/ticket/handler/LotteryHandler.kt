@@ -23,7 +23,6 @@ import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.bodyValueAndAwait
 import org.springframework.web.reactive.function.server.renderAndAwait
-import reactor.core.publisher.Mono
 import java.util.Locale
 
 @Component
@@ -39,7 +38,7 @@ class LotteryHandler(
     suspend fun ticketing(req: ServerRequest): ServerResponse =
         ok().renderAndAwait(
             if (properties.feature.lottery) LotteryEdit.template else LotteryClosed.template,
-            mapOf(TITLE to "ticketing.title")
+            mapOf(TITLE to LotteryEdit.title)
         )
 
     suspend fun submit(req: ServerRequest): ServerResponse {
@@ -60,29 +59,28 @@ class LotteryHandler(
                 )
             ).awaitSingle()
 
-        return sendUserConfirmation(lotteryTicket, formData, req.locale())
-            .onErrorResume(DuplicateKeyException::class.java) {
-                ok().render(
-                    LotteryError.template,
-                    mapOf(TITLE to "ticketing.title", "message" to "ticketing.error.alreadyexists")
-                )
-            }
-            .onErrorResume {
-                ok().render(
-                    LotteryError.template,
-                    mapOf(TITLE to "ticketing.title", "message" to "ticketing.error.default")
-                )
-            }
-            .awaitSingle()
+        return try {
+            sendUserConfirmation(lotteryTicket, formData, req.locale())
+        } catch (e: DuplicateKeyException) {
+            ok().renderAndAwait(
+                LotteryError.template,
+                mapOf(TITLE to "ticketing.title", "message" to "ticketing.error.alreadyexists")
+            )
+        } catch (e: RuntimeException) {
+            ok().renderAndAwait(
+                LotteryError.template,
+                mapOf(TITLE to "ticketing.title", "message" to "ticketing.error.default")
+            )
+        }
     }
 
     private suspend fun sendUserConfirmation(
         ticket: LotteryTicket,
         formData: Map<String, String?>,
         locale: Locale
-    ): Mono<ServerResponse> {
+    ): ServerResponse {
         val user = User(ticket.email, ticket.firstname, ticket.lastname, cryptographer.encrypt(ticket.email))
         emailService.send("email-ticketing", user, locale)
-        return ok().render(LotterySubmission.template, formData)
+        return ok().render(LotterySubmission.template, formData).awaitSingle()
     }
 }

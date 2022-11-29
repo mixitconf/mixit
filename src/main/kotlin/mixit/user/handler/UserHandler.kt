@@ -3,11 +3,11 @@ package mixit.user.handler
 import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.MixitApplication.Companion.CURRENT_EVENT
 import mixit.MixitProperties
-import mixit.routes.MustacheI18n
 import mixit.routes.MustacheI18n.ERRORS
 import mixit.routes.MustacheI18n.HAS_ERRORS
 import mixit.routes.MustacheI18n.HAS_TALKS
 import mixit.routes.MustacheI18n.TALKS
+import mixit.routes.MustacheI18n.TITLE
 import mixit.routes.MustacheI18n.USER
 import mixit.routes.MustacheTemplate
 import mixit.routes.MustacheTemplate.Speaker
@@ -58,7 +58,7 @@ class UserHandler(
     enum class ViewMode { ViewMyProfile, ViewUser, EditProfile }
 
     suspend fun speakerView(req: ServerRequest): ServerResponse =
-        ok().renderAndAwait(Speaker.template, mapOf(Pair(MustacheI18n.TITLE, "speaker.title")))
+        ok().renderAndAwait(Speaker.template, mapOf(Pair(TITLE, Speaker.title)))
 
     suspend fun findOneView(req: ServerRequest): ServerResponse {
         val login = req.decode("login")!!

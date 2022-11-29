@@ -156,7 +156,7 @@ class WebsiteRoutes(
             GET("/sponsors") { sponsorHandler.viewSponsors(it) }
             GET("/mixette/dashboard", mixetteHandler::mixette)
             GET("/mixteen") {
-                sponsorHandler.viewWithSponsors(it, Mixteen.template, "mixteen.title", arrayOf(MIXTEEN))
+                sponsorHandler.viewWithSponsors(it, Mixteen.template, Mixteen.title, arrayOf(MIXTEEN))
             }
             GET("/schedule", talkHandler::scheduleView)
             GET("/user/{login}") { userHandler.findOneView(it) }

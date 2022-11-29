@@ -54,7 +54,7 @@ class TalkHandler(
                 req,
                 topic,
                 template = Media.template,
-                title = "medias.title.html"
+                title = Media.title!!
             )
 
         fun mediaWithFavorites(req: ServerRequest, year: Int, topic: String? = null) =
@@ -83,11 +83,11 @@ class TalkHandler(
         val topic: String? = null,
         val filterOnFavorite: Boolean = false,
         val template: String = TalkList.template,
-        val title: String = "talks.title.html"
+        val title: String = TalkList.title!!
     )
 
     suspend fun scheduleView(req: ServerRequest) =
-        ok().renderAndAwait(Schedule.template, mapOf(TITLE to "schedule.title"))
+        ok().renderAndAwait(Schedule.template, mapOf(TITLE to Schedule.title))
 
     suspend fun findByEventView(config: TalkViewConfig): ServerResponse {
         val currentUserEmail = config.req.currentNonEncryptedUserEmail()
@@ -160,7 +160,7 @@ class TalkHandler(
     }
 
     suspend fun editTalkView(req: ServerRequest): ServerResponse {
-        val talk = service.findBySlug(req.pathVariable("slug")) ?: throw NotFoundException()
+        val talk = service.findBySlug(req.pathVariable("slug"))
         return editTalkViewDetail(req, talk, emptyMap())
     }
 
@@ -240,7 +240,7 @@ class TalkHandler(
     }
 
     suspend fun redirectFromSlug(req: ServerRequest): ServerResponse {
-        val talk = service.findBySlug(req.pathVariable("slug")) ?: throw NotFoundException()
+        val talk = service.findBySlug(req.pathVariable("slug"))
         return permanentRedirect("${properties.baseUri}/${talk.event}/${talk.slug}")
     }
 }

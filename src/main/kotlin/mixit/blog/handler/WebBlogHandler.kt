@@ -3,7 +3,8 @@ package mixit.blog.handler
 import mixit.MixitProperties
 import mixit.blog.model.BlogService
 import mixit.routes.MustacheI18n.TITLE
-import mixit.routes.MustacheTemplate
+import mixit.routes.MustacheTemplate.Blog
+import mixit.routes.MustacheTemplate.BlogPost
 import mixit.util.errors.NotFoundException
 import mixit.util.language
 import mixit.util.permanentRedirect
@@ -21,16 +22,16 @@ class WebBlogHandler(val service: BlogService, val properties: MixitProperties) 
             TITLE to "blog.post.title|${post.title[req.language()]}",
             "post" to post.toDto(req.language())
         )
-        return ok().renderAndAwait(MustacheTemplate.BlogPost.template, params)
+        return ok().renderAndAwait(BlogPost.template, params)
     }
 
     suspend fun findAllView(req: ServerRequest): ServerResponse {
         val posts = service.findAll()
         val params = mapOf(
-            TITLE to "blog.title",
+            TITLE to Blog.title,
             "posts" to posts.sortedByDescending { it.addedAt }.map { it.toDto(req.language()) }
         )
-        return ok().renderAndAwait(MustacheTemplate.Blog.template, params)
+        return ok().renderAndAwait(Blog.template, params)
     }
 
     suspend fun redirect(req: ServerRequest): ServerResponse {

@@ -3,7 +3,7 @@ package mixit.ticket.handler
 import kotlinx.coroutines.reactor.awaitSingle
 import mixit.MixitProperties
 import mixit.routes.MustacheI18n.TITLE
-import mixit.routes.MustacheTemplate
+import mixit.routes.MustacheTemplate.AdminLottery
 import mixit.security.model.Cryptographer
 import mixit.ticket.model.LotteryTicket
 import mixit.ticket.repository.LotteryRepository
@@ -54,8 +54,8 @@ class AdminLotteryHandler(
             }
             .sortedBy { it.lastname }
         return ok().renderAndAwait(
-            MustacheTemplate.AdminLottery.template,
-            mapOf("tickets" to tickets, TITLE to "admin.ticketing.title")
+            AdminLottery.template,
+            mapOf("tickets" to tickets, TITLE to AdminLottery.title)
         )
     }
 

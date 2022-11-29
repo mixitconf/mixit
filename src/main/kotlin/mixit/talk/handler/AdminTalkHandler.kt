@@ -53,7 +53,7 @@ class AdminTalkHandler(
     suspend fun adminTalks(req: ServerRequest, year: String): ServerResponse {
         val talks = service.findByEvent(year).map { it.toDto(req.language()) }
         val params = mapOf(
-            TITLE to "admin.talks.title",
+            TITLE to AdminTalks.title,
             YEAR to year,
             TALKS to talks
         )
@@ -97,7 +97,7 @@ class AdminTalkHandler(
 
     private suspend fun adminTalk(talk: Talk = Talk(TALK, LAST_TALK_EVENT, "", "")): ServerResponse {
         val params = mapOf(
-            TITLE to "admin.talk.title",
+            TITLE to AdminTalk.title,
             MustacheI18n.TALK to talk,
             LANGUAGES to enumMatcher(talk) { it?.language ?: Language.FRENCH },
             ROOMS to enumMatcherWithI18nKey(talk, "rooms") { it.room ?: Room.UNKNOWN },

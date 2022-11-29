@@ -24,8 +24,6 @@ import java.time.LocalDateTime
 class AdminPostHandler(private val service: BlogService, private val properties: MixitProperties) {
 
     companion object {
-        //        const val TEMPLATE_LIST = "admin-blog"
-//        const val TEMPLATE_EDIT = "admin-post"
         const val LIST_URI = "/admin/blog"
     }
 

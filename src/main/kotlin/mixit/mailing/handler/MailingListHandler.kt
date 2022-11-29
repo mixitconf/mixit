@@ -41,7 +41,7 @@ class MailingListHandler(
 
     suspend fun listMailing(req: ServerRequest): ServerResponse {
         val params = mapOf(
-            TITLE to "mailinglist.title",
+            TITLE to AdminMailingList.title,
             "roles" to RecipientType.values().sorted().map { Pair(it, false) }.toList()
         )
         return ok().renderAndAwait(AdminMailingList.template, params)
@@ -51,7 +51,7 @@ class MailingListHandler(
         val formData = req.extractFormData()
         val recipientType = formData["recipientType"]?.let { RecipientType.valueOf(it) } ?: Staff
         val params = mapOf(
-            TITLE to "mailinglist.title",
+            TITLE to AdminMailingList.title,
             "roles" to RecipientType.values().sorted().map { Pair(it, it == recipientType) }.toList(),
             "mailinglist" to getMailingList(recipientType)
         )

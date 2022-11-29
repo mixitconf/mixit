@@ -42,7 +42,7 @@ class CacheHandler(
 
     suspend fun view(req: ServerRequest): ServerResponse {
         val params = mapOf(
-            MustacheI18n.TITLE to "admin.cache.title",
+            MustacheI18n.TITLE to AdminCache.title,
             "zones" to mapOf(
                 CacheZone.EVENT.name.lowercase() to CacheZoneStat.init(eventService),
                 CacheZone.BLOG.name.lowercase() to CacheZoneStat.init(blogService),

@@ -2,13 +2,14 @@ package mixit.ticket.handler
 
 import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.MixitProperties
-import mixit.routes.MustacheI18n
 import mixit.routes.MustacheI18n.CREATION_MODE
 import mixit.routes.MustacheI18n.MESSAGE
+import mixit.routes.MustacheI18n.TICKET
 import mixit.routes.MustacheI18n.TICKETS
 import mixit.routes.MustacheI18n.TITLE
-import mixit.routes.MustacheTemplate
+import mixit.routes.MustacheI18n.TYPES
 import mixit.routes.MustacheTemplate.AdminTicket
+import mixit.routes.MustacheTemplate.AdminTicketPrint
 import mixit.routes.MustacheTemplate.TicketError
 import mixit.security.MixitWebFilter
 import mixit.security.model.Cryptographer
@@ -51,7 +52,7 @@ class AdminTicketHandler(
     suspend fun ticketing(req: ServerRequest): ServerResponse {
         val tickets = service.findAll().map { it.toDto(cryptographer) }
         val params = mapOf(
-            TITLE to "admin.ticket.title",
+            TITLE to AdminTicket.title,
             TICKETS to tickets
         )
         val template = if (properties.feature.lotteryResult) AdminTicket.template else throw NotFoundException()
@@ -67,7 +68,7 @@ class AdminTicketHandler(
                 )
         }
         val template =
-            if (properties.feature.lotteryResult) MustacheTemplate.AdminTicketPrint.template else throw NotFoundException()
+            if (properties.feature.lotteryResult) AdminTicketPrint.template else throw NotFoundException()
         val params = mapOf(
             TITLE to "admin.ticket.title",
             TICKETS to tickets
@@ -88,12 +89,12 @@ class AdminTicketHandler(
 
     private suspend fun adminTicket(ticket: Ticket = Ticket.empty(cryptographer)): ServerResponse {
         val template =
-            if (properties.feature.lotteryResult) MustacheTemplate.AdminTicketPrint.template else throw NotFoundException()
+            if (properties.feature.lotteryResult) AdminTicketPrint.template else throw NotFoundException()
         val params = mapOf(
-            TITLE to "admin.ticket.title",
+            TITLE to AdminTicketPrint.title,
             CREATION_MODE to ticket.encryptedEmail.isEmpty(),
-            MustacheI18n.TICKET to ticket,
-            MustacheI18n.TYPES to enumMatcher(ticket) { ticket.type }
+            TICKET to ticket,
+            TYPES to enumMatcher(ticket) { ticket.type }
         )
         return ok().renderAndAwait(template, params)
     }
@@ -122,7 +123,7 @@ class AdminTicketHandler(
             )
 
         val params = mapOf(
-            TITLE to "admin.ticket.title",
+            TITLE to TicketError.title,
             MESSAGE to "admin.ticket.error.alreadyexists"
         )
 

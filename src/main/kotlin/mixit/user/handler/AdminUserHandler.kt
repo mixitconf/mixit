@@ -48,7 +48,7 @@ class AdminUserHandler(
             AdminUsers.template,
             mapOf(
                 USERS to userRepository.findAll().sortedWith(compareBy<User> { it.lastname }.thenBy { it.firstname }),
-                TITLE to "admin.users.title"
+                TITLE to AdminUsers.title
             )
         )
 
@@ -72,6 +72,7 @@ class AdminUserHandler(
         ok().renderAndAwait(
             AdminUser.template,
             mapOf(
+                TITLE to AdminUser.title,
                 USER to user,
                 "usermail" to cryptographer.decrypt(user.email),
                 "description-fr" to user.description[FRENCH],

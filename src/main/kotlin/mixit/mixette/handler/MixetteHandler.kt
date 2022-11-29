@@ -45,7 +45,7 @@ class MixetteHandler(
             "organizations" to (organizations.map { it.toSponsorDto(req.language()) }),
             "donations" to donationByOrgas,
             "loadAt" to LocalTime.now(ZoneId.of(TIMEZONE)).format(frenchTalkTimeFormatter),
-            TITLE to "mixette.dashboard.title"
+            TITLE to MixetteDashboard.title
         )
 
         return ok().renderAndAwait(MixetteDashboard.template, params)
