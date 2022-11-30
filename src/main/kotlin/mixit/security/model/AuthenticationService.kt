@@ -2,6 +2,7 @@ package mixit.security.model
 
 import kotlinx.coroutines.reactor.awaitSingle
 import mixit.MixitProperties
+import mixit.routes.MustacheTemplate
 import mixit.security.MixitWebFilter.Companion.AUTHENT_COOKIE
 import mixit.ticket.repository.LotteryRepository
 import mixit.user.model.Role
@@ -80,7 +81,7 @@ class AuthenticationService(
      */
     suspend fun searchUserByEmailOrCreateHimFromTicket(nonEncryptedMail: String): User? =
         userRepository.findByNonEncryptedEmail(nonEncryptedMail)
-            // If user is not found we search in the lottery
+        // If user is not found we search in the lottery
             ?: lotteryRepository
                 .findByEncryptedEmail(cryptographer.encrypt(nonEncryptedMail)!!)
                 ?.let {
@@ -139,7 +140,11 @@ class AuthenticationService(
         if (!properties.feature.email) {
             logger.info("A token ${newUser.token} was sent by email")
         }
-        emailService.send(if (tokenForNewsletter) "email-newsletter-subscribe" else "email-token", newUser, locale)
+        emailService.send(
+            if (tokenForNewsletter) MustacheTemplate.EmailNewsletterSubscribe.template else MustacheTemplate.EmailToken.template,
+            newUser,
+            locale
+        )
         return userRepository.save(newUser).awaitSingle()
     }
 

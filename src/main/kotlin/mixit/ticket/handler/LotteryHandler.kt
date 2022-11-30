@@ -3,6 +3,7 @@ package mixit.ticket.handler
 import kotlinx.coroutines.reactor.awaitSingle
 import mixit.MixitProperties
 import mixit.routes.MustacheI18n.TITLE
+import mixit.routes.MustacheTemplate
 import mixit.routes.MustacheTemplate.LotteryClosed
 import mixit.routes.MustacheTemplate.LotteryEdit
 import mixit.routes.MustacheTemplate.LotteryError
@@ -80,7 +81,7 @@ class LotteryHandler(
         locale: Locale
     ): ServerResponse {
         val user = User(ticket.email, ticket.firstname, ticket.lastname, cryptographer.encrypt(ticket.email))
-        emailService.send("email-ticketing", user, locale)
+        emailService.send(MustacheTemplate.EmailTicketing.template, user, locale)
         return ok().render(LotterySubmission.template, formData).awaitSingle()
     }
 }
