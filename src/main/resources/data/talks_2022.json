@@ -33,6 +33,28 @@
         "video": "https://vimeo.com/726160155"
     },
     {
+        "addedAt": "2022-03-23T09:12:44.696",
+        "description": "Tester sans scripts et sans cahiers de recette dans un environnement avec peu de sp\u00e9cifications fonctionnelles peut en perturber plus d'un\u00b7e. Dans ces conditions, comment faire de la non-r\u00e9gression ou trouver le cas un peu tordu qui va \"casser\" l'exp\u00e9rience utilisateur ?\r\n\r\nSuffit-il de tester comme un singe, un chat ou un enfant de 3 ans en tapant sur toutes les touches ou en cliquant sur tous les boutons au hasard ? Bien s\u00fbr que non!\r\nIl existe des m\u00e9thodes de tests pour trouver des bugs qu'on n'avait pas anticip\u00e9s et sur lesquels nos utilisateurs risquent de tomber avant nous.\r\nDans cet atelier, nous ferons une introduction aux sessions de tests exploratoires avec mise en pratique, pour que vous appreniez la technique en mettant les mains dans le cambouis.\r\n\r\n## Ce que vous allez apprendre\r\n* Comprendre la d\u00e9marche du test exploratoire comme une approche guid\u00e9e, r\u00e9fl\u00e9chie, et qui peut se passer de sc\u00e9narios de tests\r\n* Int\u00e9grer les tests exploratoires \u00e0 votre strat\u00e9gie de test : ils sont une approche compl\u00e9mentaire aux tests de non-r\u00e9gression classiques, qu'ils soient manuels ou automatiques\r\n* Utiliser des concepts comme les oracles, les heuristiques ou les tests guid\u00e9s par le risque\r\n* Comment trouver des bugs utiles pour les clients et les utilisateurs\r\n\r\n## Public vis\u00e9 :\r\n* Les testeurs fonctionnels, les d\u00e9veloppeurs de tests fonctionnels, les tests managers, coaches QA, lead testeurs\u2026\r\n* Les responsables de produit, PO\r\n* Toute personne souhaitant mieux tester fonctionnellement son code.\r\n\r\n## Mat\u00e9riel n\u00e9c\u00e9ssaire  :\r\n* 1 portable avec un port HDMI par groupe de 5-6 personnes",
+        "end": "2022-05-24T12:30:00",
+        "event": "2022",
+        "format": "WORKSHOP",
+        "id": "623ad67c8a5c755e7139c6ed",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM4",
+        "slug": "comment-tester-avec-son-cerveau-introduction-aux-tests-exploratoires-un-outil-essentiel-pour-tous",
+        "speakerIds": [
+            "nitcheasatester",
+            "s_colson",
+            "testeacher"
+        ],
+        "start": "2022-05-24T10:40:00",
+        "summary": "Peut-on tester sans cahiers de recette ? Dans un environnement avec peu de sp\u00e9cifications fonctionnelles, comment faire de la non-r\u00e9gression ou trouver le cas un peu tordu qui va \"casser\" l'exp\u00e9rience utilisateur ? Cet atelier va vous apprendre \u00e0 faire des sessions de test exploratoire efficaces.",
+        "title": "Comment tester avec son cerveau ? Introduction aux tests exploratoires, un outil essentiel pour tous",
+        "topic": "tech",
+        "video": null
+    },
+    {
         "addedAt": "2022-03-23T09:12:44.701",
         "description": "O\u00f9 l'on parlera de design pour le service public.\r\n\u00c0 qui s'adressent les services num\u00e9riques du service public : aux citoyens et citoyennes, mais pas seulement !\r\nQuels genres de produits d\u00e9veloppe-t-on ? \r\nComment on travaille avec une administration ? Comment int\u00e9grer les m\u00e9thodologies agile et lean dans des administrations ?\r\nQu'est-ce que \u00e7a change par rapport au priv\u00e9 ? Quels points d'attention \u00e0 avoir ? Quels pi\u00e8ges \u00e9viter quand on vient du public ? \r\n",
         "end": "2022-05-24T11:30:00",
@@ -56,6 +78,37 @@
         "title": "Designer pour le service public",
         "topic": "design",
         "video": "https://vimeo.com/725688807"
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.709",
+        "description": "Apr\u00e8s le Rescue-game \u201cIl faut sauver LoRa\u201d, on revient te proposer le Handson le plus fou de l\u2019ann\u00e9e. Cette fois-ci, pas de radio ou de catastrophe naturelle. Si on allait plut\u00f4t chercher le contenu d\u2019un coffre fort?\r\nIci, le seul IDE dont tu auras besoin sera Arduino. Tu vas apprendre \u00e0 bruteforcer une valise \u00e9lectronique, trouver les bons fils \u00e0 brancher, sniffer des trames r\u00e9seau, hacker une webapp et re-programmer des badges NFC. Il te reste moins de 2h en comp\u00e9tition pour gagner le contenu du coffre. On te conseille de venir en bin\u00f4me !",
+        "end": "2022-05-24T12:30:00",
+        "event": "2022",
+        "format": "WORKSHOP",
+        "id": "623ad67c8a5c755e7139c6f6",
+        "language": "FRENCH",
+        "photoUrls": [
+            {
+                "name": "crackingthesafe",
+                "url": "https://live.staticflickr.com/65535/52095898788_d09acf87af_b.jpg"
+            },
+            {
+                "name": "crackingthesafe_2",
+                "url": "https://live.staticflickr.com/65535/52096374940_27c6dcbb22_b.jpg"
+            }
+        ],
+        "room": "ROOM3",
+        "slug": "hacking-game-crack-the-safe",
+        "speakerIds": [
+            "LoicOrtola",
+            "antoleb",
+            "de.guibert"
+        ],
+        "start": "2022-05-24T10:40:00",
+        "summary": "Les autres workshops sont \"So-2019\"?\r\n\r\nEt si on allait plut\u00f4t hacker un coffre-fort? \r\nViens bruteforcer une valise \u00e9lectronique et bouffer de l'hexa pour hacker un badge NFC. Il te reste 2h en comp\u00e9tition pour gagner le contenu du coffre. On te conseille de venir en bin\u00f4me !",
+        "title": "Hacking Game : Crack the safe",
+        "topic": "makers",
+        "video": null
     },
     {
         "addedAt": "2022-03-23T09:12:44.711",
@@ -96,59 +149,6 @@
         "title": "Le handi-surf : l'accessibilit\u00e9 d'un site internet pour une personne t\u00e9trapl\u00e9gique",
         "topic": "tech",
         "video": "https://vimeo.com/730352883"
-    },
-    {
-        "addedAt": "2022-03-23T09:12:44.696",
-        "description": "Tester sans scripts et sans cahiers de recette dans un environnement avec peu de sp\u00e9cifications fonctionnelles peut en perturber plus d'un\u00b7e. Dans ces conditions, comment faire de la non-r\u00e9gression ou trouver le cas un peu tordu qui va \"casser\" l'exp\u00e9rience utilisateur ?\r\n\r\nSuffit-il de tester comme un singe, un chat ou un enfant de 3 ans en tapant sur toutes les touches ou en cliquant sur tous les boutons au hasard ? Bien s\u00fbr que non!\r\nIl existe des m\u00e9thodes de tests pour trouver des bugs qu'on n'avait pas anticip\u00e9s et sur lesquels nos utilisateurs risquent de tomber avant nous.\r\nDans cet atelier, nous ferons une introduction aux sessions de tests exploratoires avec mise en pratique, pour que vous appreniez la technique en mettant les mains dans le cambouis.\r\n\r\n## Ce que vous allez apprendre\r\n* Comprendre la d\u00e9marche du test exploratoire comme une approche guid\u00e9e, r\u00e9fl\u00e9chie, et qui peut se passer de sc\u00e9narios de tests\r\n* Int\u00e9grer les tests exploratoires \u00e0 votre strat\u00e9gie de test : ils sont une approche compl\u00e9mentaire aux tests de non-r\u00e9gression classiques, qu'ils soient manuels ou automatiques\r\n* Utiliser des concepts comme les oracles, les heuristiques ou les tests guid\u00e9s par le risque\r\n* Comment trouver des bugs utiles pour les clients et les utilisateurs\r\n\r\n## Public vis\u00e9 :\r\n* Les testeurs fonctionnels, les d\u00e9veloppeurs de tests fonctionnels, les tests managers, coaches QA, lead testeurs\u2026\r\n* Les responsables de produit, PO\r\n* Toute personne souhaitant mieux tester fonctionnellement son code.\r\n\r\n## Mat\u00e9riel n\u00e9c\u00e9ssaire  :\r\n* 1 portable avec un port HDMI par groupe de 5-6 personnes",
-        "end": "2022-05-24T12:30:00",
-        "event": "2022",
-        "format": "WORKSHOP",
-        "id": "623ad67c8a5c755e7139c6ed",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "ROOM4",
-        "slug": "comment-tester-avec-son-cerveau-introduction-aux-tests-exploratoires-un-outil-essentiel-pour-tous",
-        "speakerIds": [
-            "nitcheasatester",
-            "s_colson",
-            "testeacher"
-        ],
-        "start": "2022-05-24T10:40:00",
-        "summary": "Peut-on tester sans cahiers de recette ? Dans un environnement avec peu de sp\u00e9cifications fonctionnelles, comment faire de la non-r\u00e9gression ou trouver le cas un peu tordu qui va \"casser\" l'exp\u00e9rience utilisateur ? Cet atelier va vous apprendre \u00e0 faire des sessions de test exploratoire efficaces.",
-        "title": "Comment tester avec son cerveau ? Introduction aux tests exploratoires, un outil essentiel pour tous",
-        "topic": "tech",
-        "video": null
-    },
-    {
-        "addedAt": "2022-03-23T09:12:44.709",
-        "description": "Apr\u00e8s le Rescue-game \u201cIl faut sauver LoRa\u201d, on revient te proposer le Handson le plus fou de l\u2019ann\u00e9e. Cette fois-ci, pas de radio ou de catastrophe naturelle. Si on allait plut\u00f4t chercher le contenu d\u2019un coffre fort?\r\nIci, le seul IDE dont tu auras besoin sera Arduino. Tu vas apprendre \u00e0 bruteforcer une valise \u00e9lectronique, trouver les bons fils \u00e0 brancher, sniffer des trames r\u00e9seau, hacker une webapp et re-programmer des badges NFC. Il te reste moins de 2h en comp\u00e9tition pour gagner le contenu du coffre. On te conseille de venir en bin\u00f4me !",
-        "end": "2022-05-24T12:30:00",
-        "event": "2022",
-        "format": "WORKSHOP",
-        "id": "623ad67c8a5c755e7139c6f6",
-        "language": "FRENCH",
-        "photoUrls": [
-            {
-                "name": "crackingthesafe",
-                "url": "https://live.staticflickr.com/65535/52095898788_d09acf87af_b.jpg"
-            },
-            {
-                "name": "crackingthesafe_2",
-                "url": "https://live.staticflickr.com/65535/52096374940_27c6dcbb22_b.jpg"
-            }
-        ],
-        "room": "ROOM3",
-        "slug": "hacking-game-crack-the-safe",
-        "speakerIds": [
-            "LoicOrtola",
-            "antoleb",
-            "de.guibert"
-        ],
-        "start": "2022-05-24T10:40:00",
-        "summary": "Les autres workshops sont \"So-2019\"?\r\n\r\nEt si on allait plut\u00f4t hacker un coffre-fort? \r\nViens bruteforcer une valise \u00e9lectronique et bouffer de l'hexa pour hacker un badge NFC. Il te reste 2h en comp\u00e9tition pour gagner le contenu du coffre. On te conseille de venir en bin\u00f4me !",
-        "title": "Hacking Game : Crack the safe",
-        "topic": "makers",
-        "video": null
     },
     {
         "addedAt": "2022-03-23T09:12:44.681",
@@ -232,26 +232,6 @@
         "video": "https://vimeo.com/730352378"
     },
     {
-        "addedAt": "2022-04-01T14:19:12.536",
-        "description": "TBD",
-        "end": "2022-05-24T12:30:00",
-        "event": "2022",
-        "format": "TALK",
-        "id": "62470a2da88168213377c693",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "ROOM2",
-        "slug": "discrimination-et-harcelement-au-travail",
-        "speakerIds": [
-            "cjf.avocat"
-        ],
-        "start": "2022-05-24T11:40:00",
-        "summary": "TBD",
-        "title": "Discrimination et harc\u00e8lement au travail",
-        "topic": "ethics",
-        "video": "https://vimeo.com/725690027"
-    },
-    {
         "addedAt": "2022-04-01T14:11:16.262",
         "description": "Comment WebAssembly pourrait changer la fa\u00e7on dont nous d\u00e9veloppons nos applications dans les ann\u00e9es \u00e0 venir ? S\u00e9bastien partagera des pistes de r\u00e9flexion ainsi que des exp\u00e9rimentations pour vous donner un aper\u00e7u de ce qu\u2019est WebAssembly en 2022 et de sa possible \u00e9volution. On parlera d\u00e9centralisation, mod\u00e8le de s\u00e9curit\u00e9, WASI, WebAssembly Component Model, int\u00e9gration de WebAssembly avec les diff\u00e9rents langages (Rust, Go, Kotlin, JavaScript, Java, Python, Ruby), performance, outillage et d\u00e9ploiement sans containeur.",
         "end": "2022-05-24T12:30:00",
@@ -270,6 +250,26 @@
         "title": "WebAssembly Developer Experience",
         "topic": "tech",
         "video": "https://vimeo.com/726160136"
+    },
+    {
+        "addedAt": "2022-04-01T14:19:12.536",
+        "description": "TBD",
+        "end": "2022-05-24T12:30:00",
+        "event": "2022",
+        "format": "TALK",
+        "id": "62470a2da88168213377c693",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM2",
+        "slug": "discrimination-et-harcelement-au-travail",
+        "speakerIds": [
+            "cjf.avocat"
+        ],
+        "start": "2022-05-24T11:40:00",
+        "summary": "TBD",
+        "title": "Discrimination et harc\u00e8lement au travail",
+        "topic": "ethics",
+        "video": "https://vimeo.com/725690027"
     },
     {
         "addedAt": "2022-03-23T09:12:44.705",
@@ -314,26 +314,6 @@
         "video": "https://vimeo.com/733370754"
     },
     {
-        "addedAt": "2022-03-23T09:12:00",
-        "description": "Remplacez \u201cmouton\u201d par \u201cappli\u201d, et vous retrouvez un dialogue courant entre d\u00e9veloppeurs, architectes, et utilisateur m\u00e9tier. Comment se comprendre quand on n'a pas le m\u00eame point de vue sur l'appli \u00e0 produire?\r\nIl faudrait pouvoir travailler sur les m\u00eames donn\u00e9es, celles qui d\u00e9crivent l'appli, mais en faisant varier les repr\u00e9sentations, en fonction des points de vue. Pour \u00e7a il nous faudrait un outil pour \u00e9diter des donn\u00e9es et les repr\u00e9senter diff\u00e9remment, de mani\u00e8re tr\u00e8s flexible, tout en gardant leur coh\u00e9rence. Sirius Web est un nouveau projet open-source, qui simplifie la cr\u00e9ation de ce genre d\u2019outil : d\u00e9finition d\u2019un domaine, cr\u00e9ation d\u2019\u00e9diteurs graphiques, le tout depuis un navigateur web. Durant ce talk nous reviendrons sur les diff\u00e9rents cas d\u2019usage, l\u2019architecture et les choix techniques, pour laisser la place aux d\u00e9mos des principales fonctionnalit\u00e9s.",
-        "end": "2022-05-24T15:40:00",
-        "event": "2022",
-        "format": "TALK",
-        "id": "623ad67c8a5c755e7139c710",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "AMPHID",
-        "slug": "s-il-vous-plait-dessine-moi-une-appli-",
-        "speakerIds": [
-            "melaniebats"
-        ],
-        "start": "2022-05-24T14:50:00",
-        "summary": "\"Non ! Celui-l\u00e0 est d\u00e9j\u00e0 tr\u00e8s malade. Fais-en un autre.\"\r\n\"Tu vois bien, ce n'est pas un mouton, c'est un b\u00e9lier. Il a des cornes.\"\r\n\"Celui-l\u00e0 est trop vieux.\"\r\nAlors, je griffonnais et je lan\u00e7ais:\r\n\"\u00c7a c'est la caisse. Le mouton que tu veux est dedans.\"\r\n\" C'est tout \u00e0 fait comme \u00e7a que je le voulais !\"",
-        "title": "S'il vous pla\u00eet... dessine-moi une appli !",
-        "topic": "design",
-        "video": "https://vimeo.com/733369882"
-    },
-    {
         "addedAt": "2022-03-23T09:12:44.71",
         "description": "Even if many have heard of it but few have seen it, the hexagonal architecture is not an Arlesian.\r\nThe goal here will be to show everyone, both beginners and experts, that this architecture is really simple to implement.\r\nIt has many advantages:\r\n\r\n- separation of business and technical code,\r\n- establishment of a Domain Specific Language,\r\n- testability of the business code,\r\n- scalability of the technical code relating to infrastructure,\r\n- facility for technological monitoring.\r\n\r\nIn short, everything is good in hexagonal architecture.\r\n\r\nThis three-hour session will be divided as follows:\r\n\r\n- a presentation of 30 minutes maximum alternating definition of each of its concepts and their implementation in a Java project.\r\n- a kata of 60 minutes max on a business domain to be used in the next part\r\n- implementation for 60 minutes max of adapters showing the power and simplicity of this architecture.\r\n- 15 minutes of Q / A and concept development\r\n\r\nThe result of this workshop was implemented on new projects in the banking sector. This made it possible to avoid recurring pitfalls on the testability and quality of the developed code ^^.\r\nReferences\r\n\r\nMeetup where this workshop has been facilitated: https://www.meetup.com/fr-FR/Nov-NCraft/events/248998729/?_xtd=gatlbWFpbF9jbGlja9oAJGMyYjA2OTYzLTRkODYtNDc4ZC04ZTQ3LTA5OGQwNjYwZmE4Yg\r\n\r\nHere is a the kata's github: https://github.com/HEIWA-IT/TripAgency/\r\n\r\nThe attendees needs to have a JDK and Maven installed and an IDE of their choice. \r\n",
         "end": "2022-05-24T16:40:00",
@@ -372,6 +352,26 @@
         "title": "Parlez de vous, faites des feedbacks !",
         "topic": "team",
         "video": null
+    },
+    {
+        "addedAt": "2022-03-23T09:12:00",
+        "description": "Remplacez \u201cmouton\u201d par \u201cappli\u201d, et vous retrouvez un dialogue courant entre d\u00e9veloppeurs, architectes, et utilisateur m\u00e9tier. Comment se comprendre quand on n'a pas le m\u00eame point de vue sur l'appli \u00e0 produire?\r\nIl faudrait pouvoir travailler sur les m\u00eames donn\u00e9es, celles qui d\u00e9crivent l'appli, mais en faisant varier les repr\u00e9sentations, en fonction des points de vue. Pour \u00e7a il nous faudrait un outil pour \u00e9diter des donn\u00e9es et les repr\u00e9senter diff\u00e9remment, de mani\u00e8re tr\u00e8s flexible, tout en gardant leur coh\u00e9rence. Sirius Web est un nouveau projet open-source, qui simplifie la cr\u00e9ation de ce genre d\u2019outil : d\u00e9finition d\u2019un domaine, cr\u00e9ation d\u2019\u00e9diteurs graphiques, le tout depuis un navigateur web. Durant ce talk nous reviendrons sur les diff\u00e9rents cas d\u2019usage, l\u2019architecture et les choix techniques, pour laisser la place aux d\u00e9mos des principales fonctionnalit\u00e9s.",
+        "end": "2022-05-24T15:40:00",
+        "event": "2022",
+        "format": "TALK",
+        "id": "623ad67c8a5c755e7139c710",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHID",
+        "slug": "s-il-vous-plait-dessine-moi-une-appli-",
+        "speakerIds": [
+            "melaniebats"
+        ],
+        "start": "2022-05-24T14:50:00",
+        "summary": "\"Non ! Celui-l\u00e0 est d\u00e9j\u00e0 tr\u00e8s malade. Fais-en un autre.\"\r\n\"Tu vois bien, ce n'est pas un mouton, c'est un b\u00e9lier. Il a des cornes.\"\r\n\"Celui-l\u00e0 est trop vieux.\"\r\nAlors, je griffonnais et je lan\u00e7ais:\r\n\"\u00c7a c'est la caisse. Le mouton que tu veux est dedans.\"\r\n\" C'est tout \u00e0 fait comme \u00e7a que je le voulais !\"",
+        "title": "S'il vous pla\u00eet... dessine-moi une appli !",
+        "topic": "design",
+        "video": "https://vimeo.com/733369882"
     },
     {
         "addedAt": "2022-03-23T09:12:44.747",
@@ -414,6 +414,27 @@
         "video": null
     },
     {
+        "addedAt": "2022-03-23T09:12:44.699",
+        "description": "JetPack Compose est un outil \u00e9tonnant que Google a pris 4 ans \u00e0 mettre au point. \r\n\r\nInspir\u00e9 des mod\u00e8les de d\u00e9veloppement des interfaces utilisateurs tels que React, il propose un nouveau mode de programmation. Avec des m\u00e9canismes qui agissent lors de la compilation et d\u2019autres au runtime, il garantit d\u2019excellentes performances.\r\n\r\nCet outil a \u00e9t\u00e9 amen\u00e9 un cran plus loin par JetBrains en le rendant multi-plateforme. Il s\u2019agit d\u00e9sormais d\u2019utiliser le m\u00eame code Kotlin pour cr\u00e9er des interfaces qui seront d\u00e9ploy\u00e9es dans des environnement aussi bien mobiles, que desktop et web.\r\n\r\nLors de cette pr\u00e9sentation, j\u2019expliquerai les m\u00e9canismes mis en \u0153uvre, et partagerai du code et des exemples permettant de comprendre les cas d\u2019utilisation de ce nouvel outil.\r\n",
+        "end": "2022-05-24T16:40:00",
+        "event": "2022",
+        "format": "TALK",
+        "id": "623ad67c8a5c755e7139c6ef",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHID",
+        "slug": "compose-multiplatform-un-framework-pour-toutes-vos-apps-",
+        "speakerIds": [
+            "g.zoritchak",
+            "louis.cognault"
+        ],
+        "start": "2022-05-24T15:50:00",
+        "summary": "Des apps mobiles, desktops, web r\u00e9alis\u00e9es avec un seul langage, performant et fun. On en a longtemps r\u00eav\u00e9. Est-ce en train d\u2019arriver?\r\n\r\nCompose Multiplatform, une extension du toolkit de Google par JetBrains, r\u00e9pond \u00e0 cette probl\u00e9matique. Un code Kotlin unique d\u00e9ploy\u00e9 sur toutes les plateformes!",
+        "title": "Compose Multiplatform: un framework pour toutes vos apps ?",
+        "topic": "tech",
+        "video": "https://vimeo.com/726166688"
+    },
+    {
         "addedAt": "2022-03-23T09:12:44.753",
         "description": "Gladys Diandoki explique ce qu'est l'UX Writing, nouveau m\u00e9tier du Design qui allie contenu et UX. Elle reviendra sur les 10 erreurs les plus fr\u00e9quentes et les choses \u00e0 mettre en place pour collaborer avec ces nouveaux profils du Design.\r\n\r\nObjectif :\r\n- Permettre de comprendre ce poste\r\n- Comprendre son r\u00f4le et son process\r\n- Collaborer avec les Product Designers/ UX Designers, les researchers, d\u00e9veloppeurs etc.\r\n- Les erreurs les plus fr\u00e9quentes\r\n- Les bonnes pratiques\r\n\r\nCe que l'on doit retenir :\r\n- Ce que fait un UX Writer\r\n- Comment travailler ensemble\r\n- Quelques bases\r\n",
         "end": "2022-05-24T16:40:00",
@@ -452,27 +473,6 @@
         "title": "Building online spaces with the public interest at heart \ud83d\udc9a ",
         "topic": "design",
         "video": "https://vimeo.com/728605340"
-    },
-    {
-        "addedAt": "2022-03-23T09:12:44.699",
-        "description": "JetPack Compose est un outil \u00e9tonnant que Google a pris 4 ans \u00e0 mettre au point. \r\n\r\nInspir\u00e9 des mod\u00e8les de d\u00e9veloppement des interfaces utilisateurs tels que React, il propose un nouveau mode de programmation. Avec des m\u00e9canismes qui agissent lors de la compilation et d\u2019autres au runtime, il garantit d\u2019excellentes performances.\r\n\r\nCet outil a \u00e9t\u00e9 amen\u00e9 un cran plus loin par JetBrains en le rendant multi-plateforme. Il s\u2019agit d\u00e9sormais d\u2019utiliser le m\u00eame code Kotlin pour cr\u00e9er des interfaces qui seront d\u00e9ploy\u00e9es dans des environnement aussi bien mobiles, que desktop et web.\r\n\r\nLors de cette pr\u00e9sentation, j\u2019expliquerai les m\u00e9canismes mis en \u0153uvre, et partagerai du code et des exemples permettant de comprendre les cas d\u2019utilisation de ce nouvel outil.\r\n",
-        "end": "2022-05-24T16:40:00",
-        "event": "2022",
-        "format": "TALK",
-        "id": "623ad67c8a5c755e7139c6ef",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "AMPHID",
-        "slug": "compose-multiplatform-un-framework-pour-toutes-vos-apps-",
-        "speakerIds": [
-            "g.zoritchak",
-            "louis.cognault"
-        ],
-        "start": "2022-05-24T15:50:00",
-        "summary": "Des apps mobiles, desktops, web r\u00e9alis\u00e9es avec un seul langage, performant et fun. On en a longtemps r\u00eav\u00e9. Est-ce en train d\u2019arriver?\r\n\r\nCompose Multiplatform, une extension du toolkit de Google par JetBrains, r\u00e9pond \u00e0 cette probl\u00e9matique. Un code Kotlin unique d\u00e9ploy\u00e9 sur toutes les plateformes!",
-        "title": "Compose Multiplatform: un framework pour toutes vos apps ?",
-        "topic": "tech",
-        "video": "https://vimeo.com/726166688"
     },
     {
         "addedAt": "2022-03-23T09:12:44.694",
@@ -615,6 +615,48 @@
         "video": "https://vimeo.com/726167284"
     },
     {
+        "addedAt": "2022-03-23T09:12:44.707",
+        "description": "Fear the ponies is a hacking workshop in the form of a code dojo having as main theme cryptography. It is a great problem solving training, an opportunity to share knowledge while programming and more important, it\u2019s fun !",
+        "end": "2022-05-25T12:30:00",
+        "event": "2022",
+        "format": "WORKSHOP",
+        "id": "623ad67c8a5c755e7139c6f4",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM5",
+        "slug": "fear-the-ponies-let-s-re-discover-cryptography-basics",
+        "speakerIds": [
+            "mmetesreau",
+            "raphaelwach"
+        ],
+        "start": "2022-05-25T10:40:00",
+        "summary": "Ponies just forged a secret alliance in order to end human civilization and their first move should happen in less than 1 hour. During this new escape game style coding dojo, we offer to challenge your knowledge and skills about encryption and to improve them while having fun !",
+        "title": "Fear the ponies, let's (re)discover cryptography basics",
+        "topic": "tech",
+        "video": null
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.724",
+        "description": "Quel est le point commun entre une base de code entre les mains d'une \u00e9quipe de d\u00e9v, une \u00e9quipe de d\u00e9v au sein d'une entreprise, un produit vis-\u00e0-vis de ses utilisateurs, une entreprise vis-\u00e0-vis de son march\u00e9 ?\r\n\r\nSi vous avez r\u00e9pondu du tac au tac \"ce sont des syst\u00e8mes complexes soumis \u00e0 des forces nombreuses avec des effets et des temporalit\u00e9s souvent difficiles \u00e0 analyser\", vous devriez appr\u00e9cier les d\u00e9fis propos\u00e9s lors de cet atelier. Si vous n'avez pas fait le lien imm\u00e9diatement, vous pourriez y faire une d\u00e9couverte utile voire salutaire.\r\n\r\nLe propos de cet atelier est d'explorer ce qui rend les syst\u00e8mes si difficiles \u00e0 gouverner, qu'il s'agisse de lignes de code ou de populations expos\u00e9es \u00e0 une pand\u00e9mie, mais aussi de montrer en quoi certaines \"lois\" se retrouvent ind\u00e9pendamment des domaines et nous fournissent des outils et des r\u00e9flexes \u00e0 cultiver.",
+        "end": "2022-05-25T12:30:00",
+        "event": "2022",
+        "format": "WORKSHOP",
+        "id": "623ad67c8a5c755e7139c6ff",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM4",
+        "slug": "le-jeu-du-frigo-petit-exercice-de-pensee-systemique",
+        "speakerIds": [
+            "Morendil",
+            "christophe.thibaut"
+        ],
+        "start": "2022-05-25T10:40:00",
+        "summary": "Dette technique, conflit dans une \u00e9quipe, gestion d'une pand\u00e9mie\u2026 sont autant d'exemples des difficult\u00e9s qu'on rencontre pour analyser et ma\u00eetriser des syst\u00e8mes complexes. Nous vous proposons un atelier pour partir \u00e0 la d\u00e9couverte des lois qui les gouvernent, et des outils et r\u00e9flexes \u00e0 cultiver.",
+        "title": "Le jeu du frigo - petit exercice de pens\u00e9e syst\u00e9mique",
+        "topic": "team",
+        "video": null
+    },
+    {
         "addedAt": "2022-03-23T09:12:44.729",
         "description": "Que vous soyez au d\u00e9veloppement, au support, \u00e0 la hotline, \u00e0 l'exploitation, il est probable que vous soyiez \u00e9quip\u00e9s d'un outil de \"ticketing\", \"bug tracker\" ou autre gestionnaire de demandes.\r\nAvez-vous d\u00e9j\u00e0 entendu une r\u00e9ponse \u00e0 vos questions du genre \"Regarde d'abord le ticket, j'ai tout \u00e9crit dedans !\" ou encore \"ce n'est pas parce que ce n'est pas dans le ticket qu'il ne fallait pas le faire\" ?\r\n\r\nAu fil du temps, ces outils se sont implant\u00e9s comme des piliers essentiels \u00e0 la structuration des it\u00e9rations et des flux Kanban, au point de remplacer le management visuel Post-It(c). \r\n\r\nPr\u00e9vus pour structurer une information et la partager entre toutes et tous, ces outils accueillent d\u00e9sormais l'int\u00e9gralit\u00e9 des backlogs produit. Mais alors, comment en sommes-nous arriver\r\nau constat que, sous couvert d'Agilit\u00e9, nos organisations sont encore silot\u00e9es, et que ces outils cristallisent des col\u00e8res, des frustrations, des r\u00e9signations ou des incoh\u00e9rences ?\r\n\r\nDans cette conf\u00e9rence (enti\u00e8rement dessin\u00e9e en direct), nous explorerons le paradoxe de ces bonnes pratiques d'Agilit\u00e9 qui conduisent les \u00e9quipes \u00e0 d\u00e9truire leur communication, petit \u00e0 petit. \r\n\r\nLes outils de tickets ne sont qu'un totem de cette perte de lien qui nuit aux organisations et aux produits, un symb\u00f4le de l'urgence \u00e0 remettre la communication au c\u0153ur des \u00e9quipes. \r\n\r\nJe vous partagerai des pratiques \u00e0 encourager et celles \u00e0 faire \u00e9voluer pour que le backlog produit soit est un point d'entr\u00e9e commun qui refl\u00e8te la qualit\u00e9 relationnelle de l'\u00e9quipe. \r\n\r\nB\u00e9n\u00e9fices\r\n\r\n- Apprendre \u00e0 dire non...\r\n- Retrouver le sens de l'Agilit\u00e9 dans son \u00e9quipe\r\n- Comprendre les paradoxes de fluidification du travail d'\u00e9quipe comme l'arr\u00eat des brainstorming\r\n- Trouver des pistes \u00e0 explorer pour am\u00e9liorer son Scrum, Kanban ou autre m\u00e9thode agile retenue\r\n- Corriger certaines pratiques d'\u00e9quipe\r\n\r\n",
         "end": "2022-05-25T11:30:00",
@@ -655,27 +697,6 @@
         "video": "https://vimeo.com/730352896"
     },
     {
-        "addedAt": "2022-03-23T09:12:44.724",
-        "description": "Quel est le point commun entre une base de code entre les mains d'une \u00e9quipe de d\u00e9v, une \u00e9quipe de d\u00e9v au sein d'une entreprise, un produit vis-\u00e0-vis de ses utilisateurs, une entreprise vis-\u00e0-vis de son march\u00e9 ?\r\n\r\nSi vous avez r\u00e9pondu du tac au tac \"ce sont des syst\u00e8mes complexes soumis \u00e0 des forces nombreuses avec des effets et des temporalit\u00e9s souvent difficiles \u00e0 analyser\", vous devriez appr\u00e9cier les d\u00e9fis propos\u00e9s lors de cet atelier. Si vous n'avez pas fait le lien imm\u00e9diatement, vous pourriez y faire une d\u00e9couverte utile voire salutaire.\r\n\r\nLe propos de cet atelier est d'explorer ce qui rend les syst\u00e8mes si difficiles \u00e0 gouverner, qu'il s'agisse de lignes de code ou de populations expos\u00e9es \u00e0 une pand\u00e9mie, mais aussi de montrer en quoi certaines \"lois\" se retrouvent ind\u00e9pendamment des domaines et nous fournissent des outils et des r\u00e9flexes \u00e0 cultiver.",
-        "end": "2022-05-25T12:30:00",
-        "event": "2022",
-        "format": "WORKSHOP",
-        "id": "623ad67c8a5c755e7139c6ff",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "ROOM4",
-        "slug": "le-jeu-du-frigo-petit-exercice-de-pensee-systemique",
-        "speakerIds": [
-            "Morendil",
-            "christophe.thibaut"
-        ],
-        "start": "2022-05-25T10:40:00",
-        "summary": "Dette technique, conflit dans une \u00e9quipe, gestion d'une pand\u00e9mie\u2026 sont autant d'exemples des difficult\u00e9s qu'on rencontre pour analyser et ma\u00eetriser des syst\u00e8mes complexes. Nous vous proposons un atelier pour partir \u00e0 la d\u00e9couverte des lois qui les gouvernent, et des outils et r\u00e9flexes \u00e0 cultiver.",
-        "title": "Le jeu du frigo - petit exercice de pens\u00e9e syst\u00e9mique",
-        "topic": "team",
-        "video": null
-    },
-    {
         "addedAt": "2022-03-23T09:12:44.733",
         "description": "Cet atelier est n\u00e9 de la rencontre entre une pratique de la communication non violente d'un c\u00f4t\u00e9 et la lecture des conclusions de recherche d'une neuro-scientifique de Harvard de l'autre.\r\n\r\nDans l'atelier nous aurons \r\n-de l'empathie avec de l'\u00e9coute active et de la relecture en bin\u00f4mes de situations \u00e9motionnellement charg\u00e9es plus ou moins agr\u00e9ables.\r\n-de la th\u00e9orie avec la d\u00e9couverte de la th\u00e9orie des \u00e9motions construites, d'un mod\u00e8le sur les \u00e9l\u00e9ments qui collectivement d\u00e9finissent une \u00e9motion et de l'essentiel de la communication non-violente.\r\n-de la cr\u00e9ativit\u00e9 avec, \u00e0 partir de ces situations, la cr\u00e9ation de n\u00e9ologismes, de nouveaux mots-\u00e9motions qui viennent t\u00e9moigner de notre r\u00e9el.\r\n\r\nJe suis Francois-Xavier Pasquier, un facilitateur en intelligence collective, \u00e0 la fois curieux et exigeant sur le \"pourquoi \u00e7a marche ?\" ce qui m'a amen\u00e9 \u00e0 ces recherches sur la nature des \u00e9motions et en quoi elles emp\u00eachent ou permettent la r\u00e9alisation de l'individu et du collectif. Un facilitateur cr\u00e9e les conditions des dialogues, des d\u00e9cisions et in fine des organisations qui prennent sens. Je ne peux juste pas faire l'\u00e9conomie des \u00e9motions dans mon m\u00e9tier... et en fait, qui que vous soyez vous non plus ! \r\n\r\nSi je ne m'occupe pas de mes \u00e9motions, mes \u00e9motions s'occupent de moi ! Alors autant plut\u00f4t les co-cr\u00e9er.\r\n\r\nH\u00e2te de vivre cet atelier ensemble !",
         "end": "2022-05-25T12:30:00",
@@ -693,27 +714,6 @@
         "summary": "Venez changer de regard sur la nature des \u00e9motions et en co-cr\u00e9er de nouvelles. Oui, une \u00e9motion \u00e7a se cr\u00e9\u00e9.\r\n\r\nTelles sont les conclusion d'une neuro-scientifique de Harvard qui rejoignent la Communication Non-Violente. Actionnons \u00e0 la fois intellects, coeurs et cr\u00e9ativit\u00e9 dans cet atelier facilit\u00e9.",
         "title": "Nous ne sommes pas \u00e0 la merci de nos \u00e9motions. Nous les co-cr\u00e9ons",
         "topic": "team",
-        "video": null
-    },
-    {
-        "addedAt": "2022-03-23T09:12:44.707",
-        "description": "Fear the ponies is a hacking workshop in the form of a code dojo having as main theme cryptography. It is a great problem solving training, an opportunity to share knowledge while programming and more important, it\u2019s fun !",
-        "end": "2022-05-25T12:30:00",
-        "event": "2022",
-        "format": "WORKSHOP",
-        "id": "623ad67c8a5c755e7139c6f4",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "ROOM5",
-        "slug": "fear-the-ponies-let-s-re-discover-cryptography-basics",
-        "speakerIds": [
-            "mmetesreau",
-            "raphaelwach"
-        ],
-        "start": "2022-05-25T10:40:00",
-        "summary": "Ponies just forged a secret alliance in order to end human civilization and their first move should happen in less than 1 hour. During this new escape game style coding dojo, we offer to challenge your knowledge and skills about encryption and to improve them while having fun !",
-        "title": "Fear the ponies, let's (re)discover cryptography basics",
-        "topic": "tech",
         "video": null
     },
     {
@@ -777,27 +777,6 @@
         "video": "https://vimeo.com/728605343"
     },
     {
-        "addedAt": "2022-03-23T09:12:44.756",
-        "description": "Vous avez peut-\u00eatre parfois de la difficult\u00e9 \u00e0 d\u00e9chiffrer certains concepts, \u00e0 comprendre le point de vue ou le comportement de l'autre, ou ce qui provoque une certaine g\u00eane ou tension chez vous.\r\nLorsque vous arrivez \u00e0 donner du sens \u00e0 un ph\u00e9nom\u00e8ne qui pouvait sembler n\u00e9buleux ou dont vous n'arriviez pas \u00e0 relier tous les signes, vous faites de l\u2019herm\u00e9neutique.\r\nLa violence herm\u00e9neutique, c\u2019est quand on rend l\u2019interpr\u00e9tation difficile pour l\u2019autre, volontairement ou non.\r\nCe talk vise \u00e0 faire prendre conscience du processus et \u00e0 \u00e9viter ou s'armer contre ce type de violence.",
-        "end": "2022-05-25T12:30:00",
-        "event": "2022",
-        "format": "TALK",
-        "id": "623ad67c8a5c755e7139c71a",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "AMPHID",
-        "slug": "violence-hermeneutique-comment-eviter-le-malaise-",
-        "speakerIds": [
-            "Sara.Dufour",
-            "malk_zameth"
-        ],
-        "start": "2022-05-25T11:40:00",
-        "summary": "Apprendre \u00e0 nous d\u00e9fendre des m\u00e9canismes qui nous emp\u00eachent de faire sens.\r\nDes m\u00e9canismes qui nous forcent \u00e0 rester dans une situation de g\u00eane de l\u2019incompr\u00e9hension. Qui nous font m\u00eame douter de notre v\u00e9cu.",
-        "title": "Violence herm\u00e9neutique - comment \u00e9viter le malaise ?",
-        "topic": "team",
-        "video": "https://vimeo.com/726166698"
-    },
-    {
         "addedAt": "2022-03-23T09:12:44.748",
         "description": "Un exercice de programmation vintage\u2026 et un outil d\u2019aide \u00e0 la composition \u00e9lectroacoustique\r\n==========\r\nJean-Jacques Girardot (programmeur), Jean-Fran\u00e7ois Minjard (compositeur)\r\n\r\nQue faire quand un compositeur vous propose une collaboration tellement passionnante que vous ne pouvez refuser ?\r\nQue faire, \u00e9galement, lorsque l\u2019on se retrouve \u00e0 travailler dans une bo\u00eete \u00e0 sable, avec un langage de programmation nu comme un ver ?\r\nOn red\u00e9couvre la roue, on commence \u00e0 impl\u00e9menter quelques structures, des tableaux, des tables de hashcode, et l\u2019on finit par \u00e9crire une allocation m\u00e9moire, un compilateur, une gestion de processus l\u00e9gers, et une interface graphique\u2026 Ceci dans 32 Mo de m\u00e9moire.\r\n\r\nOn se f\u00e9licite, dans ces conditions, de se souvenir de ses cours de structures de donn\u00e9es du si\u00e8cle dernier, et l\u2019on s\u2019\u00e9tonne de voir \u00e0 quel point ces algorithmes vintage sont encore pertinents aujourd\u2019hui !\r\n\r\nC\u2019est ainsi qu\u2019est n\u00e9 le \u00ab Game Master \u00bb, un outil multiphonique d\u2019aide \u00e0 la composition de musique \u00e9lectroacoustique, dont certains aspects de l\u2019ing\u00e9nierie vont \u00eatre d\u00e9crits dans cette pr\u00e9sentation, qui se terminera, outil oblige, par une d\u00e9monstration de ses possibilit\u00e9s,\r\nau travers de compositions de Jean-Fran\u00e7ois Minjard. \r\n\r\nLa diffusion de ces pi\u00e8ces sera effectu\u00e9e sur un syst\u00e8me multiphonique en 14.1. ",
         "end": "2022-05-25T12:30:00",
@@ -817,6 +796,27 @@
         "title": " Un exercice de programmation vintage\u2026 et un outil d\u2019aide \u00e0 la composition \u00e9lectroacoustique",
         "topic": "aliens",
         "video": "https://vimeo.com/733370300"
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.756",
+        "description": "Vous avez peut-\u00eatre parfois de la difficult\u00e9 \u00e0 d\u00e9chiffrer certains concepts, \u00e0 comprendre le point de vue ou le comportement de l'autre, ou ce qui provoque une certaine g\u00eane ou tension chez vous.\r\nLorsque vous arrivez \u00e0 donner du sens \u00e0 un ph\u00e9nom\u00e8ne qui pouvait sembler n\u00e9buleux ou dont vous n'arriviez pas \u00e0 relier tous les signes, vous faites de l\u2019herm\u00e9neutique.\r\nLa violence herm\u00e9neutique, c\u2019est quand on rend l\u2019interpr\u00e9tation difficile pour l\u2019autre, volontairement ou non.\r\nCe talk vise \u00e0 faire prendre conscience du processus et \u00e0 \u00e9viter ou s'armer contre ce type de violence.",
+        "end": "2022-05-25T12:30:00",
+        "event": "2022",
+        "format": "TALK",
+        "id": "623ad67c8a5c755e7139c71a",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHID",
+        "slug": "violence-hermeneutique-comment-eviter-le-malaise-",
+        "speakerIds": [
+            "Sara.Dufour",
+            "malk_zameth"
+        ],
+        "start": "2022-05-25T11:40:00",
+        "summary": "Apprendre \u00e0 nous d\u00e9fendre des m\u00e9canismes qui nous emp\u00eachent de faire sens.\r\nDes m\u00e9canismes qui nous forcent \u00e0 rester dans une situation de g\u00eane de l\u2019incompr\u00e9hension. Qui nous font m\u00eame douter de notre v\u00e9cu.",
+        "title": "Violence herm\u00e9neutique - comment \u00e9viter le malaise ?",
+        "topic": "team",
+        "video": "https://vimeo.com/726166698"
     },
     {
         "addedAt": "2022-03-23T09:12:44.688",
@@ -1019,27 +1019,6 @@
         "video": "https://vimeo.com/726166919"
     },
     {
-        "addedAt": "2022-03-23T09:12:44.697",
-        "description": "Vous ne connaissez pas Elm ? Ce n'est pas tr\u00e8s grave, le compilateur de ce langage frontend qui garantit l'absence d\u2019erreur d\u2019ex\u00e9cution est l\u00e0 pour vous aider ! \r\n \r\nJe vous propose de coder sans conna\u00eetre le langage avec ce format un peu particulier : \u00e9tant des d\u00e9veloppeurs tr\u00e8s distraits, nous avons commenc\u00e9 pas mal de refactorings et fonctionnalit\u00e9s sans vraiment les finir... \u00e0 vous de prendre le relais pour achever la fonctionnalit\u00e9, assist\u00e9 par les messages d'erreur.\r\n \r\nPari un peu fou ou confiance absolue dans les capacit\u00e9s de mentoring du compilateur ? Venez et vous le saurez !",
-        "end": "2022-05-25T16:40:44",
-        "event": "2022",
-        "format": "WORKSHOP",
-        "id": "623ad67c8a5c755e7139c6ee",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "ROOM5",
-        "slug": "compiler-driven-development-avec-elm",
-        "speakerIds": [
-            "jordane.grenat",
-            "sebastien-fabrice-besnier"
-        ],
-        "start": "2022-05-25T14:50:44",
-        "summary": "Un langage frontend sans aucune erreur d\u2019ex\u00e9cution, c\u2019est possible ? C\u2019est le pari r\u00e9ussi de Elm ! Et bonne nouvelle, son compilateur est un mentor tr\u00e8s p\u00e9dagogique pour apprendre ce langage. Venez le d\u00e9couvrir lors de cet atelier !",
-        "title": "Compiler-Driven Development avec Elm",
-        "topic": "tech",
-        "video": null
-    },
-    {
         "addedAt": "2022-03-23T09:12:44",
         "description": "Cette conf\u00e9rence se veut un retour d'exp\u00e9rience de mon utilisation de l'atelier Example Mapping introduit par Matt Wynne & les \u00e9quipes de Cucumber Londres il y a 6 ans\r\n\r\nLe format de l'atelier est des plus simples. Je l'ai d\u00e9couvert \u00e0 l'occasion d'un meetup DDD Paris en 2017 ou 2018 et ai voulu l'appliquer rapidement sur mes projets. Et l\u00e0, ce f\u00fbt le drame !\r\n\r\nJe partagerai donc ici avec l'audience mes 11 heuristiques pour r\u00e9ussi \u00e0 coup s\u00fbr son atelier (ou plus probablement, r\u00e9duire les chances de se planter ;)). Apr\u00e8s avoir fait quelques rappels sur le Behavior-Driven Development, j'aborderai (dans cet ordre ou pas...) :\r\n\r\n1. Il faut savoir poser un exemple concret !\r\n2. Pas besoin d\u2019\u00e9crire ses exemples au format Gherkin ! Faites au plus simple, croquis, sch\u00e9mas, etc.\r\n3. La pierre angulaire, c\u2019est l\u2019exemple concret. \r\n> Les r\u00e8gles et US ne sont que des blocs pour classifier les exemples entre eux de mani\u00e8re coh\u00e9rente et compr\u00e9hensible. \u2028Corollaire : ne pas toujours d\u00e9marrer par les cartes jaunes et bleues (US et r\u00e8gles) : commencez par donner des exemples.\r\n\r\n4. Les cartes jaunes ne sont pas que rarement des US au d\u00e9marrage de l\u2019atelier.\u2028\r\n> Et on s\u2019en fout ! L\u2019atelier est un formidable outil pour grouper des exemples (cf. heuristique n\u00b03).\r\n\r\n5. Le vote de confiance sera tr\u00e8s souvent n\u00e9gatif sur l\u2019ensemble de la carte : il reste souvent des inconnus. Le faire alors sur des sous-ensemble coh\u00e9rents et qui sont pr\u00eats.\u2028\r\n\r\n6. Atelier difficile \u00e0 tenir \u00e0 distance. \r\n> M\u00eame si des outils tels que Miro proposent un template sp\u00e9cifique, on est en difficult\u00e9 pour \u00e9crire les exemples efficacement (cf. heuristique n\u00b02).\r\n\r\n7. S\u2019assurer de capter toute la connaissance.\r\n> Chaque question / interrogation doit donner lieu \u00e0 une carte rouge ou un exemple concret : souvent besoin d\u2019un facilitateur d\u00e9di\u00e9 \u00e0 cette t\u00e2che. Dur d\u2019\u00eatre partie prenante.\r\n\r\n8. S\u2019assurer d\u2019avancer : fast & furious @Bruno Boucard\r\n\r\n9. Pr\u00e9parez-vous au chaos  !\r\n> Inconfort car l\u2019on ne navigue pas forc\u00e9ment dans la direction attendue. On peut d\u00e9couvrir des pans complets du m\u00e9tier et ce n\u2019est pas forc\u00e9ment ce qui \u00e9tait attendu / pr\u00e9vu par le PO ou expert m\u00e9tier. _\u00ab Vous ne saviez pas que vous ne saviez pas. Maintenant, vous le savez ! \u00bb_.\r\n\u2028\r\n10. La couleur dominante de votre carte vous dira beaucoup sur l\u2019avanc\u00e9e de l\u2019atelier et le partage de votre connaissance.\r\n11. De l\u2019art de trouver la fr\u00e9quence id\u00e9ale.\u2028\r\n> 25 minutes, c\u2019est souvent court et frustrant. Alors comment optimiser cet atelier ? Quelle fr\u00e9quence ? Combien de sessions \u00e0 la suite ?",
         "end": "2022-05-25T15:40:44",
@@ -1060,24 +1039,25 @@
         "video": "https://vimeo.com/726166882"
     },
     {
-        "addedAt": "2022-03-23T09:12:44.751",
-        "description": "Un de nos clients nous a fait part de son besoin de refondre un de ses sites grand public r\u00e9alis\u00e9 avec Drupal. \r\n\r\nSes contraintes : plusieurs milliers de visites par jour, un futur site attractif et dynamique et un faible impact sur l'environnement.\r\nL'occasion r\u00eav\u00e9e de mettre en place un site statique avec une architecture JAMStack ! \r\n\r\nCette stack saura t-elle g\u00e9n\u00e9rer les 70000 pages n\u00e9cessaires au site ? Tiendra t-elle ses promesses de mont\u00e9e en charge ? Et du c\u00f4t\u00e9 de l'impact \u00e9cologique et de l'\u00e9co-conception ?\r\n\r\nNous vous pr\u00e9senterons le principe de l'architecture JAMStack, les difficult\u00e9s que nous avons rencontr\u00e9es, et les adaptations que nous avons mises en \u0153uvre pour aboutir \u00e0 la nouvelle version du site.\r\n\r\nAlors, promesses tenues ?",
-        "end": "2022-05-25T16:40:00",
+        "addedAt": "2022-03-23T09:12:44.697",
+        "description": "Vous ne connaissez pas Elm ? Ce n'est pas tr\u00e8s grave, le compilateur de ce langage frontend qui garantit l'absence d\u2019erreur d\u2019ex\u00e9cution est l\u00e0 pour vous aider ! \r\n \r\nJe vous propose de coder sans conna\u00eetre le langage avec ce format un peu particulier : \u00e9tant des d\u00e9veloppeurs tr\u00e8s distraits, nous avons commenc\u00e9 pas mal de refactorings et fonctionnalit\u00e9s sans vraiment les finir... \u00e0 vous de prendre le relais pour achever la fonctionnalit\u00e9, assist\u00e9 par les messages d'erreur.\r\n \r\nPari un peu fou ou confiance absolue dans les capacit\u00e9s de mentoring du compilateur ? Venez et vous le saurez !",
+        "end": "2022-05-25T16:40:44",
         "event": "2022",
-        "format": "TALK",
-        "id": "623ad67c8a5c755e7139c716",
+        "format": "WORKSHOP",
+        "id": "623ad67c8a5c755e7139c6ee",
         "language": "FRENCH",
         "photoUrls": [],
-        "room": "ROOM1",
-        "slug": "un-peu-de-confiture-dans-votre-architecture-",
+        "room": "ROOM5",
+        "slug": "compiler-driven-development-avec-elm",
         "speakerIds": [
-            "ceciliaBossard"
+            "jordane.grenat",
+            "sebastien-fabrice-besnier"
         ],
-        "start": "2022-05-25T15:50:00",
-        "summary": "R\u00e9aliser un site le plus \u00e9co-con\u00e7u possible, attractif visuellement et avec des technos r\u00e9centes ? L'occasion r\u00eav\u00e9e de mettre en place un site statique avec une architecture JAMStack !\r\nCette stack saura t-elle g\u00e9n\u00e9rer les 70000 pages n\u00e9cessaires et tiendra t-elle ses promesses de mont\u00e9e en charge ?",
-        "title": "Un peu de confiture dans votre architecture ? ",
+        "start": "2022-05-25T14:50:44",
+        "summary": "Un langage frontend sans aucune erreur d\u2019ex\u00e9cution, c\u2019est possible ? C\u2019est le pari r\u00e9ussi de Elm ! Et bonne nouvelle, son compilateur est un mentor tr\u00e8s p\u00e9dagogique pour apprendre ce langage. Venez le d\u00e9couvrir lors de cet atelier !",
+        "title": "Compiler-Driven Development avec Elm",
         "topic": "tech",
-        "video": "https://vimeo.com/733369871"
+        "video": null
     },
     {
         "addedAt": "2022-05-25T15:50:00",
@@ -1121,6 +1101,26 @@
         "video": "https://vimeo.com/733370061"
     },
     {
+        "addedAt": "2022-03-23T09:12:44.751",
+        "description": "Un de nos clients nous a fait part de son besoin de refondre un de ses sites grand public r\u00e9alis\u00e9 avec Drupal. \r\n\r\nSes contraintes : plusieurs milliers de visites par jour, un futur site attractif et dynamique et un faible impact sur l'environnement.\r\nL'occasion r\u00eav\u00e9e de mettre en place un site statique avec une architecture JAMStack ! \r\n\r\nCette stack saura t-elle g\u00e9n\u00e9rer les 70000 pages n\u00e9cessaires au site ? Tiendra t-elle ses promesses de mont\u00e9e en charge ? Et du c\u00f4t\u00e9 de l'impact \u00e9cologique et de l'\u00e9co-conception ?\r\n\r\nNous vous pr\u00e9senterons le principe de l'architecture JAMStack, les difficult\u00e9s que nous avons rencontr\u00e9es, et les adaptations que nous avons mises en \u0153uvre pour aboutir \u00e0 la nouvelle version du site.\r\n\r\nAlors, promesses tenues ?",
+        "end": "2022-05-25T16:40:00",
+        "event": "2022",
+        "format": "TALK",
+        "id": "623ad67c8a5c755e7139c716",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM1",
+        "slug": "un-peu-de-confiture-dans-votre-architecture-",
+        "speakerIds": [
+            "ceciliaBossard"
+        ],
+        "start": "2022-05-25T15:50:00",
+        "summary": "R\u00e9aliser un site le plus \u00e9co-con\u00e7u possible, attractif visuellement et avec des technos r\u00e9centes ? L'occasion r\u00eav\u00e9e de mettre en place un site statique avec une architecture JAMStack !\r\nCette stack saura t-elle g\u00e9n\u00e9rer les 70000 pages n\u00e9cessaires et tiendra t-elle ses promesses de mont\u00e9e en charge ?",
+        "title": "Un peu de confiture dans votre architecture ? ",
+        "topic": "tech",
+        "video": "https://vimeo.com/733369871"
+    },
+    {
         "addedAt": "2022-03-23T09:12:44.683",
         "description": "Connue et reconnues par une grande majorit\u00e9 des d\u00e9veloppeurs, Firebase propose depuis plusieurs ann\u00e9es d\u00e9j\u00e0, de nombreux services permettant de mettre en place facilement toute une partie back-end pour des applications. Avec une telle r\u00e9ussite, ce n'est pas \u00e9tonnant que l\u2019on ai pu voir ces derniers temps plusieurs technologies \u00e9merger avec pour ambition de devenir de v\u00e9ritables alternatives. \r\n\r\nApr\u00e8s plusieurs projets r\u00e9alis\u00e9s \u00e0 l\u2019aide Firebase en duo, nous avons d\u00e9cid\u00e9 de pousser un peu plus loin l\u2019exp\u00e9rience en essayant cette fois une toute nouvelle solution. Laissez nous vous pr\u00e9sentez Appwrite, un ensemble de services qui cherche justement \u00e0 nous faire oublier la solution de Google. N\u2019\u00e9tant pas forc\u00e9ment d\u2019accord l\u2019un avec l\u2019autre \u00e0 l\u2019issue de nos essais, nous vous proposons de venir assister \u00e0 un duel sans merci pour savoir si oui ou non, Appwrite est pr\u00eat \u00e0 \u00e9teindre Firebase.\r\n\r\nApr\u00e8s les avoirs compar\u00e9s aux niveaux de leur facilit\u00e9 d\u2019installation, des nombreuses fonctionnalit\u00e9s qu\u2019ils nous proposent ou encore du prix que cela repr\u00e9sente, il se peut m\u00eame que l\u2019on ait besoin de vos avis pour les d\u00e9partager une bonne fois pour toutes !\r\n\r\nCe talk a pour but de pr\u00e9senter de mani\u00e8re simple les deux outils ainsi que leurs fonctionnalit\u00e9s phares. Que vous soyez d\u00e9veloppeur ou non, expert ou novice, ou juste un peu curieux, nous vous attendons sur le ring \ud83e\udd4a",
         "end": "2022-05-25T16:40:44",
@@ -1140,46 +1140,6 @@
         "title": "Appwrite est-il pr\u00eat \u00e0 \u00e9teindre Firebase ? \ud83d\udd25",
         "topic": "tech",
         "video": "https://vimeo.com/725688099"
-    },
-    {
-        "addedAt": "2022-04-21T12:36:12.038",
-        "description": "D\u00e9veloppeurs, nous passons plus de 50% de notre temps sur la conception et la revue de code. L\u2019autre partie se passe sur l\u2019interface en ligne de commande de l\u2019IDE ou le terminal de l\u2019OS: pour lancer l\u2019application, d\u00e9bugger, lire les logs, mettre \u00e0 jour les d\u00e9pendances, analyser les trames r\u00e9seau\u2026 Est-il possible de gagner du temps ? Avez-vous pris le temps de configurer votre terminal ? C\u2019est ce que nous allons voir. Je vais partager un ensemble de bonnes pratiques et d\u2019alias pour votre ligne de commande favorite.\r\n\r\nA vos marques, pr\u00eat ? Kaizen ! kaizen = am\u00e9lioration continue",
-        "end": "2022-05-25T17:20:00",
-        "event": "2022",
-        "format": "LIGHTNING_TALK",
-        "id": "626150526b650e399194a1c6",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "ROOM2",
-        "slug": "reprenez-le-controle-de-votre-bash-en-devant-un-ninja-de-la-cli-",
-        "speakerIds": [
-            "david.aparicio"
-        ],
-        "start": "2022-05-25T17:00:00",
-        "summary": "D\u00e9veloppeurs, nous passons plus de 50% de notre temps sur la conception et la revue de code. L\u2019autre partie se passe sur la ligne de commande de l\u2019IDE ou de l\u2019OS: pour lancer l\u2019app, d\u00e9bugger les logs, mettre \u00e0 jour les d\u00e9pendances, analyse r\u00e9seau\u2026 Avez-vous pris le temps de le configurer ?",
-        "title": "Reprenez le contr\u00f4le de votre bash en devant un ninja de la CLI ! \ud83d\ude0e ",
-        "topic": "tech",
-        "video": "https://vimeo.com/730352366"
-    },
-    {
-        "addedAt": "2022-03-23T09:12:44.726",
-        "description": "* Voici d\u00e9j\u00e0 40 ans que Gerald Weinberg \u00e0 travers son livre \"The Psychology of Computer Programming\" \u00e9tablissait une liste de conseils permettant d\u2019augmenter la qualit\u00e9 du code en essayant de fournir des solutions pour mettre nos egos de cot\u00e9. \r\n* Je vous invite donc \u00e0 les d\u00e9couvrir ou les red\u00e9couvrir et plus particuli\u00e8rement de les avoir en t\u00eate dans nos comportements quotidiens. ",
-        "end": "2022-05-25T17:20:00",
-        "event": "2022",
-        "format": "LIGHTNING_TALK",
-        "id": "623ad67c8a5c755e7139c701",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "AMPHIC",
-        "slug": "les-10-commandements-de-la-programmation-sans-ego",
-        "speakerIds": [
-            "othelu"
-        ],
-        "start": "2022-05-25T17:00:00",
-        "summary": "Peu importe votre architecture, peu importe vos choix de langage, le succ\u00e8s de vos \u00e9quipes d\u00e9pend des relations \u00e9tablies entre les individus.\r\nJe vous propose de parler de l\u2019\u00e9l\u00e9ment qui rend et rendra tous les projets compliqu\u00e9s : l\u2019humain.",
-        "title": "Les 10 commandements de la programmation sans ego",
-        "topic": "team",
-        "video": "https://vimeo.com/728605321"
     },
     {
         "addedAt": "2022-03-23T09:12:44.7",
@@ -1202,6 +1162,26 @@
         "video": "https://vimeo.com/726178257"
     },
     {
+        "addedAt": "2022-03-23T09:12:44.726",
+        "description": "* Voici d\u00e9j\u00e0 40 ans que Gerald Weinberg \u00e0 travers son livre \"The Psychology of Computer Programming\" \u00e9tablissait une liste de conseils permettant d\u2019augmenter la qualit\u00e9 du code en essayant de fournir des solutions pour mettre nos egos de cot\u00e9. \r\n* Je vous invite donc \u00e0 les d\u00e9couvrir ou les red\u00e9couvrir et plus particuli\u00e8rement de les avoir en t\u00eate dans nos comportements quotidiens. ",
+        "end": "2022-05-25T17:20:00",
+        "event": "2022",
+        "format": "LIGHTNING_TALK",
+        "id": "623ad67c8a5c755e7139c701",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHIC",
+        "slug": "les-10-commandements-de-la-programmation-sans-ego",
+        "speakerIds": [
+            "othelu"
+        ],
+        "start": "2022-05-25T17:00:00",
+        "summary": "Peu importe votre architecture, peu importe vos choix de langage, le succ\u00e8s de vos \u00e9quipes d\u00e9pend des relations \u00e9tablies entre les individus.\r\nJe vous propose de parler de l\u2019\u00e9l\u00e9ment qui rend et rendra tous les projets compliqu\u00e9s : l\u2019humain.",
+        "title": "Les 10 commandements de la programmation sans ego",
+        "topic": "team",
+        "video": "https://vimeo.com/728605321"
+    },
+    {
         "addedAt": "2022-03-23T09:12:44.732",
         "description": "Dans ce talk, vous d\u00e9couvrirez un peu de th\u00e9orie de l'apprentissage, du triangle p\u00e9dagogique de Houssaye... Mais surtout vous apprendrez \u00e0 reconna\u00eetre les situations d'enseignement dans lesquelles vous vous trouvez.\r\n\r\nJe pr\u00e9senterai quelques le\u00e7ons apprises dans ma carri\u00e8re en tant que consultant, mentor, et aussi enseignant en informatique - et comment les diff\u00e9rentes techniques se transposent d'un domaine \u00e0 l'autre.",
         "end": "2022-05-25T17:20:00",
@@ -1220,6 +1200,66 @@
         "title": "Mentor, consultant, prof... m\u00eames combats, m\u00eames techniques!",
         "topic": "learn",
         "video": "https://vimeo.com/728604548"
+    },
+    {
+        "addedAt": "2022-04-21T12:36:12.038",
+        "description": "D\u00e9veloppeurs, nous passons plus de 50% de notre temps sur la conception et la revue de code. L\u2019autre partie se passe sur l\u2019interface en ligne de commande de l\u2019IDE ou le terminal de l\u2019OS: pour lancer l\u2019application, d\u00e9bugger, lire les logs, mettre \u00e0 jour les d\u00e9pendances, analyser les trames r\u00e9seau\u2026 Est-il possible de gagner du temps ? Avez-vous pris le temps de configurer votre terminal ? C\u2019est ce que nous allons voir. Je vais partager un ensemble de bonnes pratiques et d\u2019alias pour votre ligne de commande favorite.\r\n\r\nA vos marques, pr\u00eat ? Kaizen ! kaizen = am\u00e9lioration continue",
+        "end": "2022-05-25T17:20:00",
+        "event": "2022",
+        "format": "LIGHTNING_TALK",
+        "id": "626150526b650e399194a1c6",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM2",
+        "slug": "reprenez-le-controle-de-votre-bash-en-devant-un-ninja-de-la-cli-",
+        "speakerIds": [
+            "david.aparicio"
+        ],
+        "start": "2022-05-25T17:00:00",
+        "summary": "D\u00e9veloppeurs, nous passons plus de 50% de notre temps sur la conception et la revue de code. L\u2019autre partie se passe sur la ligne de commande de l\u2019IDE ou de l\u2019OS: pour lancer l\u2019app, d\u00e9bugger les logs, mettre \u00e0 jour les d\u00e9pendances, analyse r\u00e9seau\u2026 Avez-vous pris le temps de le configurer ?",
+        "title": "Reprenez le contr\u00f4le de votre bash en devant un ninja de la CLI ! \ud83d\ude0e ",
+        "topic": "tech",
+        "video": "https://vimeo.com/730352366"
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.713",
+        "description": "Ing\u00e9nieure informaticienne, j\u2019ai quitt\u00e9 mon bled en 2010 pour immigrer chez les Gaulois. Je partage avec vous de \u00ab l\u2019enfer \u00bb  v\u00e9cu \u00e0 la pr\u00e9fecture de Bobigny dans le 9-3, pour renouveler le titre de s\u00e9jour.\r\nComment j\u2019ai mont\u00e9 le GDGRennes-Android? Est-ce que mon premier pr\u00e9nom, \u00e0 connotation africaine, a \u00e9t\u00e9 un frein pour ma recherche d\u2019emploi?  Est-ce que j\u2019ai r\u00e9ussi \u00e0 me faire une petite place dans l\u2019\u00e9cosyst\u00e8me informatique, associatif, collaboratif en France? Que suis-je devenue aujourd\u2019hui?  Venez me poser toutes les questions, sans tabou. Je vous ferais un bilan de 12 ans de vie, d\u2019une ing\u00e9nieure informaticienne immigr\u00e9e, vivant chez les Gaulois...InchAllah. ",
+        "end": "2022-05-25T17:50:00",
+        "event": "2022",
+        "format": "LIGHTNING_TALK",
+        "id": "623ad67c8a5c755e7139c6fa",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHIC",
+        "slug": "journal-d-une-immigree-fondatrice-du-gdgrennes-android",
+        "speakerIds": [
+            "AnnetLenaNdiaye"
+        ],
+        "start": "2022-05-25T17:30:00",
+        "summary": "En 2010, j\u2019ai immigr\u00e9 chez les Gaulois. Je partagerai avec vous de l\u2019enfer \u00e0 la pr\u00e9fecture de Bobigny dans le 9-3, pour renouveler le titre de s\u00e9jour. Est-ce que mon premier pr\u00e9nom, a \u00e9t\u00e9 un frein pour ma recherche d\u2019emploi? Je vous ferais un bilan de 12 ans de vie, d\u2019une immigr\u00e9e chez les Gaulois.",
+        "title": "Journal d'une immigr\u00e9e, Fondatrice du GDGRennes-Android",
+        "topic": "aliens",
+        "video": "https://vimeo.com/728605346"
+    },
+    {
+        "addedAt": "2022-03-23T09:12:44.728",
+        "description": "Chez **Innovorder**, nous sommes sp\u00e9cialis\u00e9s dans les solutions Android pour les restaurants et nous n'utilisons pas les Play Services. Nous avons donc d\u00e9ploy\u00e9 un micro-service en **Ktor** d\u00e9di\u00e9 \u00e0 la mise \u00e0 jour de nos applications mobiles pour avoir un contr\u00f4le total sur les d\u00e9ploiements de nos mises \u00e0 jour.\r\n\r\nNous croyons fermement en **Ktor** et avons massivement investi dans **Kotlin** au sein de l'entreprise.\r\n\r\nJ'ai \u00e9crit une s\u00e9rie de 3 articles, dont deux ont \u00e9t\u00e9 publi\u00e9s par **Kotlin Weekly**, la plus grande newsletter **Kotlin**.\r\n\r\n- **[D\u00e9ployer un microservice dans Kotlin avec Ktor \u2014 Partie 1](https://innovorder.dev/deploy-a-microservice-in-kotlin-with-ktor-part-1-2691fef75e1d)**\r\n- **[D\u00e9ployer un microservice dans Kotlin avec Ktor \u2014 Partie 2](https://innovorder.dev/deploy-a-microservice-in-kotlin-with-ktor-part-2-8c431b56dc51)**\r\n- **[D\u00e9ployer un microservice dans Kotlin avec Ktor \u2014 Partie 3](https://innovorder.dev/deploy-a-microservice-in-kotlin-with-ktor-part-3-e99312f0e7f8)**",
+        "end": "2022-05-25T17:50:00",
+        "event": "2022",
+        "format": "LIGHTNING_TALK",
+        "id": "623ad67c8a5c755e7139c703",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHID",
+        "slug": "live-coding-d-un-serveur-web-avec-ktor",
+        "speakerIds": [
+            "renaud_mathieu"
+        ],
+        "start": "2022-05-25T17:30:00",
+        "summary": "Ktor est un framework Kotlin d\u00e9di\u00e9 \u00e0 la cr\u00e9ation de serveurs et de clients asynchrones dans des syst\u00e8mes connect\u00e9s. Dans cette session, nous d\u00e9couvrirons les concepts de base de Ktor 2 en codant en live un serveur HTTP \u00e0 partir de z\u00e9ro \u00e0 l'aide de Ktor Server !",
+        "title": "Live-coding d'un serveur web avec Ktor",
+        "topic": "tech",
+        "video": "https://vimeo.com/728604532"
     },
     {
         "addedAt": "2022-03-23T09:12:44.735",
@@ -1260,46 +1300,6 @@
         "title": "Rust \u00e0 la rescousse des performances de javascript",
         "topic": "tech",
         "video": "https://vimeo.com/728604543"
-    },
-    {
-        "addedAt": "2022-03-23T09:12:44.728",
-        "description": "Chez **Innovorder**, nous sommes sp\u00e9cialis\u00e9s dans les solutions Android pour les restaurants et nous n'utilisons pas les Play Services. Nous avons donc d\u00e9ploy\u00e9 un micro-service en **Ktor** d\u00e9di\u00e9 \u00e0 la mise \u00e0 jour de nos applications mobiles pour avoir un contr\u00f4le total sur les d\u00e9ploiements de nos mises \u00e0 jour.\r\n\r\nNous croyons fermement en **Ktor** et avons massivement investi dans **Kotlin** au sein de l'entreprise.\r\n\r\nJ'ai \u00e9crit une s\u00e9rie de 3 articles, dont deux ont \u00e9t\u00e9 publi\u00e9s par **Kotlin Weekly**, la plus grande newsletter **Kotlin**.\r\n\r\n- **[D\u00e9ployer un microservice dans Kotlin avec Ktor \u2014 Partie 1](https://innovorder.dev/deploy-a-microservice-in-kotlin-with-ktor-part-1-2691fef75e1d)**\r\n- **[D\u00e9ployer un microservice dans Kotlin avec Ktor \u2014 Partie 2](https://innovorder.dev/deploy-a-microservice-in-kotlin-with-ktor-part-2-8c431b56dc51)**\r\n- **[D\u00e9ployer un microservice dans Kotlin avec Ktor \u2014 Partie 3](https://innovorder.dev/deploy-a-microservice-in-kotlin-with-ktor-part-3-e99312f0e7f8)**",
-        "end": "2022-05-25T17:50:00",
-        "event": "2022",
-        "format": "LIGHTNING_TALK",
-        "id": "623ad67c8a5c755e7139c703",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "AMPHID",
-        "slug": "live-coding-d-un-serveur-web-avec-ktor",
-        "speakerIds": [
-            "renaud_mathieu"
-        ],
-        "start": "2022-05-25T17:30:00",
-        "summary": "Ktor est un framework Kotlin d\u00e9di\u00e9 \u00e0 la cr\u00e9ation de serveurs et de clients asynchrones dans des syst\u00e8mes connect\u00e9s. Dans cette session, nous d\u00e9couvrirons les concepts de base de Ktor 2 en codant en live un serveur HTTP \u00e0 partir de z\u00e9ro \u00e0 l'aide de Ktor Server !",
-        "title": "Live-coding d'un serveur web avec Ktor",
-        "topic": "tech",
-        "video": "https://vimeo.com/728604532"
-    },
-    {
-        "addedAt": "2022-03-23T09:12:44.713",
-        "description": "Ing\u00e9nieure informaticienne, j\u2019ai quitt\u00e9 mon bled en 2010 pour immigrer chez les Gaulois. Je partage avec vous de \u00ab l\u2019enfer \u00bb  v\u00e9cu \u00e0 la pr\u00e9fecture de Bobigny dans le 9-3, pour renouveler le titre de s\u00e9jour.\r\nComment j\u2019ai mont\u00e9 le GDGRennes-Android? Est-ce que mon premier pr\u00e9nom, \u00e0 connotation africaine, a \u00e9t\u00e9 un frein pour ma recherche d\u2019emploi?  Est-ce que j\u2019ai r\u00e9ussi \u00e0 me faire une petite place dans l\u2019\u00e9cosyst\u00e8me informatique, associatif, collaboratif en France? Que suis-je devenue aujourd\u2019hui?  Venez me poser toutes les questions, sans tabou. Je vous ferais un bilan de 12 ans de vie, d\u2019une ing\u00e9nieure informaticienne immigr\u00e9e, vivant chez les Gaulois...InchAllah. ",
-        "end": "2022-05-25T17:50:00",
-        "event": "2022",
-        "format": "LIGHTNING_TALK",
-        "id": "623ad67c8a5c755e7139c6fa",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "AMPHIC",
-        "slug": "journal-d-une-immigree-fondatrice-du-gdgrennes-android",
-        "speakerIds": [
-            "AnnetLenaNdiaye"
-        ],
-        "start": "2022-05-25T17:30:00",
-        "summary": "En 2010, j\u2019ai immigr\u00e9 chez les Gaulois. Je partagerai avec vous de l\u2019enfer \u00e0 la pr\u00e9fecture de Bobigny dans le 9-3, pour renouveler le titre de s\u00e9jour. Est-ce que mon premier pr\u00e9nom, a \u00e9t\u00e9 un frein pour ma recherche d\u2019emploi? Je vous ferais un bilan de 12 ans de vie, d\u2019une immigr\u00e9e chez les Gaulois.",
-        "title": "Journal d'une immigr\u00e9e, Fondatrice du GDGRennes-Android",
-        "topic": "aliens",
-        "video": "https://vimeo.com/728605346"
     },
     {
         "addedAt": "2022-04-01T11:22:00",
