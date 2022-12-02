@@ -128,7 +128,7 @@ class WebsiteRoutes(
             GET("/volunteer/mixette-donation/create", adminMixetteHandler::addDonation)
             GET("/volunteer/mixette-donation/create/{number}", adminMixetteHandler::addDonationForAttendee)
 
-            GET("/about", aboutHandler::findAboutView)
+            GET("/about") { aboutHandler.findAboutView(it, CURRENT_EVENT.toInt()) }
             GET("/accessibility", aboutHandler::accessibilityView)
             GET("/blog", blogHandler::findAllView)
             GET("/blog/{slug}", blogHandler::findOneView)
@@ -165,6 +165,9 @@ class WebsiteRoutes(
 
             (2012..CURRENT_EVENT.toInt()).forEach { year ->
                 GET("/admin/$year/feedback-wall") { talkHandler.findByEventView(feedbackWall(it, year)) }
+
+                // About
+                GET("/about/$year") { aboutHandler.findAboutView(it, year) }
 
                 // Sponsors
                 GET("/sponsors/$year") { sponsorHandler.viewSponsors(it, year) }

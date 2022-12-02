@@ -6,6 +6,7 @@ import mixit.event.model.EventService
 import mixit.event.model.SponsorshipLevel
 import mixit.routes.MustacheI18n
 import mixit.routes.MustacheI18n.TITLE
+import mixit.routes.MustacheI18n.YEAR
 import mixit.routes.MustacheTemplate.About
 import mixit.routes.MustacheTemplate.Accessibility
 import mixit.routes.MustacheTemplate.CodeOfConduct
@@ -13,7 +14,6 @@ import mixit.routes.MustacheTemplate.Come
 import mixit.routes.MustacheTemplate.Faq
 import mixit.routes.MustacheTemplate.Search
 import mixit.user.handler.dto.toSponsorDto
-import mixit.user.model.Role
 import mixit.user.model.UserService
 import mixit.util.language
 import org.springframework.stereotype.Component
@@ -25,23 +25,23 @@ import org.springframework.web.reactive.function.server.renderAndAwait
 @Component
 class AboutHandler(val userService: UserService, val eventService: EventService) {
 
-    suspend fun findAboutView(req: ServerRequest): ServerResponse {
-        val users = userService.findByRoles(Role.STAFF, Role.STAFF_IN_PAUSE)
-        val event = eventService.findByYear(MixitApplication.CURRENT_EVENT)
+    suspend fun findAboutView(req: ServerRequest, year: Int): ServerResponse {
+        val event = eventService.findByYear(year)
 
-        val staff = users.filter { it.role == Role.STAFF }.shuffled()
-        val staffInPause = users.filter { it.role == Role.STAFF_IN_PAUSE }.shuffled()
+        val staff = event.organizers.shuffled()
         val volunteers = event.volunteers.shuffled()
+
         val lang = req.language()
         return ok()
             .render(
                 About.template,
                 mapOf(
                     TITLE to About.title,
+                    YEAR to year,
+                    "isCurrent" to (year == MixitApplication.CURRENT_EVENT.toInt()),
                     "volunteers" to volunteers.map { it.toDto(lang) },
                     "hasVolunteers" to volunteers.isNotEmpty(),
-                    "staff" to staff.map { it.toDto(lang) },
-                    "inactiveStaff" to staffInPause.map { it.toDto(lang) }
+                    "staff" to staff.map { it.toDto(lang) }
                 )
             )
             .awaitSingle()
