@@ -2,11 +2,11 @@ package mixit.util.email
 
 import com.samskivert.mustache.Mustache
 import mixit.MixitProperties
+import mixit.routes.RouteFilterUtils
 import mixit.security.model.Cryptographer
 import mixit.user.model.User
 import mixit.util.encodeToBase64
 import mixit.util.errors.EmailSenderException
-import mixit.util.web.generateModelForExernalCall
 import org.slf4j.LoggerFactory
 import org.springframework.context.MessageSource
 import org.springframework.core.io.ResourceLoader
@@ -34,7 +34,8 @@ class EmailService(
     private val messageSource: MessageSource,
     private val cryptographer: Cryptographer,
     private val emailSender: EmailSender,
-    private val templateService: TemplateService
+    private val templateService: TemplateService,
+    private val routeFilterUtils: RouteFilterUtils
 ) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
@@ -46,12 +47,12 @@ class EmailService(
         subject: String? = null,
         model: Map<String, Any> = emptyMap()
     ) {
-
-        val emailSubject = subject ?: messageSource.getMessage("$templateName-subject", null, locale)
+        val i18nkey = "${templateName.substringAfter("email/")}-subject"
+        val emailSubject = subject ?: messageSource.getMessage(i18nkey, null, locale)
         val email = cryptographer.decrypt(user.email)!!
 
         runCatching {
-            generateModelForExernalCall(properties.baseUri, locale, messageSource).apply {
+            routeFilterUtils.generateModelForExernalCall(locale).apply {
                 putAll(model)
                 put("user", user)
                 put("encodedemail", URLEncoder.encode(email.encodeToBase64(), "UTF-8"))

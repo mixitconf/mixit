@@ -16,6 +16,7 @@ data class CachedEvent(
     val sponsors: List<CachedSponsor>,
     val organizations: List<CachedOrganization>,
     val volunteers: List<CachedStaff>,
+    val organizers: List<CachedStaff>,
     val photoUrls: List<Link>,
     val videoUrl: Link?,
     val schedulingFileUrl: String?,
@@ -32,11 +33,13 @@ data class CachedEvent(
             sponsors.map { s -> EventSponsoring(s.level, s.login, s.subscriptionDate) },
             organizations.map { o -> EventOrganization(o.login) },
             volunteers.map { v -> EventVolunteer(v.login) },
+            organizers.map { v -> EventOrganizer(v.login) },
             photoUrls,
             videoUrl,
             schedulingFileUrl,
             year
         )
 
-    fun filterBySponsorLevel(vararg levels: SponsorshipLevel) = sponsors.filter { levels.contains(it.level) }
+    fun filterBySponsorLevel(vararg levels: SponsorshipLevel): List<CachedSponsor> =
+        sponsors.filter { levels.contains(it.level) }
 }

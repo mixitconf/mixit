@@ -1,6 +1,16 @@
 package mixit.ticket.handler
 
+import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.MixitProperties
+import mixit.routes.MustacheI18n.CREATION_MODE
+import mixit.routes.MustacheI18n.MESSAGE
+import mixit.routes.MustacheI18n.TICKET
+import mixit.routes.MustacheI18n.TICKETS
+import mixit.routes.MustacheI18n.TITLE
+import mixit.routes.MustacheI18n.TYPES
+import mixit.routes.MustacheTemplate.AdminTicket
+import mixit.routes.MustacheTemplate.AdminTicketPrint
+import mixit.routes.MustacheTemplate.TicketError
 import mixit.security.MixitWebFilter
 import mixit.security.model.Cryptographer
 import mixit.ticket.model.Ticket
@@ -12,14 +22,15 @@ import mixit.util.errors.NotFoundException
 import mixit.util.extractFormData
 import mixit.util.json
 import mixit.util.seeOther
+import mixit.util.webSession
 import org.springframework.dao.DuplicateKeyException
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
-import org.springframework.web.reactive.function.server.body
+import org.springframework.web.reactive.function.server.bodyValueAndAwait
+import org.springframework.web.reactive.function.server.renderAndAwait
 import reactor.core.publisher.Mono
-import reactor.kotlin.core.publisher.switchIfEmpty
 import java.time.Instant
 
 @Component
@@ -30,132 +41,128 @@ class AdminTicketHandler(
 ) {
 
     companion object {
-        const val TEMPLATE_LIST = "admin-ticket"
-        const val TEMPLATE_PRINT = "admin-ticket-print"
-        const val TEMPLATE_EDIT = "admin-ticket-edit"
-        const val TEMPLATE_ERROR = "ticket-error"
         const val LIST_URI = "/admin/ticket"
     }
 
-    fun findAll(req: ServerRequest) = ok().json().body(service.findAll().map { tickets ->
-        tickets.map { it.toEntity(cryptographer) }
-    })
+    suspend fun findAll(req: ServerRequest): ServerResponse {
+        val tickets = service.findAll().map { it.toEntity(cryptographer) }
+        return ok().json().bodyValueAndAwait(tickets)
+    }
 
-    fun ticketing(req: ServerRequest) =
-        ok().render(
-            if (properties.feature.lotteryResult) TEMPLATE_LIST else throw NotFoundException(),
-            mapOf(
-                Pair("title", "admin.ticket.title"),
-                Pair("tickets", service.findAll().map { tickets ->
-                    tickets.map { it.toDto(cryptographer) }
-                })
-            )
+    suspend fun ticketing(req: ServerRequest): ServerResponse {
+        val tickets = service.findAll().map { it.toDto(cryptographer) }
+        val params = mapOf(
+            TITLE to AdminTicket.title,
+            TICKETS to tickets
         )
+        val template = if (properties.feature.lotteryResult) AdminTicket.template else throw NotFoundException()
+        return ok().renderAndAwait(template, params)
+    }
 
-    fun printTicketing(req: ServerRequest) =
-        ok().render(
-            if (properties.feature.lotteryResult) TEMPLATE_PRINT else throw NotFoundException(),
-            mapOf(
-                Pair("title", "admin.ticket.title"),
-                Pair("tickets", service.findAll().map { tickets ->
-                    tickets.map { ticket ->
-                        ticket.toDto(cryptographer)
-                            .copy(
-                                firstname = ticket.firstname?.uppercase() ?: ticket.lastname.uppercase(),
-                                lastname = if (ticket.firstname == null) "" else ticket.lastname.uppercase()
-                            )
-                    }
-                })
-            )
+    suspend fun printTicketing(req: ServerRequest): ServerResponse {
+        val tickets = service.findAll().map { ticket ->
+            ticket.toDto(cryptographer)
+                .copy(
+                    firstname = ticket.firstname?.uppercase() ?: ticket.lastname.uppercase(),
+                    lastname = if (ticket.firstname == null) "" else ticket.lastname.uppercase()
+                )
+        }
+        val template =
+            if (properties.feature.lotteryResult) AdminTicketPrint.template else throw NotFoundException()
+        val params = mapOf(
+            TITLE to "admin.ticket.title",
+            TICKETS to tickets
         )
+        return ok().renderAndAwait(template, params)
+    }
 
-    fun createTicket(req: ServerRequest): Mono<ServerResponse> =
+    suspend fun createTicket(req: ServerRequest): ServerResponse =
         this.adminTicket()
 
-    fun editTicket(req: ServerRequest): Mono<ServerResponse> =
-        service.findOne(req.pathVariable("number")).flatMap { this.adminTicket(it.toEntity(cryptographer)) }
-
-    private fun adminTicket(ticket: Ticket = Ticket(cryptographer.encrypt(Ticket.generateNewNumber())!!, "", TicketType.ATTENDEE, "", "")) =
-        ok().render(
-            if (properties.feature.lotteryResult) TEMPLATE_EDIT else throw NotFoundException(),
-            mapOf(
-                Pair("creationMode", ticket.encryptedEmail.isEmpty()),
-                Pair("ticket", TicketDto(ticket, cryptographer)),
-                Pair("types", enumMatcher(ticket) { ticket.type })
-            )
+    suspend fun editTicket(req: ServerRequest): ServerResponse =
+        this.adminTicket(
+            service
+                .findOneOrNull(req.pathVariable("number"))
+                ?.toEntity(cryptographer)
+                ?: throw NotFoundException()
         )
 
-    fun submit(req: ServerRequest): Mono<ServerResponse> =
-        req.extractFormData().flatMap { formData ->
-            service.findByNumber(formData["number"]!!)
-                .map {
-                    it.toEntity(cryptographer).copy(
-                        encryptedEmail = cryptographer.encrypt(formData["email"]!!.lowercase())!!,
-                        firstname = cryptographer.encrypt(formData["firstname"]),
-                        lastname = cryptographer.encrypt(formData["lastname"])!!,
-                        externalId = cryptographer.encrypt(formData["externalId"]),
-                        type = TicketType.valueOf(formData["type"]!!),
-                    )
-                }
-                .switchIfEmpty(
-                    Mono.just(
-                        Ticket(
-                            number = cryptographer.encrypt(formData["number"])!!,
-                            encryptedEmail = cryptographer.encrypt(formData["email"]!!.lowercase())!!,
-                            firstname = cryptographer.encrypt(formData["firstname"]),
-                            lastname = cryptographer.encrypt(formData["lastname"])!!,
-                            externalId = cryptographer.encrypt(formData["externalId"]),
-                            lotteryRank = formData["lotteryRank"]?.toInt(),
-                            createdAt = Instant.parse(formData["createdAt"])!!,
-                            type = TicketType.valueOf(formData["type"]!!),
-                        )
-                    )
-                )
-                .flatMap { ticket ->
-                    service.save(ticket)
-                        .then(seeOther("${properties.baseUri}$LIST_URI"))
-                        .onErrorResume(DuplicateKeyException::class.java) {
-                            ok().render(
-                                TEMPLATE_ERROR,
-                                mapOf(
-                                    Pair("message", "admin.ticket.error.alreadyexists"),
-                                    Pair("title", "admin.ticket.title")
-                                )
-                            )
-                        }
-                }
-        }
+    private suspend fun adminTicket(ticket: Ticket = Ticket.empty(cryptographer)): ServerResponse {
+        val template =
+            if (properties.feature.lotteryResult) AdminTicketPrint.template else throw NotFoundException()
+        val params = mapOf(
+            TITLE to AdminTicketPrint.title,
+            CREATION_MODE to ticket.encryptedEmail.isEmpty(),
+            TICKET to ticket,
+            TYPES to enumMatcher(ticket) { ticket.type }
+        )
+        return ok().renderAndAwait(template, params)
+    }
 
-    fun adminDeleteTicket(req: ServerRequest): Mono<ServerResponse> =
-        req.extractFormData().flatMap { formData ->
-            service
-                .deleteOne(formData["number"]!!)
-                .then(seeOther("${properties.baseUri}$LIST_URI"))
-        }
+    suspend fun submit(req: ServerRequest): ServerResponse {
+        val formData = req.extractFormData()
+        val existingTicket = service.findByNumber(formData["number"]!!)
+        val ticket = existingTicket
+            ?.toEntity(cryptographer)
+            ?.copy(
+                encryptedEmail = cryptographer.encrypt(formData["email"]!!.lowercase())!!,
+                firstname = cryptographer.encrypt(formData["firstname"]),
+                lastname = cryptographer.encrypt(formData["lastname"])!!,
+                externalId = cryptographer.encrypt(formData["externalId"]),
+                type = TicketType.valueOf(formData["type"]!!),
+            )
+            ?: Ticket(
+                number = cryptographer.encrypt(formData["number"])!!,
+                encryptedEmail = cryptographer.encrypt(formData["email"]!!.lowercase())!!,
+                firstname = cryptographer.encrypt(formData["firstname"]),
+                lastname = cryptographer.encrypt(formData["lastname"])!!,
+                externalId = cryptographer.encrypt(formData["externalId"]),
+                lotteryRank = formData["lotteryRank"]?.toInt(),
+                createdAt = Instant.parse(formData["createdAt"])!!,
+                type = TicketType.valueOf(formData["type"]!!),
+            )
 
-    fun showAttendee(req: ServerRequest): Mono<ServerResponse> =
-        service.findByNumber(req.pathVariable("number"))
-            .flatMap { attendee ->
-                req.session()
-                    .flatMap { session ->
-                        when (session.getAttribute<Role>(MixitWebFilter.SESSION_ROLE_KEY)) {
-                            Role.STAFF -> {
-                                // A staff member is redirected to Mixette form
-                                seeOther("${properties.baseUri}/admin/mixette-donation/create/${attendee.number}")
-                            }
-                            Role.VOLUNTEER -> {
-                                // A staff member is redirected to Mixette form
-                                seeOther("${properties.baseUri}/volunteer/mixette-donation/create/${attendee.number}")
-                            }
-                            else -> {
-                                // Other members could be redirected to user profile in the future
-                                seeOther("${properties.baseUri}/")
-                            }
-                        }
-                    }
-                    .switchIfEmpty {
-                        // Other members are redirected to user view
-                        seeOther("${properties.baseUri}/")
-                    }
+        val params = mapOf(
+            TITLE to TicketError.title,
+            MESSAGE to "admin.ticket.error.alreadyexists"
+        )
+
+        val result = service.save(ticket)
+            .onErrorResume(DuplicateKeyException::class.java) { Mono.empty() }
+            .awaitSingleOrNull()
+
+        return result?.let { seeOther("${properties.baseUri}$LIST_URI") } ?: ok().renderAndAwait(
+            TicketError.template,
+            params
+        )
+    }
+
+    suspend fun adminDeleteTicket(req: ServerRequest): ServerResponse {
+        val formData = req.extractFormData()
+        service.deleteOne(formData["number"]!!).awaitSingleOrNull()
+        return seeOther("${properties.baseUri}$LIST_URI")
+    }
+
+    suspend fun showAttendee(req: ServerRequest): ServerResponse {
+        val attendee = service.findByNumber(req.pathVariable("number"))
+            ?: return seeOther("${properties.baseUri}/")
+
+        val session = req.webSession()
+        return when (session.getAttribute<Role>(MixitWebFilter.SESSION_ROLE_KEY)) {
+            Role.STAFF -> {
+                // A staff member is redirected to Mixette form
+                seeOther("${properties.baseUri}/admin/mixette-donation/create/${attendee.number}")
             }
+
+            Role.VOLUNTEER -> {
+                // A staff member is redirected to Mixette form
+                seeOther("${properties.baseUri}/volunteer/mixette-donation/create/${attendee.number}")
+            }
+
+            else -> {
+                // Other members could be redirected to user profile in the future
+                seeOther("${properties.baseUri}/")
+            }
+        }
+    }
 }

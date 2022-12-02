@@ -1,5 +1,7 @@
 package mixit.user.model
 
+import mixit.MixitApplication.Companion.MIXIT
+import mixit.MixitApplication.Companion.MIXIT_EMAIL
 import mixit.security.model.Cryptographer
 import mixit.talk.model.Language
 import mixit.util.encodeToBase64
@@ -33,6 +35,13 @@ data class User(
     var externalAppToken: String? = null,
     var newsletterSubscriber: Boolean = false
 ) {
+    companion object {
+        fun empty(): User =
+            User(login = "", firstname = "", lastname = "", email = "")
+
+        fun mixit(): User =
+            User(login = MIXIT, firstname = MIXIT, lastname = MIXIT, email = MIXIT_EMAIL)
+    }
     val tokenLifeTime: Duration
         get() = Duration.between(LocalDateTime.now(), tokenExpiration)
 }

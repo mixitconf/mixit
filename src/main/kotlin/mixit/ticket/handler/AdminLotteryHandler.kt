@@ -1,6 +1,9 @@
 package mixit.ticket.handler
 
+import kotlinx.coroutines.reactor.awaitSingle
 import mixit.MixitProperties
+import mixit.routes.MustacheI18n.TITLE
+import mixit.routes.MustacheTemplate.AdminLottery
 import mixit.security.model.Cryptographer
 import mixit.ticket.model.LotteryTicket
 import mixit.ticket.repository.LotteryRepository
@@ -10,8 +13,7 @@ import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
-import reactor.core.publisher.Mono
-import reactor.kotlin.core.publisher.toFlux
+import org.springframework.web.reactive.function.server.renderAndAwait
 import java.util.Random
 
 @Component
@@ -22,31 +24,25 @@ class AdminLotteryHandler(
 ) {
 
     companion object {
-        const val TEMPLATE_LIST = "admin-lottery"
         const val LIST_URI = "/admin/lottery"
     }
 
-    fun eraseRank(req: ServerRequest) = ticketRepository.eraseRank().flatMap {
-        adminTicketing(req)
+    suspend fun eraseRank(req: ServerRequest): ServerResponse {
+        ticketRepository.eraseRank()
+        return adminTicketing(req)
     }
 
-    fun randomDraw(req: ServerRequest) =
-        ticketRepository
-            .findAll()
-            .collectList()
-            .flatMapMany {
-                it.shuffled(Random())
-                    .distinctBy { listOf(it.firstname, it.lastname) }
-                    .mapIndexed { index, ticket -> ticket.copy(rank = index + 1) }
-                    .toFlux()
-            }
-            .flatMap {
-                ticketRepository.save(it)
-            }
-            .collectList()
-            .flatMap { adminTicketing(req) }
+    suspend fun randomDraw(req: ServerRequest): ServerResponse {
+        val tickets = ticketRepository.findAll()
+        tickets.shuffled(Random())
+            .distinctBy { listOf(it.firstname, it.lastname) }
+            .mapIndexed { index, ticket -> ticket.copy(rank = index + 1) }
+            .onEach { ticketRepository.save(it).awaitSingle() }
 
-    fun adminTicketing(req: ServerRequest): Mono<ServerResponse> {
+        return adminTicketing(req)
+    }
+
+    suspend fun adminTicketing(req: ServerRequest): ServerResponse {
         val tickets = ticketRepository.findAll()
             .map {
                 LotteryTicket(
@@ -56,23 +52,16 @@ class AdminLotteryHandler(
                     it.rank
                 )
             }
-            .sort(
-                Comparator.comparing(LotteryTicket::lastname)
-                    .thenComparing(Comparator.comparing(LotteryTicket::firstname))
-            )
-        return ok().render(
-            TEMPLATE_LIST,
-            mapOf(
-                Pair("tickets", tickets),
-                Pair("title", "admin.ticketing.title")
-            )
+            .sortedBy { it.lastname }
+        return ok().renderAndAwait(
+            AdminLottery.template,
+            mapOf("tickets" to tickets, TITLE to AdminLottery.title)
         )
     }
 
-    fun adminDeleteTicketing(req: ServerRequest): Mono<ServerResponse> =
-        req.extractFormData().flatMap { formData ->
-            ticketRepository
-                .deleteOne(cryptographer.encrypt(formData["email"])!!)
-                .then(seeOther("${properties.baseUri}$LIST_URI"))
-        }
+    suspend fun adminDeleteTicketing(req: ServerRequest): ServerResponse {
+        val formData = req.extractFormData()
+        ticketRepository.deleteOne(cryptographer.encrypt(formData["email"])!!).awaitSingle()
+        return seeOther("${properties.baseUri}$LIST_URI")
+    }
 }

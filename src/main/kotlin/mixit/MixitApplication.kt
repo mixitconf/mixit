@@ -10,6 +10,11 @@ data class SpeakerStart(val year: Int, val login: String)
 @EnableConfigurationProperties(MixitProperties::class)
 class MixitApplication {
     companion object {
+        const val CURRENT_EVENT = "2022"
+        const val TIMEZONE = "Europe/Paris"
+        const val MIXIT = "MiXiT"
+        const val MIXIT_EMAIL = "contact@mixitconf.org"
+
         val speakerStarInHistory = listOf(
             SpeakerStart(2015, "tastapod"),
             SpeakerStart(2016, "joel.spolsky"),

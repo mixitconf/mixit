@@ -2,6 +2,7 @@ package mixit.blog.repository
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import kotlinx.coroutines.reactor.awaitSingle
 import mixit.blog.model.Post
 import mixit.talk.model.Language
 import org.slf4j.LoggerFactory
@@ -13,7 +14,6 @@ import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.count
 import org.springframework.data.mongodb.core.find
 import org.springframework.data.mongodb.core.findById
-import org.springframework.data.mongodb.core.findOne
 import org.springframework.data.mongodb.core.query.Criteria.where
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.data.mongodb.core.query.TextCriteria
@@ -21,7 +21,6 @@ import org.springframework.data.mongodb.core.query.TextQuery
 import org.springframework.data.mongodb.core.query.isEqualTo
 import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
-import reactor.core.publisher.Flux
 
 @Repository
 class PostRepository(
@@ -42,30 +41,28 @@ class PostRepository(
 
     fun count() = template.count<Post>()
 
-    fun findOne(id: String) = template.findById<Post>(id)
+    suspend fun findOne(id: String) = template.findById<Post>(id).awaitSingle()
 
-    fun findBySlug(slug: String, lang: Language) =
-        template.findOne<Post>(Query(where("slug.$lang").isEqualTo(slug)))
-
-    fun findAll(lang: Language? = null): Flux<Post> {
+    suspend fun findAll(lang: Language? = null): List<Post> {
         val query = Query()
         query.with(Sort.by(Order(DESC, "addedAt")))
         // query.fields().exclude("content")
         if (lang != null) {
             query.addCriteria(where("title.$lang").exists(true))
         }
-        return template.find<Post>(query).doOnComplete { logger.info("Load all posts") }
+        return template
+            .find<Post>(query).doOnComplete { logger.info("Load all posts") }
+            .collectList()
+            .awaitSingle()
     }
 
-    fun findFullText(criteria: List<String>): Flux<Post> {
+    suspend fun findFullText(criteria: List<String>): List<Post> {
         val textCriteria = TextCriteria()
         criteria.forEach { textCriteria.matching(it) }
 
         val query = TextQuery(textCriteria).sortByScore()
-        return template.find(query)
+        return template.find<Post>(query).collectList().awaitSingle()
     }
-
-    fun deleteAll() = template.remove<Post>(Query())
 
     fun deleteOne(id: String) = template.remove<Post>(Query(where("_id").isEqualTo(id)))
 

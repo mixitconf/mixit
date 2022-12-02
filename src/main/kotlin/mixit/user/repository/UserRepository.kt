@@ -2,6 +2,8 @@ package mixit.user.repository
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import kotlinx.coroutines.reactor.awaitSingle
+import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.security.model.Cryptographer
 import mixit.user.model.Role
 import mixit.user.model.User
@@ -22,7 +24,6 @@ import org.springframework.data.mongodb.core.query.inValues
 import org.springframework.data.mongodb.core.query.isEqualTo
 import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
-import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 
 @Repository
@@ -43,48 +44,53 @@ class UserRepository(
         }
     }
 
-    fun findFullText(criteria: List<String>): Flux<User> {
+    suspend fun findFullText(criteria: List<String>): List<User> {
         val textCriteria = TextCriteria()
         criteria.forEach { textCriteria.matching(it) }
 
         val query = TextQuery(textCriteria).sortByScore()
-        return template.find(query)
+        return template.find<User>(query).collectList().awaitSingle()
     }
 
     fun count() = template.count<User>()
 
-    fun findByNonEncryptedEmail(email: String) = template.findOne<User>(
-        Query(
-            where("role").inValues(Role.STAFF, Role.STAFF_IN_PAUSE, Role.USER, Role.VOLUNTEER)
-                .orOperator(where("email").isEqualTo(cryptographer.encrypt(email)), where("emailHash").isEqualTo(email.encodeToMd5()))
-        )
-    )
+    suspend fun findByNonEncryptedEmail(email: String): User? =
+        template
+            .findOne<User>(
+                Query(
+                    where("role").inValues(Role.STAFF, Role.STAFF_IN_PAUSE, Role.USER, Role.VOLUNTEER)
+                        .orOperator(
+                            where("email").isEqualTo(cryptographer.encrypt(email)),
+                            where("emailHash").isEqualTo(email.encodeToMd5())
+                        )
+                )
+            )
+            .awaitSingleOrNull()
 
-    fun findByRoles(roles: List<Role>) =
-        template.find<User>(Query(where("role").inValues(roles)))
+    suspend fun findByRoles(roles: List<Role>): List<User> =
+        template.find<User>(Query(where("role").inValues(roles))).collectList().awaitSingle()
 
-    fun findOneByRoles(login: String, roles: List<Role>) =
-        template.findOne<User>(Query(where("role").inValues(roles).and("_id").isEqualTo(login)))
+    suspend fun findOneByRoles(login: String, roles: List<Role>): User? =
+        template
+            .findOne<User>(Query(where("role").inValues(roles).and("_id").isEqualTo(login)))
+            .awaitSingleOrNull()
 
-    fun findAll() =
-        template.findAll<User>().doOnComplete { logger.info("Load all users") }
+    suspend fun findAll(): List<User> =
+        template
+            .findAll<User>().doOnComplete { logger.info("Load all users") }
+            .collectList()
+            .awaitSingle()
 
-    fun findAllByIds(login: List<String>): Flux<User> {
+    suspend fun findAllByIds(login: List<String>): List<User> {
         val criteria = where("login").inValues(login)
-        return template.find(Query(criteria))
+        return template.find<User>(Query(criteria)).collectList().awaitSingle()
     }
 
-    fun findOne(login: String) =
-        template.findById<User>(login)
+    suspend fun findOneOrNull(login: String): User? =
+        template.findById<User>(login).awaitSingleOrNull()
 
-    fun findMany(logins: List<String>) =
-        template.find<User>(Query(where("_id").inValues(logins)))
-
-    fun findByLegacyId(id: Long) =
-        template.findOne<User>(Query(where("legacyId").isEqualTo(id)))
-
-    fun deleteAll() =
-        template.remove<User>(Query())
+    suspend fun findByLegacyId(id: Long): User? =
+        template.findOne<User>(Query(where("legacyId").isEqualTo(id))).awaitSingleOrNull()
 
     fun deleteOne(login: String) =
         template.remove<User>(Query(where("_id").isEqualTo(login)))

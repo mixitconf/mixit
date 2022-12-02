@@ -8,30 +8,28 @@ import org.junit.jupiter.api.Test
  */
 class UrlValidatorTest {
 
-    val validator = UrlValidator()
-
     @Test
     fun `should accept URL null or empty`() {
-        assertThat(validator.isValid(null)).isTrue()
-        assertThat(validator.isValid("")).isTrue()
+        assertThat(UrlValidator.isValid(null)).isTrue
+        assertThat(UrlValidator.isValid("")).isTrue
     }
 
     @Test
     fun `should accept http or https adress`() {
-        assertThat(validator.isValid("https://mixitconf.org/mypage")).isTrue()
-        assertThat(validator.isValid("http://mixitconf.org/mypage")).isTrue()
+        assertThat(UrlValidator.isValid("https://mixitconf.org/mypage")).isTrue
+        assertThat(UrlValidator.isValid("http://mixitconf.org/mypage")).isTrue
     }
 
     @Test
     fun `should not accept email or ftp protocols`() {
-        assertThat(validator.isValid("ftp://mixitconf.org/mypage")).isFalse()
-        assertThat(validator.isValid("mailto://mixitconf.org/mypage")).isFalse()
+        assertThat(UrlValidator.isValid("ftp://mixitconf.org/mypage")).isFalse
+        assertThat(UrlValidator.isValid("mailto://mixitconf.org/mypage")).isFalse
     }
 
     @Test
     fun `should not accept other port than 80`() {
-        assertThat(validator.isValid("https://mixitconf.org/mypage")).isTrue()
-        assertThat(validator.isValid("https://mixitconf.org:80/mypage")).isTrue()
-        assertThat(validator.isValid("https://mixitconf.org:8080/mypage")).isFalse()
+        assertThat(UrlValidator.isValid("https://mixitconf.org/mypage")).isTrue
+        assertThat(UrlValidator.isValid("https://mixitconf.org:80/mypage")).isTrue
+        assertThat(UrlValidator.isValid("https://mixitconf.org:8080/mypage")).isFalse
     }
 }

@@ -14,18 +14,18 @@
     "watch": "onchange 'src/main/resources/templates/*.*' 'src/main/resources/messages*.properties' -- npm run copy & onchange 'src/main/sass/*.*' -- npm run scss & echo 'Watch is started'"
   },
   "dependencies": {
-    "bootstrap": "^5.1.3",
-    "qrcode-svg": "^1.1.0"
+    "bootstrap": "5.2.2",
+    "qrcode-svg": "1.1.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.0",
-    "cssnano": "^5.0.10",
-    "copyfiles": "^2.4.1",
-    "node-sass": "^6.0.1",
-    "onchange": "^7.1.0",
-    "postcss": "^8.3.11",
-    "postcss-cli": "^9.0.2",
-    "terser": "^5.9.0",
-    "typescript": "^4.4.4"
+    "autoprefixer": "10.4.13",
+    "cssnano": "5.1.14",
+    "copyfiles": "2.4.1",
+    "node-sass": "7.0.3",
+    "onchange": "7.1.0",
+    "postcss": "8.4.18",
+    "postcss-cli": "10.0.0",
+    "terser": "5.15.1",
+    "typescript": "4.8.4"
   }
 }

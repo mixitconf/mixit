@@ -1,7 +1,7 @@
 package mixit.user.model
 
 import mixit.talk.model.Language
-import mixit.user.handler.SponsorDto
+import mixit.user.handler.dto.SponsorDto
 import mixit.user.handler.logoType
 import mixit.user.handler.logoWebpUrl
 import mixit.util.toHTML
@@ -29,7 +29,7 @@ data class CachedOrganization(
         login,
         company,
         photoUrl ?: "unknown",
-        photoShape ==  PhotoShape.Rectangle,
+        photoShape == PhotoShape.Rectangle,
         logoType(photoUrl),
         logoWebpUrl(photoUrl),
         description[language],

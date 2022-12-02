@@ -1,6 +1,6 @@
 package mixit.mailing.handler
 
-import mixit.event.handler.AdminEventHandler.Companion.CURRENT_EVENT
+import mixit.MixitApplication.Companion.CURRENT_EVENT
 import mixit.event.model.EventService
 import mixit.mailing.model.RecipientType
 import mixit.mailing.model.RecipientType.Attendee
@@ -10,6 +10,8 @@ import mixit.mailing.model.RecipientType.Sponsor
 import mixit.mailing.model.RecipientType.Staff
 import mixit.mailing.model.RecipientType.StaffInPause
 import mixit.mailing.model.RecipientType.Volunteers
+import mixit.routes.MustacheI18n.TITLE
+import mixit.routes.MustacheTemplate.AdminMailingList
 import mixit.security.model.Cryptographer
 import mixit.talk.model.TalkService
 import mixit.ticket.model.CachedTicket
@@ -26,7 +28,7 @@ import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
-import reactor.core.publisher.Mono
+import org.springframework.web.reactive.function.server.renderAndAwait
 
 @Component
 class MailingListHandler(
@@ -37,55 +39,51 @@ class MailingListHandler(
     private val cryptographer: Cryptographer
 ) {
 
-    private enum class MailingPages(val template: String) {
-        LIST("admin-mailing-list")
+    suspend fun listMailing(req: ServerRequest): ServerResponse {
+        val params = mapOf(
+            TITLE to AdminMailingList.title,
+            "roles" to RecipientType.values().sorted().map { Pair(it, false) }.toList()
+        )
+        return ok().renderAndAwait(AdminMailingList.template, params)
     }
 
-    fun listMailing(req: ServerRequest) =
-        ok().render(
-            MailingPages.LIST.template,
-            mapOf(
-                Pair("title", "mailinglist.title"),
-                Pair("roles", RecipientType.values().sorted().map { Pair(it, false) }.toList())
-            )
+    suspend fun generateMailinglist(req: ServerRequest): ServerResponse {
+        val formData = req.extractFormData()
+        val recipientType = formData["recipientType"]?.let { RecipientType.valueOf(it) } ?: Staff
+        val params = mapOf(
+            TITLE to AdminMailingList.title,
+            "roles" to RecipientType.values().sorted().map { Pair(it, it == recipientType) }.toList(),
+            "mailinglist" to getMailingList(recipientType)
         )
+        return ok().renderAndAwait(AdminMailingList.template, params)
+    }
 
-    fun generateMailinglist(req: ServerRequest): Mono<ServerResponse> =
-        req.extractFormData().flatMap { formData ->
-            val recipientType = formData["recipientType"]?.let { RecipientType.valueOf(it) } ?: Staff
-            ok().render(
-                MailingPages.LIST.template,
-                mapOf(
-                    Pair("title", "mailinglist.title"),
-                    Pair("roles", RecipientType.values().sorted().map { Pair(it, it == recipientType) }.toList()),
-                    Pair("mailinglist", getMailingList(recipientType))
-                )
-            )
-        }
-
-    private fun getMailingList(recipientType: RecipientType): Mono<List<MailinglistEntry>> =
+    private suspend fun getMailingList(recipientType: RecipientType): List<MailinglistEntry> =
         when (recipientType) {
             Staff ->
-                userService.findByRoles(Role.STAFF).map { it.map { staff -> MailinglistEntry(staff) } }
+                userService.findByRoles(Role.STAFF).map { staff -> MailinglistEntry(staff) }
+
             StaffInPause ->
-                userService.findByRoles(Role.STAFF_IN_PAUSE).map { it.map { staff -> MailinglistEntry(staff) } }
+                userService.findByRoles(Role.STAFF_IN_PAUSE).map { staff -> MailinglistEntry(staff) }
+
             Volunteers ->
-                eventService.findByYear(CURRENT_EVENT.toInt())
-                    .map { it.volunteers.map { volunteer -> MailinglistEntry(volunteer) } }
+                eventService.findByYear(CURRENT_EVENT).volunteers.map { volunteer -> MailinglistEntry(volunteer) }
+
             Sponsor ->
-                eventService.findByYear(CURRENT_EVENT.toInt())
-                    .map { it.sponsors.map { sponsor -> MailinglistEntry(sponsor) } }
+                eventService.findByYear(CURRENT_EVENT).sponsors.map { sponsor -> MailinglistEntry(sponsor) }
+
             Speaker ->
                 talkService.findByEvent(CURRENT_EVENT)
-                    .map { it.flatMap { talk -> talk.speakers }.map { speaker -> MailinglistEntry(speaker) } }
+                    .flatMap { talk -> talk.speakers }
+                    .map { speaker -> MailinglistEntry(speaker) }
+
             Organization ->
-                eventService.findByYear(CURRENT_EVENT.toInt())
-                    .map { it.organizations.map { sponsor -> MailinglistEntry(sponsor) } }
+                eventService.findByYear(CURRENT_EVENT).organizations.map { sponsor -> MailinglistEntry(sponsor) }
+
             Attendee ->
-                ticketService.findAll().map { it.map { attendee -> MailinglistEntry(attendee) } }
+                ticketService.findAll().map { attendee -> MailinglistEntry(attendee) }
             // TODO add user who have subscribed to our newletter
         }
-
 
     inner class MailinglistEntry(val firstname: String?, val lastname: String, val email: String) {
         constructor(user: CachedUser) : this(

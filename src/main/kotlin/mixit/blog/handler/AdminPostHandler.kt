@@ -1,8 +1,12 @@
 package mixit.blog.handler
 
+import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.MixitProperties
 import mixit.blog.model.BlogService
 import mixit.blog.model.Post
+import mixit.routes.MustacheI18n
+import mixit.routes.MustacheTemplate.AdminBlog
+import mixit.routes.MustacheTemplate.AdminPost
 import mixit.talk.model.Language.ENGLISH
 import mixit.talk.model.Language.FRENCH
 import mixit.util.extractFormData
@@ -13,63 +17,68 @@ import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
-import reactor.core.publisher.Mono
+import org.springframework.web.reactive.function.server.renderAndAwait
 import java.time.LocalDateTime
 
 @Component
 class AdminPostHandler(private val service: BlogService, private val properties: MixitProperties) {
 
     companion object {
-        const val TEMPLATE_LIST = "admin-blog"
-        const val TEMPLATE_EDIT = "admin-post"
         const val LIST_URI = "/admin/blog"
     }
 
-    fun adminBlog(req: ServerRequest): Mono<ServerResponse> {
+    suspend fun adminBlog(req: ServerRequest): ServerResponse {
         val posts = service
             .findAll()
-            .map { posts -> posts.sortedByDescending { it.addedAt }.map { it.toDto(req.language()) } }
-        return ok().render(TEMPLATE_LIST, mapOf(Pair("posts", posts)))
+            .sortedBy { it.addedAt }
+            .map { it.toDto(req.language()) }
+        return ok().renderAndAwait(AdminBlog.template, mapOf(MustacheI18n.POSTS to posts))
     }
 
-    fun createPost(req: ServerRequest): Mono<ServerResponse> =
-        this.adminPost()
+    suspend fun createPost(req: ServerRequest): ServerResponse =
+        this.adminPost(null)
 
-    fun editPost(req: ServerRequest): Mono<ServerResponse> =
-        service.findOne(req.pathVariable("id")).map { it.toPost() }.flatMap(this::adminPost)
+    suspend fun editPost(req: ServerRequest): ServerResponse =
+        this.adminPost(service.findOneOrNull(req.pathVariable("id"))?.toPost())
 
-    fun adminDeletePost(req: ServerRequest): Mono<ServerResponse> =
-        req.extractFormData().flatMap { formData ->
-            service.deleteOne(formData["id"]!!).then(seeOther("${properties.baseUri}$LIST_URI"))
-        }
+    suspend fun adminDeletePost(req: ServerRequest): ServerResponse {
+        val formData = req.extractFormData()
+        service.deleteOne(formData["id"]!!).awaitSingleOrNull()
+        return seeOther("${properties.baseUri}$LIST_URI")
+    }
 
-    private fun adminPost(post: Post = Post("")) = ok().render(
-        TEMPLATE_EDIT,
-        mapOf(
-            Pair("post", post),
-            Pair("title-fr", post.title[FRENCH]),
-            Pair("title-en", post.title[ENGLISH]),
-            Pair("headline-fr", post.headline[FRENCH]),
-            Pair("headline-en", post.headline[ENGLISH]),
-            Pair("content-fr", post.content?.get(FRENCH)),
-            Pair("content-en", post.content?.get(ENGLISH))
-        )
-    )
+    private suspend fun adminPost(post: Post?): ServerResponse {
+        val blogpost = post ?: Post("")
 
-    fun adminSavePost(req: ServerRequest): Mono<ServerResponse> =
-        req.extractFormData().flatMap { formData ->
-            val post = Post(
-                id = formData["id"],
-                addedAt = LocalDateTime.parse(formData["addedAt"]),
-                authorId = formData["authorId"]!!,
-                title = mapOf(Pair(FRENCH, formData["title-fr"]!!), Pair(ENGLISH, formData["title-en"]!!)),
-                slug = mapOf(
-                    Pair(FRENCH, formData["title-fr"]!!.toSlug()),
-                    Pair(ENGLISH, formData["title-en"]!!.toSlug())
-                ),
-                headline = mapOf(Pair(FRENCH, formData["headline-fr"]!!), Pair(ENGLISH, formData["headline-en"]!!)),
-                content = mapOf(Pair(FRENCH, formData["content-fr"]!!), Pair(ENGLISH, formData["content-en"]!!))
+        return ok().renderAndAwait(
+            AdminPost.template,
+            mapOf(
+                Pair("post", blogpost),
+                Pair("title-fr", blogpost.title[FRENCH]),
+                Pair("title-en", blogpost.title[ENGLISH]),
+                Pair("headline-fr", blogpost.headline[FRENCH]),
+                Pair("headline-en", blogpost.headline[ENGLISH]),
+                Pair("content-fr", blogpost.content?.get(FRENCH)),
+                Pair("content-en", blogpost.content?.get(ENGLISH))
             )
-            service.save(post).then(seeOther("${properties.baseUri}$LIST_URI"))
-        }
+        )
+    }
+
+    suspend fun adminSavePost(req: ServerRequest): ServerResponse {
+        val formData = req.extractFormData()
+        val post = Post(
+            id = formData["id"],
+            addedAt = LocalDateTime.parse(formData["addedAt"]),
+            authorId = formData["authorId"]!!,
+            title = mapOf(Pair(FRENCH, formData["title-fr"]!!), Pair(ENGLISH, formData["title-en"]!!)),
+            slug = mapOf(
+                Pair(FRENCH, formData["title-fr"]!!.toSlug()),
+                Pair(ENGLISH, formData["title-en"]!!.toSlug())
+            ),
+            headline = mapOf(Pair(FRENCH, formData["headline-fr"]!!), Pair(ENGLISH, formData["headline-en"]!!)),
+            content = mapOf(Pair(FRENCH, formData["content-fr"]!!), Pair(ENGLISH, formData["content-en"]!!))
+        )
+        service.save(post).awaitSingleOrNull()
+        return seeOther("${properties.baseUri}$LIST_URI")
+    }
 }

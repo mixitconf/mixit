@@ -1,5 +1,7 @@
 package mixit.mailing.handler
 
+import kotlinx.coroutines.reactor.awaitSingle
+import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.MixitProperties
 import mixit.mailing.model.Mailing
 import mixit.mailing.model.RecipientType
@@ -10,6 +12,11 @@ import mixit.mailing.model.RecipientType.Staff
 import mixit.mailing.model.RecipientType.StaffInPause
 import mixit.mailing.model.RecipientType.Volunteers
 import mixit.mailing.repository.MailingRepository
+import mixit.routes.MustacheI18n.TITLE
+import mixit.routes.MustacheTemplate.AdminMailingConfirmation
+import mixit.routes.MustacheTemplate.AdminMailingEdit
+import mixit.routes.MustacheTemplate.AdminMailingList
+import mixit.routes.MustacheTemplate.EmailMailing
 import mixit.security.model.Cryptographer
 import mixit.user.model.CachedUser
 import mixit.user.model.Role
@@ -25,7 +32,7 @@ import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
-import reactor.core.publisher.Mono
+import org.springframework.web.reactive.function.server.renderAndAwait
 import java.time.LocalDateTime
 import java.util.Locale
 
@@ -39,57 +46,47 @@ class MailingHandler(
 ) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
+    suspend fun listMailing(req: ServerRequest): ServerResponse =
+        ok().renderAndAwait(
+            AdminMailingList.template,
+            mapOf(TITLE to "mailing.title", "mailings" to mailingRepository.findAll())
+        )
 
-    private enum class MailingPages(val template: String) {
-        LIST("admin-mailing"),
-        EDIT("admin-mailing-edit"),
-        CONFIRMATION("admin-mailing-confirmation"),
-        EMAIL("email-mailing")
+    suspend fun createMailing(req: ServerRequest): ServerResponse =
+        this.displayMailing()
+
+    suspend fun editMailing(req: ServerRequest): ServerResponse {
+        val mailing = mailingRepository.findOne(req.pathVariable("id"))
+        return displayMailing(mailing)
     }
 
-    fun listMailing(req: ServerRequest) =
-        ok().render(
-            MailingPages.LIST.template,
-            mapOf(Pair("title", "mailing.title"), Pair("mailings", mailingRepository.findAll()))
+    private suspend fun displayMailing(mailing: Mailing? = null): ServerResponse =
+        ok().renderAndAwait(
+            AdminMailingEdit.template,
+            mapOf(
+                TITLE to "mailing.title",
+                "roles" to enumMatcher(mailing) { mailing?.type ?: Staff },
+                "mailing" to (mailing ?: Mailing()),
+                "recipientLogins" to (mailing?.recipientLogins?.joinToString() ?: emptyList<String>())
+            )
         )
 
-    fun createMailing(req: ServerRequest): Mono<ServerResponse> = this.displayMailing()
+    suspend fun deleteMailing(req: ServerRequest): ServerResponse {
+        val formData = req.extractFormData()
+        mailingRepository.deleteOne(formData["id"]!!).awaitSingleOrNull()
+        return seeOther("${properties.baseUri}/admin/mailings")
+    }
 
-    fun editMailing(req: ServerRequest) =
-        mailingRepository
-            .findOne(req.pathVariable("id"))
-            .flatMap { displayMailing(it) }
-
-    private fun displayMailing(mailing: Mailing? = null) = ok().render(
-        MailingPages.EDIT.template,
-        mapOf(
-            Pair("title", "mailing.title"),
-            Pair("roles", enumMatcher(mailing) { mailing?.type ?: Staff }),
-            Pair("mailing", mailing ?: Mailing()),
-            Pair("recipientLogins", mailing?.recipientLogins?.joinToString() ?: emptyList<String>())
+    suspend fun previewMailing(req: ServerRequest): ServerResponse {
+        val mailing = persistMailing(req)
+        val params = mapOf(
+            "user" to User().copy(firstname = "Bot"),
+            "message" to mailing.content.toHTML()
         )
-    )
+        return ok().renderAndAwait(EmailMailing.template, params)
+    }
 
-    fun deleteMailing(req: ServerRequest): Mono<ServerResponse> =
-        req.extractFormData().flatMap { formData ->
-            mailingRepository
-                .deleteOne(formData["id"]!!)
-                .then(seeOther("${properties.baseUri}/admin/mailings"))
-        }
-
-    fun previewMailing(req: ServerRequest): Mono<ServerResponse> =
-        persistMailing((req))
-            .flatMap {
-                ok().render(
-                    MailingPages.EMAIL.template,
-                    mapOf(
-                        Pair("user", User().copy(firstname = "Bot")),
-                        Pair("message", it.content.toHTML())
-                    )
-                )
-            }
-
-    private fun getUsers(mailing: Mailing): Mono<List<CachedUser>> {
+    private suspend fun getUsers(mailing: Mailing): List<CachedUser> {
         if (mailing.recipientLogins.isNotEmpty()) {
             return userService.findAllByIds(mailing.recipientLogins)
         }
@@ -98,15 +95,16 @@ class MailingHandler(
                 Staff -> userService.findByRoles(Role.STAFF)
                 StaffInPause -> userService.findByRoles(Role.STAFF_IN_PAUSE)
                 Volunteers -> userService.findByRoles(Role.VOLUNTEER)
-                RecipientType.Attendee, Sponsor, Organization, Speaker -> Mono.empty()
+                RecipientType.Attendee, Sponsor, Organization, Speaker -> emptyList()
             }
         }
-        return Mono.empty()
+        return emptyList()
     }
 
-    private fun persistMailing(req: ServerRequest): Mono<Mailing> =
-        req.extractFormData().flatMap { formData ->
-            mailingRepository.save(
+    private suspend fun persistMailing(req: ServerRequest): Mailing {
+        val formData = req.extractFormData()
+        return mailingRepository
+            .save(
                 Mailing(
                     id = formData["id"],
                     addedAt = LocalDateTime.parse(formData["addedAt"]),
@@ -115,40 +113,40 @@ class MailingHandler(
                     content = formData["content"]!!,
                     recipientLogins = formData["recipientLogins"]?.split(",") ?: emptyList()
                 )
-            )
+            ).awaitSingle()
+    }
+
+    suspend fun sendMailing(req: ServerRequest): ServerResponse {
+        val mailing = persistMailing(req).let {
+            val users = getUsers(it)
+            MailingDto(it.title, it.content, users.map { user -> user.toUser() })
         }
-
-    fun sendMailing(req: ServerRequest): Mono<ServerResponse> =
-        persistMailing(req)
-            .flatMap { mailing ->
-                getUsers(mailing).map { users ->
-                    MailingDto(mailing.title, mailing.content, users.map { it.toUser() })
-                }
-            }
-            .flatMap { mailing ->
-                mailing.users.forEach { user ->
-                    val email = cryptographer.decrypt(user.email)
-                    try {
-                        logger.info("Send a mailing to $email")
-                        emailService.send(
-                            MailingPages.EMAIL.template,
-                            user,
-                            Locale.FRANCE,
-                            mailing.title,
-                            mapOf(Pair("message", mailing.content.toHTML()))
-                        )
-                    } catch (e: Exception) {
-                        logger.error("Error on mailing sent to $email", e)
-                    }
-                }
-                ok().render(
-                    MailingPages.CONFIRMATION.template,
-                    mapOf(
-                        Pair("emails", mailing.users.mapNotNull { cryptographer.decrypt(it.email) })
-                    )
+        mailing.users.forEach { user ->
+            val email = cryptographer.decrypt(user.email)
+            try {
+                logger.info("Send a mailing to $email")
+                emailService.send(
+                    EmailMailing.template,
+                    user,
+                    Locale.FRANCE,
+                    mailing.title,
+                    mapOf(Pair("message", mailing.content.toHTML()))
                 )
+            } catch (e: Exception) {
+                logger.error("Error on mailing sent to $email", e)
             }
+        }
+        return ok()
+            .renderAndAwait(
+                AdminMailingConfirmation.template,
+                mapOf(
+                    "emails" to mailing.users.mapNotNull { cryptographer.decrypt(it.email) }
+                )
+            )
+    }
 
-    fun saveMailing(req: ServerRequest): Mono<ServerResponse> =
-        persistMailing((req)).then(seeOther("${properties.baseUri}/admin/mailings"))
+    suspend fun saveMailing(req: ServerRequest): ServerResponse {
+        persistMailing(req)
+        return seeOther("${properties.baseUri}/admin/mailings")
+    }
 }

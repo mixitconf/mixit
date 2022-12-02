@@ -1,8 +1,9 @@
 package mixit.ticket.model
 
+import kotlinx.coroutines.reactor.awaitSingle
 import mixit.security.model.Cryptographer
 import mixit.ticket.repository.TicketRepository
-import mixit.util.cache.CacheTemplate
+import mixit.util.cache.CacheCaffeineTemplate
 import mixit.util.cache.CacheZone
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Mono
@@ -11,24 +12,22 @@ import reactor.core.publisher.Mono
 class TicketService(
     private val repository: TicketRepository,
     private val cryptographer: Cryptographer
-) : CacheTemplate<CachedTicket>() {
+) : CacheCaffeineTemplate<CachedTicket>() {
 
     override val cacheZone: CacheZone = CacheZone.TICKET
+    override fun loader(): suspend () -> List<CachedTicket> =
+        { repository.findAll().map { ticket -> CachedTicket(cryptographer, ticket) }.collectList().awaitSingle() }
 
-    override fun findAll(): Mono<List<CachedTicket>> =
-        findAll { repository.findAll().map { ticket -> CachedTicket(cryptographer, ticket) }.collectList() }
+    suspend fun findByNumber(number: String): CachedTicket? =
+        findAll().firstOrNull { it.number == number }
 
-    fun findByNumber(number: String): Mono<CachedTicket> =
-        findAll().flatMap { tickets -> Mono.justOrEmpty(tickets.firstOrNull { it.number == number }) }
+    suspend fun findByEmail(email: String): CachedTicket? =
+        findAll().firstOrNull { it.email == email }
 
-    fun findByEmail(email: String): Mono<CachedTicket> =
-        findAll().flatMap { tickets -> Mono.justOrEmpty(tickets.firstOrNull { it.email == email }) }
-
-    fun findByLogin(login: String?): Mono<CachedTicket> =
-        findAll().flatMap { tickets ->
-            val ticket = tickets.filter { it.login != null }.firstOrNull() { it.login == login }
-            return@flatMap if (ticket == null) Mono.empty() else Mono.just(ticket)
-        }
+    suspend fun findByLogin(login: String?): CachedTicket? =
+        findAll()
+            .filter { it.login != null }
+            .firstOrNull() { it.login == login }
 
     fun save(ticket: Ticket): Mono<CachedTicket> =
         repository

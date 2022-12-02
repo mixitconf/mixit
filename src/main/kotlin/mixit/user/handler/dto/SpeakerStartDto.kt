@@ -1,4 +1,4 @@
-package mixit.user.handler
+package mixit.user.handler.dto
 
 import mixit.user.model.CachedSpeaker
 import mixit.util.camelCase

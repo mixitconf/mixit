@@ -2,6 +2,7 @@ package mixit.event.repository
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import kotlinx.coroutines.reactor.awaitSingle
 import mixit.event.model.Event
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
@@ -14,7 +15,6 @@ import org.springframework.data.mongodb.core.findOne
 import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.data.mongodb.core.query.isEqualTo
-import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
 import java.time.Duration
 
@@ -38,18 +38,18 @@ class EventRepository(
     fun count() =
         template.count<Event>()
 
-    fun findAll() =
-        template.find<Event>(Query().with(Sort.by("year"))).doOnComplete { logger.info("Load all events") }
+    suspend fun findAll() =
+        template
+            .find<Event>(Query().with(Sort.by("year"))).doOnComplete { logger.info("Load all events") }
+            .collectList()
+            .awaitSingle()
 
-    fun findOne(id: String) =
-        template.findById<Event>(id).doOnSuccess { logger.info("Try to find event $id") }
-
-    fun deleteAll() =
-        template.remove<Event>(Query())
+    suspend fun findOne(id: String) =
+        template.findById<Event>(id).doOnSuccess { logger.info("Try to find event $id") }.awaitSingle()
 
     fun save(event: Event) =
         template.save(event)
 
-    fun findByYear(year: Int) =
-        template.findOne<Event>(Query(Criteria.where("year").isEqualTo(year)))
+    suspend fun findByYear(year: Int) =
+        template.findOne<Event>(Query(Criteria.where("year").isEqualTo(year))).awaitSingle()
 }

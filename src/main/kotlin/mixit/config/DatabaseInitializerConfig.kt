@@ -1,5 +1,6 @@
 package mixit.config
 
+import kotlinx.coroutines.runBlocking
 import mixit.blog.model.BlogService
 import mixit.blog.repository.PostRepository
 import mixit.event.model.EventService
@@ -44,9 +45,11 @@ class DatabaseInitializerConfig {
         ticketRepository.initData()
         mixetteDonationRepository.initData()
 
-        userService.initializeCache()
-        eventService.initializeCache()
-        blogService.initializeCache()
-        talkService.initializeCache()
+        runBlocking {
+            userService.initializeCache()
+            eventService.initializeCache()
+            blogService.initializeCache()
+            talkService.initializeCache()
+        }
     }
 }

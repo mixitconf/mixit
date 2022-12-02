@@ -1,5 +1,6 @@
 package mixit.security.handler
 
+import kotlinx.coroutines.reactor.awaitSingle
 import mixit.favorite.handler.FavoriteDto
 import mixit.favorite.model.Favorite
 import mixit.favorite.repository.FavoriteRepository
@@ -22,9 +23,8 @@ import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
-import org.springframework.web.reactive.function.server.body
+import org.springframework.web.reactive.function.server.bodyValueAndAwait
 import org.springframework.web.reactive.function.server.queryParamOrNull
-import reactor.core.publisher.Mono
 import reactor.kotlin.core.publisher.toMono
 
 @Component
@@ -38,11 +38,11 @@ class ExternalHandler(
     /**
      * Some external request needs to be secured. So for them we need in the request the email and token
      */
-    private fun credentials(
+    private suspend fun credentials(
         req: ServerRequest,
         strictMode: Boolean,
-        action: (nonEncryptedEmail: String, user: User) -> Mono<ServerResponse>
-    ): Mono<ServerResponse> {
+        action: suspend (nonEncryptedEmail: String, user: User) -> ServerResponse
+    ): ServerResponse {
         // Email is always required
         val email = req.queryParamOrNull("email")
         // In strict mode we only check user token. In normal mode we check user token or external app token
@@ -52,110 +52,93 @@ class ExternalHandler(
             if (email == null || token == null) {
                 return INVALID_CREDENTIALS.response()
             }
-            return authenticationService.checkUserEmailAndToken(email, token)
-                .flatMap { action.invoke(email, it) }
-                .onErrorResume {
-                    when (it) {
-                        is TokenException -> INVALID_TOKEN.response()
-                        is NotFoundException -> INVALID_EMAIL.response()
-                        else -> INVALID_CREDENTIALS.response()
-                    }
+            try {
+                return authenticationService.checkUserEmailAndToken(email, token).let { action.invoke(email, it) }
+            } catch (e: Exception) {
+                return when (e) {
+                    is TokenException -> INVALID_TOKEN.response()
+                    is NotFoundException -> INVALID_EMAIL.response()
+                    else -> INVALID_CREDENTIALS.response()
                 }
+            }
         } else {
             val externalAppToken = req.queryParamOrNull("external-token")
             if (email == null || (token == null && externalAppToken == null)) {
                 return INVALID_CREDENTIALS.response()
             }
-            return authenticationService.checkUserEmailAndTokenOrAppToken(email, token, externalAppToken)
-                .flatMap { action.invoke(email, it) }
-                .onErrorResume {
-                    when (it) {
-                        is TokenException -> INVALID_TOKEN.response()
-                        is NotFoundException -> INVALID_EMAIL.response()
-                        else -> INVALID_CREDENTIALS.response()
-                    }
+            try {
+                return authenticationService.checkUserEmailAndTokenOrAppToken(email, token, externalAppToken)
+                    .let { action.invoke(email, it) }
+            } catch (e: Exception) {
+                return when (e) {
+                    is TokenException -> INVALID_TOKEN.response()
+                    is NotFoundException -> INVALID_EMAIL.response()
+                    else -> INVALID_CREDENTIALS.response()
                 }
+            }
         }
     }
 
-    fun sendToken(req: ServerRequest): Mono<ServerResponse> =
-        req.queryParamOrNull("email").let {
-            if (it == null) {
-                return@let INVALID_CREDENTIALS.response()
-            }
-            try {
-                authenticationService.searchUserByEmailOrCreateHimFromTicket(it)
-                    .flatMap { user ->
-                        // If user is found we send him a token
-                        authenticationService.generateAndSendToken(
-                            user,
-                            req.locale(),
-                            it,
-                            generateExternalToken = true,
-                            tokenForNewsletter = false
-                        )
-                            // if token is sent we return a reponse to the caller
-                            .flatMap { TOKEN_SENT.response() }
-                            // An error can occur when email is sent
-                            .onErrorResume { EMAIL_SENT_ERROR.response() }
-                    }
-                    // An error can be thrown when we try to create a user from ticketting
-                    .onErrorResume { INVALID_EMAIL.response() }
-                    // if user is not found we ask him to use website
-                    .switchIfEmpty(Mono.defer { INVALID_EMAIL.response() })
-            } catch (e: EmailValidatorException) {
-                INVALID_EMAIL.response()
-            }
+    suspend fun sendToken(req: ServerRequest): ServerResponse {
+        val email = req.queryParamOrNull("email") ?: return INVALID_CREDENTIALS.response()
+        try {
+            val user =
+                authenticationService.searchUserByEmailOrCreateHimFromTicket(email) ?: return INVALID_EMAIL.response()
+            // If user is found we send him a token
+            authenticationService.generateAndSendToken(
+                user,
+                req.locale(),
+                email,
+                generateExternalToken = true,
+                tokenForNewsletter = false
+            )
+            // if token is sent we return a reponse to the caller
+            return TOKEN_SENT.response()
+        } catch (e: EmailValidatorException) {
+            return INVALID_EMAIL.response()
+        } catch (e: Exception) {
+            // An error can occur when email is sent
+            return EMAIL_SENT_ERROR.response()
         }
+    }
 
-    fun checkToken(req: ServerRequest): Mono<ServerResponse> =
+    suspend fun checkToken(req: ServerRequest): ServerResponse =
         credentials(req, true) { _, _ -> CREDENTIAL_VALID.response() }
 
-    fun profile(req: ServerRequest): Mono<ServerResponse> =
+    suspend fun profile(req: ServerRequest): ServerResponse =
         credentials(req, false) { nonEncryptedEmail, user ->
-
-            ticketRepository
-                .findByEncryptedEmail(cryptographer.encrypt(nonEncryptedEmail)!!)
-                .flatMap {
-                    ok().json().bodyValue(ExternalUserDto(user))
-                }
-                .switchIfEmpty(
-                    Mono.defer { ok().json().bodyValue(ExternalUserDto(user)) }
-                )
+            ticketRepository.findByEncryptedEmail(cryptographer.encrypt(nonEncryptedEmail)!!)
+            ok().json().bodyValueAndAwait(ExternalUserDto(user))
         }
 
-    fun favorites(req: ServerRequest): Mono<ServerResponse> =
+    suspend fun favorites(req: ServerRequest): ServerResponse =
         credentials(req, false) { nonEncryptedEmail, _ ->
-            ok().json().body(
+            ok().json().bodyValueAndAwait(
                 favoriteRepository.findByEmail(nonEncryptedEmail).map { FavoriteDto(it.talkId, true) }
             )
         }
 
-    fun favorite(req: ServerRequest): Mono<ServerResponse> =
+    suspend fun favorite(req: ServerRequest): ServerResponse =
         credentials(req, false) { nonEncryptedEmail, _ ->
-            ok().json().body(
+            ok().json().bodyValueAndAwait(
                 favoriteRepository.findByEmailAndTalk(nonEncryptedEmail, req.pathVariable("id"))
-                    .flatMap { FavoriteDto(it.talkId, true).toMono() }
-                    .switchIfEmpty(FavoriteDto(req.pathVariable("id"), false).toMono())
+                    ?.let { FavoriteDto(it.talkId, true).toMono() }
+                    ?: FavoriteDto(req.pathVariable("id"), false)
             )
         }
 
-    fun toggleFavorite(req: ServerRequest): Mono<ServerResponse> =
+    suspend fun toggleFavorite(req: ServerRequest): ServerResponse =
         credentials(req, false) { nonEncryptedEmail, user ->
-            favoriteRepository.findByEmailAndTalk(nonEncryptedEmail, req.pathVariable("id"))
+            val favorite = favoriteRepository.findByEmailAndTalk(nonEncryptedEmail, req.pathVariable("id"))
+            return@credentials if (favorite == null) {
+                // we create it
+                favoriteRepository.save(Favorite(user.email!!, req.pathVariable("id"))).awaitSingle()
+                ok().json().bodyValueAndAwait(FavoriteDto(req.pathVariable("id"), true))
+            } else {
                 // if favorite is found we delete it
-                .flatMap { favorite ->
-                    favoriteRepository
-                        .delete(nonEncryptedEmail, favorite.talkId)
-                        .flatMap { ok().json().bodyValue(FavoriteDto(favorite.talkId, false)) }
-                }
-                // otherwise we create it
-                .switchIfEmpty(
-                    Mono.defer {
-                        favoriteRepository
-                            .save(Favorite(user.email!!, req.pathVariable("id")))
-                            .flatMap { ok().json().bodyValue(FavoriteDto(req.pathVariable("id"), true)) }
-                    }
-                )
+                favoriteRepository
+                    .delete(nonEncryptedEmail, favorite.talkId).awaitSingle()
+                ok().json().bodyValueAndAwait(FavoriteDto(favorite.talkId, false))
+            }
         }
 }

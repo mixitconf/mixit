@@ -2,10 +2,11 @@ package mixit.user.model
 
 import mixit.security.model.Cryptographer
 import mixit.user.repository.UserRepository
-import mixit.util.cache.CacheTemplate
+import mixit.util.cache.CacheCaffeineTemplate
 import mixit.util.cache.CacheZone
 import org.springframework.context.ApplicationEvent
 import org.springframework.context.ApplicationEventPublisher
+import org.springframework.data.crossstore.ChangeSetPersister
 import org.springframework.stereotype.Service
 import reactor.core.publisher.Mono
 
@@ -16,26 +17,26 @@ class UserService(
     private val userRepository: UserRepository,
     private val eventPublisher: ApplicationEventPublisher,
     private val cryptographer: Cryptographer
-) : CacheTemplate<CachedUser>() {
+) : CacheCaffeineTemplate<CachedUser>() {
 
     override val cacheZone: CacheZone = CacheZone.USER
+    override fun loader(): suspend () -> List<CachedUser> {
+        return { userRepository.findAll().map { user -> CachedUser(user) } }
+    }
 
-    override fun findAll(): Mono<List<CachedUser>> =
-        findAll { userRepository.findAll().map { user -> CachedUser(user) }.collectList() }
+    suspend fun findOneByEncryptedEmailOrNull(email: String): CachedUser? =
+        findAll().firstOrNull { it.email == email }
 
-    fun findOneByEncryptedEmail(email: String): Mono<CachedUser> =
-        findAll().flatMap { elements -> Mono.justOrEmpty(elements.firstOrNull { it.email == email }) }
-
-    fun findOneByNonEncryptedEmail(email: String): Mono<CachedUser> =
-        cryptographer.encrypt(email)!!.let { encryptedEmail ->
-            findAll().flatMap { elements -> Mono.justOrEmpty(elements.firstOrNull { it.email == encryptedEmail }) }
+    suspend fun findOneByNonEncryptedEmailOrNull(email: String): CachedUser? =
+        cryptographer.encrypt(email)?.let { encryptedEmail ->
+            findAll().firstOrNull { it.email == encryptedEmail }
         }
 
-    fun findByRoles(vararg roles: Role): Mono<List<CachedUser>> =
-        findAll().map { elements -> elements.filter { roles.contains(it.role) } }
+    suspend fun findByRoles(vararg roles: Role): List<CachedUser> =
+        findAll().filter { roles.contains(it.role) }
 
-    fun findAllByIds(userIds: List<String>): Mono<List<CachedUser>> =
-        findAll().map { elements -> elements.filter { userIds.contains(it.login) } }
+    suspend fun findAllByIds(userIds: List<String>): List<CachedUser> =
+        findAll().filter { userIds.contains(it.login) }
 
     fun save(user: User): Mono<User> =
         userRepository.save(user).doOnSuccess {
@@ -43,18 +44,20 @@ class UserService(
             eventPublisher.publishEvent(UserUpdateEvent(user))
         }
 
-    fun deleteOne(id: String) =
-        userRepository.findOne(id).flatMap { user ->
-            userRepository.deleteOne(id).map {
-                cache.invalidateAll()
-                eventPublisher.publishEvent(UserUpdateEvent(user))
-                user
+    suspend fun deleteOne(id: String): Mono<User> =
+        userRepository.findOneOrNull(id)
+            ?.let { user ->
+                userRepository.deleteOne(id).map {
+                    cache.invalidateAll()
+                    eventPublisher.publishEvent(UserUpdateEvent(user))
+                    user
+                }
             }
-        }
+            ?: throw ChangeSetPersister.NotFoundException()
 
-    fun updateReference(user: User): Mono<User> =
-        findOne(user.login)
-            .map {
+    suspend fun updateReference(user: User): User? =
+        findOneOrNull(user.login)
+            ?.let {
                 it.email = it.email ?: user.email
                 it.newsletterSubscriber = user.newsletterSubscriber
                 user

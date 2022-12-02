@@ -104,6 +104,32 @@
                 </table>
             </div>
 
+            <h3>{{#i18n}}admin.event.organizers.text{{/i18n}}&nbsp;</h3>
+
+            <div class="callout">
+                <p>{{#i18n}}admin.event.organizers.count{{/i18n}} : <b>{{event.organizers.size}}</b> |
+                    <a href="/admin/events/{{event.id}}/organizers/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
+
+                <table class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                        <th>{{#i18n}}admin.event.organizers.table.login{{/i18n}}</th>
+                        <th>{{#i18n}}common.actions{{/i18n}}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {{#event.organizers}}
+                        <tr>
+                            <td>{{organizerLogin}}</td>
+                            <td>
+                                <a href="/admin/events/{{event.id}}/organizers/edit/{{organizerLogin}}">{{#i18n}}common.actions.update{{/i18n}}</a>
+                            </td>
+                        </tr>
+                    {{/event.organizers}}
+                    </tbody>
+                </table>
+            </div>
+
             <h3>{{#i18n}}admin.event.volunteers.text{{/i18n}}&nbsp;</h3>
 
             <div class="callout">
