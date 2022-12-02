@@ -1,0 +1,35 @@
+{{> header}}
+
+<div class="mxt-wrapper--header">
+    <h1 class="text-center pt-5">{{#i18n}}admin.event.title{{/i18n}}</h1>
+</div>
+
+<div class="container mxt-wrapper--page-content">
+    {{^creationMode}}<form action="/admin/events/{{eventId}}/organizers/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.event.organizations.delete.confirm{{/i18n}}');">
+        <input type="hidden" name="eventId" value="{{eventId}}"/>
+        <input type="hidden" name="organizerLogin" value="{{eventOrganizer.organizerLogin}}"/>
+        <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}common.actions.delete{{/i18n}}"/>
+    </form>{{/creationMode}}
+    <form
+            {{#creationMode}}action="/admin/events/{{eventId}}/organizers/create"{{/creationMode}}
+            {{^creationMode}}action="/admin/events/{{eventId}}/organizers"{{/creationMode}}
+            method="post" class="row mt-3">
+        <input type="hidden" name="eventId" value="{{eventId}}"/>
+        <div class="col-12 mb-3">
+            <label class="form-label">{{#i18n}}admin.event.organizers.form.login{{/i18n}}
+                <a href="/admin/users">{{#i18n}}admin.event.organizers.form.login.text{{/i18n}}</a> </label>
+            {{#creationMode}}
+                <input class="form-control" type="text" name="organizerLogin" required />
+            {{/creationMode}}
+            {{^creationMode}}
+                <input class="form-control" type="text" value="{{eventOrganizer.organizerLogin}}" disabled="true" />
+                <input type="hidden" name="organizerLogin" value="{{eventOrganizer.organizerLogin}}"/>
+            {{/creationMode}}
+        </div>
+        <div class="col-12 mb-3 text-center">
+            <input type="submit" class="btn btn-outline-primary expand" value="{{#i18n}}common.actions.save{{/i18n}}"/>
+        </div>
+    </form>
+</div>
+
+{{> footer}}

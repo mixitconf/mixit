@@ -14,6 +14,7 @@ data class Event(
     val sponsors: List<EventSponsoring> = emptyList(),
     val organizations: List<EventOrganization> = emptyList(),
     val volunteers: List<EventVolunteer> = emptyList(),
+    val organizers: List<EventOrganizer> = emptyList(),
     val photoUrls: List<Link> = emptyList(),
     val videoUrl: Link? = null,
     val schedulingFileUrl: String? = null,
@@ -33,6 +34,10 @@ data class EventSponsoring(
 
 data class EventVolunteer(
     val volunteerLogin: String
+)
+
+data class EventOrganizer(
+    val organizerLogin: String
 )
 
 enum class SponsorshipLevel {

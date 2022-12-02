@@ -47,8 +47,8 @@ class EmailService(
         subject: String? = null,
         model: Map<String, Any> = emptyMap()
     ) {
-
-        val emailSubject = subject ?: messageSource.getMessage("$templateName-subject", null, locale)
+        val i18nkey = "${templateName.substringAfter("email/")}-subject"
+        val emailSubject = subject ?: messageSource.getMessage(i18nkey, null, locale)
         val email = cryptographer.decrypt(user.email)!!
 
         runCatching {

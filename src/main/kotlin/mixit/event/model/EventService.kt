@@ -42,6 +42,7 @@ class EventService(
                 .any { event ->
                     event.organizations.map { it.login }.contains(userUpdateEvent.user.login)
                     event.volunteers.map { it.login }.contains(userUpdateEvent.user.login)
+                    event.organizers.map { it.login }.contains(userUpdateEvent.user.login)
                     event.sponsors.map { it.login }.contains(userUpdateEvent.user.login)
                 }
                 .also {
@@ -54,10 +55,11 @@ class EventService(
 
     private suspend fun loadEventUsers(event: Event): CachedEvent {
         val userIds = event.organizations.map { it.organizationLogin } +
-            event.sponsors.map { it.sponsorId } +
-            event.volunteers.map { it.volunteerLogin } +
-            speakerStarInHistory.map { it.login } +
-            speakerStarInCurrentEvent.map { it.login }
+                event.sponsors.map { it.sponsorId } +
+                event.volunteers.map { it.volunteerLogin } +
+                event.organizers.map { it.organizerLogin } +
+                speakerStarInHistory.map { it.login } +
+                speakerStarInCurrentEvent.map { it.login }
 
         val users = userService.findAllByIds(userIds)
 
@@ -76,6 +78,10 @@ class EventService(
             },
             event.volunteers.map { volunteer ->
                 val user = users.firstOrNull { it.login == volunteer.volunteerLogin }
+                CachedStaff(user?.toUser() ?: User())
+            },
+            event.organizers.map { organizer ->
+                val user = users.firstOrNull { it.login == organizer.organizerLogin }
                 CachedStaff(user?.toUser() ?: User())
             },
             event.photoUrls,

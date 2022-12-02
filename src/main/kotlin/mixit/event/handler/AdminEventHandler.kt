@@ -5,6 +5,7 @@ import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.MixitProperties
 import mixit.event.model.Event
 import mixit.event.model.EventOrganization
+import mixit.event.model.EventOrganizer
 import mixit.event.model.EventService
 import mixit.event.model.EventSponsoring
 import mixit.event.model.EventVolunteer
@@ -17,6 +18,7 @@ import mixit.routes.MustacheI18n.LINKS
 import mixit.routes.MustacheI18n.TITLE
 import mixit.routes.MustacheTemplate.AdminEvent
 import mixit.routes.MustacheTemplate.AdminEventOrganization
+import mixit.routes.MustacheTemplate.AdminEventOrganizer
 import mixit.routes.MustacheTemplate.AdminEventSponsor
 import mixit.routes.MustacheTemplate.AdminEventVolunteer
 import mixit.routes.MustacheTemplate.AdminEvents
@@ -100,6 +102,7 @@ class AdminEventHandler(
                 existingEvent.sponsors,
                 existingEvent.organizations,
                 existingEvent.volunteers,
+                existingEvent.organizers,
                 formData["photoUrls"]?.toLinks(objectMapper) ?: emptyList(),
                 formData["videoUrl"]?.toLink(objectMapper),
                 formData["schedulingFileUrl"]
@@ -246,8 +249,19 @@ class AdminEventHandler(
         )
     }
 
+    suspend fun editEventOrganizer(req: ServerRequest): ServerResponse {
+        val event = service.findOneOrNull(req.pathVariable("eventId"))?.toEvent() ?: throw NotFoundException()
+        return adminEventOrganizer(
+            event.id,
+            event.organizers.first { it.organizerLogin == req.pathVariable("organizerLogin") }
+        )
+    }
+
     suspend fun createEventVolunteer(req: ServerRequest): ServerResponse =
         adminEventVolunteer(req.pathVariable("eventId"))
+
+    suspend fun createEventOrganizer(req: ServerRequest): ServerResponse =
+        adminEventOrganizer(req.pathVariable("eventId"))
 
     private suspend fun adminEventVolunteer(eventId: String, eventVolunteer: EventVolunteer? = null): ServerResponse =
         ok().renderAndAwait(
@@ -255,11 +269,28 @@ class AdminEventHandler(
             mapOf(
                 CREATION_MODE to (eventVolunteer == null),
                 EVENT_ID to eventId,
-                "eventOrganization" to eventVolunteer
+                "eventVolunteer" to eventVolunteer
+            )
+        )
+
+    private suspend fun adminEventOrganizer(eventId: String, eventOrganizer: EventOrganizer? = null): ServerResponse =
+        ok().renderAndAwait(
+            AdminEventOrganizer.template,
+            mapOf(
+                CREATION_MODE to (eventOrganizer == null),
+                EVENT_ID to eventId,
+                "eventOrganizer" to eventOrganizer
             )
         )
 
     suspend fun adminUpdateEventVolunteer(req: ServerRequest): ServerResponse {
+        val formData = req.extractFormData()
+        val event = loadEvent(formData)
+        // For the moment we have noting to save
+        return seeOther("${properties.baseUri}$LIST_URI/edit/${event.id}")
+    }
+
+    suspend fun adminUpdateEventOrganizer(req: ServerRequest): ServerResponse {
         val formData = req.extractFormData()
         val event = loadEvent(formData)
         // For the moment we have noting to save
@@ -275,12 +306,30 @@ class AdminEventHandler(
         return seeOther("${properties.baseUri}$LIST_URI/edit/${event.id}")
     }
 
+    suspend fun adminCreateEventOrganizer(req: ServerRequest): ServerResponse {
+        val formData = req.extractFormData()
+        val event = loadEvent(formData)
+        val organizers = event.organizers.toMutableList()
+        organizers.add(EventOrganizer(formData["organizerLogin"]!!))
+        service.save(event.copy(organizers = organizers)).awaitSingleOrNull()
+        return seeOther("${properties.baseUri}$LIST_URI/edit/${event.id}")
+    }
+
     suspend fun adminDeleteEventVolunteer(req: ServerRequest): ServerResponse {
         val formData = req.extractFormData()
         val event = loadEvent(formData)
         val volunteers =
             event.volunteers.filter { it.volunteerLogin != formData["volunteerLogin"]!! }
         service.save(event.copy(volunteers = volunteers)).awaitSingleOrNull()
+        return seeOther("${properties.baseUri}$LIST_URI/edit/${event.id}")
+    }
+
+    suspend fun adminDeleteEventOrganizer(req: ServerRequest): ServerResponse {
+        val formData = req.extractFormData()
+        val event = loadEvent(formData)
+        val organizers =
+            event.organizers.filter { it.organizerLogin != formData["organizerLogin"]!! }
+        service.save(event.copy(organizers = organizers)).awaitSingleOrNull()
         return seeOther("${properties.baseUri}$LIST_URI/edit/${event.id}")
     }
 
