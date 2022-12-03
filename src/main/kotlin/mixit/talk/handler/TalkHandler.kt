@@ -10,6 +10,7 @@ import mixit.routes.MustacheI18n
 import mixit.routes.MustacheI18n.SPONSORS
 import mixit.routes.MustacheI18n.TITLE
 import mixit.routes.MustacheI18n.YEAR
+import mixit.routes.MustacheTemplate
 import mixit.routes.MustacheTemplate.FeedbackWall
 import mixit.routes.MustacheTemplate.Media
 import mixit.routes.MustacheTemplate.Schedule
@@ -53,8 +54,7 @@ class TalkHandler(
                 year,
                 req,
                 topic,
-                template = Media.template,
-                title = Media.title!!
+                template = Media
             )
 
         fun mediaWithFavorites(req: ServerRequest, year: Int, topic: String? = null) =
@@ -62,16 +62,15 @@ class TalkHandler(
                 year,
                 req,
                 topic,
-                template = Media.template,
-                filterOnFavorite = true,
-                title = "medias.title.html"
+                template = Media,
+                filterOnFavorite = true
             )
 
         fun talks(req: ServerRequest, year: Int, topic: String? = null) =
             TalkViewConfig(year, req, topic)
 
         fun feedbackWall(req: ServerRequest, year: Int, topic: String? = null) =
-            TalkViewConfig(year, req, topic, template = FeedbackWall.template)
+            TalkViewConfig(year, req, topic, template = FeedbackWall)
 
         fun talksWithFavorites(req: ServerRequest, year: Int, topic: String? = null) =
             TalkViewConfig(year, req, topic, filterOnFavorite = true)
@@ -82,9 +81,10 @@ class TalkHandler(
         val req: ServerRequest,
         val topic: String? = null,
         val filterOnFavorite: Boolean = false,
-        val template: String = TalkList.template,
-        val title: String = TalkList.title!!
-    )
+        val template: MustacheTemplate = TalkList
+    ) {
+        fun isList() = template == Media
+    }
 
     suspend fun scheduleView(req: ServerRequest) =
         ok().renderAndAwait(Schedule.template, mapOf(TITLE to Schedule.title))
@@ -93,16 +93,16 @@ class TalkHandler(
         val currentUserEmail = config.req.currentNonEncryptedUserEmail()
         val talks = loadTalkAndFavorites(config, currentUserEmail)
         val event = eventService.findByYear(config.year)
-        val title = if (config.topic == null) "${config.title}|${config.year}" else
-            "${config.title}.${config.topic}|${config.year}"
+        val title = if (config.topic == null) "${config.template.title}|${config.year}" else
+            "${config.template.title}.${config.topic}|${config.year}"
 
         return ok()
             .render(
-                config.template,
+                config.template.template,
                 mapOf(
                     MustacheI18n.EVENT to event.toEvent(),
                     SPONSORS to loadSponsors(event),
-                    MustacheI18n.TALKS to talks.groupBy { it.date ?: "" },
+                    MustacheI18n.TALKS to (if (config.isList()) talks else talks.groupBy { it.date ?: "" }),
                     TITLE to title,
                     YEAR to config.year,
                     "schedulingFileUrl" to event.schedulingFileUrl,
