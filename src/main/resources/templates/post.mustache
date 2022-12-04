@@ -1,9 +1,10 @@
 {{> header}}
+{{> header-common }}
 
-<div class="mxt-wrapper--header">
-    <h1 class="text-center pt-5">{{post.title}}</h1>
+<div class="mxt-wrapper--header-page-title">
+    <h1 class="pt-3 ">{{post.title}}</h1>
     <p class="text-center subheader mxt-text--page-title">{{#i18n}}blog.by{{/i18n}}
-        <strong>{{post.author.firstname}}</strong>, {{#i18n}}blog.on{{/i18n}} <strong>{{post.addedAt}}</strong></p><br/>
+        <strong>{{post.author.firstname}}</strong>, {{#i18n}}blog.on{{/i18n}} <strong>{{post.addedAt}}</strong></p>
 </div>
 
 <div class="container mxt-wrapper--page-content mxt-blog">
