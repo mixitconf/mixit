@@ -42,6 +42,10 @@
             <textarea class="form-control" name="content-en" rows="10">{{#content-en}}{{content-en}}{{/content-en}}</textarea>
         </div>
         <div class="mb-5">
+            <label class="form-label">{{#i18n}}admin.post.form.year{{/i18n}}</label>
+            <input class="form-control" type="text" name="year" value="{{post.year}}" required/>
+        </div>
+        <div class="mb-5">
             <label class="form-label">{{#i18n}}admin.post.form.addedAt{{/i18n}}</label>
             <input class="form-control" type="text" name="addedAt" value="{{post.addedAt}}" required/>
         </div>

@@ -2,9 +2,7 @@ package mixit.talk.handler
 
 import kotlinx.coroutines.reactor.awaitSingle
 import mixit.MixitProperties
-import mixit.event.model.CachedEvent
 import mixit.event.model.EventService
-import mixit.event.model.SponsorshipLevel
 import mixit.favorite.repository.FavoriteRepository
 import mixit.routes.MustacheI18n
 import mixit.routes.MustacheI18n.SPONSORS
@@ -21,7 +19,7 @@ import mixit.talk.model.CachedTalk
 import mixit.talk.model.Language
 import mixit.talk.model.TalkService
 import mixit.user.handler.dto.toDto
-import mixit.user.handler.dto.toSponsorDto
+import mixit.user.model.UserService
 import mixit.util.currentNonEncryptedUserEmail
 import mixit.util.enumMatcher
 import mixit.util.errors.NotFoundException
@@ -42,6 +40,7 @@ import org.springframework.web.reactive.function.server.renderAndAwait
 class TalkHandler(
     private val service: TalkService,
     private val eventService: EventService,
+    private val userService: UserService,
     private val properties: MixitProperties,
     private val favoriteRepository: FavoriteRepository,
     private val maxLengthValidator: MaxLengthValidator,
@@ -101,7 +100,7 @@ class TalkHandler(
                 config.template.template,
                 mapOf(
                     MustacheI18n.EVENT to event.toEvent(),
-                    SPONSORS to loadSponsors(event),
+                    SPONSORS to userService.loadSponsors(event),
                     MustacheI18n.TALKS to (if (config.isList()) talks else talks.groupBy { it.date ?: "" }),
                     TITLE to title,
                     YEAR to config.year,
@@ -147,7 +146,7 @@ class TalkHandler(
                 mapOf(
                     YEAR to year,
                     TITLE to "talk.html.title|${talk.title}",
-                    SPONSORS to loadSponsors(event),
+                    SPONSORS to userService.loadSponsors(event),
                     "talk" to talk.toDto(req.language()),
                     "speakers" to talk.speakers.map { it.toDto(lang) }.sortedBy { it.firstname },
                     "othertalks" to otherTalks,
@@ -224,14 +223,6 @@ class TalkHandler(
         } else {
             return editTalkViewDetail(req, updatedTalk, errors)
         }
-    }
-
-    private fun loadSponsors(event: CachedEvent): Map<String, Any> {
-        val sponsors = event.filterBySponsorLevel(SponsorshipLevel.GOLD)
-        return mapOf(
-            Pair("sponsors-gold", sponsors.map { it.toSponsorDto() }),
-            Pair("sponsors-others", event.sponsors.filterNot { sponsors.contains(it) }.map { it.toSponsorDto() })
-        )
     }
 
     suspend fun redirectFromId(req: ServerRequest): ServerResponse {

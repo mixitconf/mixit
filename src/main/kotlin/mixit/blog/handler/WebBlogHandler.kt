@@ -2,9 +2,12 @@ package mixit.blog.handler
 
 import mixit.MixitProperties
 import mixit.blog.model.BlogService
+import mixit.event.model.EventService
+import mixit.routes.MustacheI18n.SPONSORS
 import mixit.routes.MustacheI18n.TITLE
 import mixit.routes.MustacheTemplate.Blog
 import mixit.routes.MustacheTemplate.BlogPost
+import mixit.user.model.UserService
 import mixit.util.errors.NotFoundException
 import mixit.util.language
 import mixit.util.permanentRedirect
@@ -15,7 +18,12 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.renderAndAwait
 
 @Component
-class WebBlogHandler(val service: BlogService, val properties: MixitProperties) {
+class WebBlogHandler(
+    private val service: BlogService,
+    private val userService: UserService,
+    private val eventService: EventService,
+    private val properties: MixitProperties) {
+
     suspend fun findOneView(req: ServerRequest): ServerResponse {
         val post = service.findBySlug(req.pathVariable("slug")) ?: throw NotFoundException()
         val params = mapOf(
@@ -25,10 +33,12 @@ class WebBlogHandler(val service: BlogService, val properties: MixitProperties) 
         return ok().renderAndAwait(BlogPost.template, params)
     }
 
-    suspend fun findAllView(req: ServerRequest): ServerResponse {
+    suspend fun findAllView(req: ServerRequest, year: Int): ServerResponse {
         val posts = service.findAll()
+        val event = eventService.findByYear(year)
         val params = mapOf(
             TITLE to Blog.title,
+            SPONSORS to userService.loadSponsors(event),
             "posts" to posts.sortedByDescending { it.addedAt }.map { it.toDto(req.language()) }
         )
         return ok().renderAndAwait(Blog.template, params)

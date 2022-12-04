@@ -130,7 +130,7 @@ class WebsiteRoutes(
 
             GET("/about") { aboutHandler.findAboutView(it, CURRENT_EVENT.toInt()) }
             GET("/accessibility", aboutHandler::accessibilityView)
-            GET("/blog", blogHandler::findAllView)
+            GET("/blog") { blogHandler.findAllView(it, CURRENT_EVENT.toInt()) }
             GET("/blog/{slug}", blogHandler::findOneView)
             GET("/codeofconduct", aboutHandler::codeConductView)
             GET("/code-of-conduct", aboutHandler::codeConductView)
@@ -165,11 +165,8 @@ class WebsiteRoutes(
 
             (2012..CURRENT_EVENT.toInt()).forEach { year ->
                 GET("/admin/$year/feedback-wall") { talkHandler.findByEventView(feedbackWall(it, year)) }
-
-                // About
                 GET("/about/$year") { aboutHandler.findAboutView(it, year) }
-
-                // Sponsors
+                GET("/blog/$year") { blogHandler.findAllView(it, year) }
                 GET("/sponsors/$year") { sponsorHandler.viewSponsors(it, year) }
 
                 // Talks
