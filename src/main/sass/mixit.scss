@@ -420,12 +420,12 @@ h3 {
   position: relative;
   background-color: white;
   padding: 2em;
+  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   @include media-breakpoint-up(md) {
     margin-bottom: -1em;
-    top: -3em;
   }
   margin-bottom: 0;
-  top: 0;
+  top: -1em;
 }
 
 .mxt-wrapper--callout {
@@ -435,6 +435,7 @@ h3 {
   border: none;
   border-radius: 0;
   background-color: #fff;
+  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   color: #2c233d;
   @include media-breakpoint-up(md) {
     padding: 2rem;
