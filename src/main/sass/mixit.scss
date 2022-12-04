@@ -339,7 +339,13 @@ h3 {
 
 .mxt-wrapper--header-page-title {
   background-color: #2c233d !important;
-  top: -1em;
+  position: relative;
+  top: 56px;
+  margin-bottom: 2em;
+  @include media-breakpoint-up(sm) {
+    top: -1em;
+    margin-bottom: 0;
+  }
   color: white;
   text-align: center;
   box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -367,6 +373,13 @@ h3 {
       border: 0;
       background-color: #2c233d;
     }
+  }
+}
+
+.hide-on-mobile {
+  display: none;
+  @include media-breakpoint-up(sm) {
+    display: inherit;
   }
 }
 
