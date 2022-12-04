@@ -115,7 +115,7 @@ class WebsiteRoutes(
             GET("/admin/ticket/edit/{number}", ticketHandler::editTicket)
 
             GET("/admin/talks/edit/{id}", adminTalkHandler::editTalk)
-            GET("/admin/talks") { adminTalkHandler.adminTalks(it, AdminTalkHandler.LAST_TALK_EVENT) }
+            GET("/admin/talks") { adminTalkHandler.adminTalks(it, CURRENT_EVENT) }
             GET("/admin/talks/create", adminTalkHandler::createTalk)
             GET("/admin/talks/{year}") { adminTalkHandler.adminTalks(it, it.pathVariable("year")) }
 

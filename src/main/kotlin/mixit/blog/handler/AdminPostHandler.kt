@@ -78,6 +78,7 @@ class AdminPostHandler(private val service: BlogService, private val properties:
                 Pair(FRENCH, formData["title-fr"]!!.toSlug()),
                 Pair(ENGLISH, formData["title-en"]!!.toSlug())
             ),
+            year = formData["year"]!!.toInt(),
             headline = mapOf(Pair(FRENCH, formData["headline-fr"]!!), Pair(ENGLISH, formData["headline-en"]!!)),
             content = mapOf(Pair(FRENCH, formData["content-fr"]!!), Pair(ENGLISH, formData["content-en"]!!))
         )
