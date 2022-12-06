@@ -5,6 +5,7 @@ import mixit.MixitApplication
 import mixit.event.model.EventService
 import mixit.event.model.SponsorshipLevel
 import mixit.routes.MustacheI18n
+import mixit.routes.MustacheI18n.SPONSORS
 import mixit.routes.MustacheI18n.TITLE
 import mixit.routes.MustacheI18n.YEAR
 import mixit.routes.MustacheTemplate.About
@@ -23,7 +24,9 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.renderAndAwait
 
 @Component
-class AboutHandler(val userService: UserService, val eventService: EventService) {
+class AboutHandler(
+    private val userService: UserService,
+    private val eventService: EventService) {
 
     suspend fun findAboutView(req: ServerRequest, year: Int): ServerResponse {
         val event = eventService.findByYear(year)
@@ -38,6 +41,7 @@ class AboutHandler(val userService: UserService, val eventService: EventService)
                 mapOf(
                     TITLE to About.title,
                     YEAR to year,
+                    SPONSORS to userService.loadSponsors(event),
                     "isCurrent" to (year == MixitApplication.CURRENT_EVENT.toInt()),
                     "volunteers" to volunteers.map { it.toDto(lang) },
                     "hasVolunteers" to volunteers.isNotEmpty(),
@@ -62,7 +66,7 @@ class AboutHandler(val userService: UserService, val eventService: EventService)
                 mapOf(
                     TITLE to Come.title,
                     MustacheI18n.YEAR to event.year,
-                    MustacheI18n.SPONSORS to mapOf(
+                    SPONSORS to mapOf(
                         "sponsors-gold" to goldSponsors.map { it.toSponsorDto() },
                         "sponsors-others" to event.sponsors.filterNot { goldSponsors.contains(it) }
                             .map { it.toSponsorDto() }

@@ -85,7 +85,7 @@ class AdminUserHandler(
 
     suspend fun adminSaveUser(req: ServerRequest): ServerResponse {
         val formData = req.extractFormData()
-        val existingUser = userRepository.findOneOrNull(req.pathVariable("login")) ?: User()
+        val existingUser = userRepository.findOneOrNull(formData["login"]!!) ?: User()
         val updatedUser = existingUser.copy(
             login = formData["login"]!!,
             firstname = formData["firstname"]!!,

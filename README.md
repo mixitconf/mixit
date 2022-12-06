@@ -71,6 +71,6 @@ java -jar build/libs/mixit-1.0.0-SNAPSHOT.jar
 curl https://mixitconf.org/api/blog | python -m json.tool > blog.json
 curl https://mixitconf.org/api/event | python -m json.tool > events.json
 curl https://mixitconf.org/api/user | python -m json.tool > users.json
-curl https://mixitconf.org/api/2022/talk | python -m json.tool > talks_2022.json
+curl https://mixitconf.org/api/2023/talk | python -m json.tool > talks_2023.json
 git commit -a -m "Update data from PROD"
 ```

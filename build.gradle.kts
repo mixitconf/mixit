@@ -13,7 +13,7 @@ plugins {
     kotlin("kapt") version kotlinVersion
 }
 
-version = "2022.0.0-SNAPSHOT"
+version = "2023.0.0-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_11
 
 repositories {

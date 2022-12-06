@@ -2,14 +2,13 @@ package mixit.talk.handler
 
 import kotlinx.coroutines.reactor.awaitSingle
 import mixit.MixitProperties
-import mixit.event.model.CachedEvent
 import mixit.event.model.EventService
-import mixit.event.model.SponsorshipLevel
 import mixit.favorite.repository.FavoriteRepository
 import mixit.routes.MustacheI18n
 import mixit.routes.MustacheI18n.SPONSORS
 import mixit.routes.MustacheI18n.TITLE
 import mixit.routes.MustacheI18n.YEAR
+import mixit.routes.MustacheTemplate
 import mixit.routes.MustacheTemplate.FeedbackWall
 import mixit.routes.MustacheTemplate.Media
 import mixit.routes.MustacheTemplate.Schedule
@@ -20,7 +19,7 @@ import mixit.talk.model.CachedTalk
 import mixit.talk.model.Language
 import mixit.talk.model.TalkService
 import mixit.user.handler.dto.toDto
-import mixit.user.handler.dto.toSponsorDto
+import mixit.user.model.UserService
 import mixit.util.currentNonEncryptedUserEmail
 import mixit.util.enumMatcher
 import mixit.util.errors.NotFoundException
@@ -41,6 +40,7 @@ import org.springframework.web.reactive.function.server.renderAndAwait
 class TalkHandler(
     private val service: TalkService,
     private val eventService: EventService,
+    private val userService: UserService,
     private val properties: MixitProperties,
     private val favoriteRepository: FavoriteRepository,
     private val maxLengthValidator: MaxLengthValidator,
@@ -53,8 +53,7 @@ class TalkHandler(
                 year,
                 req,
                 topic,
-                template = Media.template,
-                title = Media.title!!
+                template = Media
             )
 
         fun mediaWithFavorites(req: ServerRequest, year: Int, topic: String? = null) =
@@ -62,16 +61,15 @@ class TalkHandler(
                 year,
                 req,
                 topic,
-                template = Media.template,
-                filterOnFavorite = true,
-                title = "medias.title.html"
+                template = Media,
+                filterOnFavorite = true
             )
 
         fun talks(req: ServerRequest, year: Int, topic: String? = null) =
             TalkViewConfig(year, req, topic)
 
         fun feedbackWall(req: ServerRequest, year: Int, topic: String? = null) =
-            TalkViewConfig(year, req, topic, template = FeedbackWall.template)
+            TalkViewConfig(year, req, topic, template = FeedbackWall)
 
         fun talksWithFavorites(req: ServerRequest, year: Int, topic: String? = null) =
             TalkViewConfig(year, req, topic, filterOnFavorite = true)
@@ -82,9 +80,10 @@ class TalkHandler(
         val req: ServerRequest,
         val topic: String? = null,
         val filterOnFavorite: Boolean = false,
-        val template: String = TalkList.template,
-        val title: String = TalkList.title!!
-    )
+        val template: MustacheTemplate = TalkList
+    ) {
+        fun isList() = template == Media
+    }
 
     suspend fun scheduleView(req: ServerRequest) =
         ok().renderAndAwait(Schedule.template, mapOf(TITLE to Schedule.title))
@@ -93,16 +92,16 @@ class TalkHandler(
         val currentUserEmail = config.req.currentNonEncryptedUserEmail()
         val talks = loadTalkAndFavorites(config, currentUserEmail)
         val event = eventService.findByYear(config.year)
-        val title = if (config.topic == null) "${config.title}|${config.year}" else
-            "${config.title}.${config.topic}|${config.year}"
+        val title = if (config.topic == null) "${config.template.title}|${config.year}" else
+            "${config.template.title}.${config.topic}|${config.year}"
 
         return ok()
             .render(
-                config.template,
+                config.template.template,
                 mapOf(
                     MustacheI18n.EVENT to event.toEvent(),
-                    SPONSORS to loadSponsors(event),
-                    MustacheI18n.TALKS to talks.groupBy { it.date ?: "" },
+                    SPONSORS to userService.loadSponsors(event),
+                    MustacheI18n.TALKS to (if (config.isList()) talks else talks.groupBy { it.date ?: "" }),
                     TITLE to title,
                     YEAR to config.year,
                     "schedulingFileUrl" to event.schedulingFileUrl,
@@ -147,7 +146,7 @@ class TalkHandler(
                 mapOf(
                     YEAR to year,
                     TITLE to "talk.html.title|${talk.title}",
-                    SPONSORS to loadSponsors(event),
+                    SPONSORS to userService.loadSponsors(event),
                     "talk" to talk.toDto(req.language()),
                     "speakers" to talk.speakers.map { it.toDto(lang) }.sortedBy { it.firstname },
                     "othertalks" to otherTalks,
@@ -224,14 +223,6 @@ class TalkHandler(
         } else {
             return editTalkViewDetail(req, updatedTalk, errors)
         }
-    }
-
-    private fun loadSponsors(event: CachedEvent): Map<String, Any> {
-        val sponsors = event.filterBySponsorLevel(SponsorshipLevel.GOLD)
-        return mapOf(
-            Pair("sponsors-gold", sponsors.map { it.toSponsorDto() }),
-            Pair("sponsors-others", event.sponsors.filterNot { sponsors.contains(it) }.map { it.toSponsorDto() })
-        )
     }
 
     suspend fun redirectFromId(req: ServerRequest): ServerResponse {

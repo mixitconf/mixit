@@ -51,7 +51,7 @@ abstract class CacheCaffeineTemplate<T : Cached> {
 
     suspend fun findAll(): List<T> {
         val elements = cache.getIfPresent(DEFAULT_KEY)
-        if (elements == null) {
+        if (elements.isNullOrEmpty()) {
             cache.put(DEFAULT_KEY, loader().invoke())
         }
         return cache.getIfPresent(DEFAULT_KEY) ?: throw NotFoundException()
