@@ -329,8 +329,12 @@ h3 {
 }
 
 .mxt-wrapper--header-page {
-  background-color: #2c233d;
+  background-color: #2c233d !important;
   color: #fefefe;
+  display: none;
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
   text-align: center;
   padding-top: 2em;
   padding-left: 1em;
@@ -349,10 +353,6 @@ h3 {
   color: white;
   text-align: center;
   box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  //background: url(/images/svg/mxt-skyline.svg) no-repeat bottom;
-  //background-color: rgba(0, 0, 0, 0);
-  //background-position-x: center;
-  //background-position-y: bottom;
   border-bottom: 5px solid #dbb9b8;
   @include media-breakpoint-up(sm) {
     background-size: 130%;
