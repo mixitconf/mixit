@@ -14,6 +14,7 @@ data class Post(
     @TextIndexed(weight = 10F) val title: Map<Language, String> = emptyMap(),
     val headline: Map<Language, String> = emptyMap(),
     val content: Map<Language, String>? = emptyMap(),
+    val year: Int? = null,
     @Id val id: String? = null,
     val slug: Map<Language, String> = title.entries.map { (k, v) -> Pair(k, v.toSlug()) }.toMap(),
     // We can't add an index on Map values. This field is only used to be able to do that

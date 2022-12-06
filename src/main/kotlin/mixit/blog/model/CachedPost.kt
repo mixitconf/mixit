@@ -16,7 +16,8 @@ data class CachedPost(
     val title: Map<Language, String>,
     val headline: Map<Language, String>,
     val content: Map<Language, String>,
-    val slug: Map<Language, String>
+    val slug: Map<Language, String>,
+    val year: Int
 ) : Cached {
     constructor(post: Post, user: User) : this(
         post.id!!,
@@ -25,7 +26,8 @@ data class CachedPost(
         post.title,
         post.headline,
         post.content ?: emptyMap(),
-        post.slug
+        post.slug,
+        post.year ?: post.addedAt.year
     )
 
     fun toFeedEntry(language: Language) = FeedEntry(
@@ -41,6 +43,7 @@ data class CachedPost(
         title,
         headline,
         content,
+        year,
         id,
         slug
     )

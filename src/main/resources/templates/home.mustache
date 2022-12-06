@@ -1,52 +1,10 @@
 {{> header}}
-
-<div class="mxt-wrapper--header">
-    <div class="row">
-        <div class="col-12 text-right d-none d-md-inline">
-            <img src="/images/svg/mxt-icon--edition.svg" class="mxt-icon--edition">
-        </div>
-        <div class="col-12 text-cente pt-5">
-            <h1 class="hide">{{#i18n}}home.wrapper.text{{/i18n}}
-                <img src="/images/svg/mxt-icon--heart.svg" class="mxt-icon--heart"
-                     alt="{{#i18n}}home.wrapper.title{{/i18n}}"></h1>
-            <h2 class="pt-2 mxt-text--small">
-                {{#i18n}}home.wrapper.dates{{/i18n}}
-            </h2>
-            <p class="pb-5">
-                <a href="/accessibility">
-                    <img src="/images/svg/accessibility/mxt-icon--child-care.svg" class="mxt-icon--social"
-                         container="body"
-                         data-bs-toggle="tooltip" data-bs-placement="bottom"
-                         title="{{#i18n}}home.accessibility.childcare{{/i18n}}"
-                         alt="{{#i18n}}home.accessibility.childcare{{/i18n}}">
-                </a>
-                <a href="/accessibility">
-                    <img src="/images/svg/accessibility/mxt-icon--hearing-impaired.svg"
-                         data-bs-toggle="tooltip" data-bs-placement="bottom"
-                         class="mxt-icon--social" title="{{#i18n}}home.accessibility.hearing.impaired{{/i18n}}"
-                         alt="{{#i18n}}home.accessibility.hearing.impaired{{/i18n}}">
-                </a>
-                <a href="/accessibility">
-                    <img src="/images/svg/accessibility/mxt-icon--motor-disability.svg" class="mxt-icon--social"
-                         data-bs-toggle="tooltip" data-bs-placement="bottom"
-                         title="{{#i18n}}home.accessibility.motor.disability{{/i18n}}"
-                         alt="{{#i18n}}home.accessibility.motor.disability{{/i18n}}">
-                </a>
-                <a href="/accessibility">
-                    <img src="/images/svg/accessibility/mxt-icon--pregnant.svg" class="mxt-icon--social"
-                         data-bs-toggle="tooltip" data-bs-placement="bottom"
-                         title="{{#i18n}}home.accessibility.pregnant{{/i18n}}"
-                         alt="{{#i18n}}home.accessibility.pregnant{{/i18n}}">
-                </a>
-            </p>
-        </div>
-    </div>
-</div>
+{{> header-home }}
 <div class="container mxt-wrapper--home-content">
-    <p class="lead">{{#i18n}}home.2022.intro{{/i18n}}</p>
+    <h1 class="lead">{{#i18n}}home.intro.title{{/i18n}}</h1>
 
     <h2 class="subheader text-center pt-5">{{#i18n}}talks.title{{/i18n}}</h2>
-    <p class="pt-2">{{#i18n}}talks.content{{/i18n}} <a href="/2022">#2022</a>.</p>
+    <p class="pt-2">{{#i18n}}talks.content{{/i18n}}</p>
 
     <div class="mxt-tracks row">
         <div class="col-12 col-md-6 col-lg-4 row pt-2">
@@ -101,13 +59,6 @@
         </div>
     </div>
 
-    <p class="pt-2">{{#i18n}}talks.star{{/i18n}}</p>
-    <div class="row">
-        {{#stars-current}}
-            {{> home-speaker }}
-        {{/stars-current}}
-    </div>
-
 </div>
 
 <div class="container mxt-wrapper--home-content mt-5" style="background-color: #e6e6e6;">
@@ -145,6 +96,7 @@
         <a href="/2018/medias">#2018</a>,
         <a href="/2019/medias">#2019</a>,
         <a href="/2021/medias">#2021</a>
+        <a href="/2022/medias">#2022</a>
     </p>
 </div>
 <div class="container mxt-wrapper--home-content mt-5">

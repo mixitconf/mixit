@@ -27,7 +27,7 @@ class SponsorHandler(private val eventService: EventService) {
 
         val levels: List<Pair<String, *>> = sponsorshipLevels()
             .flatMap { level ->
-                val sponsors = event.filterBySponsorLevel(GOLD).map { it.toEventSponsoringDto(lg) }
+                val sponsors = event.filterBySponsorLevel(level).map { it.toEventSponsoringDto(lg) }
                 listOf(
                     "sponsors-${level.name.lowercase()}" to sponsors,
                     "has-sponsors-${level.name.lowercase()}" to sponsors.isNotEmpty()
@@ -36,7 +36,8 @@ class SponsorHandler(private val eventService: EventService) {
 
         val context = levels.toMap() + mapOf(
             MustacheI18n.YEAR to year,
-            MustacheI18n.TITLE to "sponsors.title|$year"
+            MustacheI18n.TITLE to "sponsors.title|$year",
+            "isCurrent" to (year == CURRENT_EVENT.toInt())
         )
         return ServerResponse.ok().renderAndAwait(Sponsors.template, context)
     }

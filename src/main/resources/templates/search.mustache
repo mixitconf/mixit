@@ -1,7 +1,9 @@
 {{> header}}
 
-<div class="mxt-wrapper--header">
-    <h1 class="text-center pt-5">{{#i18n}}search.title{{/i18n}}</h1>
+{{> header-common }}
+
+<div class="mxt-wrapper--header-page-title">
+    <h1 class="pt-3 pb-3">{{#i18n}}search.title{{/i18n}}</h1>
 </div>
 <div class="container mxt-wrapper--page-content">
     <form action="/search" method="post">
@@ -13,45 +15,50 @@
                 <button type="submit" class="btn btn-primary"><img src="/images/svg/mxt-search.svg" style="max-width: 1.5em" title="{{#i18n}}header.menu.search{{/i18n}}"></button>
             </div>
         </div>
-        <h2 class="mt-5">{{#i18n}}search.talks{{/i18n}}</h2>
-        {{#hasTalks}}
-            <p>{{#i18n}}search.nb{{/i18n}}<b>{{countTalks}}</b></p>
-            {{#talks}}
-                <article class="mb-4">
-                    <h2><a href="{{localePrefix}}/{{event}}/{{slug}}" class="mxt-title--article">
-                        <b>{{event}}</b> -{{title}}
-                        {{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
-                    </a></h2>
-                    <ul class="mxt-wrapper-list-inline mxt-menu--accordion">
-                        {{#video}}<li><strong>&#x25ba; {{#i18n}}talks.title.video{{/i18n}}</strong></li>{{/video}}
-                        <li class="mxt-text--cat-format">#{{format}}</li>
-                    </ul>
-                    <p>{{#markdown}}{{summary}}{{/markdown}}</p>
-                    <a href="{{localePrefix}}/{{event}}/{{slug}}" class="btn btn-outline-primary align-center">{{#i18n}}talks.readmore{{/i18n}}</a>
-                </article>
-            {{/talks}}
-        {{/hasTalks}}
-        {{^hasTalks}}
-            <p>{{#i18n}}search.no.talks{{/i18n}}</p>
-        {{/hasTalks}}
-        <hr/>
-        <h2 class="mt-5">{{#i18n}}search.posts{{/i18n}}</h2>
-        {{#hasArticles}}
-            <p>{{#i18n}}search.nb{{/i18n}}<b>{{countArticles}}</b></p>
-            {{#articles}}
-                <article class="mb-4">
-                    <h2><a href="{{localePrefix}}/blog/{{slug}}" class="mxt-title--article">{{title}}</a></h2>
-                    <p class="subheader">{{#i18n}}blog.on{{/i18n}} <strong>{{addedAt}}</strong></p>
-                    <p>{{#markdown}}{{headline}}{{/markdown}}</p>
-                    <a href="{{localePrefix}}/blog/{{slug}}" class="btn btn-outline-primary align-center">{{#i18n}}blog.readmore{{/i18n}}</a>
-                </article>
-            {{/articles}}
-        {{/hasArticles}}
-        {{^hasArticles}}
-            <p>{{#i18n}}search.no.posts{{/i18n}}</p>
-        {{/hasArticles}}
-        <hr/>
-        <h2 class="mt-5">{{#i18n}}search.users{{/i18n}}</h2>
+    </form>
+</div>
+<div class="container mxt-wrapper--page-content mt-3">
+    <h2 >{{#i18n}}search.talks{{/i18n}}</h2>
+    {{#hasTalks}}
+        <p>{{#i18n}}search.nb{{/i18n}}<b>{{countTalks}}</b></p>
+        {{#talks}}
+            <article class="mb-4">
+                <h2><a href="{{localePrefix}}/{{event}}/{{slug}}" class="mxt-title--article">
+                    <b>{{event}}</b> -{{title}}
+                    {{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
+                </a></h2>
+                <ul class="mxt-wrapper-list-inline mxt-menu--accordion">
+                    {{#video}}<li><strong>&#x25ba; {{#i18n}}talks.title.video{{/i18n}}</strong></li>{{/video}}
+                    <li class="mxt-text--cat-format">#{{format}}</li>
+                </ul>
+                <p>{{#markdown}}{{summary}}{{/markdown}}</p>
+                <a href="{{localePrefix}}/{{event}}/{{slug}}" class="btn btn-outline-primary align-center">{{#i18n}}talks.readmore{{/i18n}}</a>
+            </article>
+        {{/talks}}
+    {{/hasTalks}}
+    {{^hasTalks}}
+        <p>{{#i18n}}search.no.talks{{/i18n}}</p>
+    {{/hasTalks}}
+</div>
+<div class="container mxt-wrapper--page-content mt-3">
+    <h2>{{#i18n}}search.posts{{/i18n}}</h2>
+    {{#hasArticles}}
+        <p>{{#i18n}}search.nb{{/i18n}}<b>{{countArticles}}</b></p>
+        {{#articles}}
+            <article class="mb-4">
+                <h2><a href="{{localePrefix}}/blog/{{slug}}" class="mxt-title--article">{{title}}</a></h2>
+                <p class="subheader">{{#i18n}}blog.on{{/i18n}} <strong>{{addedAt}}</strong></p>
+                <p>{{#markdown}}{{headline}}{{/markdown}}</p>
+                <a href="{{localePrefix}}/blog/{{slug}}" class="btn btn-outline-primary align-center">{{#i18n}}blog.readmore{{/i18n}}</a>
+            </article>
+        {{/articles}}
+    {{/hasArticles}}
+    {{^hasArticles}}
+        <p>{{#i18n}}search.no.posts{{/i18n}}</p>
+    {{/hasArticles}}
+</div>
+<div class="container mxt-wrapper--page-content mt-3">
+    <h2>{{#i18n}}search.users{{/i18n}}</h2>
         {{#hasUsers}}
             <p>{{#i18n}}search.nb{{/i18n}}<b>{{countUsers}}</b></p>
             {{#users}}
@@ -65,6 +72,5 @@
         {{^hasUsers}}
             <p>{{#i18n}}search.no.users{{/i18n}}</p>
         {{/hasUsers}}
-    </form>
 </div>
 {{> footer}}

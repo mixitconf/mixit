@@ -1,13 +1,15 @@
 {{> header}}
+{{> header-common }}
 
-<div class="mxt-wrapper--header">
-    <h1 class="text-center pt-5">
+<div class="mxt-wrapper--header-page-title">
+    <h1 class="pt-3 pb-3">
         {{#i18n}}about.title{{/i18n}}
         <button class="btn btn-secondary dropdown-toggle mxt-dropdown-header" type="button"
                 id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
             {{year}}
         </button>
         <ul class="dropdown-menu mxt-dropdown-header" aria-labelledby="dropdownMenuButton1">
+            <li><a href="{{localePrefix}}/about/2023" class="dropdown-item">2023</a></li>
             <li><a href="{{localePrefix}}/about/2022" class="dropdown-item">2022</a></li>
             <li><a href="{{localePrefix}}/about/2021" class="dropdown-item">2021</a></li>
             <li><a href="{{localePrefix}}/about/2019" class="dropdown-item">2019</a></li>
@@ -28,8 +30,10 @@
     <p>{{#i18n}}about.story2{{/i18n}}</p>
     <p>{{#i18n}}about.story3{{/i18n}}</p>
     {{/isCurrent}}
-
-    <h2 class="subheader mt-5 text-center">{{#i18n}}about.teamtitle{{/i18n}}</h2><br />
+</div>
+<div>&nbsp;</div>
+<div class="container mxt-wrapper--page-content">
+    <h2 class="subheader text-center">{{#i18n}}about.teamtitle{{/i18n}}</h2><br />
     {{#staff}}
         <div class="row">
             <div class="col-12 col-md-4 text-center">
@@ -50,7 +54,11 @@
         </div>
     {{/staff}}
     {{#hasVolunteers}}
-        <h2 class="subheader mt-5 text-center">{{#i18n}}about.volunteers{{/i18n}}</h2><br/>
+        </div>
+        <div>&nbsp;</div>
+        <div class="container mxt-wrapper--page-content">
+
+            <h2 class="subheader text-center">{{#i18n}}about.volunteers{{/i18n}}</h2><br/>
         {{#volunteers}}
             <div class="row">
                 <div class="col-12 col-md-4 text-center">
@@ -75,4 +83,7 @@
         {{/volunteers}}
     {{/hasVolunteers}}
 </div>
+
+{{> sponsor-footer }}
+
 {{> footer}}

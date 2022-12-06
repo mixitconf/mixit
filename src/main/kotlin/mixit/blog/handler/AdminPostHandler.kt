@@ -1,6 +1,7 @@
 package mixit.blog.handler
 
 import kotlinx.coroutines.reactor.awaitSingleOrNull
+import mixit.MixitApplication
 import mixit.MixitProperties
 import mixit.blog.model.BlogService
 import mixit.blog.model.Post
@@ -39,7 +40,9 @@ class AdminPostHandler(private val service: BlogService, private val properties:
         this.adminPost(null)
 
     suspend fun editPost(req: ServerRequest): ServerResponse =
-        this.adminPost(service.findOneOrNull(req.pathVariable("id"))?.toPost())
+        this.adminPost(service.findOneOrNull(req.pathVariable("id"))?.toPost()?.let {
+            it.copy(year = it.year ?:  it.addedAt.year)
+        })
 
     suspend fun adminDeletePost(req: ServerRequest): ServerResponse {
         val formData = req.extractFormData()
@@ -48,7 +51,7 @@ class AdminPostHandler(private val service: BlogService, private val properties:
     }
 
     private suspend fun adminPost(post: Post?): ServerResponse {
-        val blogpost = post ?: Post("")
+        val blogpost = post ?: Post("", year = MixitApplication.CURRENT_EVENT.toInt())
 
         return ok().renderAndAwait(
             AdminPost.template,
@@ -75,6 +78,7 @@ class AdminPostHandler(private val service: BlogService, private val properties:
                 Pair(FRENCH, formData["title-fr"]!!.toSlug()),
                 Pair(ENGLISH, formData["title-en"]!!.toSlug())
             ),
+            year = formData["year"]!!.toInt(),
             headline = mapOf(Pair(FRENCH, formData["headline-fr"]!!), Pair(ENGLISH, formData["headline-en"]!!)),
             content = mapOf(Pair(FRENCH, formData["content-fr"]!!), Pair(ENGLISH, formData["content-en"]!!))
         )

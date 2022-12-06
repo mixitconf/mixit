@@ -46,7 +46,7 @@ enum class MustacheTemplate(val template: String, val title: String?) {
     EmailTicketing("email/email-ticketing", null),
     EmailToken("email/email-token", null),
     EmailNewsletterSubscribe("email/email-newsletter-subscribe", null),
-    FeedbackWall("talks-feedback-wall", null),
+    FeedbackWall("talks-feedback-wall", "talks.title.html"),
     Login("login", null),
     LoginError("login-error", null),
     LoginConfirmation("login-confirmation", null),
