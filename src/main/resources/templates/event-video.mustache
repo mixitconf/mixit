@@ -1,0 +1,26 @@
+{{> header}}
+{{> header-common }}
+
+<div class="mxt-wrapper--header-page-title">
+    <h1 class="pt-3">{{#i18n}}events.title{{/i18n}}</h1>
+</div>
+
+{{#events}}
+    <div class="container mxt-wrapper--page-content mb-3">
+        <h2>MiXiT {{year}}</h2>
+        <div>{{start}} / {{end}}</div>
+        {{#videoUrl}}
+            <div class="mxt-wrapper--intrinsic">
+                <iframe src="{{videoUrl.url}}" class="mxt-wrapper--video-player vimeo"
+                        allowfullscreen></iframe>
+            </div>
+        {{/videoUrl}}
+        {{^videoUrl}}
+            <div class="mt-3">
+                {{#i18n}}event.no-video{{/i18n}} {{year}}.
+            </div>
+        {{/videoUrl}}
+    </div>
+{{/events}}
+
+{{> footer}}

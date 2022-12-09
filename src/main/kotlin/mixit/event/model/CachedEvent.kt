@@ -1,11 +1,13 @@
 package mixit.event.model
 
+import mixit.talk.model.Language
 import mixit.user.model.CachedOrganization
 import mixit.user.model.CachedSpeaker
 import mixit.user.model.CachedSponsor
 import mixit.user.model.CachedStaff
 import mixit.user.model.Link
 import mixit.util.cache.Cached
+import mixit.util.formatDate
 import java.time.LocalDate
 
 data class CachedEvent(
@@ -40,6 +42,17 @@ data class CachedEvent(
             year
         )
 
+    fun toEventDto(language: Language): EventDto =
+        EventDto(
+            id,
+            start.formatDate(language),
+            end.formatDate(language),
+            current,
+            photoUrls,
+            videoUrl?.copy(url = videoUrl.url.replace("https://vimeo.com", "https://player.vimeo.com/video")),
+            schedulingFileUrl,
+            year
+        )
     fun filterBySponsorLevel(vararg levels: SponsorshipLevel): List<CachedSponsor> =
         sponsors.filter { levels.contains(it.level) }
 }

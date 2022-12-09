@@ -40,6 +40,7 @@ enum class MustacheTemplate(val template: String, val title: String?) {
     BlogPost("post", null),
     CodeOfConduct("code-of-conduct", "code-of-conduct.title"),
     Come("come", "come.title"),
+    EventVideo("event-video", "events.title"),
     Faq("faq", "faq.title"),
     Home("home", null),
     EmailMailing("email/email-mailing", null),

@@ -25,6 +25,7 @@ import java.net.URLEncoder
 import java.nio.charset.Charset
 import java.security.MessageDigest
 import java.text.Normalizer
+import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.ZoneOffset
 import java.time.ZonedDateTime
@@ -95,6 +96,9 @@ suspend fun temporaryRedirect(uri: String): ServerResponse =
 // --------------------
 // Date/Time extensions
 // --------------------
+
+fun LocalDate.formatDate(language: Language): String =
+    if (language == Language.ENGLISH) this.format(englishDateFormatter) else this.format(frenchDateFormatter)
 
 fun LocalDateTime.formatDate(language: Language): String =
     if (language == Language.ENGLISH) this.format(englishDateFormatter) else this.format(frenchDateFormatter)

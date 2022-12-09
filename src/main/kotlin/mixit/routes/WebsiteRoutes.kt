@@ -7,6 +7,7 @@ import mixit.about.SearchHandler
 import mixit.blog.handler.AdminPostHandler
 import mixit.blog.handler.WebBlogHandler
 import mixit.event.handler.AdminEventHandler
+import mixit.event.handler.EventHandler
 import mixit.event.model.SponsorshipLevel.MIXTEEN
 import mixit.mailing.handler.MailingHandler
 import mixit.mailing.handler.MailingListHandler
@@ -58,6 +59,7 @@ class WebsiteRoutes(
     private val authenticationHandler: AuthenticationHandler,
     private val blogHandler: WebBlogHandler,
     private val aboutHandler: AboutHandler,
+    private val eventHandler: EventHandler,
     private val searchHandler: SearchHandler,
     private val talkHandler: TalkHandler,
     private val sponsorHandler: SponsorHandler,
@@ -146,6 +148,7 @@ class WebsiteRoutes(
             GET("/admin/events/{eventId}/organizers/edit/{organizerLogin}", adminEventHandler::editEventOrganizer)
             GET("/admin/events/{eventId}/organizers/create", adminEventHandler::createEventOrganizer)
             GET("/admin/events/create", adminEventHandler::createEvent)
+            GET("/events", eventHandler::findEvents)
             GET("/faq", aboutHandler::faqView)
             GET("/lottery", lotteryHandler::ticketing)
             GET("/me") { userHandler.findProfileView(it) }
