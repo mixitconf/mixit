@@ -625,3 +625,13 @@ h3 {
   font-size: 1.3rem;
   text-transform: uppercase;
 }
+
+.mxt-home-round-button {
+  background-color: #2c233d;
+  padding: 2em;
+  border-radius: 90px;
+
+  &:hover {
+    background-color: #ff8d4e;
+  }
+}
