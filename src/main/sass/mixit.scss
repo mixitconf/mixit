@@ -5,14 +5,6 @@ $secondary-color: #2C233D;
 $third-color: #aecbd6;
 $primary-color: #FF8D4E;
 
-$container-max-widths: (
-        sm: 540px,
-        md: 720px,
-        lg: 960px,
-        xl: 1140px,
-        xxl: 1500px
-) !default;
-
 // 2. Include any default variable overrides here
 $theme-colors: (
         "primary": $primary-color,
