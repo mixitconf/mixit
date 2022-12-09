@@ -626,10 +626,32 @@ h3 {
   text-transform: uppercase;
 }
 
+.mxt-home-round-header {
+  div {
+    text-align: center !important;
+  }
+  button {
+    background-color: #2c233d;
+    padding: 1.5em;
+    border-radius: 90px;
+
+    > img  {
+      width: 50px;
+    }
+
+    &:hover {
+      background-color: #ff8d4e;
+    }
+  }
+}
 .mxt-home-round-button {
   background-color: #2c233d;
-  padding: 2em;
+  padding: 1.5em;
   border-radius: 90px;
+
+  > img  {
+    width: 50px;
+  }
 
   &:hover {
     background-color: #ff8d4e;
