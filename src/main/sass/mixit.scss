@@ -3,6 +3,7 @@
 
 $secondary-color: #2C233D;
 $third-color: #aecbd6;
+$fourth-color: #757575;
 $primary-color: #FF8D4E;
 
 // 2. Include any default variable overrides here
@@ -421,7 +422,7 @@ h3 {
   position: relative;
   background-color: white;
   padding: 0.5em;
-  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   top: 0.5em;
   @include media-breakpoint-up(md) {
     padding: 2em;
@@ -433,7 +434,7 @@ h3 {
   position: relative;
   background-color: white;
   padding: 2em;
-  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   @include media-breakpoint-up(md) {
     margin-bottom: -1em;
   }
@@ -448,7 +449,7 @@ h3 {
   border: none;
   border-radius: 0;
   background-color: #fff;
-  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   color: #2c233d;
   @include media-breakpoint-up(md) {
     padding: 2rem;
@@ -629,31 +630,28 @@ h3 {
 .mxt-home-round-header {
   div {
     text-align: center !important;
+    color: $fourth-color;
   }
+
+  a {
+    > div {
+      text-transform: uppercase;
+      color: $secondary-color;
+      font-weight: bolder;
+    }
+  }
+
   button {
-    background-color: #2c233d;
+    background-color: $secondary-color;
     padding: 1.5em;
     border-radius: 90px;
 
-    > img  {
+    > img {
       width: 50px;
     }
 
     &:hover {
-      background-color: #ff8d4e;
+      background-color: $primary-color;
     }
-  }
-}
-.mxt-home-round-button {
-  background-color: #2c233d;
-  padding: 1.5em;
-  border-radius: 90px;
-
-  > img  {
-    width: 50px;
-  }
-
-  &:hover {
-    background-color: #ff8d4e;
   }
 }
