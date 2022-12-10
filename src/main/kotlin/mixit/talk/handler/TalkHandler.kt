@@ -90,7 +90,9 @@ class TalkHandler(
 
     suspend fun findByEventView(config: TalkViewConfig): ServerResponse {
         val currentUserEmail = config.req.currentNonEncryptedUserEmail()
-        val talks = loadTalkAndFavorites(config, currentUserEmail)
+        val talks = loadTalkAndFavorites(config, currentUserEmail).let { talks ->
+            if (config.template == Media) talks.filter { it.video != null } else talks
+        }
         val event = eventService.findByYear(config.year)
         val title = if (config.topic == null) "${config.template.title}|${config.year}" else
             "${config.template.title}.${config.topic}|${config.year}"
