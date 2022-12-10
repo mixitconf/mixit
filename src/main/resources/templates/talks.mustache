@@ -22,23 +22,12 @@
             <li><a href="{{localePrefix}}/2012{{#topic}}/{{topic}}{{/topic}}" class="dropdown-item">2012</a></li>
         </ul>
     </h1>
-<!--    {{#schedulingFileUrl}}-->
-<!--        <p>-->
-<!--            <a href="{{schedulingFileUrl}}" target="_blank" class="button hollow mxt-anchor--uppercase">{{#i18n}}talks.schedule.download{{/i18n}}</a>-->
-<!--        </p>-->
-<!--    {{/schedulingFileUrl}}-->
-
-<!--    {{#connected}}-->
-<!--        {{#filtered}}<p>{{#i18n}}talks.favorites.filter.active{{/i18n}}</p>{{/filtered}}-->
-<!--        {{^filtered}}<p><a href="{{localePrefix}}/{{year}}{{#topic}}/{{topic}}{{/topic}}/favorite">{{#i18n}}talks.favorites.filter{{/i18n}}</a></p>{{/filtered}}-->
-<!--    {{/connected}}-->
-<!--    <p>{{#i18n}}talks.medias.see{{/i18n}} <a href="{{localePrefix}}/{{year}}/medias{{#topic}}/{{topic}}{{/topic}}">{{#i18n}}talks.medias{{/i18n}}</a></p>-->
 </div>
 
 {{^talks.entrySet}}
-    <div class="container mxt-wrapper--page-content pb-4">
-
-        <div class="row mxt-home-round-header mb-4">
+    {{#event.current}}
+    <div class="container mb-2">
+        <div class="row mxt-home-round-header" style="justify-content: center;">
             <div class="col-12 text-center">
                 <a href="https://sessionize.com/mixit2023/" target="_blank" alt="{{#i18n}}home.intro.cfp{{/i18n}}">
                     <button><img src="/images/svg/mxt-icon-cfp.svg"></button>
@@ -47,7 +36,8 @@
                 <div>{{#i18n}}home.intro.cfp{{/i18n}}</div>
             </div>
         </div>
-
+    </div>
+    <div class="container mxt-wrapper--page-content pb-4">
         <p class="lead">{{#i18n}}talks.content{{/i18n}}</p>
 
         <div class="mxt-tracks row">
@@ -103,7 +93,41 @@
             </div>
         </div>
     </div>
+    {{/event.current}}
 {{/talks.entrySet}}
+{{^event.current}}
+    <div class="container mb-2">
+        <div class="row mxt-home-round-header" style="justify-content: center;">
+            {{#schedulingFileUrl}}
+                <div class="col-12 col-md-6 col-lg-3">
+                    <a href="{{schedulingFileUrl}}" target="_blank" alt="{{#i18n}}talks.schedule{{/i18n}}">
+                        <button><img src="/images/svg/mxt-icon-file-pdf.svg"></button>
+                        <div>{{#i18n}}talks.schedule{{/i18n}}</div>
+                    </a>
+                    <div>{{#i18n}}talks.schedule.download{{/i18n}}</div>
+                </div>
+            {{/schedulingFileUrl}}
+            <div class="col-12 col-md-6 col-lg-3">
+                <a href="{{localePrefix}}/2022/medias{{#topic}}/{{topic}}{{/topic}}" alt="{{#i18n}}talks.medias{{/i18n}}">
+                    <button><img src="/images/svg/mxt-icon-video.svg"></button>
+                    <div>{{#i18n}}medias.title{{/i18n}}</div>
+                </a>
+                <div>{{#i18n}}talks.medias{{/i18n}}</div>
+            </div>
+            {{#connected}}
+                {{^filtered}}
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <a href="{{localePrefix}}/{{year}}{{#topic}}/{{topic}}{{/topic}}/favorite" alt="{{#i18n}}talks.favorites.filter{{/i18n}}">
+                            <button><img src="/images/svg/favorites/mxt-favorite-white.svg"></button>
+                            <div>{{#i18n}}talks.favorites.filter.active{{/i18n}}</div>
+                        </a>
+                        <div>{{#i18n}}talks.favorites.filter{{/i18n}}</div>
+                    </div>
+                {{/filtered}}
+            {{/connected}}
+        </div>
+    </div>
+{{/event.current}}
 {{#talks.entrySet}}
     <div class="container mxt-wrapper--page-content pb-4">
         {{#key}}<h2>{{key}}</h2>{{/key}}
