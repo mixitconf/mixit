@@ -35,6 +35,75 @@
 <!--    <p>{{#i18n}}talks.medias.see{{/i18n}} <a href="{{localePrefix}}/{{year}}/medias{{#topic}}/{{topic}}{{/topic}}">{{#i18n}}talks.medias{{/i18n}}</a></p>-->
 </div>
 
+{{^talks.entrySet}}
+    <div class="container mxt-wrapper--page-content pb-4">
+
+        <div class="row mxt-home-round-header mb-4">
+            <div class="col-12 text-center">
+                <a href="https://sessionize.com/mixit2023/" target="_blank" alt="{{#i18n}}home.intro.cfp{{/i18n}}">
+                    <button><img src="/images/svg/mxt-icon-cfp.svg"></button>
+                    <div>{{#i18n}}home.intro.cfp.title{{/i18n}}</div>
+                </a>
+                <div>{{#i18n}}home.intro.cfp{{/i18n}}</div>
+            </div>
+        </div>
+
+        <p class="lead">{{#i18n}}talks.content{{/i18n}}</p>
+
+        <div class="mxt-tracks row">
+            <div class="col-12 col-md-6 col-lg-4 row pt-2">
+                <div class="col-4 col-md-3 col-lg-3 text-center">
+                    <img src="/images/svg/mxt-icon--tech.svg" class="mxt-icon--cat__home"
+                         alt="{{#i18n}}home.topics.tech.title{{/i18n}}">
+                </div>
+                <div class="col-8 col-md-9 col-lg-9">
+                    <h3 style="margin-bottom: -0.2rem;">{{#i18n}}home.topics.tech.title{{/i18n}}</h3>
+                    <small>{{#i18n}}home.topics.tech.description{{/i18n}}</small>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 row pt-2">
+                <div class="col-4 col-md-3 col-lg-3 text-center">
+                    <img src="/images/svg/mxt-icon--design.svg" class="mxt-icon--cat__home"
+                         alt="{{#i18n}}home.topics.design.title{{/i18n}}">
+                </div>
+                <div class="col-8 col-md-9 col-lg-9">
+                    <h3 style="margin-bottom: -0.2rem;">{{#i18n}}home.topics.design.title{{/i18n}}</h3>
+                    <small>{{#i18n}}home.topics.design.description{{/i18n}}</small>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 row pt-2">
+                <div class="col-4 col-md-3 col-lg-3 text-center">
+                    <img src="/images/svg/mxt-icon--aliens.svg" class="mxt-icon--cat__home"
+                         alt="{{#i18n}}home.topics.aliens.title{{/i18n}}">
+                </div>
+                <div class="col-8 col-md-9 col-lg-9">
+                    <h3 style="margin-bottom: -0.2rem;">{{#i18n}}home.topics.aliens.title{{/i18n}}</h3>
+                    <small>{{#i18n}}home.topics.aliens.description{{/i18n}}</small>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 row pt-2">
+                <div class="col-4 col-md-3 col-lg-3 text-center">
+                    <img src="/images/svg/mxt-icon--team.svg" class="mxt-icon--cat__home"
+                         alt="{{#i18n}}home.topics.team.title{{/i18n}}">
+                </div>
+                <div class="col-8 col-md-9 col-lg-9">
+                    <h3 style="margin-bottom: -0.2rem;">{{#i18n}}home.topics.team.title{{/i18n}}</h3>
+                    <small>{{#i18n}}home.topics.team.description{{/i18n}}</small>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 row pt-2">
+                <div class="col-4 col-md-3 col-lg-3 text-center">
+                    <img src="/images/svg/mxt-icon--ethics.svg" class="mxt-icon--cat__home"
+                         alt="{{#i18n}}home.topics.ethics.title{{/i18n}}">
+                </div>
+                <div class="col-8 col-md-9 col-lg-9">
+                    <h3 style="margin-bottom: -0.2rem;">{{#i18n}}home.topics.ethics.title{{/i18n}}</h3>
+                    <small>{{#i18n}}home.topics.ethics.description{{/i18n}}</small>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/talks.entrySet}}
 {{#talks.entrySet}}
     <div class="container mxt-wrapper--page-content pb-4">
         {{#key}}<h2>{{key}}</h2>{{/key}}
