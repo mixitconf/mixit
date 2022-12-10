@@ -1,10 +1,41 @@
 {{> header}}
 {{> header-home }}
 <div class="container mxt-wrapper--home-content">
-    <h1 class="lead">{{#i18n}}home.intro.title{{/i18n}}</h1>
+    <p class="lead">{{#i18n}}home.intro.title{{/i18n}}</p>
+
+    <div class="row mxt-home-round-header">
+        <div class="col-12 col-md-6 col-lg-3">
+            <a href="https://sessionize.com/mixit2023/" target="_blank" alt="{{#i18n}}home.intro.cfp{{/i18n}}">
+                <button><img src="/images/svg/mxt-icon-cfp.svg"></button>
+                <div>{{#i18n}}home.intro.cfp.title{{/i18n}}</div>
+            </a>
+            <div>{{#i18n}}home.intro.cfp{{/i18n}}</div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <a href="mailto:contact@mixitconf.org" alt="{{#i18n}}home.intro.volunteer{{/i18n}}">
+                <button><img src="/images/svg/mxt-icon-team.svg"></button>
+                <div>{{#i18n}}home.intro.volunteer.title{{/i18n}}</div>
+            </a>
+            <div>{{#i18n}}home.intro.volunteer{{/i18n}}</div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <a href="/sponsors" alt="{{#i18n}}home.intro.sponsor{{/i18n}}">
+                <button><img src="/images/svg/mxt-icon-sponsor.svg"></button>
+                <div>{{#i18n}}home.intro.sponsor.title{{/i18n}}</div>
+            </a>
+            <div>{{#i18n}}home.intro.sponsor{{/i18n}}</div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+            <a href="/2022/medias" alt="{{#i18n}}home.intro.replay{{/i18n}}">
+                <button><img src="/images/svg/mxt-icon-video.svg"></button>
+                <div>{{#i18n}}home.intro.replay.title{{/i18n}}</div>
+            </a>
+            <div>{{#i18n}}home.intro.replay{{/i18n}}</div>
+        </div>
+    </div>
 
     <h2 class="subheader text-center pt-5">{{#i18n}}talks.title{{/i18n}}</h2>
-    <p class="pt-2">{{#i18n}}talks.content{{/i18n}}</p>
+    <p class="lead">{{#i18n}}talks.content{{/i18n}}</p>
 
     <div class="mxt-tracks row">
         <div class="col-12 col-md-6 col-lg-4 row pt-2">
