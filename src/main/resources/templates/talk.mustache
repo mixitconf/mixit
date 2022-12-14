@@ -64,11 +64,11 @@
 <div class="container mxt-wrapper--page-content mt-4 mb-4">
     {{#speakers}}
         <div class="row p-2">
-            <div class="col-2 text-center align-middle">
+            <div class="col-12 col-md-2 text-center align-middle">
                 <a href="/user/{{login}}"><img src="{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{^photoUrl}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/photoUrl}}"
                     class="mxt-img-avatar__speaker_new"></a>
             </div>
-            <div class="col-10 align-middle">
+            <div class="col-12 col-md-10 align-middle">
                 <h2>{{firstname}}&nbsp;{{lastname}}</h2>
 
                 {{#markdown}}{{description}}{{/markdown}}
@@ -76,7 +76,7 @@
                     {{#links}}
                         <li><a href="{{url}}">{{name}}</a></li>
                     {{/links}}
-                </ul>
+                </ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
             </div>
         </div>
     {{/speakers}}
