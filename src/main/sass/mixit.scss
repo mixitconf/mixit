@@ -234,6 +234,19 @@ h3 {
   }
 }
 
+.mxt-img-avatar__speaker_new {
+  border-radius: 100%;
+  border: 7px solid $secondary-color;
+  margin-bottom: 1em;
+  background: $secondary-color none repeat scroll 0 0;
+  width: 100px;
+  height: 100px;
+  max-width: 100px;
+  min-height: 100px;
+  max-height: 100px;
+  text-overflow: ellipsis;
+}
+
 .mxt-img-avatar__speaker {
   border-radius: 100%;
   border: 7px solid #dbb9b8;

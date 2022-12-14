@@ -16,7 +16,6 @@ import org.springframework.web.server.WebSession
 import org.springframework.web.util.UriUtils
 import reactor.core.publisher.Mono
 import reactor.kotlin.core.publisher.toMono
-import java.nio.charset.StandardCharsets
 import java.util.Locale
 
 @Component
@@ -66,7 +65,7 @@ class RouteFilterUtils(
         this["localePrefix"] = localePrefix(locale)
         this["en"] = locale.language == "en"
         this["fr"] = locale.language == "fr"
-        this["baseUri"] = UriUtils.encode(properties.baseUri, StandardCharsets.UTF_8)
+        this["baseUri"] = properties.baseUri
         this["i18n"] = Mustache.Lambda { frag, out ->
             val tokens = frag.execute().split("|")
             out.write(

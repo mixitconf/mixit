@@ -1,38 +1,38 @@
 {{> header}}
 
-<div class="mxt-wrapper--header">
-    <div style="display: flex;flex-wrap: wrap; align-items: center; align-content: center; flex-direction: row" class="pt-5">
-        {{#speakers}}
-            <div style="flex: 1" class="p-2">
-                <a href="/user/{{login}}"><img src="{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{^photoUrl}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/photoUrl}}"
-                    class="mxt-img-avatar__speaker"></a>
-                <div><a href="/user/{{login}}">{{firstname}}&nbsp;{{lastname}}</a>   </div>
-            </div>
-        {{/speakers}}
-    </div>
-    {{#admin}}
-        <div class="mb-5 mt-2">
-            <a href="{{localePrefix}}/admin/talks/edit/{{talk.id}}" class="btn btn-outline-primary" style="margin-bottom: 0">{{#i18n}}common.actions.update{{/i18n}}</a>
-        </div>
-    {{/admin}}
-</div>
+{{> header-common }}
 
+<div class="mxt-wrapper--header-page-title">
+    <h2 class="pt-3 pb-3">#{{#i18n}}talk.format.{{talk.format}}{{/i18n}}</h2>
+</div>
 <div class="container mxt-wrapper--page-content">
-    <article class="callout">
-        <h1 class="text-center mxt-text--talk-h1">
-            {{talk.title}}
-            {{#connected}}
-                <button id="favorite" class="btn btn-link">
-                    {{#favorites}}
-                        <img src="/images/svg/favorites/mxt-favorite.svg" class="mxt-icon--cat__talks"/>
-                    {{/favorites}}
-                    {{^favorites}}
-                        <img src="/images/svg/favorites/mxt-favorite-non.svg" class="mxt-icon--cat__talks"/>
-                    {{/favorites}}
-                </button>
-            {{/connected}}
-        </h1>
-        <p>{{#markdown}}{{talk.summary}}{{/markdown}}</p>
+    <h1 class="text-center mxt-text--talk-h1 container pb-0">
+        {{talk.title}}
+        {{#connected}}
+            <button id="favorite" class="btn btn-link">
+                {{#favorites}}
+                    <img src="/images/svg/favorites/mxt-favorite.svg" class="mxt-icon--cat__talks"/>
+                {{/favorites}}
+                {{^favorites}}
+                    <img src="/images/svg/favorites/mxt-favorite-non.svg" class="mxt-icon--cat__talks"/>
+                {{/favorites}}
+            </button>
+        {{/connected}}
+    </h1>
+
+    <div class="text-center">
+        <ul class="mxt-wrapper-list-inline mb-0 pb-0">
+            {{#speakers}}
+                <li>
+                    <span class="mxt-text--cat mxt-text--cat-speaker" style="background-color: #e6e6e6; padding: 0.3em;color: #2c233d">{{firstname}}&nbsp;{{lastname}}</span>
+                </li>
+            {{/speakers}}
+        </ul>
+    </div>
+
+    <p>{{#markdown}}{{talk.summary}}{{/markdown}}</p>
+
+    <div class="text-center">
         {{#talk.topic}}
             <div class="mxt-text--cat mxt-text--cat-{{talk.topic}}">
                 <img src="/images/svg/mxt-icon--{{talk.topic}}.svg" class="mxt-icon--cat mxt-icon--cat__talks"
@@ -40,86 +40,54 @@
                 <span>{{#i18n}}home.topics.{{talk.topic}}.title{{/i18n}}</span>
             </div>
         {{/talk.topic}}
-        <div><strong>#{{#i18n}}talk.format.{{talk.format}}{{/i18n}}</strong> {{#i18n}}talk.in{{/i18n}} {{#i18n}}talk.language.{{talk.language}}{{/i18n}}</div>
         <div>{{#talk.date}}{{talk.date}}{{/talk.date}}</div>
         <div>{{#talk.start}}{{talk.start}} - {{talk.end}}{{/talk.start}}</div>
         <p class="mxt-text--cat-room">{{#i18n}}{{talk.room}}{{/i18n}}</p>
+    </div>
 
-        {{#talk.description}}
-            <p class="mt-1 mb-1">{{#markdown}}{{talk.description}}{{/markdown}}</p>
-        {{/talk.description}}
-        {{#talk.video}}
-            {{#vimeoPlayer}}
-                <div class="mxt-wrapper--intrinsic mb-3">
-                    <iframe src="{{vimeoPlayer}}" class="mxt-wrapper--video-player" allowfullscreen></iframe>
-                </div>
-            {{/vimeoPlayer}}
-            {{^vimeoPlayer}}
-                &#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{talk.video}}" target="_blank">{{#i18n}}talk.video.thevideo{{/i18n}}</a>
-            {{/vimeoPlayer}}
-        {{/talk.video}}
+    {{#talk.description}}
+        <p class="mt-1 mb-1">{{#markdown}}{{talk.description}}{{/markdown}}</p>
+    {{/talk.description}}
 
-        {{#speakers}}
-            <h2 class="mxt-text--talktitle pt-3">{{firstname}} {{lastname}}</h2>
-            {{#company}}<p class="mxt-text-speaker-company">{{company}}</p>{{/company}}
-            {{#markdown}}{{description}}{{/markdown}}
-            <ul class="mxt-wrapper-list-inline">
-                {{#links}}
-                    <li><a href="{{url}}">{{name}}</a></li>
-                {{/links}}
-            </ul>
-            <br/>
-        {{/speakers}}
-
-        <div class="row">
-            {{#talk.photoUrls}}
-                <div class="col-4">
-                    <a href="{{url}}"><img src="{{url}}" aria-label="{{name}}" class="mxt-img--grayscale pb-2"/></a>
-                </div>
-            {{/talk.photoUrls}}
-        </div>
-
-        {{#hasOthertalks}}
-            <p>&nbsp;</p>
-            <div class="row">
-                {{#talk.speakersFirstNames}}<h2 class="mxt-text--talktitle">{{#i18n}}talk.others| {{talk.speakersFirstNames}}{{/i18n}}</h2>{{/talk.speakersFirstNames}}
-
-                {{#othertalks}}
-                    <div class="accordion-item">
-                        <h2 class="accordion-header p-2" id="heading{{id}}">
-                            <h3 class="mxt-text--talktitle">
-                                <b>{{event}}</b> -
-                                {{title}}
-                                {{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
-                            </h3>
-
-                            <ul class="mxt-wrapper-list-inline">
-                                {{#video}}
-                                    <li><strong>&#x25ba; {{#i18n}}talks.title.video{{/i18n}}</strong></li>{{/video}}
-                                <li class="mxt-text--cat-format">#{{#i18n}}talk.format.{{format}}{{/i18n}}</li>
-                            </ul>
-                            <ul class="mxt-wrapper-list-inline mb-0 pb-0">
-                                {{#speakers}}
-                                    <li>
-                                        <span class="mxt-text--cat mxt-text--cat-speaker" style="background-color: #e6e6e6; padding: 0.3em;color: #2c233d">{{firstname}}&nbsp;{{lastname}}</span>
-                                    </li>
-                                {{/speakers}}
-                            </ul>
-                            <div class="row">
-                                <div class="col-12 col-md-9">
-                                    {{#markdown}}{{summary}}{{/markdown}}
-                                </div>
-                                <div class="col-12 col-md-3 mb-4" style="text-align: right">
-                                    <a href="{{localePrefix}}/{{event}}/{{slug}}" class="btn btn-outline-primary hollow">{{#i18n}}talks.readmore{{/i18n}}</a>
-                                </div>
-                            </div>
-                        </h2>
-                    </div>
-                {{/othertalks}}
+    {{#talk.video}}
+        {{#vimeoPlayer}}
+            <div class="mxt-wrapper--intrinsic mb-3">
+                <iframe src="{{vimeoPlayer}}" class="mxt-wrapper--video-player" allowfullscreen></iframe>
             </div>
-        {{/hasOthertalks}}
+        {{/vimeoPlayer}}
+        {{^vimeoPlayer}}
+            &#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{talk.video}}" target="_blank">{{#i18n}}talk.video.thevideo{{/i18n}}</a>
+        {{/vimeoPlayer}}
+    {{/talk.video}}
 
-    </article>
+</div>
+<div class="container mxt-wrapper--page-content mt-4 mb-4">
+    {{#speakers}}
+        <div class="row p-2">
+            <div class="col-12 col-md-2 text-center align-middle">
+                <a href="/user/{{login}}"><img src="{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{^photoUrl}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/photoUrl}}"
+                    class="mxt-img-avatar__speaker_new"></a>
+            </div>
+            <div class="col-12 col-md-10 align-middle">
+                <h2>{{firstname}}&nbsp;{{lastname}}</h2>
+
+                {{#markdown}}{{description}}{{/markdown}}
+                <ul class="mxt-wrapper-list-inline">
+                    {{#links}}
+                        <li><a href="{{url}}">{{name}}</a></li>
+                    {{/links}}
+                </ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+            </div>
+        </div>
+    {{/speakers}}
+
+    <div class="row" style="justify-content: center">
+        {{#talk.photoUrls}}
+            <div class="col-4">
+                <a href="{{url}}"><img src="{{url}}" aria-label="{{name}}" class="mxt-img--grayscale pb-2"/></a>
+            </div>
+        {{/talk.photoUrls}}
+    </div>
 </div>
 
 {{#sponsors}}
