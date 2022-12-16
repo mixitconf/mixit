@@ -94,6 +94,7 @@ class WebsiteRoutes(
             GET("/admin/post/create", adminPostHandler::createPost)
             GET("/admin/cache", cacheHandler::view)
             GET("/admin/users", adminUserHandler::adminUsers)
+            GET("/admin/users-newsletter", adminUserHandler::adminUserNewsLetters)
             GET("/admin/users/edit/{login}", adminUserHandler::editUser)
             GET("/admin/users/create", adminUserHandler::createUser)
             GET("/admin/mailings", mailingHandler::listMailing)
