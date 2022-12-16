@@ -24,7 +24,7 @@
         <ul class="mxt-wrapper-list-inline mb-0 pb-0">
             {{#speakers}}
                 <li>
-                    <span class="mxt-text--cat mxt-text--cat-speaker" style="background-color: #e6e6e6; padding: 0.3em;color: #2c233d">{{firstname}}&nbsp;{{lastname}}</span>
+                    <a href="/user/{{login}}" class="mxt-text--cat mxt-text--cat-speaker" style="background-color: #e6e6e6; padding: 0.3em;color: #2c233d">{{firstname}}&nbsp;{{lastname}}</a>
                 </li>
             {{/speakers}}
         </ul>
@@ -66,7 +66,7 @@
         <div class="row p-2">
             <div class="col-12 col-md-2 text-center align-middle">
                 <a href="/user/{{login}}"><img src="{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{^photoUrl}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/photoUrl}}"
-                    class="mxt-img-avatar__speaker_new"></a>
+                    class="mxt-img-avatar__speaker"></a>
             </div>
             <div class="col-12 col-md-10 align-middle">
                 <h2>{{firstname}}&nbsp;{{lastname}}</h2>

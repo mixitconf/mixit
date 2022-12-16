@@ -1,33 +1,35 @@
 {{> header}}
 
-<div class="mxt-wrapper--header">
-    <ul class="mxt-wrapper-list-inline pt-5">
-        <li>
-            {{#user.photoUrl}}<img src="{{user.photoUrl}}" class="mxt-img-avatar__speaker">{{/user.photoUrl}}
-            {{^user.photoUrl}}<img src="https://www.gravatar.com/avatar/{{#user.emailHash}}{{user.emailHash}}{{/user.emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png" class="mxt-img-avatar__speaker">{{/user.photoUrl}}
-            <div class="mxt-text--page-title">{{#hasTalks}}{{#i18n}}user.speaker{{/i18n}}{{/hasTalks}}{{^hasTalks}}{{#i18n}}user.standard{{/i18n}}{{/hasTalks}}</div>
-        </li>
-    </ul>
-    {{#connected}}
-        {{^canUpdateProfile}}
-            {{#admin}}
-                <div class="mxt-text--page-title">
-                    <a href="{{localePrefix}}/admin/users/edit/{{user.login}}" class="btn-outline-primary btn" style="margin-bottom: 0">{{#i18n}}common.actions.update{{/i18n}}</a>
-                </div>
-            {{/admin}}
-        {{/canUpdateProfile}}
-        {{#canUpdateProfile}}
-            <div class="mxt-text--page-title">
-                <a href="{{localePrefix}}/me/edit" class="btn-outline-primary btn" style="margin-bottom: 0">{{#i18n}}common.actions.update{{/i18n}}</a>
-            </div>
-        {{/canUpdateProfile}}
-    {{/connected}}
+{{> header-common }}
+<div class="mxt-wrapper--header-page-title">
+    <h2 class="pt-3 pb-3">
+        {{#speakerYear}}{{#i18n}}user.speaker{{/i18n}} {{speakerYear}}{{/speakerYear}}
+        {{^speakerYear}}{{#i18n}}user.standard{{/i18n}}{{/speakerYear}}
+    </h2>
 </div>
-<p class="pb-2">&nbsp;</p>
-<div class="container mxt-wrapper--page-content mt-4">
+
+<div class="container mxt-wrapper--page-content">
     <h1 class="text-center mxt-title--talk" style="margin-bottom: 0">
         {{user.firstname}} {{user.lastname}}
     </h1>
+    <div class="text-center">
+        {{#user.photoUrl}}<img src="{{user.photoUrl}}" class="mxt-img-avatar__speaker">{{/user.photoUrl}}
+        {{^user.photoUrl}}<img src="https://www.gravatar.com/avatar/{{#user.emailHash}}{{user.emailHash}}{{/user.emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png" class="mxt-img-avatar__speaker">{{/user.photoUrl}}
+        {{#connected}}
+            {{^canUpdateProfile}}
+            {{#admin}}
+                <div class="mxt-text--page-title pb-3">
+                    <a href="{{localePrefix}}/admin/users/edit/{{user.login}}" class="btn-outline-primary btn" style="margin-bottom: 0">{{#i18n}}common.actions.update{{/i18n}}</a>
+                </div>
+            {{/admin}}
+            {{/canUpdateProfile}}
+            {{#canUpdateProfile}}
+                <div class="mxt-text--page-title">
+                    <a href="{{localePrefix}}/me/edit" class="btn-outline-primary btn" style="margin-bottom: 0">{{#i18n}}common.actions.update{{/i18n}}</a>
+                </div>
+            {{/canUpdateProfile}}
+        {{/connected}}
+    </div>
     <div class="row">
         <div class="columns small-12 medium-12 large-12 callout">
             {{#user.company}}<p class="text-center mxt-text-speaker-company">{{user.company}}</p>{{/user.company}}
@@ -52,6 +54,7 @@
             {{/user.newsletterSubscriber}}
         </div>
         {{/viewMyProfile}}
+        {{#connected}}
         {{#canUpdateProfile}}
             <div class="columns small-12 medium-12 large-12 callout mt-3">
                 <p>
@@ -68,12 +71,13 @@
                 </p>
                 <p>
                     {{#hasFeatureProfileWithMessages}}
-                        <!--{{#isSpeaker}}<strong><img src="/images/svg/lottery/mxt-ixon--clap.svg" class="mxt-icon--profile">&nbsp;{{#i18n}}profile.speaker{{/i18n}}</strong>{{/isSpeaker}}-->
+                        {{#isSpeaker}}<strong><img src="/images/svg/lottery/mxt-ixon--clap.svg" class="mxt-icon--profile">&nbsp;{{#i18n}}profile.speaker{{/i18n}}</strong>{{/isSpeaker}}
                         {{^isSpeaker}}{{#attendeeTicket}}<strong><img src="/images/svg/lottery/mxt-ixon--clap.svg" class="mxt-icon--profile">&nbsp;{{#i18n}}profile.attendee{{/i18n}}</strong>{{/attendeeTicket}}{{/isSpeaker}}
                     {{/hasFeatureProfileWithMessages}}
                 </p>
             </div>
         {{/canUpdateProfile}}
+        {{/connected}}
     </div>
     <div class="row">
         <div class="columns small-12 medium-12 large-12 callout">
@@ -97,7 +101,7 @@
     </div>
 </div>
 {{#connected}}{{#canUpdateProfile}}
-<div class="container mxt-wrapper--page-content">
+<div class="container mxt-wrapper--page-content mt-4">
     <div><small>{{#i18n}}user.form.rgpd{{/i18n}}</small></div>
 </div>
 {{/canUpdateProfile}}

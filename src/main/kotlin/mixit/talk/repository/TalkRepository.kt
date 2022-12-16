@@ -3,6 +3,7 @@ package mixit.talk.repository
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import kotlinx.coroutines.reactor.awaitSingle
+import mixit.MixitApplication.Companion.CURRENT_EVENT
 import mixit.talk.model.Talk
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
@@ -31,7 +32,7 @@ class TalkRepository(
 
     fun initData() {
         if (count().block() == 0L) {
-            (2012.. 2023).forEach { loadYear(it) }
+            (2012.. CURRENT_EVENT.toInt()).forEach { loadYear(it) }
         }
     }
 
