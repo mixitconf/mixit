@@ -36,6 +36,7 @@ enum class MustacheTemplate(val template: String, val title: String?) {
     AdminTicketPrint("admin/admin-ticket-print", "admin.ticket.title"),
     AdminUser("admin/admin-user", "admin.users.title"),
     AdminUsers("admin/admin-users", "admin.users.title"),
+    AdminUserNewsLetter("admin/admin-users-newsletter", "admin.users.newsletter.title"),
     Blog("blog", "blog.title"),
     BlogPost("post", null),
     CodeOfConduct("code-of-conduct", "code-of-conduct.title"),

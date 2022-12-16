@@ -8,6 +8,7 @@ import mixit.routes.MustacheI18n.TITLE
 import mixit.routes.MustacheI18n.USER
 import mixit.routes.MustacheI18n.USERS
 import mixit.routes.MustacheTemplate.AdminUser
+import mixit.routes.MustacheTemplate.AdminUserNewsLetter
 import mixit.routes.MustacheTemplate.AdminUsers
 import mixit.security.model.Cryptographer
 import mixit.talk.model.Language.ENGLISH
@@ -49,6 +50,19 @@ class AdminUserHandler(
             mapOf(
                 USERS to userRepository.findAll().sortedWith(compareBy<User> { it.lastname }.thenBy { it.firstname }),
                 TITLE to AdminUsers.title
+            )
+        )
+
+    suspend fun adminUserNewsLetters(req: ServerRequest): ServerResponse =
+        ok().renderAndAwait(
+            AdminUserNewsLetter.template,
+            mapOf(
+                USERS to userRepository
+                    .findAll()
+                    .filter { it.newsletterSubscriber }
+                    .map { it.copy(email = cryptographer.decrypt(it.email)) }
+                    .sortedWith(compareBy<User> { it.lastname }.thenBy { it.firstname }),
+                TITLE to AdminUserNewsLetter.title
             )
         )
 
