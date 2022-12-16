@@ -85,42 +85,64 @@ class UserHandler(
     ): ServerResponse =
         when (viewMode) {
             ViewMode.ViewMyProfile -> {
+                val talks = service
+                    .findBySpeakerId(listOf(user.login), "null")
+                    .sortedByDescending { it.event }
+                    .filter { it.event == CURRENT_EVENT }
+                val isSpeaker = talks.isNotEmpty()
+                val speakerYear = talks.firstOrNull()?.event
+
                 val params = mapOf(
                     USER to user.toDto(req.language()),
                     ERRORS to errors,
                     HAS_ERRORS to errors.isNotEmpty(),
+                    TALKS to talks,
+                    "isSpeaker" to isSpeaker,
+                    "speakerYear" to speakerYear,
                     "usermail" to cryptographer.decrypt(user.email),
                     "description-fr" to user.description[Language.FRENCH],
                     "description-en" to user.description[Language.ENGLISH],
-                    "userlinks" to user.toLinkDtos()
+                    "userlinks" to user.toLinkDtos(),
+                    "canUpdateProfile" to (user.email == cryptographer.encrypt(req.currentNonEncryptedUserEmail())),
+                    "viewMyProfile" to true
                 )
                 ok().renderAndAwait(MustacheTemplate.User.template, params)
             }
 
             ViewMode.ViewUser -> {
-                val isSpeaker = service
-                    .findBySpeakerId(listOf(user.login), "null")
-                    .any { it.event == CURRENT_EVENT }
+                val talks = service.findBySpeakerId(listOf(user.login), "null").sortedByDescending { it.event }
+                val isSpeaker = talks.any { it.event == CURRENT_EVENT }
+                val speakerYear = talks.firstOrNull()?.event
 
                 val attendeeTicket = ticketService.findByEmail(cryptographer.decrypt(user.email)!!)
                 val lottery = lotteryRepository.findByEncryptedEmail(user.email ?: "unknown")
                 val params = mapOf(
                     USER to user.toDto(req.language()),
+                    TALKS to talks,
                     "lotteryTicket" to lottery,
                     "attendeeTicket" to attendeeTicket,
                     "viewMyProfile" to false,
                     "isSpeaker" to isSpeaker,
-                    "canUpdateProfile" to true,
+                    "speakerYear" to speakerYear,
+                    "canUpdateProfile" to (user.email == cryptographer.encrypt(req.currentNonEncryptedUserEmail())),
                 )
                 ok().renderAndAwait(MustacheTemplate.User.template, params)
             }
 
             ViewMode.EditProfile -> {
-                val talks = service.findBySpeakerId(listOf(user.login), "all")
+                val talks = service.findBySpeakerId(listOf(user.login), "null").sortedByDescending { it.event }
+                val isSpeaker = talks.any { it.event == CURRENT_EVENT }
+
                 val params = mapOf(
                     USER to user.toDto(req.language()),
                     TALKS to talks.map { it.toDto(req.language()) },
-                    HAS_TALKS to talks.isNotEmpty()
+                    HAS_TALKS to talks.isNotEmpty(),
+                    "usermail" to cryptographer.decrypt(user.email),
+                    "description-fr" to user.description[Language.FRENCH],
+                    "description-en" to user.description[Language.ENGLISH],
+                    "userlinks" to user.toLinkDtos(),
+                    "isSpeaker" to isSpeaker,
+                    "canUpdateProfile" to (user.email == cryptographer.encrypt(req.currentNonEncryptedUserEmail()))
                 )
                 ok().renderAndAwait(UserEdit.template, params)
             }

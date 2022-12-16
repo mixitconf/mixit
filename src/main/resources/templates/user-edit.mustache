@@ -1,22 +1,20 @@
 {{> header}}
 
-<div class="mxt-wrapper--header">
-    <ul class="mxt-wrapper-list-inline pt-5">
-        <li>
-            <img src="{{^user.emailHash}}{{#user.photoUrl}}{{user.photoUrl}}{{/user.photoUrl}}{{/user.emailHash}}{{#user.emailHash}}https://www.gravatar.com/avatar/{{user.emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/user.emailHash}}"
-            class="mxt-img-avatar__speaker">
-            <div class="mxt-text--page-title">{{#hasTalks}}{{#i18n}}user.speaker{{/i18n}}{{/hasTalks}}{{^hasTalks}}{{#i18n}}user.standard{{/i18n}}{{/hasTalks}}</div>
-        </li>
-    </ul>
+{{> header-common }}
+<div class="mxt-wrapper--header-page-title">
+    <h2 class="pt-3 pb-3">
+        {{#speakerYear}}{{#i18n}}user.speaker{{/i18n}} {{speakerYear}}{{/speakerYear}}
+        {{^speakerYear}}{{#i18n}}user.standard{{/i18n}}{{/speakerYear}}
+    </h2>
+</div>
+
+<div class="container mxt-wrapper--page-content">
     {{#admin}}
         <div>
             <a href="{{localePrefix}}/admin/users/edit/{{user.login}}" class="btn btn-outline-primary" style="margin-bottom: 0">{{#i18n}}common.actions.update{{/i18n}}</a>
         </div>
     {{/admin}}
-</div>
 
-
-<div class="container mxt-wrapper--page-content">
     <form action="/me" method="post">
         <input type="hidden" name="login" value="{{user.login}}"/>
         <div class="row">
