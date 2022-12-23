@@ -1,0 +1,143 @@
+{{> header}}
+{{> header-common }}
+
+<style>
+    .card-image-container {
+        display: inline-block;
+        overflow-y: hidden;
+    }
+    .card-image-link {
+        width: 100%;
+        top: 10px;
+        position: absolute;
+    }
+    .card-image {
+        object-fit: contain;
+    }
+
+    @media (min-width: 0px) and (max-width: 576px) {
+        .card-image-container {
+            height: auto;
+            max-height: 100%;
+        }
+        .card-image-link {
+            top: auto;
+            bottom: 10px;
+        }
+    }
+    @media (min-width: 576px) and (max-width: 772px) {
+        .card-image-container {
+            height: 300px;
+            max-height: 300px;
+        }
+        .card-image-link {
+            top: 250px;
+        }
+    }
+    @media (min-width: 772px) and (max-width: 992px) {
+        .card-image-container {
+            height: 200px;
+            max-height: 200px;
+        }
+        .card-image-link {
+            top: 150px;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1400px) {
+        .card-image-container {
+            height: 180px;
+            max-height: 180px;
+        }
+        .card-image-link {
+            top: 130px;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        .card-image-container {
+            height: 250px;
+            max-height: 250px;
+        }
+        .card-image-link {
+            top: 200px;
+        }
+    }
+
+</style>
+<div class="mxt-wrapper--header-page-title">
+    <h1 class="pt-3">
+        {{#i18n}}medias.title{{/i18n}}{{#i18n}}home.topics{{#topic}}.{{topic}}{{/topic}}.title{{/i18n}}
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            {{year}}
+        </button>
+        <ul class="dropdown-menu mxt-dropdown-header" aria-labelledby="dropdownMenuButton1">
+            <li><a href="{{localePrefix}}/2023/medias" class="dropdown-item">2023</a></li>
+            <li><a href="{{localePrefix}}/2022/medias" class="dropdown-item">2022</a></li>
+            <li><a href="{{localePrefix}}/2021/medias" class="dropdown-item">2021</a></li>
+            <li><a href="{{localePrefix}}/2019/medias" class="dropdown-item">2019</a></li>
+            <li><a href="{{localePrefix}}/2018/medias" class="dropdown-item">2018</a></li>
+            <li><a href="{{localePrefix}}/2017/medias" class="dropdown-item">2017</a></li>
+            <li><a href="{{localePrefix}}/2016/medias" class="dropdown-item">2016</a></li>
+            <li><a href="{{localePrefix}}/2015/medias" class="dropdown-item">2015</a></li>
+            <li><a href="{{localePrefix}}/2014/medias" class="dropdown-item">2014</a></li>
+            <li><a href="{{localePrefix}}/2013/medias" class="dropdown-item">2013</a></li>
+            <li><a href="{{localePrefix}}/2012/medias" class="dropdown-item">2012</a></li>
+        </ul>
+    </h1>
+    <div class="pb-3">
+        {{#images}}
+            {{#sections}}
+                <b>{{#i18n}}{{i18nLabel}}{{/i18n}}</b>
+            {{/sections}}
+        {{/images}}
+    </div>
+</div>
+
+{{#images}}
+    <div class="container mxt-wrapper--page-content mt-4">
+        {{^singleImage}}
+            <div class="text-center mb-4">
+                <a href="{{localePrefix}}/{{event}}/medias" class="btn btn-outline-primary">{{#i18n}}images.back{{/i18n}}</a>
+            </div>
+        {{/singleImage}}
+        <div class="row">
+            {{#images.sections}}
+                {{#pictures}}
+                {{#singleImage}}
+                <div class="col-12">
+                    <div class="text-center mb-4">
+                        <a href="{{localePrefix}}/{{event}}/medias/images/{{name}}" class="btn btn-outline-primary">{{#i18n}}images.back{{/i18n}}</a>
+                    </div>
+                    <img class="mxt-img--speakers card-image"
+                         src="https://raw.githubusercontent.com/mixitconf/mixitconf-images/main/{{year}}/{{name}}/{{.}}">
+                </div>
+                {{/singleImage}}
+                {{^singleImage}}
+                <div class="col-12 col-lg-4 col-md-6">
+                    <div class="card m-1 card-image-container">
+                        <img class="mxt-img--speakers card-image"
+                             src="https://raw.githubusercontent.com/mixitconf/mixitconf-images/main/{{year}}/{{name}}/{{.}}">
+
+                        <div class="text-center card-image-link">
+                            <a href="{{localePrefix}}/{{event}}/medias/images/{{name}}?url={{.}}" class="btn btn-outline-primary">{{#i18n}}images.zoom{{/i18n}}</a>
+                        </div>
+                    </div>
+                </div>
+                {{/singleImage}}
+                {{/pictures}}
+                <div class="col-12 col-lg-4 col-md-6">&nbsp;</div>
+            {{/images.sections}}
+        </div>
+    </div>
+{{/images}}
+
+{{> sponsor-footer }}
+
+{{#connected}}
+    <input type="hidden" id="email" value="{{email}}"/>
+{{/connected}}
+
+<script src="/js/talks.js"></script>
+<script async src="/js/images.js"></script>
+
+{{> footer}}

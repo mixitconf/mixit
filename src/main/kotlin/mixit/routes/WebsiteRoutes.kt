@@ -18,6 +18,7 @@ import mixit.security.handler.AuthenticationHandler
 import mixit.talk.handler.AdminTalkHandler
 import mixit.talk.handler.TalkHandler
 import mixit.talk.handler.TalkHandler.Companion.feedbackWall
+import mixit.talk.handler.TalkHandler.Companion.images
 import mixit.talk.handler.TalkHandler.Companion.media
 import mixit.talk.handler.TalkHandler.Companion.mediaWithFavorites
 import mixit.talk.handler.TalkHandler.Companion.talks
@@ -174,6 +175,7 @@ class WebsiteRoutes(
                 GET("/$year") { talkHandler.findByEventView(talks(it, year)) }
                 GET("/$year/favorite") { talkHandler.findByEventView(talksWithFavorites(it, year)) }
                 GET("/$year/medias") { talkHandler.findByEventView(media(it, year)) }
+                GET("/$year/medias/images/{album}") { talkHandler.findByEventView(images(it, year)) }
                 GET("/$year/medias/favorite") { talkHandler.findByEventView(mediaWithFavorites(it, year)) }
                 Topic.values().map { it.value }.onEach { topic ->
                     GET("/$year/$topic") { talkHandler.findByEventView(talks(it, year, topic)) }
