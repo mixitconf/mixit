@@ -2,15 +2,20 @@ package mixit.talk.handler
 
 import kotlinx.coroutines.reactor.awaitSingle
 import mixit.MixitProperties
+import mixit.event.model.EventImagesService
 import mixit.event.model.EventService
 import mixit.favorite.repository.FavoriteRepository
 import mixit.routes.MustacheI18n
+import mixit.routes.MustacheI18n.EVENT
+import mixit.routes.MustacheI18n.IMAGES
 import mixit.routes.MustacheI18n.SPONSORS
+import mixit.routes.MustacheI18n.TALKS
 import mixit.routes.MustacheI18n.TITLE
 import mixit.routes.MustacheI18n.YEAR
 import mixit.routes.MustacheTemplate
 import mixit.routes.MustacheTemplate.FeedbackWall
 import mixit.routes.MustacheTemplate.Media
+import mixit.routes.MustacheTemplate.MediaImages
 import mixit.routes.MustacheTemplate.Schedule
 import mixit.routes.MustacheTemplate.TalkDetail
 import mixit.routes.MustacheTemplate.TalkEdit
@@ -34,12 +39,14 @@ import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
+import org.springframework.web.reactive.function.server.queryParamOrNull
 import org.springframework.web.reactive.function.server.renderAndAwait
 
 @Component
 class TalkHandler(
     private val service: TalkService,
     private val eventService: EventService,
+    private val eventImagesService: EventImagesService,
     private val userService: UserService,
     private val properties: MixitProperties,
     private val favoriteRepository: FavoriteRepository,
@@ -54,6 +61,16 @@ class TalkHandler(
                 req,
                 topic,
                 template = Media
+            )
+
+        fun images(req: ServerRequest, year: Int, topic: String? = null) =
+            TalkViewConfig(
+                year,
+                req,
+                topic,
+                template = MediaImages,
+                album = req.pathVariable("album"),
+                url = req.queryParamOrNull("url")
             )
 
         fun mediaWithFavorites(req: ServerRequest, year: Int, topic: String? = null) =
@@ -80,7 +97,9 @@ class TalkHandler(
         val req: ServerRequest,
         val topic: String? = null,
         val filterOnFavorite: Boolean = false,
-        val template: MustacheTemplate = TalkList
+        val template: MustacheTemplate = TalkList,
+        val album: String? = null,
+        val url: String? = null
     ) {
         fun isList() = template == Media
     }
@@ -97,21 +116,43 @@ class TalkHandler(
         val title = if (config.topic == null) "${config.template.title}|${config.year}" else
             "${config.template.title}.${config.topic}|${config.year}"
 
+        val images = if (config.template == MediaImages) {
+            // For the image page we select the given album
+            if(config.url != null) {
+                eventImagesService.findOneOrNull(config.year.toString()).let { images ->
+                    images?.copy(sections = images.sections
+                        .filter { it.name == config.album }
+                        .map { it.copy(pictures = it.pictures.filter { pic -> pic == config.url}) })
+                }
+            } else {
+                eventImagesService.findOneOrNull(config.year.toString()).let { images ->
+                    images?.copy(sections = images.sections.filter { it.name == config.album })
+                }
+            }
+        } else {
+            // For other we return all albums but with only the first image
+            eventImagesService.findOneOrNull(config.year.toString()).let { images ->
+                images?.copy(sections = images.sections.map { it.copy(pictures = listOf(it.pictures.first())) })
+            }
+        }
+
         return ok()
             .render(
                 config.template.template,
                 mapOf(
-                    MustacheI18n.EVENT to event.toEvent(),
+                    EVENT to event.toEvent(),
                     SPONSORS to userService.loadSponsors(event),
-                    MustacheI18n.TALKS to (if (config.isList()) talks else talks.groupBy { it.date ?: "" }),
+                    TALKS to (if (config.isList()) talks else talks.groupBy { it.date ?: "" }),
                     TITLE to title,
                     YEAR to config.year,
+                    IMAGES to images,
                     "schedulingFileUrl" to event.schedulingFileUrl,
                     "filtered" to config.filterOnFavorite,
                     "topic" to config.topic,
                     "filtered" to config.filterOnFavorite,
                     "videoUrl" to event.videoUrl?.url?.toVimeoPlayerUrl(),
-                    "hasPhotosOrVideo" to (event.videoUrl != null || event.photoUrls.isNotEmpty())
+                    "hasPhotosOrVideo" to (event.videoUrl != null || event.photoUrls.isNotEmpty()),
+                    "singleImage" to (config.url != null)
                 )
             )
             .awaitSingle()

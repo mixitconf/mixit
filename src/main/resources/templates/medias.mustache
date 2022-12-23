@@ -24,39 +24,59 @@
     </h1>
 </div>
 
-
-
 <div class="container mxt-wrapper--page-content">
     <div class="lead text-center">{{#i18n}}medias.text{{/i18n}}</div>
+</div>
 
-    {{#hasPhotosOrVideo}}
+{{#event.videoUrl}}
+    <div class="container mxt-wrapper--page-content">
         <h2>{{#i18n}}medias.html.soul{{/i18n}}</h2>
         <p>{{#i18n}}medias.html.soul.text{{/i18n}}</p>
+        {{#videoUrl}}
+        <div class="row">
 
-        <p>
-            {{#event.photoUrls}}
-            &#x25ba;&nbsp;{{#i18n}}medias.html.soul.see{{/i18n}}
-            <a href="{{url}}" target="_blank">"{{name}}"</a><br/>
-            {{/event.photoUrls}}
-        </p>
+            <div class="col-12 col-lg-4 col-md-6">
+                <div class="card m-1" style="height: 99%" >
+                    <div class="mxt-wrapper--intrinsic">
+                        <iframe src="{{videoUrl}}" class="mxt-wrapper--video-player" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/videoUrl}}
+        {{^videoUrl}}
+            &#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{videoUrl}}" target="_blank">{{#i18n}}talk.video.thevideo{{/i18n}}</a>
+        {{/videoUrl}}
+    </div>
+{{/event.videoUrl}}
 
-        {{#event.videoUrl}}
-            {{#videoUrl}}
-                <div class="col-12 col-lg-4 col-md-6">
-                    <div class="card m-1" style="height: 99%" >
-                        <div class="mxt-wrapper--intrinsic">
-                            <iframe src="{{videoUrl}}" class="mxt-wrapper--video-player" allowfullscreen></iframe>
+{{#images}}
+    <div class="container mxt-wrapper--page-content mt-4">
+        <h2>{{#i18n}}medias.html.images{{/i18n}}</h2>
+        <div class="row">
+            {{#images.sections}}
+            <div class="col-12 col-lg-4 col-md-6">
+                <div class="card m-1" style="height: 99%" >
+                    <div class="card-body">
+                        {{#pictures}}
+                            <img class="mxt-img--speakers"
+                                 src="https://raw.githubusercontent.com/mixitconf/mixitconf-images/main/{{year}}/{{name}}/{{.}}">
+                        {{/pictures}}
+                        <h5 class="card-title pt-2">
+                        {{#i18n}}{{i18nLabel}}{{/i18n}}
+                        </h5>
+                        <div class="text-center">
+                            <a href="{{localePrefix}}/{{event}}/medias/images/{{name}}" class="btn btn-outline-primary">{{#i18n}}images.readmore{{/i18n}}</a>
                         </div>
                     </div>
                 </div>
-            {{/videoUrl}}
-            {{^videoUrl}}
-                &#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{videoUrl}}" target="_blank">{{#i18n}}talk.video.thevideo{{/i18n}}</a>
-            {{/videoUrl}}
-        {{/event.videoUrl}}
-        <p>&nbsp;</p>
-    {{/hasPhotosOrVideo}}
-</div>
+            </div>
+            {{/images.sections}}
+        </div>
+    </div>
+{{/images}}
+
+{{#hasPhotosOrVideo}}
 <div class="container mxt-wrapper--page-content mt-4 mb-4">
     <h2>{{#i18n}}medias.html.videos{{/i18n}}</h2>
     <div class="row">
@@ -72,9 +92,11 @@
                         </div>
                     {{/topic}}
                     <div style="display: inline" class="mxt-text--cat-format">#{{#i18n}}talk.format.{{format}}{{/i18n}}</div>
+                    {{#vimeoPlayer}}
                     <div class="mxt-wrapper--intrinsic mb-3">
                         <iframe src="{{vimeoPlayer}}" class="mxt-wrapper--video-player" allowfullscreen></iframe>
                     </div>
+                    {{/vimeoPlayer}}
                     <h5 class="card-title">
                         {{title}}
                         {{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
@@ -96,6 +118,7 @@
     {{/talks}}
     </div>
 </div>
+{{/hasPhotosOrVideo}}
 {{> sponsor-footer }}
 
 {{#connected}}
