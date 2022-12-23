@@ -106,7 +106,13 @@
                 {{#singleImage}}
                 <div class="col-12">
                     <div class="text-center mb-4">
+                        {{#previousImage}}
+                            <a href="{{localePrefix}}/{{event}}/medias/images/{{name}}?url={{previousImage}}" class="btn btn-outline-primary">&lt;</a>
+                        {{/previousImage}}
                         <a href="{{localePrefix}}/{{event}}/medias/images/{{name}}" class="btn btn-outline-primary">{{#i18n}}images.back{{/i18n}}</a>
+                        {{#nextImage}}
+                            <a href="{{localePrefix}}/{{event}}/medias/images/{{name}}?url={{nextImage}}" class="btn btn-outline-primary">&gt;</a>
+                        {{/nextImage}}
                     </div>
                     <img class="mxt-img--speakers card-image"
                          src="https://raw.githubusercontent.com/mixitconf/mixitconf-images/main/{{year}}/{{name}}/{{.}}">
