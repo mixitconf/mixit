@@ -34,7 +34,7 @@ class TalkService(
         findAll().first { it.slug == slug }
 
     suspend fun findByEventAndSlug(eventId: String, slug: String) =
-        findAll().first { it.slug == slug && it.event == eventId }
+        findAll().first { it.slug.endsWith(slug) && it.event == eventId }
 
     suspend fun findBySpeakerId(speakerIds: List<String>, talkIdExcluded: String): List<CachedTalk> =
         findAll().filter { talk ->

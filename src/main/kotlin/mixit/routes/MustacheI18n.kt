@@ -14,6 +14,7 @@ object MustacheI18n {
     const val EVENT_ID = "eventId"
     const val EVENTS = "events"
     const val FORMATS = "formats"
+    const val IMAGES = "images"
     const val HAS_ERRORS = "hasErrors"
     const val HAS_ARTICLES = "hasArticles"
     const val HAS_USERS = "hasUsers"

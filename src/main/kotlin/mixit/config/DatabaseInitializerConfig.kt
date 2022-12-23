@@ -4,6 +4,7 @@ import kotlinx.coroutines.runBlocking
 import mixit.blog.model.BlogService
 import mixit.blog.repository.PostRepository
 import mixit.event.model.EventService
+import mixit.event.repository.EventImagesRepository
 import mixit.event.repository.EventRepository
 import mixit.favorite.repository.FavoriteRepository
 import mixit.mixette.repository.MixetteDonationRepository
@@ -24,6 +25,7 @@ class DatabaseInitializerConfig {
     fun databaseInitializer(
         userRepository: UserRepository,
         eventRepository: EventRepository,
+        eventImagesRepository: EventImagesRepository,
         talkRepository: TalkRepository,
         lotteryRepository: LotteryRepository,
         postRepository: PostRepository,
@@ -38,6 +40,7 @@ class DatabaseInitializerConfig {
 
         userRepository.initData()
         eventRepository.initData()
+        eventImagesRepository.initData()
         talkRepository.initData()
         postRepository.initData()
         lotteryRepository.initData()

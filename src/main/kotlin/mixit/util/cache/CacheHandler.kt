@@ -2,6 +2,7 @@ package mixit.util.cache
 
 import mixit.MixitApplication.Companion.TIMEZONE
 import mixit.blog.model.BlogService
+import mixit.event.model.EventImagesService
 import mixit.event.model.EventService
 import mixit.routes.MustacheI18n
 import mixit.routes.MustacheTemplate.AdminCache
@@ -37,7 +38,8 @@ class CacheHandler(
     private val talkService: TalkService,
     private val blogService: BlogService,
     private val userService: UserService,
-    private val ticketService: TicketService
+    private val ticketService: TicketService,
+    private val eventImagesService: EventImagesService
 ) {
 
     suspend fun view(req: ServerRequest): ServerResponse {
@@ -48,7 +50,8 @@ class CacheHandler(
                 CacheZone.BLOG.name.lowercase() to CacheZoneStat.init(blogService),
                 CacheZone.TALK.name.lowercase() to CacheZoneStat.init(talkService),
                 CacheZone.USER.name.lowercase() to CacheZoneStat.init(userService),
-                CacheZone.TICKET.name.lowercase() to CacheZoneStat.init(ticketService)
+                CacheZone.TICKET.name.lowercase() to CacheZoneStat.init(ticketService),
+                CacheZone.EVENT_IMAGES.name.lowercase() to CacheZoneStat.init(eventImagesService)
             )
         )
 
@@ -65,6 +68,7 @@ class CacheHandler(
                     CacheZone.EVENT -> eventService.invalidateCache()
                     CacheZone.USER -> userService.invalidateCache()
                     CacheZone.TICKET -> ticketService.invalidateCache()
+                    CacheZone.EVENT_IMAGES -> eventImagesService.invalidateCache()
                 }
                 view(req)
             }

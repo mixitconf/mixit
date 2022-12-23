@@ -57,6 +57,7 @@ enum class MustacheTemplate(val template: String, val title: String?) {
     LotteryClosed("lottery-closed", "ticketing.title"),
     LotteryError("lottery-error", "ticketing.title"),
     Media("medias", "medias.title.html"),
+    MediaImages("images", "medias.title.html"),
     MixetteDashboard("mixette-dashboard", "mixette.dashboard.title"),
     Mixteen("mixteen", "mixteen.title"),
     Schedule("schedule", "schedule.title"),
