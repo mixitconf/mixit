@@ -107,6 +107,7 @@ class TalkHandler(
     suspend fun scheduleView(req: ServerRequest) =
         ok().renderAndAwait(Schedule.template, mapOf(TITLE to Schedule.title))
 
+
     suspend fun findByEventView(config: TalkViewConfig): ServerResponse {
         val currentUserEmail = config.req.currentNonEncryptedUserEmail()
         val talks = loadTalkAndFavorites(config, currentUserEmail).let { talks ->
@@ -115,26 +116,8 @@ class TalkHandler(
         val event = eventService.findByYear(config.year)
         val title = if (config.topic == null) "${config.template.title}|${config.year}" else
             "${config.template.title}.${config.topic}|${config.year}"
-
-        val images = if (config.template == MediaImages) {
-            // For the image page we select the given album
-            if(config.url != null) {
-                eventImagesService.findOneOrNull(config.year.toString()).let { images ->
-                    images?.copy(sections = images.sections
-                        .filter { it.name == config.album }
-                        .map { it.copy(pictures = it.pictures.filter { pic -> pic == config.url}) })
-                }
-            } else {
-                eventImagesService.findOneOrNull(config.year.toString()).let { images ->
-                    images?.copy(sections = images.sections.filter { it.name == config.album })
-                }
-            }
-        } else {
-            // For other we return all albums but with only the first image
-            eventImagesService.findOneOrNull(config.year.toString()).let { images ->
-                images?.copy(sections = images.sections.map { it.copy(pictures = listOf(it.pictures.first())) })
-            }
-        }
+        val images = findImages(config)
+        val closestImages = findClosestImages(config)
 
         return ok()
             .render(
@@ -152,11 +135,57 @@ class TalkHandler(
                     "filtered" to config.filterOnFavorite,
                     "videoUrl" to event.videoUrl?.url?.toVimeoPlayerUrl(),
                     "hasPhotosOrVideo" to (event.videoUrl != null || event.photoUrls.isNotEmpty()),
-                    "singleImage" to (config.url != null)
+                    "singleImage" to (config.url != null),
+                    "previousImage" to closestImages?.first,
+                    "nextImage" to closestImages?.second
                 )
             )
             .awaitSingle()
     }
+
+    /**
+     * When we display only one image we want to know the previous and the next images
+     */
+    private suspend fun findClosestImages(config: TalkViewConfig) =
+        if (config.template == MediaImages && config.url != null) {
+            val pictures = eventImagesService
+                .findOneOrNull(config.year.toString())
+                ?.sections
+                ?.first { it.name == config.album }
+                ?.pictures
+
+            pictures
+                ?.indexOf(config.url)
+                ?.let {
+                    Pair(
+                        if (it > 0) pictures[it - 1] else null,
+                        if (it < pictures.size - 1) pictures[it + 1] else null,
+                    )
+                }
+        } else null
+
+    private suspend fun findImages(config: TalkViewConfig) =
+        // We have a specific behavior on the MediaImages template
+        if (config.template == MediaImages) {
+            // If an url is specified in the query param we display only this image
+            if (config.url != null) {
+                eventImagesService.findOneOrNull(config.year.toString()).let { images ->
+                    images?.copy(sections = images.sections
+                        .filter { it.name == config.album }
+                        .map { it.copy(pictures = it.pictures.filter { pic -> pic == config.url }) })
+                }
+            } else {
+                // We select all the album images
+                eventImagesService.findOneOrNull(config.year.toString()).let { images ->
+                    images?.copy(sections = images.sections.filter { it.name == config.album })
+                }
+            }
+        } else {
+            // For other we return all albums but with only the first image
+            eventImagesService.findOneOrNull(config.year.toString()).let { images ->
+                images?.copy(sections = images.sections.map { it.copy(pictures = listOf(it.pictures.first())) })
+            }
+        }
 
     private suspend fun loadTalkAndFavorites(config: TalkViewConfig, currentUserEmail: String): List<TalkDto> =
         if (currentUserEmail.isEmpty()) {
