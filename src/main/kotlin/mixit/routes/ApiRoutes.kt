@@ -40,6 +40,7 @@ class ApiRoutes(
             GET("/blog", blogHandler::findAll)
             GET("/blog/{id}", blogHandler::findOne)
             GET("/event", eventHandler::findAll)
+            GET("/event/images", eventHandler::findEventImages)
             GET("/event/{id}", eventHandler::findOne)
             GET("/favorites/{email}/talks/{id}", favoriteHandler::getFavorite)
             GET("/favorites/{email}", favoriteHandler::getFavorites)

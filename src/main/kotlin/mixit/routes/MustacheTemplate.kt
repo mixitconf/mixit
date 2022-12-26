@@ -13,6 +13,10 @@ enum class MustacheTemplate(val template: String, val title: String?) {
     AdminBlog("admin/admin-blog", "admin.title"),
     AdminCache("admin/admin-cache", "admin.cache.title"),
     AdminEvent("admin/admin-event", "admin.title"),
+    AdminEventImage("admin/admin-event-image", "admin.title"),
+    AdminEventImages("admin/admin-events-images", "admin.title"),
+    AdminEventImagesSection("admin/admin-event-images-section", "admin.title"),
+    AdminEventImagesSectionImage("admin/admin-event-images-section-image", "admin.title"),
     AdminEventOrganization("admin/admin-event-organization", "admin.title"),
     AdminEventSponsor("admin/admin-event-sponsor", "admin.title"),
     AdminEventVolunteer("admin/admin-event-volunteer", "admin.title"),
@@ -69,5 +73,6 @@ enum class MustacheTemplate(val template: String, val title: String?) {
     TalkEdit("talk-edit", "talks.title.html"),
     TicketError("ticket-error", "admin.ticket.title"),
     User("user", null),
-    UserEdit("user-edit", null)
+    UserEdit("user-edit", null),
+    None("none", null)
 }

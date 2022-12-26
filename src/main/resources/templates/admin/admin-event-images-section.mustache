@@ -1,0 +1,76 @@
+{{> header}}
+{{> header-common }}
+
+<div class="mxt-wrapper--header-page-title">
+    <h1 class="pt-3 pb-3">{{#i18n}}admin.event.images.title{{/i18n}}</h1>
+</div>
+
+<div class="container mxt-wrapper--page-content">
+    {{^creationMode}}<form action="/admin/events/images/{{eventId}}/sections/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.event.organizations.delete.confirm{{/i18n}}');">
+        <input type="hidden" name="eventId" value="{{eventId}}"/>
+        <input type="hidden" name="sectionId" value="{{section.sectionId}}"/>
+        <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}common.actions.delete{{/i18n}}"/>
+    </form>{{/creationMode}}
+    <form
+            {{#creationMode}}action="/admin/events/images/{{eventId}}/sections/create"{{/creationMode}}
+            {{^creationMode}}action="/admin/events/images/{{eventId}}/sections"{{/creationMode}}
+            method="post" class="row mt-3">
+        <input type="hidden" name="eventId" value="{{eventId}}"/>
+        <div class="col-12 mb-3">
+            <label class="form-label">{{#i18n}}admin.event.images.sections.table.name{{/i18n}}</label>
+            {{#creationMode}}
+                <input class="form-control" type="text" name="sectionId" required />
+            {{/creationMode}}
+            {{^creationMode}}
+                <input class="form-control" type="text" value="{{section.sectionId}}" disabled="true" />
+                <input type="hidden" name="sectionId" value="{{section.sectionId}}"/>
+            {{/creationMode}}
+        </div>
+        <div class="col-12 mb-3">
+            <label class="form-label">{{#i18n}}admin.event.images.sections.table.i18n{{/i18n}}</label>
+            <input class="form-control" type="text" name="i18n" required value="{{#section.i18n}}{{section.i18n}}{{/section.i18n}}"/>
+        </div>
+        <div class="col-12 mb-3 text-center">
+            <input type="submit" class="btn btn-outline-primary expand" value="{{#i18n}}common.actions.save{{/i18n}}"/>
+        </div>
+    </form>
+
+    {{^creationMode}}
+
+        <h3>{{#i18n}}admin.event.images.sections.images.text{{/i18n}}&nbsp;</h3>
+
+        <div class="callout">
+            <p>{{#i18n}}admin.event.images.sections.images.count{{/i18n}} : <b>{{section.images.size}}</b> |
+                <a href="/admin/events/images/{{eventId}}/sections/{{section.sectionId}}/images/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
+
+            <table class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>{{#i18n}}admin.event.images.sections.images.table.name{{/i18n}}</th>
+                    <th>{{#i18n}}admin.event.images.sections.images.table.talk{{/i18n}}</th>
+                    <th>{{#i18n}}admin.event.images.sections.images.table.template{{/i18n}}</th>
+                    <th>{{#i18n}}common.actions{{/i18n}}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#section.images}}
+                    <tr>
+                        <td style="width:30%">
+                            <img class="mxt-img--speakers"
+                                 src="https://raw.githubusercontent.com/mixitconf/mixitconf-images/main/{{eventId}}/{{section.sectionId}}/{{name}}">
+
+                        </td>
+                        <td>{{#talkId}}{{talkId}}{{/talkId}}</td>
+                        <td>{{#mustacheTemplate}}{{mustacheTemplate}}{{/mustacheTemplate}}</td>
+                        <td>
+                            <a href="/admin/events/images/{{eventId}}/sections/{{section.sectionId}}/images/edit?url={{name}}">Update</a>
+                        </td>
+                    </tr>
+                {{/section.images}}
+                </tbody>
+            </table>
+        </div>
+    {{/creationMode}}
+</div>
+
+{{> footer}}

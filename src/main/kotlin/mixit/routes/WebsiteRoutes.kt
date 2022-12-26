@@ -7,6 +7,7 @@ import mixit.about.SearchHandler
 import mixit.blog.handler.AdminPostHandler
 import mixit.blog.handler.WebBlogHandler
 import mixit.event.handler.AdminEventHandler
+import mixit.event.handler.AdminEventImagesHandler
 import mixit.event.model.SponsorshipLevel.MIXTEEN
 import mixit.mailing.handler.MailingHandler
 import mixit.mailing.handler.MailingListHandler
@@ -51,6 +52,7 @@ class WebsiteRoutes(
     private val adminHandler: AdminHandler,
     private val cacheHandler: CacheHandler,
     private val adminEventHandler: AdminEventHandler,
+    private val adminEventImagesHandler: AdminEventImagesHandler,
     private val adminLotteryHandler: AdminLotteryHandler,
     private val adminTalkHandler: AdminTalkHandler,
     private val adminUserHandler: AdminUserHandler,
@@ -91,6 +93,24 @@ class WebsiteRoutes(
 
             GET("/admin", adminHandler::admin)
             GET("/admin/blog", adminPostHandler::adminBlog)
+            GET("/admin/events", adminEventHandler::adminEvents)
+            GET("/admin/events/edit/{eventId}", adminEventHandler::editEvent)
+            GET("/admin/events/{eventId}/sponsors/edit/{sponsorId}/{level}", adminEventHandler::editEventSponsoring)
+            GET("/admin/events/{eventId}/sponsors/create", adminEventHandler::createEventSponsoring)
+            GET("/admin/events/{eventId}/organizations/edit/{organizationLogin}", adminEventHandler::editEventOrga)
+            GET("/admin/events/{eventId}/organizations/create", adminEventHandler::createEventOrganization)
+            GET("/admin/events/{eventId}/volunteers/edit/{volunteerLogin}", adminEventHandler::editEventVolunteer)
+            GET("/admin/events/{eventId}/volunteers/create", adminEventHandler::createEventVolunteer)
+            GET("/admin/events/{eventId}/organizers/edit/{organizerLogin}", adminEventHandler::editEventOrganizer)
+            GET("/admin/events/{eventId}/organizers/create", adminEventHandler::createEventOrganizer)
+            GET("/admin/events/create", adminEventHandler::createEvent)
+            GET("/admin/events/images", adminEventImagesHandler::adminEventImages)
+            GET("/admin/events/images/edit/{id}", adminEventImagesHandler::editEventImages)
+            GET("/admin/events/images/create", adminEventImagesHandler::createEventImages)
+            GET("/admin/events/images/{event}/sections/edit/{sectionId}", adminEventImagesHandler::editEventImagesSection)
+            GET("/admin/events/images/{event}/sections/create", adminEventImagesHandler::createEventImagesSection)
+            GET("/admin/events/images/{event}/sections/{sectionId}/images/edit", adminEventImagesHandler::editEventImagesSectionImage)
+            GET("/admin/events/images/{event}/sections/{sectionId}/images/create", adminEventImagesHandler::createEventImagesSectionImage)
             GET("/admin/post/edit/{id}", adminPostHandler::editPost)
             GET("/admin/post/create", adminPostHandler::createPost)
             GET("/admin/cache", cacheHandler::view)
@@ -137,17 +157,6 @@ class WebsiteRoutes(
             GET("/codeofconduct", aboutHandler::codeConductView)
             GET("/code-of-conduct", aboutHandler::codeConductView)
             GET("/come", aboutHandler::comeToMixitView)
-            GET("/admin/events", adminEventHandler::adminEvents)
-            GET("/admin/events/edit/{eventId}", adminEventHandler::editEvent)
-            GET("/admin/events/{eventId}/sponsors/edit/{sponsorId}/{level}", adminEventHandler::editEventSponsoring)
-            GET("/admin/events/{eventId}/sponsors/create", adminEventHandler::createEventSponsoring)
-            GET("/admin/events/{eventId}/organizations/edit/{organizationLogin}", adminEventHandler::editEventOrga)
-            GET("/admin/events/{eventId}/organizations/create", adminEventHandler::createEventOrganization)
-            GET("/admin/events/{eventId}/volunteers/edit/{volunteerLogin}", adminEventHandler::editEventVolunteer)
-            GET("/admin/events/{eventId}/volunteers/create", adminEventHandler::createEventVolunteer)
-            GET("/admin/events/{eventId}/organizers/edit/{organizerLogin}", adminEventHandler::editEventOrganizer)
-            GET("/admin/events/{eventId}/organizers/create", adminEventHandler::createEventOrganizer)
-            GET("/admin/events/create", adminEventHandler::createEvent)
             GET("/faq", aboutHandler::faqView)
             GET("/lottery", lotteryHandler::ticketing)
             GET("/me") { userHandler.findProfileView(it) }
@@ -213,6 +222,10 @@ class WebsiteRoutes(
             POST("/admin/mixette-donation/{id}/delete", adminMixetteHandler::adminDeleteDonation)
             POST("/admin/mixette-donation", adminMixetteHandler::adminSaveDonation)
             POST("/admin/events", adminEventHandler::adminSaveEvent)
+            POST("/admin/events/images", adminEventImagesHandler::adminSaveEventImages)
+            POST("/admin/events/images/{eventId}/sections/{sectionId}/images/create", adminEventImagesHandler::adminCreateEventImagesSectionImage)
+            POST("/admin/events/images/{eventId}/sections/{sectionId}/images/delete", adminEventImagesHandler::adminDeleteEventImagesSectionImage)
+            POST("/admin/events/images/{eventId}/sections/{sectionId}/images", adminEventImagesHandler::adminUpdateEventImagesSectionImage)
             POST("/admin/events/{eventId}/sponsors/create", adminEventHandler::adminCreateEventSponsoring)
             POST("/admin/events/{eventId}/sponsors/delete", adminEventHandler::adminDeleteEventSponsoring)
             POST("/admin/events/{eventId}/sponsors", adminEventHandler::adminUpdateEventSponsoring)
