@@ -1571,6 +1571,9 @@
             },
             {
                 "organizerLogin": "horalass"
+            },
+            {
+                "organizerLogin": "106329914971209052078"
             }
         ],
         "photoUrls": [
@@ -1733,7 +1736,10 @@
             }
         ],
         "start": "2022-05-24",
-        "videoUrl": null,
+        "videoUrl": {
+            "name": "MiXiT 2022",
+            "url": "https://vimeo.com/780393437"
+        },
         "volunteers": [
             {
                 "volunteerLogin": "silia.taider"
@@ -1821,6 +1827,9 @@
             },
             {
                 "organizerLogin": "horalass"
+            },
+            {
+                "organizerLogin": "106329914971209052078"
             }
         ],
         "photoUrls": [],
