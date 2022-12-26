@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document
 
 @Document
 data class EventImages(
-    @Id val event: Int?,
+    @Id val event: String?,
     val sections: List<EventImagesSection>
 )
 

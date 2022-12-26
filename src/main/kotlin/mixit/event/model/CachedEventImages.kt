@@ -4,7 +4,7 @@ import mixit.util.cache.Cached
 
 data class CachedEventImages(
     override val id: String,
-    val event: Int,
+    val event: String,
     val sections: List<CachedEventImageSection>
 ) : Cached {
     fun toEventImages(): EventImages =
