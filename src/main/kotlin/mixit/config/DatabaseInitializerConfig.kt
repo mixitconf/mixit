@@ -42,7 +42,7 @@ class DatabaseInitializerConfig {
 
         userRepository.initData()
         eventRepository.initData()
-        eventImagesRepository.initData()
+        // eventImagesRepository.initData()
         talkRepository.initData()
         postRepository.initData()
         lotteryRepository.initData()
@@ -55,7 +55,7 @@ class DatabaseInitializerConfig {
             eventService.initializeCache()
             blogService.initializeCache()
             talkService.initializeCache()
-            eventImagesService.initializeCache()
+            // eventImagesService.initializeCache()
         }
     }
 }
