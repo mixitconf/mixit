@@ -114,7 +114,7 @@ class UserHandler(
                 val isSpeaker = talks.any { it.event == CURRENT_EVENT }
                 val speakerYear = talks.firstOrNull()?.event
 
-                val attendeeTicket = ticketService.findByEmail(cryptographer.decrypt(user.email)!!)
+                val attendeeTicket = cryptographer.decrypt(user.email)?.let {  ticketService.findByEmail(it)}
                 val lottery = lotteryRepository.findByEncryptedEmail(user.email ?: "unknown")
                 val params = mapOf(
                     USER to user.toDto(req.language()),
