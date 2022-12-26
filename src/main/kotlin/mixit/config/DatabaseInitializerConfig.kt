@@ -55,7 +55,7 @@ class DatabaseInitializerConfig {
             eventService.initializeCache()
             blogService.initializeCache()
             talkService.initializeCache()
-            // eventImagesService.initializeCache()
+            eventImagesService.initializeCache()
         }
     }
 }

@@ -12,6 +12,7 @@ import org.springframework.data.mongodb.core.count
 import org.springframework.data.mongodb.core.find
 import org.springframework.data.mongodb.core.findById
 import org.springframework.data.mongodb.core.query.Query
+import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
 import java.time.Duration
 
@@ -24,6 +25,7 @@ class EventImagesRepository(
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
+        deleteAll().block()
         if (count().block() == 0L) {
             val eventsResource = ClassPathResource("data/events_image.json")
             val events: List<EventImages> = objectMapper.readValue(eventsResource.inputStream)
@@ -46,4 +48,7 @@ class EventImagesRepository(
 
     fun save(event: EventImages) =
         template.save(event)
+
+
+    fun deleteAll() = template.remove<EventImages>(Query())
 }
