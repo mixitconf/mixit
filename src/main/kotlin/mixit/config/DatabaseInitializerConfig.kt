@@ -42,7 +42,7 @@ class DatabaseInitializerConfig {
 
         userRepository.initData()
         eventRepository.initData()
-        // eventImagesRepository.initData()
+        eventImagesRepository.initData()
         talkRepository.initData()
         postRepository.initData()
         lotteryRepository.initData()

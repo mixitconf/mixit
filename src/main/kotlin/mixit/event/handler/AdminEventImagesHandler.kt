@@ -78,7 +78,7 @@ class AdminEventImagesHandler(
         val formData = req.extractFormData()
         // We need to find the event in database
         val existingEvent = service.findOneOrNull(formData["event"] ?: throw NotFoundException())?.toEventImages()
-        val updatedEvent = existingEvent ?: EventImages(formData["event"]!!.toInt(), emptyList())
+        val updatedEvent = existingEvent ?: EventImages(formData["event"]!!, emptyList())
         service.save(updatedEvent).awaitSingleOrNull()
         return seeOther("${properties.baseUri}${AdminEventHandler.LIST_URI}")
     }
