@@ -151,8 +151,9 @@ class TalkHandler(
             val pictures = eventImagesService
                 .findOneOrNull(config.year.toString())
                 ?.sections
-                ?.first { it.name == config.album }
+                ?.first { it.sectionId == config.album }
                 ?.pictures
+                ?.map { it.name }
 
             pictures
                 ?.indexOf(config.url)
@@ -171,13 +172,13 @@ class TalkHandler(
             if (config.url != null) {
                 eventImagesService.findOneOrNull(config.year.toString()).let { images ->
                     images?.copy(sections = images.sections
-                        .filter { it.name == config.album }
-                        .map { it.copy(pictures = it.pictures.filter { pic -> pic == config.url }) })
+                        .filter { it.sectionId == config.album }
+                        .map { it.copy(pictures = it.pictures.filter { pic -> pic.name == config.url }) })
                 }
             } else {
                 // We select all the album images
                 eventImagesService.findOneOrNull(config.year.toString()).let { images ->
-                    images?.copy(sections = images.sections.filter { it.name == config.album })
+                    images?.copy(sections = images.sections.filter { it.sectionId == config.album })
                 }
             }
         } else {

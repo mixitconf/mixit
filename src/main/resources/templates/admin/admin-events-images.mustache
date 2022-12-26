@@ -1,0 +1,30 @@
+{{> header}}
+{{> header-common }}
+
+<div class="mxt-wrapper--header-page-title">
+    <h1 class="pt-3 pb-3">{{#i18n}}admin.events.images.title{{/i18n}}</h1>
+</div>
+
+<div class="container mxt-wrapper--page-content">
+    <p>{{#i18n}}admin.events.images.count{{/i18n}} : <b>{{events.size}}</b> | <a href="/admin/events/images/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+            <th>{{#i18n}}admin.events.table.id{{/i18n}}</th>
+            <th>{{#i18n}}common.actions{{/i18n}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#events}}
+        <tr>
+            <td>{{id}}</td>
+            <td>
+                <a href="/admin/events/images/edit/{{id}}">{{#i18n}}common.actions.update{{/i18n}}</a>
+            </td>
+        </tr>
+        {{/events}}
+      </tbody>
+    </table>
+</div>
+
+{{> footer}}

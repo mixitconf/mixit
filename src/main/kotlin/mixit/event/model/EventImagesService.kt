@@ -14,4 +14,7 @@ class EventImagesService(
     override fun loader(): suspend () -> List<CachedEventImages> =
         { repository.findAll().map { CachedEventImages(it) } }
 
+    fun save(event: EventImages) =
+        repository.save(event).doOnSuccess { cache.invalidateAll() }
+
 }

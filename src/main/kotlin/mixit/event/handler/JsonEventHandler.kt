@@ -1,5 +1,6 @@
 package mixit.event.handler
 
+import mixit.event.repository.EventImagesRepository
 import mixit.event.repository.EventRepository
 import mixit.util.json
 import org.springframework.stereotype.Component
@@ -9,7 +10,10 @@ import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.bodyValueAndAwait
 
 @Component
-class JsonEventHandler(private val repository: EventRepository) {
+class JsonEventHandler(
+    private val repository: EventRepository,
+    private val eventImagesRepository: EventImagesRepository
+) {
 
     suspend fun findOne(req: ServerRequest): ServerResponse =
         repository.findOne(req.pathVariable("id")).let { ok().json().bodyValueAndAwait(it) }
@@ -19,4 +23,7 @@ class JsonEventHandler(private val repository: EventRepository) {
 
     suspend fun findByEventID(req: ServerRequest): ServerResponse =
         repository.findByYear(req.pathVariable("year").toInt()).let { ok().json().bodyValueAndAwait(it) }
+
+    suspend fun findEventImages(req: ServerRequest): ServerResponse =
+        eventImagesRepository.findAll().let { ok().json().bodyValueAndAwait(it) }
 }

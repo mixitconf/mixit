@@ -60,13 +60,13 @@
                     <div class="card-body">
                         {{#pictures}}
                             <img class="mxt-img--speakers"
-                                 src="https://raw.githubusercontent.com/mixitconf/mixitconf-images/main/{{year}}/{{name}}/{{.}}">
+                                 src="https://raw.githubusercontent.com/mixitconf/mixitconf-images/main/{{year}}/{{sectionId}}/{{name}}">
                         {{/pictures}}
                         <h5 class="card-title pt-2">
                         {{#i18n}}{{i18nLabel}}{{/i18n}}
                         </h5>
                         <div class="text-center">
-                            <a href="{{localePrefix}}/{{event}}/medias/images/{{name}}" class="btn btn-outline-primary">{{#i18n}}images.readmore{{/i18n}}</a>
+                            <a href="{{localePrefix}}/{{event}}/medias/images/{{sectionId}}" class="btn btn-outline-primary">{{#i18n}}images.readmore{{/i18n}}</a>
                         </div>
                     </div>
                 </div>
