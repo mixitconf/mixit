@@ -25,7 +25,6 @@ class EventImagesRepository(
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
-        deleteAll().block()
         if (count().block() == 0L) {
             val eventsResource = ClassPathResource("data/events_image.json")
             val events: List<EventImages> = objectMapper.readValue(eventsResource.inputStream)
