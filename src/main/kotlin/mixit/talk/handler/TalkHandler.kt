@@ -29,6 +29,7 @@ import mixit.util.currentNonEncryptedUserEmail
 import mixit.util.enumMatcher
 import mixit.util.errors.NotFoundException
 import mixit.util.extractFormData
+import mixit.util.formatTalkDate
 import mixit.util.language
 import mixit.util.permanentRedirect
 import mixit.util.seeOther
@@ -108,6 +109,8 @@ class TalkHandler(
         ok().renderAndAwait(Schedule.template, mapOf(TITLE to Schedule.title))
 
 
+    private data class TalkKey(val date: String, val id: String = date.replace(" ", "").lowercase())
+
     suspend fun findByEventView(config: TalkViewConfig): ServerResponse {
         val currentUserEmail = config.req.currentNonEncryptedUserEmail()
         val talks = loadTalkAndFavorites(config, currentUserEmail).let { talks ->
@@ -125,7 +128,11 @@ class TalkHandler(
                 mapOf(
                     EVENT to event.toEvent(),
                     SPONSORS to userService.loadSponsors(event),
-                    TALKS to (if (config.isList()) talks else talks.groupBy { it.date ?: "" }),
+                    TALKS to (if (config.isList()) talks else talks.groupBy {
+                        TalkKey(
+                            it.date ?: event.toEvent().start.atStartOfDay().formatTalkDate(config.req.language())
+                        )
+                    }),
                     TITLE to title,
                     YEAR to config.year,
                     IMAGES to images,
@@ -137,7 +144,8 @@ class TalkHandler(
                     "hasPhotosOrVideo" to (event.videoUrl != null || event.photoUrls.isNotEmpty()),
                     "singleImage" to (config.url != null),
                     "previousImage" to closestImages?.first,
-                    "nextImage" to closestImages?.second
+                    "nextImage" to closestImages?.second,
+                    "hasTalk" to talks.isNotEmpty()
                 )
             )
             .awaitSingle()
