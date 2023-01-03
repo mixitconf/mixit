@@ -105,6 +105,21 @@ h3 {
   box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.mxt-nav-tabs {
+  border-bottom: none;
+  margin-bottom: 1em;
+
+  .nav-item {
+    .btn.active {
+      background-color: $secondary-color;
+      border-color: $secondary-color;
+    }
+    .btn {
+      border-radius: 8px;
+    }
+  }
+}
+
 .mxt-menu__item--bullet {
   color: #fefefe !important;
   padding-top: 8px;
