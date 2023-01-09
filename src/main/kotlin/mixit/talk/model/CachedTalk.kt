@@ -70,7 +70,9 @@ data class CachedTalk(
         end?.formatTalkTime(lang),
         start?.formatTalkDate(lang),
         favorite,
-        photoUrls
+        photoUrls,
+        startLocalDateTime = start,
+        endLocalDateTime = end
     )
 
     fun toTalk() = Talk(

@@ -1,0 +1,16 @@
+<div class="mxt-agenda--talk p-1">
+    {{#topic}}
+    <div class="mxt-text--cat mxt-text--cat-{{topic}}">
+        <img src="/images/svg/mxt-icon--{{topic}}.svg"
+             class="mxt-icon--cat mxt-icon--cat__talks"
+             alt="{{#i18n}}home.topics.{{topic}}.title{{/i18n}}"/>
+        <span>{{#i18n}}home.topics.{{topic}}.title{{/i18n}}</span>
+    </div>
+    {{/topic}}
+    <div class="mxt-text--cat-format">#{{#i18n}}talk.format.{{format}}{{/i18n}}</div>
+    <div><small>{{#start}}{{start}} - {{end}}{{/start}}</small></div>
+    <div class="mxt-agenda--talk-title"><small>{{title}}</small></div>
+    {{#speakers}}
+        <div><small>{{firstname}}&nbsp;{{lastname}}</small></div>
+    {{/speakers}}
+</div>

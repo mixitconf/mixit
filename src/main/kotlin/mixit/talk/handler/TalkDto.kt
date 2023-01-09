@@ -31,5 +31,7 @@ class TalkDto(
     val isTalk: Boolean = (format == TalkFormat.TALK),
     val isCurrentEdition: Boolean = MixitApplication.CURRENT_EVENT == event,
     val multiSpeaker: Boolean = (speakers.size > 1),
-    val speakersFirstNames: String = (speakers.joinToString { it.firstname })
+    val speakersFirstNames: String = (speakers.joinToString { it.firstname }),
+    val startLocalDateTime: LocalDateTime? = null,
+    val endLocalDateTime: LocalDateTime? = null
 )

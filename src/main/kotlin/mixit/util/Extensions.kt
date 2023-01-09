@@ -58,7 +58,7 @@ suspend fun ServerRequest.extractFormData(): Map<String, String?> =
         .map { data ->
             data.toSingleValueMap().mapValues { if (it.value.isNullOrEmpty()) null else it.value }
         }
-        .awaitSingle()
+        .awaitSingleOrNull() ?: emptyMap()
 
 suspend fun ServerRequest.webSession(): WebSession =
     this.session().awaitSingle()
