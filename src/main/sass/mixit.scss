@@ -5,6 +5,8 @@ $secondary-color: #2C233D;
 $third-color: #aecbd6;
 $fourth-color: #757575;
 $primary-color: #FF8D4E;
+$fifth-color: #E0E0E0;
+$black: #212121 !default;
 
 // 2. Include any default variable overrides here
 $theme-colors: (
@@ -16,8 +18,11 @@ $theme-colors: (
         "danger": #cc4b37,
         "light": #f8f9fa,
         "dark": #212529
-);
-$font-family-base: 'Lato', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+) !default;
+
+$component-active-bg: $secondary-color !default;
+
+$font-family-base: 'Lato', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif !default;
 
 $accordion-border-radius: 0;
 
@@ -114,6 +119,7 @@ h3 {
       background-color: $secondary-color;
       border-color: $secondary-color;
     }
+
     .btn {
       border-radius: 8px;
     }
@@ -594,7 +600,7 @@ h3 {
 }
 
 .mxt-text--cat-format {
-  color: #cccccc;
+  color: $third-color;
   font-weight: normal;
 }
 
@@ -681,5 +687,119 @@ h3 {
     &:hover {
       background-color: $primary-color;
     }
+  }
+}
+
+.mxt-agenda--container {
+  position: relative;
+  overflow: auto;
+  width: auto;
+}
+
+.mxt-agenda--area {
+  flex-wrap: nowrap
+}
+
+.mxt-agenda--head {
+  height: 3em;
+  font-weight: bold;
+}
+
+.mxt-agenda--time-size {
+  min-width: 60px;
+  max-width: 80px;
+}
+
+.mxt-agenda--time {
+  height: 25px !important;
+  min-width: 60px;
+  max-width: 80px;
+  padding-bottom: 1em;
+}
+
+.mxt-agenda--room {
+  max-width: 100%;
+  min-width: 120px;
+  max-height: 100%;
+}
+
+.mxt-agenda--bordered {
+  border-top: 1px solid $third-color;
+}
+
+.mxt-agenda--talk-container:hover {
+  background-color: $primary-color;
+  overflow: visible;
+  height: auto;
+  max-height: 300%;
+  border-radius: 4px;
+  z-index: -1;
+}
+
+.mxt-agenda--talk-container {
+  background-color: $fifth-color;
+  border: 1px solid $secondary-color;
+  border-radius: 4px;
+  width: 95%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  overflow: hidden;
+  min-height: 100%;
+  max-height: 100%;
+  height: 100%;
+  z-index: -10;
+
+  .mxt-text--cat-format {
+    color: $black;
+    font-size: smaller;
+  }
+
+  .mxt-agenda--talk {
+    display: block;
+    height: 100%;
+    overflow: hidden;
+
+    .mxt-icon--cat {
+      max-width: 1em !important;
+    }
+
+    .mxt-text--cat {
+      font-size: x-small;
+    }
+  }
+}
+
+.mxt-agenda--talk-link {
+  background-color: transparent !important;
+  border: none !important;
+  height: 100%;
+  width: 100%
+}
+
+.mxt-agenda--talk-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $secondary-color;
+}
+
+.mxt-talks--container {
+  border: 0.5px solid $third-color;
+  color: $black;
+
+  a {
+    color: $black;
+  }
+
+  .mxt-text--cat-speaker {
+    background-color: $fifth-color;
+    padding: 0.3em;
+    color: $fourth-color;
+    font-size: small;
+  }
+
+  .mxt-text--cat-room {
+    color: $secondary-color;
+    font-size: small;
   }
 }

@@ -36,6 +36,7 @@ object MustacheI18n {
     const val TICKETS = "tickets"
     const val TOKEN = "token"
     const val TOPICS = "topics"
+    const val TYPE = "type"
     const val TYPES = "types"
     const val USER = "user"
     const val USERS = "users"

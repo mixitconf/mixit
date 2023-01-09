@@ -1,0 +1,44 @@
+<div class="tab-pane {{#active}}show active{{/active}}" id="{{id}}"
+     aria-selected="{{#active}}true{{/active}}{{^active}}false{{/active}}"
+     role="tabpanel" aria-labelledby="day1-tab" tabindex="0">
+
+    <div class="mxt-agenda--container">
+        <div class="row mxt-agenda--area m-0 p-0">
+            {{#slices}}
+                <div class="col p-0 m-0 text-center {{^room}}mxt-agenda--time-size{{/room}}">
+                    <div class="mxt-agenda--head">
+                        {{#room}}{{#i18n}}{{room}}{{/i18n}}{{/room}}
+                        {{^room}}&nbsp;{{/room}}
+                    </div>
+                    {{#talkByRooms}}
+                        {{#room}}
+                            <div class="mxt-agenda--room {{#bordered}}mxt-agenda--bordered{{/bordered}} p-0 m-0"
+                                 style="height: calc({{sliceDuration}}0px * 2.5); ">
+                                {{#talk}}
+                                    <article class="mxt-agenda--talk-container p-0 m-0">
+                                        <button class="p-0 m-0 mxt-agenda--talk-link d-block d-md-none"
+                                                ondblclick="location.href='{{localePrefix}}/{{event}}{{#slug}}/{{slug}}{{/slug}}'">
+                                            {{> talks-day-tab-content-agenda-btn }}
+                                        </button>
+                                        <button class="p-0 m-0 mxt-agenda--talk-link d-none d-md-block"
+                                                onclick="location.href='{{localePrefix}}/{{event}}{{#slug}}/{{slug}}{{/slug}}'">
+                                            {{> talks-day-tab-content-agenda-btn }}
+                                        </button>
+                                    </article>
+                                {{/talk}}
+                            </div>
+                        {{/room}}
+                        {{^room}}
+                            <div class="mxt-agenda--time {{#bordered}}mxt-agenda--bordered{{/bordered}}">
+                                <small>
+                                    {{#timeDisplayed}}{{time}}{{/timeDisplayed}}
+                                    {{^timeDisplayed}}&nbsp;{{/timeDisplayed}}
+                                </small>
+                            </div>
+                        {{/room}}
+                    {{/talkByRooms}}
+                </div>
+            {{/slices}}
+        </div>
+    </div>
+</div>
