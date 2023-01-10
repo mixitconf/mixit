@@ -153,6 +153,7 @@ class WebsiteRoutes(
             GET("/about") { aboutHandler.findAboutView(it, CURRENT_EVENT.toInt()) }
             GET("/accessibility", aboutHandler::accessibilityView)
             GET("/blog") { blogHandler.findAllView(it, CURRENT_EVENT.toInt()) }
+            GET("/blog/feed", blogHandler::feed)
             GET("/blog/{slug}", blogHandler::findOneView)
             GET("/codeofconduct", aboutHandler::codeConductView)
             GET("/code-of-conduct", aboutHandler::codeConductView)

@@ -3,16 +3,19 @@ package mixit.blog.handler
 import mixit.MixitApplication.Companion.CURRENT_EVENT
 import mixit.MixitProperties
 import mixit.blog.model.BlogService
+import mixit.blog.model.toFeed
 import mixit.event.model.EventService
 import mixit.routes.MustacheI18n.SPONSORS
 import mixit.routes.MustacheI18n.TITLE
 import mixit.routes.MustacheI18n.YEAR
 import mixit.routes.MustacheTemplate.Blog
 import mixit.routes.MustacheTemplate.BlogPost
+import mixit.routes.MustacheTemplate.Feed
 import mixit.user.model.UserService
 import mixit.util.errors.NotFoundException
 import mixit.util.language
 import mixit.util.permanentRedirect
+import org.springframework.http.MediaType
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
@@ -57,5 +60,12 @@ class WebBlogHandler(
     suspend fun redirect(req: ServerRequest): ServerResponse {
         val post = service.findOneOrNull(req.pathVariable("id")) ?: throw NotFoundException()
         return permanentRedirect("${properties.baseUri}/blog/${post.slug[req.language()]}")
+    }
+
+    suspend fun feed(req: ServerRequest): ServerResponse {
+        val feeds = service.findAll().toFeed(req.language(), "blog.feed.title", "/blog")
+        return ok()
+            .contentType(MediaType.APPLICATION_ATOM_XML)
+            .renderAndAwait(Feed.template, mapOf(Pair("feed", feeds)))
     }
 }
