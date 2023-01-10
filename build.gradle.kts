@@ -4,7 +4,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     val kotlinVersion = "1.6.21"
 
-    id("org.springframework.boot") version "2.7.5"
+    id("org.springframework.boot") version "2.7.7"
     id("io.spring.dependency-management") version "1.0.15.RELEASE"
     id("com.github.node-gradle.node") version "3.1.1"
     id("org.jmailen.kotlinter") version "3.7.0"
