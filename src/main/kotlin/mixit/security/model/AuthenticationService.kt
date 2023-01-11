@@ -87,7 +87,11 @@ class AuthenticationService(
                 ?.let {
                     createUserIfEmailDoesNotExist(
                         nonEncryptedMail,
-                        createUser(nonEncryptedMail, it.firstname, it.lastname).second
+                        createUser(
+                            nonEncryptedMail,
+                            cryptographer.decrypt(it.firstname),
+                            cryptographer.decrypt(it.lastname)
+                        ).second
                     )
                 }
 
