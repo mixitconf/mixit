@@ -91,12 +91,14 @@ class UserHandler(
                     .filter { it.event == CURRENT_EVENT }
                 val isSpeaker = talks.isNotEmpty()
                 val speakerYear = talks.firstOrNull()?.event
+                val lottery = lotteryRepository.findByEncryptedEmail(user.email ?: "unknown")
 
                 val params = mapOf(
                     USER to user.toDto(req.language()),
                     ERRORS to errors,
                     HAS_ERRORS to errors.isNotEmpty(),
                     TALKS to talks,
+                    "lotteryTicket" to lottery,
                     "isSpeaker" to isSpeaker,
                     "speakerYear" to speakerYear,
                     "usermail" to cryptographer.decrypt(user.email),
