@@ -80,7 +80,11 @@ class LotteryHandler(
         formData: Map<String, String?>,
         locale: Locale
     ): ServerResponse {
-        val user = User(ticket.email, ticket.firstname, ticket.lastname, ticket.email)
+        val user = User(
+            cryptographer.decrypt(ticket.email)!!,
+            cryptographer.decrypt(ticket.firstname)!!,
+            cryptographer.decrypt(ticket.lastname)!!,
+            ticket.email)
         emailService.send(MustacheTemplate.EmailTicketing.template, user, locale)
         return ok().render(LotterySubmission.template, formData).awaitSingle()
     }
