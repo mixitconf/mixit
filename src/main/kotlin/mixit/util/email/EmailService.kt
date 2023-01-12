@@ -50,8 +50,7 @@ class EmailService(
         val i18nkey = "${templateName.substringAfter("email/")}-subject"
         val emailSubject = subject ?: messageSource.getMessage(i18nkey, null, locale)
         val email = cryptographer.decrypt(user.email)!!
-        // TODO debug
-        logger.info("Try to send email to [$email] to $i18nkey")
+
         runCatching {
             routeFilterUtils.generateModelForExernalCall(locale).apply {
                 putAll(model)
@@ -62,6 +61,9 @@ class EmailService(
                 if (properties.feature.email) {
                     emailSender.send(EmailMessage(email, emailSubject, content))
                 }
+//                else {
+//                    logger.info("Mail feature is disabled. We want to send [$emailSubject] to $email :\n $content ${user.email}")
+//                }
             }
         }.onFailure {
             logger.error("Not possible to send email [$subject] to ${user.email}", it)
