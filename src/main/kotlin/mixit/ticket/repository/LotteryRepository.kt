@@ -28,8 +28,6 @@ class LotteryRepository(
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
-        // TODO fix bad data in prod
-        deleteOne("guillaume@dev-mind.fr").block()
         if (count().block() == 0L) {
             val usersResource = ClassPathResource("data/lottery.json")
             val tickets: List<LotteryTicket> = objectMapper.readValue(usersResource.inputStream)
