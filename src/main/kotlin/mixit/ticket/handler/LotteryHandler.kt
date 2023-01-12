@@ -67,7 +67,7 @@ class LotteryHandler(
                 LotteryError.template,
                 mapOf(TITLE to "ticketing.title", "message" to "ticketing.error.alreadyexists")
             )
-        } catch (e: RuntimeException) {
+        } catch (e: Exception) {
             ok().renderAndAwait(
                 LotteryError.template,
                 mapOf(TITLE to "ticketing.title", "message" to "ticketing.error.default")
