@@ -25,10 +25,12 @@ import mixit.util.encodeToMd5
 import mixit.util.enumMatcher
 import mixit.util.extractFormData
 import mixit.util.seeOther
+import org.springframework.http.MediaType
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
+import org.springframework.web.reactive.function.server.bodyValueAndAwait
 import org.springframework.web.reactive.function.server.renderAndAwait
 
 @Component
@@ -65,6 +67,19 @@ class AdminUserHandler(
                 TITLE to AdminUserNewsLetter.title
             )
         )
+
+    suspend fun adminUserNewsLetterCsv(req: ServerRequest): ServerResponse =
+        ok().contentType(MediaType(MediaType.TEXT_PLAIN, Charsets.UTF_8)).bodyValueAndAwait(
+            (listOf("firstname;lastname;email") +
+                    userRepository
+                        .findAll()
+                        .filter { it.newsletterSubscriber }
+                        .map { it.copy(email = cryptographer.decrypt(it.email)) }
+                        .sortedWith(compareBy<User> { it.lastname }.thenBy { it.firstname })
+                        .map { "${it.firstname};${it.lastname};${it.email}" }).joinToString("\n")
+
+        )
+
 
     suspend fun createUser(req: ServerRequest): ServerResponse = this.adminUser()
 

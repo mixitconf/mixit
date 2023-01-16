@@ -8,6 +8,7 @@ import mixit.security.handler.ExternalHandler
 import mixit.talk.handler.TalkJsonHandler
 import mixit.ticket.handler.AdminTicketHandler
 import mixit.ticket.handler.LotteryHandler
+import mixit.user.handler.AdminUserHandler
 import mixit.user.handler.UserJsonHandler
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -24,7 +25,8 @@ class ApiRoutes(
     private val externalHandler: ExternalHandler,
     private val userHandler: UserJsonHandler,
     private val ticketHandler: AdminTicketHandler,
-    private val adminMixetteHandler: AdminMixetteHandler
+    private val adminMixetteHandler: AdminMixetteHandler,
+    private val adminUserHandler: AdminUserHandler,
 ) {
 
     @Bean
@@ -37,6 +39,7 @@ class ApiRoutes(
             GET("/admin/mixette", adminMixetteHandler::findAll)
             GET("/admin/ticket", ticketHandler::findAll)
             GET("/admin/lottery", lotteryHandler::findAll)
+            GET("/admin/newsletter", adminUserHandler::adminUserNewsLetterCsv)
             GET("/blog", blogHandler::findAll)
             GET("/blog/{id}", blogHandler::findOne)
             GET("/event", eventHandler::findAll)
