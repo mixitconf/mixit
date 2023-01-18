@@ -11,6 +11,7 @@
       <thead>
         <tr>
             <th>{{#i18n}}admin.blog.table.title{{/i18n}}</th>
+            <th>{{#i18n}}admin.blog.table.title{{/i18n}}</th>
             <th>{{#i18n}}admin.blog.table.author{{/i18n}}</th>
             <th>{{#i18n}}common.actions{{/i18n}}</th>
         </tr>
@@ -18,6 +19,7 @@
       <tbody>
         {{#posts}}
         <tr>
+            <td>{{addedAt}}</td>
             <td>{{title}}</td>
             <td>{{author.firstname}} {{author.lastname}}</td>
             <td>

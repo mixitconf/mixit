@@ -31,7 +31,7 @@ class AdminPostHandler(private val service: BlogService, private val properties:
     suspend fun adminBlog(req: ServerRequest): ServerResponse {
         val posts = service
             .findAll()
-            .sortedBy { it.addedAt }
+            .sortedByDescending { it.addedAt }
             .map { it.toDto(req.language()) }
         return ok().renderAndAwait(AdminBlog.template, mapOf(MustacheI18n.POSTS to posts))
     }
