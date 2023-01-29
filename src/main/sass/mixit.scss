@@ -206,10 +206,10 @@ h3 {
 
 .mxt-img--grayscale {
   max-width: 100%;
-  filter: grayscale(100%);
+  //filter: grayscale(100%);
 
   &:hover {
-    filter: grayscale(0%);
+  //  filter: grayscale(0%);
   }
 }
 
@@ -248,11 +248,6 @@ h3 {
   width: 100%;
   height: auto;
   display: block;
-  filter: grayscale(70%);
-
-  &:hover {
-    filter: grayscale(30%);
-  }
 }
 
 .mxt-img-avatar__speaker_new {
