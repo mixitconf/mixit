@@ -1859,6 +1859,21 @@
                 "level": "GOLD",
                 "sponsorId": "hackyourjob",
                 "subscriptionDate": "2023-02-01"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Ippon",
+                "subscriptionDate": "2023-02-07"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "hiit",
+                "subscriptionDate": "2023-02-07"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "ZenikaLyon",
+                "subscriptionDate": "2023-02-10"
             }
         ],
         "start": "2023-04-13",
