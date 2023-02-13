@@ -692,7 +692,7 @@
     "title": "Le GitOps dont vous êtes le héros [VERSION ATELIER]",
     "summary": "Dans le vaste royaume de Kubernetes, notre application est en péril. Les bugs et les besoins utilisateurs non couverts sont en train de les épuiser. Les correctifs et nouvelles fonctionnalités arriverons-t-il à temps pour sauver l’Application ? Si le processus de livraison ne s’améliore pas, les utilisateurs vont déserter et ce sera sa fin.\nÀ vous, public, de devenir le héros qui va sauver l’Application en embrassant la voie du GitOps.\nCette ~~atelier~~ aventure sera interactive ! Vos choix vous permettront d’arriver ou pas en production dans les temps. Dans ce premier tome de cette saga, vous allez apprendre ce qu’est GitOps, vous choisirez votre solution et la mettrez en œuvre. Soyez prêt à assumer vos choix, vous apprendrez de vos erreurs comme de vos succès, et peut être arriverez vous à temps en production.\n___\n*4ème de couverture :\nCet atelier est destiné aux aventuriers avec quelques connaissances de k8s et curieux de découvrir l’approche GitOps.\nSerez-vous l’aventurier qui embrassera la voie du GitOps ? Entre rétro-gaming sur WorkAdventure et Donjons & Dragons, ce sera à vous de faire vos propres choix, pour une expérience unique. ",
     "speakerIds": [
-      "ZenikaLyon",
+      "Louis.Tournayre",
       "mathieu.mure",
       "pierre.morvan"
     ],
