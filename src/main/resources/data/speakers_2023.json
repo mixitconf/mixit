@@ -10,7 +10,7 @@
       "ENGLISH": "Devlin Duldulao is a Filipino full-stack cloud engineer based in Norway. He is a Microsoft MVP, a trainer, a conference speaker, a published book author, and a senior consultant at Inmeta. He loves going to universities and user groups to share his expertise."
     },
     "emailHash": "7dc408ee2ccfa6fb9eac30cdf08926bf",
-    "photoUrl": "https://mixitconf.org/images/speakers/devlin.duldulao.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/devlin.duldulao.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -37,7 +37,7 @@
       "ENGLISH": "Ancienne développeuse, mais codant un peu de temps en temps, je suis une agiliste passionnée ayant eu des rôles de Scrum Master et Product Owner depuis plusieurs années. Je fais à présent mes premiers pas en tant que Coach Agile tout en me posant de nombreuses questions."
     },
     "emailHash": "a931ae1542520ffb1cb2af311e286692",
-    "photoUrl": "https://mixitconf.org/images/speakers/anais.huet.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/anais.huet.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -64,7 +64,7 @@
       "ENGLISH": "Architecte logiciel et Data engineer, Marie-Alice travaille actuellement dans le département R&D de Worldline.\nElle prêche les bonnes pratiques d'ingénierie à ses collègues Data Scientists, et s'interesse particulièrement aux problématiques performance et latence associée au déploiement de solutions d'IA.\n"
     },
     "emailHash": "6b1b8582de6c8d09033de456380c9e93",
-    "photoUrl": "https://mixitconf.org/images/speakers/marie_alice.blete.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/marie_alice.blete.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -99,7 +99,7 @@
       "ENGLISH": "Quand on est mariée à un développeur, on finit tôt ou tard par s'intéresser à l'Agilité, même quand on vient de l'industrie.\nLa découverte et l'expérimentation des méthodes Agile, des serious games et de nouvelles formes de gouvernance, m'a amenée progressivement du management à l'accompagnement.\nFormée au coaching et à l'entraînement comportemental, serial gameuse, exploratrice de pratiques, j'aime m'inspirer de différentes approches pour créer des espaces de croissance pour les individus et les collectifs."
     },
     "emailHash": "85ecd6a99c2e0dc31655fdd0c14bce03",
-    "photoUrl": "https://mixitconf.org/images/speakers/nathalie.jeauffroy.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/nathalie.jeauffroy.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -138,7 +138,7 @@
       "ENGLISH": "Coach et Formatrice Management et Organisation"
     },
     "emailHash": "bfa48032dedbfe51df2148085f56c572",
-    "photoUrl": "https://mixitconf.org/images/speakers/yasmine.kraan.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/yasmine.kraan.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -161,7 +161,7 @@
       "ENGLISH": "Ancienne Project puis Product Manager, Sara a aussi accompagné clients et employeurs dans leur cheminement Agile et leurs pratiques Produit. Elle a fondé La Place des Grenouilles, une association anti-sexiste fin 2021. C'est une passionnée d'arts et de mots, de diversité et d'inclusion, de gastronomie et de CNV."
     },
     "emailHash": "3e3d8ffb3c7e85ef1088982ceed4cf2d",
-    "photoUrl": "https://mixitconf.org/images/speakers/sara.dufour.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/sara.dufour.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -196,7 +196,7 @@
       "ENGLISH": "Je suis un nouveau développeur qui partage déjà tout ce que j'ai pu apprendre."
     },
     "emailHash": "83ea11a4e4c1c8069abd2b7988fa3e1d",
-    "photoUrl": "https://mixitconf.org/images/speakers/jules.hablot.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/jules.hablot.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -266,7 +266,7 @@
       "ENGLISH": "Cédric Champeau travaille pour Oracle Labs, dans l'équipe GraalVM/Micronaut. Il s'occupe notamment des problématiques d'optimisation des builds, par l'implémentation de plugins Gradle et Maven. Ancien de Gradle Inc. où il développait l'outil de build open-source du même nom. Cédric est a aussi travaillé sur Apache Groovy: il a implémenté le compilateur statique de ce langage et contribué sur le sujet des DSLs et transformations à compile time. Son domaine de prédilection tourne donc autour de l'outillage statique et des optimisations à compile time."
     },
     "emailHash": "f929f5d80ef8a23b67ad8ac6f08416cd",
-    "photoUrl": "https://mixitconf.org/images/speakers/cedric.champeau.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/cedric.champeau.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -297,7 +297,7 @@
       "ENGLISH": "Tech lead & Coach at Theodo, Albéric is a CSS lover and web accessibility promoter. Co-organizer of the HumanTalks meetup in Paris, his favorite occupation is sharing knowledge and learning new skills in the process. Albéric is also passionate about a variety of topics such as roleplaying games, heavy metal music and space exploration."
     },
     "emailHash": "98e2ecda51b3cd3b58f9f42b0936d190",
-    "photoUrl": "https://mixitconf.org/images/speakers/alberic.trancart.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/alberic.trancart.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -328,7 +328,7 @@
       "ENGLISH": "Passionné de d’infrastructures Cloud, de performance, de stabilité et de résilience, ou encore de développement Web et PHP, Pascal Martin est Principal Engineer chez Bedrock à Lyon, sur la plateforme qui propulse 6play et Salto. Il est particulièrement intéressé par Le Cloud, AWS et Kubernetes.\nSes expériences précédentes l’ont vu passer d’un poste d’expert technique en SSII à un rôle de Lead Dev chez un éditeur, à un poste de développeur dans une startup et à un rôle de Lead DevOps. Il est intervenu sur des projets Web de toutes tailles, sur des applications intranet d’analyse et de suivi, du e-commerce, ainsi que dans le monde de la culture ou des médias. Il intervient également en tant que consultant et formateur.\nIl aime partager son expérience et écrit parfois sur son blog. Il est aussi auteur ou co-auteur des livres « Développer une Extension PHP », « PHP 7 avancé », « Le Plan Copenhague » et « Préparez et donnez votre première conférence (quand ce n’est pas votre métier) ». Il est AWS Container Hero depuis 2020."
     },
     "emailHash": "37458c7c44851cd6c402e02e5a9be94f",
-    "photoUrl": "https://mixitconf.org/images/speakers/pascal.martin.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/pascal.martin.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -367,7 +367,7 @@
       "ENGLISH": "Passionnée par l’être humain, la psychologie et la sociologie, j’accompagne les personnes et les équipes dans leur cheminement vers plus de responsabilité et de liberté individuelles. La Communication Bienveillante (CNV) est mon outil de prédilection."
     },
     "emailHash": "95d27ddf9f5187135897e0aaeba1f89d",
-    "photoUrl": "https://mixitconf.org/images/speakers/julie.quille.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/julie.quille.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -402,7 +402,7 @@
       "ENGLISH": "Endless conversation — with friends, compilers — on art, equivocacy, Symmathesy, methods, absurdism, dialectic, paradigm jumps, serendipity."
     },
     "emailHash": "65e151216a2c1fad5d82cfffaee9e4af",
-    "photoUrl": "https://mixitconf.org/images/speakers/romeu.moura.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/romeu.moura.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -441,7 +441,7 @@
       "ENGLISH": "Perrine Legal is CEO and co-founder of COLORI. By working in digital for several years until occupying a key position within an international cosmetics group, she became aware of the importance of digital in the evolution of our society and decided to devote herself to the dissemination of this knowledge, especially with children. The arrival of her own children pushes her to explore new educational methods. She then decided to combine these two passions within the COLORI project."
     },
     "emailHash": "abcf7a3931e81badbc632ba921d5ecc5",
-    "photoUrl": "https://mixitconf.org/images/speakers/perrine.legal.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/perrine.legal.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -476,7 +476,7 @@
       "ENGLISH": "Passionnée par le numérique depuis son enfance,\nAmélia Matar évolue dans le domaine du marketing\ndigital pendant dix années. Responsable digital de l’ONG Greenpeace, elle occupe ensuite le poste de directrice Marketing chez Numa Paris. Par la suite, elle développe un intérêt spécifique pour l’éducation et cofonde COLORI en janvier 2018. Parallèlement, elle publie en juillet 2022 son premier roman aux éditions Eyrolles, dont le sujet principal est l’éducation et le développement de l’enfant."
     },
     "emailHash": "f71614b2a730f20dc5674ab74919635f",
-    "photoUrl": "https://mixitconf.org/images/speakers/amelia.matar.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/amelia.matar.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -515,7 +515,7 @@
       "ENGLISH": "Couteau suisse chez Code Lutin, je fais du dev, du commercial, de la gestion..."
     },
     "emailHash": "766148f0fe3d623ec4e1bc0cec8b9bfe",
-    "photoUrl": "https://mixitconf.org/images/speakers/jean.couteau.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/jean.couteau.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -538,7 +538,7 @@
       "ENGLISH": "Développeuse avec un fort penchant pour le backend et l'infra. Globe-trotteuse compulsive, avec une passion secrète pour la cybersécurité et une (encore plus secrète) pour les dépôts Git bien rangés."
     },
     "emailHash": "6ac4f1b22b2be43371ea1a892aedc1bf",
-    "photoUrl": "https://mixitconf.org/images/speakers/sonia.seddiki.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/sonia.seddiki.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -600,7 +600,7 @@
       "ENGLISH": ""
     },
     "emailHash": null,
-    "photoUrl": "/images/speakers/aude.jpg",
+    "photoUrl": "/images/speakers/2023/aude.jpg",
     "photoShape": null,
     "role": "STAFF",
     "links": [
@@ -623,7 +623,7 @@
       "ENGLISH": "Mathilde a percé le secret de la fusion nucléaire et ne s’éteint jamais. On raconte même qu’EDF l’a contactée pour lui proposer un raccordement au réseau pour passer l’hiver.\nPassionnée de DevOps et de Backend, elle aime quand les choses sont directes et efficaces. Comme elle. D’ailleurs, elle utilise volontiers son surplus d’énergie pour transmettre ses secrets. Il paraît même qu’elle va revenir faire une conf…"
     },
     "emailHash": "5de28af5c62d5b395c65cf71a89d1db5",
-    "photoUrl": "https://mixitconf.org/images/speakers/mathilde.lorrain.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/mathilde.lorrain.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -646,7 +646,7 @@
       "ENGLISH": "Initialement porté sur le monde de la data et après un tour du monde pour ouvrir ses chakras, Benjamin a rejoint le monde du dev back. Pendant longtemps impliqué dans les équipes de Mirakl, il intervient aujourd’hui dans la direction technique et dans l’équipe de veille de Takima. Formateur, speaker, lead dev, ou simple moussaillon sur une traversée de l’atlantique à la voile, il adore désormais mettre ses talents au service de la tech, des autres et de ses passions. Ses sujets du moment ? Faire progresser les juniors en conception et en sécurité."
     },
     "emailHash": "5dd808a7e5f28a86d8b8d779f37442aa",
-    "photoUrl": "https://mixitconf.org/images/speakers/benjamin.yvernault.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/benjamin.yvernault.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -677,7 +677,7 @@
       "ENGLISH": "Biologiste-Écologue de formation, j'ai commencé en tant que naturaliste scientifique dans des réserves naturelles et des espaces protégés. J'ai commencé la programmation grâce aux analyses statistiques et au traitement géographique des données. J'ai vu la lumière grâce à l'agilité et je me suis reconvertie dans l'IT pour accompagner les transformations agiles.\nJe reste toujours très sensible aux questions environnementales et sociétales, c'est d'ailleurs ce qui fait ma patte (de Marmotte) !"
     },
     "emailHash": "28febc2a10ef0bbe4c5c093fd363b8e2",
-    "photoUrl": "https://mixitconf.org/images/speakers/charline.rageade.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/charline.rageade.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -708,7 +708,7 @@
       "ENGLISH": "Agiliplanchiste chevronné. Je planche sur l’agilité depuis 2006 : consultant SAFe (SPC), Scrum Master (CSM, PSM) et Product Owner (PSPO) certifié, j’accompagne de grandes sociétés dans leur transformation numérique à travers la mise en place de méthodes agiles.\nAgile sur les planches depuis (déjà…) 35 ans, j’ai joué de nombreuses pièces sur des scènes nationales comme en appartement. Je suis également auteur de plusieurs textes que j’ai montés avec des troupes grenobloises.\nJe suis aujourd’hui président du Club Agile Rhône-Alpes et directeur technique au sein de la société Bee Buzziness. "
     },
     "emailHash": "c13c122cf0974e82ed4d794b730dc749",
-    "photoUrl": "https://mixitconf.org/images/speakers/franck.rageade.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/franck.rageade.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -739,7 +739,7 @@
       "ENGLISH": "Accompagnatrice agile, co-créatrice de TADx, j'ai parcouru des kilomètres de lignes de développements, d'analyses fonctionnelles et d'architectures orientées données avant de revenir à mes premières amours : le travail d'équipe, dans un cadre motivant et bienveillant, autour de produits utiles et vivants.\nC'est donc tout naturellement vers l'agilité que mes dernières missions se sont tournées. Depuis, je glane le meilleur pour alimenter les équipes que j'accompagne au quotidien : mindset DevOps et crafmanship, outils au service de la qualité et du déploiement, techniques de design thinking pour capter les vrais besoins et l'amélioration continue des produits et des équipes."
     },
     "emailHash": "b00af4d7a4e575a020c4379c130d274b",
-    "photoUrl": "https://mixitconf.org/images/speakers/fanny.klauk.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/fanny.klauk.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -778,7 +778,7 @@
       "ENGLISH": "Il faut un début à tout."
     },
     "emailHash": "190d457fd9d31e1938f056cd2deab98a",
-    "photoUrl": "https://mixitconf.org/images/speakers/anthony.cassaigne.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/anthony.cassaigne.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -817,7 +817,7 @@
       "ENGLISH": "Lead & Agitateur Tech à @SII_Atlantique . Mon parcours est fortement teinté Java / Spring, après quelques années sur des projets IoT, je travaille désormais sur des projets d'animation technique, et d'animation des communautés au sein de SII."
     },
     "emailHash": "45ab41474e1855c68b8d736cfc40135f",
-    "photoUrl": "https://mixitconf.org/images/speakers/paul.roye.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/paul.roye.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -848,7 +848,7 @@
       "ENGLISH": "Je suis développeur web depuis plus de quinze ans, dont 10 ans chez Mapado, une société qui développe un logiciel de billetterie pour les salles de spectacles.\nJ'aime essayer de comprendre le \"pourquoi\" des problèmes que je rencontre."
     },
     "emailHash": "894592592c92e09dc259e04698c1458e",
-    "photoUrl": "https://mixitconf.org/images/speakers/julien.deniau.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/julien.deniau.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -887,7 +887,7 @@
       "ENGLISH": "Formateur et coach agile, facilitateur d'intelligence collective, je suis passionné par l'agilité et les sciences humaines. J'accompagne les organisations à devenir davantage résiliente et frugale dans la conception de produits numériques. "
     },
     "emailHash": "e611d8c1f1b6a87c0d820b663687137d",
-    "photoUrl": "https://mixitconf.org/images/speakers/remi.sarraillon.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/remi.sarraillon.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -914,7 +914,7 @@
       "ENGLISH": "Développeur "
     },
     "emailHash": "ce782134e6941f0779bb9e63edacabb3",
-    "photoUrl": "https://mixitconf.org/images/speakers/christophe.maldivi.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/christophe.maldivi.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -945,7 +945,7 @@
       "ENGLISH": "A full stack developer for the last 10+ years. I started from the very low level of RT/Embedded and went all the way \"up\" to react/js. Enthusiastic about culture, tech, product and ping pong. I believe everything in the world can be expressed with emojis, and usually check that every textbox I encounter supports them \uD83D\uDC7B"
     },
     "emailHash": "004c47993e987a4bb5ed7c561b076e16",
-    "photoUrl": "https://mixitconf.org/images/speakers/alon.kiriati.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/alon.kiriati.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -968,7 +968,7 @@
       "ENGLISH": ""
     },
     "emailHash": null,
-    "photoUrl": "/images/speakers/aude.jpg",
+    "photoUrl": "/images/speakers/2023/aude.jpg",
     "photoShape": null,
     "role": "STAFF",
     "links": [
@@ -991,7 +991,7 @@
       "ENGLISH": ""
     },
     "emailHash": null,
-    "photoUrl": "/images/speakers/aude.jpg",
+    "photoUrl": "/images/speakers/2023/aude.jpg",
     "photoShape": null,
     "role": "STAFF",
     "links": [
@@ -1014,7 +1014,7 @@
       "ENGLISH": "Steven Goodwin (London, England) has been involved in computing, science, and technology from an early age, building his first synthesizer while still in his teens.\nAs a systems architect he's designed and built global systems for Unilever, Playfish, and Third Space Learning using a wide range of languages and technologies. He's also highly experienced on the small scale, with work on the iPhone, Arduino, and Raspberry Pi, as well as running teams of between 1 and 30 people.\nHis position as an industry thought leader in technology implementations includes being a mentor at ed-invent, a start-up consultant, and a futurist. He has given talks around the world on topics as diverse as home automation, HTML5, game development, and quantum superpositions."
     },
     "emailHash": "728a69ae53a11fe93dc80600eec3a561",
-    "photoUrl": "https://mixitconf.org/images/speakers/steven.goodwin.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/steven.goodwin.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1041,7 +1041,7 @@
       "ENGLISH": "To be written"
     },
     "emailHash": "77bf6158275cd32b0a7bd3bb1966aeb7",
-    "photoUrl": "https://mixitconf.org/images/speakers/sofia.lescano.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/sofia.lescano.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1072,7 +1072,7 @@
       "ENGLISH": ""
     },
     "emailHash": null,
-    "photoUrl": "/images/speakers/aude.jpg",
+    "photoUrl": "/images/speakers/2023/aude.jpg",
     "photoShape": null,
     "role": "STAFF",
     "links": [
@@ -1095,7 +1095,7 @@
       "ENGLISH": "Feli is an iOS Engineer at Spotify, based in Nuremberg, Germany. She discovered her passion for iOS development during her studies and has been working on iOS projects since 2016. She is a strong advocate for accessibility and usability. At Spotify, she works 100% remotely on the design system of the app. From time to time, Feli gives sketchnoting workshops where you learn how to create better notes from talks. In her free time, you’ll find her climbing on rocks or doing other kinds of sports outside."
     },
     "emailHash": "95038e1bd6b83f56f49074d484ed1aa1",
-    "photoUrl": "https://mixitconf.org/images/speakers/feli.bernutz.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/feli.bernutz.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1126,7 +1126,7 @@
       "ENGLISH": "Avant j’ai été bio-informaticienne au Canada, entrepreneur dans le e-commerce, product owner chez vente-privée (veepee.com), scrum master dans une startup à San Francisco puis coach personnel à Paris.\nAujourd’hui, je suis product manager dans une startup qui développe 8 capteurs connectés à une même appli mobile dédiée à la rééducation de sportifs de haut niveau et patients divers chez leurs kinés. "
     },
     "emailHash": "70f7ce2a0ebacf9ba43389d4553bbbb3",
-    "photoUrl": "https://mixitconf.org/images/speakers/aurelie.le_guillou.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/aurelie.le_guillou.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1165,7 +1165,7 @@
       "ENGLISH": "Julia travaille à l'innovation dans le numérique depuis 2014. Avant ça, elle faisait des programmes d'innovation sociale et éco-conception. Greg, son binome d'atelier est un développeur chevronné et engagé pour la transition responsable du numérique.  "
     },
     "emailHash": "f8a9a8aaa6f7ad78c0f1b84a8bff35d7",
-    "photoUrl": "https://mixitconf.org/images/speakers/julia.delrieu.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/julia.delrieu.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1204,7 +1204,7 @@
       "ENGLISH": "Greg est un passionné de l’ingénierie logicielle, il aime être au contact des parties prenantes d'un projet afin de les accompagner dans la conception et la mise en œuvre des outils qui permettrons d'avancer et de progresser sur le chemin de la réussite du projet. Ses expériences se situent à la croisée des métiers du projet. Assister le Product Owner, accompagner l'équipe de test, collaborer avec l'architecte, outiller les développeurs, impliquer l’équipe infra. Greg est également un animateur et un facilitateur chevronné d’ateliers sur les enjeux climatiques (Fresque du Climant, 2tonnes, ...)​"
     },
     "emailHash": "30e144c3ce244fd061b9d2e2fa93b882",
-    "photoUrl": "https://mixitconf.org/images/speakers/gregory.ott.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/gregory.ott.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1239,7 +1239,7 @@
       "ENGLISH": "Passionnée par les relations entre tous les êtres vivants, je me questionne sans cesse sur la vie, qui je suis et qui je souhaite être. Consciente que la meilleure façon d'y répondre, c'est d'évoluer en collectif, j'ai rejoins Hunalivie cet été, un tout nouvel habitat partagé situé en Vendée.\nProfessionnellement, je m'épanouie de la même manière en collectif, grâce à la gouvernance partagée de Toovalu. Curieuse et prête à saisir les opportunités, je chemine au sein de cette entreprise depuis 4 ans. Développeuse, puis Product Owner et maintenant Product Strategist, ce qui m'anime c'est de concevoir un produit qui a de l'impact, pour des utilisateurices ambitieuses et ambitieux, et engagé.es.\nDe grands défis qui ont du sens pour moi, pour se préparer à cet avenir incertain."
     },
     "emailHash": "31f019cd83007eb3bc487ac86929c60b",
-    "photoUrl": "https://mixitconf.org/images/speakers/meghann.riandiere.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/meghann.riandiere.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1266,7 +1266,7 @@
       "ENGLISH": "Lætitia Avrot est Field CTO pour EDB.\nElle a commencé son aventure Postgres en 2007. Elle a rapidement dû apprendre aussi le métier de DBA Oracle et SQL Server. Elle s'est beaucoup amusée sur des projets\nà fortes contraintes de haute disponibilité, des pannes en production, la mise en place de plan de reprise d'activité, la répartition de charge, les données\ngéographiques...\nElle est impliquée dans la communauté en tant que trésorière de PostgreSQL Europe, co-fondatrice de Postgres Women et contributrice reconnue du projet PostgreSQL."
     },
     "emailHash": "9263a7003ef41441e542c5251a68af8a",
-    "photoUrl": "https://mixitconf.org/images/speakers/laetitia.avrot.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/laetitia.avrot.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1301,7 +1301,7 @@
       "ENGLISH": "Formateur, développeur passionné et surtout Dev qui automatise l' Ops @ Zenika Lyon.\nMes sujets de cœur sont Dev côté backend, kubernetes, cloud, automatisation, ...\nJ'aime le partage et l'échange en tant que speaker et aussi en tant qu'organisateur de meetup (co-fondateur et co-organisateur du GDG Cloud IoT Lyon)"
     },
     "emailHash": "6559013ba2afafd2170bef5894e27c8e",
-    "photoUrl": "https://mixitconf.org/images/speakers/louis.tournayre.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/louis.tournayre.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1336,7 +1336,7 @@
       "ENGLISH": "Lover of both Java and Javascript, I love talking and sharing about them.\nI spoke about Vue and Jigsaw at Devoxx, Devfest Nantes, Snowcamp and some JUG."
     },
     "emailHash": "3a27cad3441ef3e82a8464770c85f271",
-    "photoUrl": "https://mixitconf.org/images/speakers/mathieu.mure.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/mathieu.mure.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1371,7 +1371,7 @@
       "ENGLISH": "Tombé dans la potion du développement très jeune, je suis passionné par tout ce qui touche à l'informatique, des langages divers et variés (Go, Rust, Java, C, ...) aux sujets n'ayant pas forcément de liens (programmation embarquée, sécurité, impression 3D, musique, ...).\nJe suis actuellement développeur backend & DevOps chez @Zenika Paris."
     },
     "emailHash": "d094de066d155b142e77dae0e0a69a54",
-    "photoUrl": "https://mixitconf.org/images/speakers/pierre.morvan.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/pierre.morvan.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1402,7 +1402,7 @@
       "ENGLISH": "I smash my keyboard, sometimes cool stuff comes out of it"
     },
     "emailHash": "4fc6c76abc1de30bbc175f718272e90b",
-    "photoUrl": "https://mixitconf.org/images/speakers/moustapha.agack.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/moustapha.agack.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1433,7 +1433,7 @@
       "ENGLISH": "Je m'appelle Juliette, j'ai 31 ans, j'ai fait une reconversion en tant que développeuse à l'automne 2018 avec le bootcamp en Ruby On Rails \"The Hacking Project\". Je suis originellement diplômée de Sciences Po Grenoble (master Affaires Publiques) et j'ai été chargée de projets dans l'éducation musicale. Actuellement je suis Software Engineer chez Aircall, après avoir travaillé en start-up et dans une agence web. À côté de mon travail, je suis impliquée dans plusieurs communautés de code: les Women On Rails, pour lesquelles j'édite une newsletter (https://womenonrails.substack.com/) et Paris.rb. En-dehors du code j'aime tricoter, broder, coudre, courir et faire du yoga."
     },
     "emailHash": "9025632fdf32589ed405fc90cabbddd2",
-    "photoUrl": "https://mixitconf.org/images/speakers/juliette.audema.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/juliette.audema.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1472,7 +1472,7 @@
       "ENGLISH": "I've been working as a .NET developer for over 16 years now in a variety of industries including government, retail and manufacturing. But I've been hacking around with computer code since I was old enough to read my Dad's copy of the ZX Spectrum BASIC coders manual.\nI've been speaking about Functional C# at various user groups and conferences around the UK, USA,  Europe and Australia and am particularly interested in seeing just how far we can push C# without breaking it.\nI'm currently working on a book for O'Reilly publications about functional programming with C#.  Expected to appear in bookshops some time in 2023.\nWhen I'm not coding, or running after my two small children, I have been known to enjoy the classic series of Doctor Who, Fighting Fantasy Gamebooks, Cryptic Crosswords, and rather more coffee than is probably good for me."
     },
     "emailHash": "f6330ca3e5770e9f4f254e53bd605b86",
-    "photoUrl": "https://mixitconf.org/images/speakers/simon.painter.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/simon.painter.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1503,7 +1503,7 @@
       "ENGLISH": "Développeuse passé par la case 42, rêve de rendre le monde plus accessible avec équité. Atypique, curieuse, passionnée, et défenseuse de la diversité et neurodiversité."
     },
     "emailHash": "b80cd5b4a57f1339d3f6e8ab3732e48e",
-    "photoUrl": "https://mixitconf.org/images/speakers/deborah_(alias_angi).guyard.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/deborah_(alias_angi).guyard.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1534,7 +1534,7 @@
       "ENGLISH": "I like to craft software with high business value using techniques from Domain-Driven Design, all powered by Xtreme Programming in the Kanban #NoEstimates philosophy. Member of the OWASP foundation, I evangelise on application security techniques in order to avoid being hacked properly."
     },
     "emailHash": "610f3914d9b392b389657823719f09dd",
-    "photoUrl": "https://mixitconf.org/images/speakers/julien.topçu.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/julien.topçu.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1573,7 +1573,7 @@
       "ENGLISH": "I'm a curious and passionnate Web developer. I'm specialized in HTML, CSS and JavaScript but I also use server side technologies like node.js, PHP, Java, Neo4j, Docker...\nMy motivation : \"To push the technology far enough to find new ways to improve user's experiences.\""
     },
     "emailHash": "f7b7503324cbfd2a59aeb3540fa17bb1",
-    "photoUrl": "https://mixitconf.org/images/speakers/hubert.sablonniere.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/hubert.sablonniere.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1608,7 +1608,7 @@
       "ENGLISH": "Consultante freelance en stratégie Marketing Éthique sur le web, pour les structures à impact de l’Économie Sociale & Solidaire.\nCréatrice de formations en ligne pour apprendre à toutes et à tous à (BIEN) faire sa communication sur le web.\nCréatrice de contenus vidéos sur le marketing éthique et le numérique responsable.\nSlow digital nomad."
     },
     "emailHash": "b996bac49f3a567e8eee5708e52afb85",
-    "photoUrl": "https://mixitconf.org/images/speakers/alex.carmona.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/alex.carmona.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1643,7 +1643,7 @@
       "ENGLISH": "De la gestion de projet au développement web en passant par la création d'événements littéraires, Sonia Prévost a fait pas mal de métiers différents avec toujours une soif d'apprendre et de comprendre. Après 6 ans en tant que développeuse ou responsable d'équipe, elle envisage (parfois) de quitter le monde de la tech."
     },
     "emailHash": "817604f4af56c6dec8ef7eb7fc8a80d0",
-    "photoUrl": "https://mixitconf.org/images/speakers/sonia.prevost.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/sonia.prevost.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1674,7 +1674,7 @@
       "ENGLISH": "Je conçois, accompagne et développe des services numériques en allant à la\nrencontre des usagers.\nJ'utilise une combinaison de technologies web, de pratiques agiles et de pédagogie active\npour mettre à l'aise les personnes avec qui je travaille.\nJe crois beaucoup à l'apprentissage multidisciplinaire, au travail convivial et à l'autonomie.\nJ'apporter mes connaissances et mon énergie de manière bénévole à des\nassociations locales, en œuvrant à la restauration de la biodiversité et du vivant.\nAvant je travaillais dans [le département R&D de la BBC](https://bbc.co.uk/rd)\net je co-organisais la conférence [Sud Web](https://sudweb.fr).\nJ'ai aussi co-fondé une startup et [on s'est bien raté](https://www.youtube.com/watch?v=NVpH1w_aSUk)."
     },
     "emailHash": "5170857b08fd6adbc08669359bef875d",
-    "photoUrl": "https://mixitconf.org/images/speakers/thomas.parisot.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/thomas.parisot.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1705,7 +1705,7 @@
       "ENGLISH": ""
     },
     "emailHash": null,
-    "photoUrl": "/images/speakers/aude.jpg",
+    "photoUrl": "/images/speakers/2023/aude.jpg",
     "photoShape": null,
     "role": "STAFF",
     "links": [
@@ -1728,7 +1728,7 @@
       "ENGLISH": "Je suis un développeur lyonnais de 24 ans, passionné d'informatique et de nouvelles technologies ! \uD83D\uDC68\uD83C\uDFFB‍\uD83D\uDCBB\nJe suis consultant web chez @ZenikaLyon \uD83D\uDD34 et aussi développeur dans l'équipe web chez @BedrockStreaming ⚫️\nJe suis co-organisateur du @LyonJS \uD83E\uDD81, membre fondateur et président de l'association @LaCruz \uD83D\uDFE1 et je donne aussi des cours à Epitech Digital à Lyon ! \uD83C\uDF93"
     },
     "emailHash": "e4ec730ad8e4eede1e2de0cad2c35cb9",
-    "photoUrl": "https://mixitconf.org/images/speakers/mickael.alves.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/mickael.alves.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1767,7 +1767,7 @@
       "ENGLISH": "Web Maker @Bedrock_Tech, internet trublion and despote teacher @PolytechLyon co-organiser of @LyonJs meetup"
     },
     "emailHash": "7ed66677407ffb62d6d475cdf24fe68e",
-    "photoUrl": "https://mixitconf.org/images/speakers/antoine.caron.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/antoine.caron.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1806,7 +1806,7 @@
       "ENGLISH": "Damien Legendre est designer et responsable du pôle UX & UI de l'Agence LunaWeb. Son quotidien en agence l'amène à aborder des thématiques projets toujours différentes ou presque. Chaque début de mission ouvre les portes d’un nouvel univers à découvrir. Pourtant, l'objectif reste bien souvent inchangé : résoudre des problématiques d’usage.\nDamien est également cofondateur du collectif UX Rennes, co-anime le podcast Salut Les Designers.\nPortfolio : www.uncoindpixel.com\n"
     },
     "emailHash": "62f680dd37a2214ab4033b448ac9c843",
-    "photoUrl": "https://mixitconf.org/images/speakers/damien.legendre.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/damien.legendre.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1845,7 +1845,7 @@
       "ENGLISH": "Designer UX & UI chez LunaWeb, Alizée aime analyser et comprendre les comportements des utilisateurs pour concevoir des parcours et interfaces les plus adaptées possible. Tirer les différents fils qui entourent une problématique, voilà le challenge qui l’anime. Elle aime cogiter et brainstormer à plusieurs pour repartir avec toutes sortes de solutions à expérimenter permettant de répondre à un objectif donné."
     },
     "emailHash": "196ae2639af81e192c14b37c0e6b904d",
-    "photoUrl": "https://mixitconf.org/images/speakers/alizee.rault.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/alizee.rault.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1880,7 +1880,7 @@
       "ENGLISH": "Developer for 15 years, I am part of some local software related communities in Nantes (Coding Goûters, Devoxx4Kids, Software Crafters, Women In Tech, ...)"
     },
     "emailHash": "f1a82dc24d9d0fbb50dd655b00e3d741",
-    "photoUrl": "https://mixitconf.org/images/speakers/cecilia.bossard.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/cecilia.bossard.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1911,7 +1911,7 @@
       "ENGLISH": "Pour donner du sens à mon métier je me suis donnée pour mission d’oeuvrer pour un développement numérique plus vertueux ! Selon moi, adopter le point de vue des autres est indispensable pour comprendre le monde qui nous entoure et participer, selon ses moyens, à l’améliorer."
     },
     "emailHash": "1b1e4aa1544ec56abcd7a20bbdfac22d",
-    "photoUrl": "https://mixitconf.org/images/speakers/aurelie.lopes.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/aurelie.lopes.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1934,7 +1934,7 @@
       "ENGLISH": "Ancienne astrophysicienne aujourd'hui coach agile et coach professionnelle, j'interviens auprès des entreprises dans le domaine de l'agilité et de leurs transformations. En tant que coach, j'accompagne également des particuliers dans l'atteinte de leurs objectifs, notamment via le travail des croyances en m'appuyant sur la systemie et les neurosciences. "
     },
     "emailHash": "3406b8bc6745650c03701e284b04c60b",
-    "photoUrl": "https://mixitconf.org/images/speakers/albane.veyron.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/albane.veyron.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1961,7 +1961,7 @@
       "ENGLISH": "Ruby Jane Cabagnot is a full-stack DotNET/Java/Reactjs developer based in Oslo, Norway, and works for Avanade Norway.\nShe believes that to be interesting, one must BE interested. You can find her on Twitter @rubyjane88\nPublished Book:\n* Practical Enterprise React: Become an Effective React Developer in Your Team\nSpeaking Conferences:\n* NDC London 2022\n* NDC Oslo 2021\n* NDC Oslo 2020\n* NDC Sydney 2020\n* Update Conference\nGitHub:\nhttps://github.com/rubyjane88\nBlog:\nhttps://rubyjanecabagnot.pro"
     },
     "emailHash": "82802ed9c9961380ca948bcfea9cf647",
-    "photoUrl": "https://mixitconf.org/images/speakers/ruby_jane.cabagnot.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/ruby_jane.cabagnot.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -1988,7 +1988,7 @@
       "ENGLISH": "Sourde de naissance, bionique (deux implants cochléaires) et surtout développeuse Fullstack Angular .NET chez DCube, je lutte chaque jour pour l’accessibilité. Dans mon monde idéal, tout doit être accessible aussi bien dans la vraie vie que dans le Web. Je suis également fière d’être certifiée d’Access42 sur l’accessibilité numérique et certifiée Opquast pour la qualité du web."
     },
     "emailHash": "ae18327c986f75ac8ae00dc5dfee16a3",
-    "photoUrl": "https://mixitconf.org/images/speakers/emmanuelle.aboaf.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/emmanuelle.aboaf.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -2023,7 +2023,7 @@
       "ENGLISH": "Je travaille en freelance comme lead UX designer, psychologue depuis le dernier millénaire. Mon parcours m’a permis de travailler sur des sujets variés allant du WAP à la télévision, en passant par, le web, le e-commerce et les applications professionnelles ou le design de service. Ma vision de l’expérience utilisateur repose sur deux démarches complémentaires, l’une pragmatique autour de la conception de services et l’autre stratégique autour de l’évolution des organisations et l’intégration du design au sein des équipes.\nDepuis 2020, je travaille pour beta.gouv.fr toujours en freelance afin d’essayer d’améliorer les services publics avec l’intention de changer le monde, de le rendre meilleur et de limiter la crise climatique qui arrive, mais avant ça il faut que je pense à faire du pain et bien d’autres choses plus ou moins futile comme un potager, du miel et du cidre."
     },
     "emailHash": "ae0f1120fbb2232abec0a86d7d158779",
-    "photoUrl": "https://mixitconf.org/images/speakers/raphaël.yharrassarry.jpg",
+    "photoUrl": "https://mixitconf.org/images/speakers/2023/raphaël.yharrassarry.jpg",
     "photoShape": null,
     "role": "USER",
     "links": [
@@ -2062,7 +2062,7 @@
       "ENGLISH": ""
     },
     "emailHash": null,
-    "photoUrl": "/images/speakers/aude.jpg",
+    "photoUrl": "/images/speakers/2023/aude.jpg",
     "photoShape": null,
     "role": "STAFF",
     "links": [
