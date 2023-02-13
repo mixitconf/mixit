@@ -1834,7 +1834,33 @@
         ],
         "photoUrls": [],
         "schedulingFileUrl": null,
-        "sponsors": [],
+        "sponsors": [
+            {
+                "level": "LANYARD",
+                "sponsorId": "energypool",
+                "subscriptionDate": "2023-01-20"
+            },
+            {
+                "level": "LANYARD",
+                "sponsorId": "VISEO",
+                "subscriptionDate": "2023-01-21"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "talan",
+                "subscriptionDate": "2023-01-27"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "redfroggy",
+                "subscriptionDate": "2023-01-28"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "hackyourjob",
+                "subscriptionDate": "2023-02-01"
+            }
+        ],
         "start": "2023-04-13",
         "videoUrl": null,
         "volunteers": [
