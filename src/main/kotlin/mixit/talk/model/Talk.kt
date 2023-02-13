@@ -29,7 +29,7 @@ data class Talk(
 
 enum class TalkFormat(val duration: Int) {
     TALK(50),
-    LIGHTNING_TALK(5),
+    LIGHTNING_TALK(20),
     WORKSHOP(110),
     RANDOM(25),
     KEYNOTE(25),

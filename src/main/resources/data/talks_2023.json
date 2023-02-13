@@ -1,1 +1,1074 @@
-[]
+[
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Turbopack - Rust-based successor to Webpack",
+    "summary": "Take a deep dive into how Turbopack (the new Rust-based successor to Webpack) came to be and the new incremental architecture it's built on. How fast is it compared to other build tools? Why does Turbopack change builds forever? Let's find out.\nIn this presentation, I will show you the difference between Turbopack vs. Vite. What is inside the Turbo engine and the Future of Turbopack?\nThis talk will present the latest build tool for the frontend. It is faster than Vite and will replace Webpack in the future.",
+    "speakerIds": [
+      "webmasterdevlin"
+    ],
+    "language": "ENGLISH",
+    "addedAt": "2023-02-13T20:50:31.207212",
+    "description": null,
+    "topic": "tech",
+    "video": null,
+    "room": "ROOM1",
+    "start": "2023-04-13T10:40:00",
+    "end": "2023-04-13T11:30:00",
+    "photoUrls": [],
+    "slug": "turbopack-rust-based-successor-to-webpack",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Quelle est la place des introverti·e·s dans une équipe agile ?",
+    "summary": "Dans un environnement agile qui favorise le travail de groupe, l'idéation collective et les évènements fréquents, qu'est-ce que les introverti·e·s apportent ? Qu'est-ce que l'agilité peut leur apporter ? Peuvent-ils/elles y trouver leur compte ?\nEn réfléchissant à ces questions, nous allons explorer plus en détail ce qu'est un·e introverti·e par rapport à un·e extraverti·e, ainsi que par rapport à la vision que nous en avons généralement, pour finalement y réfléchir dans le cadre d'une équipe agile.",
+    "speakerIds": [
+      "anais.huet"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.210835",
+    "description": null,
+    "topic": "team",
+    "video": null,
+    "room": "ROOM2",
+    "start": "2023-04-13T10:40:00",
+    "end": "2023-04-13T11:30:00",
+    "photoUrls": [],
+    "slug": "quelle-est-la-place-des-introverti-e-s-dans-une-equipe-agile-",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Conversations avec ChatGPT: illusion ou réalité?",
+    "summary": "L'arrivée de ChatGPT a fait l'effet d'une bombe dans le monde de l'Intelligence Artificielle. Ce robot conversationnel nouvelle génération pourrait, à terme, être une alternative au moteur de recherche de Google, créer des logiciels complets,  écrire des papiers académiques... mais pas que. Avec 1 million de testeurs dès la première semaine, l'imagination débridée des internautes a clairement repoussé les limites de ce que l'on croyait possible.\nNous examinerons les principes fondamentaux de ChatGPT et les cas d'utilisation les plus bluffants imaginés par les utilisateurs.\nA la fin de cette présentation, vous aurez vu pourquoi ChatGPT a suscité un tel engouement, et quelles pourraient être les conséquences pour nos métiers.",
+    "speakerIds": [
+      "mariealice.blete"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.211136",
+    "description": null,
+    "topic": "other",
+    "video": null,
+    "room": "AMPHI1",
+    "start": "2023-04-13T10:40:00",
+    "end": "2023-04-13T11:30:00",
+    "photoUrls": [],
+    "slug": "conversations-avec-chatgpt-illusion-ou-realite-",
+    "id": null
+  },
+  {
+    "format": "WORKSHOP",
+    "event": "2023",
+    "title": "Y at-il un décideur dans l'avion ?",
+    "summary": "La prise de décision est un élément clé dans notre quotidien. A tel point que de nombreux outils sont nés pour savoir comment faire : délégation poker pour savoir à quel niveau déléguer la décision, processus de décision proposés par la sociocratie, l’holacratie, ... : gestion par consentement, sollicitation d’avis, élection sans candidat, etc.\nTout ça, c’est parfait, sauf que souvent, ce n’est pas comment la décision est prise qui pose problème mais QUI décide.\nPar exemple : Le manager qui fait semblant de faire du participatif mais prendra finalement la décision seul. Le collègue qui n’a pas compris qu’on attendait des éléments clairs de sa part et nous fait perdre du temps à vouloir qu’on décide tout, ensemble. Le responsable de projet qui prend des décisions qu’il n’a pas à prendre seul, etc.\nDans le cadre de notre équipe, nous avons construit ce DECISION Poker. Venez découvrir, tester et vous allez repartir convaincu que vous ne pourrez plus jamais faire sans !!",
+    "speakerIds": [
+      "njeauffroy",
+      "yasmine.kraan"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.211367",
+    "description": null,
+    "topic": "team",
+    "video": null,
+    "room": "ROOM3",
+    "start": "2023-04-13T10:40:00",
+    "end": "2023-04-13T12:30:00",
+    "photoUrls": [],
+    "slug": "y-at-il-un-decideur-dans-l-avion-",
+    "id": null
+  },
+  {
+    "format": "WORKSHOP",
+    "event": "2023",
+    "title": "Fresque anti-sexiste",
+    "summary": "Quels liens entre l'orientation professionnelle et la gestion des émotions, entre le rose et le capitalisme, entre l'humour et le viol ?\nVenez découvrir l'aspect systémique des violences et discriminations de genre tout en manipulant des cartes dans ce jeu pédagogique calqué sur la Fresque du Climat.",
+    "speakerIds": [
+      "Sara.Dufour"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.211629",
+    "description": null,
+    "topic": "other",
+    "video": null,
+    "room": "ROOM4",
+    "start": "2023-04-13T10:40:00",
+    "end": "2023-04-13T12:30:00",
+    "photoUrls": [],
+    "slug": "fresque-anti-sexiste",
+    "id": null
+  },
+  {
+    "format": "WORKSHOP",
+    "event": "2023",
+    "title": "Coding-dojo pour apprendre et partager",
+    "summary": "Nous, développeurs, sommes dans un métier où il faut constamment apprendre, s’améliorer, progresser. Pour cela, parmi les moyens possibles, il y a les “coding-dojo”. Vous ne connaissez pas, ou vous vous demandez comment les organiser, les animer, quels sujets retenir, quels formats adopter, etc… Venez voir et même participer à un coding-dojo, pour de vrai. Et nous vous partagerons notre vision, nos critères d’organisation, nos retours d’expérience, et nos conseils et mises en garde.",
+    "speakerIds": [
+      "jules.hablot",
+      "117142607049442069106"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.211807",
+    "description": null,
+    "topic": "tech",
+    "video": null,
+    "room": "ROOM5",
+    "start": "2023-04-13T10:40:00",
+    "end": "2023-04-13T12:30:00",
+    "photoUrls": [],
+    "slug": "coding-dojo-pour-apprendre-et-partager",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Ecrire un microservice Java natif avec Micronaut et GraalVM",
+    "summary": "Dans cette session, nous découvrirons le framework Java Micronaut, qui permet de développer des applications en ligne de commande ou des microservices efficaces et performants, avec un focus particulier sur l'expérience développeur.\nNous montrerons ce qui fait de Micronaut un framework moderne, mais aussi comment il s'intègre parfaitement avec GraalVM, pour compiler vos applications en binaires natifs, pouvant être déployés sur des environnements tels que Kubernetes.\nCes binaires natifs ont l'avantage de réduire considérablement les ressources nécessaires (temps de démarrage, occupation mémoire), les rendant particulièrement attractifs pour les différentes plateformes Cloud.",
+    "speakerIds": [
+      "cedric.champeau"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.211995",
+    "description": null,
+    "topic": "tech",
+    "video": null,
+    "room": "AMPHI2",
+    "start": "2023-04-13T10:40:00",
+    "end": "2023-04-13T11:30:00",
+    "photoUrls": [],
+    "slug": "ecrire-un-microservice-java-natif-avec-micronaut-et-graalvm",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Pourquoi le CSS Ça Saoule Souvent",
+    "summary": "Tu t’es déjà senti frustré·e par le CSS ? Que ce soit pour centrer les choses verticalement ou utiliser des hacks magiques pour obtenir ce qu’on veut… soit on a le “gène CSS”, soit on ne l’a pas. Les devs qui aiment le CSS semblent plus être l’exception que la règle.\nMais n’aie pas peur ! Ce n’est pas une fatalité.\nAprès avoir formé des douzaines de développeurs à CSS sur les 5 dernières années, j’ai fini par comprendre ce qui n’allait fondamentalement pas avec le CSS. Et je suis prêt à te le partager. Au programme :\n- une analyse d’où vient vraiment cette frustration\n- des astuces actionnables pour level up rapidement son niveau en CSS\n- comment apprendre les bons modèles mentaux pour intégrer des designs complexes\nQui sait ? Tu finiras peut-être même par aimer ça !",
+    "speakerIds": [
+      "alberict"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.212226",
+    "description": null,
+    "topic": "tech",
+    "video": null,
+    "room": "ROOM1",
+    "start": "2023-04-13T11:40:00",
+    "end": "2023-04-13T12:30:00",
+    "photoUrls": [],
+    "slug": "pourquoi-le-css-ca-saoule-souvent",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Bienvenue dans le monde merveilleux des systèmes distribués !",
+    "summary": "Pour la plupart d’entre nous, installer une application PHP + MySQL sur une seule machine n’est plus qu’un souvenir d’un lointain passé — ou une légende racontée au café. Désormais, nous développons des plateformes composées de dizaines de services, que nous assemblons à travers « le réseau ». Nous concevons, déployons et essayons de maintenir des systèmes distribués.\nMais qu’est-ce qu’un système distribué ? Quelles contraintes subit-il ? Et surtout, quels dangers devons-nous anticiper quand nous architecturons des applications distribuées que nous souhaitons efficientes, performantes et résilientes ?\nTransactions à travers plusieurs serveurs, stockage et cache, microservices et communication asynchrone : autant de préoccupations qui deviennent notre quotidien et que nous découvrirons ensemble ! Nous plongerons aussi dans des scénarios de pannes classiques et décrirons des architectures et solutions pour nous en protéger.\nBienvenue dans le monde merveilleux des systèmes distribués !",
+    "speakerIds": [
+      "pascal.martin"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.212432",
+    "description": null,
+    "topic": "tech",
+    "video": null,
+    "room": "AMPHI2",
+    "start": "2023-04-13T11:40:00",
+    "end": "2023-04-13T12:30:00",
+    "photoUrls": [],
+    "slug": "bienvenue-dans-le-monde-merveilleux-des-systemes-distribues-",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Est-il possible de réduire l'aide infligée ?",
+    "summary": "L’aide infligée c’est quand nous avons l’illusion d’aider l’autre mais qu’on s’occupe de soi sans s’en rendre compte. C’est le cadeau que nous nous sentons obligé.e.s d’accepter en remerciant poliment. C’est la réunion que votre manager organise “pour vous” alors qu’elle n’est utile qu’à ellui.\nCe sont ces thématiques que nous vous proposons d’explorer ensemble. Nous ferons le lien avec les dynamiques de groupe, la communication et l’expression de soi.\nNous aborderons également des outils (triangle de karpman, Communication NonViolente…) pour nous aider à naviguer à l’intérieur de situations complexes, et nous offrir une opportunité de vivre plus d’alignement entre nos valeurs, nos actions et nos ressentis.",
+    "speakerIds": [
+      "jquille",
+      "malk_zameth"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.212616",
+    "description": null,
+    "topic": "team",
+    "video": null,
+    "room": "AMPHI1",
+    "start": "2023-04-13T11:40:00",
+    "end": "2023-04-13T12:30:00",
+    "photoUrls": [],
+    "slug": "est-il-possible-de-reduire-l-aide-infligee-",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Colori",
+    "summary": "",
+    "speakerIds": [
+      "perrine",
+      "amelia"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.212793",
+    "description": null,
+    "topic": "other",
+    "video": null,
+    "room": "ROOM2",
+    "start": "2023-04-13T11:40:00",
+    "end": "2023-04-13T12:30:00",
+    "photoUrls": [],
+    "slug": "colori",
+    "id": null
+  },
+  {
+    "format": "LIGHTNING_TALK",
+    "event": "2023",
+    "title": "C'est qui le patron ?",
+    "summary": "Depuis 2002, chez Code Lutin on a décidé de vivre en anarchie. C'est bien beau tout ça, mais ça fonctionne comment ? C'est ce que je vais essayer de vous montrer avec les avantages et les inconvénients de la démarche.",
+    "speakerIds": [
+      "jean.couteau"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.212965",
+    "description": null,
+    "topic": "team",
+    "video": null,
+    "room": "AMPHI2",
+    "start": "2023-04-13T13:00:00",
+    "end": "2023-04-13T13:20:00",
+    "photoUrls": [],
+    "slug": "c-est-qui-le-patron-",
+    "id": null
+  },
+  {
+    "format": "LIGHTNING_TALK",
+    "event": "2023",
+    "title": "Des secrets dans les pixels ! À la découverte de la stéganographie",
+    "summary": "Quand je parle de stéganographie, j'ai en général deux réactions :\n    1. La stéga-quoi ?\n2. Ah oui, la technique d'écriture rapide ! (non, c'est la sténographie, ça \uD83D\uDE09 !)\nLa stéganographie, c'est un peu le jumeau caché de la cryptographie.\nLes deux cherchent à protéger un message confidentiel.\nLa cryptographie chiffre le message, la stéganographie le dissimule.\nJe vous propose de voir comment exploiter des \"objets numériques du quotidien\", tels que des images, afin de faire transiter toutes sortes de données au vu (mais pas au su) de tous !\n",
+    "speakerIds": [
+      "sonia.seddiki"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.213161",
+    "description": null,
+    "topic": "tech",
+    "video": null,
+    "room": "AMPHI1",
+    "start": "2023-04-13T13:00:00",
+    "end": "2023-04-13T13:20:00",
+    "photoUrls": [],
+    "slug": "des-secrets-dans-les-pixels-a-la-decouverte-de-la-steganographie",
+    "id": null
+  },
+  {
+    "format": "LIGHTNING_TALK",
+    "event": "2023",
+    "title": "Et si vos prochaines vacances se passaient à vélo ?",
+    "summary": "La randonnée à vélo, c'est économique, écologique, relaxant, dépaysant et c'est plus facile d'accès que ce que vous pourriez pensez. Alors on y va ?\nUn talk pour bien démarrer, faire découvrir, chasser les idées reçues, partager des astuces et donner l'envie de pédaler !",
+    "speakerIds": [
+      "thomas.jarrand"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.213454",
+    "description": null,
+    "topic": "other",
+    "video": null,
+    "room": "ROOM2",
+    "start": "2023-04-13T13:00:00",
+    "end": "2023-04-13T13:20:00",
+    "photoUrls": [],
+    "slug": "et-si-vos-prochaines-vacances-se-passaient-a-velo-",
+    "id": null
+  },
+  {
+    "format": "LIGHTNING_TALK",
+    "event": "2023",
+    "title": "Tremplin 1",
+    "summary": "",
+    "speakerIds": [
+      "106329914971209052078"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.213675",
+    "description": null,
+    "topic": "tech",
+    "video": null,
+    "room": "ROOM1",
+    "start": "2023-04-13T13:00:00",
+    "end": "2023-04-13T13:20:00",
+    "photoUrls": [],
+    "slug": "tremplin-1",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Progresser en conception avec les Design Patterns",
+    "summary": "Et si on te disait que tu es nul en dev ?\nLes Design patterns, c’est probablement ton deuxième pire souvenir de cours d’école (après le cours de chimie du vendredi aprem bien sur). Sauf que maintenant que tu es dev, tu te rends bien compte que c’est super dur de bien concevoir son code métier, surtout les premières années. C’est encore plus frustrant quand ton tech-lead te fait un live-coding avec un code tellement plus élégant que tu as envie de l’encadrer. Secrètement, tu te dis même qu’un jour, peut-être, tu pourras faire aussi bien spontanément.\nMême si rien ne remplace l’expérience, maîtriser les Design Patterns usuels est LE meilleur moyen de progresser très vite en conception.\nDans ce talk, Mathilde et Benjamin sortent leur IDE et pour te montrer ceux qu’ils utilisent le plus au quotidien dans leurs codebases respectives, pour que tu puisses te les approprier et gagner en level.",
+    "speakerIds": [
+      "mlorrain",
+      "byvernault"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.213857",
+    "description": null,
+    "topic": "tech",
+    "video": null,
+    "room": "ROOM1",
+    "start": "2023-04-13T14:50:00",
+    "end": "2023-04-13T15:40:00",
+    "photoUrls": [],
+    "slug": "progresser-en-conception-avec-les-design-patterns",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Le conte chaud et doux des chaudoudoux",
+    "summary": "Vous en avez marre de ce monde cruel et sans pitié où la communication est parfois rude et acerbe ?\nVenez vous offrir une parenthèse enchantée ! Après avoir tissé les liens entre les participants et participantes, laisser vous porter par la narration du conte chaud et doux des chaudoudoux de Claude Steiner.\nPour finir, un moment d'échanges de chaudoudoux qui font chauds et doux dans le cœur. Un atelier très positif qui permet de découvrir une pratique qui vous veut du bien. ",
+    "speakerIds": [
+      "charline.marmotte",
+      "thelor"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.214067",
+    "description": null,
+    "topic": "other",
+    "video": null,
+    "room": "AMPHI1",
+    "start": "2023-04-13T14:50:00",
+    "end": "2023-04-13T15:40:00",
+    "photoUrls": [],
+    "slug": "le-conte-chaud-et-doux-des-chaudoudoux",
+    "id": null
+  },
+  {
+    "format": "WORKSHOP",
+    "event": "2023",
+    "title": "Lego Flow Game : le Waterfall, le Scrum et le Kanban tu différencieras !",
+    "summary": "Il existe beaucoup de façon de gérer des projets ou des produits. Dans l'écosystème informatique, beaucoup de mots sont à la mode et il est difficile de s'y retrouver.\nJe vous propose un atelier, basé sur des Lego, pour expérimenter trois façons de gérer en équipe les fonctionnalités d'un produit :\n- en cascade - référence au mode Waterfall\n- en itératif - référence au mode Scrum\n- au fil de l'eau - référence au mode Kanban\nSerious game, débrief et présentation des notions sont au programme. Et si l'envie vous prend de rejouer cette expérience en entreprise, je vous présenterai le mode opératoire pour faciliter cet atelier-découverte.\nVenez participer à cet atelier ludique et vivant à base de briques colorées !",
+    "speakerIds": [
+      "klaukf"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.214253",
+    "description": null,
+    "topic": "team",
+    "video": null,
+    "room": "ROOM3",
+    "start": "2023-04-13T14:50:00",
+    "end": "2023-04-13T16:40:00",
+    "photoUrls": [],
+    "slug": "lego-flow-game-le-waterfall-le-scrum-et-le-kanban-tu-differencieras-",
+    "id": null
+  },
+  {
+    "format": "WORKSHOP",
+    "event": "2023",
+    "title": "Développeurs·euses : facilitez-vous la vie en (re)apprenant à lire.",
+    "summary": "Dans nos écoles, nous avons appris à lire avant de savoir écrire. D'après les méthodes usuelles d'enseignement, Comprendre un texte, c’est se faire une représentation mentale cohérente qui intègre toutes les informations du texte. Ces principes s'appliquent tout aussi bien à la compréhension de n'importe quel code logiciel. Car nous avons tous fait l'expérience de lire du code qui ne nous appartenais pas ou même nos propres productions.\nNos constats sont les suivants:\n    Il est souvent difficile et compliqué de lire ou de relire un code source.\nC'est une activité pénible et démotivante pour grand nombre des développeurs.\nEt si la raison ne tenait qu'a notre méconnaissance des mécanismes de fonctionnement de notre cerveau ?\nVenez explorer, expérimenter et apprendre comment fonctionne notre cerveau lors d'un atelier de lecture d'un code source Et tirez profit de ces nouvelles connaissances pour améliorer vos capacités de lecture ainsi que la lisibilité de votre code source.\nL'atelier se base sur les exercices proposés par Felienne Hermans dans son ouvrage \"The Programmer's Brain\".",
+    "speakerIds": [
+      "anthony-cassaigne"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.214508",
+    "description": null,
+    "topic": "tech",
+    "video": null,
+    "room": "ROOM4",
+    "start": "2023-04-13T14:50:00",
+    "end": "2023-04-13T16:40:00",
+    "photoUrls": [],
+    "slug": "developpeurs-euses-facilitez-vous-la-vie-en-re-apprenant-a-lire-",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Corn Hole 2 Turbo : Mes premiers pas dans l'embarqué",
+    "summary": "Le Corn Hole est un jeu d'extérieur qui nous vient des USA. Aussi connu là-bas que notre pétanque nationale, il consiste à lancer de petits sacs remplis de grains de maïs sur une planche située à 8,20m. Si possible il faut viser le trou situé en haut de la planche ! Tout ça, traditionnellement, à l'heure de l'apéro !\nAvec Nico on voulait \"bidouiller\". De l'électronique, du travail du bois, de la découpe laser, de l'impression 3D.. on voulait bricoler. Pour le Corn Hole nous avions un besoin : rendre le score disponible à tout le monde : aux joueurs, mais aussi au public. Et soyons honnête, on avait aussi vraiment envie de faire n'importe quoi ! Jusqu'où pourrions-nous aller ? Autour d'un verre, le défi était lancé..\nC'est comme ça que nous nous sommes lancés à faire une planche \"2.0\", avec des capteurs, un affichage du score, etc.. Au menu : du travail du bois, du dev arduino et du dev android. Quelle satisfaction de mettre les mains dans le cambouis ! Tout était nouveau pour nous. A l'heure de l'artisanat logiciel, on y redécouvre les sensations grisantes de nos débuts… repartir de zéro, avec peu de ressources. Cela nous a appris à être extrêmement sobres en énergie, en code et en utilisation de ressources ! Après quelques grosses claques (spoiler : nous n'avons pas pu atteindre nos objectifs les plus fous.. !) , c'est un retour aux sources, du développement sous contrainte, et nos premiers pas dans le développement embarqué.\nDans ce talk je vous propose un retour d'expérience et quelques conseils pour vous lancer dans votre futur side-project.",
+    "speakerIds": [
+      "paul.roye"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.214762",
+    "description": null,
+    "topic": "other",
+    "video": null,
+    "room": "ROOM2",
+    "start": "2023-04-13T14:50:00",
+    "end": "2023-04-13T15:40:00",
+    "photoUrls": [],
+    "slug": "corn-hole-2-turbo-mes-premiers-pas-dans-l-embarque",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Tout ce que vous n'avez jamais voulu savoir sur les fuseaux horaires",
+    "summary": "Dans cette conférence, je propose de vous plonger dans l'un des enfers des développeurs : les fuseaux horaires.\nPourquoi est-ce que c'est un tel bazar tout autour de la planète ? Comment est-ce qu'on en est arrivé là ? Et où est-ce qu'on en est à vrai dire ?",
+    "speakerIds": [
+      "julien.deniau"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.215034",
+    "description": null,
+    "topic": "tech",
+    "video": null,
+    "room": "AMPHI2",
+    "start": "2023-04-13T14:50:00",
+    "end": "2023-04-13T15:40:00",
+    "photoUrls": [],
+    "slug": "tout-ce-que-vous-n-avez-jamais-voulu-savoir-sur-les-fuseaux-horaires",
+    "id": null
+  },
+  {
+    "format": "WORKSHOP",
+    "event": "2023",
+    "title": "Fresque du numérique",
+    "summary": "La Fresque du Numérique est un atelier ludique et collaboratif d'une demi-journée avec une pédagogie similaire à celle de La Fresque du Climat. Le but de ce \"serious game\" est de sensibiliser et former les participant·e·s aux enjeux environnementaux du numérique.",
+    "speakerIds": [
+      "remi.sarraillon"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.215268",
+    "description": null,
+    "topic": "other",
+    "video": null,
+    "room": "ROOM5",
+    "start": "2023-04-13T14:50:00",
+    "end": "2023-04-13T16:40:00",
+    "photoUrls": [],
+    "slug": "fresque-du-numerique",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Charge mentale : l'ingrédient oublié pour la performance et le bien-être des équipes",
+    "summary": "La charge mentale est un facteur humain peu ou pas assez considéré dans l'organisation des projets logiciels.\nNous verrons en quoi celle-ci est pourtant un élément clé de la performance et du bien-être des équipes.\nQuel est le lien entre charge mental et structuration des équipes ?\nEn quoi celle-ci peut avoir un impact sur la performance ?\nNous l'explorerons au travers de la découverte de grands noms comme Felienne Hermans, J. Sweller, Yerkes & Dodson, et de références comme le livre Teams Topologies.",
+    "speakerIds": [
+      "christophe.maldivi"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.215452",
+    "description": null,
+    "topic": "team",
+    "video": null,
+    "room": "ROOM1",
+    "start": "2023-04-13T15:50:00",
+    "end": "2023-04-13T16:40:00",
+    "photoUrls": [],
+    "slug": "charge-mentale-l-ingredient-oublie-pour-la-performance-et-le-bien-etre-des-equipes",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Building your first malicious chrome extension \uD83D\uDE08",
+    "summary": "Building chrome extension is so simple & fun. In this talk I will explain the basics of building your first chrome extension, in just a couple of minutes! We will then speak about the various ways to turn your awesome extension to a malicious one. The main purpose here is not to turn you into a hacker, but instead to understand the risks of extensions, and to increase awareness to these small and harmless plugins.\n",
+    "speakerIds": [
+      "akiriati"
+    ],
+    "language": "ENGLISH",
+    "addedAt": "2023-02-13T20:50:31.215685",
+    "description": null,
+    "topic": "tech",
+    "video": null,
+    "room": "ROOM2",
+    "start": "2023-04-13T15:50:00",
+    "end": "2023-04-13T16:40:00",
+    "photoUrls": [],
+    "slug": "building-your-first-malicious-chrome-extension-",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Spring Framework 6.0",
+    "summary": "La nouvelle génération de Spring Framework est disponible !\nSpring Framework 6.0 amène de nouveaux pré-requis qui permettent à l'écosystème Spring d'aller de l'avant: Java 17, Jakarta EE 9+. C'est la fondation pour Spring Boot 3.0 et le commencement de nouveaux thèmes majeurs, tels que AOT/Native et Observability.\nPendant cette présentation, Stéphane couvrira les thèmes majeurs de cette nouvelle release:\n* La nouvelle baseline avec Java 7 et Jakarta EE 9.\n* Le support AOT qui permet de compiler vos applications Spring en natif avec GraalVM.\n* L'amélioration de l'observabilité, et ce que cela signifie pour les fonctionnalités de base telles que RestTemplate, contrôleurs web, etc.\n* Le support de clients par interface pour HTTP et d'autres transports.\n* Le support de problem details (RFC 7807).",
+    "speakerIds": [
+      "106329914971209052078"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.216587",
+    "description": null,
+    "topic": "tech",
+    "video": null,
+    "room": "AMPHI1",
+    "start": "2023-04-13T15:50:00",
+    "end": "2023-04-13T16:40:00",
+    "photoUrls": [],
+    "slug": "spring-framework-6-0",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "UX / TDAH (à définir!)",
+    "summary": "",
+    "speakerIds": [
+      "106329914971209052078"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.216758",
+    "description": null,
+    "topic": "other",
+    "video": null,
+    "room": "AMPHI2",
+    "start": "2023-04-13T15:50:00",
+    "end": "2023-04-13T16:40:00",
+    "photoUrls": [],
+    "slug": "ux-tdah-a-definir-",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Ada Lovelace and The Very First Computer Program",
+    "summary": "We all know that Ada Lovelace is credited as the first computer programmer. But what did she write? What did it do? And how does it work?\nIn this inspirational talk, developer, geek, and digital archaeologist, Steven Goodwin, breaks down the very first program ever written to explain what it does and how it works. He goes on to simulate it within a JavaScript version of Babbage's analytical engine, rewriting it piece-by-piece until it looks like modern code, and thereby demonstrate what features of current languages we now all take for granted.\nHe finishes up with a discussion on the controversy surrounding her involvement in computing, aiming to answer the question once and for all - \"Was she really the first programmer?\"",
+    "speakerIds": [
+      "marquisdegeek+techorama"
+    ],
+    "language": "ENGLISH",
+    "addedAt": "2023-02-13T20:50:31.216958",
+    "description": null,
+    "topic": "other",
+    "video": null,
+    "room": "AMPHI1",
+    "start": "2023-04-13T17:00:00",
+    "end": "2023-04-13T17:50:00",
+    "photoUrls": [],
+    "slug": "ada-lovelace-and-the-very-first-computer-program",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Faire grandir une équipe technique : autonomie VS anarchie",
+    "summary": "Comment collaborer dans une entreprise alors que le nombre de développeurs ne cesse d'augmenter ? Quels outils pour installer une vision commune au delà des visions individuelles ?\nNous somme aujourd'hui plus de 150 développeurs qui construisons ensemble un produit. Un des piliers de notre entreprise est l'autonomie, nous souhaitons que nos ingénieurs soient autonomes sur la prise des décisions de façon à ce qu'il n'y ait pas un petit groupe de personnes qui bloque notre capacité à délivrer. Cependant si on laissait chaque développeur prendre des décisions tout seul nous pourrions vite créer une forte dette technique qui nous empêcherait de continuer à développer des fonctionnalités. Pour répondre à cela nous avons créé deux initiatives : les RFC (Request for Comments), semblable à ce que l'on peut voir pour le langage PHP et les CoP (Community of Practice) organisés autour de centres d'intérêts (backend, devOps, DDD ...). Cette organisation nous permet d'avoir des discussions techniques, d'en garder un historique et d'avoir une vision commune. Je vous raconterai comment cette organisation nous aide au quotidien à collaborer et vous repartirez avec les clés pour mettre cela en place dans vos équipes.",
+    "speakerIds": [
+      "lescanosofia"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.217128",
+    "description": null,
+    "topic": "team",
+    "video": null,
+    "room": "AMPHI2",
+    "start": "2023-04-13T17:00:00",
+    "end": "2023-04-13T17:50:00",
+    "photoUrls": [],
+    "slug": "faire-grandir-une-equipe-technique-autonomie-vs-anarchie",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Choisir la bonne technologie mobile pour votre projet",
+    "summary": "Si tout au début du développement mobile (2008) et jusqu’à peu, nous n’avions que les solutions officielles fournies par les constructeurs qui étaient considérées comme des solutions sérieuses pour réaliser des applications mobiles, en 2021 les possibilités se sont multipliées. Google et Apple ont introduit des solutions pour réaliser l’UI de façon déclarative (Jetpack Compose, Swift UI), React Native a une grande part de marché, Flutter ne cesse de croître, et des solutions comme KMM (Kotlin Multiplatform Mobile) permettent la mutualisation du code métier entre les deux plateformes. Sur quelle solution il faut se lancer en tant que dev ? En tant que business ? Dans ce talk, nous vous exposerons des éléments pour vous aider dans votre choix en répondant aux questions suivantes :\nPourquoi et comment chaque solution a été créée ? Sur quelles bases ? Par qui ?\nComment ça marche ? Comment le code est exécuté ? Quelles sont les limitations techniques ?\nQuelles sont les possibilités pour intégrer ces technologies dans un nouveau projet ? Dans un projet existant ? Peut-on mélanger ces technos ?",
+    "speakerIds": [
+      "106329914971209052078"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.217342",
+    "description": null,
+    "topic": "tech",
+    "video": null,
+    "room": "ROOM2",
+    "start": "2023-04-13T17:00:00",
+    "end": "2023-04-13T17:50:00",
+    "photoUrls": [],
+    "slug": "choisir-la-bonne-technologie-mobile-pour-votre-projet",
+    "id": null
+  },
+  {
+    "format": "LIGHTNING_TALK",
+    "event": "2023",
+    "title": "Why is being different actually a good thing? – My Way Into Tech",
+    "summary": "I've been working in IT for about seven years now, but especially at the beginning of my career I was troubled by self-doubt and imposter syndrome. How do I fit in? This is probably the question most employees ask themselves when they start a new job. It took me some time to understand that it is actually good to be different from everyone else and not try to fit in. In this 20-minute lightning talk, I share my personal story about my experiences, my journey and my challenges and how I finally found my place in the tech industry because I didn't try to be like everyone else.",
+    "speakerIds": [
+      "felifichte"
+    ],
+    "language": "ENGLISH",
+    "addedAt": "2023-02-13T20:50:31.217532",
+    "description": null,
+    "topic": "other",
+    "video": null,
+    "room": "ROOM1",
+    "start": "2023-04-14T09:25:00",
+    "end": "2023-04-14T09:45:00",
+    "photoUrls": [],
+    "slug": "why-is-being-different-actually-a-good-thing-my-way-into-tech",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Poser les bonnes questions au bon moment pour accélérer son développement produit.",
+    "summary": "Thinking is the process of asking questions If you become better at asking others better questions, you become better at asking yourself questions and you improve your level of thinking - Tim Ferris\nComment poser les bonnes questions au bon moment lorsque l’on développe un produit en équipe ?\nJe vous invite à réfléchir à vos questionnements via différentes situations du quotidien sous forme de scènettes interactives. Nous répondrons aux questions suivantes :\n- Comment poser des questions ouvertes mais pas trop ?\n- Comment poser des questions percutantes auxquelles nous ne sommes pas ou peu habitué ?\n- Comment poser les questions qui vont vous permettre de prioriser, vous positionner, ou trouver un consensus plus rapidement ?\n- Comment questionner le métier lorsque vous êtes technique ou questionner ses développeurs/ingénieurs lorsque l’on se trouve côté produit ?\n- Comment questionner ses utilisateurs ?\n- Comment poser des questions en entretiens qui vont réellement apprendre quelque chose au recruteur et amener le recruté à lui aussi se questionner comme il ne l'a jamais fait auparavant ? ",
+    "speakerIds": [
+      "aurelie"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.217767",
+    "description": null,
+    "topic": "team",
+    "video": null,
+    "room": "ROOM2",
+    "start": "2023-04-14T10:40:00",
+    "end": "2023-04-14T11:30:00",
+    "photoUrls": [],
+    "slug": "poser-les-bonnes-questions-au-bon-moment-pour-accelerer-son-developpement-produit-",
+    "id": null
+  },
+  {
+    "format": "WORKSHOP",
+    "event": "2023",
+    "title": "Sensibiliser et passer à l'action avec l'Atelier Numerique Responsable",
+    "summary": "Partis du constat que c'était pas si simple de se mettre au Green IT, Greg et Julia proposent un atelier pour monter en compétences en utilisant des mécanismes popularisés par les ateliers de sensibilisation comme les fresques du climat et 2Tonnes.",
+    "speakerIds": [
+      "jdelrieu",
+      "gregory.ott"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.217994",
+    "description": null,
+    "topic": "team",
+    "video": null,
+    "room": "ROOM5",
+    "start": "2023-04-14T10:40:00",
+    "end": "2023-04-14T12:30:00",
+    "photoUrls": [],
+    "slug": "sensibiliser-et-passer-a-l-action-avec-l-atelier-numerique-responsable",
+    "id": null
+  },
+  {
+    "format": "WORKSHOP",
+    "event": "2023",
+    "title": "Shape Up, le jeu by Toovalu",
+    "summary": "Venez découvrir la vie d'un projet organisé selon la méthode Shape Up, en jouant.\nCe jeu (au format jeu de plateau) a été créé dans le cadre de la conduite du changement de Scrum à Shape Up, afin d'embarquer/impliquer l'ensemble de  notre organisation dans cette nouvelle méthodologie.",
+    "speakerIds": [
+      "meghann"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.218218",
+    "description": null,
+    "topic": "team",
+    "video": null,
+    "room": "ROOM3",
+    "start": "2023-04-14T10:40:00",
+    "end": "2023-04-14T12:30:00",
+    "photoUrls": [],
+    "slug": "shape-up-le-jeu-by-toovalu",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Chasing unicorns : 0 dataloss and 99.999% availability",
+    "summary": "If you're a database architect, you've already encountered a situation when you ask for RTO and RPO and people answer they don't want any data loss and downtime is not an option either.\nIf you discuss with people aware of the CAP theorem, they will temper their demands by asking for 99.999% availability, emphasizing they didn't ask for the impossible 100%...\nIn this conf talk, we'll explore the CAP theorem, what it means for RDBMS and what tradeoffs need to be made. Then we'll explore several practical use cases and we'll try to classify their data loss and availability.",
+    "speakerIds": [
+      "l_avrot"
+    ],
+    "language": "ENGLISH",
+    "addedAt": "2023-02-13T20:50:31.218397",
+    "description": null,
+    "topic": "tech",
+    "video": null,
+    "room": "ROOM1",
+    "start": "2023-04-14T10:40:00",
+    "end": "2023-04-14T11:30:00",
+    "photoUrls": [],
+    "slug": "chasing-unicorns-0-dataloss-and-99-999-availability",
+    "id": null
+  },
+  {
+    "format": "WORKSHOP",
+    "event": "2023",
+    "title": "Le GitOps dont vous êtes le héros [VERSION ATELIER]",
+    "summary": "Dans le vaste royaume de Kubernetes, notre application est en péril. Les bugs et les besoins utilisateurs non couverts sont en train de les épuiser. Les correctifs et nouvelles fonctionnalités arriverons-t-il à temps pour sauver l’Application ? Si le processus de livraison ne s’améliore pas, les utilisateurs vont déserter et ce sera sa fin.\nÀ vous, public, de devenir le héros qui va sauver l’Application en embrassant la voie du GitOps.\nCette ~~atelier~~ aventure sera interactive ! Vos choix vous permettront d’arriver ou pas en production dans les temps. Dans ce premier tome de cette saga, vous allez apprendre ce qu’est GitOps, vous choisirez votre solution et la mettrez en œuvre. Soyez prêt à assumer vos choix, vous apprendrez de vos erreurs comme de vos succès, et peut être arriverez vous à temps en production.\n___\n*4ème de couverture :\nCet atelier est destiné aux aventuriers avec quelques connaissances de k8s et curieux de découvrir l’approche GitOps.\nSerez-vous l’aventurier qui embrassera la voie du GitOps ? Entre rétro-gaming sur WorkAdventure et Donjons & Dragons, ce sera à vous de faire vos propres choix, pour une expérience unique. ",
+    "speakerIds": [
+      "ZenikaLyon",
+      "mathieu.mure",
+      "pierre.morvan"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.2186",
+    "description": null,
+    "topic": "tech",
+    "video": null,
+    "room": "ROOM4",
+    "start": "2023-04-14T10:40:00",
+    "end": "2023-04-14T12:30:00",
+    "photoUrls": [],
+    "slug": "le-gitops-dont-vous-etes-le-heros-version-atelier-",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Jay-Z, Maths and Signals ! How to clone Shazam \uD83C\uDFA7",
+    "summary": "J’ai toujours rêver de comprendre comment fonctionnait Shazam.\nCette application qui permet de retrouver l’artiste et le titre d’une chanson juste avec un enregistrement de quelques secondes. Du coup j’ai décider de la re-coder ! Je vous montre tout cela pendant ce talk, et ce sera l’occasion de parler notes musicales, harmoniques, fréquences, signaux, et de transformée de fourrier (et de Jay-Z) pour recréer l’algorithme qui fait tourner le moteur Shazam ⚡️\n",
+    "speakerIds": [
+      "moustapha.agack"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.218807",
+    "description": null,
+    "topic": "other",
+    "video": null,
+    "room": "AMPHI1",
+    "start": "2023-04-14T10:40:00",
+    "end": "2023-04-14T11:30:00",
+    "photoUrls": [],
+    "slug": "jay-z-maths-and-signals-how-to-clone-shazam-",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Comment être condamné par la CNIL",
+    "summary": "Spoiler alert: bien entendu, je ne vais pas vous apprendre à être condamné par la CNIL ! La CNIL a sorti un guide RGPD (Règlement Général sur la Protection des Données) pour l'équipe de développement, où elle donne des conseils aux développeuses et développeurs afin d'être en conformité avec le RGPD, notamment dans le développement. Dans ce talk, nous plongerons dans les bonnes pratiques recommandées par la CNIL et nous verrons aussi différents cas de sanctions données par la CNIL par des entreprises qui ont, elles, été condamnées.",
+    "speakerIds": [
+      "ajuliette.dev"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.219066",
+    "description": null,
+    "topic": "other",
+    "video": null,
+    "room": "AMPHI2",
+    "start": "2023-04-14T10:40:00",
+    "end": "2023-04-14T11:30:00",
+    "photoUrls": [],
+    "slug": "comment-etre-condamne-par-la-cnil",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Functional Programming with C#",
+    "summary": "Functional Programming is becoming increasingly popular and relevant with each year that goes by.  With so much discussion around languages such as F#, Haskell and Erlang, it can seem as though getting started with Functional programming would mean first learning a whole new syntax...but what if it didn't?\nMost .NET developers are familiar with the use of Linq, and basic constructs such as IEnumerable, Func delegates, arrow functions and ternary expressions, but did you know that you can use all of this to implement some of the most powerful patterns and techniques from the world of functional programming?\nThis talk will demonstrate how, using only familiar features available in out-of-the-box C#, to write Functional code that is:\n* More robust\n* Easier to read\n* Easier to maintain\nAs well as these benefits, Functional code is a great enabler for the use of concurrency with Async functions and Serverless applications with technologies such as Azure Functions.\nThis talk might be of interest to anyone looking into moving to a new platform, or in improving the scalability of an existing application, or even just interested in seeing what Functional Programming is all about, but all within the comfort of a familiar language.\nWe might even attempt the impossible, and explain what a Monad is!",
+    "speakerIds": [
+      "simonjpainter"
+    ],
+    "language": "ENGLISH",
+    "addedAt": "2023-02-13T20:50:31.219274",
+    "description": null,
+    "topic": "tech",
+    "video": null,
+    "room": "ROOM2",
+    "start": "2023-04-14T11:40:00",
+    "end": "2023-04-14T12:30:00",
+    "photoUrls": [],
+    "slug": "functional-programming-with-c-",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Comment intégrer au mieux une personne autiste en entreprise",
+    "summary": "C'est un talk qui présente d'abord l'autisme, j'en donne la définition, et celle des caractéristique majeurs, puis j’approfondis sur certaine de ces caractéristique, en expliquant comment la personne autiste perçoit le monde, ses interactions, et ce qu'on peut faire pour permettre son intégration en prenant en compte ses besoins et diminuer ses difficulté.\nplan:\n- Quelques définitions importantes : utilisons les bons mots.\n- Caractéristiques de neurodiversité et empathie : rendre le monde meilleur pour tous.\n- Les astuces pour mieux comprendre.\n- Les codes sociaux.\n- \"Mais c'est implicite !\" non...\n- Stratégie d'accueil et de communication : le message clair.\n- Risques et conséquences.\n- Conclusion et quelques sources pour aller plus loin.\nJe casse des clichés, j'informe, c'est le fruit d'un mélange d'années de recherche sur le sujet, d’expérience personnelle et d’expérience de personne autiste que j'ai rencontré.\nLes conseils que je donne, en plus de permettre une intégration plus facile et saine des personnes autistes,  devrait permettre de rendre l'environnement moins agressif pour des équipes, qu'elles soient composé d'autistes ou non, car les difficultés des personnes autistes sont en partie causées par une hypersensibilité à des éléments que des personnes qui ne sont pas autistes peuvent aussi endurer et supporter, c'est donc bénéfique pour tous.\nIl existe une version en ligne de ce talk: https://www.youtube.com/watch?v=1jm7MJws_-I\nC’était ma première présentation de ce sujet, et j'ai retravaillé les points qui me semblaient importants (fluidité, organisation, ...), et continuer de travailler dessus pour l'améliorer.\nÉtant donnée la quantité d'information fournie, il me semble compliqué de faire tenir la présentation en 30 min, et j'aimerais avoir un temps de questions/réponses à la fin. C'est pourquoi je sélectionne un format de 50 min.",
+    "speakerIds": [
+      "gdeb29"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.219448",
+    "description": null,
+    "topic": "team",
+    "video": null,
+    "room": "AMPHI2",
+    "start": "2023-04-14T11:40:00",
+    "end": "2023-04-14T12:30:00",
+    "photoUrls": [],
+    "slug": "comment-integrer-au-mieux-une-personne-autiste-en-entreprise",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Loi de Conway : Lorsque votre conception produit se fâche avec votre organisation",
+    "summary": "Bien que vous suiviez les bonnes pratiques, le logiciel construit s'écarte souvent de la vision produit, technique et parfois même des besoins de l'utilisateur ?\nEt si on vous disait qu'il existe une force qui a une influence certaine sur ce que vous produisez ?\nVenez découvrir la Loi de Conway qui a un pouvoir sur ce que vous construisez quelque soit votre métier. Nous verrons ses impacts sur les différents aspects du logiciel et nous apprendrons comment l'apprivoiser.",
+    "speakerIds": [
+      "julien.topcu"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.219671",
+    "description": null,
+    "topic": "design",
+    "video": null,
+    "room": "ROOM1",
+    "start": "2023-04-14T11:40:00",
+    "end": "2023-04-14T12:30:00",
+    "photoUrls": [],
+    "slug": "loi-de-conway-lorsque-votre-conception-produit-se-fache-avec-votre-organisation",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "#RetourAuxSources : Le cache HTTP",
+    "summary": "Dans le cadre de nos projets Web, on finit tous tôt au tard par faire appel à ce bon vieux cache HTTP.\nÉvidemment, on cherche à réduire les temps de chargement de nos utilisateurs et à soulager la charge de nos serveurs.\nAu départ, ça parait simple, il suffit \"juste\" de l'activer.\nAu milieu, on se perd un peu dans les en-têtes et les multiples couches qui entrent en jeu.\nEt à la fin, ça se termine bien trop souvent par un « Ça ne marche pas ? Essaye en vidant ton cache ! ».\nChoisir et implémenter une stratégie de cache, c'est complexe et ça ne se fait pas à la fin du projet.\nChaque étape est concernée : conception, développement, build, déploiement et run.\nPour faire les bons choix, il est important de bien comprendre comment tout cela fonctionne.\nAu menu de cette session, je vous propose de (re)découvrir le cache HTTP par l'exemple et la pratique.\nNous reviendrons sur les différents en-têtes HTTP gérés par les navigateurs, CDN, proxys-cache et autres serveurs.\nNous parlerons des différents caches présents au sein des navigateurs (HTTP, Service Worker, back/forward...).\nEnfin, nous aborderons différents contextes et cas de figures.",
+    "speakerIds": [
+      "hsablonniere"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.219989",
+    "description": null,
+    "topic": "tech",
+    "video": null,
+    "room": "AMPHI1",
+    "start": "2023-04-14T11:40:00",
+    "end": "2023-04-14T12:30:00",
+    "photoUrls": [],
+    "slug": "-retourauxsources-le-cache-http",
+    "id": null
+  },
+  {
+    "format": "LIGHTNING_TALK",
+    "event": "2023",
+    "title": "SLOW BUSINESS : Travailler moins & mieux",
+    "summary": "Le SLOW BUSINESS pour travailler moins et mieux,\nOu comment éviter le burn out dans notre société actuelle.\nLa vie d’entrepreneur disruptif VS L’art de vivre avec sa boîte ?\nLe Slow Business, c'est des pistes pour éviter le burn-out, ralentir, trouver son rythme et remettre le travail à sa place (spoiler-alert : c’est pas avant ta vie perso).\n",
+    "speakerIds": [
+      "alex.carmona"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.22017",
+    "description": null,
+    "topic": "other",
+    "video": null,
+    "room": "ROOM1",
+    "start": "2023-04-14T13:00:00",
+    "end": "2023-04-14T13:20:00",
+    "photoUrls": [],
+    "slug": "slow-business-travailler-moins-mieux",
+    "id": null
+  },
+  {
+    "format": "LIGHTNING_TALK",
+    "event": "2023",
+    "title": "Pourquoi quitter la tech ?",
+    "summary": "Le développement web, eldorado promis ? Après 7 ans à développer dans tout type de structures (startup, entreprise éthique, administration française,...), j’ai (parfois) envie de tirer ma révérence au monde de la tech. Sexisme, impasse de carrière, plafond de verre, défense du pré carré, le tableau n'a pas l'air très rose comme ça. Mais il permet de faire un état des lieux du monde du développement web aujourd'hui et de sa difficulté à faire de la place aux profils en minorité dans la tech. En partant des phrases en apparence anodines entendues au cours de ma carrière, nous allons démontrer qu’il s’agit d’un problème systémique qui concerne tous les profils discriminés. Nous essaierons aussi de voir ce qui se passe derrière ces micro-agressions, les effets qu’elles ont lorsqu’elles sont répétées. En dernier point, je tenterai de lister les bonnes pratiques, les actions que personnes discriminées, entreprises et personnes en situation de domination peuvent mettre en place pour faire de la tech un lieu plus accueillant pour toutes et tous, qu’elles que soient notre genre, nos origines, nos handicaps, nos anciennes carrières,...",
+    "speakerIds": [
+      "so.prevost"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.220361",
+    "description": null,
+    "topic": "other",
+    "video": null,
+    "room": "AMPHI1",
+    "start": "2023-04-14T13:00:00",
+    "end": "2023-04-14T13:20:00",
+    "photoUrls": [],
+    "slug": "pourquoi-quitter-la-tech-",
+    "id": null
+  },
+  {
+    "format": "LIGHTNING_TALK",
+    "event": "2023",
+    "title": "Ce (code) qui nous lit",
+    "summary": "Balade sensible dans les mots qu'on lit, qu'on écrit, qu'on copie, qu'on partage, qu'on modifie.\nNous voyagerons les yeux fermés dans du code, des commentaires de code, des descriptions de code — informatique, législatif, moral, éthique.\nEt si un livre sur les semences paysannes avait autant à voir avec le commentaire d'une fonction qui retourne \"Hello World\" ? Et si ça devenait évident si on écoutait cet entremêlement pendant une dizaine de minutes.",
+    "speakerIds": [
+      "thomas.parisot"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.220562",
+    "description": null,
+    "topic": "other",
+    "video": null,
+    "room": "ROOM2",
+    "start": "2023-04-14T13:00:00",
+    "end": "2023-04-14T13:20:00",
+    "photoUrls": [],
+    "slug": "ce-code-qui-nous-lit",
+    "id": null
+  },
+  {
+    "format": "LIGHTNING_TALK",
+    "event": "2023",
+    "title": "Tremplin 2",
+    "summary": "",
+    "speakerIds": [
+      "106329914971209052078"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.220737",
+    "description": null,
+    "topic": "tech",
+    "video": null,
+    "room": "AMPHI2",
+    "start": "2023-04-14T13:00:00",
+    "end": "2023-04-14T13:20:00",
+    "photoUrls": [],
+    "slug": "tremplin-2",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Remotion : le 7ème art à portée de composants web et d'API \uD83C\uDFAC",
+    "summary": "Vous avez déjà eu envie de générer des vidéos ... ?\nVous ne trouvez pas un outil pas cher, facile à prendre en main et pas limiter dans les possibilités ?\nVous avez des bases en HTML, CSS et Javascript ?\nRemotion est fait pour vous ! \uD83E\uDEF5\uD83C\uDFFC\nRemotion est une lib open source publiée en 2019, qui permet la génération de gif, d'animations, de vidéos de manière programmatique, à partir de composant React ! Nous allons vous partager notre aventure de création de trailer vidéo dans le contexte des plateformes de streaming sur lesquels nous travaillons chez Bedrock. Nostalgique des programmes du début des années 2000, on a essayé de reproduire quelques bandes d'annonces pour vous rappelez des souvenirs et vous montrer à quel point c'est facile !\nInstallez-vous et préparez vos pop-corn la séance va commencer ! \uD83C\uDF7F",
+    "speakerIds": [
+      "alves.mckl",
+      "antoine395.caron"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.22093",
+    "description": null,
+    "topic": "tech",
+    "video": null,
+    "room": "AMPHI1",
+    "start": "2023-04-14T14:50:00",
+    "end": "2023-04-14T15:40:00",
+    "photoUrls": [],
+    "slug": "remotion-le-7eme-art-a-portee-de-composants-web-et-d-api-",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Comment aborder le design dans une démarche d’éco-conception ?",
+    "summary": "Les chiffres alarmants de l’impact du numérique sur le climat sont clairs. Il est désormais temps de comprendre comment passer du constat à la mise en pratique. Avec cette conférence nous voulons aider les designers à concevoir des interfaces utiles et mesurées en regard de l'impact climatique du numérique.\nComment nous, designers et concepteurs pouvons jouer un rôle clef dès les fondations du projets, pour éviter de produire des services web obèses et disproportionnés ?\nTous deux designers à l’Agence LunaWeb, nous cherchons en permanence à revoir nos façons de concevoir un web à la fois efficace et raisonné.\nÀ l’issue de ce talk, vous repartirez avec des leviers pour convaincre, mais surtout des méthodes et outils simples, applicables sur le champ pour vos futurs projets éco-conçus, issues de nos recherches et éprouvées sur nos projets récents.",
+    "speakerIds": [
+      "damien.legendre",
+      "alizee.rault"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.221248",
+    "description": null,
+    "topic": "design",
+    "video": null,
+    "room": "ROOM2",
+    "start": "2023-04-14T14:50:00",
+    "end": "2023-04-14T15:40:00",
+    "photoUrls": [],
+    "slug": "comment-aborder-le-design-dans-une-demarche-d-eco-conception-",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Développement durable : et si on développait enfin des logiciels bons pour les gens et la planète",
+    "summary": "People, Planet, Profit : les 3 piliers du développement durable peuvent également s'appliquer au développement logiciel.\nComment faire rimer ces trois mots avec nos pratiques ?\nNous vous proposons un tour d'horizon avec des exemples concrets, de la conception UX au déploiement sur les serveurs, de bonnes pratiques d'éco-conception et d'accessibilité, et comment concilier toutes ces techniques avec un budget restreint.",
+    "speakerIds": [
+      "cecilia.bossard",
+      "lopes"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.221541",
+    "description": null,
+    "topic": "other",
+    "video": null,
+    "room": "AMPHI2",
+    "start": "2023-04-14T14:50:00",
+    "end": "2023-04-14T15:40:00",
+    "photoUrls": [],
+    "slug": "developpement-durable-et-si-on-developpait-enfin-des-logiciels-bons-pour-les-gens-et-la-planete",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "S'inspirer de l'astrophysique pour traverser une transformation - REX d'une étoile",
+    "summary": "Voilà, votre manager vous a annoncé la N-ième réorganisation d’équipe/de service. Quelle va être votre place cette fois-ci ?\nUne étoile ne peut vivre sans l’énergie de ses atomes, tout comme l’entreprise sans celle de ses collaborateur/trices.\nAstrophysicienne, mes recherches portaient sur la formation des étoiles. Aujourd’hui coach agile, j’ai analysé dans le détail 2 ans de transformation sur un département de 150 personnes et vous ne devinerez jamais les liens que j’ai pu découvrir.\nVoyageons ensemble au plus près de la naissance d’une étoile. Elle vous dévoilera comment agir et trouver votre place dans chacune des étapes d’une transformation.\nDe retour sur Terre, non seulement vous saurez expliquer la naissance d’une étoile mais également trouver votre chemin avec précision dans les transformations que vous rencontrerez.",
+    "speakerIds": [
+      "albane.fagot"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.221803",
+    "description": null,
+    "topic": "other",
+    "video": null,
+    "room": "ROOM1",
+    "start": "2023-04-14T14:50:00",
+    "end": "2023-04-14T15:40:00",
+    "photoUrls": [],
+    "slug": "s-inspirer-de-l-astrophysique-pour-traverser-une-transformation-rex-d-une-etoile",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Resumability in the next generation frontend framework With O(1) loading time",
+    "summary": "Qwik is a JavaScript framework that uses a new rendering paradigm called resumability. It can serialize a JavaScript app into HTML, thus eliminating the need for the hydration technique used in meta-frameworks like Next.js. Is Qwik the world's first O(1) JavaScript framework? Let's find out.\nI will teach you how to start with Qwik on this topic. We will cover the following topics: What is Qwik framework, Qwik vs. React, Qwik vs. Angular, How to make JS bundle smaller, and how to get started building with Qwik.",
+    "speakerIds": [
+      "rubyjane88"
+    ],
+    "language": "ENGLISH",
+    "addedAt": "2023-02-13T20:50:31.222016",
+    "description": null,
+    "topic": "tech",
+    "video": null,
+    "room": "ROOM1",
+    "start": "2023-04-14T15:50:00",
+    "end": "2023-04-14T16:40:00",
+    "photoUrls": [],
+    "slug": "resumability-in-the-next-generation-frontend-framework-with-o-1-loading-time",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Au secours, j'ai une personne handicapée dans mon équipe !",
+    "summary": "Vous avez ou vous allez accueillir une personne handicapée dans votre équipe et vous ne savez pas comment vous y prendre ? Comment mettre en place des aménagements de postes dédiés ? Comment intégrer une personne handicapée dans de bonnes conditions dans son équipe ?\nA partir de mon vécu personnel étant sourde, de nombreuses études et de retour d'expériences d'autres personnes handicapées, je donnerai des pistes de réflexion et des outils pour déconstruire les biais et préjugés autour du handicap.\nUne personne handicapée n'est pas moins bonne qu'une personne n'ayant pas d'handicap. Pourtant, il y a 12 millions de personnes handicapées en France et le taux de chômage est deux fois plus élevée pour ces personnes que la norme. Il serait temps d'arrêter d'avoir peur du handicap.",
+    "speakerIds": [
+      "e.aboaf"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.222236",
+    "description": null,
+    "topic": "team",
+    "video": null,
+    "room": "AMPHI1",
+    "start": "2023-04-14T15:50:00",
+    "end": "2023-04-14T16:40:00",
+    "photoUrls": [],
+    "slug": "au-secours-j-ai-une-personne-handicapee-dans-mon-equipe-",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "Statut, TJM et clients, la base du freelance",
+    "summary": "Vous êtes experts dans votre domaine et vous voulez lancer à votre compte, alors vous allez vous retrouver novice dans un domaine, celui du freelancing. Vous devez travailler avec des freelances et vous ne comprenez pas leurs tarifs, je vais vous l’expliquer.\nDe mon côté, ça fait 23 ans que je travaille en freelance. Quand j’ai commencé, une collègue m’a expliqué les bases et m’a aidé à fixer mon tarif. Alors je vous propose une session de rattrapage express des bases : choisir son statut, fixer son TJM (Tarif Journalier Moyen) et gérer la relation client.\nAvec ces bases vous devriez pouvoir vous lancer dans de bonnes conditions, négocier correctement vos premières missions, éviter quelques erreurs de débutant(e)s et trouver le bonheur dans cette nouvelle relation au travail.",
+    "speakerIds": [
+      "yharrassarry"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.222672",
+    "description": null,
+    "topic": "team",
+    "video": null,
+    "room": "ROOM2",
+    "start": "2023-04-14T15:50:00",
+    "end": "2023-04-14T16:40:00",
+    "photoUrls": [],
+    "slug": "statut-tjm-et-clients-la-base-du-freelance",
+    "id": null
+  },
+  {
+    "format": "TALK",
+    "event": "2023",
+    "title": "WASM",
+    "summary": "",
+    "speakerIds": [
+      "106329914971209052078"
+    ],
+    "language": "FRENCH",
+    "addedAt": "2023-02-13T20:50:31.222863",
+    "description": null,
+    "topic": "tech",
+    "video": null,
+    "room": "AMPHI2",
+    "start": "2023-04-14T15:50:00",
+    "end": "2023-04-14T16:40:00",
+    "photoUrls": [],
+    "slug": "wasm",
+    "id": null
+  }
+]
