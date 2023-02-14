@@ -5,6 +5,7 @@ import com.fasterxml.jackson.module.kotlin.readValue
 import kotlinx.coroutines.reactor.awaitSingle
 import mixit.MixitApplication.Companion.CURRENT_EVENT
 import mixit.talk.model.Talk
+import mixit.user.repository.UserRepository
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.domain.Sort.Direction.ASC
@@ -25,7 +26,8 @@ import org.springframework.stereotype.Repository
 @Repository
 class TalkRepository(
     private val template: ReactiveMongoTemplate,
-    private val objectMapper: ObjectMapper
+    private val objectMapper: ObjectMapper,
+    private val userRepository: UserRepository
 ) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
@@ -37,6 +39,9 @@ class TalkRepository(
     }
 
     private fun loadYear(year: Int) {
+        if(year == CURRENT_EVENT.toInt()) {
+            userRepository.initSpeakerFor2023()
+        }
         val talksResource = ClassPathResource("data/talks_$year.json")
         val talks: List<Talk> = objectMapper.readValue(talksResource.inputStream)
         talks.forEach { save(it).block() }
