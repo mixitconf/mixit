@@ -36,7 +36,6 @@ class TalkRepository(
         if (count().block() == 0L) {
             (2012.. CURRENT_EVENT.toInt()).forEach { loadYear(it) }
         }
-        loadYear(2023)
     }
 
     private fun loadYear(year: Int) {
