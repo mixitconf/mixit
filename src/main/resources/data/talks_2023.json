@@ -289,7 +289,7 @@
     "title": "Tremplin 1",
     "summary": "",
     "speakerIds": [
-      "106329914971209052078"
+      "TBA"
     ],
     "language": "FRENCH",
     "addedAt": "2023-02-13T20:50:31.213675",
@@ -491,7 +491,7 @@
     "title": "Spring Framework 6.0",
     "summary": "La nouvelle génération de Spring Framework est disponible !\nSpring Framework 6.0 amène de nouveaux pré-requis qui permettent à l'écosystème Spring d'aller de l'avant: Java 17, Jakarta EE 9+. C'est la fondation pour Spring Boot 3.0 et le commencement de nouveaux thèmes majeurs, tels que AOT/Native et Observability.\nPendant cette présentation, Stéphane couvrira les thèmes majeurs de cette nouvelle release:\n* La nouvelle baseline avec Java 7 et Jakarta EE 9.\n* Le support AOT qui permet de compiler vos applications Spring en natif avec GraalVM.\n* L'amélioration de l'observabilité, et ce que cela signifie pour les fonctionnalités de base telles que RestTemplate, contrôleurs web, etc.\n* Le support de clients par interface pour HTTP et d'autres transports.\n* Le support de problem details (RFC 7807).",
     "speakerIds": [
-      "106329914971209052078"
+      "snicoll"
     ],
     "language": "FRENCH",
     "addedAt": "2023-02-13T20:50:31.216587",
@@ -511,7 +511,7 @@
     "title": "UX / TDAH (à définir!)",
     "summary": "",
     "speakerIds": [
-      "106329914971209052078"
+      "Gladysdit"
     ],
     "language": "FRENCH",
     "addedAt": "2023-02-13T20:50:31.216758",
@@ -571,7 +571,7 @@
     "title": "Choisir la bonne technologie mobile pour votre projet",
     "summary": "Si tout au début du développement mobile (2008) et jusqu’à peu, nous n’avions que les solutions officielles fournies par les constructeurs qui étaient considérées comme des solutions sérieuses pour réaliser des applications mobiles, en 2021 les possibilités se sont multipliées. Google et Apple ont introduit des solutions pour réaliser l’UI de façon déclarative (Jetpack Compose, Swift UI), React Native a une grande part de marché, Flutter ne cesse de croître, et des solutions comme KMM (Kotlin Multiplatform Mobile) permettent la mutualisation du code métier entre les deux plateformes. Sur quelle solution il faut se lancer en tant que dev ? En tant que business ? Dans ce talk, nous vous exposerons des éléments pour vous aider dans votre choix en répondant aux questions suivantes :\nPourquoi et comment chaque solution a été créée ? Sur quelles bases ? Par qui ?\nComment ça marche ? Comment le code est exécuté ? Quelles sont les limitations techniques ?\nQuelles sont les possibilités pour intégrer ces technologies dans un nouveau projet ? Dans un projet existant ? Peut-on mélanger ces technos ?",
     "speakerIds": [
-      "106329914971209052078"
+      "elaine.diasbatista"
     ],
     "language": "FRENCH",
     "addedAt": "2023-02-13T20:50:31.217342",
@@ -894,7 +894,7 @@
     "title": "Tremplin 2",
     "summary": "",
     "speakerIds": [
-      "106329914971209052078"
+      "TBA"
     ],
     "language": "FRENCH",
     "addedAt": "2023-02-13T20:50:31.220737",
@@ -1057,7 +1057,7 @@
     "title": "WASM",
     "summary": "",
     "speakerIds": [
-      "106329914971209052078"
+      "benjamin.bouvier"
     ],
     "language": "FRENCH",
     "addedAt": "2023-02-13T20:50:31.222863",

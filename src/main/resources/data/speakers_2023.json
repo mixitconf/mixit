@@ -590,7 +590,7 @@
     "tokenLifeTime": "PT-24H-24.961219S"
   },
   {
-    "login": "106329914971209052078",
+    "login": "TBA",
     "firstname": "TBA",
     "lastname": "TBA",
     "email": "NWZ188kL91I2sJPlaprtN33JqJQM7KS+nfye3zNtZQs=",
@@ -958,7 +958,7 @@
     "tokenLifeTime": "PT-24H-23.311887S"
   },
   {
-    "login": "106329914971209052078",
+    "login": "snicoll",
     "firstname": "Stéphane",
     "lastname": "Nicoll",
     "email": "NWZ188kL91I2sJPlaprtN33JqJQM7KS+nfye3zNtZQs=",
@@ -981,7 +981,7 @@
     "tokenLifeTime": "PT-24H-23.308623S"
   },
   {
-    "login": "106329914971209052078",
+    "login": "Gladysdit",
     "firstname": "Gladys",
     "lastname": "Diandoki",
     "email": "NWZ188kL91I2sJPlaprtN33JqJQM7KS+nfye3zNtZQs=",
@@ -1062,7 +1062,7 @@
     "tokenLifeTime": "PT-24H-23.013254S"
   },
   {
-    "login": "106329914971209052078",
+    "login": "elaine.diasbatista",
     "firstname": "Elaine",
     "lastname": "Dias Batista",
     "email": "NWZ188kL91I2sJPlaprtN33JqJQM7KS+nfye3zNtZQs=",
@@ -1695,29 +1695,6 @@
     "tokenLifeTime": "PT-24H-20.317305S"
   },
   {
-    "login": "106329914971209052078",
-    "firstname": "TBA",
-    "lastname": "TBA",
-    "email": "NWZ188kL91I2sJPlaprtN33JqJQM7KS+nfye3zNtZQs=",
-    "company": null,
-    "description": {
-      "FRENCH": "",
-      "ENGLISH": ""
-    },
-    "emailHash": null,
-    "photoUrl": "/images/speakers/2023/aude.jpg",
-    "photoShape": null,
-    "role": "STAFF",
-    "links": [
-    ],
-    "legacyId": null,
-    "tokenExpiration": "2023-02-12T20:30:37.164659",
-    "token": "53b68852-ac1d-4636-9bc1-da4270466038",
-    "externalAppToken": null,
-    "newsletterSubscriber": false,
-    "tokenLifeTime": "PT-24H-20.315437S"
-  },
-  {
     "login": "alves.mckl",
     "firstname": "Mickael",
     "lastname": "Alves",
@@ -2052,7 +2029,7 @@
     "tokenLifeTime": "PT-24H-18.775441S"
   },
   {
-    "login": "106329914971209052078",
+    "login": "benjamin.bouvier",
     "firstname": "Benjamin",
     "lastname": "Bouvier",
     "email": "NWZ188kL91I2sJPlaprtN33JqJQM7KS+nfye3zNtZQs=",
