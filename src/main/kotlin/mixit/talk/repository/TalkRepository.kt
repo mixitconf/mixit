@@ -36,10 +36,12 @@ class TalkRepository(
         if (count().block() == 0L) {
             (2012.. CURRENT_EVENT.toInt()).forEach { loadYear(it) }
         }
+        loadYear(2023)
     }
 
     private fun loadYear(year: Int) {
         if(year == CURRENT_EVENT.toInt()) {
+            logger.info("Refresh 2023 speaker data")
             userRepository.initSpeakerFor2023()
         }
         val talksResource = ClassPathResource("data/talks_$year.json")
