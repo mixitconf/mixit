@@ -96,6 +96,7 @@
     </div>
 {{/talks.entrySet}}
 {{#hasTalk}}
+    {{^isCurrent}}
     <div class="container mxt-wrapper--page-content mb-4">
         <div class="container mb-2">
             <div class="row mxt-home-round-header" style="justify-content: center;">
@@ -131,6 +132,7 @@
             </div>
         </div>
     </div>
+    {{/isCurrent}}
     <div class="container mxt-wrapper--page-content pb-4">
         <!-- Area used when user want to see the agenda view -->
         {{> talks-day-tab-criteria }}
