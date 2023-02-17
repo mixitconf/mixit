@@ -1,6 +1,7 @@
 package mixit.talk.handler
 
 import kotlinx.coroutines.reactor.awaitSingle
+import mixit.MixitApplication.Companion.CURRENT_EVENT
 import mixit.MixitApplication.Companion.TIMEZONE
 import mixit.MixitProperties
 import mixit.event.model.EventImagesService
@@ -175,7 +176,8 @@ class TalkHandler(
                     "singleImage" to (config.url != null),
                     "previousImage" to closestImages?.first,
                     "nextImage" to closestImages?.second,
-                    "hasTalk" to talks.isNotEmpty()
+                    "hasTalk" to talks.isNotEmpty(),
+                    "isCurrent" to (config.year == CURRENT_EVENT.toInt())
                 )
             )
             .awaitSingle()
