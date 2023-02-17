@@ -120,8 +120,7 @@ class AdminUserHandler(
             firstname = formData["firstname"]!!,
             lastname = formData["lastname"]!!,
             email = formData["email"]?.let { cryptographer.encrypt(it) },
-            emailHash = if (formData["photoUrl"] == null) formData["emailHash"]
-                ?: formData["email"]?.encodeToMd5() else null,
+            emailHash = if (formData["photoUrl"] == null) formData["email"]?.encodeToMd5() else null,
             photoUrl = formData["photoUrl"]?.let { sanitizeImage(it) },
             photoShape = formData["photoShape"]?.let { PhotoShape.valueOf(it) },
             company = formData["company"],
