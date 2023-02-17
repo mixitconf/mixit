@@ -42,8 +42,8 @@ data class User(
         fun mixit(): User =
             User(login = MIXIT, firstname = MIXIT, lastname = MIXIT, email = MIXIT_EMAIL)
     }
-    val tokenLifeTime: Duration
-        get() = Duration.between(LocalDateTime.now(), tokenExpiration)
+    fun tokenLifeTime(): Duration =
+        Duration.between(LocalDateTime.now(), tokenExpiration)
 }
 
 enum class PhotoShape {

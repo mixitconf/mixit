@@ -99,7 +99,7 @@ class AuthenticationService(
         .from(AUTHENT_COOKIE, user.jsonToken(cryptographer))
         .secure(properties.baseUri.startsWith("https"))
         .httpOnly(true)
-        .maxAge(user.tokenLifeTime)
+        .maxAge(user.tokenLifeTime())
         .build()
 
     /**
