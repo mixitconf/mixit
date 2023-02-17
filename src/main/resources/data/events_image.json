@@ -1,6 +1,6 @@
 [
   {
-    "event": 2012,
+    "event": "2012",
     "sections": [
       {
         "sectionId": "mixit12",
@@ -876,7 +876,7 @@
     ]
   },
   {
-    "event": 2013,
+    "event": "2013",
     "sections": [
       {
         "sectionId": "mixit13",
@@ -1907,7 +1907,7 @@
     ]
   },
   {
-    "event": 2014,
+    "event": "2014",
     "sections": [
       {
         "sectionId": "mixit14",
@@ -3183,7 +3183,7 @@
     ]
   },
   {
-    "event": 2015,
+    "event": "2015",
     "sections": [
       {
         "sectionId": "mixit15-day1",
@@ -4726,7 +4726,7 @@
     ]
   },
   {
-    "event": 2016,
+    "event": "2016",
     "sections": [
       {
         "sectionId": "mixit16-conf",
@@ -5654,7 +5654,7 @@
     ]
   },
   {
-    "event": 2017,
+    "event": "2017",
     "sections": [
       {
         "sectionId": "mixit17-event",
@@ -8246,7 +8246,7 @@
     ]
   },
   {
-    "event": 2018,
+    "event": "2018",
     "sections": [
       {
         "sectionId": "mixit18-day1",
@@ -9444,11 +9444,72 @@
             "mustacheTemplate": null
           }
         ]
+      },
+      {
+        "sectionId": "mixit18-facilitation",
+        "i18n": "images.mixit18.facilitation",
+        "images": [
+          {
+            "name": "9A30DC76-15FD-4D71-816F-D28EF3FC6161.jpeg",
+            "talkId": "null",
+            "mustacheTemplate": "None"
+          },
+          {
+            "name": "9E7F9841-29C7-4922-9B8C-4010C3D98810.jpeg",
+            "talkId": "null",
+            "mustacheTemplate": "None"
+          },
+          {
+            "name": "17E66C2E-CB0C-4EC0-AE1A-3BC061A61808.jpeg",
+            "talkId": "null",
+            "mustacheTemplate": "None"
+          },
+          {
+            "name": "62A5C6B0-D18A-4817-B8B3-FAA8D19C6B3E.jpeg",
+            "talkId": "null",
+            "mustacheTemplate": "None"
+          },
+          {
+            "name": "3754EB6A-AF12-4049-9CEA-30FCC78BEF1F.jpeg",
+            "talkId": "null",
+            "mustacheTemplate": "None"
+          },
+          {
+            "name": "C28BDA8A-697B-4DD5-89CE-1CABA9C908DB.jpeg",
+            "talkId": "null",
+            "mustacheTemplate": "None"
+          },
+          {
+            "name": "C62BDA60-5687-4910-874B-8F9EDE207688.jpeg",
+            "talkId": "null",
+            "mustacheTemplate": "None"
+          },
+          {
+            "name": "C9532E3D-FC62-42A5-83C9-6BEE717AE030.jpeg",
+            "talkId": "null",
+            "mustacheTemplate": "None"
+          },
+          {
+            "name": "EE074062-A792-4227-9F91-16BEF120B868.jpeg",
+            "talkId": "null",
+            "mustacheTemplate": "None"
+          },
+          {
+            "name": "F4D70434-AF33-4D4B-85A0-5549CF3F5E37.jpeg",
+            "talkId": "null",
+            "mustacheTemplate": "None"
+          },
+          {
+            "name": "F7342945-34F8-4BF0-BEC2-22C01DE1EED4.jpeg",
+            "talkId": "null",
+            "mustacheTemplate": "None"
+          }
+        ]
       }
     ]
   },
   {
-    "event": 2019,
+    "event": "2019",
     "sections": [
       {
         "sectionId": "mixit19-cybele",
@@ -11606,11 +11667,16 @@
             "mustacheTemplate": null
           }
         ]
+      },
+      {
+        "sectionId": "mixit19-facilitation",
+        "i18n": "images.mixit19.facilitation",
+        "images": []
       }
     ]
   },
   {
-    "event": 2022,
+    "event": "2022",
     "sections": [
       {
         "sectionId": "mixit22-day1",
@@ -13175,6 +13241,11 @@
             "mustacheTemplate": null
           }
         ]
+      },
+      {
+        "sectionId": "mixit22-facilitation",
+        "i18n": "images.mixit22.facilitation",
+        "images": []
       }
     ]
   }
