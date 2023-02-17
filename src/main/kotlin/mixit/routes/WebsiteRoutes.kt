@@ -224,6 +224,8 @@ class WebsiteRoutes(
             POST("/admin/mixette-donation", adminMixetteHandler::adminSaveDonation)
             POST("/admin/events", adminEventHandler::adminSaveEvent)
             POST("/admin/events/images", adminEventImagesHandler::adminSaveEventImages)
+            POST("/admin/events/images/{eventId}/sections/create", adminEventImagesHandler::adminCreateEventImagesSection)
+            POST("/admin/events/images/{eventId}/sections/delete", adminEventImagesHandler::adminDeleteEventImagesSection)
             POST("/admin/events/images/{eventId}/sections/{sectionId}/images/create", adminEventImagesHandler::adminCreateEventImagesSectionImage)
             POST("/admin/events/images/{eventId}/sections/{sectionId}/images/delete", adminEventImagesHandler::adminDeleteEventImagesSectionImage)
             POST("/admin/events/images/{eventId}/sections/{sectionId}/images", adminEventImagesHandler::adminUpdateEventImagesSectionImage)
