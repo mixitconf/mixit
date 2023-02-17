@@ -45,13 +45,6 @@ class UserRepository(
 
     }
 
-    fun initSpeakerFor2023() {
-        val speakersResource = ClassPathResource("data/speakers_2023.json")
-        val users: List<User> = objectMapper.readValue(speakersResource.inputStream)
-        users.forEach { save(it).block() }
-        logger.info("Speaker data initialization complete")
-    }
-
     suspend fun findFullText(criteria: List<String>): List<User> {
         val textCriteria = TextCriteria()
         criteria.forEach { textCriteria.matching(it) }
