@@ -59,7 +59,7 @@
                 <div class="card m-1" style="height: 99%" >
                     <div class="card-body">
                         {{#pictures}}
-                            <img class="mxt-img--speakers"
+                            <img class="mxt-img--speakers mxt-img--lazyload"
                                  src="https://raw.githubusercontent.com/mixitconf/mixitconf-images/main/{{year}}/{{sectionId}}/{{name}}">
                         {{/pictures}}
                         <h5 class="card-title pt-2">
@@ -124,8 +124,5 @@
 {{#connected}}
     <input type="hidden" id="email" value="{{email}}"/>
 {{/connected}}
-
-<script src="/js/talks.js"></script>
-<script async src="/js/images.js"></script>
 
 {{> footer}}
