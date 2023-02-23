@@ -53,7 +53,7 @@ class UserJsonHandler(
     suspend fun findSpeakerByEventId(req: ServerRequest): ServerResponse =
         service
             .findByEvent(req.pathVariable("year"))
-            .map { talk -> talk.speakers.map { it.anonymize() }.distinct() }
+            .flatMap { talk -> talk.speakers.map { it.anonymize() }.distinct() }
             .let { ok().json().bodyValueAndAwait(it) }
 
     suspend fun create(req: ServerRequest): ServerResponse =
