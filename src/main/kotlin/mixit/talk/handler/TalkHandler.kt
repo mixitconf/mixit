@@ -366,7 +366,10 @@ class TalkHandler(
         } else {
             // For other we return all albums but with only the first image
             eventImagesService.findOneOrNull(config.year.toString()).let { images ->
-                images?.copy(sections = images.sections.map { it.copy(pictures = listOf(it.pictures.first())) })
+                images?.copy(
+                    sections = images.sections.map { section ->
+                        section.copy(pictures = section.pictures.firstOrNull()?.let { listOf(it) } ?: emptyList())
+                    })
             }
         }
 
