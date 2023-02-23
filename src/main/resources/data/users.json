@@ -7528,7 +7528,7 @@
         "links": [
             {
                 "name": "Site web",
-                "url": "http://www.hiit-consulting.fr"
+                "url": "https://www.hiit-consulting.fr"
             },
             {
                 "name": "Linked In",
@@ -7537,7 +7537,7 @@
         ],
         "login": "hiit",
         "newsletterSubscriber": false,
-        "photoShape": null,
+        "photoShape": "Square",
         "photoUrl": "https://mixitconf.org/images/sponsors/logo-hiit.svg",
         "role": "USER",
         "token": "",
@@ -34230,22 +34230,31 @@
         "tokenExpiration": "2018-01-01T00:00:00"
     },
     {
-        "company": null,
+        "company": "SFEIR",
         "description": {
-            "ENGLISH": "",
-            "FRENCH": ""
+            "ENGLISH": "Elaine is a Senior Staff Engineer at SFEIR where she works on projects including mobile technologies since 2013. She has worked on several projects in native Android/iOS and Flutter. She&#39;s a GDE for the Google Assistant, Flutter and Dart",
+            "FRENCH": "Elaine est Senior Staff Engineer chez SFEIR, o\u00f9 elle travaille sur des projets autour des technologies mobiles depuis 2013. Elle a pu r\u00e9aliser plusieurs projets Android et iOS, en natif et avec Flutter. Elle est GDE pour le Google Assistant et Flutter/Dart."
         },
         "email": "DEuVYT78isxkN1YYhIuRP7ViJogfcbah6zXKGDiOJSE=",
-        "emailHash": "cb3c988ada1925dbb88a2b1f11c60f3f",
+        "emailHash": null,
         "externalAppToken": null,
         "firstname": "Elaine",
         "lastname": "Dias Batista",
         "legacyId": null,
-        "links": [],
+        "links": [
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/elainedbatista"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/elaine-dias-batista/"
+            }
+        ],
         "login": "elaine.diasbatista",
         "newsletterSubscriber": false,
         "photoShape": "Square",
-        "photoUrl": null,
+        "photoUrl": "https://drive.google.com/file/d/1cAvCURt6xc8BjIWgUTEQiBjeiyrSSYNY/view?usp=sharing",
         "role": "USER",
         "token": "",
         "tokenExpiration": "2018-01-01T00:00:00"
@@ -35105,8 +35114,8 @@
     {
         "company": null,
         "description": {
-            "ENGLISH": "",
-            "FRENCH": ""
+            "ENGLISH": "L'\u00e9galit\u00e9 femmes-hommes a \u00e9t\u00e9 depuis toujours le fil rouge de la carri\u00e8re de Sophie Gourion. Apr\u00e8s 10 ans pass\u00e9s chez L'Or\u00e9al, elle utilise sa plume pendant 3 ans dans de nombreux m\u00e9dias pour faire progresser l'\u00e9galit\u00e9. Rep\u00e9r\u00e9e par la ministre \u00e0 cette occasion, elle int\u00e8gre alors le minist\u00e8re des familles, de l'enfance et des droits des femmes en tant conseill\u00e8re communication. Une exp\u00e9rience tr\u00e8s riche qui lui apporte une expertise et une visibilit\u00e9 suppl\u00e9mentaires. Elle publie en 2019 un livre pour enfant \"Les filles et les gar\u00e7ons peuvent le faire aussi\" qui d\u00e9construit les st\u00e9r\u00e9otypes de genre. V\u00e9ritable succ\u00e8s de librairie, il a \u00e9t\u00e9 vendu \u00e0 ce jour \u00e0 25 000 exemplaires et traduit en 5 langues. Depuis 5 ans, elle accompagne les femmes en tant que coach en gestion de carri\u00e8re. Elle int\u00e8gre en 2022 l'association DesCodeuses en tant que responsable de l'insertion professionnelle. Son r\u00f4le : accompagner les femmes issues des quartiers populaires dans leur reconversion vers les m\u00e9tiers du num\u00e9rique. Un grand succ\u00e8s puisqu\u2019aujourd\u2019hui 90% des apprenantes sont en poste et ont effectu\u00e9 un bond de salaire de 40%.",
+            "FRENCH": "L'\u00e9galit\u00e9 femmes-hommes a \u00e9t\u00e9 depuis toujours le fil rouge de la carri\u00e8re de Sophie Gourion. Apr\u00e8s 10 ans pass\u00e9s chez L'Or\u00e9al, elle utilise sa plume pendant 3 ans dans de nombreux m\u00e9dias pour faire progresser l'\u00e9galit\u00e9. Rep\u00e9r\u00e9e par la ministre \u00e0 cette occasion, elle int\u00e8gre alors le minist\u00e8re des familles, de l'enfance et des droits des femmes en tant conseill\u00e8re communication. Une exp\u00e9rience tr\u00e8s riche qui lui apporte une expertise et une visibilit\u00e9 suppl\u00e9mentaires. Elle publie en 2019 un livre pour enfant \"Les filles et les gar\u00e7ons peuvent le faire aussi\" qui d\u00e9construit les st\u00e9r\u00e9otypes de genre. V\u00e9ritable succ\u00e8s de librairie, il a \u00e9t\u00e9 vendu \u00e0 ce jour \u00e0 25 000 exemplaires et traduit en 5 langues. Depuis 5 ans, elle accompagne les femmes en tant que coach en gestion de carri\u00e8re. Elle int\u00e8gre en 2022 l'association DesCodeuses en tant que responsable de l'insertion professionnelle. Son r\u00f4le : accompagner les femmes issues des quartiers populaires dans leur reconversion vers les m\u00e9tiers du num\u00e9rique. Un grand succ\u00e8s puisqu\u2019aujourd\u2019hui 90% des apprenantes sont en poste et ont effectu\u00e9 un bond de salaire de 40%."
         },
         "email": "b9LHIDMgVreUl7JBHYQOQfSUnycf6Et/iV7v0VMAXYY=",
         "emailHash": "27a1980e72501363400a47d9ef1068b5",
@@ -35179,6 +35188,171 @@
         "newsletterSubscriber": true,
         "photoShape": "Square",
         "photoUrl": "https://mixitconf.org/images/sponsors/logo-wisper.svg",
+        "role": "USER",
+        "token": "",
+        "tokenExpiration": "2018-01-01T00:00:00"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "",
+            "FRENCH": ""
+        },
+        "email": "3bUhnWdU3U/705mn/4dO8ZPE5TQNyp9rPZ+gIZJx9Z9Dzg0xzRnbFUN2qoVTlIaG",
+        "emailHash": null,
+        "externalAppToken": null,
+        "firstname": "Guillaume",
+        "lastname": "Saint-Etienne",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "twitter",
+                "url": "http://twitter.com/guillaume_agile"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/guillaumese"
+            },
+            {
+                "name": "blog",
+                "url": "https://dev.to/guillaume_agile"
+            }
+        ],
+        "login": "guillaume.saint.etienne",
+        "newsletterSubscriber": false,
+        "photoShape": "Square",
+        "photoUrl": "https://mixitconf.org/images/speakers/2023/guillaume.saint.etienne.jpg",
+        "role": "USER",
+        "token": "",
+        "tokenExpiration": "2018-01-01T00:00:00"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "cFMEDOBbVUVMOts6L7kPHA18p0k5AsrOOJ44Mv20xXw=",
+        "emailHash": null,
+        "externalAppToken": null,
+        "firstname": "Nabil",
+        "lastname": "Benhammou",
+        "legacyId": null,
+        "links": [],
+        "login": "nbenhammou",
+        "newsletterSubscriber": false,
+        "photoShape": null,
+        "photoUrl": null,
+        "role": "USER",
+        "token": "",
+        "tokenExpiration": "2018-01-01T00:00:00"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "onJ5zoLPRwpWAsz+n5g49W0ESjdyZAd7rZGDVjVFaZs=",
+        "emailHash": null,
+        "externalAppToken": null,
+        "firstname": "Charmaine",
+        "lastname": "Charmaine",
+        "legacyId": null,
+        "links": [],
+        "login": "c29payne",
+        "newsletterSubscriber": false,
+        "photoShape": null,
+        "photoUrl": null,
+        "role": "USER",
+        "token": "",
+        "tokenExpiration": "2018-01-01T00:00:00"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "Jean-Baptiste Aubin est ma\u00eetre de conf\u00e9rence en statistique \u00e0 l'INSA Lyon et \u00e0 l'Institut Camille Jordan, est passionn\u00e9 de m\u00e9diation scientifique et a \u00e9t\u00e9 directeur de la Maison des math\u00e9matiques et de l'informatique de Lyon.",
+            "FRENCH": "Jean-Baptiste Aubin est ma\u00eetre de conf\u00e9rence en statistique \u00e0 l'INSA Lyon et \u00e0 l'Institut Camille Jordan, est passionn\u00e9 de m\u00e9diation scientifique et a \u00e9t\u00e9 directeur de la Maison des math\u00e9matiques et de l'informatique de Lyon."
+        },
+        "email": "boEtbVJ2xGEJfCr213vIEitEmu+CLGhQRLRQzYq9Wirhh/Ur5975mJDeWW5cGgKY",
+        "emailHash": "fb39be501cf7b5a941503410c3e74ea8",
+        "externalAppToken": null,
+        "firstname": "Jean-Baptiste",
+        "lastname": "Aubin",
+        "legacyId": null,
+        "links": [],
+        "login": "jbaubin",
+        "newsletterSubscriber": false,
+        "photoShape": "Square",
+        "photoUrl": null,
+        "role": "USER",
+        "token": "",
+        "tokenExpiration": "2018-01-01T00:00:00"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "GFrdh8OR2py+OXzBGoGjZOY1daVEV5q/jDR2WUmEIIM=",
+        "emailHash": null,
+        "externalAppToken": null,
+        "firstname": "Fabrice",
+        "lastname": "Bouteiller",
+        "legacyId": null,
+        "links": [],
+        "login": "fabrice-bouteiller",
+        "newsletterSubscriber": true,
+        "photoShape": null,
+        "photoUrl": null,
+        "role": "USER",
+        "token": "",
+        "tokenExpiration": "2018-01-01T00:00:00"
+    },
+    {
+        "company": "Squadracer",
+        "description": {
+            "ENGLISH": "\ud83d\udcbb Streamer, Developer & Speaker @Squadracer \ud83c\udf89\r\n\r\nAtteint d'autodidaxie depuis 6 ans.",
+            "FRENCH": "\ud83d\udcbb Streamer, Developer & Speaker @Squadracer \ud83c\udf89\r\n\r\nAtteint d'autodidaxie depuis 6 ans."
+        },
+        "email": "z3329e5r9ZbugG7kVlo7uz4mMobEXI5fc58gw3yR+lA=",
+        "emailHash": null,
+        "externalAppToken": null,
+        "firstname": "Cl\u00e9ment",
+        "lastname": "Avenel",
+        "legacyId": null,
+        "links": [
+            {
+                "name": "twitter",
+                "url": "https://twitter.com/ClementAvenel"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/clement-avenel/"
+            },
+            {
+                "name": "squadracer",
+                "url": "https://squadracer.com/"
+            },
+            {
+                "name": "twitch",
+                "url": "https://www.twitch.tv/squadracer"
+            }
+        ],
+        "login": "clement.avenel",
+        "newsletterSubscriber": false,
+        "photoShape": "Square",
+        "photoUrl": "https://mixitconf.org/images/speakers/2023/clement.avenel.jpg",
+        "role": "USER",
+        "token": "",
+        "tokenExpiration": "2018-01-01T00:00:00"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "EIViCQ6PLtde8yGnAiiofCqRSiJxNDyWe3M5sBmsCnU=",
+        "emailHash": null,
+        "externalAppToken": null,
+        "firstname": "Lee",
+        "lastname": "Govan",
+        "legacyId": null,
+        "links": [],
+        "login": "lgovan",
+        "newsletterSubscriber": false,
+        "photoShape": null,
+        "photoUrl": null,
         "role": "USER",
         "token": "",
         "tokenExpiration": "2018-01-01T00:00:00"
