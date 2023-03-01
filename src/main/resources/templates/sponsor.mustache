@@ -6,7 +6,7 @@
             <picture>
                 <source srcset="{{sponsor.photoUrl}}" type="{{sponsor.logoType}}" alt="{{sponsor.company}}"
                         class="mxt-img--sponsors">
-                <img src="{{sponsor.photoUrl}}" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}"
+                <img data-src="{{sponsor.photoUrl}}" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}"
                      alt="{{sponsor.company}}" class="mxt-img--sponsors mxt-img--lazyload">
             </picture>
         {{/sponsor.isAbsoluteLogo}}
@@ -14,7 +14,7 @@
             <picture>
                 <source srcset="{{sponsor.photoUrl}}" type="{{sponsor.logoType}}" alt="{{sponsor.company}}"
                         class="mxt-img--sponsors">
-                <img src="{{sponsor.photoUrl}}"
+                <img src="{{sponsor.photoUrl}}" data-src="{{sponsor.photoUrl}}"
                      id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}} alt="{{sponsor.company}}"
                      class="mxt-img--sponsors mxt-img--lazyload">
             </picture>
