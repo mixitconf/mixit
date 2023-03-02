@@ -74,6 +74,7 @@ class TalkService(
         return CachedTalk(talk, speakers)
     }
 
+
     fun deleteOne(id: String) =
         talkRepository.deleteOne(id).doOnSuccess { cache.invalidateAll() }
 }

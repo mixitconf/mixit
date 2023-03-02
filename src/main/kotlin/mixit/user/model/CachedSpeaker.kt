@@ -13,7 +13,8 @@ data class CachedSpeaker(
     val emailHash: String?,
     val description: Map<Language, String>,
     val links: List<Link>,
-    val year: Int
+    val year: Int,
+    val email: String?
 ) {
     constructor(user: User, year: Int = MixitApplication.CURRENT_EVENT.toInt()) : this(
         user.login,
@@ -24,14 +25,15 @@ data class CachedSpeaker(
         user.emailHash,
         user.description.mapValues { it.value.toHTML() },
         user.links,
-        year
+        year,
+        user.email
     )
 
     fun toUser() = User(
         login,
         firstname,
         lastname,
-        null,
+        email,
         company,
         description,
         emailHash,

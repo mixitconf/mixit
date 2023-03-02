@@ -114,14 +114,14 @@
                             <a href="{{localePrefix}}/{{event}}/medias/images/{{sectionId}}?url={{nextImage}}" class="btn btn-outline-primary">&gt;</a>
                         {{/nextImage}}
                     </div>
-                    <img class="mxt-img--speakers card-image mxt-img--lazyload"
-                         data-src="https://raw.githubusercontent.com/mixitconf/mixitconf-images/main/{{year}}/{{sectionId}}/{{name}}">
+                    <img class="mxt-img--speakers card-image"
+                         src="https://raw.githubusercontent.com/mixitconf/mixitconf-images/main/{{year}}/{{sectionId}}/{{name}}">
                 </div>
                 {{/singleImage}}
                 {{^singleImage}}
                 <div class="col-12 col-lg-4 col-md-6">
                     <div class="card m-1 card-image-container">
-                        <img class="mxt-img--speakers card-image mxt-img--lazyload"
+                        <img class="mxt-img--speakers card-image"
                              src="https://raw.githubusercontent.com/mixitconf/mixitconf-images/main/{{year}}/{{sectionId}}/{{name}}">
 
                         <div class="text-center card-image-link">
