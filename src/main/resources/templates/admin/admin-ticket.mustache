@@ -6,6 +6,28 @@
     <p class="text-center mxt-text--page-title">{{#i18n}}admin.ticket.text{{/i18n}}</p>
 </div>
 
+<div class="container">
+    <div class="row">
+        <form action="/admin/ticket/import/staff" method="post" class="col text-center"
+              onsubmit="return confirm('Are you sure to import staff members ?');">
+            <input type="submit" class="btn btn-primary mxt-btn-primary" value="Import staff"/>
+        </form>
+        <form action="/admin/ticket/import/volunteers" method="post" class="col text-center"
+              onsubmit="return confirm('Are you sure to import volunteer members ?');">
+            <input type="submit" class="btn btn-primary mxt-btn-primary" value="Import volunteers"/>
+        </form>
+        <form action="/admin/ticket/import/speakers" method="post" class="col text-center"
+              onsubmit="return confirm('Are you sure to import speakers ?');">
+            <input type="submit" class="btn btn-primary mxt-btn-primary" value="Import speakers"/>
+        </form>
+        <form action="/admin/ticket/import/sponsors" method="post" class="col text-center"
+              onsubmit="return confirm('Are you sure to import sponsors ?');">
+            <input type="submit" class="btn btn-primary mxt-btn-primary" value="Import sponsors"/>
+        </form>
+    </div>
+
+</div>
+
 <div class="container mxt-wrapper--page-content">
     <p>{{#i18n}}admin.ticket.count{{/i18n}} : <b>{{tickets.size}}</b>
         | <a href="/admin/ticket/create">{{#i18n}}common.actions.create{{/i18n}}</a>

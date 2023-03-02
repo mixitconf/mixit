@@ -6,8 +6,8 @@
             <picture>
                 <source srcset="{{sponsor.photoUrl}}" type="{{sponsor.logoType}}" alt="{{sponsor.company}}"
                         class="mxt-img--sponsors">
-                <img data-src="{{sponsor.photoUrl}}" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}"
-                     alt="{{sponsor.company}}" class="mxt-img--sponsors mxt-img--lazyload">
+                <img src="{{sponsor.photoUrl}}" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}"
+                     alt="{{sponsor.company}}" class="mxt-img--sponsors">
             </picture>
         {{/sponsor.isAbsoluteLogo}}
         {{^sponsor.isAbsoluteLogo}}
