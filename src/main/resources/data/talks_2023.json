@@ -225,7 +225,7 @@
     {
         "addedAt": "2023-02-13T20:50:31.212",
         "description": "",
-        "end": "2023-04-13T13:20:00",
+        "end": "2023-04-13T13:40:00",
         "event": "2023",
         "format": "LIGHTNING_TALK",
         "id": "63ebb05fe87fb83515ebcfc4",
@@ -236,7 +236,7 @@
         "speakerIds": [
             "jean.couteau"
         ],
-        "start": "2023-04-13T13:00:00",
+        "start": "2023-04-13T13:20:00",
         "summary": "Depuis 2002, chez Code Lutin on a d\u00e9cid\u00e9 de vivre en anarchie. C'est bien beau tout \u00e7a, mais \u00e7a fonctionne comment ? C'est ce que je vais essayer de vous montrer avec les avantages et les inconv\u00e9nients de la d\u00e9marche.",
         "title": "C'est qui le patron ?",
         "topic": "team",
@@ -245,7 +245,7 @@
     {
         "addedAt": "2023-02-13T20:50:31.213",
         "description": "",
-        "end": "2023-04-13T13:20:00",
+        "end": "2023-04-13T13:40:00",
         "event": "2023",
         "format": "LIGHTNING_TALK",
         "id": "63ebb05fe87fb83515ebcfc5",
@@ -256,8 +256,8 @@
         "speakerIds": [
             "sonia.seddiki"
         ],
-        "start": "2023-04-13T13:00:00",
-        "summary": "Quand je parle de st\u00e9ganographie, j'ai en g\u00e9n\u00e9ral deux r\u00e9actions :\n    1. La st\u00e9ga-quoi ?\n2. Ah oui, la technique d'\u00e9criture rapide ! (non, c'est la st\u00e9nographie, \u00e7a \ud83d\ude09 !)\nLa st\u00e9ganographie, c'est un peu le jumeau cach\u00e9 de la cryptographie.\nLes deux cherchent \u00e0 prot\u00e9ger un message confidentiel.\nLa cryptographie chiffre le message, la st\u00e9ganographie le dissimule.\nJe vous propose de voir comment exploiter des \"objets num\u00e9riques du quotidien\", tels que des images, afin de faire transiter toutes sortes de donn\u00e9es au vu (mais pas au su) de tous !\n",
+        "start": "2023-04-13T13:20:00",
+        "summary": "Quand je parle de st\u00e9ganographie, j'ai en g\u00e9n\u00e9ral deux r\u00e9actions :\r\n    1. La st\u00e9ga-quoi ?\r\n2. Ah oui, la technique d'\u00e9criture rapide ! (non, c'est la st\u00e9nographie, \u00e7a \ud83d\ude09 !)\r\nLa st\u00e9ganographie, c'est un peu le jumeau cach\u00e9 de la cryptographie.\r\nLes deux cherchent \u00e0 prot\u00e9ger un message confidentiel.\r\nLa cryptographie chiffre le message, la st\u00e9ganographie le dissimule.\r\nJe vous propose de voir comment exploiter des \"objets num\u00e9riques du quotidien\", tels que des images, afin de faire transiter toutes sortes de donn\u00e9es au vu (mais pas au su) de tous !\r\n",
         "title": "Des secrets dans les pixels ! \u00c0 la d\u00e9couverte de la st\u00e9ganographie",
         "topic": "tech",
         "video": null
@@ -265,7 +265,7 @@
     {
         "addedAt": "2023-02-13T20:50:31.213",
         "description": "",
-        "end": "2023-04-13T13:20:00",
+        "end": "2023-04-13T13:40:00",
         "event": "2023",
         "format": "LIGHTNING_TALK",
         "id": "63ebb05fe87fb83515ebcfc6",
@@ -276,7 +276,7 @@
         "speakerIds": [
             "thomas.jarrand"
         ],
-        "start": "2023-04-13T13:00:00",
+        "start": "2023-04-13T13:20:00",
         "summary": "La randonn\u00e9e \u00e0 v\u00e9lo, c'est \u00e9conomique, \u00e9cologique, relaxant, d\u00e9paysant et c'est plus facile d'acc\u00e8s que ce que vous pourriez pensez. Alors on y va ?\r\nUn talk pour bien d\u00e9marrer, faire d\u00e9couvrir, chasser les id\u00e9es re\u00e7ues, partager des astuces et donner l'envie de p\u00e9daler !",
         "title": "Et si vos prochaines vacances se passaient \u00e0 v\u00e9lo ?",
         "topic": "aliens",
@@ -285,7 +285,7 @@
     {
         "addedAt": "2023-02-13T20:50:31.213",
         "description": "",
-        "end": "2023-04-13T13:20:00",
+        "end": "2023-04-13T13:40:00",
         "event": "2023",
         "format": "LIGHTNING_TALK",
         "id": "63ebb05fe87fb83515ebcfc7",
@@ -296,31 +296,31 @@
         "speakerIds": [
             "TBA"
         ],
-        "start": "2023-04-13T13:00:00",
-        "summary": "",
+        "start": "2023-04-13T13:20:00",
+        "summary": "TBA",
         "title": "Tremplin 1",
         "topic": "tech",
         "video": null
     },
     {
-        "addedAt": "2023-02-13T20:50:31.213",
-        "description": "",
+        "addedAt": "2023-02-13T20:50:31.212",
+        "description": "En 2018, Am\u00e9lia Matar et Perrine Legal d\u00e9cident de se lancer dans une aventure singuli\u00e8re : celle d'initier les jeunes enfants au num\u00e9rique et \u00e0 la technologie, mais sans aucun \u00e9cran. Inspir\u00e9es des travaux du MIT Media Lab et convaincues du besoin d'accompagner les nouvelles g\u00e9n\u00e9rations dans la compr\u00e9hension de ces outils, elles fondent COLORI, une approche p\u00e9dagogique originale et d\u00e9ploient partout en France des ateliers \u00e0 destination des \u00e9coles maternelles et primaires. \r\n\r\nDans ce talk, les deux fondatrices r\u00e9v\u00e8lent les sp\u00e9cificit\u00e9s de COLORI et font le bilan des 5000 heures d'ateliers anim\u00e9s ici et l\u00e0. Convictions \u00e9ducatives, anecdotes et neurosciences sont au programme de cette intervention !",
         "end": "2023-04-13T15:40:00",
         "event": "2023",
         "format": "TALK",
-        "id": "63ebb05fe87fb83515ebcfc8",
+        "id": "63ebb05fe87fb83515ebcfc3",
         "language": "FRENCH",
         "photoUrls": [],
         "room": "ROOM1",
-        "slug": "progresser-en-conception-avec-les-design-patterns",
+        "slug": "la-tech-des-3-ans-sans-ecran-le-pari-de-colori",
         "speakerIds": [
-            "byvernault",
-            "mlorrain"
+            "amelia",
+            "perrine"
         ],
         "start": "2023-04-13T14:50:00",
-        "summary": "Et si on te disait que tu es nul en dev ?\nLes Design patterns, c\u2019est probablement ton deuxi\u00e8me pire souvenir de cours d\u2019\u00e9cole (apr\u00e8s le cours de chimie du vendredi aprem bien sur). Sauf que maintenant que tu es dev, tu te rends bien compte que c\u2019est super dur de bien concevoir son code m\u00e9tier, surtout les premi\u00e8res ann\u00e9es. C\u2019est encore plus frustrant quand ton tech-lead te fait un live-coding avec un code tellement plus \u00e9l\u00e9gant que tu as envie de l\u2019encadrer. Secr\u00e8tement, tu te dis m\u00eame qu\u2019un jour, peut-\u00eatre, tu pourras faire aussi bien spontan\u00e9ment.\nM\u00eame si rien ne remplace l\u2019exp\u00e9rience, ma\u00eetriser les Design Patterns usuels est LE meilleur moyen de progresser tr\u00e8s vite en conception.\nDans ce talk, Mathilde et Benjamin sortent leur IDE et pour te montrer ceux qu\u2019ils utilisent le plus au quotidien dans leurs codebases respectives, pour que tu puisses te les approprier et gagner en level.",
-        "title": "Progresser en conception avec les Design Patterns",
-        "topic": "tech",
+        "summary": "Apprendre le code et la logique sans \u00e9cran.",
+        "title": "La Tech d\u00e8s 3 ans - sans \u00e9cran, le pari de COLORI",
+        "topic": "aliens",
         "video": null
     },
     {
@@ -376,10 +376,11 @@
         "room": "ROOM4",
         "slug": "developpeurs-euses-facilitez-vous-la-vie-en-re-apprenant-a-lire-",
         "speakerIds": [
-            "anthony-cassaigne"
+            "anthony-cassaigne",
+            "guillaume.saint.etienne"
         ],
         "start": "2023-04-13T14:50:00",
-        "summary": "Dans nos \u00e9coles, nous avons appris \u00e0 lire avant de savoir \u00e9crire. D'apr\u00e8s les m\u00e9thodes usuelles d'enseignement, Comprendre un texte, c\u2019est se faire une repr\u00e9sentation mentale coh\u00e9rente qui int\u00e8gre toutes les informations du texte. Ces principes s'appliquent tout aussi bien \u00e0 la compr\u00e9hension de n'importe quel code logiciel. Car nous avons tous fait l'exp\u00e9rience de lire du code qui ne nous appartenais pas ou m\u00eame nos propres productions.\nNos constats sont les suivants:\n    Il est souvent difficile et compliqu\u00e9 de lire ou de relire un code source.\nC'est une activit\u00e9 p\u00e9nible et d\u00e9motivante pour grand nombre des d\u00e9veloppeurs.\nEt si la raison ne tenait qu'a notre m\u00e9connaissance des m\u00e9canismes de fonctionnement de notre cerveau ?\nVenez explorer, exp\u00e9rimenter et apprendre comment fonctionne notre cerveau lors d'un atelier de lecture d'un code source Et tirez profit de ces nouvelles connaissances pour am\u00e9liorer vos capacit\u00e9s de lecture ainsi que la lisibilit\u00e9 de votre code source.\nL'atelier se base sur les exercices propos\u00e9s par Felienne Hermans dans son ouvrage \"The Programmer's Brain\".",
+        "summary": "Dans nos \u00e9coles, nous avons appris \u00e0 lire avant de savoir \u00e9crire. D'apr\u00e8s les m\u00e9thodes usuelles d'enseignement, Comprendre un texte, c\u2019est se faire une repr\u00e9sentation mentale coh\u00e9rente qui int\u00e8gre toutes les informations du texte. Ces principes s'appliquent tout aussi bien \u00e0 la compr\u00e9hension de n'importe quel code logiciel. Car nous avons tous fait l'exp\u00e9rience de lire du code qui ne nous appartenais pas ou m\u00eame nos propres productions.\r\nNos constats sont les suivants:\r\n    Il est souvent difficile et compliqu\u00e9 de lire ou de relire un code source.\r\nC'est une activit\u00e9 p\u00e9nible et d\u00e9motivante pour grand nombre des d\u00e9veloppeurs.\r\nEt si la raison ne tenait qu'a notre m\u00e9connaissance des m\u00e9canismes de fonctionnement de notre cerveau ?\r\nVenez explorer, exp\u00e9rimenter et apprendre comment fonctionne notre cerveau lors d'un atelier de lecture d'un code source Et tirez profit de ces nouvelles connaissances pour am\u00e9liorer vos capacit\u00e9s de lecture ainsi que la lisibilit\u00e9 de votre code source.\r\nL'atelier se base sur les exercices propos\u00e9s par Felienne Hermans dans son ouvrage \"The Programmer's Brain\".",
         "title": "D\u00e9veloppeurs\u00b7euses : facilitez-vous la vie en (re)apprenant \u00e0 lire.",
         "topic": "tech",
         "video": null
@@ -446,6 +447,27 @@
         "video": null
     },
     {
+        "addedAt": "2023-02-13T20:50:31.213",
+        "description": "",
+        "end": "2023-04-13T16:40:00",
+        "event": "2023",
+        "format": "TALK",
+        "id": "63ebb05fe87fb83515ebcfc8",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM2",
+        "slug": "progresser-en-conception-avec-les-design-patterns",
+        "speakerIds": [
+            "byvernault",
+            "mlorrain"
+        ],
+        "start": "2023-04-13T15:50:00",
+        "summary": "Et si on te disait que tu es nul en dev ?\r\nLes Design patterns, c\u2019est probablement ton deuxi\u00e8me pire souvenir de cours d\u2019\u00e9cole (apr\u00e8s le cours de chimie du vendredi aprem bien sur). Sauf que maintenant que tu es dev, tu te rends bien compte que c\u2019est super dur de bien concevoir son code m\u00e9tier, surtout les premi\u00e8res ann\u00e9es. C\u2019est encore plus frustrant quand ton tech-lead te fait un live-coding avec un code tellement plus \u00e9l\u00e9gant que tu as envie de l\u2019encadrer. Secr\u00e8tement, tu te dis m\u00eame qu\u2019un jour, peut-\u00eatre, tu pourras faire aussi bien spontan\u00e9ment.\r\nM\u00eame si rien ne remplace l\u2019exp\u00e9rience, ma\u00eetriser les Design Patterns usuels est LE meilleur moyen de progresser tr\u00e8s vite en conception.\r\nDans ce talk, Mathilde et Benjamin sortent leur IDE et pour te montrer ceux qu\u2019ils utilisent le plus au quotidien dans leurs codebases respectives, pour que tu puisses te les approprier et gagner en level.",
+        "title": "Progresser en conception avec les Design Patterns",
+        "topic": "tech",
+        "video": null
+    },
+    {
         "addedAt": "2023-02-13T20:50:31.215",
         "description": "",
         "end": "2023-04-13T16:40:00",
@@ -484,27 +506,6 @@
         "summary": "La nouvelle g\u00e9n\u00e9ration de Spring Framework est disponible !\r\nSpring Framework 6.0 am\u00e8ne de nouveaux pr\u00e9-requis qui permettent \u00e0 l'\u00e9cosyst\u00e8me Spring d'aller de l'avant: Java 17, Jakarta EE 9+. C'est la fondation pour Spring Boot 3.0 et le commencement de nouveaux th\u00e8mes majeurs, tels que AOT/Native et Observability.\r\nPendant cette pr\u00e9sentation, St\u00e9phane couvrira les th\u00e8mes majeurs de cette nouvelle release:\r\n* La nouvelle baseline avec Java 17 et Jakarta EE 9.\r\n* Le support AOT qui permet de compiler vos applications Spring en natif avec GraalVM.\r\n* L'am\u00e9lioration de l'observabilit\u00e9, et ce que cela signifie pour les fonctionnalit\u00e9s de base telles que RestTemplate, contr\u00f4leurs web, etc.\r\n* Le support de clients par interface pour HTTP et d'autres transports.\r\n* Le support de problem details (RFC 7807).",
         "title": "Spring Framework 6.0",
         "topic": "tech",
-        "video": null
-    },
-    {
-        "addedAt": "2023-02-13T20:50:31.212",
-        "description": "",
-        "end": "2023-04-13T17:50:00",
-        "event": "2023",
-        "format": "TALK",
-        "id": "63ebb05fe87fb83515ebcfc3",
-        "language": "FRENCH",
-        "photoUrls": [],
-        "room": "ROOM1",
-        "slug": "colori",
-        "speakerIds": [
-            "amelia",
-            "perrine"
-        ],
-        "start": "2023-04-13T17:00:00",
-        "summary": "Apprendre le code et la logique sans \u00e9cran.",
-        "title": "Colori",
-        "topic": "aliens",
         "video": null
     },
     {
@@ -568,20 +569,40 @@
         "video": null
     },
     {
+        "addedAt": "2023-02-22T09:10:23.062",
+        "description": "",
+        "end": "2023-04-13T17:50:00",
+        "event": "2023",
+        "format": "TALK",
+        "id": "63f5dc52f4ed9b616de005fe",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "ROOM1",
+        "slug": "autodidaxie-c-est-grave-docteur-",
+        "speakerIds": [
+            "clement.avenel"
+        ],
+        "start": "2023-04-13T17:00:00",
+        "summary": "\u00c0 votre avis, combien de d\u00e9veloppeurs souffrent d'autodidaxie ? Quoiqu'il en soit, soignons les, une bonne fois pour toute !\r\n\r\nLors d'un groupe de parole*, anim\u00e9 par un autodidacte compulsif, nous ferons le point sur ce paradigme de l'apprentissage et les cons\u00e9quences que peuvent avoir cette maladie dans la vie professionnelle des patients.\r\n\r\n*Consultation collective, sans rendez-vous, sans m\u00e9decin, qui ressemble \u00e9trangement \u00e0 une conf\u00e9rence.",
+        "title": "Autodidaxie, c'est grave docteur ?",
+        "topic": "aliens",
+        "video": null
+    },
+    {
         "addedAt": "2023-02-13T20:50:31.217",
         "description": "",
-        "end": "2023-04-14T09:45:00",
+        "end": "2023-04-14T10:00:00",
         "event": "2023",
         "format": "KEYNOTE",
         "id": "63ebb05fe87fb83515ebcfd6",
         "language": "ENGLISH",
         "photoUrls": [],
-        "room": "ROOM1",
+        "room": "AMPHI1",
         "slug": "why-is-being-different-actually-a-good-thing-my-way-into-tech",
         "speakerIds": [
             "felifichte"
         ],
-        "start": "2023-04-14T09:25:00",
+        "start": "2023-04-14T09:30:00",
         "summary": "I've been working in IT for about seven years now, but especially at the beginning of my career I was troubled by self-doubt and imposter syndrome. How do I fit in? This is probably the question most employees ask themselves when they start a new job. It took me some time to understand that it is actually good to be different from everyone else and not try to fit in. In this 20-minute lightning talk, I share my personal story about my experiences, my journey and my challenges and how I finally found my place in the tech industry because I didn't try to be like everyone else.",
         "title": "Why is being different actually a good thing? \u2013 My Way Into Tech",
         "topic": "aliens",
@@ -814,7 +835,7 @@
     {
         "addedAt": "2023-02-13T20:50:31.22",
         "description": "",
-        "end": "2023-04-14T13:20:00",
+        "end": "2023-04-14T13:40:00",
         "event": "2023",
         "format": "LIGHTNING_TALK",
         "id": "63ebb05fe87fb83515ebcfe2",
@@ -825,7 +846,7 @@
         "speakerIds": [
             "alex.carmona"
         ],
-        "start": "2023-04-14T13:00:00",
+        "start": "2023-04-14T13:20:00",
         "summary": "Le SLOW BUSINESS pour travailler moins et mieux,\r\nOu comment \u00e9viter le burn out dans notre soci\u00e9t\u00e9 actuelle.\r\nLa vie d\u2019entrepreneur disruptif VS L\u2019art de vivre avec sa bo\u00eete ?\r\nLe Slow Business, c'est des pistes pour \u00e9viter le burn-out, ralentir, trouver son rythme et remettre le travail \u00e0 sa place (spoiler-alert : c\u2019est pas avant ta vie perso).\r\n",
         "title": "SLOW BUSINESS : Travailler moins & mieux",
         "topic": "aliens",
@@ -834,7 +855,7 @@
     {
         "addedAt": "2023-02-13T20:50:31.22",
         "description": "",
-        "end": "2023-04-14T13:20:00",
+        "end": "2023-04-14T13:40:00",
         "event": "2023",
         "format": "LIGHTNING_TALK",
         "id": "63ebb05fe87fb83515ebcfe3",
@@ -845,7 +866,7 @@
         "speakerIds": [
             "so.prevost"
         ],
-        "start": "2023-04-14T13:00:00",
+        "start": "2023-04-14T13:20:00",
         "summary": "Le d\u00e9veloppement web, eldorado promis ? Apr\u00e8s 7 ans \u00e0 d\u00e9velopper dans tout type de structures (startup, entreprise \u00e9thique, administration fran\u00e7aise,...), j\u2019ai (parfois) envie de tirer ma r\u00e9v\u00e9rence au monde de la tech. Sexisme, impasse de carri\u00e8re, plafond de verre, d\u00e9fense du pr\u00e9 carr\u00e9, le tableau n'a pas l'air tr\u00e8s rose comme \u00e7a. Mais il permet de faire un \u00e9tat des lieux du monde du d\u00e9veloppement web aujourd'hui et de sa difficult\u00e9 \u00e0 faire de la place aux profils en minorit\u00e9 dans la tech. En partant des phrases en apparence anodines entendues au cours de ma carri\u00e8re, nous allons d\u00e9montrer qu\u2019il s\u2019agit d\u2019un probl\u00e8me syst\u00e9mique qui concerne tous les profils discrimin\u00e9s. Nous essaierons aussi de voir ce qui se passe derri\u00e8re ces micro-agressions, les effets qu\u2019elles ont lorsqu\u2019elles sont r\u00e9p\u00e9t\u00e9es. En dernier point, je tenterai de lister les bonnes pratiques, les actions que personnes discrimin\u00e9es, entreprises et personnes en situation de domination peuvent mettre en place pour faire de la tech un lieu plus accueillant pour toutes et tous, qu\u2019elles que soient notre genre, nos origines, nos handicaps, nos anciennes carri\u00e8res,...",
         "title": "Pourquoi quitter la tech ?",
         "topic": "ethics",
@@ -854,7 +875,7 @@
     {
         "addedAt": "2023-02-13T20:50:31.22",
         "description": "",
-        "end": "2023-04-14T13:20:00",
+        "end": "2023-04-14T13:40:00",
         "event": "2023",
         "format": "LIGHTNING_TALK",
         "id": "63ebb05fe87fb83515ebcfe4",
@@ -865,7 +886,7 @@
         "speakerIds": [
             "thomas.parisot"
         ],
-        "start": "2023-04-14T13:00:00",
+        "start": "2023-04-14T13:20:00",
         "summary": "Balade sensible dans les mots qu'on lit, qu'on \u00e9crit, qu'on copie, qu'on partage, qu'on modifie.\r\nNous voyagerons les yeux ferm\u00e9s dans du code, des commentaires de code, des descriptions de code \u2014 informatique, l\u00e9gislatif, moral, \u00e9thique.\r\nEt si un livre sur les semences paysannes avait autant \u00e0 voir avec le commentaire d'une fonction qui retourne \"Hello World\" ? Et si \u00e7a devenait \u00e9vident si on \u00e9coutait cet entrem\u00ealement pendant une dizaine de minutes.",
         "title": "Ce (code) qui nous lit",
         "topic": "aliens",
@@ -874,7 +895,7 @@
     {
         "addedAt": "2023-02-13T20:50:31.22",
         "description": "",
-        "end": "2023-04-14T13:20:00",
+        "end": "2023-04-14T13:40:00",
         "event": "2023",
         "format": "LIGHTNING_TALK",
         "id": "63ebb05fe87fb83515ebcfe5",
@@ -885,8 +906,8 @@
         "speakerIds": [
             "TBA"
         ],
-        "start": "2023-04-14T13:00:00",
-        "summary": "",
+        "start": "2023-04-14T13:20:00",
+        "summary": "TBA",
         "title": "Tremplin 2",
         "topic": "tech",
         "video": null
@@ -1044,13 +1065,13 @@
         "language": "FRENCH",
         "photoUrls": [],
         "room": "AMPHI2",
-        "slug": "wasm",
+        "slug": "webassembly-en-2023-un-etat-de-l-art",
         "speakerIds": [
             "benjamin.bouvier"
         ],
         "start": "2023-04-14T15:50:00",
-        "summary": "",
-        "title": "WASM",
+        "summary": "WebAssembly a fait beaucoup de chemin depuis sa premi\u00e8re version majeure en 2015. Les cas d'utilisation d\u00e9passent d\u00e9sormais le cadre des applications Web : infrastructures cloud, virtualisation, *edge computing*, architectures de *plugins*, etc. Quelles \u00e9volutions pass\u00e9es ont rendu \u00e7a possible ? Comment \u00e9volue WebAssembly en tant que plateforme ? Quelles am\u00e9liorations sont \u00e0 venir, et que vont-elles permettre d'accomplir ? Nous nous pencherons sur ces questions en (re)d\u00e9couvrant ensemble WebAssembly, son historique, et ses principales extensions \u00e0 venir (WASI, component model, garbage collector).",
+        "title": "WebAssembly en 2023 : un \u00e9tat de l'art",
         "topic": "tech",
         "video": null
     }

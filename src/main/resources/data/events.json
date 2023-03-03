@@ -1760,9 +1760,6 @@
                 "volunteerLogin": "yves.hurdequint"
             },
             {
-                "volunteerLogin": "mathieu.tourrette"
-            },
-            {
                 "volunteerLogin": "ludovic.bruno"
             },
             {
@@ -1787,7 +1784,17 @@
         "current": true,
         "end": "2023-04-14",
         "id": "mixit23",
-        "organizations": [],
+        "organizations": [
+            {
+                "organizationLogin": "chezdaddy"
+            },
+            {
+                "organizationLogin": "weeefund"
+            },
+            {
+                "organizationLogin": "maisonsolidaire"
+            }
+        ],
         "organizers": [
             {
                 "organizerLogin": "guillaumeehret"
@@ -1879,6 +1886,16 @@
                 "level": "GOLD",
                 "sponsorId": "wisper",
                 "subscriptionDate": "2023-02-17"
+            },
+            {
+                "level": "LANYARD",
+                "sponsorId": "annick.challancin@esker.fr",
+                "subscriptionDate": "2023-03-01"
+            },
+            {
+                "level": "PARTY",
+                "sponsorId": "grandlyon",
+                "subscriptionDate": "2023-03-03"
             }
         ],
         "start": "2023-04-13",
@@ -1886,6 +1903,36 @@
         "volunteers": [
             {
                 "volunteerLogin": "clacote"
+            },
+            {
+                "volunteerLogin": "cedric"
+            },
+            {
+                "volunteerLogin": "ludovic.bruno"
+            },
+            {
+                "volunteerLogin": "marion.charlotte"
+            },
+            {
+                "volunteerLogin": "clement-moysan"
+            },
+            {
+                "volunteerLogin": "mathieu.tourrette"
+            },
+            {
+                "volunteerLogin": "thierry.salvan"
+            },
+            {
+                "volunteerLogin": "brandon.hunt"
+            },
+            {
+                "volunteerLogin": "victor.bouvet"
+            },
+            {
+                "volunteerLogin": "sylvia.cohen"
+            },
+            {
+                "volunteerLogin": "damien.mailhebiau"
             }
         ],
         "year": 2023

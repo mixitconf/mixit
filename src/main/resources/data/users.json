@@ -237,7 +237,7 @@
         "links": [],
         "login": "106329914971209052078",
         "newsletterSubscriber": false,
-        "photoShape": null,
+        "photoShape": "Square",
         "photoUrl": "/images/speakers/aude.jpg",
         "role": "STAFF",
         "token": "",
@@ -4566,10 +4566,10 @@
         "tokenExpiration": "2018-01-01T00:00:00"
     },
     {
-        "company": null,
+        "company": "Embark Studios",
         "description": {
-            "ENGLISH": "",
-            "FRENCH": ""
+            "ENGLISH": "I&#39;ve been lucky enough to work as a compiler engineer at Mozilla, and then to participate to the birth of the WebAssembly standard, as well as its implementation in Firefox. Since then, I&#39;ve followed the evolution of the platform and I&#39;ve had the opportunity to study new use cases, in both my professional and personal lives. In my free time, I fight to protect privacy online and keep personal data personal, I contribute to open-source projects (notably to the Rust ecosystem), and I play the ukulele.",
+            "FRENCH": "J&#39;ai eu la chance de travailler comme ing\u00e9nieur en compilation chez Mozilla, puis par la suite de participer \u00e0 la naissance du standard WebAssembly ainsi qu&#39;\u00e0 son impl\u00e9mentation dans Firefox. Depuis, j&#39;ai suivi l&#39;\u00e9volution de la plateforme et j&#39;ai pu \u00e9tudier de nouveaux cas d&#39;utilisation, dans un cadre professionnel comme personnel. Sur mon temps libre, je lutte pour la protection de la vie priv\u00e9e et des donn\u00e9es personnelles, contribue \u00e0 l&#39;open-source, notamment \u00e0 l&#39;\u00e9cosyst\u00e8me Rust, et joue de l&#39;ukul\u00e9l\u00e9."
         },
         "email": "ouEmYcuj6MsUCHj5zyDDwA==",
         "emailHash": "7274f28edf4888fb107c3515f8712e7f",
@@ -4577,7 +4577,16 @@
         "firstname": "Benjamin",
         "lastname": "Bouvier",
         "legacyId": null,
-        "links": [],
+        "links": [
+            {
+                "name": "Mastodon",
+                "url": "https://tutut.delire.party/web/@bnjbvr_en"
+            },
+            {
+                "name": "Blog",
+                "url": "https://blog.benj.me/"
+            }
+        ],
         "login": "benjamin.bouvier",
         "newsletterSubscriber": false,
         "photoShape": "Square",
@@ -10355,11 +10364,11 @@
     {
         "company": null,
         "description": {
-            "ENGLISH": "Passionn\u00e9 de d\u2019infrastructures Cloud, de performance, de stabilit\u00e9 et de r\u00e9silience, ou encore de d\u00e9veloppement Web et PHP, Pascal Martin est Principal Engineer chez Bedrock \u00e0 Lyon, sur la plateforme qui propulse 6play et Salto. Il est particuli\u00e8rement int\u00e9ress\u00e9 par Le Cloud, AWS et Kubernetes.\nSes exp\u00e9riences pr\u00e9c\u00e9dentes l\u2019ont vu passer d\u2019un poste d\u2019expert technique en SSII \u00e0 un r\u00f4le de Lead Dev chez un \u00e9diteur, \u00e0 un poste de d\u00e9veloppeur dans une startup et \u00e0 un r\u00f4le de Lead DevOps. Il est intervenu sur des projets Web de toutes tailles, sur des applications intranet d\u2019analyse et de suivi, du e-commerce, ainsi que dans le monde de la culture ou des m\u00e9dias. Il intervient \u00e9galement en tant que consultant et formateur.\nIl aime partager son exp\u00e9rience et \u00e9crit parfois sur son blog. Il est aussi auteur ou co-auteur des livres \u00ab D\u00e9velopper une Extension PHP \u00bb, \u00ab PHP 7 avanc\u00e9 \u00bb, \u00ab Le Plan Copenhague \u00bb et \u00ab Pr\u00e9parez et donnez votre premi\u00e8re conf\u00e9rence (quand ce n\u2019est pas votre m\u00e9tier) \u00bb. Il est AWS Container Hero depuis 2020.",
-            "FRENCH": "Passionn\u00e9 de d\u2019infrastructures Cloud, de performance, de stabilit\u00e9 et de r\u00e9silience, ou encore de d\u00e9veloppement Web et PHP, Pascal Martin est Principal Engineer chez Bedrock \u00e0 Lyon, sur la plateforme qui propulse 6play et Salto. Il est particuli\u00e8rement int\u00e9ress\u00e9 par Le Cloud, AWS et Kubernetes.\nSes exp\u00e9riences pr\u00e9c\u00e9dentes l\u2019ont vu passer d\u2019un poste d\u2019expert technique en SSII \u00e0 un r\u00f4le de Lead Dev chez un \u00e9diteur, \u00e0 un poste de d\u00e9veloppeur dans une startup et \u00e0 un r\u00f4le de Lead DevOps. Il est intervenu sur des projets Web de toutes tailles, sur des applications intranet d\u2019analyse et de suivi, du e-commerce, ainsi que dans le monde de la culture ou des m\u00e9dias. Il intervient \u00e9galement en tant que consultant et formateur.\nIl aime partager son exp\u00e9rience et \u00e9crit parfois sur son blog. Il est aussi auteur ou co-auteur des livres \u00ab D\u00e9velopper une Extension PHP \u00bb, \u00ab PHP 7 avanc\u00e9 \u00bb, \u00ab Le Plan Copenhague \u00bb et \u00ab Pr\u00e9parez et donnez votre premi\u00e8re conf\u00e9rence (quand ce n\u2019est pas votre m\u00e9tier) \u00bb. Il est AWS Container Hero depuis 2020."
+            "ENGLISH": "Passionn\u00e9 de d\u2019infrastructures Cloud, de performance, de stabilit\u00e9 et de r\u00e9silience, ou encore de d\u00e9veloppement Web et PHP, Pascal Martin est Principal Engineer chez Bedrock \u00e0 Lyon, sur la plateforme qui propulse 6play. Il est particuli\u00e8rement int\u00e9ress\u00e9 par Le Cloud, AWS et Kubernetes.\r\nSes exp\u00e9riences pr\u00e9c\u00e9dentes l\u2019ont vu passer d\u2019un poste d\u2019expert technique en SSII \u00e0 un r\u00f4le de Lead Dev chez un \u00e9diteur, \u00e0 un poste de d\u00e9veloppeur dans une startup et \u00e0 un r\u00f4le de Lead DevOps. Il est intervenu sur des projets Web de toutes tailles, sur des applications intranet d\u2019analyse et de suivi, du e-commerce, ainsi que dans le monde de la culture ou des m\u00e9dias. Il intervient \u00e9galement en tant que consultant et formateur.\r\nIl aime partager son exp\u00e9rience et \u00e9crit parfois sur son blog. Il est aussi auteur ou co-auteur des livres \u00ab D\u00e9velopper une Extension PHP \u00bb, \u00ab PHP 7 avanc\u00e9 \u00bb, \u00ab Le Plan Copenhague \u00bb et \u00ab Pr\u00e9parez et donnez votre premi\u00e8re conf\u00e9rence (quand ce n\u2019est pas votre m\u00e9tier) \u00bb. Il est AWS Container Hero depuis 2020.",
+            "FRENCH": "Passionn\u00e9 de d\u2019infrastructures Cloud, de performance, de stabilit\u00e9 et de r\u00e9silience, ou encore de d\u00e9veloppement Web et PHP, Pascal Martin est Principal Engineer chez Bedrock \u00e0 Lyon, sur la plateforme qui propulse 6play. Il est particuli\u00e8rement int\u00e9ress\u00e9 par Le Cloud, AWS et Kubernetes.\r\nSes exp\u00e9riences pr\u00e9c\u00e9dentes l\u2019ont vu passer d\u2019un poste d\u2019expert technique en SSII \u00e0 un r\u00f4le de Lead Dev chez un \u00e9diteur, \u00e0 un poste de d\u00e9veloppeur dans une startup et \u00e0 un r\u00f4le de Lead DevOps. Il est intervenu sur des projets Web de toutes tailles, sur des applications intranet d\u2019analyse et de suivi, du e-commerce, ainsi que dans le monde de la culture ou des m\u00e9dias. Il intervient \u00e9galement en tant que consultant et formateur.\r\nIl aime partager son exp\u00e9rience et \u00e9crit parfois sur son blog. Il est aussi auteur ou co-auteur des livres \u00ab D\u00e9velopper une Extension PHP \u00bb, \u00ab PHP 7 avanc\u00e9 \u00bb, \u00ab Le Plan Copenhague \u00bb et \u00ab Pr\u00e9parez et donnez votre premi\u00e8re conf\u00e9rence (quand ce n\u2019est pas votre m\u00e9tier) \u00bb. Il est AWS Container Hero depuis 2020."
         },
         "email": "WyGfwqB+cDBBeReml88mSFJ9x8QTm1oinzlVPaIUAAw=",
-        "emailHash": "37458c7c44851cd6c402e02e5a9be94f",
+        "emailHash": null,
         "externalAppToken": null,
         "firstname": "Pascal",
         "lastname": "Martin",
@@ -12463,9 +12472,9 @@
         "links": [],
         "login": "sylvia.cohen",
         "newsletterSubscriber": false,
-        "photoShape": null,
+        "photoShape": "Square",
         "photoUrl": "/images/speakers/cohen.png",
-        "role": "USER",
+        "role": "VOLUNTEER",
         "token": "",
         "tokenExpiration": "2018-01-01T00:00:00"
     },
@@ -24180,8 +24189,8 @@
         ],
         "login": "grandlyon",
         "newsletterSubscriber": false,
-        "photoShape": null,
-        "photoUrl": "https://mixitconf.org/images/sponsors/logo-grandlyon.jpg",
+        "photoShape": "Square",
+        "photoUrl": "https://mixitconf.org/images/sponsors/logo-metropole-lyon.png",
         "role": "USER",
         "token": "",
         "tokenExpiration": "2018-01-01T00:00:00"
@@ -26012,7 +26021,7 @@
             "FRENCH": ""
         },
         "email": "+pIZ/fl6AZdGMkKCtX+bZU+SX2CFh2TzrtRVVkHyNDM=",
-        "emailHash": null,
+        "emailHash": "262703e1551b6ace7c7a23672fa8a98b",
         "externalAppToken": null,
         "firstname": "Mathieu",
         "lastname": "Tourrette",
@@ -26020,8 +26029,8 @@
         "links": [],
         "login": "mathieu.tourrette",
         "newsletterSubscriber": false,
-        "photoShape": null,
-        "photoUrl": "/images/speakers/2022/mathieu.tourrette.jpg",
+        "photoShape": "Square",
+        "photoUrl": null,
         "role": "VOLUNTEER",
         "token": "",
         "tokenExpiration": "2018-01-01T00:00:00"
@@ -34059,13 +34068,13 @@
         "tokenExpiration": "2018-01-01T00:00:00"
     },
     {
-        "company": null,
+        "company": "Mapado",
         "description": {
-            "ENGLISH": "Je suis d\u00e9veloppeur web depuis plus de quinze ans, dont 10 ans chez Mapado, une soci\u00e9t\u00e9 qui d\u00e9veloppe un logiciel de billetterie pour les salles de spectacles.\nJ'aime essayer de comprendre le \"pourquoi\" des probl\u00e8mes que je rencontre.",
-            "FRENCH": "Je suis d\u00e9veloppeur web depuis plus de quinze ans, dont 10 ans chez Mapado, une soci\u00e9t\u00e9 qui d\u00e9veloppe un logiciel de billetterie pour les salles de spectacles.\nJ'aime essayer de comprendre le \"pourquoi\" des probl\u00e8mes que je rencontre."
+            "ENGLISH": "I am web developer for more than fifteen years, including ten years at Mapado, a company that develop a ticketing solution for theatres.\r\nI try to understand the \"why\" of problems that I face.",
+            "FRENCH": "Je suis d\u00e9veloppeur web depuis plus de quinze ans, dont dix ans chez Mapado, une soci\u00e9t\u00e9 qui d\u00e9veloppe un logiciel de billetterie pour les salles de spectacles.\r\nJ'aime essayer de comprendre le \"pourquoi\" des probl\u00e8mes que je rencontre."
         },
         "email": "ZYKN+WqgvzAq8QcEQeI5DnLBhGCAq+8ycYX9qRxuRYM=",
-        "emailHash": "894592592c92e09dc259e04698c1458e",
+        "emailHash": null,
         "externalAppToken": null,
         "firstname": "Julien",
         "lastname": "Deniau",
@@ -34076,8 +34085,8 @@
                 "url": "https://twitter.com/j_deniau"
             },
             {
-                "name": "Web site",
-                "url": "https://www.mapado.com/"
+                "name": "Mastodon",
+                "url": "https://piaille.fr/@jdeniau"
             },
             {
                 "name": "Linkedin",
@@ -34090,7 +34099,7 @@
         ],
         "login": "julien.deniau",
         "newsletterSubscriber": false,
-        "photoShape": null,
+        "photoShape": "Square",
         "photoUrl": "https://mixitconf.org/images/speakers/2023/julien.deniau.jpg",
         "role": "USER",
         "token": "",
@@ -34232,7 +34241,7 @@
     {
         "company": "SFEIR",
         "description": {
-            "ENGLISH": "Elaine is a Senior Staff Engineer at SFEIR where she works on projects including mobile technologies since 2013. She has worked on several projects in native Android/iOS and Flutter. She&#39;s a GDE for the Google Assistant, Flutter and Dart",
+            "ENGLISH": "Elaine is a Senior Staff Engineer at SFEIR where she works on projects including mobile technologies since 2013. She has worked on several projects in native Android/iOS and Flutter. She's a GDE for the Google Assistant, Flutter and Dart",
             "FRENCH": "Elaine est Senior Staff Engineer chez SFEIR, o\u00f9 elle travaille sur des projets autour des technologies mobiles depuis 2013. Elle a pu r\u00e9aliser plusieurs projets Android et iOS, en natif et avec Flutter. Elle est GDE pour le Google Assistant et Flutter/Dart."
         },
         "email": "DEuVYT78isxkN1YYhIuRP7ViJogfcbah6zXKGDiOJSE=",
@@ -34254,7 +34263,7 @@
         "login": "elaine.diasbatista",
         "newsletterSubscriber": false,
         "photoShape": "Square",
-        "photoUrl": "https://drive.google.com/file/d/1cAvCURt6xc8BjIWgUTEQiBjeiyrSSYNY/view?usp=sharing",
+        "photoUrl": "https://mixitconf.org/images/speakers/2023/elaine.dias.batista.jpg",
         "role": "USER",
         "token": "",
         "tokenExpiration": "2018-01-01T00:00:00"
@@ -34652,20 +34661,20 @@
         "tokenExpiration": "2018-01-01T00:00:00"
     },
     {
-        "company": null,
+        "company": "Sollya - Webmarketing \u00e9thique",
         "description": {
-            "ENGLISH": "Consultante freelance en strat\u00e9gie Marketing \u00c9thique sur le web, pour les structures \u00e0 impact de l\u2019\u00c9conomie Sociale & Solidaire.\nCr\u00e9atrice de formations en ligne pour apprendre \u00e0 toutes et \u00e0 tous \u00e0 (BIEN) faire sa communication sur le web.\nCr\u00e9atrice de contenus vid\u00e9os sur le marketing \u00e9thique et le num\u00e9rique responsable.\nSlow digital nomad.",
-            "FRENCH": "Consultante freelance en strat\u00e9gie Marketing \u00c9thique sur le web, pour les structures \u00e0 impact de l\u2019\u00c9conomie Sociale & Solidaire.\nCr\u00e9atrice de formations en ligne pour apprendre \u00e0 toutes et \u00e0 tous \u00e0 (BIEN) faire sa communication sur le web.\nCr\u00e9atrice de contenus vid\u00e9os sur le marketing \u00e9thique et le num\u00e9rique responsable.\nSlow digital nomad."
+            "ENGLISH": "Consultante freelance en Webmarketing \u00c9thique, pour les structures \u00e0 impact positif.\r\n\r\nCr\u00e9atrice de formations en ligne pour apprendre \u00e0 toutes et \u00e0 tous \u00e0 (BIEN) faire sa communication sur le web.\r\n\r\nCr\u00e9atrice de contenus sur le marketing \u00e9thique et le num\u00e9rique responsable.\r\n\r\nSlow digital nomad.",
+            "FRENCH": "Consultante freelance en Webmarketing \u00c9thique, pour les structures \u00e0 impact positif.\r\n\r\nCr\u00e9atrice de formations en ligne pour apprendre \u00e0 toutes et \u00e0 tous \u00e0 (BIEN) faire sa communication sur le web.\r\n\r\nCr\u00e9atrice de contenus sur le marketing \u00e9thique et le num\u00e9rique responsable.\r\n\r\nSlow digital nomad."
         },
         "email": "VxiaR99X7RgymKGho374zJ1P9FQToOgny9Tm2yXfTvU=",
-        "emailHash": "b996bac49f3a567e8eee5708e52afb85",
+        "emailHash": null,
         "externalAppToken": null,
         "firstname": "Alex",
         "lastname": "Carmona",
         "legacyId": null,
         "links": [
             {
-                "name": "Web site",
+                "name": "Website",
                 "url": "https://www.sollya.fr/"
             },
             {
@@ -34673,12 +34682,12 @@
                 "url": "https://www.linkedin.com/in/skalxdesign/"
             },
             {
-                "name": "Blog",
+                "name": "Cha\u00eene YouTube",
                 "url": "https://www.youtube.com/channel/UCz1_JqiYvwp3dNoq5k2MF-A"
             }
         ],
         "login": "alex.carmona",
-        "newsletterSubscriber": false,
+        "newsletterSubscriber": true,
         "photoShape": null,
         "photoUrl": "https://mixitconf.org/images/speakers/2023/alex.carmona.jpg",
         "role": "USER",
@@ -34716,13 +34725,13 @@
         "tokenExpiration": "2018-01-01T00:00:00"
     },
     {
-        "company": null,
+        "company": "Bedrock Streaming",
         "description": {
-            "ENGLISH": "Web Maker @Bedrock_Tech, internet trublion and despote teacher @PolytechLyon co-organiser of @LyonJs meetup",
-            "FRENCH": "Web Maker @Bedrock_Tech, internet trublion and despote teacher @PolytechLyon co-organiser of @LyonJs meetup"
+            "ENGLISH": "Here is Antoine Caron, a passionate frontend developer who tries to write quality code while having fun. He has solid expertise in Web development, React, and frontend, and has worked at M6web/Bedrock Streaming since 2017 as a Lead Frontend Developer. He has also taught at Polytech Lyon. Very involved in open source communities as well as local communities, Antoine has taken over the organization of Meetup LyonJS with a few friends for a year now.",
+            "FRENCH": "Voici Antoine Caron, un d\u00e9veloppeur frontend passionn\u00e9 qui essaie de faire du code de qualit\u00e9 tout en s&#39;amusant. Il a une expertise solide en d\u00e9veloppement Web, React et frontend, et a travaill\u00e9 chez M6web/Bedrock Streaming depuis 2017 en tant que Lead Frontend Developer. Il a enseign\u00e9 \u00e9galement \u00e0 Polytech Lyon. Tr\u00e8s impliqu\u00e9 dans les communaut\u00e9 open source mais \u00e9galement les communaut\u00e9s locales, Antoine a repris avec quelques amis les r\u00eanes du Meetup LyonJS depuis un an."
         },
         "email": "B9GvTGFnHXsEXfIkR225kBva5H3WPzfm6jmTzlRglpk=",
-        "emailHash": "7ed66677407ffb62d6d475cdf24fe68e",
+        "emailHash": null,
         "externalAppToken": null,
         "firstname": "Antoine",
         "lastname": "Caron",
@@ -34733,7 +34742,7 @@
                 "url": "https://twitter.com/Slashgear_"
             },
             {
-                "name": "Web site",
+                "name": "BedrockStreaming",
                 "url": "https://tech.bedrockstreaming.com/"
             },
             {
@@ -34741,14 +34750,14 @@
                 "url": "https://www.linkedin.com/in/antoine-%E2%9A%99%EF%B8%8F-caron-7089788a/"
             },
             {
-                "name": "Blog",
+                "name": "Personal Blog",
                 "url": "https://blog.slashgear.dev/"
             }
         ],
         "login": "antoine395.caron",
         "newsletterSubscriber": false,
         "photoShape": null,
-        "photoUrl": "https://mixitconf.org/images/speakers/2023/antoine.caron.jpg",
+        "photoUrl": "https://pbs.twimg.com/profile_images/1619099163018371077/xFDqbqUJ_400x400.jpg",
         "role": "USER",
         "token": "",
         "tokenExpiration": "2018-01-01T00:00:00"
@@ -34829,10 +34838,10 @@
         "company": null,
         "description": {
             "ENGLISH": "Developer for 15 years, I am part of some local software related communities in Nantes (Coding Go\u00fbters, Devoxx4Kids, Software Crafters, Women In Tech, ...)",
-            "FRENCH": "Developer for 15 years, I am part of some local software related communities in Nantes (Coding Go\u00fbters, Devoxx4Kids, Software Crafters, Women In Tech, ...)"
+            "FRENCH": "D\u00e9veloppeuse depuis plus de 15 ans, je m\u2019int\u00e9resse \u00e0 beaucoup de sujets et aime partager avec les diff\u00e9rentes communaut\u00e9s.\r\n\r\nVous pouvez d\u2019ailleurs me croiser du c\u00f4t\u00e9 des Duchess, ou me rencontrer sur Nantes aux meetups Software Crafters, aux coding go\u00fbters et Devoxx4kids, ou encore aux \u00e9v\u00e9nements Node schools.\r\n\r\nEt si je ne suis pas derri\u00e8re mon clavier, c\u2019est probablement que je suis en train de m\u2019occuper de mes petites abeilles :)"
         },
         "email": "ATMQecBeHuPKpta7nO7niyhjsRQeKEASWbxvmsAoP3E=",
-        "emailHash": "f1a82dc24d9d0fbb50dd655b00e3d741",
+        "emailHash": null,
         "externalAppToken": null,
         "firstname": "C\u00e9cilia",
         "lastname": "Bossard",
@@ -34843,8 +34852,8 @@
                 "url": "https://twitter.com/CeciliaBossard"
             },
             {
-                "name": "Web site",
-                "url": "http://www.codelutin.com"
+                "name": "Mastodon",
+                "url": "https://mastodon.libre-entreprise.com/@cbossard"
             }
         ],
         "login": "cecilia.bossard",
@@ -35151,22 +35160,27 @@
         "tokenExpiration": "2018-01-01T00:00:00"
     },
     {
-        "company": null,
+        "company": "Toovalu",
         "description": {
-            "ENGLISH": "",
-            "FRENCH": ""
+            "ENGLISH": "Today, I hold the position of UX/UI Designer at Toovalu. Passionate about creation, I also have a background as a product designer.\r\nMore personally, I feel deeply concerned by current environmental and social issues. At Toovalu I manage to give my job meaning and find alignment with my values. I also discovered collective work thanks to a shared governance system and thanks to Shape Up which allows us to integrate the whole company but also external stakeholders in the construction of our product.",
+            "FRENCH": "Aujourd&#39;hui, j&#39;occupe le poste d\u2019UX/UI Designer chez Toovalu. Passionn\u00e9e par la cr\u00e9ation depuis toujours, j\u2019ai \u00e9galement un parcours de designer produit. \r\nPlus personnellement, je me sens profond\u00e9ment concern\u00e9e par les enjeux environnementaux et sociaux actuels. Chez Toovalu j\u2019arrive \u00e0 donner \u00e0 mon m\u00e9tier du sens et \u00e0 trouver l\u2019alignement avec mes valeurs. J\u2019ai \u00e9galement d\u00e9couvert le travail en collectif gr\u00e2ce \u00e0 un syst\u00e8me de gouvernance partag\u00e9e et gr\u00e2ce \u00e0 Shape Up qui permet d\u2019int\u00e9grer toute l\u2019entreprise mais aussi les parties prenantes ext\u00e9rieures dans la construction de notre produit. "
         },
         "email": "AP5X22I0/dUvjpNN0nGYD0x3dG7LUNwtQxFOT56g4lU=",
-        "emailHash": "3a0c64289b4bc18fea8d9c8ab6b645ea",
+        "emailHash": null,
         "externalAppToken": null,
         "firstname": "Maud",
         "lastname": "Colas",
         "legacyId": null,
-        "links": [],
+        "links": [
+            {
+                "name": "Linkedin",
+                "url": "https://www.linkedin.com/in/maud-colas/"
+            }
+        ],
         "login": "maud.colas",
         "newsletterSubscriber": false,
         "photoShape": "Square",
-        "photoUrl": null,
+        "photoUrl": "https://media.licdn.com/dms/image/C4D03AQGtklf7QgX2xQ/profile-displayphoto-shrink_200_200/0/1549305052671?e=1682553600&v=beta&t=mx6MxXB2SHOSleD7UeJ4t7Ig6xG9irNxekEfbbdaFOU",
         "role": "USER",
         "token": "",
         "tokenExpiration": "2018-01-01T00:00:00"
@@ -35354,6 +35368,198 @@
         "photoShape": null,
         "photoUrl": null,
         "role": "USER",
+        "token": "",
+        "tokenExpiration": "2018-01-01T00:00:00"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "o0q2kM+HE0vINpqultzMzkAllx+2knRxyd6FI90j8sY=",
+        "emailHash": null,
+        "externalAppToken": null,
+        "firstname": "Nicolas",
+        "lastname": "Malgat",
+        "legacyId": null,
+        "links": [],
+        "login": "nicolas-malgat",
+        "newsletterSubscriber": true,
+        "photoShape": null,
+        "photoUrl": null,
+        "role": "USER",
+        "token": "",
+        "tokenExpiration": "2018-01-01T00:00:00"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "aEOFd8+ZPZA4vVtyl3inkHmrp0NmoRDUZi15QeTTlbs=",
+        "emailHash": null,
+        "externalAppToken": null,
+        "firstname": "Safia",
+        "lastname": "Zouaoui",
+        "legacyId": null,
+        "links": [],
+        "login": "safia-zouaoui",
+        "newsletterSubscriber": false,
+        "photoShape": null,
+        "photoUrl": null,
+        "role": "USER",
+        "token": "",
+        "tokenExpiration": "2018-01-01T00:00:00"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "1pwVcybSKEZM4DGYE3xfG7QDJVl2iKbaW0mHNcib8yY=",
+        "emailHash": null,
+        "externalAppToken": null,
+        "firstname": "Selvi",
+        "lastname": "Arik",
+        "legacyId": null,
+        "links": [],
+        "login": "selvi-arik",
+        "newsletterSubscriber": true,
+        "photoShape": null,
+        "photoUrl": null,
+        "role": "USER",
+        "token": "",
+        "tokenExpiration": "2018-01-01T00:00:00"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "vfyWYnFK15qm5dLO0sGL6Ja/ZPbAAB/bVX9uJmVEZO0=",
+        "emailHash": null,
+        "externalAppToken": null,
+        "firstname": "Lionel",
+        "lastname": "Gros",
+        "legacyId": null,
+        "links": [],
+        "login": "lgros",
+        "newsletterSubscriber": true,
+        "photoShape": null,
+        "photoUrl": null,
+        "role": "USER",
+        "token": "",
+        "tokenExpiration": "2018-01-01T00:00:00"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "nYanoy/IuHLbRdYa26c98Og0CsyUPpnfrEPVUm26psw=",
+        "emailHash": null,
+        "externalAppToken": null,
+        "firstname": "Brian",
+        "lastname": "Ngoze",
+        "legacyId": null,
+        "links": [],
+        "login": "gorobabrian",
+        "newsletterSubscriber": false,
+        "photoShape": null,
+        "photoUrl": null,
+        "role": "USER",
+        "token": "",
+        "tokenExpiration": "2018-01-01T00:00:00"
+    },
+    {
+        "company": null,
+        "description": {},
+        "email": "nyzoqoVNiKu9Eq1cDZv6rnslxe3W4IklPtFORMy78KM=",
+        "emailHash": null,
+        "externalAppToken": null,
+        "firstname": "Ankesh",
+        "lastname": "Ambat",
+        "legacyId": null,
+        "links": [],
+        "login": "ankeshambat059",
+        "newsletterSubscriber": false,
+        "photoShape": null,
+        "photoUrl": null,
+        "role": "USER",
+        "token": "",
+        "tokenExpiration": "2018-01-01T00:00:00"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "",
+            "FRENCH": ""
+        },
+        "email": "SRw5YhWOaRnItDlE3zIkhg==",
+        "emailHash": "cede889a1a34af1185007aaa00ae737b",
+        "externalAppToken": null,
+        "firstname": "Thierry",
+        "lastname": "Salvan",
+        "legacyId": null,
+        "links": [],
+        "login": "thierry.salvan",
+        "newsletterSubscriber": false,
+        "photoShape": "Square",
+        "photoUrl": null,
+        "role": "USER",
+        "token": "",
+        "tokenExpiration": "2018-01-01T00:00:00"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "",
+            "FRENCH": ""
+        },
+        "email": "5qryptmdsW8Ce3XpZGDLWkYfZ8x84Jg+P+UcCgyqlqk=",
+        "emailHash": "2732b0a979eafa8b1cb0182ecc608a7d",
+        "externalAppToken": null,
+        "firstname": "Brandon",
+        "lastname": "Hunt",
+        "legacyId": null,
+        "links": [],
+        "login": "brandon.hunt",
+        "newsletterSubscriber": false,
+        "photoShape": "Square",
+        "photoUrl": null,
+        "role": "VOLUNTEER",
+        "token": "",
+        "tokenExpiration": "2018-01-01T00:00:00"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "",
+            "FRENCH": ""
+        },
+        "email": "NoUpVphDClHkE4Z32hg4KS677srX5Z9nlnVeTzJe2II=",
+        "emailHash": "157d4c05b251534c68e31a4f33c55a7b",
+        "externalAppToken": null,
+        "firstname": "Victor",
+        "lastname": "Bouvet",
+        "legacyId": null,
+        "links": [],
+        "login": "victor.bouvet",
+        "newsletterSubscriber": false,
+        "photoShape": "Square",
+        "photoUrl": null,
+        "role": "VOLUNTEER",
+        "token": "",
+        "tokenExpiration": "2018-01-01T00:00:00"
+    },
+    {
+        "company": null,
+        "description": {
+            "ENGLISH": "",
+            "FRENCH": ""
+        },
+        "email": "fei7dH+kT65Qu+F14TNotkqCJj/jYWrVP0Cbds899d0=",
+        "emailHash": "14766ee08791d68c164782478a1f2cfa",
+        "externalAppToken": null,
+        "firstname": "Damien",
+        "lastname": "Mailhebiau",
+        "legacyId": null,
+        "links": [],
+        "login": "damien.mailhebiau",
+        "newsletterSubscriber": false,
+        "photoShape": "Square",
+        "photoUrl": null,
+        "role": "VOLUNTEER",
         "token": "",
         "tokenExpiration": "2018-01-01T00:00:00"
     }
