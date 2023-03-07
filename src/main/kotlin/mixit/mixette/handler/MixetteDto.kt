@@ -67,9 +67,9 @@ data class MixetteDonationDetailedDto(
     val ticketNumber: String?,
     val userLogin: String?,
     val userEmail: String,
-    val username: String,
+    val username: String?,
     val organizationLogin: String,
-    val organizationName: String,
+    val organizationName: String?,
     val quantity: Int,
     val createdBy: String?,
     val updatedBy: String?,
@@ -79,8 +79,8 @@ data class MixetteDonationDetailedDto(
     constructor(
         donation: MixetteDonation,
         cryptographer: Cryptographer,
-        username: String,
-        organizationName: String
+        username: String?,
+        organizationName: String?
     ) : this(
         year = donation.year,
         ticketNumber = cryptographer.decrypt(donation.encryptedTicketNumber),

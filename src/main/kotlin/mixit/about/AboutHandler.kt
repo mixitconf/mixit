@@ -3,8 +3,6 @@ package mixit.about
 import kotlinx.coroutines.reactor.awaitSingle
 import mixit.MixitApplication
 import mixit.event.model.EventService
-import mixit.event.model.SponsorshipLevel
-import mixit.routes.MustacheI18n
 import mixit.routes.MustacheI18n.SPONSORS
 import mixit.routes.MustacheI18n.TITLE
 import mixit.routes.MustacheI18n.YEAR
@@ -14,7 +12,6 @@ import mixit.routes.MustacheTemplate.CodeOfConduct
 import mixit.routes.MustacheTemplate.Come
 import mixit.routes.MustacheTemplate.Faq
 import mixit.routes.MustacheTemplate.Search
-import mixit.user.handler.dto.toSponsorDto
 import mixit.user.model.UserService
 import mixit.util.language
 import org.springframework.stereotype.Component
@@ -58,19 +55,14 @@ class AboutHandler(
 
     suspend fun comeToMixitView(req: ServerRequest): ServerResponse {
         val event = eventService.findByYear(MixitApplication.CURRENT_EVENT)
-        val goldSponsors = event.filterBySponsorLevel(SponsorshipLevel.GOLD)
 
         return ok()
             .render(
                 Come.template,
                 mapOf(
                     TITLE to Come.title,
-                    MustacheI18n.YEAR to event.year,
-                    SPONSORS to mapOf(
-                        "sponsors-gold" to goldSponsors.map { it.toSponsorDto() },
-                        "sponsors-others" to event.sponsors.filterNot { goldSponsors.contains(it) }
-                            .map { it.toSponsorDto() }
-                    )
+                    YEAR to event.year,
+                    SPONSORS to userService.loadSponsors(event)
                 )
             )
             .awaitSingle()

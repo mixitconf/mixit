@@ -36,7 +36,21 @@ data class Ticket(
     companion object {
         fun empty(cryptographer: Cryptographer) =
             Ticket(cryptographer.encrypt(generateNewNumber())!!, "", TicketType.ATTENDEE, "", "")
+
         fun generateNewNumber(): String =
             "MXT$CURRENT_EVENT-${UUID.randomUUID().toString().substring(0, 14).replace("-", "")}"
     }
+
+    fun decrypt(cryptographer: Cryptographer) =
+        Ticket(
+            number = cryptographer.decrypt(number)!!,
+            encryptedEmail = cryptographer.decrypt(encryptedEmail)!!,
+            firstname = cryptographer.decrypt(firstname),
+            lastname = cryptographer.decrypt(lastname)!!,
+            lotteryRank = lotteryRank,
+            login = cryptographer.decrypt(login),
+            externalId = cryptographer.decrypt(externalId),
+            createdAt = createdAt,
+            type = type
+        )
 }

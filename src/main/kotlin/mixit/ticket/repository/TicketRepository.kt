@@ -2,6 +2,7 @@ package mixit.ticket.repository
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import mixit.security.model.Cryptographer
 import mixit.ticket.model.Ticket
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
@@ -20,7 +21,8 @@ import reactor.core.publisher.Flux
 @Repository
 class TicketRepository(
     private val template: ReactiveMongoTemplate,
-    private val objectMapper: ObjectMapper
+    private val objectMapper: ObjectMapper,
+    private val cryptographer: Cryptographer
 ) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)

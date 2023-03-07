@@ -192,16 +192,16 @@ class AdminMixetteHandler(
         errors: Map<String, String> = emptyMap()
     ): ServerResponse {
         val event = service.findByYear(CURRENT_EVENT)
-        val donor = findDonorByEncryptedTicketNumber(donation.encryptedTicketNumber ?: "") ?: throw NotFoundException()
-        val organization = userService.findOneOrNull(donation.organizationLogin) ?: throw NotFoundException()
+        val donor = findDonorByEncryptedTicketNumber(donation.encryptedTicketNumber ?: "")
+        val organization = userService.findOneOrNull(donation.organizationLogin)
 
         val params = mapOf(
             CREATION_MODE to (donation.id == null),
             "donation" to MixetteDonationDetailedDto(
                 donation = donation,
                 cryptographer = cryptographer,
-                username = donor.name,
-                organizationName = organization.organizationName
+                username = donor?.name,
+                organizationName = organization?.organizationName
             ),
             "organizations" to event.organizations.map { MixetteOrganizationDto(it, donation) },
             "errors" to errors,

@@ -214,6 +214,7 @@ class WebsiteRoutes(
             POST("/admin/lottery/random/delete", adminLotteryHandler::eraseRank)
             POST("/admin/lottery/delete", adminLotteryHandler::adminDeleteTicketing)
             POST("/admin/ticket", ticketHandler::submit)
+            POST("/admin/ticket/search", ticketHandler::ticketing)
             POST("/admin/ticket/delete", ticketHandler::adminDeleteTicket)
             POST("/admin/ticket/import/staff", ticketHandler::adminImportStaff)
             POST("/admin/ticket/import/volunteers", ticketHandler::adminImportVolunteers)

@@ -25,7 +25,17 @@
             <input type="submit" class="btn btn-primary mxt-btn-primary" value="Import sponsors"/>
         </form>
     </div>
-
+    <div class="row text-center pt-2 pb-2">
+        <div class="col-4"></div>
+        <form action="/admin/ticket/search" method="post" class="col-4 text-center" name="search">
+        <select class="form-control" name="type" onchange="document.forms.namedItem('search').submit()">
+            <option value="null">{{#i18n}}admin.ticket.type{{/i18n}}</option>
+            {{#types}}
+                <option value="{{first}}"{{#second}} selected{{/second}}>{{first}}</option>
+            {{/types}}
+        </select>
+        </form>
+    </div>
 </div>
 
 <div class="container mxt-wrapper--page-content">

@@ -16,6 +16,7 @@ import mixit.routes.MustacheI18n.TICKETS
 import mixit.routes.MustacheI18n.TITLE
 import mixit.routes.MustacheI18n.TYPES
 import mixit.routes.MustacheTemplate.AdminTicket
+import mixit.routes.MustacheTemplate.AdminTicketEdit
 import mixit.routes.MustacheTemplate.AdminTicketPrint
 import mixit.routes.MustacheTemplate.TicketError
 import mixit.security.MixitWebFilter
@@ -66,10 +67,13 @@ class AdminTicketHandler(
     }
 
     suspend fun ticketing(req: ServerRequest): ServerResponse {
-        val tickets = service.findAll().map { it.toDto(cryptographer) }
+        val formData = req.extractFormData()
+        val type = formData["type"]?.let {  TicketType.valueOf(it)}
+        val tickets = service.findAll().filter { type == null || it.type == type }.map { it.toDto(cryptographer) }
         val params = mapOf(
             TITLE to AdminTicket.title,
-            TICKETS to tickets
+            TICKETS to tickets,
+            TYPES to TicketType.values().map {  it to false}
         )
         val template = if (properties.feature.lotteryResult) AdminTicket.template else throw NotFoundException()
         return ok().renderAndAwait(template, params)
@@ -105,11 +109,11 @@ class AdminTicketHandler(
 
     private suspend fun adminTicket(ticket: Ticket = Ticket.empty(cryptographer)): ServerResponse {
         val template =
-            if (properties.feature.lotteryResult) AdminTicketPrint.template else throw NotFoundException()
+            if (properties.feature.lotteryResult) AdminTicketEdit.template else throw NotFoundException()
         val params = mapOf(
             TITLE to AdminTicketPrint.title,
             CREATION_MODE to ticket.encryptedEmail.isEmpty(),
-            TICKET to ticket,
+            TICKET to ticket.decrypt(cryptographer),
             TYPES to enumMatcher(ticket) { ticket.type }
         )
         return ok().renderAndAwait(template, params)
@@ -128,7 +132,7 @@ class AdminTicketHandler(
                 type = TicketType.valueOf(formData["type"]!!),
             )
             ?: Ticket(
-                number = cryptographer.encrypt(formData["number"])!!,
+                number = cryptographer.encrypt(Ticket.generateNewNumber())!!,
                 encryptedEmail = cryptographer.encrypt(formData["email"]!!.lowercase())!!,
                 firstname = cryptographer.encrypt(formData["firstname"]),
                 lastname = cryptographer.encrypt(formData["lastname"])!!,
