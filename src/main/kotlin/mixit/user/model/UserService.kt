@@ -3,6 +3,7 @@ package mixit.user.model
 import mixit.event.model.CachedEvent
 import mixit.event.model.SponsorshipLevel.GOLD
 import mixit.event.model.SponsorshipLevel.LANYARD
+import mixit.event.model.SponsorshipLevel.PARTY
 import mixit.security.model.Cryptographer
 import mixit.user.handler.dto.toSponsorDto
 import mixit.user.repository.UserRepository
@@ -68,7 +69,7 @@ class UserService(
             }
 
     fun loadSponsors(event: CachedEvent): Map<String, Any> {
-        val sponsors = event.filterBySponsorLevel(GOLD) + event.filterBySponsorLevel(LANYARD)
+        val sponsors = event.filterBySponsorLevel(GOLD) + event.filterBySponsorLevel(LANYARD) + event.filterBySponsorLevel(PARTY)
         return mapOf(
             "sponsors-gold" to sponsors.map { it.toSponsorDto() },
             "sponsors-others" to event.sponsors.filterNot { sponsors.contains(it) }.map { it.toSponsorDto() }.distinct()
