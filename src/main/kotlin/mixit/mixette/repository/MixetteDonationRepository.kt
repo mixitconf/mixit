@@ -18,7 +18,6 @@ import org.springframework.data.mongodb.core.query.isEqualTo
 import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
-import java.time.Instant
 
 @Repository
 class MixetteDonationRepository(
@@ -54,11 +53,10 @@ class MixetteDonationRepository(
             .collectList()
             .awaitSingle()
 
-    suspend fun findByYearAfterNow(year: String): List<MixetteDonation> =
+    fun findByYearAfterNow(year: String): Flux<MixetteDonation> =
         template
-            .find<MixetteDonation>(Query(Criteria.where("year").isEqualTo(year).and("createdBy").gt(Instant.now())))
-            .collectList()
-            .awaitSingle()
+            .find<MixetteDonation>(Query(Criteria.where("year").isEqualTo(year)))
+
 
     suspend fun findOneOrNull(id: String) =
         template.findById<MixetteDonation>(id).awaitSingleOrNull()

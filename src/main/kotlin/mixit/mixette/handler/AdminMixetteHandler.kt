@@ -254,8 +254,7 @@ class AdminMixetteHandler(
         if (ticket == null) {
             return null
         }
-        val name = if (user != null && user.login.isNotEmpty()) "${user.firstname} ${user.lastname}" else
-            ticket.let { "${cryptographer.decrypt(it.firstname)} ${cryptographer.decrypt(it.lastname)}" }
+        val name = ticket.let { "${cryptographer.decrypt(it.firstname)} ${cryptographer.decrypt(it.lastname)}" }
 
         return MixetteUserDonationDto(
             name = name,
@@ -275,9 +274,9 @@ class AdminMixetteHandler(
 
         val errors = mutableMapOf<String, String>()
 
-        if (donor.login.isNullOrEmpty() || donor.ticketNumber.isNullOrEmpty()) {
-            errors["userLogin"] = "admin.donations.error.userLogin.required"
-        }
+//        if (donor.login.isNullOrEmpty() || donor.ticketNumber.isNullOrEmpty()) {
+//            errors["userLogin"] = "admin.donations.error.userLogin.required"
+//        }
         if (receiver == null) {
             errors["organizationLogin"] = "admin.donations.error.organizationLogin.required"
         }
