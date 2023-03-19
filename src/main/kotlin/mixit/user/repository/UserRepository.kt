@@ -7,6 +7,7 @@ import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.security.model.Cryptographer
 import mixit.user.model.Role
 import mixit.user.model.User
+import mixit.user.model.desanonymize
 import mixit.util.encodeToMd5
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
@@ -39,7 +40,9 @@ class UserRepository(
         if (count().block() == 0L) {
             val usersResource = ClassPathResource("data/users.json")
             val users: List<User> = objectMapper.readValue(usersResource.inputStream)
-            users.forEach { save(it).block() }
+            users
+                .map { it.desanonymize(cryptographer) }
+                .forEach { save(it).block() }
             logger.info("Users data initialization complete")
         }
 

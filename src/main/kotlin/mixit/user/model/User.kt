@@ -42,6 +42,7 @@ data class User(
         fun mixit(): User =
             User(login = MIXIT, firstname = MIXIT, lastname = MIXIT, email = MIXIT_EMAIL)
     }
+
     fun tokenLifeTime(): Duration =
         Duration.between(LocalDateTime.now(), tokenExpiration)
 }
@@ -81,8 +82,48 @@ fun User.hasValidTokens(token: String?, externalAppToken: String?): Boolean {
     return false
 }
 
-fun User.anonymize() = this.copy(
-    tokenExpiration = LocalDateTime.parse("2018-01-01T00:00:00.00"),
-    token = "",
-    externalAppToken = null
-)
+fun User.anonymize(cryptographer: Cryptographer?) =
+    if (cryptographer == null) {
+        this.copy(
+            tokenExpiration = LocalDateTime.parse("2018-01-01T00:00:00.00"),
+            token = "",
+            externalAppToken = null
+        )
+    } else {
+        this.copy(
+            login = cryptographer.encrypt(login)!!,
+            firstname = cryptographer.encrypt(firstname)!!,
+            lastname = cryptographer.encrypt(lastname)!!,
+            company = cryptographer.encrypt(company),
+            emailHash = cryptographer.encrypt(emailHash),
+            description = description.mapValues { cryptographer.encrypt(it.value)!! },
+            photoUrl = cryptographer.encrypt(photoUrl),
+            links = links.map {
+                it.copy(
+                    name = cryptographer.encrypt(it.name)!!,
+                    url = cryptographer.encrypt(it.url)!!
+                )
+            },
+            tokenExpiration = LocalDateTime.parse("2018-01-01T00:00:00.00"),
+            token = "",
+            externalAppToken = null
+        )
+    }
+
+fun User.desanonymize(cryptographer: Cryptographer) =
+    this.copy(
+        login = cryptographer.decrypt(login)!!,
+        firstname = cryptographer.decrypt(firstname)!!,
+        lastname = cryptographer.decrypt(lastname)!!,
+        company = cryptographer.decrypt(company),
+        emailHash = cryptographer.decrypt(emailHash),
+        description = description.mapValues { cryptographer.decrypt(it.value)!! },
+        photoUrl = cryptographer.decrypt(photoUrl),
+        links = links.map {
+            it.copy(
+                name = cryptographer.decrypt(it.name)!!,
+                url = cryptographer.decrypt(it.url)!!
+            )
+        }
+    )
+

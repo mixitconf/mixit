@@ -48,11 +48,8 @@ class ApiRoutes(
             GET("/favorites/{email}/talks/{id}", favoriteHandler::getFavorite)
             GET("/favorites/{email}", favoriteHandler::getFavorites)
             POST("/favorites/{email}/talks/{id}/toggle", favoriteHandler::toggleFavorite)
-            GET("/staff", userHandler::findStaff)
-            GET("/staff/{login}", userHandler::findOneStaff)
             GET("/talk/{login}", talkHandler::findOne)
             GET("/user", userHandler::findAll)
-            GET("/user/{login}", userHandler::findOne)
 
             // Require a token as arg
             GET("/external/token", externalHandler::sendToken)

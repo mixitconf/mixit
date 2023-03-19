@@ -1,9 +1,9 @@
 package mixit.user.handler
 
 import kotlinx.coroutines.reactor.awaitSingle
+import mixit.security.model.Cryptographer
 import mixit.talk.model.TalkService
 import mixit.user.handler.dto.toDto
-import mixit.user.model.Role
 import mixit.user.model.User
 import mixit.user.model.UserService
 import mixit.user.model.anonymize
@@ -11,7 +11,6 @@ import mixit.user.repository.UserRepository
 import mixit.util.errors.NotFoundException
 import mixit.util.json
 import mixit.util.language
-import org.springframework.data.crossstore.ChangeSetPersister
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
@@ -25,35 +24,24 @@ import java.net.URI.create
 class UserJsonHandler(
     private val repository: UserRepository,
     private val userService: UserService,
-    private val service: TalkService
+    private val service: TalkService,
+    private val cryptographer: Cryptographer
 ) {
     suspend fun findOne(req: ServerRequest): ServerResponse =
         repository.findOneOrNull(req.pathVariable("login"))
-            ?.let { ok().json().bodyValueAndAwait(it.anonymize()) }
+            ?.let { ok().json().bodyValueAndAwait(it.anonymize(cryptographer)) }
             ?: throw NotFoundException()
 
     suspend fun findAll(req: ServerRequest): ServerResponse =
         repository
             .findAll()
-            .map { it.anonymize() }
+            .map { it.anonymize(cryptographer) }
             .let { ok().json().bodyValueAndAwait(it) }
-
-    suspend fun findStaff(req: ServerRequest): ServerResponse =
-        repository
-            .findByRoles(listOf(Role.STAFF))
-            .map { it.anonymize() }
-            .let { ok().json().bodyValueAndAwait(it) }
-
-    suspend fun findOneStaff(req: ServerRequest): ServerResponse =
-        repository
-            .findOneByRoles(req.pathVariable("login"), listOf(Role.STAFF, Role.STAFF_IN_PAUSE))
-            ?.let { ok().json().bodyValueAndAwait(it) }
-            ?: throw ChangeSetPersister.NotFoundException()
 
     suspend fun findSpeakerByEventId(req: ServerRequest): ServerResponse =
         service
             .findByEvent(req.pathVariable("year"))
-            .flatMap { talk -> talk.speakers.map { it.anonymize() }.distinct() }
+            .flatMap { talk -> talk.speakers.map { it.anonymize(null) }.distinct() }
             .let { ok().json().bodyValueAndAwait(it) }
 
     suspend fun create(req: ServerRequest): ServerResponse =
