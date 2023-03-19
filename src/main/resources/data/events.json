@@ -1896,6 +1896,21 @@
                 "level": "PARTY",
                 "sponsorId": "grandlyon",
                 "subscriptionDate": "2023-03-03"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "Sopra Steria",
+                "subscriptionDate": "2023-03-06"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "smile",
+                "subscriptionDate": "2023-03-14"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "clevercloud",
+                "subscriptionDate": "2023-03-14"
             }
         ],
         "start": "2023-04-13",
@@ -1933,6 +1948,12 @@
             },
             {
                 "volunteerLogin": "damien.mailhebiau"
+            },
+            {
+                "volunteerLogin": "k.brachet"
+            },
+            {
+                "volunteerLogin": "a.djouahra"
             }
         ],
         "year": 2023

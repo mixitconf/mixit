@@ -2,10 +2,29 @@
 {{> empty-menu }}
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script>
-    function addNode(className, value) {
+    function addNode(className, value, nodeSup) {
         const node = document.createElement("div");
         node.className = className;
-        node.innerHTML = value;
+        if (nodeSup) {
+            node.append(nodeSup);
+        }
+        else {
+            node.innerHTML = value;
+        }
+        return node;
+    }
+
+    function addImage(index) {
+        const node = document.createElement("img");
+        node.style = 'max-width:100%';
+        if (index < 3) {
+            node.src = '/images/svg/mxt-icon-ticket.svg';
+        } else if(index < 6) {
+            node.src = '/images/svg/mxt-icon-tshirt.svg';
+        } else {
+            node.src = '/images/svg/mxt-icon-poster.svg';
+        }
+
         return node;
     }
 
@@ -16,25 +35,21 @@
             const field = document.getElementById("counter-" + donation.login);
             if (field) {
                 field.innerText = donation.quantity;
-
-                //<div class="col-2">#</div>
-                // <div class="col-4">Prénom</div>
-                // <div class="col-4">Nom</div>
-                // val login: String,
-                //         val firstname: String,
-                //         val lastname: String,
-                //         val quantity: Int
-                // <div class="col-2">Cadeau</div>
+            }
+            const amount = document.getElementById("amount-" + donation.login);
+            if (amount) {
+                amount.innerText = `(${donation.amount}€)`;
             }
         });
         const ranking = document.getElementById("ranking");
         if (ranking) {
             ranking.replaceChildren();
             data.ranking.forEach((elt, index) => {
-                ranking.append(addNode("col-2 pt-4 fs-3 text-center", index + 1));
-                ranking.append(addNode("col-4 pt-4", elt.firstname));
-                ranking.append(addNode("col-4 pt-4", elt.lastname));
+                ranking.append(addNode("col-1 pt-4 fs-3 text-center", index + 1));
+                ranking.append(addNode("col-4 pt-4 fw-normal", elt.firstname));
+                ranking.append(addNode("col-4 pt-4 fw-normal", elt.lastname));
                 ranking.append(addNode("col-2 pt-4 fs-3 text-center", elt.quantity));
+                ranking.append(addNode("col-1 pt-3 fw-normal text-center", '', addImage(index)));
             });
         }
     }
@@ -52,23 +67,26 @@
         </div>
         <div class="row">
             <div class="row pt-3 fs-5 fw-bold">
-                <div class="col-2 text-center">#</div>
+                <div class="col-1 text-center">#</div>
                 <div class="col-4">Prénom</div>
                 <div class="col-4">Nom</div>
                 <div class="col-2 text-center">Nombre</div>
+                <div class="col-1 text-center">?</div>
             </div>
             <div class="row fw-bold fs-5" id="ranking" style="line-height: 1.5em"></div>
         </div>
     </div>
     <div class="col-7">
         <div class="lead text-center pt-5">
-            <p class="fw-bold">Financer l'association de votre choix en faisant un don de Mixette au desk MiXiT à l'accueil.</p>
+            <p class="fw-bold">Financer l'association de votre choix en faisant un don de Mixette au desk MiXiT à
+                l'accueil.</p>
             <p>Vous pouvez récupérer
-            des Mixettes dans différents endroits de la conférence en plus des 2 mixettes remises avec votre badge. Les 10 plus
+                des Mixettes dans différents endroits de la conférence en plus des 2 mixettes remises avec votre badge.
+                Les 10 plus
                 gros donateurs seront récompensés.</p>
         </div>
         <div>
-            <div class="row p-5">
+            <div class="row pt-5" style="padding-left: 2em;padding-right: 1em">
                 {{#organizations}}
                     <div class="col-2">
                         <a href="/user/{{login}}">
@@ -87,73 +105,22 @@
                         <div class="d-flex"
                              style="font-size: 2rem; font-weight:bold;align-items: center; justify-content: center">
                             <div id="counter-{{login}}">0</div>
-                            <img src="/images/svg/mxt-icon--logo-mixette.svg" style="max-height: 2rem">
-                            </span>
+                            <img src="/images/svg/mxt-icon--logo-mixette.svg" style="max-height: 2rem" class="mr-2">
+                            <span>&nbsp;</span>
+                            <div class="fs-5 ml-2 fw-normal" id="amount-{{login}}">(0 €)</div>
                         </div>
                     </div>
                 {{/organizations}}
             </div>
         </div>
     </div>
-    <!--<div class="row-fluid mxt-wrapper--page-content">-->
-    <!--    <div class="row">-->
-        <!--        {{#organizations}}-->
-    <!--            <div class="col-4">-->
-    <!--                <div class="row">-->
-    <!--                    <div class="col-2">-->
-    <!--                        <a href="/user/{{login}}">-->
-        <!--                            {{#photoUrl}}<img src="{{photoUrl}}" alt="{{company}}" class="mxt-img--sponsors"-->
-            <!--                                              style="max-width: 100%">{{/photoUrl}}-->
-    <!--                        </a>-->
-    <!--                    </div>-->
-    <!--                    <div class="col-10">-->
-    <!--                        <h2>{{company}}</h2>-->
-    <!--                    </div>-->
-    <!--                </div>-->
-    <!--                <br>-->
-    <!--                <br>-->
-    <!--                {{description}}-->
-    <!--            </div>-->
-        <!--        {{/organizations}}-->
-    <!--    </div>-->
-    <!--    <div class="row">-->
-
-
-    <!--        <figure class="highcharts-figure">-->
-    <!--            <div id="container"></div>-->
-    <!--        </figure>-->
-
-    <!--        <script>-->
-
-    <!--            Highcharts.chart('container', {-->
-    <!--                chart: {type: 'column'},-->
-    <!--                title: {text: '{{#i18n}}mixette.dashboard.chart.title{{/i18n}}'},-->
-    <!--                subtitle: {text: '{{#i18n}}mixette.dashboard.chart.subtitle{{/i18n}} {{loadAt}}'},-->
-    <!--                xAxis: {type: 'category'},-->
-    <!--                yAxis: {-->
-    <!--                    title: {text: '{{#i18n}}mixette.dashboard.chart.axis{{/i18n}}'}-->
-    <!--                },-->
-    <!--                legend: {enabled: false},-->
-    <!--                plotOptions: {-->
-    <!--                    series: {-->
-    <!--                        borderWidth: 0,-->
-    <!--                        dataLabels: {enabled: true, format: '{point.y:.1f} €'}-->
-    <!--                    }-->
-    <!--                },-->
-    <!--                tooltip: {enabled: false},-->
-    <!--                series: [-->
-    <!--                    {-->
-    <!--                        name: "Mixette",-->
-    <!--                        colorByPoint: true,-->
-    <!--                        data: [-->
-        <!--                            {{#donations}}-->
-    <!--                                {name: '{{name}}', y: {{amount}} },-->
-        <!--                            {{/donations}}-->
-    <!--                        ]-->
-    <!--                    }-->
-    <!--                ]-->
-    <!--            });-->
-    <!--        </script>-->
-    <!--    </div>-->
-    <!--</div>-->
-    {{> empty-footer}}
+    <div class="col-12 lead text-center fw-bold">
+        Vous pouvez gagner votre place pour l'année prochaine
+        <img src="/images/svg/mxt-icon-ticket.svg" style="max-width: 2em" class="m-1"/>,
+        un T-shirt MiXiT
+        <img src="/images/svg/mxt-icon-tshirt.svg" style="max-width: 2em" class="m-1"/>,
+        ou un poster MiXiT
+        <img src="/images/svg/mxt-icon-poster.svg" style="max-width: 2em" class="m-1"/>
+    </div>
+</div>
+{{> empty-footer}}
