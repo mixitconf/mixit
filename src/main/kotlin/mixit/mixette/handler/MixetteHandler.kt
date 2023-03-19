@@ -27,6 +27,7 @@ import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.renderAndAwait
 import reactor.core.publisher.Flux
+import java.math.BigDecimal
 import java.time.Duration.ofMillis
 import java.time.LocalTime
 import java.time.ZoneId
@@ -114,7 +115,7 @@ class MixetteHandler(
             .toSortedMap()
             .map {
                 val user = userService.findOneOrNull(it.key) ?: throw IllegalArgumentException()
-                MixetteDashboardOrganisation(user, it.value)
+                MixetteDashboardOrganisation(user, it.value, properties)
             }
 
         return MixetteDashboardData(tenBetterDonors, donationByOrgas)
@@ -144,14 +145,16 @@ class MixetteHandler(
         val company: String?,
         val photoUrl: String?,
         val description: String?,
-        val quantity: Int
+        val quantity: Int,
+        val amount: Double,
     ) {
-        constructor(user: CachedUser, quantity: Int) : this(
+        constructor(user: CachedUser, quantity: Int, properties: MixitProperties) : this(
             user.login,
             user.company,
             user.photoUrl,
             user.description[Language.FRENCH],
-            quantity
+            quantity,
+            properties.mixetteValue.multiply(BigDecimal.valueOf(quantity.toLong())).toDouble()
         )
     }
 }

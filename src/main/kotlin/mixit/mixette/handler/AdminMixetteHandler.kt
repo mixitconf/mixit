@@ -150,7 +150,7 @@ class AdminMixetteHandler(
      */
     suspend fun editDonor(req: ServerRequest): ServerResponse {
         val ticketNumber = req.queryParamOrNull("ticketNumber") ?: throw NotFoundException()
-        val donations = repository.findByTicketNumber(ticketNumber, CURRENT_EVENT)
+        val donations = repository.findByTicketNumber(cryptographer.encrypt(ticketNumber)!!, CURRENT_EVENT)
         return this.adminGroupDonation(AdminMixetteDonor.template, donations) {
             findDonorByEncryptedTicketNumber(it.encryptedTicketNumber!!) ?: throw NotFoundException()
         }

@@ -1,5 +1,25 @@
 [
     {
+        "addedAt": "2023-03-06T12:31:34.194",
+        "description": "",
+        "end": "2023-04-13T10:00:00",
+        "event": "2023",
+        "format": "TALK",
+        "id": "6405dd3d34a9b85777797fe7",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHI1",
+        "slug": "keynote",
+        "speakerIds": [
+            "TBA"
+        ],
+        "start": "2023-04-13T09:30:00",
+        "summary": "A venir",
+        "title": "Keynote",
+        "topic": "aliens",
+        "video": null
+    },
+    {
         "addedAt": "2023-02-13T20:50:31.207",
         "description": "",
         "end": "2023-04-13T11:30:00",
@@ -297,9 +317,29 @@
             "TBA"
         ],
         "start": "2023-04-13T13:20:00",
-        "summary": "TBA",
+        "summary": "Pour choisir quel talk vous souhaitez voir \u00e0 cet endroit, rendez vous \u00e0 la soir\u00e9e Le Tremplin de MiXit le 30 mars 2023 \u00e0 18h30 ! https://www.meetup.com/fr-FR/craftsrecords/events/291885811/",
         "title": "Tremplin 1",
         "topic": "tech",
+        "video": null
+    },
+    {
+        "addedAt": "2023-03-06T12:32:00.687",
+        "description": "",
+        "end": "2023-04-13T14:30:00",
+        "event": "2023",
+        "format": "TALK",
+        "id": "6405dd8934a9b85777797fe8",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHI1",
+        "slug": "keynote",
+        "speakerIds": [
+            "TBA"
+        ],
+        "start": "2023-04-13T14:00:00",
+        "summary": "A venir",
+        "title": "Keynote",
+        "topic": "aliens",
         "video": null
     },
     {
@@ -359,7 +399,7 @@
             "klaukf"
         ],
         "start": "2023-04-13T14:50:00",
-        "summary": "Il existe beaucoup de fa\u00e7on de g\u00e9rer des projets ou des produits. Dans l'\u00e9cosyst\u00e8me informatique, beaucoup de mots sont \u00e0 la mode et il est difficile de s'y retrouver.\nJe vous propose un atelier, bas\u00e9 sur des Lego, pour exp\u00e9rimenter trois fa\u00e7ons de g\u00e9rer en \u00e9quipe les fonctionnalit\u00e9s d'un produit :\n- en cascade - r\u00e9f\u00e9rence au mode Waterfall\n- en it\u00e9ratif - r\u00e9f\u00e9rence au mode Scrum\n- au fil de l'eau - r\u00e9f\u00e9rence au mode Kanban\nSerious game, d\u00e9brief et pr\u00e9sentation des notions sont au programme. Et si l'envie vous prend de rejouer cette exp\u00e9rience en entreprise, je vous pr\u00e9senterai le mode op\u00e9ratoire pour faciliter cet atelier-d\u00e9couverte.\nVenez participer \u00e0 cet atelier ludique et vivant \u00e0 base de briques color\u00e9es !",
+        "summary": "Il existe beaucoup de fa\u00e7on de g\u00e9rer des projets ou des produits. Dans l'\u00e9cosyst\u00e8me informatique, beaucoup de mots sont \u00e0 la mode et il est difficile de s'y retrouver.\r\nJe vous propose un atelier, bas\u00e9 sur des Lego, pour exp\u00e9rimenter trois fa\u00e7ons de g\u00e9rer en \u00e9quipe les fonctionnalit\u00e9s d'un produit :\r\n- en cascade - r\u00e9f\u00e9rence au mode Waterfall\r\n- en it\u00e9ratif - r\u00e9f\u00e9rence au mode Scrum\r\n- au fil de l'eau - r\u00e9f\u00e9rence au mode Kanban\r\n\r\nSerious game, d\u00e9brief et pr\u00e9sentation des notions sont au programme. Et si l'envie vous prend de rejouer cette exp\u00e9rience en entreprise, je vous pr\u00e9senterai le mode op\u00e9ratoire pour faciliter cet atelier-d\u00e9couverte.\r\nVenez participer \u00e0 cet atelier ludique et vivant \u00e0 base de briques color\u00e9es !",
         "title": "Lego Flow Game : le Waterfall, le Scrum et le Kanban tu diff\u00e9rencieras !",
         "topic": "team",
         "video": null
@@ -589,6 +629,26 @@
         "video": null
     },
     {
+        "addedAt": "2023-03-06T12:34:09.681",
+        "description": "",
+        "end": "2023-04-13T18:30:00",
+        "event": "2023",
+        "format": "TALK",
+        "id": "6405ddd934a9b85777797fe9",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHI1",
+        "slug": "keynote",
+        "speakerIds": [
+            "TBA"
+        ],
+        "start": "2023-04-13T18:00:00",
+        "summary": "A venir",
+        "title": "Keynote",
+        "topic": "aliens",
+        "video": null
+    },
+    {
         "addedAt": "2023-02-13T20:50:31.217",
         "description": "",
         "end": "2023-04-14T10:00:00",
@@ -700,15 +760,15 @@
         "language": "FRENCH",
         "photoUrls": [],
         "room": "ROOM4",
-        "slug": "le-gitops-dont-vous-etes-le-heros-version-atelier-",
+        "slug": "le-gitops-dont-vous-etes-le-heros",
         "speakerIds": [
             "Louis.Tournayre",
             "mathieu.mure",
             "pierre.morvan"
         ],
         "start": "2023-04-14T10:40:00",
-        "summary": "Dans le vaste royaume de Kubernetes, notre application est en p\u00e9ril. Les bugs et les besoins utilisateurs non couverts sont en train de les \u00e9puiser. Les correctifs et nouvelles fonctionnalit\u00e9s arriverons-t-il \u00e0 temps pour sauver l\u2019Application ? Si le processus de livraison ne s\u2019am\u00e9liore pas, les utilisateurs vont d\u00e9serter et ce sera sa fin.\n\u00c0 vous, public, de devenir le h\u00e9ros qui va sauver l\u2019Application en embrassant la voie du GitOps.\nCette ~~atelier~~ aventure sera interactive ! Vos choix vous permettront d\u2019arriver ou pas en production dans les temps. Dans ce premier tome de cette saga, vous allez apprendre ce qu\u2019est GitOps, vous choisirez votre solution et la mettrez en \u0153uvre. Soyez pr\u00eat \u00e0 assumer vos choix, vous apprendrez de vos erreurs comme de vos succ\u00e8s, et peut \u00eatre arriverez vous \u00e0 temps en production.\n___\n*4\u00e8me de couverture :\nCet atelier est destin\u00e9 aux aventuriers avec quelques connaissances de k8s et curieux de d\u00e9couvrir l\u2019approche GitOps.\nSerez-vous l\u2019aventurier qui embrassera la voie du GitOps ? Entre r\u00e9tro-gaming sur WorkAdventure et Donjons & Dragons, ce sera \u00e0 vous de faire vos propres choix, pour une exp\u00e9rience unique. ",
-        "title": "Le GitOps dont vous \u00eates le h\u00e9ros [VERSION ATELIER]",
+        "summary": "Dans le vaste royaume de Kubernetes, notre application est en p\u00e9ril. Les bugs et les besoins utilisateurs non couverts sont en train de les \u00e9puiser. Les correctifs et nouvelles fonctionnalit\u00e9s arriverons-t-il \u00e0 temps pour sauver l\u2019Application ? Si le processus de livraison ne s\u2019am\u00e9liore pas, les utilisateurs vont d\u00e9serter et ce sera sa fin.\r\n\u00c0 vous, public, de devenir le h\u00e9ros qui va sauver l\u2019Application en embrassant la voie du GitOps.\r\nCette ~~atelier~~ aventure sera interactive ! Vos choix vous permettront d\u2019arriver ou pas en production dans les temps. Dans ce premier tome de cette saga, vous allez apprendre ce qu\u2019est GitOps, vous choisirez votre solution et la mettrez en \u0153uvre. Soyez pr\u00eat \u00e0 assumer vos choix, vous apprendrez de vos erreurs comme de vos succ\u00e8s, et peut \u00eatre arriverez vous \u00e0 temps en production.\r\n___\r\n*4\u00e8me de couverture :\r\nCet atelier est destin\u00e9 aux aventuriers avec quelques connaissances de k8s et curieux de d\u00e9couvrir l\u2019approche GitOps.\r\nSerez-vous l\u2019aventurier qui embrassera la voie du GitOps ? Entre r\u00e9tro-gaming sur WorkAdventure et Donjons & Dragons, ce sera \u00e0 vous de faire vos propres choix, pour une exp\u00e9rience unique. ",
+        "title": "Le GitOps dont vous \u00eates le h\u00e9ros",
         "topic": "tech",
         "video": null
     },
@@ -907,9 +967,29 @@
             "TBA"
         ],
         "start": "2023-04-14T13:20:00",
-        "summary": "TBA",
+        "summary": "Pour choisir quel talk vous souhaitez voir \u00e0 cet endroit, rendez vous \u00e0 la soir\u00e9e Le Tremplin de MiXit le 30 mars 2023 \u00e0 18h30 ! https://www.meetup.com/fr-FR/craftsrecords/events/291885811/",
         "title": "Tremplin 2",
         "topic": "tech",
+        "video": null
+    },
+    {
+        "addedAt": "2023-03-06T12:35:38.72",
+        "description": "",
+        "end": "2023-04-14T14:30:00",
+        "event": "2023",
+        "format": "KEYNOTE",
+        "id": "6405de4134a9b85777797fea",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHI1",
+        "slug": "keynote",
+        "speakerIds": [
+            "TBA"
+        ],
+        "start": "2023-04-14T14:00:00",
+        "summary": "A venir",
+        "title": "Keynote",
+        "topic": "aliens",
         "video": null
     },
     {
@@ -1073,6 +1153,26 @@
         "summary": "WebAssembly a fait beaucoup de chemin depuis sa premi\u00e8re version majeure en 2015. Les cas d'utilisation d\u00e9passent d\u00e9sormais le cadre des applications Web : infrastructures cloud, virtualisation, *edge computing*, architectures de *plugins*, etc. Quelles \u00e9volutions pass\u00e9es ont rendu \u00e7a possible ? Comment \u00e9volue WebAssembly en tant que plateforme ? Quelles am\u00e9liorations sont \u00e0 venir, et que vont-elles permettre d'accomplir ? Nous nous pencherons sur ces questions en (re)d\u00e9couvrant ensemble WebAssembly, son historique, et ses principales extensions \u00e0 venir (WASI, component model, garbage collector).",
         "title": "WebAssembly en 2023 : un \u00e9tat de l'art",
         "topic": "tech",
+        "video": null
+    },
+    {
+        "addedAt": "2023-03-06T12:36:20.524",
+        "description": "",
+        "end": "2023-04-14T17:15:00",
+        "event": "2023",
+        "format": "TALK",
+        "id": "6405de8434a9b85777797feb",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHI1",
+        "slug": "keynote",
+        "speakerIds": [
+            "TBA"
+        ],
+        "start": "2023-04-14T16:45:00",
+        "summary": "A venir",
+        "title": "Keynote",
+        "topic": "aliens",
         "video": null
     }
 ]
