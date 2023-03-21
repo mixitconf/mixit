@@ -4,18 +4,18 @@
         "description": "",
         "end": "2023-04-13T10:00:00",
         "event": "2023",
-        "format": "TALK",
+        "format": "KEYNOTE",
         "id": "6405dd3d34a9b85777797fe7",
         "language": "FRENCH",
         "photoUrls": [],
         "room": "AMPHI1",
-        "slug": "keynote",
+        "slug": "capitalisme-de-surveillance-et-rapt-de-l-ecriture-numerique",
         "speakerIds": [
-            "TBA"
+            "e.guichard"
         ],
         "start": "2023-04-13T09:30:00",
-        "summary": "A venir",
-        "title": "Keynote",
+        "summary": "Capitalisme de surveillance et rapt de l\u2019\u00e9criture num\u00e9rique",
+        "title": "Capitalisme de surveillance et rapt de l\u2019\u00e9criture num\u00e9rique",
         "topic": "aliens",
         "video": null
     },
@@ -546,6 +546,27 @@
         "summary": "La nouvelle g\u00e9n\u00e9ration de Spring Framework est disponible !\r\nSpring Framework 6.0 am\u00e8ne de nouveaux pr\u00e9-requis qui permettent \u00e0 l'\u00e9cosyst\u00e8me Spring d'aller de l'avant: Java 17, Jakarta EE 9+. C'est la fondation pour Spring Boot 3.0 et le commencement de nouveaux th\u00e8mes majeurs, tels que AOT/Native et Observability.\r\nPendant cette pr\u00e9sentation, St\u00e9phane couvrira les th\u00e8mes majeurs de cette nouvelle release:\r\n* La nouvelle baseline avec Java 17 et Jakarta EE 9.\r\n* Le support AOT qui permet de compiler vos applications Spring en natif avec GraalVM.\r\n* L'am\u00e9lioration de l'observabilit\u00e9, et ce que cela signifie pour les fonctionnalit\u00e9s de base telles que RestTemplate, contr\u00f4leurs web, etc.\r\n* Le support de clients par interface pour HTTP et d'autres transports.\r\n* Le support de problem details (RFC 7807).",
         "title": "Spring Framework 6.0",
         "topic": "tech",
+        "video": null
+    },
+    {
+        "addedAt": "2023-03-20T11:55:13.983",
+        "description": "",
+        "end": "2023-04-13T16:40:00",
+        "event": "2023",
+        "format": "TALK",
+        "id": "64184b1a2a24863cd072b4ab",
+        "language": "FRENCH",
+        "photoUrls": [],
+        "room": "AMPHI2",
+        "slug": "la-neurodiversite-au-travail",
+        "speakerIds": [
+            "c.petit",
+            "jquille"
+        ],
+        "start": "2023-04-13T15:50:00",
+        "summary": "Nous vous proposons de d\u00e9couvrir ou red\u00e9couvrir des notions telles que le haut potentiel, l'autisme, le TDA/H afin d'y mettre plus de nuances et sortir des st\u00e9r\u00e9otypes \u00e0 la Rain man, The Good Doctor ou encore The Big Bang Theory...\r\nOn estime aujourd'hui que la neurodiversit\u00e9 touche entre 1 et 2 personnes sur 10. Dans le milieu de l'IT, il semblerait que la proportion soit encore plus importante (pas de chiffre officiel car peu de personnes osent parler de leur neurodiversit\u00e9 de peur d'\u00eatre stigmatis\u00e9 ou placardis\u00e9).\r\nParticularit\u00e9s cognitives et sensorielles, maladresses sociales et difficult\u00e9s \u00e0 comprendre l'implicite, que nous le voulions ou non, nous sommes toutes et tous concern\u00e9s par le \"faire avec\". Faire avec la diversit\u00e9, faire avec les sensibilit\u00e9s particuli\u00e8res, faire avec des fa\u00e7ons de voir le monde diff\u00e9rentes. A la suite de notre intervention, nous esp\u00e9rons que plut\u00f4t que de \"faire malgr\u00e9\", vous comprendrez mieux comment en faire un atout pour votre \u00e9quipe et comment les petits am\u00e9nagements pourront b\u00e9n\u00e9ficier \u00e0 tout le monde!\r\nNous aborderons ces sujets, et en particulier l'autisme (ou le TSA) et le TDA/H, afin d'augmenter la compr\u00e9hension des sp\u00e9cificit\u00e9s li\u00e9es \u00e0 ces diff\u00e9rences. Nous verrons \u00e9galement quelques petites astuces pour cr\u00e9er un environnement plus accueillant pour les personnes neuro-atypiques. M\u00eame si la solution miracle et applicable \u00e0 chaque situation n'existe pas, d\u00e9j\u00e0 parler de ces sujets nous permet d'avancer d'un pas dans le fait de vivre la diversit\u00e9 comme une richesse.",
+        "title": "La neurodiversit\u00e9 au travail",
+        "topic": "aliens",
         "video": null
     },
     {
@@ -1160,18 +1181,18 @@
         "description": "",
         "end": "2023-04-14T17:15:00",
         "event": "2023",
-        "format": "TALK",
+        "format": "KEYNOTE",
         "id": "6405de8434a9b85777797feb",
         "language": "FRENCH",
         "photoUrls": [],
         "room": "AMPHI1",
-        "slug": "keynote",
+        "slug": "mathematiques-magie",
         "speakerIds": [
-            "TBA"
+            "jb.aubin"
         ],
         "start": "2023-04-14T16:45:00",
-        "summary": "A venir",
-        "title": "Keynote",
+        "summary": "Des propri\u00e9t\u00e9s math\u00e9matiques permettent de calculer mentalement \u00e0 une vitesse \u00e9lev\u00e9e ou \u00e0 effectuer des d\u00e9ductions qui semblent d\u00e9fier la logique... et ressembler \u00e0 de la magie !",
+        "title": "Math\u00e9matiques & Magie",
         "topic": "aliens",
         "video": null
     }
