@@ -35589,5 +35589,47 @@
         "role": "USER",
         "token": "",
         "tokenExpiration": "2018-01-01T00:00:00"
+    },
+    {
+        "company": "wGSfToomh4BFF7gEXkd/rw==",
+        "description": {
+            "ENGLISH": "iD1x60dgyI/Y/pVaYeK3NQ==",
+            "FRENCH": "iD1x60dgyI/Y/pVaYeK3NQ=="
+        },
+        "email": "/J3aDCauq9Az4vTDOUzU8M6PxeA2A/xF8JXWDQzp0rg=",
+        "emailHash": null,
+        "externalAppToken": null,
+        "firstname": "R0vw5fZTNiq0dfMQ6KpCCg==",
+        "lastname": "ZG2a31azUr4TCSPzt1wmXg==",
+        "legacyId": null,
+        "links": [],
+        "login": "wGSfToomh4BFF7gEXkd/rw==",
+        "newsletterSubscriber": false,
+        "photoShape": "Square",
+        "photoUrl": "V9Vfn04FB0Jgy5uENO6f8zp592ONjLqGhxRN8mUqXHPLY/V3fvFhoSzFAUGYXs6xgPhuCodtKZ/t1YB91wkKOg==",
+        "role": "USER",
+        "token": "",
+        "tokenExpiration": "2018-01-01T00:00:00"
+    },
+    {
+        "company": "fO0AQgLChlM1uLLW9MpaQQ==",
+        "description": {
+            "ENGLISH": "iD1x60dgyI/Y/pVaYeK3NQ==",
+            "FRENCH": "iD1x60dgyI/Y/pVaYeK3NQ=="
+        },
+        "email": "Cy1yJ+jVm9rnFck3GHM70YUPmLKJvu2UydKUUP1vxSY=",
+        "emailHash": null,
+        "externalAppToken": null,
+        "firstname": "96Gq7ZJfZP88WvpFNUxXeA==",
+        "lastname": "UrsT+iNhLmf0tvHsVcQ2Wg==",
+        "legacyId": null,
+        "links": [],
+        "login": "/BhTYq5ReRivpVWoQSxo3Q==",
+        "newsletterSubscriber": false,
+        "photoShape": "Square",
+        "photoUrl": "V9Vfn04FB0Jgy5uENO6f8zp592ONjLqGhxRN8mUqXHOKgcppu32+shp7A6aN5jI/WXChuTglrTOFaa9hT+H27A==",
+        "role": "USER",
+        "token": "",
+        "tokenExpiration": "2018-01-01T00:00:00"
     }
 ]
