@@ -23,7 +23,8 @@ import org.springframework.web.reactive.function.server.renderAndAwait
 @Component
 class AboutHandler(
     private val userService: UserService,
-    private val eventService: EventService) {
+    private val eventService: EventService
+) {
 
     suspend fun findAboutView(req: ServerRequest, year: Int): ServerResponse {
         val event = eventService.findByYear(year)

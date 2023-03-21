@@ -70,9 +70,12 @@ class UserService(
 
     fun loadSponsors(event: CachedEvent): Map<String, Any> {
         val sponsors = event.filterBySponsorLevel(GOLD) + event.filterBySponsorLevel(LANYARD) + event.filterBySponsorLevel(PARTY)
+        val sponsorIds = sponsors.map { it.login }
         return mapOf(
-            "sponsors-gold" to sponsors.map { it.toSponsorDto() },
-            "sponsors-others" to event.sponsors.filterNot { sponsors.contains(it) }.map { it.toSponsorDto() }.distinct()
+            "sponsors-main" to sponsors.map { it.toSponsorDto() },
+            "sponsors-others" to event.sponsors
+                .filterNot { sponsorIds.contains(it.login) }
+                .map { it.toSponsorDto() }.distinct()
         )
     }
 }
