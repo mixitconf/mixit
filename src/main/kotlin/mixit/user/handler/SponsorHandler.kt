@@ -2,15 +2,11 @@ package mixit.user.handler
 
 import mixit.MixitApplication.Companion.CURRENT_EVENT
 import mixit.event.model.EventService
-import mixit.event.model.SponsorshipLevel
 import mixit.event.model.SponsorshipLevel.Companion.sponsorshipLevels
-import mixit.event.model.SponsorshipLevel.GOLD
-import mixit.event.model.SponsorshipLevel.LANYARD
-import mixit.event.model.SponsorshipLevel.PARTY
 import mixit.routes.MustacheI18n
 import mixit.routes.MustacheTemplate.Sponsors
 import mixit.user.handler.dto.toSpeakerStarDto
-import mixit.user.handler.dto.toSponsorDto
+import mixit.user.model.UserService
 import mixit.util.language
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
@@ -19,7 +15,10 @@ import org.springframework.web.reactive.function.server.renderAndAwait
 
 @Suppress("CANDIDATE_CHOSEN_USING_OVERLOAD_RESOLUTION_BY_LAMBDA_ANNOTATION")
 @Component
-class SponsorHandler(private val eventService: EventService) {
+class SponsorHandler(
+    private val eventService: EventService,
+    private val userService: UserService
+) {
 
     suspend fun viewSponsors(req: ServerRequest, year: Int = CURRENT_EVENT.toInt()): ServerResponse {
         val event = eventService.findByYear(year)
@@ -46,18 +45,14 @@ class SponsorHandler(private val eventService: EventService) {
         req: ServerRequest,
         template: String,
         title: String? = null,
-        spotLights: Array<SponsorshipLevel> = arrayOf(LANYARD, GOLD, PARTY),
         year: Int = CURRENT_EVENT.toInt(),
     ): ServerResponse {
         val event = eventService.findByYear(year)
-        val mainSponsors = event.filterBySponsorLevel(*spotLights)
-        val otherSponsors = event.sponsors.filterNot { mainSponsors.contains(it) }
 
         val context = mutableMapOf(
+            MustacheI18n.SPONSORS to userService.loadSponsors(event),
             "year" to year,
-            "title" to if (template != "sponsors") title else "$title|$year",
-            "sponsors-main" to mainSponsors.map { it.toSponsorDto() },
-            "sponsors-others" to otherSponsors.map { it.toSponsorDto() }
+            "title" to if (template != "sponsors") title else "$title|$year"
         )
         if (template == "home") {
             context["stars-old"] = event.speakerStarInHistory

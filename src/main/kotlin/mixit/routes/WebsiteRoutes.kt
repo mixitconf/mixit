@@ -8,13 +8,11 @@ import mixit.blog.handler.AdminPostHandler
 import mixit.blog.handler.WebBlogHandler
 import mixit.event.handler.AdminEventHandler
 import mixit.event.handler.AdminEventImagesHandler
-import mixit.event.model.SponsorshipLevel.MIXTEEN
 import mixit.mailing.handler.MailingHandler
 import mixit.mailing.handler.MailingListHandler
 import mixit.mixette.handler.AdminMixetteHandler
 import mixit.mixette.handler.MixetteHandler
 import mixit.routes.MustacheTemplate.Home
-import mixit.routes.MustacheTemplate.Mixteen
 import mixit.security.handler.AuthenticationHandler
 import mixit.talk.handler.AdminTalkHandler
 import mixit.talk.handler.TalkHandler
@@ -169,9 +167,6 @@ class WebsiteRoutes(
             GET("/speaker", userHandler::speakerView)
             GET("/sponsors") { sponsorHandler.viewSponsors(it) }
             GET("/mixette/dashboard", mixetteHandler::mixette)
-            GET("/mixteen") {
-                sponsorHandler.viewWithSponsors(it, Mixteen.template, Mixteen.title, arrayOf(MIXTEEN))
-            }
             GET("/schedule", talkHandler::scheduleView)
             GET("/user/{login}") { userHandler.findOneView(it) }
 
