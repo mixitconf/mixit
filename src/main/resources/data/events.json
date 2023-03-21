@@ -1911,6 +1911,36 @@
                 "level": "SILVER",
                 "sponsorId": "clevercloud",
                 "subscriptionDate": "2023-03-14"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "peaks-sponsor",
+                "subscriptionDate": "2023-03-21"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "WorldlineFrance",
+                "subscriptionDate": "2023-03-21"
+            },
+            {
+                "level": "PARTY",
+                "sponsorId": "braincube",
+                "subscriptionDate": "2023-03-21"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Alstom",
+                "subscriptionDate": "2023-03-21"
+            },
+            {
+                "level": "MIXTEEN",
+                "sponsorId": "abylsen",
+                "subscriptionDate": "2023-03-21"
+            },
+            {
+                "level": "MIXTEEN",
+                "sponsorId": "annick.challancin@esker.fr",
+                "subscriptionDate": "2023-03-21"
             }
         ],
         "start": "2023-04-13",
