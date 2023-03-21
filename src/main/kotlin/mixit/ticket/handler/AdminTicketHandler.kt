@@ -191,7 +191,7 @@ class AdminTicketHandler(
         listOf(SPONSOR_LANYARD, SPONSOR_STAND, SPONSOR_MIXTEEN, SPONSOR_PARTNER, SPONSOR_PARTY)
             .onEach { service.deleteAll(it)}
 
-        val levelTypeWithEntries = listOf(GOLD, LANYARD, SILVER)
+        val levelTypeWithEntries = listOf(GOLD, LANYARD, SILVER, MIXTEEN, PARTY)
         this.eventService.findByYear(MixitApplication.CURRENT_EVENT)
             .sponsors
             .filter { levelTypeWithEntries.contains(it.level) }
@@ -247,7 +247,7 @@ class AdminTicketHandler(
 
     suspend fun adminDeleteTicket(req: ServerRequest): ServerResponse {
         val formData = req.extractFormData()
-        service.deleteOne(formData["number"]!!).awaitSingleOrNull()
+        service.deleteOne(cryptographer.encrypt(formData["number"])!!).awaitSingleOrNull()
         return seeOther("${properties.baseUri}$LIST_URI")
     }
 

@@ -16,5 +16,7 @@ enum class TicketType {
     COMPETITION_WINNER,
     FOOD,
     MEDIA,
-    MIXETTE
+    MIXETTE,
+    SIGNES_FORMATIONS,
+    METROPOLE_DE_LYON
 }
