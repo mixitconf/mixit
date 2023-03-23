@@ -40,15 +40,24 @@
         </div>
         <div>&nbsp;</div>
     {{/has-sponsors-lanyard}}
-    {{#has-sponsors-main}}
+    {{#has-sponsors-party}}
         <div class="container mxt-wrapper--page-content pb-4">
-            <h2 class="text-center  mt-3 mb-4">{{#i18n}}sponsors.gold{{/i18n}}</h2>
-            {{#sponsors-main}}
+            <h2 class="text-center mt-3 mb-4">{{#i18n}}sponsors.party{{/i18n}}</h2>
+            {{#sponsors-party}}
                 {{> sponsor }}
-            {{/sponsors-main}}
+            {{/sponsors-party}}
         </div>
         <div>&nbsp;</div>
-    {{/has-sponsors-main}}
+    {{/has-sponsors-party}}
+    {{#has-sponsors-gold}}
+        <div class="container mxt-wrapper--page-content pb-4">
+            <h2 class="text-center  mt-3 mb-4">{{#i18n}}sponsors.gold{{/i18n}}</h2>
+            {{#sponsors-gold}}
+                {{> sponsor }}
+            {{/sponsors-gold}}
+        </div>
+        <div>&nbsp;</div>
+    {{/has-sponsors-gold}}
     {{#has-sponsors-accessibility}}
         <div class="container mxt-wrapper--page-content pb-4">
             <h2 class="text-center  mt-3 mb-4">{{#i18n}}sponsors.accessibility{{/i18n}}</h2>
@@ -85,15 +94,6 @@
         </div>
         <div>&nbsp;</div>
     {{/has-sponsors-silver}}
-    {{#has-sponsors-party}}
-        <div class="container mxt-wrapper--page-content pb-4">
-            <h2 class="text-center mt-3 mb-4">{{#i18n}}sponsors.party{{/i18n}}</h2>
-            {{#sponsors-party}}
-                {{> sponsor }}
-            {{/sponsors-party}}
-        </div>
-        <div>&nbsp;</div>
-    {{/has-sponsors-party}}
     {{#has-sponsors-hosting}}
         <div class="container mxt-wrapper--page-content pb-4">
             <h2 class="text-center mt-3 mb-4">{{#i18n}}sponsors.hosting{{/i18n}}</h2>
