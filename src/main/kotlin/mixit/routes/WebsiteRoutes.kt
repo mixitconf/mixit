@@ -155,7 +155,7 @@ class WebsiteRoutes(
             GET("/blog/{slug}", blogHandler::findOneView)
             GET("/codeofconduct", aboutHandler::codeConductView)
             GET("/code-of-conduct", aboutHandler::codeConductView)
-            GET("/come", aboutHandler::comeToMixitView)
+            GET("/venue", aboutHandler::comeToMixitView)
             GET("/faq", aboutHandler::faqView)
             GET("/lottery", lotteryHandler::ticketing)
             GET("/me") { userHandler.findProfileView(it) }
