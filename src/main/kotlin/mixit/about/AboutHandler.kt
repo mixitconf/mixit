@@ -9,9 +9,9 @@ import mixit.routes.MustacheI18n.YEAR
 import mixit.routes.MustacheTemplate.About
 import mixit.routes.MustacheTemplate.Accessibility
 import mixit.routes.MustacheTemplate.CodeOfConduct
-import mixit.routes.MustacheTemplate.Come
 import mixit.routes.MustacheTemplate.Faq
 import mixit.routes.MustacheTemplate.Search
+import mixit.routes.MustacheTemplate.Venue
 import mixit.user.model.UserService
 import mixit.util.language
 import org.springframework.stereotype.Component
@@ -59,9 +59,9 @@ class AboutHandler(
 
         return ok()
             .render(
-                Come.template,
+                Venue.template,
                 mapOf(
-                    TITLE to Come.title,
+                    TITLE to Venue.title,
                     YEAR to event.year,
                     SPONSORS to userService.loadSponsors(event)
                 )

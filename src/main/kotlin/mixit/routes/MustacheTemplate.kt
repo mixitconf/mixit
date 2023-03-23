@@ -44,7 +44,6 @@ enum class MustacheTemplate(val template: String, val title: String?) {
     Blog("blog", "blog.title"),
     BlogPost("post", null),
     CodeOfConduct("code-of-conduct", "code-of-conduct.title"),
-    Come("come", "come.title"),
     Faq("faq", "faq.title"),
     Home("home", null),
     EmailMailing("email/email-mailing", null),
@@ -75,5 +74,6 @@ enum class MustacheTemplate(val template: String, val title: String?) {
     TicketError("ticket-error", "admin.ticket.title"),
     User("user", null),
     UserEdit("user-edit", null),
+    Venue("venue", "venue.title"),
     None("none", null)
 }
