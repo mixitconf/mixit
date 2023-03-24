@@ -1,0 +1,1991 @@
+[
+    {
+        "id": "mixit12",
+        "start": "2012-04-26",
+        "end": "2012-04-26",
+        "current": false,
+        "sponsors": [
+            {
+                "level": "GOLD",
+                "sponsorId": "Sqli",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "VISEO",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "Yseop",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "woonoz",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "terre.dagile",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "google",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "thales",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "ZenikaLyon",
+                "subscriptionDate": "2017-11-08"
+            }
+        ],
+        "organizations": [],
+        "volunteers": [
+            {
+                "volunteerLogin": "AlexisHassler"
+            }
+        ],
+        "organizers": [
+            {
+                "organizerLogin": "cedric"
+            },
+            {
+                "organizerLogin": "clacote"
+            },
+            {
+                "organizerLogin": "romain"
+            },
+            {
+                "organizerLogin": "agnes"
+            },
+            {
+                "organizerLogin": "franck"
+            },
+            {
+                "organizerLogin": "npelloux"
+            }
+        ],
+        "photoUrls": [
+            {
+                "name": "MiXiT 2012",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157688295733061"
+            }
+        ],
+        "videoUrl": null,
+        "schedulingFileUrl": null,
+        "year": 2012
+    },
+    {
+        "id": "mixit13",
+        "start": "2013-04-25",
+        "end": "2013-04-26",
+        "current": false,
+        "sponsors": [
+            {
+                "level": "SILVER",
+                "sponsorId": "Sqli",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "VISEO",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "terre.dagile",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "woonoz",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "thales",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "google",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "sonarsource",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "elasticsearch",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "GitHub",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "ZenikaLyon",
+                "subscriptionDate": "2017-11-08"
+            }
+        ],
+        "organizations": [],
+        "volunteers": [
+            {
+                "volunteerLogin": "AlexisHassler"
+            }
+        ],
+        "organizers": [
+            {
+                "organizerLogin": "clacote"
+            },
+            {
+                "organizerLogin": "agnes"
+            },
+            {
+                "organizerLogin": "franck"
+            },
+            {
+                "organizerLogin": "cedric"
+            },
+            {
+                "organizerLogin": "npelloux"
+            },
+            {
+                "organizerLogin": "romain"
+            }
+        ],
+        "photoUrls": [
+            {
+                "name": "MiXiT 2013",
+                "url": "https://photos.google.com/b/106629477368826686108/album/AF1QipP_2rgU2AmfHs8jqjqHZssdbptYaq8f2tqAyqLN"
+            }
+        ],
+        "videoUrl": null,
+        "schedulingFileUrl": null,
+        "year": 2013
+    },
+    {
+        "id": "mixit14",
+        "start": "2014-04-29",
+        "end": "2014-04-30",
+        "current": false,
+        "sponsors": [
+            {
+                "level": "SILVER",
+                "sponsorId": "terre.dagile",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "VISEO",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "woonoz",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "google",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "cgi",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "steria",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "GitHub",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "SerliFr",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Open_ESN",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "econocom-osiatis",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "Mozilla",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "VersionOne",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "Atlassian",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "Redhat",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "Mailjet",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "ZenikaLyon",
+                "subscriptionDate": "2017-11-08"
+            }
+        ],
+        "organizations": [],
+        "volunteers": [
+            {
+                "volunteerLogin": "AlexisHassler"
+            }
+        ],
+        "organizers": [
+            {
+                "organizerLogin": "mpetitdant"
+            },
+            {
+                "organizerLogin": "romain"
+            },
+            {
+                "organizerLogin": "cedric"
+            },
+            {
+                "organizerLogin": "clacote"
+            },
+            {
+                "organizerLogin": "agnes"
+            },
+            {
+                "organizerLogin": "npelloux"
+            },
+            {
+                "organizerLogin": "franck"
+            }
+        ],
+        "photoUrls": [
+            {
+                "name": "MiXiT 2014",
+                "url": "https://photos.google.com/b/106629477368826686108/album/AF1QipNw6ApiPhPzzd-5BtKlIsuLralYcTCm2HaG3GXk"
+            }
+        ],
+        "videoUrl": {
+            "name": "video",
+            "url": "https://vimeo.com/214902172"
+        },
+        "schedulingFileUrl": null,
+        "year": 2014
+    },
+    {
+        "id": "mixit15",
+        "start": "2015-04-16",
+        "end": "2015-04-17",
+        "current": false,
+        "sponsors": [
+            {
+                "level": "SILVER",
+                "sponsorId": "woonoz",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "VISEO",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "google",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "cgi",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "FIDUCIAL",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "SII_rhonealpes",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "alfene",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Sopra Steria",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "ERDF-Linky",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "Elao",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "sourcingisr",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "WorldlineFrance",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "neosoftlyon",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "XebiaLabs",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Enalean",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "stormshield",
+                "subscriptionDate": "2017-11-08"
+            }
+        ],
+        "organizations": [],
+        "volunteers": [
+            {
+                "volunteerLogin": "AlexisHassler"
+            }
+        ],
+        "organizers": [
+            {
+                "organizerLogin": "npelloux"
+            },
+            {
+                "organizerLogin": "mpetitdant"
+            },
+            {
+                "organizerLogin": "agnes"
+            },
+            {
+                "organizerLogin": "guillaumeehret"
+            },
+            {
+                "organizerLogin": "greg"
+            },
+            {
+                "organizerLogin": "clacote"
+            },
+            {
+                "organizerLogin": "sdeleuze"
+            },
+            {
+                "organizerLogin": "ph.charriere"
+            }
+        ],
+        "photoUrls": [
+            {
+                "name": "MiXiT 2015 jour 1",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157652095111126"
+            },
+            {
+                "name": "MiXiT 2015 soir\u00e9 la plateforme",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157651751048368"
+            },
+            {
+                "name": "MiXiT 2015 jour 2",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157649826132434"
+            }
+        ],
+        "videoUrl": {
+            "name": "video",
+            "url": "https://vimeo.com/214908582"
+        },
+        "schedulingFileUrl": null,
+        "year": 2015
+    },
+    {
+        "id": "mixit16",
+        "start": "2016-04-21",
+        "end": "2016-04-22",
+        "current": false,
+        "sponsors": [
+            {
+                "level": "GOLD",
+                "sponsorId": "Sopra Steria",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "annick.challancin@esker.fr",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "VISEO",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "ERDF-Linky",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "sonarsource",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Redhat",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Sword",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "cgi",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "econocom-osiatis",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "VIDEO",
+                "sponsorId": "infoq",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "SII_rhonealpes",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "sourcingisr",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "WorldlineFrance",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "LANYARD",
+                "sponsorId": "hired",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "PARTY",
+                "sponsorId": "onlylyon",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "HOSTING",
+                "sponsorId": "pivotal",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "stormshield",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "stackoverflow",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "alfene",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "boot-start",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "amaris",
+                "subscriptionDate": "2017-11-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "ZenikaLyon",
+                "subscriptionDate": "2017-11-08"
+            }
+        ],
+        "organizations": [],
+        "volunteers": [],
+        "organizers": [
+            {
+                "organizerLogin": "agnes"
+            },
+            {
+                "organizerLogin": "AlexisHassler"
+            },
+            {
+                "organizerLogin": "sdeleuze"
+            },
+            {
+                "organizerLogin": "greg"
+            },
+            {
+                "organizerLogin": "ph.charriere"
+            },
+            {
+                "organizerLogin": "guillaumeehret"
+            },
+            {
+                "organizerLogin": "cedric"
+            },
+            {
+                "organizerLogin": "mpetitdant"
+            },
+            {
+                "organizerLogin": "clacote"
+            }
+        ],
+        "photoUrls": [],
+        "videoUrl": null,
+        "schedulingFileUrl": null,
+        "year": 2016
+    },
+    {
+        "id": "mixit17",
+        "start": "2017-04-20",
+        "end": "2017-04-21",
+        "current": false,
+        "sponsors": [
+            {
+                "level": "GOLD",
+                "sponsorId": "Sword",
+                "subscriptionDate": "2016-12-07"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Ippon",
+                "subscriptionDate": "2016-12-14"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Sopra Steria",
+                "subscriptionDate": "2016-12-23"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "annick.challancin@esker.fr",
+                "subscriptionDate": "2017-01-10"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "LDLC",
+                "subscriptionDate": "2017-01-20"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "VISEO",
+                "subscriptionDate": "2017-02-20"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "GitHub",
+                "subscriptionDate": "2017-02-28"
+            },
+            {
+                "level": "LANYARD",
+                "sponsorId": "WorldlineFrance",
+                "subscriptionDate": "2016-10-19"
+            },
+            {
+                "level": "PARTY",
+                "sponsorId": "onlylyon",
+                "subscriptionDate": "2017-01-01"
+            },
+            {
+                "level": "PARTY",
+                "sponsorId": "Hopwork",
+                "subscriptionDate": "2016-11-02"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "SerliFr",
+                "subscriptionDate": "2016-12-13"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "SII_rhonealpes",
+                "subscriptionDate": "2016-12-20"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "woonoz",
+                "subscriptionDate": "2017-01-20"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "Algolia",
+                "subscriptionDate": "2017-01-23"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "Enedis",
+                "subscriptionDate": "2017-01-24"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "Axway",
+                "subscriptionDate": "2017-02-24"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "sourcingisr",
+                "subscriptionDate": "2017-01-25"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "NinjaSquad",
+                "subscriptionDate": "2017-03-27"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "USEway",
+                "subscriptionDate": "2017-04-04"
+            },
+            {
+                "level": "HOSTING",
+                "sponsorId": "pivotal",
+                "subscriptionDate": "2017-01-20"
+            },
+            {
+                "level": "VIDEO",
+                "sponsorId": "infoq",
+                "subscriptionDate": "2017-04-14"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "ZenikaLyon",
+                "subscriptionDate": "2016-11-04"
+            }
+        ],
+        "organizations": [],
+        "volunteers": [
+            {
+                "volunteerLogin": "AlexisHassler"
+            }
+        ],
+        "organizers": [
+            {
+                "organizerLogin": "agnes"
+            },
+            {
+                "organizerLogin": "sdeleuze"
+            },
+            {
+                "organizerLogin": "greg"
+            },
+            {
+                "organizerLogin": "guillaumeehret"
+            },
+            {
+                "organizerLogin": "Charles Bouttaz"
+            },
+            {
+                "organizerLogin": "cedric"
+            },
+            {
+                "organizerLogin": "mpetitdant"
+            },
+            {
+                "organizerLogin": "jessbordeau"
+            }
+        ],
+        "photoUrls": [
+            {
+                "name": "MiXiT 2017 official",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157680961511852"
+            },
+            {
+                "name": "MiXiT 2017 unofficial",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157683737519685"
+            }
+        ],
+        "videoUrl": {
+            "name": "video",
+            "url": "https://vimeo.com/215910469"
+        },
+        "schedulingFileUrl": "/pdf/planning2017.pdf",
+        "year": 2017
+    },
+    {
+        "id": "mixit18",
+        "start": "2018-04-19",
+        "end": "2018-04-20",
+        "current": false,
+        "sponsors": [
+            {
+                "level": "SILVER",
+                "sponsorId": "Saagie",
+                "subscriptionDate": "2017-09-06"
+            },
+            {
+                "level": "ECOCUP",
+                "sponsorId": "Saagie",
+                "subscriptionDate": "2017-09-06"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Hiptest",
+                "subscriptionDate": "2017-10-07"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "WorldlineFrance",
+                "subscriptionDate": "2017-10-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Sopra Steria",
+                "subscriptionDate": "2017-10-15"
+            },
+            {
+                "level": "MIXTEEN",
+                "sponsorId": "clevercloud",
+                "subscriptionDate": "2017-10-06"
+            },
+            {
+                "level": "ECOCUP",
+                "sponsorId": "clevercloud",
+                "subscriptionDate": "2017-11-06"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "semarchy",
+                "subscriptionDate": "2017-11-07"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "datagalaxy",
+                "subscriptionDate": "2017-11-01"
+            },
+            {
+                "level": "LANYARD",
+                "sponsorId": "annick.challancin@esker.fr",
+                "subscriptionDate": "2017-11-14"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "woonoz",
+                "subscriptionDate": "2017-11-14"
+            },
+            {
+                "level": "ECOCUP",
+                "sponsorId": "woonoz",
+                "subscriptionDate": "2017-11-14"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "sogelink",
+                "subscriptionDate": "2017-11-23"
+            },
+            {
+                "level": "ACCESSIBILITY",
+                "sponsorId": "LDLC",
+                "subscriptionDate": "2017-11-28"
+            },
+            {
+                "level": "ECOCUP",
+                "sponsorId": "LDLC",
+                "subscriptionDate": "2017-11-28"
+            },
+            {
+                "level": "MIXTEEN",
+                "sponsorId": "Redhat",
+                "subscriptionDate": "2017-11-29"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "Redhat",
+                "subscriptionDate": "2017-11-29"
+            },
+            {
+                "level": "ACCESSIBILITY",
+                "sponsorId": "talan",
+                "subscriptionDate": "2017-11-30"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "hiit",
+                "subscriptionDate": "2017-12-12"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "sourcingisr",
+                "subscriptionDate": "2017-12-18"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "sogeti",
+                "subscriptionDate": "2017-12-22"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "akuiteo",
+                "subscriptionDate": "2018-02-01"
+            },
+            {
+                "level": "PARTY",
+                "sponsorId": "onlylyon",
+                "subscriptionDate": "2018-02-20"
+            },
+            {
+                "level": "HOSTING",
+                "sponsorId": "clevercloud",
+                "subscriptionDate": "2018-03-06"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "Axway",
+                "subscriptionDate": "2018-03-06"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "feelinjob",
+                "subscriptionDate": "2018-03-14"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "Enedis",
+                "subscriptionDate": "2018-03-22"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "super.tilt",
+                "subscriptionDate": "2018-03-23"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "ZenikaLyon",
+                "subscriptionDate": "2017-10-06"
+            },
+            {
+                "level": "ACCESSIBILITY",
+                "sponsorId": "cgi",
+                "subscriptionDate": "2018-04-06"
+            }
+        ],
+        "organizations": [],
+        "volunteers": [
+            {
+                "volunteerLogin": "clacote"
+            }
+        ],
+        "organizers": [
+            {
+                "organizerLogin": "agnes"
+            },
+            {
+                "organizerLogin": "franck"
+            },
+            {
+                "organizerLogin": "Charles Bouttaz"
+            },
+            {
+                "organizerLogin": "greg"
+            },
+            {
+                "organizerLogin": "guillaumeehret"
+            },
+            {
+                "organizerLogin": "mpetitdant"
+            },
+            {
+                "organizerLogin": "cedric"
+            },
+            {
+                "organizerLogin": "alfred.almendra"
+            }
+        ],
+        "photoUrls": [
+            {
+                "name": "MiXiT 2018 - Day 1 - April 19th",
+                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157695359228534"
+            },
+            {
+                "name": "MiXiT 2018 - Day 2 - April 20th",
+                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157695359699634"
+            },
+            {
+                "name": "MiXiT 2018 MIXTeeN",
+                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157690273360050"
+            },
+            {
+                "name": "MiXiT 2018 - Hackathon",
+                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157666160590557"
+            },
+            {
+                "name": "MiXiT 2018 - Party",
+                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157694276287871"
+            },
+            {
+                "name": "MiXiT 2018 - Speakers dinner",
+                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157695105885704"
+            },
+            {
+                "name": "MiXiT 2018 - Miam",
+                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157692909395252"
+            }
+        ],
+        "videoUrl": {
+            "name": "video",
+            "url": "https://vimeo.com/266571226"
+        },
+        "schedulingFileUrl": "/pdf/planning2018.pdf",
+        "year": 2018
+    },
+    {
+        "id": "mixit19",
+        "start": "2019-05-23",
+        "end": "2019-05-24",
+        "current": false,
+        "sponsors": [
+            {
+                "level": "SILVER",
+                "sponsorId": "feelinjob",
+                "subscriptionDate": "2018-11-01"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "super.tilt",
+                "subscriptionDate": "2018-11-02"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "ZenikaLyon",
+                "subscriptionDate": "2018-11-05"
+            },
+            {
+                "level": "HOSTING",
+                "sponsorId": "clevercloud",
+                "subscriptionDate": "2018-11-16"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "woonoz",
+                "subscriptionDate": "2018-11-21"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "hiit",
+                "subscriptionDate": "2018-11-29"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "cossilys21",
+                "subscriptionDate": "2018-12-15"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "clevercloud",
+                "subscriptionDate": "2018-12-19"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Sopra Steria",
+                "subscriptionDate": "2019-01-15"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "linkvalue",
+                "subscriptionDate": "2019-01-18"
+            },
+            {
+                "level": "PARTY",
+                "sponsorId": "braincube",
+                "subscriptionDate": "2019-01-18"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Hopwork",
+                "subscriptionDate": "2019-01-21"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Bonitasoft",
+                "subscriptionDate": "2019-01-21"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "VISEO",
+                "subscriptionDate": "2019-02-11"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "sourcingisr",
+                "subscriptionDate": "2019-02-11"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "SII_rhonealpes",
+                "subscriptionDate": "2019-03-04"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "conserto",
+                "subscriptionDate": "2019-03-04"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "societegenerale",
+                "subscriptionDate": "2019-03-04"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "thales",
+                "subscriptionDate": "2019-03-06"
+            },
+            {
+                "level": "MIXTEEN",
+                "sponsorId": "Redhat",
+                "subscriptionDate": "2019-03-11"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "WorldlineFrance",
+                "subscriptionDate": "2019-03-12"
+            },
+            {
+                "level": "LANYARD",
+                "sponsorId": "Redhat",
+                "subscriptionDate": "2019-03-13"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "akuiteo",
+                "subscriptionDate": "2019-03-13"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "microsoft",
+                "subscriptionDate": "2019-03-20"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "talan",
+                "subscriptionDate": "2019-03-25"
+            },
+            {
+                "level": "PARTY",
+                "sponsorId": "onlylyon",
+                "subscriptionDate": "2019-03-25"
+            },
+            {
+                "level": "MIXTEEN",
+                "sponsorId": "keyrus",
+                "subscriptionDate": "2019-04-05"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "cabinet-asi",
+                "subscriptionDate": "2019-04-23"
+            },
+            {
+                "level": "ECOLOGY",
+                "sponsorId": "redfroggy",
+                "subscriptionDate": "2019-04-28"
+            },
+            {
+                "level": "MIXTEEN",
+                "sponsorId": "esker",
+                "subscriptionDate": "2019-04-29"
+            },
+            {
+                "level": "ECOLOGY",
+                "sponsorId": "mdbat",
+                "subscriptionDate": "2019-05-01"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "niji",
+                "subscriptionDate": "2019-05-08"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "credit-agricole",
+                "subscriptionDate": "2019-05-13"
+            },
+            {
+                "level": "ECOLOGY",
+                "sponsorId": "data2viz",
+                "subscriptionDate": "2019-05-16"
+            },
+            {
+                "level": "MIXTEEN",
+                "sponsorId": "soluxan",
+                "subscriptionDate": "2019-05-20"
+            }
+        ],
+        "organizations": [],
+        "volunteers": [
+            {
+                "volunteerLogin": "clacote"
+            },
+            {
+                "volunteerLogin": "agnes"
+            },
+            {
+                "volunteerLogin": "cedric"
+            }
+        ],
+        "organizers": [
+            {
+                "organizerLogin": "guillaumeehret"
+            },
+            {
+                "organizerLogin": "amelyeb"
+            },
+            {
+                "organizerLogin": "anne-laure"
+            },
+            {
+                "organizerLogin": "Charles Bouttaz"
+            },
+            {
+                "organizerLogin": "franck"
+            },
+            {
+                "organizerLogin": "greg"
+            },
+            {
+                "organizerLogin": "mpetitdant"
+            },
+            {
+                "organizerLogin": "sdeleuze"
+            }
+        ],
+        "photoUrls": [
+            {
+                "name": "MiXiT 2019 jour 1",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708938281588"
+            },
+            {
+                "name": "MiXiT 2019 jour 2",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708938067278"
+            },
+            {
+                "name": "MiXiT 2019 random",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708938382416"
+            },
+            {
+                "name": "MiXiT 2019 soir\u00e9e Sucre",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708935015437"
+            },
+            {
+                "name": "MiXiT 2019 repas speaker",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708935015437"
+            },
+            {
+                "name": "MiXiT 2019 visite Lyon",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708935233072"
+            },
+            {
+                "name": "MiXiT 2019 mixteen",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708824798947"
+            }
+        ],
+        "videoUrl": null,
+        "schedulingFileUrl": "/pdf/planning2019v5.pdf",
+        "year": 2019
+    },
+    {
+        "id": "mixit20",
+        "start": "2020-04-29",
+        "end": "2020-04-30",
+        "current": false,
+        "sponsors": [
+            {
+                "level": "SILVER",
+                "sponsorId": "feelinjob",
+                "subscriptionDate": "2019-11-18"
+            },
+            {
+                "level": "ECOLOGY",
+                "sponsorId": "data2viz",
+                "subscriptionDate": "2019-11-26"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "VISEO",
+                "subscriptionDate": "2019-12-18"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Hopwork",
+                "subscriptionDate": "2019-12-30"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Sopra Steria",
+                "subscriptionDate": "2020-01-06"
+            },
+            {
+                "level": "PARTY",
+                "sponsorId": "braincube",
+                "subscriptionDate": "2019-12-24"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "woonoz",
+                "subscriptionDate": "2020-01-13"
+            },
+            {
+                "level": "MIXTEEN",
+                "sponsorId": "cosmin.molea",
+                "subscriptionDate": "2020-01-14"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "esker",
+                "subscriptionDate": "2020-01-10"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "hiit",
+                "subscriptionDate": "2020-01-17"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Ippon",
+                "subscriptionDate": "2020-01-21"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "sourcingisr",
+                "subscriptionDate": "2020-01-31"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "conserto",
+                "subscriptionDate": "2020-01-31"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "cgi",
+                "subscriptionDate": "2020-02-05"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "atol",
+                "subscriptionDate": "2020-01-27"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "WorldlineFrance",
+                "subscriptionDate": "2020-02-08"
+            },
+            {
+                "level": "ECOLOGY",
+                "sponsorId": "redfroggy",
+                "subscriptionDate": "2020-02-10"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "Saagie",
+                "subscriptionDate": "2020-02-25"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "talan",
+                "subscriptionDate": "2020-02-17"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "microsoft",
+                "subscriptionDate": "2020-02-27"
+            },
+            {
+                "level": "ACCESSIBILITY",
+                "sponsorId": "softwaymedical",
+                "subscriptionDate": "2020-03-06"
+            }
+        ],
+        "organizations": [],
+        "volunteers": [],
+        "organizers": [
+            {
+                "organizerLogin": "herve.tran.pro"
+            },
+            {
+                "organizerLogin": "Charles Bouttaz"
+            },
+            {
+                "organizerLogin": "greg"
+            },
+            {
+                "organizerLogin": "anne-laure"
+            },
+            {
+                "organizerLogin": "amelyeb"
+            },
+            {
+                "organizerLogin": "agnes"
+            },
+            {
+                "organizerLogin": "brian.clozel"
+            },
+            {
+                "organizerLogin": "titimoby"
+            },
+            {
+                "organizerLogin": "anais-paillette"
+            },
+            {
+                "organizerLogin": "cedric"
+            },
+            {
+                "organizerLogin": "jessbordeau"
+            }
+        ],
+        "photoUrls": [],
+        "videoUrl": null,
+        "schedulingFileUrl": null,
+        "year": 2020
+    },
+    {
+        "id": "mixit21",
+        "start": "2021-05-18",
+        "end": "2021-05-20",
+        "current": false,
+        "sponsors": [
+            {
+                "level": "SILVER",
+                "sponsorId": "braincube",
+                "subscriptionDate": "2021-02-26"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "redfroggy",
+                "subscriptionDate": "2021-02-26"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "feelinjob",
+                "subscriptionDate": "2021-02-26"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "woonoz",
+                "subscriptionDate": "2021-02-26"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "sourcingisr",
+                "subscriptionDate": "2021-02-26"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "talan",
+                "subscriptionDate": "2021-02-26"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "hiit",
+                "subscriptionDate": "2021-02-26"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "Enedis",
+                "subscriptionDate": "2021-02-26"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "Sopra Steria",
+                "subscriptionDate": "2021-03-09"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "shodo",
+                "subscriptionDate": "2021-03-17"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "cosmin.molea",
+                "subscriptionDate": "2021-03-27"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "cgi",
+                "subscriptionDate": "2021-03-30"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "neo9",
+                "subscriptionDate": "2021-03-30"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "esker",
+                "subscriptionDate": "2021-04-01"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "conserto",
+                "subscriptionDate": "2021-04-23"
+            },
+            {
+                "level": "ACCESSIBILITY",
+                "sponsorId": "maxime.rinna",
+                "subscriptionDate": "2021-05-17"
+            }
+        ],
+        "organizations": [],
+        "volunteers": [],
+        "organizers": [
+            {
+                "organizerLogin": "guillaumeehret"
+            },
+            {
+                "organizerLogin": "herve.tran.pro"
+            },
+            {
+                "organizerLogin": "anne-laure"
+            },
+            {
+                "organizerLogin": "amelyeb"
+            },
+            {
+                "organizerLogin": "anais-paillette"
+            },
+            {
+                "organizerLogin": "neveu.audrey"
+            },
+            {
+                "organizerLogin": "Charles Bouttaz"
+            },
+            {
+                "organizerLogin": "greg"
+            },
+            {
+                "organizerLogin": "agnes"
+            }
+        ],
+        "photoUrls": [],
+        "videoUrl": {
+            "name": "Le quizz MiXiT",
+            "url": "https://vimeo.com/560334460"
+        },
+        "schedulingFileUrl": null,
+        "year": 2021
+    },
+    {
+        "id": "mixit22",
+        "start": "2022-05-24",
+        "end": "2022-05-25",
+        "current": false,
+        "sponsors": [
+            {
+                "level": "GOLD",
+                "sponsorId": "WorldlineFrance",
+                "subscriptionDate": "2021-12-05"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "redfroggy",
+                "subscriptionDate": "2021-12-09"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "microsoft",
+                "subscriptionDate": "2021-12-17"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "annick.challancin@esker.fr",
+                "subscriptionDate": "2022-01-06"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "woonoz",
+                "subscriptionDate": "2022-01-10"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "hiit",
+                "subscriptionDate": "2021-12-10"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "hackyourjob",
+                "subscriptionDate": "2021-12-15"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "peaks-sponsor",
+                "subscriptionDate": "2022-01-20"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "hiway",
+                "subscriptionDate": "2022-02-03"
+            },
+            {
+                "level": "LANYARD",
+                "sponsorId": "VISEO",
+                "subscriptionDate": "2022-02-03"
+            },
+            {
+                "level": "LANYARD",
+                "sponsorId": "clevercloud",
+                "subscriptionDate": "2022-02-03"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "credit-agricole",
+                "subscriptionDate": "2022-02-03"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "ZenikaLyon",
+                "subscriptionDate": "2022-02-17"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "conserto",
+                "subscriptionDate": "2022-03-07"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "neo9",
+                "subscriptionDate": "2022-03-11"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "feelinjob",
+                "subscriptionDate": "2022-03-14"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "SII_rhonealpes",
+                "subscriptionDate": "2022-03-15"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "dataiku",
+                "subscriptionDate": "2022-03-17"
+            },
+            {
+                "level": "PARTY",
+                "sponsorId": "lepermislibre",
+                "subscriptionDate": "2022-03-18"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "prismea",
+                "subscriptionDate": "2022-03-22"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "capgemini",
+                "subscriptionDate": "2022-03-28"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Sopra Steria",
+                "subscriptionDate": "2022-03-28"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "energypool",
+                "subscriptionDate": "2022-04-06"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "grandlyon",
+                "subscriptionDate": "2022-04-12"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "cgi",
+                "subscriptionDate": "2022-05-09"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "avanade",
+                "subscriptionDate": "2022-05-17"
+            }
+        ],
+        "organizations": [
+            {
+                "organizationLogin": "chezdaddy"
+            },
+            {
+                "organizationLogin": "weeefund"
+            },
+            {
+                "organizationLogin": "maisonsolidaire"
+            }
+        ],
+        "volunteers": [
+            {
+                "volunteerLogin": "silia.taider"
+            },
+            {
+                "volunteerLogin": "lorie.pisicchio"
+            },
+            {
+                "volunteerLogin": "pierre.lemasson"
+            },
+            {
+                "volunteerLogin": "marion.charlotte"
+            },
+            {
+                "volunteerLogin": "joannitalac"
+            },
+            {
+                "volunteerLogin": "yves.hurdequint"
+            },
+            {
+                "volunteerLogin": "ludovic.bruno"
+            },
+            {
+                "volunteerLogin": "clement-moysan"
+            },
+            {
+                "volunteerLogin": "marion.charlotte"
+            },
+            {
+                "volunteerLogin": "maxchah"
+            },
+            {
+                "volunteerLogin": "cedric"
+            },
+            {
+                "volunteerLogin": "clacote"
+            }
+        ],
+        "organizers": [
+            {
+                "organizerLogin": "guillaumeehret"
+            },
+            {
+                "organizerLogin": "herve.tran.pro"
+            },
+            {
+                "organizerLogin": "Charles Bouttaz"
+            },
+            {
+                "organizerLogin": "greg"
+            },
+            {
+                "organizerLogin": "neveu.audrey"
+            },
+            {
+                "organizerLogin": "agnes"
+            },
+            {
+                "organizerLogin": "mpetitdant"
+            },
+            {
+                "organizerLogin": "amelyeb"
+            },
+            {
+                "organizerLogin": "anais-paillette"
+            },
+            {
+                "organizerLogin": "anne-laure"
+            },
+            {
+                "organizerLogin": "horalass"
+            },
+            {
+                "organizerLogin": "106329914971209052078"
+            }
+        ],
+        "photoUrls": [
+            {
+                "name": "MiXiT 2022 J1 matin",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72177720299207346"
+            },
+            {
+                "name": "MiXiT 2022 J1 apr\u00e8s midi",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72177720299216197"
+            },
+            {
+                "name": "MiXiT 2022 J2 matin",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72177720299239720"
+            },
+            {
+                "name": "MiXiT 2022 J2 apr\u00e8s midi",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72177720299249334"
+            },
+            {
+                "name": "MiXiT 2022 soir\u00e9e chapelle",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72177720299239243"
+            },
+            {
+                "name": "MiXiT 2022 diner speaker",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72177720299210453"
+            }
+        ],
+        "videoUrl": {
+            "name": "MiXiT 2022",
+            "url": "https://vimeo.com/780393437"
+        },
+        "schedulingFileUrl": "/pdf/planning2022_v2.pdf",
+        "year": 2022
+    },
+    {
+        "id": "mixit23",
+        "start": "2023-04-13",
+        "end": "2023-04-14",
+        "current": true,
+        "sponsors": [
+            {
+                "level": "LANYARD",
+                "sponsorId": "energypool",
+                "subscriptionDate": "2023-01-20"
+            },
+            {
+                "level": "LANYARD",
+                "sponsorId": "VISEO",
+                "subscriptionDate": "2023-01-21"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "talan",
+                "subscriptionDate": "2023-01-27"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "redfroggy",
+                "subscriptionDate": "2023-01-28"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "hackyourjob",
+                "subscriptionDate": "2023-02-01"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Ippon",
+                "subscriptionDate": "2023-02-07"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "hiit",
+                "subscriptionDate": "2023-02-07"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "ZenikaLyon",
+                "subscriptionDate": "2023-02-10"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "wisper",
+                "subscriptionDate": "2023-02-17"
+            },
+            {
+                "level": "LANYARD",
+                "sponsorId": "annick.challancin@esker.fr",
+                "subscriptionDate": "2023-03-01"
+            },
+            {
+                "level": "PARTY",
+                "sponsorId": "grandlyon",
+                "subscriptionDate": "2023-03-03"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "Sopra Steria",
+                "subscriptionDate": "2023-03-06"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "smile",
+                "subscriptionDate": "2023-03-14"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "clevercloud",
+                "subscriptionDate": "2023-03-14"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "peaks-sponsor",
+                "subscriptionDate": "2023-03-21"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "WorldlineFrance",
+                "subscriptionDate": "2023-03-21"
+            },
+            {
+                "level": "PARTY",
+                "sponsorId": "braincube",
+                "subscriptionDate": "2023-03-21"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Alstom",
+                "subscriptionDate": "2023-03-21"
+            },
+            {
+                "level": "MIXTEEN",
+                "sponsorId": "abylsen",
+                "subscriptionDate": "2023-03-21"
+            },
+            {
+                "level": "MIXTEEN",
+                "sponsorId": "annick.challancin@esker.fr",
+                "subscriptionDate": "2023-03-21"
+            }
+        ],
+        "organizations": [
+            {
+                "organizationLogin": "chezdaddy"
+            },
+            {
+                "organizationLogin": "weeefund"
+            },
+            {
+                "organizationLogin": "maisonsolidaire"
+            }
+        ],
+        "volunteers": [
+            {
+                "volunteerLogin": "clacote"
+            },
+            {
+                "volunteerLogin": "cedric"
+            },
+            {
+                "volunteerLogin": "ludovic.bruno"
+            },
+            {
+                "volunteerLogin": "marion.charlotte"
+            },
+            {
+                "volunteerLogin": "clement-moysan"
+            },
+            {
+                "volunteerLogin": "mathieu.tourrette"
+            },
+            {
+                "volunteerLogin": "thierry.salvan"
+            },
+            {
+                "volunteerLogin": "brandon.hunt"
+            },
+            {
+                "volunteerLogin": "victor.bouvet"
+            },
+            {
+                "volunteerLogin": "sylvia.cohen"
+            },
+            {
+                "volunteerLogin": "damien.mailhebiau"
+            },
+            {
+                "volunteerLogin": "k.brachet"
+            },
+            {
+                "volunteerLogin": "a.djouahra"
+            }
+        ],
+        "organizers": [
+            {
+                "organizerLogin": "guillaumeehret"
+            },
+            {
+                "organizerLogin": "vbonnefond"
+            },
+            {
+                "organizerLogin": "herve.tran.pro"
+            },
+            {
+                "organizerLogin": "Charles Bouttaz"
+            },
+            {
+                "organizerLogin": "greg"
+            },
+            {
+                "organizerLogin": "neveu.audrey"
+            },
+            {
+                "organizerLogin": "agnes"
+            },
+            {
+                "organizerLogin": "mpetitdant"
+            },
+            {
+                "organizerLogin": "amelyeb"
+            },
+            {
+                "organizerLogin": "anais-paillette"
+            },
+            {
+                "organizerLogin": "romain"
+            },
+            {
+                "organizerLogin": "anne-laure"
+            },
+            {
+                "organizerLogin": "horalass"
+            },
+            {
+                "organizerLogin": "106329914971209052078"
+            }
+        ],
+        "photoUrls": [],
+        "videoUrl": null,
+        "schedulingFileUrl": "/pdf/planning2023_v1.pdf",
+        "year": 2023
+    }
+]
