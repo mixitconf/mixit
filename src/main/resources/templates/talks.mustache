@@ -96,7 +96,6 @@
     </div>
 {{/talks.entrySet}}
 {{#hasTalk}}
-    {{^isCurrent}}
     <div class="container mxt-wrapper--page-content mb-4">
         <div class="container mb-2">
             <div class="row mxt-home-round-header" style="justify-content: center;">
@@ -109,6 +108,7 @@
                         <div>{{#i18n}}talks.schedule.download{{/i18n}}</div>
                     </div>
                 {{/schedulingFileUrl}}
+                {{^isCurrent}}
                 <div class="col-12 col-md-6 col-lg-3">
                     <a href="{{localePrefix}}/{{year}}/medias{{#topic}}/{{topic}}{{/topic}}"
                        alt="{{#i18n}}talks.medias{{/i18n}}">
@@ -117,6 +117,7 @@
                     </a>
                     <div>{{#i18n}}talks.medias{{/i18n}}</div>
                 </div>
+                {{/isCurrent}}
                 {{#connected}}
                     {{^filtered}}
                         <div class="col-12 col-md-6 col-lg-3">
@@ -132,7 +133,6 @@
             </div>
         </div>
     </div>
-    {{/isCurrent}}
     <div class="container mxt-wrapper--page-content pb-4">
         <!-- Area used when user want to see the agenda view -->
         {{> talks-day-tab-criteria }}

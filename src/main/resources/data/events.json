@@ -1,36 +1,9 @@
 [
     {
-        "current": false,
-        "end": "2012-04-26",
         "id": "mixit12",
-        "organizations": [],
-        "organizers": [
-            {
-                "organizerLogin": "cedric"
-            },
-            {
-                "organizerLogin": "clacote"
-            },
-            {
-                "organizerLogin": "romain"
-            },
-            {
-                "organizerLogin": "agnes"
-            },
-            {
-                "organizerLogin": "franck"
-            },
-            {
-                "organizerLogin": "npelloux"
-            }
-        ],
-        "photoUrls": [
-            {
-                "name": "MiXiT 2012",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157688295733061"
-            }
-        ],
-        "schedulingFileUrl": null,
+        "start": "2012-04-26",
+        "end": "2012-04-26",
+        "current": false,
         "sponsors": [
             {
                 "level": "GOLD",
@@ -73,23 +46,21 @@
                 "subscriptionDate": "2017-11-08"
             }
         ],
-        "start": "2012-04-26",
-        "videoUrl": null,
+        "organizations": [],
         "volunteers": [
             {
                 "volunteerLogin": "AlexisHassler"
             }
         ],
-        "year": 2012
-    },
-    {
-        "current": false,
-        "end": "2013-04-26",
-        "id": "mixit13",
-        "organizations": [],
         "organizers": [
             {
+                "organizerLogin": "cedric"
+            },
+            {
                 "organizerLogin": "clacote"
+            },
+            {
+                "organizerLogin": "romain"
             },
             {
                 "organizerLogin": "agnes"
@@ -98,22 +69,24 @@
                 "organizerLogin": "franck"
             },
             {
-                "organizerLogin": "cedric"
-            },
-            {
                 "organizerLogin": "npelloux"
-            },
-            {
-                "organizerLogin": "romain"
             }
         ],
         "photoUrls": [
             {
-                "name": "MiXiT 2013",
-                "url": "https://photos.google.com/b/106629477368826686108/album/AF1QipP_2rgU2AmfHs8jqjqHZssdbptYaq8f2tqAyqLN"
+                "name": "MiXiT 2012",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157688295733061"
             }
         ],
+        "videoUrl": null,
         "schedulingFileUrl": null,
+        "year": 2012
+    },
+    {
+        "id": "mixit13",
+        "start": "2013-04-25",
+        "end": "2013-04-26",
+        "current": false,
         "sponsors": [
             {
                 "level": "SILVER",
@@ -166,30 +139,13 @@
                 "subscriptionDate": "2017-11-08"
             }
         ],
-        "start": "2013-04-25",
-        "videoUrl": null,
+        "organizations": [],
         "volunteers": [
             {
                 "volunteerLogin": "AlexisHassler"
             }
         ],
-        "year": 2013
-    },
-    {
-        "current": false,
-        "end": "2014-04-30",
-        "id": "mixit14",
-        "organizations": [],
         "organizers": [
-            {
-                "organizerLogin": "mpetitdant"
-            },
-            {
-                "organizerLogin": "romain"
-            },
-            {
-                "organizerLogin": "cedric"
-            },
             {
                 "organizerLogin": "clacote"
             },
@@ -197,19 +153,33 @@
                 "organizerLogin": "agnes"
             },
             {
+                "organizerLogin": "franck"
+            },
+            {
+                "organizerLogin": "cedric"
+            },
+            {
                 "organizerLogin": "npelloux"
             },
             {
-                "organizerLogin": "franck"
+                "organizerLogin": "romain"
             }
         ],
         "photoUrls": [
             {
-                "name": "MiXiT 2014",
-                "url": "https://photos.google.com/b/106629477368826686108/album/AF1QipNw6ApiPhPzzd-5BtKlIsuLralYcTCm2HaG3GXk"
+                "name": "MiXiT 2013",
+                "url": "https://photos.google.com/b/106629477368826686108/album/AF1QipP_2rgU2AmfHs8jqjqHZssdbptYaq8f2tqAyqLN"
             }
         ],
+        "videoUrl": null,
         "schedulingFileUrl": null,
+        "year": 2013
+    },
+    {
+        "id": "mixit14",
+        "start": "2014-04-29",
+        "end": "2014-04-30",
+        "current": false,
         "sponsors": [
             {
                 "level": "SILVER",
@@ -292,64 +262,53 @@
                 "subscriptionDate": "2017-11-08"
             }
         ],
-        "start": "2014-04-29",
-        "videoUrl": {
-            "name": "video",
-            "url": "https://vimeo.com/214902172"
-        },
+        "organizations": [],
         "volunteers": [
             {
                 "volunteerLogin": "AlexisHassler"
             }
         ],
-        "year": 2014
-    },
-    {
-        "current": false,
-        "end": "2015-04-17",
-        "id": "mixit15",
-        "organizations": [],
         "organizers": [
-            {
-                "organizerLogin": "npelloux"
-            },
             {
                 "organizerLogin": "mpetitdant"
             },
             {
-                "organizerLogin": "agnes"
+                "organizerLogin": "romain"
             },
             {
-                "organizerLogin": "guillaumeehret"
-            },
-            {
-                "organizerLogin": "greg"
+                "organizerLogin": "cedric"
             },
             {
                 "organizerLogin": "clacote"
             },
             {
-                "organizerLogin": "sdeleuze"
+                "organizerLogin": "agnes"
             },
             {
-                "organizerLogin": "ph.charriere"
+                "organizerLogin": "npelloux"
+            },
+            {
+                "organizerLogin": "franck"
             }
         ],
         "photoUrls": [
             {
-                "name": "MiXiT 2015 jour 1",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157652095111126"
-            },
-            {
-                "name": "MiXiT 2015 soir\u00e9 la plateforme",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157651751048368"
-            },
-            {
-                "name": "MiXiT 2015 jour 2",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157649826132434"
+                "name": "MiXiT 2014",
+                "url": "https://photos.google.com/b/106629477368826686108/album/AF1QipNw6ApiPhPzzd-5BtKlIsuLralYcTCm2HaG3GXk"
             }
         ],
+        "videoUrl": {
+            "name": "video",
+            "url": "https://vimeo.com/214902172"
+        },
         "schedulingFileUrl": null,
+        "year": 2014
+    },
+    {
+        "id": "mixit15",
+        "start": "2015-04-16",
+        "end": "2015-04-17",
+        "current": false,
         "sponsors": [
             {
                 "level": "SILVER",
@@ -432,54 +391,64 @@
                 "subscriptionDate": "2017-11-08"
             }
         ],
-        "start": "2015-04-16",
-        "videoUrl": {
-            "name": "video",
-            "url": "https://vimeo.com/214908582"
-        },
+        "organizations": [],
         "volunteers": [
             {
                 "volunteerLogin": "AlexisHassler"
             }
         ],
-        "year": 2015
-    },
-    {
-        "current": false,
-        "end": "2016-04-22",
-        "id": "mixit16",
-        "organizations": [],
         "organizers": [
             {
-                "organizerLogin": "agnes"
-            },
-            {
-                "organizerLogin": "AlexisHassler"
-            },
-            {
-                "organizerLogin": "sdeleuze"
-            },
-            {
-                "organizerLogin": "greg"
-            },
-            {
-                "organizerLogin": "ph.charriere"
-            },
-            {
-                "organizerLogin": "guillaumeehret"
-            },
-            {
-                "organizerLogin": "cedric"
+                "organizerLogin": "npelloux"
             },
             {
                 "organizerLogin": "mpetitdant"
             },
             {
+                "organizerLogin": "agnes"
+            },
+            {
+                "organizerLogin": "guillaumeehret"
+            },
+            {
+                "organizerLogin": "greg"
+            },
+            {
                 "organizerLogin": "clacote"
+            },
+            {
+                "organizerLogin": "sdeleuze"
+            },
+            {
+                "organizerLogin": "ph.charriere"
             }
         ],
-        "photoUrls": [],
+        "photoUrls": [
+            {
+                "name": "MiXiT 2015 jour 1",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157652095111126"
+            },
+            {
+                "name": "MiXiT 2015 soir\u00e9 la plateforme",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157651751048368"
+            },
+            {
+                "name": "MiXiT 2015 jour 2",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157649826132434"
+            }
+        ],
+        "videoUrl": {
+            "name": "video",
+            "url": "https://vimeo.com/214908582"
+        },
         "schedulingFileUrl": null,
+        "year": 2015
+    },
+    {
+        "id": "mixit16",
+        "start": "2016-04-21",
+        "end": "2016-04-22",
+        "current": false,
         "sponsors": [
             {
                 "level": "GOLD",
@@ -592,19 +561,14 @@
                 "subscriptionDate": "2017-11-08"
             }
         ],
-        "start": "2016-04-21",
-        "videoUrl": null,
-        "volunteers": [],
-        "year": 2016
-    },
-    {
-        "current": false,
-        "end": "2017-04-21",
-        "id": "mixit17",
         "organizations": [],
+        "volunteers": [],
         "organizers": [
             {
                 "organizerLogin": "agnes"
+            },
+            {
+                "organizerLogin": "AlexisHassler"
             },
             {
                 "organizerLogin": "sdeleuze"
@@ -613,10 +577,10 @@
                 "organizerLogin": "greg"
             },
             {
-                "organizerLogin": "guillaumeehret"
+                "organizerLogin": "ph.charriere"
             },
             {
-                "organizerLogin": "Charles Bouttaz"
+                "organizerLogin": "guillaumeehret"
             },
             {
                 "organizerLogin": "cedric"
@@ -625,20 +589,19 @@
                 "organizerLogin": "mpetitdant"
             },
             {
-                "organizerLogin": "jessbordeau"
+                "organizerLogin": "clacote"
             }
         ],
-        "photoUrls": [
-            {
-                "name": "MiXiT 2017 official",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157680961511852"
-            },
-            {
-                "name": "MiXiT 2017 unofficial",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157683737519685"
-            }
-        ],
-        "schedulingFileUrl": "/pdf/planning2017.pdf",
+        "photoUrls": [],
+        "videoUrl": null,
+        "schedulingFileUrl": null,
+        "year": 2016
+    },
+    {
+        "id": "mixit17",
+        "start": "2017-04-20",
+        "end": "2017-04-21",
+        "current": false,
         "sponsors": [
             {
                 "level": "GOLD",
@@ -751,32 +714,18 @@
                 "subscriptionDate": "2016-11-04"
             }
         ],
-        "start": "2017-04-20",
-        "videoUrl": {
-            "name": "video",
-            "url": "https://vimeo.com/215910469"
-        },
+        "organizations": [],
         "volunteers": [
             {
                 "volunteerLogin": "AlexisHassler"
             }
         ],
-        "year": 2017
-    },
-    {
-        "current": false,
-        "end": "2018-04-20",
-        "id": "mixit18",
-        "organizations": [],
         "organizers": [
             {
                 "organizerLogin": "agnes"
             },
             {
-                "organizerLogin": "franck"
-            },
-            {
-                "organizerLogin": "Charles Bouttaz"
+                "organizerLogin": "sdeleuze"
             },
             {
                 "organizerLogin": "greg"
@@ -785,46 +734,40 @@
                 "organizerLogin": "guillaumeehret"
             },
             {
-                "organizerLogin": "mpetitdant"
+                "organizerLogin": "Charles Bouttaz"
             },
             {
                 "organizerLogin": "cedric"
             },
             {
-                "organizerLogin": "alfred.almendra"
+                "organizerLogin": "mpetitdant"
+            },
+            {
+                "organizerLogin": "jessbordeau"
             }
         ],
         "photoUrls": [
             {
-                "name": "MiXiT 2018 - Day 1 - April 19th",
-                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157695359228534"
+                "name": "MiXiT 2017 official",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157680961511852"
             },
             {
-                "name": "MiXiT 2018 - Day 2 - April 20th",
-                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157695359699634"
-            },
-            {
-                "name": "MiXiT 2018 MIXTeeN",
-                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157690273360050"
-            },
-            {
-                "name": "MiXiT 2018 - Hackathon",
-                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157666160590557"
-            },
-            {
-                "name": "MiXiT 2018 - Party",
-                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157694276287871"
-            },
-            {
-                "name": "MiXiT 2018 - Speakers dinner",
-                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157695105885704"
-            },
-            {
-                "name": "MiXiT 2018 - Miam",
-                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157692909395252"
+                "name": "MiXiT 2017 unofficial",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157683737519685"
             }
         ],
-        "schedulingFileUrl": "/pdf/planning2018.pdf",
+        "videoUrl": {
+            "name": "video",
+            "url": "https://vimeo.com/215910469"
+        },
+        "schedulingFileUrl": "/pdf/planning2017.pdf",
+        "year": 2017
+    },
+    {
+        "id": "mixit18",
+        "start": "2018-04-19",
+        "end": "2018-04-20",
+        "current": false,
         "sponsors": [
             {
                 "level": "SILVER",
@@ -977,80 +920,80 @@
                 "subscriptionDate": "2018-04-06"
             }
         ],
-        "start": "2018-04-19",
-        "videoUrl": {
-            "name": "video",
-            "url": "https://vimeo.com/266571226"
-        },
+        "organizations": [],
         "volunteers": [
             {
                 "volunteerLogin": "clacote"
             }
         ],
-        "year": 2018
-    },
-    {
-        "current": false,
-        "end": "2019-05-24",
-        "id": "mixit19",
-        "organizations": [],
         "organizers": [
             {
-                "organizerLogin": "guillaumeehret"
-            },
-            {
-                "organizerLogin": "amelyeb"
-            },
-            {
-                "organizerLogin": "anne-laure"
-            },
-            {
-                "organizerLogin": "Charles Bouttaz"
+                "organizerLogin": "agnes"
             },
             {
                 "organizerLogin": "franck"
             },
             {
+                "organizerLogin": "Charles Bouttaz"
+            },
+            {
                 "organizerLogin": "greg"
+            },
+            {
+                "organizerLogin": "guillaumeehret"
             },
             {
                 "organizerLogin": "mpetitdant"
             },
             {
-                "organizerLogin": "sdeleuze"
+                "organizerLogin": "cedric"
+            },
+            {
+                "organizerLogin": "alfred.almendra"
             }
         ],
         "photoUrls": [
             {
-                "name": "MiXiT 2019 jour 1",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708938281588"
+                "name": "MiXiT 2018 - Day 1 - April 19th",
+                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157695359228534"
             },
             {
-                "name": "MiXiT 2019 jour 2",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708938067278"
+                "name": "MiXiT 2018 - Day 2 - April 20th",
+                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157695359699634"
             },
             {
-                "name": "MiXiT 2019 random",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708938382416"
+                "name": "MiXiT 2018 MIXTeeN",
+                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157690273360050"
             },
             {
-                "name": "MiXiT 2019 soir\u00e9e Sucre",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708935015437"
+                "name": "MiXiT 2018 - Hackathon",
+                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157666160590557"
             },
             {
-                "name": "MiXiT 2019 repas speaker",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708935015437"
+                "name": "MiXiT 2018 - Party",
+                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157694276287871"
             },
             {
-                "name": "MiXiT 2019 visite Lyon",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708935233072"
+                "name": "MiXiT 2018 - Speakers dinner",
+                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157695105885704"
             },
             {
-                "name": "MiXiT 2019 mixteen",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708824798947"
+                "name": "MiXiT 2018 - Miam",
+                "url": "https://www.flickr.com/photos/132667704@N02/sets/72157692909395252"
             }
         ],
-        "schedulingFileUrl": "/pdf/planning2019v5.pdf",
+        "videoUrl": {
+            "name": "video",
+            "url": "https://vimeo.com/266571226"
+        },
+        "schedulingFileUrl": "/pdf/planning2018.pdf",
+        "year": 2018
+    },
+    {
+        "id": "mixit19",
+        "start": "2019-05-23",
+        "end": "2019-05-24",
+        "current": false,
         "sponsors": [
             {
                 "level": "SILVER",
@@ -1228,8 +1171,7 @@
                 "subscriptionDate": "2019-05-20"
             }
         ],
-        "start": "2019-05-23",
-        "videoUrl": null,
+        "organizations": [],
         "volunteers": [
             {
                 "volunteerLogin": "clacote"
@@ -1241,50 +1183,71 @@
                 "volunteerLogin": "cedric"
             }
         ],
-        "year": 2019
-    },
-    {
-        "current": false,
-        "end": "2020-04-30",
-        "id": "mixit20",
-        "organizations": [],
         "organizers": [
             {
-                "organizerLogin": "herve.tran.pro"
-            },
-            {
-                "organizerLogin": "Charles Bouttaz"
-            },
-            {
-                "organizerLogin": "greg"
-            },
-            {
-                "organizerLogin": "anne-laure"
+                "organizerLogin": "guillaumeehret"
             },
             {
                 "organizerLogin": "amelyeb"
             },
             {
-                "organizerLogin": "agnes"
+                "organizerLogin": "anne-laure"
             },
             {
-                "organizerLogin": "brian.clozel"
+                "organizerLogin": "Charles Bouttaz"
             },
             {
-                "organizerLogin": "titimoby"
+                "organizerLogin": "franck"
             },
             {
-                "organizerLogin": "anais-paillette"
+                "organizerLogin": "greg"
             },
             {
-                "organizerLogin": "cedric"
+                "organizerLogin": "mpetitdant"
             },
             {
-                "organizerLogin": "jessbordeau"
+                "organizerLogin": "sdeleuze"
             }
         ],
-        "photoUrls": [],
-        "schedulingFileUrl": null,
+        "photoUrls": [
+            {
+                "name": "MiXiT 2019 jour 1",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708938281588"
+            },
+            {
+                "name": "MiXiT 2019 jour 2",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708938067278"
+            },
+            {
+                "name": "MiXiT 2019 random",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708938382416"
+            },
+            {
+                "name": "MiXiT 2019 soir\u00e9e Sucre",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708935015437"
+            },
+            {
+                "name": "MiXiT 2019 repas speaker",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708935015437"
+            },
+            {
+                "name": "MiXiT 2019 visite Lyon",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708935233072"
+            },
+            {
+                "name": "MiXiT 2019 mixteen",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72157708824798947"
+            }
+        ],
+        "videoUrl": null,
+        "schedulingFileUrl": "/pdf/planning2019v5.pdf",
+        "year": 2019
+    },
+    {
+        "id": "mixit20",
+        "start": "2020-04-29",
+        "end": "2020-04-30",
+        "current": false,
         "sponsors": [
             {
                 "level": "SILVER",
@@ -1392,34 +1355,11 @@
                 "subscriptionDate": "2020-03-06"
             }
         ],
-        "start": "2020-04-29",
-        "videoUrl": null,
-        "volunteers": [],
-        "year": 2020
-    },
-    {
-        "current": false,
-        "end": "2021-05-20",
-        "id": "mixit21",
         "organizations": [],
+        "volunteers": [],
         "organizers": [
             {
-                "organizerLogin": "guillaumeehret"
-            },
-            {
                 "organizerLogin": "herve.tran.pro"
-            },
-            {
-                "organizerLogin": "anne-laure"
-            },
-            {
-                "organizerLogin": "amelyeb"
-            },
-            {
-                "organizerLogin": "anais-paillette"
-            },
-            {
-                "organizerLogin": "neveu.audrey"
             },
             {
                 "organizerLogin": "Charles Bouttaz"
@@ -1428,11 +1368,40 @@
                 "organizerLogin": "greg"
             },
             {
+                "organizerLogin": "anne-laure"
+            },
+            {
+                "organizerLogin": "amelyeb"
+            },
+            {
                 "organizerLogin": "agnes"
+            },
+            {
+                "organizerLogin": "brian.clozel"
+            },
+            {
+                "organizerLogin": "titimoby"
+            },
+            {
+                "organizerLogin": "anais-paillette"
+            },
+            {
+                "organizerLogin": "cedric"
+            },
+            {
+                "organizerLogin": "jessbordeau"
             }
         ],
         "photoUrls": [],
+        "videoUrl": null,
         "schedulingFileUrl": null,
+        "year": 2020
+    },
+    {
+        "id": "mixit21",
+        "start": "2021-05-18",
+        "end": "2021-05-20",
+        "current": false,
         "sponsors": [
             {
                 "level": "SILVER",
@@ -1515,29 +1484,8 @@
                 "subscriptionDate": "2021-05-17"
             }
         ],
-        "start": "2021-05-18",
-        "videoUrl": {
-            "name": "Le quizz MiXiT",
-            "url": "https://vimeo.com/560334460"
-        },
+        "organizations": [],
         "volunteers": [],
-        "year": 2021
-    },
-    {
-        "current": false,
-        "end": "2022-05-25",
-        "id": "mixit22",
-        "organizations": [
-            {
-                "organizationLogin": "chezdaddy"
-            },
-            {
-                "organizationLogin": "weeefund"
-            },
-            {
-                "organizationLogin": "maisonsolidaire"
-            }
-        ],
         "organizers": [
             {
                 "organizerLogin": "guillaumeehret"
@@ -1546,19 +1494,7 @@
                 "organizerLogin": "herve.tran.pro"
             },
             {
-                "organizerLogin": "Charles Bouttaz"
-            },
-            {
-                "organizerLogin": "greg"
-            },
-            {
-                "organizerLogin": "neveu.audrey"
-            },
-            {
-                "organizerLogin": "agnes"
-            },
-            {
-                "organizerLogin": "mpetitdant"
+                "organizerLogin": "anne-laure"
             },
             {
                 "organizerLogin": "amelyeb"
@@ -1567,42 +1503,31 @@
                 "organizerLogin": "anais-paillette"
             },
             {
-                "organizerLogin": "anne-laure"
+                "organizerLogin": "neveu.audrey"
             },
             {
-                "organizerLogin": "horalass"
+                "organizerLogin": "Charles Bouttaz"
             },
             {
-                "organizerLogin": "106329914971209052078"
+                "organizerLogin": "greg"
+            },
+            {
+                "organizerLogin": "agnes"
             }
         ],
-        "photoUrls": [
-            {
-                "name": "MiXiT 2022 J1 matin",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72177720299207346"
-            },
-            {
-                "name": "MiXiT 2022 J1 apr\u00e8s midi",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72177720299216197"
-            },
-            {
-                "name": "MiXiT 2022 J2 matin",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72177720299239720"
-            },
-            {
-                "name": "MiXiT 2022 J2 apr\u00e8s midi",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72177720299249334"
-            },
-            {
-                "name": "MiXiT 2022 soir\u00e9e chapelle",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72177720299239243"
-            },
-            {
-                "name": "MiXiT 2022 diner speaker",
-                "url": "https://www.flickr.com/photos/132667704@N02/albums/72177720299210453"
-            }
-        ],
-        "schedulingFileUrl": "/pdf/planning2022_v2.pdf",
+        "photoUrls": [],
+        "videoUrl": {
+            "name": "Le quizz MiXiT",
+            "url": "https://vimeo.com/560334460"
+        },
+        "schedulingFileUrl": null,
+        "year": 2021
+    },
+    {
+        "id": "mixit22",
+        "start": "2022-05-24",
+        "end": "2022-05-25",
+        "current": false,
         "sponsors": [
             {
                 "level": "GOLD",
@@ -1735,11 +1660,17 @@
                 "subscriptionDate": "2022-05-17"
             }
         ],
-        "start": "2022-05-24",
-        "videoUrl": {
-            "name": "MiXiT 2022",
-            "url": "https://vimeo.com/780393437"
-        },
+        "organizations": [
+            {
+                "organizationLogin": "chezdaddy"
+            },
+            {
+                "organizationLogin": "weeefund"
+            },
+            {
+                "organizationLogin": "maisonsolidaire"
+            }
+        ],
         "volunteers": [
             {
                 "volunteerLogin": "silia.taider"
@@ -1778,29 +1709,9 @@
                 "volunteerLogin": "clacote"
             }
         ],
-        "year": 2022
-    },
-    {
-        "current": true,
-        "end": "2023-04-14",
-        "id": "mixit23",
-        "organizations": [
-            {
-                "organizationLogin": "chezdaddy"
-            },
-            {
-                "organizationLogin": "weeefund"
-            },
-            {
-                "organizationLogin": "maisonsolidaire"
-            }
-        ],
         "organizers": [
             {
                 "organizerLogin": "guillaumeehret"
-            },
-            {
-                "organizerLogin": "vbonnefond"
             },
             {
                 "organizerLogin": "herve.tran.pro"
@@ -1827,9 +1738,6 @@
                 "organizerLogin": "anais-paillette"
             },
             {
-                "organizerLogin": "romain"
-            },
-            {
                 "organizerLogin": "anne-laure"
             },
             {
@@ -1839,8 +1747,44 @@
                 "organizerLogin": "106329914971209052078"
             }
         ],
-        "photoUrls": [],
-        "schedulingFileUrl": null,
+        "photoUrls": [
+            {
+                "name": "MiXiT 2022 J1 matin",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72177720299207346"
+            },
+            {
+                "name": "MiXiT 2022 J1 apr\u00e8s midi",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72177720299216197"
+            },
+            {
+                "name": "MiXiT 2022 J2 matin",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72177720299239720"
+            },
+            {
+                "name": "MiXiT 2022 J2 apr\u00e8s midi",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72177720299249334"
+            },
+            {
+                "name": "MiXiT 2022 soir\u00e9e chapelle",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72177720299239243"
+            },
+            {
+                "name": "MiXiT 2022 diner speaker",
+                "url": "https://www.flickr.com/photos/132667704@N02/albums/72177720299210453"
+            }
+        ],
+        "videoUrl": {
+            "name": "MiXiT 2022",
+            "url": "https://vimeo.com/780393437"
+        },
+        "schedulingFileUrl": "/pdf/planning2022_v2.pdf",
+        "year": 2022
+    },
+    {
+        "id": "mixit23",
+        "start": "2023-04-13",
+        "end": "2023-04-14",
+        "current": true,
         "sponsors": [
             {
                 "level": "LANYARD",
@@ -1943,8 +1887,17 @@
                 "subscriptionDate": "2023-03-21"
             }
         ],
-        "start": "2023-04-13",
-        "videoUrl": null,
+        "organizations": [
+            {
+                "organizationLogin": "chezdaddy"
+            },
+            {
+                "organizationLogin": "weeefund"
+            },
+            {
+                "organizationLogin": "maisonsolidaire"
+            }
+        ],
         "volunteers": [
             {
                 "volunteerLogin": "clacote"
@@ -1986,6 +1939,53 @@
                 "volunteerLogin": "a.djouahra"
             }
         ],
+        "organizers": [
+            {
+                "organizerLogin": "guillaumeehret"
+            },
+            {
+                "organizerLogin": "vbonnefond"
+            },
+            {
+                "organizerLogin": "herve.tran.pro"
+            },
+            {
+                "organizerLogin": "Charles Bouttaz"
+            },
+            {
+                "organizerLogin": "greg"
+            },
+            {
+                "organizerLogin": "neveu.audrey"
+            },
+            {
+                "organizerLogin": "agnes"
+            },
+            {
+                "organizerLogin": "mpetitdant"
+            },
+            {
+                "organizerLogin": "amelyeb"
+            },
+            {
+                "organizerLogin": "anais-paillette"
+            },
+            {
+                "organizerLogin": "romain"
+            },
+            {
+                "organizerLogin": "anne-laure"
+            },
+            {
+                "organizerLogin": "horalass"
+            },
+            {
+                "organizerLogin": "106329914971209052078"
+            }
+        ],
+        "photoUrls": [],
+        "videoUrl": null,
+        "schedulingFileUrl": "/pdf/planning2023_v1.pdf",
         "year": 2023
     }
 ]

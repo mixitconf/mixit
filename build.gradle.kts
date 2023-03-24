@@ -4,7 +4,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     val kotlinVersion = "1.6.21"
 
-    id("org.springframework.boot") version "2.7.7"
+    id("org.springframework.boot") version "2.7.10"
     id("io.spring.dependency-management") version "1.0.15.RELEASE"
     id("com.github.node-gradle.node") version "3.1.1"
     id("org.jmailen.kotlinter") version "3.7.0"
@@ -30,6 +30,7 @@ dependencies {
     val gmailApiVersion = "1.24.2"
     val googleApiVersion = "v1-rev101-1.24.1"
     val googleOwaspVersion ="20171016.1"
+
     implementation("org.springframework.boot:spring-boot-starter-webflux") {
         exclude(module = "hibernate-validator")
     }
@@ -51,8 +52,6 @@ dependencies {
     implementation("com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:$googleOwaspVersion")
 
     kapt("org.springframework.boot:spring-boot-configuration-processor")
-
-    runtimeOnly("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
