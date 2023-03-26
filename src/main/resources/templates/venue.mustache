@@ -1,26 +1,18 @@
 {{> header}}
+{{> header-common }}
 
-<div class="mxt-wrapper--header">
-    <h1 class="text-center pt-5">{{#i18n}}venue.title{{/i18n}}</h1>
-    <p class="text-center">
-        CPE Lyon - Domaine Scientifique de la Doua - 69100 Villeurbanne
-    </p>
+<div class="mxt-wrapper--header-page-title">
+    <h1 class="pt-3 pb-3">{{#i18n}}venue.title{{/i18n}}</h1>
 </div>
 
 <div class="container mxt-wrapper--page-content">
     <h2 class="text-center">{{#i18n}}venue.cpe.title{{/i18n}}</h2>
-    <div>
-        <a target="_blank" href="https://www.cpe.fr/ecole-cpe-lyon/le-campus-lyontech-la-doua/">CPE Lyon</a>
-        Domaine Scientifique de la Doua
-        Bâtiment Hubert Curien
-        43, boulevard du 11 Novembre 1918
-        69100 Villeurbanne Cedex
-    </div>
+
+    <p class="text-center lead">{{#i18n}}venue.cpe.desc{{/i18n}}<a href="https://www.cpe.fr/coordonnees-acces-contact/" target="_blank"> CPE</a>: 3, rue Victor Grignard, 69100 Villeurbanne.</p>
 
     <div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44532.84179104339!2d4.810176969092425!3d45.76512532471853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea977b847259%3A0x9efbb71d73134a76!2sCPE%20Lyon!5e0!3m2!1sfr!2sfr!4v1679595963075!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <a href="https://www.google.com/maps/place/CPE+Lyon/@45.7841638,4.8675628,17z"
-           target="_blank">{{#i18n}}venue.cpe.map.link{{/i18n}}</a><br/>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44532.84179104339!2d4.810176969092425!3d45.76512532471853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4ea977b847259%3A0x9efbb71d73134a76!2sCPE%20Lyon!5e0!3m2!1sfr!2sfr!4v1679595963075!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br/>
+        <a href="https://www.google.com/maps/place/CPE+Lyon/@45.7841638,4.8675628,17z" target="_blank">{{#i18n}}venue.map.link{{/i18n}}</a><br/>
     </div>
 
     <div class="row align-middle">
@@ -70,10 +62,9 @@
 
         <p class="text-center lead">{{#i18n}}venue.floorplan.desc{{/i18n}}</p>
 
-        <img src="/images/facilities/cpe-floorplan-2023-groundfloor.jpg" alt="CPE groundfloor" style="max-width: 100%">
-        <img src="/images/facilities/cpe-floorplan-2023-basement.jpg" alt="CPE basement" style="max-width: 100%">
-        <img src="/images/facilities/cpe-floorplan-2023-mezzanine.jpg" alt="CPE mezzanine" style="max-width: 100%">
+        <img src="/images/facilities/cpe-floorplan-2023-basement.png" alt="CPE basement" style="max-width: 100%">
 
+        <p><strong>{{#i18n}}venue.floorplan.sponsors{{/i18n}}</strong></p>
         <div class="row align-middle">
             <div class="col-6 col-sm-3">A : HACKYOURJOB</div>
             <div class="col-6 col-sm-3">B : SMILE</div>
@@ -81,9 +72,20 @@
             <div class="col-6 col-sm-3">D : ENERGY POOL</div>
             <div class="col-6 col-sm-3">E : IPPON</div>
             <div class="col-6 col-sm-3">F : VISEO</div>
-<!--            <div class="col-6 col-sm-3">G : ALSTOM</div>-->
-<!--            <div class="col-6 col-sm-3">H : PEAKS</div>-->
         </div>
+
+        <img src="/images/facilities/cpe-floorplan-2023-groundfloor.png" alt="CPE groundfloor" style="max-width: 100%">
+        <p><strong>{{#i18n}}venue.floorplan.sponsors{{/i18n}}</strong></p>
+        <div class="row align-middle">
+            <div class="col-6 col-sm-3">G : ALSTOM</div>
+            <div class="col-6 col-sm-3">H : PEAKS</div>
+            <div class="col-6 col-sm-3">I : WISPER</div>
+            <div class="col-6 col-sm-3">J : ZENIKA</div>
+        </div>
+
+        <img src="/images/facilities/cpe-floorplan-2023-mezzanine.png" alt="CPE mezzanine" style="max-width: 100%">
+
+
     </div>
 </div>
 
