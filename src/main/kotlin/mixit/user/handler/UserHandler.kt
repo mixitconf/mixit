@@ -55,16 +55,16 @@ class UserHandler(
     private val markdownValidator: MarkdownValidator
 ) {
 
-    enum class ViewMode { ViewMyProfile, ViewUser, EditProfile }
+    enum class ViewMode { ViewMyProfile, ViewUser, ViewSponsor, EditProfile }
 
     suspend fun speakerView(req: ServerRequest): ServerResponse =
         ok().renderAndAwait(Speaker.template, mapOf(Pair(TITLE, Speaker.title)))
 
-    suspend fun findOneView(req: ServerRequest): ServerResponse {
+    suspend fun findOneView(req: ServerRequest, viewMode: ViewMode = ViewMode.ViewUser): ServerResponse {
         val login = req.decode("login")!!
         val user =
             repository.findOneOrNull(login) ?: repository.findByLegacyId(login.toLong()) ?: throw NotFoundException()
-        return findOneViewDetail(req, user)
+        return findOneViewDetail(req, user, viewMode)
     }
 
     suspend fun findProfileView(req: ServerRequest): ServerResponse {
@@ -116,7 +116,7 @@ class UserHandler(
                 val isSpeaker = talks.any { it.event == CURRENT_EVENT }
                 val speakerYear = talks.firstOrNull()?.event
 
-                val attendeeTicket = cryptographer.decrypt(user.email)?.let {  ticketService.findByEmail(it)}
+                val attendeeTicket = cryptographer.decrypt(user.email)?.let { ticketService.findByEmail(it) }
                 val lottery = lotteryRepository.findByEncryptedEmail(user.email ?: "unknown")
                 val params = mapOf(
                     USER to user.toDto(req.language()),
@@ -129,6 +129,13 @@ class UserHandler(
                     "canUpdateProfile" to (user.email == cryptographer.encrypt(req.currentNonEncryptedUserEmail())),
                 )
                 ok().renderAndAwait(MustacheTemplate.User.template, params)
+            }
+
+            ViewMode.ViewSponsor -> {
+                val params = mapOf(
+                    USER to user.toDto(req.language())
+                )
+                ok().renderAndAwait(MustacheTemplate.Sponsor.template, params)
             }
 
             ViewMode.EditProfile -> {

@@ -1,0 +1,56 @@
+{{> header}}
+
+{{> header-common }}
+<div class="mxt-wrapper--header-page-title">
+    <h2 class="pt-3 pb-3">{{#i18n}}user.sponsor{{/i18n}}</h2>
+</div>
+
+<div class="container mxt-wrapper--page-content">
+    <h1 class="text-center mxt-title--talk" style="margin-bottom: 0">
+        {{^user.photoUrl}}{{user.company}}{{/user.photoUrl}}
+    </h1>
+    <div class="text-center pb-5">
+        <div class="row">
+            <div class="offset-2 col-8">
+                {{#user.photoUrl}}<img src="{{user.photoUrl}}" style="max-height: 20vh">{{/user.photoUrl}}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="columns small-12 medium-12 large-12 callout">
+            {{#markdown}}{{user.description}}{{/markdown}}
+            <ul class="mxt-wrapper-list-inline">
+                {{#user.links}}
+                    <li><a href="{{url}}">{{name}}</a></li>
+                {{/user.links}}
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="columns small-12 medium-12 large-12 callout">
+            <ul class="accordion" data-accordion>
+                {{#talks}}
+                    <article class="mb-4">
+                        <h2><a href="{{localePrefix}}/{{event}}/{{slug}}" class="mxt-title--article">
+                            <b>{{event}}</b> -{{title}}
+                            {{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
+                        </a></h2>
+                        <ul class="mxt-wrapper-list-inline mxt-menu--accordion">
+                            {{#video}}<li><strong>&#x25ba; {{#i18n}}talks.title.video{{/i18n}}</strong></li>{{/video}}
+                            <li class="mxt-text--cat-format">#{{format}}</li>
+                        </ul>
+                        <p>{{#markdown}}{{summary}}{{/markdown}}</p>
+                        <a href="{{localePrefix}}/{{event}}/{{slug}}" class="btn btn-outline-primary align-center">{{#i18n}}talks.readmore{{/i18n}}</a>
+                    </article>
+                {{/talks}}
+            </ul>
+        </div>
+    </div>
+</div>
+{{#connected}}{{#canUpdateProfile}}
+<div class="container mxt-wrapper--page-content mt-4">
+    <div><small>{{#i18n}}user.form.rgpd{{/i18n}}</small></div>
+</div>
+{{/canUpdateProfile}}
+{{/connected}}
+{{> footer}}
