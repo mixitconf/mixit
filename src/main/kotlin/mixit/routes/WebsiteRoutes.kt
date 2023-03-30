@@ -26,6 +26,7 @@ import mixit.talk.model.Topic
 import mixit.ticket.handler.AdminLotteryHandler
 import mixit.ticket.handler.AdminTicketHandler
 import mixit.ticket.handler.LotteryHandler
+import mixit.ticket.handler.TicketHandler
 import mixit.user.handler.AdminUserHandler
 import mixit.user.handler.SponsorHandler
 import mixit.user.handler.UserHandler
@@ -63,11 +64,12 @@ class WebsiteRoutes(
     private val talkHandler: TalkHandler,
     private val sponsorHandler: SponsorHandler,
     private val lotteryHandler: LotteryHandler,
-    private val ticketHandler: AdminTicketHandler,
+    private val adminTicketHandler: AdminTicketHandler,
     private val mailingHandler: MailingHandler,
     private val mailingListHandler: MailingListHandler,
     private val mixetteHandler: MixetteHandler,
     private val userHandler: UserHandler,
+    private val ticketHandler: TicketHandler,
     private val properties: MixitProperties,
     private val routeFilterUtils: RouteFilterUtils
 ) {
@@ -128,11 +130,11 @@ class WebsiteRoutes(
             GET("/admin/mixette-donation/create", adminMixetteHandler::addDonation)
             GET("/admin/mixette-donation/create/{number}", adminMixetteHandler::addDonationForAttendee)
             GET("/admin/lottery", adminLotteryHandler::adminTicketing)
-            GET("/admin/ticket", ticketHandler::ticketing)
-            GET("/admin/ticket/print", ticketHandler::printTicketing)
-            GET("/admin/ticket/edit/{number}", ticketHandler::editTicket)
-            GET("/admin/ticket/create", ticketHandler::createTicket)
-            GET("/admin/ticket/edit/{number}", ticketHandler::editTicket)
+            GET("/admin/ticket", adminTicketHandler::ticketing)
+            GET("/admin/ticket/print", adminTicketHandler::printTicketing)
+            GET("/admin/ticket/edit/{number}", adminTicketHandler::editTicket)
+            GET("/admin/ticket/create", adminTicketHandler::createTicket)
+            GET("/admin/ticket/edit/{number}", adminTicketHandler::editTicket)
 
             GET("/admin/talks/edit/{id}", adminTalkHandler::editTalk)
             GET("/admin/talks") { adminTalkHandler.adminTalks(it, CURRENT_EVENT) }
@@ -168,6 +170,8 @@ class WebsiteRoutes(
             GET("/sponsors") { sponsorHandler.viewSponsors(it) }
             GET("/mixette/dashboard", mixetteHandler::mixette)
             GET("/schedule", talkHandler::scheduleView)
+            GET("/ticket/{number}") { ticketHandler.findOneView(it) }
+            GET("/sponsor/{login}") { userHandler.findOneView(it, UserHandler.ViewMode.ViewSponsor) }
             GET("/user/{login}") { userHandler.findOneView(it) }
 
             (2012..CURRENT_EVENT.toInt()).forEach { year ->
@@ -208,13 +212,13 @@ class WebsiteRoutes(
             POST("/admin/lottery/random", adminLotteryHandler::randomDraw)
             POST("/admin/lottery/random/delete", adminLotteryHandler::eraseRank)
             POST("/admin/lottery/delete", adminLotteryHandler::adminDeleteTicketing)
-            POST("/admin/ticket", ticketHandler::submit)
-            POST("/admin/ticket/search", ticketHandler::ticketing)
-            POST("/admin/ticket/delete", ticketHandler::adminDeleteTicket)
-            POST("/admin/ticket/import/staff", ticketHandler::adminImportStaff)
-            POST("/admin/ticket/import/volunteers", ticketHandler::adminImportVolunteers)
-            POST("/admin/ticket/import/speakers", ticketHandler::adminImportSpeakers)
-            POST("/admin/ticket/import/sponsors", ticketHandler::adminImportSponsors)
+            POST("/admin/ticket", adminTicketHandler::submit)
+            POST("/admin/ticket/search", adminTicketHandler::ticketing)
+            POST("/admin/ticket/delete", adminTicketHandler::adminDeleteTicket)
+            POST("/admin/ticket/import/staff", adminTicketHandler::adminImportStaff)
+            POST("/admin/ticket/import/volunteers", adminTicketHandler::adminImportVolunteers)
+            POST("/admin/ticket/import/speakers", adminTicketHandler::adminImportSpeakers)
+            POST("/admin/ticket/import/sponsors", adminTicketHandler::adminImportSponsors)
             POST("/admin/post", adminPostHandler::adminSavePost)
             POST("/admin/post/delete", adminPostHandler::adminDeletePost)
             POST("/admin/users", adminUserHandler::adminSaveUser)

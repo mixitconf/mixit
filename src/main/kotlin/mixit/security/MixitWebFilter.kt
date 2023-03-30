@@ -1,11 +1,13 @@
 package mixit.security
 
 import com.google.common.annotations.VisibleForTesting
+import kotlinx.coroutines.reactor.awaitSingle
 import kotlinx.coroutines.runBlocking
 import mixit.MixitProperties
 import mixit.routes.Routes
 import mixit.security.model.Credential
 import mixit.talk.model.Language
+import mixit.ticket.handler.TicketHandler
 import mixit.user.model.Role
 import mixit.user.model.User
 import mixit.user.model.hasValidToken
@@ -25,7 +27,11 @@ import java.net.URI
 import java.util.Locale
 
 @Component
-class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRepository) : WebFilter {
+class MixitWebFilter(
+    val properties: MixitProperties,
+    val userRepository: UserRepository,
+    val ticketHandler: TicketHandler
+) : WebFilter {
 
     companion object {
         const val AUTHENT_COOKIE = "XSRF-TOKEN"
@@ -97,7 +103,7 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
             filterWithCredential(exchange, chain)
         }
 
-    private fun filterWithCredential(
+    private suspend fun filterWithCredential(
         exchange: ServerWebExchange,
         chain: WebFilterChain,
         user: User? = null
@@ -112,17 +118,25 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
 
         // If url is securized we have to check the credentials information
         return if (isASecuredUrl(uriPath)) {
-            if (user == null) {
-                redirect(exchange, "/login")
-            } else {
-                // If admin page we see if user is a staff member
-                if (isAnAdminUrl(uriPath) && user.role != Role.STAFF) {
-                    redirect(exchange, "/")
-                } else if (isAVolunteerUrl(uriPath) && !listOf(Role.VOLUNTEER, Role.STAFF).contains(user.role)) {
-                    redirect(exchange, "/")
+            if (isAMixetteQRCodeUrl(uriPath)) {
+                // If user is a volunteer or a staff member we continue the route
+                if (user == null || !listOf(Role.VOLUNTEER, Role.STAFF).contains(user.role)) {
+                    val url = ticketHandler.viewTicket(uriPath)
+                    redirect(exchange, url)
                 } else {
                     chain.filter(exchange.mutate().request(req).build())
                 }
+            } else if (user == null) {
+                redirect(exchange, "/login")
+            } else if (isAnAdminUrl(uriPath) && user.role != Role.STAFF) {
+                // If admin page we see if user is a staff member
+                redirect(exchange, "/")
+            } else if (isAVolunteerUrl(uriPath) && !listOf(Role.VOLUNTEER, Role.STAFF).contains(user.role)) {
+                // If volunteer page we have 2 cases.l p
+                // The first one is the  see if user is a staff member
+                redirect(exchange, "/")
+            } else {
+                chain.filter(exchange.mutate().request(req).build())
             }
         } else {
             chain.filter(exchange.mutate().request(req).build())
@@ -143,11 +157,11 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
 
     @VisibleForTesting
     fun isAHomePageCallFromForeignLanguage(exchange: ServerWebExchange): Boolean = exchange.request.uri.path == "/" &&
-        (
-        exchange.request.headers.acceptLanguageAsLocales.firstOrNull()
-            ?: Locale.FRENCH
-        ).language != Language.FRENCH.toLanguageTag() &&
-        !isSearchEngineCrawler(exchange.request)
+            (
+                    exchange.request.headers.acceptLanguageAsLocales.firstOrNull()
+                        ?: Locale.FRENCH
+                    ).language != Language.FRENCH.toLanguageTag() &&
+            !isSearchEngineCrawler(exchange.request)
 
     @VisibleForTesting
     fun isWebResource(initUriPath: String) = WEB_RESSOURCE_EXTENSIONS.any { initUriPath.endsWith(it) }
@@ -167,6 +181,9 @@ class MixitWebFilter(val properties: MixitProperties, val userRepository: UserRe
 
     fun isAVolunteerUrl(path: String) =
         Routes.securedVolunteerUrl.stream().anyMatch { path.startsWith(it) }
+
+    fun isAMixetteQRCodeUrl(path: String) =
+        path.startsWith(Routes.mixetteQRCode)
 
     private fun redirect(
         exchange: ServerWebExchange,
