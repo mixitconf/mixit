@@ -1,18 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-<svg width="100mm" height="100mm" version="1.1" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
- <path d="m51.147 37.806 29.666-27.019h8.6717v72.934h-19.26v-37.425l-19.078 17.343-19.169-17.343v37.425h-19.169v-73.025h8.5804z" fill="#fff" stroke-width=".91281"/>
- <g fill="#ff8d4e">
-  <path d="m63.498 60.199h33.214v4.0706h-33.373z" stroke-width=".2829"/>
-  <g stroke-width=".28454">
-   <path d="m63.498 67.921h33.214v4.0706h-33.373z"/>
-   <path d="m5.5343 63.328h33.214v4.0706h-33.373z"/>
-   <path d="m5.5343 71.05h33.214v4.0706h-33.373z"/>
-  </g>
-  <g fill-rule="evenodd">
-   <ellipse cx="50.165" cy="56.454" rx="9.207" ry="9.6528" stroke-width=".75677"/>
-   <ellipse transform="matrix(-.01649 .99986 .99997 .0073356 0 0)" cx="42.234" cy="32.221" rx="3.6914" ry="2.4519" stroke-width=".2415"/>
-   <ellipse transform="matrix(-.01649 .99986 .99997 .0073356 0 0)" cx="42.049" cy="70.931" rx="3.6914" ry="2.4519" stroke-width=".2415"/>
-  </g>
- </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="100mm" height="100mm" version="1.1" viewBox="0 0 100 100"><path fill="#fff" stroke-width=".913" d="m51.147 37.806 29.666-27.019h8.6717v72.934h-19.26v-37.425l-19.078 17.343-19.169-17.343v37.425h-19.169v-73.025h8.5804z"/><g fill="#ff8d4e"><path stroke-width=".283" d="m63.498 60.199h33.214v4.0706h-33.373z"/><g stroke-width=".285"><path d="m63.498 67.921h33.214v4.0706h-33.373z"/><path d="m5.5343 63.328h33.214v4.0706h-33.373z"/><path d="m5.5343 71.05h33.214v4.0706h-33.373z"/></g><g fill-rule="evenodd"><ellipse cx="50.165" cy="56.454" stroke-width=".757" rx="9.207" ry="9.653"/><ellipse cx="42.234" cy="32.221" stroke-width=".241" rx="3.691" ry="2.452" transform="matrix(-.01649 .99986 .99997 .0073356 0 0)"/><ellipse cx="42.049" cy="70.931" stroke-width=".241" rx="3.691" ry="2.452" transform="matrix(-.01649 .99986 .99997 .0073356 0 0)"/></g></g></svg>
