@@ -69,7 +69,8 @@ enum class Topic(val value: String) {
     HACK("hacktivism"),
     ETHICS("ethics"),
     LIFE_STYLE("lifestyle"),
-    LEARN("learn");
+    LEARN("learn"),
+    ON_AIR("onair");
 
     companion object {
         fun of(label: String) = values().firstOrNull { it.value == label } ?: OTHER
