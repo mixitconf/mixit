@@ -1,14 +1,16 @@
 {{> header-http }}
-{{> empty-menu }}
-<script src="https://code.highcharts.com/highcharts.js"></script>
+<style>
+    .nums {
+        font-family: 'Anton', sans-serif;
+    }
+</style>
 <script>
     function addNode(className, value, nodeSup) {
         const node = document.createElement("div");
         node.className = className;
         if (nodeSup) {
             node.append(nodeSup);
-        }
-        else {
+        } else {
             node.innerHTML = value;
         }
         return node;
@@ -18,11 +20,11 @@
         const node = document.createElement("img");
         node.style = 'max-width:100%';
         if (index < 3) {
-            node.src = '/images/svg/mxt-icon-ticket.svg';
-        } else if(index < 6) {
-            node.src = '/images/svg/mxt-icon-tshirt.svg';
+            node.src = '/images/svg/mxt-icon-ticket-inversed.svg';
+        } else if (index < 6) {
+            node.src = '/images/svg/mxt-icon-tshirt-inversed.svg';
         } else {
-            node.src = '/images/svg/mxt-icon-poster.svg';
+            node.src = '/images/svg/mxt-icon-poster-inversed.svg';
         }
 
         return node;
@@ -34,6 +36,7 @@
         data.donations.forEach(donation => {
             const field = document.getElementById("counter-" + donation.login);
             if (field) {
+                //field.className = 'num';
                 field.innerText = donation.quantity;
             }
             const amount = document.getElementById("amount-" + donation.login);
@@ -51,66 +54,85 @@
                 ranking.append(addNode("col-2 pt-4 fs-3 text-center", elt.quantity));
                 ranking.append(addNode("col-1 pt-3 fw-normal text-center", '', addImage(index)));
             });
+            const elt = data.ranking.length;
+            const addon = 10 - data.ranking.length;
+            console.log(addon)
+            for (i = 0; i < addon; i++) {
+                ranking.append(addNode("col-1 pt-4 fs-3 text-center", elt + i + 1));
+                ranking.append(addNode("col-4 pt-4 fw-normal", "-"));
+                ranking.append(addNode("col-4 pt-4 fw-normal", ""));
+                ranking.append(addNode("col-2 pt-4 fs-3 text-center", ""));
+                ranking.append(addNode("col-1 pt-3 fw-normal text-center", '', addImage(elt + i + 1)));
+            }
         }
     }
 </script>
-<div class="row pt-4">
-    <div class="col-5" style="padding-left: 1.5em">
-        <div class="row mxt-navbar" style="color: white;">
-            <div class="col-12">
-                <div class="mt-5 mb-5 d-flex" style="font-weight: bolder; font-size: 5rem; align-items: center">
-                    <img src="/images/svg/mxt-icon--logo-mixette-inversed.svg" style="max-height: 7rem">
-                    IXETTE
+<div class="row">
+    <div class="col-5">
+        <div style="margin-left: 2em; margin-right: 2em;">
+            <div class="row">
+                <div class="col-12">
+                    <div class="mt-5 mb-5 d-flex"
+                         style="font-weight: bolder; font-size: 5rem; align-items: center;justify-content: center">
+                        <img src="/images/svg/mxt-icon--logo-mixette.svg" style="max-height: 7rem">
+                        <span style="color: #2c233d !important;">IXETTE</span>
+                    </div>
                 </div>
+                <div><h2>Les meilleurs donateurs</h2></div>
             </div>
-            <div><h2>Les meilleurs donateurs</h2></div>
-        </div>
-        <div class="row">
-            <div class="row pt-3 fs-5 fw-bold">
-                <div class="col-1 text-center">#</div>
-                <div class="col-4">Prénom</div>
-                <div class="col-4">Nom</div>
-                <div class="col-2 text-center">Nombre</div>
-                <div class="col-1 text-center">?</div>
+            <div class="row mb-4">
+                <div class="row pt-3 fs-5 fw-bold" style="margin-right: 1em;margin-left: 1em">
+                    <div class="col-1 text-center">#</div>
+                    <div class="col-4">Prénom</div>
+                    <div class="col-4">Nom</div>
+                    <div class="col-2 text-center">Nombre</div>
+                    <div class="col-1 text-center">?</div>
+                </div>
+                <div class="row fw-bold fs-5" id="ranking"
+                     style="line-height: 1.5em;border: 1px solid #2c233d; margin: 1em; border-radius: 18px; background-color: #2c233d; color: white"></div>
             </div>
-            <div class="row fw-bold fs-5" id="ranking" style="line-height: 1.5em"></div>
         </div>
     </div>
     <div class="col-7">
-        <div class="lead text-center pt-5">
-            <p class="fw-bold">Financer l'association de votre choix en faisant un don de Mixette au desk MiXiT à
-                l'accueil.</p>
-            <p>Vous pouvez récupérer
-                des Mixettes dans différents endroits de la conférence en plus des 2 mixettes remises avec votre badge.
-                Les 10 plus
-                gros donateurs seront récompensés.</p>
-        </div>
-        <div>
-            <div class="row pt-5" style="padding-left: 2em;padding-right: 1em">
-                {{#organizations}}
-                    <div class="col-2">
-                        <a href="/user/{{login}}">
-                            {{#photoUrl}}<img src="{{photoUrl}}" alt="{{company}}"
-                                              class="mxt-img--speakers"
-                                              style="max-width: 100%; border-radius: 50%">{{/photoUrl}}
-                        </a>
-                    </div>
-                    <div class="col-10">
-                        <h2>{{company}}</h2>
-                        <div class="lead">
-                            {{description}}
+        <div style="margin-left: 2em; margin-right: 2em;">
+            <div class="lead text-center pt-5">
+                <p class="fw-bold">Financer l'association de votre choix en faisant un don de Mixette au desk MiXiT à
+                    l'accueil.</p>
+                <p>Vous pouvez récupérer
+                    des Mixettes dans différents endroits de la conférence en plus des 2 mixettes remises avec votre
+                    badge.
+                    Les 10 plus
+                    gros donateurs seront récompensés.</p>
+            </div>
+            <div>
+                <div class="row pt-5" style="padding-left: 2em;padding-right: 1em">
+                    {{#organizations}}
+                        <div class="col-2">
+                            <a href="/user/{{login}}">
+                                {{#photoUrl}}<img src="{{photoUrl}}" alt="{{company}}"
+                                                  class="mxt-img--speakers"
+                                                  style="max-width: 100%; border-radius: 50%">{{/photoUrl}}
+                            </a>
                         </div>
-                    </div>
-                    <div class="col-12 text-center pb-5">
-                        <div class="d-flex"
-                             style="font-size: 2rem; font-weight:bold;align-items: center; justify-content: center">
-                            <div id="counter-{{login}}">0</div>
-                            <img src="/images/svg/mxt-icon--logo-mixette.svg" style="max-height: 2rem" class="mr-2">
-                            <span>&nbsp;</span>
-                            <div class="fs-5 ml-2 fw-normal" id="amount-{{login}}">(0 €)</div>
+                        <div class="col-10">
+                            <h2>{{company}}</h2>
+                            <div class="lead">
+                                {{description}}
+                            </div>
                         </div>
-                    </div>
-                {{/organizations}}
+                        <div class="col-12 text-center pb-5">
+                            <div class="d-flex"
+                                 style="font-size: 2rem; font-weight:bold;align-items: center; justify-content: center">
+                                <div class="nums">
+                                    <div id="counter-{{login}}" class="animation">0</div>
+                                </div>
+                                <img src="/images/svg/mxt-icon--logo-mixette.svg" style="max-height: 2rem" class="mr-2">
+                                <span>&nbsp;</span>
+                                <div class="fs-5 ml-2 fw-normal" id="amount-{{login}}">(0 €)</div>
+                            </div>
+                        </div>
+                    {{/organizations}}
+                </div>
             </div>
         </div>
     </div>
@@ -123,4 +145,12 @@
         <img src="/images/svg/mxt-icon-poster.svg" style="max-width: 2em" class="m-1"/>
     </div>
 </div>
+<style>
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+</style>
 {{> empty-footer}}
