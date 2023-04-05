@@ -34,7 +34,8 @@ enum class TalkFormat(val duration: Int) {
     RANDOM(25),
     KEYNOTE(25),
     KEYNOTE_SURPRISE(25),
-    CLOSING_SESSION(25)
+    CLOSING_SESSION(25),
+    INTERVIEW(45),
 }
 
 @Suppress("UNUSED_PARAMETER")
@@ -56,7 +57,8 @@ enum class Room(capacity: Int, val hasLink: Boolean) {
     MUMMY(30, false),
     SPEAKER(16, false),
     UNKNOWN(0, false),
-    SURPRISE(0, false);
+    SURPRISE(0, false),
+    ON_AIR(0, false);
 }
 
 enum class Topic(val value: String) {
