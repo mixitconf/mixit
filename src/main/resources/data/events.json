@@ -1885,6 +1885,11 @@
                 "level": "MIXTEEN",
                 "sponsorId": "annick.challancin@esker.fr",
                 "subscriptionDate": "2023-03-21"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "presstart",
+                "subscriptionDate": "2023-04-04"
             }
         ],
         "organizations": [
@@ -1922,9 +1927,6 @@
             },
             {
                 "volunteerLogin": "brandon.hunt"
-            },
-            {
-                "volunteerLogin": "victor.bouvet"
             },
             {
                 "volunteerLogin": "sylvia.cohen"

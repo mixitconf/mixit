@@ -325,10 +325,10 @@
     {
         "format": "LIGHTNING_TALK",
         "event": "2023",
-        "title": "Tremplin 1",
-        "summary": "Pour choisir quel talk vous souhaitez voir \u00e0 cet endroit, rendez vous \u00e0 la soir\u00e9e Le Tremplin de MiXit le 30 mars 2023 \u00e0 18h30 ! https://www.meetup.com/fr-FR/craftsrecords/events/291885811/",
+        "title": "R\u00e9fl\u00e9chir avant de cliquer : comprendre les risques li\u00e9s \u00e0 vos donn\u00e9es personnelles en ligne",
+        "summary": "Vous n\u2019avez rien \u00e0 cacher n\u2019est-ce pas ? 1.134 trillion de megabyte, c\u2019est le volume de donn\u00e9es cr\u00e9\u00e9 chaque jour en 2021 dans le monde. Les chiffres sont tellement \u00e9normes que je ne suis pas certaine de savoir les \u00e9crire au format num\u00e9rique sans faire une recherche sur internet. Dans ce talk, je vais vous expliquer pourquoi il est important de vous soucier des donn\u00e9es personnelles que vous partagez sur internet et quels sont les risques associ\u00e9s \u00e0 celles-ci. On reviendra sur le scandale de Cambridge Anatytica, les risques li\u00e9s aux r\u00e9seaux sociaux, et les conseils que l\u2019on peut mettre en \u0153uvre individuellement pour prot\u00e9ger sa vie priv\u00e9e en ligne.",
         "speakerIds": [
-            "TBA"
+            "m.jarrar"
         ],
         "language": "FRENCH",
         "addedAt": "2023-02-13T20:50:31.213",
@@ -339,16 +339,16 @@
         "start": "2023-04-13T13:20:00",
         "end": "2023-04-13T13:40:00",
         "photoUrls": [],
-        "slug": "tremplin-1",
+        "slug": "reflechir-avant-de-cliquer-comprendre-les-risques-lies-a-vos-donnees-personnelles-en-ligne",
         "id": "63ebb05fe87fb83515ebcfc7"
     },
     {
-        "format": "TALK",
+        "format": "KEYNOTE",
         "event": "2023",
-        "title": "Keynote",
-        "summary": "A venir",
+        "title": "Pour une \u00e9cologie d\u00e9coloniale du num\u00e9rique",
+        "summary": "Pour une \u00e9cologie d\u00e9coloniale du num\u00e9rique.",
         "speakerIds": [
-            "TBA"
+            "david.maenda"
         ],
         "language": "FRENCH",
         "addedAt": "2023-03-06T12:32:00.687",
@@ -359,7 +359,7 @@
         "start": "2023-04-13T14:00:00",
         "end": "2023-04-13T14:30:00",
         "photoUrls": [],
-        "slug": "keynote",
+        "slug": "pour-une-ecologie-decoloniale-du-numerique",
         "id": "6405dd8934a9b85777797fe8"
     },
     {
@@ -449,7 +449,7 @@
         "format": "TALK",
         "event": "2023",
         "title": "Corn Hole 2 Turbo : Mes premiers pas dans l'embarqu\u00e9",
-        "summary": "Le Corn Hole est un jeu d'ext\u00e9rieur qui nous vient des USA. Aussi connu l\u00e0-bas que notre p\u00e9tanque nationale, il consiste \u00e0 lancer de petits sacs remplis de grains de ma\u00efs sur une planche situ\u00e9e \u00e0 8,20m. Si possible il faut viser le trou situ\u00e9 en haut de la planche ! Tout \u00e7a, traditionnellement, \u00e0 l'heure de l'ap\u00e9ro !\r\nAvec Nico on voulait \"bidouiller\". De l'\u00e9lectronique, du travail du bois, de la d\u00e9coupe laser, de l'impression 3D.. on voulait bricoler. Pour le Corn Hole nous avions un besoin : rendre le score disponible \u00e0 tout le monde : aux joueurs, mais aussi au public. Et soyons honn\u00eate, on avait aussi vraiment envie de faire n'importe quoi ! Jusqu'o\u00f9 pourrions-nous aller ? Autour d'un verre, le d\u00e9fi \u00e9tait lanc\u00e9..\r\nC'est comme \u00e7a que nous nous sommes lanc\u00e9s \u00e0 faire une planche \"2.0\", avec des capteurs, un affichage du score, etc.. Au menu : du travail du bois, du dev arduino et du dev android. Quelle satisfaction de mettre les mains dans le cambouis ! Tout \u00e9tait nouveau pour nous. A l'heure de l'artisanat logiciel, on y red\u00e9couvre les sensations grisantes de nos d\u00e9buts\u2026 repartir de z\u00e9ro, avec peu de ressources. Cela nous a appris \u00e0 \u00eatre extr\u00eamement sobres en \u00e9nergie, en code et en utilisation de ressources ! Apr\u00e8s quelques grosses claques (spoiler : nous n'avons pas pu atteindre nos objectifs les plus fous.. !) , c'est un retour aux sources, du d\u00e9veloppement sous contrainte, et nos premiers pas dans le d\u00e9veloppement embarqu\u00e9.\r\nDans ce talk je vous propose un retour d'exp\u00e9rience et quelques conseils pour vous lancer dans votre futur side-project.",
+        "summary": "Le Corn Hole est un jeu d'ext\u00e9rieur qui nous vient des USA. Aussi connu l\u00e0-bas que notre p\u00e9tanque nationale, il consiste \u00e0 lancer de petits sacs remplis de grains de ma\u00efs sur une planche situ\u00e9e \u00e0 8,20m. Si possible il faut viser le trou situ\u00e9 en haut de la planche ! Tout \u00e7a, traditionnellement, \u00e0 l'heure de l'ap\u00e9ro !\r\n\r\nAvec Nico on voulait \"bidouiller\". De l'\u00e9lectronique, du travail du bois, de la d\u00e9coupe laser, de l'impression 3D.. on voulait bricoler. Pour le Corn Hole nous avions un besoin : rendre le score disponible \u00e0 tout le monde : aux joueurs, mais aussi au public. Et soyons honn\u00eate, on avait aussi vraiment envie de faire n'importe quoi ! Jusqu'o\u00f9 pourrions-nous aller ? Autour d'un verre, le d\u00e9fi \u00e9tait lanc\u00e9..\r\n\r\nC'est comme \u00e7a que nous nous sommes lanc\u00e9s \u00e0 faire une planche \"2.0\", avec des capteurs, un affichage du score, etc.. Au menu : du travail du bois, du dev arduino et du dev android. Quelle satisfaction de mettre les mains dans le cambouis ! Tout \u00e9tait nouveau pour nous. A l'heure de l'artisanat logiciel, on y red\u00e9couvre les sensations grisantes de nos d\u00e9buts\u2026 repartir de z\u00e9ro, avec peu de ressources. Cela nous a appris \u00e0 \u00eatre extr\u00eamement sobres en \u00e9nergie, en code et en utilisation de ressources ! Apr\u00e8s quelques grosses claques (spoiler : nous n'avons pas pu atteindre nos objectifs les plus fous.. !) , c'est un retour aux sources, du d\u00e9veloppement sous contrainte, et nos premiers pas dans le d\u00e9veloppement embarqu\u00e9.\r\n\r\nDans ce talk je vous propose un retour d'exp\u00e9rience et quelques conseils pour vous lancer dans votre futur side-project.",
         "speakerIds": [
             "paul.roye"
         ],
@@ -674,9 +674,7 @@
         "event": "2023",
         "title": "Keynote",
         "summary": "A venir",
-        "speakerIds": [
-            "TBA"
-        ],
+        "speakerIds": [],
         "language": "FRENCH",
         "addedAt": "2023-03-06T12:34:09.681",
         "description": "",
@@ -815,7 +813,7 @@
         "format": "WORKSHOP",
         "event": "2023",
         "title": "Le GitOps dont vous \u00eates le h\u00e9ros",
-        "summary": "Dans le vaste royaume de Kubernetes, notre application est en p\u00e9ril. Les bugs et les besoins utilisateurs non couverts sont en train de les \u00e9puiser. Les correctifs et nouvelles fonctionnalit\u00e9s arriverons-t-il \u00e0 temps pour sauver l\u2019Application ? Si le processus de livraison ne s\u2019am\u00e9liore pas, les utilisateurs vont d\u00e9serter et ce sera sa fin.\r\n\u00c0 vous, public, de devenir le h\u00e9ros qui va sauver l\u2019Application en embrassant la voie du GitOps.\r\nCette ~~atelier~~ aventure sera interactive ! Vos choix vous permettront d\u2019arriver ou pas en production dans les temps. Dans ce premier tome de cette saga, vous allez apprendre ce qu\u2019est GitOps, vous choisirez votre solution et la mettrez en \u0153uvre. Soyez pr\u00eat \u00e0 assumer vos choix, vous apprendrez de vos erreurs comme de vos succ\u00e8s, et peut \u00eatre arriverez vous \u00e0 temps en production.\r\n___\r\n*4\u00e8me de couverture :\r\nCet atelier est destin\u00e9 aux aventuriers avec quelques connaissances de k8s et curieux de d\u00e9couvrir l\u2019approche GitOps.\r\nSerez-vous l\u2019aventurier qui embrassera la voie du GitOps ? Entre r\u00e9tro-gaming sur WorkAdventure et Donjons & Dragons, ce sera \u00e0 vous de faire vos propres choix, pour une exp\u00e9rience unique. ",
+        "summary": "Dans le vaste royaume de Kubernetes, notre application est en p\u00e9ril. Les bugs et les besoins utilisateurs non couverts sont en train de les \u00e9puiser. Les correctifs et nouvelles fonctionnalit\u00e9s arriverons-t-il \u00e0 temps pour sauver l\u2019Application ? Si le processus de livraison ne s\u2019am\u00e9liore pas, les utilisateurs vont d\u00e9serter et ce sera sa fin.\r\n\u00c0 vous, public, de devenir le h\u00e9ros qui va sauver l\u2019Application en embrassant la voie du GitOps.\r\nCette ~~atelier~~ aventure sera interactive ! Vos choix vous permettront d\u2019arriver ou pas en production dans les temps. Dans ce premier tome de cette saga, vous allez apprendre ce qu\u2019est GitOps, vous choisirez votre solution et la mettrez en \u0153uvre. Soyez pr\u00eat \u00e0 assumer vos choix, vous apprendrez de vos erreurs comme de vos succ\u00e8s, et peut \u00eatre arriverez vous \u00e0 temps en production.\r\n___\r\n*4\u00e8me de couverture :\r\nCet atelier est destin\u00e9 aux aventuriers avec quelques connaissances de k8s et curieux de d\u00e9couvrir l\u2019approche GitOps.\r\nDans ce RPG r\u00e9tro-gaming sur WorkAdventure ce sera \u00e0 vous de faire vos propres choix, pour une exp\u00e9rience unique.\r\n\r\n**Pr\u00e9requis pour participer \u00e0 l\u2019atelier** : https://gitops-heros.gitlab.io/requirements/",
         "speakerIds": [
             "Louis.Tournayre",
             "mathieu.mure",
@@ -1016,10 +1014,10 @@
     {
         "format": "LIGHTNING_TALK",
         "event": "2023",
-        "title": "Tremplin 2",
-        "summary": "Pour choisir quel talk vous souhaitez voir \u00e0 cet endroit, rendez vous \u00e0 la soir\u00e9e Le Tremplin de MiXit le 30 mars 2023 \u00e0 18h30 ! https://www.meetup.com/fr-FR/craftsrecords/events/291885811/",
+        "title": "Comment les reconverties peuvent inspirer et enrichir vos \u00e9quipes.",
+        "summary": "Ing\u00e9nieure, vendeuse de popcorn, prof de maths puis d\u00e9veloppeuse, je suis arriv\u00e9e dans \u201cla tech\u201d en 2020 par une formation de reconversion courte. Apr\u00e8s de nombreuses p\u00e9rip\u00e9ties, ma reconversion est aujourd\u2019hui une r\u00e9ussite totale. Pour mon \u00e9quipe et pour moi.\r\nInt\u00e9grer un profil reconverti apporte une diversit\u00e9 de parcours qui vous assure d\u2019enrichir vos \u00e9quipes mais il est facile de passer \u00e0 c\u00f4t\u00e9. Le processus d\u2019accompagnement est diff\u00e9rent de celui d\u2019un junior sorti d\u2019\u00e9cole, et tout le monde sera gagnant si vous r\u00e9ussissez ce d\u00e9fi.\r\nA travers mon histoire j\u2019aimerais inspirer des personnes en reconversion \u00e0 prendre leur place, mais aussi donner des cl\u00e9s d\u2019\u00e9coute aux \u00e9quipes qui les accueillent.\r\nVenez d\u00e9couvrir comment je suis pass\u00e9e d\u2019apprenante \u00e0 contributrice et r\u00e9f\u00e9rente en trois ans et autant de jobs.",
         "speakerIds": [
-            "TBA"
+            "lea.coston"
         ],
         "language": "FRENCH",
         "addedAt": "2023-02-13T20:50:31.22",
@@ -1030,16 +1028,16 @@
         "start": "2023-04-14T13:20:00",
         "end": "2023-04-14T13:40:00",
         "photoUrls": [],
-        "slug": "tremplin-2",
+        "slug": "comment-les-reconverties-peuvent-inspirer-et-enrichir-vos-equipes-",
         "id": "63ebb05fe87fb83515ebcfe5"
     },
     {
         "format": "KEYNOTE",
         "event": "2023",
-        "title": "Keynote",
-        "summary": "A venir",
+        "title": "Comment le num\u00e9rique limite les libert\u00e9s des femmes et des minorit\u00e9s",
+        "summary": "...et ce qu\u2019on peut faire pour l'en emp\u00eacher",
         "speakerIds": [
-            "TBA"
+            "m.saliou"
         ],
         "language": "FRENCH",
         "addedAt": "2023-03-06T12:35:38.72",
@@ -1050,7 +1048,7 @@
         "start": "2023-04-14T14:00:00",
         "end": "2023-04-14T14:30:00",
         "photoUrls": [],
-        "slug": "keynote",
+        "slug": "comment-le-numerique-limite-les-libertes-des-femmes-et-des-minorites",
         "id": "6405de4134a9b85777797fea"
     },
     {
