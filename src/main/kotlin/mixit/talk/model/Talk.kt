@@ -58,7 +58,7 @@ enum class Room(capacity: Int, val hasLink: Boolean) {
     SPEAKER(16, false),
     UNKNOWN(0, false),
     SURPRISE(0, false),
-    ON_AIR(0, false);
+    TWITCH(0, false);
 }
 
 enum class Topic(val value: String) {
