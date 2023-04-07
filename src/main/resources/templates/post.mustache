@@ -5,6 +5,12 @@
     <h1 class="pt-3 ">{{post.title}}</h1>
     <p class="text-center subheader mxt-text--page-title">{{#i18n}}blog.by{{/i18n}}
         <strong>{{post.author.firstname}}</strong>, {{#i18n}}blog.on{{/i18n}} <strong>{{post.addedAt}}</strong></p>
+
+    {{#admin}}
+        <div class="mxt-text--page-title pb-3">
+            <a href="{{localePrefix}}/admin/post/edit/{{post.id}}" class="btn-outline-primary btn" style="margin-bottom: 0">{{#i18n}}common.actions.update{{/i18n}}</a>
+        </div>
+    {{/admin}}
 </div>
 
 <div class="container mxt-wrapper--page-content mxt-blog">
