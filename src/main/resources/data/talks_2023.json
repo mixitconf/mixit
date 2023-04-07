@@ -22,6 +22,26 @@
     {
         "format": "KEYNOTE",
         "event": "2023",
+        "title": "Keynote team",
+        "summary": "Retransmission de la keynote de l'\u00e9quipe",
+        "speakerIds": [
+            "mixit"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-04-05T20:10:49.132",
+        "description": "",
+        "topic": "onair",
+        "video": null,
+        "room": "TWITCH",
+        "start": "2023-04-13T09:00:00",
+        "end": "2023-04-13T09:30:00",
+        "photoUrls": [],
+        "slug": "keynote-team",
+        "id": "642dd5f23c378a36d10327d6"
+    },
+    {
+        "format": "KEYNOTE",
+        "event": "2023",
         "title": "Capitalisme de surveillance et rapt de l\u2019\u00e9criture num\u00e9rique",
         "summary": "Capitalisme de surveillance et rapt de l\u2019\u00e9criture num\u00e9rique",
         "speakerIds": [
@@ -38,6 +58,70 @@
         "photoUrls": [],
         "slug": "capitalisme-de-surveillance-et-rapt-de-l-ecriture-numerique",
         "id": "6405dd3d34a9b85777797fe7"
+    },
+    {
+        "format": "KEYNOTE",
+        "event": "2023",
+        "title": "Capitalisme de surveillance et rapt de l\u2019\u00e9criture num\u00e9rique",
+        "summary": "Retransmission de la keynote \"Capitalisme de surveillance et rapt de l\u2019\u00e9criture num\u00e9rique\"",
+        "speakerIds": [
+            "e.guichard"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-04-05T20:07:44.277",
+        "description": "",
+        "topic": "onair",
+        "video": null,
+        "room": "TWITCH",
+        "start": "2023-04-13T09:30:00",
+        "end": "2023-04-13T10:00:00",
+        "photoUrls": [],
+        "slug": "capitalisme-de-surveillance-et-rapt-de-l-ecriture-numerique",
+        "id": "642dd54a3c378a36d10327d5"
+    },
+    {
+        "format": "INTERVIEW",
+        "event": "2023",
+        "title": "Welcome to MiXiT on Air !",
+        "summary": "Ouverture, Accueil et bienvenue",
+        "speakerIds": [
+            "greg",
+            "neveu.audrey",
+            "romain"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-04-05T19:54:49.617",
+        "description": "On vous pr\u00e9sente MIXIT On Air, la Web TV pour profiter de MIXIT 2023 depuis votre canap\u00e9. Uniquement sur \ud83d\udcfa https://twitch.tv/mixitconf",
+        "topic": "onair",
+        "video": null,
+        "room": "TWITCH",
+        "start": "2023-04-13T10:00:00",
+        "end": "2023-04-13T10:15:00",
+        "photoUrls": [],
+        "slug": "welcome-to-mixit-on-air-",
+        "id": "642dd24d3c378a36d10327d0"
+    },
+    {
+        "format": "INTERVIEW",
+        "event": "2023",
+        "title": "Interview Eric Guichard",
+        "summary": "Interview d'Eric Guichard sur sa keynote \"Capitalisme de surveillance et rapt de l\u2019\u00e9criture num\u00e9rique\" - https://mixitconf.org/2023/capitalisme-de-surveillance-et-rapt-de-l-ecriture-numerique",
+        "speakerIds": [
+            "agnes",
+            "e.guichard",
+            "neveu.audrey"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-04-05T19:56:13.086",
+        "description": "",
+        "topic": "onair",
+        "video": null,
+        "room": "TWITCH",
+        "start": "2023-04-13T10:30:00",
+        "end": "2023-04-13T11:15:00",
+        "photoUrls": [],
+        "slug": "interview-eric-guichard",
+        "id": "642dd2bc3c378a36d10327d1"
     },
     {
         "format": "TALK",
@@ -182,6 +266,26 @@
         "id": "63ebb05fe87fb83515ebcfbf"
     },
     {
+        "format": "INTERVIEW",
+        "event": "2023",
+        "title": "On refait la conf, sp\u00e9ciale Team !",
+        "summary": "Interview de Sofia Lescano (https://mixitconf.org/2023/faire-grandir-une-equipe-technique-autonomie-vs-anarchie)",
+        "speakerIds": [
+            "romain"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-04-05T20:03:03.341",
+        "description": "",
+        "topic": "onair",
+        "video": null,
+        "room": "TWITCH",
+        "start": "2023-04-13T11:30:00",
+        "end": "2023-04-13T12:15:00",
+        "photoUrls": [],
+        "slug": "on-refait-la-conf-speciale-team-",
+        "id": "642dd41e3c378a36d10327d3"
+    },
+    {
         "format": "TALK",
         "event": "2023",
         "title": "Pourquoi le CSS \u00c7a Saoule Souvent",
@@ -261,6 +365,48 @@
         "photoUrls": [],
         "slug": "changer-le-visage-des-mathematiques-une-nouvelle-image-pour-la-recherche",
         "id": "63ed511a561dc311fc7da366"
+    },
+    {
+        "format": "INTERVIEW",
+        "event": "2023",
+        "title": "Papotage avec les sponsors !",
+        "summary": "C'est le moment de vous pr\u00e9senter nos sponsors !",
+        "speakerIds": [
+            "greg",
+            "romain"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-04-05T20:00:45.591",
+        "description": "",
+        "topic": "onair",
+        "video": null,
+        "room": "TWITCH",
+        "start": "2023-04-13T12:30:00",
+        "end": "2023-04-13T12:55:00",
+        "photoUrls": [],
+        "slug": "papotage-avec-les-sponsors-",
+        "id": "642dd3db3c378a36d10327d2"
+    },
+    {
+        "format": "INTERVIEW",
+        "event": "2023",
+        "title": "Inside MiXiT : la Mixette",
+        "summary": "Pour tout savoir sur la monnaie de MIXIT : la Mixette et les associations que nous soutenons pendant les 2 jours",
+        "speakerIds": [
+            "amelyeb",
+            "guillaumeehret"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-04-05T20:05:29.381",
+        "description": "",
+        "topic": "onair",
+        "video": null,
+        "room": "TWITCH",
+        "start": "2023-04-13T13:10:00",
+        "end": "2023-04-13T13:45:00",
+        "photoUrls": [],
+        "slug": "inside-mixit-la-mixette",
+        "id": "642dd4e33c378a36d10327d4"
     },
     {
         "format": "LIGHTNING_TALK",
@@ -361,6 +507,48 @@
         "photoUrls": [],
         "slug": "pour-une-ecologie-decoloniale-du-numerique",
         "id": "6405dd8934a9b85777797fe8"
+    },
+    {
+        "format": "KEYNOTE",
+        "event": "2023",
+        "title": "Pour une \u00e9cologie d\u00e9coloniale du num\u00e9rique",
+        "summary": "Retransmission de la keynote \"Pour une \u00e9cologie d\u00e9coloniale du num\u00e9rique\"",
+        "speakerIds": [
+            "david.maenda"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-04-05T20:14:19.917",
+        "description": "",
+        "topic": "onair",
+        "video": null,
+        "room": "TWITCH",
+        "start": "2023-04-13T14:00:00",
+        "end": "2023-04-13T14:30:00",
+        "photoUrls": [],
+        "slug": "pour-une-ecologie-decoloniale-du-numerique",
+        "id": "642dd6d13c378a36d10327d7"
+    },
+    {
+        "format": "INTERVIEW",
+        "event": "2023",
+        "title": "Interview de David Maenda Kithoko",
+        "summary": "Interview de David Maenda Kithoko sur sa keynote \"Pour une \u00e9cologie d\u00e9coloniale du num\u00e9rique\"",
+        "speakerIds": [
+            "agnes",
+            "david.maenda",
+            "neveu.audrey"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-04-05T20:15:34.055",
+        "description": "",
+        "topic": "onair",
+        "video": null,
+        "room": "TWITCH",
+        "start": "2023-04-13T14:45:00",
+        "end": "2023-04-13T15:30:00",
+        "photoUrls": [],
+        "slug": "interview-de-david-maenda-kithoko",
+        "id": "642dd7613c378a36d10327d8"
     },
     {
         "format": "TALK",
@@ -507,6 +695,29 @@
         "id": "63ebb05fe87fb83515ebcfce"
     },
     {
+        "format": "INTERVIEW",
+        "event": "2023",
+        "title": "Inside MIXIT : MIXTEEN",
+        "summary": "Pour tout savoir sur Mixteen, l\u2019association qui apprend le code aux enfants, dans la joie, la bonne humeur et pleins de robots",
+        "speakerIds": [
+            "106329914971209052078",
+            "greg",
+            "romain",
+            "vbonnefond"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-04-05T20:17:59.329",
+        "description": "",
+        "topic": "onair",
+        "video": null,
+        "room": "TWITCH",
+        "start": "2023-04-13T15:30:00",
+        "end": "2023-04-13T16:00:00",
+        "photoUrls": [],
+        "slug": "inside-mixit-mixteen",
+        "id": "642dd7de3c378a36d10327d9"
+    },
+    {
         "format": "TALK",
         "event": "2023",
         "title": "Progresser en conception avec les Design Patterns",
@@ -590,6 +801,26 @@
         "id": "64184b1a2a24863cd072b4ab"
     },
     {
+        "format": "INTERVIEW",
+        "event": "2023",
+        "title": "On refait la conf, sp\u00e9ciale Aliens !",
+        "summary": "Interview de Nathalie Ayi (https://mixitconf.org/2023/changer-le-visage-des-mathematiques-une-nouvelle-image-pour-la-recherche)",
+        "speakerIds": [
+            "romain"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-04-05T20:24:40.836",
+        "description": "",
+        "topic": "onair",
+        "video": null,
+        "room": "TWITCH",
+        "start": "2023-04-13T16:15:00",
+        "end": "2023-04-13T17:00:00",
+        "photoUrls": [],
+        "slug": "on-refait-la-conf-speciale-aliens-",
+        "id": "642dd9353c378a36d10327db"
+    },
+    {
         "format": "TALK",
         "event": "2023",
         "title": "Ada Lovelace and The Very First Computer Program",
@@ -670,22 +901,66 @@
         "id": "63f5dc52f4ed9b616de005fe"
     },
     {
-        "format": "TALK",
+        "format": "INTERVIEW",
         "event": "2023",
-        "title": "Keynote",
-        "summary": "A venir",
-        "speakerIds": [],
+        "title": "On refait la conf, sp\u00e9ciale Tech",
+        "summary": "Compilation native avec GraalVM, Spring Framework 6",
+        "speakerIds": [
+            "cedric.champeau",
+            "guillaumeehret",
+            "neveu.audrey"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-04-05T20:20:51.747",
+        "description": "",
+        "topic": "onair",
+        "video": null,
+        "room": "TWITCH",
+        "start": "2023-04-13T17:15:00",
+        "end": "2023-04-13T18:00:00",
+        "photoUrls": [],
+        "slug": "on-refait-la-conf-speciale-tech",
+        "id": "642dd8e63c378a36d10327da"
+    },
+    {
+        "format": "KEYNOTE",
+        "event": "2023",
+        "title": "MiXiT on Air",
+        "summary": "MiXiT on Air",
+        "speakerIds": [
+            "mixit"
+        ],
         "language": "FRENCH",
         "addedAt": "2023-03-06T12:34:09.681",
         "description": "",
-        "topic": "aliens",
+        "topic": "onair",
         "video": null,
         "room": "AMPHI1",
         "start": "2023-04-13T18:00:00",
         "end": "2023-04-13T18:30:00",
         "photoUrls": [],
-        "slug": "keynote",
+        "slug": "mixit-on-air",
         "id": "6405ddd934a9b85777797fe9"
+    },
+    {
+        "format": "KEYNOTE",
+        "event": "2023",
+        "title": "Keynote de cl\u00f4ture",
+        "summary": "Keynote de cl\u00f4ture",
+        "speakerIds": [
+            "mixit"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-04-05T17:50:43.866",
+        "description": "",
+        "topic": "onair",
+        "video": null,
+        "room": "TWITCH",
+        "start": "2023-04-13T18:00:00",
+        "end": "2023-04-13T18:30:00",
+        "photoUrls": [],
+        "slug": "keynote-de-cloture",
+        "id": "642dc2eaaa73a1714e34df02"
     },
     {
         "format": "KEYNOTE",
@@ -708,6 +983,26 @@
         "id": "641cbeaebc829903f2e9941e"
     },
     {
+        "format": "INTERVIEW",
+        "event": "2023",
+        "title": "Keynote Team",
+        "summary": "Retransmission de la keynote de l'\u00e9quipe",
+        "speakerIds": [
+            "mixit"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-04-05T20:29:54.848",
+        "description": "",
+        "topic": "onair",
+        "video": null,
+        "room": "TWITCH",
+        "start": "2023-04-14T09:00:00",
+        "end": "2023-04-14T09:30:00",
+        "photoUrls": [],
+        "slug": "keynote-team",
+        "id": "642dda643c378a36d10327dd"
+    },
+    {
         "format": "KEYNOTE",
         "event": "2023",
         "title": "Why is being different actually a good thing? \u2013 My Way Into Tech",
@@ -726,6 +1021,70 @@
         "photoUrls": [],
         "slug": "why-is-being-different-actually-a-good-thing-my-way-into-tech",
         "id": "63ebb05fe87fb83515ebcfd6"
+    },
+    {
+        "format": "KEYNOTE",
+        "event": "2023",
+        "title": "Why is being different actually a good thing? \u2013 My Way Into Tech",
+        "summary": "Retransmission de la keynote \"Why is being different actually a good thing? \u2013 My Way Into Tech\"",
+        "speakerIds": [
+            "felifichte"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-04-05T20:27:51.521",
+        "description": "",
+        "topic": "onair",
+        "video": null,
+        "room": "TWITCH",
+        "start": "2023-04-14T09:30:00",
+        "end": "2023-04-14T10:00:00",
+        "photoUrls": [],
+        "slug": "why-is-being-different-actually-a-good-thing-my-way-into-tech",
+        "id": "642dda223c378a36d10327dc"
+    },
+    {
+        "format": "INTERVIEW",
+        "event": "2023",
+        "title": "Welcome to MiXiT on Air! ",
+        "summary": "Ouverture, accueil et bienvenue",
+        "speakerIds": [
+            "greg",
+            "neveu.audrey",
+            "romain"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-04-05T20:30:53.901",
+        "description": "",
+        "topic": "onair",
+        "video": null,
+        "room": "TWITCH",
+        "start": "2023-04-14T10:00:00",
+        "end": "2023-04-14T10:15:00",
+        "photoUrls": [],
+        "slug": "welcome-to-mixit-on-air-",
+        "id": "642ddaca3c378a36d10327de"
+    },
+    {
+        "format": "INTERVIEW",
+        "event": "2023",
+        "title": "Interview Feli Bernutz",
+        "summary": "Interview de Feli Bernutz sur sa keynote \"Why is being different actually a good thing? \u2013 My Way Into Tech\"",
+        "speakerIds": [
+            "felifichte",
+            "neveu.audrey",
+            "romain"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-04-05T20:32:14.615",
+        "description": "",
+        "topic": "onair",
+        "video": null,
+        "room": "TWITCH",
+        "start": "2023-04-14T10:30:00",
+        "end": "2023-04-14T11:15:00",
+        "photoUrls": [],
+        "slug": "interview-feli-bernutz",
+        "id": "642ddb763c378a36d10327df"
     },
     {
         "format": "TALK",
@@ -872,6 +1231,26 @@
         "id": "63ebb05fe87fb83515ebcfdd"
     },
     {
+        "format": "INTERVIEW",
+        "event": "2023",
+        "title": "TBA",
+        "summary": "TBA",
+        "speakerIds": [
+            "greg"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-04-05T20:37:29.581",
+        "description": "",
+        "topic": "onair",
+        "video": null,
+        "room": "TWITCH",
+        "start": "2023-04-14T11:30:00",
+        "end": "2023-04-14T12:15:00",
+        "photoUrls": [],
+        "slug": "tba",
+        "id": "642ddc393c378a36d10327e0"
+    },
+    {
         "format": "TALK",
         "event": "2023",
         "title": "Functional Programming with C#",
@@ -950,6 +1329,48 @@
         "photoUrls": [],
         "slug": "-retourauxsources-le-cache-http",
         "id": "63ebb05fe87fb83515ebcfe1"
+    },
+    {
+        "format": "INTERVIEW",
+        "event": "2023",
+        "title": "Papotage avec les sponsors !",
+        "summary": "C'est le moment de vous pr\u00e9senter nos sponsors !",
+        "speakerIds": [
+            "Charles Bouttaz",
+            "greg"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-04-05T20:39:13.161",
+        "description": "",
+        "topic": "onair",
+        "video": null,
+        "room": "TWITCH",
+        "start": "2023-04-14T12:30:00",
+        "end": "2023-04-14T12:55:00",
+        "photoUrls": [],
+        "slug": "papotage-avec-les-sponsors-",
+        "id": "642ddcff3c378a36d10327e1"
+    },
+    {
+        "format": "INTERVIEW",
+        "event": "2023",
+        "title": "On d\u00e9briefe avec les participant\u00b7e\u00b7s",
+        "summary": "On d\u00e9briefe avec les participant\u00b7e\u00b7s",
+        "speakerIds": [
+            "Charles Bouttaz",
+            "romain"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-04-05T20:42:08.532",
+        "description": "",
+        "topic": "onair",
+        "video": null,
+        "room": "TWITCH",
+        "start": "2023-04-14T13:10:00",
+        "end": "2023-04-14T13:45:00",
+        "photoUrls": [],
+        "slug": "on-debriefe-avec-les-participant-e-s",
+        "id": "642ddd513c378a36d10327e2"
     },
     {
         "format": "LIGHTNING_TALK",
@@ -1052,6 +1473,48 @@
         "id": "6405de4134a9b85777797fea"
     },
     {
+        "format": "KEYNOTE",
+        "event": "2023",
+        "title": "Comment le num\u00e9rique limite les libert\u00e9s des femmes et des minorit\u00e9s",
+        "summary": "Retransmission de la keynote \"Comment le num\u00e9rique limite les libert\u00e9s des femmes et des minorit\u00e9s\"",
+        "speakerIds": [
+            "m.saliou"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-04-05T20:43:37.839",
+        "description": "",
+        "topic": "onair",
+        "video": null,
+        "room": "TWITCH",
+        "start": "2023-04-14T14:00:00",
+        "end": "2023-04-14T14:30:00",
+        "photoUrls": [],
+        "slug": "comment-le-numerique-limite-les-libertes-des-femmes-et-des-minorites",
+        "id": "642dddd63c378a36d10327e3"
+    },
+    {
+        "format": "INTERVIEW",
+        "event": "2023",
+        "title": "Interview Mathilde Saliou",
+        "summary": "Interview de Mathilde Saliou sur sa keynote \"Comment le num\u00e9rique limite les libert\u00e9s des femmes et des minorit\u00e9s\"",
+        "speakerIds": [
+            "agnes",
+            "m.saliou",
+            "neveu.audrey"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-04-05T20:46:05.863",
+        "description": "",
+        "topic": "onair",
+        "video": null,
+        "room": "TWITCH",
+        "start": "2023-04-14T14:45:00",
+        "end": "2023-04-14T15:15:00",
+        "photoUrls": [],
+        "slug": "interview-mathilde-saliou",
+        "id": "642dde4c3c378a36d10327e4"
+    },
+    {
         "format": "TALK",
         "event": "2023",
         "title": "Remotion : le 7\u00e8me art \u00e0 port\u00e9e de composants web et d'API \ud83c\udfac",
@@ -1135,6 +1598,27 @@
         "id": "63ebb05fe87fb83515ebcfe9"
     },
     {
+        "format": "INTERVIEW",
+        "event": "2023",
+        "title": "TBA",
+        "summary": "TBA",
+        "speakerIds": [
+            "greg",
+            "romain"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-04-05T20:47:38.668",
+        "description": "",
+        "topic": "onair",
+        "video": null,
+        "room": "TWITCH",
+        "start": "2023-04-14T15:15:00",
+        "end": "2023-04-14T15:45:00",
+        "photoUrls": [],
+        "slug": "tba",
+        "id": "642dde9c3c378a36d10327e5"
+    },
+    {
         "format": "TALK",
         "event": "2023",
         "title": "Resumability in the next generation frontend framework With O(1) loading time",
@@ -1215,6 +1699,31 @@
         "id": "63ebb05fe87fb83515ebcfed"
     },
     {
+        "format": "INTERVIEW",
+        "event": "2023",
+        "title": "On refait la conf, sp\u00e9cial Tech",
+        "summary": "Parlons un peu d\u00e9veloppement front et mobile !",
+        "speakerIds": [
+            "alves.mckl",
+            "antoine395.caron",
+            "cedric",
+            "elaine.diasbatista",
+            "hsablonniere",
+            "neveu.audrey"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-04-05T20:48:44.958",
+        "description": "",
+        "topic": "onair",
+        "video": null,
+        "room": "TWITCH",
+        "start": "2023-04-14T16:00:00",
+        "end": "2023-04-14T16:35:00",
+        "photoUrls": [],
+        "slug": "on-refait-la-conf-special-tech",
+        "id": "642ddf3c3c378a36d10327e6"
+    },
+    {
         "format": "KEYNOTE",
         "event": "2023",
         "title": "Math\u00e9matiques & Magie",
@@ -1228,10 +1737,30 @@
         "topic": "aliens",
         "video": null,
         "room": "AMPHI1",
-        "start": "2023-04-14T16:50:00",
-        "end": "2023-04-14T17:20:00",
+        "start": "2023-04-14T17:00:00",
+        "end": "2023-04-14T17:30:00",
         "photoUrls": [],
         "slug": "mathematiques-magie",
         "id": "6405de8434a9b85777797feb"
+    },
+    {
+        "format": "KEYNOTE",
+        "event": "2023",
+        "title": "Math\u00e9matiques & Magie",
+        "summary": "Retransmission de la keynote \"Math\u00e9matiques & Magie\"",
+        "speakerIds": [
+            "jb.aubin"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-04-05T20:52:49.864",
+        "description": "",
+        "topic": "onair",
+        "video": null,
+        "room": "TWITCH",
+        "start": "2023-04-14T17:00:00",
+        "end": "2023-04-14T17:30:00",
+        "photoUrls": [],
+        "slug": "mathematiques-magie",
+        "id": "642ddfea3c378a36d10327e7"
     }
 ]
