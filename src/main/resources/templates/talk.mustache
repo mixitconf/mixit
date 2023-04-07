@@ -4,6 +4,11 @@
 
 <div class="mxt-wrapper--header-page-title">
     <h2 class="pt-3 pb-3">#{{#i18n}}talk.format.{{talk.format}}{{/i18n}}</h2>
+    {{#admin}}
+        <div class="mxt-text--page-title pb-3">
+            <a href="{{localePrefix}}/admin/talks/edit/{{talk.id}}" class="btn-outline-primary btn" style="margin-bottom: 0">{{#i18n}}common.actions.update{{/i18n}}</a>
+        </div>
+    {{/admin}}
 </div>
 <div class="container mxt-wrapper--page-content">
     <h1 class="text-center mxt-text--talk-h1 container pb-0">
