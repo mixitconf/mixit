@@ -8,6 +8,7 @@ import mixit.event.model.EventService
 import mixit.event.repository.EventImagesRepository
 import mixit.event.repository.EventRepository
 import mixit.favorite.repository.FavoriteRepository
+import mixit.features.repository.FeatureStateRepository
 import mixit.mixette.repository.MixetteDonationRepository
 import mixit.talk.model.TalkService
 import mixit.talk.repository.TalkRepository
@@ -33,6 +34,7 @@ class DatabaseInitializerConfig {
         favoriteRepository: FavoriteRepository,
         ticketRepository: TicketRepository,
         mixetteDonationRepository: MixetteDonationRepository,
+        featureStateRepository:FeatureStateRepository,
         eventService: EventService,
         eventImagesService: EventImagesService,
         blogService: BlogService,
@@ -49,6 +51,7 @@ class DatabaseInitializerConfig {
         favoriteRepository.initData()
         ticketRepository.initData()
         mixetteDonationRepository.initData()
+        featureStateRepository.initData()
 
         runBlocking {
             userService.initializeCache()
