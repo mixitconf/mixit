@@ -22,6 +22,7 @@ enum class MustacheTemplate(val template: String, val title: String?) {
     AdminEventVolunteer("admin/admin-event-volunteer", "admin.title"),
     AdminEventOrganizer("admin/admin-event-organizer", "admin.title"),
     AdminEvents("admin/admin-events", "admin.events.title"),
+    AdminFeatureState("admin/admin-feature", "admin.title"),
     AdminLottery("admin/admin-lottery", "admin.ticketing.title"),
     // AdminMailing("admin/admin-mailing", "mailinglist.title"),
     AdminMailingConfirmation("admin/admin-mailing-confirmation", "mailinglist.title"),

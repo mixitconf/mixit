@@ -1,0 +1,25 @@
+{{> header}}
+{{> header-common }}
+
+<div class="mxt-wrapper--header-page-title">
+    <h1 class="pt-3 pb-3">{{#i18n}}{{title}}{{/i18n}}</h1>
+</div>
+
+<div class="container mxt-wrapper--page-content">
+    <h2>{{#i18n}}admin.feature{{/i18n}}</h2>
+    <p>{{#i18n}}admin.feature.desc{{/i18n}}</p>
+    <form action="/admin/features" method="post" id="features">
+        {{#features}}
+            <div class="row">
+            <div class="form-check form-switch" style="width: max-content;">
+                <input class="form-check-input" type="checkbox" role="switch" id="{{feature}}" name="{{feature}}"
+                       onclick="return confirm('{{#i18n}}admin.feature.confirm{{/i18n}}') ? document.getElementById('features').submit() : false"
+                       {{#active}}checked{{/active}}>
+                <label class="form-check-label" for="_agenda">{{feature}}</label>
+            </div>
+            </div>
+        {{/features}}
+    </form>
+</div>
+
+{{> footer}}

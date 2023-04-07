@@ -8,6 +8,7 @@ import mixit.blog.handler.AdminPostHandler
 import mixit.blog.handler.WebBlogHandler
 import mixit.event.handler.AdminEventHandler
 import mixit.event.handler.AdminEventImagesHandler
+import mixit.features.handler.FeatureStateHandler
 import mixit.mailing.handler.MailingHandler
 import mixit.mailing.handler.MailingListHandler
 import mixit.mixette.handler.AdminMixetteHandler
@@ -71,7 +72,8 @@ class WebsiteRoutes(
     private val userHandler: UserHandler,
     private val ticketHandler: TicketHandler,
     private val properties: MixitProperties,
-    private val routeFilterUtils: RouteFilterUtils
+    private val routeFilterUtils: RouteFilterUtils,
+    private val featureStateHandler: FeatureStateHandler
 ) {
 
     private val logger = LoggerFactory.getLogger(WebsiteRoutes::class.java)
@@ -111,6 +113,7 @@ class WebsiteRoutes(
             GET("/admin/events/images/{event}/sections/create", adminEventImagesHandler::createEventImagesSection)
             GET("/admin/events/images/{event}/sections/{sectionId}/images/edit", adminEventImagesHandler::editEventImagesSectionImage)
             GET("/admin/events/images/{event}/sections/{sectionId}/images/create", adminEventImagesHandler::createEventImagesSectionImage)
+            GET("/admin/features", featureStateHandler::list)
             GET("/admin/post/edit/{id}", adminPostHandler::editPost)
             GET("/admin/post/create", adminPostHandler::createPost)
             GET("/admin/cache", cacheHandler::view)
@@ -245,6 +248,7 @@ class WebsiteRoutes(
             POST("/admin/events/{eventId}/organizers/create", adminEventHandler::adminCreateEventOrganizer)
             POST("/admin/events/{eventId}/organizers/delete", adminEventHandler::adminDeleteEventOrganizer)
             POST("/admin/events/{eventId}/organizers", adminEventHandler::adminUpdateEventOrganizer)
+            POST("/admin/features", featureStateHandler::save)
             POST("/login", authenticationHandler::login)
             POST("/send-token", authenticationHandler::sendToken)
             POST("/signup", authenticationHandler::signUp)

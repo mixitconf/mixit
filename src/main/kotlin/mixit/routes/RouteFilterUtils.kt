@@ -1,7 +1,10 @@
 package mixit.routes
 
 import com.samskivert.mustache.Mustache
+import kotlinx.coroutines.runBlocking
 import mixit.MixitProperties
+import mixit.features.model.Feature
+import mixit.features.repository.FeatureStateRepository
 import mixit.user.model.Role
 import mixit.util.locale
 import mixit.util.localePrefix
@@ -21,7 +24,8 @@ import java.util.Locale
 @Component
 class RouteFilterUtils(
     private val messageSource: MessageSource,
-    private val properties: MixitProperties
+    private val properties: MixitProperties,
+    private val featureStateRepository: FeatureStateRepository,
 ) {
 
     fun addModelToResponse(request: ServerRequest, next: HandlerFunction<ServerResponse>): Mono<ServerResponse> =
@@ -56,6 +60,7 @@ class RouteFilterUtils(
         this["hasFeatureLotteryResult"] = properties.feature.lotteryResult
         this["hasFeatureMixette"] = properties.feature.mixette
         this["hasFeatureProfileWithMessages"] = properties.feature.profilemsg
+        this["hasMixitOnAirOnHomePage"] = featureStateRepository.findFeature(Feature.MixitOnAirOnHomePage).map { it.active }
     }.toMap()
 
     fun generateModelForExernalCall(
