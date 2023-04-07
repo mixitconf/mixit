@@ -27,10 +27,10 @@ class FeatureStateHandler(
     suspend fun save(req: ServerRequest): ServerResponse {
         val formData = req.extractFormData()
         return Feature.values()
-            .onEach {
+            .map {
                 val active = formData[it.name] == "on"
                 val state = featureStateRepository.findOneByType(it)
-                featureStateRepository.save(state.copy(active = active)).block()
+                featureStateRepository.save(state.copy(active = active)).awaitSingle()
             }
             .let {
                 list(req)

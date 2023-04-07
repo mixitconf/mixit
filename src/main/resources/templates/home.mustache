@@ -1,5 +1,57 @@
 {{> header}}
 {{> header-home }}
+{{#hasMixitOnAirOnHomePage}}
+    <div class="container mxt-wrapper--home-content">
+        <div class="row mxt-home-round-header">
+            <div class="col-12 col-md-6 col-lg-3">
+                <a href="/codeofconduct" alt="{{#i18n}}home.intro.coc{{/i18n}}">
+                    <button><img src="/images/svg/mxt-icon-code.svg"></button>
+                    <div>{{#i18n}}home.intro.coc.title{{/i18n}}</div>
+                </a>
+                <div>{{#i18n}}home.intro.coc{{/i18n}}</div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <a href="/accessibility" alt="{{#i18n}}home.intro.accessibility{{/i18n}}">
+                    <button><img src="/images/svg/mxt-icon-baby.svg"></button>
+                    <div>{{#i18n}}home.intro.accessibility.title{{/i18n}}</div>
+                </a>
+                <div>{{#i18n}}home.intro.accessibility{{/i18n}}</div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <a href="/venue" alt="{{#i18n}}home.intro.venue{{/i18n}}">
+                    <button><img src="/images/svg/mxt-icon-place.svg"></button>
+                    <div>{{#i18n}}home.intro.venue.title{{/i18n}}</div>
+                </a>
+                <div>{{#i18n}}home.intro.venue{{/i18n}}</div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <a href="/newsletter-subscribe" alt="{{#i18n}}home.intro.newsletter{{/i18n}}">
+                    <button><img src="/images/svg/mxt-icon-newsletter.svg"></button>
+                    <div>{{#i18n}}home.intro.newsletter.title{{/i18n}}</div>
+                </a>
+                <div>{{#i18n}}home.intro.newsletter{{/i18n}}</div>
+            </div>
+        </div>
+
+        <h2 class="mt-5">{{#i18n}}home.live.title{{/i18n}}</h2>
+        <p class="mb-2">{{#i18n}}home.live.intro{{/i18n}}</p>
+
+        <p class="lead mb-3">{{#i18n}}talks.content{{/i18n}}</p>
+
+
+
+        <div class="mxt-wrapper--intrinsic">
+            <iframe
+                    src="https://player.twitch.tv/?channel=mixitconf&parent=mixitconf.org"
+                    height="200"
+                    width="1000"
+                    allowfullscreen>
+            </iframe>
+        </div>
+
+    </div>
+{{/hasMixitOnAirOnHomePage}}
+{{^hasMixitOnAirOnHomePage}}
 <div class="container mxt-wrapper--home-content">
     <p class="lead">{{#i18n}}home.intro.title{{/i18n}}</p>
     <p>{{#i18n}}home.lottery.description{{/i18n}}</p>
@@ -38,6 +90,7 @@
 
     <h2 class="subheader text-center pt-5">{{#i18n}}talks.title{{/i18n}}</h2>
     <p class="lead">{{#i18n}}talks.content{{/i18n}}</p>
+
 
     <div class="mxt-tracks row">
         <div class="col-12 col-md-6 col-lg-4 row pt-2">
@@ -93,6 +146,7 @@
     </div>
 
 </div>
+{{/hasMixitOnAirOnHomePage}}
 
 <div class="container mxt-wrapper--home-content mt-5" style="background-color: #e6e6e6;">
     <h2 class="subheader pt-2 text-center">{{#i18n}}home.2023.previous{{/i18n}}</h2>

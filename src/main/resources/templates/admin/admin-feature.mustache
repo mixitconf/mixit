@@ -12,7 +12,7 @@
         {{#features}}
             <div class="row">
             <div class="form-check form-switch" style="width: max-content;">
-                <input class="form-check-input" type="checkbox" role="switch" id="{{feature}}" name="feat_{{id}}"
+                <input class="form-check-input" type="checkbox" role="switch" id="{{feature}}" name="{{feature}}"
                        onclick="return confirm('{{#i18n}}admin.feature.confirm{{/i18n}}') ? document.getElementById('features').submit() : false"
                        {{#active}}checked{{/active}}>
                 <label class="form-check-label" for="_agenda">{{feature}}</label>

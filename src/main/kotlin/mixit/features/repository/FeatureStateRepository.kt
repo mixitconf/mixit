@@ -13,6 +13,7 @@ import org.springframework.data.mongodb.core.query.Criteria.where
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.data.mongodb.core.query.isEqualTo
 import org.springframework.stereotype.Repository
+import reactor.core.publisher.Mono
 
 @Repository
 class FeatureStateRepository(private val template: ReactiveMongoTemplate) {
@@ -29,10 +30,12 @@ class FeatureStateRepository(private val template: ReactiveMongoTemplate) {
     suspend fun findOne(id: String): FeatureState =
         template.findById<FeatureState>(id).awaitSingle()
 
-    suspend fun findOneByType(feature: Feature): FeatureState =
+    fun findFeature(feature: Feature): Mono<FeatureState> =
         template
             .findOne<FeatureState>(Query(Criteria.where("feature").isEqualTo(feature.name)))
-            .awaitSingle()
+
+    suspend fun findOneByType(feature: Feature): FeatureState =
+        findFeature(feature).awaitSingle()
 
     fun findAll() = template.findAll<FeatureState>()
 
