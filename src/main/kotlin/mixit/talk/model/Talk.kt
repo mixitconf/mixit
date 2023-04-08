@@ -36,6 +36,7 @@ enum class TalkFormat(val duration: Int) {
     KEYNOTE_SURPRISE(25),
     CLOSING_SESSION(25),
     INTERVIEW(45),
+    ON_AIR(30),
 }
 
 @Suppress("UNUSED_PARAMETER")
