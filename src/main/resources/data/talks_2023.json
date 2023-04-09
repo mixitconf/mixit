@@ -20,7 +20,7 @@
         "id": "641cbe1dbc829903f2e9941d"
     },
     {
-        "format": "KEYNOTE",
+        "format": "ON_AIR",
         "event": "2023",
         "title": "Keynote team",
         "summary": "Retransmission de la keynote de l'\u00e9quipe",
@@ -60,7 +60,7 @@
         "id": "6405dd3d34a9b85777797fe7"
     },
     {
-        "format": "KEYNOTE",
+        "format": "ON_AIR",
         "event": "2023",
         "title": "Capitalisme de surveillance et rapt de l\u2019\u00e9criture num\u00e9rique",
         "summary": "Retransmission de la keynote \"Capitalisme de surveillance et rapt de l\u2019\u00e9criture num\u00e9rique\"",
@@ -80,7 +80,7 @@
         "id": "642dd54a3c378a36d10327d5"
     },
     {
-        "format": "INTERVIEW",
+        "format": "ON_AIR",
         "event": "2023",
         "title": "Welcome to MiXiT on Air !",
         "summary": "Ouverture, Accueil et bienvenue",
@@ -102,7 +102,7 @@
         "id": "642dd24d3c378a36d10327d0"
     },
     {
-        "format": "INTERVIEW",
+        "format": "ON_AIR",
         "event": "2023",
         "title": "Interview Eric Guichard",
         "summary": "Interview d'Eric Guichard sur sa keynote \"Capitalisme de surveillance et rapt de l\u2019\u00e9criture num\u00e9rique\" - https://mixitconf.org/2023/capitalisme-de-surveillance-et-rapt-de-l-ecriture-numerique",
@@ -266,7 +266,7 @@
         "id": "63ebb05fe87fb83515ebcfbf"
     },
     {
-        "format": "INTERVIEW",
+        "format": "ON_AIR",
         "event": "2023",
         "title": "On refait la conf, sp\u00e9ciale Team !",
         "summary": "Interview de Sofia Lescano (https://mixitconf.org/2023/faire-grandir-une-equipe-technique-autonomie-vs-anarchie)",
@@ -367,7 +367,7 @@
         "id": "63ed511a561dc311fc7da366"
     },
     {
-        "format": "INTERVIEW",
+        "format": "ON_AIR",
         "event": "2023",
         "title": "Papotage avec les sponsors !",
         "summary": "C'est le moment de vous pr\u00e9senter nos sponsors !",
@@ -388,7 +388,7 @@
         "id": "642dd3db3c378a36d10327d2"
     },
     {
-        "format": "INTERVIEW",
+        "format": "ON_AIR",
         "event": "2023",
         "title": "Inside MiXiT : la Mixette",
         "summary": "Pour tout savoir sur la monnaie de MIXIT : la Mixette et les associations que nous soutenons pendant les 2 jours",
@@ -509,7 +509,7 @@
         "id": "6405dd8934a9b85777797fe8"
     },
     {
-        "format": "KEYNOTE",
+        "format": "ON_AIR",
         "event": "2023",
         "title": "Pour une \u00e9cologie d\u00e9coloniale du num\u00e9rique",
         "summary": "Retransmission de la keynote \"Pour une \u00e9cologie d\u00e9coloniale du num\u00e9rique\"",
@@ -529,7 +529,7 @@
         "id": "642dd6d13c378a36d10327d7"
     },
     {
-        "format": "INTERVIEW",
+        "format": "ON_AIR",
         "event": "2023",
         "title": "Interview de David Maenda Kithoko",
         "summary": "Interview de David Maenda Kithoko sur sa keynote \"Pour une \u00e9cologie d\u00e9coloniale du num\u00e9rique\"",
@@ -695,7 +695,7 @@
         "id": "63ebb05fe87fb83515ebcfce"
     },
     {
-        "format": "INTERVIEW",
+        "format": "ON_AIR",
         "event": "2023",
         "title": "Inside MIXIT : MIXTEEN",
         "summary": "Pour tout savoir sur Mixteen, l\u2019association qui apprend le code aux enfants, dans la joie, la bonne humeur et pleins de robots",
@@ -801,7 +801,7 @@
         "id": "64184b1a2a24863cd072b4ab"
     },
     {
-        "format": "INTERVIEW",
+        "format": "ON_AIR",
         "event": "2023",
         "title": "On refait la conf, sp\u00e9ciale Aliens !",
         "summary": "Interview de Nathalie Ayi (https://mixitconf.org/2023/changer-le-visage-des-mathematiques-une-nouvelle-image-pour-la-recherche)",
@@ -901,7 +901,7 @@
         "id": "63f5dc52f4ed9b616de005fe"
     },
     {
-        "format": "INTERVIEW",
+        "format": "ON_AIR",
         "event": "2023",
         "title": "On refait la conf, sp\u00e9ciale Tech",
         "summary": "Compilation native avec GraalVM, Spring Framework 6",
@@ -943,7 +943,7 @@
         "id": "6405ddd934a9b85777797fe9"
     },
     {
-        "format": "KEYNOTE",
+        "format": "ON_AIR",
         "event": "2023",
         "title": "Keynote de cl\u00f4ture",
         "summary": "Keynote de cl\u00f4ture",
@@ -963,7 +963,7 @@
         "id": "642dc2eaaa73a1714e34df02"
     },
     {
-        "format": "KEYNOTE",
+        "format": "ON_AIR",
         "event": "2023",
         "title": "Keynote Team",
         "summary": "Keynote de l'\u00e9quipe",
@@ -983,7 +983,7 @@
         "id": "641cbeaebc829903f2e9941e"
     },
     {
-        "format": "INTERVIEW",
+        "format": "ON_AIR",
         "event": "2023",
         "title": "Keynote Team",
         "summary": "Retransmission de la keynote de l'\u00e9quipe",
@@ -1023,7 +1023,7 @@
         "id": "63ebb05fe87fb83515ebcfd6"
     },
     {
-        "format": "KEYNOTE",
+        "format": "ON_AIR",
         "event": "2023",
         "title": "Why is being different actually a good thing? \u2013 My Way Into Tech",
         "summary": "Retransmission de la keynote \"Why is being different actually a good thing? \u2013 My Way Into Tech\"",
@@ -1043,7 +1043,7 @@
         "id": "642dda223c378a36d10327dc"
     },
     {
-        "format": "INTERVIEW",
+        "format": "ON_AIR",
         "event": "2023",
         "title": "Welcome to MiXiT on Air! ",
         "summary": "Ouverture, accueil et bienvenue",
@@ -1065,7 +1065,7 @@
         "id": "642ddaca3c378a36d10327de"
     },
     {
-        "format": "INTERVIEW",
+        "format": "ON_AIR",
         "event": "2023",
         "title": "Interview Feli Bernutz",
         "summary": "Interview de Feli Bernutz sur sa keynote \"Why is being different actually a good thing? \u2013 My Way Into Tech\"",
@@ -1231,10 +1231,10 @@
         "id": "63ebb05fe87fb83515ebcfdd"
     },
     {
-        "format": "INTERVIEW",
+        "format": "ON_AIR",
         "event": "2023",
-        "title": "TBA",
-        "summary": "TBA",
+        "title": "On refait la conf, sp\u00e9ciale Aliens / Ethics",
+        "summary": "Une interview exclusive de C\u00e9cilia Bossard (https://mixitconf.org/2023/developpement-durable-et-si-on-developpait-enfin-des-logiciels-bons-pour-les-gens-et-la-planete) et Alex Comona (https://mixitconf.org/2023/slow-business-travailler-moins-mieux) ! ",
         "speakerIds": [
             "greg"
         ],
@@ -1247,7 +1247,7 @@
         "start": "2023-04-14T11:30:00",
         "end": "2023-04-14T12:15:00",
         "photoUrls": [],
-        "slug": "tba",
+        "slug": "on-refait-la-conf-speciale-aliens-ethics",
         "id": "642ddc393c378a36d10327e0"
     },
     {
@@ -1331,7 +1331,7 @@
         "id": "63ebb05fe87fb83515ebcfe1"
     },
     {
-        "format": "INTERVIEW",
+        "format": "ON_AIR",
         "event": "2023",
         "title": "Papotage avec les sponsors !",
         "summary": "C'est le moment de vous pr\u00e9senter nos sponsors !",
@@ -1352,7 +1352,7 @@
         "id": "642ddcff3c378a36d10327e1"
     },
     {
-        "format": "INTERVIEW",
+        "format": "ON_AIR",
         "event": "2023",
         "title": "On d\u00e9briefe avec les participant\u00b7e\u00b7s",
         "summary": "On d\u00e9briefe avec les participant\u00b7e\u00b7s",
@@ -1473,7 +1473,7 @@
         "id": "6405de4134a9b85777797fea"
     },
     {
-        "format": "KEYNOTE",
+        "format": "ON_AIR",
         "event": "2023",
         "title": "Comment le num\u00e9rique limite les libert\u00e9s des femmes et des minorit\u00e9s",
         "summary": "Retransmission de la keynote \"Comment le num\u00e9rique limite les libert\u00e9s des femmes et des minorit\u00e9s\"",
@@ -1493,7 +1493,7 @@
         "id": "642dddd63c378a36d10327e3"
     },
     {
-        "format": "INTERVIEW",
+        "format": "ON_AIR",
         "event": "2023",
         "title": "Interview Mathilde Saliou",
         "summary": "Interview de Mathilde Saliou sur sa keynote \"Comment le num\u00e9rique limite les libert\u00e9s des femmes et des minorit\u00e9s\"",
@@ -1598,10 +1598,10 @@
         "id": "63ebb05fe87fb83515ebcfe9"
     },
     {
-        "format": "INTERVIEW",
+        "format": "ON_AIR",
         "event": "2023",
-        "title": "TBA",
-        "summary": "TBA",
+        "title": "On refait la conf, sp\u00e9ciale Team et Tremplin !",
+        "summary": "Avec en interview Aur\u00e9lie Le Guillou (https://mixitconf.org/2023/poser-les-bonnes-questions-au-bon-moment-pour-accelerer-son-developpement-produit-), L\u00e9a Coston (https://mixitconf.org/2023/comment-les-reconverties-peuvent-inspirer-et-enrichir-vos-equipes-) et M\u00e9lanie Jarrar (https://mixitconf.org/2023/reflechir-avant-de-cliquer-comprendre-les-risques-lies-a-vos-donnees-personnelles-en-ligne)",
         "speakerIds": [
             "greg",
             "romain"
@@ -1615,7 +1615,7 @@
         "start": "2023-04-14T15:15:00",
         "end": "2023-04-14T15:45:00",
         "photoUrls": [],
-        "slug": "tba",
+        "slug": "on-refait-la-conf-speciale-team-et-tremplin-",
         "id": "642dde9c3c378a36d10327e5"
     },
     {
@@ -1699,7 +1699,7 @@
         "id": "63ebb05fe87fb83515ebcfed"
     },
     {
-        "format": "INTERVIEW",
+        "format": "ON_AIR",
         "event": "2023",
         "title": "On refait la conf, sp\u00e9cial Tech",
         "summary": "Parlons un peu d\u00e9veloppement front et mobile !",
@@ -1744,7 +1744,7 @@
         "id": "6405de8434a9b85777797feb"
     },
     {
-        "format": "KEYNOTE",
+        "format": "ON_AIR",
         "event": "2023",
         "title": "Math\u00e9matiques & Magie",
         "summary": "Retransmission de la keynote \"Math\u00e9matiques & Magie\"",
