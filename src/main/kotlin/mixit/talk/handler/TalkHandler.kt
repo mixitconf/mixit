@@ -128,7 +128,18 @@ class TalkHandler(
         val currentUserEmail = config.req.currentNonEncryptedUserEmail()
         val talks = filterTalkByFormat(
             loadTalkAndFavorites(config, currentUserEmail).let { talks ->
-                if (config.template == Media) talks.filter { it.video != null } else talks
+                if (config.template == Media){
+                    talks.filter { it.video != null }
+                } else if (config.template == FeedbackWall){
+                    talks
+                        .filterNot { it.format == TalkFormat.INTERVIEW  }
+                        .filterNot { it.format == TalkFormat.ON_AIR }
+                        .filterNot { it.topic == "onair" }
+                        .filterNot { it.title.contains("Keynote team") }
+                        .toList()
+                }
+                else talks
+
             }, config.viewWorkshop
         )
         val event = eventService.findByYear(config.year)

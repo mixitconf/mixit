@@ -23,139 +23,136 @@
 </head>
 <body>
 <div class="container-fluid">
-    <footer></footer>
-    {{#talks.entrySet}}
-        {{#value}}
-            <div class="mxt-accordion-talk-line row">
-                <div class="text-center">
-                    <img src="/images/svg/mxt-icon--inversed.svg" alt="MiXiT logo" style="max-width:13em">
-                </div>
-                <p>&nbsp;</p>
-                <h1 style="color: #2c233d"><strong>{{title}}</strong></h1>
-                <div>
-                    {{#topic}}
-                        <div class="mxt-text--cat mxt-text--cat-{{topic}}">
-                            <img src="/images/svg/mxt-icon--{{topic}}.svg" class="mxt-icon--cat mxt-icon--cat__talks"
-                                 alt="{{#i18n}}home.topics.{{topic}}.title{{/i18n}}"/>
-                            <span>{{#i18n}}home.topics.{{topic}}.title{{/i18n}}</span>
-                        </div>
-                    {{/topic}}
-                    <div class="d-inline">
-                            {{#date}}{{date}}{{/date}}</small></div>
-                    / <strong>{{#start}}{{start}} - {{end}}{{/start}}</strong>
-                </div>
-
-                <h2 class="mxt-text--talktitle">
-
-                    {{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
-                    <span class="mxt-text--cat-format">#{{#i18n}}talk.format.{{format}}{{/i18n}}</span>
-                </h2>
-
-
-                <ul class="mxt-wrapper-list-inline m-0" style="padding-left: 1em">
-                    {{#speakers}}
-                        <li>
-                        <span class="mxt-text--cat mxt-text--cat-speaker"
-                              style="background-color: #e6e6e6; padding: 0.3em;color: #2c233d">{{firstname}}
-                            &nbsp;{{lastname}}</span>
-                        </li>
-                    {{/speakers}}
-                </ul>
-                <div class="col-sm-7 col-md-9 col-lg-8">
-                    <p class="mxt-text--cat-room">
-                        {{#i18n}}{{room}}{{/i18n}}
-                    </p>
-                </div>
-                <div>{{#markdown}}{{summary}}{{/markdown}}</div>
-
-                <table style="padding-left: 1em" class="table table-bordered mb-5">
-                    <tbody>
-                    <tr>
-                        <td width="25%" class="text-center" style="background-color: #ccc">
-                            &nbsp;<br>&nbsp;<br>&nbsp;<br>
-                            <strong>I learnt something</strong><br>
-                            J'ai appris quelque chose<br>
-                            &nbsp;<br>&nbsp;<br>&nbsp;<br>
-                        </td>
-                        <td width="25%" class="text-center">
-                            &nbsp;<br>&nbsp;<br>&nbsp;<br>
-                            <strong>Too fast</strong><br>
-                            Trop rapide<br>
-                            &nbsp;<br>&nbsp;<br>&nbsp;<br>
-                        </td>
-                        <td width="25%" class="text-center" style="background-color: #ccc">
-                            &nbsp;<br>&nbsp;<br>&nbsp;<br>
-                            <strong>Very interesting</strong><br>
-                            Très interessant<br>
-                            &nbsp;<br>&nbsp;<br>&nbsp;<br>
-                        </td>
-                        <td width="25%" class="text-center">
-                            &nbsp;<br>&nbsp;<br>&nbsp;<br>
-                            <strong>Could be more explored</strong><br>
-                            Pas assez creusé<br>
-                            &nbsp;<br>&nbsp;<br>&nbsp;<br>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="25%" class="text-center">
-                            &nbsp;<br>&nbsp;<br>&nbsp;<br>
-                            <strong>Too slow</strong><br>
-                            Trop lent<br>
-                            &nbsp;<br>&nbsp;<br>&nbsp;<br>
-                        </td>
-                        <td width="25%" class="text-center" style="background-color: #ccc">
-                            &nbsp;<br>&nbsp;<br>&nbsp;<br>
-                            <strong>I loved live coding</strong><br>
-                            J'ai aimé le live coding<br>
-                            &nbsp;<br>&nbsp;<br>&nbsp;<br>
-                        </td>
-                        <td width="25%" class="text-center">
-                            &nbsp;<br>&nbsp;<br>&nbsp;<br>
-                            <strong>Unclear</strong><br>
-                            Pas clair<br>
-                            &nbsp;<br>&nbsp;<br>&nbsp;<br>
-                        </td>
-                        <td width="25%" class="text-center" style="background-color: #ccc">
-                            &nbsp;<br>&nbsp;<br>&nbsp;<br>
-                            <strong>Fun</strong><br>
-                            Fun<br>
-                            &nbsp;<br>&nbsp;<br>&nbsp;<br>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="25%" class="text-center" style="background-color: #ccc">
-                            &nbsp;<br>&nbsp;<br>&nbsp;<br>
-                            <strong>Lacks demo</strong><br>
-                            Ca manque de démo<br>
-                            &nbsp;<br>&nbsp;<br>&nbsp;<br>
-                        </td>
-                        <td width="25%" class="text-center">
-                            &nbsp;<br>&nbsp;<br>&nbsp;<br>
-                            <strong>Too complicated</strong><br>
-                            Trop compliqué<br>
-                            &nbsp;<br>&nbsp;<br>&nbsp;<br>
-                        </td>
-                        <td width="25%" class="text-center" style="background-color: #ccc">
-                            &nbsp;<br>&nbsp;<br>&nbsp;<br>
-                            <strong>Very good talk</strong><br>
-                            Très bon talk<br>
-                            &nbsp;<br>&nbsp;<br>&nbsp;<br>
-                        </td>
-                        <td width="25%" class="text-center">
-                            &nbsp;<br>&nbsp;<br>&nbsp;<br>
-                            <strong>Understood nothing</strong><br>
-                            Je n'ai rien compris<br>
-                            &nbsp;<br>&nbsp;<br>&nbsp;<br>
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-
-
+    {{#talks}}
+        <div class="mxt-accordion-talk-line row">
+            <div class="text-center">
+                <img src="/images/svg/mxt-icon--inversed.svg" alt="MiXiT logo" style="max-width:13em">
             </div>
-            <footer></footer>
-        {{/value}}
-    {{/talks.entrySet}}
+            <p>&nbsp;</p>
+            <h1 style="color: #2c233d"><strong>{{title}}</strong></h1>
+            <div>
+                {{#topic}}
+                    <div class="mxt-text--cat mxt-text--cat-{{topic}}">
+                        <img src="/images/svg/mxt-icon--{{topic}}.svg" class="mxt-icon--cat mxt-icon--cat__talks"
+                             alt="{{#i18n}}home.topics.{{topic}}.title{{/i18n}}"/>
+                        <span>{{#i18n}}home.topics.{{topic}}.title{{/i18n}}</span>
+                    </div>
+                {{/topic}}
+                <div class="d-inline">
+                        {{#date}}{{date}}{{/date}}</small></div>
+                / <strong>{{#start}}{{start}} - {{end}}{{/start}}</strong>
+            </div>
+
+            <h2 class="mxt-text--talktitle">
+
+                {{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
+                <span class="mxt-text--cat-format">#{{#i18n}}talk.format.{{format}}{{/i18n}}</span>
+            </h2>
+
+
+            <ul class="mxt-wrapper-list-inline m-0" style="padding-left: 1em">
+                {{#speakers}}
+                    <li>
+                    <span class="mxt-text--cat mxt-text--cat-speaker"
+                          style="background-color: #e6e6e6; padding: 0.3em;color: #2c233d">{{firstname}}
+                        &nbsp;{{lastname}}</span>
+                    </li>
+                {{/speakers}}
+            </ul>
+            <div class="col-sm-7 col-md-9 col-lg-8">
+                <p class="mxt-text--cat-room">
+                    {{#i18n}}{{room}}{{/i18n}}
+                </p>
+            </div>
+            <div>{{#markdown}}{{summary}}{{/markdown}}</div>
+
+            <table style="padding-left: 1em" class="table table-bordered mb-5">
+                <tbody>
+                <tr>
+                    <td width="25%" class="text-center" style="background-color: #ccc">
+                        &nbsp;<br>&nbsp;<br>&nbsp;<br>
+                        <strong>I learnt something</strong><br>
+                        J'ai appris quelque chose<br>
+                        &nbsp;<br>&nbsp;<br>&nbsp;<br>
+                    </td>
+                    <td width="25%" class="text-center">
+                        &nbsp;<br>&nbsp;<br>&nbsp;<br>
+                        <strong>Too fast</strong><br>
+                        Trop rapide<br>
+                        &nbsp;<br>&nbsp;<br>&nbsp;<br>
+                    </td>
+                    <td width="25%" class="text-center" style="background-color: #ccc">
+                        &nbsp;<br>&nbsp;<br>&nbsp;<br>
+                        <strong>Very interesting</strong><br>
+                        Très interessant<br>
+                        &nbsp;<br>&nbsp;<br>&nbsp;<br>
+                    </td>
+                    <td width="25%" class="text-center">
+                        &nbsp;<br>&nbsp;<br>&nbsp;<br>
+                        <strong>Could be more explored</strong><br>
+                        Pas assez creusé<br>
+                        &nbsp;<br>&nbsp;<br>&nbsp;<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="25%" class="text-center">
+                        &nbsp;<br>&nbsp;<br>&nbsp;<br>
+                        <strong>Too slow</strong><br>
+                        Trop lent<br>
+                        &nbsp;<br>&nbsp;<br>&nbsp;<br>
+                    </td>
+                    <td width="25%" class="text-center" style="background-color: #ccc">
+                        &nbsp;<br>&nbsp;<br>&nbsp;<br>
+                        <strong>I loved live coding</strong><br>
+                        J'ai aimé le live coding<br>
+                        &nbsp;<br>&nbsp;<br>&nbsp;<br>
+                    </td>
+                    <td width="25%" class="text-center">
+                        &nbsp;<br>&nbsp;<br>&nbsp;<br>
+                        <strong>Unclear</strong><br>
+                        Pas clair<br>
+                        &nbsp;<br>&nbsp;<br>&nbsp;<br>
+                    </td>
+                    <td width="25%" class="text-center" style="background-color: #ccc">
+                        &nbsp;<br>&nbsp;<br>&nbsp;<br>
+                        <strong>Fun</strong><br>
+                        Fun<br>
+                        &nbsp;<br>&nbsp;<br>&nbsp;<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="25%" class="text-center" style="background-color: #ccc">
+                        &nbsp;<br>&nbsp;<br>&nbsp;<br>
+                        <strong>Lacks demo</strong><br>
+                        Ca manque de démo<br>
+                        &nbsp;<br>&nbsp;<br>&nbsp;<br>
+                    </td>
+                    <td width="25%" class="text-center">
+                        &nbsp;<br>&nbsp;<br>&nbsp;<br>
+                        <strong>Too complicated</strong><br>
+                        Trop compliqué<br>
+                        &nbsp;<br>&nbsp;<br>&nbsp;<br>
+                    </td>
+                    <td width="25%" class="text-center" style="background-color: #ccc">
+                        &nbsp;<br>&nbsp;<br>&nbsp;<br>
+                        <strong>Very good talk</strong><br>
+                        Très bon talk<br>
+                        &nbsp;<br>&nbsp;<br>&nbsp;<br>
+                    </td>
+                    <td width="25%" class="text-center">
+                        &nbsp;<br>&nbsp;<br>&nbsp;<br>
+                        <strong>Understood nothing</strong><br>
+                        Je n'ai rien compris<br>
+                        &nbsp;<br>&nbsp;<br>&nbsp;<br>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+        <footer></footer>
+    {{/talks}}
 </div>
 </body>
 </html>
