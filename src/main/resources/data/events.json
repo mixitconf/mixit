@@ -1932,9 +1932,6 @@
                 "volunteerLogin": "sylvia.cohen"
             },
             {
-                "volunteerLogin": "damien.mailhebiau"
-            },
-            {
                 "volunteerLogin": "k.brachet"
             },
             {
@@ -1987,7 +1984,7 @@
         ],
         "photoUrls": [],
         "videoUrl": null,
-        "schedulingFileUrl": "/pdf/planning2023_v1.pdf",
+        "schedulingFileUrl": "/pdf/planning2023_v2.pdf",
         "year": 2023
     }
 ]
