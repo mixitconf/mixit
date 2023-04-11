@@ -225,6 +225,8 @@ val parser: Parser by lazy { Parser.builder().extensions(listOf(AutolinkExtensio
 val renderer: HtmlRenderer by lazy { HtmlRenderer.builder().build() }
 
 fun String.toHTML(): String = if (this.isEmpty()) "" else renderer.render(parser.parse(this))
+    .replaceFirst("<p>", "<div>")
+    .replaceAfterLast("</p>", "</div>")
 
 private fun cipher(key: String, initVector: String, mode: Int): Cipher {
     val iv = IvParameterSpec(initVector.toByteArray(charset("UTF-8")))

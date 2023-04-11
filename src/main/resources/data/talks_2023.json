@@ -545,7 +545,7 @@
         "video": null,
         "room": "TWITCH",
         "start": "2023-04-13T14:45:00",
-        "end": "2023-04-13T15:30:00",
+        "end": "2023-04-13T15:15:00",
         "photoUrls": [],
         "slug": "interview-de-david-maenda-kithoko",
         "id": "642dd7613c378a36d10327d8"
@@ -883,22 +883,23 @@
     {
         "format": "TALK",
         "event": "2023",
-        "title": "Autodidaxie, c'est grave docteur ?",
-        "summary": "\u00c0 votre avis, combien de d\u00e9veloppeurs souffrent d'autodidaxie ? Quoiqu'il en soit, soignons les, une bonne fois pour toute !\r\n\r\nLors d'un groupe de parole*, anim\u00e9 par un autodidacte compulsif, nous ferons le point sur ce paradigme de l'apprentissage et les cons\u00e9quences que peuvent avoir cette maladie dans la vie professionnelle des patients.\r\n\r\n*Consultation collective, sans rendez-vous, sans m\u00e9decin, qui ressemble \u00e9trangement \u00e0 une conf\u00e9rence.",
+        "title": "Comment aborder le design dans une d\u00e9marche d\u2019\u00e9co-conception ?",
+        "summary": "Les chiffres alarmants de l\u2019impact du num\u00e9rique sur le climat sont clairs. Il est d\u00e9sormais temps de comprendre comment passer du constat \u00e0 la mise en pratique. Avec cette conf\u00e9rence nous voulons aider les designers \u00e0 concevoir des interfaces utiles et mesur\u00e9es en regard de l'impact climatique du num\u00e9rique.\r\nComment nous, designers et concepteurs pouvons jouer un r\u00f4le clef d\u00e8s les fondations du projets, pour \u00e9viter de produire des services web ob\u00e8ses et disproportionn\u00e9s ?\r\nTous deux designers \u00e0 l\u2019Agence LunaWeb, nous cherchons en permanence \u00e0 revoir nos fa\u00e7ons de concevoir un web \u00e0 la fois efficace et raisonn\u00e9.\r\n\u00c0 l\u2019issue de ce talk, vous repartirez avec des leviers pour convaincre, mais surtout des m\u00e9thodes et outils simples, applicables sur le champ pour vos futurs projets \u00e9co-con\u00e7us, issues de nos recherches et \u00e9prouv\u00e9es sur nos projets r\u00e9cents.",
         "speakerIds": [
-            "clement.avenel"
+            "alizee.rault",
+            "damien.legendre"
         ],
         "language": "FRENCH",
-        "addedAt": "2023-02-22T09:10:23.062",
+        "addedAt": "2023-02-13T20:50:31.221",
         "description": "",
-        "topic": "aliens",
+        "topic": "design",
         "video": null,
         "room": "ROOM1",
         "start": "2023-04-13T17:00:00",
         "end": "2023-04-13T17:50:00",
         "photoUrls": [],
-        "slug": "autodidaxie-c-est-grave-docteur-",
-        "id": "63f5dc52f4ed9b616de005fe"
+        "slug": "comment-aborder-le-design-dans-une-demarche-d-eco-conception-",
+        "id": "63ebb05fe87fb83515ebcfe7"
     },
     {
         "format": "ON_AIR",
@@ -1538,27 +1539,6 @@
     {
         "format": "TALK",
         "event": "2023",
-        "title": "Comment aborder le design dans une d\u00e9marche d\u2019\u00e9co-conception ?",
-        "summary": "Les chiffres alarmants de l\u2019impact du num\u00e9rique sur le climat sont clairs. Il est d\u00e9sormais temps de comprendre comment passer du constat \u00e0 la mise en pratique. Avec cette conf\u00e9rence nous voulons aider les designers \u00e0 concevoir des interfaces utiles et mesur\u00e9es en regard de l'impact climatique du num\u00e9rique.\nComment nous, designers et concepteurs pouvons jouer un r\u00f4le clef d\u00e8s les fondations du projets, pour \u00e9viter de produire des services web ob\u00e8ses et disproportionn\u00e9s ?\nTous deux designers \u00e0 l\u2019Agence LunaWeb, nous cherchons en permanence \u00e0 revoir nos fa\u00e7ons de concevoir un web \u00e0 la fois efficace et raisonn\u00e9.\n\u00c0 l\u2019issue de ce talk, vous repartirez avec des leviers pour convaincre, mais surtout des m\u00e9thodes et outils simples, applicables sur le champ pour vos futurs projets \u00e9co-con\u00e7us, issues de nos recherches et \u00e9prouv\u00e9es sur nos projets r\u00e9cents.",
-        "speakerIds": [
-            "alizee.rault",
-            "damien.legendre"
-        ],
-        "language": "FRENCH",
-        "addedAt": "2023-02-13T20:50:31.221",
-        "description": "",
-        "topic": "design",
-        "video": null,
-        "room": "ROOM2",
-        "start": "2023-04-14T14:50:00",
-        "end": "2023-04-14T15:40:00",
-        "photoUrls": [],
-        "slug": "comment-aborder-le-design-dans-une-demarche-d-eco-conception-",
-        "id": "63ebb05fe87fb83515ebcfe7"
-    },
-    {
-        "format": "TALK",
-        "event": "2023",
         "title": "D\u00e9veloppement durable : et si on d\u00e9veloppait enfin des logiciels bons pour les gens et la plan\u00e8te",
         "summary": "People, Planet, Profit : les 3 piliers du d\u00e9veloppement durable peuvent \u00e9galement s'appliquer au d\u00e9veloppement logiciel.\r\nComment faire rimer ces trois mots avec nos pratiques ?\r\nNous vous proposons un tour d'horizon avec des exemples concrets, de la conception UX au d\u00e9ploiement sur les serveurs, de bonnes pratiques d'\u00e9co-conception et d'accessibilit\u00e9, et comment concilier toutes ces techniques avec un budget restreint.",
         "speakerIds": [
@@ -1598,6 +1578,26 @@
         "id": "63ebb05fe87fb83515ebcfe9"
     },
     {
+        "format": "TALK",
+        "event": "2023",
+        "title": "Autodidaxie, c'est grave docteur ?",
+        "summary": "\u00c0 votre avis, combien de d\u00e9veloppeurs souffrent d'autodidaxie ? Quoiqu'il en soit, soignons les, une bonne fois pour toute !\r\n\r\nLors d'un groupe de parole*, anim\u00e9 par un autodidacte compulsif, nous ferons le point sur ce paradigme de l'apprentissage et les cons\u00e9quences que peuvent avoir cette maladie dans la vie professionnelle des patients.\r\n\r\n*Consultation collective, sans rendez-vous, sans m\u00e9decin, qui ressemble \u00e9trangement \u00e0 une conf\u00e9rence.",
+        "speakerIds": [
+            "clement.avenel"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-02-22T09:10:23.062",
+        "description": "",
+        "topic": "aliens",
+        "video": null,
+        "room": "ROOM2",
+        "start": "2023-04-14T14:50:00",
+        "end": "2023-04-14T15:40:00",
+        "photoUrls": [],
+        "slug": "autodidaxie-c-est-grave-docteur-",
+        "id": "63f5dc52f4ed9b616de005fe"
+    },
+    {
         "format": "ON_AIR",
         "event": "2023",
         "title": "On refait la conf, sp\u00e9ciale Team et Tremplin !",
@@ -1612,8 +1612,8 @@
         "topic": "onair",
         "video": null,
         "room": "TWITCH",
-        "start": "2023-04-14T15:15:00",
-        "end": "2023-04-14T15:45:00",
+        "start": "2023-04-14T15:30:00",
+        "end": "2023-04-14T16:00:00",
         "photoUrls": [],
         "slug": "on-refait-la-conf-speciale-team-et-tremplin-",
         "id": "642dde9c3c378a36d10327e5"
@@ -1717,8 +1717,8 @@
         "topic": "onair",
         "video": null,
         "room": "TWITCH",
-        "start": "2023-04-14T16:00:00",
-        "end": "2023-04-14T16:35:00",
+        "start": "2023-04-14T16:15:00",
+        "end": "2023-04-14T16:45:00",
         "photoUrls": [],
         "slug": "on-refait-la-conf-special-tech",
         "id": "642ddf3c3c378a36d10327e6"
