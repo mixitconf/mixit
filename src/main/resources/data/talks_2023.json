@@ -471,13 +471,13 @@
     {
         "format": "LIGHTNING_TALK",
         "event": "2023",
-        "title": "R\u00e9fl\u00e9chir avant de cliquer : comprendre les risques li\u00e9s \u00e0 vos donn\u00e9es personnelles en ligne",
-        "summary": "Vous n\u2019avez rien \u00e0 cacher n\u2019est-ce pas ? 1.134 trillion de megabyte, c\u2019est le volume de donn\u00e9es cr\u00e9\u00e9 chaque jour en 2021 dans le monde. Les chiffres sont tellement \u00e9normes que je ne suis pas certaine de savoir les \u00e9crire au format num\u00e9rique sans faire une recherche sur internet. Dans ce talk, je vais vous expliquer pourquoi il est important de vous soucier des donn\u00e9es personnelles que vous partagez sur internet et quels sont les risques associ\u00e9s \u00e0 celles-ci. On reviendra sur le scandale de Cambridge Anatytica, les risques li\u00e9s aux r\u00e9seaux sociaux, et les conseils que l\u2019on peut mettre en \u0153uvre individuellement pour prot\u00e9ger sa vie priv\u00e9e en ligne.",
+        "title": "Comment les reconverties peuvent inspirer et enrichir vos \u00e9quipes.",
+        "summary": "Ing\u00e9nieure, vendeuse de popcorn, prof de maths puis d\u00e9veloppeuse, je suis arriv\u00e9e dans \u201cla tech\u201d en 2020 par une formation de reconversion courte. Apr\u00e8s de nombreuses p\u00e9rip\u00e9ties, ma reconversion est aujourd\u2019hui une r\u00e9ussite totale. Pour mon \u00e9quipe et pour moi.\r\nInt\u00e9grer un profil reconverti apporte une diversit\u00e9 de parcours qui vous assure d\u2019enrichir vos \u00e9quipes mais il est facile de passer \u00e0 c\u00f4t\u00e9. Le processus d\u2019accompagnement est diff\u00e9rent de celui d\u2019un junior sorti d\u2019\u00e9cole, et tout le monde sera gagnant si vous r\u00e9ussissez ce d\u00e9fi.\r\nA travers mon histoire j\u2019aimerais inspirer des personnes en reconversion \u00e0 prendre leur place, mais aussi donner des cl\u00e9s d\u2019\u00e9coute aux \u00e9quipes qui les accueillent.\r\nVenez d\u00e9couvrir comment je suis pass\u00e9e d\u2019apprenante \u00e0 contributrice et r\u00e9f\u00e9rente en trois ans et autant de jobs.",
         "speakerIds": [
-            "m.jarrar"
+            "lea.coston"
         ],
         "language": "FRENCH",
-        "addedAt": "2023-02-13T20:50:31.213",
+        "addedAt": "2023-02-13T20:50:31.22",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -485,8 +485,8 @@
         "start": "2023-04-13T13:20:00",
         "end": "2023-04-13T13:40:00",
         "photoUrls": [],
-        "slug": "reflechir-avant-de-cliquer-comprendre-les-risques-lies-a-vos-donnees-personnelles-en-ligne",
-        "id": "63ebb05fe87fb83515ebcfc7"
+        "slug": "comment-les-reconverties-peuvent-inspirer-et-enrichir-vos-equipes-",
+        "id": "63ebb05fe87fb83515ebcfe5"
     },
     {
         "format": "KEYNOTE",
@@ -731,7 +731,7 @@
         "description": "",
         "topic": "tech",
         "video": null,
-        "room": "ROOM2",
+        "room": "ROOM1",
         "start": "2023-04-13T15:50:00",
         "end": "2023-04-13T16:40:00",
         "photoUrls": [],
@@ -752,7 +752,7 @@
         "description": "",
         "topic": "team",
         "video": null,
-        "room": "ROOM1",
+        "room": "ROOM2",
         "start": "2023-04-13T15:50:00",
         "end": "2023-04-13T16:40:00",
         "photoUrls": [],
@@ -1376,6 +1376,26 @@
     {
         "format": "LIGHTNING_TALK",
         "event": "2023",
+        "title": "R\u00e9fl\u00e9chir avant de cliquer : comprendre les risques li\u00e9s \u00e0 vos donn\u00e9es personnelles en ligne",
+        "summary": "Vous n\u2019avez rien \u00e0 cacher n\u2019est-ce pas ? 1.134 trillion de megabyte, c\u2019est le volume de donn\u00e9es cr\u00e9\u00e9 chaque jour en 2021 dans le monde. Les chiffres sont tellement \u00e9normes que je ne suis pas certaine de savoir les \u00e9crire au format num\u00e9rique sans faire une recherche sur internet. Dans ce talk, je vais vous expliquer pourquoi il est important de vous soucier des donn\u00e9es personnelles que vous partagez sur internet et quels sont les risques associ\u00e9s \u00e0 celles-ci. On reviendra sur le scandale de Cambridge Anatytica, les risques li\u00e9s aux r\u00e9seaux sociaux, et les conseils que l\u2019on peut mettre en \u0153uvre individuellement pour prot\u00e9ger sa vie priv\u00e9e en ligne.",
+        "speakerIds": [
+            "m.jarrar"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2023-02-13T20:50:31.213",
+        "description": "",
+        "topic": "tech",
+        "video": null,
+        "room": "AMPHI2",
+        "start": "2023-04-14T13:20:00",
+        "end": "2023-04-14T13:40:00",
+        "photoUrls": [],
+        "slug": "reflechir-avant-de-cliquer-comprendre-les-risques-lies-a-vos-donnees-personnelles-en-ligne",
+        "id": "63ebb05fe87fb83515ebcfc7"
+    },
+    {
+        "format": "LIGHTNING_TALK",
+        "event": "2023",
         "title": "SLOW BUSINESS : Travailler moins & mieux",
         "summary": "Le SLOW BUSINESS pour travailler moins et mieux,\r\nOu comment \u00e9viter le burn out dans notre soci\u00e9t\u00e9 actuelle.\r\nLa vie d\u2019entrepreneur disruptif VS L\u2019art de vivre avec sa bo\u00eete ?\r\nLe Slow Business, c'est des pistes pour \u00e9viter le burn-out, ralentir, trouver son rythme et remettre le travail \u00e0 sa place (spoiler-alert : c\u2019est pas avant ta vie perso).\r\n",
         "speakerIds": [
@@ -1432,26 +1452,6 @@
         "photoUrls": [],
         "slug": "ce-code-qui-nous-lit",
         "id": "63ebb05fe87fb83515ebcfe4"
-    },
-    {
-        "format": "LIGHTNING_TALK",
-        "event": "2023",
-        "title": "Comment les reconverties peuvent inspirer et enrichir vos \u00e9quipes.",
-        "summary": "Ing\u00e9nieure, vendeuse de popcorn, prof de maths puis d\u00e9veloppeuse, je suis arriv\u00e9e dans \u201cla tech\u201d en 2020 par une formation de reconversion courte. Apr\u00e8s de nombreuses p\u00e9rip\u00e9ties, ma reconversion est aujourd\u2019hui une r\u00e9ussite totale. Pour mon \u00e9quipe et pour moi.\r\nInt\u00e9grer un profil reconverti apporte une diversit\u00e9 de parcours qui vous assure d\u2019enrichir vos \u00e9quipes mais il est facile de passer \u00e0 c\u00f4t\u00e9. Le processus d\u2019accompagnement est diff\u00e9rent de celui d\u2019un junior sorti d\u2019\u00e9cole, et tout le monde sera gagnant si vous r\u00e9ussissez ce d\u00e9fi.\r\nA travers mon histoire j\u2019aimerais inspirer des personnes en reconversion \u00e0 prendre leur place, mais aussi donner des cl\u00e9s d\u2019\u00e9coute aux \u00e9quipes qui les accueillent.\r\nVenez d\u00e9couvrir comment je suis pass\u00e9e d\u2019apprenante \u00e0 contributrice et r\u00e9f\u00e9rente en trois ans et autant de jobs.",
-        "speakerIds": [
-            "lea.coston"
-        ],
-        "language": "FRENCH",
-        "addedAt": "2023-02-13T20:50:31.22",
-        "description": "",
-        "topic": "tech",
-        "video": null,
-        "room": "AMPHI2",
-        "start": "2023-04-14T13:20:00",
-        "end": "2023-04-14T13:40:00",
-        "photoUrls": [],
-        "slug": "comment-les-reconverties-peuvent-inspirer-et-enrichir-vos-equipes-",
-        "id": "63ebb05fe87fb83515ebcfe5"
     },
     {
         "format": "KEYNOTE",
