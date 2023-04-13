@@ -28,7 +28,8 @@ class MixetteDonationRepository(
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
-        if (count().block() == 0L) {
+        deleteAll().block()
+                if (count().block() == 0L) {
             val usersResource = ClassPathResource("data/mixette.json")
             val donations: List<MixetteDonation> = objectMapper.readValue(usersResource.inputStream)
             donations.forEach { insert(it).block() }
