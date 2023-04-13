@@ -5,6 +5,7 @@ import com.fasterxml.jackson.module.kotlin.readValue
 import kotlinx.coroutines.reactor.awaitSingle
 import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.mixette.model.MixetteDonation
+import mixit.ticket.model.Ticket
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
@@ -36,6 +37,9 @@ class MixetteDonationRepository(
             logger.info("Mixette data initialization complete")
         }
     }
+
+    fun deleteAll() =
+        template.remove<Ticket>(Query())
 
     fun count() = template.count<MixetteDonation>()
 
