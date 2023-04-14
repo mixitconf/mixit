@@ -39,10 +39,10 @@
                 //field.className = 'num';
                 field.innerText = donation.quantity;
             }
-            const amount = document.getElementById("amount-" + donation.login);
-            if (amount) {
-                amount.innerText = `(${donation.amount}€)`;
-            }
+            // const amount = document.getElementById("amount-" + donation.login);
+            // if (amount) {
+            //     amount.innerText = `(${donation.amount}€)`;
+            // }
         });
         const ranking = document.getElementById("ranking");
         if (ranking) {
@@ -128,7 +128,7 @@
                                 </div>
                                 <img src="/images/svg/mxt-icon--logo-mixette.svg" style="max-height: 2rem" class="mr-2">
                                 <span>&nbsp;</span>
-                                <div class="fs-5 ml-2 fw-normal" id="amount-{{login}}">(0 €)</div>
+                                <!--<div class="fs-5 ml-2 fw-normal" id="amount-{{login}}">(0 €)</div>!!>
                             </div>
                         </div>
                     {{/organizations}}
