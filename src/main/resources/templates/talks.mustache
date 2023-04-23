@@ -108,7 +108,6 @@
                         <div>{{#i18n}}talks.schedule.download{{/i18n}}</div>
                     </div>
                 {{/schedulingFileUrl}}
-                {{^isCurrent}}
                 <div class="col-12 col-md-6 col-lg-3">
                     <a href="{{localePrefix}}/{{year}}/medias{{#topic}}/{{topic}}{{/topic}}"
                        alt="{{#i18n}}talks.medias{{/i18n}}">
@@ -117,7 +116,6 @@
                     </a>
                     <div>{{#i18n}}talks.medias{{/i18n}}</div>
                 </div>
-                {{/isCurrent}}
                 {{#connected}}
                     {{^filtered}}
                         <div class="col-12 col-md-6 col-lg-3">
