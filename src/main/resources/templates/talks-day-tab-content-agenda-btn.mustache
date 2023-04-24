@@ -6,8 +6,11 @@
              alt="{{#i18n}}home.topics.{{topic}}.title{{/i18n}}"/>
         <span>{{#i18n}}home.topics.{{topic}}.title{{/i18n}}</span>
     </div>
+        {{#video}}<img src="/images/svg/mxt-icon-video-dark.svg" style="max-height: 1em">{{/video}}
     {{/topic}}
-    <div class="mxt-text--cat-format">#{{#i18n}}talk.format.{{format}}{{/i18n}}</div>
+    <div class="mxt-text--cat-format">
+        #{{#i18n}}talk.format.{{format}}{{/i18n}}
+    </div>
     <div><small>{{#start}}{{start}} - {{end}}{{/start}}</small></div>
     <div class="mxt-agenda--talk-title"><small>{{title}}</small></div>
     {{#speakers}}
