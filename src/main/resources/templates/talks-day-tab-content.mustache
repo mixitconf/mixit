@@ -11,6 +11,12 @@
                         <div class="mxt-text--cat-format">
                             &nbsp;<strong><small>#{{#i18n}}talk.format.{{format}}{{/i18n}}</small></strong>
                         </div>
+                        <div style="justify-content: end;align-items: center;flex: 1 1 auto;display: flex">
+                            {{#video}}
+                                <img src="/images/svg/mxt-icon-video-dark.svg"  style="max-height: 1em;margin-right: 4px">
+                                <div>video</div>
+                            {{/video}}
+                        </div>
                     </div>
                     <h3 class="mxt-text--talktitle">
                         {{#connected}}
@@ -34,6 +40,7 @@
                                 <span>{{#i18n}}home.topics.{{topic}}.title{{/i18n}}</span>
                             </div>
                         {{/topic}}
+
                     </h3>
                     <ul class="mxt-wrapper-list-inline mb-0 pb-0">
                         {{#speakers}}
