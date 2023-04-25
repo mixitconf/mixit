@@ -20,6 +20,7 @@ class TalkDto(
     val topic: String?,
     val video: String?,
     val vimeoPlayer: String?,
+    val video2: String?,
     val room: String?,
     val roomLink: String?,
     val start: String?,
@@ -33,5 +34,6 @@ class TalkDto(
     val multiSpeaker: Boolean = (speakers.size > 1),
     val speakersFirstNames: String = (speakers.joinToString { it.firstname }),
     val startLocalDateTime: LocalDateTime? = null,
-    val endLocalDateTime: LocalDateTime? = null
+    val endLocalDateTime: LocalDateTime? = null,
+    val hasAtLeastOneVideo: Boolean = !video.isNullOrEmpty() || !video2.isNullOrEmpty()
 )

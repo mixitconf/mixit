@@ -19,6 +19,7 @@ data class Talk(
     @TextIndexed val description: String? = null,
     val topic: String? = null,
     val video: String? = null,
+    val video2: String? = null,
     val room: Room? = Room.UNKNOWN,
     val start: LocalDateTime? = null,
     val end: LocalDateTime? = null,
