@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "autoprefixer": "10.4.13",
-    "cssnano": "5.1.14",
+    "cssnano": "6.0.0",
     "copyfiles": "2.4.1",
     "node-sass": "7.0.3",
     "onchange": "7.1.0",
