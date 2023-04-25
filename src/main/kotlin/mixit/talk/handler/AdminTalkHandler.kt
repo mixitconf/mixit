@@ -79,6 +79,7 @@ class AdminTalkHandler(
             language = formData["language"]?.let { Language.valueOf(it) } ?: Language.FRENCH,
             speakerIds = formData["speakers"]!!.split(","),
             video = formData["video"],
+            video2 = formData["video2"],
             room = Room.valueOf(formData["room"]!!),
             addedAt = LocalDateTime.parse(formData["addedAt"]),
             start = LocalDateTime.parse(formData["start"]),

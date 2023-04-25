@@ -6,7 +6,7 @@
              alt="{{#i18n}}home.topics.{{topic}}.title{{/i18n}}"/>
         <span>{{#i18n}}home.topics.{{topic}}.title{{/i18n}}</span>
     </div>
-        {{#video}}<img src="/images/svg/mxt-icon-video-dark.svg" style="max-height: 1em">{{/video}}
+        {{#hasAtLeastOneVideo}}<img src="/images/svg/mxt-icon-video-dark.svg" style="max-height: 1em">{{/hasAtLeastOneVideo}}
     {{/topic}}
     <div class="mxt-text--cat-format">
         #{{#i18n}}talk.format.{{format}}{{/i18n}}

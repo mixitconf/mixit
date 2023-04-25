@@ -50,6 +50,10 @@
             <input class="form-control" type="text" name="video" value="{{#talk.video}}{{talk.video}}{{/talk.video}}"/>
         </div>
         <div class="mb-3">
+            <label class="form-label">{{#i18n}}admin.talk.form.video2{{/i18n}}</label>
+            <input class="form-control" type="text" name="video2" value="{{#talk.video2}}{{talk.video2}}{{/talk.video2}}"/>
+        </div>
+        <div class="mb-3">
             <label class="form-label">{{#i18n}}admin.talk.form.room{{/i18n}}</label>
             <select class="form-control" name="room" required>
                 {{#rooms}}

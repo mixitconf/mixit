@@ -421,7 +421,10 @@ class TalkHandler(
                     "othertalks" to otherTalks,
                     "favorites" to favoriteTalkIds.any { talk.id == it },
                     "hasOthertalks" to otherTalks.isNotEmpty(),
-                    "vimeoPlayer" to talk.video.toVimeoPlayerUrl()
+                    "vimeoPlayer" to talk.video.toVimeoPlayerUrl(),
+                    "twitchPlayer" to (talk.video?.contains("twitch") ?: false),
+                    "vimeoPlayer2" to talk.video2.toVimeoPlayerUrl(),
+                    "twitchPlayer2" to (talk.video2?.contains("twitch") ?: false)
                 )
             )
             .awaitSingle()

@@ -55,16 +55,39 @@
     {{/talk.description}}
 
     {{#talk.video}}
-        {{#vimeoPlayer}}
-            <div class="mxt-wrapper--intrinsic mb-3">
-                <iframe src="{{vimeoPlayer}}" class="mxt-wrapper--video-player" allowfullscreen></iframe>
+        {{#twitchPlayer}}
+            <div class="mxt-wrapper--intrinsic">
+                <iframe src="{{talk.video}}" height="200" width="1000" allowfullscreen></iframe>
             </div>
-        {{/vimeoPlayer}}
-        {{^vimeoPlayer}}
-            &#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{talk.video}}" target="_blank">{{#i18n}}talk.video.thevideo{{/i18n}}</a>
-        {{/vimeoPlayer}}
+        {{/twitchPlayer}}
+        {{^twitchPlayer}}
+            {{#vimeoPlayer}}
+                <div class="mxt-wrapper--intrinsic mb-3">
+                    <iframe src="{{vimeoPlayer}}" class="mxt-wrapper--video-player" allowfullscreen></iframe>
+                </div>
+            {{/vimeoPlayer}}
+            {{^vimeoPlayer}}
+                &#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{talk.video}}" target="_blank">{{#i18n}}talk.video.thevideo{{/i18n}}</a>
+            {{/vimeoPlayer}}
+        {{/twitchPlayer}}
     {{/talk.video}}
-
+    {{#talk.video2}}
+        {{#twitchPlayer2}}
+            <div class="mxt-wrapper--intrinsic">
+                <iframe src="{{talk.video2}}" height="200" width="1000" allowfullscreen></iframe>
+            </div>
+        {{/twitchPlayer2}}
+        {{^twitchPlayer2}}
+            {{#vimeoPlayer2}}
+                <div class="mxt-wrapper--intrinsic mb-3">
+                    <iframe src="{{vimeoPlayer2}}" class="mxt-wrapper--video-player" allowfullscreen></iframe>
+                </div>
+            {{/vimeoPlayer2}}
+            {{^vimeoPlayer2}}
+                &#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{talk.video2}}" target="_blank">{{#i18n}}talk.video.thevideo{{/i18n}}</a>
+            {{/vimeoPlayer2}}
+        {{/twitchPlayer2}}
+    {{/talk.video2}}
 </div>
 <div class="container mxt-wrapper--page-content mt-4 mb-4">
     {{#speakers}}
