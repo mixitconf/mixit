@@ -4,6 +4,7 @@ import kotlinx.coroutines.reactor.awaitSingle
 import mixit.MixitApplication.Companion.CURRENT_EVENT
 import mixit.MixitApplication.Companion.TIMEZONE
 import mixit.MixitProperties
+import mixit.event.model.EventImageDto
 import mixit.event.model.EventImagesService
 import mixit.event.model.EventService
 import mixit.favorite.repository.FavoriteRepository
@@ -409,6 +410,16 @@ class TalkHandler(
         val speakers = talk.speakers.map { it.toDto(lang) }.sortedBy { it.firstname }
         val otherTalks = service.findBySpeakerId(speakers.map { it.login }, talk.id).map { it.toDto(lang) }
 
+        val images: List<EventImageDto> = eventImagesService.findAll()
+            .filter { it.event == talk.event }
+            .flatMap { it.sections }
+            .flatMap { section ->
+                section.pictures
+                    .filter { it.talkId != null }
+                    .map { EventImageDto(talk.event, it.name, section.sectionId, it.talkId!!) }
+            }
+            .filter { it.talkId.contains(talk.id) }
+
         return ok()
             .render(
                 TalkDetail.template,
@@ -420,6 +431,7 @@ class TalkHandler(
                     "speakers" to talk.speakers.map { it.toDto(lang) }.sortedBy { it.firstname },
                     "othertalks" to otherTalks,
                     "favorites" to favoriteTalkIds.any { talk.id == it },
+                    "images" to images,
                     "hasOthertalks" to otherTalks.isNotEmpty(),
                     "vimeoPlayer" to talk.video.toVimeoPlayerUrl(),
                     "twitchPlayer" to (talk.video?.contains("twitch") ?: false),

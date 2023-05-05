@@ -21,3 +21,10 @@ data class EventImage(
     val talkId: String? = null,
     val mustacheTemplate: MustacheTemplate? = null
 )
+
+data class EventImageDto(
+    val event: String,
+    val name: String,
+    val sectionId: String,
+    val talkId: String
+)
