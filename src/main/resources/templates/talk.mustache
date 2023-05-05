@@ -104,18 +104,40 @@
                     {{#links}}
                         <li><a href="{{url}}">{{name}}</a></li>
                     {{/links}}
-                </ul>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+                </ul>
             </div>
         </div>
     {{/speakers}}
 
+    <script>
+        function zoomImage(id) {
+            const div = document.getElementById(id);
+            if(div.classList.contains('col-6')) {
+                div.classList.remove('col-6');
+                div.classList.remove('col-lg-4');
+                div.classList.add('col-12');
+            }
+            else {
+                div.classList.add('col-6');
+                div.classList.add('col-lg-4');
+                div.classList.remove('col-12');
+            }
+
+        }
+    </script>
     <div class="row" style="justify-content: center">
         {{#images}}
-            <div class="col-6 col-lg-4">
-                <img class="mxt-img--grayscale pb-2"
+            <div class="col-6 col-lg-4" id="{{name}}">
+                <img class="mxt-img--grayscale pb-2" style="width: 100%;cursor:pointer"
+                     onclick="zoomImage('{{name}}')" onblur="zoomImage('{{name}}')"
                      src="https://raw.githubusercontent.com/mixitconf/mixitconf-images/main/{{event}}/{{sectionId}}/{{name}}">
             </div>
         {{/images}}
+        {{#talk.photoUrls}}
+            <div class="col-4">
+                <a href="{{url}}"><img src="{{url}}" aria-label="{{name}}" class="mxt-img--grayscale pb-2"/></a>
+            </div>
+        {{/talk.photoUrls}}
     </div>
 </div>
 
