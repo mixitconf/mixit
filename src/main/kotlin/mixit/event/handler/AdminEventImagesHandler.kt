@@ -159,7 +159,7 @@ class AdminEventImagesHandler(
         image: EventImage? = null
     ): ServerResponse {
         val talks = talkService.findByEvent(eventId).sortedBy { it.title }.map {
-            Triple(it.id, it.title, it.id === image?.talkId)
+            Triple(it.id, "${it.title} (${it.format})", it.id.contains(image?.talkId ?: "oops"))
         }
         return ok().renderAndAwait(
             MustacheTemplate.AdminEventImagesSectionImage.template,

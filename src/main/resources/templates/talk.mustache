@@ -110,11 +110,12 @@
     {{/speakers}}
 
     <div class="row" style="justify-content: center">
-        {{#talk.photoUrls}}
-            <div class="col-4">
-                <a href="{{url}}"><img src="{{url}}" aria-label="{{name}}" class="mxt-img--grayscale pb-2"/></a>
+        {{#images}}
+            <div class="col-6 col-lg-4">
+                <img class="mxt-img--grayscale pb-2"
+                     src="https://raw.githubusercontent.com/mixitconf/mixitconf-images/main/{{event}}/{{sectionId}}/{{name}}">
             </div>
-        {{/talk.photoUrls}}
+        {{/images}}
     </div>
 </div>
 
