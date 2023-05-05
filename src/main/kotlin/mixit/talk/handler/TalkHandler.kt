@@ -129,17 +129,16 @@ class TalkHandler(
         val currentUserEmail = config.req.currentNonEncryptedUserEmail()
         val talks = filterTalkByFormat(
             loadTalkAndFavorites(config, currentUserEmail).let { talks ->
-                if (config.template == Media){
+                if (config.template == Media) {
                     talks.filter { it.video != null }
-                } else if (config.template == FeedbackWall){
+                } else if (config.template == FeedbackWall) {
                     talks
-                        .filterNot { it.format == TalkFormat.INTERVIEW  }
+                        .filterNot { it.format == TalkFormat.INTERVIEW }
                         .filterNot { it.format == TalkFormat.ON_AIR }
                         .filterNot { it.topic == "onair" }
                         .filterNot { it.title.contains("Keynote team") }
                         .toList()
-                }
-                else talks
+                } else talks
 
             }, config.viewWorkshop
         )
@@ -151,7 +150,7 @@ class TalkHandler(
         val days = (0..Duration.between(event.start.atStartOfDay(), event.end.atStartOfDay())
             .toDays()).map { event.start.plusDays(it) }
         val rooms = roomsToDisplayOnAgenda(talks)
-        val canDisplayAgenda = rooms.isNotEmpty() && !(rooms.contains(Room.UNKNOWN) && rooms.size==1)
+        val canDisplayAgenda = rooms.isNotEmpty() && !(rooms.contains(Room.UNKNOWN) && rooms.size == 1)
 
         return ok()
             .render(
@@ -162,13 +161,13 @@ class TalkHandler(
                     TALKS to when (config.viewList) {
                         SimpleList -> talks
                         Agenda -> {
-                            if(canDisplayAgenda) {
+                            if (canDisplayAgenda) {
                                 talksToDisplayOnAgenda(talks, rooms, days, config.req.language())
-                            }
-                            else {
+                            } else {
                                 talksToDisplayByDate(talks, days, config.req.language())
                             }
                         }
+
                         ListByDate -> {
                             talksToDisplayByDate(talks, days, config.req.language())
                         }
@@ -220,7 +219,7 @@ class TalkHandler(
                 day,
                 localDate.atStartOfDay().formatTalkDate(language),
                 day == "day1",
-                filteredTalks.filter { it.startLocalDateTime ==null ||  it.startLocalDateTime?.toLocalDate() == localDate }
+                filteredTalks.filter { it.startLocalDateTime == null || it.startLocalDateTime?.toLocalDate() == localDate }
             )
         }
     }
@@ -359,6 +358,18 @@ class TalkHandler(
                 }
         } else null
 
+    private suspend fun findTalkImages(talk: CachedTalk): List<EventImageDto> =
+        eventImagesService.findAll()
+            .filter { it.event == talk.event }
+            .flatMap { it.sections }
+            .flatMap { section ->
+                section.pictures
+                    .filter { it.talkId != null }
+                    .map { EventImageDto(talk.event, it.name, section.sectionId, it.talkId!!) }
+            }
+            .filter { it.talkId.contains(talk.id) }
+            .sortedBy { it.name }
+
     private suspend fun findImages(config: TalkViewConfig) =
         // We have a specific behavior on the MediaImages template
         if (config.template == MediaImages) {
@@ -410,16 +421,6 @@ class TalkHandler(
         val speakers = talk.speakers.map { it.toDto(lang) }.sortedBy { it.firstname }
         val otherTalks = service.findBySpeakerId(speakers.map { it.login }, talk.id).map { it.toDto(lang) }
 
-        val images: List<EventImageDto> = eventImagesService.findAll()
-            .filter { it.event == talk.event }
-            .flatMap { it.sections }
-            .flatMap { section ->
-                section.pictures
-                    .filter { it.talkId != null }
-                    .map { EventImageDto(talk.event, it.name, section.sectionId, it.talkId!!) }
-            }
-            .filter { it.talkId.contains(talk.id) }
-
         return ok()
             .render(
                 TalkDetail.template,
@@ -431,7 +432,7 @@ class TalkHandler(
                     "speakers" to talk.speakers.map { it.toDto(lang) }.sortedBy { it.firstname },
                     "othertalks" to otherTalks,
                     "favorites" to favoriteTalkIds.any { talk.id == it },
-                    "images" to images,
+                    "images" to findTalkImages(talk),
                     "hasOthertalks" to otherTalks.isNotEmpty(),
                     "vimeoPlayer" to talk.video.toVimeoPlayerUrl(),
                     "twitchPlayer" to (talk.video?.contains("twitch") ?: false),
