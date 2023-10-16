@@ -78,6 +78,6 @@ curl https://mixitconf.org/api/blog | python3 -m json.tool > blog.json
 curl https://mixitconf.org/api/event | python3 -m json.tool > events.json
 curl https://mixitconf.org/api/event/images | python3 -m json.tool > events_image.json
 curl https://mixitconf.org/api/user | python3 -m json.tool > users.json
-curl https://mixitconf.org/api/2023/talk | python3 -m json.tool > talks_2023.json
+curl https://mixitconf.org/api/2024/talk | python3 -m json.tool > talks_2024.json
 git commit -a -m "Update data from PROD"
 ```

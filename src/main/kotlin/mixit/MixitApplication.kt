@@ -10,7 +10,7 @@ data class SpeakerStart(val year: Int, val login: String)
 @EnableConfigurationProperties(MixitProperties::class)
 class MixitApplication {
     companion object {
-        const val CURRENT_EVENT = "2023"
+        const val CURRENT_EVENT = "2024"
         const val TIMEZONE = "Europe/Paris"
         const val MIXIT = "MiXiT"
         const val MIXIT_EMAIL = "contact@mixitconf.org"

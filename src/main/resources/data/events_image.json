@@ -13916,8 +13916,8 @@
                     },
                     {
                         "name": "j1-dinnerspeaker-soiree-mixit-SD3-120.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
+                        "talkId": "6405dd3d34a9b85777797fe7",
+                        "mustacheTemplate": "None"
                     },
                     {
                         "name": "j1-dinnerspeaker-soiree-mixit-SD3-126.jpg",
@@ -13951,8 +13951,8 @@
                     },
                     {
                         "name": "j1-dinnerspeaker-soiree-mixit-SD3-147.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
+                        "talkId": "642dd24d3c378a36d10327d0",
+                        "mustacheTemplate": "None"
                     },
                     {
                         "name": "j1-dinnerspeaker-soiree-mixit-SD3-151.jpg",
@@ -18110,171 +18110,6 @@
                     },
                     {
                         "name": "",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit23-mixteen",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD1-1135.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD1-1139.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD1-1146.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD1-1147.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD1-1153.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD1-1158.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD1-1160.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD1-1162.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD1-1166.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD1-1167.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD1-1183.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD1-1187.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD1-1193.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD1-1196.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD1-1197.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD1-1203.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD1-1211.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD1-1217.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD2-548-Copie1.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD2-551.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD2-556.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD2-558.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD2-562.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD2-567.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD2-572.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD2-582.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD2-583.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD2-587.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD2-591.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD2-593.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD2-595.jpg",
-                        "talkId": null,
-                        "mustacheTemplate": null
-                    },
-                    {
-                        "name": "mixit-J2-SD2-597.jpg",
                         "talkId": null,
                         "mustacheTemplate": null
                     }

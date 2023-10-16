@@ -1784,7 +1784,7 @@
         "id": "mixit23",
         "start": "2023-04-13",
         "end": "2023-04-14",
-        "current": true,
+        "current": false,
         "sponsors": [
             {
                 "level": "LANYARD",
@@ -1983,8 +1983,25 @@
             }
         ],
         "photoUrls": [],
-        "videoUrl": null,
+        "videoUrl": {
+            "name": "MiXiT 2023",
+            "url": "https://vimeo.com/840545012"
+        },
         "schedulingFileUrl": "/pdf/planning2023_v3.pdf",
         "year": 2023
+    },
+    {
+        "id": "mixit24",
+        "start": "2024-04-25",
+        "end": "2024-04-26",
+        "current": true,
+        "sponsors": [],
+        "organizations": [],
+        "volunteers": [],
+        "organizers": [],
+        "photoUrls": [],
+        "videoUrl": null,
+        "schedulingFileUrl": null,
+        "year": 2024
     }
 ]

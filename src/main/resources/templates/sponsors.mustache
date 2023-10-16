@@ -9,6 +9,7 @@
             {{year}}
         </button>
         <ul class="dropdown-menu mxt-dropdown-header" aria-labelledby="dropdownMenuButton1">
+            <li><a href="{{localePrefix}}/sponsors/2024" class="dropdown-item">2024</a></li>
             <li><a href="{{localePrefix}}/sponsors/2023" class="dropdown-item">2023</a></li>
             <li><a href="{{localePrefix}}/sponsors/2022" class="dropdown-item">2022</a></li>
             <li><a href="{{localePrefix}}/sponsors/2021" class="dropdown-item">2021</a></li>
@@ -24,12 +25,12 @@
     </h1>
 </div>
         {{#isCurrent}}
-<!--    <div class="container mxt-wrapper--page-content">-->
-<!--        <h2 class="subheader text-center">{{#i18n}}home.sponsors.title{{/i18n}}</h2>-->
-<!--        <p class="text-center"><a class="mxt-anchor--uppercase" href="{{#i18n}}home.sponsors.pdf.url{{/i18n}}">{{#i18n}}home.sponsors.pdf{{/i18n}}</a> / <a-->
-<!--                class="mxt-anchor--uppercase" href="mailto:contact@mixitconf.org" target="_top">{{#i18n}}home.sponsors.contact{{/i18n}}</a></p>-->
-<!--    </div>-->
-<!--    <div>&nbsp;</div>-->
+        <div class="container mxt-wrapper--page-content">
+            <h2 class="subheader text-center">{{#i18n}}home.sponsors.title{{/i18n}}</h2>
+            <p class="text-center"><a class="mxt-anchor--uppercase" href="{{#i18n}}home.sponsors.pdf.url{{/i18n}}">{{#i18n}}home.sponsors.pdf{{/i18n}}</a> / <a
+                    class="mxt-anchor--uppercase" href="mailto:contact@mixitconf.org" target="_top">{{#i18n}}home.sponsors.contact{{/i18n}}</a></p>
+        </div>
+        <div>&nbsp;</div>
         {{/isCurrent}}
 {{#has-sponsors-lanyard}}
     <div class="container mxt-wrapper--page-content pb-4">
