@@ -1,7 +1,6 @@
 package mixit.routes
 
 import com.samskivert.mustache.Mustache
-import kotlinx.coroutines.runBlocking
 import mixit.MixitProperties
 import mixit.features.model.Feature
 import mixit.features.repository.FeatureStateRepository

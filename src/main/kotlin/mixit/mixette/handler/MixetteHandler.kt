@@ -32,7 +32,6 @@ import java.time.Duration.ofMillis
 import java.time.LocalTime
 import java.time.ZoneId
 
-
 @Component
 class MixetteHandler(
     private val repository: MixetteDonationRepository,
@@ -72,27 +71,29 @@ class MixetteHandler(
         val interval = Flux.interval(ofMillis(1000))
         return ok()
             .contentType(MediaType.TEXT_EVENT_STREAM)
-            .body(BodyInserters.fromServerSentEvents(
-                interval
-                    .onBackpressureBuffer()
-                    // .flatMap { repository.findByYearAfterNow(CURRENT_EVENT) }
-                    .map {
-                        runBlocking {
-                            repository
-                                .findByYearAfterNow(CURRENT_EVENT)
-                                .collectList()
-                                .awaitSingle()
-                                .let {
-                                    // Here we have the list of all donation. We need to compute the 10 betters donors
-                                    // and the computation of all donations
-                                    ServerSentEvent.builder<MixetteDashboardData>()
-                                        .event("message")
-                                        .data(computeBetterDonorAndAggregateResult(it))
-                                        .build()
-                                }
+            .body(
+                BodyInserters.fromServerSentEvents(
+                    interval
+                        .onBackpressureBuffer()
+                        // .flatMap { repository.findByYearAfterNow(CURRENT_EVENT) }
+                        .map {
+                            runBlocking {
+                                repository
+                                    .findByYearAfterNow(CURRENT_EVENT)
+                                    .collectList()
+                                    .awaitSingle()
+                                    .let {
+                                        // Here we have the list of all donation. We need to compute the 10 betters donors
+                                        // and the computation of all donations
+                                        ServerSentEvent.builder<MixetteDashboardData>()
+                                            .event("message")
+                                            .data(computeBetterDonorAndAggregateResult(it))
+                                            .build()
+                                    }
+                            }
                         }
-                    }
-            ))
+                )
+            )
             .awaitSingle()
     }
 

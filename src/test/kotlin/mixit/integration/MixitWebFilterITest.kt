@@ -1,25 +1,25 @@
-//package mixit.integration
+// package mixit.integration
 //
-//import com.ninjasquad.springmockk.SpykBean
-//import io.mockk.every
-//import mixit.security.MixitWebFilter
-//import mixit.security.model.Cryptographer
-//import mixit.user.model.Role
-//import mixit.user.model.User
-//import mixit.user.model.jsonToken
-//import mixit.user.repository.UserRepository
-//import org.assertj.core.api.Assertions.assertThat
-//import org.junit.jupiter.api.Test
-//import org.springframework.beans.factory.annotation.Autowired
-//import org.springframework.boot.test.context.SpringBootTest
-//import org.springframework.http.HttpHeaders
-//import org.springframework.http.MediaType
-//import org.springframework.test.web.reactive.server.WebTestClient
-//import reactor.core.publisher.Mono
-//import java.time.LocalDateTime
+// import com.ninjasquad.springmockk.SpykBean
+// import io.mockk.every
+// import mixit.security.MixitWebFilter
+// import mixit.security.model.Cryptographer
+// import mixit.user.model.Role
+// import mixit.user.model.User
+// import mixit.user.model.jsonToken
+// import mixit.user.repository.UserRepository
+// import org.assertj.core.api.Assertions.assertThat
+// import org.junit.jupiter.api.Test
+// import org.springframework.beans.factory.annotation.Autowired
+// import org.springframework.boot.test.context.SpringBootTest
+// import org.springframework.http.HttpHeaders
+// import org.springframework.http.MediaType
+// import org.springframework.test.web.reactive.server.WebTestClient
+// import reactor.core.publisher.Mono
+// import java.time.LocalDateTime
 //
-//@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-//class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val cryptographer: Cryptographer) {
+// @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+// class MixitWebFilterITest(@Autowired val client: WebTestClient, @Autowired val cryptographer: Cryptographer) {
 //
 //    @SpykBean
 //    private lateinit var userRepository: UserRepository
@@ -320,4 +320,4 @@
 //            .expectHeader()
 //            .valueEquals(HttpHeaders.LOCATION, "http://localhost:8080/login")
 //    }
-//}
+// }

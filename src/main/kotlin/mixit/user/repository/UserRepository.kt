@@ -45,7 +45,6 @@ class UserRepository(
                 .forEach { save(it).block() }
             logger.info("Users data initialization complete")
         }
-
     }
 
     suspend fun findFullText(criteria: List<String>): List<User> {

@@ -27,7 +27,6 @@ class TicketService(
     suspend fun findByType(type: TicketType): List<CachedTicket> =
         findAll().filter { it.type == type }
 
-
     suspend fun findByLogin(login: String?): CachedTicket? =
         findAll()
             .filter { it.login != null }
@@ -43,14 +42,13 @@ class TicketService(
         tickets
             .map { repository.save(it).awaitSingle() }
             .map { CachedTicket(cryptographer, it!!) }
-            .also { cache.invalidateAll()  }
-
+            .also { cache.invalidateAll() }
 
     fun deleteOne(id: String) =
         repository.deleteOne(id).doOnSuccess { cache.invalidateAll() }
 
     suspend fun deleteAll(ticketType: TicketType) =
         findByType(ticketType)
-            .map {repository.deleteOne(it.id) }
-            .also { cache.invalidateAll()  }
+            .map { repository.deleteOne(it.id) }
+            .also { cache.invalidateAll() }
 }

@@ -34,7 +34,7 @@ class TalkRepository(
 
     fun initData() {
         if (count().block() == 0L) {
-            (2012.. CURRENT_EVENT.toInt()).forEach { loadYear(it) }
+            (2012..CURRENT_EVENT.toInt()).forEach { loadYear(it) }
         }
     }
 

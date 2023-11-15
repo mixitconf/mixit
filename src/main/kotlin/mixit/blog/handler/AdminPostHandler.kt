@@ -40,9 +40,11 @@ class AdminPostHandler(private val service: BlogService, private val properties:
         this.adminPost(null)
 
     suspend fun editPost(req: ServerRequest): ServerResponse =
-        this.adminPost(service.findOneOrNull(req.pathVariable("id"))?.toPost()?.let {
-            it.copy(year = it.year ?:  it.addedAt.year)
-        })
+        this.adminPost(
+            service.findOneOrNull(req.pathVariable("id"))?.toPost()?.let {
+                it.copy(year = it.year ?: it.addedAt.year)
+            }
+        )
 
     suspend fun adminDeletePost(req: ServerRequest): ServerResponse {
         val formData = req.extractFormData()

@@ -24,6 +24,7 @@ import mixit.util.AdminUtils.toLinks
 import mixit.util.encodeToMd5
 import mixit.util.enumMatcher
 import mixit.util.extractFormData
+import mixit.util.json
 import mixit.util.seeOther
 import org.springframework.http.MediaType
 import org.springframework.stereotype.Component
@@ -70,16 +71,17 @@ class AdminUserHandler(
 
     suspend fun adminUserNewsLetterCsv(req: ServerRequest): ServerResponse =
         ok().contentType(MediaType(MediaType.TEXT_PLAIN, Charsets.UTF_8)).bodyValueAndAwait(
-            (listOf("firstname;lastname;email") +
+            (
+                listOf("firstname;lastname;email") +
                     userRepository
                         .findAll()
                         .filter { it.newsletterSubscriber }
                         .map { it.copy(email = cryptographer.decrypt(it.email)) }
                         .sortedWith(compareBy<User> { it.lastname }.thenBy { it.firstname })
-                        .map { "${it.firstname};${it.lastname};${it.email}" }).joinToString("\n")
+                        .map { "${it.firstname};${it.lastname};${it.email}" }
+                ).joinToString("\n")
 
         )
-
 
     suspend fun createUser(req: ServerRequest): ServerResponse = this.adminUser()
 
@@ -142,4 +144,11 @@ class AdminUserHandler(
     } else {
         if (photoUrl.startsWith("images")) "/$photoUrl" else photoUrl
     }
+
+    suspend fun findAll(req: ServerRequest): ServerResponse =
+        userRepository
+            .findAll()
+            .let { users ->
+                ok().json().bodyValueAndAwait(users.map { it.copy(email = cryptographer.decrypt(it.email)) })
+            }
 }

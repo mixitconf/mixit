@@ -81,7 +81,7 @@ class AuthenticationService(
      */
     suspend fun searchUserByEmailOrCreateHimFromTicket(nonEncryptedMail: String): User? =
         userRepository.findByNonEncryptedEmail(nonEncryptedMail)
-        // If user is not found we search in the lottery
+            // If user is not found we search in the lottery
             ?: lotteryRepository
                 .findByEncryptedEmail(cryptographer.encrypt(nonEncryptedMail)!!)
                 ?.let {

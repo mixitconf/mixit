@@ -1,29 +1,29 @@
-//package mixit.util
+// package mixit.util
 //
-//import com.samskivert.mustache.Mustache
-//import mixit.user.model.User
-//import mixit.util.email.TemplateService
-//import mixit.util.web.generateModelForExernalCall
-//import org.assertj.core.api.Assertions
-//import org.junit.jupiter.api.Test
-//import org.junit.jupiter.api.extension.ExtendWith
-//import org.springframework.beans.factory.annotation.Autowired
-//import org.springframework.boot.test.context.SpringBootTest
-//import org.springframework.context.MessageSource
-//import org.springframework.core.io.ResourceLoader
-//import org.springframework.test.context.junit.jupiter.SpringExtension
-//import java.util.Locale
+// import com.samskivert.mustache.Mustache
+// import mixit.user.model.User
+// import mixit.util.email.TemplateService
+// import mixit.util.web.generateModelForExernalCall
+// import org.assertj.core.api.Assertions
+// import org.junit.jupiter.api.Test
+// import org.junit.jupiter.api.extension.ExtendWith
+// import org.springframework.beans.factory.annotation.Autowired
+// import org.springframework.boot.test.context.SpringBootTest
+// import org.springframework.context.MessageSource
+// import org.springframework.core.io.ResourceLoader
+// import org.springframework.test.context.junit.jupiter.SpringExtension
+// import java.util.Locale
 //
-///**
+// /**
 // * Test {@link TemplateService}
 // */
-//@ExtendWith(SpringExtension::class)
-//@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-//class TemplateServiceTest(
+// @ExtendWith(SpringExtension::class)
+// @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+// class TemplateServiceTest(
 //    @Autowired val mustacheCompiler: Mustache.Compiler,
 //    @Autowired val resourceLoader: ResourceLoader,
 //    @Autowired val messageSource: MessageSource
-//) {
+// ) {
 //
 //    val templateService: TemplateService = TemplateService(mustacheCompiler, resourceLoader)
 //
@@ -68,4 +68,4 @@
 //        user.token = "token-3455-dede"
 //        return user
 //    }
-//}
+// }

@@ -32,7 +32,7 @@ class WebBlogHandler(
 
     suspend fun findOneView(req: ServerRequest): ServerResponse {
         val slug = req.pathVariable("slug")
-        if((2012..CURRENT_EVENT.toInt()).any { slug == it.toString() }) {
+        if ((2012..CURRENT_EVENT.toInt()).any { slug == it.toString() }) {
             return findAllView(req, slug.toInt())
         }
         val post = service.findBySlug(slug) ?: throw NotFoundException()

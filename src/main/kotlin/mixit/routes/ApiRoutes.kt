@@ -40,6 +40,7 @@ class ApiRoutes(
             GET("/admin/ticket", ticketHandler::findAll)
             GET("/admin/lottery", lotteryHandler::findAll)
             GET("/admin/newsletter", adminUserHandler::adminUserNewsLetterCsv)
+            GET("/admin/user", adminUserHandler::findAll)
             GET("/blog", blogHandler::findAll)
             GET("/blog/{id}", blogHandler::findOne)
             GET("/event", eventHandler::findAll)

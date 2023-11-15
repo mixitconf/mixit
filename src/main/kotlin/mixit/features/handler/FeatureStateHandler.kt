@@ -36,5 +36,4 @@ class FeatureStateHandler(
                 list(req)
             }
     }
-
 }

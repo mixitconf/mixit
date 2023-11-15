@@ -55,11 +55,11 @@ class EventService(
 
     private suspend fun loadEventUsers(event: Event): CachedEvent {
         val userIds = event.organizations.map { it.organizationLogin } +
-                event.sponsors.map { it.sponsorId } +
-                event.volunteers.map { it.volunteerLogin } +
-                event.organizers.map { it.organizerLogin } +
-                speakerStarInHistory.map { it.login } +
-                speakerStarInCurrentEvent.map { it.login }
+            event.sponsors.map { it.sponsorId } +
+            event.volunteers.map { it.volunteerLogin } +
+            event.organizers.map { it.organizerLogin } +
+            speakerStarInHistory.map { it.login } +
+            speakerStarInCurrentEvent.map { it.login }
 
         val users = userService.findAllByIds(userIds)
 

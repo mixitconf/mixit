@@ -5,7 +5,6 @@ import com.fasterxml.jackson.module.kotlin.readValue
 import kotlinx.coroutines.reactor.awaitSingle
 import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.mixette.model.MixetteDonation
-import mixit.ticket.model.Ticket
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
@@ -57,7 +56,6 @@ class MixetteDonationRepository(
     fun findByYearAfterNow(year: String): Flux<MixetteDonation> =
         template
             .find<MixetteDonation>(Query(Criteria.where("year").isEqualTo(year)))
-
 
     suspend fun findOneOrNull(id: String) =
         template.findById<MixetteDonation>(id).awaitSingleOrNull()

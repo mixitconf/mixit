@@ -10,11 +10,13 @@ data class CachedEventImages(
     fun toEventImages(): EventImages =
         EventImages(
             event,
-            sections.map { EventImagesSection(
-                it.sectionId,
-                it.i18nLabel,
-                it.pictures
-            ) }
+            sections.map {
+                EventImagesSection(
+                    it.sectionId,
+                    it.i18nLabel,
+                    it.pictures
+                )
+            }
         )
 
     constructor(images: EventImages) : this(

@@ -38,12 +38,11 @@ class TalkService(
             .firstOrNull { it.slug.endsWith(slug) && it.event == eventId }
             // If slug has changed during the past we try to find the talk with another method
             // We search a talk in an edition with a slug that contains all part of the new one
-            ?: slug.split("-").let {slugDetail ->
+            ?: slug.split("-").let { slugDetail ->
                 findAll().filter { it.event == eventId }.first { talk ->
                     slugDetail.all { talk.slug.contains(it) }
                 }
             }
-
 
     suspend fun findBySpeakerId(speakerIds: List<String>, talkIdExcluded: String): List<CachedTalk> =
         findAll().filter { talk ->
@@ -73,7 +72,6 @@ class TalkService(
         val speakers = userRepository.findAllByIds(talk.speakerIds)
         return CachedTalk(talk, speakers)
     }
-
 
     fun deleteOne(id: String) =
         talkRepository.deleteOne(id).doOnSuccess { cache.invalidateAll() }
