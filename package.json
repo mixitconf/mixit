@@ -1,31 +1,31 @@
 {
   "name": "mixit",
-  "version": "2022.0.0",
+  "version": "2023.0.0",
   "description": "Site used to manage Mixit conference (Lyon - France)",
   "repository": "https://github.com/mix-it/mixit.git",
   "license": "MIT",
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=18.0.0"
   },
   "scripts": {
     "scss": "node-sass src/main/sass/mixit.scss -o build/classes/css && postcss build/classes/css/mixit.css -u autoprefixer -u cssnano -o build/resources/main/static/css/mixit.css",
-    "typescript": "tsc src/main/ts/*.ts --target es6 --out build/classes/js/mixit.js;terser build/classes/js/mixit.js -o build/resources/main/static/js/mixit.js",
+    "typescript": "tsc src/main/ts/*.ts --target es6 --out build/resources/main/static/js/mixit.js;terser build/classes/js/mixit.js -o build/resources/main/static/js/mixit.js",
     "copy": "copyfiles -f 'src/main/resources/templates/*.*' 'build/resources/main/templates/' & copyfiles -f 'src/main/resources/templates/partials/*.*' 'build/resources/main/templates/partials/' & copyfiles -f 'src/main/resources/templates/email/*.*' 'build/resources/main/templates/email/' & copyfiles -f 'src/main/resources/templates/admin/*.*' 'build/resources/main/templates/admin/' & copyfiles -f 'src/main/resources/templates/error/*.*' 'build/resources/main/templates/error/' & copyfiles -f 'src/main/resources/messages*.properties' 'build/resources/main/'",
     "watch": "onchange 'src/main/resources/**/*.mustache' 'src/main/resources/messages*.properties' -- npm run copy & onchange 'src/main/sass/*.*' -- npm run scss & echo 'Watch is started'"
   },
   "dependencies": {
-    "bootstrap": "5.2.2",
+    "bootstrap": "5.3.2",
     "qrcode-svg": "1.1.0"
   },
   "devDependencies": {
-    "autoprefixer": "10.4.13",
-    "cssnano": "5.1.14",
+    "autoprefixer": "10.4.16",
+    "cssnano": "6.0.1",
     "copyfiles": "2.4.1",
-    "node-sass": "7.0.3",
+    "node-sass": "9.0.0",
     "onchange": "7.1.0",
-    "postcss": "8.4.18",
-    "postcss-cli": "10.0.0",
-    "terser": "5.15.1",
+    "postcss": "8.4.31",
+    "postcss-cli": "10.1.0",
+    "terser": "5.24.0",
     "typescript": "4.8.4"
   }
 }
