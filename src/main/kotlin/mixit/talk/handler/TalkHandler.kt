@@ -220,7 +220,7 @@ class TalkHandler(
                 day,
                 localDate.atStartOfDay().formatTalkDate(language),
                 day == "day1",
-                filteredTalks.filter { it.startLocalDateTime == null || it.startLocalDateTime?.toLocalDate() == localDate }
+                filteredTalks.filter { it.startLocalDateTime == null || it.startLocalDateTime.toLocalDate() == localDate }
             )
         }
     }

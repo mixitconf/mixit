@@ -20,7 +20,7 @@ repositories {
 }
 
 node {
-    version.set("16.13.0")
+    version.set("18.12.0")
     download.set(true)
 }
 

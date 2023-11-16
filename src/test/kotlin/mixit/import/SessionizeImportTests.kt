@@ -1,33 +1,33 @@
-//package mixit.import
+// package mixit.import
 //
-//import com.fasterxml.jackson.databind.ObjectMapper
-//import com.fasterxml.jackson.module.kotlin.jacksonTypeRef
-//import kotlinx.coroutines.runBlocking
-//import mixit.security.model.Cryptographer
-//import mixit.talk.model.Language
-//import mixit.talk.model.Room
-//import mixit.talk.model.Talk
-//import mixit.talk.model.TalkFormat
-//import mixit.user.model.Link
-//import mixit.user.model.Role
-//import mixit.user.model.User
-//import mixit.user.repository.UserRepository
-//import mixit.util.encodeToMd5
-//import org.junit.jupiter.api.Test
-//import org.springframework.beans.factory.annotation.Autowired
-//import org.springframework.boot.test.context.SpringBootTest
-//import org.springframework.core.io.ResourceLoader
-//import java.io.File
-//import java.io.FileOutputStream
-//import java.io.InputStream
-//import java.net.URL
-//import java.time.LocalDateTime
-//import java.time.format.DateTimeFormatter
-//import java.util.UUID
+// import com.fasterxml.jackson.databind.ObjectMapper
+// import com.fasterxml.jackson.module.kotlin.jacksonTypeRef
+// import kotlinx.coroutines.runBlocking
+// import mixit.security.model.Cryptographer
+// import mixit.talk.model.Language
+// import mixit.talk.model.Room
+// import mixit.talk.model.Talk
+// import mixit.talk.model.TalkFormat
+// import mixit.user.model.Link
+// import mixit.user.model.Role
+// import mixit.user.model.User
+// import mixit.user.repository.UserRepository
+// import mixit.util.encodeToMd5
+// import org.junit.jupiter.api.Test
+// import org.springframework.beans.factory.annotation.Autowired
+// import org.springframework.boot.test.context.SpringBootTest
+// import org.springframework.core.io.ResourceLoader
+// import java.io.File
+// import java.io.FileOutputStream
+// import java.io.InputStream
+// import java.net.URL
+// import java.time.LocalDateTime
+// import java.time.format.DateTimeFormatter
+// import java.util.UUID
 //
-//inline fun <reified T> ObjectMapper.readValue(src: InputStream): T = readValue(src, jacksonTypeRef<T>())
+// inline fun <reified T> ObjectMapper.readValue(src: InputStream): T = readValue(src, jacksonTypeRef<T>())
 //
-//data class TalkSessionizeDto(
+// data class TalkSessionizeDto(
 //    val session_id: String,
 //    val title: String?,
 //    val description: String?,
@@ -56,15 +56,15 @@
 //    val blog: String?,
 //    val companyWS: String?,
 //    val picture: String?,
-//)
+// )
 //
-//@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-//class SessionizeImportTests(
+// @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+// class SessionizeImportTests(
 //    @Autowired val objectMapper: ObjectMapper,
 //    @Autowired val userRepository: UserRepository,
 //    @Autowired val cryptographer: Cryptographer,
 //    @Autowired val resourceLoader: ResourceLoader
-//) {
+// ) {
 //
 //    fun testDate(date: String?): LocalDateTime? {
 //        if (date == null) return null
@@ -223,9 +223,9 @@
 //    private fun getLanguage(lang: String): Language {
 //        return if (lang == "English") Language.ENGLISH else Language.FRENCH
 //    }
-//}
+// }
 //
-//fun getImageUrl(user: User, pictureUrl: String?): String? {
+// fun getImageUrl(user: User, pictureUrl: String?): String? {
 //    System.out.println("user ${user.lastname} -> ${user.photoUrl}")
 //    if (!user.photoUrl.isNullOrEmpty()) {
 //        if (user.photoUrl!!.contains("/mixitconf")) {
@@ -239,14 +239,14 @@
 //        return "https://www.gravatar.com/avatar/${user.emailHash}?s=400"
 //    }
 //    return pictureUrl
-//}
+// }
 //
-//fun bioToMap(bio: String?) = if (bio == null) mapOf(
+// fun bioToMap(bio: String?) = if (bio == null) mapOf(
 //    Pair(Language.FRENCH, "UNKNOWN"),
 //    Pair(Language.ENGLISH, "UNKNOWN")
-//) else mapOf(Pair(Language.FRENCH, bio), Pair(Language.ENGLISH, bio))
+// ) else mapOf(Pair(Language.FRENCH, bio), Pair(Language.ENGLISH, bio))
 //
-//val SPECIAL_SLUG_CHARACTERS = mapOf(
+// val SPECIAL_SLUG_CHARACTERS = mapOf(
 //    Pair('é', 'e'),
 //    Pair('è', 'e'),
 //    Pair('ï', 'i'),
@@ -256,20 +256,20 @@
 //    Pair('-', '_'),
 //    Pair('_', '0'),
 //    Pair('∴', '0')
-//)
+// )
 //
-//fun sanitize(value: String): String = value.lowercase().toCharArray()
+// fun sanitize(value: String): String = value.lowercase().toCharArray()
 //    .map { if (SPECIAL_SLUG_CHARACTERS.get(it) == null) it else SPECIAL_SLUG_CHARACTERS.get(it) }.joinToString("")
 //
-//fun initializeFolder() {
+// fun initializeFolder() {
 //    // Check if /tmp/images/ exists ?
 //    val directory = File("/tmp/mixit/")
 //    if (!directory.exists()) {
 //        directory.mkdir()
 //    }
-//}
+// }
 //
-//fun downloadImage(url: String, filename: String): Boolean {
+// fun downloadImage(url: String, filename: String): Boolean {
 //    try {
 //        val emplacement = File("/tmp/mixit/$filename")
 //        if (emplacement.exists()) {
@@ -295,9 +295,9 @@
 //        e.printStackTrace()
 //        return false
 //    }
-//}
+// }
 //
-//fun toMixitTopic(rawTopic: String): String =
+// fun toMixitTopic(rawTopic: String): String =
 //    when (rawTopic) {
 //        "Maker" -> "makers"
 //        "Design" -> "design"
@@ -310,7 +310,7 @@
 //        else -> "other"
 //    }
 //
-//fun toRoom(room: String?): Room =
+// fun toRoom(room: String?): Room =
 //    when (room) {
 //        "F08 (100 places)" -> Room.ROOM1
 //        "F02/F03 (100 places)" -> Room.ROOM2
