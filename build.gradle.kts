@@ -101,7 +101,7 @@ tasks.register<Copy>("copyJsVendors") {
 tasks.register<NpmTask>("compileTypescript") {
     dependsOn(tasks.npmInstall)
     npmCommand.set(listOf("run", "typescript"))
-    args.set(listOf("--", "--out-dir", "${layout.buildDirectory}/npm-output"))
+    //args.set(listOf("--", "--out-dir", "${layout.buildDirectory}/npm-output"))
     inputs.dir("src/main/ts")
     outputs.dir("${layout.buildDirectory}/resources/main/static/js")
 }
