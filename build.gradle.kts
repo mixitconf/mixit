@@ -10,7 +10,6 @@ plugins {
     id("org.jmailen.kotlinter") version "3.7.0"
     kotlin("jvm") version kotlinVersion
     kotlin("plugin.spring") version kotlinVersion
-   // kotlin("kapt") version kotlinVersion
 }
 
 version = "2024.0.0-SNAPSHOT"
@@ -50,8 +49,6 @@ dependencies {
     implementation("com.google.api-client:google-api-client:$gmailApiVersion")
     implementation("com.google.apis:google-api-services-gmail:$googleApiVersion")
     implementation("com.googlecode.owasp-java-html-sanitizer:owasp-java-html-sanitizer:$googleOwaspVersion")
-
-    //kapt("org.springframework.boot:spring-boot-configuration-processor")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 
