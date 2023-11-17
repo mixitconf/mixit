@@ -126,4 +126,3 @@ fun User.desanonymize(cryptographer: Cryptographer) =
             )
         }
     )
-

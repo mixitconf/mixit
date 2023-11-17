@@ -122,25 +122,25 @@ data class CachedTalk(
             if (format == RANDOM) {
                 if (language == Language.ENGLISH)
                     "This is a \"Random\" talk. For this track we choose the program for you. You are in a room, " +
-                            "and a speaker comes to speak about a subject for which you ignore the content. Don't be " +
-                            "afraid it's only for 20 minutes. As it's a surprise we don't display the session summary" +
-                            " before...   "
+                        "and a speaker comes to speak about a subject for which you ignore the content. Don't be " +
+                        "afraid it's only for 20 minutes. As it's a surprise we don't display the session summary" +
+                        " before...   "
                 else
                     "Ce talk est de type \"random\". Pour cette track, nous choisissons le programme pour vous." +
-                            "Vous êtes dans une pièce et un speaker vient parler d'un sujet dont vous ignorez le " +
-                            "contenu. N'ayez pas peur, c'est seulement pour 20 minutes. Comme c'est une surprise, " +
-                            "nous n'affichons pas le résumé de la session avant ..."
+                        "Vous êtes dans une pièce et un speaker vient parler d'un sujet dont vous ignorez le " +
+                        "contenu. N'ayez pas peur, c'est seulement pour 20 minutes. Comme c'est une surprise, " +
+                        "nous n'affichons pas le résumé de la session avant ..."
             } else {
                 if (language == Language.ENGLISH)
                     "This is a \"surprise\" talk. For our keynote we choose the programm for you. You are in a room, " +
-                            "and a speaker come to speak about a subject for which you ignore the content. Don't be " +
-                            "afraid it's only for 30 minutes. As it's a surprise we don't display the " +
-                            "session summary before...   "
+                        "and a speaker come to speak about a subject for which you ignore the content. Don't be " +
+                        "afraid it's only for 30 minutes. As it's a surprise we don't display the " +
+                        "session summary before...   "
                 else
                     "Ce talk est une \"surprise\". Pour cette track, nous choisissons le programme pour vous. " +
-                            "Vous êtes dans une pièce et un speaker vient parler d'un sujet dont vous ignorez le " +
-                            "contenu. N'ayez pas peur, c'est seulement pour 30 minutes. Comme c'est une surprise, " +
-                            "nous n'affichons pas le résumé de la session avant ..."
+                        "Vous êtes dans une pièce et un speaker vient parler d'un sujet dont vous ignorez le " +
+                        "contenu. N'ayez pas peur, c'est seulement pour 30 minutes. Comme c'est une surprise, " +
+                        "nous n'affichons pas le résumé de la session avant ..."
             }
         } else {
             summary

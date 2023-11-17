@@ -48,6 +48,5 @@ class EventImagesRepository(
     fun save(event: EventImages) =
         template.save(event)
 
-
     fun deleteAll() = template.remove<EventImages>(Query())
 }

@@ -16,5 +16,4 @@ class EventImagesService(
 
     fun save(event: EventImages) =
         repository.save(event).doOnSuccess { cache.invalidateAll() }
-
 }

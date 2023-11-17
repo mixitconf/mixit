@@ -68,12 +68,12 @@ class AdminTicketHandler(
 
     suspend fun ticketing(req: ServerRequest): ServerResponse {
         val formData = req.extractFormData()
-        val type = formData["type"]?.let {  TicketType.valueOf(it)}
+        val type = formData["type"]?.let { TicketType.valueOf(it) }
         val tickets = service.findAll().filter { type == null || it.type == type }.map { it.toDto(cryptographer) }
         val params = mapOf(
             TITLE to AdminTicket.title,
             TICKETS to tickets,
-            TYPES to TicketType.values().map {  it to false}
+            TYPES to TicketType.values().map { it to false }
         )
         val template = if (properties.feature.lotteryResult) AdminTicket.template else throw NotFoundException()
         return ok().renderAndAwait(template, params)
@@ -172,14 +172,11 @@ class AdminTicketHandler(
                     lastname = cryptographer.encrypt(it.lastname)!!,
                     login = cryptographer.encrypt(it.login),
                 )
-
             }
             .also { service.save(it) }
 
-
         return seeOther("${properties.baseUri}$LIST_URI")
     }
-
 
     suspend fun adminImportStaff(req: ServerRequest): ServerResponse =
         adminImportStaffOrVolunteer(req, TicketType.STAFF)
@@ -189,7 +186,7 @@ class AdminTicketHandler(
 
     suspend fun adminImportSponsors(req: ServerRequest): ServerResponse {
         listOf(SPONSOR_LANYARD, SPONSOR_STAND, SPONSOR_MIXTEEN, SPONSOR_PARTNER, SPONSOR_PARTY)
-            .onEach { service.deleteAll(it)}
+            .onEach { service.deleteAll(it) }
 
         val levelTypeWithEntries = listOf(GOLD, LANYARD, SILVER, MIXTEEN, PARTY)
         this.eventService.findByYear(MixitApplication.CURRENT_EVENT)
@@ -243,7 +240,6 @@ class AdminTicketHandler(
 
         return seeOther("${properties.baseUri}$LIST_URI")
     }
-
 
     suspend fun adminDeleteTicket(req: ServerRequest): ServerResponse {
         val formData = req.extractFormData()

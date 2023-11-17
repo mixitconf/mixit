@@ -84,7 +84,8 @@ class LotteryHandler(
             cryptographer.decrypt(ticket.email)!!,
             cryptographer.decrypt(ticket.firstname)!!,
             cryptographer.decrypt(ticket.lastname)!!,
-            ticket.email)
+            ticket.email
+        )
         emailService.send(MustacheTemplate.EmailTicketing.template, user, locale)
         return ok().render(LotterySubmission.template, formData).awaitSingle()
     }

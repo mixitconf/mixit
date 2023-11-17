@@ -1,24 +1,24 @@
-//package mixit.import
+// package mixit.import
 //
-//import com.fasterxml.jackson.databind.ObjectMapper
-//import mixit.event.handler.AdminEventHandler
-//import mixit.security.model.Cryptographer
-//import mixit.talk.model.TalkService
-//import mixit.user.repository.UserRepository
-//import org.springframework.beans.factory.annotation.Autowired
-//import org.springframework.boot.test.context.SpringBootTest
-//import org.springframework.core.io.ClassPathResource
-//import java.io.File
-//import java.io.FileOutputStream
-//import java.net.URL
+// import com.fasterxml.jackson.databind.ObjectMapper
+// import mixit.event.handler.AdminEventHandler
+// import mixit.security.model.Cryptographer
+// import mixit.talk.model.TalkService
+// import mixit.user.repository.UserRepository
+// import org.springframework.beans.factory.annotation.Autowired
+// import org.springframework.boot.test.context.SpringBootTest
+// import org.springframework.core.io.ClassPathResource
+// import java.io.File
+// import java.io.FileOutputStream
+// import java.net.URL
 //
-//@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-//class SpeakerImageDownloader(
+// @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+// class SpeakerImageDownloader(
 //    @Autowired val objectMapper: ObjectMapper,
 //    @Autowired val userRepository: UserRepository,
 //    @Autowired val talkService: TalkService,
 //    @Autowired val cryptographer: Cryptographer
-//) {
+// ) {
 //
 //    // @Test
 //    fun `load speakers`() {
@@ -83,4 +83,4 @@
 //            }
 //        }
 //    }
-//}
+// }

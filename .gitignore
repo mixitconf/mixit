@@ -14,3 +14,4 @@ src/main/resources/static/images/
 
 # MacOS
 .DS_Store
+/src/main/resources/data/users_uncrypted.json

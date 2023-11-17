@@ -1,17 +1,18 @@
 package mixit.features.repository
 
-import com.fasterxml.jackson.module.kotlin.readValue
 import kotlinx.coroutines.reactor.awaitSingle
 import mixit.features.model.Feature
 import mixit.features.model.FeatureState
-import mixit.mixette.model.MixetteDonation
-import org.springframework.core.io.ClassPathResource
-import org.springframework.data.domain.Sort
-import org.springframework.data.mongodb.core.*
+import org.springframework.data.mongodb.core.ReactiveMongoTemplate
+import org.springframework.data.mongodb.core.count
+import org.springframework.data.mongodb.core.findAll
+import org.springframework.data.mongodb.core.findById
+import org.springframework.data.mongodb.core.findOne
 import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Criteria.where
 import org.springframework.data.mongodb.core.query.Query
 import org.springframework.data.mongodb.core.query.isEqualTo
+import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Mono
 
@@ -25,7 +26,6 @@ class FeatureStateRepository(private val template: ReactiveMongoTemplate) {
     }
 
     fun count() = template.count<FeatureState>()
-
 
     suspend fun findOne(id: String): FeatureState =
         template.findById<FeatureState>(id).awaitSingle()

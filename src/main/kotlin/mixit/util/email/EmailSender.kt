@@ -11,9 +11,9 @@ import org.springframework.mail.javamail.MimeMessageHelper
 import org.springframework.stereotype.Component
 import java.io.ByteArrayOutputStream
 import java.util.Properties
-import javax.mail.Session
-import javax.mail.internet.InternetAddress
-import javax.mail.internet.MimeMessage
+import jakarta.mail.Session
+import jakarta.mail.internet.InternetAddress
+import jakarta.mail.internet.MimeMessage
 
 /**
  * Email
@@ -40,9 +40,9 @@ class GmailApiSender(private val properties: MixitProperties, private val gmailS
         val message = MimeMessage(session)
 
         message.setFrom(InternetAddress(properties.contact))
-        message.addRecipient(javax.mail.Message.RecipientType.TO, InternetAddress(email.to))
+        message.addRecipient(jakarta.mail.Message.RecipientType.TO, InternetAddress(email.to))
         if (email.bcc != null) {
-            message.addRecipients(javax.mail.Message.RecipientType.BCC, email.bcc)
+            message.addRecipients(jakarta.mail.Message.RecipientType.BCC, email.bcc)
         }
         message.subject = email.subject
         message.setContent(email.content, "${MediaType.TEXT_HTML_VALUE}; charset=UTF-8")

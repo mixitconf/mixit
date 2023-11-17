@@ -73,7 +73,6 @@ class AdminEventImagesHandler(
             ?.let { this.adminEditEventImages(it.toEventImages()) }
             ?: throw NotFoundException()
 
-
     suspend fun adminSaveEventImages(req: ServerRequest): ServerResponse {
         val formData = req.extractFormData()
         // We need to find the event in database
@@ -113,7 +112,7 @@ class AdminEventImagesHandler(
             } else it
         }
         service.save(event.copy(sections = sections)).awaitSingleOrNull()
-        return seeOther("${properties.baseUri}${LIST_URI}/edit/${event.event}")
+        return seeOther("${properties.baseUri}$LIST_URI/edit/${event.event}")
     }
 
     suspend fun adminCreateEventImagesSection(req: ServerRequest): ServerResponse {
@@ -122,7 +121,7 @@ class AdminEventImagesHandler(
         val sections = event.sections.toMutableList()
         sections.add(EventImagesSection(formData["sectionId"]!!, formData["i18n"]!!, emptyList()))
         service.save(event.copy(sections = sections)).awaitSingleOrNull()
-        return seeOther("${properties.baseUri}${LIST_URI}/edit/${event.event}")
+        return seeOther("${properties.baseUri}$LIST_URI/edit/${event.event}")
     }
 
     suspend fun adminDeleteEventImagesSection(req: ServerRequest): ServerResponse {
@@ -130,7 +129,7 @@ class AdminEventImagesHandler(
         val event = loadEventImages(formData)
         val sections = event.sections.filter { it.sectionId != formData["sectionId"]!! }
         service.save(event.copy(sections = sections)).awaitSingleOrNull()
-        return seeOther("${properties.baseUri}${LIST_URI}/edit/${event.event}")
+        return seeOther("${properties.baseUri}$LIST_URI/edit/${event.event}")
     }
 
     private suspend fun loadEventImages(formData: Map<String, String?>): EventImages =
@@ -183,15 +182,20 @@ class AdminEventImagesHandler(
             if (img.name == formData["name"]!!) {
                 img.copy(
                     talkId = formData["talkId"],
-                    mustacheTemplate = formData["template"]?.let { MustacheTemplate.valueOf(it) })
+                    mustacheTemplate = formData["template"]?.let { MustacheTemplate.valueOf(it) }
+                )
             } else img
         }
-        service.save(event.copy(sections = event.sections.map {
-            if (it.sectionId == section.sectionId) section.copy(
-                images = images
-            ) else it
-        })).awaitSingleOrNull()
-        return seeOther("${properties.baseUri}${LIST_URI}/${event.event}/sections/edit/${section.sectionId}")
+        service.save(
+            event.copy(
+                sections = event.sections.map {
+                    if (it.sectionId == section.sectionId) section.copy(
+                        images = images
+                    ) else it
+                }
+            )
+        ).awaitSingleOrNull()
+        return seeOther("${properties.baseUri}$LIST_URI/${event.event}/sections/edit/${section.sectionId}")
     }
 
     suspend fun adminCreateEventImagesSectionImage(req: ServerRequest): ServerResponse {
@@ -203,14 +207,19 @@ class AdminEventImagesHandler(
             EventImage(
                 formData["name"]!!,
                 formData["talkId"],
-                formData["template"]?.let { MustacheTemplate.valueOf(it) })
+                formData["template"]?.let { MustacheTemplate.valueOf(it) }
+            )
         )
-        service.save(event.copy(sections = event.sections.map {
-            if (it.sectionId == section.sectionId) section.copy(
-                images = images
-            ) else it
-        })).awaitSingleOrNull()
-        return seeOther("${properties.baseUri}${LIST_URI}/${event.event}/sections/edit/${section.sectionId}")
+        service.save(
+            event.copy(
+                sections = event.sections.map {
+                    if (it.sectionId == section.sectionId) section.copy(
+                        images = images
+                    ) else it
+                }
+            )
+        ).awaitSingleOrNull()
+        return seeOther("${properties.baseUri}$LIST_URI/${event.event}/sections/edit/${section.sectionId}")
     }
 
     suspend fun adminDeleteEventImagesSectionImage(req: ServerRequest): ServerResponse {
@@ -218,17 +227,20 @@ class AdminEventImagesHandler(
         val event = loadEventImages(formData)
         val section = loadEventSection(formData)
         val images = section.images.filter { it.name != formData["name"]!! }
-        service.save(event.copy(sections = event.sections.map {
-            if (it.sectionId == section.sectionId) section.copy(
-                images = images
-            ) else it
-        })).awaitSingleOrNull()
-        return seeOther("${properties.baseUri}${LIST_URI}/${event.event}/sections/edit/${section.sectionId}")
+        service.save(
+            event.copy(
+                sections = event.sections.map {
+                    if (it.sectionId == section.sectionId) section.copy(
+                        images = images
+                    ) else it
+                }
+            )
+        ).awaitSingleOrNull()
+        return seeOther("${properties.baseUri}$LIST_URI/${event.event}/sections/edit/${section.sectionId}")
     }
 
     private suspend fun loadEventSection(formData: Map<String, String?>): EventImagesSection =
         loadEventImages(formData).sections
             .firstOrNull { it.sectionId == formData["sectionId"] }
             ?: throw NotFoundException()
-
 }

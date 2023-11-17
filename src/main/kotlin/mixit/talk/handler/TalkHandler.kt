@@ -122,7 +122,6 @@ class TalkHandler(
     suspend fun scheduleView(req: ServerRequest) =
         ok().renderAndAwait(Schedule.template, mapOf(TITLE to Schedule.title))
 
-
     private data class TalkKey(val date: String, val id: String = date.replace(" ", "").lowercase())
 
     suspend fun findByEventView(config: TalkViewConfig): ServerResponse {
@@ -139,16 +138,18 @@ class TalkHandler(
                         .filterNot { it.title.contains("Keynote team") }
                         .toList()
                 } else talks
-
-            }, config.viewWorkshop
+            },
+            config.viewWorkshop
         )
         val event = eventService.findByYear(config.year)
         val title = if (config.topic == null) "${config.template.title}|${config.year}" else
             "${config.template.title}.${config.topic}|${config.year}"
         val images = findImages(config)
         val closestImages = findClosestImages(config)
-        val days = (0..Duration.between(event.start.atStartOfDay(), event.end.atStartOfDay())
-            .toDays()).map { event.start.plusDays(it) }
+        val days = (
+            0..Duration.between(event.start.atStartOfDay(), event.end.atStartOfDay())
+                .toDays()
+            ).map { event.start.plusDays(it) }
         val rooms = roomsToDisplayOnAgenda(talks)
         val canDisplayAgenda = rooms.isNotEmpty() && !(rooms.contains(Room.UNKNOWN) && rooms.size == 1)
 
@@ -213,13 +214,13 @@ class TalkHandler(
         if (filteredTalks.isEmpty()) {
             return emptyMap()
         }
-        val keys: Map<String, LocalDate> = (1..days.size).associate { "day${it}" to days[it - 1] }
+        val keys: Map<String, LocalDate> = (1..days.size).associate { "day$it" to days[it - 1] }
         return keys.entries.associate { (day, localDate) ->
             day to DayTalksDto(
                 day,
                 localDate.atStartOfDay().formatTalkDate(language),
                 day == "day1",
-                filteredTalks.filter { it.startLocalDateTime == null || it.startLocalDateTime?.toLocalDate() == localDate }
+                filteredTalks.filter { it.startLocalDateTime == null || it.startLocalDateTime.toLocalDate() == localDate }
             )
         }
     }
@@ -237,7 +238,7 @@ class TalkHandler(
         if (rooms.isEmpty() || filteredTalks.isEmpty()) {
             return emptyMap()
         }
-        val keys: Map<String, LocalDate> = (1..days.size).associate { "day${it}" to days[it - 1] }
+        val keys: Map<String, LocalDate> = (1..days.size).associate { "day$it" to days[it - 1] }
         return keys.entries.associate { (day, localDate) ->
             day to DayRoomTalksDto(
                 day,
@@ -292,7 +293,6 @@ class TalkHandler(
                 val sliceDuration = talkOnSliceAndRoom?.let {
                     Duration.between(it.startLocalDateTime, it.endLocalDateTime).toMinutes() / 5
                 } ?: 1
-
 
                 RoomTalkDto(
                     sliceStart.formatTalkTime(language),
@@ -376,9 +376,11 @@ class TalkHandler(
             // If an url is specified in the query param we display only this image
             if (config.url != null) {
                 eventImagesService.findOneOrNull(config.year.toString()).let { images ->
-                    images?.copy(sections = images.sections
-                        .filter { it.sectionId == config.album }
-                        .map { it.copy(pictures = it.pictures.filter { pic -> pic.name == config.url }) })
+                    images?.copy(
+                        sections = images.sections
+                            .filter { it.sectionId == config.album }
+                            .map { it.copy(pictures = it.pictures.filter { pic -> pic.name == config.url }) }
+                    )
                 }
             } else {
                 // We select all the album images
@@ -392,7 +394,8 @@ class TalkHandler(
                 images?.copy(
                     sections = images.sections.map { section ->
                         section.copy(pictures = section.pictures.firstOrNull()?.let { listOf(it) } ?: emptyList())
-                    })
+                    }
+                )
             }
         }
 

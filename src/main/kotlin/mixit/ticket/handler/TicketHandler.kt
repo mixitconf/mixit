@@ -1,50 +1,20 @@
 package mixit.ticket.handler
 
-import kotlinx.coroutines.reactor.awaitSingleOrNull
-import mixit.MixitApplication
-import mixit.MixitProperties
-import mixit.event.model.EventService
-import mixit.event.model.SponsorshipLevel.GOLD
-import mixit.event.model.SponsorshipLevel.LANYARD
-import mixit.event.model.SponsorshipLevel.MIXTEEN
-import mixit.event.model.SponsorshipLevel.PARTY
-import mixit.event.model.SponsorshipLevel.SILVER
-import mixit.routes.MustacheI18n
-import mixit.routes.MustacheI18n.CREATION_MODE
-import mixit.routes.MustacheI18n.MESSAGE
-import mixit.routes.MustacheI18n.TICKET
-import mixit.routes.MustacheI18n.TICKETS
-import mixit.routes.MustacheI18n.TITLE
-import mixit.routes.MustacheI18n.TYPES
 import mixit.routes.MustacheTemplate
-import mixit.routes.MustacheTemplate.AdminTicket
-import mixit.routes.MustacheTemplate.AdminTicketEdit
-import mixit.routes.MustacheTemplate.AdminTicketPrint
-import mixit.routes.MustacheTemplate.TicketError
 import mixit.routes.Routes
-import mixit.security.MixitWebFilter
-import mixit.security.model.Cryptographer
-import mixit.talk.model.TalkService
-import mixit.ticket.model.Ticket
 import mixit.ticket.model.TicketService
-import mixit.ticket.model.TicketType
-import mixit.ticket.model.TicketType.*
-import mixit.user.handler.UserHandler
-import mixit.user.handler.dto.toDto
-import mixit.user.model.Role
+import mixit.ticket.model.TicketType.ATTENDEE
+import mixit.ticket.model.TicketType.SPONSOR_LANYARD
+import mixit.ticket.model.TicketType.SPONSOR_MIXTEEN
+import mixit.ticket.model.TicketType.SPONSOR_PARTNER
+import mixit.ticket.model.TicketType.SPONSOR_PARTY
+import mixit.ticket.model.TicketType.SPONSOR_STAND
 import mixit.user.model.UserService
-import mixit.util.*
-import mixit.util.errors.NotFoundException
-import org.springframework.dao.DuplicateKeyException
-import org.springframework.data.crossstore.ChangeSetPersister
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
-import org.springframework.web.reactive.function.server.bodyValueAndAwait
 import org.springframework.web.reactive.function.server.renderAndAwait
-import reactor.core.publisher.Mono
-import java.time.Instant
 
 @Component
 class TicketHandler(
@@ -74,9 +44,8 @@ class TicketHandler(
             } else {
                 "/user/${user.login}"
             }
-
         } else {
-            "/ticket/${ticketNumber}"
+            "/ticket/$ticketNumber"
         }
     }
 

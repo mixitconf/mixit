@@ -1,34 +1,34 @@
-//package mixit.util.web.service
+// package mixit.util.web.service
 //
-//import io.mockk.confirmVerified
-//import io.mockk.every
-//import io.mockk.impl.annotations.InjectMockKs
-//import io.mockk.impl.annotations.MockK
-//import io.mockk.impl.annotations.SpyK
-//import io.mockk.junit5.MockKExtension
-//import io.mockk.verify
-//import mixit.security.model.AuthenticationService
-//import mixit.security.model.Cryptographer
-//import mixit.ticket.model.LotteryTicket
-//import mixit.ticket.repository.LotteryRepository
-//import mixit.user.model.Role
-//import mixit.user.model.User
-//import mixit.user.repository.UserRepository
-//import mixit.util.email.EmailService
-//import mixit.util.errors.DuplicateException
-//import mixit.util.errors.EmailSenderException
-//import mixit.util.errors.NotFoundException
-//import mixit.util.errors.TokenException
-//import mixit.util.validator.EmailValidator
-//import org.junit.jupiter.api.Test
-//import org.junit.jupiter.api.extension.ExtendWith
-//import reactor.core.publisher.Mono
-//import reactor.test.StepVerifier
-//import java.time.LocalDateTime
-//import java.util.Locale
+// import io.mockk.confirmVerified
+// import io.mockk.every
+// import io.mockk.impl.annotations.InjectMockKs
+// import io.mockk.impl.annotations.MockK
+// import io.mockk.impl.annotations.SpyK
+// import io.mockk.junit5.MockKExtension
+// import io.mockk.verify
+// import mixit.security.model.AuthenticationService
+// import mixit.security.model.Cryptographer
+// import mixit.ticket.model.LotteryTicket
+// import mixit.ticket.repository.LotteryRepository
+// import mixit.user.model.Role
+// import mixit.user.model.User
+// import mixit.user.repository.UserRepository
+// import mixit.util.email.EmailService
+// import mixit.util.errors.DuplicateException
+// import mixit.util.errors.EmailSenderException
+// import mixit.util.errors.NotFoundException
+// import mixit.util.errors.TokenException
+// import mixit.util.validator.EmailValidator
+// import org.junit.jupiter.api.Test
+// import org.junit.jupiter.api.extension.ExtendWith
+// import reactor.core.publisher.Mono
+// import reactor.test.StepVerifier
+// import java.time.LocalDateTime
+// import java.util.Locale
 //
-//@ExtendWith(MockKExtension::class)
-//internal class AuthenticationServiceTest {
+// @ExtendWith(MockKExtension::class)
+// internal class AuthenticationServiceTest {
 //
 //    @MockK
 //    lateinit var userRepository: UserRepository
@@ -202,4 +202,4 @@
 //            .expectNext(aUser)
 //            .verifyComplete()
 //    }
-//}
+// }

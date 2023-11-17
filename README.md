@@ -19,7 +19,7 @@ developed with Spring Boot 2, Spring WebFlux and Kotlin can look like:
 ### Technologies used
 
  - Language: [Kotlin](https://kotlin.link/) 
- - Framework: [Spring Boot 2.x](https://projects.spring.io/spring-boot/) with [Spring 5 Kotlin support](https://docs.spring.io/spring-framework/docs/5.0.x/spring-framework-reference/kotlin.html) and [Spring WebFlux functional](https://docs.spring.io/spring-framework/docs/5.0.x/spring-framework-reference/reactive-web.html)
+ - Framework: [Spring Boot 3.x](https://projects.spring.io/spring-boot/) with [Spring 5 Kotlin support](https://docs.spring.io/spring-framework/docs/5.0.x/spring-framework-reference/kotlin.html) and [Spring WebFlux functional](https://docs.spring.io/spring-framework/docs/5.0.x/spring-framework-reference/reactive-web.html)
  - Engine: [Netty](http://netty.io/) used for client and server
  - Templates: [Mustache](https://github.com/samskivert/jmustache) (will be migrated later to [Kotlin typesafe templates](https://github.com/sdeleuze/kotlin-script-templating))
  - Reactive API: [Reactor](http://projectreactor.io/)

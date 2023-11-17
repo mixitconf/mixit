@@ -34,7 +34,7 @@ class DatabaseInitializerConfig {
         favoriteRepository: FavoriteRepository,
         ticketRepository: TicketRepository,
         mixetteDonationRepository: MixetteDonationRepository,
-        featureStateRepository:FeatureStateRepository,
+        featureStateRepository: FeatureStateRepository,
         eventService: EventService,
         eventImagesService: EventImagesService,
         blogService: BlogService,

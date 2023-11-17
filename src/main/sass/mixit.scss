@@ -43,54 +43,7 @@ $link-decoration: none;
 $link-hover-decoration: none;
 $enable-cssgrid: true;
 
-// 3. Include remainder of required Bootstrap stylesheets
-@import "../../../node_modules/bootstrap/scss/variables";
-@import "../../../node_modules/bootstrap/scss/mixins";
-@import "../../../node_modules/bootstrap/scss/maps";
-@import "../../../node_modules/bootstrap/scss/root";
-
-// 4. Include any optional Bootstrap CSS as needed
-@import "../../../node_modules/bootstrap/scss/utilities";
-@import "../../../node_modules/bootstrap/scss/root";
-@import "../../../node_modules/bootstrap/scss/reboot";
-@import "../../../node_modules/bootstrap/scss/type";
-@import "../../../node_modules/bootstrap/scss/images";
-@import "../../../node_modules/bootstrap/scss/card";
-@import "../../../node_modules/bootstrap/scss/badge";
-@import "../../../node_modules/bootstrap/scss/containers";
-@import "../../../node_modules/bootstrap/scss/grid";
-@import "../../../node_modules/bootstrap/scss/tables";
-@import "../../../node_modules/bootstrap/scss/forms";
-@import "../../../node_modules/bootstrap/scss/buttons";
-@import "../../../node_modules/bootstrap/scss/transitions";
-@import "../../../node_modules/bootstrap/scss/tooltip";
-@import "../../../node_modules/bootstrap/scss/button-group";
-@import "../../../node_modules/bootstrap/scss/dropdown";
-@import "../../../node_modules/bootstrap/scss/navbar";
-@import "../../../node_modules/bootstrap/scss/nav";
-@import "../../../node_modules/bootstrap/scss/accordion";
-@import "../../../node_modules/bootstrap/scss/alert";
-
-@import "../../../node_modules/bootstrap/scss/helpers";
-@import "../../../node_modules/bootstrap/scss/utilities/api";
-
-//@import "breadcrumb";
-//@import "pagination";
-//@import "progress";
-//@import "list-group";
-//@import "close";
-//@import "toasts";
-//@import "modal";
-//@import "tooltip";
-//@import "popover";
-//@import "carousel";
-//@import "spinners";
-//@import "offcanvas";
-//@import "placeholders";
-//
-
-
-// navbar
+@import "../../../node_modules/bootstrap/scss/bootstrap";
 
 h3 {
   font-weight: 300;
