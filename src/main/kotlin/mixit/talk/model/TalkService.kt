@@ -48,7 +48,7 @@ class TalkService(
         findAll()
             .asSequence()
             .filter { it.format == TalkFormat.KEYNOTE }
-            .filter { (it.topic == topic || it.topic == Topic.OTHER.value) && (it.video !=null || it.video2 != null)}
+            .filter { (it.topic == topic || it.topic == Topic.OTHER.value) && (it.video != null || it.video2 != null) }
             .shuffled()
             .take(n)
             .toList()

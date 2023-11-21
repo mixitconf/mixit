@@ -125,6 +125,8 @@ tasks.getByName("processResources").dependsOn(
     "compileTypescript"
 )
 
+tasks.getByName("assemble").dependsOn("processResources")
+
 kotlinter {
     disabledRules = arrayOf("import-ordering")
 }

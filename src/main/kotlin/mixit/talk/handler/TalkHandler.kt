@@ -126,7 +126,6 @@ class TalkHandler(
 
     private data class TalkKey(val date: String, val id: String = date.replace(" ", "").lowercase())
 
-
     suspend fun findByEventView(config: TalkViewConfig): ServerResponse {
         val currentUserEmail = config.req.currentNonEncryptedUserEmail()
         val talks = filterTalkByFormat(
