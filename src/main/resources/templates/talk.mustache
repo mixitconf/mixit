@@ -1,8 +1,8 @@
 {{> header}}
 
-{{> header-common }}
 
-<div class="mxt-wrapper--header-page-title">
+
+<div class="container-xxl">
     <h2 class="pt-3 pb-3">#{{#i18n}}talk.format.{{talk.format}}{{/i18n}}</h2>
     {{#admin}}
         <div class="mxt-text--page-title pb-3">
@@ -10,7 +10,7 @@
         </div>
     {{/admin}}
 </div>
-<div class="container mxt-wrapper--page-content">
+<div class="container-xxl">
     <h1 class="text-center mxt-text--talk-h1 container pb-0">
         {{talk.title}}
         {{#connected}}
@@ -41,8 +41,8 @@
         {{#talk.topic}}
             <div class="mxt-text--cat mxt-text--cat-{{talk.topic}}">
                 <img src="/images/svg/mxt-icon--{{talk.topic}}.svg" class="mxt-icon--cat mxt-icon--cat__talks"
-                     alt="{{#i18n}}home.topics.{{talk.topic}}.title{{/i18n}}"/>
-                <span>{{#i18n}}home.topics.{{talk.topic}}.title{{/i18n}}</span>
+                     alt="{{#i18n}}topics.{{talk.topic}}.title{{/i18n}}"/>
+                <span>{{#i18n}}topics.{{talk.topic}}.title{{/i18n}}</span>
             </div>
         {{/talk.topic}}
         <div>{{#talk.date}}{{talk.date}}{{/talk.date}}</div>

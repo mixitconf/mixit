@@ -1,14 +1,14 @@
 {{> header}}
 
-{{> header-common }}
-<div class="mxt-wrapper--header-page-title">
+
+<div class="container-xxl">
     <h2 class="pt-3 pb-3">
         {{#speakerYear}}{{#i18n}}user.speaker{{/i18n}} {{speakerYear}}{{/speakerYear}}
         {{^speakerYear}}{{#i18n}}user.standard{{/i18n}}{{/speakerYear}}
     </h2>
 </div>
 
-<div class="container mxt-wrapper--page-content">
+<div class="container-xxl">
     {{#admin}}
         <div>
             <a href="{{localePrefix}}/admin/users/edit/{{user.login}}" class="btn btn-outline-primary" style="margin-bottom: 0">{{#i18n}}common.actions.update{{/i18n}}</a>

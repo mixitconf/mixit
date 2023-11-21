@@ -1,0 +1,42 @@
+<div>
+    <div class="mxt-video--player-header">
+        <div class="mxt-text--cat mxt-text--cat-{{topic}}">
+            <img src="/images/svg/mxt-icon--{{topic}}.svg" class="mxt-icon--cat mxt-icon--cat__talks"
+                 alt="{{#i18n}}topics.{{topic}}.title{{/i18n}}"/>
+            <span>{{#i18n}}topics.{{topic}}.title{{/i18n}} <b>{{event}}</b></span>
+        </div>
+        <div class="mxt-text--cat-format ps-2">
+            <strong>#{{#i18n}}talk.format.{{format}}{{/i18n}}</strong>
+        </div>
+        <div class="flex-fill"></div>
+        <div>
+            <a class="btn btn-outline-primary btn-sm"
+               href="{{localePrefix}}/{{event}}/{{slug}}">{{#i18n}}home.talk.plus{{/i18n}}</a>
+        </div>
+    </div>
+    <div class="mxt-video--player-video">
+        {{#vimeoPlayer}}
+            <div class="mxt-wrapper--intrinsic">
+                <iframe data-src="{{vimeoPlayer}}"
+                        class="mxt-wrapper--video-player mxt-img--lazyload"
+                        allowfullscreen></iframe>
+            </div>
+        {{/vimeoPlayer}}
+        {{^vimeoPlayer}}
+            <a href="{{video}}" target="_blank">
+                <img data-src="/images/svg/mxt-no-player.svg"
+                     class="mxt-img--lazyload"
+                     style="max-width: 100%"
+                     alt="No video player"/>
+            </a>
+        {{/vimeoPlayer}}
+    </div>
+    <div class="mxt-video--player-title text-center">
+        {{title}}
+    </div>
+    <div class="mxt-video--player-speaker text-center">
+        {{#speakers}}
+            <div>{{firstname}}&nbsp;{{lastname}}</div>
+        {{/speakers}}
+    </div>
+</div>

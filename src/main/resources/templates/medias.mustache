@@ -1,126 +1,72 @@
 {{> header}}
 
-{{> header-common }}
-
-<div class="mxt-wrapper--header-page-title">
-    <h1 class="pt-3 pb-3">
-        {{#i18n}}medias.title{{/i18n}}{{#i18n}}home.topics{{#topic}}.{{topic}}{{/topic}}.title{{/i18n}}
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            {{year}}
-        </button>
-        <ul class="dropdown-menu mxt-dropdown-header" aria-labelledby="dropdownMenuButton1">
-            <li><a href="{{localePrefix}}/2023/medias" class="dropdown-item">2023</a></li>
-            <li><a href="{{localePrefix}}/2022/medias" class="dropdown-item">2022</a></li>
-            <li><a href="{{localePrefix}}/2021/medias" class="dropdown-item">2021</a></li>
-            <li><a href="{{localePrefix}}/2019/medias" class="dropdown-item">2019</a></li>
-            <li><a href="{{localePrefix}}/2018/medias" class="dropdown-item">2018</a></li>
-            <li><a href="{{localePrefix}}/2017/medias" class="dropdown-item">2017</a></li>
-            <li><a href="{{localePrefix}}/2016/medias" class="dropdown-item">2016</a></li>
-            <li><a href="{{localePrefix}}/2015/medias" class="dropdown-item">2015</a></li>
-            <li><a href="{{localePrefix}}/2014/medias" class="dropdown-item">2014</a></li>
-            <li><a href="{{localePrefix}}/2013/medias" class="dropdown-item">2013</a></li>
-            <li><a href="{{localePrefix}}/2012/medias" class="dropdown-item">2012</a></li>
-        </ul>
-    </h1>
-</div>
-
-<div class="container mxt-wrapper--page-content">
-    <div class="lead text-center">{{#i18n}}medias.text{{/i18n}}</div>
+<div class="container-xxl">
+    <h1>{{#i18n}}medias.title{{/i18n}}{{#i18n}}topics{{#topic}}.{{topic}}{{/topic}}.title{{/i18n}}</h1>
+    <div>{{#i18n}}medias.text{{/i18n}}</div>
+    {{> year-selector}}
 </div>
 
 {{#event.videoUrl}}
-    <div class="container mxt-wrapper--page-content">
+    <div class="container-xxl">
         <h2>{{#i18n}}medias.html.soul{{/i18n}}</h2>
         <p>{{#i18n}}medias.html.soul.text{{/i18n}}</p>
         {{#videoUrl}}
-        <div class="row">
-
-            <div class="col-12 col-lg-4 col-md-6">
-                <div class="card m-1" style="height: 99%" >
-                    <div class="mxt-wrapper--intrinsic">
-                        <iframe src="{{videoUrl}}" class="mxt-wrapper--video-player" allowfullscreen></iframe>
+            <div class="row">
+                <div class="col-12 col-lg-4 col-md-6">
+                    <div class="card m-1" style="height: 99%">
+                        <div class="mxt-wrapper--intrinsic">
+                            <iframe src="{{videoUrl}}" class="mxt-wrapper--video-player" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         {{/videoUrl}}
         {{^videoUrl}}
-            &#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{videoUrl}}" target="_blank">{{#i18n}}talk.video.thevideo{{/i18n}}</a>
+            &#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{videoUrl}}" target="_blank">{{#i18n}}
+            talk.video.thevideo{{/i18n}}</a>
         {{/videoUrl}}
     </div>
 {{/event.videoUrl}}
 
 {{#images}}
-    <div class="container mxt-wrapper--page-content mt-4">
+    <div class="container-xxl">
         <h2>{{#i18n}}medias.html.images{{/i18n}}</h2>
-        <div class="row">
+        <div class="mxt-video--player-container">
             {{#images.sections}}
-            <div class="col-12 col-lg-4 col-md-6">
-                <div class="card m-1" style="height: 99%" >
-                    <div class="card-body">
-                        {{#pictures}}
-                            <img class="mxt-img--speakers"
-                                 src="https://raw.githubusercontent.com/mixitconf/mixitconf-images/main/{{year}}/{{sectionId}}/{{name}}">
-                        {{/pictures}}
-                        <h5 class="card-title pt-2">
-                        {{#i18n}}{{i18nLabel}}{{/i18n}}
-                        </h5>
-                        <div class="text-center">
-                            <a href="{{localePrefix}}/{{event}}/medias/images/{{sectionId}}" class="btn btn-outline-primary">{{#i18n}}images.readmore{{/i18n}}</a>
+                <div>
+                    <div class="mxt-video--player-header mb-2">
+                        <div class="flex-fill"></div>
+                        <div>
+                            <a href="{{localePrefix}}/{{event}}/medias/images/{{sectionId}}"
+                               class="btn btn-sm btn-outline-primary">{{#i18n}}images.readmore{{/i18n}}</a>
                         </div>
                     </div>
+                    <div class="mxt-video--player-video">
+                        {{#pictures}}
+                            <img class="mxt-img--speakers mxt-img--lazyload"
+                                 data-src="https://raw.githubusercontent.com/mixitconf/mixitconf-images/main/{{year}}/{{sectionId}}/{{name}}">
+                        {{/pictures}}
+                    </div>
+                    <div class="mxt-video--player-title text-center">
+                        {{#i18n}}{{i18nLabel}}{{/i18n}}
+                    </div>
                 </div>
-            </div>
             {{/images.sections}}
         </div>
     </div>
 {{/images}}
 
-<div class="container mxt-wrapper--page-content mt-4 mb-4">
+<div class="container-xxl">
     <h2>{{#i18n}}medias.html.videos{{/i18n}}</h2>
-    <div class="row">
-    {{#talks}}
-        <div class="col-12 col-lg-4 col-md-6">
-            <div class="card m-1" style="height: 99%" >
-                <div class="card-body">
-                    {{#topic}}
-                        <div class="mxt-text--cat mxt-text--cat-{{topic}}">
-                            <img src="/images/svg/mxt-icon--{{topic}}.svg" class="mxt-icon--cat mxt-icon--cat__talks"
-                                 alt="{{#i18n}}home.topics.{{topic}}.title{{/i18n}}"/>
-                            <span>{{#i18n}}home.topics.{{topic}}.title{{/i18n}}</span>
-                        </div>
-                    {{/topic}}
-                    <div style="display: inline" class="mxt-text--cat-format">#{{#i18n}}talk.format.{{format}}{{/i18n}}</div>
-                    {{#vimeoPlayer}}
-                    <div class="mxt-wrapper--intrinsic mb-3">
-                        <iframe src="{{vimeoPlayer}}" class="mxt-wrapper--video-player" allowfullscreen></iframe>
-                    </div>
-                    {{/vimeoPlayer}}
-                    <h5 class="card-title">
-                        {{title}}
-                        {{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
-                    </h5>
-                    <ul class="mxt-wrapper-list-inline mb-0 pb-0">
-                        {{#speakers}}
-                            <li>
-                                <span class="mxt-text--cat mxt-text--cat-speaker"
-                                      style="background-color: #e6e6e6; padding: 0.3em;color: #2c233d;font-size: small">{{firstname}}&nbsp;{{lastname}}</span>
-                            </li>
-                        {{/speakers}}
-                    </ul>
-                    <div class="text-center">
-                    <a href="{{localePrefix}}/{{event}}/{{slug}}" class="btn btn-outline-primary">{{#i18n}}talks.readmore{{/i18n}}</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    {{/talks}}
+    <div class="mxt-video--player-container">
+        {{#talks}}
+            {{>talk-video-viewer}}
+        {{/talks}}
     </div>
 </div>
-{{> sponsor-footer }}
 
 {{#connected}}
     <input type="hidden" id="email" value="{{email}}"/>
 {{/connected}}
 
-{{> footer}}
+{{> footer-sponsor}}

@@ -1,11 +1,11 @@
 {{> header}}
-{{> header-common }}
 
-<div class="mxt-wrapper--header-page-title">
+
+<div class="container-xxl">
     <h1 class="pt-3 pb-3">{{#i18n}}admin.event.title{{/i18n}}</h1>
 </div>
 
-<div class="container mxt-wrapper--page-content">
+<div class="container-xxl">
     {{^creationMode}}<form action="/admin/events/{{eventId}}/organizers/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.event.organizations.delete.confirm{{/i18n}}');">
         <input type="hidden" name="eventId" value="{{eventId}}"/>
         <input type="hidden" name="organizerLogin" value="{{eventOrganizer.organizerLogin}}"/>

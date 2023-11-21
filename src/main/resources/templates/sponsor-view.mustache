@@ -1,11 +1,11 @@
 {{> header}}
 
-{{> header-common }}
-<div class="mxt-wrapper--header-page-title">
+
+<div class="container-xxl">
     <h2 class="pt-3 pb-3">{{#i18n}}user.sponsor{{/i18n}}</h2>
 </div>
 
-<div class="container mxt-wrapper--page-content">
+<div class="container-xxl">
     <h1 class="text-center mxt-title--talk" style="margin-bottom: 0">
         {{^user.photoUrl}}{{user.company}}{{/user.photoUrl}}
     </h1>
@@ -48,7 +48,7 @@
     </div>
 </div>
 {{#connected}}{{#canUpdateProfile}}
-<div class="container mxt-wrapper--page-content mt-4">
+<div class="container-xxl mt-4">
     <div><small>{{#i18n}}user.form.rgpd{{/i18n}}</small></div>
 </div>
 {{/canUpdateProfile}}

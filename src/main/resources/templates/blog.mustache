@@ -1,7 +1,6 @@
 {{> header}}
-{{> header-common }}
 
-<div class="mxt-wrapper--header-page-title">
+<div class="container-xxl">
     <h1 class="pt-3 pb-3">
         {{#i18n}}blog.title{{/i18n}}
         <button class="btn btn-secondary dropdown-toggle mxt-dropdown-header" type="button"
@@ -24,12 +23,12 @@
     </h1>
 </div>
     {{^posts}}
-        <div class="container mxt-wrapper--page-content">
+        <div class="container-xxl">
             <div class="text-center">{{#i18n}}blog.none{{/i18n}}</div>
         </div>
     {{/posts}}
     {{#posts}}
-        <div class="container mxt-wrapper--page-content">
+        <div class="container-xxl">
         <article class="mb-4">
             <h2><a href="{{localePrefix}}/blog/{{slug}}" class="mxt-title--article">{{title}}</a></h2>
             <p class="subheader">{{#i18n}}blog.by{{/i18n}} <strong>{{author.firstname}}</strong>, {{#i18n}}blog.on{{/i18n}} <strong>{{addedAt}}</strong></p>
@@ -40,7 +39,4 @@
         <div>&nbsp;</div>
     {{/posts}}
 
-
-{{> sponsor-footer }}
-
-{{> footer}}
+{{> footer-sponsor}}

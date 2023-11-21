@@ -1,13 +1,10 @@
 {{> header}}
 
-<div class="mxt-wrapper--header">
+<div class="container-xxl">
     <h1 class="text-center pt-5">
         {{#isLogin}}{{#i18n}}login.title{{/i18n}}{{/isLogin}}
         {{^isLogin}}{{#i18n}}newsletter.title{{/i18n}}{{/isLogin}}
     </h1>
-</div>
-
-<div class="container mxt-wrapper--page-content">
     <div class="row">
         <div class="col-10 offset-1 col-lg-6 offset-lg-3 text-center">
             {{#i18n}}{{description}}{{/i18n}}

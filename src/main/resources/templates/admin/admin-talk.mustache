@@ -1,11 +1,11 @@
 {{> header}}
-{{> header-common }}
 
-<div class="mxt-wrapper--header-page-title">
+
+<div class="container-xxl">
     <h1 class="pt-3 pb-3">{{#i18n}}admin.talk.title{{/i18n}}</h1>
 </div>
 
-<div class="container mxt-wrapper--page-content">
+<div class="container-xxl">
     {{#talk.id}}<form class="text-center mb-4" action="/admin/talks/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.talk.delete.confirm{{/i18n}}');">
         <input type="hidden" name="id" value="{{talk.id}}"/>
         <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}common.actions.delete{{/i18n}}"/>

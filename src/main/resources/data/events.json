@@ -1995,10 +1995,66 @@
         "start": "2024-04-25",
         "end": "2024-04-26",
         "current": true,
-        "sponsors": [],
+        "sponsors": [
+            {
+                "level": "GOLD",
+                "sponsorId": "hackyourjob",
+                "subscriptionDate": "2023-11-16"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "agixis-sponsor",
+                "subscriptionDate": "2023-11-17"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "max-digital-service",
+                "subscriptionDate": "2023-11-18"
+            }
+        ],
         "organizations": [],
         "volunteers": [],
-        "organizers": [],
+        "organizers": [
+            {
+                "organizerLogin": "guillaumeehret"
+            },
+            {
+                "organizerLogin": "vbonnefond"
+            },
+            {
+                "organizerLogin": "herve.tran.pro"
+            },
+            {
+                "organizerLogin": "Charles Bouttaz"
+            },
+            {
+                "organizerLogin": "greg"
+            },
+            {
+                "organizerLogin": "neveu.audrey"
+            },
+            {
+                "organizerLogin": "agnes"
+            },
+            {
+                "organizerLogin": "mpetitdant"
+            },
+            {
+                "organizerLogin": "amelyeb"
+            },
+            {
+                "organizerLogin": "anais-paillette"
+            },
+            {
+                "organizerLogin": "romain"
+            },
+            {
+                "organizerLogin": "horalass"
+            },
+            {
+                "organizerLogin": "106329914971209052078"
+            }
+        ],
         "photoUrls": [],
         "videoUrl": null,
         "schedulingFileUrl": null,

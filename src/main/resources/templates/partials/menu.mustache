@@ -1,78 +1,123 @@
-<div class="mxt-wrapper--page">
-    <nav class="navbar navbar-expand-lg navbar-light mxt-navbar fixed-top">
-        <div class="container-fluid">
-            <a href="{{localePrefix}}/{{#fr}}fr/{{/fr}}" class="navbar-brand mxt-anchor--svg" rel="nofollow">
-                <img src="/images/svg/mxt-icon--logo.svg" class="mxt-icon--logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse text-right" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                </ul>
-                <div class="d-flex">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        {{#admin}}<li class="nav-item">
-                            <a href="{{localePrefix}}/admin" class="nav-link mxt-nav-link">{{#i18n}}header.menu.admin{{/i18n}}</a>
-                        </li>{{/admin}}
-                        {{#volunteer}}<li class="nav-item">
-                            <a href="{{localePrefix}}/volunteer" class="nav-link mxt-nav-link">{{#i18n}}header.menu.admin{{/i18n}}</a>
-                        </li>{{/volunteer}}
-                        {{#hasFeatureLottery}}
-                        <li class="nav-item">
-                            <a href="{{localePrefix}}/lottery" class="nav-link mxt-nav-link">{{#i18n}}header.menu.lottery{{/i18n}}</a>
-                        </li>
-                        {{/hasFeatureLottery}}
-                        <li class="nav-item">
-                            <a href="{{localePrefix}}/2023" class="nav-link mxt-nav-link">{{#i18n}}header.menu.talks{{/i18n}}</a>
-                        </li>
-<!--                        <li class="nav-item">-->
-<!--                            <a href="{{localePrefix}}/come" class="nav-link mxt-nav-link">{{#i18n}}header.menu.come{{/i18n}}</a>-->
-<!--                        </li>-->
-                        <li class="nav-item">
-                            <a href="{{localePrefix}}/sponsors" class="nav-link mxt-nav-link">{{#i18n}}header.menu.sponsors{{/i18n}}</a>
-                        </li>
-<!--                        <li class="nav-item">-->
-<!--                            <a href="{{localePrefix}}/blog" class="nav-link mxt-nav-link">{{#i18n}}header.menu.blog{{/i18n}}</a>-->
-<!--                        </li>-->
-                        <li class="nav-item d-inline d-md-none">
-                            <a href="{{localePrefix}}/about" class="nav-link mxt-nav-link">{{#i18n}}header.menu.about{{/i18n}}</a>
-                        </li>
-                        <li class="d-none d-md-inline mxt-menu__item--bullet">&bull;</li>
-                        <li class="d-inline d-md-none">
-                            <a href="{{localePrefix}}/search" class="nav-link mxt-nav-link" title="{{#i18n}}search.title{{/i18n}}">{{#i18n}}search.title{{/i18n}}</a>
-                        </li>
-                        <li class="d-sm-inline d-md-none">
-                            {{#connected}}<a href="{{localePrefix}}/me"
-                                             class="nav-link mxt-nav-link">{{#i18n}}header.menu.profile{{/i18n}}</a>{{/connected}}
-                            {{#connected}}<a href="{{localePrefix}}/disconnect"
-                                             class="nav-link mxt-nav-link">{{#i18n}}header.menu.logout{{/i18n}}</a>{{/connected}}
-                            {{^connected}}<a href="{{localePrefix}}/login"
-                                             class="nav-link mxt-nav-link">{{#i18n}}header.menu.login{{/i18n}}</a>{{/connected}}
-                        </li>
-                        <li>
-                            {{#en}}<a class="nav-link mxt-nav-link" href="{{switchLangUrl}}">Français</a>{{/en}}
-                            {{#fr}}<a href="{{switchLangUrl}}" class="nav-link mxt-nav-link">English</a>{{/fr}}
-                        </li>
+<nav class="navbar navbar-expand-lg navbar-light mxt-navbar fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-brand mxt-navbar-brand">
+            <a href="{{localePrefix}}/{{#fr}}fr/{{/fr}}" class="mxt-anchor--svg" rel="nofollow">
+                <img src="/images/svg/mxt-icon--logo.svg" alt="MiXiT logo" class="mxt-icon--logo"></a>
+            <div class="d-none d-sm-flex">
+                <span>{{#i18n}}header.menu.dates{{/i18n}}</span>
+                <span>{{#i18n}}header.menu.place{{/i18n}}</span>
+            </div>
+        </div>
+        <div class="navbar-nav mxt-navbar-nav-language d-lg-none flex-fill">
+            <div class="nav-item mxt-navbar--language me-2">
+                {{#en}}EN{{/en}}
+                {{#fr}}
+                    <a href="{{switchLangUrl}}" class="nav-link mxt-navbar--nav-link mxt-navbar--nav-link">EN</a>{{/fr}}
+            </div>
+            <div class="nav-item mxt-navbar--language">
+                {{#en}}<a class="nav-link mxt-navbar--nav-link" href="{{switchLangUrl}}">FR</a>{{/en}}
+                {{#fr}}FR{{/fr}}
+            </div>
+        </div>
+        <button class="navbar-toggler mxt-navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <img src="/images/svg/mxt-icon--hamburger.svg" alt="MiXiT menu" class="">
+        </button>
+        <div class="collapse navbar-collapse text-right" id="navbarSupportedContent">
+            <div class="navbar-nav mxt-navbar-nav-main">
+                {{#admin}}
+                    <div class="nav-item">
+                        <a href="{{localePrefix}}/admin" class="nav-link mxt-navbar--nav-link">
+                            {{#i18n}}header.menu.admin{{/i18n}}</a>
+                    </div>{{/admin}}
+                {{#volunteer}}
+                    <div class="nav-item">
+                        <a href="{{localePrefix}}/volunteer" class="nav-link mxt-navbar--nav-link">
+                            {{#i18n}}header.menu.admin{{/i18n}}</a>
+                    </div>{{/volunteer}}
+                {{#hasFeatureLottery}}
+                    <div class="nav-item">
+                        <a href="{{localePrefix}}/lottery" class="nav-link mxt-navbar--nav-link">
+                            {{#i18n}}header.menu.lottery{{/i18n}}</a>
+                    </div>
+                {{/hasFeatureLottery}}
+                <div class="nav-item">
+                    <a href="{{localePrefix}}/codeofconduct" class="nav-link mxt-navbar--nav-link mxt-icon--navbar-code">
+                        <img src="/images/svg/mxt-icon-code.svg"
+                             class="mxt-icon--navbar me-1"
+                             alt="{{#i18n}}header.menu.coc{{/i18n}}">
+                            {{#i18n}}header.menu.coc{{/i18n}}</a>
+                </div>
+                <div class="nav-item">
+                    <a href="{{localePrefix}}/sponsors" class="nav-link mxt-navbar--nav-link mxt-icon--navbar-sponsors">
+                        <img src="/images/svg/mxt-icon-sponsor.svg"
+                             class="mxt-icon--navbar me-1"
+                             alt="{{#i18n}}header.menu.sponsors{{/i18n}}">
+                        {{#i18n}}header.menu.sponsors{{/i18n}}</a>
+                </div>
+                <div class="nav-item">
+                    <a href="{{localePrefix}}/2023/medias" class="nav-link mxt-navbar--nav-link mxt-icon--navbar-video ">
+                        <img src="/images/svg/mxt-icon-video.svg"
+                             class="mxt-icon--navbar me-1"
+                             alt="{{#i18n}}header.menu.replay{{/i18n}}">
+                        {{#i18n}}header.menu.replay{{/i18n}}</a>
+                </div>
 
-                        <li class="d-none d-lg-inline">
-                            <a href="{{localePrefix}}/search" class="mxt-menu__item--nav mxt-menu__item--close-nav">
-                                <img src="/images/svg/mxt-search.svg" title="{{#i18n}}header.menu.search{{/i18n}}" class="mxt-icon--top-bar"></a>
-                        </li>
-                        {{#connected}}<li class="d-none d-lg-inline">
-                            <a href="{{localePrefix}}/me" class="mxt-menu__item--nav mxt-menu__item--close-nav">
-                                <img src="/images/svg/mxt-profile.svg" title="{{#i18n}}header.menu.profile{{/i18n}}" class="mxt-icon--top-bar"></a>
-                        </li>{{/connected}}
-                        <li class="d-none d-md-inline">
-                            {{#connected}}<a href="{{localePrefix}}/disconnect" class="mxt-menu__item--nav mxt-menu__item--close-nav">
-                                <img src="/images/svg/security/mxt-lock--close.svg"  title="{{#i18n}}header.menu.logout{{/i18n}}" class="mxt-icon--top-bar"></a>
-                            {{/connected}}
-                            {{^connected}}
-                                <a href="{{localePrefix}}/login" class="mxt-menu__item--nav mxt-menu__item--close-nav">
-                                    <img src="/images/svg/security/mxt-lock--open.svg" title="{{#i18n}}header.menu.login{{/i18n}}" class="mxt-icon--top-bar"></a>
-                            {{/connected}}
-                        </li>
-                    </ul>
+            </div>
+            <div class="flex-fill d-none d-lg-inline"></div>
+            <div class="navbar-nav mxt-navbar-nav">
+                <div class="nav-item">
+                    <a href="{{localePrefix}}/search" class="nav-link mxt-icon--navbar-search mxt-navbar--nav-link">
+                        <img src="/images/svg/mxt-search.svg"
+                             alt="{{#i18n}}header.menu.search{{/i18n}}"
+                             title="{{#i18n}}header.menu.search{{/i18n}}"
+                             class="mxt-icon--navbar">
+                        <span class="ms-1 d-inline d-lg-none">{{#i18n}}header.menu.search{{/i18n}}</span>
+                    </a>
+                </div>
+                {{#connected}}
+                    <div class="nav-item">
+                        <a href="{{localePrefix}}/me" class="nav-link mxt-icon--navbar-profile mxt-navbar--nav-link">
+                            <img src="/images/svg/mxt-profile.svg"
+                                 alt="{{#i18n}}header.menu.profile{{/i18n}}"
+                                 title="{{#i18n}}header.menu.profile{{/i18n}}"
+                                 class="mxt-icon--navbar">
+                            <span class="ms-1 d-inline d-lg-none">{{#i18n}}header.menu.profile{{/i18n}}</span>
+                        </a>
+                    </div>
+                {{/connected}}
+                <div class="nav-item">
+                    {{#connected}}
+                        <a href="{{localePrefix}}/disconnect"
+                           class="nav-link mxt-icon--navbar-disconnect mxt-navbar--nav-link">
+                            <img src="/images/svg/security/mxt-lock--close.svg"
+                                 title="{{#i18n}}header.menu.logout{{/i18n}}"
+                                 alt="{{#i18n}}header.menu.logout{{/i18n}}"
+                                 class="mxt-icon--navbar">
+                            <span class="ms-1 d-inline d-lg-none">{{#i18n}}header.menu.logout{{/i18n}}</span>
+                        </a>
+                    {{/connected}}
+                    {{^connected}}
+                        <a href="{{localePrefix}}/login" class="nav-link mxt-icon--navbar-login mxt-navbar--nav-link">
+                            <img src="/images/svg/security/mxt-lock--open.svg"
+                                 title="{{#i18n}}header.menu.login{{/i18n}}"
+                                 alt="{{#i18n}}header.menu.login{{/i18n}}"
+                                 class="mxt-icon--navbar">
+                            <span class="ms-1 d-inline d-lg-none">{{#i18n}}header.menu.login{{/i18n}}</span>
+                        </a>
+                    {{/connected}}
+                </div>
+                <div class="nav-item mxt-navbar--language d-none d-lg-inline">
+                    {{#en}}EN{{/en}}
+                    {{#fr}}<a href="{{switchLangUrl}}"
+                              class="nav-link mxt-navbar--nav-link mxt-navbar--nav-link">EN</a>{{/fr}}
+                </div>
+                <div class="nav-item mxt-navbar--language d-none d-lg-inline">
+                    {{#en}}<a class="nav-link mxt-navbar--nav-link" href="{{switchLangUrl}}">FR</a>{{/en}}
+                    {{#fr}}FR{{/fr}}
                 </div>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>

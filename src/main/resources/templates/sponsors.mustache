@@ -1,40 +1,101 @@
 {{> header}}
-{{> header-common }}
 
-<div class="mxt-wrapper--header-page-title">
-    <h1 class="pt-3 pb-3">
-        {{#i18n}}sponsors.title{{#topic}}.{{topic}}{{/topic}}{{/i18n}}
-        <button class="btn btn-secondary dropdown-toggle mxt-dropdown-header" type="button"
-                id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            {{year}}
-        </button>
-        <ul class="dropdown-menu mxt-dropdown-header" aria-labelledby="dropdownMenuButton1">
-            <li><a href="{{localePrefix}}/sponsors/2024" class="dropdown-item">2024</a></li>
-            <li><a href="{{localePrefix}}/sponsors/2023" class="dropdown-item">2023</a></li>
-            <li><a href="{{localePrefix}}/sponsors/2022" class="dropdown-item">2022</a></li>
-            <li><a href="{{localePrefix}}/sponsors/2021" class="dropdown-item">2021</a></li>
-            <li><a href="{{localePrefix}}/sponsors/2019" class="dropdown-item">2019</a></li>
-            <li><a href="{{localePrefix}}/sponsors/2018" class="dropdown-item">2018</a></li>
-            <li><a href="{{localePrefix}}/sponsors/2017" class="dropdown-item">2017</a></li>
-            <li><a href="{{localePrefix}}/sponsors/2016" class="dropdown-item">2016</a></li>
-            <li><a href="{{localePrefix}}/sponsors/2015" class="dropdown-item">2015</a></li>
-            <li><a href="{{localePrefix}}/sponsors/2014" class="dropdown-item">2014</a></li>
-            <li><a href="{{localePrefix}}/sponsors/2013" class="dropdown-item">2013</a></li>
-            <li><a href="{{localePrefix}}/sponsors/2012" class="dropdown-item">2012</a></li>
-        </ul>
-    </h1>
+<div class="container-xxl">
+    <h1>{{#i18n}}sponsors.title{{/i18n}}</h1>
+    {{> year-selector}}
+{{#isCurrent}}
+    <h2>{{#i18n}}sponsors.becoming{{/i18n}}</h2>
+    <p>
+        {{#i18n}}sponsors.description{{/i18n}}
+        <strong><a href="href="{{#i18n}}sponsors.pdf.url{{/i18n}}">PDF</a></strong>.
+    </p>
+    <p>{{#i18n}}sponsors.reservations{{/i18n}}</p>
+    <table>
+        <tr>
+            <td>Badge + stand</td>
+            <td class="mxt-sponsor--slots">
+                <div class="mxt-sponsor--booked-slot"></div>
+                <div class="mxt-sponsor--booked-slot"></div>
+                <div class="mxt-sponsor--booked-slot"></div>
+                <div class="flex-fill"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Badge + stand</td>
+            <td class="mxt-sponsor--slots">
+                <div class="mxt-sponsor--booked-slot"></div>
+                <div class="mxt-sponsor--booked-slot"></div>
+                <div class="mxt-sponsor--booked-slot"></div>
+                <div class="mxt-sponsor--free-slot"></div>
+                <div class="mxt-sponsor--free-slot"></div>
+                <div class="mxt-sponsor--free-slot"></div>
+                <div class="mxt-sponsor--free-slot"></div>
+                <div class="mxt-sponsor--free-slot"></div>
+                <div class="mxt-sponsor--free-slot"></div>
+                <div class="mxt-sponsor--free-slot"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Partner</td>
+            <td class="mxt-sponsor--slots">
+                <div class="mxt-sponsor--booked-slot"></div>
+                <div class="mxt-sponsor--booked-slot"></div>
+                <div class="mxt-sponsor--booked-slot"></div>
+                <div class="mxt-sponsor--free-slot"></div>
+                <div class="mxt-sponsor--free-slot"></div>
+                <div class="mxt-sponsor--free-slot"></div>
+                <div class="mxt-sponsor--free-slot"></div>
+                <div class="mxt-sponsor--free-slot"></div>
+                <div class="mxt-sponsor--free-slot"></div>
+                <div class="mxt-sponsor--free-slot"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Party</td>
+            <td class="mxt-sponsor--slots">
+                <div class="mxt-sponsor--free-slot"></div>
+                <div class="mxt-sponsor--free-slot"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>MiXiT on air basic</td>
+            <td class="mxt-sponsor--slots">
+                <div class="mxt-sponsor--booked-slot"></div>
+                <div class="mxt-sponsor--free-slot"></div>
+                <div class="mxt-sponsor--free-slot"></div>
+                <div class="mxt-sponsor--free-slot"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>MiXiT on air premium</td>
+            <td class="mxt-sponsor--slots">
+                <div class="mxt-sponsor--free-slot"></div>
+                <div class="mxt-sponsor--free-slot"></div>
+                <div class="mxt-sponsor--free-slot"></div>
+                <div class="mxt-sponsor--free-slot"></div>
+            </td>
+        </tr>
+    </table>
+    <div class="mxt-sponsor--slots">
+        <div class="mxt-sponsor--booked-slot"></div>
+        <div class="ms-1 me-2"><small>{{#i18n}}sponsors.pack.booked{{/i18n}}</small></div>
+        <div class="mxt-sponsor--free-slot"></div>
+        <div class="ms-1"><small>{{#i18n}}sponsors.pack.available{{/i18n}}</small></div>
+    </div>
+
+    <p class="pt-2">
+        {{#i18n}}sponsors.contact{{/i18n}}
+        <a
+                class="mxt-anchor--uppercase"
+                href="mailto:sponsoring@mixitconf.org"
+                target="_top">
+            <strong>{{#i18n}}sponsors.contact.action{{/i18n}}</strong></a>
+    </p>
+{{/isCurrent}}
 </div>
-        {{#isCurrent}}
-        <div class="container mxt-wrapper--page-content">
-            <h2 class="subheader text-center">{{#i18n}}home.sponsors.title{{/i18n}}</h2>
-            <p class="text-center"><a class="mxt-anchor--uppercase" href="{{#i18n}}home.sponsors.pdf.url{{/i18n}}">{{#i18n}}home.sponsors.pdf{{/i18n}}</a> / <a
-                    class="mxt-anchor--uppercase" href="mailto:contact@mixitconf.org" target="_top">{{#i18n}}home.sponsors.contact{{/i18n}}</a></p>
-        </div>
-        <div>&nbsp;</div>
-        {{/isCurrent}}
 {{#has-sponsors-lanyard}}
-    <div class="container mxt-wrapper--page-content pb-4">
-        <h2 class="text-center mt-3 mb-4">{{#i18n}}sponsors.lanyard{{/i18n}}</h2>
+    <div class="container-xxl">
+        <h2>Pack {{#i18n}}sponsors.lanyard{{/i18n}}</h2>
         {{#sponsors-lanyard}}
             {{> sponsor }}
         {{/sponsors-lanyard}}
@@ -42,8 +103,8 @@
 {{/has-sponsors-lanyard}}
 
 {{#has-sponsors-party}}
-    <div class="container mxt-wrapper--page-content pb-4 mt-5">
-        <h2 class="text-center mt-3 mb-4">{{#i18n}}sponsors.party{{/i18n}}</h2>
+    <div class="container-xxl">
+        <h2>Pack {{#i18n}}sponsors.party{{/i18n}}</h2>
         {{#sponsors-party}}
             {{> sponsor }}
         {{/sponsors-party}}
@@ -51,8 +112,8 @@
     <div>&nbsp;</div>
 {{/has-sponsors-party}}
 {{#has-sponsors-gold}}
-    <div class="container mxt-wrapper--page-content pb-4">
-        <h2 class="text-center  mt-3 mb-4">{{#i18n}}sponsors.gold{{/i18n}}</h2>
+    <div class="container-xxl">
+        <h2 >Pack {{#i18n}}sponsors.gold{{/i18n}}</h2>
         {{#sponsors-gold}}
             {{> sponsor }}
         {{/sponsors-gold}}
@@ -60,8 +121,8 @@
     <div>&nbsp;</div>
 {{/has-sponsors-gold}}
 {{#has-sponsors-accessibility}}
-    <div class="container mxt-wrapper--page-content pb-4">
-        <h2 class="text-center  mt-3 mb-4">{{#i18n}}sponsors.accessibility{{/i18n}}</h2>
+    <div class="container-xxl">
+        <h2 >Pack {{#i18n}}sponsors.accessibility{{/i18n}}</h2>
         {{#sponsors-accessibility}}
             {{> sponsor }}
         {{/sponsors-accessibility}}
@@ -69,8 +130,8 @@
     <div>&nbsp;</div>
 {{/has-sponsors-accessibility}}
 {{#has-sponsors-ecology}}
-    <div class="container mxt-wrapper--page-content pb-4">
-        <h2 class="text-center mt-3 mb-4">{{#i18n}}sponsors.ecology{{/i18n}}</h2>
+    <div class="container-xxl">
+        <h2>Pack {{#i18n}}sponsors.ecology{{/i18n}}</h2>
         {{#sponsors-ecology}}
             {{> sponsor }}
         {{/sponsors-ecology}}
@@ -78,8 +139,8 @@
     <div>&nbsp;</div>
 {{/has-sponsors-ecology}}
 {{#has-sponsors-mixteen}}
-    <div class="container mxt-wrapper--page-content pb-4">
-        <h2 class="text-center mt-3 mb-4">{{#i18n}}sponsors.mixteen{{/i18n}}</h2>
+    <div class="container-xxl">
+        <h2>Pack {{#i18n}}sponsors.mixteen{{/i18n}}</h2>
         {{#sponsors-mixteen}}
             {{> sponsor }}
         {{/sponsors-mixteen}}
@@ -87,8 +148,8 @@
     <div>&nbsp;</div>
 {{/has-sponsors-mixteen}}
 {{#has-sponsors-silver}}
-    <div class="container mxt-wrapper--page-content pb-4">
-        <h2 class="text-center mt-3 mb-4">{{#i18n}}sponsors.silver{{/i18n}}</h2>
+    <div class="container-xxl">
+        <h2>Pack {{#i18n}}sponsors.silver{{/i18n}}</h2>
         {{#sponsors-silver}}
             {{> sponsor }}
         {{/sponsors-silver}}
@@ -96,8 +157,8 @@
     <div>&nbsp;</div>
 {{/has-sponsors-silver}}
 {{#has-sponsors-hosting}}
-    <div class="container mxt-wrapper--page-content pb-4">
-        <h2 class="text-center mt-3 mb-4">{{#i18n}}sponsors.hosting{{/i18n}}</h2>
+    <div class="container-xxl">
+        <h2>Pack {{#i18n}}sponsors.hosting{{/i18n}}</h2>
         {{#sponsors-hosting}}
             {{> sponsor }}
         {{/sponsors-hosting}}
@@ -105,8 +166,8 @@
     <div>&nbsp;</div>
 {{/has-sponsors-hosting}}
 {{#has-sponsors-video}}
-    <div class="container mxt-wrapper--page-content pb-4">
-        <h2 class="text-center mt-3 mb-4">{{#i18n}}sponsors.videos{{/i18n}}</h2>
+    <div class="container-xxl">
+        <h2>Pack {{#i18n}}sponsors.videos{{/i18n}}</h2>
         {{#sponsors-video}}
             {{> sponsor }}
         {{/sponsors-video}}
