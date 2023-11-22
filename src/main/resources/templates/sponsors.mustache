@@ -3,95 +3,97 @@
 <div class="container-xxl">
     <h1>{{#i18n}}sponsors.title{{/i18n}}</h1>
     {{> year-selector}}
-{{#isCurrent}}
-    <h2 class="mxt-section-small">{{#i18n}}sponsors.becoming{{/i18n}}</h2>
-    <p>
-        {{#i18n}}sponsors.description{{/i18n}}
-        <strong><a href="href="{{#i18n}}sponsors.pdf.url{{/i18n}}">PDF</a></strong>.
-    </p>
-    <p>{{#i18n}}sponsors.reservations{{/i18n}}</p>
-    <table>
-        <tr>
-            <td>Badge + stand</td>
-            <td class="mxt-sponsor--slots">
-                <div class="mxt-sponsor--booked-slot"></div>
-                <div class="mxt-sponsor--booked-slot"></div>
-                <div class="mxt-sponsor--booked-slot"></div>
-                <div class="flex-fill"></div>
-            </td>
-        </tr>
-        <tr>
-            <td>Badge + stand</td>
-            <td class="mxt-sponsor--slots">
-                <div class="mxt-sponsor--booked-slot"></div>
-                <div class="mxt-sponsor--booked-slot"></div>
-                <div class="mxt-sponsor--booked-slot"></div>
-                <div class="mxt-sponsor--free-slot"></div>
-                <div class="mxt-sponsor--free-slot"></div>
-                <div class="mxt-sponsor--free-slot"></div>
-                <div class="mxt-sponsor--free-slot"></div>
-                <div class="mxt-sponsor--free-slot"></div>
-                <div class="mxt-sponsor--free-slot"></div>
-                <div class="mxt-sponsor--free-slot"></div>
-            </td>
-        </tr>
-        <tr>
-            <td>Partner</td>
-            <td class="mxt-sponsor--slots">
-                <div class="mxt-sponsor--booked-slot"></div>
-                <div class="mxt-sponsor--booked-slot"></div>
-                <div class="mxt-sponsor--booked-slot"></div>
-                <div class="mxt-sponsor--free-slot"></div>
-                <div class="mxt-sponsor--free-slot"></div>
-                <div class="mxt-sponsor--free-slot"></div>
-                <div class="mxt-sponsor--free-slot"></div>
-                <div class="mxt-sponsor--free-slot"></div>
-                <div class="mxt-sponsor--free-slot"></div>
-                <div class="mxt-sponsor--free-slot"></div>
-            </td>
-        </tr>
-        <tr>
-            <td>Party</td>
-            <td class="mxt-sponsor--slots">
-                <div class="mxt-sponsor--free-slot"></div>
-                <div class="mxt-sponsor--free-slot"></div>
-            </td>
-        </tr>
-        <tr>
-            <td>MiXiT on air basic</td>
-            <td class="mxt-sponsor--slots">
-                <div class="mxt-sponsor--booked-slot"></div>
-                <div class="mxt-sponsor--free-slot"></div>
-                <div class="mxt-sponsor--free-slot"></div>
-                <div class="mxt-sponsor--free-slot"></div>
-            </td>
-        </tr>
-        <tr>
-            <td>MiXiT on air premium</td>
-            <td class="mxt-sponsor--slots">
-                <div class="mxt-sponsor--free-slot"></div>
-                <div class="mxt-sponsor--free-slot"></div>
-                <div class="mxt-sponsor--free-slot"></div>
-                <div class="mxt-sponsor--free-slot"></div>
-            </td>
-        </tr>
-    </table>
-    <div class="mxt-sponsor--slots">
-        <div class="mxt-sponsor--booked-slot"></div>
-        <div class="ms-1 me-2"><small>{{#i18n}}sponsors.pack.booked{{/i18n}}</small></div>
-        <div class="mxt-sponsor--free-slot"></div>
-        <div class="ms-1"><small>{{#i18n}}sponsors.pack.available{{/i18n}}</small></div>
-    </div>
+    {{#isCurrent}}
+        <h2 class="mxt-section-small">{{#i18n}}sponsors.becoming{{/i18n}}</h2>
+        <p>
+            {{#i18n}}sponsors.description{{/i18n}}
+            <strong><a href="{{#i18n}}sponsors.pdf.url{{/i18n}}">PDF</a></strong>.
+        </p>
+        <p>{{#i18n}}sponsors.reservations{{/i18n}}</p>
+        <div class="mxt-sponsor--stats">
+            <table>
+                <tr>
+                    <td>Badge + stand</td>
+                    <td class="mxt-sponsor--slots">
+                        <div class="mxt-sponsor--booked-slot"></div>
+                        <div class="mxt-sponsor--booked-slot"></div>
+                        <div class="mxt-sponsor--booked-slot"></div>
+                        <div class="flex-fill"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Badge + stand</td>
+                    <td class="mxt-sponsor--slots">
+                        <div class="mxt-sponsor--booked-slot"></div>
+                        <div class="mxt-sponsor--booked-slot"></div>
+                        <div class="mxt-sponsor--booked-slot"></div>
+                        <div class="mxt-sponsor--free-slot"></div>
+                        <div class="mxt-sponsor--free-slot"></div>
+                        <div class="mxt-sponsor--free-slot"></div>
+                        <div class="mxt-sponsor--free-slot"></div>
+                        <div class="mxt-sponsor--free-slot"></div>
+                        <div class="mxt-sponsor--free-slot"></div>
+                        <div class="mxt-sponsor--free-slot"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Partner</td>
+                    <td class="mxt-sponsor--slots">
+                        <div class="mxt-sponsor--booked-slot"></div>
+                        <div class="mxt-sponsor--booked-slot"></div>
+                        <div class="mxt-sponsor--booked-slot"></div>
+                        <div class="mxt-sponsor--free-slot"></div>
+                        <div class="mxt-sponsor--free-slot"></div>
+                        <div class="mxt-sponsor--free-slot"></div>
+                        <div class="mxt-sponsor--free-slot"></div>
+                        <div class="mxt-sponsor--free-slot"></div>
+                        <div class="mxt-sponsor--free-slot"></div>
+                        <div class="mxt-sponsor--free-slot"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Party</td>
+                    <td class="mxt-sponsor--slots">
+                        <div class="mxt-sponsor--free-slot"></div>
+                        <div class="mxt-sponsor--free-slot"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>MiXiT on air basic</td>
+                    <td class="mxt-sponsor--slots">
+                        <div class="mxt-sponsor--booked-slot"></div>
+                        <div class="mxt-sponsor--free-slot"></div>
+                        <div class="mxt-sponsor--free-slot"></div>
+                        <div class="mxt-sponsor--free-slot"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-wrap: nowrap">MiXiT on air premium</td>
+                    <td class="mxt-sponsor--slots">
+                        <div class="mxt-sponsor--free-slot"></div>
+                        <div class="mxt-sponsor--free-slot"></div>
+                        <div class="mxt-sponsor--free-slot"></div>
+                        <div class="mxt-sponsor--free-slot"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="mxt-sponsor--slots mt-2">
+            <div class="mxt-sponsor--booked-slot"></div>
+            <div class="ms-1 me-2"><small>{{#i18n}}sponsors.pack.booked{{/i18n}}</small></div>
+            <div class="mxt-sponsor--free-slot"></div>
+            <div class="ms-1"><small>{{#i18n}}sponsors.pack.available{{/i18n}}</small></div>
+        </div>
 
-    <p class="pt-2">
-        {{#i18n}}sponsors.contact{{/i18n}}
-        <a
-                class="mxt-anchor--uppercase"
-                href="mailto:sponsoring@mixitconf.org"
-                target="_top">
-            <strong>{{#i18n}}sponsors.contact.action{{/i18n}}</strong></a>
-    </p>
-{{/isCurrent}}
+        <p class="pt-2">
+            {{#i18n}}sponsors.contact{{/i18n}}
+            <a
+                    class="mxt-anchor--uppercase"
+                    href="mailto:sponsoring@mixitconf.org"
+                    target="_top">
+                <strong>{{#i18n}}sponsors.contact.action{{/i18n}}</strong></a>
+        </p>
+    {{/isCurrent}}
 </div>
 {{#has-sponsors-lanyard}}
     <div class="container-xxl mxt-section">
@@ -113,7 +115,7 @@
 {{/has-sponsors-party}}
 {{#has-sponsors-gold}}
     <div class="container-xxl mxt-section">
-        <h2 >Pack {{#i18n}}sponsors.gold{{/i18n}}</h2>
+        <h2>Pack {{#i18n}}sponsors.gold{{/i18n}}</h2>
         {{#sponsors-gold}}
             {{> sponsor }}
         {{/sponsors-gold}}
@@ -122,7 +124,7 @@
 {{/has-sponsors-gold}}
 {{#has-sponsors-accessibility}}
     <div class="container-xxl mxt-section">
-        <h2 >Pack {{#i18n}}sponsors.accessibility{{/i18n}}</h2>
+        <h2>Pack {{#i18n}}sponsors.accessibility{{/i18n}}</h2>
         {{#sponsors-accessibility}}
             {{> sponsor }}
         {{/sponsors-accessibility}}

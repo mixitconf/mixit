@@ -939,6 +939,7 @@ h2 {
 
 .navbar-collapse {
   background-color: $secondary-color !important;
+  padding: 1em;
 }
 
 .mxt-header--accesibility-container {
@@ -1152,6 +1153,22 @@ $sponsor-max-width: 20em;
 
 .mxt-sponsor--slots {
   display: flex;
+}
+.mxt-sponsor--pack {
+  display: block;
+}
+.mxt-sponsor--stats {
+  overflow-x: auto  !important;
+  scrollbar-color: $secondary-color #cccccc;
+}
+
+.mxt-sponsor--stats::-webkit-scrollbar {
+  height: 6px;
+  background-color: #cccccc;
+}
+
+.mxt-sponsor--stats::-webkit-scrollbar-thumb {
+  background: $secondary-color;
 }
 
 .mxt-sponsor--free-slot {

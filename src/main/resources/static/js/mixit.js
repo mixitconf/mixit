@@ -10,8 +10,12 @@ new MixitApp().bootstrap();
  */
 class ImagesCtrl {
     constructor() {
-        const images = document.getElementsByClassName('mxt-img--lazyload');
-        Array.from(images).forEach((image) => image.src = image.getAttribute('data-src'));
+        setTimeout(() => {
+            const images = document.getElementsByClassName('mxt-img--lazyload');
+            Array
+                .from(images)
+                .forEach((image) => image.src = image.getAttribute('data-src'));
+        }, 100);
     }
 }
 window.addEventListener("load", () => new ImagesCtrl());
