@@ -776,7 +776,7 @@ $font-title: 'Changa One', 'Varela round', Arial, system-ui, -apple-system, "Seg
 .mxt-layout-main-accent-section {
   background-color: $fifth-color;
   padding-bottom: 1em;
-  margin-top: 2em;
+  margin-top: 3em;
 }
 
 .mxt-layout-main-outline {
@@ -937,6 +937,10 @@ h2 {
   color: $primary-color !important;
 }
 
+.navbar-collapse {
+  background-color: $secondary-color !important;
+}
+
 .mxt-header--accesibility-container {
   display: flex;
   align-items: center;
@@ -993,8 +997,12 @@ h2 {
   overflow: hidden;
   text-overflow: ellipsis;
   justify-content: center;
-  align-content: center;
+  //align-content: center;
   width: calc(100% - 1px);
+}
+
+.mxt-image--player-title {
+
 }
 
 .mxt-video--player-header {
@@ -1021,7 +1029,7 @@ h2 {
   }
 }
 
-.mxt-video--player-title {
+.mxt-video--player-title, .mxt-image--player-title {
   width: 100%;
   text-overflow: ellipsis;
   font-family: $font-title;
@@ -1163,4 +1171,12 @@ $sponsor-max-width: 20em;
   margin-left: 1em;
   width: 1.5em;
   height: 1.5em;
+}
+
+.mxt-section {
+  margin-top: 3em;
+}
+
+.mxt-section-small {
+  margin-top: 1em;
 }

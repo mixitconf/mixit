@@ -4,13 +4,13 @@
     {{> year-selector}}
 </div>
 {{#isCurrent}}
-    <div class="container-xxl">
+    <div class="container-xxl mxt-section">
         <p class="text-center lead">{{#i18n}}about.story1{{/i18n}}</p>
         <p>{{#i18n}}about.story2{{/i18n}}</p>
         <p>{{#i18n}}about.story3{{/i18n}}</p>
     </div>
 {{/isCurrent}}
-<div class="container-xxl">
+<div class="container-xxl mxt-section">
     <h2>{{#i18n}}about.teamtitle{{/i18n}}</h2>
     <div class="mxt-about--people">
         {{#staff}}
@@ -19,7 +19,7 @@
     </div>
 </div>
 {{#hasVolunteers}}
-    <div class="container-xxl">
+    <div class="container-xxl mxt-section">
         <h2>{{#i18n}}about.volunteers{{/i18n}}</h2>
         <div class="mxt-about--people">
             {{#volunteers}}

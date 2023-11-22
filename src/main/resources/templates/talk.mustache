@@ -89,7 +89,7 @@
         {{/twitchPlayer2}}
     {{/talk.video2}}
 </div>
-<div class="container mxt-wrapper--page-content mt-4 mb-4">
+<div class="container-xxl mxt-section">
     {{#speakers}}
         <div class="row p-2">
             <div class="col-12 col-md-2 text-center align-middle">
@@ -141,26 +141,6 @@
     </div>
 </div>
 
-{{#sponsors}}
-    <div class="row">
-        <div class="col-12 col-lg-10 offset-lg-1">
-            <div class="text-center row justify-content-md-center">
-                {{#sponsors-main}}
-                    <div class="col-4 text-center col-md-3 col-lg-2">
-                        {{> sponsor-detail }}
-                    </div>
-                {{/sponsors-main}}
-            </div>
-            <div class="text-center row justify-content-md-center">
-                {{#sponsors-others}}
-                    <div class="col-3 col-md-2 col-lg-1 text-center">
-                        {{> sponsor-detail }}
-                    </div>
-                {{/sponsors-others}}
-            </div>
-        </div>
-    </div>
-{{/sponsors}}
 
 {{#connected}}
     <input type="hidden" id="talkId" value="{{talk.id}}"/>
@@ -168,4 +148,4 @@
 {{/connected}}
 
 
-{{> footer}}
+{{> footer-sponsor}}

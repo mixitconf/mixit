@@ -8,10 +8,12 @@ import mixit.event.model.EventService
 import mixit.routes.MustacheI18n.SPONSORS
 import mixit.routes.MustacheI18n.TITLE
 import mixit.routes.MustacheI18n.YEAR
+import mixit.routes.MustacheI18n.YEAR_SELECTOR
 import mixit.routes.MustacheTemplate.Blog
 import mixit.routes.MustacheTemplate.BlogPost
 import mixit.routes.MustacheTemplate.Feed
 import mixit.user.model.UserService
+import mixit.util.YearSelector
 import mixit.util.errors.NotFoundException
 import mixit.util.language
 import mixit.util.permanentRedirect
@@ -49,6 +51,7 @@ class WebBlogHandler(
         val params = mapOf(
             TITLE to Blog.title,
             SPONSORS to userService.loadSponsors(event),
+            YEAR_SELECTOR to YearSelector.create(year, "blog"),
             YEAR to year,
             "posts" to posts.filter { year == it.year }
                 .sortedByDescending { it.addedAt }

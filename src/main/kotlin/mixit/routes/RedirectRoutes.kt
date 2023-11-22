@@ -36,7 +36,10 @@ class RedirectRoutes(
 
             (2012..CURRENT_EVENT.toInt()).forEach { year ->
                 GET("/$year/") { permanentRedirect("${properties.baseUri}/$year") }
+                GET("/about/$year/") { permanentRedirect("${properties.baseUri}/$year/about") }
+                GET("/sponsors/$year/") { permanentRedirect("${properties.baseUri}/$year/sponsors") }
             }
+
 
             GET("/mixteen") { permanentRedirect("${properties.baseUri}/2022/mixteen-2022-born-to-code") }
 

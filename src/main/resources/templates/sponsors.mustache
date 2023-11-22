@@ -4,7 +4,7 @@
     <h1>{{#i18n}}sponsors.title{{/i18n}}</h1>
     {{> year-selector}}
 {{#isCurrent}}
-    <h2>{{#i18n}}sponsors.becoming{{/i18n}}</h2>
+    <h2 class="mxt-section-small">{{#i18n}}sponsors.becoming{{/i18n}}</h2>
     <p>
         {{#i18n}}sponsors.description{{/i18n}}
         <strong><a href="href="{{#i18n}}sponsors.pdf.url{{/i18n}}">PDF</a></strong>.
@@ -94,7 +94,7 @@
 {{/isCurrent}}
 </div>
 {{#has-sponsors-lanyard}}
-    <div class="container-xxl">
+    <div class="container-xxl mxt-section">
         <h2>Pack {{#i18n}}sponsors.lanyard{{/i18n}}</h2>
         {{#sponsors-lanyard}}
             {{> sponsor }}
@@ -103,7 +103,7 @@
 {{/has-sponsors-lanyard}}
 
 {{#has-sponsors-party}}
-    <div class="container-xxl">
+    <div class="container-xxl mxt-section">
         <h2>Pack {{#i18n}}sponsors.party{{/i18n}}</h2>
         {{#sponsors-party}}
             {{> sponsor }}
@@ -112,7 +112,7 @@
     <div>&nbsp;</div>
 {{/has-sponsors-party}}
 {{#has-sponsors-gold}}
-    <div class="container-xxl">
+    <div class="container-xxl mxt-section">
         <h2 >Pack {{#i18n}}sponsors.gold{{/i18n}}</h2>
         {{#sponsors-gold}}
             {{> sponsor }}
@@ -121,7 +121,7 @@
     <div>&nbsp;</div>
 {{/has-sponsors-gold}}
 {{#has-sponsors-accessibility}}
-    <div class="container-xxl">
+    <div class="container-xxl mxt-section">
         <h2 >Pack {{#i18n}}sponsors.accessibility{{/i18n}}</h2>
         {{#sponsors-accessibility}}
             {{> sponsor }}
@@ -130,7 +130,7 @@
     <div>&nbsp;</div>
 {{/has-sponsors-accessibility}}
 {{#has-sponsors-ecology}}
-    <div class="container-xxl">
+    <div class="container-xxl mxt-section">
         <h2>Pack {{#i18n}}sponsors.ecology{{/i18n}}</h2>
         {{#sponsors-ecology}}
             {{> sponsor }}
@@ -139,7 +139,7 @@
     <div>&nbsp;</div>
 {{/has-sponsors-ecology}}
 {{#has-sponsors-mixteen}}
-    <div class="container-xxl">
+    <div class="container-xxl mxt-section">
         <h2>Pack {{#i18n}}sponsors.mixteen{{/i18n}}</h2>
         {{#sponsors-mixteen}}
             {{> sponsor }}
@@ -148,7 +148,7 @@
     <div>&nbsp;</div>
 {{/has-sponsors-mixteen}}
 {{#has-sponsors-silver}}
-    <div class="container-xxl">
+    <div class="container-xxl mxt-section">
         <h2>Pack {{#i18n}}sponsors.silver{{/i18n}}</h2>
         {{#sponsors-silver}}
             {{> sponsor }}
@@ -157,7 +157,7 @@
     <div>&nbsp;</div>
 {{/has-sponsors-silver}}
 {{#has-sponsors-hosting}}
-    <div class="container-xxl">
+    <div class="container-xxl mxt-section">
         <h2>Pack {{#i18n}}sponsors.hosting{{/i18n}}</h2>
         {{#sponsors-hosting}}
             {{> sponsor }}
@@ -166,7 +166,7 @@
     <div>&nbsp;</div>
 {{/has-sponsors-hosting}}
 {{#has-sponsors-video}}
-    <div class="container-xxl">
+    <div class="container-xxl mxt-section">
         <h2>Pack {{#i18n}}sponsors.videos{{/i18n}}</h2>
         {{#sponsors-video}}
             {{> sponsor }}

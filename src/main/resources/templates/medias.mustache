@@ -7,7 +7,7 @@
 </div>
 
 {{#event.videoUrl}}
-    <div class="container-xxl">
+    <div class="container-xxl mxt-section">
         <h2>{{#i18n}}medias.html.soul{{/i18n}}</h2>
         <p>{{#i18n}}medias.html.soul.text{{/i18n}}</p>
         {{#videoUrl}}
@@ -29,7 +29,7 @@
 {{/event.videoUrl}}
 
 {{#images}}
-    <div class="container-xxl">
+    <div class="container-xxl mxt-section">
         <h2>{{#i18n}}medias.html.images{{/i18n}}</h2>
         <div class="mxt-video--player-container">
             {{#images.sections}}
@@ -47,7 +47,7 @@
                                  data-src="https://raw.githubusercontent.com/mixitconf/mixitconf-images/main/{{year}}/{{sectionId}}/{{name}}">
                         {{/pictures}}
                     </div>
-                    <div class="mxt-video--player-title text-center">
+                    <div class="mxt-image--player-title text-center">
                         {{#i18n}}{{i18nLabel}}{{/i18n}}
                     </div>
                 </div>
@@ -56,7 +56,7 @@
     </div>
 {{/images}}
 
-<div class="container-xxl">
+<div class="container-xxl mxt-section">
     <h2>{{#i18n}}medias.html.videos{{/i18n}}</h2>
     <div class="mxt-video--player-container">
         {{#talks}}
