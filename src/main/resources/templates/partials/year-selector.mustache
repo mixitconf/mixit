@@ -16,7 +16,9 @@
 </div>
 <script>
     addEventListener("load", () => {
-        let elts = document.getElementsByClassName('selected');
+        let elts;
+
+        elts = document.getElementsByClassName('selected');
         if (elts.length > 0) {
             elts.item(0).scrollIntoView(true);
         }
@@ -28,5 +30,7 @@
         } else if (elts.length > 0) {
             elts.item(0).scrollIntoView(true);
         }
+
+
     });
 </script>
