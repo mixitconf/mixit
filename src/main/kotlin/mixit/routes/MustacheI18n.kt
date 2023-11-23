@@ -42,4 +42,5 @@ object MustacheI18n {
     const val USER = "user"
     const val USERS = "users"
     const val YEAR = "year"
+    const val YEAR_SELECTOR = "year-selector"
 }

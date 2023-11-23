@@ -1,0 +1,36 @@
+<div class="mxt-year-selector">
+    {{#year-selector}}
+        <div class="flex-fill text-center">
+            {{#talk}}
+                <a href="{{localePrefix}}/{{value}}/{{path}}"
+                   class="mxt-nav-link mxt-navbar--nav-link {{#selected}}selected{{/selected}}"
+                >{{value}}</a>
+            {{/talk}}
+            {{^talk}}
+                <a href="{{localePrefix}}/{{path}}/{{value}}"
+                   class="mxt-nav-link mxt-navbar--nav-link {{#selected}}selected{{/selected}}"
+                >{{value}}</a>
+            {{/talk}}
+        </div>
+    {{/year-selector}}
+</div>
+<script>
+    addEventListener("load", () => {
+        let elts;
+
+        elts = document.getElementsByClassName('selected');
+        if (elts.length > 0) {
+            elts.item(0).scrollIntoView(true);
+        }
+
+        elts = document.getElementsByClassName('anchor');
+        const hash = document.location.hash;
+        if (hash) {
+            document.getElementById(hash.substring(1, hash.length))?.scrollIntoView(true);
+        } else if (elts.length > 0) {
+            elts.item(0).scrollIntoView(true);
+        }
+
+
+    });
+</script>

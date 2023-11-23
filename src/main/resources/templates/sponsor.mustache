@@ -1,27 +1,23 @@
 <div class="mb-5" id="{{sponsor.login}}">
 </div>
-<div class="row pt-5">
-    <div class="col-12 col-sm-4 text-center">
+<div class="mxt-sponsor--grid">
+    <div class="image">
         {{#sponsor.isAbsoluteLogo}}
-            <picture>
-                <source srcset="{{sponsor.photoUrl}}" type="{{sponsor.logoType}}" alt="{{sponsor.company}}"
-                        class="mxt-img--sponsors">
-                <img src="{{sponsor.photoUrl}}" id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}"
-                     alt="{{sponsor.company}}" class="mxt-img--sponsors">
-            </picture>
+            <img src="{{sponsor.photoUrl}}"
+                 id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}"
+                 alt="{{sponsor.company}}"
+                 class="mxt-img--sponsors">
         {{/sponsor.isAbsoluteLogo}}
         {{^sponsor.isAbsoluteLogo}}
-            <picture>
-                <source srcset="{{sponsor.photoUrl}}" type="{{sponsor.logoType}}" alt="{{sponsor.company}}"
-                        class="mxt-img--sponsors">
-                <img src="{{sponsor.photoUrl}}" data-src="{{sponsor.photoUrl}}"
-                     id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}} alt="{{sponsor.company}}"
-                     class="mxt-img--sponsors mxt-img--lazyload">
-            </picture>
+            <img src="{{sponsor.photoUrl}}"
+                 data-src="{{sponsor.photoUrl}}"
+                 class="mxt-img--sponsors mxt-img--lazyload"
+                 id="{{#urlEncode}}{{sponsor.login}}{{/urlEncode}}"
+                 alt="{{sponsor.company}}"
+            >
         {{/sponsor.isAbsoluteLogo}}
     </div>
-    <div class="col-12 col-sm-8 columns">
-        <h3 class="subheader">{{sponsor.company}}</h3>
+    <div>
         {{#markdown}}{{sponsor.description}}{{/markdown}}
         <ul class="mxt-wrapper-list-inline">
             {{#sponsor.links}}

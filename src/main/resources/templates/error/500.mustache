@@ -1,27 +1,5 @@
-{{> header}}
-
-<div class="mxt-wrapper--header">
-    <div class="row">
-        <div class="col-12 text-right d-none d-md-inline">
-            <img src="/images/svg/mxt-icon--edition-13.svg" class="mxt-icon--edition">
-        </div>
-        <div class="col-12 text-cente pt-5">
-            <h1 class="hide">{{#i18n}}home.wrapper.text{{/i18n}}
-                <img src="/images/svg/mxt-icon--heart.svg" class="mxt-icon--heart"
-                     alt="{{#i18n}}home.wrapper.title{{/i18n}}"></h1>
-            <h2 class="pt-2 mxt-text--small">
-                <small>{{#i18n}}home.wrapper.dates{{/i18n}}</small>
-            </h2>
-            <p class="pb-5">
-                <img src="/images/svg/accessibility/mxt-icon--child-care.svg" class="mxt-icon--social" title="{{#i18n}}home.accessibility.childcare{{/i18n}}" alt="{{#i18n}}home.accessibility.childcare{{/i18n}}">
-                <img src="/images/svg/accessibility/mxt-icon--hearing-impaired.svg" class="mxt-icon--social" title="{{#i18n}}home.accessibility.hearing.impaired{{/i18n}}" alt="{{#i18n}}home.accessibility.hearing.impaired{{/i18n}}">
-                <img src="/images/svg/accessibility/mxt-icon--motor-disability.svg" class="mxt-icon--social" title="{{#i18n}}home.accessibility.motor.disability{{/i18n}}" alt="{{#i18n}}home.accessibility.motor.disability{{/i18n}}">
-                <img src="/images/svg/accessibility/mxt-icon--pregnant.svg" class="mxt-icon--social" title="{{#i18n}}home.accessibility.pregnant{{/i18n}}" alt="{{#i18n}}home.accessibility.pregnant{{/i18n}}">
-            </p>
-        </div>
-    </div>
-</div>
-<div class="container">
+{{> new-header}}
+<div class="container-xxl">
     <h1 class="text-center">{{#i18n}}error.500.title{{/i18n}}</h1>
     <p class="text-center">{{#i18n}}error.500.description{{/i18n}}</p>
     <p class="text-center"><code>{{#message}}{{message}}{{/message}}</code></p>
@@ -29,5 +7,4 @@
         <a href="{{localePrefix}}/{{#fr}}fr/{{/fr}}" class="btn btn-primary mxt-btn-primary" style="width: 10em">{{#i18n}}error.404.action{{/i18n}}</a>
     </div>
 </div>
-
 {{> footer}}

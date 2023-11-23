@@ -1,8 +1,8 @@
 {{> header}}
 
-{{> header-common }}
 
-<div class="mxt-wrapper--header-page-title">
+
+<div class="container-xxl">
     <h2 class="pt-3 pb-3">#{{#i18n}}talk.format.{{talk.format}}{{/i18n}}</h2>
     {{#admin}}
         <div class="mxt-text--page-title pb-3">
@@ -10,7 +10,7 @@
         </div>
     {{/admin}}
 </div>
-<div class="container mxt-wrapper--page-content">
+<div class="container-xxl">
     <h1 class="text-center mxt-text--talk-h1 container pb-0">
         {{talk.title}}
         {{#connected}}
@@ -41,8 +41,8 @@
         {{#talk.topic}}
             <div class="mxt-text--cat mxt-text--cat-{{talk.topic}}">
                 <img src="/images/svg/mxt-icon--{{talk.topic}}.svg" class="mxt-icon--cat mxt-icon--cat__talks"
-                     alt="{{#i18n}}home.topics.{{talk.topic}}.title{{/i18n}}"/>
-                <span>{{#i18n}}home.topics.{{talk.topic}}.title{{/i18n}}</span>
+                     alt="{{#i18n}}topics.{{talk.topic}}.title{{/i18n}}"/>
+                <span>{{#i18n}}topics.{{talk.topic}}.title{{/i18n}}</span>
             </div>
         {{/talk.topic}}
         <div>{{#talk.date}}{{talk.date}}{{/talk.date}}</div>
@@ -89,7 +89,7 @@
         {{/twitchPlayer2}}
     {{/talk.video2}}
 </div>
-<div class="container mxt-wrapper--page-content mt-4 mb-4">
+<div class="container-xxl mxt-section">
     {{#speakers}}
         <div class="row p-2">
             <div class="col-12 col-md-2 text-center align-middle">
@@ -141,26 +141,6 @@
     </div>
 </div>
 
-{{#sponsors}}
-    <div class="row">
-        <div class="col-12 col-lg-10 offset-lg-1">
-            <div class="text-center row justify-content-md-center">
-                {{#sponsors-main}}
-                    <div class="col-4 text-center col-md-3 col-lg-2">
-                        {{> sponsor-detail }}
-                    </div>
-                {{/sponsors-main}}
-            </div>
-            <div class="text-center row justify-content-md-center">
-                {{#sponsors-others}}
-                    <div class="col-3 col-md-2 col-lg-1 text-center">
-                        {{> sponsor-detail }}
-                    </div>
-                {{/sponsors-others}}
-            </div>
-        </div>
-    </div>
-{{/sponsors}}
 
 {{#connected}}
     <input type="hidden" id="talkId" value="{{talk.id}}"/>
@@ -168,4 +148,4 @@
 {{/connected}}
 
 
-{{> footer}}
+{{> footer-sponsor}}

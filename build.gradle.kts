@@ -1,5 +1,6 @@
 import com.github.gradle.node.npm.task.NpmTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.springframework.boot.gradle.tasks.run.BootRun
 
 plugins {
     val kotlinVersion = "1.9.20"
@@ -124,6 +125,15 @@ tasks.getByName("processResources").dependsOn(
     "compileSass",
     "compileTypescript"
 )
+
+tasks.named("assemble") {
+    dependsOn(
+        "copyImages",
+        "copyJsVendors",
+        "compileSass",
+        "compileTypescript"
+    )
+}
 
 kotlinter {
     disabledRules = arrayOf("import-ordering")

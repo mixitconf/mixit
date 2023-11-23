@@ -44,6 +44,15 @@ class TalkService(
                 }
             }
 
+    suspend fun findNKeynoteByTopic(n: Int, topic: String) =
+        findAll()
+            .asSequence()
+            .filter { it.format == TalkFormat.KEYNOTE }
+            .filter { (it.topic == topic || it.topic == Topic.OTHER.value) && (it.video != null || it.video2 != null) }
+            .shuffled()
+            .take(n)
+            .toList()
+
     suspend fun findBySpeakerId(speakerIds: List<String>, talkIdExcluded: String): List<CachedTalk> =
         findAll().filter { talk ->
             val speakers = talk.speakers.map { it.login }

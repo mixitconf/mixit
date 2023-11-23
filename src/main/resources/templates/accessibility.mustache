@@ -1,101 +1,63 @@
 {{> header}}
 
-<div class="mxt-wrapper--header">
-    <h1 class="text-center pt-5">{{#i18n}}accessibility.title{{/i18n}}</h1>
-    <p class="text-center mxt-text--page-title">
-            <p class="pb-5">
-                <a href="/accessibility">
-                    <img src="/images/svg/accessibility/mxt-icon--child-care.svg" class="mxt-icon--social"
-                         container="body"
-                         data-bs-toggle="tooltip" data-bs-placement="bottom"
-                         title="{{#i18n}}home.accessibility.childcare{{/i18n}}" alt="{{#i18n}}home.accessibility.childcare{{/i18n}}">
-                </a>
-                <a href="/accessibility">
-                    <img src="/images/svg/accessibility/mxt-icon--hearing-impaired.svg"
-                         data-bs-toggle="tooltip" data-bs-placement="bottom"
-                         class="mxt-icon--social" title="{{#i18n}}home.accessibility.hearing.impaired{{/i18n}}" alt="{{#i18n}}home.accessibility.hearing.impaired{{/i18n}}">
-                </a>
-                <a href="/accessibility">
-                    <img src="/images/svg/accessibility/mxt-icon--motor-disability.svg" class="mxt-icon--social"
-                         data-bs-toggle="tooltip" data-bs-placement="bottom"
-                         title="{{#i18n}}home.accessibility.motor.disability{{/i18n}}" alt="{{#i18n}}home.accessibility.motor.disability{{/i18n}}">
-                </a>
-                <a href="/accessibility">
-                    <img src="/images/svg/accessibility/mxt-icon--pregnant.svg" class="mxt-icon--social"
-                         data-bs-toggle="tooltip" data-bs-placement="bottom"
-                         title="{{#i18n}}home.accessibility.pregnant{{/i18n}}" alt="{{#i18n}}home.accessibility.pregnant{{/i18n}}">
-                </a>
-            </p>
-    </p>
+<div class="container-xxl">
+    <h1>{{#i18n}}accessibility.title{{/i18n}}</h1>
+
+    <h2><small>{{#i18n}}accessibility.part1.title{{/i18n}}</small></h2>
+    <p class="lead">{{#i18n}}accessibility.part1.lead{{/i18n}}</p>
+    <div class="row">
+        <div class="mxt-accesibility-container">
+            <img src="/images/svg/accessibility/mxt-icon--child-care-dark.svg"
+                 class="mxt-icon--social"
+                 alt="{{#i18n}}accessibility.childcare{{/i18n}}">
+            <div>{{#i18n}}accessibility.text.mummy{{/i18n}}</div>
+        </div>
+        <div class="mxt-accesibility-container">
+            <img src="/images/svg/accessibility/mxt-icon--hearing-impaired-dark.svg"
+                 class="mxt-icon--social"
+                 alt="{{#i18n}}accessibility.hearing.impaired{{/i18n}}">
+            <div>{{#i18n}}accessibility.hearing.impaired{{/i18n}}</div>
+        </div>
+        <div class="mxt-accesibility-container">
+            <img src="/images/svg/accessibility/mxt-icon--motor-disability-dark.svg"
+                 class="mxt-icon--social"
+                 alt="{{#i18n}}accessibility.motor.disability{{/i18n}}">
+            <div>{{#i18n}}accessibility.motor.disability{{/i18n}}</div>
+        </div>
+        <div class="mxt-accesibility-container">
+            <img src="/images/svg/accessibility/mxt-icon--pregnant-dark.svg"
+                 class="mxt-icon--social"
+                 alt="{{#i18n}}accessibility.pregnant{{/i18n}}">
+            <div>{{#i18n}}accessibility.pregnant{{/i18n}}</div>
+        </div>
+    </div>
+
+    <p>{{#i18n}}accessibility.part1.p1{{/i18n}}</p>
+    <img src="/images/jpg/mxt-accessibility-1200.jpg" style="max-width: 100%" alt="Une conférence accessible">
+
+    <p class="pt-2">{{#i18n}}accessibility.part1.p2{{/i18n}}</p>
+    <p>{{#i18n}}accessibility.part1.p3{{/i18n}}</p>
+
+    <div class="row">
+        <div class="col-6">
+            <img src="/images/jpg/mxt-accessibility1.jpg" style="max-width: 100%" alt="Une conférence accessible">
+        </div>
+        <div class="col-6">
+            <img src="/images/jpg/mxt-accessibility2.jpg" style="max-width: 100%" alt="Une conférence accessible">
+        </div>
+    </div>
+
+    <h2><small>{{#i18n}}accessibility.part2.title{{/i18n}}</small></h2>
+    <p class="lead">{{#i18n}}accessibility.part2.lead{{/i18n}}</p>
+    <p>{{#i18n}}accessibility.part2.p1{{/i18n}}</p>
+    <p>{{#i18n}}accessibility.part2.p2{{/i18n}}</p>
+    <p>{{#i18n}}accessibility.part2.p3{{/i18n}}</p>
+
+    <h2><small>{{#i18n}}accessibility.part3.title{{/i18n}}</small></h2>
+    <p class="lead">{{#i18n}}accessibility.part3.lead{{/i18n}}</p>
+    <p>{{#i18n}}accessibility.part3.p1{{/i18n}}</p>
+    <p>{{#i18n}}accessibility.part3.p2{{/i18n}}</p>
+    <p>{{#i18n}}accessibility.part3.p3{{/i18n}}</p>
 </div>
 
-<div class="container mxt-wrapper--page-content">
-    <div>
-        <h2><small>{{#i18n}}accessibility.part1.title{{/i18n}}</small></h2>
-        <p class="lead">{{#i18n}}accessibility.part1.lead{{/i18n}}</p>
-
-        <div>
-            <div style="background-color: #2c233d;" class="d-inline pt-2 pb-2 mr-3">
-                <img src="/images/svg/accessibility/mxt-icon--child-care.svg" class="mxt-icon--social" title="{{#i18n}}home.accessibility.childcare{{/i18n}}" alt="{{#i18n}}home.accessibility.childcare{{/i18n}}">
-            </div>
-            <div class="d-inline p-2">{{#i18n}}home.accessibility.childcare{{/i18n}}</div>
-        </div>
-        <div class="pt-1">
-            <div style="background-color: #2c233d;" class="d-inline pt-2 pb-2 mr-3">
-                <img src="/images/svg/accessibility/mxt-icon--hearing-impaired.svg" class="mxt-icon--social" title="{{#i18n}}home.accessibility.hearing.impaired{{/i18n}}" alt="{{#i18n}}home.accessibility.hearing.impaired{{/i18n}}">
-            </div>
-            <div class="d-inline p-2">{{#i18n}}home.accessibility.hearing.impaired{{/i18n}}</div>
-        </div>
-        <div class="pt-1">
-            <div style="background-color: #2c233d;" class="d-inline pt-2 pb-2 mr-3">
-                <img src="/images/svg/accessibility/mxt-icon--motor-disability.svg" class="mxt-icon--social" title="{{#i18n}}home.accessibility.motor.disability{{/i18n}}" alt="{{#i18n}}home.accessibility.motor.disability{{/i18n}}">
-            </div>
-            <div class="d-inline p-2">{{#i18n}}home.accessibility.motor.disability{{/i18n}}</div>
-        </div>
-        <div class="pt-1">
-            <div style="background-color: #2c233d;" class="d-inline pt-2 pb-2 mr-3">
-                <img src="/images/svg/accessibility/mxt-icon--pregnant.svg" class="mxt-icon--social" title="{{#i18n}}home.accessibility.pregnant{{/i18n}}" alt="{{#i18n}}home.accessibility.pregnant{{/i18n}}">
-            </div>
-            <div class="d-inline p-2">{{#i18n}}home.accessibility.pregnant{{/i18n}}</div>
-        </div>
-
-        </p>
-
-        <p>{{#i18n}}accessibility.part1.p1{{/i18n}}</p>
-        <img src="/images/jpg/mxt-accessibility-1200.jpg" style="max-width: 100%" alt="Une conférence accessible">
-
-        <p class="pt-2">{{#i18n}}accessibility.part1.p2{{/i18n}}</p>
-        <p>{{#i18n}}accessibility.part1.p3{{/i18n}}</p>
-
-        <div class="row">
-            <div class="col-6">
-                <img src="/images/jpg/mxt-accessibility1.jpg" style="max-width: 100%" alt="Une conférence accessible">
-            </div>
-            <div class="col-6">
-                <img src="/images/jpg/mxt-accessibility2.jpg" style="max-width: 100%" alt="Une conférence accessible">
-            </div>
-        </div>
-    </div>
-
-    <hr/>
-
-    <div>
-        <h2><small>{{#i18n}}accessibility.part2.title{{/i18n}}</small></h2>
-        <p class="lead">{{#i18n}}accessibility.part2.lead{{/i18n}}</p>
-        <p>{{#i18n}}accessibility.part2.p1{{/i18n}}</p>
-        <p>{{#i18n}}accessibility.part2.p2{{/i18n}}</p>
-        <p>{{#i18n}}accessibility.part2.p3{{/i18n}}</p>
-    </div>
-
-    <hr/>
-
-    <div>
-        <h2><small>{{#i18n}}accessibility.part3.title{{/i18n}}</small></h2>
-        <p class="lead">{{#i18n}}accessibility.part3.lead{{/i18n}}</p>
-        <p>{{#i18n}}accessibility.part3.p1{{/i18n}}</p>
-        <p>{{#i18n}}accessibility.part3.p2{{/i18n}}</p>
-        <p>{{#i18n}}accessibility.part3.p3{{/i18n}}</p>
-    </div>
-</div>
-
-{{> footer}}
+{{> footer-sponsor}}

@@ -6,6 +6,7 @@ import mixit.event.model.EventService
 import mixit.routes.MustacheI18n.SPONSORS
 import mixit.routes.MustacheI18n.TITLE
 import mixit.routes.MustacheI18n.YEAR
+import mixit.routes.MustacheI18n.YEAR_SELECTOR
 import mixit.routes.MustacheTemplate.About
 import mixit.routes.MustacheTemplate.Accessibility
 import mixit.routes.MustacheTemplate.CodeOfConduct
@@ -13,6 +14,7 @@ import mixit.routes.MustacheTemplate.Faq
 import mixit.routes.MustacheTemplate.Search
 import mixit.routes.MustacheTemplate.Venue
 import mixit.user.model.UserService
+import mixit.util.YearSelector
 import mixit.util.language
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
@@ -39,6 +41,7 @@ class AboutHandler(
                 mapOf(
                     TITLE to About.title,
                     YEAR to year,
+                    YEAR_SELECTOR to YearSelector.create(year, "about", true),
                     SPONSORS to userService.loadSponsors(event),
                     "isCurrent" to (year == MixitApplication.CURRENT_EVENT.toInt()),
                     "volunteers" to volunteers.map { it.toDto(lang) },

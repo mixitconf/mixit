@@ -179,11 +179,12 @@ class WebsiteRoutes(
 
             (2012..CURRENT_EVENT.toInt()).forEach { year ->
                 GET("/admin/$year/feedback-wall") { talkHandler.findByEventView(feedbackWall(it, year)) }
-                GET("/about/$year") { aboutHandler.findAboutView(it, year) }
                 GET("/blog/$year") { blogHandler.findAllView(it, year) }
-                GET("/sponsors/$year") { sponsorHandler.viewSponsors(it, year) }
+
 
                 // Talks
+                GET("/$year/sponsors") { sponsorHandler.viewSponsors(it, year) }
+                GET("/$year/about") { aboutHandler.findAboutView(it, year) }
                 GET("/$year") { talkHandler.findByEventView(talks(it, year)) }
                 GET("/$year/favorite") { talkHandler.findByEventView(talksWithFavorites(it, year)) }
                 GET("/$year/medias") { talkHandler.findByEventView(media(it, year)) }

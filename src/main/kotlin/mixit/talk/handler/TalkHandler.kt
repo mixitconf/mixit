@@ -15,6 +15,7 @@ import mixit.routes.MustacheI18n.SPONSORS
 import mixit.routes.MustacheI18n.TALKS
 import mixit.routes.MustacheI18n.TITLE
 import mixit.routes.MustacheI18n.YEAR
+import mixit.routes.MustacheI18n.YEAR_SELECTOR
 import mixit.routes.MustacheTemplate
 import mixit.routes.MustacheTemplate.FeedbackWall
 import mixit.routes.MustacheTemplate.Media
@@ -33,6 +34,7 @@ import mixit.talk.model.TalkFormat
 import mixit.talk.model.TalkService
 import mixit.user.handler.dto.toDto
 import mixit.user.model.UserService
+import mixit.util.YearSelector
 import mixit.util.currentNonEncryptedUserEmail
 import mixit.util.enumMatcher
 import mixit.util.errors.NotFoundException
@@ -128,16 +130,21 @@ class TalkHandler(
         val currentUserEmail = config.req.currentNonEncryptedUserEmail()
         val talks = filterTalkByFormat(
             loadTalkAndFavorites(config, currentUserEmail).let { talks ->
-                if (config.template == Media) {
-                    talks.filter { it.video != null }
-                } else if (config.template == FeedbackWall) {
-                    talks
-                        .filterNot { it.format == TalkFormat.INTERVIEW }
-                        .filterNot { it.format == TalkFormat.ON_AIR }
-                        .filterNot { it.topic == "onair" }
-                        .filterNot { it.title.contains("Keynote team") }
-                        .toList()
-                } else talks
+                when (config.template) {
+                    Media -> {
+                        talks.filter { it.video != null }
+                    }
+                    FeedbackWall -> {
+                        talks
+                            .asSequence()
+                            .filterNot { it.format == TalkFormat.INTERVIEW }
+                            .filterNot { it.format == TalkFormat.ON_AIR }
+                            .filterNot { it.topic == "onair" }
+                            .filterNot { it.title.contains("Keynote team") }
+                            .toList()
+                    }
+                    else -> talks
+                }
             },
             config.viewWorkshop
         )
@@ -159,6 +166,7 @@ class TalkHandler(
                 mapOf(
                     EVENT to event.toEvent(),
                     SPONSORS to userService.loadSponsors(event),
+                    YEAR_SELECTOR to YearSelector.create(config.year, config.template.template, talk = true),
                     TALKS to when (config.viewList) {
                         SimpleList -> talks
                         Agenda -> {

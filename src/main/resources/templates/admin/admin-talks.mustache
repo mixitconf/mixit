@@ -1,7 +1,7 @@
 {{> header}}
-{{> header-common }}
 
-<div class="mxt-wrapper--header-page-title">
+
+<div class="container-xxl">
     <h1 class="pt-3 pb-3">
         {{#i18n}}admin.talks.title{{/i18n}}
         <button class="btn btn-secondary dropdown-toggle mxt-dropdown-header" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -23,7 +23,7 @@
         </ul>
     </h1>
 </div>
-<div class="container mxt-wrapper--page-content">
+<div class="container-xxl">
     <p>{{#i18n}}admin.talks.count{{/i18n}} : <b>{{talks.size}}</b> | <a href="/admin/talks/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
     <table class="table table-bordered table-striped">
       <thead>
