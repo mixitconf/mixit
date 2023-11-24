@@ -45,10 +45,6 @@ $enable-cssgrid: true;
 
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
-//h3 {
-//  font-weight: 300;
-//}
-
 .is-invalid {
   color: #cc4b37;
 }
@@ -766,6 +762,16 @@ $font-title: 'Changa One', 'Varela round', Arial, system-ui, -apple-system, "Seg
     border-top: 50px solid $secondary-color;
     border-right: 150vw solid transparent;
   }
+
+  .mxt-layout-header-effect-grey {
+    border-top: 50px solid $fifth-color;
+  }
+
+  .mxt-layout-header-effect-grey-inversed {
+    border-right: 150vw solid transparent;
+    border-bottom: 50px solid $fifth-color;
+    border-top: none;
+  }
 }
 
 .mxt-layout-main {
@@ -776,7 +782,6 @@ $font-title: 'Changa One', 'Varela round', Arial, system-ui, -apple-system, "Seg
 .mxt-layout-main-accent-section {
   background-color: $fifth-color;
   padding-bottom: 1em;
-  margin-top: 3em;
 }
 
 .mxt-layout-main-outline {
@@ -785,6 +790,7 @@ $font-title: 'Changa One', 'Varela round', Arial, system-ui, -apple-system, "Seg
 
 .mxt-layout-header {
   background-color: $secondary-color;
+  padding-top: 50px;
 }
 
 h1, h2 {
@@ -898,6 +904,10 @@ h2 {
 
     > span:last-child {
       font-size: small;
+      color: $third-color;
+      &hover {
+        color: $third-color !important;
+      }
     }
   }
 }
