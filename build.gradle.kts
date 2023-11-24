@@ -135,6 +135,12 @@ tasks.named("assemble") {
     )
 }
 
+tasks.named("bootRun") {
+    dependsOn(
+        "assemble"
+    )
+}
+
 kotlinter {
     disabledRules = arrayOf("import-ordering")
 }
