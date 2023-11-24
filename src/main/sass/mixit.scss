@@ -730,7 +730,7 @@ $font-title: 'Changa One', 'Varela round', Arial, system-ui, -apple-system, "Seg
 .mxt-layout--container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 70px 1fr 70px;
+  grid-template-rows: 70px 1fr;
   width: 100vw;
   max-width: 100vw;
   height: 100vh;
