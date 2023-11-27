@@ -796,7 +796,7 @@ $font-title: 'Changa One', 'Varela round', Arial, system-ui, -apple-system, "Seg
   padding-top: 50px;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: $font-title !important;
 }
 
@@ -806,7 +806,11 @@ h1 {
 }
 
 h2 {
-  padding-top: 0.5em;
+  padding-top: 0.6em;
+}
+
+h3 {
+  padding-top: 0.4em;
 }
 
 .mxt-icon--logo {
