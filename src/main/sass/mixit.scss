@@ -803,6 +803,12 @@ h1, h2, h3 {
 h1 {
   padding-top: 1em;
   padding-bottom: 0.2em;
+  display: flex;
+  align-items: center;
+
+  > img {
+    max-height: 1.5em;
+  }
 }
 
 h2 {
