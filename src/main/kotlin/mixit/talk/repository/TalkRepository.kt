@@ -39,10 +39,11 @@ class TalkRepository(
     }
 
     private fun loadYear(year: Int) {
-        val talksResource = ClassPathResource("data/talks_$year.json")
-        val talks: List<Talk> = objectMapper.readValue(talksResource.inputStream)
-        talks.forEach { save(it).block() }
-        logger.info("Talks data for $year initialization complete")
+        ClassPathResource("data/talks_$year.json").inputStream.use { resource ->
+            val talks: List<Talk> = objectMapper.readValue(resource)
+            talks.forEach { save(it).block() }
+            logger.info("Talks data for $year initialization complete")
+        }
     }
 
     fun count() =

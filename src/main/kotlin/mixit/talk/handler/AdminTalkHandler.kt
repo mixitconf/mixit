@@ -25,6 +25,7 @@ import mixit.talk.model.TalkService
 import mixit.talk.model.Topic
 import mixit.util.AdminUtils.toJson
 import mixit.util.AdminUtils.toLinks
+import mixit.util.YearSelector
 import mixit.util.enumMatcher
 import mixit.util.enumMatcherWithI18nKey
 import mixit.util.errors.NotFoundException
@@ -55,6 +56,7 @@ class AdminTalkHandler(
         val params = mapOf(
             TITLE to AdminTalks.title,
             YEAR to year,
+            MustacheI18n.YEAR_SELECTOR to YearSelector.create(year.toInt(), "admin/talks"),
             TALKS to talks
         )
         return ok().render(AdminTalks.template, params).awaitSingle()
