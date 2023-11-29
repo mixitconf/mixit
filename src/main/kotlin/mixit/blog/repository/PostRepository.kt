@@ -32,10 +32,11 @@ class PostRepository(
 
     fun initData() {
         if (count().block() == 0L) {
-            val blogResource = ClassPathResource("data/blog.json")
-            val posts: List<Post> = objectMapper.readValue(blogResource.inputStream)
-            posts.forEach { save(it).block() }
-            logger.info("Blog posts data initialization complete")
+            ClassPathResource("data/blog.json").inputStream.use { resource ->
+                val posts: List<Post> = objectMapper.readValue(resource)
+                posts.forEach { save(it).block() }
+                logger.info("Blog posts data initialization complete")
+            }
         }
     }
 

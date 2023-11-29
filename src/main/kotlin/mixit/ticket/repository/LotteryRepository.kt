@@ -29,12 +29,11 @@ class LotteryRepository(
 
     fun initData() {
         if (count().block() == 0L) {
-            val usersResource = ClassPathResource("data/lottery.json")
-            val tickets: List<LotteryTicket> = objectMapper.readValue(usersResource.inputStream)
-            tickets.forEach {
-                save(it).block()
+            ClassPathResource("data/lottery.json").inputStream.use { resource ->
+                val tickets: List<LotteryTicket> = objectMapper.readValue(resource)
+                tickets.forEach { save(it).block() }
+                logger.info("Lottery data initialization complete")
             }
-            logger.info("Lottery data initialization complete")
         }
     }
 
