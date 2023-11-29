@@ -40,7 +40,6 @@ class RedirectRoutes(
                 GET("/sponsors/$year/") { permanentRedirect("${properties.baseUri}/$year/sponsors") }
             }
 
-
             GET("/mixteen") { permanentRedirect("${properties.baseUri}/2022/mixteen-2022-born-to-code") }
 
             GET("/session/{id}", talkHandler::redirectFromId)

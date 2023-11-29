@@ -2,6 +2,7 @@ package mixit.routes
 
 import mixit.blog.handler.JsonBlogHandler
 import mixit.event.handler.JsonEventHandler
+import mixit.faq.handler.JsonQuestionHandler
 import mixit.favorite.handler.JsonFavoriteHandler
 import mixit.mixette.handler.AdminMixetteHandler
 import mixit.security.handler.ExternalHandler
@@ -27,6 +28,7 @@ class ApiRoutes(
     private val ticketHandler: AdminTicketHandler,
     private val adminMixetteHandler: AdminMixetteHandler,
     private val adminUserHandler: AdminUserHandler,
+    private val jsonQuestionHandler: JsonQuestionHandler
 ) {
 
     @Bean
@@ -41,6 +43,7 @@ class ApiRoutes(
             GET("/admin/lottery", lotteryHandler::findAll)
             GET("/admin/newsletter", adminUserHandler::adminUserNewsLetterCsv)
             GET("/admin/user", adminUserHandler::findAll)
+            GET("/faq", jsonQuestionHandler::findAll)
             GET("/blog", blogHandler::findAll)
             GET("/blog/{id}", blogHandler::findOne)
             GET("/event", eventHandler::findAll)

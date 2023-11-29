@@ -1,0 +1,51 @@
+{{> header}}
+
+<div class="container-xxl">
+    <h1 class="pt-3 pb-3">{{#i18n}}admin.faq.title{{/i18n}}</h1>
+    <p>{{#i18n}}admin.faq.description{{/i18n}}</p>
+
+    {{#question.id}}
+        <div class="text-center mb-5">
+            <form action="/admin/faq/sections/{{sectionId}}/questions/{{question.id}}/delete" method="post"
+                  onsubmit="return confirm('{{#i18n}}admin.faq.delete.question.confirm{{/i18n}}');">
+                <input type="hidden" name="sectionId" value="{{sectionId}}"/>
+                <input type="hidden" name="questionId" value="{{question.id}}"/>
+                <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}common.actions.delete{{/i18n}}"/>
+            </form>
+        </div>
+    {{/question.id}}
+    <form action="/admin/faq/sections/{{sectionId}}/questions" method="post">
+        <input type="hidden" name="sectionId" value="{{#sectionId}}{{sectionId}}{{/sectionId}}"/>
+        <input type="hidden" name="questionId" value="{{#question.id}}{{question.id}}{{/question.id}}"/>
+        <div class="mb-3">
+            <label class="label">{{#i18n}}admin.user.form.description.fr{{/i18n}}</label>
+            <input class="form-control" name="titleFr" required
+                   value="{{#question.title.descriptionFr}}{{question.title.descriptionFr}}{{/question.title.descriptionFr}}"/>
+        </div>
+        <div class="mb-3">
+            <label class="label">{{#i18n}}admin.user.form.description.en{{/i18n}}</label>
+            <input class="form-control" name="titleEn" required
+                   value="{{#question.title.descriptionEn}}{{question.title.descriptionEn}}{{/question.title.descriptionEn}}"/>
+        </div>
+        <div class="mb-3">
+            <label class="label">{{#i18n}}admin.faq.form.answer.fr{{/i18n}}</label>
+            <input class="form-control" name="answerFr" required
+                   value="{{#question.answer.descriptionFr}}{{question.answer.descriptionFr}}{{/question.answer.descriptionFr}}"/>
+        </div>
+        <div class="mb-3">
+            <label class="label">{{#i18n}}admin.faq.form.answer.en{{/i18n}}</label>
+            <input class="form-control" name="answerEn" required
+                   value="{{#question.answer.descriptionEn}}{{question.answer.descriptionEn}}{{/question.answer.descriptionEn}}"/>
+        </div>
+        <div class="mb-3">
+            <label class="label">{{#i18n}}admin.faq.table.order{{/i18n}}</label>
+            <input type="number" class="form-control" name="order" required
+                   value="{{#question.order}}{{question.order}}{{/question.order}}"/>
+        </div>
+        <div class="mb-3 text-center">
+            <input type="submit" class="btn btn-outline-primary expand" value="{{#i18n}}common.actions.save{{/i18n}}"/>
+        </div>
+    </form>
+</div>
+
+{{> footer}}

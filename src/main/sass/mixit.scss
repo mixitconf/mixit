@@ -848,6 +848,13 @@ h3 {
   @include linkWithImage("/images/svg/mxt-search-hover.svg");
 }
 
+.mxt-icon--navbar-admin {
+  @include linkWithImage("/images/svg/mxt-icon--admin-hover.svg");
+}
+
+.mxt-icon--navbar-faq {
+  @include linkWithImage("/images/svg/mxt-icon--faq-hover.svg");
+}
 .mxt-icon--navbar-code {
   @include linkWithImage("/images/svg/mxt-icon-code-hover.svg");
 }

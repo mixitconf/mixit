@@ -75,6 +75,7 @@ java -jar build/libs/mixit-1.0.0-SNAPSHOT.jar
  
 ```
 curl https://mixitconf.org/api/blog | python3 -m json.tool > blog.json
+curl https://mixitconf.org/api/faq | python3 -m json.tool > faq.json
 curl https://mixitconf.org/api/event | python3 -m json.tool > events.json
 curl https://mixitconf.org/api/event/images | python3 -m json.tool > events_image.json
 curl https://mixitconf.org/api/user | python3 -m json.tool > users.json
