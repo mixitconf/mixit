@@ -166,7 +166,7 @@ class TalkHandler(
                 mapOf(
                     EVENT to event.toEvent(),
                     SPONSORS to userService.loadSponsors(event),
-                    YEAR_SELECTOR to YearSelector.create(config.year, config.template.path, talk = true),
+                    YEAR_SELECTOR to YearSelector.create(config.year, config.template.path!!, talk = true),
                     TALKS to when (config.viewList) {
                         SimpleList -> talks
                         Agenda -> {
