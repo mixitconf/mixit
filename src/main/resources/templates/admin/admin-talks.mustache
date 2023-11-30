@@ -1,29 +1,11 @@
 {{> header}}
 
-
 <div class="container-xxl">
-    <h1 class="pt-3 pb-3">
-        {{#i18n}}admin.talks.title{{/i18n}}
-        <button class="btn btn-secondary dropdown-toggle mxt-dropdown-header" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            {{year}}
-        </button>
-        <ul class="dropdown-menu mxt-dropdown-header" aria-labelledby="dropdownMenuButton1">
-            <li><a href="{{localePrefix}}/admin/talks/2024" class="dropdown-item">2024</a></li>
-            <li><a href="{{localePrefix}}/admin/talks/2023" class="dropdown-item">2023</a></li>
-            <li><a href="{{localePrefix}}/admin/talks/2022" class="dropdown-item">2022</a></li>
-            <li><a href="{{localePrefix}}/admin/talks/2021" class="dropdown-item">2021</a></li>
-            <li><a href="{{localePrefix}}/admin/talks/2019" class="dropdown-item">2019</a></li>
-            <li><a href="{{localePrefix}}/admin/talks/2018" class="dropdown-item">2018</a></li>
-            <li><a href="{{localePrefix}}/admin/talks/2017" class="dropdown-item">2017</a></li>
-            <li><a href="{{localePrefix}}/admin/talks/2016" class="dropdown-item">2016</a></li>
-            <li><a href="{{localePrefix}}/admin/talks/2015" class="dropdown-item">2015</a></li>
-            <li><a href="{{localePrefix}}/admin/talks/2014" class="dropdown-item">2014</a></li>
-            <li><a href="{{localePrefix}}/admin/talks/2013" class="dropdown-item">2013</a></li>
-            <li><a href="{{localePrefix}}/admin/talks/2012" class="dropdown-item">2012</a></li>
-        </ul>
-    </h1>
+    <h1>{{#i18n}}admin.talks.title{{/i18n}}</h1>
+    {{> year-selector}}
 </div>
-<div class="container-xxl">
+
+<div class="container-xxl pt-5">
     <p>{{#i18n}}admin.talks.count{{/i18n}} : <b>{{talks.size}}</b> | <a href="/admin/talks/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
     <table class="table table-bordered table-striped">
       <thead>

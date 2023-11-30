@@ -29,10 +29,11 @@ class MixetteDonationRepository(
 
     fun initData() {
         if (count().block() == 0L) {
-            val usersResource = ClassPathResource("data/mixette.json")
-            val donations: List<MixetteDonation> = objectMapper.readValue(usersResource.inputStream)
-            donations.forEach { insert(it).block() }
-            logger.info("Mixette data initialization complete")
+            ClassPathResource("data/mixette.json").inputStream.use { resource ->
+                val donations: List<MixetteDonation> = objectMapper.readValue(resource)
+                donations.forEach { insert(it).block() }
+                logger.info("Mixette data initialization complete")
+            }
         }
     }
 

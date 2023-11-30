@@ -38,12 +38,13 @@ class UserRepository(
 
     fun initData() {
         if (count().block() == 0L) {
-            val usersResource = ClassPathResource("data/users.json")
-            val users: List<User> = objectMapper.readValue(usersResource.inputStream)
-            users
-                .map { it.desanonymize(cryptographer) }
-                .forEach { save(it).block() }
-            logger.info("Users data initialization complete")
+            ClassPathResource("data/users.json").inputStream.use { resource ->
+                val users: List<User> = objectMapper.readValue(resource)
+                users
+                    .map { it.desanonymize(cryptographer) }
+                    .forEach { save(it).block() }
+                logger.info("Users data initialization complete")
+            }
         }
     }
 

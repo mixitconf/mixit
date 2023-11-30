@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light mxt-navbar fixed-top">
+<nav class="navbar navbar-expand-xl navbar-light mxt-navbar fixed-top">
     <div class="container-fluid">
         <div class="navbar-brand mxt-navbar-brand">
             <a href="{{localePrefix}}/{{#fr}}fr/{{/fr}}" class="mxt-anchor--svg" rel="nofollow">
@@ -28,12 +28,18 @@
             <div class="navbar-nav mxt-navbar-nav-main">
                 {{#admin}}
                     <div class="nav-item">
-                        <a href="{{localePrefix}}/admin" class="nav-link mxt-navbar--nav-link">
+                        <a href="{{localePrefix}}/admin" class="nav-link mxt-navbar--nav-link mxt-icon--navbar-admin">
+                            <img src="/images/svg/mxt-icon--admin.svg"
+                                 class="mxt-icon--navbar me-2"
+                                 alt="{{#i18n}}header.menu.admin{{/i18n}}">
                             {{#i18n}}header.menu.admin{{/i18n}}</a>
                     </div>{{/admin}}
                 {{#volunteer}}
                     <div class="nav-item">
-                        <a href="{{localePrefix}}/volunteer" class="nav-link mxt-navbar--nav-link">
+                        <a href="{{localePrefix}}/volunteer" class="nav-link mxt-navbar--nav-link mxt-icon--navbar-admin">
+                            <img src="/images/svg/mxt-icon--admin.svg"
+                                 class="mxt-icon--navbar me-2"
+                                 alt="{{#i18n}}header.menu.admin{{/i18n}}">
                             {{#i18n}}header.menu.admin{{/i18n}}</a>
                     </div>{{/volunteer}}
                 {{#hasFeatureLottery}}
@@ -63,7 +69,13 @@
                              alt="{{#i18n}}header.menu.replay{{/i18n}}">
                         {{#i18n}}header.menu.replay{{/i18n}}</a>
                 </div>
-
+                <div class="nav-item">
+                    <a href="{{localePrefix}}/faq" class="nav-link mxt-navbar--nav-link mxt-icon--navbar-faq ">
+                        <img src="/images/svg/mxt-icon--faq.svg"
+                             class="mxt-icon--navbar me-2"
+                             alt="{{#i18n}}header.menu.faq{{/i18n}}">
+                        {{#i18n}}header.menu.faq{{/i18n}}</a>
+                </div>
             </div>
             <div class="flex-fill d-none d-lg-inline"></div>
             <div class="navbar-nav mxt-navbar-nav">

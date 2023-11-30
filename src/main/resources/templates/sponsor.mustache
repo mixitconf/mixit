@@ -18,7 +18,7 @@
         {{/sponsor.isAbsoluteLogo}}
     </div>
     <div>
-        {{#markdown}}{{sponsor.description}}{{/markdown}}
+        {{#markdown}}{{#sponsor.description}}{{sponsor.description}}{{/sponsor.description}}{{/markdown}}
         <ul class="mxt-wrapper-list-inline">
             {{#sponsor.links}}
                 <li><a href="{{url}}" target="_blank">{{name}}</a></li>

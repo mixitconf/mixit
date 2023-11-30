@@ -1,0 +1,35 @@
+{{> header}}
+
+
+<div class="container-xxl">
+    <h1 class="pt-3 pb-3">{{#i18n}}admin.faq.title{{/i18n}}</h1>
+    <p>{{#i18n}}admin.faq.description{{/i18n}}</p>
+
+    <p>{{#i18n}}admin.faq.count{{/i18n}} : <b>{{sections.size}}</b> |
+        <a href="/admin/faq/sections/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>{{#i18n}}admin.faq.table.title{{/i18n}}</th>
+            <th>{{#i18n}}admin.faq.table.order{{/i18n}}</th>
+            <th>{{#i18n}}common.actions{{/i18n}}</th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#sections}}
+            <tr>
+                <td>
+                    <strong>fr</strong> : {{title.descriptionFr}}<br>
+                    <strong>en</strong> : {{title.descriptionEn}}
+                </td>
+                <td>{{order}}</td>
+                <td>
+                    <a href="/admin/faq/sections/{{id}}">{{#i18n}}common.actions.update{{/i18n}}</a>
+                </td>
+            </tr>
+        {{/sections}}
+        </tbody>
+    </table>
+</div>
+
+{{> footer}}

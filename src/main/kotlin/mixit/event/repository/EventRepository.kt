@@ -28,10 +28,11 @@ class EventRepository(
 
     fun initData() {
         if (count().block() == 0L) {
-            val eventsResource = ClassPathResource("data/events.json")
-            val events: List<Event> = objectMapper.readValue(eventsResource.inputStream)
-            events.forEach { save(it).block(Duration.ofSeconds(10)) }
-            logger.info("Events data initialization complete")
+            ClassPathResource("data/events.json").inputStream.use { resource ->
+                val events: List<Event> = objectMapper.readValue(resource)
+                events.forEach { save(it).block(Duration.ofSeconds(10)) }
+                logger.info("Events data initialization complete")
+            }
         }
     }
 

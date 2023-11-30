@@ -28,10 +28,11 @@ class TicketRepository(
     fun initData() {
         deleteAll().block()
         if (count().block() == 0L) {
-            val resource = ClassPathResource("data/ticket.json")
-            val tickets: List<Ticket> = objectMapper.readValue(resource.inputStream)
-            tickets.forEach { save(it).block() }
-            logger.info("Ticket data initialization complete")
+            ClassPathResource("data/ticket.json").inputStream.use { resource ->
+                val tickets: List<Ticket> = objectMapper.readValue(resource)
+                tickets.forEach { save(it).block() }
+                logger.info("Ticket data initialization complete")
+            }
         }
     }
 

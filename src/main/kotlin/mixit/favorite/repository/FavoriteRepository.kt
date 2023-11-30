@@ -30,10 +30,11 @@ class FavoriteRepository(
 
     fun initData() {
         if (count().block() == 0L) {
-            val favoriteResource = ClassPathResource("data/favorite.json")
-            val favorites: List<Favorite> = objectMapper.readValue(favoriteResource.inputStream)
-            favorites.forEach { save(it).block(Duration.ofSeconds(10)) }
-            logger.info("Favorite data initialization complete")
+            ClassPathResource("data/favorite.json").inputStream.use { resource ->
+                val favorites: List<Favorite> = objectMapper.readValue(resource)
+                favorites.forEach { save(it).block(Duration.ofSeconds(10)) }
+                logger.info("Favorite data initialization complete")
+            }
         }
     }
 
