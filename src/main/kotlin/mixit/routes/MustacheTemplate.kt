@@ -6,8 +6,8 @@ package mixit.routes
  * - a title
  * - several images
  */
-enum class MustacheTemplate(val template: String, val title: String?) {
-    About("about", "about.title"),
+enum class MustacheTemplate(val template: String, val title: String?, val path: String? = null) {
+    About("about", "about.title", "about"),
     Accessibility("accessibility", "accessibility.title"),
     Admin("admin/admin", "admin.title"),
     AdminBlog("admin/admin-blog", "admin.title"),
@@ -38,7 +38,7 @@ enum class MustacheTemplate(val template: String, val title: String?) {
     AdminMixetteOrganizations("admin/admin-mixette-organizations", "admin.donations.title"),
     AdminPost("admin/admin-post", null),
     AdminTalk("admin/admin-talk", "admin.talk.title"),
-    AdminTalks("admin/admin-talks", "admin.talks.title"),
+    AdminTalks("admin/admin-talks", "admin.talks.title", "admin/talks"),
     AdminTicket("admin/admin-ticket", "admin.ticket.title"),
     AdminTicketEdit("admin/admin-ticket-edit", "admin.ticket.title"),
     AdminTicketPrint("admin/admin-ticket-print", "admin.ticket.title"),
@@ -72,8 +72,8 @@ enum class MustacheTemplate(val template: String, val title: String?) {
     Search("search", "search.title"),
     Speaker("speaker", "speaker.title"),
     Sponsor("sponsor-view", null),
-    Sponsors("sponsors", null),
-    TalkList("talks", "talks.title.html"),
+    Sponsors("sponsors", null, "sponsors"),
+    TalkList("talks", "talks.title.html", ""),
     TalkDetail("talk", "talks.title.html"),
     TalkEdit("talk-edit", "talks.title.html"),
     TicketError("ticket-error", "admin.ticket.title"),

@@ -808,6 +808,10 @@ h1 {
 
   > img {
     max-height: 1.5em;
+    border: 2px solid $secondary-color;
+    border-radius: 50%;
+    padding: 0.2em;
+    background-color: $secondary-color;
   }
 }
 
