@@ -2,10 +2,11 @@
 
 <div class="container-xxl">
     <h1>{{#i18n}}search.title{{/i18n}}</h1>
-    <form action="/search" method="post">
+    <form action="{{localePrefix}}/search" method="post">
         <div class="row">
             <div class="col-10">
-                <input type="search" class="form-control" name="search" placeholder="{{#i18n}}search.title{{/i18n}}">
+                <input type="search" class="form-control" name="search" placeholder="{{#i18n}}search.title{{/i18n}}"
+                    value="{{#criteria}}{{criteria}}{{/criteria}}">
             </div>
             <div class="col-2">
                 <button type="submit" class="btn btn-primary"><img src="/images/svg/mxt-search.svg" style="max-width: 1.5em" title="{{#i18n}}header.menu.search{{/i18n}}"></button>
@@ -13,8 +14,27 @@
         </div>
     </form>
 
-    <h2 class="mxt-section">{{#i18n}}search.talks{{/i18n}}</h2>
+    {{#hasQuestions}}
+        <h2 class="mt-5">{{#i18n}}search.faq{{/i18n}}</h2>
+        <p>{{#i18n}}search.nb{{/i18n}}<b>{{countQuestions}}</b></p>
+        {{#faq}}
+            <article class="mb-4">
+                <h2 class="pt-5">
+                    {{#en}}{{title.descriptionEn}}{{/en}}
+                    {{#fr}}{{title.descriptionFr}}{{/fr}}
+                </h2>
+                {{#questions}}
+                    <div class="row">
+                        <h3 class="subheader">{{#en}}{{title.descriptionEn}}{{/en}}{{#fr}}{{title.descriptionFr}}{{/fr}}</h3>
+                        <p>{{#en}}{{#markdown}}{{answer.descriptionEn}}{{/markdown}}{{/en}}{{#fr}}{{#markdown}}{{answer.descriptionFr}}{{/markdown}}{{/fr}}</p>
+                    </div>
+                {{/questions}}
+            </article>
+        {{/faq}}
+    {{/hasQuestions}}
+
     {{#hasTalks}}
+        <h2 class="mt-5">{{#i18n}}search.talks{{/i18n}}</h2>
         <p>{{#i18n}}search.nb{{/i18n}}<b>{{countTalks}}</b></p>
         {{#talks}}
             <article class="mb-4">
@@ -31,12 +51,9 @@
             </article>
         {{/talks}}
     {{/hasTalks}}
-    {{^hasTalks}}
-        <p>{{#i18n}}search.no.talks{{/i18n}}</p>
-    {{/hasTalks}}
 
-    <h2 class="mxt-section">{{#i18n}}search.posts{{/i18n}}</h2>
     {{#hasArticles}}
+        <h2 class="mt-5">{{#i18n}}search.posts{{/i18n}}</h2>
         <p>{{#i18n}}search.nb{{/i18n}}<b>{{countArticles}}</b></p>
         {{#articles}}
             <article class="mb-4">
@@ -47,23 +64,17 @@
             </article>
         {{/articles}}
     {{/hasArticles}}
-    {{^hasArticles}}
-        <p>{{#i18n}}search.no.posts{{/i18n}}</p>
-    {{/hasArticles}}
 
-    <h2 class="mxt-section">{{#i18n}}search.users{{/i18n}}</h2>
-        {{#hasUsers}}
-            <p>{{#i18n}}search.nb{{/i18n}}<b>{{countUsers}}</b></p>
-            {{#users}}
-                <article class="mb-4">
-                    <h2><a href="{{localePrefix}}/user/{{login}}" class="mxt-title--article">{{firstname}} {{lastname}}</a></h2>
-                    <p>{{#markdown}}{{description}}{{/markdown}}</p>
-                    <a href="{{localePrefix}}/user/{{login}}" class="btn btn-outline-primary align-center">{{#i18n}}user.readmore{{/i18n}}</a>
-                </article>
-            {{/users}}
-        {{/hasUsers}}
-        {{^hasUsers}}
-            <p>{{#i18n}}search.no.users{{/i18n}}</p>
-        {{/hasUsers}}
+    {{#hasUsers}}
+        <h2 class="mt-5">{{#i18n}}search.users{{/i18n}}</h2>
+        <p>{{#i18n}}search.nb{{/i18n}}<b>{{countUsers}}</b></p>
+        {{#users}}
+            <article class="mb-4">
+                <h2><a href="{{localePrefix}}/user/{{login}}" class="mxt-title--article">{{firstname}} {{lastname}}</a></h2>
+                <p>{{#markdown}}{{description}}{{/markdown}}</p>
+                <a href="{{localePrefix}}/user/{{login}}" class="btn btn-outline-primary align-center">{{#i18n}}user.readmore{{/i18n}}</a>
+            </article>
+        {{/users}}
+    {{/hasUsers}}
 </div>
 {{> footer}}
