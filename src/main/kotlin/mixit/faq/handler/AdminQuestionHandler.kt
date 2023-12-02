@@ -14,6 +14,7 @@ import mixit.talk.model.Language
 import mixit.util.errors.NotFoundException
 import mixit.util.extractFormData
 import mixit.util.seeOther
+import mixit.util.validator.MarkdownValidator
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
@@ -25,7 +26,8 @@ import java.util.*
 class AdminQuestionHandler(
     private val service: QuestionSectionService,
     private val repository: QuestionSectionRepository,
-    private val properties: MixitProperties
+    private val properties: MixitProperties,
+    private val markdownValidator: MarkdownValidator
 ) {
 
     companion object {
@@ -121,8 +123,8 @@ class AdminQuestionHandler(
                     descriptionEn = formData["titleEn"]!!
                 ),
                 answer = Text(
-                    descriptionFr = formData["answerFr"]!!,
-                    descriptionEn = formData["answerEn"]!!
+                    descriptionFr = markdownValidator.sanitize(formData["answerFr"]!!.trim()),
+                    descriptionEn = markdownValidator.sanitize(formData["answerEn"]!!.trim())
                 ),
                 order = formData["order"]?.toInt() ?: 0,
             )

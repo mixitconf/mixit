@@ -52,11 +52,6 @@ class AboutHandler(
             .awaitSingle()
     }
 
-    suspend fun faqView(req: ServerRequest): ServerResponse =
-        ok()
-            .render(Faq.template, mapOf(TITLE to Faq.title))
-            .awaitSingle()
-
     suspend fun comeToMixitView(req: ServerRequest): ServerResponse {
         val event = eventService.findByYear(MixitApplication.CURRENT_EVENT)
 
