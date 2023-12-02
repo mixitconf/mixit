@@ -29,13 +29,20 @@
         </div>
         <div class="mb-3">
             <label class="label">{{#i18n}}admin.faq.form.answer.fr{{/i18n}}</label>
-            <input class="form-control" name="answerFr" required
-                   value="{{#question.answer.descriptionFr}}{{question.answer.descriptionFr}}{{/question.answer.descriptionFr}}"/>
+            <textarea class="form-control"
+                      name="answerFr"
+                      rows="5"
+                      required>{{#question.answer.descriptionFr}}{{question.answer.descriptionFr}}{{/question.answer.descriptionFr}}
+            </textarea>
         </div>
         <div class="mb-3">
             <label class="label">{{#i18n}}admin.faq.form.answer.en{{/i18n}}</label>
-            <input class="form-control" name="answerEn" required
-                   value="{{#question.answer.descriptionEn}}{{question.answer.descriptionEn}}{{/question.answer.descriptionEn}}"/>
+            <textarea
+                    class="form-control"
+                    name="answerEn"
+                    rows="5"
+                    required>{{#question.answer.descriptionEn}}{{question.answer.descriptionEn}}{{/question.answer.descriptionEn}}
+            </textarea>
         </div>
         <div class="mb-3">
             <label class="label">{{#i18n}}admin.faq.table.order{{/i18n}}</label>

@@ -9,6 +9,7 @@ import mixit.blog.handler.WebBlogHandler
 import mixit.event.handler.AdminEventHandler
 import mixit.event.handler.AdminEventImagesHandler
 import mixit.faq.handler.AdminQuestionHandler
+import mixit.faq.model.QuestionSectionService
 import mixit.features.handler.FeatureStateHandler
 import mixit.mailing.handler.MailingHandler
 import mixit.mailing.handler.MailingListHandler
@@ -75,7 +76,8 @@ class WebsiteRoutes(
     private val ticketHandler: TicketHandler,
     private val properties: MixitProperties,
     private val routeFilterUtils: RouteFilterUtils,
-    private val featureStateHandler: FeatureStateHandler
+    private val featureStateHandler: FeatureStateHandler,
+    private val faqHandler: mixit.faq.handler.FaqHandler,
 ) {
 
     private val logger = LoggerFactory.getLogger(WebsiteRoutes::class.java)
@@ -166,7 +168,7 @@ class WebsiteRoutes(
             GET("/blog/{slug}", blogHandler::findOneView)
             GET("/code-of-conduct", aboutHandler::codeConductView)
             GET("/codeofconduct", aboutHandler::codeConductView)
-            GET("/faq", aboutHandler::faqView)
+            GET("/faq", faqHandler::faqView)
             GET("/lottery", lotteryHandler::ticketing)
             GET("/me") { userHandler.findProfileView(it) }
             GET("/me/edit", userHandler::editProfileView)

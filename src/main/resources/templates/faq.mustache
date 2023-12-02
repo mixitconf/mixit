@@ -2,88 +2,21 @@
 
 <div class="container-xxl">
     <h1>{{#i18n}}faq.title{{/i18n}}</h1>
-    
-    <h2 class="pt-5">{{#i18n}}faq.title.ticket{{/i18n}}</h2>
 
-    <div >
-        <div class="row align-middle">
-            <h3 class="subheader">{{#i18n}}faq.buy.title{{/i18n}}</h3>
-            <div>{{#i18n}}faq.buy.detail{{/i18n}}</div>
-        </div>
-    </div>
-    <div >
-        <div class="row align-middle">
-            <h3 class="subheader">{{#i18n}}faq.lottery.title{{/i18n}}</h3>
-            <div>{{#i18n}}faq.lottery.detail{{/i18n}}</div>
-        </div>
-    </div>
-    <div >
-        <div class="row align-middle">
-            <h3 class="subheader">{{#i18n}}faq.bill.title{{/i18n}}</h3>
-            <div>{{#i18n}}faq.bill.detail{{/i18n}}</div>
-        </div>
-    </div>
+    {{#sections}}
+        <article class="pt-2 pb-2">
+            <h2 class="pt-5">
+                {{#en}}{{title.descriptionEn}}{{/en}}
+                {{#fr}}{{title.descriptionFr}}{{/fr}}
+            </h2>
+            {{#questions}}
+                <div class="row">
+                    <h3 class="subheader">{{#en}}{{title.descriptionEn}}{{/en}}{{#fr}}{{title.descriptionFr}}{{/fr}}</h3>
+                    <p>{{#en}}{{#markdown}}{{answer.descriptionEn}}{{/markdown}}{{/en}}{{#fr}}{{#markdown}}{{answer.descriptionFr}}{{/markdown}}{{/fr}}</p>
+                </div>
+            {{/questions}}
+        </article>
+    {{/sections}}
 
-    <h2 class="pt-5">{{#i18n}}faq.title.prog{{/i18n}}</h2>
-
-    <div >
-        <div class="row align-middle">
-            <h3 class="subheader">{{#i18n}}faq.cfp.title{{/i18n}}</h3>
-            <div>{{#i18n}}faq.cfp.details{{/i18n}}</div>
-        </div>
-    </div>
-
-    <div >
-        <div class="row align-middle">
-            <h3 class="subheader">{{#i18n}}faq.prog.title{{/i18n}}</h3>
-            <div>{{#i18n}}faq.prog.details{{/i18n}}</div>
-        </div>
-    </div>
-
-    <div >
-        <div class="row align-middle">
-            <h3 class="subheader">{{#i18n}}faq.video.title{{/i18n}}</h3>
-            <div>{{#i18n}}faq.video.detail{{/i18n}}</div>
-        </div>
-    </div>
-
-    <h2 class="pt-5">{{#i18n}}faq.title.info{{/i18n}}</h2>
-    
-    <div >
-        <div class="row align-middle">
-            <h3 class="subheader">{{#i18n}}faq.newsletter.title{{/i18n}}</h3>
-            <div>{{#i18n}}faq.newsletter.detail{{/i18n}}</div>
-        </div>
-    </div>
-
-    <div >
-        <div class="row align-middle">
-            <h3 class="subheader">{{#i18n}}faq.social.title{{/i18n}}</h3>
-            <div>{{#i18n}}faq.social.detail{{/i18n}}</div>
-        </div>
-    </div>
-
-    <h2 class="pt-5">{{#i18n}}faq.title.training{{/i18n}}</h2>
-
-    <div >
-        <div class="row align-middle">
-            <h3 class="subheader">{{#i18n}}faq.training.title{{/i18n}}</h3>
-            <p>{{#i18n}}faq.training.detail{{/i18n}}</p>
-        </div>
-    </div>
-
-    <div >
-        <div class="row align-middle">
-            <h3 class="subheader">{{#i18n}}faq.opca.title{{/i18n}}</h3>
-            <p>{{#i18n}}faq.opca.detail{{/i18n}}</p>
-        </div>
-    </div>
-
-    <div >
-        <div class="row align-middle">
-            <h3 class="subheader">{{#i18n}}faq.cpf.title{{/i18n}}</h3>
-            <p>{{#i18n}}faq.cpf.detail{{/i18n}}</p>
-        </div>
-    </div>
 </div>
 {{> footer}}
