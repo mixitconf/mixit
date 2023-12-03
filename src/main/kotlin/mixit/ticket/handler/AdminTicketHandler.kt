@@ -9,6 +9,8 @@ import mixit.event.model.SponsorshipLevel.LANYARD
 import mixit.event.model.SponsorshipLevel.MIXTEEN
 import mixit.event.model.SponsorshipLevel.PARTY
 import mixit.event.model.SponsorshipLevel.SILVER
+import mixit.features.model.Feature
+import mixit.features.model.FeatureStateService
 import mixit.routes.MustacheI18n.CREATION_MODE
 import mixit.routes.MustacheI18n.MESSAGE
 import mixit.routes.MustacheI18n.TICKET
@@ -54,7 +56,8 @@ class AdminTicketHandler(
     private val talkService: TalkService,
     private val eventService: EventService,
     private val properties: MixitProperties,
-    private val cryptographer: Cryptographer
+    private val cryptographer: Cryptographer,
+    private val featureStateService: FeatureStateService
 ) {
 
     companion object {
@@ -75,7 +78,7 @@ class AdminTicketHandler(
             TICKETS to tickets,
             TYPES to TicketType.values().map { it to false }
         )
-        val template = if (properties.feature.lotteryResult) AdminTicket.template else throw NotFoundException()
+        val template = if (featureStateService.findOneByType(Feature.LotteryResult).active) AdminTicket.template else throw NotFoundException()
         return ok().renderAndAwait(template, params)
     }
 
@@ -88,7 +91,7 @@ class AdminTicketHandler(
                 )
         }
         val template =
-            if (properties.feature.lotteryResult) AdminTicketPrint.template else throw NotFoundException()
+            if (featureStateService.findOneByType(Feature.LotteryResult).active) AdminTicketPrint.template else throw NotFoundException()
         val params = mapOf(
             TITLE to "admin.ticket.title",
             TICKETS to tickets
@@ -109,7 +112,7 @@ class AdminTicketHandler(
 
     private suspend fun adminTicket(ticket: Ticket = Ticket.empty(cryptographer)): ServerResponse {
         val template =
-            if (properties.feature.lotteryResult) AdminTicketEdit.template else throw NotFoundException()
+            if (featureStateService.findOneByType(Feature.LotteryResult).active) AdminTicketEdit.template else throw NotFoundException()
         val params = mapOf(
             TITLE to AdminTicketPrint.title,
             CREATION_MODE to ticket.encryptedEmail.isEmpty(),

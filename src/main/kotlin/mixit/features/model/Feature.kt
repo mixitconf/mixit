@@ -4,7 +4,34 @@ import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 
 enum class Feature {
-    MixitOnAirOnHomePage
+    /**
+     * Active MiXiT on Air on the home page
+     */
+    MixitOnAirOnHomePage,
+
+    /**
+     * Active the lottery feature
+     */
+    Lottery,
+
+    /**
+     * If active we display the lottery result in user profile
+     */
+    LotteryResult,
+
+    /**
+     * We have a double check on the user profile page to display lottery result
+     */
+    ProfileMessage,
+
+    /**
+     * Active the mixette feature
+     */
+    Mixette,
+    /**
+     * Active the CFP
+     */
+    Cfp,
 }
 
 @Document

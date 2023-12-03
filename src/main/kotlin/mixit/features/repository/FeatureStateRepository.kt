@@ -1,6 +1,7 @@
 package mixit.features.repository
 
 import kotlinx.coroutines.reactor.awaitSingle
+import mixit.faq.model.QuestionSection
 import mixit.features.model.Feature
 import mixit.features.model.FeatureState
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
@@ -20,26 +21,25 @@ import reactor.core.publisher.Mono
 class FeatureStateRepository(private val template: ReactiveMongoTemplate) {
 
     fun initData() {
+        //TODO delete after index creation
+        deleteAll().block()
         if (count().block() == 0L) {
+            save(FeatureState(false, Feature.Cfp)).block()
+            save(FeatureState(false, Feature.Lottery)).block()
+            save(FeatureState(false, Feature.LotteryResult)).block()
+            save(FeatureState(false, Feature.Mixette)).block()
             save(FeatureState(false, Feature.MixitOnAirOnHomePage)).block()
+            save(FeatureState(false, Feature.ProfileMessage)).block()
         }
     }
 
     fun count() = template.count<FeatureState>()
 
-    suspend fun findOne(id: String): FeatureState =
-        template.findById<FeatureState>(id).awaitSingle()
-
-    fun findFeature(feature: Feature): Mono<FeatureState> =
-        template
-            .findOne<FeatureState>(Query(Criteria.where("feature").isEqualTo(feature.name)))
-
-    suspend fun findOneByType(feature: Feature): FeatureState =
-        findFeature(feature).awaitSingle()
-
-    fun findAll() = template.findAll<FeatureState>()
-
-    fun deleteOne(id: String) = template.remove<FeatureState>(Query(where("_id").isEqualTo(id)))
+    suspend fun findAll() = template.findAll<FeatureState>().collectList().awaitSingle()
 
     fun save(feature: FeatureState) = template.save(feature)
+
+    fun deleteAll() =
+        template.remove<FeatureState>(Query())
+
 }
