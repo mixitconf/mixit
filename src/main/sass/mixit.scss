@@ -55,7 +55,7 @@ $enable-cssgrid: true;
 
   .nav-item {
     .btn.active {
-      background-color: $fifth-color;
+      background-color: $primary-color !important;
       border-color: $fifth-color;
     }
 
@@ -442,7 +442,6 @@ $enable-cssgrid: true;
 }
 
 .mxt-text--talk-h1 {
-  font-size: 2rem;
   padding-top: 1em;
   padding-bottom: 1em;
 }
@@ -842,6 +841,25 @@ h3 {
   }
 }
 
+.mxt-navbar--talks {
+  justify-content: flex-start;
+  .nav-item {
+    background-color: $third-color;
+    border-radius: 24px;
+  }
+  a, .mxt-navbar--nav-link {
+    border: 2px solid $third-color !important;
+    padding: 1em !important;
+    border-radius: 24px;
+    color: white;
+
+    &:hover {
+      color: $secondary-color !important;
+      border: 2px solid $secondary-color !important;
+    }
+  }
+}
+
 .mxt-icon--navbar-login {
   @include linkWithImage("/images/svg/security/mxt-lock--open-hover.svg");
 }
@@ -875,6 +893,18 @@ h3 {
 
 .mxt-icon--navbar-video {
   @include linkWithImage("/images/svg/mxt-icon-video-hover.svg");
+}
+
+.mxt-icon--navbar-video-dark {
+  @include linkWithImage("/images/svg/mxt-icon-video-dark.svg");
+}
+
+.mxt-icon--navbar-file-dark {
+  @include linkWithImage("/images/svg/mxt-icon-file-pdf-dark.svg");
+}
+
+.mxt-icon--navbar-favorite-dark {
+  @include linkWithImage("/images/svg/favorites/mxt-favorite-dark.svg");
 }
 
 .mxt-icon--navbar-cfp {
