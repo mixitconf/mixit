@@ -48,7 +48,8 @@ class LotteryHandler(
         val ticket = LotteryTicket(
             formData["email"]!!.lowercase(),
             formData["firstname"]!!,
-            formData["lastname"]!!
+            formData["lastname"]!!,
+            interests = formData["interests"]?.split(",")?.map { it.trim() } ?: emptyList(),
         )
 
         // Data are encrypted

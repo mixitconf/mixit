@@ -877,6 +877,14 @@ h3 {
   @include linkWithImage("/images/svg/mxt-icon-video-hover.svg");
 }
 
+.mxt-icon--navbar-cfp {
+  @include linkWithImage("/images/svg/mxt-icon-cfp-hover.svg");
+}
+
+.mxt-icon--navbar-lottery {
+  @include linkWithImage("/images/svg/mxt-icon-lottery-hover.svg");
+}
+
 .mxt-navbar {
   box-shadow: none;
   background-color: $secondary-color;
@@ -1238,4 +1246,24 @@ $sponsor-max-width: 20em;
 .mxt-anchor-container{
   display: flex;
   justify-content: flex-end;
+}
+
+.mxt-interests {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  > li {
+    margin: 0.5em;
+    font-weight: bold;
+    background-color: $primary-color;
+    color: white;
+    padding: 0.2em 0.5em;
+    border-radius: 24px;
+    &::before {
+      content: "#";
+      color: white;
+      padding-right: 0.2em;
+    }
+  }
+
 }

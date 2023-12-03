@@ -15,7 +15,8 @@ data class LotteryTicket(
     @Id val email: String,
     val firstname: String,
     val lastname: String,
-    val rank: Int? = null
+    val rank: Int? = null,
+    val interests: List<String> = emptyList(),
 )
 
 /**

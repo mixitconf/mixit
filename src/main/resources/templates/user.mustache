@@ -1,17 +1,16 @@
 {{> header}}
 
-
 <div class="container-xxl">
-    <h2 class="pt-3 pb-3">
+    <h1 class="pt-3 pb-3">
         {{#speakerYear}}{{#i18n}}user.speaker{{/i18n}} {{speakerYear}}{{/speakerYear}}
         {{^speakerYear}}{{#i18n}}user.standard{{/i18n}}{{/speakerYear}}
-    </h2>
+    </h1>
 </div>
 
 <div class="container-xxl">
-    <h1 class="text-center mxt-title--talk" style="margin-bottom: 0">
+    <h2 class="text-center mxt-title--talk" style="margin-bottom: 0">
         {{user.firstname}} {{user.lastname}}
-    </h1>
+    </h2>
     <div class="text-center">
         {{#user.photoUrl}}<img src="{{user.photoUrl}}" class="mxt-img-avatar__speaker">{{/user.photoUrl}}
         {{^user.photoUrl}}<img src="https://www.gravatar.com/avatar/{{#user.emailHash}}{{user.emailHash}}{{/user.emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png" class="mxt-img-avatar__speaker">{{/user.photoUrl}}
