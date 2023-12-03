@@ -97,7 +97,7 @@ class TalkHandler(
                 year,
                 req,
                 topic,
-                viewList = if ((req.queryParamOrNull("agenda") ?: "true") == "true") Agenda else ListByDate,
+                viewList = if ((req.queryParamOrNull("agenda") ?: if(year == CURRENT_EVENT.toInt()) "true" else "false") == "true") Agenda else ListByDate,
                 viewWorkshop = (req.queryParamOrNull("workshop") ?: "true") == "true"
             )
 
