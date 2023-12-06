@@ -41,7 +41,8 @@ class CacheHandler(
     private val userService: UserService,
     private val ticketService: TicketService,
     private val eventImagesService: EventImagesService,
-    private val faqService: QuestionSectionService
+    private val faqService: QuestionSectionService,
+    private val featureStateService: QuestionSectionService
 ) {
 
     suspend fun view(req: ServerRequest): ServerResponse {
@@ -54,7 +55,8 @@ class CacheHandler(
                 CacheZone.USER.name.lowercase() to CacheZoneStat.init(userService),
                 CacheZone.TICKET.name.lowercase() to CacheZoneStat.init(ticketService),
                 CacheZone.EVENT_IMAGES.name.lowercase() to CacheZoneStat.init(eventImagesService),
-                CacheZone.FAQ.name.lowercase() to CacheZoneStat.init(faqService)
+                CacheZone.FAQ.name.lowercase() to CacheZoneStat.init(faqService),
+                CacheZone.FEATURE.name.lowercase() to CacheZoneStat.init(faqService)
             )
         )
 
@@ -73,6 +75,7 @@ class CacheHandler(
                     CacheZone.TICKET -> ticketService.invalidateCache()
                     CacheZone.EVENT_IMAGES -> eventImagesService.invalidateCache()
                     CacheZone.FAQ -> faqService.invalidateCache()
+                    CacheZone.FEATURE -> featureStateService.invalidateCache()
                 }
                 view(req)
             }

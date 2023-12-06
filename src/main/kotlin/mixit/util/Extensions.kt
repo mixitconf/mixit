@@ -155,6 +155,14 @@ fun String.markFoundOccurrences(searchTerms: List<String> = emptyList()): String
         str
     }
 
+/**
+ * Return true if the string contains at least one of the search terms. The search is insensitive to case.
+ */
+fun String.hasFoundOccurrences(searchTerms: List<String> = emptyList()): Boolean =
+    this.let { str ->
+        if (searchTerms.isEmpty()) false else searchTerms.any { str.contains(it, true) }
+    }
+
 fun String.stripAccents() = Normalizer
     .normalize(this, Normalizer.Form.NFD)
     .replace("\\p{InCombiningDiacriticalMarks}+".toRegex(), "")

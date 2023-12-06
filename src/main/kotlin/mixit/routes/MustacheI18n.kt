@@ -2,6 +2,7 @@ package mixit.routes
 
 object MustacheI18n {
     const val ARTICLES = "articles"
+    const val COUNT_QUESTIONS = "countQuestions"
     const val COUNT_ARTICLES = "countArticles"
     const val COUNT_USERS = "countUsers"
     const val COUNT_TALKS = "countTalks"
@@ -13,10 +14,12 @@ object MustacheI18n {
     const val EVENT = "event"
     const val EVENT_ID = "eventId"
     const val EVENTS = "events"
+    const val FAQ = "faq"
     const val FEATURES = "features"
     const val FORMATS = "formats"
     const val IMAGES = "images"
     const val HAS_ERRORS = "hasErrors"
+    const val HAS_QUESTION = "hasQuestions"
     const val HAS_ARTICLES = "hasArticles"
     const val HAS_USERS = "hasUsers"
     const val HAS_SPEAKERS = "hasSpeakers"

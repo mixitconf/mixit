@@ -3,6 +3,7 @@ package mixit.routes
 import com.samskivert.mustache.Mustache
 import mixit.MixitProperties
 import mixit.features.model.Feature
+import mixit.features.model.FeatureStateService
 import mixit.features.repository.FeatureStateRepository
 import mixit.user.model.Role
 import mixit.util.locale
@@ -24,7 +25,7 @@ import java.util.Locale
 class RouteFilterUtils(
     private val messageSource: MessageSource,
     private val properties: MixitProperties,
-    private val featureStateRepository: FeatureStateRepository,
+    private val featureStateService: FeatureStateService,
 ) {
 
     fun addModelToResponse(request: ServerRequest, next: HandlerFunction<ServerResponse>): Mono<ServerResponse> =
@@ -55,11 +56,12 @@ class RouteFilterUtils(
         this["switchLangUrl"] = switchLangUrl(path, locale)
         this["uri"] = "${properties.baseUri}$path"
         this["markdown"] = Mustache.Lambda { frag, out -> out.write(frag.execute().toHTML()) }
-        this["hasFeatureLottery"] = properties.feature.lottery
-        this["hasFeatureLotteryResult"] = properties.feature.lotteryResult
-        this["hasFeatureMixette"] = properties.feature.mixette
-        this["hasFeatureProfileWithMessages"] = properties.feature.profilemsg
-        this["hasMixitOnAirOnHomePage"] = featureStateRepository.findFeature(Feature.MixitOnAirOnHomePage).map { it.active }
+        this["hasCfp"] = featureStateService.findFeature(Feature.Cfp).map { it.active }
+        this["hasFeatureLottery"] = featureStateService.findFeature(Feature.Lottery).map { it.active }
+        this["hasFeatureLotteryResult"] = featureStateService.findFeature(Feature.LotteryResult).map { it.active }
+        this["hasFeatureMixette"] = featureStateService.findFeature(Feature.Mixette).map { it.active }
+        this["hasFeatureProfileWithMessages"] = featureStateService.findFeature(Feature.ProfileMessage).map { it.active }
+        this["hasMixitOnAirOnHomePage"] = featureStateService.findFeature(Feature.MixitOnAirOnHomePage).map { it.active }
     }.toMap()
 
     fun generateModelForExernalCall(

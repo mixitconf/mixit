@@ -1,7 +1,8 @@
 package mixit.ticket.handler
 
 import kotlinx.coroutines.reactor.awaitSingle
-import mixit.MixitProperties
+import mixit.features.model.Feature
+import mixit.features.model.FeatureStateService
 import mixit.routes.MustacheI18n.TITLE
 import mixit.routes.MustacheTemplate
 import mixit.routes.MustacheTemplate.LotteryClosed
@@ -24,21 +25,21 @@ import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.bodyValueAndAwait
 import org.springframework.web.reactive.function.server.renderAndAwait
-import java.util.Locale
+import java.util.*
 
 @Component
 class LotteryHandler(
     private val lotteryRepository: LotteryRepository,
     private val cryptographer: Cryptographer,
     private val emailService: EmailService,
-    private val properties: MixitProperties
+    private val featureStateService: FeatureStateService
 ) {
     suspend fun findAll(req: ServerRequest): ServerResponse =
         ok().json().bodyValueAndAwait(lotteryRepository.findAll())
 
     suspend fun ticketing(req: ServerRequest): ServerResponse =
         ok().renderAndAwait(
-            if (properties.feature.lottery) LotteryEdit.template else LotteryClosed.template,
+            if (featureStateService.findOneByType(Feature.Lottery).active) LotteryEdit.template else LotteryClosed.template,
             mapOf(TITLE to LotteryEdit.title)
         )
 
@@ -47,7 +48,8 @@ class LotteryHandler(
         val ticket = LotteryTicket(
             formData["email"]!!.lowercase(),
             formData["firstname"]!!,
-            formData["lastname"]!!
+            formData["lastname"]!!,
+            interests = formData["interests"]?.split(",")?.map { it.trim() } ?: emptyList(),
         )
 
         // Data are encrypted

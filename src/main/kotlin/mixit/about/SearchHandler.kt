@@ -2,12 +2,16 @@ package mixit.about
 
 import mixit.blog.handler.toDto
 import mixit.blog.repository.PostRepository
+import mixit.faq.repository.QuestionSectionRepository
 import mixit.routes.MustacheI18n.ARTICLES
 import mixit.routes.MustacheI18n.COUNT_ARTICLES
+import mixit.routes.MustacheI18n.COUNT_QUESTIONS
 import mixit.routes.MustacheI18n.COUNT_TALKS
 import mixit.routes.MustacheI18n.COUNT_USERS
 import mixit.routes.MustacheI18n.CRITERIA
+import mixit.routes.MustacheI18n.FAQ
 import mixit.routes.MustacheI18n.HAS_ARTICLES
+import mixit.routes.MustacheI18n.HAS_QUESTION
 import mixit.routes.MustacheI18n.HAS_TALKS
 import mixit.routes.MustacheI18n.HAS_USERS
 import mixit.routes.MustacheI18n.TALKS
@@ -30,9 +34,10 @@ import org.springframework.web.reactive.function.server.renderAndAwait
 
 @Component
 class SearchHandler(
-    val userRepository: UserRepository,
-    val postRepository: PostRepository,
-    val talkRepository: TalkRepository
+    private val userRepository: UserRepository,
+    private val postRepository: PostRepository,
+    private val talkRepository: TalkRepository,
+    private val questionSectionRepository: QuestionSectionRepository
 ) {
 
     suspend fun searchFullTextView(req: ServerRequest): ServerResponse {
@@ -45,7 +50,7 @@ class SearchHandler(
             )
             return ok().renderAndAwait(Search.template, params)
         } else {
-            val criteria = formData["search"]!!.trim().split(" ")
+            val criteria = formData["search"]!!.trim().split(" ").filter { it.length > 2 }
 
             val users = userRepository.findFullText(criteria).map { user ->
                 user.toDto(req.language(), criteria)
@@ -56,6 +61,9 @@ class SearchHandler(
             }
             val talks = talkRepository.findFullText(criteria).map { talk: Talk ->
                 CachedTalk(talk, emptyList()).toDto(req.language(), false)
+            }
+            val questions = questionSectionRepository.findFullText(criteria).mapNotNull { question ->
+                question.markFoundOccurrences(req.language(), criteria)
             }
 
             val params = mapOf(
@@ -69,7 +77,11 @@ class SearchHandler(
                 COUNT_TALKS to talks.count(),
                 ARTICLES to articles,
                 HAS_ARTICLES to articles.isNotEmpty(),
-                COUNT_ARTICLES to articles.count()
+                COUNT_ARTICLES to articles.count(),
+                COUNT_QUESTIONS to questions.count(),
+                HAS_QUESTION to questions.isNotEmpty(),
+                FAQ to questions
+
             )
             return ok().renderAndAwait(Search.template, params)
         }

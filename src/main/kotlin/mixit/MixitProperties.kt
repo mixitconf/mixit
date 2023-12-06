@@ -41,11 +41,6 @@ class MixitProperties {
     }
 
     class Feature {
-        var donation: Boolean = false
-        var lottery: Boolean = false
-        var lotteryResult: Boolean = false
         var email: Boolean = false
-        var mixette: Boolean = false
-        var profilemsg: Boolean = false
     }
 }

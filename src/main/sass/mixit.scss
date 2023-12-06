@@ -55,8 +55,8 @@ $enable-cssgrid: true;
 
   .nav-item {
     .btn.active {
-      background-color: $secondary-color;
-      border-color: $secondary-color;
+      background-color: $primary-color !important;
+      border-color: $fifth-color;
     }
 
     .btn {
@@ -442,7 +442,6 @@ $enable-cssgrid: true;
 }
 
 .mxt-text--talk-h1 {
-  font-size: 2rem;
   padding-top: 1em;
   padding-bottom: 1em;
 }
@@ -842,6 +841,25 @@ h3 {
   }
 }
 
+.mxt-navbar--talks {
+  justify-content: flex-start;
+  .nav-item {
+    background-color: $third-color;
+    border-radius: 24px;
+  }
+  a, .mxt-navbar--nav-link {
+    border: 2px solid $third-color !important;
+    padding: 1em !important;
+    border-radius: 24px;
+    color: white;
+
+    &:hover {
+      color: $secondary-color !important;
+      border: 2px solid $secondary-color !important;
+    }
+  }
+}
+
 .mxt-icon--navbar-login {
   @include linkWithImage("/images/svg/security/mxt-lock--open-hover.svg");
 }
@@ -875,6 +893,26 @@ h3 {
 
 .mxt-icon--navbar-video {
   @include linkWithImage("/images/svg/mxt-icon-video-hover.svg");
+}
+
+.mxt-icon--navbar-video-dark {
+  @include linkWithImage("/images/svg/mxt-icon-video-dark.svg");
+}
+
+.mxt-icon--navbar-file-dark {
+  @include linkWithImage("/images/svg/mxt-icon-file-pdf-dark.svg");
+}
+
+.mxt-icon--navbar-favorite-dark {
+  @include linkWithImage("/images/svg/favorites/mxt-favorite-dark.svg");
+}
+
+.mxt-icon--navbar-cfp {
+  @include linkWithImage("/images/svg/mxt-icon-cfp-hover.svg");
+}
+
+.mxt-icon--navbar-lottery {
+  @include linkWithImage("/images/svg/mxt-icon-lottery-hover.svg");
 }
 
 .mxt-navbar {
@@ -1238,4 +1276,24 @@ $sponsor-max-width: 20em;
 .mxt-anchor-container{
   display: flex;
   justify-content: flex-end;
+}
+
+.mxt-interests {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  > li {
+    margin: 0.5em;
+    font-weight: bold;
+    background-color: $primary-color;
+    color: white;
+    padding: 0.2em 0.5em;
+    border-radius: 24px;
+    &::before {
+      content: "#";
+      color: white;
+      padding-right: 0.2em;
+    }
+  }
+
 }
