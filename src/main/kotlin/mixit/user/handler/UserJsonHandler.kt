@@ -9,7 +9,7 @@ import mixit.user.model.UserService
 import mixit.user.model.anonymize
 import mixit.user.repository.UserRepository
 import mixit.util.errors.NotFoundException
-import mixit.util.json
+import org.springframework.web.reactive.function.server.json
 import mixit.util.language
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest

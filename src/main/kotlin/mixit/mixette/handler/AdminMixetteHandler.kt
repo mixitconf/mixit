@@ -23,7 +23,7 @@ import mixit.user.model.User
 import mixit.user.model.UserService
 import mixit.util.errors.NotFoundException
 import mixit.util.extractFormData
-import mixit.util.json
+import org.springframework.web.reactive.function.server.json
 import mixit.util.seeOther
 import mixit.util.toNumber
 import mixit.util.webSession

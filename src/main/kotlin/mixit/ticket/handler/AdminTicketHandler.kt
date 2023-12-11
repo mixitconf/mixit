@@ -37,7 +37,7 @@ import mixit.user.model.Role
 import mixit.util.enumMatcher
 import mixit.util.errors.NotFoundException
 import mixit.util.extractFormData
-import mixit.util.json
+import org.springframework.web.reactive.function.server.json
 import mixit.util.seeOther
 import mixit.util.webSession
 import org.springframework.dao.DuplicateKeyException

@@ -76,12 +76,6 @@ suspend fun ServerRequest.decode(pathVariable: String): String? =
         URLDecoder.decode(pathVariable(pathVariable), "UTF-8")
     }
 
-fun ServerResponse.BodyBuilder.json() = contentType(APPLICATION_JSON)
-
-fun ServerResponse.BodyBuilder.xml() = contentType(APPLICATION_XML)
-
-fun ServerResponse.BodyBuilder.html() = contentType(TEXT_HTML)
-
 suspend fun permanentRedirect(uri: String): ServerResponse = permanentRedirect(URI(uri)).build().awaitSingle()
 
 suspend fun seeOther(uri: String): ServerResponse = seeOther(URI(uri)).build().awaitSingle()

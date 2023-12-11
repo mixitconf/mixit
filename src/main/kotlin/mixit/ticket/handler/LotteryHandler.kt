@@ -16,7 +16,7 @@ import mixit.user.model.User
 import mixit.util.camelCase
 import mixit.util.email.EmailService
 import mixit.util.extractFormData
-import mixit.util.json
+import org.springframework.web.reactive.function.server.json
 import mixit.util.locale
 import org.springframework.dao.DuplicateKeyException
 import org.springframework.stereotype.Component
