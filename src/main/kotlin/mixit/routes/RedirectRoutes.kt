@@ -60,6 +60,9 @@ class RedirectRoutes(
 
             GET("/about/") { permanentRedirect("${properties.baseUri}/about") }
             GET("/home") { permanentRedirect("${properties.baseUri}/") }
+
+            GET("/cfp") { permanentRedirect("https://sessionize.com/mixit-2024/") }
+
         }
     }
 }

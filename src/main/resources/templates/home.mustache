@@ -10,7 +10,7 @@
             <div class="text-center">{{#i18n}}home.timeline.dec16{{/i18n}}</div>
         </div>
         <div class="col-md-2 col-sm-6">
-            <img src="/images/svg/timeline/jan16.svg"
+            <img src="/images/svg/timeline/jan19.svg"
                  alt="{{#i18n}}home.timeline.jan16{{/i18n}}">
             <div class="text-center">{{#i18n}}home.timeline.jan16{{/i18n}}</div>
         </div>
@@ -31,9 +31,15 @@
                  alt="{{#i18n}}home.timeline.apr25{{/i18n}}">
         </div>
     </div>
+    {{#hasFeatureLottery}}
+        <p class="pt-3">{{#i18n}}home.news.cfp.lottery{{/i18n}}</p>
+        <p class="pt-2">{{#i18n}}home.news.cfp.cfp{{/i18n}}</p>
+    {{/hasFeatureLottery}}
+    {{^hasFeatureLottery}}
+        <p class="pt-3">{{#i18n}}home.news.lottery{{/i18n}}</p>
+        <p class="pt-2">{{#i18n}}home.news.cfp{{/i18n}}</p>
+    {{/hasFeatureLottery}}
 
-    <p class="pt-3">{{#i18n}}home.news.lottery{{/i18n}}</p>
-    <p class="pt-2">{{#i18n}}home.news.cfp{{/i18n}}</p>
 </div>
 
 <div class="row mxt-layout-header-effect mxt-section"><div class="mxt-layout-header-effect-grey-inversed"></div></div>
