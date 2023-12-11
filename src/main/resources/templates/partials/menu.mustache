@@ -51,6 +51,15 @@
                             {{#i18n}}header.menu.lottery{{/i18n}}</a>
                     </div>
                 {{/hasFeatureLottery}}
+                {{#hasFeatureCfp}}
+                    <div class="nav-item">
+                        <a href="{{localePrefix}}/cfp" class="nav-link mxt-navbar--nav-link mxt-icon--navbar-cfp">
+                            <img src="/images/svg/mxt-icon-cfp.svg"
+                                 class="mxt-icon--navbar me-2"
+                                 alt="{{#i18n}}header.menu.cfp{{/i18n}}">
+                            {{#i18n}}header.menu.cfp{{/i18n}}</a>
+                    </div>
+                {{/hasFeatureCfp}}
                 <div class="nav-item">
                     <a href="{{localePrefix}}/codeofconduct" class="nav-link mxt-navbar--nav-link mxt-icon--navbar-code">
                         <img src="/images/svg/mxt-icon-code.svg"

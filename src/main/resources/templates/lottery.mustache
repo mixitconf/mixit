@@ -17,20 +17,25 @@
                 <input type="email" class="form-control mt-2" name="email"
                        placeholder="{{#i18n}}lottery.email{{/i18n}}" required>
                 <label for="interests" class="form-label pt-2">
-                    Cette année nous aimerions savoir les sujets qui vous intéressent le plus pour les conférences.
-                    Vous pouvez en ajouter plusieurs.
+                    {{#i18n}}lottery.topics{{/i18n}}
                 </label>
                 <div class="row">
                     <div class="col-11">
                         <input class="form-control" list="datalistOptions" id="interest" onclick="this.value=''"
-                               placeholder="Type to search...">
+                               placeholder="{{#i18n}}lottery.placeholder{{/i18n}}">
                         <datalist id="datalistOptions">
-                            <option value="Agile">
-                            <option value="Java">
-                            <option value="Javascript">
+                            <option value=" .net">
+                            <option value="Aliens">
+                            <option value="Data">
                             <option value="Design">
+                            <option value="IA">
+                            <option value="JVM">
+                            <option value="Mobile">
+                            <option value="Ops">
+                            <option value="Php">
+                            <option value="Security">
+                            <option value="Team / orga">
                             <option value="Web">
-                            <option value=".Net">
                         </datalist>
                     </div>
                     <div class="col-1">

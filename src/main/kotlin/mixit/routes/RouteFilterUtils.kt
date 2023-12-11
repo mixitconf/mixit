@@ -57,6 +57,7 @@ class RouteFilterUtils(
         this["uri"] = "${properties.baseUri}$path"
         this["markdown"] = Mustache.Lambda { frag, out -> out.write(frag.execute().toHTML()) }
         this["hasCfp"] = featureStateService.findFeature(Feature.Cfp).map { it.active }
+        this["hasFeatureCfp"] = featureStateService.findFeature(Feature.Cfp).map { it.active }
         this["hasFeatureLottery"] = featureStateService.findFeature(Feature.Lottery).map { it.active }
         this["hasFeatureLotteryResult"] = featureStateService.findFeature(Feature.LotteryResult).map { it.active }
         this["hasFeatureMixette"] = featureStateService.findFeature(Feature.Mixette).map { it.active }

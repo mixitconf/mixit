@@ -17,7 +17,7 @@ import mixit.user.model.User
 import mixit.util.errors.EmailValidatorException
 import mixit.util.errors.NotFoundException
 import mixit.util.errors.TokenException
-import mixit.util.json
+import org.springframework.web.reactive.function.server.json
 import mixit.util.locale
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest

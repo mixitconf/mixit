@@ -4,7 +4,7 @@ import kotlinx.coroutines.reactor.awaitSingle
 import mixit.favorite.model.Favorite
 import mixit.favorite.repository.FavoriteRepository
 import mixit.security.model.Cryptographer
-import mixit.util.json
+import org.springframework.web.reactive.function.server.json
 import org.springframework.stereotype.Controller
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse

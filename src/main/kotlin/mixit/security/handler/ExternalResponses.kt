@@ -1,6 +1,6 @@
 package mixit.security.handler
 
-import mixit.util.json
+import org.springframework.web.reactive.function.server.json
 import org.springframework.http.HttpStatus
 import org.springframework.http.HttpStatus.BAD_REQUEST
 import org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR

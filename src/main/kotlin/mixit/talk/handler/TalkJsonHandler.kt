@@ -1,7 +1,7 @@
 package mixit.talk.handler
 
 import mixit.talk.model.TalkService
-import mixit.util.json
+import org.springframework.web.reactive.function.server.json
 import org.springframework.data.crossstore.ChangeSetPersister.NotFoundException
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
