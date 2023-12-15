@@ -45,9 +45,11 @@
                 <span>{{#i18n}}topics.{{talk.topic}}.title{{/i18n}}</span>
             </div>
         {{/talk.topic}}
+        {{#isCurrent}}
         <div>{{#talk.date}}{{talk.date}}{{/talk.date}}</div>
         <div>{{#talk.start}}{{talk.start}} - {{talk.end}}{{/talk.start}}</div>
         <p class="mxt-text--cat-room">{{#i18n}}{{talk.room}}{{/i18n}}</p>
+        {{/isCurrent}}
     </div>
 
     {{#talk.description}}
