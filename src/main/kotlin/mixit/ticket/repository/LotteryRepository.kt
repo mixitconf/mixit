@@ -28,6 +28,7 @@ class LotteryRepository(
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
+        deleteAll().block()
         if (count().block() == 0L) {
             ClassPathResource("data/lottery.json").inputStream.use { resource ->
                 val tickets: List<LotteryTicket> = objectMapper.readValue(resource)
