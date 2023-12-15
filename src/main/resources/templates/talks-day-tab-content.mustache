@@ -7,7 +7,9 @@
             <div class="mxt-talks--container p-3">
                 <a href="{{localePrefix}}/{{event}}{{#slug}}/{{slug}}{{/slug}}">
                     <div class="mxt-accordion-talk-line">
+                        {{#isCurrent}}
                         <small>{{#start}}{{start}} - {{end}}{{/start}}</small>
+                        {{/isCurrent}}
                         <div class="mxt-text--cat-format">
                             &nbsp;<strong><small>#{{#i18n}}talk.format.{{format}}{{/i18n}}</small></strong>
                         </div>
@@ -48,11 +50,13 @@
                                 {{firstname}}&nbsp;{{lastname}}</div></li>
                         {{/speakers}}
                     </ul>
+                    {{#isCurrent}}
                     <p class="mxt-text--cat-room">
                         {{#roomLink}}<a href="{{#i18n}}{{roomLink}}{{/i18n}}"
                                         aria-label="{{#i18n}}{{room}}{{/i18n}}">{{#i18n}}{{room}}{{/i18n}}</a>{{/roomLink}}
                         {{^roomLink}}{{#i18n}}{{room}}{{/i18n}}{{/roomLink}}
                     </p>
+                    {{/isCurrent}}
                 </a>
             </div>
         {{/talks}}
