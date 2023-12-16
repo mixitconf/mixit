@@ -43,15 +43,6 @@
 
     <div class="container mb-2">
         <nav class="navbar mxt-navbar--talks" style="justify-content: center;">
-            <div class="nav-item">
-                <a href="{{localePrefix}}/newsletter-subscribe" class="nav-link mxt-navbar--nav-link"
-                   alt="{{#i18n}}home.intro.newsletter{{/i18n}}">
-                    <img src="/images/svg/mxt-icon-newsletter-dark.svg"
-                         class="mxt-icon--navbar me-2"
-                         alt="{{#i18n}}home.intro.newsletter{{/i18n}}">
-                    {{#i18n}}home.intro.newsletter{{/i18n}}
-                </a>
-            </div>
             {{#hasFeatureLottery}}
                 <div class="nav-item ms-3 d-none d-md-inline">
                     <a href="{{localePrefix}}/lottery" class="nav-link mxt-navbar--nav-link">
@@ -70,6 +61,15 @@
                         {{#i18n}}header.menu.cfp{{/i18n}}</a>
                 </div>
             {{/hasFeatureCfp}}
+            <div class="nav-item">
+                <a href="{{localePrefix}}/newsletter-subscribe" class="nav-link mxt-navbar--nav-link"
+                   alt="{{#i18n}}home.intro.newsletter{{/i18n}}">
+                    <img src="/images/svg/mxt-icon-newsletter-dark.svg"
+                         class="mxt-icon--navbar me-2"
+                         alt="{{#i18n}}home.intro.newsletter{{/i18n}}">
+                    {{#i18n}}home.intro.newsletter{{/i18n}}
+                </a>
+            </div>
         </nav>
     </div>
 </div>
