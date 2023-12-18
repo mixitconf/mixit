@@ -68,8 +68,8 @@
                 <div class="nav-item">
                     <a href="{{schedulingFileUrl}}"
                        target="_blank" alt="{{#i18n}}talks.schedule{{/i18n}}"
-                       class="nav-link mxt-navbar--nav-link mxt-icon--navbar-file-dark">
-                        <img src="/images/svg/mxt-icon-file-pdf.svg"
+                       class="nav-link mxt-navbar--nav-link">
+                        <img src="/images/svg/mxt-icon-file-pdf-dark.svg"
                              class="mxt-icon--navbar me-2"
                              alt="{{#i18n}}talks.schedule.download{{/i18n}}">
                         {{#i18n}}talks.schedule.download{{/i18n}}</a>
@@ -78,8 +78,8 @@
             <div class="nav-item ms-2">
                 <a href="{{year}}/medias{{#topic}}/{{topic}}{{/topic}}"
                    alt="{{#i18n}}talks.medias{{/i18n}}"
-                   class="nav-link mxt-navbar--nav-link mxt-icon--navbar-video-dark">
-                    <img src="/images/svg/mxt-icon-video.svg"
+                   class="nav-link mxt-navbar--nav-link">
+                    <img src="/images/svg/mxt-icon-video-dark.svg"
                          class="mxt-icon--navbar me-2"
                          alt="{{#i18n}}medias.title{{/i18n}}"/>
                     {{#i18n}}medias.title{{/i18n}}
@@ -90,8 +90,8 @@
                     <div class="nav-item ms-2">
                         <a href="{{localePrefix}}/{{year}}{{#topic}}/{{topic}}{{/topic}}/favorite"
                            alt="{{#i18n}}talks.favorites.filter{{/i18n}}"
-                           class="nav-link mxt-navbar--nav-link mxt-icon--navbar-favorite-dark">
-                            <img src="/images/svg/favorites/mxt-favorite-white.svg"
+                           class="nav-link mxt-navbar--nav-link">
+                            <img src="/images/svg/favorites/mxt-favorite-dark.svg"
                                  class="mxt-icon--navbar me-2"
                                  alt="{{#i18n}}talks.favorites.filter{{/i18n}}"/>
                             {{#i18n}}talks.favorites.filter{{/i18n}}
@@ -118,7 +118,9 @@
             {{/talks.day3}}
         </ul>
         <div class="tab-content">
+            {{#isCurrent}}
             <div class="text-center lead p-2 mb-2">{{#i18n}}talks.welcome.start{{/i18n}}</div>
+            {{/isCurrent}}
             {{#displayAgenda}}
                 {{#talks.day1}}
                     {{> talks-day-tab-content-agenda }}
