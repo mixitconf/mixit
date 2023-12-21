@@ -2010,6 +2010,41 @@
                 "level": "SILVER",
                 "sponsorId": "max-digital-service",
                 "subscriptionDate": "2023-11-18"
+            },
+            {
+                "level": "MIXTEEN",
+                "sponsorId": "redfroggy",
+                "subscriptionDate": "2023-11-28"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "redfroggy",
+                "subscriptionDate": "2023-11-28"
+            },
+            {
+                "level": "LANYARD",
+                "sponsorId": "clevercloudsponsor24",
+                "subscriptionDate": "2023-11-28"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "hiit",
+                "subscriptionDate": "2023-11-29"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "hoppr-sponsor",
+                "subscriptionDate": "2023-12-02"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "younup-sponsor",
+                "subscriptionDate": "2023-09-06"
+            },
+            {
+                "level": "MIXTEEN",
+                "sponsorId": "max-digital-service",
+                "subscriptionDate": "2023-12-06"
             }
         ],
         "organizations": [],

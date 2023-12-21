@@ -1,174 +1,178 @@
 [
-  {
-    "title": {
-      "descriptionFr": "Billeterie",
-      "descriptionEn": "Ticket"
-    },
-    "questions": [
-      {
+    {
         "title": {
-          "descriptionFr": "Comment acheter son billet ?",
-          "descriptionEn": "How to buy a ticket?"
+            "descriptionFr": "Billeterie",
+            "descriptionEn": "Ticket"
         },
-        "answer": {
-          "descriptionFr": "Pour pouvoir acheter une place pour la prochaine édition, il faudra au préalable avoir participé à la loterie. La loterie ouvrira le 16 décembre 2023 et fermera le 16 janvier 2024. Les gagnant·e·s de la loterie pourront acheter leur billet à partir du 29 janvier 2024. Aucune place ne sera vendue en dehors de la loterie.",
-          "descriptionEn": "To be able to purchase a place for the next edition, you must first have participated in the lottery. The lottery will open on 18 December 2023 and close on 19 January 2024. Lottery winners will be able to buy their ticket from 29 January 2024. No tickets will be sold outside of the lottery."
-        },
+        "questions": [
+            {
+                "title": {
+                    "descriptionFr": "Comment acheter son billet ?",
+                    "descriptionEn": "How to buy a ticket?"
+                },
+                "answer": {
+                    "descriptionFr": "Pour pouvoir acheter une place pour la prochaine \u00e9dition, il faudra au pr\u00e9alable avoir particip\u00e9 \u00e0 la loterie. La loterie ouvrira le 16 d\u00e9cembre 2023 et fermera le 16 janvier 2024. Les gagnant\u00b7e\u00b7s de la loterie pourront acheter leur billet \u00e0 partir du 29 janvier 2024. Aucune place ne sera vendue en dehors de la loterie.",
+                    "descriptionEn": "To be able to purchase a place for the next edition, you must first have participated in the lottery. The lottery will open on 18 December 2023 and close on 19 January 2024. Lottery winners will be able to buy their ticket from 29 January 2024. No tickets will be sold outside of the lottery."
+                },
+                "order": 1,
+                "id": "6cbceb84-366c-491e-9563-25175fe00957"
+            },
+            {
+                "title": {
+                    "descriptionFr": "Pourquoi y a t-il une loterie ?",
+                    "descriptionEn": "Why a lottery?"
+                },
+                "answer": {
+                    "descriptionFr": "Dans la plupart des conf\u00e9rences, il est devenu difficile d'obtenir une place si l'on n'est pas connect\u00e9\u00b7e au moment de l'ouverture de la billeterie. Parce que nous avons \u00e0 c\u0153ur que chacun\u00b7e puisse avoir sa chance, nous avons mis en place une loterie. Ainsi pas de stress, tout le monde a un mois pour s'inscrire et tenter sa chance !",
+                    "descriptionEn": "In many conferences, you need to be online at the opening of the registration if you want to have a ticket. Because we want everyone to have the same chance to participate, we opted for a lottery. This way, everybody has two weeks to pre-register and try to get a ticket, no more stress!"
+                },
+                "order": 2,
+                "id": "1945d63a-d85b-4079-867d-e3a63a6dec2c"
+            },
+            {
+                "title": {
+                    "descriptionFr": "Comment obtenir une facture pour ma place ?",
+                    "descriptionEn": "How to get an invoice for my MiXiT ticket?"
+                },
+                "answer": {
+                    "descriptionFr": "Pour obtenir votre facture, connectez vous sur le site de notre partenaire billetterie : billetweb.fr.",
+                    "descriptionEn": "You can download your bill from our partner's ticketing website: billetweb.fr. Please note that this bill does not show any VAT nor amount excluding tax, and this is normal: the conference is organized by an association subdued to the french law 1901. The association does not collect any VAT so we cannot show it on the invoice."
+                },
+                "order": 3,
+                "id": "ae6cb70b-5c37-410d-b736-874978d54a42"
+            }
+        ],
         "order": 1,
-        "id": "6cbceb84-366c-491e-9563-25175fe00957"
-      },
-      {
+        "id": "7e580f8a-7b4f-414e-a55e-63ab16ddbc4e",
+        "index": "billeterie ticket, comment acheter son billet ? how to buy a ticket? pour pouvoir acheter une place pour la prochaine \u00e9dition, il faudra au pr\u00e9alable avoir particip\u00e9 \u00e0 la loterie. la loterie ouvrira le 16 d\u00e9cembre 2023 et fermera le 16 janvier 2024. les gagnant\u00b7e\u00b7s de la loterie pourront acheter leur billet \u00e0 partir du 29 janvier 2024. aucune place ne sera vendue en dehors de la loterie. to be able to purchase a place for the next edition, you must first have participated in the lottery. the lottery will open on 18 december 2023 and close on 19 january 2024. lottery winners will be able to buy their ticket from 29 january 2024. no tickets will be sold outside of the lottery., pourquoi y a t-il une loterie ? why a lottery? dans la plupart des conf\u00e9rences, il est devenu difficile d'obtenir une place si l'on n'est pas connect\u00e9\u00b7e au moment de l'ouverture de la billeterie. parce que nous avons \u00e0 c\u0153ur que chacun\u00b7e puisse avoir sa chance, nous avons mis en place une loterie. ainsi pas de stress, tout le monde a un mois pour s'inscrire et tenter sa chance ! in many conferences, you need to be online at the opening of the registration if you want to have a ticket. because we want everyone to have the same chance to participate, we opted for a lottery. this way, everybody has two weeks to pre-register and try to get a ticket, no more stress!, comment obtenir une facture pour ma place ? how to get an invoice for my mixit ticket? pour obtenir votre facture, connectez vous sur le site de notre partenaire billetterie : billetweb.fr. you can download your bill from our partner's ticketing website: billetweb.fr. please note that this bill does not show any vat nor amount excluding tax, and this is normal: the conference is organized by an association subdued to the french law 1901. the association does not collect any vat so we cannot show it on the invoice."
+    },
+    {
         "title": {
-          "descriptionFr": "Pourquoi y a t-il une loterie ?",
-          "descriptionEn": "Why a lottery?"
+            "descriptionFr": "Programmation",
+            "descriptionEn": "Programmation"
         },
-        "answer": {
-          "descriptionFr": "Dans la plupart des conférences, il est devenu difficile d'obtenir une place si l'on n'est pas connecté·e au moment de l'ouverture de la billeterie. Parce que nous avons à cœur que chacun·e puisse avoir sa chance, nous avons mis en place une loterie. Ainsi pas de stress, tout le monde a un mois pour s'inscrire et tenter sa chance !",
-          "descriptionEn": "In many conferences, you need to be online at the opening of the registration if you want to have a ticket. Because we want everyone to have the same chance to participate, we opted for a lottery. This way, everybody has two weeks to pre-register and try to get a ticket, no more stress!"
-        },
+        "questions": [
+            {
+                "title": {
+                    "descriptionFr": "Appel \u00e0 orateurs\u00b7rices",
+                    "descriptionEn": "Appel \u00e0 orateurs\u00b7rices"
+                },
+                "answer": {
+                    "descriptionFr": "L'appel \u00e0 orateurs\u00b7rices ouvrira le 16 d\u00e9cembre 2023 et fermera le 16 janvier 2024. L'annonce des sessions aura lieu le 29 janvier 2024.",
+                    "descriptionEn": "L'appel \u00e0 orateurs\u00b7rices ouvrira le 16 d\u00e9cembre 2023 et fermera le 16 janvier 2024. L'annonce des sessions aura lieu le 29 janvier 2024."
+                },
+                "order": 1,
+                "id": "ed15f900-3f88-40b6-881e-1b9f878269cf"
+            },
+            {
+                "title": {
+                    "descriptionFr": "Qu'est ce qu'il y a au programme ?",
+                    "descriptionEn": "Qu'est ce qu'il y a au programme ?"
+                },
+                "answer": {
+                    "descriptionFr": "Pour avoir une id\u00e9e du type de sessions que vous pourrez voir \u00e0 MiXiT 2024, vous pouvez regarder les sessions des ann\u00e9es pr\u00e9c\u00e9dentes dans la partie replay.",
+                    "descriptionEn": "Pour avoir une id\u00e9e du type de sessions que vous pourrez voir \u00e0 MiXiT 2024, vous pouvez regarder les sessions des ann\u00e9es pr\u00e9c\u00e9dentes dans la partie replay."
+                },
+                "order": 2,
+                "id": "3f11a9a4-f461-48d2-bec0-6cef75d884a4"
+            },
+            {
+                "title": {
+                    "descriptionFr": "Les conf\u00e9rences sont-elles film\u00e9es ?",
+                    "descriptionEn": "Les conf\u00e9rences sont-elles film\u00e9es ?"
+                },
+                "answer": {
+                    "descriptionFr": "Les conf\u00e9rences seront int\u00e9gralement film\u00e9es et mises \u00e0 disposition d\u00e8s la semaine suivant la conf\u00e9rence.",
+                    "descriptionEn": "Les conf\u00e9rences seront int\u00e9gralement film\u00e9es et mises \u00e0 disposition d\u00e8s la semaine suivant la conf\u00e9rence."
+                },
+                "order": 3,
+                "id": "a7016410-7698-4f7c-8540-50a7909a1439"
+            }
+        ],
         "order": 2,
-        "id": "1945d63a-d85b-4079-867d-e3a63a6dec2c"
-      },
-      {
+        "id": "119b384c-ee59-4ca5-8863-ef4aa823155e",
+        "index": "programmation programmation, appel \u00e0 orateurs\u00b7rices appel \u00e0 orateurs\u00b7rices l'appel \u00e0 orateurs\u00b7rices ouvrira le 16 d\u00e9cembre 2023 et fermera le 16 janvier 2024. l'annonce des sessions aura lieu le 29 janvier 2024. l'appel \u00e0 orateurs\u00b7rices ouvrira le 16 d\u00e9cembre 2023 et fermera le 16 janvier 2024. l'annonce des sessions aura lieu le 29 janvier 2024., qu'est ce qu'il y a au programme ? qu'est ce qu'il y a au programme ? pour avoir une id\u00e9e du type de sessions que vous pourrez voir \u00e0 mixit 2024, vous pouvez regarder les sessions des ann\u00e9es pr\u00e9c\u00e9dentes dans la partie replay. pour avoir une id\u00e9e du type de sessions que vous pourrez voir \u00e0 mixit 2024, vous pouvez regarder les sessions des ann\u00e9es pr\u00e9c\u00e9dentes dans la partie replay., les conf\u00e9rences sont-elles film\u00e9es ? les conf\u00e9rences sont-elles film\u00e9es ? les conf\u00e9rences seront int\u00e9gralement film\u00e9es et mises \u00e0 disposition d\u00e8s la semaine suivant la conf\u00e9rence. les conf\u00e9rences seront int\u00e9gralement film\u00e9es et mises \u00e0 disposition d\u00e8s la semaine suivant la conf\u00e9rence."
+    },
+    {
         "title": {
-          "descriptionFr": "Comment obtenir une facture pour ma place ?",
-          "descriptionEn": "How to get an invoice for my MiXiT ticket?"
+            "descriptionFr": "Formation",
+            "descriptionEn": "Training"
         },
-        "answer": {
-          "descriptionFr": "Pour obtenir votre facture, connectez vous sur le site de notre partenaire billetterie : billetweb.fr.",
-          "descriptionEn": "You can download your bill from our partner's ticketing website: billetweb.fr. Please note that this bill does not show any VAT nor amount excluding tax, and this is normal: the conference is organized by an association subdued to the french law 1901. The association does not collect any VAT so we cannot show it on the invoice."
+        "questions": [
+            {
+                "title": {
+                    "descriptionFr": "Puis-je participer \u00e0 MiXiT au titre de la formation ?",
+                    "descriptionEn": "Is it possible to participate to MiXiT as a training?"
+                },
+                "answer": {
+                    "descriptionFr": "Cette ann\u00e9e ce ne sera pas possible.",
+                    "descriptionEn": "This year, it's not possible."
+                },
+                "order": 1,
+                "id": "986a142d-f77f-459f-ae46-8fe856b191ec"
+            },
+            {
+                "title": {
+                    "descriptionFr": "Puis-je solliciter un OPCA pour prendre en charge mon inscription \u00e0 MiXiT ?",
+                    "descriptionEn": "Is it possible to ask an OPCA to finance my registration for MiXiT ?"
+                },
+                "answer": {
+                    "descriptionFr": "L'achat des places n'est possible que par la billetterie en ligne. Il n'est donc pas possible de passer par un financement par OPCA qui nous imposerait, \u00e0 notre partenaire et nous, de vous soumettre une facture pour r\u00e8glement apr\u00e8s l'\u00e9v\u00e8nement.",
+                    "descriptionEn": "Tickets are only sold online. It is not possible to register through an OPCA which would require us, and our partner, to send you a bill for payment after the event."
+                },
+                "order": 2,
+                "id": "c976ea8f-2539-42c3-b73c-294d840ad862"
+            },
+            {
+                "title": {
+                    "descriptionFr": "Puis-je utiliser mon CPF pour m'inscrire \u00e0 MiXiT ?",
+                    "descriptionEn": "Is it possible to use my 'Compte Personnel de Formation' (CPF) to subscribe to MiXiT?"
+                },
+                "answer": {
+                    "descriptionFr": "Cette ann\u00e9e ce ne sera pas possible.",
+                    "descriptionEn": "This year, it's not possible."
+                },
+                "order": 3,
+                "id": "c050a2ca-6066-4a92-a5fe-96c52389758e"
+            }
+        ],
+        "order": 4,
+        "id": "cd542942-18c9-48f2-805b-788811a718a3",
+        "index": "formation training, puis-je participer \u00e0 mixit au titre de la formation ? is it possible to participate to mixit as a training? cette ann\u00e9e ce ne sera pas possible. this year, it's not possible., puis-je solliciter un opca pour prendre en charge mon inscription \u00e0 mixit ? is it possible to ask an opca to finance my registration for mixit ? l'achat des places n'est possible que par la billetterie en ligne. il n'est donc pas possible de passer par un financement par opca qui nous imposerait, \u00e0 notre partenaire et nous, de vous soumettre une facture pour r\u00e8glement apr\u00e8s l'\u00e9v\u00e8nement. tickets are only sold online. it is not possible to register through an opca which would require us, and our partner, to send you a bill for payment after the event., puis-je utiliser mon cpf pour m'inscrire \u00e0 mixit ? is it possible to use my 'compte personnel de formation' (cpf) to subscribe to mixit? cette ann\u00e9e ce ne sera pas possible. this year, it's not possible."
+    },
+    {
+        "title": {
+            "descriptionFr": "Rester inform\u00e9\u00b7e\u00b7s",
+            "descriptionEn": "Stay tuned"
         },
+        "questions": [
+            {
+                "title": {
+                    "descriptionFr": "Newsletter",
+                    "descriptionEn": "Newsletter"
+                },
+                "answer": {
+                    "descriptionFr": "Nous communiquons les informations importantes (dates de l'\u00e9v\u00e9nements, ouverture du CFP, de la loterie...) dans notre newsletter. Vous pouvez vous inscrire ici. (4 mails par an environ)",
+                    "descriptionEn": "We annouce major milestones (dates of events, opening of CFP, lottery...) via our newsletter. You can register here. (4 emails per year approximatively)"
+                },
+                "order": 1,
+                "id": "a6de837d-bfe4-47c6-90a7-75e1d6d34871"
+            },
+            {
+                "title": {
+                    "descriptionFr": "R\u00e9seaux sociaux",
+                    "descriptionEn": "Social networks"
+                },
+                "answer": {
+                    "descriptionFr": "Vous pouvez nous retrouver sur Twitter Twitter, LinkedIn, Mastodon, Twitch et Instagram.",
+                    "descriptionEn": "You can find us on Twitter, LinkedIn, Mastodon, Twitch and Instagram."
+                },
+                "order": 2,
+                "id": "5aa9cfe5-9ab8-42ed-a982-5c0ea64990e0"
+            }
+        ],
         "order": 3,
-        "id": "ae6cb70b-5c37-410d-b736-874978d54a42"
-      }
-    ],
-    "order": 1,
-    "id": "7e580f8a-7b4f-414e-a55e-63ab16ddbc4e"
-  },
-  {
-    "title": {
-      "descriptionFr": "Programmation",
-      "descriptionEn": "Programmation"
-    },
-    "questions": [
-      {
-        "title": {
-          "descriptionFr": "Appel à orateurs·rices",
-          "descriptionEn": "Appel à orateurs·rices"
-        },
-        "answer": {
-          "descriptionFr": "L'appel à orateurs·rices ouvrira le 16 décembre 2023 et fermera le 16 janvier 2024. L'annonce des sessions aura lieu le 29 janvier 2024.",
-          "descriptionEn": "L'appel à orateurs·rices ouvrira le 16 décembre 2023 et fermera le 16 janvier 2024. L'annonce des sessions aura lieu le 29 janvier 2024."
-        },
-        "order": 1,
-        "id": "ed15f900-3f88-40b6-881e-1b9f878269cf"
-      },
-      {
-        "title": {
-          "descriptionFr": "Qu'est ce qu'il y a au programme ?",
-          "descriptionEn": "Qu'est ce qu'il y a au programme ?"
-        },
-        "answer": {
-          "descriptionFr": "Pour avoir une idée du type de sessions que vous pourrez voir à MiXiT 2024, vous pouvez regarder les sessions des années précédentes dans la partie replay.",
-          "descriptionEn": "Pour avoir une idée du type de sessions que vous pourrez voir à MiXiT 2024, vous pouvez regarder les sessions des années précédentes dans la partie replay."
-        },
-        "order": 2,
-        "id": "3f11a9a4-f461-48d2-bec0-6cef75d884a4"
-      },
-      {
-        "title": {
-          "descriptionFr": "Les conférences sont-elles filmées ?",
-          "descriptionEn": "Les conférences sont-elles filmées ?"
-        },
-        "answer": {
-          "descriptionFr": "Les conférences seront intégralement filmées et mises à disposition dès la semaine suivant la conférence.",
-          "descriptionEn": "Les conférences seront intégralement filmées et mises à disposition dès la semaine suivant la conférence."
-        },
-        "order": 3,
-        "id": "a7016410-7698-4f7c-8540-50a7909a1439"
-      }
-    ],
-    "order": 2,
-    "id": "119b384c-ee59-4ca5-8863-ef4aa823155e"
-  },
-  {
-    "title": {
-      "descriptionFr": "Formation",
-      "descriptionEn": "Training"
-    },
-    "questions": [
-      {
-        "title": {
-          "descriptionFr": "Puis-je participer à MiXiT au titre de la formation ?",
-          "descriptionEn": "Is it possible to participate to MiXiT as a training?"
-        },
-        "answer": {
-          "descriptionFr": "Cette année ce ne sera pas possible.",
-          "descriptionEn": "This year, it's not possible."
-        },
-        "order": 1,
-        "id": "986a142d-f77f-459f-ae46-8fe856b191ec"
-      },
-      {
-        "title": {
-          "descriptionFr": "Puis-je solliciter un OPCA pour prendre en charge mon inscription à MiXiT ?",
-          "descriptionEn": "Is it possible to ask an OPCA to finance my registration for MiXiT ?"
-        },
-        "answer": {
-          "descriptionFr": "L'achat des places n'est possible que par la billetterie en ligne. Il n'est donc pas possible de passer par un financement par OPCA qui nous imposerait, à notre partenaire et nous, de vous soumettre une facture pour règlement après l'évènement.",
-          "descriptionEn": "Tickets are only sold online. It is not possible to register through an OPCA which would require us, and our partner, to send you a bill for payment after the event."
-        },
-        "order": 2,
-        "id": "c976ea8f-2539-42c3-b73c-294d840ad862"
-      },
-      {
-        "title": {
-          "descriptionFr": "Puis-je utiliser mon CPF pour m'inscrire à MiXiT ?",
-          "descriptionEn": "Is it possible to use my 'Compte Personnel de Formation' (CPF) to subscribe to MiXiT?"
-        },
-        "answer": {
-          "descriptionFr": "Cette année ce ne sera pas possible.",
-          "descriptionEn": "This year, it's not possible."
-        },
-        "order": 3,
-        "id": "c050a2ca-6066-4a92-a5fe-96c52389758e"
-      }
-    ],
-    "order": 4,
-    "id": "cd542942-18c9-48f2-805b-788811a718a3"
-  },
-  {
-    "title": {
-      "descriptionFr": "Rester informé·e·s",
-      "descriptionEn": "Stay tuned"
-    },
-    "questions": [
-      {
-        "title": {
-          "descriptionFr": "Newsletter",
-          "descriptionEn": "Newsletter"
-        },
-        "answer": {
-          "descriptionFr": "Nous communiquons les informations importantes (dates de l'événements, ouverture du CFP, de la loterie...) dans notre newsletter. Vous pouvez vous inscrire ici. (4 mails par an environ)",
-          "descriptionEn": "We annouce major milestones (dates of events, opening of CFP, lottery...) via our newsletter. You can register here. (4 emails per year approximatively)"
-        },
-        "order": 1,
-        "id": "a6de837d-bfe4-47c6-90a7-75e1d6d34871"
-      },
-      {
-        "title": {
-          "descriptionFr": "Réseaux sociaux",
-          "descriptionEn": "Social networks"
-        },
-        "answer": {
-          "descriptionFr": "Vous pouvez nous retrouver sur Twitter Twitter, LinkedIn, Mastodon, Twitch et Instagram.",
-          "descriptionEn": "You can find us on Twitter, LinkedIn, Mastodon, Twitch and Instagram."
-        },
-        "order": 2,
-        "id": "5aa9cfe5-9ab8-42ed-a982-5c0ea64990e0"
-      }
-    ],
-    "order": 3,
-    "id": "1c1b3a78-1715-429c-9a40-d49c42c8bf0a"
-  }
+        "id": "1c1b3a78-1715-429c-9a40-d49c42c8bf0a",
+        "index": "rester inform\u00e9\u00b7e\u00b7s stay tuned, newsletter newsletter nous communiquons les informations importantes (dates de l'\u00e9v\u00e9nements, ouverture du cfp, de la loterie...) dans notre newsletter. vous pouvez vous inscrire ici. (4 mails par an environ) we annouce major milestones (dates of events, opening of cfp, lottery...) via our newsletter. you can register here. (4 emails per year approximatively), r\u00e9seaux sociaux social networks vous pouvez nous retrouver sur twitter twitter, linkedin, mastodon, twitch et instagram. you can find us on twitter, linkedin, mastodon, twitch and instagram."
+    }
 ]

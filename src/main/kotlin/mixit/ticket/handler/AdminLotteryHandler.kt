@@ -49,7 +49,8 @@ class AdminLotteryHandler(
                     cryptographer.decrypt(it.email)!!,
                     cryptographer.decrypt(it.firstname)!!,
                     cryptographer.decrypt(it.lastname)!!,
-                    it.rank
+                    it.rank,
+                    it.interests
                 )
             }
             .sortedBy { it.lastname }
