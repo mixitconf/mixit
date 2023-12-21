@@ -19,13 +19,14 @@
     </div>
 
     <p>{{#i18n}}admin.ticketing.count{{/i18n}} : <b>{{tickets.size}}</b></p>
-    <table class="table-striped table table-bordered">
+    <table class="table-striped table table-bordered" style="max-width: 100%">
         <thead>
         <tr>
             <th>{{#i18n}}admin.ticketing.table.lastname{{/i18n}}</th>
             <th>{{#i18n}}admin.ticketing.table.firstname{{/i18n}}</th>
             <th>{{#i18n}}admin.ticketing.table.email{{/i18n}}</th>
             <th>{{#i18n}}admin.ticketing.table.rank{{/i18n}}</th>
+            <th>Interests</th>
             <th>&nbsp;</th>
         </tr>
         </thead>
@@ -36,6 +37,7 @@
                 <td>{{firstname}}</td>
                 <td><a href="mailto:{{email}}">{{email}}</a></td>
                 <td>{{#rank}}{{rank}}{{/rank}}</td>
+                <td>{{#interests}}{{.}}, {{/interests}}</td>
                 <td>
                     <form action="/admin/lottery/delete" method="post"
                           onsubmit="return confirm('{{#i18n}}admin.ticketing.delete.confirm{{/i18n}}');">
