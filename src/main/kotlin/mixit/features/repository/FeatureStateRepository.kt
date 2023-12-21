@@ -21,8 +21,6 @@ import reactor.core.publisher.Mono
 class FeatureStateRepository(private val template: ReactiveMongoTemplate) {
 
     fun initData() {
-        //TODO delete after index creation
-        deleteAll().block()
         if (count().block() == 0L) {
             save(FeatureState(false, Feature.Cfp)).block()
             save(FeatureState(false, Feature.Lottery)).block()
