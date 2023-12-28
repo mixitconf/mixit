@@ -98,6 +98,7 @@ class UserHandler(
                     ERRORS to errors,
                     HAS_ERRORS to errors.isNotEmpty(),
                     TALKS to talks,
+                    "hasInterests" to (lottery?.interests?.isNotEmpty() ?: false),
                     "lotteryTicket" to lottery,
                     "isSpeaker" to isSpeaker,
                     "speakerYear" to speakerYear,
