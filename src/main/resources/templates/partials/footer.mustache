@@ -1,4 +1,24 @@
     </div>
+    <script>
+        addEventListener("load", () => {
+            let elts;
+
+            elts = document.getElementsByClassName('selected');
+            if (elts.length > 0) {
+                elts.item(0).scrollIntoView(true);
+            }
+
+            elts = document.getElementsByClassName('anchor');
+            const hash = document.location.hash;
+            if (hash) {
+                document.getElementById(hash.substring(1, hash.length))?.scrollIntoView(true);
+            } else if (elts.length > 0) {
+                elts.item(0).scrollIntoView(true);
+            }
+
+
+        });
+    </script>
     <div class="container-xxl text-center pt-5">
         <small>Hosted and supported by <br><img src="/images/sponsors/logo-clevercloud.svg" style="max-height: 2em"></small>
     </div>
