@@ -796,6 +796,9 @@ $font-title: 'Changa One', 'Varela round', Arial, system-ui, -apple-system, "Seg
 .mxt-layout-header {
   background-color: $secondary-color;
   padding-top: 50px;
+  @media (max-width: 990px) {
+    padding-top: 10px !important;
+  }
 }
 
 h1, h2, h3 {
