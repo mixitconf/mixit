@@ -14,6 +14,7 @@
     <div class="text-center">
         {{#user.photoUrl}}<img src="{{user.photoUrl}}" class="mxt-img-avatar__speaker">{{/user.photoUrl}}
         {{^user.photoUrl}}<img src="https://www.gravatar.com/avatar/{{#user.emailHash}}{{user.emailHash}}{{/user.emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png" class="mxt-img-avatar__speaker">{{/user.photoUrl}}
+        {{#user.company}}<p class="text-center mxt-text-speaker-company">{{user.company}}</p>{{/user.company}}
         {{#connected}}
             {{^canUpdateProfile}}
             {{#admin}}
@@ -23,15 +24,14 @@
             {{/admin}}
             {{/canUpdateProfile}}
             {{#canUpdateProfile}}
-                <div class="mxt-text--page-title">
-                    <a href="{{localePrefix}}/me/edit" class="btn-outline-primary btn" style="margin-bottom: 0">{{#i18n}}common.actions.update{{/i18n}}</a>
+                <div class="mxt-text--page-title pb-4">
+                    <a href="{{localePrefix}}/me/edit" class="btn-outline-primary btn" style="margin-bottom: 0">{{#i18n}}profile.update{{/i18n}}</a>
                 </div>
             {{/canUpdateProfile}}
         {{/connected}}
     </div>
     <div class="row">
         <div class="columns small-12 medium-12 large-12 callout">
-            {{#user.company}}<p class="text-center mxt-text-speaker-company">{{user.company}}</p>{{/user.company}}
 
             {{#markdown}}{{user.description}}{{/markdown}}
             <ul class="mxt-wrapper-list-inline">
@@ -58,8 +58,28 @@
             <div class="columns small-12 medium-12 large-12 callout mt-3">
                 <p>
                     {{#hasFeatureLottery}}
-                        {{#lotteryTicket}}<strong><img src="/images/svg/lottery/mxt-icon--ok.svg" class="mxt-icon--profile">&nbsp;{{#i18n}}profile.hasticket{{/i18n}}</strong>{{/lotteryTicket}}
-                        {{^lotteryTicket}}<strong><img src="/images/svg/lottery/mxt-icon--ko.svg" class="mxt-icon--profile">&nbsp;{{#i18n}}profile.hasnoticket{{/i18n}}</strong>{{/lotteryTicket}}
+                        {{#lotteryTicket}}
+                            <strong><img src="/images/svg/lottery/mxt-icon--ok.svg" class="mxt-icon--profile">&nbsp;{{#i18n}}profile.hasticket{{/i18n}}</strong>
+                            {{^hasFeatureLotteryResult}}
+                                {{#hasInterests}}
+                                    <p>{{#i18n}}profile.hasticket.interest{{/i18n}}</p>
+                                    <div id="interests-list" class="col-12 mt-2">
+                                        <input name="interests" id="final-interests" type="hidden"/>
+                                        <ul id="interests" class="mxt-interests">
+                                            {{#interests}}
+                                                <li>{{.}}</li>
+                                            {{/interests}}
+                                        </ul>
+                                    </div>
+                                {{/hasInterests}}
+                                {{^hasInterests}}
+                                    {{#i18n}}profile.hasticket.interest.no{{/i18n}}
+                                {{/hasInterests}}
+                            {{/hasFeatureLotteryResult}}
+                        {{/lotteryTicket}}
+                        {{^lotteryTicket}}
+                            <strong><img src="/images/svg/lottery/mxt-icon--ko.svg" class="mxt-icon--profile">&nbsp;{{#i18n}}profile.hasnoticket{{/i18n}}</strong>
+                        {{/lotteryTicket}}
                     {{/hasFeatureLottery}}
                     {{#hasFeatureLotteryResult}}
                         {{#lotteryTicket}}<strong>{{#i18n}}profile.hasticket.result{{/i18n}}</strong>

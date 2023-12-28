@@ -98,6 +98,7 @@ class UserHandler(
                     ERRORS to errors,
                     HAS_ERRORS to errors.isNotEmpty(),
                     TALKS to talks,
+                    "hasInterests" to (lottery?.interests?.isNotEmpty() ?: false),
                     "lotteryTicket" to lottery,
                     "isSpeaker" to isSpeaker,
                     "speakerYear" to speakerYear,
@@ -141,6 +142,7 @@ class UserHandler(
             ViewMode.EditProfile -> {
                 val talks = service.findBySpeakerId(listOf(user.login), "null").sortedByDescending { it.event }
                 val isSpeaker = talks.any { it.event == CURRENT_EVENT }
+                val lottery = lotteryRepository.findByEncryptedEmail(user.email ?: "unknown")
 
                 val params = mapOf(
                     USER to user.toDto(req.language()),
@@ -149,6 +151,7 @@ class UserHandler(
                     "usermail" to cryptographer.decrypt(user.email),
                     "description-fr" to user.description[Language.FRENCH],
                     "description-en" to user.description[Language.ENGLISH],
+                    "lotteryTicket" to lottery,
                     "userlinks" to user.toLinkDtos(),
                     "isSpeaker" to isSpeaker,
                     "canUpdateProfile" to (user.email == cryptographer.encrypt(req.currentNonEncryptedUserEmail()))
@@ -187,6 +190,13 @@ class UserHandler(
             links = extractLinks(formData),
             newsletterSubscriber = formData["newsletterSubscriber"]?.toBoolean() ?: false
         )
+
+        val interests = formData["interests"]?.split(",")?.map { it.trim() } ?: emptyList()
+        if(interests.isNotEmpty()) {
+            lotteryRepository
+                .save(lotteryRepository.findByEncryptedEmail(updatedUser.email!!)!!.copy(interests = interests))
+                .awaitSingleOrNull()
+        }
 
         val errors = mutableMapOf<String, String>()
 

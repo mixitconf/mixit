@@ -161,10 +161,82 @@
                     {{/userlinks.link5}}
                 {{/userlinks}}
             </div>
+            {{#hasFeatureLottery}}
+            <div class="row">
+                <strong><label for="interests" class="form-label pt-2">
+                    {{#i18n}}lottery.topics{{/i18n}}
+                </label></strong>
+            </div>
+            <div class="row">
+                <div class="col-11">
+                    <input class="form-control" list="datalistOptions" id="interest" onclick="this.value=''"
+                           placeholder="{{#i18n}}lottery.placeholder{{/i18n}}">
+                    <datalist id="datalistOptions">
+                        <option value=" .net">
+                        <option value="Aliens">
+                        <option value="Data">
+                        <option value="Design">
+                        <option value="IA">
+                        <option value="JVM">
+                        <option value="Mobile">
+                        <option value="Ops">
+                        <option value="Php">
+                        <option value="Security">
+                        <option value="Team / orga">
+                        <option value="Web">
+                    </datalist>
+                </div>
+                <div class="col-1">
+                    <script>
+                        function addOption(event) {
+                            event.stopPropagation();
+                            var ul = document.getElementById('interests');
+                            var option = document.createElement('li');
+                            const interest = document.getElementById('interest').value.trim();
+                            if (interest) {
+                                option.innerHTML = interest;
+                                option.onclick = function () {
+                                    ul.removeChild(option);
+                                    const selected = [...ul.getElementsByTagName('li')];
+                                    document.getElementById('final-interests').value =
+                                            selected.map(e => e.innerHTML).join(',');
+                                };
+                                if (![...ul.getElementsByTagName('li')].find(e => e.innerHTML === interest)) {
+                                    ul.appendChild(option);
+                                }
+                                document.getElementById('final-interests').value =
+                                        [...ul.getElementsByTagName('li')].map(e => e.innerHTML).join(',');
+                            }
+                            document.getElementById('interest').value = '';
+                        }
+                        function remove(id) {
+                           const ul = document.getElementById('interests');
+                            const li = document.getElementById(id);
+                            ul.removeChild(li);
+                            const selected = [...ul.getElementsByTagName('li')];
+                            document.getElementById('final-interests').value =
+                                    selected.map(e => e.innerHTML).join(',');
+                        }
+                    </script>
+                    <button type="button"
+                            class="btn btn-outline-primary"
+                            onclick="addOption(event)">+
+                    </button>
+                </div>
+                <div id="interests-list" class="col-12 mt-2">
+                    <input name="interests" id="final-interests" type="hidden"/>
+                    <ul id="interests" class="mxt-interests">
+                        {{#lotteryTicket.interests}}
+                           <li onclick="remove('{{.}}')" id="{{.}}">{{.}}</li>
+                        {{/lotteryTicket.interests}}
+                    </ul>
+                </div>
+            </div>
             <div class="col-12 mt-5 text-center">
                 <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}common.actions.save{{/i18n}}"/>
             </div>
         </div>
+        {{/hasFeatureLottery}}
     </form>
 </div>
 
