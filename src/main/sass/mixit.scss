@@ -747,7 +747,8 @@ $font-title: 'Changa One', 'Varela round', Arial, system-ui, -apple-system, "Seg
 .mxt-layout-footer {
   display: flex;
   align-items: center;
-
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
   .mxt-icon--logo {
     height: 1em;
     padding-left: 1em;
@@ -799,19 +800,16 @@ h1, h2, h3 {
   font-family: $font-title !important;
 }
 
+.mxt-text-speaker-company {
+  font-family: $font-title !important;
+  font-size: 1.2em;
+}
+
 h1 {
   padding-top: 1em;
   padding-bottom: 0.2em;
   display: flex;
   align-items: center;
-
-  //> img {
-  //  max-height: 1.5em;
-  //  border: 2px solid $secondary-color;
-  //  border-radius: 50%;
-  //  padding: 0.2em;
-  //  background-color: $secondary-color;
-  //}
 }
 
 h2 {
@@ -915,11 +913,19 @@ h3 {
   @include linkWithImage("/images/svg/mxt-icon-lottery-hover.svg");
 }
 
+.mxt-icon--navbar-staff {
+  @include linkWithImage("/images/svg/mxt-icon--staff-hover.svg");
+}
+
 .mxt-navbar {
   box-shadow: none;
   background-color: $secondary-color;
   padding: 0;
   margin: 0;
+  top: 0;
+  @media (min-width: 990px) and (max-width: 1200px) {
+    top: 0.5em !important;
+  }
 }
 
 .mxt-navbar-nav-language {
