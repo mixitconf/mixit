@@ -724,6 +724,7 @@ $font-title: 'Changa One', 'Varela round', Arial, system-ui, -apple-system, "Seg
 .mxt-body {
   font-family: $font !important;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .mxt-layout--container {
@@ -749,6 +750,7 @@ $font-title: 'Changa One', 'Varela round', Arial, system-ui, -apple-system, "Seg
   align-items: center;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
+  position: relative;
   .mxt-icon--logo {
     height: 1em;
     padding-left: 1em;
