@@ -3,12 +3,14 @@ package mixit.user.handler
 import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.MixitApplication.Companion.CURRENT_EVENT
 import mixit.MixitProperties
+import mixit.event.model.EventService
 import mixit.routes.MustacheI18n.ERRORS
 import mixit.routes.MustacheI18n.HAS_ERRORS
 import mixit.routes.MustacheI18n.HAS_TALKS
 import mixit.routes.MustacheI18n.TALKS
 import mixit.routes.MustacheI18n.TITLE
 import mixit.routes.MustacheI18n.USER
+import mixit.routes.MustacheI18n.YEAR
 import mixit.routes.MustacheTemplate
 import mixit.routes.MustacheTemplate.Speaker
 import mixit.routes.MustacheTemplate.UserEdit
@@ -20,6 +22,7 @@ import mixit.ticket.repository.LotteryRepository
 import mixit.user.handler.dto.toDto
 import mixit.user.handler.dto.toLinkDtos
 import mixit.user.model.Link
+import mixit.user.model.Role
 import mixit.user.model.User
 import mixit.user.model.UserService
 import mixit.user.repository.UserRepository
@@ -45,6 +48,7 @@ import java.util.stream.IntStream
 class UserHandler(
     private val repository: UserRepository,
     private val userService: UserService,
+    private val eventService: EventService,
     private val service: TalkService,
     private val lotteryRepository: LotteryRepository,
     private val ticketService: TicketService,
@@ -115,6 +119,8 @@ class UserHandler(
             ViewMode.ViewUser -> {
                 val talks = service.findBySpeakerId(listOf(user.login), "null").sortedByDescending { it.event }
                 val isSpeaker = talks.any { it.event == CURRENT_EVENT }
+                val isStaff = eventService.findByYear(CURRENT_EVENT).organizers.any { it.login == user.login }
+                val isVolunteer = eventService.findByYear(CURRENT_EVENT).volunteers.any { it.login == user.login }
                 val speakerYear = talks.firstOrNull()?.event
 
                 val attendeeTicket = cryptographer.decrypt(user.email)?.let { ticketService.findByEmail(it) }
@@ -122,10 +128,13 @@ class UserHandler(
                 val params = mapOf(
                     USER to user.toDto(req.language()),
                     TALKS to talks,
+                    YEAR to CURRENT_EVENT,
                     "lotteryTicket" to lottery,
                     "attendeeTicket" to attendeeTicket,
                     "viewMyProfile" to false,
                     "isSpeaker" to isSpeaker,
+                    "isStaff" to isStaff,
+                    "isVolunteer" to isVolunteer,
                     "speakerYear" to speakerYear,
                     "canUpdateProfile" to (user.email == cryptographer.encrypt(req.currentNonEncryptedUserEmail())),
                 )

@@ -2,8 +2,18 @@
 
 <div class="container-xxl">
     <h1 class="pt-3 pb-3">
-        {{#speakerYear}}{{#i18n}}user.speaker{{/i18n}} {{speakerYear}}{{/speakerYear}}
-        {{^speakerYear}}{{#i18n}}user.standard{{/i18n}}{{/speakerYear}}
+        {{#isStaff}}
+            Staff {{year}}
+        {{/isStaff}}
+        {{^isStaff}}
+            {{#isVolunteer}}
+                Volunteer {{year}}
+            {{/isVolunteer}}
+            {{^isVolunteer}}
+                {{#speakerYear}}{{#i18n}}user.speaker{{/i18n}} {{speakerYear}}{{/speakerYear}}
+                {{^speakerYear}}{{#i18n}}user.standard{{/i18n}}{{/speakerYear}}
+            {{/isVolunteer}}
+        {{/isStaff}}
     </h1>
 </div>
 
