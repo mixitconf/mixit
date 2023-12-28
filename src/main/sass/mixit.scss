@@ -1285,6 +1285,7 @@ $sponsor-max-width: 20em;
 }
 
 .mxt-interests {
+  cursor: pointer;
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
