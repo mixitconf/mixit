@@ -10,17 +10,16 @@ import mixit.routes.MustacheI18n.YEAR_SELECTOR
 import mixit.routes.MustacheTemplate.About
 import mixit.routes.MustacheTemplate.Accessibility
 import mixit.routes.MustacheTemplate.CodeOfConduct
-import mixit.routes.MustacheTemplate.Faq
 import mixit.routes.MustacheTemplate.Search
 import mixit.routes.MustacheTemplate.Venue
 import mixit.user.model.UserService
+import mixit.util.SimpleTemplateLoader
 import mixit.util.YearSelector
 import mixit.util.language
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
-import org.springframework.web.reactive.function.server.renderAndAwait
 
 @Component
 class AboutHandler(
@@ -52,27 +51,32 @@ class AboutHandler(
             .awaitSingle()
     }
 
-    suspend fun comeToMixitView(req: ServerRequest): ServerResponse {
-        val event = eventService.findByYear(MixitApplication.CURRENT_EVENT)
+    suspend fun comeToMixitView(req: ServerRequest): ServerResponse =
+        SimpleTemplateLoader.openTemplate(
+            eventService,
+            userService,
+            Venue
+        )
 
-        return ok()
-            .render(
-                Venue.template,
-                mapOf(
-                    TITLE to Venue.title,
-                    YEAR to event.year,
-                    SPONSORS to userService.loadSponsors(event)
-                )
-            )
-            .awaitSingle()
-    }
 
     suspend fun codeConductView(req: ServerRequest): ServerResponse =
-        ok().renderAndAwait(CodeOfConduct.template, mapOf(TITLE to CodeOfConduct.title))
+        SimpleTemplateLoader.openTemplate(
+            eventService,
+            userService,
+            CodeOfConduct
+        )
 
     suspend fun accessibilityView(req: ServerRequest): ServerResponse =
-        ok().renderAndAwait(Accessibility.template, mapOf(TITLE to Accessibility.title))
+        SimpleTemplateLoader.openTemplate(
+            eventService,
+            userService,
+            Accessibility
+        )
 
     suspend fun findFullTextView(req: ServerRequest): ServerResponse =
-        ok().renderAndAwait(Search.template, mapOf(TITLE to Search.title))
+        SimpleTemplateLoader.openTemplate(
+            eventService,
+            userService,
+            Search
+        )
 }
