@@ -1,6 +1,7 @@
 package mixit.ticket.handler
 
 import kotlinx.coroutines.reactor.awaitSingle
+import mixit.event.model.EventService
 import mixit.features.model.Feature
 import mixit.features.model.FeatureStateService
 import mixit.routes.MustacheI18n.TITLE
@@ -13,6 +14,8 @@ import mixit.security.model.Cryptographer
 import mixit.ticket.model.LotteryTicket
 import mixit.ticket.repository.LotteryRepository
 import mixit.user.model.User
+import mixit.user.model.UserService
+import mixit.util.SimpleTemplateLoader
 import mixit.util.camelCase
 import mixit.util.email.EmailService
 import mixit.util.extractFormData
@@ -32,15 +35,18 @@ class LotteryHandler(
     private val lotteryRepository: LotteryRepository,
     private val cryptographer: Cryptographer,
     private val emailService: EmailService,
+    private val eventService: EventService,
+    private val userService: UserService,
     private val featureStateService: FeatureStateService
 ) {
     suspend fun findAll(req: ServerRequest): ServerResponse =
         ok().json().bodyValueAndAwait(lotteryRepository.findAll())
 
     suspend fun ticketing(req: ServerRequest): ServerResponse =
-        ok().renderAndAwait(
-            if (featureStateService.findOneByType(Feature.Lottery).active) LotteryEdit.template else LotteryClosed.template,
-            mapOf(TITLE to LotteryEdit.title)
+        SimpleTemplateLoader.openTemplate(
+            eventService,
+            userService,
+            if (featureStateService.findOneByType(Feature.Lottery).active) LotteryEdit else LotteryClosed
         )
 
     suspend fun submit(req: ServerRequest): ServerResponse {
