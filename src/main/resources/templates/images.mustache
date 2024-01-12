@@ -46,15 +46,12 @@
                 {{^singleImage}}
                     <div>
                         <div class="mxt-video--player-header mb-2">
-                            <div class="flex-fill"></div>
-                            <div>
-                                <a href="{{localePrefix}}/{{year}}/medias/images/{{sectionId}}?url={{name}}"
-                                class="btn btn-sm btn-outline-primary">{{#i18n}}images.zoom{{/i18n}}</a>
-                            </div>
                         </div>
                         <div class="mxt-video--player-image">
-                            <img class="mxt-img--speakers mxt-img--lazyload"
+                            <a href="{{localePrefix}}/{{year}}/medias/images/{{sectionId}}?url={{name}}">
+                                <img class="mxt-img--speakers mxt-img--lazyload"
                                  data-src="https://raw.githubusercontent.com/mixitconf/mixitconf-images/main/{{year}}/{{sectionId}}/{{name}}">
+                            </a>
                         </div>
                     </div>
                 {{/singleImage}}

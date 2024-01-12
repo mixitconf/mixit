@@ -5,13 +5,9 @@
                  alt="{{#i18n}}topics.{{topic}}.title{{/i18n}}"/>
             <span>{{#i18n}}topics.{{topic}}.title{{/i18n}} <b>{{event}}</b></span>
         </div>
+        <div class="flex-fill"></div>
         <div class="mxt-text--cat-format ps-2">
             <strong>#{{#i18n}}talk.format.{{format}}{{/i18n}}</strong>
-        </div>
-        <div class="flex-fill"></div>
-        <div>
-            <a class="btn btn-outline-primary btn-sm"
-               href="{{localePrefix}}/{{event}}/{{slug}}">{{#i18n}}home.talk.plus{{/i18n}}</a>
         </div>
     </div>
     <div class="mxt-video--player-video">
@@ -32,7 +28,8 @@
         {{/vimeoPlayer}}
     </div>
     <div class="mxt-video--player-title text-center">
-        {{title}}
+        <a class="mxt-media--link" aria-label="{{title}}"
+           href="{{localePrefix}}/{{event}}/{{slug}}">{{title}}</a>
     </div>
     <div class="mxt-video--player-speaker text-center">
         {{#speakers}}

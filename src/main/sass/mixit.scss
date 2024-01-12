@@ -1305,3 +1305,11 @@ $sponsor-max-width: 20em;
   }
 
 }
+
+mxt-media--link.mxt-media--link {
+  color: $secondary-color;
+  text-decoration: none;
+  &:hover {
+    color:  $primary-color;
+  }
+}
