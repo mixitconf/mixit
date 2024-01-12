@@ -35,20 +35,23 @@
             {{#images.sections}}
                 <div>
                     <div class="mxt-video--player-header mb-2">
-                        <div class="flex-fill"></div>
-                        <div>
-                            <a href="{{localePrefix}}/{{event}}/medias/images/{{sectionId}}"
-                               class="btn btn-sm btn-outline-primary">{{#i18n}}images.readmore{{/i18n}}</a>
-                        </div>
                     </div>
                     <div class="mxt-video--player-video">
                         {{#pictures}}
+                        <a href="{{localePrefix}}/{{event}}/medias/images/{{sectionId}}"
+
+                           title="{{#i18n}}images.readmore{{/i18n}}">
                             <img class="mxt-img--speakers mxt-img--lazyload"
                                  data-src="https://raw.githubusercontent.com/mixitconf/mixitconf-images/main/{{year}}/{{sectionId}}/{{name}}">
+                        </a>
                         {{/pictures}}
                     </div>
                     <div class="mxt-image--player-title text-center">
-                        {{#i18n}}{{i18nLabel}}{{/i18n}}
+                        <a href="{{localePrefix}}/{{event}}/medias/images/{{sectionId}}"
+                           class="mxt-media--link"
+                           title="{{#i18n}}images.readmore{{/i18n}}">
+                                {{#i18n}}{{i18nLabel}}{{/i18n}}
+                        </a>
                     </div>
                 </div>
             {{/images.sections}}
