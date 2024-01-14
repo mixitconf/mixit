@@ -23,8 +23,8 @@
                             {{^refreshAt}}???{{/refreshAt}}
                         </strong></div>
                     <div class="card-text">{{#i18n}}admin.cache.entries{{/i18n}} <strong>{{entries}}</strong></div>
-                    <form action="/admin/cache/{{zone}}/invalidate" method="post">
-                        <button type="submit" class="btn btn-outline-primary mt-2">Invalidate</button>
+                    <form action="/admin/cache/{{zone}}/invalidate" method="post" class="mxt-btn-container">
+                        <button type="submit" class="mxt-btn-primary mt-2">Invalidate</button>
                     </form>
                 {{/value}}
                 </div>

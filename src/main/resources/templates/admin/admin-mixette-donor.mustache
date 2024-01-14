@@ -14,13 +14,20 @@
         <li>{{#i18n}}admin.donations.amount{{/i18n}} : <strong>{{userDonation.amount}}</strong></li>
     </ul>
 
-    <p>{{#i18n}}admin.donations.donor.count{{/i18n}} : <b>{{donations.size}}</b> | <a href="/{{#admin}}admin{{/admin}}{{#volunteer}}volunteer{{/volunteer}}/mixette-donation/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
+    <div class="mxt-btn-container pb-3">
+        {{#i18n}}admin.donations.donor.count{{/i18n}} : <b>{{donations.size}}</b>
+        <div class="flex-fill"></div>
+        <a class="mxt-btn-light"
+           href="/{{#admin}}admin{{/admin}}{{#volunteer}}volunteer{{/volunteer}}/mixette-donation/create">
+            {{#i18n}}common.actions.create{{/i18n}}
+        </a>
+    </div>
     <table class="table-striped table table-bordered">
       <thead>
         <tr>
             <th>{{#i18n}}admin.donations.login{{/i18n}}</th>
             <th>{{#i18n}}admin.donations.quantity{{/i18n}}</th>
-            <th>{{#i18n}}common.actions{{/i18n}}</th>
+            <th style="width: 8em">{{#i18n}}common.actions{{/i18n}}</th>
         </tr>
       </thead>
       <tbody>
@@ -28,8 +35,10 @@
         <tr>
             <td>{{login}}</td>
             <td>{{quantity}}</td>
-            <td>
-                <a href="/{{#admin}}admin{{/admin}}{{#volunteer}}volunteer{{/volunteer}}/mixette-donation/edit/{{#id}}{{id}}{{/id}}">{{#i18n}}common.actions.update{{/i18n}}</a>
+            <td class="mxt-btn-container">
+                <a href="/{{#admin}}admin{{/admin}}{{#volunteer}}volunteer{{/volunteer}}/mixette-donation/edit/{{#id}}{{id}}{{/id}}" class="mxt-btn-light">
+                <img src="/images/svg/mxt-search-dark.svg" class="mxt-icon--cat__talks"
+                     title="{{#i18n}}common.actions.update{{/i18n}}"/></a>
             </td>
         </tr>
         {{/donations}}

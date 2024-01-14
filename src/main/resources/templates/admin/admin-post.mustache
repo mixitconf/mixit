@@ -7,10 +7,11 @@
 
 <div class="container-xxl">
     {{#post.id}}<form action="/admin/post/delete" method="post"
-                      class="text-center"
+                      class="mxt-btn-container mb-4"
+                      style="justify-content: flex-start"
                       onsubmit="return confirm('{{#i18n}}admin.post.delete.confirm{{/i18n}}');">
         <input type="hidden" name="id" value="{{post.id}}"/>
-        <input type="submit" class="btn-primary btn mxt-btn-primary" value="{{#i18n}}common.actions.delete{{/i18n}}"/>
+        <button class="mxt-btn-primary">{{#i18n}}common.actions.delete{{/i18n}}</button>
     </form>{{/post.id}}
     <form action="/admin/post" method="post">
         {{#post.id}}<input type="hidden" name="id" value="{{post.id}}"/>{{/post.id}}
@@ -50,8 +51,8 @@
             <label class="form-label">{{#i18n}}admin.post.form.addedAt{{/i18n}}</label>
             <input class="form-control" type="text" name="addedAt" value="{{post.addedAt}}" required/>
         </div>
-        <div class="text-center">
-            <input type="submit" class="btn btn-outline-primary" value="{{#i18n}}common.actions.save{{/i18n}}"/>
+        <div class="mxt-btn-container">
+            <button type="submit" class="mxt-btn-primary">{{#i18n}}common.actions.save{{/i18n}}</button>
         </div>
     </form>
 </div>

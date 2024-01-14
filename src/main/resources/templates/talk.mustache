@@ -3,38 +3,50 @@
 
 
 <div class="container-xxl">
-    <h2 class="pt-3 pb-3">#{{#i18n}}talk.format.{{talk.format}}{{/i18n}}</h2>
     {{#admin}}
-        <div class="mxt-text--page-title pb-3">
-            <a href="{{localePrefix}}/admin/talks/edit/{{talk.id}}" class="btn-outline-primary btn" style="margin-bottom: 0">{{#i18n}}common.actions.update{{/i18n}}</a>
+        <div class="pb-3 mxt-btn-container">
+            <a href="{{localePrefix}}/admin/talks/edit/{{talk.id}}" class="mxt-btn-primary" style="margin-bottom: 0">
+                <img src="/images/svg/mxt-icon--admin-dark.svg"
+                     class="mxt-icon--navbar me-2"
+                     alt="{{#i18n}}header.menu.admin{{/i18n}}">
+                {{#i18n}}common.actions.update{{/i18n}}
+            </a>
         </div>
     {{/admin}}
 </div>
 <div class="container-xxl">
-    <h1 class="text-center mxt-text--talk-h1 container pb-0">
+    <h3 class="mxt-text--cat-format">#{{#i18n}}talk.format.{{talk.format}}{{/i18n}}</h3>
+    <h1 class="text-center mxt-text--talk-h1 container pb-1 pt-0">
         {{talk.title}}
-        {{#connected}}
-            <button id="favorite" class="btn btn-link">
-                {{#favorites}}
-                    <img src="/images/svg/favorites/mxt-favorite.svg" class="mxt-icon--cat__talks"/>
-                {{/favorites}}
-                {{^favorites}}
-                    <img src="/images/svg/favorites/mxt-favorite-non.svg" class="mxt-icon--cat__talks"/>
-                {{/favorites}}
-            </button>
-        {{/connected}}
     </h1>
-
-    <div class="text-center">
+    <div class="">
         <ul class="mxt-wrapper-list-inline mb-0 pb-0">
             {{#speakers}}
                 <li>
-                    <a href="/user/{{login}}" class="mxt-text--cat mxt-text--cat-speaker" style="background-color: #e6e6e6; padding: 0.3em;color: #2c233d">{{firstname}}&nbsp;{{lastname}}</a>
+                    <a href="/user/{{login}}" class="mxt-text--cat mxt-text--cat-speaker">{{firstname}}&nbsp;{{lastname}}</a>
                 </li>
             {{/speakers}}
         </ul>
     </div>
 
+    {{#isCurrent}}
+    <div class="mxt-btn-container">
+        {{#connected}}
+            <button id="favorite" class="mxt-btn-light"
+                    {{^favorites}}style="display: none"{{/favorites}}
+                    aria-label="{{#i18n}}favorite.selected{{/i18n}}">
+                    <img src="/images/svg/favorites/mxt-favorite.svg" class="mxt-icon--cat__talks"/>
+                    {{#i18n}}favorite.selected{{/i18n}}
+            </button>
+            <button id="nonfavorite" class="mxt-btn-light"
+                    {{#favorites}}style="display: none"{{/favorites}}
+                    aria-label="{{#i18n}}favorite.nonselected{{/i18n}}">
+                <img src="/images/svg/favorites/mxt-favorite-non.svg" class="mxt-icon--cat__talks"/>
+                {{#i18n}}favorite.nonselected{{/i18n}}
+            </button>
+        {{/connected}}
+    </div>
+    {{/isCurrent}}
     <p>{{#markdown}}{{talk.summary}}{{/markdown}}</p>
 
     <div class="text-center">
@@ -94,7 +106,7 @@
 <div class="container-xxl mxt-section">
     {{#speakers}}
         <div class="row p-2">
-            <div class="col-12 col-md-2 text-center align-middle">
+            <div class="col-12 col-md-2 text-center align-middle mxt-img-avatar-container">
                 <a href="/user/{{login}}"><img src="{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{^photoUrl}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/photoUrl}}"
                     class="mxt-img-avatar__speaker"></a>
             </div>
@@ -127,22 +139,40 @@
 
         }
     </script>
-    <div class="row" style="justify-content: center">
-        {{#images}}
-            <div class="col-6 col-lg-4" id="{{name}}">
-                <img class="mxt-img--grayscale pb-2" style="width: 100%;cursor:pointer"
-                     onclick="zoomImage('{{name}}')" onblur="zoomImage('{{name}}')"
-                     src="https://raw.githubusercontent.com/mixitconf/mixitconf-images/main/{{event}}/{{sectionId}}/{{name}}">
-            </div>
-        {{/images}}
-        {{#talk.photoUrls}}
-            <div class="col-4">
-                <a href="{{url}}"><img src="{{url}}" aria-label="{{name}}" class="mxt-img--grayscale pb-2"/></a>
-            </div>
-        {{/talk.photoUrls}}
+</div>
+<div class="container-xxl" style="justify-content: center">
+    <div class="row">
+    {{#images}}
+        <div class="col-6 col-lg-4" id="{{name}}">
+            <img class="mxt-img--grayscale pb-2" style="width: 100%;cursor:pointer"
+                 onclick="zoomImage('{{name}}')" onblur="zoomImage('{{name}}')"
+                 src="https://raw.githubusercontent.com/mixitconf/mixitconf-images/main/{{event}}/{{sectionId}}/{{name}}">
+        </div>
+    {{/images}}
+    {{#talk.photoUrls}}
+        <div class="col-4">
+            <a href="{{url}}"><img src="{{url}}" aria-label="{{name}}" class="mxt-img--grayscale pb-2"/></a>
+        </div>
+    {{/talk.photoUrls}}
     </div>
 </div>
+{{#hasFeatureFeedback}}
+<div class="container-xxl">
+    <h2 class="pt-5">{{#i18n}}feedback.title{{/i18n}}</h2>
+    <p>{{#i18n}}feedback.{{talk.format}}.description{{/i18n}}</p>
 
+    <div class="row">
+    {{#feedbackTypes}}
+        <div class="col-4 p-3" >
+            <div class="mxt-feedback--container text-center">
+                <div>{{first}}</div>
+                <div>Votes : {{second.count}}</div>
+            </div>
+        </div>
+    {{/feedbackTypes}}
+    </div>
+</div>
+{{/hasFeatureFeedback}}
 
 {{#connected}}
     <input type="hidden" id="talkId" value="{{talk.id}}"/>

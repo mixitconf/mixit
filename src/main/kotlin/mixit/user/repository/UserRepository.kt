@@ -71,6 +71,20 @@ class UserRepository(
             )
             .awaitSingleOrNull()
 
+    suspend fun findByEncryptedEmail(email: String): User? =
+        template
+            .findOne<User>(
+                Query(
+                    where("role").inValues(Role.STAFF, Role.STAFF_IN_PAUSE, Role.USER, Role.VOLUNTEER)
+                        .orOperator(
+                            where("email").isEqualTo(email),
+                            where("emailHash").isEqualTo(email.encodeToMd5())
+                        )
+                )
+            )
+            .awaitSingleOrNull()
+
+
     suspend fun findByRoles(roles: List<Role>): List<User> =
         template.find<User>(Query(where("role").inValues(roles))).collectList().awaitSingle()
 

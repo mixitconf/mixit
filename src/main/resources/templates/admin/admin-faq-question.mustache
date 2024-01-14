@@ -10,7 +10,7 @@
                   onsubmit="return confirm('{{#i18n}}admin.faq.delete.question.confirm{{/i18n}}');">
                 <input type="hidden" name="sectionId" value="{{sectionId}}"/>
                 <input type="hidden" name="questionId" value="{{question.id}}"/>
-                <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}common.actions.delete{{/i18n}}"/>
+                <button class="mxt-btn-primary">{{#i18n}}common.actions.delete{{/i18n}}</button>
             </form>
         </div>
     {{/question.id}}
@@ -49,8 +49,8 @@
             <input type="number" class="form-control" name="order" required
                    value="{{#question.order}}{{question.order}}{{/question.order}}"/>
         </div>
-        <div class="mb-3 text-center">
-            <input type="submit" class="btn btn-outline-primary expand" value="{{#i18n}}common.actions.save{{/i18n}}"/>
+        <div class="mb-3 mxt-btn-container">
+            <button type="submit" class="mxt-btn-primary" >{{#i18n}}common.actions.save{{/i18n}}</button>
         </div>
     </form>
 </div>

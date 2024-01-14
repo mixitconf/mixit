@@ -7,11 +7,16 @@
 
 <div class="container-xxl">
     {{#user.login}}
-        <form action="/admin/users/delete" method="post" class="text-center"
+        <form action="/admin/users/delete" method="post" class="mxt-btn-container mb-4"
+              style="justify-content: flex-start"
               onsubmit="return confirm('{{#i18n}}admin.user.delete.confirm{{/i18n}}');">
-        <input type="hidden" name="login" value="{{user.login}}"/>
-        <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}common.actions.delete{{/i18n}}"/>
-    </form>{{/user.login}}
+            <input type="hidden" name="login" value="{{user.login}}"/>
+            <button type="submit" class="btn btn-primary mxt-btn-primary">
+                {{#i18n}}common.actions.delete{{/i18n}}</button>
+            <a href="/user/{{user.login}}"
+               class="btn btn-primary mxt-btn-light ms-3">{{#i18n}}common.actions.view{{/i18n}}</a>
+        </form>
+    {{/user.login}}
     <form action="/admin/users" method="post">
         <div class="mb-3">
             <label class="form-label">{{#i18n}}admin.user.form.login{{/i18n}}</label>
@@ -34,7 +39,8 @@
         </div>
         <div class="mb-3">
             <label class="label">{{#i18n}}admin.user.form.photoUrl{{/i18n}}</label>
-            <input class="form-control" type="text" name="photoUrl" value="{{#user.photoUrl}}{{user.photoUrl}}{{/user.photoUrl}}"/>
+            <input class="form-control" type="text" name="photoUrl"
+                   value="{{#user.photoUrl}}{{user.photoUrl}}{{/user.photoUrl}}"/>
         </div>
         <div class="mb-3">
             <label class="label">{{#i18n}}admin.user.form.shape{{/i18n}}</label>
@@ -46,15 +52,18 @@
         </div>
         <div class="mb-3">
             <label class="label">{{#i18n}}admin.user.form.company{{/i18n}}</label>
-            <input class="form-control" type="text" name="company" value="{{#user.company}}{{user.company}}{{/user.company}}"/>
+            <input class="form-control" type="text" name="company"
+                   value="{{#user.company}}{{user.company}}{{/user.company}}"/>
         </div>
         <div class="mb-3">
             <label class="label">{{#i18n}}admin.user.form.description.fr{{/i18n}}</label>
-            <textarea class="form-control" name="description-fr" rows="10">{{#description-fr}}{{description-fr}}{{/description-fr}}</textarea>
+            <textarea class="form-control" name="description-fr"
+                      rows="10">{{#description-fr}}{{description-fr}}{{/description-fr}}</textarea>
         </div>
         <div class="mb-3">
             <label class="label">{{#i18n}}admin.user.form.description.en{{/i18n}}</label>
-            <textarea class="form-control" name="description-en" rows="10">{{#description-en}}{{description-en}}{{/description-en}}</textarea>
+            <textarea class="form-control" name="description-en"
+                      rows="10">{{#description-en}}{{description-en}}{{/description-en}}</textarea>
         </div>
         <div class="mb-3">
             <label class="label">{{#i18n}}admin.user.form.role{{/i18n}}</label>
@@ -70,7 +79,8 @@
         </div>
         <div class="mb-3">
             <label class="label">{{#i18n}}admin.user.form.legacyId{{/i18n}}</label>
-            <input class="form-control" type="text" name="legacyId" value="{{#user.legacyId}}{{user.legacyId}}{{/user.legacyId}}"/>
+            <input class="form-control" type="text" name="legacyId"
+                   value="{{#user.legacyId}}{{user.legacyId}}{{/user.legacyId}}"/>
         </div>
         <div class="col-12 mb-3">
             <label class="form-label">
@@ -79,8 +89,8 @@
                        {{#user.newsletterSubscriber}}checked{{/user.newsletterSubscriber}}/>
             </label>
         </div>
-        <div class="mb-3 text-center">
-            <input type="submit" class="btn btn-outline-primary expand" value="{{#i18n}}common.actions.save{{/i18n}}"/>
+        <div class="mb-3 mxt-btn-container">
+            <button type="submit" class="mxt-btn-primary">{{#i18n}}common.actions.save{{/i18n}}</button>
         </div>
     </form>
 </div>

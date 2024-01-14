@@ -3,9 +3,8 @@ package mixit.util
 import kotlinx.coroutines.reactor.awaitSingle
 import mixit.MixitApplication
 import mixit.event.model.EventService
-import mixit.faq.model.CachedQuestionSection
-import mixit.routes.MustacheI18n
-import mixit.routes.MustacheTemplate
+import mixit.util.mustache.MustacheI18n
+import mixit.util.mustache.MustacheTemplate
 import mixit.user.model.UserService
 import org.springframework.web.reactive.function.server.ServerResponse
 

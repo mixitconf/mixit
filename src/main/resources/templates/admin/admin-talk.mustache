@@ -6,9 +6,13 @@
 </div>
 
 <div class="container-xxl">
-    {{#talk.id}}<form class="text-center mb-4" action="/admin/talks/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.talk.delete.confirm{{/i18n}}');">
+    {{#talk.id}}<form class="mxt-btn-container mb-4"
+                      style="justify-content: flex-start"
+                      action="/admin/talks/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.talk.delete.confirm{{/i18n}}');">
         <input type="hidden" name="id" value="{{talk.id}}"/>
-        <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}common.actions.delete{{/i18n}}"/>
+        <button class="btn btn-primary mxt-btn-primary">{{#i18n}}common.actions.delete{{/i18n}}</button>
+        <a href=" /{{talk.event}}/{{talk.slug}}"
+           class="btn btn-primary mxt-btn-light ms-3">{{#i18n}}common.actions.view{{/i18n}}</a>
     </form>{{/talk.id}}
     <form action="/admin/talks" method="post">
         {{#talk.id}}<input type="hidden" name="id" value="{{talk.id}}"/>{{/talk.id}}
@@ -85,8 +89,8 @@
             <label class="form-label">{{#i18n}}admin.talk.form.photo{{/i18n}}</label>
             <input class="form-control" type="text" name="photoUrls" value="{{#photos}}{{photos}}{{/photos}}"/>
         </div>
-        <div class="mb-3 text-center">
-            <input type="submit" class="btn btn-outline-primary" value="{{#i18n}}common.actions.save{{/i18n}}"/>
+        <div class="mb-3 mxt-btn-container">
+            <button type="submit" class="mxt-btn-primary">{{#i18n}}common.actions.save{{/i18n}}</button>
         </div>
     </form>
 </div>

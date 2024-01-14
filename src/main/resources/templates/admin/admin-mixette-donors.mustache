@@ -6,7 +6,11 @@
 </div>
 
 <div class="container-xxl">
-    <p>{{#i18n}}admin.donations.donor.count{{/i18n}} : <b>{{donations.size}}</b> | <a href="/{{#admin}}admin{{/admin}}{{#volunteer}}volunteer{{/volunteer}}/mixette-donation/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
+    <div class="mxt-btn-container pb-3">
+        {{#i18n}}admin.donations.donor.count{{/i18n}} : <b>{{donations.size}}</b>
+        <div class="flex-fill"></div>
+        <a  class="mxt-btn-light" href="/{{#admin}}admin{{/admin}}{{#volunteer}}volunteer{{/volunteer}}/mixette-donation/create">{{#i18n}}common.actions.create{{/i18n}}</a>
+    </div>
     <table class="table-striped table table-bordered">
       <thead>
         <tr>
@@ -15,9 +19,9 @@
             <th>{{#i18n}}admin.donations.login{{/i18n}}</th>
             <th>{{#i18n}}admin.donations.donor.number{{/i18n}}</th>
             <th>{{#i18n}}admin.donations.amount{{/i18n}}</th>
-            <th>{{#i18n}}common.actions{{/i18n}}</th>
+            <th style="width: 8em">{{#i18n}}common.actions{{/i18n}}</th>
         </tr>
-      </thead
+      </thead>
       <tbody>
         {{#donations}}
         <tr>
@@ -26,8 +30,10 @@
             <td>{{#login}}{{login}}{{/login}}</td>
             <td>{{#number}}{{number}}{{/number}}</td>
             <td>{{amount}}</td>
-            <td>
-                <a href="/{{#admin}}admin{{/admin}}{{#volunteer}}volunteer{{/volunteer}}/mixette-donation/donor?ticketNumber={{ticketNumber}}">{{#i18n}}common.actions.view{{/i18n}}</a>
+            <td class="mxt-btn-container">
+                <a href="/{{#admin}}admin{{/admin}}{{#volunteer}}volunteer{{/volunteer}}/mixette-donation/donor?ticketNumber={{ticketNumber}}" class="mxt-btn-light">
+                <img src="/images/svg/mxt-search-dark.svg" class="mxt-icon--cat__talks"
+                     title="{{#i18n}}common.actions.update{{/i18n}}"/></a>
             </td>
         </tr>
         {{/donations}}

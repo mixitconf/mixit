@@ -1,5 +1,15 @@
 {{> header}}
 
+{{#admin}}
+    <div class="mxt-btn-container pb-3">
+        <a href="{{localePrefix}}/admin/users/edit/{{user.login}}" class="mxt-btn-primary" style="margin-bottom: 0">
+            <img src="/images/svg/mxt-icon--admin-dark.svg"
+                 class="mxt-icon--navbar me-2"
+                 alt="{{#i18n}}header.menu.admin{{/i18n}}">
+            {{#i18n}}common.actions.update{{/i18n}}
+        </a>
+    </div>
+{{/admin}}
 
 <div class="container-xxl">
     <h2 class="pt-3 pb-3">
@@ -9,12 +19,6 @@
 </div>
 
 <div class="container-xxl">
-    {{#admin}}
-        <div>
-            <a href="{{localePrefix}}/admin/users/edit/{{user.login}}" class="btn btn-outline-primary" style="margin-bottom: 0">{{#i18n}}common.actions.update{{/i18n}}</a>
-        </div>
-    {{/admin}}
-
     <form action="/me" method="post">
         <input type="hidden" name="login" value="{{user.login}}"/>
         <div class="row">
@@ -219,7 +223,7 @@
                         }
                     </script>
                     <button type="button"
-                            class="btn btn-outline-primary"
+                            class="mxt-btn-light"
                             onclick="addOption(event)">+
                     </button>
                 </div>
@@ -232,8 +236,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-12 mt-5 text-center">
-                <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}common.actions.save{{/i18n}}"/>
+            <div class="col-12 mt-5 mxt-btn-container">
+                <button type="submit" class="mxt-btn-primary">{{#i18n}}common.actions.save{{/i18n}}</button>
             </div>
         </div>
         {{/hasFeatureLottery}}

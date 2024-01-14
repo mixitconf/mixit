@@ -32,6 +32,10 @@ enum class Feature {
      * Active the CFP
      */
     Cfp,
+    /**
+     * Active talk feedback
+     */
+    Feedback,
 }
 
 @Document

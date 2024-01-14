@@ -6,15 +6,14 @@
 </div>
 
 <div class="container mxt-wrapper--page-content ">
-    <div class="row container pb-5">
-        <form action="/admin/lottery/random/delete" method="post" class="text-right m-auto col-6"
-              style="text-align: right"
+    <div style="display: flex;justify-content: center">
+        <form action="/admin/lottery/random/delete" method="post"
               onsubmit="return confirm('Are you sure to erase all ranks ?');">
-            <input type="submit" class="btn btn-primary mxt-btn-primary" value="Erase rank"/>
+            <button class="mxt-btn-primary">Erase rank</button>
         </form>
-        <form action="/admin/lottery/random" method="post" class="text-left col-6"
+        <form action="/admin/lottery/random" method="post" class="ms-3"
               onsubmit="return confirm('Are you sure to eras random draw by a new one ?');">
-            <input type="submit" class="btn btn-primary mxt-btn-primary" value="Random draw"/>
+            <button class="mxt-btn-primary">Random draw</button>
         </form>
     </div>
 
@@ -42,8 +41,7 @@
                     <form action="/admin/lottery/delete" method="post"
                           onsubmit="return confirm('{{#i18n}}admin.ticketing.delete.confirm{{/i18n}}');">
                         <input type="hidden" name="email" value="{{email}}"/>
-                        <input type="submit" class="btn btn-primary mxt-btn-primary"
-                               value="{{#i18n}}common.actions.delete{{/i18n}}"/>
+                        <button class="mxt-btn-primary">{{#i18n}}common.actions.delete{{/i18n}}</button>
                     </form>
                 </td>
             </tr>

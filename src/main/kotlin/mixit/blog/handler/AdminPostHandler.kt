@@ -5,9 +5,9 @@ import mixit.MixitApplication
 import mixit.MixitProperties
 import mixit.blog.model.BlogService
 import mixit.blog.model.Post
-import mixit.routes.MustacheI18n
-import mixit.routes.MustacheTemplate.AdminBlog
-import mixit.routes.MustacheTemplate.AdminPost
+import mixit.util.mustache.MustacheI18n
+import mixit.util.mustache.MustacheTemplate.AdminBlog
+import mixit.util.mustache.MustacheTemplate.AdminPost
 import mixit.talk.model.Language.ENGLISH
 import mixit.talk.model.Language.FRENCH
 import mixit.util.extractFormData

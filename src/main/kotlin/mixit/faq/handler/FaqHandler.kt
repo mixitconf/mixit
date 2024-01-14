@@ -2,7 +2,7 @@ package mixit.faq.handler
 
 import mixit.event.model.EventService
 import mixit.faq.model.QuestionSectionService
-import mixit.routes.MustacheTemplate.Faq
+import mixit.util.mustache.MustacheTemplate.Faq
 import mixit.user.model.UserService
 import mixit.util.SimpleTemplateLoader
 import org.springframework.stereotype.Component

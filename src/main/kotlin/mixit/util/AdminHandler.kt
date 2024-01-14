@@ -1,7 +1,7 @@
 package mixit.util
 
-import mixit.routes.MustacheI18n
-import mixit.routes.MustacheTemplate.Admin
+import mixit.util.mustache.MustacheI18n
+import mixit.util.mustache.MustacheTemplate.Admin
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse

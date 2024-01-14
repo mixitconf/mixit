@@ -1,6 +1,6 @@
 package mixit.event.model
 
-import mixit.routes.MustacheTemplate
+import mixit.util.mustache.MustacheTemplate
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
 

@@ -4,25 +4,23 @@
 <div class="container-xxl">
     <h1 class="pt-3 pb-3">{{#i18n}}admin.ticket.title{{/i18n}}</h1>
     <p class="text-center mxt-text--page-title">{{#i18n}}admin.ticket.text{{/i18n}}</p>
-</div>
 
-<div class="container">
-    <div class="row">
-        <form action="/admin/ticket/import/staff" method="post" class="col text-center"
+    <div class="mxt-btn-container">
+        <form action="/admin/ticket/import/staff" method="post"
               onsubmit="return confirm('Are you sure to import staff members ?');">
-            <input type="submit" class="btn btn-primary mxt-btn-primary" value="Import staff"/>
+            <button class="mxt-btn-primary me-3">Import staff</button>
         </form>
-        <form action="/admin/ticket/import/volunteers" method="post" class="col text-center"
+        <form action="/admin/ticket/import/volunteers" method="post"
               onsubmit="return confirm('Are you sure to import volunteer members ?');">
-            <input type="submit" class="btn btn-primary mxt-btn-primary" value="Import volunteers"/>
+            <button class="mxt-btn-primary me-3">Import volunteers</button>
         </form>
-        <form action="/admin/ticket/import/speakers" method="post" class="col text-center"
+        <form action="/admin/ticket/import/speakers" method="post"
               onsubmit="return confirm('Are you sure to import speakers ?');">
-            <input type="submit" class="btn btn-primary mxt-btn-primary" value="Import speakers"/>
+            <button class="mxt-btn-primary me-3">Import speakers</button>
         </form>
-        <form action="/admin/ticket/import/sponsors" method="post" class="col text-center"
+        <form action="/admin/ticket/import/sponsors" method="post"
               onsubmit="return confirm('Are you sure to import sponsors ?');">
-            <input type="submit" class="btn btn-primary mxt-btn-primary" value="Import sponsors"/>
+            <button class="mxt-btn-primary me-3">Import sponsors</button>
         </form>
     </div>
     <div class="row text-center pt-2 pb-2">
@@ -39,11 +37,12 @@
 </div>
 
 <div class="container-xxl">
-    <p>{{#i18n}}admin.ticket.count{{/i18n}} : <b>{{tickets.size}}</b>
-        | <a href="/admin/ticket/create">{{#i18n}}common.actions.create{{/i18n}}</a>
-
-        <span style="float:right"><a href="/admin/ticket/print">Print</a></span>
-    </p>
+    <div class="mxt-btn-container pb-3">
+        {{#i18n}}admin.ticket.count{{/i18n}} : <b>{{tickets.size}}</b>
+        <div class="flex-fill"></div>
+        <a  class="mxt-btn-light" href="/admin/ticket/create">{{#i18n}}common.actions.create{{/i18n}}</a>
+        <a  class="mxt-btn-light ms-3" href="/admin/ticket/print">Print</a>
+    </div>
     <table class="table-striped table table-bordered">
         <thead>
         <tr>
@@ -52,7 +51,7 @@
             <th>{{#i18n}}admin.ticket.lastname{{/i18n}}</th>
             <th>{{#i18n}}admin.ticket.type{{/i18n}}</th>
             <th>{{#i18n}}admin.ticket.email{{/i18n}}</th>
-            <th>&nbsp;</th>
+            <th style="width: 8em">&nbsp;</th>
         </tr>
         </thead>
         <tbody>
@@ -63,8 +62,11 @@
                 <td>{{lastname}}</td>
                 <td>{{type}}</td>
                 <td><a href="mailto:{{email}}">{{email}}</a></td>
-                <td>
-                    <a href="/admin/ticket/edit/{{number}}">{{#i18n}}common.actions.update{{/i18n}}</a> <br/>
+                <td class="mxt-btn-container">
+                    <a href="/admin/ticket/edit/{{number}}" class="mxt-btn-light">
+                        <img src="/images/svg/mxt-search-dark.svg" class="mxt-icon--cat__talks"
+                             title="{{#i18n}}common.actions.update{{/i18n}}"/>
+                    </a>
                 </td>
             </tr>
         {{/tickets}}

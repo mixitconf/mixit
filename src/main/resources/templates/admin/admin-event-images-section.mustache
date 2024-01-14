@@ -9,7 +9,7 @@
     {{^creationMode}}<form action="/admin/events/images/{{eventId}}/sections/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.event.organizations.delete.confirm{{/i18n}}');">
         <input type="hidden" name="eventId" value="{{eventId}}"/>
         <input type="hidden" name="sectionId" value="{{section.sectionId}}"/>
-        <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}common.actions.delete{{/i18n}}"/>
+        <button type="submit" class="btn btn-primary mxt-btn-primary">{{#i18n}}common.actions.delete{{/i18n}}</button>
     </form>{{/creationMode}}
     <form
             {{#creationMode}}action="/admin/events/images/{{eventId}}/sections/create"{{/creationMode}}
@@ -30,8 +30,8 @@
             <label class="form-label">{{#i18n}}admin.event.images.sections.table.i18n{{/i18n}}</label>
             <input class="form-control" type="text" name="i18n" required value="{{#section.i18n}}{{section.i18n}}{{/section.i18n}}"/>
         </div>
-        <div class="col-12 mb-3 text-center">
-            <input type="submit" class="btn btn-outline-primary expand" value="{{#i18n}}common.actions.save{{/i18n}}"/>
+        <div class="col-12 mb-3 mxt-btn-container">
+            <button type="submit" class="mxt-btn-primary">{{#i18n}}common.actions.save{{/i18n}}</button>
         </div>
     </form>
 
@@ -40,8 +40,11 @@
         <h3>{{#i18n}}admin.event.images.sections.images.text{{/i18n}}&nbsp;</h3>
 
         <div class="callout">
-            <p>{{#i18n}}admin.event.images.sections.images.count{{/i18n}} : <b>{{section.images.size}}</b> |
-                <a href="/admin/events/images/{{eventId}}/sections/{{section.sectionId}}/images/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
+            <div class="mxt-btn-container pb-3">
+                {{#i18n}}admin.event.images.sections.images.count{{/i18n}} : <b>{{section.images.size}}</b>
+                <div class="flex-fill"></div>
+                <a  class="mxt-btn-light" href="/admin/events/images/{{eventId}}/sections/{{section.sectionId}}/images/create">{{#i18n}}common.actions.create{{/i18n}}</a>
+            </div>
 
             <table class="table table-bordered table-striped">
                 <thead>
@@ -49,7 +52,7 @@
                     <th>{{#i18n}}admin.event.images.sections.images.table.name{{/i18n}}</th>
                     <th>{{#i18n}}admin.event.images.sections.images.table.talk{{/i18n}}</th>
                     <th>{{#i18n}}admin.event.images.sections.images.table.template{{/i18n}}</th>
-                    <th>{{#i18n}}common.actions{{/i18n}}</th>
+                    <th style="width: 8em">{{#i18n}}common.actions{{/i18n}}</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -62,8 +65,12 @@
                         </td>
                         <td>{{#talkId}}{{talkId}}{{/talkId}}</td>
                         <td>{{#mustacheTemplate}}{{mustacheTemplate}}{{/mustacheTemplate}}</td>
-                        <td>
-                            <a href="/admin/events/images/{{eventId}}/sections/{{section.sectionId}}/images/edit?url={{name}}">Update</a>
+                        <td class="mxt-btn-container">
+                            <a href="/admin/events/images/{{eventId}}/sections/{{section.sectionId}}/images/edit?url={{name}}"
+                            class="mxt-btn-light">
+                                <img src="/images/svg/mxt-search-dark.svg" class="mxt-icon--cat__talks"
+                                     title="{{#i18n}}common.actions.update{{/i18n}}"/>
+                            </a>
                         </td>
                     </tr>
                 {{/section.images}}

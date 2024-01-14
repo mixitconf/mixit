@@ -5,8 +5,9 @@ import mixit.blog.model.BlogService
 import mixit.event.model.EventImagesService
 import mixit.event.model.EventService
 import mixit.faq.model.QuestionSectionService
-import mixit.routes.MustacheI18n
-import mixit.routes.MustacheTemplate.AdminCache
+import mixit.feedback.model.UserFeedbackService
+import mixit.util.mustache.MustacheI18n
+import mixit.util.mustache.MustacheTemplate.AdminCache
 import mixit.talk.model.TalkService
 import mixit.ticket.model.TicketService
 import mixit.user.model.UserService
@@ -42,7 +43,8 @@ class CacheHandler(
     private val ticketService: TicketService,
     private val eventImagesService: EventImagesService,
     private val faqService: QuestionSectionService,
-    private val featureStateService: QuestionSectionService
+    private val featureStateService: QuestionSectionService,
+    private val feedbackService: UserFeedbackService
 ) {
 
     suspend fun view(req: ServerRequest): ServerResponse {
@@ -56,7 +58,8 @@ class CacheHandler(
                 CacheZone.TICKET.name.lowercase() to CacheZoneStat.init(ticketService),
                 CacheZone.EVENT_IMAGES.name.lowercase() to CacheZoneStat.init(eventImagesService),
                 CacheZone.FAQ.name.lowercase() to CacheZoneStat.init(faqService),
-                CacheZone.FEATURE.name.lowercase() to CacheZoneStat.init(faqService)
+                CacheZone.FEATURE.name.lowercase() to CacheZoneStat.init(featureStateService),
+                CacheZone.FEEDBACK.name.lowercase() to CacheZoneStat.init(feedbackService)
             )
         )
 
@@ -76,6 +79,7 @@ class CacheHandler(
                     CacheZone.EVENT_IMAGES -> eventImagesService.invalidateCache()
                     CacheZone.FAQ -> faqService.invalidateCache()
                     CacheZone.FEATURE -> featureStateService.invalidateCache()
+                    CacheZone.FEEDBACK -> feedbackService.invalidateCache()
                 }
                 view(req)
             }

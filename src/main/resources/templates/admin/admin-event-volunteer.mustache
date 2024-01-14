@@ -9,7 +9,7 @@
     {{^creationMode}}<form action="/admin/events/{{eventId}}/volunteers/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.event.organizations.delete.confirm{{/i18n}}');">
         <input type="hidden" name="eventId" value="{{eventId}}"/>
         <input type="hidden" name="volunteerLogin" value="{{eventVolunteer.volunteerLogin}}"/>
-        <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}common.actions.delete{{/i18n}}"/>
+        <button type="submit" class="btn btn-primary mxt-btn-primary">{{#i18n}}common.actions.delete{{/i18n}}</button>
     </form>{{/creationMode}}
     <form
             {{#creationMode}}action="/admin/events/{{eventId}}/volunteers/create"{{/creationMode}}
@@ -27,8 +27,8 @@
                 <input type="hidden" name="volunteerLogin" value="{{eventVolunteer.volunteerLogin}}"/>
             {{/creationMode}}
         </div>
-        <div class="col-12 mb-3 text-center">
-            <input type="submit" class="btn btn-outline-primary expand" value="{{#i18n}}common.actions.save{{/i18n}}"/>
+        <div class="col-12 mb-3 mxt-btn-container">
+            <button type="submit" class="mxt-btn-primary">{{#i18n}}common.actions.save{{/i18n}}</button>
         </div>
     </form>
 </div>

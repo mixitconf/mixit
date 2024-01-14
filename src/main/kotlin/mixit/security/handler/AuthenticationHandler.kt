@@ -1,13 +1,13 @@
 package mixit.security.handler
 
 import mixit.MixitProperties
-import mixit.routes.MustacheI18n.DESCRIPTION
-import mixit.routes.MustacheI18n.EMAIL
-import mixit.routes.MustacheI18n.TOKEN
-import mixit.routes.MustacheTemplate
-import mixit.routes.MustacheTemplate.Login
-import mixit.routes.MustacheTemplate.LoginConfirmation
-import mixit.routes.MustacheTemplate.LoginCreation
+import mixit.util.mustache.MustacheI18n.DESCRIPTION
+import mixit.util.mustache.MustacheI18n.EMAIL
+import mixit.util.mustache.MustacheI18n.TOKEN
+import mixit.util.mustache.MustacheTemplate
+import mixit.util.mustache.MustacheTemplate.Login
+import mixit.util.mustache.MustacheTemplate.LoginConfirmation
+import mixit.util.mustache.MustacheTemplate.LoginCreation
 import mixit.security.MixitWebFilter.Companion.SESSION_EMAIL_KEY
 import mixit.security.MixitWebFilter.Companion.SESSION_LOGIN_KEY
 import mixit.security.MixitWebFilter.Companion.SESSION_ROLE_KEY

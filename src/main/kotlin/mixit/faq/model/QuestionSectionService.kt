@@ -10,7 +10,7 @@ class QuestionSectionService(
     private val repository: QuestionSectionRepository
 ) : CacheCaffeineTemplate<CachedQuestionSection>() {
 
-    override val cacheZone: CacheZone = CacheZone.FAQ
+    override val cacheZone: CacheZone = CacheZone.FEATURE
     override fun loader(): suspend () -> List<CachedQuestionSection> =
         { repository.findAll().map { event -> loadQuestionSections(event) } }
 

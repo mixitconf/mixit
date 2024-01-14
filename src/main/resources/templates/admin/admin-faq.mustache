@@ -5,14 +5,17 @@
     <h1 class="pt-3 pb-3">{{#i18n}}admin.faq.title{{/i18n}}</h1>
     <p>{{#i18n}}admin.faq.description{{/i18n}}</p>
 
-    <p>{{#i18n}}admin.faq.count{{/i18n}} : <b>{{sections.size}}</b> |
-        <a href="/admin/faq/sections/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
+    <div class="mxt-btn-container pb-3">
+        {{#i18n}}admin.faq.count{{/i18n}} : <b>{{sections.size}}</b>
+        <div class="flex-fill"></div>
+        <a  class="mxt-btn-light" href="/admin/faq/sections/create">{{#i18n}}common.actions.create{{/i18n}}</a>
+    </div>
     <table class="table table-bordered table-striped">
         <thead>
         <tr>
             <th>{{#i18n}}admin.faq.table.title{{/i18n}}</th>
             <th>{{#i18n}}admin.faq.table.order{{/i18n}}</th>
-            <th>{{#i18n}}common.actions{{/i18n}}</th>
+            <th style="width: 8em">{{#i18n}}common.actions{{/i18n}}</th>
         </tr>
         </thead>
         <tbody>
@@ -24,7 +27,12 @@
                 </td>
                 <td>{{order}}</td>
                 <td>
-                    <a href="/admin/faq/sections/{{id}}">{{#i18n}}common.actions.update{{/i18n}}</a>
+                    <div class="mxt-btn-container">
+                    <a href="/admin/faq/sections/{{id}}" class="mxt-btn-light">
+                        <img src="/images/svg/mxt-search-dark.svg" class="mxt-icon--cat__talks"
+                             title="{{#i18n}}common.actions.update{{/i18n}}"/></a>
+
+                    </div>
                 </td>
             </tr>
         {{/sections}}

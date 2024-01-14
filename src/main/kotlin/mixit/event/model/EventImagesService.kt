@@ -16,4 +16,7 @@ class EventImagesService(
 
     fun save(event: EventImages) =
         repository.save(event).doOnSuccess { cache.invalidateAll() }
+
+    fun delete(event: String) =
+        repository.delete(event).doOnSuccess { cache.invalidateAll() }
 }

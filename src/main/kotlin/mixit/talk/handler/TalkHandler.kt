@@ -8,22 +8,24 @@ import mixit.event.model.EventImageDto
 import mixit.event.model.EventImagesService
 import mixit.event.model.EventService
 import mixit.favorite.repository.FavoriteRepository
-import mixit.routes.MustacheI18n
-import mixit.routes.MustacheI18n.EVENT
-import mixit.routes.MustacheI18n.IMAGES
-import mixit.routes.MustacheI18n.SPONSORS
-import mixit.routes.MustacheI18n.TALKS
-import mixit.routes.MustacheI18n.TITLE
-import mixit.routes.MustacheI18n.YEAR
-import mixit.routes.MustacheI18n.YEAR_SELECTOR
-import mixit.routes.MustacheTemplate
-import mixit.routes.MustacheTemplate.FeedbackWall
-import mixit.routes.MustacheTemplate.Media
-import mixit.routes.MustacheTemplate.MediaImages
-import mixit.routes.MustacheTemplate.Schedule
-import mixit.routes.MustacheTemplate.TalkDetail
-import mixit.routes.MustacheTemplate.TalkEdit
-import mixit.routes.MustacheTemplate.TalkList
+import mixit.feedback.model.Feedback
+import mixit.feedback.model.FeedbackService
+import mixit.util.mustache.MustacheI18n
+import mixit.util.mustache.MustacheI18n.EVENT
+import mixit.util.mustache.MustacheI18n.IMAGES
+import mixit.util.mustache.MustacheI18n.SPONSORS
+import mixit.util.mustache.MustacheI18n.TALKS
+import mixit.util.mustache.MustacheI18n.TITLE
+import mixit.util.mustache.MustacheI18n.YEAR
+import mixit.util.mustache.MustacheI18n.YEAR_SELECTOR
+import mixit.util.mustache.MustacheTemplate
+import mixit.util.mustache.MustacheTemplate.FeedbackWall
+import mixit.util.mustache.MustacheTemplate.Media
+import mixit.util.mustache.MustacheTemplate.MediaImages
+import mixit.util.mustache.MustacheTemplate.Schedule
+import mixit.util.mustache.MustacheTemplate.TalkDetail
+import mixit.util.mustache.MustacheTemplate.TalkEdit
+import mixit.util.mustache.MustacheTemplate.TalkList
 import mixit.talk.handler.TalkHandler.TalkListType.Agenda
 import mixit.talk.handler.TalkHandler.TalkListType.ListByDate
 import mixit.talk.handler.TalkHandler.TalkListType.SimpleList
@@ -42,6 +44,7 @@ import mixit.util.extractFormData
 import mixit.util.formatTalkDate
 import mixit.util.formatTalkTime
 import mixit.util.language
+import mixit.util.mustache.MustacheI18n.FEEDBACK_TYPES
 import mixit.util.permanentRedirect
 import mixit.util.seeOther
 import mixit.util.toVimeoPlayerUrl
@@ -67,7 +70,8 @@ class TalkHandler(
     private val properties: MixitProperties,
     private val favoriteRepository: FavoriteRepository,
     private val maxLengthValidator: MaxLengthValidator,
-    private val markdownValidator: MarkdownValidator
+    private val markdownValidator: MarkdownValidator,
+    private val feedbackService: FeedbackService
 ) {
 
     companion object {
@@ -448,7 +452,7 @@ class TalkHandler(
                     "vimeoPlayer" to talk.video.toVimeoPlayerUrl(),
                     "twitchPlayer" to (talk.video?.contains("twitch") ?: false),
                     "vimeoPlayer2" to talk.video2.toVimeoPlayerUrl(),
-                    "twitchPlayer2" to (talk.video2?.contains("twitch") ?: false)
+                    FEEDBACK_TYPES to feedbackService.computeTalkFeedback(talk, currentUserEmail)
                 )
             )
             .awaitSingle()

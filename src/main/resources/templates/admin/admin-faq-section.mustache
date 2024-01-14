@@ -9,7 +9,7 @@
         <form action="/admin/faq/sections/{{section.id}}/delete" method="post"
                            onsubmit="return confirm('{{#i18n}}admin.faq.delete.section.confirm{{/i18n}}');">
             <input type="hidden" name="sectionId" value="{{section.id}}"/>
-            <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}common.actions.delete{{/i18n}}"/>
+            <button class="btn btn-primary mxt-btn-primary">{{#i18n}}common.actions.delete{{/i18n}}</button>
         </form>
         </div>
     {{/section.id}}
@@ -30,19 +30,22 @@
             <input type="number" class="form-control" name="order" required
                    value="{{#section.order}}{{section.order}}{{/section.order}}"/>
         </div>
-        <div class="mb-3 text-center">
-            <input type="submit" class="btn btn-outline-primary expand" value="{{#i18n}}common.actions.save{{/i18n}}"/>
+        <div class="mb-3 mxt-btn-container">
+            <button type="submit" class="mxt-btn-primary">{{#i18n}}common.actions.save{{/i18n}}</button>
         </div>
     </form>
     {{#section}}
-        <p>{{#i18n}}admin.faq.count{{/i18n}} : <b>{{section.questions.size}}</b> |
-            <a href="/admin/faq/sections/{{section.id}}/questions/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
+        <div class="mxt-btn-container pb-3">
+            {{#i18n}}admin.faq.count{{/i18n}} : <b>{{section.questions.size}}</b>
+            <div class="flex-fill"></div>
+            <a  class="mxt-btn-light" href="/admin/faq/sections/{{section.id}}/questions/create">{{#i18n}}common.actions.create{{/i18n}}</a>
+        </div>
         <table class="table table-bordered table-striped">
             <thead>
             <tr>
                 <th>{{#i18n}}admin.faq.table.title{{/i18n}}</th>
                 <th>{{#i18n}}admin.faq.table.order{{/i18n}}</th>
-                <th>{{#i18n}}common.actions{{/i18n}}</th>
+                <th style="width: 8em">{{#i18n}}common.actions{{/i18n}}</th>
             </tr>
             </thead>
             <tbody>
@@ -54,7 +57,12 @@
                 </td>
                 <td>{{order}}</td>
                 <td>
-                    <a href="/admin/faq/sections/{{section.id}}/questions/{{id}}">{{#i18n}}common.actions.update{{/i18n}}</a>
+                    <div class="mxt-btn-container">
+                        <a href="/admin/faq/sections/{{section.id}}/questions/{{id}}" class="mxt-btn-light">
+                            <img src="/images/svg/mxt-search-dark.svg" class="mxt-icon--cat__talks"
+                                 title="{{#i18n}}common.actions.update{{/i18n}}"/></a>
+
+                    </div>
                 </td>
             </tr>
             {{/section.questions}}

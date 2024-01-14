@@ -6,20 +6,27 @@
 </div>
 
 <div class="container-xxl">
-    <p>{{#i18n}}admin.events.images.count{{/i18n}} : <b>{{events.size}}</b> | <a href="/admin/events/images/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
+    <div class="mxt-btn-container pb-3">
+        {{#i18n}}admin.events.images.count{{/i18n}} : <b>{{events.size}}</b>
+        <div class="flex-fill"></div>
+        <a  class="mxt-btn-light" href="/admin/events/images/create">{{#i18n}}common.actions.create{{/i18n}}</a>
+    </div>
     <table class="table table-striped table-bordered">
       <thead>
         <tr>
             <th>{{#i18n}}admin.events.table.id{{/i18n}}</th>
-            <th>{{#i18n}}common.actions{{/i18n}}</th>
+            <th style="width: 8em">{{#i18n}}common.actions{{/i18n}}</th>
         </tr>
       </thead>
       <tbody>
         {{#events}}
         <tr>
             <td>{{id}}</td>
-            <td>
-                <a href="/admin/events/images/edit/{{id}}">{{#i18n}}common.actions.update{{/i18n}}</a>
+            <td class="mxt-btn-container">
+                <a href="/admin/events/images/edit/{{id}}" class="mxt-btn-light">
+                    <img src="/images/svg/mxt-search-dark.svg" class="mxt-icon--cat__talks"
+                         title="{{#i18n}}common.actions.update{{/i18n}}"/>
+                </a>
             </td>
         </tr>
         {{/events}}

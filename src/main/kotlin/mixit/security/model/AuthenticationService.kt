@@ -2,7 +2,7 @@ package mixit.security.model
 
 import kotlinx.coroutines.reactor.awaitSingle
 import mixit.MixitProperties
-import mixit.routes.MustacheTemplate
+import mixit.util.mustache.MustacheTemplate
 import mixit.security.MixitWebFilter.Companion.AUTHENT_COOKIE
 import mixit.ticket.repository.LotteryRepository
 import mixit.user.model.Role

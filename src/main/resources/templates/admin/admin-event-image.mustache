@@ -6,52 +6,62 @@
 </div>
 
 <div class="container-xxl">
-    <form action="/admin/events/images" method="post" class="row">
-        <div class="col-12 mb-3">
-            <label class="form-label">{{#i18n}}admin.event.images.form.id{{/i18n}}</label>
-            {{#creationMode}}
+    <div class="col-12 mb-3">
+        {{#creationMode}}
+            <form action="/admin/events/images" method="post" class="row">
+                <label class="form-label">{{#i18n}}admin.event.images.form.id{{/i18n}}</label>
                 <input class="form-control" type="text" name="event" required/>
-            {{/creationMode}}
-            {{^creationMode}}
-                <input class="form-control" type="text" value="{{event.event}}" disabled="true"/>
-                <input type="hidden" name="event" value="{{event.event}}"/>
-            {{/creationMode}}
-        </div>
-        <div class="col-12 mb-3 text-center">
-            <input type="submit" class="btn btn-outline-primary expand" value="{{#i18n}}common.actions.save{{/i18n}}"/>
-        </div>
 
-        {{^creationMode}}
-
-            <h3>{{#i18n}}admin.event.images.sections.text{{/i18n}}&nbsp;</h3>
-
-            <div class="callout">
-                <p>{{#i18n}}admin.event.images.sections.count{{/i18n}} : <b>{{event.sections.size}}</b> |
-                    <a href="/admin/events/images/{{event.event}}/sections/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
-
-                <table class="table table-bordered table-striped">
-                    <thead>
-                    <tr>
-                        <th>{{#i18n}}admin.event.images.sections.table.name{{/i18n}}</th>
-                        <th>{{#i18n}}admin.event.images.sections.table.i18n{{/i18n}}</th>
-                        <th>{{#i18n}}common.actions{{/i18n}}</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    {{#event.sections}}
-                        <tr>
-                            <td>{{sectionId}}</td>
-                            <td>{{i18n}}</td>
-                            <td>
-                                <a href="/admin/events/images/{{event.event}}/sections/edit/{{sectionId}}">Update</a>
-                            </td>
-                        </tr>
-                    {{/event.sections}}
-                    </tbody>
-                </table>
-            </div>
+                <div class="col-12 mt-3 mxt-btn-container">
+                    <button type="submit" class="mxt-btn-primary">{{#i18n}}common.actions.save{{/i18n}}</button>
+                </div>
+            </form>
         {{/creationMode}}
-    </form>
+        {{^creationMode}}
+            <form action="/admin/events/images/delete" method="post" onsubmit="return confirm('{{#i18n}}admin.event.organizations.delete.confirm{{/i18n}}');">
+                <input type="hidden" name="event" value="{{event.event}}"/>
+                <button type="submit" class="mxt-btn-primary">{{#i18n}}common.actions.delete{{/i18n}}</button>
+            </form>
+        {{/creationMode}}
+    </div>
+
+
+    {{^creationMode}}
+
+        <h3>{{#i18n}}admin.event.images.sections.text{{/i18n}}&nbsp;</h3>
+
+        <div class="callout">
+            <div class="mxt-btn-container pb-3">
+                {{#i18n}}admin.event.images.sections.count{{/i18n}} : <b>{{event.sections.size}}</b>
+                <div class="flex-fill"></div>
+                <a  class="mxt-btn-light" href="/admin/events/images/{{event.event}}/sections/create">{{#i18n}}common.actions.create{{/i18n}}</a>
+            </div>
+
+            <table class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>{{#i18n}}admin.event.images.sections.table.name{{/i18n}}</th>
+                    <th>{{#i18n}}admin.event.images.sections.table.i18n{{/i18n}}</th>
+                    <th style="width: 8em">{{#i18n}}common.actions{{/i18n}}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#event.sections}}
+                    <tr>
+                        <td>{{sectionId}}</td>
+                        <td>{{i18n}}</td>
+                        <td class="mxt-btn-container">
+                            <a href="/admin/events/images/{{event.event}}/sections/edit/{{sectionId}}" class="mxt-btn-light">
+                                <img src="/images/svg/mxt-search-dark.svg" class="mxt-icon--cat__talks"
+                                     title="{{#i18n}}common.actions.update{{/i18n}}"/>
+                            </a>
+                        </td>
+                    </tr>
+                {{/event.sections}}
+                </tbody>
+            </table>
+        </div>
+    {{/creationMode}}
 </div>
 
 {{> footer}}

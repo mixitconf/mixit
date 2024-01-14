@@ -9,13 +9,12 @@ import mixit.blog.handler.WebBlogHandler
 import mixit.event.handler.AdminEventHandler
 import mixit.event.handler.AdminEventImagesHandler
 import mixit.faq.handler.AdminQuestionHandler
-import mixit.faq.model.QuestionSectionService
 import mixit.features.handler.FeatureStateHandler
 import mixit.mailing.handler.MailingHandler
 import mixit.mailing.handler.MailingListHandler
 import mixit.mixette.handler.AdminMixetteHandler
 import mixit.mixette.handler.MixetteHandler
-import mixit.routes.MustacheTemplate.Home
+import mixit.util.mustache.MustacheTemplate.Home
 import mixit.security.handler.AuthenticationHandler
 import mixit.talk.handler.AdminTalkHandler
 import mixit.talk.handler.TalkHandler
@@ -214,6 +213,7 @@ class WebsiteRoutes(
             POST("/admin/cache/{zone}/invalidate", cacheHandler::invalidate)
             POST("/admin/events", adminEventHandler::adminSaveEvent)
             POST("/admin/events/images", adminEventImagesHandler::adminSaveEventImages)
+            POST("/admin/events/images/delete", adminEventImagesHandler::adminDeleteEventImages)
             POST("/admin/events/images/{eventId}/sections/create", adminEventImagesHandler::adminCreateEventImagesSection)
             POST("/admin/events/images/{eventId}/sections/delete", adminEventImagesHandler::adminDeleteEventImagesSection)
             POST("/admin/events/images/{eventId}/sections/{sectionId}/images", adminEventImagesHandler::adminUpdateEventImagesSectionImage)

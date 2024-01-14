@@ -44,19 +44,19 @@
             <textarea class="form-control" name="content" rows="20"
                       required>{{#mailing.content}}{{mailing.content}}{{/mailing.content}}</textarea>
         </div>
-        <div class="text-center">
+        <div class="mxt-btn-container">
             <button type="submit"
                     onclick="document.getElementById('editForm').action='/admin/mailings'"
-                    class="btn btn-outline-primary">{{#i18n}}common.actions.save{{/i18n}}</button>
+                    class="mxt-btn-primary">{{#i18n}}common.actions.save{{/i18n}}</button>
 
             <button type="submit"
                     onclick="document.getElementById('editForm').action='/admin/mailings/send'"
-                    class="btn btn-outline-primary">{{#i18n}}mailing.send{{/i18n}}</button>
+                    class="mxt-btn-primary">{{#i18n}}mailing.send{{/i18n}}</button>
 
             <button type="submit"
                     onclick="document.getElementById('editForm').action='/admin/mailings/preview'"
                     target="_blank"
-                    class="btn btn-outline-primary">{{#i18n}}mailing.preview{{/i18n}}</button>
+                    class="mxt-btn-primary">{{#i18n}}mailing.preview{{/i18n}}</button>
         </div>
     </form>
 </div>

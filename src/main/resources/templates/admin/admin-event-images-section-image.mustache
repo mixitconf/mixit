@@ -10,7 +10,7 @@
         <input type="hidden" name="eventId" value="{{eventId}}"/>
         <input type="hidden" name="sectionId" value="{{sectionId}}"/>
         <input type="hidden" name="name" value="{{image.name}}"/>
-        <input type="submit" class="btn btn-primary mxt-btn-primary" value="{{#i18n}}common.actions.delete{{/i18n}}"/>
+        <button type="submit" class="mxt-btn-primary">{{#i18n}}common.actions.delete{{/i18n}}</button>
     </form>
     {{/creationMode}}
     <form
@@ -52,8 +52,8 @@
             </select>
             <small>{{#i18n}}admin.event.images.sections.images.table.talk.text{{/i18n}}</small>
         </div>
-        <div class="col-12 mb-3 text-center">
-            <input type="submit" class="btn btn-outline-primary expand" value="{{#i18n}}common.actions.save{{/i18n}}"/>
+        <div class="col-12 mb-3 mxt-btn-container">
+            <button type="submit" class="mxt-btn-primary">{{#i18n}}common.actions.save{{/i18n}}</button>
         </div>
     </form>
 </div>

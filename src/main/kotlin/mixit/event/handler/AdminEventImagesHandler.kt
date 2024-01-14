@@ -6,15 +6,15 @@ import mixit.event.model.EventImage
 import mixit.event.model.EventImages
 import mixit.event.model.EventImagesSection
 import mixit.event.model.EventImagesService
-import mixit.routes.MustacheI18n
-import mixit.routes.MustacheI18n.CREATION_MODE
-import mixit.routes.MustacheI18n.EVENT
-import mixit.routes.MustacheI18n.EVENTS
-import mixit.routes.MustacheI18n.TITLE
-import mixit.routes.MustacheTemplate
-import mixit.routes.MustacheTemplate.AdminEvent
-import mixit.routes.MustacheTemplate.AdminEventImage
-import mixit.routes.MustacheTemplate.AdminEventImages
+import mixit.util.mustache.MustacheI18n
+import mixit.util.mustache.MustacheI18n.CREATION_MODE
+import mixit.util.mustache.MustacheI18n.EVENT
+import mixit.util.mustache.MustacheI18n.EVENTS
+import mixit.util.mustache.MustacheI18n.TITLE
+import mixit.util.mustache.MustacheTemplate
+import mixit.util.mustache.MustacheTemplate.AdminEvent
+import mixit.util.mustache.MustacheTemplate.AdminEventImage
+import mixit.util.mustache.MustacheTemplate.AdminEventImages
 import mixit.talk.model.TalkService
 import mixit.util.enumMatcher
 import mixit.util.errors.NotFoundException
@@ -73,13 +73,19 @@ class AdminEventImagesHandler(
             ?.let { this.adminEditEventImages(it.toEventImages()) }
             ?: throw NotFoundException()
 
+    suspend fun adminDeleteEventImages(req: ServerRequest): ServerResponse {
+        val formData = req.extractFormData()
+        service.delete(formData["event"] ?: throw NotFoundException()).awaitSingleOrNull()
+        return seeOther("${properties.baseUri}${LIST_URI}")
+    }
+
     suspend fun adminSaveEventImages(req: ServerRequest): ServerResponse {
         val formData = req.extractFormData()
         // We need to find the event in database
         val existingEvent = service.findOneOrNull(formData["event"] ?: throw NotFoundException())?.toEventImages()
         val updatedEvent = existingEvent ?: EventImages(formData["event"]!!, emptyList())
         service.save(updatedEvent).awaitSingleOrNull()
-        return seeOther("${properties.baseUri}${AdminEventHandler.LIST_URI}")
+        return seeOther("${properties.baseUri}${LIST_URI}")
     }
 
     suspend fun editEventImagesSection(req: ServerRequest): ServerResponse {

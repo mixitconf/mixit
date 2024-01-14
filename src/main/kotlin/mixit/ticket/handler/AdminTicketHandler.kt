@@ -11,16 +11,16 @@ import mixit.event.model.SponsorshipLevel.PARTY
 import mixit.event.model.SponsorshipLevel.SILVER
 import mixit.features.model.Feature
 import mixit.features.model.FeatureStateService
-import mixit.routes.MustacheI18n.CREATION_MODE
-import mixit.routes.MustacheI18n.MESSAGE
-import mixit.routes.MustacheI18n.TICKET
-import mixit.routes.MustacheI18n.TICKETS
-import mixit.routes.MustacheI18n.TITLE
-import mixit.routes.MustacheI18n.TYPES
-import mixit.routes.MustacheTemplate.AdminTicket
-import mixit.routes.MustacheTemplate.AdminTicketEdit
-import mixit.routes.MustacheTemplate.AdminTicketPrint
-import mixit.routes.MustacheTemplate.TicketError
+import mixit.util.mustache.MustacheI18n.CREATION_MODE
+import mixit.util.mustache.MustacheI18n.MESSAGE
+import mixit.util.mustache.MustacheI18n.TICKET
+import mixit.util.mustache.MustacheI18n.TICKETS
+import mixit.util.mustache.MustacheI18n.TITLE
+import mixit.util.mustache.MustacheI18n.TYPES
+import mixit.util.mustache.MustacheTemplate.AdminTicket
+import mixit.util.mustache.MustacheTemplate.AdminTicketEdit
+import mixit.util.mustache.MustacheTemplate.AdminTicketPrint
+import mixit.util.mustache.MustacheTemplate.TicketError
 import mixit.security.MixitWebFilter
 import mixit.security.model.Cryptographer
 import mixit.talk.model.TalkService
@@ -78,8 +78,7 @@ class AdminTicketHandler(
             TICKETS to tickets,
             TYPES to TicketType.values().map { it to false }
         )
-        val template = if (featureStateService.findOneByType(Feature.LotteryResult).active) AdminTicket.template else throw NotFoundException()
-        return ok().renderAndAwait(template, params)
+        return ok().renderAndAwait(AdminTicket.template, params)
     }
 
     suspend fun printTicketing(req: ServerRequest): ServerResponse {
@@ -90,13 +89,11 @@ class AdminTicketHandler(
                     lastname = if (ticket.firstname == null) "" else ticket.lastname.uppercase()
                 )
         }
-        val template =
-            if (featureStateService.findOneByType(Feature.LotteryResult).active) AdminTicketPrint.template else throw NotFoundException()
         val params = mapOf(
             TITLE to "admin.ticket.title",
             TICKETS to tickets
         )
-        return ok().renderAndAwait(template, params)
+        return ok().renderAndAwait(AdminTicketPrint.template, params)
     }
 
     suspend fun createTicket(req: ServerRequest): ServerResponse =
@@ -111,15 +108,13 @@ class AdminTicketHandler(
         )
 
     private suspend fun adminTicket(ticket: Ticket = Ticket.empty(cryptographer)): ServerResponse {
-        val template =
-            if (featureStateService.findOneByType(Feature.LotteryResult).active) AdminTicketEdit.template else throw NotFoundException()
         val params = mapOf(
             TITLE to AdminTicketPrint.title,
             CREATION_MODE to ticket.encryptedEmail.isEmpty(),
             TICKET to ticket.decrypt(cryptographer),
             TYPES to enumMatcher(ticket) { ticket.type }
         )
-        return ok().renderAndAwait(template, params)
+        return ok().renderAndAwait(AdminTicketEdit.template, params)
     }
 
     suspend fun submit(req: ServerRequest): ServerResponse {
