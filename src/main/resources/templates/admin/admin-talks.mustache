@@ -6,14 +6,18 @@
 </div>
 
 <div class="container-xxl pt-5">
-    <p>{{#i18n}}admin.talks.count{{/i18n}} : <b>{{talks.size}}</b> | <a href="/admin/talks/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
+    <div class="mxt-btn-container pb-3">
+        {{#i18n}}admin.talks.count{{/i18n}} : <b>{{talks.size}}</b>
+        <div class="flex-fill"></div>
+        <a  class="mxt-btn-light" href="/admin/talks/create">{{#i18n}}common.actions.create{{/i18n}}</a>
+    </div>
     <table class="table table-bordered table-striped">
       <thead>
         <tr>
             <th>{{#i18n}}admin.talks.table.format{{/i18n}}</th>
             <th>{{#i18n}}admin.talks.table.title{{/i18n}}</th>
             <th>{{#i18n}}admin.talks.table.speakers{{/i18n}}</th>
-            <th>{{#i18n}}common.actions{{/i18n}}</th>
+            <th style="width: 8em">{{#i18n}}common.actions{{/i18n}}</th>
         </tr>
       </thead>
       <tbody>
@@ -22,9 +26,11 @@
             <td>{{format}}</td>
             <td>{{title}}</td>
             <td>{{#speakers}}{{firstname}} {{lastname}} {{/speakers}}</td>
-            <td>
-                <a href="/admin/talks/edit/{{id}}">{{#i18n}}common.actions.update{{/i18n}}</a> <br />
-                <a href="/{{event}}/{{slug}}" target="_blank">{{#i18n}}common.actions.view{{/i18n}}</a>
+            <td class="mxt-btn-container">
+                <a href="/admin/talks/edit/{{id}}" class="mxt-btn-light">
+                    <img src="/images/svg/mxt-search-dark.svg" class="mxt-icon--cat__talks"
+                         title="{{#i18n}}common.actions.update{{/i18n}}"/>
+                </a>
             </td>
         </tr>
         {{/talks}}

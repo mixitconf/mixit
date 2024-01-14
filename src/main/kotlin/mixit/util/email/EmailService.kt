@@ -52,7 +52,7 @@ class EmailService(
         val email = cryptographer.decrypt(user.email)!!
 
         runCatching {
-            routeFilterUtils.generateModelForExernalCall(locale).apply {
+            routeFilterUtils.generateModelForExternalCall(locale).apply {
                 putAll(model)
                 put("user", user)
                 put("encodedemail", URLEncoder.encode(email.encodeToBase64(), "UTF-8"))

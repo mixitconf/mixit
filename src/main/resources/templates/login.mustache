@@ -16,21 +16,23 @@
                 <input type="email" class="form-control" name="email" placeholder="contact@mixitconf.org"
                        onchange="document.getElementById('email_token').value = this.value" required/>
 
-                <button class="mt-3 mr-3 btn btn-primary mxt-btn-primary"
-                    {{#isLogin}}onclick="document.forms[0].action='/login';document.forms[0].submit()"{{/isLogin}}
-                    {{^isLogin}}onclick="document.forms[0].action='/newsletter-login';document.forms[0].submit()"{{/isLogin}}
-                >
-                    {{#isLogin}}{{#i18n}}login.action.signin{{/i18n}}{{/isLogin}}
-                    {{^isLogin}}{{#i18n}}newsletter.action.signin{{/i18n}}{{/isLogin}}
-                </button>
-                &nbsp;
-                <button class="mt-3 btn btn-primary mxt-btn-primary"
-                    {{#isLogin}}onclick="document.forms[0].action='/send-token';document.forms[0].submit()"{{/isLogin}}
-                    {{^isLogin}}onclick="document.forms[0].action='/newsletter-send-token';document.forms[0].submit()"{{/isLogin}}
-                >
-                    {{#isLogin}}{{#i18n}}login.action.token{{/i18n}}{{/isLogin}}
-                    {{^isLogin}}{{#i18n}}newsletter.action.token{{/i18n}}{{/isLogin}}
-                </button>
+                <div class="mxt-btn-container">
+                    <button class="mt-3 mr-3 btn btn-primary mxt-btn-primary"
+                        {{#isLogin}}onclick="document.forms[0].action='/login';document.forms[0].submit()"{{/isLogin}}
+                        {{^isLogin}}onclick="document.forms[0].action='/newsletter-login';document.forms[0].submit()"{{/isLogin}}
+                    >
+                        {{#isLogin}}{{#i18n}}login.action.signin{{/i18n}}{{/isLogin}}
+                        {{^isLogin}}{{#i18n}}newsletter.action.signin{{/i18n}}{{/isLogin}}
+                    </button>
+                    &nbsp;
+                    <button class="mt-3 btn btn-primary mxt-btn-light"
+                        {{#isLogin}}onclick="document.forms[0].action='/send-token';document.forms[0].submit()"{{/isLogin}}
+                        {{^isLogin}}onclick="document.forms[0].action='/newsletter-send-token';document.forms[0].submit()"{{/isLogin}}
+                    >
+                        {{#isLogin}}{{#i18n}}login.action.token{{/i18n}}{{/isLogin}}
+                        {{^isLogin}}{{#i18n}}newsletter.action.token{{/i18n}}{{/isLogin}}
+                    </button>
+                </div>
             </form>
         </div>
     </div>

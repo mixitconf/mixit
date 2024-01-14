@@ -3,10 +3,9 @@ package mixit.features.handler
 import kotlinx.coroutines.reactor.awaitSingle
 import mixit.features.model.Feature
 import mixit.features.model.FeatureStateService
-import mixit.routes.MustacheI18n.FEATURES
-import mixit.routes.MustacheI18n.TITLE
-import mixit.routes.MustacheTemplate
-import mixit.util.errors.NotFoundException
+import mixit.util.mustache.MustacheI18n.FEATURES
+import mixit.util.mustache.MustacheI18n.TITLE
+import mixit.util.mustache.MustacheTemplate
 import mixit.util.extractFormData
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest

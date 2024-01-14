@@ -4,12 +4,12 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import kotlinx.coroutines.reactor.awaitSingle
 import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.MixitProperties
-import mixit.routes.MustacheI18n.TITLE
-import mixit.routes.MustacheI18n.USER
-import mixit.routes.MustacheI18n.USERS
-import mixit.routes.MustacheTemplate.AdminUser
-import mixit.routes.MustacheTemplate.AdminUserNewsLetter
-import mixit.routes.MustacheTemplate.AdminUsers
+import mixit.util.mustache.MustacheI18n.TITLE
+import mixit.util.mustache.MustacheI18n.USER
+import mixit.util.mustache.MustacheI18n.USERS
+import mixit.util.mustache.MustacheTemplate.AdminUser
+import mixit.util.mustache.MustacheTemplate.AdminUserNewsLetter
+import mixit.util.mustache.MustacheTemplate.AdminUsers
 import mixit.security.model.Cryptographer
 import mixit.talk.model.Language.ENGLISH
 import mixit.talk.model.Language.FRENCH
@@ -51,7 +51,8 @@ class AdminUserHandler(
         ok().renderAndAwait(
             AdminUsers.template,
             mapOf(
-                USERS to userRepository.findAll().sortedWith(compareBy<User> { it.lastname }.thenBy { it.firstname }),
+                USERS to userRepository.findAll()
+                    .sortedWith(compareBy<User> { it.lastname.lowercase() }.thenBy { it.firstname.lowercase() }),
                 TITLE to AdminUsers.title
             )
         )

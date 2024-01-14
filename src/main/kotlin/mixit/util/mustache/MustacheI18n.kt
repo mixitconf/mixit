@@ -1,4 +1,4 @@
-package mixit.routes
+package mixit.util.mustache
 
 object MustacheI18n {
     const val ARTICLES = "articles"
@@ -16,6 +16,9 @@ object MustacheI18n {
     const val EVENTS = "events"
     const val FAQ = "faq"
     const val FEATURES = "features"
+    const val FEEDBACK = "feedback"
+    const val FEEDBACK_TYPES = "feedbackTypes"
+    const val FEEDBACK_COMMENTS = "feedbackComments"
     const val FORMATS = "formats"
     const val IMAGES = "images"
     const val HAS_ERRORS = "hasErrors"

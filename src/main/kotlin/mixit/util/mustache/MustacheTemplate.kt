@@ -1,4 +1,4 @@
-package mixit.routes
+package mixit.util.mustache
 
 /**
  * Each element has

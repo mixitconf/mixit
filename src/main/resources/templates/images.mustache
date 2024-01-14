@@ -4,13 +4,13 @@
     <h1>
         {{#images}}
             {{#sections}}
-                <b>{{#i18n}}{{i18nLabel}}{{/i18n}}</b>
+                {{#i18n}}{{i18nLabel}}{{/i18n}}
             {{/sections}}
         {{/images}}
     </h1>
     {{^singleImage}}
-        <div class="text-center mb-4">
-            <a href="{{localePrefix}}/{{year}}/medias" class="btn btn-outline-primary">{{#i18n}}images.back{{/i18n}}</a>
+        <div class="mxt-btn-container mb-4">
+            <a href="{{localePrefix}}/{{year}}/medias" class="mxt-btn-light">{{#i18n}}images.back{{/i18n}}</a>
         </div>
     {{/singleImage}}
     <div class="mxt-image--player-container">
@@ -18,16 +18,16 @@
             {{#pictures}}
                 {{#singleImage}}
                     <div>
-                        <div class="text-center mb-4">
+                        <div class="mxt-btn-container mb-4">
                             {{#previousImage}}
                                 <a href="{{localePrefix}}/{{year}}/medias/images/{{sectionId}}?url={{previousImage}}"
-                                class="btn btn-outline-primary">&lt;</a>
+                                class="mxt-btn-light">&lt;</a>
                             {{/previousImage}}
                             <a href="{{localePrefix}}/{{year}}/medias/images/{{sectionId}}"
-                               class="btn btn-outline-primary">{{#i18n}}images.back{{/i18n}}</a>
+                               class="mxt-btn-light me-2 ms-2">{{#i18n}}images.back{{/i18n}}</a>
                             {{#nextImage}}
                                 <a href="{{localePrefix}}/{{year}}/medias/images/{{sectionId}}?url={{nextImage}}"
-                                class="btn btn-outline-primary">&gt;</a>
+                                class="mxt-btn-light">&gt;</a>
                             {{/nextImage}}
                         </div>
                         <div class="mxt-video--player-video">

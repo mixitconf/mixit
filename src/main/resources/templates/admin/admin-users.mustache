@@ -6,7 +6,11 @@
 </div>
 
 <div class="container-xxl">
-    <p>{{#i18n}}admin.users.count{{/i18n}} : <b>{{users.size}}</b> | <a href="/admin/users/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
+    <div class="mxt-btn-container pb-3">
+        {{#i18n}}admin.users.count{{/i18n}} : <b>{{users.size}}</b>
+        <div class="flex-fill"></div>
+        <a  class="mxt-btn-light" href="/admin/users/create">{{#i18n}}common.actions.create{{/i18n}}</a>
+    </div>
     <table class="table-striped table table-bordered">
       <thead>
         <tr>
@@ -15,7 +19,7 @@
             <th>{{#i18n}}admin.users.table.login{{/i18n}}</th>
             <th></th>
             <th>{{#i18n}}admin.users.table.email{{/i18n}}</th>
-            <th>{{#i18n}}common.actions{{/i18n}}</th>
+            <th style="width: 8em">{{#i18n}}common.actions{{/i18n}}</th>
         </tr>
       </thead>
       <tbody>
@@ -26,16 +30,16 @@
             <td>{{login}}</td>
             <td>{{role}}</td>
             <td>{{#email}}<img src="/images/svg/mxt-icon--mail.svg" class="mxt-icon--social" alt="Mail">{{/email}}</td>
-            <td>
-                <a href="/admin/users/edit/{{login}}">{{#i18n}}common.actions.update{{/i18n}}</a>
+            <td class="mxt-btn-container">
+                <a href="/admin/users/edit/{{login}}" class="mxt-btn-light">
+                    <img src="/images/svg/mxt-search-dark.svg" class="mxt-icon--cat__talks"
+                         title="{{#i18n}}common.actions.update{{/i18n}}"/>
+                </a>
             </td>
         </tr>
         {{/users}}
       </tbody>
     </table>
-            </div>
-        </div>
-    </div>
 </div>
 
 {{> footer}}

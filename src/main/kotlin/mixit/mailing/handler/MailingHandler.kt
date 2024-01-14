@@ -12,11 +12,11 @@ import mixit.mailing.model.RecipientType.Staff
 import mixit.mailing.model.RecipientType.StaffInPause
 import mixit.mailing.model.RecipientType.Volunteers
 import mixit.mailing.repository.MailingRepository
-import mixit.routes.MustacheI18n.TITLE
-import mixit.routes.MustacheTemplate.AdminMailingConfirmation
-import mixit.routes.MustacheTemplate.AdminMailingEdit
-import mixit.routes.MustacheTemplate.AdminMailingList
-import mixit.routes.MustacheTemplate.EmailMailing
+import mixit.util.mustache.MustacheI18n.TITLE
+import mixit.util.mustache.MustacheTemplate.AdminMailingConfirmation
+import mixit.util.mustache.MustacheTemplate.AdminMailingEdit
+import mixit.util.mustache.MustacheTemplate.AdminMailingList
+import mixit.util.mustache.MustacheTemplate.EmailMailing
 import mixit.security.model.Cryptographer
 import mixit.user.model.CachedUser
 import mixit.user.model.Role

@@ -6,11 +6,10 @@ import mixit.faq.model.QuestionSection
 import mixit.faq.model.QuestionSectionService
 import mixit.faq.model.Text
 import mixit.faq.repository.QuestionSectionRepository
-import mixit.routes.MustacheI18n.TITLE
-import mixit.routes.MustacheTemplate.AdminFaq
-import mixit.routes.MustacheTemplate.AdminFaqQuestion
-import mixit.routes.MustacheTemplate.AdminFaqQuestionSection
-import mixit.talk.model.Language
+import mixit.util.mustache.MustacheI18n.TITLE
+import mixit.util.mustache.MustacheTemplate.AdminFaq
+import mixit.util.mustache.MustacheTemplate.AdminFaqQuestion
+import mixit.util.mustache.MustacheTemplate.AdminFaqQuestionSection
 import mixit.util.errors.NotFoundException
 import mixit.util.extractFormData
 import mixit.util.seeOther

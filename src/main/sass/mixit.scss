@@ -152,6 +152,12 @@ $enable-cssgrid: true;
   display: block;
 }
 
+.mxt-img-avatar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .mxt-img-avatar__speaker_new {
   border-radius: 100%;
   border: 7px solid $secondary-color;
@@ -434,8 +440,8 @@ $enable-cssgrid: true;
 .mxt-text--cat {
   text-transform: uppercase;
   color: $white;
-  padding: 0.2em 0.5em 0.1em 0.1em;
-  border-radius: 0.2em;
+  padding: 0.3em 0.5em !important;
+  border-radius: 14px;
   display: inline-block;
   margin-bottom: 0.5em;
   font-size: 0.9rem;
@@ -515,11 +521,14 @@ $enable-cssgrid: true;
 }
 
 .mxt-text--cat-speaker {
-  background-color: #fefefe;
+  background-color: #e6e6e6;
   font-weight: normal;
   text-transform: uppercase;
-  padding: 0.3em;
-  color: $secondary-color
+  color: $secondary-color;
+  border: 2px solid #e6e6e6;
+  &:hover {
+    border: 2px solid $secondary-color;
+  }
 }
 
 .mxt-text--found {
@@ -846,7 +855,7 @@ h3 {
     background-color: $third-color;
     border-radius: 24px;
   }
-  a, .mxt-navbar--nav-link {
+  button, a, .mxt-navbar--nav-link {
     border: 2px solid $third-color !important;
     padding: 1em !important;
     border-radius: 24px;
@@ -1303,13 +1312,55 @@ $sponsor-max-width: 20em;
       padding-right: 0.2em;
     }
   }
-
 }
 
-mxt-media--link.mxt-media--link {
+.mxt-media--link.mxt-media--link {
   color: $secondary-color;
   text-decoration: none;
   &:hover {
     color:  $primary-color;
   }
 }
+
+.mxt-feedback--container {
+  border: 1px solid $fifth-color;
+  padding: 1em;
+  border-radius: 12px;
+}
+
+@mixin mixitBtn($primary, $secondary) {
+  border: 2px solid $secondary !important;
+  background-color: $secondary;
+  border-radius: 24px;
+  color: $primary;
+  padding: 1em!important;
+  align-items: center;
+  display: flex;
+  font-size: inherit;
+  font-weight: 700;
+  height: 2.5em;
+
+  &:hover {
+    border: 2px solid $primary !important;
+  }
+}
+
+.mxt-btn-light {
+  @include mixitBtn($secondary-color, $fifth-color);
+}
+
+.mxt-btn-secondary {
+  @include mixitBtn($primary-color, $secondary-color);
+}
+
+.mxt-btn-primary {
+  @include mixitBtn($secondary-color, $primary-color);
+}
+
+.mxt-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+

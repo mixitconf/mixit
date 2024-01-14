@@ -4,7 +4,6 @@ import com.samskivert.mustache.Mustache
 import mixit.MixitProperties
 import mixit.features.model.Feature
 import mixit.features.model.FeatureStateService
-import mixit.features.repository.FeatureStateRepository
 import mixit.user.model.Role
 import mixit.util.locale
 import mixit.util.localePrefix
@@ -19,7 +18,7 @@ import org.springframework.web.server.WebSession
 import org.springframework.web.util.UriUtils
 import reactor.core.publisher.Mono
 import reactor.kotlin.core.publisher.toMono
-import java.util.Locale
+import java.util.*
 
 @Component
 class RouteFilterUtils(
@@ -42,7 +41,7 @@ class RouteFilterUtils(
         session: WebSession,
     ) = mutableMapOf<String, Any>().apply {
 
-        this.putAll(generateModelForExernalCall(locale))
+        this.putAll(generateModelForExternalCall(locale))
 
         val email = session.getAttribute<String>("email")
         val role = session.getAttribute<Role>("role")
@@ -56,16 +55,12 @@ class RouteFilterUtils(
         this["switchLangUrl"] = switchLangUrl(path, locale)
         this["uri"] = "${properties.baseUri}$path"
         this["markdown"] = Mustache.Lambda { frag, out -> out.write(frag.execute().toHTML()) }
-        this["hasCfp"] = featureStateService.findFeature(Feature.Cfp).map { it.active }
-        this["hasFeatureCfp"] = featureStateService.findFeature(Feature.Cfp).map { it.active }
-        this["hasFeatureLottery"] = featureStateService.findFeature(Feature.Lottery).map { it.active }
-        this["hasFeatureLotteryResult"] = featureStateService.findFeature(Feature.LotteryResult).map { it.active }
-        this["hasFeatureMixette"] = featureStateService.findFeature(Feature.Mixette).map { it.active }
-        this["hasFeatureProfileWithMessages"] = featureStateService.findFeature(Feature.ProfileMessage).map { it.active }
-        this["hasMixitOnAirOnHomePage"] = featureStateService.findFeature(Feature.MixitOnAirOnHomePage).map { it.active }
+        Feature.entries.onEach {
+            this["hasFeature${it.name}"] = featureStateService.findFeature(it).map { it.active }
+        }
     }.toMap()
 
-    fun generateModelForExernalCall(
+    fun generateModelForExternalCall(
         locale: Locale
     ) = mutableMapOf<String, Any>().apply {
         this["locale"] = locale.toString()

@@ -1,6 +1,6 @@
 package mixit.ticket.handler
 
-import mixit.routes.MustacheTemplate
+import mixit.util.mustache.MustacheTemplate
 import mixit.routes.Routes
 import mixit.ticket.model.TicketService
 import mixit.ticket.model.TicketType.ATTENDEE

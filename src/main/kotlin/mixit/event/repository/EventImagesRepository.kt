@@ -11,7 +11,9 @@ import org.springframework.data.mongodb.core.ReactiveMongoTemplate
 import org.springframework.data.mongodb.core.count
 import org.springframework.data.mongodb.core.find
 import org.springframework.data.mongodb.core.findById
+import org.springframework.data.mongodb.core.query.Criteria
 import org.springframework.data.mongodb.core.query.Query
+import org.springframework.data.mongodb.core.query.isEqualTo
 import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
 import java.time.Duration
@@ -47,6 +49,10 @@ class EventImagesRepository(
 
     fun save(event: EventImages) =
         template.save(event)
+
+    fun delete(event: String) = template.remove<EventImages>(
+        Query(Criteria.where("event").isEqualTo(event))
+    )
 
     fun deleteAll() = template.remove<EventImages>(Query())
 }

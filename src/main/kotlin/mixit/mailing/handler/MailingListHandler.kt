@@ -10,8 +10,8 @@ import mixit.mailing.model.RecipientType.Sponsor
 import mixit.mailing.model.RecipientType.Staff
 import mixit.mailing.model.RecipientType.StaffInPause
 import mixit.mailing.model.RecipientType.Volunteers
-import mixit.routes.MustacheI18n.TITLE
-import mixit.routes.MustacheTemplate.AdminMailingList
+import mixit.util.mustache.MustacheI18n.TITLE
+import mixit.util.mustache.MustacheTemplate.AdminMailingList
 import mixit.security.model.Cryptographer
 import mixit.talk.model.TalkService
 import mixit.ticket.model.CachedTicket

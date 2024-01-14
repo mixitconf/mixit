@@ -6,32 +6,41 @@
 </div>
 
 <div class="container-xxl">
-    <p>{{#i18n}}admin.donations.orga.count{{/i18n}} : <b>{{donations.size}}</b> | <a href="/{{#admin}}admin{{/admin}}{{#volunteer}}volunteer{{/volunteer}}/mixette-donation/create">{{#i18n}}common.actions.create{{/i18n}}</a></p>
+    <div class="mxt-btn-container pb-3">
+        {{#i18n}}admin.donations.orga.count{{/i18n}} : <b>{{donations.size}}</b>
+        <div class="flex-fill"></div>
+        <a class="mxt-btn-light"
+           href="/{{#admin}}admin{{/admin}}{{#volunteer}}volunteer{{/volunteer}}/mixette-donation/create">
+            {{#i18n}}common.actions.create{{/i18n}}
+        </a>
+    </div>
     <table class="table-striped table table-bordered">
-      <thead>
+        <thead>
         <tr>
             <th>&nbsp;</th>
             <th>{{#i18n}}admin.donations.login{{/i18n}}</th>
             <th>{{#i18n}}admin.donations.name{{/i18n}}</th>
             <th>{{#i18n}}admin.donations.orga.number{{/i18n}}</th>
             <th>{{#i18n}}admin.donations.amount{{/i18n}}</th>
-            <th>{{#i18n}}common.actions{{/i18n}}</th>
+            <th style="width: 8em">{{#i18n}}common.actions{{/i18n}}</th>
         </tr>
-      </thead>
-      <tbody>
+        </thead>
+        <tbody>
         {{#donations}}
-        <tr>
-            <th>{{rank}}</th>
-            <td>{{login}}</td>
-            <td>{{name}}</td>
-            <td>{{number}}</td>
-            <td>{{amount}}</td>
-            <td>
-                <a href="/{{#admin}}admin{{/admin}}{{#volunteer}}volunteer{{/volunteer}}/mixette-donation/orga?login={{login}}">{{#i18n}}common.actions.view{{/i18n}}</a>
-            </td>
-        </tr>
+            <tr>
+                <th>{{rank}}</th>
+                <td>{{login}}</td>
+                <td>{{name}}</td>
+                <td>{{number}}</td>
+                <td>{{amount}}</td>
+                <td class="mxt-btn-container">
+                    <a href="/{{#admin}}admin{{/admin}}{{#volunteer}}volunteer{{/volunteer}}/mixette-donation/orga?login={{login}}" class="mxt-btn-light">
+                    <img src="/images/svg/mxt-search-dark.svg" class="mxt-icon--cat__talks"
+                         title="{{#i18n}}common.actions.update{{/i18n}}"/></a>
+                </td>
+            </tr>
         {{/donations}}
-      </tbody>
+        </tbody>
     </table>
 </div>
 

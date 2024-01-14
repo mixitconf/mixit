@@ -8,8 +8,8 @@ import mixit.MixitProperties
 import mixit.event.model.EventService
 import mixit.mixette.model.MixetteDonation
 import mixit.mixette.repository.MixetteDonationRepository
-import mixit.routes.MustacheI18n.TITLE
-import mixit.routes.MustacheTemplate.MixetteDashboard
+import mixit.util.mustache.MustacheI18n.TITLE
+import mixit.util.mustache.MustacheTemplate.MixetteDashboard
 import mixit.security.model.Cryptographer
 import mixit.talk.model.Language
 import mixit.ticket.model.CachedTicket
