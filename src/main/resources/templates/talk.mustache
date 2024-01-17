@@ -159,18 +159,63 @@
 {{#hasFeatureFeedback}}
 <div class="container-xxl">
     <h2 class="pt-5">{{#i18n}}feedback.title{{/i18n}}</h2>
-    <p>{{#i18n}}feedback.{{talk.format}}.description{{/i18n}}</p>
+    <p>
+        {{#i18n}}feedback.{{talk.format}}.description{{/i18n}}
+        {{#connected}}{{#i18n}}feedback.available{{/i18n}}{{/connected}}
+        {{^connected}}{{#i18n}}feedback.not.available{{/i18n}}{{/connected}}
+        <br>
+        <i>{{#i18n}}feedback.anonymous{{/i18n}}</i>
+    </p>
 
     <div class="row">
     {{#feedbackTypes}}
         <div class="col-4 p-3" >
-            <div class="mxt-feedback--container text-center">
+            <div class="mxt-feedback--container text-center {{#second.selectedByCurrentUser}}mxt-feedback-selected{{/second.selectedByCurrentUser}}"
+                 id="mxt-feedback-{{first}}--container">
                 <div>{{first}}</div>
-                <div>Votes : {{second.count}}</div>
+                <div>Votes : <span id="mxt-feedback-{{first}}--vote">{{second.count}}</span></div>
+                {{#connected}}
+                <div>
+                    <button data-feedback="{{first}}"
+                            data-vote="{{second.selectedByCurrentUser}}"
+                            data-email="{{email}}"
+                            data-talk="{{talk.id}}"
+                            class="mxt-feedback-btn">Vote</button>
+                </div>
+                {{/connected}}
             </div>
         </div>
     {{/feedbackTypes}}
     </div>
+    {{#connected}}
+        <div class="mxt-btn-container pb-4">
+            <button class="mxt-btn-light" id="mxt-feedback-comment--new">{{#i18n}}feedback.action{{/i18n}}</button>
+        </div>
+        <div class="row pt-4 pb-4" id="mxt-feedback-comment--container" style="display: none">
+            <form method="post" action="/{{year}}/{{talk.slug}}/feedback/comment">
+                <input type="hidden" name="email" value="{{email}}">
+                <input type="hidden" name="talkId" value="{{talk.id}}">
+                {{#i18n}}feedback.comment{{/i18n}}
+                <textarea name="comment"
+                          type="text"
+                          class="form-control col-10"
+                          rows="2">{{#feedbackComments.userComment}}{{feedbackComments.userComment}}{{/feedbackComments.userComment}}</textarea>
+                <div class="mxt-btn-container pt-3">
+                    <button class="mxt-btn-light me-2" id="mxt-feedback-comment--cancel">
+                        {{#i18n}}common.actions.cancel{{/i18n}}</button>
+                    <button class="mxt-btn-primary" id="mxt-feedback-comment--button">
+                        {{#i18n}}common.actions.save{{/i18n}}</button>
+                </div>
+            </form>
+        </div>
+    {{/connected}}
+    {{#feedbackComments.otherComments}}
+        <div class="mxt-feedback-comment--container row">
+            <div class="col-2">+: {{plusCount}}, -: {{minusCount}}</div>
+            <div class="col-10">{{comment}}</div>
+        </div>
+    {{/feedbackComments.otherComments}}
+
 </div>
 {{/hasFeatureFeedback}}
 

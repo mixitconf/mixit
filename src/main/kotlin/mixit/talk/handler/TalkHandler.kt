@@ -44,7 +44,9 @@ import mixit.util.extractFormData
 import mixit.util.formatTalkDate
 import mixit.util.formatTalkTime
 import mixit.util.language
+import mixit.util.mustache.MustacheI18n.FEEDBACK_COMMENTS
 import mixit.util.mustache.MustacheI18n.FEEDBACK_TYPES
+import mixit.util.mustache.MustacheI18n.HAS_FEEDBACK
 import mixit.util.permanentRedirect
 import mixit.util.seeOther
 import mixit.util.toVimeoPlayerUrl
@@ -452,7 +454,10 @@ class TalkHandler(
                     "vimeoPlayer" to talk.video.toVimeoPlayerUrl(),
                     "twitchPlayer" to (talk.video?.contains("twitch") ?: false),
                     "vimeoPlayer2" to talk.video2.toVimeoPlayerUrl(),
-                    FEEDBACK_TYPES to feedbackService.computeTalkFeedback(talk, currentUserEmail)
+                    FEEDBACK_TYPES to feedbackService.computeTalkFeedback(talk, currentUserEmail),
+                    FEEDBACK_COMMENTS to feedbackService.computeTalkFeedbackComment(talk, currentUserEmail),
+                    // TODO condition on the year
+                    // HAS_FEEDBACK to (talk.event == "2023")
                 )
             )
             .awaitSingle()

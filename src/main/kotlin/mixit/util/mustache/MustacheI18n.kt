@@ -16,7 +16,7 @@ object MustacheI18n {
     const val EVENTS = "events"
     const val FAQ = "faq"
     const val FEATURES = "features"
-    const val FEEDBACK = "feedback"
+    const val HAS_FEEDBACK = "hasFeedback"
     const val FEEDBACK_TYPES = "feedbackTypes"
     const val FEEDBACK_COMMENTS = "feedbackComments"
     const val FORMATS = "formats"

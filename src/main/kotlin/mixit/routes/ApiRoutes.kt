@@ -4,6 +4,7 @@ import mixit.blog.handler.JsonBlogHandler
 import mixit.event.handler.JsonEventHandler
 import mixit.faq.handler.JsonQuestionHandler
 import mixit.favorite.handler.JsonFavoriteHandler
+import mixit.feedback.handler.FeedbackHandler
 import mixit.mixette.handler.AdminMixetteHandler
 import mixit.security.handler.ExternalHandler
 import mixit.talk.handler.TalkJsonHandler
@@ -28,7 +29,8 @@ class ApiRoutes(
     private val ticketHandler: AdminTicketHandler,
     private val adminMixetteHandler: AdminMixetteHandler,
     private val adminUserHandler: AdminUserHandler,
-    private val jsonQuestionHandler: JsonQuestionHandler
+    private val jsonQuestionHandler: JsonQuestionHandler,
+    private val feedbackHandler: FeedbackHandler
 ) {
 
     @Bean
@@ -52,6 +54,7 @@ class ApiRoutes(
             GET("/favorites/{email}/talks/{id}", favoriteHandler::getFavorite)
             GET("/favorites/{email}", favoriteHandler::getFavorites)
             POST("/favorites/{email}/talks/{id}/toggle", favoriteHandler::toggleFavorite)
+            POST("/feedback/{email}/talks/{talkId}/vote/{feedback}", feedbackHandler::vote)
             GET("/talk/{login}", talkHandler::findOne)
             GET("/user", userHandler::findAll)
 
