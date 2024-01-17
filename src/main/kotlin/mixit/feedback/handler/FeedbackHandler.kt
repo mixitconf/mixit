@@ -1,10 +1,14 @@
 package mixit.feedback.handler
 
+import mixit.MixitProperties
 import mixit.feedback.model.Feedback
 import mixit.feedback.model.FeedbackService
+import mixit.talk.handler.AdminTalkHandler
 import mixit.talk.handler.TalkHandler
+import mixit.talk.model.TalkService
 import mixit.util.errors.NotFoundException
 import mixit.util.extractFormData
+import mixit.util.seeOther
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
@@ -14,7 +18,8 @@ import org.springframework.web.reactive.function.server.json
 @Component
 class FeedbackHandler(
     private val feedbackService: FeedbackService,
-    private val talkHandler: TalkHandler
+    private val talkService: TalkService,
+    private val properties: MixitProperties
 ) {
     suspend fun vote(req: ServerRequest): ServerResponse {
         val email = req.pathVariable("email")
@@ -29,14 +34,14 @@ class FeedbackHandler(
     suspend fun comment(req: ServerRequest, year: Int): ServerResponse {
         val formData = req.extractFormData()
         val email = formData["email"] ?: throw NotFoundException()
-        val talkId = formData["talkId"] ?: throw NotFoundException()
+        val talk = talkService.findOneOrNull(formData["talkId"] ?: throw NotFoundException())!!
         val comment = formData["comment"]
 
         feedbackService.saveCommentForTalk(
-            talkId = talkId,
+            talkId = talk.id,
             comment = comment,
             nonEncryptedUserEmail = email
         )
-        return talkHandler.findOneView(req, year)
+        return seeOther("${properties.baseUri}/$year/${talk.slug}")
     }
 }

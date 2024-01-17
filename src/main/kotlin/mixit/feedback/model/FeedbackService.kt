@@ -3,7 +3,6 @@ package mixit.feedback.model
 import mixit.MixitApplication
 import mixit.security.model.Cryptographer
 import mixit.talk.model.CachedTalk
-import mixit.talk.model.TalkService
 import mixit.user.model.UserService
 import org.springframework.stereotype.Service
 import java.time.Instant
@@ -29,9 +28,33 @@ data class FeedbackCommentDto(
 class FeedbackService(
     private val userFeedbackService: UserFeedbackService,
     private val userService: UserService,
-    private val talkService: TalkService,
     private val cryptographer: Cryptographer
 ) {
+
+    suspend fun computeUserTalkFeedback(
+        talk: CachedTalk,
+        nonEncryptedUserEmail: String?
+    ): List<Pair<Feedback, FeedbackCount>> {
+        if(nonEncryptedUserEmail == null) {
+            return emptyList()
+        }
+
+        val currentUserFeedback = userFeedbackService
+            .findByTalk(talk.id)
+            .firstOrNull { it.user.email == cryptographer.encrypt(nonEncryptedUserEmail) }
+
+        // We need to compute the different scores
+        return Feedback.entries
+            .filter { it.formats.contains(talk.format) }
+            .map { feedback ->
+                val hasCurrentUserFeedback = currentUserFeedback?.notes?.contains(feedback) ?: false
+                feedback to FeedbackCount(
+                    count = if(hasCurrentUserFeedback) 1 else 0,
+                    selectedByCurrentUser = hasCurrentUserFeedback
+                )
+            }
+            .sortedBy { it.first.sort }
+    }
 
     suspend fun computeTalkFeedback(
         talk: CachedTalk,
@@ -61,9 +84,7 @@ class FeedbackService(
         talk: CachedTalk,
         nonEncryptedUserEmail: String?
     ): UserFeedbackComment {
-        val user = nonEncryptedUserEmail?.let {
-            userService.findOneByNonEncryptedEmailOrNull(it)
-        }
+        val user = nonEncryptedUserEmail?.let { userService.findOneByNonEncryptedEmailOrNull(it) }
 
         try {
             val feedbacks = userFeedbackService.findByTalk(talk.id)
@@ -104,7 +125,7 @@ class FeedbackService(
         val userFeedbackOnTalk = userFeedbackService
             .findByTalk(talkId)
             .firstOrNull {
-                it.user.email == cryptographer.encrypt(nonEncryptedUserEmail)
+                it.user.email == encryptedEmail
             }
         val userHasAlreadyFeed = userFeedbackOnTalk?.notes?.contains(feedback) ?: false
 
@@ -132,7 +153,7 @@ class FeedbackService(
 
         return FeedbackCount(
             count = feedbackNotes.size,
-            selectedByCurrentUser = (userFeedbackOnTalk == null)
+            selectedByCurrentUser = userFeedbackOnTalkToPersist.notes.contains(feedback)
         )
     }
 
@@ -140,7 +161,7 @@ class FeedbackService(
         talkId: String,
         comment: String?,
         nonEncryptedUserEmail: String
-    ): UserFeedbackComment {
+    ) {
         val encryptedEmail = cryptographer.encrypt(nonEncryptedUserEmail)!!
         val userFeedbackOnTalk = userFeedbackService
             .findByTalk(talkId)
@@ -170,7 +191,5 @@ class FeedbackService(
         if (userFeedbackOnTalkToPersist != null) {
             userFeedbackService.save(userFeedbackOnTalkToPersist)
         }
-
-        return computeTalkFeedbackComment(talkService.findOneOrNull(talkId)!!, nonEncryptedUserEmail)
     }
 }

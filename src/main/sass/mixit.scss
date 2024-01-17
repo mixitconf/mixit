@@ -1329,6 +1329,21 @@ $sponsor-max-width: 20em;
   background-color: $fifth-color;
 }
 
+.mxt-feedback-tolike-btn, .mxt-feedback-unlike-btn {
+  img{
+    height: 2em;
+  }
+}
+.mxt-feedback-tolike-btn {
+  img{
+    height: 2em;
+  }
+  &:hover {
+    >img {
+      content: url('/images/svg/mxt-icon--like-dark.svg');
+    }
+  }
+}
 .mxt-feedback-comment--container {
   border: 2px solid $fifth-color;
   border-left-width: 12px;
@@ -1361,6 +1376,10 @@ $sponsor-max-width: 20em;
 
 .mxt-btn-light {
   @include mixitBtn($secondary-color, $fifth-color);
+}
+
+.mxt-btn-third {
+  @include mixitBtn($secondary-color, $third-color);
 }
 
 .mxt-btn-secondary {
