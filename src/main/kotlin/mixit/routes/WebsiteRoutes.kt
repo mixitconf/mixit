@@ -10,6 +10,7 @@ import mixit.event.handler.AdminEventHandler
 import mixit.event.handler.AdminEventImagesHandler
 import mixit.faq.handler.AdminQuestionHandler
 import mixit.features.handler.FeatureStateHandler
+import mixit.feedback.handler.FeedbackHandler
 import mixit.mailing.handler.MailingHandler
 import mixit.mailing.handler.MailingListHandler
 import mixit.mixette.handler.AdminMixetteHandler
@@ -77,6 +78,7 @@ class WebsiteRoutes(
     private val routeFilterUtils: RouteFilterUtils,
     private val featureStateHandler: FeatureStateHandler,
     private val faqHandler: mixit.faq.handler.FaqHandler,
+    private val feedbackHandler: FeedbackHandler,
 ) {
 
     private val logger = LoggerFactory.getLogger(WebsiteRoutes::class.java)
@@ -206,6 +208,9 @@ class WebsiteRoutes(
                 }
 
                 GET("/$year/{slug}") { talkHandler.findOneView(it, year) }
+                POST("/$year/{slug}/feedback/comment") {
+                    feedbackHandler.comment(it, year)
+                }
             }
         }
 

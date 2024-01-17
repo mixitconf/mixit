@@ -23,5 +23,16 @@ data class CachedUserFeedback(
         userFeedback.notes,
         userFeedback.comment
     )
+
+    fun toUserFeedback() =
+        UserFeedback(
+            id = this.id,
+            notes = notes,
+            event = event,
+            talkId = talk.id!!,
+            comment = comment,
+            encryptedEmail = user.email!!,
+            creationInstant = creationInstant,
+        )
 }
 

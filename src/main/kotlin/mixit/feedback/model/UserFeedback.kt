@@ -21,4 +21,10 @@ data class FeedbackComment(
     val disapprovedByLogin: String? = null,
     val approvedInstant: Instant? = null,
     val approvedByLogin: String? = null,
-)
+    val feedbackPlus: List<String> = emptyList(),
+    val feedbackMinus: List<String> = emptyList()
+) {
+    companion object {
+        fun create(comment: String) = FeedbackComment(comment)
+    }
+}

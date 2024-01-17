@@ -1323,9 +1323,23 @@ $sponsor-max-width: 20em;
 }
 
 .mxt-feedback--container {
-  border: 1px solid $fifth-color;
+  border: 2px solid $fifth-color;
   padding: 1em;
   border-radius: 12px;
+  background-color: $fifth-color;
+}
+
+.mxt-feedback-comment--container {
+  border: 2px solid $fifth-color;
+  border-left-width: 12px;
+  padding: 1em;
+  border-radius: 12px;
+  background-color: $white;
+}
+
+.mxt-feedback-selected {
+  border: 2px solid $third-color;
+  background-color: $third-color;
 }
 
 @mixin mixitBtn($primary, $secondary) {

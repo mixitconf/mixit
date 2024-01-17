@@ -48,6 +48,8 @@ class TalkService(
         findAll()
             .asSequence()
             .filter { it.format == TalkFormat.KEYNOTE }
+            // For the moment we filter the InfoQ years
+            .filter { listOf("2017", "2018", "2019", "2021", "2022", "2023").contains(it.event) }
             .filter { (it.topic == topic || it.topic == Topic.OTHER.value) && (it.video != null || it.video2 != null) }
             .shuffled()
             .take(n)

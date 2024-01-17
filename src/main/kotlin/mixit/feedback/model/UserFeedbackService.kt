@@ -22,8 +22,10 @@ class UserFeedbackService(
     override fun loader(): suspend () -> List<CachedUserFeedback> =
         { userFeedbackRepository.findAll().map { talk -> loadCachedUserFeedback(talk) } }
 
-    fun save(talk: UserFeedback): Mono<UserFeedback> =
-        userFeedbackRepository.save(talk).doOnSuccess { cache.invalidateAll() }
+    suspend fun save(talk: UserFeedback): UserFeedback =
+        userFeedbackRepository.save(talk)
+            .awaitSingle()
+            .also { cache.invalidateAll() }
 
     suspend fun findByEvent(eventId: String): List<CachedUserFeedback> =
         findAll()
