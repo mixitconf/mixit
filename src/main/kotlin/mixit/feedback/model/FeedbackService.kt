@@ -64,25 +64,35 @@ class FeedbackService(
         val user = nonEncryptedUserEmail?.let {
             userService.findOneByNonEncryptedEmailOrNull(it)
         }
-        val feedbacks = userFeedbackService.findByTalk(talk.id)
 
-        val otherComments = feedbacks
-            .mapNotNull { it.comment }
-            .map { comment ->
-                FeedbackCommentDto(
-                    comment = comment.comment,
-                    plusCount = comment.feedbackPlus.count(),
-                    plusSelectedByCurrentUser = user?.let { comment.feedbackPlus.contains(it.login) } ?: false,
-                    minusCount = comment.feedbackMinus.count(),
-                    minusSelectedByCurrentUser = user?.let { comment.feedbackMinus.contains(it.login) } ?: false,
-                )
-            }
+        try {
+            val feedbacks = userFeedbackService.findByTalk(talk.id)
 
-        return UserFeedbackComment(
-            login = user?.login,
-            userComment = user?.let { u -> feedbacks.first { it.user.login == u.login }.comment?.comment },
-            otherComments = otherComments
-        )
+            val otherComments = feedbacks
+                .mapNotNull { it.comment }
+                .map { comment ->
+                    FeedbackCommentDto(
+                        comment = comment.comment,
+                        plusCount = comment.feedbackPlus.count(),
+                        plusSelectedByCurrentUser = user?.let { comment.feedbackPlus.contains(it.login) } ?: false,
+                        minusCount = comment.feedbackMinus.count(),
+                        minusSelectedByCurrentUser = user?.let { comment.feedbackMinus.contains(it.login) } ?: false,
+                    )
+                }
+
+            return UserFeedbackComment(
+                login = user?.login,
+                userComment = user?.let { u -> feedbacks.first { it.user.login == u.login }.comment?.comment },
+                otherComments = otherComments
+            )
+        } catch (e: Exception) {
+            return UserFeedbackComment(
+                login = user?.login,
+                userComment = null,
+                otherComments = emptyList()
+            )
+        }
+
     }
 
     suspend fun voteForTalk(

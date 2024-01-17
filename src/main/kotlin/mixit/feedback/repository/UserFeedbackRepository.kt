@@ -5,6 +5,7 @@ import com.fasterxml.jackson.module.kotlin.readValue
 import kotlinx.coroutines.reactor.awaitSingle
 import mixit.MixitApplication.Companion.CURRENT_EVENT
 import mixit.feedback.model.UserFeedback
+import mixit.mixette.model.MixetteDonation
 import mixit.talk.model.Talk
 import mixit.user.repository.UserRepository
 import org.slf4j.LoggerFactory
