@@ -36,8 +36,8 @@
         <p class="pt-2">{{#i18n}}home.news.cfp.cfp{{/i18n}}</p>
     {{/hasFeatureLottery}}
     {{^hasFeatureLottery}}
-        <p class="pt-3">{{#i18n}}home.news.lottery{{/i18n}}</p>
-        <p class="pt-2">{{#i18n}}home.news.cfp{{/i18n}}</p>
+        <p class="pt-3">{{#i18n}}home.news.postcfp.lottery{{/i18n}}</p>
+        <p class="pt-2">{{#i18n}}home.news.postcfp.cfp{{/i18n}}</p>
     {{/hasFeatureLottery}}
 
 
@@ -68,6 +68,16 @@
                          class="mxt-icon--navbar me-2"
                          alt="{{#i18n}}home.intro.newsletter{{/i18n}}">
                     {{#i18n}}home.intro.newsletter{{/i18n}}
+                </a>
+            </div>
+            <div class="nav-item ms-3">
+                <a href="/docs/sponsor/leaflet/fr" class="nav-link mxt-navbar--nav-link"
+                   target="_blank"
+                   alt="{{#i18n}}sponsors.becoming{{/i18n}}">
+                    <img src="/images/svg/mxt-icon-sponsor-dark.svg"
+                         class="mxt-icon--navbar me-2"
+                         alt="{{#i18n}}sponsors.becoming{{/i18n}}">
+                    {{#i18n}}sponsors.becoming{{/i18n}}
                 </a>
             </div>
         </nav>
