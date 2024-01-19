@@ -38,11 +38,11 @@
         {{^user.photoUrl}}<img src="https://www.gravatar.com/avatar/{{#user.emailHash}}{{user.emailHash}}{{/user.emailHash}}?s=100&?s=100&d={{baseUri}}%2Fimages%2Fpng%2Fmxt-icon--default-avatar.png" class="mxt-img-avatar__speaker">{{/user.photoUrl}}
         {{#user.company}}<p class="text-center mxt-text-speaker-company">{{user.company}}</p>{{/user.company}}
         {{#connected}}
-            {{#canUpdateProfile}}
-                <div class="mxt-btn-container pb-4">
+            <div class="mxt-btn-container pb-4">
+                {{#canUpdateProfile}}
                     <a href="{{localePrefix}}/me/edit" class="mxt-btn-light" style="margin-bottom: 0">{{#i18n}}profile.update{{/i18n}}</a>
-                </div>
-            {{/canUpdateProfile}}
+                {{/canUpdateProfile}}
+            </div>
         {{/connected}}
     </div>
     <div class="row">
@@ -127,6 +127,14 @@
                             <li class="mxt-text--cat-format">#{{format}}</li>
                         </ul>
                         <p>{{#markdown}}{{summary}}{{/markdown}}</p>
+                        <div class="mxt-btn-container">
+                        {{#hasFeatureFeedback}}
+                            {{#speakerYear}}
+                                <a href="{{localePrefix}}/me/feedback/{{id}}" class="mxt-btn-light ms-2" style="margin-bottom: 0">
+                                    {{#i18n}}feedback.speaker{{/i18n}} {{speakerYear}}</a>
+                            {{/speakerYear}}
+                        {{/hasFeatureFeedback}}
+                        </div>
                     </article>
                 {{/talks}}
             </ul>

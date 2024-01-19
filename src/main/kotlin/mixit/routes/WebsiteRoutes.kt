@@ -140,7 +140,7 @@ class WebsiteRoutes(
             GET("/admin/post/create", adminPostHandler::createPost)
             GET("/admin/post/edit/{id}", adminPostHandler::editPost)
             GET("/admin/talks") { adminTalkHandler.adminTalks(it, CURRENT_EVENT) }
-            GET("/admin/talks/create", adminTalkHandler::createTalk)
+            GET("/admin/talks/create/{year}", adminTalkHandler::createTalk)
             GET("/admin/talks/edit/{id}", adminTalkHandler::editTalk)
             GET("/admin/talks/{year}") { adminTalkHandler.adminTalks(it, it.pathVariable("year")) }
             GET("/admin/ticket", adminTicketHandler::ticketing)
@@ -172,6 +172,7 @@ class WebsiteRoutes(
             GET("/faq", faqHandler::faqView)
             GET("/lottery", lotteryHandler::ticketing)
             GET("/me") { userHandler.findProfileView(it) }
+            GET("/me/feedback/{talkId}") { feedbackHandler.findMyFeedbacks(it) }
             GET("/me/edit", userHandler::editProfileView)
             GET("/me/talks/edit/{slug}", talkHandler::editTalkView)
             GET("/mixette/dashboard", mixetteHandler::mixette)

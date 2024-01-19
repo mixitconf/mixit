@@ -1327,8 +1327,18 @@ $sponsor-max-width: 20em;
   padding: 1em;
   border-radius: 12px;
   background-color: $fifth-color;
+  img{
+    height: 2em;
+  }
 }
 
+.mxt-feedback-tolike-btn {
+  &:hover {
+    >img {
+      content: url('/images/svg/mxt-icon--like-dark.svg');
+    }
+  }
+}
 .mxt-feedback-comment--container {
   border: 2px solid $fifth-color;
   border-left-width: 12px;
@@ -1361,6 +1371,10 @@ $sponsor-max-width: 20em;
 
 .mxt-btn-light {
   @include mixitBtn($secondary-color, $fifth-color);
+}
+
+.mxt-btn-third {
+  @include mixitBtn($secondary-color, $third-color);
 }
 
 .mxt-btn-secondary {

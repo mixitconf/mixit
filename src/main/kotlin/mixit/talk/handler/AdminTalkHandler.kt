@@ -63,9 +63,9 @@ class AdminTalkHandler(
     }
 
     suspend fun createTalk(req: ServerRequest): ServerResponse =
-        this.adminTalk()
+        this.adminTalk(Talk(TALK, req.pathVariable("year"), "", ""))
 
-    suspend fun editTalk(req: ServerRequest): ServerResponse =
+    suspend fun editTalk(req: ServerRequest): ServerResponse  =
         adminTalk(service.findOneOrNull(req.pathVariable("id"))?.toTalk() ?: throw NotFoundException())
 
     suspend fun adminSaveTalk(req: ServerRequest): ServerResponse {
@@ -98,7 +98,7 @@ class AdminTalkHandler(
         return seeOther("${properties.baseUri}$LIST_URI")
     }
 
-    private suspend fun adminTalk(talk: Talk = Talk(TALK, LAST_TALK_EVENT, "", "")): ServerResponse {
+    private suspend fun adminTalk(talk: Talk): ServerResponse {
         val params = mapOf(
             TITLE to AdminTalk.title,
             MustacheI18n.TALK to talk,
