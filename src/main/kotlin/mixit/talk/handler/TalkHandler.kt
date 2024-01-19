@@ -454,7 +454,7 @@ class TalkHandler(
                     "twitchPlayer" to (talk.video?.contains("twitch") ?: false),
                     "vimeoPlayer2" to talk.video2.toVimeoPlayerUrl(),
                     FEEDBACK_TYPES to feedbackService.computeUserTalkFeedback(talk, currentUserEmail),
-                    FEEDBACK_COMMENTS to feedbackService.computeTalkFeedbackComment(talk, currentUserEmail),
+                    FEEDBACK_COMMENTS to feedbackService.computeUserTalkFeedbackComment(talk, currentUserEmail),
                     // We must be more clever (open when the talk start ?)
                     HAS_FEEDBACK to true
                 )

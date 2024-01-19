@@ -55,6 +55,8 @@ enum class MustacheTemplate(val template: String, val title: String?, val path: 
     EmailNewsletterSubscribe("email/email-newsletter-subscribe", null),
     Faq("faq", "faq.title"),
     Feed("feed", "talks.title.html"),
+    AdminFeedback("admin/admin-feedback", "feedback.title.html"),
+    SpeakerFeedback("feedback-speaker", "feedback-speaker.title.html"),
     FeedbackWall("talks-feedback-wall", "talks.title.html"),
     Login("login", null),
     LoginError("login-error", null),

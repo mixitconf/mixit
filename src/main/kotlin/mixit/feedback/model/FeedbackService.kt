@@ -35,7 +35,7 @@ class FeedbackService(
         talk: CachedTalk,
         nonEncryptedUserEmail: String?
     ): List<Pair<Feedback, FeedbackCount>> {
-        if(nonEncryptedUserEmail == null) {
+        if (nonEncryptedUserEmail == null) {
             return emptyList()
         }
 
@@ -49,7 +49,7 @@ class FeedbackService(
             .map { feedback ->
                 val hasCurrentUserFeedback = currentUserFeedback?.notes?.contains(feedback) ?: false
                 feedback to FeedbackCount(
-                    count = if(hasCurrentUserFeedback) 1 else 0,
+                    count = if (hasCurrentUserFeedback) 1 else 0,
                     selectedByCurrentUser = hasCurrentUserFeedback
                 )
             }
@@ -60,27 +60,28 @@ class FeedbackService(
         talk: CachedTalk,
         nonEncryptedUserEmail: String?
     ): List<Pair<Feedback, FeedbackCount>> {
+        val user = nonEncryptedUserEmail?.let { userService.findOneByNonEncryptedEmailOrNull(it) }
+        if (user == null || talk.speakers.none { it.login == user.login }) {
+            return emptyList()
+        }
         val feedbacks = userFeedbackService.findByTalk(talk.id)
+
         // We need to compute the different scores
         return Feedback.entries
             .filter { it.formats.contains(talk.format) }
             .map { feedback ->
-                val currentUserFeedback = nonEncryptedUserEmail?.let { email ->
-                    feedbacks.any { it.user.email == cryptographer.encrypt(email) && it.notes.contains(feedback) }
-                } ?: false
-
                 val feedbackNotes = feedbacks.mapNotNull { userFeedback ->
                     userFeedback.notes.firstOrNull { it == feedback }
                 }
                 feedback to FeedbackCount(
                     count = feedbackNotes.count(),
-                    selectedByCurrentUser = currentUserFeedback
+                    selectedByCurrentUser = false
                 )
             }
             .sortedBy { it.first.sort }
     }
 
-    suspend fun computeTalkFeedbackComment(
+    suspend fun computeUserTalkFeedbackComment(
         talk: CachedTalk,
         nonEncryptedUserEmail: String?
     ): UserFeedbackComment {
@@ -114,6 +115,34 @@ class FeedbackService(
             )
         }
 
+    }
+
+    suspend fun computeTalkFeedbackComment(
+        talk: CachedTalk,
+        nonEncryptedUserEmail: String?
+    ): UserFeedbackComment? {
+        val user = nonEncryptedUserEmail?.let { userService.findOneByNonEncryptedEmailOrNull(it) }
+        if (user == null || talk.speakers.none { it.login == user.login }) {
+            return null
+        }
+        val feedbacks = userFeedbackService
+            .findByTalk(talk.id)
+            .mapNotNull { it.comment }
+            .filter { it.approvedInstant != null && it.approvedByLogin != null }
+            .map { comment ->
+                FeedbackCommentDto(
+                    comment = comment.comment,
+                    plusCount = comment.feedbackPlus.count(),
+                    plusSelectedByCurrentUser = user?.let { comment.feedbackPlus.contains(it.login) } ?: false,
+                    minusCount = comment.feedbackMinus.count(),
+                    minusSelectedByCurrentUser = user?.let { comment.feedbackMinus.contains(it.login) } ?: false,
+                )
+            }
+        return UserFeedbackComment(
+            login = null,
+            userComment = null,
+            otherComments = feedbacks
+        )
     }
 
     suspend fun voteForTalk(

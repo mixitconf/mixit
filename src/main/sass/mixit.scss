@@ -1327,17 +1327,12 @@ $sponsor-max-width: 20em;
   padding: 1em;
   border-radius: 12px;
   background-color: $fifth-color;
+  img{
+    height: 2em;
+  }
 }
 
-.mxt-feedback-tolike-btn, .mxt-feedback-unlike-btn {
-  img{
-    height: 2em;
-  }
-}
 .mxt-feedback-tolike-btn {
-  img{
-    height: 2em;
-  }
   &:hover {
     >img {
       content: url('/images/svg/mxt-icon--like-dark.svg');

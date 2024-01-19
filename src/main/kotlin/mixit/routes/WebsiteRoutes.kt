@@ -172,6 +172,7 @@ class WebsiteRoutes(
             GET("/faq", faqHandler::faqView)
             GET("/lottery", lotteryHandler::ticketing)
             GET("/me") { userHandler.findProfileView(it) }
+            GET("/me/feedback/{talkId}") { feedbackHandler.findMyFeedbacks(it) }
             GET("/me/edit", userHandler::editProfileView)
             GET("/me/talks/edit/{slug}", talkHandler::editTalkView)
             GET("/mixette/dashboard", mixetteHandler::mixette)
