@@ -38,5 +38,4 @@ class FeatureStateRepository(private val template: ReactiveMongoTemplate) {
 
     fun deleteAll() =
         template.remove<FeatureState>(Query())
-
 }
