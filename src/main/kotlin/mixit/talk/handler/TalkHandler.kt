@@ -102,7 +102,7 @@ class TalkHandler(
                 year,
                 req,
                 topic,
-                viewList = if ((req.queryParamOrNull("agenda") ?: if(year == CURRENT_EVENT.toInt()) "true" else "false") == "true") Agenda else ListByDate,
+                viewList = if ((req.queryParamOrNull("agenda") ?: if (year == CURRENT_EVENT.toInt()) "true" else "false") == "true") Agenda else ListByDate,
                 viewWorkshop = (req.queryParamOrNull("workshop") ?: "true") == "true"
             )
 
@@ -453,8 +453,8 @@ class TalkHandler(
                     "vimeoPlayer" to talk.video.toVimeoPlayerUrl(),
                     "twitchPlayer" to (talk.video?.contains("twitch") ?: false),
                     "vimeoPlayer2" to talk.video2.toVimeoPlayerUrl(),
-                    FEEDBACK_TYPES to feedbackService.computeUserTalkFeedback(talk, currentUserEmail),
-                    FEEDBACK_COMMENTS to feedbackService.computeUserTalkFeedbackComment(talk, currentUserEmail),
+                    FEEDBACK_TYPES to feedbackService.computeUserFeedbackForTalk(talk, currentUserEmail),
+                    FEEDBACK_COMMENTS to feedbackService.computeUserCommentForTalk(talk, currentUserEmail),
                     // We must be more clever (open when the talk start ?)
                     HAS_FEEDBACK to true
                 )

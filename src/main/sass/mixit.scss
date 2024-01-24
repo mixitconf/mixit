@@ -1322,6 +1322,24 @@ $sponsor-max-width: 20em;
   }
 }
 
+.mxt-feedback--note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > div {
+    margin-right: 0.2em;
+    font-weight: bolder;
+    font-size: larger;
+    top:4px;
+    position: relative;
+    color: white;
+    background-color: $secondary-color;
+    border-radius: 50%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}
+
 .mxt-feedback--container {
   border: 2px solid $fifth-color;
   padding: 1em;

@@ -58,7 +58,6 @@ class AboutHandler(
             Venue
         )
 
-
     suspend fun codeConductView(req: ServerRequest): ServerResponse =
         SimpleTemplateLoader.openTemplate(
             eventService,

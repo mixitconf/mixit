@@ -9,7 +9,6 @@ import mixit.event.model.SponsorshipLevel.LANYARD
 import mixit.event.model.SponsorshipLevel.MIXTEEN
 import mixit.event.model.SponsorshipLevel.PARTY
 import mixit.event.model.SponsorshipLevel.SILVER
-import mixit.features.model.Feature
 import mixit.features.model.FeatureStateService
 import mixit.util.mustache.MustacheI18n.CREATION_MODE
 import mixit.util.mustache.MustacheI18n.MESSAGE

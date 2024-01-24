@@ -200,7 +200,7 @@ class UserHandler(
         )
 
         val interests = formData["interests"]?.split(",")?.map { it.trim() } ?: emptyList()
-        if(interests.isNotEmpty()) {
+        if (interests.isNotEmpty()) {
             lotteryRepository
                 .save(lotteryRepository.findByEncryptedEmail(updatedUser.email!!)!!.copy(interests = interests))
                 .awaitSingleOrNull()

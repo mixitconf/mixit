@@ -84,7 +84,6 @@ class UserRepository(
             )
             .awaitSingleOrNull()
 
-
     suspend fun findByRoles(roles: List<Role>): List<User> =
         template.find<User>(Query(where("role").inValues(roles))).collectList().awaitSingle()
 
