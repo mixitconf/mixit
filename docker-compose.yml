@@ -12,6 +12,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: mixit23
     volumes:
       - ./db/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+      - ./db/dump:/tmp/dump
 
   mongo-express:
     image: mongo-express

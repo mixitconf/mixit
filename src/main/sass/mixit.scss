@@ -850,10 +850,11 @@ h3 {
 }
 
 .mxt-navbar--talks {
-  justify-content: flex-start;
+  justify-content: center;
   .nav-item {
     background-color: $third-color;
     border-radius: 24px;
+    margin: 0.5em;
   }
   button, a, .mxt-navbar--nav-link {
     border: 2px solid $third-color !important;
@@ -1319,6 +1320,24 @@ $sponsor-max-width: 20em;
   text-decoration: none;
   &:hover {
     color:  $primary-color;
+  }
+}
+
+.mxt-feedback--note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  > div {
+    margin-right: 0.2em;
+    font-weight: bolder;
+    font-size: larger;
+    top:4px;
+    position: relative;
+    color: white;
+    background-color: $secondary-color;
+    border-radius: 50%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
   }
 }
 

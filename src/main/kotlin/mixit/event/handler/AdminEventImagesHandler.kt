@@ -76,7 +76,7 @@ class AdminEventImagesHandler(
     suspend fun adminDeleteEventImages(req: ServerRequest): ServerResponse {
         val formData = req.extractFormData()
         service.delete(formData["event"] ?: throw NotFoundException()).awaitSingleOrNull()
-        return seeOther("${properties.baseUri}${LIST_URI}")
+        return seeOther("${properties.baseUri}$LIST_URI")
     }
 
     suspend fun adminSaveEventImages(req: ServerRequest): ServerResponse {
@@ -85,7 +85,7 @@ class AdminEventImagesHandler(
         val existingEvent = service.findOneOrNull(formData["event"] ?: throw NotFoundException())?.toEventImages()
         val updatedEvent = existingEvent ?: EventImages(formData["event"]!!, emptyList())
         service.save(updatedEvent).awaitSingleOrNull()
-        return seeOther("${properties.baseUri}${LIST_URI}")
+        return seeOther("${properties.baseUri}$LIST_URI")
     }
 
     suspend fun editEventImagesSection(req: ServerRequest): ServerResponse {

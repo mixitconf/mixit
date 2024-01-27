@@ -30,7 +30,6 @@ data class Question(
         } else {
             title.descriptionEn.hasFoundOccurrences(searchTerms) || answer.descriptionEn.hasFoundOccurrences(searchTerms)
         }
-
 }
 
 @Document
@@ -56,7 +55,7 @@ data class QuestionSection(
      */
     private fun markFoundOccurrencesEn(searchTerms: List<String>): QuestionSection? =
         if (searchTerms.isEmpty()) this else {
-            if(!hasFoundOccurrences(ENGLISH, searchTerms) || questions.all { !it.hasFoundOccurrences(ENGLISH, searchTerms) }) {
+            if (!hasFoundOccurrences(ENGLISH, searchTerms) || questions.all { !it.hasFoundOccurrences(ENGLISH, searchTerms) }) {
                 null
             } else {
                 this.copy(
@@ -64,10 +63,9 @@ data class QuestionSection(
                         descriptionEn = title.descriptionEn.markFoundOccurrences(searchTerms) ?: title.descriptionEn
                     ),
                     questions = questions.mapNotNull {
-                        if(!it.hasFoundOccurrences(ENGLISH, searchTerms)) {
+                        if (!it.hasFoundOccurrences(ENGLISH, searchTerms)) {
                             null
-                        }
-                        else {
+                        } else {
                             it.copy(
                                 title = it.title.copy(
                                     descriptionEn = it.title.descriptionEn.markFoundOccurrences(searchTerms)
@@ -83,30 +81,29 @@ data class QuestionSection(
         }
 
     private fun markFoundOccurrencesFr(searchTerms: List<String>): QuestionSection? =
-    if (searchTerms.isEmpty()) this else {
-        if(!hasFoundOccurrences(FRENCH, searchTerms) || questions.all { !it.hasFoundOccurrences(FRENCH, searchTerms) }) {
-            null
-        } else {
-            this.copy(
-                title = title.copy(
-                    descriptionFr = title.descriptionFr.markFoundOccurrences(searchTerms)
-                ),
-                questions = questions.mapNotNull {
-                    if(!it.hasFoundOccurrences(ENGLISH, searchTerms)) {
-                        null
-                    }
-                    else {
-                        it.copy(
-                            title = it.title.copy(
-                                descriptionFr = it.title.descriptionFr.markFoundOccurrences(searchTerms)
-                            ),
-                            answer = it.answer.copy(
-                                descriptionFr = it.answer.descriptionFr.markFoundOccurrences(searchTerms)
+        if (searchTerms.isEmpty()) this else {
+            if (!hasFoundOccurrences(FRENCH, searchTerms) || questions.all { !it.hasFoundOccurrences(FRENCH, searchTerms) }) {
+                null
+            } else {
+                this.copy(
+                    title = title.copy(
+                        descriptionFr = title.descriptionFr.markFoundOccurrences(searchTerms)
+                    ),
+                    questions = questions.mapNotNull {
+                        if (!it.hasFoundOccurrences(ENGLISH, searchTerms)) {
+                            null
+                        } else {
+                            it.copy(
+                                title = it.title.copy(
+                                    descriptionFr = it.title.descriptionFr.markFoundOccurrences(searchTerms)
+                                ),
+                                answer = it.answer.copy(
+                                    descriptionFr = it.answer.descriptionFr.markFoundOccurrences(searchTerms)
+                                )
                             )
-                        )
+                        }
                     }
-                }
-            )
+                )
+            }
         }
-    }
 }

@@ -128,12 +128,10 @@
                         </ul>
                         <p>{{#markdown}}{{summary}}{{/markdown}}</p>
                         <div class="mxt-btn-container">
-                        {{#hasFeatureFeedback}}
-                            {{#speakerYear}}
+                        {{#hasFeatureFeedbackResult}}
                                 <a href="{{localePrefix}}/me/feedback/{{id}}" class="mxt-btn-light ms-2" style="margin-bottom: 0">
                                     {{#i18n}}feedback.speaker{{/i18n}} {{speakerYear}}</a>
-                            {{/speakerYear}}
-                        {{/hasFeatureFeedback}}
+                        {{/hasFeatureFeedbackResult}}
                         </div>
                     </article>
                 {{/talks}}

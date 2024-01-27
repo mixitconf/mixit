@@ -14,5 +14,4 @@ class JsonQuestionHandler(
 ) {
     suspend fun findAll(req: ServerRequest): ServerResponse =
         repository.findAll().let { ok().json().bodyValueAndAwait(it) }
-
 }

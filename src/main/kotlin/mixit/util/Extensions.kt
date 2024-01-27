@@ -9,9 +9,6 @@ import mixit.talk.model.Language
 import org.commonmark.ext.autolink.AutolinkExtension
 import org.commonmark.parser.Parser
 import org.commonmark.renderer.html.HtmlRenderer
-import org.springframework.http.MediaType.APPLICATION_JSON
-import org.springframework.http.MediaType.APPLICATION_XML
-import org.springframework.http.MediaType.TEXT_HTML
 import org.springframework.http.ResponseCookie
 import org.springframework.web.reactive.function.BodyExtractors
 import org.springframework.web.reactive.function.server.ServerRequest

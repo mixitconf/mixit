@@ -65,7 +65,7 @@ class AdminTalkHandler(
     suspend fun createTalk(req: ServerRequest): ServerResponse =
         this.adminTalk(Talk(TALK, req.pathVariable("year"), "", ""))
 
-    suspend fun editTalk(req: ServerRequest): ServerResponse  =
+    suspend fun editTalk(req: ServerRequest): ServerResponse =
         adminTalk(service.findOneOrNull(req.pathVariable("id"))?.toTalk() ?: throw NotFoundException())
 
     suspend fun adminSaveTalk(req: ServerRequest): ServerResponse {

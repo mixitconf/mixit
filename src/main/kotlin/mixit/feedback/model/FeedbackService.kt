@@ -1,12 +1,21 @@
 package mixit.feedback.model
 
-import mixit.MixitApplication
-import mixit.security.model.Cryptographer
-import mixit.talk.model.CachedTalk
-import mixit.user.model.UserService
-import org.springframework.stereotype.Service
 import java.time.Instant
-import java.util.*
+import java.util.UUID
+import mixit.MixitApplication
+import mixit.feedback.model.FeedbackService.CommentType.All
+import mixit.feedback.model.FeedbackService.CommentType.Rejected
+import mixit.feedback.model.FeedbackService.CommentType.Unvalidated
+import mixit.feedback.model.FeedbackService.CommentType.Validated
+import mixit.security.model.Cryptographer
+import mixit.talk.handler.TalkDto
+import mixit.talk.model.CachedTalk
+import mixit.talk.model.Language
+import mixit.user.model.UserService
+import mixit.user.model.desanonymize
+import mixit.util.extractFormData
+import org.springframework.data.crossstore.ChangeSetPersister.NotFoundException
+import org.springframework.stereotype.Service
 
 data class FeedbackCount(val count: Int, val selectedByCurrentUser: Boolean)
 
@@ -31,7 +40,7 @@ class FeedbackService(
     private val cryptographer: Cryptographer
 ) {
 
-    suspend fun computeUserTalkFeedback(
+    suspend fun computeUserFeedbackForTalk(
         talk: CachedTalk,
         nonEncryptedUserEmail: String?
     ): List<Pair<Feedback, FeedbackCount>> {
@@ -56,7 +65,7 @@ class FeedbackService(
             .sortedBy { it.first.sort }
     }
 
-    suspend fun computeTalkFeedback(
+    suspend fun computeFeedbackForTalk(
         talk: CachedTalk,
         nonEncryptedUserEmail: String?
     ): List<Pair<Feedback, FeedbackCount>> {
@@ -75,13 +84,13 @@ class FeedbackService(
                 }
                 feedback to FeedbackCount(
                     count = feedbackNotes.count(),
-                    selectedByCurrentUser = false
+                    selectedByCurrentUser = feedbackNotes.isNotEmpty()
                 )
             }
             .sortedBy { it.first.sort }
     }
 
-    suspend fun computeUserTalkFeedbackComment(
+    suspend fun computeUserCommentForTalk(
         talk: CachedTalk,
         nonEncryptedUserEmail: String?
     ): UserFeedbackComment {
@@ -114,10 +123,9 @@ class FeedbackService(
                 otherComments = emptyList()
             )
         }
-
     }
 
-    suspend fun computeTalkFeedbackComment(
+    suspend fun computeCommentsForTalk(
         talk: CachedTalk,
         nonEncryptedUserEmail: String?
     ): UserFeedbackComment? {
@@ -186,6 +194,26 @@ class FeedbackService(
         )
     }
 
+    suspend fun saveFeedbackState(
+        adminNonEncryptedUserEmail: String,
+        feedbackId: String,
+        type: CommentType,
+        accepted: Boolean = true
+    ) {
+        val feedback = userFeedbackService.findOneOrNull(feedbackId) ?: throw NotFoundException()
+        val comment = feedback.comment ?: throw NotFoundException()
+        val admin = userService.findOneByNonEncryptedEmailOrNull(adminNonEncryptedUserEmail) ?: throw NotFoundException()
+
+        val newComment = comment.copy(
+            approvedInstant = if (accepted) Instant.now() else null,
+            approvedByLogin = if (accepted) admin.login else null,
+            disapprovedInstant = if (!accepted) Instant.now() else null,
+            disapprovedByLogin = if (!accepted) admin.login else null
+        )
+
+        userFeedbackService.save(feedback.copy(comment = newComment).toUserFeedback())
+    }
+
     suspend fun saveCommentForTalk(
         talkId: String,
         comment: String?,
@@ -221,4 +249,31 @@ class FeedbackService(
             userFeedbackService.save(userFeedbackOnTalkToPersist)
         }
     }
+
+    enum class CommentType { Unvalidated, Validated, Rejected, All }
+
+    suspend fun findComments(type: CommentType, year: String): Map<TalkDto, List<CachedUserFeedback>> =
+        userFeedbackService
+            .findAll()
+            .asSequence()
+            .filter { it.talk.event == year }
+            .filter {
+                when (type) {
+                    All -> true
+                    Rejected -> (it.comment?.disapprovedByLogin != null)
+                    Validated -> (it.comment?.approvedByLogin != null)
+                    Unvalidated -> it.comment?.disapprovedByLogin == null && it.comment?.approvedByLogin == null
+                }
+            }
+            .groupBy { it.talk }
+            .filter { it.value.mapNotNull { feed -> feed.comment }.isNotEmpty() }
+            .map { (talk, comments) ->
+                val speakers = userService.findAllByIds(talk.speakerIds).map { it.toUser() }
+                val sortedComments = comments.sortedByDescending { it.creationInstant }.map {
+                    val user = it.user.copy(email = cryptographer.decrypt(it.user.email))
+                    it.copy(user = user)
+                }
+                CachedTalk(talk, speakers).toDto(Language.FRENCH) to sortedComments
+            }
+            .toMap()
 }

@@ -2,7 +2,7 @@ package mixit.feedback.model
 
 import mixit.talk.model.TalkFormat
 
-enum class Feedback(val sort:Int, val formats: List<TalkFormat>) {
+enum class Feedback(val sort: Int, val formats: List<TalkFormat>) {
     COULD_BE_MORE_EXPLORED(10, TalkFormat.entries.toList()),
     FUN(11, TalkFormat.entries.toList()),
     LACKS_DEMO(3, listOf(TalkFormat.TALK, TalkFormat.LIGHTNING_TALK, TalkFormat.WORKSHOP)),

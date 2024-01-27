@@ -175,104 +175,106 @@
     </div>
 </div>
 {{#hasFeatureFeedback}}
-<div class="container-xxl">
-    <h2 class="pt-5">{{#i18n}}feedback.title{{/i18n}}</h2>
-    <p>
-        {{#i18n}}feedback.{{talk.format}}.description{{/i18n}}
-        <br>
-        <i>{{#i18n}}feedback.anonymous{{/i18n}}</i>
-    </p>
-    {{^connected}}
-        <div class="mxt-btn-container">
-            <a class="mxt-btn-primary" id="mxt-feedback-comment--button ps-2" href="/login">
-                {{#i18n}}login.action.signin{{/i18n}}</a>
-        </div>
-    {{/connected}}
-    {{#connected}}
-        <div class="row">
-            {{#feedbackTypes}}
-                <div class="col-4 p-3" >
-                    <div class="mxt-feedback--container text-center {{#second.selectedByCurrentUser}}mxt-feedback-selected{{/second.selectedByCurrentUser}}"
-                         id="mxt-feedback-{{first}}--container">
-                        <div><b>{{#i18n}}feedback.{{first}}{{/i18n}}</b></div>
-                        <div class="mxt-btn-container">
-                            <button onclick="voteForTalk('{{first}}', '{{talk.id}}', '{{email}}')"
-                                    class="mxt-feedback-btn mxt-btn-light mxt-feedback-tolike-btn"
-                                    id="mxt-feedback-btn-{{first}}-like"
-                                    {{#second.selectedByCurrentUser}}style="display: none" {{/second.selectedByCurrentUser}}>
-                                <img src="/images/svg/mxt-icon--like-hover.svg" alt="Vote">
-                            </button>
-                            <button onclick="voteForTalk('{{first}}', '{{talk.id}}', '{{email}}')"
-                                    class="mxt-feedback-btn mxt-btn-third mxt-feedback-unlike-btn mxt-feedback-btn"
-                                    id="mxt-feedback-btn-{{first}}-unlike"
-                                    {{^second.selectedByCurrentUser}}style="display: none" {{/second.selectedByCurrentUser}}>
-                                <img src="/images/svg/mxt-icon--like-selected-dark.svg" alt="Vote">
-                            </button>
+    {{#isCurrent}}
+    <div class="container-xxl">
+        <h2 class="pt-5">{{#i18n}}feedback.title{{/i18n}}</h2>
+        <p>
+            {{#i18n}}feedback.{{talk.format}}.description{{/i18n}}
+            <br>
+            <i>{{#i18n}}feedback.anonymous{{/i18n}}</i>
+        </p>
+        {{^connected}}
+            <div class="mxt-btn-container">
+                <a class="mxt-btn-primary" id="mxt-feedback-comment--button ps-2" href="/login">
+                    {{#i18n}}login.action.signin{{/i18n}}</a>
+            </div>
+        {{/connected}}
+        {{#connected}}
+            <div class="row">
+                {{#feedbackTypes}}
+                    <div class="col-4 p-3" >
+                        <div class="mxt-feedback--container text-center {{#second.selectedByCurrentUser}}mxt-feedback-selected{{/second.selectedByCurrentUser}}"
+                             id="mxt-feedback-{{first}}--container">
+                            <div><b>{{#i18n}}feedback.{{first}}{{/i18n}}</b></div>
+                            <div class="mxt-btn-container">
+                                <button onclick="voteForTalk('{{first}}', '{{talk.id}}', '{{email}}')"
+                                        class="mxt-feedback-btn mxt-btn-light mxt-feedback-tolike-btn"
+                                        id="mxt-feedback-btn-{{first}}-like"
+                                        {{#second.selectedByCurrentUser}}style="display: none" {{/second.selectedByCurrentUser}}>
+                                    <img src="/images/svg/mxt-icon--like-hover.svg" alt="Vote">
+                                </button>
+                                <button onclick="voteForTalk('{{first}}', '{{talk.id}}', '{{email}}')"
+                                        class="mxt-feedback-btn mxt-btn-third mxt-feedback-unlike-btn mxt-feedback-btn"
+                                        id="mxt-feedback-btn-{{first}}-unlike"
+                                        {{^second.selectedByCurrentUser}}style="display: none" {{/second.selectedByCurrentUser}}>
+                                    <img src="/images/svg/mxt-icon--like-selected-dark.svg" alt="Vote">
+                                </button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            {{/feedbackTypes}}
-            <script>
-                function voteForTalk(feedback, talkId, email) {
-                    fetch(`/api/feedback/${email}/talks/${talkId}/vote/${feedback}`, {method: 'post'})
-                            .then(response => response.json())
-                            .then((json) => {
-                                const container = document.getElementById(`mxt-feedback-${feedback}--container`);
-                                if(json.selectedByCurrentUser) {
-                                    document.getElementById(`mxt-feedback-btn-${feedback}-unlike`).style.display = 'flex';
-                                    document.getElementById(`mxt-feedback-btn-${feedback}-like`).style.display = 'none';
-                                }
-                                else  {
-                                    document.getElementById(`mxt-feedback-btn-${feedback}-unlike`).style.display = 'none';
-                                    document.getElementById(`mxt-feedback-btn-${feedback}-like`).style.display = 'flex';
-                                }
-                                if (json.selectedByCurrentUser && !container.classList.contains('mxt-feedback-selected')) {
-                                    container.classList.add('mxt-feedback-selected');
-                                }
-                                if (!json.selectedByCurrentUser && container.classList.contains('mxt-feedback-selected')) {
-                                    container.classList.remove('mxt-feedback-selected');
-                                }
-                            });
-
-                    event.stopPropagation();
-                }
-            </script>
-        </div>
-        <div class="row pt-4 pb-4" id="mxt-feedback-comment--container">
-            <form method="post" action="/{{year}}/{{talk.slug}}/feedback/comment" name="commentForm">
-                <input type="hidden" name="email" value="{{email}}">
-                <input type="hidden" name="talkId" value="{{talk.id}}">
-                {{#i18n}}feedback.comment{{/i18n}}
-                <textarea name="comment"
-                          id="comment"
-                          type="text"
-                          class="form-control col-10"
-                          rows="2">{{#feedbackComments.userComment}}{{feedbackComments.userComment}}{{/feedbackComments.userComment}}</textarea>
-                <div class="mxt-btn-container pt-3">
-                    {{#feedbackComments.userComment}}
-                        <button class="mxt-btn-primary" id="mxt-feedback-comment--button"
-                                onclick="deleteComment()">
-                            {{#i18n}}common.actions.delete{{/i18n}}</button>&nbsp;
-                        <button type="submit" class="mxt-btn-primary" id="mxt-feedback-comment--button ps-2">
-                            {{#i18n}}common.actions.update{{/i18n}}</button>
-                    {{/feedbackComments.userComment}}
-                    {{^feedbackComments.userComment}}
-                        <button class="mxt-btn-primary" id="mxt-feedback-comment--button">
-                            {{#i18n}}common.actions.create{{/i18n}}</button>
-                    {{/feedbackComments.userComment}}
-                </div>
+                {{/feedbackTypes}}
                 <script>
-                    function deleteComment() {
-                        if(confirm('{{#i18n}}feedback.comment.delete{{/i18n}}')) {
-                            document.getElementById('comment').textContent='';
-                            document.forms['commentForm'].submit();
-                        }
+                    function voteForTalk(feedback, talkId, email) {
+                        fetch(`/api/feedback/${email}/talks/${talkId}/vote/${feedback}`, {method: 'post'})
+                                .then(response => response.json())
+                                .then((json) => {
+                                    const container = document.getElementById(`mxt-feedback-${feedback}--container`);
+                                    if(json.selectedByCurrentUser) {
+                                        document.getElementById(`mxt-feedback-btn-${feedback}-unlike`).style.display = 'flex';
+                                        document.getElementById(`mxt-feedback-btn-${feedback}-like`).style.display = 'none';
+                                    }
+                                    else  {
+                                        document.getElementById(`mxt-feedback-btn-${feedback}-unlike`).style.display = 'none';
+                                        document.getElementById(`mxt-feedback-btn-${feedback}-like`).style.display = 'flex';
+                                    }
+                                    if (json.selectedByCurrentUser && !container.classList.contains('mxt-feedback-selected')) {
+                                        container.classList.add('mxt-feedback-selected');
+                                    }
+                                    if (!json.selectedByCurrentUser && container.classList.contains('mxt-feedback-selected')) {
+                                        container.classList.remove('mxt-feedback-selected');
+                                    }
+                                });
+
+                        event.stopPropagation();
                     }
                 </script>
-            </form>
-        </div>
-    {{/connected}}
-</div>
+            </div>
+            <div class="row pt-4 pb-4" id="mxt-feedback-comment--container">
+                <form method="post" action="/{{year}}/{{talk.slug}}/feedback/comment" name="commentForm">
+                    <input type="hidden" name="email" value="{{email}}">
+                    <input type="hidden" name="talkId" value="{{talk.id}}">
+                    {{#i18n}}feedback.comment{{/i18n}}
+                    <textarea name="comment"
+                              id="comment"
+                              type="text"
+                              class="form-control col-10"
+                              rows="2">{{#feedbackComments.userComment}}{{feedbackComments.userComment}}{{/feedbackComments.userComment}}</textarea>
+                    <div class="mxt-btn-container pt-3">
+                        {{#feedbackComments.userComment}}
+                            <button class="mxt-btn-primary" id="mxt-feedback-comment--button"
+                                    onclick="deleteComment()">
+                                {{#i18n}}common.actions.delete{{/i18n}}</button>&nbsp;
+                            <button type="submit" class="mxt-btn-primary" id="mxt-feedback-comment--button ps-2">
+                                {{#i18n}}common.actions.update{{/i18n}}</button>
+                        {{/feedbackComments.userComment}}
+                        {{^feedbackComments.userComment}}
+                            <button class="mxt-btn-primary" id="mxt-feedback-comment--button">
+                                {{#i18n}}common.actions.create{{/i18n}}</button>
+                        {{/feedbackComments.userComment}}
+                    </div>
+                    <script>
+                        function deleteComment() {
+                            if(confirm('{{#i18n}}feedback.comment.delete{{/i18n}}')) {
+                                document.getElementById('comment').textContent='';
+                                document.forms['commentForm'].submit();
+                            }
+                        }
+                    </script>
+                </form>
+            </div>
+        {{/connected}}
+    </div>
+    {{/isCurrent}}
 {{/hasFeatureFeedback}}
 
 {{#connected}}

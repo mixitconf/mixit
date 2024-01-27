@@ -1,6 +1,7 @@
 package mixit.routes
 
 import com.samskivert.mustache.Mustache
+import java.util.Locale
 import mixit.MixitProperties
 import mixit.features.model.Feature
 import mixit.features.model.FeatureStateService
@@ -18,7 +19,6 @@ import org.springframework.web.server.WebSession
 import org.springframework.web.util.UriUtils
 import reactor.core.publisher.Mono
 import reactor.kotlin.core.publisher.toMono
-import java.util.*
 
 @Component
 class RouteFilterUtils(

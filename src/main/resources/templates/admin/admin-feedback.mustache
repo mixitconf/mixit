@@ -1,0 +1,95 @@
+{{> header}}
+
+
+<div class="container-xxl">
+    <h1>{{#i18n}}{{title}}{{/i18n}} comments {{year}}</h1>
+    {{> year-selector}}
+    <div class="mxt-year-selector mt-3 mb-3">
+        {{#criteria}}
+            <div class="flex-fill text-center">
+                <a href="{{localePrefix}}/admin/feedbacks/{{year}}?type={{first}}"
+                class="mxt-nav-link mxt-navbar--nav-link {{#second}}selected{{/second}}">{{first}}</a>
+            </div>
+        {{/criteria}}
+    </div>
+
+    {{#feedbackComments}}
+        {{#entrySet}}
+            {{#key}}
+                <div class="mxt-talks--container p-3" style="border-radius: 4px;margin-top: 0.5em;">
+                    <div class="mxt-accordion-talk-line">
+                        {{#topic}}
+                            <div class="mxt-text--cat mxt-text--cat-{{topic}}" style="float: right">
+                                <img src="/images/svg/mxt-icon--{{topic}}.svg"
+                                     class="mxt-icon--cat mxt-icon--cat__talks"
+                                     alt="{{#i18n}}topics.{{topic}}.title{{/i18n}}"/>
+                                <span>{{#i18n}}topics.{{topic}}.title{{/i18n}}</span>
+                            </div>
+                        {{/topic}}
+                        <div class="mxt-text--cat-format">
+                            &nbsp;<strong><small>#{{#i18n}}talk.format.{{format}}{{/i18n}}</small></strong>
+                        </div>
+                    </div>
+                    <h3 class="mxt-text--talktitle">
+                        <a href="{{localePrefix}}/{{event}}{{#slug}}/{{slug}}{{/slug}}">{{title}}</a>
+                        {{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
+                    </h3>
+                    <ul class="mxt-wrapper-list-inline mb-0 pb-0">
+                        {{#speakers}}
+                            <li>
+                                <div class="mxt-text--cat mxt-text--cat-speaker">
+                                    <a href="/user/{{login}}">{{firstname}}&nbsp;{{lastname}}</a></div>
+                            </li>
+                        {{/speakers}}
+                    </ul>
+                    {{#value}}
+                        {{#comment.comment}}
+                            <div class="row mt-3">
+                                <div class="col-lg-9 col-12">
+                                    <div>
+                                        <small>commentaire de <a href="/user/{{user.login}}">
+                                            <strong>{{user.firstname}}&nbsp;{{user.lastname}}</strong></a>
+                                            ({{user.email}})</small>
+                                    </div>
+                                    <div class="form-control">
+                                        {{comment.comment}}
+                                    </div>
+                                    {{#comment.approvedByLogin}}
+                                        <small>approuvé à {{comment.approvedInstant}}
+                                            par {{comment.approvedByLogin}}</small>
+                                    {{/comment.approvedByLogin}}
+                                    {{#comment.disapprovedByLogin}}
+                                        <small>rejeté à {{comment.disapprovedInstant}}
+                                            par {{comment.disapprovedByLogin}}</small>
+                                    {{/comment.disapprovedByLogin}}
+                                    {{^comment.approvedByLogin}}
+                                        {{^comment.disapprovedByLogin}}
+                                            <small>pas encore approuvé ou refusé</small>
+                                        {{/comment.disapprovedByLogin}}
+                                    {{/comment.approvedByLogin}}
+
+                                </div>
+                                <div class="col-lg-3 col-12 mxt-btn-container">
+                                    <form action="/admin/feedbacks/{{id}}/approve" method="post">
+                                        <input type="hidden" name="type" value="{{type}}">
+                                        <input type="hidden" name="year" value="{{year}}">
+                                        <button class="mxt-btn-primary ms-2"><small>Approuver</small></button>
+                                    </form>
+                                    <form action="/admin/feedbacks/{{id}}/reject" method="post">
+                                        <input type="hidden" name="type" value="{{type}}">
+                                        <input type="hidden" name="year" value="{{year}}">
+                                        <button class="mxt-btn-light ms-2"><small>Rejeter</small></button>
+                                    </form>
+                                </div>
+                            </div>
+                        {{/comment.comment}}
+                    {{/value}}
+
+                </div>
+            {{/key}}
+        {{/entrySet}}
+    {{/feedbackComments}}
+</div>
+
+
+{{> footer}}

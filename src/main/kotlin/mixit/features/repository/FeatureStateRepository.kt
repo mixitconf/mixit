@@ -15,13 +15,9 @@ class FeatureStateRepository(private val template: ReactiveMongoTemplate) {
 
     fun initData() {
         if (count().block() == 0L) {
-            save(FeatureState(false, Feature.Cfp)).block()
-            save(FeatureState(false, Feature.Lottery)).block()
-            save(FeatureState(false, Feature.LotteryResult)).block()
-            save(FeatureState(false, Feature.Mixette)).block()
-            save(FeatureState(false, Feature.MixitOnAirOnHomePage)).block()
-            save(FeatureState(false, Feature.ProfileMessage)).block()
-            save(FeatureState(false, Feature.Feedback)).block()
+            Feature.entries.forEach {
+                save(FeatureState(false,it)).block()
+            }
         }
     }
 
@@ -38,5 +34,4 @@ class FeatureStateRepository(private val template: ReactiveMongoTemplate) {
 
     fun deleteAll() =
         template.remove<FeatureState>(Query())
-
 }

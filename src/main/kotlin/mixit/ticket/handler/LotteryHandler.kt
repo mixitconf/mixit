@@ -1,15 +1,10 @@
 package mixit.ticket.handler
 
+import java.util.Locale
 import kotlinx.coroutines.reactor.awaitSingle
 import mixit.event.model.EventService
 import mixit.features.model.Feature
 import mixit.features.model.FeatureStateService
-import mixit.util.mustache.MustacheI18n.TITLE
-import mixit.util.mustache.MustacheTemplate
-import mixit.util.mustache.MustacheTemplate.LotteryClosed
-import mixit.util.mustache.MustacheTemplate.LotteryEdit
-import mixit.util.mustache.MustacheTemplate.LotteryError
-import mixit.util.mustache.MustacheTemplate.LotterySubmission
 import mixit.security.model.Cryptographer
 import mixit.ticket.model.LotteryTicket
 import mixit.ticket.repository.LotteryRepository
@@ -19,16 +14,21 @@ import mixit.util.SimpleTemplateLoader
 import mixit.util.camelCase
 import mixit.util.email.EmailService
 import mixit.util.extractFormData
-import org.springframework.web.reactive.function.server.json
 import mixit.util.locale
+import mixit.util.mustache.MustacheI18n.TITLE
+import mixit.util.mustache.MustacheTemplate
+import mixit.util.mustache.MustacheTemplate.LotteryClosed
+import mixit.util.mustache.MustacheTemplate.LotteryEdit
+import mixit.util.mustache.MustacheTemplate.LotteryError
+import mixit.util.mustache.MustacheTemplate.LotterySubmission
 import org.springframework.dao.DuplicateKeyException
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.bodyValueAndAwait
+import org.springframework.web.reactive.function.server.json
 import org.springframework.web.reactive.function.server.renderAndAwait
-import java.util.*
 
 @Component
 class LotteryHandler(

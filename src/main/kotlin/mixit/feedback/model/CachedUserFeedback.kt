@@ -35,4 +35,3 @@ data class CachedUserFeedback(
             creationInstant = creationInstant,
         )
 }
-

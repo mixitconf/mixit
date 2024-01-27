@@ -5,7 +5,6 @@ import com.fasterxml.jackson.module.kotlin.readValue
 import kotlinx.coroutines.reactor.awaitSingle
 import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.faq.model.QuestionSection
-import mixit.talk.model.Talk
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
@@ -31,7 +30,7 @@ class QuestionSectionRepository(
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
-        //TODO delete after index creation
+        // TODO delete after index creation
         deleteAll().block()
         if (count().block() == 0L) {
             ClassPathResource("data/faq.json").inputStream.use { resource ->

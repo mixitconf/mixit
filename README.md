@@ -82,3 +82,15 @@ curl https://mixitconf.org/api/user | python3 -m json.tool > users.json
 curl https://mixitconf.org/api/2024/talk | python3 -m json.tool > talks_2024.json
 git commit -a -m "Update data from PROD"
 ```
+
+## Database
+
+If you need to restore a Clever Cloud archive in your local db, you can follow these steps
+
+* copy the archive in ./db/dump
+* restart the container
+* use this command 
+```shell
+docker exec -it mongo-mixit mongorestore -u=admin -p=mixit23 --drop --noIndexRestore --archive=/tmp/dump/mongodb_XXXX.archive
+
+```

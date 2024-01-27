@@ -1,17 +1,18 @@
 package mixit.faq.handler
 
+import java.util.UUID
 import mixit.MixitProperties
 import mixit.faq.model.Question
 import mixit.faq.model.QuestionSection
 import mixit.faq.model.QuestionSectionService
 import mixit.faq.model.Text
 import mixit.faq.repository.QuestionSectionRepository
+import mixit.util.errors.NotFoundException
+import mixit.util.extractFormData
 import mixit.util.mustache.MustacheI18n.TITLE
 import mixit.util.mustache.MustacheTemplate.AdminFaq
 import mixit.util.mustache.MustacheTemplate.AdminFaqQuestion
 import mixit.util.mustache.MustacheTemplate.AdminFaqQuestionSection
-import mixit.util.errors.NotFoundException
-import mixit.util.extractFormData
 import mixit.util.seeOther
 import mixit.util.validator.MarkdownValidator
 import org.springframework.stereotype.Component
@@ -19,7 +20,6 @@ import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.renderAndAwait
-import java.util.*
 
 @Component
 class AdminQuestionHandler(
@@ -160,6 +160,6 @@ class AdminQuestionHandler(
         val sectionId = formData["sectionId"] ?: throw NotFoundException()
         val section = repository.findOneOrNull(sectionId) ?: throw NotFoundException()
         service.save(section.copy(questions = section.questions.filter { it.id != formData["questionId"] }))
-        return seeOther("${properties.baseUri}$LIST_URI/sections/${sectionId}")
+        return seeOther("${properties.baseUri}$LIST_URI/sections/$sectionId")
     }
 }
