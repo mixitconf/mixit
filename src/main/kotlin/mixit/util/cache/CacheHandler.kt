@@ -17,6 +17,7 @@ import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.renderAndAwait
 import java.time.LocalDateTime
 import java.time.ZoneId
+import mixit.features.model.FeatureStateService
 
 data class CacheZoneStat(
     val zone: CacheZone,
@@ -43,7 +44,7 @@ class CacheHandler(
     private val ticketService: TicketService,
     private val eventImagesService: EventImagesService,
     private val faqService: QuestionSectionService,
-    private val featureStateService: QuestionSectionService,
+    private val featureStateService: FeatureStateService,
     private val feedbackService: UserFeedbackService
 ) {
 
