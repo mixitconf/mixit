@@ -850,10 +850,11 @@ h3 {
 }
 
 .mxt-navbar--talks {
-  justify-content: flex-start;
+  justify-content: center;
   .nav-item {
     background-color: $third-color;
     border-radius: 24px;
+    margin: 0.5em;
   }
   button, a, .mxt-navbar--nav-link {
     border: 2px solid $third-color !important;
