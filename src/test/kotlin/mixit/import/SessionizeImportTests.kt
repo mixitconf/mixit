@@ -27,6 +27,9 @@
 //
 // inline fun <reified T> ObjectMapper.readValue(src: InputStream): T = readValue(src, jacksonTypeRef<T>())
 //
+
+// TODO https://sessionize.com/api/v2/em5tudqq/view/All
+
 // data class TalkSessionizeDto(
 //    val session_id: String,
 //    val title: String?,
