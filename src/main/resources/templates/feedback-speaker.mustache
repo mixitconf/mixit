@@ -3,10 +3,10 @@
     <h1>{{#i18n}}{{title}}{{/i18n}}</h1>
     <div class="row">
         {{#feedbackTypes}}
-            <div class="col-4 p-3">
+            <div class="col-6 p-3 col-md-4 col-lg-3">
                 <div class="mxt-feedback--container text-center {{#second.selectedByCurrentUser}}mxt-feedback-selected{{/second.selectedByCurrentUser}}"
                      id="mxt-feedback-{{first}}--container">
-                    <div><b>{{#i18n}}feedback.{{first}}{{/i18n}}</b></div>
+                    <div style="text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"><b>{{#i18n}}feedback.{{first}}{{/i18n}}</b></div>
                     <div class="mxt-btn-container">
                         <div
                             {{#second.selectedByCurrentUser}}style="display: none" {{/second.selectedByCurrentUser}}>

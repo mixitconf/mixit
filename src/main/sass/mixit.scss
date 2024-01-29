@@ -859,6 +859,9 @@ h3 {
   button, a, .mxt-navbar--nav-link {
     border: 2px solid $third-color !important;
     padding: 1em !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     border-radius: 24px;
     color: #2c233d;
 
@@ -1201,6 +1204,9 @@ h3 {
     text-align: center;
   }
 
+  a {
+    color: $secondary-color;
+  }
   .firstname {
     font-family: $font-title;
     font-size: larger;

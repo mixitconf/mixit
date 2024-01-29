@@ -196,6 +196,7 @@ class WebsiteRoutes(
                 GET("/$year/medias/favorite") { talkHandler.findByEventView(mediaWithFavorites(it, year)) }
                 GET("/$year/medias/images/{album}") { talkHandler.findByEventView(images(it, year)) }
                 GET("/$year/sponsors") { sponsorHandler.viewSponsors(it, year) }
+                GET("/$year/speakers") { userHandler.speakersView(it, year) }
                 GET("/admin/$year/feedback-wall") { talkHandler.findByEventView(feedbackWall(it, year)) }
                 GET("/blog/$year") { blogHandler.findAllView(it, year) }
                 Topic.entries.map { it.value }.onEach { topic ->

@@ -73,6 +73,7 @@ enum class MustacheTemplate(val template: String, val title: String?, val path: 
     Schedule("schedule", "schedule.title", "schedule"),
     Search("search", "search.title"),
     Speaker("speaker", "speaker.title"),
+    Speakers("speakers", "speakers.title"),
     Sponsor("sponsor-view", null),
     Sponsors("sponsors", null, "sponsors"),
     TalkList("talks", "talks.title.html", ""),

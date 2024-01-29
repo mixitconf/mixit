@@ -42,6 +42,10 @@ import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.renderAndAwait
 import java.util.stream.IntStream
+import mixit.util.YearSelector
+import mixit.util.mustache.MustacheI18n
+import mixit.util.mustache.MustacheI18n.SPEAKERS
+import mixit.util.mustache.MustacheTemplate.Speakers
 
 @Component
 class UserHandler(
@@ -62,6 +66,31 @@ class UserHandler(
 
     suspend fun speakerView(req: ServerRequest): ServerResponse =
         ok().renderAndAwait(Speaker.template, mapOf(Pair(TITLE, Speaker.title)))
+
+    suspend fun speakersView(req: ServerRequest, year: Int): ServerResponse =
+        eventService.findByYear(year).let {event ->
+            val staffs = event.organizers.map { it.login }
+            val speakers = service
+                .findByEvent(year.toString())
+                .asSequence()
+                .flatMap { it.speakers }
+                .toSet()
+                .filterNot { staffs.contains(it.login) }
+                .map { it.toDto(req.language()) }
+                .sortedBy { it.firstname }
+
+            ok().renderAndAwait(
+                Speakers.template,
+                mapOf(
+                    TITLE to Speakers.title,
+                    SPEAKERS to speakers,
+                    YEAR to year,
+                    MustacheI18n.YEAR_SELECTOR to YearSelector.create(year, "speakers", true),
+                    MustacheI18n.SPONSORS to userService.loadSponsors(event),
+                )
+            )
+        }
+
 
     suspend fun findOneView(req: ServerRequest, viewMode: ViewMode = ViewMode.ViewUser): ServerResponse {
         val login = req.decode("login")!!

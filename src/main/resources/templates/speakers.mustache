@@ -1,0 +1,33 @@
+{{> header}}
+<div class="container-xxl">
+    <h1>{{#i18n}}{{title}}{{/i18n}}</h1>
+    {{> year-selector}}
+
+    <div class="mxt-about--people pt-5">
+        {{#speakers}}
+            <div>
+                <div class="firstname"><a href="/user/{{login}}">{{firstname}}</a></div>
+                <div class="lastname"><a href="/user/{{login}}">{{lastname}}</a></div>
+                <div class="mxt-img-avatar__wrapper">
+                    <a href="/user/{{login}}">
+                        {{#emailHash}}
+                            <img src="https://www.gravatar.com/avatar/{{emailHash}}?size=400"
+                                 class="mxt-img-avatar__speaker"
+                                 aria-label="{{firstname}} {{lastname}}
+                             photo"/>
+                        {{/emailHash}}
+                        {{^emailHash}}
+                            {{#photoUrl}}
+                                <img src="{{photoUrl}}"
+                                     class="mxt-img-avatar__speaker"
+                                     aria-label="{{firstname}} {{lastname}}
+                                 photo"/>
+                            {{/photoUrl}}
+                        {{/emailHash}}
+                    </a>
+                </div>
+            </div>
+        {{/speakers}}
+    </div>
+</div>
+{{> footer-sponsor}}
