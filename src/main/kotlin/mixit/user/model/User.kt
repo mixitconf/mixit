@@ -33,7 +33,8 @@ data class User(
     var tokenExpiration: LocalDateTime = LocalDateTime.now().minusDays(1),
     var token: String = "empty-token",
     var externalAppToken: String? = null,
-    var newsletterSubscriber: Boolean = false
+    val cfpId: String? = null,
+    var newsletterSubscriber: Boolean = false,
 ) {
     companion object {
         fun empty(): User =

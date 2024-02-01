@@ -10,6 +10,7 @@ class MixitProperties {
     lateinit var vimeoTchatUri: String
     lateinit var vimeoFluxUri: String
     lateinit var mixetteValue: BigDecimal
+    lateinit var sessionizeKey: String
 
     val drive = Drive()
     val aes = Aes()

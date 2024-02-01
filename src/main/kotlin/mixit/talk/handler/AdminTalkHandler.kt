@@ -38,12 +38,17 @@ import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.renderAndAwait
 import java.time.LocalDateTime
+import mixit.MixitApplication
+import mixit.talk.spi.CfpSynchronizer
+import org.springframework.web.reactive.function.server.bodyValueAndAwait
+import org.springframework.web.reactive.function.server.json
 
 @Component
 class AdminTalkHandler(
     private val service: TalkService,
     private val properties: MixitProperties,
-    private val objectMapper: ObjectMapper
+    private val objectMapper: ObjectMapper,
+    private val synchronizer: CfpSynchronizer
 ) {
 
     companion object {
@@ -56,6 +61,7 @@ class AdminTalkHandler(
         val params = mapOf(
             TITLE to AdminTalks.title,
             YEAR to year,
+            "isCurrent" to (year == MixitApplication.CURRENT_EVENT),
             MustacheI18n.YEAR_SELECTOR to YearSelector.create(year.toInt(), "admin/talks"),
             TALKS to talks
         )
@@ -110,5 +116,10 @@ class AdminTalkHandler(
             TOPICS to enumMatcher(talk) { Topic.of(it?.topic ?: "other") }
         )
         return ok().renderAndAwait(AdminTalk.template, params)
+    }
+
+    suspend fun adminSynchronize(req: ServerRequest): ServerResponse {
+        synchronizer.synchronize()
+        return adminTalks(req, MixitApplication.CURRENT_EVENT)
     }
 }

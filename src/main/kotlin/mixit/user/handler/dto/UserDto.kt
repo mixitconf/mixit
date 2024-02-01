@@ -27,6 +27,7 @@ class UserDto(
     val logoWebpUrl: String? = null,
     val isAbsoluteLogo: Boolean = photoUrl?.startsWith("http") ?: false,
     val path: String = login.toUrlPath(),
+    val cfpId: String? = null,
     val newsletterSubscriber: Boolean = false
 )
 
@@ -45,5 +46,6 @@ fun User.toDto(language: Language, searchTerms: List<String> = emptyList()) =
         links,
         logoType(photoUrl),
         logoWebpUrl(photoUrl),
+        cfpId = cfpId,
         newsletterSubscriber = newsletterSubscriber
     )
