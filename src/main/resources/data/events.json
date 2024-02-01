@@ -2045,6 +2045,21 @@
                 "level": "MIXTEEN",
                 "sponsorId": "max-digital-service",
                 "subscriptionDate": "2023-12-06"
+            },
+            {
+                "level": "PARTY",
+                "sponsorId": "ZenikaLyon",
+                "subscriptionDate": "2024-01-04"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "feelinjob",
+                "subscriptionDate": "2024-01-22"
+            },
+            {
+                "level": "LANYARD",
+                "sponsorId": "annick.challancin@esker.fr",
+                "subscriptionDate": "2024-01-29"
             }
         ],
         "organizations": [],

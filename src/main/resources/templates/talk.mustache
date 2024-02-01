@@ -11,6 +11,8 @@
                      alt="{{#i18n}}header.menu.admin{{/i18n}}">
                 {{#i18n}}common.actions.update{{/i18n}}
             </a>
+            <a href="{{localePrefix}}/admin/talk/feedback/{{talk.id}}" class="mxt-btn-light ms-2" style="margin-bottom: 0">
+                {{#i18n}}feedback.admin{{/i18n}}</a>
         </div>
     {{/admin}}
 </div>
@@ -32,16 +34,18 @@
     <div class="mxt-btn-container">
         {{#connected}}
             <button id="favorite" class="mxt-btn-light"
+                    onclick="favoriteToggle(event)"
                     {{^favorites}}style="display: none"{{/favorites}}
                     aria-label="{{#i18n}}favorite.selected{{/i18n}}">
                     <img src="/images/svg/favorites/mxt-favorite.svg" class="mxt-icon--cat__talks"/>
-                    {{#i18n}}favorite.selected{{/i18n}}
+                    <span class="ms-2">{{#i18n}}favorite.selected{{/i18n}}</span>
             </button>
             <button id="nonfavorite" class="mxt-btn-light"
+                    onclick="favoriteToggle(event)"
                     {{#favorites}}style="display: none"{{/favorites}}
                     aria-label="{{#i18n}}favorite.nonselected{{/i18n}}">
                 <img src="/images/svg/favorites/mxt-favorite-non.svg" class="mxt-icon--cat__talks"/>
-                {{#i18n}}favorite.nonselected{{/i18n}}
+                <span class="ms-2">{{#i18n}}favorite.nonselected{{/i18n}}</span>
             </button>
             <script>
                 function favoriteToggle(event) {

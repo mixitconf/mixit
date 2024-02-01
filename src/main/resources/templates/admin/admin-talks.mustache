@@ -9,6 +9,14 @@
     <div class="mxt-btn-container pb-3">
         {{#i18n}}admin.talks.count{{/i18n}} : <b>{{talks.size}}</b>
         <div class="flex-fill"></div>
+        {{#isCurrent}}
+        <form action="/admin/talks/synchronize" method="post" class="me-2"
+              onsubmit="return confirm('Etes vous sûr de vouloir tout écraser (talk + speaker) ?');">
+            <button type="submit" class="mxt-btn-primary">
+               Synchronize
+            </button>
+        </form>
+        {{/isCurrent}}
         <a  class="mxt-btn-light" href="/admin/talks/create/{{year}}">{{#i18n}}common.actions.create{{/i18n}}</a>
     </div>
     <table class="table table-bordered table-striped">

@@ -453,6 +453,7 @@ class TalkHandler(
                     "vimeoPlayer" to talk.video.toVimeoPlayerUrl(),
                     "twitchPlayer" to (talk.video?.contains("twitch") ?: false),
                     "vimeoPlayer2" to talk.video2.toVimeoPlayerUrl(),
+                    "isCurrent" to (year == CURRENT_EVENT.toInt()),
                     FEEDBACK_TYPES to feedbackService.computeUserFeedbackForTalk(talk, currentUserEmail),
                     FEEDBACK_COMMENTS to feedbackService.computeUserCommentForTalk(talk, currentUserEmail),
                     // We must be more clever (open when the talk start ?)

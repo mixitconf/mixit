@@ -20,6 +20,7 @@ data class CachedUser(
     val links: List<Link>,
     val legacyId: Long? = null,
     val role: Role,
+    val cfpId: String? = null,
     var newsletterSubscriber: Boolean,
     override val id: String = login
 ) : Cached {
@@ -36,6 +37,7 @@ data class CachedUser(
         user.links,
         user.legacyId,
         user.role,
+        user.cfpId,
         user.newsletterSubscriber
     )
 
@@ -54,7 +56,8 @@ data class CachedUser(
             links,
             logoType(photoUrl),
             logoWebpUrl(photoUrl),
-            newsletterSubscriber = newsletterSubscriber
+            cfpId = cfpId,
+            newsletterSubscriber = newsletterSubscriber,
         )
 
     fun toUser() =
@@ -71,6 +74,7 @@ data class CachedUser(
             role,
             links,
             legacyId,
+            cfpId = cfpId,
             newsletterSubscriber = newsletterSubscriber
         )
 
