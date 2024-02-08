@@ -33,7 +33,13 @@
         <tr>
             <td>{{format}}</td>
             <td>{{title}}</td>
-            <td>{{#speakers}}{{firstname}} {{lastname}} {{/speakers}}</td>
+            <td>
+                {{#speakers}}
+                    <a href="/admin/users/edit/{{login}}"
+                         class="mxt-text--cat mxt-text--cat-speaker">
+                        {{firstname}}&nbsp;{{lastname}}</a>
+                {{/speakers}}
+            </td>
             <td class="mxt-btn-container">
                 <a href="/admin/talks/edit/{{id}}" class="mxt-btn-light">
                     <img src="/images/svg/mxt-search-dark.svg" class="mxt-icon--cat__talks"

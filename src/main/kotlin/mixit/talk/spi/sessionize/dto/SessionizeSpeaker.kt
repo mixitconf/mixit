@@ -16,12 +16,14 @@ data class SessionizeSpeaker(
     val email: String?,
 ) {
     val pictureExtension: String by lazy {
-        profilePicture.substringAfterLast(".")
+        profilePicture.substringAfterLast(".").replace("jpeg", "jpg")
     }
 
     val picture: String by lazy {
-        "/images/speakers/$CURRENT_EVENT/${
-            firstName.camelCase().stripAccents().replace(" ", "_")
-        }_${lastName.camelCase().stripAccents().replace(" ", "_")}.$pictureExtension"
+        "${firstName} ${lastName}"
+            .stripAccents()
+            .replace(" ", "_")
+            .replace("__", "_")
+            .let { "/images/speakers/$CURRENT_EVENT/$it.$pictureExtension" }
     }
 }
