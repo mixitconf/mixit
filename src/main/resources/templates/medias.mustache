@@ -1,75 +1,12 @@
 {{> header}}
 
 <div class="container-xxl">
-    <h1>{{#i18n}}medias.title{{/i18n}}{{#i18n}}topics{{#topic}}.{{topic}}{{/topic}}.title{{/i18n}}</h1>
-    <div>{{#i18n}}medias.text{{/i18n}}</div>
-    {{> year-selector}}
-</div>
-
-{{#event.videoUrl}}
-    <div class="container-xxl mxt-section">
-        <h2>{{#i18n}}medias.html.soul{{/i18n}}</h2>
-        <p>{{#i18n}}medias.html.soul.text{{/i18n}}</p>
-        {{#videoUrl}}
-            <div class="row">
-                <div class="col-12 col-lg-4 col-md-6">
-                    <div class="card m-1" style="height: 99%">
-                        <div class="mxt-wrapper--intrinsic">
-                            <iframe src="{{videoUrl}}" class="mxt-wrapper--video-player" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        {{/videoUrl}}
-        {{^videoUrl}}
-            &#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{videoUrl}}" target="_blank">{{#i18n}}
-            talk.video.thevideo{{/i18n}}</a>
-        {{/videoUrl}}
-    </div>
-{{/event.videoUrl}}
-
-{{#images}}
-    <div class="container-xxl mxt-section">
-        <h2>{{#i18n}}medias.html.images{{/i18n}}</h2>
-        <div class="mxt-video--player-container">
-            {{#images.sections}}
-                <div>
-                    <div class="mxt-video--player-header mb-2">
-                    </div>
-                    <div class="mxt-video--player-video">
-                        {{#pictures}}
-                        <a href="{{localePrefix}}/{{event}}/medias/images/{{sectionId}}"
-
-                           title="{{#i18n}}images.readmore{{/i18n}}">
-                            <img class="mxt-img--speakers mxt-img--lazyload"
-                                 data-src="https://raw.githubusercontent.com/mixitconf/mixitconf-images/main/{{year}}/{{sectionId}}/{{name}}">
-                        </a>
-                        {{/pictures}}
-                    </div>
-                    <div class="mxt-image--player-title text-center">
-                        <a href="{{localePrefix}}/{{event}}/medias/images/{{sectionId}}"
-                           class="mxt-media--link"
-                           title="{{#i18n}}images.readmore{{/i18n}}">
-                                {{#i18n}}{{i18nLabel}}{{/i18n}}
-                        </a>
-                    </div>
-                </div>
-            {{/images.sections}}
-        </div>
-    </div>
-{{/images}}
-
-<div class="container-xxl mxt-section">
-    <h2>{{#i18n}}medias.html.videos{{/i18n}}</h2>
-    <div class="mxt-video--player-container">
+    {{> talks-header}}
+    <div class="mxt-video--player-container pt-5">
         {{#talks}}
             {{>talk-video-viewer}}
         {{/talks}}
     </div>
 </div>
-
-{{#connected}}
-    <input type="hidden" id="email" value="{{email}}"/>
-{{/connected}}
 
 {{> footer-sponsor}}
