@@ -39,7 +39,7 @@ class ApiRoutes(
             "/admin".nest {
                 GET("/{year}/talk", talkHandler::findAdminByEventId)
             }
-            GET("/admin/favorite", favoriteHandler::findAll)
+            GET("/admin/favorites", favoriteHandler::findAll)
             GET("/admin/mixette", adminMixetteHandler::findAll)
             GET("/admin/ticket", ticketHandler::findAll)
             GET("/admin/lottery", lotteryHandler::findAll)

@@ -9,7 +9,7 @@ data class SessionizeSpeaker(
     val id: String,
     val firstName: String,
     val lastName: String,
-    val bio: String,
+    val bio: String?,
     val tagLine: String?,
     val profilePicture: String,
     val links: List<SessionizeLink>,

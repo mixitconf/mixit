@@ -195,10 +195,10 @@ class WebsiteRoutes(
             (2012..CURRENT_EVENT.toInt()).forEach { year ->
                 GET("/$year") { talkHandler.findByEventView(talks(it, year)) }
                 GET("/$year/about") { aboutHandler.findAboutView(it, year) }
-                GET("/$year/favorite") { talkHandler.findByEventView(talksWithFavorites(it, year)) }
+                GET("/$year/favorites") { talkHandler.findByEventView(talksWithFavorites(it, year)) }
                 GET("/$year/medias/video") { talkHandler.findByEventView(video(it, year)) }
                 GET("/$year/medias") { talkHandler.findByEventView(media(it, year)) }
-                GET("/$year/medias/favorite") { talkHandler.findByEventView(mediaWithFavorites(it, year)) }
+                GET("/$year/medias/favorites") { talkHandler.findByEventView(talksWithFavorites(it, year)) }
                 GET("/$year/medias/images") { talkHandler.findByEventView(images(it, year)) }
                 GET("/$year/medias/images/{album}") { talkHandler.findByEventView(imageAlbum(it, year)) }
                 GET("/$year/sponsors") { sponsorHandler.viewSponsors(it, year) }
@@ -207,11 +207,11 @@ class WebsiteRoutes(
                 GET("/blog/$year") { blogHandler.findAllView(it, year) }
                 Topic.entries.map { it.value }.onEach { topic ->
                     GET("/$year/$topic") { talkHandler.findByEventView(talks(it, year, topic)) }
-                    GET("/$year/$topic/favorite") {
+                    GET("/$year/$topic/favorites") {
                         talkHandler.findByEventView(talksWithFavorites(it, year, topic))
                     }
                     GET("/$year/medias/$topic") { talkHandler.findByEventView(media(it, year, topic)) }
-                    GET("/$year/medias/$topic/favorite") {
+                    GET("/$year/medias/$topic/favorites") {
                         talkHandler.findByEventView(mediaWithFavorites(it, year, topic))
                     }
                 }

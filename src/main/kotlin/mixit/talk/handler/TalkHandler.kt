@@ -140,7 +140,7 @@ class TalkHandler(
         Talks(""),
         Speakers("/speakers"),
         Schedule("?agenda=true"),
-        Favorites("/favorite"),
+        Favorites("/favorites"),
         MainVideo("/medias/video"),
         TalksWithVideo("/medias"),
         Photos("/medias/images");
@@ -229,7 +229,12 @@ class TalkHandler(
         if (listOf(TalksTabs.Schedule, TalksTabs.Talks).contains(config.tabs) && !isCurrent) {
             return seeOther("${properties.baseUri}/${config.year}/medias")
         }
-        if (listOf(TalksTabs.MainVideo, TalksTabs.TalksWithVideo, TalksTabs.Photos).contains(config.tabs) && isCurrent) {
+        if (listOf(
+                TalksTabs.MainVideo,
+                TalksTabs.TalksWithVideo,
+                TalksTabs.Photos
+            ).contains(config.tabs) && isCurrent
+        ) {
             return seeOther("${properties.baseUri}/${config.year}")
         }
         return ok()
@@ -240,15 +245,7 @@ class TalkHandler(
                     SPONSORS to userService.loadSponsors(event),
                     YEAR_SELECTOR to YearSelector.create(config.year, config.template.path!!, talk = true),
                     "tabs" to config.tabs.tabs(isCurrent, currentUserEmail.isNotEmpty(), canDisplayAgenda),
-                    TALKS to if (listOf(TalksTabs.Schedule, TalksTabs.Talks).contains(config.tabs)) {
-                        if (config.tabs == TalksTabs.Schedule && canDisplayAgenda) {
-                            talksToDisplayOnAgenda(talks, rooms, days, config.req.language())
-                        } else {
-                            talksToDisplayByDate(talks, days, config.req.language())
-                        }
-                    } else {
-                        talks
-                    },
+                    TALKS to getTalkToDisplay(config, rooms, days, talks, canDisplayAgenda),
                     TITLE to title,
                     YEAR to config.year,
                     IMAGES to images,
@@ -270,6 +267,18 @@ class TalkHandler(
             )
             .awaitSingle()
     }
+
+    private fun getTalkToDisplay(
+        config: TalkViewConfig,
+        rooms: List<Room>, days: List<LocalDate>,
+        talks: List<TalkDto>,
+        canDisplayAgenda: Boolean
+    ): Any =
+        if (config.tabs == TalksTabs.Schedule && canDisplayAgenda) {
+            talksToDisplayOnAgenda(talks, rooms, days, config.req.language())
+        } else {
+            talksToDisplayByDate(talks, days, config.req.language())
+        }
 
     private suspend fun speakers(req: ServerRequest, year: Int): List<UserDto> =
         eventService.findByYear(year).let { event ->
