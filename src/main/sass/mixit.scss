@@ -708,9 +708,29 @@ $enable-cssgrid: true;
 .mxt-talks--container {
   border: 0.5px solid $third-color;
   color: $black;
+  border-radius: 24px;
+
+  &:hover {
+    background-color: $fifth-color;
+  }
+
+  .mxt-talks--container-link {
+    display: flex;
+    flex-direction: column;
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+    }
+  }
+
+  .mxt-wrapper-list-inline, .mxt-text--talktitle {
+    text-align: center;
+    @include media-breakpoint-up(md) {
+      text-align: left;
+    }
+  }
 
   a {
-    color: $black;
+    color: $secondary-color;
   }
 
   .mxt-text--cat-speaker {
@@ -1130,6 +1150,51 @@ h3 {
   text-overflow: ellipsis;
   font-family: $font-title;
   font-size: 140%;
+}
+
+.mxt-talk-selector {
+  display: flex;
+  width: 100%;
+  font-family: $font-title;
+  max-width: 95vw;
+  white-space: nowrap;
+  text-overflow: unset;
+  overflow: scroll;
+  overflow-y: hidden;
+  border-radius: 24px;
+  overflow-x: auto;
+  scrollbar-color: $secondary-color #cccccc;
+  background-color: $fifth-color;
+
+  .mxt-nav-link {
+    color: $secondary-color !important;
+    border: 2px solid $fifth-color !important;
+    border-radius: 24px;
+    font-size: initial;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    padding: .7rem 1rem;
+    justify-content: center;
+
+    &:hover {
+      color: $fifth-color !important;
+      border: 2px solid $secondary-color !important;
+      border-radius: 24px;
+      background-color: $secondary-color;
+    }
+  }
+
+  .selected {
+    border: 2px solid $secondary-color !important;
+    border-radius: 24px;
+    background-color: $secondary-color !important;
+    color: white !important;
+
+    &:hover {
+      color: white !important;
+    }
+  }
 }
 
 .mxt-year-selector {

@@ -1,0 +1,28 @@
+{{> header}}
+
+<div class="container-xxl">
+    {{> talks-header}}
+    <p class="pt-5">{{#i18n}}medias.html.soul.text{{/i18n}}</p>
+    {{#event.videoUrl}}
+        {{#videoUrl}}
+            <div class="row">
+                <div class="col-12">
+                    <div class="card m-1" style="height: 99%">
+                        <div class="mxt-wrapper--intrinsic">
+                            <iframe src="{{videoUrl}}" class="mxt-wrapper--video-player" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{/videoUrl}}
+        {{^videoUrl}}
+            &#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{videoUrl}}" target="_blank">{{#i18n}}
+            talk.video.thevideo{{/i18n}}</a>
+        {{/videoUrl}}
+    {{/event.videoUrl}}
+    {{^event.videoUrl}}
+        {{#i18n}}medias.html.soul.novideo{{/i18n}}
+    {{/event.videoUrl}}
+</div>
+
+{{> footer-sponsor}}

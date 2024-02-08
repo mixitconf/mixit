@@ -20,11 +20,14 @@ import mixit.security.handler.AuthenticationHandler
 import mixit.talk.handler.AdminTalkHandler
 import mixit.talk.handler.TalkHandler
 import mixit.talk.handler.TalkHandler.Companion.feedbackWall
+import mixit.talk.handler.TalkHandler.Companion.imageAlbum
 import mixit.talk.handler.TalkHandler.Companion.images
 import mixit.talk.handler.TalkHandler.Companion.media
 import mixit.talk.handler.TalkHandler.Companion.mediaWithFavorites
+import mixit.talk.handler.TalkHandler.Companion.speakers
 import mixit.talk.handler.TalkHandler.Companion.talks
 import mixit.talk.handler.TalkHandler.Companion.talksWithFavorites
+import mixit.talk.handler.TalkHandler.Companion.video
 import mixit.talk.model.Topic
 import mixit.ticket.handler.AdminLotteryHandler
 import mixit.ticket.handler.AdminTicketHandler
@@ -193,11 +196,13 @@ class WebsiteRoutes(
                 GET("/$year") { talkHandler.findByEventView(talks(it, year)) }
                 GET("/$year/about") { aboutHandler.findAboutView(it, year) }
                 GET("/$year/favorite") { talkHandler.findByEventView(talksWithFavorites(it, year)) }
+                GET("/$year/medias/video") { talkHandler.findByEventView(video(it, year)) }
                 GET("/$year/medias") { talkHandler.findByEventView(media(it, year)) }
                 GET("/$year/medias/favorite") { talkHandler.findByEventView(mediaWithFavorites(it, year)) }
-                GET("/$year/medias/images/{album}") { talkHandler.findByEventView(images(it, year)) }
+                GET("/$year/medias/images") { talkHandler.findByEventView(images(it, year)) }
+                GET("/$year/medias/images/{album}") { talkHandler.findByEventView(imageAlbum(it, year)) }
                 GET("/$year/sponsors") { sponsorHandler.viewSponsors(it, year) }
-                GET("/$year/speakers") { userHandler.speakersView(it, year) }
+                GET("/$year/speakers") { talkHandler.findByEventView(speakers(it, year)) }
                 GET("/admin/$year/feedback-wall") { talkHandler.findByEventView(feedbackWall(it, year)) }
                 GET("/blog/$year") { blogHandler.findAllView(it, year) }
                 Topic.entries.map { it.value }.onEach { topic ->

@@ -3,7 +3,7 @@ package mixit.util
 /**
  * Parse an enum and try to return a list with a boolean to indicate which value an entity used
  */
-inline fun <reified E : Enum<E>, reified T> enumMatcher(entity: T?, getter: (T?) -> E): List<Pair<E, Boolean>> =
+inline fun <reified E : Enum<E>, reified T> enumMatcher(entity: T?, getter: (T?) -> E?): List<Pair<E, Boolean>> =
     enumValues<E>().sorted().map { Pair(it, it == getter.invoke(entity)) }.toList()
 
 inline fun <reified E : Enum<E>, reified T> enumMatcherWithI18nKey(

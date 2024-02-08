@@ -2,61 +2,51 @@
      aria-selected="{{#active}}true{{/active}}{{^active}}false{{/active}}"
      role="tabpanel" aria-labelledby="day1-tab" tabindex="0">
 
-    <div style="border-radius: 4px; border: 0.5px solid #aecbd6">
+    <div>
         {{#talks}}
-            <div class="mxt-talks--container p-3">
-                <a href="{{localePrefix}}/{{event}}{{#slug}}/{{slug}}{{/slug}}">
-                    <div class="mxt-accordion-talk-line">
-                        {{#isCurrent}}
-                        <small>{{#start}}{{start}} - {{end}}{{/start}}</small>
-                        {{/isCurrent}}
+            <div class="mxt-talks--container p-3 mb-3">
+                <a href="{{localePrefix}}/{{event}}{{#slug}}/{{slug}}{{/slug}}" class="mxt-talks--container-link">
+                    <div class="flex-fill">
                         <div class="mxt-text--cat-format">
+                            {{#connected}}
+                                {{#favorite}}
+                                    <img src="/images/svg/favorites/mxt-favorite.svg" class="mxt-icon--cat__talks"
+                                         id="favorite-{{id}}"/>
+                                {{/favorite}}
+                                {{^favorite}}
+                                    <img src="/images/svg/favorites/mxt-favorite-non.svg"
+                                         class="mxt-icon--cat__talks" id="favorite-{{id}}"/>
+                                {{/favorite}}
+                            {{/connected}}
                             &nbsp;<strong><small>#{{#i18n}}talk.format.{{format}}{{/i18n}}</small></strong>
                         </div>
-                        <div style="justify-content: end;align-items: center;flex: 1 1 auto;display: flex">
-                            {{#hasAtLeastOneVideo}}
-                                <img src="/images/svg/mxt-icon-video-dark.svg"  style="max-height: 1em;margin-right: 4px">
-                                <div>video</div>
-                            {{/hasAtLeastOneVideo}}
-                        </div>
+                        <h3 class="mxt-text--talktitle">
+                            {{title}}
+                            {{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
+                        </h3>
+                        <ul class="mxt-wrapper-list-inline mb-0 pb-0">
+                            {{#speakers}}
+                                <li><div class="mxt-text--cat mxt-text--cat-speaker">
+                                    {{firstname}}&nbsp;{{lastname}}</div></li>
+                            {{/speakers}}
+                        </ul>
                     </div>
-                    <h3 class="mxt-text--talktitle">
-                        {{#connected}}
-                            {{#favorite}}
-                                <img src="/images/svg/favorites/mxt-favorite.svg" class="mxt-icon--cat__talks"
-                                     id="favorite-{{id}}"/>
-                            {{/favorite}}
-                            {{^favorite}}
-                                <img src="/images/svg/favorites/mxt-favorite-non.svg"
-                                     class="mxt-icon--cat__talks" id="favorite-{{id}}"/>
-                            {{/favorite}}
-                        {{/connected}}
-                        {{title}}
-                        {{#isEn}}<span class="mxt-text--cat mxt-text--cat-en">EN</span>{{/isEn}}
-
+                    <div style="display: flex; flex-direction: column; margin-right: 1em;justify-content: center;align-items: center">
                         {{#topic}}
-                            <div class="mxt-text--cat mxt-text--cat-{{topic}}" style="float: right">
+                            <div class="mxt-text--cat mxt-text--cat-{{topic}}">
                                 <img src="/images/svg/mxt-icon--{{topic}}.svg"
                                      class="mxt-icon--cat mxt-icon--cat__talks"
                                      alt="{{#i18n}}topics.{{topic}}.title{{/i18n}}"/>
                                 <span>{{#i18n}}topics.{{topic}}.title{{/i18n}}</span>
                             </div>
                         {{/topic}}
-
-                    </h3>
-                    <ul class="mxt-wrapper-list-inline mb-0 pb-0">
-                        {{#speakers}}
-                            <li><div class="mxt-text--cat mxt-text--cat-speaker">
-                                {{firstname}}&nbsp;{{lastname}}</div></li>
-                        {{/speakers}}
-                    </ul>
-                    {{#isCurrent}}
-                    <p class="mxt-text--cat-room">
-                        {{#roomLink}}<a href="{{#i18n}}{{roomLink}}{{/i18n}}"
-                                        aria-label="{{#i18n}}{{room}}{{/i18n}}">{{#i18n}}{{room}}{{/i18n}}</a>{{/roomLink}}
-                        {{^roomLink}}{{#i18n}}{{room}}{{/i18n}}{{/roomLink}}
-                    </p>
-                    {{/isCurrent}}
+                        <div>
+                            <b><small>{{#start}}{{start}} - {{end}}{{/start}}</small></b>
+                        </div>
+                        <div class="mxt-text--cat-room">
+                            {{#i18n}}{{room}}{{/i18n}}
+                        </div>
+                    </div>
                 </a>
             </div>
         {{/talks}}
