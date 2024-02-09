@@ -268,19 +268,23 @@ class AuthenticationHandler(
         } else {
             // Email sent can be crypted or not
             val nonEncryptedMail = if (email.contains("@")) email else cryptographer.decrypt(email)
+            try {
+                val user = authenticationService.checkUserEmailAndToken(nonEncryptedMail!!, token)
+                    .let { authenticationService.updateNewsletterSubscription(it, context == Context.Newsletter) }
 
-            val user = authenticationService.checkUserEmailAndToken(nonEncryptedMail!!, token)
-                .let { authenticationService.updateNewsletterSubscription(it, context == Context.Newsletter) }
-
-            val session = req.webSession()
-            val cookie = authenticationService.createCookie(user)
-            session.apply {
-                attributes[SESSION_ROLE_KEY] = user.role
-                attributes[SESSION_EMAIL_KEY] = nonEncryptedMail
-                attributes[SESSION_TOKEN_KEY] = token
-                attributes[SESSION_LOGIN_KEY] = user.login
+                val session = req.webSession()
+                val cookie = authenticationService.createCookie(user)
+                session.apply {
+                    attributes[SESSION_ROLE_KEY] = user.role
+                    attributes[SESSION_EMAIL_KEY] = nonEncryptedMail
+                    attributes[SESSION_TOKEN_KEY] = token
+                    attributes[SESSION_LOGIN_KEY] = user.login
+                }
+                seeOther("${properties.baseUri}/me", cookie)
             }
-            seeOther("${properties.baseUri}/me", cookie)
+            catch (e: Exception) {
+                displayErrorView(LoginError.INVALID_TOKEN, context)
+            }
         }
 
     /**
