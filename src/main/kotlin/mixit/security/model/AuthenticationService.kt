@@ -1,8 +1,8 @@
 package mixit.security.model
 
+import java.util.Locale
 import kotlinx.coroutines.reactor.awaitSingle
 import mixit.MixitProperties
-import mixit.util.mustache.MustacheTemplate
 import mixit.security.MixitWebFilter.Companion.AUTHENT_COOKIE
 import mixit.ticket.repository.LotteryRepository
 import mixit.user.model.Role
@@ -19,12 +19,12 @@ import mixit.util.errors.CredentialValidatorException
 import mixit.util.errors.DuplicateException
 import mixit.util.errors.NotFoundException
 import mixit.util.errors.TokenException
+import mixit.util.mustache.MustacheTemplate
 import mixit.util.toSlug
 import mixit.util.validator.EmailValidator
 import org.slf4j.LoggerFactory
 import org.springframework.http.ResponseCookie
 import org.springframework.stereotype.Service
-import java.util.Locale
 
 @Service
 class AuthenticationService(
@@ -62,10 +62,19 @@ class AuthenticationService(
     /**
      * Create user if he does not exist
      */
-    suspend fun createUserIfEmailDoesNotExist(nonEncryptedMail: String, user: User): User {
+    suspend fun createUserIfEmailDoesNotExist(nonEncryptedMail: String, user: User, attempt: Int = 1): User {
         userRepository.findOneOrNull(user.login)
             ?.also {
-                throw DuplicateException("Login already exist")
+                // if user login already exist we try to create a new one with a new login
+                if (attempt < 10) {
+                    return createUserIfEmailDoesNotExist(
+                        nonEncryptedMail,
+                        user.copy(login = "${user.login}${attempt}"),
+                        attempt + 1
+                    )
+                } else {
+                    throw DuplicateException("Login already exist")
+                }
             }
         // Email is unique and if an email is found we return an error
         userRepository.findByNonEncryptedEmail(nonEncryptedMail)
@@ -81,7 +90,7 @@ class AuthenticationService(
      */
     suspend fun searchUserByEmailOrCreateHimFromTicket(nonEncryptedMail: String): User? =
         userRepository.findByNonEncryptedEmail(nonEncryptedMail)
-            // If user is not found we search in the lottery
+        // If user is not found we search in the lottery
             ?: lotteryRepository
                 .findByEncryptedEmail(cryptographer.encrypt(nonEncryptedMail)!!)
                 ?.let {
