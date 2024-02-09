@@ -276,6 +276,8 @@ class TalkHandler(
     ): Any =
         if (config.tabs == TalksTabs.Schedule && canDisplayAgenda) {
             talksToDisplayOnAgenda(talks, rooms, days, config.req.language())
+        } else if(config.tabs == TalksTabs.TalksWithVideo) {
+            talks
         } else {
             talksToDisplayByDate(talks, days, config.req.language())
         }
