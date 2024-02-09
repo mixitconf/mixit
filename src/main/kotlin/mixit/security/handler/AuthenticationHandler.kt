@@ -17,6 +17,7 @@ import mixit.security.handler.LoginError.DUPLICATE_LOGIN
 import mixit.security.model.AuthenticationService
 import mixit.security.model.Cryptographer
 import mixit.user.model.User
+import mixit.user.model.generateNewToken
 import mixit.util.decode
 import mixit.util.decodeFromBase64
 import mixit.util.errors.CredentialValidatorException
@@ -180,17 +181,12 @@ class AuthenticationHandler(
                 formData["firstname"],
                 formData["lastname"]
             )
-
+            val user = newUser.generateNewToken()
             val persistedUser = authenticationService.createUserIfEmailDoesNotExist(
                 nonEncryptedMail = email,
-                user = newUser
+                user = user
             )
-            generateAndSendToken(
-                req,
-                nonEncryptedMail = email,
-                user = persistedUser,
-                context = context
-            )
+            doSignIn(req, Context.Newsletter, email, user.token)
         } catch (e: EmailValidatorException) {
             displayErrorView(LoginError.INVALID_EMAIL, context)
         } catch (e: CredentialValidatorException) {
