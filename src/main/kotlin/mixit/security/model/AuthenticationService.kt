@@ -66,10 +66,13 @@ class AuthenticationService(
         userRepository.findOneOrNull(user.login)
             ?.also {
                 // if user login already exist we try to create a new one with a new login
-                if (attempt < 10) {
+                if (attempt < 3) {
+                    val extension  = nonEncryptedMail.substringAfterLast(".")
+                    val parts = nonEncryptedMail.split("@")
+                    val login = parts[0].toSlug() + "_" + parts[1].substringBefore(".$extension").toSlug()
                     return createUserIfEmailDoesNotExist(
                         nonEncryptedMail,
-                        user.copy(login = "${user.login}${attempt}"),
+                        user.copy(login = login),
                         attempt + 1
                     )
                 } else {

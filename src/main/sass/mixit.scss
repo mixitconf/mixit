@@ -526,6 +526,7 @@ $enable-cssgrid: true;
   text-transform: uppercase;
   color: $secondary-color;
   border: 2px solid #e6e6e6;
+
   &:hover {
     border: 2px solid $secondary-color;
   }
@@ -779,6 +780,7 @@ $font-title: 'Changa One', 'Varela round', Arial, system-ui, -apple-system, "Seg
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   position: relative;
+
   .mxt-icon--logo {
     height: 1em;
     padding-left: 1em;
@@ -871,11 +873,13 @@ h3 {
 
 .mxt-navbar--talks {
   justify-content: center;
+
   .nav-item {
     background-color: $third-color;
     border-radius: 24px;
     margin: 0.5em;
   }
+
   button, a, .mxt-navbar--nav-link {
     border: 2px solid $third-color !important;
     padding: 1em !important;
@@ -915,6 +919,7 @@ h3 {
 .mxt-icon--navbar-faq {
   @include linkWithImage("/images/svg/mxt-icon--faq-hover.svg");
 }
+
 .mxt-icon--navbar-code {
   @include linkWithImage("/images/svg/mxt-icon-code-hover.svg");
 }
@@ -1007,6 +1012,7 @@ h3 {
     > span:last-child {
       font-size: small;
       color: $third-color;
+
       &hover {
         color: $third-color !important;
       }
@@ -1272,6 +1278,7 @@ h3 {
   a {
     color: $secondary-color;
   }
+
   .firstname {
     font-family: $font-title;
     font-size: larger;
@@ -1317,11 +1324,13 @@ $sponsor-max-width: 20em;
 .mxt-sponsor--slots {
   display: flex;
 }
+
 .mxt-sponsor--pack {
   display: block;
 }
+
 .mxt-sponsor--stats {
-  overflow-x: auto  !important;
+  overflow-x: auto !important;
   scrollbar-color: $secondary-color #cccccc;
 }
 
@@ -1361,7 +1370,7 @@ $sponsor-max-width: 20em;
   margin-top: 1em;
 }
 
-.mxt-anchor-container{
+.mxt-anchor-container {
   display: flex;
   justify-content: flex-end;
 }
@@ -1371,6 +1380,7 @@ $sponsor-max-width: 20em;
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
+
   > li {
     margin: 0.5em;
     font-weight: bold;
@@ -1378,6 +1388,7 @@ $sponsor-max-width: 20em;
     color: white;
     padding: 0.2em 0.5em;
     border-radius: 24px;
+
     &::before {
       content: "#";
       color: white;
@@ -1389,8 +1400,9 @@ $sponsor-max-width: 20em;
 .mxt-media--link.mxt-media--link {
   color: $secondary-color;
   text-decoration: none;
+
   &:hover {
-    color:  $primary-color;
+    color: $primary-color;
   }
 }
 
@@ -1398,11 +1410,12 @@ $sponsor-max-width: 20em;
   display: flex;
   align-items: center;
   justify-content: center;
+
   > div {
     margin-right: 0.2em;
     font-weight: bolder;
     font-size: larger;
-    top:4px;
+    top: 4px;
     position: relative;
     color: white;
     background-color: $secondary-color;
@@ -1417,18 +1430,20 @@ $sponsor-max-width: 20em;
   padding: 1em;
   border-radius: 12px;
   background-color: $fifth-color;
-  img{
+
+  img {
     height: 2em;
   }
 }
 
 .mxt-feedback-tolike-btn {
   &:hover {
-    >img {
+    > img {
       content: url('/images/svg/mxt-icon--like-dark.svg');
     }
   }
 }
+
 .mxt-feedback-comment--container {
   border: 2px solid $fifth-color;
   border-left-width: 12px;
@@ -1447,15 +1462,22 @@ $sponsor-max-width: 20em;
   background-color: $secondary;
   border-radius: 24px;
   color: $primary;
-  padding: 1em!important;
+  padding: 1em !important;
   align-items: center;
   display: flex;
   font-size: inherit;
   font-weight: 700;
   height: 2.5em;
+  margin-bottom: 4px;
 
   &:hover {
     border: 2px solid $primary !important;
+  }
+
+  img {
+    max-height: 1em;
+    padding-right: 4px;
+    filter: invert(1);
   }
 }
 
@@ -1479,6 +1501,7 @@ $sponsor-max-width: 20em;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 

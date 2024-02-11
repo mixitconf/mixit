@@ -275,6 +275,8 @@ class WebsiteRoutes(
             POST("/admin/ticket/search", adminTicketHandler::ticketing)
             POST("/admin/users", adminUserHandler::adminSaveUser)
             POST("/admin/users/delete", adminUserHandler::adminDeleteUser)
+            POST("/admin/users/search", adminUserHandler::adminUsers)
+            POST("/admin/users-newsletter/search", adminUserHandler::adminUserNewsLetters)
             POST("/login", authenticationHandler::login)
             POST("/lottery", lotteryHandler::submit)
             POST("/me", userHandler::saveProfile)

@@ -2,6 +2,7 @@ package mixit.user.model
 
 import mixit.talk.model.Language
 import mixit.user.handler.dto.SponsorDto
+import mixit.user.handler.dto.toLinkDto
 import mixit.user.handler.logoType
 import mixit.user.handler.logoWebpUrl
 import mixit.util.toHTML
@@ -33,6 +34,6 @@ data class CachedOrganization(
         logoType(photoUrl),
         logoWebpUrl(photoUrl),
         description[language],
-        links
+        links.mapIndexed { index, link ->  link.toLinkDto(index) }
     )
 }

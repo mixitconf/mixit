@@ -24,7 +24,7 @@ data class SponsorDto(
     val logoType: String?,
     val logoWebpUrl: String? = null,
     var description: String? = null,
-    var links: List<Link> = emptyList(),
+    var links: List<LinkDto> = emptyList(),
     val isAbsoluteLogo: Boolean = photoUrl.startsWith("http"),
     val path: String = login.toUrlPath()
 )
@@ -38,5 +38,5 @@ fun CachedSponsor.toSponsorDto(language: Language = Language.FRENCH) =
         logoType(photoUrl),
         logoWebpUrl(photoUrl),
         description[language],
-        links
+        links.mapIndexed { index, link ->  link.toLinkDto(index) }
     )

@@ -48,27 +48,36 @@ class AdminUserHandler(
     }
 
     suspend fun adminUsers(req: ServerRequest): ServerResponse =
-        ok().renderAndAwait(
-            AdminUsers.template,
-            mapOf(
-                USERS to userRepository.findAll()
-                    .sortedWith(compareBy<User> { it.lastname.lowercase() }.thenBy { it.firstname.lowercase() }),
-                TITLE to AdminUsers.title
+        req.extractFormData().let { formData ->
+            val criteria = formData["criteria"]
+            ok().renderAndAwait(
+                AdminUsers.template,
+                mapOf(
+                    USERS to userRepository.findAll()
+                        .filter { it.filterOn(criteria, cryptographer)}
+                        .sortedWith(compareBy<User> { it.lastname.lowercase() }.thenBy { it.firstname.lowercase() }),
+                    TITLE to AdminUsers.title
+                )
             )
-        )
+        }
+
 
     suspend fun adminUserNewsLetters(req: ServerRequest): ServerResponse =
-        ok().renderAndAwait(
-            AdminUserNewsLetter.template,
-            mapOf(
-                USERS to userRepository
-                    .findAll()
-                    .filter { it.newsletterSubscriber }
-                    .map { it.copy(email = cryptographer.decrypt(it.email)) }
-                    .sortedWith(compareBy<User> { it.lastname }.thenBy { it.firstname }),
-                TITLE to AdminUserNewsLetter.title
+        req.extractFormData().let { formData ->
+            val criteria = formData["criteria"]
+            ok().renderAndAwait(
+                AdminUserNewsLetter.template,
+                mapOf(
+                    USERS to userRepository
+                        .findAll()
+                        .filter { it.filterOn(criteria, cryptographer)}
+                        .filter { it.newsletterSubscriber }
+                        .map { it.copy(email = cryptographer.decrypt(it.email)) }
+                        .sortedWith(compareBy<User> { it.lastname }.thenBy { it.firstname }),
+                    TITLE to AdminUserNewsLetter.title
+                )
             )
-        )
+        }
 
     suspend fun adminUserNewsLetterCsv(req: ServerRequest): ServerResponse =
         ok().contentType(MediaType(MediaType.TEXT_PLAIN, Charsets.UTF_8)).bodyValueAndAwait(
