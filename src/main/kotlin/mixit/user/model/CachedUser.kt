@@ -2,6 +2,7 @@ package mixit.user.model
 
 import mixit.talk.model.Language
 import mixit.user.handler.dto.UserDto
+import mixit.user.handler.dto.toLinkDto
 import mixit.user.handler.logoType
 import mixit.user.handler.logoWebpUrl
 import mixit.util.cache.Cached
@@ -53,7 +54,7 @@ data class CachedUser(
             photoUrl,
             photoShape,
             role,
-            links,
+            links.mapIndexed { index, link ->  link.toLinkDto(index) },
             logoType(photoUrl),
             logoWebpUrl(photoUrl),
             cfpId = cfpId,

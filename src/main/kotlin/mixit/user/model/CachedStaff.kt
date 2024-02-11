@@ -2,6 +2,7 @@ package mixit.user.model
 
 import mixit.talk.model.Language
 import mixit.user.handler.dto.UserDto
+import mixit.user.handler.dto.toLinkDto
 import mixit.user.handler.logoType
 import mixit.user.handler.logoWebpUrl
 import mixit.util.toHTML
@@ -43,7 +44,7 @@ data class CachedStaff(
             photoUrl,
             photoShape,
             role,
-            links,
+            links.mapIndexed { index, link ->  link.toLinkDto(index) },
             logoType(photoUrl),
             logoWebpUrl(photoUrl)
         )

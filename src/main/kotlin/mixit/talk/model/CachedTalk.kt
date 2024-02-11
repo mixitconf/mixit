@@ -11,6 +11,7 @@ import mixit.util.formatTalkTime
 import mixit.util.toSlug
 import mixit.util.toVimeoPlayerUrl
 import java.time.LocalDateTime
+import mixit.user.handler.dto.toDto
 
 data class CachedTalk(
     override val id: String,
@@ -59,7 +60,7 @@ data class CachedTalk(
         event,
         title(lang),
         summary(lang),
-        speakers,
+        speakers.map { it.toDto(lang) },
         language.name.lowercase(),
         addedAt,
         if (isRandomHidden()) "" else description,

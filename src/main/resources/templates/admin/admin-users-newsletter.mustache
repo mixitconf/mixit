@@ -2,7 +2,7 @@
 
 
 <div class="container-xxl">
-    <h1 class="pt-3 pb-3">{{#i18n}}admin.users.title{{/i18n}}</h1>
+    <h1 class="pt-3 pb-3">Newsletter subscription</h1>
 </div>
 
 <div class="container-xxl">
@@ -11,12 +11,20 @@
     </div>
 
     <p>{{#i18n}}admin.users.count{{/i18n}} : <b>{{users.size}}</b></p>
+
+    <div class="row">
+        <form action="/admin/users-newsletter/search" method="post" class="mxt-btn-container col-12 col-lg-6 mb-3">
+            <input type="text" name="criteria" class="form-control me-3"/>
+            <button type="submit" class="btn btn-primary mxt-btn-light">Filter</button>
+        </form>
+    </div>
     <table class="table-striped table table-bordered">
       <thead>
         <tr>
             <th>{{#i18n}}admin.users.table.lastname{{/i18n}}</th>
             <th>{{#i18n}}admin.users.table.firstname{{/i18n}}</th>
             <th>{{#i18n}}admin.users.table.email{{/i18n}}</th>
+            <th style="width: 8em">{{#i18n}}common.actions{{/i18n}}</th>
         </tr>
       </thead>
       <tbody>
@@ -25,6 +33,12 @@
             <td>{{lastname}}</td>
             <td>{{firstname}}</td>
             <td>{{email}}</td>
+            <td class="mxt-btn-container">
+                <a href="/admin/users/edit/{{login}}" class="mxt-btn-light">
+                    <img src="/images/svg/mxt-search-dark.svg" class="mxt-icon--cat__talks"
+                         title="{{#i18n}}common.actions.update{{/i18n}}"/>
+                </a>
+            </td>
         </tr>
         {{/users}}
       </tbody>

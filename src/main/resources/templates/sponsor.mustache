@@ -19,9 +19,9 @@
     </div>
     <div>
         {{#markdown}}{{#sponsor.description}}{{sponsor.description}}{{/sponsor.description}}{{/markdown}}
-        <ul class="mxt-wrapper-list-inline">
+        <ul class="mxt-wrapper-list-inline mxt-btn-container">
             {{#sponsor.links}}
-                <li><a href="{{url}}" target="_blank">{{name}}</a></li>
+                {{> links}}
             {{/sponsor.links}}
         </ul>
     </div>

@@ -11,6 +11,12 @@
         <div class="flex-fill"></div>
         <a  class="mxt-btn-light" href="/admin/users/create">{{#i18n}}common.actions.create{{/i18n}}</a>
     </div>
+    <div class="row">
+        <form action="/admin/users/search" method="post" class="mxt-btn-container col-12 col-lg-6 mb-3">
+            <input type="text" name="criteria" class="form-control me-3"/>
+            <button type="submit" class="btn btn-primary mxt-btn-light">Filter</button>
+        </form>
+    </div>
     <table class="table-striped table table-bordered">
       <thead>
         <tr>

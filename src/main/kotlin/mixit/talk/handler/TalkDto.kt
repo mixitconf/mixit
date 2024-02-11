@@ -5,6 +5,7 @@ import mixit.talk.model.TalkFormat
 import mixit.user.model.Link
 import mixit.user.model.User
 import java.time.LocalDateTime
+import mixit.user.handler.dto.UserDto
 
 class TalkDto(
     val id: String?,
@@ -13,7 +14,7 @@ class TalkDto(
     val event: String,
     val title: String,
     val summary: String,
-    val speakers: List<User>,
+    val speakers: List<UserDto>,
     val language: String,
     val addedAt: LocalDateTime,
     val description: String?,

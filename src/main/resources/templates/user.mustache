@@ -49,9 +49,9 @@
         <div class="columns small-12 medium-12 large-12 callout">
 
             {{#markdown}}{{user.description}}{{/markdown}}
-            <ul class="mxt-wrapper-list-inline">
+            <ul class="mxt-wrapper-list-inline mxt-btn-container">
                 {{#user.links}}
-                    <li><a href="{{url}}">{{name}}</a></li>
+                    {{> links }}
                 {{/user.links}}
             </ul>
         </div>
