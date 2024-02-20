@@ -30,8 +30,6 @@ class QuestionSectionRepository(
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
-        // TODO delete after index creation
-        deleteAll().block()
         if (count().block() == 0L) {
             ClassPathResource("data/faq.json").inputStream.use { resource ->
                 val sections: List<QuestionSection> = objectMapper.readValue(resource)
