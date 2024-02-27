@@ -2,11 +2,14 @@ package mixit.talk.spi.sessionize
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import java.time.Instant
 import java.time.LocalDateTime
+import java.time.ZoneId
 import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.MixitApplication
+import mixit.MixitApplication.Companion.CURRENT_EVENT
+import mixit.MixitApplication.Companion.TIMEZONE
 import mixit.security.model.Cryptographer
-import mixit.talk.model.CachedTalk
 import mixit.talk.model.Language
 import mixit.talk.model.Room
 import mixit.talk.model.Talk
@@ -21,7 +24,6 @@ import mixit.user.model.Link
 import mixit.user.model.User
 import mixit.user.model.UserService
 import mixit.user.repository.UserRepository
-import mixit.util.AdminUtils.toLinks
 import mixit.util.camelCase
 import mixit.util.encodeToMd5
 import mixit.util.validator.MarkdownValidator
@@ -54,36 +56,47 @@ class SessionizeSynchronizer(
         userService.invalidateCache()
 
         // Save talks
-        val formats = response?.formats()?: emptyMap()
-        val topics = response?.topics()?: emptyMap()
+        val formats = response?.formats() ?: emptyMap()
+        val topics = response?.topics() ?: emptyMap()
         val languages = response?.languages() ?: emptyMap()
+        val rooms = response?.rooms() ?: emptyMap()
+        val levels = response?.levels() ?: emptyMap()
 
-        val talks = (response?.sessions?: emptyList())
+        val talks = (response?.sessions ?: emptyList())
             .map { session ->
-            val talSpeakers = session.speakers.mapNotNull { speaker ->
-                speakers.find { it.cfpId == speaker }
-            }
-            val format =  session.categoryItems.firstNotNullOfOrNull {  formats[it] } ?: TalkFormat.TALK
-            val topic = session.categoryItems.firstNotNullOfOrNull {  topics[it] } ?: Topic.OTHER
-            val language = session.categoryItems.firstNotNullOfOrNull {  languages[it] } ?: Language.FRENCH
+                val talSpeakers = session.speakers.mapNotNull { speaker ->
+                    speakers.find { it.cfpId == speaker }
+                }
+                val format = session.categoryItems.firstNotNullOfOrNull { formats[it] } ?: TalkFormat.TALK
+                val topic = session.categoryItems.firstNotNullOfOrNull { topics[it] } ?: Topic.OTHER
+                val language = session.categoryItems.firstNotNullOfOrNull { languages[it] } ?: Language.FRENCH
+                val room = session.roomId?.let { rooms[it] } ?: Room.UNKNOWN
+                val level = session.categoryItems.firstNotNullOfOrNull { levels[it] }
 
-            Talk(
-                id = session.id,
-                event = MixitApplication.CURRENT_EVENT,
-                format = format,
-                title = markdownValidator.sanitize(session.title),
-                summary = markdownValidator.sanitize(session.description),
-                description = null,
-                topic = topic.value,
-                language = language,
-                speakerIds = talSpeakers.map { it.login },
-                room = session.roomId?.let { Room.valueOf(it) } ?: Room.UNKNOWN,
-                addedAt = LocalDateTime.now(),
-                start = session.startsAt?.let { LocalDateTime.parse(it)},
-                end = session.endsAt?.let { LocalDateTime.parse(it)}
-            )
-        }
+                Talk(
+                    id = session.id,
+                    event = MixitApplication.CURRENT_EVENT,
+                    format = format,
+                    title = markdownValidator.sanitize(session.title),
+                    summary = markdownValidator.sanitize(session.description),
+                    description = null,
+                    topic = topic.value,
+                    language = language,
+                    speakerIds = talSpeakers.map { it.login },
+                    room = room,
+                    addedAt = LocalDateTime.now(),
+                    start = session.startsAt?.let { Instant.parse(it).atZone(ZoneId.of(TIMEZONE)).toLocalDateTime() },
+                    end = session.endsAt?.let { Instant.parse(it).atZone(ZoneId.of(TIMEZONE)).toLocalDateTime() },
+                    level = level
+                )
+            }
         talks.forEach { talkRepository.save(it).awaitSingleOrNull() }
+
+        val talskIds = talks.map { it.id }
+        val talksToDelete =
+            talkRepository.findAll().filter { it.event == CURRENT_EVENT }.filterNot { talskIds.contains(it.id) }
+        talksToDelete.onEach { talkRepository.deleteOne(it.id!!).awaitSingleOrNull() }
+
         talkService.invalidateCache()
     }
 

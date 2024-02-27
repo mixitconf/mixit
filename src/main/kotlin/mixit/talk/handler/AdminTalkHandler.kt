@@ -1,12 +1,32 @@
 package mixit.talk.handler
 
 import com.fasterxml.jackson.databind.ObjectMapper
+import java.time.LocalDateTime
 import kotlinx.coroutines.reactor.awaitSingle
 import kotlinx.coroutines.reactor.awaitSingleOrNull
+import mixit.MixitApplication
 import mixit.MixitProperties
+import mixit.talk.model.Language
+import mixit.talk.model.Room
+import mixit.talk.model.Talk
+import mixit.talk.model.TalkFormat
+import mixit.talk.model.TalkFormat.TALK
+import mixit.talk.model.TalkLevel
+import mixit.talk.model.TalkService
+import mixit.talk.model.Topic
+import mixit.talk.spi.CfpSynchronizer
+import mixit.util.AdminUtils.toJson
+import mixit.util.AdminUtils.toLinks
+import mixit.util.YearSelector
+import mixit.util.enumMatcher
+import mixit.util.enumMatcherWithI18nKey
+import mixit.util.errors.NotFoundException
+import mixit.util.extractFormData
+import mixit.util.language
 import mixit.util.mustache.MustacheI18n
 import mixit.util.mustache.MustacheI18n.FORMATS
 import mixit.util.mustache.MustacheI18n.LANGUAGES
+import mixit.util.mustache.MustacheI18n.LEVELS
 import mixit.util.mustache.MustacheI18n.PHOTOS
 import mixit.util.mustache.MustacheI18n.ROOMS
 import mixit.util.mustache.MustacheI18n.SPEAKERS
@@ -16,32 +36,12 @@ import mixit.util.mustache.MustacheI18n.TOPICS
 import mixit.util.mustache.MustacheI18n.YEAR
 import mixit.util.mustache.MustacheTemplate.AdminTalk
 import mixit.util.mustache.MustacheTemplate.AdminTalks
-import mixit.talk.model.Language
-import mixit.talk.model.Room
-import mixit.talk.model.Talk
-import mixit.talk.model.TalkFormat
-import mixit.talk.model.TalkFormat.TALK
-import mixit.talk.model.TalkService
-import mixit.talk.model.Topic
-import mixit.util.AdminUtils.toJson
-import mixit.util.AdminUtils.toLinks
-import mixit.util.YearSelector
-import mixit.util.enumMatcher
-import mixit.util.enumMatcherWithI18nKey
-import mixit.util.errors.NotFoundException
-import mixit.util.extractFormData
-import mixit.util.language
 import mixit.util.seeOther
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.renderAndAwait
-import java.time.LocalDateTime
-import mixit.MixitApplication
-import mixit.talk.spi.CfpSynchronizer
-import org.springframework.web.reactive.function.server.bodyValueAndAwait
-import org.springframework.web.reactive.function.server.json
 
 @Component
 class AdminTalkHandler(
@@ -80,6 +80,7 @@ class AdminTalkHandler(
             id = formData["id"],
             event = formData["event"]!!,
             format = TalkFormat.valueOf(formData["format"]!!),
+            level = TalkLevel.valueOf(formData["level"]!!),
             title = formData["title"]!!,
             summary = formData["summary"]!!,
             description = formData["description"],
@@ -113,6 +114,7 @@ class AdminTalkHandler(
             SPEAKERS to talk.speakerIds.joinToString(separator = ","),
             PHOTOS to talk.photoUrls.toJson(objectMapper),
             FORMATS to enumMatcher(talk) { it?.format ?: TALK },
+            LEVELS to enumMatcher(talk) { it?.level },
             TOPICS to enumMatcher(talk) { Topic.of(it?.topic ?: "other") }
         )
         return ok().renderAndAwait(AdminTalk.template, params)

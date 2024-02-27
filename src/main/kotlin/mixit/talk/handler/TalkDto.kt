@@ -1,11 +1,11 @@
 package mixit.talk.handler
 
+import java.time.LocalDateTime
 import mixit.MixitApplication
 import mixit.talk.model.TalkFormat
-import mixit.user.model.Link
-import mixit.user.model.User
-import java.time.LocalDateTime
+import mixit.talk.model.TalkLevel
 import mixit.user.handler.dto.UserDto
+import mixit.user.model.Link
 
 class TalkDto(
     val id: String?,
@@ -36,5 +36,6 @@ class TalkDto(
     val speakersFirstNames: String = (speakers.joinToString { it.firstname }),
     val startLocalDateTime: LocalDateTime? = null,
     val endLocalDateTime: LocalDateTime? = null,
-    val hasAtLeastOneVideo: Boolean = !video.isNullOrEmpty() || !video2.isNullOrEmpty()
+    val hasAtLeastOneVideo: Boolean = !video.isNullOrEmpty() || !video2.isNullOrEmpty(),
+    val level: TalkLevel? = null
 )

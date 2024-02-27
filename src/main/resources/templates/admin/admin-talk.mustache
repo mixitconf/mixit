@@ -74,6 +74,15 @@
             </select>
         </div>
         <div class="mb-3">
+            <label class="form-label">{{#i18n}}admin.talk.form.level{{/i18n}}</label>
+            <select class="form-control" name="level" required>
+                <option></option>
+                {{#levels}}
+                    <option value="{{first}}"{{#second}} selected{{/second}}>{{first}}</option>
+                {{/levels}}
+            </select>
+        </div>
+        <div class="mb-3">
             <label class="form-label">{{#i18n}}admin.talk.form.addedAt{{/i18n}} </label>
             <input class="form-control" type="text" name="addedAt" value="{{talk.addedAt}}" required/>
         </div>
@@ -94,5 +103,4 @@
         </div>
     </form>
 </div>
-
 {{> footer}}
