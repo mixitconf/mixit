@@ -1,8 +1,10 @@
 package mixit.talk.model
 
+import java.time.LocalDateTime
 import mixit.talk.handler.TalkDto
 import mixit.talk.model.Language.FRENCH
 import mixit.talk.model.TalkFormat.RANDOM
+import mixit.user.handler.dto.toDto
 import mixit.user.model.Link
 import mixit.user.model.User
 import mixit.util.cache.Cached
@@ -10,8 +12,6 @@ import mixit.util.formatTalkDate
 import mixit.util.formatTalkTime
 import mixit.util.toSlug
 import mixit.util.toVimeoPlayerUrl
-import java.time.LocalDateTime
-import mixit.user.handler.dto.toDto
 
 data class CachedTalk(
     override val id: String,
@@ -30,7 +30,8 @@ data class CachedTalk(
     val start: LocalDateTime?,
     val end: LocalDateTime?,
     val photoUrls: List<Link>,
-    val slug: String
+    val slug: String,
+    val level: TalkLevel?
 ) : Cached {
 
     constructor(talk: Talk, speakers: List<User>) : this(
@@ -50,7 +51,8 @@ data class CachedTalk(
         talk.start,
         talk.end,
         talk.photoUrls,
-        talk.slug
+        talk.slug,
+        talk.level
     )
 
     fun toDto(lang: Language, favorite: Boolean = false) = TalkDto(
@@ -76,7 +78,8 @@ data class CachedTalk(
         favorite,
         photoUrls,
         startLocalDateTime = start,
-        endLocalDateTime = end
+        endLocalDateTime = end,
+        level = level
     )
 
     fun toTalk() = Talk(
@@ -95,6 +98,7 @@ data class CachedTalk(
         start,
         end,
         photoUrls,
+        level = level,
         id = id
     )
 

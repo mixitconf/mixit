@@ -66,12 +66,12 @@
 //    @Autowired val objectMapper: ObjectMapper,
 //    @Autowired val userRepository: UserRepository,
 //    @Autowired val cryptographer: Cryptographer,
-//    @Autowired val resourceLoader: ResourceLoader
+//    @Autowival pattern = DateTimeFormatter.ofPattern("dd MMM yyyy hh:mm a")red val resourceLoader: ResourceLoader
 // ) {
 //
 //    fun testDate(date: String?): LocalDateTime? {
 //        if (date == null) return null
-//        val pattern = DateTimeFormatter.ofPattern("dd MMM yyyy hh:mm a")
+//
 //        return LocalDateTime.parse(date, pattern)
 //    }
 //

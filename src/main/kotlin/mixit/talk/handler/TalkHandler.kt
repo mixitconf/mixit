@@ -374,7 +374,7 @@ class TalkHandler(
     ): List<RoomTalkDto> {
         // The start is 8:00 and the last 19:00
         val start = 9L
-        val end = 19L
+        val end = 18L
         val startOfConference = day.atStartOfDay(ZoneId.of(TIMEZONE)).plusHours(start).toLocalDateTime()
         val sliceNumber = 12 * (end - start)
 

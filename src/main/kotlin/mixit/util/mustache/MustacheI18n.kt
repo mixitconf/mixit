@@ -20,6 +20,7 @@ object MustacheI18n {
     const val FEEDBACK_TYPES = "feedbackTypes"
     const val FEEDBACK_COMMENTS = "feedbackComments"
     const val FORMATS = "formats"
+    const val LEVELS = "levels"
     const val IMAGES = "images"
     const val HAS_ERRORS = "hasErrors"
     const val HAS_QUESTION = "hasQuestions"
