@@ -15,7 +15,7 @@ data class SessionizeRoom(
             "lovelace" -> Room.AMPHI2
             "kare" -> Room.ROOM2
             "gosling" -> Room.ROOM1
-            "dijkstra" -> Room.ROOM5
+            "djikstra" -> Room.ROOM5
             "feinler" -> Room.ROOM6
             "hopper" -> Room.ROOM7
             else -> Room.UNKNOWN
