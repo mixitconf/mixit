@@ -2060,6 +2060,26 @@
                 "level": "LANYARD",
                 "sponsorId": "annick.challancin@esker.fr",
                 "subscriptionDate": "2024-01-29"
+            },
+            {
+                "level": "MIXTEEN",
+                "sponsorId": "annick.challancin@esker.fr",
+                "subscriptionDate": "2024-02-01"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "shodo-sponsor",
+                "subscriptionDate": "2024-02-02"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "theodo-sponsor",
+                "subscriptionDate": "2024-02-14"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Worldline",
+                "subscriptionDate": "2024-02-20"
             }
         ],
         "organizations": [],

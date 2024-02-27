@@ -11,8 +11,8 @@
                     "descriptionEn": "How to buy a ticket?"
                 },
                 "answer": {
-                    "descriptionFr": "Pour pouvoir acheter une place pour la prochaine \u00e9dition, il faudra au pr\u00e9alable avoir particip\u00e9 \u00e0 la loterie. La loterie ouvrira le 16 d\u00e9cembre 2023 et fermera le 16 janvier 2024. Les gagnant\u00b7e\u00b7s de la loterie pourront acheter leur billet \u00e0 partir du 29 janvier 2024. Aucune place ne sera vendue en dehors de la loterie.",
-                    "descriptionEn": "To be able to purchase a place for the next edition, you must first have participated in the lottery. The lottery will open on 18 December 2023 and close on 19 January 2024. Lottery winners will be able to buy their ticket from 29 January 2024. No tickets will be sold outside of the lottery."
+                    "descriptionFr": "Pour pouvoir acheter une place pour la prochaine \u00e9dition, il faudra au pr\u00e9alable avoir particip\u00e9 \u00e0 la loterie. La loterie ouvrira le 16 d\u00e9cembre 2023 et fermera le 16 janvier 2024. Les gagnant\u00b7e\u00b7s de la loterie pourront acheter leur billet \u00e0 partir du 29 janvier 2024. Aucune place ne sera vendue en dehors de la loterie.\r\n            ",
+                    "descriptionEn": "To purchase a ticket for the next edition, you must first have participated in the lottery. The lottery will open on 18 December 2023 and close on 19 January 2024. Lottery winners will be able to buy their ticket from 29 January 2024. No tickets will be sold outside of the lottery."
                 },
                 "order": 1,
                 "id": "6cbceb84-366c-491e-9563-25175fe00957"
@@ -23,8 +23,8 @@
                     "descriptionEn": "Why a lottery?"
                 },
                 "answer": {
-                    "descriptionFr": "Dans la plupart des conf\u00e9rences, il est devenu difficile d'obtenir une place si l'on n'est pas connect\u00e9\u00b7e au moment de l'ouverture de la billeterie. Parce que nous avons \u00e0 c\u0153ur que chacun\u00b7e puisse avoir sa chance, nous avons mis en place une loterie. Ainsi pas de stress, tout le monde a un mois pour s'inscrire et tenter sa chance !",
-                    "descriptionEn": "In many conferences, you need to be online at the opening of the registration if you want to have a ticket. Because we want everyone to have the same chance to participate, we opted for a lottery. This way, everybody has two weeks to pre-register and try to get a ticket, no more stress!"
+                    "descriptionFr": "Dans la plupart des conf\u00e9rences, il est devenu difficile d'obtenir une place si l'on n'est pas connect\u00e9\u00b7e au moment de l'ouverture de la billeterie. Parce que nous avons \u00e0 c\u0153ur que chacun\u00b7e puisse avoir sa chance, nous avons mis en place une loterie. Ainsi pas de stress, tout le monde a un mois pour s'inscrire et tenter sa chance !\r\n            ",
+                    "descriptionEn": "In many conferences, you need to be online at the opening of the registration if you want to have a ticket. Because we want everyone to have the same chance to participate, we opted for a lottery. This way, everybody has one month to pre-register and try to get a ticket, no more stress!\r\n            "
                 },
                 "order": 2,
                 "id": "1945d63a-d85b-4079-867d-e3a63a6dec2c"
@@ -35,8 +35,8 @@
                     "descriptionEn": "How to get an invoice for my MiXiT ticket?"
                 },
                 "answer": {
-                    "descriptionFr": "Pour obtenir votre facture, connectez vous sur le site de notre partenaire billetterie : billetweb.fr.",
-                    "descriptionEn": "You can download your bill from our partner's ticketing website: billetweb.fr. Please note that this bill does not show any VAT nor amount excluding tax, and this is normal: the conference is organized by an association subdued to the french law 1901. The association does not collect any VAT so we cannot show it on the invoice."
+                    "descriptionFr": "Pour obtenir votre facture, connectez vous sur le site de notre partenaire billetterie : [billetweb.fr](https://www.billetweb.fr/).\r\n            ",
+                    "descriptionEn": "You can download your bill from our partner's ticketing website: [billetweb.fr](https://www.billetweb.fr/)."
                 },
                 "order": 3,
                 "id": "ae6cb70b-5c37-410d-b736-874978d54a42"
