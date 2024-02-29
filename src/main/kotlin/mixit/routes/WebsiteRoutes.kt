@@ -15,7 +15,6 @@ import mixit.mailing.handler.MailingHandler
 import mixit.mailing.handler.MailingListHandler
 import mixit.mixette.handler.AdminMixetteHandler
 import mixit.mixette.handler.MixetteHandler
-import mixit.util.mustache.MustacheTemplate.Home
 import mixit.security.handler.AuthenticationHandler
 import mixit.talk.handler.AdminTalkHandler
 import mixit.talk.handler.TalkHandler
@@ -38,6 +37,7 @@ import mixit.user.handler.SponsorHandler
 import mixit.user.handler.UserHandler
 import mixit.util.AdminHandler
 import mixit.util.cache.CacheHandler
+import mixit.util.mustache.MustacheTemplate.Home
 import org.slf4j.LoggerFactory
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -248,6 +248,7 @@ class WebsiteRoutes(
             POST("/admin/faq/sections", adminFaqHandler::saveFaqSectionAdmin)
             POST("/admin/faq/sections/{sectionId}/delete", adminFaqHandler::deleteFaqSectionAdmin)
             POST("/admin/faq/sections/{sectionId}/questions", adminFaqHandler::saveFaqQuestionAdmin)
+            POST("/admin/faq/sections/{sectionId}/questions/{questionId}/delete", adminFaqHandler::deleteFaqQuestionAdmin)
             POST("/admin/feedbacks/{id}/reject", feedbackHandler::reject)
             POST("/admin/feedbacks/{id}/approve", feedbackHandler::approve)
             POST("/admin/features", featureStateHandler::save)
