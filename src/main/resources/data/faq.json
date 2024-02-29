@@ -35,11 +35,35 @@
                     "descriptionEn": "How to get an invoice for my MiXiT ticket?"
                 },
                 "answer": {
-                    "descriptionFr": "Pour obtenir votre facture, connectez vous sur le site de notre partenaire billetterie : [billetweb.fr](https://www.billetweb.fr/).\r\n            ",
-                    "descriptionEn": "You can download your bill from our partner's ticketing website: [billetweb.fr](https://www.billetweb.fr/)."
+                    "descriptionFr": "Pour obtenir votre facture, connectez vous sur le site de notre partenaire billetterie : [billetweb.fr](https://www.billetweb.fr/).\r\n            \r\n            \r\n            ",
+                    "descriptionEn": "You can download your bill from our partner's ticketing website: [billetweb.fr](https://www.billetweb.fr/).\r\n            \r\n            "
+                },
+                "order": 4,
+                "id": "ae6cb70b-5c37-410d-b736-874978d54a42"
+            },
+            {
+                "title": {
+                    "descriptionFr": "Quelles sont les conditions de vente du billet ? ",
+                    "descriptionEn": "What are the ticket sales terms and conditions?"
+                },
+                "answer": {
+                    "descriptionFr": "Les billets sont en prix libre avec un prix minimum de 75\u20ac. Les billets ne sont ni remboursables, ni transf\u00e9rables.\r\n            \r\n            \r\n            ",
+                    "descriptionEn": "The tickets are on a pay-what-you-want basis with a minimum price of \u20ac75. Tickets are non-refundable and non-transferable.\r\n            \r\n            \r\n            "
+                },
+                "order": 5,
+                "id": "f17e33b4-6f21-431a-947d-b0e4a3b715f4"
+            },
+            {
+                "title": {
+                    "descriptionFr": "Quelles sont les conditions de vente du billet ? ",
+                    "descriptionEn": "What are the ticket sales terms and conditions?"
+                },
+                "answer": {
+                    "descriptionFr": "Les billets sont en prix libre avec un prix minimum de 75\u20ac. Les billets ne sont ni remboursables, ni transf\u00e9rables.\r\n            \r\n            \r\n            ",
+                    "descriptionEn": "The tickets are on a pay-what-you-want basis with a minimum price of \u20ac75. Tickets are non-refundable and non-transferable.\r\n            \r\n            \r\n            "
                 },
                 "order": 3,
-                "id": "ae6cb70b-5c37-410d-b736-874978d54a42"
+                "id": "62f3e740-08b0-454c-9650-8d6237d98606"
             }
         ],
         "order": 1,
@@ -49,17 +73,17 @@
     {
         "title": {
             "descriptionFr": "Programmation",
-            "descriptionEn": "Programmation"
+            "descriptionEn": "Schedule"
         },
         "questions": [
             {
                 "title": {
                     "descriptionFr": "Appel \u00e0 orateurs\u00b7rices",
-                    "descriptionEn": "Appel \u00e0 orateurs\u00b7rices"
+                    "descriptionEn": "Call For Papers"
                 },
                 "answer": {
-                    "descriptionFr": "L'appel \u00e0 orateurs\u00b7rices ouvrira le 16 d\u00e9cembre 2023 et fermera le 16 janvier 2024. L'annonce des sessions aura lieu le 29 janvier 2024.",
-                    "descriptionEn": "L'appel \u00e0 orateurs\u00b7rices ouvrira le 16 d\u00e9cembre 2023 et fermera le 16 janvier 2024. L'annonce des sessions aura lieu le 29 janvier 2024."
+                    "descriptionFr": "L'appel \u00e0 orateurs\u00b7rices ouvrira le 16 d\u00e9cembre 2023 et fermera le 16 janvier 2024. L'annonce des sessions et des orateurs\u00b7rices aura lieu le 29 janvier 2024.\r\n            \r\n            ",
+                    "descriptionEn": "The Call for Papers will open on 16 December 2023 and close on 19 January 2024. Sessions and speakers will be announced on 29 January 2024.\r\n            "
                 },
                 "order": 1,
                 "id": "ed15f900-3f88-40b6-881e-1b9f878269cf"
@@ -67,11 +91,11 @@
             {
                 "title": {
                     "descriptionFr": "Qu'est ce qu'il y a au programme ?",
-                    "descriptionEn": "Qu'est ce qu'il y a au programme ?"
+                    "descriptionEn": "What is on the schedule?"
                 },
                 "answer": {
-                    "descriptionFr": "Pour avoir une id\u00e9e du type de sessions que vous pourrez voir \u00e0 MiXiT 2024, vous pouvez regarder les sessions des ann\u00e9es pr\u00e9c\u00e9dentes dans la partie replay.",
-                    "descriptionEn": "Pour avoir une id\u00e9e du type de sessions que vous pourrez voir \u00e0 MiXiT 2024, vous pouvez regarder les sessions des ann\u00e9es pr\u00e9c\u00e9dentes dans la partie replay."
+                    "descriptionFr": "Pour avoir une id\u00e9e du type de sessions que vous pourrez voir \u00e0 MiXiT 2024, vous pouvez regarder les sessions des ann\u00e9es pr\u00e9c\u00e9dentes dans la partie [programme](https://mixitconf.org/2024). Le planning de l'\u00e9dition 2024 sera annonc\u00e9 mi f\u00e9vrier. \r\n            ",
+                    "descriptionEn": "To get an idea of the type of sessions you can expect at MiXiT 2024, you can watch sessions from previous years in the [schedule](https://mixitconf.org/2024) section. The 2024 edition schedule will be announced in mid-February.\r\n            \r\n            "
                 },
                 "order": 2,
                 "id": "3f11a9a4-f461-48d2-bec0-6cef75d884a4"
@@ -79,11 +103,11 @@
             {
                 "title": {
                     "descriptionFr": "Les conf\u00e9rences sont-elles film\u00e9es ?",
-                    "descriptionEn": "Les conf\u00e9rences sont-elles film\u00e9es ?"
+                    "descriptionEn": "Are the conferences filmed?"
                 },
                 "answer": {
-                    "descriptionFr": "Les conf\u00e9rences seront int\u00e9gralement film\u00e9es et mises \u00e0 disposition d\u00e8s la semaine suivant la conf\u00e9rence.",
-                    "descriptionEn": "Les conf\u00e9rences seront int\u00e9gralement film\u00e9es et mises \u00e0 disposition d\u00e8s la semaine suivant la conf\u00e9rence."
+                    "descriptionFr": "Les conf\u00e9rences seront int\u00e9gralement film\u00e9es et mises \u00e0 disposition d\u00e8s la semaine suivant la conf\u00e9rence.\r\n            ",
+                    "descriptionEn": "The conferences will be fully filmed and made available the week following the conference."
                 },
                 "order": 3,
                 "id": "a7016410-7698-4f7c-8540-50a7909a1439"
@@ -152,8 +176,8 @@
                     "descriptionEn": "Newsletter"
                 },
                 "answer": {
-                    "descriptionFr": "Nous communiquons les informations importantes (dates de l'\u00e9v\u00e9nements, ouverture du CFP, de la loterie...) dans notre newsletter. Vous pouvez vous inscrire ici. (4 mails par an environ)",
-                    "descriptionEn": "We annouce major milestones (dates of events, opening of CFP, lottery...) via our newsletter. You can register here. (4 emails per year approximatively)"
+                    "descriptionFr": "Nous communiquons les informations importantes (dates de l'\u00e9v\u00e9nements, ouverture du CFP, de la loterie...) dans notre newsletter. Vous pouvez vous inscrire [ici](https://mixitconf.org/me). (4 mails par an environ)\r\n            \r\n            ",
+                    "descriptionEn": "We communicate important information (event dates, CFP opening, lottery dates, etc.) through our newsletter. You can sign up [here](https://mixitconf.org/me). (Approximately 4 emails per year)"
                 },
                 "order": 1,
                 "id": "a6de837d-bfe4-47c6-90a7-75e1d6d34871"
@@ -164,8 +188,8 @@
                     "descriptionEn": "Social networks"
                 },
                 "answer": {
-                    "descriptionFr": "Vous pouvez nous retrouver sur Twitter Twitter, LinkedIn, Mastodon, Twitch et Instagram.",
-                    "descriptionEn": "You can find us on Twitter, LinkedIn, Mastodon, Twitch and Instagram."
+                    "descriptionFr": "Vous pouvez nous retrouver sur [Bluesky](https://bsky.app/profile/mixitconf.bsky.social), [Instagram](https://www.instagram.com/mixitconf/), [LinkedIn](https://www.linkedin.com/company/mixitconf/), [Twitch](https://www.twitch.tv/mixitconf/) et [X](https://twitter.com/mixitconf).\r\n            ",
+                    "descriptionEn": "You can find us on [Bluesky](https://bsky.app/profile/mixitconf.bsky.social), [Instagram](https://www.instagram.com/mixitconf/), [LinkedIn](https://www.linkedin.com/company/mixitconf/), [Twitch](https://www.twitch.tv/mixitconf/) and [X](https://twitter.com/mixitconf)."
                 },
                 "order": 2,
                 "id": "5aa9cfe5-9ab8-42ed-a982-5c0ea64990e0"
