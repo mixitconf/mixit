@@ -50,18 +50,6 @@
                     "descriptionFr": "Les billets sont en prix libre avec un prix minimum de 75\u20ac. Les billets ne sont ni remboursables, ni transf\u00e9rables.\r\n            \r\n            \r\n            ",
                     "descriptionEn": "The tickets are on a pay-what-you-want basis with a minimum price of \u20ac75. Tickets are non-refundable and non-transferable.\r\n            \r\n            \r\n            "
                 },
-                "order": 5,
-                "id": "f17e33b4-6f21-431a-947d-b0e4a3b715f4"
-            },
-            {
-                "title": {
-                    "descriptionFr": "Quelles sont les conditions de vente du billet ? ",
-                    "descriptionEn": "What are the ticket sales terms and conditions?"
-                },
-                "answer": {
-                    "descriptionFr": "Les billets sont en prix libre avec un prix minimum de 75\u20ac. Les billets ne sont ni remboursables, ni transf\u00e9rables.\r\n            \r\n            \r\n            ",
-                    "descriptionEn": "The tickets are on a pay-what-you-want basis with a minimum price of \u20ac75. Tickets are non-refundable and non-transferable.\r\n            \r\n            \r\n            "
-                },
                 "order": 3,
                 "id": "62f3e740-08b0-454c-9650-8d6237d98606"
             }

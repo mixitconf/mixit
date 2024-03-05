@@ -2080,6 +2080,11 @@
                 "level": "GOLD",
                 "sponsorId": "Worldline",
                 "subscriptionDate": "2024-02-20"
+            },
+            {
+                "level": "PARTY",
+                "sponsorId": "grandlyon",
+                "subscriptionDate": "2024-03-04"
             }
         ],
         "organizations": [],
