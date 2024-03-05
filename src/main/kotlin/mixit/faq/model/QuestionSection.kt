@@ -60,7 +60,7 @@ data class QuestionSection(
             } else {
                 this.copy(
                     title = title.copy(
-                        descriptionEn = title.descriptionEn.markFoundOccurrences(searchTerms) ?: title.descriptionEn
+                        descriptionEn = title.descriptionEn.markFoundOccurrences(searchTerms)
                     ),
                     questions = questions.mapNotNull {
                         if (!it.hasFoundOccurrences(ENGLISH, searchTerms)) {
