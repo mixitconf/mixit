@@ -33,39 +33,20 @@
 
     <div class="mxt-btn-container">
         {{#connected}}
-            <button id="favorite" class="mxt-btn-light"
-                    onclick="favoriteToggle(event)"
-                    {{^favorites}}style="display: none"{{/favorites}}
-                    aria-label="{{#i18n}}favorite.selected{{/i18n}}">
-                    <img src="/images/svg/favorites/mxt-favorite.svg" class="mxt-icon--cat__talks"/>
-                    <span class="ms-2">{{#i18n}}favorite.selected{{/i18n}}</span>
-            </button>
-            <button id="nonfavorite" class="mxt-btn-light"
-                    onclick="favoriteToggle(event)"
-                    {{#favorites}}style="display: none"{{/favorites}}
-                    aria-label="{{#i18n}}favorite.nonselected{{/i18n}}">
-                <img src="/images/svg/favorites/mxt-favorite-non.svg" class="mxt-icon--cat__talks"/>
-                <span class="ms-2">{{#i18n}}favorite.nonselected{{/i18n}}</span>
-            </button>
-            <script>
-                function favoriteToggle(event) {
-                    const talkField = document.getElementById('talkId');
-                    const email = document.getElementById('email');
-
-                    fetch(`/api/favorites/${email.value}/talks/${talkField.value}/toggle`, {method: 'post'})
-                            .then(response => response.json())
-                            .then(json => {
-                                if (json.selected) {
-                                    document.getElementById('favorite').style.display = 'flex';
-                                    document.getElementById('nonfavorite').style.display = 'none';
-                                } else {
-                                    document.getElementById('favorite').style.display = 'none';
-                                    document.getElementById('nonfavorite').style.display = 'flex';
-                                }
-                            });
-                    event.stopPropagation();
-                }
-            </script>
+            <form method="post" action="/favorites/{{email}}/talks/{{talk.id}}/toggle" name="favoriteForm">
+                {{#favorites}}
+                    <button class="mxt-btn-light" aria-label="{{#i18n}}favorite.selected{{/i18n}}">
+                        <img src="/images/svg/favorites/mxt-favorite.svg" class="mxt-icon--cat__talks"/>
+                        <span class="ms-2">{{#i18n}}favorite.selected{{/i18n}}</span>
+                    </button>
+                {{/favorites}}
+                {{^favorites}}
+                    <button class="mxt-btn-light" aria-label="{{#i18n}}favorite.nonselected{{/i18n}}">
+                        <img src="/images/svg/favorites/mxt-favorite-non.svg" class="mxt-icon--cat__talks"/>
+                        <span class="ms-2">{{#i18n}}favorite.nonselected{{/i18n}}</span>
+                    </button>
+                {{/favorites}}
+            </form>
         {{/connected}}
     </div>
 

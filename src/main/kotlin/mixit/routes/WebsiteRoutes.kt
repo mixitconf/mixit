@@ -9,6 +9,7 @@ import mixit.blog.handler.WebBlogHandler
 import mixit.event.handler.AdminEventHandler
 import mixit.event.handler.AdminEventImagesHandler
 import mixit.faq.handler.AdminQuestionHandler
+import mixit.favorite.handler.JsonFavoriteHandler
 import mixit.features.handler.FeatureStateHandler
 import mixit.feedback.handler.FeedbackHandler
 import mixit.mailing.handler.MailingHandler
@@ -76,6 +77,7 @@ class WebsiteRoutes(
     private val mailingListHandler: MailingListHandler,
     private val mixetteHandler: MixetteHandler,
     private val userHandler: UserHandler,
+    private val favoriteHandler: JsonFavoriteHandler,
     private val ticketHandler: TicketHandler,
     private val properties: MixitProperties,
     private val routeFilterUtils: RouteFilterUtils,
@@ -278,6 +280,7 @@ class WebsiteRoutes(
             POST("/admin/users/delete", adminUserHandler::adminDeleteUser)
             POST("/admin/users/search", adminUserHandler::adminUsers)
             POST("/admin/users-newsletter/search", adminUserHandler::adminUserNewsLetters)
+            POST("/favorites/{email}/talks/{id}/toggle", favoriteHandler::toggleFavorite)
             POST("/login", authenticationHandler::login)
             POST("/lottery", lotteryHandler::submit)
             POST("/me", userHandler::saveProfile)
