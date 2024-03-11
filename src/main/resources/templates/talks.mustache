@@ -59,6 +59,11 @@
             </div>
         </div>
     {{/hasTalk}}
+    {{^talkByRooms}}
+       <p class="pt-3">
+        {{#i18n}}favorite.none{{/i18n}}
+       </p>
+    {{/talkByRooms}}
 </div>
 
 {{> footer-sponsor}}

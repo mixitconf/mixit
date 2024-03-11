@@ -53,7 +53,6 @@ class ApiRoutes(
             GET("/event/{id}", eventHandler::findOne)
             GET("/favorites/{email}/talks/{id}", favoriteHandler::getFavorite)
             GET("/favorites/{email}", favoriteHandler::getFavorites)
-            POST("/favorites/{email}/talks/{id}/toggle", favoriteHandler::toggleFavorite)
             POST("/feedback/{email}/talks/{talkId}/vote/{feedback}", feedbackHandler::vote)
             GET("/talk/{login}", talkHandler::findOne)
             GET("/user", userHandler::findAll)

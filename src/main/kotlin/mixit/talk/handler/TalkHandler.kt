@@ -147,10 +147,10 @@ class TalkHandler(
 
         companion object {
             private fun current(isConnected: Boolean, canDisplayAgenda: Boolean) =
-                if (isConnected && canDisplayAgenda) {
-                    listOf(Talks, Speakers, Schedule, Favorites)
+                if (isConnected && (canDisplayAgenda)) {
+                    listOf(Schedule, Speakers, Talks, Favorites)
                 } else if (canDisplayAgenda) {
-                    listOf(Talks, Speakers, Schedule)
+                    listOf(Schedule, Speakers, Talks)
                 } else if (isConnected) {
                     listOf(Talks, Speakers, Favorites)
                 } else {
@@ -161,13 +161,14 @@ class TalkHandler(
         }
 
         fun tabs(isCurrent: Boolean, isConnected: Boolean, canDisplayAgenda: Boolean): List<TabDto> =
-            (if (isCurrent) current(isConnected, canDisplayAgenda) else old()).map {
-                TabDto(
-                    name = it.name.lowercase(),
-                    active = it == this,
-                    url = it.url
-                )
-            }
+            (if (isCurrent) current(isConnected, canDisplayAgenda) else old())
+                .map {
+                    TabDto(
+                        name = it.name.lowercase(),
+                        active = it == this,
+                        url = it.url
+                    )
+                }
     }
 
     data class TabDto(val name: String, val active: Boolean, val url: String)
@@ -235,7 +236,7 @@ class TalkHandler(
                 TalksTabs.Photos
             ).contains(config.tabs) && isCurrent
         ) {
-            return seeOther("${properties.baseUri}/${config.year}")
+            return seeOther("${properties.baseUri}/${config.year}?agenda=true")
         }
         return ok()
             .render(
@@ -244,14 +245,14 @@ class TalkHandler(
                     EVENT to event.toEvent(),
                     SPONSORS to userService.loadSponsors(event),
                     YEAR_SELECTOR to YearSelector.create(config.year, config.template.path!!, talk = true),
-                    "tabs" to config.tabs.tabs(isCurrent, currentUserEmail.isNotEmpty(), canDisplayAgenda),
+                    "tabs" to config.tabs.tabs(isCurrent, currentUserEmail.isNotEmpty(), canDisplayAgenda || config.tabs == TalksTabs.Favorites),
                     TALKS to getTalkToDisplay(config, rooms, days, talks, canDisplayAgenda),
                     TITLE to title,
                     YEAR to config.year,
                     IMAGES to images,
                     SPEAKERS to speakers(config.req, config.year),
                     "canDisplayAgenda" to canDisplayAgenda,
-                    "displayAgenda" to (config.tabs == TalksTabs.Schedule && canDisplayAgenda),
+                    "displayAgenda" to ((config.tabs == TalksTabs.Schedule || config.tabs == TalksTabs.Favorites) && canDisplayAgenda),
                     "displayWorkshop" to config.viewWorkshop,
                     "schedulingFileUrl" to event.schedulingFileUrl,
                     "filtered" to config.filterOnFavorite,
@@ -274,9 +275,9 @@ class TalkHandler(
         talks: List<TalkDto>,
         canDisplayAgenda: Boolean
     ): Any =
-        if (config.tabs == TalksTabs.Schedule && canDisplayAgenda) {
+        if ((config.tabs == TalksTabs.Schedule || config.tabs == TalksTabs.Favorites) && canDisplayAgenda) {
             talksToDisplayOnAgenda(talks, rooms, days, config.req.language())
-        } else if(config.tabs == TalksTabs.TalksWithVideo) {
+        } else if (config.tabs == TalksTabs.TalksWithVideo) {
             talks
         } else {
             talksToDisplayByDate(talks, days, config.req.language())
@@ -303,7 +304,7 @@ class TalkHandler(
             .distinct()
             .map { Room.valueOf(it.replace("rooms.", "").uppercase()) }
             .filter { !listOf(Room.MUMMY, Room.OUTSIDE).contains(it) }
-            .sortedBy { it.name }
+            .sortedBy { it.order }
             .toList()
 
     private fun talksToDisplayByDate(
@@ -515,12 +516,18 @@ class TalkHandler(
             }
         }
 
-    suspend fun findOneView(req: ServerRequest, year: Int): ServerResponse {
+    suspend fun findOneView(req: ServerRequest, year: Int): ServerResponse =
+        findOneView(
+            service.findByEventAndSlug(year.toString(), req.pathVariable("slug")),
+            req,
+            year
+        )
+
+    suspend fun findOneView(talk: CachedTalk, req: ServerRequest, year: Int): ServerResponse {
         val lang = req.language()
         val currentUserEmail = req.currentNonEncryptedUserEmail()
         val event = eventService.findByYear(year)
         val favoriteTalkIds = favoriteRepository.findByEmail(currentUserEmail).map { it.talkId }
-        val talk = service.findByEventAndSlug(year.toString(), req.pathVariable("slug"))
         val speakers = talk.speakers.map { it.toDto(lang) }.sortedBy { it.firstname }
         val otherTalks = service.findBySpeakerId(speakers.map { it.login }, talk.id).map { it.toDto(lang) }
 
