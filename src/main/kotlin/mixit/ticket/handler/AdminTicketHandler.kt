@@ -1,5 +1,6 @@
 package mixit.ticket.handler
 
+import java.time.Instant
 import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.MixitApplication
 import mixit.MixitProperties
@@ -10,20 +11,11 @@ import mixit.event.model.SponsorshipLevel.MIXTEEN
 import mixit.event.model.SponsorshipLevel.PARTY
 import mixit.event.model.SponsorshipLevel.SILVER
 import mixit.features.model.FeatureStateService
-import mixit.util.mustache.MustacheI18n.CREATION_MODE
-import mixit.util.mustache.MustacheI18n.MESSAGE
-import mixit.util.mustache.MustacheI18n.TICKET
-import mixit.util.mustache.MustacheI18n.TICKETS
-import mixit.util.mustache.MustacheI18n.TITLE
-import mixit.util.mustache.MustacheI18n.TYPES
-import mixit.util.mustache.MustacheTemplate.AdminTicket
-import mixit.util.mustache.MustacheTemplate.AdminTicketEdit
-import mixit.util.mustache.MustacheTemplate.AdminTicketPrint
-import mixit.util.mustache.MustacheTemplate.TicketError
 import mixit.security.MixitWebFilter
 import mixit.security.model.Cryptographer
 import mixit.talk.model.TalkService
 import mixit.ticket.model.Ticket
+import mixit.ticket.model.TicketPronoun
 import mixit.ticket.model.TicketService
 import mixit.ticket.model.TicketType
 import mixit.ticket.model.TicketType.SPEAKER
@@ -36,7 +28,17 @@ import mixit.user.model.Role
 import mixit.util.enumMatcher
 import mixit.util.errors.NotFoundException
 import mixit.util.extractFormData
-import org.springframework.web.reactive.function.server.json
+import mixit.util.mustache.MustacheI18n.CREATION_MODE
+import mixit.util.mustache.MustacheI18n.MESSAGE
+import mixit.util.mustache.MustacheI18n.PRONOUNS
+import mixit.util.mustache.MustacheI18n.TICKET
+import mixit.util.mustache.MustacheI18n.TICKETS
+import mixit.util.mustache.MustacheI18n.TITLE
+import mixit.util.mustache.MustacheI18n.TYPES
+import mixit.util.mustache.MustacheTemplate.AdminTicket
+import mixit.util.mustache.MustacheTemplate.AdminTicketEdit
+import mixit.util.mustache.MustacheTemplate.AdminTicketPrint
+import mixit.util.mustache.MustacheTemplate.TicketError
 import mixit.util.seeOther
 import mixit.util.webSession
 import org.springframework.dao.DuplicateKeyException
@@ -45,9 +47,9 @@ import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.bodyValueAndAwait
+import org.springframework.web.reactive.function.server.json
 import org.springframework.web.reactive.function.server.renderAndAwait
 import reactor.core.publisher.Mono
-import java.time.Instant
 
 @Component
 class AdminTicketHandler(
@@ -75,7 +77,7 @@ class AdminTicketHandler(
         val params = mapOf(
             TITLE to AdminTicket.title,
             TICKETS to tickets,
-            TYPES to TicketType.values().map { it to false }
+            TYPES to TicketType.entries.map { it to false }
         )
         return ok().renderAndAwait(AdminTicket.template, params)
     }
@@ -111,7 +113,8 @@ class AdminTicketHandler(
             TITLE to AdminTicketPrint.title,
             CREATION_MODE to ticket.encryptedEmail.isEmpty(),
             TICKET to ticket.decrypt(cryptographer),
-            TYPES to enumMatcher(ticket) { ticket.type }
+            TYPES to enumMatcher(ticket) { ticket.type },
+            PRONOUNS to TicketPronoun.entries.map { it to false }
         )
         return ok().renderAndAwait(AdminTicketEdit.template, params)
     }
@@ -127,6 +130,8 @@ class AdminTicketHandler(
                 lastname = cryptographer.encrypt(formData["lastname"])!!,
                 externalId = cryptographer.encrypt(formData["externalId"]),
                 type = TicketType.valueOf(formData["type"]!!),
+                pronoun = if(formData["pronoun"].isNullOrBlank()) null else TicketPronoun.valueOf(formData["pronoun"]!!),
+                englishSpeaker = formData["englishSpeaker"] == "on"
             )
             ?: Ticket(
                 number = cryptographer.encrypt(Ticket.generateNewNumber())!!,
@@ -137,6 +142,8 @@ class AdminTicketHandler(
                 lotteryRank = formData["lotteryRank"]?.toInt(),
                 createdAt = Instant.parse(formData["createdAt"])!!,
                 type = TicketType.valueOf(formData["type"]!!),
+                pronoun = if(formData["pronoun"].isNullOrBlank()) null else TicketPronoun.valueOf(formData["pronoun"]!!),
+                englishSpeaker = formData["englishSpeaker"] == "on"
             )
 
         val params = mapOf(

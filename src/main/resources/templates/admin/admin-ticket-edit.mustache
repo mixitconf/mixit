@@ -20,6 +20,15 @@
             <input class="form-control" type="hidden" name="number" value="{{ticket.number}}"/>
         </div>
         <div class="mb-3">
+            <label class="label">{{#i18n}}admin.ticket.pronoun{{/i18n}}</label>
+            <select class="form-control" name="pronoun">
+                <option value=""></option>
+                {{#pronouns}}
+                    <option value="{{first}}"{{#second}} selected{{/second}}>{{first}}</option>
+                {{/pronouns}}
+            </select>
+        </div>
+        <div class="mb-3">
             <label class="label">{{#i18n}}admin.ticket.firstname{{/i18n}}</label>
             <input class="form-control" type="text" name="firstname"
                    value="{{#ticket.firstname}}{{ticket.firstname}}{{/ticket.firstname}}"/>
@@ -50,6 +59,11 @@
             <label class="label">{{#i18n}}admin.ticket.rank{{/i18n}}</label>
             <input class="form-control" readonly type="text" value="{{#ticket.lotteryRank}}{{ticket.lotteryRank}}{{/ticket.lotteryRank}}"/>
             <input class="form-control" type="hidden" name="lotteryRank" value="{{#ticket.lotteryRank}}{{ticket.lotteryRank}}{{/ticket.lotteryRank}}"/>
+        </div>
+        <div class="mb-3">
+            <label class="label">{{#i18n}}admin.ticket.en{{/i18n}}</label>
+            <input class="form-check-input" type="checkbox" role="switch" id="englishSpeaker" name="englishSpeaker"
+                   {{#englishSpeaker}}checked{{/englishSpeaker}}>
         </div>
         <div class="mb-3">
             <label class="label">{{#i18n}}admin.ticket.createdat{{/i18n}}</label>

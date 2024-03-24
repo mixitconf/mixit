@@ -26,7 +26,7 @@ class TicketRepository(
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
-        deleteAll().block()
+        //deleteAll().block()
         if (count().block() == 0L) {
             ClassPathResource("data/ticket.json").inputStream.use { resource ->
                 val tickets: List<Ticket> = objectMapper.readValue(resource)
