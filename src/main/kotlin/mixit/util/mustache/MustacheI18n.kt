@@ -33,6 +33,7 @@ object MustacheI18n {
     const val MESSAGE = "message"
     const val PHOTOS = "photos"
     const val POSTS = "posts"
+    const val PRONOUNS = "pronouns"
     const val ROOMS = "rooms"
     const val SPEAKER = "speaker"
     const val SPEAKERS = "speakers"

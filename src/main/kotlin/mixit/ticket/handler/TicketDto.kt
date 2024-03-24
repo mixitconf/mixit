@@ -1,9 +1,10 @@
 package mixit.ticket.handler
 
+import java.time.Instant
 import mixit.security.model.Cryptographer
 import mixit.ticket.model.Ticket
+import mixit.ticket.model.TicketPronoun
 import mixit.ticket.model.TicketType
-import java.time.Instant
 
 data class TicketDto(
     val email: String,
@@ -14,7 +15,9 @@ data class TicketDto(
     val login: String?,
     val externalId: String?,
     val type: TicketType,
-    val createdAt: Instant
+    val createdAt: Instant,
+    val pronoun: TicketPronoun? = null,
+    val englishSpeaker: Boolean = false,
 ) {
     constructor(ticket: Ticket, cryptographer: Cryptographer) : this(
         number = ticket.number.isNotBlank().let { cryptographer.decrypt(ticket.number)!! },
@@ -25,6 +28,8 @@ data class TicketDto(
         login = ticket.login?.isNotBlank().let { cryptographer.decrypt(ticket.login) },
         externalId = ticket.externalId?.isNotBlank().let { cryptographer.decrypt(ticket.externalId) },
         createdAt = ticket.createdAt,
-        type = ticket.type
+        type = ticket.type,
+        pronoun = ticket.pronoun,
+        englishSpeaker = ticket.englishSpeaker
     )
 }

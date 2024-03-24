@@ -14,14 +14,14 @@
               onsubmit="return confirm('Are you sure to import volunteer members ?');">
             <button class="mxt-btn-primary me-3">Import volunteers</button>
         </form>
-        <form action="/admin/ticket/import/speakers" method="post"
-              onsubmit="return confirm('Are you sure to import speakers ?');">
-            <button class="mxt-btn-primary me-3">Import speakers</button>
-        </form>
-        <form action="/admin/ticket/import/sponsors" method="post"
-              onsubmit="return confirm('Are you sure to import sponsors ?');">
-            <button class="mxt-btn-primary me-3">Import sponsors</button>
-        </form>
+<!--        <form action="/admin/ticket/import/speakers" method="post"-->
+<!--              onsubmit="return confirm('Are you sure to import speakers ?');">-->
+<!--            <button class="mxt-btn-primary me-3">Import speakers</button>-->
+<!--        </form>-->
+<!--        <form action="/admin/ticket/import/sponsors" method="post"-->
+<!--              onsubmit="return confirm('Are you sure to import sponsors ?');">-->
+<!--            <button class="mxt-btn-primary me-3">Import sponsors</button>-->
+<!--        </form>-->
     </div>
     <div class="row text-center pt-2 pb-2">
         <div class="col-4"></div>
@@ -47,9 +47,11 @@
         <thead>
         <tr>
             <th>{{#i18n}}admin.ticket.number{{/i18n}}</th>
+            <th>{{#i18n}}admin.ticket.pronoun{{/i18n}}</th>
             <th>{{#i18n}}admin.ticket.firstname{{/i18n}}</th>
             <th>{{#i18n}}admin.ticket.lastname{{/i18n}}</th>
             <th>{{#i18n}}admin.ticket.type{{/i18n}}</th>
+            <th>{{#i18n}}admin.ticket.en{{/i18n}}</th>
             <th>{{#i18n}}admin.ticket.email{{/i18n}}</th>
             <th style="width: 8em">&nbsp;</th>
         </tr>
@@ -58,9 +60,11 @@
         {{#tickets}}
             <tr>
                 <th>{{number}}</th>
+                <td>{{#pronoun}}{{pronoun}}{{/pronoun}}</td>
                 <td>{{firstname}}</td>
                 <td>{{lastname}}</td>
                 <td>{{type}}</td>
+                <td>{{#englishSpeaker}}{{englishSpeaker}}{{/englishSpeaker}}</td>
                 <td><a href="mailto:{{email}}">{{email}}</a></td>
                 <td class="mxt-btn-container">
                     <a href="/admin/ticket/edit/{{number}}" class="mxt-btn-light">
