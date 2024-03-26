@@ -2,7 +2,13 @@ package mixit.ticket.repository
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import java.time.Instant
+import kotlinx.coroutines.runBlocking
+import mixit.security.model.Cryptographer
 import mixit.ticket.model.Ticket
+import mixit.ticket.model.TicketPronoun
+import mixit.ticket.model.TicketType
+import mixit.user.repository.UserRepository
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
 import org.springframework.data.mongodb.core.ReactiveMongoTemplate
@@ -17,16 +23,78 @@ import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
 import reactor.core.publisher.Flux
 
+data class TicketTemp(
+    val number: String?,
+    val encryptedEmail: String,
+    val type: TicketType,
+    val pronoun: String? = null,
+    val firstname: String? = null,
+    val lastname: String,
+    val externalId: String? = null,
+    val englishSpeaker: Int = 0,
+    val createdAt: Instant = Instant.now()
+) {
+    fun toTicket(cryptographer: Cryptographer) = Ticket(
+        number = cryptographer.encrypt(if(number.isNullOrBlank()) Ticket.generateNewNumber() else number)!!,
+        encryptedEmail = cryptographer.encrypt(encryptedEmail)!!,
+        type = type,
+        pronoun = if (pronoun == null) null
+        else if (pronoun.lowercase().startsWith("il")) {
+            TicketPronoun.HE_HIM
+        } else if (pronoun.lowercase().startsWith("elle")) {
+            TicketPronoun.SHE_HER
+        } else if (pronoun.lowercase().startsWith("iel")) {
+            TicketPronoun.THEY_THEM
+        } else if (pronoun.lowercase().startsWith("xe")) {
+            TicketPronoun.XE_XEM
+        } else if (pronoun.lowercase().startsWith("ask")) {
+            TicketPronoun.ASK_ME
+        } else {
+            null
+        },
+        firstname = cryptographer.encrypt(firstname),
+        lastname = cryptographer.encrypt(lastname)!!,
+        externalId = cryptographer.encrypt(externalId),
+        englishSpeaker = englishSpeaker == 1,
+        createdAt = createdAt
+    )
+}
+
 @Repository
 class TicketRepository(
     private val template: ReactiveMongoTemplate,
+    private val lotteryRepository: LotteryRepository,
+    private val userRepository: UserRepository,
+    private val cryptographer: Cryptographer,
     private val objectMapper: ObjectMapper
 ) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
 
     fun initData() {
-        //deleteAll().block()
+        deleteAll().block()
+        if (count().block() == 0L) {
+            ClassPathResource("data/import_lottery_attendee.json").inputStream.use { resource ->
+                runBlocking {
+                    val tickets: List<TicketTemp> = objectMapper.readValue(resource)
+                    val users = userRepository.findAll().filterNot { it.email == null }.associateBy { it.email }
+                    val lotteries = lotteryRepository.findAll().associateBy { it.email }
+
+                    tickets
+                        .forEach { ticketTemp ->
+                            val encryptedEmail = cryptographer.encrypt(ticketTemp.encryptedEmail)!!
+                            val ticket = ticketTemp.toTicket(cryptographer)
+                                .copy(
+                                    login = cryptographer.encrypt(users[encryptedEmail]?.login),
+                                    lotteryRank = lotteries[encryptedEmail]?.rank,
+                                )
+                            save(ticket).block()
+                        }
+
+                }
+                logger.info("Ticket data initialization complete")
+            }
+        }
         if (count().block() == 0L) {
             ClassPathResource("data/ticket.json").inputStream.use { resource ->
                 val tickets: List<Ticket> = objectMapper.readValue(resource)

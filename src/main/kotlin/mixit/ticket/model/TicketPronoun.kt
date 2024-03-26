@@ -5,5 +5,6 @@ enum class TicketPronoun {
     SHE_HER,
     HE_HIM,
     THEY_THEM,
-    XE_XEM
+    XE_XEM,
+    SHE_THEY
 }
