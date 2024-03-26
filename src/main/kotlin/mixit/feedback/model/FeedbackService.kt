@@ -12,8 +12,6 @@ import mixit.talk.handler.TalkDto
 import mixit.talk.model.CachedTalk
 import mixit.talk.model.Language
 import mixit.user.model.UserService
-import mixit.user.model.desanonymize
-import mixit.util.extractFormData
 import org.springframework.data.crossstore.ChangeSetPersister.NotFoundException
 import org.springframework.stereotype.Service
 

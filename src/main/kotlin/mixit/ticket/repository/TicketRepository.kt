@@ -3,7 +3,6 @@ package mixit.ticket.repository
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import java.time.Instant
-import kotlinx.coroutines.runBlocking
 import mixit.security.model.Cryptographer
 import mixit.ticket.model.Ticket
 import mixit.ticket.model.TicketPronoun
@@ -73,28 +72,28 @@ class TicketRepository(
 
     fun initData() {
         deleteAll().block()
-        if (count().block() == 0L) {
-            ClassPathResource("data/import_lottery_attendee.json").inputStream.use { resource ->
-                runBlocking {
-                    val tickets: List<TicketTemp> = objectMapper.readValue(resource)
-                    val users = userRepository.findAll().filterNot { it.email == null }.associateBy { it.email }
-                    val lotteries = lotteryRepository.findAll().associateBy { it.email }
-
-                    tickets
-                        .forEach { ticketTemp ->
-                            val encryptedEmail = cryptographer.encrypt(ticketTemp.encryptedEmail)!!
-                            val ticket = ticketTemp.toTicket(cryptographer)
-                                .copy(
-                                    login = cryptographer.encrypt(users[encryptedEmail]?.login),
-                                    lotteryRank = lotteries[encryptedEmail]?.rank,
-                                )
-                            save(ticket).block()
-                        }
-
-                }
-                logger.info("Ticket data initialization complete")
-            }
-        }
+//        if (count().block() == 0L) {
+//            ClassPathResource("data/import_lottery_attendee.json").inputStream.use { resource ->
+//                runBlocking {
+//                    val tickets: List<TicketTemp> = objectMapper.readValue(resource)
+//                    val users = userRepository.findAll().filterNot { it.email == null }.associateBy { it.email }
+//                    val lotteries = lotteryRepository.findAll().associateBy { it.email }
+//
+//                    tickets
+//                        .forEach { ticketTemp ->
+//                            val encryptedEmail = cryptographer.encrypt(ticketTemp.encryptedEmail)!!
+//                            val ticket = ticketTemp.toTicket(cryptographer)
+//                                .copy(
+//                                    login = cryptographer.encrypt(users[encryptedEmail]?.login),
+//                                    lotteryRank = lotteries[encryptedEmail]?.rank,
+//                                )
+//                            save(ticket).block()
+//                        }
+//
+//                }
+//                logger.info("Ticket data initialization complete")
+//            }
+//        }
         if (count().block() == 0L) {
             ClassPathResource("data/ticket.json").inputStream.use { resource ->
                 val tickets: List<Ticket> = objectMapper.readValue(resource)

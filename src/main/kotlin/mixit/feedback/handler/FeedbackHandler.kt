@@ -4,6 +4,7 @@ import mixit.MixitProperties
 import mixit.feedback.model.Feedback
 import mixit.feedback.model.FeedbackService
 import mixit.feedback.model.FeedbackService.CommentType
+import mixit.feedback.repository.UserFeedbackRepository
 import mixit.security.MixitWebFilter.Companion.SESSION_EMAIL_KEY
 import mixit.talk.model.TalkService
 import mixit.util.YearSelector
@@ -32,9 +33,13 @@ import org.springframework.web.reactive.function.server.renderAndAwait
 @Component
 class FeedbackHandler(
     private val feedbackService: FeedbackService,
+    private val feedbackRepository: UserFeedbackRepository,
     private val talkService: TalkService,
     private val properties: MixitProperties
 ) {
+
+    suspend fun findAll(req: ServerRequest): ServerResponse =
+        ServerResponse.ok().json().bodyValueAndAwait(feedbackRepository.findAll())
 
     private suspend fun routeToAdminPage(year: String, type: CommentType): ServerResponse =
         ServerResponse.ok().renderAndAwait(

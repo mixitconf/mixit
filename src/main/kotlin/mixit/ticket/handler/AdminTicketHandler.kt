@@ -83,13 +83,15 @@ class AdminTicketHandler(
     }
 
     suspend fun printTicketing(req: ServerRequest): ServerResponse {
-        val tickets = service.findAll().map { ticket ->
-            ticket.toDto(cryptographer)
-                .copy(
-                    firstname = ticket.firstname?.uppercase() ?: ticket.lastname.uppercase(),
-                    lastname = if (ticket.firstname == null) "" else ticket.lastname.uppercase()
-                )
-        }
+        val tickets = service.findAll()
+            .map { ticket ->
+                ticket.toDto(cryptographer)
+                    .copy(
+                        firstname = ticket.firstname?.uppercase() ?: ticket.lastname.uppercase(),
+                        lastname = if (ticket.firstname == null) "" else ticket.lastname.uppercase()
+                    )
+            }
+            .sortedBy { it.lastname }
         val params = mapOf(
             TITLE to "admin.ticket.title",
             TICKETS to tickets
@@ -130,7 +132,7 @@ class AdminTicketHandler(
                 lastname = cryptographer.encrypt(formData["lastname"])!!,
                 externalId = cryptographer.encrypt(formData["externalId"]),
                 type = TicketType.valueOf(formData["type"]!!),
-                pronoun = if(formData["pronoun"].isNullOrBlank()) null else TicketPronoun.valueOf(formData["pronoun"]!!),
+                pronoun = if (formData["pronoun"].isNullOrBlank()) null else TicketPronoun.valueOf(formData["pronoun"]!!),
                 englishSpeaker = formData["englishSpeaker"] == "on"
             )
             ?: Ticket(
@@ -142,7 +144,7 @@ class AdminTicketHandler(
                 lotteryRank = formData["lotteryRank"]?.toInt(),
                 createdAt = Instant.parse(formData["createdAt"])!!,
                 type = TicketType.valueOf(formData["type"]!!),
-                pronoun = if(formData["pronoun"].isNullOrBlank()) null else TicketPronoun.valueOf(formData["pronoun"]!!),
+                pronoun = if (formData["pronoun"].isNullOrBlank()) null else TicketPronoun.valueOf(formData["pronoun"]!!),
                 englishSpeaker = formData["englishSpeaker"] == "on"
             )
 

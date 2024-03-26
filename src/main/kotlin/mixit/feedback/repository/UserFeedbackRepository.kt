@@ -1,8 +1,11 @@
 package mixit.feedback.repository
 
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.module.kotlin.readValue
 import kotlinx.coroutines.reactor.awaitSingle
 import mixit.feedback.model.UserFeedback
 import org.slf4j.LoggerFactory
+import org.springframework.core.io.ClassPathResource
 import org.springframework.data.domain.Sort.Direction.ASC
 import org.springframework.data.domain.Sort.Order
 import org.springframework.data.domain.Sort.by
@@ -18,10 +21,21 @@ import org.springframework.stereotype.Repository
 
 @Repository
 class UserFeedbackRepository(
-    private val template: ReactiveMongoTemplate
+    private val template: ReactiveMongoTemplate,
+    private val objectMapper: ObjectMapper,
 ) {
 
     private val logger = LoggerFactory.getLogger(this.javaClass)
+
+    fun initData() {
+        if (count().block() == 0L) {
+            ClassPathResource("data/feedback.json").inputStream.use { resource ->
+                val tickets: List<UserFeedback> = objectMapper.readValue(resource)
+                tickets.forEach { save(it).block() }
+                logger.info("Feedback initialization complete")
+            }
+        }
+    }
 
     fun count() =
         template.count<UserFeedback>()

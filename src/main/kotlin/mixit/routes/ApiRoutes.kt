@@ -43,6 +43,7 @@ class ApiRoutes(
             GET("/admin/mixette", adminMixetteHandler::findAll)
             GET("/admin/ticket", ticketHandler::findAll)
             GET("/admin/lottery", lotteryHandler::findAll)
+            GET("/admin/feedback", feedbackHandler::findAll)
             GET("/admin/newsletter", adminUserHandler::adminUserNewsLetterCsv)
             GET("/admin/user", adminUserHandler::findAll)
             GET("/faq", jsonQuestionHandler::findAll)
