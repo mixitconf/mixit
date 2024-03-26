@@ -39,6 +39,7 @@ class LotteryHandler(
     private val userService: UserService,
     private val featureStateService: FeatureStateService
 ) {
+
     suspend fun findAll(req: ServerRequest): ServerResponse =
         ok().json().bodyValueAndAwait(lotteryRepository.findAll())
 
