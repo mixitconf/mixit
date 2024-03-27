@@ -2085,19 +2085,70 @@
                 "level": "PARTY",
                 "sponsorId": "grandlyon",
                 "subscriptionDate": "2024-03-04"
+            },
+            {
+                "level": "LANYARD",
+                "sponsorId": "energypool",
+                "subscriptionDate": "2024-03-13"
             }
         ],
         "organizations": [],
-        "volunteers": [],
+        "volunteers": [
+            {
+                "volunteerLogin": "horalass"
+            },
+            {
+                "volunteerLogin": "herve.tran.pro"
+            },
+            {
+                "volunteerLogin": "anne-laure"
+            },
+            {
+                "volunteerLogin": "cedric"
+            },
+            {
+                "volunteerLogin": "marion.charlotte"
+            },
+            {
+                "volunteerLogin": "sylvia.cohen"
+            },
+            {
+                "volunteerLogin": "y-boissaux"
+            },
+            {
+                "volunteerLogin": "clement-moysan"
+            },
+            {
+                "volunteerLogin": "joannitalac"
+            },
+            {
+                "volunteerLogin": "lavigne-johana"
+            },
+            {
+                "volunteerLogin": "chekina"
+            },
+            {
+                "volunteerLogin": "maud-hue"
+            },
+            {
+                "volunteerLogin": "zonca-cros"
+            },
+            {
+                "volunteerLogin": "amina-nekka"
+            },
+            {
+                "volunteerLogin": "hasna-kharbouche "
+            },
+            {
+                "volunteerLogin": "thomas.derville"
+            }
+        ],
         "organizers": [
             {
                 "organizerLogin": "guillaumeehret"
             },
             {
                 "organizerLogin": "vbonnefond"
-            },
-            {
-                "organizerLogin": "herve.tran.pro"
             },
             {
                 "organizerLogin": "Charles Bouttaz"
@@ -2124,15 +2175,18 @@
                 "organizerLogin": "romain"
             },
             {
-                "organizerLogin": "horalass"
+                "organizerLogin": "106329914971209052078"
             },
             {
-                "organizerLogin": "106329914971209052078"
+                "organizerLogin": "mathieu.tourrette"
+            },
+            {
+                "organizerLogin": "thierry.salvan"
             }
         ],
         "photoUrls": [],
         "videoUrl": null,
-        "schedulingFileUrl": null,
+        "schedulingFileUrl": "https://drive.proton.me/urls/NTWTM08JA0#FHMiDpGs5RwI",
         "year": 2024
     }
 ]

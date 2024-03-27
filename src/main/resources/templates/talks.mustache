@@ -3,19 +3,6 @@
 <div class="container-xxl">
     {{> talks-header}}
     {{#hasTalk}}
-        {{#schedulingFileUrl}}
-        <nav class="navbar mxt-navbar--talks">
-            <div class="nav-item">
-                <a href="{{schedulingFileUrl}}"
-                   target="_blank" alt="{{#i18n}}talks.schedule{{/i18n}}"
-                   class="nav-link mxt-navbar--nav-link">
-                    <img src="/images/svg/mxt-icon-file-pdf-dark.svg"
-                         class="mxt-icon--navbar me-2"
-                         alt="{{#i18n}}talks.schedule.download{{/i18n}}">
-                    {{#i18n}}talks.schedule.download{{/i18n}}</a>
-            </div>
-        </nav>
-        {{/schedulingFileUrl}}
         <div class="container-xxl pt-4 pb-4">
             <!-- Area used when user want to see the agenda view -->
             {{#canDisplayAgenda}}

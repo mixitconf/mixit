@@ -1,5 +1,9 @@
 package mixit.mixette.handler
 
+import java.math.BigDecimal
+import java.time.Duration.ofMillis
+import java.time.LocalTime
+import java.time.ZoneId
 import kotlinx.coroutines.reactor.awaitSingle
 import kotlinx.coroutines.runBlocking
 import mixit.MixitApplication.Companion.CURRENT_EVENT
@@ -8,8 +12,6 @@ import mixit.MixitProperties
 import mixit.event.model.EventService
 import mixit.mixette.model.MixetteDonation
 import mixit.mixette.repository.MixetteDonationRepository
-import mixit.util.mustache.MustacheI18n.TITLE
-import mixit.util.mustache.MustacheTemplate.MixetteDashboard
 import mixit.security.model.Cryptographer
 import mixit.talk.model.Language
 import mixit.ticket.model.CachedTicket
@@ -18,6 +20,8 @@ import mixit.user.model.CachedUser
 import mixit.user.model.UserService
 import mixit.util.frenchTalkTimeFormatter
 import mixit.util.language
+import mixit.util.mustache.MustacheI18n.TITLE
+import mixit.util.mustache.MustacheTemplate.MixetteDashboard
 import org.springframework.http.MediaType
 import org.springframework.http.codec.ServerSentEvent
 import org.springframework.stereotype.Component
@@ -27,10 +31,6 @@ import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.renderAndAwait
 import reactor.core.publisher.Flux
-import java.math.BigDecimal
-import java.time.Duration.ofMillis
-import java.time.LocalTime
-import java.time.ZoneId
 
 @Component
 class MixetteHandler(
@@ -68,14 +68,13 @@ class MixetteHandler(
     }
 
     suspend fun mixetteRealTime(req: ServerRequest): ServerResponse {
-        val interval = Flux.interval(ofMillis(1000))
+        val interval = Flux.interval(ofMillis(3000))
         return ok()
             .contentType(MediaType.TEXT_EVENT_STREAM)
             .body(
                 BodyInserters.fromServerSentEvents(
                     interval
                         .onBackpressureBuffer()
-                        // .flatMap { repository.findByYearAfterNow(CURRENT_EVENT) }
                         .map {
                             runBlocking {
                                 repository
