@@ -76,7 +76,7 @@ class AdminTicketHandler(
         val tickets = service.findAll().filter { type == null || it.type == type }.map { it.toDto(cryptographer) }
         val params = mapOf(
             TITLE to AdminTicket.title,
-            TICKETS to tickets,
+            TICKETS to tickets.sortedBy { it.lastname },
             TYPES to TicketType.entries.map { it to false }
         )
         return ok().renderAndAwait(AdminTicket.template, params)

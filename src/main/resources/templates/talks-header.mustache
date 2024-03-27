@@ -1,4 +1,19 @@
 <h1 class="">{{#i18n}}talks.title{{#topic}}.{{topic}}{{/topic}}{{/i18n}}</h1>
+
+{{#schedulingFileUrl}}
+    <nav class="navbar mxt-navbar--talks">
+        <div class="nav-item">
+            <a href="{{schedulingFileUrl}}"
+               target="_blank" alt="{{#i18n}}talks.schedule{{/i18n}}"
+               class="nav-link mxt-navbar--nav-link">
+                <img src="/images/svg/mxt-icon-file-pdf-dark.svg"
+                     class="mxt-icon--navbar me-2"
+                     alt="{{#i18n}}talks.schedule.download{{/i18n}}">
+                {{#i18n}}talks.schedule.download{{/i18n}}</a>
+        </div>
+    </nav>
+{{/schedulingFileUrl}}
+
 {{> year-selector}}
 <div class="mxt-talk-selector mt-3 mb-3">
     {{#tabs}}
