@@ -73,7 +73,7 @@ class TicketRepository(
     fun initData() {
         deleteAll().block()
 //        if (count().block() == 0L) {
-//            ClassPathResource("data/import_lottery_attendee.json").inputStream.use { resource ->
+//            ClassPathResource("data/import_lottery_speaker.json").inputStream.use { resource ->
 //                runBlocking {
 //                    val tickets: List<TicketTemp> = objectMapper.readValue(resource)
 //                    val users = userRepository.findAll().filterNot { it.email == null }.associateBy { it.email }
