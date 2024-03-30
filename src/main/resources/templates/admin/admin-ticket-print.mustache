@@ -1,8 +1,9 @@
 <style>
     @media print {
         @page {
+            size: A4;
             margin-top: 1.4cm;
-            margin-bottom: 1.1cm;
+            margin-bottom: 1cm;
             margin-left: 0.8cm;
             margin-right: 0.8cm;
         }
@@ -12,8 +13,8 @@
             height: 29.7cm;
             font-family: "Lato Light", Arial;
         }
-        header {
-            page-break-after: always;
+        .break {
+            break-after: page;
         }
     }
 
@@ -26,35 +27,42 @@
     .grid-container {
         //border: 1px solid #232323;
         display: grid;
-        column-gap: 0.5cm;
-        row-gap: 0.5cm;
+        column-gap: 0.3cm;
+        //row-gap: 0.5cm;
         grid-template-columns: auto auto auto;
     }
 
     .grid-cell {
+        //border: 1px solid #232323;
         // border: 2px solid #000000;
-        background-color: #0dcaf0;
+        //background-color: #0dcaf0;
         page-break-inside: avoid;
         text-align: center;
         padding-top: 0.5cm;
-        width: 6.4cm;
-        max-width: 6.4cm;
-        max-height: 4.9cm;
-        height: 4.9cm;
+        width: 6.6cm;
+        min-width: 6.6cm;
+        max-width: 6.6cm;
+        min-height: 5cm;
+        max-height: 5cm;
+        height: 5cm;
+    }
+    .grid-cell-margin {
+        margin-bottom: 0.2cm;
+    }
+    .grid-first-cell-margin {
+        padding-top: 0.6cm;
+        min-height: 5.4cm;
+        max-height: 5.4cm;
+        height: 5.4cm;
     }
 </style>
 <script src="/js/qrcode.min.js"></script>
-
+<div class="break"></div>
 <div class="grid-container">
-    <header></header>
-    <header></header>
-    <header></header>
     {{#tickets}}
-        <div class="grid-cell">
-            <div style="font-size: 10px;font-family: 'Lato Black'">{{#pronoun}}
-                {{#i18n}}admin.ticket.pronoun.{{ pronoun }}{{/i18n}}
-            {{/pronoun}}&nbsp;</div>
-            <div style="font-size: 27px; font-family: Lato; margin-top: 5px;text-overflow:ellipsis;height: 29px">{{ firstname }}</div>
+        <div class="grid-cell {{#isFirstLine}}grid-first-cell-margin{{/isFirstLine}} {{^isLastLine}}grid-cell-margin{{/isLastLine}}">
+            <div style="font-size: 10px;font-family: 'Lato Black'; {{#isFirstLine}}margin-top:18px{{/isFirstLine}}">{{#pronoun}}{{#i18n}}admin.ticket.pronoun.{{ pronoun }}{{/i18n}}{{/pronoun}}&nbsp;</div>
+            <div style="font-size: 28px; font-family: Lato; margin-top: 5px;text-overflow:ellipsis;height: 30px">{{ firstname }}</div>
             <div style="font-size: 20px; font-family: Lato; text-overflow:ellipsis;height: 22px;margin-bottom: 4px;white-space: nowrap;">{{ lastname }}</div>
             <div style="height: 2cm;width: 2cm; text-align: center;margin: auto" id="{{ number }}"></div>
             <script>
@@ -68,6 +76,7 @@
             <div style="font-size: 12px;font-family: 'Lato Black'; margin-top: 5px">{{ type }}</div>
             <div>&nbsp;</div>
         </div>
+
     {{/tickets}}
 </div>
 {{^tickets}}No ticket to print for the moment{{/tickets}}

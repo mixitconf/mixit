@@ -84,14 +84,16 @@ class AdminTicketHandler(
 
     suspend fun printTicketing(req: ServerRequest): ServerResponse {
         val tickets = service.findAll()
-            .map { ticket ->
-                ticket.toDto(cryptographer)
+            .sortedBy { it.lastname }
+            .mapIndexed { index, ticket ->
+                ticket.toDto(cryptographer, index)
                     .copy(
                         firstname = ticket.firstname?.uppercase() ?: ticket.lastname.uppercase(),
-                        lastname = if (ticket.firstname == null) "" else ticket.lastname.uppercase()
+                        lastname = if (ticket.firstname == null) "" else ticket.lastname.uppercase(),
+                        isLastLine = if (index % 15 == 12 || index % 15 == 13 || index % 15 == 14) true else null,
+                        isFirstLine = if (index % 15 == 0 || index % 15 == 1 || index % 15 == 2) true else null
                     )
             }
-            .sortedBy { it.lastname }
         val params = mapOf(
             TITLE to "admin.ticket.title",
             TICKETS to tickets

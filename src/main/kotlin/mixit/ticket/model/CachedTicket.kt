@@ -51,5 +51,6 @@ data class CachedTicket(
         type = type
     )
 
-    fun toDto(cryptographer: Cryptographer) = TicketDto(toEntity(cryptographer), cryptographer)
+    fun toDto(cryptographer: Cryptographer, index: Int = 0) =
+        TicketDto(toEntity(cryptographer), cryptographer)
 }
