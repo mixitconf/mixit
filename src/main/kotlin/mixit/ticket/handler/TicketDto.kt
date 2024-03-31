@@ -18,6 +18,8 @@ data class TicketDto(
     val createdAt: Instant,
     val pronoun: TicketPronoun? = null,
     val englishSpeaker: Boolean = false,
+    val isLastLine: Boolean? = false,
+    val isFirstLine: Boolean? = false
 ) {
     constructor(ticket: Ticket, cryptographer: Cryptographer) : this(
         number = ticket.number.isNotBlank().let { cryptographer.decrypt(ticket.number)!! },

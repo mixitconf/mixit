@@ -37,16 +37,15 @@
 
     setTimeout(() => {
         elements = document.getElementsByClassName("slide");
-        console.log(elements.length)
-        // for(let i=0, elt=elements.item(i); elements.length; i++) {
-        //     console.log(elt.id)
-        // }
     }, 200);
 
     let eventSource = new EventSource("/mixette/dashboard/sse");
     eventSource.onmessage = (e) => {
-
-        console.log('TEEE', slide++, (slide % 4), elements.length);
+        console.log(elements.length, slide);
+        slide = (slide + 1) % elements.length;
+        // for (let i = 0; i < elements.length; i++) {
+        //     elements[i].style.display = i === slide ? 'flex' : 'none';
+        // }
         const data = JSON.parse(e.data);
         data.donations.forEach(donation => {
             const field = document.getElementById("counter-" + donation.login);
@@ -71,7 +70,6 @@
             });
             const elt = data.ranking.length;
             const addon = 10 - data.ranking.length;
-            console.log(addon)
             for (i = 0; i < addon; i++) {
                 ranking.append(addNode("col-1 pt-4 fs-3 text-center", elt + i + 1));
                 ranking.append(addNode("col-4 pt-4 fw-normal", "-"));
@@ -82,14 +80,38 @@
         }
     }
 </script>
-<div class="row slide" id="slide0" style="display: flex">
-    Slide 1
+<style>
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    .slide {
+        animation: fadeIn ease 2s;animation-fill-mode: forwards; justify-content: center;align-items: center;
+    }
+</style>
+<div class="row slide" style="background-color: #2C233D; width: 100vw; height: 100vh;display: none">
+    <div style="display: flex;flex-direction: column;justify-content: center;align-items: center">
+        <img src="/images/svg/mxt-icon--logo-mixette-inversed.svg" style="max-height: 14rem">
+        <span style="color: #fff !important;font-size: 8em;font-weight: bold">Mixette</span>
+        <div style="color: white;font-size: 4em;text-align: center">
+            Financez l'association de votre choix en faisant un don de Mixette au desk MiXiT à
+            l'accueil.
+        </div>
+    </div>
+    <div class="flex-fill">&nbsp;</div>
 </div>
-<div class="row slide" id="slide0" style="display: none">
+<div class="row slide" style="display: flex">
     Slide 2
 </div>
-<div class="row slide" id="slide0" style="display: none">
+<div class="row slide" style="display: none">
     Slide 3
+</div>
+<div class="row slide" style="display: none">
+    Slide 4
 </div>
 
 <div class="row" style="display: none">
