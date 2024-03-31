@@ -70,6 +70,7 @@ enum class MustacheTemplate(val template: String, val title: String?, val path: 
     MediaVideo("medias-video", "medias.title", "medias/video"),
     MediaAllImages("medias-images", "medias.title", "medias/images"),
     MediaImages("images", "medias.title", "medias/images"),
+    Mixette("mixette", "mixette.title", "mixette"),
     MixetteDashboard("mixette-dashboard", "mixette.dashboard.title"),
     Mixteen("mixteen", "mixteen.title"),
     Schedule("schedule", "schedule.title", "schedule"),

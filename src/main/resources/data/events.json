@@ -2092,7 +2092,17 @@
                 "subscriptionDate": "2024-03-13"
             }
         ],
-        "organizations": [],
+        "organizations": [
+            {
+                "organizationLogin": "lerefuge"
+            },
+            {
+                "organizationLogin": "migrant_croix_rousse"
+            },
+            {
+                "organizationLogin": "anciela"
+            }
+        ],
         "volunteers": [
             {
                 "volunteerLogin": "horalass"
@@ -2141,6 +2151,12 @@
             },
             {
                 "volunteerLogin": "thomas.derville"
+            },
+            {
+                "volunteerLogin": "mathieu.tourrette"
+            },
+            {
+                "volunteerLogin": "thierry.salvan"
             }
         ],
         "organizers": [
@@ -2176,12 +2192,6 @@
             },
             {
                 "organizerLogin": "106329914971209052078"
-            },
-            {
-                "organizerLogin": "mathieu.tourrette"
-            },
-            {
-                "organizerLogin": "thierry.salvan"
             }
         ],
         "photoUrls": [],

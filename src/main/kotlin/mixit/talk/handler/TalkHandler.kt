@@ -37,6 +37,7 @@ import mixit.util.mustache.MustacheI18n.FEEDBACK_COMMENTS
 import mixit.util.mustache.MustacheI18n.FEEDBACK_TYPES
 import mixit.util.mustache.MustacheI18n.HAS_FEEDBACK
 import mixit.util.mustache.MustacheI18n.IMAGES
+import mixit.util.mustache.MustacheI18n.ORGANIZATIONS
 import mixit.util.mustache.MustacheI18n.SPEAKERS
 import mixit.util.mustache.MustacheI18n.SPONSORS
 import mixit.util.mustache.MustacheI18n.TALKS
@@ -120,7 +121,15 @@ class TalkHandler(
             )
         }
 
-        fun speakers(req: ServerRequest, year: Int, topic: String? = null) =
+        fun mixette(req: ServerRequest, year: Int) =
+            TalkViewConfig(
+                year,
+                req,
+                TalksTabs.Mixette,
+                template = MustacheTemplate.Mixette,
+            )
+
+        fun speakers(req: ServerRequest, year: Int) =
             TalkViewConfig(
                 year,
                 req,
@@ -143,25 +152,34 @@ class TalkHandler(
         Favorites("/favorites"),
         MainVideo("/medias/video"),
         TalksWithVideo("/medias"),
+        Mixette("/mixette"),
         Photos("/medias/images");
 
         companion object {
-            private fun current(isConnected: Boolean, canDisplayAgenda: Boolean) =
+            private fun current(hasMixette: Boolean, isConnected: Boolean, canDisplayAgenda: Boolean) =
                 if (isConnected && (canDisplayAgenda)) {
-                    listOf(Schedule, Speakers, Talks, Favorites)
+                    listOf(Schedule, Speakers, Talks, Favorites).addMixette(hasMixette)
                 } else if (canDisplayAgenda) {
-                    listOf(Schedule, Speakers, Talks)
+                    listOf(Schedule, Speakers, Talks).addMixette(hasMixette)
                 } else if (isConnected) {
-                    listOf(Talks, Speakers, Favorites)
+                    listOf(Talks, Speakers, Favorites).addMixette(hasMixette)
                 } else {
-                    listOf(Talks, Speakers)
+                    listOf(Talks, Speakers).addMixette(hasMixette)
                 }
 
-            private fun old() = listOf(TalksWithVideo, Speakers, MainVideo, Photos)
+            private fun List<TalksTabs>.addMixette(hasMixette: Boolean) =
+                if (hasMixette) this + listOf(Mixette) else this
+            private fun old(hasMixette: Boolean) =
+                listOf(TalksWithVideo, Speakers, MainVideo, Photos).addMixette(hasMixette)
         }
 
-        fun tabs(isCurrent: Boolean, isConnected: Boolean, canDisplayAgenda: Boolean): List<TabDto> =
-            (if (isCurrent) current(isConnected, canDisplayAgenda) else old())
+        fun tabs(
+            hasMixette: Boolean,
+            isCurrent: Boolean,
+            isConnected: Boolean,
+            canDisplayAgenda: Boolean
+        ): List<TabDto> =
+            (if (isCurrent) current(hasMixette, isConnected, canDisplayAgenda) else old(hasMixette))
                 .map {
                     TabDto(
                         name = it.name.lowercase(),
@@ -215,6 +233,7 @@ class TalkHandler(
             config.viewWorkshop
         )
         val event = eventService.findByYear(config.year)
+        val hasMixette = event.organizations.isNotEmpty()
         val title = if (config.topic == null) "${config.template.title}|${config.year}" else
             "${config.template.title}.${config.topic}|${config.year}"
         val images = findImages(config)
@@ -244,8 +263,14 @@ class TalkHandler(
                 mapOf(
                     EVENT to event.toEvent(),
                     SPONSORS to userService.loadSponsors(event),
+                    ORGANIZATIONS to userService.loadOrganizations(event, config.req.language()),
                     YEAR_SELECTOR to YearSelector.create(config.year, config.template.path!!, talk = true),
-                    "tabs" to config.tabs.tabs(isCurrent, currentUserEmail.isNotEmpty(), canDisplayAgenda || config.tabs == TalksTabs.Favorites),
+                    "tabs" to config.tabs.tabs(
+                        hasMixette = hasMixette,
+                        isCurrent = isCurrent,
+                        isConnected = currentUserEmail.isNotEmpty(),
+                        canDisplayAgenda = canDisplayAgenda || config.tabs == TalksTabs.Favorites
+                    ),
                     TALKS to getTalkToDisplay(config, rooms, days, talks, canDisplayAgenda),
                     TITLE to title,
                     YEAR to config.year,

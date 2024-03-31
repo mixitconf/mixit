@@ -5,6 +5,8 @@ import mixit.event.model.SponsorshipLevel.GOLD
 import mixit.event.model.SponsorshipLevel.LANYARD
 import mixit.event.model.SponsorshipLevel.PARTY
 import mixit.security.model.Cryptographer
+import mixit.talk.model.Language
+import mixit.user.handler.dto.SponsorDto
 import mixit.user.handler.dto.toSponsorDto
 import mixit.user.repository.UserRepository
 import mixit.util.cache.CacheCaffeineTemplate
@@ -78,4 +80,8 @@ class UserService(
                 .map { it.toSponsorDto() }.distinct()
         )
     }
+
+    fun loadOrganizations(event: CachedEvent, language: Language): List<SponsorDto> =
+        event.organizations.map { it.toSponsorDto(language) }
+
 }

@@ -24,6 +24,7 @@ import mixit.talk.handler.TalkHandler.Companion.imageAlbum
 import mixit.talk.handler.TalkHandler.Companion.images
 import mixit.talk.handler.TalkHandler.Companion.media
 import mixit.talk.handler.TalkHandler.Companion.mediaWithFavorites
+import mixit.talk.handler.TalkHandler.Companion.mixette
 import mixit.talk.handler.TalkHandler.Companion.speakers
 import mixit.talk.handler.TalkHandler.Companion.talks
 import mixit.talk.handler.TalkHandler.Companion.talksWithFavorites
@@ -205,6 +206,7 @@ class WebsiteRoutes(
                 GET("/$year/medias/images/{album}") { talkHandler.findByEventView(imageAlbum(it, year)) }
                 GET("/$year/sponsors") { sponsorHandler.viewSponsors(it, year) }
                 GET("/$year/speakers") { talkHandler.findByEventView(speakers(it, year)) }
+                GET("/$year/mixette") { talkHandler.findByEventView(mixette(it, year)) }
                 GET("/admin/$year/feedback-wall") { talkHandler.findByEventView(feedbackWall(it, year)) }
                 GET("/blog/$year") { blogHandler.findAllView(it, year) }
                 Topic.entries.map { it.value }.onEach { topic ->
