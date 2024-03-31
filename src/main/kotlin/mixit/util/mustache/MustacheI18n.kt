@@ -31,6 +31,7 @@ object MustacheI18n {
     const val LANGUAGES = "languages"
     const val LINKS = "links"
     const val MESSAGE = "message"
+    const val ORGANIZATIONS = "organizations"
     const val PHOTOS = "photos"
     const val POSTS = "posts"
     const val PRONOUNS = "pronouns"

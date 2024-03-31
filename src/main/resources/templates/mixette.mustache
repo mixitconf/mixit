@@ -1,0 +1,45 @@
+{{> header}}
+<div class="container-xxl">
+    {{> talks-header}}
+
+    <div class="lead mt-5">{{#i18n}}mixette.desc{{/i18n}}</div>
+
+    <div class="mt-2">{{#i18n}}mixette.how{{/i18n}}</div>
+
+    <div class="mt-2">{{#i18n}}mixette.who{{/i18n}}</div>
+
+    <div class="container-xxl mxt-section">
+        {{#organizations}}
+            <div class="mb-5">
+            </div>
+            <div class="mxt-sponsor--grid">
+                <div class="image">
+                    {{#isAbsoluteLogo}}
+                        <img src="{{photoUrl}}"
+                             id="{{#urlEncode}}{{login}}{{/urlEncode}}"
+                             alt="{{company}}"
+                             class="mxt-img--sponsors">
+                    {{/isAbsoluteLogo}}
+                    {{^isAbsoluteLogo}}
+                        <img src="{{photoUrl}}"
+                             data-src="{{photoUrl}}"
+                             class="mxt-img--sponsors mxt-img--lazyload"
+                             id="{{#urlEncode}}{{login}}{{/urlEncode}}"
+                             alt="{{company}}"
+                        >
+                    {{/isAbsoluteLogo}}
+                </div>
+                <div>
+                    {{#markdown}}{{#description}}{{description}}{{/description}}{{/markdown}}
+                    <ul class="mxt-wrapper-list-inline mxt-btn-container">
+                        {{#links}}
+                            {{> links}}
+                        {{/links}}
+                    </ul>
+                </div>
+            </div>
+        {{/organizations}}
+    </div>
+
+</div>
+{{> footer-sponsor}}
