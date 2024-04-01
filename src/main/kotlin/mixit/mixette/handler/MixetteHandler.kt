@@ -57,8 +57,12 @@ class MixetteHandler(
                     amount = entry.value.sumOf { it.quantity * properties.mixetteValue.toDouble() }
                 )
             }
+        val orgs = (organizations.map { it.toSponsorDto(req.language()) })
         val params = mapOf(
-            "organizations" to (organizations.map { it.toSponsorDto(req.language()) }),
+            "organizations" to orgs,
+            "organization0" to if (orgs.isNotEmpty()) orgs[0] else null,
+            "organization1" to if (orgs.size > 1) orgs[1] else null,
+            "organization2" to if (orgs.size > 2) orgs[2] else null,
             "donations" to donationByOrgas,
             "loadAt" to LocalTime.now(ZoneId.of(TIMEZONE)).format(frenchTalkTimeFormatter),
             TITLE to MixetteDashboard.title
@@ -68,7 +72,7 @@ class MixetteHandler(
     }
 
     suspend fun mixetteRealTime(req: ServerRequest): ServerResponse {
-        val interval = Flux.interval(ofMillis(3000))
+        val interval = Flux.interval(ofMillis(7000))
         return ok()
             .contentType(MediaType.TEXT_EVENT_STREAM)
             .body(
@@ -103,7 +107,8 @@ class MixetteHandler(
             .toSortedMap()
             .asIterable()
             .map {
-                val user = ticketService.findByNumber(cryptographer.decrypt(it.key)!!) ?: throw IllegalArgumentException()
+                val user =
+                    ticketService.findByNumber(cryptographer.decrypt(it.key)!!) ?: throw IllegalArgumentException()
                 MixetteDashboardUser(user, it.value)
             }
             .sortedByDescending { it.quantity }
