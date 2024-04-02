@@ -22,7 +22,7 @@ class TalkService(
         { talkRepository.findAll().map { talk -> loadSpeakers(talk) } }
 
     fun save(talk: Talk): Mono<Talk> =
-        talkRepository.save(talk).doOnSuccess { cache.invalidateAll() }
+        talkRepository.save(talk).doOnSuccess { invalidateCache() }
 
     suspend fun findByEvent(eventId: String, topic: String? = null): List<CachedTalk> =
         findAll()
@@ -85,5 +85,5 @@ class TalkService(
     }
 
     fun deleteOne(id: String) =
-        talkRepository.deleteOne(id).doOnSuccess { cache.invalidateAll() }
+        talkRepository.deleteOne(id).doOnSuccess { invalidateCache() }
 }

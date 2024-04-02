@@ -1,9 +1,9 @@
 package mixit.feedback.model
 
+import java.time.Instant
 import mixit.talk.model.Talk
 import mixit.user.model.User
 import mixit.util.cache.Cached
-import java.time.Instant
 
 data class CachedUserFeedback(
     override val id: String,
@@ -33,5 +33,11 @@ data class CachedUserFeedback(
             comment = comment,
             encryptedEmail = user.email!!,
             creationInstant = creationInstant,
+        )
+
+    fun updateWith(userFeedback: UserFeedback) =
+        copy(
+            notes = userFeedback.notes,
+            comment = userFeedback.comment
         )
 }

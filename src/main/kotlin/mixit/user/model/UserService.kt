@@ -47,7 +47,7 @@ class UserService(
 
     fun save(user: User): Mono<User> =
         userRepository.save(user).doOnSuccess {
-            cache.invalidateAll()
+            invalidateCache()
             eventPublisher.publishEvent(UserUpdateEvent(user))
         }
 
@@ -55,7 +55,7 @@ class UserService(
         userRepository.findOneOrNull(id)
             ?.let { user ->
                 userRepository.deleteOne(id).map {
-                    cache.invalidateAll()
+                    invalidateCache()
                     eventPublisher.publishEvent(UserUpdateEvent(user))
                     user
                 }

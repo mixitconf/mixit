@@ -33,7 +33,7 @@ class EventService(
         findAll().first { it.year == year.toInt() }
 
     fun save(event: Event) =
-        repository.save(event).doOnSuccess { cache.invalidateAll() }
+        repository.save(event).doOnSuccess { invalidateCache() }
 
     @EventListener(UserUpdateEvent::class)
     fun handleUserUpdate(userUpdateEvent: UserUpdateEvent) {

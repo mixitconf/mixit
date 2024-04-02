@@ -89,31 +89,43 @@
             opacity: 1;
         }
     }
+
     .slide {
-        animation: fadeIn ease 2s;animation-fill-mode: forwards; justify-content: center;align-items: center;
+        animation: fadeIn ease 2s;
+        animation-fill-mode: forwards;
+        justify-content: center;
+        align-items: center;
     }
 </style>
 <div class="row slide" style="background-color: #2C233D; width: 100vw; height: 100vh;display: flex">
-    <div style="display: flex;flex-direction: column;justify-content: center;align-items: center">
-        <img src="/images/svg/mxt-icon--logo-mixette-inversed.svg" style="max-height: 14rem">
-        <span style="color: #fff !important;font-size: 8em;font-weight: bold">Mixette</span>
-        <div style="color: white;font-size: 4em;text-align: center;font-weight: bold">
-            Financez l'association de votre choix en faisant un don de Mixette au desk MiXiT à
-            l'accueil.
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10" style="display: flex;flex-direction: column;justify-content: center;align-items: center">
+            <img src="/images/svg/mxt-icon--logo-mixette-inversed.svg" style="max-height: 14rem">
+            <span style="color: #fff !important;font-size: 8em;font-weight: bold">Mixette</span>
+            <div style="color: white;font-size: 4em;text-align: center;font-weight: bold">
+                Financez l'association de votre choix en faisant un don de Mixette au desk MiXiT à
+                l'accueil.
+            </div>
         </div>
+        <div class="col-1"></div>
     </div>
     <div class="flex-fill">&nbsp;</div>
 </div>
 <div class="row slide" style="background-color: #2C233D; width: 100vw; height: 100vh;display: none">
-    <div style="display: flex;flex-direction: column;justify-content: center;align-items: center">
-        <img src="/images/svg/mxt-icon--logo-mixette-inversed.svg" style="max-height: 14rem">
-        <div style="color: white;font-size: 4em;text-align: center;font-weight: bold">
-            Les 10 plus gros donateurs·rices seront récompensé·e·s.
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10" style="display: flex;flex-direction: column;justify-content: center;align-items: center">
+            <img src="/images/svg/mxt-icon--logo-mixette-inversed.svg" style="max-height: 14rem">
+            <div style="color: white;font-size: 4em;text-align: center;font-weight: bold">
+                Les 10 plus gros donateurs·rices seront récompensé·e·s.
+            </div>
+            <div style="color: white;font-size: 4em;text-align: center;font-weight: bold;margin-top: 1em">
+                En plus des deux Mixettes remises avec votre
+                badge, vous pouvez en récupérer auprès de nos sponsors.
+            </div>
         </div>
-        <div style="color: white;font-size: 4em;text-align: center;font-weight: bold">
-            En plus des deux Mixettes remises avec votre
-            badge, vous pouvez en récupérer auprès de nos sponsors.
-        </div>
+        <div class="col-1"></div>
     </div>
     <div class="flex-fill">&nbsp;</div>
 </div>
@@ -139,7 +151,7 @@
             <div class="col-1"></div>
             <div class="col-10">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-5">
                         <img src="{{organization0.photoUrl}}"
                              style="max-width: 100%"
                              data-src="{{organization0.photoUrl}}"
@@ -148,7 +160,7 @@
                              alt="{{organization0.company}}"
                         >
                     </div>
-                    <div class="col-6">
+                    <div class="col-7">
                         <h2 style="font-size: 6em">{{organization0.company}}</h2>
                         <div class="lead" style="font-size: 2em">
                             {{organization0.description}}
@@ -182,7 +194,7 @@
             <div class="col-1"></div>
             <div class="col-10">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-5">
                         <img src="{{organization1.photoUrl}}"
                              data-src="{{organization1.photoUrl}}"
                              style="max-width: 100%"
@@ -191,7 +203,7 @@
                              alt="{{organization1.company}}"
                         >
                     </div>
-                    <div class="col-6">
+                    <div class="col-7">
                         <h2 style="font-size: 5em">{{organization1.company}}</h2>
                         <div class="lead" style="font-size: 2em">
                             {{organization1.description}}
@@ -209,7 +221,8 @@
             <div class="col-1"></div>
             <div class="col-10">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-4 text-center"
+                         style="display: flex;justify-content: center;align-items: center;justify-items: center;align-content: center">
                         <img src="{{organization2.photoUrl}}"
                              data-src="{{organization2.photoUrl}}"
                              style="max-width: 100%"
@@ -218,9 +231,9 @@
                              alt="{{organization2.company}}"
                         >
                     </div>
-                    <div class="col-6">
+                    <div class="col-8">
                         <h2 style="font-size: 4em">{{organization2.company}}</h2>
-                        <div class="lead" style="font-size: 1.5em">
+                        <div class="lead" style="font-size: 2em">
                             {{organization2.description}}
                         </div>
                     </div>
