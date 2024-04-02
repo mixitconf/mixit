@@ -2,10 +2,10 @@ package mixit.util.cache
 
 import com.github.benmanes.caffeine.cache.Cache
 import com.github.benmanes.caffeine.cache.Caffeine
-import mixit.util.errors.NotFoundException
 import java.time.Instant
 import java.util.concurrent.TimeUnit
 import java.util.concurrent.atomic.AtomicReference
+import mixit.util.errors.NotFoundException
 
 interface Cached {
     val id: String
@@ -28,11 +28,11 @@ abstract class CacheCaffeineTemplate<T : Cached> {
 
     val refreshInstant = AtomicReference<Instant?>()
 
-    val cache: Cache<String, List<T>> by lazy {
+    private val cache: Cache<String, List<T>> by lazy {
         Caffeine
             .newBuilder()
             .expireAfterWrite(1, TimeUnit.DAYS)
-            .maximumSize(5_000)
+            .maximumSize(10_000)
             .build()
     }
 
@@ -46,10 +46,10 @@ abstract class CacheCaffeineTemplate<T : Cached> {
 
     abstract fun loader(): suspend () -> List<T>
 
-    suspend fun findOneOrNull(id: String): T? =
+    open suspend fun findOneOrNull(id: String): T? =
         findAll().firstOrNull { it.id == id }
 
-    suspend fun findAll(): List<T> {
+    open suspend fun findAll(): List<T> {
         val elements = cache.getIfPresent(DEFAULT_KEY)
         if (elements.isNullOrEmpty()) {
             cache.put(DEFAULT_KEY, loader().invoke())
@@ -57,11 +57,14 @@ abstract class CacheCaffeineTemplate<T : Cached> {
         return cache.getIfPresent(DEFAULT_KEY) ?: throw NotFoundException()
     }
 
-    fun isEmpty(): Boolean =
+    open fun isEmpty(): Boolean =
         cache.asMap().entries.isEmpty()
 
-    fun invalidateCache() {
+    open fun invalidateCache() {
         cache.invalidateAll()
         refreshInstant.set(Instant.now())
     }
+
+    open fun size() =
+        cache.asMap().entries.firstOrNull()?.value?.size ?: 0
 }

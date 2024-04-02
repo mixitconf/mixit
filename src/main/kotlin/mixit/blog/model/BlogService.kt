@@ -21,7 +21,7 @@ class BlogService(private val repository: PostRepository, private val userServic
         findAll().firstOrNull { it.slug[Language.ENGLISH] == slug || it.slug[Language.FRENCH] == slug }
 
     fun save(event: Post) =
-        repository.save(event).doOnSuccess { cache.invalidateAll() }
+        repository.save(event).doOnSuccess { invalidateCache() }
 
     private suspend fun loadPostWriters(post: Post): CachedPost =
         userService.findOneOrNull(post.authorId)
@@ -29,5 +29,5 @@ class BlogService(private val repository: PostRepository, private val userServic
             ?: CachedPost(post, User())
 
     fun deleteOne(id: String) =
-        repository.deleteOne(id).doOnSuccess { cache.invalidateAll() }
+        repository.deleteOne(id).doOnSuccess { invalidateCache() }
 }

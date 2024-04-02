@@ -36,19 +36,19 @@ class TicketService(
         repository
             .save(ticket)
             .map { CachedTicket(cryptographer, it) }
-            .doOnSuccess { cache.invalidateAll() }
+            .doOnSuccess { invalidateCache() }
 
     suspend fun save(tickets: List<Ticket>): List<CachedTicket> =
         tickets
             .map { repository.save(it).awaitSingle() }
             .map { CachedTicket(cryptographer, it!!) }
-            .also { cache.invalidateAll() }
+            .also { invalidateCache() }
 
     fun deleteOne(id: String) =
-        repository.deleteOne(id).doOnSuccess { cache.invalidateAll() }
+        repository.deleteOne(id).doOnSuccess { invalidateCache() }
 
     suspend fun deleteAll(ticketType: TicketType) =
         findByType(ticketType)
             .map { repository.deleteOne(it.id) }
-            .also { cache.invalidateAll() }
+            .also { invalidateCache() }
 }

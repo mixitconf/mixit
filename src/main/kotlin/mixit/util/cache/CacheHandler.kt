@@ -1,23 +1,23 @@
 package mixit.util.cache
 
+import java.time.LocalDateTime
+import java.time.ZoneId
 import mixit.MixitApplication.Companion.TIMEZONE
 import mixit.blog.model.BlogService
 import mixit.event.model.EventImagesService
 import mixit.event.model.EventService
 import mixit.faq.model.QuestionSectionService
+import mixit.features.model.FeatureStateService
 import mixit.feedback.model.UserFeedbackService
-import mixit.util.mustache.MustacheI18n
-import mixit.util.mustache.MustacheTemplate.AdminCache
 import mixit.talk.model.TalkService
 import mixit.ticket.model.TicketService
 import mixit.user.model.UserService
+import mixit.util.mustache.MustacheI18n
+import mixit.util.mustache.MustacheTemplate.AdminCache
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.renderAndAwait
-import java.time.LocalDateTime
-import java.time.ZoneId
-import mixit.features.model.FeatureStateService
 
 data class CacheZoneStat(
     val zone: CacheZone,
@@ -29,7 +29,7 @@ data class CacheZoneStat(
     companion object {
         fun <I : Cached, T : CacheCaffeineTemplate<I>> init(cacheService: T): CacheZoneStat = CacheZoneStat(
             cacheService.cacheZone,
-            cacheService.cache.asMap().entries.firstOrNull()?.value?.size ?: 0,
+            cacheService.size(),
             cacheService.refreshInstant.get()?.atZone(ZoneId.of(TIMEZONE))?.toLocalDateTime()
         )
     }

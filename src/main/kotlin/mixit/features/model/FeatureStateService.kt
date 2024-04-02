@@ -18,7 +18,7 @@ class FeatureStateService(
         { repository.findAll().map { event -> loadFeatures(event) } }
 
     suspend fun save(section: FeatureState) =
-        repository.save(section).also { cache.invalidateAll() }
+        repository.save(section).also { invalidateCache() }
 
     private suspend fun loadFeatures(featureState: FeatureState): CachedFeatureState {
         return CachedFeatureState(

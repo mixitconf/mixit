@@ -15,7 +15,7 @@ class QuestionSectionService(
         { repository.findAll().map { event -> loadQuestionSections(event) } }
 
     suspend fun save(section: QuestionSection) =
-        repository.save(section).also { cache.invalidateAll() }
+        repository.save(section).also { invalidateCache() }
 
     private suspend fun loadQuestionSections(section: QuestionSection): CachedQuestionSection {
         return CachedQuestionSection(
@@ -28,6 +28,6 @@ class QuestionSectionService(
 
     suspend fun deleteOne(id: String) =
         repository.deleteOne(id).also {
-            cache.invalidateAll()
+            invalidateCache()
         }
 }
