@@ -2090,6 +2090,11 @@
                 "level": "LANYARD",
                 "sponsorId": "energypool",
                 "subscriptionDate": "2024-03-13"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "sponsor-ovh",
+                "subscriptionDate": "2024-04-01"
             }
         ],
         "organizations": [
