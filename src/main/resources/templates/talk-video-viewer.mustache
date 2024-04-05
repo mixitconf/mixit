@@ -1,10 +1,12 @@
 <div>
     <div class="mxt-video--player-header">
+        {{#topic}}
         <div class="mxt-text--cat mxt-text--cat-{{topic}}">
             <img src="/images/svg/mxt-icon--{{topic}}.svg" class="mxt-icon--cat mxt-icon--cat__talks"
                  alt="{{#i18n}}topics.{{topic}}.title{{/i18n}}"/>
             <span>{{#i18n}}topics.{{topic}}.title{{/i18n}} <b>{{event}}</b></span>
         </div>
+        {{/topic}}
         <div class="flex-fill"></div>
         <div class="mxt-text--cat-format ps-2">
             <strong>#{{#i18n}}talk.format.{{format}}{{/i18n}}</strong>
@@ -19,12 +21,22 @@
             </div>
         {{/vimeoPlayer}}
         {{^vimeoPlayer}}
-            <a href="{{video}}" target="_blank">
-                <img data-src="/images/svg/mxt-no-player.svg"
-                     class="mxt-img--lazyload"
-                     style="max-width: 100%"
-                     alt="No video player"/>
-            </a>
+            {{#video}}
+                <a href="{{video}}" target="_blank">
+                    <img data-src="/images/svg/mxt-no-player.svg"
+                         class="mxt-img--lazyload"
+                         style="max-width: 100%"
+                         alt="No video player"/>
+                </a>
+            {{/video}}
+            {{#video2}}
+                <iframe
+                        src="{{.}}"
+                        height="250"
+                        width="100%"
+                        allowfullscreen>
+                </iframe>
+            {{/video2}}
         {{/vimeoPlayer}}
     </div>
     <div class="mxt-video--player-title text-center">
