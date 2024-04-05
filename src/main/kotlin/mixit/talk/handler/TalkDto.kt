@@ -39,3 +39,28 @@ class TalkDto(
     val hasAtLeastOneVideo: Boolean = !video.isNullOrEmpty() || !video2.isNullOrEmpty(),
     val level: TalkLevel? = null
 )
+
+data class DayTalksDto(
+    val id: String,
+    val day: String,
+    val active: Boolean,
+    val talks: List<TalkDto>
+)
+
+data class DayRoomTalksDto(
+    val id: String,
+    val day: String,
+    val active: Boolean,
+    val slices: List<RoomDaySliceDto>
+)
+
+data class RoomDaySliceDto(val room: String?, val talkByRooms: List<RoomTalkDto>)
+
+data class RoomTalkDto(
+    val time: String,
+    val start: LocalDateTime,
+    val timeDisplayed: Boolean,
+    val bordered: Boolean,
+    val sliceDuration: Long = 1,
+    val talk: TalkDto?
+)

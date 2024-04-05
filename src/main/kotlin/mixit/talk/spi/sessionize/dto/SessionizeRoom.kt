@@ -8,7 +8,8 @@ data class SessionizeRoom(
     val sort: Int
 ) {
     fun toRoom(): Room =
-        when (name.lowercase()) {
+        if (name.lowercase().contains("mixit on air")) Room.TWITCH
+        else when (name.lowercase()) {
             "nonaka" -> Room.ROOM4
             "turing" -> Room.ROOM3
             "hamilton" -> Room.AMPHI1
@@ -18,6 +19,7 @@ data class SessionizeRoom(
             "djikstra" -> Room.ROOM5
             "feinler" -> Room.ROOM6
             "hopper" -> Room.ROOM7
+            "mixit on air" -> Room.TWITCH
             else -> Room.UNKNOWN
         }
 }

@@ -8,7 +8,7 @@
             "mixit"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.704",
+        "addedAt": "2024-04-03T19:47:17.552",
         "description": "",
         "topic": "other",
         "video": null,
@@ -30,7 +30,7 @@
             "c173e77b-9020-4a0b-a9b4-6550da2710d5"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.704",
+        "addedAt": "2024-04-03T19:47:17.553",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -53,7 +53,7 @@
             "yostane"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.704",
+        "addedAt": "2024-04-03T19:47:17.553",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -75,7 +75,7 @@
             "ant.arhipov"
         ],
         "language": "ENGLISH",
-        "addedAt": "2024-03-25T08:10:52.704",
+        "addedAt": "2024-04-03T19:47:17.553",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -98,7 +98,7 @@
             "vtt2vtt2"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.704",
+        "addedAt": "2024-04-03T19:47:17.553",
         "description": "",
         "topic": "team",
         "video": null,
@@ -112,6 +112,29 @@
         "id": "601609"
     },
     {
+        "format": "WORKSHOP",
+        "event": "2024",
+        "title": "Lib\u00e8re ta cr\u00e9ature et embrasse tes bizarreries !",
+        "summary": "Les personnes neuro-atypiques sont mal accept\u00e9es en entreprises et souvent victimes de pr\u00e9jug\u00e9s. Elles rencontrent aussi de grandes difficult\u00e9s \u00e0 s\u2019assumer comme tel et \u00e0 trouver un environnement sain dans lequel s\u2019\u00e9panouir.\r\nSachant que les neuro-atypiques repr\u00e9sentent environ 20% de la population et que seulement 15% des personnes neuro-atypiques sont diagnostiqu\u00e9es, imaginez le nombre de personnes en souffrance au quotidien !\r\n\r\nVous pourrez, au travers d&#39;un jeu ludique, vous mettre dans la peau d&#39;un ou plusieurs neuro-atypiques et exp\u00e9rimenter diff\u00e9rentes mises en situations. \r\n\r\nCela vous permettra de comprendre : \r\n*comment nous pouvons hacker le syst\u00e8me pour que l&#39;ensemble des collaborateurs (neuro-atypiques et neuro-typiques) se sentent bien dans leurs job avec quelques m\u00e9thodes d\u2019organisation personnelles pour g\u00e9rer sa performance et son \u00e9panouissement \r\n*quels sont les modes de communication et leviers de motivation des neuro-atypiques (bien que chacun soit diff\u00e9rents, quelques id\u00e9es pour guider managers et \u00e9quipes)\r\n*pour les neuro-typiques : comment \u00eatre acteur dans l\u2019inclusion et la diversit\u00e9 \r\n\r\nOn vous parlera notamment de :\r\n*Qu\u2019est-ce que c\u2019est la neuro-diversit\u00e9 ? Les diff\u00e9rentes formes de neuro-atypies\r\n*Quels sont les impacts de la neuro-atypie sur la perception de l&#39;environnement, la confiance en soi et les interactions\r\n*REX de neuro-atypiques aux parcours bien diff\u00e9rents \r\n",
+        "speakerIds": [
+            "cyrielle.eudeline",
+            "maria-eliza.paez"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2024-04-03T19:47:17.553",
+        "description": "",
+        "topic": "aliens",
+        "video": null,
+        "video2": null,
+        "room": "ROOM4",
+        "start": "2024-04-25T10:20:00",
+        "end": "2024-04-25T12:15:00",
+        "photoUrls": [],
+        "slug": "libere-ta-creature-et-embrasse-tes-bizarreries-",
+        "level": "Beginner",
+        "id": "593824"
+    },
+    {
         "format": "TALK",
         "event": "2024",
         "title": "Num\u00e9rique Responsable en contexte humanitaire",
@@ -120,7 +143,7 @@
             "bertrand.keller"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.704",
+        "addedAt": "2024-04-03T19:47:17.553",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -142,7 +165,7 @@
             "sonia.seddiki"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.704",
+        "addedAt": "2024-04-03T19:47:17.553",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -156,28 +179,6 @@
         "id": "609510"
     },
     {
-        "format": "WORKSHOP",
-        "event": "2024",
-        "title": "Tous ensemble : Atelier de l&#39;inclusion",
-        "summary": "La conception des produits cr\u00e9e de l\u2019exclusion dont les d\u00e9veloppeurs ou designers sont souvent peu conscients. En am\u00e9liorant le caract\u00e8re inclusif d\u2019un produit, on peut \u00e0 la fois am\u00e9liorer la qualit\u00e9 et le confort d\u2019usage pour tous, mais aussi trouver de nouvelles fonctionnalit\u00e9s.\r\n\r\nDans cet atelier, nous travaillerons sur des situations de vuln\u00e9rabilit\u00e9 ou sociales qui peuvent amener des besoins particuliers dans les exp\u00e9riences de produits ou services (handicap, situations de pr\u00e9carit\u00e9, neurodiversit\u00e9, maladie psychique, orientation sexuelles\u2026) avec des cas concrets pour plonger dans la fa\u00e7on dont ces diff\u00e9rences peuvent impacter nos produits et services. Nous allons pouvoir imaginer des solutions inclusives en travaillant sur un parcours et un jeu de cartes qui pourrait \u00eatre utilis\u00e9 pour sensibiliser les \u00e9quipes \u00e0 ces situations parfois invisibles ou ignor\u00e9es.\r\n\r\n",
-        "speakerIds": [
-            "luz.delgado.bautista"
-        ],
-        "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.704",
-        "description": "",
-        "topic": "ethics",
-        "video": null,
-        "video2": null,
-        "room": "ROOM4",
-        "start": "2024-04-25T10:20:00",
-        "end": "2024-04-25T12:15:00",
-        "photoUrls": [],
-        "slug": "tous-ensemble-atelier-de-l-39-inclusion",
-        "level": "Beginner",
-        "id": "612466"
-    },
-    {
         "format": "TALK",
         "event": "2024",
         "title": "L\u2019IA et le handicap : progr\u00e8s ou exclusion ?",
@@ -187,7 +188,7 @@
             "emmanuelle-aboaf"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.704",
+        "addedAt": "2024-04-03T19:47:17.553",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -209,7 +210,7 @@
             "llenet"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.705",
+        "addedAt": "2024-04-03T19:47:17.553",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -231,7 +232,7 @@
             "herve"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.705",
+        "addedAt": "2024-04-03T19:47:17.553",
         "description": "",
         "topic": "team",
         "video": null,
@@ -253,7 +254,7 @@
             "lise.quesnel"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.705",
+        "addedAt": "2024-04-03T19:47:17.553",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -275,7 +276,7 @@
             "pyg"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.705",
+        "addedAt": "2024-04-03T19:47:17.553",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -297,7 +298,7 @@
             "xstefank122"
         ],
         "language": "ENGLISH",
-        "addedAt": "2024-03-25T08:10:52.705",
+        "addedAt": "2024-04-03T19:47:17.553",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -319,7 +320,7 @@
             "mixit"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.705",
+        "addedAt": "2024-04-03T19:47:17.553",
         "description": "",
         "topic": "other",
         "video": null,
@@ -341,7 +342,7 @@
             "5025955e-d202-462e-8a01-5a10ee9a054e"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.705",
+        "addedAt": "2024-04-03T19:47:17.553",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -363,7 +364,7 @@
             "glaforge"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.705",
+        "addedAt": "2024-04-03T19:47:17.553",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -386,7 +387,7 @@
             "celine"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.705",
+        "addedAt": "2024-04-03T19:47:17.554",
         "description": "",
         "topic": "team",
         "video": null,
@@ -408,7 +409,7 @@
             "katia"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.705",
+        "addedAt": "2024-04-03T19:47:17.553",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -430,7 +431,7 @@
             "fchabanois"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.706",
+        "addedAt": "2024-04-03T19:47:17.554",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -452,7 +453,7 @@
             "tennamiqui"
         ],
         "language": "ENGLISH",
-        "addedAt": "2024-03-25T08:10:52.705",
+        "addedAt": "2024-04-03T19:47:17.554",
         "description": "",
         "topic": "team",
         "video": null,
@@ -475,7 +476,7 @@
             "mailis-cohen"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.705",
+        "addedAt": "2024-04-03T19:47:17.554",
         "description": "",
         "topic": "team",
         "video": null,
@@ -498,7 +499,7 @@
             "bd3298b6-2b7f-49b3-836e-7176ac9b4c0a"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.705",
+        "addedAt": "2024-04-03T19:47:17.554",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -520,7 +521,7 @@
             "matthieu-faure"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.706",
+        "addedAt": "2024-04-03T19:47:17.554",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -537,12 +538,12 @@
         "format": "LIGHTNING_TALK",
         "event": "2024",
         "title": "Je d\u00e9l\u00e8gue tous mes tests \u00e0 une IA",
-        "summary": "Le craftsmanship et nos pratiques de d\u00e9veloppement moderne pl\u00e9biscitent de tester efficacement nos applications. Et heureusement ! \r\n\r\nPour autant, le test est rarement ce qu\u2019on pr\u00e9f\u00e8re r\u00e9aliser au quotidien, et cela prend une partie non n\u00e9gligeable de notre temps.\r\n\r\nD\u2019ailleurs, on se dit m\u00eame que le test, ce n\u2019est pas vraiment la partie avec le meilleur ROI de l\u2019utilisation de nos neurones.\r\n\r\nAlors pourquoi pas faire faire nos tests \u00e0 une IA ?\r\n\r\nDans cette conf, je vous pr\u00e9senterai Codium AI \u00e0 travers des exemples concrets, et de son utilisation \u00e0 la fois pour du Unit Testing que pour des tests plus complexes (e2e).\r\n\r\nOn prendra ensemble le temps de regarder ce qui marche bien, et aussi ses limites !\r\n\r\nUne chose est sure : vous n\u2019\u00eates pas pr\u00eats !",
+        "summary": "Le craftsmanship et nos pratiques de d\u00e9veloppement moderne pl\u00e9biscitent de tester efficacement nos applications. Et heureusement ! \r\n\r\nPour autant, le test est rarement ce qu\u2019on pr\u00e9f\u00e8re r\u00e9aliser au quotidien, et cela prend une partie non n\u00e9gligeable de notre temps.\r\n\r\nD\u2019ailleurs, on se dit m\u00eame que le test, ce n\u2019est pas vraiment la partie avec le meilleur ROI de l\u2019utilisation de nos neurones.\r\n\r\nAlors pourquoi pas faire faire nos tests \u00e0 une IA ?\r\n\r\nDans cette conf, je vous pr\u00e9senterai Codium AI \u00e0 travers des exemples concrets, et de son utilisation \u00e0 la fois pour du Unit Testing que pour des tests plus complexes (e2e).\r\n\r\nOn prendra ensemble le temps de regarder ce qui marche bien, et aussi ses limites !\r\n\r\nUne chose est s\u00fbre : vous n\u2019\u00eates pas pr\u00eats !",
         "speakerIds": [
             "vdumas"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.706",
+        "addedAt": "2024-04-03T19:47:17.554",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -564,7 +565,7 @@
             "snicoll"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.706",
+        "addedAt": "2024-04-03T19:47:17.554",
         "description": "",
         "topic": "team",
         "video": null,
@@ -586,7 +587,7 @@
             "chris.depaola.toru"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.706",
+        "addedAt": "2024-04-03T19:47:17.554",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -602,13 +603,35 @@
     {
         "format": "LIGHTNING_TALK",
         "event": "2024",
+        "title": "Git, devenir le chouchou de son reviewer",
+        "summary": "Vos revues de code prennent du temps \u00e0 \u00eatre trait\u00e9es et laissent passer des bugs?\r\n\r\nLa revue prend du temps non n\u00e9gligeable dans nos cycles de d\u00e9veloppement. Et, bien qu&#39;il existe de nombreux articles et vid\u00e9os sur la fa\u00e7on de mener une revue de code, la question de l\u2019organisation et de la pr\u00e9sentation des commits est souvent n\u00e9glig\u00e9e. \r\nNous parlerons donc de cette phase pr\u00e9liminaire \u00e0 la revue pour mettre en lumi\u00e8re quelques pi\u00e8ges \u00e0 \u00e9viter et des m\u00e9canismes pour faciliter la relecture comme ceux mis en avant par Alberto Bacchelli dans son \u00e9tude How code review works (and doesn&#39;t) in the real world.\r\n\r\nVous apprendrez \u00e0 travailler en amont sur vos commits pour les rendre plus pr\u00e9sentables en utilisant git au-del\u00e0 du simple pull-push. Ainsi, vos propositions de MR feront de vous le\u00b7la chouchou de votre relecteur\u00b7rice.",
+        "speakerIds": [
+            "490b9dd2-06b4-4fab-a521-4a2ad2e8cc63"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2024-04-03T19:47:17.554",
+        "description": "",
+        "topic": "tech",
+        "video": null,
+        "video2": null,
+        "room": "ROOM5",
+        "start": "2024-04-25T15:50:00",
+        "end": "2024-04-25T16:10:00",
+        "photoUrls": [],
+        "slug": "git-devenir-le-chouchou-de-son-reviewer",
+        "level": "Beginner",
+        "id": "660190"
+    },
+    {
+        "format": "LIGHTNING_TALK",
+        "event": "2024",
         "title": "Assistants vocaux inclusifs : le d\u00e9fi de la neutralit\u00e9 de genre",
         "summary": "Cette pr\u00e9sentation explorera l&#39;innovation et les d\u00e9fis li\u00e9s \u00e0 la cr\u00e9ation de voix neutres en genre (ni masculine ni f\u00e9minine) pour les assistants vocaux. \r\nNous explorerons comment la neutralit\u00e9 de genre peut transformer notre interaction avec la technologie et favoriser une plus grande inclusivit\u00e9. L&#39;accent sera mis sur l&#39;importance de cette \u00e9volution dans un contexte technologique en rapide \u00e9volution, o\u00f9 la repr\u00e9sentation et l&#39;inclusivit\u00e9 deviennent des enjeux cruciaux.",
         "speakerIds": [
             "elodie-oudot"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.706",
+        "addedAt": "2024-04-03T19:47:17.554",
         "description": "",
         "topic": "design",
         "video": null,
@@ -630,7 +653,7 @@
             "thomas.parisot"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.706",
+        "addedAt": "2024-04-03T19:47:17.554",
         "description": "",
         "topic": "team",
         "video": null,
@@ -652,7 +675,7 @@
             "shodo"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.706",
+        "addedAt": "2024-04-03T19:47:17.554",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -674,7 +697,7 @@
             "thibaut-cantet"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.706",
+        "addedAt": "2024-04-03T19:47:17.554",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -688,6 +711,28 @@
         "id": "595818"
     },
     {
+        "format": "LIGHTNING_TALK",
+        "event": "2024",
+        "title": "Objectif Jetpack Compose \ud83d\ude80",
+        "summary": "Vous en avez marre de d\u00e9velopper vos interfaces Android tant bien que mal en XML ? Vous avez toujours r\u00eav\u00e9 de faire du d\u00e9veloppement Android aussi facilement qu&#39;en React ou en Flutter ? C&#39;est maintenant possible avec Jetpack Compose ! \ud83d\udce6\r\n\r\nEnsemble, partons \u00e0 la d\u00e9couverte de l&#39;univers incroyable du d\u00e9veloppement Android. \ud83e\udd16\r\n\r\nDurant ce voyage, nous observerons l&#39;\u00e9volution d&#39;Android au cours du temps, jusqu&#39;\u00e0 la naissance de Jetpack Compose. Nous en apprendrons plus sur ce nouveau kit d&#39;outils bas\u00e9 sur la composition qui chamboule notre mani\u00e8re de concevoir nos applications mobiles Android.\r\n\r\nAlors, par\u00e9s au d\u00e9collage ? \ud83d\ude80",
+        "speakerIds": [
+            "039f7151-c8b7-49e9-af49-35a93f8bdcd8"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2024-04-03T19:47:17.554",
+        "description": "",
+        "topic": "tech",
+        "video": null,
+        "video2": null,
+        "room": "ROOM5",
+        "start": "2024-04-25T16:30:00",
+        "end": "2024-04-25T16:50:00",
+        "photoUrls": [],
+        "slug": "objectif-jetpack-compose-",
+        "level": "Intermediate",
+        "id": "660189"
+    },
+    {
         "format": "KEYNOTE",
         "event": "2024",
         "title": "Comment Bitcoin et les cryptos ont envo\u00fbt\u00e9 la plan\u00e8te ?",
@@ -696,18 +741,40 @@
             "5d7f531b-9dc9-4306-b742-cb54a80d8208"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.706",
+        "addedAt": "2024-04-03T19:47:17.554",
         "description": "",
         "topic": "aliens",
         "video": null,
         "video2": null,
         "room": "AMPHI1",
-        "start": "2024-04-25T17:05:00",
-        "end": "2024-04-25T17:35:00",
+        "start": "2024-04-25T17:00:00",
+        "end": "2024-04-25T17:30:00",
         "photoUrls": [],
         "slug": "comment-bitcoin-et-les-cryptos-ont-envoute-la-planete-",
         "level": "Beginner",
         "id": "641460"
+    },
+    {
+        "format": "KEYNOTE",
+        "event": "2024",
+        "title": "Mot de la fin",
+        "summary": "",
+        "speakerIds": [
+            "mixit"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2024-04-03T19:47:17.554",
+        "description": "",
+        "topic": "other",
+        "video": null,
+        "video2": null,
+        "room": "AMPHI1",
+        "start": "2024-04-25T17:30:00",
+        "end": "2024-04-25T17:35:00",
+        "photoUrls": [],
+        "slug": "mot-de-la-fin",
+        "level": null,
+        "id": "663704"
     },
     {
         "format": "KEYNOTE",
@@ -718,7 +785,7 @@
             "mixit"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.706",
+        "addedAt": "2024-04-03T19:47:17.554",
         "description": "",
         "topic": "other",
         "video": null,
@@ -740,7 +807,7 @@
             "307a046c-9f3b-49fb-9634-188a6cdc9c4b"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.706",
+        "addedAt": "2024-04-03T19:47:17.554",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -762,7 +829,7 @@
             "eric"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.706",
+        "addedAt": "2024-04-03T19:47:17.554",
         "description": "",
         "topic": "team",
         "video": null,
@@ -785,7 +852,7 @@
             "seguin.caroline"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.707",
+        "addedAt": "2024-04-03T19:47:17.554",
         "description": "",
         "topic": "team",
         "video": null,
@@ -799,29 +866,6 @@
         "id": "602796"
     },
     {
-        "format": "WORKSHOP",
-        "event": "2024",
-        "title": "Lib\u00e8re ta cr\u00e9ature et embrasse tes bizarreries !",
-        "summary": "Les personnes neuro-atypiques sont mal accept\u00e9es en entreprises et souvent victimes de pr\u00e9jug\u00e9s. Elles rencontrent aussi de grandes difficult\u00e9s \u00e0 s\u2019assumer comme tel et \u00e0 trouver un environnement sain dans lequel s\u2019\u00e9panouir.\r\nSachant que les neuro-atypiques repr\u00e9sentent environ 20% de la population et que seulement 15% des personnes neuro-atypiques sont diagnostiqu\u00e9es, imaginez le nombre de personnes en souffrance au quotidien !\r\n\r\nVous pourrez, au travers d&#39;un jeu ludique, vous mettre dans la peau d&#39;un ou plusieurs neuro-atypiques et exp\u00e9rimenter diff\u00e9rentes mises en situations. \r\n\r\nCela vous permettra de comprendre : \r\n*comment nous pouvons hacker le syst\u00e8me pour que l&#39;ensemble des collaborateurs (neuro-atypiques et neuro-typiques) se sentent bien dans leurs job avec quelques m\u00e9thodes d\u2019organisation personnelles pour g\u00e9rer sa performance et son \u00e9panouissement \r\n*quels sont les modes de communication et leviers de motivation des neuro-atypiques (bien que chacun soit diff\u00e9rents, quelques id\u00e9es pour guider managers et \u00e9quipes)\r\n*pour les neuro-typiques : comment \u00eatre acteur dans l\u2019inclusion et la diversit\u00e9 \r\n\r\nOn vous parlera notamment de :\r\n*Qu\u2019est-ce que c\u2019est la neuro-diversit\u00e9 ? Les diff\u00e9rentes formes de neuro-atypies\r\n*Quels sont les impacts de la neuro-atypie sur la perception de l&#39;environnement, la confiance en soi et les interactions\r\n*REX de neuro-atypiques aux parcours bien diff\u00e9rents \r\n",
-        "speakerIds": [
-            "cyrielle.eudeline",
-            "maria-eliza.paez"
-        ],
-        "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.707",
-        "description": "",
-        "topic": "aliens",
-        "video": null,
-        "video2": null,
-        "room": "ROOM4",
-        "start": "2024-04-26T10:20:00",
-        "end": "2024-04-26T12:15:00",
-        "photoUrls": [],
-        "slug": "libere-ta-creature-et-embrasse-tes-bizarreries-",
-        "level": "Beginner",
-        "id": "593824"
-    },
-    {
         "format": "TALK",
         "event": "2024",
         "title": "R\u00e9inventer les masculinit\u00e9s, un chemin vers plus d\u2019inclusion dans la tech",
@@ -830,7 +874,7 @@
             "nathan.castelein"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.706",
+        "addedAt": "2024-04-03T19:47:17.554",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -852,7 +896,7 @@
             "pcreux"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.706",
+        "addedAt": "2024-04-03T19:47:17.554",
         "description": "",
         "topic": "team",
         "video": null,
@@ -874,7 +918,7 @@
             "Kehrlann"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.707",
+        "addedAt": "2024-04-03T19:47:17.554",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -888,6 +932,28 @@
         "id": "593894"
     },
     {
+        "format": "WORKSHOP",
+        "event": "2024",
+        "title": "Tous ensemble : Atelier de l&#39;inclusion",
+        "summary": "La conception des produits cr\u00e9e de l\u2019exclusion dont les d\u00e9veloppeurs ou designers sont souvent peu conscients. En am\u00e9liorant le caract\u00e8re inclusif d\u2019un produit, on peut \u00e0 la fois am\u00e9liorer la qualit\u00e9 et le confort d\u2019usage pour tous, mais aussi trouver de nouvelles fonctionnalit\u00e9s.\r\n\r\nDans cet atelier, nous travaillerons sur des situations de vuln\u00e9rabilit\u00e9 ou sociales qui peuvent amener des besoins particuliers dans les exp\u00e9riences de produits ou services (handicap, situations de pr\u00e9carit\u00e9, neurodiversit\u00e9, maladie psychique, orientation sexuelles\u2026) avec des cas concrets pour plonger dans la fa\u00e7on dont ces diff\u00e9rences peuvent impacter nos produits et services. Nous allons pouvoir imaginer des solutions inclusives en travaillant sur un parcours et un jeu de cartes qui pourrait \u00eatre utilis\u00e9 pour sensibiliser les \u00e9quipes \u00e0 ces situations parfois invisibles ou ignor\u00e9es.\r\n\r\n",
+        "speakerIds": [
+            "luz.delgado.bautista"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2024-04-03T19:47:17.555",
+        "description": "",
+        "topic": "ethics",
+        "video": null,
+        "video2": null,
+        "room": "ROOM4",
+        "start": "2024-04-26T10:20:00",
+        "end": "2024-04-26T12:15:00",
+        "photoUrls": [],
+        "slug": "tous-ensemble-atelier-de-l-39-inclusion",
+        "level": "Beginner",
+        "id": "612466"
+    },
+    {
         "format": "TALK",
         "event": "2024",
         "title": "GitHub Copilot : L&#39;IA g\u00e9n\u00e9rative au service du d\u00e9veloppeur",
@@ -896,7 +962,7 @@
             "tugdual"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.706",
+        "addedAt": "2024-04-03T19:47:17.554",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -919,7 +985,7 @@
             "palis.beatrice"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.707",
+        "addedAt": "2024-04-03T19:47:17.555",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -941,7 +1007,7 @@
             "anais.huet"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.707",
+        "addedAt": "2024-04-03T19:47:17.555",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -963,7 +1029,7 @@
             "1338530083"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.707",
+        "addedAt": "2024-04-03T19:47:17.555",
         "description": "",
         "topic": "team",
         "video": null,
@@ -985,7 +1051,7 @@
             "jose.paumard"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.707",
+        "addedAt": "2024-04-03T19:47:17.555",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -1007,7 +1073,7 @@
             "nicolas.frizzarin54"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.707",
+        "addedAt": "2024-04-03T19:47:17.555",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -1029,7 +1095,7 @@
             "9340cb4b-50ea-4f7a-bed3-3aadb63c42bb"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.707",
+        "addedAt": "2024-04-03T19:47:17.555",
         "description": "",
         "topic": "other",
         "video": null,
@@ -1051,7 +1117,7 @@
             "evathiebaud"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.707",
+        "addedAt": "2024-04-03T19:47:17.555",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -1073,7 +1139,7 @@
             "m.jarrar"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.707",
+        "addedAt": "2024-04-03T19:47:17.555",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -1095,7 +1161,7 @@
             "revolutioninclusive"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.707",
+        "addedAt": "2024-04-03T19:47:17.555",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -1117,7 +1183,7 @@
             "morgane.hauguel"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.707",
+        "addedAt": "2024-04-03T19:47:17.555",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -1139,7 +1205,7 @@
             "aurelie"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.707",
+        "addedAt": "2024-04-03T19:47:17.555",
         "description": "",
         "topic": "team",
         "video": null,
@@ -1162,7 +1228,7 @@
             "simon-mercier59"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.707",
+        "addedAt": "2024-04-03T19:47:17.555",
         "description": "",
         "topic": "design",
         "video": null,
@@ -1185,7 +1251,7 @@
             "snicoll"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.707",
+        "addedAt": "2024-04-03T19:47:17.555",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -1208,7 +1274,7 @@
             "clement+sessionize"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.707",
+        "addedAt": "2024-04-03T19:47:17.555",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -1231,7 +1297,7 @@
             "hsablonniere"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.707",
+        "addedAt": "2024-04-03T19:47:17.555",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -1254,7 +1320,7 @@
             "romain.berthon"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.708",
+        "addedAt": "2024-04-03T19:47:17.555",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -1276,7 +1342,7 @@
             "christophe.breheret.girardin"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.708",
+        "addedAt": "2024-04-03T19:47:17.555",
         "description": "",
         "topic": "design",
         "video": null,
@@ -1298,7 +1364,7 @@
             "jbriault"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.708",
+        "addedAt": "2024-04-03T19:47:17.555",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -1321,7 +1387,7 @@
             "julien.topcu"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.707",
+        "addedAt": "2024-04-03T19:47:17.555",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -1343,7 +1409,7 @@
             "34382931-9f50-47a8-8373-64508f73596b"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.708",
+        "addedAt": "2024-04-03T19:47:17.555",
         "description": "",
         "topic": "other",
         "video": null,
@@ -1365,7 +1431,7 @@
             "mixit"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-03-25T08:10:52.708",
+        "addedAt": "2024-04-03T19:47:17.555",
         "description": "",
         "topic": "other",
         "video": null,

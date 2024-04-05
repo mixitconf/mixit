@@ -2,7 +2,6 @@ package mixit.talk.handler
 
 import java.time.Duration
 import java.time.LocalDate
-import java.time.LocalDateTime
 import java.time.ZoneId
 import kotlinx.coroutines.reactor.awaitSingle
 import mixit.MixitApplication.Companion.CURRENT_EVENT
@@ -13,8 +12,6 @@ import mixit.event.model.EventImagesService
 import mixit.event.model.EventService
 import mixit.favorite.repository.FavoriteRepository
 import mixit.feedback.model.FeedbackService
-import mixit.talk.handler.TalkHandler.TalkListType.Agenda
-import mixit.talk.handler.TalkHandler.TalkListType.ListByDate
 import mixit.talk.model.CachedTalk
 import mixit.talk.model.Language
 import mixit.talk.model.Room
@@ -44,16 +41,12 @@ import mixit.util.mustache.MustacheI18n.TALKS
 import mixit.util.mustache.MustacheI18n.TITLE
 import mixit.util.mustache.MustacheI18n.YEAR
 import mixit.util.mustache.MustacheI18n.YEAR_SELECTOR
-import mixit.util.mustache.MustacheTemplate
-import mixit.util.mustache.MustacheTemplate.FeedbackWall
 import mixit.util.mustache.MustacheTemplate.Media
-import mixit.util.mustache.MustacheTemplate.MediaAllImages
 import mixit.util.mustache.MustacheTemplate.MediaImages
-import mixit.util.mustache.MustacheTemplate.MediaVideo
+import mixit.util.mustache.MustacheTemplate.MiXiTOnAir
 import mixit.util.mustache.MustacheTemplate.Schedule
 import mixit.util.mustache.MustacheTemplate.TalkDetail
 import mixit.util.mustache.MustacheTemplate.TalkEdit
-import mixit.util.mustache.MustacheTemplate.TalkList
 import mixit.util.permanentRedirect
 import mixit.util.seeOther
 import mixit.util.toVimeoPlayerUrl
@@ -63,8 +56,8 @@ import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
-import org.springframework.web.reactive.function.server.queryParamOrNull
 import org.springframework.web.reactive.function.server.renderAndAwait
+
 
 @Component
 class TalkHandler(
@@ -79,161 +72,32 @@ class TalkHandler(
     private val feedbackService: FeedbackService
 ) {
 
-    companion object {
-        fun media(req: ServerRequest, year: Int, topic: String? = null) =
-            TalkViewConfig(
-                year,
-                req,
-                TalksTabs.TalksWithVideo,
-                topic,
-                template = Media
-            )
-
-        fun video(req: ServerRequest, year: Int, topic: String? = null) =
-            media(req, year, topic).copy(tabs = TalksTabs.MainVideo, template = MediaVideo)
-
-        fun images(req: ServerRequest, year: Int, topic: String? = null) =
-            media(req, year, topic).copy(tabs = TalksTabs.Photos, template = MediaAllImages)
-
-        fun mediaWithFavorites(req: ServerRequest, year: Int, topic: String? = null) =
-            media(req, year, topic).copy(filterOnFavorite = true, tabs = TalksTabs.Favorites)
-
-        fun imageAlbum(req: ServerRequest, year: Int, topic: String? = null) =
-            TalkViewConfig(
-                year,
-                req,
-                TalksTabs.Photos,
-                topic,
-                template = MediaImages,
-                album = req.pathVariable("album"),
-                url = req.queryParamOrNull("url")
-            )
-
-        fun talks(req: ServerRequest, year: Int, topic: String? = null): TalkViewConfig {
-            val isAgenda = (req.queryParamOrNull("agenda") ?: "false") == "true"
-            val mode = if (isAgenda) Agenda else ListByDate
-            return TalkViewConfig(
-                year,
-                req,
-                if (mode == Agenda) TalksTabs.Schedule else TalksTabs.Talks,
-                topic,
-                viewWorkshop = (req.queryParamOrNull("workshop") ?: "true") == "true"
-            )
-        }
-
-        fun mixette(req: ServerRequest, year: Int) =
-            TalkViewConfig(
-                year,
-                req,
-                TalksTabs.Mixette,
-                template = MustacheTemplate.Mixette,
-            )
-
-        fun speakers(req: ServerRequest, year: Int) =
-            TalkViewConfig(
-                year,
-                req,
-                TalksTabs.Speakers,
-                template = MustacheTemplate.Speakers,
-            )
-
-        fun talksWithFavorites(req: ServerRequest, year: Int, topic: String? = null) =
-            talks(req, year, topic).copy(filterOnFavorite = true, tabs = TalksTabs.Favorites)
-
-        fun feedbackWall(req: ServerRequest, year: Int, topic: String? = null) =
-            TalkViewConfig(year, req, TalksTabs.Talks, topic, template = FeedbackWall)
-    }
-
-    enum class TalkListType { SimpleList, ListByDate, Agenda }
-    enum class TalksTabs(val url: String) {
-        Talks(""),
-        Speakers("/speakers"),
-        Schedule("?agenda=true"),
-        Favorites("/favorites"),
-        MainVideo("/medias/video"),
-        TalksWithVideo("/medias"),
-        Mixette("/mixette"),
-        Photos("/medias/images");
-
-        companion object {
-            private fun current(hasMixette: Boolean, isConnected: Boolean, canDisplayAgenda: Boolean) =
-                if (isConnected && (canDisplayAgenda)) {
-                    listOf(Schedule, Speakers, Talks, Favorites).addMixette(hasMixette)
-                } else if (canDisplayAgenda) {
-                    listOf(Schedule, Speakers, Talks).addMixette(hasMixette)
-                } else if (isConnected) {
-                    listOf(Talks, Speakers, Favorites).addMixette(hasMixette)
-                } else {
-                    listOf(Talks, Speakers).addMixette(hasMixette)
-                }
-
-            private fun List<TalksTabs>.addMixette(hasMixette: Boolean) =
-                if (hasMixette) this + listOf(Mixette) else this
-            private fun old(hasMixette: Boolean) =
-                listOf(TalksWithVideo, Speakers, MainVideo, Photos).addMixette(hasMixette)
-        }
-
-        fun tabs(
-            hasMixette: Boolean,
-            isCurrent: Boolean,
-            isConnected: Boolean,
-            canDisplayAgenda: Boolean
-        ): List<TabDto> =
-            (if (isCurrent) current(hasMixette, isConnected, canDisplayAgenda) else old(hasMixette))
-                .map {
-                    TabDto(
-                        name = it.name.lowercase(),
-                        active = it == this,
-                        url = it.url
-                    )
-                }
-    }
-
-    data class TabDto(val name: String, val active: Boolean, val url: String)
-
-    data class TalkViewConfig(
-        val year: Int,
-        val req: ServerRequest,
-        val tabs: TalksTabs,
-        val topic: String? = null,
-        val filterOnFavorite: Boolean = false,
-        val template: MustacheTemplate = TalkList,
-        val album: String? = null,
-        val url: String? = null,
-        val viewWorkshop: Boolean = true,
-    )
-
     suspend fun scheduleView(req: ServerRequest) =
         ok().renderAndAwait(Schedule.template, mapOf(TITLE to Schedule.title))
 
     private data class TalkKey(val date: String, val id: String = date.replace(" ", "").lowercase())
 
     suspend fun findByEventView(config: TalkViewConfig): ServerResponse {
+        val event = eventService.findByYear(config.year)
+
         val currentUserEmail = config.req.currentNonEncryptedUserEmail()
+        val allEventTalks = loadTalkAndFavorites(config, currentUserEmail)
         val talks = filterTalkByFormat(
-            loadTalkAndFavorites(config, currentUserEmail).let { talks ->
-                when (config.template) {
-                    Media -> {
-                        talks.filter { it.video != null }
-                    }
-
-                    FeedbackWall -> {
-                        talks
-                            .asSequence()
-                            .filterNot { it.format == TalkFormat.INTERVIEW }
-                            .filterNot { it.format == TalkFormat.ON_AIR }
-                            .filterNot { it.topic == "onair" }
-                            .filterNot { it.title.contains("Keynote team") }
-                            .toList()
-                    }
-
-                    else -> talks
+            when (config.template) {
+                Media -> allEventTalks.filter { it.video != null }
+                MiXiTOnAir -> {
+                    if (event.year == config.year)
+                        allEventTalks.filter { it.format == TalkFormat.ON_AIR }
+                    else
+                        allEventTalks.filter { it.format == TalkFormat.ON_AIR && it.video != null }
                 }
+                else -> allEventTalks.filterNot { it.format == TalkFormat.ON_AIR }
             },
             config.viewWorkshop
         )
-        val event = eventService.findByYear(config.year)
+
         val hasMixette = event.organizations.isNotEmpty()
+        val hasOnAir = allEventTalks.any { it.format == TalkFormat.ON_AIR }
         val title = if (config.topic == null) "${config.template.title}|${config.year}" else
             "${config.template.title}.${config.topic}|${config.year}"
         val images = findImages(config)
@@ -245,7 +109,15 @@ class TalkHandler(
         val rooms = roomsToDisplayOnAgenda(talks)
         val canDisplayAgenda = rooms.isNotEmpty() && !(rooms.contains(Room.UNKNOWN) && rooms.size == 1)
         val isCurrent = (config.year == CURRENT_EVENT.toInt())
-
+        val displayAgenda =  ((config.tabs == TalksTabs.Schedule || config.tabs == TalksTabs.Favorites) && canDisplayAgenda)
+                || (config.tabs == TalksTabs.MiXiTonAir && isCurrent)
+        if (config.tabs == TalksTabs.Mixette && !hasMixette) {
+            return seeOther("${properties.baseUri}/${config.year}/medias")
+        }
+        if (config.tabs == TalksTabs.MiXiTonAir && !hasOnAir) {
+            return if (!isCurrent) seeOther("${properties.baseUri}/${config.year}/medias") else
+                seeOther("${properties.baseUri}/${config.year}?agenda=true")
+        }
         if (listOf(TalksTabs.Schedule, TalksTabs.Talks).contains(config.tabs) && !isCurrent) {
             return seeOther("${properties.baseUri}/${config.year}/medias")
         }
@@ -267,6 +139,7 @@ class TalkHandler(
                     YEAR_SELECTOR to YearSelector.create(config.year, config.template.path!!, talk = true),
                     "tabs" to config.tabs.tabs(
                         hasMixette = hasMixette,
+                        hasOnAir = hasOnAir,
                         isCurrent = isCurrent,
                         isConnected = currentUserEmail.isNotEmpty(),
                         canDisplayAgenda = canDisplayAgenda || config.tabs == TalksTabs.Favorites
@@ -277,7 +150,7 @@ class TalkHandler(
                     IMAGES to images,
                     SPEAKERS to speakers(config.req, config.year),
                     "canDisplayAgenda" to canDisplayAgenda,
-                    "displayAgenda" to ((config.tabs == TalksTabs.Schedule || config.tabs == TalksTabs.Favorites) && canDisplayAgenda),
+                    "displayAgenda" to displayAgenda,
                     "displayWorkshop" to config.viewWorkshop,
                     "schedulingFileUrl" to event.schedulingFileUrl,
                     "filtered" to config.filterOnFavorite,
@@ -300,7 +173,14 @@ class TalkHandler(
         talks: List<TalkDto>,
         canDisplayAgenda: Boolean
     ): Any =
-        if ((config.tabs == TalksTabs.Schedule || config.tabs == TalksTabs.Favorites) && canDisplayAgenda) {
+        if(config.tabs ==TalksTabs.MiXiTonAir) {
+            if(config.year == CURRENT_EVENT.toInt()) {
+                talksToDisplayOnAgenda(talks, rooms, days, config.req.language())
+            } else {
+                talks.filter { it.video != null  || it.video2 != null }
+            }
+        }
+        else if ((config.tabs == TalksTabs.Schedule || config.tabs == TalksTabs.Favorites) && canDisplayAgenda) {
             talksToDisplayOnAgenda(talks, rooms, days, config.req.language())
         } else if (config.tabs == TalksTabs.TalksWithVideo) {
             talks
@@ -659,28 +539,5 @@ class TalkHandler(
         return permanentRedirect("${properties.baseUri}/${talk.event}/${talk.slug}")
     }
 
-    private data class DayTalksDto(
-        val id: String,
-        val day: String,
-        val active: Boolean,
-        val talks: List<TalkDto>
-    )
 
-    private data class DayRoomTalksDto(
-        val id: String,
-        val day: String,
-        val active: Boolean,
-        val slices: List<RoomDaySliceDto>
-    )
-
-    private data class RoomDaySliceDto(val room: String?, val talkByRooms: List<RoomTalkDto>)
-
-    private data class RoomTalkDto(
-        val time: String,
-        val start: LocalDateTime,
-        val timeDisplayed: Boolean,
-        val bordered: Boolean,
-        val sliceDuration: Long = 1,
-        val talk: TalkDto?
-    )
 }

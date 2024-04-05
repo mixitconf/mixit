@@ -1,0 +1,29 @@
+{{> header}}
+<div class="container-xxl">
+    {{> talks-header}}
+
+        {{#isCurrent}}
+            <div class="container-xxl pt-4 pb-4">
+                <div class="row">
+                    <div class="col-md-6">
+                        {{#talks.day1}}
+                            <div class="fw-bold text-center text-uppercase">{{day}}</div>
+                            {{> talks-day-tab-content-agenda }}
+                        {{/talks.day1}}
+                    </div>
+                    <div class="col-md-6">
+                        {{#talks.day2}}
+                            <div class="fw-bold text-center text-uppercase">{{day}}</div>
+                            {{> talks-day-tab-content-agenda }}
+                        {{/talks.day2}}
+                    </div>
+                </div>
+            </div>
+        {{/isCurrent}}
+        {{^isCurrent}}
+            {{#talks}}
+                {{>talk-video-viewer}}
+            {{/talks}}
+        {{/isCurrent}}
+</div>
+{{> footer-sponsor}}

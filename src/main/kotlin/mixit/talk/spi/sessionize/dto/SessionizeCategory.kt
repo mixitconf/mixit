@@ -71,6 +71,7 @@ data class SessionizeCategoryItem(
             "dijkstra" -> Room.ROOM5
             "feinler" -> Room.ROOM6
             "hopper" -> Room.ROOM7
+            "mixit on air" -> Room.TWITCH
             else -> Room.UNKNOWN
         }
 }

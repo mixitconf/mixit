@@ -67,10 +67,10 @@ class SessionizeSynchronizer(
                 val talSpeakers = session.speakers.mapNotNull { speaker ->
                     speakers.find { it.cfpId == speaker }
                 }
-                val format = session.categoryItems.firstNotNullOfOrNull { formats[it] } ?: TalkFormat.TALK
+                val room = session.roomId?.let { rooms[it] } ?: Room.TWITCH
+                val format = if(room == Room.TWITCH) TalkFormat.ON_AIR else session.categoryItems.firstNotNullOfOrNull { formats[it] } ?: TalkFormat.TALK
                 val topic = session.categoryItems.firstNotNullOfOrNull { topics[it] } ?: Topic.OTHER
                 val language = session.categoryItems.firstNotNullOfOrNull { languages[it] } ?: Language.FRENCH
-                val room = session.roomId?.let { rooms[it] } ?: Room.UNKNOWN
                 val level = session.categoryItems.firstNotNullOfOrNull { levels[it] }
 
                 Talk(

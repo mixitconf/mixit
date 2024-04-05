@@ -1142,6 +1142,7 @@ h3 {
     border-radius: 12px;
     padding: 0.2em 0.5em;
     margin-left: 1em;
+    margin-bottom: 4px;
   }
 }
 
@@ -1430,7 +1431,7 @@ $sponsor-max-width: 20em;
   border: 2px solid $fifth-color;
   padding: 1em;
   border-radius: 12px;
-  background-color: $fifth-color;
+  background-color: $white;
 
   img {
     height: 2em;
@@ -1479,6 +1480,10 @@ $sponsor-max-width: 20em;
     padding-right: 4px;
     filter: invert(1);
   }
+}
+
+.mxt-btn-white {
+  @include mixitBtn($secondary-color, $white);
 }
 
 .mxt-btn-light {
