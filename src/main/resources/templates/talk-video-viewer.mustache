@@ -12,7 +12,7 @@
             <strong>#{{#i18n}}talk.format.{{format}}{{/i18n}}</strong>
         </div>
     </div>
-    <div class="mxt-video--player-video" style="max-width: 100%">
+    <div class="mxt-video--player-video">
         {{#vimeoPlayer}}
             <div class="mxt-wrapper--intrinsic">
                 <iframe data-src="{{vimeoPlayer}}"
@@ -30,13 +30,13 @@
                 </a>
             {{/video}}
             {{#video2}}
-                <iframe
-                        src="{{.}}&autoplay=false"
-                        height="250"
-                        class="mxt-img--lazyload"
-                        style="max-width: 100%;width: auto"
-                        allowfullscreen>
+                <div class="mxt-wrapper--intrinsic">
+                    <iframe
+                            src="{{.}}&autoplay=false"
+                            class="mxt-wrapper--video-player"
+                            allowfullscreen>
                 </iframe>
+            </div>
             {{/video2}}
         {{/vimeoPlayer}}
     </div>

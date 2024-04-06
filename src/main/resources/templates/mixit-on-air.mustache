@@ -21,9 +21,11 @@
             </div>
         {{/isCurrent}}
         {{^isCurrent}}
+            <div class="mxt-video--player-container">
             {{#talks}}
                 {{>talk-video-viewer}}
             {{/talks}}
+            </div>
         {{/isCurrent}}
 </div>
 {{> footer-sponsor}}
