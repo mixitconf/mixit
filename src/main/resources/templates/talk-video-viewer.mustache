@@ -30,12 +30,15 @@
                 </a>
             {{/video}}
             {{#video2}}
+            <div class="mxt-wrapper--intrinsic">
                 <iframe
                         src="{{.}}&autoplay=false"
                         height="250"
+                        class="mxt-wrapper--video-player mxt-img--lazyload"
                         style="max-width: 100%;width: auto"
                         allowfullscreen>
                 </iframe>
+            </div>
             {{/video2}}
         {{/vimeoPlayer}}
     </div>
