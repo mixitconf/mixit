@@ -151,6 +151,7 @@ class TalkHandler(
                     SPEAKERS to speakers(config.req, config.year),
                     "canDisplayAgenda" to canDisplayAgenda,
                     "displayAgenda" to displayAgenda,
+                    "onair" to (config.tabs == TalksTabs.MiXiTonAir),
                     "displayWorkshop" to config.viewWorkshop,
                     "schedulingFileUrl" to event.schedulingFileUrl,
                     "filtered" to config.filterOnFavorite,
