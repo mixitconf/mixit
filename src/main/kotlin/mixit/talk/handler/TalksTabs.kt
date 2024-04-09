@@ -15,20 +15,26 @@ enum class TalksTabs(val url: String) {
 
     companion object {
         private fun current(
+            isCurrent: Boolean,
             hasMixette: Boolean,
             hasOnAir: Boolean,
             isConnected: Boolean,
             canDisplayAgenda: Boolean
         ) =
-            if (isConnected && (canDisplayAgenda)) {
-                listOf(Schedule, Speakers, Talks, Favorites).addOnAir(hasOnAir).addMixette(hasMixette)
-            } else if (canDisplayAgenda) {
-                listOf(Schedule, Speakers, Talks).addOnAir(hasOnAir).addMixette(hasMixette)
-            } else if (isConnected) {
-                listOf(Talks, Speakers, Favorites).addOnAir(hasOnAir).addMixette(hasMixette)
+            if (isCurrent  && canDisplayAgenda) {
+                listOf(Schedule, Speakers).addOnAir(hasOnAir).addMixette(hasMixette)
             } else {
                 listOf(Talks, Speakers).addOnAir(hasOnAir).addMixette(hasMixette)
             }
+//            if (isCurrent && isConnected && canDisplayAgenda) {
+//                listOf(Schedule, Speakers, Favorites).addOnAir(hasOnAir).addMixette(hasMixette)
+//            } else if (isCurrent && canDisplayAgenda) {
+//                listOf(Schedule, Speakers).addOnAir(hasOnAir).addMixette(hasMixette)
+//            } else if (isConnected) {
+//                listOf(Talks, Speakers, Favorites).addOnAir(hasOnAir).addMixette(hasMixette)
+//            } else {
+//                listOf(Talks, Speakers).addOnAir(hasOnAir).addMixette(hasMixette)
+//            }
 
         private fun List<TalksTabs>.addMixette(hasMixette: Boolean) =
             if (hasMixette) this + listOf(Mixette) else this
@@ -50,7 +56,7 @@ enum class TalksTabs(val url: String) {
         isCurrent
             .let {
                 if (isCurrent) {
-                    current(hasMixette, hasOnAir, isConnected, canDisplayAgenda)
+                    current(true, hasMixette, hasOnAir, isConnected, canDisplayAgenda)
                 } else {
                     old(hasMixette, hasOnAir)
                 }

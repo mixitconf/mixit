@@ -8,10 +8,36 @@
     </div>
         {{#hasAtLeastOneVideo}}<img src="/images/svg/mxt-icon-video-dark.svg" style="max-height: 1em">{{/hasAtLeastOneVideo}}
     {{/topic}}
+    {{^onair}}
     <div class="mxt-text--cat-format">
         #{{#i18n}}talk.format.{{format}}{{/i18n}}
+        {{#connected}}
+            {{#favorite}}
+                <img src="/images/svg/favorites/mxt-favorite.svg" class="mxt-icon--cat__talks"
+                     id="favorite-{{id}}"/>
+            {{/favorite}}
+            {{^favorite}}
+                <img src="/images/svg/favorites/mxt-favorite-non.svg"
+                     class="mxt-icon--cat__talks" id="favorite-{{id}}"/>
+            {{/favorite}}
+        {{/connected}}
     </div>
-    <div><small>{{#start}}{{start}} - {{end}}{{/start}}</small></div>
+    {{/onair}}
+    <div>
+        <small>{{#start}}{{start}} - {{end}}{{/start}}</small>
+        {{#onair}}
+            {{#connected}}
+                {{#favorite}}
+                    <img src="/images/svg/favorites/mxt-favorite.svg" class="mxt-icon--cat__talks"
+                         id="favorite-{{id}}"/>
+                {{/favorite}}
+                {{^favorite}}
+                    <img src="/images/svg/favorites/mxt-favorite-non.svg"
+                         class="mxt-icon--cat__talks" id="favorite-{{id}}"/>
+                {{/favorite}}
+            {{/connected}}
+        {{/onair}}
+    </div>
     <div class="mxt-agenda--talk-title"><small>{{title}}</small></div>
     {{#speakers}}
         <div><small>{{firstname}}&nbsp;{{lastname}}</small></div>
