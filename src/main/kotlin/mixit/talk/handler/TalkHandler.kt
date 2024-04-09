@@ -81,23 +81,25 @@ class TalkHandler(
         val event = eventService.findByYear(config.year)
 
         val currentUserEmail = config.req.currentNonEncryptedUserEmail()
-        val allEventTalks = loadTalkAndFavorites(config, currentUserEmail)
-        val talks = filterTalkByFormat(
-            when (config.template) {
-                Media -> allEventTalks.filter { it.video != null }
-                MiXiTOnAir -> {
-                    if (event.year == config.year)
-                        allEventTalks.filter { it.format == TalkFormat.ON_AIR }
-                    else
-                        allEventTalks.filter { it.format == TalkFormat.ON_AIR && it.video != null }
-                }
-                else -> allEventTalks.filterNot { it.format == TalkFormat.ON_AIR }
-            },
-            config.viewWorkshop
-        )
+
+        val talks = loadTalkAndFavorites(config, currentUserEmail).let { talks ->
+            filterTalkByFormat(
+                when (config.template) {
+                    Media -> talks.filter { it.video != null }
+                    MiXiTOnAir -> {
+                        if (event.year == config.year)
+                            talks.filter { it.format == TalkFormat.ON_AIR }
+                        else
+                            talks.filter { it.format == TalkFormat.ON_AIR && it.video != null }
+                    }
+                    else -> talks.filterNot { it.format == TalkFormat.ON_AIR }
+                },
+                config.viewWorkshop
+            )
+        }
 
         val hasMixette = event.organizations.isNotEmpty()
-        val hasOnAir = allEventTalks.any { it.format == TalkFormat.ON_AIR }
+        val hasOnAir = hasMixitOnAir(config)
         val title = if (config.topic == null) "${config.template.title}|${config.year}" else
             "${config.template.title}.${config.topic}|${config.year}"
         val images = findImages(config)
@@ -162,7 +164,7 @@ class TalkHandler(
                     "previousImage" to closestImages?.first,
                     "nextImage" to closestImages?.second,
                     "hasTalk" to talks.isNotEmpty(),
-                    "isCurrent" to isCurrent
+                    "isCurrent" to isCurrent,
                 )
             )
             .awaitSingle()
@@ -405,6 +407,9 @@ class TalkHandler(
                 )
             }
         }
+
+    private suspend fun hasMixitOnAir(config: TalkViewConfig): Boolean =
+        service.findByEvent(config.year.toString()).any { it.format == TalkFormat.ON_AIR }
 
     private suspend fun loadTalkAndFavorites(config: TalkViewConfig, currentUserEmail: String): List<TalkDto> =
         if (currentUserEmail.isEmpty()) {

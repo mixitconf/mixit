@@ -37,7 +37,8 @@ class TalkDto(
     val startLocalDateTime: LocalDateTime? = null,
     val endLocalDateTime: LocalDateTime? = null,
     val hasAtLeastOneVideo: Boolean = !video.isNullOrEmpty() || !video2.isNullOrEmpty(),
-    val level: TalkLevel? = null
+    val level: TalkLevel? = null,
+    val onair: Boolean = (format == TalkFormat.ON_AIR),
 )
 
 data class DayTalksDto(
