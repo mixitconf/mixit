@@ -1,6 +1,7 @@
 package mixit.event.handler
 
 import com.fasterxml.jackson.databind.ObjectMapper
+import java.time.LocalDate
 import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.MixitProperties
 import mixit.event.model.Event
@@ -10,6 +11,12 @@ import mixit.event.model.EventService
 import mixit.event.model.EventSponsoring
 import mixit.event.model.EventVolunteer
 import mixit.event.model.SponsorshipLevel
+import mixit.util.AdminUtils.toJson
+import mixit.util.AdminUtils.toLink
+import mixit.util.AdminUtils.toLinks
+import mixit.util.enumMatcher
+import mixit.util.errors.NotFoundException
+import mixit.util.extractFormData
 import mixit.util.mustache.MustacheI18n.CREATION_MODE
 import mixit.util.mustache.MustacheI18n.EVENT
 import mixit.util.mustache.MustacheI18n.EVENTS
@@ -22,19 +29,12 @@ import mixit.util.mustache.MustacheTemplate.AdminEventOrganizer
 import mixit.util.mustache.MustacheTemplate.AdminEventSponsor
 import mixit.util.mustache.MustacheTemplate.AdminEventVolunteer
 import mixit.util.mustache.MustacheTemplate.AdminEvents
-import mixit.util.AdminUtils.toJson
-import mixit.util.AdminUtils.toLink
-import mixit.util.AdminUtils.toLinks
-import mixit.util.enumMatcher
-import mixit.util.errors.NotFoundException
-import mixit.util.extractFormData
 import mixit.util.seeOther
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.renderAndAwait
-import java.time.LocalDate
 
 @Component
 class AdminEventHandler(
@@ -245,7 +245,7 @@ class AdminEventHandler(
         val event = service.findOneOrNull(req.pathVariable("eventId"))?.toEvent() ?: throw NotFoundException()
         return adminEventVolunteer(
             event.id,
-            event.volunteers.first { it.volunteerLogin == req.pathVariable("volunteerLogin") }
+            event.volunteers.first { it.volunteerLogin.contains(req.pathVariable("volunteerLogin")) }
         )
     }
 
