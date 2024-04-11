@@ -91,6 +91,7 @@ class AdminEventHandler(
                 formData["current"]?.toBoolean() ?: false,
                 photoUrls = formData["photoUrls"]?.toLinks(objectMapper) ?: emptyList(),
                 videoUrl = formData["videoUrl"]?.toLink(objectMapper),
+                streamingUrl = formData["streamingUrl"],
                 schedulingFileUrl = formData["schedulingFileUrl"]
             )
         } else {
@@ -105,7 +106,8 @@ class AdminEventHandler(
                 existingEvent.organizers,
                 formData["photoUrls"]?.toLinks(objectMapper) ?: emptyList(),
                 formData["videoUrl"]?.toLink(objectMapper),
-                formData["schedulingFileUrl"]
+                formData["schedulingFileUrl"],
+                streamingUrl = formData["streamingUrl"],
             )
         }
         service.save(updatedEvent).awaitSingleOrNull()

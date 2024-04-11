@@ -3,15 +3,15 @@ package mixit.user.handler
 import mixit.MixitApplication.Companion.CURRENT_EVENT
 import mixit.event.model.EventService
 import mixit.event.model.SponsorshipLevel.Companion.sponsorshipLevels
-import mixit.util.mustache.MustacheI18n
-import mixit.util.mustache.MustacheTemplate.Home
-import mixit.util.mustache.MustacheTemplate.Sponsors
 import mixit.talk.model.TalkService
 import mixit.talk.model.Topic
 import mixit.user.handler.dto.toSpeakerStarDto
 import mixit.user.model.UserService
 import mixit.util.YearSelector
 import mixit.util.language
+import mixit.util.mustache.MustacheI18n
+import mixit.util.mustache.MustacheTemplate.Home
+import mixit.util.mustache.MustacheTemplate.Sponsors
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
@@ -59,6 +59,7 @@ class SponsorHandler(
             MustacheI18n.SPONSORS to userService.loadSponsors(event),
             MustacheI18n.YEAR to year,
             MustacheI18n.YEAR_SELECTOR to YearSelector.create(year, template, true),
+            MustacheI18n.EVENT to event,
             "title" to if (template != "sponsors") title else "$title|$year"
         )
         if (template == Home.template) {

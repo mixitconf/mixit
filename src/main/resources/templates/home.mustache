@@ -1,17 +1,30 @@
 {{> header}}
 <div class="container-xxl">
+
+{{#hasFeatureMixitOnAirOnHomePage}}
+    <h2 class="mt-5">{{#i18n}}home.live.title{{/i18n}}</h2>
+    <p class="mb-2">{{#i18n}}home.live.intro{{/i18n}}</p>
+
+    <div class="mxt-wrapper--intrinsic">
+        <iframe
+                src="{{#event.streamingUrl}}{{event.streamingUrl}}{{/event.streamingUrl}}"
+                height="200"
+                width="1000"
+                allowfullscreen>
+        </iframe>
+    </div>
+{{/hasFeatureMixitOnAirOnHomePage}}
+{{^hasFeatureMixitOnAirOnHomePage}}
     <h2>News</h2>
     <p class="lead text-center">{{#i18n}}home.news.intro{{/i18n}}</p>
-
-
-
     <div class="row">
-        <div class="col-md-2 col-sm-4"><img src="/images/svg/mxt-soldout.svg" class="mxt-img--event-home"></div>
+        <div class="col-md-2 col-sm-4 text-center"><img src="/images/svg/mxt-soldout.svg" class="mxt-img--event-home"></div>
         <div class="col-md-10 col-sm-8 justify-content-center d-flex flex-column">
             <p>{{#i18n}}home.news.preconf{{/i18n}}</p>
             <p>{{#i18n}}home.news.preconf2{{/i18n}}</p>
         </div>
     </div>
+{{/hasFeatureMixitOnAirOnHomePage}}
 
 
 <!--    <div class="row mxt-home-round-header">-->
