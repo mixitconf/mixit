@@ -17,7 +17,7 @@
                             <div class="mxt-agenda--room {{#bordered}}mxt-agenda--bordered{{/bordered}} p-0 m-0"
                                  style="height: calc({{sliceDuration}}0px * 2.5); ">
                                 {{#talk}}
-                                    <article class="mxt-agenda--talk-container p-0 m-0">
+                                    <article class="mxt-agenda--talk-container p-0 m-0 {{#displayFavorites}}{{#connected}}{{^favorite}}mxt-agenda--talk-container-disable{{/favorite}}{{/connected}}{{/displayFavorites}}">
                                         <button class="p-0 m-0 mxt-agenda--talk-link d-block d-md-none"
                                                 ondblclick="location.href='{{localePrefix}}/{{event}}{{#slug}}/{{slug}}{{/slug}}'">
                                             {{> talks-day-tab-content-agenda-btn }}
