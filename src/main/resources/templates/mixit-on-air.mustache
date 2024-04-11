@@ -1,7 +1,7 @@
 {{> header}}
 <div class="container-xxl">
     {{> talks-header}}
- 
+
     <div class="row">
         <div class="col-6 p-2">
             <img src="/images/jpg/mixitonair1.jpg" class="mxt-img--event-home">
@@ -12,16 +12,17 @@
     </div>
         {{#isCurrent}}
             <div class="container-xxl pt-4 pb-4">
+                {{> talks-day-tab-criteria }}
                 <div class="row">
                     <div class="col-md-6">
                         {{#talks.day1}}
-                            <div class="fw-bold text-center text-uppercase">{{day}}</div>
+                            <div class="fw-bold text-center text-uppercase p-5">{{day}}</div>
                             {{> talks-day-tab-content-agenda }}
                         {{/talks.day1}}
                     </div>
                     <div class="col-md-6">
                         {{#talks.day2}}
-                            <div class="fw-bold text-center text-uppercase">{{day}}</div>
+                            <div class="fw-bold text-center text-uppercase p-5">{{day}}</div>
                             {{> talks-day-tab-content-agenda }}
                         {{/talks.day2}}
                     </div>

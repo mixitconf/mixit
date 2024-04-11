@@ -155,6 +155,7 @@ class TalkHandler(
                     "displayAgenda" to displayAgenda,
                     "onair" to (config.tabs == TalksTabs.MiXiTonAir),
                     "displayWorkshop" to config.viewWorkshop,
+                    "displayFavorites" to config.viewFavorites,
                     "schedulingFileUrl" to event.schedulingFileUrl,
                     "filtered" to config.filterOnFavorite,
                     "topic" to config.topic,

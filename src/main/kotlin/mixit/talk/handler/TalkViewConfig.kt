@@ -30,6 +30,7 @@ data class TalkViewConfig(
     val album: String? = null,
     val url: String? = null,
     val viewWorkshop: Boolean = true,
+    val viewFavorites: Boolean = true,
 ) {
     companion object {
         fun media(req: ServerRequest, year: Int, topic: String? = null) =
@@ -69,7 +70,8 @@ data class TalkViewConfig(
                 req,
                 tabs = if(year == MixitApplication.CURRENT_EVENT.toInt()) Schedule else Talks,
                 topic,
-                viewWorkshop = (req.queryParamOrNull("workshop") ?: "true") == "true"
+                viewWorkshop = (req.queryParamOrNull("workshop") ?: "true") == "true",
+                viewFavorites = (req.queryParamOrNull("favorites") ?: "false") == "true",
             )
         }
 
@@ -78,7 +80,8 @@ data class TalkViewConfig(
                 year,
                 req,
                 tabs = MiXiTonAir,
-                template = MustacheTemplate.MiXiTOnAir
+                template = MustacheTemplate.MiXiTOnAir,
+                viewFavorites = (req.queryParamOrNull("favorites") ?: "false") == "true",
             )
 
         fun mixette(req: ServerRequest, year: Int) =

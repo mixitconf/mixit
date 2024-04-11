@@ -1,9 +1,9 @@
 package mixit.event.model
 
+import java.time.LocalDate
 import mixit.user.model.Link
 import org.springframework.data.annotation.Id
 import org.springframework.data.mongodb.core.mapping.Document
-import java.time.LocalDate
 
 @Document
 data class Event(
@@ -18,7 +18,8 @@ data class Event(
     val photoUrls: List<Link> = emptyList(),
     val videoUrl: Link? = null,
     val schedulingFileUrl: String? = null,
-    val year: Int = start.year
+    val year: Int = start.year,
+    val streamingUrl: String? = null
 )
 
 @Document

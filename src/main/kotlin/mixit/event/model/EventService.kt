@@ -95,7 +95,8 @@ class EventService(
                 val user = users.firstOrNull { it.login == starLogin.login }?.toUser() ?: User()
                 CachedSpeaker(user, starLogin.year)
             },
-            event.year
+            event.year,
+            event.streamingUrl
         )
     }
 }

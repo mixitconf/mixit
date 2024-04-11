@@ -1,20 +1,22 @@
-<form action="{{localePrefix}}/{{event.year}}{{#slug}}/{{slug}}{{/slug}}"
+<form action="{{localePrefix}}/{{event.year}}{{#slug}}/{{slug}}{{/slug}}{{#onair}}/mixit-on-air{{/onair}}"
       id="criteria" class="row m-0" style="justify-content: end">
-    <input type="hidden" value="{{displayAgenda}}" name="agenda" id="agenda">
+    <input type="hidden" value="{{#displayFavorites}}{{displayFavorites}}{{/displayFavorites}}" name="favorites" id="favorites">
     <input type="hidden" value="{{displayWorkshop}}" name="workshop" id="workshop">
     <div style="flex-grow: 1;"></div>
-<!--    {{#canDisplayAgenda}}-->
-<!--    <div class="form-check form-switch" style="width: max-content;">-->
-<!--        <input class="form-check-input" type="checkbox" role="switch" id="_agenda"-->
-<!--               onclick="document.getElementById('agenda').value=this.checked;document.getElementById('criteria').submit()"-->
-<!--               {{#displayAgenda}}checked{{/displayAgenda}}>-->
-<!--        <label class="form-check-label" for="_agenda">{{#i18n}}talks.criteria.agenda{{/i18n}}</label>-->
-<!--    </div>-->
-<!--    {{/canDisplayAgenda}}-->
+    {{#canDisplayAgenda}}
+    <div class="form-check form-switch" style="width: max-content;">
+        <input class="form-check-input" type="checkbox" role="switch" id="_favorites"
+               onclick="document.getElementById('favorites').value=this.checked;document.getElementById('criteria').submit()"
+               {{#displayFavorites}}checked{{/displayFavorites}}>
+        <label class="form-check-label" for="_favorites">{{#i18n}}talks.criteria.favorites{{/i18n}}</label>
+    </div>
+    {{/canDisplayAgenda}}
+    {{^onair}}
     <div class="form-check form-switch" style="width: max-content;">
         <input class="form-check-input" type="checkbox" role="switch" id="_workshop"
                onclick="document.getElementById('workshop').value=this.checked;document.getElementById('criteria').submit()"
                {{#displayWorkshop}}checked{{/displayWorkshop}}>
         <label class="form-check-label" for="_workshop">{{#i18n}}talks.criteria.workshop{{/i18n}}</label>
     </div>
+    {{/onair}}
 </form>
