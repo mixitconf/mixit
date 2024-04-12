@@ -48,6 +48,12 @@ data class TicketTemp(
             TicketPronoun.XE_XEM
         } else if (pronoun.lowercase().startsWith("ask")) {
             TicketPronoun.ASK_ME
+        } else if (pronoun.lowercase().startsWith("jeudi")) {
+            TicketPronoun.THURSDAY
+        } else if (pronoun.lowercase().startsWith("vendredi")) {
+            TicketPronoun.FRIDAY
+        } else if (pronoun.lowercase().startsWith("full")) {
+            TicketPronoun.TWO_DAYS
         } else {
             null
         },
