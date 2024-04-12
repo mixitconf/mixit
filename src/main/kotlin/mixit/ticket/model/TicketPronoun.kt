@@ -6,5 +6,8 @@ enum class TicketPronoun {
     HE_HIM,
     THEY_THEM,
     XE_XEM,
-    SHE_THEY
+    SHE_THEY,
+    TWO_DAYS,
+    THURSDAY,
+    FRIDAY,
 }
