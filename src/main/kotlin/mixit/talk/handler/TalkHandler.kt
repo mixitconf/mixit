@@ -200,7 +200,15 @@ class TalkHandler(
                 .asSequence()
                 .flatMap { it.speakers }
                 .toSet()
-                .filterNot { user-> staffs.any { user.login == it.login || (user.firstname.lowercase() == it.firstname.lowercase() && user.lastname.lowercase() == it.lastname.lowercase()) } }
+                .filterNot {
+                    user-> staffs.any {
+                        user.login == it.login ||
+                                (user.firstname.lowercase() == it.firstname.lowercase() && user.lastname.lowercase() == it.lastname.lowercase()) ||
+                                (user.firstname.lowercase() == "greg" && user.lastname.lowercase() == "alexandre") ||
+                                (user.firstname.lowercase() == "agnes" && user.lastname.lowercase() == "crepet") ||
+                                (user.firstname.lowercase() == "amelie" && user.lastname.lowercase() == "b")
+                    }
+                }
                 .map { it.toDto(req.language()) }
                 .sortedBy { it.firstname }
         }
