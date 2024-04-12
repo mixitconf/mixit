@@ -194,13 +194,13 @@ class TalkHandler(
 
     private suspend fun speakers(req: ServerRequest, year: Int): List<UserDto> =
         eventService.findByYear(year).let { event ->
-            val staffs = event.organizers.map { it.login }
+            val staffs = event.organizers
             service
                 .findByEvent(year.toString())
                 .asSequence()
                 .flatMap { it.speakers }
                 .toSet()
-                .filterNot { staffs.contains(it.login) }
+                .filterNot { user-> staffs.any { user.login == it.login || (user.firstname.lowercase() == it.firstname.lowercase() && user.lastname.lowercase() == it.lastname.lowercase()) } }
                 .map { it.toDto(req.language()) }
                 .sortedBy { it.firstname }
         }
