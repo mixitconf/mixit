@@ -646,7 +646,7 @@ $enable-cssgrid: true;
 
 .mxt-agenda--talk-container:hover {
   border: 1px solid $secondary-color;
-  background-color: $primary-color;
+  background-color: $third-color;
   overflow: visible;
   height: auto;
   max-height: 300%;
@@ -660,7 +660,7 @@ $enable-cssgrid: true;
   .mxt-agenda--talk, .mxt-agenda--talk-link, mxt-agenda--talk-link:hover, button, button:hover {
     height: 100%;
     z-index: 1000;
-    background-color: $primary-color;
+    background-color: $third-color;
   }
 }
 
@@ -672,7 +672,7 @@ $enable-cssgrid: true;
 }
 
 .mxt-agenda--talk-container {
-  background-color: #ddedf4;
+  background-color: #DAE9EF;
   border: 1px solid $secondary-color;
   border-radius: 4px;
   width: 95%;
