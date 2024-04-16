@@ -72,7 +72,7 @@ class MixetteHandler(
     }
 
     suspend fun mixetteRealTime(req: ServerRequest): ServerResponse {
-        val interval = Flux.interval(ofMillis(7000))
+        val interval = Flux.interval(ofMillis(10000))
         return ok()
             .contentType(MediaType.TEXT_EVENT_STREAM)
             .body(
