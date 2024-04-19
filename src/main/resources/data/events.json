@@ -80,7 +80,8 @@
         ],
         "videoUrl": null,
         "schedulingFileUrl": null,
-        "year": 2012
+        "year": 2012,
+        "streamingUrl": null
     },
     {
         "id": "mixit13",
@@ -173,7 +174,8 @@
         ],
         "videoUrl": null,
         "schedulingFileUrl": null,
-        "year": 2013
+        "year": 2013,
+        "streamingUrl": null
     },
     {
         "id": "mixit14",
@@ -302,7 +304,8 @@
             "url": "https://vimeo.com/214902172"
         },
         "schedulingFileUrl": null,
-        "year": 2014
+        "year": 2014,
+        "streamingUrl": null
     },
     {
         "id": "mixit15",
@@ -442,7 +445,8 @@
             "url": "https://vimeo.com/214908582"
         },
         "schedulingFileUrl": null,
-        "year": 2015
+        "year": 2015,
+        "streamingUrl": null
     },
     {
         "id": "mixit16",
@@ -595,7 +599,8 @@
         "photoUrls": [],
         "videoUrl": null,
         "schedulingFileUrl": null,
-        "year": 2016
+        "year": 2016,
+        "streamingUrl": null
     },
     {
         "id": "mixit17",
@@ -761,7 +766,8 @@
             "url": "https://vimeo.com/215910469"
         },
         "schedulingFileUrl": "/pdf/planning2017.pdf",
-        "year": 2017
+        "year": 2017,
+        "streamingUrl": null
     },
     {
         "id": "mixit18",
@@ -987,7 +993,8 @@
             "url": "https://vimeo.com/266571226"
         },
         "schedulingFileUrl": "/pdf/planning2018.pdf",
-        "year": 2018
+        "year": 2018,
+        "streamingUrl": null
     },
     {
         "id": "mixit19",
@@ -1241,7 +1248,8 @@
         ],
         "videoUrl": null,
         "schedulingFileUrl": "/pdf/planning2019v5.pdf",
-        "year": 2019
+        "year": 2019,
+        "streamingUrl": null
     },
     {
         "id": "mixit20",
@@ -1395,7 +1403,8 @@
         "photoUrls": [],
         "videoUrl": null,
         "schedulingFileUrl": null,
-        "year": 2020
+        "year": 2020,
+        "streamingUrl": null
     },
     {
         "id": "mixit21",
@@ -1521,7 +1530,8 @@
             "url": "https://vimeo.com/560334460"
         },
         "schedulingFileUrl": null,
-        "year": 2021
+        "year": 2021,
+        "streamingUrl": null
     },
     {
         "id": "mixit22",
@@ -1778,7 +1788,8 @@
             "url": "https://vimeo.com/780393437"
         },
         "schedulingFileUrl": "/pdf/planning2022_v2.pdf",
-        "year": 2022
+        "year": 2022,
+        "streamingUrl": null
     },
     {
         "id": "mixit23",
@@ -1988,7 +1999,8 @@
             "url": "https://vimeo.com/840545012"
         },
         "schedulingFileUrl": "/pdf/planning2023_v3.pdf",
-        "year": 2023
+        "year": 2023,
+        "streamingUrl": null
     },
     {
         "id": "mixit24",
@@ -2095,6 +2107,11 @@
                 "level": "GOLD",
                 "sponsorId": "sponsor-ovh",
                 "subscriptionDate": "2024-04-01"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "sponsor-groupama",
+                "subscriptionDate": "2024-04-17"
             }
         ],
         "organizations": [
@@ -2122,9 +2139,6 @@
                 "volunteerLogin": "cedric"
             },
             {
-                "volunteerLogin": "marion.charlotte"
-            },
-            {
                 "volunteerLogin": "sylvia.cohen"
             },
             {
@@ -2140,16 +2154,10 @@
                 "volunteerLogin": "chekina"
             },
             {
-                "volunteerLogin": "maud-hue"
-            },
-            {
                 "volunteerLogin": "zonca-cros"
             },
             {
                 "volunteerLogin": "amina-nekka"
-            },
-            {
-                "volunteerLogin": "hasna-kharbouche "
             },
             {
                 "volunteerLogin": "thomas.derville"
@@ -2199,6 +2207,7 @@
         "photoUrls": [],
         "videoUrl": null,
         "schedulingFileUrl": "https://drive.proton.me/urls/NTWTM08JA0#FHMiDpGs5RwI",
-        "year": 2024
+        "year": 2024,
+        "streamingUrl": null
     }
 ]
