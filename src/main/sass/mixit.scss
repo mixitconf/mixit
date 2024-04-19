@@ -790,10 +790,9 @@ $font-title: 'Changa One', 'Varela round', Arial, system-ui, -apple-system, "Seg
 .mxt-layout-footer {
   display: flex;
   align-items: center;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  position: relative;
-
+  margin: 0;
+  padding: 0.5em;
+  justify-content: center;
   .mxt-icon--logo {
     height: 1em;
     padding-left: 1em;
