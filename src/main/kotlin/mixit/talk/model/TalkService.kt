@@ -35,7 +35,8 @@ class TalkService(
 
     suspend fun findByEventAndSlug(eventId: String, slug: String) =
         findAll()
-            .firstOrNull { it.slug.endsWith(slug) && it.event == eventId }
+            .firstOrNull { it.slug == slug && it.event == eventId }
+            ?: findAll().firstOrNull { it.slug.endsWith(slug) && it.event == eventId }
             // If slug has changed during the past we try to find the talk with another method
             // We search a talk in an edition with a slug that contains all part of the new one
             ?: slug.split("-").let { slugDetail ->
