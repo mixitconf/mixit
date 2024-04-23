@@ -1,19 +1,10 @@
 package mixit.user.handler
 
+import java.util.stream.IntStream
 import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.MixitApplication.Companion.CURRENT_EVENT
 import mixit.MixitProperties
 import mixit.event.model.EventService
-import mixit.util.mustache.MustacheI18n.ERRORS
-import mixit.util.mustache.MustacheI18n.HAS_ERRORS
-import mixit.util.mustache.MustacheI18n.HAS_TALKS
-import mixit.util.mustache.MustacheI18n.TALKS
-import mixit.util.mustache.MustacheI18n.TITLE
-import mixit.util.mustache.MustacheI18n.USER
-import mixit.util.mustache.MustacheI18n.YEAR
-import mixit.util.mustache.MustacheTemplate
-import mixit.util.mustache.MustacheTemplate.Speaker
-import mixit.util.mustache.MustacheTemplate.UserEdit
 import mixit.security.model.Cryptographer
 import mixit.talk.model.Language
 import mixit.talk.model.TalkService
@@ -30,6 +21,16 @@ import mixit.util.decode
 import mixit.util.encodeToMd5
 import mixit.util.extractFormData
 import mixit.util.language
+import mixit.util.mustache.MustacheI18n.ERRORS
+import mixit.util.mustache.MustacheI18n.HAS_ERRORS
+import mixit.util.mustache.MustacheI18n.HAS_TALKS
+import mixit.util.mustache.MustacheI18n.TALKS
+import mixit.util.mustache.MustacheI18n.TITLE
+import mixit.util.mustache.MustacheI18n.USER
+import mixit.util.mustache.MustacheI18n.YEAR
+import mixit.util.mustache.MustacheTemplate
+import mixit.util.mustache.MustacheTemplate.Speaker
+import mixit.util.mustache.MustacheTemplate.UserEdit
 import mixit.util.seeOther
 import mixit.util.validator.EmailValidator
 import mixit.util.validator.MarkdownValidator
@@ -41,11 +42,6 @@ import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.renderAndAwait
-import java.util.stream.IntStream
-import mixit.util.YearSelector
-import mixit.util.mustache.MustacheI18n
-import mixit.util.mustache.MustacheI18n.SPEAKERS
-import mixit.util.mustache.MustacheTemplate.Speakers
 
 @Component
 class UserHandler(
@@ -66,7 +62,6 @@ class UserHandler(
 
     suspend fun speakerView(req: ServerRequest): ServerResponse =
         ok().renderAndAwait(Speaker.template, mapOf(Pair(TITLE, Speaker.title)))
-
 
 
     suspend fun findOneView(req: ServerRequest, viewMode: ViewMode = ViewMode.ViewUser): ServerResponse {
