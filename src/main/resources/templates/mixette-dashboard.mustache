@@ -63,8 +63,8 @@
             r.replaceChildren();
             data.ranking.forEach((elt, index) => {
                 r.append(addNode("col-1 pt-4 fs-3 text-center", index + 1));
-                r.append(addNode("col-4 pt-4 fw-normal", elt.firstname));
-                r.append(addNode("col-4 pt-4 fw-normal", elt.lastname));
+                r.append(addNode("col-4 pt-4 fs-2 fw-normal", elt.firstname));
+                r.append(addNode("col-4 pt-4 fs-2 fw-normal", elt.lastname));
                 r.append(addNode("col-2 pt-4 fs-3 text-center", elt.quantity));
                 r.append(addNode("col-1 pt-3 fw-normal text-center", '', addImage(index)));
             });
@@ -170,7 +170,7 @@
     <div class="row">
         <div class="col-2"></div>
         <div class="col-8">
-            <div class="row pt-3 fs-5 fw-bold" style="margin-right: 1em;margin-left: 1em">
+            <div class="row pt-3 fs-5 fw-bold" style="margin-right: 1em;margin-left: 1em;color: white">
                 <div class="col-1 text-center">#</div>
                 <div class="col-4">Prénom</div>
                 <div class="col-4">Nom</div>
@@ -213,7 +213,7 @@
     <div class="row">
         <div class="col-2"></div>
         <div class="col-8">
-            <div class="row pt-3 fs-5 fw-bold" style="margin-right: 1em;margin-left: 1em">
+            <div class="row pt-3 fs-5 fw-bold" style="margin-right: 1em;margin-left: 1em;color: white">
                 <div class="col-1 text-center">#</div>
                 <div class="col-4">Prénom</div>
                 <div class="col-4">Nom</div>
