@@ -36,5 +36,8 @@ enum class TicketType {
     CLEVER_CLOUD,
     ENERGY_POOL,
     ESKER,
-    ZENIKA
+    ZENIKA,
+    ANCIELA,
+    LE_REFUGE,
+    SOUTIEN_MIGRANTS,
 }
