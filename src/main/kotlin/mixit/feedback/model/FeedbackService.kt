@@ -65,10 +65,11 @@ class FeedbackService(
 
     suspend fun computeFeedbackForTalk(
         talk: CachedTalk,
-        nonEncryptedUserEmail: String?
+        nonEncryptedUserEmail: String?,
+        admin:Boolean =false
     ): List<Pair<Feedback, FeedbackCount>> {
         val user = nonEncryptedUserEmail?.let { userService.findOneByNonEncryptedEmailOrNull(it) }
-        if (user == null || talk.speakers.none { it.login == user.login }) {
+        if (!admin && (user == null || talk.speakers.none { it.login == user?.login })) {
             return emptyList()
         }
         val feedbacks = userFeedbackService.findByTalk(talk.id)
@@ -125,10 +126,11 @@ class FeedbackService(
 
     suspend fun computeCommentsForTalk(
         talk: CachedTalk,
-        nonEncryptedUserEmail: String?
+        nonEncryptedUserEmail: String?,
+        admin:Boolean =false
     ): UserFeedbackComment? {
         val user = nonEncryptedUserEmail?.let { userService.findOneByNonEncryptedEmailOrNull(it) }
-        if (user == null || talk.speakers.none { it.login == user.login }) {
+        if (!admin && user == null || talk.speakers.none { it.login == user?.login }) {
             return null
         }
         val feedbacks = userFeedbackService

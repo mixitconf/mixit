@@ -149,7 +149,7 @@ class WebsiteRoutes(
             GET("/admin/talks") { adminTalkHandler.adminTalks(it, CURRENT_EVENT) }
             GET("/admin/talks/create/{year}", adminTalkHandler::createTalk)
             GET("/admin/talks/edit/{id}", adminTalkHandler::editTalk)
-            GET("/admin/talk/feedback/{talkId}") { feedbackHandler.findMyFeedbacks(it) }
+            GET("/admin/talk/feedback/{talkId}") { feedbackHandler.findMyFeedbacks(it, admin = true) }
             GET("/admin/talks/{year}") { adminTalkHandler.adminTalks(it, it.pathVariable("year")) }
             GET("/admin/ticket", adminTicketHandler::ticketing)
             GET("/admin/ticket/create", adminTicketHandler::createTicket)

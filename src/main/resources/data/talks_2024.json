@@ -8,7 +8,7 @@
             "mixit"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.896",
+        "addedAt": "2024-04-24T16:23:55.377",
         "description": "",
         "topic": "other",
         "video": null,
@@ -30,7 +30,7 @@
             "c173e77b-9020-4a0b-a9b4-6550da2710d5"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.896",
+        "addedAt": "2024-04-24T16:23:55.377",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -52,7 +52,7 @@
             "c173e77b-9020-4a0b-a9b4-6550da2710d5"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.897",
+        "addedAt": "2024-04-24T16:23:55.378",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -76,7 +76,7 @@
             "neveu.audrey"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.897",
+        "addedAt": "2024-04-24T16:23:55.378",
         "description": "",
         "topic": "other",
         "video": null,
@@ -99,7 +99,7 @@
             "yostane"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.897",
+        "addedAt": "2024-04-24T16:23:55.379",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -121,7 +121,7 @@
             "ant.arhipov"
         ],
         "language": "ENGLISH",
-        "addedAt": "2024-04-19T07:25:46.897",
+        "addedAt": "2024-04-24T16:23:55.378",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -144,7 +144,7 @@
             "vtt2vtt2"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.897",
+        "addedAt": "2024-04-24T16:23:55.378",
         "description": "",
         "topic": "team",
         "video": null,
@@ -167,7 +167,7 @@
             "maria-eliza.paez"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.897",
+        "addedAt": "2024-04-24T16:23:55.379",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -189,7 +189,7 @@
             "bertrand.keller"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.897",
+        "addedAt": "2024-04-24T16:23:55.378",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -211,7 +211,7 @@
             "sonia.seddiki"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.897",
+        "addedAt": "2024-04-24T16:23:55.379",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -234,7 +234,7 @@
             "emmanuelle-aboaf"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.897",
+        "addedAt": "2024-04-24T16:23:55.378",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -259,7 +259,7 @@
             "xstefank122"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.898",
+        "addedAt": "2024-04-24T16:23:55.379",
         "description": "",
         "topic": "other",
         "video": null,
@@ -280,12 +280,12 @@
         "speakerIds": [
             "64759160",
             "Kehrlann",
-            "clement+sessionize",
+            "clement.delafargue",
             "guillaumeehret",
             "neveu.audrey"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.898",
+        "addedAt": "2024-04-24T16:23:55.379",
         "description": "",
         "topic": "other",
         "video": null,
@@ -307,7 +307,7 @@
             "llenet"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.898",
+        "addedAt": "2024-04-24T16:23:55.38",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -329,7 +329,7 @@
             "herve"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.898",
+        "addedAt": "2024-04-24T16:23:55.379",
         "description": "",
         "topic": "team",
         "video": null,
@@ -351,7 +351,7 @@
             "lise.quesnel"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.898",
+        "addedAt": "2024-04-24T16:23:55.379",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -373,7 +373,7 @@
             "pyg"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.898",
+        "addedAt": "2024-04-24T16:23:55.38",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -395,7 +395,7 @@
             "xstefank122"
         ],
         "language": "ENGLISH",
-        "addedAt": "2024-04-19T07:25:46.898",
+        "addedAt": "2024-04-24T16:23:55.379",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -411,8 +411,8 @@
     {
         "format": "ON_AIR",
         "event": "2024",
-        "title": "Vers une inclusion transformative : non-mixit\u00e9 et \u00e9criture inclusive",
-        "summary": "Explorez les dynamiques de la non-mixit\u00e9 et de l&#39;\u00e9criture inclusive comme leviers pour un espace de travail et des interactions sociales plus \u00e9quitables et inclusifs. Florence nous expliquera comment le th\u00e9\u00e2tre forum offre un terrain d&#39;expression s\u00e9curis\u00e9 pour rejouer et transformer des situations de micro-agressions v\u00e9cues par des femmes et des personnes non binaires, et Laury nous expliquera le r\u00f4le de la non-mixit\u00e9 choisie dans la f\u00e9minisation des entreprises. Ce dialogue engag\u00e9 pr\u00e9sentera des t\u00e9moignages et des \u00e9tudes de cas sur l&#39;impact concret de ces pratiques sur l&#39;\u00e9galit\u00e9 des genres et la lutte contre les discriminations. Rejoignez-nous pour une session inspirante qui promet d&#39;ouvrir des voies vers une soci\u00e9t\u00e9 plus juste et inclusive.",
+        "title": "Vers une inclusion transformative avec la non-mixit\u00e9",
+        "summary": "Explorez les dynamiques de la non-mixit\u00e9 comme leviers d\u2019inclusion pour un espace de travail et des interactions sociales plus \u00e9quitables. Florence nous expliquera comment le th\u00e9\u00e2tre forum offre un terrain d&#39;expression s\u00e9curis\u00e9 pour rejouer et transformer des situations de micro-agressions v\u00e9cues par des femmes et des personnes non binaires, et Laury nous expliquera le r\u00f4le de la non-mixit\u00e9 choisie dans la f\u00e9minisation des entreprises. Ce dialogue engag\u00e9 pr\u00e9sentera des t\u00e9moignages et des \u00e9tudes de cas sur l&#39;impact concret de ces pratiques sur l&#39;\u00e9galit\u00e9 des genres et la lutte contre les discriminations. Rejoignez-nous pour une session inspirante qui promet d&#39;ouvrir des voies vers une soci\u00e9t\u00e9 plus juste et inclusive.",
         "speakerIds": [
             "106329914971209052078",
             "fchabanois",
@@ -420,7 +420,7 @@
             "shodo"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.898",
+        "addedAt": "2024-04-24T16:23:55.38",
         "description": "",
         "topic": "other",
         "video": null,
@@ -429,7 +429,7 @@
         "start": "2024-04-25T11:55:00",
         "end": "2024-04-25T12:20:00",
         "photoUrls": [],
-        "slug": "vers-une-inclusion-transformative-non-mixite-et-ecriture-inclusive",
+        "slug": "vers-une-inclusion-transformative-avec-la-non-mixite",
         "level": null,
         "id": "664608"
     },
@@ -443,7 +443,7 @@
             "romain"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.898",
+        "addedAt": "2024-04-24T16:23:55.38",
         "description": "",
         "topic": "other",
         "video": null,
@@ -468,7 +468,7 @@
             "neveu.audrey"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.898",
+        "addedAt": "2024-04-24T16:23:55.38",
         "description": "",
         "topic": "other",
         "video": null,
@@ -492,7 +492,7 @@
             "feaccb95-22ec-41c3-8371-f2685569ceb7"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.898",
+        "addedAt": "2024-04-24T16:23:55.38",
         "description": "",
         "topic": "other",
         "video": null,
@@ -514,7 +514,7 @@
             "mixit"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.898",
+        "addedAt": "2024-04-24T16:23:55.381",
         "description": "",
         "topic": "other",
         "video": null,
@@ -536,7 +536,7 @@
             "5025955e-d202-462e-8a01-5a10ee9a054e"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.899",
+        "addedAt": "2024-04-24T16:23:55.381",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -558,7 +558,7 @@
             "5025955e-d202-462e-8a01-5a10ee9a054e"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.899",
+        "addedAt": "2024-04-24T16:23:55.381",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -580,7 +580,7 @@
             "glaforge"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.899",
+        "addedAt": "2024-04-24T16:23:55.381",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -603,7 +603,7 @@
             "celine"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.899",
+        "addedAt": "2024-04-24T16:23:55.381",
         "description": "",
         "topic": "team",
         "video": null,
@@ -625,7 +625,7 @@
             "katia"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.899",
+        "addedAt": "2024-04-24T16:23:55.381",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -642,12 +642,12 @@
         "format": "WORKSHOP",
         "event": "2024",
         "title": "Une histoire sans fin, avec le th\u00e9\u00e2tre forum - ou une fin acceptable pour les femmes* ?",
-        "summary": "Mixit 2024\r\n\r\nUne histoire sans fin, avec le th\u00e9\u00e2tre forum - ou une fin acceptable pour les femmes* ?\r\n\r\n\r\nIl vous arrive de vivre des situations d\u00e9rangeantes, pour lesquelles vous avez d\u00e9velopp\u00e9 des strat\u00e9gies de survie : rire \u00e0 une blague sexiste, faire diversion, d\u00e9tourner le regard, faire semblant de ne pas entendre ni voir. \r\nEn rentrant chez vous, vous ruminez. Quand tout \u00e0 coup, la voil\u00e0 la r\u00e9plique parfaite : c\u2019est celle-ci que vous auriez d\u00fb dire ! \r\nPeut-\u00eatre qu\u2019au contraire, ces situations sont tellement fr\u00e9quentes que vous les avez int\u00e9gr\u00e9es et glissez dessus quotidiennement. \r\nParadoxalement, quand une autre que vous les vit, l\u2019indignation est imm\u00e9diate et vous vous trouvez plus inspir\u00e9e en contre attaque. \r\n\r\nLe cadre du th\u00e9\u00e2tre forum permet de tenter des choses auxquelles vous n&#39;auriez pas pens\u00e9, que vous n&#39;auriez pas os\u00e9, dans un espace de jeu s\u00fbr et bienveillant. Il donne aussi un regard ext\u00e9rieur \u00e0 ces situations oppressantes non vocalis\u00e9es. \r\n\r\n(Re)jouer ces sc\u00e8nes dans un contexte s\u00fbr, y r\u00e9fl\u00e9chir ensemble vous aidera \u00e0 changer le d\u00e9nouement de ces micro-agressions. \r\n\r\nCet atelier, destin\u00e9 \u00e0 adresser des oppressions v\u00e9cues par des femmes et personnes non binaires, leur est r\u00e9serv\u00e9 en priorit\u00e9. Les hommes peuvent \u00eatre pr\u00e9sents sous r\u00e9serve de places disponibles (25% max), sur des r\u00f4les sp\u00e9cifiques. \r\n\r\n* femmes et personnes non binaires\r\n\r\n",
+        "summary": "Il vous arrive de vivre des situations d\u00e9rangeantes, pour lesquelles vous avez d\u00e9velopp\u00e9 des strat\u00e9gies de survie : rire \u00e0 une blague sexiste, faire diversion, d\u00e9tourner le regard, faire semblant de ne pas entendre ni voir. \r\nEn rentrant chez vous, vous ruminez. Quand tout \u00e0 coup, la voil\u00e0 la r\u00e9plique parfaite : c\u2019est celle-ci que vous auriez d\u00fb dire ! \r\nPeut-\u00eatre qu\u2019au contraire, ces situations sont tellement fr\u00e9quentes que vous les avez int\u00e9gr\u00e9es et glissez dessus quotidiennement. \r\nParadoxalement, quand une autre que vous les vit, l\u2019indignation est imm\u00e9diate. Vous vous trouvez plus inspir\u00e9e en contre attaque. \r\n\r\nLe cadre du th\u00e9\u00e2tre forum permet de tenter des choses auxquelles vous n&#39;auriez pas pens\u00e9, que vous n&#39;auriez pas os\u00e9. Vous pourrez vocaliser ces situations oppressantes et y porter un regard plus ext\u00e9rieur.\r\n\r\n(Re)jouer et observer ces sc\u00e8nes dans un contexte s\u00fbr et bienveillant vous aidera \u00e0 changer le d\u00e9nouement de ces micro-agressions. \r\n\r\nCet atelier, destin\u00e9 \u00e0 adresser des oppressions v\u00e9cues par des femmes et personnes non binaires, leur est r\u00e9serv\u00e9 en priorit\u00e9. Les hommes peuvent \u00eatre pr\u00e9sents sous r\u00e9serve de places disponibles (25% max), sur des r\u00f4les sp\u00e9cifiques. \r\n\r\n* femmes et personnes non binaires\r\n\r\n",
         "speakerIds": [
             "fchabanois"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.899",
+        "addedAt": "2024-04-24T16:23:55.381",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -661,28 +661,6 @@
         "id": "600027"
     },
     {
-        "format": "TALK",
-        "event": "2024",
-        "title": "Will they care? On finding a job that loves me back.",
-        "summary": "I am a techie. I am a crafter and care about quality in Software. I love communities &amp; inclusion, and believe in bringing value to my clients and pride to my field. Sadly, I am convinced there\u2019s something wrong with hiring. \r\nFor hiring managers, processes are expensive, time-consuming and fruitless. \r\nFor candidates interviewing is hell, painful and fuzzy. No one is winning in this equation.\r\n\r\nFirst I chose jobs based on the \u201ccompany\u201d: its name, and its stability.\r\nThen I chose based on the \u201cTechStack\u201d: the more modern &amp; shiny, the better.\r\nLater I chose based on the people I wanted to be surrounded with: more skillful people than me.\r\n\r\nNone of these worked for me.\r\n\r\nThree different periods, three different failures, and three different pains, which made me feel what was offered back to me compared with my efforts was not enough, and sometimes even harmful.\r\n\r\nHow can I make sure this works out better next time? How to make a better choice? But better based on what?\r\n\r\nIn this talk I want to share my hypothesis with you: The only way to find fulfilment in a job is to find one in which a team can care for each other without over-adapting to each other. I need to be myself. \r\nJoin and help me define and enrich the \u201cJob Caring Framework\u201d so we can share it with everyone in our field and heal it a bit and help me find a job that accepts me as I am. ",
-        "speakerIds": [
-            "tennamiqui"
-        ],
-        "language": "ENGLISH",
-        "addedAt": "2024-04-19T07:25:46.899",
-        "description": "",
-        "topic": "team",
-        "video": null,
-        "video2": null,
-        "room": "ROOM1",
-        "start": "2024-04-25T14:40:00",
-        "end": "2024-04-25T15:25:00",
-        "photoUrls": [],
-        "slug": "will-they-care-on-finding-a-job-that-loves-me-back-",
-        "level": "Beginner",
-        "id": "611557"
-    },
-    {
         "format": "WORKSHOP",
         "event": "2024",
         "title": "Pas d&#39;innovation sans s\u00e9curit\u00e9 psychologique !",
@@ -692,7 +670,7 @@
             "mailis-cohen"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.899",
+        "addedAt": "2024-04-24T16:23:55.381",
         "description": "",
         "topic": "team",
         "video": null,
@@ -715,12 +693,12 @@
             "bd3298b6-2b7f-49b3-836e-7176ac9b4c0a"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.899",
+        "addedAt": "2024-04-24T16:23:55.381",
         "description": "",
         "topic": "aliens",
         "video": null,
         "video2": null,
-        "room": "ROOM2",
+        "room": "ROOM1",
         "start": "2024-04-25T14:40:00",
         "end": "2024-04-25T15:25:00",
         "photoUrls": [],
@@ -739,7 +717,7 @@
             "neveu.audrey"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.899",
+        "addedAt": "2024-04-24T16:23:55.382",
         "description": "",
         "topic": "other",
         "video": null,
@@ -765,7 +743,7 @@
             "pyg"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.899",
+        "addedAt": "2024-04-24T16:23:55.382",
         "description": "",
         "topic": "other",
         "video": null,
@@ -787,7 +765,7 @@
             "matthieu-faure"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.9",
+        "addedAt": "2024-04-24T16:23:55.382",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -809,7 +787,7 @@
             "vdumas"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.899",
+        "addedAt": "2024-04-24T16:23:55.382",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -831,7 +809,7 @@
             "snicoll"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.899",
+        "addedAt": "2024-04-24T16:23:55.382",
         "description": "",
         "topic": "team",
         "video": null,
@@ -853,7 +831,7 @@
             "chris.depaola.toru"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.9",
+        "addedAt": "2024-04-24T16:23:55.382",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -875,7 +853,7 @@
             "490b9dd2-06b4-4fab-a521-4a2ad2e8cc63"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.9",
+        "addedAt": "2024-04-24T16:23:55.382",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -902,14 +880,14 @@
             "vtt2vtt2"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.9",
+        "addedAt": "2024-04-24T16:23:55.383",
         "description": "",
         "topic": "other",
         "video": null,
         "video2": null,
         "room": "TWITCH",
         "start": "2024-04-25T15:50:00",
-        "end": "2024-04-25T16:10:00",
+        "end": "2024-04-25T16:15:00",
         "photoUrls": [],
         "slug": "redefinir-le-leadership-et-renforcer-les-scrum-masters-dans-les-environnements-agiles",
         "level": null,
@@ -928,7 +906,7 @@
             "tugdual"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.9",
+        "addedAt": "2024-04-24T16:23:55.383",
         "description": "",
         "topic": "other",
         "video": null,
@@ -950,7 +928,7 @@
             "elodie-oudot"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.9",
+        "addedAt": "2024-04-24T16:23:55.383",
         "description": "",
         "topic": "design",
         "video": null,
@@ -972,7 +950,7 @@
             "thomas.parisot"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.9",
+        "addedAt": "2024-04-24T16:23:55.383",
         "description": "",
         "topic": "team",
         "video": null,
@@ -994,7 +972,7 @@
             "shodo"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.9",
+        "addedAt": "2024-04-24T16:23:55.383",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -1016,7 +994,7 @@
             "thibaut-cantet"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.9",
+        "addedAt": "2024-04-24T16:23:55.383",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -1038,7 +1016,7 @@
             "039f7151-c8b7-49e9-af49-35a93f8bdcd8"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.9",
+        "addedAt": "2024-04-24T16:23:55.383",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -1060,7 +1038,7 @@
             "5d7f531b-9dc9-4306-b742-cb54a80d8208"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.9",
+        "addedAt": "2024-04-24T16:23:55.383",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -1082,7 +1060,7 @@
             "5d7f531b-9dc9-4306-b742-cb54a80d8208"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.9",
+        "addedAt": "2024-04-24T16:23:55.383",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -1096,28 +1074,6 @@
         "id": "663659"
     },
     {
-        "format": "KEYNOTE",
-        "event": "2024",
-        "title": "Mot de la fin",
-        "summary": "",
-        "speakerIds": [
-            "mixit"
-        ],
-        "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.9",
-        "description": "",
-        "topic": "other",
-        "video": null,
-        "video2": null,
-        "room": "AMPHI1",
-        "start": "2024-04-25T17:30:00",
-        "end": "2024-04-25T17:35:00",
-        "photoUrls": [],
-        "slug": "mot-de-la-fin",
-        "level": null,
-        "id": "663704"
-    },
-    {
         "format": "ON_AIR",
         "event": "2024",
         "title": "Interview Comment Bitcoin et les cryptos ont envo\u00fbt\u00e9 la plan\u00e8te ?",
@@ -1128,7 +1084,7 @@
             "neveu.audrey"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.9",
+        "addedAt": "2024-04-24T16:23:55.383",
         "description": "",
         "topic": "other",
         "video": null,
@@ -1150,7 +1106,7 @@
             "mixit"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.901",
+        "addedAt": "2024-04-24T16:23:55.383",
         "description": "",
         "topic": "other",
         "video": null,
@@ -1172,7 +1128,7 @@
             "307a046c-9f3b-49fb-9634-188a6cdc9c4b"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.901",
+        "addedAt": "2024-04-24T16:23:55.383",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -1194,7 +1150,7 @@
             "307a046c-9f3b-49fb-9634-188a6cdc9c4b"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.901",
+        "addedAt": "2024-04-24T16:23:55.383",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -1219,7 +1175,7 @@
             "thomas.parisot"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.901",
+        "addedAt": "2024-04-24T16:23:55.384",
         "description": "",
         "topic": "other",
         "video": null,
@@ -1241,7 +1197,7 @@
             "eric"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.901",
+        "addedAt": "2024-04-24T16:23:55.384",
         "description": "",
         "topic": "team",
         "video": null,
@@ -1264,7 +1220,7 @@
             "seguin.caroline"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.901",
+        "addedAt": "2024-04-24T16:23:55.384",
         "description": "",
         "topic": "team",
         "video": null,
@@ -1286,7 +1242,7 @@
             "nathan.castelein"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.901",
+        "addedAt": "2024-04-24T16:23:55.384",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -1308,7 +1264,7 @@
             "pcreux"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.901",
+        "addedAt": "2024-04-24T16:23:55.384",
         "description": "",
         "topic": "team",
         "video": null,
@@ -1330,7 +1286,7 @@
             "Kehrlann"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.901",
+        "addedAt": "2024-04-24T16:23:55.384",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -1352,7 +1308,7 @@
             "luz.delgado.bautista"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.901",
+        "addedAt": "2024-04-24T16:23:55.384",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -1374,7 +1330,7 @@
             "tugdual"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.901",
+        "addedAt": "2024-04-24T16:23:55.384",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -1390,16 +1346,15 @@
     {
         "format": "ON_AIR",
         "event": "2024",
-        "title": "Cybers\u00e9curit\u00e9, hacking Ikea et robot masseur, mais c&#39;est quoi le lien ?",
-        "summary": "Sonia et M\u00e9lanie partagent une passion commune : la cybers\u00e9curit\u00e9. Dans cette interview, nous verrons comment des attaques peuvent \u00eatre orchestr\u00e9es en d\u00e9tournant des m\u00e9canismes techniquement valides, ainsi que les dangers tr\u00e8s r\u00e9els que les cyberattaques posent \u00e0 nos vies et \u00e0 notre s\u00e9curit\u00e9. Pr\u00e9parez-vous \u00e0 une discussion passionnante qui r\u00e9v\u00e8le les enjeux cruciaux de la cybers\u00e9curit\u00e9 dans notre monde connect\u00e9.",
+        "title": "Cybers\u00e9curit\u00e9 et hacking Ikea, mais c&#39;est quoi le lien ?",
+        "summary": "Dans cette interview, nous verrons comment des attaques peuvent \u00eatre orchestr\u00e9es en d\u00e9tournant des m\u00e9canismes techniquement valides, ainsi que les dangers tr\u00e8s r\u00e9els que les cyberattaques posent \u00e0 nos vies et \u00e0 notre s\u00e9curit\u00e9. Pr\u00e9parez-vous \u00e0 une discussion passionnante qui r\u00e9v\u00e8le les enjeux cruciaux de la cybers\u00e9curit\u00e9 dans notre monde connect\u00e9.",
         "speakerIds": [
-            "m.jarrar",
             "neveu.audrey",
             "romain",
             "sonia.seddiki"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.901",
+        "addedAt": "2024-04-24T16:23:55.384",
         "description": "",
         "topic": "other",
         "video": null,
@@ -1408,7 +1363,7 @@
         "start": "2024-04-26T10:45:00",
         "end": "2024-04-26T11:10:00",
         "photoUrls": [],
-        "slug": "cybersecurite-hacking-ikea-et-robot-masseur-mais-c-39-est-quoi-le-lien-",
+        "slug": "cybersecurite-et-hacking-ikea-mais-c-39-est-quoi-le-lien-",
         "level": null,
         "id": "666011"
     },
@@ -1426,7 +1381,7 @@
             "neveu.audrey"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.901",
+        "addedAt": "2024-04-24T16:23:55.384",
         "description": "",
         "topic": "other",
         "video": null,
@@ -1449,7 +1404,7 @@
             "palis.beatrice"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.901",
+        "addedAt": "2024-04-24T16:23:55.385",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -1471,7 +1426,7 @@
             "anais.huet"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.902",
+        "addedAt": "2024-04-24T16:23:55.385",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -1493,7 +1448,7 @@
             "1338530083"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.901",
+        "addedAt": "2024-04-24T16:23:55.385",
         "description": "",
         "topic": "team",
         "video": null,
@@ -1515,7 +1470,7 @@
             "jose.paumard"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.901",
+        "addedAt": "2024-04-24T16:23:55.384",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -1537,7 +1492,7 @@
             "nicolas.frizzarin54"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.902",
+        "addedAt": "2024-04-24T16:23:55.385",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -1561,7 +1516,7 @@
             "romain"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.902",
+        "addedAt": "2024-04-24T16:23:55.385",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -1584,7 +1539,7 @@
             "d80868bb-7243-4c19-9ef9-87d30ac89f81"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.902",
+        "addedAt": "2024-04-24T16:23:55.385",
         "description": "",
         "topic": "other",
         "video": null,
@@ -1603,14 +1558,13 @@
         "title": "Horizon Front-End : Les enjeux \u00e0 venir des frameworks",
         "summary": "Alors que React et Vue ont maintenant dix ans contre 8 bougies seulement pour Angular, chaque framework continue d&#39;innover avec des innovations majeures pour chacun. Dans cette session, nous reviendrons sur ces nouveaut\u00e9s et explorerons le futur de ces trois acteurs majeurs ainsi que celui du d\u00e9veloppement front-end dans son ensemble.",
         "speakerIds": [
-            "272184ad-4c25-4781-b35c-1444ba878f77",
             "cedric",
             "guillaumeehret",
             "neveu.audrey",
             "nicolas.frizzarin54"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.902",
+        "addedAt": "2024-04-24T16:23:55.385",
         "description": "",
         "topic": "other",
         "video": null,
@@ -1632,7 +1586,7 @@
             "9340cb4b-50ea-4f7a-bed3-3aadb63c42bb"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.902",
+        "addedAt": "2024-04-24T16:23:55.385",
         "description": "",
         "topic": "other",
         "video": null,
@@ -1654,7 +1608,7 @@
             "evathiebaud"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.902",
+        "addedAt": "2024-04-24T16:23:55.385",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -1676,7 +1630,7 @@
             "evathiebaud"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.902",
+        "addedAt": "2024-04-24T16:23:55.385",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -1690,28 +1644,6 @@
         "id": "663709"
     },
     {
-        "format": "TALK",
-        "event": "2024",
-        "title": "[Cybers\u00e9curit\u00e9] Intelligence Artificielle appliqu\u00e9e \u00e0 la sant\u00e9 : quels sont les risques ?",
-        "summary": "Avez-vous vu iYU le robot-masseur pr\u00e9sent\u00e9 au CES 2024 ? Votre kin\u00e9sith\u00e9rapeute va-t-il \u00eatre remplac\u00e9 par un robot ? Votre m\u00e9decin traitant va-t-il \u00eatre remplac\u00e9 par une IA ? \r\nQuand vous lisez cela, vous vous dites peut-\u00eatre qu\u2019on marche un peu sur la t\u00eate n\u2019est-ce pas ? Cette conf\u00e9rence explore les d\u00e9fis et les opportunit\u00e9s r\u00e9sultant de l&#39;int\u00e9gration croissante de l&#39;intelligence artificielle dans le secteur de la sant\u00e9. Alors que l&#39;IA offre des avantages consid\u00e9rables tels que des diagnostics plus pr\u00e9cis et une personnalisation accrue des soins, elle expose \u00e9galement le domaine de la sant\u00e9 \u00e0 des risques significatifs en mati\u00e8re de cybers\u00e9curit\u00e9. Nous examinerons les risques potentiels associ\u00e9s \u00e0 ces dispositifs m\u00e9dicaux connect\u00e9s, en mettant en \u00e9vidence les cons\u00e9quences sur la sant\u00e9 d\u00e9coulant de ces risques.\r\n",
-        "speakerIds": [
-            "m.jarrar"
-        ],
-        "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.902",
-        "description": "",
-        "topic": "tech",
-        "video": null,
-        "video2": null,
-        "room": "AMPHI2",
-        "start": "2024-04-26T14:40:00",
-        "end": "2024-04-26T15:25:00",
-        "photoUrls": [],
-        "slug": "-cybersecurite-intelligence-artificielle-appliquee-a-la-sante-quels-sont-les-risques-",
-        "level": "Beginner",
-        "id": "606840"
-    },
-    {
         "format": "WORKSHOP",
         "event": "2024",
         "title": "Atelier - D\u00e9couvrir l\u2019\u00e9criture inclusive",
@@ -1720,7 +1652,7 @@
             "revolutioninclusive"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.902",
+        "addedAt": "2024-04-24T16:23:55.386",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -1742,7 +1674,7 @@
             "morgane.hauguel"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.902",
+        "addedAt": "2024-04-24T16:23:55.385",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -1764,7 +1696,7 @@
             "aurelie"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.902",
+        "addedAt": "2024-04-24T16:23:55.385",
         "description": "",
         "topic": "team",
         "video": null,
@@ -1787,7 +1719,7 @@
             "simon-mercier59"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.903",
+        "addedAt": "2024-04-24T16:23:55.386",
         "description": "",
         "topic": "design",
         "video": null,
@@ -1810,7 +1742,7 @@
             "snicoll"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.902",
+        "addedAt": "2024-04-24T16:23:55.385",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -1830,10 +1762,10 @@
         "summary": "Depuis l&#39;essor des architectures microservices, l&#39;auth a bien \u00e9volu\u00e9. Les solutions bas\u00e9es sur un serveur d&#39;authorisation central sont certes simples \u00e0 mettre en place, mais rendent les syst\u00e8mes moins r\u00e9silients. Si le serveur d&#39;auth tombe, l&#39;ensemble de la plateforme tombe. De l&#39;autre c\u00f4t\u00e9 du spectre, des syst\u00e8mes \u00e0 base de jetons au porteur (comme JWT) permettent de s&#39;affranchir des contraintes d&#39;un syst\u00e8me centralis\u00e9. En revanche, de tels syst\u00e8mes sont notoirement complexes \u00e0 mettre en place et n\u00e9cessitent une bonne dose d&#39;exp\u00e9rience pour \u00e9viter les erreurs.\r\n\r\nDans cette conf\u00e9rence je vous pr\u00e9senterai\u00a0:\r\n\r\n- comment choisir entre un syst\u00e8me d&#39;auth centralis\u00e9 et un syst\u00e8me distribu\u00e9\r\n- un tour d&#39;horizon des solutions possibles pour les jetons au porteur;\r\n- les diff\u00e9rentes architectures d&#39;auth possibles (passerelle d&#39;auth, int\u00e9gration directe, \u2026);\r\n- les \u00e9l\u00e9ments indispensables \u00e0 mettre en place dans un tel syst\u00e8me (rafra\u00eechissement des tokens, r\u00e9vocation, rotation des cl\u00e9s, \u2026);\r\n- la plateforme biscuit, construite autours de ces use cases.\r\n\r\nEt si vous \u00eates sages on pourra prendre le temps d&#39;\u00e9crire des r\u00e8gles d&#39;acc\u00e8s avec datalog, un langage logique inspir\u00e9 de prolog.",
         "speakerIds": [
             "64759160",
-            "clement+sessionize"
+            "clement.delafargue"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.902",
+        "addedAt": "2024-04-24T16:23:55.385",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -1857,7 +1789,7 @@
             "guillaumeehret"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.903",
+        "addedAt": "2024-04-24T16:23:55.386",
         "description": "",
         "topic": "other",
         "video": null,
@@ -1871,6 +1803,28 @@
         "id": "666016"
     },
     {
+        "format": "TALK",
+        "event": "2024",
+        "title": "Qu&#39;est ce que les champignons nous apprennent sur l&#39;intelligence artificielle ?",
+        "summary": "Les champignons sont capables de r\u00e9soudre des probl\u00e8mes algorithmiques complexes comme trouver le plus cours chemin ou le voyageur de commerce.  Plus int\u00e9ressant encore, la propagation des champignons suit un m\u00e9canisme similaire au fonctionnement des r\u00e9seaux de neurones utilis\u00e9s en intelligence artificielle. A premi\u00e8re vue, l\u2019analogie entre les deux peut surprendre, mais c\u2019est en fait une excellente porte d\u2019entr\u00e9e pour revoir ensemble les bases de l\u2019IA et r\u00e9fl\u00e9chir \u00e0 ses implications concr\u00e8tes et philosophiques.",
+        "speakerIds": [
+            "5629542f-10c1-4e94-be75-2039c99162dd"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2024-04-24T16:23:55.385",
+        "description": "",
+        "topic": "tech",
+        "video": null,
+        "video2": null,
+        "room": "AMPHI2",
+        "start": "2024-04-26T14:40:00",
+        "end": "2024-04-26T15:25:00",
+        "photoUrls": [],
+        "slug": "qu-39-est-ce-que-les-champignons-nous-apprennent-sur-l-39-intelligence-artificielle-",
+        "level": "Beginner",
+        "id": "674303"
+    },
+    {
         "format": "ON_AIR",
         "event": "2024",
         "title": "Interview keynote - Les innovations ont-elles un genre ?",
@@ -1881,7 +1835,7 @@
             "neveu.audrey"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.903",
+        "addedAt": "2024-04-24T16:23:55.386",
         "description": "",
         "topic": "other",
         "video": null,
@@ -1904,7 +1858,7 @@
             "hsablonniere"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.903",
+        "addedAt": "2024-04-24T16:23:55.386",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -1927,7 +1881,7 @@
             "romain.berthon"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.903",
+        "addedAt": "2024-04-24T16:23:55.386",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -1949,7 +1903,7 @@
             "christophe.breheret.girardin"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.903",
+        "addedAt": "2024-04-24T16:23:55.386",
         "description": "",
         "topic": "design",
         "video": null,
@@ -1971,7 +1925,7 @@
             "jbriault"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.903",
+        "addedAt": "2024-04-24T16:23:55.386",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -1994,7 +1948,7 @@
             "julien.topcu"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.903",
+        "addedAt": "2024-04-24T16:23:55.386",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -2017,7 +1971,7 @@
             "romain"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.903",
+        "addedAt": "2024-04-24T16:23:55.386",
         "description": "",
         "topic": "other",
         "video": null,
@@ -2041,7 +1995,7 @@
             "romain"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.903",
+        "addedAt": "2024-04-24T16:23:55.386",
         "description": "",
         "topic": "other",
         "video": null,
@@ -2063,7 +2017,7 @@
             "34382931-9f50-47a8-8373-64508f73596b"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.903",
+        "addedAt": "2024-04-24T16:23:55.386",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -2077,6 +2031,28 @@
         "id": "646315"
     },
     {
+        "format": "ON_AIR",
+        "event": "2024",
+        "title": "Les innovations ont-elles un genre ? - Livestream",
+        "summary": "Les approches f\u00e9ministes des sciences et des technologies remettent en cause le caract\u00e8re neutre et universel des savoirs et des innovations. On entend par exemple souvent parler de st\u00e9r\u00e9otypes, et il est courant de chercher \u00e0 faire \u00e9voluer l&#39;image classique (et masculine) de l&#39;expert en tech. Mais au-del\u00e0 des repr\u00e9sentations, comment des biais de genre peuvent-ils fa\u00e7onner la conception ou le fonctionnement m\u00eame d&#39;une technologie ? Comment des in\u00e9galit\u00e9s peuvent-elles se mat\u00e9rialiser dans des services num\u00e9riques ?",
+        "speakerIds": [
+            "34382931-9f50-47a8-8373-64508f73596b"
+        ],
+        "language": "FRENCH",
+        "addedAt": "2024-04-24T16:23:55.386",
+        "description": "",
+        "topic": "aliens",
+        "video": null,
+        "video2": null,
+        "room": "TWITCH",
+        "start": "2024-04-26T16:50:00",
+        "end": "2024-04-26T17:20:00",
+        "photoUrls": [],
+        "slug": "les-innovations-ont-elles-un-genre-livestream",
+        "level": "Beginner",
+        "id": "663711"
+    },
+    {
         "format": "KEYNOTE",
         "event": "2024",
         "title": "Mot de la fin",
@@ -2085,7 +2061,7 @@
             "mixit"
         ],
         "language": "FRENCH",
-        "addedAt": "2024-04-19T07:25:46.903",
+        "addedAt": "2024-04-24T16:23:55.386",
         "description": "",
         "topic": "other",
         "video": null,

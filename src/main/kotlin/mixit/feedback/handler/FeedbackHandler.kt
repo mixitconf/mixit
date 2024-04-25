@@ -61,7 +61,7 @@ class FeedbackHandler(
         }
 
 
-    suspend fun findMyFeedbacks(req: ServerRequest): ServerResponse =
+    suspend fun findMyFeedbacks(req: ServerRequest, admin:Boolean =false): ServerResponse =
         req.webSession().let { session ->
             talkService.findOneOrNull(req.pathVariable("talkId"))!!.let { talk ->
                 session.getAttribute<String?>(SESSION_EMAIL_KEY).let { email ->
@@ -70,8 +70,8 @@ class FeedbackHandler(
                         mapOf(
                             TITLE to SpeakerFeedback.title,
                             TALK to talk,
-                            FEEDBACK_TYPES to feedbackService.computeFeedbackForTalk(talk, email),
-                            FEEDBACK_COMMENTS to feedbackService.computeCommentsForTalk(talk, email)
+                            FEEDBACK_TYPES to feedbackService.computeFeedbackForTalk(talk, email, admin),
+                            FEEDBACK_COMMENTS to feedbackService.computeCommentsForTalk(talk, email, admin)
                         )
                     )
                 }

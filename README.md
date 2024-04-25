@@ -92,5 +92,4 @@ If you need to restore a Clever Cloud archive in your local db, you can follow t
 * use this command 
 ```shell
 docker exec -it mongo-mixit mongorestore -u=admin -p=mixit23 --drop --noIndexRestore --archive=/tmp/dump/mongodb_XXXX.archive
-
 ```

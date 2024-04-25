@@ -2112,6 +2112,11 @@
                 "level": "GOLD",
                 "sponsorId": "sponsor-groupama",
                 "subscriptionDate": "2024-04-17"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "talan",
+                "subscriptionDate": "2024-04-22"
             }
         ],
         "organizations": [
@@ -2163,10 +2168,10 @@
                 "volunteerLogin": "thomas.derville"
             },
             {
-                "volunteerLogin": "mathieu.tourrette"
+                "volunteerLogin": "thierry.salvan"
             },
             {
-                "volunteerLogin": "thierry.salvan"
+                "volunteerLogin": "clement-moysan"
             }
         ],
         "organizers": [
@@ -2206,8 +2211,8 @@
         ],
         "photoUrls": [],
         "videoUrl": null,
-        "schedulingFileUrl": "https://drive.proton.me/urls/NTWTM08JA0#FHMiDpGs5RwI",
+        "schedulingFileUrl": "https://drive.proton.me/urls/47C6FR914C#qan6woJ3O7Iy",
         "year": 2024,
-        "streamingUrl": null
+        "streamingUrl": "https://www.youtube.com/embed/HYUekFOurP0?si=i5nW7MLLyyxph73w"
     }
 ]
