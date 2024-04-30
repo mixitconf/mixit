@@ -2,22 +2,28 @@ package mixit.feedback.handler
 
 import mixit.MixitProperties
 import mixit.feedback.model.Feedback
+import mixit.feedback.model.FeedbackCount
 import mixit.feedback.model.FeedbackService
 import mixit.feedback.model.FeedbackService.CommentType
+import mixit.feedback.model.UserFeedbackComment
 import mixit.feedback.repository.UserFeedbackRepository
 import mixit.security.MixitWebFilter.Companion.SESSION_EMAIL_KEY
+import mixit.talk.model.CachedTalk
 import mixit.talk.model.TalkService
 import mixit.util.YearSelector
 import mixit.util.enumMatcher
 import mixit.util.errors.NotFoundException
+import mixit.util.extractEmailFromSession
 import mixit.util.extractFormData
 import mixit.util.mustache.MustacheI18n.CRITERIA
 import mixit.util.mustache.MustacheI18n.FEEDBACK_COMMENTS
 import mixit.util.mustache.MustacheI18n.FEEDBACK_TYPES
 import mixit.util.mustache.MustacheI18n.TALK
+import mixit.util.mustache.MustacheI18n.TALKS
 import mixit.util.mustache.MustacheI18n.TITLE
 import mixit.util.mustache.MustacheI18n.YEAR
 import mixit.util.mustache.MustacheI18n.YEAR_SELECTOR
+import mixit.util.mustache.MustacheTemplate
 import mixit.util.mustache.MustacheTemplate.AdminFeedback
 import mixit.util.mustache.MustacheTemplate.SpeakerFeedback
 import mixit.util.seeOther
@@ -60,21 +66,48 @@ class FeedbackHandler(
             routeToAdminPage(year, type)
         }
 
+    // TODO move elsewhere
+    data class TalkFeedback(
+        val talk: CachedTalk,
+        val feedbackTypes: List<Pair<Feedback, FeedbackCount>>,
+        val feedbackComments: UserFeedbackComment?
+    )
 
-    suspend fun findMyFeedbacks(req: ServerRequest, admin:Boolean =false): ServerResponse =
-        req.webSession().let { session ->
-            talkService.findOneOrNull(req.pathVariable("talkId"))!!.let { talk ->
-                session.getAttribute<String?>(SESSION_EMAIL_KEY).let { email ->
+    suspend fun seeAll(req: ServerRequest): ServerResponse =
+        req.pathVariable("year").let { year ->
+            req.extractEmailFromSession().let { email ->
+                talkService.findByEvent(year).let { talks ->
+                    val result = talks.map { talk ->
+                        TalkFeedback(
+                            talk,
+                            feedbackService.computeFeedbackForTalk(talk, email, admin = true),
+                            feedbackService.computeCommentsForTalk(talk, email, admin = true),
+                        )
+                    }
                     ServerResponse.ok().renderAndAwait(
-                        SpeakerFeedback.template,
+                        MustacheTemplate.AdminFeedbacks.template,
                         mapOf(
                             TITLE to SpeakerFeedback.title,
-                            TALK to talk,
-                            FEEDBACK_TYPES to feedbackService.computeFeedbackForTalk(talk, email, admin),
-                            FEEDBACK_COMMENTS to feedbackService.computeCommentsForTalk(talk, email, admin)
+                            YEAR to year,
+                            TALKS to result
                         )
                     )
                 }
+            }
+        }
+
+    suspend fun findMyFeedbacks(req: ServerRequest, admin: Boolean = false): ServerResponse =
+        req.extractEmailFromSession().let { email ->
+            talkService.findOneOrNull(req.pathVariable("talkId"))!!.let { talk ->
+                ServerResponse.ok().renderAndAwait(
+                    SpeakerFeedback.template,
+                    mapOf(
+                        TITLE to SpeakerFeedback.title,
+                        TALK to talk,
+                        FEEDBACK_TYPES to feedbackService.computeFeedbackForTalk(talk, email, admin),
+                        FEEDBACK_COMMENTS to feedbackService.computeCommentsForTalk(talk, email, admin)
+                    )
+                )
             }
         }
 

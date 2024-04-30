@@ -19,7 +19,8 @@
                                 {{#talk}}
                                     <article class="mxt-agenda--talk-container p-0 m-0 {{#displayFavorites}}{{#connected}}{{^favorite}}mxt-agenda--talk-container-disable{{/favorite}}{{/connected}}{{/displayFavorites}}">
                                         <button class="p-0 m-0 mxt-agenda--talk-link d-block d-md-none"
-                                                ondblclick="location.href='{{localePrefix}}/{{event}}{{#slug}}/{{slug}}{{/slug}}'">
+                                                onclick="location.href='{{localePrefix}}/{{event}}{{#slug}}/{{slug}}{{/slug}}'"
+                                        >
                                             {{> talks-day-tab-content-agenda-btn }}
                                         </button>
                                         <button class="p-0 m-0 mxt-agenda--talk-link d-none d-md-block"

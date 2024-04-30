@@ -1,0 +1,11 @@
+{{> header}}
+
+<div class="container-xxl">
+    <h1>Feedbacks {{year}}</h1>
+
+    {{#talks}}
+        {{> feedback-speaker-content}}
+    {{/talks}}
+</div>
+
+{{> footer}}
