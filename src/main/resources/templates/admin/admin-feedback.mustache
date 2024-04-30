@@ -4,6 +4,11 @@
 <div class="container-xxl">
     <h1>{{#i18n}}{{title}}{{/i18n}} comments {{year}}</h1>
     {{> year-selector}}
+
+    <div class="mxt-btn-container">
+        <a class="mxt-btn-light" href="{{localePrefix}}/admin/feedbacks/{{year}}/all">See all feedbacks</a>
+    </div>
+
     <div class="mxt-year-selector mt-3 mb-3">
         {{#criteria}}
             <div class="flex-fill text-center">
@@ -12,7 +17,6 @@
             </div>
         {{/criteria}}
     </div>
-
     {{#feedbackComments}}
         {{#entrySet}}
             {{#key}}

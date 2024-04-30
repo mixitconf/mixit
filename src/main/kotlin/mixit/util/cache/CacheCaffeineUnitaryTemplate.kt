@@ -22,7 +22,7 @@ abstract class CacheCaffeineUnitaryTemplate<T : Cached> : CacheCaffeineTemplate<
     abstract fun unitaryLoader(id: String): suspend () -> T?
 
     override suspend fun findAll(): List<T> {
-        if (isEmpty()) {
+        if (cache.asMap().isEmpty()) {
             loader().invoke().onEach {
                 cache.put(it.id, it)
             }

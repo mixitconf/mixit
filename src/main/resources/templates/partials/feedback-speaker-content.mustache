@@ -1,0 +1,38 @@
+    <h2><a class="mxt-title--article" href="{{localePrefix}}/{{talk.event}}/{{talk.slug}}">{{talk.title}}</a></h2>
+    <div class="row">
+        {{^feedbackTypes}}
+            <div class="">
+            {{#i18n}}feedback-speaker.none{{/i18n}}
+            </div>
+        {{/feedbackTypes}}
+        {{#feedbackTypes}}
+            <div class="col-6 p-3 col-md-4 col-lg-3">
+                <div class="mxt-feedback--container text-center {{#second.selectedByCurrentUser}}mxt-feedback-selected{{/second.selectedByCurrentUser}}"
+                     id="mxt-feedback-{{first}}--container">
+                    <div style="text-overflow: ellipsis;overflow: hidden;white-space: nowrap;"><b>{{#i18n}}feedback.{{first}}{{/i18n}}</b></div>
+                    <div class="mxt-btn-container">
+                        <div
+                            {{#second.selectedByCurrentUser}}style="display: none" {{/second.selectedByCurrentUser}}>
+                            <img src="/images/svg/mxt-icon--like-hover.svg" alt="Vote">
+                        </div>
+                        <div class="mxt-feedback--note"
+                            {{^second.selectedByCurrentUser}}style="display: none" {{/second.selectedByCurrentUser}}>
+                            <div>{{second.count}}</div>
+                            <img src="/images/svg/mxt-icon--like-selected-dark.svg" alt="Vote">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{/feedbackTypes}}
+    </div>
+    <div class="row">
+        {{#feedbackComments.otherComments}}
+            {{#comment}}
+                <div class="row mt-2">
+                    <div class="form-control">
+                        {{comment}}
+                    </div>
+                </div>
+            {{/comment}}
+        {{/feedbackComments.otherComments}}
+    </div>

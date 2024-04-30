@@ -132,6 +132,7 @@ class WebsiteRoutes(
             GET("/admin/events/{eventId}/volunteers/edit/{volunteerLogin}", adminEventHandler::editEventVolunteer)
             GET("/admin/features", featureStateHandler::list)
             GET("/admin/feedbacks/{year}", feedbackHandler::admin)
+            GET("/admin/feedbacks/{year}/all", feedbackHandler::seeAll)
             GET("/admin/lottery", adminLotteryHandler::adminTicketing)
             GET("/admin/mailing-lists", mailingListHandler::listMailing)
             GET("/admin/mailings", mailingHandler::listMailing)

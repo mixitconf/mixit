@@ -42,7 +42,8 @@ class UserFeedbackRepository(
 
     suspend fun findAll(): List<UserFeedback> =
         template
-            .find<UserFeedback>(Query().with(by(Order(ASC, "start")))).doOnComplete { logger.info("Load all feedback") }
+            .find<UserFeedback>(Query().with(by(Order(ASC, "start"))))
+            .doOnComplete { logger.info("Load all feedback") }
             .collectList()
             .awaitSingle()
 

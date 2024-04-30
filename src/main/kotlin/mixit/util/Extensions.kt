@@ -1,21 +1,5 @@
 package mixit.util
 
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.reactor.awaitSingle
-import kotlinx.coroutines.reactor.awaitSingleOrNull
-import kotlinx.coroutines.withContext
-import mixit.security.MixitWebFilter
-import mixit.talk.model.Language
-import org.commonmark.ext.autolink.AutolinkExtension
-import org.commonmark.parser.Parser
-import org.commonmark.renderer.html.HtmlRenderer
-import org.springframework.http.ResponseCookie
-import org.springframework.web.reactive.function.BodyExtractors
-import org.springframework.web.reactive.function.server.ServerRequest
-import org.springframework.web.reactive.function.server.ServerResponse
-import org.springframework.web.reactive.function.server.ServerResponse.permanentRedirect
-import org.springframework.web.reactive.function.server.ServerResponse.seeOther
-import org.springframework.web.server.WebSession
 import java.net.URI
 import java.net.URLDecoder
 import java.net.URLEncoder
@@ -36,6 +20,22 @@ import java.util.stream.IntStream
 import javax.crypto.Cipher
 import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.SecretKeySpec
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.reactor.awaitSingle
+import kotlinx.coroutines.reactor.awaitSingleOrNull
+import kotlinx.coroutines.withContext
+import mixit.security.MixitWebFilter
+import mixit.talk.model.Language
+import org.commonmark.ext.autolink.AutolinkExtension
+import org.commonmark.parser.Parser
+import org.commonmark.renderer.html.HtmlRenderer
+import org.springframework.http.ResponseCookie
+import org.springframework.web.reactive.function.BodyExtractors
+import org.springframework.web.reactive.function.server.ServerRequest
+import org.springframework.web.reactive.function.server.ServerResponse
+import org.springframework.web.reactive.function.server.ServerResponse.permanentRedirect
+import org.springframework.web.reactive.function.server.ServerResponse.seeOther
+import org.springframework.web.server.WebSession
 
 // -------------------------
 // Spring WebFlux extensions
@@ -59,6 +59,9 @@ suspend fun ServerRequest.extractFormData(): Map<String, String?> =
 
 suspend fun ServerRequest.webSession(): WebSession =
     this.session().awaitSingle()
+
+suspend fun ServerRequest.extractEmailFromSession(): String? =
+    webSession().getAttribute<String?>(MixitWebFilter.SESSION_EMAIL_KEY)
 
 suspend fun ServerRequest.webSessionOrNull(): WebSession? =
     this.session().awaitSingleOrNull()
