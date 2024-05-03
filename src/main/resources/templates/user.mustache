@@ -129,8 +129,10 @@
                         <p>{{#markdown}}{{summary}}{{/markdown}}</p>
                         <div class="mxt-btn-container">
                         {{#hasFeatureFeedbackResult}}
+                            {{#canUpdateProfile}}
                                 <a href="{{localePrefix}}/me/feedback/{{id}}" class="mxt-btn-light ms-2" style="margin-bottom: 0">
                                     {{#i18n}}feedback.speaker{{/i18n}} {{speakerYear}}</a>
+                            {{/canUpdateProfile}}
                         {{/hasFeatureFeedbackResult}}
                         </div>
                     </article>
