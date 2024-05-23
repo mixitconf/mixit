@@ -6,6 +6,10 @@ import mixit.event.model.EventImage
 import mixit.event.model.EventImages
 import mixit.event.model.EventImagesSection
 import mixit.event.model.EventImagesService
+import mixit.talk.model.TalkService
+import mixit.util.enumMatcher
+import mixit.util.errors.NotFoundException
+import mixit.util.extractFormData
 import mixit.util.mustache.MustacheI18n
 import mixit.util.mustache.MustacheI18n.CREATION_MODE
 import mixit.util.mustache.MustacheI18n.EVENT
@@ -15,10 +19,6 @@ import mixit.util.mustache.MustacheTemplate
 import mixit.util.mustache.MustacheTemplate.AdminEvent
 import mixit.util.mustache.MustacheTemplate.AdminEventImage
 import mixit.util.mustache.MustacheTemplate.AdminEventImages
-import mixit.talk.model.TalkService
-import mixit.util.enumMatcher
-import mixit.util.errors.NotFoundException
-import mixit.util.extractFormData
 import mixit.util.seeOther
 import org.springframework.stereotype.Component
 import org.springframework.web.reactive.function.server.ServerRequest
@@ -36,6 +36,7 @@ class AdminEventImagesHandler(
 
     companion object {
         const val LIST_URI = "/admin/events/images"
+        const val DEFAULT_ROOT_URL = "https://raw.githubusercontent.com/mixitconf/mixitconf-images/main/"
     }
 
     suspend fun adminEventImages(req: ServerRequest): ServerResponse {
@@ -52,7 +53,8 @@ class AdminEventImagesHandler(
     private suspend fun adminEditEventImages(
         eventImages: EventImages = EventImages(
             null,
-            emptyList()
+            emptyList(),
+            null
         )
     ): ServerResponse =
         ok().renderAndAwait(
@@ -82,8 +84,10 @@ class AdminEventImagesHandler(
     suspend fun adminSaveEventImages(req: ServerRequest): ServerResponse {
         val formData = req.extractFormData()
         // We need to find the event in database
-        val existingEvent = service.findOneOrNull(formData["event"] ?: throw NotFoundException())?.toEventImages()
-        val updatedEvent = existingEvent ?: EventImages(formData["event"]!!, emptyList())
+        val event = formData["event"] ?: throw NotFoundException()
+        val rootUrl = formData["root_url"] ?: DEFAULT_ROOT_URL
+        val existingEvent = service.findOneOrNull(event)?.toEventImages()
+        val updatedEvent = existingEvent ?: EventImages(event, emptyList(), rootUrl)
         service.save(updatedEvent).awaitSingleOrNull()
         return seeOther("${properties.baseUri}$LIST_URI")
     }
