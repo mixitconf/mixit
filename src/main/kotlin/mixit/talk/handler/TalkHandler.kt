@@ -4,9 +4,10 @@ import java.time.Duration
 import java.time.LocalDate
 import java.time.ZoneId
 import kotlinx.coroutines.reactor.awaitSingle
-import mixit.MixitApplication.Companion.CURRENT_EVENT
+import mixit.MixitApplication.Companion.NEXT_EVENT
 import mixit.MixitApplication.Companion.TIMEZONE
 import mixit.MixitProperties
+import mixit.event.handler.AdminEventImagesHandler
 import mixit.event.model.EventImageDto
 import mixit.event.model.EventImagesService
 import mixit.event.model.EventService
@@ -92,6 +93,7 @@ class TalkHandler(
                         else
                             talks.filter { it.format == TalkFormat.ON_AIR && it.video != null }
                     }
+
                     else -> talks.filterNot { it.format == TalkFormat.ON_AIR }
                 },
                 config.viewWorkshop
@@ -110,9 +112,10 @@ class TalkHandler(
                 ).map { event.start.plusDays(it) }
         val rooms = roomsToDisplayOnAgenda(talks)
         val canDisplayAgenda = rooms.isNotEmpty() && !(rooms.contains(Room.UNKNOWN) && rooms.size == 1)
-        val isCurrent = (config.year == CURRENT_EVENT.toInt())
-        val displayAgenda =  ((config.tabs == TalksTabs.Schedule || config.tabs == TalksTabs.Favorites) && canDisplayAgenda)
-                || (config.tabs == TalksTabs.MiXiTonAir && isCurrent)
+        val isCurrent = (config.year == NEXT_EVENT.toInt())
+        val displayAgenda =
+            ((config.tabs == TalksTabs.Schedule || config.tabs == TalksTabs.Favorites) && canDisplayAgenda)
+                    || (config.tabs == TalksTabs.MiXiTonAir && isCurrent)
         if (config.tabs == TalksTabs.Mixette && !hasMixette) {
             return seeOther("${properties.baseUri}/${config.year}/medias")
         }
@@ -177,14 +180,13 @@ class TalkHandler(
         talks: List<TalkDto>,
         canDisplayAgenda: Boolean
     ): Any =
-        if(config.tabs ==TalksTabs.MiXiTonAir) {
-            if(config.year == CURRENT_EVENT.toInt()) {
+        if (config.tabs == TalksTabs.MiXiTonAir) {
+            if (config.year == NEXT_EVENT.toInt()) {
                 talksToDisplayOnAgenda(talks, rooms, days, config.req.language())
             } else {
-                talks.filter { it.video != null  || it.video2 != null }
+                talks.filter { it.video != null || it.video2 != null }
             }
-        }
-        else if ((config.tabs == TalksTabs.Schedule || config.tabs == TalksTabs.Favorites) && canDisplayAgenda) {
+        } else if ((config.tabs == TalksTabs.Schedule || config.tabs == TalksTabs.Favorites) && canDisplayAgenda) {
             talksToDisplayOnAgenda(talks, rooms, days, config.req.language())
         } else if (config.tabs == TalksTabs.TalksWithVideo) {
             talks
@@ -200,8 +202,8 @@ class TalkHandler(
                 .asSequence()
                 .flatMap { it.speakers }
                 .toSet()
-                .filterNot {
-                    user-> staffs.any {
+                .filterNot { user ->
+                    staffs.any {
                         user.login == it.login ||
                                 (user.firstname.lowercase() == it.firstname.lowercase() && user.lastname.lowercase() == it.lastname.lowercase()) ||
                                 (user.firstname.lowercase() == "greg" && user.lastname.lowercase() == "alexandre") ||
@@ -378,43 +380,58 @@ class TalkHandler(
 
     private suspend fun findTalkImages(talk: CachedTalk): List<EventImageDto> =
         eventImagesService.findAll()
+            .asSequence()
             .filter { it.event == talk.event }
-            .flatMap { it.sections }
+            .flatMap { event -> event.sections }
             .flatMap { section ->
                 section.pictures
                     .filter { it.talkId != null }
-                    .map { EventImageDto(talk.event, it.name, section.sectionId, it.talkId!!) }
+                    .map {
+                        EventImageDto(
+                            talk.event,
+                            it.name,
+                            section.sectionId,
+                            it.talkId!!
+                        )
+                    }
             }
             .filter { it.talkId.contains(talk.id) }
             .sortedBy { it.name }
+            .toList()
 
     private suspend fun findImages(config: TalkViewConfig) =
         // We have a specific behavior on the MediaImages template
         if (config.template == MediaImages) {
             // If an url is specified in the query param we display only this image
             if (config.url != null) {
-                eventImagesService.findOneOrNull(config.year.toString()).let { images ->
-                    images?.copy(
-                        sections = images.sections
-                            .filter { it.sectionId == config.album }
-                            .map { it.copy(pictures = it.pictures.filter { pic -> pic.name == config.url }) }
-                    )
-                }
+                eventImagesService.findOneOrNull(config.year.toString())
+                    .let { it?.toDto(AdminEventImagesHandler.DEFAULT_ROOT_URL) }
+                    .let { images ->
+                        images?.copy(
+                            sections = images.sections
+                                .filter { it.sectionId == config.album }
+                                .map { it.copy(pictures = it.pictures.filter { pic -> pic.name == config.url }) }
+                        )
+                    }
             } else {
                 // We select all the album images
-                eventImagesService.findOneOrNull(config.year.toString()).let { images ->
-                    images?.copy(sections = images.sections.filter { it.sectionId == config.album })
-                }
+                eventImagesService.findOneOrNull(config.year.toString())
+                    .let { it?.toDto(AdminEventImagesHandler.DEFAULT_ROOT_URL) }
+                    .let { images ->
+                        images?.copy(sections = images.sections.filter { it.sectionId == config.album })
+                    }
             }
         } else {
             // For other we return all albums but with only the first image
-            eventImagesService.findOneOrNull(config.year.toString()).let { images ->
-                images?.copy(
-                    sections = images.sections.map { section ->
-                        section.copy(pictures = section.pictures.firstOrNull()?.let { listOf(it) } ?: emptyList())
-                    }
-                )
-            }
+            eventImagesService.findOneOrNull(config.year.toString())
+                .let { it?.toDto(AdminEventImagesHandler.DEFAULT_ROOT_URL) }
+                .let { images ->
+                    images?.copy(
+                        sections = images.sections.map { section ->
+                            section.copy(pictures = section.pictures.firstOrNull()?.let { listOf(it) } ?: emptyList())
+                        }
+                    )
+                }
         }
 
     private suspend fun hasMixitOnAir(config: TalkViewConfig): Boolean =
@@ -467,7 +484,7 @@ class TalkHandler(
                     "vimeoPlayer" to talk.video.toVimeoPlayerUrl(),
                     "twitchPlayer" to (talk.video?.contains("twitch") ?: false),
                     "vimeoPlayer2" to talk.video2.toVimeoPlayerUrl(),
-                    "isCurrent" to (year == CURRENT_EVENT.toInt()),
+                    "isCurrent" to (year == NEXT_EVENT.toInt()),
                     FEEDBACK_TYPES to feedbackService.computeUserFeedbackForTalk(talk, currentUserEmail),
                     FEEDBACK_COMMENTS to feedbackService.computeUserCommentForTalk(talk, currentUserEmail),
                     // We must be more clever (open when the talk start ?)

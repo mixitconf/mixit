@@ -1,6 +1,7 @@
 package mixit.favorite.handler
 
 import kotlinx.coroutines.reactor.awaitSingle
+import mixit.MixitApplication
 import mixit.favorite.model.Favorite
 import mixit.favorite.repository.FavoriteRepository
 import mixit.security.model.Cryptographer
@@ -44,7 +45,7 @@ class JsonFavoriteHandler(
                 .map { FavoriteDto(talkId, false) }
                 .awaitSingle()
         }
-        return talkHandler.findOneView(talkService.findOneOrNull(talkId)!!, req, 2024)
+        return talkHandler.findOneView(talkService.findOneOrNull(talkId)!!, req, MixitApplication.NEXT_EVENT.toInt())
     }
 
     suspend fun getFavorite(req: ServerRequest) =

@@ -7,7 +7,8 @@ import org.springframework.data.mongodb.core.mapping.Document
 @Document
 data class EventImages(
     @Id val event: String?,
-    val sections: List<EventImagesSection>
+    val sections: List<EventImagesSection>,
+    val rootUrl: String?
 )
 
 data class EventImagesSection(
@@ -21,6 +22,7 @@ data class EventImage(
     val talkId: String? = null,
     val mustacheTemplate: MustacheTemplate? = null
 )
+
 
 data class EventImageDto(
     val event: String,

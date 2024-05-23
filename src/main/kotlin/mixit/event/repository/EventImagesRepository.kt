@@ -2,7 +2,10 @@ package mixit.event.repository
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import java.time.Duration
 import kotlinx.coroutines.reactor.awaitSingle
+import kotlinx.coroutines.reactor.awaitSingleOrNull
+import kotlinx.coroutines.runBlocking
 import mixit.event.model.EventImages
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
@@ -16,7 +19,6 @@ import org.springframework.data.mongodb.core.query.Query
 import org.springframework.data.mongodb.core.query.isEqualTo
 import org.springframework.data.mongodb.core.remove
 import org.springframework.stereotype.Repository
-import java.time.Duration
 
 @Repository
 class EventImagesRepository(
@@ -33,6 +35,15 @@ class EventImagesRepository(
             events.forEach { save(it).block(Duration.ofSeconds(10)) }
             logger.info("Events images data initialization complete")
         }
+        runBlocking {
+            if (template.findById<EventImages>("2024").awaitSingleOrNull() == null) {
+                val eventsResource = ClassPathResource("data/import_images.json")
+                val events: EventImages = objectMapper.readValue(eventsResource.inputStream)
+                save(events).block(Duration.ofSeconds(10))
+                logger.info("Events 2024 images data initialization complete")
+            }
+        }
+
     }
 
     fun count() =
