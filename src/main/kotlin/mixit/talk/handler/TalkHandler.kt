@@ -4,7 +4,7 @@ import java.time.Duration
 import java.time.LocalDate
 import java.time.ZoneId
 import kotlinx.coroutines.reactor.awaitSingle
-import mixit.MixitApplication.Companion.CURRENT_EVENT
+import mixit.MixitApplication.Companion.NEXT_EVENT
 import mixit.MixitApplication.Companion.TIMEZONE
 import mixit.MixitProperties
 import mixit.event.handler.AdminEventImagesHandler
@@ -112,7 +112,7 @@ class TalkHandler(
                 ).map { event.start.plusDays(it) }
         val rooms = roomsToDisplayOnAgenda(talks)
         val canDisplayAgenda = rooms.isNotEmpty() && !(rooms.contains(Room.UNKNOWN) && rooms.size == 1)
-        val isCurrent = (config.year == CURRENT_EVENT.toInt())
+        val isCurrent = (config.year == NEXT_EVENT.toInt())
         val displayAgenda =
             ((config.tabs == TalksTabs.Schedule || config.tabs == TalksTabs.Favorites) && canDisplayAgenda)
                     || (config.tabs == TalksTabs.MiXiTonAir && isCurrent)
@@ -181,7 +181,7 @@ class TalkHandler(
         canDisplayAgenda: Boolean
     ): Any =
         if (config.tabs == TalksTabs.MiXiTonAir) {
-            if (config.year == CURRENT_EVENT.toInt()) {
+            if (config.year == NEXT_EVENT.toInt()) {
                 talksToDisplayOnAgenda(talks, rooms, days, config.req.language())
             } else {
                 talks.filter { it.video != null || it.video2 != null }
@@ -484,7 +484,7 @@ class TalkHandler(
                     "vimeoPlayer" to talk.video.toVimeoPlayerUrl(),
                     "twitchPlayer" to (talk.video?.contains("twitch") ?: false),
                     "vimeoPlayer2" to talk.video2.toVimeoPlayerUrl(),
-                    "isCurrent" to (year == CURRENT_EVENT.toInt()),
+                    "isCurrent" to (year == NEXT_EVENT.toInt()),
                     FEEDBACK_TYPES to feedbackService.computeUserFeedbackForTalk(talk, currentUserEmail),
                     FEEDBACK_COMMENTS to feedbackService.computeUserCommentForTalk(talk, currentUserEmail),
                     // We must be more clever (open when the talk start ?)

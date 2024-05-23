@@ -3,7 +3,7 @@
   "sections": [
     {
       "sectionId": "day1_am",
-      "i18n": "images.day1_am",
+      "i18n": "images.mixit24.day1_am",
       "images": [
         {
           "name": "mixit24-J1-AM-171-DianeSevrin.jpg",
@@ -1079,7 +1079,7 @@
     },
     {
       "sectionId": "speaker_diner",
-      "i18n": "images.speaker_diner",
+      "i18n": "images.mixit24.speaker_diner",
       "images": [
         {
           "name": "mixit24-diner-speaker-14-DianeSevrin.jpg",
@@ -1360,7 +1360,7 @@
     },
     {
       "sectionId": "day2_pm",
-      "i18n": "images.day2_pm",
+      "i18n": "images.mixit24.day2_pm",
       "images": [
         {
           "name": "mixit24-J2-PM-113-DianeSevrin.jpg",
@@ -2571,7 +2571,7 @@
     },
     {
       "sectionId": "day2_am",
-      "i18n": "images.day2_am",
+      "i18n": "images.mixit24.day2_am",
       "images": [
         {
           "name": "mixit24-J2-AM-120-DianeSevrin.jpg",
@@ -3292,7 +3292,7 @@
     },
     {
       "sectionId": "day1_pm",
-      "i18n": "images.day1_pm",
+      "i18n": "images.mixit24.day1_pm",
       "images": [
         {
           "name": "mixit24-J1-PM-188-DianeSevrin.jpg",
@@ -4363,7 +4363,7 @@
     },
     {
       "sectionId": "party",
-      "i18n": "images.party",
+      "i18n": "images.mixit24.party",
       "images": [
         {
           "name": "mixit24-soiree-chapelle-55-DianeSevrin.jpg",

@@ -3,6 +3,7 @@ package mixit.import
 import java.nio.file.Files
 import java.nio.file.Path
 import java.nio.file.Paths
+import kotlin.io.path.name
 import kotlin.io.path.pathString
 
 fun createSection(section: Path): String {
@@ -37,13 +38,15 @@ fun main() {
         .filter { it.pathString.contains("/2024/")}
         .filter { Files.isDirectory(it) }
 
-    println("""
-        {
-            "event": "2024",
-            "sections": [${sections.map { createSection(it) }.toList().joinToString(",")}],
-            "rootUrl": "https://mixitconf.org"
-        }
-    """.trimIndent())
+    println(sections.map { it.name }.toList().joinToString())
+
+//    println("""
+//        {
+//            "event": "2024",
+//            "sections": [${sections.map { createSection(it) }.toList().joinToString(",")}],
+//            "rootUrl": "https://mixitconf.org"
+//        }
+//    """.trimIndent())
 }
 
 
