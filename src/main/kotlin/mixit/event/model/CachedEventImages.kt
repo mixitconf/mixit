@@ -73,7 +73,7 @@ data class EventImagesDto(
 data class EventImagesSectionDto(
     val sectionId: String,
     val i18nLabel: String,
-    val pictures: List<ImageDto>
+    val pictures: List<ImageDto>,
 )
 
 data class ImageDto(

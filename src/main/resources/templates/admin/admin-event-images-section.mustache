@@ -28,7 +28,7 @@
         </div>
         <div class="col-12 mb-3">
             <label class="form-label">{{#i18n}}admin.event.images.sections.table.i18n{{/i18n}}</label>
-            <input class="form-control" type="text" name="i18n" required value="{{#section.i18n}}{{section.i18n}}{{/section.i18n}}"/>
+            <input class="form-control" type="text" name="i18n" required value="{{#section.i18nLabel}}{{section.i18nLabel}}{{/section.i18nLabel}}"/>
         </div>
         <div class="col-12 mb-3 mxt-btn-container">
             <button type="submit" class="mxt-btn-primary">{{#i18n}}common.actions.save{{/i18n}}</button>
@@ -41,7 +41,7 @@
 
         <div class="callout">
             <div class="mxt-btn-container pb-3">
-                {{#i18n}}admin.event.images.sections.images.count{{/i18n}} : <b>{{section.images.size}}</b>
+                {{#i18n}}admin.event.images.sections.images.count{{/i18n}} : <b>{{section.pictures.size}}</b>
                 <div class="flex-fill"></div>
                 <a  class="mxt-btn-light" href="/admin/events/images/{{eventId}}/sections/{{section.sectionId}}/images/create">{{#i18n}}common.actions.create{{/i18n}}</a>
             </div>
@@ -56,7 +56,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                {{#section.images}}
+                {{#section.pictures}}
                     <tr>
                         <td style="width:30%">
                             <img class="mxt-img--speakers"
@@ -73,7 +73,7 @@
                             </a>
                         </td>
                     </tr>
-                {{/section.images}}
+                {{/section.pictures}}
                 </tbody>
             </table>
         </div>

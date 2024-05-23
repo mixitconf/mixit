@@ -382,6 +382,7 @@ class TalkHandler(
         eventImagesService.findAll()
             .asSequence()
             .filter { it.event == talk.event }
+            .map { it.toDto(AdminEventImagesHandler.DEFAULT_ROOT_URL) }
             .flatMap { event -> event.sections }
             .flatMap { section ->
                 section.pictures
@@ -391,7 +392,8 @@ class TalkHandler(
                             talk.event,
                             it.name,
                             section.sectionId,
-                            it.talkId!!
+                            it.talkId!!,
+                            it.rootUrl
                         )
                     }
             }

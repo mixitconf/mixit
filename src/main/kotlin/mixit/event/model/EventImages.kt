@@ -15,7 +15,20 @@ data class EventImagesSection(
     val sectionId: String,
     val i18n: String,
     val images: List<EventImage>
-)
+) {
+    fun toDto(defaultUrl: String) = EventImagesSectionDto(
+        sectionId = sectionId,
+        i18nLabel = i18n,
+        pictures = images.map {
+            ImageDto(
+                name = it.name,
+                talkId = it.talkId,
+                mustacheTemplate = it.mustacheTemplate,
+                rootUrl = defaultUrl
+            )
+        }
+    )
+}
 
 data class EventImage(
     val name: String,
@@ -28,5 +41,6 @@ data class EventImageDto(
     val event: String,
     val name: String,
     val sectionId: String,
-    val talkId: String
+    val talkId: String,
+    val rootUrl: String,
 )
