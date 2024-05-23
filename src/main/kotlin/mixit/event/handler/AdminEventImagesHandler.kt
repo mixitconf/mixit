@@ -2,6 +2,7 @@ package mixit.event.handler
 
 import kotlinx.coroutines.reactor.awaitSingleOrNull
 import mixit.MixitProperties
+import mixit.event.model.CachedEventImages
 import mixit.event.model.EventImage
 import mixit.event.model.EventImages
 import mixit.event.model.EventImagesSection
@@ -45,7 +46,7 @@ class AdminEventImagesHandler(
             AdminEventImages.template,
             mapOf(
                 TITLE to AdminEventImages.title,
-                EVENTS to events
+                EVENTS to events.map { it.toDto(DEFAULT_ROOT_URL) }
             )
         )
     }
@@ -62,7 +63,7 @@ class AdminEventImagesHandler(
             mapOf(
                 TITLE to AdminEvent.title,
                 CREATION_MODE to (eventImages.event == null),
-                EVENT to eventImages
+                EVENT to CachedEventImages(eventImages).toDto(DEFAULT_ROOT_URL)
             )
         )
 
@@ -103,15 +104,18 @@ class AdminEventImagesHandler(
     suspend fun createEventImagesSection(req: ServerRequest): ServerResponse =
         adminEventImagesSection(req.pathVariable("event"))
 
-    private suspend fun adminEventImagesSection(eventId: String, section: EventImagesSection? = null): ServerResponse =
-        ok().renderAndAwait(
+    private suspend fun adminEventImagesSection(eventId: String, section: EventImagesSection? = null): ServerResponse {
+        val event = service.findOneOrNull(eventId)?.toDto(DEFAULT_ROOT_URL) ?: throw NotFoundException()
+        return ok().renderAndAwait(
             MustacheTemplate.AdminEventImagesSection.template,
             mapOf(
                 CREATION_MODE to (section == null),
                 MustacheI18n.EVENT_ID to eventId,
-                "section" to section
+                "section" to section?.toDto(event.rootUrl)
             )
         )
+    }
+
 
     suspend fun adminUpdateEventImagesSection(req: ServerRequest): ServerResponse {
         val formData = req.extractFormData()
@@ -167,6 +171,7 @@ class AdminEventImagesHandler(
         sectionId: String,
         image: EventImage? = null
     ): ServerResponse {
+        val event = service.findOneOrNull(eventId)?.toDto(DEFAULT_ROOT_URL) ?: throw NotFoundException()
         val talks = talkService.findByEvent(eventId).sortedBy { it.title }.map {
             Triple(it.id, "${it.title} (${it.format})", it.id.contains(image?.talkId ?: "oops"))
         }
@@ -177,6 +182,7 @@ class AdminEventImagesHandler(
                 MustacheI18n.EVENT_ID to eventId,
                 "sectionId" to sectionId,
                 "image" to image,
+                "rootUrl" to event.rootUrl,
                 "templates" to enumMatcher(image) { it?.mustacheTemplate ?: MustacheTemplate.None },
                 MustacheI18n.TALKS to talks,
                 "notalk" to talks.isEmpty()

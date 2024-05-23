@@ -25,7 +25,6 @@
         {{/creationMode}}
     </div>
 
-
     {{^creationMode}}
 
         <h3>{{#i18n}}admin.event.images.sections.text{{/i18n}}&nbsp;</h3>
@@ -49,7 +48,7 @@
                 {{#event.sections}}
                     <tr>
                         <td>{{sectionId}}</td>
-                        <td>{{i18n}}</td>
+                        <td>{{i18nLabel}}</td>
                         <td class="mxt-btn-container">
                             <a href="/admin/events/images/{{event.event}}/sections/edit/{{sectionId}}" class="mxt-btn-light">
                                 <img src="/images/svg/mxt-search-dark.svg" class="mxt-icon--cat__talks"

@@ -233,6 +233,7 @@ class WebsiteRoutes(
             POST("/admin/events", adminEventHandler::adminSaveEvent)
             POST("/admin/events/images", adminEventImagesHandler::adminSaveEventImages)
             POST("/admin/events/images/delete", adminEventImagesHandler::adminDeleteEventImages)
+            POST("/admin/events/images/{eventId}/sections", adminEventImagesHandler::adminUpdateEventImagesSection)
             POST("/admin/events/images/{eventId}/sections/create", adminEventImagesHandler::adminCreateEventImagesSection)
             POST("/admin/events/images/{eventId}/sections/delete", adminEventImagesHandler::adminDeleteEventImagesSection)
             POST("/admin/events/images/{eventId}/sections/{sectionId}/images", adminEventImagesHandler::adminUpdateEventImagesSectionImage)
