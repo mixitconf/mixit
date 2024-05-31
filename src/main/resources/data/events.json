@@ -2006,7 +2006,7 @@
         "id": "mixit24",
         "start": "2024-04-25",
         "end": "2024-04-26",
-        "current": true,
+        "current": false,
         "sponsors": [
             {
                 "level": "GOLD",
@@ -2069,11 +2069,6 @@
                 "subscriptionDate": "2024-01-22"
             },
             {
-                "level": "LANYARD",
-                "sponsorId": "annick.challancin@esker.fr",
-                "subscriptionDate": "2024-01-29"
-            },
-            {
                 "level": "MIXTEEN",
                 "sponsorId": "annick.challancin@esker.fr",
                 "subscriptionDate": "2024-02-01"
@@ -2117,6 +2112,11 @@
                 "level": "SILVER",
                 "sponsorId": "talan",
                 "subscriptionDate": "2024-04-22"
+            },
+            {
+                "level": "LANYARD",
+                "sponsorId": "sponsor-esker",
+                "subscriptionDate": "2024-05-27"
             }
         ],
         "organizations": [
@@ -2213,6 +2213,21 @@
         "videoUrl": null,
         "schedulingFileUrl": "https://drive.proton.me/urls/47C6FR914C#qan6woJ3O7Iy",
         "year": 2024,
-        "streamingUrl": "https://www.youtube.com/embed/HYUekFOurP0?si=i5nW7MLLyyxph73w"
+        "streamingUrl": "https://www.youtube.com/embed/rgsI6DHJkWg?si=IyfMfcVQTxNMghH9"
+    },
+    {
+        "id": "mixit25",
+        "start": "2025-04-23",
+        "end": "2025-04-23",
+        "current": true,
+        "sponsors": [],
+        "organizations": [],
+        "volunteers": [],
+        "organizers": [],
+        "photoUrls": [],
+        "videoUrl": null,
+        "schedulingFileUrl": null,
+        "year": 2025,
+        "streamingUrl": null
     }
 ]

@@ -873,7 +873,8 @@
                     }
                 ]
             }
-        ]
+        ],
+        "rootUrl": null
     },
     {
         "event": "2013",
@@ -1904,7 +1905,8 @@
                     }
                 ]
             }
-        ]
+        ],
+        "rootUrl": null
     },
     {
         "event": "2014",
@@ -3180,7 +3182,8 @@
                     }
                 ]
             }
-        ]
+        ],
+        "rootUrl": null
     },
     {
         "event": "2015",
@@ -4723,7 +4726,8 @@
                     }
                 ]
             }
-        ]
+        ],
+        "rootUrl": null
     },
     {
         "event": "2016",
@@ -5651,7 +5655,8 @@
                     }
                 ]
             }
-        ]
+        ],
+        "rootUrl": null
     },
     {
         "event": "2017",
@@ -8243,7 +8248,8 @@
                     }
                 ]
             }
-        ]
+        ],
+        "rootUrl": null
     },
     {
         "event": "2018",
@@ -9506,7 +9512,8 @@
                     }
                 ]
             }
-        ]
+        ],
+        "rootUrl": null
     },
     {
         "event": "2019",
@@ -11819,7 +11826,8 @@
                     }
                 ]
             }
-        ]
+        ],
+        "rootUrl": null
     },
     {
         "event": "2022",
@@ -13744,7 +13752,8 @@
                     }
                 ]
             }
-        ]
+        ],
+        "rootUrl": null
     },
     {
         "event": "2023",
@@ -18779,6 +18788,4734 @@
                     }
                 ]
             }
-        ]
+        ],
+        "rootUrl": null
+    },
+    {
+        "event": "2024",
+        "sections": [
+            {
+                "sectionId": "day1_am",
+                "i18n": "images.mixit24.day1_am",
+                "images": [
+                    {
+                        "name": "mixit24-J1-AM-171-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-204-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-186-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-118-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-98-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-18-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-63-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-51-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-24-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-108-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-9-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-19-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-12-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-10-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-17-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-139-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-155-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-119-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-29-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-25-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-4-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-96-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-13-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-205-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-211-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-47-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-167-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-5-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-82-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-85-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-164-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-207-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-128-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-27-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-147-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-153-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-170-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-129-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-7-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-33-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-142-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-197-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-115-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-56-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-104-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-30-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-40-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-28-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-38-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-83-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-58-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-53-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-208-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-188-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-72-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-39-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-35-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-2-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-97-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-177-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-212-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-213-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-6-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-131-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-162-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-46-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-189-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-121-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-187-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-88-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-185-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-41-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-71-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-86-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-178-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-77-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-110-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-163-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-73-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-74-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-8-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-54-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-43-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-103-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-31-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-174-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-161-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-49-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-127-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-44-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-1-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-132-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-111-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-158-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-3-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-168-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-144-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-99-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-166-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-94-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-141-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-14-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-195-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-87-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-80-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-93-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-156-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-152-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-120-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-146-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-114-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-196-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-113-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-69-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-145-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-95-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-182-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-176-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-201-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-124-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-175-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-70-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-91-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-203-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-68-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-107-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-92-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-50-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-199-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-62-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-22-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-135-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-194-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-89-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-65-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-32-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-112-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-214-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-90-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-169-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-55-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-172-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-193-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-45-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-184-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-79-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-130-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-102-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-151-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-198-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-76-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-137-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-105-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-150-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-206-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-209-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-20-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-57-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-202-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-200-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-52-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-23-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-66-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-84-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-117-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-190-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-138-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-191-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-21-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-100-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-26-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-78-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-154-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-210-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-64-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-133-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-126-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-123-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-34-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-143-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-173-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-36-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-179-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-42-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-81-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-140-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-134-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-60-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-157-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-125-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-183-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-106-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-165-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-48-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-61-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-181-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-136-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-180-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-160-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-11-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-159-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-15-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-101-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-75-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-192-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-116-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-37-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-109-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-16-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-122-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-148-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-59-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-149-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-AM-67-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    }
+                ]
+            },
+            {
+                "sectionId": "speaker_diner",
+                "i18n": "images.mixit24.speaker_diner",
+                "images": [
+                    {
+                        "name": "mixit24-diner-speaker-14-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-42-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-29-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-34-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-28-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-9-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-1-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-51-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-38-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-25-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-50-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-7-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-32-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-45-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-52-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-20-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-53-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-22-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-6-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-39-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-11-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-16-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-12-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-10-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-30-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-17-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-43-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-33-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-47-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-24-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-35-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-21-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-5-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-55-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-40-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-4-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-18-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-37-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-46-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-27-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-54-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-15-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-48-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-19-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-36-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-23-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-13-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-49-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-3-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-26-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-31-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-44-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-2-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-8-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-diner-speaker-41-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    }
+                ]
+            },
+            {
+                "sectionId": "day2_pm",
+                "i18n": "images.mixit24.day2_pm",
+                "images": [
+                    {
+                        "name": "mixit24-J2-PM-113-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-11-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-38-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-21-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-15-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-114-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-240-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-39-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-170-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-86-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-22-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-47-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-52-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-12-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-216-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-129-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-158-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-17-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-176-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-203-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-131-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-206-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-199-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-182-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-6-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-148-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-99-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-105-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-200-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-59-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-204-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-235-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-101-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-31-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-14-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-50-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-168-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-194-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-192-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-147-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-213-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-72-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-41-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-57-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-175-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-172-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-5-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-167-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-127-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-241-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-138-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-160-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-159-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-30-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-214-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-202-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-223-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-224-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-137-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-233-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-230-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-18-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-124-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-150-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-46-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-90-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-63-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-155-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-186-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-121-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-40-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-117-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-178-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-125-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-187-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-156-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-234-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-185-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-66-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-119-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-226-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-128-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-132-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-215-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-95-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-109-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-218-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-91-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-219-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-77-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-149-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-169-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-181-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-126-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-97-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-135-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-92-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-154-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-27-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-130-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-80-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-107-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-56-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-211-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-229-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-87-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-146-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-42-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-153-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-73-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-232-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-69-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-2-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-189-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-165-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-239-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-188-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-104-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-10-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-115-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-196-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-217-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-193-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-35-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-143-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-220-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-13-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-201-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-212-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-83-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-227-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-134-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-108-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-225-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-70-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-25-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-96-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-89-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-118-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-139-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-184-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-136-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-9-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-8-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-221-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-67-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-120-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-173-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-29-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-171-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-49-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-122-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-177-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-98-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-208-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-236-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-228-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-78-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-133-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-81-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-75-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-166-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-61-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-4-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-24-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-209-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-142-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-37-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-54-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-62-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-110-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-33-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-111-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-88-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-34-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-68-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-237-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-55-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-191-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-123-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-141-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-45-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-180-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-82-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-71-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-238-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-84-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-85-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-58-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-26-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-51-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-19-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-164-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-151-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-152-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-174-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-102-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-231-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-222-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-79-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-32-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-60-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-140-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-43-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-157-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-210-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-3-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-23-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-20-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-74-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-145-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-106-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-205-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-48-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-64-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-116-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-195-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-1-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-16-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-100-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-207-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-197-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-198-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-179-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-93-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-36-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-103-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-7-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-183-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-161-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-65-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-112-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-76-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-94-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-162-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-190-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-144-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-53-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-28-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-44-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-PM-163-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    }
+                ]
+            },
+            {
+                "sectionId": "day2_am",
+                "i18n": "images.mixit24.day2_am",
+                "images": [
+                    {
+                        "name": "mixit24-J2-AM-120-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-112-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-110-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-14-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-73-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-48-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-122-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-56-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-54-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-46-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-16-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-93-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-102-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-44-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-99-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-129-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-5-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-22-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-24-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-92-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-143-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-20-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-126-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-12-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-131-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-100-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-104-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-39-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-50-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-23-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-75-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-13-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-8-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-40-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-107-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-65-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-86-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-36-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-123-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-142-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-29-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-55-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-77-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-97-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-132-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-121-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-15-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-64-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-3-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-70-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-74-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-85-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-62-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-106-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-43-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-11-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-21-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-114-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-130-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-109-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-59-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-31-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-91-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-125-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-127-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-26-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-41-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-25-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-137-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-116-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-6-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-58-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-2-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-52-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-37-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-115-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-49-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-135-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-71-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-69-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-101-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-89-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-133-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-87-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-118-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-105-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-76-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-95-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-51-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-79-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-10-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-83-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-94-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-30-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-9-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-96-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-33-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-42-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-28-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-88-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-27-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-128-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-139-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-82-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-47-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-113-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-119-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-35-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-138-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-78-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-19-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-68-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-45-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-98-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-53-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-80-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-117-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-61-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-136-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-60-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-81-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-4-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-111-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-124-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-1-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-67-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-66-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-103-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-84-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-32-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-34-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-108-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-63-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-7-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-57-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-17-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-38-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-140-2-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-134-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-72-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-90-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-18-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J2-AM-141-2-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    }
+                ]
+            },
+            {
+                "sectionId": "day1_pm",
+                "i18n": "images.mixit24.day1_pm",
+                "images": [
+                    {
+                        "name": "mixit24-J1-PM-188-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-37-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-144-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-58-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-125-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-56-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-66-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-138-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-130-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-21-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-111-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-87-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-13-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-201-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-128-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-134-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-16-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-80-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-49-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-161-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-181-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-57-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-45-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-67-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-108-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-9-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-203-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-163-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-194-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-106-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-28-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-156-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-208-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-169-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-35-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-52-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-99-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-44-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-199-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-139-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-100-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-205-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-114-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-109-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-107-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-175-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-31-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-180-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-129-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-101-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-50-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-14-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-43-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-27-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-179-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-141-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-103-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-19-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-42-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-4-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-186-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-55-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-135-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-209-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-89-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-84-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-23-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-24-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-6-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-192-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-88-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-190-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-22-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-126-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-150-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-7-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-68-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-97-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-140-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-147-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-210-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-177-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-32-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-149-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-17-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-10-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-200-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-113-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-122-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-77-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-53-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-85-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-162-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-72-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-167-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-137-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-195-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-75-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-3-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-93-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-95-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-2-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-178-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-124-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-96-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-76-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-118-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-92-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-18-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-83-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-166-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-189-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-86-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-104-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-5-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-157-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-155-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-71-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-64-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-30-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-82-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-132-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-74-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-15-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-136-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-90-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-33-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-211-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-193-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-213-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-48-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-153-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-41-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-62-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-110-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-142-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-46-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-112-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-59-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-145-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-116-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-98-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-159-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-34-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-131-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-40-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-105-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-207-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-91-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-61-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-123-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-39-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-121-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-206-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-20-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-81-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-1-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-26-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-176-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-79-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-148-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-152-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-165-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-183-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-173-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-115-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-47-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-170-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-184-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-102-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-78-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-160-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-127-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-29-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-143-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-197-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-69-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-151-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-146-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-94-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-73-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-11-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-120-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-198-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-51-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-202-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-191-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-25-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-117-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-60-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-185-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-168-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-8-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-174-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-171-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-187-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-12-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-164-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-182-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-38-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-36-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-63-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-154-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-119-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-172-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-65-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-204-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-54-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-196-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-158-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-133-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-70-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-J1-PM-212-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    }
+                ]
+            },
+            {
+                "sectionId": "party",
+                "i18n": "images.mixit24.party",
+                "images": [
+                    {
+                        "name": "mixit24-soiree-chapelle-55-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-66-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-52-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-49-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-70-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-57-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-59-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-24-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-25-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-31-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-10-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-11-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-16-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-50-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-45-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-38-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-26-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-47-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-4-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-28-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-68-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-17-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-64-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-39-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-58-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-13-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-3-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-60-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-7-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-33-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-46-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-9-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-44-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-8-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-71-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-30-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-54-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-63-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-5-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-65-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-41-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-48-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-29-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-42-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-40-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-34-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-12-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-53-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-32-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-21-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-6-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-18-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-15-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-19-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-61-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-14-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-1-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-23-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-22-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-51-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-56-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-2-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-37-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-35-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-69-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-36-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-43-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-67-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-20-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-62-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    },
+                    {
+                        "name": "mixit24-soiree-chapelle-27-DianeSevrin.jpg",
+                        "talkId": null,
+                        "mustacheTemplate": null
+                    }
+                ]
+            }
+        ],
+        "rootUrl": "https://raw.githubusercontent.com/mixitconf/mixitconf-images-two/main/"
     }
 ]
