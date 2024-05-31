@@ -176,11 +176,17 @@ fun String.camelCase() = this
 
 fun String.toUrlPath() = URLEncoder.encode(this, "UTF-8").replace("+", "%20")
 
-fun String?.toVimeoPlayerUrl() = this?.let {
+fun String?.toPlayerUrl() = this?.let {
     if (it.startsWith("https://vimeo.com/")) {
         it.replace("https://vimeo.com/", "https://player.vimeo.com/video/")
+    } else if (it.startsWith("https://www.youtube.com/watch?v=")) {
+        it.replace("https://www.youtube.com/watch?v=", "https://www.youtube.com/embed/")
     } else null
 }
+
+fun String?.IsVimeoPlayer(): Boolean = this?.startsWith("https://vimeo.com/") ?: false
+fun String?.IsYoutube(): Boolean = this?.contains("youtube.com") ?: false
+
 
 fun String.encodeToMd5(): String? =
     if (isNullOrEmpty()) null else hex(MessageDigest.getInstance("MD5").digest(toByteArray(Charset.forName("CP1252"))))

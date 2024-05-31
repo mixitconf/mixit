@@ -13,32 +13,42 @@
         </div>
     </div>
     <div class="mxt-video--player-video">
-        {{#vimeoPlayer}}
+        {{#isVimeo}}
             <div class="mxt-wrapper--intrinsic">
-                <iframe data-src="{{vimeoPlayer}}"
+                <iframe data-src="{{player}}"
                         class="mxt-wrapper--video-player mxt-img--lazyload"
                         allowfullscreen></iframe>
             </div>
-        {{/vimeoPlayer}}
-        {{^vimeoPlayer}}
-            {{#video}}
-                <a href="{{video}}" target="_blank">
-                    <img data-src="/images/svg/mxt-no-player.svg"
-                         class="mxt-img--lazyload"
-                         style="max-width: 100%"
-                         alt="No video player"/>
-                </a>
-            {{/video}}
-            {{#video2}}
+        {{/isVimeo}}
+        {{^isVimeo}}
+            {{#isYoutube}}
                 <div class="mxt-wrapper--intrinsic">
-                    <iframe
-                            src="{{.}}&autoplay=false"
-                            class="mxt-wrapper--video-player"
-                            allowfullscreen>
-                </iframe>
-            </div>
-            {{/video2}}
-        {{/vimeoPlayer}}
+                    <iframe data-src="{{player}}"
+                            class="mxt-wrapper--video-player mxt-img--lazyload"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            {{/isYoutube}}
+            {{^isYoutube}}
+                {{#video}}
+                    <a href="{{video}}" target="_blank">
+                        <img data-src="/images/svg/mxt-no-player.svg"
+                             class="mxt-img--lazyload"
+                             style="max-width: 100%"
+                             alt="No video player"/>
+                    </a>
+                {{/video}}
+                {{#video2}}
+                    <div class="mxt-wrapper--intrinsic">
+                        <iframe
+                                src="{{.}}&autoplay=false"
+                                class="mxt-wrapper--video-player"
+                                allowfullscreen>
+                    </iframe>
+                </div>
+                {{/video2}}
+            {{/isYoutube}}
+        {{/isVimeo}}
     </div>
     <div class="mxt-video--player-title text-center">
         <a class="mxt-media--link" aria-label="{{title}}"

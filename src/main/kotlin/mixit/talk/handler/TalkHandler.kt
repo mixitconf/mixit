@@ -21,6 +21,8 @@ import mixit.talk.model.TalkService
 import mixit.user.handler.dto.UserDto
 import mixit.user.handler.dto.toDto
 import mixit.user.model.UserService
+import mixit.util.IsVimeoPlayer
+import mixit.util.IsYoutube
 import mixit.util.YearSelector
 import mixit.util.currentNonEncryptedUserEmail
 import mixit.util.enumMatcher
@@ -50,7 +52,7 @@ import mixit.util.mustache.MustacheTemplate.TalkDetail
 import mixit.util.mustache.MustacheTemplate.TalkEdit
 import mixit.util.permanentRedirect
 import mixit.util.seeOther
-import mixit.util.toVimeoPlayerUrl
+import mixit.util.toPlayerUrl
 import mixit.util.validator.MarkdownValidator
 import mixit.util.validator.MaxLengthValidator
 import org.springframework.stereotype.Component
@@ -162,7 +164,7 @@ class TalkHandler(
                     "schedulingFileUrl" to event.schedulingFileUrl,
                     "filtered" to config.filterOnFavorite,
                     "topic" to config.topic,
-                    "videoUrl" to event.videoUrl?.url?.toVimeoPlayerUrl(),
+                    "videoUrl" to event.videoUrl?.url?.toPlayerUrl(),
                     "hasPhotosOrVideo" to (event.videoUrl != null || event.photoUrls.isNotEmpty()),
                     "singleImage" to (config.url != null),
                     "previousImage" to closestImages?.first,
@@ -483,9 +485,11 @@ class TalkHandler(
                     "favorites" to favoriteTalkIds.any { talk.id == it },
                     "images" to findTalkImages(talk),
                     "hasOthertalks" to otherTalks.isNotEmpty(),
-                    "vimeoPlayer" to talk.video.toVimeoPlayerUrl(),
+                    "youtubePlayer" to if(talk.video.IsYoutube()) talk.video.toPlayerUrl() else null,
+                    "vimeoPlayer" to if(talk.video.IsVimeoPlayer()) talk.video.toPlayerUrl() else null,
                     "twitchPlayer" to (talk.video?.contains("twitch") ?: false),
-                    "vimeoPlayer2" to talk.video2.toVimeoPlayerUrl(),
+                    "vimeoPlayer2" to if(talk.video2.IsVimeoPlayer()) talk.video2.toPlayerUrl() else null,
+                    "youtubePlayer2" to if(talk.video2.IsYoutube()) talk.video2.toPlayerUrl() else null,
                     "isCurrent" to (year == NEXT_EVENT.toInt()),
                     FEEDBACK_TYPES to feedbackService.computeUserFeedbackForTalk(talk, currentUserEmail),
                     FEEDBACK_COMMENTS to feedbackService.computeUserCommentForTalk(talk, currentUserEmail),
