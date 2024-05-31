@@ -87,7 +87,17 @@
                 </div>
             {{/vimeoPlayer}}
             {{^vimeoPlayer}}
-                &#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{talk.video}}" target="_blank">{{#i18n}}talk.video.thevideo{{/i18n}}</a>
+                {{#youtubePlayer}}
+                <div class="mxt-wrapper--intrinsic mb-3">
+                    <iframe data-src="{{youtubePlayer}}"
+                            class="mxt-wrapper--video-player mxt-img--lazyload"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                {{/youtubePlayer}}
+                {{^youtubePlayer}}
+                    &#x25ba;&nbsp;{{#i18n}}talk.video.watch{{/i18n}} <a href="{{talk.video}}" target="_blank">{{#i18n}}talk.video.thevideo{{/i18n}}</a>
+                {{/youtubePlayer}}
             {{/vimeoPlayer}}
         {{/twitchPlayer}}
     {{/talk.video}}

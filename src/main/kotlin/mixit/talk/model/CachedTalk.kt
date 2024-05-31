@@ -10,8 +10,8 @@ import mixit.user.model.User
 import mixit.util.cache.Cached
 import mixit.util.formatTalkDate
 import mixit.util.formatTalkTime
+import mixit.util.toPlayerUrl
 import mixit.util.toSlug
-import mixit.util.toVimeoPlayerUrl
 
 data class CachedTalk(
     override val id: String,
@@ -68,8 +68,10 @@ data class CachedTalk(
         if (isRandomHidden()) "" else description,
         topic,
         video,
-        video.toVimeoPlayerUrl(),
         video2,
+        video?.contains("youtube") ?: false,
+        video?.contains("vimeo") ?: false,
+        video.toPlayerUrl(),
         "rooms.${room.name.lowercase()}",
         if (room.hasLink) "rooms.${room.name.lowercase()}.link" else null,
         start?.formatTalkTime(lang),
