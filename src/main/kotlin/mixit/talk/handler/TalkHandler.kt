@@ -152,6 +152,7 @@ class TalkHandler(
                         canDisplayAgenda = canDisplayAgenda || config.tabs == TalksTabs.Favorites
                     ),
                     TALKS to getTalkToDisplay(config, rooms, days, talks, canDisplayAgenda),
+                    "keynotes" to getKeynoteToDisplay(config, talks),
                     TITLE to title,
                     YEAR to config.year,
                     IMAGES to images,
@@ -191,9 +192,16 @@ class TalkHandler(
         } else if ((config.tabs == TalksTabs.Schedule || config.tabs == TalksTabs.Favorites) && canDisplayAgenda) {
             talksToDisplayOnAgenda(talks, rooms, days, config.req.language())
         } else if (config.tabs == TalksTabs.TalksWithVideo) {
-            talks
+            talks.filter { !it.format.isKeynote() }
         } else {
             talksToDisplayByDate(talks, days, config.req.language())
+        }
+
+    private fun getKeynoteToDisplay(config: TalkViewConfig, talks: List<TalkDto>): List<TalkDto> =
+        if (config.tabs == TalksTabs.TalksWithVideo) {
+            talks.filter { it.format.isKeynote() }
+        } else {
+            emptyList()
         }
 
     private suspend fun speakers(req: ServerRequest, year: Int): List<UserDto> =

@@ -2,6 +2,15 @@
 
 <div class="container-xxl">
     {{> talks-header}}
+
+    <h2>Keynotes</h2>
+
+    <div class="mxt-video--player-container pt-5">
+        {{#keynotes}}
+            {{>talk-video-viewer}}
+        {{/keynotes}}
+    </div>
+    <h2>Talks</h2>
     <div class="mxt-video--player-container pt-5">
         {{#talks}}
             {{>talk-video-viewer}}

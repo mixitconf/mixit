@@ -9,5 +9,8 @@ enum class TalkFormat(val duration: Int) {
     KEYNOTE_SURPRISE(25),
     CLOSING_SESSION(25),
     INTERVIEW(45),
-    ON_AIR(30),
+    ON_AIR(30);
+
+    fun isKeynote():Boolean =
+        this == KEYNOTE || this == KEYNOTE_SURPRISE || this == CLOSING_SESSION
 }
