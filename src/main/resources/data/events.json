@@ -2210,7 +2210,10 @@
             }
         ],
         "photoUrls": [],
-        "videoUrl": null,
+        "videoUrl": {
+            "name": "video",
+            "url": "https://youtu.be/s7_Gz2OScLk"
+        },
         "schedulingFileUrl": "https://drive.proton.me/urls/47C6FR914C#qan6woJ3O7Iy",
         "year": 2024,
         "streamingUrl": "https://www.youtube.com/embed/rgsI6DHJkWg?si=IyfMfcVQTxNMghH9"

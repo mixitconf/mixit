@@ -124,7 +124,7 @@
         "addedAt": "2024-04-24T16:23:55.378",
         "description": "",
         "topic": "tech",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=ZhkQak0utms",
         "video2": null,
         "room": "AMPHI1",
         "start": "2024-04-25T10:20:00",
@@ -138,7 +138,7 @@
         "format": "TALK",
         "event": "2024",
         "title": "Leadership \u00c9mergent: Jouons \u00e0 Faire \u00c9clore Notre Potentiel",
-        "summary": "Rejoignez Van Tang et Alexis Monville pour une exp\u00e9rience de conf\u00e9rence unique et vivifiante intitul\u00e9e &#34;Leadership \u00c9mergent: L&#39;Art de Faire \u00c9clore le Potentiel&#34;. Cette session interactive et profond\u00e9ment inspirante est con\u00e7ue pour \u00e9veiller, engager et \u00e9quiper les participants \u00e0 la fois intellectuellement, \u00e9motionnellement et physiquement.\r\n\r\nNotre objectif est de laisser chaque participant avec un sourire, une confiance renouvel\u00e9e en leurs capacit\u00e9s, et une passion ardente pour faire \u00e9merger du leadership autour d&#39;eux. Nous explorerons comment le leadership n&#39;est pas un r\u00f4le fixe, mais une invitation ouverte, permettant \u00e0 chacun de choisir son moment pour diriger ou soutenir.\r\n\r\n\u00c0 travers des activit\u00e9s interactives, des discussions en petits groupes et des mises en situation, nous aborderons des th\u00e8mes tels que l&#39;expression des d\u00e9fis souvent tus, la prise de d\u00e9cision face \u00e0 l&#39;inconfort, et l&#39;exploration des dynamiques de leadership. Une attention particuli\u00e8re sera accord\u00e9e \u00e0 la notion de temps et \u00e0 la mani\u00e8re dont le leadership peut \u00e9voluer et se transformer.\r\n\r\nNous concevons cette conf\u00e9rence pour qu\u2019elle soit une exp\u00e9rience inoubliable. Que vous soyez un leader \u00e9tabli ou que vous exploriez votre potentiel de leadership, cette session vous donnera les outils et la perspective n\u00e9cessaires pour exceller dans un monde en constante \u00e9volution.\r\n\r\nJoignez-vous \u00e0 nous pour une exploration transformative du leadership \u00e9mergent!\r\n",
+        "summary": "Rejoignez Van Tang et Alexis Monville pour une exp\u00e9rience de conf\u00e9rence unique et vivifiante intitul\u00e9e \"Leadership \u00c9mergent: L'Art de Faire \u00c9clore le Potentiel\". Cette session interactive et profond\u00e9ment inspirante est con\u00e7ue pour \u00e9veiller, engager et \u00e9quiper les participants \u00e0 la fois intellectuellement, \u00e9motionnellement et physiquement.\r\n\r\nNotre objectif est de laisser chaque participant avec un sourire, une confiance renouvel\u00e9e en leurs capacit\u00e9s, et une passion ardente pour faire \u00e9merger du leadership autour d'eux. Nous explorerons comment le leadership n'est pas un r\u00f4le fixe, mais une invitation ouverte, permettant \u00e0 chacun de choisir son moment pour diriger ou soutenir.\r\n\r\n\u00c0 travers des activit\u00e9s interactives, des discussions en petits groupes et des mises en situation, nous aborderons des th\u00e8mes tels que l'expression des d\u00e9fis souvent tus, la prise de d\u00e9cision face \u00e0 l'inconfort, et l'exploration des dynamiques de leadership. Une attention particuli\u00e8re sera accord\u00e9e \u00e0 la notion de temps et \u00e0 la mani\u00e8re dont le leadership peut \u00e9voluer et se transformer.\r\n\r\nNous concevons cette conf\u00e9rence pour qu\u2019elle soit une exp\u00e9rience inoubliable. Que vous soyez un leader \u00e9tabli ou que vous exploriez votre potentiel de leadership, cette session vous donnera les outils et la perspective n\u00e9cessaires pour exceller dans un monde en constante \u00e9volution.\r\n\r\nJoignez-vous \u00e0 nous pour une exploration transformative du leadership \u00e9mergent!\r\n",
         "speakerIds": [
             "alexismonville",
             "vtt2vtt2"
@@ -147,7 +147,7 @@
         "addedAt": "2024-04-24T16:23:55.378",
         "description": "",
         "topic": "team",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=kkuQP4UMcVE",
         "video2": null,
         "room": "AMPHI2",
         "start": "2024-04-25T10:20:00",
@@ -184,7 +184,7 @@
         "format": "TALK",
         "event": "2024",
         "title": "Num\u00e9rique Responsable en contexte humanitaire",
-        "summary": "Vous voulez savoir c&#39;est quoi le web dans des populations de pays dit &#34;pauvres&#34;. Comment se d\u00e9cide la conception de services web \u00e0 l&#39;internationale ? La maturit\u00e9 de l&#39;ONU sur les nouvelles technologies ? L&#39;utilisation du num\u00e9rique en situation d&#39;urgence ?\r\n\r\nC&#39;est parti pour une immersion en contexte humanitaire.\r\n\r\nJe vais faire un parall\u00e8le avec les obligations l\u00e9gales que nous avons en France (RGAA, RSE, REEN, AGEC\u2026) et la situation de diff\u00e9rents pays du monde o\u00f9 il n&#39;existe aucune loi sp\u00e9cifique.\r\n\r\nOn va voir quelles seraient les mani\u00e8res d&#39;aider des territoires dans lesquels il existe peu de comp\u00e9tence, peu d&#39;\u00e9quipement, peu de r\u00e9seau\u2026 pour poser simplement les enjeux r\u00e9els du Num\u00e9rique Responsable.\r\n\r\nNous verront s&#39;il est possible de mettre en place un indicateur de maturit\u00e9, \u00e0 travers un mix de tests manuels et automatis\u00e9s. Si finalement la question de l&#39;impact de nos services num\u00e9riques n&#39;est-il pas une question de posture.\r\n\r\nEt nous questionnerons l&#39;urgence pour savoir qu&#39;est-ce que notre responsabilit\u00e9 en tant que travailleurs du web. \r\n\r\n",
+        "summary": "Vous voulez savoir c'est quoi le web dans des populations de pays dit \"pauvres\". Comment se d\u00e9cide la conception de services web \u00e0 l'internationale ? La maturit\u00e9 de l'ONU sur les nouvelles technologies ? L'utilisation du num\u00e9rique en situation d'urgence ?\r\n\r\nC'est parti pour une immersion en contexte humanitaire.\r\n\r\nJe vais faire un parall\u00e8le avec les obligations l\u00e9gales que nous avons en France (RGAA, RSE, REEN, AGEC\u2026) et la situation de diff\u00e9rents pays du monde o\u00f9 il n'existe aucune loi sp\u00e9cifique.\r\n\r\nOn va voir quelles seraient les mani\u00e8res d'aider des territoires dans lesquels il existe peu de comp\u00e9tence, peu d'\u00e9quipement, peu de r\u00e9seau\u2026 pour poser simplement les enjeux r\u00e9els du Num\u00e9rique Responsable.\r\n\r\nNous verront s'il est possible de mettre en place un indicateur de maturit\u00e9, \u00e0 travers un mix de tests manuels et automatis\u00e9s. Si finalement la question de l'impact de nos services num\u00e9riques n'est-il pas une question de posture.\r\n\r\nEt nous questionnerons l'urgence pour savoir qu'est-ce que notre responsabilit\u00e9 en tant que travailleurs du web. \r\n\r\n",
         "speakerIds": [
             "bertrand.keller"
         ],
@@ -192,7 +192,7 @@
         "addedAt": "2024-04-24T16:23:55.378",
         "description": "",
         "topic": "ethics",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=zoDLayuICdE",
         "video2": null,
         "room": "ROOM2",
         "start": "2024-04-25T10:20:00",
@@ -205,8 +205,8 @@
     {
         "format": "TALK",
         "event": "2024",
-        "title": "Quand la cybers\u00e9curit\u00e9 n&#39;est pas qu&#39;une affaire de failles",
-        "summary": "La communaut\u00e9 des IKEA Hackers, vous connaissez ? Ce sont des personnes qui assemblent et transforment des meubles IKEA afin de cr\u00e9er de nouveaux meubles. Ils peuvent par exemple, partir d&#39;un meuble TV et avec quelques accessoires, le transformer en dressing avec penderie.\r\n\r\nEst ce que le meuble TV \u00e9tait mal con\u00e7u ? Non, il est tout \u00e0 fait adapt\u00e9 pour accueillir une t\u00e9l\u00e9vision et quelques accessoires comme une box Internet ou quelques bibelots. Ce n&#39;\u00e9tait pas une erreur de design en soi.\r\n\r\nQuand on pense cybers\u00e9curit\u00e9, on pense avant tout aux failles et aux d\u00e9fauts de conception. Mais construire une attaque, c&#39;est aussi savoir tirer parti de m\u00e9canismes pens\u00e9s pour remplir un objectif A, et les d\u00e9tourner pour remplir votre objectif B.\r\n\r\nExfiltration de donn\u00e9es, DNS rebinding, side-channel attacks... D\u00e9couvrons ensemble quelques-unes de ces techniques bas\u00e9es sur des objets et protocoles l\u00e9gitimes, au c\u0153ur de notre utilisation du num\u00e9rique.",
+        "title": "Quand la cybers\u00e9curit\u00e9 n'est pas qu'une affaire de failles",
+        "summary": "La communaut\u00e9 des IKEA Hackers, vous connaissez ? Ce sont des personnes qui assemblent et transforment des meubles IKEA afin de cr\u00e9er de nouveaux meubles. Ils peuvent par exemple, partir d'un meuble TV et avec quelques accessoires, le transformer en dressing avec penderie.\r\n\r\nEst ce que le meuble TV \u00e9tait mal con\u00e7u ? Non, il est tout \u00e0 fait adapt\u00e9 pour accueillir une t\u00e9l\u00e9vision et quelques accessoires comme une box Internet ou quelques bibelots. Ce n'\u00e9tait pas une erreur de design en soi.\r\n\r\nQuand on pense cybers\u00e9curit\u00e9, on pense avant tout aux failles et aux d\u00e9fauts de conception. Mais construire une attaque, c'est aussi savoir tirer parti de m\u00e9canismes pens\u00e9s pour remplir un objectif A, et les d\u00e9tourner pour remplir votre objectif B.\r\n\r\nExfiltration de donn\u00e9es, DNS rebinding, side-channel attacks... D\u00e9couvrons ensemble quelques-unes de ces techniques bas\u00e9es sur des objets et protocoles l\u00e9gitimes, au c\u0153ur de notre utilisation du num\u00e9rique.",
         "speakerIds": [
             "sonia.seddiki"
         ],
@@ -214,13 +214,13 @@
         "addedAt": "2024-04-24T16:23:55.379",
         "description": "",
         "topic": "tech",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=JCfktctD7Yg",
         "video2": null,
         "room": "ROOM5",
         "start": "2024-04-25T10:20:00",
         "end": "2024-04-25T11:05:00",
         "photoUrls": [],
-        "slug": "quand-la-cybersecurite-n-39-est-pas-qu-39-une-affaire-de-failles",
+        "slug": "quand-la-cybersecurite-n-est-pas-qu-une-affaire-de-failles",
         "level": "Beginner",
         "id": "609510"
     },
@@ -228,7 +228,7 @@
         "format": "TALK",
         "event": "2024",
         "title": "L\u2019IA et le handicap : progr\u00e8s ou exclusion ?",
-        "summary": "L\u2019Intelligence Artificielle (IA) fait beaucoup parler d\u2019elle avec l\u2019apparition de multiples outils bas\u00e9s sur l\u2019IA (par exemple : ChatGPT, DALL\u22c5E et Midjourney). Mais quand on est handicap\u00e9 ou en situation de handicap, nous change-t-elle r\u00e9ellement la vie ou au contraire nous isole-t-elle encore plus ? Est-ce que l\u2019\u00e9mergence de l\u2019IA r\u00e9volutionne notre accessibilit\u00e9 au quotidien ?\r\n\r\nNous vous expliquerons succinctement comment fonctionne la majorit\u00e9 des IA et pourquoi ces programmes peuvent impacter n\u00e9gativement nos vies. Mais tout n&#39;est pas noir, l&#39;intelligence artificielle a permis la cr\u00e9ation de nouveaux outils qui permettent plus d&#39;accessibilit\u00e9 et d&#39;inclusion des personnes handicap\u00e9es.\r\n\r\nToutes deux sourdes et d\u00e9veloppeuses, nous vous ferons part de nos exp\u00e9riences personnelles et professionnelles ainsi que des r\u00e9flexions et exemples concr\u00e8tes sur le sujet.",
+        "summary": "L\u2019Intelligence Artificielle (IA) fait beaucoup parler d\u2019elle avec l\u2019apparition de multiples outils bas\u00e9s sur l\u2019IA (par exemple : ChatGPT, DALL\u22c5E et Midjourney). Mais quand on est handicap\u00e9 ou en situation de handicap, nous change-t-elle r\u00e9ellement la vie ou au contraire nous isole-t-elle encore plus ? Est-ce que l\u2019\u00e9mergence de l\u2019IA r\u00e9volutionne notre accessibilit\u00e9 au quotidien ?\r\n\r\nNous vous expliquerons succinctement comment fonctionne la majorit\u00e9 des IA et pourquoi ces programmes peuvent impacter n\u00e9gativement nos vies. Mais tout n'est pas noir, l'intelligence artificielle a permis la cr\u00e9ation de nouveaux outils qui permettent plus d'accessibilit\u00e9 et d'inclusion des personnes handicap\u00e9es.\r\n\r\nToutes deux sourdes et d\u00e9veloppeuses, nous vous ferons part de nos exp\u00e9riences personnelles et professionnelles ainsi que des r\u00e9flexions et exemples concr\u00e8tes sur le sujet.",
         "speakerIds": [
             "7ab0cacd-d663-4b59-8a13-664ccc68476e",
             "emmanuelle-aboaf"
@@ -237,7 +237,7 @@
         "addedAt": "2024-04-24T16:23:55.378",
         "description": "",
         "topic": "ethics",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=mNB2czLkF-s",
         "video2": null,
         "room": "ROOM1",
         "start": "2024-04-25T10:20:00",
@@ -302,7 +302,7 @@
         "format": "TALK",
         "event": "2024",
         "title": "Et si on impl\u00e9mentait une Machine \u00e0 Etats from scratch pour aider la petite souris ?",
-        "summary": "Vous \u00eates-vous d\u00e9j\u00e0 perdu dans le code d\u2019un workflow complexe avec beaucoup de r\u00e8gles m\u00e9tier ? Entre les if-else un peu partout, les appels \u00e0 des micro-services internes, les sollicitations de services externes, les callbacks, les sauvegardes en base, les retours au front, on peut facilement se retrouver avec un code spaghetti !\r\n\r\nLe pattern machine \u00e0 \u00e9tats nous permet de cr\u00e9er un processus d\u00e9fini clairement \u00e0 partir de multiples \u00e9tapes. Ces \u00e9tapes sont effectu\u00e9es une \u00e0 une en fonction de l\u2019\u00e9tat dans lequel se trouve l&#39;objet qui parcourt le process.\r\n\r\nRejoignez-moi pendant 45 min pour construire une Machine \u00e0 Etat from scratch.\r\n\r\nLe use-case ? Aider la petite souris \u00e0 g\u00e9rer un workflow \u00e0 s\u2019en arracher les poils : collecte des dents, v\u00e9rification des caries, commande et r\u00e9ception de pi\u00e8ces \u00e0 la banque de France et l\u2019exp\u00e9dition sous l\u2019oreiller.\r\n\r\nAucun fromage, que du Java.",
+        "summary": "Vous \u00eates-vous d\u00e9j\u00e0 perdu dans le code d\u2019un workflow complexe avec beaucoup de r\u00e8gles m\u00e9tier ? Entre les if-else un peu partout, les appels \u00e0 des micro-services internes, les sollicitations de services externes, les callbacks, les sauvegardes en base, les retours au front, on peut facilement se retrouver avec un code spaghetti !\r\n\r\nLe pattern machine \u00e0 \u00e9tats nous permet de cr\u00e9er un processus d\u00e9fini clairement \u00e0 partir de multiples \u00e9tapes. Ces \u00e9tapes sont effectu\u00e9es une \u00e0 une en fonction de l\u2019\u00e9tat dans lequel se trouve l'objet qui parcourt le process.\r\n\r\nRejoignez-moi pendant 45 min pour construire une Machine \u00e0 Etat from scratch.\r\n\r\nLe use-case ? Aider la petite souris \u00e0 g\u00e9rer un workflow \u00e0 s\u2019en arracher les poils : collecte des dents, v\u00e9rification des caries, commande et r\u00e9ception de pi\u00e8ces \u00e0 la banque de France et l\u2019exp\u00e9dition sous l\u2019oreiller.\r\n\r\nAucun fromage, que du Java.",
         "speakerIds": [
             "llenet"
         ],
@@ -310,7 +310,7 @@
         "addedAt": "2024-04-24T16:23:55.38",
         "description": "",
         "topic": "tech",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=BlmaJO1YSaM",
         "video2": null,
         "room": "ROOM1",
         "start": "2024-04-25T11:30:00",
@@ -323,7 +323,7 @@
     {
         "format": "TALK",
         "event": "2024",
-        "title": "Squad all the things!! Retour d&#39;xp no bullshit sur la mise en oeuvre d&#39;\u00e9quipes pluridisciplinaires.",
+        "title": "Squad all the things!! Retour d'xp no bullshit sur la mise en oeuvre d'\u00e9quipes pluridisciplinaires.",
         "summary": "En gagnant en taille, nos \u00e9quipes d\u2019ing\u00e9nierie logicielle rencontrent souvent des difficult\u00e9s pour se distribuer efficacement le travail entre elles. Gr\u00e2ce ou \u00e0 cause de Spotify, les organisations \u00e0 base d\u2019\u00e9quipes pluridisciplinaires se sont majoritairement d\u00e9mocratis\u00e9es pour adresser ce probl\u00e8me. Il n\u2019en reste pas moins que basculer vers ce genre de mod\u00e8le n\u2019est pas si simple et ne s\u2019op\u00e8re rarement en une nuit. Cela tire en effet bon nombre de sujets \u00e9pineux autour de l\u2019engineering management, du leadership sur les stack technologiques, la juste r\u00e9partition des p\u00e9rim\u00e8tres fonctionnels ou encore du juste \u00e9quilibre entre priorit\u00e9s fonctionnelles et techniques.\r\n\r\nJe vous propose dans ce talk de partager mon retour d\u2019exp\u00e9riences sur les organisations des \u00e9quipes engineering dont j\u2019ai eu la responsabilit\u00e9 ou que j\u2019ai c\u00f4toy\u00e9 (Batch, Leboncoin, Videdressing\u2026) . De fa\u00e7on pragmatique et sans langue de bois, nous \u00e9voquerons ce qui a fonctionn\u00e9 mais aussi des points sur lesquels j\u2019ai \u00e9chou\u00e9 pour vous ! ",
         "speakerIds": [
             "herve"
@@ -332,13 +332,13 @@
         "addedAt": "2024-04-24T16:23:55.379",
         "description": "",
         "topic": "team",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=7ux16U07Its",
         "video2": null,
         "room": "ROOM2",
         "start": "2024-04-25T11:30:00",
         "end": "2024-04-25T12:15:00",
         "photoUrls": [],
-        "slug": "squad-all-the-things-retour-d-39-xp-no-bullshit-sur-la-mise-en-oeuvre-d-39-equipes-pluridisciplinaires-",
+        "slug": "squad-all-the-things-retour-d-xp-no-bullshit-sur-la-mise-en-oeuvre-d-equipes-pluridisciplinaires-",
         "level": "Intermediate",
         "id": "611900"
     },
@@ -346,7 +346,7 @@
         "format": "TALK",
         "event": "2024",
         "title": "Survivre dans la JS-jungle des outils de tests",
-        "summary": "En pleine JS-jungle, Jasmine tente de se frayer un Chai-min sous une atmosph\u00e8re S\u00e9l\u00e9nium. Son but : la fameuse pyramide de tests. Soudain, plus un Jest, Sinon c&#39;est le mauvais Karma ! Un Mocha venimeux lui barre la route... Pourtant, pas question de faire demi-tour Cypress du but !\r\n\r\nPlongeons-nous avec Jasmine dans cette JS-jungle afin de mieux comprendre cet environnement hostile. Ces outils de tests, \u00e0 quoi servent-ils donc tous ? Leur fonctionnement est-il identique ? A-t-on besoin de tout ? Quelle strat\u00e9gie adopter pour avoir un ensemble coh\u00e9rent et performant ? Comment \u00e9crire des tests de mani\u00e8re pertinente ?\r\n\r\nNous allons parler typologie d&#39;outils, types de tests, strat\u00e9gie de tests ainsi que tests utiles et robustes. Nous d\u00e9couvrirons aussi que l&#39;objectif de la bonne vieille pyramide n&#39;est peut \u00eatre pas si id\u00e9ale que cela...",
+        "summary": "En pleine JS-jungle, Jasmine tente de se frayer un Chai-min sous une atmosph\u00e8re S\u00e9l\u00e9nium. Son but : la fameuse pyramide de tests. Soudain, plus un Jest, Sinon c'est le mauvais Karma ! Un Mocha venimeux lui barre la route... Pourtant, pas question de faire demi-tour Cypress du but !\r\n\r\nPlongeons-nous avec Jasmine dans cette JS-jungle afin de mieux comprendre cet environnement hostile. Ces outils de tests, \u00e0 quoi servent-ils donc tous ? Leur fonctionnement est-il identique ? A-t-on besoin de tout ? Quelle strat\u00e9gie adopter pour avoir un ensemble coh\u00e9rent et performant ? Comment \u00e9crire des tests de mani\u00e8re pertinente ?\r\n\r\nNous allons parler typologie d'outils, types de tests, strat\u00e9gie de tests ainsi que tests utiles et robustes. Nous d\u00e9couvrirons aussi que l'objectif de la bonne vieille pyramide n'est peut \u00eatre pas si id\u00e9ale que cela...",
         "speakerIds": [
             "lise.quesnel"
         ],
@@ -354,7 +354,7 @@
         "addedAt": "2024-04-24T16:23:55.379",
         "description": "",
         "topic": "tech",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=OceViwCJUtg",
         "video2": null,
         "room": "AMPHI1",
         "start": "2024-04-25T11:30:00",
@@ -368,7 +368,7 @@
         "format": "TALK",
         "event": "2024",
         "title": "Framaspace : du (Next)cloud pour les petites associations et collectifs militants",
-        "summary": "Il y a 18 mois, l&#39;association Framasoft annon\u00e7ait un projet techniquement et politiquement ambitieux : Framaspace.\r\n\r\nFramaspace, c&#39;est un projet avec de multiples ambitions :\r\n- accro\u00eetre la notori\u00e9t\u00e9 du logiciel libre Nextcloud (solution de cloud collaboratif : fichiers, agendas, contacts, etc) en France et dans les territoires francophones ;\r\n- fournir jusqu&#39;\u00e0 10 000 instances Nextcloud, gratuitement, aux petites associations et collectifs militants, afin de leur permettre de &#34;sortir&#34; de Google Apps ou Office 365 ;\r\n- faciliter les pratiques collaboratives libres, \u00e0 la fois intra-associations et inter-associations, afin de renforcer la capacit\u00e9 et le pouvoir d&#39;agir de ces structures pour mieux faire face au monde actuel et pr\u00e9parer celui qui vient.\r\n\r\n1 000 instances Nextcloud plus tard, que s&#39;est-il pass\u00e9 depuis ? On en est-o\u00f9 ? Qu&#39;est-ce qui marche ? Qu&#39;est-ce qui ne marche pas ? Quel avenir pour le projet ?",
+        "summary": "Il y a 18 mois, l'association Framasoft annon\u00e7ait un projet techniquement et politiquement ambitieux : Framaspace.\r\n\r\nFramaspace, c'est un projet avec de multiples ambitions :\r\n- accro\u00eetre la notori\u00e9t\u00e9 du logiciel libre Nextcloud (solution de cloud collaboratif : fichiers, agendas, contacts, etc) en France et dans les territoires francophones ;\r\n- fournir jusqu'\u00e0 10 000 instances Nextcloud, gratuitement, aux petites associations et collectifs militants, afin de leur permettre de \"sortir\" de Google Apps ou Office 365 ;\r\n- faciliter les pratiques collaboratives libres, \u00e0 la fois intra-associations et inter-associations, afin de renforcer la capacit\u00e9 et le pouvoir d'agir de ces structures pour mieux faire face au monde actuel et pr\u00e9parer celui qui vient.\r\n\r\n1 000 instances Nextcloud plus tard, que s'est-il pass\u00e9 depuis ? On en est-o\u00f9 ? Qu'est-ce qui marche ? Qu'est-ce qui ne marche pas ? Quel avenir pour le projet ?",
         "speakerIds": [
             "pyg"
         ],
@@ -376,7 +376,7 @@
         "addedAt": "2024-04-24T16:23:55.38",
         "description": "",
         "topic": "ethics",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=mq0vCr2BoK8",
         "video2": null,
         "room": "ROOM5",
         "start": "2024-04-25T11:30:00",
@@ -390,7 +390,7 @@
         "format": "TALK",
         "event": "2024",
         "title": "A day in the life of a Quarkus developer",
-        "summary": "If you are a Java developer, chances are you\u2019ve already heard about Quarkus. You may have heard about the developer joy that Quarkus provides. But what exactly is it? How does it enhance your day-to-day tasks? What benefits and shortcuts does it offer for your work? These are the questions we will address in this talk.\r\n\r\nDuring this live-coded session, we will create a new Quarkus project and demonstrate how it can expedite the development of Java microservices by leveraging its multitude of out-of-the-box features. The session will be interactive, so if there is something specific you want to see, we will gladly demonstrate it. Our primary focus, however, will be showcasing typical user application development scenarios, including database integration, remote connections using both blocking and asynchronous APIs, and implementing security measures. Naturally, we cannot overlook the crucial aspects of packaging applications into containers and deploying them to the cloud.\r\n\r\nQuarkus is a framework that places developer productivity as a top priority, fostering a sense of joy throughout the development process. You will witness the remarkable things we can achieve with Quarkus within the given time. By the end of the session, you will truly grasp the essence of Quarkus&#39; development joy.",
+        "summary": "If you are a Java developer, chances are you\u2019ve already heard about Quarkus. You may have heard about the developer joy that Quarkus provides. But what exactly is it? How does it enhance your day-to-day tasks? What benefits and shortcuts does it offer for your work? These are the questions we will address in this talk.\r\n\r\nDuring this live-coded session, we will create a new Quarkus project and demonstrate how it can expedite the development of Java microservices by leveraging its multitude of out-of-the-box features. The session will be interactive, so if there is something specific you want to see, we will gladly demonstrate it. Our primary focus, however, will be showcasing typical user application development scenarios, including database integration, remote connections using both blocking and asynchronous APIs, and implementing security measures. Naturally, we cannot overlook the crucial aspects of packaging applications into containers and deploying them to the cloud.\r\n\r\nQuarkus is a framework that places developer productivity as a top priority, fostering a sense of joy throughout the development process. You will witness the remarkable things we can achieve with Quarkus within the given time. By the end of the session, you will truly grasp the essence of Quarkus' development joy.",
         "speakerIds": [
             "xstefank122"
         ],
@@ -398,7 +398,7 @@
         "addedAt": "2024-04-24T16:23:55.379",
         "description": "",
         "topic": "tech",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=4LJzhDTC4KM",
         "video2": null,
         "room": "AMPHI2",
         "start": "2024-04-25T11:30:00",
@@ -530,8 +530,8 @@
     {
         "format": "KEYNOTE",
         "event": "2024",
-        "title": "Ce que le nazisme dit du management. A propos de Libres d&#39;ob\u00e9ir (Gallimard, 2020)",
-        "summary": "Le plus grand th\u00e9oricien allemand du management, cr\u00e9ateur et directeur de la premi\u00e8re business school des pays de langue germanique est un g\u00e9n\u00e9ral de la SS. Tout interroge dans son parcours : comment a-t-il pu faire, apr\u00e8s 1945, une seconde carri\u00e8re aussi brillante ? Que signifie le caract\u00e8re lib\u00e9ral de son mod\u00e8le manag\u00e9rial, la &#34;d\u00e9l\u00e9gation de responsabilit\u00e9&#34; ? Comment interpr\u00e9ter le fait que ce mod\u00e8le, lib\u00e9ral et &#34;bienveillant&#34;, corresponde en r\u00e9alit\u00e9 ad\u00e9quatement \u00e0 la conception nazie du travail ? Quels liens cette conception a-t-elle avec ce que les nazis pensaient de &#34;l&#39;administration&#34; (\u00e0 liquider) et de l&#39;Etat (\u00e0 supprimer), au profit des &#34;agences&#34;, qu&#39;il convenait au contraire de multiplier ? On le voit, penser le cas de ce SS manager interroge sur le III\u00e8 Reich et son fonctionnement, bien \u00e9loign\u00e9 de ce que l&#39;on croyait en savoir, et interroge aussi sur notre temps. ",
+        "title": "Ce que le nazisme dit du management. A propos de Libres d'ob\u00e9ir (Gallimard, 2020)",
+        "summary": "Le plus grand th\u00e9oricien allemand du management, cr\u00e9ateur et directeur de la premi\u00e8re business school des pays de langue germanique est un g\u00e9n\u00e9ral de la SS. Tout interroge dans son parcours : comment a-t-il pu faire, apr\u00e8s 1945, une seconde carri\u00e8re aussi brillante ? Que signifie le caract\u00e8re lib\u00e9ral de son mod\u00e8le manag\u00e9rial, la \"d\u00e9l\u00e9gation de responsabilit\u00e9\" ? Comment interpr\u00e9ter le fait que ce mod\u00e8le, lib\u00e9ral et \"bienveillant\", corresponde en r\u00e9alit\u00e9 ad\u00e9quatement \u00e0 la conception nazie du travail ? Quels liens cette conception a-t-elle avec ce que les nazis pensaient de \"l'administration\" (\u00e0 liquider) et de l'Etat (\u00e0 supprimer), au profit des \"agences\", qu'il convenait au contraire de multiplier ? On le voit, penser le cas de ce SS manager interroge sur le III\u00e8 Reich et son fonctionnement, bien \u00e9loign\u00e9 de ce que l'on croyait en savoir, et interroge aussi sur notre temps. ",
         "speakerIds": [
             "5025955e-d202-462e-8a01-5a10ee9a054e"
         ],
@@ -539,13 +539,13 @@
         "addedAt": "2024-04-24T16:23:55.381",
         "description": "",
         "topic": "ethics",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=JQm6_WoCbuI",
         "video2": null,
         "room": "AMPHI1",
         "start": "2024-04-25T14:00:00",
         "end": "2024-04-25T14:30:00",
         "photoUrls": [],
-        "slug": "ce-que-le-nazisme-dit-du-management-a-propos-de-libres-d-39-obeir-gallimard-2020-",
+        "slug": "ce-que-le-nazisme-dit-du-management-a-propos-de-libres-d-obeir-gallimard-2020-",
         "level": "Beginner",
         "id": "622656"
     },
@@ -583,7 +583,7 @@
         "addedAt": "2024-04-24T16:23:55.381",
         "description": "",
         "topic": "tech",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=zImi2Kn1-64",
         "video2": null,
         "room": "AMPHI1",
         "start": "2024-04-25T14:40:00",
@@ -596,8 +596,8 @@
     {
         "format": "TALK",
         "event": "2024",
-        "title": "Redonner de l&#39;envergure au Scrum Master",
-        "summary": "Depuis de nombreuses ann\u00e9es, le r\u00f4le de Scrum Master est r\u00e9guli\u00e8rement vu, amen\u00e9 (et document\u00e9 par les agilistes) comme un r\u00f4le de facilitateur, de gentil GO, de &#34;gardien&#34; des pratiques agiles.\r\n\r\n\r\nDes fois moqu\u00e9 et/ou d\u00e9cr\u00e9dibilis\u00e9, le Scrum Master peine - contrairement au Product Owner - \u00e0 trouver sa l\u00e9gitimit\u00e9 au sein des organisations. Et les organisation ne l&#39;aident pas :\r\n\r\n\r\n    Quand vous recrutez un Scrum Master, savez-vous exactement ce que vous pouvez en attendre ?\r\n    Savez-vous quelles sont les qualit\u00e9s et comp\u00e9tences requises?\r\n    Savez-vous quelles missions vous pouvez lui confier et attendre de lui/d&#39;elle?\r\n\r\n\r\nIl est temps de (r\u00e9)\u00e9valuer nos attentes envers ce r\u00f4le, de comprendre l&#39;impact qu&#39;il peut avoir dans le quotidien d&#39;une \u00e9quipe, dans le delivery des produits sur lesquels l&#39;\u00e9quipe travaille et de mani\u00e8re plus g\u00e9n\u00e9rale sur l&#39;organisation.",
+        "title": "Redonner de l'envergure au Scrum Master",
+        "summary": "Depuis de nombreuses ann\u00e9es, le r\u00f4le de Scrum Master est r\u00e9guli\u00e8rement vu, amen\u00e9 (et document\u00e9 par les agilistes) comme un r\u00f4le de facilitateur, de gentil GO, de \"gardien\" des pratiques agiles.\r\n\r\n\r\nDes fois moqu\u00e9 et/ou d\u00e9cr\u00e9dibilis\u00e9, le Scrum Master peine - contrairement au Product Owner - \u00e0 trouver sa l\u00e9gitimit\u00e9 au sein des organisations. Et les organisation ne l'aident pas :\r\n\r\n\r\n    Quand vous recrutez un Scrum Master, savez-vous exactement ce que vous pouvez en attendre ?\r\n    Savez-vous quelles sont les qualit\u00e9s et comp\u00e9tences requises?\r\n    Savez-vous quelles missions vous pouvez lui confier et attendre de lui/d'elle?\r\n\r\n\r\nIl est temps de (r\u00e9)\u00e9valuer nos attentes envers ce r\u00f4le, de comprendre l'impact qu'il peut avoir dans le quotidien d'une \u00e9quipe, dans le delivery des produits sur lesquels l'\u00e9quipe travaille et de mani\u00e8re plus g\u00e9n\u00e9rale sur l'organisation.",
         "speakerIds": [
             "803fe423-1142-4448-9699-156cb9075dd7",
             "celine"
@@ -606,13 +606,13 @@
         "addedAt": "2024-04-24T16:23:55.381",
         "description": "",
         "topic": "team",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=M7Nqz7evsSA",
         "video2": null,
         "room": "ROOM5",
         "start": "2024-04-25T14:40:00",
         "end": "2024-04-25T15:25:00",
         "photoUrls": [],
-        "slug": "redonner-de-l-39-envergure-au-scrum-master",
+        "slug": "redonner-de-l-envergure-au-scrum-master",
         "level": "Intermediate",
         "id": "612165"
     },
@@ -620,7 +620,7 @@
         "format": "TALK",
         "event": "2024",
         "title": "S\u00e9curiser votre cluster Kubernetes : la recette pour r\u00e9ussir, \u00e9tape par \u00e9tape !",
-        "summary": "Aujourd&#39;hui, apr\u00e8s plusieurs ann\u00e9es d&#39;existence, une communaut\u00e9 extr\u00eamement active et un \u00e9cosyst\u00e8me ultra dynamique, Kubernetes s&#39;est impos\u00e9 comme le standard de facto dans le domaine de l&#39;orchestration de conteneurs. Gr\u00e2ce aux nombreuses offres manag\u00e9es, il n&#39;a jamais \u00e9t\u00e9 aussi facile et \u00e0 la port\u00e9e de tout type de profil, de disposer d&#39;un cluster Kubernetes pr\u00eat \u00e0 l&#39;emploi. \r\n\r\nCependant, cette simplicit\u00e9 \u00e0 en disposer fait que le sujet de la s\u00e9curit\u00e9 dans Kubernetes est laiss\u00e9 souvent \u00e0 plus tard, voire n\u00e9glig\u00e9. Exposant ainsi les entreprises \u00e0 des risques importants.\r\n\r\nDurant ce talk, je vous montrerai, \u00e9tape par \u00e9tape, comment s\u00e9curiser votre cluster Kubernetes pour gagner en s\u00e9r\u00e9nit\u00e9 et en fiabilit\u00e9.",
+        "summary": "Aujourd'hui, apr\u00e8s plusieurs ann\u00e9es d'existence, une communaut\u00e9 extr\u00eamement active et un \u00e9cosyst\u00e8me ultra dynamique, Kubernetes s'est impos\u00e9 comme le standard de facto dans le domaine de l'orchestration de conteneurs. Gr\u00e2ce aux nombreuses offres manag\u00e9es, il n'a jamais \u00e9t\u00e9 aussi facile et \u00e0 la port\u00e9e de tout type de profil, de disposer d'un cluster Kubernetes pr\u00eat \u00e0 l'emploi. \r\n\r\nCependant, cette simplicit\u00e9 \u00e0 en disposer fait que le sujet de la s\u00e9curit\u00e9 dans Kubernetes est laiss\u00e9 souvent \u00e0 plus tard, voire n\u00e9glig\u00e9. Exposant ainsi les entreprises \u00e0 des risques importants.\r\n\r\nDurant ce talk, je vous montrerai, \u00e9tape par \u00e9tape, comment s\u00e9curiser votre cluster Kubernetes pour gagner en s\u00e9r\u00e9nit\u00e9 et en fiabilit\u00e9.",
         "speakerIds": [
             "katia"
         ],
@@ -628,7 +628,7 @@
         "addedAt": "2024-04-24T16:23:55.381",
         "description": "",
         "topic": "tech",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=5D2nwaHmmUc",
         "video2": null,
         "room": "AMPHI2",
         "start": "2024-04-25T14:40:00",
@@ -687,7 +687,7 @@
         "format": "TALK",
         "event": "2024",
         "title": "D\u00e9marrer la plus sociale des start-up...",
-        "summary": "...ou comment ouvrir une section syndicale dans la French Tech  (-;\r\n\r\nDans un milieu professionnel qualifiable de d\u00e9sert syndical, nous vous proposons de partager nos exp\u00e9riences de section syndicale. De la cr\u00e9ation du collectif aux \u00e9lections du CSE en passant par les relations avec d&#39;autres syndicats et la direction : une r\u00e9trospective pour vous donner une belle vue d&#39;ensemble!\r\n\r\nNous reviendrons sur qui a fonctionn\u00e9 (ou pas) dans nos exp\u00e9riences syndicales dans des entreprises fran\u00e7aises de la tech.\r\n\r\nCette pr\u00e9sentation se veut accessible m\u00eame aux plus novices en la mati\u00e8re et ne sera pas la promotion d&#39;une organisation syndicale en particulier. On esp\u00e8re juste vous donner l&#39;envie de sauter le pas avec vos coll\u00e8gues.",
+        "summary": "...ou comment ouvrir une section syndicale dans la French Tech  (-;\r\n\r\nDans un milieu professionnel qualifiable de d\u00e9sert syndical, nous vous proposons de partager nos exp\u00e9riences de section syndicale. De la cr\u00e9ation du collectif aux \u00e9lections du CSE en passant par les relations avec d'autres syndicats et la direction : une r\u00e9trospective pour vous donner une belle vue d'ensemble!\r\n\r\nNous reviendrons sur qui a fonctionn\u00e9 (ou pas) dans nos exp\u00e9riences syndicales dans des entreprises fran\u00e7aises de la tech.\r\n\r\nCette pr\u00e9sentation se veut accessible m\u00eame aux plus novices en la mati\u00e8re et ne sera pas la promotion d'une organisation syndicale en particulier. On esp\u00e8re juste vous donner l'envie de sauter le pas avec vos coll\u00e8gues.",
         "speakerIds": [
             "431a0039-9160-4e34-81ee-7888dac21d27",
             "bd3298b6-2b7f-49b3-836e-7176ac9b4c0a"
@@ -696,7 +696,7 @@
         "addedAt": "2024-04-24T16:23:55.381",
         "description": "",
         "topic": "aliens",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=rXey2dOWWKM",
         "video2": null,
         "room": "ROOM1",
         "start": "2024-04-25T14:40:00",
@@ -759,8 +759,8 @@
     {
         "format": "LIGHTNING_TALK",
         "event": "2024",
-        "title": "50 000 sites publics, l&#39;accessibilit\u00e9, et moi, et moi, \u00e9moi",
-        "summary": "18 mois d&#39;\u00e9tude et recherche nous ont permis de construire l&#39;Observatoire de l&#39;accessibilit\u00e9, un logiciel libre permettant de mesurer r\u00e9guli\u00e8rement l&#39;application du RGAA (R\u00e9f\u00e9rentiel G\u00e9n\u00e9ral d&#39;Am\u00e9lioration de l&#39;Accessibilit\u00e9).\r\n\r\nUne premi\u00e8re analyse de 50000 sites web du secteur public a \u00e9t\u00e9 op\u00e9r\u00e9e. Nous proposons un regard objectif et quantifi\u00e9 sur cette masse de donn\u00e9es colossale publi\u00e9e en open data, avec son lot d&#39;interrogations :\r\n\r\n- Est-ce que les villes sont plus accessibles que les minist\u00e8res ? \r\n- Les communes dont la population est plus \u00e2g\u00e9e que la moyenne ont-elles une meilleure accessibilit\u00e9 ? \r\n- Qui porte la charge de la responsabilit\u00e9 : prestataires ? acheteurs publics ? Associations du handicap ?",
+        "title": "50 000 sites publics, l'accessibilit\u00e9, et moi, et moi, \u00e9moi",
+        "summary": "18 mois d'\u00e9tude et recherche nous ont permis de construire l'Observatoire de l'accessibilit\u00e9, un logiciel libre permettant de mesurer r\u00e9guli\u00e8rement l'application du RGAA (R\u00e9f\u00e9rentiel G\u00e9n\u00e9ral d'Am\u00e9lioration de l'Accessibilit\u00e9).\r\n\r\nUne premi\u00e8re analyse de 50000 sites web du secteur public a \u00e9t\u00e9 op\u00e9r\u00e9e. Nous proposons un regard objectif et quantifi\u00e9 sur cette masse de donn\u00e9es colossale publi\u00e9e en open data, avec son lot d'interrogations :\r\n\r\n- Est-ce que les villes sont plus accessibles que les minist\u00e8res ? \r\n- Les communes dont la population est plus \u00e2g\u00e9e que la moyenne ont-elles une meilleure accessibilit\u00e9 ? \r\n- Qui porte la charge de la responsabilit\u00e9 : prestataires ? acheteurs publics ? Associations du handicap ?",
         "speakerIds": [
             "matthieu-faure"
         ],
@@ -768,13 +768,13 @@
         "addedAt": "2024-04-24T16:23:55.382",
         "description": "",
         "topic": "ethics",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=hl5D9Xg1uT8",
         "video2": null,
         "room": "ROOM2",
         "start": "2024-04-25T15:50:00",
         "end": "2024-04-25T16:10:00",
         "photoUrls": [],
-        "slug": "50-000-sites-publics-l-39-accessibilite-et-moi-et-moi-emoi",
+        "slug": "50-000-sites-publics-l-accessibilite-et-moi-et-moi-emoi",
         "level": "Intermediate",
         "id": "610061"
     },
@@ -790,7 +790,7 @@
         "addedAt": "2024-04-24T16:23:55.382",
         "description": "",
         "topic": "tech",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=tR16nrXcpTY",
         "video2": null,
         "room": "AMPHI1",
         "start": "2024-04-25T15:50:00",
@@ -803,8 +803,8 @@
     {
         "format": "LIGHTNING_TALK",
         "event": "2024",
-        "title": "Spring Boot d\u00e9voil\u00e9 : Exploration des rouages internes d&#39;un projet open source",
-        "summary": "Au cours de cette session, nous d\u00e9voilerons les dynamiques en coulisses qui contribuent \u00e0 la vitalit\u00e9 du projet, notamment son organisation interne, sa collaboration avec les contributeurs et les subtilit\u00e9s de la gestion des versions.\r\n\r\nAcqu\u00e9rez une compr\u00e9hension approfondie de la mani\u00e8re dont l&#39;\u00e9quipe Spring Boot structure efficacement son travail, interagit avec une communaut\u00e9 diversifi\u00e9e de contributeurs et aborde les complexit\u00e9s de la maintenance d&#39;une initiative open source \u00e0 fort impact. De la planification initiale \u00e0 la sortie finale, nous diss\u00e9querons les pratiques et les outils qui jouent un r\u00f4le essentiel dans le succ\u00e8s continu du projet.\r\n\r\nQue vous soyez un contributeur chevronn\u00e9 ou simplement curieux des m\u00e9canismes internes des projets open source, cette pr\u00e9sentation offre des perspectives pr\u00e9cieuses sur les strat\u00e9gies qui stimulent Spring Boot. Rejoignez-nous pour une exploration d\u00e9taill\u00e9e des coulisses de Spring Boot et d\u00e9couvrez des pratiques susceptibles d&#39;\u00e9lever vos propres initiatives open source.",
+        "title": "Spring Boot d\u00e9voil\u00e9 : Exploration des rouages internes d'un projet open source",
+        "summary": "Au cours de cette session, nous d\u00e9voilerons les dynamiques en coulisses qui contribuent \u00e0 la vitalit\u00e9 du projet, notamment son organisation interne, sa collaboration avec les contributeurs et les subtilit\u00e9s de la gestion des versions.\r\n\r\nAcqu\u00e9rez une compr\u00e9hension approfondie de la mani\u00e8re dont l'\u00e9quipe Spring Boot structure efficacement son travail, interagit avec une communaut\u00e9 diversifi\u00e9e de contributeurs et aborde les complexit\u00e9s de la maintenance d'une initiative open source \u00e0 fort impact. De la planification initiale \u00e0 la sortie finale, nous diss\u00e9querons les pratiques et les outils qui jouent un r\u00f4le essentiel dans le succ\u00e8s continu du projet.\r\n\r\nQue vous soyez un contributeur chevronn\u00e9 ou simplement curieux des m\u00e9canismes internes des projets open source, cette pr\u00e9sentation offre des perspectives pr\u00e9cieuses sur les strat\u00e9gies qui stimulent Spring Boot. Rejoignez-nous pour une exploration d\u00e9taill\u00e9e des coulisses de Spring Boot et d\u00e9couvrez des pratiques susceptibles d'\u00e9lever vos propres initiatives open source.",
         "speakerIds": [
             "snicoll"
         ],
@@ -812,13 +812,13 @@
         "addedAt": "2024-04-24T16:23:55.382",
         "description": "",
         "topic": "team",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=txjItzeZpTk",
         "video2": null,
         "room": "AMPHI2",
         "start": "2024-04-25T15:50:00",
         "end": "2024-04-25T16:10:00",
         "photoUrls": [],
-        "slug": "spring-boot-devoile-exploration-des-rouages-internes-d-39-un-projet-open-source",
+        "slug": "spring-boot-devoile-exploration-des-rouages-internes-d-un-projet-open-source",
         "level": "Intermediate",
         "id": "594797"
     },
@@ -826,7 +826,7 @@
         "format": "LIGHTNING_TALK",
         "event": "2024",
         "title": "La grande absente : la communaut\u00e9 trans dans nos produits digitaux",
-        "summary": "",
+        "summary": "Nos produits num\u00e9riques affectent la vie et la perception des vrais gens. Si nos produits ne respectent pas la diversit\u00e9 de nos utilisateurs, alors on a consciemment choisi d'oublier quelques couleurs de l'arc en ciel de notre soci\u00e9t\u00e9. Et si on s'alliait pour plus d'inclusion dans nos designs ?\r\n\r\n",
         "speakerIds": [
             "chris.depaola.toru"
         ],
@@ -834,7 +834,7 @@
         "addedAt": "2024-04-24T16:23:55.382",
         "description": "",
         "topic": "ethics",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=4w1SHoLX3Y8",
         "video2": null,
         "room": "ROOM1",
         "start": "2024-04-25T15:50:00",
@@ -848,7 +848,7 @@
         "format": "LIGHTNING_TALK",
         "event": "2024",
         "title": "Git, devenir le chouchou de son reviewer",
-        "summary": "Vos revues de code prennent du temps \u00e0 \u00eatre trait\u00e9es et laissent passer des bugs?\r\n\r\nLa revue prend du temps non n\u00e9gligeable dans nos cycles de d\u00e9veloppement. Et, bien qu&#39;il existe de nombreux articles et vid\u00e9os sur la fa\u00e7on de mener une revue de code, la question de l\u2019organisation et de la pr\u00e9sentation des commits est souvent n\u00e9glig\u00e9e. \r\nNous parlerons donc de cette phase pr\u00e9liminaire \u00e0 la revue pour mettre en lumi\u00e8re quelques pi\u00e8ges \u00e0 \u00e9viter et des m\u00e9canismes pour faciliter la relecture comme ceux mis en avant par Alberto Bacchelli dans son \u00e9tude How code review works (and doesn&#39;t) in the real world.\r\n\r\nVous apprendrez \u00e0 travailler en amont sur vos commits pour les rendre plus pr\u00e9sentables en utilisant git au-del\u00e0 du simple pull-push. Ainsi, vos propositions de MR feront de vous le\u00b7la chouchou de votre relecteur\u00b7rice.",
+        "summary": "Vos revues de code prennent du temps \u00e0 \u00eatre trait\u00e9es et laissent passer des bugs?\r\n\r\nLa revue prend du temps non n\u00e9gligeable dans nos cycles de d\u00e9veloppement. Et, bien qu'il existe de nombreux articles et vid\u00e9os sur la fa\u00e7on de mener une revue de code, la question de l\u2019organisation et de la pr\u00e9sentation des commits est souvent n\u00e9glig\u00e9e. \r\nNous parlerons donc de cette phase pr\u00e9liminaire \u00e0 la revue pour mettre en lumi\u00e8re quelques pi\u00e8ges \u00e0 \u00e9viter et des m\u00e9canismes pour faciliter la relecture comme ceux mis en avant par Alberto Bacchelli dans son \u00e9tude How code review works (and doesn't) in the real world.\r\n\r\nVous apprendrez \u00e0 travailler en amont sur vos commits pour les rendre plus pr\u00e9sentables en utilisant git au-del\u00e0 du simple pull-push. Ainsi, vos propositions de MR feront de vous le\u00b7la chouchou de votre relecteur\u00b7rice.",
         "speakerIds": [
             "490b9dd2-06b4-4fab-a521-4a2ad2e8cc63"
         ],
@@ -856,7 +856,7 @@
         "addedAt": "2024-04-24T16:23:55.382",
         "description": "",
         "topic": "tech",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=7aqy5j9bP38",
         "video2": null,
         "room": "ROOM5",
         "start": "2024-04-25T15:50:00",
@@ -923,7 +923,7 @@
         "format": "LIGHTNING_TALK",
         "event": "2024",
         "title": "Assistants vocaux inclusifs : le d\u00e9fi de la neutralit\u00e9 de genre",
-        "summary": "Cette pr\u00e9sentation explorera l&#39;innovation et les d\u00e9fis li\u00e9s \u00e0 la cr\u00e9ation de voix neutres en genre (ni masculine ni f\u00e9minine) pour les assistants vocaux. \r\nNous explorerons comment la neutralit\u00e9 de genre peut transformer notre interaction avec la technologie et favoriser une plus grande inclusivit\u00e9. L&#39;accent sera mis sur l&#39;importance de cette \u00e9volution dans un contexte technologique en rapide \u00e9volution, o\u00f9 la repr\u00e9sentation et l&#39;inclusivit\u00e9 deviennent des enjeux cruciaux.",
+        "summary": "Cette pr\u00e9sentation explorera l'innovation et les d\u00e9fis li\u00e9s \u00e0 la cr\u00e9ation de voix neutres en genre (ni masculine ni f\u00e9minine) pour les assistants vocaux. \r\nNous explorerons comment la neutralit\u00e9 de genre peut transformer notre interaction avec la technologie et favoriser une plus grande inclusivit\u00e9. L'accent sera mis sur l'importance de cette \u00e9volution dans un contexte technologique en rapide \u00e9volution, o\u00f9 la repr\u00e9sentation et l'inclusivit\u00e9 deviennent des enjeux cruciaux.",
         "speakerIds": [
             "elodie-oudot"
         ],
@@ -931,7 +931,7 @@
         "addedAt": "2024-04-24T16:23:55.383",
         "description": "",
         "topic": "design",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=EYPB4_JDp_A",
         "video2": null,
         "room": "AMPHI2",
         "start": "2024-04-25T16:30:00",
@@ -945,7 +945,7 @@
         "format": "LIGHTNING_TALK",
         "event": "2024",
         "title": "Recruter avec amour",
-        "summary": "Recruter c&#39;est pas compliqu\u00e9 : on attend de quelqu&#39;un\u00b7e des comp\u00e9tences \u2014techniques principalement\u2014 avec un certain niveau d&#39;aisance \u00e0 les utiliser, \u00e0 un certain prix.\r\n\r\nEnfin, la maitrise, l&#39;exp\u00e9rience et le salaire, c&#39;est de l&#39;ordre du &#34;pas trop&#34; ni du&#34;pas assez&#34;. Ou des &#34;pas comme ceci&#34; et des &#34;plut\u00f4t comme \u00e7a&#34;. Les \u00e9vidences.\r\n\r\nEt si on cherchait plut\u00f4t \u00e0 se\u2026 rencontrer ? C&#39;est-\u00e0-dire \u00e0 \u00e9crire une &#34;proposition&#34; plut\u00f4t qu&#39;une &#34;annonce&#34;, \u00e0 se poser des &#34;questions&#34; plut\u00f4t que d&#39;attendre des &#34;bonnes r\u00e9ponses&#34;, \u00e0 construire une confiance mutuelle plut\u00f4t que d&#39;attendre des signes de conformit\u00e9 ?\r\n\r\nLe recrutement serait d\u00e9j\u00e0 un espace-temps de travail commun : celui de se proposer une mani\u00e8re de faire \u00e9quipe alors qu&#39;on ne se connait pas, un premier \u00e9change sur nos mani\u00e8res de fonctionner et un &#34;oui&#34; explicite \u00e0 l&#39;am\u00e9lioration de notre relation de travail comme objectif principal, comme co-responsabilit\u00e9 partag\u00e9e.",
+        "summary": "Recruter c'est pas compliqu\u00e9 : on attend de quelqu'un\u00b7e des comp\u00e9tences \u2014techniques principalement\u2014 avec un certain niveau d'aisance \u00e0 les utiliser, \u00e0 un certain prix.\r\n\r\nEnfin, la maitrise, l'exp\u00e9rience et le salaire, c'est de l'ordre du \"pas trop\" ni du\"pas assez\". Ou des \"pas comme ceci\" et des \"plut\u00f4t comme \u00e7a\". Les \u00e9vidences.\r\n\r\nEt si on cherchait plut\u00f4t \u00e0 se\u2026 rencontrer ? C'est-\u00e0-dire \u00e0 \u00e9crire une \"proposition\" plut\u00f4t qu'une \"annonce\", \u00e0 se poser des \"questions\" plut\u00f4t que d'attendre des \"bonnes r\u00e9ponses\", \u00e0 construire une confiance mutuelle plut\u00f4t que d'attendre des signes de conformit\u00e9 ?\r\n\r\nLe recrutement serait d\u00e9j\u00e0 un espace-temps de travail commun : celui de se proposer une mani\u00e8re de faire \u00e9quipe alors qu'on ne se connait pas, un premier \u00e9change sur nos mani\u00e8res de fonctionner et un \"oui\" explicite \u00e0 l'am\u00e9lioration de notre relation de travail comme objectif principal, comme co-responsabilit\u00e9 partag\u00e9e.",
         "speakerIds": [
             "thomas.parisot"
         ],
@@ -953,7 +953,7 @@
         "addedAt": "2024-04-24T16:23:55.383",
         "description": "",
         "topic": "team",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=uVS1mDwDFJk",
         "video2": null,
         "room": "ROOM1",
         "start": "2024-04-25T16:30:00",
@@ -975,7 +975,7 @@
         "addedAt": "2024-04-24T16:23:55.383",
         "description": "",
         "topic": "ethics",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=cHk__ueb3pc",
         "video2": null,
         "room": "AMPHI1",
         "start": "2024-04-25T16:30:00",
@@ -997,7 +997,7 @@
         "addedAt": "2024-04-24T16:23:55.383",
         "description": "",
         "topic": "tech",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=JEN7TBo2scI",
         "video2": null,
         "room": "ROOM2",
         "start": "2024-04-25T16:30:00",
@@ -1011,7 +1011,7 @@
         "format": "LIGHTNING_TALK",
         "event": "2024",
         "title": "Objectif Jetpack Compose \ud83d\ude80",
-        "summary": "Vous en avez marre de d\u00e9velopper vos interfaces Android tant bien que mal en XML ? Vous avez toujours r\u00eav\u00e9 de faire du d\u00e9veloppement Android aussi facilement qu&#39;en React ou en Flutter ? C&#39;est maintenant possible avec Jetpack Compose ! \ud83d\udce6\r\n\r\nEnsemble, partons \u00e0 la d\u00e9couverte de l&#39;univers incroyable du d\u00e9veloppement Android. \ud83e\udd16\r\n\r\nDurant ce voyage, nous observerons l&#39;\u00e9volution d&#39;Android au cours du temps, jusqu&#39;\u00e0 la naissance de Jetpack Compose. Nous en apprendrons plus sur ce nouveau kit d&#39;outils bas\u00e9 sur la composition qui chamboule notre mani\u00e8re de concevoir nos applications mobiles Android.\r\n\r\nAlors, par\u00e9s au d\u00e9collage ? \ud83d\ude80",
+        "summary": "Vous en avez marre de d\u00e9velopper vos interfaces Android tant bien que mal en XML ? Vous avez toujours r\u00eav\u00e9 de faire du d\u00e9veloppement Android aussi facilement qu'en React ou en Flutter ? C'est maintenant possible avec Jetpack Compose ! \ud83d\udce6\r\n\r\nEnsemble, partons \u00e0 la d\u00e9couverte de l'univers incroyable du d\u00e9veloppement Android. \ud83e\udd16\r\n\r\nDurant ce voyage, nous observerons l'\u00e9volution d'Android au cours du temps, jusqu'\u00e0 la naissance de Jetpack Compose. Nous en apprendrons plus sur ce nouveau kit d'outils bas\u00e9 sur la composition qui chamboule notre mani\u00e8re de concevoir nos applications mobiles Android.\r\n\r\nAlors, par\u00e9s au d\u00e9collage ? \ud83d\ude80",
         "speakerIds": [
             "039f7151-c8b7-49e9-af49-35a93f8bdcd8"
         ],
@@ -1019,7 +1019,7 @@
         "addedAt": "2024-04-24T16:23:55.383",
         "description": "",
         "topic": "tech",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=dQWdgcNTy7o",
         "video2": null,
         "room": "ROOM5",
         "start": "2024-04-25T16:30:00",
@@ -1033,7 +1033,7 @@
         "format": "KEYNOTE",
         "event": "2024",
         "title": "Comment Bitcoin et les cryptos ont envo\u00fbt\u00e9 la plan\u00e8te ?",
-        "summary": "Que le march\u00e9 monte ou se crashe. Que les esprits s&#39;enflamment ou se lamentent, les cryptos ne laissent personne indiff\u00e9rent. Mais comment penser les effets sociaux, \u00e9conomiques, \u00e9cologiques et politiques de cette industrie, par-del\u00e0 la hype et les chiffres ? Nastasia Hadjadji pr\u00e9sentera les grands axes de r\u00e9flexion tir\u00e9s de son enqu\u00eate No Crypto. Comment Bitcoin a envo\u00fbt\u00e9 la plan\u00e8te ? paru en mai 2023 aux \u00e9ditions Divergences. Dans cet essai critique, l&#39;autrice prend le parti d&#39;attaquer le totem Bitcoin ainsi que les autres f\u00e9tiches de la crypto-\u00e9conomie avec les outils des sciences sociales, dans le but de percer l&#39;\u00e9pais rideau de fum\u00e9e qui entoure cette industrie politiquement r\u00e9actionnaire et largement \u00e9cocidaire.",
+        "summary": "Que le march\u00e9 monte ou se crashe. Que les esprits s'enflamment ou se lamentent, les cryptos ne laissent personne indiff\u00e9rent. Mais comment penser les effets sociaux, \u00e9conomiques, \u00e9cologiques et politiques de cette industrie, par-del\u00e0 la hype et les chiffres ? Nastasia Hadjadji pr\u00e9sentera les grands axes de r\u00e9flexion tir\u00e9s de son enqu\u00eate No Crypto. Comment Bitcoin a envo\u00fbt\u00e9 la plan\u00e8te ? paru en mai 2023 aux \u00e9ditions Divergences. Dans cet essai critique, l'autrice prend le parti d'attaquer le totem Bitcoin ainsi que les autres f\u00e9tiches de la crypto-\u00e9conomie avec les outils des sciences sociales, dans le but de percer l'\u00e9pais rideau de fum\u00e9e qui entoure cette industrie politiquement r\u00e9actionnaire et largement \u00e9cocidaire.",
         "speakerIds": [
             "5d7f531b-9dc9-4306-b742-cb54a80d8208"
         ],
@@ -1041,7 +1041,7 @@
         "addedAt": "2024-04-24T16:23:55.383",
         "description": "",
         "topic": "aliens",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=9XjCH50VzuM",
         "video2": null,
         "room": "AMPHI1",
         "start": "2024-04-25T17:00:00",
@@ -1131,7 +1131,7 @@
         "addedAt": "2024-04-24T16:23:55.383",
         "description": "",
         "topic": "ethics",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=h09oafWk6Us",
         "video2": null,
         "room": "AMPHI1",
         "start": "2024-04-26T09:30:00",
@@ -1192,7 +1192,7 @@
         "format": "TALK",
         "event": "2024",
         "title": "\u00ab\u00a0Pourquoi une grille de salaire ? On n\u2019est pas chez les fonctionnaires ! \u00bb",
-        "summary": "\u00ab\u00a0Honn\u00eatement, qu\u2019est-ce que tu nous emm*** avec une grille de salaire ? On n\u2019est pas chez les fonctionnaires ! \u00bb (*)\r\n\r\nJe vous propose de monter dans la barque avec moi pour vous raconter l\u2019aventure d\u2019une grille de salaire, pourquoi, comment, et ce qu\u2019on en a retir\u00e9. \u00c7a parait simple quand on s\u2019engage mais il y a eu des hauts fonds sur tout le trajet.\r\n\r\nEn sortant, vous aurez des billes suppl\u00e9mentaires pour savoir o\u00f9 aller de votre c\u00f4t\u00e9, faire vos choix ou poussez les bons enjeux dans vos \u00e9quipes.\r\n\r\nNous parlerons, avec un mode retour d\u2019exp\u00e9rience et discussion, de g\u00e9ographie, de niveaux et r\u00f4les, de t\u00e9l\u00e9travail et pr\u00e9sentiel, de n\u00e9gociation et augmentation automatique, d\u2019exp\u00e9rience et de dipl\u00f4me, de comparaison au march\u00e9. Rien que se positionner dans le march\u00e9 a \u00e9t\u00e9 tout sauf simple et j\u2019esp\u00e8re bien vous \u00e9viter nos difficult\u00e9s.\r\n\r\n* avec plein de respect pour les fonctionnaires, qui ont justement compris le besoin d&#39;avoir des grilles de salaire",
+        "summary": "\u00ab\u00a0Honn\u00eatement, qu\u2019est-ce que tu nous emm*** avec une grille de salaire ? On n\u2019est pas chez les fonctionnaires ! \u00bb (*)\r\n\r\nJe vous propose de monter dans la barque avec moi pour vous raconter l\u2019aventure d\u2019une grille de salaire, pourquoi, comment, et ce qu\u2019on en a retir\u00e9. \u00c7a parait simple quand on s\u2019engage mais il y a eu des hauts fonds sur tout le trajet.\r\n\r\nEn sortant, vous aurez des billes suppl\u00e9mentaires pour savoir o\u00f9 aller de votre c\u00f4t\u00e9, faire vos choix ou poussez les bons enjeux dans vos \u00e9quipes.\r\n\r\nNous parlerons, avec un mode retour d\u2019exp\u00e9rience et discussion, de g\u00e9ographie, de niveaux et r\u00f4les, de t\u00e9l\u00e9travail et pr\u00e9sentiel, de n\u00e9gociation et augmentation automatique, d\u2019exp\u00e9rience et de dipl\u00f4me, de comparaison au march\u00e9. Rien que se positionner dans le march\u00e9 a \u00e9t\u00e9 tout sauf simple et j\u2019esp\u00e8re bien vous \u00e9viter nos difficult\u00e9s.\r\n\r\n* avec plein de respect pour les fonctionnaires, qui ont justement compris le besoin d'avoir des grilles de salaire",
         "speakerIds": [
             "eric"
         ],
@@ -1200,7 +1200,7 @@
         "addedAt": "2024-04-24T16:23:55.384",
         "description": "",
         "topic": "team",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=anY8xUxozso",
         "video2": null,
         "room": "AMPHI2",
         "start": "2024-04-26T10:20:00",
@@ -1245,7 +1245,7 @@
         "addedAt": "2024-04-24T16:23:55.384",
         "description": "",
         "topic": "ethics",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=vwm2pGE84sQ",
         "video2": null,
         "room": "ROOM1",
         "start": "2024-04-26T10:20:00",
@@ -1258,8 +1258,8 @@
     {
         "format": "TALK",
         "event": "2024",
-        "title": "Shape Up: L&#39;agilit\u00e9 sans tickets!",
-        "summary": "J&#39;ai utilis\u00e9 de nombreuses m\u00e9thodologies de d\u00e9veloppement produit \u00e0 base de Scrum, Kanban, et \u00e0 l&#39;arrache\u2122, mais ma pr\u00e9f\u00e9r\u00e9e, c&#39;est Shape Up !\r\n\r\nAvec des cycles de 6 semaines, des petites \u00e9quipes autonomes et une pr\u00e9f\u00e9rence pour de la communication asynchrone, on oublie les r\u00e9unions et on peut se concentrer sur son taf !\r\n\r\nDans cette pr\u00e9sentation, nous verrons ce qui diff\u00e9rencie ShapeUp des autres m\u00e9thodologies agiles et comment nous l&#39;utilisons (et l&#39;avons adapt\u00e9) depuis trois ans chez Zipline. (getzipline.com)",
+        "title": "Shape Up: L'agilit\u00e9 sans tickets!",
+        "summary": "J'ai utilis\u00e9 de nombreuses m\u00e9thodologies de d\u00e9veloppement produit \u00e0 base de Scrum, Kanban, et \u00e0 l'arrache\u2122, mais ma pr\u00e9f\u00e9r\u00e9e, c'est Shape Up !\r\n\r\nAvec des cycles de 6 semaines, des petites \u00e9quipes autonomes et une pr\u00e9f\u00e9rence pour de la communication asynchrone, on oublie les r\u00e9unions et on peut se concentrer sur son taf !\r\n\r\nDans cette pr\u00e9sentation, nous verrons ce qui diff\u00e9rencie ShapeUp des autres m\u00e9thodologies agiles et comment nous l'utilisons (et l'avons adapt\u00e9) depuis trois ans chez Zipline. (getzipline.com)",
         "speakerIds": [
             "pcreux"
         ],
@@ -1267,13 +1267,13 @@
         "addedAt": "2024-04-24T16:23:55.384",
         "description": "",
         "topic": "team",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=WqX8czkfK_Y",
         "video2": null,
         "room": "ROOM2",
         "start": "2024-04-26T10:20:00",
         "end": "2024-04-26T11:05:00",
         "photoUrls": [],
-        "slug": "shape-up-l-39-agilite-sans-tickets-",
+        "slug": "shape-up-l-agilite-sans-tickets-",
         "level": "Intermediate",
         "id": "611298"
     },
@@ -1281,7 +1281,7 @@
         "format": "TALK",
         "event": "2024",
         "title": "Spring Security: D\u00e9codage et d\u00e9mystification",
-        "summary": "Aujourd&#39;hui, impossible de faire l&#39;impasse sur la s\u00e9curit\u00e9 dans le d\u00e9veloppement d&#39;applis. Spring Security est le standard pour l&#39;\u00e9cosyst\u00e8me Spring. Mais une fois sortis des guides &#34;Getting Started&#34;, les avis sont unanimes: direction StackOverflow, copier-coller et frustration.\r\n\r\nPourtant, la librairie ne s&#39;appuie que sur quelques principes d\u2019architecture de base, qui se retrouvent partout dans le code et dans l\u2019API. Elle est flexible et s&#39;adapte \u00e0 (presque) tous les cas d&#39;utilisation\u2026 \u00e0 condition d&#39;en comprendre les quelques points d&#39;entr\u00e9e.\r\n\r\nCette session vise \u00e0 d\u00e9mystifier Spring Security, et commencer \u00e0 vous rendre autonomes. Vous d\u00e9couvrirez l&#39;architecture globale, les patterns fondamentaux et les abstractions courantes, sous quelles formes ils se retrouvent dans le code et comment vous en inspirer pour vos propres cas d&#39;utilisation.\r\n\r\nLa session s&#39;adresse aux devs qui ont d\u00e9j\u00e0 de l&#39;exp\u00e9rience Spring, notamment avec Boot. Il est utile, mais pas n\u00e9cessaire, d&#39;avoir d\u00e9j\u00e0 utilis\u00e9 Spring Security.",
+        "summary": "Aujourd'hui, impossible de faire l'impasse sur la s\u00e9curit\u00e9 dans le d\u00e9veloppement d'applis. Spring Security est le standard pour l'\u00e9cosyst\u00e8me Spring. Mais une fois sortis des guides \"Getting Started\", les avis sont unanimes: direction StackOverflow, copier-coller et frustration.\r\n\r\nPourtant, la librairie ne s'appuie que sur quelques principes d\u2019architecture de base, qui se retrouvent partout dans le code et dans l\u2019API. Elle est flexible et s'adapte \u00e0 (presque) tous les cas d'utilisation\u2026 \u00e0 condition d'en comprendre les quelques points d'entr\u00e9e.\r\n\r\nCette session vise \u00e0 d\u00e9mystifier Spring Security, et commencer \u00e0 vous rendre autonomes. Vous d\u00e9couvrirez l'architecture globale, les patterns fondamentaux et les abstractions courantes, sous quelles formes ils se retrouvent dans le code et comment vous en inspirer pour vos propres cas d'utilisation.\r\n\r\nLa session s'adresse aux devs qui ont d\u00e9j\u00e0 de l'exp\u00e9rience Spring, notamment avec Boot. Il est utile, mais pas n\u00e9cessaire, d'avoir d\u00e9j\u00e0 utilis\u00e9 Spring Security.",
         "speakerIds": [
             "Kehrlann"
         ],
@@ -1289,7 +1289,7 @@
         "addedAt": "2024-04-24T16:23:55.384",
         "description": "",
         "topic": "tech",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=U1jnaUvX9kA",
         "video2": null,
         "room": "ROOM5",
         "start": "2024-04-26T10:20:00",
@@ -1324,8 +1324,8 @@
     {
         "format": "TALK",
         "event": "2024",
-        "title": "GitHub Copilot : L&#39;IA g\u00e9n\u00e9rative au service du d\u00e9veloppeur",
-        "summary": "Au cours des 18 derniers mois, Github Copilot a captiv\u00e9 l&#39;attention de plus d&#39;1,7 million de d\u00e9veloppeurs, devenant une r\u00e9f\u00e9rence incontournable dans le domaine de l&#39;intelligence artificielle g\u00e9n\u00e9rative. \r\n\r\nTug exposera l&#39;architecture de Github Copilot. Fort de son exp\u00e9rience, il mettra en lumi\u00e8re divers cas d&#39;utilisation \u00e0 travers des d\u00e9monstrations pratiques. Cette pr\u00e9sentation ne se limitera pas aux aspects positifs, car Tug partagera \u00e9galement les \u00e9cueils \u00e0 \u00e9viter et les connaissances essentielles pour naviguer avec succ\u00e8s dans l&#39;univers de Github Copilot, tout en explorant son impact significatif sur le quotidien des d\u00e9veloppeurs.\r\n\r\nLa session sera ponctu\u00e9e de nombreuses d\u00e9monstrations impliquant les langages de programmation front-end et back-end tels que Java, JavaScript, TypeScript, Python, et m\u00eame un soup\u00e7on d&#39;improvisation en fonction des commentaires et des questions de l&#39;auditoire. \r\n",
+        "title": "GitHub Copilot : L'IA g\u00e9n\u00e9rative au service du d\u00e9veloppeur",
+        "summary": "Au cours des 18 derniers mois, Github Copilot a captiv\u00e9 l'attention de plus d'1,7 million de d\u00e9veloppeurs, devenant une r\u00e9f\u00e9rence incontournable dans le domaine de l'intelligence artificielle g\u00e9n\u00e9rative. \r\n\r\nTug exposera l'architecture de Github Copilot. Fort de son exp\u00e9rience, il mettra en lumi\u00e8re divers cas d'utilisation \u00e0 travers des d\u00e9monstrations pratiques. Cette pr\u00e9sentation ne se limitera pas aux aspects positifs, car Tug partagera \u00e9galement les \u00e9cueils \u00e0 \u00e9viter et les connaissances essentielles pour naviguer avec succ\u00e8s dans l'univers de Github Copilot, tout en explorant son impact significatif sur le quotidien des d\u00e9veloppeurs.\r\n\r\nLa session sera ponctu\u00e9e de nombreuses d\u00e9monstrations impliquant les langages de programmation front-end et back-end tels que Java, JavaScript, TypeScript, Python, et m\u00eame un soup\u00e7on d'improvisation en fonction des commentaires et des questions de l'auditoire. \r\n",
         "speakerIds": [
             "tugdual"
         ],
@@ -1333,13 +1333,13 @@
         "addedAt": "2024-04-24T16:23:55.384",
         "description": "",
         "topic": "tech",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=GWpP4O8_EQc",
         "video2": null,
         "room": "AMPHI1",
         "start": "2024-04-26T10:20:00",
         "end": "2024-04-26T11:05:00",
         "photoUrls": [],
-        "slug": "github-copilot-l-39-ia-generative-au-service-du-developpeur",
+        "slug": "github-copilot-l-ia-generative-au-service-du-developpeur",
         "level": "Beginner",
         "id": "602999"
     },
@@ -1397,8 +1397,8 @@
     {
         "format": "TALK",
         "event": "2024",
-        "title": "Comment garder espoir en l&#39;avenir ?",
-        "summary": "Dans notre quotidien, les nouvelles alarmantes se multiplient, engendrant une atmosph\u00e8re souvent teint\u00e9e de pessimisme. Que ce soit les perspectives incertaines li\u00e9es \u00e0 l&#39;intelligence artificielle, les conflits en Ukraine et en Isra\u00ebl, les avertissements sur l&#39;\u00e9puisement de nos ressources vitales (sable, eau, m\u00e9taux, \u00e9nergie...) malgr\u00e9 une \u00e9conomie les consid\u00e9rant comme infinies, la pollution rampante, la dramatique diminution de la biodiversit\u00e9, ou le d\u00e9r\u00e8glement climatique qui \u00e0 lui seul pourrait suffire \u00e0 plomber notre moral, le tableau peut sembler sombre. Cela g\u00e9n\u00e8re chez certains une forte anxi\u00e9t\u00e9.\r\n\r\nDans ce contexte difficile, comment garder espoir, voire retrouver une lueur d&#39;optimisme pour l&#39;avenir et se mobiliser pour agir ?\r\n\r\nPour nous, B\u00e9atrice et J\u00e9r\u00f4me, c&#39;est une pr\u00e9occupation qui nous accompagne depuis longtemps et nous vous proposons un voyage \u00e0 travers les d\u00e9couvertes qui nous ont inspir\u00e9es et qu&#39;il nous semble essentiel de partager. Elles \u00e9manent de concepts fondamentaux ancr\u00e9s dans l&#39;Agilit\u00e9, la PNL, la syst\u00e9mique, le coaching ou les sciences sociales. Il est crucial de les explorer, tant pour notre \u00e9panouissement individuel que pour le bien des collectifs auxquels nous appartenons (\u00e9quipe, famille, entreprise, soci\u00e9t\u00e9...). En les int\u00e9grant, nous pourrons construire une confiance commune dans nos capacit\u00e9s, surmonter cette anxi\u00e9t\u00e9 et influencer positivement notre futur.\r\n\r\nReprenons espoir ensemble !",
+        "title": "Comment garder espoir en l'avenir ?",
+        "summary": "Dans notre quotidien, les nouvelles alarmantes se multiplient, engendrant une atmosph\u00e8re souvent teint\u00e9e de pessimisme. Que ce soit les perspectives incertaines li\u00e9es \u00e0 l'intelligence artificielle, les conflits en Ukraine et en Isra\u00ebl, les avertissements sur l'\u00e9puisement de nos ressources vitales (sable, eau, m\u00e9taux, \u00e9nergie...) malgr\u00e9 une \u00e9conomie les consid\u00e9rant comme infinies, la pollution rampante, la dramatique diminution de la biodiversit\u00e9, ou le d\u00e9r\u00e8glement climatique qui \u00e0 lui seul pourrait suffire \u00e0 plomber notre moral, le tableau peut sembler sombre. Cela g\u00e9n\u00e8re chez certains une forte anxi\u00e9t\u00e9.\r\n\r\nDans ce contexte difficile, comment garder espoir, voire retrouver une lueur d'optimisme pour l'avenir et se mobiliser pour agir ?\r\n\r\nPour nous, B\u00e9atrice et J\u00e9r\u00f4me, c'est une pr\u00e9occupation qui nous accompagne depuis longtemps et nous vous proposons un voyage \u00e0 travers les d\u00e9couvertes qui nous ont inspir\u00e9es et qu'il nous semble essentiel de partager. Elles \u00e9manent de concepts fondamentaux ancr\u00e9s dans l'Agilit\u00e9, la PNL, la syst\u00e9mique, le coaching ou les sciences sociales. Il est crucial de les explorer, tant pour notre \u00e9panouissement individuel que pour le bien des collectifs auxquels nous appartenons (\u00e9quipe, famille, entreprise, soci\u00e9t\u00e9...). En les int\u00e9grant, nous pourrons construire une confiance commune dans nos capacit\u00e9s, surmonter cette anxi\u00e9t\u00e9 et influencer positivement notre futur.\r\n\r\nReprenons espoir ensemble !",
         "speakerIds": [
             "jerome.froville",
             "palis.beatrice"
@@ -1407,13 +1407,13 @@
         "addedAt": "2024-04-24T16:23:55.385",
         "description": "",
         "topic": "aliens",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=uaWxp4rIUuw",
         "video2": null,
         "room": "AMPHI2",
         "start": "2024-04-26T11:30:00",
         "end": "2024-04-26T12:15:00",
         "photoUrls": [],
-        "slug": "comment-garder-espoir-en-l-39-avenir-",
+        "slug": "comment-garder-espoir-en-l-avenir-",
         "level": "Beginner",
         "id": "611744"
     },
@@ -1421,7 +1421,7 @@
         "format": "TALK",
         "event": "2024",
         "title": "La douceur est-elle un avantage dans ce monde de brutes ?",
-        "summary": "&#34;Un peu de douceur dans ce monde de brutes&#34;, voil\u00e0 une expression bien connue. Pourtant, dans notre environnement bourr\u00e9 de transformations agiles, de challenges, de leadership et de management bienveillant, est-il est r\u00e9ellement avantageux de faire preuve de douceur si on veut \u00eatre pris\u00b7e au s\u00e9rieux ? Doit-on forc\u00e9ment \u00eatre pr\u00eat\u00b7e \u00e0 taper du poing pour mener une \u00e9quipe, un projet, un changement ? Et s&#39;il y avait d&#39;autres mani\u00e8res de faire ?\r\nPrenons un moment pour y r\u00e9fl\u00e9chir ensemble, tout en douceur.",
+        "summary": "\"Un peu de douceur dans ce monde de brutes\", voil\u00e0 une expression bien connue. Pourtant, dans notre environnement bourr\u00e9 de transformations agiles, de challenges, de leadership et de management bienveillant, est-il est r\u00e9ellement avantageux de faire preuve de douceur si on veut \u00eatre pris\u00b7e au s\u00e9rieux ? Doit-on forc\u00e9ment \u00eatre pr\u00eat\u00b7e \u00e0 taper du poing pour mener une \u00e9quipe, un projet, un changement ? Et s'il y avait d'autres mani\u00e8res de faire ?\r\nPrenons un moment pour y r\u00e9fl\u00e9chir ensemble, tout en douceur.",
         "speakerIds": [
             "anais.huet"
         ],
@@ -1429,7 +1429,7 @@
         "addedAt": "2024-04-24T16:23:55.385",
         "description": "",
         "topic": "aliens",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=DtobFP6Sm8Q",
         "video2": null,
         "room": "ROOM1",
         "start": "2024-04-26T11:30:00",
@@ -1442,8 +1442,8 @@
     {
         "format": "TALK",
         "event": "2024",
-        "title": "Possible de mesurer la productivit\u00e9 d&#39;un d\u00e9veloppeur ?",
-        "summary": "La mesure de la productivit\u00e9 des d\u00e9veloppeurs reste un d\u00e9fi majeur dans notre industrie. Les m\u00e9triques et frameworks traditionnels ne parviennent souvent pas \u00e0 saisir la v\u00e9ritable essence de la contribution d&#39;un d\u00e9veloppeur \u00e0 un projet. Cette intervention synth\u00e9tise les m\u00e9thodes actuelles et vise \u00e0 explorer une approche plus holistique de l&#39;\u00e9valuation de la productivit\u00e9 des d\u00e9veloppeurs, une approche qui transcende les m\u00e9thodes conventionnelles et s&#39;aligne sur la nature cr\u00e9ative et collaborative du d\u00e9veloppement logiciel.",
+        "title": "Possible de mesurer la productivit\u00e9 d'un d\u00e9veloppeur ?",
+        "summary": "La mesure de la productivit\u00e9 des d\u00e9veloppeurs reste un d\u00e9fi majeur dans notre industrie. Les m\u00e9triques et frameworks traditionnels ne parviennent souvent pas \u00e0 saisir la v\u00e9ritable essence de la contribution d'un d\u00e9veloppeur \u00e0 un projet. Cette intervention synth\u00e9tise les m\u00e9thodes actuelles et vise \u00e0 explorer une approche plus holistique de l'\u00e9valuation de la productivit\u00e9 des d\u00e9veloppeurs, une approche qui transcende les m\u00e9thodes conventionnelles et s'aligne sur la nature cr\u00e9ative et collaborative du d\u00e9veloppement logiciel.",
         "speakerIds": [
             "1338530083"
         ],
@@ -1451,13 +1451,13 @@
         "addedAt": "2024-04-24T16:23:55.385",
         "description": "",
         "topic": "team",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=TS8YqGh6cjo",
         "video2": null,
         "room": "ROOM2",
         "start": "2024-04-26T11:30:00",
         "end": "2024-04-26T12:15:00",
         "photoUrls": [],
-        "slug": "possible-de-mesurer-la-productivite-d-39-un-developpeur-",
+        "slug": "possible-de-mesurer-la-productivite-d-un-developpeur-",
         "level": "Intermediate",
         "id": "612412"
     },
@@ -1465,7 +1465,7 @@
         "format": "TALK",
         "event": "2024",
         "title": "Programmation Asynchrone : Les Threads Virtuels en Java 21 et au-del\u00e0",
-        "summary": "Le projet Loom nous a livr\u00e9 sa premi\u00e8re fonctionnalit\u00e9 en version finale avec Java 21 : les threads virtuels. On se propose de pr\u00e9senter les raisons pour lesquelles cette technologie a \u00e9t\u00e9 d\u00e9velopp\u00e9e et ajout\u00e9e au JDK, de d\u00e9tailler comment ils fonctionnent, ce que l&#39;on peut en attendre, comment les utiliser et dans quel contexte. On parlera aussi de leurs performances, et de ce qu&#39;ils apportent par rapport \u00e0 la programmation r\u00e9active.",
+        "summary": "Le projet Loom nous a livr\u00e9 sa premi\u00e8re fonctionnalit\u00e9 en version finale avec Java 21 : les threads virtuels. On se propose de pr\u00e9senter les raisons pour lesquelles cette technologie a \u00e9t\u00e9 d\u00e9velopp\u00e9e et ajout\u00e9e au JDK, de d\u00e9tailler comment ils fonctionnent, ce que l'on peut en attendre, comment les utiliser et dans quel contexte. On parlera aussi de leurs performances, et de ce qu'ils apportent par rapport \u00e0 la programmation r\u00e9active.",
         "speakerIds": [
             "jose.paumard"
         ],
@@ -1473,7 +1473,7 @@
         "addedAt": "2024-04-24T16:23:55.384",
         "description": "",
         "topic": "tech",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=N4g61e1AV8c",
         "video2": null,
         "room": "AMPHI1",
         "start": "2024-04-26T11:30:00",
@@ -1487,7 +1487,7 @@
         "format": "TALK",
         "event": "2024",
         "title": "La metric INP: qu\u2019est ce que c\u2019est et comment l\u2019am\u00e9liorer ",
-        "summary": "La latence d&#39;entr\u00e9e (INP) est une mesure du temps n\u00e9cessaire \u00e0 un site web pour r\u00e9pondre \u00e0 l&#39;entr\u00e9e de l&#39;utilisateur. Il s&#39;agit d&#39;une mesure essentielle pour l&#39;exp\u00e9rience utilisateur, car elle peut affecter la rapidit\u00e9 avec laquelle les utilisateurs peuvent interagir avec votre site web. Cette mesure remplacera la mesure FID en mars 2024.\r\n\r\nUne interaction se compose de trois parties\r\n\r\nLe d\u00e9lai d&#39;entr\u00e9e\r\nLes \u00e9v\u00e9nements de rappel\r\nLe d\u00e9lai de pr\u00e9sentation\r\nMalheureusement, l&#39;optimisation d&#39;une seule de ces trois parties ne suffira pas \u00e0 optimiser la m\u00e9trique INP.\r\n\r\nMais \u00e0 quoi correspondent ces parties et comment les optimiser toutes ?\r\n\r\n\u00c0 la fin de cette conf\u00e9rence, vous serez bien \u00e9quip\u00e9 pour am\u00e9liorer l&#39;INP de votre site web et offrir une meilleure exp\u00e9rience utilisateur \u00e0 vos visiteurs.",
+        "summary": "La latence d'entr\u00e9e (INP) est une mesure du temps n\u00e9cessaire \u00e0 un site web pour r\u00e9pondre \u00e0 l'entr\u00e9e de l'utilisateur. Il s'agit d'une mesure essentielle pour l'exp\u00e9rience utilisateur, car elle peut affecter la rapidit\u00e9 avec laquelle les utilisateurs peuvent interagir avec votre site web. Cette mesure remplacera la mesure FID en mars 2024.\r\n\r\nUne interaction se compose de trois parties\r\n\r\nLe d\u00e9lai d'entr\u00e9e\r\nLes \u00e9v\u00e9nements de rappel\r\nLe d\u00e9lai de pr\u00e9sentation\r\nMalheureusement, l'optimisation d'une seule de ces trois parties ne suffira pas \u00e0 optimiser la m\u00e9trique INP.\r\n\r\nMais \u00e0 quoi correspondent ces parties et comment les optimiser toutes ?\r\n\r\n\u00c0 la fin de cette conf\u00e9rence, vous serez bien \u00e9quip\u00e9 pour am\u00e9liorer l'INP de votre site web et offrir une meilleure exp\u00e9rience utilisateur \u00e0 vos visiteurs.",
         "speakerIds": [
             "nicolas.frizzarin54"
         ],
@@ -1495,7 +1495,7 @@
         "addedAt": "2024-04-24T16:23:55.385",
         "description": "",
         "topic": "tech",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=-46xm2tlqio",
         "video2": null,
         "room": "ROOM5",
         "start": "2024-04-26T11:30:00",
@@ -1603,7 +1603,7 @@
         "format": "KEYNOTE",
         "event": "2024",
         "title": "Abou Dhabi, p\u00f4le mondial de la cybersurveillance",
-        "summary": "En deux d\u00e9cennies, Abou Dhabi s\u2019est dot\u00e9 d\u2019importants moyens num\u00e9riques pour encadrer et contr\u00f4ler sa population, main-d\u2019\u0153uvre \u00e9trang\u00e8re comprise. \r\nEn parall\u00e8le, le pays sert de &#34;hub&#34; aux d\u00e9mocraties pour vendre en toute discr\u00e9tion leurs technologies \u00e0 des pays peu recommandables.",
+        "summary": "En deux d\u00e9cennies, Abou Dhabi s\u2019est dot\u00e9 d\u2019importants moyens num\u00e9riques pour encadrer et contr\u00f4ler sa population, main-d\u2019\u0153uvre \u00e9trang\u00e8re comprise. \r\nEn parall\u00e8le, le pays sert de \"hub\" aux d\u00e9mocraties pour vendre en toute discr\u00e9tion leurs technologies \u00e0 des pays peu recommandables.",
         "speakerIds": [
             "evathiebaud"
         ],
@@ -1611,7 +1611,7 @@
         "addedAt": "2024-04-24T16:23:55.385",
         "description": "",
         "topic": "ethics",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=onQVnxSdlFY",
         "video2": null,
         "room": "AMPHI1",
         "start": "2024-04-26T14:00:00",
@@ -1668,8 +1668,8 @@
     {
         "format": "TALK",
         "event": "2024",
-        "title": "Ce que l&#39;on con\u00e7oit bien s&#39;\u00e9crit clairement : les textes et l&#39;accessibilit\u00e9 num\u00e9rique",
-        "summary": "Dans la section &#34;Understanding&#34; des WCAG (les r\u00e8gles internationales pour l&#39;accessibilit\u00e9 des contenus web) est indiqu\u00e9 que dans les environnements num\u00e9riques &#34; le contenu doit \u00eatre r\u00e9dig\u00e9 de la mani\u00e8re la plus claire et la plus simple possible&#34;. C&#39;est le crit\u00e8re 3.1.5.\r\nMais qu&#39;est-ce que \u00e7a veut dire concr\u00e8tement des textes \u00ab\u00a0les plus clairs et simples possibles\u00a0\u00bb ? Pourquoi c&#39;est particuli\u00e8rement important dans les environnements ? Et, au fait, qui en a besoin ? \r\nLes in\u00e9galit\u00e9s devant l&#39;\u00e9crit dans les environnements num\u00e9riques sont encore trop souvent un non-sujet , pourtant des solutions existent ! Ce sont \u00e0 la fois les enjeux et les pistes de r\u00e9solution que nous explorerons ensemble pendant cette conf\u00e9rence. ",
+        "title": "Ce que l'on con\u00e7oit bien s'\u00e9crit clairement : les textes et l'accessibilit\u00e9 num\u00e9rique",
+        "summary": "Dans la section \"Understanding\" des WCAG (les r\u00e8gles internationales pour l'accessibilit\u00e9 des contenus web) est indiqu\u00e9 que dans les environnements num\u00e9riques \" le contenu doit \u00eatre r\u00e9dig\u00e9 de la mani\u00e8re la plus claire et la plus simple possible\". C'est le crit\u00e8re 3.1.5.\r\nMais qu'est-ce que \u00e7a veut dire concr\u00e8tement des textes \u00ab\u00a0les plus clairs et simples possibles\u00a0\u00bb ? Pourquoi c'est particuli\u00e8rement important dans les environnements ? Et, au fait, qui en a besoin ? \r\nLes in\u00e9galit\u00e9s devant l'\u00e9crit dans les environnements num\u00e9riques sont encore trop souvent un non-sujet , pourtant des solutions existent ! Ce sont \u00e0 la fois les enjeux et les pistes de r\u00e9solution que nous explorerons ensemble pendant cette conf\u00e9rence. ",
         "speakerIds": [
             "morgane.hauguel"
         ],
@@ -1677,13 +1677,13 @@
         "addedAt": "2024-04-24T16:23:55.385",
         "description": "",
         "topic": "ethics",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=LllATC5qQC4",
         "video2": null,
         "room": "ROOM1",
         "start": "2024-04-26T14:40:00",
         "end": "2024-04-26T15:25:00",
         "photoUrls": [],
-        "slug": "ce-que-l-39-on-concoit-bien-s-39-ecrit-clairement-les-textes-et-l-39-accessibilite-numerique",
+        "slug": "ce-que-l-on-concoit-bien-s-ecrit-clairement-les-textes-et-l-accessibilite-numerique",
         "level": "Beginner",
         "id": "611849"
     },
@@ -1691,7 +1691,7 @@
         "format": "TALK",
         "event": "2024",
         "title": "Comment ChatGPT me fait gagner du temps en tant que Product Manager",
-        "summary": "En 2023, j\u2019ai utilis\u00e9 chatGPT chaque jour en tant que principale \u201cProduct Manager\u201d d\u2019une startup dans la sant\u00e9. \u2028\r\nEn 2024, j\u2019utilise chatGPT dans le cadre de la refonte d\u2019un syst\u00e8me historique d\u2019une grande organisation. \r\n\u2028En parall\u00e8le, j\u2019ai co-cr\u00e9\u00e9 une formation intitul\u00e9e \u201cChatGPT au service de vos user stories\u201d.\u2028\r\nJe vous propose un retour d\u2019exp\u00e9rience de mes principaux sc\u00e9narios d\u2019utilisation au quotidien en entreprise ainsi qu&#39;un retour de mon exp\u00e9rience p\u00e9dagogique dans le cadre d\u2019une formation d\u00e9livr\u00e9e en ligne pour gagner du temps au quotidien via diff\u00e9rentes applications de l\u2019IA appliqu\u00e9es au d\u00e9veloppement de Produit.",
+        "summary": "En 2023, j\u2019ai utilis\u00e9 chatGPT chaque jour en tant que principale \u201cProduct Manager\u201d d\u2019une startup dans la sant\u00e9. \u2028\r\nEn 2024, j\u2019utilise chatGPT dans le cadre de la refonte d\u2019un syst\u00e8me historique d\u2019une grande organisation. \r\n\u2028En parall\u00e8le, j\u2019ai co-cr\u00e9\u00e9 une formation intitul\u00e9e \u201cChatGPT au service de vos user stories\u201d.\u2028\r\nJe vous propose un retour d\u2019exp\u00e9rience de mes principaux sc\u00e9narios d\u2019utilisation au quotidien en entreprise ainsi qu'un retour de mon exp\u00e9rience p\u00e9dagogique dans le cadre d\u2019une formation d\u00e9livr\u00e9e en ligne pour gagner du temps au quotidien via diff\u00e9rentes applications de l\u2019IA appliqu\u00e9es au d\u00e9veloppement de Produit.",
         "speakerIds": [
             "aurelie"
         ],
@@ -1699,7 +1699,7 @@
         "addedAt": "2024-04-24T16:23:55.385",
         "description": "",
         "topic": "team",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=e6pRwrdY0P4",
         "video2": null,
         "room": "AMPHI1",
         "start": "2024-04-26T14:40:00",
@@ -1736,7 +1736,7 @@
         "format": "TALK",
         "event": "2024",
         "title": "Rechargez vos applications web avec Spring Boot",
-        "summary": "Si vous faites vivres des applications web, les mettre \u00e0 jour \u00e0 la derni\u00e8re version de Spring n&#39;est pas juste une question de maintenance: c&#39;est aussi le bon moment pour appuyer sur &#34;F5&#34; et recharger votre stack web. Vous pouvez faciliter la vie des d\u00e9veloppeurs et apporter de la valeur \u00e0 vos utilisateurs. Avec Spring Boot 3.2, l&#39;\u00e9quipe Spring vous aide \u00e0 faire \u00e9voluer vos applications selon vos besoins:\r\n\r\n* Am\u00e9liorer l&#39;efficacit\u00e9 en production avec les Virtual Threads\r\n* Utiliser une API moderne de client HTTP (sans Reactive!) avec RestClient\r\n* S&#39;aider des m\u00e9triques et des traces pour r\u00e9soudre les incidents en production\r\n* Mieux g\u00e9rer les certificats TLS avec les bundles\r\n* Connecter l&#39;application \u00e0 d&#39;autres syst\u00e8mes gr\u00e2ce \u00e0 Docker compose et Testcontainers\r\n* Am\u00e9liorer les temps de d\u00e9marrage avec CDS ou bien Checkpoint Restore",
+        "summary": "Si vous faites vivres des applications web, les mettre \u00e0 jour \u00e0 la derni\u00e8re version de Spring n'est pas juste une question de maintenance: c'est aussi le bon moment pour appuyer sur \"F5\" et recharger votre stack web. Vous pouvez faciliter la vie des d\u00e9veloppeurs et apporter de la valeur \u00e0 vos utilisateurs. Avec Spring Boot 3.2, l'\u00e9quipe Spring vous aide \u00e0 faire \u00e9voluer vos applications selon vos besoins:\r\n\r\n* Am\u00e9liorer l'efficacit\u00e9 en production avec les Virtual Threads\r\n* Utiliser une API moderne de client HTTP (sans Reactive!) avec RestClient\r\n* S'aider des m\u00e9triques et des traces pour r\u00e9soudre les incidents en production\r\n* Mieux g\u00e9rer les certificats TLS avec les bundles\r\n* Connecter l'application \u00e0 d'autres syst\u00e8mes gr\u00e2ce \u00e0 Docker compose et Testcontainers\r\n* Am\u00e9liorer les temps de d\u00e9marrage avec CDS ou bien Checkpoint Restore",
         "speakerIds": [
             "brian.clozel",
             "snicoll"
@@ -1745,7 +1745,7 @@
         "addedAt": "2024-04-24T16:23:55.385",
         "description": "",
         "topic": "tech",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=4NphG0VZnQU",
         "video2": null,
         "room": "ROOM5",
         "start": "2024-04-26T14:40:00",
@@ -1758,8 +1758,8 @@
     {
         "format": "TALK",
         "event": "2024",
-        "title": "Syst\u00e8mes distribu\u00e9s\u00a0: ne jetez pas le b\u00e9b\u00e9 avec l&#39;auth du bain\u00a0!",
-        "summary": "Depuis l&#39;essor des architectures microservices, l&#39;auth a bien \u00e9volu\u00e9. Les solutions bas\u00e9es sur un serveur d&#39;authorisation central sont certes simples \u00e0 mettre en place, mais rendent les syst\u00e8mes moins r\u00e9silients. Si le serveur d&#39;auth tombe, l&#39;ensemble de la plateforme tombe. De l&#39;autre c\u00f4t\u00e9 du spectre, des syst\u00e8mes \u00e0 base de jetons au porteur (comme JWT) permettent de s&#39;affranchir des contraintes d&#39;un syst\u00e8me centralis\u00e9. En revanche, de tels syst\u00e8mes sont notoirement complexes \u00e0 mettre en place et n\u00e9cessitent une bonne dose d&#39;exp\u00e9rience pour \u00e9viter les erreurs.\r\n\r\nDans cette conf\u00e9rence je vous pr\u00e9senterai\u00a0:\r\n\r\n- comment choisir entre un syst\u00e8me d&#39;auth centralis\u00e9 et un syst\u00e8me distribu\u00e9\r\n- un tour d&#39;horizon des solutions possibles pour les jetons au porteur;\r\n- les diff\u00e9rentes architectures d&#39;auth possibles (passerelle d&#39;auth, int\u00e9gration directe, \u2026);\r\n- les \u00e9l\u00e9ments indispensables \u00e0 mettre en place dans un tel syst\u00e8me (rafra\u00eechissement des tokens, r\u00e9vocation, rotation des cl\u00e9s, \u2026);\r\n- la plateforme biscuit, construite autours de ces use cases.\r\n\r\nEt si vous \u00eates sages on pourra prendre le temps d&#39;\u00e9crire des r\u00e8gles d&#39;acc\u00e8s avec datalog, un langage logique inspir\u00e9 de prolog.",
+        "title": "Syst\u00e8mes distribu\u00e9s\u00a0: ne jetez pas le b\u00e9b\u00e9 avec l'auth du bain\u00a0!",
+        "summary": "Depuis l'essor des architectures microservices, l'auth a bien \u00e9volu\u00e9. Les solutions bas\u00e9es sur un serveur d'authorisation central sont certes simples \u00e0 mettre en place, mais rendent les syst\u00e8mes moins r\u00e9silients. Si le serveur d'auth tombe, l'ensemble de la plateforme tombe. De l'autre c\u00f4t\u00e9 du spectre, des syst\u00e8mes \u00e0 base de jetons au porteur (comme JWT) permettent de s'affranchir des contraintes d'un syst\u00e8me centralis\u00e9. En revanche, de tels syst\u00e8mes sont notoirement complexes \u00e0 mettre en place et n\u00e9cessitent une bonne dose d'exp\u00e9rience pour \u00e9viter les erreurs.\r\n\r\nDans cette conf\u00e9rence je vous pr\u00e9senterai\u00a0:\r\n\r\n- comment choisir entre un syst\u00e8me d'auth centralis\u00e9 et un syst\u00e8me distribu\u00e9\r\n- un tour d'horizon des solutions possibles pour les jetons au porteur;\r\n- les diff\u00e9rentes architectures d'auth possibles (passerelle d'auth, int\u00e9gration directe, \u2026);\r\n- les \u00e9l\u00e9ments indispensables \u00e0 mettre en place dans un tel syst\u00e8me (rafra\u00eechissement des tokens, r\u00e9vocation, rotation des cl\u00e9s, \u2026);\r\n- la plateforme biscuit, construite autours de ces use cases.\r\n\r\nEt si vous \u00eates sages on pourra prendre le temps d'\u00e9crire des r\u00e8gles d'acc\u00e8s avec datalog, un langage logique inspir\u00e9 de prolog.",
         "speakerIds": [
             "64759160",
             "clement.delafargue"
@@ -1768,13 +1768,13 @@
         "addedAt": "2024-04-24T16:23:55.385",
         "description": "",
         "topic": "tech",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=FaaMLMzeoNA",
         "video2": null,
         "room": "ROOM2",
         "start": "2024-04-26T14:40:00",
         "end": "2024-04-26T15:25:00",
         "photoUrls": [],
-        "slug": "systemes-distribues-ne-jetez-pas-le-bebe-avec-l-39-auth-du-bain-",
+        "slug": "systemes-distribues-ne-jetez-pas-le-bebe-avec-l-auth-du-bain-",
         "level": "Intermediate",
         "id": "599383"
     },
@@ -1805,7 +1805,7 @@
     {
         "format": "TALK",
         "event": "2024",
-        "title": "Qu&#39;est ce que les champignons nous apprennent sur l&#39;intelligence artificielle ?",
+        "title": "Qu'est ce que les champignons nous apprennent sur l'intelligence artificielle ?",
         "summary": "Les champignons sont capables de r\u00e9soudre des probl\u00e8mes algorithmiques complexes comme trouver le plus cours chemin ou le voyageur de commerce.  Plus int\u00e9ressant encore, la propagation des champignons suit un m\u00e9canisme similaire au fonctionnement des r\u00e9seaux de neurones utilis\u00e9s en intelligence artificielle. A premi\u00e8re vue, l\u2019analogie entre les deux peut surprendre, mais c\u2019est en fait une excellente porte d\u2019entr\u00e9e pour revoir ensemble les bases de l\u2019IA et r\u00e9fl\u00e9chir \u00e0 ses implications concr\u00e8tes et philosophiques.",
         "speakerIds": [
             "5629542f-10c1-4e94-be75-2039c99162dd"
@@ -1814,13 +1814,13 @@
         "addedAt": "2024-04-24T16:23:55.385",
         "description": "",
         "topic": "tech",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=BIAQ-vReeWE",
         "video2": null,
         "room": "AMPHI2",
         "start": "2024-04-26T14:40:00",
         "end": "2024-04-26T15:25:00",
         "photoUrls": [],
-        "slug": "qu-39-est-ce-que-les-champignons-nous-apprennent-sur-l-39-intelligence-artificielle-",
+        "slug": "qu-est-ce-que-les-champignons-nous-apprennent-sur-l-intelligence-artificielle-",
         "level": "Beginner",
         "id": "674303"
     },
@@ -1852,7 +1852,7 @@
         "format": "TALK",
         "event": "2024",
         "title": "La compression Web : comment (re)prendre le contr\u00f4le ?",
-        "summary": "Saviez-vous que toute la journ\u00e9e, nos serveurs compressent nos r\u00e9ponses HTTP et que nos navigateurs les d\u00e9compressent ?\r\nC&#39;est comme si on passait notre temps \u00e0 plier des T-shirts et \u00e0 les d\u00e9plier.\r\nCette compression est partout sur le Web, et pourtant ses subtilit\u00e9s nous \u00e9chappent souvent.\r\nOn compresse des formats qui n&#39;en ont pas besoin, on compresse \u00e0 la vol\u00e9e des fichiers statiques, on n&#39;adopte pas les nouveaux algorithmes...\r\nParfois, on oublie carr\u00e9ment d&#39;activer la compression.\r\nBref, on remplit les tuyaux d&#39;internet plus que n\u00e9cessaire, comme si on remplissait notre valise de chaussettes en boule.\r\n\r\nMais rassurez-vous, il y a de l&#39;espoir !\r\nDans cette session, nous allons (re)d\u00e9couvrir la compression pour le Web.\r\nNous vous pr\u00e9senterons les principaux algorithmes et techniques qui se cachent sous les formats gzip et brotli.\r\nNous aborderons \u00e9galement la n\u00e9gociation de contenu entre serveurs et navigateurs.\r\n\r\n\u00c7a sera l&#39;occasion de rappeler les termes, d&#39;\u00e9voquer des ordres de grandeur, de faire des d\u00e9mos et aussi de partager quelques astuces pour am\u00e9liorer les performances de votre site web.\r\nCar, oui, optimiser la compression de vos donn\u00e9es, c&#39;est un peu comme optimiser votre valise avant de partir en vacances : vous gagnez de la place, vous \u00eates plus efficace, et vous \u00e9vitez de criser sur cette satan\u00e9e fermeture \u00e9clair qui ne veut pas se fermer !",
+        "summary": "Saviez-vous que toute la journ\u00e9e, nos serveurs compressent nos r\u00e9ponses HTTP et que nos navigateurs les d\u00e9compressent ?\r\nC'est comme si on passait notre temps \u00e0 plier des T-shirts et \u00e0 les d\u00e9plier.\r\nCette compression est partout sur le Web, et pourtant ses subtilit\u00e9s nous \u00e9chappent souvent.\r\nOn compresse des formats qui n'en ont pas besoin, on compresse \u00e0 la vol\u00e9e des fichiers statiques, on n'adopte pas les nouveaux algorithmes...\r\nParfois, on oublie carr\u00e9ment d'activer la compression.\r\nBref, on remplit les tuyaux d'internet plus que n\u00e9cessaire, comme si on remplissait notre valise de chaussettes en boule.\r\n\r\nMais rassurez-vous, il y a de l'espoir !\r\nDans cette session, nous allons (re)d\u00e9couvrir la compression pour le Web.\r\nNous vous pr\u00e9senterons les principaux algorithmes et techniques qui se cachent sous les formats gzip et brotli.\r\nNous aborderons \u00e9galement la n\u00e9gociation de contenu entre serveurs et navigateurs.\r\n\r\n\u00c7a sera l'occasion de rappeler les termes, d'\u00e9voquer des ordres de grandeur, de faire des d\u00e9mos et aussi de partager quelques astuces pour am\u00e9liorer les performances de votre site web.\r\nCar, oui, optimiser la compression de vos donn\u00e9es, c'est un peu comme optimiser votre valise avant de partir en vacances : vous gagnez de la place, vous \u00eates plus efficace, et vous \u00e9vitez de criser sur cette satan\u00e9e fermeture \u00e9clair qui ne veut pas se fermer !",
         "speakerIds": [
             "antoine395.caron",
             "hsablonniere"
@@ -1861,7 +1861,7 @@
         "addedAt": "2024-04-24T16:23:55.386",
         "description": "",
         "topic": "tech",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=zxiJXQpRa4E",
         "video2": null,
         "room": "AMPHI1",
         "start": "2024-04-26T15:45:00",
@@ -1874,8 +1874,8 @@
     {
         "format": "TALK",
         "event": "2024",
-        "title": "L&#39;AGC : retour sur l&#39;ordinateur qui a amen\u00e9 l&#39;humanit\u00e9 sur la Lune",
-        "summary": "Lundi 21 juillet 1969, l\u2019humanit\u00e9 posait pour la premi\u00e8re fois le pied sur la Lune. Cet exploit est le fruit de nombreuses avanc\u00e9es techniques et technologiques, notamment en \u00e9lectronique et dans le domaine de l\u2019informatique alors naissant. Pour mener \u00e0 bien leurs missions, les astronautes s\u2019appuyaient sur l\u2019AGC, l\u2019ordinateur de bord du programme Apollo qui permettra de r\u00e9aliser ces exploits.\r\n\r\nEmbarquez avec nous et d\u00e9couvrons ensemble la conception de cet ordinateur et les r\u00f4les qu\u2019il devait assurer au cours d\u2019une mission jusqu\u2019\u00e0 la Lune. Nous nous replacerons dans le contexte historique, aborderons les moyens qui \u00e9taient alors \u00e0 disposition des ing\u00e9nieurs de l\u2019\u00e9poque, les avanc\u00e9es technologiques qui ont \u00e9t\u00e9 n\u00e9cessaires pour relever ce d\u00e9fi ainsi que les h\u00e9ritages que ce programme nous aura laiss\u00e9, notamment dans le domaine de l&#39;ing\u00e9nierie logicielle.",
+        "title": "L'AGC : retour sur l'ordinateur qui a amen\u00e9 l'humanit\u00e9 sur la Lune",
+        "summary": "Lundi 21 juillet 1969, l\u2019humanit\u00e9 posait pour la premi\u00e8re fois le pied sur la Lune. Cet exploit est le fruit de nombreuses avanc\u00e9es techniques et technologiques, notamment en \u00e9lectronique et dans le domaine de l\u2019informatique alors naissant. Pour mener \u00e0 bien leurs missions, les astronautes s\u2019appuyaient sur l\u2019AGC, l\u2019ordinateur de bord du programme Apollo qui permettra de r\u00e9aliser ces exploits.\r\n\r\nEmbarquez avec nous et d\u00e9couvrons ensemble la conception de cet ordinateur et les r\u00f4les qu\u2019il devait assurer au cours d\u2019une mission jusqu\u2019\u00e0 la Lune. Nous nous replacerons dans le contexte historique, aborderons les moyens qui \u00e9taient alors \u00e0 disposition des ing\u00e9nieurs de l\u2019\u00e9poque, les avanc\u00e9es technologiques qui ont \u00e9t\u00e9 n\u00e9cessaires pour relever ce d\u00e9fi ainsi que les h\u00e9ritages que ce programme nous aura laiss\u00e9, notamment dans le domaine de l'ing\u00e9nierie logicielle.",
         "speakerIds": [
             "ponceto",
             "romain.berthon"
@@ -1884,13 +1884,13 @@
         "addedAt": "2024-04-24T16:23:55.386",
         "description": "",
         "topic": "aliens",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=xxOK4HbBYv4",
         "video2": null,
         "room": "ROOM2",
         "start": "2024-04-26T15:45:00",
         "end": "2024-04-26T16:30:00",
         "photoUrls": [],
-        "slug": "l-39-agc-retour-sur-l-39-ordinateur-qui-a-amene-l-39-humanite-sur-la-lune",
+        "slug": "l-agc-retour-sur-l-ordinateur-qui-a-amene-l-humanite-sur-la-lune",
         "level": "Intermediate",
         "id": "593079"
     },
@@ -1898,7 +1898,7 @@
         "format": "TALK",
         "event": "2024",
         "title": "Le biomim\u00e9tisme au secours des d\u00e9v",
-        "summary": "Le biomim\u00e9tisme, qui tire inspiration et solutions de la nature pour r\u00e9soudre des d\u00e9fis humains, offre une perspective novatrice pour le d\u00e9veloppement logiciel. \r\n\r\nCette pr\u00e9sentation explorera comment le biomim\u00e9tisme peut \u00eatre une source d&#39;inspiration pour la collaboration entre les membres de votre \u00e9quipe, pour la posture \u00e0 adopter, pour d\u00e9tecter les bugs au plus t\u00f4t, pour am\u00e9liorer votre design ou une explication plus compr\u00e9hensible des principes SOLID :\r\n- Adoption comportemental de la baleine \u00e0 bosse\r\n- Le syndrome de la m\u00e9duse immortelle\r\n- Le figuier \u00e9trangleur\r\n- Le principe de la fourmi rousse des bois\r\n- La danse TDD de l\u2019abeille\r\n- Le principe de dispersion du criquet migrateur\r\n- La singularit\u00e9 de l&#39;orchid\u00e9e\r\n- L\u2019adaptabilit\u00e9 harmonieuse du cam\u00e9l\u00e9on\r\n- La diversit\u00e9 de la prairie\r\n- L\u2019interd\u00e9pendance symbiotique de l&#39;abeille et de la fleur\r\n",
+        "summary": "Le biomim\u00e9tisme, qui tire inspiration et solutions de la nature pour r\u00e9soudre des d\u00e9fis humains, offre une perspective novatrice pour le d\u00e9veloppement logiciel. \r\n\r\nCette pr\u00e9sentation explorera comment le biomim\u00e9tisme peut \u00eatre une source d'inspiration pour la collaboration entre les membres de votre \u00e9quipe, pour la posture \u00e0 adopter, pour d\u00e9tecter les bugs au plus t\u00f4t, pour am\u00e9liorer votre design ou une explication plus compr\u00e9hensible des principes SOLID :\r\n- Adoption comportemental de la baleine \u00e0 bosse\r\n- Le syndrome de la m\u00e9duse immortelle\r\n- Le figuier \u00e9trangleur\r\n- Le principe de la fourmi rousse des bois\r\n- La danse TDD de l\u2019abeille\r\n- Le principe de dispersion du criquet migrateur\r\n- La singularit\u00e9 de l'orchid\u00e9e\r\n- L\u2019adaptabilit\u00e9 harmonieuse du cam\u00e9l\u00e9on\r\n- La diversit\u00e9 de la prairie\r\n- L\u2019interd\u00e9pendance symbiotique de l'abeille et de la fleur\r\n",
         "speakerIds": [
             "christophe.breheret.girardin"
         ],
@@ -1906,7 +1906,7 @@
         "addedAt": "2024-04-24T16:23:55.386",
         "description": "",
         "topic": "design",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=Y1KEjHKE0sc",
         "video2": null,
         "room": "ROOM1",
         "start": "2024-04-26T15:45:00",
@@ -1920,7 +1920,7 @@
         "format": "TALK",
         "event": "2024",
         "title": "Pulumi : G\u00e9rer son infrastructure avec son langage de programmation pr\u00e9f\u00e9r\u00e9",
-        "summary": "N\u2019avez-vous jamais r\u00eav\u00e9 de pouvoir g\u00e9rer votre infrastructure avec votre langage de programmation pr\u00e9f\u00e9r\u00e9 ?\r\n\r\nLa gestion d&#39;infrastructures en tant que code (IaC) a r\u00e9volutionn\u00e9 la mani\u00e8re dont les \u00e9quipes d\u00e9ploient, maintiennent et \u00e9voluent leurs environnements informatiques. Terraform, l&#39;un des outils les plus populaires dans ce domaine, a permis aux \u00e9quipes de cr\u00e9er des infrastructures reproductibles et \u00e9volutives. Cependant, l&#39;arriv\u00e9e de Pulumi a ouvert de nouvelles perspectives en offrant une approche novatrice pour le provisionnement d&#39;infrastructures.\r\n\r\nCette conf\u00e9rence se penche sur les avantages de Pulumi par rapport \u00e0 Terraform, en explorant comment Pulumi repense les fondements de l&#39;IaC. Nous mettrons en lumi\u00e8re les points forts de la solution comme la programmation multi-langages, etc.\r\n\r\nElle rapporte \u00e9galement l\u2019utilisation de Pulumi au sein des Restos du C\u0153ur. Utilisation qui marque une \u00e9tape significative dans l&#39;optimisation et la modernisation de la gestion de l&#39;infrastructure informatique. \r\n\r\nEn tant qu&#39;organisation caritative d\u00e9di\u00e9e \u00e0 l&#39;aide alimentaire et \u00e0 la lutte contre la pauvret\u00e9, les Restos du C\u0153ur d\u00e9pendent fortement d&#39;une infrastructure informatique fiable et \u00e9volutive pour coordonner leurs activit\u00e9s, g\u00e9rer les dons et assurer une communication efficace.\r\n\r\nPour terminer cette conf\u00e9rence, nous r\u00e9aliserons une d\u00e9monstration de l\u2019utilisation du SDK Pulumi pour d\u00e9clarer notre infrastructure en utilisant le Python et le Go, pour montrer ainsi, qu\u2019il n\u2019a jamais \u00e9t\u00e9 aussi simple pour un d\u00e9veloppeur de g\u00e9rer et provisionner l\u2019infrastructure.",
+        "summary": "N\u2019avez-vous jamais r\u00eav\u00e9 de pouvoir g\u00e9rer votre infrastructure avec votre langage de programmation pr\u00e9f\u00e9r\u00e9 ?\r\n\r\nLa gestion d'infrastructures en tant que code (IaC) a r\u00e9volutionn\u00e9 la mani\u00e8re dont les \u00e9quipes d\u00e9ploient, maintiennent et \u00e9voluent leurs environnements informatiques. Terraform, l'un des outils les plus populaires dans ce domaine, a permis aux \u00e9quipes de cr\u00e9er des infrastructures reproductibles et \u00e9volutives. Cependant, l'arriv\u00e9e de Pulumi a ouvert de nouvelles perspectives en offrant une approche novatrice pour le provisionnement d'infrastructures.\r\n\r\nCette conf\u00e9rence se penche sur les avantages de Pulumi par rapport \u00e0 Terraform, en explorant comment Pulumi repense les fondements de l'IaC. Nous mettrons en lumi\u00e8re les points forts de la solution comme la programmation multi-langages, etc.\r\n\r\nElle rapporte \u00e9galement l\u2019utilisation de Pulumi au sein des Restos du C\u0153ur. Utilisation qui marque une \u00e9tape significative dans l'optimisation et la modernisation de la gestion de l'infrastructure informatique. \r\n\r\nEn tant qu'organisation caritative d\u00e9di\u00e9e \u00e0 l'aide alimentaire et \u00e0 la lutte contre la pauvret\u00e9, les Restos du C\u0153ur d\u00e9pendent fortement d'une infrastructure informatique fiable et \u00e9volutive pour coordonner leurs activit\u00e9s, g\u00e9rer les dons et assurer une communication efficace.\r\n\r\nPour terminer cette conf\u00e9rence, nous r\u00e9aliserons une d\u00e9monstration de l\u2019utilisation du SDK Pulumi pour d\u00e9clarer notre infrastructure en utilisant le Python et le Go, pour montrer ainsi, qu\u2019il n\u2019a jamais \u00e9t\u00e9 aussi simple pour un d\u00e9veloppeur de g\u00e9rer et provisionner l\u2019infrastructure.",
         "speakerIds": [
             "jbriault"
         ],
@@ -1928,7 +1928,7 @@
         "addedAt": "2024-04-24T16:23:55.386",
         "description": "",
         "topic": "tech",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=Sa37M1EyrEw",
         "video2": null,
         "room": "ROOM5",
         "start": "2024-04-26T15:45:00",
@@ -1942,7 +1942,7 @@
         "format": "TALK",
         "event": "2024",
         "title": "Model Mitosis\u202f: ne plus se tromper entre les microservices et le monolithe",
-        "summary": "Tout comme le d\u00e9veloppement doit \u00eatre it\u00e9ratif, le design du logiciel doit changer lorsque le contexte et notre compr\u00e9hension du probl\u00e8me \u00e9voluent. Au fur et \u00e0 mesure qu&#39;un logiciel se d\u00e9veloppe pour r\u00e9soudre plus de probl\u00e8mes, il devient moins souple dans sa capacit\u00e9 \u00e0 \u00e9voluer. Des tensions apparaissent au sein du mod\u00e8le m\u00e9tier du logiciel qui peine \u00e0 rester coh\u00e9rent.\r\n\r\nFinalement, il atteint une masse critique et devient un monolithe de code en spaghetti... Comment pouvons nous d\u00e9terminer quand il est temps de modulariser notre logiciel ? Comment prendre la d\u00e9cision de le scinder en plusieurs modules ou services ? Comment g\u00e9rer la diff\u00e9renciation progressive de nos mod\u00e8les m\u00e9tiers tout en \u00e9vitant les couplages inutiles ? Il n&#39;est pas facile de d\u00e9couper son logiciel en deux car d\u00e9terminer les bonnes fronti\u00e8res peut s&#39;av\u00e9rer \u00eatre compliqu\u00e9.\r\n\r\nD\u00e9couvrez avec nous le Model Mitosis, une approche dynamique utilis\u00e9e pour diviser un mod\u00e8le m\u00e9tier en plusieurs mod\u00e8les qui seront fa\u00e7onn\u00e9s et d\u00e9coupl\u00e9s de mani\u00e8re it\u00e9rative. Gagnez en flexibilit\u00e9 afin de mieux d\u00e9terminer quand diviser votre logiciel en plusieurs services tout en \u00e9vitant de payer les co\u00fbt d&#39;\u00e9chelle des microservices ou bien de devenir un monolithe distribu\u00e9.",
+        "summary": "Tout comme le d\u00e9veloppement doit \u00eatre it\u00e9ratif, le design du logiciel doit changer lorsque le contexte et notre compr\u00e9hension du probl\u00e8me \u00e9voluent. Au fur et \u00e0 mesure qu'un logiciel se d\u00e9veloppe pour r\u00e9soudre plus de probl\u00e8mes, il devient moins souple dans sa capacit\u00e9 \u00e0 \u00e9voluer. Des tensions apparaissent au sein du mod\u00e8le m\u00e9tier du logiciel qui peine \u00e0 rester coh\u00e9rent.\r\n\r\nFinalement, il atteint une masse critique et devient un monolithe de code en spaghetti... Comment pouvons nous d\u00e9terminer quand il est temps de modulariser notre logiciel ? Comment prendre la d\u00e9cision de le scinder en plusieurs modules ou services ? Comment g\u00e9rer la diff\u00e9renciation progressive de nos mod\u00e8les m\u00e9tiers tout en \u00e9vitant les couplages inutiles ? Il n'est pas facile de d\u00e9couper son logiciel en deux car d\u00e9terminer les bonnes fronti\u00e8res peut s'av\u00e9rer \u00eatre compliqu\u00e9.\r\n\r\nD\u00e9couvrez avec nous le Model Mitosis, une approche dynamique utilis\u00e9e pour diviser un mod\u00e8le m\u00e9tier en plusieurs mod\u00e8les qui seront fa\u00e7onn\u00e9s et d\u00e9coupl\u00e9s de mani\u00e8re it\u00e9rative. Gagnez en flexibilit\u00e9 afin de mieux d\u00e9terminer quand diviser votre logiciel en plusieurs services tout en \u00e9vitant de payer les co\u00fbt d'\u00e9chelle des microservices ou bien de devenir un monolithe distribu\u00e9.",
         "speakerIds": [
             "066f1a14-540f-4f93-9cbd-a666a8ca46ce",
             "julien.topcu"
@@ -1951,7 +1951,7 @@
         "addedAt": "2024-04-24T16:23:55.386",
         "description": "",
         "topic": "tech",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=vBmMsN83ZTk",
         "video2": null,
         "room": "AMPHI2",
         "start": "2024-04-26T15:45:00",
@@ -2012,7 +2012,7 @@
         "format": "KEYNOTE",
         "event": "2024",
         "title": "Les innovations ont-elles un genre ?",
-        "summary": "Les approches f\u00e9ministes des sciences et des technologies remettent en cause le caract\u00e8re neutre et universel des savoirs et des innovations. On entend par exemple souvent parler de st\u00e9r\u00e9otypes, et il est courant de chercher \u00e0 faire \u00e9voluer l&#39;image classique (et masculine) de l&#39;expert en tech. Mais au-del\u00e0 des repr\u00e9sentations, comment des biais de genre peuvent-ils fa\u00e7onner la conception ou le fonctionnement m\u00eame d&#39;une technologie ? Comment des in\u00e9galit\u00e9s peuvent-elles se mat\u00e9rialiser dans des services num\u00e9riques ?",
+        "summary": "Les approches f\u00e9ministes des sciences et des technologies remettent en cause le caract\u00e8re neutre et universel des savoirs et des innovations. On entend par exemple souvent parler de st\u00e9r\u00e9otypes, et il est courant de chercher \u00e0 faire \u00e9voluer l'image classique (et masculine) de l'expert en tech. Mais au-del\u00e0 des repr\u00e9sentations, comment des biais de genre peuvent-ils fa\u00e7onner la conception ou le fonctionnement m\u00eame d'une technologie ? Comment des in\u00e9galit\u00e9s peuvent-elles se mat\u00e9rialiser dans des services num\u00e9riques ?",
         "speakerIds": [
             "34382931-9f50-47a8-8373-64508f73596b"
         ],
@@ -2020,7 +2020,7 @@
         "addedAt": "2024-04-24T16:23:55.386",
         "description": "",
         "topic": "aliens",
-        "video": null,
+        "video": "https://www.youtube.com/watch?v=KKnlTIWv8gM",
         "video2": null,
         "room": "AMPHI1",
         "start": "2024-04-26T16:50:00",
