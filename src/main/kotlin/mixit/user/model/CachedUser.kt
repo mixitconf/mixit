@@ -54,7 +54,7 @@ data class CachedUser(
             photoUrl,
             photoShape,
             role,
-            links.mapIndexed { index, link ->  link.toLinkDto(index) },
+            links.mapIndexed { index, link -> link.toLinkDto(index) },
             logoType(photoUrl),
             logoWebpUrl(photoUrl),
             cfpId = cfpId,

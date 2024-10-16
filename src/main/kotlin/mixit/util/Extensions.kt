@@ -187,7 +187,6 @@ fun String?.toPlayerUrl() = this?.let {
 fun String?.IsVimeoPlayer(): Boolean = this?.startsWith("https://vimeo.com/") ?: false
 fun String?.IsYoutube(): Boolean = this?.contains("youtube.com") ?: false
 
-
 fun String.encodeToMd5(): String? =
     if (isNullOrEmpty()) null else hex(MessageDigest.getInstance("MD5").digest(toByteArray(Charset.forName("CP1252"))))
 

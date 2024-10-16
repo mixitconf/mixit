@@ -83,5 +83,4 @@ class UserService(
 
     fun loadOrganizations(event: CachedEvent, language: Language): List<SponsorDto> =
         event.organizations.map { it.toSponsorDto(language) }
-
 }

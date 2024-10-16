@@ -1,14 +1,11 @@
 package mixit.talk.spi.sessionize
 
 import mixit.MixitProperties
-import mixit.talk.model.CachedTalk
-import mixit.talk.spi.CfpSynchronizer
 import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.http.HttpHeaders
 import org.springframework.http.MediaType
-import org.springframework.stereotype.Service
 import org.springframework.web.reactive.function.client.WebClient
 
 @Qualifier

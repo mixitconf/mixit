@@ -63,7 +63,6 @@ class UserHandler(
     suspend fun speakerView(req: ServerRequest): ServerResponse =
         ok().renderAndAwait(Speaker.template, mapOf(Pair(TITLE, Speaker.title)))
 
-
     suspend fun findOneView(req: ServerRequest, viewMode: ViewMode = ViewMode.ViewUser): ServerResponse {
         val login = req.decode("login")!!
         val user =
