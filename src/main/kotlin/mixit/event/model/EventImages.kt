@@ -36,7 +36,6 @@ data class EventImage(
     val mustacheTemplate: MustacheTemplate? = null
 )
 
-
 data class EventImageDto(
     val event: String,
     val name: String,

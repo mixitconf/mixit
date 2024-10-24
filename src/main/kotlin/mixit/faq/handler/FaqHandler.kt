@@ -21,9 +21,11 @@ class FaqHandler(
             eventService,
             userService,
             Faq,
-            mapOf("sections" to questionSectionService
-                .findAll()
-                .map { section -> section.copy(questions = section.questions.sortedBy { it.order }) }
-                .sortedBy { it.order })
+            mapOf(
+                "sections" to questionSectionService
+                    .findAll()
+                    .map { section -> section.copy(questions = section.questions.sortedBy { it.order }) }
+                    .sortedBy { it.order }
+            )
         )
 }

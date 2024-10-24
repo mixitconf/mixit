@@ -32,7 +32,7 @@ data class CachedEventImages(
     fun toDto(defaultUrl: String): EventImagesDto = EventImagesDto(
         id = id,
         event = event,
-        rootUrl = rootUrl ?:defaultUrl,
+        rootUrl = rootUrl ?: defaultUrl,
         sections = sections.map { section ->
             EventImagesSectionDto(
                 sectionId = section.sectionId,
@@ -61,7 +61,6 @@ data class CachedEventImageSection(
         section.images
     )
 }
-
 
 data class EventImagesDto(
     val id: String,

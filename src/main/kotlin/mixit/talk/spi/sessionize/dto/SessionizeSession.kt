@@ -1,6 +1,5 @@
 package mixit.talk.spi.sessionize.dto
 
-
 data class SessionizeSession(
     val id: String,
     val title: String,

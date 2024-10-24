@@ -68,7 +68,7 @@ class SessionizeSynchronizer(
                     speakers.find { it.cfpId == speaker }
                 }
                 val room = session.roomId?.let { rooms[it] } ?: Room.TWITCH
-                val format = if(room == Room.TWITCH) TalkFormat.ON_AIR else session.categoryItems.firstNotNullOfOrNull { formats[it] } ?: TalkFormat.TALK
+                val format = if (room == Room.TWITCH) TalkFormat.ON_AIR else session.categoryItems.firstNotNullOfOrNull { formats[it] } ?: TalkFormat.TALK
                 val topic = session.categoryItems.firstNotNullOfOrNull { topics[it] } ?: Topic.OTHER
                 val language = session.categoryItems.firstNotNullOfOrNull { languages[it] } ?: Language.FRENCH
                 val level = session.categoryItems.firstNotNullOfOrNull { levels[it] }
@@ -117,9 +117,11 @@ class SessionizeSynchronizer(
                 .findAll()
                 .firstOrNull {
                     (sessionizeSpeaker.email != null && it.email == sessionizeSpeaker.email) ||
-                            (it.cfpId == sessionizeSpeaker.id) ||
-                            (it.firstname.lowercase() == sessionizeSpeaker.firstName.lowercase() &&
-                                    it.lastname.lowercase() == sessionizeSpeaker.lastName.lowercase())
+                        (it.cfpId == sessionizeSpeaker.id) ||
+                        (
+                            it.firstname.lowercase() == sessionizeSpeaker.firstName.lowercase() &&
+                                it.lastname.lowercase() == sessionizeSpeaker.lastName.lowercase()
+                            )
                 }
                 ?.let { user ->
                     user.copy(
@@ -168,7 +170,6 @@ class SessionizeSynchronizer(
                     cfpId = sessionizeSpeaker.id
                 )
             }
-
 
         return existingSpeakers + nonExistingSpeakers
     }

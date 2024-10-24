@@ -29,6 +29,8 @@ class RedirectRoutes(
             GET("/docs/sponsor/leaflet/fr") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${properties.drive.fr.sponsor}") }
             GET("/docs/sponsor/form/en") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${properties.drive.en.sponsorform}") }
             GET("/docs/sponsor/form/fr") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${properties.drive.fr.sponsorform}") }
+            GET("/docs/sponsor/form/mixteen/en") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${properties.drive.en.sponsormixteenform}") }
+            GET("/docs/sponsor/form/mixteen/fr") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${properties.drive.fr.sponsormixteenform}") }
             GET("/docs/speaker/leaflet/en") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${properties.drive.en.speaker}") }
             GET("/docs/speaker/leaflet/fr") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${properties.drive.fr.speaker}") }
             GET("/docs/presse/leaflet/en") { permanentRedirect("$GOOGLE_DRIVE_URI?id=${properties.drive.en.press}") }
@@ -61,7 +63,7 @@ class RedirectRoutes(
             GET("/about/") { permanentRedirect("${properties.baseUri}/about") }
             GET("/home") { permanentRedirect("${properties.baseUri}/") }
 
-            GET("/cfp") { permanentRedirect("https://sessionize.com/mixit-2024/") }
+            GET("/cfp") { permanentRedirect("https://sessionize.com/mixit-2025/") }
         }
     }
 }

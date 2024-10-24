@@ -34,7 +34,7 @@ data class TicketTemp(
     val createdAt: Instant = Instant.now()
 ) {
     fun toTicket(cryptographer: Cryptographer) = Ticket(
-        number = cryptographer.encrypt(if(number.isNullOrBlank()) Ticket.generateNewNumber() else number)!!,
+        number = cryptographer.encrypt(if (number.isNullOrBlank()) Ticket.generateNewNumber() else number)!!,
         encryptedEmail = cryptographer.encrypt(encryptedEmail)!!,
         type = type,
         pronoun = if (pronoun == null) null

@@ -61,7 +61,6 @@ import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
 import org.springframework.web.reactive.function.server.renderAndAwait
 
-
 @Component
 class TalkHandler(
     private val service: TalkService,
@@ -109,15 +108,15 @@ class TalkHandler(
         val images = findImages(config)
         val closestImages = findClosestImages(config)
         val days = (
-                0..Duration.between(event.start.atStartOfDay(), event.end.atStartOfDay())
-                    .toDays()
-                ).map { event.start.plusDays(it) }
+            0..Duration.between(event.start.atStartOfDay(), event.end.atStartOfDay())
+                .toDays()
+            ).map { event.start.plusDays(it) }
         val rooms = roomsToDisplayOnAgenda(talks)
         val canDisplayAgenda = rooms.isNotEmpty() && !(rooms.contains(Room.UNKNOWN) && rooms.size == 1)
         val isCurrent = (config.year == NEXT_EVENT.toInt())
         val displayAgenda =
-            ((config.tabs == TalksTabs.Schedule || config.tabs == TalksTabs.Favorites) && canDisplayAgenda)
-                    || (config.tabs == TalksTabs.MiXiTonAir && isCurrent)
+            ((config.tabs == TalksTabs.Schedule || config.tabs == TalksTabs.Favorites) && canDisplayAgenda) ||
+                (config.tabs == TalksTabs.MiXiTonAir && isCurrent)
         if (config.tabs == TalksTabs.Mixette && !hasMixette) {
             return seeOther("${properties.baseUri}/${config.year}/medias")
         }
@@ -179,7 +178,8 @@ class TalkHandler(
 
     private fun getTalkToDisplay(
         config: TalkViewConfig,
-        rooms: List<Room>, days: List<LocalDate>,
+        rooms: List<Room>,
+        days: List<LocalDate>,
         talks: List<TalkDto>,
         canDisplayAgenda: Boolean
     ): Any =
@@ -215,10 +215,10 @@ class TalkHandler(
                 .filterNot { user ->
                     staffs.any {
                         user.login == it.login ||
-                                (user.firstname.lowercase() == it.firstname.lowercase() && user.lastname.lowercase() == it.lastname.lowercase()) ||
-                                (user.firstname.lowercase() == "greg" && user.lastname.lowercase() == "alexandre") ||
-                                (user.firstname.lowercase() == "agnes" && user.lastname.lowercase() == "crepet") ||
-                                (user.firstname.lowercase() == "amelie" && user.lastname.lowercase() == "b")
+                            (user.firstname.lowercase() == it.firstname.lowercase() && user.lastname.lowercase() == it.lastname.lowercase()) ||
+                            (user.firstname.lowercase() == "greg" && user.lastname.lowercase() == "alexandre") ||
+                            (user.firstname.lowercase() == "agnes" && user.lastname.lowercase() == "crepet") ||
+                            (user.firstname.lowercase() == "amelie" && user.lastname.lowercase() == "b")
                     }
                 }
                 .map { it.toDto(req.language()) }
@@ -493,11 +493,11 @@ class TalkHandler(
                     "favorites" to favoriteTalkIds.any { talk.id == it },
                     "images" to findTalkImages(talk),
                     "hasOthertalks" to otherTalks.isNotEmpty(),
-                    "youtubePlayer" to if(talk.video.IsYoutube()) talk.video.toPlayerUrl() else null,
-                    "vimeoPlayer" to if(talk.video.IsVimeoPlayer()) talk.video.toPlayerUrl() else null,
+                    "youtubePlayer" to if (talk.video.IsYoutube()) talk.video.toPlayerUrl() else null,
+                    "vimeoPlayer" to if (talk.video.IsVimeoPlayer()) talk.video.toPlayerUrl() else null,
                     "twitchPlayer" to (talk.video?.contains("twitch") ?: false),
-                    "vimeoPlayer2" to if(talk.video2.IsVimeoPlayer()) talk.video2.toPlayerUrl() else null,
-                    "youtubePlayer2" to if(talk.video2.IsYoutube()) talk.video2.toPlayerUrl() else null,
+                    "vimeoPlayer2" to if (talk.video2.IsVimeoPlayer()) talk.video2.toPlayerUrl() else null,
+                    "youtubePlayer2" to if (talk.video2.IsYoutube()) talk.video2.toPlayerUrl() else null,
                     "isCurrent" to (year == NEXT_EVENT.toInt()),
                     FEEDBACK_TYPES to feedbackService.computeUserFeedbackForTalk(talk, currentUserEmail),
                     FEEDBACK_COMMENTS to feedbackService.computeUserCommentForTalk(talk, currentUserEmail),
@@ -584,6 +584,4 @@ class TalkHandler(
         val talk = service.findBySlug(req.pathVariable("slug"))
         return permanentRedirect("${properties.baseUri}/${talk.event}/${talk.slug}")
     }
-
-
 }

@@ -21,7 +21,7 @@ enum class TalksTabs(val url: String) {
             isConnected: Boolean,
             canDisplayAgenda: Boolean
         ) =
-            if (isCurrent  && canDisplayAgenda) {
+            if (isCurrent && canDisplayAgenda) {
                 listOf(Schedule, Speakers).addOnAir(hasOnAir).addMixette(hasMixette)
             } else {
                 listOf(Talks, Speakers).addOnAir(hasOnAir).addMixette(hasMixette)

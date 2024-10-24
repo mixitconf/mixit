@@ -7,7 +7,39 @@
         <h2 class="mxt-section-small">{{#i18n}}sponsors.becoming{{/i18n}}</h2>
         <p>
             {{#i18n}}sponsors.description{{/i18n}}
-            <strong><a href="{{#i18n}}sponsors.pdf.url{{/i18n}}">PDF</a></strong>.
+
+            <nav class="navbar mxt-navbar--talks" style="justify-content: center;">
+                <div class="nav-item ms-3">
+                    <a href="{{#i18n}}sponsors.pdf.url{{/i18n}}" class="nav-link mxt-navbar--nav-link"
+                       target="_blank"
+                       alt="{{#i18n}}sponsors.form.leaflet{{/i18n}}">
+                        <img src="/images/svg/mxt-icon-sponsor-dark.svg"
+                             class="mxt-icon--navbar me-2"
+                             alt="{{#i18n}}sponsors.form.leaflet{{/i18n}}">
+                        {{#i18n}}sponsors.form.leaflet{{/i18n}}
+                    </a>
+                </div>
+                <div class="nav-item ms-3">
+                    <a href="{{#i18n}}sponsors.form.mixit.url{{/i18n}}" class="nav-link mxt-navbar--nav-link"
+                       target="_blank"
+                       alt="{{#i18n}}sponsors.form.mixit{{/i18n}}">
+                        <img src="/images/svg/mxt-icon-sponsor-dark.svg"
+                             class="mxt-icon--navbar me-2"
+                             alt="{{#i18n}}sponsors.form.mixit{{/i18n}}">
+                        {{#i18n}}sponsors.form.mixit{{/i18n}}
+                    </a>
+                </div>
+                <div class="nav-item ms-3">
+                    <a href="{{#i18n}}sponsors.form.mixteen.url{{/i18n}}" class="nav-link mxt-navbar--nav-link"
+                       target="_blank"
+                       alt="{{#i18n}}sponsors.form.mixteen{{/i18n}}">
+                        <img src="/images/svg/mxt-icon-sponsor-dark.svg"
+                             class="mxt-icon--navbar me-2"
+                             alt="{{#i18n}}sponsors.form.mixteen{{/i18n}}">
+                        {{#i18n}}sponsors.form.mixteen{{/i18n}}
+                    </a>
+                </div>
+            </nav>
         </p>
 <!--        <p>{{#i18n}}sponsors.reservations{{/i18n}}</p>-->
 <!--        <div class="mxt-sponsor--stats">-->
@@ -93,6 +125,7 @@
                     target="_top">
                 <strong>{{#i18n}}sponsors.contact.action{{/i18n}}</strong></a>
         </p>
+
     {{/isCurrent}}
 </div>
 {{#has-sponsors-lanyard}}

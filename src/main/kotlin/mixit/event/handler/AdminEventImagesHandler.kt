@@ -116,7 +116,6 @@ class AdminEventImagesHandler(
         )
     }
 
-
     suspend fun adminUpdateEventImagesSection(req: ServerRequest): ServerResponse {
         val formData = req.extractFormData()
         val event = loadEventImages(formData)

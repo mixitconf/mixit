@@ -54,13 +54,12 @@ class AdminUserHandler(
                 AdminUsers.template,
                 mapOf(
                     USERS to userRepository.findAll()
-                        .filter { it.filterOn(criteria, cryptographer)}
+                        .filter { it.filterOn(criteria, cryptographer) }
                         .sortedWith(compareBy<User> { it.lastname.lowercase() }.thenBy { it.firstname.lowercase() }),
                     TITLE to AdminUsers.title
                 )
             )
         }
-
 
     suspend fun adminUserNewsLetters(req: ServerRequest): ServerResponse =
         req.extractFormData().let { formData ->
@@ -70,7 +69,7 @@ class AdminUserHandler(
                 mapOf(
                     USERS to userRepository
                         .findAll()
-                        .filter { it.filterOn(criteria, cryptographer)}
+                        .filter { it.filterOn(criteria, cryptographer) }
                         .filter { it.newsletterSubscriber }
                         .map { it.copy(email = cryptographer.decrypt(it.email)) }
                         .sortedWith(compareBy<User> { it.lastname }.thenBy { it.firstname }),

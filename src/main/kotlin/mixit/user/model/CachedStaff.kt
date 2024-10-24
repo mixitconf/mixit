@@ -44,7 +44,7 @@ data class CachedStaff(
             photoUrl,
             photoShape,
             role,
-            links.mapIndexed { index, link ->  link.toLinkDto(index) },
+            links.mapIndexed { index, link -> link.toLinkDto(index) },
             logoType(photoUrl),
             logoWebpUrl(photoUrl)
         )

@@ -21,13 +21,14 @@ fun createSectionImages(section: Path): List<String> =
     Files.walk(section)
         .filter { Files.isRegularFile(it) }
         .map { it.pathString.split("/").last() }
-        .map { """
+        .map {
+            """
             {
                 "name": "$it",
                 "talkId": null,
                 "mustacheTemplate": null
             }
-        """.trimIndent()
+            """.trimIndent()
         }
         .toList()
 
@@ -35,7 +36,7 @@ fun main() {
     val rootPath = Paths.get("/home/devmind/Workspace/pictures/mixiconf-images-two/2024/")
     // list all files in the directory
     val sections = Files.walk(rootPath)
-        .filter { it.pathString.contains("/2024/")}
+        .filter { it.pathString.contains("/2024/") }
         .filter { Files.isDirectory(it) }
 
     println(sections.map { it.name }.toList().joinToString())
@@ -48,5 +49,3 @@ fun main() {
 //        }
 //    """.trimIndent())
 }
-
-

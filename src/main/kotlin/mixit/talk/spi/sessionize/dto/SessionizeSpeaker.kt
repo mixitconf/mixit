@@ -18,7 +18,7 @@ data class SessionizeSpeaker(
     }
 
     val picture: String by lazy {
-        "${firstName} ${lastName}"
+        "$firstName $lastName"
             .stripAccents()
             .replace(" ", "_")
             .replace("__", "_")

@@ -30,10 +30,9 @@ abstract class CacheCaffeineUnitaryTemplate<T : Cached> : CacheCaffeineTemplate<
         return cache.asMap().values.toList()
     }
 
-
     override suspend fun findOneOrNull(id: String): T? {
         val elt = cache.getIfPresent(id)
-        if(elt == null) {
+        if (elt == null) {
             unitaryLoader(id).invoke()?.also {
                 cache.put(id, it)
             }

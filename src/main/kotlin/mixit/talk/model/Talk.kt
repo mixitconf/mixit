@@ -28,7 +28,3 @@ data class Talk(
     val level: TalkLevel? = null,
     @Id val id: String? = null
 )
-
-
-
-
