@@ -1,8 +1,6 @@
 package mixit.event.model
 
 import kotlinx.coroutines.runBlocking
-import mixit.MixitApplication.Companion.speakerStarInCurrentEvent
-import mixit.MixitApplication.Companion.speakerStarInHistory
 import mixit.event.repository.EventRepository
 import mixit.user.model.CachedOrganization
 import mixit.user.model.CachedSpeaker
@@ -57,9 +55,7 @@ class EventService(
         val userIds = event.organizations.map { it.organizationLogin } +
             event.sponsors.map { it.sponsorId } +
             event.volunteers.map { it.volunteerLogin } +
-            event.organizers.map { it.organizerLogin } +
-            speakerStarInHistory.map { it.login } +
-            speakerStarInCurrentEvent.map { it.login }
+            event.organizers.map { it.organizerLogin }
 
         val users = userService.findAllByIds(userIds)
 
@@ -87,14 +83,6 @@ class EventService(
             event.photoUrls,
             event.videoUrl,
             event.schedulingFileUrl,
-            speakerStarInHistory.map { starLogin ->
-                val user = users.firstOrNull { it.login == starLogin.login }?.toUser() ?: User()
-                CachedSpeaker(user, starLogin.year)
-            },
-            speakerStarInCurrentEvent.map { starLogin ->
-                val user = users.firstOrNull { it.login == starLogin.login }?.toUser() ?: User()
-                CachedSpeaker(user, starLogin.year)
-            },
             event.year,
             event.streamingUrl
         )

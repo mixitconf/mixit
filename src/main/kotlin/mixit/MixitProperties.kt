@@ -24,6 +24,7 @@ class MixitProperties {
         class DriveDocuments {
             lateinit var sponsorform: String
             lateinit var sponsor: String
+            lateinit var sponsormixteenform: String
             lateinit var speaker: String
             lateinit var press: String
         }

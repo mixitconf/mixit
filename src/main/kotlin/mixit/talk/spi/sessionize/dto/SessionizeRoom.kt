@@ -23,4 +23,3 @@ data class SessionizeRoom(
             else -> Room.UNKNOWN
         }
 }
-

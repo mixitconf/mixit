@@ -43,7 +43,6 @@ class EventImagesRepository(
                 logger.info("Events 2024 images data initialization complete")
             }
         }
-
     }
 
     fun count() =

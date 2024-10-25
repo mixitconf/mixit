@@ -5,7 +5,6 @@ import mixit.talk.model.Language
 import mixit.user.handler.logoType
 import mixit.user.handler.logoWebpUrl
 import mixit.user.model.CachedSponsor
-import mixit.user.model.Link
 import mixit.user.model.PhotoShape
 import mixit.util.toUrlPath
 import java.time.LocalDate
@@ -38,5 +37,5 @@ fun CachedSponsor.toSponsorDto(language: Language = Language.FRENCH) =
         logoType(photoUrl),
         logoWebpUrl(photoUrl),
         description[language],
-        links.mapIndexed { index, link ->  link.toLinkDto(index) }
+        links.mapIndexed { index, link -> link.toLinkDto(index) }
     )

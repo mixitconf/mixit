@@ -1,13 +1,6 @@
 package mixit.security.handler
 
 import mixit.MixitProperties
-import mixit.util.mustache.MustacheI18n.DESCRIPTION
-import mixit.util.mustache.MustacheI18n.EMAIL
-import mixit.util.mustache.MustacheI18n.TOKEN
-import mixit.util.mustache.MustacheTemplate
-import mixit.util.mustache.MustacheTemplate.Login
-import mixit.util.mustache.MustacheTemplate.LoginConfirmation
-import mixit.util.mustache.MustacheTemplate.LoginCreation
 import mixit.security.MixitWebFilter.Companion.SESSION_EMAIL_KEY
 import mixit.security.MixitWebFilter.Companion.SESSION_LOGIN_KEY
 import mixit.security.MixitWebFilter.Companion.SESSION_ROLE_KEY
@@ -26,6 +19,13 @@ import mixit.util.errors.EmailSenderException
 import mixit.util.errors.EmailValidatorException
 import mixit.util.extractFormData
 import mixit.util.locale
+import mixit.util.mustache.MustacheI18n.DESCRIPTION
+import mixit.util.mustache.MustacheI18n.EMAIL
+import mixit.util.mustache.MustacheI18n.TOKEN
+import mixit.util.mustache.MustacheTemplate
+import mixit.util.mustache.MustacheTemplate.Login
+import mixit.util.mustache.MustacheTemplate.LoginConfirmation
+import mixit.util.mustache.MustacheTemplate.LoginCreation
 import mixit.util.seeOther
 import mixit.util.temporaryRedirect
 import mixit.util.validator.EmailValidator
@@ -277,8 +277,7 @@ class AuthenticationHandler(
                     attributes[SESSION_LOGIN_KEY] = user.login
                 }
                 seeOther("${properties.baseUri}/me", cookie)
-            }
-            catch (e: Exception) {
+            } catch (e: Exception) {
                 displayErrorView(LoginError.INVALID_TOKEN, context)
             }
         }

@@ -16,7 +16,7 @@ class FeatureStateRepository(private val template: ReactiveMongoTemplate) {
     fun initData() {
         if (count().block() == 0L) {
             Feature.entries.forEach {
-                save(FeatureState(false,it)).block()
+                save(FeatureState(false, it)).block()
             }
         }
     }

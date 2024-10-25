@@ -2,7 +2,6 @@ package mixit.event.model
 
 import java.time.LocalDate
 import mixit.user.model.CachedOrganization
-import mixit.user.model.CachedSpeaker
 import mixit.user.model.CachedSponsor
 import mixit.user.model.CachedStaff
 import mixit.user.model.Link
@@ -20,8 +19,6 @@ data class CachedEvent(
     val photoUrls: List<Link>,
     val videoUrl: Link?,
     val schedulingFileUrl: String?,
-    val speakerStarInHistory: List<CachedSpeaker>,
-    val speakerStarInCurrent: List<CachedSpeaker>,
     val year: Int,
     val streamingUrl: String?
 ) : Cached {

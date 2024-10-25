@@ -3,7 +3,6 @@ package mixit.user.handler.dto
 import mixit.talk.model.Language
 import mixit.user.handler.logoType
 import mixit.user.handler.logoWebpUrl
-import mixit.user.model.Link
 import mixit.user.model.PhotoShape
 import mixit.user.model.Role
 import mixit.user.model.User
@@ -43,7 +42,7 @@ fun User.toDto(language: Language, searchTerms: List<String> = emptyList()) =
         photoUrl,
         photoShape ?: PhotoShape.Square,
         role,
-        links.mapIndexed { index, link ->  link.toLinkDto(index) },
+        links.mapIndexed { index, link -> link.toLinkDto(index) },
         logoType(photoUrl),
         logoWebpUrl(photoUrl),
         cfpId = cfpId,

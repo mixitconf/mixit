@@ -68,7 +68,7 @@ data class TalkViewConfig(
             return TalkViewConfig(
                 year,
                 req,
-                tabs = if(year == MixitApplication.CURRENT_EVENT.toInt()) Schedule else Talks,
+                tabs = if (year == MixitApplication.CURRENT_EVENT.toInt()) Schedule else Talks,
                 topic,
                 viewWorkshop = (req.queryParamOrNull("workshop") ?: "true") == "true",
                 viewFavorites = (req.queryParamOrNull("favorites") ?: "false") == "true",
@@ -102,6 +102,5 @@ data class TalkViewConfig(
 
         fun talksWithFavorites(req: ServerRequest, year: Int, topic: String? = null) =
             talks(req, year, topic).copy(filterOnFavorite = true, tabs = Favorites)
-
     }
 }

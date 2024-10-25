@@ -63,17 +63,6 @@ class SponsorHandler(
             "title" to if (template != "sponsors") title else "$title|$year"
         )
         if (template == Home.template) {
-            context["stars-old"] = event.speakerStarInHistory
-                .asSequence()
-                .shuffled()
-                .take(6)
-                .map { it.toSpeakerStarDto() }
-                .toList()
-            context["stars-current"] = event.speakerStarInCurrent
-                .shuffled()
-                .take(6)
-                .map { it.toSpeakerStarDto() }
-                .toList()
             context["aliens"] = talkService
                 .findNKeynoteByTopic(3, Topic.ALIENS.value)
                 .map { it.toDto(req.language()) }

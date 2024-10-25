@@ -75,4 +75,3 @@ data class SessionizeCategoryItem(
             else -> Room.UNKNOWN
         }
 }
-

@@ -67,7 +67,7 @@ class AuthenticationService(
             ?.also {
                 // if user login already exist we try to create a new one with a new login
                 if (attempt < 3) {
-                    val extension  = nonEncryptedMail.substringAfterLast(".")
+                    val extension = nonEncryptedMail.substringAfterLast(".")
                     val parts = nonEncryptedMail.split("@")
                     val login = parts[0].toSlug() + "_" + parts[1].substringBefore(".$extension").toSlug()
                     return createUserIfEmailDoesNotExist(
@@ -93,7 +93,7 @@ class AuthenticationService(
      */
     suspend fun searchUserByEmailOrCreateHimFromTicket(nonEncryptedMail: String): User? =
         userRepository.findByNonEncryptedEmail(nonEncryptedMail)
-        // If user is not found we search in the lottery
+            // If user is not found we search in the lottery
             ?: lotteryRepository
                 .findByEncryptedEmail(cryptographer.encrypt(nonEncryptedMail)!!)
                 ?.let {

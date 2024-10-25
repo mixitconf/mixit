@@ -22,9 +22,8 @@ class UserFeedbackService(
     override fun loader(): suspend () -> List<CachedUserFeedback> =
         { userFeedbackRepository.findAll().map { talk -> loadCachedUserFeedback(talk) } }
 
-
     override fun unitaryLoader(id: String): suspend () -> CachedUserFeedback? =
-        { userFeedbackRepository.findOne(id).awaitSingleOrNull()?.let { loadCachedUserFeedback(it)} }
+        { userFeedbackRepository.findOne(id).awaitSingleOrNull()?.let { loadCachedUserFeedback(it) } }
 
     suspend fun save(talk: UserFeedback): UserFeedback =
         userFeedbackRepository.save(talk)
@@ -54,7 +53,6 @@ class UserFeedbackService(
         val talk = talkRepository.findOne(userFeedback.talkId).awaitSingle()
         return CachedUserFeedback(userFeedback, talk, user)
     }
-
 
     fun deleteOne(id: String) =
         userFeedbackRepository.deleteOne(id).doOnSuccess { invalidateElement(id) }

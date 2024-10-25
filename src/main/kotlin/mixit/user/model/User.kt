@@ -49,10 +49,10 @@ data class User(
 
     fun filterOn(criteria: String?, cryptographer: Cryptographer) =
         criteria.isNullOrBlank() ||
-                login.contains(criteria, true) ||
-                firstname.contains(criteria, true) ||
-                lastname.contains(criteria, true) ||
-                cryptographer.decrypt(email)?.contains(criteria, true) ?: false
+            login.contains(criteria, true) ||
+            firstname.contains(criteria, true) ||
+            lastname.contains(criteria, true) ||
+            cryptographer.decrypt(email)?.contains(criteria, true) ?: false
 }
 
 enum class PhotoShape {
