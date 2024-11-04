@@ -1096,6 +1096,9 @@ h3 {
   font-size: larger;
   flex-direction: column;
   align-items: center;
+  > h3 {
+    color: $primary-color !important;
+  }
 }
 
 .mxt-video--player-container, .mxt-image--player-container {
