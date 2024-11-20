@@ -2,7 +2,7 @@
 <div class="container-xxl">
 
 {{#hasFeatureMixitOnAirOnHomePage}}
-    <h2 class="mt-5">{{#i18n}}home.live.title{{/i18n}}</h2>
+    <h2 class="mt-5 pt-2">{{#i18n}}home.live.title{{/i18n}}</h2>
     <p class="mb-2">{{#i18n}}home.live.intro{{/i18n}}</p>
 
     <div class="mxt-wrapper--intrinsic">
@@ -15,19 +15,13 @@
     </div>
 {{/hasFeatureMixitOnAirOnHomePage}}
 {{^hasFeatureMixitOnAirOnHomePage}}
-    <h2>News</h2>
-    <p class="lead text-center">{{#i18n}}home.news.intro{{/i18n}}</p>
+    <h2>{{#i18n}}home.next.edition.title{{/i18n}}</h2>
+    <p class="lead">{{#i18n}}home.news.intro{{/i18n}}</p>
     <div class="row">
-<!--        <div class="col-md-2 col-sm-4 text-center"><img src="/images/svg/mxt-soldout.svg" class="mxt-img--event-home"></div>-->
-<!--        <div class="col-md-10 col-sm-8 justify-content-center d-flex flex-column">-->
-<!--            <p>{{#i18n}}home.news.postconf{{/i18n}}</p>-->
-            <p>{{#i18n}}home.news.preconf{{/i18n}}</p>
-            <p>{{#i18n}}home.news.preconf2{{/i18n}}</p>
-<!--        </div>-->
+        <p>{{#i18n}}home.news.preconf{{/i18n}}</p>
+        <p>{{#i18n}}home.news.preconf2{{/i18n}}</p>
     </div>
 {{/hasFeatureMixitOnAirOnHomePage}}
-
-
     <div class="row mxt-home-round-header">
         <div class="col-md-2 col-sm-6">
             <img src="/images/svg/timeline/nov18.svg"
@@ -51,15 +45,16 @@
                  alt="{{#i18n}}home.timeline.mixit{{/i18n}}">
         </div>
     </div>
-<!--    {{#hasFeatureLottery}}-->
-<!--        <p class="pt-3">{{#i18n}}home.news.cfp.lottery{{/i18n}}</p>-->
-<!--        <p class="pt-2">{{#i18n}}home.news.cfp.cfp{{/i18n}}</p>-->
-<!--    {{/hasFeatureLottery}}-->
-<!--    {{^hasFeatureLottery}}-->
-<!--        <p class="pt-3">{{#i18n}}home.news.postcfp.lottery{{/i18n}}</p>-->
-<!--        <p class="pt-2">{{#i18n}}home.news.postcfp.cfp{{/i18n}}</p>-->
-<!--    {{/hasFeatureLottery}}-->
-
+    {{#disableForTheMoment}}
+        {{#hasFeatureLottery}}
+            <p class="pt-3">{{#i18n}}home.news.cfp.lottery{{/i18n}}</p>
+            <p class="pt-2">{{#i18n}}home.news.cfp.cfp{{/i18n}}</p>
+        {{/hasFeatureLottery}}
+        {{^hasFeatureLottery}}
+            <p class="pt-3">{{#i18n}}home.news.postcfp.lottery{{/i18n}}</p>
+            <p class="pt-2">{{#i18n}}home.news.postcfp.cfp{{/i18n}}</p>
+        {{/hasFeatureLottery}}
+    {{/disableForTheMoment}}
 
     <div class="container mb-2">
         <nav class="navbar mxt-navbar--talks" style="justify-content: center;">
@@ -90,17 +85,8 @@
                     {{#i18n}}home.intro.newsletter{{/i18n}}
                 </a>
             </div>
-<!--            <div class="nav-item">-->
-<!--                <a href="{{localePrefix}}/2023/medias" class="nav-link mxt-navbar--nav-link"-->
-<!--                   alt="{{#i18n}}header.menu.replay{{/i18n}}">-->
-<!--                    <img src="/images/svg/mxt-icon-video-dark.svg"-->
-<!--                         class="mxt-icon--navbar me-2"-->
-<!--                         alt="{{#i18n}}header.menu.replay{{/i18n}}">-->
-<!--                    {{#i18n}}header.menu.replay{{/i18n}}</a>-->
-<!--            </div>-->
             <div class="nav-item ms-3">
                 <a href="/sponsors" class="nav-link mxt-navbar--nav-link"
-                   target="_blank"
                    alt="{{#i18n}}sponsors.becoming{{/i18n}}">
                     <img src="/images/svg/mxt-icon-sponsor-dark.svg"
                          class="mxt-icon--navbar me-2"
@@ -108,132 +94,144 @@
                     {{#i18n}}sponsors.becoming{{/i18n}}
                 </a>
             </div>
-<!--            <div class="nav-item ms-3">-->
-<!--                <a href="/venue" class="nav-link mxt-navbar--nav-link"-->
-<!--                   alt="{{#i18n}}header.menu.come{{/i18n}}">-->
-<!--                    <img src="/images/svg/mxt-icon-place-dark.svg"-->
-<!--                         class="mxt-icon--navbar me-2"-->
-<!--                         alt="{{#i18n}}header.menu.come{{/i18n}}">-->
-<!--                    {{#i18n}}header.menu.come{{/i18n}}-->
-<!--                </a>-->
-<!--            </div>-->
+            {{#disableForTheMoment}}
+                <div class="nav-item ms-3">
+                    <a href="/venue" class="nav-link mxt-navbar--nav-link"
+                       alt="{{#i18n}}header.menu.come{{/i18n}}">
+                        <img src="/images/svg/mxt-icon-place-dark.svg"
+                             class="mxt-icon--navbar me-2"
+                             alt="{{#i18n}}header.menu.come{{/i18n}}">
+                        {{#i18n}}header.menu.come{{/i18n}}
+                    </a>
+                </div>
+            {{/disableForTheMoment}}
         </nav>
     </div>
 </div>
 
-<div class="row mxt-layout-header-effect mxt-section"><div class="mxt-layout-header-effect-grey-inversed"></div></div>
+<div class="row mxt-layout-header-effect mxt-section">
+    <div class="mxt-layout-header-effect-grey-inversed"></div>
+</div>
+
 <div class="mxt-layout-main-accent-section">
     <div class="container-xxl ">
-        <h2>{{#i18n}}home.about{{/i18n}}</h2>
+        <h2>{{#i18n}}home.talk.intro{{/i18n}}</h2>
+        <p class="lead">{{#i18n}}home.talk.alien{{/i18n}}</p>
 
-        <div class="row pt-2">
-            <div class="col-md-6">
-                <div class="mxt-layout-main-outline">{{#i18n}}home.about.outline{{/i18n}}</div>
-                <br/>
-                <p class="lead">{{#i18n}}home.about.description{{/i18n}}</p>
-                <p>{{#i18n}}home.about.wishes{{/i18n}}</p>
+        <p>{{#i18n}}home.talk.themes{{/i18n}}</p>
+        <p>{{#i18n}}home.talk.format{{/i18n}}</p>
 
-                <div class="row">
-                    <div class="mxt-header--accesibility-container">
-                        <img src="/images/svg/accessibility/mxt-icon--child-care-dark.svg"
-                             class="mxt-icon--social"
-                             alt="{{#i18n}}accessibility.childcare{{/i18n}}">
-                        <div>{{#i18n}}accessibility.text.mummy{{/i18n}}</div>
-                    </div>
-                    <div class="mxt-header--accesibility-container">
-                        <img src="/images/svg/accessibility/mxt-icon--hearing-impaired-dark.svg"
-                             class="mxt-icon--social"
-                             alt="{{#i18n}}accessibility.hearing.impaired{{/i18n}}">
-                        <div>{{#i18n}}accessibility.hearing.impaired{{/i18n}}</div>
-                    </div>
-                    <div class="mxt-header--accesibility-container">
-                        <img src="/images/svg/accessibility/mxt-icon--motor-disability-dark.svg"
-                             class="mxt-icon--social"
-                             alt="{{#i18n}}accessibility.motor.disability{{/i18n}}">
-                        <div>{{#i18n}}accessibility.motor.disability{{/i18n}}</div>
-                    </div>
-                    <div class="mxt-header--accesibility-container">
-                        <img src="/images/svg/accessibility/mxt-icon--pregnant-dark.svg"
-                             class="mxt-icon--social"
-                             alt="{{#i18n}}accessibility.pregnant{{/i18n}}">
-                        <div>{{#i18n}}accessibility.pregnant{{/i18n}}</div>
-                    </div>
+        <div class="mxt-tracks row justify-content-center">
+            <div class="col-12 col-md-6 col-lg-3 row pt-2">
+                <div class="col-4 col-md-3 col-lg-3 text-center">
+                    <img src="/images/svg/mxt-icon--aliens.svg" class="mxt-icon--cat__home"
+                         alt="{{#i18n}}topics.aliens.title{{/i18n}}">
                 </div>
-                <p>
-                    {{#i18n}}accessibility.text.moblity{{/i18n}}
-                    <a href="/accessibility"><strong>{{#i18n}}accessibility.plus{{/i18n}}</strong></a>
-                </p>
+                <div class="col-8 col-md-9 col-lg-9">
+                    <h3 style="margin-bottom: -0.2rem;" class="pt-0">{{#i18n}}topics.aliens.title{{/i18n}}</h3>
+                    <small>{{#i18n}}topics.aliens.description{{/i18n}}</small>
+                </div>
             </div>
-            <div class="col-md-6">
-                <div class="mxt-wrapper--intrinsic">
-                    <iframe src="https://www.youtube.com/embed/s7_Gz2OScLk" class="mxt-wrapper--video-player"
-                            allowfullscreen=""></iframe>
+            <div class="col-12 col-md-6 col-lg-3 row pt-2">
+                <div class="col-4 col-md-3 col-lg-3 text-center">
+                    <img src="/images/svg/mxt-icon--tech.svg" class="mxt-icon--cat__home"
+                         alt="{{#i18n}}topics.tech.title{{/i18n}}">
                 </div>
-                <div class="mxt-header--stats">
-                    <div>{{#i18n}}home.stat1{{/i18n}}</div>
-                    <div>{{#i18n}}home.stat2{{/i18n}}</div>
-                    <div>{{#i18n}}home.stat3{{/i18n}}</div>
-                    <div>{{#i18n}}home.stat4{{/i18n}}</div>
-                    <div>{{#i18n}}home.stat5{{/i18n}}</div>
+                <div class="col-8 col-md-9 col-lg-9">
+                    <h3 style="margin-bottom: -0.2rem;" class="pt-0">{{#i18n}}topics.tech.title{{/i18n}}</h3>
+                    <small>{{#i18n}}topics.tech.description{{/i18n}}</small>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 row pt-2">
+                <div class="col-4 col-md-3 col-lg-3 text-center">
+                    <img src="/images/svg/mxt-icon--ethics.svg" class="mxt-icon--cat__home"
+                         alt="{{#i18n}}topics.ethics.title{{/i18n}}">
+                </div>
+                <div class="col-8 col-md-9 col-lg-9">
+                    <h3 style="margin-bottom: -0.2rem;" class="pt-0">{{#i18n}}topics.ethics.title{{/i18n}}</h3>
+                    <small>{{#i18n}}topics.ethics.description{{/i18n}}</small>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 row pt-2">
+                <div class="col-4 col-md-3 col-lg-3 text-center">
+                    <img src="/images/svg/mxt-icon--people.svg" class="mxt-icon--cat__home"
+                         alt="{{#i18n}}topics.people.title{{/i18n}}">
+                </div>
+                <div class="col-8 col-md-9 col-lg-9">
+                    <h3 style="margin-bottom: -0.2rem;" class="pt-0">{{#i18n}}topics.people.title{{/i18n}}</h3>
+                    <small>{{#i18n}}topics.people.description{{/i18n}}</small>
                 </div>
             </div>
         </div>
+        <div class="mxt-video--player-container">
+            {{#aliens}}
+                {{>talk-video-viewer}}
+            {{/aliens}}
+        </div>
     </div>
+
+
 </div>
 <div class="row mxt-layout-header-effect"><div class="mxt-layout-header-effect-grey"></div></div>
 
 <div class="container-xxl mxt-section">
-    <h2>{{#i18n}}home.talk.intro{{/i18n}}</h2>
-    <p>{{#i18n}}home.talk.description{{/i18n}}</p>
-    <div class="mxt-tracks row">
-        <div class="col-12 col-md-6 col-lg-3 row pt-2">
-            <div class="col-4 col-md-3 col-lg-3 text-center">
-                <img src="/images/svg/mxt-icon--tech.svg" class="mxt-icon--cat__home"
-                     alt="{{#i18n}}topics.tech.title{{/i18n}}">
-            </div>
-            <div class="col-8 col-md-9 col-lg-9">
-                <h3 style="margin-bottom: -0.2rem;" class="pt-0">{{#i18n}}topics.tech.title{{/i18n}}</h3>
-                <small>{{#i18n}}topics.tech.description{{/i18n}}</small>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3 row pt-2">
-            <div class="col-4 col-md-3 col-lg-3 text-center">
-                <img src="/images/svg/mxt-icon--aliens.svg" class="mxt-icon--cat__home"
-                     alt="{{#i18n}}topics.aliens.title{{/i18n}}">
-            </div>
-            <div class="col-8 col-md-9 col-lg-9">
-                <h3 style="margin-bottom: -0.2rem;" class="pt-0">{{#i18n}}topics.aliens.title{{/i18n}}</h3>
-                <small>{{#i18n}}topics.aliens.description{{/i18n}}</small>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3 row pt-2">
-            <div class="col-4 col-md-3 col-lg-3 text-center">
-                <img src="/images/svg/mxt-icon--team.svg" class="mxt-icon--cat__home"
-                     alt="{{#i18n}}topics.team.title{{/i18n}}">
-            </div>
-            <div class="col-8 col-md-9 col-lg-9">
-                <h3 style="margin-bottom: -0.2rem;" class="pt-0">{{#i18n}}topics.team.title{{/i18n}}</h3>
-                <small>{{#i18n}}topics.team.description{{/i18n}}</small>
-            </div>
-        </div>
-        <div class="col-12 col-md-6 col-lg-3 row pt-2">
-            <div class="col-4 col-md-3 col-lg-3 text-center">
-                <img src="/images/svg/mxt-icon--ethics.svg" class="mxt-icon--cat__home"
-                     alt="{{#i18n}}topics.ethics.title{{/i18n}}">
-            </div>
-            <div class="col-8 col-md-9 col-lg-9">
-                <h3 style="margin-bottom: -0.2rem;" class="pt-0">{{#i18n}}topics.ethics.title{{/i18n}}</h3>
-                <small>{{#i18n}}topics.ethics.description{{/i18n}}</small>
-            </div>
-        </div>
-    </div>
+    <div class="container-xxl">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <h2>{{#i18n}}home.values.title{{/i18n}}</h2>
+                <div class="d-flex align-items-baseline pt-3">
+                    <div class="">
+                        <img src="/images/svg/mxt-icon-access-dark.svg" class="mxt-icon--cat__home"
+                             alt="{{#i18n}}home.values.accessibility.title{{/i18n}}">
+                    </div>
+                    <div class="">
+                        <h3 class="pt-0">{{#i18n}}home.values.accessibility.title{{/i18n}}</h3>
+                    </div>
+                </div>
+                <div>{{#i18n}}home.values.accessibility.desc{{/i18n}}</div>
 
-    <p class="lead">{{#i18n}}home.talk.alien{{/i18n}}</p>
+                <div class="d-flex align-items-baseline pt-3">
+                    <div class="">
+                        <img src="/images/svg/mxt-icon-sponsor-dark.svg" class="mxt-icon--cat__home"
+                             alt="{{#i18n}}home.values.safe.title{{/i18n}}">
+                    </div>
+                    <div class="">
+                        <h3 class="pt-0">{{#i18n}}home.values.safe.title{{/i18n}}</h3>
+                    </div>
+                </div>
+                <div>{{#i18n}}home.values.safe.desc{{/i18n}}</div>
 
-    <div class="mxt-video--player-container">
-        {{#aliens}}
-            {{>talk-video-viewer}}
-        {{/aliens}}
+                <div class="d-flex align-items-baseline pt-3">
+                    <div class="">
+                        <img src="/images/svg/mxt-icon-eco-dark.svg" class="mxt-icon--cat__home"
+                             alt="{{#i18n}}home.values.eco.title{{/i18n}}">
+                    </div>
+                    <div class="">
+                        <h3 class="pt-0">{{#i18n}}home.values.eco.title{{/i18n}}</h3>
+                    </div>
+                </div>
+                <div>{{#i18n}}home.values.eco.desc{{/i18n}}</div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <h2>{{#i18n}}home.stats{{/i18n}}</h2>
+
+                <div class="mxt-header--stats">
+                    <h3>+ 600</h3>
+                    <div>{{#i18n}}home.stats.attendees{{/i18n}}</div>
+                    <h3>+ 90</h3>
+                    <div>{{#i18n}}home.stats.speakers{{/i18n}}</div>
+                    <h3>+ 60</h3>
+                    <div>{{#i18n}}home.stats.sessions{{/i18n}}</div>
+                    <h3>+ 2000</h3>
+                    <div>{{#i18n}}home.stats.crepes{{/i18n}}</div>
+                </div>
+
+                <div class="mxt-wrapper--intrinsic">
+                    <iframe src="https://www.youtube.com/embed/s7_Gz2OScLk" class="mxt-wrapper--video-player"
+                            allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {{> footer-sponsor}}
