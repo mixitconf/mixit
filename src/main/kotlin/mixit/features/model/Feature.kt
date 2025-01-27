@@ -41,6 +41,11 @@ enum class Feature {
      * Active talk feedback result
      */
     FeedbackResult,
+
+    /**
+     * Ticketing
+     */
+    Ticketing
 }
 
 @Document

@@ -5,7 +5,6 @@ import mixit.event.model.EventService
 import mixit.event.model.SponsorshipLevel.Companion.sponsorshipLevels
 import mixit.talk.model.TalkService
 import mixit.talk.model.Topic
-import mixit.user.handler.dto.toSpeakerStarDto
 import mixit.user.model.UserService
 import mixit.util.YearSelector
 import mixit.util.language
