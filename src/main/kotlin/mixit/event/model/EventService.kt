@@ -3,7 +3,6 @@ package mixit.event.model
 import kotlinx.coroutines.runBlocking
 import mixit.event.repository.EventRepository
 import mixit.user.model.CachedOrganization
-import mixit.user.model.CachedSpeaker
 import mixit.user.model.CachedSponsor
 import mixit.user.model.CachedStaff
 import mixit.user.model.User

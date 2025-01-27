@@ -58,6 +58,15 @@
 
     <div class="container mb-2">
         <nav class="navbar mxt-navbar--talks" style="justify-content: center;">
+            {{#hasFeatureTicketing}}
+                <div class="nav-item ms-3 d-none d-md-inline">
+                    <a href="https://www.billetweb.fr/mixit-2025" class="nav-link mxt-navbar--nav-link">
+                        <img src="/images/svg/mxt-icon-lottery-dark.svg"
+                             class="mxt-icon--navbar me-2"
+                             alt="{{#i18n}}header.menu.ticket{{/i18n}}">
+                        {{#i18n}}header.menu.ticket{{/i18n}}</a>
+                </div>
+            {{/hasFeatureTicketing}}
             {{#hasFeatureLottery}}
                 <div class="nav-item ms-3 d-none d-md-inline">
                     <a href="{{localePrefix}}/lottery" class="nav-link mxt-navbar--nav-link">
