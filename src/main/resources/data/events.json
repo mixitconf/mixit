@@ -2223,10 +2223,80 @@
         "start": "2025-04-23",
         "end": "2025-04-23",
         "current": true,
-        "sponsors": [],
+        "sponsors": [
+            {
+                "level": "SILVER",
+                "sponsorId": "hiit",
+                "subscriptionDate": "2024-11-13"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "feelinjob",
+                "subscriptionDate": "2024-11-13"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "insitoo",
+                "subscriptionDate": "2025-01-15"
+            },
+            {
+                "level": "PARTY",
+                "sponsorId": "cbtw",
+                "subscriptionDate": "2025-01-29"
+            },
+            {
+                "level": "LANYARD",
+                "sponsorId": "sponsor-esker",
+                "subscriptionDate": "2025-01-29"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "Worldline",
+                "subscriptionDate": "2025-01-29"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "sponsor-lbc",
+                "subscriptionDate": "2025-02-07"
+            }
+        ],
         "organizations": [],
         "volunteers": [],
-        "organizers": [],
+        "organizers": [
+            {
+                "organizerLogin": "guillaumeehret"
+            },
+            {
+                "organizerLogin": "vbonnefond"
+            },
+            {
+                "organizerLogin": "Charles Bouttaz"
+            },
+            {
+                "organizerLogin": "greg"
+            },
+            {
+                "organizerLogin": "neveu.audrey"
+            },
+            {
+                "organizerLogin": "agnes"
+            },
+            {
+                "organizerLogin": "mpetitdant"
+            },
+            {
+                "organizerLogin": "romain"
+            },
+            {
+                "organizerLogin": "106329914971209052078"
+            },
+            {
+                "organizerLogin": "horalass"
+            },
+            {
+                "organizerLogin": "hubert"
+            }
+        ],
         "photoUrls": [],
         "videoUrl": null,
         "schedulingFileUrl": null,

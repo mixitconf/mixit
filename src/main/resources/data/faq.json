@@ -11,23 +11,11 @@
                     "descriptionEn": "How to buy a ticket?"
                 },
                 "answer": {
-                    "descriptionFr": "Pour pouvoir acheter une place pour la prochaine \u00e9dition, il faudra au pr\u00e9alable avoir particip\u00e9 \u00e0 la loterie. La loterie ouvrira le 16 d\u00e9cembre 2023 et fermera le 16 janvier 2024. Les gagnant\u00b7e\u00b7s de la loterie pourront acheter leur billet \u00e0 partir du 29 janvier 2024. Aucune place ne sera vendue en dehors de la loterie.\r\n            ",
-                    "descriptionEn": "To purchase a ticket for the next edition, you must first have participated in the lottery. The lottery will open on 18 December 2023 and close on 19 January 2024. Lottery winners will be able to buy their ticket from 29 January 2024. No tickets will be sold outside of the lottery."
+                    "descriptionFr": "Les places seront mises en vente en deux sessions : le lundi 27 janvier 2025 \u00e0 13h et le jeudi 30 janvier 2025 \u00e0 21h.",
+                    "descriptionEn": "Our ticket sale will take place in two phases: Monday, January 27, 2025 at 1:00 PM and Thursday, January 30, 2025 at 9:00 PM."
                 },
                 "order": 1,
                 "id": "6cbceb84-366c-491e-9563-25175fe00957"
-            },
-            {
-                "title": {
-                    "descriptionFr": "Pourquoi y a t-il une loterie ?",
-                    "descriptionEn": "Why a lottery?"
-                },
-                "answer": {
-                    "descriptionFr": "Dans la plupart des conf\u00e9rences, il est devenu difficile d'obtenir une place si l'on n'est pas connect\u00e9\u00b7e au moment de l'ouverture de la billeterie. Parce que nous avons \u00e0 c\u0153ur que chacun\u00b7e puisse avoir sa chance, nous avons mis en place une loterie. Ainsi pas de stress, tout le monde a un mois pour s'inscrire et tenter sa chance !\r\n            ",
-                    "descriptionEn": "In many conferences, you need to be online at the opening of the registration if you want to have a ticket. Because we want everyone to have the same chance to participate, we opted for a lottery. This way, everybody has one month to pre-register and try to get a ticket, no more stress!\r\n            "
-                },
-                "order": 2,
-                "id": "1945d63a-d85b-4079-867d-e3a63a6dec2c"
             },
             {
                 "title": {
@@ -47,11 +35,23 @@
                     "descriptionEn": "What are the ticket sales terms and conditions?"
                 },
                 "answer": {
-                    "descriptionFr": "Les billets sont en prix libre avec un prix minimum de 75\u20ac. Les billets ne sont ni remboursables, ni transf\u00e9rables.\r\n            \r\n            \r\n            ",
-                    "descriptionEn": "The tickets are on a pay-what-you-want basis with a minimum price of \u20ac75. Tickets are non-refundable and non-transferable.\r\n            \r\n            \r\n            "
+                    "descriptionFr": "Les billets sont en vente avec deux tarifs : un tarif individuel (si vous l'achetez par vous m\u00eame) et un tarif professionnel (si c'est votre soci\u00e9t\u00e9 qui vous paye la place). Ils sont remboursables jusqu'\u00e0 6 semaines avant l'\u00e9v\u00e8nement et non cessible.",
+                    "descriptionEn": "Tickets are available at two rates: an individual rate (if you purchase it yourself) and a professional rate (if your company is covering the cost). They are refundable up to 6 weeks before the event and non-transferable."
                 },
                 "order": 3,
                 "id": "62f3e740-08b0-454c-9650-8d6237d98606"
+            },
+            {
+                "title": {
+                    "descriptionFr": "Quels types de billets sont disponibles ?",
+                    "descriptionEn": "What types of tickets are available?"
+                },
+                "answer": {
+                    "descriptionFr": "Nous vous proposons des tickets 2 jours et des tickets 1 jour pour chaque jour de conf\u00e9rence.",
+                    "descriptionEn": "We offer 2-day tickets and 1-day tickets for each day of the conference."
+                },
+                "order": 2,
+                "id": "eece86ec-d38a-4376-9d69-afe71a26916c"
             }
         ],
         "order": 1,
@@ -70,8 +70,8 @@
                     "descriptionEn": "Call For Papers"
                 },
                 "answer": {
-                    "descriptionFr": "L'appel \u00e0 orateurs\u00b7rices ouvrira le 16 d\u00e9cembre 2023 et fermera le 16 janvier 2024. L'annonce des sessions et des orateurs\u00b7rices aura lieu le 29 janvier 2024.\r\n            \r\n            ",
-                    "descriptionEn": "The Call for Papers will open on 16 December 2023 and close on 19 January 2024. Sessions and speakers will be announced on 29 January 2024.\r\n            "
+                    "descriptionFr": "L\u2019appel \u00e0 orateurs\u00b7rices sera ouvert du 18 novembre 2024 au 17 janvier 2025. L'annonce des sessions se fera entre le 27 janvier et le 7 f\u00e9vrier 2025.\r\n            ",
+                    "descriptionEn": "The Call for Papers will be opened from November 18, 2024 to January 17, 2025. Session announcements will follow between January 27 and February 7, 2025.\r\n            "
                 },
                 "order": 1,
                 "id": "ed15f900-3f88-40b6-881e-1b9f878269cf"
@@ -82,8 +82,8 @@
                     "descriptionEn": "What is on the schedule?"
                 },
                 "answer": {
-                    "descriptionFr": "Pour avoir une id\u00e9e du type de sessions que vous pourrez voir \u00e0 MiXiT 2024, vous pouvez regarder les sessions des ann\u00e9es pr\u00e9c\u00e9dentes dans la partie [programme](https://mixitconf.org/2024). Le planning de l'\u00e9dition 2024 sera annonc\u00e9 mi f\u00e9vrier. \r\n            ",
-                    "descriptionEn": "To get an idea of the type of sessions you can expect at MiXiT 2024, you can watch sessions from previous years in the [schedule](https://mixitconf.org/2024) section. The 2024 edition schedule will be announced in mid-February.\r\n            \r\n            "
+                    "descriptionFr": "Pour avoir une id\u00e9e du type de sessions que vous pourrez voir \u00e0 MiXiT 2025, vous pouvez regarder les sessions des ann\u00e9es pr\u00e9c\u00e9dentes dans la partie [programme](https://mixitconf.org/2024). Le planning de l'\u00e9dition 2025 sera annonc\u00e9 fin f\u00e9vrier. \r\n            \r\n            ",
+                    "descriptionEn": "To get an idea of the type of sessions you can expect at MiXiT 2025, you can watch sessions from previous years in the [schedule](https://mixitconf.org/2024) section. The 2025 edition schedule will be announced at the end of February.\r\n            \r\n            \r\n            "
                 },
                 "order": 2,
                 "id": "3f11a9a4-f461-48d2-bec0-6cef75d884a4"
@@ -176,8 +176,8 @@
                     "descriptionEn": "Social networks"
                 },
                 "answer": {
-                    "descriptionFr": "Vous pouvez nous retrouver sur [Bluesky](https://bsky.app/profile/mixitconf.bsky.social), [Instagram](https://www.instagram.com/mixitconf/), [LinkedIn](https://www.linkedin.com/company/mixitconf/), [Twitch](https://www.twitch.tv/mixitconf/) et [X](https://twitter.com/mixitconf).\r\n            ",
-                    "descriptionEn": "You can find us on [Bluesky](https://bsky.app/profile/mixitconf.bsky.social), [Instagram](https://www.instagram.com/mixitconf/), [LinkedIn](https://www.linkedin.com/company/mixitconf/), [Twitch](https://www.twitch.tv/mixitconf/) and [X](https://twitter.com/mixitconf)."
+                    "descriptionFr": "Vous pouvez nous retrouver sur [Instagram](https://www.instagram.com/mixitconf/), [LinkedIn](https://www.linkedin.com/company/mixitconf/), [Bluesky](https://bsky.app/profile/mixitconf.org) et [Mastodon](https://piaille.fr/@mixitconf).\r\n            \r\n            ",
+                    "descriptionEn": "You can find us on [Instagram](https://www.instagram.com/mixitconf/), [LinkedIn](https://www.linkedin.com/company/mixitconf/), [Bluesky](https://bsky.app/profile/mixitconf.org) and [Mastodon](https://piaille.fr/@mixitconf).\r\n            \r\n            "
                 },
                 "order": 2,
                 "id": "5aa9cfe5-9ab8-42ed-a982-5c0ea64990e0"

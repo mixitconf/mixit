@@ -102,10 +102,11 @@ class SessionizeSynchronizer(
 
     suspend fun synchronizeSpeakers(speakers: List<SessionizeSpeaker>): List<User> {
         // We read the mapping between speaker id and email (exported manually from Sessionize)
-        val emails = ClassPathResource("data/speakers_2024.json").inputStream.use { resource ->
-            val speakersWithEmails: List<SpeakerMail> = objectMapper.readValue(resource)
-            speakersWithEmails.map { it.copy(email = cryptographer.decrypt(it.email)!!) }
-        }
+//        val emails = ClassPathResource("data/speakers_2025.json").inputStream.use { resource ->
+//            val speakersWithEmails: List<SpeakerMail> = objectMapper.readValue(resource)
+//            speakersWithEmails.map { it.copy(email = cryptographer.decrypt(it.email)!!) }
+//        }
+        val emails = emptyList<SpeakerMail>()
         // We complete the speaker list with emails
         val speakersWithEmails = speakers.map {
             val email = emails.find { email -> email.id == it.id }
