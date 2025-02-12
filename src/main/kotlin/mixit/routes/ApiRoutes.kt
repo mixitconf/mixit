@@ -38,6 +38,7 @@ class ApiRoutes(
         (accept(APPLICATION_JSON) and "/api").nest {
             "/admin".nest {
                 GET("/{year}/talk", talkHandler::findAdminByEventId)
+                GET("/{year}/feedback", feedbackHandler::findAllByYear)
             }
             GET("/admin/favorites", favoriteHandler::findAll)
             GET("/admin/mixette", adminMixetteHandler::findAll)

@@ -50,7 +50,7 @@ class UserFeedbackService(
 
     private suspend fun loadCachedUserFeedback(userFeedback: UserFeedback): CachedUserFeedback {
         val user = userRepository.findByEncryptedEmail(userFeedback.encryptedEmail) ?: throw NotFoundException()
-        val talk = talkRepository.findOne(userFeedback.talkId).awaitSingle()
+        val talk = talkRepository.findOne(userFeedback.talkId).awaitSingleOrNull() ?: throw NotFoundException()
         return CachedUserFeedback(userFeedback, talk, user)
     }
 

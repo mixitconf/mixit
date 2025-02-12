@@ -47,6 +47,10 @@ class FeedbackHandler(
     suspend fun findAll(req: ServerRequest): ServerResponse =
         ServerResponse.ok().json().bodyValueAndAwait(feedbackRepository.findAll())
 
+    suspend fun findAllByYear(req: ServerRequest): ServerResponse =
+        ServerResponse.ok().json().bodyValueAndAwait(feedbackRepository.findAllByYear(req.pathVariable("year")))
+
+
     private suspend fun routeToAdminPage(year: String, type: CommentType): ServerResponse =
         ServerResponse.ok().renderAndAwait(
             AdminFeedback.template,
