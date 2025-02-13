@@ -67,7 +67,7 @@ class SessionizeSynchronizer(
                 val talSpeakers = session.speakers.mapNotNull { speaker ->
                     speakers.find { it.cfpId == speaker }
                 }
-                val room = session.roomId?.let { rooms[it] } ?: Room.TWITCH
+                val room = session.roomId?.let { rooms[it] } ?: Room.UNKNOWN
                 val format = if (room == Room.TWITCH) TalkFormat.ON_AIR else session.categoryItems.firstNotNullOfOrNull { formats[it] } ?: TalkFormat.TALK
                 val topic = session.categoryItems.firstNotNullOfOrNull { topics[it] } ?: Topic.OTHER
                 val language = session.categoryItems.firstNotNullOfOrNull { languages[it] } ?: Language.FRENCH
@@ -85,8 +85,8 @@ class SessionizeSynchronizer(
                     speakerIds = talSpeakers.map { it.login },
                     room = room,
                     addedAt = LocalDateTime.now(),
-                    start = session.startsAt?.let { Instant.parse(it).atZone(ZoneId.of(TIMEZONE)).toLocalDateTime() },
-                    end = session.endsAt?.let { Instant.parse(it).atZone(ZoneId.of(TIMEZONE)).toLocalDateTime() },
+                    start = session.startsAt?.let { formatDateTime(it) },
+                    end = session.endsAt?.let { formatDateTime(it) },
                     level = level
                 )
             }
@@ -100,12 +100,17 @@ class SessionizeSynchronizer(
         talkService.invalidateCache()
     }
 
+    fun formatDateTime(string: String) =
+        // Instant.parse(it).atZone(ZoneId.of(TIMEZONE)).toLocalDateTime()
+        LocalDateTime.parse(string)
+
     suspend fun synchronizeSpeakers(speakers: List<SessionizeSpeaker>): List<User> {
         // We read the mapping between speaker id and email (exported manually from Sessionize)
-        val emails = ClassPathResource("data/speakers_2024.json").inputStream.use { resource ->
+        val emails = ClassPathResource("data/speakers_2025.json").inputStream.use { resource ->
             val speakersWithEmails: List<SpeakerMail> = objectMapper.readValue(resource)
             speakersWithEmails.map { it.copy(email = cryptographer.decrypt(it.email)!!) }
         }
+
         // We complete the speaker list with emails
         val speakersWithEmails = speakers.map {
             val email = emails.find { email -> email.id == it.id }

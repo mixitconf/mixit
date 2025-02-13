@@ -56,6 +56,7 @@ data class SessionizeCategoryItem(
             "ethics" -> Topic.ETHICS
             "design" -> Topic.DESIGN
             "alien" -> Topic.ALIENS
+            "people" -> Topic.TEAM
             "other" -> Topic.OTHER
             else -> Topic.OTHER
         }

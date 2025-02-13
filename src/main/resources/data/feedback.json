@@ -606,8 +606,8 @@
       "comment": "Je pense que le format n'était pas très adéquat à la salle/le nombre, et qu'il aurait fallu répéter un peu pour respecter la durée.",
       "disapprovedInstant": null,
       "disapprovedByLogin": null,
-      "approvedInstant": null,
-      "approvedByLogin": null,
+      "approvedInstant": "2024-04-26T22:55:57.574Z",
+      "approvedByLogin": "guillaumeehret",
       "feedbackPlus": [],
       "feedbackMinus": []
     },
@@ -800,5 +800,5203 @@
     ],
     "comment": null,
     "id": "d14d30b0-014f-4117-b6ae-3f9bdaaaf01c"
+  },
+  {
+    "encryptedEmail": "w1vKY5ohOJQDg8B3/GsKP+5wKbZVIrIBynJ0jljptxk=",
+    "talkId": "610061",
+    "event": "2024",
+    "creationInstant": "2024-04-25T14:19:59.115Z",
+    "notes": [
+      "COULD_BE_MORE_EXPLORED",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "d0b29527-015f-490d-9655-5a39f686be60"
+  },
+  {
+    "encryptedEmail": "PAay9Gjoh/ByikbNyaROW3Hc2LMbBkyiqoSeauSVChw=",
+    "talkId": "660190",
+    "event": "2024",
+    "creationInstant": "2024-04-25T14:22:46.175Z",
+    "notes": [
+      "TOO_FAST",
+      "LEARNT_NOTHING",
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": null,
+    "id": "9400af74-08c3-4644-835c-6cc2385d9999"
+  },
+  {
+    "encryptedEmail": "PAay9Gjoh/ByikbNyaROW3Hc2LMbBkyiqoSeauSVChw=",
+    "talkId": "612165",
+    "event": "2024",
+    "creationInstant": "2024-04-25T14:23:32.668Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "3881680a-fa7f-4f4f-b5b4-289db08d353d"
+  },
+  {
+    "encryptedEmail": "JBgjGZ39v7V4+UJDJv/GDRdcUGoRHIAel6YniNhUYWc=",
+    "talkId": "653397",
+    "event": "2024",
+    "creationInstant": "2024-04-25T14:26:17.562Z",
+    "notes": [
+      "TOO_SLOW",
+      "LEARNT_NOTHING"
+    ],
+    "comment": null,
+    "id": "e87f891d-e82d-4d28-98de-7772cdae5b32"
+  },
+  {
+    "encryptedEmail": "JBgjGZ39v7V4+UJDJv/GDRdcUGoRHIAel6YniNhUYWc=",
+    "talkId": "613767",
+    "event": "2024",
+    "creationInstant": "2024-04-25T14:27:19.418Z",
+    "notes": [
+      "VERY_INTERESTING",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "3e63c8f3-ed8b-4972-b233-c665ecd31134"
+  },
+  {
+    "encryptedEmail": "JBgjGZ39v7V4+UJDJv/GDRdcUGoRHIAel6YniNhUYWc=",
+    "talkId": "595434",
+    "event": "2024",
+    "creationInstant": "2024-04-25T14:28:07.716Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "LOVED_LIVE_CODING",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "98d8de5b-8f94-4048-b72e-d0848feff18a"
+  },
+  {
+    "encryptedEmail": "JBgjGZ39v7V4+UJDJv/GDRdcUGoRHIAel6YniNhUYWc=",
+    "talkId": "622656",
+    "event": "2024",
+    "creationInstant": "2024-04-25T14:28:42.038Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": null,
+    "id": "bdd120ad-b343-4537-be2d-b79c711148af"
+  },
+  {
+    "encryptedEmail": "JBgjGZ39v7V4+UJDJv/GDRdcUGoRHIAel6YniNhUYWc=",
+    "talkId": "604593",
+    "event": "2024",
+    "creationInstant": "2024-04-25T14:29:56.314Z",
+    "notes": [
+      "COULD_BE_MORE_EXPLORED",
+      "LEARNT_SOMETHING",
+      "TOO_FAST"
+    ],
+    "comment": null,
+    "id": "e3a3fda7-be86-4c75-9b01-5ef384d4ba88"
+  },
+  {
+    "encryptedEmail": "JBgjGZ39v7V4+UJDJv/GDRdcUGoRHIAel6YniNhUYWc=",
+    "talkId": "612354",
+    "event": "2024",
+    "creationInstant": "2024-04-25T14:30:32.849Z",
+    "notes": [
+      "LACKS_DEMO",
+      "LEARNT_NOTHING",
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": null,
+    "id": "250f1cb7-d10b-4389-bd8c-29d84da2f173"
+  },
+  {
+    "encryptedEmail": "vhTmBoTJpSxAAAkX/0dshfE1/zp46XEuf96/kIhjA14=",
+    "talkId": "604593",
+    "event": "2024",
+    "creationInstant": "2024-04-25T14:43:37.195Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING",
+      "LOVED_LIVE_CODING"
+    ],
+    "comment": null,
+    "id": "f1cbe7f6-d196-4a8b-a20d-34e5ddb16bd6"
+  },
+  {
+    "encryptedEmail": "COTK4O3xCBAjvNTehSp80JXTFuwDeL6VTa15ygMJ0W0=",
+    "talkId": "593091",
+    "event": "2024",
+    "creationInstant": "2024-04-25T14:43:58.495Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "20b55e1b-a7d2-4b9c-97ff-227df8ac13f6"
+  },
+  {
+    "encryptedEmail": "vhTmBoTJpSxAAAkX/0dshfE1/zp46XEuf96/kIhjA14=",
+    "talkId": "598718",
+    "event": "2024",
+    "creationInstant": "2024-04-25T14:44:08.955Z",
+    "notes": [
+      "LEARNT_NOTHING",
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": null,
+    "id": "cb88caaf-9226-49e3-aabc-468b767c236f"
+  },
+  {
+    "encryptedEmail": "vhTmBoTJpSxAAAkX/0dshfE1/zp46XEuf96/kIhjA14=",
+    "talkId": "622656",
+    "event": "2024",
+    "creationInstant": "2024-04-25T14:44:36.787Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "Extrêmement intéressant, le genre de talk Alien que j'adore à MiXiT !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:09:56.826Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "acc3be5a-a6ae-49e0-a93b-d751605e241c"
+  },
+  {
+    "encryptedEmail": "JDB0PFbWgXeBK4F2frtwoMkEyPWP336Ciqa3HqltA7Y=",
+    "talkId": "660189",
+    "event": "2024",
+    "creationInstant": "2024-04-25T14:48:30.241Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "3d218a45-9eff-40d9-b424-d9717cca9b33"
+  },
+  {
+    "encryptedEmail": "kL6jrqyY2iNXiIOKU9yx+9I0+nOtoUrLEjq7H0D8Ygo=",
+    "talkId": "660189",
+    "event": "2024",
+    "creationInstant": "2024-04-25T14:52:38.886Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": {
+      "comment": "Impressionné par ta gestion des aléas !\r\nUn grand bravo !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:15:43.992Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "23f6a553-3c5c-4867-9849-42b519e79e9c"
+  },
+  {
+    "encryptedEmail": "w1vKY5ohOJQDg8B3/GsKP+5wKbZVIrIBynJ0jljptxk=",
+    "talkId": "595818",
+    "event": "2024",
+    "creationInstant": "2024-04-25T14:59:51.607Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING",
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": {
+      "comment": "Belle découverte pour moi. \r\nJ’ai eu du mal à me projeter ou me mettre en situation pour comprendre comment ça se passe concrètement lors de ces sessions. ",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:07:05.275Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "1d5f8712-5f62-4c66-81a2-b6b719fc10a0"
+  },
+  {
+    "encryptedEmail": "JBgjGZ39v7V4+UJDJv/GDRdcUGoRHIAel6YniNhUYWc=",
+    "talkId": "595818",
+    "event": "2024",
+    "creationInstant": "2024-04-25T15:01:33.361Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "0fd7fd7b-dbe4-4e5c-b7fc-5e1e299414f2"
+  },
+  {
+    "encryptedEmail": "bFN9DzWFjLEa4Mm3jbMWcwXAkGIiFcgOuKUssz6p5CY=",
+    "talkId": "653397",
+    "event": "2024",
+    "creationInstant": "2024-04-25T15:07:17.473Z",
+    "notes": [
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": null,
+    "id": "42c53359-4a6f-4999-8a9a-4bfaac294973"
+  },
+  {
+    "encryptedEmail": "GcfikpXZCz41zxBBLeWNoyBkRs0xAopw0kp9PagedNw=",
+    "talkId": "609122",
+    "event": "2024",
+    "creationInstant": "2024-04-25T15:10:28.702Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "14fcbe59-e014-477f-b0c8-9e54b68c823e"
+  },
+  {
+    "encryptedEmail": "GcfikpXZCz41zxBBLeWNoyBkRs0xAopw0kp9PagedNw=",
+    "talkId": "594797",
+    "event": "2024",
+    "creationInstant": "2024-04-25T15:11:07.785Z",
+    "notes": [
+      "VERY_INTERESTING",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "7dd03beb-8657-4b3a-8ba2-ce40a2f7da4c"
+  },
+  {
+    "encryptedEmail": "GcfikpXZCz41zxBBLeWNoyBkRs0xAopw0kp9PagedNw=",
+    "talkId": "660189",
+    "event": "2024",
+    "creationInstant": "2024-04-25T15:11:28.923Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "beb275f6-98fe-4c1d-891c-8159d670e490"
+  },
+  {
+    "encryptedEmail": "PAay9Gjoh/ByikbNyaROW3Hc2LMbBkyiqoSeauSVChw=",
+    "talkId": "595818",
+    "event": "2024",
+    "creationInstant": "2024-04-25T15:23:23.171Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "c10d779e-08f1-4d8a-85f7-fd90d9d7add9"
+  },
+  {
+    "encryptedEmail": "bFN9DzWFjLEa4Mm3jbMWcwXAkGIiFcgOuKUssz6p5CY=",
+    "talkId": "622656",
+    "event": "2024",
+    "creationInstant": "2024-04-25T15:27:12.553Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Discours expert exceptionnel \r\nUne description de l’histoire très claire et comment elle explique notre réalité managériale actuelle. ",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:09:45.639Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "aa7322e4-c7b6-4a4e-bae8-329a74e8b05f"
+  },
+  {
+    "encryptedEmail": "bFN9DzWFjLEa4Mm3jbMWcwXAkGIiFcgOuKUssz6p5CY=",
+    "talkId": "622656",
+    "event": "2024",
+    "creationInstant": "2024-04-25T15:27:12.562Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "a7148d5e-02f2-4de0-9923-0a9ea8fb56e3"
+  },
+  {
+    "encryptedEmail": "A1vuFPy9Re0neqygH9ldtM9C28tQBPrD+bLkNauDuS4=",
+    "talkId": "601609",
+    "event": "2024",
+    "creationInstant": "2024-04-25T15:33:38.470Z",
+    "notes": [
+      "COULD_BE_MORE_EXPLORED",
+      "LEARNT_NOTHING",
+      "UNCLEAR",
+      "UNDERSTOOD_NOTHING"
+    ],
+    "comment": {
+      "comment": "Une volonté appréciable de rendre la session fun et interactive. Malheureusement le fond a été oublié en cours de route  et le concept de leadership n'a été qu'effleuré.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:15:27.884Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "56e3e8b3-365b-47eb-a616-3ed14f0faf7c"
+  },
+  {
+    "encryptedEmail": "A1vuFPy9Re0neqygH9ldtM9C28tQBPrD+bLkNauDuS4=",
+    "talkId": "611900",
+    "event": "2024",
+    "creationInstant": "2024-04-25T15:38:37.710Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Talk intéressant, orateur clair et qui maîtrise son sujet, slides léchées... Bravo !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:10:01.729Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "736605fd-30e0-4d06-b515-c81d9993fef8"
+  },
+  {
+    "encryptedEmail": "A1vuFPy9Re0neqygH9ldtM9C28tQBPrD+bLkNauDuS4=",
+    "talkId": "595818",
+    "event": "2024",
+    "creationInstant": "2024-04-25T15:43:33.778Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Talk qui amène une idée intéressante même si au final sa mise en pratique serait loin de la promesse initiale d'un gain de temps sur les PR :)",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:06:58.362Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "5e2d0caf-8392-46bf-a8ac-986137ff81e4"
+  },
+  {
+    "encryptedEmail": "wBONwXO4xZ0xCOes8iw2hmJfiOj4975NETThQ03LbSQ=",
+    "talkId": "611900",
+    "event": "2024",
+    "creationInstant": "2024-04-25T16:17:18.915Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "6942358d-dd3e-4ff7-b5a7-f0e82719d261"
+  },
+  {
+    "encryptedEmail": "yxOM1zCxXDa8W+HdbnQ6RU00asVQ4iYX3NQfFitx7+w=",
+    "talkId": "641460",
+    "event": "2024",
+    "creationInstant": "2024-04-25T17:02:07.271Z",
+    "notes": [
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": null,
+    "id": "5edd09d3-2eaa-482f-b415-2554da7fcad1"
+  },
+  {
+    "encryptedEmail": "NIWTWGM0bWedq3rVwk+Zgd4Xq9hYcVoX8APMhiIMagx7F7vQuJqwzWi4BXiVofMV",
+    "talkId": "641460",
+    "event": "2024",
+    "creationInstant": "2024-04-25T17:45:26.676Z",
+    "notes": [
+      "UNCLEAR"
+    ],
+    "comment": {
+      "comment": "Merci d'avoir décortiqué ce charlatanisme anti-éthique. Mais je crains que les pré-requis pour comprendre tout ce que vous présentiez n'étaient pas rempli par une partie de l'audience. L'usage du vocabulaire liturgique, bien que justifié par votre thèse, ne permet pas de comprendre vos propos. De même, je pense qu'il manquait des définitions comme \"crypto-actif\" ou \"minage\".\r\nJe pense qu'il est bien difficile de résumer autant de votre travail en aussi peu de temps, mais je trouve qu'une partie essentielle pour la compréhension a été perdue au passage.\r\nPourtant vous méritez d'être entendu, rien que pour le regard critique que vous apportez. Mais, pour moi, des détails ont nuit à cela.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:09:24.416Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "43963d00-95ed-45ee-ab37-c09319bb3126"
+  },
+  {
+    "encryptedEmail": "NIWTWGM0bWedq3rVwk+Zgd4Xq9hYcVoX8APMhiIMagx7F7vQuJqwzWi4BXiVofMV",
+    "talkId": "660190",
+    "event": "2024",
+    "creationInstant": "2024-04-25T17:53:05.412Z",
+    "notes": [
+      "LEARNT_NOTHING",
+      "VERY_GOOD_TALK",
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": {
+      "comment": "J'ai mis \"pourrait être + approfondi\" car je suis resté sur ma faim, malgré le format. Je trouve pertinent de montrer le rebase interactif, mais le montrer 2 fois était une de trop. Et il manquait je pense de nuance sur ce que cette technique apporte, notemment le coût de faire des commits propres, s'ils ne seront jamais revus après la PR mergée, ou bien d'autres astuces indépendantes du rebase.\r\nNéanmoins la présentation était maitrisée, bravo.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:16:30.078Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "ff5a919f-fc00-4435-b404-657e31667574"
+  },
+  {
+    "encryptedEmail": "l1OHshBjjzL3hvBkzLhoTQ1EUNEdCotMgNi6KPPx654=",
+    "talkId": "601609",
+    "event": "2024",
+    "creationInstant": "2024-04-25T18:29:38.963Z",
+    "notes": [
+      "FUN",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "2b32f88b-6346-48fb-a670-c29c6fd74177"
+  },
+  {
+    "encryptedEmail": "S0l+JeI2L3ocde/4iAh9DpBDQ1aJIdVYIWls5sknZls=",
+    "talkId": "653397",
+    "event": "2024",
+    "creationInstant": "2024-04-25T18:38:28.856Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "df33209f-4e45-4449-9a02-436a56660558"
+  },
+  {
+    "encryptedEmail": "S0l+JeI2L3ocde/4iAh9DpBDQ1aJIdVYIWls5sknZls=",
+    "talkId": "613767",
+    "event": "2024",
+    "creationInstant": "2024-04-25T18:39:03.392Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "86d835a2-9fcb-4f04-97ab-18ba546d6e08"
+  },
+  {
+    "encryptedEmail": "S0l+JeI2L3ocde/4iAh9DpBDQ1aJIdVYIWls5sknZls=",
+    "talkId": "611900",
+    "event": "2024",
+    "creationInstant": "2024-04-25T18:39:42.994Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": null,
+    "id": "952e13cd-4e58-493b-8667-165e0b474518"
+  },
+  {
+    "encryptedEmail": "S0l+JeI2L3ocde/4iAh9DpBDQ1aJIdVYIWls5sknZls=",
+    "talkId": "622656",
+    "event": "2024",
+    "creationInstant": "2024-04-25T18:39:56.417Z",
+    "notes": [
+      "SURPRISED_BY_SUBJECT"
+    ],
+    "comment": null,
+    "id": "9cb269d1-71d1-4dc8-9734-176a83daac73"
+  },
+  {
+    "encryptedEmail": "S0l+JeI2L3ocde/4iAh9DpBDQ1aJIdVYIWls5sknZls=",
+    "talkId": "612354",
+    "event": "2024",
+    "creationInstant": "2024-04-25T18:41:26.496Z",
+    "notes": [
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": null,
+    "id": "bda39a02-cb02-4fd7-9cd3-193078ae2df8"
+  },
+  {
+    "encryptedEmail": "S0l+JeI2L3ocde/4iAh9DpBDQ1aJIdVYIWls5sknZls=",
+    "talkId": "641460",
+    "event": "2024",
+    "creationInstant": "2024-04-25T18:41:50.366Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "b11895f0-3b61-42b7-b221-d38a6cd0a6a4"
+  },
+  {
+    "encryptedEmail": "dnAElSU3TOCeV8q/+Cv7uLz07+KN4DwX0RLypjx4cYo=",
+    "talkId": "653397",
+    "event": "2024",
+    "creationInstant": "2024-04-25T18:48:12.323Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Super intéressant, très bonne présentation. Je vais lire votre livre",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:10:27.882Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "a3ed7ffa-d5aa-4e75-8893-fa50a19eb7ef"
+  },
+  {
+    "encryptedEmail": "OWtbjwAR+H+M9yY7e4YWVByb8foSBP4ZCNJgCyC/MW0=",
+    "talkId": "595434",
+    "event": "2024",
+    "creationInstant": "2024-04-25T20:14:47.821Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "LOVED_LIVE_CODING"
+    ],
+    "comment": null,
+    "id": "0d66bfaa-eb73-44bb-a187-6ddf3046112e"
+  },
+  {
+    "encryptedEmail": "7TrrCbrtLrt5clTycEpgWgoIgWwcN5rDcKAD5XFnKd8=",
+    "talkId": "600153",
+    "event": "2024",
+    "creationInstant": "2024-04-25T21:22:43.744Z",
+    "notes": [],
+    "comment": null,
+    "id": "e2486a7f-1b5b-4697-8252-e893f2d324b0"
+  },
+  {
+    "encryptedEmail": "yphldkZVllf5MV6Dy345KmqzpVwph+IQSiX8akHREhk=",
+    "talkId": "637079",
+    "event": "2024",
+    "creationInstant": "2024-04-25T21:53:17.166Z",
+    "notes": [],
+    "comment": {
+      "comment": "Il manquait des teasers pour présenter rapidement les talks, pour aider à choisir si on hésite ou pour mieux cerner une conf",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:08:47.166Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "3480bef1-8c1e-40ba-9c7a-9c547d34c8e0"
+  },
+  {
+    "encryptedEmail": "yphldkZVllf5MV6Dy345KmqzpVwph+IQSiX8akHREhk=",
+    "talkId": "653397",
+    "event": "2024",
+    "creationInstant": "2024-04-25T21:55:34.752Z",
+    "notes": [
+      "UNCLEAR"
+    ],
+    "comment": {
+      "comment": "Du mal à comprendre où le speaker voulait en venir",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:10:24.038Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "c26e5e85-d853-4c4d-a56d-02b6162613a7"
+  },
+  {
+    "encryptedEmail": "yphldkZVllf5MV6Dy345KmqzpVwph+IQSiX8akHREhk=",
+    "talkId": "613767",
+    "event": "2024",
+    "creationInstant": "2024-04-25T21:56:16.255Z",
+    "notes": [
+      "LOVED_LIVE_CODING"
+    ],
+    "comment": {
+      "comment": "Instructif car revue complète des possibilités avec leurs inconvénients et qualités.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:10:10.942Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "20bbeb22-3667-4de1-81f5-f28c315e9e64"
+  },
+  {
+    "encryptedEmail": "yphldkZVllf5MV6Dy345KmqzpVwph+IQSiX8akHREhk=",
+    "talkId": "595434",
+    "event": "2024",
+    "creationInstant": "2024-04-25T21:57:31.290Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "Meilleur talk de la journée !\r\nIntéressant, vivant et le sujet est très bien amené. La complexité augment très graduellement et de manière pédagogique ",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:15:36.218Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "310ecfea-658c-4c64-a3d6-8bb85f268e12"
+  },
+  {
+    "encryptedEmail": "yphldkZVllf5MV6Dy345KmqzpVwph+IQSiX8akHREhk=",
+    "talkId": "612165",
+    "event": "2024",
+    "creationInstant": "2024-04-25T21:59:11.133Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": null,
+    "id": "38a0071e-856b-4860-a0ca-7718582fa4f7"
+  },
+  {
+    "encryptedEmail": "yphldkZVllf5MV6Dy345KmqzpVwph+IQSiX8akHREhk=",
+    "talkId": "594797",
+    "event": "2024",
+    "creationInstant": "2024-04-25T21:59:43.260Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "87da6eac-e7fc-4c3b-a0e8-32ff3be3ff92"
+  },
+  {
+    "encryptedEmail": "yphldkZVllf5MV6Dy345KmqzpVwph+IQSiX8akHREhk=",
+    "talkId": "595818",
+    "event": "2024",
+    "creationInstant": "2024-04-25T22:00:00.950Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "5bd25e76-171f-4520-9af7-b31cdd0c2ea0"
+  },
+  {
+    "encryptedEmail": "yphldkZVllf5MV6Dy345KmqzpVwph+IQSiX8akHREhk=",
+    "talkId": "641460",
+    "event": "2024",
+    "creationInstant": "2024-04-25T22:00:28.701Z",
+    "notes": [
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": null,
+    "id": "81a8a67d-d9e4-4f53-97fa-98f8023776a9"
+  },
+  {
+    "encryptedEmail": "odNIdOTPYuocfFP8zJSduYzJAj48azu5BBfs73tN5zs=",
+    "talkId": "613767",
+    "event": "2024",
+    "creationInstant": "2024-04-25T22:03:12.256Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "9c40d4cc-f44b-4262-929d-717ca1f9e1c6"
+  },
+  {
+    "encryptedEmail": "odNIdOTPYuocfFP8zJSduYzJAj48azu5BBfs73tN5zs=",
+    "talkId": "622656",
+    "event": "2024",
+    "creationInstant": "2024-04-25T22:05:27.542Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "d1f0743d-9da6-486c-b634-97b02f393b8e"
+  },
+  {
+    "encryptedEmail": "WRP8bW8wDEdltZrLCBUm/+RBSIu3WGQ9Evz4L9JSQfc=",
+    "talkId": "612448",
+    "event": "2024",
+    "creationInstant": "2024-04-26T03:48:01.593Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "LOVED_LIVE_CODING",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Bravo \uD83D\uDC4F\uD83C\uDFFB",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T22:53:47.013Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "fe6676ef-3092-41f3-89ce-fe7cda74228f"
+  },
+  {
+    "encryptedEmail": "WRP8bW8wDEdltZrLCBUm/+RBSIu3WGQ9Evz4L9JSQfc=",
+    "talkId": "593091",
+    "event": "2024",
+    "creationInstant": "2024-04-26T03:49:15.625Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "LOVED_LIVE_CODING",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "d4f333fb-0763-4963-80bf-c4af8a00ba80"
+  },
+  {
+    "encryptedEmail": "WRP8bW8wDEdltZrLCBUm/+RBSIu3WGQ9Evz4L9JSQfc=",
+    "talkId": "610061",
+    "event": "2024",
+    "creationInstant": "2024-04-26T03:51:20.176Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "LOVED_LIVE_CODING",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "522ca92c-a004-4021-8cfc-b3fc7bccf7bf"
+  },
+  {
+    "encryptedEmail": "GkoYRvjc8NWN932uv32E7Uu1Se/wx3acUgB+o4FYOlM=",
+    "talkId": "609122",
+    "event": "2024",
+    "creationInstant": "2024-04-26T05:38:43.604Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "6d898e74-9bf0-406c-a166-9733e2710190"
+  },
+  {
+    "encryptedEmail": "GkoYRvjc8NWN932uv32E7Uu1Se/wx3acUgB+o4FYOlM=",
+    "talkId": "610274",
+    "event": "2024",
+    "creationInstant": "2024-04-26T05:39:39.610Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "99bead2b-8ed1-4900-b5d0-ecd49269842c"
+  },
+  {
+    "encryptedEmail": "GkoYRvjc8NWN932uv32E7Uu1Se/wx3acUgB+o4FYOlM=",
+    "talkId": "611564",
+    "event": "2024",
+    "creationInstant": "2024-04-26T05:41:33.542Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "41d1035c-bd2a-4630-8240-afbd57c30a33"
+  },
+  {
+    "encryptedEmail": "COTK4O3xCBAjvNTehSp80JXTFuwDeL6VTa15ygMJ0W0=",
+    "talkId": "609268",
+    "event": "2024",
+    "creationInstant": "2024-04-26T06:32:41.590Z",
+    "notes": [
+      "FUN",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "94bdcfd7-27a5-4026-8dd9-eccabd761635"
+  },
+  {
+    "encryptedEmail": "COTK4O3xCBAjvNTehSp80JXTFuwDeL6VTa15ygMJ0W0=",
+    "talkId": "622656",
+    "event": "2024",
+    "creationInstant": "2024-04-26T06:32:51.239Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING",
+      "SURPRISED_BY_SUBJECT"
+    ],
+    "comment": null,
+    "id": "fae1dfad-1b8a-47d7-a0c5-29dd0e9d43a2"
+  },
+  {
+    "encryptedEmail": "COTK4O3xCBAjvNTehSp80JXTFuwDeL6VTa15ygMJ0W0=",
+    "talkId": "600027",
+    "event": "2024",
+    "creationInstant": "2024-04-26T06:33:26.263Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "082c91b8-46b0-4742-a055-2f819dfde3ea"
+  },
+  {
+    "encryptedEmail": "COTK4O3xCBAjvNTehSp80JXTFuwDeL6VTa15ygMJ0W0=",
+    "talkId": "641460",
+    "event": "2024",
+    "creationInstant": "2024-04-26T06:33:46.193Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "7c37d98b-68b3-4c6a-a2ce-495c9f8487b6"
+  },
+  {
+    "encryptedEmail": "y9U0HcTViBywxejGZB/PIP1Aqg8pe6FY02dP149uyhQ=",
+    "talkId": "612354",
+    "event": "2024",
+    "creationInstant": "2024-04-26T07:09:58.923Z",
+    "notes": [
+      "VERY_INTERESTING",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "4958bbe4-773c-4149-9ed6-76063b6a757f"
+  },
+  {
+    "encryptedEmail": "ronvaBgh9p3PejlLo5veQDcERW9Regp6lpi7u8Pk3Rw=",
+    "talkId": "593091",
+    "event": "2024",
+    "creationInstant": "2024-04-26T07:20:59.972Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Une conférence très intéressante. Merci ",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:08:59.028Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "a99f9292-4e4a-419f-a029-3d4fb1549e72"
+  },
+  {
+    "encryptedEmail": "vhTmBoTJpSxAAAkX/0dshfE1/zp46XEuf96/kIhjA14=",
+    "talkId": "622669",
+    "event": "2024",
+    "creationInstant": "2024-04-26T08:05:35.194Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "4193987d-ec4f-4bf0-8110-474cea4eb820"
+  },
+  {
+    "encryptedEmail": "JBgjGZ39v7V4+UJDJv/GDRdcUGoRHIAel6YniNhUYWc=",
+    "talkId": "641460",
+    "event": "2024",
+    "creationInstant": "2024-04-26T08:15:55.583Z",
+    "notes": [
+      "LEARNT_NOTHING",
+      "UNCLEAR"
+    ],
+    "comment": null,
+    "id": "edb21bb3-d9eb-474e-ac4b-0ca22639d8f6"
+  },
+  {
+    "encryptedEmail": "JBgjGZ39v7V4+UJDJv/GDRdcUGoRHIAel6YniNhUYWc=",
+    "talkId": "622669",
+    "event": "2024",
+    "creationInstant": "2024-04-26T08:16:36.289Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "SURPRISED_BY_SUBJECT"
+    ],
+    "comment": null,
+    "id": "b4204190-b9d8-40f9-b355-173330a933b5"
+  },
+  {
+    "encryptedEmail": "3YQls+eXYyDoQS/5/HDOfxPvDl37EfSJ6WhFheZBQDQ=",
+    "talkId": "622669",
+    "event": "2024",
+    "creationInstant": "2024-04-26T08:19:14.287Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "94bb0417-d171-4d43-a2d0-45b3c57daf2e"
+  },
+  {
+    "encryptedEmail": "ooK5ZTJRRVTJsTGvpAjpEUFWYbey/pC/6ptOTl+/fAo=",
+    "talkId": "622669",
+    "event": "2024",
+    "creationInstant": "2024-04-26T08:33:03.455Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": null,
+    "id": "d9d6f508-5d64-4cb2-9ad7-58a14fb59993"
+  },
+  {
+    "encryptedEmail": "NIWTWGM0bWedq3rVwk+Zgd4Xq9hYcVoX8APMhiIMagx7F7vQuJqwzWi4BXiVofMV",
+    "talkId": "622669",
+    "event": "2024",
+    "creationInstant": "2024-04-26T08:39:32.993Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": {
+      "comment": "Super intéressant, j'ai beaucoup apprécié !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:08:35.444Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "da0a1539-9664-4ddf-8d30-332fddab9ccf"
+  },
+  {
+    "encryptedEmail": "zmjAZsgcbYRAIr/FN6aQgqBVSyoR0mPfl1y9TpSKjEA=",
+    "talkId": "593894",
+    "event": "2024",
+    "creationInstant": "2024-04-26T08:48:21.293Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "c33eb7e8-87bc-45cc-b87b-c5d769064a7e"
+  },
+  {
+    "encryptedEmail": "NIWTWGM0bWedq3rVwk+Zgd4Xq9hYcVoX8APMhiIMagx7F7vQuJqwzWi4BXiVofMV",
+    "talkId": "611170",
+    "event": "2024",
+    "creationInstant": "2024-04-26T09:01:33.092Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Merci pour ce témoignage et ces réflexions.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T22:55:14.857Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "a585a0a1-a7fd-4620-a243-e5b5f3ef668f"
+  },
+  {
+    "encryptedEmail": "xDlkf3a3YDNPJ8ybhggJi3UsgKF4ZewWlbRXRVZHsL8=",
+    "talkId": "593894",
+    "event": "2024",
+    "creationInstant": "2024-04-26T09:08:25.270Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "LOVED_LIVE_CODING",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "6b70103b-60ea-4190-aaf1-599d2577b1ee"
+  },
+  {
+    "encryptedEmail": "t6sF4jdxQ4IOGJd6RHpxFM+K6dGGYSZP3WElKvkPCoQ=",
+    "talkId": "593894",
+    "event": "2024",
+    "creationInstant": "2024-04-26T09:08:38.285Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "LOVED_LIVE_CODING"
+    ],
+    "comment": null,
+    "id": "db653463-cf56-47ec-938e-d547f50987e2"
+  },
+  {
+    "encryptedEmail": "3YQls+eXYyDoQS/5/HDOfxPvDl37EfSJ6WhFheZBQDQ=",
+    "talkId": "593894",
+    "event": "2024",
+    "creationInstant": "2024-04-26T09:08:55.842Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "8af28820-e44f-4a71-b951-9ca23c7a1d66"
+  },
+  {
+    "encryptedEmail": "6hoBG/pnqFsHzSZOdPcNfwZt/WtSfAwlC5CVzfLZfso=",
+    "talkId": "593894",
+    "event": "2024",
+    "creationInstant": "2024-04-26T09:09:47.939Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "db43c373-8de0-4773-8b23-41673c35a15c"
+  },
+  {
+    "encryptedEmail": "PulP3FKIW24ImqVHFYCYN0HQ3ie182PM3ZZtQRgPsaA=",
+    "talkId": "593894",
+    "event": "2024",
+    "creationInstant": "2024-04-26T09:10:39.525Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "LOVED_LIVE_CODING"
+    ],
+    "comment": null,
+    "id": "a671b8ca-e550-49f0-9fc3-f7c16a69c287"
+  },
+  {
+    "encryptedEmail": "ooK5ZTJRRVTJsTGvpAjpEUFWYbey/pC/6ptOTl+/fAo=",
+    "talkId": "593894",
+    "event": "2024",
+    "creationInstant": "2024-04-26T09:14:29.397Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": null,
+    "id": "3b2165e8-1b61-487f-a26a-6d2c5e7628d2"
+  },
+  {
+    "encryptedEmail": "bFN9DzWFjLEa4Mm3jbMWcwXAkGIiFcgOuKUssz6p5CY=",
+    "talkId": "622669",
+    "event": "2024",
+    "creationInstant": "2024-04-26T09:16:01.430Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "Merci beaucoup pour ce talk qui nous apprend beaucoup et surtout avec une réelle démarche scientifique ",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:07:29.577Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "c57379a1-c343-4f95-bf7c-01e75cede94d"
+  },
+  {
+    "encryptedEmail": "bFN9DzWFjLEa4Mm3jbMWcwXAkGIiFcgOuKUssz6p5CY=",
+    "talkId": "611298",
+    "event": "2024",
+    "creationInstant": "2024-04-26T09:17:21.936Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Merci beaucoup pour ce REX très clair et inspirant ",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T22:55:23.744Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "c43aed29-31f1-4820-9db1-e9a1bddbcaef"
+  },
+  {
+    "encryptedEmail": "Nh6AcJebS35LFBOoSqGNVrWSD+pzvSHqHwLw6qBa8yQ=",
+    "talkId": "611170",
+    "event": "2024",
+    "creationInstant": "2024-04-26T09:17:47.077Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": {
+      "comment": "Merci Nathan pour avoir partagé ton expérience, dont tes vulnérabilités.\r\nEn tant que femme, je me sens réconfortée et pleine d'espoir, soutenue par des alliés masculins connus et inconnus.\r\nUn petit plus (si ça rentre en timing): partager tes erreurs ou échecs si tu en as rencontrées sur ton chemin.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T22:56:06.553Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "939a69fc-0bea-4094-bf13-8c846638530b"
+  },
+  {
+    "encryptedEmail": "WuH6Yvt2fXEXqw69umoZLrP91TedXNQ5WJISWTf1DRc=",
+    "talkId": "611170",
+    "event": "2024",
+    "creationInstant": "2024-04-26T09:24:48.467Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "Un immense merci de prendre la parole sur ce sujet ! Talk très clair, drôle et impactant !!!",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T22:54:13.205Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "c40ac49d-1887-4a68-b3fb-ec993fbfffd8"
+  },
+  {
+    "encryptedEmail": "0tj56a16Nfxo8cJxlFSxpzVwCUQ5eOf2cHvztn0U3fU=",
+    "talkId": "593894",
+    "event": "2024",
+    "creationInstant": "2024-04-26T09:24:59.996Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "569fb96a-685b-4492-8433-80964fdaf36e"
+  },
+  {
+    "encryptedEmail": "JDB0PFbWgXeBK4F2frtwoMkEyPWP336Ciqa3HqltA7Y=",
+    "talkId": "602999",
+    "event": "2024",
+    "creationInstant": "2024-04-26T09:29:09.753Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "49ff7fbb-960d-4611-abf6-0d9b3798a709"
+  },
+  {
+    "encryptedEmail": "EPWovhwaSKrmPDNHIXOTez26w362KoUeh3VkFgXOjA0=",
+    "talkId": "601609",
+    "event": "2024",
+    "creationInstant": "2024-04-26T09:46:43.577Z",
+    "notes": [],
+    "comment": {
+      "comment": "Bonne introduction au leadership.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:15:22.843Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "0d161df8-4b63-4f22-a5de-5063e26901d7"
+  },
+  {
+    "encryptedEmail": "Oilut4ZGOW+faWwpu3soHbFSIIr+b/xGqH10CknIIyU=",
+    "talkId": "611298",
+    "event": "2024",
+    "creationInstant": "2024-04-26T09:51:59.969Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "ca325496-3456-42f0-a299-ff6d08badb31"
+  },
+  {
+    "encryptedEmail": "Oilut4ZGOW+faWwpu3soHbFSIIr+b/xGqH10CknIIyU=",
+    "talkId": "622669",
+    "event": "2024",
+    "creationInstant": "2024-04-26T09:53:21.204Z",
+    "notes": [],
+    "comment": {
+      "comment": "Intéressant mais un peu long pour arriver au sujet qui correspond au titre tu talk",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:07:22.486Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "631c9769-917a-42f9-b5b6-18a6ccd1d39b"
+  },
+  {
+    "encryptedEmail": "Oilut4ZGOW+faWwpu3soHbFSIIr+b/xGqH10CknIIyU=",
+    "talkId": "610061",
+    "event": "2024",
+    "creationInstant": "2024-04-26T09:56:15.786Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "J'ai raté la moitié, satané crêpes ",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:11:51.952Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "f82eea78-fe84-4eb5-b098-f79b69a34fa8"
+  },
+  {
+    "encryptedEmail": "ZLNUh2ppcX+NlCxnjXdsm3Z/2bqAxKRxLzVgBtmzOh4=",
+    "talkId": "612466",
+    "event": "2024",
+    "creationInstant": "2024-04-26T09:57:17.411Z",
+    "notes": [],
+    "comment": {
+      "comment": "Workshop intéressant \uD83D\uDC4D. Juste un peu dur de suivre les témoignages audio et en même temps de faire l’exercice des post its. Je pensai que l’atelier serait plus global pour l’inclusion (handicap, neuro diversité, situation de précarité, maladie psychiques…) comme c’était décrit dans la description. Peut être le preciser pour une prochaine fois. :) En tout cas l’exercice était instructif. Merci pour votre intervention \uD83D\uDE4F\uD83D\uDC4D",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:14:46.575Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "b236288e-5e8d-4ade-a6cb-3f63073d2a4b"
+  },
+  {
+    "encryptedEmail": "EPWovhwaSKrmPDNHIXOTez26w362KoUeh3VkFgXOjA0=",
+    "talkId": "660190",
+    "event": "2024",
+    "creationInstant": "2024-04-26T10:03:45.338Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": {
+      "comment": "Bons points. La démo rebase était un peu discordant.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:09:32.545Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "30b1a8c1-5c26-4df5-9d22-8326e67e6e72"
+  },
+  {
+    "encryptedEmail": "EPWovhwaSKrmPDNHIXOTez26w362KoUeh3VkFgXOjA0=",
+    "talkId": "611170",
+    "event": "2024",
+    "creationInstant": "2024-04-26T10:04:31.758Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING",
+      "FUN",
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "J'ai bien aimé. Cette présentation me touche personnellement. Et en effet, ça serait bien d'avoir une petite mention du \"boys club\" !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T22:51:28.287Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "1ffc47ff-1628-4981-a880-ff6a2e8760e7"
+  },
+  {
+    "encryptedEmail": "EPWovhwaSKrmPDNHIXOTez26w362KoUeh3VkFgXOjA0=",
+    "talkId": "622669",
+    "event": "2024",
+    "creationInstant": "2024-04-26T10:06:25.852Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "SURPRISED_BY_SUBJECT",
+      "VERY_INTERESTING",
+      "TOO_FAST",
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "J'ai bien aimé, je pense qu'on n'aborde pas assez le sujet de la technologie qui n'est pas forcément une panacée.\r\nJe pense que la présentation pourrait être un peu plus vulgarisée avec quelques slides en moins pour la rendre plus rapide.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:07:19.073Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "3e58d63f-29fc-4a5c-b0e4-3727b253bedb"
+  },
+  {
+    "encryptedEmail": "zmjAZsgcbYRAIr/FN6aQgqBVSyoR0mPfl1y9TpSKjEA=",
+    "talkId": "612065",
+    "event": "2024",
+    "creationInstant": "2024-04-26T10:07:43.878Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK"
+    ],
+    "comment": null,
+    "id": "64fd5a78-4004-482f-951c-81ac0e50c2b3"
+  },
+  {
+    "encryptedEmail": "RiuQbyOiTNR+UE77eZo1I67fTALmPlJ5Iv2bYdAnc30=",
+    "talkId": "612412",
+    "event": "2024",
+    "creationInstant": "2024-04-26T10:08:13.494Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "9cef1235-a191-4849-834d-d52d842a5214"
+  },
+  {
+    "encryptedEmail": "3YQls+eXYyDoQS/5/HDOfxPvDl37EfSJ6WhFheZBQDQ=",
+    "talkId": "612065",
+    "event": "2024",
+    "creationInstant": "2024-04-26T10:18:44.402Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "f932b2db-0a39-4c39-bb36-2bbd9f693383"
+  },
+  {
+    "encryptedEmail": "NIWTWGM0bWedq3rVwk+Zgd4Xq9hYcVoX8APMhiIMagx7F7vQuJqwzWi4BXiVofMV",
+    "talkId": "593954",
+    "event": "2024",
+    "creationInstant": "2024-04-26T10:22:04.538Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": {
+      "comment": "J'ai mis tous les points positifs, sauf celui sur le live coding, sorry \uD83D\uDE02 Et pour la rime avec \"antilope\" : c'était super top !!",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:07:11.235Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "e26f2a79-c3ac-4ede-bc40-ed0cb7d83247"
+  },
+  {
+    "encryptedEmail": "EhEfV70gZzdFNiCJygzixUAEhuqF/1IXN96nO3x9tNw=",
+    "talkId": "613767",
+    "event": "2024",
+    "creationInstant": "2024-04-26T10:39:39.821Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "d2841e2f-e330-4647-8b13-c2d5838158c6"
+  },
+  {
+    "encryptedEmail": "EhEfV70gZzdFNiCJygzixUAEhuqF/1IXN96nO3x9tNw=",
+    "talkId": "622656",
+    "event": "2024",
+    "creationInstant": "2024-04-26T10:42:29.201Z",
+    "notes": [
+      "VERY_INTERESTING",
+      "SURPRISED_BY_SUBJECT"
+    ],
+    "comment": null,
+    "id": "16b9a54f-806f-4d78-a5bc-d4fa1637f8c7"
+  },
+  {
+    "encryptedEmail": "EhEfV70gZzdFNiCJygzixUAEhuqF/1IXN96nO3x9tNw=",
+    "talkId": "611220",
+    "event": "2024",
+    "creationInstant": "2024-04-26T10:43:17.905Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "LOVED_LIVE_CODING",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "ec8cb41f-816a-4cb9-b112-4f91c789c45c"
+  },
+  {
+    "encryptedEmail": "EhEfV70gZzdFNiCJygzixUAEhuqF/1IXN96nO3x9tNw=",
+    "talkId": "612165",
+    "event": "2024",
+    "creationInstant": "2024-04-26T10:44:04.836Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "60710a4f-4694-4bb1-922d-6cd11abc2a29"
+  },
+  {
+    "encryptedEmail": "EhEfV70gZzdFNiCJygzixUAEhuqF/1IXN96nO3x9tNw=",
+    "talkId": "594797",
+    "event": "2024",
+    "creationInstant": "2024-04-26T10:44:54.386Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "ee24d455-4a0a-4d76-b20e-0e0c281ef858"
+  },
+  {
+    "encryptedEmail": "vfnM/lEWk2TB9I8HX0e3tLFYy5x/LSoX6a24eQXGr/s=",
+    "talkId": "612412",
+    "event": "2024",
+    "creationInstant": "2024-04-26T10:45:58.150Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "LOVED_LIVE_CODING",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "a3f82b5e-659f-4889-984d-8ca74e27815c"
+  },
+  {
+    "encryptedEmail": "EhEfV70gZzdFNiCJygzixUAEhuqF/1IXN96nO3x9tNw=",
+    "talkId": "595818",
+    "event": "2024",
+    "creationInstant": "2024-04-26T10:46:02.228Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "8bec5291-1c28-4441-8ee8-e1a8cbe6e57d"
+  },
+  {
+    "encryptedEmail": "PAay9Gjoh/ByikbNyaROW3Hc2LMbBkyiqoSeauSVChw=",
+    "talkId": "593954",
+    "event": "2024",
+    "creationInstant": "2024-04-26T11:00:22.301Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "f486e5c0-388f-49f0-8dca-6c5c276d8f9f"
+  },
+  {
+    "encryptedEmail": "PAay9Gjoh/ByikbNyaROW3Hc2LMbBkyiqoSeauSVChw=",
+    "talkId": "602999",
+    "event": "2024",
+    "creationInstant": "2024-04-26T11:00:43.491Z",
+    "notes": [],
+    "comment": null,
+    "id": "9938330c-dacb-43bd-8443-337199a23726"
+  },
+  {
+    "encryptedEmail": "PAay9Gjoh/ByikbNyaROW3Hc2LMbBkyiqoSeauSVChw=",
+    "talkId": "622669",
+    "event": "2024",
+    "creationInstant": "2024-04-26T11:01:00.860Z",
+    "notes": [
+      "VERY_INTERESTING",
+      "SURPRISED_BY_SUBJECT"
+    ],
+    "comment": null,
+    "id": "f2683b3f-856e-4782-ab84-acb5257eea70"
+  },
+  {
+    "encryptedEmail": "JDB0PFbWgXeBK4F2frtwoMkEyPWP336Ciqa3HqltA7Y=",
+    "talkId": "593954",
+    "event": "2024",
+    "creationInstant": "2024-04-26T12:03:21.903Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "3129c3d8-2da5-41ce-aa97-eaec48a9d71e"
+  },
+  {
+    "encryptedEmail": "A1vuFPy9Re0neqygH9ldtM9C28tQBPrD+bLkNauDuS4=",
+    "talkId": "611298",
+    "event": "2024",
+    "creationInstant": "2024-04-26T12:04:27.490Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Talk intéressant, concret, qui apporte une idée nouvelle. Bon orateur avec une touche d'humour.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:12:27.797Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "435b6f40-4137-41f2-b799-9af658ffafeb"
+  },
+  {
+    "encryptedEmail": "w1vKY5ohOJQDg8B3/GsKP+5wKbZVIrIBynJ0jljptxk=",
+    "talkId": "612466",
+    "event": "2024",
+    "creationInstant": "2024-04-26T12:28:41.366Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": {
+      "comment": "Premier atelier pour ma part, animatrice et participants bien bienveillants. \r\nPenser à l’accessibilité de ces ateliers pour une personne sourde : sous-titres ou transcriptions des audios/vidéos, limiter le nombre de groupes en simultané dans la même salle, interprètes LSF à la demande ?",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:14:42.860Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "37a20e58-97b5-478f-a894-2db73f05c411"
+  },
+  {
+    "encryptedEmail": "w1vKY5ohOJQDg8B3/GsKP+5wKbZVIrIBynJ0jljptxk=",
+    "talkId": "637082",
+    "event": "2024",
+    "creationInstant": "2024-04-26T12:38:54.374Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "FUN",
+      "COULD_BE_MORE_EXPLORED",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": {
+      "comment": "Bravo pour les jeunes qui se sont exprimés, bravo pour cette longévité\r\nMériterait un talk plus long et plus de démos",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:15:58.682Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "aa0d73ed-3a66-4064-8ea4-7b59f1bbc629"
+  },
+  {
+    "encryptedEmail": "NIWTWGM0bWedq3rVwk+Zgd4Xq9hYcVoX8APMhiIMagx7F7vQuJqwzWi4BXiVofMV",
+    "talkId": "611369",
+    "event": "2024",
+    "creationInstant": "2024-04-26T12:43:10.667Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "TOO_COMPLICATED",
+      "UNCLEAR",
+      "VERY_INTERESTING",
+      "SURPRISED_BY_SUBJECT"
+    ],
+    "comment": {
+      "comment": "J'ai mis des avis positifs et négatifs. Le sujet est intéressant, mais je pense que la forme ne le servait pas bien. La panne malheureuse du diapo n'a pas aidé je pense.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:11:38.389Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "b24861d1-a457-4154-b706-857aab62e70f"
+  },
+  {
+    "encryptedEmail": "1WmFwCb9/VoLsFr3TfEG44bWmx+nHscFvXS9RNnq4C4=",
+    "talkId": "609268",
+    "event": "2024",
+    "creationInstant": "2024-04-26T12:52:33.484Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "TOO_SLOW",
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": {
+      "comment": "L'histoire racontée était cool mais elle prend beaucoup de places dans la conf, alors que les formes de stratégies de tests est le propos le + intéressant et le + riche du talk. ",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T22:52:14.622Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "4de04fab-1014-4500-93a4-af0eba9421fd"
+  },
+  {
+    "encryptedEmail": "gkNMB/y686qGOCl01jKLZOzDHk3pjcUZe6mX9IY3a7M=",
+    "talkId": "622656",
+    "event": "2024",
+    "creationInstant": "2024-04-26T12:55:09.499Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "SURPRISED_BY_SUBJECT",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "7d5446bd-3b2f-4a19-bab8-319fc3140aca"
+  },
+  {
+    "encryptedEmail": "TnlHIsdKl40CdK5Ieq3nkw==",
+    "talkId": "593044",
+    "event": "2024",
+    "creationInstant": "2024-04-26T13:04:35.562Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "0f0212e8-93a7-48a0-a887-0514e5787679"
+  },
+  {
+    "encryptedEmail": "gkNMB/y686qGOCl01jKLZOzDHk3pjcUZe6mX9IY3a7M=",
+    "talkId": "641460",
+    "event": "2024",
+    "creationInstant": "2024-04-26T13:10:24.982Z",
+    "notes": [
+      "VERY_INTERESTING",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "0cc0957f-ca68-41fb-9eac-e24894b085f1"
+  },
+  {
+    "encryptedEmail": "gkNMB/y686qGOCl01jKLZOzDHk3pjcUZe6mX9IY3a7M=",
+    "talkId": "612277",
+    "event": "2024",
+    "creationInstant": "2024-04-26T13:11:37.112Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "247e837f-77a7-4b27-aab6-620fd7d44caa"
+  },
+  {
+    "encryptedEmail": "0tj56a16Nfxo8cJxlFSxpzVwCUQ5eOf2cHvztn0U3fU=",
+    "talkId": "599383",
+    "event": "2024",
+    "creationInstant": "2024-04-26T13:16:10.600Z",
+    "notes": [
+      "TOO_COMPLICATED",
+      "LACKS_DEMO",
+      "UNCLEAR",
+      "UNDERSTOOD_NOTHING"
+    ],
+    "comment": {
+      "comment": "L'introduction était abordable, par contre l'explication sur ce qu'est biscuit était beaucoup trop rapide, sans exemple ni schémas, en ne parlant que de ses propriétés, qui n'étaient pas très appréhendables pour des néophytes.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T22:55:47.257Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "061f7874-5016-40de-bbf1-e6d6e940ed71"
+  },
+  {
+    "encryptedEmail": "w1vKY5ohOJQDg8B3/GsKP+5wKbZVIrIBynJ0jljptxk=",
+    "talkId": "611849",
+    "event": "2024",
+    "creationInstant": "2024-04-26T13:32:58.770Z",
+    "notes": [
+      "VERY_INTERESTING",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": {
+      "comment": "Bravo pour cette présentation. ",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:10:55.951Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "a37f11a4-ac5e-4d0a-a31a-0550b10f942c"
+  },
+  {
+    "encryptedEmail": "5uGyRlklru6zXnANJP8DFisjGdLaNQsy8qNXoXsJTio=",
+    "talkId": "612065",
+    "event": "2024",
+    "creationInstant": "2024-04-26T13:40:22.685Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Talk didactique et très fluide. Bravo !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:10:05.417Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "5e5a4ec6-f574-4ada-b4e7-fa32db1086b0"
+  },
+  {
+    "encryptedEmail": "5uGyRlklru6zXnANJP8DFisjGdLaNQsy8qNXoXsJTio=",
+    "talkId": "609510",
+    "event": "2024",
+    "creationInstant": "2024-04-26T13:42:25.889Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": {
+      "comment": "Astuces et technique combinées, talk très intéressant",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:08:52.108Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "4fd63ace-6122-4359-8382-5b811cb4c5d1"
+  },
+  {
+    "encryptedEmail": "5uGyRlklru6zXnANJP8DFisjGdLaNQsy8qNXoXsJTio=",
+    "talkId": "602999",
+    "event": "2024",
+    "creationInstant": "2024-04-26T13:44:47.746Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "e3cbc5be-7ffd-4d2f-8268-7f857262f086"
+  },
+  {
+    "encryptedEmail": "zmjAZsgcbYRAIr/FN6aQgqBVSyoR0mPfl1y9TpSKjEA=",
+    "talkId": "593044",
+    "event": "2024",
+    "creationInstant": "2024-04-26T13:57:34.244Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "85bfd76c-0e8b-4c83-8ee5-ed7dc901ae11"
+  },
+  {
+    "encryptedEmail": "zmjAZsgcbYRAIr/FN6aQgqBVSyoR0mPfl1y9TpSKjEA=",
+    "talkId": "674303",
+    "event": "2024",
+    "creationInstant": "2024-04-26T13:59:24.306Z",
+    "notes": [
+      "FUN"
+    ],
+    "comment": null,
+    "id": "a3c12aef-cd5a-46d4-9b48-f5f29965177a"
+  },
+  {
+    "encryptedEmail": "NIWTWGM0bWedq3rVwk+Zgd4Xq9hYcVoX8APMhiIMagx7F7vQuJqwzWi4BXiVofMV",
+    "talkId": "611849",
+    "event": "2024",
+    "creationInstant": "2024-04-26T14:03:56.151Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Merci beaucoup Morgane pour cette expertise que tu nous a livré !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:10:51.913Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "67cf0f7e-40ad-4273-9554-6960fa3c9b74"
+  },
+  {
+    "encryptedEmail": "PAay9Gjoh/ByikbNyaROW3Hc2LMbBkyiqoSeauSVChw=",
+    "talkId": "600153",
+    "event": "2024",
+    "creationInstant": "2024-04-26T14:39:35.972Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "6befbd41-61f8-491d-ada8-84e6129b8618"
+  },
+  {
+    "encryptedEmail": "Nh6AcJebS35LFBOoSqGNVrWSD+pzvSHqHwLw6qBa8yQ=",
+    "talkId": "610225",
+    "event": "2024",
+    "creationInstant": "2024-04-26T14:42:26.944Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": {
+      "comment": "J'ai beaucoup aimé tes exemples très riches en détails et très concrets.\r\nJe suis encore perplexe sur les interventions de l'avatar LIA. Peut-être a relier a un exemple live d'interaction?",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:08:40.798Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "5823ddd6-9dfc-44fb-9be6-abc0731eb9fa"
+  },
+  {
+    "encryptedEmail": "5uGyRlklru6zXnANJP8DFisjGdLaNQsy8qNXoXsJTio=",
+    "talkId": "600153",
+    "event": "2024",
+    "creationInstant": "2024-04-26T14:46:34.239Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": {
+      "comment": "Talk bien technique et super intéressant !!! Bravo",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T22:53:36.662Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "156aee08-b482-4c02-97d6-41a7f8c068b9"
+  },
+  {
+    "encryptedEmail": "w1vKY5ohOJQDg8B3/GsKP+5wKbZVIrIBynJ0jljptxk=",
+    "talkId": "601595",
+    "event": "2024",
+    "creationInstant": "2024-04-26T14:49:26.529Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "FUN"
+    ],
+    "comment": {
+      "comment": "Belle connaissance de la nature et bravo pour la qualité de de exemples pour étayer les principes SOLID",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T22:51:45.564Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "c68dcc6e-5ac9-4d02-9083-3f55a1de0a37"
+  },
+  {
+    "encryptedEmail": "bFN9DzWFjLEa4Mm3jbMWcwXAkGIiFcgOuKUssz6p5CY=",
+    "talkId": "593079",
+    "event": "2024",
+    "creationInstant": "2024-04-26T15:27:02.089Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "Super intéressant bien que très dense. \r\n",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T22:56:12.365Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "d098ac4d-cd47-44c3-bd69-fb05a5a77ac5"
+  },
+  {
+    "encryptedEmail": "bFN9DzWFjLEa4Mm3jbMWcwXAkGIiFcgOuKUssz6p5CY=",
+    "talkId": "611369",
+    "event": "2024",
+    "creationInstant": "2024-04-26T15:29:15.073Z",
+    "notes": [
+      "UNCLEAR"
+    ],
+    "comment": null,
+    "id": "accfb6d3-2535-4410-8c2b-45610d1c7279"
+  },
+  {
+    "encryptedEmail": "bFN9DzWFjLEa4Mm3jbMWcwXAkGIiFcgOuKUssz6p5CY=",
+    "talkId": "610225",
+    "event": "2024",
+    "creationInstant": "2024-04-26T15:29:48.414Z",
+    "notes": [
+      "FUN"
+    ],
+    "comment": null,
+    "id": "6a33fc69-10f6-4105-925a-e88290e4eee4"
+  },
+  {
+    "encryptedEmail": "yxOM1zCxXDa8W+HdbnQ6RU00asVQ4iYX3NQfFitx7+w=",
+    "talkId": "622669",
+    "event": "2024",
+    "creationInstant": "2024-04-26T16:00:29.401Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "65bc623c-e2ec-46c6-818f-f078af675d8a"
+  },
+  {
+    "encryptedEmail": "yxOM1zCxXDa8W+HdbnQ6RU00asVQ4iYX3NQfFitx7+w=",
+    "talkId": "612277",
+    "event": "2024",
+    "creationInstant": "2024-04-26T16:00:49.351Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": null,
+    "id": "fa7e09d9-da59-4f3a-8524-6814eac13402"
+  },
+  {
+    "encryptedEmail": "JaNz1mf5Qlc7n2eWOB2heOneAhopPrZJ46tx+2mOiKE=",
+    "talkId": "653397",
+    "event": "2024",
+    "creationInstant": "2024-04-26T16:00:54.484Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "74bd5f56-21de-496c-b9b5-6e035248aa7a"
+  },
+  {
+    "encryptedEmail": "yxOM1zCxXDa8W+HdbnQ6RU00asVQ4iYX3NQfFitx7+w=",
+    "talkId": "612065",
+    "event": "2024",
+    "creationInstant": "2024-04-26T16:01:03.131Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "45a34a43-b8d9-40bc-ab79-f05021c6efd1"
+  },
+  {
+    "encryptedEmail": "yxOM1zCxXDa8W+HdbnQ6RU00asVQ4iYX3NQfFitx7+w=",
+    "talkId": "611369",
+    "event": "2024",
+    "creationInstant": "2024-04-26T16:01:22.521Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "a5ecd794-7811-48da-a447-9b2f3c6cc744"
+  },
+  {
+    "encryptedEmail": "yxOM1zCxXDa8W+HdbnQ6RU00asVQ4iYX3NQfFitx7+w=",
+    "talkId": "674303",
+    "event": "2024",
+    "creationInstant": "2024-04-26T16:01:56.683Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": null,
+    "id": "977af4de-19e5-42de-bc39-c2bc974ef8cf"
+  },
+  {
+    "encryptedEmail": "yxOM1zCxXDa8W+HdbnQ6RU00asVQ4iYX3NQfFitx7+w=",
+    "talkId": "593079",
+    "event": "2024",
+    "creationInstant": "2024-04-26T16:02:31.399Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "eb70bb6b-034f-4431-91f3-7ba29560394f"
+  },
+  {
+    "encryptedEmail": "yxOM1zCxXDa8W+HdbnQ6RU00asVQ4iYX3NQfFitx7+w=",
+    "talkId": "646315",
+    "event": "2024",
+    "creationInstant": "2024-04-26T16:02:53.517Z",
+    "notes": [
+      "LEARNT_NOTHING"
+    ],
+    "comment": null,
+    "id": "07c80cdc-49d1-4fb6-953a-2f5f590f2dd9"
+  },
+  {
+    "encryptedEmail": "zmjAZsgcbYRAIr/FN6aQgqBVSyoR0mPfl1y9TpSKjEA=",
+    "talkId": "646315",
+    "event": "2024",
+    "creationInstant": "2024-04-26T16:37:19.358Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "181bfa83-2221-4eba-8977-236f9e2c1c76"
+  },
+  {
+    "encryptedEmail": "8TnjP7EGhM8bArhbkCSnjQ/ZsG1UaN5LB0YQDdSfh+xvsAjjVCZDg8BJMzIRJ38K",
+    "talkId": "612354",
+    "event": "2024",
+    "creationInstant": "2024-04-26T16:42:07.485Z",
+    "notes": [
+      "UNCLEAR"
+    ],
+    "comment": {
+      "comment": "On a l’impression que ça ne fonctionne que sur du CRUD, et en + sur ce genre de typologie la pyramide des tests (TU > TI > Te2e) est contre productive",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:16:36.605Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "e0653a3e-6076-425e-a0ef-6f56fae917f5"
+  },
+  {
+    "encryptedEmail": "EhEfV70gZzdFNiCJygzixUAEhuqF/1IXN96nO3x9tNw=",
+    "talkId": "653397",
+    "event": "2024",
+    "creationInstant": "2024-04-26T17:39:17.893Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "SURPRISED_BY_SUBJECT"
+    ],
+    "comment": null,
+    "id": "f1af32e0-63a6-44b2-97f6-9adf12c4aa6a"
+  },
+  {
+    "encryptedEmail": "EhEfV70gZzdFNiCJygzixUAEhuqF/1IXN96nO3x9tNw=",
+    "talkId": "641460",
+    "event": "2024",
+    "creationInstant": "2024-04-26T17:51:13.497Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "8e5c4414-3c89-4fae-a13c-59a2ee44a80c"
+  },
+  {
+    "encryptedEmail": "EhEfV70gZzdFNiCJygzixUAEhuqF/1IXN96nO3x9tNw=",
+    "talkId": "622669",
+    "event": "2024",
+    "creationInstant": "2024-04-26T17:53:17.159Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING",
+      "VERY_GOOD_TALK",
+      "SURPRISED_BY_SUBJECT"
+    ],
+    "comment": null,
+    "id": "ec189ed0-6544-4b7d-a610-ad92c4139af8"
+  },
+  {
+    "encryptedEmail": "EhEfV70gZzdFNiCJygzixUAEhuqF/1IXN96nO3x9tNw=",
+    "talkId": "593894",
+    "event": "2024",
+    "creationInstant": "2024-04-26T17:53:46.697Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "LOVED_LIVE_CODING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "0b698d44-5fa7-42e1-b500-05fc81e0840e"
+  },
+  {
+    "encryptedEmail": "EhEfV70gZzdFNiCJygzixUAEhuqF/1IXN96nO3x9tNw=",
+    "talkId": "612412",
+    "event": "2024",
+    "creationInstant": "2024-04-26T17:54:23.882Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "0b57fd0f-a367-44a8-9cee-5b346b3679fc"
+  },
+  {
+    "encryptedEmail": "EhEfV70gZzdFNiCJygzixUAEhuqF/1IXN96nO3x9tNw=",
+    "talkId": "611369",
+    "event": "2024",
+    "creationInstant": "2024-04-26T17:55:07.874Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "SURPRISED_BY_SUBJECT"
+    ],
+    "comment": null,
+    "id": "a94c6609-5b04-46e6-add1-c6a2152e2a49"
+  },
+  {
+    "encryptedEmail": "EhEfV70gZzdFNiCJygzixUAEhuqF/1IXN96nO3x9tNw=",
+    "talkId": "605488",
+    "event": "2024",
+    "creationInstant": "2024-04-26T17:56:46.872Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "LOVED_LIVE_CODING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "5dd7f1fb-512f-4ded-8a76-aecf366249fa"
+  },
+  {
+    "encryptedEmail": "EhEfV70gZzdFNiCJygzixUAEhuqF/1IXN96nO3x9tNw=",
+    "talkId": "600153",
+    "event": "2024",
+    "creationInstant": "2024-04-26T17:57:23.717Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "LOVED_LIVE_CODING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "507572da-2d68-4572-9c18-0af9d9cb82ea"
+  },
+  {
+    "encryptedEmail": "EhEfV70gZzdFNiCJygzixUAEhuqF/1IXN96nO3x9tNw=",
+    "talkId": "646315",
+    "event": "2024",
+    "creationInstant": "2024-04-26T17:58:08.467Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "83bc7c58-2b36-4a77-99b6-de25fd4b48e0"
+  },
+  {
+    "encryptedEmail": "uUhOJDLIEHJLgdvyauCHeTH7PEm+Y+MtwSI+GDz1seM=",
+    "talkId": "610532",
+    "event": "2024",
+    "creationInstant": "2024-04-26T18:07:45.966Z",
+    "notes": [
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": {
+      "comment": "Très intéressant mais format vraiment trop court pour un atelier !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T22:56:18.978Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "ab3a5300-dc1b-4608-86d3-5469ac3689a8"
+  },
+  {
+    "encryptedEmail": "uUhOJDLIEHJLgdvyauCHeTH7PEm+Y+MtwSI+GDz1seM=",
+    "talkId": "611564",
+    "event": "2024",
+    "creationInstant": "2024-04-26T18:09:01.539Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": {
+      "comment": "Très intéressant ...et sans enjoliver la réalité.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:15:39.858Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "0ec0c524-1bf8-49c1-a6ae-b0d8fcc5b077"
+  },
+  {
+    "encryptedEmail": "uUhOJDLIEHJLgdvyauCHeTH7PEm+Y+MtwSI+GDz1seM=",
+    "talkId": "660190",
+    "event": "2024",
+    "creationInstant": "2024-04-26T18:10:23.543Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "TOO_FAST",
+      "COULD_BE_MORE_EXPLORED",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "De bonnes pistes pour améliorer les code reviews !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:09:28.762Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "67ee875b-c20b-48b5-8cf4-3087905ec3af"
+  },
+  {
+    "encryptedEmail": "uUhOJDLIEHJLgdvyauCHeTH7PEm+Y+MtwSI+GDz1seM=",
+    "talkId": "611440",
+    "event": "2024",
+    "creationInstant": "2024-04-26T18:12:13.728Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Inspirant !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T22:55:52.149Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "6c96e493-a20d-47df-b565-553b6427037c"
+  },
+  {
+    "encryptedEmail": "uUhOJDLIEHJLgdvyauCHeTH7PEm+Y+MtwSI+GDz1seM=",
+    "talkId": "602999",
+    "event": "2024",
+    "creationInstant": "2024-04-26T18:12:55.045Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": {
+      "comment": "Merci pour cette démo !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:08:55.628Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "aecf14f6-45d7-4438-b11a-a0f506cedfc0"
+  },
+  {
+    "encryptedEmail": "uUhOJDLIEHJLgdvyauCHeTH7PEm+Y+MtwSI+GDz1seM=",
+    "talkId": "611744",
+    "event": "2024",
+    "creationInstant": "2024-04-26T18:14:18.782Z",
+    "notes": [
+      "COULD_BE_MORE_EXPLORED",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Un peu d'espoir dans ce monde, merci ! Les solutions proposées nous laissent un peu sur notre faim....",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:11:03.503Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "fde16116-0d69-4eda-8176-3a3b8434e7fe"
+  },
+  {
+    "encryptedEmail": "uUhOJDLIEHJLgdvyauCHeTH7PEm+Y+MtwSI+GDz1seM=",
+    "talkId": "674303",
+    "event": "2024",
+    "creationInstant": "2024-04-26T18:15:32.698Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "FUN",
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": {
+      "comment": "Un talk qui sort des sentiers battus, on a envie d'en savoir plus !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T19:09:51.840Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "6956e829-48ff-4c8d-9209-89f0893388a9"
+  },
+  {
+    "encryptedEmail": "uUhOJDLIEHJLgdvyauCHeTH7PEm+Y+MtwSI+GDz1seM=",
+    "talkId": "601595",
+    "event": "2024",
+    "creationInstant": "2024-04-26T18:17:14.619Z",
+    "notes": [
+      "FUN",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Ou comment ré-expliquer quelques notions de base du développement de façon ludique. Très sympa.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T22:51:41.787Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "115aed8c-c6ab-4a55-b4bc-6c5067b18c72"
+  },
+  {
+    "encryptedEmail": "1WmFwCb9/VoLsFr3TfEG44bWmx+nHscFvXS9RNnq4C4=",
+    "talkId": "601609",
+    "event": "2024",
+    "creationInstant": "2024-04-26T19:14:19.113Z",
+    "notes": [
+      "LEARNT_NOTHING",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "c5424708-a330-49c9-9da6-5a4dc001df2f"
+  },
+  {
+    "encryptedEmail": "1WmFwCb9/VoLsFr3TfEG44bWmx+nHscFvXS9RNnq4C4=",
+    "talkId": "622656",
+    "event": "2024",
+    "creationInstant": "2024-04-26T19:17:23.235Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "e8f6933b-6e6b-4c18-8543-6c017676f86b"
+  },
+  {
+    "encryptedEmail": "1WmFwCb9/VoLsFr3TfEG44bWmx+nHscFvXS9RNnq4C4=",
+    "talkId": "612165",
+    "event": "2024",
+    "creationInstant": "2024-04-26T19:19:33.121Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "Merci !! Après avoir passé 2 ans à gamifier le rôle de Scrum Master pour qu'une équipe de juniors en prenne les tenants et aboutissants complets, votre talk m'a rassurée sur l'importance du scrum master et du profil qui doit occuper ce poste !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T22:51:52.535Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "24f87cf0-3672-4788-a655-567a2d65146e"
+  },
+  {
+    "encryptedEmail": "1WmFwCb9/VoLsFr3TfEG44bWmx+nHscFvXS9RNnq4C4=",
+    "talkId": "598718",
+    "event": "2024",
+    "creationInstant": "2024-04-26T19:25:35.303Z",
+    "notes": [
+      "UNCLEAR"
+    ],
+    "comment": null,
+    "id": "aa8ef6da-e006-4b2b-8f87-398c3f4c20bd"
+  },
+  {
+    "encryptedEmail": "1WmFwCb9/VoLsFr3TfEG44bWmx+nHscFvXS9RNnq4C4=",
+    "talkId": "641460",
+    "event": "2024",
+    "creationInstant": "2024-04-26T19:26:17.256Z",
+    "notes": [
+      "TOO_COMPLICATED"
+    ],
+    "comment": {
+      "comment": "Le propos de fond est bon et mérite l'adhésion mais la posture énervée (presque hargneuse) et la présentation du livre plutôt que du propos gâche un peu le talk. Dommage, c'était prometteur ! ",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T22:53:43.769Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "51772cdc-b623-4fdf-bab2-dfabd409795b"
+  },
+  {
+    "encryptedEmail": "1WmFwCb9/VoLsFr3TfEG44bWmx+nHscFvXS9RNnq4C4=",
+    "talkId": "622669",
+    "event": "2024",
+    "creationInstant": "2024-04-26T19:29:05.374Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "e56c154b-35f2-4ad8-93f1-ecb385c7db73"
+  },
+  {
+    "encryptedEmail": "1WmFwCb9/VoLsFr3TfEG44bWmx+nHscFvXS9RNnq4C4=",
+    "talkId": "611298",
+    "event": "2024",
+    "creationInstant": "2024-04-26T19:29:38.194Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "a695d2fa-6d94-4216-b6d8-9560a59e8f67"
+  },
+  {
+    "encryptedEmail": "1WmFwCb9/VoLsFr3TfEG44bWmx+nHscFvXS9RNnq4C4=",
+    "talkId": "611744",
+    "event": "2024",
+    "creationInstant": "2024-04-26T19:30:37.672Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": null,
+    "id": "fcca1c22-a8bf-4fec-8480-be8d32f5d942"
+  },
+  {
+    "encryptedEmail": "1WmFwCb9/VoLsFr3TfEG44bWmx+nHscFvXS9RNnq4C4=",
+    "talkId": "611369",
+    "event": "2024",
+    "creationInstant": "2024-04-26T19:31:14.094Z",
+    "notes": [
+      "VERY_INTERESTING",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "6b689188-0617-4e2f-b2ff-2fdf39169210"
+  },
+  {
+    "encryptedEmail": "1WmFwCb9/VoLsFr3TfEG44bWmx+nHscFvXS9RNnq4C4=",
+    "talkId": "611849",
+    "event": "2024",
+    "creationInstant": "2024-04-26T19:32:03.391Z",
+    "notes": [
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": null,
+    "id": "eb70ccb0-56bf-405e-8a86-a0cc52b0f349"
+  },
+  {
+    "encryptedEmail": "1WmFwCb9/VoLsFr3TfEG44bWmx+nHscFvXS9RNnq4C4=",
+    "talkId": "601595",
+    "event": "2024",
+    "creationInstant": "2024-04-26T19:33:37.167Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "54b4cf31-a8a0-42cd-9562-fc1c786a43e6"
+  },
+  {
+    "encryptedEmail": "wSyA/HBEeTQjjHMDIhhZkb/jom36Tr/g+v/23/IV4uc=",
+    "talkId": "646315",
+    "event": "2024",
+    "creationInstant": "2024-04-26T20:15:06.354Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "FUN",
+      "SURPRISED_BY_SUBJECT"
+    ],
+    "comment": null,
+    "id": "14ee55ad-2fb1-45fd-b029-7fc0bf989572"
+  },
+  {
+    "encryptedEmail": "yphldkZVllf5MV6Dy345KmqzpVwph+IQSiX8akHREhk=",
+    "talkId": "611170",
+    "event": "2024",
+    "creationInstant": "2024-04-26T20:15:10.347Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": {
+      "comment": "Sujet important et très bien amené.\r\nPar contre j'aurais apprécié parlé plus du lien avec le monde de la Tech, c'est dans le titre du talk quand même",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-26T22:53:55.578Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "ff0575e0-d432-48c6-be8b-2d86acc993ff"
+  },
+  {
+    "encryptedEmail": "k+eFIN0m3eN3iwy7jQZhmTomvdYlvSP0OjxAN6yILwo=",
+    "talkId": "622656",
+    "event": "2024",
+    "creationInstant": "2024-04-26T20:16:19.077Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "6552266d-37a7-4d79-92ac-b7d62d565925"
+  },
+  {
+    "encryptedEmail": "yphldkZVllf5MV6Dy345KmqzpVwph+IQSiX8akHREhk=",
+    "talkId": "612412",
+    "event": "2024",
+    "creationInstant": "2024-04-26T20:17:08.330Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": null,
+    "id": "dbd31e2d-36c9-4bf1-832d-22faf3190f6d"
+  },
+  {
+    "encryptedEmail": "yphldkZVllf5MV6Dy345KmqzpVwph+IQSiX8akHREhk=",
+    "talkId": "611369",
+    "event": "2024",
+    "creationInstant": "2024-04-26T20:17:37.155Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "d240c2da-22c6-4587-a1e9-bde2d1eecca9"
+  },
+  {
+    "encryptedEmail": "yphldkZVllf5MV6Dy345KmqzpVwph+IQSiX8akHREhk=",
+    "talkId": "605488",
+    "event": "2024",
+    "creationInstant": "2024-04-26T20:17:59.673Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "90ca5fdd-b3f2-4b25-88f4-c48ce9190edb"
+  },
+  {
+    "encryptedEmail": "yphldkZVllf5MV6Dy345KmqzpVwph+IQSiX8akHREhk=",
+    "talkId": "593044",
+    "event": "2024",
+    "creationInstant": "2024-04-26T20:18:19.986Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": null,
+    "id": "aa1ff13a-6880-4c23-941a-9142aff2432e"
+  },
+  {
+    "encryptedEmail": "yphldkZVllf5MV6Dy345KmqzpVwph+IQSiX8akHREhk=",
+    "talkId": "646315",
+    "event": "2024",
+    "creationInstant": "2024-04-26T20:18:36.938Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": null,
+    "id": "2eb9ee36-d0c8-4591-8d95-009a2b44ea69"
+  },
+  {
+    "encryptedEmail": "kQ7yCTevAghOJI5BN8WBDjm7U8ssJtFemcFQOFtXfJP3wKw4S7qH5OAMVvKOPe7o",
+    "talkId": "612466",
+    "event": "2024",
+    "creationInstant": "2024-04-26T21:25:42.228Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "ef9e8130-43a3-4f6b-b8cb-ab52c9db78cf"
+  },
+  {
+    "encryptedEmail": "Wgka5oUXPDzxb7Ml1jlSeGXaWCSezSpQHXrFNwFIDfU=",
+    "talkId": "611298",
+    "event": "2024",
+    "creationInstant": "2024-04-26T21:58:54.441Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "b0e41985-489f-43e5-a435-7995bd771fd4"
+  },
+  {
+    "encryptedEmail": "Wgka5oUXPDzxb7Ml1jlSeGXaWCSezSpQHXrFNwFIDfU=",
+    "talkId": "612412",
+    "event": "2024",
+    "creationInstant": "2024-04-26T22:00:00.589Z",
+    "notes": [
+      "LACKS_DEMO",
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": null,
+    "id": "05b86159-2922-4893-a5d2-1c64710b8e16"
+  },
+  {
+    "encryptedEmail": "Wgka5oUXPDzxb7Ml1jlSeGXaWCSezSpQHXrFNwFIDfU=",
+    "talkId": "674303",
+    "event": "2024",
+    "creationInstant": "2024-04-26T22:01:33.205Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "11163e17-1d43-4f87-ba64-0141e13c6c96"
+  },
+  {
+    "encryptedEmail": "Wgka5oUXPDzxb7Ml1jlSeGXaWCSezSpQHXrFNwFIDfU=",
+    "talkId": "593079",
+    "event": "2024",
+    "creationInstant": "2024-04-26T22:02:25.393Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "COULD_BE_MORE_EXPLORED",
+      "VERY_GOOD_TALK"
+    ],
+    "comment": null,
+    "id": "f8365b5e-deee-43b6-86eb-7afc9829b6c8"
+  },
+  {
+    "encryptedEmail": "Wgka5oUXPDzxb7Ml1jlSeGXaWCSezSpQHXrFNwFIDfU=",
+    "talkId": "646315",
+    "event": "2024",
+    "creationInstant": "2024-04-26T22:03:39.217Z",
+    "notes": [
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": null,
+    "id": "e63af6cf-ab07-4b66-a7ea-14a48e8347c5"
+  },
+  {
+    "encryptedEmail": "Wgka5oUXPDzxb7Ml1jlSeGXaWCSezSpQHXrFNwFIDfU=",
+    "talkId": "611369",
+    "event": "2024",
+    "creationInstant": "2024-04-26T22:04:12.199Z",
+    "notes": [
+      "UNCLEAR",
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": null,
+    "id": "12fe6dc9-0b9e-4c79-8f4f-b17ec422b244"
+  },
+  {
+    "encryptedEmail": "Wgka5oUXPDzxb7Ml1jlSeGXaWCSezSpQHXrFNwFIDfU=",
+    "talkId": "622669",
+    "event": "2024",
+    "creationInstant": "2024-04-26T22:04:38.742Z",
+    "notes": [
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "f969b53b-7eed-4db7-b7ce-38b15a0209a0"
+  },
+  {
+    "encryptedEmail": "E5FoXHm3xUBpW2vWxjy0r28R/VE4k6aU5Lz2g48KgyY=",
+    "talkId": "611369",
+    "event": "2024",
+    "creationInstant": "2024-04-26T23:11:43.847Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "79c0c220-391b-4d32-985f-3901e85ee066"
+  },
+  {
+    "encryptedEmail": "w1vKY5ohOJQDg8B3/GsKP+5wKbZVIrIBynJ0jljptxk=",
+    "talkId": "646315",
+    "event": "2024",
+    "creationInstant": "2024-04-27T01:06:25.131Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": null,
+    "id": "74c0031b-bb5c-47bf-9c1f-c2599879a65d"
+  },
+  {
+    "encryptedEmail": "PAay9Gjoh/ByikbNyaROW3Hc2LMbBkyiqoSeauSVChw=",
+    "talkId": "646315",
+    "event": "2024",
+    "creationInstant": "2024-04-27T06:11:47.491Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK"
+    ],
+    "comment": null,
+    "id": "e809d34e-a15a-4129-a173-f54be4b04530"
+  },
+  {
+    "encryptedEmail": "PAay9Gjoh/ByikbNyaROW3Hc2LMbBkyiqoSeauSVChw=",
+    "talkId": "611369",
+    "event": "2024",
+    "creationInstant": "2024-04-27T06:13:24.193Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "TOO_FAST",
+      "VERY_INTERESTING",
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": null,
+    "id": "097e9ece-7f78-420b-900d-ca08948253ca"
+  },
+  {
+    "encryptedEmail": "hgfJqnikcfJUfvw9f/QNZU55YrVloOvdLOVOmiXgEaU=",
+    "talkId": "595818",
+    "event": "2024",
+    "creationInstant": "2024-04-27T10:21:42.860Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING",
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "Très intéressant ce retour d'expérience. Merci ! \r\nJ'aurais aimé davantage de détails sur certaines notions évoquées, comme le rôle supposé du scribe, et à quoi correspond une stratégie de branches à durée de vie courte, et comment on peut migrer d'un systeme ou on a une master  + des branches de hotfixs + des branches dev  vers un systeme de branches \"courtes\".\r\nMais sinon , c'était parfait ;)",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:07:40.343Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "8a7785d8-e5c6-4f78-ae5b-c1d68e32c6e2"
+  },
+  {
+    "encryptedEmail": "vKo40cwRp+78SoSohaYc9a0Kj3M4cI7/Lq2IyYK78gM=",
+    "talkId": "612448",
+    "event": "2024",
+    "creationInstant": "2024-04-27T14:35:04.417Z",
+    "notes": [
+      "VERY_INTERESTING",
+      "LEARNT_SOMETHING",
+      "FUN"
+    ],
+    "comment": {
+      "comment": "Merci pour ce super talk, ça fait plaisir de voir ces sujets enfin abordés !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:07:03.312Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "a7774346-f2cf-4302-a288-5d5e17096214"
+  },
+  {
+    "encryptedEmail": "vKo40cwRp+78SoSohaYc9a0Kj3M4cI7/Lq2IyYK78gM=",
+    "talkId": "612466",
+    "event": "2024",
+    "creationInstant": "2024-04-27T14:36:28.316Z",
+    "notes": [
+      "VERY_INTERESTING",
+      "FUN",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "3ef1b20b-5516-4102-9f4e-4efaa6292632"
+  },
+  {
+    "encryptedEmail": "vKo40cwRp+78SoSohaYc9a0Kj3M4cI7/Lq2IyYK78gM=",
+    "talkId": "646315",
+    "event": "2024",
+    "creationInstant": "2024-04-27T14:37:21.627Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "SURPRISED_BY_SUBJECT",
+      "FUN"
+    ],
+    "comment": {
+      "comment": "Super sujet, amené d'une superbe manière, merci pour tout ce que tu fais !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:06:07.401Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "a6130e27-0702-4854-9e65-9cf6e29ecc0b"
+  },
+  {
+    "encryptedEmail": "JEpwBD5S6NXHMAFlFEAc0zc7AoidFRAA4cypQitYyUI=",
+    "talkId": "611900",
+    "event": "2024",
+    "creationInstant": "2024-04-27T20:56:08.112Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "6a02da98-0df6-479b-b017-1cd5a58fff80"
+  },
+  {
+    "encryptedEmail": "mq/+gMlpS3FYsERj0/48UyNhf2Y66YbSV0aZ4T5Y+pI=",
+    "talkId": "674303",
+    "event": "2024",
+    "creationInstant": "2024-04-28T13:11:26.395Z",
+    "notes": [
+      "VERY_INTERESTING",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "6b446221-ece5-44a0-84e2-475c6d9fc486"
+  },
+  {
+    "encryptedEmail": "mq/+gMlpS3FYsERj0/48UyNhf2Y66YbSV0aZ4T5Y+pI=",
+    "talkId": "611170",
+    "event": "2024",
+    "creationInstant": "2024-04-28T13:14:24.429Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "C'est assez rare d'avoir un point de vue d'homme sur ce sujet. Plein d'info et des ressources pour approfondir, une très bonne présentation",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:07:48.284Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "3512bcac-7d07-454d-9a12-daec7eeb818f"
+  },
+  {
+    "encryptedEmail": "mq/+gMlpS3FYsERj0/48UyNhf2Y66YbSV0aZ4T5Y+pI=",
+    "talkId": "611744",
+    "event": "2024",
+    "creationInstant": "2024-04-28T13:14:35.727Z",
+    "notes": [
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": null,
+    "id": "ede6ed13-cb22-4e90-a891-a5b3849cd312"
+  },
+  {
+    "encryptedEmail": "mq/+gMlpS3FYsERj0/48UyNhf2Y66YbSV0aZ4T5Y+pI=",
+    "talkId": "611369",
+    "event": "2024",
+    "creationInstant": "2024-04-28T13:15:47.882Z",
+    "notes": [
+      "VERY_INTERESTING",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "7fb91792-0d24-4c9c-953b-d3953a241604"
+  },
+  {
+    "encryptedEmail": "JaNz1mf5Qlc7n2eWOB2heOneAhopPrZJ46tx+2mOiKE=",
+    "talkId": "601609",
+    "event": "2024",
+    "creationInstant": "2024-04-28T15:37:26.243Z",
+    "notes": [
+      "FUN"
+    ],
+    "comment": {
+      "comment": "Fun, l'atelier était très sympa. Faire le lien entre l'atelier et le sujet ne m'a pas semblé évident. Les questions sur le leadership étaient très intéressantes. Dans le timing, peut-être que l'atelier prend trop de temps. Ce qui est un peu perturbant et certainement volontaire, c'est que les questions restent des questions et n'apportent pas de réponses. :)",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:07:30.200Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "1da582eb-9d2a-43ec-866a-af617f426215"
+  },
+  {
+    "encryptedEmail": "JaNz1mf5Qlc7n2eWOB2heOneAhopPrZJ46tx+2mOiKE=",
+    "talkId": "622656",
+    "event": "2024",
+    "creationInstant": "2024-04-28T15:40:49.833Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "J'ai le livre dans ma bibliothèque et il va remonter dans mes priorités hautes de lectures prochaines ! Très bonne présentation malgré la quasi-absence de support visuel. Bravo !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:04:08.432Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "e20b7b4b-3d04-42ab-bd65-334be9971741"
+  },
+  {
+    "encryptedEmail": "JaNz1mf5Qlc7n2eWOB2heOneAhopPrZJ46tx+2mOiKE=",
+    "talkId": "641460",
+    "event": "2024",
+    "creationInstant": "2024-04-28T15:42:28.831Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "Très bon talk, support bien fait, sujet intéressant. Seule mini-réserve : un peu trop d'insistance sur le fait d'aller lire le livre. En parler au début et à la fin aurait pu suffire. Bravo !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:08:32.523Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "98ebec56-5764-4e37-a70f-b760a7e7aaca"
+  },
+  {
+    "encryptedEmail": "JaNz1mf5Qlc7n2eWOB2heOneAhopPrZJ46tx+2mOiKE=",
+    "talkId": "603754",
+    "event": "2024",
+    "creationInstant": "2024-04-28T15:44:24.772Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Je fais tous les ateliers sur la sécurité psychologique et le vôtre est vraiment très bien : la bonne dose de théorie et des ateliers pratiques progressifs et intéressants. Un très bon débrief à la fin. Pour info, Ben Linders avait fait un atelier à base de cartes, certes payantes, que je co-traduit actuellement en français et qui pourrait vous intéresser à creuser si cela vous intéresse : https://www.benlinders.com/shop/psychological-safety-cards/. (Pub gratuite, je ne suis pas rémunéré sur ses ventes). :)",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:08:02.037Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "a803798e-ef08-459b-8ae7-3154ff397aad"
+  },
+  {
+    "encryptedEmail": "JaNz1mf5Qlc7n2eWOB2heOneAhopPrZJ46tx+2mOiKE=",
+    "talkId": "622669",
+    "event": "2024",
+    "creationInstant": "2024-04-28T15:47:47.453Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "J'ai été très impressionné par le travail que vous réalisez et sur le rendu très intéressant que vous en faites. Bravo pour votre présentation à la fois amusante et intéressante.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:01:10.790Z",
+      "approvedByLogin": "greg",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "6a4254ff-2bb0-4997-8ea7-8469c396b4e9"
+  },
+  {
+    "encryptedEmail": "JaNz1mf5Qlc7n2eWOB2heOneAhopPrZJ46tx+2mOiKE=",
+    "talkId": "612277",
+    "event": "2024",
+    "creationInstant": "2024-04-28T15:49:11.002Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": {
+      "comment": "J'ai trouvé le sujet intéressant et la démarche de réflexion et de prise de décision était bien décrite. J'ai été surpris par les salaires que j'ai trouvés élevé (diable, je suis mal payé !). Bravo !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:05:26.673Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "51a1be0f-5c2d-403d-bac3-d8bd6df627ce"
+  },
+  {
+    "encryptedEmail": "JaNz1mf5Qlc7n2eWOB2heOneAhopPrZJ46tx+2mOiKE=",
+    "talkId": "611369",
+    "event": "2024",
+    "creationInstant": "2024-04-28T15:50:36.824Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": {
+      "comment": "Le sujet était intéressant. J'ai apprécié le niveau poussé d'informations. J'ai regretté l'absence de support visuel qui aurait rendu la présentation plus facile à suivre pour moi qui suis plutôt visuel. Bravo !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:03:36.887Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "64659245-7729-46ee-bdf3-5f5a7c6d62e8"
+  },
+  {
+    "encryptedEmail": "JaNz1mf5Qlc7n2eWOB2heOneAhopPrZJ46tx+2mOiKE=",
+    "talkId": "610225",
+    "event": "2024",
+    "creationInstant": "2024-04-28T15:51:43.895Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "Je dois avouer que je n'ai pas le même optimisme sur ChatGpt même si je l'utilise presque quotidiennement, je suis inquiet des conséquences qu'il aura à terme sur l'emploi et sur l'empreinte écologique de cette technologie. La conférence était à la fois fun, joyeuse, intéressante et pleine de très très bonnes idées. Bravo !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:11:37.982Z",
+      "approvedByLogin": "greg",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "049b88dc-878e-4b95-9b07-7c92ec595e7a"
+  },
+  {
+    "encryptedEmail": "A1vuFPy9Re0neqygH9ldtM9C28tQBPrD+bLkNauDuS4=",
+    "talkId": "653397",
+    "event": "2024",
+    "creationInstant": "2024-04-28T19:20:33.200Z",
+    "notes": [
+      "UNCLEAR"
+    ],
+    "comment": null,
+    "id": "f9bfa97a-2be6-4019-a5a8-96a280a69d6b"
+  },
+  {
+    "encryptedEmail": "A1vuFPy9Re0neqygH9ldtM9C28tQBPrD+bLkNauDuS4=",
+    "talkId": "612354",
+    "event": "2024",
+    "creationInstant": "2024-04-28T19:23:07.544Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "d5feba68-3433-4aad-8910-132a627e1f95"
+  },
+  {
+    "encryptedEmail": "A1vuFPy9Re0neqygH9ldtM9C28tQBPrD+bLkNauDuS4=",
+    "talkId": "612412",
+    "event": "2024",
+    "creationInstant": "2024-04-28T19:26:10.505Z",
+    "notes": [
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": {
+      "comment": "Talk un peu décevant par manque de concret. On aurait pu plus rentrer dans le détail d'un des frameworks évoqués.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:08:24.508Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "1f687b4e-32d8-47b8-9dc8-d7ce1f855250"
+  },
+  {
+    "encryptedEmail": "A1vuFPy9Re0neqygH9ldtM9C28tQBPrD+bLkNauDuS4=",
+    "talkId": "610225",
+    "event": "2024",
+    "creationInstant": "2024-04-28T19:30:38.369Z",
+    "notes": [
+      "FUN",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "a4b65c52-ec49-4ccb-99f4-aa154e02ce7b"
+  },
+  {
+    "encryptedEmail": "A1vuFPy9Re0neqygH9ldtM9C28tQBPrD+bLkNauDuS4=",
+    "talkId": "593044",
+    "event": "2024",
+    "creationInstant": "2024-04-28T19:31:57.896Z",
+    "notes": [
+      "FUN",
+      "TOO_COMPLICATED",
+      "TOO_FAST"
+    ],
+    "comment": null,
+    "id": "8b3a4ca2-70c7-4d55-b3ae-2e00b6bb3ff5"
+  },
+  {
+    "encryptedEmail": "ncvtZWJHrMVjLkuSm+2Tnh6e22crxpAEG9wtlH3lDEc=",
+    "talkId": "653397",
+    "event": "2024",
+    "creationInstant": "2024-04-28T19:59:55.315Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "e3ffa98e-3930-46bf-b45a-5bf9035499a7"
+  },
+  {
+    "encryptedEmail": "0K+E+QubkkK3o7IIpQHvOhazuCxg4UofmDqTNRPpP+U=",
+    "talkId": "610532",
+    "event": "2024",
+    "creationInstant": "2024-04-29T05:38:35.267Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": null,
+    "id": "0fee95df-e347-425d-a392-1c70ca480704"
+  },
+  {
+    "encryptedEmail": "0K+E+QubkkK3o7IIpQHvOhazuCxg4UofmDqTNRPpP+U=",
+    "talkId": "594797",
+    "event": "2024",
+    "creationInstant": "2024-04-29T05:40:44.669Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "FUN",
+      "VERY_GOOD_TALK"
+    ],
+    "comment": null,
+    "id": "20f08d21-640a-460d-899e-52889c7a123d"
+  },
+  {
+    "encryptedEmail": "0K+E+QubkkK3o7IIpQHvOhazuCxg4UofmDqTNRPpP+U=",
+    "talkId": "604593",
+    "event": "2024",
+    "creationInstant": "2024-04-29T05:41:02.626Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "2cb063b6-6bd6-4ad2-8a77-8ed44bebe4a2"
+  },
+  {
+    "encryptedEmail": "0K+E+QubkkK3o7IIpQHvOhazuCxg4UofmDqTNRPpP+U=",
+    "talkId": "612277",
+    "event": "2024",
+    "creationInstant": "2024-04-29T05:41:21.069Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Potentiellement ajouter un comparatif avec les autres boites ayant aussi une grille salariale, afin soit de comparer soit d'expliquer pourquoi ce n'est pas comparable.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:06:45.578Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "d6bf4dd0-275f-4d18-8234-21c049972c96"
+  },
+  {
+    "encryptedEmail": "0K+E+QubkkK3o7IIpQHvOhazuCxg4UofmDqTNRPpP+U=",
+    "talkId": "605488",
+    "event": "2024",
+    "creationInstant": "2024-04-29T05:43:09.843Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING",
+      "FUN",
+      "LOVED_LIVE_CODING"
+    ],
+    "comment": null,
+    "id": "7a94fc67-9d1f-4f99-9197-65f8462fbae1"
+  },
+  {
+    "encryptedEmail": "0K+E+QubkkK3o7IIpQHvOhazuCxg4UofmDqTNRPpP+U=",
+    "talkId": "593044",
+    "event": "2024",
+    "creationInstant": "2024-04-29T05:43:37.818Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "FUN",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "La masterclass du Mix-IT 2024 tout simplement !\r\nMalgré quelques déboires avec le micro, vous avez réussi à tourner ça de façon amusante.\r\nUne pièce de théâtre (eu peu) satirique qui nous fait progresser, on en redemande encore !\r\n\r\nUn grand bravo et continuez comme ça !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:01:04.720Z",
+      "approvedByLogin": "greg",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "8b8ca31c-8a83-438c-a4a3-cc8b8c8499fe"
+  },
+  {
+    "encryptedEmail": "NIWTWGM0bWedq3rVwk+Zgd4Xq9hYcVoX8APMhiIMagx7F7vQuJqwzWi4BXiVofMV",
+    "talkId": "601595",
+    "event": "2024",
+    "creationInstant": "2024-04-29T06:05:36.178Z",
+    "notes": [
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "cd492ec7-c9ac-4fb2-a539-90379ddf0c83"
+  },
+  {
+    "encryptedEmail": "bWV8Xsp6vhq3wbPiqXTYHonWUEhSqZ4LGqIdSYmGppi5U9a6Ml6Mptmbci0XXy7w",
+    "talkId": "593091",
+    "event": "2024",
+    "creationInstant": "2024-04-29T06:46:37.238Z",
+    "notes": [
+      "LOVED_LIVE_CODING",
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "3763a8e1-5647-48c2-89b4-074b340b04d0"
+  },
+  {
+    "encryptedEmail": "bWV8Xsp6vhq3wbPiqXTYHonWUEhSqZ4LGqIdSYmGppi5U9a6Ml6Mptmbci0XXy7w",
+    "talkId": "612448",
+    "event": "2024",
+    "creationInstant": "2024-04-29T06:48:59.031Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "f576c5cc-10b7-4480-9757-93f611267def"
+  },
+  {
+    "encryptedEmail": "bWV8Xsp6vhq3wbPiqXTYHonWUEhSqZ4LGqIdSYmGppi5U9a6Ml6Mptmbci0XXy7w",
+    "talkId": "612277",
+    "event": "2024",
+    "creationInstant": "2024-04-29T06:49:39.027Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "2ead8aaf-37db-4603-b3a9-8cc4d8c7ebea"
+  },
+  {
+    "encryptedEmail": "bWV8Xsp6vhq3wbPiqXTYHonWUEhSqZ4LGqIdSYmGppi5U9a6Ml6Mptmbci0XXy7w",
+    "talkId": "611849",
+    "event": "2024",
+    "creationInstant": "2024-04-29T06:50:10.542Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING",
+      "VERY_GOOD_TALK"
+    ],
+    "comment": null,
+    "id": "d282959b-5344-4ad5-88d0-fac618185b1e"
+  },
+  {
+    "encryptedEmail": "huBlR8X8G1Uw5q34InSTB5pDgrJIDESpxRau0AXuSMzbnlM9tC5dH5zKBM4umkEU",
+    "talkId": "609510",
+    "event": "2024",
+    "creationInstant": "2024-04-29T07:23:16.382Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "f170f41d-2640-4f8b-a89d-ad3442f80d40"
+  },
+  {
+    "encryptedEmail": "huBlR8X8G1Uw5q34InSTB5pDgrJIDESpxRau0AXuSMzbnlM9tC5dH5zKBM4umkEU",
+    "talkId": "609268",
+    "event": "2024",
+    "creationInstant": "2024-04-29T07:23:40.314Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "Merci c'était cool, j'ai bien aimé l'histoire.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:01:15.349Z",
+      "approvedByLogin": "greg",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "2c615998-4141-450d-ae09-94fed3dba132"
+  },
+  {
+    "encryptedEmail": "huBlR8X8G1Uw5q34InSTB5pDgrJIDESpxRau0AXuSMzbnlM9tC5dH5zKBM4umkEU",
+    "talkId": "612354",
+    "event": "2024",
+    "creationInstant": "2024-04-29T07:26:35.855Z",
+    "notes": [
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": {
+      "comment": "Merci, c'était cool même si la démo a été un peu ratée sans connexion réseau. J'aurais bien aimé avoir une demo des tests d'ui end2end, mais pas de chance ce n'était pas dans le périmètre de la démo!",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:04:43.491Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "eab10b7b-9803-4613-b785-39978c2303f2"
+  },
+  {
+    "encryptedEmail": "huBlR8X8G1Uw5q34InSTB5pDgrJIDESpxRau0AXuSMzbnlM9tC5dH5zKBM4umkEU",
+    "talkId": "602999",
+    "event": "2024",
+    "creationInstant": "2024-04-29T07:29:04.045Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "Merci, je vais tenter de me mettre à copilot avec mon prochain projet (si le client l'accepte)",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:07:11.118Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "3105e0c8-7841-4457-a4da-d7fa9473f36e"
+  },
+  {
+    "encryptedEmail": "huBlR8X8G1Uw5q34InSTB5pDgrJIDESpxRau0AXuSMzbnlM9tC5dH5zKBM4umkEU",
+    "talkId": "611744",
+    "event": "2024",
+    "creationInstant": "2024-04-29T07:31:01.343Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": {
+      "comment": "Merci les cousins :)",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:04:57.752Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "4cf47d09-232d-49e1-b8b9-27a20847ff15"
+  },
+  {
+    "encryptedEmail": "Uqx0JtV+qFdUeTyDrF3/Os62j5/Fk3vWmepQXAQvdCXiBjcPC8Kt/pa3233N1/Be",
+    "talkId": "609510",
+    "event": "2024",
+    "creationInstant": "2024-04-29T07:36:06.649Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "0995f1f1-8830-4916-a4ac-ceef28b554e3"
+  },
+  {
+    "encryptedEmail": "q2rElxdTR5oUZKSumrb7QGxQEjih59B9k6M1gcxPqyE=",
+    "talkId": "595434",
+    "event": "2024",
+    "creationInstant": "2024-04-29T07:39:51.335Z",
+    "notes": [
+      "LOVED_LIVE_CODING",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": {
+      "comment": "Je connaissais les machines à état, mais çà datait de mes études (il y a 30 ans). J'ai aimé me replonger dedans avec du live coding. Tout était fluide et clair, j'ai pris beaucoup de plaisir à suivre cette session",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:05:06.130Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "bb640bf3-9512-43aa-ba62-65fffee71e63"
+  },
+  {
+    "encryptedEmail": "q2rElxdTR5oUZKSumrb7QGxQEjih59B9k6M1gcxPqyE=",
+    "talkId": "604593",
+    "event": "2024",
+    "creationInstant": "2024-04-29T07:42:24.468Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Démo très claire (et impressionnante), avec un peu de code à la fin qui fait plaisir. Ce fut très instructif.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:01:21.375Z",
+      "approvedByLogin": "greg",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "a1720eb8-8d91-441e-9a3f-68742ecdff2f"
+  },
+  {
+    "encryptedEmail": "q2rElxdTR5oUZKSumrb7QGxQEjih59B9k6M1gcxPqyE=",
+    "talkId": "612354",
+    "event": "2024",
+    "creationInstant": "2024-04-29T07:43:48.040Z",
+    "notes": [
+      "LACKS_DEMO"
+    ],
+    "comment": {
+      "comment": "Un peu déçu : comme le speaker n'avait pas d'accès à Internet on n'a pas saisi le potentiel de l'outil. J'avoue que je n'ai vu de valeur ajoutée à Github Copilot. Dommage, j'espérais mieux.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:08:40.457Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "1e5bb5c2-949c-402f-b66a-8d511a19528c"
+  },
+  {
+    "encryptedEmail": "q2rElxdTR5oUZKSumrb7QGxQEjih59B9k6M1gcxPqyE=",
+    "talkId": "598718",
+    "event": "2024",
+    "creationInstant": "2024-04-29T07:46:15.642Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Présentateur sympathique, détendu et plein de bonne humeur : son approche du recrutement est stimulante et j'en suis ressorti avec plein d'idées. Merci ;)",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:06:32.723Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "1d245951-c454-41c4-ac9b-c236334c6562"
+  },
+  {
+    "encryptedEmail": "q2rElxdTR5oUZKSumrb7QGxQEjih59B9k6M1gcxPqyE=",
+    "talkId": "593894",
+    "event": "2024",
+    "creationInstant": "2024-04-29T07:50:55.382Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "LOVED_LIVE_CODING",
+      "FUN"
+    ],
+    "comment": {
+      "comment": "Le meilleur talk que j'ai vu pour cette édition : clair pour les néophytes et passionnant pour les plus expérimenté. Tout était fluide, clair, avec de l'humour. C'était un très très bon moment !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:05:52.666Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "21a12d1a-39fa-4194-af92-54f0460526f1"
+  },
+  {
+    "encryptedEmail": "q2rElxdTR5oUZKSumrb7QGxQEjih59B9k6M1gcxPqyE=",
+    "talkId": "612065",
+    "event": "2024",
+    "creationInstant": "2024-04-29T07:52:20.555Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "José Paumard est à l'image de sa réputation : clair, limpide, passionné et passionnant. Talk quasiment parfait !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:03:56.638Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "10bc1e4c-5eb0-4280-8164-f98ae2e9d409"
+  },
+  {
+    "encryptedEmail": "q2rElxdTR5oUZKSumrb7QGxQEjih59B9k6M1gcxPqyE=",
+    "talkId": "599383",
+    "event": "2024",
+    "creationInstant": "2024-04-29T07:57:23.808Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": {
+      "comment": "Dans mon travail, je n'utilise pas les architectures distribuées mais le produit présenté (biscuit) m'intéresse et je vais y passer un peu de temps.\r\nConcernant la présentation, j'aime bien les talks à 2 intervenants mais çà manquait un peu de dynamisme à mon goût",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:05:15.896Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "076f765b-14e4-4ad8-a4b7-aa54a87438ad"
+  },
+  {
+    "encryptedEmail": "q2rElxdTR5oUZKSumrb7QGxQEjih59B9k6M1gcxPqyE=",
+    "talkId": "593079",
+    "event": "2024",
+    "creationInstant": "2024-04-29T07:58:59.794Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Talk dynamique et passionnant  : on aurait aimé qu'il dure des heures et des heures. Du coup, je vais me plonger dans les documentations et chaînes youtube présentées",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:05:59.243Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "89a8a379-661b-4c27-a057-917ffd49fb32"
+  },
+  {
+    "encryptedEmail": "N3MuWI2QvrKP8ZElyvImd8uGp1tcIDB7IkOK/MjlVbg=",
+    "talkId": "593824",
+    "event": "2024",
+    "creationInstant": "2024-04-29T08:01:21.636Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "super atelier, \r\nsuperbe énergie\r\n\r\n\r\nmerci :)\r\n\r\n",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:05:40.889Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "05d733ea-b2d1-4d7e-b21a-8cb4079e41a1"
+  },
+  {
+    "encryptedEmail": "N3MuWI2QvrKP8ZElyvImd8uGp1tcIDB7IkOK/MjlVbg=",
+    "talkId": "600027",
+    "event": "2024",
+    "creationInstant": "2024-04-29T08:02:57.329Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "merci pour cet atelier\r\nj'ai également bien apprécié ta façon d'animer le théatre forum",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:06:16.090Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "72a26538-b542-4a1d-9dc7-ce218e10d87f"
+  },
+  {
+    "encryptedEmail": "q2rElxdTR5oUZKSumrb7QGxQEjih59B9k6M1gcxPqyE=",
+    "talkId": "622656",
+    "event": "2024",
+    "creationInstant": "2024-04-29T08:22:11.950Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Impressionnant : Johann arrive, s'assoie et parle pendant 30 minutes. Quand on entend \"'merci de votre attention\" on se dit \"déjà\". C'était passionnant et très riche. J'ai adoré.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T09:04:13.767Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "50bd1738-efce-48ff-9324-eb688f695bd0"
+  },
+  {
+    "encryptedEmail": "MhUyFf8FRk5zWeqyZMAL+skKXu8CDWhzfkZhhDe1Ntk=",
+    "talkId": "612277",
+    "event": "2024",
+    "creationInstant": "2024-04-29T09:18:15.050Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "be88be3b-e82c-455e-b7d8-73a2136fdbd5"
+  },
+  {
+    "encryptedEmail": "w+aXNvNckZ0vOOT1HgZYG4BaBM6dghECUvBfD7tZOH0=",
+    "talkId": "660189",
+    "event": "2024",
+    "creationInstant": "2024-04-29T09:18:21.466Z",
+    "notes": [],
+    "comment": null,
+    "id": "eabfc2e8-7309-4491-a3ca-6e4645c52856"
+  },
+  {
+    "encryptedEmail": "SmOFGdPzxHtav1b1LKhGafvaCSK2RMhti+MMElRieW0=",
+    "talkId": "593824",
+    "event": "2024",
+    "creationInstant": "2024-04-29T12:02:45.368Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "a5b50b05-acbf-49bd-827e-03a58528d81c"
+  },
+  {
+    "encryptedEmail": "SmOFGdPzxHtav1b1LKhGafvaCSK2RMhti+MMElRieW0=",
+    "talkId": "653397",
+    "event": "2024",
+    "creationInstant": "2024-04-29T12:03:50.500Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Dommage de déborder autant du temps imparti, en keynote d'ouverture qui plus est.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:14:34.657Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "2532a52e-7a0e-46f4-a9b3-22c48556adf9"
+  },
+  {
+    "encryptedEmail": "jGGK6LMXqIijPHhFSXqh2FTUrnDgpYYgUcAueRPV3Rw=",
+    "talkId": "609268",
+    "event": "2024",
+    "creationInstant": "2024-04-29T13:15:56.706Z",
+    "notes": [
+      "COULD_BE_MORE_EXPLORED",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "ffd746d3-ea1a-4da4-8e37-476d8a02d2b8"
+  },
+  {
+    "encryptedEmail": "jGGK6LMXqIijPHhFSXqh2FTUrnDgpYYgUcAueRPV3Rw=",
+    "talkId": "609510",
+    "event": "2024",
+    "creationInstant": "2024-04-29T13:16:27.851Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "563e8321-0124-453f-b330-4fffc5290333"
+  },
+  {
+    "encryptedEmail": "SmOFGdPzxHtav1b1LKhGafvaCSK2RMhti+MMElRieW0=",
+    "talkId": "611564",
+    "event": "2024",
+    "creationInstant": "2024-04-29T13:50:23.196Z",
+    "notes": [
+      "COULD_BE_MORE_EXPLORED",
+      "LEARNT_NOTHING"
+    ],
+    "comment": {
+      "comment": "Je m'attendais à un REX ou une réflexion sur comment initier un mouvement de syndicalisation dans une entreprise, j'ai eu plutôt une description des différentes instances qui existent (syndicat, CSE), et de à quoi elles servent (et à quoi elles ne servent pas).\r\nJe ressens un décalage entre l'abstract et ce qui a été proposé.\r\nEtant moi-même CSE, je n'ai pas appris grand-chose, mais je pense que ce talk aura néanmoins été utile à d'autres.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T14:27:56.119Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "2706925e-c36a-4ae1-b7f8-ae185ad39250"
+  },
+  {
+    "encryptedEmail": "SmOFGdPzxHtav1b1LKhGafvaCSK2RMhti+MMElRieW0=",
+    "talkId": "622630",
+    "event": "2024",
+    "creationInstant": "2024-04-29T14:06:13.735Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "<3",
+      "disapprovedInstant": "2024-05-12T07:17:40.828Z",
+      "disapprovedByLogin": "guillaumeehret",
+      "approvedInstant": null,
+      "approvedByLogin": null,
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "a6726183-a739-44e7-91b4-a0d274aff093"
+  },
+  {
+    "encryptedEmail": "Bew/GWT0U0iZrwomLxkYNzyllyMQTJwdUDg5hfh7zr8=",
+    "talkId": "611170",
+    "event": "2024",
+    "creationInstant": "2024-04-29T14:21:52.781Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": {
+      "comment": "Super talk. J'ai pu cheminer dans les pas d'un homme déconstruit. C'était émouvant, drôle, fort, humble, motivant ... bref extra et à relayer sans modération",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T14:27:35.680Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "49cba9a3-89d0-44ec-8283-2fc68c48fd0a"
+  },
+  {
+    "encryptedEmail": "Bew/GWT0U0iZrwomLxkYNzyllyMQTJwdUDg5hfh7zr8=",
+    "talkId": "593954",
+    "event": "2024",
+    "creationInstant": "2024-04-29T14:26:32.326Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Un talk qui fait du bien ! Oui la douceur a toute sa place dans 1 monde incertain !!! Merci Anaïs pour ce message puissant",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-29T14:31:10.120Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "44ee9380-346f-4ab1-b226-a09b3cceb990"
+  },
+  {
+    "encryptedEmail": "Bew/GWT0U0iZrwomLxkYNzyllyMQTJwdUDg5hfh7zr8=",
+    "talkId": "610225",
+    "event": "2024",
+    "creationInstant": "2024-04-29T14:28:18.401Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Je suis a priori pas fan de ce qui remplace l'humain. Mais les nombreux exemples partagés étaient très pratico pratiques, et utiles pour soulager le quotidien. Bref si ça permet de gagner en équilibre vie pro et perso c'est cool",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-30T10:11:33.589Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "08072ab8-6e08-4751-bde5-bb1971eb6874"
+  },
+  {
+    "encryptedEmail": "Bew/GWT0U0iZrwomLxkYNzyllyMQTJwdUDg5hfh7zr8=",
+    "talkId": "603754",
+    "event": "2024",
+    "creationInstant": "2024-04-29T14:37:15.322Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Super atelier où on chemine bien progressivement. C'est agréable d'avoir des temps en solo puis de la mise en partage et enfin des éclairages. Moi j'ai bien aimé le bol tibétain :)",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-30T10:11:58.523Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "22d53b8c-c9d5-4115-adea-a26ca9a79ce0"
+  },
+  {
+    "encryptedEmail": "Bew/GWT0U0iZrwomLxkYNzyllyMQTJwdUDg5hfh7zr8=",
+    "talkId": "611440",
+    "event": "2024",
+    "creationInstant": "2024-04-29T14:56:59.333Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "enthousiasmant. Merci de montrer la voie ",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-30T10:11:42.994Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "280dd58a-735d-4009-bbf6-7e701d46fbf9"
+  },
+  {
+    "encryptedEmail": "xOU3aenLcp+ix9jve8j4in2tbpfvS0k24SJ93aXUPBs=",
+    "talkId": "653397",
+    "event": "2024",
+    "creationInstant": "2024-04-29T20:14:46.089Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "73c887eb-ce83-4938-a932-6edd70e420e8"
+  },
+  {
+    "encryptedEmail": "xOU3aenLcp+ix9jve8j4in2tbpfvS0k24SJ93aXUPBs=",
+    "talkId": "595434",
+    "event": "2024",
+    "creationInstant": "2024-04-29T20:16:16.997Z",
+    "notes": [
+      "LOVED_LIVE_CODING"
+    ],
+    "comment": null,
+    "id": "deae5da8-4f21-4be5-8ac1-15d5d4fc5b11"
+  },
+  {
+    "encryptedEmail": "xOU3aenLcp+ix9jve8j4in2tbpfvS0k24SJ93aXUPBs=",
+    "talkId": "622656",
+    "event": "2024",
+    "creationInstant": "2024-04-29T20:17:25.035Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "437bcc2d-5c2c-40ca-aefe-abe4e523757b"
+  },
+  {
+    "encryptedEmail": "i0Sca5BTufF9K/BJafoDKHQlCvgdJtbCYAR/waCDD8c=",
+    "talkId": "609510",
+    "event": "2024",
+    "creationInstant": "2024-04-29T21:23:39.175Z",
+    "notes": [
+      "LACKS_DEMO",
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING",
+      "COULD_BE_MORE_EXPLORED",
+      "FUN"
+    ],
+    "comment": {
+      "comment": "Très bonnes explications.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-30T10:11:28.609Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "6931f5ff-fbee-490f-8601-03a4f4bcbc9d"
+  },
+  {
+    "encryptedEmail": "i0Sca5BTufF9K/BJafoDKHQlCvgdJtbCYAR/waCDD8c=",
+    "talkId": "611900",
+    "event": "2024",
+    "creationInstant": "2024-04-29T21:33:16.644Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Très très intéressant !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-30T10:11:26.379Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "1e66f72f-07a1-4658-89e9-78675f632324"
+  },
+  {
+    "encryptedEmail": "i0Sca5BTufF9K/BJafoDKHQlCvgdJtbCYAR/waCDD8c=",
+    "talkId": "622656",
+    "event": "2024",
+    "creationInstant": "2024-04-29T21:33:56.894Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "SURPRISED_BY_SUBJECT",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Merci pour cette conférence.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-30T10:11:35.842Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "5bc02139-7d45-4286-ac2f-79152eef5f65"
+  },
+  {
+    "encryptedEmail": "i0Sca5BTufF9K/BJafoDKHQlCvgdJtbCYAR/waCDD8c=",
+    "talkId": "641460",
+    "event": "2024",
+    "creationInstant": "2024-04-29T21:34:48.400Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "b7fca89c-e4cd-4e84-a8a4-4bfe3e477b28"
+  },
+  {
+    "encryptedEmail": "i0Sca5BTufF9K/BJafoDKHQlCvgdJtbCYAR/waCDD8c=",
+    "talkId": "611440",
+    "event": "2024",
+    "creationInstant": "2024-04-29T21:35:21.353Z",
+    "notes": [
+      "LEARNT_NOTHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "e1d807de-98f9-400c-889d-ab114323bb89"
+  },
+  {
+    "encryptedEmail": "i0Sca5BTufF9K/BJafoDKHQlCvgdJtbCYAR/waCDD8c=",
+    "talkId": "600027",
+    "event": "2024",
+    "creationInstant": "2024-04-29T21:37:11.335Z",
+    "notes": [
+      "FUN",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": {
+      "comment": "Excellent atelier : très bien animé et passionnant. Je le referai sans hésiter et le recommanderai aux autres personnes concernées.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-30T10:11:54.212Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "d69ebf93-9e56-4912-8903-b656705ee148"
+  },
+  {
+    "encryptedEmail": "i0Sca5BTufF9K/BJafoDKHQlCvgdJtbCYAR/waCDD8c=",
+    "talkId": "611170",
+    "event": "2024",
+    "creationInstant": "2024-04-29T21:38:07.213Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": {
+      "comment": "J'attends la vidéo pour le partager avec le plus grand nombre possible de mes collègues.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-30T10:11:49.494Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "0ef5e675-319a-4103-8658-186452d0da7f"
+  },
+  {
+    "encryptedEmail": "i0Sca5BTufF9K/BJafoDKHQlCvgdJtbCYAR/waCDD8c=",
+    "talkId": "611744",
+    "event": "2024",
+    "creationInstant": "2024-04-29T21:39:01.222Z",
+    "notes": [
+      "UNCLEAR",
+      "LACKS_DEMO",
+      "TOO_FAST",
+      "COULD_BE_MORE_EXPLORED",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "5545bbe2-f349-4920-b0e8-f305a557d071"
+  },
+  {
+    "encryptedEmail": "i0Sca5BTufF9K/BJafoDKHQlCvgdJtbCYAR/waCDD8c=",
+    "talkId": "593079",
+    "event": "2024",
+    "creationInstant": "2024-04-29T21:39:37.037Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "FUN",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Excellent talk, merci aux orateurs !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-30T10:12:01.882Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "eaf2d7b5-4aab-4e59-8a3f-57fdea6ee7d1"
+  },
+  {
+    "encryptedEmail": "i0Sca5BTufF9K/BJafoDKHQlCvgdJtbCYAR/waCDD8c=",
+    "talkId": "646315",
+    "event": "2024",
+    "creationInstant": "2024-04-29T21:40:27.216Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "SURPRISED_BY_SUBJECT",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Merci : c'était clair, engagé, intéressant et même passionnant !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-30T10:11:45.829Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "ebf38cb6-44aa-4ac0-bdaf-c4fcbe2a09fd"
+  },
+  {
+    "encryptedEmail": "dUvsg6FpFY9IZZfE51ZUjD1vRRAfAnyxlGlMDc7UaV8=",
+    "talkId": "593824",
+    "event": "2024",
+    "creationInstant": "2024-04-30T07:27:57.930Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "FUN",
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING",
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": {
+      "comment": "Merci pour cette conférence qui s'est déroulée dans la bienveillance :)",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-30T10:11:40.230Z",
+      "approvedByLogin": "anais-paillette",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "1aeb6e57-f3b6-404b-b329-9869fb0a0e5c"
+  },
+  {
+    "encryptedEmail": "E5FoXHm3xUBpW2vWxjy0r28R/VE4k6aU5Lz2g48KgyY=",
+    "talkId": "663643",
+    "event": "2024",
+    "creationInstant": "2024-04-30T11:17:48.133Z",
+    "notes": [],
+    "comment": null,
+    "id": "e61ef528-de75-46da-84a8-19a188b35e59"
+  },
+  {
+    "encryptedEmail": "E5FoXHm3xUBpW2vWxjy0r28R/VE4k6aU5Lz2g48KgyY=",
+    "talkId": "664605",
+    "event": "2024",
+    "creationInstant": "2024-04-30T11:18:57.406Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": {
+      "comment": "Test de commentaire ",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-04-30T11:19:12.175Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "7044f57a-4e8e-4a90-8b52-e96f1e8d38c2"
+  },
+  {
+    "encryptedEmail": "jGGK6LMXqIijPHhFSXqh2FTUrnDgpYYgUcAueRPV3Rw=",
+    "talkId": "604593",
+    "event": "2024",
+    "creationInstant": "2024-04-30T12:18:19.178Z",
+    "notes": [
+      "LACKS_DEMO",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "9f6d584b-0d12-4f6a-a817-26851c956b2d"
+  },
+  {
+    "encryptedEmail": "EPWovhwaSKrmPDNHIXOTez26w362KoUeh3VkFgXOjA0=",
+    "talkId": "653397",
+    "event": "2024",
+    "creationInstant": "2024-04-30T15:08:45.865Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "TOO_COMPLICATED",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "43554edb-e9a0-46d9-8d22-20f8d2d735f6"
+  },
+  {
+    "encryptedEmail": "EPWovhwaSKrmPDNHIXOTez26w362KoUeh3VkFgXOjA0=",
+    "talkId": "611440",
+    "event": "2024",
+    "creationInstant": "2024-04-30T15:10:15.472Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "d6cacd24-88a2-4561-863a-ef3507b6a682"
+  },
+  {
+    "encryptedEmail": "EPWovhwaSKrmPDNHIXOTez26w362KoUeh3VkFgXOjA0=",
+    "talkId": "593954",
+    "event": "2024",
+    "creationInstant": "2024-04-30T15:11:04.289Z",
+    "notes": [
+      "FUN",
+      "VERY_INTERESTING",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "85b2e78c-df42-4259-acbe-91077bd43d84"
+  },
+  {
+    "encryptedEmail": "EPWovhwaSKrmPDNHIXOTez26w362KoUeh3VkFgXOjA0=",
+    "talkId": "611369",
+    "event": "2024",
+    "creationInstant": "2024-04-30T15:11:17.441Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK"
+    ],
+    "comment": null,
+    "id": "6399b885-8e5a-40f8-99e1-a2cb96507450"
+  },
+  {
+    "encryptedEmail": "EPWovhwaSKrmPDNHIXOTez26w362KoUeh3VkFgXOjA0=",
+    "talkId": "611849",
+    "event": "2024",
+    "creationInstant": "2024-04-30T15:11:30.950Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "1254e0ab-95bf-4d0b-b3d5-58816c90f5b3"
+  },
+  {
+    "encryptedEmail": "EPWovhwaSKrmPDNHIXOTez26w362KoUeh3VkFgXOjA0=",
+    "talkId": "646315",
+    "event": "2024",
+    "creationInstant": "2024-04-30T15:11:45.797Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "480edc8a-c838-46c8-94b6-a72ad13486e5"
+  },
+  {
+    "encryptedEmail": "SmOFGdPzxHtav1b1LKhGafvaCSK2RMhti+MMElRieW0=",
+    "talkId": "611440",
+    "event": "2024",
+    "creationInstant": "2024-05-01T19:59:38.874Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "361df2fa-f665-427e-84cf-55d189e96458"
+  },
+  {
+    "encryptedEmail": "SmOFGdPzxHtav1b1LKhGafvaCSK2RMhti+MMElRieW0=",
+    "talkId": "622669",
+    "event": "2024",
+    "creationInstant": "2024-05-01T20:14:55.328Z",
+    "notes": [
+      "VERY_INTERESTING",
+      "SURPRISED_BY_SUBJECT",
+      "FUN",
+      "VERY_GOOD_TALK",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "2d8d4f51-a190-4ad8-a831-22e1dce67fbd"
+  },
+  {
+    "encryptedEmail": "SmOFGdPzxHtav1b1LKhGafvaCSK2RMhti+MMElRieW0=",
+    "talkId": "593954",
+    "event": "2024",
+    "creationInstant": "2024-05-01T20:15:33.148Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "f6c1588e-033e-49c1-b0da-c908128a3877"
+  },
+  {
+    "encryptedEmail": "SmOFGdPzxHtav1b1LKhGafvaCSK2RMhti+MMElRieW0=",
+    "talkId": "611369",
+    "event": "2024",
+    "creationInstant": "2024-05-01T20:15:58.623Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "UNCLEAR",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Personnellement il me manquait une touche de facilitation graphique, pour savoir qui est qui, de qui on parle, car les noms sont compliqués et se ressemblent.\r\nDu reste c'était très bien !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:14:13.110Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "b755993f-6369-4ea5-a4f2-b99ba4187acf"
+  },
+  {
+    "encryptedEmail": "SmOFGdPzxHtav1b1LKhGafvaCSK2RMhti+MMElRieW0=",
+    "talkId": "609049",
+    "event": "2024",
+    "creationInstant": "2024-05-01T20:17:55.543Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "c160f951-c8b2-45f4-bcbd-42707623a6db"
+  },
+  {
+    "encryptedEmail": "SmOFGdPzxHtav1b1LKhGafvaCSK2RMhti+MMElRieW0=",
+    "talkId": "646315",
+    "event": "2024",
+    "creationInstant": "2024-05-01T20:18:29.098Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Bravo et merci, une parfaite keynote de clôture !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:14:47.957Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "c9d9aa7b-f9a2-4213-be55-89a0473d853b"
+  },
+  {
+    "encryptedEmail": "wtBF/W1Eo4wrr2P8sBsp/Q==",
+    "talkId": "612466",
+    "event": "2024",
+    "creationInstant": "2024-05-02T08:28:19.160Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "8cadc052-4051-4d77-9a2b-5282a82f406f"
+  },
+  {
+    "encryptedEmail": "wJnQTpqhAvHyNeK4zoDd1tDJIGeLJBGYNXMMr0+6raY=",
+    "talkId": "622656",
+    "event": "2024",
+    "creationInstant": "2024-05-02T11:10:19.472Z",
+    "notes": [
+      "VERY_INTERESTING",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "6809ff08-fa52-4ca6-aac3-6e39b131ec35"
+  },
+  {
+    "encryptedEmail": "ToDs5DxT1xLz6En3Zxapoh9pQnQ42I5sv2/3cUM+cCk=",
+    "talkId": "653397",
+    "event": "2024",
+    "creationInstant": "2024-05-03T12:38:06.081Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": null,
+    "id": "f6d44625-30b5-4e10-8ae0-ee9dffbf3b20"
+  },
+  {
+    "encryptedEmail": "ToDs5DxT1xLz6En3Zxapoh9pQnQ42I5sv2/3cUM+cCk=",
+    "talkId": "601609",
+    "event": "2024",
+    "creationInstant": "2024-05-03T12:38:18.654Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "a5391b43-9581-4dda-a714-99b4de459c23"
+  },
+  {
+    "encryptedEmail": "ToDs5DxT1xLz6En3Zxapoh9pQnQ42I5sv2/3cUM+cCk=",
+    "talkId": "611900",
+    "event": "2024",
+    "creationInstant": "2024-05-03T12:38:59.205Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "e793710b-c788-4369-afc5-90d012513ef8"
+  },
+  {
+    "encryptedEmail": "ToDs5DxT1xLz6En3Zxapoh9pQnQ42I5sv2/3cUM+cCk=",
+    "talkId": "622656",
+    "event": "2024",
+    "creationInstant": "2024-05-03T12:39:15.745Z",
+    "notes": [
+      "VERY_INTERESTING",
+      "TOO_SLOW"
+    ],
+    "comment": null,
+    "id": "62fccae2-ca24-4bf8-b77f-b374cfff3a5b"
+  },
+  {
+    "encryptedEmail": "ToDs5DxT1xLz6En3Zxapoh9pQnQ42I5sv2/3cUM+cCk=",
+    "talkId": "612165",
+    "event": "2024",
+    "creationInstant": "2024-05-03T12:39:41.866Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": null,
+    "id": "028138be-760f-4479-ad63-28d8235613e3"
+  },
+  {
+    "encryptedEmail": "ToDs5DxT1xLz6En3Zxapoh9pQnQ42I5sv2/3cUM+cCk=",
+    "talkId": "598718",
+    "event": "2024",
+    "creationInstant": "2024-05-03T12:40:05.991Z",
+    "notes": [
+      "VERY_INTERESTING",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "98899342-11b8-4790-863c-537b7677cfe8"
+  },
+  {
+    "encryptedEmail": "ToDs5DxT1xLz6En3Zxapoh9pQnQ42I5sv2/3cUM+cCk=",
+    "talkId": "641460",
+    "event": "2024",
+    "creationInstant": "2024-05-03T12:40:20.903Z",
+    "notes": [
+      "FUN",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "0e5fe278-08b6-4ef0-b822-c58bb8009615"
+  },
+  {
+    "encryptedEmail": "ToDs5DxT1xLz6En3Zxapoh9pQnQ42I5sv2/3cUM+cCk=",
+    "talkId": "622669",
+    "event": "2024",
+    "creationInstant": "2024-05-03T12:40:39.569Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "de37b940-2dfb-40cf-9f72-13932d86b85c"
+  },
+  {
+    "encryptedEmail": "ToDs5DxT1xLz6En3Zxapoh9pQnQ42I5sv2/3cUM+cCk=",
+    "talkId": "602796",
+    "event": "2024",
+    "creationInstant": "2024-05-03T12:40:58.995Z",
+    "notes": [
+      "FUN",
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "2d1a3daf-5a2c-4143-bd54-6bdcdbabf94e"
+  },
+  {
+    "encryptedEmail": "ToDs5DxT1xLz6En3Zxapoh9pQnQ42I5sv2/3cUM+cCk=",
+    "talkId": "611369",
+    "event": "2024",
+    "creationInstant": "2024-05-03T12:41:32.497Z",
+    "notes": [
+      "VERY_INTERESTING",
+      "TOO_COMPLICATED"
+    ],
+    "comment": null,
+    "id": "0a22d20e-a6db-495a-b486-0e013007f533"
+  },
+  {
+    "encryptedEmail": "ToDs5DxT1xLz6En3Zxapoh9pQnQ42I5sv2/3cUM+cCk=",
+    "talkId": "674303",
+    "event": "2024",
+    "creationInstant": "2024-05-03T12:41:52.995Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "a6e6b69f-f216-44d7-a1ad-b48b1c8fd382"
+  },
+  {
+    "encryptedEmail": "ToDs5DxT1xLz6En3Zxapoh9pQnQ42I5sv2/3cUM+cCk=",
+    "talkId": "646315",
+    "event": "2024",
+    "creationInstant": "2024-05-03T12:42:16.087Z",
+    "notes": [
+      "FUN",
+      "VERY_INTERESTING",
+      "VERY_GOOD_TALK",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "0911269b-4db4-407d-b0b8-8841e319ff68"
+  },
+  {
+    "encryptedEmail": "hteWvEE4tB3v8OgL/PVktZFKq4mrFpDazuLxYm1g8OcVUGsXtrSbdK3q5G/2Q+jM",
+    "talkId": "637079",
+    "event": "2024",
+    "creationInstant": "2024-05-03T20:54:56.220Z",
+    "notes": [],
+    "comment": {
+      "comment": "Toujours fan des règles pour poser les questions.\r\n\r\nil faudrait peut être juste rappeler le code couleur des tours de cou pour les photos :\r\nc'est pour les photos officielles de la photographe de MixIT, mais c'est aussi valable pour les gens qui prennent avec un smartphone pour les réseaux sociaux en live.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:15:12.585Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "5bc0db09-4f1f-4f8d-9fe2-c55351d8db29"
+  },
+  {
+    "encryptedEmail": "hteWvEE4tB3v8OgL/PVktZFKq4mrFpDazuLxYm1g8OcVUGsXtrSbdK3q5G/2Q+jM",
+    "talkId": "613767",
+    "event": "2024",
+    "creationInstant": "2024-05-03T20:55:30.832Z",
+    "notes": [
+      "LOVED_LIVE_CODING",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "49f3fb74-d6b2-43eb-9d62-8b3ef00dc41f"
+  },
+  {
+    "encryptedEmail": "hteWvEE4tB3v8OgL/PVktZFKq4mrFpDazuLxYm1g8OcVUGsXtrSbdK3q5G/2Q+jM",
+    "talkId": "595434",
+    "event": "2024",
+    "creationInstant": "2024-05-03T20:56:03.371Z",
+    "notes": [
+      "LOVED_LIVE_CODING",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "4c9be652-914b-4a98-a665-7cbcbb38cc4e"
+  },
+  {
+    "encryptedEmail": "hteWvEE4tB3v8OgL/PVktZFKq4mrFpDazuLxYm1g8OcVUGsXtrSbdK3q5G/2Q+jM",
+    "talkId": "622656",
+    "event": "2024",
+    "creationInstant": "2024-05-03T21:00:43.077Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "741324fe-968f-4b88-800c-f52717dec475"
+  },
+  {
+    "encryptedEmail": "hteWvEE4tB3v8OgL/PVktZFKq4mrFpDazuLxYm1g8OcVUGsXtrSbdK3q5G/2Q+jM",
+    "talkId": "611564",
+    "event": "2024",
+    "creationInstant": "2024-05-03T21:01:22.616Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING",
+      "UNCLEAR"
+    ],
+    "comment": null,
+    "id": "353d5347-2ee0-4f72-b95e-2586d1d9dbdd"
+  },
+  {
+    "encryptedEmail": "hteWvEE4tB3v8OgL/PVktZFKq4mrFpDazuLxYm1g8OcVUGsXtrSbdK3q5G/2Q+jM",
+    "talkId": "622630",
+    "event": "2024",
+    "creationInstant": "2024-05-03T21:01:51.303Z",
+    "notes": [
+      "VERY_INTERESTING",
+      "UNCLEAR",
+      "COULD_BE_MORE_EXPLORED",
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "c86d689e-4a09-4241-86f1-41377419c1ac"
+  },
+  {
+    "encryptedEmail": "hteWvEE4tB3v8OgL/PVktZFKq4mrFpDazuLxYm1g8OcVUGsXtrSbdK3q5G/2Q+jM",
+    "talkId": "612448",
+    "event": "2024",
+    "creationInstant": "2024-05-03T21:05:31.272Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "d5e7979c-a406-4970-bb32-8e39d800dd42"
+  },
+  {
+    "encryptedEmail": "hteWvEE4tB3v8OgL/PVktZFKq4mrFpDazuLxYm1g8OcVUGsXtrSbdK3q5G/2Q+jM",
+    "talkId": "641460",
+    "event": "2024",
+    "creationInstant": "2024-05-03T21:05:51.364Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK"
+    ],
+    "comment": null,
+    "id": "095b9517-0c8f-4551-a761-dab060b0ca15"
+  },
+  {
+    "encryptedEmail": "hteWvEE4tB3v8OgL/PVktZFKq4mrFpDazuLxYm1g8OcVUGsXtrSbdK3q5G/2Q+jM",
+    "talkId": "622669",
+    "event": "2024",
+    "creationInstant": "2024-05-03T21:11:56.545Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING",
+      "FUN",
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "C'était cool de voir un talk qui mettait l'Ardèche au même plan que Taiwan !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:13:03.334Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "7952da93-478d-4a51-9da2-ac6c9cdd0cdc"
+  },
+  {
+    "encryptedEmail": "hteWvEE4tB3v8OgL/PVktZFKq4mrFpDazuLxYm1g8OcVUGsXtrSbdK3q5G/2Q+jM",
+    "talkId": "611849",
+    "event": "2024",
+    "creationInstant": "2024-05-03T21:21:28.577Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING",
+      "VERY_GOOD_TALK",
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": null,
+    "id": "9ce238de-4dc6-4701-8515-f32b3d3ebf90"
+  },
+  {
+    "encryptedEmail": "hteWvEE4tB3v8OgL/PVktZFKq4mrFpDazuLxYm1g8OcVUGsXtrSbdK3q5G/2Q+jM",
+    "talkId": "612412",
+    "event": "2024",
+    "creationInstant": "2024-05-03T21:21:59.648Z",
+    "notes": [
+      "FUN"
+    ],
+    "comment": {
+      "comment": "talk fun et intéressant, mais ça aurait pu être un lightning talk de 20 minutes, là c'était un poil long sur la fin.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:14:40.987Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "29071c47-3f17-44ab-b7bb-d6ca013e29c9"
+  },
+  {
+    "encryptedEmail": "hteWvEE4tB3v8OgL/PVktZFKq4mrFpDazuLxYm1g8OcVUGsXtrSbdK3q5G/2Q+jM",
+    "talkId": "601595",
+    "event": "2024",
+    "creationInstant": "2024-05-03T21:23:14.006Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "719a6bbf-eaa0-47e9-8f76-b685004cb56e"
+  },
+  {
+    "encryptedEmail": "hteWvEE4tB3v8OgL/PVktZFKq4mrFpDazuLxYm1g8OcVUGsXtrSbdK3q5G/2Q+jM",
+    "talkId": "646315",
+    "event": "2024",
+    "creationInstant": "2024-05-03T21:23:38.829Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": null,
+    "id": "99916952-9685-4be9-8217-87f9baec6e76"
+  },
+  {
+    "encryptedEmail": "InU6yu49zS2eh9VUW0y3K+loOgugE+FoaUJ8BuHbF3s=",
+    "talkId": "601609",
+    "event": "2024",
+    "creationInstant": "2024-05-06T13:26:37.127Z",
+    "notes": [
+      "COULD_BE_MORE_EXPLORED",
+      "FUN"
+    ],
+    "comment": {
+      "comment": "Des speakers très intéressants et drôles. Cependant j'ai l'impression qu'on est resté à la surface, en posant des questions sans y répondre.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:16:44.091Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "9c8b3f6b-b276-4d70-9d9a-ae886a0ffd3b"
+  },
+  {
+    "encryptedEmail": "InU6yu49zS2eh9VUW0y3K+loOgugE+FoaUJ8BuHbF3s=",
+    "talkId": "611900",
+    "event": "2024",
+    "creationInstant": "2024-05-06T13:27:48.011Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": {
+      "comment": "Talk hyper intéressant. Les retours d'XP étaient variés et pertinents. J'ai trouvé cette conférence super :)",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:13:16.308Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "c02a9385-97a0-44c3-8821-07718c79e12f"
+  },
+  {
+    "encryptedEmail": "InU6yu49zS2eh9VUW0y3K+loOgugE+FoaUJ8BuHbF3s=",
+    "talkId": "622656",
+    "event": "2024",
+    "creationInstant": "2024-05-06T13:28:45.717Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": {
+      "comment": "J'ai eu l'impression de ne pas avoir dépassé l'intro. \r\nLe sujet était très intéressant, mais j'ai l'impression que seul le contexte a été donné, sans vraiment arriver à la conclusion. J'ai peut être raté quelque chose, mais il m'a manqué un aspect plus concret sur le management",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:14:25.907Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "8ceed469-61ed-4927-80e6-f962c69ead99"
+  },
+  {
+    "encryptedEmail": "InU6yu49zS2eh9VUW0y3K+loOgugE+FoaUJ8BuHbF3s=",
+    "talkId": "612165",
+    "event": "2024",
+    "creationInstant": "2024-05-06T13:30:27.694Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING",
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": {
+      "comment": "Talk intéressant qui fait réfléchir.\r\nCependant j'ai trouvé qu'il manquait d'ouverture à d'autres contextes : l'expérience des speaker est devenue une vérité générale ( par exemple \" les PO ne savent pas ce que sont des exigences non fonctionnelles, la preuve, j'étais PO et je ne sais pas ce que c'est\", alors que je pense que la plupart des bons PO savent très bien ce que c'est). L'objectif était de libéré le Scrum Master de certaines de ces tâches pour lui laisser le temps d'en faire d'autres, mais ne suis pas convaincue que ce soit le rôle du SM de faire ces tâches là",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:13:40.172Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "87fc7514-e26f-48d3-9048-55529085cd66"
+  },
+  {
+    "encryptedEmail": "InU6yu49zS2eh9VUW0y3K+loOgugE+FoaUJ8BuHbF3s=",
+    "talkId": "611440",
+    "event": "2024",
+    "creationInstant": "2024-05-06T13:33:21.060Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": {
+      "comment": "Conf hyper intéressante, j'aurais voulu qu'elle dure plus longtemps.\r\nLe discours étaient très clair et c'était super de voir les résultats de ces réunions. \r\nSi la conférence avait duré plus longtemps, j'aurais aimé savoir plus concrètement comment ces réus ont été mises en places. Mais c'est très cool de montrer qu'on peut faire évoluer un secteur aussi masculin!",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:18:03.364Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "ed3115b1-8603-4c1a-b376-c2fc5a16f762"
+  },
+  {
+    "encryptedEmail": "InU6yu49zS2eh9VUW0y3K+loOgugE+FoaUJ8BuHbF3s=",
+    "talkId": "641460",
+    "event": "2024",
+    "creationInstant": "2024-05-06T13:35:33.109Z",
+    "notes": [
+      "TOO_COMPLICATED"
+    ],
+    "comment": {
+      "comment": "Je pense que contrairement à ce qu'avait l'air de penser la conférencière, la plupart des  personnes présentes étaient d'accord avec elle et souhaitaient en apprendre plus. Mais son attitude arrogante et agressive a complètement desservi son propos, dommage",
+      "disapprovedInstant": "2024-10-16T11:36:59.980Z",
+      "disapprovedByLogin": "guillaumeehret",
+      "approvedInstant": null,
+      "approvedByLogin": null,
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "1ccb0a31-759f-4d66-b4a6-0ba49324ffcd"
+  },
+  {
+    "encryptedEmail": "InU6yu49zS2eh9VUW0y3K+loOgugE+FoaUJ8BuHbF3s=",
+    "talkId": "611298",
+    "event": "2024",
+    "creationInstant": "2024-05-06T13:43:37.728Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING",
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "Belle découverte. Je ne connaissais pas Shape up et j'ai trouvé ça hyper intéressant. ça m'a donné envie d'en savoir plus!",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:18:07.530Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "6027326a-64b5-4f2e-8eec-ec28bde505af"
+  },
+  {
+    "encryptedEmail": "InU6yu49zS2eh9VUW0y3K+loOgugE+FoaUJ8BuHbF3s=",
+    "talkId": "610225",
+    "event": "2024",
+    "creationInstant": "2024-05-06T13:44:12.816Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "d3f11993-a9cc-4568-9070-6b3b6d7ce69e"
+  },
+  {
+    "encryptedEmail": "InU6yu49zS2eh9VUW0y3K+loOgugE+FoaUJ8BuHbF3s=",
+    "talkId": "646315",
+    "event": "2024",
+    "creationInstant": "2024-05-06T13:44:32.336Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "57a5d2eb-9f63-413f-9329-4f0f7f844c8e"
+  },
+  {
+    "encryptedEmail": "AaWDSpVbnELm2+iVujv5AKHETfLT+SknGLCbLIPUXFU=",
+    "talkId": "593894",
+    "event": "2024",
+    "creationInstant": "2024-05-06T21:43:14.230Z",
+    "notes": [],
+    "comment": null,
+    "id": "8eda3f2c-e7fe-4f9c-a358-41135bbdaf1b"
+  },
+  {
+    "encryptedEmail": "x54gnqXJ+Wk2Fkdjxe4zx+0NQb3tM38/XQmznTqAbYA=",
+    "talkId": "637079",
+    "event": "2024",
+    "creationInstant": "2024-05-10T12:48:47.542Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "Merci de poser un cadre, c'était très clair. Merci notamment pour le travail sur la prévention des VSS.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:15:00.305Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "bbef3e4b-1015-45be-beb8-0e5e54f25af7"
+  },
+  {
+    "encryptedEmail": "x54gnqXJ+Wk2Fkdjxe4zx+0NQb3tM38/XQmznTqAbYA=",
+    "talkId": "653397",
+    "event": "2024",
+    "creationInstant": "2024-05-10T12:50:24.620Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Merci !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:14:28.581Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "ed13ba5a-920f-47c0-bf37-cc780e589b52"
+  },
+  {
+    "encryptedEmail": "x54gnqXJ+Wk2Fkdjxe4zx+0NQb3tM38/XQmznTqAbYA=",
+    "talkId": "593091",
+    "event": "2024",
+    "creationInstant": "2024-05-10T13:58:47.704Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Merci !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:13:19.971Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "721a03b8-ab40-4e72-9b56-47721ebeb943"
+  },
+  {
+    "encryptedEmail": "x54gnqXJ+Wk2Fkdjxe4zx+0NQb3tM38/XQmznTqAbYA=",
+    "talkId": "595434",
+    "event": "2024",
+    "creationInstant": "2024-05-10T14:05:38.382Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "COULD_BE_MORE_EXPLORED"
+    ],
+    "comment": {
+      "comment": "Merci pour cette présentation, c'était très clair ; je me poserai dorénavant la question d'utiliser une machine à états quand je code au boulot.\r\nMerci aussi d'avoir donné le lien Github pour accéder au code.\r\nPerso j'aurais aimé en savoir plus sur d'éventuelles autres implémentations possibles d'une machine à état (qqch de récursif peut-être ?), peut-être une idée pour un talk un peu plus long ?",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:17:53.396Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "0240ec30-893e-4066-aa35-0a9352d8f8cc"
+  },
+  {
+    "encryptedEmail": "x54gnqXJ+Wk2Fkdjxe4zx+0NQb3tM38/XQmznTqAbYA=",
+    "talkId": "637081",
+    "event": "2024",
+    "creationInstant": "2024-05-10T14:11:52.198Z",
+    "notes": [],
+    "comment": {
+      "comment": "Merci d'avoir permis ces prises de paroles, on a besoin de solidarité notamment avec les mineurs isolés. Merci au jeune qui a pris la parole pour son témoignage.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:18:57.125Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "74af6f8e-cffb-4242-b706-43f342e9a3d5"
+  },
+  {
+    "encryptedEmail": "x54gnqXJ+Wk2Fkdjxe4zx+0NQb3tM38/XQmznTqAbYA=",
+    "talkId": "622656",
+    "event": "2024",
+    "creationInstant": "2024-05-10T14:15:00.259Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING",
+      "SURPRISED_BY_SUBJECT"
+    ],
+    "comment": {
+      "comment": "Merci pour cette présentation ! ",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:14:15.570Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "5874d15e-514c-4b33-a0cd-795965fdb998"
+  },
+  {
+    "encryptedEmail": "x54gnqXJ+Wk2Fkdjxe4zx+0NQb3tM38/XQmznTqAbYA=",
+    "talkId": "611564",
+    "event": "2024",
+    "creationInstant": "2024-05-10T14:18:23.698Z",
+    "notes": [
+      "VERY_INTERESTING",
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "Merci et bravo, je vais envoyer le replay aux gens qui me posent des questions sur le syndicalisme.\r\n\r\nJ'ai apprécié le parti pris de l'écriture inclusive sur les slides.\r\n\r\nSi vous remettez ça, peut-être mettre en avant qques victoires obtenues dans l'entreprise ?",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:17:31.311Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "f0131edc-3294-4add-8214-2239c889afc4"
+  },
+  {
+    "encryptedEmail": "x54gnqXJ+Wk2Fkdjxe4zx+0NQb3tM38/XQmznTqAbYA=",
+    "talkId": "622630",
+    "event": "2024",
+    "creationInstant": "2024-05-10T14:22:47.902Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": {
+      "comment": "Merci pour cette prise de parole nécessaire en ces temps orageux.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:17:35.103Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "fb9f560e-04a5-4e1c-969c-3836580a734e"
+  },
+  {
+    "encryptedEmail": "x54gnqXJ+Wk2Fkdjxe4zx+0NQb3tM38/XQmznTqAbYA=",
+    "talkId": "641460",
+    "event": "2024",
+    "creationInstant": "2024-05-10T14:25:45.588Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING",
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "Merci pour cette présentation ! \r\n\r\n",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:13:43.996Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "86785156-f2d1-45e1-b528-8ce47edfa6ad"
+  },
+  {
+    "encryptedEmail": "x54gnqXJ+Wk2Fkdjxe4zx+0NQb3tM38/XQmznTqAbYA=",
+    "talkId": "622669",
+    "event": "2024",
+    "creationInstant": "2024-05-10T14:26:58.581Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING",
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "Merci !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:13:05.203Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "e1e0c9b6-e020-498d-94ed-f22c44dbe6b4"
+  },
+  {
+    "encryptedEmail": "x54gnqXJ+Wk2Fkdjxe4zx+0NQb3tM38/XQmznTqAbYA=",
+    "talkId": "612466",
+    "event": "2024",
+    "creationInstant": "2024-05-10T14:27:49.946Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Merci c'était génial !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:14:43.527Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "60b25198-200c-452f-9467-90fb9348875f"
+  },
+  {
+    "encryptedEmail": "x54gnqXJ+Wk2Fkdjxe4zx+0NQb3tM38/XQmznTqAbYA=",
+    "talkId": "637082",
+    "event": "2024",
+    "creationInstant": "2024-05-10T14:51:51.379Z",
+    "notes": [],
+    "comment": {
+      "comment": "Bravo aux jeunes qui ont pris la parole devant tout le monde, c'est pas un exercice facile mais il et elles avaient l'air très à l'aise et c'était très clair !\r\n\r\nBonne continuation aux codeurs et codeuses en herbe, et à l'asso !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:19:02.219Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "4df25033-9a65-422c-991d-bfd90eb6203c"
+  },
+  {
+    "encryptedEmail": "x54gnqXJ+Wk2Fkdjxe4zx+0NQb3tM38/XQmznTqAbYA=",
+    "talkId": "611369",
+    "event": "2024",
+    "creationInstant": "2024-05-10T14:52:16.686Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "Merci pour cette présentation.\r\n\r\nJ'aurais aimé en apprendre plus sur les technologies de surveillance utilisées en France (mais bon je reconnais que ce n'était pas l'objet du talk ^^)",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:14:10.606Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "f70b8b6d-57fd-4c39-b9c2-38948701613e"
+  },
+  {
+    "encryptedEmail": "x54gnqXJ+Wk2Fkdjxe4zx+0NQb3tM38/XQmznTqAbYA=",
+    "talkId": "637080",
+    "event": "2024",
+    "creationInstant": "2024-05-10T15:00:30.437Z",
+    "notes": [],
+    "comment": {
+      "comment": "Merci pour le travail d'organisation de la conférence, hâte de revenir !\r\nMerci pour la mise en place de vélotypie, les repas qui étaient délicieux, le tarif accessible, les crêpes, la visibilité donnée aux assos notamment le collectif d'aide aux mineurs isolés, les dessins qui étaient très beaux, les noms des salles qui étaient fort sympathiques. Un grand merci pour les 2-3 sujets sur l'inclusion des personnes trans (3 en comptant la keynote de clôture), en ces temps difficiles on a besoin de confs comme ça.\r\n\r\nEt merci pour la salle de \"sieste\", c'était bien pratique ;)",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:18:59.544Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "7e2d7b37-12e6-4af2-803d-1b8b7eafa2a9"
+  },
+  {
+    "encryptedEmail": "x54gnqXJ+Wk2Fkdjxe4zx+0NQb3tM38/XQmznTqAbYA=",
+    "talkId": "600153",
+    "event": "2024",
+    "creationInstant": "2024-05-10T15:01:03.856Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": {
+      "comment": "Merci, c'était très clair et très intéressant !",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:16:48.626Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "48a929fd-6f2c-4ce2-bfca-9bfb8c4b326a"
+  },
+  {
+    "encryptedEmail": "x54gnqXJ+Wk2Fkdjxe4zx+0NQb3tM38/XQmznTqAbYA=",
+    "talkId": "646315",
+    "event": "2024",
+    "creationInstant": "2024-05-10T15:01:36.296Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING",
+      "VERY_GOOD_TALK"
+    ],
+    "comment": {
+      "comment": "Merci beaucoup pour cette présentation, et merci pour les très nombreuses références d'ouvrages que je garde sous le coude pour pouvoir approfondir.\r\nMerci pour la prise de position finale pour la défense des droits des personnes trans, en particulier handicapées.",
+      "disapprovedInstant": null,
+      "disapprovedByLogin": null,
+      "approvedInstant": "2024-05-12T07:14:54.128Z",
+      "approvedByLogin": "guillaumeehret",
+      "feedbackPlus": [],
+      "feedbackMinus": []
+    },
+    "id": "eee2d5d1-f2a5-438f-8d2e-2e39a4bc45c9"
+  },
+  {
+    "encryptedEmail": "Auk74qtlKafcSf5So+tdas8GbsQBg4mX5NU97HhRiXE=",
+    "talkId": "660190",
+    "event": "2024",
+    "creationInstant": "2024-05-13T11:51:24.465Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "56c08bd1-aa04-4e66-9c4b-52cbd39a27f8"
+  },
+  {
+    "encryptedEmail": "Auk74qtlKafcSf5So+tdas8GbsQBg4mX5NU97HhRiXE=",
+    "talkId": "600153",
+    "event": "2024",
+    "creationInstant": "2024-05-13T11:52:08.029Z",
+    "notes": [
+      "LEARNT_SOMETHING",
+      "VERY_INTERESTING",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "42bddad5-8108-441c-bb67-31bae1435a42"
+  },
+  {
+    "encryptedEmail": "O4SQxLGA4eIV9RvzpYGAUhTmPSuz6ohSgnJJot5SHEY=",
+    "talkId": "660190",
+    "event": "2024",
+    "creationInstant": "2024-05-14T12:06:22.267Z",
+    "notes": [
+      "VERY_GOOD_TALK",
+      "LEARNT_SOMETHING",
+      "FUN"
+    ],
+    "comment": null,
+    "id": "1973a64b-a191-4fcf-81b0-f6a253a94254"
+  },
+  {
+    "encryptedEmail": "O4SQxLGA4eIV9RvzpYGAUhTmPSuz6ohSgnJJot5SHEY=",
+    "talkId": "601609",
+    "event": "2024",
+    "creationInstant": "2024-05-14T12:07:06.046Z",
+    "notes": [
+      "FUN",
+      "VERY_GOOD_TALK",
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "c23b93f0-2bf5-473b-9b89-6667211940d5"
+  },
+  {
+    "encryptedEmail": "O4SQxLGA4eIV9RvzpYGAUhTmPSuz6ohSgnJJot5SHEY=",
+    "talkId": "611220",
+    "event": "2024",
+    "creationInstant": "2024-05-14T12:07:24.871Z",
+    "notes": [
+      "LOVED_LIVE_CODING"
+    ],
+    "comment": null,
+    "id": "bfd70dd0-a7cd-4f07-80a4-945640f8be3c"
+  },
+  {
+    "encryptedEmail": "O4SQxLGA4eIV9RvzpYGAUhTmPSuz6ohSgnJJot5SHEY=",
+    "talkId": "612165",
+    "event": "2024",
+    "creationInstant": "2024-05-14T12:07:44.178Z",
+    "notes": [
+      "LEARNT_NOTHING"
+    ],
+    "comment": null,
+    "id": "7303ad1b-4428-4e4b-a9ff-e05fcd412ccd"
+  },
+  {
+    "encryptedEmail": "O4SQxLGA4eIV9RvzpYGAUhTmPSuz6ohSgnJJot5SHEY=",
+    "talkId": "598718",
+    "event": "2024",
+    "creationInstant": "2024-05-14T12:08:16.313Z",
+    "notes": [
+      "VERY_INTERESTING"
+    ],
+    "comment": null,
+    "id": "651ef4a3-d0a1-4855-9a2d-688980d69e3b"
+  },
+  {
+    "encryptedEmail": "O4SQxLGA4eIV9RvzpYGAUhTmPSuz6ohSgnJJot5SHEY=",
+    "talkId": "612277",
+    "event": "2024",
+    "creationInstant": "2024-05-14T12:08:37.932Z",
+    "notes": [
+      "VERY_GOOD_TALK"
+    ],
+    "comment": null,
+    "id": "9e88d0e3-db4c-4b4c-b868-02a4fe20fc53"
+  },
+  {
+    "encryptedEmail": "O4SQxLGA4eIV9RvzpYGAUhTmPSuz6ohSgnJJot5SHEY=",
+    "talkId": "612065",
+    "event": "2024",
+    "creationInstant": "2024-05-14T12:09:59.851Z",
+    "notes": [
+      "LEARNT_SOMETHING"
+    ],
+    "comment": null,
+    "id": "c527fa25-bb52-44b3-80a5-e92636f3b63b"
   }
 ]
