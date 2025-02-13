@@ -3,6 +3,7 @@ package mixit.feedback.repository
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import kotlinx.coroutines.reactor.awaitSingle
+import mixit.MixitApplication.Companion.CURRENT_EVENT
 import mixit.feedback.model.UserFeedback
 import org.slf4j.LoggerFactory
 import org.springframework.core.io.ClassPathResource
@@ -29,13 +30,20 @@ class UserFeedbackRepository(
 
     fun initData() {
         if (count().block() == 0L) {
-            ClassPathResource("data/feedback.json").inputStream.use { resource ->
-                val tickets: List<UserFeedback> = objectMapper.readValue(resource)
-                tickets.forEach { save(it).block() }
-                logger.info("Feedback initialization complete")
+            (2024..CURRENT_EVENT.toInt()).forEach {
+                loadYear(it)
             }
         }
     }
+
+    private fun loadYear(year: Int) {
+        ClassPathResource("data/feedback_$year.json").inputStream.use { resource ->
+            val tickets: List<UserFeedback> = objectMapper.readValue(resource)
+            tickets.forEach { save(it).block() }
+            logger.info("Feedback initialization complete")
+        }
+    }
+
 
     fun count() =
         template.count<UserFeedback>()
@@ -44,6 +52,13 @@ class UserFeedbackRepository(
         template
             .find<UserFeedback>(Query().with(by(Order(ASC, "start"))))
             .doOnComplete { logger.info("Load all feedback") }
+            .collectList()
+            .awaitSingle()
+
+    suspend fun findAllByYear(year: String): List<UserFeedback> =
+        template
+            .find<UserFeedback>(Query(where("event").isEqualTo(year)).with(by(Order(ASC, "start"))))
+            .doOnComplete { logger.info("Load all $year feedback") }
             .collectList()
             .awaitSingle()
 

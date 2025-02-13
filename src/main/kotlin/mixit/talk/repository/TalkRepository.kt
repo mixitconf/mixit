@@ -68,5 +68,7 @@ class TalkRepository(
 
     fun deleteOne(id: String) = template.remove<Talk>(Query(where("_id").isEqualTo(id)))
 
+    fun deleteByYear(year: String) = template.remove<Talk>(Query(where("event").isEqualTo(year)))
+
     fun save(talk: Talk) = template.save(talk)
 }

@@ -29,9 +29,9 @@ data class CachedUserFeedback(
             id = this.id,
             notes = notes,
             event = event,
-            talkId = talk.id!!,
+            talkId = talk.id ?: "unknown talk",
             comment = comment,
-            encryptedEmail = user.email!!,
+            encryptedEmail = user.email ?: "unknown email",
             creationInstant = creationInstant,
         )
 

@@ -67,7 +67,7 @@ class SessionizeSynchronizer(
                 val talSpeakers = session.speakers.mapNotNull { speaker ->
                     speakers.find { it.cfpId == speaker }
                 }
-                val room = session.roomId?.let { rooms[it] } ?: Room.TWITCH
+                val room = session.roomId?.let { rooms[it] } ?: Room.UNKNOWN
                 val format = if (room == Room.TWITCH) TalkFormat.ON_AIR else session.categoryItems.firstNotNullOfOrNull { formats[it] } ?: TalkFormat.TALK
                 val topic = session.categoryItems.firstNotNullOfOrNull { topics[it] } ?: Topic.OTHER
                 val language = session.categoryItems.firstNotNullOfOrNull { languages[it] } ?: Language.FRENCH
@@ -102,11 +102,13 @@ class SessionizeSynchronizer(
 
     suspend fun synchronizeSpeakers(speakers: List<SessionizeSpeaker>): List<User> {
         // We read the mapping between speaker id and email (exported manually from Sessionize)
-//        val emails = ClassPathResource("data/speakers_2025.json").inputStream.use { resource ->
-//            val speakersWithEmails: List<SpeakerMail> = objectMapper.readValue(resource)
-//            speakersWithEmails.map { it.copy(email = cryptographer.decrypt(it.email)!!) }
-//        }
-        val emails = emptyList<SpeakerMail>()
+        val emails = ClassPathResource("data/speakers_2025.json").inputStream.use { resource ->
+            val speakersWithEmails: List<SpeakerMail> = objectMapper.readValue(resource)
+            speakersWithEmails.map { it.copy(email = cryptographer.decrypt(it.email)!!) }
+        }
+//        println("Speakers with emails: ${emails.size}")
+//        println(objectMapper.writeValueAsString(emails))
+
         // We complete the speaker list with emails
         val speakersWithEmails = speakers.map {
             val email = emails.find { email -> email.id == it.id }
