@@ -85,8 +85,8 @@ class SessionizeSynchronizer(
                     speakerIds = talSpeakers.map { it.login },
                     room = room,
                     addedAt = LocalDateTime.now(),
-                    start = session.startsAt?.let { Instant.parse(it).atZone(ZoneId.of(TIMEZONE)).toLocalDateTime() },
-                    end = session.endsAt?.let { Instant.parse(it).atZone(ZoneId.of(TIMEZONE)).toLocalDateTime() },
+                    start = session.startsAt?.let { formatDateTime(it) },
+                    end = session.endsAt?.let { formatDateTime(it) },
                     level = level
                 )
             }
@@ -100,14 +100,16 @@ class SessionizeSynchronizer(
         talkService.invalidateCache()
     }
 
+    fun formatDateTime(string: String) =
+        // Instant.parse(it).atZone(ZoneId.of(TIMEZONE)).toLocalDateTime()
+        LocalDateTime.parse(string)
+
     suspend fun synchronizeSpeakers(speakers: List<SessionizeSpeaker>): List<User> {
         // We read the mapping between speaker id and email (exported manually from Sessionize)
         val emails = ClassPathResource("data/speakers_2025.json").inputStream.use { resource ->
             val speakersWithEmails: List<SpeakerMail> = objectMapper.readValue(resource)
             speakersWithEmails.map { it.copy(email = cryptographer.decrypt(it.email)!!) }
         }
-//        println("Speakers with emails: ${emails.size}")
-//        println(objectMapper.writeValueAsString(emails))
 
         // We complete the speaker list with emails
         val speakersWithEmails = speakers.map {

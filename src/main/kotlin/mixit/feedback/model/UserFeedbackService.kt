@@ -20,7 +20,7 @@ class UserFeedbackService(
     override val cacheZone: CacheZone = CacheZone.FEEDBACK
 
     override fun loader(): suspend () -> List<CachedUserFeedback> =
-        { userFeedbackRepository.findAll().map { talk -> loadCachedUserFeedback(talk) } }
+        { userFeedbackRepository.findAll().mapNotNull { talk -> loadCachedUserFeedback(talk) } }
 
     override fun unitaryLoader(id: String): suspend () -> CachedUserFeedback? =
         { userFeedbackRepository.findOne(id).awaitSingleOrNull()?.let { loadCachedUserFeedback(it) } }
@@ -31,7 +31,9 @@ class UserFeedbackService(
             .also {
                 // To be more efficient we don't reset the cache here
                 val cached = findOneOrNull(talk.id!!)?.updateWith(talk) ?: loadCachedUserFeedback(talk)
-                updateElement(cached)
+                if (cached != null) {
+                    updateElement(cached)
+                }
             }
 
     suspend fun findByEvent(eventId: String): List<CachedUserFeedback> =
@@ -48,10 +50,10 @@ class UserFeedbackService(
         findAll()
             .firstOrNull { feedback -> feedback.user.email == encryptedEmail && feedback.talk.id == talkId }
 
-    private suspend fun loadCachedUserFeedback(userFeedback: UserFeedback): CachedUserFeedback {
-        val user = userRepository.findByEncryptedEmail(userFeedback.encryptedEmail) ?: throw NotFoundException()
-        val talk = talkRepository.findOne(userFeedback.talkId).awaitSingleOrNull() ?: throw NotFoundException()
-        return CachedUserFeedback(userFeedback, talk, user)
+    private suspend fun loadCachedUserFeedback(userFeedback: UserFeedback): CachedUserFeedback? {
+        val user = userRepository.findByEncryptedEmail(userFeedback.encryptedEmail) ?: return null
+        val talk = talkRepository.findOne(userFeedback.talkId).awaitSingleOrNull()
+        return talk?.let { CachedUserFeedback(userFeedback, talk, user) }
     }
 
     fun deleteOne(id: String) =

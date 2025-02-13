@@ -52,7 +52,6 @@ class AdminTalkHandler(
 ) {
 
     companion object {
-        const val LAST_TALK_EVENT = "2023"
         const val LIST_URI = "/admin/talks"
     }
 
