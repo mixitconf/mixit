@@ -641,12 +641,15 @@ $enable-cssgrid: true;
 }
 
 .mxt-agenda--bordered {
-  border-top: 1px solid $third-color;
+  border-top: 1px solid #dddddd;
 }
 
+$agenda-color-hover: #C6C8BD;
+$agenda-color:  #E1E1D9;
+
 .mxt-agenda--talk-container:hover {
-  border: 1px solid $secondary-color;
-  background-color: $third-color;
+  border: 2px solid $secondary-color;
+  background-color: $agenda-color-hover;
   overflow: visible;
   height: auto;
   max-height: 300%;
@@ -660,7 +663,7 @@ $enable-cssgrid: true;
   .mxt-agenda--talk, .mxt-agenda--talk-link, mxt-agenda--talk-link:hover, button, button:hover {
     height: 100%;
     z-index: 1000;
-    background-color: $third-color;
+    background-color: $agenda-color-hover;
   }
 }
 
@@ -672,8 +675,8 @@ $enable-cssgrid: true;
 }
 
 .mxt-agenda--talk-container {
-  background-color: #DAE9EF;
-  border: 1px solid $secondary-color;
+  background-color: $agenda-color;
+  border: 2px solid $secondary-color;
   border-radius: 4px;
   width: 95%;
   display: flex;
