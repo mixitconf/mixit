@@ -13,6 +13,7 @@ import mixit.ticket.repository.LotteryRepository
 import mixit.user.handler.dto.toDto
 import mixit.user.handler.dto.toLinkDtos
 import mixit.user.model.Link
+import mixit.user.model.Role
 import mixit.user.model.User
 import mixit.user.model.UserService
 import mixit.user.repository.UserRepository
@@ -100,7 +101,7 @@ class UserHandler(
                     USER to user.toDto(req.language()),
                     ERRORS to errors,
                     HAS_ERRORS to errors.isNotEmpty(),
-                    TALKS to talks,
+                    TALKS to talks.map { it.toDto(req.language()) },
                     "hasInterests" to (lottery?.interests?.isNotEmpty() ?: false),
                     "lotteryTicket" to lottery,
                     "isSpeaker" to isSpeaker,
@@ -126,7 +127,7 @@ class UserHandler(
                 val lottery = lotteryRepository.findByEncryptedEmail(user.email ?: "unknown")
                 val params = mapOf(
                     USER to user.toDto(req.language()),
-                    TALKS to talks,
+                    TALKS to talks.map { it.toDto(req.language()) },
                     YEAR to CURRENT_EVENT,
                     "lotteryTicket" to lottery,
                     "attendeeTicket" to attendeeTicket,
@@ -155,6 +156,8 @@ class UserHandler(
                 val params = mapOf(
                     USER to user.toDto(req.language()),
                     TALKS to talks.map { it.toDto(req.language()) },
+                    ERRORS to errors,
+                    HAS_ERRORS to errors.isNotEmpty(),
                     HAS_TALKS to talks.isNotEmpty(),
                     "usermail" to cryptographer.decrypt(user.email),
                     "description-fr" to user.description[Language.FRENCH],
@@ -227,9 +230,9 @@ class UserHandler(
         if (!markdownValidator.isValid(updatedUser.description[Language.ENGLISH])) {
             errors["description-en"] = "user.form.error.description.en"
         }
-        if (updatedUser.photoUrl != null && !UrlValidator.isValid(updatedUser.photoUrl)) {
-            errors["photoUrl"] = "user.form.error.photourl"
-        }
+//        if (updatedUser.photoUrl != null && user.role != Role.STAFF && !UrlValidator.isValid(updatedUser.photoUrl)) {
+//            errors["photoUrl"] = "user.form.error.photourl"
+//        }
 
         updatedUser.links.forEachIndexed { index, link ->
             if (!maxLengthValidator.isValid(link.name, 30)) {

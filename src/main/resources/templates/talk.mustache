@@ -174,12 +174,15 @@
 </div>
 {{#hasFeatureFeedback}}
     {{#isCurrent}}
-    <div class="container-xxl">
-        <h2 class="pt-5">{{#i18n}}feedback.title{{/i18n}}</h2>
+    <div class="container-xxl" id="feedback">
+        <h2 class="pt-5">{{#i18n}}feedback.title{{/i18n}} <a href="#feedback">#</a></h2>
         <p>
-            {{#i18n}}feedback.{{talk.format}}.description{{/i18n}}
-            <br>
+            {{#connected}}
+                {{#i18n}}feedback.description{{/i18n}} <i>{{talk.title}}</i>.
+            {{/connected}}
+            {{^connected}}
             <i>{{#i18n}}feedback.anonymous{{/i18n}}</i>
+            {{/connected}}
         </p>
         {{^connected}}
             <div class="mxt-btn-container">
@@ -203,7 +206,7 @@
                                     <img src="/images/svg/mxt-icon--like-hover.svg" alt="Vote">
                                 </button>
                                 <button onclick="voteForTalk('{{first}}', '{{talk.id}}', '{{email}}')"
-                                        class="mxt-feedback-btn mxt-btn-third mxt-feedback-unlike-btn mxt-feedback-btn"
+                                        class="mxt-feedback-btn mxt-btn-feed mxt-feedback-unlike-btn mxt-feedback-btn"
                                         id="mxt-feedback-btn-{{first}}-unlike"
                                         {{^second.selectedByCurrentUser}}style="display: none" {{/second.selectedByCurrentUser}}>
                                     <img src="/images/svg/mxt-icon--like-selected-dark.svg" alt="Vote">
@@ -258,7 +261,7 @@
                         {{/feedbackComments.userComment}}
                         {{^feedbackComments.userComment}}
                             <button class="mxt-btn-primary" id="mxt-feedback-comment--button">
-                                {{#i18n}}common.actions.create{{/i18n}}</button>
+                                {{#i18n}}feedback.action{{/i18n}}</button>
                         {{/feedbackComments.userComment}}
                     </div>
                     <script>

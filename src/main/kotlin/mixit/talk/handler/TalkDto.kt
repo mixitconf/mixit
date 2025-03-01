@@ -41,6 +41,7 @@ class TalkDto(
     val hasAtLeastOneVideo: Boolean = !video.isNullOrEmpty() || !video2.isNullOrEmpty(),
     val level: TalkLevel? = null,
     val onair: Boolean = (format == TalkFormat.ON_AIR),
+    val hasFeedback: Boolean = event.toInt() >= 2024,
 )
 
 data class DayTalksDto(

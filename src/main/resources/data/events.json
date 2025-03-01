@@ -2258,6 +2258,16 @@
                 "level": "SILVER",
                 "sponsorId": "sponsor-lbc",
                 "subscriptionDate": "2025-02-07"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "VISEO",
+                "subscriptionDate": "2025-02-17"
+            },
+            {
+                "level": "PARTY",
+                "sponsorId": "ville_de_lyon",
+                "subscriptionDate": "2025-02-17"
             }
         ],
         "organizations": [],

@@ -1,4 +1,5 @@
 {{> header}}
+<script src="/js/qrcode.min.js"></script>
 
 <div class="container-xxl">
     <h1>{{#i18n}}admin.talks.title{{/i18n}}</h1>
@@ -25,6 +26,7 @@
             <th>{{#i18n}}admin.talks.table.format{{/i18n}}</th>
             <th>{{#i18n}}admin.talks.table.title{{/i18n}}</th>
             <th>{{#i18n}}admin.talks.table.speakers{{/i18n}}</th>
+            <th>Feedback</th>
             <th style="width: 8em">{{#i18n}}common.actions{{/i18n}}</th>
         </tr>
       </thead>
@@ -39,6 +41,17 @@
                          class="mxt-text--cat mxt-text--cat-speaker">
                         {{firstname}}&nbsp;{{lastname}}</a>
                 {{/speakers}}
+            </td>
+            <td>
+                <div id="{{ slug }}"></div>
+                <script>
+                    document.getElementById('{{ slug }}').innerHTML = new QRCode({
+                        content: 'https://mixitconf.org/{{event}}/{{slug}}#feedback',
+                        container: 'svg-viewbox',
+                        join: true,
+                        ecl: 'L'
+                    }).svg();
+                </script>
             </td>
             <td class="mxt-btn-container">
                 <a href="/admin/talks/edit/{{id}}" class="mxt-btn-light">

@@ -1,6 +1,6 @@
 {{> header}}
 
-
+<script src="/js/qrcode.min.js"></script>
 <div class="container-xxl">
     <h1 class="pt-3 pb-3">{{#i18n}}admin.talk.title{{/i18n}}</h1>
 </div>
@@ -101,6 +101,24 @@
         <div class="mb-3 mxt-btn-container">
             <button type="submit" class="mxt-btn-primary">{{#i18n}}common.actions.save{{/i18n}}</button>
         </div>
+        {{#talk.id}}
+        {{#hasFeatureFeedback}}
+            <div class="mb-3">
+                <label class="form-label">Feedback link to share to access directly to the feedback</label>
+                <div class="text-center">
+                    <div id="{{ talk.slug }}" style="max-width: 600px"></div>
+                </div>
+                <script>
+                    document.getElementById('{{ talk.slug }}').innerHTML = new QRCode({
+                        content: 'https://mixitconf.org/{{talk.event}}/{{talk.slug}}#feedback',
+                        container: 'svg-viewbox',
+                        join: true,
+                        ecl: 'L'
+                    }).svg();
+                </script>
+            </div>
+        {{/hasFeatureFeedback}}
+        {{/talk.id}}
     </form>
 </div>
 {{> footer}}
