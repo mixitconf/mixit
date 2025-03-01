@@ -81,7 +81,8 @@ data class CachedTalk(
         photoUrls,
         startLocalDateTime = start,
         endLocalDateTime = end,
-        level = level
+        level = level,
+        hasFeedback = event.toInt() >= 2024,
     )
 
     fun toTalk() = Talk(

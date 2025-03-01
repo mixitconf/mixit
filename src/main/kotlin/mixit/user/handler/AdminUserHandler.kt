@@ -54,7 +54,13 @@ class AdminUserHandler(
                 AdminUsers.template,
                 mapOf(
                     USERS to userRepository.findAll()
-                        .filter { it.filterOn(criteria, cryptographer) }
+                        .filter {
+                            try {
+                                it.filterOn(criteria, cryptographer)
+                            } catch (e: Exception) {
+                                false
+                            }
+                        }
                         .sortedWith(compareBy<User> { it.lastname.lowercase() }.thenBy { it.firstname.lowercase() }),
                     TITLE to AdminUsers.title
                 )

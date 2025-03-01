@@ -1,5 +1,5 @@
 {{> header}}
-
+<script src="/js/qrcode.min.js"></script>
 {{^canUpdateProfile}}
     {{#admin}}
         <div class="mxt-btn-container pb-3">
@@ -127,14 +127,32 @@
                             <li class="mxt-text--cat-format">#{{format}}</li>
                         </ul>
                         <p>{{#markdown}}{{summary}}{{/markdown}}</p>
-                        <div class="mxt-btn-container">
+<!--                        {{#hasFeatureFeedback}}-->
+<!--                            {{#canUpdateProfile}}-->
+<!--                            <div>-->
+<!--                                <div class="text-center">-->
+<!--                                    <div id="{{ slug }}" style="max-width: 600px"></div>-->
+<!--                                </div>-->
+<!--                                <script>-->
+<!--                                    document.getElementById('{{ slug }}').innerHTML = new QRCode({-->
+<!--                                        content: 'https://mixitconf.org/{{event}}/{{slug}}#feedback',-->
+<!--                                        container: 'svg-viewbox',-->
+<!--                                        join: true,-->
+<!--                                        ecl: 'L'-->
+<!--                                    }).svg();-->
+<!--                                </script></div>-->
+<!--                            {{/canUpdateProfile}}-->
+<!--                        {{/hasFeatureFeedback}}-->
                         {{#hasFeatureFeedbackResult}}
                             {{#canUpdateProfile}}
+                                {{#hasFeedback}}
+                                <div class="mxt-btn-container">
                                 <a href="{{localePrefix}}/me/feedback/{{id}}" class="mxt-btn-light ms-2" style="margin-bottom: 0">
-                                    {{#i18n}}feedback.speaker{{/i18n}} {{speakerYear}}</a>
+                                    {{#i18n}}feedback.speaker{{/i18n}}</a>
+                                </div>
+                                {{/hasFeedback}}
                             {{/canUpdateProfile}}
                         {{/hasFeatureFeedbackResult}}
-                        </div>
                     </article>
                 {{/talks}}
             </ul>

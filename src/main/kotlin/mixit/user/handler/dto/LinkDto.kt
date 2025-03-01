@@ -19,6 +19,8 @@ data class LinkDto(
         else if (name.contains("youtube", true)) "mxt-icon--social-youtube.svg"
         else if (name.contains("medium", true)) "mxt-icon--social-medium.svg"
         else if (name.contains("twitch", true)) "mxt-icon--social-twitch.svg"
+        else if (name.contains("bsky", true)) "mxt-icon--social-bsky.svg"
+        else if (name.contains("bluesky", true)) "mxt-icon--social-bsky.svg"
         else if (name.contains("tiktok", true)) "mxt-icon--social-tiktok.svg"
         else if (name.contains("discord", true)) "mxt-icon--social-discord.svg"
         else if (name.contains("snapchat", true)) "mxt-icon--social-snapchat.svg"

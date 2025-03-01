@@ -44,9 +44,17 @@
             <div class="col-12 mb-3">
                 <label class="form-label {{#errors.email}}is-invalid{{/errors.email}}">
                     {{#i18n}}user.form.email{{/i18n}}</label>
-                <input type="text" name="email" class="form-control {{#errors.email}}is-invalid{{/errors.email}}"
+                {{#admin}}
+                    <input type="text" name="email" class="form-control {{#errors.email}}is-invalid{{/errors.email}}"
+                           value="{{#usermail}}{{usermail}}{{/usermail}}" required id="email"/>
+                {{/admin}}
+                {{^admin}}
+                    <input type="text" name="email" class="form-control {{#errors.email}}is-invalid{{/errors.email}}"
+                           value="{{#usermail}}{{usermail}}{{/usermail}}" readonly id="email" disabled="true"/>
+                    <input type="hidden" name="email" class="form-control {{#errors.email}}is-invalid{{/errors.email}}"
                            value="{{#usermail}}{{usermail}}{{/usermail}}" required id="email"/>
 
+                {{/admin}}
             </div>
             <div class="col-12 mb-3">
                 <label class="form-label {{#errors.company}}is-invalid{{/errors.company}}">
@@ -73,9 +81,16 @@
 
                 <label class="mt-2 form-label {{#errors.photoUrl}}is-invalid{{/errors.photoUrl}}">
                     {{#i18n}}user.form.photoUrl{{/i18n}} </label>
-                <input type="text" name="photoUrl" class="form-control {{#errors.photoUrl}}is-invalid{{/errors.photoUrl}}"
+                {{^isSpeaker}}
+                    <input type="text" name="photoUrl" class="form-control {{#errors.photoUrl}}is-invalid{{/errors.photoUrl}}"
                            value="{{#user.photoUrl}}{{user.photoUrl}}{{/user.photoUrl}}" id="photoUrl"/>
-
+                {{/isSpeaker}}
+                {{#isSpeaker}}
+                    <input type="text" name="photoUrl" class="form-control {{#errors.photoUrl}}is-invalid{{/errors.photoUrl}}"
+                           value="{{#user.photoUrl}}{{user.photoUrl}}{{/user.photoUrl}}" id="photoUrl" readonly disabled/>
+                    <input type="hidden" name="photoUrl" class="form-control {{#errors.photoUrl}}is-invalid{{/errors.photoUrl}}"
+                           value="{{#user.photoUrl}}{{user.photoUrl}}{{/user.photoUrl}}" id="photoUrl"/>
+                {{/isSpeaker}}
             </div>
             <div class="col-12 mb-3 mt-5">
                 <label class="form-label">
