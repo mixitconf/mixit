@@ -101,8 +101,11 @@ class SessionizeSynchronizer(
     }
 
     fun formatDateTime(string: String) =
-        // Instant.parse(it).atZone(ZoneId.of(TIMEZONE)).toLocalDateTime()
-        LocalDateTime.parse(string)
+        try {
+            LocalDateTime.parse(string)
+        } catch (e: Exception) {
+            Instant.parse(string).atZone(ZoneId.of(TIMEZONE)).toLocalDateTime()
+        }
 
     suspend fun synchronizeSpeakers(speakers: List<SessionizeSpeaker>): List<User> {
         // We read the mapping between speaker id and email (exported manually from Sessionize)

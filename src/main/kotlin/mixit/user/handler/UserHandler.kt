@@ -13,7 +13,6 @@ import mixit.ticket.repository.LotteryRepository
 import mixit.user.handler.dto.toDto
 import mixit.user.handler.dto.toLinkDtos
 import mixit.user.model.Link
-import mixit.user.model.Role
 import mixit.user.model.User
 import mixit.user.model.UserService
 import mixit.user.repository.UserRepository

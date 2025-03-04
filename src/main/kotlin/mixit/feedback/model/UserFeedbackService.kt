@@ -7,7 +7,6 @@ import mixit.talk.repository.TalkRepository
 import mixit.user.repository.UserRepository
 import mixit.util.cache.CacheCaffeineUnitaryTemplate
 import mixit.util.cache.CacheZone
-import mixit.util.errors.NotFoundException
 import org.springframework.stereotype.Service
 
 @Service
