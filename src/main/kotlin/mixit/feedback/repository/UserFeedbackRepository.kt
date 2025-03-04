@@ -44,7 +44,6 @@ class UserFeedbackRepository(
         }
     }
 
-
     fun count() =
         template.count<UserFeedback>()
 
