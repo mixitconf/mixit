@@ -155,10 +155,13 @@ class SessionizeSynchronizer(
                 existingSpeakers.none { it.cfpId == sessionizeSpeaker.id }
             }
             .map { sessionizeSpeaker ->
-                val login = sessionizeSpeaker.email?.let { it.substring(0, it.indexOf("@")) } ?: sessionizeSpeaker.id
+                var login = sessionizeSpeaker.email?.let { it.substring(0, it.indexOf("@")) } ?: sessionizeSpeaker.id
                 val userCheck = userRepository.findOneOrNull(login)
                 if (userCheck != null) {
-                    throw IllegalArgumentException("Login ${userCheck.login} already exist: try to create one with suffix")
+                    login = "${sessionizeSpeaker.firstName.lowercase()}_${sessionizeSpeaker.firstName.lowercase()}"
+                    if (userRepository.findOneOrNull(login) != null) {
+                        throw IllegalArgumentException("Login ${userCheck.login} already exist: try to create one with suffix")
+                    }
                 }
                 User(
                     login = login,
