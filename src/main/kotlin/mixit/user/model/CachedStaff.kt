@@ -27,7 +27,7 @@ data class CachedStaff(
         user.photoShape,
         user.emailHash,
         user.description.mapValues { it.value.toHTML() },
-        user.links,
+        user.links.filterNot { it.isTwitter() },
         user.role,
         user.email
     )

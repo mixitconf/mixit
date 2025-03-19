@@ -22,7 +22,7 @@ data class CachedOrganization(
         user.photoUrl,
         user.photoShape,
         user.description.mapValues { it.value.toHTML() },
-        user.links,
+        user.links.filterNot { it.isTwitter() },
         user.email
     )
 
