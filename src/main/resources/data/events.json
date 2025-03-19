@@ -2268,6 +2268,26 @@
                 "level": "PARTY",
                 "sponsorId": "ville_de_lyon",
                 "subscriptionDate": "2025-02-17"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "energypool",
+                "subscriptionDate": "2025-03-12"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "altair",
+                "subscriptionDate": "2025-03-17"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "redfroggy",
+                "subscriptionDate": "2025-03-17"
+            },
+            {
+                "level": "MIXTEEN",
+                "sponsorId": "redfroggy",
+                "subscriptionDate": "2025-03-17"
             }
         ],
         "organizations": [],

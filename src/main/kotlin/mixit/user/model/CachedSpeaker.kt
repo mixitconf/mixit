@@ -25,7 +25,7 @@ data class CachedSpeaker(
         user.photoUrl,
         user.emailHash,
         user.description.mapValues { it.value.toHTML() },
-        user.links,
+        user.links.filterNot { it.isTwitter() },
         year,
         user.email,
         user.cfpId
