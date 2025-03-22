@@ -127,22 +127,24 @@
                             <li class="mxt-text--cat-format">#{{format}}</li>
                         </ul>
                         <p>{{#markdown}}{{summary}}{{/markdown}}</p>
-<!--                        {{#hasFeatureFeedback}}-->
-<!--                            {{#canUpdateProfile}}-->
-<!--                            <div>-->
-<!--                                <div class="text-center">-->
-<!--                                    <div id="{{ slug }}" style="max-width: 600px"></div>-->
-<!--                                </div>-->
-<!--                                <script>-->
-<!--                                    document.getElementById('{{ slug }}').innerHTML = new QRCode({-->
-<!--                                        content: 'https://mixitconf.org/{{event}}/{{slug}}#feedback',-->
-<!--                                        container: 'svg-viewbox',-->
-<!--                                        join: true,-->
-<!--                                        ecl: 'L'-->
-<!--                                    }).svg();-->
-<!--                                </script></div>-->
-<!--                            {{/canUpdateProfile}}-->
-<!--                        {{/hasFeatureFeedback}}-->
+                        {{#hasFeaturePreFeedback}}
+                            {{#isCurrentEdition}}
+                                    <div>
+                                        <div class="text-center">
+                                            <div id="{{ slug }}" style="max-width: 400px;margin:auto"></div>
+                                            <div><a href="/{{event}}/{{slug}}#feedback">Feedback</a></div>
+                                        </div>
+                                        <script>
+                                            document.getElementById('{{ slug }}').innerHTML = new QRCode({
+                                                content: 'https://mixitconf.org/{{event}}/{{slug}}#feedback',
+                                                container: 'svg-viewbox',
+                                                join: true,
+                                                ecl: 'L'
+                                            }).svg();
+                                        </script>
+                                    </div>
+                            {{/isCurrentEdition}}
+                        {{/hasFeaturePreFeedback}}
                         {{#hasFeatureFeedbackResult}}
                             {{#canUpdateProfile}}
                                 {{#hasFeedback}}
