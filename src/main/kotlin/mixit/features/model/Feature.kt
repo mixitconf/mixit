@@ -32,6 +32,11 @@ enum class Feature {
      * Active the CFP
      */
     Cfp,
+
+    /**
+     * Active image feedback for speaker
+     */
+    PreFeedback,
     /**
      * Active talk feedback filling
      */

@@ -172,6 +172,18 @@
     {{/talk.photoUrls}}
     </div>
 </div>
+{{#hasFeaturePreFeedback}}
+    {{#isCurrent}}
+        {{^hasFeatureFeedback}}
+            <div class="container-xxl" id="feedback">
+                <h2 class="pt-5">{{#i18n}}feedback.title{{/i18n}} <a href="#feedback">#</a></h2>
+                <p>
+                    <i>{{#i18n}}feedback.preconf{{/i18n}}</i>
+                </p>
+            </div>
+        {{/hasFeatureFeedback}}
+    {{/isCurrent}}
+{{/hasFeaturePreFeedback}}
 {{#hasFeatureFeedback}}
     {{#isCurrent}}
     <div class="container-xxl" id="feedback">
