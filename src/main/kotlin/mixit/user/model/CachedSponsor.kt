@@ -25,7 +25,7 @@ data class CachedSponsor(
         user.photoUrl,
         user.photoShape,
         user.description.mapValues { it.value.toHTML() },
-        user.links.filterNot { it.isTwitter() },
+        user.links.filterNot { it.isTwitterOrTruthSocial() },
         sponsoring.level,
         sponsoring.subscriptionDate,
         user.email

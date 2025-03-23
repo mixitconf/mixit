@@ -35,7 +35,7 @@ data class CachedUser(
         user.photoShape,
         user.emailHash,
         user.description,
-        user.links.filterNot { it.isTwitter() },
+        user.links.filterNot { it.isTwitterOrTruthSocial() },
         user.legacyId,
         user.role,
         user.cfpId,
