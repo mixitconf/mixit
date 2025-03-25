@@ -34,6 +34,8 @@ data class CachedOrganization(
         logoType(photoUrl),
         logoWebpUrl(photoUrl),
         description[language],
-        links.mapIndexed { index, link -> link.toLinkDto(index) }
+        links
+            .filterNot { it.isTwitterOrTruthSocial() }
+            .mapIndexed { index, link -> link.toLinkDto(index) }
     )
 }

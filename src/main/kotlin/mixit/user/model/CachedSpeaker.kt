@@ -40,7 +40,7 @@ data class CachedSpeaker(
         description,
         emailHash,
         photoUrl,
-        links = links,
+        links = links.filterNot { it.isTwitterOrTruthSocial() },
         cfpId = cfpId
     )
 }
