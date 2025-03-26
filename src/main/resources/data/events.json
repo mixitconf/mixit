@@ -2288,10 +2288,71 @@
                 "level": "MIXTEEN",
                 "sponsorId": "redfroggy",
                 "subscriptionDate": "2025-03-17"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "clevercloudsponsor24",
+                "subscriptionDate": "2025-03-24"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "exotec",
+                "subscriptionDate": "2025-03-24"
+            },
+            {
+                "level": "MIXTEEN",
+                "sponsorId": "sponsor-esker",
+                "subscriptionDate": "2025-03-24"
             }
         ],
         "organizations": [],
-        "volunteers": [],
+        "volunteers": [
+            {
+                "volunteerLogin": "amelyeb"
+            },
+            {
+                "volunteerLogin": "anne-laure"
+            },
+            {
+                "volunteerLogin": "cedric"
+            },
+            {
+                "volunteerLogin": "clacote"
+            },
+            {
+                "volunteerLogin": "joannitalac"
+            },
+            {
+                "volunteerLogin": "sylvia.cohen"
+            },
+            {
+                "volunteerLogin": "maud-hue"
+            },
+            {
+                "volunteerLogin": "marion.charlotte"
+            },
+            {
+                "volunteerLogin": "antoine395.caron"
+            },
+            {
+                "volunteerLogin": "zonca-cros"
+            },
+            {
+                "volunteerLogin": "fabien.rouge"
+            },
+            {
+                "volunteerLogin": "sauboua-beneluz-matthieu"
+            },
+            {
+                "volunteerLogin": "mazerty"
+            },
+            {
+                "volunteerLogin": "quent.fleury"
+            },
+            {
+                "volunteerLogin": "lavigne-johana"
+            }
+        ],
         "organizers": [
             {
                 "organizerLogin": "guillaumeehret"
