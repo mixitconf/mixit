@@ -6,6 +6,7 @@ import mixit.user.handler.logoWebpUrl
 import mixit.user.model.PhotoShape
 import mixit.user.model.Role
 import mixit.user.model.User
+import mixit.user.model.isTwitterOrTruthSocial
 import mixit.util.markFoundOccurrences
 import mixit.util.toHTML
 import mixit.util.toUrlPath
@@ -42,7 +43,7 @@ fun User.toDto(language: Language, searchTerms: List<String> = emptyList()) =
         photoUrl,
         photoShape ?: PhotoShape.Square,
         role,
-        links.mapIndexed { index, link -> link.toLinkDto(index) },
+        links.filterNot { it.isTwitterOrTruthSocial() }.mapIndexed { index, link -> link.toLinkDto(index) },
         logoType(photoUrl),
         logoWebpUrl(photoUrl),
         cfpId = cfpId,

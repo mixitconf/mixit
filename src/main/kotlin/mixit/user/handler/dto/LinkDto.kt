@@ -3,6 +3,7 @@ package mixit.user.handler.dto
 import mixit.user.model.Link
 import mixit.user.model.User
 import java.util.stream.IntStream
+import mixit.user.model.isTwitterOrTruthSocial
 
 data class LinkDto(
     val name: String,
@@ -36,10 +37,10 @@ fun Link.toLinkDto(index: Int) =
 
 fun User.toLinkDtos(): Map<String, List<LinkDto>> =
     if (links.size > 4) {
-        links.mapIndexed { index, link -> link.toLinkDto(index) }.groupBy { it.index }
+        links.filterNot { it.isTwitterOrTruthSocial() }.mapIndexed { index, link -> link.toLinkDto(index) }.groupBy { it.index }
     } else {
         val existingLinks = links.size
-        val userLinks = links.mapIndexed { index, link -> link.toLinkDto(index) }.toMutableList()
+        val userLinks = links.filterNot { it.isTwitterOrTruthSocial() }.mapIndexed { index, link -> link.toLinkDto(index) }.toMutableList()
         IntStream.range(0, 5 - existingLinks)
             .forEach { userLinks.add(LinkDto("", "", "link${existingLinks + it + 1}")) }
         userLinks.groupBy { it.index }
