@@ -15,6 +15,7 @@ data class TicketDto(
     val login: String?,
     val externalId: String?,
     val type: TicketType,
+    val imageType: String,
     val createdAt: Instant,
     val pronoun: TicketPronoun? = null,
     val englishSpeaker: Boolean = false,
@@ -31,6 +32,7 @@ data class TicketDto(
         externalId = ticket.externalId?.isNotBlank().let { cryptographer.decrypt(ticket.externalId) },
         createdAt = ticket.createdAt,
         type = ticket.type,
+        imageType = ticket.type.image,
         pronoun = ticket.pronoun,
         englishSpeaker = ticket.englishSpeaker
     )
