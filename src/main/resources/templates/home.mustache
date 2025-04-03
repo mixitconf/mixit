@@ -19,32 +19,32 @@
     <p class="lead">{{#i18n}}home.news.intro{{/i18n}}</p>
     <div class="row">
         <p>{{#i18n}}home.news.preconf{{/i18n}}</p>
-        <p>{{#i18n}}home.news.preconf2{{/i18n}}</p>
+<!--        <p>{{#i18n}}home.news.preconf2{{/i18n}}</p>-->
     </div>
 {{/hasFeatureMixitOnAirOnHomePage}}
-    <div class="row mxt-home-round-header">
-        <div class="col-md-2 col-sm-6">
-            <img src="/images/svg/timeline/nov18.svg"
-                 alt="{{#i18n}}home.timeline.cfp.start{{/i18n}}">
-            <div class="text-center">{{#i18n}}home.timeline.cfp.start{{/i18n}}</div>
-        </div>
-        <div class="col-md-2 col-sm-6">
-            <img src="/images/svg/timeline/jan17.svg"
-                 alt="{{#i18n}}home.timeline.cfp.end{{/i18n}}">
-            <div class="text-center">{{#i18n}}home.timeline.cfp.end{{/i18n}}</div>
-        </div>
-        <div class="col-md-2 col-sm-6">
-            <img src="/images/svg/timeline/jan27.svg"
-                 alt="{{#i18n}}home.timeline.ticketing{{/i18n}}">
-            <div class="text-center">{{#i18n}}home.timeline.ticketing{{/i18n}}</div>
-        </div>
-        <div class="d-none d-md-block col-md-2">
-            <img src="/images/svg/timeline/avr29.svg"
-                 alt="{{#i18n}}home.timeline.mixit{{/i18n}}"><br>
-            <img src="/images/svg/mxt-icon--logo-25.svg" class="img-fluid pt-3"
-                 alt="{{#i18n}}home.timeline.mixit{{/i18n}}">
-        </div>
-    </div>
+<!--    <div class="row mxt-home-round-header">-->
+<!--        <div class="col-md-2 col-sm-6">-->
+<!--            <img src="/images/svg/timeline/nov18.svg"-->
+<!--                 alt="{{#i18n}}home.timeline.cfp.start{{/i18n}}">-->
+<!--            <div class="text-center">{{#i18n}}home.timeline.cfp.start{{/i18n}}</div>-->
+<!--        </div>-->
+<!--        <div class="col-md-2 col-sm-6">-->
+<!--            <img src="/images/svg/timeline/jan17.svg"-->
+<!--                 alt="{{#i18n}}home.timeline.cfp.end{{/i18n}}">-->
+<!--            <div class="text-center">{{#i18n}}home.timeline.cfp.end{{/i18n}}</div>-->
+<!--        </div>-->
+<!--        <div class="col-md-2 col-sm-6">-->
+<!--            <img src="/images/svg/timeline/jan27.svg"-->
+<!--                 alt="{{#i18n}}home.timeline.ticketing{{/i18n}}">-->
+<!--            <div class="text-center">{{#i18n}}home.timeline.ticketing{{/i18n}}</div>-->
+<!--        </div>-->
+<!--        <div class="d-none d-md-block col-md-2">-->
+<!--            <img src="/images/svg/timeline/avr29.svg"-->
+<!--                 alt="{{#i18n}}home.timeline.mixit{{/i18n}}"><br>-->
+<!--            <img src="/images/svg/mxt-icon--logo-25.svg" class="img-fluid pt-3"-->
+<!--                 alt="{{#i18n}}home.timeline.mixit{{/i18n}}">-->
+<!--        </div>-->
+<!--    </div>-->
     {{#disableForTheMoment}}
         {{#hasFeatureLottery}}
             <p class="pt-3">{{#i18n}}home.news.cfp.lottery{{/i18n}}</p>
@@ -59,7 +59,7 @@
     <div class="container mb-2">
         <nav class="navbar mxt-navbar--talks" style="justify-content: center;">
             {{#hasFeatureTicketing}}
-                <div class="nav-item ms-3 d-none d-md-inline">
+                <div class="nav-item ms-3">
                     <a href="https://www.billetweb.fr/mixit-2025" class="nav-link mxt-navbar--nav-link">
                         <img src="/images/svg/mxt-icon-lottery-dark.svg"
                              class="mxt-icon--navbar me-2"
@@ -86,6 +86,24 @@
                 </div>
             {{/hasFeatureCfp}}
             <div class="nav-item ms-3">
+                <a href="/venue" class="nav-link mxt-navbar--nav-link"
+                   alt="{{#i18n}}header.menu.come{{/i18n}}">
+                    <img src="/images/svg/mxt-icon-place-dark.svg"
+                         class="mxt-icon--navbar me-2"
+                         alt="{{#i18n}}header.menu.come{{/i18n}}">
+                    {{#i18n}}header.menu.come{{/i18n}}
+                </a>
+            </div>
+            <div class="nav-item ms-3">
+                <a href="/accessibility" class="nav-link mxt-navbar--nav-link"
+                   alt="{{#i18n}}header.menu.accessibility{{/i18n}}">
+                    <img src="/images/svg/mxt-icon-access-dark.svg"
+                         class="mxt-icon--navbar me-2"
+                         alt="{{#i18n}}header.menu.accessibility{{/i18n}}">
+                    {{#i18n}}header.menu.accessibility{{/i18n}}
+                </a>
+            </div>
+            <div class="nav-item ms-3">
                 <a href="{{localePrefix}}/newsletter-subscribe" class="nav-link mxt-navbar--nav-link"
                    alt="{{#i18n}}home.intro.newsletter{{/i18n}}">
                     <img src="/images/svg/mxt-icon-newsletter-dark.svg"
@@ -94,25 +112,17 @@
                     {{#i18n}}home.intro.newsletter{{/i18n}}
                 </a>
             </div>
-            <div class="nav-item ms-3">
-                <a href="/sponsors" class="nav-link mxt-navbar--nav-link"
-                   alt="{{#i18n}}sponsors.becoming{{/i18n}}">
-                    <img src="/images/svg/mxt-icon-sponsor-dark.svg"
-                         class="mxt-icon--navbar me-2"
-                         alt="{{#i18n}}sponsors.becoming{{/i18n}}">
-                    {{#i18n}}sponsors.becoming{{/i18n}}
-                </a>
-            </div>
+<!--            <div class="nav-item ms-3">-->
+<!--                <a href="/sponsors" class="nav-link mxt-navbar--nav-link"-->
+<!--                   alt="{{#i18n}}sponsors.becoming{{/i18n}}">-->
+<!--                    <img src="/images/svg/mxt-icon-sponsor-dark.svg"-->
+<!--                         class="mxt-icon--navbar me-2"-->
+<!--                         alt="{{#i18n}}sponsors.becoming{{/i18n}}">-->
+<!--                    {{#i18n}}sponsors.becoming{{/i18n}}-->
+<!--                </a>-->
+<!--            </div>-->
             {{#disableForTheMoment}}
-                <div class="nav-item ms-3">
-                    <a href="/venue" class="nav-link mxt-navbar--nav-link"
-                       alt="{{#i18n}}header.menu.come{{/i18n}}">
-                        <img src="/images/svg/mxt-icon-place-dark.svg"
-                             class="mxt-icon--navbar me-2"
-                             alt="{{#i18n}}header.menu.come{{/i18n}}">
-                        {{#i18n}}header.menu.come{{/i18n}}
-                    </a>
-                </div>
+
             {{/disableForTheMoment}}
         </nav>
     </div>
