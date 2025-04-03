@@ -94,6 +94,7 @@ class AdminTicketHandler(
                         isFirstLine = if (index % 15 == 0 || index % 15 == 1 || index % 15 == 2) true else null
                     )
             }
+
         val params = mapOf(
             TITLE to "admin.ticket.title",
             TICKETS to tickets

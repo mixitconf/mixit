@@ -4,8 +4,8 @@
             size: A4;
             margin-top: 1.4cm;
             margin-bottom: 1cm;
-            margin-left: 0.2cm;
-            margin-right: 0.2cm;
+            margin-left: 0;
+            margin-right: 0;
         }
 
         body {
@@ -27,21 +27,24 @@
     .grid-container {
         //border: 1px solid #232323;
         display: grid;
-        column-gap: 0.3cm;
-        //row-gap: 0.5cm;
+        column-gap: 0;
+        row-gap: 0;
         grid-template-columns: auto auto auto;
     }
 
     .grid-cell {
-        border: 1px solid #232323;
+        // border: 1px solid #232323;
         // border: 2px solid #000000;
         //background-color: #0dcaf0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         page-break-inside: avoid;
         text-align: center;
         padding-top: 0.5cm;
-        width: 6.2cm;
-        min-width: 6.2cm;
-        max-width: 6.2cm;
+        width: 7cm;
+        min-width: 7cm;
+        max-width: 7cm;
         min-height: 5cm;
         max-height: 5cm;
         height: 5cm;
@@ -50,10 +53,10 @@
         margin-bottom: 0.2cm;
     }
     .grid-first-cell-margin {
-        padding-top: 0.6cm;
-        min-height: 5.4cm;
-        max-height: 5.4cm;
-        height: 5.4cm;
+        padding-top: 1.6cm;
+        /*min-height: 5.4cm;*/
+        /*max-height: 5.4cm;*/
+        /*height: 5.4cm;*/
     }
 </style>
 <script src="/js/qrcode.min.js"></script>
@@ -61,20 +64,34 @@
 <div class="grid-container">
     {{#tickets}}
         <div class="grid-cell {{#isFirstLine}}grid-first-cell-margin{{/isFirstLine}} {{^isLastLine}}grid-cell-margin{{/isLastLine}}">
-            <div style="font-size: 10px;font-family: 'Lato Black'; {{#isFirstLine}}margin-top:18px{{/isFirstLine}}">{{#pronoun}}{{#i18n}}admin.ticket.pronoun.{{ pronoun }}{{/i18n}}{{/pronoun}}&nbsp;</div>
-            <div style="font-size: 28px; font-family: Lato; margin-top: 5px;text-overflow:ellipsis;height: 30px">{{ firstname }}</div>
+            <div style="font-size: 28px; font-family: Lato; margin-top: 5px;text-overflow:ellipsis;height: 30px;{{#isFirstLine}}margin-top:18px{{/isFirstLine}}">{{ firstname }}</div>
             <div style="font-size: 20px; font-family: Lato; text-overflow:ellipsis;height: 22px;margin-bottom: 4px;white-space: nowrap;">{{ lastname }}</div>
-            <div style="height: 2cm;width: 2cm; text-align: center;margin: auto" id="{{ number }}"></div>
-            <script>
+            <div style="font-size: 10px;font-family: 'Lato Black';">{{#pronoun}}{{#i18n}}admin.ticket.pronoun.{{ pronoun }}{{/i18n}}{{/pronoun}}&nbsp;</div>
+            <div style="display: flex;align-items: center">
+                <div style="height: 2cm;width: 2cm; text-align: center;margin: auto" id="{{ number }}"></div>
+                <script>
                     document.getElementById('{{ number }}').innerHTML = new QRCode({
-                    content: 'https://mixitconf.org/volunteer/mixette-donation/create/{{ number }}',
-                    container: 'svg-viewbox',
-                    join: true,
-                    ecl: 'L'
-                }).svg();
-            </script>
-            <div style="font-size: 12px;font-family: 'Lato Black'; margin-top: 5px">{{ type }}</div>
-            <div>&nbsp;</div>
+                        content: 'https://mixitconf.org/volunteer/mixette-donation/create/{{ number }}',
+                        container: 'svg-viewbox',
+                        join: true,
+                        ecl: 'L'
+                    }).svg();
+                </script>
+                <div style="margin-left:10px;">
+                    <div>
+                        <img src="{{imageType}}" class="mxt-icon--cat__talks"
+                             style="height: 50px"
+                             title="{{#i18n}}common.actions.update{{/i18n}}"/>
+                    </div>
+                    <div style="font-size: 12px;font-family: 'Lato Black'; margin-top: 5px">{{ type }}</div>
+                </div>
+            </div>
+            {{#externalId}}
+                <div style="font-size: 12px;font-family: 'Lato'; margin-top: 5px;text-transform: uppercase">{{ externalId }}</div>
+            {{/externalId}}
+            {{^externalId}}
+                <div style="font-size: 12px;font-family: 'Lato'; margin-top: 5px; ">&nbsp;</div>
+            {{/externalId}}
         </div>
 
     {{/tickets}}
