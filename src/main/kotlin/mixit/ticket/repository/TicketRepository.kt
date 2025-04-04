@@ -79,35 +79,35 @@ class TicketRepository(
 
     fun initData() {
         deleteAll().block()
-        if (count().block() == 0L) {
-            ClassPathResource("data/ticket/ticket_speaker.json").inputStream.use { resource ->
-                runBlocking {
-                    val tickets: List<TicketTemp> = objectMapper.readValue(resource)
-                    val users = userRepository.findAll().filterNot { it.email == null }.associateBy { it.email }
-                    val lotteries = lotteryRepository.findAll().associateBy { it.email }
-
-                    tickets
-                        .forEach { ticketTemp ->
-                            val encryptedEmail = cryptographer.encrypt(ticketTemp.encryptedEmail)!!
-                            val ticket = ticketTemp.toTicket(cryptographer)
-                                .copy(
-                                    login = cryptographer.encrypt(users[encryptedEmail]?.login),
-                                    lotteryRank = lotteries[encryptedEmail]?.rank,
-                                )
-                            save(ticket).block()
-                        }
-
-                }
-                logger.info("Ticket data initialization complete")
-            }
-        }
 //        if (count().block() == 0L) {
-//            ClassPathResource("data/ticket.json").inputStream.use { resource ->
-//                val tickets: List<Ticket> = objectMapper.readValue(resource)
-//                tickets.forEach { save(it).block() }
+//            ClassPathResource("data/ticket/ticket_speaker.json").inputStream.use { resource ->
+//                runBlocking {
+//                    val tickets: List<TicketTemp> = objectMapper.readValue(resource)
+//                    val users = userRepository.findAll().filterNot { it.email == null }.associateBy { it.email }
+//                    val lotteries = lotteryRepository.findAll().associateBy { it.email }
+//
+//                    tickets
+//                        .forEach { ticketTemp ->
+//                            val encryptedEmail = cryptographer.encrypt(ticketTemp.encryptedEmail)!!
+//                            val ticket = ticketTemp.toTicket(cryptographer)
+//                                .copy(
+//                                    login = cryptographer.encrypt(users[encryptedEmail]?.login),
+//                                    lotteryRank = lotteries[encryptedEmail]?.rank,
+//                                )
+//                            save(ticket).block()
+//                        }
+//
+//                }
 //                logger.info("Ticket data initialization complete")
 //            }
 //        }
+        if (count().block() == 0L) {
+            ClassPathResource("data/ticket.json").inputStream.use { resource ->
+                val tickets: List<Ticket> = objectMapper.readValue(resource)
+                tickets.forEach { save(it).block() }
+                logger.info("Ticket data initialization complete")
+            }
+        }
     }
 
     fun count() = template.count<Ticket>()
