@@ -187,7 +187,7 @@ class WebsiteRoutes(
             GET("/mixette/dashboard", mixetteHandler::mixette)
             GET("/newsletter-signin/{token}/{email:.*}", authenticationHandler::signInViaUrlForNewsletter)
             GET("/newsletter-subscribe", authenticationHandler::newsletterView)
-            GET("/schedule", talkHandler::scheduleView)
+            GET("/schedule") { talkHandler.findByEventView(talks(it, CURRENT_EVENT.toInt())) }
             GET("/search") { aboutHandler.findFullTextView(it) }
             GET("/speaker", userHandler::speakerView)
             GET("/sponsor/{login}") { userHandler.findOneView(it, UserHandler.ViewMode.ViewSponsor) }
