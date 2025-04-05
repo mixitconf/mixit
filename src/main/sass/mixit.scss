@@ -1,6 +1,9 @@
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "../../../node_modules/bootstrap/scss/functions";
 
+$font: 'Varela', Arial, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-title: 'Changa One', 'Varela round', Arial, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
 $secondary-color: #2C233D;
 $third-color: #aecbd6;
 $fourth-color: #757575;
@@ -517,7 +520,8 @@ $enable-cssgrid: true;
 
 .mxt-text--cat-room {
   color: $third-color;
-  font-weight: normal;
+  font-weight: bold;
+  font-family: $font-title;
   text-transform: uppercase;
 }
 
@@ -765,8 +769,6 @@ $agenda-color:  #E1E1D9;
 
 
 // New styles
-$font: 'Varela', Arial, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-$font-title: 'Changa One', 'Varela round', Arial, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 .mxt-body {
   font-family: $font !important;
   overflow: hidden;
