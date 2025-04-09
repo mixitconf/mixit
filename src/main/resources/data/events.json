@@ -2303,6 +2303,21 @@
                 "level": "MIXTEEN",
                 "sponsorId": "sponsor-esker",
                 "subscriptionDate": "2025-03-24"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "sponsor-groupama",
+                "subscriptionDate": "2025-03-28"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "adullact",
+                "subscriptionDate": "2025-04-07"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "octopuce",
+                "subscriptionDate": "2025-04-07"
             }
         ],
         "organizations": [],
@@ -2390,7 +2405,7 @@
         ],
         "photoUrls": [],
         "videoUrl": null,
-        "schedulingFileUrl": null,
+        "schedulingFileUrl": "https://drive.proton.me/urls/H4S0KA1WMG#hn9UHNGT8Jbj",
         "year": 2025,
         "streamingUrl": null
     }
