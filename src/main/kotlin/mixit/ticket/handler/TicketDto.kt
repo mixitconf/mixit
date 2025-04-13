@@ -16,6 +16,7 @@ data class TicketDto(
     val externalId: String?,
     val type: TicketType,
     val imageType: String,
+    val typeDisplay: String,
     val createdAt: Instant,
     val pronoun: TicketPronoun? = null,
     val englishSpeaker: Boolean = false,
@@ -33,6 +34,7 @@ data class TicketDto(
         createdAt = ticket.createdAt,
         type = ticket.type,
         imageType = ticket.type.image,
+        typeDisplay = ticket.type.typeDisplay,
         pronoun = ticket.pronoun,
         englishSpeaker = ticket.englishSpeaker
     )
