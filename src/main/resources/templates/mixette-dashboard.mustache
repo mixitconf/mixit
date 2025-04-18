@@ -7,7 +7,7 @@
 </style>
 
 <script>
-    let slide = 0
+    let slide = 3;
     let elements;
 
     function addNode(className, value, nodeSup) {
@@ -97,10 +97,10 @@
         align-items: center;
     }
 </style>
-<div class="row slide" style="background-color: #2C233D; width: 100vw; height: 100vh;display: flex">
+<div class="row slide" style="background-color: #2C233D; width: 100vw; height: 100vh;display: block">
     <div class="row">
         <div class="col-1"></div>
-        <div class="col-10" style="display: flex;flex-direction: column;justify-content: center;align-items: center">
+        <div class="col-10" style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
             <img src="/images/svg/mxt-icon--logo-mixette-inversed.svg" style="max-height: 14rem">
             <span style="color: #fff !important;font-size: 8em;font-weight: bold">Mixette</span>
             <div style="color: white;font-size: 4em;text-align: center;font-weight: bold">
@@ -131,8 +131,8 @@
         <div class="row">
             <div class="col-1"></div>
             <div class="col-10">
-                <div class="row">
-                    <div class="col-5">
+                <div class="d-flex justify-content-center align-items-center gap-4">
+                    <div style="flex: 1">
                         <img src="{{organization0.photoUrl}}"
                              style="max-width: 100%"
                              data-src="{{organization0.photoUrl}}"
@@ -141,7 +141,7 @@
                              alt="{{organization0.company}}"
                         >
                     </div>
-                    <div class="col-7">
+                    <div style="flex: 2;">
                         <h2 style="font-size: 6em">{{organization0.company}}</h2>
                         <div class="lead" style="font-size: 2em">
                             {{organization0.description}}
@@ -187,18 +187,18 @@
         <div class="row">
             <div class="col-1"></div>
             <div class="col-10">
-                <div class="row">
-                    <div class="col-5">
+                <div class="d-flex justify-content-center align-items-center gap-4">
+                    <div style="flex: 1">
                         <img src="{{organization1.photoUrl}}"
-                             data-src="{{organization1.photoUrl}}"
                              style="max-width: 100%"
+                             data-src="{{organization1.photoUrl}}"
                              class="mxt-img--sponsors mxt-img--lazyload"
                              id="{{#urlEncode}}{{organization1.login}}{{/urlEncode}}"
                              alt="{{organization1.company}}"
                         >
                     </div>
-                    <div class="col-7">
-                        <h2 style="font-size: 5em">{{organization1.company}}</h2>
+                    <div style="flex: 2;">
+                        <h2 style="font-size: 6em">{{organization1.company}}</h2>
                         <div class="lead" style="font-size: 2em">
                             {{organization1.description}}
                         </div>
@@ -230,19 +230,18 @@
         <div class="row">
             <div class="col-1"></div>
             <div class="col-10">
-                <div class="row">
-                    <div class="col-4 text-center"
-                         style="display: flex;justify-content: center;align-items: center;justify-items: center;align-content: center">
+                <div class="d-flex justify-content-center align-items-center gap-4">
+                    <div style="flex: 1">
                         <img src="{{organization2.photoUrl}}"
-                             data-src="{{organization2.photoUrl}}"
                              style="max-width: 100%"
+                             data-src="{{organization2.photoUrl}}"
                              class="mxt-img--sponsors mxt-img--lazyload"
                              id="{{#urlEncode}}{{organization2.login}}{{/urlEncode}}"
                              alt="{{organization2.company}}"
                         >
                     </div>
-                    <div class="col-8">
-                        <h2 style="font-size: 4em">{{organization2.company}}</h2>
+                    <div style="flex: 2;">
+                        <h2 style="font-size: 6em">{{organization2.company}}</h2>
                         <div class="lead" style="font-size: 2em">
                             {{organization2.description}}
                         </div>
@@ -252,6 +251,92 @@
             </div>
         </div>
     {{/organization2}}
+</div>
+<div class="row slide" style="background-color: #2C233D; width: 100vw; height: 100vh;display: none">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <div class="row pt-3 fs-5 fw-bold" style="margin-right: 1em;margin-left: 1em;color: white">
+                <div class="col-1 text-center">#</div>
+                <div class="col-4">Prénom</div>
+                <div class="col-4">Nom</div>
+                <div class="col-2 text-center">Nombre</div>
+                <div class="col-1 text-center">?</div>
+            </div>
+            <div class="row fw-bold fs-5 ranking"
+                 style="line-height: 1.5em;border: 1px solid #2c233d; margin: 1em; border-radius: 18px; background-color: #2c233d; color: white"></div>
+        </div>
+    </div>
+</div>
+<div class="row slide" style="display: none">
+    {{#organization3}}
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <div class="d-flex justify-content-center align-items-center gap-4">
+                    <div style="flex: 1">
+                        <img src="{{organization3.photoUrl}}"
+                             style="max-width: 100%"
+                             data-src="{{organization3.photoUrl}}"
+                             class="mxt-img--sponsors mxt-img--lazyload"
+                             id="{{#urlEncode}}{{organization3.login}}{{/urlEncode}}"
+                             alt="{{organization3.company}}"
+                        >
+                    </div>
+                    <div style="flex: 2;">
+                        <h2 style="font-size: 6em">{{organization3.company}}</h2>
+                        <div class="lead" style="font-size: 2em">
+                            {{organization3.description}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    {{/organization3}}
+</div>
+<div class="row slide" style="background-color: #2C233D; width: 100vw; height: 100vh;display: none">
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <div class="row pt-3 fs-5 fw-bold" style="margin-right: 1em;margin-left: 1em;color: white">
+                <div class="col-1 text-center">#</div>
+                <div class="col-4">Prénom</div>
+                <div class="col-4">Nom</div>
+                <div class="col-2 text-center">Nombre</div>
+                <div class="col-1 text-center">?</div>
+            </div>
+            <div class="row fw-bold fs-5 ranking"
+                 style="line-height: 1.5em;border: 1px solid #2c233d; margin: 1em; border-radius: 18px; background-color: #2c233d; color: white"></div>
+        </div>
+    </div>
+</div>
+<div class="row slide" style="display: none">
+    {{#organization4}}
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <div class="d-flex justify-content-center align-items-center gap-4">
+                    <div style="flex: 1">
+                        <img src="{{organization4.photoUrl}}"
+                             style="max-width: 100%"
+                             data-src="{{organization4.photoUrl}}"
+                             class="mxt-img--sponsors mxt-img--lazyload"
+                             id="{{#urlEncode}}{{organization4.login}}{{/urlEncode}}"
+                             alt="{{organization4.company}}"
+                        >
+                    </div>
+                    <div style="flex: 2;">
+                        <h2 style="font-size: 6em">{{organization4.company}}</h2>
+                        <div class="lead" style="font-size: 2em">
+                            {{organization4.description}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    {{/organization4}}
 </div>
 <div style="display: none">
     <div class="col-12 lead text-center fw-bold">

@@ -59,10 +59,12 @@ class MixetteHandler(
             }
         val orgs = (organizations.map { it.toSponsorDto(req.language()) })
         val params = mapOf(
-            "organizations" to orgs,
+            //"organizations" to orgs,
             "organization0" to if (orgs.isNotEmpty()) orgs[0] else null,
             "organization1" to if (orgs.size > 1) orgs[1] else null,
             "organization2" to if (orgs.size > 2) orgs[2] else null,
+            "organization3" to if (orgs.size > 3) orgs[3] else null,
+            "organization4" to if (orgs.size > 4) orgs[4] else null,
             "donations" to donationByOrgas,
             "loadAt" to LocalTime.now(ZoneId.of(TIMEZONE)).format(frenchTalkTimeFormatter),
             TITLE to MixetteDashboard.title
