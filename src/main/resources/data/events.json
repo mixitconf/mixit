@@ -2320,7 +2320,20 @@
                 "subscriptionDate": "2025-04-07"
             }
         ],
-        "organizations": [],
+        "organizations": [
+            {
+                "organizationLogin": "migrant_croix_rousse"
+            },
+            {
+                "organizationLogin": "anciela"
+            },
+            {
+                "organizationLogin": "echap"
+            },
+            {
+                "organizationLogin": "emmaus-connect"
+            }
+        ],
         "volunteers": [
             {
                 "volunteerLogin": "amelyeb"
@@ -2405,7 +2418,7 @@
         ],
         "photoUrls": [],
         "videoUrl": null,
-        "schedulingFileUrl": "https://drive.proton.me/urls/H4S0KA1WMG#hn9UHNGT8Jbj",
+        "schedulingFileUrl": "https://drive.proton.me/urls/59W61Y7J7M#I9kOQnsZ3oVh",
         "year": 2025,
         "streamingUrl": null
     }
