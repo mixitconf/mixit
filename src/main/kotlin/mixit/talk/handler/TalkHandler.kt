@@ -114,17 +114,18 @@ class TalkHandler(
         val rooms = roomsToDisplayOnAgenda(talks)
         val canDisplayAgenda = rooms.isNotEmpty() && !(rooms.contains(Room.UNKNOWN) && rooms.size == 1)
         val isCurrent = (config.year == NEXT_EVENT.toInt())
+        val isOldYear = (config.year <= 2013)
         val displayAgenda =
             ((config.tabs == TalksTabs.Schedule || config.tabs == TalksTabs.Favorites) && canDisplayAgenda) ||
                 (config.tabs == TalksTabs.MiXiTonAir && isCurrent)
-        if (config.tabs == TalksTabs.Mixette && !hasMixette) {
+        if (config.tabs == TalksTabs.Mixette && !hasMixette && !isOldYear) {
             return seeOther("${properties.baseUri}/${config.year}/medias")
         }
         if (config.tabs == TalksTabs.MiXiTonAir && !hasOnAir) {
             return if (!isCurrent) seeOther("${properties.baseUri}/${config.year}/medias") else
                 seeOther("${properties.baseUri}/${config.year}?agenda=true")
         }
-        if (listOf(TalksTabs.Schedule, TalksTabs.Talks).contains(config.tabs) && !isCurrent) {
+        if (listOf(TalksTabs.Schedule, TalksTabs.Talks).contains(config.tabs) && (!isCurrent) ) {
             return seeOther("${properties.baseUri}/${config.year}/medias")
         }
         if (listOf(
