@@ -41,6 +41,7 @@ enum class MustacheTemplate(val template: String, val title: String?, val path: 
     AdminPost("admin/admin-post", null),
     AdminTalk("admin/admin-talk", "admin.talk.title"),
     AdminTalks("admin/admin-talks", "admin.talks.title", "admin/talks"),
+    AdminTalkByRoom("admin/admin-talks-rooms", "admin.talks.title", "admin/talks"),
     AdminTicket("admin/admin-ticket", "admin.ticket.title"),
     AdminTicketEdit("admin/admin-ticket-edit", "admin.ticket.title"),
     AdminTicketPrint("admin/admin-ticket-print", "admin.ticket.title"),

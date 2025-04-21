@@ -148,6 +148,7 @@ class WebsiteRoutes(
             GET("/admin/post/create", adminPostHandler::createPost)
             GET("/admin/post/edit/{id}", adminPostHandler::editPost)
             GET("/admin/talks") { adminTalkHandler.adminTalks(it, CURRENT_EVENT) }
+            GET("/admin/talks-rooms") { adminTalkHandler.adminTalksByRooms(it, CURRENT_EVENT) }
             GET("/admin/talks/create/{year}", adminTalkHandler::createTalk)
             GET("/admin/talks/edit/{id}", adminTalkHandler::editTalk)
             GET("/admin/talk/feedback/{talkId}") { feedbackHandler.findMyFeedbacks(it, admin = true) }

@@ -49,7 +49,7 @@ class MixetteHandler(
                 organizations.first { it.login == donation.organizationLogin }.let {
                     MixetteOrganizationDonationDto(name = it.company, login = it.login)
                 }
-            }
+           }
             .map { entry ->
                 entry.key.populate(
                     number = entry.value.size,
@@ -59,7 +59,7 @@ class MixetteHandler(
             }
         val orgs = (organizations.map { it.toSponsorDto(req.language()) })
         val params = mapOf(
-            //"organizations" to orgs,
+            // "organizations" to orgs,
             "organization0" to if (orgs.isNotEmpty()) orgs[0] else null,
             "organization1" to if (orgs.size > 1) orgs[1] else null,
             "organization2" to if (orgs.size > 2) orgs[2] else null,
