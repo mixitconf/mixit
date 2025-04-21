@@ -3,7 +3,6 @@ package mixit.ticket.repository
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
 import java.time.Instant
-import kotlinx.coroutines.runBlocking
 import mixit.security.model.Cryptographer
 import mixit.ticket.model.Ticket
 import mixit.ticket.model.TicketPronoun

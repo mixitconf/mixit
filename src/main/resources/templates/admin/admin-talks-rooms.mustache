@@ -1,0 +1,58 @@
+{{> header}}
+<script src="/js/qrcode.min.js"></script>
+
+<div class="row pt-5">
+{{#talks.entrySet}}
+    {{#key}}
+            <div class="row text-center">
+                <h1 style="display:block">{{#i18n}}{{key}}{{/i18n}}</h1>
+            </div>
+    {{/key}}
+    {{#value}}
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="col-2 text-center p-4">
+                    <div id="{{ slug }}"></div>
+                    <script>
+                        document.getElementById('{{ slug }}').innerHTML = new QRCode({
+                            content: 'https://mixitconf.org/{{event}}/{{slug}}#feedback',
+                            container: 'svg-viewbox',
+                            join: true,
+                            ecl: 'L'
+                        }).svg();
+                    </script>
+                </div>
+                <div class="col-10">
+                    <h2>{{title}}</h2>
+                    <div class="text-center d-flex align-items-center mb-2">
+                        {{#topic}}
+                            <div class="mxt-text--cat mxt-text--cat-{{topic}}">
+                                <img src="/images/svg/mxt-icon--{{topic}}.svg" class="mxt-icon--cat mxt-icon--cat__talks"
+                                     alt="{{#i18n}}topics.{{topic}}.title{{/i18n}}"/>
+                                <span>{{#i18n}}topics.{{topic}}.title{{/i18n}}</span>
+                            </div>
+                        {{/topic}}
+                        <div class="ms-2"><b>{{#date}}{{date}}{{/date}}</b></div>
+                            <div class="ms-2">{{#start}}{{start}} - {{end}}{{/start}}</div>
+                    </div>
+                    <div class="row">
+                    <div class="col-2">
+                        {{#speakers}}
+                            <div class="text-center mxt-img-avatar-container d-flex flex-column">
+                            <img src="{{#photoUrl}}{{photoUrl}}{{/photoUrl}}{{^photoUrl}}https://www.gravatar.com/avatar/{{emailHash}}?s=100&?s=100&d={{baseUri}}
+                                %2Fimages%2Fpng%2Fmxt-icon--default-avatar.png{{/photoUrl}}"
+                                class="mxt-img-avatar__speaker" style="width: 80px; height: 80px;min-width: 80px;
+                                min-height: 80px;">
+                                <b>{{firstname}}&nbsp;{{lastname}}</b>
+                            </div>
+                        {{/speakers}}
+                    </div>
+                    <div class="col-10">{{#markdown}}{{summary}}{{/markdown}}</div>
+                </div>
+
+            </div>
+        </div>
+    {{/value}}
+{{/talks.entrySet}}
+</div>
+
+{{> footer}}

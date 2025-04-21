@@ -247,19 +247,19 @@ class AdminMixetteHandler(
      */
     private suspend fun findDonorByEncryptedTicketNumber(ticketNumber: String): MixetteUserDonationDto? {
         // We find the ticket
-        val ticket = ticketService.findByNumber(cryptographer.decrypt(ticketNumber)!!)?.toEntity(cryptographer)
-        // We try to find if user is known
-        val user = ticket?.let { userService.findOneByEncryptedEmailOrNull(it.encryptedEmail) }?.toUser()
+        val ticketSource = ticketService.findByNumber(cryptographer.decrypt(ticketNumber)!!)?.toEntity(cryptographer) ?: return null
+        val decryptedEmail = cryptographer.decrypt(ticketSource.encryptedEmail)!!
+        // We have to check if the user has several tickets
+        val ticket = ticketService.findByEmail(decryptedEmail).first()
 
-        if (ticket == null) {
-            return null
-        }
-        val name = ticket.let { "${cryptographer.decrypt(it.firstname)} ${cryptographer.decrypt(it.lastname)}" }
+        // We try to find if user is known
+        val user = ticket.let { userService.findOneByEncryptedEmailOrNull(ticketSource.encryptedEmail) }?.toUser()
+        val name = "${ticket.firstname} ${ticket.lastname}"
 
         return MixetteUserDonationDto(
             name = name,
-            email = cryptographer.decrypt(ticket.encryptedEmail)!!,
-            ticketNumber = cryptographer.decrypt(ticket.number),
+            email = decryptedEmail,
+            ticketNumber = ticket.number,
             login = user?.login
         )
     }

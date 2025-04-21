@@ -34,6 +34,7 @@ import mixit.util.mustache.MustacheI18n.TALKS
 import mixit.util.mustache.MustacheI18n.TITLE
 import mixit.util.mustache.MustacheI18n.TOPICS
 import mixit.util.mustache.MustacheI18n.YEAR
+import mixit.util.mustache.MustacheTemplate
 import mixit.util.mustache.MustacheTemplate.AdminTalk
 import mixit.util.mustache.MustacheTemplate.AdminTalks
 import mixit.util.seeOther
@@ -65,6 +66,21 @@ class AdminTalkHandler(
             TALKS to talks
         )
         return ok().render(AdminTalks.template, params).awaitSingle()
+    }
+
+    suspend fun adminTalksByRooms(req: ServerRequest, year: String): ServerResponse {
+        val talks = service.findByEvent(year)
+            .map { it.toDto(req.language()) }
+            .sortedBy { it.date }
+            .groupBy { it.room }
+
+        val params = mapOf(
+            TITLE to AdminTalks.title,
+            YEAR to year,
+            "isCurrent" to (year == MixitApplication.CURRENT_EVENT),
+            TALKS to talks
+        )
+        return ok().render(MustacheTemplate.AdminTalkByRoom.template, params).awaitSingle()
     }
 
     suspend fun createTalk(req: ServerRequest): ServerResponse =

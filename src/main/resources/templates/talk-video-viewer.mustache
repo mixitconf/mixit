@@ -15,18 +15,21 @@
     <div class="mxt-video--player-video">
         {{#isVimeo}}
             <div class="mxt-wrapper--intrinsic">
-                <iframe data-src="{{player}}"
+                {{#player}}<iframe data-src="{{player}}"
                         class="mxt-wrapper--video-player mxt-img--lazyload"
                         allowfullscreen></iframe>
+                {{/player}}
             </div>
         {{/isVimeo}}
         {{^isVimeo}}
             {{#isYoutube}}
                 <div class="mxt-wrapper--intrinsic">
+                    {{#player}}
                     <iframe data-src="{{player}}"
                             class="mxt-wrapper--video-player mxt-img--lazyload"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    {{/player}}
                 </div>
             {{/isYoutube}}
             {{^isYoutube}}

@@ -9,7 +9,5 @@ data class Link(
     }
 }
 
-
 fun Link.isTwitterOrTruthSocial(): Boolean =
     Link.excludedSocialNetworks.any { url.lowercase().contains(it) || name.lowercase().contains(it) }
-

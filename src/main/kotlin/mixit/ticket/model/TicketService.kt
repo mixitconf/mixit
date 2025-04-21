@@ -21,8 +21,8 @@ class TicketService(
     suspend fun findByNumber(number: String): CachedTicket? =
         findAll().firstOrNull { it.number == number }
 
-    suspend fun findByEmail(email: String): CachedTicket? =
-        findAll().firstOrNull { it.email == email }
+    suspend fun findByEmail(email: String): List<CachedTicket> =
+        findAll().filter { it.email == email }.sortedBy { it.number }
 
     suspend fun findByType(type: TicketType): List<CachedTicket> =
         findAll().filter { it.type == type }
