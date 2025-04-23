@@ -1,50 +1,50 @@
 {{> header}}
 <div class="container-xxl">
 
-{{#hasFeatureMixitOnAirOnHomePage}}
-    <h2 class="mt-5 pt-2">{{#i18n}}home.live.title{{/i18n}}</h2>
-    <p class="mb-2">{{#i18n}}home.live.intro{{/i18n}}</p>
+    {{#hasFeatureMixitOnAirOnHomePage}}
+        <h2 class="mt-5 pt-2">{{#i18n}}home.live.title{{/i18n}}</h2>
+        <p class="mb-2">{{#i18n}}home.live.intro{{/i18n}}</p>
 
-    <div class="mxt-wrapper--intrinsic">
-        <iframe
-                src="{{#event.streamingUrl}}{{event.streamingUrl}}{{/event.streamingUrl}}"
-                height="200"
-                width="1000"
-                allowfullscreen>
-        </iframe>
-    </div>
-{{/hasFeatureMixitOnAirOnHomePage}}
-{{^hasFeatureMixitOnAirOnHomePage}}
-    <h2>{{#i18n}}home.next.edition.title{{/i18n}}</h2>
-    <p class="lead">{{#i18n}}home.news.intro{{/i18n}}</p>
-    <div class="row">
-        <p>{{#i18n}}home.news.preconf{{/i18n}}</p>
-<!--        <p>{{#i18n}}home.news.preconf2{{/i18n}}</p>-->
-    </div>
-{{/hasFeatureMixitOnAirOnHomePage}}
-<!--    <div class="row mxt-home-round-header">-->
-<!--        <div class="col-md-2 col-sm-6">-->
-<!--            <img src="/images/svg/timeline/nov18.svg"-->
-<!--                 alt="{{#i18n}}home.timeline.cfp.start{{/i18n}}">-->
-<!--            <div class="text-center">{{#i18n}}home.timeline.cfp.start{{/i18n}}</div>-->
-<!--        </div>-->
-<!--        <div class="col-md-2 col-sm-6">-->
-<!--            <img src="/images/svg/timeline/jan17.svg"-->
-<!--                 alt="{{#i18n}}home.timeline.cfp.end{{/i18n}}">-->
-<!--            <div class="text-center">{{#i18n}}home.timeline.cfp.end{{/i18n}}</div>-->
-<!--        </div>-->
-<!--        <div class="col-md-2 col-sm-6">-->
-<!--            <img src="/images/svg/timeline/jan27.svg"-->
-<!--                 alt="{{#i18n}}home.timeline.ticketing{{/i18n}}">-->
-<!--            <div class="text-center">{{#i18n}}home.timeline.ticketing{{/i18n}}</div>-->
-<!--        </div>-->
-<!--        <div class="d-none d-md-block col-md-2">-->
-<!--            <img src="/images/svg/timeline/avr29.svg"-->
-<!--                 alt="{{#i18n}}home.timeline.mixit{{/i18n}}"><br>-->
-<!--            <img src="/images/svg/mxt-icon--logo-25.svg" class="img-fluid pt-3"-->
-<!--                 alt="{{#i18n}}home.timeline.mixit{{/i18n}}">-->
-<!--        </div>-->
-<!--    </div>-->
+        <div class="mxt-wrapper--intrinsic">
+            <iframe
+                    src="{{#event.streamingUrl}}{{event.streamingUrl}}{{/event.streamingUrl}}"
+                    height="200"
+                    width="1000"
+                    allowfullscreen>
+            </iframe>
+        </div>
+    {{/hasFeatureMixitOnAirOnHomePage}}
+    {{^hasFeatureMixitOnAirOnHomePage}}
+        <h2>{{#i18n}}home.next.edition.title{{/i18n}}</h2>
+        <p class="lead">{{#i18n}}home.news.intro{{/i18n}}</p>
+        <div class="row">
+            <p>{{#i18n}}home.news.preconf{{/i18n}}</p>
+            <!--        <p>{{#i18n}}home.news.preconf2{{/i18n}}</p>-->
+        </div>
+    {{/hasFeatureMixitOnAirOnHomePage}}
+    <!--    <div class="row mxt-home-round-header">-->
+    <!--        <div class="col-md-2 col-sm-6">-->
+    <!--            <img src="/images/svg/timeline/nov18.svg"-->
+    <!--                 alt="{{#i18n}}home.timeline.cfp.start{{/i18n}}">-->
+    <!--            <div class="text-center">{{#i18n}}home.timeline.cfp.start{{/i18n}}</div>-->
+    <!--        </div>-->
+    <!--        <div class="col-md-2 col-sm-6">-->
+    <!--            <img src="/images/svg/timeline/jan17.svg"-->
+    <!--                 alt="{{#i18n}}home.timeline.cfp.end{{/i18n}}">-->
+    <!--            <div class="text-center">{{#i18n}}home.timeline.cfp.end{{/i18n}}</div>-->
+    <!--        </div>-->
+    <!--        <div class="col-md-2 col-sm-6">-->
+    <!--            <img src="/images/svg/timeline/jan27.svg"-->
+    <!--                 alt="{{#i18n}}home.timeline.ticketing{{/i18n}}">-->
+    <!--            <div class="text-center">{{#i18n}}home.timeline.ticketing{{/i18n}}</div>-->
+    <!--        </div>-->
+    <!--        <div class="d-none d-md-block col-md-2">-->
+    <!--            <img src="/images/svg/timeline/avr29.svg"-->
+    <!--                 alt="{{#i18n}}home.timeline.mixit{{/i18n}}"><br>-->
+    <!--            <img src="/images/svg/mxt-icon--logo-25.svg" class="img-fluid pt-3"-->
+    <!--                 alt="{{#i18n}}home.timeline.mixit{{/i18n}}">-->
+    <!--        </div>-->
+    <!--    </div>-->
     {{#disableForTheMoment}}
         {{#hasFeatureLottery}}
             <p class="pt-3">{{#i18n}}home.news.cfp.lottery{{/i18n}}</p>
@@ -112,21 +112,182 @@
                     {{#i18n}}home.intro.newsletter{{/i18n}}
                 </a>
             </div>
-<!--            <div class="nav-item ms-3">-->
-<!--                <a href="/sponsors" class="nav-link mxt-navbar--nav-link"-->
-<!--                   alt="{{#i18n}}sponsors.becoming{{/i18n}}">-->
-<!--                    <img src="/images/svg/mxt-icon-sponsor-dark.svg"-->
-<!--                         class="mxt-icon--navbar me-2"-->
-<!--                         alt="{{#i18n}}sponsors.becoming{{/i18n}}">-->
-<!--                    {{#i18n}}sponsors.becoming{{/i18n}}-->
-<!--                </a>-->
-<!--            </div>-->
+            <!--            <div class="nav-item ms-3">-->
+            <!--                <a href="/sponsors" class="nav-link mxt-navbar--nav-link"-->
+            <!--                   alt="{{#i18n}}sponsors.becoming{{/i18n}}">-->
+            <!--                    <img src="/images/svg/mxt-icon-sponsor-dark.svg"-->
+            <!--                         class="mxt-icon--navbar me-2"-->
+            <!--                         alt="{{#i18n}}sponsors.becoming{{/i18n}}">-->
+            <!--                    {{#i18n}}sponsors.becoming{{/i18n}}-->
+            <!--                </a>-->
+            <!--            </div>-->
             {{#disableForTheMoment}}
 
             {{/disableForTheMoment}}
         </nav>
     </div>
 </div>
+
+<div class="row mxt-layout-header-effect mxt-section">
+    <div class="mxt-layout-header-effect-grey-inversed"></div>
+</div>
+
+<div class="mxt-layout-main-accent-section">
+    <div class="container-xxl ">
+        <h2>{{#i18n}}home.podcast.title{{/i18n}}</h2>
+        <p class="lead">{{#i18n}}home.podcast.subtitle{{/i18n}}</p>
+
+        <p>{{#i18n}}home.podcast.description{{/i18n}}</p>
+
+        <p>{{#i18n}}home.podcast.description2{{/i18n}}</p>
+
+        <div>
+            <nav class="navbar mxt-navbar--talks" style="justify-content: center;">
+                <div class="nav-item ms-3">
+                    <a href="https://podcasts.apple.com/fr/podcast/mixit/id1809671856"
+                       class="nav-link mxt-navbar--nav-link"
+                       target="_blank"
+                       alt="Apple podcast">
+                        <img src="/images/svg/podcast/mxt-icon_apple-podcast.svg"
+                             class="mxt-icon--navbar me-2"
+                             alt="Apple podcast">
+                        Apple podcast
+                    </a>
+                </div>
+                <div class="nav-item ms-3">
+                    <a href="https://open.spotify.com/show/1VjQM9KdqFVRRFzkgPf7b3"
+                       class="nav-link mxt-navbar--nav-link"
+                       target="_blank"
+                       alt="Spotify">
+                        <img src="/images/svg/podcast/mxt-icon_spotify.svg"
+                             class="mxt-icon--navbar me-2"
+                             alt="Spotify">
+                        Spotify
+                    </a>
+                </div>
+                <div class="nav-item ms-3">
+                    <a href="https://www.deezer.com/show/1001819911"
+                       class="nav-link mxt-navbar--nav-link"
+                       target="_blank"
+                       alt="Deezer">
+                        <img src="/images/svg/podcast/mxt-icon_deezer.svg"
+                             class="mxt-icon--navbar me-2"
+                             alt="Deezer">
+                        Deezer
+                    </a>
+                </div>
+                <div class="nav-item ms-3">
+                    <a href="https://podcastaddict.com/podcast/mixit-on-air/5835412"
+                       class="nav-link mxt-navbar--nav-link"
+                       target="_blank"
+                       alt="Podcast Addict">
+                        <img src="/images/svg/podcast/mxt-icon_podcast-addict.svg"
+                             class="mxt-icon--navbar me-2"
+                             alt="Podcast Addict">
+                        Podcast Addict
+                    </a>
+                </div>
+                <div class="nav-item ms-3">
+                    <a href="https://overcast.fm/itunes1809671856"
+                       class="nav-link mxt-navbar--nav-link"
+                       target="_blank"
+                       alt="Overcast">
+                        <img src="/images/svg/podcast/mxt-icon_overcast.svg"
+                             class="mxt-icon--navbar me-2"
+                             alt="Overcast">
+                        Overcast
+                    </a>
+                </div>
+                <div class="nav-item ms-3">
+                    <a href="https://podcast.ausha.co/mixit"
+                       class="nav-link mxt-navbar--nav-link"
+                       target="_blank"
+                       alt="Ausha">
+                        <img src="/images/svg/podcast/mxt-icon_ausha.svg"
+                             class="mxt-icon--navbar me-2"
+                             alt="Ausha">
+                        Ausha
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="mxt-wrapper--intrinsic-podcast">
+            <iframe name="Ausha Podcast Player" frameborder="0"
+                    loading="lazy"
+                    id="ausha-tvtg"
+                    height="220"
+                    style="border: none; width:100%; height:220px"
+                    src="https://player.ausha.co/?podcastId=ZR0DWhzVRKEV&v=3&playerId=ausha-tvtg"></iframe>
+            <script src="https://player.ausha.co/ausha-player.js"></script>
+        </div>
+    </div>
+</div>
+<div class="row mxt-layout-header-effect">
+    <div class="mxt-layout-header-effect-grey"></div>
+</div>
+
+<div class="container-xxl mxt-section">
+    <div class="container-xxl">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <h2>{{#i18n}}home.values.title{{/i18n}}</h2>
+                <div class="d-flex align-items-baseline pt-3">
+                    <div class="">
+                        <img src="/images/svg/mxt-icon-access-dark.svg" class="mxt-icon--cat__home"
+                             alt="{{#i18n}}home.values.accessibility.title{{/i18n}}">
+                    </div>
+                    <div class="">
+                        <h3 class="pt-0">{{#i18n}}home.values.accessibility.title{{/i18n}}</h3>
+                    </div>
+                </div>
+                <div>{{#i18n}}home.values.accessibility.desc{{/i18n}}</div>
+
+                <div class="d-flex align-items-baseline pt-3">
+                    <div class="">
+                        <img src="/images/svg/mxt-icon-sponsor-dark.svg" class="mxt-icon--cat__home"
+                             alt="{{#i18n}}home.values.safe.title{{/i18n}}">
+                    </div>
+                    <div class="">
+                        <h3 class="pt-0">{{#i18n}}home.values.safe.title{{/i18n}}</h3>
+                    </div>
+                </div>
+                <div>{{#i18n}}home.values.safe.desc{{/i18n}}</div>
+
+                <div class="d-flex align-items-baseline pt-3">
+                    <div class="">
+                        <img src="/images/svg/mxt-icon-eco-dark.svg" class="mxt-icon--cat__home"
+                             alt="{{#i18n}}home.values.eco.title{{/i18n}}">
+                    </div>
+                    <div class="">
+                        <h3 class="pt-0">{{#i18n}}home.values.eco.title{{/i18n}}</h3>
+                    </div>
+                </div>
+                <div>{{#i18n}}home.values.eco.desc{{/i18n}}</div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <h2>{{#i18n}}home.stats{{/i18n}}</h2>
+
+                <div class="mxt-header--stats">
+                    <h3>+ 800</h3>
+                    <div>{{#i18n}}home.stats.attendees{{/i18n}}</div>
+                    <h3>+ 90</h3>
+                    <div>{{#i18n}}home.stats.speakers{{/i18n}}</div>
+                    <h3>+ 60</h3>
+                    <div>{{#i18n}}home.stats.sessions{{/i18n}}</div>
+                    <h3>+ 2000</h3>
+                    <div>{{#i18n}}home.stats.crepes{{/i18n}}</div>
+                </div>
+                <div class="mxt-wrapper--intrinsic">
+                    <iframe src="https://www.youtube.com/embed/s7_Gz2OScLk" class="mxt-wrapper--video-player"
+                            allowfullscreen=""></iframe>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <div class="row mxt-layout-header-effect mxt-section">
     <div class="mxt-layout-header-effect-grey-inversed"></div>
@@ -188,69 +349,10 @@
             {{/aliens}}
         </div>
     </div>
-
-
 </div>
-<div class="row mxt-layout-header-effect"><div class="mxt-layout-header-effect-grey"></div></div>
-
-<div class="container-xxl mxt-section">
-    <div class="container-xxl">
-        <div class="row">
-            <div class="col-12 col-lg-6">
-                <h2>{{#i18n}}home.values.title{{/i18n}}</h2>
-                <div class="d-flex align-items-baseline pt-3">
-                    <div class="">
-                        <img src="/images/svg/mxt-icon-access-dark.svg" class="mxt-icon--cat__home"
-                             alt="{{#i18n}}home.values.accessibility.title{{/i18n}}">
-                    </div>
-                    <div class="">
-                        <h3 class="pt-0">{{#i18n}}home.values.accessibility.title{{/i18n}}</h3>
-                    </div>
-                </div>
-                <div>{{#i18n}}home.values.accessibility.desc{{/i18n}}</div>
-
-                <div class="d-flex align-items-baseline pt-3">
-                    <div class="">
-                        <img src="/images/svg/mxt-icon-sponsor-dark.svg" class="mxt-icon--cat__home"
-                             alt="{{#i18n}}home.values.safe.title{{/i18n}}">
-                    </div>
-                    <div class="">
-                        <h3 class="pt-0">{{#i18n}}home.values.safe.title{{/i18n}}</h3>
-                    </div>
-                </div>
-                <div>{{#i18n}}home.values.safe.desc{{/i18n}}</div>
-
-                <div class="d-flex align-items-baseline pt-3">
-                    <div class="">
-                        <img src="/images/svg/mxt-icon-eco-dark.svg" class="mxt-icon--cat__home"
-                             alt="{{#i18n}}home.values.eco.title{{/i18n}}">
-                    </div>
-                    <div class="">
-                        <h3 class="pt-0">{{#i18n}}home.values.eco.title{{/i18n}}</h3>
-                    </div>
-                </div>
-                <div>{{#i18n}}home.values.eco.desc{{/i18n}}</div>
-            </div>
-            <div class="col-12 col-lg-6">
-                <h2>{{#i18n}}home.stats{{/i18n}}</h2>
-
-                <div class="mxt-header--stats">
-                    <h3>+ 800</h3>
-                    <div>{{#i18n}}home.stats.attendees{{/i18n}}</div>
-                    <h3>+ 90</h3>
-                    <div>{{#i18n}}home.stats.speakers{{/i18n}}</div>
-                    <h3>+ 60</h3>
-                    <div>{{#i18n}}home.stats.sessions{{/i18n}}</div>
-                    <h3>+ 2000</h3>
-                    <div>{{#i18n}}home.stats.crepes{{/i18n}}</div>
-                </div>
-
-                <div class="mxt-wrapper--intrinsic">
-                    <iframe src="https://www.youtube.com/embed/s7_Gz2OScLk" class="mxt-wrapper--video-player"
-                            allowfullscreen=""></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="row mxt-layout-header-effect">
+    <div class="mxt-layout-header-effect-grey"></div>
 </div>
+
+
 {{> footer-sponsor}}
