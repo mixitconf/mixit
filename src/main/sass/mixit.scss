@@ -404,7 +404,14 @@ $enable-cssgrid: true;
   padding-bottom: 56.25%; // 16:9
 }
 
-.mxt-wrapper--intrinsic iframe {
+.mxt-wrapper--intrinsic-podcast {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 23%;
+}
+
+.mxt-wrapper--intrinsic-podcast iframe, .mxt-wrapper--intrinsic iframe {
   position: absolute;
   top: 0;
   left: 0;
