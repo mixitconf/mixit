@@ -409,22 +409,16 @@ $enable-cssgrid: true;
   height: 0;
   overflow: hidden;
   @media (min-width: 950px) {
-    padding-bottom: 20% !important;
-  }
-  @media (min-width: 400px) and (max-width: 949px) {
     padding-bottom: 23% !important;
   }
-  @media (min-width: 524px) and (max-width: 676px) {
+  @media (min-width: 769px) and (max-width: 949px) {
+    padding-bottom: 30% !important;
+  }
+  @media (min-width: 525px) and (max-width: 768px) {
     padding-bottom: 55% !important;
   }
-  @media (min-width: 340px) and (max-width: 523px) {
-    padding-bottom: 120% !important;
-  }
-  @media (min-width: 276px) and (max-width: 339px) {
+  @media (max-width: 524px) {
     padding-bottom: 150% !important;
-  }
-  @media (max-width: 275px) {
-    padding-bottom: 180% !important;
   }
 }
 
