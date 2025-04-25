@@ -408,7 +408,24 @@ $enable-cssgrid: true;
   position: relative;
   height: 0;
   overflow: hidden;
-  padding-bottom: 23%;
+  @media (min-width: 950px) {
+    padding-bottom: 20% !important;
+  }
+  @media (min-width: 400px) and (max-width: 949px) {
+    padding-bottom: 23% !important;
+  }
+  @media (min-width: 400px) and (max-width: 676px) {
+    padding-bottom: 50% !important;
+  }
+  @media (min-width: 340px) and (max-width: 399px) {
+    padding-bottom: 120% !important;
+  }
+  @media (min-width: 276px) and (max-width: 339px) {
+    padding-bottom: 150% !important;
+  }
+  @media (max-width: 275px) {
+    padding-bottom: 180% !important;
+  }
 }
 
 .mxt-wrapper--intrinsic-podcast iframe, .mxt-wrapper--intrinsic iframe {
@@ -657,7 +674,7 @@ $enable-cssgrid: true;
 }
 
 $agenda-color-hover: #C6C8BD;
-$agenda-color:  #E1E1D9;
+$agenda-color: #E1E1D9;
 
 .mxt-agenda--talk-container:hover {
   border: 2px solid $secondary-color;
@@ -681,6 +698,7 @@ $agenda-color:  #E1E1D9;
 
 .mxt-agenda--talk-container-disable {
   background-color: #eee !important;
+
   div {
     color: #92929a !important;
   }
@@ -699,9 +717,11 @@ $agenda-color:  #E1E1D9;
   max-height: 100%;
   height: 100%;
   z-index: -10;
+
   div {
     color: $black;
   }
+
   .mxt-text--cat-format {
     font-size: smaller;
   }
@@ -806,6 +826,7 @@ $agenda-color:  #E1E1D9;
   margin: 0;
   padding: 0.5em;
   justify-content: center;
+
   .mxt-icon--logo {
     height: 1em;
     padding-left: 1em;
@@ -1109,6 +1130,7 @@ h3 {
   font-size: larger;
   flex-direction: column;
   align-items: center;
+
   > h3 {
     color: $primary-color !important;
   }
