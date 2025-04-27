@@ -2318,6 +2318,21 @@
                 "level": "SILVER",
                 "sponsorId": "octopuce",
                 "subscriptionDate": "2025-04-07"
+            },
+            {
+                "level": "GOLD",
+                "sponsorId": "dataiku",
+                "subscriptionDate": "2025-04-20"
+            },
+            {
+                "level": "LANYARD",
+                "sponsorId": "grandlyon",
+                "subscriptionDate": "2025-04-23"
+            },
+            {
+                "level": "SILVER",
+                "sponsorId": "solidaires-informatique",
+                "subscriptionDate": "2025-04-25"
             }
         ],
         "organizations": [
@@ -2332,6 +2347,9 @@
             },
             {
                 "organizationLogin": "emmaus-connect"
+            },
+            {
+                "organizationLogin": "designers-ethiques"
             }
         ],
         "volunteers": [
@@ -2418,7 +2436,7 @@
         ],
         "photoUrls": [],
         "videoUrl": null,
-        "schedulingFileUrl": "https://drive.proton.me/urls/59W61Y7J7M#I9kOQnsZ3oVh",
+        "schedulingFileUrl": "https://drive.proton.me/urls/QVC1GDYRMM#dVZPkLs4csGO",
         "year": 2025,
         "streamingUrl": null
     }
