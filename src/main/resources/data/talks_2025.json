@@ -8,7 +8,7 @@
             "80c1435d-cfad-40dd-975c-663adb0ddd6d"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.818",
+        "addedAt": "2025-04-27T17:41:23.235",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -30,7 +30,7 @@
             "glaforge"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.818",
+        "addedAt": "2025-04-27T17:41:23.236",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -52,7 +52,7 @@
             "anais.huet"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.818",
+        "addedAt": "2025-04-27T17:41:23.236",
         "description": "",
         "topic": "team",
         "video": null,
@@ -74,7 +74,7 @@
             "iris.vnaudin"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.818",
+        "addedAt": "2025-04-27T17:41:23.236",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -97,7 +97,7 @@
             "sonia.seddiki"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.818",
+        "addedAt": "2025-04-27T17:41:23.236",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -119,7 +119,7 @@
             "albane.fagot"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.818",
+        "addedAt": "2025-04-27T17:41:23.236",
         "description": "",
         "topic": "team",
         "video": null,
@@ -142,7 +142,7 @@
             "olivier.perez.pro"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.819",
+        "addedAt": "2025-04-27T17:41:23.236",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -165,7 +165,7 @@
             "patrice.desaintsteban"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.819",
+        "addedAt": "2025-04-27T17:41:23.236",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -188,7 +188,7 @@
             "tpierrain"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.819",
+        "addedAt": "2025-04-27T17:41:23.236",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -210,7 +210,7 @@
             "sdeleuze"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.819",
+        "addedAt": "2025-04-27T17:41:23.236",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -232,7 +232,7 @@
             "philippe-laumay"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.819",
+        "addedAt": "2025-04-27T17:41:23.236",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -255,7 +255,7 @@
             "so-lapouge"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.819",
+        "addedAt": "2025-04-27T17:41:23.236",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -277,7 +277,7 @@
             "elmaizi.hafsa.it"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.819",
+        "addedAt": "2025-04-27T17:41:23.237",
         "description": "",
         "topic": "team",
         "video": null,
@@ -299,7 +299,7 @@
             "val\u00e9rie_val\u00e9rie"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.819",
+        "addedAt": "2025-04-27T17:41:23.237",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -321,7 +321,7 @@
             "camilleroux"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.819",
+        "addedAt": "2025-04-27T17:41:23.237",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -343,7 +343,7 @@
             "glaforge"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.819",
+        "addedAt": "2025-04-27T17:41:23.237",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -360,12 +360,12 @@
         "format": "TALK",
         "event": "2025",
         "title": "Quand le Terminal d\u00e9vore la UI : TUI pour tout le monde !",
-        "summary": "Lass\u00e9\u00b7es des interfaces graphiques gourmandes en ressources et complexes \u00e0 utiliser ?\r\nVous n&#39;avez pas de temps \u00e0 perdre entre votre terminal et un navigateur web ?\r\nD\u00e9couvrez le pouvoir de l&#39;interface utilisateur textuelle (Textual User Interface) !\r\n\r\nNous explorerons l&#39;univers des TUI et leur potentiel pour enrichir les applications en ligne de commande.\r\nEn partant d&#39;une CLI simple, je vous montrerai comment int\u00e9grer des \u00e9l\u00e9ments de TUI pour cr\u00e9er une exp\u00e9rience utilisateur plus intuitive et interactive.\r\n\r\nJe vous proposerai un aper\u00e7u de quelques frameworks TUI populaires tels que Textual, BubbleTea et Ratatui, respectivement pour les langages Python, Golang et Rust.\r\nQue vous ayez une grande ma\u00eetrise du d\u00e9veloppement ou que vous soyez novice, ce talk vous montrera comment ces frameworks pourront vous aider \u00e0 cr\u00e9er des interfaces utilisateur textuelles de nouvelle g\u00e9n\u00e9ration.\r\n\r\nVous repartirez donc :\r\n\r\n    en sachant ce que les TUI peuvent vous apporter\r\n    avec un tour d&#39;horizon de solutions pour en d\u00e9velopper vous m\u00eame\r\n    avec des exemples concrets de code\r\n\r\nEt n&#39;oubliez pas : ne quittez plus le confort de votre terminal quand les TUI sont l\u00e0 pour vous !\r\n",
+        "summary": "Lass\u00e9\u00b7es des interfaces graphiques gourmandes en ressources et complexes \u00e0 utiliser ?\r\nVous n&#39;avez pas de temps \u00e0 perdre entre votre terminal et un navigateur web ?\r\nD\u00e9couvrez le pouvoir de l&#39;interface utilisateur textuelle (Textual User Interface) !\r\n\r\nNous explorerons l&#39;univers des TUI et leur potentiel pour enrichir les applications en ligne de commande.\r\nEn partant d&#39;une CLI simple, je vous montrerai comment int\u00e9grer des \u00e9l\u00e9ments de TUI pour cr\u00e9er une exp\u00e9rience utilisateur plus intuitive et interactive.\r\n\r\nJe vous proposerai un aper\u00e7u de quelques frameworks TUI populaires tels que Textual, BubbleTea et Ratatui, respectivement pour les langages Python, Golang et Rust.\r\nQue vous ayez une grande ma\u00eetrise du d\u00e9veloppement ou que vous soyez novice, ce talk vous montrera comment ces frameworks pourront vous aider \u00e0 cr\u00e9er des interfaces utilisateur textuelles de nouvelle g\u00e9n\u00e9ration.\r\n\r\nVous repartirez donc :\r\n\r\n- en sachant ce que les TUI peuvent vous apporter\r\n- avec un tour d&#39;horizon de solutions pour en d\u00e9velopper vous m\u00eame\r\n- avec des exemples concrets de code\r\n\r\nEt n&#39;oubliez pas : ne quittez plus le confort de votre terminal quand les TUI sont l\u00e0 pour vous !\r\n",
         "speakerIds": [
             "titimoby"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.82",
+        "addedAt": "2025-04-27T17:41:23.237",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -387,7 +387,7 @@
             "dianemoinet"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.82",
+        "addedAt": "2025-04-27T17:41:23.237",
         "description": "",
         "topic": "team",
         "video": null,
@@ -410,7 +410,7 @@
             "theo.gianella"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.82",
+        "addedAt": "2025-04-27T17:41:23.237",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -433,7 +433,7 @@
             "jeremy.chauvin"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.82",
+        "addedAt": "2025-04-27T17:41:23.237",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -456,7 +456,7 @@
             "marjorie.aubert"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.82",
+        "addedAt": "2025-04-27T17:41:23.237",
         "description": "",
         "topic": "team",
         "video": null,
@@ -475,10 +475,11 @@
         "title": "Rendre transparents les changements des CGUs avec Open Terms Archive",
         "summary": "\u00ab Si vous n&#39;\u00eates pas d&#39;accord avec ces nouvelles conditions, vous pouvez fermer votre compte. Sinon, elles seront consid\u00e9r\u00e9es comme accept\u00e9es. \u00bb Vous faites quoi quand vous recevez ce genre de message, vous ? Vous relisez les 60 pages de CGUs ? Non, comme personne d&#39;autre d&#39;ailleurs. Mais si vous pouviez voir juste ce qui a chang\u00e9, alors ce serait peut-\u00eatre diff\u00e9rent\u2026\r\nOpen Terms Archive est un commun num\u00e9rique qui enregistre publiquement chaque version des conditions d&#39;utilisation des services en ligne pour en permettre le contr\u00f4le d\u00e9mocratique.\r\nQue ce soit pour influencer la gouvernance des grandes plateformes, v\u00e9rifier la conformit\u00e9, ou informer les citoyen\u2027ne\u2027s, chaque changement est rendu lisible de mani\u00e8re transparente.\r\nDans cette session, nous verrons ce qu&#39;est Open Terms Archive, ce que ce produit a d\u00e9j\u00e0 permis, ce qu&#39;il est possible d&#39;en retirer en tant qu&#39;individu, et comment y contribuer.",
         "speakerIds": [
-            "MattiSG"
+            "MattiSG",
+            "d1466929-efc3-4ce4-b490-5032951bf2ea"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.82",
+        "addedAt": "2025-04-27T17:41:23.237",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -500,7 +501,7 @@
             "kabdelouali"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.82",
+        "addedAt": "2025-04-27T17:41:23.237",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -522,7 +523,7 @@
             "juliette.grillere"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.82",
+        "addedAt": "2025-04-27T17:41:23.237",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -544,7 +545,7 @@
             "scraly"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.82",
+        "addedAt": "2025-04-27T17:41:23.237",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -566,7 +567,7 @@
             "27060e94-14d2-4c80-b9c5-d2c290f5d21c"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.82",
+        "addedAt": "2025-04-27T17:41:23.238",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -588,7 +589,7 @@
             "sonia.seddiki"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.82",
+        "addedAt": "2025-04-27T17:41:23.238",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -610,7 +611,7 @@
             "montaine.marteau"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.82",
+        "addedAt": "2025-04-27T17:41:23.238",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -632,7 +633,7 @@
             "e.soubiran25"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.82",
+        "addedAt": "2025-04-27T17:41:23.238",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -655,7 +656,7 @@
             "mgarnero"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.82",
+        "addedAt": "2025-04-27T17:41:23.238",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -677,7 +678,7 @@
             "dc15d35e-18da-4faa-a7bc-a186295fcde3"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.82",
+        "addedAt": "2025-04-27T17:41:23.238",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -699,7 +700,7 @@
             "GeoffreyDorne"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.82",
+        "addedAt": "2025-04-27T17:41:23.238",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -721,7 +722,7 @@
             "f2210236-eac4-49c2-be02-af1fa3650bb3"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.82",
+        "addedAt": "2025-04-27T17:41:23.238",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -743,7 +744,7 @@
             "jose.paumard"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.821",
+        "addedAt": "2025-04-27T17:41:23.238",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -766,7 +767,7 @@
             "bd3298b6-2b7f-49b3-836e-7176ac9b4c0a"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.821",
+        "addedAt": "2025-04-27T17:41:23.238",
         "description": "",
         "topic": "team",
         "video": null,
@@ -788,7 +789,7 @@
             "e.soubiran25"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.821",
+        "addedAt": "2025-04-27T17:41:23.238",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -810,7 +811,7 @@
             "fanny.pluvinage"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.821",
+        "addedAt": "2025-04-27T17:41:23.238",
         "description": "",
         "topic": "team",
         "video": null,
@@ -832,7 +833,7 @@
             "benjamin.becquet"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.821",
+        "addedAt": "2025-04-27T17:41:23.238",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -854,7 +855,7 @@
             "106558503016616394107"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.821",
+        "addedAt": "2025-04-27T17:41:23.238",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -877,7 +878,7 @@
             "decoster"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.821",
+        "addedAt": "2025-04-27T17:41:23.238",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -899,7 +900,7 @@
             "cyrillemartraire"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.821",
+        "addedAt": "2025-04-27T17:41:23.238",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -922,7 +923,7 @@
             "stephane.nicoll"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.821",
+        "addedAt": "2025-04-27T17:41:23.239",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -944,7 +945,7 @@
             "tut_tuuut"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.821",
+        "addedAt": "2025-04-27T17:41:23.239",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -966,7 +967,7 @@
             "lfanuel"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.821",
+        "addedAt": "2025-04-27T17:41:23.239",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -988,7 +989,7 @@
             "celine-louvet"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.821",
+        "addedAt": "2025-04-27T17:41:23.239",
         "description": "",
         "topic": "team",
         "video": null,
@@ -1004,13 +1005,13 @@
     {
         "format": "KEYNOTE",
         "event": "2025",
-        "title": "Les masculinit\u00e9s juv\u00e9niles entre mixit\u00e9 et homosocialit\u00e9 au XX\u00e8me si\u00e8cle",
-        "summary": "Dans cette intervention, Anne-Marie Sohn explore la construction des masculinit\u00e9s juv\u00e9niles au XX\u1d49 si\u00e8cle \u00e0 travers les dynamiques de mixit\u00e9 et d\u2019homosocialit\u00e9. Elle analyse comment les jeunes hommes fa\u00e7onnent leur identit\u00e9 en oscillant entre les interactions avec les femmes et les sociabilit\u00e9s masculines (camaraderie, comp\u00e9tition, rites de passage). Cette r\u00e9flexion permet de mieux comprendre les \u00e9volutions des normes masculines face aux transformations sociales du si\u00e8cle.",
+        "title": "Mapping the critical infrastructure sustaining our understanding of the Earth",
+        "summary": "An overwhelming amount of applications, services and products today have a geospatial component. Whether we study bee health, the consequences of an oil spill on ocean wildlife, search for gold or for a school, even take an Uber home, geospatial analysis and visualisation is at work. \r\n\r\nGeospatial technologies have become pervasive, following technological progress, evolving from desktop, to\r\nserver-side, mobile and into the cloud. A critical part of these technologies are open source.\r\n\r\nStarted in the 1980s, open source for geospatial has reached a maturity level, covering all cycles of geospatial data processing and visualization and it did so by following the traditional FOSS paradigm - community/voluntary based development and maintenance with deep, intrinsic dependencies between projects. And that is an ecosystem.\r\n\r\nIn this keynote, the author will give the short story of a long, winding journey to map the complex, dynamic and ever-expanding ecosystem of the free and open source software used in any geospatial related process, activity or field, from storage to processing to visualisation, from operational to\r\nscientific endeavours. The community-led initiative has come a long way since 2016 and, starting with 2023, it has received support from the European Space Agency, leading to significant improvements.",
         "speakerIds": [
-            "5e14a53f-21fb-4866-8f27-5d29eec2549a"
+            "1cdd53ea-68d1-4acf-b832-3662da09d116"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.821",
+        "addedAt": "2025-04-27T17:41:23.239",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -1019,9 +1020,9 @@
         "start": "2025-04-30T14:00:00",
         "end": "2025-04-30T14:30:00",
         "photoUrls": [],
-        "slug": "les-masculinites-juveniles-entre-mixite-et-homosocialite-au-xxeme-siecle",
+        "slug": "mapping-the-critical-infrastructure-sustaining-our-understanding-of-the-earth",
         "level": "Beginner",
-        "id": "868820"
+        "id": "868821"
     },
     {
         "format": "TALK",
@@ -1032,7 +1033,7 @@
             "moustapha-agack"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.821",
+        "addedAt": "2025-04-27T17:41:23.239",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -1054,7 +1055,7 @@
             "dorra.bartaguiz"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.821",
+        "addedAt": "2025-04-27T17:41:23.239",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -1076,7 +1077,7 @@
             "aurelien"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.821",
+        "addedAt": "2025-04-27T17:41:23.239",
         "description": "",
         "topic": "team",
         "video": null,
@@ -1099,7 +1100,7 @@
             "philippe.bourgau"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.821",
+        "addedAt": "2025-04-27T17:41:23.239",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -1122,7 +1123,7 @@
             "jean-palies"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.821",
+        "addedAt": "2025-04-27T17:41:23.239",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -1144,7 +1145,7 @@
             "sonyth.huber"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.821",
+        "addedAt": "2025-04-27T17:41:23.239",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -1166,7 +1167,7 @@
             "pascal.martin"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.821",
+        "addedAt": "2025-04-27T17:41:23.239",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -1188,7 +1189,7 @@
             "5629542f-10c1-4e94-be75-2039c99162dd"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.822",
+        "addedAt": "2025-04-27T17:41:23.239",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -1211,7 +1212,7 @@
             "ph.charriere"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.822",
+        "addedAt": "2025-04-27T17:41:23.239",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -1233,7 +1234,7 @@
             "jbriault"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.822",
+        "addedAt": "2025-04-27T17:41:23.239",
         "description": "",
         "topic": "tech",
         "video": null,
@@ -1256,7 +1257,7 @@
             "yasmine.messaoudi"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.822",
+        "addedAt": "2025-04-27T17:41:23.24",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -1278,7 +1279,7 @@
             "anne-laure.gros"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.822",
+        "addedAt": "2025-04-27T17:41:23.24",
         "description": "",
         "topic": "ethics",
         "video": null,
@@ -1294,13 +1295,13 @@
     {
         "format": "KEYNOTE",
         "event": "2025",
-        "title": "Mapping the critical infrastructure sustaining our understanding of the Earth",
-        "summary": "An overwhelming amount of applications, services and products today have a geospatial component. Whether we study bee health, the consequences of an oil spill on ocean wildlife, search for gold or for a school, even take an Uber home, geospatial analysis and visualisation is at work. \r\n\r\nGeospatial technologies have become pervasive, following technological progress, evolving from desktop, to\r\nserver-side, mobile and into the cloud. A critical part of these technologies are open source.\r\n\r\nStarted in the 1980s, open source for geospatial has reached a maturity level, covering all cycles of geospatial data processing and visualization and it did so by following the traditional FOSS paradigm - community/voluntary based development and maintenance with deep, intrinsic dependencies between projects. And that is an ecosystem.\r\n\r\nIn this keynote, the author will give the short story of a long, winding journey to map the complex, dynamic and ever-expanding ecosystem of the free and open source software used in any geospatial related process, activity or field, from storage to processing to visualisation, from operational to\r\nscientific endeavours. The community-led initiative has come a long way since 2016 and, starting with 2023, it has received support from the European Space Agency, leading to significant improvements.",
+        "title": "Keynote de cloture",
+        "summary": "La team MiXiT sera pr\u00e9sente pour cl\u00f4turer l&#39;\u00e9dition 2024",
         "speakerIds": [
-            "1cdd53ea-68d1-4acf-b832-3662da09d116"
+            "mixit"
         ],
         "language": "FRENCH",
-        "addedAt": "2025-04-16T15:12:01.822",
+        "addedAt": "2025-04-27T17:41:23.24",
         "description": "",
         "topic": "aliens",
         "video": null,
@@ -1309,8 +1310,8 @@
         "start": "2025-04-30T16:50:00",
         "end": "2025-04-30T17:20:00",
         "photoUrls": [],
-        "slug": "mapping-the-critical-infrastructure-sustaining-our-understanding-of-the-earth",
+        "slug": "keynote-de-cloture",
         "level": "Beginner",
-        "id": "868821"
+        "id": "916736"
     }
 ]
