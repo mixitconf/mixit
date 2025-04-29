@@ -65,6 +65,7 @@ class MixetteHandler(
             "organization2" to if (orgs.size > 2) orgs[2] else null,
             "organization3" to if (orgs.size > 3) orgs[3] else null,
             "organization4" to if (orgs.size > 4) orgs[4] else null,
+            "organization5" to if (orgs.size > 5) orgs[5] else null,
             "donations" to donationByOrgas,
             "loadAt" to LocalTime.now(ZoneId.of(TIMEZONE)).format(frenchTalkTimeFormatter),
             TITLE to MixetteDashboard.title
