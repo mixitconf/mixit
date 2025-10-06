@@ -79,7 +79,12 @@ class UserJsonHandler(
         repository
             .findAll()
             .filterNot { user ->
-                EXCLUDED.any { user.email?.lowercase()?.endsWith(it.lowercase()) ?: false }
+                EXCLUDED.any {
+                    user.email?.lowercase()?.endsWith(it.lowercase())
+                        ?: cryptographer.decrypt(user.email)?.lowercase()?.endsWith(it.lowercase())
+                    ?: false
+                }
+
             }
             .map { it.anonymize(cryptographer) }
             .let { ok().json().bodyValueAndAwait(it) }
